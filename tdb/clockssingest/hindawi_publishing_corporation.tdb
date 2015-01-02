@@ -888,6 +888,7 @@
     param[journal_id] = anurs
 
     au < ready ; exists ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -902,6 +903,7 @@
     param[journal_id] = aocean
 
     au < ready ; exists ; 2014 ; Advances in Oceanography Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Oceanography Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -921,6 +923,7 @@
     au < manifest ; exists ; 2012 ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Operations Research Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Operations Reserch Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -941,6 +944,7 @@
     au < manifest ; exists ; 2012 ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Optical Technologies Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -955,6 +959,7 @@
     param[journal_id] = ao
 
     au < ready ; exists ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Optics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -976,6 +981,7 @@
     au < manifest ; exists ; 2012 ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in OptoElectronics Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in OptoElectronics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in OptoElectronics Volume 2015 ; 2015 ; 2015 >
 
   }
  
@@ -990,6 +996,7 @@
     param[journal_id] = aos
 
     au < ready ; exists ; 2014 ; Advances in Orthopedic Surgery Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Orthopedic Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1007,6 +1014,7 @@
     au < manifest ; exists ; 2012 ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Orthopedics Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Orthopedics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Orthopedics Volume 2015 ; 2015 ; 2015 >
     
   }
  
@@ -1021,6 +1029,7 @@
     param[journal_id] = aoto
 
     au < ready ; exists ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Otolaryngology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1035,6 +1044,7 @@
     param[journal_id] = ap
 
     au < ready ; exists ; 2014 ; Advances in Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Pharmaceutics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1055,6 +1065,7 @@
     au < manifest ; exists ; 2012 ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Pharmacological Sciences Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Pharmacological Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
  
@@ -1076,6 +1087,7 @@
     au < manifest ; exists ; 2012 ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Physical Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
  
@@ -1096,6 +1108,7 @@
     au < manifest ; exists ; 2012 ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Power Electronics Volume 2013 (2013) ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Power Electronics Volume 2014 (2014) ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Power Electronics Volume 2015 (2015) ; 2015 ; 2015 >
 
     
   }
@@ -1114,6 +1127,7 @@
     au < manifest ; exists ; 2012 ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Preventive Medicine Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Preventive Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Preventive Medicine Volume 2015 ; 2015 ; 2015 >
     
   }
  
@@ -1128,6 +1142,7 @@
     param[journal_id] = apsy
 
     au < testing ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1142,6 +1157,7 @@
     param[journal_id] = aph
 
     au < ready ; exists ; 2014 ; Advances in Public Health Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Public Health Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1156,6 +1172,7 @@
     param[journal_id] = ara
 
     au < ready ; exists ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1170,6 +1187,7 @@
     param[journal_id] = arm
 
     au < ready ; exists ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Regenerative Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1189,6 +1207,7 @@
     au < manifest ; exists ; 2012 ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Software Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Software Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1203,6 +1222,7 @@
     param[journal_id] = as
 
     au < ready ; exists ; 2014 ; Advances in Statistics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Statistics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1217,6 +1237,7 @@
     param[journal_id] = atox
 
     au < ready ; exists ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1237,6 +1258,7 @@
     au < manifest ; exists ; 2012 ; Advances in Tribology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Tribology Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Tribology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Tribology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1256,6 +1278,7 @@
     au < manifest ; exists ; 2012 ; Advances in Urology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Urology Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Urology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Urology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1270,6 +1293,7 @@
     param[journal_id] = avm
 
     au < ready ; exists ; 2014 ; Advances in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Vascular Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1289,6 +1313,7 @@
     au < manifest ; exists ; 2012 ; Advances in Virology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Virology Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -1303,6 +1328,7 @@
     param[journal_id] = az
 
     au < ready ; exists ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Advances in Zoology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1321,6 +1347,7 @@
     au < manifest ; exists ; 2012 ; AIDS Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; AIDS Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; AIDS Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; AIDS Research and Treatment Volume 2015 ; 2015 ; 2015 >
       
   }
   
@@ -1336,6 +1363,7 @@
 
     au < manifest ; exists ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1350,6 +1378,7 @@
     param[journal_id] = acp
 
     au < ready ; exists ; 2014 ; Analytical Cellular Pathology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Analytical Cellular Pathology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1367,6 +1396,7 @@
     au < manifest ; exists ; 2012 ; Anatomy Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Anatomy Research International Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Anatomy Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Anatomy Research International Volume 2015 ; 2015 ; 2015 >
       
   } 
 
@@ -1385,6 +1415,7 @@
     au < manifest ; exists ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Anemia Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Anemia Volume 2015 ; 2015 ; 2015 >
       
   } 
     
@@ -1405,6 +1436,7 @@
     au < manifest ; exists ; 2012 ; Anesthesiology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Anesthesiology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Anesthesiology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Anesthesiology Research and Practice Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1424,6 +1456,7 @@
     au < manifest ; exists ; 2012 ; Applied and Environmental Soil Science Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Applied and Environmental Soil Science Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Applied and Environmental Soil Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Applied and Environmental Soil Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1439,6 +1472,7 @@
     param[journal_id] = abb 
 
     au < ready ; exists ; 2014 ; Applied Bionics and Biomechanics Volume 2014 ; 2014 ; 2014 > 
+    au < expected ; exists ; 2015 ; Applied Bionics and Biomechanics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1458,6 +1492,7 @@
     au < manifest ; exists ; 2012 ; Applied Computational Intelligence and Soft Computing Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Applied Computational Intelligence and Soft Computing Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Applied Computational Intelligence and Soft Computing Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Applied Computational Intelligence and Soft Computing Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1484,6 +1519,7 @@
     au < manifest ; exists ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Archaea Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1502,6 +1538,7 @@
     au < manifest ; exists ; 2012 ; Arthritis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Arthritis Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Arthritis Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Arthritis Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1516,6 +1553,7 @@
 
     au < manifest ; exists ; 2013 ; Asian Journal of Neuroscience Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Asian Journal of Neuroscience Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Asian Journal of Neuroscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1534,6 +1572,7 @@
     au < manifest ; exists ; 2012 ; Autism Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Autism Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Autism Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Autism Research and Treatment Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1552,6 +1591,7 @@
     au < manifest ; exists ; 2012 ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Autoimmune Diseases Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Autoimmune Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1591,6 +1631,7 @@
     au < manifest ; exists ; 2012 ; Behavioural Neurology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Behavioural Neurology Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Behavioural Neurology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Behavioural Neurology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1611,6 +1652,7 @@
     au < manifest ; exists ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Biochemistry Research International Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1636,6 +1678,7 @@
     au < manifest ; exists ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Bioinorganic Chemistry and Applications Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Bioinorganic Chemistry and Applications Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -1663,6 +1706,7 @@
     au < manifest ; exists ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; BioMed Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; BioMed Research International Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1680,6 +1724,7 @@
     au < manifest ; exists ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Biotechnology Research International Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1697,6 +1742,7 @@
     au < manifest ; exists ; 2012 ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Bone Marrow Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Bone Marrow Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1716,6 +1762,7 @@
     au < manifest ; exists ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Cardiology Research and Practice Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1734,7 +1781,8 @@
     au < manifest ; exists ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Cardiovascular Phychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -1752,6 +1800,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Anesthesiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1769,6 +1818,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Cardiology Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -1786,6 +1836,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Critical Care Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1803,6 +1854,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Dentistry Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -1820,6 +1872,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Dermatological Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1837,6 +1890,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Emergency Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1854,6 +1908,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Endocrinology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1871,6 +1926,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1888,6 +1944,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Genetics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1905,6 +1962,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Hematology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1922,6 +1980,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1939,6 +1998,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Immunology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1956,6 +2016,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Infectious Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1975,6 +2036,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Medicine Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -1992,6 +2054,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Nephrology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2009,6 +2072,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Neurological Mecicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2026,6 +2090,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2043,6 +2108,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Oncological Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2060,6 +2126,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Ophthalmological Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
  
@@ -2077,6 +2144,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -2094,6 +2162,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Otolaryngology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2111,6 +2180,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Pathology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2128,6 +2198,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Pediatrics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2145,6 +2216,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Psychiatry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2162,6 +2234,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Pulmonology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2179,6 +2252,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Radiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2196,6 +2270,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Rheumatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2213,6 +2288,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2230,6 +2306,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Transplantation Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2247,6 +2324,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Urology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2264,6 +2342,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Vascular Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2281,6 +2360,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Case Reports in Veterinary Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2299,6 +2379,7 @@
     au < manifest ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Chemotherapy Research and Practice Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -2316,6 +2397,7 @@
     au < manifest ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Child Development Research Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -2329,6 +2411,7 @@
     param[journal_id] = cjb
 
     au < manifest ; exists ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2343,6 +2426,7 @@
 
     au < manifest ; exists ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Chinese Journal of Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2357,6 +2441,7 @@
 
     au < manifest ; exists ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Chinese Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Chinese Journal of Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2375,6 +2460,7 @@
     au < manifest ; exists ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Cholesterol Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -2392,6 +2478,7 @@
     au < manifest ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2423,6 +2510,7 @@
     au < manifest ; exists ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Computational and Mathematical Methods in Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -2438,6 +2526,7 @@
 
     au < manifest ; exists ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Computational Biology Journal Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2459,6 +2548,7 @@
     au < manifest ; exists ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Computational Intelligence and Neuroscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2474,6 +2564,7 @@
 
     au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2492,6 +2583,7 @@
     au < manifest ; exists ; 2012 ; Critical Care Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Critical Care Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Critical Care Research and Practice Volume 2015 ; 2015 ; 2015 >
     
   }
   {
@@ -2511,6 +2603,7 @@
     au < manifest ; exists ; 2012 ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Current Gerontology and Geriatrics Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2525,6 +2618,7 @@
 
     au < manifest ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2543,6 +2637,7 @@
     au < manifest ; exists ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Depression Research and Treatment Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2562,6 +2657,7 @@
     au < manifest ; exists ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Dermatology Research and Practice Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -2577,6 +2673,7 @@
 
     au < manifest ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Developmental Biology Journal Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2606,6 +2703,7 @@
     au < manifest ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Diagnostic and Tehrapeutic Endoscopy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2637,6 +2735,7 @@
     au < manifest ; exists ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Discrete Dynamics in Nature and Society Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2671,6 +2770,7 @@
     au < manifest ; exists ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 >
     au < manifest ; exists ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 >
     au < manifest ; exists ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Disease Markers Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2690,6 +2790,7 @@
     au < manifest ; exists ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Economics Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Economics Research International Volume 2015 ; 2015 ; 2015 >
     }
 
   }
@@ -2709,6 +2810,7 @@
     au < manifest ; exists ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Education Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Education Research International Volume 2015 ; 2015 ; 2015 >
     }
 
   }
@@ -2728,6 +2830,7 @@
     au < manifest ; exists ; 2012 ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Emergency Medicine International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Emergency Medicine International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Emergency Medicine International Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -2746,6 +2849,7 @@
     au < manifest ; exists ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Enzyme Research Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -2763,6 +2867,7 @@
     au < manifest ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Epidemiology Research International Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2781,6 +2886,7 @@
     au < manifest ; exists ; 2012 ; Epilepsy Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Epilepsy Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Epilepsy Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Epilepsy Research and Treatment Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2805,6 +2911,7 @@
     au < manifest ; exists ; 2012 ; Evidence-based Complementary and Alternative Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Evidence-based Complementary and Alternative Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Evidence-based Complementary and Alternative Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Evidence-based Complementary and Alternative Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2820,6 +2927,7 @@
 
     au < manifest ; exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Game Theory Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2840,6 +2948,7 @@
     au < manifest ; exists ; 2012 ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Gastroenterology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Gastroenterology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Gastroenterology Research and Practice Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2856,6 +2965,7 @@
     au < manifest ; exists ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Genetics Research International Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2871,6 +2981,7 @@
 
     au < manifest ; exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Geography Journal Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2886,6 +2997,7 @@
 
     au < manifest ; exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Geometry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2904,6 +3016,7 @@
     au < manifest ; exists ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Hepatitis Research and Treatment Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -2938,6 +3051,7 @@
     au < manifest ; exists ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; HPB Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2952,6 +3066,7 @@
 
     au < manifest ; exists ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Indian Journal of Materials Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2987,6 +3102,7 @@
     au < manifest ; exists ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Infectious Diseases in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Infectious Diseases in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3005,6 +3121,7 @@
     au < manifest ; exists ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Influenza Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Influenza Research and Treatment Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -3025,6 +3142,7 @@
     au < manifest ; exists ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3045,6 +3163,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3064,6 +3183,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Agronomy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Agronomy Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -3082,6 +3202,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Alzheimer's Disease Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Alzheimer's Disease Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -3097,6 +3218,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3116,6 +3238,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Analytical Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Analytical Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3137,6 +3260,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Antennas and Propagation Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Antennas and Propagation Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3152,6 +3276,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Antibiotics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3167,6 +3292,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Atmospheric Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3182,6 +3308,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Bacteriology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Bacteriology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3197,6 +3324,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Biodiversity Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Biodiversity Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3216,6 +3344,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Biomaterials Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Biomaterials Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Biomaterials Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3238,6 +3367,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Biomedical Imaging Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3252,6 +3382,7 @@
     param[journal_id] = ijbs
 
     au < manifest ; exists ; 2014 ; International Journal of Brain Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Brain Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3269,6 +3400,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Breast Cancer Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Breast Cancer Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3288,6 +3420,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Carbohydrate Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3307,6 +3440,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Cell Biology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Cell Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3327,6 +3461,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Chemical Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Chemical Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3342,6 +3477,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; International Journal of Chemical Physics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3357,6 +3493,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Chronic Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Chronic Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3376,6 +3513,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Combinatorics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3390,6 +3528,7 @@
     param[journal_id] = ijcm
 
     au < manifest ; exists ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Computational Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3410,6 +3549,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Computer Games Technology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Computer Games Technology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3428,6 +3568,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Corrosion Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3447,6 +3588,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Dentistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3469,6 +3611,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Differential Equations Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Differential Equations Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Differential Equations Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Differential Equations Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3489,6 +3632,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Digital Multimedia Broadcasting Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Digital Multimedia Broadcasting Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3512,6 +3656,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Distributed Sensor Networks Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3533,6 +3678,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Ecology Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -3549,6 +3695,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Electrochemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Electrochemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Electrochemistry Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -3563,6 +3710,7 @@
     param[journal_id] = ijembry
 
     au < manifest ; exists ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Embryology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3582,6 +3730,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Endocrinology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Endocrinology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3597,6 +3746,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Engineering Mathematics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Engineering Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3616,6 +3766,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Evolutionary Biology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Evolutionary Biology Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -3634,6 +3785,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Family Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Family Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Family Medicine Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -3649,6 +3801,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Food Science Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Food Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Food Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3668,6 +3821,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Forestry Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Forestry Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Forestry Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Forestry Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3696,6 +3850,7 @@
     au < manifest ; exists ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Genomics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3715,6 +3870,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Geophysics Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -3732,6 +3888,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Hepatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3750,6 +3907,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Hypertension Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3768,6 +3926,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Inflammation Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Inflammation Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -3788,6 +3947,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -3803,6 +3963,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Manufacturing Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Manufacturing Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3853,6 +4014,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Mathematics and Mathematical Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3867,6 +4029,7 @@
     param[journal_id] = ijmg
 
     au < manifest ; exists ; 2014 ; International Journal of Medical Genetics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Medical Genetics Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -3884,6 +4047,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Medicinal Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3899,6 +4063,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Metals Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3918,6 +4083,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Microbiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3939,6 +4105,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Microwave Science and Technology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3953,6 +4120,7 @@
     param[journal_id] = ijm
 
     au < manifest ; exists ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Mineralogy Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -3970,6 +4138,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Molecular Imaging Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -3990,6 +4159,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Navigation and Observation Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Navigation and Observarion Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4008,6 +4178,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Nephrology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Nephrology Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -4023,6 +4194,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Nuclear Energy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Nuclear Energy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Nuclear Energy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4042,6 +4214,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Oceanography Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4062,6 +4235,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Optics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Optics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Optics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4081,6 +4255,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Otolaryngology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4095,6 +4270,7 @@
     param[journal_id] = ijpc
 
     au < manifest ; exists ; 2014 ; International Journal of Palliative Care Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Palliative Care Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -4110,6 +4286,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Partial Differential Equations Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Partial Differential Equations Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4129,6 +4306,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Pediatrics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Pediatrics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4148,6 +4326,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Peptides Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Peptides Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Peptides Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4162,6 +4341,7 @@
     param[journal_id] = ijpho
 
     au < manifest ; exists ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Photochemistry Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -4191,6 +4371,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Photoenergy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Photoenergy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Photoenergy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4212,6 +4393,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Plant Genomics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Plant Genomics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Plant Genomics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4231,6 +4413,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Polymer Science Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Polymer Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Polymer Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4248,6 +4431,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Population Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Population Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Population Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4266,6 +4450,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Proteomics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Proteomics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Proteomics Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -4286,6 +4471,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Reconfigurable Computing Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4301,6 +4487,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Reproductive Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Reproductive Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Reproductive Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4320,6 +4507,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Rheumatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4353,6 +4541,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Rotating Machinery Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Rotating Machinery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4372,6 +4561,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4387,6 +4577,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Statistical Mechanics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Statistical Mechanics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4428,6 +4619,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Stochastic Analysis Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Stochastic Analysis Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Stochastic Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4443,6 +4635,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Superconductivity Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Superconductivity Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Superconductivity Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4461,6 +4654,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Surgical Oncology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Surgical Oncology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Surgical Oncology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Surgical Oncology Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -4481,6 +4675,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Telemedicine and Applications Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Telemedicine and Applications Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Telemedicine and Applications Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Telemedicine and Applications Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4496,6 +4691,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Tissue Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Tissue Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Tissue Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4514,6 +4710,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Vascular Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Vascular Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Vascular Medicine Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -4534,6 +4731,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Vehicular Technology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Vehicular Technology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Vehicular Technology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Vehicular Technology Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -4553,6 +4751,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Zoology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Zoology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Zoology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Journal of Zology Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -4569,6 +4768,7 @@
     au < manifest ; exists ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Scholarly Research Notices Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; International Scholarly Research Notices Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; International Scholarly Research Notices Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4583,6 +4783,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4598,6 +4799,7 @@
     au < exists ; exists ; 2012 ; ISRN Analytical Chemistry Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Analytical Chemistry Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Analytical Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4612,6 +4814,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Anatomy Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Anatomy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Anatomy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4628,6 +4831,7 @@
     au < exists ; exists ; 2012 ; ISRN Anesthesiology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Anesthesiology Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; ISRN Anesthesiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Anesthesiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4644,6 +4848,7 @@
     au < exists ; exists ; 2012 ; ISRN Applied Mathematics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Applied Mathematics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Applied Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Applied Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4660,6 +4865,7 @@
     au < exists ; exists ; 2012 ; ISRN Astronomy and Astrophysics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Astronomy and Astrophysics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Astronomy and Astrophysics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Astronomy and Astrophysics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4675,6 +4881,7 @@
     au < exists ; exists ; 2012 ; ISRN Biochemistry Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Biochemistry Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Biochemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Biochemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4689,6 +4896,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Biodiversity Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Biodiversity Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Biodiversity Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4704,6 +4912,7 @@
     au < exists ; exists ; 2012 ; ISRN Bioinformatics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Bioinformatics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Bioinformatics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Bioinformatics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4718,6 +4927,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Biotechnology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Biotechnology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Biotechnology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4733,6 +4943,7 @@
     au < exists ; exists ; 2012 ; ISRN Chromatography Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Chromatography Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Chromatography Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Chromatography Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4748,6 +4959,7 @@
     au < exists ; exists ; 2012 ; ISRN Civil Engineering Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Civil Engineering Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Civil Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Civil Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4764,6 +4976,7 @@
     au < exists ; exists ; 2012 ; ISRN Communications and Networking Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Communications and Networking Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Communications and Networking Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Communications and Networking Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4780,6 +4993,7 @@
     au < exists ; exists ; 2012 ; ISRN Dentistry Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Dentistry Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Dentistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4796,6 +5010,7 @@
     au < exists ; exists ; 2012 ; ISRN Dermatology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Dermatology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Dermatology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Dermatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4812,6 +5027,7 @@
     au < exists ; exists ; 2012 ; ISRN Discrete Mathematics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Discrete Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4827,6 +5043,7 @@
     au < exists ; exists ; 2012 ; ISRN Economics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Economics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Economics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Economics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4842,6 +5059,7 @@
     au < exists ; exists ; 2012 ; ISRN Electronics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Electronics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Electronics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Electronics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4858,6 +5076,7 @@
     au < exists ; exists ; 2012 ; ISRN Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Endocrinology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Endocrinology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4873,6 +5092,7 @@
     au < exists ; exists ; 2012 ; ISRN Forestry Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Forestry Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; ISRN Forestry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Forestry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4889,6 +5109,7 @@
     au < exists ; exists ; 2012 ; ISRN Gastroenterology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Gastroenterology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Gastroenterology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Gastroenterology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4903,6 +5124,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Geology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Geology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Geology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4919,6 +5141,7 @@
     au < exists ; exists ; 2012 ; ISRN Geometry Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Geometry Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Geometry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Geometry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4948,6 +5171,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Hepatology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Hepatology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Hepatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4964,6 +5188,7 @@
     au < exists ; exists ; 2012 ; ISRN Materials Science Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Materials Science Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Materials Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Materials Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4980,6 +5205,7 @@
     au < exists ; exists ; 2012 ; ISRN Mathematical Analysis Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Mathematical Analysis Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Mathematical Analysis Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Mathematical Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4996,6 +5222,7 @@
     au < exists ; exists ; 2012 ; ISRN Mechanical Engineering Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Mechanical Engineering Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Mechanical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Mechanical Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5011,6 +5238,7 @@
     au < exists ; exists ; 2012 ; ISRN Metallurgy Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Metallurgy Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Metallurgy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Metallurgy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5026,6 +5254,7 @@
     au < exists ; exists ; 2012 ; ISRN Molecular Biology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Molecular Biology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Molecular Biology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Molecular Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5041,6 +5270,7 @@
     au < exists ; exists ; 2012 ; ISRN Nanomaterials Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Nanomaterials Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Nanomaterials Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Nanomaterials Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5055,6 +5285,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Neuroscience Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Neuroscience Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Neuroscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5071,6 +5302,7 @@
     au < exists ; exists ; 2012 ; ISRN Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5087,6 +5319,7 @@
     au < exists ; exists ; 2012 ; ISRN Oncology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Oncology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Oncology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5103,6 +5336,7 @@
     au < exists ; exists ; 2012 ; ISRN Ophthalmology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Ophthalmology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Ophthalmology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Opthalmology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5119,6 +5353,7 @@
     au < exists ; exists ; 2012 ; ISRN Organic Chemistry Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Organic Chemistry Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Organic Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Organic Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5135,6 +5370,7 @@
     au < exists ; exists ; 2012 ; ISRN Orthopedics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Orthopedics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Orthopedics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Orthopedics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5148,6 +5384,7 @@
     param[journal_id] = isrn.paleontology
 
     au < expected ; exists ; 2014 ; ISRN Paleontology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Paleontology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5164,6 +5401,7 @@
     au < exists ; exists ; 2012 ; ISRN Pharmaceutics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Pharmaceutics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Pharmaceutics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5180,6 +5418,7 @@
     au < exists ; exists ; 2012 ; ISRN Pharmacology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Pharmacology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Pharmacology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Pharmacology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5195,6 +5434,7 @@
     au < exists ; exists ; 2012 ; ISRN Polymer Science Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Polymer Science Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Polymer Science Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Polymer Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5209,6 +5449,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Power Engineering Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Power Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Power Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5224,6 +5465,7 @@
     au < exists ; exists ; 2012 ; ISRN Public Health Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Public Health Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Public Health Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Public Health Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5239,6 +5481,7 @@
     au < exists ; exists ; 2012 ; ISRN Stroke Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Stroke Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Stroke Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Stroke Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5253,6 +5496,7 @@
 
     au < exists ; exists ; 2013 ; ISRN Tribology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Tribology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Tribology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5269,6 +5513,7 @@
     au < exists ; exists ; 2012 ; ISRN Urology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; ISRN Urology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; ISRN Urology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; ISRN Urology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5284,6 +5529,7 @@
 
     au < manifest ; exists ; 2013 ; Journal of Addiction Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Addiction Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Addiction Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5298,6 +5544,7 @@
     param[journal_id] = jaer
 
     au < manifest ; exists ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Aerodynamics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5315,6 +5562,7 @@
     au < manifest ; exists ; 2012 ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Aging Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Aging Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Aging Research Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -5334,6 +5582,7 @@
     au < manifest ; exists ; 2012 ; Journal of Allergy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Allergy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Allergy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Allergy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5351,6 +5600,7 @@
     au < manifest ; exists ; 2012 ; Journal of Amino Acids Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Amino Acids Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Amino Acids Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Amino Acids Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -5399,6 +5649,7 @@
     au < manifest ; exists ; 2012 ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Analytical Methods in Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Analytical Methods in Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5413,6 +5664,7 @@
     param[journal_id] = jan
     
     au < manifest ; exists ; 2014 ; Journal of Anesthesiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Anesthesiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5428,6 +5680,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Angiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Angiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5442,6 +5695,7 @@
     param[journal_id] = jani
     
     au < manifest ; exists ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Animals Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5459,6 +5713,7 @@
     au < manifest ; exists ; 2012 ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Anthropology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Anthroplolgy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5474,6 +5729,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Applied Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Applied Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5501,6 +5757,7 @@
     au < manifest ; exists ; 2012 ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Applied Mathematics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Applied Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Applied Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5516,6 +5773,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Archaeology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Archaeology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5531,6 +5789,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Astrophysics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Astrophysics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Astrophysics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5550,6 +5809,7 @@
     au < manifest ; exists ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Atomic and Molecular Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5565,6 +5825,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Biomarkers Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Biomarkers Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Biomarkers Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5580,6 +5841,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Biomedical Education Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Biomedical Education Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Biomedical Education Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5600,6 +5862,7 @@
     au < manifest ; exists ; 2012 ; Journal of Biophysics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Biophysics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Biophysics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Biophysics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5617,6 +5880,7 @@
     au < manifest ; exists ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Blood Transfusion Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5636,6 +5900,7 @@
     au < manifest ; exists ; 2012 ; Journal of Botany Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Botany Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -5651,6 +5916,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Journal of Calculus of Variations Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Calculus of Variations Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5671,6 +5937,7 @@
     au < manifest ; exists ; 2012 ; Journal of Cancer Epidemiology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Cancer Epidemiology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Cancer Epidemiology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Cancer Epidemiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5686,6 +5953,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Cancer Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Cancer Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5701,6 +5969,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Catalysts Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Catalysts Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Catalysts Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5715,6 +5984,7 @@
     param[journal_id] = jcad
     
     au < manifest ; exists ; 2014 ; Journal of Cell Adhesion Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Cell Adhesion Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5730,6 +6000,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Ceramics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Ceramics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Ceramics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5745,6 +6016,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Chaos Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5769,6 +6041,7 @@
     au < manifest ; exists ; 2012 ; E-Journal of Chemistry Volume 9 (2012) ; 2012 ; 9 >
     au < manifest ; exists ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Chemistry Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -5784,6 +6057,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Climatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5799,6 +6073,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Coatings Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5819,6 +6094,7 @@
     au < manifest ; exists ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Combustion Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -5834,6 +6110,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Complex Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5849,6 +6126,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Complex Systems Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Complex Systems Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Complex Systems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5864,6 +6142,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Composites Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Composites Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5879,6 +6158,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Computational Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Computational Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Computational Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5893,6 +6173,7 @@
     param[journal_id] = jces
     
     au < manifest ; exists ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Computational Environmental Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5908,6 +6189,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Computational Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5923,6 +6205,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Computational Methods in Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5943,6 +6226,7 @@
     au < manifest ; exists ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Computer Networks and Communications Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -5958,6 +6242,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Construction Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5979,6 +6264,7 @@
     au < manifest ; exists ; 2012 ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Control Science and Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5994,6 +6280,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Criminology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Criminology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Criminology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6008,6 +6295,7 @@
     param[journal_id] = jccm
     
     au < manifest ; exists ; 2014 ; Journal of Critical Care Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Critical Care Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6023,6 +6311,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Crystallography Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Crystallography Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6037,6 +6326,7 @@
     param[journal_id] = jds
     
     au < manifest ; exists ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6064,6 +6354,7 @@
     au < manifest ; exists ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Diabetes Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6078,6 +6369,7 @@
     param[journal_id] = jde
     
     au < manifest ; exists ; 2014 ; Journal of Difference Equations Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Difference Equations Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6093,6 +6385,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6110,6 +6403,7 @@
     au < manifest ; exists ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Drug Delivery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6124,6 +6418,7 @@
     param[journal_id] = jearth
     
     au < manifest ; exists ; 2014 ; Journal of Earthquakes Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Earthquakes Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6139,6 +6434,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Ecosystems Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Ecosystems Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Ecosystems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6163,6 +6459,7 @@
     au < manifest ; exists ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Electrical and Computer Engineering Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -6178,6 +6475,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Energy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Energy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Energy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6193,6 +6491,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6211,6 +6510,7 @@
     au < manifest ; exists ; 2012 ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Environmental and Public Health Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Environmental and Public Health Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Environmental and Public Health Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6225,6 +6525,7 @@
     param[journal_id] = jep
     
     au < manifest ; exists ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6240,6 +6541,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Fluids Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6254,6 +6556,7 @@
     param[journal_id] = jfp
     
     au < manifest ; exists ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6268,6 +6571,7 @@
     param[journal_id] = jfu
     
     au < manifest ; exists ; 2014 ; Journal of Fuels Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Fuels Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6293,6 +6597,7 @@
     au < manifest ; exists ; 2012 ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Function Spaces Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Function Spaces Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6307,6 +6612,7 @@
     param[journal_id] = jg
     
     au < manifest ; exists ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6326,6 +6632,7 @@
     au < manifest ; exists ; 2012 ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Geological Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Geological Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Geological Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6340,6 +6647,7 @@
     param[journal_id] = jger
     
     au < manifest ; exists ; 2014 ; Journal of Geriatrics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Geriatrics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6355,6 +6663,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Gravity Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Gravity Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Gravity Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6370,6 +6679,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Histology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6385,6 +6695,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Hormonoes Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6423,6 +6734,7 @@
     au < manifest ; exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Immunology Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6438,6 +6750,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Industrial Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Industrial Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6453,6 +6766,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6468,6 +6782,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6483,6 +6798,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6500,6 +6816,7 @@
     au < manifest ; exists ; 2012 ; Journal of Lipids Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Lipids Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Lipids Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -6519,6 +6836,7 @@
     au < manifest ; exists ; 2012 ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Marine Biology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Marine Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6534,6 +6852,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Materials Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6549,6 +6868,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6564,6 +6884,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Medical Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Medical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Medical Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6583,6 +6904,7 @@
     au < manifest ; exists ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6598,6 +6920,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6613,6 +6936,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Mycology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6635,6 +6959,7 @@
     au < manifest ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6650,6 +6975,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Nanoparticles Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nanoparticles Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nanoparticles Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6665,6 +6991,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nanoscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6686,6 +7013,7 @@
     au < manifest ; exists ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nanotechnology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6701,6 +7029,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Neurodegenerative Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Neurodegenerative Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6716,6 +7045,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6731,6 +7061,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Nuclear Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nuclear Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6749,6 +7080,7 @@
     au < manifest ; exists ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nucleic Acids Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -6763,6 +7095,7 @@
     param[journal_id] = jn
     
     au < manifest ; exists ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Numbers Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6781,6 +7114,7 @@
     au < manifest ; exists ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nutrition and Metabolism Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -6799,6 +7133,7 @@
     au < manifest ; exists ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Obesity Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -6819,6 +7154,7 @@
     au < manifest ; exists ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6834,6 +7170,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Operators Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6853,6 +7190,7 @@
     au < manifest ; exists ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Ophthalmology Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -6868,6 +7206,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Optimization Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6883,6 +7222,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6897,6 +7237,7 @@
     param[journal_id] = joi
     
     au < manifest ; exists ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6912,6 +7253,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6930,6 +7272,7 @@
     au < manifest ; exists ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Osteoporosis Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -6949,6 +7292,7 @@
     au < manifest ; exists ; 2012 ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Parasitology Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Parasitology Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6966,6 +7310,7 @@
     au < manifest ; exists ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6981,6 +7326,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Petroleum Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6996,6 +7342,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Pharmaceutics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7011,6 +7358,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Photonics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7026,6 +7374,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Polymers Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Polymers Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Polymers Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7041,6 +7390,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Powder Technology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7059,6 +7409,7 @@
     au < manifest ; exists ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Pregnancy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7073,6 +7424,7 @@
     param[journal_id] = jprob
     
     au < manifest ; exists ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7091,6 +7443,7 @@
     au < manifest ; exists ; 2012 ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Probability and Statistics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Probability and Statistics Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Probability and Statistics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7111,6 +7464,7 @@
     au < manifest ; exists ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Quality and Reliability Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7125,6 +7479,7 @@
     param[journal_id] = jqc
 
     au < manifest ; exists ; 2014 ; Journal of Quantum Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Quantum Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7139,6 +7494,7 @@
     param[journal_id] = jra
 
     au < manifest ; exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7154,6 +7510,7 @@
 
     au < manifest ; exists ; 2013 ; Journal of Renewable Energy Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Renewable Energy Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Renewable Energy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7169,6 +7526,7 @@
 
     au < manifest ; exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Respiratory Medicine Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Respiratory Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
