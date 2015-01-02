@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.12 2014-10-22 19:39:40 thib_gc Exp $
+ * $Id: BibliographicUtil.java,v 1.13 2015-01-02 06:02:00 tlipkis Exp $
  */
 
 /*
@@ -787,11 +787,11 @@ public class BibliographicUtil {
 
 
   /**
-   * Get the current year from a calendar.
+   * Get the current year.
    * @return an integer representing the current year
    */
   public static final int getThisYear() {
-    return Calendar.getInstance().get(Calendar.YEAR);
+    return TimeBase.nowCalendar().get(Calendar.YEAR);
   }
 
   /**
