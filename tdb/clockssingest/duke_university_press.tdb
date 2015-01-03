@@ -76,6 +76,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; American Literature Volume 84 ; 84 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; American Literature Volume 85 ; 85 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; American Literature Volume 86 ; 86 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; American Literature Volume 87 ; 87 >
 
     }
 
@@ -111,6 +112,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; American Speech Volume 87 ; 87 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; American Speech Volume 88 ; 88 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; American Speech Volume 89 ; 89 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; American Speech Volume 90 ; 90 >
 
     }
 
@@ -146,6 +148,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; boundary 2 Volume 39 ; 39 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; boundary 2 Volume 40 ; 40 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; boundary 2 Volume 41 ; 41 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; boundary 2 Volume 42 ; 42 >
 
     }
 
@@ -198,6 +201,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 28 ; 28 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 30 ; 30 >
 
     }
 
@@ -288,6 +292,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Common Knowledge Volume 18 ; 18 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Common Knowledge Volume 19 ; 19 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Common Knowledge Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Common Knowledge Volume 21 ; 21 >
 
     }
 
@@ -323,6 +328,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Comparative Literature Volume 64 ; 64 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Comparative Literature Volume 65 ; 65 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Comparative Literature Volume 66 ; 66 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Comparative Literature Volume 67 ; 67 >
 
     }
 
@@ -377,6 +383,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 ; 34 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 ; 35 >
 
     }
 
@@ -407,6 +414,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Cultural Politics Volume 9 ; 9 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Cultural Politics Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Cultural Politics Volume 11 ; 11 >
 
     }
 
@@ -442,6 +450,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; differences: A Journal of Feminist Cultural Studies Volume 24 ; 24 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; differences: A Journal of Feminist Cultural Studies Volume 26 ; 26 >
 
     }
 
@@ -624,7 +633,8 @@
       au < exists ; exists ; 2011 ; Duke Mathematical Journal Volume 160 ; 160 >
       au < exists ; exists ; 2012 ; Duke Mathematical Journal Volume 161 ; 161 >
       au < exists ; exists ; 2013 ; Duke Mathematical Journal Volume 162 ; 162 >
-      au < expected ; exists ; 2014 ; Duke Mathematical Journal Volume 163 ; 163 >
+      au < exists ; exists ; 2014 ; Duke Mathematical Journal Volume 163 ; 163 >
+      au < expected ; exists ; 2015 ; Duke Mathematical Journal Volume 164 ; 164 >
 
     }
   }
@@ -652,6 +662,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 ; 9 >
 
     }
 
@@ -686,6 +697,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Eighteenth-Century Life Volume 37 ; 37 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Eighteenth-Century Life Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2015 ; Eighteenth-Century Life Volume 39 ; 39 >
 
     }
 
@@ -720,6 +732,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Ethnohistory Volume 59 ; 59 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Ethnohistory Volume 60 ; 60 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Ethnohistory Volume 61 ; 61 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Ethnohistory Volume 62 ; 62 >
 
     }
 
@@ -755,6 +768,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; French Historical Studies Volume 35 ; 35 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; French Historical Studies Volume 36 ; 36 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; French Historical Studies Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; French Historical Studies Volume 38 ; 38 >
 
   }
 
@@ -788,6 +802,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Genre: Forms of Discourse and Culture Volume 46 ; 46 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Genre: Forms of Discourse and Culture Volume 48 ; 48 >
 
   }
 
@@ -824,6 +839,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 ; 19 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 ; 21 >
 
     }
 
@@ -854,6 +870,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Hispanic American Historical Review Volume 93 ; 93 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Hispanic American Historical Review Volume 94 ; 94 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Hispanic American Historical Review Volume 95 ; 95 >
 
     }
 
