@@ -27,7 +27,8 @@
     au < crawling ; exists ; 2011-2012 ; Breathe Volume 8 ; 8 >
     au < crawling ; exists ; 2012-2013 ; Breathe Volume 9 ; 9 >
     au < crawling ; exists ; 2014 ; Breathe Volume 10 ; 10 >
-    
+    au < expected ; exists ; 2015 ; Breathe Volume 11 ; 11 >
+
   }
 
   {
@@ -41,7 +42,8 @@
     param[base_url] = http://ERJopenres.ersjournals.com/
 
     au < expected ; exists ; 2014 ; ERJ Open Research Volume 1 ; 1 >
-    
+    au < expected ; exists ; 2015 ; ERJ Open Research Volume 2 ; 2 >
+
   }
 
   {
@@ -51,7 +53,7 @@
       issn = 0903-1936 ;
       eissn = 1399-3003 ;
       issnl = 0903-1936
-      
+
     >
 
     param[base_url] = http://erj.ersjournals.com/
@@ -106,13 +108,15 @@
       au < crawling ; exists ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
       au < crawling ; exists ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
       au < manifest ; exists ; 2014 ; European Respiratory Journal Volume 44 ; 44 >
+      au < expected ; exists ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
+      au < expected ; exists ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
 
     }
 
   }
 
   {
-  
+
     title <
       name = European Respiratory Review ;
       issn = 0905-9180 ;
@@ -121,7 +125,7 @@
     >
 
     param[base_url] = http://err.ersjournals.com/
-  
+
     au < manifest ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 >
     au < manifest ; exists ; 2006 ; European Respiratory Review Volume 15 ; 15 >
     au < manifest ; exists ; 2007 ; European Respiratory Review Volume 16 ; 16 >
@@ -132,6 +136,7 @@
     au < finished ; frozen ; 2012 ; European Respiratory Review Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; European Respiratory Review Volume 22 ; 22 >
     au < crawling ; exists ; 2014 ; European Respiratory Review Volume 23 ; 23 >
+    au < expected ; exists ; 2015 ; European Respiratory Review Volume 24 ; 24 >
 
   }
 
