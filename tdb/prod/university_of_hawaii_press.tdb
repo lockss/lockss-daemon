@@ -3,7 +3,7 @@
   publisher <
     name = University of Hawai'i Press
   >
-  
+
   {
     title <
       name = Archives of Asian Art ;
@@ -26,11 +26,11 @@
       au < released ; 2012 ; Archives of Asian Art Volume 62 ; 62 >
       au < released ; 2013 ; Archives of Asian Art Volume 63 ; 63 >
       au < expected ; 2014 ; Archives of Asian Art Volume 64 ; 64 >
-      
+
     }
 
-  }  
-  
+  }
+
   {
     title <
       name = Asian Perspectives ;
@@ -62,7 +62,7 @@
 
     }
 
-  }  
+  }
 
   {
     title <
@@ -98,7 +98,7 @@
 
     }
 
-  } 
+  }
 
   {
     title <
@@ -125,8 +125,8 @@
 
     }
 
-  } 
-  
+  }
+
   {
     title <
       name = Biography ;
@@ -141,7 +141,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = biography
       attr[journal_id] = bio
-      
+
       au < released ; 1978 ; Biography Volume 1 ; 1 >
       au < released ; 1979 ; Biography Volume 2 ; 2 >
       au < released ; 1980 ; Biography Volume 3 ; 3 >
@@ -182,7 +182,7 @@
 
     }
   }
-  
+
   {
     title <
       name = Buddhist-Christian Studies ;
@@ -194,7 +194,7 @@
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/  
+      param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = buddhist-christian_studies
       attr[journal_id] = bcs
 
@@ -215,9 +215,9 @@
       au < released ; 2013 ; Buddhist-Christian Studies Volume 33 ; 33 >
       au < expected ; 2014 ; Buddhist-Christian Studies Volume 34 ; 34 >
 
-    }      
+    }
   }
-  
+
   {
     title <
       name = China Review International ;
@@ -252,10 +252,10 @@
       au < released ; 2010 ; China Review International Volume 17 ; 17 >
       au < released ; 2011 ; China Review International Volume 18 ; 18 >
       au < released ; 2012 ; China Review International Volume 19 ; 19 >
-      
+
     }
   }
-  
+
   {
     title <
       name = The Contemporary Pacific ;
@@ -286,7 +286,7 @@
       au < released ; 2012 ; The Contemporary Pacific Volume 24 ; 24 >
       au < released ; 2013 ; The Contemporary Pacific Volume 25 ; 25 >
       au < manifest ; 2014 ; The Contemporary Pacific Volume 26 ; 26 >
-    
+
     }
   }
 
@@ -303,18 +303,18 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = cross_currents_east_asian_history_and_culture_review
       attr[journal_id] = ach
-      
+
       au < released ; 2012 ; Cross-Currents: East Asian History and Culture Review Volume 1 ; 1 >
       au < released ; 2013 ; Cross-Currents: East Asian History and Culture Review Volume 2 ; 2 >
       au < manifest ; 2014 ; Cross-Currents: East Asian History and Culture Review Volume 3 ; 3 >
- 
-    }  
+
+    }
   }
 
   {
     title <
       name = Journal of Korean Religions ;
-      issn = 2093-7288 
+      issn = 2093-7288
     >
 
     {
@@ -323,16 +323,16 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_korean_religions
       attr[journal_id] = jkr
- 
+
       au < released ; 2010 ; Journal of Korean Religions Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Korean Religions Volume 2 ; 2 >
       au < released ; 2012 ; Journal of Korean Religions Volume 3 ; 3 >
       au < released ; 2013 ; Journal of Korean Religions Volume 4 ; 4 >
       au < manifest ; 2014 ; Journal of Korean Religions Volume 5 ; 5 >
- 
-    }  
+
+    }
   }
-  
+
   {
     title <
       name = Journal of World History ;
@@ -347,7 +347,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_world_history
       attr[journal_id] = jwh
-      
+
       au < released ; 1996 ; Journal of World History Volume 7 ; 7 >
       au < released ; 1997 ; Journal of World History Volume 8 ; 8 >
       au < released ; 1998 ; Journal of World History Volume 9 ; 9 >
@@ -370,7 +370,7 @@
 
     }
   }
-  
+
   {
     title <
       name = Ka Ho'oilina/The Legacy ;
@@ -385,7 +385,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ka_hooilina_the_legacy
       attr[journal_id] = kah
-      
+
       au < released ; 2002 ; Ka Ho'oilina/The Legacy Puke (Volume) 1 ; 1 >
       au < released ; 2003 ; Ka Ho'oilina/The Legacy Puke (Volume) 2 ; 2 >
       au < released ; 2004 ; Ka Ho'oilina/The Legacy Puke (Volume) 3 ; 3 >
@@ -394,7 +394,7 @@
 
     }
   }
-  
+
   {
     title <
       name = Korean Studies ;
@@ -448,10 +448,10 @@
       au < released ; 2012 ; Korean Studies Volume 36 ; 36 >
       au < released ; 2013 ; Korean Studies Volume 37 ; 37 >
       au < expected ; 2014 ; Korean Studies Volume 38 ; 38 >
-    
+
     }
   }
-  
+
   {
     title <
       name = Manoa ;
@@ -485,10 +485,10 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2012 ; Manoa Volume 24 ; 24 >
       au < released ; 2013 ; Manoa Volume 25 ; 25 >
       au < manifest ; 2014 ; Manoa Volume 26 ; 26 >
-    
+
     }
   }
-  
+
   {
     title <
       name = Oceanic Linguistics ;
@@ -503,7 +503,7 @@ comment[mn20] = URL with 403 Forbidden error
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = oceanic_linguistics
       attr[journal_id] = ol
-      
+
       au < released ; 1999 ; Oceanic Linguistics Volume 38 ; 38 >
       au < released ; 2000 ; Oceanic Linguistics Volume 39 ; 39 >
       au < released ; 2001 ; Oceanic Linguistics Volume 40 ; 40 >
@@ -520,10 +520,10 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2012 ; Oceanic Linguistics Volume 51 ; 51 >
       au < released ; 2013 ; Oceanic Linguistics Volume 52 ; 52 >
       au < manifest ; 2014 ; Oceanic Linguistics Volume 53 ; 53 >
-    
+
     }
   }
-  
+
   {
 
     title <
@@ -539,7 +539,7 @@ comment[mn20] = URL with 403 Forbidden error
       param[base_url] = http://www.bioone.org/
       param[journal_id] = pasc
       attr[journal_id] = pasc
-  
+
       au < released ; 2005 ; Pacific Science Volume 59 ; 59 >
       au < released ; 2006 ; Pacific Science Volume 60 ; 60 >
       au < released ; 2007 ; Pacific Science Volume 61 ; 61 >
@@ -552,7 +552,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < manifest ; 2014 ; Pacific Science Volume 68 ; 68 >
 
     }
-    
+
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -567,12 +567,12 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2005 ; Pacific Science Volume 59 ; 59 >
       au < released ; 2006 ; Pacific Science Volume 60 ; 60 >
       au < released ; 2007 ; Pacific Science Volume 61 ; 61 >
-      
-      
+
+
     }
 
   }
-    
+
   {
     title <
       name = Philosophy East and West ;
@@ -603,10 +603,10 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2012 ; Philosophy East and West Volume 62 ; 62 >
       au < released ; 2013 ; Philosophy East and West Volume 63 ; 63 >
       au < manifest ; 2014 ; Philosophy East and West Volume 64 ; 64 >
-    
+
     }
   }
-  
+
   {
     title <
       name = Review of Japanese Culture and Society ;
@@ -623,10 +623,10 @@ comment[mn20] = URL with 403 Forbidden error
 
       au < released ; 2012 ; Review of Japanese Culture and Society Volume 24 ; 24 >
       au < manifest ; 2013 ; Review of Japanese Culture and Society Volume 25 ; 25 >
-    
+
     }
   }
-  
+
   {
     title <
       name = U.S.-Japan Women's Journal ;
@@ -645,10 +645,10 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2013 ; U.S.-Japan Women's Journal Volume 44 ; 44 >
       au < doNotProcess ; 2013 ; U.S.-Japan Women's Journal Volume 45 ; 45 >
       au < manifest ; 2014 ; U.S.-Japan Women's Journal Volume 46 ; 46 >
-    
+
     }
   }
-  
+
   {
     title <
       name = Yearbook of the Association of Pacific Coast Geographers ;
@@ -663,7 +663,7 @@ comment[mn20] = URL with 403 Forbidden error
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = yearbook_of_the_association_of_pacific_coast_geographers
       attr[journal_id] = pcg
-      
+
       comment[v65] = malformed manifest page.
 
       au < doNotProcess ; 2003 ; Yearbook of the Association of Pacific Coast Geographers Volume 65 ; 65 >
@@ -678,7 +678,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2012 ; Yearbook of the Association of Pacific Coast Geographers Volume 74 ; 74 >
       au < released ; 2013 ; Yearbook of the Association of Pacific Coast Geographers Volume 75 ; 75 >
       au < manifest ; 2014 ; Yearbook of the Association of Pacific Coast Geographers Volume 76 ; 76 >
-    
+
     }
 
   }
