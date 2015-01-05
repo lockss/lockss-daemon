@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.8 2014-12-22 23:00:32 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.9 2015-01-05 23:00:01 etenbrink Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
       // catch Exception that was thrown, log and re-throw
       // XXX may need to revisit if problems persist
       log.warning("caught/log/re-throw exception from pdf framework", e);
+      throw(e);
     }
     
     pdfDocument.unsetMetadata();
