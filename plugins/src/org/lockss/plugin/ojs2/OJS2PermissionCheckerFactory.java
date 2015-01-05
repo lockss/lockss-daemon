@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.7 2014-12-30 19:41:10 etenbrink Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.8 2015-01-05 22:55:36 etenbrink Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.Crawler.PermissionHelper;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -63,13 +62,17 @@ public class OJS2PermissionCheckerFactory
     private static final String CLOCKSS_FRAG = "about/editorialPolicies";
     
     public OJS2PermissionChecker(ArchivalUnit au) {
+      // XXX need to call super(au)
       super(au);
       au_year = au.getConfiguration().get(ConfigParamDescr.YEAR.getKey());
       au_year_paren = Pattern.compile("[(]" + au_year + "[)]");
       au_year_colon = Pattern.compile(":\\s+" + au_year + "[^0-9]");
     }
     
-    private boolean checkPermission0(Reader inputReader, String permissionUrl) {
+    @Override
+    public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
+        String permissionUrl) {
+      
       // if the permissionUrl is for CLOCKSS, then just return True
       // XXX FIXME replace the entire PremissionChecker with CrawlSeed?
       if (permissionUrl.contains(CLOCKSS_FRAG)) {
@@ -106,22 +109,9 @@ public class OJS2PermissionCheckerFactory
       return ret;
     }
     
-    @Override
-    public boolean checkPermission(CrawlerFacade crawlFacade,
-        Reader inputReader, String permissionUrl) {
-      
-      return checkPermission0(inputReader, permissionUrl);
-    }
-    
-    @Override
-    public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
-        String permissionUrl) {
-      
-      return checkPermission0(inputReader, permissionUrl);
-    }
-    
   }
   
+  @Override
   public List<OJS2PermissionChecker> createPermissionCheckers(ArchivalUnit au) {
     List<OJS2PermissionChecker> list = new ArrayList<OJS2PermissionChecker>(1);
     list.add(new OJS2PermissionChecker(au));
