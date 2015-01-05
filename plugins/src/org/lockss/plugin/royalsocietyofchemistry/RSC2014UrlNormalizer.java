@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014UrlNormalizer.java,v 1.2 2014-12-22 23:01:20 etenbrink Exp $
+ * $Id: RSC2014UrlNormalizer.java,v 1.3 2015-01-05 23:03:18 etenbrink Exp $
  */
 
 /*
@@ -51,6 +51,10 @@ public class RSC2014UrlNormalizer implements UrlNormalizer {
   
   private static final Logger log = Logger.getLogger(RSC2014PdfFilterFactory.class);
   
+  /*  Note: this assumes that all AUs have same params, this way we set the urls once
+   *       param[base_url] = http://pubs.rsc.org/
+   *       param[resolver_url] = http://xlink.rsc.org/
+   */
   private static String content_url = "";
   private static String resolver_url = "";
   
