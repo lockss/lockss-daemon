@@ -199,7 +199,6 @@
       attr[journal_id] = ACP   
       param[base_url] = http://www.atmos-chem-phys.net/
       param[home_url] = http://www.atmospheric-chemistry-and-physics.net/
-      comment[notReady] = content not completely online
 
       au < manifest ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Volume 1 ; 1 >
       au < manifest ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Volume 2 ; 2 >
@@ -214,7 +213,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Volume 11 ; 11 >
       au < finished ; crawling ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 >
-      au < notReady ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 >
+      au < ready ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 >
       au < expected ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 >
     
    }
@@ -228,7 +227,6 @@
       attr[journal_id] =  AMT  
       param[base_url] = http://www.atmos-meas-tech.net/
       param[home_url] = http://www.atmospheric-measurement-techniques.net/
-      comment[notReady] = content not completely online
 
       au < manifest ; exists ; 2008 ; 2008 ; Atmospheric Measurement Techniques Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; 2009 ; Atmospheric Measurement Techniques Volume 2 ; 2 >
@@ -236,7 +234,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 >
       au < finished ; frozen ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 >
-      au < notReady ; exists ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
+      au < ready ; exists ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
       au < expected ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
     
    }
@@ -558,7 +556,6 @@
       attr[journal_id] = GMD   
       param[base_url] = http://www.geosci-model-dev.net/
       param[home_url] = http://www.geoscientific-model-development.net/
-      comment[notReady] = content not completely online
 
       au < manifest ; exists ; 2008 ; 2008 ; Geoscientific Model Development Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; 2009 ; Geoscientific Model Development Volume 2 ; 2 >
@@ -566,7 +563,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 >
       au < finished ; frozen ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
-      au < notReady ; exists ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
+      au < ready ; exists ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
       au < expected ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
     
    }
@@ -1089,7 +1086,6 @@
       attr[journal_id] = TC   
       param[base_url] = http://www.the-cryosphere.net/
       param[home_url] = http://www.the-cryosphere.net/
-      comment[notReady] = content not completely online
 
       au < manifest ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 >
@@ -1098,7 +1094,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 >
       au < finished ; crawling ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
-      au < notReady ; exists ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 >
+      au < ready ; exists ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 >
       au < expected ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
     
    }
