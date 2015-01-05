@@ -1,10 +1,10 @@
 /*
- * $Id: ZipFilterInputStream.java,v 1.3 2014-09-05 18:59:42 thib_gc Exp $
+ * $Id: ZipFilterInputStream.java,v 1.4 2015-01-05 20:40:23 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.zip.*;
 
 /*
- * This is also needed in Palgrave -- should be generalized in the daemon
+ * FIXME 1.67: use org.lockss.filter.ZipFilterInputStream.java instead
  */
 public abstract class ZipFilterInputStream extends InputStream {
 
