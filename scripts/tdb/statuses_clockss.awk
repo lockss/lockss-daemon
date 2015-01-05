@@ -8,7 +8,7 @@ BEGIN {
 
 {
   # add a loop to add line only if ending year is gt or eq to contract year
-  current_year = 2014
+  current_year = 2015
   end_year = 0
   incontract = 0
   test_year = ""
