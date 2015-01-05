@@ -12681,7 +12681,7 @@
     au < finished ; frozen ; 2011 ; Journal of International Economic Law Volume 14 ; 14 ; >
     au < finished ; frozen ; 2012 ; Journal of International Economic Law Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Journal of International Economic Law Volume 16 ; 16 ; >
-    au < ready ; exists ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ; >
     au < expected ; exists ; 2015 ; Journal of International Economic Law Volume 18 ; 18 ; >
 
     }
@@ -12876,7 +12876,7 @@
     au < finished ; crawling ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Logic and Computation Volume 23 ; 23 ; >
-    au < ready ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
     au < expected ; exists ; 2015 ; Journal of Logic and Computation Volume 25 ; 25 ; >
 
     }
@@ -13476,7 +13476,7 @@
     au < finished ; crawling ; 2011 ; Journal of the National Cancer Institute: JNCI Volume 103 ; 103 ; >
     au < crawling ; exists ; 2012 ; Journal of the National Cancer Institute: JNCI Volume 104 ; 104 ; >
     au < crawling ; exists ; 2013 ; Journal of the National Cancer Institute: JNCI Volume 105 ; 105 ; >
-    au < ready ; exists ; 2014 ; Journal of the National Cancer Institute: JNCI Volume 106 ; 106 ; >
+    au < crawling ; exists ; 2014 ; Journal of the National Cancer Institute: JNCI Volume 106 ; 106 ; >
     au < expected ; exists ; 2015 ; Journal of the National Cancer Institute: JNCI Volume 107 ; 107 ; >
 
     }
@@ -13692,7 +13692,7 @@
     au < finished ; frozen ; 2011 ; Journal of Petrology Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Journal of Petrology Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Petrology Volume 54 ; 54 ; >
-    au < ready ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
     au < expected ; exists ; 2015 ; Journal of Petrology Volume 56 ; 56 ; >
 
     }
@@ -13804,7 +13804,7 @@
     param[base_url] = http://jpo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < ready ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Journal of Professions and Organization Volume 2 ; 2 ; >
 
   }
@@ -13856,7 +13856,7 @@
     au < finished ; frozen ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
-    au < ready ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
     au < expected ; exists ; 2015 ; Journal of Public Administration Research and Theory Volume 25 ; 25 ; >
 
     }
@@ -13998,7 +13998,7 @@
     au < finished ; frozen ; 2011 ; Journal of Refugee Studies Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Refugee Studies Volume 26 ; 26 ; >
-    au < ready ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
     au < expected ; exists ; 2015 ; Journal of Refugee Studies Volume 28 ; 28 ; >
 
     }
@@ -14059,7 +14059,7 @@
     au < finished ; crawling ; 2011 ; Journal of Semantics Volume 28 ; 28 ; >
     au < finished ; frozen ; 2012 ; Journal of Semantics Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; Journal of Semantics Volume 30 ; 30 ; >
-    au < ready ; exists ; 2014 ; Journal of Semantics Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2014 ; Journal of Semantics Volume 31 ; 31 ; >
     au < expected ; exists ; 2015 ; Journal of Semantics Volume 32 ; 32 ; >
 
     }
@@ -14382,7 +14382,7 @@
     au < finished ; frozen ; 2011 ; The Journal of Theological Studies Volume 62 ; 62 ; >
     au < crawling ; exists ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Journal of Theological Studies Volume 64 ; 64 ; >
-    au < ready ; exists ; 2014 ; The Journal of Theological Studies Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2014 ; The Journal of Theological Studies Volume 65 ; 65 ; >
     au < expected ; exists ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 ; >
 
     }
@@ -14509,7 +14509,7 @@
     au < finished ; crawling ; 2011 ; Journal of Tropical Pediatrics Volume 57 ; 57 ; >
     au < finished ; frozen ; 2012 ; Journal of Tropical Pediatrics Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; Journal of Tropical Pediatrics Volume 59 ; 59 ; >
-    au < ready ; exists ; 2014 ; Journal of Tropical Pediatrics Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2014 ; Journal of Tropical Pediatrics Volume 60 ; 60 ; >
     au < expected ; exists ; 2015 ; Journal of Tropical Pediatrics Volume 61 ; 61 ; >
 
     }
@@ -14589,7 +14589,7 @@
     au < zapped ; finished ; 2011 ; Law, Probability and Risk Volume 10 ; 10 ; >
     au < finished ; frozen ; 2012 ; Law, Probability and Risk Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Law, Probability and Risk Volume 12 ; 12 ; >
-    au < ready ; exists ; 2014 ; Law, Probability and Risk Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2014 ; Law, Probability and Risk Volume 13 ; 13 ; >
     au < expected ; exists ; 2015 ; Law, Probability and Risk Volume 14 ; 14 ; >
 
     }
@@ -15016,7 +15016,7 @@
     au < finished ; frozen ; 2011 ; Literature and Theology Volume 25 ; 25 ; >
     au < finished ; crawling ; 2012 ; Literature and Theology Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; Literature and Theology Volume 27 ; 27 ; >
-    au < ready ; exists ; 2014 ; Literature and Theology Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2014 ; Literature and Theology Volume 28 ; 28 ; >
     au < expected ; exists ; 2015 ; Literature and Theology Volume 29 ; 29 ; >
 
     }
@@ -15068,7 +15068,7 @@
     au < zapped ; finished ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
     au < finished ; crawling ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 ; >
-    au < ready ; exists ; 2014 ; Logic Journal of the IGPL Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2014 ; Logic Journal of the IGPL Volume 22 ; 22 ; >
     au < expected ; exists ; 2015 ; Logic Journal of the IGPL Volume 23 ; 23 ; >
 
     }
@@ -15201,7 +15201,7 @@
     au < finished ; frozen ; 2011 ; Medical Law Review Volume 19 ; 19 ; >
     au < finished ; frozen ; 2012 ; Medical Law Review Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Medical Law Review Volume 21 ; 21 ; >
-    au < ready ; exists ; 2014 ; Medical Law Review Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2014 ; Medical Law Review Volume 22 ; 22 ; >
     au < expected ; exists ; 2015 ; Medical Law Review Volume 23 ; 23 ; >
 
     }
@@ -15357,7 +15357,7 @@
     au < crawling ; exists ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 ; >
     au < finished ; frozen ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 ; >
-    au < ready ; exists ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 ; >
     au < expected ; exists ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 ; 40 ; >
 
   }
@@ -15630,7 +15630,7 @@
     au < finished ; frozen ; 2011 ; Modern Judaism Volume 31 ; 31 ; >
     au < finished ; frozen ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Modern Judaism Volume 33 ; 33 ; >
-    au < ready ; exists ; 2014 ; Modern Judaism Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2014 ; Modern Judaism Volume 34 ; 34 ; >
     au < expected ; exists ; 2015 ; Modern Judaism Volume 35 ; 35 ; >
 
     }
@@ -15719,7 +15719,7 @@
     au < finished ; crawling ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Molecular Plant Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Molecular Plant Volume 6 ; 6 ; >
-    au < ready ; exists ; 2014 ; Molecular Plant Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2014 ; Molecular Plant Volume 7 ; 7 ; >
     au < expected ; exists ; 2015 ; Molecular Plant Volume 8 ; 8 ; >
 
     }
@@ -16168,7 +16168,7 @@
     au < finished ; crawling ; 2011 ; Music and Letters Volume 92 ; 92 ; >
     au < crawling ; exists ; 2012 ; Music and Letters Volume 93 ; 93 ; >
     au < crawling ; exists ; 2013 ; Music and Letters Volume 94 ; 94 ; >
-    au < ready ; exists ; 2014 ; Music and Letters Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2014 ; Music and Letters Volume 95 ; 95 ; >
     au < expected ; exists ; 2015 ; Music and Letters Volume 96 ; 96 ; >
 
     }
@@ -16463,7 +16463,7 @@
     au < finished ; crawling ; 2011 ; The Musical Quarterly Volume 94 ; 94 ; >
     au < finished ; crawling ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Musical Quarterly Volume 96 ; 96 ; >
-    au < ready ; exists ; 2014 ; The Musical Quarterly Volume 97 ; 97 ; >
+    au < crawling ; exists ; 2014 ; The Musical Quarterly Volume 97 ; 97 ; >
     au < expected ; exists ; 2015 ; The Musical Quarterly Volume 98 ; 98 ; >
 
     }
@@ -17012,7 +17012,7 @@
     au < finished ; frozen ; 2011 ; Notes and Queries Volume 58 ; 58 ; >
     au < finished ; crawling ; 2012 ; Notes and Queries Volume 59 ; 59 ; >
     au < crawling ; exists ; 2013 ; Notes and Queries Volume 60 ; 60 ; >
-    au < ready ; exists ; 2014 ; Notes and Queries Volume 61 ; 61 ; >
+    au < crawling ; exists ; 2014 ; Notes and Queries Volume 61 ; 61 ; >
     au < expected ; exists ; 2015 ; Notes and Queries Volume 62 ; 62 ; >
 
     }
@@ -17374,7 +17374,7 @@
     au < finished ; crawling ; 2011 ; The Opera Quarterly Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
-    au < ready ; exists ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
     au < expected ; exists ; 2015 ; The Opera Quarterly Volume 31 ; 31 ; >
 
     }
@@ -17512,7 +17512,7 @@
     au < finished ; frozen ; 2011 ; Oxford Art Journal Volume 34 ; 34 ; >
     au < finished ; crawling ; 2012 ; Oxford Art Journal Volume 35 ; 35 ; >
     au < crawling ; exists ; 2013 ; Oxford Art Journal Volume 36 ; 36 ; >
-    au < ready ; exists ; 2014 ; Oxford Art Journal Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2014 ; Oxford Art Journal Volume 37 ; 37 ; >
     au < expected ; exists ; 2015 ; Oxford Art Journal Volume 38 ; 38 ; >
 
     }
@@ -17616,7 +17616,7 @@
     au < finished ; frozen ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
     au < finished ; crawling ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
     au < crawling ; exists ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
-    au < ready ; exists ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
     au < expected ; exists ; 2015 ; Oxford Economic Papers Volume 67 ; 67 ; >
 
     }
@@ -17639,7 +17639,7 @@
     
     au < finished ; frozen ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Oxford Journal of Law and Religion Volume 2 ; 2 ; >
-    au < ready ; exists ; 2014 ; Oxford Journal of Law and Religion Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2014 ; Oxford Journal of Law and Religion Volume 3 ; 3 ; >
     
     }
 
@@ -17702,7 +17702,7 @@
     au < finished ; crawling ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 ; >
     au < finished ; crawling ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 ; >
-    au < ready ; exists ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 ; >
     au < expected ; exists ; 2015 ; Oxford Journal of Legal Studies Volume 35 ; 35 ; >
 
     }
@@ -17781,7 +17781,7 @@
     au < finished ; frozen ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Oxford Review of Economic Policy Volume 29 ; 29 ; >
-    au < ready ; exists ; 2014 ; Oxford Review of Economic Policy Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2014 ; Oxford Review of Economic Policy Volume 30 ; 30 ; >
     au < expected ; exists ; 2015 ; Oxford Review of Economic Policy Volume 31 ; 31 ; >
 
     }
@@ -17899,7 +17899,7 @@
     au < finished ; crawling ; 2011 ; Parliamentary Affairs Volume 64 ; 64 ; >
     au < finished ; frozen ; 2012 ; Parliamentary Affairs Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; Parliamentary Affairs Volume 66 ; 66 ; >
-    au < ready ; exists ; 2014 ; Parliamentary Affairs Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2014 ; Parliamentary Affairs Volume 67 ; 67 ; >
     au < expected ; exists ; 2015 ; Parliamentary Affairs Volume 68 ; 68 ; >
 
     }
@@ -18233,7 +18233,7 @@
     au < finished ; crawling ; 2011 ; Philosophia Mathematica Volume 19 ; 19 ; >
     au < finished ; crawling ; 2012 ; Philosophia Mathematica Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Philosophia Mathematica Volume 21 ; 21 ; >
-    au < ready ; exists ; 2014 ; Philosophia Mathematica Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2014 ; Philosophia Mathematica Volume 22 ; 22 ; >
     au < expected ; exists ; 2015 ; Philosophia Mathematica Volume 23 ; 23 ; >
 
     }
@@ -18436,7 +18436,7 @@
     au < finished ; frozen ; 2011 ; Policing: A Journal of Policy and Practice Volume 5 ; 5 ; >
     au < finished ; frozen ; 2012 ; Policing: A Journal of Policy and Practice Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Policing: A Journal of Policy and Practice Volume 7 ; 7 ; >
-    au < ready ; exists ; 2014 ; Policing: A Journal of Policy and Practice Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2014 ; Policing: A Journal of Policy and Practice Volume 8 ; 8 ; >
     au < expected ; exists ; 2015 ; Policing: A Journal of Policy and Practice Volume 9 ; 9 ; >
 
     }
@@ -18488,7 +18488,7 @@
     au < finished ; frozen ; 2011 ; Political Analysis Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Political Analysis Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Political Analysis Volume 21 ; 21 ; >
-    au < ready ; exists ; 2014 ; Political Analysis Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2014 ; Political Analysis Volume 22 ; 22 ; >
     au < expected ; exists ; 2015 ; Political Analysis Volume 23 ; 23 ; >
 
     }
@@ -18950,7 +18950,7 @@
     au < finished ; frozen ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 ; >
-    au < ready ; exists ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 ; >
     au < expected ; exists ; 2015 ; Protein Engineering, Design & Selection : PEDS Volume 28 ; 28 ; >
 
     }
@@ -18987,7 +18987,7 @@
     au < finished ; crawling ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Public Health Ethics Volume 6 ; 6 ; >
-    au < ready ; exists ; 2014 ; Public Health Ethics Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2014 ; Public Health Ethics Volume 7 ; 7 ; >
     au < expected ; exists ; 2015 ; Public Health Ethics Volume 8 ; 8 ; >
 
     }
@@ -19095,7 +19095,7 @@
     au < finished ; crawling ; 2011 ; Public Opinion Quarterly Volume 75 ; 75 ; >
     au < crawling ; exists ; 2012 ; Public Opinion Quarterly Volume 76 ; 76 ; >
     au < crawling ; exists ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; >
-    au < ready ; exists ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
+    au < crawling ; exists ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
     au < expected ; exists ; 2015 ; Public Opinion Quarterly Volume 79 ; 79 ; >
 
     }
@@ -19236,7 +19236,7 @@
     au < finished ; crawling ; 2011 ; Publius: The Journal of Federalism Volume 41 ; 41 ; >
     au < finished ; crawling ; 2012 ; Publius: The Journal of Federalism Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 ; >
-    au < ready ; exists ; 2014 ; Publius: The Journal of Federalism Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2014 ; Publius: The Journal of Federalism Volume 44 ; 44 ; >
     au < expected ; exists ; 2015 ; Publius: The Journal of Federalism Volume 45 ; 45 ; >
 
     }
@@ -19525,7 +19525,7 @@
     au < finished ; crawling ; 2011 ; The Quarterly Journal of Mathematics Volume 62 ; 62 ; >
     au < crawling ; exists ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Quarterly Journal of Mathematics Volume 64 ; 64 ; >
-    au < ready ; exists ; 2014 ; The Quarterly Journal of Mathematics Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2014 ; The Quarterly Journal of Mathematics Volume 65 ; 65 ; >
     au < expected ; exists ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 ; >
 
     }
@@ -19622,7 +19622,7 @@
     au < finished ; frozen ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
     au < crawling ; exists ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 66 ; 66 ; >
-    au < ready ; exists ; 2014 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2014 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 67 ; 67 ; >
     au < expected ; exists ; 2015 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 68 ; 68 ; >
 
     }
@@ -19816,10 +19816,10 @@
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 155 ; 155 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 156 ; 156 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 157 ; 157 ; >
-    au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 158 ; 158 ; >
-    au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
-    au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
-    au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
+    au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 158 ; 158 ; >
+    au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
+    au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
+    au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
     au < manifest ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
     au < expected ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
 
@@ -19883,7 +19883,7 @@
     au < finished ; crawling ; 2011 ; Refugee Survey Quarterly Volume 30 ; 30 ; >
     au < crawling ; exists ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Refugee Survey Quarterly Volume 32 ; 32 ; >
-    au < ready ; exists ; 2014 ; Refugee Survey Quarterly Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2014 ; Refugee Survey Quarterly Volume 33 ; 33 ; >
     au < expected ; exists ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 ; >
 
     }
@@ -20009,7 +20009,7 @@
     au < finished ; crawling ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; Research Evaluation Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Research Evaluation Volume 22 ; 22 ; >
-    au < ready ; exists ; 2014 ; Research Evaluation Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2014 ; Research Evaluation Volume 23 ; 23 ; >
     au < expected ; exists ; 2015 ; Research Evaluation Volume 24 ; 24 ; >
 
   }
@@ -20029,7 +20029,7 @@
     au < zapped ; finished ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
     au < finished ; crawling ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; The Review of Asset Pricing Studies Volume 3 ; 3 ; >
-    au < ready ; exists ; 2014 ; The Review of Asset Pricing Studies Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2014 ; The Review of Asset Pricing Studies Volume 4 ; 4 ; >
     au < expected ; exists ; 2015 ; The Review of Asset Pricing Studies Volume 5 ; 5 ; >
 
   }
@@ -20148,7 +20148,7 @@
     au < finished ; frozen ; 2011 ; The Review of Economic Studies Volume 78 ; 78 ; >
     au < crawling ; exists ; 2012 ; The Review of Economic Studies Volume 79 ; 79 ; >
     au < crawling ; exists ; 2013 ; The Review of Economic Studies Volume 80 ; 80 ; >
-    au < ready ; exists ; 2014 ; The Review of Economic Studies Volume 81 ; 81 ; >
+    au < crawling ; exists ; 2014 ; The Review of Economic Studies Volume 81 ; 81 ; >
     au < expected ; exists ; 2015 ; The Review of Economic Studies Volume 82 ; 82 ; >
 
   }
@@ -20255,7 +20255,7 @@
     au < finished ; frozen ; 2011 ; The Review of English Studies Volume 62 ; 62 ; >
     au < crawling ; exists ; 2012 ; The Review of English Studies Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Review of English Studies Volume 64 ; 64 ; >
-    au < ready ; exists ; 2014 ; The Review of English Studies Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2014 ; The Review of English Studies Volume 65 ; 65 ; >
     au < expected ; exists ; 2015 ; The Review of English Studies Volume 66 ; 66 ; >
 
     }
@@ -20293,7 +20293,7 @@
     au < finished ; crawling ; 2011 ; Review of Environmental Economics and Policy Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; Review of Environmental Economics and Policy Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Review of Environmental Economics and Policy Volume 7 ; 7 ; >
-    au < ready ; exists ; 2014 ; Review of Environmental Economics and Policy Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2014 ; Review of Environmental Economics and Policy Volume 8 ; 8 ; >
     au < expected ; exists ; 2015 ; Review of Environmental Economics and Policy Volume 9 ; 9 ; >
 
     }
@@ -20341,7 +20341,7 @@
     au < finished ; frozen ; 2011 ; Review of Finance Volume 15 ; 15 ; >
     au < finished ; crawling ; 2012 ; Review of Finance Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; Review of Finance Volume 17 ; 17 ; >
-    au < ready ; exists ; 2014 ; Review of Finance Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2014 ; Review of Finance Volume 18 ; 18 ; >
     au < expected ; exists ; 2015 ; Review of Finance Volume 19 ; 19 ; >
 
     }
@@ -20617,7 +20617,7 @@
     au < zapped ; finished ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
     au < finished ; crawling ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; Science and Public Policy Volume 40 ; 40 ; >
-    au < ready ; exists ; 2014 ; Science and Public Policy Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2014 ; Science and Public Policy Volume 41 ; 41 ; >
     au < expected ; exists ; 2015 ; Science and Public Policy Volume 42 ; 42 ; >
 
   }
@@ -20730,7 +20730,7 @@
     au < finished ; frozen ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
-    au < ready ; exists ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; >
     au < expected ; exists ; 2015 ; Social Cognitive and Affective Neuroscience Volume 10 ; 10 ; >
 
     }
@@ -20841,7 +20841,7 @@
     au < finished ; crawling ; 2011 ; Social Forces Volume 90 ; 90 ; >
     au < finished ; crawling ; 2012 ; Social Forces Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; Social Forces Volume 92 ; 92 ; >
-    au < ready ; exists ; 2014 ; Social Forces Volume 93 ; 93 ; >
+    au < crawling ; exists ; 2014 ; Social Forces Volume 93 ; 93 ; >
     au < expected ; exists ; 2015 ; Social Forces Volume 94 ; 94 ; >
 
   }
@@ -20947,7 +20947,7 @@
     au < finished ; frozen ; 2011 ; Social Politics Volume 18 ; 18 ; >
     au < crawling ; exists ; 2012 ; Social Politics Volume 19 ; 19 ; >
     au < crawling ; exists ; 2013 ; Social Politics Volume 20 ; 20 ; >
-    au < ready ; exists ; 2014 ; Social Politics Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2014 ; Social Politics Volume 21 ; 21 ; >
     au < expected ; exists ; 2015 ; Social Politics Volume 22 ; 22 ; >
 
     }
@@ -21070,7 +21070,7 @@
     au < finished ; frozen ; 2011 ; Social Science Japan Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 2012 ; Social Science Japan Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Social Science Japan Journal Volume 16 ; 16 ; >
-    au < ready ; exists ; 2014 ; Social Science Japan Journal Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2014 ; Social Science Japan Journal Volume 17 ; 17 ; >
     au < expected ; exists ; 2015 ; Social Science Japan Journal Volume 18 ; 18 ; >
 
     }
@@ -21185,7 +21185,7 @@
     au < finished ; crawling ; 2011 ; Social Work Research Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Social Work Research Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Social Work Research Volume 37 ; 37 ; >
-    au < ready ; exists ; 2014 ; Social Work Research Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2014 ; Social Work Research Volume 38 ; 38 ; >
     au < expected ; exists ; 2015 ; Social Work Research Volume 39 ; 39 ; >
 
   }
@@ -22991,7 +22991,7 @@
       au < finished ; frozen ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
       au < finished ; frozen ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < crawling ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
-      au < ready ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
+      au < crawling ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
       au < expected ; exists ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 ; >
 
     }
@@ -23077,7 +23077,7 @@
     au < crawling ; exists ; 2011 ; Interacting with Computers Volume 23 ; 23 ; >
     au < crawling ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
-    au < ready ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
     
   }
   {
@@ -23186,7 +23186,7 @@
     au < crawling ; exists ; 2011 ; BioScience Volume 61 ; 61 ; >
     au < exists ; exists ; 2012 ; BioScience Volume 62 ; 62 ; >
     au < exists ; exists ; 2013 ; BioScience Volume 63 ; 63 ; >
-    au < ready ; exists ; 2014 ; BioScience Volume 64 ; 64 ; >
+    au < crawling ; exists ; 2014 ; BioScience Volume 64 ; 64 ; >
     au < expected ; exists ; 2015 ; BioScience Volume 65 ; 65 ; >
 
   }
