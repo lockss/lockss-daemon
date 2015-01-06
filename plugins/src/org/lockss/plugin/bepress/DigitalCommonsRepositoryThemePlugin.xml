@@ -13,18 +13,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -101,9 +101,20 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
-    </list>
+    <map>
+      <entry>
+        <string>abstracts</string>
+        <list>
+          <string>"^%s%s/%s/[^/]+/[0-9]+/?$", base_url, collection, collection_theme</string>
+        </list>
+      </entry>
+      <entry>
+        <string>*</string><!-- 'fulltext' and others -->
+        <list>
+          <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+        </list>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

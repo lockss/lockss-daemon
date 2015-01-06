@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,11 +24,11 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
     </map>
   </entry>
@@ -124,13 +124,13 @@
         <string>tablesofcontents</string>
         <list>
           <string>"^%s%s/?$", base_url, collection</string>
-          <string>"^%s%s/index(\.[0-9]+)\.html$", base_url, collection</string>
+          <string>"^%s%s/index(\.[0-9]+)?\.html$", base_url, collection</string>
         </list>
       </entry>
       <entry>
         <string>abstracts</string>
         <list>
-          <string>"^%s%s/[0-9]+$", base_url, collection</string>
+          <string>"^%s%s/[0-9]+/?$", base_url, collection</string>
         </list>
       </entry>
       <entry>

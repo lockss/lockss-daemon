@@ -1,10 +1,10 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlHashFilterFactory.java,v 1.3 2014-11-22 00:56:46 thib_gc Exp $
+ * $Id: DigitalCommonsRepositoryHtmlHashFilterFactory.java,v 1.4 2015-01-06 01:56:04 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.bepress;
 
 import java.io.InputStream;
+
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
-import org.lockss.filter.html.HtmlNodeFilters;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
+import org.lockss.filter.html.*;
+import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 public class DigitalCommonsRepositoryHtmlHashFilterFactory implements FilterFactory {
@@ -65,8 +63,8 @@ public class DigitalCommonsRepositoryHtmlHashFilterFactory implements FilterFact
         // breadcrumb and accompanying backlinks/decorations
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "series-header"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "series-home"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "series-title"),
+        HtmlNodeFilters.tagWithAttribute("h2", "id", "series-title"),
         // skip to main
         HtmlNodeFilters.tagWithAttribute("a", "class", "skiplink"),
         // near top - navigation
@@ -85,6 +83,7 @@ public class DigitalCommonsRepositoryHtmlHashFilterFactory implements FilterFact
         // footer
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // 'follow' publication or 'follow' author buttons
+        HtmlNodeFilters.tagWithAttribute("p", "class", "publication-follow"),
         HtmlNodeFilters.tagWithAttribute("a", "rel", "nofollow"),
         // right side box 'Included in'
         HtmlNodeFilters.tagWithAttribute("div", "id", "beta-disciplines"),

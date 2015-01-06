@@ -1,10 +1,10 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.4 2014-12-06 01:33:11 thib_gc Exp $
+ * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.5 2015-01-06 01:56:04 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,8 +35,7 @@ package org.lockss.plugin.bepress;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
-import org.lockss.daemon.ConfigParamDescr;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.filter.html.HtmlNodeFilters.HasAttributeRegexFilter;
