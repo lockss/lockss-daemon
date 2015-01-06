@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# $Id: propose_new_aus.pl,v 1.6 2015-01-06 02:58:13 mellen22 Exp $
+# $Id: propose_new_aus.pl,v 1.7 2015-01-06 03:21:03 mellen22 Exp $
 #
 # Read in a list of AUs defined with the HighWire plugins.
 # Propose new AUs, either before or after the range provided
@@ -20,7 +20,7 @@ my @Usage = ("$0 [-h] [--pre=<num1>] [--post=<num2>] auid_file\n",
     "-c            Use ClockssHighWirePressH20Plugin (default HighWirePressH20Plugin)\n",
     "-h            Print this help message.");
 sub usage {
-    print '$Revision: 1.6 $' . "\n";
+    print '$Revision: 1.7 $' . "\n";
     print "Usage:\n @Usage\n";
     exit(1);
 }
@@ -68,10 +68,10 @@ while (my $line = <>) {
 
 foreach my $base_url (sort(keys(%au_volume))) {
     for (my $x = $au_volume{$base_url}{min} - $opt_pre; $x < $au_volume{$base_url}{min}; ++$x) {
-      &print_au($start_plugin, $base_url, $x) if ($x > 0);
+      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $x) if ($x > 0);
     }
     for (my $x = $au_volume{$base_url}{max} + 1; $x <= $au_volume{$base_url}{max} + $opt_post; ++$x) {
-      &print_au($start_plugin, $base_url, $x) if ($x > 0);
+      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $x) if ($x > 0);
     }
 }
 
