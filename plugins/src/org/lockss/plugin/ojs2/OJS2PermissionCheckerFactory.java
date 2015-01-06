@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.8 2015-01-05 22:55:36 etenbrink Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.9 2015-01-06 00:35:46 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -76,7 +76,7 @@ public class OJS2PermissionCheckerFactory
       // if the permissionUrl is for CLOCKSS, then just return True
       // XXX FIXME replace the entire PremissionChecker with CrawlSeed?
       if (permissionUrl.contains(CLOCKSS_FRAG)) {
-        return true;
+        return false;
       }
       
       BufferedReader in = new BufferedReader(inputReader);
