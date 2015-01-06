@@ -33,6 +33,10 @@
     <string>"%sindex.php/%s/about/editorialPolicies", base_url, journal_id</string>
   </entry>
   <entry>
+    <string>au_permission_checker_factory</string>
+    <org.lockss.util.Default />
+  </entry>
+  <entry>
     <string>clockss_override</string>
     <map>
       <entry>
