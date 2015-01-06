@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.8 2014-08-12 21:42:42 thib_gc Exp $
+ * $Id: GPOFDSysHtmlFilterFactory.java,v 1.9 2015-01-06 02:46:38 thib_gc Exp $
  */
 
 /*
@@ -57,11 +57,11 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
          */
         /* Document header */
         // Differences in the presence and order of <meta> tags and spacing of the <title> tag
-        new TagNameFilter("head"),
+        HtmlNodeFilters.tag("head"),
         /* Scripts, inline style */
-        new TagNameFilter("script"),
-        new TagNameFilter("noscript"),
-        new TagNameFilter("style"),
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("noscript"),
+        HtmlNodeFilters.tag("style"),
         /* Header */
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "top-menu-one"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "top-banner-inside"),
@@ -117,7 +117,26 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
         new HtmlFilterInputStream(in,
                                   encoding,
                                   new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
-                                                            xform));
+                                                            xform)) {
+      // Title 42 has a 50+ MB HTML file that does not require this filter.
+      // Many daemons get an OOME applying this filter, caught by BlockHasher,
+      // and the daemon exits (e.g. Stanford on the order of once a day).
+      // In the future, the interface will have the CU or URL, but for now,
+      // just ignore OOME by rethrowing an IOException.
+      // HtmlFilterInputStream's parse() or getOut() are not visible.
+      @Override public int read() throws IOException {
+        try { return super.read(); }
+        catch (OutOfMemoryError oome) { throw new IOException(oome); }
+      }
+      @Override public int read(byte[] buf) throws IOException {
+        try { return super.read(buf); }
+        catch (OutOfMemoryError oome) { throw new IOException(oome); }
+      }
+      @Override public int read(byte[] buf, int off, int len) throws IOException {
+        try { return super.read(buf, off, len); }
+        catch (OutOfMemoryError oome) { throw new IOException(oome); }
+      }
+    };
 
     try {
       Reader filteredReader = new InputStreamReader(prefilteredStream, encoding);
