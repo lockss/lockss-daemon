@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.42 2013-06-17 18:18:52 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.43 2015-01-06 22:39:22 tlipkis Exp $
  */
 
 /*
@@ -344,7 +344,7 @@ public class V3PollFactory extends BasePollFactory {
     }
     int willing = countWillingRepairers(au);
     double prob = acceptProbabilityCurve.getY(willing);
-    log.debug2("Accept probability " + prob + "ybased on " + willing +
+    log.debug2("Accept probability " + prob + " based on " + willing +
 	       " willing repairers");
 
     // further reduce probability by acceptRepairersPollPercent if the
