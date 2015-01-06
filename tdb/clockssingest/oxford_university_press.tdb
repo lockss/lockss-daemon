@@ -1892,6 +1892,7 @@
     param[base_url] = http://amt.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
     
+    au < manifest ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
     au < manifest ; exists ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; >
     au < expected ; exists ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; >
     au < expected ; exists ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
