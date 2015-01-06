@@ -1183,9 +1183,9 @@
       
       comment[moved] = moved to Wiley.
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
 
     }
 

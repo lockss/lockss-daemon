@@ -1552,12 +1552,13 @@
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://lofe.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       
-      au < HighWirePressH20Plugin ; released ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Limnology and Oceanography: Fluids and Environments Volume 4 ; 4 >
+      comment[moved] = moved to Wiley.
+      
+      au < HighWirePressH20Plugin ; down ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
 
     }
     
