@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# $Id: propose_new_aus.pl,v 1.4 2014-09-30 21:28:43 mellen22 Exp $
+# $Id: propose_new_aus.pl,v 1.5 2015-01-06 02:33:53 mellen22 Exp $
 #
 # Read in a list of AUs defined with the HighWire plugins.
 # Propose new AUs, either before or after the range provided
@@ -20,7 +20,7 @@ my @Usage = ("$0 [-h] [--pre=<num1>] [--post=<num2>] auid_file\n",
     "-c            Use ClockssHighWirePressH20Plugin (default HighWirePressH20Plugin)\n",
     "-h            Print this help message.");
 sub usage {
-    print '$Revision: 1.4 $' . "\n";
+    print '$Revision: 1.5 $' . "\n";
     print "Usage:\n @Usage\n";
     exit(1);
 }
@@ -45,30 +45,30 @@ while (my $line = <>) {
     chomp($line);
     # Check only for HighWire plugins.
     if ($line =~ m/(HighWireStrVolPlugin|HighWirePressPlugin|HighWirePressH20Plugin|HighWireDrupalPlugin)/i) {
-	if ($line =~ m/\&base_url~(\S+)\&volume_name~(\d+)/) {
-	    my $base_url = $1;
-	    my $vol_num  = $2;
-	    if (! exists($au_volume{$base_url})) {
-		$au_volume{$base_url}{min} = $vol_num;
-		$au_volume{$base_url}{max} = $vol_num;
-	    } else {
-		if ($vol_num < $au_volume{$base_url}{min}) {
-		    $au_volume{$base_url}{min} = $vol_num;
-		}
-		if ($vol_num > $au_volume{$base_url}{max}) {
-		    $au_volume{$base_url}{max} = $vol_num;
-		}
-	    }
-	}
+      if ($line =~ m/\&base_url~(\S+)\&volume_name~(\d+)/) {
+        my $base_url = $1;
+        my $vol_num  = $2;
+        if (! exists($au_volume{$base_url})) {
+          $au_volume{$base_url}{min} = $vol_num;
+          $au_volume{$base_url}{max} = $vol_num;
+        } else {
+        if ($vol_num < $au_volume{$base_url}{min}) {
+          $au_volume{$base_url}{min} = $vol_num;
+        }
+        if ($vol_num > $au_volume{$base_url}{max}) {
+          $au_volume{$base_url}{max} = $vol_num;
+        }
+      }
     }
+  }
 }
 
 foreach my $base_url (sort(keys(%au_volume))) {
     for (my $x = $au_volume{$base_url}{min} - $opt_pre; $x < $au_volume{$base_url}{min}; ++$x) {
-	&print_au($plugin, $base_url, $x) if ($x > 0);
+      &print_au($plugin, $base_url, $x) if ($x > 0);
     }
     for (my $x = $au_volume{$base_url}{max} + 1; $x <= $au_volume{$base_url}{max} + $opt_post; ++$x) {
-	&print_au($plugin, $base_url, $x) if ($x > 0);
+      &print_au($plugin, $base_url, $x) if ($x > 0);
     }
 }
 
@@ -77,7 +77,7 @@ exit(0);
 sub print_au {
     my ($plugin, $base_url, $vol_num) = @_;
     printf("%s|%s|%s|%s|%s\n", "org", "lockss", "plugin", "highwire",
-	"${plugin}\&base_url~${base_url}\&volume_name~${vol_num}");
+    "${plugin}\&base_url~${base_url}\&volume_name~${vol_num}");
     return(1);
 }
 
