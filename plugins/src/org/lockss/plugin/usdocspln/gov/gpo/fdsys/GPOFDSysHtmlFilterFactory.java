@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.10 2015-01-06 22:43:55 thib_gc Exp $
+ * $Id: GPOFDSysHtmlFilterFactory.java,v 1.11 2015-01-06 22:44:56 thib_gc Exp $
  */
 
 /*
@@ -59,7 +59,6 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
                       Pattern.CASE_INSENSITIVE); 
   
   public boolean shouldFilter(InputStream is, String encoding) throws IOException {
-    logger.setLevel(Logger.LEVEL_DEBUG3);
     BufferedReader br = new BufferedReader(new InputStreamReader(new BoundedInputStream(is, 2000), encoding));
     boolean title42 = false;
     for (String line = br.readLine() ; line != null ; line = br.readLine()) {
