@@ -1,9 +1,10 @@
-/* $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.5 2014-12-23 19:16:30 alexandraohlson Exp $
+/*
+ * $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.6 2015-01-06 20:53:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,10 +48,7 @@ import java.util.regex.Pattern;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
-import org.lockss.extractor.HtmlFormExtractor;
-import org.lockss.extractor.JsoupHtmlLinkExtractor;
-import org.lockss.extractor.JsoupHtmlLinkExtractor.LinkExtractor;
-import org.lockss.extractor.LinkExtractorFactory;
+import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.ScriptTagLinkExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
@@ -79,7 +77,8 @@ implements LinkExtractorFactory {
    * Simple version for most Atypon children
    * restrict the form download URLs to just those forms with the name="frmCitMgr"
    */
-  public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType) {
+  @Override
+  public LinkExtractor createLinkExtractor(String mimeType) {
     // set up the base link extractor to use specific includes and excludes
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
     setFormRestrictors(extractor);
@@ -92,7 +91,7 @@ implements LinkExtractorFactory {
    * for use by the citation download FORM extractor
    * This method merges the child restrictions with the necessary base restriction
    */
-  public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType, Map<String, HtmlFormExtractor.FormFieldRestrictions> child_restrictor) {
+  public LinkExtractor createLinkExtractor(String mimeType, Map<String, HtmlFormExtractor.FormFieldRestrictions> child_restrictor) {
     // set up the base link extractor to use specific includes and excludes
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
     setFormRestrictors(extractor, child_restrictor);
@@ -153,7 +152,7 @@ implements LinkExtractorFactory {
    * For a child plugin to use its own subclassed simple tag link extractor
    * to handle <a> tags, override this method
    */
-  protected LinkExtractor createLinkTagExtractor(String attr) {
+  protected JsoupHtmlLinkExtractor.LinkExtractor createLinkTagExtractor(String attr) {
     return new BaseAtyponLinkTagLinkExtractor(attr);
   }
 
@@ -161,7 +160,7 @@ implements LinkExtractorFactory {
    * For a child plugin to use its own subclassed script tag link extractor
    * override this method
    */
-  protected LinkExtractor createScriptTagExtractor() {
+  protected JsoupHtmlLinkExtractor.LinkExtractor createScriptTagExtractor() {
     return new BaseAtyponScriptTagLinkExtractor();
   }
 
