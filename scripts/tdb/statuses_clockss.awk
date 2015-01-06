@@ -9,8 +9,10 @@ BEGIN {
 {
   # add a loop to add line only if ending year is gt or eq to contract year
   current_year = 2014
+  # end_year is the AU year, or the second half of a range, ie 2014 in 2013-2014
   end_year = 0
   incontract = 0
+  # test_year is the contract year, or the back year if there is one.
   test_year = ""
   if ($7 == "") {
     test_year = $3
@@ -22,7 +24,7 @@ BEGIN {
   }
   #printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
   if (end_year >= test_year) {
-    if ((end_year < current_year) || ((end_year >= current_year) && (incl_cur == 1))) {
+    if ((end_year < current_year) || ((end_year == current_year) && (incl_cur == 1))) {
       incontract = 1
     }
   } 
