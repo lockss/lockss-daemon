@@ -1602,7 +1602,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; AoB PLANTS Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; released ; 2012 ; AoB PLANTS Volume 2012 ; 2012 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; AoB PLANTS Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; AoB PLANTS Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; AoB PLANTS Volume 6 ; 6 >
 
   }
 
@@ -2156,7 +2156,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 7 ; 7 >
 
     }
 
@@ -4632,8 +4632,8 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Database: The Journal of Biological Databases and Curation Volume 2013 ; 2013 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Database: The Journal of Biological Databases and Curation Volume 2014 ; 2014 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Database: The Journal of Biological Databases and Curation Volume 2013 ; 2013 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Database: The Journal of Biological Databases and Curation Volume 2014 ; 2014 >
 
   }
 
@@ -7354,8 +7354,8 @@
     param[base_url] = http://gastro.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Gastroenterology Report Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Gastroenterology Report Volume 2 ; 2 >
       
   }
       
@@ -16522,7 +16522,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; exists ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Music Therapy Perspectives Volume 32 ; 32 >
 
     }
@@ -20269,8 +20269,8 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < released ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 >
-    au < expected ; 2013 ; Review of Corporate Finance Studies Volume 2 ; 2 >
-    au < expected ; 2014 ; Review of Corporate Finance Studies Volume 3 ; 3 >
+    au < manifest ; 2013 ; Review of Corporate Finance Studies Volume 2 ; 2 >
+    au < manifest ; 2014 ; Review of Corporate Finance Studies Volume 3 ; 3 >
 
   }
 
@@ -22436,7 +22436,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Yearbook of European Law Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Yearbook of European Law Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Yearbook of European Law Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Yearbook of European Law Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Yearbook of European Law Volume 33 ; 33 >
 
   }
 
@@ -22782,8 +22782,8 @@
 
     {
 
-      au < exists ; 2013 ; London Review of International Law Volume 1 ; 1 >
-      au < exists ; 2014 ; London Review of International Law Volume 2 ; 2 >
+      au < manifest ; 2013 ; London Review of International Law Volume 1 ; 1 >
+      au < manifest ; 2014 ; London Review of International Law Volume 2 ; 2 >
 
     }
 
@@ -22803,8 +22803,8 @@
 
     {
 
-      au < exists ; 2013 ; Migration Studies Volume 1 ; 1 >
-      au < expected ; 2014 ; Migration Studies Volume 2 ; 2 >
+      au < manifest ; 2013 ; Migration Studies Volume 1 ; 1 >
+      au < manifest ; 2014 ; Migration Studies Volume 2 ; 2 >
 
     }
 
@@ -23504,7 +23504,7 @@
     au < doNotProcess ; 2010 ; Poultry Science Volume 89 ; 89 >
     au < doNotProcess ; 2011 ; Poultry Science Volume 90 ; 90 >
     au < doNotProcess ; 2012 ; Poultry Science Volume 91 ; 91 >
-    au < exists ; 2013 ; Poultry Science Volume 92 ; 92 >
+    au < manifest ; 2013 ; Poultry Science Volume 92 ; 92 >
     au < manifest ; 2014 ; Poultry Science Volume 93 ; 93 >
 
   }
