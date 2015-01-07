@@ -169,17 +169,26 @@
       eissn = 2043-8575 ;
       issnl = 2043-8567 
      >
-
+    {
     param[journal_id] = brw
 
-    au < crawling ; crawling ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
-    au < crawling ; crawling ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
-    au < crawling ; crawling ; 2010 ; Britain and the World Volume 3 ; 3 >
+    au < superseded ; down ; 2008-2009 ; British Scholar Volume 1 [superseded] ; 1 >
+    au < superseded ; down ; 2009-2010 ; British Scholar Volume 2 [superseded] ; 2 >
+    au < superseded ; down ; 2010 ; British Scholar Volume 3 [superseded] ; 3 >
     au < finished ; crawling ; 2011 ; Britain and the World Volume 4 ; 4 >
     au < finished ; crawling ; 2012 ; Britain and the World Volume 5 ; 5 >
     au < crawling ; exists ; 2013 ; Britain and the World Volume 6 ; 6 >
     au < manifest ; exists ; 2014 ; Britain and the World Volume 7 ; 7 >
+    
+    }
+    {
+    param[journal_id] = brs
 
+    au < exists ; exists ; 2008-2009 ; British Scholar Volume 1 ; 1 >
+    au < exists ; exists ; 2009-2010 ; British Scholar Volume 2 ; 2 >
+    au < exists ; exists ; 2010 ; British Scholar Volume 3 ; 3 >
+
+    }
   }
 
   {
