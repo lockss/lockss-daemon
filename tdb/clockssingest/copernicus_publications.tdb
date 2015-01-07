@@ -9,6 +9,7 @@
 
     plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] >
+    comment[year] = year as param, not really use in plugin
 
   {
     title <
@@ -19,6 +20,7 @@
       attr[journal_id] = ADGEO
       param[base_url] = http://www.adv-geosci.net/
       param[home_url] = http://www.advances-in-geosciences.net/
+      comment[v37] = publication year is 2013 to 2014, publisher puts it under 2013, we collect it under 2014
 
       au < manifest ; exists ; 2003 ; 2003 ; Advances in Geosciences Volume 1 ; 1 >
       au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 2 ; 2 >
@@ -56,7 +58,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
-      au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
+      au < crawling ; exists ; 2013-2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
       au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
       au < manifest ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 >
       au < manifest ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 >
