@@ -538,7 +538,7 @@
         au < zapped ; finished ; 2012 ; Adult Learning Volume 23 ; 23 ; >
         au < crawling ; exists ; 2013 ; Adult Learning Volume 24 ; 24 ; >
         au < crawling ; exists ; 2014 ; Adult Learning Volume 25 ; 25 ; >
-        au < expected ; exists ; 2015 ; Adult Learning Volume 26 ; 26 ; >
+        au < manifest ; exists ; 2015 ; Adult Learning Volume 26 ; 26 ; >
 
       }
 
@@ -1410,7 +1410,7 @@
       au < finished ; crawling ; 2012 ; American Politics Research Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; American Politics Research Volume 41 ; 41 ; >
       au < manifest ; exists ; 2014 ; American Politics Research Volume 42 ; 42 ; >
-      au < expected ; exists ; 2015 ; American Politics Research Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2015 ; American Politics Research Volume 43 ; 43 ; >
 
     }
 
@@ -2344,7 +2344,7 @@
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 654 ; 654 ; >
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 655 ; 655 ; >
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 656 ; 656 ; >
-      au < expected ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 657 ; 657 ; >
+      au < manifest ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 657 ; 657 ; >
 
     }
 
@@ -2656,16 +2656,16 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://aan.sagepub.com/
 
-    au < exists ; exists ; 1993 ; Asian Cardiovascular and Thoracic Annals Volume 1 ; 1 ; >
-    au < exists ; exists ; 1994 ; Asian Cardiovascular and Thoracic Annals Volume 2 ; 2 ; >
-    au < exists ; exists ; 1995 ; Asian Cardiovascular and Thoracic Annals Volume 3 ; 3 ; >
-    au < exists ; exists ; 1996 ; Asian Cardiovascular and Thoracic Annals Volume 4 ; 4 ; >
-    au < exists ; exists ; 1997 ; Asian Cardiovascular and Thoracic Annals Volume 5 ; 5 ; >
-    au < exists ; exists ; 1998 ; Asian Cardiovascular and Thoracic Annals Volume 6 ; 6 ; >
-    au < exists ; exists ; 1999 ; Asian Cardiovascular and Thoracic Annals Volume 7 ; 7 ; >
-    au < exists ; exists ; 2000 ; Asian Cardiovascular and Thoracic Annals Volume 8 ; 8 ; >
-    au < exists ; exists ; 2001 ; Asian Cardiovascular and Thoracic Annals Volume 9 ; 9 ; >
-    au < exists ; exists ; 2002 ; Asian Cardiovascular and Thoracic Annals Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1993 ; Asian Cardiovascular and Thoracic Annals Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1994 ; Asian Cardiovascular and Thoracic Annals Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1995 ; Asian Cardiovascular and Thoracic Annals Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1996 ; Asian Cardiovascular and Thoracic Annals Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1997 ; Asian Cardiovascular and Thoracic Annals Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1998 ; Asian Cardiovascular and Thoracic Annals Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1999 ; Asian Cardiovascular and Thoracic Annals Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2000 ; Asian Cardiovascular and Thoracic Annals Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2001 ; Asian Cardiovascular and Thoracic Annals Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2002 ; Asian Cardiovascular and Thoracic Annals Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; Asian Cardiovascular and Thoracic Annals Volume 11 ; 11 ; >
     au < manifest ; exists ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 ; >
     au < manifest ; exists ; 2005 ; Asian Cardiovascular and Thoracic Annals Volume 13 ; 13 ; >
@@ -6814,7 +6814,7 @@
       au < finished ; frozen ; 2012 ; Cornell Hospitality Quarterly Volume 53 ; 53 ; >
       au < crawling ; exists ; 2013 ; Cornell Hospitality Quarterly Volume 54 ; 54 ; >
       au < manifest ; exists ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; >
-      au < expected ; exists ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; >
 
     }
 
@@ -6911,7 +6911,7 @@
       au < finished ; crawling ; 2012 ; The Counseling Psychologist Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; The Counseling Psychologist Volume 41 ; 41 ; >
       au < manifest ; exists ; 2014 ; The Counseling Psychologist Volume 42 ; 42 ; >
-      au < expected ; exists ; 2015 ; The Counseling Psychologist Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2015 ; The Counseling Psychologist Volume 43 ; 43 ; >
 
     }
 
@@ -8944,7 +8944,7 @@
       au < finished ; frozen ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013 ; Educational Administration Quarterly Volume 49 ; 49 ; >
       au < manifest ; exists ; 2014 ; Educational Administration Quarterly Volume 50 ; 50 ; >
-      au < expected ; exists ; 2015 ; Educational Administration Quarterly Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2015 ; Educational Administration Quarterly Volume 51 ; 51 ; >
 
     }
 
@@ -9205,7 +9205,7 @@
       au < finished ; frozen ; 2012 ; Educational Management Administration & Leadership Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; Educational Management Administration & Leadership Volume 41 ; 41 ; >
       au < manifest ; exists ; 2014 ; Educational Management Administration & Leadership Volume 42 ; 42 ; >
-      au < expected ; exists ; 2015 ; Educational Management Administration & Leadership Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2015 ; Educational Management Administration & Leadership Volume 43 ; 43 ; >
 
     }
 
@@ -12748,7 +12748,7 @@
       au < finished ; crawling ; 2012 ; High Performance Polymers Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; High Performance Polymers Volume 25 ; 25 ; >
       au < manifest ; exists ; 2014 ; High Performance Polymers Volume 26 ; 26 ; >
-      au < expected ; exists ; 2015 ; High Performance Polymers Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2015 ; High Performance Polymers Volume 27 ; 27 ; >
 
     }
 
@@ -15923,7 +15923,7 @@
         au < finished ; frozen ; 2012 ; International Review of Victimology Volume 18 ; 18 ; >
         au < crawling ; exists ; 2013 ; International Review of Victimology Volume 19 ; 19 ; >
         au < manifest ; exists ; 2014 ; International Review of Victimology Volume 20 ; 20 ; >
-        au < expected ; exists ; 2015 ; International Review of Victimology Volume 21 ; 21 ; >
+        au < manifest ; exists ; 2015 ; International Review of Victimology Volume 21 ; 21 ; >
 
       }
 
@@ -16072,7 +16072,7 @@
       au < finished ; crawling ; 2012 ; International Social Work Volume 55 ; 55 ; >
       au < crawling ; exists ; 2013 ; International Social Work Volume 56 ; 56 ; >
       au < manifest ; exists ; 2014 ; International Social Work Volume 57 ; 57 ; >
-      au < expected ; exists ; 2015 ; International Social Work Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2015 ; International Social Work Volume 58 ; 58 ; >
 
     }
 
@@ -16916,7 +16916,7 @@
       au < finished ; crawling ; 2012 ; Journal of Applied Gerontology Volume 31 ; 31 ; >
       au < crawling ; exists ; 2013 ; Journal of Applied Gerontology Volume 32 ; 32 ; >
       au < manifest ; exists ; 2014 ; Journal of Applied Gerontology Volume 33 ; 33 ; >
-      au < expected ; exists ; 2015 ; Journal of Applied Gerontology Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2015 ; Journal of Applied Gerontology Volume 34 ; 34 ; >
 
     }
 
@@ -17801,7 +17801,7 @@
       au < finished ; crawling ; 2012 ; Journal of Career Assessment Volume 20 ; 20 ; >
       au < crawling ; exists ; 2013 ; Journal of Career Assessment Volume 21 ; 21 ; >
       au < manifest ; exists ; 2014 ; Journal of Career Assessment Volume 22 ; 22 ; >
-      au < expected ; exists ; 2015 ; Journal of Career Assessment Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2015 ; Journal of Career Assessment Volume 23 ; 23 ; >
 
     }
 
@@ -17872,7 +17872,7 @@
       au < finished ; crawling ; 2012 ; Journal of Career Development Volume 39 ; 39 ; >
       au < crawling ; exists ; 2013 ; Journal of Career Development Volume 40 ; 40 ; >
       au < manifest ; exists ; 2014 ; Journal of Career Development Volume 41 ; 41 ; >
-      au < expected ; exists ; 2015 ; Journal of Career Development Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2015 ; Journal of Career Development Volume 42 ; 42 ; >
 
     }
 
@@ -18806,7 +18806,7 @@
       au < finished ; frozen ; 2012 ; Journal of Contemporary History Volume 47 ; 47 ; >
       au < crawling ; exists ; 2013 ; Journal of Contemporary History Volume 48 ; 48 ; >
       au < manifest ; exists ; 2014 ; Journal of Contemporary History Volume 49 ; 49 ; >
-      au < expected ; exists ; 2015 ; Journal of Contemporary History Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2015 ; Journal of Contemporary History Volume 50 ; 50 ; >
 
     }
 
@@ -19049,7 +19049,7 @@
         au < zapped ; finished ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 ; >
         au < finished ; frozen ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 ; >
         au < crawling ; exists ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 ; >
-        au < exists ; exists ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 ; >
         au < expected ; exists ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 ; >
 
       }
@@ -19241,7 +19241,7 @@
         au < crawling ; exists ; 2012 ; Journal of Diabetes Science and Technology Volume 6 ; 6 ; >
         au < crawling ; exists ; 2013 ; Journal of Diabetes Science and Technology Volume 7 ; 7 ; >
         au < manifest ; exists ; 2014 ; Journal of Diabetes Science and Technology Volume 8 ; 8 ; >
-        au < expected ; exists ; 2015 ; Journal of Diabetes Science and Technology Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2015 ; Journal of Diabetes Science and Technology Volume 9 ; 9 ; >
 
     }
 
@@ -20288,7 +20288,7 @@
       au < finished ; frozen ; 2012 ; Journal of Family History Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013 ; Journal of Family History Volume 38 ; 38 ; >
       au < manifest ; exists ; 2014 ; Journal of Family History Volume 39 ; 39 ; >
-      au < expected ; exists ; 2015 ; Journal of Family History Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2015 ; Journal of Family History Volume 40 ; 40 ; >
 
     }
 
@@ -21092,7 +21092,7 @@
       au < finished ; crawling ; 2012 ; Journal of Hospitality & Tourism Research Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; Journal of Hospitality & Tourism Research Volume 37 ; 37 ; >
       au < manifest ; exists ; 2014 ; Journal of Hospitality & Tourism Research Volume 38 ; 38 ; >
-      au < expected ; exists ; 2015 ; Journal of Hospitality & Tourism Research Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2015 ; Journal of Hospitality & Tourism Research Volume 39 ; 39 ; >
 
     }
 
@@ -22075,7 +22075,7 @@
       au < finished ; crawling ; 2012 ; Journal of Leadership & Organizational Studies Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Journal of Leadership & Organizational Studies Volume 20 ; 20 ; >
       au < manifest ; exists ; 2014 ; Journal of Leadership & Organizational Studies Volume 21 ; 21 ; >
-      au < expected ; exists ; 2015 ; Journal of Leadership & Organizational Studies Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; Journal of Leadership & Organizational Studies Volume 22 ; 22 ; >
 
     }
 
@@ -22791,7 +22791,7 @@
       au < finished ; frozen ; 2012 ; Journal of Oncology Pharmacy Practice Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Journal of Oncology Pharmacy Practice Volume 19 ; 19 ; >
       au < manifest ; exists ; 2014 ; Journal of Oncology Pharmacy Practice Volume 20 ; 20 ; >
-      au < expected ; exists ; 2015 ; Journal of Oncology Pharmacy Practice Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2015 ; Journal of Oncology Pharmacy Practice Volume 21 ; 21 ; >
 
     }
 
@@ -23585,7 +23585,7 @@
     param[base_url] = http://jrt.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 ; >
 
   }
 
@@ -23710,7 +23710,7 @@
       au < finished ; crawling ; 2012 ; Journal of Research in Crime and Delinquency Volume 49 ; 49 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in Crime and Delinquency Volume 50 ; 50 ; >
       au < manifest ; exists ; 2014 ; Journal of Research in Crime and Delinquency Volume 51 ; 51 ; >
-      au < expected ; exists ; 2015 ; Journal of Research in Crime and Delinquency Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2015 ; Journal of Research in Crime and Delinquency Volume 52 ; 52 ; >
 
     }
 
@@ -24203,7 +24203,7 @@
       au < finished ; frozen ; 2012 ; Journal of Social Work Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Journal of Social Work Volume 13 ; 13 ; >
       au < manifest ; exists ; 2014 ; Journal of Social Work Volume 14 ; 14 ; >
-      au < expected ; exists ; 2015 ; Journal of Social Work Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2015 ; Journal of Social Work Volume 15 ; 15 ; >
 
     }
 
@@ -24513,7 +24513,7 @@
       au < finished ; crawling ; 2012 ; Journal of Sports Economics Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Journal of Sports Economics Volume 14 ; 14 ; >
       au < manifest ; exists ; 2014 ; Journal of Sports Economics Volume 15 ; 15 ; >
-      au < expected ; exists ; 2015 ; Journal of Sports Economics Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2015 ; Journal of Sports Economics Volume 16 ; 16 ; >
 
     }
 
@@ -29246,7 +29246,7 @@
       au < crawling ; exists ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 149 ; 149 ; >
       au < manifest ; exists ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 150 ; 150 ; >
       au < manifest ; exists ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 151 ; 151 ; >
-      au < expected ; exists ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 ; >
+      au < manifest ; exists ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 ; >
 
     }
 
@@ -29545,7 +29545,7 @@
       au < finished ; frozen ; 2012 ; Personality and Social Psychology Review Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Personality and Social Psychology Review Volume 17 ; 17 ; >
       au < manifest ; exists ; 2014 ; Personality and Social Psychology Review Volume 18 ; 18 ; >
-      au < expected ; exists ; 2015 ; Personality and Social Psychology Review Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2015 ; Personality and Social Psychology Review Volume 19 ; 19 ; >
 
     }
 
@@ -30043,7 +30043,7 @@
       au < finished ; frozen ; 2012 ; Planning Theory Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Planning Theory Volume 12 ; 12 ; >
       au < manifest ; exists ; 2014 ; Planning Theory Volume 13 ; 13 ; >
-      au < expected ; exists ; 2015 ; Planning Theory Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2015 ; Planning Theory Volume 14 ; 14 ; >
 
     }
 
@@ -30909,7 +30909,7 @@
       au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 226 ; 226 ; >
       au < crawling ; exists ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 227 ; 227 ; >
       au < manifest ; exists ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 228 ; 228 ; >
-      au < expected ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 229 ; 229 ; >
+      au < manifest ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 229 ; 229 ; >
 
     }
 
@@ -32185,7 +32185,7 @@
       au < finished ; frozen ; 2012 ; Public Understanding of Science Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Public Understanding of Science Volume 22 ; 22 ; >
       au < manifest ; exists ; 2014 ; Public Understanding of Science Volume 23 ; 23 ; >
-      au < expected ; exists ; 2015 ; Public Understanding of Science Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2015 ; Public Understanding of Science Volume 24 ; 24 ; >
 
     }
 
@@ -34677,7 +34677,7 @@
       au < finished ; frozen ; 2012 ; Small Group Research Volume 43 ; 43 ; >
       au < crawling ; exists ; 2013 ; Small Group Research Volume 44 ; 44 ; >
       au < manifest ; exists ; 2014 ; Small Group Research Volume 45 ; 45 ; >
-      au < expected ; exists ; 2015 ; Small Group Research Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2015 ; Small Group Research Volume 46 ; 46 ; >
 
     }
 
@@ -35322,7 +35322,7 @@
       au < finished ; crawling ; 2012 ; Sociology of Education Volume 85 ; 85 ; >
       au < crawling ; exists ; 2013 ; Sociology of Education Volume 86 ; 86 ; >
       au < manifest ; exists ; 2014 ; Sociology of Education Volume 87 ; 87 ; >
-      au < expected ; exists ; 2015 ; Sociology of Education Volume 88 ; 88 ; >
+      au < manifest ; exists ; 2015 ; Sociology of Education Volume 88 ; 88 ; >
 
     }
 
@@ -39470,7 +39470,7 @@
       au < finished ; frozen ; 2012 ; World Journal for Pediatric and Congenital Heart Surgery Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; World Journal for Pediatric and Congenital Heart Surgery Volume 4 ; 4 ; >
       au < manifest ; exists ; 2014 ; World Journal for Pediatric and Congenital Heart Surgery Volume 5 ; 5 ; >
-      au < expected ; exists ; 2015 ; World Journal for Pediatric and Congenital Heart Surgery Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2015 ; World Journal for Pediatric and Congenital Heart Surgery Volume 6 ; 6 ; >
 
 
     }
@@ -41315,7 +41315,7 @@
 
     au < crawling ; exists ; 2013 ; Foot & Ankle International Volume 34 ; 34 ; >
     au < manifest ; exists ; 2014 ; Foot & Ankle International Volume 35 ; 35 ; >
-    au < expected ; exists ; 2015 ; Foot & Ankle International Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2015 ; Foot & Ankle International Volume 36 ; 36 ; >
 
     }
 
@@ -41511,7 +41511,7 @@
 
     au < crawling ; exists ; 2013 ; Mobile Media & Communication Volume 1 ; 1 ; >
     au < manifest ; exists ; 2014 ; Mobile Media & Communication Volume 2 ; 2 ; >
-    au < expected ; exists ; 2015 ; Mobile Media & Communication Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; Mobile Media & Communication Volume 3 ; 3 ; >
 
     }
 
@@ -41544,7 +41544,7 @@
     param[base_url] = http://sco.sagepub.com/
 
     au < crawling ; exists ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 ; >
-    au < expected ; exists ; 2014 ; SAGE Open Medical Case Reports Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; SAGE Open Medical Case Reports Volume 2 ; 2 ; >
     au < expected ; exists ; 2015 ; SAGE Open Medical Case Reports Volume 3 ; 3 ; >
 
     }
@@ -41574,7 +41574,7 @@
     param[base_url] = http://smo.sagepub.com/
 
     au < crawling ; exists ; 2013 ; SAGE Open Medicine Volume 1 ; 1 ; >
-    au < expected ; exists ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; >
     au < expected ; exists ; 2015 ; SAGE Open Medicine Volume 3 ; 3 ; >
 
     }
@@ -41827,7 +41827,7 @@
         au < crawling ; exists ; 2012 ; Acta Radiologica Volume 53 ; 53 ; >
         au < crawling ; exists ; 2013 ; Acta Radiologica Volume 54 ; 54 ; >
         au < manifest ; exists ; 2014 ; Acta Radiologica Volume 55 ; 55 ; >
-        au < expected ; exists ; 2015 ; Acta Radiologica Volume 56 ; 56 ; >
+        au < manifest ; exists ; 2015 ; Acta Radiologica Volume 56 ; 56 ; >
 
     }
 
@@ -41861,7 +41861,7 @@
         au < exists ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
         au < crawling ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 ; >
         au < manifest ; exists ; 2014 ; Annals of Clinical Biochemistry Volume 51 ; 51 ; >
-        au < exists ; exists ; 2015 ; Annals of Clinical Biochemistry Volume 52 ; 52 ; >
+        au < manifest ; exists ; 2015 ; Annals of Clinical Biochemistry Volume 52 ; 52 ; >
 
     }
 
@@ -41915,8 +41915,8 @@
         au < exists ; exists ; 2010 ; Clinical Risk Volume 16 ; 16 ; >
         au < exists ; exists ; 2011 ; Clinical Risk Volume 17 ; 17 ; >
         au < exists ; exists ; 2012 ; Clinical Risk Volume 18 ; 18 ; >
-        au < exists ; exists ; 2013 ; Clinical Risk Volume 19 ; 19 ; >
-        au < exists ; exists ; 2014 ; Clinical Risk Volume 20 ; 20 ; >
+        au < manifest ; exists ; 2013 ; Clinical Risk Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2014 ; Clinical Risk Volume 20 ; 20 ; >
         au < expected ; exists ; 2015 ; Clinical Risk Volume 21 ; 21 ; >
 
     }
@@ -42402,8 +42402,9 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nan.sagepub.com/
 
-        au < manifest ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
-        au < expected ; exists ; 2015 ; International Journal of Green Nanotechnology Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
+        au < manifest ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 ; >
+        au < expected ; exists ; 2015 ; International Journal of Green Nanotechnology Volume 3 ; 3 ; >
 
       }
 
