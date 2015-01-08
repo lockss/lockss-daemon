@@ -1,10 +1,10 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.7 2014-12-02 21:00:36 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.8 2015-01-08 01:09:38 alexandraohlson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@
 package org.lockss.plugin.elsevier;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -280,15 +281,19 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
       Matcher mat = TOP_METADATA_PATTERN.matcher(datasetCu.getUrl());
       Pattern ARTICLE_METADATA_PATTERN = null;
       if (mat.matches()) {
-        String pattern_string = mat.group(1) + mat.group(2) + "[A-Z]\\.tar!/" + mat.group(2) + "/.*/main\\.xml$";
+        // must create this here because it is specific to this tar set
+        String pattern_string = "^" + mat.group(1) + mat.group(2) + "[A-Z]\\.tar!/" + mat.group(2) + "/.*/main\\.xml$";
         log.debug3("Iterate and find the pattern: " + pattern_string);
         ARTICLE_METADATA_PATTERN = Pattern.compile(pattern_string, Pattern.CASE_INSENSITIVE);
-
+        
+        // Limit the scope of the iteration to only those TAR archives that share this tar number
+        List<String> rootList = createRootList(datasetCu, mat);
         // Now create the map of files to the tarfile they're in
         ArchivalUnit au = datasetCu.getArchivalUnit();
         SubTreeArticleIteratorBuilder articlebuilder = new SubTreeArticleIteratorBuilder(au);
         SubTreeArticleIterator.Spec artSpec = articlebuilder.newSpec();
         // Limit it just to this group of tar files
+        artSpec.setRoots(rootList); 
         artSpec.setPattern(ARTICLE_METADATA_PATTERN); // look for url-ending "main.xml" files
         artSpec.setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN); //but do not descend in to any underlying archives
         artSpec.setVisitArchiveMembers(true);
@@ -312,6 +317,30 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
       }
       return  allAMs;
     }
+  }
+  
+  /* 
+   * Create a list of strings, one for each unique tar within this tarset.
+   * The passed in CU is for the A file of the list, the one that dataset.xml came off of.
+   */
+  
+  private List<String> createRootList(CachedUrl cu, Matcher mat) {
+    String test_tar_name;
+    String tar_begin = mat.group(1) + mat.group(2);
+    List<String> rootList = new ArrayList<String>();
+    // we know this one exists!
+    rootList.add(tar_begin + "A.tar");
+    for(char alphabet = 'B'; alphabet <= 'Z';alphabet++) {
+      test_tar_name = tar_begin + String.valueOf(alphabet) + ".tar";
+      CachedUrl testCu = cu.getArchivalUnit().makeCachedUrl(test_tar_name);
+      if ((testCu == null) || (!testCu.hasContent())){
+        break;
+      } else {
+        rootList.add(test_tar_name);
+      }
+    }
+    log.debug3("ROOT templates for inner iterator is: " + rootList.toString());
+    return rootList;
   }
 
 }
