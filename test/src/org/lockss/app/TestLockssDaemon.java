@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.14 2014-10-24 19:43:32 thib_gc Exp $
+ * $Id: TestLockssDaemon.java,v 1.15 2015-01-08 06:25:31 tlipkis Exp $
  */
 
 /*
@@ -247,7 +247,7 @@ public class TestLockssDaemon extends LockssTestCase {
   }
   
   public void testMinJavaVersion() throws Exception {
-    assertEquals(JavaVersion.JAVA_1_6, LockssDaemon.MIN_JAVA_VERSION);
+    assertEquals(JavaVersion.JAVA_1_7, LockssDaemon.MIN_JAVA_VERSION);
   }
   
   List events;

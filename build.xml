@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.388 2015-01-08 06:25:31 tlipkis Exp $
+ $Id: build.xml,v 1.389 2015-01-08 06:29:12 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -809,6 +809,12 @@ Test results in ${test.results}
      </or>
     </condition>
 
+    <condition property="is-java-eq-1.7">
+     <or>
+      <equals arg1="1.7" arg2="${my.ant.java.version}"/>
+     </or>
+    </condition>
+
     <condition property="is-java-ge-1.7">
      <or>
       <equals arg1="1.7" arg2="${my.ant.java.version}"/>
@@ -838,7 +844,7 @@ Java ${my.ant.java.version} found, 1.7 required
 	 requirements -->
     <condition property="is-satisfy-java-max-version">
      <or>
-      <istrue value="${is-java-le-1.7}" />
+      <istrue value="${is-java-eq-1.7}" />
      </or>
     </condition>
 
