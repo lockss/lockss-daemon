@@ -2422,7 +2422,21 @@
     au < down ; crawling ; 2011 ; Brain Volume 134 ; 134 ; >
     au < down ; crawling ; 2012 ; Brain Volume 135 ; 135 ; >
     au < down ; manifest ; 2013 ; Brain Volume 136 ; 136 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Brain Volume 137 ; 137 ; >
+
+    }
+
+    {
+
+    param[base_url] = http://brain.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+    comment[down] = Moved to Drupal platform
+
+    au < doNotProcess ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Brain Volume 136 ; 136 ; >
+    au < exists ; exists ; 2014 ; Brain Volume 137 ; 137 ; >
+    au < exists ; exists ; 2015 ; Brain Volume 138 ; 138 ; >
 
     }
 
