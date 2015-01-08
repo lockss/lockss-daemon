@@ -732,10 +732,10 @@
     >
 
     param[journal_id] = 164
-    comment[0] = no years 2011, 2012, 2013 as of 4/25/13
+    comment[0] = no years 2011, 2012, 2013. Subscription content. Publisher does not intend to give access.
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2 ; 2010 >
+    au < doNotProcess ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 1 ; 2009 >
+    au < doNotProcess ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2 ; 2010 >
 
   }
 
@@ -748,12 +748,12 @@
     >
 
     param[journal_id] = 163
-    comment[0] = no years 2013 as of 10/4/14
+    comment[0] = no years 2013 as of 10/4/14. Subscription content. Publisher does not intend to give access.
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 4 ; 2012 >
+    au < doNotProcess ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 1 ; 2009 >
+    au < doNotProcess ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2 ; 2010 >
+    au < down ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 3 ; 2011 >
+    au < down ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 4 ; 2012 >
 
   }
 
@@ -766,10 +766,10 @@
     >
 
     param[journal_id] = 167
-    comment[0] = no years 2010, 2012, 2013 as of 10/4/13
+    comment[0] = no years 2010, 2012, 2013 as of 10/4/13. Subscription content. Publisher does not intend to give access.
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 1 ; 2009 >
-    au < released ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2 ; 2011 >
+    au < doNotProcess ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 1 ; 2009 >
+    au < down ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -780,14 +780,17 @@
       eissn = 1179-2558
 
     >
+    
+    comment[publisher] = Subscription content. Publisher does not intend to give access.
+    
     param[journal_id] = 166
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 4 ; 2012 >
-    au < exists ; 2013 ; Clinical Medicine Reviews in Therapeutics Volume 5 ; 5 ; 2013 >
-    au < expected ; 2014 ; Clinical Medicine Reviews in Therapeutics Volume 6 ; 6 ; 2014 >
+    au < doNotProcess ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 1 ; 2009 >
+    au < doNotProcess ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2 ; 2010 >
+    au < down ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 3 ; 2011 >
+    au < down ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 4 ; 2012 >
+    au < doNotProcess ; 2013 ; Clinical Medicine Reviews in Therapeutics Volume 5 ; 5 ; 2013 >
+    au < doNotProcess ; 2014 ; Clinical Medicine Reviews in Therapeutics Volume 6 ; 6 ; 2014 >
 
   }
 
@@ -798,15 +801,17 @@
       eissn = 1179-2566
 
     >
+    
+    comment[publisher] = Subscription content. Publisher does not intend to give access.
 
     param[journal_id] = 165
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 4 ; 2012 >
-    au < exists ; 2013 ; Clinical Medicine Reviews in Vascular Health Volume 5 ; 5 ; 2013 >
-    au < expected ; 2014 ; Clinical Medicine Reviews in Vascular Health Volume 6 ; 6 ; 2014 >
+    au < doNotProcess ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 1 ; 2009 >
+    au < doNotProcess ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2 ; 2010 >
+    au < down ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 3 ; 2011 >
+    au < down ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 4 ; 2012 >
+    au < doNotProcess ; 2013 ; Clinical Medicine Reviews in Vascular Health Volume 5 ; 5 ; 2013 >
+    au < doNotProcess ; 2014 ; Clinical Medicine Reviews in Vascular Health Volume 6 ; 6 ; 2014 >
 
   }
 
@@ -817,15 +822,17 @@
       eissn = 1179-2574
 
     >
+    
+    comment[publisher] = Subscription content. Publisher does not intend to give access.
 
     param[journal_id] = 162
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 4 ; 2012 >
-    au < expected ; 2013 ; Clinical Medicine Reviews in Women's Health Volume 5 ; 5 ; 2013 >
-    au < expected ; 2014 ; Clinical Medicine Reviews in Women's Health Volume 6 ; 6 ; 2014 >
+    au < doNotProcess ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 1 ; 2009 >
+    au < doNotProcess ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2 ; 2010 >
+    au < down ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 3 ; 2011 >
+    au < down ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 4 ; 2012 >
+    au < doNotProcess ; 2013 ; Clinical Medicine Reviews in Women's Health Volume 5 ; 5 ; 2013 >
+    au < doNotProcess ; 2014 ; Clinical Medicine Reviews in Women's Health Volume 6 ; 6 ; 2014 >
 
   }
 
