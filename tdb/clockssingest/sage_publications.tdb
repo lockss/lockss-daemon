@@ -41313,6 +41313,19 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://fai.sagepub.com/
 
+    au < exists ; exists ; 2000 ; Foot & Ankle International Volume 21 ; 21 ; >
+    au < exists ; exists ; 2001 ; Foot & Ankle International Volume 22 ; 22 ; >
+    au < exists ; exists ; 2002 ; Foot & Ankle International Volume 23 ; 23 ; >
+    au < exists ; exists ; 2003 ; Foot & Ankle International Volume 24 ; 24 ; >
+    au < exists ; exists ; 2004 ; Foot & Ankle International Volume 25 ; 25 ; >
+    au < exists ; exists ; 2005 ; Foot & Ankle International Volume 26 ; 26 ; >
+    au < exists ; exists ; 2006 ; Foot & Ankle International Volume 27 ; 27 ; >
+    au < exists ; exists ; 2007 ; Foot & Ankle International Volume 28 ; 28 ; >
+    au < exists ; exists ; 2008 ; Foot & Ankle International Volume 29 ; 29 ; >
+    au < exists ; exists ; 2009 ; Foot & Ankle International Volume 30 ; 30 ; >
+    au < exists ; exists ; 2010 ; Foot & Ankle International Volume 31 ; 31 ; >
+    au < exists ; exists ; 2011 ; Foot & Ankle International Volume 32 ; 32 ; >
+    au < exists ; exists ; 2012 ; Foot & Ankle International Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; Foot & Ankle International Volume 34 ; 34 ; >
     au < manifest ; exists ; 2014 ; Foot & Ankle International Volume 35 ; 35 ; >
     au < manifest ; exists ; 2015 ; Foot & Ankle International Volume 36 ; 36 ; >
