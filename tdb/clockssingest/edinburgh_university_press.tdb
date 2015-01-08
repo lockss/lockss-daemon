@@ -570,19 +570,32 @@
       eissn = 1755-1722 ;
       issnl = 1755-0882 
      >
-
+     
+     comment[moved] = journal moved to Sage. http://ipt.sagepub.com. Content still online as of 1/2014.
+     comment[changed_manifest] = Manifest pages may be down, disallowing reprocessing of the AUs that were chopped off at the knees.
+    {
     param[journal_id] = jipt
 
-    au < crawling ; crawling ; 2005 ; Journal of International Political Theory Volume 1 ; 1 >
-    au < crawling ; crawling ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
-    au < crawling ; crawling ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
+    au < superseded ; down ; 2005 ; Journal of International Political Theory Volume 1 [superseded] ; 1 >
+    au < superseded ; down ; 2006 ; Journal of International Political Theory Volume 2 [superseded] ; 2 >
+    au < superseded ; down ; 2007 ; Journal of International Political Theory Volume 3 [superseded] ; 3 >
     au < finished ; crawling ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
     au < finished ; crawling ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
     au < finished ; frozen ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
     au < finished ; crawling ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
     au < crawling ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
-    au < expected ; exists ; 2014 ; Journal of International Political Theory Volume 10 ; 10 >
+    
+    }
+    
+    {
+    param[journal_id] = per
+
+    au < exists ; exists ; 2005 ; Journal of International Political Theory Volume 1 ; 1 >
+    au < exists ; exists ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
+    au < exists ; exists ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
+    
+    }
 
   }
 
