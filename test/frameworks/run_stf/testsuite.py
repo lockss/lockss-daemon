@@ -3,7 +3,7 @@
 build frameworks.  If desired, optional parameters may also be set to change
 the default behavior.  See testsuite.props for details."""
 
-# $Id: testsuite.py,v 1.82 2014-12-28 08:44:42 tlipkis Exp $
+# $Id: testsuite.py,v 1.83 2015-01-08 06:25:45 tlipkis Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -253,8 +253,7 @@ class V3TestCases( LockssTestCases ):
         self.victim.reloadConfiguration()
 
     def _await_repair( self, nodes ):
-        current_poll_key = self.victim.getV3PollKey( self.AU )
-        summary = self.victim.getPollSummaryFromKey( current_poll_key )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
         # XXX self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for V3 poll' )
         if (summary[ 'Type' ] != 'Local' ):
             # Just pause until we have better tests; assumes that repair
@@ -262,23 +261,20 @@ class V3TestCases( LockssTestCases ):
             self.assert_( self.victim.waitForV3Repair( self.AU, nodes, self.timeout ), 'Timed out while waiting for V3 repair' )
 
     def _verify_repair( self, nodes ):
-        current_poll_key = self.victim.getV3PollKey( self.AU )
-        summary = self.victim.getPollSummaryFromKey( current_poll_key )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
         if (summary[ 'Type' ] != 'Local' ):
             for node in nodes:
                 log.debug('super verify repair of node %s' % node )
                 self.assert_( self._content_matches( node ), 'File not repaired: %s' % node.url )
 
     def _verify_poll_results( self ):
-        current_poll_key = self.victim.getV3PollKey( self.AU )
-        summary = self.victim.getPollSummaryFromKey( current_poll_key )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
         if (summary[ 'Type' ] != 'Local' ):
             self.assertEqual( self.victim.getPollResults( self.AU ),
                               (u'Complete', u'100.00% Agreement') )
 
     def _verify_voter_agreements( self ):
-        current_poll_key = self.victim.getV3PollKey( self.AU )
-        summary = self.victim.getPollSummaryFromKey( current_poll_key )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
         if (summary[ 'Type' ] != 'Local' ):
             for client in self.clients:
                 if client != self.victim:
@@ -302,10 +298,13 @@ class V3TestCases( LockssTestCases ):
 
 
     def _verify_voters_counts( self ):
-        poll_key = self.victim.getV3PollKey( self.AU )
-        voters_counts = self.victim.getV3PollVotersCounts( poll_key )
-        # -1 for us, the victim
-        self.assertEqual( len( self.clients ) + len ( self.offline_peers ) - 1, len( voters_counts ) )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
+        if (summary[ 'Type' ] != 'Local' ):
+            voters_counts = self.victim.getV3PollVotersCounts( self.poll_key )
+            # -1 for us, the victim
+            self.assertEqual( len( self.clients ) +
+                              len ( self.offline_peers ) - 1,
+                              len( voters_counts ) )
 
     def setUp( self ):
         LockssTestCases.setUp( self )
@@ -345,6 +344,9 @@ class V3TestCases( LockssTestCases ):
         log.info( 'Waiting for a V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for V3 poll' )
         log.info( 'Successfully called a V3 poll' )
+        self.poll_key = self.victim.getV3PollKey( self.AU )
+        log.debug( "Victim's poll key: " + self.poll_key )
+        self.victim.waitForThisCompletedV3Poll( self.AU, self.poll_key )
         self._check_v3_result( nodes )
 
     def _check_v3_result( self, nodes, variant = u'Proof of Retrievability'):
@@ -358,8 +360,6 @@ class V3TestCases( LockssTestCases ):
         log.info( 'AU successfully repaired' )
 
     def _verify_poll_type( self, variant ):
-        self.poll_key = self.victim.getV3PollKey( self.AU )
-        log.debug( "Victim's poll key: " + self.poll_key )
         summary = self.victim.getPollSummaryFromKey( self.poll_key )
         self.assertEqual(summary[ 'Type' ], variant )
 
@@ -400,12 +400,11 @@ class PollPolicyTestCases( V3TestCases ):
         return [ ]
 
     def _check_v3_result( self, nodes ):
-        victim_first_poll_key = self.victim.getV3PollKey( self.AU )
+        victim_first_poll_key = self.poll_key
         log.info( 'First poll key: ' + victim_first_poll_key )
         V3TestCases._check_v3_result( self, nodes )
         log.info( 'V3 result checked - was PoR' )
         # Now wait for the next poll
-        log.info( 'self.poll_key: ' + self.poll_key )
         self.assert_( self.victim.waitForV3Poller( self.AU, [ victim_first_poll_key ] ), 'Timed out while waiting for V3 poll' )
         log.info( 'Successfully called a V3 poll' )
         victim_second_poll_key = self.victim.getV3PollKey( self.AU, victim_first_poll_key )
@@ -510,7 +509,6 @@ class SimpleV3LocalTestCase( V3TestCases ):
 
     def _check_v3_result( self , nodes ):
         self._verify_poll_type( 'Local' )
-        self.poll_key = self.victim.getV3PollKey( self.AU )
         log.debug( "Victim's poll key: " + self.poll_key )
         self.victim.waitForThisCompletedV3Poll( self.AU, self.poll_key )
         summary = self.victim.getPollSummaryFromKey( self.poll_key )
@@ -977,7 +975,9 @@ class TotalLossRecoverySymmetricV3TestCase( TotalLossRecoveryV3Tests ):
         log.info( 'Waiting for a V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for first V3 poll' )
         log.info( 'Successfully called first V3 poll' )
-        self.assert_( self.victim.waitForCompletedV3Poll( self.AU ), 'Timed out while waiting for poll to complete' )
+        self.poll_key = self.victim.getV3PollKey( self.AU )
+        log.debug( "Victim's poll key: " + self.poll_key )
+        self.victim.waitForThisCompletedV3Poll( self.AU, self.poll_key )
         self._verify_poll_results()
         self._verify_voter_agreements()
         self._verify_voters_counts()
@@ -987,6 +987,9 @@ class TotalLossRecoverySymmetricV3TestCase( TotalLossRecoveryV3Tests ):
         log.info( 'Waiting for second V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for second V3 poll' )
         log.info( 'Successfully called second V3 poll' )
+        self.poll_key = self.victim.getV3PollKey( self.AU )
+        log.debug( "Victim's second poll key: " + self.poll_key )
+        self.victim.waitForThisCompletedV3Poll( self.AU, self.poll_key )
         # Check the result
         self._await_repair(nodes)
         self._check_v3_result( nodes )
