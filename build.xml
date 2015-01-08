@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.387 2014-12-08 04:10:05 tlipkis Exp $
+ $Id: build.xml,v 1.388 2015-01-08 06:25:31 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -50,7 +50,7 @@ Args:
   -Dforkc=true             Run compiler in a separate jvm.
   -Dhalt=false             Run all tests in group, even if some fail.
   -Dinclude=path           Include matching tests.
-  -Djavaversion=1.6        The version of Java accepted/targeted.
+  -Djavaversion=1.7        The version of Java accepted/targeted.
   -Dkeeptempfiles=true     Don't delete temp files after tests run.
   -Dlistfiles=true         List the source files that will be compiled.  Use if
                               a compile step runs when nothing should need to
@@ -103,7 +103,7 @@ Args:
   <property file="${user.home}/.lockssprops"/>
 
   <!-- Defaults -->
-  <property name="javaversion" value="1.6" />
+  <property name="javaversion" value="1.7" />
   <property name="loglevel" value="" />
   <property name="showoutput" value="no" />
   <property name="filtertrace" value="yes" />
@@ -822,23 +822,23 @@ Test results in ${test.results}
      </or>
     </condition>
 
-    <!-- Require at least Java 1.6, but allow builds if force is set -->
+    <!-- Require at least Java 1.7, but allow builds if force is set -->
     <condition property="is-satisfy-java-min-version">
      <or>
-      <istrue value="${is-java-ge-1.6}" />
+      <istrue value="${is-java-ge-1.7}" />
       <istrue value="${force}" />
      </or>
     </condition>
 
     <fail unless="is-satisfy-java-min-version">
-Java ${my.ant.java.version} found, 1.6 required
+Java ${my.ant.java.version} found, 1.7 required
     </fail>
 
     <!-- Determine whether java version is compatible with release
 	 requirements -->
     <condition property="is-satisfy-java-max-version">
      <or>
-      <istrue value="${is-java-le-1.6}" />
+      <istrue value="${is-java-le-1.7}" />
      </or>
     </condition>
 
@@ -852,7 +852,7 @@ Java ${my.ant.java.version} found, 1.6 required
 
   <target name="require.release.java.version" depends="prepare">
     <fail unless="is-satisfy-java-max-version"
-          message="This target must be run with Java 1.6; you are using Java ${my.ant.java.version}"/>
+          message="This target must be run with Java 1.7; you are using Java ${my.ant.java.version}"/>
   </target>
 
   <!-- ==================================================================== -->
