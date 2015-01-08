@@ -96,7 +96,7 @@
      issnl = 1090-820X
    >
 
-    param[base_url] = http://asj.oxfordjournals.org/ 
+    param[base_url] = http://asj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
@@ -400,7 +400,7 @@
     }
 
   }
-  
+
   {
 
     title <
@@ -443,14 +443,14 @@
   }
 
   {
-  
+
     title <
         name = The American Historical Review ;
         issn = 0002-8762 ;
         eissn = 1937-5239 ;
         issnl = 0002-8762
       >
-      
+
     {
 
     param[base_url] = http://ahr.oxfordjournals.org/
@@ -507,7 +507,7 @@
     au < manifest ; exists ; 1943-1944 ; The American Historical Review Volume 49 ; 49 ; >
     au < manifest ; exists ; 1944-1945 ; The American Historical Review Volume 50 ; 50 ; >
     au < manifest ; exists ; 1945-1946 ; The American Historical Review Volume 51 ; 51 ; >
-    au < manifest ; exists ; 1946-1947 ; The American Historical Review Volume 52 ; 52 ; >                                         
+    au < manifest ; exists ; 1946-1947 ; The American Historical Review Volume 52 ; 52 ; >
     au < manifest ; exists ; 1947-1948 ; The American Historical Review Volume 53 ; 53 ; >
     au < manifest ; exists ; 1948-1949 ; The American Historical Review Volume 54 ; 54 ; >
     au < manifest ; exists ; 1949-1950 ; The American Historical Review Volume 55 ; 55 ; >
@@ -531,30 +531,30 @@
     au < manifest ; exists ; 1967-1968 ; The American Historical Review Volume 73 ; 73 ; >
     au < manifest ; exists ; 1968-1969 ; The American Historical Review Volume 74 ; 74 ; >
     au < manifest ; exists ; 1969-1970 ; The American Historical Review Volume 75 ; 75 ; >
-    au < manifest ; exists ; 1971 ; The American Historical Review Volume 76 ; 76 ; >  
-    au < manifest ; exists ; 1972 ; The American Historical Review Volume 77 ; 77 ; >  
-    au < manifest ; exists ; 1973 ; The American Historical Review Volume 78 ; 78 ; >  
-    au < manifest ; exists ; 1974 ; The American Historical Review Volume 79 ; 79 ; >  
-    au < manifest ; exists ; 1975 ; The American Historical Review Volume 80 ; 80 ; >  
-    au < manifest ; exists ; 1976 ; The American Historical Review Volume 81 ; 81 ; >  
-    au < manifest ; exists ; 1977 ; The American Historical Review Volume 82 ; 82 ; >  
-    au < manifest ; exists ; 1978 ; The American Historical Review Volume 83 ; 83 ; >  
-    au < manifest ; exists ; 1979 ; The American Historical Review Volume 84 ; 84 ; >  
-    au < manifest ; exists ; 1980 ; The American Historical Review Volume 85 ; 85 ; >  
-    au < manifest ; exists ; 1981 ; The American Historical Review Volume 86 ; 86 ; >  
-    au < manifest ; exists ; 1982 ; The American Historical Review Volume 87 ; 87 ; >  
-    au < manifest ; exists ; 1983 ; The American Historical Review Volume 88 ; 88 ; >  
-    au < manifest ; exists ; 1984 ; The American Historical Review Volume 89 ; 89 ; >  
-    au < manifest ; exists ; 1985 ; The American Historical Review Volume 90 ; 90 ; >  
-    au < manifest ; exists ; 1986 ; The American Historical Review Volume 91 ; 91 ; >  
-    au < manifest ; exists ; 1987 ; The American Historical Review Volume 92 ; 92 ; >  
-    au < manifest ; exists ; 1988 ; The American Historical Review Volume 93 ; 93 ; >  
-    au < manifest ; exists ; 1989 ; The American Historical Review Volume 94 ; 94 ; >  
-    au < manifest ; exists ; 1990 ; The American Historical Review Volume 95 ; 95 ; >  
-    au < manifest ; exists ; 1991 ; The American Historical Review Volume 96 ; 96 ; >  
-    au < manifest ; exists ; 1992 ; The American Historical Review Volume 97 ; 97 ; >  
-    au < manifest ; exists ; 1993 ; The American Historical Review Volume 98 ; 98 ; >  
-    au < manifest ; exists ; 1994 ; The American Historical Review Volume 99 ; 99 ; >  
+    au < manifest ; exists ; 1971 ; The American Historical Review Volume 76 ; 76 ; >
+    au < manifest ; exists ; 1972 ; The American Historical Review Volume 77 ; 77 ; >
+    au < manifest ; exists ; 1973 ; The American Historical Review Volume 78 ; 78 ; >
+    au < manifest ; exists ; 1974 ; The American Historical Review Volume 79 ; 79 ; >
+    au < manifest ; exists ; 1975 ; The American Historical Review Volume 80 ; 80 ; >
+    au < manifest ; exists ; 1976 ; The American Historical Review Volume 81 ; 81 ; >
+    au < manifest ; exists ; 1977 ; The American Historical Review Volume 82 ; 82 ; >
+    au < manifest ; exists ; 1978 ; The American Historical Review Volume 83 ; 83 ; >
+    au < manifest ; exists ; 1979 ; The American Historical Review Volume 84 ; 84 ; >
+    au < manifest ; exists ; 1980 ; The American Historical Review Volume 85 ; 85 ; >
+    au < manifest ; exists ; 1981 ; The American Historical Review Volume 86 ; 86 ; >
+    au < manifest ; exists ; 1982 ; The American Historical Review Volume 87 ; 87 ; >
+    au < manifest ; exists ; 1983 ; The American Historical Review Volume 88 ; 88 ; >
+    au < manifest ; exists ; 1984 ; The American Historical Review Volume 89 ; 89 ; >
+    au < manifest ; exists ; 1985 ; The American Historical Review Volume 90 ; 90 ; >
+    au < manifest ; exists ; 1986 ; The American Historical Review Volume 91 ; 91 ; >
+    au < manifest ; exists ; 1987 ; The American Historical Review Volume 92 ; 92 ; >
+    au < manifest ; exists ; 1988 ; The American Historical Review Volume 93 ; 93 ; >
+    au < manifest ; exists ; 1989 ; The American Historical Review Volume 94 ; 94 ; >
+    au < manifest ; exists ; 1990 ; The American Historical Review Volume 95 ; 95 ; >
+    au < manifest ; exists ; 1991 ; The American Historical Review Volume 96 ; 96 ; >
+    au < manifest ; exists ; 1992 ; The American Historical Review Volume 97 ; 97 ; >
+    au < manifest ; exists ; 1993 ; The American Historical Review Volume 98 ; 98 ; >
+    au < manifest ; exists ; 1994 ; The American Historical Review Volume 99 ; 99 ; >
     au < manifest ; exists ; 1995 ; The American Historical Review Volume 100 ; 100 ; >
     au < manifest ; exists ; 1996 ; The American Historical Review Volume 101 ; 101 ; >
     au < manifest ; exists ; 1997 ; The American Historical Review Volume 102 ; 102 ; >
@@ -564,7 +564,7 @@
     au < manifest ; exists ; 2001 ; The American Historical Review Volume 106 ; 106 ; >
     au < manifest ; exists ; 2002 ; The American Historical Review Volume 107 ; 107 ; >
     au < manifest ; exists ; 2003 ; The American Historical Review Volume 108 ; 108 ; >
-    au < manifest ; exists ; 2004 ; The American Historical Review Volume 109 ; 109 ; >   
+    au < manifest ; exists ; 2004 ; The American Historical Review Volume 109 ; 109 ; >
     au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
     au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < manifest ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
@@ -575,9 +575,9 @@
     au < finished ; crawling ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
     au < crawling ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
     au < doNotProcess ; exists ; 2014 ; The American Historical Review Volume 119 ; 119 ; >
-    
+
     }
-    
+
   }
 
   {
@@ -921,7 +921,7 @@
 
     param[base_url] = http://ajh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     comment[nR] = RT 5641 fetch error
 
     au < manifest ; exists ; 1988 ; American Journal of Hypertension Volume 1 ; 1 ; >
@@ -966,7 +966,7 @@
 
     param[base_url] = http://ajj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     au < manifest ; exists ; 1956 ; The American Journal of Jurisprudence Volume 1 ; 1 ; >
     au < manifest ; exists ; 1957 ; The American Journal of Jurisprudence Volume 2 ; 2 ; >
     au < manifest ; exists ; 1958 ; The American Journal of Jurisprudence Volume 3 ; 3 ; >
@@ -1026,7 +1026,7 @@
     au < crawling ; exists ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
     au < doNotProcess ; exists ; 2014 ; The American Journal of Jurisprudence Volume 59 ; 59 ; >
-    
+
   }
 
   {
@@ -1583,7 +1583,7 @@
 
     param[base_url] = http://annonc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     comment[notReady] = V24 has many 509 errors.
 
     au < manifest ; exists ; 1990 ; Annals of Oncology Volume 1 ; 1 ; >
@@ -1784,7 +1784,7 @@
       name = Arbitration International ;
       issn = 0957-0411 ;
       eissn = 1875-8398 ;
-      issnl = 0957-0411 
+      issnl = 0957-0411
     >
 
     param[base_url] = http://arbitration.oxfordjournals.org/
@@ -1891,7 +1891,8 @@
 
     param[base_url] = http://amt.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
-    
+
+    au < manifest ; exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; >
     au < manifest ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
     au < manifest ; exists ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; >
     au < expected ; exists ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; >
@@ -1910,7 +1911,7 @@
 
     param[base_url] = http://astrogeo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     au < manifest ; exists ; 1997 ; Astronomy & Geophysics Volume 38 ; 38 ; >
     au < manifest ; exists ; 1998 ; Astronomy & Geophysics Volume 39 ; 39 ; >
     au < manifest ; exists ; 1999 ; Astronomy & Geophysics Volume 40 ; 40 ; >
@@ -1932,7 +1933,7 @@
     au < doNotProcess ; exists ; 2015 ; Astronomy & Geophysics Volume 56 ; 56 ; >
 
   }
-  
+
   {
 
     title <
@@ -2551,7 +2552,7 @@
 
     title <
       name = Briefings in Functional Genomics ;
-      issn = 2041-2649 
+      issn = 2041-2649
     >
 
      comment[continues] = [1473-9550]
@@ -4024,7 +4025,7 @@
     {
 
     pluginSuffix = ClockssHighWirePressH20Plugin
-    param[base_url] = http://cjcl.oxfordjournals.org/ 
+    param[base_url] = http://cjcl.oxfordjournals.org/
 
     au < crawling ; exists ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 ; >
     au < crawling ; exists ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
@@ -4668,7 +4669,7 @@
      issnl = 2055-7671
    >
 
-    param[base_url] = http://dsh.oxfordjournals.org/ 
+    param[base_url] = http://dsh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < expected ; exists ; 2014 ; Digital Scholarship in the Humanities Volume 1 ; 1 ; >
@@ -4860,7 +4861,7 @@
       name = Economic Policy ;
       issn = 0266-4658 ;
       eissn = 1468-0327 ;
-      issnl = 0266-4658 
+      issnl = 0266-4658
     >
 
     param[base_url] = http://economicpolicy.oxfordjournals.org/
@@ -4895,7 +4896,7 @@
     au < manifest ; exists ; 2012 ; Economic Policy Volume 27 ; 27 ; >
     au < manifest ; exists ; 2013 ; Economic Policy Volume 28 ; 28 ; >
     au < manifest ; exists ; 2014 ; Economic Policy Volume 29 ; 29 ; >
-    
+
   }
 
   {
@@ -5283,7 +5284,7 @@
     param[base_url] = http://ee.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
     comment[0] = content available from 1972 volume 1 to 1989 volume 18
-    
+
     au < exists ; exists ; 1990 ; Environmental Entomology Volume 19 ; 19 ; >
     au < exists ; exists ; 1991 ; Environmental Entomology Volume 20 ; 20 ; >
     au < exists ; exists ; 1992 ; Environmental Entomology Volume 21 ; 21 ; >
@@ -5309,7 +5310,7 @@
     au < exists ; exists ; 2012 ; Environmental Entomology Volume 41 ; 41 ; >
     au < exists ; exists ; 2013 ; Environmental Entomology Volume 42 ; 42 ; >
     au < exists ; exists ; 2014 ; Environmental Entomology Volume 43 ; 43 ; >
-    
+
   }
 
   {
@@ -5877,9 +5878,9 @@
       eissn = 1879-0844 ;
       issnl = 1388-9842
     >
-    
-    comment[publisher] = moving to Wiley Blackwell 
-    
+
+    comment[publisher] = moving to Wiley Blackwell
+
     {
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
@@ -6382,13 +6383,17 @@
       name = FEMS Immunology & Medical Microbiology ;
       issn = 0928-8244 ;
       eissn = 1574-695X ;
-      issnl = 0928-8244 
+      issnl = 0928-8244
     >
 
     param[base_url] = http://femsim.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
     comment[backcontent] = 1993 volume 6 to 1999 volume 26
 
+    au < exists ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 23 ; 23 ; >
+    au < exists ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 24 ; 24 ; >
+    au < exists ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 26 ; 26 ; >
     au < manifest ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 27 ; 27 ; >
     au < manifest ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 28 ; 28 ; >
     au < manifest ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 29 ; 29 ; >
@@ -6533,7 +6538,7 @@
     title <
       name = FEMS Microbiology Immunology ;
       eissn = 0920-8534 ;
-      issnl = 0920-8534 
+      issnl = 0920-8534
     >
 
     param[base_url] = http://femsmi.oxfordjournals.org/
@@ -6552,13 +6557,25 @@
     title <
       name = FEMS Microbiology Letters ;
       eissn = 1574-6968 ;
-      issnl = 1574-6968 
+      issnl = 1574-6968
     >
 
     param[base_url] = http://femsle.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
     comment[backcontent] = 1977 volume 1 to 1999 volume 181
 
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 170 ; 170 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 171 ; 171 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 172 ; 172 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 173 ; 173 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 174 ; 174 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 175 ; 175 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 176 ; 176 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 177 ; 177 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 178 ; 178 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 179 ; 179 ; >
+    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 180 ; 180 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 181 ; 181 ; >
     au < manifest ; exists ; 2000 ; FEMS Microbiology Letters Volume 182 ; 182 ; >
     au < manifest ; exists ; 2000 ; FEMS Microbiology Letters Volume 183 ; 183 ; >
     au < manifest ; exists ; 2000 ; FEMS Microbiology Letters Volume 184 ; 184 ; >
@@ -7274,26 +7291,26 @@
     }
 
   }
-  
+
   {
 
     title <
       name = Gastroenterology Report ;
       eissn = 2052-0034
-      
+
     >
-      
+
     rights = openaccess
     param[base_url] = http://gastro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     comment[status] = May be moving to Drupal soon?
-      
+
     au < testing ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
-     
+
   }
-      
+
   {
 
     title <
@@ -8591,7 +8608,7 @@
   }
 
   {
-  
+
     title <
       name = ILAR Journal ;
       issn = 1084-2020 ;
@@ -9064,11 +9081,11 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     {
-    
+
     au < finished ; frozen ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Information and Inference: A Journal of the IMA Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2014 ; Information and Inference: A Journal of the IMA Volume 3 ; 3 ; >
-    
+
     }
 
   }
@@ -9104,7 +9121,8 @@
     au < crawling ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 19 ; 19 ; >
-   
+    au < doNotProcess ; exists ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20 ; 20 ; >
+
   }
 
   {
@@ -9348,7 +9366,7 @@
       name = International Immunology Meeting Abstracts ;
       type = bookSeries
     >
-    
+
     param[base_url] = http://intimmabs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
@@ -9684,7 +9702,7 @@
       name = International Journal of Neuropsychopharmacology ;
       issn = 1461-1457  ;
       eissn = 1469-5111 ;
-      issnl = 1461-1457 
+      issnl = 1461-1457
     >
 
     param[base_url] = http://ijnp.oxfordjournals.org/
@@ -10007,7 +10025,7 @@
     au < manifest ; exists ; 2006 ; International Mathematics Research Surveys Volume 2006 ; 2006 ; >
     au < manifest ; exists ; 2008 ; International Mathematics Research Surveys Volume 2007 ; 2007 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Mathematics Research Surveys Volume 2008 ; 2008 ; >
-    
+
   }
 
   {
@@ -11224,7 +11242,7 @@
     >
     param[base_url] = http://ecco-jcc.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
-    
+
     au < manifest ; exists ; 2007 ; Journal of Crohn's and Colitis Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; Journal of Crohn's and Colitis Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; Journal of Crohn's and Colitis Volume 3 ; 3 ; >
@@ -11233,7 +11251,8 @@
     au < manifest ; exists ; 2012 ; Journal of Crohn's and Colitis Volume 6 ; 6 ; >
     au < manifest ; exists ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 ; >
     au < manifest ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
-    
+    au < manifest ; exists ; 2015 ; Journal of Crohn's and Colitis Volume 9 ; 9 ; >
+
   }
 
   {
@@ -11354,7 +11373,7 @@
     param[base_url] = http://jee.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
     comment[0] = content available from 1908 volume 1 to 1989 volume 82
-    
+
     au < exists ; exists ; 1990 ; Journal of Economic Entomology Volume 83 ; 83 ; >
     au < exists ; exists ; 1991 ; Journal of Economic Entomology Volume 84 ; 84 ; >
     au < exists ; exists ; 1992 ; Journal of Economic Entomology Volume 85 ; 85 ; >
@@ -11380,7 +11399,7 @@
     au < exists ; exists ; 2012 ; Journal of Economic Entomology Volume 105 ; 105 ; >
     au < exists ; exists ; 2013 ; Journal of Economic Entomology Volume 106 ; 106 ; >
     au < exists ; exists ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 ; >
-    
+
   }
 
   {
@@ -11406,7 +11425,7 @@
 
     param[base_url] = http://joeg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     comment[vol59] = added in error.
 
     au < manifest ; exists ; 2001 ; Journal of Economic Geography Volume 1 ; 1 ; >
@@ -11423,7 +11442,7 @@
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
     au < crawling ; exists ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
-    
+
     au < down ; exists ; 0 ; Journal of Economic Geography Volume 59 [to delete] ; 59 ; reingest2.clockss.org:8085 >
 
     }
@@ -11860,7 +11879,7 @@
       name = Journal of Global Security Studies ;
       issn = ;
       eissn = ;
-      issnl = 
+      issnl =
     >
 
     param[base_url] = http://jogss.oxfordjournals.org/
@@ -12047,15 +12066,15 @@
     }
 
   }
-  
+
   {
 
     title <
       name = Journal of Hip Preservation Surgery ;
       eissn = 2054-8397
-      
+
     >
-    
+
     {
 
     param[base_url] = http://jhps.oxfordjournals.org/
@@ -12530,7 +12549,7 @@
 
     pluginSuffix = ClockssHighWireDrupalPlugin
     param[base_url] = http://jipm.oxfordjournals.org/
-    
+
     au < manifest ; exists ; 2010 ; Journal of Integrated Pest Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 2011 ; Journal of Integrated Pest Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 2012 ; Journal of Integrated Pest Management Volume 3 ; 3 ; >
@@ -12900,7 +12919,7 @@
     au < doNotProcess ; exists ; 2015 ; Journal of the Law and the Biosciences Volume 2 ; 2 ; >
 
     }
-    
+
   }
 
   {
@@ -13064,7 +13083,7 @@
     au < crawling ; exists ; 2013 ; Journal of the London Mathematical Society Volume 88 ; 88 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of the London Mathematical Society Volume 89 ; 89 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of the London Mathematical Society Volume 90 ; 90 ; >
-    
+
     }
 
   }
@@ -13075,7 +13094,7 @@
       name = Journal of Mammalogy ;
       issn = 0022-2372  ;
       eissn = 1545-1542 ;
-      issnl = 0022-2372 
+      issnl = 0022-2372
     >
 
     param[base_url] = http://jmammal.oxfordjournals.org/
@@ -13098,13 +13117,13 @@
       name = Journal of Medical Entomology ;
       issn = 0022-2585 ;
       eissn = 1938-2928 ;
-      issnl = 0022-2585 
+      issnl = 0022-2585
     >
 
     param[base_url] = http://jme.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
-    comment[0] = content available from 1976 volume 13 to 1989 volume 27 
-    
+    comment[0] = content available from 1976 volume 13 to 1989 volume 27
+
     au < exists ; exists ; 1990 ; Journal of Medical Entomology Volume 27 ; 27 ; >
     au < exists ; exists ; 1991 ; Journal of Medical Entomology Volume 28 ; 28 ; >
     au < exists ; exists ; 1992 ; Journal of Medical Entomology Volume 29 ; 29 ; >
@@ -13411,7 +13430,7 @@
     au < manifest ; exists ; 1945 ; Journal of the National Cancer Institute: JNCI Volume 37 ; 37 ; >
     au < manifest ; exists ; 1946 ; Journal of the National Cancer Institute: JNCI Volume 38 ; 38 ; >
     au < manifest ; exists ; 1947 ; Journal of the National Cancer Institute: JNCI Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1948 ; Journal of the National Cancer Institute: JNCI Volume 40 ; 40 ; > 
+    au < manifest ; exists ; 1948 ; Journal of the National Cancer Institute: JNCI Volume 40 ; 40 ; >
     au < manifest ; exists ; 1949 ; Journal of the National Cancer Institute: JNCI Volume 41 ; 41 ; >
     au < manifest ; exists ; 1950 ; Journal of the National Cancer Institute: JNCI Volume 42 ; 42 ; >
     au < manifest ; exists ; 1951 ; Journal of the National Cancer Institute: JNCI Volume 43 ; 43 ; >
@@ -13431,8 +13450,8 @@
     au < manifest ; exists ; 1965 ; Journal of the National Cancer Institute: JNCI Volume 57 ; 57 ; >
     au < manifest ; exists ; 1966 ; Journal of the National Cancer Institute: JNCI Volume 58 ; 58 ; >
     au < manifest ; exists ; 1967 ; Journal of the National Cancer Institute: JNCI Volume 59 ; 59 ; >
-    au < manifest ; exists ; 1968 ; Journal of the National Cancer Institute: JNCI Volume 60 ; 60 ; > 
-    au < manifest ; exists ; 1969 ; Journal of the National Cancer Institute: JNCI Volume 61 ; 61 ; > 
+    au < manifest ; exists ; 1968 ; Journal of the National Cancer Institute: JNCI Volume 60 ; 60 ; >
+    au < manifest ; exists ; 1969 ; Journal of the National Cancer Institute: JNCI Volume 61 ; 61 ; >
     au < manifest ; exists ; 1970 ; Journal of the National Cancer Institute: JNCI Volume 62 ; 62 ; >
     au < manifest ; exists ; 1971 ; Journal of the National Cancer Institute: JNCI Volume 63 ; 63 ; >
     au < manifest ; exists ; 1972 ; Journal of the National Cancer Institute: JNCI Volume 64 ; 64 ; >
@@ -13450,7 +13469,7 @@
     au < manifest ; exists ; 1984 ; Journal of the National Cancer Institute: JNCI Volume 76 ; 76 ; >
     au < manifest ; exists ; 1985 ; Journal of the National Cancer Institute: JNCI Volume 77 ; 77 ; >
     au < manifest ; exists ; 1986 ; Journal of the National Cancer Institute: JNCI Volume 78 ; 78 ; >
-    au < manifest ; exists ; 1987 ; Journal of the National Cancer Institute: JNCI Volume 79 ; 79 ; >       
+    au < manifest ; exists ; 1987 ; Journal of the National Cancer Institute: JNCI Volume 79 ; 79 ; >
     au < manifest ; exists ; 1988 ; Journal of the National Cancer Institute: JNCI Volume 80 ; 80 ; >
     au < manifest ; exists ; 1989 ; Journal of the National Cancer Institute: JNCI Volume 81 ; 81 ; >
     au < manifest ; exists ; 1990 ; Journal of the National Cancer Institute: JNCI Volume 82 ; 82 ; >
@@ -13537,11 +13556,11 @@
     comment[nR] = RT 5641 fetch error
 
     {
-    
+
     au < crawling ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
-    
+
     }
 
   }
@@ -14228,7 +14247,7 @@
     title <
       name = Journal of Surgical Case Reports ;
       eissn = 2042-8812 ;
-      issnl = 2042-8812 
+      issnl = 2042-8812
     >
 
     param[base_url] = http://jscr.oxfordjournals.org/
@@ -15082,7 +15101,7 @@
       name = Mammalian Species ;
       issn = 0076-3519 ;
       eissn = 1545-1410 ;
-      issnl = 0076-3519 
+      issnl = 0076-3519
     >
 
     param[base_url] = http://mspecies.oxfordjournals.org/
@@ -15093,7 +15112,7 @@
     au < manifest ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < manifest ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < exists ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
-    
+
   }
 
   {
@@ -15156,7 +15175,7 @@
     }
 
   }
-  
+
   {
 
     title <
@@ -15253,8 +15272,8 @@
 
     param[base_url] = http://jmvm.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[continues] = 1369-3786 
-    comment[continued_by] = 0268-1218 
+    comment[continues] = 1369-3786
+    comment[continued_by] = 0268-1218
 
     au < manifest ; exists ; 1986 ; Journal of Medical and Veterinary Mycology Volume 24 ; 24 ; >
     au < manifest ; exists ; 1987 ; Journal of Medical and Veterinary Mycology Volume 25 ; 25 ; >
@@ -15280,7 +15299,7 @@
 
     param[base_url] = http://sabouraudia.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[continued_by] = 0268-1218 and 0268-1218 
+    comment[continued_by] = 0268-1218 and 0268-1218
 
     au < manifest ; exists ; 1962 ; Sabouraudia Volume 1 ; 1 ; >
     au < manifest ; exists ; 1963 ; Sabouraudia Volume 2 ; 2 ; >
@@ -15941,7 +15960,7 @@
 
     title <
       name = Monthly Notices of the Royal Astronomical Society: Letters ;
-      eissn = 1745-3933 
+      eissn = 1745-3933
     >
 
     param[base_url] = http://mnrasl.oxfordjournals.org/
@@ -16555,7 +16574,7 @@
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     comment[vol25] = No content. Added to ingest1 and 2.
 
     au < superseded ; down ; 2010 ; NDT Plus Volume 3 [superseded] ; 3 ; >
@@ -17260,7 +17279,7 @@
 
     param[base_url] = http://occmed.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    
+
     au < manifest ; exists ; 1948-1949 ; Occupational Medicine Volume os-1 ; os-1 ; >
     au < manifest ; exists ; 1951-1952 ; Occupational Medicine Volume 1 ; 1 ; >
     au < manifest ; exists ; 1952-1953 ; Occupational Medicine Volume 2 ; 2 ; >
@@ -17637,11 +17656,11 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     {
-    
+
     au < finished ; frozen ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Oxford Journal of Law and Religion Volume 2 ; 2 ; >
     au < crawling ; exists ; 2014 ; Oxford Journal of Law and Religion Volume 3 ; 3 ; >
-    
+
     }
 
   }
@@ -17719,12 +17738,12 @@
     >
 
     {
-    
+
     param[base_url] = http://omcr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 ; >
-    
+
     }
 
   }
@@ -17794,7 +17813,7 @@
     title <
       name = Pathogens and Disease ;
       eissn = 2049-632X  ;
-      issnl = 2049-632X 
+      issnl = 2049-632X
     >
 
     param[base_url] = http://femspd.oxfordjournals.org/
@@ -19897,7 +19916,7 @@
       name = Regenerative Biomaterials ;
       issn = 2056-3418 ;
       eissn = 2056-3426 ;
-      issnl = 2056-3418 
+      issnl = 2056-3418
     >
 
     param[base_url] = http://rb.oxfordjournals.org/
@@ -22096,7 +22115,7 @@
 
     param[base_url] = http://workar.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
-    
+
     au < exists ; exists ; 2014 ; Work, Aging and Retirement Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Work, Aging and Retirement Volume 2 ; 2 ; >
 
@@ -22635,12 +22654,12 @@
 
     title <
       name = Progress of Theoretical Physics Supplement ;
-      issn = 0375-9687 
+      issn = 0375-9687
     >
 
     param[base_url] = http://ptps.oxfordjournals.org/
-    comment[0] = PTP Supplement terminated in December 2012 and merged into PTEP in January 2013, 
-    comment[1] = including the Supplements content. 
+    comment[0] = PTP Supplement terminated in December 2012 and merged into PTEP in January 2013,
+    comment[1] = including the Supplements content.
 
     {
 
@@ -23003,7 +23022,7 @@
 
     title <
       name = Conservation Physiology ;
-      eissn = 2051-1434 
+      eissn = 2051-1434
     >
 
     param[base_url] = http://conphys.oxfordjournals.org/
@@ -23079,7 +23098,8 @@
     au < crawling ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
-    
+    au < manifest ; exists ; 2015 ; Interacting with Computers Volume 27 ; 27 ; >
+
   }
   {
 
@@ -23094,15 +23114,15 @@
 
     au < crawling ; exists ; 2013 ; National Science Review Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2014 ; National Science Review Volume 2 ; 2 ; >
-    
+
   }
 
   {
 
     title <
       name = AIBS Bulletin ;
-      issn = 0096-7645 
-    > 
+      issn = 0096-7645
+    >
 
     param[base_url] = http://aibsbulletin.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
@@ -23131,7 +23151,7 @@
       issn = 0006-3568 ;
       eissn = 1525-3244 ;
       issnl = 0006-3568
-    > 
+    >
 
     param[base_url] = http://bioscience.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
@@ -23199,7 +23219,7 @@
       issn = 0032-5791 ;
       eissn = 1525-3171 ;
       issnl = 0032-5791
-    > 
+    >
 
     param[base_url] = http://ps.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
