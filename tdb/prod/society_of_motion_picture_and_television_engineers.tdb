@@ -207,19 +207,4 @@
 
   }
   
-  {
-    title <
-      name = SMPTE Standards ;
-      type = bookSeries
-    >
-
-    {
-
-      comment[base_url] = http://standards.smpte.org/
-      comment[database] = this is not a journal or a book. It is a set of standards.
-
-    }
-
-  }
-
 }
