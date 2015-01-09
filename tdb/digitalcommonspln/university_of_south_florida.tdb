@@ -2105,10 +2105,10 @@
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin
     param[base_url] = http://scholarcommons.usf.edu/
-    param[collection] = iigw
+    param[collection] = sinkhole_2013
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < released ; 2013 ; University of South Florida Sinkhole Conference 2013: Program ; Program >
+    au < exists ; 2013 ; University of South Florida Sinkhole Conference 2013: Program ; Program >
 
   }
 
