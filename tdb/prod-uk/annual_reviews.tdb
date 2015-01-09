@@ -313,24 +313,6 @@
   }
 
   {
-  
-    title <
-      name = Annual Review of Biophysics ;
-      issn = 0084-6589
-    >
-    
-comment[bb3] = continued from previous title entry
-
-    param[journal_id] = biophys
-    param[short_journal_id] = bb
-
-    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 37 ; 37 >
-    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 38 ; 38 >
-
-  }  
-
-
-  {
     title <
       name = Annual Review of Cell Biology ;
       issn = 0743-4634
