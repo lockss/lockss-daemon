@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - Janice/Thib</string>
+    <string>testing - Janice/Audrey</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -24,44 +24,48 @@
     <map>
       <entry>
         <string>Poll</string>
-		<string>4</string>
+	<string>5</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+	<string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
-		<string>1</string>
+	<string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Massachusetts Medical Society Plugin, Base URL %s, Base URL 2 %s, Journal ID %s, Volume %s&quot;, base_url, base_url2, journal_id, volume_name</string>
+    <string>"Massachusetts Medical Society Plugin, Base URL %s, Base URL 2 %s, Journal ID %s, Volume %s", base_url, base_url2, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_manifest</string>
     <list>
-      <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-      <string>&quot;%slockss.txt&quot;, base_url2</string>
+      <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+      <string>"%slockss.txt", base_url2</string>
     </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f|swf)$&quot;, base_url, base_url2</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%sdoi/[^/]+/[.0-9]+/[-.9]+&quot;, base_url</string>
-      <string>1,&quot;^%sdoi/audio/.*\.issue-[0-9]+$&quot;, base_url</string>
-      <string>2,&quot;^%sdoi/(citedby|exam|audio)/[.0-9]+&quot;, base_url</string>
-      <string>2,&quot;.*(toggleRef)$&quot;</string>
-      <string>1,&quot;^%stoc/%s(\.[0-9]+)?/([0-9]{4}/)?%s&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%sdoi/[^/]+/[.0-9]+&quot;, base_url</string>
-      <string>1,&quot;^%saction/(showSupplements|showImage|showMediaPlayer|showCitFormats)\?doi=&quot;, base_url</string>
-      <string>1,&quot;^%saction/showIssueAudio\?a=%s_[0-9]{4}\.%s&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%saction/downloadCitation\?format=(ris|endnote|bibTex|medlars|procite|referenceManager)&amp;doi=&quot;, base_url</string>
-      <string>1,&quot;^%sentityImage/\?code=&quot;, base_url</string>
+      <string>1,"^(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f|swf)$", base_url, base_url2</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%sdoi/[^/]+/[.0-9]+/[-.9]+", base_url</string>
+      <string>1,"^%sdoi/audio/.*\.issue-[0-9]+$", base_url</string>
+      <string>2,"^%sdoi/(citedby|exam|audio)/[.0-9]+", base_url</string>
+      <string>2,".*(toggleRef)$"</string>
+      <string>1,"^%stoc/%s(\.[0-9]+)?/([0-9]{4}/)?%s", base_url, journal_id, volume_name</string>
+      <string>1,"^%sdoi/[^/]+/[.0-9]+", base_url</string>
+      <string>1,"^%saction/(showSupplements|showImage|showMediaPlayer|showCitFormats)\?doi=", base_url</string>
+      <string>1,"^%saction/showIssueAudio\?a=%s_[0-9]{4}\.%s", base_url, journal_id, volume_name</string>
+      <string>1,"^%saction/downloadCitation\?format=(ris|endnote|bibTex|medlars|procite|referenceManager)&amp;doi=", base_url</string>
+      <string>1,"^%sentityImage/\?code=", base_url</string>
     </list>
   </entry>
   <entry>
@@ -105,19 +109,19 @@
     </list>
   </entry>
   <entry>
-  	 <string>au_substance_url_pattern</string>
-     <string>&quot;^%sdoi/(full|pdf)/&quot;, base_url</string>
+     <string>au_substance_url_pattern</string>
+     <string>"^%sdoi/(full|pdf)/", base_url</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
     <entry>
       <string>au_volume</string>
-      <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+      <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
     </entry>
     <entry>
       <string>au_issue</string>
-      <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
+      <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
     </entry>
     </map>
   </entry>
@@ -160,7 +164,7 @@
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
-    <string>&quot;Crawler traps&quot;</string>
+    <string>"Crawler traps"</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>

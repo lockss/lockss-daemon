@@ -1,7 +1,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,10 +45,12 @@ public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory implements Filter
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-    		// Contain cross-links to other articles in other journals/volumes
+    	// Contain cross-links to other articles in other journals/volumes
             HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "trendsBox"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "trendsMod"),
+            // "Related Articles" 
+            HtmlNodeFilters.tagWithAttribute("div", "class", "articleLink"),
             // Contains ads
             HtmlNodeFilters.tagWithAttribute("div", "id", "topAdBar"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "topLeftAniv"),

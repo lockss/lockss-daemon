@@ -1,7 +1,9 @@
-
+/*
+ * $Id: MassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.4 2015-01-09 18:05:14 aishizaki Exp $
+ */
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,7 +27,7 @@ Except as contained in this notice, tMassachusettsMedicalSocietyHtmlFilterFactor
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
@@ -38,6 +40,7 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -46,21 +49,21 @@ import org.lockss.util.ReaderInputStream;
 
 public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterFactory {
 
-	Logger log = Logger.getLogger("MassachusettsMedicalSocietyHtmlHashFilterFactory");
-	
+  Logger log = Logger.getLogger(MassachusettsMedicalSocietyHtmlHashFilterFactory.class);
+
   public static class FilteringException extends PluginException {
     public FilteringException() { super(); }
     public FilteringException(String msg, Throwable cause) { super(msg, cause); }
     public FilteringException(String msg) { super(msg); }
     public FilteringException(Throwable cause) { super(cause); }
   }
-  
+
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-	  
+      InputStream in,
+      String encoding)
+  throws PluginException {
+
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
         /*
@@ -125,40 +128,45 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         //For recent issues you can submit a comment then this feature disappears
         HtmlNodeFilters.tagWithAttribute("p", "class", "openUntilInfo"),
         //Poll if collected while poll is open will change
-        HtmlNodeFilters.tagWithAttribute("div", "class", "poll")
-        
+        HtmlNodeFilters.tagWithAttribute("div", "class", "poll"),
+        //the emailAlert is extraneous info and often contains inconsistent whitespace
+        HtmlNodeFilters.tagWithAttribute("div", "class", "emailAlert"),
+        //Metadata contains either "current-issue" or "Last-6-months" or...
+        HtmlNodeFilters.tagWithAttribute("meta", "name", "evt-ageContent"),
+        //removes "OpenURL" button local url reference (eg Stanford)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "title", "OpenURL ")
+
     };
-    
+
     HtmlTransform xform = new HtmlTransform() {
-	    @Override
-	    public NodeList transform(NodeList nodeList) throws IOException {
-	      try {
-	        nodeList.visitAllNodesWith(new NodeVisitor() {
-	          @Override
-	          public void visitTag(Tag tag) {
-	            try {
-	              if ("div".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("id") != null && tag.getAttribute("id").trim().startsWith("layerPlayer")) {
-	                tag.removeAttribute("id");
-	              }
-	              else {
-	                super.visitTag(tag);
-	              }
-	            }
-	            catch (Exception exc) {
-	              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-	            }
-	          }
-	        });
-	      }
-	      catch (ParserException pe) {
-	        log.debug2("Internal error (parser)", pe); // Bail
-	      }
-	      return nodeList;
-	    }
-	  };
-	return new HtmlFilterInputStream(in,
-              						 encoding,
-              						 new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              try {
+                if ("div".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("id") != null && tag.getAttribute("id").trim().startsWith("layerPlayer")) {
+                  tag.removeAttribute("id");
+                } else {
+                  super.visitTag(tag);
+                }
+              } catch (Exception exc) {
+                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+              }
+            }
+          });
+        } catch (ParserException pe) {
+          log.debug2("Internal error (parser)", pe); // Bail
+        }
+        return nodeList;
+      }
+    };
+    // initial html filtering
+    InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
+      new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
+    // whitespace filtering
+    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(filteredStream, encoding)));
   }
-  
+
 }

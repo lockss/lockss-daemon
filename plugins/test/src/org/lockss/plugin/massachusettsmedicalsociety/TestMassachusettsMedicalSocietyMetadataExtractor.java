@@ -1,6 +1,6 @@
+/* $Id: TestMassachusettsMedicalSocietyMetadataExtractor.java,v 1.3 2015-01-09 18:05:14 aishizaki Exp $ */
 /*
-
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,7 +68,7 @@ Y2  - 2012/02/29
 ER  -*/ 
 public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestIgiGlobalMetadataExtractor");
+  static Logger log = Logger.getLogger(TestMassachusettsMedicalSocietyMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private SimulatedArchivalUnit sau; // Simulated AU to generate content
@@ -134,13 +134,14 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
   String goodIssn = "0028-4793";
   String goodDate = "1979/01/18";
   String goodAuthors[] = {"Krugman, Saul",
-		   	  			  "Overby, Lacy R.",
-		   	  			  "Mushahwar, Isa K.",
-		   	  			  "Ling, Chung-Mei",
-		   	  			  "Frösner, Gert G."};
+		   	  "Overby, Lacy R.",
+		   	  "Mushahwar, Isa K.",
+		   	  "Ling, Chung-Mei",
+		   	  "Frösner, Gert G."};
   String goodArticleTitle = "Viral Hepatitis, Type B";
   String goodPublisher = "Massachusetts Medical Society";
   String goodJournalTitle = "New England Journal of Medicine";
+  String goodAccessUrl = BASE_URL + "doi/full/" + goodDoi;
 
   private String createGoodContent() {
 	  StringBuilder sb = new StringBuilder();
@@ -172,34 +173,72 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
 	  sb.append(goodPublisher);
 	  sb.append("\nSN  - ");
 	  sb.append(goodIssn);
-	  sb.append("\nDO  - ");
-	  sb.append(goodDoi);
+	  sb.append("\nDO  - " + goodDoi);
 	  sb.append("\nT1  - ");
 	  sb.append(goodArticleTitle);
-	  sb.append("\nM3  - doi: 10.1056/NEJM197901183000301");
-	  sb.append("\nUR  - http://dx.doi.org/10.1056/NEJM197901183000301");
+	  sb.append("\nM3  - doi: " + goodDoi);
+	  //sb.append("\nUR  - http://dx.doi.org/" + goodDoi);
 	  sb.append("\nY2  - 2012/02/29");
 	  sb.append("\nER  -");
 	  return sb.toString();
   }
+  // MostlyGoodContent has no access url
+  private String createMostlyGoodContent() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("TY  - JOUR");
+    for(String auth : goodAuthors) {
+            sb.append("\nAU  - ");
+            sb.append(auth);
+    }
+    sb.append("\nY1  - ");
+    sb.append(goodDate);
+    sb.append("\nPY  - ");
+    sb.append(goodDate);
+    sb.append("\nDA  - ");
+    sb.append(goodDate);
+    sb.append("\nT2  - ");
+    sb.append(goodJournalTitle);
+    sb.append("\nJF  - ");
+    sb.append(goodJournalTitle);
+    sb.append("\nJO  - N Engl J Med");
+    sb.append("\nSP  - ");
+    sb.append(goodStartPage);
+    sb.append("\nEP  - ");
+    sb.append(goodEndPage);
+    sb.append("\nVL  - ");
+    sb.append(goodVolume);
+    sb.append("\nIS  - ");
+    sb.append(goodIssue);
+    sb.append("\nPB  - ");
+    sb.append(goodPublisher);
+    sb.append("\nSN  - ");
+    sb.append(goodIssn);
+    sb.append("\nDO  - " + goodDoi);
+    sb.append("\nT1  - ");
+    sb.append(goodArticleTitle);
+    sb.append("\nM3  - doi: " + goodDoi);
+    sb.append("\nY2  - 2012/02/29");
+    sb.append("\nER  -");
+    return sb.toString();
+}
   /**
    * Method that creates a simulated Cached URL from the source code provided by 
    * the goodContent String. It then asserts that the metadata extracted, by using
-   * the NatureHtmlMetadataExtractorFactory, match the metadata in the source code. 
+   * the MassachussetsMedicalSocietyRisMetadataExtractorFactory, match the metadata in the source code. 
    * @throws Exception
    */
   public void testExtractFromGoodContent() throws Exception {
 	String goodContent = createGoodContent();
-	log.info(goodContent);
+	//log.info(goodContent);
     String url = "http://www.example.com/vol1/issue2/art3/";
     MockCachedUrl cu = new MockCachedUrl(url, bau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
-    FileMetadataExtractor me = new MassachussetsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MassachussetsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), Constants.MIME_TYPE_RIS);
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -215,8 +254,45 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodAccessUrl, md.get(MetadataField.FIELD_ACCESS_URL));
   }
+  /**
+   * Method that creates a simulated Cached URL from the source code provided by 
+   * the MostlyGoodContent String (has no access url, which is manufactured from the
+   * DOI, if it exists. It then asserts that the metadata extracted, by using
+   * the MassachussetsMedicalSocietyRisMetadataExtractorFactory, match the metadata in the source code. 
+   * @throws Exception
+   */
+  public void testExtractFromMostlyGoodContent() throws Exception {
+        String goodContent = createMostlyGoodContent();
+        //log.info(goodContent);
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MassachussetsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), Constants.MIME_TYPE_RIS);
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodIssn, md.get(MetadataField.FIELD_ISSN));
+    Iterator<String> actAuthIter = md.getList(MetadataField.FIELD_AUTHOR).iterator();
+    for(String expAuth : goodAuthors) {
+        assertEquals(expAuth, actAuthIter.next());
+    }
+    assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodAccessUrl, md.get(MetadataField.FIELD_ACCESS_URL));
 
+  }
   // a chunk of RIS source code from where the NatureHtmlMetadataExtractorFactory should NOT be able to extract metadata
   String badContent = "SN - " + goodIssn
     + "\nT1 - " + goodArticleTitle;

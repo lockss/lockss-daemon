@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,10 +28,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
+import java.io.IOException;
+
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
-import org.lockss.extractor.RisMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractor.Emitter;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 /*
@@ -68,12 +72,82 @@ import org.lockss.util.Logger;
  */
 public class MassachussetsMedicalSocietyRisMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BaseArchivalUnit");
+  static Logger log = Logger.getLogger(MassachussetsMedicalSocietyRisMetadataExtractorFactory.class);
   
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
-    return new RisMetadataExtractor();
+    log.debug3("Inside MassMedical Metadata extractor factory");
+    MassachusettsMedicalSocietyRisMetadataExtractor ris = new MassachusettsMedicalSocietyRisMetadataExtractor();
+    
+    ris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
+    ris.addRisTag("JF", MetadataField.FIELD_PUBLICATION_TITLE);
+    
+    return ris;
   }
+  public static class MassachusettsMedicalSocietyRisMetadataExtractor 
+    extends RisMetadataExtractor {
+    // override this to do some additional attempts to get valid data before emitting
+    @Override
+    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+        throws IOException, PluginException {
+      ArticleMetadata md = extract(target, cu);
+      final String urlPrefix = "http://dx.doi.org/";
+      final String doiPrefix = "doi: ";
+      final String nejmPrefix = "http://www.nejm.org/doi/full/";
+      log.debug3("MassMedicalRisMetadataExtractor:extract");
+      if (md != null) {
+        String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
+        log.debug3("  access.url=" + accessUrl);
 
+        if (!md.hasValidValue(MetadataField.FIELD_DOI)) {
+          // fill in DOI from accessURL
+          // http://dx.doi.org/10.1056/NEJMe1211736
+          // -> doi: 10.1056/NEJMe1211736
+          if (accessUrl != null) {
+            if (accessUrl.startsWith(urlPrefix)) {
+              String doi = doiPrefix + accessUrl.substring(urlPrefix.length());
+              md.put(MetadataField.FIELD_DOI, doi);
+            }
+          }
+        } else {        // doi is valid, no access url
+          if (accessUrl == null) {
+            String doi = md.get(MetadataField.FIELD_DOI);
+            // doi: 10.1056/NEJMe1211736 
+            // -> http://www.nejm.org/doi/pdf/10.1056/NEJMe1211736
+            StringBuilder newUrl = new StringBuilder(nejmPrefix);
+            if (doi != null) {
+              newUrl.append(doi);
+              log.debug3(" newUrl = " +newUrl);
+              md.put(MetadataField.FIELD_ACCESS_URL, newUrl.toString());
+            }
+          } 
+        }
+        log.debug3("  access.url=" + md.get(MetadataField.FIELD_ACCESS_URL));
+        completeMetadata(cu, md);
+        emitter.emitMetadata(cu, md);
+      }
+    }    
+  };
+  
+  public static void completeMetadata(CachedUrl cu, ArticleMetadata am) {
+    // Pick up some information from the TDB if not in the cooked data
+    TdbAu tdbau = cu.getArchivalUnit().getTdbAu(); // returns null if titleConfig is null 
+    if (tdbau != null) {
+      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
+        // Get the publishger from the tdb file.  This would be the most accurate
+        String publisher = tdbau.getPublisherName();
+        if (publisher != null) {
+          am.put(MetadataField.FIELD_PUBLISHER, publisher);
+        }
+      }
+      if (am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
+        String journal_title = tdbau.getPublicationTitle();
+        if (journal_title != null) {
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, journal_title);
+        }
+      }
+    }
+    log.debug3(am.toString());
+  }
 }

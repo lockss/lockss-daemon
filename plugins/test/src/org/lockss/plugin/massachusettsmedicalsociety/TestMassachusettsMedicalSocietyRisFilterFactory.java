@@ -1,6 +1,7 @@
+/* Id: $ */
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,14 +74,11 @@ public class TestMassachusettsMedicalSocietyRisFilterFactory extends LockssTestC
 		fact = new MassachusettsMedicalSocietyRisFilterFactory();
 		mau = new MockArchivalUnit();
 	}
-	
-	
-	
+
 	public void testFilterCreationDate() throws Exception {
 		InputStream actIn = fact.createFilteredInputStream(mau,
-														   new StringInputStream(risData),
-														   Constants.DEFAULT_ENCODING);
+		    new StringInputStream(risData), Constants.DEFAULT_ENCODING);
 		assertEquals(risDataFiltered, StringUtil.fromInputStream(actIn));
 	}
-	
+
 }
