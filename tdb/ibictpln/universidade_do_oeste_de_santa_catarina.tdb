@@ -1,0 +1,93 @@
+{
+  publisher <
+    name = Universidade do Oeste de Santa Catarina
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = ESPAÇO JURÍDICO ;
+        issn = 1519-5899 ;
+        eissn = 2179-7943
+      >
+
+      comment[publisher] = Universidade do Oeste de Santa Catarina
+      param[journal_id] = espacojuridico
+      param[base_url] = http://editora.unoesc.edu.br/
+
+      au < exists ; 2007 ; 1 ; ESPAÇO JURÍDICO Volume 2008 ; 2008 ; >
+      au < exists ; 2008 ; 2 ; ESPAÇO JURÍDICO Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; ESPAÇO JURÍDICO Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; ESPAÇO JURÍDICO Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; ESPAÇO JURÍDICO Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; ESPAÇO JURÍDICO Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 7 ; ESPAÇO JURÍDICO Volume 2013 ; 2013 ; >
+  }
+
+  {
+
+      title <
+        name = EVIDÊNCIA ;
+        issn = 1519-5287 ;
+        eissn = 2236-6059
+      >
+
+      comment[publisher] = Universidade do Oeste de Santa Catarina
+      param[journal_id] = evidencia
+      param[base_url] = http://editora.unoesc.edu.br/
+
+      au < exists ; 2007 ; 1 ; EVIDÊNCIA Volume 2008 ; 2008 ; >
+      au < exists ; 2008 ; 2 ; EVIDÊNCIA Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; EVIDÊNCIA Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; EVIDÊNCIA Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; EVIDÊNCIA Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; EVIDÊNCIA Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 7 ; EVIDÊNCIA Volume 2013 ; 2013 ; >
+  }
+
+  {
+
+      title <
+        name = RACE ;
+        issn = 1678-6483 ;
+        eissn = 2179-4936
+      >
+
+      comment[publisher] = Universidade do Oeste de Santa Catarina
+      param[journal_id] = race
+      param[base_url] = http://editora.unoesc.edu.br/
+
+      au < exists ; 2007 ; 1 ; RACE Volume 2008 ; 2008 ; >
+      au < exists ; 2008 ; 2 ; RACE Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; RACE Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; RACE Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; RACE Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; RACE Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 7 ; RACE Volume 2013 ; 2013 ; >
+  }
+
+  {
+
+      title <
+        name = ROTEIRO ;
+        issn = 0104-4311 ;
+        eissn = 2177-6059
+      >
+
+      comment[publisher] = Universidade do Oeste de Santa Catarina
+      param[journal_id] = roteiro
+      param[base_url] = http://editora.unoesc.edu.br/
+
+      au < exists ; 2007 ; 1 ; ROTEIRO Volume 2008 ; 2008 ; >
+      au < exists ; 2008 ; 2 ; ROTEIRO Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; ROTEIRO Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; ROTEIRO Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; ROTEIRO Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; ROTEIRO Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 7 ; ROTEIRO Volume 2013 ; 2013 ; >
+  }
+
+}
