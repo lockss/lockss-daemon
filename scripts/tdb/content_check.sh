@@ -26,6 +26,7 @@ scripts/tdb/tdbout -t plugin tdb/*/*.tdb | sort -u | sed 's/\./\//g' > $tpath/ac
 #diff $tpath/ab.txt $tpath/ac.txt | grep "^< "     
 #plugins that don't exist, but are listed in tdb files
 diff $tpath/ab.txt $tpath/ac.txt | grep "^> "
+echo " "
 #
 # Find duplicate auids in the gln title database
 echo "---------------------"
@@ -36,6 +37,27 @@ allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "GLN. All AUids = $allAUs"
 echo "GLN. AUids without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#
+# Find duplicate name/plugin pairs in the gln title database
+echo "---------------------"
+scripts/tdb/tdbout -AXE -c plugin,name tdb/prod/*.tdb | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "GLN. All plugin/names = $allAUs"
+echo "GLN. Plugin/names without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo " "
+#
+# Find duplicate released names in the gln title database
+echo "---------------------"
+scripts/tdb/tdbout -P -c name tdb/prod/*.tdb | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "GLN. All Released names = $allAUs"
+echo "GLN. Released names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
@@ -49,6 +71,27 @@ uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "CLOCKSS. All AUids = $allAUs"
 echo "CLOCKSS. AUids without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#
+# Find duplicate name/plugin pairs in the clockss title database
+echo "---------------------"
+scripts/tdb/tdbout -AXE -c plugin,name tdb/clockssingest/*.tdb | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "CLOCKSS. All plugin/names = $allAUs"
+echo "CLOCKSS. Plugin/names without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo " "
+#
+# Find duplicate released names in the clockss title database
+echo "---------------------"
+scripts/tdb/tdbout -P -c name tdb/clockssingest/*.tdb | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "CLOCKSS. All Released names = $allAUs"
+echo "CLOCKSS. Released names without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
 # Find duplicate auids in the ibictpln title database
@@ -61,34 +104,8 @@ uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "IBICT. All AUids = $allAUs"
 echo "IBICT. AUids without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-echo " "
-#
-# Find duplicate name/plugin pairs in the gln title database
-echo "---------------------"
-echo "---------------------"
-scripts/tdb/tdbout -AXE -c plugin,name tdb/prod/*.tdb | sort > $tpath/allAUs
-uniq $tpath/allAUs > $tpath/dedupedAUs
-allAUs=`cat $tpath/allAUs | wc -l`
-uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "GLN. All plugin/names = $allAUs"
-echo "GLN. Plugin/names without duplicates = $uniqAUs"
-diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-echo " "
-#
-# Find duplicate name/plugin pairs in the clockss title database
-echo "---------------------"
-echo "---------------------"
-scripts/tdb/tdbout -AXE -c plugin,name tdb/clockssingest/*.tdb | sort > $tpath/allAUs
-uniq $tpath/allAUs > $tpath/dedupedAUs
-allAUs=`cat $tpath/allAUs | wc -l`
-uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "CLOCKSS. All plugin/names = $allAUs"
-echo "CLOCKSS. Plugin/names without duplicates = $uniqAUs"
-diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-echo " "
 #
 # Find duplicate name/plugin pairs in the ibictpln title database
-echo "---------------------"
 echo "---------------------"
 scripts/tdb/tdbout -AXE -c plugin,name tdb/ibictpln/*.tdb | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
@@ -96,6 +113,18 @@ allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "IBICT. All plugin/names = $allAUs"
 echo "IBICT. Plugin/names without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo " "
+#
+# Find duplicate auids in the whole database. Not exists or expected
+echo "---------------------"
+echo "---------------------"
+scripts/tdb/tdbout -Aa tdb/*/*.tdb | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "All AUids = $allAUs"
+echo "AUids without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
