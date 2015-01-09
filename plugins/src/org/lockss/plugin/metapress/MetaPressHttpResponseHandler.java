@@ -1,10 +1,10 @@
 /*
- * $Id: MetaPressHttpResponseHandler.java,v 1.1 2014-05-23 02:43:27 etenbrink Exp $
+ * $Id: MetaPressHttpResponseHandler.java,v 1.2 2015-01-09 20:51:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,10 +43,12 @@ public class MetaPressHttpResponseHandler implements CacheResultHandler {
 
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Unexpected call to init()");
   }
   
-  public CacheException handleResult(ArchivalUnit au, String url, int responseCode)
+  public CacheException handleResult(ArchivalUnit au,
+                                     String url,
+                                     int responseCode)
       throws PluginException {
     
     logger.debug2(url);
@@ -60,8 +62,8 @@ public class MetaPressHttpResponseHandler implements CacheResultHandler {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
       default:
-        logger.debug2("default");
-        throw new UnsupportedOperationException();
+        logger.warning(String.format("Unexpected response code %d for %s", responseCode, url));
+        throw new UnsupportedOperationException("Unpexpected response code: " + responseCode);
     }
   }
   
