@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHttpResponseHandler.java,v 1.2 2014-12-31 00:07:26 etenbrink Exp $
+ * $Id: ELifeDrupalHttpResponseHandler.java,v 1.3 2015-01-09 00:13:58 etenbrink Exp $
  */
 
 /*
@@ -54,6 +54,13 @@ public class ELifeDrupalHttpResponseHandler extends HighWireDrupalHttpResponseHa
                                      int responseCode) {
     logger.debug2(url);
     switch (responseCode) {
+      case 403:
+        logger.debug2("403");
+        if (url.contains("/download")) {
+          return new CacheException.RetryDeadLinkException("403 Forbidden (non-fatal)");
+        }
+        return super.handleResult(au, url, responseCode);
+        
       case 500:
         logger.debug2("500");
         if (url.contains("lockss-manifest/")) {
