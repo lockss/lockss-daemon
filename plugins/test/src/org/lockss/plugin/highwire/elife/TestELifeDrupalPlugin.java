@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalPlugin.java,v 1.3 2014-12-31 00:08:54 etenbrink Exp $
+ * $Id: TestELifeDrupalPlugin.java,v 1.4 2015-01-09 19:08:47 etenbrink Exp $
  */
 
 /*
@@ -131,7 +131,29 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
         500, "foo");
-    assertClass(NoFailRetryableNetworkException_3_60S.class, exc);
+    assertClass(CacheException.RetrySameUrlException.class, exc);
+    
+  }
+  
+  public void testHandles403Result() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "2013");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    
+    String starturl =
+        "http://www.example.com/lockss-manifest/elife_2013.html";
+    DefinableArchivalUnit au = makeAuFromProps(props);
+    MockLockssUrlConnection conn = new MockLockssUrlConnection();
+    conn.setURL("http://uuu17/download/somestuff");
+    CacheException exc =
+        ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+            403, "foo");
+    assertClass(CacheException.RetryDeadLinkException.class, exc);
+    
+    conn.setURL(starturl);
+    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+        403, "foo");
+    assertClass(CacheException.UnknownCodeException.class, exc);
     
   }
   
