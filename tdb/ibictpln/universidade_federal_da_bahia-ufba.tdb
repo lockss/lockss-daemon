@@ -11,6 +11,51 @@
   {
 
       title <
+        name = Anais da Faculdade de Medicina da Bahia ;
+        issn = 0365-2262
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = afmbahia
+
+      au < exists ; 1940 ; 1 ; Anais da Faculdade de Medicina da Bahia Volume 1 ; 1940 ; >
+
+  }
+
+  {
+
+      title <
+        name = Arquivos da Universidade da Bahia - Faculdade de Medicina ;
+        issn = 0365-8139
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = arqmedicina
+
+      au < exists ; 1946 ; 1 ; Arquivos da Universidade da Bahia - Faculdade de Medicina Volume 1 ; 1946 ; >
+
+  }
+
+  {
+
+      title <
+        name = Ângulos ;
+        issn = 0570-1147
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = angulos
+
+      au < exists ; 1950 ; 1 ; Ângulos Volume 1 ; 1950 ; >
+
+  }
+
+  {
+
+      title <
         name = Cadernos de Arte e Antropologia ;
         issn = 2238-0361
       >
@@ -59,6 +104,36 @@
   {
 
       title <
+        name = Revista CAITITU ;
+        eissn = 2318-504
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = revcaititu
+
+      au < exists ; 2013 ; 1 ; Revista CAITITU Volume 1 ; 2013 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista CETRAMA ;
+        issn = 1806-3225
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = revcetrama
+
+      au < exists ; 2003 ; 1 ; Revista CETRAMA Volume 1 ; 2003 ; >
+
+  }
+
+  {
+
+      title <
         name = Revista Eletrônica de Gestão e Tecnologias Ambientais ;
         issn = 2317-563X
       >
@@ -67,7 +142,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = gesta
 
-      au < testing ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 ; >
+      au < ready ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 ; >
 
   }
 
@@ -286,6 +361,25 @@
   {
 
       title <
+        name = GERMINAL: Marxismo e Educação em Debate ;
+        issn = 2175-5604
+      >
+
+      comment[publisher] = Universidade Federal da Bahia
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = germinal
+
+      au < exists ; 2009 ; 1 ; GERMINAL: Marxismo e Educação em Debate Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; GERMINAL: Marxismo e Educação em Debate Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; GERMINAL: Marxismo e Educação em Debate Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; GERMINAL: Marxismo e Educação em Debate Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 5 ; GERMINAL: Marxismo e Educação em Debate Volume 2013 ; 2013 ; >
+
+  }
+
+  {
+
+      title <
         name = Ictus: Periódico do PPGMUS ;
         eissn = 2238-6599
       >
@@ -297,6 +391,43 @@
       au < exists ; 2012 ; 1 ; Ictus: Periódico do PPGMUS Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 2 ; Ictus: Periódico do PPGMUS Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 3 ; Ictus: Periódico do PPGMUS Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
+        name = Organizações & Sociedade (O&S) ;
+        issn = 1413-585X ;
+        eissn = 1984-9230
+      >
+
+      comment[publisher] = Universidade Federal da Bahia
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = revistaoes
+
+      au < exists ; 1993 ; 1 ; Organizações & Sociedade (O&S) Volume 1993 ; 1993 ; >
+      au < exists ; 1994 ; 2 ; Organizações & Sociedade (O&S) Volume 1994 ; 1994 ; >
+      au < exists ; 1995 ; 3 ; Organizações & Sociedade (O&S) Volume 1995 ; 1995 ; >
+      au < exists ; 1996 ; 4 ; Organizações & Sociedade (O&S) Volume 1996 ; 1996 ; >
+      au < exists ; 1997 ; 5 ; Organizações & Sociedade (O&S) Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 6 ; Organizações & Sociedade (O&S) Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 7 ; Organizações & Sociedade (O&S) Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 8 ; Organizações & Sociedade (O&S) Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 9 ; Organizações & Sociedade (O&S) Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 10 ; Organizações & Sociedade (O&S) Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 11 ; Organizações & Sociedade (O&S) Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 12 ; Organizações & Sociedade (O&S) Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 13 ; Organizações & Sociedade (O&S) Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 14 ; Organizações & Sociedade (O&S) Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 15 ; Organizações & Sociedade (O&S) Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 16 ; Organizações & Sociedade (O&S) Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 17 ; Organizações & Sociedade (O&S) Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 18 ; Organizações & Sociedade (O&S) Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 19 ; Organizações & Sociedade (O&S) Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 20 ; Organizações & Sociedade (O&S) Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 21 ; Organizações & Sociedade (O&S) Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 22 ; Organizações & Sociedade (O&S) Volume 2014 ; 2014 ; >
 
   }
 
@@ -446,6 +577,21 @@
   {
 
       title <
+        name = Revista Eletrônica MAPA D2 - Mapa e Programa de Artes em Dança (e Performance) Digital ;
+        issn = 2358-2006 
+      >
+
+      comment[publisher] = Universidade Federal da Bahia
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = mapad2
+
+      au < exists ; 2014 ; 1 ; Revista Eletrônica MAPA D2 - Mapa e Programa de Artes em Dança (e Performance) Digital Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
         name = Revista Entreideias: Educação, Cultura e Sociedade ;
         issn = 1516-2907 ;
         eissn = 1980-6620
@@ -474,6 +620,59 @@
       au < released ; 2012 ; 19 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 20 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 21 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Nexos Econômicos ;
+        issn = 1516-9022
+      >
+
+      comment[publisher] = Universidade Federal da Bahia
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = revnexeco
+
+      au < exists ; 2010 ; 1 ; Revista Nexos Econômicos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Revista Nexos Econômicos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Revista Nexos Econômicos Volume 2012 ; 2012 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Periódicus ;
+        issn =  2358-0844
+      >
+
+      comment[publisher] = Universidade Federal da Bahia
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = revistaperiodicus
+
+      au < exists ; 2014 ; 1 ; Revista Periódicus Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista RUA - Revista de Arquitetura e Urbanismo ;
+        issn = 0103-1651
+      >
+
+      comment[publisher] = Universidade Federal da Bahia
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = rua
+
+      au < exists ; 1988 ; 1 ; Revista RUA - Revista de Arquitetura e Urbanismo Volume 1968 ; 1968 ; >
+      au < exists ; 1989 ; 2 ; Revista RUA - Revista de Arquitetura e Urbanismo Volume 1969 ; 1969 ; >
+      au < exists ; 1990 ; 3 ; Revista RUA - Revista de Arquitetura e Urbanismo Volume 1970 ; 1970 ; >
+      au < exists ; 1996 ; 4 ; Revista RUA - Revista de Arquitetura e Urbanismo Volume 1971 ; 1971 ; >
+      au < exists ; 1999 ; 5 ; Revista RUA - Revista de Arquitetura e Urbanismo Volume 1972 ; 1972 ; >
+      au < exists ; 2003 ; 6 ; Revista RUA - Revista de Arquitetura e Urbanismo Volume 1973 ; 1973 ; >
+      au < exists ; 2006 ; 7 ; Revista RUA - Revista de Arquitetura e Urbanismo Volume 1977 ; 1977 ; >
 
   }
 
