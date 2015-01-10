@@ -4277,16 +4277,14 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.intarchmed.com/
       param[journal_issn] = 1755-7682
-      comment[0] = leaving to iMedPub on 2014-12-31
+      comment[0] = moved to iMedPub on 2014-12-31
 
-      au < crawling ; exists ; 2008 ; International Archives of Medicine Volume 1 ; 1 >
-      au < crawling ; exists ; 2009 ; International Archives of Medicine Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Archives of Medicine Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; International Archives of Medicine Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; International Archives of Medicine Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; International Archives of Medicine Volume 6 ; 6 >
-      au < manifest ; exists ; 2014 ; International Archives of Medicine Volume 7 ; 7 >
-      au < expected ; exists ; 2015 ; International Archives of Medicine Volume 8 ; 8 >
+      au < down ; exists ; 2008 ; International Archives of Medicine Volume 1 ; 1 >
+      au < down ; exists ; 2009 ; International Archives of Medicine Volume 2 ; 2 >
+      au < down ; exists ; 2010 ; International Archives of Medicine Volume 3 ; 3 >
+      au < down ; exists ; 2011 ; International Archives of Medicine Volume 4 ; 4 >
+      au < down ; exists ; 2012 ; International Archives of Medicine Volume 5 ; 5 >
+      au < down ; exists ; 2013 ; International Archives of Medicine Volume 6 ; 6 >
 
     }
 
