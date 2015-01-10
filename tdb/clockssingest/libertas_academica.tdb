@@ -761,7 +761,8 @@
       
     >
 
-    param[journal_id] = 166. Subscription content. Publisher does not intend to give access.
+    param[journal_id] = 166
+    comment[publisher] = Subscription content. Publisher does not intend to give access.
 
     au < down ; frozen ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 3 ; 2011 >
     au < down ; frozen ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 4 ; 2012 >
