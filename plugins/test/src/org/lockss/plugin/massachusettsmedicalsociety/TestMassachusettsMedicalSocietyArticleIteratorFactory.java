@@ -1,4 +1,4 @@
-/* $Id: TestMassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.5 2015-01-09 18:05:14 aishizaki Exp $ */
+/* $Id: TestMassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.6 2015-01-10 22:14:29 alexandraohlson Exp $ */
 
 /*
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
@@ -168,7 +168,7 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
         BASE_URL + "doi/media/10.5339/nejm12315002",
         BASE_URL + "doi/pdf/10.5339/nejm123456",
         BASE_URL + "doi/full/10.5339/nejm123456",
-        BASE_URL + "action/showSupplements?doi=10.5339%2FNEJM123456",
+        BASE_URL + "action/showSupplements?doi=10.5339%2Fnejm123456",
         BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm123456&include=cit&direct=checked",
         BASE_URL + "doi/",
         BASE_URL + "bq/352/12"
@@ -239,6 +239,7 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
     
     for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ){
       ArticleFiles af = artIter.next();
+      //log.info("next AF: " + af.ppString(2));
       String[] act = {
           af.getFullTextUrl(),
           af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
@@ -250,7 +251,10 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
       String[] exp = expStack.pop();
       if(act.length == exp.length){
         for(int i = 0;i< act.length; i++){
+          //log.info("check index: " + i);
           assertEquals(ARTICLE_FAIL_MSG + " Expected: " + exp[i] + " Actual: " + act[i], exp[i],act[i]);
+          //log.info("ok: ");
+          //log.info(exp[i]);
         }
       }
       else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same");
