@@ -1,4 +1,4 @@
-/* $Id: TestMassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.6 2015-01-10 22:14:29 alexandraohlson Exp $ */
+/* $Id: TestMassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.7 2015-01-10 22:59:53 alexandraohlson Exp $ */
 
 /*
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
@@ -153,6 +153,7 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
     assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/pdf/10232.533339/nejm12315");
    }
 
+  /*
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String[] urls = {
@@ -260,5 +261,6 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
       else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same");
     }
     
-  }			
+  }
+  */			
 }
