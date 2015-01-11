@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.2 2015-01-09 18:05:14 aishizaki Exp $
+ * $Id: MassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.3 2015-01-11 06:19:07 alexandraohlson Exp $
  */
 
 /*
@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.regex.*;
 
 import org.lockss.daemon.*;
@@ -66,8 +64,6 @@ public class MassachusettsMedicalSocietyArticleIteratorFactory
   protected static Logger log = Logger.getLogger("MassachusettsMedicalSocietyArticleIteratorFactory");
   
   protected static final String ROOT_TEMPLATE = "\"%sdoi\", base_url"; // params from tdb file corresponding to AU
-  // base_url/doi/
-  
   protected static final String PATTERN_TEMPLATE = "\"^%sdoi/(full|pdf)/\", base_url";
 
   
@@ -112,9 +108,6 @@ public class MassachusettsMedicalSocietyArticleIteratorFactory
       if (mat.find() && isPdf(cu)) {
         return processFullTextPdf(cu, mat);
       }
-      
-      
-
       //log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
     }
@@ -203,21 +196,18 @@ public class MassachusettsMedicalSocietyArticleIteratorFactory
     // Assigning the Supplementary_Materials role to the url (eg):
     // http://www.nejm.org/action/showSupplements?doi=10.1056%2FNEJMc1304053
     // which contain links to the appendix, disclosures and/or protocol page(s)
-    // [prompted by: metadata database limitation of 32 chars - 
-    // ("SupplementaryMaterialsDisclosures" = 33), decided to use the parent page
-    // rather than all the links]
+    // Supplementary_Materials landing page doi case matches that of main article
+    // urls (whereas underlying specific supplementary data urls are always lower case
     protected void guessSupplements(ArticleFiles af, Matcher mat) {
-      String supDoi = (mat.group(1)).replace("/", "%2F");
-      String doiEnd = supDoi.substring(supDoi.indexOf('/') + 1).toLowerCase();
-      CachedUrl primSupplCu = null;
-      log.debug3("guessSupplements: "+ "/action/showSupplements?doi="+supDoi);        
+      String origdoi = mat.group(1);
+      String supDoi = origdoi.replace("/", "%2F");
+      log.debug3("guessSupplements: "+ "/action/showSupplements?doi="+supDoi);   
       CachedUrl supCu = au.makeCachedUrl(
           mat.replaceFirst("/action/showSupplements?doi="+supDoi));
 
       if (supCu != null && supCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, supCu);
-      } else           af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, null);
-
+      }  
     }
   }
   

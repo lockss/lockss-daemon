@@ -70,9 +70,9 @@ import org.lockss.util.Logger;
  * Y2  - 2012/02/29
  * ER  - 
  */
-public class MassachussetsMedicalSocietyRisMetadataExtractorFactory
+public class MassachusettsMedicalSocietyRisMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(MassachussetsMedicalSocietyRisMetadataExtractorFactory.class);
+  static Logger log = Logger.getLogger(MassachusettsMedicalSocietyRisMetadataExtractorFactory.class);
   
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)

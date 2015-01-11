@@ -1,4 +1,6 @@
-/* $Id: TestMassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.7 2015-01-10 22:59:53 alexandraohlson Exp $ */
+/* 
+ * $Id: TestMassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.8 2015-01-11 06:19:07 alexandraohlson Exp $ 
+ */
 
 /*
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
@@ -25,23 +27,19 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
-import java.io.File;
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.Iterator;
-import java.util.Stack;
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.*;
-import org.lockss.plugin.simulated.SimulatedArchivalUnit;
-import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -52,10 +50,7 @@ import org.lockss.util.*;
  * Supplemental Materials page: http://www.nejm.org/action/showSupplements?doi=10.1056%2FNEJMc1304053
  */
 public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends ArticleIteratorTestCase {
-	
-  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
 
-  private final String ARTICLE_FAIL_MSG = "Article files not created properly";
   private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
   private final String PLUGIN_NAME = "org.lockss.plugin.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -71,18 +66,24 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
       BASE_URL2_KEY, BASE_URL2,
       VOLUME_NAME_KEY, VOLUME_NAME,
       JOURNAL_ID_KEY, JOURNAL_ID);
-  private static final int DEFAULT_FILESIZE = 3000;
+  private CIProperties pdfHeader = new CIProperties();    
+  private CIProperties textHeader = new CIProperties();
+  private static final String ContentString = "foo blah";
+  InputStream random_content_stream;
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();
+    setUpDiskSpace();
 
     au = createAu();
-    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+    // set up headers for creating mock CU's of the appropriate type
+    pdfHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+    textHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    // the content in the urls doesn't really matter for the test
+    random_content_stream = new ByteArrayInputStream(ContentString.getBytes(Constants.ENCODING_UTF_8));
   }
-  
+
   public void tearDown() throws Exception {
-    sau.deleteContentTree();
     super.tearDown();
   }
 
@@ -99,36 +100,22 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
 
     return conf;
   }
-  
+
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
-      PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
-  }
-  
-  Configuration simAuConfig(String rootPath) {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("root", rootPath);
-    conf.put(BASE_URL_KEY, BASE_URL);
-    conf.put("depth", "1");
-    conf.put("branch", "2");
-    conf.put("numFiles", "6");
-    conf.put("fileTypes",
-        "" + (  SimulatedContentGenerator.FILE_TYPE_HTML
-            | SimulatedContentGenerator.FILE_TYPE_PDF));
-    conf.put("binFileSize", ""+DEFAULT_FILESIZE);
-    return conf;
+        PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
   }
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertEquals("Article file root URL pattern changed or incorrect" ,ListUtil.list( BASE_URL + "doi"),
-		 getRootUrls(artIter));
+        getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
-    
+
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/doi/full/10.5339/nejm12315");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "dooi/full/10.5339/nejm12315");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "/full/10.5339/nejm12315");
@@ -151,116 +138,99 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
     assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/pdf/10.533329/nejm123324315");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/pdf/1023.5339/nejmb123b315");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/pdf/10232.533339/nejm12315");
-   }
+  }
 
-  /*
   public void testCreateArticleFiles() throws Exception {
-    PluginTestUtil.crawlSimAu(sau);
-    String[] urls = {
-        BASE_URL + "doi/pdf/10.5339/nejm1231",
+    // add the following URLs to the AU
+    String[] au_urls = {
+        // article "NEJM1231" - pdf, full, supplements and citation
+        BASE_URL + "doi/pdf/10.5339/NEJM1231",
         BASE_URL + "action/showSupplements?doi=10.5339%2FNEJM1231",
-        BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm1231&include=cit&direct=checked",
+        BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2FNEJM1231&include=cit&direct=checked",
+        // article nejm12345  - full text only
         BASE_URL + "doi/full/10.5339/nejm12345",
-        BASE_URL + "doi/pdf/10.5339/nejm1231113",
+        // article nejm1231113 - pdf, full, media, image and citation
         BASE_URL + "doi/full/10.5339/nejm1231113",
+        BASE_URL + "doi/pdf/10.5339/nejm1231113",
         BASE_URL + "doi/media/10.5339/nejm1231113",
         BASE_URL + "doi/image/10.5339/nejm1231113",
         BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm1231113&include=cit&direct=checked",
+        // random article nejm12315002
         BASE_URL + "doi/media/10.5339/nejm12315002",
-        BASE_URL + "doi/pdf/10.5339/nejm123456",
-        BASE_URL + "doi/full/10.5339/nejm123456",
-        BASE_URL + "action/showSupplements?doi=10.5339%2Fnejm123456",
-        BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm123456&include=cit&direct=checked",
+        // article nejm123456
+        BASE_URL + "doi/pdf/10.5339/NEJM123456",
+        BASE_URL + "doi/full/10.5339/NEJM123456",
+        BASE_URL + "action/showSupplements?doi=10.5339%2FNEJM123456",
+        BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2FNEJM123456&include=cit&direct=checked",
+        // randoms
         BASE_URL + "doi/",
         BASE_URL + "bq/352/12"
     };
-    CachedUrl cuPdf = null;
-    CachedUrl cuHtml = null;
-    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {   
-      if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)){
-        cuPdf = cu;
+    // the content is never checked so just use a random input stream with the
+    //correct header
+    for(String url : au_urls) {
+      if(url.contains("pdf")){
+        storeContent(random_content_stream,pdfHeader, url);
       }
-      else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)){
-        cuHtml = cu;
-      }
-      if (cuPdf != null && cuHtml != null) {
-        break;
+      else {
+        storeContent(random_content_stream,textHeader, url);
       }
     }
 
-    for(String url : urls) {
-      	if(url.contains("pdf")){
-      	  storeContent(cuPdf.getUnfilteredInputStream(),
-      	      cuPdf.getProperties(), url);
-      	}
-      	else if(url.contains("full") || url.contains("ris") || url.contains("Supplements")){
-      	  storeContent(cuHtml.getUnfilteredInputStream(),
-      	      cuHtml.getProperties(), url);
-      	}
+    // article nejm1231113
+    ArticleFiles af1 = new ArticleFiles();
+    af1.setRoleString(ArticleFiles.ROLE_FULL_TEXT_PDF, BASE_URL + "doi/pdf/10.5339/nejm1231113");
+    af1.setRoleString(ArticleFiles.ROLE_FULL_TEXT_HTML, BASE_URL + "doi/full/10.5339/nejm1231113");
+    af1.setRoleString(ArticleFiles.ROLE_CITATION, BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm1231113&include=cit&direct=checked");
+    // article nejm12345
+    ArticleFiles af2 = new ArticleFiles();
+    af2.setRoleString(ArticleFiles.ROLE_FULL_TEXT_HTML, BASE_URL + "doi/full/10.5339/nejm12345");
+    // article nejm123456
+    ArticleFiles af3 = new ArticleFiles();
+    af3.setRoleString(ArticleFiles.ROLE_FULL_TEXT_PDF,BASE_URL + "doi/pdf/10.5339/NEJM123456");
+    af3.setRoleString(ArticleFiles.ROLE_FULL_TEXT_HTML,BASE_URL + "doi/full/10.5339/NEJM123456");
+    af3.setRoleString(ArticleFiles.ROLE_CITATION,BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2FNEJM123456&include=cit&direct=checked");
+    af3.setRoleString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS,BASE_URL + "action/showSupplements?doi=10.5339%2FNEJM123456");
+    // article nejm1231
+    ArticleFiles af4 = new ArticleFiles();
+    af4.setRoleString(ArticleFiles.ROLE_FULL_TEXT_PDF,BASE_URL + "doi/pdf/10.5339/NEJM1231");
+    af4.setRoleString(ArticleFiles.ROLE_CITATION,BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2FNEJM1231&include=cit&direct=checked");
+    af4.setRoleString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS,BASE_URL + "action/showSupplements?doi=10.5339%2FNEJM1231");
 
-      }
-    
-    Stack<String[]> expStack = new Stack<String[]>();
-    String [] af1 = {
-        BASE_URL + "doi/full/10.5339/nejm1231113",
-        BASE_URL + "doi/pdf/10.5339/nejm1231113",
-        BASE_URL + "doi/full/10.5339/nejm1231113",
-        null,
-        BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm1231113&include=cit&direct=checked",
-        null
-    };
-    String [] af2 = {
-        BASE_URL + "doi/full/10.5339/nejm12345",
-        null,
-        BASE_URL + "doi/full/10.5339/nejm12345",
-        null,
-        null,
-        null
-    };
-    String [] af3 = {
-        BASE_URL + "doi/full/10.5339/nejm123456",
-        BASE_URL + "doi/pdf/10.5339/nejm123456",
-        BASE_URL + "doi/full/10.5339/nejm123456",
-        null,
-        BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm123456&include=cit&direct=checked",
-        BASE_URL + "action/showSupplements?doi=10.5339%2Fnejm123456"
-    };
-    String [] af4 = {
-        BASE_URL + "doi/pdf/10.5339/nejm1231",
-        BASE_URL + "doi/pdf/10.5339/nejm1231",
-        null,
-        null,
-        BASE_URL + "action/downloadCitation?format=ris&doi=10.5339%2Fnejm1231&include=cit&direct=checked",
-        BASE_URL + "action/showSupplements?doi=10.5339%2Fnejm1231"
-    };
-    expStack.push(af4);
-    expStack.push(af3);
-    expStack.push(af2);
-    expStack.push(af1);
-    
+    // key the expected content to the fullTextUrl for the ArticleFiles
+    HashMap<String, ArticleFiles> fullUrlToAF = new HashMap<String, ArticleFiles>();
+    fullUrlToAF.put(BASE_URL + "doi/full/10.5339/nejm1231113", af1);
+    fullUrlToAF.put(BASE_URL + "doi/full/10.5339/nejm12345", af2);
+    fullUrlToAF.put(BASE_URL + "doi/full/10.5339/NEJM123456", af3);
+    fullUrlToAF.put(BASE_URL + "doi/pdf/10.5339/NEJM1231", af4);
+
     for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ){
       ArticleFiles af = artIter.next();
-      //log.info("next AF: " + af.ppString(2));
-      String[] act = {
-          af.getFullTextUrl(),
-          af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
-          af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML),
-          af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
-          af.getRoleUrl(ArticleFiles.ROLE_CITATION),
-          af.getRoleUrl(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS)
-      };
-      String[] exp = expStack.pop();
-      if(act.length == exp.length){
-        for(int i = 0;i< act.length; i++){
-          //log.info("check index: " + i);
-          assertEquals(ARTICLE_FAIL_MSG + " Expected: " + exp[i] + " Actual: " + act[i], exp[i],act[i]);
-          //log.info("ok: ");
-          //log.info(exp[i]);
-        }
-      }
-      else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same");
+      log.debug3("next AF: " + af.ppString(2));
+      ArticleFiles exp= fullUrlToAF.get(af.getFullTextUrl());
+      assertNotNull(exp);
+      compareArticleFiles(exp, af);
     }
-    
   }
-  */			
+
+  private void compareArticleFiles(ArticleFiles exp, ArticleFiles act) {
+
+    assertEquals("ROLE_FULL_TEXT_PDF: ",
+        exp.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_PDF),
+        act.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_PDF));
+    assertEquals("ROLE_FULL_TEXT_HTML",
+        exp.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML),
+        act.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML));
+    assertEquals("ROLE_ABSTRACT: ",
+        exp.getRoleAsString(ArticleFiles.ROLE_ABSTRACT),
+        act.getRoleAsString(ArticleFiles.ROLE_ABSTRACT));
+    assertEquals("ROLE_CITATION: ",
+        exp.getRoleAsString(ArticleFiles.ROLE_CITATION),
+        act.getRoleAsString(ArticleFiles.ROLE_CITATION));
+    assertEquals("ROLE_SUPPLEMENTARY_MATERIALS: ",
+        exp.getRoleAsString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS),
+        act.getRoleAsString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS));
+  }
+
+
 }

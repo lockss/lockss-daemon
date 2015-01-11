@@ -1,4 +1,4 @@
-/* $Id: TestMassachusettsMedicalSocietyMetadataExtractor.java,v 1.3 2015-01-09 18:05:14 aishizaki Exp $ */
+/* $Id: TestMassachusettsMedicalSocietyMetadataExtractor.java,v 1.4 2015-01-11 06:19:07 alexandraohlson Exp $ */
 /*
  Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -235,7 +235,7 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
-    FileMetadataExtractor me = new MassachussetsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MassachusettsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), Constants.MIME_TYPE_RIS);
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
@@ -271,7 +271,7 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
-    FileMetadataExtractor me = new MassachussetsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MassachusettsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), Constants.MIME_TYPE_RIS);
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
@@ -308,7 +308,7 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
     cu.setContent(badContent);
     cu.setContentSize(badContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new MassachussetsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MassachusettsMedicalSocietyRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
