@@ -64,14 +64,14 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      printf("Req:%s\nResp:%s\nurl_d:%s\n",$req->url,$resp->request->uri,$man_url_d);
+      #printf("Req:%s\nResp:%s\nurl_d:%s\n",$req->url,$resp->request->uri,$man_url_d);
       if ($req->url ne $resp->request->uri) {
-        printf("Redirected\n");
+        #printf("Redirected\n");
         if ($resp->request->uri eq $man_url_d) {
-          printf("Uses Drupal plugin\n");
+          #printf("Uses Drupal plugin\n");
           $result = "Moved_to_Drupal";
         } else {
-          printf("Doesn't use Drupal plugin\n");
+          #printf("Doesn't use Drupal plugin\n");
           $result = "Redirected";
         }
         #$result = "Redirected";
