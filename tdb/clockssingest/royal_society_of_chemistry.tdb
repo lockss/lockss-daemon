@@ -49,11 +49,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
 
-      au < manifest ; exists ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 >
-      au < manifest ; exists ; 2011 ; The Analyst Volume 136 ; 136 ; 2011 >
-      au < manifest ; exists ; 2012 ; The Analyst Volume 137 ; 137 ; 2012 >
-      au < manifest ; exists ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 >
-      au < manifest ; exists ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 >
+      au < testing ; exists ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 >
+      au < testing ; exists ; 2011 ; The Analyst Volume 136 ; 136 ; 2011 >
+      au < testing ; exists ; 2012 ; The Analyst Volume 137 ; 137 ; 2012 >
+      au < testing ; exists ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 >
+      au < testing ; exists ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 >
       
     }
   }
@@ -104,11 +104,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 >
-      au < manifest ; exists ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 >
-      au < manifest ; exists ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 >
-      au < manifest ; exists ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 >
-      au < manifest ; exists ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 >
+      au < testing ; exists ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 >
+      au < testing ; exists ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 >
+      au < testing ; exists ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 >
+      au < testing ; exists ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 >
+      au < testing ; exists ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 >
       
     }
   }
