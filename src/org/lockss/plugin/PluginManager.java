@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.252 2014-08-22 19:22:47 fergaloy-sf Exp $
+ * $Id: PluginManager.java,v 1.252.2.1 2015-01-12 04:55:54 tlipkis Exp $
  */
 
 /*
@@ -2322,27 +2322,29 @@ public class PluginManager
 	  log.debug3("findCachedUrls: " + normUrl + " check "
 		     + au.toString());
 	}
+	// Unit test for archive member lookup is in TestArchiveMembers
+	String noMembUrl = normUrl;
 	ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(au, normUrl);
 	if (ams != null) {
 	  if (isTrace) log.debug3("Recognized archive member: " + ams);
-	  normUrl = ams.getUrl();
+	  noMembUrl = ams.getUrl();
 	}
-	String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
-	if (isTrace && !siteUrl.equals(normUrl)) {
-	  log.debug3("Site normalized to: " + siteUrl);
+	String siteUrl = UrlUtil.normalizeUrl(noMembUrl, au);
+	if (!siteUrl.equals(noMembUrl)) {
+	  if (isTrace) log.debug3("Site normalized to: " + siteUrl);
+	  noMembUrl = siteUrl;
 	}
-	normUrl = siteUrl;
-	if (au.shouldBeCached(normUrl)) {
+	if (au.shouldBeCached(noMembUrl)) {
 	  if (isTrace) {
-	    log.debug3("findCachedUrls: " + normUrl + " should be in "
+	    log.debug3("findCachedUrls: " + noMembUrl + " should be in "
 		       + au.getAuId());
 	  }
-	  CachedUrl cu = au.makeCachedUrl(siteUrl);
+	  CachedUrl cu = au.makeCachedUrl(noMembUrl);
 	  if (ams != null) {
 	    cu = cu.getArchiveMemberCu(ams);
 	  }
 	  if (isTrace) {
-	    log.debug3("findCachedUrls(" + siteUrl + ") = " + cu);
+	    log.debug3("findCachedUrls(" + normUrl + ") = " + cu);
 	  }
 	  if (cu == null) {
 	    // can this happen?
@@ -2360,7 +2362,7 @@ public class PluginManager
 	      break;
 	    case RetCu:
 	      makeFirstCandidate(searchSet, au);
-	      if (isTrace) log.debug3("findCachedUrls: ret: " + siteUrl);
+	      if (isTrace) log.debug3("findCachedUrls: ret: " + cu);
 	      res.add(cu);
 	      return res;
 	    case UpdateBest:

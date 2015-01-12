@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.11 2014-11-12 20:11:56 wkwilson Exp $
+ * $Id: TestArchiveMembers.java,v 1.11.2.1 2015-01-12 04:55:53 tlipkis Exp $
  */
 
 /*
@@ -89,9 +89,8 @@ public class TestArchiveMembers extends LockssTestCase {
 
     simau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
 					       simAuConfig(tempDirPath));
-    msau = (MySimulatedArchivalUnit)simau;
-
     simau.generateContentTree();
+    msau = (MySimulatedArchivalUnit)simau;
     msau.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
   }
 
@@ -113,6 +112,15 @@ public class TestArchiveMembers extends LockssTestCase {
     conf.put("redirectDirToIndex", "true");
     conf.put("autoGenIndexHtml", "true");
 
+    return conf;
+  }
+
+  Configuration simAuConfig2(String rootPath) {
+    Configuration conf = simAuConfig(rootPath);
+    conf.put("depth", "1");
+    conf.put("branch", "1");
+    conf.put("numFiles", "1");
+    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_XML);
     return conf;
   }
 
@@ -458,6 +466,24 @@ public class TestArchiveMembers extends LockssTestCase {
 
   public void testFindCu() throws Exception {
     PluginTestUtil.crawlSimAu(simau);
+
+    // Generate a second sim AU that doesn't contains the URL we're looking
+    // for, to force PluginManager to search multiple AUs for the member,
+    // which tickles a former bug.
+    String tmp2 = getTempDir().getAbsolutePath() + File.separator;
+    SimulatedArchivalUnit simau2 =
+      PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
+					 simAuConfig2(tmp2));
+    log.debug("Real sim au: " + simau);
+    log.debug("2nd sim au: " + simau2);
+    simau2.generateContentTree();
+    MySimulatedArchivalUnit msau2 = (MySimulatedArchivalUnit)simau2;
+    msau2.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
+    // Ensure this one is first so PluginManager.findCachedUrls0() loop
+    // finds it first, which formerly caused the archive to be returned
+    // instead of the member
+    pluginMgr.promoteAuInSearchSets(msau2);
+
     CachedUrl cu;
 
     String arcUrl = "http://www.example.com/branch1/branch1/zip5.zip";
