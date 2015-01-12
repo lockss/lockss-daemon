@@ -64,15 +64,17 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      printf("Req:%s\nResp:%s\nurl_d:%s\n",$req->url,$resp->request->uri,$url_d);
+      printf("Req:%s\nResp:%s\nurl_d:%s\n",$req->url,$resp->request->uri,$man_url_d);
       if ($req->url ne $resp->request->uri) {
         printf("Redirected\n");
         if ($resp->request->uri eq $man_url_d) {
           printf("Uses Drupal plugin\n");
+          $result = "Moved_to_Drupal";
         } else {
           printf("Doesn't use Drupal plugin\n");
+          $result = "Redirected";
         }
-        $result = "Redirected";
+        #$result = "Redirected";
       }
       elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
         if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
@@ -1167,18 +1169,21 @@ while (my $line = <>) {
                 
   } 
   if ($result eq "Plugin Unknown") {
-    printf("*PLUGIN UNKNOWN*, %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
+    printf("*PLUGIN UNKNOWN*, %s, %s, %s\n",$vol_title,$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;
   } elsif ($result eq "Manifest") {
-    printf("*MANIFEST*, %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
+    printf("*MANIFEST*, %s, %s, %s\n",$vol_title,$auid,$man_url);
     $total_manifests = $total_manifests + 1;
     #printf("%s\n",$vol_title);
     #printf("%s\n",decode_entities($vol_title));
     #my $new_title = encode("utf8", $vol_title);
     #printf("%s\n",$new_title);
     #printf("%s\n",decode_entities($new_title));
+  } elsif ($result eq "Moved_to_Drupal") {
+    printf("*MANIFEST*(%s), %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
+    $total_manifests = $total_manifests + 1;
   } else {
-    printf("*NO MANIFEST*(%s), %s, %s \n",$result, $auid,$man_url);
+    printf("*NO MANIFEST*(%s), %s, %s \n",$result,$auid,$man_url);
     $total_missing = $total_missing + 1;
     #$tmp = "AINS - An&auml;sthesiologie &middot; Intensivmedizin &middot; Notfallmedizin &middot; Schmerztherapie";
     #printf("%s\n",$tmp);
