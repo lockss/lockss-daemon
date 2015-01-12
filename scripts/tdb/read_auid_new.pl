@@ -56,10 +56,10 @@ while (my $line = <>) {
       $param{base_url}, $param{volume_name});
     $url_d = sprintf("%slockss-manifest/vol_%s_manifest.html",
       $param{base_url}, $param{volume_name});
-    printf("\n\nurl: %s\n",$url);
     $man_url = uri_unescape($url);
+    printf("\n\nman_url: %s\n",$man_url);
     $man_url_d = uri_unescape($url_d);
-    printf("man_url: %s\n",$man_url);
+    printf("man_url_d: %s\n",$man_url_d);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
@@ -67,7 +67,7 @@ while (my $line = <>) {
       printf("Req:%s\nResp:%s\nurl_d:%s\n",$req->url,$resp->request->uri,$url_d);
       if ($req->url ne $resp->request->uri) {
         printf("Redirected\n");
-        if ($resp->request->uri eq $url_d) {
+        if ($resp->request->uri eq $man_url_d) {
           printf("Uses Drupal plugin\n");
         } else {
           printf("Doesn't use Drupal plugin\n");
