@@ -45,20 +45,31 @@ while (my $line = <>) {
     }
   }
   my $url = "cant_create_url";
-  my $url_permission = "cant_create_url";
+  my $url_d = "cant_create_url";
+  #my $url_permission = "cant_create_url";
   my $man_url = "cant_create_url";
   my $vol_title = "NO TITLE FOUND";
   my $result = "Plugin Unknown";
   if ($plugin eq "HighWirePressH20Plugin" || $plugin eq "HighWirePressPlugin") {
     $url = sprintf("%slockss-manifest/vol_%s_manifest.dtl",
       $param{base_url}, $param{volume_name});
+    $url_d = sprintf("%slockss-manifest/vol_%s_manifest.html",
+      $param{base_url}, $param{volume_name});
+    printf("\n\nurl: %s\n",$url);
     $man_url = uri_unescape($url);
+    printf("man_url: %s\n",$man_url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-#      printf("Req:%s\nResp:%s\n",$req->url,$resp->request->uri);
+      printf("Req:%s\nResp:%s\nurl_d:%s\n",$req->url,$resp->request->uri,$url_d);
       if ($req->url ne $resp->request->uri) {
+        printf("Redirected\n");
+        if ($resp->request->uri eq $url_d) {
+          printf("Uses Drupal plugin\n");
+        } else {
+          printf("Doesn't use Drupal plugin\n");
+        }
         $result = "Redirected";
       }
       elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
