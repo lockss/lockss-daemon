@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookPdfFilterFactory.java,v 1.2 2014-09-08 15:03:08 aishizaki Exp $
+ * $Id: PalgraveBookPdfFilterFactory.java,v 1.3 2015-01-12 17:47:09 aishizaki Exp $
  */
 
 /*
@@ -124,15 +124,19 @@ public class PalgraveBookPdfFilterFactory extends SimplePdfFilterFactory {
     
     Worker worker = new Worker();
     for (PdfPage pdfPage : pdfDocument.getPages()) {
-      // Pages seem to be made of concatenated token streams, and the
-      // target personalization is at the end -- get the last token stream
+      // Pages seem to be made of concatenated token streams, and while most
+      // target personalization is at the end (previously filtered the last
+      // token stream), some books (9781137023803 - on pages with "Left Intentianally
+      // Blank") had customization elsewhere in the token stream, so now checking all
       List<PdfTokenStream> pdfTokenstreams = pdfPage.getAllTokenStreams();
-      PdfTokenStream pdfTokenStream = pdfTokenstreams.get(pdfTokenstreams.size() - 1);
-      worker.process(pdfTokenStream);
-      if (worker.result) {
-        List<PdfToken> pdfTokens = pdfTokenStream.getTokens();
-        pdfTokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
-        pdfTokenStream.setTokens(pdfTokens);
+      for (int i = 0; i < pdfTokenstreams.size(); i++){
+        PdfTokenStream pdfTokenStream = pdfTokenstreams.get(i);
+        worker.process(pdfTokenStream);
+        if (worker.result) {
+          List<PdfToken> pdfTokens = pdfTokenStream.getTokens();
+          pdfTokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
+          pdfTokenStream.setTokens(pdfTokens);
+        }
       }
     }
   }
