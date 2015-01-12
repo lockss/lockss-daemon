@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsBookReport2.java,v 1.11 2014-10-03 23:04:43 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2.java,v 1.12 2015-01-12 20:40:46 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ package org.lockss.exporter.counter;
 
 import static org.lockss.db.SqlConstants.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
-import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

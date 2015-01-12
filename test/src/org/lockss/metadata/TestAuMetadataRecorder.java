@@ -1,10 +1,10 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.10 2014-12-31 22:09:58 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.11 2015-01-12 20:40:46 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -818,7 +818,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       addJournalTypeAggregates(conn, publicationSeq, true, 2013, 1, 30, 20, 10);
 
-      metadataManager.removeAu(conn, sau0.getAuId());
+      metadataManager.getMetadataManagerSql().removeAu(conn, sau0.getAuId());
 
       metadata = getJournalMetadata("Publisher", 1, 8, false, false, null);
 
@@ -903,7 +903,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Check that 0 archival unit problems exist.
       assertEquals(0, countAuProblems(conn) - initialProblemCount);
 
-      metadataManager.removeAu(conn, sau0.getAuId());
+      metadataManager.getMetadataManagerSql().removeAu(conn, sau0.getAuId());
 
       metadata = getJournalMetadata(null, 1, 8, false, false, null);
 

@@ -1,10 +1,10 @@
 /*
- * $Id: TestMetadataManager.java,v 1.11 2014-11-15 02:41:24 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.12 2015-01-12 20:40:46 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.metadata;
 
 import static org.lockss.db.SqlConstants.*;
-import static org.lockss.metadata.MetadataManager.*;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -62,6 +61,7 @@ public class TestMetadataManager extends LockssTestCase {
   private SimulatedArchivalUnit sau0, sau1, sau2, sau3, sau4;
   private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
+  private MetadataManagerSql metadataManagerSql;
   private PluginManager pluginManager;
   private DbManager dbManager;
 
@@ -149,6 +149,8 @@ public class TestMetadataManager extends LockssTestCase {
     metadataManager.initService(theDaemon);
     metadataManager.startService();
 
+    metadataManagerSql = metadataManager.getMetadataManagerSql();
+
     theDaemon.setAusStarted(true);
     
     int expectedAuCount = 5;
@@ -217,25 +219,26 @@ public class TestMetadataManager extends LockssTestCase {
     Connection con = dbManager.getConnection();
     
     assertEquals(0, metadataManager.activeReindexingTasks.size());
-    assertEquals(0, metadataManager.
-                 getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE).size());
+    assertEquals(0, metadataManagerSql.getPrioritizedAuIdsToReindex(con,
+	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus())
+	.size());
 
     // 21 articles for each of four AUs
     // au0 and au1 for plugin0 have the same articles for different AUs
-    long articleCount = metadataManager.getArticleCount(con);
+    long articleCount = metadataManagerSql.getArticleCount(con);
     assertEquals(105, articleCount);
     
     // one pubication for each of four plugins
-    long publicationCount = metadataManager.getPublicationCount(con);
+    long publicationCount = metadataManagerSql.getPublicationCount(con);
     assertEquals(4, publicationCount);
     
     // one publisher for each of four plugins
-    long publisherCount = metadataManager.getPublisherCount(con);
+    long publisherCount = metadataManagerSql.getPublisherCount(con);
     assertEquals(4, publisherCount);
     
     // one more provider than publications because
     // au0 and au4 for plugin0 have different providers
-    long providerCount = metadataManager.getProviderCount(con);
+    long providerCount = metadataManagerSql.getProviderCount(con);
     assertEquals(5, providerCount);
     
     // check distinct access URLs
@@ -336,8 +339,9 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(0, results.size());
     
     assertEquals(0, metadataManager.activeReindexingTasks.size());
-    assertEquals(0, metadataManager
-                 .getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE).size());
+    assertEquals(0, metadataManagerSql.getPrioritizedAuIdsToReindex(con,
+	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus())
+	.size());
 
     con.rollback();
     con.commit();
@@ -427,7 +431,8 @@ public class TestMetadataManager extends LockssTestCase {
     
     // ensure that the the most recently added "new" AU is prioritized last
     List<MetadataManager.PrioritizedAuId> auids =
-        metadataManager.getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE);
+        metadataManagerSql.getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE,
+            metadataManager.isPrioritizeIndexingNewAus());
     assertEquals(6, auids.size());
     assertTrue(auids.get(0).isNew);
     for (int i = 1; i <= 5; i++) {
@@ -442,7 +447,8 @@ public class TestMetadataManager extends LockssTestCase {
     metadataManager.setConfig(newConf, oldConf, diffs);
 
     // ensure that the the most recently added "new" AU is prioritized first
-    auids = metadataManager.getPrioritizedAuIdsToReindex(con,Integer.MAX_VALUE);
+    auids = metadataManagerSql.getPrioritizedAuIdsToReindex(con,
+	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus());
     assertEquals(6, auids.size());
     for (int i = 0; i < 5; i++) {
       assertFalse(auids.get(i).isNew);
@@ -610,7 +616,7 @@ public class TestMetadataManager extends LockssTestCase {
     Connection con = dbManager.getConnection();
     
     // Add a disabled AU.
-    metadataManager.addDisabledAuToPendingAus(con, sau0.getAuId());
+    metadataManagerSql.addDisabledAuToPendingAus(con, sau0.getAuId());
     con.commit();
 
     // Make sure that it is there.
@@ -622,7 +628,7 @@ public class TestMetadataManager extends LockssTestCase {
     Connection con = dbManager.getConnection();
     
     // Add an AU with a failed indexing process.
-    metadataManager.addFailedIndexingAuToPendingAus(con, sau1.getAuId());
+    metadataManagerSql.addFailedIndexingAuToPendingAus(con, sau1.getAuId());
     con.commit();
 
     // Make sure that it is there.
@@ -1000,7 +1006,7 @@ public class TestMetadataManager extends LockssTestCase {
       Map<Long, String> eIsbns) throws Exception {
 
     for (Long publicationSeq : journals) {
-      metadataManager.addMdItemIsbns(conn, mdItems.get(publicationSeq),
+      metadataManagerSql.addMdItemIsbns(conn, mdItems.get(publicationSeq),
 	  "9781585623174", "9781585623177");
       pIsbns.put(publicationSeq, "9781585623174");
       eIsbns.put(publicationSeq, "9781585623177");

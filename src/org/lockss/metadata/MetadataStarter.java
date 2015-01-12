@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataStarter.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.11 2015-01-12 20:40:46 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -191,7 +191,8 @@ public class MetadataStarter extends LockssRunnable {
         DbManager.commitOrRollback(conn, log);
 
         // Remove the AU from the table of unconfigured AUs.
-        mdManager.removeFromUnconfiguredAus(conn, au.getAuId());
+        mdManager.getMetadataManagerSql().removeFromUnconfiguredAus(conn,
+            au.getAuId());
 
         insertPendingAuBatchStatement =
             mdManager.getInsertPendingAuBatchStatement(conn);

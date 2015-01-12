@@ -1,10 +1,10 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.22 2014-12-31 22:09:58 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.23 2015-01-12 20:40:44 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,6 +40,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -67,6 +68,29 @@ public class AuMetadataRecorder {
 
   static final String UNKNOWN_PUBLISHER_AU_PROBLEM = "UNKNOWN_PUBLISHER";
 
+  // Query to update the primary name of a metadata item.
+  private static final String UPDATE_MD_ITEM_PRIMARY_NAME_QUERY = "update "
+      + MD_ITEM_NAME_TABLE
+      + " set " + NAME_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'";
+
+  // Query to delete a metadata item non-primary name.
+  private static final String DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY = "delete "
+      + "from " + MD_ITEM_NAME_TABLE
+      + " where "
+      + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_COLUMN + " like '" + UNKNOWN_TITLE_NAME_ROOT + "%'"
+      + " and " + NAME_TYPE_COLUMN + " = '" + NOT_PRIMARY_NAME_TYPE + "'";
+
+  // Query to delete a metadata item non-primary name.
+  private static final String DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY = "delete "
+      + "from " + MD_ITEM_NAME_TABLE
+      + " where "
+      + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_COLUMN + " = ?"
+      + " and " + NAME_TYPE_COLUMN + " = '" + NOT_PRIMARY_NAME_TYPE + "'";
+
   // Query to update the version of an Archival Unit metadata.
   private static final String UPDATE_AU_MD_VERSION_QUERY = "update "
       + AU_MD_TABLE
@@ -80,6 +104,12 @@ public class AuMetadataRecorder {
       + "," + MD_ITEM_TABLE + " m"
       + " where m." + MD_ITEM_SEQ_COLUMN + " = ?"
       + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN;
+
+  // Query to find the metadata entry of an Archival Unit.
+  private static final String FIND_AU_MD_QUERY = "select "
+      + AU_MD_SEQ_COLUMN
+      + " from " + AU_MD_TABLE
+      + " where " + AU_SEQ_COLUMN + " = ?";
 
   // Query to find the DOIs of a metadata item.
   private static final String FIND_MD_ITEM_DOI_QUERY = "select "
@@ -106,6 +136,66 @@ public class AuMetadataRecorder {
       + "," + START_PAGE_COLUMN + " = ?"
       + "," + END_PAGE_COLUMN + " = ?"
       + "," + ITEM_NO_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
+
+  // Query to find a metadata item by its type, Archival Unit and access URL.
+  private static final String FIND_MD_ITEM_QUERY = "select "
+      + "m." + MD_ITEM_SEQ_COLUMN
+      + " from " + MD_ITEM_TABLE + " m"
+      + "," + URL_TABLE + " u"
+      + " where m." + MD_ITEM_TYPE_SEQ_COLUMN + " = ?"
+      + " and m." + AU_MD_SEQ_COLUMN + " = ?"
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
+      + " and u." + FEATURE_COLUMN + " = '" + ACCESS_URL_FEATURE + "'"
+      + " and u." + URL_COLUMN + " = ?";
+
+  // Query to get the name of a publisher.
+  private static final String GET_PUBLISHER_NAME_QUERY = "select "
+      + PUBLISHER_NAME_COLUMN
+      + " from " + PUBLISHER_TABLE
+      + " where " + PUBLISHER_SEQ_COLUMN + " = ?";
+
+  // Query to find AU problems.
+  private static final String FIND_AU_PROBLEMS_QUERY = "select "
+      + PROBLEM_COLUMN
+      + " from " + AU_PROBLEM_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to delete an AU problem entry.
+  private static final String DELETE_AU_PROBLEM_QUERY = "delete from "
+      + AU_PROBLEM_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?"
+      + " and " + PROBLEM_COLUMN + " = ?";
+
+  // Query to add an AU problem entry.
+  private static final String INSERT_AU_PROBLEM_QUERY = "insert into "
+      + AU_PROBLEM_TABLE
+      + "(" + PLUGIN_ID_COLUMN
+      + "," + AU_KEY_COLUMN
+      + "," + PROBLEM_COLUMN
+      + ") values (?,?,?)";
+
+  // Query to find the publications of a publisher.
+  private static final String FIND_PUBLISHER_PUBLICATIONS_QUERY = "select "
+      + PUBLICATION_SEQ_COLUMN
+      + " from " + PUBLICATION_TABLE
+      + " where " + PUBLISHER_SEQ_COLUMN + " = ?";
+
+  // Query to find the metadata items of a publication.
+  private static final String FIND_PUBLICATION_CHILD_MD_ITEMS_QUERY = "select "
+      + "distinct "
+      + "m." + MD_ITEM_SEQ_COLUMN
+      + " from " + PUBLICATION_TABLE + " p"
+      + "," + MD_ITEM_TABLE + " m"
+      + " where p." + PUBLICATION_SEQ_COLUMN + " = ?"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN;
+
+  // Query to update the parent sequence of a metadata item.
+  private static final String UPDATE_MD_ITEM_PARENT_SEQ_QUERY = "update "
+      + MD_ITEM_TABLE
+      + " set " + PARENT_SEQ_COLUMN + " = ?"
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
   // Query to delete the metadata item of a publication created for an unknown
@@ -153,6 +243,9 @@ public class AuMetadataRecorder {
 
   // The metadata manager.
   private final MetadataManager mdManager;
+
+  // The metadata manager SQL executor.
+  private final MetadataManagerSql mdManagerSql;
 
   // The database manager.
   private final DbManager dbManager;
@@ -203,6 +296,7 @@ public class AuMetadataRecorder {
       ArchivalUnit au) {
     this.task = task;
     this.mdManager = mdManager;
+    mdManagerSql = mdManager.getMetadataManagerSql();
     dbManager = mdManager.getDbManager();
     this.au = au;
 
@@ -256,7 +350,7 @@ public class AuMetadataRecorder {
     }
 
     // Find the list of previous problems indexing this Archival Unit.
-    List<String> problems = mdManager.findAuProblems(conn, auId);
+    List<String> problems = findAuProblems(conn, auId);
     log.debug3(DEBUG_HEADER + "problems.size() = " + problems.size());
 
     // Check whether the publisher name used is a synthetic name.
@@ -264,7 +358,7 @@ public class AuMetadataRecorder {
       // Yes: Check whether an entry in the AU problem table does not exist.
       if (!problems.contains(publisherName)) {
 	// Yes: Add an unknown publisher entry to the AU problem table.
-	mdManager.addAuProblem(conn, auId, publisherName);
+	addAuProblem(conn, auId, publisherName);
       }
     } else {
       // No: Check whether there is data obtained when the publisher was unknown
@@ -561,7 +655,7 @@ public class AuMetadataRecorder {
     final String DEBUG_HEADER = "replaceGenSym(): ";
 
     // Find the publication names.
-    Map<String, String> names = mdManager.getMdItemNames(conn, mdSequence);
+    Map<String, String> names = mdManagerSql.getMdItemNames(conn, mdSequence);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "names.size() = " + names.size());
 
@@ -576,7 +670,7 @@ public class AuMetadataRecorder {
           // Yes: Check whether this is not a synthesized name.
           if (!entry.getKey().startsWith(unknownRoot)) {
             // Yes: Remove any synthesized names.
-            mdManager.removeNotPrimarySynthesizedMdItemNames(conn, mdSequence);
+            removeNotPrimarySynthesizedMdItemNames(conn, mdSequence);
 
             // Use the primary name instead of the synthesized name.
             publicationTitle = entry.getKey();
@@ -585,13 +679,11 @@ public class AuMetadataRecorder {
           // No: Check whether this is a synthesized name.
           if (entry.getKey().startsWith(unknownRoot)) {
             // Yes: Update the synthesized primary name with the current one.
-            mdManager.updatePrimarySynthesizedMdItemName(conn, mdSequence,
-                title);
+            updatePrimarySynthesizedMdItemName(conn, mdSequence, title);
 
             // Remove the previously entered non-primary name for this
             // publication.
-            mdManager.removeNotPrimaryMdItemName(conn, mdSequence,
-                title);
+            removeNotPrimaryMdItemName(conn, mdSequence, title);
           }
         }
 
@@ -599,7 +691,113 @@ public class AuMetadataRecorder {
       }
     }
   }
-  
+
+  /**
+   * Updates the primary name of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the identifier of the metadata item.
+   * @param primaryName
+   *          A String with the primary name of the metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updatePrimarySynthesizedMdItemName(Connection conn,
+      Long mdItemSeq, String primaryName) throws DbException {
+    final String DEBUG_HEADER = "updatePrimarySynthesizedMdItemName(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "primaryName = " + primaryName);
+    }
+
+    PreparedStatement updatePrimaryName =
+	dbManager.prepareStatement(conn, UPDATE_MD_ITEM_PRIMARY_NAME_QUERY);
+
+    try {
+      updatePrimaryName.setString(1, primaryName);
+      updatePrimaryName.setLong(2, mdItemSeq);
+      int count = dbManager.executeUpdate(updatePrimaryName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update the primary name", sqle);
+      log.error("mdItemSeq = '" + mdItemSeq + "'.");
+      log.error("primaryName = '" + primaryName + "'.");
+      log.error("SQL = '" + UPDATE_MD_ITEM_PRIMARY_NAME_QUERY + "'.");
+      throw new DbException("Cannot update the primary name", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updatePrimaryName);
+    }
+  }
+
+  /**
+   * Removes non-primary metadata item synthesized names from the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void removeNotPrimarySynthesizedMdItemNames(Connection conn,
+      Long mdItemSeq) throws DbException {
+    final String DEBUG_HEADER = "removeNotPrimarySynthesizedMdItemNames(): ";
+    PreparedStatement deleteName =
+	dbManager.prepareStatement(conn, DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY);
+
+    try {
+      deleteName.setLong(1, mdItemSeq);
+      int count = dbManager.executeUpdate(deleteName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      String message =
+	  "Cannot remove metadata item non-primary synthesized names";
+      log.error(message, sqle);
+      log.error("mdItemSeq = " + mdItemSeq + ".");
+      log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteName);
+    }
+  }
+
+  /**
+   * Removes a non-primary metadata item name from the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param name
+   *          A String with the non-primary metadata item name to be removed.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void removeNotPrimaryMdItemName(Connection conn, Long mdItemSeq,
+      String name) throws DbException {
+    final String DEBUG_HEADER = "removeNotPrimaryMdItemName(): ";
+    PreparedStatement deleteName =
+	dbManager.prepareStatement(conn, DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY);
+
+    try {
+      deleteName.setLong(1, mdItemSeq);
+      deleteName.setString(2, name);
+      int count = dbManager.executeUpdate(deleteName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      String message = "Cannot remove metadata item non-primary name";
+      log.error(message, sqle);
+      log.error("mdItemSeq = " + mdItemSeq + ".");
+      log.error("name = '" + name + "'.");
+      log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteName);
+    }
+  }
+
   /**
    * Stores in the database metadata for the Archival Unit.
    * 
@@ -739,7 +937,7 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
 
       // Find the plugin or create it.
-      pluginSeq = mdManager.findOrCreatePlugin(conn, pluginId, platformSeq,
+      pluginSeq = mdManagerSql.findOrCreatePlugin(conn, pluginId, platformSeq,
 	  isBulkContent);
       log.debug3(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
 
@@ -767,7 +965,7 @@ public class AuMetadataRecorder {
     // database.
     if (auMdSeq == null) {
       // Yes: Find the Archival Unit metadata in the database.
-      auMdSeq = mdManager.findAuMd(conn, auSeq);
+      auMdSeq = findAuMd(conn, auSeq);
       log.debug3(DEBUG_HEADER + "new auMdSeq = " + auMdSeq);
     }
 
@@ -787,9 +985,8 @@ public class AuMetadataRecorder {
 	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
 
       // Add to the database the new Archival Unit metadata.
-      auMdSeq = mdManager.addAuMd(conn, auSeq, pluginVersion,
-                                  NEVER_EXTRACTED_EXTRACTION_TIME, creationTime,
-                                  providerSeq);
+      auMdSeq = mdManagerSql.addAuMd(conn, auSeq, pluginVersion,
+	  NEVER_EXTRACTED_EXTRACTION_TIME, creationTime, providerSeq);
       log.debug3(DEBUG_HEADER + "new auSeq = " + auMdSeq);
 
       // Skip it if the new Archival Unit metadata could not be created.
@@ -840,7 +1037,7 @@ public class AuMetadataRecorder {
 	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
     } else {
       // No: Find the AU in the database.
-      auSeq = mdManager.findAuByAuId(conn, auId);
+      auSeq = mdManagerSql.findAuByAuId(conn, auId);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
 
       // Check whether the AU was found.
@@ -853,7 +1050,7 @@ public class AuMetadataRecorder {
 	// Check whether the AU publisher was found.
 	if (publisherSeq != null) {
 	  // Yes: Get its name.
-	  publisherName = mdManager.getPublisherName(conn, publisherSeq);
+	  publisherName = getPublisherName(conn, publisherSeq);
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 	} else {
@@ -868,7 +1065,7 @@ public class AuMetadataRecorder {
 	}
       } else {
 	// No: Loop through all outstanding previous problems for this AU.
-	for (String problem : mdManager.findAuProblems(conn, auId)) {
+	for (String problem : findAuProblems(conn, auId)) {
 	  // Check whether there is an unknown publisher already for this AU.
 	  if (problem.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
 	    // Yes: Get the corresponding publisher identifier.
@@ -883,7 +1080,7 @@ public class AuMetadataRecorder {
 	      break;
 	    } else {
 	      // No: Remove the obsolete problem.
-	      mdManager.removeAuProblem(conn, auId, problem);
+	      removeAuProblem(conn, auId, problem);
 	    }
 	  }
 	}
@@ -1169,7 +1366,7 @@ public class AuMetadataRecorder {
       newMdItem = true;
     } else {
       // No: Find the metadata item in the database.
-      mdItemSeq = mdManager.findMdItem(conn, mdItemTypeSeq, auMdSeq, accessUrl);
+      mdItemSeq = findMdItem(conn, mdItemTypeSeq, auMdSeq, accessUrl);
       log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
       // Check whether it is a new metadata item.
@@ -1211,11 +1408,11 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "added AUItem URL.");
 
       // Add the item authors.
-      mdManager.addMdItemAuthors(conn, mdItemSeq, authors);
+      mdManagerSql.addMdItemAuthors(conn, mdItemSeq, authors);
       log.debug3(DEBUG_HEADER + "added AUItem authors.");
 
       // Add the item keywords.
-      mdManager.addMdItemKeywords(conn, mdItemSeq, keywords);
+      mdManagerSql.addMdItemKeywords(conn, mdItemSeq, keywords);
       log.debug3(DEBUG_HEADER + "added AUItem keywords.");
 
       // Add the item DOI.
@@ -1285,6 +1482,43 @@ public class AuMetadataRecorder {
     }
 
     return typeName;
+  }
+
+  /**
+   * Provides the identifier of an Archival Unit metadata.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auSeq
+   *          A Long with the identifier of the Archival Unit.
+   * @return a Long with the identifier of the Archival Unit metadata.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findAuMd(Connection conn, Long auSeq) throws DbException {
+    final String DEBUG_HEADER = "findAuMd(): ";
+    Long auMdSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findAuMd = dbManager.prepareStatement(conn,
+	FIND_AU_MD_QUERY);
+
+    try {
+      findAuMd.setLong(1, auSeq);
+
+      resultSet = dbManager.executeQuery(findAuMd);
+      if (resultSet.next()) {
+	auMdSeq = resultSet.getLong(AU_MD_SEQ_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot find AU metadata", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findAuMd);
+    }
+
+    log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+    return auMdSeq;
   }
 
   /**
@@ -1375,6 +1609,50 @@ public class AuMetadataRecorder {
 
     log.debug3(DEBUG_HEADER + "updatedCount = " + updatedCount);
     return updatedCount;
+  }
+
+  /**
+   * Provides the identifier of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemTypeSeq
+   *          A Long with the identifier of the metadata item type.
+   * @param auMdSeq
+   *          A Long with the identifier of the archival unit metadata.
+   * @param accessUrl
+   *          A String with the access URL of the metadata item.
+   * @return a Long with the identifier of the metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Long findMdItem(Connection conn, Long mdItemTypeSeq, Long auMdSeq,
+      String accessUrl) throws DbException {
+    final String DEBUG_HEADER = "findMdItem(): ";
+    Long mdItemSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findMdItem =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_QUERY);
+
+    try {
+      findMdItem.setLong(1, mdItemTypeSeq);
+      findMdItem.setLong(2, auMdSeq);
+      findMdItem.setString(3, accessUrl);
+
+      resultSet = dbManager.executeQuery(findMdItem);
+      if (resultSet.next()) {
+	mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot find metadata item", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findMdItem);
+    }
+
+    log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    return mdItemSeq;
   }
 
   /**
@@ -1469,6 +1747,179 @@ public class AuMetadataRecorder {
   }
 
   /**
+   * Provides the name of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @return a String with the name of the publisher.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private String getPublisherName(Connection conn, Long publisherSeq)
+      throws DbException {
+    final String DEBUG_HEADER = "getPublisherName(): ";
+    String publisherName = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement getPublisherNameStatement =
+	dbManager.prepareStatement(conn, GET_PUBLISHER_NAME_QUERY);
+
+    try {
+      getPublisherNameStatement.setLong(1, publisherSeq);
+
+      resultSet = dbManager.executeQuery(getPublisherNameStatement);
+      if (resultSet.next()) {
+	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot get the name of a publisher", sqle);
+      log.error("publisherSeq = '" + publisherSeq + "'.");
+      log.error("SQL = '" + GET_PUBLISHER_NAME_QUERY + "'.");
+      throw new DbException("Cannot get the name of a publisher", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(getPublisherNameStatement);
+    }
+
+    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+    return publisherName;
+  }
+
+  /**
+   * Provides the problems found indexing an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @return a List<String> with the problems found indexing the Archival Unit.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private List<String> findAuProblems(Connection conn, String auId)
+      throws DbException {
+    final String DEBUG_HEADER = "findAuProblems(): ";
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+    List<String> problems = new ArrayList<String>();
+    ResultSet results = null;
+    String problem;
+
+    PreparedStatement findProblems =
+	dbManager.prepareStatement(conn, FIND_AU_PROBLEMS_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      findProblems.setString(1, pluginId);
+      findProblems.setString(2, auKey);
+      results = dbManager.executeQuery(findProblems);
+
+      while (results.next()) {
+	problem = results.getString(PROBLEM_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "problem = " + problem);
+
+	problems.add(problem);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find AU problems", sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("SQL = '" + FIND_AU_PROBLEMS_QUERY + "'.");
+      throw new DbException("Cannot find AU problems", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(findProblems);
+    }
+
+    return problems;
+  }
+
+  /**
+   * Removes an entry from the table of AU problems.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archiva lUnit identifier.
+   * @param problem
+   *          A String with the problem.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void removeAuProblem(Connection conn, String auId, String problem)
+      throws DbException {
+    final String DEBUG_HEADER = "removeAuProblem(): ";
+    PreparedStatement deleteAuProblem =
+	dbManager.prepareStatement(conn, DELETE_AU_PROBLEM_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      deleteAuProblem.setString(1, pluginId);
+      deleteAuProblem.setString(2, auKey);
+      deleteAuProblem.setString(3, problem);
+      int count = dbManager.executeUpdate(deleteAuProblem);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot remove problem AU entry", sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("problem = '" + problem + "'.");
+      log.error("SQL = '" + DELETE_AU_PROBLEM_QUERY + "'.");
+      throw new DbException("Cannot remove problem AU entry", sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteAuProblem);
+    }
+  }
+
+  /**
+   * Adds an entry to the table of AU problems.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @param problem
+   *          A String with the problem.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void addAuProblem(Connection conn, String auId, String problem)
+      throws DbException {
+    final String DEBUG_HEADER = "addAuProblem(): ";
+    PreparedStatement addAuProblemStatement =
+	dbManager.prepareStatement(conn, INSERT_AU_PROBLEM_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      addAuProblemStatement.setString(1, pluginId);
+      addAuProblemStatement.setString(2, auKey);
+      addAuProblemStatement.setString(3, problem);
+      int count = dbManager.executeUpdate(addAuProblemStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot add problem AU entry", sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("problem = '" + problem + "'.");
+      log.error("SQL = '" + INSERT_AU_PROBLEM_QUERY + "'.");
+      throw new DbException("Cannot add problem AU entry", sqle);
+    } finally {
+      DbManager.safeCloseStatement(addAuProblemStatement);
+    }
+  }
+
+  /**
    * Fixes the Archival Unit data of unknown publishers.
    * 
    * @param conn
@@ -1520,11 +1971,11 @@ public class AuMetadataRecorder {
     if (unknownPublisherSeq != null && unknownPublisherSeq != publisherSeq) {
       // Yes: Get the identifiers of any publications of the unknown publisher.
       Set<Long> unknownPublicationSeqs =
-	  mdManager.findPublisherPublications(conn, unknownPublisherSeq);
+	  findPublisherPublications(conn, unknownPublisherSeq);
 
       // Get the identifiers of the metadata items of the current publication.
       Set<Long> mdItemSeqs =
-	    mdManager.findPublicationChildMetadataItems(conn, publicationSeq);
+	  findPublicationChildMetadataItems(conn, publicationSeq);
 
       Map<String, Long> mdItemMapByName = new HashMap<String, Long>();
 
@@ -1533,7 +1984,7 @@ public class AuMetadataRecorder {
       for (Long mdItemSeq : mdItemSeqs) {
 	// Get allthe names of this metadata item.
 	Map<String, String> mdItemSeqNames =
-	    mdManager.getMdItemNames(conn, mdItemSeq);
+	    mdManagerSql.getMdItemNames(conn, mdItemSeq);
 
 	// Map the identifier by each of its names.
 	for (String mdItemSeqName : mdItemSeqNames.keySet()) {
@@ -1571,9 +2022,100 @@ public class AuMetadataRecorder {
     removeUnknownPublisher(conn, unknownPublisherName);
 
     // Remove the record of the fixed unknown publisher problem.
-    mdManager.removeAuProblem(conn, auId, unknownPublisherName);
+    removeAuProblem(conn, auId, unknownPublisherName);
 
     log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the identifiers of the publications of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @return a Set<Long> with the identifiers of the publications.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Set<Long> findPublisherPublications(Connection conn,
+      Long publisherSeq) throws DbException {
+    final String DEBUG_HEADER = "findPublisherPublications(): ";
+    Set<Long> publicationSeqs = new HashSet<Long>();
+    Long publicationSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findPublications =
+	dbManager.prepareStatement(conn, FIND_PUBLISHER_PUBLICATIONS_QUERY);
+
+    try {
+      findPublications.setLong(1, publisherSeq);
+
+      resultSet = dbManager.executeQuery(findPublications);
+      while (resultSet.next()) {
+	publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
+	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+	publicationSeqs.add(publicationSeq);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the publications of a publisher", sqle);
+      log.error("publisherSeq = '" + publisherSeq + "'.");
+      log.error("SQL = '" + FIND_PUBLISHER_PUBLICATIONS_QUERY + "'.");
+      throw new DbException("Cannot find the publications of a publisher",
+	  sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findPublications);
+    }
+
+    return publicationSeqs;
+  }
+
+  /**
+   * Provides the identifiers of the child metadata items (chapters, articles)
+   * of a publication.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publicationSeq
+   *          A Long with the identifier of the publication.
+   * @return a Set<Long> with the identifiers of the metadata items.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Set<Long> findPublicationChildMetadataItems(Connection conn,
+      Long publicationSeq) throws DbException {
+    final String DEBUG_HEADER = "findPublicationChildMetadataItems(): ";
+    Set<Long> mdItemSeqs = new HashSet<Long>();
+    Long mdItemSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findMdItems =
+	dbManager.prepareStatement(conn, FIND_PUBLICATION_CHILD_MD_ITEMS_QUERY);
+
+    try {
+      findMdItems.setLong(1, publicationSeq);
+
+      resultSet = dbManager.executeQuery(findMdItems);
+      while (resultSet.next()) {
+	mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	mdItemSeqs.add(mdItemSeq);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the child metadata items of a publication", sqle);
+      log.error("publicationSeq = '" + publicationSeq + "'.");
+      log.error("SQL = '" + FIND_PUBLICATION_CHILD_MD_ITEMS_QUERY + "'.");
+      throw new DbException(
+	  "Cannot find the child metadata items of a publication", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findMdItems);
+    }
+
+    return mdItemSeqs;
   }
 
   /**
@@ -1598,8 +2140,7 @@ public class AuMetadataRecorder {
 
     // Get the identifiers of the metadata items of the unknown publication.
     Set<Long> unknownMdItemSeqs =
-	mdManager.findPublicationChildMetadataItems(conn,
-	    unknownPublicationSeq);
+	findPublicationChildMetadataItems(conn, unknownPublicationSeq);
 
     // Loop through all the identifiers of the metadata items of the unknown
     // publication.
@@ -1608,7 +2149,7 @@ public class AuMetadataRecorder {
 
       // Map the identifier by each of its names.
       Map<String, String> unknownMdItemSeqNames =
-	  mdManager.getMdItemNames(conn, unknownMdItemSeq);
+	  mdManagerSql.getMdItemNames(conn, unknownMdItemSeq);
 
       // Loop through all of the names of the unknown publication metadata item.
       for (String unknownMdItemSeqName : unknownMdItemSeqNames.keySet()) {
@@ -1630,7 +2171,7 @@ public class AuMetadataRecorder {
       if (!merged) {
 	// Yes: Assign the unknown publication metadata item to the current
 	// publication.
-	mdManager.updateMdItemParentSeq(conn, unknownMdItemSeq, parentSeq);
+	updateMdItemParentSeq(conn, unknownMdItemSeq, parentSeq);
       }
     }
 
@@ -1644,6 +2185,46 @@ public class AuMetadataRecorder {
     mdManager.mergeParentMdItemProperties(conn, unknownParentSeq, parentSeq);
 
     log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the identifier of the parenet of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the identifier of the metadata item.
+   * @param parentSeq
+   *          A Long with the identifier of the parent metadata item.
+   * @return a Set<Long> with the identifiers of the Archival Units.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateMdItemParentSeq(Connection conn, Long mdItemSeq,
+      Long parentSeq) throws DbException {
+    final String DEBUG_HEADER = "updateMdItemParentSeq(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "parentSeq = " + parentSeq);
+    }
+
+    PreparedStatement updateParentSeq =
+	dbManager.prepareStatement(conn, UPDATE_MD_ITEM_PARENT_SEQ_QUERY);
+
+    try {
+      updateParentSeq.setLong(1, parentSeq);
+      updateParentSeq.setLong(2, mdItemSeq);
+      int count = dbManager.executeUpdate(updateParentSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update the parent sequence", sqle);
+      log.error("mdItemSeq = '" + mdItemSeq + "'.");
+      log.error("parentSeq = '" + parentSeq + "'.");
+      log.error("SQL = '" + UPDATE_MD_ITEM_PARENT_SEQ_QUERY + "'.");
+      throw new DbException("Cannot update the parent sequence", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updateParentSeq);
+    }
   }
 
   /**

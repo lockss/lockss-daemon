@@ -1,10 +1,10 @@
 /*
- * $Id: SqlConstants.java,v 1.4 2014-10-03 23:04:44 fergaloy-sf Exp $
+ * $Id: SqlConstants.java,v 1.5 2015-01-12 20:40:46 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -548,4 +548,23 @@ public class SqlConstants {
 
   /** The name of the unknown provider. */
   public static final String UNKNOWN_PROVIDER_NAME = "UNKNOWN PROVIDER";
+
+  /**
+   * The standard type of a name that is primary.
+   */
+  public static final String PRIMARY_NAME_TYPE = "primary";
+
+  /**
+   * The standard type of a name that is not primary.
+   */
+  public static final String NOT_PRIMARY_NAME_TYPE = "not_primary";
+
+  /**
+   * The standard types of ISBNs and ISSNs.
+   */
+  public static final String E_ISBN_TYPE = "e_isbn";
+  public static final String E_ISSN_TYPE = "e_issn";
+  public static final String L_ISSN_TYPE = "l_issn";
+  public static final String P_ISBN_TYPE = "p_isbn";
+  public static final String P_ISSN_TYPE = "p_issn";
 }

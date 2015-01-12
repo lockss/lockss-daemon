@@ -1,10 +1,10 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.31 2014-10-13 23:28:33 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.32 2015-01-12 20:40:46 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,9 +37,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
-
 import junit.framework.Test;
-
 import org.lockss.config.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.db.DbManager;
@@ -302,7 +300,9 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     assertEquals(expectedAuCount, ausCount);
     
     assertEquals(0, metadataManager.getActiveReindexingCount());
-    assertEquals(0, metadataManager.getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE).size());
+    assertEquals(0, metadataManager.getPrioritizedAuIdsToReindex(con,
+	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus())
+	.size());
 
     String query = "select " + URL_COLUMN + " from " + URL_TABLE; 
     PreparedStatement stmt = dbManager.prepareStatement(con, query);

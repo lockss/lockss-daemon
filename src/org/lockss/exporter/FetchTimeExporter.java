@@ -1,10 +1,10 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.12 2014-09-16 19:55:44 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.13 2015-01-12 20:40:46 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@
 package org.lockss.exporter;
 
 import static org.lockss.db.SqlConstants.*;
-import static org.lockss.metadata.MetadataManager.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
