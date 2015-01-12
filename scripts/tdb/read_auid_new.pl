@@ -48,6 +48,7 @@ while (my $line = <>) {
   my $url_d = "cant_create_url";
   #my $url_permission = "cant_create_url";
   my $man_url = "cant_create_url";
+  my $man_url_d = "cant_create_url";
   my $vol_title = "NO TITLE FOUND";
   my $result = "Plugin Unknown";
   if ($plugin eq "HighWirePressH20Plugin" || $plugin eq "HighWirePressPlugin") {
@@ -57,6 +58,7 @@ while (my $line = <>) {
       $param{base_url}, $param{volume_name});
     printf("\n\nurl: %s\n",$url);
     $man_url = uri_unescape($url);
+    $man_url_d = uri_unescape($url_d);
     printf("man_url: %s\n",$man_url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
