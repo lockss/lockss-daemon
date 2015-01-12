@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookPdfFilterFactory.java,v 1.3 2015-01-12 17:47:09 aishizaki Exp $
+ * $Id: PalgraveBookPdfFilterFactory.java,v 1.4 2015-01-12 17:53:56 aishizaki Exp $
  */
 
 /*
@@ -41,8 +41,8 @@ import org.lockss.util.Logger;
 
 public class PalgraveBookPdfFilterFactory extends SimplePdfFilterFactory {
 
-  private static final Logger logger = Logger.getLoggerWithInitialLevel(PalgraveBookPdfFilterFactory.class.getName(), Logger.LEVEL_DEBUG3);
-  
+  private static final Logger logger = Logger.getLogger(PalgraveBookPdfFilterFactory.class);
+
   protected static class Worker extends PdfTokenStreamWorker {
     
     protected boolean result;
