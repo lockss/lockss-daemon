@@ -66,7 +66,7 @@
     au < ready ; exists ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
-    au < expected ; exists ; 2015 ; Breast Cancer Management Volume 4 ; 4 >
+    au < manifest ; exists ; 2015 ; Breast Cancer Management Volume 4 ; 4 >
   
   }
 
@@ -302,7 +302,7 @@
     au < testing ; exists ; 2012 ; Future Oncology Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Future Oncology Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Future Oncology Volume 10 ; 10 >
-    au < expected ; exists ; 2015 ; Future Oncology Volume 11 ; 11 >
+    au < manifest ; exists ; 2015 ; Future Oncology Volume 11 ; 11 >
     
   }
 
@@ -395,7 +395,7 @@
     au < ready ; exists ; 2012 ; Immunotherapy Volume 4 ; 4 >
     au < ingNotReady ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Immunotherapy Volume 6 ; 6 >
-    au < expected ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 >
+    au < manifest ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 >
     
   }
 
@@ -483,7 +483,7 @@
     au < testing ; exists ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 >
-    au < expected ; exists ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 >
+    au < manifest ; exists ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 >
     
   }
 
@@ -574,7 +574,7 @@
     au < ready ; exists ; 2012 ; Pain Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Pain Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Pain Management Volume 4 ; 4 >
-    au < expected ; exists ; 2015 ; Pain Management Volume 5 ; 5 >
+    au < manifest ; exists ; 2015 ; Pain Management Volume 5 ; 5 >
     
   }
 
@@ -617,7 +617,7 @@
     au < testing ; exists ; 2012 ; Personalized Medicine Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Personalized Medicine Volume 10 ; 10 >
     au < manifest ; exists ; 2014 ; Personalized Medicine Volume 11 ; 11 >
-    au < expected ; exists ; 2015 ; Personalized Medicine Volume 12 ; 12 >
+    au < manifest ; exists ; 2015 ; Personalized Medicine Volume 12 ; 12 >
     
   }
 
@@ -646,7 +646,7 @@
     au < testing ; exists ; 2012 ; Pharmacogenomics Volume 13 ; 13 >
     au < crawling ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 >
     au < manifest ; exists ; 2014 ; Pharmacogenomics Volume 15 ; 15 >
-    au < expected ; exists ; 2015 ; Pharmacogenomics Volume 16 ; 16 >
+    au < manifest ; exists ; 2015 ; Pharmacogenomics Volume 16 ; 16 >
     
   }
 
@@ -669,7 +669,7 @@
     au < testing ; exists ; 2012 ; Regenerative Medicine Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Regenerative Medicine Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Regenerative Medicine Volume 9 ; 9 >
-    au < expected ; exists ; 2015 ; Regenerative Medicine Volume 10 ; 10 >
+    au < manifest ; exists ; 2015 ; Regenerative Medicine Volume 10 ; 10 >
     
   }
 
