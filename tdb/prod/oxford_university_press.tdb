@@ -4804,7 +4804,7 @@
     param[base_url] = http://em.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2005 ; Early Music Volume 33 ; 33 >
+    au < superseded ; 2005 ; Early Music Volume 33 [superseded] ; 33 >
 
     }
 
@@ -4813,6 +4813,8 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://em.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    comment[superseded] = volume 34 and 35 superseded by Project Muse title.
 
     au < HighWirePressH20Plugin ; manifest ; 1973 ; Early Music Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1974 ; Early Music Volume 2 ; 2 >
@@ -4847,8 +4849,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Early Music Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Early Music Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Early Music Volume 33 ; 33 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Early Music Volume 34 ; 34 >
-    au < HighWirePressPlugin ; down ; 2007 ; Early Music Volume 35 ; 35 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; Early Music Volume 34 [superseded] ; 34 >
+    au < HighWirePressPlugin ; superseded ; 2007 ; Early Music Volume 35 [superseded] ; 35 >
     au < HighWirePressPlugin ; down ; 2008 ; Early Music Volume 36 ; 36 >
     au < HighWirePressPlugin ; down ; 2009 ; Early Music Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Early Music Volume 38 ; 38 >
