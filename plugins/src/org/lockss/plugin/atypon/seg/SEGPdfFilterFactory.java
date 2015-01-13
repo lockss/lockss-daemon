@@ -1,5 +1,5 @@
 /*
- * $Id: SEGPdfFilterFactory.java,v 1.5 2015-01-13 00:02:53 alexandraohlson Exp $
+ * $Id: SEGPdfFilterFactory.java,v 1.6 2015-01-13 20:33:59 alexandraohlson Exp $
  */
 
 /*
@@ -34,16 +34,12 @@ package org.lockss.plugin.atypon.seg;
 
 import java.util.regex.Pattern;
 
-import org.lockss.pdf.*;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
-import org.lockss.util.Logger;
 
 /*
  * Example: http://library.seg.org/doi/pdfplus/10.1190/geo2012-0531.1
  */
 public class SEGPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
-  private static final Logger logger = Logger.getLogger(SEGPdfFilterFactory.class);
 
   public static final Pattern SEG_DOWNLOADED_PATTERN =
       Pattern.compile("^Downloaded \\d+/\\d+/\\d+ to \\d+\\.\\d+\\.\\d+\\.\\d+", Pattern.CASE_INSENSITIVE);
@@ -65,43 +61,11 @@ public class SEGPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
     return SEG_DOWNLOADED_PATTERN;
   }  
 
-
-   /*
-    * (non-Javadoc)
-    * @see org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory#transform(org.lockss.plugin.ArchivalUnit, org.lockss.pdf.PdfDocument)
-    * 
-    * Override transform in order to extend the base transforms done before modifying the
-    * token stream.
-    */
+  // Metadata completely rewritten when file is watermarked, can't compare to original
   @Override
-  public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
-    // Metadata completely rewritten when file is watermarked, can't compare to original
-    /* FIXME 1.67: use the getDocumentTransform/outputDocumentInformation override instead */
-    pdfDocument.unsetCreationDate();
-    pdfDocument.unsetModificationDate();
-    pdfDocument.unsetMetadata();
-    pdfDocument.unsetCreator();
-    pdfDocument.unsetProducer();
-    pdfDocument.unsetAuthor();
-    pdfDocument.unsetTitle();
-    pdfDocument.unsetSubject();
-    pdfDocument.unsetKeywords();
-    /* end FIXME 1.67 */   
-    removeCitedByPage(pdfDocument);
-    removeDownloadStrip(pdfDocument);
-  }
-
-  /* FIXME 1.67 */
-  //  @Override
-  //  public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
-  //    return new BaseDocumentExtractingTransform(os) {
-  //      @Override
-  //      public void outputDocumentInformation() throws PdfException {
-  //        // Intentionally left blank
-  //      }
-  //    };
-  //  }
-  /* end FIXME 1.67 */
+  public boolean doRemoveAllDocumentInfo() {
+    return true;
+  }  
 
 }
 

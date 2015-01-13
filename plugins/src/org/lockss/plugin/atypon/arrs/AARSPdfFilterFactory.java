@@ -1,5 +1,5 @@
 /*
- * $Id: AARSPdfFilterFactory.java,v 1.1 2015-01-13 00:02:52 alexandraohlson Exp $
+ * $Id: AARSPdfFilterFactory.java,v 1.2 2015-01-13 20:33:59 alexandraohlson Exp $
  */
 
 /*
@@ -35,9 +35,6 @@ package org.lockss.plugin.atypon.arrs;
 import java.util.regex.Pattern;
 
 import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
-import org.lockss.util.Logger;
-
-
 
 /**
  * AARS - 
@@ -47,7 +44,6 @@ import org.lockss.util.Logger;
  * EXAMPLE: http://www.ajronline.org/doi/pdfplus/10.2214/AJR.13.10940
  */
 public class AARSPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
-  private static final Logger logger = Logger.getLogger(AARSPdfFilterFactory.class);
   
   public static final Pattern AARS_DOWNLOAD_PATTERN = Pattern.compile("^Downloaded from www\\.ajronline\\.org");
 

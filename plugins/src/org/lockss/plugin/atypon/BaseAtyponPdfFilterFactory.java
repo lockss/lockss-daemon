@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.7 2015-01-13 00:02:52 alexandraohlson Exp $
+ * $Id: BaseAtyponPdfFilterFactory.java,v 1.8 2015-01-13 20:33:58 alexandraohlson Exp $
  */
 
 /*
@@ -57,7 +57,16 @@ public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
-    doBaseTransforms(pdfDocument);
+    if (doRemoveAllDocumentInfo()) {
+      doAllBaseTransforms(pdfDocument);
+    } else {
+      doBaseTransforms(pdfDocument);
+    }
+      
+  }
+  
+  public static boolean doRemoveAllDocumentInfo() {
+    return false;
   }
   
   public static void doBaseTransforms(PdfDocument pdfDocument) 
@@ -67,5 +76,36 @@ public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
     pdfDocument.unsetMetadata();
     PdfUtil.normalizeTrailerId(pdfDocument);
   }
+  
+  public static void doAllBaseTransforms(PdfDocument pdfDocument)
+  throws PdfException {
+    pdfDocument.unsetCreationDate();
+    pdfDocument.unsetModificationDate();
+    pdfDocument.unsetMetadata();
+    pdfDocument.unsetCreator();
+    pdfDocument.unsetProducer();
+    pdfDocument.unsetAuthor();
+    pdfDocument.unsetTitle();
+    pdfDocument.unsetSubject();
+    pdfDocument.unsetKeywords();
+  }
 
 }
+
+/*
+ * NOTE - possible future improvment
+ * Instead of remembering all the various things to remove (doAllBaseTransforms(
+ * when doing maximal information removal, 
+ * override the definition of output of document information to do nothing
+ * it's not clear how I would turn this on and off depending on child whim
+ *   /* FIXME 1.67 */
+  //  @Override
+  //  public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
+  //    return new BaseDocumentExtractingTransform(os) {
+  //      @Override
+  //      public void outputDocumentInformation() throws PdfException {
+  //        // Intentionally left blank
+  //      }
+  //    };
+  //  }
+  /* end FIXME 1.67 */

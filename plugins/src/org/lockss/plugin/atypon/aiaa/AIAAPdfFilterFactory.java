@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAPdfFilterFactory.java,v 1.6 2015-01-13 00:02:53 alexandraohlson Exp $
+ * $Id: AIAAPdfFilterFactory.java,v 1.7 2015-01-13 20:33:59 alexandraohlson Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.atypon.aiaa;
 import java.util.regex.Pattern;
 
 import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
-import org.lockss.util.Logger;
 
 /*
  * The AIAA pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
@@ -43,7 +42,6 @@ import org.lockss.util.Logger;
  * Because of varying BASEFONT values, must also extract text/images for hash comparison
  */
 public class AIAAPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
-  private static final Logger logger = Logger.getLogger(AIAAPdfFilterFactory.class);
   
   public static final Pattern AIAA_DOWNLOAD_PATTERN = Pattern.compile("^Downloaded by");
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponScrapingPdfFilterFactory.java,v 1.4 2015-01-13 20:00:28 thib_gc Exp $
+ * $Id: BaseAtyponScrapingPdfFilterFactory.java,v 1.5 2015-01-13 20:33:58 alexandraohlson Exp $
  */
 
 /*
@@ -66,7 +66,11 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
   public void transform(ArchivalUnit au,
       PdfDocument pdfDocument)
           throws PdfException {
-    BaseAtyponPdfFilterFactory.doBaseTransforms(pdfDocument);
+    if (doRemoveAllDocumentInfo()) {
+      BaseAtyponPdfFilterFactory.doAllBaseTransforms(pdfDocument);
+    } else {
+      BaseAtyponPdfFilterFactory.doBaseTransforms(pdfDocument);
+    }
     //remove any end pages before stepping through to remove download strips
     if (doRemoveCitedByPage()) {
       removeCitedByPage(pdfDocument);
@@ -74,6 +78,14 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
     if (doRemoveDownloadStrip()) {
       removeDownloadStrip(pdfDocument);
     }
+  }
+
+  /* this also exists in BaseAtyponPdfFilterFactory for those children that
+   * extend that functionality instead of this one.
+   * by default just do basic stuff - dates/metadata
+   */
+  public boolean doRemoveAllDocumentInfo() {
+    return false;
   }
 
   /*
@@ -143,10 +155,6 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
       throws PdfException {
     AtyponDownloadedFromStateMachine worker = new AtyponDownloadedFromStateMachine(getDownloadStripPattern());
     for (PdfPage pdfPage : pdfDocument.getPages()) {
-      // Pages seem to be made of concatenated token streams, and the
-      // target personalization is at the end -- get the last token stream
-      // NOTE - if this starts to fail - loop over all token streams
-      // and then break (continue) if we find it
       List<PdfTokenStream> pdfTokenStreams = pdfPage.getAllTokenStreams();
       //PdfTokenStream pdfTokenStream = pdfTokenstreams.get(pdfTokenstreams.size() - 1);
       for (Iterator<PdfTokenStream> iter = pdfTokenStreams.iterator(); iter.hasNext();) {
