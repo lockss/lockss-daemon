@@ -231,7 +231,7 @@
     au < finished ; frozen ; 2012 ; African Affairs Volume 111 ; 111 ; >
     au < crawling ; exists ; 2013 ; African Affairs Volume 112 ; 112 ; >
     au < crawling ; exists ; 2014 ; African Affairs Volume 113 ; 113 ; >
-    au < expected ; exists ; 2015 ; African Affairs Volume 114 ; 114 ; >
+    au < manifest ; exists ; 2015 ; African Affairs Volume 114 ; 114 ; >
 
     }
 
@@ -1124,7 +1124,7 @@
     au < finished ; frozen ; 2012 ; American Literary History Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; American Literary History Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; American Literary History Volume 26 ; 26 ; >
-    au < expected ; exists ; 2015 ; American Literary History Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2015 ; American Literary History Volume 27 ; 27 ; >
 
     }
 
@@ -1790,36 +1790,36 @@
     param[base_url] = http://arbitration.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
 
-    au < exists ; exists ; 1985 ; Arbitration International Volume 1 ; 1 ; >
-    au < exists ; exists ; 1986 ; Arbitration International Volume 2 ; 2 ; >
-    au < exists ; exists ; 1987 ; Arbitration International Volume 3 ; 3 ; >
-    au < exists ; exists ; 1988 ; Arbitration International Volume 4 ; 4 ; >
-    au < exists ; exists ; 1989 ; Arbitration International Volume 5 ; 5 ; >
-    au < exists ; exists ; 1990 ; Arbitration International Volume 6 ; 6 ; >
-    au < exists ; exists ; 1991 ; Arbitration International Volume 7 ; 7 ; >
-    au < exists ; exists ; 1992 ; Arbitration International Volume 8 ; 8 ; >
-    au < exists ; exists ; 1993 ; Arbitration International Volume 9 ; 9 ; >
-    au < exists ; exists ; 1994 ; Arbitration International Volume 10 ; 10 ; >
-    au < exists ; exists ; 1995 ; Arbitration International Volume 11 ; 11 ; >
-    au < exists ; exists ; 1996 ; Arbitration International Volume 12 ; 12 ; >
-    au < exists ; exists ; 1997 ; Arbitration International Volume 13 ; 13 ; >
-    au < exists ; exists ; 1998 ; Arbitration International Volume 14 ; 14 ; >
-    au < exists ; exists ; 1999 ; Arbitration International Volume 15 ; 15 ; >
-    au < exists ; exists ; 2000 ; Arbitration International Volume 16 ; 16 ; >
-    au < exists ; exists ; 2001 ; Arbitration International Volume 17 ; 17 ; >
-    au < exists ; exists ; 2002 ; Arbitration International Volume 18 ; 18 ; >
-    au < exists ; exists ; 2003 ; Arbitration International Volume 19 ; 19 ; >
-    au < exists ; exists ; 2004 ; Arbitration International Volume 20 ; 20 ; >
-    au < exists ; exists ; 2005 ; Arbitration International Volume 21 ; 21 ; >
-    au < exists ; exists ; 2006 ; Arbitration International Volume 22 ; 22 ; >
-    au < exists ; exists ; 2007 ; Arbitration International Volume 23 ; 23 ; >
-    au < exists ; exists ; 2008 ; Arbitration International Volume 24 ; 24 ; >
-    au < exists ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1985 ; Arbitration International Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1986 ; Arbitration International Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1987 ; Arbitration International Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1988 ; Arbitration International Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1989 ; Arbitration International Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1990 ; Arbitration International Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1991 ; Arbitration International Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1992 ; Arbitration International Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1993 ; Arbitration International Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1994 ; Arbitration International Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1995 ; Arbitration International Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1996 ; Arbitration International Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1997 ; Arbitration International Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1998 ; Arbitration International Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1999 ; Arbitration International Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2000 ; Arbitration International Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2001 ; Arbitration International Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2002 ; Arbitration International Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2003 ; Arbitration International Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2004 ; Arbitration International Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2005 ; Arbitration International Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2006 ; Arbitration International Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2007 ; Arbitration International Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2008 ; Arbitration International Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
     au < exists ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
-    au < exists ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
-    au < exists ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
-    au < exists ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
-    au < exists ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
     au < expected ; exists ; 2015 ; Arbitration International Volume 31 ; 31 ; >
 
   }
@@ -2476,8 +2476,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Brain Volume 136 ; 136 ; >
-    au < exists ; exists ; 2014 ; Brain Volume 137 ; 137 ; >
-    au < exists ; exists ; 2015 ; Brain Volume 138 ; 138 ; >
+    au < manifest ; exists ; 2014 ; Brain Volume 137 ; 137 ; >
+    au < manifest ; exists ; 2015 ; Brain Volume 138 ; 138 ; >
 
     }
 
@@ -5851,7 +5851,7 @@
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; >
     au < doNotProcess ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
-    au < expected ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
 
   }
 
@@ -6462,10 +6462,10 @@
     au < exists ; exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 19 ; 19 ; >
     au < exists ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 20 ; 20 ; >
     au < exists ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 21 ; 21 ; >
-    au < exists ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 22 ; 22 ; >
-    au < exists ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 23 ; 23 ; >
-    au < exists ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 24 ; 24 ; >
-    au < exists ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 25 ; 25 ; >
     au < manifest ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 26 ; 26 ; >
     au < manifest ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 27 ; 27 ; >
     au < manifest ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 28 ; 28 ; >
@@ -6637,18 +6637,18 @@
     pluginSuffix = ClockssHighWireDrupalPlugin
     comment[backcontent] = 1977 volume 1 to 1999 volume 181
 
-    au < exists ; exists ; 1998 ; FEMS Microbiology Letters Volume 169 ; 169 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 170 ; 170 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 171 ; 171 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 172 ; 172 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 173 ; 173 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 174 ; 174 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 175 ; 175 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 176 ; 176 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 177 ; 177 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 178 ; 178 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 179 ; 179 ; >
-    au < exists ; exists ; 1999 ; FEMS Microbiology Letters Volume 180 ; 180 ; >
+    au < manifest ; exists ; 1998 ; FEMS Microbiology Letters Volume 169 ; 169 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 170 ; 170 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 171 ; 171 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 172 ; 172 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 173 ; 173 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 174 ; 174 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 175 ; 175 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 176 ; 176 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 177 ; 177 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 178 ; 178 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 179 ; 179 ; >
+    au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 180 ; 180 ; >
     au < manifest ; exists ; 1999 ; FEMS Microbiology Letters Volume 181 ; 181 ; >
     au < manifest ; exists ; 2000 ; FEMS Microbiology Letters Volume 182 ; 182 ; >
     au < manifest ; exists ; 2000 ; FEMS Microbiology Letters Volume 183 ; 183 ; >
@@ -7070,7 +7070,7 @@
     au < finished ; crawling ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 ; >
     au < crawling ; exists ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ; >
     au < doNotProcess ; exists ; 2014 ; Forestry: An International Journal of Forest Research Volume 87 ; 87 ; >
-    au < expected ; exists ; 2015 ; Forestry: An International Journal of Forest Research Volume 88 ; 88 ; >
+    au < manifest ; exists ; 2015 ; Forestry: An International Journal of Forest Research Volume 88 ; 88 ; >
 
     }
 
@@ -7306,7 +7306,7 @@
     au < finished ; frozen ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 ; >
     au < doNotProcess ; exists ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 ; >
-    au < expected ; exists ; 2015 ; French Studies: A Quarterly Review Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2015 ; French Studies: A Quarterly Review Volume 69 ; 69 ; >
 
     }
 
@@ -7617,7 +7617,7 @@
     au < doNotProcess ; exists ; 2014 ; Geophysical Journal International Volume 197 ; 197 ; >
     au < doNotProcess ; exists ; 2014 ; Geophysical Journal International Volume 198 ; 198 ; >
     au < doNotProcess ; exists ; 2014 ; Geophysical Journal International Volume 199 ; 199 ; >
-    au < expected ; exists ; 2015 ; Geophysical Journal International Volume 200 ; 200 ; >
+    au < manifest ; exists ; 2015 ; Geophysical Journal International Volume 200 ; 200 ; >
 
   }
 
@@ -8012,7 +8012,7 @@
     au < finished ; crawling ; 2012 ; Health Policy and Planning Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2014 ; Health Policy and Planning Volume 29 ; 29 ; >
-    au < expected ; exists ; 2015 ; Health Policy and Planning Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; Health Policy and Planning Volume 30 ; 30 ; >
 
     }
 
@@ -8346,7 +8346,7 @@
     au < finished ; frozen ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Human Reproduction Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2014 ; Human Reproduction Volume 29 ; 29 ; >
-    au < expected ; exists ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
 
     }
 
@@ -9374,7 +9374,7 @@
     au < finished ; frozen ; 2012 ; International Health Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; International Health Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 2014 ; International Health Volume 6 ; 6 ; >
-    au < expected ; exists ; 2015 ; International Health Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2015 ; International Health Volume 7 ; 7 ; >
 
   }
 
@@ -9428,7 +9428,7 @@
     au < finished ; crawling ; 2012 ; International Immunology Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Immunology Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2014 ; International Immunology Volume 26 ; 26 ; >
-    au < expected ; exists ; 2015 ; International Immunology Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2015 ; International Immunology Volume 27 ; 27 ; >
 
     }
 
@@ -10848,7 +10848,7 @@
     au < finished ; frozen ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Antimicrobial Chemotherapy Volume 69 ; 69 ; >
-    au < expected ; exists ; 2015 ; Journal of Antimicrobial Chemotherapy Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2015 ; Journal of Antimicrobial Chemotherapy Volume 70 ; 70 ; >
 
     }
 
@@ -11036,7 +11036,7 @@
     au < crawling ; exists ; 2013 ; The Journal of Biochemistry Volume 154 ; 154 ; >
     au < doNotProcess ; exists ; 2014 ; The Journal of Biochemistry Volume 155 ; 155 ; >
     au < doNotProcess ; exists ; 2014 ; The Journal of Biochemistry Volume 156 ; 156 ; >
-    au < expected ; exists ; 2015 ; The Journal of Biochemistry Volume 157 ; 157 ; >
+    au < manifest ; exists ; 2015 ; The Journal of Biochemistry Volume 157 ; 157 ; >
 
     }
 
@@ -11783,7 +11783,7 @@
     au < finished ; crawling ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; Journal of Experimental Botany Volume 64 ; 64 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Experimental Botany Volume 65 ; 65 ; >
-    au < expected ; exists ; 2015 ; Journal of Experimental Botany Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Experimental Botany Volume 66 ; 66 ; >
 
     }
 
@@ -11825,7 +11825,7 @@
     au < finished ; frozen ; 2012 ; Journal of Financial Econometrics Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Journal of Financial Econometrics Volume 11 ; 11 ; >
     au < crawling ; exists ; 2014 ; Journal of Financial Econometrics Volume 12 ; 12 ; >
-    au < expected ; exists ; 2015 ; Journal of Financial Econometrics Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2015 ; Journal of Financial Econometrics Volume 13 ; 13 ; >
 
     }
 
@@ -12101,7 +12101,7 @@
     au < finished ; frozen ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
     au < crawling ; exists ; 2013 ; Journal of Heredity Volume 104 ; 104 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Heredity Volume 105 ; 105 ; >
-    au < expected ; exists ; 2015 ; Journal of Heredity Volume 106 ; 106 ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Heredity Volume 106 ; 106 ; >
 
     }
 
@@ -12577,7 +12577,8 @@
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 208 ; 208 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Infectious Diseases Volume 210 ; 210 ; >
-    au < expected ; exists ; 2015 ; Journal of Infectious Diseases Volume 211 ; 211 ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Infectious Diseases Volume 211 ; 211 ; >
+    au < expected ; exists ; 2015 ; Journal of Infectious Diseases Volume 212 ; 212 ; >
 
     }
 
@@ -13954,7 +13955,7 @@
     au < finished ; frozen ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
-    au < expected ; exists ; 2015 ; Journal of Public Administration Research and Theory Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2015 ; Journal of Public Administration Research and Theory Volume 25 ; 25 ; >
 
     }
 
@@ -16021,7 +16022,7 @@
     au < doNotProcess ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 444 ; 444 ; >
     au < doNotProcess ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 445 ; 445 ; >
     au < doNotProcess ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446 ; 446 ; >
-    au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 447 ; 447 ; >
+    au < doNotProcess ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 447 ; 447 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 448 ; 448 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 449 ; 449 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 450 ; 450 ; >
@@ -16134,7 +16135,7 @@
     au < doNotProcess ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 444 ; 444 ; >
     au < doNotProcess ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 445 ; 445 ; >
     au < doNotProcess ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446 ; 446 ; >
-    au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 447 ; 447 ; >
+    au < doNotProcess ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 447 ; 447 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 448 ; 448 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 449 ; 449 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 450 ; 450 ; >
@@ -17182,7 +17183,7 @@
     au < finished ; crawling ; 2012 ; Nucleic Acids Research Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Nucleic Acids Research Volume 41 ; 41 ; >
     au < testing ; exists ; 2014 ; Nucleic Acids Research Volume 42 ; 42 ; >
-    au < expected ; exists ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
 
     }
 
@@ -17714,7 +17715,7 @@
     au < finished ; crawling ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
     au < crawling ; exists ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
     au < crawling ; exists ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
-    au < expected ; exists ; 2015 ; Oxford Economic Papers Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2015 ; Oxford Economic Papers Volume 67 ; 67 ; >
 
     }
 
@@ -17997,7 +17998,7 @@
     au < finished ; frozen ; 2012 ; Parliamentary Affairs Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; Parliamentary Affairs Volume 66 ; 66 ; >
     au < crawling ; exists ; 2014 ; Parliamentary Affairs Volume 67 ; 67 ; >
-    au < expected ; exists ; 2015 ; Parliamentary Affairs Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2015 ; Parliamentary Affairs Volume 68 ; 68 ; >
 
     }
 
@@ -18586,7 +18587,7 @@
     au < crawling ; exists ; 2012 ; Political Analysis Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Political Analysis Volume 21 ; 21 ; >
     au < crawling ; exists ; 2014 ; Political Analysis Volume 22 ; 22 ; >
-    au < expected ; exists ; 2015 ; Political Analysis Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2015 ; Political Analysis Volume 23 ; 23 ; >
 
     }
 
