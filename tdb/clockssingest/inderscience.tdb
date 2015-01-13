@@ -5038,8 +5038,8 @@
       au < crawling ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
       au < crawling ; exists ; 2013 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Manufacturing Technology and Management Volume 28 ; 28 >
-      au < expected ; exists ; 2014 ; International Journal of Manufacturing Technology and Management Volume 29 ; 29 >
-      au < expected ; exists ; 2014 ; International Journal of Manufacturing Technology and Management Volume 30 ; 30 >
+      au < manifest ; exists ; 2015 ; International Journal of Manufacturing Technology and Management Volume 29 ; 29 >
+      au < expected ; exists ; 2015 ; International Journal of Manufacturing Technology and Management Volume 30 ; 30 >
 
     }
 
@@ -5964,9 +5964,9 @@
 
       param[journal_issn] = 2044-4958
       
-      au < zapped ; finished ; 2011-2012 ; International Journal of Planning and Scheduling Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Planning and Scheduling Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Planning and Scheduling Volume 3 ; 3 >
+      au < zapped ; finished ; 2011-2013 ; International Journal of Planning and Scheduling Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of Planning and Scheduling Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Planning and Scheduling Volume 3 ; 3 >
 
     }
 
@@ -7514,7 +7514,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Technology Intelligence and Planning Volume 7 ; 7 >
       au < zapped ; finished ; 2012 ; International Journal of Technology Intelligence and Planning Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 >
-      au < expected ; exists ; 2014 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 >
+      au < manifest ; exists ; 2014 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 >
 
     }
 
@@ -8298,8 +8298,8 @@
       au < manifest ; exists ; 2009 ; Journal for International Business and Entrepreneurship Development Volume 4 ; 4 >
       au < finished ; frozen ; 2010-2011 ; Journal for International Business and Entrepreneurship Development Volume 5 ; 5 >
       au < zapped ; finished ; 2012 ; Journal for International Business and Entrepreneurship Development Volume 6 ; 6 >
-      au < crawling ; exists ; 2013 ; Journal for International Business and Entrepreneurship Development Volume 7 ; 7 >
-      au < expected ; exists ; 2014 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
+      au < crawling ; exists ; 2013-2014 ; Journal for International Business and Entrepreneurship Development Volume 7 ; 7 >
+      au < manifest ; exists ; 2015 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
 
     }
 
