@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGPdfFilterFactory.java,v 1.2 2014-11-27 00:21:54 thib_gc Exp $
+ * $Id: TestSEGPdfFilterFactory.java,v 1.3 2015-01-13 00:02:53 alexandraohlson Exp $
  */
 
 /*
@@ -33,7 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.seg;
 
 import org.lockss.pdf.MockPdfTokenStream;
-import org.lockss.plugin.atypon.seg.SEGPdfFilterFactory.Worker;
+import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory.AtyponDownloadedFromStateMachine;
+import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory.CitedByStateMachine;
 import org.lockss.test.LockssTestCase;
 
 public class TestSEGPdfFilterFactory extends LockssTestCase {
@@ -42,9 +43,12 @@ public class TestSEGPdfFilterFactory extends LockssTestCase {
    * Example: http://library.seg.org/doi/pdfplus/10.1190/geo2012-0531.1
    */
   public void testWorker() throws Exception {
-    Worker worker = new Worker();
+    CitedByStateMachine citedSM = 
+        new CitedByStateMachine("This article has been cited by:");// hardcode the default
+    AtyponDownloadedFromStateMachine downSM = 
+        new AtyponDownloadedFromStateMachine(org.lockss.plugin.atypon.seg.SEGPdfFilterFactory.SEG_DOWNLOADED_PATTERN);
     
-    worker.process(MockPdfTokenStream.parse(
+    citedSM.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "q " +
 "1 0 0 -1 0 782 cm " +
@@ -58,10 +62,9 @@ public class TestSEGPdfFilterFactory extends LockssTestCase {
 "1 0 0 -1 -7.19000006 35.16799927 Tm"
 // ---- end PDF stream ----
     ));
-    assertTrue(worker.resultCitedBy);
-    assertFalse(worker.resultDownloaded);
+    assertTrue(citedSM.getResult());
     
-    worker.process(MockPdfTokenStream.parse(
+    citedSM.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "BT " +
 "(This is irrelevant.) Tj " +
@@ -78,10 +81,9 @@ public class TestSEGPdfFilterFactory extends LockssTestCase {
 "1 0 0 -1 -7.19000006 35.16799927 Tm"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.resultCitedBy);
-    assertFalse(worker.resultDownloaded);
+    assertTrue(citedSM.getResult());
     
-    worker.process(MockPdfTokenStream.parse(
+    downSM.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 /* 00 */ "BT " +
 /* 01 */ "/F1 10 Tf " +
@@ -91,12 +93,9 @@ public class TestSEGPdfFilterFactory extends LockssTestCase {
 /* 20 */ "ET"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.resultCitedBy);
-    assertTrue(worker.resultDownloaded);
-    assertEquals(0, worker.beginDownloaded);
-    assertEquals(20, worker.endDownloaded);
+    assertTrue(downSM.getResult());
     
-    worker.process(MockPdfTokenStream.parse(
+    downSM.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "BT " +
 "(This is irrelevant.) Tj " +
@@ -109,10 +108,9 @@ public class TestSEGPdfFilterFactory extends LockssTestCase {
 "ET"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.resultCitedBy);
-    assertFalse(worker.resultDownloaded);
+    assertTrue(downSM.getResult());
 
-    worker.process(MockPdfTokenStream.parse(
+    downSM.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 /* 00 */ "BT " +
 /* 01 */ "/F1 10 Tf " +
@@ -122,8 +120,18 @@ public class TestSEGPdfFilterFactory extends LockssTestCase {
 /* 20 */ "ET"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.resultCitedBy);
-    assertFalse(worker.resultDownloaded);
+    assertFalse(downSM.getResult());
+    citedSM.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+/* 00 */ "BT " +
+/* 01 */ "/F1 10 Tf " +
+/* 04 */ "0 1 -1 0 10 121.85 Tm " +
+/* 11 */ "(Not the right string.) Tj " +
+/* 13 */ "1 0 0 1 0 0 Tm " +
+/* 20 */ "ET"
+// ---- end PDF stream ----
+    ));
+    assertFalse(citedSM.getResult());
     
   }
   

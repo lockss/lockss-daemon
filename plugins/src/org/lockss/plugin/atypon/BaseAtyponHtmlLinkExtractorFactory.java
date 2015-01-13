@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.6 2015-01-06 20:53:55 thib_gc Exp $
+ * $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.7 2015-01-13 00:02:52 alexandraohlson Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ implements LinkExtractorFactory {
   public LinkExtractor createLinkExtractor(String mimeType) {
     // set up the base link extractor to use specific includes and excludes
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
-    setFormRestrictors(extractor);
+    setFormRestrictors(extractor, null); // no additional child restrictors
     registerExtractors(extractor);
     return extractor;
   }
@@ -97,21 +97,6 @@ implements LinkExtractorFactory {
     setFormRestrictors(extractor, child_restrictor);
     registerExtractors(extractor);
     return extractor;
-  }
-
-
-  /*
-   * Allow child plugins to customize how form restrictors are managed
-   * although being able to merge with the base restrictors should be sufficient
-   * for most cases
-   * see: createLinkExtractor(mimeType, child_restrictors)
-   */
-  protected void setFormRestrictors(JsoupHtmlLinkExtractor extractor) {  
-    Map<String, HtmlFormExtractor.FormFieldRestrictions> baseRestrictor
-    = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
-
-    baseRestrictor = setUpBaseRestrictor();
-    extractor.setFormRestrictors(baseRestrictor);
   }
 
   /* 

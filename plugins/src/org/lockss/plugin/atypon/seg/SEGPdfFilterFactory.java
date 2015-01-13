@@ -1,5 +1,5 @@
 /*
- * $Id: SEGPdfFilterFactory.java,v 1.4 2014-11-27 00:01:00 thib_gc Exp $
+ * $Id: SEGPdfFilterFactory.java,v 1.5 2015-01-13 00:02:53 alexandraohlson Exp $
  */
 
 /*
@@ -32,85 +32,47 @@
 
 package org.lockss.plugin.atypon.seg;
 
-import java.util.List;
 import java.util.regex.Pattern;
 
-import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
 import org.lockss.util.Logger;
 
-public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
+/*
+ * Example: http://library.seg.org/doi/pdfplus/10.1190/geo2012-0531.1
+ */
+public class SEGPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
+  private static final Logger logger = Logger.getLogger(SEGPdfFilterFactory.class);
 
-  // FIXME 1.67: extend PdfTokenStreamStateMachine instead
-  /*
-   * Example: http://library.seg.org/doi/pdfplus/10.1190/geo2012-0531.1
+  public static final Pattern SEG_DOWNLOADED_PATTERN =
+      Pattern.compile("^Downloaded \\d+/\\d+/\\d+ to \\d+\\.\\d+\\.\\d+\\.\\d+", Pattern.CASE_INSENSITIVE);
+
+  /* 
+   * Turn on removal of "This article cited by:" pages - the default string is correct
    */
-  public static class Worker extends PdfTokenStreamWorker {
-
-    private static final Logger logger = Logger.getLogger(Worker.class);
-    
-    public static final String CITED_BY_STRING = "This article has been cited by:";
-    
-    public static final Pattern DOWNLOADED_PATTERN =
-        Pattern.compile("^Downloaded \\d+/\\d+/\\d+ to \\d+\\.\\d+\\.\\d+\\.\\d+", Pattern.CASE_INSENSITIVE);
-    
-    public int state;
-    public boolean resultCitedBy;
-    public boolean resultDownloaded;
-    public int beginDownloaded;
-    public int endDownloaded;
-    
-    @Override
-    public void setUp() throws PdfException {
-      this.state = 0;
-      this.resultCitedBy = false;
-      this.resultDownloaded = false;
-      this.beginDownloaded = -1;
-      this.endDownloaded = -1;
-    }
-    
-    @Override
-    public void operatorCallback() throws PdfException {
-      logger.debug3("initial: " + state);
-      logger.debug3("index: " + getIndex());
-      logger.debug3("operator: " + getOpcode());
-      switch (state) {
-        case 0: {
-          if (isBeginTextObject()) {
-            beginDownloaded = getIndex();
-            ++state;
-          }
-        } break;
-        case 1: {
-          if (isShowTextGlyphPositioningEquals(CITED_BY_STRING)) {
-            resultCitedBy = true;
-            stop();
-          }
-          else if (isShowTextFind(DOWNLOADED_PATTERN)) {
-            ++state;
-          }
-          else if (isEndTextObject()) {
-            stop(); // Both paths are only on the first BT..ET of the stream
-          }
-        } break;
-        case 2: {
-          if (isEndTextObject()) {
-            resultDownloaded = true;
-            endDownloaded = getIndex();
-            stop();
-          }
-        } break;
-        default: {
-          throw new PdfException("Illegal state: " + state);
-        }
-      }
-      logger.debug3("final: " + state);
-      logger.debug3("result: " + resultDownloaded);
-    }
-    
+  @Override
+  public boolean doRemoveCitedByPage() {
+    return true;    
+  }  
+  @Override
+  public boolean doRemoveDownloadStrip() {
+    return true;
   }
-  
+  /* and set the correct string to use for this publisher */
+  @Override
+  public Pattern getDownloadStripPattern() {
+    return SEG_DOWNLOADED_PATTERN;
+  }  
+
+
+   /*
+    * (non-Javadoc)
+    * @see org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory#transform(org.lockss.plugin.ArchivalUnit, org.lockss.pdf.PdfDocument)
+    * 
+    * Override transform in order to extend the base transforms done before modifying the
+    * token stream.
+    */
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
     // Metadata completely rewritten when file is watermarked, can't compare to original
@@ -124,39 +86,25 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
     pdfDocument.unsetTitle();
     pdfDocument.unsetSubject();
     pdfDocument.unsetKeywords();
-    /* end FIXME 1.67 */
-    
-    Worker worker = new Worker();
-    page_loop: for (int i = 0 ; i < pdfDocument.getNumberOfPages() ; ++i) {
-      PdfPage pdfPage = pdfDocument.getPage(i);
-      stream_loop: for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
-        worker.process(pdfTokenStream);
-        if (worker.resultCitedBy) {
-          for (int j = pdfDocument.getNumberOfPages() - 1 ; j >= i ; --j) {
-            pdfDocument.removePage(j);
-          }
-          break page_loop;
-        }
-        if (worker.resultDownloaded) {
-          List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(worker.beginDownloaded, worker.endDownloaded + 1).clear();
-          pdfTokenStream.setTokens(tokens);
-          break stream_loop;
-        }
-      }
-    }
+    /* end FIXME 1.67 */   
+    removeCitedByPage(pdfDocument);
+    removeDownloadStrip(pdfDocument);
   }
- 
+
   /* FIXME 1.67 */
-//  @Override
-//  public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
-//    return new BaseDocumentExtractingTransform(os) {
-//      @Override
-//      public void outputDocumentInformation() throws PdfException {
-//        // Intentionally left blank
-//      }
-//    };
-//  }
-/* end FIXME 1.67 */
+  //  @Override
+  //  public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
+  //    return new BaseDocumentExtractingTransform(os) {
+  //      @Override
+  //      public void outputDocumentInformation() throws PdfException {
+  //        // Intentionally left blank
+  //      }
+  //    };
+  //  }
+  /* end FIXME 1.67 */
 
 }
+
+
+
+

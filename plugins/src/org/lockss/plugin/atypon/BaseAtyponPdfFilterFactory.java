@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.6 2014-12-19 21:18:20 alexandraohlson Exp $
+ * $Id: BaseAtyponPdfFilterFactory.java,v 1.7 2015-01-13 00:02:52 alexandraohlson Exp $
  */
 
 /*
@@ -46,12 +46,6 @@ import org.lockss.plugin.ArchivalUnit;
  *
  */
 public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
-
-  //Until the daemon handles this, use the special document factory
-  // that knows how to handle the cryptography exception
-  public BaseAtyponPdfFilterFactory() {
-    super(new BaseAtyponPdfDocumentFactory()); // FIXME 1.67
-  }
 
   /*
    * Many Atypon pdf files have the CreationDate and ModDate and the two ID numbers in the trailer

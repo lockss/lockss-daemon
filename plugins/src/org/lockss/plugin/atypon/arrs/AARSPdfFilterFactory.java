@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAPdfFilterFactory.java,v 1.6 2015-01-13 00:02:53 alexandraohlson Exp $
+ * $Id: AARSPdfFilterFactory.java,v 1.1 2015-01-13 00:02:52 alexandraohlson Exp $
  */
 
 /*
@@ -30,37 +30,39 @@
 
  */
 
-package org.lockss.plugin.atypon.aiaa;
+package org.lockss.plugin.atypon.arrs;
 
 import java.util.regex.Pattern;
 
 import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
 import org.lockss.util.Logger;
 
-/*
- * The AIAA pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
- * vary from collection to collection. Filter them out to avoid incorrect hash failures.
- * Because of varying BASEFONT values, must also extract text/images for hash comparison
- */
-public class AIAAPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
-  private static final Logger logger = Logger.getLogger(AIAAPdfFilterFactory.class);
-  
-  public static final Pattern AIAA_DOWNLOAD_PATTERN = Pattern.compile("^Downloaded by");
 
-  /* 
-   * Turn on removal of "This article cited by:" pages - the default string is correct
-   */
+
+/**
+ * AARS - 
+ * in addition to default scraping and date/metadata removal
+ * This plugin also has to turn on removal of a "Downloaded by" strip
+ * and the "This article cited by:" pages at the end of the document
+ * EXAMPLE: http://www.ajronline.org/doi/pdfplus/10.2214/AJR.13.10940
+ */
+public class AARSPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
+  private static final Logger logger = Logger.getLogger(AARSPdfFilterFactory.class);
+  
+  public static final Pattern AARS_DOWNLOAD_PATTERN = Pattern.compile("^Downloaded from www\\.ajronline\\.org");
+
   @Override
   public boolean doRemoveCitedByPage() {
     return true;    
   }  
   @Override
   public boolean doRemoveDownloadStrip() {
-    return true;
+    return true;    
   }
   /* and set the correct string to use for this publisher */
   @Override
   public Pattern getDownloadStripPattern() {
-    return AIAA_DOWNLOAD_PATTERN;
-  }  
+    return AARS_DOWNLOAD_PATTERN;
+  }
+
 }
