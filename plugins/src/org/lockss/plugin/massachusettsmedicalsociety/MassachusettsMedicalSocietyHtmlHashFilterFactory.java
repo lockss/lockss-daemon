@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.4 2015-01-09 18:05:14 aishizaki Exp $
+ * $Id: MassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.5 2015-01-13 22:42:58 aishizaki Exp $
  */
 /*
 
@@ -134,7 +134,9 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         //Metadata contains either "current-issue" or "Last-6-months" or...
         HtmlNodeFilters.tagWithAttribute("meta", "name", "evt-ageContent"),
         //removes "OpenURL" button local url reference (eg Stanford)
-        HtmlNodeFilters.tagWithAttributeRegex("a", "title", "OpenURL ")
+        HtmlNodeFilters.tagWithAttributeRegex("a", "title", "OpenURL "),
+        // references current mp3s "More Weekly Audio Summaries" from page
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "jcarousel-skin-audio")
 
     };
 
