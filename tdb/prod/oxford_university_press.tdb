@@ -1052,8 +1052,10 @@
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://alh.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
+    
+    comment[superseded] = Journal is superseded by volume on Project Muse platform.
 
-    au < down ; 2005 ; American Literary History Volume 17 ; 17 >
+    au < superseded ; 2005 ; American Literary History Volume 17 [superseded]; 17 >
 
     }
 
