@@ -51,22 +51,24 @@ while (my $line = <>) {
   my $man_url_d = "cant_create_url";
   my $vol_title = "NO TITLE FOUND";
   my $result = "Plugin Unknown";
+  
+  
   if ($plugin eq "HighWirePressH20Plugin" || $plugin eq "HighWirePressPlugin") {
     $url = sprintf("%slockss-manifest/vol_%s_manifest.dtl",
       $param{base_url}, $param{volume_name});
     $url_d = sprintf("%slockss-manifest/vol_%s_manifest.html",
       $param{base_url}, $param{volume_name});
     $man_url = uri_unescape($url);
-    printf("\n\nman_url: %s\n",$man_url);
+    #printf("\n\nman_url: %s\n",$man_url);
     $man_url_d = uri_unescape($url_d);
-    printf("man_url_d: %s\n",$man_url_d);
+    #printf("man_url_d: %s\n",$man_url_d);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       #printf("Req:%s\nResp:%s\nurl_d:%s\n",$req->url,$resp->request->uri,$man_url_d);
       if ($req->url ne $resp->request->uri) {
-        #printf("Redirected\n");
+        $vol_title = $resp->request->uri;
         if ($resp->request->uri eq $man_url_d) {
           #printf("Uses Drupal plugin\n");
           $result = "Moved_to_Drupal";
@@ -1169,7 +1171,7 @@ while (my $line = <>) {
                 
   } 
   if ($result eq "Plugin Unknown") {
-    printf("*PLUGIN UNKNOWN*, %s, %s, %s\n",$vol_title,$auid,$man_url);
+    printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;
   } elsif ($result eq "Manifest") {
     printf("*MANIFEST*, %s, %s, %s\n",$vol_title,$auid,$man_url);
@@ -1179,11 +1181,8 @@ while (my $line = <>) {
     #my $new_title = encode("utf8", $vol_title);
     #printf("%s\n",$new_title);
     #printf("%s\n",decode_entities($new_title));
-  } elsif ($result eq "Moved_to_Drupal") {
-    printf("*NO MANIFEST*(%s), %s, %s\n",$result,$auid,$man_url);
-    $total_manifests = $total_manifests + 1;
   } else {
-    printf("*NO MANIFEST*(%s), %s, %s\n",$result,$auid,$man_url);
+    printf("*NO MANIFEST*(%s), %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
     $total_missing = $total_missing + 1;
     #$tmp = "AINS - An&auml;sthesiologie &middot; Intensivmedizin &middot; Notfallmedizin &middot; Schmerztherapie";
     #printf("%s\n",$tmp);
