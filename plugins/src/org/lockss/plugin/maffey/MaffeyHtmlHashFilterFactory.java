@@ -1,7 +1,10 @@
+/*
+ * $Id: MaffeyHtmlHashFilterFactory.java,v 1.6 2015-01-13 01:08:53 thib_gc Exp $
+ */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,56 +47,72 @@ public class MaffeyHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-	  
+    // [LA] = Libertas Academica
+    
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
         /*
-        * Crawl filter
-        */
-        //Related articles
+         * Crawl filter
+         */
+        // Related articles
         HtmlNodeFilters.tagWithAttribute("div", "class", "alsoRead"),
-        /*
-        * Hash filter
-        */
-        // Contains ad-specific cookies
-        new TagNameFilter("script"),
-        // Ad
-        HtmlNodeFilters.tagWithAttribute("div", "id", "ad_holder"),
-        // Dicussion and comments
-        HtmlNodeFilters.tagWithAttribute("div", "id", "commentsBoxes"),
-        // Constantly changing reference to css file: css/grid.css?1337026463
-        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "css/grid.css\\?[0-9]+"),
-        // Article views <p class="article_views_p">
-        HtmlNodeFilters.tagWithAttribute("p", "class", "article_views_p"),
-        // Latest News items change over time <div id="news_holder">
-        //HtmlNodeFilters.tagWithAttribute("div", "id", "news_holder"),   // rightcolumn
-        // remove entire right column
-        HtmlNodeFilters.tagWithAttribute("div", "class", "rightcolumn"), // headerright
-        HtmlNodeFilters.tagWithAttribute("div", "id", "sharing"), // the Sharing/social media
-        // author services, including author testimonials
-        HtmlNodeFilters.tagWithAttribute("div", "class", "hideForPrint"), 
-        HtmlNodeFilters.tagWithAttribute("div", "class", "a-100 assets-light journal-footer"), 
-        // comments
-        HtmlNodeFilters.comment(),
-        
-        // Chat with support availability status changes
-        HtmlNodeFilters.tagWithAttribute("div", "class", "searchleft"),
-
-        // Rotating user testimonials	
-        HtmlNodeFilters.tagWithAttribute("div", "class", "categoriescolumn4"),
-        // # article views
-        HtmlNodeFilters.tagWithAttribute("div", "class", "yellowbgright1"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "article_meta_stats"),
-        // # total libertas academica article views
-        HtmlNodeFilters.tagWithAttribute("p", "class", "laarticleviews"),
-        // dynamic css/js urls
-        new TagNameFilter("link"),
-        // Libertas Academica: number of journal views
-        HtmlNodeFilters.tagWithAttribute("div", "class", "journal_heading_stats"),
-        // Libertas Academica: what your colleagues are saying about Libertas Academica
+        // "What your colleagues are saying about..." contains author thumbnails [LA]
         HtmlNodeFilters.tagWithAttribute("div", "id", "colleagues"),
-        // Libertas Academica: our service promise
-        HtmlNodeFilters.tagWithAttribute("div", "id", "ourservicepromise"),
+        /*
+         * Hash filter
+         */
+        /* Broad area filtering */
+        // Scripts, comments
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.comment(),
+        // Header
+        HtmlNodeFilters.tagWithAttribute("div", "id", "headerouter"), // [LA]
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "nav-bg"), // [LA]
+        HtmlNodeFilters.tagWithAttribute("div", "class", "nav"), // redundant: within 'nav-bg' [LA]
+        // Right column
+        HtmlNodeFilters.tagWithAttribute("div", "class", "rightcolumn"), // [LA]
+        // Footer
+        HtmlNodeFilters.tagWithAttribute("div", "id", "followus"), // social media [LA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer-banner"), // [LA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer-links"), // [LA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer-copyright"), // [LA]
+        // Side tab
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidetab"), // [LA]
+        /* Main content area */
+        // Number of journal views
+        HtmlNodeFilters.tagWithAttribute("div", "class", "journal_heading_stats"), // [LA]
+        // Journal menu
+        HtmlNodeFilters.tagWithAttribute("div", "class", "journalmenu"), // [LA]
+        // Article metrics
+        HtmlNodeFilters.tagWithAttribute("div", "class", "yellowbgright1"), // ??
+        HtmlNodeFilters.tagWithAttribute("div", "class", "article_meta_stats"), // [LA]
+        HtmlNodeFilters.tagWithAttribute("p", "class", "article_views_p"), // [LA]
+        // Social media
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sharing"), // [LA]
+        /* Other */
+        // dynamic css/js urls // ??
+        HtmlNodeFilters.tag("link"),
+        // Ads
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ad_holder"),
+        // Discussion and comments
+        HtmlNodeFilters.tagWithAttribute("div", "id", "commentsBoxes"),
+        /* ?? */
+        // ??
+        HtmlNodeFilters.tagWithAttribute("div", "class", "a-100 assets-light journal-footer"), // redundant: within 'footer-banner' [LA]
+        // Rotating user testimonials
+        HtmlNodeFilters.tagWithAttribute("div", "class", "categoriescolumn4"), // ??
+        // Chat with support availability status changes
+        HtmlNodeFilters.tagWithAttribute("div", "class", "searchleft"), // redundant: within 'headerouter'
+        // author services, including author testimonials
+        HtmlNodeFilters.tagWithAttribute("div", "class", "hideForPrint"), // redundant: within 'footer-banner' [LA]
+        // Latest News items change over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "news_holder"), // redundant: within 'rightcolumn'
+        // # total libertas academica article views
+        HtmlNodeFilters.tagWithAttribute("p", "class", "laarticleviews"), // no longer present? [LA]
+        // "Our service promise" [LA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ourservicepromise"), // no longer present? [LA]
+        // Constantly changing reference to css file: css/grid.css?1337026463
+        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "css/grid.css\\?[0-9]+"), // no longer present? [LA]
     };
     
     return new HtmlFilterInputStream(in,

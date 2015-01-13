@@ -1,7 +1,10 @@
+/*
+ * $Id: MaffeyHtmlCrawlFilterFactory.java,v 1.2 2015-01-13 01:08:53 thib_gc Exp $
+ */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,9 +47,12 @@ public class MaffeyHtmlCrawlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
+    // [LA] = Libertas Academica
     NodeFilter[] filters = new NodeFilter[] {
-    // Contain cross-links to other articles in other journals/volumes
-    HtmlNodeFilters.tagWithAttribute("div", "class", "alsoRead")
+      // Contain cross-links to other articles in other journals/volumes
+      HtmlNodeFilters.tagWithAttribute("div", "class", "alsoRead"),
+      // "What your colleagues are saying about..." contains varying author thumbnails [LA]
+      HtmlNodeFilters.tagWithAttribute("div", "id", "colleagues"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

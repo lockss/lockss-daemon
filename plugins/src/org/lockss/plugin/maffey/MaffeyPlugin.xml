@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -43,6 +43,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- Libertas Academica: this image directory should have been crawl-filtered but some URLs got into extant AUs; exclude from polls -->
+      <string>2,"^%scr_data/cache/testimonial_images/", base_url</string>
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
