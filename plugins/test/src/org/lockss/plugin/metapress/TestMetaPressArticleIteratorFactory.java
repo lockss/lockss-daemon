@@ -28,7 +28,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
-import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,8 +41,6 @@ import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.*;
 import org.lockss.util.*;
-
-import java.util.Iterator;
 
 public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase {
 	
