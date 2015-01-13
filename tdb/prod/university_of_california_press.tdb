@@ -912,6 +912,8 @@
     param[base_url] = http://caliber.ucpress.net/
     param[journal_id] = ctx
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[superseded] = superseded by title in Sage.
 
     au < down ; 2002 ; Contexts Volume 1 ; 1 >
     au < down ; 2003 ; Contexts Volume 2 ; 2 >
@@ -919,9 +921,9 @@
     au < down ; 2005 ; Contexts Volume 4 ; 4 >
     au < down ; 2006 ; Contexts Volume 5 ; 5 >
     au < down ; 2007 ; Contexts Volume 6 ; 6 >
-    au < down ; 2008 ; Contexts Volume 7 ; 7 >
-    au < down ; 2009 ; Contexts Volume 8 ; 8 >
-    au < down ; 2010 ; Contexts Volume 9 ; 9 >
+    au < superseded ; 2008 ; Contexts Volume 7 [superseded] ; 7 >
+    au < superseded ; 2009 ; Contexts Volume 8 [superseded] ; 8 >
+    au < superseded ; 2010 ; Contexts Volume 9 [superseded] ; 9 >
 
   }
 
