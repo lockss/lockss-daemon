@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,6 +64,7 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
   FileMetadataExtractor me = null; 
   MetadataTarget target;
 
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
@@ -72,6 +73,7 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
   
+  @Override
   public void tearDown() throws Exception {
     sau.deleteContentTree();
     super.tearDown();
@@ -165,7 +167,6 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
       }
     }
     // store content using cached url content type and properties
-    UrlCacher uc;
     for (String url : urls) {
       //log.info("url: " + url);
       if (url.contains("full")) {
@@ -195,6 +196,6 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
         assertEquals(expectedUrls[i], actualUrls[i]);
       }   
     }
-  }    
+  }
   
 }
