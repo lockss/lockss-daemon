@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponScrapingPdfFilterFactory.java,v 1.3 2015-01-13 00:02:52 alexandraohlson Exp $
+ * $Id: BaseAtyponScrapingPdfFilterFactory.java,v 1.4 2015-01-13 20:00:28 thib_gc Exp $
  */
 
 /*
@@ -53,8 +53,8 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
   private static final Logger log = Logger.getLogger(BaseAtyponScrapingPdfFilterFactory.class);
   
   private static final String DEFAULT_CITED_BY_STRING = "This article has been cited by:";
-  private static final String DEFAULT_DOWNLOAD_STRING= "^Downloaded from ";
-  private static final Pattern DEFAULT_DOWNLOAD_PATTERN = Pattern.compile(DEFAULT_DOWNLOAD_STRING);
+  private static final String DEFAULT_DOWNLOAD_REGEX = "^Downloaded from ";
+  private static final Pattern DEFAULT_DOWNLOAD_PATTERN = Pattern.compile(DEFAULT_DOWNLOAD_REGEX);
 
 
   /*
@@ -181,18 +181,18 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
     public void state0() throws PdfException {
       if (isEndTextObject()) {
         setEnd(getIndex());
-        setState(getState() + 1);
+        setState(1);
       }
     } 
 
     @Override
     public void state1() throws PdfException {
       if (isShowTextFind(DOWNLOADED_FROM_PATTERN)) {
-        setState(getState() + 1);
+        setState(2);
       }
       else if (isBeginTextObject()) { // not the BT-ET we were looking for
         //COULD STOP HERE IF assuming only one bt/et in the stream we want
-        setState(getState() -1);
+        setState(0);
       }
     }
 
