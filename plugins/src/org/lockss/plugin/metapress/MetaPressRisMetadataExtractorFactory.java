@@ -1,10 +1,10 @@
 /*
- * $Id: MetaPressRisMetadataExtractorFactory.java,v 1.3 2013-05-17 23:43:49 thib_gc Exp $
+ * $Id: MetaPressRisMetadataExtractorFactory.java,v 1.4 2015-01-13 23:57:54 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -53,6 +53,7 @@ AU  - Finnie, Gavin
 public class MetaPressRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(MetaPressRisMetadataExtractorFactory.class);
   
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                  String contentType)
       throws PluginException {
