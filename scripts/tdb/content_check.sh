@@ -119,14 +119,14 @@ echo " "
 # Find duplicate auids in the whole database. Not exists or expected
 echo "---------------------"
 echo "---------------------"
-scripts/tdb/tdbout -Aa tdb/*/*.tdb | sort > $tpath/allAUs
-uniq $tpath/allAUs > $tpath/dedupedAUs
-allAUs=`cat $tpath/allAUs | wc -l`
-uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "All AUids = $allAUs"
-echo "AUids without duplicates = $uniqAUs"
-diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-echo " "
+#scripts/tdb/tdbout -Aa tdb/*/*.tdb | sort > $tpath/allAUs
+#uniq $tpath/allAUs > $tpath/dedupedAUs
+#allAUs=`cat $tpath/allAUs | wc -l`
+#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+#echo "All AUids = $allAUs"
+#echo "AUids without duplicates = $uniqAUs"
+#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#echo " "
 #
 #
 # Find HighWire plugin dupes
