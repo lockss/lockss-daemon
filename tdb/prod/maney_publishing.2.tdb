@@ -2340,6 +2340,25 @@
   {
 
     title <
+      name = Journal of Orthodontics ;
+      issn = 1465-3125 ;
+      eissn = 1465-3133
+    >
+
+    param[journal_id] = jorthod 
+
+    au < doNotProcess ; 2009 ; Journal of Orthodontics Volume 36 ; 36 > 
+    au < exists ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
+    au < doNotProcess ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
+    au < doNotProcess ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
+    au < exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 > 
+    au < exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 > 
+
+  }
+
+  {
+
+    title <
       name = Journal of Spinal Cord Medicine ;
       issn = 1079-0268 
     >
