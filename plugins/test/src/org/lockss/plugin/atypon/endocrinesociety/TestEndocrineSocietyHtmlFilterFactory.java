@@ -1,5 +1,5 @@
 /*
- * $Id: TestEndocrineSocietyHtmlFilterFactory.java,v 1.3 2014-11-08 22:59:39 ldoan Exp $
+ * $Id: TestEndocrineSocietyHtmlFilterFactory.java,v 1.4 2015-01-14 23:04:29 ldoan Exp $
  */
 
 /*
@@ -61,7 +61,12 @@ public class TestEndocrineSocietyHtmlFilterFactory
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
 
-  
+  // test for pdf and pdfplus file size
+  // is in TestBaseAtyponHtmlHashFilterFactory since the html is similar
+  // <a class="ref nowrap pdf" target="_blank" 
+  // title="Opens new window" 
+  // href="/doi/pdf/10.1210/en.2013-1182">PDF (52 KB)</a>
+ 
   // top right of issue toc - links to previous or next issue
   private static final String withNavJournal = 
       "<div class=\"block\">" +
