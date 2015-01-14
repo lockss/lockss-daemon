@@ -1,10 +1,10 @@
 /*
- * $Id: DbManager.java,v 1.46 2014-10-13 22:21:28 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.47 2015-01-14 18:13:22 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -219,10 +219,10 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 21;
+  private int targetDatabaseVersion = 22;
 
   // The database version updates that are performed asynchronously.
-  private int[] asynchronousUpdates = new int[] {10, 15, 17, 20};
+  private int[] asynchronousUpdates = new int[] {10, 15, 17, 20, 22};
 
   // An indication of whether to perform only synchronous updates to the
   // database. This is useful for performance reasons when creating an empty
@@ -1839,6 +1839,10 @@ public class DbManager extends BaseLockssDaemonManager
 	  }
 	} else if (from == 20) {
 	  dbManagerSql.updateDatabaseFrom20To21(conn);
+	} else if (from == 21) {
+	  if (!skipAsynchronousUpdates) {
+	    dbManagerSql.updateDatabaseFrom21To22(conn);
+	  }
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
