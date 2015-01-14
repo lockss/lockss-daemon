@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -30,8 +30,8 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <!-- needs 1.66 for ris filter -->
-    <string>1.66.0</string>
+    <!-- needs 1.67 for PdfTokenStreamWorker -->
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_name</string>
