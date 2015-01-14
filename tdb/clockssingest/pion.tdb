@@ -258,11 +258,11 @@
       au < down ; exists ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; 34 >
       au < down ; exists ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35-36 ; 35 >
 
-      au < down ; exists ; 2010 ; High Temperatures - High Pressures Volume 37 [to delete] ; 37 ; 37 >
-      au < down ; exists ; 2010 ; High Temperatures - High Pressures Volume 38 [to delete] ; 38 ; 38 >
-      au < zapped ; down ; 2010 ; High Temperatures - High Pressures Volume 39 [to delete] ; 39 ; 39 >
-      au < zapped ; down ; 2011 ; High Temperatures - High Pressures Volume 40 [to delete] ; 40 ; 40 >
-      au < down ; exists ; 2011 ; High Temperatures - High Pressures Volume 41 [to delete] ; 41 ; 41 >
+      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 37 [to delete] ; 37 ; 37 >
+      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 38 [to delete] ; 38 ; 38 >
+      au < zapped ; superseded ; 2010 ; High Temperatures - High Pressures Volume 39 [to delete] ; 39 ; 39 >
+      au < zapped ; superseded ; 2011 ; High Temperatures - High Pressures Volume 40 [to delete] ; 40 ; 40 >
+      au < superseded ; exists ; 2011 ; High Temperatures - High Pressures Volume 41 [to delete] ; 41 ; 41 >
   
     }
   
