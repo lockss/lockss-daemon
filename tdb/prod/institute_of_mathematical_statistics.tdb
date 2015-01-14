@@ -20,8 +20,8 @@
       plugin = org.lockss.plugin.ojs.OJSPlugin
       param[base_url] = http://www.math.washington.edu/~ejpecp/ECP/
       
-      au < down ; 1996 ; Electronic Communications in Probability Volume 1 ; 1 ; 1996 >
-      au < down ; 1997 ; Electronic Communications in Probability Volume 2 ; 2 ; 1997 >
+      au < superseded ; 1996 ; Electronic Communications in Probability Volume 1 [superseded] ; 1 ; 1996 >
+      au < superseded ; 1997 ; Electronic Communications in Probability Volume 2 [superseded] ; 2 ; 1997 >
       au < down ; 1998 ; Electronic Communications in Probability Volume 3 ; 3 ; 1998 >
       au < down ; 1999 ; Electronic Communications in Probability Volume 4 ; 4 ; 1999 >
       au < down ; 2000 ; Electronic Communications in Probability Volume 5 ; 5 ; 2000 >
