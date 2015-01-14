@@ -10566,7 +10566,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of the American Academy of Religion Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of the American Academy of Religion Volume 72 ; 72 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the American Academy of Religion Volume 73 ; 73 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; Journal of the American Academy of Religion Volume 74 [superseded] ; 74 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of the American Academy of Religion Volume 75 ; 75 >
     au < HighWirePressPlugin ; down ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 >
@@ -12332,7 +12332,7 @@
     param[base_url] = http://jhmas.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
+    au < superseded ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 [superseded] ; 60 >
 
     }
 
@@ -12402,10 +12402,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 [superseded] ; 61 >
+    au < HighWireStrVolPlugin ; superseded ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 [superseded] ; 62 >
+    au < HighWirePressPlugin ; superseded ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 [superseded] ; 63 >
+    au < HighWirePressPlugin ; superseded ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 [superseded] ; 64 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 >
