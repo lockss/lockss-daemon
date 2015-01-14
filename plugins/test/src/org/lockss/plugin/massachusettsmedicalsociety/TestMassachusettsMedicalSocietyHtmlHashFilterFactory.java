@@ -1,5 +1,5 @@
 /*
- * $Id: TestMassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.3 2015-01-13 22:42:58 aishizaki Exp $
+ * $Id: TestMassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.4 2015-01-14 23:07:10 aishizaki Exp $
  */
 /*
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
@@ -88,6 +88,7 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
   "             <html><meta name=\"evt-ageContent\" content=\"Last-6-Months\" /></html> ",
   "  <html><div class=\"emailAlert\"></div></html>  ",
   " <html><div class=\"&#xA; jcarousel-skin-audio carousel-type-audiosummary\"><h3>More Weekly Audio Summaries (8)</h3></html> ",
+  "     <html><div id=\"toolsBox\"><h3> Tools </h3></div></html>    ",
   " <html><a href=\"/servlet/linkout?suffix=r001&amp;dbid=16384&amp;url=http%3A%2F%2Fsfx.stanford.edu%2Flocal%3Fsid%3Dmms%26genre%3D%26aulast%3DSampson%26aufirst%3DHA%26aulast%3DMunoz-Furlong%26aufirst%3DA%26aulast%3DCampbell%26aufirst%3DRL%26atitle%3DSecond%2Bsymposium%2Bon%2Bthe%2Bdefinition%2Band%2Bmanagement%2Bof%2Banaphylaxis%253A%2Bsummary%2Breport%2B%252D%252D%2BSecond%2BNational%2BInstitute%2Bof%2BAllergy%2Band%2BInfectious%2BDisease%252FFood%2BAllergy%2Band%2BAnaphylaxis%2BNetwork%2BSymposium.%26stitle%3DJ%2BAllergy%2BClin%2BImmunol%26date%3D2006%26volume%3D117%26spage%3D391%26id%3Ddoi%3A10.1016%252Fj.jaci.2005.12.1303\" title=\"OpenURL STANFORD UNIVERSITY\" onclick=\"newWindow(this.href);return false\" class=\"sfxLink\"><img src=\"/templates/jsp/images/sfxbutton.gif\" alt=\"OpenURL STANFORD UNIVERSITY\"></a></html>  "
   };
 

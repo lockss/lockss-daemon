@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.5 2015-01-13 22:42:58 aishizaki Exp $
+ * $Id: MassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.6 2015-01-14 23:07:10 aishizaki Exp $
  */
 /*
 
@@ -136,7 +136,9 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         //removes "OpenURL" button local url reference (eg Stanford)
         HtmlNodeFilters.tagWithAttributeRegex("a", "title", "OpenURL "),
         // references current mp3s "More Weekly Audio Summaries" from page
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "jcarousel-skin-audio")
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "jcarousel-skin-audio"),
+        // remove toolsbox
+        HtmlNodeFilters.tagWithAttribute("div", "id", "toolsBox")
 
     };
 
