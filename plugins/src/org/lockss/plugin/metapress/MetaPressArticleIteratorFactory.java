@@ -1,10 +1,10 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.7 2014-05-07 00:58:41 etenbrink Exp $
+ * $Id: MetaPressArticleIteratorFactory.java,v 1.8 2015-01-14 00:00:58 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
 
@@ -52,10 +55,16 @@ public class MetaPressArticleIteratorFactory
   protected static final String PATTERN_TEMPLATE =
       "\"^%scontent/[A-Za-z0-9]{16}/fulltext\\.pdf$\", base_url";
 
+  protected String au_vol = null;
+  protected static final Pattern RIS_PATTERN = Pattern.compile(
+      "^VL[ ]+[-][ ]+([0-9-]+)", Pattern.CASE_INSENSITIVE);
+
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
+    
+    au_vol= getAuVol(au);
     return new MetaPressArticleIterator(au,
                                         new SubTreeArticleIterator.Spec()
                                             .setTarget(target)
@@ -64,7 +73,7 @@ public class MetaPressArticleIteratorFactory
                                         target);
   }
 
-  protected static class MetaPressArticleIterator extends SubTreeArticleIterator {
+  protected class MetaPressArticleIterator extends SubTreeArticleIterator {
 
     protected Pattern PATTERN = Pattern.compile("/content/([a-z0-9]{16})/fulltext\\.pdf$",
         Pattern.CASE_INSENSITIVE);
@@ -91,14 +100,13 @@ public class MetaPressArticleIteratorFactory
       log.warning("Mismatch between article iterator factory and article iterator: "+ url);
       return null;
     }
-    //http://inderscience.metapress.com/content/kv824m8x38336011/fulltext.pdfmap={
+    //http://inderscience.metapress.com/content/kv824m8x38336011/fulltext.pdf map={
     // FullTextPdfLanding=[BCU: http://inderscience.metapress.com/content/p20687286306321u],
     // FullTextPdfFile=[BCU: http://inderscience.metapress.com/content/p20687286306321u/fulltext.pdf],
     // IssueMetadata=[BCU: http://inderscience.metapress.com/content/p20687286306321u],
     // Citation=[BCU: http://inderscience.metapress.com/export.mpx?code=P20687286306321U&mode=ris],
     // Abstract=[BCU: http://inderscience.metapress.com/content/p20687286306321u]}])
 
-    //http://inderscience.metapress.com/export.mpx?code=KV824M8X38336011&mode=ris
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
@@ -107,8 +115,20 @@ public class MetaPressArticleIteratorFactory
         guessAbstract(af, pdfMat);
         guessFullTextHtml(af, pdfMat);
         guessReferences(af, pdfMat);
-        guessCitations(af,pdfMat);
-       }
+      }
+      guessCitations(af, pdfMat);
+      if (au_vol != null) {
+        CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_CITATION_RIS);
+        if (cu != null) {
+          String vol = getCuVol(cu);
+          if (vol != null && !vol.isEmpty() && !au_vol.equals(vol)) {
+            af = null;
+            // probably an overcrawled cu, so warn
+            log.warning("Au (" + au_vol + ") and Cu (" + vol + ") do not match " +
+                "probable overcrawled url: " + pdfCu.getUrl());
+          }
+        }
+      }
       log.debug3("af: " + af);
       return af;
     }
@@ -152,14 +172,51 @@ public class MetaPressArticleIteratorFactory
         af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refCu);
       }
     }
-
   }
   
+  protected String getAuVol(ArchivalUnit au) {
+    String vol = null;
+    try {
+      vol = au.getConfiguration().get("volume_name");
+    } catch(Exception ex) {
+      log.error("Error getting volume", ex);
+    }
+    return vol;
+  }
+  
+  protected String getCuVol(CachedUrl cu) {
+    String vol = null;
+    BufferedReader bReader = null;
+    try {
+      bReader = new BufferedReader(new InputStreamReader(
+          cu.getUnfilteredInputStream(), cu.getEncoding())
+          );
+      Matcher matcher;
+      
+      // go through the cached URL content line by line
+      // if a match is found, look for valid url & content
+      // if found then set the role for ROLE_FULL_TEXT_PDF
+      for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
+        matcher = RIS_PATTERN.matcher(line);
+        if (matcher.find()) {
+          vol = matcher.group(1);
+          break;
+        }
+      }
+    } catch (Exception e) {
+      // probably not serious, so warn
+      log.warning(e + " : Looking for volume name");
+    }
+    finally {
+      IOUtil.safeClose(bReader);
+    }
+    return vol;
+  }
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-   // return new MetaPressArticleMetadataExtractor();
+    
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_CITATION_RIS);
   }
 
