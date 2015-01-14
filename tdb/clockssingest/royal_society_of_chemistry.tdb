@@ -139,10 +139,10 @@
       param[base_url2] = http://www.rsc.org/
       
 
-      au < manifest ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 >
-      au < manifest ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 107 ; 107 ; 2011 >
-      au < manifest ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 108 ; 108 ; 2012 >
-      au < manifest ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 109 ; 109 ; 2013 >
+      au < testing ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 >
+      au < testing ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 107 ; 107 ; 2011 >
+      au < testing ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 108 ; 108 ; 2012 >
+      au < testing ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 109 ; 109 ; 2013 >
 
     }
   }
@@ -174,10 +174,10 @@
       param[base_url2] = http://www.rsc.org/
       
 
-      au < manifest ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
-      au < manifest ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 107 ; 107 ; 2011 >
-      au < manifest ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 108 ; 108 ; 2012 >
-      au < manifest ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 109 ; 109 ; 2013 >
+      au < testing ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
+      au < testing ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 107 ; 107 ; 2011 >
+      au < testing ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 108 ; 108 ; 2012 >
+      au < testing ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 109 ; 109 ; 2013 >
 
     }
   }
@@ -208,10 +208,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 >
-      au < manifest ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 107 ; 107 ; 2011 >
-      au < manifest ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 >
-      au < manifest ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 109 ; 109 ; 2013 >
+      au < testing ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 >
+      au < testing ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 107 ; 107 ; 2011 >
+      au < testing ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 >
+      au < testing ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 109 ; 109 ; 2013 >
 
     }
   }
