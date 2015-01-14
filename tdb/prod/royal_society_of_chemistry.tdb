@@ -7,7 +7,7 @@
 
   pluginPrefix = org.lockss.plugin.royalsocietyofchemistry.
   implicit < status ; year ; name ; param[volume_name] ; param[year] >
-  comment[notReady] = PD-64,PD-1021
+  comment[Ready] = PD-64,PD-1021 - resolved
 
   {
 
