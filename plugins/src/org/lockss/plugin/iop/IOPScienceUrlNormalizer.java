@@ -1,10 +1,10 @@
 /*
- * $Id: IOPScienceUrlNormalizer.java,v 1.3 2013-12-11 01:40:53 thib_gc Exp $
+ * $Id: IOPScienceUrlNormalizer.java,v 1.4 2015-01-14 00:42:06 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,9 +55,8 @@ public class IOPScienceUrlNormalizer implements UrlNormalizer {
     if (mat.find()) {
       return url.substring(0, mat.start());
     }
-    else {
-      return url;
-    }
+    
+    return url;
   }
   
 }
