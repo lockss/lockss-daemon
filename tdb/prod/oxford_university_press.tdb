@@ -8091,7 +8091,7 @@
     param[base_url] = http://hwj.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2005 ; History Workshop Journal Volume 61 ; 61 >
+    au < superseded ; 2005 ; History Workshop Journal Volume 61 [superseded] ; 61 >
 
     }
 
@@ -8153,10 +8153,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; History Workshop Journal Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; History Workshop Journal Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; History Workshop Journal Volume 58 ; 58 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; History Workshop Journal Volume 59 ; 59 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; History Workshop Journal Volume 60 ; 60 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; History Workshop Journal Volume 59 [superseded] ; 59 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; History Workshop Journal Volume 60 [superseded] ; 60 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; History Workshop Journal Volume 61 ; 61 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; History Workshop Journal Volume 62 ; 62 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; History Workshop Journal Volume 62 [superseded] ; 62 >
     au < HighWirePressH20Plugin ; released ; 2007 ; History Workshop Journal Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2007 ; History Workshop Journal Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2008 ; History Workshop Journal Volume 65 ; 65 >
