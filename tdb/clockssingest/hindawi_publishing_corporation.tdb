@@ -2563,7 +2563,7 @@
     param[journal_id] = cpis
 
     au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2582,7 +2582,7 @@
     au < manifest ; exists ; 2011 ; Critical Care Research and Practice Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Critical Care Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Critical Care Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Critical Care Research and Practice Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -2602,7 +2602,7 @@
     au < manifest ; exists ; 2011 ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Current Gerontology and Geriatrics Research Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2617,7 +2617,7 @@
     param[journal_id] = dpis
 
     au < manifest ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2636,7 +2636,7 @@
     au < manifest ; exists ; 2011 ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Depression Research and Treatment Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2656,7 +2656,7 @@
     au < manifest ; exists ; 2011 ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Dermatology Research and Practice Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -2672,7 +2672,7 @@
     param[journal_id] = dbj
 
     au < manifest ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Developmental Biology Journal Volume 2015 ; 2015 ; 2015 >
 
   }
