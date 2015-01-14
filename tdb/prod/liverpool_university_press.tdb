@@ -487,12 +487,12 @@
       implicit < status ; year ; name ; param[volume_name] >  
       param[journal_issn] = 1753-0776 
 
-      au < down ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
-      au < down ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-      au < down ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
-      au < down ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
-      au < down ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
-      au < down ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
+      au < superseded ; 2007 ; Music, Sound, and the Moving Image Volume 1 [superseded] ; 1 >
+      au < superseded ; 2008 ; Music, Sound, and the Moving Image Volume 2 [superseded] ; 2 >
+      au < superseded ; 2009 ; Music, Sound, and the Moving Image Volume 3 [superseded] ; 3 >
+      au < superseded ; 2010 ; Music, Sound, and the Moving Image Volume 4 [superseded] ; 4 >
+      au < superseded ; 2011 ; Music, Sound, and the Moving Image Volume 5 [superseded] ; 5 >
+      au < superseded ; 2012 ; Music, Sound, and the Moving Image Volume 6 [superseded] ; 6 >
       au < doNotProcess ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
       au < manifest ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
 
