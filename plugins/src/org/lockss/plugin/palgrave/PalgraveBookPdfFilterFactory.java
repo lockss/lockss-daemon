@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookPdfFilterFactory.java,v 1.5 2015-01-14 17:31:13 aishizaki Exp $
+ * $Id: PalgraveBookPdfFilterFactory.java,v 1.6 2015-01-14 18:08:02 alexandraohlson Exp $
  */
 
 /*
@@ -36,34 +36,25 @@ import java.util.List;
 import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Logger;
 import java.util.regex.Pattern;
 
 public class PalgraveBookPdfFilterFactory extends SimplePdfFilterFactory {
-  private static final Logger logger = Logger.getLogger(PalgraveBookPdfFilterFactory.class);
-  private static final String searchString = "^Copyright material from www.palgraveconnect.com";
+  private static final String searchPatternTemplate = "^Copyright material from www\\.palgraveconnect\\.com";
+  
+  private final static Pattern DOWNLOADED_FROM_PATTERN = Pattern.compile(searchPatternTemplate);
   
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
-    doBaseTransforms(pdfDocument);    
-    removeDownloadStrip(pdfDocument);
-  }
-
-  /* and set the correct string to use for this publisher */
-  public Pattern getDownloadStripPattern() {
-    return Pattern.compile(searchString);
-  }
-
-  public static void doBaseTransforms(PdfDocument pdfDocument) throws PdfException {
     pdfDocument.unsetModificationDate();
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetMetadata();
-    PdfUtil.normalizeTrailerId(pdfDocument);
+    PdfUtil.normalizeTrailerId(pdfDocument);   
+    removeDownloadStrip(pdfDocument);
   }
   
   private void removeDownloadStrip(PdfDocument pdfDocument) throws PdfException {
     // using StateMachine which requires 1.67
-   PalgraveDownloadedFromStateMachine worker = new PalgraveDownloadedFromStateMachine(getDownloadStripPattern());
+   PalgraveDownloadedFromStateMachine worker = new PalgraveDownloadedFromStateMachine();
 
    // check each page for an access date set on the rhs of the page
    for (PdfPage pdfPage : pdfDocument.getPages()) {
@@ -85,29 +76,26 @@ public class PalgraveBookPdfFilterFactory extends SimplePdfFilterFactory {
   }
   
   public static class PalgraveDownloadedFromStateMachine extends PdfTokenStreamStateMachine {
-    /* set when this worker is created */
-    public static Pattern DOWNLOADED_FROM_PATTERN;
-
     // The footer is close to the bottom of each page
-    public PalgraveDownloadedFromStateMachine(Pattern downloadPattern) {
+    public PalgraveDownloadedFromStateMachine() {
       super(Direction.BACKWARD);
-      DOWNLOADED_FROM_PATTERN = downloadPattern;
     }
 
     @Override
     public void state0() throws PdfException {
       if (isEndTextObject()) {
         setEnd(getIndex());
-        setState(getState() + 1);
+        setState(1);
       }
     } 
 
     @Override
     public void state1() throws PdfException {
       if (isShowTextGlyphPositioningFind(DOWNLOADED_FROM_PATTERN))  {
-        setState(getState() + 1);
+        setState(2);
       } else if (isBeginTextObject()) { // not the BT-ET we were looking for
-        //COULD STOP HERE IF assuming only one bt/et in the stream we want
+        //STOPPING HERE: assuming only one bt/et in the stream we want
+        setState(0); //we're stopping, but this is safe behavior for future changes
         stop();
       }
     }
