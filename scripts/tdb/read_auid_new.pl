@@ -59,9 +59,7 @@ while (my $line = <>) {
     $url_d = sprintf("%slockss-manifest/vol_%s_manifest.html",
       $param{base_url}, $param{volume_name});
     $man_url = uri_unescape($url);
-    #printf("\n\nman_url: %s\n",$man_url);
     $man_url_d = uri_unescape($url_d);
-    #printf("man_url_d: %s\n",$man_url_d);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
@@ -98,13 +96,24 @@ while (my $line = <>) {
   } elsif ($plugin eq "ClockssHighWirePressH20Plugin" || $plugin eq "ClockssHighWirePlugin") {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.dtl",
             $param{base_url}, $param{volume_name});
+        $url_d = sprintf("%sclockss-manifest/vol_%s_manifest.html",
+            $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
+        $man_url_d = uri_unescape($url_d);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
-              $result = "Redirected";
+              $vol_title = $resp->request->uri;
+              if ($resp->request->uri eq $man_url_d) {
+                #printf("Uses Drupal plugin\n");
+                $result = "Moved_to_Drupal";
+              } else {
+                #printf("Doesn't use Drupal plugin\n");
+                $result = "Redirected";
+              }
+              #$result = "Redirected";
             }
             elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
