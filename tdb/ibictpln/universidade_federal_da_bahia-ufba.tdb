@@ -112,7 +112,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revcaititu
 
-      au < exists ; 2013 ; 1 ; Revista CAITITU Volume 1 ; 2013 ; >
+      au < manifest ; 2013 ; 1 ; Revista CAITITU Volume 1 ; 2013 ; >
 
   }
 
@@ -127,7 +127,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revcetrama
 
-      au < exists ; 2003 ; 1 ; Revista CETRAMA Volume 1 ; 2003 ; >
+      au < manifest ; 2003 ; 1 ; Revista CETRAMA Volume 1 ; 2003 ; >
 
   }
 
@@ -651,7 +651,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistaperiodicus
 
-      au < exists ; 2014 ; 1 ; Revista Periódicus Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 1 ; Revista Periódicus Volume 2014 ; 2014 ; >
 
   }
 
