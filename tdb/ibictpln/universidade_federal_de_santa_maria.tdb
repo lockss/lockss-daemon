@@ -12,6 +12,29 @@
   {
 
     title <
+      name = Balduinia ;
+      issn = 1808-2688 ;
+      eissn = 2358-1980
+    >
+
+    param[journal_id] = balduinia
+
+    au < exists ; 2005 ; 1 ; Balduinia Volume 2005 ; 2005 ; >
+    au < exists ; 2006 ; 2 ; Balduinia Volume 2006 ; 2006 ; >
+    au < exists ; 2007 ; 3 ; Balduinia Volume 2007 ; 2007 ; >
+    au < exists ; 2008 ; 4 ; Balduinia Volume 2008 ; 2008 ; >
+    au < exists ; 2009 ; 5 ; Balduinia Volume 2009 ; 2009 ; >
+    au < exists ; 2010 ; 6 ; Balduinia Volume 2010 ; 2010 ; >
+    au < exists ; 2011 ; 7 ; Balduinia Volume 2011 ; 2011 ; >
+    au < exists ; 2012 ; 8 ; Balduinia Volume 2012 ; 2012 ; >
+    au < exists ; 2013 ; 9 ; Balduinia Volume 2013 ; 2013 ; >
+    au < exists ; 2014 ; 10 ; Balduinia Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Educação ;
       issn = 0101-9031 ;
       eissn = 1984-6444
@@ -82,6 +105,26 @@
   {
 
     title <
+      name = Revista Eletrônica do Curso de Direito da UFSM ;
+      issn = 1981-3694
+    >
+
+    param[journal_id] = revistadireito
+
+    au < exists ; 2006 ; 1 ; Revista Eletrônica do Curso de Direito da UFSM Volume 1 ; 2006 ; >
+    au < exists ; 2007 ; 2 ; Revista Eletrônica do Curso de Direito da UFSM Volume 2 ; 2007 ; >
+    au < exists ; 2008 ; 3 ; Revista Eletrônica do Curso de Direito da UFSM Volume 3 ; 2008 ; >
+    au < exists ; 2009 ; 4 ; Revista Eletrônica do Curso de Direito da UFSM Volume 4 ; 2009 ; >
+    au < exists ; 2010 ; 5 ; Revista Eletrônica do Curso de Direito da UFSM Volume 5 ; 2010 ; >
+    au < exists ; 2011 ; 6 ; Revista Eletrônica do Curso de Direito da UFSM Volume 6 ; 2011 ; >
+    au < exists ; 2012 ; 7 ; Revista Eletrônica do Curso de Direito da UFSM Volume 7 ; 2012 ; >
+    au < exists ; 2013 ; 8 ; Revista Eletrônica do Curso de Direito da UFSM Volume 8 ; 2013 ; >
+    au < exists ; 2014 ; 9 ; Revista Eletrônica do Curso de Direito da UFSM Volume 9 ; 2014 ; >
+  }
+
+  {
+
+    title <
       name = Revista Monografias Ambientais ;
       eissn = 2236-1308 
     >
@@ -94,7 +137,38 @@
     au < released ; 2013 ; 11-12 ; Revista Monografias Ambientais Volume 11-12 ; 2013 ; >
     au < manifest ; 2014 ; 13 ; Revista Monografias Ambientais Volume 13 ; 2014 ; >
   }
-  
+
+  {
+
+    title <
+      name = Revista InterAção ;
+      issn = 2357-7975
+    >
+
+    param[journal_id] = interacao
+
+    au < exists ; 2010 ; 1 ; Revista InterAção Volume 1 ; 2010 ; >
+    au < exists ; 2011 ; 2 ; Revista InterAção Volume 2 ; 2011 ; >
+    au < exists ; 2012 ; 3 ; Revista InterAção Volume 3 ; 2012 ; >
+    au < exists ; 2013 ; 4 ; Revista InterAção Volume 4 ; 2013 ; >
+    au < exists ; 2014 ; 5 ; Revista InterAção Volume 5 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista de Gestão e Avaliação Educacional ;
+      eissn = 2318-1338 
+    >
+
+    param[journal_id] = regae
+
+    au < exists ; 2013 ; 1 ; Revista de Gestão e Avaliação Educacional Volume 1 ; 2013 ; >
+    au < exists ; 2014 ; 2 ; Revista de Gestão e Avaliação Educacional Volume 2 ; 2014 ; >
+
+  }
+
   {
 
     title <
@@ -208,7 +282,21 @@
     au < manifest ; 2014 ; 2014 ; Revista Digital do LAV Volume 2014 ; 2014 ; >
 
   }
-  
+
+  {
+
+    title <
+      name = Revista Ecologia e Nutrição Florestal - ENFLO ;
+      eissn = 2316-980X
+    >
+
+    param[journal_id] = enflo
+
+    au < exists ; 2013 ; 1 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 1 ; 2013 ; >
+    au < exists ; 2014 ; 2 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 2 ; 2014 ; >
+
+  }
+
   {
 
     title <
@@ -288,6 +376,20 @@
   {
 
       title <
+        name = Revista de Gestão e Organizações Cooperativas ;
+        eissn = 2359-0432
+      >
+
+      comment[publisher] = Universidade Federal de Santa Maria
+      param[journal_id] = rgc
+
+      au < exists ; 2014 ; 1 ; Revista de Gestão e Organizações Cooperativasa Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
         name = Ciência e Natura ;
         issn = 0100-8307 ;
         eissn = 2179-460X
@@ -336,6 +438,21 @@
       au < released ; 2012 ; 14 ; ECONOMIA E DESENVOLVIMENTO Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 15 ; ECONOMIA E DESENVOLVIMENTO Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 16 ; ECONOMIA E DESENVOLVIMENTO Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
+        name = Literatura e Autoritarismo ;
+        issn = 1679-849X
+      >
+
+      comment[publisher] = Universidade Federal de Santa Maria
+      param[journal_id] = LA
+
+      au < exists ; 2013 ; 1 ; Literatura e Autoritarismo Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 2 ; Literatura e Autoritarismo Volume 2014 ; 2014 ; >
 
   }
 
@@ -416,6 +533,36 @@
   {
 
       title <
+        name = Revista Sociais e Humanas ;
+        issn = 0103-0620 
+      >
+
+      comment[publisher] = Universidade Federal de Santa Maria
+      param[journal_id] = sociaisehumanas
+
+      au < exists ; 1998 ; 1 ; Revista Sociais e Humanas Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 2 ; Revista Sociais e Humanas Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 3 ; Revista Sociais e Humanas Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 4 ; Revista Sociais e Humanas Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 5 ; Revista Sociais e Humanas Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 6 ; Revista Sociais e Humanas Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 7 ; Revista Sociais e Humanas Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 8 ; Revista Sociais e Humanas Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 9 ; Revista Sociais e Humanas Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 10 ; Revista Sociais e Humanas Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 11 ; Revista Sociais e Humanas Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 12 ; Revista Sociais e Humanas Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 13 ; Revista Sociais e Humanas Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 14 ; Revista Sociais e Humanas Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 15 ; Revista Sociais e Humanas Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 16 ; Revista Sociais e Humanas Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 17 ; Revista Sociais e Humanas Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
         name = Revista de Administração da UFSM ;
         eissn = 1983-4659
       >
@@ -454,6 +601,20 @@
       au < released ; 2012 ; 9 ; Revista Eletrônica de Contabilidade Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 10 ; Revista Eletrônica de Contabilidade Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 11 ; Revista Eletrônica de Contabilidade Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
+        name = Notas de Pesquisa ;
+        eissn = 2238-2615
+      >
+
+      comment[publisher] = Universidade Federal de Santa Maria
+      param[journal_id] = nope
+
+      au < exists ; 2011 ; 1 ; RNotas de Pesquisa Volume 2011 ; 2011 ; >
 
   }
 
