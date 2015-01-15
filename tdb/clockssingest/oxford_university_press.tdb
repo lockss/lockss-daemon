@@ -23,7 +23,7 @@
     param[base_url] = http://abbs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 [to delete] ; 40 ; >
+    au < superseded ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 [to delete] ; 40 ; >
     au < down ; crawling ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
 
     }
@@ -325,7 +325,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < down ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 [to delete] ; 44 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 [to delete] ; 44 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1144,7 +1144,7 @@
     param[base_url] = http://analysis.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; down ; 2008 ; Analysis Volume 68 [to delete] ; 68 ; >
+    au < zapped ; superseded ; 2008 ; Analysis Volume 68 [to delete] ; 68 ; >
     au < zapped ; finished ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
 
     }
@@ -1248,10 +1248,10 @@
     param[base_url] = http://aob.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; down ; 2008 ; Annals of Botany Volume 101 [to delete] ; 101 ; >
-    au < zapped ; down ; 2008 ; Annals of Botany Volume 102 [to delete] ; 102 ; >
-    au < down ; exists ; 2009 ; Annals of Botany Volume 103 [to delete] ; 103 ; reingest3.clockss.org:8083 >
-    au < down ; exists ; 2009 ; Annals of Botany Volume 104 [to delete] ; 104 ; reingest3.clockss.org:8083 >
+    au < zapped ; superseded ; 2008 ; Annals of Botany Volume 101 [to delete] ; 101 ; >
+    au < zapped ; superseded ; 2008 ; Annals of Botany Volume 102 [to delete] ; 102 ; >
+    au < superseded ; exists ; 2009 ; Annals of Botany Volume 103 [to delete] ; 103 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2009 ; Annals of Botany Volume 104 [to delete] ; 104 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1410,8 +1410,8 @@
     au < manifest ; exists ; 2006 ; Annals of Botany Volume 98 ; 98 ; >
     au < manifest ; exists ; 2007 ; Annals of Botany Volume 99 ; 99 ; >
     au < manifest ; exists ; 2007 ; Annals of Botany Volume 100 ; 100 ; >
-    au < manifest ; exists ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
-    au < manifest ; exists ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
+    au < wanted ; exists ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
+    au < wanted ; exists ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
     au < finished ; crawling ; 2009 ; Annals of Botany Volume 103 ; 103 ; >
     au < finished ; crawling ; 2009 ; Annals of Botany Volume 104 ; 104 ; >
     au < finished ; frozen ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
@@ -1486,7 +1486,7 @@
     param[base_url] = http://annhyg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; down ; 2008 ; The Annals of Occupational Hygiene Volume 52 [to delete] ; 52 ; >
+    au < zapped ; superseded ; 2008 ; The Annals of Occupational Hygiene Volume 52 [to delete] ; 52 ; >
     au < zapped ; finished ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
 
     }
@@ -1547,7 +1547,7 @@
     au < manifest ; exists ; 2005 ; The Annals of Occupational Hygiene Volume 49 ; 49 ; >
     au < manifest ; exists ; 2006 ; The Annals of Occupational Hygiene Volume 50 ; 50 ; >
     au < manifest ; exists ; 2007 ; The Annals of Occupational Hygiene Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
+    au < wanted ; exists ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
     au < finished ; crawling ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; >
     au < finished ; frozen ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 ; >
     au < finished ; frozen ; 2011 ; The Annals of Occupational Hygiene Volume 55 ; 55 ; >
@@ -1574,7 +1574,7 @@
     param[base_url] = http://annonc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; down ; 2008 ; Annals of Oncology Volume 19 [to delete] ; 19 ; >
+    au < zapped ; superseded ; 2008 ; Annals of Oncology Volume 19 [to delete] ; 19 ; >
     au < zapped ; finished ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
@@ -1604,7 +1604,7 @@
     au < manifest ; exists ; 2005 ; Annals of Oncology Volume 16 ; 16 ; >
     au < manifest ; exists ; 2006 ; Annals of Oncology Volume 17 ; 17 ; >
     au < manifest ; exists ; 2007 ; Annals of Oncology Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
+    au < wanted ; exists ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Annals of Oncology Volume 20 ; 20 ; >
     au < finished ; frozen ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
     au < finished ; crawling ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
@@ -1699,7 +1699,7 @@
     param[base_url] = http://applij.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; down ; 2008 ; Applied Linguistics Volume 29 [to delete] ; 29 ; >
+    au < zapped ; superseded ; 2008 ; Applied Linguistics Volume 29 [to delete] ; 29 ; >
     au < zapped ; finished ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
     }
@@ -1737,7 +1737,7 @@
     au < manifest ; exists ; 2005 ; Applied Linguistics Volume 26 ; 26 ; >
     au < manifest ; exists ; 2006 ; Applied Linguistics Volume 27 ; 27 ; >
     au < manifest ; exists ; 2007 ; Applied Linguistics Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
+    au < wanted ; exists ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Applied Linguistics Volume 30 ; 30 ; >
     au < finished ; crawling ; 2010 ; Applied Linguistics Volume 31 ; 31 ; >
     au < finished ; crawling ; 2011 ; Applied Linguistics Volume 32 ; 32 ; >
@@ -1865,7 +1865,7 @@
     param[base_url] = http://acn.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; down ; 2008 ; Archives of Clinical Neuropsychology Volume 23 [to delete] ; 23 ; >
+    au < zapped ; superseded ; 2008 ; Archives of Clinical Neuropsychology Volume 23 [to delete] ; 23 ; >
     au < zapped ; finished ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
@@ -1897,7 +1897,7 @@
     au < manifest ; exists ; 2005 ; Archives of Clinical Neuropsychology Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Archives of Clinical Neuropsychology Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Archives of Clinical Neuropsychology Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
+    au < wanted ; exists ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; >
     au < finished ; crawling ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
     au < finished ; crawling ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 ; >
@@ -4147,7 +4147,7 @@
     param[base_url] = http://cjip.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 [to delete] ; 2 ; >
+    au < superseded ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 [to delete] ; 2 ; >
 
     }
 
@@ -6366,7 +6366,7 @@
     param[base_url] = http://ecam.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 [to delete] ; 7 ; >
+    au < superseded ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 [to delete] ; 7 ; >
 
     }
 
@@ -11517,7 +11517,7 @@
     au < crawling ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
     au < crawling ; exists ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
 
-    au < down ; exists ; 0 ; Journal of Economic Geography Volume 59 [to delete] ; 59 ; reingest2.clockss.org:8085 >
+    au < superseded ; exists ; 0 ; Journal of Economic Geography Volume 59 [to delete] ; 59 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -11862,7 +11862,7 @@
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A [to delete] ; 64A ; >
+    au < superseded ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A [to delete] ; 64A ; >
 
     }
 
@@ -13975,7 +13975,7 @@
     param[base_url] = http://jpubhealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; exists ; 2009 ; Journal of Public Health Volume 30 [to delete] ; 30 ; >
+    au < superseded ; exists ; 2009 ; Journal of Public Health Volume 30 [to delete] ; 30 ; >
     au < zapped ; finished ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
 
     }
@@ -14708,7 +14708,7 @@
     param[base_url] = http://leobaeck.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 [to delete] ; 53 ; >
+    au < superseded ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 [to delete] ; 53 ; >
     au < zapped ; finished ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
 
     }
@@ -15135,8 +15135,8 @@
     param[base_url] = http://jigpal.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 [to delete] ; 16 ; >
-    au < down ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 [to delete] ; 17 ; >
+    au < superseded ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 [to delete] ; 16 ; >
+    au < superseded ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 [to delete] ; 17 ; >
 
     }
 
