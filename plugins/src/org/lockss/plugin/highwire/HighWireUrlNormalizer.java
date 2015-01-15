@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireUrlNormalizer.java,v 1.1 2014-05-15 22:48:09 etenbrink Exp $
+ * $Id: HighWireUrlNormalizer.java,v 1.2 2015-01-15 03:03:14 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,11 +41,11 @@ import org.lockss.util.Logger;
 
 public class HighWireUrlNormalizer implements UrlNormalizer {
   
-  protected static Logger log = Logger.getLogger(HighWireUrlNormalizer.class);
+  protected static final Logger log = Logger.getLogger(HighWireUrlNormalizer.class);
   protected static final String TOC_SUFFIX = ".toc";
-  private String base_url = "";
-  private Pattern H20_LINK;
+  protected static final Pattern H20_LINK = Pattern.compile("(https?://[^/]+)/content/([^/]+)/([^/]+)[.]toc");
   
+  @Override
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
     
@@ -53,19 +53,12 @@ public class HighWireUrlNormalizer implements UrlNormalizer {
     // <base_url>content/168/1.toc to <base_url>content/vol168/issue1/
     
     if (url.endsWith(TOC_SUFFIX)) {
-      if (base_url.isEmpty()) {
-        base_url = au.getConfiguration().get("base_url");
-        H20_LINK = Pattern.compile(base_url + "content/([^/]+)/([^/]+)[.]toc$");
-      }
-      
       Matcher mat = H20_LINK.matcher(url);
       if (mat.matches()) {
-        url = base_url + "content/vol" + mat.group(1) + "/issue" + mat.group(2) + "/";
+        url = mat.group(1) + "/content/vol" + mat.group(2) + "/issue" + mat.group(3) + "/";
       }
     }
     
     return(url);
-    
   }
-  
 }
