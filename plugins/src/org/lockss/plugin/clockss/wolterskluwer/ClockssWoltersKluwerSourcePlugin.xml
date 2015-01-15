@@ -9,12 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
-  </entry>
-  <entry>
-    <!-- for rewritingReader -->
-    <string>required_daemon_version</string> 
-    <string>1.66.0</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -53,17 +48,14 @@
   <entry>
     <string>au_crawlrules</string>
     <list> 
+      <string>1,"^%s%d/AACR201402[0-1][1,5]\.[0-9].zip", base_url, year</string>  
       <string>1,"^%s%d/JACP90000000\.[0-9].zip", base_url, year</string>  
       <string>1,"^%s%d/ARTE90000000\.[0-9].zip", base_url, year</string>  
       <string>1,"^%s%d/SPNE20130801\.[0-9].zip", base_url, year</string>  
       <string>2,"^%s%d/[A-Z]+\d.*", base_url, year</string>    
     </list>
   </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%s%d/", base_url, year</string>
-  </entry>
-   -->
+  -->
   <entry>
     <string>au_substance_url_pattern</string>
     <list>

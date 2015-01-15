@@ -1,10 +1,10 @@
 /*
- * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.4 2014-10-21 18:41:09 aishizaki Exp $
+ * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.5 2015-01-15 05:06:46 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,48 +34,30 @@ package org.lockss.plugin.clockss.wolterskluwer;
 
 import java.io.*;
 
-import org.apache.commons.io.input.BOMInputStream;
-
 import java.util.Map;
 
 import javax.xml.parsers.*;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.xml.sax.*;
+import org.lockss.util.Constants;
 
-import java.io.BufferedReader;
-import org.apache.commons.io.FilenameUtils;
 
 
 public class WoltersKluwerXPathXmlMetadataParser extends XPathXmlMetadataParser {
   private static Logger log = Logger.getLogger(WoltersKluwerXPathXmlMetadataParser.class);
 
   public WoltersKluwerXPathXmlMetadataParser(Map<String, XPathValue> globalMap,
-                                             String articleNode,
-                                             Map<String, XPathValue> articleMap)
+      String articleNode, Map<String, XPathValue> articleMap)
       throws XPathExpressionException {
     super(globalMap, articleNode, articleMap);
   }
   
-  /*
-   *  A constructor that allows for the xml filtering of the modified
-   *  sgml input stream
-   *  
-   */
-  public WoltersKluwerXPathXmlMetadataParser(Map<String, XPathValue> globalMap, 
-                                String articleNode, 
-                                Map<String, XPathValue> articleMap,
-                                boolean doXmlFiltering)
-      throws XPathExpressionException {
-    this(globalMap, articleNode, articleMap);
-    setDoXmlFiltering(doXmlFiltering);
-  }
-
   /*
    *  uses the sgmlentities.dtd to help parse WK's metadata/sgml file(non-Javadoc)
    */
@@ -98,16 +80,16 @@ public class WoltersKluwerXPathXmlMetadataParser extends XPathXmlMetadataParser 
   
   @Override
   protected InputSource makeInputSource(CachedUrl cu) throws UnsupportedEncodingException {
-    //InputStream cuInputStream = getInputStreamFromCU(cu);
-    BOMInputStream cuInputStream = new BOMInputStream(getInputStreamFromCU(cu));
-    Reader sgmlReader = new InputStreamReader(cuInputStream, cu.getEncoding());
-    Reader xmlReader = new WoltersKluwerSgmlAdapter(sgmlReader);
-    InputSource is = new InputSource(xmlReader);
-
-    is.setEncoding(Constants.ENCODING_UTF_8);
-    log.debug3("InputStream.setEncoding:" +Constants.ENCODING_UTF_8 );
-
-    return is;
-  }
-
+ 
+      Pair<Reader, String> sgmlReaderPair = makeInputSourceReader(cu);
+      String sgmlReader_cset = sgmlReaderPair.getRight();
+      if (sgmlReader_cset != Constants.ENCODING_UTF_8) {
+        log.debug3("WARNING: WoltersKluwer sgml input NOT UTF");
+      }
+      Reader xmlReader = new WoltersKluwerSgmlAdapter(sgmlReaderPair.getLeft());
+      InputSource is = new InputSource(xmlReader);
+      is.setEncoding(sgmlReader_cset);
+      return is;
+     }
+  
 }

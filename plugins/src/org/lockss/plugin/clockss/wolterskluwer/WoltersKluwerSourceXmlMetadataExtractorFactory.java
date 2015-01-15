@@ -1,10 +1,10 @@
 /*
- * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.7 2014-12-18 23:00:43 alexandraohlson Exp $
+ * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.8 2015-01-15 05:06:46 alexandraohlson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -104,8 +104,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
         List<ArticleMetadata> amList = 
             new WoltersKluwerXPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(), 
                 schemaHelper.getArticleNode(), 
-                schemaHelper.getArticleMetaMap(),
-                getDoXmlFiltering()).extractMetadata(target, cu);
+                schemaHelper.getArticleMetaMap()).extractMetadata(target, cu);
 
         //3. Optional consolidation of duplicate records within one XML file
         // a child plugin can leave the default (no deduplication) or 

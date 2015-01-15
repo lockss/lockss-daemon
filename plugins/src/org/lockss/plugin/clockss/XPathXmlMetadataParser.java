@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.12 2014-12-17 21:46:09 thib_gc Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.13 2015-01-15 05:06:46 alexandraohlson Exp $
  */
 
 /*
@@ -48,6 +48,8 @@ import org.lockss.util.*;
 import org.w3c.dom.*;
 import org.xml.sax.*;
 import org.apache.commons.io.input.BOMInputStream;
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 
 
 /**
@@ -440,7 +442,8 @@ public class XPathXmlMetadataParser  {
    * {@link CachedUrl#getUnfilteredInputStream()} method and, if
    * {@link #isDoXmlFiltering()} return true, wraps it in a
    * {@link XmlFilteringInputStream}, setting the encoding of the input source
-   * to {@link CachedUrl#getEncoding()}.
+   * to the value returned by the util {@link CharsetUtil#guessCharsetName()} and
+   * if that returns null, to {@link CachedUrl#getEncoding()}.
    * </p>
    * 
    * @param cu
@@ -448,48 +451,18 @@ public class XPathXmlMetadataParser  {
    * @return An input source for the cached URL's data stream.
    * @throws IOException
    *           if an I/O exception occurs.
-   * @since 1.66
+   * @since 1.67
    */
   protected InputSource makeInputSource(CachedUrl cu) throws IOException {
-    InputSource is = new InputSource(getInputStreamFromCU(cu));
-    is.setEncoding(cu.getEncoding());
-    return is;
+ 
+    // first create a reader so child classes can 
+    // do filtering on the reader if they need to
+    Pair<Reader, String> iReaderPair = makeInputSourceReader(cu);
+    InputSource iSource = new InputSource(iReaderPair.getLeft());
+    iSource.setEncoding(iReaderPair.getRight());
+    return iSource;
   }
-
-  /**
-   *
-   * @param cu
-   *          A cached URL.
-   * @param encoding the encoding which should be used for this input stream
-   * @return
-   * @throws IOException
-   */
-  protected InputSource makeInputSource(CachedUrl cu, String encoding)
-      throws IOException {
-    // set the encoding on the BufferedReader which somehow sets the
-    // encoding to work (despite if the default charset is set wrongly),
-    // unlike just setting the encoding on the InputSource
-    BufferedReader in = null;
-    BOMInputStream bistream = null;
-    if (encoding != null) {
-      if (Constants.ENCODING_UTF_8.equals(encoding)) {
-        // Some UTF-8 xml files have a BOM char as the first - this strips it
-        // so the sax parser doesn't complain "No Content before prolog"
-        bistream = new BOMInputStream(getInputStreamFromCU(cu));
-        in = new BufferedReader(new InputStreamReader(bistream, encoding));
-      } else {
-        in = new BufferedReader(new InputStreamReader(getInputStreamFromCU(cu),
-            encoding));
-      }
-    } else {    // no encoding
-      in = new BufferedReader(new InputStreamReader(getInputStreamFromCU(cu)));
-      encoding = cu.getEncoding();
-    }
-    InputSource is = new InputSource(in);
-    is.setEncoding(encoding);
-
-    return is;
-  }
+  
   /**
    *  Given a CU for an XML file, load and return the XML as a Document "tree". 
    * @param cu to the XML file
@@ -526,9 +499,12 @@ public class XPathXmlMetadataParser  {
     }
   }
 
+
   protected InputStream getInputStreamFromCU(CachedUrl cu) {
     if (isDoXmlFiltering()) {
-      if (!(Constants.ENCODING_ISO_8859_1.equalsIgnoreCase(cu.getEncoding()))) {
+      // This check is a little bogus because the charset isn't always correctly
+      // set on the cu.  After this call, we do an additional check on the inputstream
+      if (!(Constants.ENCODING_ISO_8859_1.equalsIgnoreCase(cu.getEncoding()))) { 
         log.error("Filtering XML that is not ISO-8859-1 which may or may not work");
       }
       return new XmlFilteringInputStream(cu.getUnfilteredInputStream());
@@ -538,7 +514,46 @@ public class XPathXmlMetadataParser  {
   }
   
   
-
+  /*
+   * Return a reader from the inputstream on the CU
+   *  - do XML filtering on the stream if the flag is set
+   *      this should only be done for IS0-8859 charsets
+   *  - make an attempt to figure out the charset
+   *  -if it's UTF8, remove any leading BOM characters
+   *  return the reader with the charset set
+   */
+  protected Pair<Reader, String> makeInputSourceReader(CachedUrl cu) throws UnsupportedEncodingException {
+  
+    String guessed_cset = cu.getEncoding(); // set a default
+    try {
+      /* 
+       * TODO 1.68  
+       * With planned improvements to CharsetUtil should be able to 
+       * a) just get back the charset
+       * b) get back a charset & Reader with BOM bypassed already
+       *  This is a little inefficient with current implementation as it
+       *  creates a reader from the inputStream during charset evaluation that
+       *  it never uses. 
+       */
+     Pair<Reader, String> retInfoPair = CharsetUtil.getCharsetReader(cu.getUnfilteredInputStream());
+     guessed_cset = retInfoPair.getRight();
+     log.debug3("guessed cset is: " + guessed_cset);
+     } catch (IOException ex){
+       log.debug3("Was not able to get a Reader/Charset from util");
+     }
+     Reader inputReader;
+     if (guessed_cset == Constants.ENCODING_UTF_8) {
+       /* this is utf-8, so clear out any initial BOM chars */
+       log.debug3("UTF-8 input stream - remove any BOM chars");
+       BOMInputStream cuInputStream = new BOMInputStream(cu.getUnfilteredInputStream());
+       inputReader = new InputStreamReader(cuInputStream, Constants.ENCODING_UTF_8);
+     } else {
+       log.debug3("Not UTF-8; create reader, possibly doing XML filtering.");
+       inputReader = new InputStreamReader(getInputStreamFromCU(cu), guessed_cset);
+     }
+     return new ImmutablePair<Reader,String>(inputReader, guessed_cset);
+  }
+  
   /**
    * A wrapper around ArticleMetadata creation to allow for override
    * @return newly created ArticleMetadata object

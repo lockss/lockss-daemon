@@ -9,8 +9,13 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
+  <entry>
+    <!-- support for guessing at encoding -->
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>  
   <entry>
     <string>plugin_name</string>
     <string>Parent Source Plugin (CLOCKSS)</string>

@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXmlMetadataExtractorFactory.java,v 1.3 2015-01-15 05:06:47 alexandraohlson Exp $
+ * $Id: AthabascauOnix3SourceXmlMetadataExtractorFactory.java,v 1.1 2015-01-15 05:06:47 alexandraohlson Exp $
  */
 
 /*
@@ -30,34 +30,36 @@
 
  */
 
-package org.lockss.plugin.clockss.tangram;
+package org.lockss.plugin.clockss.onixbooks;
 
+import java.util.ArrayList;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-//import org.lockss.extractor.FileMetadataExtractor.Emitter;
-
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
-public class TangramSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(TangramSourceXmlMetadataExtractorFactory.class);
+public class AthabascauOnix3SourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  static Logger log = Logger.getLogger(AthabascauOnix3SourceXmlMetadataExtractorFactory.class);
 
-  private static SourceXmlSchemaHelper tangramHelper = null;
+  private static SourceXmlSchemaHelper Onix3Helper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new TangramSourceXmlMetadataExtractor();
+    return new Onix3LongSourceXmlMetadataExtractor();
   }
 
-  public static class TangramSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class Onix3LongSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
-    // this version shouldn't get called. It will ultimately get removed
-    // in favor of the version that takes a CachedUrl
+    /*
+    * This version of the method is abstract and must be implemented but should
+    * be deprecated and ultimately removed in favor of the one that takes a 
+    * CachedUrl
+    */
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
       return null; // cause a plugin exception to get thrown
@@ -65,12 +67,30 @@ public class TangramSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-    // Once you have it, just keep returning the same one. It won't change.
-      if (tangramHelper != null) {
-        return tangramHelper;
+      // Once you have it, just keep returning the same one. It won't change.
+      if (Onix3Helper != null) {
+        return Onix3Helper;
       }
-      tangramHelper = new TangramSourceXmlSchemaHelper();
-      return tangramHelper;
+      Onix3Helper = new Onix3LongSchemaHelper();
+      return Onix3Helper;
     }
+
+
+    /* In this case, build up the filename the XML filename with .pdf
+     * Although the Onix3 schema sets the fileNamekey to the isbn13, that
+     * isn't the naming convention for this plugin
+     */
+    @Override
+    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+        ArticleMetadata oneAM) {
+
+  
+      String xmlFilename = cu.getUrl();
+      String filenameValue = xmlFilename.substring(0,xmlFilename.length() - 3) + "pdf";
+      ArrayList<String> returnList = new ArrayList<String>();
+      returnList.add(filenameValue);
+      return returnList;
+    }
+
   }
 }
