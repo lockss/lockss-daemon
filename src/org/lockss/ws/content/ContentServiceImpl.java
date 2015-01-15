@@ -1,10 +1,10 @@
 /*
- * $Id: ContentServiceImpl.java,v 1.1 2014-12-08 19:16:22 fergaloy-sf Exp $
+ * $Id: ContentServiceImpl.java,v 1.2 2015-01-15 21:45:20 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,6 +31,9 @@
  */
 package org.lockss.ws.content;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.jws.WebService;
 import javax.xml.ws.soap.MTOM;
@@ -46,6 +49,7 @@ import org.lockss.util.HeaderUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.ws.entities.ContentResult;
+import org.lockss.ws.entities.FileWsResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
 
 /**
@@ -59,7 +63,7 @@ public class ContentServiceImpl implements ContentService {
   /**
    * Provides the content defined by a URL and Archival Unit.
    * 
-   * @param auId
+   * @param url
    *          A String with the URL.
    * @param auId
    *          A String with the identifier (auid) of the archival unit.
@@ -78,6 +82,39 @@ public class ContentServiceImpl implements ContentService {
       throw new LockssWebServicesFault("Missing required URL");
     }
 
+    return fetchVersionedFile(url, auId, null);
+  }
+
+  /**
+   * Provides the content defined by a URL, an Archival Unit and a version.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @param version
+   *          An Integer with the requested version of the content.
+   * @return a ContentResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  public ContentResult fetchVersionedFile(String url, String auId,
+      Integer version) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "fetchVersionedFile(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "url = " + url);
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "version = " + version);
+    }
+
+    if (StringUtil.isNullString(url)) {
+      throw new LockssWebServicesFault("Missing required URL");
+    }
+
+    if (StringUtil.isNullString(auId) && version != null) {
+      throw new LockssWebServicesFault("To fetch a specific version, the "
+	  + "Archival Unit identifier (auId) is required");
+    }
+
     CachedUrl cu = null;
 
     try {
@@ -87,6 +124,12 @@ public class ContentServiceImpl implements ContentService {
       if (StringUtil.isNullString(auId)) {
         // Find a CU with content.
         cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+
+        if (cu == null) {
+          throw new LockssWebServicesFault("Missing CachedUrl for url '" + url
+              + "'");
+        }
       } else {
 	ArchivalUnit au = pluginMgr.getAuFromId(auId);
         if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
@@ -97,18 +140,40 @@ public class ContentServiceImpl implements ContentService {
         }
 
         cu = au.makeCachedUrl(url);
-      }
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
 
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+        if (cu == null) {
+          throw new LockssWebServicesFault("Missing CachedUrl for url '" + url
+              + "', auId '" + auId + "'");
+        }
 
-      if (cu == null) {
-	if (StringUtil.isNullString(auId)) {
-	  throw new LockssWebServicesFault("Missing CachedUrl for url '" + url
-	      + "'");
-	} else {
-	  throw new LockssWebServicesFault("Missing CachedUrl for auid '" + auId
-	      + "', url '" + url + "'");
-	}
+        // Check whether a specific version has been requested that is not the
+        // version of the current CachedUrl.
+        if (version != null && version.intValue() != cu.getVersion()) {
+          // Yes: Get the requested version CachedUrl.
+          CachedUrl versionedCu = cu.getCuVersion(version);
+
+          // Check whether the requested version CachedUrl does not exist.
+          if (versionedCu == null) {
+            // Yes: Report the problem.
+            throw new Exception("Missing CachedUrl for url '" + url
+        	+ "', auId '" + auId + "', version " + version);
+
+            // No: Check whether the requested version CachedUrl does not have
+            // content.
+          } else if (!versionedCu.hasContent()) {
+            // Yes: Report the problem.
+            AuUtil.safeRelease(versionedCu);
+            throw new Exception("Version " + version + " of " + url
+        	+ " for the requested Archival Unit '" + auId
+        	+ "' has no content");
+          }
+
+          // No: Replace the current CachedUrl with the versioned one.
+          AuUtil.safeRelease(cu);
+          cu = versionedCu;
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+        }
       }
 
       CIProperties props = null;
@@ -120,8 +185,8 @@ public class ContentServiceImpl implements ContentService {
 	if (StringUtil.isNullString(auId)) {
 	  throw e;
 	} else {
-	  throw new LockssWebServicesFault("No content for auid '" + auId
-	      + "', url '" + url + "'");
+	  throw new LockssWebServicesFault("No content for url '" + url
+	      + "', auId '" + auId + "', version " + version);
 	}
       }
 
@@ -133,9 +198,98 @@ public class ContentServiceImpl implements ContentService {
 
       // Populate the response.
       ContentResult result = new ContentResult();
+      result.setProperties((Properties)props);
       result.setDataHandler(new DataHandler(
 	  new InputStreamDataSource(cu.getUnfilteredInputStream(), mimeType,
 	      url)));
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    } catch (Exception e) {
+      log.error(e.getMessage(), e);
+      throw new LockssWebServicesFault(e);
+    } finally {
+      AuUtil.safeRelease(cu);
+    }
+  }
+
+  /**
+   * Provides a list of the versions of a URL in an Archival Unit.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a List<FileWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  public List<FileWsResult> getVersions(String url, String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getVersions(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "url = " + url);
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+    }
+
+    if (StringUtil.isNullString(url)) {
+      throw new LockssWebServicesFault("Missing required URL");
+    }
+
+    if (StringUtil.isNullString(auId)) {
+      throw new LockssWebServicesFault("Missing required Archival Unit "
+	  + "identifier (auId)");
+    }
+
+    CachedUrl cu = null;
+
+    try {
+      ArchivalUnit au =
+	  LockssDaemon.getLockssDaemon().getPluginManager().getAuFromId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+      if (au == null) {
+	throw new LockssWebServicesFault("Missing AU with auid '" + auId + "'");
+      }
+
+      cu = au.makeCachedUrl(url);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+
+      if (cu == null) {
+	throw new LockssWebServicesFault("Missing CachedUrl for url '" + url
+	    + "', auId '" + auId + "'");
+      }
+
+      // Get the versions.
+      CachedUrl[] cuVersions = cu.getCuVersions(Integer.MAX_VALUE);
+
+      // Initialize the result.
+      List<FileWsResult> result =
+	  new ArrayList<FileWsResult>(cuVersions.length);
+
+      for (CachedUrl versionedCu : cuVersions) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "versionedCu = " + versionedCu);
+
+	try {
+	  FileWsResult versionedFile = new FileWsResult();
+
+	  versionedFile.setUrl(url);
+	  versionedFile.setVersion(versionedCu.getVersion());
+	  versionedFile.setSize(versionedCu.getContentSize());
+	  versionedFile.setCollectionDate(Long.parseLong(versionedCu
+	      .getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME)));
+
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "versionedFile = " + versionedFile);
+
+	  result.add(versionedFile);
+	} catch (Exception e) {
+	  log.error(e.getMessage(), e);
+	  throw new LockssWebServicesFault(e);
+	} finally {
+	  AuUtil.safeRelease(versionedCu);
+	}
+      }
 
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
       return result;

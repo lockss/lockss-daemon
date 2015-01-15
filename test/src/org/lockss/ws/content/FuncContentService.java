@@ -1,10 +1,10 @@
 /*
- * $Id: FuncContentService.java,v 1.1 2014-12-08 19:16:22 fergaloy-sf Exp $
+ * $Id: FuncContentService.java,v 1.2 2015-01-15 21:45:20 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.ws.content;
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 import java.net.URL;
+import java.util.Properties;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import org.lockss.account.AccountManager;
@@ -147,14 +148,26 @@ public class FuncContentService extends LockssTestCase {
     ContentResult result = proxy.fetchFile(url, null);
     assertEquals(256, result.writeContentToFile(outputFileSpec).length());
 
-    result = proxy.fetchFile(url, auId);
+    Properties properties = result.getProperties();
+    assertEquals("1", properties.get("org.lockss.version.number"));
+    assertEquals("text/plain", properties.get("x-lockss-content-type"));
+    assertEquals("http://www.example.com/001file.bin",
+	properties.get("x-lockss-node-url"));
+
+    result = proxy.fetchVersionedFile(url, auId, null);
     assertEquals(256, result.writeContentToFile(outputFileSpec).length());
-    
+
+    properties = result.getProperties();
+    assertEquals("1", properties.get("org.lockss.version.number"));
+    assertEquals("text/plain", properties.get("x-lockss-content-type"));
+    assertEquals("http://www.example.com/001file.bin",
+	properties.get("x-lockss-node-url"));
+
     // User "contentAdminRole" should fail.
     userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
 
     try {
-      result = proxy.fetchFile(url, null);
+      result = proxy.fetchVersionedFile(url, null, null);
       fail("Test should have failed for role "
 	  + LockssServlet.ROLE_CONTENT_ADMIN);
     } catch (LockssWebServicesFault lwsf) {
@@ -181,11 +194,32 @@ public class FuncContentService extends LockssTestCase {
 
     url = "http://www.example.com/branch1/branch1/index.html";
     outputFileSpec = tempDirPath + "/index.html";
-    result = proxy.fetchFile(url, null);
+    result = proxy.fetchVersionedFile(url, null, null);
     assertEquals(398, result.writeContentToFile(outputFileSpec).length());
+
+    properties = result.getProperties();
+    assertEquals("1", properties.get("org.lockss.version.number"));
+    assertEquals("text/html", properties.get("x-lockss-content-type"));
+    assertEquals("http://www.example.com/branch1/branch1/index.html",
+	properties.get("x-lockss-node-url"));
 
     result = proxy.fetchFile(url, auId);
     assertEquals(398, result.writeContentToFile(outputFileSpec).length());
+
+    properties = result.getProperties();
+    assertEquals("1", properties.get("org.lockss.version.number"));
+    assertEquals("text/html", properties.get("x-lockss-content-type"));
+    assertEquals("http://www.example.com/branch1/branch1/index.html",
+	properties.get("x-lockss-node-url"));
+
+    result = proxy.fetchVersionedFile(url, auId, 1);
+    assertEquals(398, result.writeContentToFile(outputFileSpec).length());
+
+    properties = result.getProperties();
+    assertEquals("1", properties.get("org.lockss.version.number"));
+    assertEquals("text/html", properties.get("x-lockss-content-type"));
+    assertEquals("http://www.example.com/branch1/branch1/index.html",
+	properties.get("x-lockss-node-url"));
 
     // Once more with a bad AU identifier.
     userAccount.setRoles(LockssServlet.ROLE_USER_ADMIN);
@@ -205,12 +239,27 @@ public class FuncContentService extends LockssTestCase {
 
     try {
       url = "wrongURL";
-      result = proxy.fetchFile(url, null);
+      result = proxy.fetchVersionedFile(url, null, null);
       fail("Test should have failed for url '" + url + "'");
     } catch (LockssWebServicesFault lwsf) {
       // Expected authorization failure.
       assertEquals("org.lockss.ws.entities.LockssWebServicesFault: "
 	  + "Missing CachedUrl for url 'wrongURL'", lwsf.getMessage());
+    }
+
+    // Non-existent version.
+    try {
+      url = "http://www.example.com/branch1/branch1/index.html";
+      auId = sau.getAuId();
+      result = proxy.fetchVersionedFile(url, auId, 2);
+      fail("Test should have failed for version " + 2);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertTrue(lwsf.getMessage().startsWith("java.lang.Exception: Version 2 "
+	  + "of http://www.example.com/branch1/branch1/index.html for the "
+	  + "requested Archival Unit "
+	  + "'org|lockss|plugin|simulated|SimulatedPlugin&"));
+      assertTrue(lwsf.getMessage().endsWith(" has no content"));
     }
   }
 

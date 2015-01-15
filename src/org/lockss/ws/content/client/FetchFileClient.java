@@ -1,10 +1,10 @@
 /*
- * $Id: FetchFileClient.java,v 1.1 2014-12-08 19:16:22 fergaloy-sf Exp $
+ * $Id: FetchFileClient.java,v 1.2 2015-01-15 21:45:20 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,6 +51,7 @@ public class FetchFileClient extends ContentServiceBaseClient {
 
     String url = null;
     String auId = null;
+    String versionStr = null;
     String outputFilename = null;
     int argCount = args.length;
 
@@ -65,17 +66,36 @@ public class FetchFileClient extends ContentServiceBaseClient {
       url = args[0];
       outputFilename = args[1];
       break;
-    default:
+    case 3:
       url = args[0];
       auId = args[1];
       outputFilename = args[2];
+      break;
+    default:
+      url = args[0];
+      auId = args[1];
+      versionStr = args[2];
+      outputFilename = args[3];
     }
 
     System.out.println("url = " + url);
     System.out.println("auId = " + auId);
+    System.out.println("versionStr = " + versionStr);
     System.out.println("outputFilename = " + outputFilename);
 
-    ContentResult result = proxy.fetchFile(url, auId);
+    Integer version = null;
+
+    if (versionStr != null) {
+      try {
+	version = Integer.parseInt(versionStr);
+      } catch (NumberFormatException nfe) {
+	System.out.println("Error: Invalid version number '" + versionStr
+	    + "' passed");
+	System.exit(1);
+      }
+    }
+
+    ContentResult result = proxy.fetchVersionedFile(url, auId, version);
     System.out.println("result = " + result);
 
     File outputFile = result.writeContentToFile("/tmp/" + outputFilename);

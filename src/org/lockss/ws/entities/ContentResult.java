@@ -1,10 +1,10 @@
 /*
- * $Id: ContentResult.java,v 1.1 2014-12-08 19:16:22 fergaloy-sf Exp $
+ * $Id: ContentResult.java,v 1.2 2015-01-15 21:45:20 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Properties;
 import javax.activation.DataHandler;
 
 /**
@@ -42,6 +43,7 @@ import javax.activation.DataHandler;
  */
 public class ContentResult {
   private DataHandler dataHandler;
+  private Properties properties;
 
   /**
    * Provides the requested content.
@@ -54,6 +56,19 @@ public class ContentResult {
 
   public void setDataHandler(DataHandler dataHandler) {
     this.dataHandler = dataHandler;
+  }
+
+  /**
+   * Provides the properties of the requested content.
+   *
+   * @return a Properties with the properties of the content.
+   */
+  public Properties getProperties() {
+    return properties;
+  }
+
+  public void setProperties(Properties properties) {
+    this.properties = properties;
   }
 
   /**
@@ -102,10 +117,6 @@ public class ContentResult {
 
   @Override
   public String toString() {
-    StringBuilder builder = new StringBuilder();
-    builder.append("[CounterResult dataHandler=");
-    builder.append(dataHandler);
-    builder.append("]");
-    return builder.toString();
+    return ("[CounterResult properties=" + properties + "]");
   }
 }

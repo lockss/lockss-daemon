@@ -1,10 +1,10 @@
 /*
- * $Id: ContentService.java,v 1.1 2014-12-08 19:16:22 fergaloy-sf Exp $
+ * $Id: ContentService.java,v 1.2 2015-01-15 21:45:20 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,10 +31,12 @@
  */
 package org.lockss.ws.content;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import org.lockss.ws.entities.ContentResult;
+import org.lockss.ws.entities.FileWsResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
 
 /**
@@ -45,7 +47,7 @@ public interface ContentService {
   /**
    * Provides the content defined by a URL and Archival Unit.
    * 
-   * @param auId
+   * @param url
    *          A String with the URL.
    * @param auId
    *          A String with the identifier (auid) of the archival unit.
@@ -54,5 +56,36 @@ public interface ContentService {
    */
   @WebMethod
   ContentResult fetchFile(@WebParam(name = "url") String url,
+      @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+  /**
+   * Provides the content defined by a URL, an Archival Unit and a version.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @param version
+   *          An Integer with the requested version of the content.
+   * @return a ContentResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  ContentResult fetchVersionedFile(@WebParam(name = "url") String url,
+      @WebParam(name = "auId") String auId,
+      @WebParam(name = "version") Integer version)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides a list of the versions of a URL in an Archival Unit.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a List<FileWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<FileWsResult> getVersions(@WebParam(name = "url") String url,
       @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
 }
