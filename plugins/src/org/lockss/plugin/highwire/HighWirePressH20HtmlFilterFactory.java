@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.58 2014-10-21 23:58:36 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.59 2015-01-15 03:50:06 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,8 +57,9 @@ import org.lockss.util.ReaderInputStream;
 
 public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
 
-  Logger log = Logger.getLogger(HighWirePressH20HtmlFilterFactory.class);
+  private static final Logger log = Logger.getLogger(HighWirePressH20HtmlFilterFactory.class);
   
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -78,8 +79,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("ul", "class", "tower-ads"),
         HtmlNodeFilters.tagWithAttribute("ul", "class", "col4-square"),
         HtmlNodeFilters.tagWithAttribute("ul", "class", "col4-tower"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads-ft"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "leaderboard-ads"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-current-issue"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-global-nav"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
@@ -134,12 +134,13 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // For biologists.org
         HtmlNodeFilters.tagWithAttribute("div", "id", "authstring"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-stats"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "relmgr-related"),
         //For BMJ
         HtmlNodeFilters.tagWithAttribute("div", "id", "access"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "feeds-widget1"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "careers-widget"),
         // For JCB
-        HtmlNodeFilters.tagWithAttribute("div", "id", "leaderboard-ads"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "leaderboard-ads"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "current-issue"),
         // Optional institution-specific citation resolver (e.g. SAGE Publications)
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
@@ -147,6 +148,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/external-ref"),   
         //For SAGE (at least).  Name of the institution. E.g. </a> INDIANA UNIV </div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header-Uni"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "header-initialNav"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "impact-factor"),
         //Project HOPE (at least).  <div class="in-this-issue">
         HtmlNodeFilters.tagWithAttribute("div", "class", "in-this-issue"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-feed"),   
@@ -171,8 +174,6 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "rel-relevant-article"), 
         // For BMJ variable poll 
         HtmlNodeFilters.tagWithAttribute("div", "id", "polldaddy-bottom"),
-        // For adclicks leaderboard-ads leaderboard-ads-two
-        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads leaderboard-ads-two"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-article-page-promo-column"),
         HtmlNodeFilters.tagWithAttribute("form", "id", "bmj-advanced-search-channel-form"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
@@ -223,12 +224,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         }
     };
     
-    // HTML transform to remove uniqueness from microtagging attributes
-    // "itemscope" and "itemtype" in content divs (first appearance:
-    // American Journal of Epidemiology). Method tag.setAttribute() does not
-    // insert quotation marks when creating a new attribute, so we must do it
-    // manually. Quotation marks are handled correctly when modifying an
-    // existing attribute.
+    // HTML transform to remove attributes in content body, div, and h1 tags
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
@@ -240,6 +236,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
               try {
                 if ("body".equals(tagName) ||
                     "div".equals(tagName) ||
+                    "li".equals(tagName) ||
                     "h1".equals(tagName)) {
                   Attribute a = tag.getAttributeEx(tagName);
                   Vector<Attribute> v = new Vector<Attribute>();
@@ -265,14 +262,13 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         return nodeList;
       }
     };
- 
+    
     InputStream filtered =  new HtmlFilterInputStream(in,
         encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
-
   }
 
 }
