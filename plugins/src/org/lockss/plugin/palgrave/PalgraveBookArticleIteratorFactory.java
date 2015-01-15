@@ -1,6 +1,6 @@
-/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.6 2014-10-30 20:59:56 aishizaki Exp $
+/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.7 2015-01-15 22:07:30 aishizaki Exp $
  
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,6 +47,10 @@ import org.lockss.util.Logger;
  * epub (download epub):      http://www.palgraveconnect.com/pc/busman2013/browse/inside/epub/9780230389113.epub
  * citation export:           http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
  * Metadata found in citation export ris file. 
+ * 1/14/15 
+ *  citation:                 http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137304094
+ *  pdf (download pdf):       http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803
+ * epub (download epub):      http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803.epub
  */
 
 public class PalgraveBookArticleIteratorFactory
@@ -59,6 +63,7 @@ public class PalgraveBookArticleIteratorFactory
   // match PATTERN_TEMPLATE.
   // root: http://www.palgraveconnect.com
   protected static final String ROOT_TEMPLATE = "\"%spc/\", base_url";
+/* old patterns
   protected static final String PATTERN_TEMPLATE =    
    "\"%spc/([^/]+)/browse/inside(/download|/epub)/([0-9]+)\\.(pdf|epub)$\", base_url";
 
@@ -71,7 +76,26 @@ public class PalgraveBookArticleIteratorFactory
   protected static String EPUB_REPLACEMENT = "/pc/$1/browse/inside/epub/$2.epub";
   protected static String CITATION_RIS_REPLACEMENT = 
     "/pc/browse/citationExport?doi=10.1057/$2&WT.cg_n=eBooks&WT.cg_s=Citation%20Export";
-  
+  */
+  // new patterns 1/14/15
+  /*
+   * top-level (landing page) : http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137283351
+   * 1/14/15 
+   *  citation:                 http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137304094
+   *  pdf (download pdf):       http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803
+   *  epub (download epub):     http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803.epub
+   */
+  protected static final String PATTERN_TEMPLATE =    
+    "\"%spc/doifinder/download/10.1057/([0-9]+)(\\.epub)?$\", base_url";
+
+   protected Pattern PDF_PATTERN = 
+     Pattern.compile("/pc/doifinder/download/10.1057/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+   protected Pattern EPUB_PATTERN = 
+     Pattern.compile("/pc/doifinder/download/10.1057/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
+     
+   protected static String PDF_REPLACEMENT = "/pc/doifinder/download/10.1057/$1";
+   protected static String EPUB_REPLACEMENT = "/pc/doifinder/download/10.1057/$1.epub";
+   protected static String CITATION_RIS_REPLACEMENT = "/pc/browse/citationExport?doi=10.1057/$1";
    
   // Create PalgraveBookArticleIterator with the new object of 
   // SubTreeArticleIterator ROOT_TEMPLATE and PATTERN_TEMPLATE already set.

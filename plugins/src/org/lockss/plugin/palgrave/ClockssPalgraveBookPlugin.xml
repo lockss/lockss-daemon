@@ -9,22 +9,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -75,6 +75,9 @@
     epub: http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137284808.epub
     pdf: http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
     ris citation  http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137310149&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
+    new epub: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803.epub
+    new pdf: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803
+    new ris citation: http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137304094
     -->
     <list>
       <!-- removes gifs for fb, reddit, etc.. -->
@@ -91,6 +94,10 @@
       <string>1,"^%spc/browse/citationExport\?doi=10\.1057/%s[^/]+Export$", base_url, book_isbn</string>
       <!-- gets book/epub pdf (no need for chapter pdf) -->
       <string>1,"^%spc/[^/]+/browse/inside/(download|epub)/%s.(pdf|epub)$", base_url, book_isbn</string>
+      <!-- matches new pdf, epub 1/14/15 -->
+      <string>1,"^%spc/doifinder/download/10\.1057/%s(\.epub)?$", base_url, book_isbn</string>      
+      <!-- matches new ris 1/14/15 -->
+      <string>1,"^%spc/browse/citationExport\?doi=10\.1057/%s$", base_url, book_isbn</string>
       <!-- no need for the rest; CLOCKSS only -->
       <string>2, "^%spc/[^/]+/browse/", base_url</string>
     </list>
@@ -100,9 +107,14 @@
     <!-- examples
     http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
     http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137268839.epub
+    new examples - 1/14/15 :
+    new epub: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803.epub
+    new pdf: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803
     -->
     <list>
     <string>"^%spc/[^/]+/browse/inside/[^/]+/%s\.(pdf|epub)$", base_url, book_isbn</string>
+    <!-- matches new pdf/epub - 1/14/15 -->
+    <string>"^%spc/doifinder/download/10\.1057/%s(\.epub)?$", base_url, book_isbn</string>      
     </list>
   </entry>
   <entry>
