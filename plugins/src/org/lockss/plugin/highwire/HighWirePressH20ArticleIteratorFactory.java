@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.16 2014-10-23 03:13:37 etenbrink Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.17 2015-01-15 03:48:33 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ public class HighWirePressH20ArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
   
-  protected static Logger log =
+  private static final Logger log =
     Logger.getLogger(HighWirePressH20ArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE =
@@ -86,6 +86,7 @@ public class HighWirePressH20ArticleIteratorFactory
   protected static final String SUPPL_REPLACEMENT = "/$1/suppl/DC1";
   
   
+  @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
@@ -139,6 +140,7 @@ public class HighWirePressH20ArticleIteratorFactory
     return builder.getSubTreeArticleIterator();
   }
   
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);

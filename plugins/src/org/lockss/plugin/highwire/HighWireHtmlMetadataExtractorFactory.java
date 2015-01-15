@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.11 2014-02-07 19:02:46 pgust Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.12 2015-01-15 03:42:26 etenbrink Exp $
  */
 
 /*
@@ -47,8 +47,9 @@ import org.lockss.plugin.*;
  * http://asj.sagepub.com/content/53/2/99.abstract
  */
 public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("HighWireHtmlMetadataExtractorFactory");
+  private static final Logger log = Logger.getLogger(HighWireHtmlMetadataExtractorFactory.class);
 
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
@@ -74,7 +75,7 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
                  new MetadataField(MetadataField.FIELD_AUTHOR,
                                    MetadataField.splitAt(";")));
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_mjid", new MetadataField(
           MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 

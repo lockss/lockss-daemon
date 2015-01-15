@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressHttpResponseHandler.java,v 1.3 2013-11-12 23:20:01 etenbrink Exp $
+ * $Id: HighWirePressHttpResponseHandler.java,v 1.4 2015-01-15 03:45:06 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,13 +39,15 @@ import org.lockss.util.urlconn.*;
 
 public class HighWirePressHttpResponseHandler implements CacheResultHandler {
 
-  protected static Logger logger = Logger.getLogger(HighWirePressHttpResponseHandler.class);
+  private static final Logger logger = Logger.getLogger(HighWirePressHttpResponseHandler.class);
 
+  @Override
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Unexpected call to HighWirePressHttpResponseHandler.init()");
   }
 
+  @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode)
@@ -63,21 +65,20 @@ public class HighWirePressHttpResponseHandler implements CacheResultHandler {
         else if (url.contains("cgi/content/extract/")) {
           return new CacheException.RetryDeadLinkException("500 Internal Server Error (non-fatal)");
         }
-        else {
-          return new CacheException.RetrySameUrlException("500 Internal Server Error");
-        }
+        return new CacheException.RetrySameUrlException("500 Internal Server Error");
       default:
-        logger.debug2("default");
-        throw new UnsupportedOperationException();
+        logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
+        throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
     }
   }
 
+  @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      Exception ex)
       throws PluginException {
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
 
 }

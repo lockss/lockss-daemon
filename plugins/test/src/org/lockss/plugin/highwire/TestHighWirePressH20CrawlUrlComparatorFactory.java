@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWirePressH20CrawlUrlComparatorFactory.java,v 1.4 2010-01-11 22:41:55 thib_gc Exp $
+ * $Id: TestHighWirePressH20CrawlUrlComparatorFactory.java,v 1.5 2015-01-15 03:51:32 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -140,6 +140,32 @@ public class TestHighWirePressH20CrawlUrlComparatorFactory extends LockssTestCas
     factory.testUrl("http://www.lockss.org/favicon.ico",
                     HighWirePressH20UrlPriority.HIGHEST,
                     null, null, null, null);
+    
+    // Drupal additional tests
+    factory.testUrl("http://www.example.com/lockss-manifest/vol_3_manifest.html",
+        HighWirePressH20UrlPriority.HIGHEST, null, null, null, null);
+    factory.testUrl("http://www.example.com/content/3/4.toc",
+        HighWirePressH20UrlPriority.ISSUE, "3", "4", null, null);
+    factory.testUrl("http://www.example.com/content/3/4/5",
+        HighWirePressH20UrlPriority.PAGE, "3", "4", "5", null);
+    factory.testUrl("http://www.example.com/content/3/4/5.abstract",
+        HighWirePressH20UrlPriority.PAGE, "3", "4", "5", null);
+    factory.testUrl("http://www.example.com/content/3/4/5.article-info",
+        HighWirePressH20UrlPriority.PAGE, "3", "4", "5", null);
+    factory.testUrl("http://www.example.com/content/3/4/5.e-letters",
+        HighWirePressH20UrlPriority.PAGE, "3", "4", "5", null);
+    factory.testUrl("http://www.example.com/content/3/4/5.figures-only",
+        HighWirePressH20UrlPriority.PAGE, "3", "4", "5", null);
+    factory.testUrl("http://www.example.com/content/3/4/5.full.pdf",
+        HighWirePressH20UrlPriority.PAGE, "3", "4", "5", null);
+    // these are actually pages may need to revisit later XXX
+    factory.testUrl("http://www.example.com/content/jcode/3/4/5.full.pdf",
+        HighWirePressH20UrlPriority.FIGURE, "jcode", "3", "4", "5");
+    factory.testUrl("http://www.example.com/content/jcode/3/4/5/F6.medium.gif",
+        HighWirePressH20UrlPriority.FIGURE, "jcode", "3", "4", "5");
+    /*
+     * 
+     */
   }
   
   public void testHighWirePressH20CrawlUrlComparator() throws Exception {
@@ -161,6 +187,7 @@ public class TestHighWirePressH20CrawlUrlComparatorFactory extends LockssTestCas
     String[] urls = new String[] {
         "http://www.lockss.org/favicon.ico",
         "http://www.lockss.org/robots.txt",
+        "http://www.example.com/content/123/456/998",
         "http://www.example.com/content/123/456/998.abstract",
         "http://www.example.com/content/123/456/999/F1.expansion.html",
         "http://www.example.com/content/123/456/999/F1.large.jpg",

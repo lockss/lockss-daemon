@@ -1,10 +1,10 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.25 2014-10-22 16:11:26 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.26 2015-01-15 03:51:32 etenbrink Exp $
  */
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -272,11 +272,11 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String accessCheckFiltered=
       " <div>" +
           "<ol>" +
-          "<li class=\"abstract-view-link primary\"></li>" +
+          "<li></li>" +
           "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">Figures Only</a></li>" +
-          "<li class=\"notice full-text-view-link primary\"><a href=\"/content/47/1/1.full\"" +
+          "<li><a href=\"/content/47/1/1.full\"" +
           " rel=\"view-full-text\">Full Text</a></li>" +
-          "<li class=\"notice full-text-pdf-view-link primary\"><a href=\"/content/47/1/1." +
+          "<li><a href=\"/content/47/1/1." +
           "full.pdf+html\" rel=\"view-full-text.pdf\">Full Text (PDF)</a></li>" +
           "</ol>" +
           "</div>";
@@ -347,8 +347,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   
   private static final String viewingDateFiltered =
       "<ul class=\"button-list header-buttons\">" +
-      " <li id=\"na_home\" class=\"first\"><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
-      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\">" +
+      " <li><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
+      " <li><a href=\"/content/current/\" title=\"Current Volume\">" +
       "<span>Current Volume</span></a></li>" +
       "</ul>" +
       " " +

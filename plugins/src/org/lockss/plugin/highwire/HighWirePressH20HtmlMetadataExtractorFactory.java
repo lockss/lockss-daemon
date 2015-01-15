@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20HtmlMetadataExtractorFactory.java,v 1.6 2014-05-09 22:46:56 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlMetadataExtractorFactory.java,v 1.7 2015-01-15 03:51:05 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,8 +44,9 @@ import org.lockss.plugin.*;
 
 
 public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(HighWirePressH20HtmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(HighWirePressH20HtmlMetadataExtractorFactory.class);
   
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
       throws PluginException {
@@ -90,6 +91,8 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
         if (!val.hasContent()) {
           am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
         }
+      } else {
+        am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
       }
       emitter.emitMetadata(cu, am);
     }

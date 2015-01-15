@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.10 2014-10-23 03:05:11 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.11 2015-01-15 03:45:30 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -86,6 +86,7 @@ public class HighWirePressH20PermissionCheckerFactory
     }
   }
   
+  @Override
   public List<H20ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
     List<H20ProbePermissionChecker> list = new ArrayList<H20ProbePermissionChecker>(1);
     list.add(new H20ProbePermissionChecker(au));

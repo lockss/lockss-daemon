@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20CrawlUrlComparatorFactory.java,v 1.2 2010-01-08 01:49:33 thib_gc Exp $
+ * $Id: HighWirePressH20CrawlUrlComparatorFactory.java,v 1.3 2015-01-15 03:48:33 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -175,7 +175,7 @@ public class HighWirePressH20CrawlUrlComparatorFactory implements CrawlUrlCompar
 
         // Find the page component
         slash = str.indexOf('/');
-        // If the thrid slash is followed by "suppl/" or "embed/", this is still a page-level URL 
+        // If the third slash is followed by "suppl/" or "embed/", this is still a page-level URL 
         special = (slash >= 0) && (slash < str.length() - 1) && (str.substring(slash + 1).startsWith("suppl/") || str.substring(slash + 1).startsWith("embed/"));
         if (slash < 0 || slash == str.length() - 1 || special) {
           // No third slash, ends with it, or continues with "suppl/" or "embed/": URL of type PAGE
@@ -285,6 +285,7 @@ extract("99b.0.foo") ==> "99b.0"
       factory = new HighWirePressH20UrlFactory(baseUrl);
     }
     
+    @Override
     public int compare(CrawlUrl url1, CrawlUrl url2) {
       // Opportunities for caching
       HighWirePressH20Url hu1 = factory.makeUrl(url1.getUrl());
@@ -347,6 +348,7 @@ extract("99b.0.foo") ==> "99b.0"
     
   }
   
+  @Override
   public Comparator<CrawlUrl> createCrawlUrlComparator(ArchivalUnit au) throws LinkageError {
     return createCrawlUrlComparator(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
   }
