@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.11 2015-01-15 03:45:30 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.12 2015-01-16 23:09:14 etenbrink Exp $
  */
 
 /*
@@ -49,8 +49,6 @@ public class HighWirePressH20PermissionCheckerFactory
   public static class H20ProbePermissionChecker extends ProbePermissionChecker {
     
     private static final Logger logger = Logger.getLogger(H20ProbePermissionChecker.class);
-    protected ArchivalUnit au;
-    protected String probeUrl;
     
     @Override
     public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
@@ -80,16 +78,15 @@ public class HighWirePressH20PermissionCheckerFactory
       return ret;
     }
     
-    public H20ProbePermissionChecker(ArchivalUnit au) {
-      super(au);
-      this.au = au;
+    public H20ProbePermissionChecker() {
+      super();
     }
   }
   
   @Override
   public List<H20ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
     List<H20ProbePermissionChecker> list = new ArrayList<H20ProbePermissionChecker>(1);
-    list.add(new H20ProbePermissionChecker(au));
+    list.add(new H20ProbePermissionChecker());
     return list;
   }
 }
