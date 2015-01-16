@@ -6,7 +6,7 @@
   >
 
   {
-    
+
     title <
       name = American Literary Scholarship ;
       issn = 0065-9142 ;
@@ -36,18 +36,18 @@
       au < released ; 2009 ; American Literary Scholarship 2009 ; 2009 >
       au < released ; 2010 ; American Literary Scholarship 2010 ; 2010 >
       au < released ; 2011 ; American Literary Scholarship 2011 ; 2011 >
-        
+
     }
 
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://als.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
       comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
-      
+
       au < HighWirePressH20Plugin ; released ; 2000 ; American Literary Scholarship 2000 ; 1998 >
       au < HighWirePressH20Plugin ; released ; 2001 ; American Literary Scholarship 2001 ; 1999 >
       au < HighWirePressH20Plugin ; released ; 2002 ; American Literary Scholarship 2002 ; 2000 >
@@ -66,20 +66,20 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; American Literary Scholarship 2015 ; 2013 >
 
     }
-    
+
   }
 
   {
-  
+
     title <
       name = American Literature ;
       issn = 0002-9831 ;
       eissn = 1527-2117 ;
       issnl = 0002-9831
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -92,15 +92,15 @@
       au < released ; 2002 ; American Literature Volume 74 ; 74 >
       au < released ; 2003 ; American Literature Volume 75 ; 75 >
       au < released ; 2004 ; American Literature Volume 76 ; 76 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanliterature.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; American Literature Volume 72 ; 72 >
       au < HighWirePressH20Plugin ; released ; 2001 ; American Literature Volume 73 ; 73 >
       au < HighWirePressH20Plugin ; released ; 2002 ; American Literature Volume 74 ; 74 >
@@ -118,20 +118,20 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; American Literature Volume 86 ; 86 >
 
     }
-    
+
   }
-  
+
   {
-  
+
     title <
       name = American Speech ;
       issn = 0003-1283 ;
       eissn = 1527-2133 ;
       issnl = 0003-1283
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -144,15 +144,15 @@
       au < released ; 2002 ; American Speech Volume 77 ; 77 >
       au < released ; 2003 ; American Speech Volume 78 ; 78 >
       au < released ; 2004 ; American Speech Volume 79 ; 79 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanspeech.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; American Speech Volume 75 ; 75 >
       au < HighWirePressH20Plugin ; released ; 2001 ; American Speech Volume 76 ; 76 >
       au < HighWirePressH20Plugin ; released ; 2002 ; American Speech Volume 77 ; 77 >
@@ -170,20 +170,20 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; American Speech Volume 89 ; 89 >
 
     }
-    
+
   }
-  
+
   {
-  
+
     title <
       name = boundary 2 ;
       issn = 0190-3659 ;
       eissn = 1527-2141 ;
       issnl = 0190-3659
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = boundary
@@ -196,15 +196,15 @@
       au < released ; 2002 ; boundary 2 Volume 29 ; 29 >
       au < released ; 2003 ; boundary 2 Volume 30 ; 30 >
       au < released ; 2004 ; boundary 2 Volume 31 ; 31 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://boundary2.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; boundary 2 Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; released ; 2001 ; boundary 2 Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; released ; 2002 ; boundary 2 Volume 29 ; 29 >
@@ -212,7 +212,7 @@
       au < HighWirePressH20Plugin ; released ; 2004 ; boundary 2 Volume 31 ; 31 >
       au < HighWireStrVolPlugin ; down ; 2005 ; boundary 2 Volume 32 ; 32 >
       au < HighWireStrVolPlugin ; down ; 2006 ; boundary 2 Volume 33 ; 33 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; boundary 2 Volume 34 ; 34 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; boundary 2 Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2008 ; boundary 2 Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; released ; 2009 ; boundary 2 Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; released ; 2010 ; boundary 2 Volume 37 ; 37 >
@@ -222,20 +222,20 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; boundary 2 Volume 41 ; 41 >
 
     }
-    
+
   }
 
   {
-  
+
     title <
       name = Camera Obscura: Feminism, Culture, and Media Studies ;
       issn = 0270-5346 ;
       eissn = 1529-1510 ;
       issnl = 0270-5346
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = camera_obscura
@@ -247,15 +247,15 @@
       au < released ; 2002 ; Camera Obscura Volume 17 ; 17 >
       au < released ; 2003 ; Camera Obscura Volume 18 ; 18 >
       au < released ; 2004 ; Camera Obscura Volume 19 ; 19 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cameraobscura.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; doNotProcess ; 1976-1977 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1-2 ; 1-2 >
       au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 2 ; 2 >
@@ -280,7 +280,7 @@
       au < HighWirePressH20Plugin ; exists ; 2004 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
@@ -290,19 +290,19 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 29 ; 29 >
 
     }
-    
+
   }
 
 
   {
-  
+
     title <
       name = The Carlyle Letters Online ;
       issn = 1532-0928 ;
       eissn = 1940-1795 ;
       issnl = 1532-0928
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -346,9 +346,9 @@
       au < HighWirePressPlugin ; released ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
       au < HighWirePressPlugin ; ready ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
       au < HighWirePressPlugin ; released ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
- 
+
    }
-  
+
   }
 
 
@@ -359,7 +359,7 @@
       eissn = 1538-4578 ;
       issnl = 0961-754X
     >
-    
+
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -367,7 +367,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = common_knowledge
       attr[journal_id] = ckn
-  
+
       au < released ; 2002 ; Common Knowledge Volume 8 ; 8 >
       au < released ; 2003 ; Common Knowledge Volume 9 ; 9 >
       au < released ; 2004 ; Common Knowledge Volume 10 ; 10 >
@@ -383,7 +383,7 @@
       au < manifest ; 2014 ; Common Knowledge Volume 20 ; 20 >
 
     }
-  
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -405,18 +405,18 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Common Knowledge Volume 20 ; 20 >
 
     }
-  
+
   }
 
   {
-  
+
     title <
       name = Comparative Literature ;
       issn = 0010-4124 ;
       eissn = 1945-8517 ;
       issnl = 0010-4124
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -440,9 +440,9 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Comparative Literature Volume 66 ; 66 >
 
     }
-  
+
   }
-  
+
   {
 
     title <
@@ -453,7 +453,7 @@
     >
 
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
@@ -476,13 +476,13 @@
       au < released ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 >
 
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cssaame.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Comparative Studies of South Asia, Africa and the Middle East Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Comparative Studies of South Asia, Africa and the Middle East Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Comparative Studies of South Asia, Africa and the Middle East Volume 3 ; 3 >
@@ -519,7 +519,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 ; 34 >
 
     }
-    
+
   }
 
   {
@@ -529,9 +529,9 @@
       eissn = 1751-7435 ;
       issnl = 1743-2197
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -543,7 +543,7 @@
       au < manifest ; 2014 ; Cultural Politics Volume 10 ; 10 >
 
     }
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -562,7 +562,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Cultural Politics Volume 10 ; 10 >
 
     }
-    
+
    }
 
   {
@@ -572,9 +572,9 @@
       eissn = 1527-1986 ;
       issnl = 1040-7391
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -587,22 +587,22 @@
       au < released ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
       au < released ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
       au < released ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://differences.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; released ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; released ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
-      au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
+      au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; released ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
@@ -613,23 +613,23 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 >
 
     }
-    
+
   }
- 
+
   {
-  
-    title < 
+
+    title <
       name = Duke Mathematical Journal ;
       issn = 0012-7094 ;
       eissn = 1547-7398
     >
-    
+
     {
-    
+
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/dmj/
       implicit < status ; year ; name ; param[volume_name] >
-      
+
       au < doNotProcess ; 1935 ; Duke Mathematical Journal Volume 1 ; 1 >
       au < doNotProcess ; 1936 ; Duke Mathematical Journal Volume 2 ; 2 >
       au < doNotProcess ; 1937 ; Duke Mathematical Journal Volume 3 ; 3 >
@@ -796,13 +796,13 @@
 
     }
   }
-      
+
   {
 
     title <
       name = East Asian Science, Technology and Society: An International Journal ;
       issn = 1875-2160 ;
-      eissn = 1875-2152 
+      eissn = 1875-2152
     >
 
     {
@@ -823,13 +823,13 @@
       au < manifest ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 ; 8 >
 
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://easts.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
@@ -840,7 +840,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 ; 8 >
 
     }
-    
+
   }
 
   {
@@ -883,11 +883,11 @@
     }
 
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ecl.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
@@ -905,7 +905,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Eighteenth-Century Life Volume 38 ; 38 >
 
     }
-    
+
   }
 
   {
@@ -915,9 +915,9 @@
       eissn = 1527-5477 ;
       issnl = 0014-1801
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -930,15 +930,15 @@
       au < released ; 2002 ; Ethnohistory Volume 49 ; 49 >
       au < released ; 2003 ; Ethnohistory Volume 50 ; 50 >
       au < released ; 2004 ; Ethnohistory Volume 51 ; 51 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ethnohistory.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
      au < HighWirePressH20Plugin ; released ; 2000 ; Ethnohistory Volume 47 ; 47 >
      au < HighWirePressH20Plugin ; released ; 2001 ; Ethnohistory Volume 48 ; 48 >
      au < HighWirePressH20Plugin ; released ; 2002 ; Ethnohistory Volume 49 ; 49 >
@@ -954,9 +954,9 @@
      au < HighWirePressH20Plugin ; released ; 2012 ; Ethnohistory Volume 59 ; 59 >
      au < HighWirePressH20Plugin ; released ; 2013 ; Ethnohistory Volume 60 ; 60 >
      au < HighWirePressH20Plugin ; manifest ; 2014 ; Ethnohistory Volume 61 ; 61 >
-    
+
     }
-    
+
   }
 
   {
@@ -966,9 +966,9 @@
       eissn = 1527-5493 ;
       issnl = 0016-1071
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -981,15 +981,15 @@
       au < released ; 2002 ; French Historical Studies Volume 25 ; 25 >
       au < released ; 2003 ; French Historical Studies Volume 26 ; 26 >
       au < released ; 2004 ; French Historical Studies Volume 27 ; 27 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://fhs.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
      au < HighWirePressH20Plugin ; released ; 2000 ; French Historical Studies Volume 23 ; 23 >
      au < HighWirePressH20Plugin ; released ; 2001 ; French Historical Studies Volume 24 ; 24 >
      au < HighWirePressH20Plugin ; released ; 2002 ; French Historical Studies Volume 25 ; 25 >
@@ -997,7 +997,7 @@
      au < HighWirePressH20Plugin ; released ; 2004 ; French Historical Studies Volume 27 ; 27 >
      au < HighWireStrVolPlugin ; down ; 2005 ; French Historical Studies Volume 28 ; 28 >
      au < HighWireStrVolPlugin ; down ; 2006 ; French Historical Studies Volume 29 ; 29 >
-     au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >      
+     au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >
      au < HighWirePressH20Plugin ; released ; 2008 ; French Historical Studies Volume 31 ; 31 >
      au < HighWirePressH20Plugin ; released ; 2009 ; French Historical Studies Volume 32 ; 32 >
      au < HighWirePressH20Plugin ; released ; 2010 ; French Historical Studies Volume 33 ; 33 >
@@ -1005,9 +1005,9 @@
      au < HighWirePressH20Plugin ; released ; 2012 ; French Historical Studies Volume 35 ; 35 >
      au < HighWirePressH20Plugin ; released ; 2013 ; French Historical Studies Volume 36 ; 36 >
      au < HighWirePressH20Plugin ; manifest ; 2014 ; French Historical Studies Volume 37 ; 37 >
-    
+
     }
-    
+
   }
 
   {
@@ -1019,7 +1019,7 @@
     >
 
     {
-    
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://genre.dukejournals.org/
@@ -1039,7 +1039,7 @@
       au < released ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       au < released ; 2013 ; Genre: Forms of Discourse and Culture Volume 46 ; 46 >
       au < manifest ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 >
-      
+
     }
   }
 
@@ -1053,7 +1053,7 @@
     >
 
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -1076,15 +1076,15 @@
       au < released ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
       au < released ; 2013 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 ; 19 >
       au < manifest ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 >
-      
+
     }
 
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://glq.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
@@ -1097,7 +1097,7 @@
       au < HighWirePressH20Plugin ; released ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; released ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
@@ -1107,7 +1107,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 >
 
     }
-    
+
   }
 
   {
@@ -1117,9 +1117,9 @@
       eissn = 1527-1900 ;
       issnl = 0018-2168
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -1132,15 +1132,15 @@
       au < released ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
       au < released ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
       au < released ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hahr.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
@@ -1148,7 +1148,7 @@
       au < HighWirePressH20Plugin ; released ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
-     au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
+     au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >
      au < HighWirePressH20Plugin ; released ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 >
      au < HighWirePressH20Plugin ; released ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
      au < HighWirePressH20Plugin ; released ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
@@ -1156,9 +1156,9 @@
      au < HighWirePressH20Plugin ; released ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
      au < HighWirePressH20Plugin ; released ; 2013 ; Hispanic American Historical Review Volume 93 ; 93 >
      au < HighWirePressH20Plugin ; manifest ; 2014 ; Hispanic American Historical Review Volume 94 ; 94 >
-    
+
     }
-    
+
   }
 
   {
@@ -1168,9 +1168,9 @@
       eissn = 1527-1919 ;
       issnl = 0018-2702
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -1183,15 +1183,15 @@
       au < released ; 2002 ; History of Political Economy Volume 34 ; 34 >
       au < released ; 2003 ; History of Political Economy Volume 35 ; 35 >
       au < released ; 2004 ; History of Political Economy Volume 36 ; 36 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hope.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
      au < HighWirePressH20Plugin ; released ; 1969 ; History of Political Economy Volume 1 ; 1 >
      au < HighWirePressH20Plugin ; released ; 1970 ; History of Political Economy Volume 2 ; 2 >
      au < HighWirePressH20Plugin ; released ; 1971 ; History of Political Economy Volume 3 ; 3 >
@@ -1230,7 +1230,7 @@
      au < HighWirePressH20Plugin ; released ; 2004 ; History of Political Economy Volume 36 ; 36 >
      au < HighWireStrVolPlugin ; down ; 2005 ; History of Political Economy Volume 37 ; 37 >
      au < HighWireStrVolPlugin ; down ; 2006 ; History of Political Economy Volume 38 ; 38 >
-     au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >      
+     au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >
      au < HighWirePressH20Plugin ; released ; 2008 ; History of Political Economy Volume 40 ; 40 >
      au < HighWirePressH20Plugin ; released ; 2009 ; History of Political Economy Volume 41 ; 41 >
      au < HighWirePressH20Plugin ; released ; 2010 ; History of Political Economy Volume 42 ; 42 >
@@ -1240,7 +1240,7 @@
      au < HighWirePressH20Plugin ; manifest ; 2014 ; History of Political Economy Volume 46 ; 46 >
 
     }
-    
+
   }
 
   {
@@ -1269,7 +1269,7 @@
       eissn = 1527-1927 ;
       issnl = 0361-6878
     >
-    
+
    {
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
@@ -1283,15 +1283,15 @@
       au < released ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
       au < released ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
       au < released ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
-      
+
      }
-    
-    {  
-    
+
+    {
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jhppl.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1976 ; Journal of Health Politics, Policy and Law Volume 1; 1 >
       au < HighWirePressH20Plugin ; released ; 1977 ; Journal of Health Politics, Policy and Law Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1978 ; Journal of Health Politics, Policy and Law Volume 3 ; 3 >
@@ -1323,7 +1323,7 @@
       au < HighWirePressH20Plugin ; released ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
@@ -1333,17 +1333,17 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Health Politics, Policy and Law Volume 39 ; 39 >
 
     }
-    
+
   }
 
   {
-  
-    title < 
+
+    title <
       name = The Journal of Mathematics of Kyoto University ;
-      issn = 0023-608X 
+      issn = 0023-608X
     >
-    
-      comment[continued_by] = 2156-2261 
+
+      comment[continued_by] = 2156-2261
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
 
       plugin = needs.plugin
@@ -1401,9 +1401,9 @@
       au < exists ; 2007 ; The Journal of Mathematics of Kyoto University Volume 47 ; 47 >
       au < exists ; 2008 ; The Journal of Mathematics of Kyoto University Volume 48 ; 48 >
       au < exists ; 2009 ; The Journal of Mathematics of Kyoto University Volume 49 ; 49 >
-      
+
     }
-    
+
 
   {
     title <
@@ -1412,9 +1412,9 @@
       eissn = 1527-8263 ;
       issnl = 1082-9636
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -1427,15 +1427,15 @@
       au < released ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
       au < released ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
       au < released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmems.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
@@ -1443,7 +1443,7 @@
       au < HighWirePressH20Plugin ; released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
@@ -1454,7 +1454,7 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Medieval and Early Modern Studies Volume 45 ; 45 >
 
     }
-    
+
   }
 
   {
@@ -1464,13 +1464,13 @@
       eissn = 1941-7497 ;
       issnl = 0022-2909
     >
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmt.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1999 ; Journal of Music Theory Volume 43 ; 43 >
       au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Music Theory Volume 44 ; 44 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Music Theory Volume 45 ; 45 >
@@ -1490,17 +1490,17 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Music Theory Volume 59 ; 59 >
 
     }
-    
+
     }
-    
+
     {
-  
+
     title <
       name = Kyoto Journal of Mathematics ;
       issn =  2156-2261 ;
       eissn = 2154-3321
     >
-      
+
       comment[continues] = 0023-608X
       plugin = needs.plugin
       param[base_url] =  http://projecteuclid.org/kjm/
@@ -1517,14 +1517,14 @@
       au < expected ; 2014 ; Kyoto Journal of Mathematics Volume 54 ; 54 >
 
    }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Labor: Studies in Working-Class History of the Americas ;
       issn = 1547-6715 ;
       eissn = 1558-1454
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://labor.dukejournals.org/
@@ -1550,21 +1550,21 @@
       name = Limnology and Oceanography: Fluids and Environments ;
       eissn = 2157-3689
     >
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://lofe.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      
+
       comment[moved] = moved to Wiley.
-      
+
       au < HighWirePressH20Plugin ; down ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; down ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
 
     }
-    
+
   }
 
   {
@@ -1603,13 +1603,13 @@
       au < expected ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 >
 
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mq.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 >
@@ -1617,7 +1617,7 @@
       au < HighWirePressH20Plugin ; released ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
@@ -1628,17 +1628,17 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 >
 
     }
-    
+
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Memoirs of the College of Science, University of Kyoto. Series A: Mathematics ;
-      issn = 0368-8887 
+      issn = 0368-8887
     >
-  
-      comment[continued_by] = 2156-2261 
+
+      comment[continued_by] = 2156-2261
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
 
       plugin = needs.plugin
@@ -1655,17 +1655,17 @@
       au < doNotProcess ; 1958 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 31 ; 31 >
       au < doNotProcess ; 1959-1960 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 32 ; 32 >
       au < doNotProcess ; 1960-1961 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 33 ; 33 >
-    
+
     }
 
   {
-  
+
     title <
       name = The Minnesota Review ;
       issn = 0026-5667 ;
       eissn = 2157-4189
     >
-    
+
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -1715,13 +1715,13 @@
       au < released ; 1997 ; The Minnesota Review Volume 48 and 49 ; 48 >
 
     }
-    
+
     {
-    
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://minnesotareview.dukejournals.org/
-      implicit < status ; year ; name ; param[volume_name] >  
-      
+      implicit < status ; year ; name ; param[volume_name] >
+
       au < released ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
       au < released ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
       au < released ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
@@ -1735,7 +1735,7 @@
       au < expected ; 2015 ; The Minnesota Review Volume 2015 ; 2015 >
 
     }
-    
+
   }
 
   {
@@ -1745,9 +1745,9 @@
       eissn = 1527-1943 ;
       issnl = 0026-7929
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -1760,15 +1760,15 @@
       au < released ; 2002 ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
       au < released ; 2003 ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
       au < released ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mlq.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1940 ; MLQ: Modern Language Quarterly Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1941 ; MLQ: Modern Language Quarterly Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1942 ; MLQ: Modern Language Quarterly Volume 3 ; 3 >
@@ -1836,7 +1836,7 @@
       au < HighWirePressH20Plugin ; released ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
       au < HighWireStrVolPlugin ; down ; 2005 ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
       au < HighWireStrVolPlugin ; down ; 2006 ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 >
       au < HighWirePressH20Plugin ; released ; 2008 ; MLQ: Modern Language Quarterly Volume 69 ; 69 >
       au < HighWirePressH20Plugin ; released ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; released ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
@@ -1849,12 +1849,12 @@
     }
     }
     {
-  
-    title < 
+
+    title <
       name = Nagoya Mathematical Journal ;
       issn = 0027-7630 ;
       eissn = 2152-6842
-  
+
      >
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/nmj/
@@ -1868,8 +1868,8 @@
       au < doNotProcess ; 1955 ; Nagoya Mathematical Journal Volume 6 ; 6 >
       au < doNotProcess ; 1956 ; Nagoya Mathematical Journal Volume 7 ; 7 >
       au < doNotProcess ; 1957 ; Nagoya Mathematical Journal Volume 8 ; 8 >
-      au < doNotProcess ; 1958 ; Nagoya Mathematical Journal Volume 9 ; 9 >     
-      au < doNotProcess ; 1959 ; Nagoya Mathematical Journal Volume 10 ; 10 >      
+      au < doNotProcess ; 1958 ; Nagoya Mathematical Journal Volume 9 ; 9 >
+      au < doNotProcess ; 1959 ; Nagoya Mathematical Journal Volume 10 ; 10 >
       au < doNotProcess ; 1960 ; Nagoya Mathematical Journal Volume 11 ; 11 >
       au < doNotProcess ; 1961 ; Nagoya Mathematical Journal Volume 12 ; 12 >
       au < doNotProcess ; 1962 ; Nagoya Mathematical Journal Volume 13 ; 13 >
@@ -1878,8 +1878,8 @@
       au < doNotProcess ; 1965 ; Nagoya Mathematical Journal Volume 16 ; 16 >
       au < doNotProcess ; 1966 ; Nagoya Mathematical Journal Volume 17 ; 17 >
       au < doNotProcess ; 1967 ; Nagoya Mathematical Journal Volume 18 ; 18 >
-      au < doNotProcess ; 1968 ; Nagoya Mathematical Journal Volume 19 ; 19 >      
-      au < doNotProcess ; 1969 ; Nagoya Mathematical Journal Volume 20 ; 20 >      
+      au < doNotProcess ; 1968 ; Nagoya Mathematical Journal Volume 19 ; 19 >
+      au < doNotProcess ; 1969 ; Nagoya Mathematical Journal Volume 20 ; 20 >
       au < doNotProcess ; 1970 ; Nagoya Mathematical Journal Volume 21 ; 21 >
       au < doNotProcess ; 1971 ; Nagoya Mathematical Journal Volume 22 ; 22 >
       au < doNotProcess ; 1972 ; Nagoya Mathematical Journal Volume 23 ; 23 >
@@ -1888,7 +1888,7 @@
       au < doNotProcess ; 1975 ; Nagoya Mathematical Journal Volume 26 ; 26 >
       au < doNotProcess ; 1976 ; Nagoya Mathematical Journal Volume 27 ; 27 >
       au < doNotProcess ; 1977 ; Nagoya Mathematical Journal Volume 28 ; 28 >
-      au < doNotProcess ; 1978 ; Nagoya Mathematical Journal Volume 29 ; 29 >      
+      au < doNotProcess ; 1978 ; Nagoya Mathematical Journal Volume 29 ; 29 >
       au < doNotProcess ; 1979 ; Nagoya Mathematical Journal Volume 30 ; 30 >
       au < doNotProcess ; 1980 ; Nagoya Mathematical Journal Volume 31 ; 31 >
       au < doNotProcess ; 1981 ; Nagoya Mathematical Journal Volume 32 ; 32 >
@@ -1898,8 +1898,8 @@
       au < doNotProcess ; 1985 ; Nagoya Mathematical Journal Volume 36 ; 36 >
       au < doNotProcess ; 1986 ; Nagoya Mathematical Journal Volume 37 ; 37 >
       au < doNotProcess ; 1987 ; Nagoya Mathematical Journal Volume 38 ; 38 >
-      au < doNotProcess ; 1988 ; Nagoya Mathematical Journal Volume 39 ; 39 >      
-      au < doNotProcess ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >      
+      au < doNotProcess ; 1988 ; Nagoya Mathematical Journal Volume 39 ; 39 >
+      au < doNotProcess ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >
       au < doNotProcess ; 1990 ; Nagoya Mathematical Journal Volume 41 ; 41 >
       au < doNotProcess ; 1991 ; Nagoya Mathematical Journal Volume 42 ; 42 >
       au < doNotProcess ; 1992 ; Nagoya Mathematical Journal Volume 43 ; 43 >
@@ -1927,7 +1927,7 @@
       au < expected ; 2014 ; Nagoya Mathematical Journal Volume 65 ; 65 >
 
     }
-        
+
 
   {
     title <
@@ -1949,17 +1949,17 @@
     au < released ; 2003 ; Nepantla: Views from South Volume 4 ; 4 >
 
   }
-  
+
   {
     title <
       name = New German Critique ;
       issn =  0094-033X ;
       eissn = 1558-1462
     >
-      
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ngc.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; released ; 2006 ; New German Critique Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2007 ; New German Critique Volume 34 ; 34 >
@@ -1981,15 +1981,15 @@
       eissn = 2152-7792 ;
       issnl = 1075-7163
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = nka
       attr[journal_id] = nka
-      
+
       au < released ; 1994 ; Nka: Journal of Contemporary African Art Issue 1 ; 1 >
       au < released ; 1995 ; Nka: Journal of Contemporary African Art Number 2 ; 2 >
       au < released ; 1995 ; Nka: Journal of Contemporary African Art Number 3 ; 3 >
@@ -2023,13 +2023,13 @@
       au < expected ; 2015 ; Nka: Journal of Contemporary African Art Number 36 ; 36 >
 
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://nka.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1994 ; Nka: Journal of Contemporary African Art Volume 1994 ; 1994 >
       au < HighWirePressH20Plugin ; released ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 >
       au < HighWirePressH20Plugin ; released ; 1996 ; Nka: Journal of Contemporary African Art Volume 1996 ; 1996 >
@@ -2056,12 +2056,12 @@
     }
     }
     {
-  
-    title < 
+
+    title <
       name = Notre Dame Journal of Formal Logic ;
       issn = 0029-4527 ;
       eissn = 1939-0726
-  
+
 >
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/ndjfl/
@@ -2075,8 +2075,8 @@
       au < doNotProcess ; 1965 ; Notre Dame Journal of Formal Logic Volume 6 ; 6 >
       au < doNotProcess ; 1966 ; Notre Dame Journal of Formal Logic Volume 7 ; 7 >
       au < doNotProcess ; 1967 ; Notre Dame Journal of Formal Logic Volume 8 ; 8 >
-      au < doNotProcess ; 1968 ; Notre Dame Journal of Formal Logic Volume 9 ; 9 >      
-      au < doNotProcess ; 1969 ; Notre Dame Journal of Formal Logic Volume 10 ; 10 >      
+      au < doNotProcess ; 1968 ; Notre Dame Journal of Formal Logic Volume 9 ; 9 >
+      au < doNotProcess ; 1969 ; Notre Dame Journal of Formal Logic Volume 10 ; 10 >
       au < doNotProcess ; 1970 ; Notre Dame Journal of Formal Logic Volume 11 ; 11 >
       au < doNotProcess ; 1971 ; Notre Dame Journal of Formal Logic Volume 12 ; 12 >
       au < doNotProcess ; 1972 ; Notre Dame Journal of Formal Logic Volume 13 ; 13 >
@@ -2085,7 +2085,7 @@
       au < doNotProcess ; 1975 ; Notre Dame Journal of Formal Logic Volume 16 ; 16 >
       au < doNotProcess ; 1976 ; Notre Dame Journal of Formal Logic Volume 17 ; 17 >
       au < doNotProcess ; 1977 ; Notre Dame Journal of Formal Logic Volume 18 ; 18 >
-      au < doNotProcess ; 1978 ; Notre Dame Journal of Formal Logic Volume 19 ; 19 >      
+      au < doNotProcess ; 1978 ; Notre Dame Journal of Formal Logic Volume 19 ; 19 >
       au < doNotProcess ; 1979 ; Notre Dame Journal of Formal Logic Volume 20 ; 20 >
       au < doNotProcess ; 1980 ; Notre Dame Journal of Formal Logic Volume 21 ; 21 >
       au < doNotProcess ; 1981 ; Notre Dame Journal of Formal Logic Volume 22 ; 22 >
@@ -2095,8 +2095,8 @@
       au < doNotProcess ; 1985 ; Notre Dame Journal of Formal Logic Volume 26 ; 26 >
       au < doNotProcess ; 1986 ; Notre Dame Journal of Formal Logic Volume 27 ; 27 >
       au < doNotProcess ; 1987 ; Notre Dame Journal of Formal Logic Volume 28 ; 28 >
-      au < doNotProcess ; 1988 ; Notre Dame Journal of Formal Logic Volume 29 ; 29 >      
-      au < doNotProcess ; 1989 ; Notre Dame Journal of Formal Logic Volume 30 ; 30 >      
+      au < doNotProcess ; 1988 ; Notre Dame Journal of Formal Logic Volume 29 ; 29 >
+      au < doNotProcess ; 1989 ; Notre Dame Journal of Formal Logic Volume 30 ; 30 >
       au < doNotProcess ; 1990 ; Notre Dame Journal of Formal Logic Volume 31 ; 31 >
       au < doNotProcess ; 1991 ; Notre Dame Journal of Formal Logic Volume 32 ; 32 >
       au < doNotProcess ; 1992 ; Notre Dame Journal of Formal Logic Volume 33 ; 33 >
@@ -2124,17 +2124,17 @@
       au < expected ; 2014 ; Notre Dame Journal of Formal Logic Volume 55 ; 55 >
 
     }
-  
+
   {
     title <
       name = Novel: A Forum on Fiction ;
       issn = 0029-5132 ;
-      eissn = 1945-8509 
+      eissn = 1945-8509
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://novel.dukejournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 1999-2000 ; Novel: A Forum on Fiction Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2000-2001 ; Novel: A Forum on Fiction Volume 34 ; 34 >
@@ -2162,9 +2162,9 @@
       eissn = 1533-6255 ;
       issnl = 1531-4200
     >
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
@@ -2190,11 +2190,11 @@
     }
 
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pedagogy.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; exists ; 2001 ; Pedagogy Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; exists ; 2002 ; Pedagogy Volume 2 ; 2  >
       au < HighWirePressH20Plugin ; exists ; 2003 ; Pedagogy Volume 3 ; 3  >
@@ -2212,22 +2212,22 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Pedagogy Volume 15 ; 15 >
 
     }
-    
+
   }
 
   {
     title <
       name = Philosophical Review ;
       issn = 0031-8108  ;
-      eissn = 1558-1470 
+      eissn = 1558-1470
     >
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://philreview.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Philosophical Review Volume 109 ; 109 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Philosophical Review Volume 110 ; 110 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Philosophical Review Volume 111 ; 111 >
@@ -2246,7 +2246,7 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Philosophical Review Volume 124 ; 124 >
 
     }
-    
+
   }
 
   {
@@ -2256,9 +2256,9 @@
       eissn = 1527-5507 ;
       issnl = 0333-5372
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -2271,15 +2271,15 @@
       au < released ; 2002 ; Poetics Today Volume 23 ; 23 >
       au < released ; 2003 ; Poetics Today Volume 24 ; 24 >
       au < released ; 2004 ; Poetics Today Volume 25 ; 25 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://poeticstoday.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Poetics Today Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Poetics Today Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Poetics Today Volume 23 ; 23 >
@@ -2298,7 +2298,7 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Poetics Today Volume 36 ; 36 >
 
     }
-    
+
   }
 
   {
@@ -2337,14 +2337,14 @@
       au < expected ; 2015 ; positions: asia critique Volume 23 ; 23 >
 
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://positions.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       comment[title] = title changed since 2012 in Duke only
-      
+
       au < HighWirePressH20Plugin ; released ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 >
@@ -2370,7 +2370,7 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; positions: asia critique Volume 23 ; 23 >
 
     }
-    
+
   }
 
   {
@@ -2380,14 +2380,14 @@
       eissn = 0002-8207
 
     >
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pads.dukejournals.org/
       comment[0] = no content in 2012
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
@@ -2406,9 +2406,9 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Publication of the American Dialect Society Volume 99 ; 99 >
 
     }
-  
+
   }
- 
+
   {
     title <
       name = Public Culture ;
@@ -2416,9 +2416,9 @@
       eissn = 1527-8018 ;
       issnl = 0899-2363
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -2431,15 +2431,15 @@
       au < released ; 2002 ; Public Culture Volume 14 ; 14 >
       au < released ; 2003 ; Public Culture Volume 15 ; 15 >
       au < released ; 2004 ; Public Culture Volume 16 ; 16 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://publicculture.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1988-1989 ; Public Culture Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1989-1990 ; Public Culture Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1990-1991 ; Public Culture Volume 3 ; 3 >
@@ -2469,9 +2469,9 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Public Culture Volume 27 ; 27 >
 
     }
-  
+
   }
- 
+
   {
     title <
       name = Radical History Review ;
@@ -2479,9 +2479,9 @@
       eissn = 1534-1453 ;
       issnl = 0163-6545
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -2500,15 +2500,15 @@
       au < released ; 2004 ; Radical History Review Issue 88 ; 88 >
       au < released ; 2004 ; Radical History Review Issue 89 ; 89 >
       au < released ; 2004 ; Radical History Review Issue 90 ; 90 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://rhr.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1975 ; Radical History Review Volume 1975 ; 1975 >
       au < HighWirePressH20Plugin ; released ; 1976 ; Radical History Review Volume 1976 ; 1976 >
       au < HighWirePressH20Plugin ; released ; 1977 ; Radical History Review Volume 1977 ; 1977 >
@@ -2552,7 +2552,7 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Radical History Review Volume 2015 ; 2015 >
 
     }
-  
+
   }
 
   {
@@ -2562,14 +2562,14 @@
       eissn = 1534-6714 ;
       issnl = 1534-6714
     >
-    
+
     {
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = small_axe
       attr[journal_id] = smx
-      
+
       au < released ; 2001 ; Small Axe Volume 5 ; 5 >
       au < released ; 2002 ; Small Axe Volume 6 ; 6 >
       au < released ; 2003 ; Small Axe Volume 7 ; 7 >
@@ -2587,7 +2587,7 @@
       au < expected ; 2015 ; Small Axe Volume 19 ; 19 >
 
     }
-    
+
     {
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://smallaxe.dukejournals.org/
@@ -2608,7 +2608,7 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Small Axe Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Small Axe Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; expected ; 2015 ; Small Axe Volume 19 ; 19 >
-      
+
     }
 
   }
@@ -2621,7 +2621,7 @@
       eissn = 1527-8034 ;
       issnl = 0145-5532 ;
       comment[0] = See RT 6211, due to legal dispute, vol 2014 is unavailable indefinitely as of 4/11/14
-      
+
     >
 
     {
@@ -2649,15 +2649,15 @@
       au < released ; 2013 ; Social Science History Volume 37 ; 37 >
       au < expected ; 2014 ; Social Science History Volume 38 ; 38 >
       au < expected ; 2015 ; Social Science History Volume 39 ; 39 >
-      
+
     }
 
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ssh.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Social Science History Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Social Science History Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Social Science History Volume 26 ; 26 >
@@ -2675,9 +2675,9 @@
       au < HighWirePressH20Plugin ; expected ; 2014 ; Social Science History Volume 38 ; 38 >
 
     }
-  
+
   }
-   
+
   {
     title <
       name = Social Text ;
@@ -2685,9 +2685,9 @@
       eissn = 1527-1951 ;
       issnl = 0164-2472
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -2700,15 +2700,15 @@
       au < released ; 2002 ; Social Text Volume 20 ; 20 >
       au < released ; 2003 ; Social Text Volume 21 ; 21 >
       au < released ; 2004 ; Social Text Volume 22 ; 22 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://socialtext.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; Social Text Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Social Text Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Social Text Volume 20 ; 20 >
@@ -2727,7 +2727,7 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Social Text Volume 33 ; 33 >
 
     }
-  
+
   }
 
   {
@@ -2737,9 +2737,9 @@
       eissn = 1527-8026 ;
       issnl = 0038-2876
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -2752,15 +2752,15 @@
       au < released ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
       au < released ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
       au < released ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://saq.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
       au < HighWirePressH20Plugin ; released ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
       au < HighWirePressH20Plugin ; released ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
@@ -2779,7 +2779,7 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; The South Atlantic Quarterly Volume 114 ; 114 >
 
     }
-  
+
   }
 
   {
@@ -2789,9 +2789,9 @@
       eissn = 1527-196X ;
       issnl = 0161-0775
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -2804,15 +2804,15 @@
       au < released ; 2002 ; Theater Volume 32 ; 32 >
       au < released ; 2003 ; Theater Volume 33 ; 33 >
       au < released ; 2004 ; Theater Volume 34 ; 34 >
-      
+
     }
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://theater.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; released ; 1968 ; Theater Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1969 ; Theater Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1970-1972 ; Theater Volume 3 ; 3 >
@@ -2860,9 +2860,9 @@
       au < HighWirePressH20Plugin ; expected ; 2015 ; Theater Volume 45 ; 45 >
 
     }
-  
+
   }
-   
+
   {
     title <
       name = Tikkun ;
@@ -2871,29 +2871,29 @@
       issnl = 0887-9982
 
     >
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
 
     param[journal_dir] = tikkun
     attr[journal_id] = tik
-    
+
     au < released ; 2012 ; Tikkun Volume 27 ; 27 >
     au < released ; 2013 ; Tikkun Volume 28 ; 28 >
     au < manifest ; 2014 ; Tikkun Volume 29 ; 29 >
     au < expected ; 2015 ; Tikkun Volume 30 ; 30 >
 
     }
-   
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://tikkun.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
       au < HighWirePressH20Plugin ; exists ; 2011 ; Tikkun Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; exists ; 2012 ; Tikkun Volume 27 ; 27 >
@@ -2901,9 +2901,9 @@
       au < HighWirePressH20Plugin ; expected ; 2014 ; Tikkun Volume 29 ; 29 >
 
      }
-    
+
     }
-    
+
   {
     title <
       name = Transgender Studies Quarterly ;
@@ -2911,16 +2911,16 @@
       eissn = 2328-9260 ;
       issnl = 2328-9252
     >
-    
+
     {
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://tsq.dukejournals.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       au < HighWirePressH20Plugin ; exists ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 >
 
     }
-    
+
   }
-    
+
 }
