@@ -1,5 +1,5 @@
 /*
- * $Id: TestMarkAllenHtmlFilterFactory.java,v 1.3 2014-12-10 05:40:30 ldoan Exp $
+ * $Id: TestMarkAllenHtmlFilterFactory.java,v 1.4 2015-01-16 07:14:25 ldoan Exp $
  */
 
 /*
@@ -60,6 +60,11 @@ public class TestMarkAllenHtmlFilterFactory
   
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
+   
+  // test for pdf and pdfplus file size
+  // is in TestBaseAtyponHtmlHashFilterFactory since the html is similar
+  // <a class="ref nowrap pdfplus" target="_blank" title="Opens new window" 
+  // href="/doi/pdfplus/10.12968/bjom.2013.21.10.692">PDF Plus (672 KB)</a>
   
   // institution banner
   // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
