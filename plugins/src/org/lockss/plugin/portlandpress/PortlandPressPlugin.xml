@@ -55,7 +55,8 @@
       <string>4,"^%s", base_url</string>
       <!--  I find www.biochemj.org/bj/200/0043/bj2000043_browse.htm -->
       <string>2,"^%s%s(/ev)?/%s/[^/]+/[^/]_browse\.htm", base_url, journal_id, volume_name</string>
-      <string>1,"^%s%s(/ev)?/%s/", base_url, journal_id, volume_name</string>
+      <!--  some IWA concatenate 2-digit issue# to vol#: http://www.iwaponline.com/wst/06701/01/default.htm -->
+      <string>1,"^%s%s(/ev)?/%s([0-9S]{2})?/", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -69,13 +70,10 @@
 	    <string>au_title</string>
 	    <string>"%s%s", base_url, journal_id</string>
 	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-        <string>"%s%s/%s/lockss.htm", base_url, journal_id, volume_name</string>
-	  </entry>
+      <!--  volume will default to start_url -->
 	  <entry>
 	    <string>au_issue</string>
-        <string>"%s%s/%s/%s/default.htm", base_url, journal_id, volume_name, issue</string>
+          <string>"%s%s/%s/%s/default.htm", base_url, journal_id, volume_name, issue</string>
 	  </entry>
   	</map>
   </entry>
@@ -115,7 +113,8 @@
     <list>
       <!-- <base>/<jid>/<vnum>/<stpage>/<volstpage>.(pdf|htm) -->
       <!-- <base>/<jid>/ev/<vnum>/<stpage>/<volstpage>_ev.htm -->
-      <string>"^%s%s(/ev)?/%s/[^/]+/(?!default.htm)[^/]+\.(pdf|htm)$", base_url, journal_id, volume_name</string>
+      <!-- <base>/<jid>/<vnum><issue>/<stpage>/<vol><issue><stpage>.pdf -->
+      <string>"^%s%s(/ev)?/%s([0-9S]{2})?/[^/]+/(?!default.htm)[^/]+\.(pdf|htm)$", base_url, journal_id, volume_name</string>
     </list>
   </entry> 
   <entry>

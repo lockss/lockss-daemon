@@ -1,5 +1,5 @@
 /*
- * $Id: TestPortlandPressArticleIteratorFactory.java,v 1.2 2013-09-23 19:25:46 etenbrink Exp $
+ * $Id: TestPortlandPressArticleIteratorFactory.java,v 1.3 2015-01-16 21:19:46 alexandraohlson Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TestPortlandPressArticleIteratorFactory extends ArticleIteratorTest
   
   public void testRoots() throws Exception {      
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + JOURNAL_ID + "/" + VOLUME_NAME + "/"),
+    assertEquals(ListUtil.list(BASE_URL + JOURNAL_ID + "/"),
         getRootUrls(artIter));
   }
   
