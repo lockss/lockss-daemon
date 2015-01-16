@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.8 2015-01-14 00:00:58 etenbrink Exp $
+ * $Id: MetaPressArticleIteratorFactory.java,v 1.9 2015-01-16 19:20:25 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.regex.*;
 
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.IOUtil;
@@ -55,7 +55,6 @@ public class MetaPressArticleIteratorFactory
   protected static final String PATTERN_TEMPLATE =
       "\"^%scontent/[A-Za-z0-9]{16}/fulltext\\.pdf$\", base_url";
 
-  protected String au_vol = null;
   protected static final Pattern RIS_PATTERN = Pattern.compile(
       "^VL[ ]+[-][ ]+([0-9-]+)", Pattern.CASE_INSENSITIVE);
 
@@ -64,7 +63,6 @@ public class MetaPressArticleIteratorFactory
                                                       MetadataTarget target)
       throws PluginException {
     
-    au_vol= getAuVol(au);
     return new MetaPressArticleIterator(au,
                                         new SubTreeArticleIterator.Spec()
                                             .setTarget(target)
@@ -80,11 +78,14 @@ public class MetaPressArticleIteratorFactory
     
     protected MetadataTarget target;
     
+    protected String au_vol = null;
+
     public MetaPressArticleIterator(ArchivalUnit au,
                                     SubTreeArticleIterator.Spec spec,
                                     MetadataTarget target) {
       super(au, spec);
       this.target = target;
+      this.au_vol = getAuVol(au);
     }
     
     @Override
@@ -175,17 +176,11 @@ public class MetaPressArticleIteratorFactory
   }
   
   protected String getAuVol(ArchivalUnit au) {
-    String vol = null;
-    try {
-      vol = au.getConfiguration().get("volume_name");
-    } catch(Exception ex) {
-      log.error("Error getting volume", ex);
-    }
+    String vol = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
     return vol;
   }
   
   protected String getCuVol(CachedUrl cu) {
-    String vol = null;
     BufferedReader bReader = null;
     try {
       bReader = new BufferedReader(new InputStreamReader(
@@ -199,8 +194,8 @@ public class MetaPressArticleIteratorFactory
       for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
         matcher = RIS_PATTERN.matcher(line);
         if (matcher.find()) {
-          vol = matcher.group(1);
-          break;
+          String vol = matcher.group(1); 
+          return vol;
         }
       }
     } catch (Exception e) {
@@ -210,7 +205,7 @@ public class MetaPressArticleIteratorFactory
     finally {
       IOUtil.safeClose(bReader);
     }
-    return vol;
+    return null;
   }
   
   @Override
