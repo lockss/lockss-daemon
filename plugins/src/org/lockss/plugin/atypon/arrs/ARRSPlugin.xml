@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -42,7 +42,7 @@
   <!--some pdfplus files need scraping.  -->  
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
+    <string>org.lockss.plugin.atypon.arrs.ARRSPdfFilterFactory</string>
   </entry>  
   <entry>
     <string>plugin_au_config_user_msg</string>

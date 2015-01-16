@@ -1,5 +1,5 @@
 /*
- * $Id: ARRSHtmlHashFilterFactory.java,v 1.1 2014-12-05 05:58:20 ldoan Exp $
+ * $Id: ARRSHtmlHashFilterFactory.java,v 1.2 2015-01-16 07:54:34 ldoan Exp $
  */
 
 /*
@@ -61,10 +61,11 @@ public class ARRSHtmlHashFilterFactory
         // http://www.ajronline.org/toc/ajr/201/6
         HtmlNodeFilters.tagWithAttributeRegex("img", "class", "CMESAM"),
         
-        // from toc, abs, full - whole left sidebar
+        // from toc, abs, full, suppl - whole left sidebar
 	// http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "leftColumn"),
-       
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", 
+                                              "dropzone-Left-Sidebar"),  
+                                              
         // from abs, full - Previous Article|Next Article
         // http://www.ajronline.org/doi/abs/10.2214/AJR.12.10039
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articleToolsNav"),   
@@ -78,6 +79,11 @@ public class ARRSHtmlHashFilterFactory
 	// http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
 	HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
 	                                      "articleAdditionalLinks"), 
+	                                      
+	// from abs, full - 'Choose' pulldown near References section
+	// some page collected with 'CITING ARTICLES', some without
+	// http://www.ajronline.org/doi/full/10.2214/AJR.12.9121                                     
+	HtmlNodeFilters.tagWithAttribute("table", "class", "sectionHeading"),                                       
                
     };
     

@@ -112,29 +112,20 @@ ARTICLE pages:
      users also read
      most read
      most cited
- 
-* from toc, left sidebar containing links to other issues:
-http://www.ajronline.org/toc/ajr/201/6
-<div class="dropzone ui-corner-all " id="dropzone-Left-Sidebar">
-* from abs, full - Previous Article|Next Article:
-http://www.ajronline.org/doi/abs/10.2214/AJR.12.10039
-<div id="articleToolsNav" class="stackContents">
-     
-     
-
-* most read
-  http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-
-* from abs and full text - middle column 
-  http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
-  all article tools except Download Citations
 
 7) CAREFUL - you must be sure NOT to exclude the link that points to the "download citation information".
 If it lives within a column you otherwise don't need, use the HtmlNodeFilters.allExceptSubtree() method
    
-* logo leads to current toc
-  http://www.magonlinelibrary.com/toc/bjom/21/10
+    from toc, abs, full - whole left sidebar
+    http://www.ajronline.org/toc/ajr/201/6
+    http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
     
+    from abs, full - Previous Article|Next Article
+    http://www.ajronline.org/doi/abs/10.2214/AJR.12.10039
+     
+    from abs, full - Recommended Articles
+    http://www.ajronline.org/doi/full/10.2214/AJR.12.9120
+   
 ---------------------HASH FILTERING-----------------------------
 The other section that is almost guaranteed to require some plugin specific code.
 Some publishers are truly unique, but MOST of them fall in to one of 3 types.  Check out some existing 
@@ -173,23 +164,29 @@ Thinks to look for:
 6) Section pull down menus - sometimes in full-text versions of the article there are pull down menus that let you go to the different sections (figures, references, introduction).  These menus will ADD a "citations" to the drop down once there are some.
 7) TOC - may have increasing citation counts next to each article listing, once they've been cited
 
-* top page ad and all other ads with class LiteratumAd
-* institution banner
-* pageHeader
-* pageFooter
-* panel ad under pageHeader has link to other issue
-  http://www.magonlinelibrary.com/toc/bjom/21/10
-* for toc - social media
-* from toc - accessIconContainer 
-* middle column ad of an article - all article tools with 
-  class literatumArticleToolsWidget except Download Citations
-  http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
-* abs, full text and ref right column - most read 
-  http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-* full text right colummn - several locations with ids
-  http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-* Downloaded count from full text.
-
+         Covered by BaseAtypon:
+         header - <div id="header">
+         footer - <div id="footer">
+         Open URL sfxLink
+        
+         from toc - accessIcon
+         http://www.ajronline.org/toc/ajr/201/6
+        
+         from toc - credit icon
+         http://www.ajronline.org/toc/ajr/201/6
+        
+         from toc, abs, full - whole left sidebar
+	       http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
+             
+         from abs, full - Previous Article|Next Article
+         http://www.ajronline.org/doi/abs/10.2214/AJR.12.10039
+        
+	       from abs, full - Recommended Articles
+	       http://www.ajronline.org/doi/full/10.2214/AJR.12.9120
+	
+	       from abs - share/email button below article title
+	       http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
+	
 ---------------------LINK EXTRACTOR-----------------------------
 The BaseAtypon link extractor does two primary things - it generates the links on the "download citations" form so that we get the citations (RIS) and it generates the links needed to pick up the alternate sizes for the images. 
 
@@ -279,6 +276,8 @@ AIAA
   http://arc.aiaa.org/doi/full/10.2514/1.J051906
 AMetSoc
   http://journals.ametsoc.org/doi/full/10.1175/2007JHM925.1
+ARRS (in development)
+  http://www.ajronline.org/doi/full/10.2214/AJR.12.10140
 ASCE
   http://ascelibrary.org/doi/full/10.1061/%28ASCE%29BE.1943-5592.0000364
 AmmonsScientific
@@ -289,6 +288,10 @@ BritishInstituteRadiology (in development)
   http://www.birpublications.org/doi/full/10.1259/dmfr.20130118
 BloomsburyQatar
   http://www.qscience.com/doi/full/10.5339/avi.2013.2
+CYS (in development)
+  http://www.cysjournal.ca/doi/full/10.13034/cysj-2013-004
+Emerald (in development)
+  http://www.emeraldinsight.com/doi/full/10.1108/AAAJ-02-2013-1226
 EndocrineSociety (in development)
   http://press.endocrine.org/doi/full/10.1210/en.2012-1768
 FutureScience
@@ -297,6 +300,8 @@ FutureScience
   http://www.futuremedicine.com/doi/full/10.2217/whe.11.97
 Maney (in development)
   http://www.maneyonline.com/doi/full/10.1179/0002698013Z.00000000033
+MarkAllen
+  http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.12.888
 NRCResearchPress
   http://www.nrcresearchpress.com/doi/full/10.1139/cjz-2013-0098#.VE5yRlXC2TU
 SocietyExplorationGeophysicists

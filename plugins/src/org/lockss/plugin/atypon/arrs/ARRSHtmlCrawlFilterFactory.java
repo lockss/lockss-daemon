@@ -1,5 +1,5 @@
 /*
- * $Id: ARRSHtmlCrawlFilterFactory.java,v 1.1 2014-12-05 05:58:20 ldoan Exp $
+ * $Id: ARRSHtmlCrawlFilterFactory.java,v 1.2 2015-01-16 07:54:34 ldoan Exp $
  */
 
 /*
@@ -44,14 +44,12 @@ public class ARRSHtmlCrawlFilterFactory
   extends BaseAtyponHtmlCrawlFilterFactory {
   
   static NodeFilter[] filters = new NodeFilter[] {
-
-    // from toc - left column with links to other issues
-    // http://www.ajronline.org/toc/ajr/201/6
-        
+       
     // from toc, abs, full - whole left sidebar
     // http://www.ajronline.org/toc/ajr/201/6
     // http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "leftColumn"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", 
+                                          "dropzone-Left-Sidebar"),
     
     // from abs, full - Previous Article|Next Article
     // http://www.ajronline.org/doi/abs/10.2214/AJR.12.10039
