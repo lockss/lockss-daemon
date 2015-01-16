@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20CrawlUrlComparatorFactory.java,v 1.3 2015-01-15 03:48:33 etenbrink Exp $
+ * $Id: HighWirePressH20CrawlUrlComparatorFactory.java,v 1.4 2015-01-16 23:08:05 etenbrink Exp $
  */
 
 /*
@@ -259,8 +259,9 @@ extract("99b.0.foo") ==> "99b.0"
     
     protected String[] urlPrefixes;
     
-    public HighWirePressH20UrlFactory(String baseUrl) {
+    public HighWirePressH20UrlFactory(String baseUrl, String jcode) {
       this.urlPrefixes = new String[] {
+          baseUrl + "content/" + jcode + "/",
           baseUrl + "content/",
           baseUrl + "powerpoint/",
       };
@@ -281,8 +282,10 @@ extract("99b.0.foo") ==> "99b.0"
     
     protected HighWirePressH20UrlFactory factory;
     
-    public HighWirePressH20CrawlUrlComparator(String baseUrl) {
-      factory = new HighWirePressH20UrlFactory(baseUrl);
+    public HighWirePressH20CrawlUrlComparator(ArchivalUnit au) {
+      String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+      String jcode = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+      factory = new HighWirePressH20UrlFactory(baseUrl, jcode);
     }
     
     @Override
@@ -350,20 +353,7 @@ extract("99b.0.foo") ==> "99b.0"
   
   @Override
   public Comparator<CrawlUrl> createCrawlUrlComparator(ArchivalUnit au) throws LinkageError {
-    return createCrawlUrlComparator(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-  }
-  
-  /**
-   * <p>This method is not actually part of the
-   * {@link CrawlUrlComparatorFactory} interface but it is useful
-   * for testing purposes and so
-   * {@link #createCrawlUrlComparator(ArchivalUnit)} calls it.</p>
-   * @param baseUrl The {@link ArchivalUnit}'s base URL.
-   * @return The crawl URL comparator for the AU.
-   * @see #createCrawlUrlComparator(ArchivalUnit)
-   */
-  public Comparator<CrawlUrl> createCrawlUrlComparator(String baseUrl) {
-    return new HighWirePressH20CrawlUrlComparator(baseUrl);
+    return new HighWirePressH20CrawlUrlComparator(au);
   }
   
 }
