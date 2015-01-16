@@ -1,10 +1,10 @@
 /*
- * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.4 2014-12-10 05:40:06 ldoan Exp $
+ * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.5 2015-01-16 19:31:03 ldoan Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
