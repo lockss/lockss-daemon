@@ -2980,7 +2980,7 @@
     param[journal_id] = geography
 
     au < manifest ; exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Geography Journal Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2996,7 +2996,7 @@
     param[journal_id] = geometry
 
     au < manifest ; exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Geometry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3015,7 +3015,7 @@
     au < manifest ; exists ; 2011 ; Hepatitis Research and Treatment Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Hepatitis Research and Treatment Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -3050,7 +3050,7 @@
     au < manifest ; exists ; 2011 ; HPB Surgery Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; HPB Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3065,7 +3065,7 @@
     param[journal_id] = ijms
 
     au < manifest ; exists ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Indian Journal of Materials Science Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3101,7 +3101,7 @@
     au < manifest ; exists ; 2011 ; Infectious Diseases in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Infectious Diseases in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Infectious Diseases in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3120,7 +3120,7 @@
     au < manifest ; exists ; 2011 ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Influenza Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Influenza Research and Treatment Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -3141,7 +3141,7 @@
     au < manifest ; exists ; 2011 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3162,7 +3162,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Aerospace Engineering Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3182,7 +3182,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Agronomy Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Agronomy Volume 2015 ; 2015 ; 2015 >
 
   }
