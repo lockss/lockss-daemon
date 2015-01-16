@@ -131,7 +131,7 @@
     
     {
     
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.arrs.ARRSPlugin
       comment[platform] = Atypon
       param[base_url] = http://www.ajronline.org/
       implicit < status ; year ; name ; param[volume_name] >
