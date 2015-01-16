@@ -1,10 +1,10 @@
 /*
- * $Id: MetaPressPdfFilterFactory.java,v 1.3 2014-05-15 01:21:59 etenbrink Exp $
+ * $Id: MetaPressPdfFilterFactory.java,v 1.4 2015-01-16 20:08:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,8 +37,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lockss.config.Configuration;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
@@ -68,8 +67,9 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
     UKSG,
   }
   
-  private static final Logger logger = Logger.getLogger(MetaPressPdfFilterFactory.class);
-  private static Pattern JOURNAL_ID = Pattern.compile("^https?://([^.]+)[.]metapress[.]com/");
+  private static final Logger log = Logger.getLogger(MetaPressPdfFilterFactory.class);
+  
+  private static Pattern PUBLISHER_ID = Pattern.compile("^https?://([^.]+)[.]metapress[.]com/");
   
   private FilterFactory papFiltFact = new PracticalActionPdfFilterFactory();
   
@@ -79,74 +79,50 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
    */
   private class PracticalActionPdfFilterFactory extends SimplePdfFilterFactory {
     
-    private Pattern pat1 = Pattern.compile("^Delivered by ");
-    private Pattern pat2 = Pattern.compile("^IP Address: ");
-    
-    protected class MetaPressWorker extends PdfTokenStreamWorker {
+    protected class MetaPressStateMachine extends PdfTokenStreamStateMachine {
       
-      protected boolean result;
-      protected int beginIndex;
-      protected int endIndex;
-      protected int state;
-      
-      public MetaPressWorker() {
+      protected static final String DELIVERED_BY = "Delivered by ";
+      protected static final String IP_ADDRESS = "IP Address: ";
+
+      public MetaPressStateMachine() {
+        super(log);
       }
       
       @Override
-      public void setUp() throws PdfException {
-        super.setUp();
-        this.state = 0;
-        this.result = false;
-        this.beginIndex = -1;
-        this.endIndex = -1;
+      public void state0() throws PdfException {
+        if (isBeginTextObject()) {
+          setBegin(getIndex());
+          setState(1);
+        }
       }
-      
+
       @Override
-      public void operatorCallback() throws PdfException {
-        if (logger.isDebug3()) {
-          logger.debug3("MetaPressWorker: initial: " + state);
-          logger.debug3("MetaPressWorker: index: " + getIndex());
-          logger.debug3("MetaPressWorker: operator: " + getOpcode());
+      public void state1() throws PdfException {
+        if (isShowTextStartsWith(DELIVERED_BY)) {
+          setState(2);
         }
-        
-        switch (state) {
-          case 0: {
-            if (isBeginTextObject()) {
-              beginIndex = getIndex();
-              ++state;
-            }
-          } break;
-          
-          case 1: {
-            if (isShowTextFind(pat1)) {
-              ++state;
-            }
-          } break;
-          
-          case 2: {
-            if (isShowTextFind(pat2)) {
-              ++state;
-            }
-          } break;
-          
-          case 3: {
-            if (isEndTextObject()) {
-              endIndex = getIndex();
-              result = true;
-              stop(); 
-            }
-          } break;
-          
-          default: {
-            throw new PdfException("Invalid state in MetaPressWorker: " + state);
-          }
+        else if (isEndTextObject()) {
+          setState(0);
         }
-        
-        if (logger.isDebug3()) {
-          logger.debug3("MetaPressWorker: final: " + state);
-          logger.debug3("MetaPressWorker: result: " + result);
+      }
+
+      @Override
+      public void state2() throws PdfException {
+        if (isShowTextStartsWith(IP_ADDRESS)) {
+          setState(3);
         }
-        
+        else if (isEndTextObject()) {
+          setState(0);
+        }
+      }
+
+      @Override
+      public void state3() throws PdfException {
+        if (isEndTextObject()) {
+          setEnd(getIndex());
+          setResult(true);
+          stop(); 
+        }
       }
       
     }
@@ -159,16 +135,16 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
       pdfDocument.unsetMetadata();
       PdfUtil.normalizeTrailerId(pdfDocument);
       
-      MetaPressWorker worker = new MetaPressWorker();
+      PdfTokenStreamStateMachine worker = new MetaPressStateMachine();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
-        List<PdfTokenStream> pdfTokenStreamList = pdfPage.getAllTokenStreams();
-        for (PdfTokenStream pdfTokenStream : pdfTokenStreamList) {
-          List<PdfToken> tokens = pdfTokenStream.getTokens();
+        for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
           worker.process(pdfTokenStream);
-          if (worker.result) {
-            tokens.subList(worker.beginIndex, worker.endIndex).clear();
+          if (worker.getResult()) {
+            List<PdfToken> tokens = pdfTokenStream.getTokens();
+            tokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
+            pdfTokenStream.setTokens(tokens);
+            break; // go to the next page
           }
-          pdfTokenStream.setTokens(tokens);
         }
       }
     }
@@ -179,18 +155,17 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
       InputStream in, String encoding)
           throws PluginException {
     
-    PublisherId publisherId = PublisherId.UNKNOWN;
-    String publisher_sd = "";
-    try {
-      Configuration config = au.getConfiguration();
-      Matcher mat = JOURNAL_ID.matcher(config.get("base_url"));
-      if (mat.matches()) {
-        publisher_sd = mat.group(1).toUpperCase();
-        publisher_sd.replace("-", "");
-        publisherId = PublisherId.valueOf(publisher_sd);
+    PublisherId publisherId = null;
+    String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+    Matcher mat = PUBLISHER_ID.matcher(base_url);
+    if (mat.matches()) {
+      try {
+        publisherId = PublisherId.valueOf(mat.group(1).toUpperCase().replace("-", ""));
       }
-    } catch (Exception e) {
-      logger.debug(String.format("Exception: %s : %s", publisher_sd, e.toString()));
+      catch (IllegalArgumentException iae) {
+        log.debug(String.format("Illegal publisher ID: %s", mat.group(1)), iae);
+        publisherId = PublisherId.UNKNOWN;
+      }
     }
     
     switch (publisherId) {
