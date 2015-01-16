@@ -8,7 +8,7 @@
     plugin = org.lockss.plugin.palgrave.ClockssPalgraveBookPlugin
     param[base_url] = http://www.palgraveconnect.com/
     implicit < status ; status2 ; year ; book_isbn ; doi ; param[book_isbn] ; name ; author >
-    comment[notReady] = PD-1175, hash filter needed for metadata
+    comment[notReady] = publisher change url, retest later
 
    {
 
@@ -1048,7 +1048,7 @@
       au < manifest ; exists ; 2012 ; 9781137280350 ; 10.1057/9781137280350 ; 9781137280350 ; Integrity in Organizations (9781137280350) ; Edited By Wolfgang Amann and Agata Stachowicz-Stanusch > 
       au < manifest ; exists ; 2012 ; 9781137270702 ; 10.1057/9781137270702 ; 9781137270702 ; The Decentralized Energy Revolution (9781137270702) ; Christoph Burger and Jens Weinmann > 
       au < manifest ; exists ; 2013 ; 9781137309341 ; 10.1057/9781137309341 ; 9781137309341 ; From Stress to Wellbeing Volume 2 (9781137309341) ; Edited By Cary L. Cooper > 
-      au < testing ; exists ; 2013 ; 9781137023803 ; 10.1057/9781137023803 ; 9781137023803 ; Statutory Regulation and Employment Relations (9781137023803) ; Sian Moore, Sonia McKay and Sarah Veale > 
+      au < notReady ; exists ; 2013 ; 9781137023803 ; 10.1057/9781137023803 ; 9781137023803 ; Statutory Regulation and Employment Relations (9781137023803) ; Sian Moore, Sonia McKay and Sarah Veale > 
       au < manifest ; exists ; 2013 ; 9781137307729 ; 10.1057/9781137307729 ; 9781137307729 ; Conquering Global Markets (9781137307729) ; Nancy A. Hubbard > 
       au < manifest ; exists ; 2013 ; 9781137331526 ; 10.1057/9781137331526 ; 9781137331526 ; Morals and Markets (9781137331526) ; Daniel Friedman and Daniel McNeill > 
       au < manifest ; exists ; 2013 ; 9781137281920 ; 10.1057/9781137281920 ; 9781137281920 ; Managing Social Media and Consumerism (9781137281920) ; Rajagopal > 
@@ -1112,8 +1112,8 @@
       au < manifest ; exists ; 2013 ; 9781137292964 ; 10.1057/9781137292964 ; 9781137292964 ; Innovation in Business Education in Emerging Markets (9781137292964) ; Edited By Ilan Alon, Victoria Jones and John R. McIntyre > 
       au < manifest ; exists ; 2013 ; 9781137270672 ; 10.1057/9781137270672 ; 9781137270672 ; Luxury Talent Management (9781137270672) ; Gilles Auguste and Michel Gutsatz > 
       au < manifest ; exists ; 2013 ; 9781137005540 ; 10.1057/9781137005540 ; 9781137005540 ; ICTs and Development (9781137005540) ; Maitrayee Mukerji > 
-      au < manifest ; exists ; 2013 ; 9781137024961 ; 10.1057/9781137024961 ; 9781137024961 ; Towards Organizational Knowledge (9781137024961) ; Edited By Georg von Krogh, Hirotaka Takeuchi, Kimio Kase and César González Cantón > 
-      au < manifest ; exists ; 2013 ; 9781137299994 ; 10.1057/9781137299994 ; 9781137299994 ; Evolution of Innovation Management (9781137299994) ; Edited By Alexander Brem and Eric Viardot > 
+      au < testing ; exists ; 2013 ; 9781137024961 ; 10.1057/9781137024961 ; 9781137024961 ; Towards Organizational Knowledge (9781137024961) ; Edited By Georg von Krogh, Hirotaka Takeuchi, Kimio Kase and César González Cantón > 
+      au < testing ; exists ; 2013 ; 9781137299994 ; 10.1057/9781137299994 ; 9781137299994 ; Evolution of Innovation Management (9781137299994) ; Edited By Alexander Brem and Eric Viardot > 
      }
    }
 
