@@ -14462,6 +14462,49 @@
 
     }
 
+  {
+
+    title <
+      name = Healthcare Management Forum ;
+      issn = 0840-4704 ;
+      eissn = 2352-3883 ;
+      issnl = 0840-4704
+    >
+
+      param[base_url] = http://hmf.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1988 ; Healthcare Management Forum Volume 1 ; 1 >
+      au < exists ; 1989 ; Healthcare Management Forum Volume 2 ; 2 >
+      au < exists ; 1990 ; Healthcare Management Forum Volume 3 ; 3 >
+      au < exists ; 1991 ; Healthcare Management Forum Volume 4 ; 4 >
+      au < exists ; 1992 ; Healthcare Management Forum Volume 5 ; 5 >
+      au < exists ; 1993 ; Healthcare Management Forum Volume 6 ; 6 >
+      au < exists ; 1994 ; Healthcare Management Forum Volume 7 ; 7 >
+      au < exists ; 1995 ; Healthcare Management Forum Volume 8 ; 8 >
+      au < exists ; 1996 ; Healthcare Management Forum Volume 9 ; 9 >
+      au < exists ; 1997 ; Healthcare Management Forum Volume 10 ; 10 >
+      au < exists ; 1998 ; Healthcare Management Forum Volume 11 ; 11 >
+      au < exists ; 1999 ; Healthcare Management Forum Volume 12 ; 12 >
+      au < exists ; 2000 ; Healthcare Management Forum Volume 13 ; 13 >
+      au < exists ; 2001 ; Healthcare Management Forum Volume 14 ; 14 >
+      au < exists ; 2002 ; Healthcare Management Forum Volume 15 ; 15 >
+      au < exists ; 2003 ; Healthcare Management Forum Volume 16 ; 16 >
+      au < exists ; 2004 ; Healthcare Management Forum Volume 17 ; 17 >
+      au < exists ; 2005 ; Healthcare Management Forum Volume 18 ; 18 >
+      au < exists ; 2006 ; Healthcare Management Forum Volume 19 ; 19 >
+      au < exists ; 2007 ; Healthcare Management Forum Volume 20 ; 20 >
+      au < exists ; 2008 ; Healthcare Management Forum Volume 21 ; 21 >
+      au < exists ; 2009 ; Healthcare Management Forum Volume 22 ; 22 >
+      au < exists ; 2010 ; Healthcare Management Forum Volume 23 ; 23 >
+      au < exists ; 2011 ; Healthcare Management Forum Volume 24 ; 24 >
+      au < exists ; 2012 ; Healthcare Management Forum Volume 25 ; 25 >
+      au < exists ; 2013 ; Healthcare Management Forum Volume 26 ; 26 >
+      au < exists ; 2014 ; Healthcare Management Forum Volume 27 ; 27 >
+      au < exists ; 2015 ; Healthcare Management Forum Volume 28 ; 28 >
+  }
+
     {
 
       title <
@@ -42814,12 +42857,39 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = Workplace Health & Safety ;
+      issn = 2165-0799 ;
+      eissn = 2165-0969 ;
+      issnl = 2165-0799
+    >
+
+      param[base_url] = http://whs.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2006 ; Workplace Health & Safety Volume 54 ; 54 >
+      au < exists ; 2007 ; Workplace Health & Safety Volume 55 ; 55 >
+      au < exists ; 2008 ; Workplace Health & Safety Volume 56 ; 56 >
+      au < exists ; 2009 ; Workplace Health & Safety Volume 57 ; 57 >
+      au < exists ; 2010 ; Workplace Health & Safety Volume 58 ; 58 >
+      au < exists ; 2011 ; Workplace Health & Safety Volume 59 ; 59 >
+      au < exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 >
+      au < exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 >
+      au < exists ; 2014 ; Workplace Health & Safety Volume 62 ; 62 >
+      au < expected ; 2015 ; Workplace Health & Safety Volume 63 ; 63 >
+
+  }
+
     {
 
       title <
         name = World Journal for Pediatric and Congenital Heart Surgery ;
         issn = 2150-1351 ;
-        eissn = 2150-136X
+        eissn = 2150-136X ;
+        issnl = 2150-1351
       >
 
       {
