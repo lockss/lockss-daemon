@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.12 2008-07-12 08:36:02 dshr Exp $
+ * $Id: StringFilter.java,v 1.13 2015-01-16 22:54:14 thib_gc Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class StringFilter extends Reader {
    * @param strList a List of strings to remove
    * @return the nested StringFilter
    */
-  public static StringFilter makeNestedFilter(Reader reader, List strList) {
+  public static StringFilter makeNestedFilter(Reader reader, List/*<String>*/ strList) {
     if (reader == null) {
       throw new IllegalArgumentException("Called with a null Reader");
     } else if (strList == null) {

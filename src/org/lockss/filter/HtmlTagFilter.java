@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.11 2006-11-07 20:44:47 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.12 2015-01-16 22:51:49 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -139,7 +139,7 @@ public class HtmlTagFilter extends Reader {
    * @param pairs List of TagPairs to filter between.
    * @return an HtmlTagFilter
    */
-  public static HtmlTagFilter makeNestedFilter(Reader reader, List pairs) {
+  public static HtmlTagFilter makeNestedFilter(Reader reader, List/*<TagPair>*/ pairs) {
     if (pairs == null) {
       throw new IllegalArgumentException("Called with a null tag pair list");
     }
