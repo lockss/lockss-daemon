@@ -1,10 +1,10 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.20 2014-10-22 21:39:20 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.21 2015-01-17 00:29:58 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-20154 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,43 +60,15 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
   private static final String relatedHtml =
       "<div id=\"relatedArticles\" class=\"module widget\"><h2>Related Articles</h2><div class=\"jqueryTab tabs clear\">" +
           "<ul class=\"tabsNav clear\"><li class=\"active\" id=\"readTab\"><a class='jslink' href=\"#read\">Most read</a>" +
-          "</li></ul></div></div><div class=\"tabsPanel articleSummaries hide\" id=\"citedPanel\"></div>";
+          "</li></ul></div><div class=\"tabsPanel articleSummaries hide\" id=\"citedPanel\"></div>";
   private static final String relatedHtmlFiltered =
-      "<div class=\"tabsPanel articleSummaries hide\" id=\"citedPanel\"></div>";
+      "";
 
   private static final String moduleHtml =
       "<div class=\"ad module\"><!-- Literatum Advertisement --><!-- width:200 -->" +
           "<!-- placeholder id=null, description=Journal right column 1 --></div>";
   private static final String moduleHtmlFiltered =
       "";
-
-  private static final String referencesHtml =
-      "<div class=\"tabsPanel hide\" id=\"fulltextPanel\">" +
-          "    </div>" +
-          "    <div class=\"tabsPanel \" id=\"referencesPanel\">" +
-          "        <div class=\"gutter\"><div class=\"summationSection\"><ul class=\"references\">" +
-          "<li id=\"CIT0001\"><strong>1." +
-          "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
-          "<span class=\"NLM_year\">1998</span>. TITLE, 7(4): 159�175.   " +
-          "<a href=\"/servlet/linkout?suffix=CIT0001&amp;dbid=20&amp;doi=10.1080%2FXXXX&amp;key=10.1080%2FXXXX\" target=\"_blank\">[Taylor &amp;Francis Online]</a>, " +
-          "</li><li id=\"CIT0002\"><strong>2." +
-          "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
-          "<span class=\"NLM_year\">2003</span>. Another Title, 36: 81�109.   " +
-          "<a href=\"/servlet/linkout?suffix=CIT0002&amp;dbid=16&amp;doi=10.1080%2FJJJJ&amp;key=10.1017%2FJJJJ\" target=\"_blank\">[CrossRef]</a>" +
-          "</li>" +
-          "</ul></div></div> </div>" +
-          "<div class=\"tabsPanel hide\" id=\"permissionsPanel\">" +
-          "" +
-          "</div>DONE";
-
-  private static final String referencesFiltered =
-      "<div class=\"tabsPanel hide\" id=\"fulltextPanel\">" +
-          "    </div>" +
-          "    " +
-          "<div class=\"tabsPanel hide\" id=\"permissionsPanel\">" +
-          "" +
-          "</div>DONE";
-
 
   /**
    * Variant to test with Crawl Filter
@@ -389,20 +361,18 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             + "<div class=\"auPopUp hidden\">"
             + "<div class=\"pointyEdge\">"
             + "</div>Article usage statistics combine cumulative total PDF"
-            +	"downloads and full-text HTML views from publication"
-            + "date (but no earlier than 25 Jun 2011, launch date of"
-            +	"this website) to 08 Oct 2012. Article views are only"
-            + "counted from this site. Although these data are updated"
-            + "every 24 hours, there may be a 48-hour delay before the"
-            + "most recent numbers are available."
-            +	"</div>"
+            + " downloads and full-text HTML views from publication"
+            + " date (but no earlier than 25 Jun 2011, launch date of"
+            + " this website) to 08 Oct 2012. Article views are only"
+            + " counted from this site. Although these data are updated"
+            + " every 24 hours, there may be a 48-hour delay before the"
+            + " most recent numbers are available."
             + "</div>"
-            + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+            + "</div>"
+            + "<div class=\"block-2 sb-div\"></div>"
+            + "</div>";
 
-    private static final String articleUsageHtmlHashFiltered =
-        "<div id=\"footer\">"
-            + "<div class=\"block-1\">"
-            + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+    private static final String articleUsageHtmlHashFiltered = " ";
 
 
     private static final String javascriptHtmlHash = 
@@ -410,7 +380,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "<script type=\"text/javascript\" src=\"http://nejm.resultspage.com/autosuggest/searchbox_suggest_v1.js\" language=\"javascript\">Hello</script>";
     // Trailing space is due to the WhiteSpaceFilter
     private static final String javascriptHtmlHashFiltered = 
-        "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> ";
+        " ";
 
     private static final String googleStuffHtml = 
         "<td colspan=\"1\" style=\"border-style: none\">" +
@@ -445,12 +415,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "<div class=\"status-message\" style=\"display: none; \"></div>" +
             "</div>" +
             "</td>";
-    private static final String googleStuffFiltered = 
-        "<td colspan=\"1\" style=\"border-style: none\">" +
-            "<div>" +
-            "<a href=\"/action/clickThrough?id=blah\">Translator&nbsp;disclaimer</a>" +
-            "</div>" +
-            "</td>";
+    private static final String googleStuffFiltered = " Translator disclaimer ";
 
     private static final String socialMediaHtml = 
         "<div class=\"social clear\">" +
@@ -619,60 +584,9 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "</div>";
 
     private static final String tocEntryFiltered = 
-            "<div class=\"article original as2\">" +
-            "<div class=\"gutter\">" +
-            "<label for=\"10.1080/xxxx\">" +
-            "<a class=\"entryTitle\" href=\"/doi/full/10.1080/xxxx\">" +
-            "<h3>" +
-            "TITLE OF ARTICLE</h3>" +
-            "</a>" +
-            "</label>" +
-            "<span class=\"subtitle\">" +
-            "</span>" +
-            "<div >" +
-            "<a class=\"txt\" href=\"/doi/full/10.1080/xxxx\">" +
-            "View full text</a>" +
-            "<a class=\"pdf last\" href=\"/doi/pdf/10.1080/xxxx\">" +
-            "Download full text</a>" +
-            "</div>" +
-            "<ul class=\"clear doimetalist\">" +
-            "<li>" +
-            "<strong>" +
-            "DOI:</strong>" +
-            "10.1080/xxxx</li>" +
-            "<li>" +
-            "<strong>" +
-            "Published online:</strong>" +
-            " 25 Jan 2013</li>" +
-            "<li>" +
-            "<noscript>" +
-            "<br/>" +
-            "</noscript>" +            
-            "</li>" +
-            "</ul>" +
-            "<div class=\"ft\">" +
-            "<h6>" +
-            "Further Information</h6>" +
-            "<ul class=\"entryLinks clear\">" +
-            "<li class=\"firstEntryLink\">" +
-            "<a href=\"/doi/abs/10.1080/xxxx?queryID=%24%7BresultBean.queryID%7D\">" +
-            "Abstract</a>" +
-            "</li>" +
-            "<li>" +
-            "<a href=\"/doi/ref/10.1080/xxxx\">" +
-            "References</a>" +
-            "</li>" +
-            "<li class=\"relatedArticleLink\">" +
-            "<a href=\"/doi/mlt/10.1080/xxxx\">" +
-            "Related articles" +
-            "</a>" +
-            "</li>" +
-            "</ul>" +
-            "</div> " +
-            "<div class=\"clear floatclear\">" +
-            "</div>" +
-            "</div>" +
-            "</div>";
+            " TITLE OF ARTICLE Author &amp; OtherAuthor pages 1-60 View full text"
+            + " Download full text DOI: 10.1080/xxxx 25 Jan 2013 Further Information"
+            + " Abstract References Related articles ";
 
     // note lower case of "articles"
     private static final String citArticlesCase1 =
@@ -774,28 +688,6 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals(linkoutHtmlHashFiltered, StringUtil.fromInputStream(actIn));
     }
 
-    public void testLinkToHomePage() throws Exception {
-      assertEquals("",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("<a href=\"/\">" + rand() + "</a>"),
-              Constants.DEFAULT_ENCODING)));
-      assertEquals("",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("<a href=\"http://www.tandfonline.com\">" + rand() + "</a>"),
-              Constants.DEFAULT_ENCODING)));
-    }
-
-    public void testH4() throws Exception {
-      assertEquals("",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("<h4 class=\"" + rand() + "\">" + rand() + "</h4>"),
-              Constants.DEFAULT_ENCODING)));
-      assertEquals("",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("<h4>" + rand() + "</h4>"),
-              Constants.DEFAULT_ENCODING)));
-    }
-
     public void testCitations() throws Exception {
       assertEquals("",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
@@ -808,23 +700,23 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     }
 
     public void testDivIdContent() throws Exception {
-      assertEquals("<div id=\"content\">ABCDEFGHIJKLM</div>",
+      assertEquals(" ABCDEFGHIJKLM ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<div id=\"content\">ABCDEFGHIJKLM</div>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals("<div id=\"content\">ABCDEFGHIJKLM</div>",
+      assertEquals(" ABCDEFGHIJKLM ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<div id=\"journal_content\">ABCDEFGHIJKLM</div>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals("<div id=\"content\">ABCDEFGHIJKLM</div>",
+      assertEquals(" ABCDEFGHIJKLM ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<div id=\"tandf_content\">ABCDEFGHIJKLM</div>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals("<a href=\"#tandf_content\">ABCDEFGHIJKLM</a>",
+      assertEquals(" ABCDEFGHIJKLM ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<a href=\"#content\">ABCDEFGHIJKLM</a>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals("<a href=\"#tandf_content\">ABCDEFGHIJKLM</a>",
+      assertEquals(" ABCDEFGHIJKLM ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<a href=\"#tandf_content\">ABCDEFGHIJKLM</a>"),
               Constants.DEFAULT_ENCODING)));
@@ -934,42 +826,27 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
               Constants.DEFAULT_ENCODING)));
     }
 
-    public void testDivSpacing() throws Exception {
-      assertEquals("</div> <div class=\"foo\">",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("</div><div class=\"foo\">"),
-              Constants.DEFAULT_ENCODING)));
-      assertEquals("</div> <div class=\"foo\">",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("</div> <div class=\"foo\">"),
-              Constants.DEFAULT_ENCODING)));
-      assertEquals("</div> <div class=\"foo\">",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("</div>\n<div class=\"foo\">"),
-              Constants.DEFAULT_ENCODING)));
-      assertEquals("</div> <div class=\"foo\">",
-          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-              new StringInputStream("</div>   \n\n\n   <div class=\"foo\">"),
-              Constants.DEFAULT_ENCODING)));
-    }
-
     public void testVersionOfRecordFirstPublished() throws Exception {
-      assertEquals("<strong>Version of record first published:</strong>",
+      assertEquals("",
+          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+              new StringInputStream("<strong>Published online:</strong>"),
+              Constants.DEFAULT_ENCODING)));
+      assertEquals("",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<strong>Available online:</strong>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals("<strong>Version of record first published:</strong>",
+      assertEquals("",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<strong>Version of record first published:</strong>"),
               Constants.DEFAULT_ENCODING)));
     }
 
     public void testImgClassCover() throws Exception {
-      assertEquals("<p></p>",
+      assertEquals(" ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<p><img src=\"" + rand() + "\" alt=\"" + rand() + "\" class=\"cover\"/></p>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals("<p></p>",
+      assertEquals(" ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<p><img src=\"" + rand() + "\" alt=\"" + rand() + "\" class=\"cover\" /></p>"),
               Constants.DEFAULT_ENCODING)));
@@ -995,7 +872,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     }
 
     public void testHead() throws Exception {
-      assertEquals("<html></html>",
+      assertEquals(" ",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<html>"
                   + "<head>"
@@ -1040,8 +917,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
         fact.createFilteredInputStream(mau,
             new StringInputStream(relatedHtml),
             Constants.DEFAULT_ENCODING);
-    assertEquals(StringUtil.fromInputStream(actIn),
-        relatedHtmlFiltered);
+    assertEquals(relatedHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
   public void testNewsArticlesHtmlFiltering() throws Exception {
