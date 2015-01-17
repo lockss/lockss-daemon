@@ -274,4 +274,53 @@
     au < released ; 2013 ; 47 ; Therapeutic Recreation Journal Volume 47 ; 2013 >
     au < manifest ; 2014 ; 48 ; Therapeutic Recreation Journal Volume 48 ; 2014 >
   }
+  
+  {
+    title <
+      name = Journal of Health Education Teaching Techniques ;
+      issn = 2332-1008
+    >
+
+    param[journal_id] = jhett
+
+    au < exists ; 2014 ; 1 ; Journal of Health Education Teaching Techniques Volume 1 ; 2014 >
+  }
+  
+  {
+    title <
+      name = Journal of Nonprofit Education and Leadership
+    >
+
+    param[journal_id] = jnel
+
+    au < exists ; 2011 ; 1 ; Journal of Nonprofit Education and Leadership Volume 1 ; 2011 >
+    au < exists ; 2012 ; 2 ; Journal of Nonprofit Education and Leadership Volume 2 ; 2012 >
+    au < exists ; 2013 ; 3 ; Journal of Nonprofit Education and Leadership Volume 3 ; 2013 >
+    au < exists ; 2014 ; 4 ; Journal of Nonprofit Education and Leadership Volume 4 ; 2014 >
+  }
+  
+  {
+    title <
+      name = Learning Disabilities: A Multidisciplinary Journal
+    >
+
+    param[journal_id] = ldmj
+
+    au < exists ; 2012 ; 18 ; Learning Disabilities: A Multidisciplinary Journal Volume 18 ; 2012 >
+    au < exists ; 2013 ; 19 ; Learning Disabilities: A Multidisciplinary Journal Volume 19 ; 2013 >
+    au < exists ; 2014 ; 20 ; Learning Disabilities: A Multidisciplinary Journal Volume 20 ; 2014 >
+  }
+  {
+    title <
+      name = PALAESTRA
+    >
+
+    param[journal_id] = palaestra
+
+    au < exists ; 2010 ; 24 ; PALAESTRA Volume 24 ; 2010 >
+    au < exists ; 2011 ; 25 ; PALAESTRA Volume 25 ; 2011 >
+    au < exists ; 2012 ; 26 ; PALAESTRA Volume 26 ; 2012 >
+    au < exists ; 2013 ; 27 ; PALAESTRA Volume 27 ; 2013 >
+    au < exists ; 2014 ; 28 ; PALAESTRA Volume 28 ; 2014 >
+  }
 }
