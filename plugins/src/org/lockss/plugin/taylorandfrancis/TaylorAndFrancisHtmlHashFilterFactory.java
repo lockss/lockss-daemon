@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.20 2015-01-17 00:29:58 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.21 2015-01-17 02:14:58 thib_gc Exp $
  */
 
 /*
@@ -114,10 +114,20 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // Google Translate related stuff
         HtmlNodeFilters.tagWithAttribute("div", "id", "google_translate_element"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "goog-gt-tt"),
+        HtmlNodeFilters.tagWithText("a", "Translator disclaimer"),
+        HtmlNodeFilters.tagWithText("a", "Translator&nbsp;disclaimer"),
         // Variants of "Search related articles" tag sequence, added later 
         HtmlNodeFilters.tagWithText("h3", "Related articles"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "relatedLink"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "searchRelatedLink"),
+        HtmlNodeFilters.tagWithAttribute("li", "class", "relatedArticleLink"), // TOC in 'Further Information': wording change
+        // Form at the bottom of downloadCitation pages with RIS data in a <textarea>;
+        // the RIS data itself has a Y2 tag that changes at every fetch
+        HtmlNodeFilters.tagWithAttribute("form", "name", "refworks"),
+        // TOC: wording change
+        HtmlNodeFilters.tagWithText("a", "Sample copy"),
+        HtmlNodeFilters.tagWithText("a", "Sample this title"),
+        
         
         /*
          * ?? 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.21 2015-01-17 00:29:58 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.22 2015-01-17 02:14:58 thib_gc Exp $
  */
 
 /*
@@ -415,7 +415,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "<div class=\"status-message\" style=\"display: none; \"></div>" +
             "</div>" +
             "</td>";
-    private static final String googleStuffFiltered = " Translator disclaimer ";
+    private static final String googleStuffFiltered = " ";
 
     private static final String socialMediaHtml = 
         "<div class=\"social clear\">" +
@@ -586,7 +586,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     private static final String tocEntryFiltered = 
             " TITLE OF ARTICLE Author &amp; OtherAuthor pages 1-60 View full text"
             + " Download full text DOI: 10.1080/xxxx 25 Jan 2013 Further Information"
-            + " Abstract References Related articles ";
+            + " Abstract References ";
 
     // note lower case of "articles"
     private static final String citArticlesCase1 =
