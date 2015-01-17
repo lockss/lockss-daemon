@@ -13177,6 +13177,13 @@
     param[base_url] = http://jmammal.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
 
+    au < exists ; exists ; 2000 ; Journal of Mammalogy Volume 81 ; 81 ; >
+    au < exists ; exists ; 2001 ; Journal of Mammalogy Volume 82 ; 82 ; >
+    au < exists ; exists ; 2002 ; Journal of Mammalogy Volume 83 ; 83 ; >
+    au < exists ; exists ; 2003 ; Journal of Mammalogy Volume 84 ; 84 ; >
+    au < exists ; exists ; 2004 ; Journal of Mammalogy Volume 85 ; 85 ; >
+    au < exists ; exists ; 2005 ; Journal of Mammalogy Volume 86 ; 86 ; >
+    au < manifest ; exists ; 2006 ; Journal of Mammalogy Volume 87 ; 87 ; >
     au < manifest ; exists ; 2007 ; Journal of Mammalogy Volume 88 ; 88 ; >
     au < manifest ; exists ; 2008 ; Journal of Mammalogy Volume 89 ; 89 ; >
     au < manifest ; exists ; 2009 ; Journal of Mammalogy Volume 90 ; 90 ; >
