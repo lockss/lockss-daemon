@@ -9,6 +9,10 @@
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
     param[base_url] = http://inderscience.metapress.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
+    comment[error0] = for multiple charsets on page. For example: http://inderscience.metapress.com/content/e43jr3v2t0m6724t/fulltext.html 
+    comment[error1] = add this to the title attr[EncodingMatchRange]=200
+
 
     {
 
@@ -2261,7 +2265,6 @@
       >
 
       param[journal_issn] = 1752-3591
-      attr[EncodingMatchRange]=200
       
       au < manifest ; exists ; 2007-2008 ;  International Journal of Dynamical Systems and Differential Equations Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
@@ -2814,7 +2817,6 @@
 
       param[journal_issn] = 1741-8054
       comment[doNotProcess] = wait for daemon 1.63 because of Unable to sync new encoding within range of +/- 100 chars
-      attr[EncodingMatchRange]=200
       
       au < manifest ; exists ; 2004 ; International Journal of Entrepreneurship and Small Business Volume 1 ; 1 >
       au < manifest ; exists ; 2005 ; International Journal of Entrepreneurship and Small Business Volume 2 ; 2 >
@@ -5072,7 +5074,6 @@
       >
 
       param[journal_issn] = 1741-5209
-      attr[EncodingMatchRange]=200
       
       au < manifest ; exists ; 1986 ; International Journal of Materials and Product Technology Volume 1 ; 1 >
       au < manifest ; exists ; 1987 ; International Journal of Materials and Product Technology Volume 2 ; 2 >
@@ -5474,7 +5475,6 @@
       >
 
       param[journal_issn] = 1746-6180
-      attr[EncodingMatchRange]=200
       
       au < manifest ; exists ; 2006 ; International Journal of Modelling, Identification and Control Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; International Journal of Modelling, Identification and Control Volume 2 ; 2 >
@@ -6466,7 +6466,6 @@
       >
 
       param[journal_issn] = 1755-0564
-      attr[EncodingMatchRange]=200
       
       comment[vol5] = notReady multiple charsets on page. http://inderscience.metapress.com/content/e43jr3v2t0m6724t/fulltext.html 
       
