@@ -1,10 +1,10 @@
 /*
- * $Id: PalgraveBookEpubFilterFactory.java,v 1.1 2014-09-05 19:00:19 thib_gc Exp $
+ * $Id: PalgraveBookEpubFilterFactory.java,v 1.2 2015-01-20 21:04:54 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.palgrave;
 
 import java.io.*;
+import java.util.*;
 import java.util.zip.ZipEntry;
 
 import org.lockss.daemon.PluginException;
@@ -40,6 +41,12 @@ import org.lockss.plugin.*;
 
 public class PalgraveBookEpubFilterFactory implements FilterFactory {
 
+  protected static final Set<String> badPaths = new HashSet<String>(Arrays.asList(
+      "META-INF/pc-license.xml",
+      "OPS/pc-cover.html",
+      "OEBPS/pc-cover.html"
+  ));
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -49,8 +56,7 @@ public class PalgraveBookEpubFilterFactory implements FilterFactory {
       @Override
       public boolean keepZipEntry(ZipEntry zipEntry) {
         String name = zipEntry.getName();
-        return    !"META-INF/pc-license.xml".equals(name)
-               && !"OPS/pc-cover.html".equals(name);
+        return !badPaths.contains(name);
       }
     };
   }
