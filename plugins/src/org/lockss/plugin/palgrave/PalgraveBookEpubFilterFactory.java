@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookEpubFilterFactory.java,v 1.2 2015-01-20 21:04:54 thib_gc Exp $
+ * $Id: PalgraveBookEpubFilterFactory.java,v 1.3 2015-01-20 21:15:38 thib_gc Exp $
  */
 
 /*
@@ -32,33 +32,23 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.palgrave;
 
-import java.io.*;
-import java.util.*;
-import java.util.zip.ZipEntry;
+import java.io.InputStream;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.ZipFilterInputStream;
 import org.lockss.plugin.*;
 
 public class PalgraveBookEpubFilterFactory implements FilterFactory {
 
-  protected static final Set<String> badPaths = new HashSet<String>(Arrays.asList(
-      "META-INF/pc-license.xml",
-      "OPS/pc-cover.html",
-      "OEBPS/pc-cover.html"
-  ));
-  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return new ZipFilterInputStream(in) {
-      @Override
-      public boolean keepZipEntry(ZipEntry zipEntry) {
-        String name = zipEntry.getName();
-        return !badPaths.contains(name);
-      }
-    };
+    return ZipFilterInputStream.skipFiles(in,
+                                          "META-INF/pc-license.xml",
+                                          "OPS/pc-cover.html",
+                                          "OEBPS/pc-cover.html");
   }
 
 }
