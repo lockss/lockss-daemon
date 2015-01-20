@@ -105,10 +105,8 @@
       <string>1,"^https?://%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
       <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
       <string>1,"^%stoc/%s(\.[0-9]+)?/%s($|/)", base_url, journal_id, volume_name</string>
-      <string>2,"^%sdoi/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
-      <string>2,"^%sdoi/[^/]+/[0-9.]+/null\?", base_url</string>      
-      <string>2,"^%sdoi/.*\?tab=permissions", base_url</string>      
-      <string>2,"^%sdoi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D)$", base_url</string>  
+      <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
+      <string>2,"^%sdoi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", base_url</string>  
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
       <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string>          
