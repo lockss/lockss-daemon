@@ -108,8 +108,7 @@
       <string>2,"^%sdoi/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
       <string>2,"^%sdoi/[^/]+/[0-9.]+/null\?", base_url</string>      
       <string>2,"^%sdoi/.*\?tab=permissions", base_url</string>      
-      <string>2,"^%sdoi/.*\?prevSearch=$", base_url</string>  
-      <string>2,"^%sdoi/.*\?queryID=%%24%%7BresultBean.queryID%%7D$", base_url</string>    
+      <string>2,"^%sdoi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D)$", base_url</string>  
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
       <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string>          
