@@ -285,7 +285,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Ophthalmic Practice Volume 3 ; 3 >
     au < manifest ; exists ; 2013 ; International Journal of Ophthalmic Practice Volume 4 ; 4 >
     au < manifest ; exists ; 2014 ; International Journal of Ophthalmic Practice Volume 5 ; 5 >
-    
+
   }
 
   {
@@ -296,8 +296,13 @@
     >
     
     comment[base_url] = http://www.ijpn.co.uk/
+    param[journal_id] = ijpn
 
-    
+    au < exists ; exists ; 2011 ; International Journal of Palliative Nursing Volume 17 ; 17 >
+    au < exists ; exists ; 2012 ; International Journal of Palliative Nursing Volume 18 ; 18 >
+    au < exists ; exists ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 >
+    au < exists ; exists ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 >
+
   }
 
   {
@@ -308,8 +313,13 @@
     >
     
     comment[base_url] = http://www.ijtr.co.uk/
+    param[journal_id] = ijtr
 
-    
+    au < exists ; exists ; 2011 ; International Journal of Therapy and Rehabilitation Volume 18 ; 18 >
+    au < exists ; exists ; 2012 ; International Journal of Therapy and Rehabilitation Volume 19 ; 19 >
+    au < exists ; exists ; 2013 ; International Journal of Therapy and Rehabilitation Volume 20 ; 20 >
+    au < exists ; exists ; 2014 ; International Journal of Therapy and Rehabilitation Volume 21 ; 21 >
+
   }
 
   {
@@ -319,8 +329,13 @@
     >
     
     comment[base_url] = http://www.internationaljpp.com/
+    param[journal_id] = ippr
 
-    
+    au < exists ; exists ; 2011 ; International Paramedic Practice Volume 18 ; 18 >
+    au < exists ; exists ; 2012 ; International Paramedic Practice Volume 19 ; 19 >
+    au < exists ; exists ; 2013 ; International Paramedic Practice Volume 20 ; 20 >
+    au < exists ; exists ; 2014 ; International Paramedic Practice Volume 21 ; 21 >
+
   }
 
   {
@@ -331,8 +346,12 @@
     >
     
     comment[base_url] = http://www.aestheticnursing.co.uk/
+    param[journal_id] = joan
 
-    
+    au < exists ; exists ; 2012 ; Journal of Aesthetic Nursing Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; Journal of Aesthetic Nursing Volume 2 ; 2 >
+    au < exists ; exists ; 2014 ; Journal of Aesthetic Nursing Volume 3 ; 3 >
+
   }
 
   {
@@ -342,10 +361,11 @@
       eissn = 2052-2886 
     >
     
-    comment[base_url] = 
-    comment[0] = website is not up yet
+    comment[base_url] = ???
+    param[journal_id] = jcyn
+    au < exists ; exists ; 2007 ; Journal of Children's and Young People's Nursing Volume 1 ; 1 >
+    au < exists ; exists ; 2008 ; Journal of Children's and Young People's Nursing Volume 2 ; 2 >
 
-    
   }
 
   {
@@ -356,8 +376,11 @@
     >
     
     comment[base_url] = http://www.journalofhealthvisiting.com/
+    param[journal_id] = johv
 
-    
+    au < exists ; exists ; 2013 ; Journal of Health Visiting Volume 1 ; 1 >
+    au < exists ; exists ; 2014 ; Journal of Health Visiting Volume 2 ; 2 >
+
   }
 
   {
@@ -368,8 +391,13 @@
     >
     
     comment[base_url] = http://www.paramedicpractice.com/
+    param[journal_id] = jpar
 
-    
+    au < exists ; exists ; 2011 ; Journal of Paramedic Practice Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Paramedic Practice Volume 4 ; 4 >
+    au < exists ; exists ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 >
+
   }
 
   {
@@ -380,8 +408,13 @@
     >
     
     comment[base_url] = http://www.renalnursing.co.uk/
+    param[journal_id] = jorn
 
-    
+    au < exists ; exists ; 2011 ; Journal of Renal Nursing Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Renal Nursing Volume 4 ; 4 >
+    au < exists ; exists ; 2013 ; Journal of Renal Nursing Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; Journal of Renal Nursing Volume 6 ; 6 >
+
   }
 
   {
@@ -392,8 +425,13 @@
     >
     
     comment[base_url] = http://www.journalofwoundcare.com/
+    param[journal_id] = jowc
 
-    
+    au < exists ; exists ; 2011 ; Journal of Renal Nursing Volume 20 ; 20 >
+    au < exists ; exists ; 2012 ; Journal of Renal Nursing Volume 21 ; 21 >
+    au < exists ; exists ; 2013 ; Journal of Renal Nursing Volume 22 ; 22 >
+    au < exists ; exists ; 2014 ; Journal of Renal Nursing Volume 23 ; 23 >
+
   }
  
   {
@@ -404,8 +442,13 @@
     >
     
     comment[base_url] = http://www.nurseprescribing.com/
+    param[journal_id] = npre
 
-    
+    au < exists ; exists ; 2011 ; Nurse Prescribing Volume 9 ; 9 >
+    au < exists ; exists ; 2012 ; Nurse Prescribing Volume 10 ; 10 >
+    au < exists ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 >
+    au < exists ; exists ; 2014 ; Nurse Prescribing Volume 12 ; 12 >
+
   }
  
   {
@@ -416,8 +459,13 @@
     >
     
     comment[base_url] = http://www.nursingresidentialcare.com/
+    param[journal_id] = npre
 
-    
+    au < exists ; exists ; 2011 ; Nurse Prescribing Volume 9 ; 9 >
+    au < exists ; exists ; 2012 ; Nurse Prescribing Volume 10 ; 10 >
+    au < exists ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 >
+    au < exists ; exists ; 2014 ; Nurse Prescribing Volume 12 ; 12 >
+
   }
  
   {
@@ -428,8 +476,13 @@
     >
     
     comment[base_url] = http://www.practicenursing.com/
+    param[journal_id] = pnur
 
-    
+    au < exists ; exists ; 2011 ; Practice Nursing Volume 22 ; 22 >
+    au < exists ; exists ; 2012 ; Practice Nursing Volume 23 ; 23 >
+    au < exists ; exists ; 2013 ; Practice Nursing Volume 24 ; 24 >
+    au < exists ; exists ; 2014 ; Practice Nursing Volume 25 ; 25 >
+
   }
  
   {
@@ -440,9 +493,13 @@
     >
     
     comment[base_url] = http://www.ukvet.co.uk/view/caHome.html
-    comment[0] = need to update base_url
+    param[journal_id] = coan
 
-    
+    au < exists ; exists ; 2011 ; Companion Animal Volume 16 ; 16 >
+    au < exists ; exists ; 2012 ; Companion Animal Volume 17 ; 17 >
+    au < exists ; exists ; 2013 ; Companion Animal Volume 18 ; 18 >
+    au < exists ; exists ; 2014 ; Companion Animal Volume 19 ; 19 >
+
   }
  
   {
@@ -453,8 +510,10 @@
     >
     
     comment[base_url] = http://www.equinehealthmagazine.com/
+    param[journal_id] = eqhe
 
-    
+    au < exists ; exists ; 2014 ; Companion Animal Volume 1 ; 1 >
+
   }
  
   {
@@ -465,9 +524,13 @@
     >
     
     comment[base_url] = http://www.ukvet.co.uk/view/lsHome.html
-    comment[0] = need to update base_url
+    param[journal_id] = live
 
-    
+    au < exists ; exists ; 2011 ; Livestock Volume 16 ; 16 >
+    au < exists ; exists ; 2012 ; Livestock Volume 17 ; 17 >
+    au < exists ; exists ; 2013 ; Livestock Volume 18 ; 18 >
+    au < exists ; exists ; 2014 ; Livestock Volume 19 ; 19 >
+
   }
  
   {
