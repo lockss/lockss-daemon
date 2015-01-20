@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.11 2014-11-12 20:11:54 wkwilson Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.12 2015-01-20 21:33:00 alexandraohlson Exp $
  */
 
 /*
@@ -143,6 +143,33 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     // LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, ABAu, cus);
     // other sites
+    
+    // Later addition of crawl rules to avoid polling things we no longer collect or that we normalize off
+    // this is normalized off but does exist in some aus from early crawls
+    shouldCacheTest(ROOT_URL + "doi/abs/10.5504/50YRTIMB.2011.0036?queryID=%24%7BresultBean.queryID%7D", 
+        false, ABAu, cus);
+    // but if it were part of a doiname
+    shouldCacheTest(ROOT_URL + "doi/abs/10.5504/50YRTIMB.2011.0036queryIDresultBean_name", 
+        true, ABAu, cus);
+    // no longer accepted citation formats
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=bibtex&include=cit", 
+        false, ABAu, cus);
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=medlars&include=cit", 
+        false, ABAu, cus);
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=endnote&include=cit", 
+        false, ABAu, cus);
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=refworks&include=cit", 
+        false, ABAu, cus);
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=refworks=cn&include=cit", 
+        false, ABAu, cus);
+    //no longer accepted include types.  we allow abs and cit, but not ref
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=ris&include=abs", 
+        true, ABAu, cus);
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=ris&include=ref", 
+        false, ABAu, cus);
+    // this one is valid 
+    shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=ris&include=cit", 
+        true, ABAu, cus);
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,

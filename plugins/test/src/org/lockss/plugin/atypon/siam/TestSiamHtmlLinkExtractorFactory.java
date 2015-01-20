@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlLinkExtractorFactory.java,v 1.2 2013-08-30 22:45:58 alexandraohlson Exp $
+ * $Id: TestSiamHtmlLinkExtractorFactory.java,v 1.3 2015-01-20 21:33:00 alexandraohlson Exp $
  */
 /*
 
@@ -110,17 +110,19 @@ public class TestSiamHtmlLinkExtractorFactory extends LockssTestCase {
       
   public void testCitationsForm() throws Exception {
     expectedUrls = SetUtil.set(
-        SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=ris&include=cit",
+        SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=ris&include=cit"
+        /*,
         SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=bibtex&include=cit",
         SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=endnote&include=cit",
-        SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=medlars&include=cit");      
+        SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=medlars&include=cit"*/);      
     String norm_url;
     Set<String> result_strings = parseSingleSource(citationForm);
     Set<String> norm_urls = new HashSet<String>();
     
     // if the additional SIAM restriction didn't work, you would end up with 12 URLS due to duplication 
     // refworks and refworks-cn is restricted out by base atypon 
-    assertEquals(4, result_strings.size());
+    // base atypon now excludes all formats except ris
+    assertEquals(1, result_strings.size());
 
     for (String url : result_strings) {
       norm_url = normalizer.normalizeUrl(url, m_mau);

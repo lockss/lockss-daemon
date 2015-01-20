@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
    <entry>
     <string>plugin_publishing_platform</string>
@@ -34,7 +34,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>17</string>
+        <string>18</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -88,9 +88,12 @@
     - exclude the article with the search highlight turned off. It's redundant (BioOneAtypon)
     - exclude the citedBy tab of an article by not explicitly allowing it in the next rule
     - exclude the "mlt" (related articles) page (see: http://www.tandfonline.com/toc/rama20/7/1)
+
     - include the article in all possible formats - which live under non-deterministic DOI path; do not terminate, could go deeper
     - use basic DOI pattern, to whit: PREFIX = one or more digits and dots [0-9.]+; SUFFIX = not a slash
     - The following may not be needed by all Atypon publishers, but won't hurt:
+    - exclude the article ending with a suffix that is now normalized off to handle previously collected
+    - allow only downloadCitation format=ris and include=cit or abs in order to ignore previously collected mismatch
     - exclude a doi/<type>/<DOIprefix>/null?sequence=.... (taylor&francis)
     - exclude the popup image if the id is null (bioOneAtypon)        
     - some publishers show in-line images in larger format using URL with show*Image and variations for other formats
@@ -105,10 +108,12 @@
       <string>2,"^%sdoi/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
       <string>2,"^%sdoi/[^/]+/[0-9.]+/null\?", base_url</string>      
       <string>2,"^%sdoi/.*\?tab=permissions", base_url</string>      
-      <string>2,"^%sdoi/.*\?prevSearch=$", base_url</string>      
+      <string>2,"^%sdoi/.*\?prevSearch=$", base_url</string>  
+      <string>2,"^%sdoi/.*\?queryID=%%24%%7BresultBean.queryID%%7D$", base_url</string>    
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
       <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
-      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup|downloadCitation)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
+      <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string>          
+      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
     </list>
   </entry>
   <entry>

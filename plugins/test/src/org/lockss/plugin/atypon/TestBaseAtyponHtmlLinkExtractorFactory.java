@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.7 2014-12-23 19:16:30 alexandraohlson Exp $
+ * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.8 2015-01-20 21:33:00 alexandraohlson Exp $
  */
 /*
 
@@ -147,23 +147,29 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
   /* Since this sample form comes from SIAM this is very similar to the TestSiamHtmLinkExtractor, but 
    * since this is the less restricted BaseAtyponHtnlLinkExtractor there are more expected URLs so it's
    * not exactly the same test.
+   * 
+   * Newly implmemented - we ONLY want to collect urls that are format=ris&include=cit. 
+   * exclude all others
    */
 
   public void testCitationsForm() throws Exception {
     UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
     expectedUrls = SetUtil.set(
         BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=ris&include=cit",
-        BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=bibtex&include=cit",
+/*        BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=bibtex&include=cit",
         BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks&include=cit",
         BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks-cn&include=cit",
         BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=endnote&include=cit",
         BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=medlars&include=cit",     
-        BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=ris&include=cit",
-        BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=bibtex&include=cit",
+*/     
+        BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=ris&include=cit"
+/*        BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=bibtex&include=cit",
         BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks&include=cit",
         BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks-cn&include=cit",
         BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=endnote&include=cit",
-        BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=medlars&include=cit");      
+        BASE_URL + "action/downloadCitation?direct=on&doi=" + DOI_START + "%2F" + DOI_END + "&format=medlars&include=cit"
+*/        
+        );      
 
 
     String norm_url;
@@ -172,13 +178,14 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
     final String refworks_url = BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks&include=cit";
     final String refworks_cn_url = BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks-cn&include=cit";
 
+    assertEquals(2, result_strings.size());
     for (String url : result_strings) {
       norm_url = normalizer.normalizeUrl(url, m_mau);
       log.debug3("normalized citation form URL: " + norm_url);
       assertTrue(expectedUrls.contains(norm_url));
       norm_urls.add(norm_url);
     }
-    // these two were excluded by BaseAtypon
+    // these were all excluded by BaseAtypon
     assertFalse(norm_urls.contains(refworks_url)); 
     assertFalse(norm_urls.contains(refworks_cn_url));
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.7 2015-01-13 00:02:52 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.8 2015-01-20 21:33:00 alexandraohlson Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ implements LinkExtractorFactory {
    */
   private Map<String, HtmlFormExtractor.FormFieldRestrictions> setUpBaseRestrictor() {
     Set<String> include = new HashSet<String>();
-    Set<String> exclude = new HashSet<String>();
+    Set<String> exclude_args = new HashSet<String>();
     Map<String, HtmlFormExtractor.FormFieldRestrictions> restrictor
     = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
 
@@ -176,10 +176,25 @@ implements LinkExtractorFactory {
     HtmlFormExtractor.FormFieldRestrictions include_restrictions = new HtmlFormExtractor.FormFieldRestrictions(include,null);
     restrictor.put(HtmlFormExtractor.FORM_NAME, include_restrictions);
 
+    /* 
+     * For downloadCitation urls, such as:
+     *     "action/downloadCitation?doi=10.1111%2F123456&format=ris&include=cit",
+     * we only want to include: format=ris & include=cit
+     * but do this by excluding the usual alternatives instead of just including what we want
+     * so that in the cases where there is only ONE choice and therefore no specific arguments, 
+     * we still get the one default option (normalized to have the right arguments for the crawl rules) 
+     */
+    
     /* now set up an exclude restriction on "format" */ 
-    exclude = SetUtil.fromCSV("refworks,refworks-cn"); 
-    HtmlFormExtractor.FormFieldRestrictions exclude_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null, exclude);
+    exclude_args = SetUtil.fromCSV("refworks,refworks-cn,bibtex,medlars,endnote"); 
+    HtmlFormExtractor.FormFieldRestrictions exclude_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null, exclude_args);
     restrictor.put("format", exclude_restrictions);
+    
+    /* now set up an exclude restriction on "include" */
+    exclude_args = SetUtil.fromCSV("ref,abs"); 
+    exclude_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null, exclude_args);
+    restrictor.put("include", exclude_restrictions);
+
 
     return restrictor;
   }
