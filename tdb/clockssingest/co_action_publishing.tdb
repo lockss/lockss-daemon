@@ -196,7 +196,7 @@
     param[journal_id] = ecrj
 
     au < manifest ; exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
-    au < expected ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
+    au < manifest ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
 
   }
 
@@ -296,7 +296,7 @@
     au < finished ; crawling ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 ; 2013 >
     au < manifest ; exists ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 ; 2014 >
-    au < expected ; exists ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 ; 2015 >
+    au < manifest ; exists ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 ; 2015 >
   }
   
   {
@@ -443,7 +443,7 @@
     au < finished ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 >
 
   }
 
@@ -716,7 +716,7 @@
     au < finished ; crawling ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
     au < crawling ; exists ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; 2013 >
     au < manifest ; exists ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; 2014 >
-    au < expected ; exists ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; 2015 >
+    au < manifest ; exists ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; 2015 >
 
   }
 
