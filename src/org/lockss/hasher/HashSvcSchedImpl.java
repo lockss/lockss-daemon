@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.29 2015-01-20 18:52:19 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.30 2015-01-20 22:12:08 tlipkis Exp $
  */
 
 /*
@@ -254,7 +254,7 @@ public class HashSvcSchedImpl
       this.hashCallback = hashCallback;
       this.urlsetHasher = urlsetHasher;
       typeString = urlsetHasher.typeString();
-      isRecalcEstimateHash = urlsetHasher.typeString().startsWith("E");
+      isRecalcEstimateHash = typeString.startsWith("E");
     }
 
     public String typeString() {
