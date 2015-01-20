@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.21 2015-01-17 02:14:58 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.22 2015-01-20 22:38:46 thib_gc Exp $
  */
 
 /*
@@ -121,9 +121,10 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "class", "relatedLink"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "searchRelatedLink"),
         HtmlNodeFilters.tagWithAttribute("li", "class", "relatedArticleLink"), // TOC in 'Further Information': wording change
-        // Form at the bottom of downloadCitation pages with RIS data in a <textarea>;
-        // the RIS data itself has a Y2 tag that changes at every fetch
-        HtmlNodeFilters.tagWithAttribute("form", "name", "refworks"),
+        // (no longer needed because we no longer get Refworks citation files)
+//        // Form at the bottom of downloadCitation pages with RIS data in a <textarea>;
+//        // the RIS data itself has a Y2 tag that changes at every fetch
+//        HtmlNodeFilters.tagWithAttribute("form", "name", "refworks"),
         // TOC: wording change
         HtmlNodeFilters.tagWithText("a", "Sample copy"),
         HtmlNodeFilters.tagWithText("a", "Sample this title"),
@@ -141,6 +142,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"),
         // Counterpart of the previous clause when there is no integrated SFX
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
+        // (no longer needed because we strip out inner tag content)
 //        // These two equivalent links are found (this is not a regex)
 //        HtmlNodeFilters.tagWithAttribute("a", "href", "/"),
 //        HtmlNodeFilters.tagWithAttribute("a", "href", "http://www.tandfonline.com"),
@@ -166,6 +168,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("input", "id", "singleHighlightColor"),
     };
     
+    // (no longer needed because we strip out inner tag content)
 //    HtmlTransform xform = new HtmlTransform() {
 //      @Override
 //      public NodeList transform(NodeList nodeList) throws IOException {
@@ -328,8 +331,9 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 
     Reader stringFilter = StringFilter.makeNestedFilter(reader,
                                                         new String[][] {
-        // Alternates over time
+        // Typographical changes over time
         {"&nbsp;", " "},
+        {" ,", ","}, // in inline citations
         // Wording change over time
         {"<strong>Published online:</strong>"},
         {"<strong>Available online:</strong>"},
@@ -338,18 +342,14 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(stringFilter,
                                                       Arrays.asList(
-        // Two alternate forms of citation links (no easy to characterize in the DOM)
-        // the final argument "true" is to ignore case. Yes, case can vary
+        // Alternate forms of citation links (no easy to characterize in the DOM)
         new TagPair("<li><strong>Citations:", "</li>", true),
         new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>", true),
-        // Added to some articles later
         new TagPair("<li><strong>Citation information:", "</li>", true),
-        // toc/rama20/7/1 - new wording; 
-        // different case toc/wjsa21/37/2
         new TagPair("<li><div><strong>Citing Articles:", "</li>", true)
-        //<li><div><strong>Citing articles:</strong> 0</div></li>
     ));
     
+    // (no longer needed because we strip out inner tag content)
 //    stringFilter = new StringFilter(stringFilter,
 //                                    "</div><div",
 //                                    "</div> <div");
@@ -361,10 +361,10 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
     return new ReaderInputStream(new WhiteSpaceFilter(noTagFilter));
   }
 
-  public static void main(String[] args) throws Exception {
-    String file = "/tmp/q6/file-b2";
-    IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-                 new FileOutputStream(file + ".out"));
-  }
+//  public static void main(String[] args) throws Exception {
+//    String file = "/tmp/q6/file-b2";
+//    IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+//                 new FileOutputStream(file + ".out"));
+//  }
   
 }
