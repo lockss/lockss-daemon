@@ -1921,15 +1921,15 @@
     param[base_url] = http://amt.oxfordjournals.org/
     pluginSuffix = ClockssHighWireDrupalPlugin
 
-    au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 24 ; 24 ; >
-    au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 25 ; 25 ; >
     au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 26 ; 26 ; >
-    au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 27 ; 27 ; >
     au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 28 ; 28 ; >
-    au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 29 ; 29 ; >
-    au < exists ; exists ; 2005 ; Arthropod Management Tests Volume 30 ; 30 ; >
-    au < exists ; exists ; 2006 ; Arthropod Management Tests Volume 31 ; 31 ; >
-    au < exists ; exists ; 2007 ; Arthropod Management Tests Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2005 ; Arthropod Management Tests Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2006 ; Arthropod Management Tests Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2007 ; Arthropod Management Tests Volume 32 ; 32 ; >
     au < exists ; exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ; >
     au < manifest ; exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
     au < manifest ; exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ; >
@@ -2549,7 +2549,7 @@
     au < finished ; crawling ; 2012 ; Briefings in Bioinformatics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Briefings in Bioinformatics Volume 14 ; 14 ; >
     au < crawling ; exists ; 2014 ; Briefings in Bioinformatics Volume 15 ; 15 ; >
-    au < expected ; exists ; 2015 ; Briefings in Bioinformatics Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2015 ; Briefings in Bioinformatics Volume 16 ; 16 ; >
 
     }
 
@@ -3640,7 +3640,7 @@
     au < finished ; crawling ; 2012 ; Capital Markets Law Journal Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ; >
-    au < expected ; exists ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ; >
 
     }
 
@@ -3705,7 +3705,7 @@
     au < finished ; crawling ; 2012 ; Carcinogenesis Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; Carcinogenesis Volume 34 ; 34 ; >
     au < crawling ; exists ; 2014 ; Carcinogenesis Volume 35 ; 35 ; >
-    au < expected ; exists ; 2015 ; Carcinogenesis Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2015 ; Carcinogenesis Volume 36 ; 36 ; >
 
     }
 
@@ -4417,7 +4417,7 @@
     au < finished ; frozen ; 2012 ; Community Development Journal Volume 47 ; 47 ; >
     au < crawling ; exists ; 2013 ; Community Development Journal Volume 48 ; 48 ; >
     au < crawling ; exists ; 2014 ; Community Development Journal Volume 49 ; 49 ; >
-    au < expected ; exists ; 2015 ; Community Development Journal Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2015 ; Community Development Journal Volume 50 ; 50 ; >
 
     }
 
@@ -5400,7 +5400,7 @@
     au < finished ; frozen ; 2012 ; Environmental History Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Environmental History Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 2014 ; Environmental History Volume 19 ; 19 ; >
-    au < expected ; exists ; 2015 ; Environmental History Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2015 ; Environmental History Volume 20 ; 20 ; >
 
   }
 
@@ -6276,7 +6276,7 @@
     au < finished ; frozen ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; European Review of Economic History Volume 17 ; 17 ; >
     au < crawling ; exists ; 2014 ; European Review of Economic History Volume 18 ; 18 ; >
-    au < expected ; exists ; 2015 ; European Review of Economic History Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2015 ; European Review of Economic History Volume 19 ; 19 ; >
 
   }
 
@@ -6446,22 +6446,22 @@
     pluginSuffix = ClockssHighWireDrupalPlugin
     comment[backcontent] = 1993 volume 6 to 1999 volume 26
 
-    au < exists ; exists ; 1993 ; FEMS Immunology & Medical Microbiology Volume 6 ; 6 ; >
-    au < exists ; exists ; 1993 ; FEMS Immunology & Medical Microbiology Volume 7 ; 7 ; >
-    au < exists ; exists ; 1994 ; FEMS Immunology & Medical Microbiology Volume 8 ; 8 ; >
-    au < exists ; exists ; 1994 ; FEMS Immunology & Medical Microbiology Volume 9 ; 9 ; >
-    au < exists ; exists ; 1994-1995 ; FEMS Immunology & Medical Microbiology Volume 10 ; 10 ; >
-    au < exists ; exists ; 1995 ; FEMS Immunology & Medical Microbiology Volume 11 ; 11 ; >
-    au < exists ; exists ; 1995 ; FEMS Immunology & Medical Microbiology Volume 12 ; 12 ; >
-    au < exists ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 13 ; 13 ; >
-    au < exists ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 14 ; 14 ; >
-    au < exists ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 15 ; 15 ; >
-    au < exists ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 16 ; 16 ; >
-    au < exists ; exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 17 ; 17 ; >
-    au < exists ; exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 18 ; 18 ; >
-    au < exists ; exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 19 ; 19 ; >
-    au < exists ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 20 ; 20 ; >
-    au < exists ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1993 ; FEMS Immunology & Medical Microbiology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1993 ; FEMS Immunology & Medical Microbiology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1994 ; FEMS Immunology & Medical Microbiology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1994 ; FEMS Immunology & Medical Microbiology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1994-1995 ; FEMS Immunology & Medical Microbiology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1995 ; FEMS Immunology & Medical Microbiology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1995 ; FEMS Immunology & Medical Microbiology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 21 ; 21 ; >
     au < manifest ; exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 22 ; 22 ; >
     au < manifest ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 23 ; 23 ; >
     au < manifest ; exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 24 ; 24 ; >
@@ -6872,7 +6872,7 @@
     au < manifest ; exists ; 2012 ; FEMS Microbiology Reviews Volume 36 ; 36 ; >
     au < manifest ; exists ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 ; >
     au < manifest ; exists ; 2014 ; FEMS Microbiology Reviews Volume 38 ; 38 ; >
-    au < expected ; exists ; 2015 ; FEMS Microbiology Reviews Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2015 ; FEMS Microbiology Reviews Volume 39 ; 39 ; >
 
   }
 
@@ -7896,7 +7896,7 @@
     au < finished ; frozen ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Health & Social Work Volume 38 ; 38 ; >
     au < crawling ; exists ; 2014 ; Health & Social Work Volume 39 ; 39 ; >
-    au < expected ; exists ; 2015 ; Health & Social Work Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2015 ; Health & Social Work Volume 40 ; 40 ; >
 
   }
 
@@ -7953,7 +7953,7 @@
     au < finished ; crawling ; 2012 ; Health Education Research Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Health Education Research Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; Health Education Research Volume 29 ; 29 ; >
-    au < expected ; exists ; 2015 ; Health Education Research Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; Health Education Research Volume 30 ; 30 ; >
 
     }
 
@@ -8831,7 +8831,7 @@
     au < finished ; crawling ; 2012 ; IMA Journal of Applied Mathematics Volume 77 ; 77 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Applied Mathematics Volume 78 ; 78 ; >
     au < doNotProcess ; exists ; 2014 ; IMA Journal of Applied Mathematics Volume 79 ; 79 ; >
-    au < expected ; exists ; 2015 ; IMA Journal of Applied Mathematics Volume 80 ; 80 ; >
+    au < manifest ; exists ; 2015 ; IMA Journal of Applied Mathematics Volume 80 ; 80 ; >
 
     }
 
@@ -9011,7 +9011,7 @@
     au < finished ; frozen ; 2012 ; IMA Journal of Numerical Analysis Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Numerical Analysis Volume 33 ; 33 ; >
     au < doNotProcess ; exists ; 2014 ; IMA Journal of Numerical Analysis Volume 34 ; 34 ; >
-    au < expected ; exists ; 2015 ; IMA Journal of Numerical Analysis Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2015 ; IMA Journal of Numerical Analysis Volume 35 ; 35 ; >
 
     }
 
@@ -10056,7 +10056,7 @@
     au < finished ; frozen ; 2012 ; International Mathematics Research Notices Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; International Mathematics Research Notices Volume 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; International Mathematics Research Notices Volume 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; International Mathematics Research Notices Volume 2015 ; 2015 ; >
+    au < manifest ; exists ; 2015 ; International Mathematics Research Notices Volume 2015 ; 2015 ; >
 
     }
 
@@ -10706,7 +10706,7 @@
     au < finished ; crawling ; 2012 ; Journal of Analytical Toxicology Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Journal of Analytical Toxicology Volume 37 ; 37 ; >
     au < crawling ; exists ; 2014 ; Journal of Analytical Toxicology Volume 38 ; 38 ; >
-    au < expected ; exists ; 2015 ; Journal of Analytical Toxicology Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2015 ; Journal of Analytical Toxicology Volume 39 ; 39 ; >
 
   }
 
@@ -11372,7 +11372,7 @@
     au < finished ; crawling ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Journal of Deaf Studies and Deaf Education Volume 18 ; 18 ; >
     au < crawling ; exists ; 2014 ; Journal of Deaf Studies and Deaf Education Volume 19 ; 19 ; >
-    au < expected ; exists ; 2015 ; Journal of Deaf Studies and Deaf Education Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2015 ; Journal of Deaf Studies and Deaf Education Volume 20 ; 20 ; >
 
     }
 
@@ -13234,7 +13234,7 @@
     au < exists ; exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 ; >
     au < exists ; exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 ; >
     au < exists ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
-    au < expected ; exists ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 ; >
 
   }
 
@@ -15736,7 +15736,7 @@
     au < finished ; frozen ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Modern Judaism Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; Modern Judaism Volume 34 ; 34 ; >
-    au < expected ; exists ; 2015 ; Modern Judaism Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2015 ; Modern Judaism Volume 35 ; 35 ; >
 
     }
 
@@ -20115,7 +20115,7 @@
     au < crawling ; exists ; 2012 ; Research Evaluation Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Research Evaluation Volume 22 ; 22 ; >
     au < crawling ; exists ; 2014 ; Research Evaluation Volume 23 ; 23 ; >
-    au < expected ; exists ; 2015 ; Research Evaluation Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2015 ; Research Evaluation Volume 24 ; 24 ; >
 
   }
 
@@ -21176,7 +21176,7 @@
     au < crawling ; exists ; 2012 ; Social Science Japan Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Social Science Japan Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2014 ; Social Science Japan Journal Volume 17 ; 17 ; >
-    au < expected ; exists ; 2015 ; Social Science Japan Journal Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2015 ; Social Science Japan Journal Volume 18 ; 18 ; >
 
     }
 
