@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.16 2014-11-12 20:11:54 wkwilson Exp $
+ * $Id: PollTestPlugin.java,v 1.16.2.1 2015-01-20 22:17:14 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,10 @@ public class PollTestPlugin {
 
     public long getEstimatedHashDuration() {
       return 1000;
+    }
+
+    public String typeString() {
+      return "Test";
     }
 
     public boolean finished() {
