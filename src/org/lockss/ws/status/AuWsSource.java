@@ -1,10 +1,10 @@
 /*
- * $Id: AuWsSource.java,v 1.7 2014-11-12 20:11:45 wkwilson Exp $
+ * $Id: AuWsSource.java,v 1.8 2015-01-20 19:54:54 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,16 +31,25 @@
  */
 package org.lockss.ws.status;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import org.lockss.app.LockssDaemon;
 import org.lockss.crawler.CrawlManagerStatus;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.CrawlWindow;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSetNode;
+import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.Plugin;
 import org.lockss.poller.Poll;
 import org.lockss.protocol.AgreementType;
@@ -48,21 +57,28 @@ import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.PeerAgreement;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryNode;
 import org.lockss.state.AuState;
 import org.lockss.state.NodeManager;
+import org.lockss.state.SubstanceChecker;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
+import org.lockss.util.UrlUtil;
 import org.lockss.ws.entities.AgreementTypeWsResult;
 import org.lockss.ws.entities.AuConfigurationWsResult;
 import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.PeerAgreementWsResult;
 import org.lockss.ws.entities.PeerAgreementsWsResult;
+import org.lockss.ws.entities.UrlWsResult;
 
 /**
  * Container for the information that is used as the source for a query related
  * to Archival Units.
  */
 public class AuWsSource extends AuWsResult {
+  private static Logger log = Logger.getLogger(AuWsSource.class);
+
   private ArchivalUnit au;
 
   private boolean auIdPopulated = false;
@@ -97,11 +113,15 @@ public class AuWsSource extends AuWsResult {
   private boolean urlStemsPopulated = false;
   private boolean isBulkContentPopulated = false;
   private boolean peerAgreementsPopulated = false;
+  private boolean urlsPopulated = false;
+  private boolean substanceUrlsPopulated = false;
+  private boolean articleUrlsPopulated = false;
 
   private LockssDaemon theDaemon = null;
   private Plugin plugin = null;
   private NodeManager nodeMgr = null;
   private AuState state = null;
+  private CachedUrlSet auCachedUrlSet = null;
 
   public AuWsSource(ArchivalUnit au) {
     this.au = au;
@@ -643,6 +663,167 @@ public class AuWsSource extends AuWsResult {
     return super.getPeerAgreements();
   }
 
+  @Override
+  public List<UrlWsResult> getUrls() {
+    if (!urlsPopulated) {
+      // Initialize the results.
+      List<UrlWsResult> results = new ArrayList<UrlWsResult>();
+
+      // Loop through all the URL nodes.
+      for (CachedUrlSetNode cusn : getAuCachedUrlSet().getCuIterable()) {
+	CachedUrlSet cus;
+	CachedUrl cu = null;
+
+	if (cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL_SET) {
+	  cus = (CachedUrlSet)cusn;
+	} else {
+	  cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(cusn.getUrl()));
+	}
+
+	// Get the URL.
+	String url = cus.getUrl();
+
+	if (url.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+	  url = url.substring(0, url.length() - 1);
+	}
+
+	try {
+	  RepositoryNode node =
+	      getTheDaemon().getLockssRepository(au).getNode(url);
+
+	  // Get the URLproperties.
+	  UrlWsResult urlResult = new UrlWsResult();
+	  urlResult.setUrl(node.getNodeUrl());
+	  cu = au.makeCachedUrl(url);
+	  urlResult.setVersionCount(cu.getCuVersions().length);
+	  urlResult.setCurrentVersionSize(Long.valueOf(node.getContentSize()));
+
+	  // Add it to the results.
+	  results.add(urlResult);
+	} catch (MalformedURLException mue) {
+	  if (log.isDebug())
+	    log.debug("getUrls(): Ignored malformed URL '" + url + "'");
+	} finally {
+	  AuUtil.safeRelease(cu);
+	}
+      }
+
+      setUrls(results);
+      urlsPopulated = true;
+    }
+
+    return super.getUrls();
+  }
+
+  @Override
+  public List<String> getSubstanceUrls() {
+    if (!substanceUrlsPopulated) {
+      // Initialize the results.
+      List<String> results = new ArrayList<String>();
+
+      int logException = 3;
+
+      CuIterator iterator = getAuCachedUrlSet().getCuIterator();
+      CachedUrl cu = null;
+      SubstanceChecker subChecker = new SubstanceChecker(au);
+
+      // Loop through all the cached URLs.
+      while (iterator.hasNext()) {
+	try {
+	  cu = iterator.next();
+
+	  // Check whether the cached URL has content.
+	  if (cu.hasContent()) {
+	    // Yes: Get the URL.
+	    String url = cu.getUrl();
+
+	    // Check whether the URL has substance.
+	    if (subChecker.isSubstanceUrl(url)) {
+	      // Yes: Add it to the results.
+	      results.add(url);
+	    }
+	  }
+	} catch (Exception e) {
+	  // It shouldn't happen, but, if it does, it will likely happen many
+	  // times, so avoid cluttering the log.
+	  if (logException-- > 0) {
+	    log.warning("getSubstanceUrls() threw for cu " + cu, e);
+	  }
+	} finally {
+	  AuUtil.safeRelease(cu);
+	}
+      }
+
+      setSubstanceUrls(results);
+      substanceUrlsPopulated = true;
+    }
+
+    return super.getSubstanceUrls();
+  }
+
+  @Override
+  public List<String> getArticleUrls() {
+    if (!articleUrlsPopulated) {
+      // Initialize the results.
+      List<String> results = new ArrayList<String>();
+
+      int logEmpty = 3;
+      int logException = 3;
+      int logMissing = 3;
+
+      // Loop through all the article files.
+      Iterator<ArticleFiles> iter =
+	  au.getArticleIterator(MetadataTarget.Article());
+      while (iter.hasNext()) {
+	ArticleFiles af = iter.next();
+
+	// Check whether it is empty.
+	if (af.isEmpty()) {
+	  // Yes: It is probably a plugin error that shouldn't happen; but, if
+	  // it does, it will likely happen many times, so avoid cluttering the
+	  // log.
+	  if (logEmpty-- > 0) {
+	    log.error("ArticleIterator generated empty ArticleFiles");
+	  }
+	} else {
+	  // No.
+	  CachedUrl cu = null;
+
+	  try {
+	    // Get the full text cached URL.
+	    cu = af.getFullTextCu();
+
+	    // Check whether it exists.
+	    if (cu != null) {
+	      // Yes: Add it to the results.
+	      results.add(cu.getUrl());
+	    } else {
+	      // No: It shouldn't happen, but, if it does, it will likely happen
+	      // many times, so avoid cluttering the log.
+	      if (logMissing-- > 0) {
+		log.error("ArticleIterator generated ArticleFiles with no full "
+		    + "text CU: " + af);
+	      }
+	    }
+	  } catch (Exception e) {
+	    // It shouldn't happen, but, if it does, it will likely happen many
+	    // times, so avoid cluttering the log.
+	    if (logException-- > 0) {
+	      log.warning("getArticleUrls() threw", e);
+	    }
+	  } finally {
+	    AuUtil.safeRelease(cu);
+	  }
+	}
+      }
+
+      setArticleUrls(results);
+      articleUrlsPopulated = true;
+    }
+
+    return super.getArticleUrls();
+  }
+
   /**
    * Provides the daemon, initializing it if necessary.
    * 
@@ -693,5 +874,18 @@ public class AuWsSource extends AuWsResult {
     }
 
     return state;
+  }
+
+  /**
+   * Provides the Archival Unit cached URL set, initializing it if necessary.
+   * 
+   * @return a CachedUrlSet with the Archival Unit cached URL set.
+   */
+  private CachedUrlSet getAuCachedUrlSet() {
+    if (auCachedUrlSet == null) {
+      auCachedUrlSet = au.getAuCachedUrlSet();
+    }
+
+    return auCachedUrlSet;
   }
 }

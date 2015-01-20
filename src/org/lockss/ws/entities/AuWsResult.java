@@ -1,10 +1,10 @@
 /*
- * $Id: AuWsResult.java,v 1.5 2014-09-15 23:42:39 fergaloy-sf Exp $
+ * $Id: AuWsResult.java,v 1.6 2015-01-20 19:54:54 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -70,6 +70,9 @@ public class AuWsResult {
   private List<String> urlStems;
   private Boolean isBulkContent;
   private List<PeerAgreementsWsResult> peerAgreements;
+  private List<UrlWsResult> urls;
+  private List<String> substanceUrls;
+  private List<String> articleUrls;
 
   /**
    * Provides the Archival Unit identifier.
@@ -463,9 +466,45 @@ public class AuWsResult {
     this.peerAgreements = peerAgreements;
   }
 
+  /**
+   * Provides the Archival Unit URLs.
+   * 
+   * @return a List<UrlWsResult> with the URLs.
+   */
+  public List<UrlWsResult> getUrls() {
+    return urls;
+  }
+  public void setUrls(List<UrlWsResult> urls) {
+    this.urls = urls;
+  }
+
+  /**
+   * Provides the Archival Unit substance URLs.
+   * 
+   * @return a List<String> with the substance URLs.
+   */
+  public List<String> getSubstanceUrls() {
+    return substanceUrls;
+  }
+  public void setSubstanceUrls(List<String> substanceUrls) {
+    this.substanceUrls = substanceUrls;
+  }
+
+  /**
+   * Provides the Archival Unit article URLs.
+   * 
+   * @return a List<String> with the article URLs.
+   */
+  public List<String> getArticleUrls() {
+    return articleUrls;
+  }
+  public void setArticleUrls(List<String> articleUrls) {
+    this.articleUrls = articleUrls;
+  }
+
   @Override
   public String toString() {
-    return "AuWsResult [auId=" + auId + ", name=" + name + ", volume=" + volume
+    return "[AuWsResult auId=" + auId + ", name=" + name + ", volume=" + volume
 	+ ", pluginName=" + pluginName + ", tdbYear=" + tdbYear
 	+ ", accessType=" + accessType + ", contentSize=" + contentSize
 	+ ", diskUsage=" + diskUsage + ", repositoryPath=" + repositoryPath
@@ -483,6 +522,7 @@ public class AuWsResult {
 	+ subscriptionStatus + ", auConfiguration=" + auConfiguration
 	+ ", newContentCrawlUrls=" + newContentCrawlUrls + ", urlStems="
 	+ urlStems + ", isBulkContent=" + isBulkContent + ", peerAgreements="
-	+ peerAgreements + "]";
+	+ peerAgreements + ", urls=" + urls + ", substanceUrls=" + substanceUrls
+	+ ", articleUrls=" + articleUrls + "]";
   }
 }

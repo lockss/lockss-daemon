@@ -1,10 +1,10 @@
 /*
- * $Id: AuHelper.java,v 1.7 2014-11-12 20:11:45 wkwilson Exp $
+ * $Id: AuHelper.java,v 1.8 2015-01-20 19:54:54 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -108,6 +108,9 @@ public class AuHelper {
   static String URL_STEMS = "urlStems";
   static String IS_BULK_CONTENT = "isBulkContent";
   static String PEER_AGREEMENTS = "peerAgreements";
+  static String URLS = "urls";
+  static String SUBSTANCE_URLS = "substanceUrls";
+  static String ARTICLE_URLS = "articleUrls";
 
   /**
    * All the property names used in Archival Unit queries.
@@ -147,6 +150,9 @@ public class AuHelper {
       add(URL_STEMS);
       add(IS_BULK_CONTENT);
       add(PEER_AGREEMENTS);
+      add(URLS);
+      add(SUBSTANCE_URLS);
+      add(ARTICLE_URLS);
     }
   };
 
@@ -725,6 +731,36 @@ public class AuHelper {
       }
 
       builder.append("peerAgreements=").append(result.getPeerAgreements());
+    }
+
+    if (result.getUrls() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("urls=").append(result.getUrls());
+    }
+
+    if (result.getSubstanceUrls() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("substanceUrls=").append(result.getSubstanceUrls());
+    }
+
+    if (result.getArticleUrls() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("articleUrls=").append(result.getArticleUrls());
     }
 
     return builder.append("]").toString();
