@@ -715,6 +715,10 @@
     >
 
     comment[base_url] = http://www.sec-ed.co.uk/
+    param[journal_id] = sece
+    comment[notReady] = issues lumped into one volume.
+
+    au < notReady ; exists ; 2014 ; SecEd Volume 2014 ; 2014 >
 
 
   }
@@ -727,6 +731,7 @@
 
     comment[base_url] =
     comment[0] = website is not up yet
+    comment[0] = not on Atypon platform.
 
 
   }
