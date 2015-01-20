@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.28 2014-10-01 08:33:10 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.28.2.1 2015-01-20 18:54:14 tlipkis Exp $
  */
 
 /*
@@ -232,6 +232,7 @@ public class HashSvcSchedImpl
     long bytesHashed = 0;
     long unaccountedBytesHashed = 0;
     String typeString;
+    boolean isRecalcEstimateHash = false;
 
     HashTask(CachedUrlSetHasher urlsetHasher,
 	     Deadline deadline,
@@ -253,6 +254,7 @@ public class HashSvcSchedImpl
       this.hashCallback = hashCallback;
       this.urlsetHasher = urlsetHasher;
       typeString = urlsetHasher.typeString();
+      isRecalcEstimateHash = urlsetHasher.typeString().startsWith("E");
     }
 
     public String typeString() {
@@ -332,7 +334,7 @@ public class HashSvcSchedImpl
       if (getException() == null) {
 	return TASK_STATE_DONE;
       } else if (getException() instanceof SchedService.Timeout) {
-	if (urlsetHasher.typeString().startsWith("E")) {
+	if (isRecalcEstimateHash) {
 	  // XXX add status accessor to Hasher interface
 	  return TASK_STATE_RECALC_UNFINISHED;
 	} else {
