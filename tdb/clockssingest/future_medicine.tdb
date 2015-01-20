@@ -156,7 +156,7 @@
     au < testing ; exists ; 2012 ; CNS Oncology Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; CNS Oncology Volume 3 ; 3 >
-    au < expected ; exists ; 2015 ; CNS Oncology Volume 4 ; 4 >
+    au < manifest ; exists ; 2015 ; CNS Oncology Volume 4 ; 4 >
     
   }
 
@@ -190,7 +190,7 @@
     au < ready ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Diabetes Management Volume 4 ; 4 >
-    au < expected ; exists ; 2015 ; Diabetes Management Volume 5 ; 5 >
+    au < manifest ; exists ; 2015 ; Diabetes Management Volume 5 ; 5 >
   
   }
 
@@ -278,7 +278,7 @@
     au < ready ; exists ; 2012 ; Future Neurology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Future Neurology Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Future Neurology Volume 9 ; 9 >
-    au < expected ; exists ; 2015 ; Future Neurology Volume 10 ; 10 >
+    au < manifest ; exists ; 2015 ; Future Neurology Volume 10 ; 10 >
     
   }
 
@@ -325,7 +325,7 @@
     au < testing ; exists ; 2012 ; Future Virology Volume 7 ; 7 >
     au < ingNotReady ; exists ; 2013 ; Future Virology Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Future Virology Volume 9 ; 9 >
-    au < expected ; exists ; 2015 ; Future Virology Volume 10 ; 10 >
+    au < manifest ; exists ; 2015 ; Future Virology Volume 10 ; 10 >
     
   }
 
@@ -692,7 +692,7 @@
     au < ready ; exists ; 2012 ; Women's Health Volume 8 ; 8 >
     au < ingNotReady ; exists ; 2013 ; Women's Health Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Women's Health Volume 10 ; 10 >
-    au < expected ; exists ; 2015 ; Women's Health Volume 11 ; 11 >
+    au < manifest ; exists ; 2015 ; Women's Health Volume 11 ; 11 >
     
   }
 
