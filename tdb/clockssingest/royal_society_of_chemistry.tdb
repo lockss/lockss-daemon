@@ -240,8 +240,8 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < testing ; exists ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 >
-      au < testing ; exists ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 >
+      au < ready ; exists ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 >
+      au < ready ; exists ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 >
 
     }
   }
@@ -283,9 +283,9 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < testing ; exists ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 >
-      au < testing ; exists ; 2011 ; Chemical Communications Volume 47 ; 47 ; 2011 >
-      au < testing ; exists ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 >
+      au < ready ; exists ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 >
+      au < ready ; exists ; 2011 ; Chemical Communications Volume 47 ; 47 ; 2011 >
+      au < ready ; exists ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 >
       au < testing ; exists ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 >
       au < testing ; exists ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 >
 
@@ -351,10 +351,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < testing ; exists ; 2010 ; Chemical Society Reviews Volume 39 ; 39 ; 2010 >
-      au < testing ; exists ; 2011 ; Chemical Society Reviews Volume 40 ; 40 ; 2011 >
+      au < ready ; exists ; 2010 ; Chemical Society Reviews Volume 39 ; 39 ; 2010 >
+      au < ready ; exists ; 2011 ; Chemical Society Reviews Volume 40 ; 40 ; 2011 >
       au < testing ; exists ; 2012 ; Chemical Society Reviews Volume 41 ; 41 ; 2012 >
-      au < testing ; exists ; 2013 ; Chemical Society Reviews Volume 42 ; 42 ; 2013 >
+      au < ready ; exists ; 2013 ; Chemical Society Reviews Volume 42 ; 42 ; 2013 >
       au < testing ; exists ; 2014 ; Chemical Society Reviews Volume 43 ; 43 ; 2014 >
 
     }
