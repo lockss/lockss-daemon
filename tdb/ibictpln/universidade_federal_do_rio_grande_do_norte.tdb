@@ -19,7 +19,7 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = artresearchjournal
 
-      au < exists ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 >
+      au < manifest ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 >
 
   }
 
@@ -81,7 +81,7 @@
       au < released ; 2011 ; 5 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2011 ; 2011 >
       au < released ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 >
+      au < manifest ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 >
 
   }
 
@@ -121,8 +121,8 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = aletheia
 
-      au < exists ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 >
-      au < exists ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 >
+      au < manifest ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 >
 
   }
 
@@ -291,8 +291,8 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = turismocontemporaneo
 
-      au < exists ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 >
-      au < exists ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 >
+      au < manifest ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 >
 
   }
 
