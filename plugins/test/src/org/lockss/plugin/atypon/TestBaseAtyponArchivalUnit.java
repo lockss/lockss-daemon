@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.12 2015-01-20 21:33:00 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.13 2015-01-21 02:35:43 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,6 +111,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     // Test for pages that should get crawled
     //manifest page
     shouldCacheTest(ROOT_URL+"lockss/xxxx/123/index.html", true, ABAu, cus);    
+    // images (etc.) but not as query arguments
+    shouldCacheTest(ROOT_URL+"foo/bar/baz/qux.js", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"foo/bar/baz?url=qux.js", false, ABAu, cus);
     // toc page for an issue
     shouldCacheTest(ROOT_URL+"toc/xxxx/123/5", true, ABAu, cus);
     // special issue
@@ -220,7 +223,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   }
 
 
-  public void testgetName() throws Exception {
+  public void testGetName() throws Exception {
     DefinableArchivalUnit au =
       makeAu(new URL("http://www.BaseAtypon.com/"), 33, "yyyy");
     assertEquals(PluginName + ", Base URL http://www.BaseAtypon.com/, Journal ID yyyy, Volume 33", au.getName());
