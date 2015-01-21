@@ -20,10 +20,11 @@
 
     comment[base_url] = http://www.africanjournalofmidwifery.com/
     param[journal_id] = ajmw
+    comment[notReady] = No access to content - Connection refused
 
     au < manifest ; exists ; 2011 ; African Journal of Midwifery and Women's Health Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; African Journal of Midwifery and Women's Health Volume 6 ; 6 >
-    au < testing ; exists ; 2013 ; African Journal of Midwifery and Women's Health Volume 7 ; 7 >
+    au < notReady ; exists ; 2013 ; African Journal of Midwifery and Women's Health Volume 7 ; 7 >
     au < manifest ; exists ; 2014 ; African Journal of Midwifery and Women's Health Volume 8 ; 8 >
 
 
@@ -38,11 +39,12 @@
 
     comment[base_url] = http://www.cardiac-nursing.co.uk/
     param[journal_id] = bjca
+    comment[notReady] = no access to content - Connection refused
 
     au < manifest ; exists ; 2011 ; British Journal of Cardiac Nursing Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; British Journal of Cardiac Nursing Volume 7 ; 7 >
     au < manifest ; exists ; 2013 ; British Journal of Cardiac Nursing Volume 8 ; 8 >
-    au < testing ; exists ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 >
+    au < notReady ; exists ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 >
 
 
   }
