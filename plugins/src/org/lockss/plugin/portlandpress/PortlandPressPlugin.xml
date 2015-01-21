@@ -1,34 +1,35 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - Ly/Mep</string>
+    <string>testing - alexandra/Mep</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.portlandpress.PortlandPressPlugin</string>
   </entry>
  <entry>
+    <!-- use of CrawlSeedFactory -->
     <string>required_daemon_version</string>
-    <string>1.57.0</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -59,10 +60,12 @@
       <string>1,"^%s%s(/ev)?/%s([0-9S]{2})?/", base_url, journal_id, volume_name</string>
     </list>
   </entry>
+<!-- 
   <entry>
     <string>au_start_url</string>
     <string>"%s%s/%s/lockss.htm", base_url, journal_id, volume_name</string>
   </entry>
+-->  
   <entry>
   	<string>au_feature_urls</string>
   	<map>
@@ -117,6 +120,10 @@
       <string>"^%s%s(/ev)?/%s([0-9S]{2})?/[^/]+/(?!default.htm)[^/]+\.(pdf|htm)$", base_url, journal_id, volume_name</string>
     </list>
   </entry> 
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.portlandpress.PortlandPressCrawlSeedFactory</string>
+  </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>

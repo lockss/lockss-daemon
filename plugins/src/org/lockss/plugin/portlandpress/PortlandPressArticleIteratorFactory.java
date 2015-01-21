@@ -1,10 +1,10 @@
 /*
- * $Id: PortlandPressArticleIteratorFactory.java,v 1.5 2015-01-16 21:19:46 alexandraohlson Exp $
+ * $Id: PortlandPressArticleIteratorFactory.java,v 1.6 2015-01-21 22:20:32 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ public class PortlandPressArticleIteratorFactory
                ArticleMetadataExtractorFactory {
 
   protected static Logger log =
-      Logger.getLogger("PortlandPressArticleIteratorFactory");
+      Logger.getLogger(PortlandPressArticleIteratorFactory.class);
   /*
    * We need to also allow the oddball cases where the issuenum is concatenated to
    * the volume_name in the url. 
@@ -53,24 +53,21 @@ public class PortlandPressArticleIteratorFactory
    * Can we not use a ROOT TEMPLATE AT ALL? It's not really limiting beyond the AU limit
    */
   
- /* Would it be better to just not use a ROOT_TEMPLATE? */
-  /* I can't define it down to volnum because of the few cases that 
-   * concatenate issue to the vol - and ROOT_TEMPLATE doesn't take regexp
-   */
+ /* 
+  * Can't set the root to <base>/jid/vol because vol might be vol-issue
+  * but this is still restrictive enough
+  */
   protected static final String ROOT_TEMPLATE =
       "\"%s%s/\", base_url, journal_id";
         
-  
   // pick up the abstract as the logical definition of one article
   // - lives one level higher than pdf & fulltext
-  // pick up <lettersnums>.htm, but not <lettersnums>add.htm
-  //   or add1.htm, add01.htm... etc
+  // - do not pick up the supplemental info, which differs from abstract
+  // only in that it ends in add.htm or add01.htm, or add1.htm, etc.
   // allow for concatenated /<vol><issue>/ for the volnum
-  // The journal id portion of the articlename is, in one case a truncated version
-  // and therefore we should just assume characters preceding volnum.
   protected static final String PATTERN_TEMPLATE =
       "\"^%s%s/%s(?:[0-9S]{2})?/(?![^/]+add(?:[0-9]+)?[.]htm)[^/]+[.]htm\", " +
-      "base_url,journal_id, volume_name, journal_id";
+      "base_url,journal_id, volume_name";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -95,25 +92,32 @@ public class PortlandPressArticleIteratorFactory
      * volnum is usually just the volume_name but in 3 journals by IWA, it can
      *   be a concatenated /<volnum><issuenum>/ where issuenum is padded to 
      *   two, leading 0. The rest of the paradigm holds because the concatenated <volnum>
-     *   is used consistently, even in the article name
+     *   is used consistently, even in the article name.
+     *   Issuenum can also be S1 or S2 (for supplementary issue)
      *     (see: http://www.iwaponline.com/wp/01505/wp015050816.htm) 
-     * startpagenum can have letters in it, but follows volumenum which is all numbers
+     * startpagenum can have letters in it, but follows volnum
      *     (see: )
      * lettersnums seems to be concatenated <jid><volnum><startpagenum>
      *    except for ONE journal, which truncates the <jid> to first three chars in <lettersnums>
      *      (see: http://essays.biochemistry.org/bsessays/048/bse0480063.htm)
-     *    except for pdf which is <volnum><startpagenum>
+     *    except for pdf which is <volnum><startpagenum>, no leading <jid>
      *    
      */
-    
+
     // various aspects of an article
-    // http://www.clinsci.org/cs/120/cs1200013add.htm
+    // PRIMARY - the one the pattern above matches against is the ABTRACT
     // http://www.iwaponline.com/wp/01505/wp015050816.htm
     // http://www.iwaponline.com/washdev/003/washdev0030375.htm
     // http://essays.biochemistry.org/bsessays/048/bse0480001.htm
+    
+    // SECONDARY - not matched by the pattern above, but generated
+    // http://www.clinsci.org/cs/120/cs1200013add.htm
     // http://essays.biochemistry.org/bsessays/048/0001/0480001.pdf
     // http://essays.biochemistry.org/bsessays/048/0001/bse0480001.htm
     // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_ev.htm
+
+    // preserved but not added to ArticleFiles
+    // http://www.biochemj.org/bj/441/bj4410889add01.htm
     // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evf01.htm
     // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evrefs.htm
     // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evtab01.htm
@@ -126,16 +130,9 @@ public class PortlandPressArticleIteratorFactory
     // special case one journal in identifying the jid used in the articlenum
     // ONE journal "bsessays" becomes "bse" in the articlenum. All others stay complete
 
-    //  this is "/(fulljid)/(volnumdir)/(jidbit)volnumdir(pageno).htm$"
+    // Identify groups in the pattern "/(<jid>)/(<voldir>)/(jidbit)volnumdir(pageno).htm$"
     final Pattern ABSTRACT_PATTERN = Pattern.compile(
     "/([^/]+)/([^/]+)/([a-z]+)\\2([^/]+)[.]htm$", Pattern.CASE_INSENSITIVE);
-    
-    // this is "/(fulljid)/(volnumdir)/pageno/(jidbit)volnumdir(pageno).htm$"
-    final Pattern HTML_PATTERN = Pattern.compile(
-        "/([^/]+)/([^/]+)/[^/]+/([a-z]+)\\2([^/])[.]htm$", Pattern.CASE_INSENSITIVE);
-    
-    /*final Pattern PDF_PATTERN = Pattern.compile(
-        "/([^/]{1,3})([^/]*)/([^/]+)/([^/]+)/\\3\\4[.]pdf$", Pattern.CASE_INSENSITIVE);*/
     
     // how to change from one form (aspect) of article to another
     // $1 = fulljid 
@@ -144,13 +141,11 @@ public class PortlandPressArticleIteratorFactory
     // $4 = pageno (the numeric portion of the articlename, used as subdirectory for full text versions)
     final String ABSTRACT_REPLACEMENT = "/$1/$2/$3$2$4.htm";
     final String HTML_REPLACEMENT = "/$1/$2/$4/$3$2$4.htm";
-    // pdf doesn't use the jidbit and we can't guess what this is so we can't use pdf as a full aspect
     final String PDF_REPLACEMENT = "/$1/$2/$4/$2$4.pdf";
     final String ADD_REPLACEMENT = "/$1/$2/$4/$3$2$4add.htm"; // won't catch add01 or add1...
     final String EV_REPLACEMENT = "/$1/ev/$2/$4/$3$2$4_ev.htm";
     
-    
-    builder.setSpec(target,
+        builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     // set up abstract to be an aspect that will trigger an ArticleFiles
@@ -167,20 +162,17 @@ public class PortlandPressArticleIteratorFactory
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT,
+        HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA);
     
-/* even though logically a pdf would trigger an article files, we cannot
- * easily generate the other aspects from the information in the pdf url
- * (we have no way of automatically getting the 'jidbit' for the one case (bsessays) where it
- * is shortened.  But we will always have an abstract, so just set pdf from that
- */
     builder.addAspect(
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     // set up *add.htm to be a suppl aspect
+    // this won't find fooadd01.htm or fooadd1.htm but they'll still 
+    // be preserved, just not listed in ArticleFiles. Not ideal, but rare.
     builder.addAspect(ADD_REPLACEMENT,
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
     
