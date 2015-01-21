@@ -1,10 +1,10 @@
 /*
- * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.4 2013-09-26 22:40:46 aishizaki Exp $
+ * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.5 2015-01-21 16:12:14 aishizaki Exp $
  */
 
 /*
 
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -79,6 +79,14 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   " </dl>         </div>       Hello World";
   // added a space before 'Hello World' to match consolidated white space
   private static final String commonResult = " Hello World";
+  
+  private static final String inst11 = 
+    "<html><p style=\"line-height:160%\" class=\"inlinenumber\">" +
+    "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
+    "<m:mrow>" +
+    "</m:mrow>" +
+    "</p></html>";
+  private static final String inst11Filtered = "<html></html>";
 
 
   public void testFiltering() throws Exception {
@@ -145,6 +153,16 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     inA.close();
     inB.close();
   }
+  public void testInlineNumber() throws Exception {
+    InputStream inA;
+    InputStream inB;
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst11), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst11Filtered), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+  }
+
   
 
 }

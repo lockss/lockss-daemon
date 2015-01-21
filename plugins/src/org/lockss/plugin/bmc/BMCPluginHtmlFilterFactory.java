@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlFilterFactory.java,v 1.5 2013-10-30 22:21:56 thib_gc Exp $
+ * $Id: BMCPluginHtmlFilterFactory.java,v 1.6 2015-01-21 16:12:14 aishizaki Exp $
  */
 
 /*
@@ -103,6 +103,8 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
         // The text of this link changed from "About this article" to "Article metrics"
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
+        // removes mathml inline wierdnesses
+        HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));

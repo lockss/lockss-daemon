@@ -1,10 +1,10 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.13 2014-08-05 18:51:46 aishizaki Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.14 2015-01-21 16:12:14 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -110,6 +110,10 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
         // Journal of Cheminformatics -  an "accesses" and/or "citations" block
         // but the id is associated with the <h2>, not with the sibling <div>
+        
+        // removes mathml inline wierdnesses
+        HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
+        
         new NodeFilter() {
           @Override public boolean accept(Node node) {
             if (!(node instanceof Div)) return false;

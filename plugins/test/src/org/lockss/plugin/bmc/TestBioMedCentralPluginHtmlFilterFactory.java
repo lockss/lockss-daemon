@@ -1,10 +1,10 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.9 2014-08-05 18:51:46 aishizaki Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.10 2015-01-21 16:12:14 aishizaki Exp $
  */
 
 /*
 
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -136,7 +136,15 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "</div>" + "</div>" +
     "Hello World";
   private static final String BiomeBadgeHashFiltered = "Hello World";
-
+  
+  private static final String InlineNumberHash = 
+    "<html><p style=\"line-height:160%\" class=\"inlinenumber\">" +
+    "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
+    "<m:mrow>" +
+    "</m:mrow>" +
+    "</p></html>";
+  private static final String InlineNumberHashFiltered =
+    "<html></html>";
 
   private void checkHashFilter2(String testStr1, String testStr2) throws Exception {
     InputStream inA;
@@ -211,6 +219,12 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   public void testFilterBiomeBadge() throws Exception {
     
     checkHashFilter1(BiomeBadgeHash, BiomeBadgeHashFiltered);
+
+  }
+  
+  public void testFilterInlineNumber() throws Exception {
+    
+    checkHashFilter1(InlineNumberHash, InlineNumberHashFiltered);
 
   }
 }
