@@ -513,7 +513,7 @@
     param[journal_id] = eqhe
     comment[notReady] = publisher has lumped all issues into one volume.
 
-    au < notReady ; exists ; 2014 ; Companion Animal Volume 1 ; 1 >
+    au < notReady ; exists ; 2014 ; Equine Health Volume 1 ; 1 >
 
   }
 
@@ -704,7 +704,12 @@
     >
 
     comment[base_url] = http://www.primaryteacherupdate.co.uk/
+    param[journal_id] = prtu
+    comment[notReady] = issues lumped into one volume.
+    
 
+    au < exists ; exists ; 2010 ; SecEd Volume 9 ; 2010 >
+    au < notReady ; exists ; 2011-2015 ; SecEd Volume 2015 ; 2015 >
 
   }
 
@@ -719,159 +724,6 @@
     comment[notReady] = issues lumped into one volume.
 
     au < notReady ; exists ; 2014 ; SecEd Volume 2014 ; 2014 >
-
-
-  }
-
-  {
-    title <
-      name = Facilities UK Handbook ;
-      issn = 2052-9759
-    >
-
-    comment[base_url] =
-    comment[0] = website is not up yet
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = HR ;
-      issn = 0964-8380
-    >
-
-    comment[base_url] = http://www.hrmagazine.co.uk/
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = Land Mobile ;
-      issn = 1352-2701
-    >
-
-    comment[base_url] = http://www.landmobile.co.uk/
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = PrintWeek ;
-      issn = 1350-9829
-    >
-
-    comment[base_url] = http://www.printweek.com/
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = Pro Shop Europe ;
-      issn = 1355-2740
-    >
-
-    comment[base_url] = http://www.proshopeurope.co.uk/
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = Recycling & Waste World ;
-      issn = 1759-7366
-    >
-
-    comment[base_url] = http://www.recyclingwasteworld.co.uk/
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = Recycling & Waste World Handbook ;
-      type = bookSeries
-    >
-
-    comment[base_url] = http://www.recyclingwasteworld.co.uk/handbook.shtml
-    comment[0] = need to update base_url
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = TETRA Today ;
-      issn = 2045-8665 ;
-      eissn = 2045-8673
-
-    >
-
-    comment[base_url] = http://www.tetratoday.com/
-    comment[pdf] = file from http://content.yudu.com
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = Carriage Driving ;
-      issn = 0958-1820
-
-    >
-
-    comment[base_url] = http://www.carriage-driving.com/
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = Hampshire - the county magazine ;
-      issn = 0017-7113
-
-    >
-
-    comment[base_url] =
-    comment[0] = Apparently purely a paper publication.
-
-
-  }
-
-  {
-    title <
-      name = Jazzwise ;
-      issn = 1368-0021
-
-    >
-
-    comment[base_url] = http://www.jazzwisemagazine.com/
-    comment[0] = not on Atypon platform.
-
-
-  }
-
-  {
-    title <
-      name = Wiltshire Life ;
-      issn = 1358-0582
-
-    >
-
-    comment[base_url] = http://www.wiltshirelife.co.uk/
-    comment[0] = not on Atypon platform.
 
 
   }
