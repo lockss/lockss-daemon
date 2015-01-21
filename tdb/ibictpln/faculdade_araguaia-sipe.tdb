@@ -9,23 +9,6 @@
   {
 
       title <
-        name = Anuário Discente ;
-        issn = 2238-6778
-      >
-
-      comment[publisher] = Faculdade Araguaia-SIPE
-      param[base_url] = http://www.fara.edu.br/sipe/
-      param[journal_id] = anuario
-
-      au < exists ; 2012 ; 1 ; Anuário Discente Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Anuário Discente Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 3 ; Anuário Discente Volume 2014 ; 2014 >
-
-  }
-
-  {
-
-      title <
         name = RENEFARA-Revista Eletrônica de Educação da Faculdade Araguaia ;
         eissn = 2236-8779
       >
