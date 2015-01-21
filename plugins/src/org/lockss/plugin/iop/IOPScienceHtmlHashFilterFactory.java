@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.15 2015-01-21 22:50:13 thib_gc Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.16 2015-01-21 23:05:24 thib_gc Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(IOPScienceHtmlHashFilterFactory.class);
   
   @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
+  public InputStream createFilteredInputStream(final ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
@@ -108,7 +108,9 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
           // DEBUG
           public void logException(Throwable thr, String plainText) {
             StringBuilder sb = new StringBuilder();
-            sb.append("toLowerCase threw on the following input: <begin quote>");
+            sb.append("toLowerCase threw in AU ");
+            sb.append(au.getName());
+            sb.append(" on the following input: <begin quote>");
             sb.append(plainText);
             sb.append("<end quote>, which translates to:");
             for (int i = 0 ; i < plainText.length() ; ++i) {
