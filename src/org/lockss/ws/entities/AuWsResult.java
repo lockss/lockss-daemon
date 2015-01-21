@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsResult.java,v 1.6 2015-01-20 19:54:54 fergaloy-sf Exp $
+ * $Id: AuWsResult.java,v 1.7 2015-01-21 22:05:33 fergaloy-sf Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class AuWsResult {
   private Long diskUsage;
   private String repositoryPath;
   private Double recentPollAgreement;
+  private Double highestPollAgreement;
   private String publishingPlatform;
   private String tdbPublisher;
   private Boolean availableFromPublisher;
@@ -192,6 +193,18 @@ public class AuWsResult {
   }
   public void setRecentPollAgreement(Double recentPollAgreement) {
     this.recentPollAgreement = recentPollAgreement;
+  }
+
+  /**
+   * Provides the Archival Unit highest poll agreement percentage.
+   * 
+   * @return a Double with the highest poll agreement percentage.
+   */
+  public Double getHighestPollAgreement() {
+    return highestPollAgreement;
+  }
+  public void setHighestPollAgreement(Double highestPollAgreement) {
+    this.highestPollAgreement = highestPollAgreement;
   }
 
   /**
@@ -509,6 +522,7 @@ public class AuWsResult {
 	+ ", accessType=" + accessType + ", contentSize=" + contentSize
 	+ ", diskUsage=" + diskUsage + ", repositoryPath=" + repositoryPath
 	+ ", recentPollAgreement=" + recentPollAgreement
+	+ ", highestPollAgreement=" + highestPollAgreement
 	+ ", publishingPlatform=" + publishingPlatform + ", tdbPublisher="
 	+ tdbPublisher + ", availableFromPublisher=" + availableFromPublisher
 	+ ", substanceState=" + substanceState + ", creationTime="

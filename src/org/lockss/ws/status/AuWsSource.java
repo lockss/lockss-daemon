@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsSource.java,v 1.8 2015-01-20 19:54:54 fergaloy-sf Exp $
+ * $Id: AuWsSource.java,v 1.9 2015-01-21 22:05:33 fergaloy-sf Exp $
  */
 
 /*
@@ -91,6 +91,7 @@ public class AuWsSource extends AuWsResult {
   private boolean diskUsagePopulated = false;
   private boolean repositoryPathPopulated = false;
   private boolean recentPollAgreementPopulated = false;
+  private boolean highestPollAgreementPopulated = false;
   private boolean publishingPlatformPopulated = false;
   private boolean tdbPublisherPopulated = false;
   private boolean availableFromPublisherPopulated = false;
@@ -238,18 +239,29 @@ public class AuWsSource extends AuWsResult {
   @Override
   public Double getRecentPollAgreement() {
     if (!recentPollAgreementPopulated) {
-      if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
-  	if (getState().getV3Agreement() >= 0) {
-  	  if (state.getHighestV3Agreement() != state.getV3Agreement()) {
-  	    setRecentPollAgreement(Double.valueOf(state.getV3Agreement()));
-  	  }
-  	}
+      if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL
+	  && getState().getV3Agreement() >= 0) {
+	setRecentPollAgreement(Double.valueOf(state.getV3Agreement()));
       }
 
       recentPollAgreementPopulated = true;
     }
 
     return super.getRecentPollAgreement();
+  }
+
+  @Override
+  public Double getHighestPollAgreement() {
+    if (!highestPollAgreementPopulated) {
+      if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL
+	  && getState().getHighestV3Agreement() >= 0) {
+	setHighestPollAgreement(Double.valueOf(state.getHighestV3Agreement()));
+      }
+
+      highestPollAgreementPopulated = true;
+    }
+
+    return super.getHighestPollAgreement();
   }
 
   @Override

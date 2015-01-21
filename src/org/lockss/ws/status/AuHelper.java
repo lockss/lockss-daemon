@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.8 2015-01-20 19:54:54 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.9 2015-01-21 22:05:33 fergaloy-sf Exp $
  */
 
 /*
@@ -86,6 +86,7 @@ public class AuHelper {
   static String DISK_USAGE = "diskUsage";
   static String REPOSITORY_PATH = "repositoryPath";
   static String RECENT_POLL_AGREEMENT = "recentPollAgreement";
+  static String HIGHEST_POLL_AGREEMENT = "highestPollAgreement";
   static String PUBLISHING_PLATFORM = "publishingPlatform";
   static String TDB_PUBLISHER = "tdbPublisher";
   static String AVAILABLE_FROM_PUBLISHER = "availableFromPublisher";
@@ -128,6 +129,7 @@ public class AuHelper {
       add(DISK_USAGE);
       add(REPOSITORY_PATH);
       add(RECENT_POLL_AGREEMENT);
+      add(HIGHEST_POLL_AGREEMENT);
       add(PUBLISHING_PLATFORM);
       add(TDB_PUBLISHER);
       add(AVAILABLE_FROM_PUBLISHER);
@@ -504,6 +506,17 @@ public class AuHelper {
 
       builder.append("recentPollAgreement=")
       .append(result.getRecentPollAgreement());
+    }
+
+    if (result.getHighestPollAgreement() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("highestPollAgreement=")
+      .append(result.getHighestPollAgreement());
     }
 
     if (result.getPublishingPlatform() != null) {
