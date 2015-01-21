@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.14 2014-12-03 21:02:26 etenbrink Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.15 2015-01-21 22:50:13 thib_gc Exp $
  */
 
 /*
@@ -42,11 +42,13 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.util.*;
 
 
 public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
 
+  private static final Logger log = Logger.getLogger(IOPScienceHtmlHashFilterFactory.class);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -103,15 +105,32 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "metrics-panel"),
         // <dd> <p> Total article downloads: <strong>1193</strong> </p>...</dd>
         new TagNameFilter("dd") {
+          // DEBUG
+          public void logException(Throwable thr, String plainText) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("toLowerCase threw on the following input: <begin quote>");
+            sb.append(plainText);
+            sb.append("<end quote>, which translates to:");
+            for (int i = 0 ; i < plainText.length() ; ++i) {
+              sb.append(String.format(" %04X", plainText.charAt(i)));
+            }
+            log.warning(sb.toString(), thr);
+          }
           @Override
           public boolean accept(Node node) {
             boolean ret = false;
             if (super.accept(node)) {
-              String allText = node.toPlainTextString().toLowerCase();
-              ret = allText.contains("total article downloads") ||
-                   (allText.contains("download data unavailable") &&
-                    allText.contains("more metrics"));
-              return ret;
+              String plainText = node.toPlainTextString();
+              try {
+                String allText = plainText.toLowerCase();
+                ret = allText.contains("total article downloads") ||
+                    (allText.contains("download data unavailable") &&
+                     allText.contains("more metrics"));
+                return ret;
+              }
+              catch (InternalError interr) {
+                logException(interr, plainText);
+              }
             }
             return ret;
           }
