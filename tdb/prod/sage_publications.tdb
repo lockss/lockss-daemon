@@ -2659,7 +2659,22 @@
       param[base_url] = http://aor.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
+      comment[0] = content available from 1911 volume 20 to 1999 volume 108
 
+      au < exists ; 2000 ; Annals of Otology, Rhinology & Laryngology Volume 109 ; 109 >
+      au < exists ; 2001 ; Annals of Otology, Rhinology & Laryngology Volume 110 ; 110 >
+      au < exists ; 2002 ; Annals of Otology, Rhinology & Laryngology Volume 111 ; 111 >
+      au < exists ; 2003 ; Annals of Otology, Rhinology & Laryngology Volume 112 ; 112 >
+      au < exists ; 2004 ; Annals of Otology, Rhinology & Laryngology Volume 113 ; 113 >
+      au < exists ; 2005 ; Annals of Otology, Rhinology & Laryngology Volume 114 ; 114 >
+      au < exists ; 2006 ; Annals of Otology, Rhinology & Laryngology Volume 115 ; 115 >
+      au < exists ; 2007 ; Annals of Otology, Rhinology & Laryngology Volume 116 ; 116 >
+      au < exists ; 2008 ; Annals of Otology, Rhinology & Laryngology Volume 117 ; 117 >
+      au < exists ; 2009 ; Annals of Otology, Rhinology & Laryngology Volume 118 ; 118 >
+      au < exists ; 2010 ; Annals of Otology, Rhinology & Laryngology Volume 119 ; 119 >
+      au < exists ; 2011 ; Annals of Otology, Rhinology & Laryngology Volume 120 ; 120 >
+      au < exists ; 2012 ; Annals of Otology, Rhinology & Laryngology Volume 121 ; 121 >
+      au < exists ; 2013 ; Annals of Otology, Rhinology & Laryngology Volume 122 ; 122 >
       au < manifest ; 2014 ; Annals of Otology, Rhinology & Laryngology Volume 123 ; 123 >
       au < manifest ; 2015 ; Annals of Otology, Rhinology & Laryngology Volume 124 ; 124 >
 
@@ -6489,6 +6504,35 @@
       }
 
     }
+
+  {
+
+    title <
+      name = Common Law World Review ;
+      issn = 1473-7795 ;
+      eissn = 1740-5556 ;
+      issnl = 1473-7795
+    >
+
+      param[base_url] = http://clw.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; Common Law World Review Volume 32 ; 32 >
+      au < exists ; 2004 ; Common Law World Review Volume 33 ; 33 >
+      au < exists ; 2005 ; Common Law World Review Volume 34 ; 34 >
+      au < exists ; 2006 ; Common Law World Review Volume 35 ; 35 >
+      au < exists ; 2007 ; Common Law World Review Volume 36 ; 36 >
+      au < exists ; 2008 ; Common Law World Review Volume 37 ; 37 >
+      au < exists ; 2009 ; Common Law World Review Volume 38 ; 38 >
+      au < exists ; 2010 ; Common Law World Review Volume 39 ; 39 >
+      au < exists ; 2011 ; Common Law World Review Volume 40 ; 40 >
+      au < exists ; 2012 ; Common Law World Review Volume 41 ; 41 >
+      au < exists ; 2013 ; Common Law World Review Volume 42 ; 42 >
+      au < exists ; 2014 ; Common Law World Review Volume 43 ; 43 >
+      au < expected ; 2015 ; Common Law World Review Volume 44 ; 44 >
+
+  }
 
     {
 
@@ -10625,6 +10669,35 @@
       }
 
     }
+
+  {
+
+    title <
+      name = Environmental Law Review ;
+      issn = 1461-4529 ;
+      eissn = 1740-5564 ;
+      issnl = 1461-4529
+    >
+
+      param[base_url] = http://elj.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; Environmental Law Review Volume 5 ; 5 >
+      au < exists ; 2004 ; Environmental Law Review Volume 6 ; 6 >
+      au < exists ; 2005 ; Environmental Law Review Volume 7 ; 7 >
+      au < exists ; 2006 ; Environmental Law Review Volume 8 ; 8 >
+      au < exists ; 2007 ; Environmental Law Review Volume 9 ; 9 >
+      au < exists ; 2008 ; Environmental Law Review Volume 10 ; 10 >
+      au < exists ; 2009 ; Environmental Law Review Volume 11 ; 11 >
+      au < exists ; 2010 ; Environmental Law Review Volume 12 ; 12 >
+      au < exists ; 2011 ; Environmental Law Review Volume 13 ; 13 >
+      au < exists ; 2012 ; Environmental Law Review Volume 14 ; 14 >
+      au < exists ; 2013 ; Environmental Law Review Volume 15 ; 15 >
+      au < exists ; 2014 ; Environmental Law Review Volume 16 ; 16 >
+      au < expected ; 2015 ; Environmental Law Review Volume 17 ; 17 >
+
+  }
 
     {
       title <
@@ -32732,7 +32805,8 @@ comment[mpj] = now published by Brill
 
       title <
         name = Paradigm ;
-        issn = 0971-8907
+        issn = 0971-8907 ;
+        issnl = 0971-8907
       >
 
       param[base_url] = http://par.sagepub.com/
@@ -32740,6 +32814,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2014 ; Paradigm Volume 18 ; 18 >
+      au < expected ; 2015 ; Paradigm Volume 19 ; 19 >
     }
 
     {
@@ -33273,6 +33348,34 @@ comment[mpj] = now published by Brill
       }
 
     }
+
+  {
+
+    title <
+      name = The Police Journal: Theory, Practice and Principles ;
+      issn = 0032-258X ;
+      eissn = 1740-5599 ;
+      issnl = 0032-258X
+    >
+
+      param[base_url] = http://pjx.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; The Police Journal: Theory, Practice and Principles Volume 76 ; 76 >
+      au < exists ; 2004 ; The Police Journal: Theory, Practice and Principles Volume 77 ; 77 >
+      au < exists ; 2005 ; The Police Journal: Theory, Practice and Principles Volume 78 ; 78 >
+      au < exists ; 2006 ; The Police Journal: Theory, Practice and Principles Volume 79 ; 79 >
+      au < exists ; 2007 ; The Police Journal: Theory, Practice and Principles Volume 80 ; 80 >
+      au < exists ; 2008 ; The Police Journal: Theory, Practice and Principles Volume 81 ; 81 >
+      au < exists ; 2009 ; The Police Journal: Theory, Practice and Principles Volume 82 ; 82 >
+      au < exists ; 2010 ; The Police Journal: Theory, Practice and Principles Volume 83 ; 83 >
+      au < exists ; 2011 ; The Police Journal: Theory, Practice and Principles Volume 84 ; 84 >
+      au < exists ; 2012 ; The Police Journal: Theory, Practice and Principles Volume 85 ; 85 >
+      au < exists ; 2013 ; The Police Journal: Theory, Practice and Principles Volume 86 ; 86 >
+      au < exists ; 2014 ; The Police Journal: Theory, Practice and Principles Volume 87 ; 87 >
+      au < expected ; 2015 ; The Police Journal: Theory, Practice and Principles Volume 88 ; 88 >
+  }
 
     {
 
@@ -41690,7 +41793,8 @@ comment[mpj] = now published by Brill
 
     title <
       name = Translational Epigenomics ;
-      issn = 2334-4865
+      issn = 2334-4865 ;
+      issnl = 2334-4865
     >
 
       param[base_url] = http://epi.sagepub.com/
