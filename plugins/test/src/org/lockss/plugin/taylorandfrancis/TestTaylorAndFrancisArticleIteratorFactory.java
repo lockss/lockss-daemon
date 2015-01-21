@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArticleIteratorFactory.java,v 1.2 2013-12-23 18:30:45 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArticleIteratorFactory.java,v 1.3 2015-01-21 23:14:50 alexandraohlson Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class TestTaylorAndFrancisArticleIteratorFactory extends ArticleIteratorT
 
 
   //
-  // We are set up to match any of abs|pdf|full|pdfplus
+  // We are set up to match any of pdf|full|pdfplus
   //
 
   public void testUrlsWithPrefixes() throws Exception {
@@ -121,12 +121,13 @@ public class TestTaylorAndFrancisArticleIteratorFactory extends ArticleIteratorT
     
     // we match to doi/(abs|full|pdf|pdfplus)
     assertMatchesRE(pat, "http://www.tandfonline.com/doi/pdf/10.1137/100818522"); 
-    assertMatchesRE(pat, "http://www.tandfonline.com/doi/abs/10.1137/100818522");
+    // abstract is only a match if "abstract only" type of au
+    assertNotMatchesRE(pat, "http://www.tandfonline.com/doi/abs/10.1137/100818522");
     assertMatchesRE(pat, "http://www.tandfonline.com/doi/full/10.1137/100818522");
     assertMatchesRE(pat, "http://www.tandfonline.com/doi/pdfplus/10.1137/100818522");
     // and this is the problem URL
     // eg: http://www.tandfonline.com/doi/abs/10.2989/null?sequence=tsfs20%2F2011%2Ftsfs20.v073.i01%2Ftsfs20.v073.i01%2Fproduction
-    assertMatchesRE(pat, "http://www.tandfonline.com/doi/abs/10.2989/null?sequence=tsfs20%2F2011%2Ftsfs20.v073.i01%2Ftsfs20.v073.i01%2Fproduction");
+    assertMatchesRE(pat, "http://www.tandfonline.com/doi/full/10.2989/null?sequence=tsfs20%2F2011%2Ftsfs20.v073.i01%2Ftsfs20.v073.i01%2Fproduction");
   }
   
   // Set up some content to test generation of ArticleFiles  

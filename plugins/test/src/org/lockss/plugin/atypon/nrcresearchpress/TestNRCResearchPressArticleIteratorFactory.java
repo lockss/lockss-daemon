@@ -119,7 +119,7 @@ public class TestNRCResearchPressArticleIteratorFactory extends ArticleIteratorT
     assertMatchesRE(pat, BASE_URL + "doi/pdf/10.2466/g353-354");
    
     assertNotMatchesRE(pat, BASE_URL + "toc/PR0/108/3");
-    assertMatchesRE(pat, BASE_URL + "doi/abs/10.2446/000/1.2.98.PR0.108.4.567-589");
+    assertMatchesRE(pat, BASE_URL + "doi/full/10.2446/000/1.2.98.PR0.108.4.567-589");
 
   }
   public void testCrawlRules() throws Exception {

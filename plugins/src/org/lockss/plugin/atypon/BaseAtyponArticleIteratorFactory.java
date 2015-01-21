@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.12 2014-10-21 16:47:13 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.13 2015-01-21 23:14:50 alexandraohlson Exp $
  */
 
 /*
@@ -57,8 +57,12 @@ ArticleMetadataExtractorFactory {
   private static final String ROLE_PDFPLUS = "PdfPlus";
 
   private static final String ROOT_TEMPLATE = "\"%sdoi/\", base_url";
-  private static final String PATTERN_TEMPLATE = 
+
+  // Only put the 'abs' in the pattern if used for primary; otherwise builder spews errors
+  private static final String PATTERN_TEMPLATE_WITH_ABSTRACT = 
       "\"^%sdoi/(abs|full|pdf|pdfplus)/[.0-9]+/\", base_url";
+  private static final String PATTERN_TEMPLATE = 
+      "\"^%sdoi/(full|pdf|pdfplus)/[.0-9]+/\", base_url";
 
   // various aspects of an article
   // DOI's can have "/"s in the suffix
@@ -112,9 +116,15 @@ ArticleMetadataExtractorFactory {
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
 
-    builder.setSpec(target,
-        ROOT_TEMPLATE,
-        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    if (isAbstractOnly(au)) {
+      builder.setSpec(target,
+          ROOT_TEMPLATE,
+          PATTERN_TEMPLATE_WITH_ABSTRACT, Pattern.CASE_INSENSITIVE);
+    } else {
+      builder.setSpec(target,
+          ROOT_TEMPLATE,
+          PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    }
 
     // The order in which these aspects are added is important. They determine which will trigger
     // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
@@ -165,7 +175,7 @@ ArticleMetadataExtractorFactory {
     builder.addAspect(Arrays.asList(
         RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT),
         ArticleFiles.ROLE_CITATION_RIS);
-    
+
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,

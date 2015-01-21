@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.6 2014-10-21 16:47:13 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.7 2015-01-21 23:14:50 alexandraohlson Exp $
  */
 
 /*
@@ -119,26 +119,26 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
-    // we match to doi/(abs|full|pdf|pdfplus)
+    // we match to doi/(full|pdf|pdfplus)
     assertMatchesRE(pat, "http://www.baseatypon.org/doi/pdf/10.1137/100818522"); 
-    assertMatchesRE(pat, "http://www.baseatypon.org/doi/abs/10.1137/100818522");
+    assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/abs/10.1137/100818522");
     assertMatchesRE(pat, "http://www.baseatypon.org/doi/full/10.1137/100818522");
     assertMatchesRE(pat, "http://www.baseatypon.org/doi/pdfplus/10.1137/100818522");
     // prefix of DOI can have additional dots
-    assertMatchesRE(pat, "http://www.baseatypon.org/doi/abs/10.1137.12.13/100818522");
+    assertMatchesRE(pat, "http://www.baseatypon.org/doi/full/10.1137.12.13/100818522");
     // PATTERN will allow this but actual article pattern matches will not allow "/" in 2nd part of DOI
-    assertMatchesRE(pat, "http://www.baseatypon.org/doi/abs/10.1137/ABC1234-3/fff");
+    assertMatchesRE(pat, "http://www.baseatypon.org/doi/full/10.1137/ABC1234-3/fff");
     
     // but not to doi/(ref|suppl| which are supporting only
     assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/ref/10.1137.12.13/100818522");
     assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/suppl/10.1137.12.13/100818522");
     // must have both parts of DOI
-    assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/abs/10.1137");
+    assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/full/10.1137");
 
     // prefix of DOI doesn't support letters though that is technically legal
-    assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/abs/10.1ABCD/12345");
+    assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/full/10.1ABCD/12345");
     // wrong base url
-    assertNotMatchesRE(pat, "http://ametsoc.org/doi/abs/10.1175/2009WCAS1006.1");
+    assertNotMatchesRE(pat, "http://ametsoc.org/doi/full/10.1175/2009WCAS1006.1");
   }
 
   //
