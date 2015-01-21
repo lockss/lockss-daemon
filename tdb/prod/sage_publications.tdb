@@ -3294,6 +3294,23 @@
 
     }
 
+  {
+
+    title <
+      name = Asian/Pacific Island Nursing Journal ;
+      eissn = 2373-6658 ;
+      issnl = 2373-6658
+    >
+
+      param[base_url] = http://psm.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < expected ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
+
+  }
+
     {
 
       title <
@@ -17037,6 +17054,35 @@
 
     }
 
+  {
+
+    title <
+      name = The International Journal of Evidence & Proof ;
+      issn = 1365-7127 ;
+      eissn = 1740-5572 ;
+      issnl = 1365-7127
+    >
+
+      param[base_url] = http://epj.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; The International Journal of Evidence & Proof Volume 7  ; 7 >
+      au < exists ; 2004 ; The International Journal of Evidence & Proof Volume 8  ; 8 >
+      au < exists ; 2005 ; The International Journal of Evidence & Proof Volume 9  ; 9 >
+      au < exists ; 2006 ; The International Journal of Evidence & Proof Volume 10 ; 10 >
+      au < exists ; 2007 ; The International Journal of Evidence & Proof Volume 11 ; 11 >
+      au < exists ; 2008 ; The International Journal of Evidence & Proof Volume 12 ; 12 >
+      au < exists ; 2009 ; The International Journal of Evidence & Proof Volume 13 ; 13 >
+      au < exists ; 2010 ; The International Journal of Evidence & Proof Volume 14 ; 14 >
+      au < exists ; 2011 ; The International Journal of Evidence & Proof Volume 15 ; 15 >
+      au < exists ; 2012 ; The International Journal of Evidence & Proof Volume 16 ; 16 >
+      au < exists ; 2013 ; The International Journal of Evidence & Proof Volume 17 ; 17 >
+      au < exists ; 2014 ; The International Journal of Evidence & Proof Volume 18 ; 18 >
+      au < exists ; 2015 ; The International Journal of Evidence & Proof Volume 19 ; 19 >
+
+  }
+
     {
 
       title <
@@ -17327,6 +17373,36 @@
 
 
     }
+
+  {
+
+    title <
+      name = International Journal of Police Science & Management ;
+      issn = 1461-3557 ;
+      eissn = 1478-1603 ;
+      issnl = 1461-3557
+    >
+
+      param[base_url] = http://psm.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2002 ; International Journal of Police Science & Management Volume 4 ; 4 >
+      au < exists ; 2003 ; International Journal of Police Science & Management Volume 5 ; 5 >
+      au < exists ; 2004 ; International Journal of Police Science & Management Volume 6 ; 6 >
+      au < exists ; 2005 ; International Journal of Police Science & Management Volume 7 ; 7 >
+      au < exists ; 2006 ; International Journal of Police Science & Management Volume 8 ; 8 >
+      au < exists ; 2007 ; International Journal of Police Science & Management Volume 9 ; 9 >
+      au < exists ; 2008 ; International Journal of Police Science & Management Volume 10 ; 10 >
+      au < exists ; 2009 ; International Journal of Police Science & Management Volume 11 ; 11 >
+      au < exists ; 2010 ; International Journal of Police Science & Management Volume 12 ; 12 >
+      au < exists ; 2011 ; International Journal of Police Science & Management Volume 13 ; 13 >
+      au < exists ; 2012 ; International Journal of Police Science & Management Volume 14 ; 14 >
+      au < exists ; 2013 ; International Journal of Police Science & Management Volume 15 ; 15 >
+      au < exists ; 2014 ; International Journal of Police Science & Management Volume 16 ; 16 >
+      au < expected ; 2015 ; International Journal of Police Science & Management Volume 17 ; 17 >
+
+  }
 
     {
 
@@ -38812,6 +38888,22 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+      title <
+        name = Sociology of Race and Ethnicity ;
+        issn = 2332-6492 ;
+        eissn = 2332-6506 ;
+        issnl = 2332-6492
+      >
+
+      param[base_url] = http://sre.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Sociology of Race and Ethnicity Volume 1 ; 1 >
+
+  }
     {
 
       title <

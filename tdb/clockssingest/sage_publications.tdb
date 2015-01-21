@@ -2937,20 +2937,31 @@
         issnl = 1326-365X
       >
 
-    param[base_url] = http://ame.sagepub.com/
+      param[base_url] = http://ame.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
 
-      {
-
-        pluginSuffix = ClockssHighWirePressH20Plugin
-
-        au < crawling ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
-        au < manifest ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
-        au < manifest ; exists ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
-        au < expected ; exists ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 ; >
-
-      }
+      au < crawling ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
+      au < expected ; exists ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 ; >
 
     }
+
+  {
+
+    title <
+      name = Asian/Pacific Island Nursing Journal ;
+      eissn = 2373-6658 ;
+      issnl = 2373-6658
+    >
+
+      param[base_url] = http://psm.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; >
+      au < expected ; exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
+
+  }
 
   {
 
@@ -15052,6 +15063,34 @@
   {
 
     title <
+      name = The International Journal of Evidence & Proof ;
+      issn = 1365-7127 ;
+      eissn = 1740-5572 ;
+      issnl = 1365-7127
+    >
+
+      param[base_url] = http://epj.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2003 ; The International Journal of Evidence & Proof Volume 7  ; 7 ; >
+      au < exists ; exists ; 2004 ; The International Journal of Evidence & Proof Volume 8  ; 8 ; >
+      au < exists ; exists ; 2005 ; The International Journal of Evidence & Proof Volume 9  ; 9 ; >
+      au < exists ; exists ; 2006 ; The International Journal of Evidence & Proof Volume 10 ; 10 ; >
+      au < exists ; exists ; 2007 ; The International Journal of Evidence & Proof Volume 11 ; 11 ; >
+      au < exists ; exists ; 2008 ; The International Journal of Evidence & Proof Volume 12 ; 12 ; >
+      au < exists ; exists ; 2009 ; The International Journal of Evidence & Proof Volume 13 ; 13 ; >
+      au < exists ; exists ; 2010 ; The International Journal of Evidence & Proof Volume 14 ; 14 ; >
+      au < exists ; exists ; 2011 ; The International Journal of Evidence & Proof Volume 15 ; 15 ; >
+      au < exists ; exists ; 2012 ; The International Journal of Evidence & Proof Volume 16 ; 16 ; >
+      au < exists ; exists ; 2013 ; The International Journal of Evidence & Proof Volume 17 ; 17 ; >
+      au < exists ; exists ; 2014 ; The International Journal of Evidence & Proof Volume 18 ; 18 ; >
+      au < exists ; exists ; 2015 ; The International Journal of Evidence & Proof Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of High Performance Computing Applications ;
       issn = 1094-3420 ;
       eissn = 1741-2846
@@ -15310,6 +15349,35 @@
       au < manifest ; exists ; 2015 ; International Journal of Offender Therapy and Comparative Criminology Volume 59 ; 59 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Police Science & Management ;
+      issn = 1461-3557 ;
+      eissn = 1478-1603 ;
+      issnl = 1461-3557
+    >
+
+      param[base_url] = http://psm.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2002 ; International Journal of Police Science & Management Volume 4 ; 4 ; >
+      au < exists ; exists ; 2003 ; International Journal of Police Science & Management Volume 5 ; 5 ; >
+      au < exists ; exists ; 2004 ; International Journal of Police Science & Management Volume 6 ; 6 ; >
+      au < exists ; exists ; 2005 ; International Journal of Police Science & Management Volume 7 ; 7 ; >
+      au < exists ; exists ; 2006 ; International Journal of Police Science & Management Volume 8 ; 8 ; >
+      au < exists ; exists ; 2007 ; International Journal of Police Science & Management Volume 9 ; 9 ; >
+      au < exists ; exists ; 2008 ; International Journal of Police Science & Management Volume 10 ; 10 ; >
+      au < exists ; exists ; 2009 ; International Journal of Police Science & Management Volume 11 ; 11 ; >
+      au < exists ; exists ; 2010 ; International Journal of Police Science & Management Volume 12 ; 12 ; >
+      au < exists ; exists ; 2011 ; International Journal of Police Science & Management Volume 13 ; 13 ; >
+      au < exists ; exists ; 2012 ; International Journal of Police Science & Management Volume 14 ; 14 ; >
+      au < exists ; exists ; 2013 ; International Journal of Police Science & Management Volume 15 ; 15 ; >
+      au < exists ; exists ; 2014 ; International Journal of Police Science & Management Volume 16 ; 16 ; >
+      au < expected ; exists ; 2015 ; International Journal of Police Science & Management Volume 17 ; 17 ; >
 
   }
 
@@ -29071,7 +29139,8 @@
     title <
       name = OTJR: Occupation, Participation and Health ;
       issn = 1539-4492 ;
-      eissn = 1938-2383
+      eissn = 1938-2383 ;
+      issnl = 1539-4492
     >
 
       param[base_url] = http://otj.sagepub.com/
@@ -35521,6 +35590,22 @@
       au < manifest ; exists ; 2015 ; Sociology of Education Volume 88 ; 88 ; >
 
     }
+
+  }
+
+  {
+
+      title <
+        name = Sociology of Race and Ethnicity ;
+        issn = 2332-6492 ;
+        eissn = 2332-6506 ;
+        issnl = 2332-6492
+      >
+
+      param[base_url] = http://sre.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Sociology of Race and Ethnicity Volume 1 ; 1 ; >
 
   }
 
