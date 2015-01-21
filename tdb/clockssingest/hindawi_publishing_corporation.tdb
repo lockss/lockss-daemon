@@ -3201,7 +3201,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Alzheimer's Disease Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Alzheimer's Disease Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Alzheimer's Disease Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -3217,7 +3217,7 @@
     param[journal_id] = ijanal
 
     au < manifest ; exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3237,7 +3237,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Analytical Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Analytical Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3275,7 +3275,7 @@
     param[journal_id] = ijan
 
     au < manifest ; exists ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Antibiotics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3291,7 +3291,7 @@
     param[journal_id] = ijas
 
     au < manifest ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Atmospheric Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3307,7 +3307,7 @@
     param[journal_id] = ijb
 
     au < manifest ; exists ; 2013 ; International Journal of Bacteriology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Bacteriology Volume 2015 ; 2015 ; 2015 >
 
   }
