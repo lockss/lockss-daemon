@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.8 2014-10-28 22:40:28 aishizaki Exp $
+/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.9 2015-01-22 23:26:16 aishizaki Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -75,6 +75,8 @@ public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("li", "class", "view-cta"),
         HtmlNodeFilters.tagWithAttribute("li", "class", "download-cta"),
         HtmlNodeFilters.tagWithAttribute("li", "class", "kindle-cta"),
+        // new stuff as of jan 2015: this contains "related content"
+        HtmlNodeFilters.tagWithAttribute("div", "class", "similar-content cleared"),
 
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));

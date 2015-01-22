@@ -1,5 +1,5 @@
 /*
- * $Id: TestPalgraveBookHtmlHashFilterFactory.java,v 1.2 2014-10-28 22:43:19 aishizaki Exp $
+ * $Id: TestPalgraveBookHtmlHashFilterFactory.java,v 1.3 2015-01-22 23:26:16 aishizaki Exp $
  */
 
 /*
@@ -88,6 +88,10 @@ public class TestPalgraveBookHtmlHashFilterFactory extends LockssTestCase {
   private static final String HtmlHashD = ".          .\t\t\t\t\t\t\t.";
   private static final String HtmlHashDFiltered = ". . .";
 
+  private static final String HtmlHashEFiltered = "Hello World";
+  private static final String HtmlHashE = 
+    "<div class=\"similar-content cleared\">" +
+    "<h3>related content</h3></div>" + HtmlHashEFiltered;
 
   public void testFilterA() throws Exception {
     InputStream inA;
@@ -125,6 +129,15 @@ public class TestPalgraveBookHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(HtmlHashD), ENC);    
     String filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashDFiltered, filtStr);
+   
+  }
+  public void testFilterE() throws Exception {
+    InputStream in;
+
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashE), ENC);    
+    String filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
    
   }
 
