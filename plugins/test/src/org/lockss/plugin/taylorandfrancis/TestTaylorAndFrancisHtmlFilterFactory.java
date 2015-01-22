@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.22 2015-01-17 02:14:58 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.23 2015-01-22 04:32:46 thib_gc Exp $
  */
 
 /*
@@ -372,7 +372,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             + "<div class=\"block-2 sb-div\"></div>"
             + "</div>";
 
-    private static final String articleUsageHtmlHashFiltered = " ";
+    private static final String articleUsageHtmlHashFiltered = "";
 
 
     private static final String javascriptHtmlHash = 
@@ -415,7 +415,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "<div class=\"status-message\" style=\"display: none; \"></div>" +
             "</div>" +
             "</td>";
-    private static final String googleStuffFiltered = " ";
+    private static final String googleStuffFiltered = "";
 
     private static final String socialMediaHtml = 
         "<div class=\"social clear\">" +
@@ -584,9 +584,9 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "</div>";
 
     private static final String tocEntryFiltered = 
-            " TITLE OF ARTICLE Author &amp; OtherAuthor pages 1-60 View full text"
-            + " Download full text DOI: 10.1080/xxxx 25 Jan 2013 Further Information"
-            + " Abstract References ";
+            "TITLE OF ARTICLEAuthor &amp; OtherAuthorpages 1-60View full text"
+            + "Download full textDOI:10.1080/xxxx 25 Jan 2013Further Information"
+            + "AbstractReferences";
 
     // note lower case of "articles"
     private static final String citArticlesCase1 =
@@ -700,23 +700,23 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     }
 
     public void testDivIdContent() throws Exception {
-      assertEquals(" ABCDEFGHIJKLM ",
+      assertEquals("ABCDEFGHIJKLM",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<div id=\"content\">ABCDEFGHIJKLM</div>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals(" ABCDEFGHIJKLM ",
+      assertEquals("ABCDEFGHIJKLM",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<div id=\"journal_content\">ABCDEFGHIJKLM</div>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals(" ABCDEFGHIJKLM ",
+      assertEquals("ABCDEFGHIJKLM",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<div id=\"tandf_content\">ABCDEFGHIJKLM</div>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals(" ABCDEFGHIJKLM ",
+      assertEquals("ABCDEFGHIJKLM",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<a href=\"#content\">ABCDEFGHIJKLM</a>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals(" ABCDEFGHIJKLM ",
+      assertEquals("ABCDEFGHIJKLM",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<a href=\"#tandf_content\">ABCDEFGHIJKLM</a>"),
               Constants.DEFAULT_ENCODING)));
@@ -842,11 +842,11 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     }
 
     public void testImgClassCover() throws Exception {
-      assertEquals(" ",
+      assertEquals("",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<p><img src=\"" + rand() + "\" alt=\"" + rand() + "\" class=\"cover\"/></p>"),
               Constants.DEFAULT_ENCODING)));
-      assertEquals(" ",
+      assertEquals("",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<p><img src=\"" + rand() + "\" alt=\"" + rand() + "\" class=\"cover\" /></p>"),
               Constants.DEFAULT_ENCODING)));
@@ -872,7 +872,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     }
 
     public void testHead() throws Exception {
-      assertEquals(" ",
+      assertEquals("",
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream("<html>"
                   + "<head>"

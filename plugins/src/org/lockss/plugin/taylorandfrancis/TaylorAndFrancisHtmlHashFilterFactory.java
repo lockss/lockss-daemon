@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.22 2015-01-20 22:38:46 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.23 2015-01-22 04:32:47 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -128,20 +129,24 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // TOC: wording change
         HtmlNodeFilters.tagWithText("a", "Sample copy"),
         HtmlNodeFilters.tagWithText("a", "Sample this title"),
-        
+        // List of outside venues for each Reference changes over time
+        // (Web of Science, Crossref, site-specific SFX, etc.)
+        // See also the string filter below that addresses the leftover commas
+        HtmlNodeFilters.tagWithAttribute("span", "class", "referenceDiv"), // hidden popup at each inline citation
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
+        HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
+        // Tabular data used to be inline, is now separate (like a Figure)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "NLM_table-wrap"), // embedded tabular data
+        HtmlNodeFilters.tagWithAttribute("center", "class", "fulltext"), // external tabular data
         
         /*
          * ?? 
          */
         // what follows here may no longer be all needed due to the maximal filtering - but leave it in
-        // Contains site-specific SFX markup
-        HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // Contains a cookie or session ID
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
         // Contains a variant phrase "Full access" or "Free access"
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"),
-        // Counterpart of the previous clause when there is no integrated SFX
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
         // (no longer needed because we strip out inner tag content)
 //        // These two equivalent links are found (this is not a regex)
 //        HtmlNodeFilters.tagWithAttribute("a", "href", "/"),
@@ -325,7 +330,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
     
     InputStream filtered = new HtmlFilterInputStream(in,
                                                      encoding,
-                                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+                                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
+    .registerTag(new CompositeTag() { @Override public String[] getIds() { return new String[] {"CENTER"}; } }); // FIXME 1.67.4
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
@@ -333,7 +339,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                                                         new String[][] {
         // Typographical changes over time
         {"&nbsp;", " "},
-        {" ,", ","}, // in inline citations
+//        {"  ,", ","}, // in inline citations
+//        {" ,", ","}, // in inline citations
         // Wording change over time
         {"<strong>Published online:</strong>"},
         {"<strong>Available online:</strong>"},
@@ -346,7 +353,12 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagPair("<li><strong>Citations:", "</li>", true),
         new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>", true),
         new TagPair("<li><strong>Citation information:", "</li>", true),
-        new TagPair("<li><div><strong>Citing Articles:", "</li>", true)
+        new TagPair("<li><div><strong>Citing Articles:", "</li>", true),
+        // List of outside venues for References changes over time
+        // (Web of Science, Crossref, site-specific SFX...)
+        // Tags removed above but commas are left over afterwards
+        // This is about the best we can do in this situation
+        new TagPair("</pub-id>", "</li>", true)
     ));
     
     // (no longer needed because we strip out inner tag content)
@@ -355,16 +367,17 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 //                                    "</div> <div");
 
     // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(tagFilter, "<", " <"), new TagPair("<", ">"));
+//    Reader noTagFilter = new HtmlTagFilter(new StringFilter(tagFilter, "<", " <"), new TagPair("<", ">"));
+    Reader noTagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
     
     // Remove white space
     return new ReaderInputStream(new WhiteSpaceFilter(noTagFilter));
   }
 
-//  public static void main(String[] args) throws Exception {
-//    String file = "/tmp/q6/file-b2";
-//    IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-//                 new FileOutputStream(file + ".out"));
-//  }
+  public static void main(String[] args) throws Exception {
+    String file = "/tmp/w4/file-b1";
+    IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+                 new FileOutputStream(file + ".out"));
+  }
   
 }
