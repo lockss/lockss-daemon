@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTags.java,v 1.9 2014-07-14 23:20:27 etenbrink Exp $
+ * $Id: HtmlTags.java,v 1.9.4.1 2015-01-22 04:21:48 thib_gc Exp $
  */
 
 /*
@@ -371,7 +371,20 @@ public class HtmlTags {
   }
 
   /**
-   * A NOSCRIPT tag.  Registered with PrototypicalNodeFactory to cause iframe
+   * @since 1.67.4 
+   */
+  public static class Center extends CompositeTag {
+
+    private static final String[] mIds = new String[] {"CENTER"};
+
+    public String[] getIds() {
+      return mIds;
+    }
+
+  }
+
+  /**
+   * A NOSCRIPT tag.  Registered with PrototypicalNodeFactory to cause noscript
    * to be a CompositeTag.  See code samples in org.htmlparser.tags.
    * @see HtmlFilterInputStream#makeParser()
    */

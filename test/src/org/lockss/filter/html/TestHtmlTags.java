@@ -1,10 +1,10 @@
 /*
- * $Id: TestHtmlTags.java,v 1.6 2014-07-14 23:21:40 etenbrink Exp $
+ * $Id: TestHtmlTags.java,v 1.6.4.1 2015-01-22 04:21:48 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.html;
 
 import java.io.*;
-import org.lockss.util.*;
-import org.lockss.test.*;
-import org.htmlparser.*;
-import org.htmlparser.util.*;
+
+import org.htmlparser.Node;
 import org.htmlparser.tags.*;
+import org.htmlparser.util.NodeList;
+import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class TestHtmlTags extends LockssTestCase {
-  static Logger log = Logger.getLogger(TestHtmlTags.class);
   
   // Ensure <header>...</header> gets parsed as an HtmlTags.Header
   // composite tag, not as the default sequence of TagNodes
@@ -283,6 +283,21 @@ public class TestHtmlTags extends LockssTestCase {
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
     assertTrue(node instanceof HtmlTags.Noscript);
+    assertEquals(1, nl.size());
+  }
+
+  // Ensure <center>...</center> gets parsed as an HtmlTags.Center
+  // composite tag, not as the default sequence of TagNodes
+  public void testCenterTag() throws IOException {
+    String in = "<center><i>iii</i></center>";
+    MockHtmlTransform xform =
+      new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+      new HtmlFilterInputStream(new StringInputStream(in), xform);
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Center);
     assertEquals(1, nl.size());
   }
 
