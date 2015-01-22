@@ -1,10 +1,10 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.19 2013-08-15 08:18:59 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.19.12.1 2015-01-22 04:22:42 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.19 2013-08-15 08:18:59 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.19.12.1 2015-01-22 04:22:42 thib_gc Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -458,11 +458,11 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             // parsing the date.
             ResourceCache.ResourceMetaData metaData =
                 (ResourceCache.ResourceMetaData)resource.getAssociate();
-            if (metaData!=null)
+            if (metaData != null && resource.lastModified() > 0)
             {
                 String ifms=request.getField(HttpFields.__IfModifiedSince);
                 String mdlm=metaData.getLastModified();
-                if (ifms!=null && mdlm!=null && ifms.equals(mdlm))
+                if (ifms != null && mdlm != null && ifms.equals(mdlm))
                 {
                     response.setStatus(HttpResponse.__304_Not_Modified);
                     request.setHandled(true);
