@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.22 2014-07-14 23:22:22 etenbrink Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.22.4.1 2015-01-22 11:31:29 thib_gc Exp $
  */
 
 /*
@@ -385,6 +385,7 @@ public class HtmlFilterInputStream
     factory.registerTag(new HtmlTags.Progress()); // added in 1.66
     factory.registerTag(new HtmlTags.Summary()); // added in 1.66
     factory.registerTag(new HtmlTags.Time()); // added in 1.66
+    factory.registerTag(new HtmlTags.Center()); // added in 1.67.4
     return factory;
   }
 
