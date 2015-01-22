@@ -4544,6 +4544,20 @@
   {
 
     title <
+      name = Business Perspectives and Research ;
+      issn = 2278-5337 ;
+      issnl = 2278-5337
+    >
+
+      param[base_url] = http://bpr.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Business Perspectives and Research Volume 3 ; 3 ; >
+  }
+
+  {
+
+    title <
       name = Canadian Journal of School Psychology ;
       issn = 0829-5735 ;
       eissn = 2154-3984
@@ -20301,6 +20315,20 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Journal of Entrepreneurship and Innovation in Emerging Economies ;
+      issn = 2393-9575 ;
+      issnl = 2393-9575
+    >
+
+      param[base_url] = http://eie.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Journal of Entrepreneurship and Innovation in Emerging Economies Volume 1 ; 1 ; >
   }
 
   {
