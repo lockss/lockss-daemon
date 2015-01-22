@@ -45,8 +45,9 @@
     param[base_url] = http://stemcellstm.alphamedpress.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady] = Login page
 
-    au < testing ; 2012 ; Stem Cells: Translational Medicine Volume 1 ; 1 >
+    au < notReady ; 2012 ; Stem Cells: Translational Medicine Volume 1 ; 1 >
     au < expected ; 2013 ; Stem Cells: Translational Medicine Volume 2 ; 2 >
     au < expected ; 2014 ; Stem Cells: Translational Medicine Volume 3 ; 3 >
 
