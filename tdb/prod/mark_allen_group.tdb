@@ -511,9 +511,9 @@
 
     comment[base_url] = http://www.equinehealthmagazine.com/
     param[journal_id] = eqhe
-    comment[notReady] = publisher has lumped all issues into one volume.
+    comment[notReady] = all issues lumped into one volume.
 
-    au < notReady ; 2014 ; Companion Animal Volume 1 ; 1 >
+    au < notReady ; 2014 ; Equine Health Volume 1 ; 1 >
 
   }
 
@@ -704,7 +704,12 @@
     >
 
     comment[base_url] = http://www.primaryteacherupdate.co.uk/
+    param[journal_id] = prtu
+    comment[notReady] = issues lumped into one volume.
+    
 
+    au < exists ; 2010 ; SecEd Volume 9 ; 2010 >
+    au < notReady ; 2011-2015 ; SecEd Volume 2015 ; 2015 >
 
   }
 
