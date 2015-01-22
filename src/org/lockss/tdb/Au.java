@@ -1,10 +1,10 @@
 /*
- * $Id: Au.java,v 1.7 2014-11-17 22:30:40 thib_gc Exp $
+ * $Id: Au.java,v 1.7.2.1 2015-01-22 22:37:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,6 +74,7 @@ public class Au {
     this.plugin = other.plugin;
     this.pluginPrefix = other.pluginPrefix;
     this.pluginSuffix = other.pluginSuffix;
+    this.provider = other.provider;
     this.proxy = other.proxy;
     this.rights = other.rights;
     if (other.attrsMap != null) {
@@ -261,6 +262,10 @@ public class Au {
         }
         else if (PLUGIN_SUFFIX.equals(key)) {
           pluginSuffix = value;
+          return;
+        }
+        else if (PROVIDER.equals(key)) {
+          provider = value;
           return;
         }
         else if (PROXY.equals(key)) {
@@ -698,6 +703,36 @@ public class Au {
    */
   public String getPluginSuffix() {
     return pluginSuffix;
+  }
+  
+  /**
+   * <p>
+   * The AU's provider (key).
+   * </p>
+   * 
+   * @since 1.67.4
+   */
+  protected static final String PROVIDER = "provider";
+  
+  /**
+   * <p>
+   * The AU's provider (field).
+   * </p>
+   * 
+   * @since 1.67.4
+   */
+  protected String provider;
+  
+  /**
+   * <p>
+   * Retrieves the AU's provider.
+   * </p>
+   * 
+   * @return The AU's provider.
+   * @since 1.67.4
+   */
+  public String getProvider() {
+    return provider;
   }
   
   /**
@@ -1146,6 +1181,7 @@ public class Au {
     m.put("au:plugin", new A() { @Override String a(Au a) { return a.getPlugin(); } });
     m.put("au:pluginPrefix", new A() { @Override String a(Au a) { return a.getPluginPrefix(); } });
     m.put("au:pluginSuffix", new A() { @Override String a(Au a) { return a.getPluginSuffix(); } });
+    m.put("au:provider", new A() { @Override String a(Au a) { return a.getProvider(); } });
     m.put("au:proxy", new A() { @Override String a(Au a) { return a.getProxy(); } });
     m.put("au:rights", new A() { @Override String a(Au a) { return a.getRights(); } });
     m.put("au:status", new A() { @Override String a(Au a) { return a.getStatus(); } });
@@ -1184,6 +1220,7 @@ public class Au {
     m.put("plugin", m.get("au:plugin"));
     m.put("pluginPrefix", m.get("au:pluginPrefix"));
     m.put("pluginSuffix", m.get("au:pluginSuffix"));
+    m.put("provider", m.get("au:provider"));
     m.put("proxy", m.get("au:proxy"));
     m.put("publisher", m.get("publisher:name"));
     m.put("rights", m.get("au:rights"));

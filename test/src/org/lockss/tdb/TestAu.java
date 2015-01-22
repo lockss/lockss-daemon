@@ -1,5 +1,5 @@
 /*
- * $Id: TestAu.java,v 1.2 2014-11-17 22:31:27 thib_gc Exp $
+ * $Id: TestAu.java,v 1.2.2.1 2015-01-22 22:37:55 thib_gc Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class TestAu extends LockssTestCase {
   public static final String PLUGIN_VALUE = "Plugin Value";
   public static final String PLUGIN_PREFIX_VALUE = "Plugin Prefix Value";
   public static final String PLUGIN_SUFFIX_VALUE = "Plugin Suffix Value";
+  public static final String PROVIDER_VALUE = "Provider Value";
   public static final String PROXY_VALUE = "Proxy Value";
   public static final String RIGHTS_VALUE = "Rights Value";
   public static final String STATUS_VALUE = "Status Value";
@@ -91,6 +92,7 @@ public class TestAu extends LockssTestCase {
     assertEquals("plugin", Au.PLUGIN);
     assertEquals("pluginPrefix", Au.PLUGIN_PREFIX);
     assertEquals("pluginSuffix", Au.PLUGIN_SUFFIX);
+    assertEquals("provider", Au.PROVIDER);
     assertEquals("proxy", Au.PROXY);
     assertEquals("rights", Au.RIGHTS);
     assertEquals("status", Au.STATUS);
@@ -135,6 +137,7 @@ public class TestAu extends LockssTestCase {
     assertNull(au.getPlugin());
     assertNull(au.getPluginPrefix());
     assertNull(au.getPluginSuffix());
+    assertNull(au.getProvider());
     assertNull(au.getProxy());
     assertNull(au.getRights());
     assertNull(au.getStatus());
@@ -163,6 +166,8 @@ public class TestAu extends LockssTestCase {
     assertEquals(EISBN_VALUE, au.getEisbn());
     au.put(Au.ISBN, ISBN_VALUE);
     assertEquals(ISBN_VALUE, au.getIsbn());
+    au.put(Au.PROVIDER, PROVIDER_VALUE);
+    assertEquals(PROVIDER_VALUE, au.getProvider());
     au.put(Au.PROXY, PROXY_VALUE);
     assertEquals(PROXY_VALUE, au.getProxy());
     au.put(Au.RIGHTS, RIGHTS_VALUE);
@@ -302,6 +307,9 @@ public class TestAu extends LockssTestCase {
     au.put(Au.NAME, NAME_VALUE);
     assertEquals(NAME_VALUE, Au.traitFunctor("au:name").apply(au));
     assertSame(Au.traitFunctor("au:name"), Au.traitFunctor("name"));
+    au.put(Au.PROVIDER, PROVIDER_VALUE);
+    assertEquals(PROVIDER_VALUE, Au.traitFunctor("au:provider").apply(au));
+    assertSame(Au.traitFunctor("au:provider"), Au.traitFunctor("provider"));
     au.put(Au.PROXY, PROXY_VALUE);
     assertEquals(PROXY_VALUE, Au.traitFunctor("au:proxy").apply(au));
     assertSame(Au.traitFunctor("au:proxy"), Au.traitFunctor("proxy"));
