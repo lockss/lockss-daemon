@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.10 2015-01-21 16:12:14 aishizaki Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.11 2015-01-22 23:12:11 aishizaki Exp $
  */
 
 /*
@@ -143,6 +143,15 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "<m:mrow>" +
     "</m:mrow>" +
     "</p></html>";
+  private static final String DisplayInlineHash = 
+    "<html><div style=\"display:table;width:100%;*display:inline\">" +
+    "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
+    "<m:mrow>" +
+    "</m:mrow>" +
+    "</div></html>";
+  private static final String MathJaxHash = 
+    "<html><span class=\"mathjax\">" +
+    "</span></html>";
   private static final String InlineNumberHashFiltered =
     "<html></html>";
 
@@ -225,6 +234,9 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   public void testFilterInlineNumber() throws Exception {
     
     checkHashFilter1(InlineNumberHash, InlineNumberHashFiltered);
+    checkHashFilter1(DisplayInlineHash, InlineNumberHashFiltered);
+    checkHashFilter1(MathJaxHash, InlineNumberHashFiltered);
+
 
   }
 }

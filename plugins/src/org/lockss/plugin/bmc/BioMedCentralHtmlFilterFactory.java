@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.14 2015-01-21 16:12:14 aishizaki Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.15 2015-01-22 23:12:11 aishizaki Exp $
  */
 
 /*
@@ -51,15 +51,17 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains variable code
-        new TagNameFilter("script"),
+        HtmlNodeFilters.tag("script"),
         // Contains variable alternatives to the code
-        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tag("noscript"),
+        // remove all style tags!
+        HtmlNodeFilters.tag("style"),
         // Contains ads
-        new TagNameFilter("iframe"),
+        HtmlNodeFilters.tag("iframe"),
         // Contains ads
-        new TagNameFilter("object"),
+        HtmlNodeFilters.tag("object"),
         // CSS and RSS links varied over time
-        new TagNameFilter("link"),
+        HtmlNodeFilters.tag("link"),
         // Contains one-time names inside the page
         HtmlNodeFilters.tagWithAttribute("a", "name"),
         // Links to one-time names inside the page
@@ -113,6 +115,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         
         // removes mathml inline wierdnesses
         HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "style", ".*display:inline$"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
         
         new NodeFilter() {
           @Override public boolean accept(Node node) {

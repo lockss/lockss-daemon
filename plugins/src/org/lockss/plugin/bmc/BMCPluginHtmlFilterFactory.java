@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlFilterFactory.java,v 1.6 2015-01-21 16:12:14 aishizaki Exp $
+ * $Id: BMCPluginHtmlFilterFactory.java,v 1.7 2015-01-22 23:12:11 aishizaki Exp $
  */
 
 /*
@@ -48,17 +48,19 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       String encoding) throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains variable code
-        new TagNameFilter("script"),
+        HtmlNodeFilters.tag("script"),
         // Contains variable alternatives to the code
-        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tag("noscript"),
+        // remove all style tags!
+        HtmlNodeFilters.tag("style"),
         // Contains ads
-        new TagNameFilter("iframe"),
+        HtmlNodeFilters.tag("iframe"),
         // Contains ads
-        new TagNameFilter("object"),
+        HtmlNodeFilters.tag("object"),
         // CSS and RSS links varied over time
-        new TagNameFilter("link"),
+        HtmlNodeFilters.tag("link"),
         //filter out comments
-        HtmlNodeFilters.commentWithRegex(".*"),
+        HtmlNodeFilters.comment(),
         // upper area above the article - Extreme Hash filtering!
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // left-hand area next to the article - Extreme Hash filtering!
@@ -105,6 +107,9 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
         // removes mathml inline wierdnesses
         HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "style", ".*display:inline$"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
+
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));

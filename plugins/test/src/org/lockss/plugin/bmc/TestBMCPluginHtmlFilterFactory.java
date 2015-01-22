@@ -1,5 +1,5 @@
 /*
- * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.5 2015-01-21 16:12:14 aishizaki Exp $
+ * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.6 2015-01-22 23:12:11 aishizaki Exp $
  */
 
 /*
@@ -35,9 +35,7 @@ package org.lockss.plugin.bmc;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.HtmlNodeFilters;
-import org.lockss.plugin.CachedUrl;
+
 import org.lockss.test.*;
 
 public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
@@ -86,7 +84,16 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     "<m:mrow>" +
     "</m:mrow>" +
     "</p></html>";
-  private static final String inst11Filtered = "<html></html>";
+  private static final String inst12 = 
+    "<html><div style=\"display:table;width:100%;*display:inline\">" +
+    "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
+    "<m:mrow>" +
+    "</m:mrow>" +
+    "</div></html>";
+  private static final String inst13 = 
+    "<html><span class=\"mathjax\">" +
+    "</span></html>";
+  private static final String inst1123Filtered = "<html></html>";
 
 
   public void testFiltering() throws Exception {
@@ -98,7 +105,6 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
         ENC);
     inB = fact.createFilteredInputStream(mau, new StringInputStream(inst1result),
         ENC);
-
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
     inB.close();
@@ -156,8 +162,21 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   public void testInlineNumber() throws Exception {
     InputStream inA;
     InputStream inB;
+    
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst11), ENC);
-    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst11Filtered), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst1123Filtered), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst12), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst1123Filtered), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst13), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst1123Filtered), ENC);
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
     inB.close();
