@@ -1,10 +1,10 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.14 2014-10-13 22:21:29 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.15 2015-01-22 20:22:09 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1351,7 +1351,9 @@ public class TestSubscriptionManager extends LockssTestCase {
     Long subscriptionSeq =
 	subManager.persistSubscription(conn, publicationSeq, providerSeq);
 
+    assertFalse(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
+    assertFalse(subManager.hasSubscriptionRanges());
 
     // Handle a subscription with no ranges.
     subManager.unsubscribeAu(conn, au);
@@ -1365,9 +1367,11 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     // Handle a subscription with a null collection of subscribed ranges.
     int count = subManager.persistSubscribedRanges(conn, subscriptionSeq, null);
+    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1380,9 +1384,11 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     // Handle a subscription with a null collection of unsubscribed ranges.
     count = subManager.persistUnsubscribedRanges(conn, subscriptionSeq, null);
+    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1399,9 +1405,11 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
 	subscribedRanges);
+    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1418,9 +1426,11 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     count = subManager.persistUnsubscribedRanges(conn, subscriptionSeq,
 	unsubscribedRanges);
+    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(0, count);
+    assertFalse(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1436,9 +1446,12 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
 	subscribedRanges);
+    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
     assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1450,6 +1463,7 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     assertEquals(0,
 	subManager.findSubscriptionRanges(conn, subscriptionSeq, false).size());
+    assertTrue(subManager.hasSubscriptionRanges(conn));
 
     // Handle a subscription with an exactly matching subscribed range.
     subscribedRanges = new ArrayList<BibliographicPeriod>();
@@ -1457,9 +1471,11 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
 	subscribedRanges);
+    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1473,18 +1489,22 @@ public class TestSubscriptionManager extends LockssTestCase {
 	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
     assertEquals(1, unsubscribedRanges.size());
     assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+    assertTrue(subManager.hasSubscriptionRanges(conn));
 
     // Handle a subscription with an overlapping subscribed range.
     clearSubscriptionRanges(conn, subscriptionSeq, 1, 1);
+    assertFalse(subManager.hasSubscriptionRanges(conn));
 
     subscribedRanges = new ArrayList<BibliographicPeriod>();
     subscribedRanges.add(new BibliographicPeriod("1900-2000"));
 
     count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
 	subscribedRanges);
+    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1498,18 +1518,22 @@ public class TestSubscriptionManager extends LockssTestCase {
 	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
     assertEquals(1, unsubscribedRanges.size());
     assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+    assertTrue(subManager.hasSubscriptionRanges(conn));
 
     // Handle a subscription with an overlapping subscribed range second edge.
     clearSubscriptionRanges(conn, subscriptionSeq, 1, 1);
+    assertFalse(subManager.hasSubscriptionRanges(conn));
 
     subscribedRanges = new ArrayList<BibliographicPeriod>();
     subscribedRanges.add(new BibliographicPeriod("1900-1954"));
 
     count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
 	subscribedRanges);
+    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1523,18 +1547,22 @@ public class TestSubscriptionManager extends LockssTestCase {
 	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
     assertEquals(1, unsubscribedRanges.size());
     assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+    assertTrue(subManager.hasSubscriptionRanges(conn));
 
     // Handle a subscription with an overlapping subscribed range first edge.
     clearSubscriptionRanges(conn, subscriptionSeq, 1, 1);
+    assertFalse(subManager.hasSubscriptionRanges(conn));
 
     subscribedRanges = new ArrayList<BibliographicPeriod>();
     subscribedRanges.add(new BibliographicPeriod("1954-2000"));
 
     count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
 	subscribedRanges);
+    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges(conn));
     DbManager.commitOrRollback(conn, log);
 
-    assertEquals(1, count);
+    assertTrue(subManager.hasSubscriptionRanges());
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
@@ -1548,9 +1576,12 @@ public class TestSubscriptionManager extends LockssTestCase {
 	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
     assertEquals(1, unsubscribedRanges.size());
     assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+    assertTrue(subManager.hasSubscriptionRanges(conn));
 
     subManager.unsubscribeAu(conn, au);
     DbManager.commitOrRollback(conn, log);
+
+    assertTrue(subManager.hasSubscriptionRanges());
 
     // Handle a subscription with an already unsubscribed range.
     subscribedRanges =
@@ -1562,6 +1593,7 @@ public class TestSubscriptionManager extends LockssTestCase {
 	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
     assertEquals(1, unsubscribedRanges.size());
     assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+    assertTrue(subManager.hasSubscriptionRanges(conn));
   }
 
   private TitleConfig makeTitleConfig(String vol) {

@@ -1,10 +1,10 @@
 /*
- * $Id: SubscriptionManager.java,v 1.22 2014-10-03 23:04:44 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.23 2015-01-22 20:22:09 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@
 package org.lockss.subscription;
 
 import static org.lockss.db.SqlConstants.*;
-import static org.lockss.metadata.MetadataManager.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -253,16 +252,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + ",sr." + RANGE_IDX_COLUMN
       + ",pi." + PROPRIETARY_ID_COLUMN;
 
-  // Query to get the count of subscriptions.
-  private static final String COUNT_SUBSCRIBED_PUBLICATIONS_QUERY = "select"
-      + " count(*)"
-      + " from " + SUBSCRIPTION_TABLE
-      + " where " + SUBSCRIPTION_SEQ_COLUMN + " in ("
-      + "select distinct s." + SUBSCRIPTION_SEQ_COLUMN
-      + " from " + SUBSCRIPTION_TABLE + " s"
-      + ", " + SUBSCRIPTION_RANGE_TABLE + " sr"
-      + " where s." + SUBSCRIPTION_SEQ_COLUMN + " = sr."
-      + SUBSCRIPTION_SEQ_COLUMN + ")";
+  // Query to get the subscription ranges.
+  private static final String FIND_ALL_SUBSCRIPTION_RANGES_QUERY = "select "
+      + SUBSCRIPTION_SEQ_COLUMN
+      + " from " + SUBSCRIPTION_RANGE_TABLE;
 
   private static final String CANNOT_CONNECT_TO_DB_ERROR_MESSAGE =
       "Cannot connect to the database";
@@ -2027,39 +2020,55 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides a count of the publications with subscriptions.
-   *
-   * @return a long with the count of the publications with subscriptions.
+   * Provides an indication of whether there are subscription ranges.
+   * 
+   * @return a boolean with <code>true</code> if there are subscribed
+   *         publications, <code>false</code> otherwise.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public long countSubscribedPublications() throws DbException {
-    final String DEBUG_HEADER = "countSubscribedPublications(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    long result = 0;
-
+  public boolean hasSubscriptionRanges() throws DbException {
     // Get a connection to the database.
     Connection conn = dbManager.getConnection();
 
-    String query = COUNT_SUBSCRIBED_PUBLICATIONS_QUERY;
+    return hasSubscriptionRanges(conn);
+  }
+
+  /**
+   * Provides an indication of whether there are subscription ranges.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a boolean with <code>true</code> if there are subscribed
+   *         publications, <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  boolean hasSubscriptionRanges(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "hasSubscriptionRanges(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    boolean result = false;
+
+    String query = FIND_ALL_SUBSCRIPTION_RANGES_QUERY;
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
 
-    PreparedStatement countSubscriptions =
-	dbManager.prepareStatement(conn, query);
+    PreparedStatement findAnySubscription = null;
     ResultSet resultSet = null;
 
     try {
-      resultSet = dbManager.executeQuery(countSubscriptions);
-      resultSet.next();
-      result = resultSet.getLong(1);
+      findAnySubscription = dbManager.prepareStatement(conn, query);
+      findAnySubscription.setMaxRows(1);
+      resultSet = dbManager.executeQuery(findAnySubscription);
+      result = resultSet.next();
     } catch (SQLException sqle) {
-      log.error("Cannot count subscribed publications", sqle);
+      String message = "Cannot find any subscribed publications";
+      log.error(message, sqle);
       log.error("SQL = '" + query + "'.");
-      throw new DbException("Cannot count subscribed publications", sqle);
+      throw new DbException(message, sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(countSubscriptions);
+      DbManager.safeCloseStatement(findAnySubscription);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);

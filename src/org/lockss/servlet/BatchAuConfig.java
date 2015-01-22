@@ -1,10 +1,10 @@
 /*
- * $Id: BatchAuConfig.java,v 1.56 2014-10-22 19:39:33 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.57 2015-01-22 20:22:09 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -263,7 +263,7 @@ public class BatchAuConfig extends LockssServlet {
 
       // Only show the update link if there are subscriptions already.
       try {
-	if (subManager.countSubscribedPublications() > 0) {
+	if (subManager.hasSubscriptionRanges()) {
 	  // Add titles to subscription management.
 	  list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
 	      			     SubscriptionManagement
