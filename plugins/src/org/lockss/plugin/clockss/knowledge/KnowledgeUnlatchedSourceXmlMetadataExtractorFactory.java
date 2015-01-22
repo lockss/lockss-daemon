@@ -1,5 +1,5 @@
 /*
- * $Id: KnowledgeUnlatchedSourceXmlMetadataExtractorFactory.java,v 1.2 2014-11-20 18:31:25 alexandraohlson Exp $
+ * $Id: KnowledgeUnlatchedSourceXmlMetadataExtractorFactory.java,v 1.3 2015-01-22 23:04:57 alexandraohlson Exp $
  */
 
 /*
@@ -99,14 +99,11 @@ public class KnowledgeUnlatchedSourceXmlMetadataExtractorFactory extends SourceX
         String filenameValue = FilenameUtils.getBaseName(url_string);
         thisAM.put(MetadataField.FIELD_ISBN,  filenameValue);
       }
-      //TODO 1.67 - just uncomment; also in plugin, make required_daemon_version 1.67
-      /*
       if (thisAM.get(MetadataField.FIELD_PROVIDER)== null ) {
         // this plugin delivers content from Knowledge Unlatched 
         thisAM.put(MetadataField.FIELD_PROVIDER,  KNOWLEDGE_UNLATCHED_PROVIDER);
         log.debug3("Provider is now set to  " + thisAM.get(MetadataField.FIELD_PROVIDER));
       }
-      */
       log.debug3("in KnowledgeUnlatched postEmitProcess");
     }
 

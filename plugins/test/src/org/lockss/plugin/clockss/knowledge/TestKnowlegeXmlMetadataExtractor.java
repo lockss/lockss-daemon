@@ -1,5 +1,5 @@
 /*
- * $Id: TestKnowlegeXmlMetadataExtractor.java,v 1.2 2014-11-20 18:31:25 alexandraohlson Exp $
+ * $Id: TestKnowlegeXmlMetadataExtractor.java,v 1.3 2015-01-22 23:04:58 alexandraohlson Exp $
  */
 /*
 
@@ -125,8 +125,7 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     assertEquals(ISBN_1,mdRecord.get(MetadataField.FIELD_ISBN));
     assertEquals(TITLE_1 + " : " + SUBTITLE_1,mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(DATE_1,mdRecord.get(MetadataField.FIELD_DATE));
-    //TODO 1.67
-    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
+    assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
   public void testISBN_issues() throws Exception
@@ -155,8 +154,7 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     mdRecord = getMDFromXMLString(xml_string);
     printMetadata(mdRecord);
     assertEquals(TEST_FILENAME,mdRecord.get(MetadataField.FIELD_ISBN));
-    //TODO 1.67
-    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
+    assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
     
   }
   
@@ -185,8 +183,7 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     mdRecord = getMDFromXMLString(xml_string);
     printMetadata(mdRecord);
     assertEquals(TITLE_1,mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
-    //TODO 1.67
-    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
+    assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
   public void testDate_issues() throws Exception
@@ -222,8 +219,7 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     mdRecord = getMDFromXMLString(xml_string);
     printMetadata(mdRecord);
     assertEquals(WONKY_DATE,mdRecord.get(MetadataField.FIELD_DATE));   
-    //TODO 1.67
-    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
+    assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
 
@@ -253,8 +249,7 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     assertEquals(AUTHOR_1, authors.get(0));
     assertEquals(AUTHOR_2, authors.get(1));
     assertEquals(AUTHOR_3, authors.get(2));
-    //TODO 1.67
-    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
+    assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
   
