@@ -123,7 +123,7 @@
       <!-- Do not crawl these BMJ variations -->
       <string>2,"^%scontent/.+([.]print|/(article-info|related|submit))", base_url</string>
       <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
-      <string>2,"^%s(?:[^?]+([?](sort|tab|form)|most-(cited|read)|featured_article|featured-podcasts|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
+      <string>2,"^%s(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
       <string>1,"^%shighwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$", base_url</string>
     </list>
