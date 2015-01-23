@@ -147,7 +147,7 @@
       issnl = 2052-2525
     >
     
-    plugin = org.lockss.plugin.internationalunionofcrystallography.ClockssInternationalUnionOfCrystallographyPlugin
+    plugin = needs.plugin
     param[base_url] = http://journals.iucr.org/
     param[scripts_url] = http://scripts.iucr.org/
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[issue] >

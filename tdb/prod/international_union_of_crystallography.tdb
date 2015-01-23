@@ -8,6 +8,37 @@
   {
   
     title <
+      name = Acta Crystallographica Section E: Crystallographic Communications ;
+      eissn = 2056-9890
+    >
+    
+    plugin = needs.plugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[year] ; param[issue] >
+    comment[doNotProcess] = Moving to a new platform as of spring 2015.
+    comment[name] = Changed the subtitle from Structure Reports Online to Crystallographic Communications, from 1600-5368 to 2056-9890
+    
+    param[journal_id] = e
+    
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 1 ; 2015 ; 01 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 2 ; 2015 ; 02 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 3 ; 2015 ; 03 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 4 ; 2015 ; 04 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 5 ; 2015 ; 05 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 6 ; 2015 ; 06 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 7 ; 2015 ; 07 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 8 ; 2015 ; 08 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 9 ; 2015 ; 09 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 10 ; 2015 ; 10 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 11 ; 2015 ; 11 >
+    au < doNotProcess ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 12 ; 2015 ; 12 >
+  
+  }
+
+  {
+  
+    title <
       name = Acta Crystallographica Section E: Structure Reports Online ;
       eissn = 1600-5368 ;
       issnl = 1600-5368
