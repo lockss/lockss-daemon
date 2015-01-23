@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireDrupalPermissionCheckerFactory.java,v 1.1 2014-06-03 01:09:37 etenbrink Exp $
+ * $Id: HighWireDrupalPermissionCheckerFactory.java,v 1.2 2015-01-23 08:10:37 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,18 +32,60 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.*;
 
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.HighWirePressH20LoginPageChecker;
+import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
-public class HighWireDrupalPermissionCheckerFactory
-  implements PermissionCheckerFactory{
+public class HighWireDrupalPermissionCheckerFactory implements PermissionCheckerFactory {
   
-  public List<ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
-    List<ProbePermissionChecker> list = new ArrayList<ProbePermissionChecker>(1);
-    list.add(new ProbePermissionChecker(new HighWirePressH20LoginPageChecker(), au));
+  public static class DrupalProbePermissionChecker extends ProbePermissionChecker {
+    
+    private static final Logger logger = Logger.getLogger(DrupalProbePermissionChecker.class);
+    
+    @Override
+    public boolean checkPermission(CrawlerFacade crawlFacade,
+        Reader inputReader, String permissionUrl) {
+      
+      BufferedReader in = new BufferedReader(inputReader); 
+      boolean ret = true;
+      try {
+        in.mark(102400);
+        if (!StringUtil.containsString(in, "platform = DRUPAL", true)) {
+          logger.siteError(" ");
+          logger.siteError("       ===============        ");
+          logger.siteError(" ");
+          logger.siteError("DRUPAL flag NOT found");
+          logger.siteError(" ");
+          logger.siteError("       ===============        ");
+          logger.siteError(" ");
+          ret = false;
+        }
+        in.reset();
+      } catch (IOException e) {
+        logger.warning("IOException checking drupal flag", e);
+      }
+      if (ret) {
+        ret = super.checkPermission(crawlFacade, in, permissionUrl);
+      }
+      return ret;
+    }
+    
+    public DrupalProbePermissionChecker() {
+      super();
+    }
+  }
+  
+  @Override
+  public List<DrupalProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
+    List<DrupalProbePermissionChecker> list = new ArrayList<DrupalProbePermissionChecker>(1);
+    list.add(new DrupalProbePermissionChecker());
     return list;
   }
 }
