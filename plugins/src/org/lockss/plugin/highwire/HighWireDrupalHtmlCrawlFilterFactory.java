@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.6 2014-12-30 21:50:50 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.7 2015-01-23 07:38:59 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,8 +49,9 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     new TagNameFilter("footer"),
     // Do not crawl for links from aside in BMJ, etc
     new TagNameFilter("aside"),
-    // Do not crawl prev/next pager for links from APS
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
+    // Do not crawl reference section, right sidebar for links; common with APS & OUP
+    HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
   };
   
   @Override
