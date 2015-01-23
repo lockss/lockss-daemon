@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressHtmlFilterFactory.java,v 1.6 2009-11-06 23:24:06 thib_gc Exp $
+ * $Id: PortlandPressHtmlFilterFactory.java,v 1.7 2015-01-23 19:13:14 alexandraohlson Exp $
  */
 
 /*
@@ -65,6 +65,26 @@ public class PortlandPressHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Contains variable links to recent issues (e.g. Biochemical Journal)
         HtmlNodeFilters.tagWithAttribute("td", "id", "RightPanel"),
+        // Relook at x-plugin html Jan15 - update
+        HtmlNodeFilters.tagWithAttribute("div", "class", "RHSocialBox"),
+        // all of IWA and some of bioscirep, essay.biochemistry.org,
+        // right side links (current issue and sample issue change 
+        HtmlNodeFilters.tagWithAttribute("table","class","sidelinks"),
+        // headers
+        HtmlNodeFilters.tagWithAttribute("td","class","backgmast"),
+        HtmlNodeFilters.tagWithAttribute("td","class","backg"),
+        // http://www.biochemj.org/bj/455/2/default.htm
+        //http://www.biochemsoctrans.org/bst/041/5/default.htm
+        HtmlNodeFilters.tagWithAttribute("div","class","Nav_Panel_Right"),
+        HtmlNodeFilters.tagWithAttribute("div","class","Page_Footer_Container"),
+        HtmlNodeFilters.tagWithAttribute("div","class","Page_Header_Container"),
+        // http://www.clinsci.org/cs/128/5/default.htm
+        HtmlNodeFilters.tagWithAttribute("div","id","Banner"),
+        HtmlNodeFilters.tagWithAttribute("div","id","RightHandDiv"),
+        // ex: http://www.clinsci.org/cs/128/0321/cs1280321.htm
+        // on article page, links to aspects, but also to citing article/similar paper pulldown which change
+        HtmlNodeFilters.tagWithAttribute("div","class","NavPaperLinksBoxContainer"),
+        
     };
 
     OrFilter combinedFilter = new OrFilter(filters);

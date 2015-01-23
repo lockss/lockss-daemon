@@ -1,5 +1,5 @@
 /*
- * $Id: TestPortlandPressHtmlFilterFactory.java,v 1.1 2013-01-24 22:40:18 alexandraohlson Exp $
+ * $Id: TestPortlandPressHtmlFilterFactory.java,v 1.2 2015-01-23 19:13:14 alexandraohlson Exp $
  */
 /*
 
@@ -123,7 +123,7 @@ public class TestPortlandPressHtmlFilterFactory extends LockssTestCase {
           "         <!--- END MID TEMPLATE --->" +
           "<!--- FOOTER TEMPLATE --->";
   private static final String midTempHtmlFiltered =
-          "<!--- FOOTER TEMPLATE --->";
+      "<!--- FOOTER TEMPLATE --->";
 
 
   private static final String  RHAdsHtml = 
@@ -132,41 +132,155 @@ public class TestPortlandPressHtmlFilterFactory extends LockssTestCase {
           "</div>" +
           "<img src=\"/images/spacer.gif\" width=\"1\" height=\"3\" border=\"0\"><br>";
   private static final String  RHAdsHtmlFiltered = 
-          "<img src=\"/images/spacer.gif\" width=\"1\" height=\"3\" border=\"0\"><br>";
+      "<img src=\"/images/spacer.gif\" width=\"1\" height=\"3\" border=\"0\"><br>";
+
+  private static final String new_iwa_style_snippet = 
+      "  <tr>" +
+          "  <td class=\"backgmast\">" +
+          "  <img src=\"/images/foo.jpg\" name=\"foo_rollovers_r1_c1\">" +
+          "  </td>" +
+          "  </tr>" +
+          "  <tr>" +
+          "  <td class=\"backg\">" +
+          "  </td>" +
+          "  </tr>" +
+          "  <img width=\"1\" height=\"15\" border=\"0\" src=\"/images/spacer.gif\">" +
+          "  <br clear=\"ALL\">" +
+          "  <table class=\"sidelinks\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" +
+          "  <tbody></tbody>" +
+          "  </table>";
+  private static final String new_iwa_style_filtered = 
+      "  <tr>" +
+          "  " +
+          "  </tr>" +
+          "  <tr>" +
+          "  " +
+          "  </tr>" +
+          "  <img width=\"1\" height=\"15\" border=\"0\" src=\"/images/spacer.gif\">" +
+          "  <br clear=\"ALL\">" +
+          "  "; 
+
+  private static final String new_biochemj_style_snippet =
+      "  <div class=\"Page_Header_Container\">" +
+          "  <div style=\"clear:both\"></div>" +
+          "  </div>" +
+          "  <div class=\"Page_Body_Container\">" +
+          "  <div style=\"clear:both\"></div>" +
+          "  <div class=\"Page_Body\">" +
+          "  <div class=\"Nav_Panel_Right\">" +
+          "    rightpanelfoo" +
+          "  <div class=\"Nav_Panel_Inner\">" +
+          "    innerpanelfoo" +
+          "  </div> //Panel_Inner" +
+          "  </div>" + // Panel_Right
+          "  </div>" + // Page_Body
+          "  </div>" + //Pagebody_Container
+          "    <div class=\"Page_Footer_Container\">" +
+          "  </div>";
+  private static final String new_biochemj_style_filtered =
+      "  " +
+          "  <div class=\"Page_Body_Container\">" +
+          "  <div style=\"clear:both\"></div>" +
+          "  <div class=\"Page_Body\">" +
+          "  " + // Panel_Right
+          "  </div>" + // Page_Body
+          "  </div>" + //Pagebody_Container
+          "    ";  
+
+  private static final String new_clinsci_style_snippet =
+      "  <div id=\"Banner\">" +
+          "  <img class=\"noBorder\" alt=\"banner\" src=\"/images/foo.png\">" +
+          "  </div>" +
+          "  <div class=\"NavPaperLinksBoxContainer\">" +
+          "    <div id=\"ArticleMetrics\"></div>" +
+          " </div>" +
+          "  <div class=\"ArticleHeaderType typeColor\">Review article</div>" +
+          "  <div id=\"LeftHandContainer\" style=\"margin-top: 20px;\"></div>" +
+          "  <div id=\"RightHandDiv\">" +
+          "     righthandfoo" +
+          "  </div>";
+  private static final String new_clinsci_style_filtered =
+      "  " +
+          "  " +
+          "  <div class=\"ArticleHeaderType typeColor\">Review article</div>" +
+          "  <div id=\"LeftHandContainer\" style=\"margin-top: 20px;\"></div>" +
+          "  ";  
+
+  // http://www.bioscirep.org/bsr/032/5/default.htm   
+  // leave this test in for future? Not currently filtering this
+  // see if a problem crops up
+  private static final String tricky_metrics_image =
+      "<div class=\"Search_Box\"></div>" +
+          "<br>" +
+          "<br style=\"clear:both\">" +
+          "<img width=\"1\" height=\"3\" border=\"0\" src=\"/images/spacer.gif\">" +
+          "<br>" +
+          "<img src=\"/images/ifup_170_bsr_2853.png\">" +
+          "<img width=\"1\" height=\"3\" border=\"0\" src=\"/images/spacer.gif\">" +
+          "<br>";
+  private static final String tricky_metrics_image_filtered =
+      "<div class=\"Search_Box\"></div>" +
+          "<br>" +
+          "<br style=\"clear:both\">" +
+          "<img width=\"1\" height=\"3\" border=\"0\" src=\"/images/spacer.gif\">" +
+          "<br>" +
+          "<img src=\"/images/ifup_170_bsr_2853.png\">" +
+          "<img width=\"1\" height=\"3\" border=\"0\" src=\"/images/spacer.gif\">" +
+          "<br>";
+
+
 
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(BJNameHtml),
         ENC);
 
     assertEquals(BJNameHtmlFiltered,StringUtil.fromInputStream(inA));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(RHAdvertHtml),
         ENC);
 
     assertEquals(RHAdvertHtmlFiltered,StringUtil.fromInputStream(inA));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(LeftPanelHtml),
         ENC);
 
     assertEquals(LeftPanelHtmlFiltered,StringUtil.fromInputStream(inA));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(tagPairHtml),
         ENC);
 
     assertEquals(tagPairHtmlFiltered,StringUtil.fromInputStream(inA))
-    
+
     ;    inA = fact.createFilteredInputStream(mau, new StringInputStream(midTempHtml),
         ENC);
 
     assertEquals(midTempHtmlFiltered,StringUtil.fromInputStream(inA));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(RHAdsHtml),
         ENC);
 
     assertEquals(RHAdsHtmlFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(new_iwa_style_snippet),
+        ENC);
+
+    assertEquals(new_iwa_style_filtered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(new_biochemj_style_snippet),
+        ENC);
+
+    assertEquals(new_biochemj_style_filtered,StringUtil.fromInputStream(inA));
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(new_clinsci_style_snippet),
+        ENC);
+
+    assertEquals(new_clinsci_style_filtered,StringUtil.fromInputStream(inA));
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(tricky_metrics_image),
+        ENC);
+
+    assertEquals(tricky_metrics_image_filtered,StringUtil.fromInputStream(inA));
   }
 }
 
