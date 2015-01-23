@@ -3,9 +3,7 @@
     name = Western Michigan University
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
 
   {
     title <
@@ -14,6 +12,10 @@
       eissn = 1936-1637 ;
       issnl = 0010-4078
     >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
 
     param[journal_dir] = comparative_drama
     attr[journal_id] = cdr
@@ -30,6 +32,25 @@
     au < released ; 2012 ; Comparative Drama Volume 46 ; 46 >
     au < released ; 2013 ; Comparative Drama Volume 47 ; 47 >
     au < manifest ; 2014 ; Comparative Drama Volume 48 ; 48 >
+    au < expected ; 2015 ; Comparative Drama Volume 49 ; 49 >
+
+  }
+
+  {
+    title <
+      name = The Open Journal of Occupational Therapy ;
+      eissn = 2168-6408 ;
+      issnl = 2168-6408
+    >
+
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://scholarworks.wmich.edu/
+    param[journal_abbr] = ojot
+      
+    au < exists ; 2012 ; Open Journal of Occupational Therapy Volume 1 ; 1 >
+    au < exists ; 2014 ; Open Journal of Occupational Therapy Volume 2 ; 2 >
+    au < exists ; 2015 ; Open Journal of Occupational Therapy Volume 3 ; 3 >
 
   }
 
