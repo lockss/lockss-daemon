@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireDrupalHttpResponseHandler.java,v 1.3 2014-12-30 21:56:31 etenbrink Exp $
+ * $Id: HighWireDrupalHttpResponseHandler.java,v 1.4 2015-01-23 08:06:12 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,6 +63,22 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
     }
   }
   
+  public static class NoFailRetryableNetworkException_3_5M
+  extends CacheException.RetryableNetworkException_3_5M {
+    
+    private static final long serialVersionUID = 1L;
+    
+    public NoFailRetryableNetworkException_3_5M(String message) {
+      super(message);
+    }
+    
+    @Override
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+  }
+  
   @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
@@ -76,6 +92,13 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
         return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
+        
+      case 502:
+        logger.debug2("502");
+        if (url.endsWith(".index-by-author")) {
+          return new NoFailRetryableNetworkException_3_5M("502 Bad Gateway Error (non-fatal)");
+        }
+        return new CacheException.RetryableNetworkException_3_60S("502 Bad Gateway Error");
         
       case 504:
         logger.debug2("504");
