@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.65.0</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -111,6 +111,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- all content from CDN -->
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn.mathjax.org)/."</string>
       <!-- no gifs from other volumes -->
       <string>2,"^%scontent/(?!([^/]+/)?%s/)[^?]*[.]gif", base_url, volume_name</string>
       <!-- all fonts, images, resources, css, js, etc. -->
@@ -138,6 +140,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
     </list>
   </entry>
@@ -157,6 +160,10 @@
         <string>org.lockss.plugin.highwire.HighWireDrupalHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
@@ -185,10 +192,6 @@
     <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
   </entry>
   <entry>
-    <string>au_http_request_header</string>
-    <string>Accept:text/html, image/gif, image/jpeg; q=.2, */*; q=.2</string>
-  </entry>
-  <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:HighWire</string>
   </entry>
@@ -211,12 +214,18 @@
     <int>2</int>
   </entry>
   <entry>
-    <string>content-testing_override</string>
-    <map>
-      <entry>
-        <string>au_http_request_header</string>
-        <string>X-Lockss-Source:publisher</string>
-      </entry>
-    </map>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts= -->
+    <string>au_permitted_host_pattern</string>
+    <string>"(.*[.]cloudfront[.]net|cdn.mathjax.org)"</string>
+  </entry>
+  <entry>
+    <!-- APS & OUP use cdn -->
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/(css|js)_[^/]+[.](css|js)$</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>/(css|js)_[^/]+[.](css|js)$</string>
   </entry>
 </map>
