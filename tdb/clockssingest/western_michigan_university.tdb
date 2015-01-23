@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Western Michigan University ;
+    info[contract] = 2014 ;
+    info[tester] = 5
+  >
+
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+
+  {
+    title <
+      name = The Open Journal of Occupational Therapy ;
+      eissn = 2168-6408 ;
+      issnl = 2168-6408
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] >
+    param[base_url] = http://scholarworks.wmich.edu/
+    param[journal_abbr] = ojot
+      
+    au < exists ; exists ; 2012 ; Open Journal of Occupational Therapy Volume 1 ; 1 >
+    au < exists ; exists ; 2014 ; Open Journal of Occupational Therapy Volume 2 ; 2 >
+    au < exists ; exists ; 2015 ; Open Journal of Occupational Therapy Volume 3 ; 3 >
+
+  }
+
+}
