@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlCrawlFilterFactory.java,v 1.4 2014-12-30 22:42:54 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlCrawlFilterFactory.java,v 1.5 2015-01-23 07:44:11 etenbrink Exp $
  */
 
 /*
@@ -231,17 +231,17 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
 //    a = StringUtil.fromInputStream(inA);
 //    assertEquals(withoutRefList, a);
 //    
-//    // sidebar
-//    inA = fact.createFilteredInputStream(mau, new StringInputStream(withSidebar),
-//        Constants.DEFAULT_ENCODING);
-//    a = StringUtil.fromInputStream(inA);
-//    assertEquals(withoutSidebar, a);
-//    
-    // node pager
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(withPager),
+    // sidebar
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withSidebar),
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutPager, a);
+    assertEquals(withoutSidebar, a);
+    
+    // node pager
+//    inA = fact.createFilteredInputStream(mau, new StringInputStream(withPager),
+//        Constants.DEFAULT_ENCODING);
+//    a = StringUtil.fromInputStream(inA);
+//    assertEquals(withoutPager, a);
     
     // aside
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withAside),
