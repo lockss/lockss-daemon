@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.12 2014-12-30 22:11:39 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.13 2015-01-23 07:40:08 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,6 +66,8 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     new TagNameFilter("footer"),
     // no need to include aside (in crawl filter)
     new TagNameFilter("aside"),
+    // Do not include right-sidebar in hash; common with APS & OUP
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
     // prev/next pager can change (in crawl filter)
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
     
