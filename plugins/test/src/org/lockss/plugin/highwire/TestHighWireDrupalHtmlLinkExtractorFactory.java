@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlLinkExtractorFactory.java,v 1.3 2014-12-30 22:44:05 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlLinkExtractorFactory.java,v 1.4 2015-01-23 08:01:38 etenbrink Exp $
  */
 /*
 
@@ -51,11 +51,11 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
   private final String HW_BASE_URL = "http://ajp.highwire.org/";
   private static final String NODE_ID = "111111";
   
-//  private static final String citation = "<html><head><title>Test Title</title>" +
-//      "<link href=\"/node/" + NODE_ID + "\" rel=\"shortlink\">" +
-//      "<div>" +
-//      "</head><body></body>" +
-//      "</html>";
+  private static final String citation = "<html><head><title>Test Title</title>" +
+      "<link href=\"/node/" + NODE_ID + "\" rel=\"shortlink\">" +
+      "<div>" +
+      "</head><body></body>" +
+      "</html>";
   
   private static final String toc = "<html><head><title>Test Title</title>" +
       "</head><body>" +
@@ -134,13 +134,13 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
   }
   
   // and once we get to the content page, will we handle stuff as expected? 
-//  public void testCitations() throws Exception {
-//    String expectedUrl = HW_BASE_URL + "highwire/citation/" + NODE_ID + "/ris";
-//    Set<String> result_strings = parseSingleSource(citation);
-//    
-//    assertEquals(2, result_strings.size());
-//    assertTrue(result_strings.contains(expectedUrl));
-//  }
+  public void testCitations() throws Exception {
+    String expectedUrl = HW_BASE_URL + "highwire/citation/" + NODE_ID + "/ris";
+    Set<String> result_strings = parseSingleSource(citation);
+    
+    assertEquals(2, result_strings.size());
+    assertTrue(result_strings.contains(expectedUrl));
+  }
   
   private Set<String> parseSingleSource(String source)
       throws Exception {
