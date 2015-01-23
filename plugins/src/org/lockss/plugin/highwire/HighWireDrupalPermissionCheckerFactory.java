@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalPermissionCheckerFactory.java,v 1.2 2015-01-23 08:10:37 etenbrink Exp $
+ * $Id: HighWireDrupalPermissionCheckerFactory.java,v 1.3 2015-01-23 09:04:43 etenbrink Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class HighWireDrupalPermissionCheckerFactory implements PermissionChecker
   
   public static class DrupalProbePermissionChecker extends ProbePermissionChecker {
     
-    private static final Logger logger = Logger.getLogger(DrupalProbePermissionChecker.class);
+    private static final Logger log = Logger.getLogger(DrupalProbePermissionChecker.class);
     
     @Override
     public boolean checkPermission(CrawlerFacade crawlFacade,
@@ -58,18 +58,17 @@ public class HighWireDrupalPermissionCheckerFactory implements PermissionChecker
       try {
         in.mark(102400);
         if (!StringUtil.containsString(in, "platform = DRUPAL", true)) {
-          logger.siteError(" ");
-          logger.siteError("       ===============        ");
-          logger.siteError(" ");
-          logger.siteError("DRUPAL flag NOT found");
-          logger.siteError(" ");
-          logger.siteError("       ===============        ");
-          logger.siteError(" ");
-          ret = false;
+          log.siteWarning(" ");
+          log.siteWarning("       ===============        ");
+          log.siteWarning(" ");
+          log.siteWarning("DRUPAL flag NOT found");
+          log.siteWarning(" ");
+          log.siteWarning("       ===============        ");
+          log.siteWarning(" ");
         }
         in.reset();
       } catch (IOException e) {
-        logger.warning("IOException checking drupal flag", e);
+        log.warning("IOException checking drupal flag", e);
       }
       if (ret) {
         ret = super.checkPermission(crawlFacade, in, permissionUrl);
