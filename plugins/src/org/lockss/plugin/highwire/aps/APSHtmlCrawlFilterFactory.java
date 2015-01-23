@@ -1,10 +1,10 @@
 /*
- * $Id: APSHtmlCrawlFilterFactory.java,v 1.2 2014-12-30 23:03:13 etenbrink Exp $
+ * $Id: APSHtmlCrawlFilterFactory.java,v 1.3 2015-01-23 08:35:05 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,9 +51,8 @@ public class APSHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFact
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Do not crawl reference section, right-sidebar 
-        HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
+        // Do not crawl prev/next pager for links from APS
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
         // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^author-tooltip"),
         // APS articles sometimes had view links, but not always
