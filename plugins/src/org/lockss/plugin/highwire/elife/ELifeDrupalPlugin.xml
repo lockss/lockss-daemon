@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -44,10 +44,6 @@
   <entry>
     <string>au_name</string>
     <string>"HighWire eLife Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>required_daemon_version</string>
-    <string>1.67.0</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -98,11 +94,5 @@
     <!-- manifest to articles -->
     <string>au_refetch_depth</string>
     <int>1</int>
-  </entry>
-  <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts= -->
-    <string>au_permitted_host_pattern</string>
-    <string>"(.*[.]cloudfront[.]net|cdn.mathjax.org)"</string>
   </entry>
 </map>
