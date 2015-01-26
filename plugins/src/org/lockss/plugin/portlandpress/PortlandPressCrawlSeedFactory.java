@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressCrawlSeedFactory.java,v 1.1 2015-01-21 22:20:32 alexandraohlson Exp $
+ * $Id: PortlandPressCrawlSeedFactory.java,v 1.2 2015-01-26 22:18:05 wkwilson Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.crawler.BaseCrawlSeed;
 import org.lockss.crawler.CrawlSeed;
 import org.lockss.crawler.CrawlSeedFactory;
 import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.Crawler;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
@@ -53,9 +54,12 @@ implements CrawlSeedFactory {
   private static final String WS_JID = "ws";
 
 
-  @Override
   public CrawlSeed createCrawlSeed(ArchivalUnit au) {
     return new PortlandPressCrawlSeed(au);
+  }
+  
+  public CrawlSeed createCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
+    return new PortlandPressCrawlSeed(crawlFacade.getAu());
   }
 
 
@@ -77,7 +81,7 @@ implements CrawlSeedFactory {
       String vol = config.get(ConfigParamDescr.VOLUME_NAME.getKey());
       if (base_url == null || jid == null || vol == null) {
         throw new PluginException.InvalidDefinition(
-            "CrawlInitializer cannot set a starting URL based on the params");
+            "CrawlSeed cannot set a starting URL based on the params");
       }
       /* 
        * start_url will be one of:
