@@ -392,12 +392,13 @@
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
+      comment[notReady] = No permission in CLOCKSS for content 3 and 4
       
-      au < testing ; exists ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 >
-      au < testing ; exists ; 2011 ; Chemistry Education Research and Practice Volume 12 ; 12 ; 2011 >
-      au < testing ; exists ; 2012 ; Chemistry Education Research and Practice Volume 13 ; 13 ; 2012 >
-      au < testing ; exists ; 2013 ; Chemistry Education Research and Practice Volume 14 ; 14 ; 2013 >
-      au < testing ; exists ; 2014 ; Chemistry Education Research and Practice Volume 15 ; 15 ; 2014 >
+      au < notReady ; exists ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 >
+      au < notReady ; exists ; 2011 ; Chemistry Education Research and Practice Volume 12 ; 12 ; 2011 >
+      au < notReady ; exists ; 2012 ; Chemistry Education Research and Practice Volume 13 ; 13 ; 2012 >
+      au < notReady ; exists ; 2013 ; Chemistry Education Research and Practice Volume 14 ; 14 ; 2013 >
+      au < notReady ; exists ; 2014 ; Chemistry Education Research and Practice Volume 15 ; 15 ; 2014 >
       au < expected ; exists ; 2015 ; Chemistry Education Research and Practice Volume 16 ; 16 ; 2015 >
 
     }
@@ -459,11 +460,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < testing ; exists ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 >
+      au < ready ; exists ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 >
       au < ready ; exists ; 2011 ; CrystEngComm Volume 13 ; 13 ; 2011 >
       au < ready ; exists ; 2012 ; CrystEngComm Volume 14 ; 14 ; 2012 >
       au < ready ; exists ; 2013 ; CrystEngComm Volume 15 ; 15 ; 2013 >
-      au < testing ; exists ; 2014 ; CrystEngComm Volume 16 ; 16 ; 2014 >
+      au < ready ; exists ; 2014 ; CrystEngComm Volume 16 ; 16 ; 2014 >
       au < expected ; exists ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 >
 
     }
@@ -508,11 +509,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 >
-      au < manifest ; exists ; 2011 ; Dalton Transactions Volume 40 ; 40 ; 2011 >
-      au < manifest ; exists ; 2012 ; Dalton Transactions Volume 41 ; 41 ; 2012 >
-      au < manifest ; exists ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 >
-      au < manifest ; exists ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 >
+      au < testing ; exists ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 >
+      au < testing ; exists ; 2011 ; Dalton Transactions Volume 40 ; 40 ; 2011 >
+      au < testing ; exists ; 2012 ; Dalton Transactions Volume 41 ; 41 ; 2012 >
+      au < testing ; exists ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 >
+      au < testing ; exists ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 >
       au < expected ; exists ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 >
 
     }
