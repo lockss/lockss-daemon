@@ -1,5 +1,5 @@
 /*
- * $Id: TestNRCResearchPressHtmlHashFilterFactory.java,v 1.3 2014-10-22 21:51:13 alexandraohlson Exp $
+ * $Id: TestNRCResearchPressHtmlHashFilterFactory.java,v 1.4 2015-01-26 20:20:07 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -256,7 +256,6 @@ public class TestNRCResearchPressHtmlHashFilterFactory extends LockssTestCase{
           "<ul class=\"icon-list-vertical box-gray-border box-pad clear\"><li><a class=\"icon-abstract\" title=\"View the Abstract\" href=\"/doi/abs/10.1139/blah\">" +
           "<span>Abstract</span></a></li><li><a class=\"icon-pdf\" href=\"/doi/pdf/10.1139/blah\">" +
           "</a></li><li><a class=\"icon-pdf-plus\" href=\"/doi/pdfplus/10.1139/blah\">" +
-          "PDF-Plus (208 K)" +
           "</a></li><li><a class=\"icon-figures\" id=\"figures\" href=\"javascript:void(0);\">Figures</a></li>" +
           "<li><a class=\"icon-references\" href=\"#ttl5\">References</a></li><li></li>" +
           "<li></li>" +
