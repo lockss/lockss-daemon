@@ -1,4 +1,4 @@
-/*  $Id: TestBaseAtyponHtmlHashFilterFactory.java,v 1.3 2014-11-13 23:57:38 alexandraohlson Exp $
+/*  $Id: TestBaseAtyponHtmlHashFilterFactory.java,v 1.4 2015-01-26 20:10:58 alexandraohlson Exp $
  
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 
@@ -150,7 +150,7 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
           + "</div>"
           + "<div id=\"footer_message\"><span style=\"color: rgb(0, 0, 0);\">"
           + "<span class=\"fontSize2\"><span style=\"color: rgb(0, 0, 0);\">"
-          + "Copyright © 1996-2013, American So</span>"
+          + "Copyright ï¿½ 1996-2013, American So</span>"
           + "ciety of Civil Engineers</span>"
           + "<br>"
           + "</span></div>"
@@ -230,6 +230,56 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
       "<a href=\"/doi/pdfplus/10.2217/foo\" target=\"_blank\">View PDF Plus " +
   "</a>" +
           "</div>";
+  
+  private static final String cys_fileSize =
+    //CYS pdf with sizing
+      "<ul class=\"icon-list-vertical box-gray-border box-pad clear\">" +
+      "<li>" +
+      "<a href=\"/doi/abs/10.13034/cysj-2013-005\" title=\"View the Abstract\" class=\"icon-abstract\">" +
+      "<span>Abstract</span>" +
+      "</a>" +
+      "</li>" +
+      "<li>" +
+      "<a href=\"/doi/pdf/10.13034/cysj-2013-005\" class=\"icon-pdf\">" +
+      "               PDF (318 K)" +
+      "            " +
+      "</a>" +
+      "</li>" +
+      "<li>" +
+      "<a href=\"/doi/pdfplus/10.13034/cysj-2013-005\" class=\"icon-pdf-plus\">" +
+      "               PDF-Plus (319 K)" +
+      "            " +
+      "</a>" +
+      "</li>" +
+      "<li>" +
+      "<a href=\"javascript:void(0);\" id=\"figures\" class=\"icon-figures\">Figures</a></li>" +
+      "<li>" +
+      "<a class=\"icon-tables\" href=\"javascript:void(0);\" id=\"tables\">Tables</a>" +
+      "</li>" +
+      "</ul>";  
+  private static final String cys_fileSize_filtered =
+      //CYS pdf with sizing
+        "<ul class=\"icon-list-vertical box-gray-border box-pad clear\">" +
+        "<li>" +
+        "<a href=\"/doi/abs/10.13034/cysj-2013-005\" title=\"View the Abstract\" class=\"icon-abstract\">" +
+        "<span>Abstract</span>" +
+        "</a>" +
+        "</li>" +
+        "<li>" +
+        "<a href=\"/doi/pdf/10.13034/cysj-2013-005\" class=\"icon-pdf\">" +
+        "</a>" +
+        "</li>" +
+        "<li>" +
+        "<a href=\"/doi/pdfplus/10.13034/cysj-2013-005\" class=\"icon-pdf-plus\">" +
+        "</a>" +
+        "</li>" +
+        "<li>" +
+        "<a href=\"javascript:void(0);\" id=\"figures\" class=\"icon-figures\">Figures</a></li>" +
+        "<li>" +
+        "<a class=\"icon-tables\" href=\"javascript:void(0);\" id=\"tables\">Tables</a>" +
+        "</li>" +
+        "</ul>";        
+
 
   
   /*
@@ -293,6 +343,11 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(fileSize),
         Constants.DEFAULT_ENCODING);
     assertEquals(fileSizeFiltered, StringUtil.fromInputStream(actIn));    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(cys_fileSize),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(cys_fileSize_filtered, StringUtil.fromInputStream(actIn));    
+
   }
   
   /* This section tests variants that the child plugins can turn on or not */

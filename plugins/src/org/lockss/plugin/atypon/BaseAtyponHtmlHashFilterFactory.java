@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.10 2014-11-18 20:06:29 thib_gc Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.11 2015-01-26 20:10:58 alexandraohlson Exp $
  */
 
 /*
@@ -67,9 +67,9 @@ import org.lockss.util.ReaderInputStream;
 public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   Logger log = Logger.getLogger(BaseAtyponHtmlHashFilterFactory.class);
   // String used to see if text matches a size description of an article
-  // usually "PDF Plus (527 KB)" or similar
+  // usually "PDF Plus (527 KB)" or similar (PDFPlus, PDF-Plus)
   // (?i) makes it case insensitive
-  private static final String SIZE_REGEX = "PDF\\s?(Plus)?\\s?\\(\\s?[0-9]+";
+  private static final String SIZE_REGEX = "PDF(\\s|-)?(Plus)?\\s?\\(\\s?[0-9]+";
   private static final Pattern SIZE_PATTERN = Pattern.compile(SIZE_REGEX, Pattern.CASE_INSENSITIVE);  
 
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
