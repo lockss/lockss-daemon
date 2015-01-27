@@ -1021,6 +1021,19 @@
     
   {
     title <
+      name = SOIL ;
+      eissn = 2199-3998
+    >
+      attr[journal_id] = soild 
+      param[base_url] = http://www.soil-journal.net/
+      param[home_url] = http://www.soil-journal.net/
+
+      au < exists ; exists ; 2015 ; 2015 ; SOIL Volume 1 ; 1 >
+
+   }
+    
+  {
+    title <
       name = SOIL Discussions ;
       eissn = 2199-3998
     >
