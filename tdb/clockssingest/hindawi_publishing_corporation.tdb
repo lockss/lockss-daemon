@@ -3587,7 +3587,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Dentistry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3610,7 +3610,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Differential Equations Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Differential Equations Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Differential Equations Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Differential Equations Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Differential Equations Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3631,7 +3631,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Digital Multimedia Broadcasting Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Digital Multimedia Broadcasting Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3677,7 +3677,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Ecology Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -3694,7 +3694,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Electrochemistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Electrochemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Electrochemistry Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Electrochemistry Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -3709,7 +3709,7 @@
 
     param[journal_id] = ijembry
 
-    au < testing ; exists ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Embryology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3745,7 +3745,7 @@
     param[journal_id] = ijem
 
     au < manifest ; exists ; 2013 ; International Journal of Engineering Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Engineering Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3765,7 +3765,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Evolutionary Biology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Evolutionary Biology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; International Journal of Evolutionary Biology Volume 2015 ; 2015 ; 2015 >
     
   }
