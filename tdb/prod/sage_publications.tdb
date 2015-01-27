@@ -889,7 +889,7 @@
         au < released ; 2012 ; Affilia Volume 27 ; 27 >
         au < manifest ; 2013 ; Affilia Volume 28 ; 28 >
         au < manifest ; 2014 ; Affilia Volume 29 ; 29 >
-        au < expected ; 2015 ; Affilia Volume 30 ; 30 >
+        au < manifest ; 2015 ; Affilia Volume 30 ; 30 >
 
       }
 
@@ -1373,7 +1373,7 @@
         au < released ; 2012 ; American Journal of Lifestyle Medicine Volume 6 ; 6 >
         au < manifest ; 2013 ; American Journal of Lifestyle Medicine Volume 7 ; 7 >
         au < manifest ; 2014 ; American Journal of Lifestyle Medicine Volume 8 ; 8 >
-        au < expected ; 2015 ; American Journal of Lifestyle Medicine Volume 9 ; 9 >
+        au < manifest ; 2015 ; American Journal of Lifestyle Medicine Volume 9 ; 9 >
 
       }
 
@@ -3221,7 +3221,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2014 ; Asian Journal of Legal Education Volume 1 ; 1 >
-        au < expected ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 >
+        au < manifest ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 >
 
     }
 
@@ -3526,7 +3526,7 @@
         au < released ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
         au < manifest ; 2013 ; Australasian Psychiatry Volume 21 ; 21 >
         au < manifest ; 2014 ; Australasian Psychiatry Volume 22 ; 22 >
-        au < expected ; 2015 ; Australasian Psychiatry Volume 23 ; 23 >
+        au < manifest ; 2015 ; Australasian Psychiatry Volume 23 ; 23 >
 
       }
 
@@ -5028,7 +5028,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Business Perspectives and Research Volume 3 ; 3 >
+      au < manifest ; 2015 ; Business Perspectives and Research Volume 3 ; 3 >
   }
 
     {
@@ -5857,7 +5857,7 @@
         au < released ; 2012 ; Chronic Respiratory Disease Volume 9 ; 9 >
         au < manifest ; 2013 ; Chronic Respiratory Disease Volume 10 ; 10 >
         au < manifest ; 2014 ; Chronic Respiratory Disease Volume 11 ; 11 >
-        au < expected ; 2015 ; Chronic Respiratory Disease Volume 12 ; 12 >
+        au < manifest ; 2015 ; Chronic Respiratory Disease Volume 12 ; 12 >
 
       }
 
@@ -6561,7 +6561,7 @@
       au < exists ; 2011 ; Common Law World Review Volume 40 ; 40 >
       au < exists ; 2012 ; Common Law World Review Volume 41 ; 41 >
       au < exists ; 2013 ; Common Law World Review Volume 42 ; 42 >
-      au < exists ; 2014 ; Common Law World Review Volume 43 ; 43 >
+      au < manifest ; 2014 ; Common Law World Review Volume 43 ; 43 >
       au < expected ; 2015 ; Common Law World Review Volume 44 ; 44 >
 
   }
@@ -7441,7 +7441,7 @@
         au < released ; 2012 ; Convergence: The International Journal of Research into New Media Technologies Volume 18 ; 18 >
         au < manifest ; 2013 ; Convergence: The International Journal of Research into New Media Technologies Volume 19 ; 19 >
         au < manifest ; 2014 ; Convergence: The International Journal of Research into New Media Technologies Volume 20 ; 20 >
-        au < expected ; 2015 ; Convergence: The International Journal of Research into New Media Technologies Volume 21 ; 21 >
+        au < manifest ; 2015 ; Convergence: The International Journal of Research into New Media Technologies Volume 21 ; 21 >
 
       }
 
@@ -9121,7 +9121,7 @@
         au < released ; 2012 ; The Diabetes Educator Volume 38 ; 38 >
         au < manifest ; 2013 ; The Diabetes Educator Volume 39 ; 39 >
         au < manifest ; 2014 ; The Diabetes Educator Volume 40 ; 40 >
-        au < expected ; 2015 ; The Diabetes Educator Volume 41 ; 41 >
+        au < manifest ; 2015 ; The Diabetes Educator Volume 41 ; 41 >
 
       }
 
@@ -10726,7 +10726,7 @@
       au < exists ; 2011 ; Environmental Law Review Volume 13 ; 13 >
       au < exists ; 2012 ; Environmental Law Review Volume 14 ; 14 >
       au < exists ; 2013 ; Environmental Law Review Volume 15 ; 15 >
-      au < exists ; 2014 ; Environmental Law Review Volume 16 ; 16 >
+      au < manifest ; 2014 ; Environmental Law Review Volume 16 ; 16 >
       au < expected ; 2015 ; Environmental Law Review Volume 17 ; 17 >
 
   }
@@ -10825,7 +10825,7 @@
         au < released ; 2012 ; Ethnicities Volume 12 ; 12 >
         au < manifest ; 2013 ; Ethnicities Volume 13 ; 13 >
         au < manifest ; 2014 ; Ethnicities Volume 14 ; 14 >
-        au < expected ; 2015 ; Ethnicities Volume 15 ; 15 >
+        au < manifest ; 2015 ; Ethnicities Volume 15 ; 15 >
 
       }
 
@@ -11334,7 +11334,7 @@
         au < released ; 2012 ; European Journal of Cultural Studies Volume 15 ; 15 >
         au < manifest ; 2013 ; European Journal of Cultural Studies Volume 16 ; 16 >
         au < manifest ; 2014 ; European Journal of Cultural Studies Volume 17 ; 17 >
-        au < expected ; 2015 ; European Journal of Cultural Studies Volume 18 ; 18 >
+        au < manifest ; 2015 ; European Journal of Cultural Studies Volume 18 ; 18 >
 
       }
 
@@ -11718,7 +11718,7 @@
         au < released ; 2012 ; European Physical Education Review Volume 18 ; 18 >
         au < manifest ; 2013 ; European Physical Education Review Volume 19 ; 19 >
         au < manifest ; 2014 ; European Physical Education Review Volume 20 ; 20 >
-        au < expected ; 2015 ; European Physical Education Review Volume 21 ; 21 >
+        au < manifest ; 2015 ; European Physical Education Review Volume 21 ; 21 >
 
       }
     }
@@ -13820,7 +13820,7 @@
         au < released ; 2012 ; Group & Organization Management Volume 37 ; 37 >
         au < manifest ; 2013 ; Group & Organization Management Volume 38 ; 38 >
         au < manifest ; 2014 ; Group & Organization Management Volume 39 ; 39 >
-        au < expected ; 2015 ; Group & Organization Management Volume 40 ; 40 >
+        au < manifest ; 2015 ; Group & Organization Management Volume 40 ; 40 >
 
       }
 
@@ -14030,7 +14030,7 @@
         au < released ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 >
         au < manifest ; 2013 ; International Journal of Bilingualism Volume 17 ; 17 >
         au < manifest ; 2014 ; International Journal of Bilingualism Volume 18 ; 18 >
-        au < expected ; 2015 ; International Journal of Bilingualism Volume 19 ; 19 >
+        au < manifest ; 2015 ; International Journal of Bilingualism Volume 19 ; 19 >
 
       }
 
@@ -14553,7 +14553,9 @@
         param[base_url] = http://hme.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Health Services Research and Managerial Epidemiology Volume 1 ; 1 >
+        au < manifest ; 2014 ; Health Services Research and Managerial Epidemiology Volume 1 ; 1 >
+        au < expected ; 2015 ; Health Services Research and Managerial Epidemiology Volume 2 ; 2 >
+
     }
 
     {
@@ -17093,8 +17095,8 @@
       au < exists ; 2011 ; The International Journal of Evidence & Proof Volume 15 ; 15 >
       au < exists ; 2012 ; The International Journal of Evidence & Proof Volume 16 ; 16 >
       au < exists ; 2013 ; The International Journal of Evidence & Proof Volume 17 ; 17 >
-      au < exists ; 2014 ; The International Journal of Evidence & Proof Volume 18 ; 18 >
-      au < exists ; 2015 ; The International Journal of Evidence & Proof Volume 19 ; 19 >
+      au < manifest ; 2014 ; The International Journal of Evidence & Proof Volume 18 ; 18 >
+      au < manifest ; 2015 ; The International Journal of Evidence & Proof Volume 19 ; 19 >
 
   }
 
@@ -17414,7 +17416,7 @@
       au < exists ; 2011 ; International Journal of Police Science & Management Volume 13 ; 13 >
       au < exists ; 2012 ; International Journal of Police Science & Management Volume 14 ; 14 >
       au < exists ; 2013 ; International Journal of Police Science & Management Volume 15 ; 15 >
-      au < exists ; 2014 ; International Journal of Police Science & Management Volume 16 ; 16 >
+      au < manifest ; 2014 ; International Journal of Police Science & Management Volume 16 ; 16 >
       au < expected ; 2015 ; International Journal of Police Science & Management Volume 17 ; 17 >
 
   }
@@ -22887,7 +22889,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Journal of Entrepreneurship and Innovation in Emerging Economies Volume 1 ; 1 >
+      au < manifest ; 2015 ; Journal of Entrepreneurship and Innovation in Emerging Economies Volume 1 ; 1 >
   }
 
     {
@@ -23295,7 +23297,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Family Nursing Volume 18 ; 18 >
         au < manifest ; 2013 ; Journal of Family Nursing Volume 19 ; 19 >
         au < manifest ; 2014 ; Journal of Family Nursing Volume 20 ; 20 >
-        au < expected ; 2015 ; Journal of Family Nursing Volume 21 ; 21 >
+        au < manifest ; 2015 ; Journal of Family Nursing Volume 21 ; 21 >
 
       }
 
@@ -24393,7 +24395,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Industrial Relations Volume 54 ; 54 >
         au < manifest ; 2013 ; Journal of Industrial Relations Volume 55 ; 55 >
         au < manifest ; 2014 ; Journal of Industrial Relations Volume 56 ; 56 >
-        au < expected ; 2015 ; Journal of Industrial Relations Volume 57 ; 57 >
+        au < manifest ; 2015 ; Journal of Industrial Relations Volume 57 ; 57 >
 
       }
 
