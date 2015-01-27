@@ -303,7 +303,7 @@
     au < finished ; frozen ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
     au < finished ; crawling ; 2012 ; Age and Ageing Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
+    au < testing ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
     au < manifest ; exists ; 2015 ; Age and Ageing Volume 44 ; 44 ; >
 
     }
@@ -721,7 +721,6 @@
 
     param[base_url] = http://aje.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[doNotProcess] = multiple poll failures, see RU 4377
     comment[0] = includes supplements
 
     au < manifest ; exists ; 1921 ; American Journal of Epidemiology Volume 1 ; 1 ; >
@@ -902,8 +901,8 @@
     au < finished ; crawling ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
-    au < manifest ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
-    au < doNotProcess ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
+    au < testing ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
+    au < testing ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
     au < doNotProcess ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
 
     }
@@ -921,8 +920,6 @@
 
     param[base_url] = http://ajh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-
-    comment[nR] = RT 5641 fetch error
 
     au < manifest ; exists ; 1988 ; American Journal of Hypertension Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; American Journal of Hypertension Volume 2 ; 2 ; >
@@ -950,7 +947,7 @@
     au < crawling ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
+    au < testing ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2015 ; American Journal of Hypertension Volume 28 ; 28 ; >
 
   }
@@ -1227,7 +1224,7 @@
     au < finished ; frozen ; 2011 ; Analysis Volume 71 ; 71 ; >
     au < finished ; frozen ; 2012 ; Analysis Volume 72 ; 72 ; >
     au < crawling ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
+    au < testing ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
     au < doNotProcess ; exists ; 2015 ; Analysis Volume 75 ; 75 ; >
 
     }
@@ -1610,7 +1607,7 @@
     au < finished ; crawling ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; Annals of Oncology Volume 23 ; 23 ; >
     au < ingNotReady ; exists ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
+    au < testing ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2015 ; Annals of Oncology Volume 26 ; 26 ; >
 
     }
@@ -1633,7 +1630,7 @@
     au < finished ; crawling ; 2011 ; AoB PLANTS Volume 2011 ; 2011 ; >
     au < finished ; frozen ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; AoB PLANTS Volume 6 ; 6 ; >
+    au < testing ; exists ; 2014 ; AoB PLANTS Volume 6 ; 6 ; >
     au < expected ; exists ; 2015 ; AoB PLANTS Volume 7 ; 7 ; >
 
   }
@@ -2250,7 +2247,7 @@
     au < finished ; crawling ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 ; >
     au < zapped ; finished ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2014 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 7 ; 7 ; >
+    au < testing ; exists ; 2014 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 7 ; 7 ; >
     au < expected ; exists ; 2015 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 8 ; 8 ; >
 
     }
@@ -3248,7 +3245,7 @@
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 109 ; 109 ; >
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
-    au < manifest ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
+    au < testing ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
     au < expected ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
 
     }
@@ -3305,7 +3302,7 @@
     au < finished ; crawling ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
     au < crawling ; exists ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
     au < crawling ; exists ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
-    au < manifest ; exists ; 2014 ; British Yearbook of International Law Volume 84 ; 84 ; >
+    au < testing ; exists ; 2014 ; British Yearbook of International Law Volume 84 ; 84 ; >
     au < expected ; exists ; 2015 ; British Yearbook of International Law Volume 85 ; 85 ; >
 
   }
@@ -13936,7 +13933,7 @@
     au < finished ; frozen ; 2011 ; Journal of Plankton Research Volume 33 ; 33 ; >
     au < finished ; frozen ; 2012 ; Journal of Plankton Research Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Journal of Plankton Research Volume 35 ; 35 ; >
-    au < testing ; exists ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
+    au < ready ; exists ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
     au < expected ; exists ; 2015 ; Journal of Plankton Research Volume 37 ; 37 ; >
 
     }
@@ -19998,7 +19995,7 @@
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
-    au < manifest ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
+    au < testing ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
     au < expected ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
 
     }
@@ -22441,7 +22438,7 @@
     au < finished ; crawling ; 2011 ; Yearbook of European Law Volume 30 ; 30 ; >
     au < finished ; frozen ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Yearbook of European Law Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
+    au < testing ; exists ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
     au < expected ; exists ; 2015 ; Yearbook of European Law Volume 34 ; 34 ; >
 
   }
@@ -23186,7 +23183,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2013 ; Conservation Physiology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2014 ; Conservation Physiology Volume 2 ; 2 ; >
+      au < testing ; exists ; 2014 ; Conservation Physiology Volume 2 ; 2 ; >
       au < expected ; exists ; 2015 ; Conservation Physiology Volume 3 ; 3 ; >
 
     }
