@@ -466,9 +466,10 @@
 
     {
       param[base_url] = http://aapredbook.aappublications.org/
+      comment[moved] = moved to http://redbook.solutions.aap.org/
       
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Red Book Online Volume 1 ; 1 >
-      }
+      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Red Book Online Volume 2012 ; 1 >
+    }
 
   }
 
