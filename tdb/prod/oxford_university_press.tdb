@@ -362,8 +362,8 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 >
-    au < HighWireDrupalPlugin ; manifest ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 >
-    au < HighWireDrupalPlugin ; manifest ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 >
 
     }
 
@@ -379,7 +379,7 @@
       >
 
     param[base_url] = http://ae.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1990 ; American Entomologist Volume 36 ; 36 >
@@ -1422,7 +1422,7 @@
     >
 
     param[base_url] = http://aesa.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1908 volume 1 to 1989 volume 82 
 
@@ -1760,7 +1760,7 @@
     >
 
     param[base_url] = http://arbitration.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1985 ; Arbitration International Volume 1 ; 1 >
@@ -1881,7 +1881,7 @@
     >
 
     param[base_url] = http://amt.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     
     au < manifest ; 2013 ; Arthropod Management Tests Volume 38 ; 38 >
@@ -3263,7 +3263,7 @@
     >
 
     param[base_url] = http://besa.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1955 ; Bulletin of the Entomological Society of America Volume 1 ; 1 >
@@ -4925,7 +4925,7 @@
     >
 
     param[base_url] = http://economicpolicy.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1985-1986 ; Economic Policy Volume 1 ; 1 >
@@ -5378,7 +5378,7 @@
     >
 
     param[base_url] = http://ee.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1972 volume 1 to 1989 volume 18
     
@@ -5793,8 +5793,8 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; European Heart Journal Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; down ; 2011 ; European Heart Journal Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Heart Journal Volume 33 ; 33 >
-    au < HighWireDrupalPlugin ; manifest ; 2013 ; European Heart Journal Volume 34 ; 34 >
-    au < HighWireDrupalPlugin ; manifest ; 2014 ; European Heart Journal Volume 35 ; 35 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; European Heart Journal Volume 34 ; 34 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; European Heart Journal Volume 35 ; 35 >
 
     }
 
@@ -6165,20 +6165,20 @@
     param[base_url] = http://eurpub.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireDrupalPlugin ; manifest ; 1991 ; European Journal of Public Health Volume 1 ; 1 >
-    au < HighWireDrupalPlugin ; manifest ; 1992 ; European Journal of Public Health Volume 2 ; 2 >
-    au < HighWireDrupalPlugin ; manifest ; 1993 ; European Journal of Public Health Volume 3 ; 3 >
-    au < HighWireDrupalPlugin ; manifest ; 1994 ; European Journal of Public Health Volume 4 ; 4 >
-    au < HighWireDrupalPlugin ; manifest ; 1995 ; European Journal of Public Health Volume 5 ; 5 >
-    au < HighWireDrupalPlugin ; manifest ; 1996 ; European Journal of Public Health Volume 6 ; 6 >
-    au < HighWireDrupalPlugin ; manifest ; 1997 ; European Journal of Public Health Volume 7 ; 7 >
-    au < HighWireDrupalPlugin ; manifest ; 1998 ; European Journal of Public Health Volume 8 ; 8 >
-    au < HighWireDrupalPlugin ; manifest ; 1999 ; European Journal of Public Health Volume 9 ; 9 >
-    au < HighWireDrupalPlugin ; manifest ; 2000 ; European Journal of Public Health Volume 10 ; 10 >
-    au < HighWireDrupalPlugin ; manifest ; 2001 ; European Journal of Public Health Volume 11 ; 11 >
-    au < HighWireDrupalPlugin ; manifest ; 2002 ; European Journal of Public Health Volume 12 ; 12 >
-    au < HighWireDrupalPlugin ; manifest ; 2003 ; European Journal of Public Health Volume 13 ; 13 >
-    au < HighWireDrupalPlugin ; manifest ; 2004 ; European Journal of Public Health Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; European Journal of Public Health Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; European Journal of Public Health Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1993 ; European Journal of Public Health Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1994 ; European Journal of Public Health Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; European Journal of Public Health Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; European Journal of Public Health Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; European Journal of Public Health Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; European Journal of Public Health Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; European Journal of Public Health Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; European Journal of Public Health Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; European Journal of Public Health Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; European Journal of Public Health Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; European Journal of Public Health Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; European Journal of Public Health Volume 14 ; 14 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; European Journal of Public Health Volume 15 [superseded] ; 15 >
     au < HighWirePressH20Plugin ; down ; 2005 ; European Journal of Public Health Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; down ; 2006 ; European Journal of Public Health Volume 16 ; 16 >
@@ -6189,8 +6189,8 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; European Journal of Public Health Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Public Health Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Public Health Volume 22 ; 22 >
-    au < HighWireDrupalPlugin ; manifest ; 2013 ; European Journal of Public Health Volume 23 ; 23 >
-    au < HighWireDrupalPlugin ; manifest ; 2014 ; European Journal of Public Health Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; European Journal of Public Health Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; European Journal of Public Health Volume 24 ; 24 >
 
     }
 
@@ -6458,7 +6458,7 @@
     >
 
     param[base_url] = http://femsim.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = 1993 volume 6 to 1999 volume 26
 
@@ -6507,7 +6507,7 @@
     >
 
     param[base_url] = http://femsec.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1985 ; FEMS Microbiology Ecology Volume 1 ; 1 >
@@ -6610,7 +6610,7 @@
     >
 
     param[base_url] = http://femsmi.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1988-1989 ; FEMS Microbiology Immunology Volume 1 ; 1 >
@@ -6630,7 +6630,7 @@
     >
 
     param[base_url] = http://femsle.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = 1977 volume 1 to 1999 volume 181
 
@@ -6815,7 +6815,7 @@
     >
 
     param[base_url] = http://femsre.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1985-1986 ; FEMS Microbiology Reviews Volume 1 ; 1 >
@@ -6868,7 +6868,7 @@
     >
 
     param[base_url] = http://femsyr.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2001-2002 ; FEMS Yeast Research Volume 1 ; 1 >
@@ -9876,7 +9876,7 @@
     >
 
     param[base_url] = http://ijnp.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1998 ; International Journal of Neuropsychopharmacology Volume 1 ; 1 >
@@ -10724,7 +10724,7 @@
     >
 
     param[base_url] = http://jamia.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1994 ; JAMIA Volume 1 ; 1 >
@@ -11441,7 +11441,7 @@
       issnl = 1873-9946
     >
     param[base_url] = http://ecco-jcc.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     
     au < manifest ; 2007 ; Journal of Crohn's and Colitis Volume 1 ; 1 >
@@ -11571,7 +11571,7 @@
     >
 
     param[base_url] = http://jee.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1908 volume 1 to 1989 volume 82
     
@@ -12067,7 +12067,7 @@
     >
 
     param[base_url] = http://jogss.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     comment[0] = expected to be online on 6 Jan 2016
 
   }
@@ -12748,7 +12748,7 @@
 
     {
 
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     param[base_url] = http://jinsectscience.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -12779,7 +12779,7 @@
       issnl = 2155-7470
     >
 
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://jipm.oxfordjournals.org/
     
@@ -13315,7 +13315,7 @@
     >
 
     param[base_url] = http://jmammal.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2008 ; Journal of Mammalogy Volume 89 ; 89 >
@@ -13338,7 +13338,7 @@
     >
 
     param[base_url] = http://jme.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1976 volume 13 to 1989 volume 27 
     
@@ -15286,7 +15286,7 @@
     >
 
     param[base_url] = http://mspecies.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2010 ; Mammalian Species Volume 42 ; 42 >
@@ -17404,7 +17404,7 @@
       issnl = 0029-6643
     >
 
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -18103,7 +18103,7 @@
     >
 
     param[base_url] = http://femspd.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2013 ; Pathogens and Disease Volume 67 ; 67 >
@@ -19565,137 +19565,137 @@
     param[base_url] = http://qjmed.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireDrupalPlugin ; manifest ; 1907-1908 ; QJM: An International Journal of Medicine Volume os1 ; os1 >
-    au < HighWireDrupalPlugin ; manifest ; 1908-1909 ; QJM: An International Journal of Medicine Volume os2 ; os2 >
-    au < HighWireDrupalPlugin ; manifest ; 1909-1910 ; QJM: An International Journal of Medicine Volume os3 ; os3 >
-    au < HighWireDrupalPlugin ; manifest ; 1910-1911 ; QJM: An International Journal of Medicine Volume os4 ; os4 >
-    au < HighWireDrupalPlugin ; manifest ; 1911-1912 ; QJM: An International Journal of Medicine Volume os5 ; os5 >
-    au < HighWireDrupalPlugin ; manifest ; 1912-1913 ; QJM: An International Journal of Medicine Volume os6 ; os6 >
-    au < HighWireDrupalPlugin ; doesNotExist ; 1913-1914 ; QJM: An International Journal of Medicine Volume os7 ; os7 >
-    au < HighWireDrupalPlugin ; manifest ; 1914-1915 ; QJM: An International Journal of Medicine Volume os-8 ; os-8 >
-    au < HighWireDrupalPlugin ; manifest ; 1915-1916 ; QJM: An International Journal of Medicine Volume os-9 ; os-9 >
-    au < HighWireDrupalPlugin ; manifest ; 1916-1917 ; QJM: An International Journal of Medicine Volume os-10 ; os-10 >
-    au < HighWireDrupalPlugin ; manifest ; 1917-1918 ; QJM: An International Journal of Medicine Volume os-11 ; os-11 >
-    au < HighWireDrupalPlugin ; manifest ; 1918-1919 ; QJM: An International Journal of Medicine Volume os-12 ; os-12 >
-    au < HighWireDrupalPlugin ; manifest ; 1919-1920 ; QJM: An International Journal of Medicine Volume os-13 ; os-13 >
-    au < HighWireDrupalPlugin ; manifest ; 1920-1921 ; QJM: An International Journal of Medicine Volume os-14 ; os-14 >
-    au < HighWireDrupalPlugin ; manifest ; 1921-1922 ; QJM: An International Journal of Medicine Volume os-15 ; os-15 >
-    au < HighWireDrupalPlugin ; manifest ; 1922-1923 ; QJM: An International Journal of Medicine Volume os-16 ; os-16 >
-    au < HighWireDrupalPlugin ; manifest ; 1923-1924 ; QJM: An International Journal of Medicine Volume os-17 ; os-17 >
-    au < HighWireDrupalPlugin ; manifest ; 1924-1925 ; QJM: An International Journal of Medicine Volume os-18 ; os-18 >
-    au < HighWireDrupalPlugin ; manifest ; 1925-1926 ; QJM: An International Journal of Medicine Volume os-19 ; os-19 >
-    au < HighWireDrupalPlugin ; manifest ; 1926-1927 ; QJM: An International Journal of Medicine Volume os-20 ; os-20 >
-    au < HighWireDrupalPlugin ; manifest ; 1927-1928 ; QJM: An International Journal of Medicine Volume os-21 ; os-21 >
-    au < HighWireDrupalPlugin ; doesNotExist ; 1928 ; QJM: An International Journal of Medicine Volume os-22 ; os-22 >
-    au < HighWireDrupalPlugin ; manifest ; 1929-1930 ; QJM: An International Journal of Medicine Volume os-23 ; os-23 >
-    au < HighWireDrupalPlugin ; manifest ; 1930-1931 ; QJM: An International Journal of Medicine Volume os-24 ; os-24 >
-    au < HighWireDrupalPlugin ; manifest ; 1932 ; QJM: An International Journal of Medicine Volume 1 ; 1 >
-    au < HighWireDrupalPlugin ; manifest ; 1933 ; QJM: An International Journal of Medicine Volume 2 ; 2 >
-    au < HighWireDrupalPlugin ; manifest ; 1934 ; QJM: An International Journal of Medicine Volume 3 ; 3 >
-    au < HighWireDrupalPlugin ; manifest ; 1935 ; QJM: An International Journal of Medicine Volume 4 ; 4 >
-    au < HighWireDrupalPlugin ; manifest ; 1936 ; QJM: An International Journal of Medicine Volume 5 ; 5 >
-    au < HighWireDrupalPlugin ; manifest ; 1937 ; QJM: An International Journal of Medicine Volume 6 ; 6 >
-    au < HighWireDrupalPlugin ; manifest ; 1938 ; QJM: An International Journal of Medicine Volume 7 ; 7 >
-    au < HighWireDrupalPlugin ; manifest ; 1939 ; QJM: An International Journal of Medicine Volume 8 ; 8 >
-    au < HighWireDrupalPlugin ; manifest ; 1940 ; QJM: An International Journal of Medicine Volume 9 ; 9 >
-    au < HighWireDrupalPlugin ; manifest ; 1941 ; QJM: An International Journal of Medicine Volume 10 ; 10 >
-    au < HighWireDrupalPlugin ; manifest ; 1942 ; QJM: An International Journal of Medicine Volume 11 ; 11 >
-    au < HighWireDrupalPlugin ; manifest ; 1943 ; QJM: An International Journal of Medicine Volume 12 ; 12 >
-    au < HighWireDrupalPlugin ; manifest ; 1944 ; QJM: An International Journal of Medicine Volume 13 ; 13 >
-    au < HighWireDrupalPlugin ; manifest ; 1945 ; QJM: An International Journal of Medicine Volume 14 ; 14 >
-    au < HighWireDrupalPlugin ; manifest ; 1946 ; QJM: An International Journal of Medicine Volume 15 ; 15 >
-    au < HighWireDrupalPlugin ; manifest ; 1947 ; QJM: An International Journal of Medicine Volume 16 ; 16 >
-    au < HighWireDrupalPlugin ; manifest ; 1948 ; QJM: An International Journal of Medicine Volume 17 ; 17 >
-    au < HighWireDrupalPlugin ; manifest ; 1949 ; QJM: An International Journal of Medicine Volume 18 ; 18 >
-    au < HighWireDrupalPlugin ; manifest ; 1950 ; QJM: An International Journal of Medicine Volume 19 ; 19 >
-    au < HighWireDrupalPlugin ; manifest ; 1951 ; QJM: An International Journal of Medicine Volume 20 ; 20 >
-    au < HighWireDrupalPlugin ; manifest ; 1952 ; QJM: An International Journal of Medicine Volume 21 ; 21 >
-    au < HighWireDrupalPlugin ; manifest ; 1953 ; QJM: An International Journal of Medicine Volume 22 ; 22 >
-    au < HighWireDrupalPlugin ; manifest ; 1954 ; QJM: An International Journal of Medicine Volume 23 ; 23 >
-    au < HighWireDrupalPlugin ; manifest ; 1955 ; QJM: An International Journal of Medicine Volume 24 ; 24 >
-    au < HighWireDrupalPlugin ; manifest ; 1956 ; QJM: An International Journal of Medicine Volume 25 ; 25 >
-    au < HighWireDrupalPlugin ; manifest ; 1957 ; QJM: An International Journal of Medicine Volume 26 ; 26 >
-    au < HighWireDrupalPlugin ; manifest ; 1958 ; QJM: An International Journal of Medicine Volume 27 ; 27 >
-    au < HighWireDrupalPlugin ; manifest ; 1959 ; QJM: An International Journal of Medicine Volume 28 ; 28 >
-    au < HighWireDrupalPlugin ; manifest ; 1960 ; QJM: An International Journal of Medicine Volume 29 ; 29 >
-    au < HighWireDrupalPlugin ; manifest ; 1961 ; QJM: An International Journal of Medicine Volume 30 ; 30 >
-    au < HighWireDrupalPlugin ; manifest ; 1962 ; QJM: An International Journal of Medicine Volume 31 ; 31 >
-    au < HighWireDrupalPlugin ; manifest ; 1963 ; QJM: An International Journal of Medicine Volume 32 ; 32 >
-    au < HighWireDrupalPlugin ; manifest ; 1964 ; QJM: An International Journal of Medicine Volume 33 ; 33 >
-    au < HighWireDrupalPlugin ; manifest ; 1965 ; QJM: An International Journal of Medicine Volume 34 ; 34 >
-    au < HighWireDrupalPlugin ; manifest ; 1966 ; QJM: An International Journal of Medicine Volume 35 ; 35 >
-    au < HighWireDrupalPlugin ; manifest ; 1967 ; QJM: An International Journal of Medicine Volume 36 ; 36 >
-    au < HighWireDrupalPlugin ; manifest ; 1968 ; QJM: An International Journal of Medicine Volume 37 ; 37 >
-    au < HighWireDrupalPlugin ; manifest ; 1969 ; QJM: An International Journal of Medicine Volume 38 ; 38 >
-    au < HighWireDrupalPlugin ; manifest ; 1970 ; QJM: An International Journal of Medicine Volume 39 ; 39 >
-    au < HighWireDrupalPlugin ; manifest ; 1971 ; QJM: An International Journal of Medicine Volume 40 ; 40 >
-    au < HighWireDrupalPlugin ; manifest ; 1972 ; QJM: An International Journal of Medicine Volume 41 ; 41 >
-    au < HighWireDrupalPlugin ; manifest ; 1973 ; QJM: An International Journal of Medicine Volume 42 ; 42 >
-    au < HighWireDrupalPlugin ; manifest ; 1974 ; QJM: An International Journal of Medicine Volume 43 ; 43 >
-    au < HighWireDrupalPlugin ; manifest ; 1975 ; QJM: An International Journal of Medicine Volume 44 ; 44 >
-    au < HighWireDrupalPlugin ; manifest ; 1976 ; QJM: An International Journal of Medicine Volume 45 ; 45 >
-    au < HighWireDrupalPlugin ; manifest ; 1977 ; QJM: An International Journal of Medicine Volume 46 ; 46 >
-    au < HighWireDrupalPlugin ; manifest ; 1978 ; QJM: An International Journal of Medicine Volume 47 ; 47 >
-    au < HighWireDrupalPlugin ; manifest ; 1979 ; QJM: An International Journal of Medicine Volume 48 ; 48 >
-    au < HighWireDrupalPlugin ; manifest ; 1980 ; QJM: An International Journal of Medicine Volume 49 ; 49 >
-    au < HighWireDrupalPlugin ; manifest ; 1981 ; QJM: An International Journal of Medicine Volume 50 ; 50 >
-    au < HighWireDrupalPlugin ; manifest ; 1982 ; QJM: An International Journal of Medicine Volume 51 ; 51 >
-    au < HighWireDrupalPlugin ; manifest ; 1983 ; QJM: An International Journal of Medicine Volume 52 ; 52 >
-    au < HighWireDrupalPlugin ; manifest ; 1984 ; QJM: An International Journal of Medicine Volume 53 ; 53 >
-    au < HighWireDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 54 ; 54 >
-    au < HighWireDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 55 ; 55 >
-    au < HighWireDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 56 ; 56 >
-    au < HighWireDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 57 ; 57 >
-    au < HighWireDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 58 ; 58 >
-    au < HighWireDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 59 ; 59 >
-    au < HighWireDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 60 ; 60 >
-    au < HighWireDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 61 ; 61 >
-    au < HighWireDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 62 ; 62 >
-    au < HighWireDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 63 ; 63 >
-    au < HighWireDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 64 ; 64 >
-    au < HighWireDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 65 ; 65 >
-    au < HighWireDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 66 ; 66 >
-    au < HighWireDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 67 ; 67 >
-    au < HighWireDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 68 ; 68 >
-    au < HighWireDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 69 ; 69 >
-    au < HighWireDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 70 ; 70 >
-    au < HighWireDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 71 ; 71 >
-    au < HighWireDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 72 ; 72 >
-    au < HighWireDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 73 ; 73 >
-    au < HighWireDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 74 ; 74 >
-    au < HighWireDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 75 ; 75 >
-    au < HighWireDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 76 ; 76 >
-    au < HighWireDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 77 ; 77 >
-    au < HighWireDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 78 ; 78 >
-    au < HighWireDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 79 ; 79 >
-    au < HighWireDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 80 ; 80 >
-    au < HighWireDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 81 ; 81 >
-    au < HighWireDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 82 ; 82 >
-    au < HighWireDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 83 ; 83 >
-    au < HighWireDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 84 ; 84 >
-    au < HighWireDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 85 ; 85 >
-    au < HighWireDrupalPlugin ; manifest ; 1993 ; QJM: An International Journal of Medicine Volume 86 ; 86 >
-    au < HighWireDrupalPlugin ; manifest ; 1994 ; QJM: An International Journal of Medicine Volume 87 ; 87 >
-    au < HighWireDrupalPlugin ; manifest ; 1995 ; QJM: An International Journal of Medicine Volume 88 ; 88 >
-    au < HighWireDrupalPlugin ; manifest ; 1996 ; QJM: An International Journal of Medicine Volume 89 ; 89 >
-    au < HighWireDrupalPlugin ; manifest ; 1997 ; QJM: An International Journal of Medicine Volume 90 ; 90 >
-    au < HighWireDrupalPlugin ; manifest ; 1998 ; QJM: An International Journal of Medicine Volume 91 ; 91 >
-    au < HighWireDrupalPlugin ; manifest ; 1999 ; QJM: An International Journal of Medicine Volume 92 ; 92 >
-    au < HighWireDrupalPlugin ; manifest ; 2000 ; QJM: An International Journal of Medicine Volume 93 ; 93 >
-    au < HighWireDrupalPlugin ; manifest ; 2001 ; QJM: An International Journal of Medicine Volume 94 ; 94 >
-    au < HighWireDrupalPlugin ; manifest ; 2002 ; QJM: An International Journal of Medicine Volume 95 ; 95 >
-    au < HighWireDrupalPlugin ; manifest ; 2003 ; QJM: An International Journal of Medicine Volume 96 ; 96 >
-    au < HighWireDrupalPlugin ; manifest ; 2004 ; QJM: An International Journal of Medicine Volume 97 ; 97 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1907-1908 ; QJM: An International Journal of Medicine Volume os1 ; os1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1908-1909 ; QJM: An International Journal of Medicine Volume os2 ; os2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1909-1910 ; QJM: An International Journal of Medicine Volume os3 ; os3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1910-1911 ; QJM: An International Journal of Medicine Volume os4 ; os4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1911-1912 ; QJM: An International Journal of Medicine Volume os5 ; os5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1912-1913 ; QJM: An International Journal of Medicine Volume os6 ; os6 >
+    au < oup.OUPDrupalPlugin ; doesNotExist ; 1913-1914 ; QJM: An International Journal of Medicine Volume os7 ; os7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1914-1915 ; QJM: An International Journal of Medicine Volume os-8 ; os-8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1915-1916 ; QJM: An International Journal of Medicine Volume os-9 ; os-9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1916-1917 ; QJM: An International Journal of Medicine Volume os-10 ; os-10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1917-1918 ; QJM: An International Journal of Medicine Volume os-11 ; os-11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1918-1919 ; QJM: An International Journal of Medicine Volume os-12 ; os-12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1919-1920 ; QJM: An International Journal of Medicine Volume os-13 ; os-13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1920-1921 ; QJM: An International Journal of Medicine Volume os-14 ; os-14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1921-1922 ; QJM: An International Journal of Medicine Volume os-15 ; os-15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1922-1923 ; QJM: An International Journal of Medicine Volume os-16 ; os-16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1923-1924 ; QJM: An International Journal of Medicine Volume os-17 ; os-17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1924-1925 ; QJM: An International Journal of Medicine Volume os-18 ; os-18 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1925-1926 ; QJM: An International Journal of Medicine Volume os-19 ; os-19 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1926-1927 ; QJM: An International Journal of Medicine Volume os-20 ; os-20 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1927-1928 ; QJM: An International Journal of Medicine Volume os-21 ; os-21 >
+    au < oup.OUPDrupalPlugin ; doesNotExist ; 1928 ; QJM: An International Journal of Medicine Volume os-22 ; os-22 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1929-1930 ; QJM: An International Journal of Medicine Volume os-23 ; os-23 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1930-1931 ; QJM: An International Journal of Medicine Volume os-24 ; os-24 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1932 ; QJM: An International Journal of Medicine Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1933 ; QJM: An International Journal of Medicine Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1934 ; QJM: An International Journal of Medicine Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1935 ; QJM: An International Journal of Medicine Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1936 ; QJM: An International Journal of Medicine Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1937 ; QJM: An International Journal of Medicine Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1938 ; QJM: An International Journal of Medicine Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1939 ; QJM: An International Journal of Medicine Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1940 ; QJM: An International Journal of Medicine Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1941 ; QJM: An International Journal of Medicine Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1942 ; QJM: An International Journal of Medicine Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1943 ; QJM: An International Journal of Medicine Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1944 ; QJM: An International Journal of Medicine Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1945 ; QJM: An International Journal of Medicine Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1946 ; QJM: An International Journal of Medicine Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1947 ; QJM: An International Journal of Medicine Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1948 ; QJM: An International Journal of Medicine Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1949 ; QJM: An International Journal of Medicine Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1950 ; QJM: An International Journal of Medicine Volume 19 ; 19 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1951 ; QJM: An International Journal of Medicine Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1952 ; QJM: An International Journal of Medicine Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1953 ; QJM: An International Journal of Medicine Volume 22 ; 22 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1954 ; QJM: An International Journal of Medicine Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1955 ; QJM: An International Journal of Medicine Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1956 ; QJM: An International Journal of Medicine Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1957 ; QJM: An International Journal of Medicine Volume 26 ; 26 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1958 ; QJM: An International Journal of Medicine Volume 27 ; 27 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1959 ; QJM: An International Journal of Medicine Volume 28 ; 28 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1960 ; QJM: An International Journal of Medicine Volume 29 ; 29 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1961 ; QJM: An International Journal of Medicine Volume 30 ; 30 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1962 ; QJM: An International Journal of Medicine Volume 31 ; 31 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1963 ; QJM: An International Journal of Medicine Volume 32 ; 32 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1964 ; QJM: An International Journal of Medicine Volume 33 ; 33 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1965 ; QJM: An International Journal of Medicine Volume 34 ; 34 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1966 ; QJM: An International Journal of Medicine Volume 35 ; 35 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1967 ; QJM: An International Journal of Medicine Volume 36 ; 36 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1968 ; QJM: An International Journal of Medicine Volume 37 ; 37 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1969 ; QJM: An International Journal of Medicine Volume 38 ; 38 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1970 ; QJM: An International Journal of Medicine Volume 39 ; 39 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1971 ; QJM: An International Journal of Medicine Volume 40 ; 40 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1972 ; QJM: An International Journal of Medicine Volume 41 ; 41 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1973 ; QJM: An International Journal of Medicine Volume 42 ; 42 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1974 ; QJM: An International Journal of Medicine Volume 43 ; 43 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1975 ; QJM: An International Journal of Medicine Volume 44 ; 44 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1976 ; QJM: An International Journal of Medicine Volume 45 ; 45 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1977 ; QJM: An International Journal of Medicine Volume 46 ; 46 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1978 ; QJM: An International Journal of Medicine Volume 47 ; 47 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1979 ; QJM: An International Journal of Medicine Volume 48 ; 48 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1980 ; QJM: An International Journal of Medicine Volume 49 ; 49 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1981 ; QJM: An International Journal of Medicine Volume 50 ; 50 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1982 ; QJM: An International Journal of Medicine Volume 51 ; 51 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1983 ; QJM: An International Journal of Medicine Volume 52 ; 52 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1984 ; QJM: An International Journal of Medicine Volume 53 ; 53 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 54 ; 54 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 55 ; 55 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 56 ; 56 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; QJM: An International Journal of Medicine Volume 57 ; 57 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 58 ; 58 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 59 ; 59 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 60 ; 60 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; QJM: An International Journal of Medicine Volume 61 ; 61 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 62 ; 62 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 63 ; 63 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 64 ; 64 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; QJM: An International Journal of Medicine Volume 65 ; 65 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 66 ; 66 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 67 ; 67 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 68 ; 68 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; QJM: An International Journal of Medicine Volume 69 ; 69 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 70 ; 70 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 71 ; 71 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 72 ; 72 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; QJM: An International Journal of Medicine Volume 73 ; 73 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 74 ; 74 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 75 ; 75 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 76 ; 76 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; QJM: An International Journal of Medicine Volume 77 ; 77 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 78 ; 78 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 79 ; 79 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 80 ; 80 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; QJM: An International Journal of Medicine Volume 81 ; 81 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 82 ; 82 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 83 ; 83 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 84 ; 84 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; QJM: An International Journal of Medicine Volume 85 ; 85 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1993 ; QJM: An International Journal of Medicine Volume 86 ; 86 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1994 ; QJM: An International Journal of Medicine Volume 87 ; 87 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; QJM: An International Journal of Medicine Volume 88 ; 88 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; QJM: An International Journal of Medicine Volume 89 ; 89 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; QJM: An International Journal of Medicine Volume 90 ; 90 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; QJM: An International Journal of Medicine Volume 91 ; 91 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; QJM: An International Journal of Medicine Volume 92 ; 92 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; QJM: An International Journal of Medicine Volume 93 ; 93 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; QJM: An International Journal of Medicine Volume 94 ; 94 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; QJM: An International Journal of Medicine Volume 95 ; 95 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; QJM: An International Journal of Medicine Volume 96 ; 96 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; QJM: An International Journal of Medicine Volume 97 ; 97 >
     au < HighWireStrVolPlugin ; down ; 2005 ; QJM: An International Journal of Medicine Volume 98 ; 98 >
-    au < HighWireDrupalPlugin ; doNotProcess ; 2006 ; QJM: An International Journal of Medicine Volume 99 ; 99 >
+    au < oup.OUPDrupalPlugin ; doNotProcess ; 2006 ; QJM: An International Journal of Medicine Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; down ; 2007 ; QJM: An International Journal of Medicine Volume 100 ; 100 >
     au < HighWirePressPlugin ; down ; 2008 ;  QJM: An International Journal of Medicine Volume 101 ; 101 >
     au < HighWirePressPlugin ; down ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; down ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 >
     au < HighWirePressH20Plugin ; down ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 >
     au < HighWirePressH20Plugin ; down ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 >
-    au < HighWireDrupalPlugin ; manifest ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 >
-    au < HighWireDrupalPlugin ; manifest ; 2014 ; QJM: An International Journal of Medicine Volume 107 ; 107 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; QJM: An International Journal of Medicine Volume 107 ; 107 >
 
     }
 
@@ -20168,7 +20168,7 @@
     >
 
     param[base_url] = http://rb.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2014 ; Regenerative Biomaterials Volume 1 ; 1 >
@@ -21214,7 +21214,7 @@
     >
 
     param[base_url] = http://socpro.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1953-1954 ; Social Problems Volume 1 ; 1 >
@@ -22302,7 +22302,7 @@
     >
 
     param[base_url] = http://workar.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     
     au < expected ; 2014 ; Work, Aging and Retirement Volume 1 ; 1 >

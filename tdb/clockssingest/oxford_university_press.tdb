@@ -344,7 +344,7 @@
     {
 
     param[base_url] = http://alcalc.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 ; >
     au < manifest ; exists ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 ; >
@@ -411,7 +411,7 @@
       >
 
     param[base_url] = http://ae.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 1990 ; American Entomologist Volume 36 ; 36 ; >
     au < exists ; exists ; 1991 ; American Entomologist Volume 37 ; 37 ; >
@@ -1440,7 +1440,7 @@
     >
 
     param[base_url] = http://aesa.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[0] = content available from 1908 volume 1 to 1989 volume 82
 
     au < exists ; exists ; 1990 ; Annals of the Entomological Society of America Volume 83 ; 83 ; >
@@ -1788,7 +1788,7 @@
     >
 
     param[base_url] = http://arbitration.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1985 ; Arbitration International Volume 1 ; 1 ; >
     au < manifest ; exists ; 1986 ; Arbitration International Volume 2 ; 2 ; >
@@ -1919,7 +1919,7 @@
     >
 
     param[base_url] = http://amt.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 24 ; 24 ; >
     au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 25 ; 25 ; >
@@ -2469,7 +2469,7 @@
     {
 
     param[base_url] = http://brain.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[down] = Moved to Drupal platform
 
     au < doNotProcess ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 ; >
@@ -3319,7 +3319,7 @@
     >
 
     param[base_url] = http://besa.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1955 ; Bulletin of the Entomological Society of America Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 1956 ; Bulletin of the Entomological Society of America Volume 2 ; 2 ; >
@@ -4921,7 +4921,7 @@
     >
 
     param[base_url] = http://economicpolicy.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1985-1986 ; Economic Policy Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Economic Policy Volume 2 ; 2 ; >
@@ -5339,7 +5339,7 @@
     >
 
     param[base_url] = http://ee.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[0] = content available from 1972 volume 1 to 1989 volume 18
 
     au < exists ; exists ; 1990 ; Environmental Entomology Volume 19 ; 19 ; >
@@ -5683,7 +5683,7 @@
     {
 
     param[base_url] = http://europace.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[notReady] = needs hash filter RU 4470
     comment[down] = Moved to Drupal platform
 
@@ -5774,7 +5774,7 @@
     {
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[down] = Moved to Drupal platform
 
     au < exists ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
@@ -5842,7 +5842,7 @@
     {
 
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[down] = Moved to Drupal platform
 
     au < doNotProcess ; doNotProcess ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 ; >
@@ -6214,7 +6214,7 @@
     {
 
     param[base_url] = http://eurpub.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1991 ; European Journal of Public Health Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; European Journal of Public Health Volume 2 ; 2 ; >
@@ -6514,7 +6514,7 @@
     >
 
     param[base_url] = http://femsim.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[backcontent] = 1993 volume 6 to 1999 volume 26
 
     au < manifest ; exists ; 1993 ; FEMS Immunology & Medical Microbiology Volume 6 ; 6 ; >
@@ -6583,7 +6583,7 @@
     >
 
     param[base_url] = http://femsec.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1985 ; FEMS Microbiology Ecology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1986 ; FEMS Microbiology Ecology Volume 2 ; 2 ; >
@@ -6686,7 +6686,7 @@
     >
 
     param[base_url] = http://femsmi.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1988-1989 ; FEMS Microbiology Immunology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1990 ; FEMS Microbiology Immunology Volume 2 ; 2 ; >
@@ -6705,7 +6705,7 @@
     >
 
     param[base_url] = http://femsle.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[backcontent] = 1977 volume 1 to 1999 volume 181
 
     au < manifest ; exists ; 1998 ; FEMS Microbiology Letters Volume 169 ; 169 ; >
@@ -6903,7 +6903,7 @@
     >
 
     param[base_url] = http://femsre.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1985-1986 ; FEMS Microbiology Reviews Volume 1 ; 1 ; >
     au < manifest ; exists ; 1986 ; FEMS Microbiology Reviews Volume 2 ; 2 ; >
@@ -6956,7 +6956,7 @@
     >
 
     param[base_url] = http://femsyr.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 2001-2002 ; FEMS Yeast Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 2002 ; FEMS Yeast Research Volume 2 ; 2 ; >
@@ -9851,7 +9851,7 @@
     >
 
     param[base_url] = http://ijnp.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1998 ; International Journal of Neuropsychopharmacology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1999 ; International Journal of Neuropsychopharmacology Volume 2 ; 2 ; >
@@ -10700,7 +10700,7 @@
     >
 
     param[base_url] = http://jamia.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 1994 ; JAMIA Volume 1 ; 1 ; >
     au < exists ; exists ; 1995 ; JAMIA Volume 2 ; 2 ; >
@@ -11386,7 +11386,7 @@
       issnl = 1873-9946
     >
     param[base_url] = http://ecco-jcc.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 2007 ; Journal of Crohn's and Colitis Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; Journal of Crohn's and Colitis Volume 2 ; 2 ; >
@@ -11516,7 +11516,7 @@
     >
 
     param[base_url] = http://jee.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[0] = content available from 1908 volume 1 to 1989 volume 82
 
     au < exists ; exists ; 1990 ; Journal of Economic Entomology Volume 83 ; 83 ; >
@@ -12030,7 +12030,7 @@
     >
 
     param[base_url] = http://jogss.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[0] = expected to be online on 6 Jan 2016
 
   }
@@ -12664,7 +12664,7 @@
 
     {
 
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://jinsectscience.oxfordjournals.org/
 
     au < manifest ; exists ; 2001 ; Journal of Insect Science Volume 1 ; 1 ; >
@@ -12695,7 +12695,7 @@
       issnl = 2155-7470
     >
 
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://jipm.oxfordjournals.org/
 
     au < manifest ; exists ; 2010 ; Journal of Integrated Pest Management Volume 1 ; 1 ; >
@@ -13248,7 +13248,7 @@
     >
 
     param[base_url] = http://jmammal.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 2000 ; Journal of Mammalogy Volume 81 ; 81 ; >
     au < exists ; exists ; 2001 ; Journal of Mammalogy Volume 82 ; 82 ; >
@@ -13279,7 +13279,7 @@
     >
 
     param[base_url] = http://jme.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[0] = content available from 1976 volume 13 to 1989 volume 27
 
     au < exists ; exists ; 1990 ; Journal of Medical Entomology Volume 27 ; 27 ; >
@@ -15263,7 +15263,7 @@
     >
 
     param[base_url] = http://mspecies.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
     au < exists ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
@@ -17319,7 +17319,7 @@
       issnl = 0029-6643
     >
 
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
 
     au < manifest ; exists ; 1975 ; Nutrition Reviews Volume 33 ; 33 ; >
@@ -17975,7 +17975,7 @@
     >
 
     param[base_url] = http://femspd.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 2013 ; Pathogens and Disease Volume 67 ; 67 ; >
     au < manifest ; exists ; 2013 ; Pathogens and Disease Volume 68 ; 68 ; >
@@ -19456,7 +19456,7 @@
     {
 
     param[base_url] = http://qjmed.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1907-1908 ; QJM: An International Journal of Medicine Volume os1 ; os1 ; >
     au < manifest ; exists ; 1908-1909 ; QJM: An International Journal of Medicine Volume os2 ; os2 ; >
@@ -20078,7 +20078,7 @@
     >
 
     param[base_url] = http://rb.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 2014 ; Regenerative Biomaterials Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Regenerative Biomaterials Volume 2 ; 2 ; >
@@ -21142,7 +21142,7 @@
     >
 
     param[base_url] = http://socpro.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 1953-1954 ; Social Problems Volume 1 ; 1 ; >
     au < exists ; exists ; 1954 ; Social Problems Volume 2 ; 2 ; >
@@ -22272,7 +22272,7 @@
     >
 
     param[base_url] = http://workar.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireDrupalPlugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 2014 ; Work, Aging and Retirement Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Work, Aging and Retirement Volume 2 ; 2 ; >
