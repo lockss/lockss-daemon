@@ -132,7 +132,7 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "HighWireDrupalPlugin") {
+  } elsif ($plugin eq "HighWireDrupalPlugin" || $plugin eq "OUPDrupalPlugin" || $plugin eq "APSDrupalPlugin") {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
