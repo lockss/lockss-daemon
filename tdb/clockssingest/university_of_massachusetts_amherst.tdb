@@ -23,6 +23,7 @@
     au < manifest ; exists ; 2007 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; Rasenna: Journal of the Center for Etruscan Studies volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 >
+    au < exists ; exists ; 2014 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 >
 
   }
 
@@ -55,8 +56,9 @@
     param[journal_abbr] = cpo
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < crawling ; exists ; 2013 ; communication +1 Volume 1 ; 1 >
-    au < crawling ; exists ; 2014 ; communication +1 Volume 2 ; 2 >
+    au < crawling ; exists ; 2012 ; communication +1 Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; communication +1 Volume 2 ; 2 >
+    au < exists ; exists ; 2014 ; communication +1 Volume 3 ; 3 >
 
   }
   
