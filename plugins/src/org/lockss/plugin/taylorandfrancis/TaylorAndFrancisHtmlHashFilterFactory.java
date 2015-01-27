@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.23 2015-01-22 04:32:47 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.24 2015-01-27 22:30:13 thib_gc Exp $
  */
 
 /*
@@ -58,9 +58,11 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        
         /*
          * From the crawl filter
          */
+        
         // News articles
         HtmlNodeFilters.tagWithAttribute("div", "id", "newsArticles"),
         // Related and most read articles
@@ -70,9 +72,11 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // Links to other articles
         HtmlNodeFilters.tagWithAttribute("div", "id", "referencesPanel"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "citationsPanel"),
+        
         /*
          * Broad area filtering
          */
+        
         // Scripts, style, comments
         HtmlNodeFilters.tag("script"),
         HtmlNodeFilters.tag("noscript"),
@@ -97,9 +101,24 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^secondarySubjects"),
         // Footer
         HtmlNodeFilters.tagWithAttribute("div", "id", "ft"),
+        
+        /*
+         * Main content area
+         */
+        // Box with "View full text", "Download full text" etc. changes when
+        // article becomes free
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessmodule"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"), // redundant: enclosed in previous
+        // Contains an article view count
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"),
+        // "Alert me" (varied over time)
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "alertDiv"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alertDiv"),
+        
         /*
          * Other
          */
+        
         // TOCs above content area: icons like "peer review integrity" and
         // "Routledge Open Select" can change over time
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journalOverviewAds"),
@@ -107,8 +126,6 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 //        HtmlNodeFilters.tagWithAttribute("span", "class", "subtitles"),
         // Wording in TOCs changed from 'Related' to ' Related articles ' [sic]
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/action/doSearch\\?target=related"),
-//        // Went from <..."/> to <..." />
-//        HtmlNodeFilters.tagWithAttribute("img", "class", "cover"),
         // Maximal filtering. Take out non-content sections proactively
         //top search area - can have addt'l words
         HtmlNodeFilters.tagWithAttribute("div", "class", "social clear"), // facebook/twitter etc 
@@ -122,10 +139,6 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "class", "relatedLink"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "searchRelatedLink"),
         HtmlNodeFilters.tagWithAttribute("li", "class", "relatedArticleLink"), // TOC in 'Further Information': wording change
-        // (no longer needed because we no longer get Refworks citation files)
-//        // Form at the bottom of downloadCitation pages with RIS data in a <textarea>;
-//        // the RIS data itself has a Y2 tag that changes at every fetch
-//        HtmlNodeFilters.tagWithAttribute("form", "name", "refworks"),
         // TOC: wording change
         HtmlNodeFilters.tagWithText("a", "Sample copy"),
         HtmlNodeFilters.tagWithText("a", "Sample this title"),
@@ -142,191 +155,23 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         /*
          * ?? 
          */
+        
         // what follows here may no longer be all needed due to the maximal filtering - but leave it in
         // Contains a cookie or session ID
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
-        // Contains a variant phrase "Full access" or "Free access"
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"),
-        // (no longer needed because we strip out inner tag content)
-//        // These two equivalent links are found (this is not a regex)
-//        HtmlNodeFilters.tagWithAttribute("a", "href", "/"),
-//        HtmlNodeFilters.tagWithAttribute("a", "href", "http://www.tandfonline.com"),
         // These two are sometimes found in a temporary overlay
-//        // (also requires whitespace normalization to work)
         HtmlNodeFilters.tagWithAttribute("div", "id", "overlay"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "overlay clear overlayHelp"),
-        // "Alert me" (varied over time)
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "alertDiv"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alertDiv"),
         // Two alternative versions of the same empty section
         HtmlNodeFilters.tagWithAttribute("a", "id", "fpi"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "fpi"),
         // Newer placeholder
         HtmlNodeFilters.tagWithAttribute("li", "id", "citationsTab"),
-//        // Some <h4> tags had/have a 'class' attribute
-//        new TagNameFilter("h4"),
-        // Contains an article view count
-        HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"),
         // Too much subtly variable markup to keep
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^doiMeta"),
         // Added later
         HtmlNodeFilters.tagWithAttribute("input", "id", "singleHighlightColor"),
     };
-    
-    // (no longer needed because we strip out inner tag content)
-//    HtmlTransform xform = new HtmlTransform() {
-//      @Override
-//      public NodeList transform(NodeList nodeList) throws IOException {
-//        try {
-//          nodeList.visitAllNodesWith(new NodeVisitor() {
-//            @Override
-//            public void visitTag(Tag tag) {
-//              if (tag instanceof CompositeTag) {
-//                CompositeTag ctag = (CompositeTag)tag;
-//                Vector<Attribute> vec = new Vector<Attribute>();
-//                vec.add(new Attribute(ctag.getRawTagName(), null, '\0'));
-//                tag.setAttributesEx(vec);
-//              }
-////              try {
-////                String tagName = tag.getTagName().toLowerCase();
-////                switch (tagName.charAt(0)) {
-////                  case 'a': {
-////                    /*
-////                     * <a>
-////                     */
-////                    if ("a".equals(tagName)) {
-////                      // The anchor ID 'content' was renamed 'tandf_content'
-////                      if ("#content".equals(tag.getAttribute("href"))) {
-////                        tag.setAttribute("href", "#tandf_content");
-////                        return;
-////                      }
-////                      // Inline links used to have class="ref" and target="url",
-////                      // now only target="_blank"
-////                      if (tag.getAttribute("target") != null) {
-////                        tag.removeAttribute("target");
-////                      }
-////                      if ("ref".equals(tag.getAttribute("class"))) {
-////                        tag.removeAttribute("class");
-////                      }
-////                      return;
-////                    }
-////                  } break;
-////                  case 'd': {
-////                    /*
-////                     * <div>
-////                     */
-////                    if ("div".equals(tagName)) {
-////                      String clas = tag.getAttribute("class");
-////                      if (clas != null && clas.startsWith("access ")) {
-////                        // ??
-////                        tag.removeAttribute("class");
-////                        return;
-////                      }
-////                      // From <div class="bodyFooterContent clear floatclear"> 
-////                      // to <div class="bodyFooterContent clear floatclear" style="margin-bottom: -15px"> 
-////                      if (clas != null && clas.contains("bodyFooterContent")) {
-////                        if (tag.getAttribute("style") != null) {
-////                          tag.removeAttribute("style");
-////                        }
-////                        // Prevent the latter from causing spurious <.../> vs. <... />
-////                        tag.removeAttribute("class");
-////                        tag.setAttribute("class", clas);
-////                        return;
-////                      }
-////                      // For a while, there were two <div> tags with 'id' set to 'content'
-////                      // Now clarified to 'journal_content' and 'tandf_content'
-////                      if ("journal_content".equals(tag.getAttribute("id")) || "tandf_content".equals(tag.getAttribute("id"))) {
-////                        tag.setAttribute("id", "content");
-////                        return;
-////                      }
-////                    }
-////                  } break;
-////                  case 'i': {
-////                    /*
-////                     * <img>
-////                     */
-////                    // Images used to have an ID
-////                    if ("img".equals(tagName)) {
-////                      if (tag.getAttribute("id") != null) {
-////                        tag.removeAttribute("id");
-////                      }
-////                      // Prevent the latter from causing spurious <.../> vs. <... />
-////                      String alt = tag.getAttribute("alt");
-////                      tag.removeAttribute("alt");
-////                      tag.setAttribute("alt", alt);
-////                      return;
-////                    }
-////                  } break;
-////                  case 's': {
-////                    /*
-////                     * <span>
-////                     */
-////                    if ("span".equals(tagName)) {
-////                      if (tag.getAttribute("id") != null) {
-////                        tag.removeAttribute("id");
-////                      }
-////                      return;
-////                    }
-////                  } break;
-////                  case 't': {
-////                    /*
-////                     * <table>
-////                     */
-////                    if ("table".equals(tagName)) {
-////                      // From <table class="listgroup " border="0" width="95%">
-////                      // to <table xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="listgroup " border="0" width="95%">
-////                      if (tag.getAttribute("xmlns:mml") != null) {
-////                        tag.removeAttribute("xmlns:mml");
-////                      }
-////                      if (tag.getAttribute("xmlns:xsi") != null) {
-////                        tag.removeAttribute("xmlns:xsi");
-////                      }
-////                      return;
-////                    }
-////                    /*
-////                     * <td>
-////                     */
-////                    if ("td".equals(tagName)) {
-////                      // From <td valign="top">
-////                      // to <td valign="top" class="lilabel">
-////                      if ("top".equals(tag.getAttribute("valign"))) {
-////                        if ("lilabel".equals(tag.getAttribute("class"))) {
-////                          tag.removeAttribute("class");
-////                        }
-////                        tag.removeAttribute("valign");
-////                        tag.setAttribute("valign", "top");
-////                      }
-////                      return;
-////                    }
-////                  } break;
-////                  case 'u': {
-////                    /*
-////                     * <ul>
-////                     */
-////                    if ("ul".equals(tagName)) {
-////                      // Varied between <ul> and <ul style="clear:both">
-////                      if (tag.getAttribute("style") != null) {
-////                        tag.removeAttribute("style");
-////                      }
-////                      return;
-////                    }
-////                  } break;
-////                }
-////                // Still here: tag has not been visited
-////                super.visitTag(tag);
-////              }
-////              catch (Exception exc) {
-////                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-////              }
-//            }
-//          });
-//        }
-//        catch (ParserException pe) {
-//          log.debug2("Internal error (parser)", pe); // Bail
-//        }
-//        return nodeList;
-//      }
-//    };
     
     InputStream filtered = new HtmlFilterInputStream(in,
                                                      encoding,
@@ -339,8 +184,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                                                         new String[][] {
         // Typographical changes over time
         {"&nbsp;", " "},
-//        {"  ,", ","}, // in inline citations
-//        {" ,", ","}, // in inline citations
+        {"&amp;", "&"},
         // Wording change over time
         {"<strong>Published online:</strong>"},
         {"<strong>Available online:</strong>"},
@@ -361,23 +205,18 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagPair("</pub-id>", "</li>", true)
     ));
     
-    // (no longer needed because we strip out inner tag content)
-//    stringFilter = new StringFilter(stringFilter,
-//                                    "</div><div",
-//                                    "</div> <div");
-
     // Remove all inner tag content
-//    Reader noTagFilter = new HtmlTagFilter(new StringFilter(tagFilter, "<", " <"), new TagPair("<", ">"));
     Reader noTagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
     
     // Remove white space
     return new ReaderInputStream(new WhiteSpaceFilter(noTagFilter));
   }
 
-  public static void main(String[] args) throws Exception {
-    String file = "/tmp/w4/file-b1";
-    IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-                 new FileOutputStream(file + ".out"));
-  }
+//  public static void main(String[] args) throws Exception {
+//    for (String file : Arrays.asList("/tmp/w6/file-b1", "/tmp/w6/file-b4")) {
+//      IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+//                   new FileOutputStream(file + ".out"));
+//    }
+//  }
   
 }

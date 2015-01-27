@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.23 2015-01-22 04:32:46 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.24 2015-01-27 22:30:13 thib_gc Exp $
  */
 
 /*
@@ -584,8 +584,8 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "</div>";
 
     private static final String tocEntryFiltered = 
-            "TITLE OF ARTICLEAuthor &amp; OtherAuthorpages 1-60View full text"
-            + "Download full textDOI:10.1080/xxxx 25 Jan 2013Further Information"
+            "TITLE OF ARTICLEAuthor & OtherAuthorpages 1-60"
+            + "DOI:10.1080/xxxx 25 Jan 2013Further Information"
             + "AbstractReferences";
 
     // note lower case of "articles"
