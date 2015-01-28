@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisPdfFilterFactory.java,v 1.5 2013-08-23 20:20:41 alexandraohlson Exp $
+ * $Id: TafPdfFilterFactory.java,v 1.1 2015-01-28 01:59:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,12 +36,8 @@ import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory;
 
-public class TaylorAndFrancisPdfFilterFactory extends BaseAtyponPdfFilterFactory {
+public class TafPdfFilterFactory extends BaseAtyponPdfFilterFactory {
 
-  public TaylorAndFrancisPdfFilterFactory() {
-    super();
-  }
-  
   // Do what BaseAtypon does, plus one additional transformation
   @Override
   public void transform(ArchivalUnit au,

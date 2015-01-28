@@ -1,6 +1,10 @@
 /*
+ * $Id: TestTafMetadataExtractor.java,v 1.1 2015-01-28 01:58:59 thib_gc Exp $
+ */
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +42,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor;
 
 /*
  * 
@@ -50,9 +53,9 @@ import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlMetadataExtractorF
  * The AU configuration in this file and the information in the tdb file must stay in sync
  *
  */
-public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
+public class TestTafMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestTaylorAndFrancisMetadataExtractor");
+  private static final Logger log = Logger.getLogger(TestTafMetadataExtractor.class);
 
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static String BASE_URL = "http://www.tandfonline.com/";  
@@ -410,7 +413,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     uc.storeContent();
     CachedUrl cu = uc.getCachedUrl();
     
-    FileMetadataExtractor me = new TaylorAndFrancisRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
+    FileMetadataExtractor me = new TafRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
@@ -465,7 +468,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     uc.storeContent();
     CachedUrl cu = uc.getCachedUrl();
     
-    FileMetadataExtractor me = new TaylorAndFrancisRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
+    FileMetadataExtractor me = new TafRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);

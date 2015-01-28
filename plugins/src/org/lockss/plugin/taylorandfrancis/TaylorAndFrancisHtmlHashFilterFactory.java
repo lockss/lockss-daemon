@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.24 2015-01-27 22:30:13 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.25 2015-01-28 01:59:01 thib_gc Exp $
  */
 
 /*
@@ -48,6 +48,11 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 /*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
+/**
+ * @deprecated This filter has suffered enough and will eventually be replaced
+ *             by {@link TafHtmlHashFilterFactory}, which is under development.
+ */
+@Deprecated
 public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 
   private static final Logger log = Logger.getLogger(TaylorAndFrancisHtmlHashFilterFactory.class);
@@ -109,8 +114,9 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // article becomes free
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessmodule"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"), // redundant: enclosed in previous
-        // Contains an article view count
-        HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"),
+        // Article header
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^doiMeta"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"), // redundant: enclosed in previous
         // "Alert me" (varied over time)
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "alertDiv"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alertDiv"),
@@ -167,8 +173,6 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "fpi"),
         // Newer placeholder
         HtmlNodeFilters.tagWithAttribute("li", "id", "citationsTab"),
-        // Too much subtly variable markup to keep
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^doiMeta"),
         // Added later
         HtmlNodeFilters.tagWithAttribute("input", "id", "singleHighlightColor"),
     };
@@ -213,7 +217,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
   }
 
 //  public static void main(String[] args) throws Exception {
-//    for (String file : Arrays.asList("/tmp/w6/file-b1", "/tmp/w6/file-b4")) {
+//    for (String file : Arrays.asList("/tmp/w7/file-a1", "/tmp/w7/file-a3")) {
 //      IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
 //                   new FileOutputStream(file + ".out"));
 //    }

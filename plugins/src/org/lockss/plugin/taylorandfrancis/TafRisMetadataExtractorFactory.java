@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisRisMetadataExtractorFactory.java,v 1.4 2014-08-29 17:16:46 alexandraohlson Exp $
+ * $Id: TafRisMetadataExtractorFactory.java,v 1.1 2015-01-28 01:59:01 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,38 +68,38 @@ Y2  - 2013/07/26
 ER  - 
  * 
  */
-public class TaylorAndFrancisRisMetadataExtractorFactory
-  implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("TaylorAndFrancisRisMetadataExtractorFactory");
+public class TafRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
   
+  private static final Logger log = Logger.getLogger(TafRisMetadataExtractorFactory.class);
+  
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
     
     log.debug3("Inside TaylorAndFrancis Metadata extractor factory for RIS files");
-    
     TaylorAndFrancisRisMetadataExtractor tfris = new TaylorAndFrancisRisMetadataExtractor();
-    
     tfris.addRisTag("A1", MetadataField.FIELD_AUTHOR); // in case they use this 
     // Do not add the "UR" tag because it points to dx.doi.org - not an access.url in the AU      
-     return tfris;
+    return tfris;
   }
   
-  public static class TaylorAndFrancisRisMetadataExtractor
-  extends RisMetadataExtractor {
+  public static class TaylorAndFrancisRisMetadataExtractor extends RisMetadataExtractor {
 
     // we have to override this to add functionality after basic extraction
     @Override
-    public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter) 
+    public void extract(MetadataTarget target,
+                        CachedUrl cu,
+                        FileMetadataExtractor.Emitter emitter) 
         throws IOException, PluginException {
       ArticleMetadata am = extract(target, cu); //extract but do some analysis before emitting
 
       /* if the cooked data isn't complete, we could try to pick up from secondary tags in raw data */
-      if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null) {
+      if (am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
         if (am.getRaw("T2") != null) {
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, am.getRaw("T2"));
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("T2"));
         } else if (am.getRaw("JO") != null) {
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, am.getRaw("JO")); // might be unabbreviated version
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("JO")); // might be unabbreviated version
         }
       } 
       if (am.get(MetadataField.FIELD_DATE) == null) {

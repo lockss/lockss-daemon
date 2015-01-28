@@ -1,10 +1,10 @@
 /*
- * $Id: TestTaylorAndFrancisArticleIteratorFactory.java,v 1.3 2015-01-21 23:14:50 alexandraohlson Exp $
+ * $Id: TestTafArticleIteratorFactory.java,v 1.1 2015-01-28 01:59:00 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +50,7 @@ import org.lockss.util.ListUtil;
  * so this  just tests that additional functionality. 
  */
 
-public class TestTaylorAndFrancisArticleIteratorFactory extends ArticleIteratorTestCase {
+public class TestTafArticleIteratorFactory extends ArticleIteratorTestCase {
 
   private SimulatedArchivalUnit sau;      // Simulated AU to generate content
   private final String PLUGIN_NAME = "org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin";

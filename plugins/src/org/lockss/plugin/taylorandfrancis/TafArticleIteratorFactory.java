@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.10 2014-07-08 17:30:28 alexandraohlson Exp $
+ * $Id: TafArticleIteratorFactory.java,v 1.1 2015-01-28 01:59:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,44 +42,29 @@ import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory;
 import org.lockss.util.Logger;
 
+public class TafArticleIteratorFactory extends BaseAtyponArticleIteratorFactory {
 
-public class TaylorAndFrancisArticleIteratorFactory
-extends BaseAtyponArticleIteratorFactory {
-
-  protected static Logger log = Logger.getLogger("TaylorAndFrancisArticleIteratorFactory");
+  private static final Logger log = Logger.getLogger(TafArticleIteratorFactory.class);
+  
   private static final Pattern URL_UACP_HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)_HTML/");
 
-  // Override creation of builder to allow override of underlying createArticleFiles
-  // to solve a T&F bug that was generating bogus URLS that looked like article files...
   @Override
   protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
     return new SubTreeArticleIteratorBuilder(au) {
       @Override
-      protected void maybeMakeSubTreeArticleIterator() {
-        if (au != null && spec != null && iterator == null) { /// FIXME 1.63
-          this.iterator = new BuildableSubTreeArticleIterator(au, spec) {
-            @Override
-            protected ArticleFiles createArticleFiles(CachedUrl cu) {
-              // modify the returned Builder's createArticleFiles to ignore specific URLs
-              if (cu.getUrl().contains("/null?")) { // 
-                return null; // ignore these URLs
-              }
-              /* 
-               * This one is to avoid iterating over all the contents of the 
-               * subdirectories created for full text HTML for the TRIGGERED
-               * website created for UACP and WJPT journals ONLY
-               * This website didn't exactly match the usual T&F patterns
-               * and doing it here avoids modifying the full Atypon PATTERN
-               * to exclude directories that match "doi/full/<prefix>/<suffix>_HTML/"
-               */
-              Matcher UrlMat = URL_UACP_HTML_PATTERN.matcher(cu.getUrl());
-              if (UrlMat.find()) {
-                return null; // ignore these URLs
-              }
-              return super.createArticleFiles(cu); // normal processing
+      protected BuildableSubTreeArticleIterator instantiateBuildableIterator() {
+        return new BuildableSubTreeArticleIterator(au, spec) {
+          @Override
+          protected ArticleFiles createArticleFiles(CachedUrl cu) {
+            // Ignore "/null?" URLs and some URLs from the UACP and WJPT
+            // triggered content
+            String url = cu.getUrl();
+            if (url.contains("/null?") || URL_UACP_HTML_PATTERN.matcher(url).find()) { 
+              return null;
             }
-          };
-        }
+            return super.createArticleFiles(cu); // normal processing
+          }
+        };
       }
     };
   }
