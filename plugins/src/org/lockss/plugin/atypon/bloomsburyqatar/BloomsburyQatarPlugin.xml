@@ -13,8 +13,25 @@
   </entry>  
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>13</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>21</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
+  </entry>  
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
@@ -38,6 +55,10 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarHtmlCrawlFilterFactory</string>
+  </entry>    
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPdfFilterFactory</string>
   </entry>    
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
