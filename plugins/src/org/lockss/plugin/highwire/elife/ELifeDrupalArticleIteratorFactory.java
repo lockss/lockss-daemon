@@ -1,10 +1,10 @@
 /*
- * $Id: ELifeDrupalArticleIteratorFactory.java,v 1.3 2014-12-31 00:05:10 etenbrink Exp $
+ * $Id: ELifeDrupalArticleIteratorFactory.java,v 1.4 2015-01-28 23:09:09 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -86,7 +86,8 @@ public class ELifeDrupalArticleIteratorFactory
     // until this is deprecated
     builder.addAspect(
         LANDING_PATTERN, LANDING_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
+        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
     
     builder.addAspect(
         Arrays.asList(PDF_REPLACEMENT, PDF_REPLACEMENT2),
@@ -95,16 +96,6 @@ public class ELifeDrupalArticleIteratorFactory
     // set up figures-only to be an aspect
     builder.addAspect(FIGURES_REPLACEMENT,
         ArticleFiles.ROLE_FIGURES_TABLES);
-    
-    // add metadata role from html
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
-    
-    // The order in which we want to define full_text_cu.
-    // First one that exists will get the job
-    builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     return builder.getSubTreeArticleIterator();
   }
