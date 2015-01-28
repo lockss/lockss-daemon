@@ -17,22 +17,22 @@
 
     param[journal_id] = actas
 
-    au < manifest ; 1977 ; 1 ; Acta Semiótica et Lingvistica Volume 1; 1977 ; >
-    au < manifest ; 1978 ; 2 ; Acta Semiótica et Lingvistica Volume 2; 1978 ; >
-    au < manifest ; 1979 ; 3 ; Acta Semiótica et Lingvistica Volume 3; 1979 ; >
-    au < manifest ; 1980 ; 4 ; Acta Semiótica et Lingvistica Volume 4; 1980 ; >
-    au < manifest ; 1984 ; 5 ; Acta Semiótica et Lingvistica Volume 5; 1984 ; >
-    au < manifest ; 1996 ; 6 ; Acta Semiótica et Lingvistica Volume 6; 1996 ; >
-    au < manifest ; 1998 ; 7 ; Acta Semiótica et Lingvistica Volume 7; 1998 ; >
-    au < manifest ; 2000 ; 8 ; Acta Semiótica et Lingvistica Volume 8; 2000 ; >
-    au < manifest ; 2002 ; 9 ; Acta Semiótica et Lingvistica Volume 9; 2002 ; >
-    au < manifest ; 2004 ; 10 ; Acta Semiótica et Lingvistica Volume 10; 2004 ; >
-    au < manifest ; 2007 ; 11 ; Acta Semiótica et Lingvistica Volume 11; 2007 ; >
-    au < manifest ; 2008 ; 12 ; Acta Semiótica et Lingvistica Volume 12; 2008 ; >
-    au < manifest ; 2009 ; 13 ; Acta Semiótica et Lingvistica Volume 13; 2009 ; >
-    au < manifest ; 2010 ; 14 ; Acta Semiótica et Lingvistica Volume 14; 2010 ; >
-    au < manifest ; 2011 ; 15 ; Acta Semiótica et Lingvistica Volume 15; 2011 ; >
-    au < manifest ; 2012 ; 16 ; Acta Semiótica et Lingvistica Volume 16; 2012 ; >
+    au < testing ; 1977 ; 1 ; Acta Semiótica et Lingvistica Volume 1; 1977 ; >
+    au < testing ; 1978 ; 2 ; Acta Semiótica et Lingvistica Volume 2; 1978 ; >
+    au < testing ; 1979 ; 3 ; Acta Semiótica et Lingvistica Volume 3; 1979 ; >
+    au < testing ; 1980 ; 4 ; Acta Semiótica et Lingvistica Volume 4; 1980 ; >
+    au < testing ; 1984 ; 5 ; Acta Semiótica et Lingvistica Volume 5; 1984 ; >
+    au < testing ; 1996 ; 6 ; Acta Semiótica et Lingvistica Volume 6; 1996 ; >
+    au < testing ; 1998 ; 7 ; Acta Semiótica et Lingvistica Volume 7; 1998 ; >
+    au < testing ; 2000 ; 8 ; Acta Semiótica et Lingvistica Volume 8; 2000 ; >
+    au < testing ; 2002 ; 9 ; Acta Semiótica et Lingvistica Volume 9; 2002 ; >
+    au < testing ; 2004 ; 10 ; Acta Semiótica et Lingvistica Volume 10; 2004 ; >
+    au < testing ; 2007 ; 11 ; Acta Semiótica et Lingvistica Volume 11; 2007 ; >
+    au < testing ; 2008 ; 12 ; Acta Semiótica et Lingvistica Volume 12; 2008 ; >
+    au < testing ; 2009 ; 13 ; Acta Semiótica et Lingvistica Volume 13; 2009 ; >
+    au < testing ; 2010 ; 14 ; Acta Semiótica et Lingvistica Volume 14; 2010 ; >
+    au < testing ; 2011 ; 15 ; Acta Semiótica et Lingvistica Volume 15; 2011 ; >
+    au < testing ; 2012 ; 16 ; Acta Semiótica et Lingvistica Volume 16; 2012 ; >
     au < manifest ; 2013 ; 17 ; Acta Semiótica et Lingvistica Volume 17; 2013 ; >
 
   }
@@ -46,7 +46,7 @@
 
     param[journal_id] = archeion
 
-    au < manifest ; 2013 ; 1 ; Archeion Online Volume 2013 ; 2013 ; >
+    au < testing ; 2013 ; 1 ; Archeion Online Volume 2013 ; 2013 ; >
     au < manifest ; 2014 ; 2 ; Archeion Online Volume 2014 ; 2014 ; >
 
   }
@@ -96,8 +96,8 @@
 
     param[journal_id] = ci
 
-    au < manifest ; 2010 ; 6 ; Cadernos Imbondeiro Volume 2010 ; 2010 ; >
-    au < manifest ; 2012 ; 7 ; Cadernos Imbondeiro Volume 2012 ; 2012 ; >
+    au < testing ; 2010 ; 6 ; Cadernos Imbondeiro Volume 2010 ; 2010 ; >
+    au < testing ; 2012 ; 7 ; Cadernos Imbondeiro Volume 2012 ; 2012 ; >
     au < manifest ; 2014 ; 8 ; Cadernos Imbondeiro Volume 2014 ; 2014 ; >
 
   }
@@ -111,7 +111,7 @@
 
     param[journal_id] = ct
 
-    au < manifest ; 2011 ; 1 ; Cultura e Tradução Volume 2011 ; 2011 ; >
+    au < testing ; 2011 ; 1 ; Cultura e Tradução Volume 2011 ; 2011 ; >
     au < manifest ; 2014 ; 2 ; Cultura e Tradução Volume 2014 ; 2014 ; >
 
   }
@@ -125,13 +125,13 @@
 
     param[journal_id] = logepa
 
-    au < manifest ; 2002 ; 1 ; CADERNOS DO LOGEPA Volume 2002 ; 2002 ; >
-    au < manifest ; 2003 ; 2 ; CADERNOS DO LOGEPA Volume 2003 ; 2003 ; >
-    au < manifest ; 2004 ; 3 ; CADERNOS DO LOGEPA Volume 2004 ; 2004 ; >
-    au < manifest ; 2005 ; 4 ; CADERNOS DO LOGEPA Volume 2005 ; 2005 ; >
-    au < manifest ; 2006 ; 5 ; CADERNOS DO LOGEPA Volume 2006 ; 2006 ; >
-    au < manifest ; 2011 ; 6 ; CADERNOS DO LOGEPA Volume 2011 ; 2011 ; >
-    au < manifest ; 2012 ; 7 ; CADERNOS DO LOGEPA Volume 2012 ; 2012 ; >
+    au < testing ; 2002 ; 1 ; CADERNOS DO LOGEPA Volume 2002 ; 2002 ; >
+    au < testing ; 2003 ; 2 ; CADERNOS DO LOGEPA Volume 2003 ; 2003 ; >
+    au < testing ; 2004 ; 3 ; CADERNOS DO LOGEPA Volume 2004 ; 2004 ; >
+    au < testing ; 2005 ; 4 ; CADERNOS DO LOGEPA Volume 2005 ; 2005 ; >
+    au < testing ; 2006 ; 5 ; CADERNOS DO LOGEPA Volume 2006 ; 2006 ; >
+    au < testing ; 2011 ; 6 ; CADERNOS DO LOGEPA Volume 2011 ; 2011 ; >
+    au < testing ; 2012 ; 7 ; CADERNOS DO LOGEPA Volume 2012 ; 2012 ; >
     au < manifest ; 2013 ; 8 ; CADERNOS DO LOGEPA Volume 2013 ; 2013 ; >
 
   }
@@ -158,12 +158,12 @@
 
     param[journal_id] = cm
 
-    au < manifest ; 2008 ; 1 ; Culturas Midiáticas Volume 2008 ; 2008 ; >
-    au < manifest ; 2009 ; 2 ; Culturas Midiáticas Volume 2009 ; 2009 ; >
-    au < manifest ; 2010 ; 3 ; Culturas Midiáticas Volume 2010 ; 2010 ; >
-    au < manifest ; 2011 ; 4 ; Culturas Midiáticas Volume 2011 ; 2011 ; >
-    au < manifest ; 2012 ; 5 ; Culturas Midiáticas Volume 2012 ; 2012 ; >
-    au < manifest ; 2013 ; 6 ; Culturas Midiáticas Volume 2013 ; 2013 ; >
+    au < testing ; 2008 ; 1 ; Culturas Midiáticas Volume 2008 ; 2008 ; >
+    au < testing ; 2009 ; 2 ; Culturas Midiáticas Volume 2009 ; 2009 ; >
+    au < testing ; 2010 ; 3 ; Culturas Midiáticas Volume 2010 ; 2010 ; >
+    au < testing ; 2011 ; 4 ; Culturas Midiáticas Volume 2011 ; 2011 ; >
+    au < testing ; 2012 ; 5 ; Culturas Midiáticas Volume 2012 ; 2012 ; >
+    au < testing ; 2013 ; 6 ; Culturas Midiáticas Volume 2013 ; 2013 ; >
     au < manifest ; 2014 ; 7 ; Culturas Midiáticas Volume 2014 ; 2014 ; >
 
   }
@@ -266,12 +266,12 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = at
 
-      au < manifest ; 1980 ; 1 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 1980 ; 1980 ; >
-      au < manifest ; 2008 ; 2 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 3 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 4 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 5 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2011 ; 2011 ; >
-      au < manifest ; 2013 ; 6 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2013 ; 2013 ; >
+      au < testing ; 1980 ; 1 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 1980 ; 1980 ; >
+      au < testing ; 2008 ; 2 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 3 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 4 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 5 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2011 ; 2011 ; >
+      au < testing ; 2013 ; 6 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 7 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2014 ; 2014 ; >
 
   }
@@ -389,8 +389,8 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = lv
 
-      au < manifest ; 2008 ; 1 ; Letr@ Viv@ Volume 2008 ; 2008 ; >
-      au < manifest ; 2012 ; 2 ; Letr@ Viv@ Volume 2012 ; 2012 ; >
+      au < testing ; 2008 ; 1 ; Letr@ Viv@ Volume 2008 ; 2008 ; >
+      au < testing ; 2012 ; 2 ; Letr@ Viv@ Volume 2012 ; 2012 ; >
 
   }
 
@@ -537,11 +537,11 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = prolingua
 
-      au < manifest ; 2008 ; 1 ; PROLÍNGUA Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 2 ; PROLÍNGUA Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 3 ; PROLÍNGUA Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 4 ; PROLÍNGUA Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 5 ; PROLÍNGUA Volume 2012 ; 2012 ; >
+      au < testing ; 2008 ; 1 ; PROLÍNGUA Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 2 ; PROLÍNGUA Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 3 ; PROLÍNGUA Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 4 ; PROLÍNGUA Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 5 ; PROLÍNGUA Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; PROLÍNGUA Volume 2013 ; 2013 ; >
 
   }
