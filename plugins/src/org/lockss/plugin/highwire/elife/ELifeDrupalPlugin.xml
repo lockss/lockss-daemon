@@ -87,7 +87,7 @@
     <list>
       <string>403=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
       <string>500=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
-      <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
