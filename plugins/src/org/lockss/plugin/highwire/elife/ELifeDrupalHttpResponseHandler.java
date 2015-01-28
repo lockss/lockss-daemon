@@ -1,10 +1,10 @@
 /*
- * $Id: ELifeDrupalHttpResponseHandler.java,v 1.3 2015-01-09 00:13:58 etenbrink Exp $
+ * $Id: ELifeDrupalHttpResponseHandler.java,v 1.4 2015-01-28 23:08:09 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,15 +59,17 @@ public class ELifeDrupalHttpResponseHandler extends HighWireDrupalHttpResponseHa
         if (url.contains("/download")) {
           return new CacheException.RetryDeadLinkException("403 Forbidden (non-fatal)");
         }
-        return super.handleResult(au, url, responseCode);
+        return new CacheException.RetrySameUrlException("403 Forbidden");
         
       case 500:
         logger.debug2("500");
         if (url.contains("lockss-manifest/")) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
+        return super.handleResult(au, url, responseCode);
         
-        return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
+      case 504:
+        return super.handleResult(au, url, responseCode);
         
       default:
         return super.handleResult(au, url, responseCode);
