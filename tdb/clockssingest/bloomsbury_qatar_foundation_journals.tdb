@@ -290,15 +290,30 @@
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = qfarf
+      comment[continued_by] = 2313-6030
 
       au < doNotProcess ; doNotProcess ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
       au < doNotProcess ; doNotProcess ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
       au < doNotProcess ; doNotProcess ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
       au < crawling ; exists ; 2013 ; Qatar Foundation Annual Research Forum Proceedings Volume 2013 ; 2013 >
-      au < testing ; exists ; 2014 ; Qatar Foundation Annual Research Forum Proceedings Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; Qatar Foundation Annual Research Forum Proceedings Volume 2015 ; 2015 >
       
     }
+  }
+
+  {
+
+    title <
+      name = Qatar Foundation Annual Research Conference Proceedings ;
+      eissn = 2313-6030
+    >
+
+      plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+      param[journal_id] = qfarc
+      comment[continues] = 2220-251X
+
+      au < testing ; exists ; 2014 ; Qatar Foundation Annual Research Forum Proceedings Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; Qatar Foundation Annual Research Forum Proceedings Volume 2 ; 2 >
+
   }
 
   {
