@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlFilterFactory.java,v 1.7 2015-01-22 23:12:11 aishizaki Exp $
+ * $Id: BMCPluginHtmlFilterFactory.java,v 1.8 2015-01-28 21:52:02 aishizaki Exp $
  */
 
 /*
@@ -109,6 +109,8 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "style", ".*display:inline$"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "inline-math"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "inlinenumber"),
 
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, 

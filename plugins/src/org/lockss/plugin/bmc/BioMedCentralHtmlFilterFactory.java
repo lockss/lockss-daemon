@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.15 2015-01-22 23:12:11 aishizaki Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.16 2015-01-28 21:52:02 aishizaki Exp $
  */
 
 /*
@@ -117,6 +117,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "style", ".*display:inline$"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "inline-math"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "inlinenumber"),
         
         new NodeFilter() {
           @Override public boolean accept(Node node) {
