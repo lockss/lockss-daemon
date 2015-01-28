@@ -1054,10 +1054,8 @@
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://alh.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
-    
-    comment[superseded] = Journal is superseded by volume on Project Muse platform.
 
-    au < superseded ; 2005 ; American Literary History Volume 17 [superseded]; 17 >
+    au < down ; 2005 ; American Literary History Volume 17 ; 17 >
 
     }
 
@@ -1084,8 +1082,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; American Literary History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; American Literary History Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; American Literary History Volume 17 ; 17 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; American Literary History Volume 18 [superseded] ; 18 >
-    au < HighWireStrVolPlugin ; superseded ; 2007 ; American Literary History Volume 19 [superseded] ; 19 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; American Literary History Volume 18 ; 18 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; American Literary History Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2008 ; American Literary History Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2009 ; American Literary History Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Literary History Volume 22 ; 22 >
@@ -4806,7 +4804,7 @@
     param[base_url] = http://em.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < superseded ; 2005 ; Early Music Volume 33 [superseded] ; 33 >
+    au < down ; 2005 ; Early Music Volume 33 ; 33 >
 
     }
 
@@ -4815,8 +4813,6 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://em.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
-    comment[superseded] = volume 34 and 35 superseded by Project Muse title.
 
     au < HighWirePressH20Plugin ; manifest ; 1973 ; Early Music Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1974 ; Early Music Volume 2 ; 2 >
@@ -4851,8 +4847,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Early Music Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Early Music Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Early Music Volume 33 ; 33 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; Early Music Volume 34 [superseded] ; 34 >
-    au < HighWirePressPlugin ; superseded ; 2007 ; Early Music Volume 35 [superseded] ; 35 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Early Music Volume 34 ; 34 >
+    au < HighWirePressPlugin ; down ; 2007 ; Early Music Volume 35 ; 35 >
     au < HighWirePressPlugin ; down ; 2008 ; Early Music Volume 36 ; 36 >
     au < HighWirePressPlugin ; down ; 2009 ; Early Music Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Early Music Volume 38 ; 38 >
@@ -5667,8 +5663,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Essays in Criticism Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Essays in Criticism Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ;Essays in Criticism Volume 55 ; 55 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; Essays in Criticism Volume 56 [superseded] ; 56 >
-    au < HighWireStrVolPlugin ; superseded ; 2007 ; Essays in Criticism Volume 57 [superseded] ; 57 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Essays in Criticism Volume 56 ; 56 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Essays in Criticism Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Essays in Criticism Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Essays in Criticism Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Essays in Criticism Volume 60 ; 60 >
@@ -7214,10 +7210,8 @@
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://fs.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
-    
-    comment[superseded] = superseded by Project Muse copy.
 
-    au < superseded ; 2006 ; French Studies: A Quarterly Review Volume 60 [superseded] ; 60 >
+    au < down ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
 
     }
 
@@ -7287,7 +7281,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2004 ; French Studies: A Quarterly Review Volume 58 ; 58 >
     au < HighWireStrVolPlugin ; down ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
-    au < HighWireStrVolPlugin ; superseded ; 2007 ; French Studies: A Quarterly Review Volume 61 [superseded] ; 61 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 >
@@ -8091,7 +8085,7 @@
     param[base_url] = http://hwj.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < superseded ; 2005 ; History Workshop Journal Volume 61 [superseded] ; 61 >
+    au < down ; 2005 ; History Workshop Journal Volume 61 ; 61 >
 
     }
 
@@ -8153,10 +8147,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; History Workshop Journal Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; History Workshop Journal Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; History Workshop Journal Volume 58 ; 58 >
-    au < HighWireStrVolPlugin ; superseded ; 2005 ; History Workshop Journal Volume 59 [superseded] ; 59 >
-    au < HighWireStrVolPlugin ; superseded ; 2005 ; History Workshop Journal Volume 60 [superseded] ; 60 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; History Workshop Journal Volume 59 ; 59 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; History Workshop Journal Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; History Workshop Journal Volume 61 ; 61 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; History Workshop Journal Volume 62 [superseded] ; 62 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; History Workshop Journal Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2007 ; History Workshop Journal Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2007 ; History Workshop Journal Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2008 ; History Workshop Journal Volume 65 ; 65 >
@@ -8245,8 +8239,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Holocaust and Genocide Studies Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Holocaust and Genocide Studies Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Holocaust and Genocide Studies Volume 18 ; 18 >
-    au < HighWireStrVolPlugin ; superseded ; 2005 ; Holocaust and Genocide Studies Volume 19 [superseded] ; 19 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; Holocaust and Genocide Studies Volume 20 [superseded] ; 20 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Holocaust and Genocide Studies Volume 19 ; 19 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Holocaust and Genocide Studies Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Holocaust and Genocide Studies Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 >
@@ -10566,7 +10560,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of the American Academy of Religion Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of the American Academy of Religion Volume 72 ; 72 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the American Academy of Religion Volume 73 ; 73 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; Journal of the American Academy of Religion Volume 74 [superseded] ; 74 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of the American Academy of Religion Volume 75 ; 75 >
     au < HighWirePressPlugin ; down ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 >
@@ -12332,7 +12326,7 @@
     param[base_url] = http://jhmas.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < superseded ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 [superseded] ; 60 >
+    au < down ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
 
     }
 
@@ -12402,10 +12396,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 [superseded] ; 61 >
-    au < HighWireStrVolPlugin ; superseded ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 [superseded] ; 62 >
-    au < HighWirePressPlugin ; superseded ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 [superseded] ; 63 >
-    au < HighWirePressPlugin ; superseded ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 [superseded] ; 64 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
+    au < HighWirePressPlugin ; down ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 >
+    au < HighWirePressPlugin ; down ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 >
