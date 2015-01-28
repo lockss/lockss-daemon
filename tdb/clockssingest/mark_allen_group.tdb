@@ -486,7 +486,7 @@
     >
 
     comment[base_url] = http://www.nursingresidentialcare.com/
-    param[journal_id] = npre
+    param[journal_id] = nrec
 
     au < exists ; exists ; 2011 ; Nursing and Residential Care Volume 9 ; 9 >
     au < exists ; exists ; 2012 ; Nursing and Residential Care Volume 10 ; 10 >
@@ -694,8 +694,8 @@
     comment[pdf] = file from http://content.yudu.com
     param[journal_id] = htup
 
-    au < exists ; exists ; 2011 ; Headteacher Update Volume 2012 ; 2012 >
-    au < exists ; exists ; 2012 ; Headteacher Update Volume 2013 ; 2013 >
+    au < exists ; exists ; 2011 ; Headteacher Update Volume 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Headteacher Update Volume 2012 ; 2012 >
     au < exists ; exists ; 2013 ; Headteacher Update Volume 2013 ; 2013 >
     au < exists ; exists ; 2014 ; Headteacher Update Volume 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Headteacher Update Volume 2015 ; 2015 >
@@ -711,8 +711,8 @@
     comment[base_url] = http://www.nurseryworld.co.uk/
     param[journal_id] = nuwa
 
-    au < exists ; exists ; 2011 ; Nursery World Volume 2012 ; 2012 >
-    au < exists ; exists ; 2012 ; Nursery World Volume 2013 ; 2013 >
+    au < exists ; exists ; 2011 ; Nursery World Volume 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Nursery World Volume 2012 ; 2012 >
     au < exists ; exists ; 2013 ; Nursery World Volume 2013 ; 2013 >
     au < exists ; exists ; 2014 ; Nursery World Volume 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Nursery World Volume 2015 ; 2015 >
