@@ -37,7 +37,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>32</string>
+        <string>33</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -55,7 +55,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.taylorandfrancis.TafHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
