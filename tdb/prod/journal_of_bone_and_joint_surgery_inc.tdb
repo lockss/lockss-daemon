@@ -129,9 +129,10 @@
     au < exists ; 2010 ; JBJS Case Connector Volume os-92 ; os-92 >
     au < exists ; 2011 ; JBJS Case Connector Volume os-93 ; os-93 >
     au < exists ; 2011 ; JBJS Case Connector Volume 1 ; 1 >
-    au < exists ; 2002 ; JBJS Case Connector Volume 2 ; 2 >
-    au < exists ; 2003 ; JBJS Case Connector Volume 3 ; 3 >
-    au < exists ; 2004 ; JBJS Case Connector Volume 4 ; 4 >
+    au < exists ; 2012 ; JBJS Case Connector Volume 2 ; 2 >
+    au < exists ; 2013 ; JBJS Case Connector Volume 3 ; 3 >
+    au < exists ; 2014 ; JBJS Case Connector Volume 4 ; 4 >
+    au < exists ; 2015 ; JBJS Case Connector Volume 5 ; 5 >
   }
   
   {
@@ -155,9 +156,10 @@
     au < exists ; 2010 ; JBJS Essential Surgical Techniques Volume os-92 ; os-92 >
     au < exists ; 2011 ; JBJS Essential Surgical Techniques Volume os-93 ; os-93 >
     au < exists ; 2011 ; JBJS Essential Surgical Techniques Volume 1 ; 1 >
-    au < exists ; 2002 ; JBJS Essential Surgical Techniques Volume 2 ; 2 >
-    au < exists ; 2003 ; JBJS Essential Surgical Techniques Volume 3 ; 3 >
-    au < exists ; 2004 ; JBJS Essential Surgical Techniques Volume 4 ; 4 >
+    au < exists ; 2012 ; JBJS Essential Surgical Techniques Volume 2 ; 2 >
+    au < exists ; 2013 ; JBJS Essential Surgical Techniques Volume 3 ; 3 >
+    au < exists ; 2014 ; JBJS Essential Surgical Techniques Volume 4 ; 4 >
+    au < exists ; 2015 ; JBJS Essential Surgical Techniques Volume 5 ; 5 >
   }
   
   {
@@ -170,7 +172,7 @@
     
     {
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-    param[base_url] = http://www.ejbjs.org/
+    param[base_url] = http://www.jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
     au < down ; 1889 ; Journal of Orthopaedic Surgery Volume s1-1 (1889) ; s1-1 >
@@ -428,9 +430,10 @@
     au < exists ; 2009 ; The Journal of Bone & Joint Surgery Volume 91 ; 91 >
     au < exists ; 2010 ; The Journal of Bone & Joint Surgery Volume 92 ; 92 >
     au < exists ; 2011 ; The Journal of Bone & Joint Surgery Volume 93 ; 93 >
-    au < exists ; 2002 ; The Journal of Bone & Joint Surgery Volume 94 ; 94 >
-    au < exists ; 2003 ; The Journal of Bone & Joint Surgery Volume 95 ; 95 >
-    au < exists ; 2004 ; The Journal of Bone & Joint Surgery Volume 96 ; 96 >
+    au < exists ; 2012 ; The Journal of Bone & Joint Surgery Volume 94 ; 94 >
+    au < exists ; 2013 ; The Journal of Bone & Joint Surgery Volume 95 ; 95 >
+    au < exists ; 2014 ; The Journal of Bone & Joint Surgery Volume 96 ; 96 >
+    au < exists ; 2015 ; The Journal of Bone & Joint Surgery Volume 97 ; 97 >
     
     }
 
