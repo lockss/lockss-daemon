@@ -1,5 +1,5 @@
 /*
- * $Id: TafHtmlHashFilterFactory.java,v 1.3 2015-01-28 23:59:28 thib_gc Exp $
+ * $Id: TafHtmlHashFilterFactory.java,v 1.4 2015-01-29 01:19:37 thib_gc Exp $
  */
 
 /*
@@ -133,7 +133,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
 
     Reader stringFilter = StringFilter.makeNestedFilter(reader,
                                                         new String[][] {
-        // Typographical changes over time
+        // Markup changes over time
         {"&nbsp;", " "},
         {"&amp;", "&"},
         // Wording change over time [article block, abs/full/ref/suppl overview]
@@ -154,23 +154,18 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     ));
     
     // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
+    Reader noTagFilter = new HtmlTagFilter(new StringFilter(tagFilter, "<", " <"), new TagPair("<", ">"));
     
     // Remove white space
     return new ReaderInputStream(new WhiteSpaceFilter(noTagFilter));
   }
 
-  public static void main(String[] args) throws Exception {
-    for (String file : Arrays.asList("/tmp/w8/toc1",
-                                     "/tmp/w8/abs1",
-                                     "/tmp/w8/full1",
-                                     "/tmp/w8/ref1",
-                                     "/tmp/w8/cit1",
-                                     "/tmp/w8/full2",
-                                     "/tmp/w8/suppl1")) {
-      IOUtils.copy(new TafHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-                   new FileOutputStream(file + ".out"));
-    }
-  }
+//  public static void main(String[] args) throws Exception {
+//    for (String file : Arrays.asList("/tmp/e1/file-b1",
+//                                     "/tmp/e1/file-b4")) {
+//      IOUtils.copy(new TafHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+//                   new FileOutputStream(file + ".out"));
+//    }
+//  }
 
 }
