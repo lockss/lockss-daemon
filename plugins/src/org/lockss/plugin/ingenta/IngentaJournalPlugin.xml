@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>50</string>
+    <string>51</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,13 +24,13 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>22</string>
+        <string>23</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.62.0</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -51,6 +51,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- all fonts, images, resources, css, js, etc. -->
+      <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](eot|svg|ttf|woff)$", base_url_host, api_url_host, graphics_url_host</string>
       <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](?:bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
       <string>4,"^(?:%s|%s|%s)", base_url, api_url, graphics_url</string>
       <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
@@ -199,5 +201,11 @@
         <string>org.lockss.plugin.ingenta.IngentaHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts= -->
+    <string>au_permitted_host_pattern</string>
+    <string>".*\.cloudfront\.net|cdn\.mathjax\.org"</string>
   </entry>
 </map>
