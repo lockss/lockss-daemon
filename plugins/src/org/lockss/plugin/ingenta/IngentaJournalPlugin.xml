@@ -51,6 +51,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- all content from CDN -->
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org)/."</string>
       <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](eot|svg|ttf|woff)$", base_url_host, api_url_host, graphics_url_host</string>
       <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](?:bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
@@ -204,8 +206,8 @@
   </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts= -->
+         org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>".*\.cloudfront\.net|cdn\.mathjax\.org"</string>
+    <string>".*[.]cloudfront[.]net|cdn[.]mathjax[.]org"</string>
   </entry>
 </map>
