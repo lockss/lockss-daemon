@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -38,7 +38,7 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>16</string>
+        <string>17</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -128,6 +128,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- all content from CDN -->
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|fonts[.]gstatic[.]com)/."</string>
       <!-- new - making index.php and journal_id optional, removed [0-9]+ for some rules -->
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
@@ -197,6 +199,12 @@
     <!-- manifest to issue to articles -->
     <string>au_refetch_depth</string>
     <int>2</int>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts= -->
+    <string>au_permitted_host_pattern</string>
+    <string>".*[.]cloudfront[.]net|cdn[.]mathjax[.]org|fonts[.]gstatic[.]com"</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
