@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalPlugin.java,v 1.4 2015-01-09 19:08:47 etenbrink Exp $
+ * $Id: TestELifeDrupalPlugin.java,v 1.5 2015-01-29 01:30:49 etenbrink Exp $
  */
 
 /*
@@ -153,7 +153,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
         403, "foo");
-    assertClass(CacheException.UnknownCodeException.class, exc);
+    assertClass(CacheException.RetrySameUrlException.class, exc);
     
   }
   
