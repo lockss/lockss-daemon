@@ -172,7 +172,7 @@
     
     {
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-    param[base_url] = http://www.jbjs.org/
+    param[base_url] = http://www.ejbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
     au < down ; 1889 ; Journal of Orthopaedic Surgery Volume s1-1 (1889) ; s1-1 >
