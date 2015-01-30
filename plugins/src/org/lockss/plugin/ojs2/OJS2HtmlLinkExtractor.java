@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlLinkExtractor.java,v 1.5 2015-01-30 09:25:34 etenbrink Exp $
+ * $Id: OJS2HtmlLinkExtractor.java,v 1.6 2015-01-30 22:22:00 etenbrink Exp $
  */
 
 /*
@@ -46,7 +46,8 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   protected static final Logger log = Logger.getLogger(OJS2HtmlLinkExtractor.class);
   
   protected static final String NAME = "name";
-  protected static final String META_NAME = "citation_pdf_url";
+  protected static final String PDF_NAME = "citation_pdf_url";
+  protected static final String FT_NAME = "citation_fulltext_html_url";
   protected static final String CONTENT = "content";
 
   protected static final org.apache.oro.text.regex.Pattern OPEN_RT_WINDOW_PATTERN = 
@@ -121,13 +122,15 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
                 }
               }
             }
-          } else if (this.META_NAME.equalsIgnoreCase(getAttributeValue(NAME, link))) {
-            //<meta name= content="<base_url>index.php/<jid>/article/download/22850/35314"/>
-            String url = getAttributeValue(CONTENT, link);
-            if (url != null) {
-              cb.foundLink(url);
+          } else {
+            if (PDF_NAME.equalsIgnoreCase(getAttributeValue(NAME, link)) ||
+                FT_NAME.equalsIgnoreCase(getAttributeValue(NAME, link))) {
+              
+              String url = getAttributeValue(CONTENT, link);
+              if (url != null) {
+                cb.foundLink(url);
+              }
             }
-            
           }
         }
         break;
