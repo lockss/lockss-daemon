@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.10 2015-01-06 00:48:32 etenbrink Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.11 2015-01-30 09:28:15 etenbrink Exp $
  */
 
 /*
@@ -39,10 +39,11 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lockss.daemon.Crawler.PermissionHelper;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.urlconn.CacheException;
 
 public class OJS2PermissionCheckerFactory
   implements PermissionCheckerFactory{
@@ -52,7 +53,7 @@ public class OJS2PermissionCheckerFactory
    * the ProbePermissionChecker does have the PermissionHelper pHelper param
    * rather than the new in 1.67 CrawlerFacade crawlFacade param
    */
-  public class OJS2PermissionChecker extends ProbePermissionChecker {
+  public class OJS2PermissionChecker implements PermissionChecker {
     
     private final Logger logger = Logger.getLogger(OJS2PermissionCheckerFactory.class);
     protected String au_year;
@@ -62,16 +63,15 @@ public class OJS2PermissionCheckerFactory
     private static final String CLOCKSS_FRAG = "about/editorialPolicies";
     
     public OJS2PermissionChecker(ArchivalUnit au) {
-      // XXX need to call super(au)
-      super(au);
+      super();
       au_year = au.getConfiguration().get(ConfigParamDescr.YEAR.getKey());
       au_year_paren = Pattern.compile("[(]" + au_year + "[)]");
       au_year_colon = Pattern.compile(":\\s+" + au_year + "[^0-9]");
     }
     
     @Override
-    public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
-        String permissionUrl) {
+    public boolean checkPermission(CrawlerFacade crawlFacade,
+        Reader inputReader, String permissionUrl) throws CacheException {
       
       // if the permissionUrl is for CLOCKSS, then just return True
       // XXX FIXME replace the entire PremissionChecker with CrawlSeed?
@@ -108,7 +108,6 @@ public class OJS2PermissionCheckerFactory
       }
       return ret;
     }
-    
   }
   
   @Override
