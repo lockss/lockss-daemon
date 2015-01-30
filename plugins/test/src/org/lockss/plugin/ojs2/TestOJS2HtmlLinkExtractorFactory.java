@@ -1,5 +1,5 @@
 /*
- * $Id: TestOJS2HtmlLinkExtractorFactory.java,v 1.1 2013-04-12 23:36:26 pgust Exp $
+ * $Id: TestOJS2HtmlLinkExtractorFactory.java,v 1.2 2015-01-30 22:54:39 etenbrink Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
 
   OJS2HtmlLinkExtractorFactory fact;
 
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     fact = new OJS2HtmlLinkExtractorFactory();
@@ -83,16 +84,25 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
       "<head>\n"
     + "  <meta http-equiv=\"refresh\" content=\"2;url=javascript:openRTWindow('leaf');\">\n"
     + "</head>";
-
+  
+  static final String testMetaInput =
+      "<head>\n" +
+      "  <meta name=\"citation_pdf_url\"           content=\"http://www.xyz.com/index.php/edui/article/download/2850/5314\"/>\n" + 
+      "  <meta name=\"citation_fulltext_html_url\" content=\"http://www.xyz.com/index.php/edui/article/view/2850/5315\"/>\n" + 
+      "  <meta name=\"citation_fulltext_html_url\" content=\"http://www.xyz.com/index.php/edui/article/view/2850/5317\"/>\n" + 
+      "  <meta name=\"citation_fulltext_html_url\" content=\"http://www.xyz.com/index.php/edui/article/view/2850/5318\"/>\n" + 
+      "  <meta name=\"citation_abstract_url\"      content=\"http://www.xyz.com/index.php/edui/article/view/2850\"/>\n" + 
+      "</head>";
+  
   static final String expectedAbsLinkPath = "http://www.xyz.com/path/leaf";
   static final String expectedRelLinkPath = "http://www.xyz.com/foo/leaf";
 
 
   
   /**
-   * Make a basic Ingenta test AU to which URLs can be added.
+   * Make a basic OJS test AU to which URLs can be added.
    * 
-   * @return a basic Ingenta test AU
+   * @return a basic OJS test AU
    * @throws ConfigurationException if can't set configuration
    */
   MockArchivalUnit makeAu() throws ConfigurationException {
@@ -114,6 +124,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
         fact.createLinkExtractor("text/html");
     final List<String> foundLink = new ArrayList<String>();
     ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
       public void foundLink(String url) {
         foundLink.add(url);
       }
@@ -129,6 +140,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
         fact.createLinkExtractor("text/html");
     final List<String> foundLink = new ArrayList<String>();
     ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
       public void foundLink(String url) {
         foundLink.add(url);
       }
@@ -144,6 +156,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
         fact.createLinkExtractor("text/html");
     final List<String> foundLink = new ArrayList<String>();
     ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
       public void foundLink(String url) {
         foundLink.add(url);
       }
@@ -159,6 +172,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
         fact.createLinkExtractor("text/html");
     final List<String> foundLink = new ArrayList<String>();
     ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
       public void foundLink(String url) {
         foundLink.add(url);
       }
@@ -174,6 +188,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
         fact.createLinkExtractor("text/html");
     final List<String> foundLink = new ArrayList<String>();
     ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
       public void foundLink(String url) {
         foundLink.add(url);
       }
@@ -189,11 +204,32 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
         fact.createLinkExtractor("text/html");
     final List<String> foundLink = new ArrayList<String>();
     ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
       public void foundLink(String url) {
         foundLink.add(url);
       }
     });
     assertEquals(Collections.singletonList(expectedRelLinkPath), foundLink);
   }
-
+  
+  public void testMetaExtracting() throws Exception {
+    ArrayList<String> expectedMetaLinks = new ArrayList<String>();
+    expectedMetaLinks.add("http://www.xyz.com/index.php/edui/article/download/2850/5314"); // citation_pdf_url
+    expectedMetaLinks.add("http://www.xyz.com/index.php/edui/article/view/2850/5315"); // citation_fulltext_html_url
+    expectedMetaLinks.add("http://www.xyz.com/index.php/edui/article/view/2850/5317"); // citation_fulltext_html_url
+    expectedMetaLinks.add("http://www.xyz.com/index.php/edui/article/view/2850/5318"); // citation_fulltext_html_url
+    
+    MockArchivalUnit mockAu = makeAu();
+    InputStream in = new ByteArrayInputStream(testMetaInput.getBytes());
+    LinkExtractor ext  = fact.createLinkExtractor("text/html");
+    final List<String> foundLink = new ArrayList<String>();
+    ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
+      public void foundLink(String url) {
+        foundLink.add(url);
+      }
+    });
+    assertEquals(expectedMetaLinks, foundLink);
+  }
+  
 }
