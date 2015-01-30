@@ -1,9 +1,9 @@
 /*
- * $Id: TestBioOneAtyponHtmlFilterFactory.java,v 1.2 2014-10-08 16:11:29 alexandraohlson Exp $
+ * $Id: TestBioOneAtyponHtmlFilterFactory.java,v 1.3 2015-01-30 19:59:27 thib_gc Exp $
  */
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,8 +37,6 @@ import junit.framework.Test;
 
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.plugin.taylorandfrancis.TestTaylorAndFrancisHtmlFilterFactory.TestCrawl;
-import org.lockss.plugin.taylorandfrancis.TestTaylorAndFrancisHtmlFilterFactory.TestHash;
 import org.lockss.test.*;
 
 /*
@@ -166,9 +164,9 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
   
   private static final String articleNav=
       "<div class=\"articleNav\">" +
-          "<a class=\"articleToolsNav\" href=\"/doi/full/10.111/x\">Ç previous article</a>" +
+          "<a class=\"articleToolsNav\" href=\"/doi/full/10.111/x\">ï¿½ previous article</a>" +
           "<span class=\"navSearchColon\"> : </span>" +
-          "<a class=\"articleToolsNav\" href=\"/doi/full/10.1111/x\">next article È</a>" +
+          "<a class=\"articleToolsNav\" href=\"/doi/full/10.1111/x\">next article ï¿½</a>" +
           "</div>";
   private static final String articleNavFiltered=
       "<div class=\"articleNav\">" +
@@ -178,11 +176,11 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
       "<div class=\"issueNav\">Jun 2010 : Volume 45 Issue 1 |" +
           "<!--<div id=\"nextprev\">-->" +
           "<a href=\"/toc/xxx/44/2\">" +
-          "                            Ç previous issue" +
+          "                            ï¿½ previous issue" +
           "</a>" +
           "            : " +
           "<a href=\"/toc/xxx/45/2\">" +
-          "                            next issue È" +
+          "                            next issue ï¿½" +
           "</a>" +
           "<!--</div><br/>-->" +
           "</div>";
