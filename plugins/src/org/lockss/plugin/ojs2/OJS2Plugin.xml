@@ -46,7 +46,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
     </map>
   </entry>
@@ -145,7 +145,7 @@
         <!--  new - making index.php and journal_id optional -->
         <!--  adding pdf for Electronic Journal of Combinatorics; 
               viewFile for KwaZulu Natal Museum -->
-        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#@amp;]+$", base_url, journal_id</string>
+        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#&amp;]+$", base_url, journal_id</string>
       </list>
   </entry>
   <entry>
