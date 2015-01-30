@@ -303,17 +303,18 @@
     >
 
     param[journal_issn] = 1745-8188
+    comment[platform] = This journal also published with Maney on Ingenta previously, and now Maney on Atypon.
 
-    au < doNotProcess ; exists ; 2005 ; Labour History Review Volume 70 ; 70 >
-    au < doNotProcess ; exists ; 2006 ; Labour History Review Volume 71 ; 71 >
-    au < doNotProcess ; exists ; 2007 ; Labour History Review Volume 72 ; 72 >
-    au < finished ; frozen ; 2008 ; Labour History Review Volume 73 ; 73 >
-    au < finished ; frozen ; 2009 ; Labour History Review Volume 74 ; 74 >
-    au < finished ; frozen ; 2010 ; Labour History Review Volume 75 ; 75 >
-    au < finished ; frozen ; 2011 ; Labour History Review Volume 76 ; 76 >
-    au < finished ; frozen ; 2012 ; Labour History Review Volume 77 ; 77 >
-    au < crawling ; exists ; 2013 ; Labour History Review Volume 78 ; 78 >
-    au < doNotProcess ; exists ; 2014 ; Labour History Review Volume 79 ; 79 >
+    au < doNotProcess ; exists ; 2005 ; Labour History Review Volume 70 [Metapress] ; 70 >
+    au < doNotProcess ; exists ; 2006 ; Labour History Review Volume 71 [Metapress] ; 71 >
+    au < doNotProcess ; exists ; 2007 ; Labour History Review Volume 72 [Metapress] ; 72 >
+    au < finished ; frozen ; 2008 ; Labour History Review Volume 73 [Metapress]; 73 >
+    au < finished ; frozen ; 2009 ; Labour History Review Volume 74 [Metapress]; 74 >
+    au < finished ; frozen ; 2010 ; Labour History Review Volume 75 [Metapress]; 75 >
+    au < finished ; frozen ; 2011 ; Labour History Review Volume 76 [Metapress]; 76 >
+    au < finished ; frozen ; 2012 ; Labour History Review Volume 77 [Metapress]; 77 >
+    au < crawling ; exists ; 2013 ; Labour History Review Volume 78 [Metapress]; 78 >
+    au < doNotProcess ; exists ; 2014 ; Labour History Review Volume 79 [Metapress] ; 79 >
 
   }
 
