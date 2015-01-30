@@ -9,28 +9,44 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
     <string>British Institute of Radiology Publishing Plugin (Atypon)</string>
   </entry>
     <entry>
+  <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>  
+    <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>18</string>
-  </entry>
-<!--  convenient hash filter util -->  
+    <string>26</string>
+  </entry>   
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.65.4</string>
-  </entry>      
-   <entry>
     <string>plugin_publishing_platform</string>
     <string>Atypon</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>13</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>20</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
@@ -44,6 +60,11 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.bir.BIRAtyponHtmlCrawlFilterFactory</string>
   </entry>
+  <!-- some pdfplus files need scraping -->  
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
+  </entry>  
   <!-- add plugin_au_config_user_msg -->
   <entry>
     <string>plugin_au_config_user_msg</string>

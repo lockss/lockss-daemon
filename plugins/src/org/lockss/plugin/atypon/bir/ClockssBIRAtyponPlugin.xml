@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -36,7 +36,7 @@
     <string>plugin_au_config_user_msg</string>
     <org.lockss.util.Default />
   </entry>
-  <entry>
+  <entry>  
     <string>clockss_override</string>
     <map>
       <entry>

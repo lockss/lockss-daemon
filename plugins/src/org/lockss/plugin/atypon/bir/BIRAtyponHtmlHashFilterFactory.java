@@ -1,10 +1,10 @@
 /*
- * $Id: BIRAtyponHtmlHashFilterFactory.java,v 1.2 2014-08-29 17:16:45 alexandraohlson Exp $
+ * $Id: BIRAtyponHtmlHashFilterFactory.java,v 1.3 2015-01-30 06:06:41 ldoan Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,81 +34,88 @@ package org.lockss.plugin.atypon.bir;
 
 import java.io.InputStream;
 
-import java.io.Reader;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.TagNameFilter;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.filter.html.*;
-import org.lockss.plugin.*;
+import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
-/* 
- * Don't extend BaseAtyponHtmlHashFilterFactory because we need to do more 
- * extensive filtering with spaces, etc.
- */
-public class BIRAtyponHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
+public class BIRAtyponHtmlHashFilterFactory 
+  extends BaseAtyponHtmlHashFilterFactory {
 
   Logger log = Logger.getLogger(BIRAtyponHtmlHashFilterFactory.class);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in,
-      String encoding) {
+                                               InputStream in,
+                                               String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-        // div class="citedBySection" handled in BaseAtypon
-        // sfxlink handled in BaseAtypon
-        //script, comments also in BaseAtypon
+        // handled by parent: script, sfxlink, stylesheet
         
         // this is controversial - draconian; what about updated metadata
         new TagNameFilter("head"),
         new TagNameFilter("noscript"),
-        // issue TOC
-        // ad above header
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget literatumAd"),
-        // header of toc - login, etc
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget pageHeader"),
-        // footer
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget pageFooter"),
-
-        //  BJR image
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget general-image"),
-        // top menu on journal header
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget menuXml"),
-        //  pulldown with sections - may add citedby later
-        HtmlNodeFilters.tagWithAttribute("div", "class", "publicationTooldropdownContainer"),
-        // right column, current issue
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget literatumBookIssueNavigation"),
-        // social media stuff
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget general-bookmark-share"),
-        // toc - place for free, open, etc 
+        
+        // toc - first top block ad
+        // http://www.birpublications.org/toc/bjr/87/1044
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
+        // page header: login, register, etc., and journal menu such as
+        // subscribe, alerts, ...
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageHeader"),
+        // page footer
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageFooter"),
+        // toc - BJR logo image right below pageHeader
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "^widget general-image"),
+        // toc, abs, full, ref - menu above breadcrumbs
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "menuXml"),
+        // toc - free.gif image tied to an abs
+        HtmlNodeFilters.tagWithAttributeRegex("img",  "src", "free.gif"),   
+        // toc - access icon container
         HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
-        // see notice of redundant publication toc/dmfr/42/8
-        HtmlNodeFilters.tagWithAttribute("a",  "class", "relatedLink"),
-        // div holding original article link 
-        HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
-
-        // article page - abs
-        // 'Cited By' won't be there until after it's cited
-        HtmlNodeFilters.tagWithAttribute("ul", "class", "tab-nav"),
-        // right column
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget literatumArticleToolsWidget"),
-
-        // article page - full
-        // once cited, the pulldown menu includes "citing articles" 
-        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
-
+        // toc - pulldown with sections - may add citedby later
+        HtmlNodeFilters.tagWithAttribute("div", "class", 
+                                         "publicationTooldropdownContainer"), 
+        // toc - right column, current issue
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "literatumBookIssueNavigation"),
+        // toc, abs - share social media
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                                              "general-bookmark-share"),
+        // toc - right column impact factor block - no unique name found
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+            "widget\\s+layout-one-column\\s+none\\s+widget-regular\\s+widget-border-toggle"),
+        // ref - this seems unused but may get turned on
+        // http://www.birpublications.org/doi/ref/10.1259/bjr.20130571
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "MathJax_Message"),
+        // abs - right column all literatumArticleToolsWidget 
+        // except Download Citation
+        // http://www.birpublications.org/doi/abs/10.1259/bjr.20140472                                      
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex( 
+                "div", "class", "literatumArticleToolsWidget"),
+                HtmlNodeFilters.tagWithAttributeRegex(
+                    "a", "href", "/action/showCitFormats\\?"))                                                
+         
     };
 
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
-    // combine the two arrays of NodeFilters; do optional white space filtering
-    boolean doWS = true; 
-    return super.createFilteredInputStream(au, in, encoding, filters, doWS);
+    // combine the two arrays of NodeFilters.
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
+  @Override
+  public boolean doTagIDFiltering() {
+    return true;
+  }
+   
+  @Override
+  public boolean doWSFiltering() {
+    return true;
+  }
+  
 }
 
 

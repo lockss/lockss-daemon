@@ -1,10 +1,10 @@
 /*
- * $Id: BIRAtyponHtmlCrawlFilterFactory.java,v 1.2 2014-10-08 16:11:29 alexandraohlson Exp $
+ * $Id: BIRAtyponHtmlCrawlFilterFactory.java,v 1.3 2015-01-30 06:06:41 ldoan Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,19 +42,22 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class BIRAtyponHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
     
   NodeFilter[] filters = new NodeFilter[] {
-      // BaseAtypon takes care of citedBySection, original/errata issues & prev/next links
       
-      // see notice of redundant publication toc/dmfr/42/8
-      HtmlNodeFilters.tagWithAttribute("a",  "class", "relatedLink"),
-      // div holding original article link 
-      HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),      
-      //  <div class="references" - NOT HASH; might legitimately change
-      HtmlNodeFilters.tagWithAttribute("div",  "class", "references"),
-      // Remove ALL of right column stuff EXCEPT for <li <class=downloadCitations"
-      HtmlNodeFilters.allExceptSubtree(
-          HtmlNodeFilters.tagWithAttributeRegex("section", "class", "^widget literatumArticleToolsWidget"),
-          HtmlNodeFilters.tagWithAttribute("li", "class", "downloadCitations")), 
-  
+      // handled by parent BaseAtypon:
+      // prev/next issues
+      // <td class="journalNavLeftTd">
+      // <td class="journalNavRightTd">
+      
+      // toc, abs, full, ref - menu above breadcrumbs, Paper in Press links
+      // to http://www.birpublications.org/toc/bjr/0/0
+      // http://www.birpublications.org/toc/bjr/87/1038
+      HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "menuXml"),
+      // toc - erratum section linking to Original Article
+      HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
+      // errata page linking to Original Article
+      // http://www.birpublications.org/doi/abs/10.1259/dmfr/24435203
+      HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent")      
+      
   };
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
