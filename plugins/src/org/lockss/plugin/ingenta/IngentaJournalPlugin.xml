@@ -170,6 +170,15 @@
     <string>org.lockss.plugin.ingenta.IngentaPdfFilterFactory</string>
   </entry>
   <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaRisFilterFactory</string>
+  </entry>
+<!--  BIB citations come in as text/plain -->
+  <entry>
+    <string>text/plain_filter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaKeywordFilterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaHtmlLinkExtractorFactory</string>
   </entry>
