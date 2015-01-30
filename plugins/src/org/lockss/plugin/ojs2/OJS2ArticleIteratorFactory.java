@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.14 2014-11-26 23:50:53 etenbrink Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.15 2015-01-30 09:23:51 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -87,7 +87,7 @@ public class OJS2ArticleIteratorFactory
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s(index[.]php/)?(%s/)?article/(viewFile|download)/[^/]+/[^/]+$\", base_url, journal_id";
+      "\"^%s(index[.]php/)?(%s/)?article/(viewFile|download)/[^/]+/[^/?]+$\", base_url, journal_id";
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "/article/(?:viewFile|download)/([^/]+)/([^/]+)$",
@@ -189,10 +189,9 @@ public class OJS2ArticleIteratorFactory
       }
       if(tmp == null){
         return false;
-      } else {
-        nextAF = tmp;
-        return true;
       }
+      nextAF = tmp;
+      return true;
     }
     
     @Override
