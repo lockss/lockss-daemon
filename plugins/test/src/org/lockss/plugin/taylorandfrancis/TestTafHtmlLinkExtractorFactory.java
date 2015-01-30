@@ -1,10 +1,10 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlLinkExtractorFactory.java,v 1.2 2014-04-07 21:52:55 alexandraohlson Exp $
+ * $Id: TestTafHtmlLinkExtractorFactory.java,v 1.1 2015-01-30 21:16:05 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,11 +49,10 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
 import org.lockss.test.*;
 
-public class TestTaylorAndFrancisHtmlLinkExtractorFactory 
-  extends LockssTestCase {
+public class TestTafHtmlLinkExtractorFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
-  TaylorAndFrancisHtmlLinkExtractorFactory fact;
+  TafHtmlLinkExtractorFactory fact;
   MockArchivalUnit m_mau;
   private LinkExtractor m_extractor;
   private MyLinkExtractorCallback m_callback;
@@ -63,7 +62,7 @@ public class TestTaylorAndFrancisHtmlLinkExtractorFactory
     super.setUp();
     m_mau = new MockArchivalUnit();
     m_callback = new MyLinkExtractorCallback();
-    fact = new TaylorAndFrancisHtmlLinkExtractorFactory();
+    fact = new TafHtmlLinkExtractorFactory();
     // extractor will get set for the specific test 
   }
   

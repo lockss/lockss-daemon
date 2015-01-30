@@ -17,7 +17,7 @@
   </entry>   
   <entry>
     <string>plugin_version</string>
-    <string>64</string>
+    <string>65</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
   <entry>
@@ -37,7 +37,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>34</string>
+        <string>35</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -59,7 +59,7 @@
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlLinkExtractorFactory</string>
+    <string>org.lockss.plugin.taylorandfrancis.TafHtmlLinkExtractorFactory</string>
   </entry> 
   <entry>
     <string>text/html_link_rewriter_factory</string>
@@ -141,6 +141,6 @@
   <!-- Candidate to be hoisted into BaseAtyponPlugin -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>/(css|img|js)Jawr/|/templates/jsp/|/[^/]+/home/literatum/|/action/downloadCitation\?doi=[^&amp;]+&amp;format=</string>
+    <string>://[^/]+/((css|img|js)Jawr/|templates/jsp/|[^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=|sda/)</string>
   </entry>
 </map>
