@@ -135,7 +135,7 @@
       <string>4,"^%s", base_url</string>
       <string>1,"^%s(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", base_url, journal_id, year</string>
       <string>2,"^%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", base_url, journal_id</string>
-      <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/", base_url, journal_id</string>
+      <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", base_url, journal_id</string>
       <string>1,"^%s(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", base_url, journal_id</string>
     </list>
   </entry>
