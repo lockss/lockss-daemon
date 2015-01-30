@@ -270,7 +270,7 @@
       au < ready ; 2008 ; 2 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2008 ; 2008 ; >
       au < ready ; 2009 ; 3 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2009 ; 2009 ; >
       au < ready ; 2010 ; 4 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 5 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2011 ; 2011 ; >
+      au < ready ; 2011 ; 5 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2011 ; 2011 ; >
       au < ready ; 2013 ; 6 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 7 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2014 ; 2014 ; >
 
@@ -390,7 +390,7 @@
       param[journal_id] = lv
 
       au < ready ; 2008 ; 1 ; Letr@ Viv@ Volume 2008 ; 2008 ; >
-      au < testing ; 2012 ; 2 ; Letr@ Viv@ Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 2 ; Letr@ Viv@ Volume 2012 ; 2012 ; >
 
   }
 
@@ -558,12 +558,12 @@
       param[base_url] = http://www.ies.ufpb.br/ojs2/
       param[journal_id] = ra
 
-      au < testing ; 2003 ; 1 ; Revista de Arqueologia Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 2 ; Revista de Arqueologia Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 3 ; Revista de Arqueologia Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 4 ; Revista de Arqueologia Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 5 ; Revista de Arqueologia Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 6 ; Revista de Arqueologia Volume 2008 ; 2008 ; >
+      au < ready ; 2003 ; 1 ; Revista de Arqueologia Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 2 ; Revista de Arqueologia Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 3 ; Revista de Arqueologia Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 4 ; Revista de Arqueologia Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 5 ; Revista de Arqueologia Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 6 ; Revista de Arqueologia Volume 2008 ; 2008 ; >
 
   }
 
@@ -579,19 +579,19 @@
       param[base_url] = http://www.ies.ufpb.br/ojs2/
       param[journal_id] = abet
 
-      au < testing ; 2001 ; 1 ; Revista da ABET Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 2 ; Revista da ABET Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 3 ; Revista da ABET Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 4 ; Revista da ABET Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 5 ; Revista da ABET Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 6 ; Revista da ABET Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 7 ; Revista da ABET Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 8 ; Revista da ABET Volume 2008 ; 2008 ; >
+      au < ready ; 2001 ; 1 ; Revista da ABET Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 2 ; Revista da ABET Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 3 ; Revista da ABET Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 4 ; Revista da ABET Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 5 ; Revista da ABET Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 6 ; Revista da ABET Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 7 ; Revista da ABET Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 8 ; Revista da ABET Volume 2008 ; 2008 ; >
       au < testing ; 2009 ; 9 ; Revista da ABET Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 10 ; Revista da ABET Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 11 ; Revista da ABET Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 12 ; Revista da ABET Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 13 ; Revista da ABET Volume 2013 ; 2013 ; >
+      au < ready ; 2010 ; 10 ; Revista da ABET Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 11 ; Revista da ABET Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 12 ; Revista da ABET Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 13 ; Revista da ABET Volume 2013 ; 2013 ; >
 
   }
 
@@ -606,13 +606,13 @@
       param[base_url] = http://www.ies.ufpb.br/ojs2/
       param[journal_id] = rbcs
 
-      au < testing ; 2006 ; 10 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 11 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 12 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 13 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2009 ; 2009 ; >
+      au < ready ; 2006 ; 10 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 11 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 12 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 13 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2009 ; 2009 ; >
       au < testing ; 2010 ; 14 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 15 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 16 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2012 ; 2012 ; >
+      au < ready ; 2011 ; 15 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 16 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2012 ; 2012 ; >
       au < testing ; 2013 ; 17 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 18 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2014 ; 2014 ; >
 
@@ -629,17 +629,17 @@
       param[base_url] = http://www.ies.ufpb.br/ojs2/
       param[journal_id] = economia
 
-      au < testing ; 1997 ; 1 ; Revista Economia e Desenvolvimento Volume 1997 ; 1997 ; >
-      au < testing ; 2004 ; 2 ; Revista Economia e Desenvolvimento Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 3 ; Revista Economia e Desenvolvimento Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 4 ; Revista Economia e Desenvolvimento Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 5 ; Revista Economia e Desenvolvimento Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 6 ; Revista Economia e Desenvolvimento Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 7 ; Revista Economia e Desenvolvimento Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 8 ; Revista Economia e Desenvolvimento Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 9 ; Revista Economia e Desenvolvimento Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 10 ; Revista Economia e Desenvolvimento Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 11 ; Revista Economia e Desenvolvimento Volume 2013 ; 2013 ; >
+      au < ready ; 1997 ; 1 ; Revista Economia e Desenvolvimento Volume 1997 ; 1997 ; >
+      au < ready ; 2004 ; 2 ; Revista Economia e Desenvolvimento Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 3 ; Revista Economia e Desenvolvimento Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 4 ; Revista Economia e Desenvolvimento Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 5 ; Revista Economia e Desenvolvimento Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 6 ; Revista Economia e Desenvolvimento Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 7 ; Revista Economia e Desenvolvimento Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 8 ; Revista Economia e Desenvolvimento Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 9 ; Revista Economia e Desenvolvimento Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 10 ; Revista Economia e Desenvolvimento Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 11 ; Revista Economia e Desenvolvimento Volume 2013 ; 2013 ; >
 
   }
 
@@ -673,12 +673,12 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = rec
 
-      au < testing ; 2008 ; 1 ; Revista Espaço do Currículo Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 2 ; Revista Espaço do Currículo Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 3 ; Revista Espaço do Currículo Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 4 ; Revista Espaço do Currículo Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 5 ; Revista Espaço do Currículo Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 6 ; Revista Espaço do Currículo Volume 2013 ; 2013 ; >
+      au < ready ; 2008 ; 1 ; Revista Espaço do Currículo Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 2 ; Revista Espaço do Currículo Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 3 ; Revista Espaço do Currículo Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 4 ; Revista Espaço do Currículo Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; Revista Espaço do Currículo Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 6 ; Revista Espaço do Currículo Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 7 ; Revista Espaço do Currículo Volume 2014 ; 2014 ; >
 
   }
@@ -710,8 +710,8 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = ged
 
-      au < testing ; 2010 ; 1 ; Revista Gênero & Direito Volume 2010 ; 2010 ; >
-      au < testing ; 2013 ; 2 ; Revista Gênero & Direito Volume 2013 ; 2013 ; >
+      au < ready ; 2010 ; 1 ; Revista Gênero & Direito Volume 2010 ; 2010 ; >
+      au < ready ; 2013 ; 2 ; Revista Gênero & Direito Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 3 ; Revista Gênero & Direito Volume 2014 ; 2014 ; >
 
   }
@@ -727,24 +727,24 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = graphos
 
-      au < testing ; 1995 ; 1 ; Revista Graphos Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 2 ; Revista Graphos Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 3 ; Revista Graphos Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 4 ; Revista Graphos Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 5 ; Revista Graphos Volume 1999 ; 1999 ; >
-      au < testing ; 2001 ; 6 ; Revista Graphos Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 7 ; Revista Graphos Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 8 ; Revista Graphos Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 9 ; Revista Graphos Volume 2004 ; 2004 ; >
+      au < ready ; 1995 ; 1 ; Revista Graphos Volume 1995 ; 1995 ; >
+      au < ready ; 1996 ; 2 ; Revista Graphos Volume 1996 ; 1996 ; >
+      au < ready ; 1997 ; 3 ; Revista Graphos Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 4 ; Revista Graphos Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 5 ; Revista Graphos Volume 1999 ; 1999 ; >
+      au < notReady ; 2001 ; 6 ; Revista Graphos Volume 2001 ; 2001 ; no permission from publisher >
+      au < notReady ; 2002 ; 7 ; Revista Graphos Volume 2002 ; 2002 ; no permission from publisher >
+      au < ready ; 2003 ; 8 ; Revista Graphos Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 9 ; Revista Graphos Volume 2004 ; 2004 ; >
       au < testing ; 2005 ; 10 ; Revista Graphos Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 11 ; Revista Graphos Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 12 ; Revista Graphos Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 13 ; Revista Graphos Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 14 ; Revista Graphos Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 15 ; Revista Graphos Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 16 ; Revista Graphos Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 17 ; Revista Graphos Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 18 ; Revista Graphos Volume 2013 ; 2013 ; >
+      au < ready ; 2006 ; 11 ; Revista Graphos Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 12 ; Revista Graphos Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 13 ; Revista Graphos Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 14 ; Revista Graphos Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 15 ; Revista Graphos Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 16 ; Revista Graphos Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 17 ; Revista Graphos Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 18 ; Revista Graphos Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 19 ; Revista Graphos Volume 2014 ; 2014 ; >
 
   }
@@ -760,17 +760,17 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = revico
 
-      au < testing ; 2003 ; 1 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 2 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 3 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 4 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 5 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 6 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2008 ; 2008 ; >
+      au < notReady ; 2003 ; 1 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2003 ; 2003 ; no substance >
+      au < notReady ; 2004 ; 2 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2004 ; 2004 ; no substance >
+      au < notReady ; 2005 ; 3 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2005 ; 2005 ; no substance >
+      au < notReady ; 2006 ; 4 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2006 ; 2006 ; no substance >
+      au < notReady ; 2007 ; 5 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2007 ; 2007 ; no substance >
+      au < ready ; 2008 ; 6 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2008 ; 2008 ; >
       au < testing ; 2009 ; 7 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 8 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 8 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2010 ; 2010 ; >
       au < testing ; 2011 ; 9 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2011 ; 2011 ; >
       au < testing ; 2012 ; 10 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 11 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2013 ; 2013 ; >
+      au < ready ; 2013 ; 11 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 12 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2014 ; 2014 ; >
 
   }
@@ -786,7 +786,7 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = ricri
 
-      au < testing ; 2013 ; 11 ; Revista de Iniciação Científica em Relações Internacionais Volume 2013 ; 2013 ; >
+      au < ready ; 2013 ; 11 ; Revista de Iniciação Científica em Relações Internacionais Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 12 ; Revista de Iniciação Científica em Relações Internacionais Volume 2014 ; 2014 ; >
 
   }
@@ -802,8 +802,8 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = le
 
-      au < testing ; 2012 ; 1 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 2 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2013 ; 2013 ; >
+      au < ready ; 2012 ; 1 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 2 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 3 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2014 ; 2014 ; >
 
   }
@@ -838,8 +838,8 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = mpgoa
 
-      au < testing ; 2012 ; 1 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 2 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2013 ; 2013 ; >
+      au < ready ; 2012 ; 1 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 2 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 3 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2014 ; 2014 ; >
 
   }
@@ -932,11 +932,11 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = religare
 
-      au < testing ; 2009 ; 1 ; Revista Religare Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 2 ; Revista Religare Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 3 ; Revista Religare Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 4 ; Revista Religare Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 5 ; Revista Religare Volume 2013 ; 2013 ; >
+      au < ready ; 2009 ; 1 ; Revista Religare Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 2 ; Revista Religare Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 3 ; Revista Religare Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 4 ; Revista Religare Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 5 ; Revista Religare Volume 2013 ; 2013 ; >
 
   }
 
@@ -951,7 +951,7 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = rteo
 
-      au < testing ; 2010 ; 1 ; Revista Temas em Educação Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 1 ; Revista Temas em Educação Volume 2010 ; 2010 ; >
       au < testing ; 2012 ; 2 ; Revista Temas em Educação Volume 2012 ; 2012 ; >
       au < testing ; 2013 ; 3 ; Revista Temas em Educação Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 4 ; Revista Temas em Educação Volume 2014 ; 2014 ; >
@@ -972,20 +972,20 @@
 
       au < testing ; 1995 ; 1 ; Sæculum – Revista de História Volume 1995 ; 1995 ; >
       au < testing ; 1996 ; 2 ; Sæculum – Revista de História Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 3 ; Sæculum – Revista de História Volume 1997 ; 1997 ; >
-      au < testing ; 1999 ; 4 ; Sæculum – Revista de História Volume 1999 ; 1999 ; >
-      au < testing ; 2001 ; 5 ; Sæculum – Revista de História Volume 2001 ; 2001 ; >
-      au < testing ; 2003 ; 6 ; Sæculum – Revista de História Volume 2003 ; 2003 ; >
+      au < ready ; 1997 ; 3 ; Sæculum – Revista de História Volume 1997 ; 1997 ; >
+      au < ready ; 1999 ; 4 ; Sæculum – Revista de História Volume 1999 ; 1999 ; >
+      au < ready ; 2001 ; 5 ; Sæculum – Revista de História Volume 2001 ; 2001 ; >
+      au < ready ; 2003 ; 6 ; Sæculum – Revista de História Volume 2003 ; 2003 ; >
       au < testing ; 2004 ; 7 ; Sæculum – Revista de História Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 8 ; Sæculum – Revista de História Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 9 ; Sæculum – Revista de História Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 10 ; Sæculum – Revista de História Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 11 ; Sæculum – Revista de História Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 12 ; Sæculum – Revista de História Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 13 ; Sæculum – Revista de História Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 14 ; Sæculum – Revista de História Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 15 ; Sæculum – Revista de História Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 16 ; Sæculum – Revista de História Volume 2013 ; 2013 ; >
+      au < ready ; 2005 ; 8 ; Sæculum – Revista de História Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 9 ; Sæculum – Revista de História Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 10 ; Sæculum – Revista de História Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 11 ; Sæculum – Revista de História Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 12 ; Sæculum – Revista de História Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 13 ; Sæculum – Revista de História Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 14 ; Sæculum – Revista de História Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 15 ; Sæculum – Revista de História Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 16 ; Sæculum – Revista de História Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 17 ; Sæculum – Revista de História Volume 2014 ; 2014 ; >
 
   }
@@ -1017,7 +1017,7 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = tn
 
-      au < testing ; 2012 ; 1 ; Turis Nostrum Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 1 ; Turis Nostrum Volume 2012 ; 2012 ; >
 
   }
 
@@ -1046,13 +1046,13 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = vj
 
-      au < testing ; 2002 ; 1 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 2 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 3 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 4 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 5 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 6 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 7 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2008 ; 2008 ; >
+      au < ready ; 2002 ; 1 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 2 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 3 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 4 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 5 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 6 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 7 ; VERBA JURIS - Anuário da Pós-Graduação em Direito Volume 2008 ; 2008 ; >
 
   }
 
