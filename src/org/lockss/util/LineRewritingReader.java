@@ -1,10 +1,10 @@
 /*
- * $Id: LineRewritingReader.java,v 1.1 2014-07-22 02:08:41 thib_gc Exp $
+ * $Id: LineRewritingReader.java,v 1.2 2015-01-31 00:25:14 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 
@@ -56,7 +55,7 @@ public abstract class LineRewritingReader extends Reader {
   /**
    * <p>
    * The underlying {@link Reader}, wrapped if necessary in a
-   * {@link BufferedReader}.
+   * {@link LineEndingBufferedReader}.
    * </p>
    */
   protected LineEndingBufferedReader underlyingReader;
@@ -185,8 +184,7 @@ public abstract class LineRewritingReader extends Reader {
    * @param maxLineLength
    *          The maximum line length allowed, <code>0</code> for unlimited
    *          length. Note that the underlying {@link Reader} is consumed via a
-   *          {@link BufferedReader} which trims the line terminator, which is
-   *          system-dependent; this maximum length applies to a trimmed line.
+   *          {@link LineEndingBufferedReader} which keeps the line terminator.
    * @since 1.66
    */
   public void setMaxLineLength(int maxLineLength) {
