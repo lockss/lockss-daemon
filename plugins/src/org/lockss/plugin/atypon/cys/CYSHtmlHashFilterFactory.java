@@ -1,5 +1,5 @@
 /* 
- * $Id: CYSHtmlHashFilterFactory.java,v 1.1 2014-12-14 01:16:40 ldoan Exp $ 
+ * $Id: CYSHtmlHashFilterFactory.java,v 1.2 2015-01-31 20:18:13 ldoan Exp $ 
  */
 
 /*
@@ -34,10 +34,10 @@ package org.lockss.plugin.atypon.cys;
 
 import java.io.InputStream;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.util.Logger;
 
 public class CYSHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
   
@@ -45,9 +45,12 @@ public class CYSHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
-    NodeFilter[] cysfilters = new NodeFilter[] {
+    NodeFilter[] cysfilters = new NodeFilter[] {       
         // Handled by parent:
         // comments, script, footer, accessIcon
+        
+        // this is controversial - draconian; what about updated metadata
+        new TagNameFilter("head"),
         
         // from toc, full - top panel
         // http://www.cysjournal.ca/doi/full/10.13034/cysj-2014-005
@@ -55,6 +58,8 @@ public class CYSHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // from toc - panel with login, register
         // institution banner inside this block
         HtmlNodeFilters.tagWithAttribute("div",  "id", "top-bar-wrapper"),
+        // toc - journal banner
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "banner"),
         // from  toc, abs, full - strip below the main title with links to 
         // Home, About, Journals, etc...
         // http://www.cysjournal.ca/toc/cysj/2013/2
@@ -66,7 +71,12 @@ public class CYSHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // from toc, abs, full - all left sidebar
         // http://www.cysjournal.ca/toc/cysj/2013/2
         // http://www.cysjournal.ca/doi/abs/10.13034/cysj-2013-006
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "sidebar-left"),         
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "sidebar-left"), 
+        // toc - table of contents box with full issue pdf,
+        // previous/next issue, current issue - no unique name found
+        // http://www.cysjournal.ca/toc/cysj/2013/2
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+            "box-pad\\s+border-gray\\s+margin-bottom\\s+clearfix"),
         // from full - all right sidebar except Download Citations
         // http://www.cysjournal.ca/doi/full/10.13034/cysj-2014-005
         // <div id="sidebar-right">
@@ -78,7 +88,10 @@ public class CYSHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // to current/full/list of issues
         // http://www.cysjournal.ca/toc/cysj/2013/2
         HtmlNodeFilters.tagWithAttribute("div", "class", 
-            "box-pad border-gray margin-bottom clearfix"),        
+            "box-pad border-gray margin-bottom clearfix"),  
+        // abs, full - previous/toc/next article
+        // http://www.cysjournal.ca/doi/full/10.13034/cysj-2013-006
+        HtmlNodeFilters.tagWithAttribute("a", "class", "white-link-right"),     
         // spider trap link in this tag
         // <a href="/doi/pdf/10.1046/9999-9999.99999">
         // http://www.cysjournal.ca/toc/cysj/2013/2
@@ -90,6 +103,11 @@ public class CYSHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
     return super.createFilteredInputStream(au, in, encoding, cysfilters);
+  }
+  
+  @Override
+  public boolean doWSFiltering() {
+    return true;
   }
 
 }

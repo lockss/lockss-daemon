@@ -1,5 +1,5 @@
 /*
- * $Id: TestCYSHtmlFilterFactory.java,v 1.1 2014-12-14 01:18:07 ldoan Exp $
+ * $Id: TestCYSHtmlFilterFactory.java,v 1.2 2015-01-31 20:18:37 ldoan Exp $
  */
 
 /*
@@ -60,6 +60,20 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
   
+  private static final String withHead =
+      "<div class=\"block\">" +
+      "<head>" +
+      "<meta content=\"text/html; charset=UTF-8\">" +
+      "<title> The Golden title - XYZ Journal </title>" +
+      "<link href=\"/templates/jsp/style.css\" rel=\"stylesheet\">" +
+      "<script async=\"\" src=\"//www.google-analytics.com/analytics.js\">" +
+      "<script src=\"/jsquery/jquery-1.6.1.min.js\" type=\"text/javascript\">" +
+      "<link href=\"http://purl.org/DC/elements/1.0/\" rel=\"schema.DC\">" +
+      "<meta content=\"The Golden title 1 \" name=\"dc.Title\">" +
+      "<meta content=\"XYZ Journal\" name=\"citation_journal_title\">" +
+      "</head>" +
+      "</div>";
+  
   private static final String withNavWrapper =
       "<div class=\"block\">"
           + "<div id=\"nav-wrapper\">"
@@ -89,7 +103,6 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           "</span>" +
           "</div>" +
           "</div>";
-  
   private static final String withSidebarLeft = 
       "<div class=\"block\">"
           + "<div id=\"sidebar-left\">"
@@ -105,16 +118,9 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "</ul></li></ul><div></div></div>"
           + "</div>";
   
-  private static final String withPreviousTocNext = 
-      "<div class=\"block\">" +
-          "<a class=\"white-link-right\" title=\"Previous Article\" " +
-          "href=\"/doi/full/11.11111/jid-2013-001\"> Ç Previous</a>" +
-          "<a class=\"white-link-right\" " +
-          "href=\"http://www.xxx.com/toc/jid/2013/2\"> TOC </a>" +
-          "<a class=\"white-link-right\" title=\"Next Article\" " +
-          "href=\"/doi/full/11.11111/jid-2013-005\"> Next È </a>" +
-          "</div>";
-  
+  // toc - table of contents box with full issue pdf,
+  // previous/next issue, current issue - no unique name found
+  // http://www.cysjournal.ca/toc/cysj/2013/2
   private static final String withFullListIssues =
       "<div class=\"block\">"
           + "<div class=\"box-pad border-gray margin-bottom clearfix\">"
@@ -126,6 +132,18 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "href=\"/doi/pdf/11.11111/xxxx2013-2\">"
           + "</a></div></div>"
           + "</div>";
+  
+  // abs, full - previous/toc/next article
+  // http://www.cysjournal.ca/doi/full/10.13034/cysj-2013-006
+  private static final String withPreviousNextArticle = 
+      "<div class=\"block\">" +
+          "<a class=\"white-link-right\" title=\"Previous Article\" " +
+          "href=\"/doi/full/11.11111/jid-2013-001\"> Ç Previous</a>" +
+          "<a class=\"white-link-right\" " +
+          "href=\"http://www.xxx.com/toc/jid/2013/2\"> TOC </a>" +
+          "<a class=\"white-link-right\" title=\"Next Article\" " +
+          "href=\"/doi/full/11.11111/jid-2013-005\"> Next È </a>" +
+          "</div>";
   
   private static final String withSpiderTrap =
       "<div class=\"block\">"
@@ -149,6 +167,13 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "</div></div></div>"
           + "</div>";
   
+  private static final String withBanner =
+       "<div class=\"block\">" +
+          "<div class=\"banner\">" +
+          "<h1> XYZ Journal</h1>" +
+          "</div>" +
+          "</div>";
+      
   private static final String withAllSidebarRightExceptDownloadCitation = 
       "<div class=\"block\">"
           + "<div id=\"sidebar-right\">"
@@ -217,10 +242,8 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
   public static class TestCrawl extends TestCYSHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new CYSHtmlCrawlFilterFactory();
-      doFilterTest(cau, variantFact, withNavWrapper, filteredStr);
-      doFilterTest(cau, variantFact, withBreadcrumbs, filteredStr);
       doFilterTest(cau, variantFact, withSidebarLeft, filteredStr);
-      doFilterTest(cau, variantFact, withPreviousTocNext, filteredStr);
+      doFilterTest(cau, variantFact, withPreviousNextArticle, filteredStr);
       doFilterTest(cau, variantFact, withFullListIssues, filteredStr);
       doFilterTest(cau, variantFact, withSpiderTrap, filteredStr);
     }    
@@ -230,14 +253,17 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
    public static class TestHash extends TestCYSHtmlFilterFactory {   
     public void testFiltering() throws Exception {
       variantFact = new CYSHtmlHashFilterFactory();
+      doFilterTest(cau, variantFact, withHead, filteredStr);
       doFilterTest(cau, variantFact, withLeaderBoard, filteredStr);
       doFilterTest(cau, variantFact, withTopBarWrapper, filteredStr);
+      doFilterTest(cau, variantFact, withBanner, filteredStr);
       doFilterTest(cau, variantFact, withNavWrapper, filteredStr);
       doFilterTest(cau, variantFact, withBreadcrumbs, filteredStr);
       doFilterTest(cau, variantFact, withSidebarLeft, filteredStr);
       doFilterTest(cau, variantFact, withAllSidebarRightExceptDownloadCitation, 
                    sidebarRightFiltered);
       doFilterTest(cau, variantFact, withFullListIssues, filteredStr);
+      doFilterTest(cau, variantFact, withPreviousNextArticle, filteredStr);
       doFilterTest(cau, variantFact, withSpiderTrap, filteredStr);
     }
   }

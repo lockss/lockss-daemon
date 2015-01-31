@@ -1,10 +1,10 @@
 /* 
- * $Id: CYSHtmlCrawlFilterFactory.java,v 1.1 2014-12-14 01:16:40 ldoan Exp $
+ * $Id: CYSHtmlCrawlFilterFactory.java,v 1.2 2015-01-31 20:18:13 ldoan Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,26 +43,18 @@ public class CYSHtmlCrawlFilterFactory
   extends BaseAtyponHtmlCrawlFilterFactory {
   
     NodeFilter[] filters = new NodeFilter[] {
-        // from  toc, abs, full - strip below the main title with links to 
-        // Home, About, Journals, etc...
-        // http://www.cysjournal.ca/toc/cysj/2013/2
-        HtmlNodeFilters.tagWithAttribute("div", "id", "nav-wrapper"),        
-        // from toc, abs, full - breadcrumbs leading to
-        // journal home, list of issues 
-        // http://www.cysjournal.ca/toc/cysj/2013/2
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "breadcrumbs"),        
-        // from toc, abs, full - all left sidebar
+        // toc, abs, full - all left sidebar
         // http://www.cysjournal.ca/toc/cysj/2013/2
         // http://www.cysjournal.ca/doi/abs/10.13034/cysj-2013-006
-        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-left"),        
-        // from abs, full - previous/toc/next article
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-left"), 
+        // toc - table of contents box with full issue pdf,
+        // previous/next issue, current issue - no unique name found
+        // http://www.cysjournal.ca/toc/cysj/2013/2
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+            "box-pad\\s+border-gray\\s+margin-bottom\\s+clearfix"),
+        // abs, full - previous/toc/next article
         // http://www.cysjournal.ca/doi/full/10.13034/cysj-2013-006
         HtmlNodeFilters.tagWithAttribute("a", "class", "white-link-right"),      
-        // from toc - center area above the current issue has links 
-        // to current/full/list of issues
-        // http://www.cysjournal.ca/toc/cysj/2013/2
-        HtmlNodeFilters.tagWithAttribute("div", "class", 
-            "box-pad border-gray margin-bottom clearfix"),       
        // spider trap link in this tag
        // <a href="/doi/pdf/10.1046/9999-9999.99999">
        // http://www.cysjournal.ca/toc/cysj/2013/2
