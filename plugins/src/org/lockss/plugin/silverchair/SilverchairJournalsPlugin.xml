@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -83,7 +83,7 @@
       <string>1,"^%sIssue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", base_url, resource_id, resource_id</string>
       <string>1,"^%sdata/(Journals|Multimedia)/", base_url</string>
       <string>1,"^%scombres\.axd/", base_url</string>
-      <string>1,"^https?://(ajax\\.googleapis\\.com|ajax\\.microsoft\\.com|.*\\.silverchair\\.netdna-cdn\\.com)/"</string>
+      <string>1,"^https?://(ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com)/"</string>
     </list>
   </entry>
   <entry>
@@ -162,6 +162,6 @@
   <entry>
     <!-- org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>"ajax\\.googleapis\\.com|ajax\\.microsoft\\.com|.*\\.silverchair\\.netdna-cdn\\.com"</string>
+    <string>"ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com"</string>
   </entry>
 </map>
