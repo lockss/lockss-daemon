@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairHtmlHashFilterFactory.java,v 1.6 2014-11-20 21:54:29 thib_gc Exp $
+ * $Id: SilverchairHtmlHashFilterFactory.java,v 1.7 2015-01-31 03:57:40 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +44,11 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
+/**
+ * @deprecated This class is in the process of being deprecated in favor of
+ * {@link ScHtmlHashFilterFactory} (work in progress).
+ */
+@Deprecated
 public class SilverchairHtmlHashFilterFactory implements FilterFactory {
 
   @Override

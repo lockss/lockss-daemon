@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -83,6 +83,7 @@
       <string>1,"^%sIssue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", base_url, resource_id, resource_id</string>
       <string>1,"^%sdata/(Journals|Multimedia)/", base_url</string>
       <string>1,"^%scombres\.axd/", base_url</string>
+      <string>1,"^https?://(ajax\\.googleapis\\.com|ajax\\.microsoft\\.com|.*\\.silverchair\\.netdna-cdn\\.com)/"</string>
     </list>
   </entry>
   <entry>
@@ -115,7 +116,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.SilverchairHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -157,5 +158,10 @@
         <string>org.lockss.plugin.silverchair.SilverchairHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>"ajax\\.googleapis\\.com|ajax\\.microsoft\\.com|.*\\.silverchair\\.netdna-cdn\\.com"</string>
   </entry>
 </map>
