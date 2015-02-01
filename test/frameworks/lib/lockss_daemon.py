@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.43 2014-12-28 08:44:43 tlipkis Exp $
+# $Id: lockss_daemon.py,v 1.44 2015-02-01 05:24:40 dshr Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -612,17 +612,27 @@ class Client:
             if new_crawl:
                 table = self.getCrawlStatus( AU )
                 status = table[ 0 ][ 'crawl_status' ][ 'value' ]
+		log.debug( 'New crawl on %s status %s' % ( self, status ) )
             else:
                 status = self._getStatusTable( 'ArchivalUnitTable', AU.auId )[ 0 ][ 'Last Crawl Result' ]
+		log.debug( 'Old crawl on %s status %s' % ( self, status ) )
         except ( TypeError, IndexError, KeyError ):
-            log.debug( 'AU not found' )
+            log.info( 'AU not found' )
             return False
         if status == 'Successful':
+	    if not new_crawl:
+		log.debug( 'Not new crawl' )
+	    if not isinstance( AU, Simulated_AU ):
+		log.debug( 'Not simulated' )
+	    if int(self.valueOfRef( table[ 0 ][ 'num_urls_fetched' ] )) == AU.expectedUrlCount():
+		log.debug( 'Count is expected' )
             if not new_crawl or not isinstance( AU, Simulated_AU ) or int(self.valueOfRef( table[ 0 ][ 'num_urls_fetched' ] )) == AU.expectedUrlCount():
+		log.debug( 'Not new_crawl etc. so True' )
                 return True
             raise LockssError( "Crawl on client %s collected only %s of %i URL's" % ( self, self.valueOfRef( table[ 0 ][ 'num_urls_fetched' ] ), AU.expectedUrlCount() ) )
         elif status not in ( 'Pending', 'Active', 'Interrupted by daemon exit' ):
             raise LockssError( '%s in crawl on %s' % ( status, self ) )
+	log.debug( 'Fall through' )
 
     def isPublisherDown( self, AU ):
         """Return true if the AU is marked 'publisher down' (i.e., if the ArchivalUnitTable lists 'Available From Publisher' as 'No')"""

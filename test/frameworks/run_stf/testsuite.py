@@ -3,7 +3,7 @@
 build frameworks.  If desired, optional parameters may also be set to change
 the default behavior.  See testsuite.props for details."""
 
-# $Id: testsuite.py,v 1.83 2015-01-08 06:25:45 tlipkis Exp $
+# $Id: testsuite.py,v 1.84 2015-02-01 05:24:41 dshr Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -222,6 +222,7 @@ class V3TestCases( LockssTestCases ):
             client.waitAu( self.AU )
         log.info( "Waiting for simulated AU's to crawl" )
         for client in self.clients:
+	    log.info( 'Checking client %s for crawl' % client.port);
             self.assert_( client.waitForSuccessfulCrawl( self.AU ), "AU's did not complete initial crawl" )
         log.info( "AU's completed initial crawl" )
 
@@ -1009,9 +1010,13 @@ class TotalLossRecoveryPoPV3TestCase( TotalLossRecoveryV3Tests ):
         TotalLossRecoveryV3Tests.__init__( self, methodName )
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True,
                                      'org.lockss.poll.v3.modulus': 2,
-                                     'org.lockss.poll.v3.enableLocalPolls': False,
+                                     'org.lockss.baseuc.checksumAlgorithm': 'SHA-1',
+                                     'org.lockss.blockHasher.enableLocalHash': True,
+                                     'org.lockss.blockHasher.localHashAlgorithm': 'SHA-1',
                                      'org.lockss.poll.v3.allPoPPolls': True,
                                      'org.lockss.poll.v3.enablePoPVoting': True,
+            			     'org.lockss.poll.v3.toplevelPollInterval': 1000,
+            			     'org.lockss.poll.minPollAttemptInterval': 500,
                                      'org.lockss.poll.v3.enablePoPPolls': True}
 
     def _verify_poll_results( self ):

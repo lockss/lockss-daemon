@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.277 2014-12-28 08:43:14 tlipkis Exp $
+ * $Id: PollManager.java,v 1.278 2015-02-01 05:24:38 dshr Exp $
  */
 
 /*
@@ -987,7 +987,7 @@ public class PollManager
 		}
 	      } catch (NotEligibleException e) {
 		if (theLog.isDebug3()) {
-		  theLog.debug3("Not eligible for poll: " + au);
+		  theLog.debug3("Not eligible for poll: " + au + " reason " + e);
 		}
 	      }
 	    } catch (RuntimeException e) {
