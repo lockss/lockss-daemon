@@ -8,7 +8,7 @@ BEGIN {
 
 {
   # add a loop to add line only if either status is _not_ manifest or ending year is gt or eq to contract year
-  current_year = 2013
+  current_year = 2014
   end_year = 0
   incontract = 0
   test_year = ""
