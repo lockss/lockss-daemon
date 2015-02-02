@@ -70,7 +70,7 @@ if [ "X${LOCKSS_CONFIG_VERSION}" != X ] ; then
     CURRENT_CONFIG_VERSION=`sed -n 's/^.*LOCKSS_CONFIG_VERSION=\([1-9][0-9]*\).*$/\1/p' <${LOCKSS_HOME}/etc/lockss/hostconfig`
     if [ "X${CURRENT_CONFIG_VERSION}" != X -a "${LOCKSS_CONFIG_VERSION}" != "${CURRENT_CONFIG_VERSION}" ] ; then
         echo "Config version skew: required ${CURRENT_CONFIG_VERSION} have ${LOCKSS_CONFIG_VERSION}."
-        echo "Not starting LOCKSS. Please run ${LOCKSS_HOME}/etc/lockss/hostconfig."
+        echo "Not starting $1. Please run ${LOCKSS_HOME}/etc/lockss/hostconfig."
         exit 1
     fi
 fi
@@ -78,6 +78,8 @@ if [ "X${LOG_FILE}" = X -o ! -f ${LOG_FILE} ]; then
     echo "No log file - can't start $1"
     exit 1
 fi
+
+if [ -n "$LOCKSS_DEBUG" ]; then echo "startdaemon running: $$"; fi >>${LOG_FILE}
 
 ensure_dir "${RUN_DIR}"
 TEMPFILE="${RUN_DIR}/startdaemon.$$"
@@ -87,6 +89,7 @@ TEMPFILE="${RUN_DIR}/startdaemon.$$"
 # check for stale lock file left over from abnormal exit or system crash
 if [ -f "${LOCKFILE}" ]; then
     SPID=`cat "${LOCKFILE}"`
+    echo "$$: Existing lockfile found: ${LOCKFILE}: ${SPID}" >>${LOG_FILE}
     if [ "X${SPID}" != X ]; then
 	if ps -p "${SPID}" | grep -q startdaemon; then
 	    # PID in lock file is a startdaemon process.  If it's us, we
@@ -94,15 +97,17 @@ if [ -f "${LOCKFILE}" ]; then
 	    # file was present when the system booted, and we got the same
 	    # pid we had last time.)
 	    if [ "X${SPID}" = "$$" ]; then
-		echo "My PID (${SPID}) already locked" >>${LOG_FILE}
+		echo "$$: My PID (${SPID}) already locked" >>${LOG_FILE}
 		ALREADY_LOCKED=yes
+	    else
+		if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: Not my pid: ${SPID}"; fi >>${LOG_FILE}
 	    fi
 	else
-	    echo "${SPID} isn't a startdaemon, deleting ${LOCKFILE}" >>${LOG_FILE}
+	    echo "$$: ${SPID} isn't a startdaemon, deleting ${LOCKFILE}" >>${LOG_FILE}
 	    rm "${LOCKFILE}"
 	fi
     else
-	echo "deleting empty ${LOCKFILE}" >>${LOG_FILE}
+	echo "$$: deleting empty ${LOCKFILE}" >>${LOG_FILE}
 	rm "${LOCKFILE}"
     fi
 fi
@@ -114,13 +119,13 @@ fi
 
 if [ "X${ALREADY_LOCKED}" != Xyes ]; then
     if ! echo "$$" >${TEMPFILE} 2>/dev/null; then
-	echo "No permission to write ${TEMPFILE}" >>${LOG_FILE}
+	echo "$$: No permission to write ${TEMPFILE}" >>${LOG_FILE}
 	rm -f ${TEMPFILE}
 	exit 1
     fi
     # ln is atomic, fails if lock file already exists
     if ! ln ${TEMPFILE} ${LOCKFILE} >/dev/null 2>&1; then
-	echo "startdaemon already running" >>${LOG_FILE}
+	echo "$$: startdaemon already running" >>${LOG_FILE}
 	rm -f ${TEMPFILE}
 	exit 1
     fi
@@ -134,8 +139,11 @@ fi
 # this point but haven't started anything, so there should be no processes
 # running as this user.
 
-if [ "`ps --no-headers -u lockss`"X != X ]; then
+if [ "`ps --no-headers -u $1`"X != X ]; then
+    echo "$$: Deleting stale ${KEEP_GOING}" >>${LOG_FILE}
     rm -f ${KEEP_GOING}
+    echo "$$: killing stale $1 processes:" >>${LOG_FILE}
+    ps -u  -F >>${LOG_FILE}
     killall -u $1 -s 9
 fi
 
@@ -182,12 +190,15 @@ fi
 does_file_contain() {
     local FILE="$1"
     if [ ! -s "${FILE}" ]; then
+	if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: does_file_contain(${FILE},$2) doesn't exist"; fi >>${LOG_FILE}
 	return 1
     fi
     local CONT=`cat "${FILE}"`
     if [ "${CONT}" != "$2" ]; then
+	if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: does_file_contain(${FILE},$2): != $(CONT), false"; fi >>${LOG_FILE}
         return 1
     fi
+    if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: does_file_contain(${FILE},$2): true"; fi >>${LOG_FILE}
     return 0
 }
 
@@ -199,10 +210,19 @@ is_continue() {
 }
 
 cleanup() {
+    if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: cleanup $1 deleting ${LOCKFILE} ${KEEP_GOING}"; fi >>${LOG_FILE}
     rm -f ${LOCKFILE} ${KEEP_GOING}
 }
 
-trap "cleanup" 0 1 2 3 15
+ignore() {
+    if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: ignoring signal $1"; fi >>${LOG_FILE}
+}
+
+trap "cleanup 0" 0
+trap "ignore 1" 1
+trap "ignore 2" 2
+trap "cleanup 3" 3
+trap "cleanup 15" 15
 
 # We want to use the PID of the subshell running the loop as both the loop
 # continuation condition and the startdaemon lock.  The normal way to get
@@ -212,6 +232,7 @@ trap "cleanup" 0 1 2 3 15
 MYPID=`sh -c 'echo $PPID'`
 echo ${MYPID} >${KEEP_GOING}
 chown $1 ${KEEP_GOING}
+if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: Wrote ${KEEP_GOING}: `cat ${KEEP_GOING}`"; fi >>${LOG_FILE}
 # put PID of spawned loop in lock file
 echo ${MYPID} >${LOCKFILE}
 
@@ -265,6 +286,7 @@ while is_continue; do
                 rm -f ${RMDUP_OUT}
                 cat /dev/null >${RMDUP_OUT}
                 chown $1 ${RMDUP_OUT}
+                if [ -n "$LOCKSS_DEBUG" ]; then echo "$$: Running rmdup"; fi >>${LOG_FILE}
                 runuser -s /bin/sh - $1 -c "nice -10 ${RMDUP_SCRIPT} ${RMDUP_PID} ${RMDUP_STATE} ${CFG_FILE} ${RMDUP_OUT}" &
                 echo $! >${RMDUP_PID}
                 chown $1 ${RMDUP_PID}
@@ -285,7 +307,7 @@ while is_continue; do
         ;;
     esac
     EXIT_CODE=$?
-    echo "stopped with status ${EXIT_CODE} at `date`." >>${LOG_FILE}
+    echo "$$: stopped with status ${EXIT_CODE} at `date`." >>${LOG_FILE}
 
     START_COUNT=`expr ${START_COUNT} + 1`
     if [ ${START_COUNT} -gt ${MAX_STARTS} ]; then
@@ -293,7 +315,7 @@ while is_continue; do
         Linux)
             if [ X`find ${START_FLAG} -mmin +${MAX_STARTS}` = X ]; then
 # Disabled until can be debugged.
-                echo "Rapid daemon exit detected" >>${LOG_FILE}
+                echo "$$: Rapid daemon exit detected" >>${LOG_FILE}
                 # Daemon has been exiting once per minute - give up
 #                echo "Daemon exiting rapidly" >>${LOG_FILE}
 #                rm -f ${KEEP_GOING}
@@ -311,4 +333,5 @@ while is_continue; do
     fi
 done ) &
 
+echo "$$: startdaemon done" >>${LOG_FILE}
 exit 0
