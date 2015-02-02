@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.7 2014-12-22 22:53:06 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.8 2015-02-02 23:34:37 etenbrink Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.royalsocietyofchemistry;
 import java.io.InputStream;
 
 import org.lockss.util.*;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.test.*;
 
 public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
@@ -44,6 +43,7 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
   private RSC2014HtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
 
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     fact = new RSC2014HtmlHashFilterFactory();
@@ -100,6 +100,17 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       ", <span>Jnl.</span>, year, <span>2</span>(1), 80 87" +
       "<a>Left</a><a><img src=\"http://pubs.rsc.org/en\"></a>.";
   
+  private static final String withNav = "<html>\n" +
+      " <div id=\"top\" class=\"navigation\" style=\"color: rgb(0, 0, 0);\">\n" + 
+      "  <h1>\nGap in\n</h1>\n" + 
+      "  <div class=\"open_access\">\n</div>" +
+      " </div>" +
+      "</html>";
+  
+  private static final String withoutNav = "<html>" +
+      " " +
+      "</html>";
+  
   private static final String genError = "" +
       "<html><body>" +
       "<span id=\"1\" />" +
@@ -120,6 +131,7 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
     assertFilterToSame(withScript, withoutScript);
     assertFilterToSame(withStuff, withoutStuff);
     assertFilterToSame(withLinks, withoutLinks);
+    assertFilterToSame(withNav, withoutNav);
   }
   
   private void assertFilterToSame(String str1, String str2) throws Exception {
