@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.13 2015-01-23 07:40:08 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.14 2015-02-02 23:54:00 etenbrink Exp $
  */
 
 /*
@@ -86,6 +86,8 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     // most scripts are in head, however, if any are in the body they are filtered
     new TagNameFilter("script"),
     new TagNameFilter("noscript"),
+    // <div class="ui-dialog ui-widget had id changes in inner div
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ui-widget"),
   };
   
   // HTML transform to convert all remaining nodes to plaintext nodes
