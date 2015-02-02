@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlHashFilterFactory.java,v 1.6 2014-12-22 22:58:01 etenbrink Exp $
+ * $Id: RSC2014HtmlHashFilterFactory.java,v 1.7 2015-02-02 23:35:34 etenbrink Exp $
  */
 
 /*
@@ -100,6 +100,7 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
     }
   };
   
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
                                                String encoding)
       throws PluginException {
@@ -112,6 +113,8 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tag("script"),
         // remove head for metadata changes and JS/CSS version number
         HtmlNodeFilters.tag("head"),
+        // <div id="top" class="navigation"  access links intermittent http://xlink.rsc.org/?doi=c3dt52391h
+        HtmlNodeFilters.tagWithAttribute("div", "class", "navigation"),
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
