@@ -36,7 +36,8 @@ exit 0
 
 %pre
 grep -q ^lockss: /etc/passwd || ( useradd -d /home/lockss -s /bin/false lockss ; echo "Created user 'lockss'" )
-if [ -x /etc/init.d/lockss -a -s /etc/lockss/config.dat ]; then /etc/init.d/lockss stop ; echo "Stopped LOCKSS" ; rm -f ~lockss/KeepGoing ; PS=`ps a | grep 'startdaemon lockss' | sed 's/\([0-9][0-9]*\) .*/\1/'` ; if [ "X${PS}" != X ]; then for A in ${PS} ; do if kill -9 ${A} >/dev/null 2>&1 ; then echo "Killed ${A}" ; fi ; done ; fi ; fi
+if [ -x /etc/init.d/lockss -a -s /etc/lockss/config.dat ]; then /etc/init.d/lockss stop ; echo "Stopped LOCKSS" ; fi
+#if [ -x /etc/init.d/lockss -a -s /etc/lockss/config.dat ]; then /etc/init.d/lockss stop ; echo "Stopped LOCKSS" ; rm -f ~lockss/KeepGoing ; PS=`ps a | grep 'startdaemon lockss' | sed 's/\([0-9][0-9]*\) .*/\1/'` ; if [ "X${PS}" != X ]; then for A in ${PS} ; do if kill -9 ${A} >/dev/null 2>&1 ; then echo "Killed ${A}" ; fi ; done ; fi ; fi
 
 %post
 if [ -s /etc/lockss/config.dat ]; then /etc/init.d/lockss start ; echo "Started LOCKSS" ; else echo Please run /etc/lockss/hostconfig .  See /etc/lockss/README for details. ; fi
