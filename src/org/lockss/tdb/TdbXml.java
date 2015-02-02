@@ -1,5 +1,5 @@
 /*
- * $Id: TdbXml.java,v 1.8 2015-01-22 22:36:28 thib_gc Exp $
+ * $Id: TdbXml.java,v 1.9 2015-02-02 19:34:59 thib_gc Exp $
  */
 
 /*
@@ -414,6 +414,9 @@ public class TdbXml {
       int paramIndex = 1;
       for (String param : paramNames) {
         String val = params.get(param);
+        if (val == null || val.length() == 0) {
+          continue;
+        }
         appendOneParam(sb, paramIndex, param, val);
         ++paramIndex;
       }
