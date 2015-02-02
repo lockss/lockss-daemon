@@ -5,14 +5,22 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.ua.adpn.contentdm.UAContentDmPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>University of Alabama CONTENTdm Plugin (Full Collections)</string>
+    <string>edu.ua.adpn.contentdm.UAContentDmSplitCollectionsPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>University of Alabama CONTENTdm Plugin (Split Collections)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>edu.ua.adpn.contentdm.UAContentDmPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
     <string>3</string>
   </entry>
   <entry>
@@ -36,34 +44,23 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_part</key>
+        <displayName>Collection Part Number</displayName>
+        <description>The number of this part of the collection (1, 2, 3...)</description>
+        <type>2</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;University of Alabama CONTENTdm Plugin (Full Collections), Base URL %s, Collection Path %s&quot;, base_url, collection_path</string>
+    <string>&quot;University of Alabama CONTENTdm Plugin (Split Collections), Base URL %s, Collection Path %s, Collection Part %d&quot;, base_url, collection_path, collection_part</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/Documentation/Manifest.html&quot;, base_url, collection_path</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/&quot;, base_url, collection_path</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>2419200000</long>
-  </entry>
-  <entry>
-    <string>au_crawl_depth</string>
-    <int>99</int>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
+    <string>&quot;%s%s/Documentation/Manifest%d.html&quot;, base_url, collection_path, collection_part</string>
   </entry>
 </map>
