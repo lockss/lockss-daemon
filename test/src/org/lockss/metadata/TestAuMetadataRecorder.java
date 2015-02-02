@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.11 2015-01-12 20:40:46 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.12 2015-02-02 21:33:17 fergaloy-sf Exp $
  */
 
 /*
@@ -153,6 +153,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runRecordUnknownPublisher4();
     runRecordNoJournalTitleNoISSNJournal();
     runNormalizeMetadataTest();
+    runRecordMultipleJournalsAndPublishers();
   }
 
   ReindexingTask newReindexingTask(ArchivalUnit au,
@@ -197,7 +198,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int nTitles = 1;
       int nArticles = 6;
       ArticleMetadataBuffer metadata = getJournalMetadata("Publisher", nTitles,
-	  nArticles, true, false, null);
+	  nArticles, true, false, null, false);
 
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
                 .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
@@ -225,7 +226,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       
       // now index the same AU, this time with a publication title
       metadata = getJournalMetadata("Publisher", nTitles, nArticles, false,
-	  false, null);
+	  false, null, false);
       
       task = newReindexingTask(sau0, sau0.getPlugin()
           .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
@@ -256,7 +257,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
   private ArticleMetadataBuffer getJournalMetadata(String publishername,
       int publicationCount, int articleCount, boolean noJournalTitles,
-      boolean noIssns, Map<String, String> featuredUrls) throws IOException {
+      boolean noIssns, Map<String, String> featuredUrls,
+      boolean multiplePublishers) throws IOException {
     ArticleMetadataBuffer result = new ArticleMetadataBuffer(getTempDir());
 
     for (int i = 1; i <= publicationCount; i++) {
@@ -266,7 +268,11 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	       MetadataField.PUBLICATION_TYPE_JOURNAL);
 
 	if (publishername != null) {
-	  am.put(MetadataField.FIELD_PUBLISHER, publishername);
+	  if (multiplePublishers) {
+	    am.put(MetadataField.FIELD_PUBLISHER, publishername + i);
+	  } else {
+	    am.put(MetadataField.FIELD_PUBLISHER, publishername);
+	  }
 	}
 
 	if (!noJournalTitles) {
@@ -620,7 +626,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata = getJournalMetadata(null, 1, 8, false,
-	  false, null);
+	  false, null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -647,7 +653,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       addJournalTypeAggregates(conn, publicationSeq, true, 2013, 1, 30, 20, 10);
 
-      metadata = getJournalMetadata("Publisher", 1, 8, false, false, null);
+      metadata =
+	  getJournalMetadata("Publisher", 1, 8, false, false, null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -709,7 +716,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 8, false, false, null);
+	  getJournalMetadata("Publisher", 1, 8, false, false, null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -730,7 +737,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Check that 0 archival unit problems exist.
       assertEquals(0, countAuProblems(conn) - initialProblemCount);
 
-      metadata = getJournalMetadata(null, 1, 8, false, false, null);
+      metadata = getJournalMetadata(null, 1, 8, false, false, null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -791,7 +798,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata = 
-          getJournalMetadata(null, 1, 8, false, false, null);
+          getJournalMetadata(null, 1, 8, false, false, null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -820,7 +827,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       metadataManager.getMetadataManagerSql().removeAu(conn, sau0.getAuId());
 
-      metadata = getJournalMetadata("Publisher", 1, 8, false, false, null);
+      metadata =
+	  getJournalMetadata("Publisher", 1, 8, false, false, null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -882,7 +890,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 8, false, false,  null);
+	  getJournalMetadata("Publisher", 1, 8, false, false,  null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -905,7 +913,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       metadataManager.getMetadataManagerSql().removeAu(conn, sau0.getAuId());
 
-      metadata = getJournalMetadata(null, 1, 8, false, false, null);
+      metadata = getJournalMetadata(null, 1, 8, false, false, null, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -962,8 +970,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       int nTitles = 1;
       int nArticles = 6;
-      ArticleMetadataBuffer metadata =
-        getJournalMetadata("Publisher", nTitles, nArticles, true, true, null);
+      ArticleMetadataBuffer metadata = getJournalMetadata("Publisher", nTitles,
+	  nArticles, true, true, null, false);
 
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
@@ -1262,7 +1270,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
     // Generate the metadata.
     ArticleMetadataBuffer metadata =
-	getJournalMetadata("Publisher", 1, 1, true, false, featuredUrls);
+	getJournalMetadata("Publisher", 1, 1, true, false, featuredUrls, false);
 
     Iterator<ArticleMetadataInfo> mditr = metadata.iterator();
 
@@ -1289,6 +1297,70 @@ public class TestAuMetadataRecorder extends LockssTestCase {
           fail("Unexpected URL: " + url);
         }
       }
+    }
+  }
+
+  /**
+   * Records an AU with multiple journals, each with a different publisher.
+   * 
+   * @throws Exception
+   */
+  private void runRecordMultipleJournalsAndPublishers() throws Exception {
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      // Get the initial number of publishers.
+      int initialPublisherCount = countPublishers(conn);
+      assertNotEquals(-1, initialPublisherCount);
+
+      // Get the initial number of publications.
+      int initialPublicationCount = countPublications(conn);
+      assertNotEquals(-1, initialPublicationCount);
+      
+      // Get the initial number of unknown publication titles
+      int initialUnknownTitlesCount = 
+          countUnknownTitles(conn);
+
+      // Get the initial number of archival units.
+      int initialAuMdCount = countArchivalUnits(conn);
+      assertNotEquals(-1, initialAuMdCount);
+
+      // Get the initial number of articles.
+      int initialArticleCount = countAuMetadataItems(conn);
+      assertNotEquals(-1, initialArticleCount);
+
+      // Each publication has its own publisher. 
+      int nTitles = 4;
+      int nArticles = 3;
+      ArticleMetadataBuffer metadata = getJournalMetadata("Publisher", nTitles,
+	  nArticles, false, false, null, true);
+
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+                .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+      // Write the AU metadata to the database.
+      new AuMetadataRecorder(task, metadataManager, sau0)
+          .recordMetadata(conn, metadata.iterator());
+
+      // Check that as many publishers as publications exist.
+      assertEquals(nTitles, countPublishers(conn) - initialPublisherCount);
+
+      // Check that nTitles publication exists.
+      assertEquals(nTitles, countPublications(conn) - initialPublicationCount);
+
+      // Check that no unknown publication title exist.
+      assertEquals(0, countUnknownTitles(conn) - initialUnknownTitlesCount);
+
+      // Check that 1 archival unit exists.
+      assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
+
+      // Check that nArticles articles for each of the nTitle titles
+      assertEquals(nTitles*nArticles, 
+                   countAuMetadataItems(conn) - initialArticleCount);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 

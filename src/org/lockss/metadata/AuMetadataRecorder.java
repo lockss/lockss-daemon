@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.23 2015-01-12 20:40:44 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.24 2015-02-02 21:33:17 fergaloy-sf Exp $
  */
 
 /*
@@ -820,10 +820,17 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "mdinfo.articleTitle = " + mdinfo.articleTitle);
     }
 
-    // Check whether the publisher has not been located in the database.
-    if (publisherSeq == null) {
-      // Yes: Find or create the publisher.
+    // Check whether this is a new publisher.
+    if (publisherSeq == null || !isSamePublisher(mdinfo)) {
+      // Yes.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "is new publisher.");
+
+      // Find or create the publisher.
       findOrCreatePublisher(conn, mdinfo);
+
+      // It cannot be the same publication as the previous one if it has a
+      // different publisher.
+      publicationSeq = null;
     }
     
     // Check whether this is a new publication.
@@ -1706,6 +1713,20 @@ public class AuMetadataRecorder {
   }
   
   /**
+   * Provides an indication of whether the previous publisher is the same as the
+   * current publisher.
+   * 
+   * @param mdinfo
+   *          An ArticleMetadataInfo providing the metadata of the current
+   *          publication.
+   * @return <code>true</code> if the previous publisher is the same as the
+   *         current publisher, <code>false</code> otherwise.
+   */
+  private boolean isSamePublisher(ArticleMetadataInfo mdinfo) {
+    return isSameProperty(publisherName, mdinfo.publisher);
+  }
+  
+  /**
    * Provides an indication of whether the previous publication is the same as
    * the current publication.
    * 
@@ -1726,7 +1747,7 @@ public class AuMetadataRecorder {
 	isSameProperty(seriesTitle, mdinfo.seriesTitle) &&
 	isSameProperty(proprietarySeriesId, mdinfo.proprietarySeriesIdentifier);
   }
-  
+
   /**
    * Provides an indication of whether the previous property is the same as the
    * current property.
