@@ -552,17 +552,17 @@ comment[mn20] = URL with 403 Forbidden error
       param[journal_id] = pasc
       attr[journal_id] = pasc
 
-      au < released ; 2005 ; Pacific Science Volume 59 ; 59 >
-      au < released ; 2006 ; Pacific Science Volume 60 ; 60 >
-      au < released ; 2007 ; Pacific Science Volume 61 ; 61 >
-      au < released ; 2008 ; Pacific Science Volume 62 ; 62 >
-      au < released ; 2009 ; Pacific Science Volume 63 ; 63 >
-      au < released ; 2010 ; Pacific Science Volume 64 ; 64 >
-      au < released ; 2011 ; Pacific Science Volume 65 ; 65 >
-      au < released ; 2012 ; Pacific Science Volume 66 ; 66 >
-      au < released ; 2013 ; Pacific Science Volume 67 ; 67 >
-      au < manifest ; 2014 ; Pacific Science Volume 68 ; 68 >
-      au < expected ; 2015 ; Pacific Science Volume 69 ; 69 >
+      au < released ; 2005 ; Pacific Science Volume 59 [BioOne] ; 59 >
+      au < released ; 2006 ; Pacific Science Volume 60 [BioOne] ; 60 >
+      au < released ; 2007 ; Pacific Science Volume 61 [BioOne] ; 61 >
+      au < released ; 2008 ; Pacific Science Volume 62 [BioOne] ; 62 >
+      au < released ; 2009 ; Pacific Science Volume 63 [BioOne] ; 63 >
+      au < released ; 2010 ; Pacific Science Volume 64 [BioOne] ; 64 >
+      au < released ; 2011 ; Pacific Science Volume 65 [BioOne] ; 65 >
+      au < released ; 2012 ; Pacific Science Volume 66 [BioOne] ; 66 >
+      au < released ; 2013 ; Pacific Science Volume 67 [BioOne] ; 67 >
+      au < manifest ; 2014 ; Pacific Science Volume 68 [BioOne] ; 68 >
+      au < expected ; 2015 ; Pacific Science Volume 69 [BioOne] ; 69 >
 
     }
 
@@ -573,13 +573,13 @@ comment[mn20] = URL with 403 Forbidden error
       param[journal_dir] = pacific_science
       attr[journal_id] = psc
 
-      au < released ; 2001 ; Pacific Science Volume 55 ; 55 >
-      au < released ; 2002 ; Pacific Science Volume 56 ; 56 >
-      au < released ; 2003 ; Pacific Science Volume 57 ; 57 >
-      au < released ; 2004 ; Pacific Science Volume 58 ; 58 >
-      au < released ; 2005 ; Pacific Science Volume 59 ; 59 >
-      au < released ; 2006 ; Pacific Science Volume 60 ; 60 >
-      au < released ; 2007 ; Pacific Science Volume 61 ; 61 >
+      au < released ; 2001 ; Pacific Science Volume 55 [Project MUSE] ; 55 >
+      au < released ; 2002 ; Pacific Science Volume 56 [Project MUSE] ; 56 >
+      au < released ; 2003 ; Pacific Science Volume 57 [Project MUSE] ; 57 >
+      au < released ; 2004 ; Pacific Science Volume 58 [Project MUSE] ; 58 >
+      au < released ; 2005 ; Pacific Science Volume 59 [Project MUSE] ; 59 >
+      au < released ; 2006 ; Pacific Science Volume 60 [Project MUSE] ; 60 >
+      au < released ; 2007 ; Pacific Science Volume 61 [Project MUSE] ; 61 >
 
 
     }

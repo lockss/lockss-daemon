@@ -113,20 +113,20 @@
       param[journal_dir] = human_biology
       attr[journal_id] = hub
     
-      au < released ; 2001 ; Human Biology Volume 73 ; 73 >
-      au < released ; 2002 ; Human Biology Volume 74 ; 74 >
-      au < released ; 2003 ; Human Biology Volume 75 ; 75 >
-      au < released ; 2004 ; Human Biology Volume 76 ; 76 >
-      au < released ; 2005 ; Human Biology Volume 77 ; 77 >
-      au < released ; 2006 ; Human Biology Volume 78 ; 78 >
-      au < released ; 2007 ; Human Biology Volume 79 ; 79 >
-      au < released ; 2008 ; Human Biology Volume 80 ; 80 >
-      au < released ; 2009 ; Human Biology Volume 81 ; 81 >
-      au < released ; 2010 ; Human Biology Volume 82 ; 82 >
-      au < released ; 2011 ; Human Biology Volume 83 ; 83 >
-      au < released ; 2012 ; Human Biology Volume 84 ; 84 >
-      au < released ; 2013 ; Human Biology Volume 85 ; 85 >
-      au < manifest ; 2014 ; Human Biology Volume 86 ; 86 >
+      au < released ; 2001 ; Human Biology Volume 73 [Project MUSE] ; 73 >
+      au < released ; 2002 ; Human Biology Volume 74 [Project MUSE] ; 74 >
+      au < released ; 2003 ; Human Biology Volume 75 [Project MUSE] ; 75 >
+      au < released ; 2004 ; Human Biology Volume 76 [Project MUSE] ; 76 >
+      au < released ; 2005 ; Human Biology Volume 77 [Project MUSE] ; 77 >
+      au < released ; 2006 ; Human Biology Volume 78 [Project MUSE] ; 78 >
+      au < released ; 2007 ; Human Biology Volume 79 [Project MUSE] ; 79 >
+      au < released ; 2008 ; Human Biology Volume 80 [Project MUSE] ; 80 >
+      au < released ; 2009 ; Human Biology Volume 81 [Project MUSE] ; 81 >
+      au < released ; 2010 ; Human Biology Volume 82 [Project MUSE] ; 82 >
+      au < released ; 2011 ; Human Biology Volume 83 [Project MUSE] ; 83 >
+      au < released ; 2012 ; Human Biology Volume 84 [Project MUSE] ; 84 >
+      au < released ; 2013 ; Human Biology Volume 85 [Project MUSE] ; 85 >
+      au < manifest ; 2014 ; Human Biology Volume 86 [Project MUSE] ; 86 >
 
     }
 
@@ -139,15 +139,15 @@
       
       comment[doNotProcess] = volume 85 500 error http://www.bioone.org/action/showFullPopup?doi=10.3378%2F027.085.0319&id=f01
 
-      au < released ; 2006 ; Human Biology Volume 78 ; 78 >
-      au < released ; 2007 ; Human Biology Volume 79 ; 79 >
-      au < released ; 2008 ; Human Biology Volume 80 ; 80 >
-      au < released ; 2009 ; Human Biology Volume 81 ; 81 >
-      au < released ; 2010 ; Human Biology Volume 82 ; 82 >
-      au < released ; 2011 ; Human Biology Volume 83 ; 83 >
-      au < released ; 2012 ; Human Biology Volume 84 ; 84 >
-      au < doNotProcess ; 2013 ; Human Biology Volume 85 ; 85 >
-      au < manifest ; 2014 ; Human Biology Volume 86 ; 86 >
+      au < released ; 2006 ; Human Biology Volume 78 [BioOne] ; 78 >
+      au < released ; 2007 ; Human Biology Volume 79 [BioOne] ; 79 >
+      au < released ; 2008 ; Human Biology Volume 80 [BioOne] ; 80 >
+      au < released ; 2009 ; Human Biology Volume 81 [BioOne] ; 81 >
+      au < released ; 2010 ; Human Biology Volume 82 [BioOne] ; 82 >
+      au < released ; 2011 ; Human Biology Volume 83 [BioOne] ; 83 >
+      au < released ; 2012 ; Human Biology Volume 84 [BioOne] ; 84 >
+      au < doNotProcess ; 2013 ; Human Biology Volume 85 [BioOne] ; 85 >
+      au < manifest ; 2014 ; Human Biology Volume 86 [BioOne] ; 86 >
 
     }
 

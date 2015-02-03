@@ -57,7 +57,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1540-7063
   
-      au < down ; 2004 ; Integrative and Comparative Biology Volume 44 ; 044 >
+      au < down ; 2004 ; Integrative and Comparative Biology Volume 44 [BioOne] ; 044 >
 
     }
 
@@ -68,10 +68,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = icbi
 
-      au < released ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
-      au < released ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
-      au < doNotProcess; 2004 ; Integrative and Comparative Biology Volume 44 ; 44 >
-      au < released ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 >
+      au < released ; 2002 ; Integrative and Comparative Biology Volume 42 [BioOne] ; 42 >
+      au < released ; 2003 ; Integrative and Comparative Biology Volume 43 [BioOne] ; 43 >
+      au < doNotProcess; 2004 ; Integrative and Comparative Biology Volume 44 [BioOne] ; 44 >
+      au < released ; 2005 ; Integrative and Comparative Biology Volume 45 [BioOne] ; 45 >
 
     }
 
