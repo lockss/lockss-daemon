@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>42</string>
+    <string>43</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -46,7 +46,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
     </map>
   </entry>
@@ -145,7 +145,7 @@
         <!--  new - making index.php and journal_id optional -->
         <!--  adding pdf for Electronic Journal of Combinatorics; 
               viewFile for KwaZulu Natal Museum -->
-        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#&amp;]+$", base_url, journal_id</string>
+        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
       </list>
   </entry>
   <entry>
