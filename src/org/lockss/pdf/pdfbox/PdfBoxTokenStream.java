@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokenStream.java,v 1.6 2014-10-06 22:42:39 thib_gc Exp $
+ * $Id: PdfBoxTokenStream.java,v 1.6.2.1 2015-02-03 23:41:03 thib_gc Exp $
  */
 
 /*
@@ -146,7 +146,11 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
         if (!fontName.isName() || !(fontSize.isFloat() || fontSize.isInteger())) {
           continue; // Malformed; ignore
         }
-        currentFont = (PDFont)getStreamResources().getFonts().get(fontName.getName());
+        PDResources streamResources = getStreamResources();
+        if (streamResources == null) {
+          throw new PdfException("Current context has no PDResources instance");
+        }
+        currentFont = (PDFont)streamResources.getFonts().get(fontName.getName());
         if (currentFont == null) {
           throw new PdfException(String.format("Font '%s' not found", fontName.getName()));              
         }
