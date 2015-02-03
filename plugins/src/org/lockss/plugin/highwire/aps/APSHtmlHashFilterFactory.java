@@ -1,5 +1,5 @@
 /*
- * $Id: APSHtmlHashFilterFactory.java,v 1.3 2015-01-23 08:35:06 etenbrink Exp $
+ * $Id: APSHtmlHashFilterFactory.java,v 1.4 2015-02-03 00:14:26 etenbrink Exp $
  */
 
 /*
@@ -65,10 +65,10 @@ public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^author-tooltip"),
-        // APS articles sometimes had view links, but not always
-        // XXX need to find example or remove this filter
-        // HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
+        // <div id="hw-article-author-popups-
+        // HtmlNodeFilters.tagWithAttributeRegex("div", "id", "hw-.{40}popup"),
+        // <div class="highwire-cite-access">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cite-access"),
     };
     
     InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
