@@ -2217,9 +2217,8 @@
       >
 
       param[journal_issn] = 2046-3383
-      comment[0] = title is not yet published on 9/19/2013
       
-      au < expected ; 2014 ; International Journal of the Digital Human Volume 1 ; 1 >
+      au < doNotProcess ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -2256,8 +2255,7 @@
       au < released ; 2009 ;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
       au < released ; 2011 ;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
       au < released ; 2012 ; International Journal of Dynamical Systems and Differential Equations Volume 4 ; 4 >
-      au < expected ; 2013 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Dynamical Systems and Differential Equations Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
 
     }
 
@@ -7403,7 +7401,7 @@
       
       au < released ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 >
       au < released ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Technoentrepreneurship Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; International Journal of Technoentrepreneurship Volume 3 ; 3 >
 
     }
 
