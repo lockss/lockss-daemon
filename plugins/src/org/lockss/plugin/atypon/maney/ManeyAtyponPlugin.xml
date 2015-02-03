@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - Janice/Ly V1.67</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,23 +9,19 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
     <string>Maney Publishing Plugin (Atypon)</string>
-  </entry>
+  </entry> 
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.67.0</string>
-  </entry>  
-    <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>    
    <entry>
     <string>plugin_publishing_platform</string>
@@ -41,7 +37,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>19</string>
+        <string>20</string>
       </entry>
       <entry>
         <string>Substance</string>
