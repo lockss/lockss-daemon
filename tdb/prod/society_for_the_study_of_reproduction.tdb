@@ -121,7 +121,7 @@
       param[journal_id] = 0006-3363
       implicit < status ; year ; name ; param[volume] >
 
-      au < down ; 2005 ; Biology of Reproduction Volume 72 ; 072 >
+      au < down ; 2005 ; Biology of Reproduction Volume 72 [BioOne] ; 072 >
 
     }
 
@@ -135,20 +135,20 @@
       comment[bire63] = v63 persistent 403 errors for URL redirection below
       comment[URL] = http://www.bioone.org/doi/abs/10.1043/0006-3363%282000%29063%3C1219%3AE%3E2.0.CO%3B2
 
-      au < released ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
-      au < doNotProcess ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
-      au < released ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
-      au < released ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
-      au < released ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
-      au < released ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
-      au < released ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
-      au < released ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
-      au < released ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
-      au < released ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
-      au < doNotProcess; 2005 ; Biology of Reproduction Volume 72 ; 72 >
-      au < released ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
-      au < released ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
-      au < released ; 2006 ; Biology of Reproduction Volume 75 ; 75 >
+      au < released ; 2000 ; Biology of Reproduction Volume 62 [BioOne] ; 62 >
+      au < doNotProcess ; 2000 ; Biology of Reproduction Volume 63 [BioOne] ; 63 >
+      au < released ; 2001 ; Biology of Reproduction Volume 64 [BioOne] ; 64 >
+      au < released ; 2001 ; Biology of Reproduction Volume 65 [BioOne] ; 65 >
+      au < released ; 2002 ; Biology of Reproduction Volume 66 [BioOne] ; 66 >
+      au < released ; 2002 ; Biology of Reproduction Volume 67 [BioOne] ; 67 >
+      au < released ; 2003 ; Biology of Reproduction Volume 68 [BioOne] ; 68 >
+      au < released ; 2003 ; Biology of Reproduction Volume 69 [BioOne] ; 69 >
+      au < released ; 2004 ; Biology of Reproduction Volume 70 [BioOne] ; 70 >
+      au < released ; 2004 ; Biology of Reproduction Volume 71 [BioOne] ; 71 >
+      au < doNotProcess; 2005 ; Biology of Reproduction Volume 72 [BioOne] ; 72 >
+      au < released ; 2005 ; Biology of Reproduction Volume 73 [BioOne] ; 73 >
+      au < released ; 2006 ; Biology of Reproduction Volume 74 [BioOne] ; 74 >
+      au < released ; 2006 ; Biology of Reproduction Volume 75 [BioOne] ; 75 >
 
     }
 

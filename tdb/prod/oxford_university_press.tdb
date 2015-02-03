@@ -2455,7 +2455,7 @@
     param[base_url] = http://brief-treatment.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+    au < superseded ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 [superseded] ; 5 >
 
     }
 
