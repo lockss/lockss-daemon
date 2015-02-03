@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalPermissionCheckerFactory.java,v 1.3 2015-01-23 09:04:43 etenbrink Exp $
+ * $Id: HighWireDrupalPermissionCheckerFactory.java,v 1.4 2015-02-03 00:07:43 etenbrink Exp $
  */
 
 /*
@@ -53,10 +53,10 @@ public class HighWireDrupalPermissionCheckerFactory implements PermissionChecker
     public boolean checkPermission(CrawlerFacade crawlFacade,
         Reader inputReader, String permissionUrl) {
       
-      BufferedReader in = new BufferedReader(inputReader); 
+      BufferedReader in = new BufferedReader(inputReader, 1024000); 
       boolean ret = true;
       try {
-        in.mark(102400);
+        in.mark(1024000);
         if (!StringUtil.containsString(in, "platform = DRUPAL", true)) {
           log.siteWarning(" ");
           log.siteWarning("       ===============        ");
