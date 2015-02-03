@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
     </map>
   </entry>
@@ -88,7 +88,7 @@
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.SilverchairHtmlLinkExtractorFactory</string>
+    <string>org.lockss.plugin.silverchair.ScHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
@@ -96,7 +96,7 @@
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.silverchair.SilverchairUrlNormalizer</string>
+    <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
@@ -126,18 +126,18 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.silverchair.SilverchairJournalsArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
   </entry> 
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.SilverchairJournalsArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
   </entry> 
   <entry>
     <string>text/plain_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;RIS</string>
-        <string>org.lockss.plugin.silverchair.SilverchairRisMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -146,7 +146,7 @@
     <map>
       <entry>
         <string>*;RIS</string>
-        <string>org.lockss.plugin.silverchair.SilverchairRisMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>  
@@ -155,12 +155,11 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.silverchair.SilverchairHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
   <entry>
-    <!-- org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
     <string>"ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com"</string>
   </entry>

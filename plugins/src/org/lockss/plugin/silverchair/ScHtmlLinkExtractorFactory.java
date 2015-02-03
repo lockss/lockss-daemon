@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairHtmlLinkExtractorFactory.java,v 1.1 2014-04-29 15:07:05 thib_gc Exp $
+ * $Id: ScHtmlLinkExtractorFactory.java,v 1.1 2015-02-03 03:07:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,11 +35,11 @@ package org.lockss.plugin.silverchair;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 
-public class SilverchairHtmlLinkExtractorFactory implements LinkExtractorFactory {
+public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-    return new SilverchairHtmlLinkExtractor();
+    return new ScHtmlLinkExtractor();
   }
   
 }

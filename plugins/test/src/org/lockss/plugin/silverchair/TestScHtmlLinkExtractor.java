@@ -1,5 +1,5 @@
 /*
- * $Id: TestSilverchairHtmlLinkExtractor.java,v 1.4 2014-06-24 23:08:44 thib_gc Exp $
+ * $Id: TestScHtmlLinkExtractor.java,v 1.1 2015-02-03 03:07:34 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.extractor.LinkExtractor;
 import org.lockss.test.*;
 import org.lockss.util.Constants;
 
-public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
+public class TestScHtmlLinkExtractor extends LockssTestCase {
 
   public void testImg() throws Exception {
     String input =
@@ -47,7 +47,7 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
         "<img src=\"bazsrc.jpg\" />\n" +
         "<img data-original=\"quxdo.jpg\" />\n";
     String srcUrl = "http://www.example.com/";
-    LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
     final List<String> emitted = new ArrayList<String>();
     le.extractUrls(null,
                    new StringInputStream(input),
@@ -65,33 +65,11 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
     assertContains(emitted, srcUrl + "quxdo.jpg");
   }
   
-  public void testCombres() throws Exception {
-    String input =
-        "<link href=\"//example.com/combres.axd/issue-css/123333/\" />\n" +
-        "<script src=\"//example.com/combres.axd/ga-custom-js/456666/\" />\n";
-    String srcUrl = "http://journal.example.com/";
-    LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
-    final List<String> emitted = new ArrayList<String>();
-    le.extractUrls(null,
-                   new StringInputStream(input),
-                   Constants.ENCODING_UTF_8,
-                   srcUrl,
-                   new LinkExtractor.Callback() {
-                       @Override
-                       public void foundLink(String url) {
-                         emitted.add(url);
-                       }
-                   });
-    assertEquals(4, emitted.size()); // 2 x "http://example.com/" + 2 x "http://journal.example.com/"
-    assertContains(emitted, srcUrl + "combres.axd/issue-css/123333/");
-    assertContains(emitted, srcUrl + "combres.axd/ga-custom-js/456666/");
-  }
-  
   public void testDownloadFile() throws Exception {
     String input =
         "<a onclick=\"javascript:downloadFile('/data/Journals/JOURN/12345/journ_11_222_edboard.pdf')\">Foo</a>\n";
     String srcUrl = "http://www.example.com/";
-    LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
     final List<String> emitted = new ArrayList<String>();
     le.extractUrls(null,
                    new StringInputStream(input),
@@ -114,7 +92,7 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
         "<a target=\"_blank\" onclick=\"detailsHandler(this.href); return false;\" href=\"../downloadCitation.aspx?\">RefWorks</a>\n";
     String baseUrl = "http://www.example.com/";
     String srcUrl = baseUrl + "article.aspx?articleid=1234567";
-    LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
     final List<String> emitted = new ArrayList<String>();
     le.extractUrls(null,
                    new StringInputStream(input),

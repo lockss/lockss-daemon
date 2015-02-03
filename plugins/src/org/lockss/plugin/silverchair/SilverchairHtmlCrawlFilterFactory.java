@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.5 2014-09-02 22:17:23 thib_gc Exp $
+ * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.6 2015-02-03 03:07:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -109,8 +109,8 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
          * ACP:
          *     <div id="ctl00_scm6MainContent_ToolBox"> but not inside <div class="portletColumn">
          */
-        new AllExceptSubtreeNodeFilter(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
-                                       HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
+        HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
+                                         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

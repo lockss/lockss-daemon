@@ -1,10 +1,10 @@
 /*
- * $Id: TestSilverchairUrlNormalizer.java,v 1.1 2014-04-15 19:10:29 thib_gc Exp $
+ * $Id: TestScUrlNormalizer.java,v 1.1 2015-02-03 03:07:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,12 +35,12 @@ package org.lockss.plugin.silverchair;
 import org.lockss.plugin.*;
 import org.lockss.test.LockssTestCase;
 
-public class TestSilverchairUrlNormalizer extends LockssTestCase {
+public class TestScUrlNormalizer extends LockssTestCase {
 
   protected UrlNormalizer norm;
   
   public void setUp() {
-    this.norm = new SilverchairUrlNormalizer();
+    this.norm = new ScUrlNormalizer();
   }
   
   public void testArticleId() throws Exception {
@@ -74,7 +74,6 @@ public class TestSilverchairUrlNormalizer extends LockssTestCase {
                  norm.normalizeUrl("http://www.example.com/article.aspx?articleid=1234444&atab=123&foo=bar", null));
   }
  
-  
   public void testUnicode2111() throws Exception {
     assertEquals("http://www.example.com/DownloadImage.aspx?image=/data/Journals/JABC/999123/jxy100001t1.png&sec=45688888&ar=1234444&imagename=",
                  norm.normalizeUrl("http://www.example.com/DownloadImage.aspx?image=/data/Journals/JABC/999123/jxy100001t1.png&sec=45688888&ar=1234444\u2111name=", null));

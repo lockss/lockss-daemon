@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlHashFilterFactory.java,v 1.7 2015-01-31 03:57:40 thib_gc Exp $
+ * $Id: SilverchairHtmlHashFilterFactory.java,v 1.8 2015-02-03 03:07:31 thib_gc Exp $
  */
 
 /*
@@ -111,8 +111,8 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
          * ACP:
          *     <div id="ctl00_scm6MainContent_ToolBox"> but not inside <div class="portletColumn">
          */
-        new AllExceptSubtreeNodeFilter(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
-                                       HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
+        HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
+                                         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
         /*
          * Broad area filtering 
          */

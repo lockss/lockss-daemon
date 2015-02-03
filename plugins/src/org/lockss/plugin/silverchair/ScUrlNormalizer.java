@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairUrlNormalizer.java,v 1.1 2014-04-15 19:10:29 thib_gc Exp $
+ * $Id: ScUrlNormalizer.java,v 1.1 2015-02-03 03:07:30 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +50,7 @@ import org.lockss.plugin.*;
  * first)</li>
  * </ul>
  */
-public class SilverchairUrlNormalizer implements UrlNormalizer {
+public class ScUrlNormalizer implements UrlNormalizer {
 
   private static final Pattern ATAB_PATTERN = Pattern.compile("&atab=[^&]*", Pattern.CASE_INSENSITIVE);
   private static final String ATAB_CANONICAL = "";
@@ -60,7 +60,6 @@ public class SilverchairUrlNormalizer implements UrlNormalizer {
 
   private static final Pattern ISSUE_PATTERN = Pattern.compile("/Issue\\.aspx\\?(issueid=(\\d+)&journalid=(\\d+)|journalid=(\\d+)&issueid=(\\d+))", Pattern.CASE_INSENSITIVE);
   private static final String ISSUE_CANONICAL = "/Issue.aspx?issueid=$2$5&journalid=$3$4";
-
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {

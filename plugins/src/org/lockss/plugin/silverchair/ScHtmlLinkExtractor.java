@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairHtmlLinkExtractor.java,v 1.7 2014-06-24 23:08:44 thib_gc Exp $
+ * $Id: ScHtmlLinkExtractor.java,v 1.1 2015-02-03 03:07:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,9 +41,9 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
+public class ScHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
-  private static final Logger logger = Logger.getLogger(SilverchairHtmlLinkExtractor.class);
+  private static final Logger logger = Logger.getLogger(ScHtmlLinkExtractor.class);
   
   protected static final Pattern PATTERN_ARTICLE =
       Pattern.compile("/article\\.aspx\\?(articleid=[^&]+)$",
@@ -53,16 +53,8 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       Pattern.compile("/downloadCitation\\.aspx\\?(format=[^&]+)?$",
                       Pattern.CASE_INSENSITIVE);
   
-  protected static final Pattern PATTERN_COMBRES =
-      Pattern.compile("//[^/]+(/combres\\.axd/.*)$",
-                      Pattern.CASE_INSENSITIVE);
-  
   protected static final Pattern PATTERN_DOWNLOAD_FILE =
       Pattern.compile("javascript:downloadFile\\('([^']+)'\\)",
-                      Pattern.CASE_INSENSITIVE);
-  
-  protected static final Pattern PATTERN_JQUERY =
-      Pattern.compile("//ajax\\.googleapis\\.com/ajax/libs/jquery/([^/]+)/jquery\\.min\\.js$",
                       Pattern.CASE_INSENSITIVE);
   
   @Override
@@ -137,55 +129,6 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       return super.extractLinkFromTag(link, au, cb);
     }
     
-    // <link>
-    else if ((ch == 'l' || ch == 'L') && beginsWithTag(link, LINKTAG)) {
-      String href = getAttributeValue(HREF, link);
-      if (href == null) {
-        href = "";
-      }
-      Matcher hrefMat = PATTERN_COMBRES.matcher(href);
-      if (hrefMat.find()) {
-        logger.debug3("Found target Combres stylesheet URL");
-        String url = hrefMat.group(1);
-        logger.debug3(String.format("Generated %s", url));
-        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-        emit(cb, resolveUri(baseUrl, hrefMat.group(1)));
-      }
-      return super.extractLinkFromTag(link, au, cb);
-    }
-    
-    // <script>
-    else if ((ch == 's' || ch == 'S') && beginsWithTag(link, SCRIPTTAG)) {
-      String src = getAttributeValue(SRC, link);
-      if (src == null) {
-        src = "";
-      }
-      
-      Matcher srcMat = null;
-      
-      srcMat = PATTERN_COMBRES.matcher(src);
-      if (srcMat.find()) {
-        logger.debug3("Found target Combres script URL");
-        String url = srcMat.group(1);
-        logger.debug3(String.format("Generated %s", url));
-        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-        emit(cb, resolveUri(baseUrl, srcMat.group(1)));
-        return super.extractLinkFromTag(link, au, cb);
-      }
-
-      srcMat = PATTERN_JQUERY.matcher(src);
-      if (srcMat.find()) {
-        logger.debug3("Found target JQuery URL");
-        String jqueryVersion = srcMat.group(1);
-        // Generate local JQuery URL
-        String url = String.format("/JS/plugins/jquery-%s.min.js", jqueryVersion);
-        logger.debug3(String.format("Generated %s", url));
-        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-        emit(cb, resolveUri(baseUrl, url));
-        return super.extractLinkFromTag(link, au, cb);
-      }
-    }
-
     return super.extractLinkFromTag(link, au, cb);
   }
 

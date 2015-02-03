@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairJournalsArticleIteratorFactory.java,v 1.2 2014-05-14 18:50:38 thib_gc Exp $
+ * $Id: ScJournalsArticleIteratorFactory.java,v 1.1 2015-02-03 03:07:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,11 +39,12 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-public class SilverchairJournalsArticleIteratorFactory
+public class ScJournalsArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   public static final String ROLE_CITATION_REFWORKS = "CitationRefworks";
   public static final String ROLE_CITATION_MEDLARS = "CitationMedlars";
+  
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
   private static final String PATTERN_TEMPLATE = "\"^%sarticle\\.aspx\\?articleid=\\d+$\", base_url";
   

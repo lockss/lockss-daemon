@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairHtmlMetadataExtractorFactory.java,v 1.1 2014-04-29 15:07:05 thib_gc Exp $
+ * $Id: ScHtmlMetadataExtractorFactory.java,v 1.1 2015-02-03 03:07:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.silverchair;
 
 import java.io.IOException;
-import java.util.*;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -42,9 +41,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.CachedUrl;
 
-public class SilverchairHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-
-  protected static final Collection<String> selectors = Arrays.asList("meta");
+public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
   protected static final String KEY_PUBLICATION_ABBREV = "publication.abbrev";
   

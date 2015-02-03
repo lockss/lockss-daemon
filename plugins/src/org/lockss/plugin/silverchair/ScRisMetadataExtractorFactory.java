@@ -1,10 +1,10 @@
 /*
- * $Id: SilverchairRisMetadataExtractorFactory.java,v 1.2 2014-07-30 21:57:06 thib_gc Exp $
+ * $Id: ScRisMetadataExtractorFactory.java,v 1.1 2015-02-03 03:07:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -105,7 +105,7 @@ M3  - doi: 10.7326/0003-4819-159-1-201307020-00643
 UR  - http://dx.doi.org/10.7326/0003-4819-159-1-201307020-00643
 ER  - 
  */
-public class SilverchairRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class ScRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
