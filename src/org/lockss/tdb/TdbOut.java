@@ -1,10 +1,10 @@
 /*
- * $Id: TdbOut.java,v 1.7 2014-11-12 00:15:41 thib_gc Exp $
+ * $Id: TdbOut.java,v 1.8 2015-02-03 23:43:47 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -224,6 +224,36 @@ public class TdbOut {
   
   /**
    * <p>
+   * Key for the count option ({@value}).
+   * </p>
+   * 
+   * @since 1.68
+   */
+  protected static final String KEY_COUNT = "count";
+  
+  /**
+   * <p>
+   * Single letter for the count option ({@value}).
+   * </p>
+   * 
+   * @since 1.68
+   */
+  protected static final char LETTER_COUNT = 'n';
+
+  /**
+   * <p>
+   * The count option.
+   * </p>
+   * 
+   * @since 1.68
+   */
+  protected static final Option OPTION_COUNT =
+      OptionBuilder.withLongOpt(KEY_COUNT)
+                   .withDescription("prints a count of matching AUs")
+                   .create(LETTER_COUNT);
+  
+  /**
+   * <p>
    * Key for the CSV option ({@value}).
    * </p>
    * 
@@ -407,6 +437,7 @@ public class TdbOut {
   protected static final List<String> mutuallyExclusiveActions =
       AppUtil.ul(KEY_AUID,
                  KEY_AUIDPLUS,
+                 KEY_COUNT,
                  KEY_CSV,
                  KEY_JOURNALS,
                  KEY_LIST,
@@ -472,6 +503,7 @@ public class TdbOut {
     // Own options
     options.addOption(OPTION_AUID);
     options.addOption(OPTION_AUIDPLUS);
+    options.addOption(OPTION_COUNT);
     options.addOption(OPTION_CSV);
     options.addOption(OPTION_FIELDS);
     options.addOption(OPTION_JOURNALS);
@@ -533,6 +565,7 @@ public class TdbOut {
       options.put(KEY_STYLE, STYLE_TSV);
       options.put(KEY_FIELDS, Arrays.asList("auidplus"));
     }
+    options.put(KEY_COUNT, Boolean.valueOf(cmd.hasOption(KEY_COUNT)));
     if (cmd.hasOption(KEY_CSV)) {
       options.put(KEY_STYLE, STYLE_CSV);
       options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_CSV).split(",")));
@@ -566,6 +599,20 @@ public class TdbOut {
     return options;
   }
 
+  /**
+   * <p>
+   * Determines from the options map if the count option was requested.
+   * </p>
+   * 
+   * @param options
+   *          An options map.
+   * @return Whether the count option has been requested.
+   * @since 1.68
+   */
+  public boolean getCount(Map<String, Object> options) {
+    return ((Boolean)options.get(KEY_COUNT)).booleanValue();
+  }
+  
   /**
    * <p>
    * Determines from the options map the output style.
@@ -656,18 +703,28 @@ public class TdbOut {
     PrintStream out = OutputOption.getSingleOutput(options);
     Predicate<Au> auPredicate = tdbQueryBuilder.getAuPredicate(options);
     boolean csv = STYLE_CSV.equals(getStyle(options));
+    boolean count = getCount(options);
     
     List<Functor<Au, String>> traitFunctors = new ArrayList<Functor<Au, String>>();
-    for (String field : getFields(options)) {
-      Functor<Au, String> traitFunctor = Au.traitFunctor(field);
-      if (traitFunctor == null) {
-        AppUtil.error("Unknown field '%s'", field);
+    if (!count) {
+      for (String field : getFields(options)) {
+        Functor<Au, String> traitFunctor = Au.traitFunctor(field);
+        if (traitFunctor == null) {
+          AppUtil.error("Unknown field '%s'", field);
+        }
+        traitFunctors.add(traitFunctor);
       }
-      traitFunctors.add(traitFunctor);
     }
     
+    int counter = 0;
     for (Au au : tdb.getAus()) {
-      if (!auPredicate.test(au)) {
+      if (auPredicate.test(au)) {
+        ++counter;
+        if (count) {
+          continue;
+        }
+      }
+      else {
         continue;
       }
       boolean first = true;
@@ -683,6 +740,10 @@ public class TdbOut {
         first = false;
       }
       out.println(sb.toString());
+    }
+    
+    if (count) {
+      out.println(counter);  
     }
     
     out.close();
