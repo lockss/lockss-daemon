@@ -1,5 +1,5 @@
 /*
- * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.4 2014-11-08 22:58:52 ldoan Exp $
+ * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.5 2015-02-03 21:38:21 ldoan Exp $
  */
 
 /*
@@ -84,8 +84,12 @@ public class EndocrineSocietyHtmlHashFilterFactory
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    boolean doWS = true;
-    return super.createFilteredInputStream(au, in, encoding, filters, doWS);
+    return super.createFilteredInputStream(au, in, encoding, filters);
+    }
+    
+    @Override
+    public boolean doWSFiltering() {
+      return true;
     }
     
 }

@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,9 +21,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>22</string>
+    <string>26</string>
   </entry>
-  <!-- 1.67: to be able to collect medium and large size images, handled using window.figureViewer -->
   <entry>
     <string>plugin_publishing_platform</string>
     <string>Atypon</string>
