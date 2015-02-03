@@ -18,8 +18,6 @@
       eissn = 1854-0392
     >
     
-    comment[ingNotReady] = file has a header indicating encoding of windows 1250, but encoding is more likely utf-16. See IE http://www2.pms-lj.si/illiesia/html/2014.html
-   
     au < manifest ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 >
     au < manifest ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 >
     au < manifest ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 >
@@ -29,7 +27,7 @@
     au < crawling ; exists ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 >
     au < crawling ; exists ; 2012 ; Illiesia International Journal of Stonefly Research Volume 8 ; 8 ; 2012 >
     au < crawling ; exists ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 ; 9 ; 2013 >
-    au < ingNotReady ; exists ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 >
+    au < ready ; exists ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 >
     au < expected ; exists ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 ; 11 ; 2015 >
  
   }
