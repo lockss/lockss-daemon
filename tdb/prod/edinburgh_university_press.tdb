@@ -247,9 +247,9 @@
       attr[journal_id] = ccs
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
-      au < released ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
-      au < released ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
+      au < released ; 2006 ; Comparative Critical Studies Volume 3 [Project MUSE] ; 3 >
+      au < released ; 2007 ; Comparative Critical Studies Volume 4 [Project MUSE] ; 4 >
+      au < released ; 2008 ; Comparative Critical Studies Volume 5 [Project MUSE] ; 5 >
 
     }
 
@@ -328,9 +328,9 @@
       attr[journal_id] = dar
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Dance Research Volume 24 ; 24 >
-      au < released ; 2007 ; Dance Research Volume 25 ; 25 >
-      au < released ; 2008 ; Dance Research Volume 26 ; 26 >
+      au < released ; 2006 ; Dance Research Volume 24 [Project MUSE] ; 24 >
+      au < released ; 2007 ; Dance Research Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2008 ; Dance Research Volume 26 [Project MUSE] ; 26 >
 
     }
 
@@ -463,9 +463,9 @@
       attr[journal_id] = epi
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 ; 3 >
-      au < released ; 2007 ; Episteme: A Journal of Social Epistemology Volume 4 ; 4 >
-      au < released ; 2008 ; Episteme: A Journal of Social Epistemology Volume 5 ; 5 >
+      au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 [Project MUSE] ; 3 >
+      au < released ; 2007 ; Episteme: A Journal of Social Epistemology Volume 4 [Project MUSE] ; 4 >
+      au < released ; 2008 ; Episteme: A Journal of Social Epistemology Volume 5 [Project MUSE] ; 5 >
 
     }
 
@@ -510,9 +510,9 @@
       attr[journal_id] = hls
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 ; 5 >
-      au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 ; 6 >
-      au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 ; 7 >
+      au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 [Project MUSE] ; 5 >
+      au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 [Project MUSE] ; 6 >
+      au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 [Project MUSE] ; 7 >
 
     }
 
@@ -557,8 +557,8 @@
       attr[journal_id] = inn
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2007 ; The Innes Review Volume 58 ; 58 >
-      au < released ; 2008 ; The Innes Review Volume 59 ; 59 >
+      au < released ; 2007 ; The Innes Review Volume 58 [Project MUSE] ; 58 >
+      au < released ; 2008 ; The Innes Review Volume 59 [Project MUSE] ; 59 >
     
     }
     
@@ -927,9 +927,9 @@
       comment[change_publisher] = from 2010, published by Taylor and Francis.  
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Journal of Victorian Culture Volume 11 ; 11 >
-      au < released ; 2007 ; Journal of Victorian Culture Volume 12 ; 12 >
-      au < released ; 2008 ; Journal of Victorian Culture Volume 13 ; 13 >
+      au < released ; 2006 ; Journal of Victorian Culture Volume 11 [Project MUSE] ; 11 >
+      au < released ; 2007 ; Journal of Victorian Culture Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2008 ; Journal of Victorian Culture Volume 13 [Project MUSE] ; 13 >
 
     }
 
@@ -1187,9 +1187,9 @@
       attr[journal_id] = prg
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Paragraph Volume 29 ; 29 >
-      au < released ; 2007 ; Paragraph Volume 30 ; 30 >
-      au < released ; 2008 ; Paragraph Volume 31 ; 31 >
+      au < released ; 2006 ; Paragraph Volume 29 [Project MUSE] ; 29 >
+      au < released ; 2007 ; Paragraph Volume 30 [Project MUSE] ; 30 >
+      au < released ; 2008 ; Paragraph Volume 31 [Project MUSE] ; 31 >
 
     }
 
@@ -1213,8 +1213,8 @@
       attr[journal_id] = pah
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Parliamentary History Volume 25 ; 25 >
-      au < released ; 2007 ; Parliamentary History Volume 26 ; 26 >
+      au < released ; 2006 ; Parliamentary History Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2007 ; Parliamentary History Volume 26 [Project MUSE] ; 26 >
 
     }
 
@@ -1299,9 +1299,9 @@
       attr[journal_id] = rom
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Romanticism Volume 12 ; 12 >
-      au < released ; 2007 ; Romanticism Volume 13 ; 13 >
-      au < released ; 2008 ; Romanticism Volume 14 ; 14 >
+      au < released ; 2006 ; Romanticism Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2007 ; Romanticism Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2008 ; Romanticism Volume 14 [Project MUSE] ; 14 >
 
     }
 
@@ -1453,9 +1453,9 @@
       attr[journal_id] = shr
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
-      au < released ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
-      au < released ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
+      au < released ; 2006 ; Scottish Historical Review Volume 85 [Project MUSE] ; 85 >
+      au < released ; 2007 ; Scottish Historical Review Volume 86 [Project MUSE] ; 86 >
+      au < released ; 2008 ; Scottish Historical Review Volume 87 [Project MUSE] ; 87 >
 
     }
 
@@ -1503,9 +1503,9 @@
       attr[journal_id] = swc
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
-      au < released ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
-      au < released ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
+      au < released ; 2006 ; Studies in World Christianity Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2007 ; Studies in World Christianity Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2008 ; Studies in World Christianity Volume 14 [Project MUSE] ; 14 >
 
     }
 
@@ -1552,9 +1552,9 @@
       attr[journal_id] = tal
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Translation and Literature Volume 15 ; 15 >
-      au < released ; 2007 ; Translation and Literature Volume 16 ; 16 >
-      au < released ; 2008 ; Translation and Literature Volume 17 ; 17 >
+      au < released ; 2006 ; Translation and Literature Volume 15 [Project MUSE] ; 15 >
+      au < released ; 2007 ; Translation and Literature Volume 16 [Project MUSE] ; 16 >
+      au < released ; 2008 ; Translation and Literature Volume 17 [Project MUSE] ; 17 >
     
     }
 
