@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Nature Publishing Group Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s&quot;, base_url, journal_id, year, volume_name</string>
+    <string>"Nature Publishing Group Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -52,48 +52,51 @@
       - The ?message=remove rule exists because of global messages across all pages (eg for survey) cause each page twice
      -->
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/clockss/%s_clockss_%d.html$&quot;, base_url, journal_id, journal_id, year</string>
-      <string>2,&quot;^%s%s/journal/v%s/.*(/metrics|\?(lang=[a-z]{2}|message=remove))$&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%s%s/journal/v%s/[^/]+/[^/]+/[^/]+_ja\.html$&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%s%s/journal/v%s/[^/]+/(products|pubmed)/&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%s.*url_ver=&quot;,base_url</string>
-      <string>1,&quot;^%s%s/journal/v%s/&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%s%s/index_ja\.html\?volume=%s&quot;, base_url, journal_id, volume_name</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%s/clockss/%s_clockss_%d.html$", base_url, journal_id, journal_id, year</string>
+      <string>2,"^%s%s/journal/v%s/.*(/metrics|\?(lang=[a-z]{2}|message=remove))$", base_url, journal_id, volume_name</string>
+      <string>2,"^%s%s/journal/v%s/[^/]+/[^/]+/[^/]+_ja\.html$", base_url, journal_id, volume_name</string>
+      <string>2,"^%s%s/journal/v%s/[^/]+/(products|pubmed)/", base_url, journal_id, volume_name</string>
+      <string>2,"^%s.*url_ver=",base_url</string>
+      <string>1,"^%s%s/journal/v%s/", base_url, journal_id, volume_name</string>
+      <!-- for ndigest: http://www.nature.com/ndigest/index_ja.html??volume=9&issue=4 -->
+      <string>1,"^%s%s/index_ja\.html\?[?]?volume=%s", base_url, journal_id, volume_name</string>
       <!-- for ncomms -->
-      <string>1,&quot;^%s%s/archive/date/%d/&quot;, base_url, journal_id, year</string>
+      <string>1,"^%s%s/archive/date/%d/", base_url, journal_id, year</string>
+      <!-- for nclimate -->
+      <string>1,"^%s%s/archive/issue\.html\?year=%d", base_url, journal_id, year</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/clockss/%s_clockss_%d.html&quot;, base_url, journal_id, journal_id, year</string>
+    <string>"%s%s/clockss/%s_clockss_%d.html", base_url, journal_id, journal_id, year</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-	    <string>&quot;%s/%s&quot;, base_url, journal_id</string>
+	    <string>"%s/%s", base_url, journal_id</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>&quot;%s%s/clockss/%s_clockss_%d.html&quot;, base_url, journal_id, journal_id, year</string>
+	    <string>"%s%s/clockss/%s_clockss_%d.html", base_url, journal_id, journal_id, year</string>
 	  </entry>
 	  <entry>
 	    <string>au_issue</string>
-	    <string>&quot;%s%s/(journal/v%s/n%s|archive/date/%d/[0-9]+)/index.html&quot;, base_url, journal_id, volume_name, issue, year</string>
+	    <string>"%s%s/(journal/v%s/n%s|archive/date/%d/[0-9]+)/index.html", base_url, journal_id, volume_name, issue, year</string>
 	  </entry>
 	  <entry>
 	    <string>au_article</string>
-	    <string>&quot;%s%s/journal/v%s/n%s/full/%s.%d.%s.html&quot;, base_url, journal_id, volume_name, issue, journal_id, year, article</string>
+	    <string>"%s%s/journal/v%s/n%s/full/%s.%d.%s.html", base_url, journal_id, volume_name, issue, journal_id, year, article</string>
 	  </entry>
   	</map>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s%s/journal/v%s/[^/]+/(full|pdf)/[^/]+\.(html|pdf)$&quot;, base_url, journal_id, volume_name</string>
+      <string>"^%s%s/journal/v%s/[^/]+/(full|pdf)/[^/]+\.(html|pdf)$", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
