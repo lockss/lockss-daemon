@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.13 2015-01-21 02:35:43 thib_gc Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.14 2015-02-03 21:32:21 ldoan Exp $
  */
 
 /*
@@ -295,6 +295,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://ajph.aphapublications.org/", null, 
         "org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin",
         null);
+    //arrs
+    testSpecificUserMsg("http://www.ajronline.org/", null, 
+        "org.lockss.plugin.atypon.arrs.ARRSPlugin",
+        null);
     //bir
     testSpecificUserMsg("http://www.birpublications.org/", null, 
         "org.lockss.plugin.atypon.bir.BIRAtyponPlugin",
@@ -354,6 +358,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static {
     pluginPubMap.put("http://journals.ametsoc.org/", "American Meteorological Society");
     pluginPubMap.put("http://arc.aiaa.org/", "American Institute of Aeronautics and Astronautics");
+    pluginPubMap.put("http://www.ajronline.org/", "American Roentgen Ray Society");
     pluginPubMap.put("http://ascelibrary.org/", "American Society of Civil Engineers");
     pluginPubMap.put("http://www.amsciepub.com/", "Ammons Scientific Journals");
     pluginPubMap.put("http://ajph.aphapublications.org/", "American Public Health Association");
