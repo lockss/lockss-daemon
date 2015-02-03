@@ -303,7 +303,7 @@
     au < finished ; frozen ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
     au < finished ; crawling ; 2012 ; Age and Ageing Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
-    au < testing ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
+    au < ready ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
     au < manifest ; exists ; 2015 ; Age and Ageing Volume 44 ; 44 ; >
 
     }
@@ -902,7 +902,7 @@
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
     au < testing ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
-    au < testing ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
+    au < ready ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
     au < doNotProcess ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
 
     }
@@ -1224,7 +1224,7 @@
     au < finished ; frozen ; 2011 ; Analysis Volume 71 ; 71 ; >
     au < finished ; frozen ; 2012 ; Analysis Volume 72 ; 72 ; >
     au < crawling ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
-    au < testing ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
+    au < ready ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
     au < doNotProcess ; exists ; 2015 ; Analysis Volume 75 ; 75 ; >
 
     }
@@ -8471,7 +8471,7 @@
     au < finished ; crawling ; 2011 ; Human Reproduction Update Volume 17 ; 17 ; >
     au < finished ; crawling ; 2012 ; Human Reproduction Update Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Human Reproduction Update Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2014 ; Human Reproduction Update Volume 20 ; 20 ; >
+    au < testing ; exists ; 2014 ; Human Reproduction Update Volume 20 ; 20 ; >
     au < manifest ; exists ; 2015 ; Human Reproduction Update Volume 21 ; 21 ; >
 
     }
@@ -12909,7 +12909,7 @@
     au < finished ; crawling ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Journal of Islamic Studies Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
+    au < testing ; exists ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
     au < manifest ; exists ; 2015 ; Journal of Islamic Studies Volume 26 ; 26 ; >
 
     }
@@ -20009,7 +20009,7 @@
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
-    au < testing ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
+    au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
     au < expected ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
 
     }
@@ -22452,7 +22452,7 @@
     au < finished ; crawling ; 2011 ; Yearbook of European Law Volume 30 ; 30 ; >
     au < finished ; frozen ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Yearbook of European Law Volume 32 ; 32 ; >
-    au < testing ; exists ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
+    au < ready ; exists ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
     au < expected ; exists ; 2015 ; Yearbook of European Law Volume 34 ; 34 ; >
 
   }
