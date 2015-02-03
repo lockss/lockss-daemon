@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -112,7 +112,7 @@
     <string>au_crawlrules</string>
     <list>
       <!-- all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn.mathjax.org)/."</string>
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.](mathjax|elifesciences)[.]org)/."</string>
       <!-- no gifs from other volumes -->
       <string>2,"^%scontent/(?!([^/]+/)?%s/)[^?]*[.]gif", base_url, volume_name</string>
       <!-- all fonts, images, resources, css, js, etc. -->
@@ -215,9 +215,9 @@
   </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts= -->
+         org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>"(.*[.]cloudfront[.]net|cdn.mathjax.org)"</string>
+    <string>.+[.]cloudfront[.]net|cdn[.](mathjax|elifesciences)[.]org</string>
   </entry>
   <entry>
     <!-- APS & OUP use cdn -->
