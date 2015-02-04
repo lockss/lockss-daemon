@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressCrawlSeedFactory.java,v 1.3 2015-02-04 19:00:47 alexandraohlson Exp $
+ * $Id: PortlandPressCrawlSeedFactory.java,v 1.4 2015-02-04 19:05:23 alexandraohlson Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.lockss.daemon.Crawler;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.util.ListUtil;
 
 public class PortlandPressCrawlSeedFactory  
 implements CrawlSeedFactory {
@@ -102,7 +101,7 @@ implements CrawlSeedFactory {
         sb.append("01");
       }
       sb.append("/lockss.htm");
-      return ListUtil.list(sb.toString());
+      return Arrays.asList(sb.toString());
     }
 
     @Override
