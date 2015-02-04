@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressCrawlSeedFactory.java,v 1.2 2015-01-26 22:18:05 wkwilson Exp $
+ * $Id: PortlandPressCrawlSeedFactory.java,v 1.3 2015-02-04 19:00:47 alexandraohlson Exp $
  */
 
 /*
@@ -32,7 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.portlandpress;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.lockss.config.Configuration;
 import org.lockss.crawler.BaseCrawlSeed;
@@ -52,6 +55,7 @@ implements CrawlSeedFactory {
   private static final String WP_JID = "wp";
   private static final String WST_JID = "wst";
   private static final String WS_JID = "ws";
+  private static final Set<String> issueJids = new HashSet<String>(Arrays.asList(WP_JID, WST_JID, WS_JID));
 
 
   public CrawlSeed createCrawlSeed(ArchivalUnit au) {
@@ -91,9 +95,10 @@ implements CrawlSeedFactory {
        */
       StringBuilder sb = new StringBuilder();
       sb.append(base_url);
-      sb.append(jid + "/");
+      sb.append(jid);
+      sb.append("/");
       sb.append(vol);
-      if (WS_JID.equals(jid) || WST_JID.equals(jid) || WP_JID.equals(jid)) {
+      if (issueJids.contains(jid)) {
         sb.append("01");
       }
       sb.append("/lockss.htm");

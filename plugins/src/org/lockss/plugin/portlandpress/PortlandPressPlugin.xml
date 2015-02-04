@@ -60,10 +60,11 @@
       <string>1,"^%s%s(/ev)?/%s([0-9S]{2})?/", base_url, journal_id, volume_name</string>
     </list>
   </entry>
-<!-- 
+<!-- start url is determined by CrawlSeedFactory based on journal_id, it will be one of
   <entry>
     <string>au_start_url</string>
     <string>"%s%s/%s/lockss.htm", base_url, journal_id, volume_name</string>
+    <string>"%s%s/%s01/lockss.htm", base_url, journal_id, volume_name</string>
   </entry>
 -->  
   <entry>
