@@ -14317,7 +14317,20 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[0] = content available from 1960 volume 1 to 1999 volume 40
 
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Radiation Research Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Radiation Research Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Radiation Research Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Radiation Research Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Radiation Research Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Radiation Research Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Radiation Research Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Radiation Research Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Radiation Research Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Radiation Research Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Radiation Research Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Radiation Research Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Radiation Research Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Radiation Research Volume 55 ; 55 >

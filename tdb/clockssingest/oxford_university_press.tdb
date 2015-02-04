@@ -14123,7 +14123,20 @@
 
     param[base_url] = http://jrr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[0] = content available from 1960 volume 1 to 1999 volume 40
 
+    au < exists ; exists ; 2000 ; Journal of Radiation Research Volume 41 ; 41 ; >
+    au < exists ; exists ; 2001 ; Journal of Radiation Research Volume 42 ; 42 ; >
+    au < exists ; exists ; 2002 ; Journal of Radiation Research Volume 43 ; 43 ; >
+    au < exists ; exists ; 2003 ; Journal of Radiation Research Volume 44 ; 44 ; >
+    au < exists ; exists ; 2004 ; Journal of Radiation Research Volume 45 ; 45 ; >
+    au < exists ; exists ; 2005 ; Journal of Radiation Research Volume 46 ; 46 ; >
+    au < exists ; exists ; 2006 ; Journal of Radiation Research Volume 47 ; 47 ; >
+    au < exists ; exists ; 2007 ; Journal of Radiation Research Volume 48 ; 48 ; >
+    au < exists ; exists ; 2008 ; Journal of Radiation Research Volume 49 ; 49 ; >
+    au < exists ; exists ; 2009 ; Journal of Radiation Research Volume 50 ; 50 ; >
+    au < exists ; exists ; 2010 ; Journal of Radiation Research Volume 51 ; 51 ; >
+    au < exists ; exists ; 2011 ; Journal of Radiation Research Volume 52 ; 52 ; >
     au < finished ; frozen ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Radiation Research Volume 54 ; 54 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Radiation Research Volume 55 ; 55 ; >
