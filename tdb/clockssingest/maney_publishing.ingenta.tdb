@@ -1,16 +1,21 @@
+# This is a legacy Maney Publishing file for titles previously hosted by Ingenta
+# See http://www.maney.co.uk/index.php/online/journals_available_online/
+
 {
 
   publisher <
     name = Maney Publishing ;
-    info[contract] = 2010 ;
-    info[tester] = 5
+    info[contract] = 2010
   >
 
-  {
-    comment[publisher_list] = http://www.maney.co.uk/index.php/online/journals_available_online/
-    comment[Highwire]= only 1, exclude others listed above, see http://www.maney.co.uk/index.php/online_journals/  
-  }
- 
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = maney
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+
   {
 
     title <
@@ -20,15 +25,8 @@
       issnl = 1743-6753 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = aac 
     param[journal_issn] = 1743-6753
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0967-9782
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
@@ -54,15 +52,8 @@
       issnl = 0002-6980 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = amb
     param[journal_issn] = 0002-6980
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1937 ; Ambix Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1938-1946 ; Ambix Volume 2 ; 2 > 
@@ -136,15 +127,8 @@
       issnl = 0003-4983 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = atmp 
     param[journal_issn] = 0003-4983
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 2047-7724
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
@@ -172,15 +156,8 @@
       issnl = 0272-4936 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = atp 
     param[journal_issn] = 0272-4936
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 2046-9047
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
@@ -208,15 +185,8 @@
       issnl = 0371-7453 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = aes 
     param[journal_issn] = 0371-7453
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
     au < doNotProcess ; doNotProcess ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
@@ -244,15 +214,8 @@
       issnl = 1741-6124 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = aaa 
     param[journal_issn] = 1741-6124
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2004 ; Arms & Armour Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2005 ; Arms & Armour Volume 2 ; 2 > 
@@ -276,15 +239,8 @@
       issnl = 0967-9782 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = bct 
     param[journal_issn] = 0967-9782
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 1743-6753
 
@@ -304,15 +260,8 @@
       issn = 0007-0599 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = bcj
     param[journal_issn] = 0007-0599
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 1478-422X
 
@@ -330,14 +279,8 @@
       issn = 0969-7950
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = bjdd 
     param[journal_issn] = 0969-7950
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 2047-3877
     
@@ -352,15 +295,8 @@
       issn = 0309-7765 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = bronsoc
     param[journal_issn] = 0309-7765
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continued_by] = 1474-8932
  
     au < doNotProcess ; doNotProcess ; 1976-1980 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 17 ; 17 >   
@@ -385,15 +321,8 @@
       issnl = 1474-8932 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = bst 
     param[journal_issn] = 1474-8932
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continues] = 0309-7765
 
     au < doNotProcess ; doNotProcess ; 2002 ; Brontë Studies Volume 27 ; 27 > 
@@ -420,15 +349,8 @@
       issnl = 1758-8960 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = bub 
     param[journal_issn] = 1758-8960
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
@@ -448,15 +370,8 @@
       issnl = 1752-7260 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = brl 
     param[journal_issn] = 1752-7260
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
@@ -478,15 +393,8 @@
       issnl = 0307-0131 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = byz 
     param[journal_issn] = 0307-0131
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
@@ -537,15 +445,8 @@
       issnl = 0008-4433
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = cmq  
     param[journal_issn] = 0008-4433
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
@@ -612,15 +513,8 @@
       issnl = 0008-7041 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = caj 
     param[journal_issn] = 0008-7041
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 1964 ; The Cartographic Journal Volume 1 ; 1 > 
@@ -685,15 +579,8 @@
       issnl = 1479-0963 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ceu 
     param[journal_issn] = 1479-0963
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2003 ; Central Europe Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2004 ; Central Europe Volume 2 ; 2 > 
@@ -718,15 +605,8 @@
       issnl = 1547-402X
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tcr
     param[journal_issn] = 1547-402X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
    
     au < finished ; crawling ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >  
     au < finished ; crawling ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >   
@@ -742,15 +622,8 @@
       eissn = 1754-7628
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = cii 
     param[journal_issn] = 1467-0100
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2000 ; Cochlear Implants International Volume 1 ; 1 > 
@@ -779,15 +652,8 @@
       issnl = 1477-5700 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = cas 
     param[journal_issn] = 1477-5700
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2003 ; Comparative American Studies Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2004 ; Comparative American Studies Volume 2 ; 2 > 
@@ -812,15 +678,8 @@
       issnl = 1024-5294 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = com 
     param[journal_issn] = 1024-5294
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2002 ; Competition & Change Volume 6 ; 6 > 
     au < doNotProcess ; doNotProcess ; 2003 ; Competition & Change Volume 7 ; 7 > 
@@ -846,15 +705,8 @@
       issnl = 1350-5033 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = cma 
     param[journal_issn] = 1350-5033
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1995-1996 ; Conservation and Management of Archaeological Sites Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1997-1998 ; Conservation and Management of Archaeological Sites Volume 2 ; 2 > 
@@ -883,15 +735,8 @@
       issnl = 1478-422X 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = cest 
     param[journal_issn] = 1478-422X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continues] = 0007-0599
     comment[notReady] = low agreement
 
@@ -920,15 +765,8 @@
     
     {
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = cos 
     param[journal_issn] = 0590-8876
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[2011] = year 2011 has been used as volume #
 
@@ -996,15 +834,8 @@
     
     {
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = dei 
     param[journal_issn] = 1464-3154
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 1999 ; Deafness & Education International Volume 1 ; 1 > 
@@ -1035,15 +866,8 @@
       issnl = 1478-7318 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = dix 
     param[journal_issn] = 1478-7318
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2003 ; Dix-Neuf Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2004 ; Dix-Neuf Volume 2 ; 2 > 
@@ -1074,15 +898,8 @@
       issnl = 0361-2112 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = dre 
     param[journal_issn] = 0361-2112
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < finished ; frozen ; 2010 ; Dress Volume 36 ; 36 > 
     au < finished ; frozen ; 2011 ; Dress Volume 37 ; 37 > 
@@ -1100,15 +917,8 @@
       issnl = 0309-6564 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = dtc 
     param[journal_issn] = 0309-6564
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
     au < finished ; frozen ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
@@ -1127,15 +937,8 @@
       issnl = 1529-9104 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = emc 
     param[journal_issn] = 1529-9104
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1994 ; Early Medieval China Volume 1994 ; 1994 > 
     au < doNotProcess ; doNotProcess ; 1995-1996 ; Early Medieval China Volume 1995 ; 1995 > 
@@ -1169,15 +972,8 @@
       issnl = 1748-9237 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ema 
     param[journal_issn] = 1748-9237
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[moved] = This journal became a virtual journal and a compilation journal which we won't collect.
 
@@ -1196,14 +992,8 @@
       issn = 1752-0169
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ehr 
     param[journal_issn] = 1752-0169
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2006 ; English Heritage Historical Review Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2007 ; English Heritage Historical Review Volume 2 ; 2 >
@@ -1224,15 +1014,8 @@
       issnl = 1461-4103 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = env 
     param[journal_issn] = 1461-4103
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1996 ; Environmental Archaeology Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1997 ; Environmental Archaeology Volume 2 ; 2 > 
@@ -1264,14 +1047,8 @@
       issnl = 1461-9571
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] =  eja
     param[journal_issn] = 1461-9571
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < finished ; crawling ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
     au < finished ; crawling ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
@@ -1288,15 +1065,8 @@
       issnl = 1041-2573 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = exm 
     param[journal_issn] = 1041-2573
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1989 ; Exemplaria Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1990 ; Exemplaria Volume 2 ; 2 > 
@@ -1335,15 +1105,8 @@
       issnl = 1463-1180 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = fch 
     param[journal_issn] = 1463-1180
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2006 ; Family & Community History Volume 9 ; 9 > 
     au < doNotProcess ; doNotProcess ; 2007 ; Family & Community History Volume 10 ; 10 > 
@@ -1365,15 +1128,8 @@
       issnl = 0430-8778 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = flk 
     param[journal_issn] = 0430-8778
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
     au < finished ; frozen ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
@@ -1392,15 +1148,8 @@
       issnl = 1934-8908 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = hdy 
     param[journal_issn] = 1934-8908
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     comment[1] = ceased publication in 2011
     comment[error] = on ingest machines, AUs have picked up manifest page with no links. Consider marking these superseded and recollecting on atypon platform.
@@ -1422,15 +1171,8 @@
       issnl = 1024-5332 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = hem 
     param[journal_issn] = 1024-5332
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2002 ; Hematology Volume 7 ; 7 > 
@@ -1457,15 +1199,8 @@
       issnl = 1468-2737 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = hrj 
     param[journal_issn] = 1468-2737
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2000 ; Hispanic Research Journal Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2001 ; Hispanic Research Journal Volume 2 ; 2 > 
@@ -1493,15 +1228,8 @@
       issnl = 1756-7505 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = hen 
     param[journal_issn] = 1756-7505
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < finished ; crawling ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
@@ -1519,15 +1247,8 @@
       issnl = 1368-2199 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = isj 
     param[journal_issn] = 1368-2199
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2004 ; The Imaging Science Journal Volume 52 ; 52 > 
@@ -1552,15 +1273,8 @@
       issnl = 0309-0728 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = iar 
     param[journal_issn] = 0309-0728
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1976-1977 ; Industrial Archaeology Review Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1977-1978 ; Industrial Archaeology Review Volume 2 ; 2 > 
@@ -1609,15 +1323,8 @@
       issnl = 0308-0188 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = isr 
     param[journal_issn] = 0308-0188
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 1976 ; Interdisciplinary Science Reviews Volume 1 ; 1 > 
@@ -1670,15 +1377,8 @@
       issnl = 1749-5148 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = iht 
     param[journal_issn] = 1749-5148
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2007 ; International Heat Treatment & Surface Engineering Volume 1 ; 1 > 
@@ -1700,15 +1400,8 @@
       issnl = 1758-1206 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = het 
     param[journal_issn] = 1758-1206
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continues] = 0372-0187
 
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
@@ -1728,15 +1421,8 @@
       issnl = 1364-0461 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ijcmr 
     param[journal_issn] = 1364-0461
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Cast Metals Research Volume 17 ; 17 > 
@@ -1760,15 +1446,8 @@
       eissn = 2047-3877 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = jdd
     param[journal_issn] = 2047-3869
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0969-7950
     
@@ -1785,14 +1464,8 @@
       eissn = 2047-9719
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ihm
     param[journal_issn] = 2047-9700
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 1753-3031
     
@@ -1810,15 +1483,8 @@
       issnl = 0950-6608 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = imr 
     param[journal_issn] = 0950-6608
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     comment[continues] = 0308-4590
@@ -1862,15 +1528,8 @@
       issnl = 0367-9020 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = imtlr 
     param[journal_issn] = 0367-9020
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continues] = 0076-6690
     comment[continued_by] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
@@ -1890,15 +1549,8 @@
       issnl = 0308-4590  
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = imtr 
     param[journal_issn] = 0308-4590 
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0367-9020
     comment[continued_by] = 0950-6608 
@@ -1926,15 +1578,8 @@
       eissn = 1753-6154
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = imm 
     param[journal_issn] = 1753-6146
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -1955,15 +1600,8 @@
       eissn = 2042-6453
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = iwp 
     param[journal_issn] = 2042-6445
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0020-3203
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
@@ -1983,15 +1621,8 @@
       eissn = 1743-2812
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ias 
     param[journal_issn] = 0301-9233
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -2021,15 +1652,8 @@
       eissn = 1559-0909
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = itc 
     param[journal_issn] = 0161-4622
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2009 ; Italian Culture Volume 27 ; 27 > 
     au < finished ; frozen ; 2010 ; Italian Culture Volume 28 ; 28 > 
@@ -2047,15 +1671,8 @@
       eissn = 1748-6181
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = its 
     param[journal_issn] = 0075-1634
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1937-1938 ; Italian Studies Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1938-1939 ; Italian Studies Volume 2 ; 2 > 
@@ -2136,15 +1753,8 @@
       eissn = 1748-619X
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ita 
     param[journal_issn] = 0261-4340
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1981 ; The Italianist Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1982 ; The Italianist Volume 2 ; 2 > 
@@ -2190,15 +1800,8 @@
       eissn = 1743-2820
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = jbr 
     param[journal_issn] = 0373-6687
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -2225,15 +1828,8 @@
       eissn = 1750-1687
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = csm 
     param[journal_issn] = 1750-1679
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2006-2007 ; Journal of Care Services Management Volume 1 ; 1 > 
@@ -2254,15 +1850,8 @@
       eissn = 1973-9478 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = joc 
     param[journal_issn] = 1120-009X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = wait for moving to Atypon
     
@@ -2296,15 +1885,8 @@
       eissn = 1753-8076
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = cih 
     param[journal_issn] = 1753-8068
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -2325,15 +1907,8 @@
       eissn = 1574-0781
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = jca 
     param[journal_issn] = 1574-0773
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Conflict Archaeology Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Conflict Archaeology Volume 2 ; 2 > 
@@ -2354,15 +1929,8 @@
       eissn = 2042-4582
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = jfa 
     param[journal_issn] = 0093-4690
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1974 ; Journal of Field Archaeology Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1975 ; Journal of Field Archaeology Volume 2 ; 2 > 
@@ -2413,15 +1981,8 @@
       eissn = 2046-0236
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = his 
     param[journal_issn] = 0147-8885
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -2472,15 +2033,8 @@
       eissn = 1753-304X
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mmh 
     param[journal_issn] = 1753-3031
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     comment[continued_by] = 2047-9700
@@ -2500,15 +2054,8 @@
       eissn = 2042-6186
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = jmt 
     param[journal_issn] = 1066-9817
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -2544,14 +2091,8 @@
       eissn = 2049-3967
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = oeh
     param[journal_issn] = 1077-3525
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     au < doNotProcess ; doNotProcess ; 1995 ; International Journal of Occupational and Environmental Health Volume 1 ; 1 >  
     au < doNotProcess ; doNotProcess ; 1996 ; International Journal of Occupational and Environmental Health Volume 2 ; 2 >  
@@ -2578,92 +2119,12 @@
   {
 
     title <
-      name = Journal of Orthodontics ;
-      issn = 1465-3125 ;
-      eissn = 1465-3133
-    >
-
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://jorthod.maneyjournals.org/
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[moving] = move to Atypon, did not know journal_id
-
-    { 
-      
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      {
-
-        au < doNotProcess ; exists ; 1973-1974 ; Journal of Orthodontics Volume 1 [tables of contents only] ; 1 > 
-        au < doNotProcess ; exists ; 1975 ; Journal of Orthodontics Volume 2 [tables of contents only] ; 2 > 
-        au < doNotProcess ; exists ; 1976 ; Journal of Orthodontics Volume 3 [tables of contents only] ; 3 > 
-        au < doNotProcess ; exists ; 1977 ; Journal of Orthodontics Volume 4 [tables of contents only] ; 4 > 
-        au < doNotProcess ; exists ; 1978 ; Journal of Orthodontics Volume 5 [tables of contents only] ; 5 > 
-        au < doNotProcess ; exists ; 1979 ; Journal of Orthodontics Volume 6 [tables of contents only] ; 6 > 
-        au < doNotProcess ; exists ; 1980 ; Journal of Orthodontics Volume 7 [tables of contents only] ; 7 >
-      }
-      {
-
-      attr[au_coverage_depth] = abstracts
-
-        au < doNotProcess ; exists ; 1981 ; Journal of Orthodontics Volume 8 [abstracts only] ; 8 > 
-        au < doNotProcess ; exists ; 1982 ; Journal of Orthodontics Volume 9 [abstracts only] ; 9 > 
-        au < doNotProcess ; exists ; 1983 ; Journal of Orthodontics Volume 10 [abstracts only] ; 10 > 
-        au < doNotProcess ; exists ; 1984 ; Journal of Orthodontics Volume 11 [abstracts only] ; 11 > 
-        au < doNotProcess ; exists ; 1985 ; Journal of Orthodontics Volume 12 [abstracts only] ; 12 > 
-        au < doNotProcess ; exists ; 1986 ; Journal of Orthodontics Volume 13 [abstracts only] ; 13 > 
-        au < doNotProcess ; exists ; 1987 ; Journal of Orthodontics Volume 14 [abstracts only] ; 14 > 
-        au < doNotProcess ; exists ; 1988 ; Journal of Orthodontics Volume 15 [abstracts only] ; 15 > 
-        au < doNotProcess ; exists ; 1989 ; Journal of Orthodontics Volume 16 [abstracts only] ; 16 > 
-        au < doNotProcess ; exists ; 1990 ; Journal of Orthodontics Volume 17 [abstracts only] ; 17 > 
-        au < doNotProcess ; exists ; 1991 ; Journal of Orthodontics Volume 18 [abstracts only] ; 18 > 
-        au < doNotProcess ; exists ; 1992 ; Journal of Orthodontics Volume 19 [abstracts only] ; 19 > 
-        au < doNotProcess ; exists ; 1993 ; Journal of Orthodontics Volume 20 [abstracts only] ; 20 > 
-        au < doNotProcess ; exists ; 1994 ; Journal of Orthodontics Volume 21 [abstracts only] ; 21 > 
-        au < doNotProcess ; exists ; 1995 ; Journal of Orthodontics Volume 22 [abstracts only] ; 22 > 
-        au < doNotProcess ; exists ; 1996 ; Journal of Orthodontics Volume 23 [abstracts only] ; 23 > 
-      }
-      {
-        au < doNotProcess ; exists ; 1997 ; Journal of Orthodontics Volume 24 ; 24 > 
-        au < doNotProcess ; exists ; 1998 ; Journal of Orthodontics Volume 25 ; 25 > 
-        au < doNotProcess ; exists ; 1999 ; Journal of Orthodontics Volume 26 ; 26 > 
-        au < doNotProcess ; exists ; 2000 ; Journal of Orthodontics Volume 27 ; 27 > 
-        au < doNotProcess ; exists ; 2001 ; Journal of Orthodontics Volume 28 ; 28 > 
-        au < doNotProcess ; exists ; 2002 ; Journal of Orthodontics Volume 29 ; 29 > 
-        au < doNotProcess ; exists ; 2003 ; Journal of Orthodontics Volume 30 ; 30 > 
-        au < doNotProcess ; exists ; 2004 ; Journal of Orthodontics Volume 31 ; 31 > 
-        au < doNotProcess ; exists ; 2005 ; Journal of Orthodontics Volume 32 ; 32 > 
-        au < doNotProcess ; exists ; 2006 ; Journal of Orthodontics Volume 33 ; 33 > 
-        au < doNotProcess ; exists ; 2007 ; Journal of Orthodontics Volume 34 ; 34 > 
-        au < doNotProcess ; exists ; 2008 ; Journal of Orthodontics Volume 35 ; 35 > 
-        au < doNotProcess ; exists ; 2009 ; Journal of Orthodontics Volume 36 ; 36 > 
-        au < finished ; crawling ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
-        au < finished ; frozen ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
-        au < finished ; crawling ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
-        au < doNotProcess ; exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 > 
-        au < doNotProcess ; exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 > 
-
-      }
-    }
-
-  }
-
-  {
-
-    title <
       name = Journal of Spinal Cord Medicine ;
       issn = 1079-0268 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = scm 
     param[journal_issn] = 1079-0268
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[notReady] = low agreement
 
@@ -2682,15 +2143,8 @@
       issnl = 0068-1288 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = jba 
     param[journal_issn] = 0068-1288
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1980 ; Journal of the British Archaeological Association Volume 133 ; 133 > 
     au < doNotProcess ; doNotProcess ; 1981 ; Journal of the British Archaeological Association Volume 134 ; 134 > 
@@ -2738,15 +2192,8 @@
       issnl = 0144-2600 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = eni 
     param[journal_issn] = 0144-2600
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -2771,15 +2218,8 @@
       issnl = 0020-3203 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = wsc 
     param[journal_issn] = 0020-3203
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 2042-6445
 
@@ -2798,15 +2238,8 @@
       issnl = 0952-4142 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ksr 
     param[journal_issn] = 0952-4142
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < finished ; crawling ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < finished ; frozen ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
@@ -2824,15 +2257,8 @@
       issnl = 0961-5652 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = lhr 
     param[journal_issn] = 0961-5652
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     comment[0] = ceased publication 2011
     
@@ -2855,15 +2281,8 @@
       issnl = 1759-7536 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = lhi 
     param[journal_issn] = 1759-7536
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
  
     au < doNotProcess ; doNotProcess ; 2009 ; Language & History Volume 52 ; 52 > 
     au < finished ; frozen ; 2010 ; Language & History Volume 53 ; 53 > 
@@ -2882,15 +2301,8 @@
       issnl = 0075-8914 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = lev 
     param[journal_issn] = 0075-8914
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[notReady] = low agreement
 
@@ -2949,15 +2361,8 @@
       issn = 0024-2306 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = lbh 
     param[journal_issn] = 0024-2306
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 1758-3489
 
@@ -2977,15 +2382,8 @@
       issnl = 1758-3489 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = lih 
     param[journal_issn] = 1758-3489
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0024-2306
 
@@ -3006,15 +2404,8 @@
       issnl = 0305-8034 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ldn 
     param[journal_issn] = 0305-8034
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1975 ; The London Journal Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1976 ; The London Journal Volume 2 ; 2 > 
@@ -3066,15 +2457,8 @@
       issnl = 1432-8917 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mri 
     param[journal_issn] = 1432-8917
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -3098,15 +2482,8 @@
       issnl = 0267-0836 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mst 
     param[journal_issn] = 0267-0836
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0306-3453
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
@@ -3152,15 +2529,8 @@
       issnl = 1066-7857 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mte 
     param[journal_issn] = 1066-7857
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -3184,15 +2554,8 @@
       issnl = 2047-4806 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mew 
     param[journal_issn] = 2047-4806
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     comment[dnp] = wait for moving to Atypon
 
@@ -3212,15 +2575,8 @@
 	
 	{
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = med 
     param[journal_issn] = 0076-6097
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2000 ; Medieval Archaeology Volume 44 ; 44 > 
     au < doNotProcess ; doNotProcess ; 2001 ; Medieval Archaeology Volume 45 ; 45 > 
@@ -3250,15 +2606,8 @@
       issnl = 1366-0691 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mss 
     param[journal_issn] = 1366-0691
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     au < doNotProcess ; doNotProcess ; 2006 ; Medieval Sermon Studies Volume 50 ; 50 > 
     au < doNotProcess ; doNotProcess ; 2007 ; Medieval Sermon Studies Volume 51 ; 51 > 
@@ -3278,15 +2627,8 @@
       issn = 0306-3453 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = msc 
     param[journal_issn] = 0306-3453
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[merged_into] = 0267-0836
 
@@ -3318,15 +2660,8 @@
       issn = 0076-6690 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mtlr 
     param[journal_issn] = 0076-6690
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 0367-9020
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
@@ -3360,15 +2695,8 @@
       issnl = 0047-729X 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mdh 
     param[journal_issn] = 0047-729X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1971-1972 ; Midland History Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1973-1974 ; Midland History Volume 2 ; 2 > 
@@ -3420,15 +2748,8 @@
       issnl = 0371-9553 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mpem 
     param[journal_issn] = 0371-9553
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -3458,15 +2779,8 @@
       issnl = 0147-037X 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mng 
     param[journal_issn] = 0147-037X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1975 ; Ming Studies Volume 1975 ; 1975 > 
     au < doNotProcess ; doNotProcess ; 1976 ; Ming Studies Volume 1976 ; 1976 > 
@@ -3519,15 +2833,8 @@
       issnl = 1474-9009 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = mint 
     param[journal_issn] = 1474-9009
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -3557,15 +2864,8 @@
       issnl = 0027-7738 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = nam 
     param[journal_issn] = 0027-7738
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2008 ; Names: A Journal of Onomastics Volume 56 ; 56 > 
     au < doNotProcess ; doNotProcess ; 2009 ; Names: A Journal of Onomastics Volume 57 ; 57 > 
@@ -3585,15 +2885,8 @@
       issnl = 0161-6412 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = nres 
     param[journal_issn] = 0161-6412
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -3620,14 +2913,8 @@
       issn = 2042-3489
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = njb
     param[journal_issn] = 2042-3489
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -3646,15 +2933,8 @@
       issnl = 0078-172X 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = nhi 
     param[journal_issn] = 0078-172X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1966 ; Northern History Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1967 ; Northern History Volume 2 ; 2 > 
@@ -3718,15 +2998,8 @@
       issnl = 1028-415X 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = nns 
     param[journal_issn] = 1028-415X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -3754,15 +3027,8 @@
       issnl = 0078-7191 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ogs 
     param[journal_issn] = 0078-7191
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1966 ; Oxford German Studies Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1967 ; Oxford German Studies Volume 2 ; 2 > 
@@ -3818,15 +3084,8 @@
       issnl = 1746-5095 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ptssrm 
     param[journal_issn] = 1746-5095
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -3850,14 +3109,8 @@
       issn = 2046-9047 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = pch 
     param[journal_issn] = 2046-9047
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0272-4936 
     
@@ -3875,15 +3128,8 @@
       issnl = 0169-1112 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tpc 
     param[journal_issn] = 0169-1112
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[0] = publication ceased in 2007
         
@@ -3908,15 +3154,8 @@
       issnl = 0031-0328 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = peq 
     param[journal_issn] = 0031-0328
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2004 ; Palestine Exploration Quarterly Volume 136 ; 136 > 
     au < doNotProcess ; doNotProcess ; 2005 ; Palestine Exploration Quarterly Volume 137 ; 137 > 
@@ -3940,15 +3179,8 @@
       issnl = 0957-4190 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = pvr 
     param[journal_issn] = 0957-4190
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[0] = ceased publication in 2005
 
@@ -3965,14 +3197,8 @@
       issn = 2047-7724
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = pgh
     param[journal_issn] = 2047-7724
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0003-4983
     
@@ -3990,15 +3216,8 @@
       issnl = 1757-0921 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = pha 
     param[journal_issn] = 1757-0921
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     comment[0] = ceased publication 2012
 
@@ -4019,15 +3238,8 @@
       issnl = 1083-3196 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ptr 
     param[journal_issn] = 1083-3196
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -4061,15 +3273,8 @@
       issnl = 1465-8011 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = prc 
     param[journal_issn] = 1465-8011
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -4100,15 +3305,8 @@
       issnl = 0079-4236 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = pma 
     param[journal_issn] = 0079-4236
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2005 ; Post-Medieval Archaeology Volume 39 ; 39 > 
     au < doNotProcess ; doNotProcess ; 2006 ; Post-Medieval Archaeology Volume 40 ; 40 > 
@@ -4131,15 +3329,8 @@
       issnl = 0032-5899 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = pm 
     param[journal_issn] = 0032-5899
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -4170,15 +3361,8 @@
       issnl = 0969-9260 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ppc 
     param[journal_issn] = 0969-9260
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -4205,15 +3389,8 @@
       issnl = 1465-5187 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = pua 
     param[journal_issn] = 1465-5187
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 2000-2001 ; Public Archaeology Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2001-2002 ; Public Archaeology Volume 2 ; 2 > 
@@ -4239,15 +3416,8 @@
       issnl = 0959-3683 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = peg 
     param[journal_issn] = 0959-3683
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     au < doNotProcess ; doNotProcess ; 2006 ; Publications of the English Goethe Society Volume 75 ; 75 > 
     au < doNotProcess ; doNotProcess ; 2007 ; Publications of the English Goethe Society Volume 76 ; 76 > 
@@ -4269,15 +3439,8 @@
       issnl = 1351-0002 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = rer 
     param[journal_issn] = 1351-0002
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -4306,15 +3469,8 @@
       issn = 0893-2344 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = repc
     param[journal_issn] = 0893-2344
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 1521-5385 
 
@@ -4333,15 +3489,8 @@
       issnl = 0263-9904 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = ros 
     param[journal_issn] = 0263-9904
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1982-1983 ; Romance Studies Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1984 ; Romance Studies Volume 2 ; 2 > 
@@ -4386,15 +3535,8 @@
       issnl = 1362-1718 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = stwj 
     param[journal_issn] = 1362-1718
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -4428,15 +3570,8 @@
       issnl = 0265-1068  
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = c17 
     param[journal_issn] = 0265-1068 
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1979 ; Seventeenth-Century French Studies Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1980 ; Seventeenth-Century French Studies Volume 2 ; 2 > 
@@ -4485,15 +3620,8 @@
       issnl = 1361-7427 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = sla 
     param[journal_issn] = 1361-7427
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1994 ; Slavonica Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1995 ; Slavonica Volume 2 ; 2 > 
@@ -4525,15 +3653,8 @@
       eissn = 2047-0584 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = sic 
     param[journal_issn] = 0039-3630
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
  
    au < finished ; frozen ; 2011 ; Studies in Conservation Volume 56 ; 56 > 
    au < finished ; crawling ; 2012 ; Studies in Conservation Volume 57 ; 57 > 
@@ -4550,15 +3671,8 @@
       issnl = 0267-0844 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = se 
     param[journal_issn] = 0267-0844
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -4589,15 +3703,8 @@
       issnl = 0039-6265 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = sre 
     param[journal_issn] = 0039-6265
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1931-1932 ; Survey Review Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1933-1934 ; Survey Review Volume 2 ; 2 > 
@@ -4656,15 +3763,8 @@
       issnl = 0737-5034 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tang 
     param[journal_issn] = 0737-5034
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     au < doNotProcess ; doNotProcess ; 1982-1983 ; T'ang Studies Volume 1982 ; 1982 > 
     au < doNotProcess ; doNotProcess ; 1984 ; T'ang Studies Volume 1984 ; 1984 > 
@@ -4703,15 +3803,9 @@
       issnl = 0334-4355 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tav 
     param[journal_issn] = 0334-4355
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; volume >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; volume > # FIXME
 
     au < doNotProcess ; doNotProcess ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1974 ; 1974 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1975 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1975 ; 1975 ; 2 > 
@@ -4764,15 +3858,8 @@
       issnl = 0082-2884 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tin 
     param[journal_issn] = 0082-2884
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1969 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1970 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 2 ; 2 > 
@@ -4831,15 +3918,8 @@
       issnl = 0040-4969 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tex 
     param[journal_issn] = 0040-4969
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1968-1970 ; Textile History Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1971 ; Textile History Volume 2 ; 2 > 
@@ -4897,15 +3977,8 @@
       issnl = 0020-2967 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = imf 
     param[journal_issn] = 0020-2967
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -4930,15 +4003,8 @@
       issnl = 0372-0187 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tns 
     param[journal_issn] = 0372-0187
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continued_by] = 1758-1206
 
@@ -4958,15 +4024,8 @@
       issnl = 1751-5831 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = trb 
     param[journal_issn] = 1751-5831
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
@@ -4989,15 +4048,8 @@
       issnl = 1521-5385
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = tcc 
     param[journal_issn] = 1521-5385
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     comment[continues] = 0893-2344 
 
@@ -5033,15 +4085,8 @@
       issnl = 1757-8949 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = usu 
     param[journal_issn] = 1757-8949
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     comment[0] = publication ceased December 31, 2012
     
@@ -5060,15 +4105,8 @@
       issnl = 0305-5477 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = vea 
     param[journal_issn] = 0305-5477
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
     au < doesNotExist ; doesNotExist ; 0 ; Vernacular Architecture Volume 2 ; 2 > 
@@ -5126,15 +4164,8 @@
       issnl = 0729-2473 
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = war 
     param[journal_issn] = 0729-2473
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < doNotProcess ; doNotProcess ; 1983 ; War & Society Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1984 ; War & Society Volume 2 ; 2 > 
@@ -5179,15 +4210,8 @@
       eissn = 2045-0664
     >
 
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = yaj 
     param[journal_issn] = 0084-4276
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < finished ; frozen ; 2010 ; Yorkshire Archaeological Journal Volume 82 ; 82 >
     au < finished ; crawling ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
