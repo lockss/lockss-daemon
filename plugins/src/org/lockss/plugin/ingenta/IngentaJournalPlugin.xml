@@ -221,10 +221,10 @@
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>([.](css|js|(eot|svg|ttf|woff)([?]v=[^&amp;]*)?)$</string>
+    <string>[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?$</string>
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>([.](css|js|(eot|svg|ttf|woff)([?]v=[^&amp;]*)?)$</string>
+    <string>[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?$</string>
   </entry>
 </map>
