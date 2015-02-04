@@ -99,15 +99,15 @@
       param[base_url] = http://sistemas.ib.unicamp.br/be310/
       param[journal_id] = be310
 
-      au < releasing ; 2005 ; 1 ; Ciências do Ambiente On-line Volume 2005 ; 2005 ; >
-      au < releasing ; 2006 ; 2 ; Ciências do Ambiente On-line Volume 2006 ; 2006 ; >
-      au < releasing ; 2007 ; 3 ; Ciências do Ambiente On-line Volume 2007 ; 2007 ; >
-      au < releasing ; 2008 ; 4 ; Ciências do Ambiente On-line Volume 2008 ; 2008 ; >
-      au < releasing ; 2009 ; 5 ; Ciências do Ambiente On-line Volume 2009 ; 2009 ; >
-      au < releasing ; 2010 ; 6 ; Ciências do Ambiente On-line Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 7 ; Ciências do Ambiente On-line Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 8 ; Ciências do Ambiente On-line Volume 2012 ; 2012 ; >
-      au < releasing ; 2013 ; 9 ; Ciências do Ambiente On-line Volume 2013 ; 2013 ; >
+      au < released ; 2005 ; 1 ; Ciências do Ambiente On-line Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 2 ; Ciências do Ambiente On-line Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Ciências do Ambiente On-line Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Ciências do Ambiente On-line Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Ciências do Ambiente On-line Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Ciências do Ambiente On-line Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Ciências do Ambiente On-line Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Ciências do Ambiente On-line Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 9 ; Ciências do Ambiente On-line Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 10 ; Ciências do Ambiente On-line Volume 2014 ; 2014 ; >
 
   }
@@ -178,15 +178,15 @@
       param[base_url] = http://physicae.ifi.unicamp.br/
       param[journal_id] = physicae
 
-      au < releasing ; 2000 ; 1 ; Physicae Volume 2000 ; 2000 ; >
-      au < releasing ; 2001 ; 2 ; Physicae Volume 2001 ; 2001 ; >
-      au < releasing ; 2003 ; 3 ; Physicae Volume 2003 ; 2003 ; >
-      au < releasing ; 2005 ; 4 ; Physicae Volume 2005 ; 2005 ; >
-      au < releasing ; 2006 ; 5 ; Physicae Volume 2006 ; 2006 ; >
-      au < releasing ; 2008 ; 6 ; Physicae Volume 2008 ; 2008 ; >
-      au < releasing ; 2009 ; 7 ; Physicae Volume 2009 ; 2009 ; >
-      au < releasing ; 2010 ; 8 ; Physicae Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 9 ; Physicae Volume 2011 ; 2011 ; >
+      au < released ; 2000 ; 1 ; Physicae Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 2 ; Physicae Volume 2001 ; 2001 ; >
+      au < released ; 2003 ; 3 ; Physicae Volume 2003 ; 2003 ; >
+      au < released ; 2005 ; 4 ; Physicae Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Physicae Volume 2006 ; 2006 ; >
+      au < released ; 2008 ; 6 ; Physicae Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Physicae Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Physicae Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Physicae Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 10 ; Physicae Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 11 ; Physicae Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 12 ; Physicae Volume 2014 ; 2014 ; >
@@ -318,8 +318,8 @@
       param[base_url] = http://physicae.ifi.unicamp.br/
       param[journal_id] = phyproceedings
 
-      au < releasing ; 2010 ; 1 ; Physicae Proceedings Volume 2010 ; 2010 ; >
-      au < releasing ; 2012 ; 2 ; Physicae Proceedings Volume 2012 ; 2012 ; >
+      au < released ; 2010 ; 1 ; Physicae Proceedings Volume 2010 ; 2010 ; >
+      au < released ; 2012 ; 2 ; Physicae Proceedings Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Physicae Proceedings Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 4 ; Physicae Proceedings Volume 2014 ; 2014 ; >
 
