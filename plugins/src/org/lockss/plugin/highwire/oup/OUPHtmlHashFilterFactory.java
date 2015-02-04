@@ -1,5 +1,5 @@
 /*
- * $Id: OUPHtmlHashFilterFactory.java,v 1.1 2015-01-23 23:43:16 etenbrink Exp $
+ * $Id: OUPHtmlHashFilterFactory.java,v 1.2 2015-02-04 07:14:09 etenbrink Exp $
  */
 
 /*
@@ -67,6 +67,12 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
         // HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
         // right sidebar 
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
+        // content-header from QJM
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-header"),
+        // <div class="panel-pane pane-panels-mini pane-oup-explore-related-articles"
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citing|related)-articles?"),
+        // don't remove any div tags with login, as they should not happen and we don't want to hide
+        // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-login"),
     };
     
     InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
