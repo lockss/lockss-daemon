@@ -120,8 +120,8 @@
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
-      <!-- Do not crawl these BMJ variations -->
-      <string>2,"^%scontent/.+([.]print|/(article-info|related|submit))", base_url</string>
+      <!-- Do not crawl these BMJ & OUP variations -->
+      <string>2,"^%scontent/.+([.](print|explore[?])|/(article-info|related|submit))", base_url</string>
       <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
       <string>2,"^%s(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
