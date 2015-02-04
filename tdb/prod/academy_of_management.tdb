@@ -11,7 +11,7 @@
 
     title <
       name = Academy of Management Discoveries (AMD) ;
-      comment[0] = expected in 2014
+      comment[0] = expected in 2015
     >
     
    }
@@ -40,8 +40,9 @@
       au < released ; 2010 ; Academy of Management Learning and Education (AMLE) Volume 9 ; 9 >
       au < released ; 2011 ; Academy of Management Learning and Education (AMLE) Volume 10 ; 10 >
       au < released ; 2012 ; Academy of Management Learning and Education (AMLE) Volume 11 ; 11 >
-      au < expected ; 2013 ; Academy of Management Learning and Education (AMLE) Volume 12 ; 12 >
-      au < expected ; 2014 ; Academy of Management Learning and Education (AMLS) Volume 13 ; 13 >
+      au < exists ; 2013 ; Academy of Management Learning and Education (AMLE) Volume 12 ; 12 >
+      au < exists ; 2014 ; Academy of Management Learning and Education (AMLS) Volume 13 ; 13 >
+      au < expected ; 2015 ; Academy of Management Learning and Education (AMLS) Volume 14 ; 14 >
     }
 
   }
@@ -114,8 +115,9 @@
       au < released ; 2010 ; Academy of Management Journal (AMJ) Volume 53 ; 53 >
       au < released ; 2011 ; Academy of Management Journal (AMJ) Volume 54 ; 54 >
       au < released ; 2012 ; Academy of Management Journal (AMJ) Volume 55 ; 55 >
-      au < expected ; 2013 ; Academy of Management Journal (AMJ) Volume 56 ; 56 >
-      au < expected ; 2014 ; Academy of Management Journal (AMJ) Volume 57 ; 57 >
+      au < exists ; 2013 ; Academy of Management Journal (AMJ) Volume 56 ; 56 >
+      au < exists ; 2014 ; Academy of Management Journal (AMJ) Volume 57 ; 57 >
+      au < expected ; 2015 ; Academy of Management Journal (AMJ) Volume 58 ; 58 >
       
     }
 
@@ -131,7 +133,7 @@
     >
     
     {
-      comment[nR] = RT 5453 permission needed
+
       param[base_url] = http://amr.aom.org/
   
       au < manifest ; 1976 ; Academy of Management Review (AMR) Volume 1 ; 1 >
@@ -173,6 +175,7 @@
       au < released ; 2012 ; Academy of Management Review (AMR) Volume 37 ; 37 >
       au < released ; 2013 ; Academy of Management Review (AMR) Volume 38 ; 38 >
       au < manifest ; 2014 ; Academy of Management Review (AMR) Volume 39 ; 39 >
+      au < expected ; 2015 ; Academy of Management Review (AMR) Volume 40 ; 40 >
       
     }
 
@@ -219,6 +222,7 @@
       au < released ; 2012 ; Academy of Management Perspectives (AMP) Volume 26 ; 26 >
       au < released ; 2013 ; Academy of Management Perspectives (AMP) Volume 27 ; 27 >
       au < manifest ; 2014 ; Academy of Management Perspectives (AMP) Volume 28 ; 28 >
+      au < expected ; 2015 ; Academy of Management Perspectives (AMP) Volume 29 ; 29 >
 
     }
 
