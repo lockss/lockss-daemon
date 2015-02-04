@@ -3655,7 +3655,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Distributed Sensor Networks Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -4012,7 +4012,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Mathematics and Mathematical Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -4027,7 +4027,7 @@
 
     param[journal_id] = ijmg
 
-    au < testing ; exists ; 2014 ; International Journal of Medical Genetics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Medical Genetics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Medical Genetics Volume 2015 ; 2015 ; 2015 >
 
   }
