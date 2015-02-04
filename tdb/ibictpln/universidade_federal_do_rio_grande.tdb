@@ -34,16 +34,16 @@
       au < notReady ; 2001 ; 17 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2001 ; 2001 ; no articles >
       au < notReady ; 2002 ; 18 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2002 ; 2002 ; no articles >
       au < notReady ; 2003 ; 19 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2003 ; 2003 ; no articles >
-      au < ready ; 2004 ; 20 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2004 ; 2004 ; >
-      au < ready ; 2005 ; 21 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 22 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 23 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 24 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 25 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 26 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 27 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 28 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 29 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2013 ; 2013 ; >
+      au < releasing ; 2004 ; 20 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2004 ; 2004 ; >
+      au < releasing ; 2005 ; 21 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 22 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 23 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 24 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 25 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 26 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 27 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 28 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 29 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 30 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2014 ; 2014 ; >
 
   }
@@ -79,13 +79,13 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = juris
 
-      au < ready ; 2005 ; 1 ; JURIS-Revista da Faculdade de Direito Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 2 ; JURIS-Revista da Faculdade de Direito Volume 2006 ; 2006 ; >
-      au < ready ; 2008 ; 4 ; JURIS-Revista da Faculdade de Direito Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 5 ; JURIS-Revista da Faculdade de Direito Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 6 ; JURIS-Revista da Faculdade de Direito Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 7 ; JURIS-Revista da Faculdade de Direito Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 8 ; JURIS-Revista da Faculdade de Direito Volume 2012 ; 2012 ; >
+      au < releasing ; 2005 ; 1 ; JURIS-Revista da Faculdade de Direito Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 2 ; JURIS-Revista da Faculdade de Direito Volume 2006 ; 2006 ; >
+      au < releasing ; 2008 ; 4 ; JURIS-Revista da Faculdade de Direito Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 5 ; JURIS-Revista da Faculdade de Direito Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 6 ; JURIS-Revista da Faculdade de Direito Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 7 ; JURIS-Revista da Faculdade de Direito Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 8 ; JURIS-Revista da Faculdade de Direito Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 9 ; JURIS-Revista da Faculdade de Direito Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 10 ; JURIS-Revista da Faculdade de Direito Volume 2014 ; 2014 ; >
 
@@ -130,17 +130,17 @@
       au < notReady ; 1999 ; 4 ; Revista Ambiente & Educação Volume 1999 ; 1999 ; no articles >
       au < notReady ; 2000 ; 5 ; Revista Ambiente & Educação Volume 2000 ; 2000 ; no articles >
       au < notReady ; 2002 ; 7 ; Revista Ambiente & Educação Volume 2002 ; 2002 ; no articles >
-      au < ready ; 2003 ; 8 ; Revista Ambiente & Educação Volume 2003 ; 2003 ; >
-      au < ready ; 2004 ; 9 ; Revista Ambiente & Educação Volume 2004 ; 2004 ; >
-      au < ready ; 2005 ; 10 ; Revista Ambiente & Educação Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 11 ; Revista Ambiente & Educação Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 12 ; Revista Ambiente & Educação Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 13 ; Revista Ambiente & Educação Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 14 ; Revista Ambiente & Educação Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 15 ; Revista Ambiente & Educação Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 16 ; Revista Ambiente & Educação Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 17 ; Revista Ambiente & Educação Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 18 ; Revista Ambiente & Educação Volume 2013 ; 2013 ; >
+      au < releasing ; 2003 ; 8 ; Revista Ambiente & Educação Volume 2003 ; 2003 ; >
+      au < releasing ; 2004 ; 9 ; Revista Ambiente & Educação Volume 2004 ; 2004 ; >
+      au < releasing ; 2005 ; 10 ; Revista Ambiente & Educação Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 11 ; Revista Ambiente & Educação Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 12 ; Revista Ambiente & Educação Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 13 ; Revista Ambiente & Educação Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 14 ; Revista Ambiente & Educação Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 15 ; Revista Ambiente & Educação Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 16 ; Revista Ambiente & Educação Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 17 ; Revista Ambiente & Educação Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 18 ; Revista Ambiente & Educação Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 19 ; Revista Ambiente & Educação Volume 2014 ; 2014 ; >
 
   }
@@ -180,17 +180,17 @@
       au < notReady ; 2000 ; 24 ; Revista Atlântica Volume 2000 ; 2000 ; no articles >
       au < notReady ; 2001 ; 25 ; Revista Atlântica Volume 2001 ; 2001 ; no articles >
       au < notReady ; 2002 ; 26 ; Revista Atlântica Volume 2002 ; 2002 ; no articles >
-      au < ready ; 2003 ; 27 ; Revista Atlântica Volume 2003 ; 2003 ; >
-      au < ready ; 2004 ; 28 ; Revista Atlântica Volume 2004 ; 2004 ; >
-      au < ready ; 2005 ; 29 ; Revista Atlântica Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 30 ; Revista Atlântica Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 31 ; Revista Atlântica Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 32 ; Revista Atlântica Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 33 ; Revista Atlântica Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 34 ; Revista Atlântica Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 35 ; Revista Atlântica Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 36 ; Revista Atlântica Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 37 ; Revista Atlântica Volume 2013 ; 2013 ; >
+      au < releasing ; 2003 ; 27 ; Revista Atlântica Volume 2003 ; 2003 ; >
+      au < releasing ; 2004 ; 28 ; Revista Atlântica Volume 2004 ; 2004 ; >
+      au < releasing ; 2005 ; 29 ; Revista Atlântica Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 30 ; Revista Atlântica Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 31 ; Revista Atlântica Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 32 ; Revista Atlântica Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 33 ; Revista Atlântica Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 34 ; Revista Atlântica Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 35 ; Revista Atlântica Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 36 ; Revista Atlântica Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 37 ; Revista Atlântica Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 38 ; Revista Atlântica Volume 2014 ; 2014 ; >
 
   }
@@ -225,15 +225,15 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = redsis
 
-      au < ready ; 2005 ; 1 ; Revista Didática Sistêmica Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 2 ; Revista Didática Sistêmica Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 3 ; Revista Didática Sistêmica Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 4 ; Revista Didática Sistêmica Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 5 ; Revista Didática Sistêmica Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 6 ; Revista Didática Sistêmica Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 7 ; Revista Didática Sistêmica Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 8 ; Revista Didática Sistêmica Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 9 ; Revista Didática Sistêmica Volume 2013 ; 2013 ; >
+      au < releasing ; 2005 ; 1 ; Revista Didática Sistêmica Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 2 ; Revista Didática Sistêmica Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 3 ; Revista Didática Sistêmica Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 4 ; Revista Didática Sistêmica Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 5 ; Revista Didática Sistêmica Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 6 ; Revista Didática Sistêmica Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 7 ; Revista Didática Sistêmica Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 8 ; Revista Didática Sistêmica Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 9 ; Revista Didática Sistêmica Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 10 ; Revista Didática Sistêmica Volume 2014 ; 2014 ; >
 
   }
@@ -275,18 +275,18 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = sinergia
 
-      au < ready ; 1985 ; 1 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1985 ; 1985 ; >
-      au < ready ; 1988 ; 4 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1988 ; 1988 ; >
+      au < releasing ; 1985 ; 1 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1985 ; 1985 ; >
+      au < releasing ; 1988 ; 4 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1988 ; 1988 ; >
       au < notReady ; 1992 ; 8 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1992 ; 1992 ; no articles >
       au < notReady ; 1993 ; 9 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1993 ; 1993 ; no articles >
       au < notReady ; 1994 ; 10 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1994 ; 1994 ; no articles >
-      au < ready ; 1995 ; 11 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1995 ; 1995 ; >
+      au < releasing ; 1995 ; 11 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1995 ; 1995 ; >
       au < notReady ; 1996 ; 12 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1996 ; 1996 ; no articles >
       au < notReady ; 1997 ; 13 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1997 ; 1997 ; no articles >
       au < notReady ; 1998 ; 14 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1998 ; 1998 ; no articles >
-      au < ready ; 2007 ; 23 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2007 ; 2007 ; >
-      au < ready ; 2012 ; 28 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 29 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2013 ; 2013 ; >
+      au < releasing ; 2007 ; 23 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2007 ; 2007 ; >
+      au < releasing ; 2012 ; 28 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 29 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 30 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2014 ; 2014 ; >
 
   }
@@ -314,17 +314,17 @@
       au < notReady ; 2000 ; 15 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2000 ; 2000 ; no articles >
       au < notReady ; 2001 ; 16 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2001 ; 2001 ; no articles >
       au < notReady ; 2002 ; 17 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2002 ; 2002 ; no articles >
-      au < ready ; 2003 ; 18 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2003 ; 2003 ; >
+      au < releasing ; 2003 ; 18 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2003 ; 2003 ; >
       au < notReady ; 2004 ; 19 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2004 ; 2004 ; no articles >
-      au < ready ; 2005 ; 20 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 21 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 22 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 23 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 24 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 25 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 26 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 27 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 28 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2013 ; 2013 ; >
+      au < releasing ; 2005 ; 20 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 21 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 22 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 23 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 24 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 25 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 26 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 27 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 28 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 29 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2014 ; 2014 ; >
 
   }

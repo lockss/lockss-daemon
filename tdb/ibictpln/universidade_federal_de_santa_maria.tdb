@@ -19,15 +19,15 @@
 
     param[journal_id] = balduinia
 
-    au < ready ; 2005 ; 1 ; Balduinia Volume 2005 ; 2005 ; >
-    au < ready ; 2006 ; 2 ; Balduinia Volume 2006 ; 2006 ; >
-    au < ready ; 2007 ; 3 ; Balduinia Volume 2007 ; 2007 ; >
-    au < ready ; 2008 ; 4 ; Balduinia Volume 2008 ; 2008 ; >
-    au < ready ; 2009 ; 5 ; Balduinia Volume 2009 ; 2009 ; >
-    au < ready ; 2010 ; 6 ; Balduinia Volume 2010 ; 2010 ; >
-    au < ready ; 2011 ; 7 ; Balduinia Volume 2011 ; 2011 ; >
-    au < ready ; 2012 ; 8 ; Balduinia Volume 2012 ; 2012 ; >
-    au < ready ; 2013 ; 9 ; Balduinia Volume 2013 ; 2013 ; >
+    au < releasing ; 2005 ; 1 ; Balduinia Volume 2005 ; 2005 ; >
+    au < releasing ; 2006 ; 2 ; Balduinia Volume 2006 ; 2006 ; >
+    au < releasing ; 2007 ; 3 ; Balduinia Volume 2007 ; 2007 ; >
+    au < releasing ; 2008 ; 4 ; Balduinia Volume 2008 ; 2008 ; >
+    au < releasing ; 2009 ; 5 ; Balduinia Volume 2009 ; 2009 ; >
+    au < releasing ; 2010 ; 6 ; Balduinia Volume 2010 ; 2010 ; >
+    au < releasing ; 2011 ; 7 ; Balduinia Volume 2011 ; 2011 ; >
+    au < releasing ; 2012 ; 8 ; Balduinia Volume 2012 ; 2012 ; >
+    au < releasing ; 2013 ; 9 ; Balduinia Volume 2013 ; 2013 ; >
     au < manifest ; 2014 ; 10 ; Balduinia Volume 2014 ; 2014 ; >
 
   }
@@ -111,14 +111,14 @@
 
     param[journal_id] = revistadireito
 
-    au < ready ; 2006 ; 1 ; Revista Eletrônica do Curso de Direito da UFSM Volume 1 ; 2006 ; >
-    au < ready ; 2007 ; 2 ; Revista Eletrônica do Curso de Direito da UFSM Volume 2 ; 2007 ; >
-    au < ready ; 2008 ; 3 ; Revista Eletrônica do Curso de Direito da UFSM Volume 3 ; 2008 ; >
-    au < ready ; 2009 ; 4 ; Revista Eletrônica do Curso de Direito da UFSM Volume 4 ; 2009 ; >
-    au < ready ; 2010 ; 5 ; Revista Eletrônica do Curso de Direito da UFSM Volume 5 ; 2010 ; >
-    au < ready ; 2011 ; 6 ; Revista Eletrônica do Curso de Direito da UFSM Volume 6 ; 2011 ; >
-    au < ready ; 2012 ; 7 ; Revista Eletrônica do Curso de Direito da UFSM Volume 7 ; 2012 ; >
-    au < ready ; 2013 ; 8 ; Revista Eletrônica do Curso de Direito da UFSM Volume 8 ; 2013 ; >
+    au < releasing ; 2006 ; 1 ; Revista Eletrônica do Curso de Direito da UFSM Volume 1 ; 2006 ; >
+    au < releasing ; 2007 ; 2 ; Revista Eletrônica do Curso de Direito da UFSM Volume 2 ; 2007 ; >
+    au < releasing ; 2008 ; 3 ; Revista Eletrônica do Curso de Direito da UFSM Volume 3 ; 2008 ; >
+    au < releasing ; 2009 ; 4 ; Revista Eletrônica do Curso de Direito da UFSM Volume 4 ; 2009 ; >
+    au < releasing ; 2010 ; 5 ; Revista Eletrônica do Curso de Direito da UFSM Volume 5 ; 2010 ; >
+    au < releasing ; 2011 ; 6 ; Revista Eletrônica do Curso de Direito da UFSM Volume 6 ; 2011 ; >
+    au < releasing ; 2012 ; 7 ; Revista Eletrônica do Curso de Direito da UFSM Volume 7 ; 2012 ; >
+    au < releasing ; 2013 ; 8 ; Revista Eletrônica do Curso de Direito da UFSM Volume 8 ; 2013 ; >
     au < manifest ; 2014 ; 9 ; Revista Eletrônica do Curso de Direito da UFSM Volume 9 ; 2014 ; >
   }
 
@@ -147,10 +147,10 @@
 
     param[journal_id] = interacao
 
-    au < ready ; 2010 ; 1 ; Revista InterAção Volume 1 ; 2010 ; >
-    au < ready ; 2011 ; 2 ; Revista InterAção Volume 2 ; 2011 ; >
-    au < ready ; 2012 ; 3 ; Revista InterAção Volume 3 ; 2012 ; >
-    au < ready ; 2013 ; 4 ; Revista InterAção Volume 4 ; 2013 ; >
+    au < releasing ; 2010 ; 1 ; Revista InterAção Volume 1 ; 2010 ; >
+    au < releasing ; 2011 ; 2 ; Revista InterAção Volume 2 ; 2011 ; >
+    au < releasing ; 2012 ; 3 ; Revista InterAção Volume 3 ; 2012 ; >
+    au < releasing ; 2013 ; 4 ; Revista InterAção Volume 4 ; 2013 ; >
     au < manifest ; 2014 ; 5 ; Revista InterAção Volume 5 ; 2014 ; >
 
   }
@@ -164,7 +164,7 @@
 
     param[journal_id] = regae
 
-    au < ready ; 2013 ; 1 ; Revista de Gestão e Avaliação Educacional Volume 1 ; 2013 ; >
+    au < releasing ; 2013 ; 1 ; Revista de Gestão e Avaliação Educacional Volume 1 ; 2013 ; >
     au < manifest ; 2014 ; 2 ; Revista de Gestão e Avaliação Educacional Volume 2 ; 2014 ; >
 
   }
@@ -292,7 +292,7 @@
 
     param[journal_id] = enflo
 
-    au < ready ; 2013 ; 1 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 1 ; 2013 ; >
+    au < releasing ; 2013 ; 1 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 1 ; 2013 ; >
     au < manifest ; 2014 ; 2 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 2 ; 2014 ; >
 
   }
@@ -451,7 +451,7 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = LA
 
-      au < ready ; 2013 ; 1 ; Literatura e Autoritarismo Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 1 ; Literatura e Autoritarismo Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 2 ; Literatura e Autoritarismo Volume 2014 ; 2014 ; >
 
   }
@@ -540,22 +540,22 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = sociaisehumanas
 
-      au < ready ; 1998 ; 1 ; Revista Sociais e Humanas Volume 1998 ; 1998 ; >
-      au < ready ; 1999 ; 2 ; Revista Sociais e Humanas Volume 1999 ; 1999 ; >
-      au < ready ; 2000 ; 3 ; Revista Sociais e Humanas Volume 2000 ; 2000 ; >
-      au < ready ; 2001 ; 4 ; Revista Sociais e Humanas Volume 2001 ; 2001 ; >
-      au < ready ; 2002 ; 5 ; Revista Sociais e Humanas Volume 2002 ; 2002 ; >
-      au < ready ; 2003 ; 6 ; Revista Sociais e Humanas Volume 2003 ; 2003 ; >
-      au < ready ; 2004 ; 7 ; Revista Sociais e Humanas Volume 2004 ; 2004 ; >
-      au < ready ; 2005 ; 8 ; Revista Sociais e Humanas Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 9 ; Revista Sociais e Humanas Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 10 ; Revista Sociais e Humanas Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 11 ; Revista Sociais e Humanas Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 12 ; Revista Sociais e Humanas Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 13 ; Revista Sociais e Humanas Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 14 ; Revista Sociais e Humanas Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 15 ; Revista Sociais e Humanas Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 16 ; Revista Sociais e Humanas Volume 2013 ; 2013 ; >
+      au < releasing ; 1998 ; 1 ; Revista Sociais e Humanas Volume 1998 ; 1998 ; >
+      au < releasing ; 1999 ; 2 ; Revista Sociais e Humanas Volume 1999 ; 1999 ; >
+      au < releasing ; 2000 ; 3 ; Revista Sociais e Humanas Volume 2000 ; 2000 ; >
+      au < releasing ; 2001 ; 4 ; Revista Sociais e Humanas Volume 2001 ; 2001 ; >
+      au < releasing ; 2002 ; 5 ; Revista Sociais e Humanas Volume 2002 ; 2002 ; >
+      au < releasing ; 2003 ; 6 ; Revista Sociais e Humanas Volume 2003 ; 2003 ; >
+      au < releasing ; 2004 ; 7 ; Revista Sociais e Humanas Volume 2004 ; 2004 ; >
+      au < releasing ; 2005 ; 8 ; Revista Sociais e Humanas Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 9 ; Revista Sociais e Humanas Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 10 ; Revista Sociais e Humanas Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 11 ; Revista Sociais e Humanas Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 12 ; Revista Sociais e Humanas Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 13 ; Revista Sociais e Humanas Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 14 ; Revista Sociais e Humanas Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 15 ; Revista Sociais e Humanas Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 16 ; Revista Sociais e Humanas Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 17 ; Revista Sociais e Humanas Volume 2014 ; 2014 ; >
 
   }
@@ -614,7 +614,7 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = nope
 
-      au < ready ; 2011 ; 1 ; Notas de Pesquisa Volume 2011 ; 2011 ; >
+      au < releasing ; 2011 ; 1 ; Notas de Pesquisa Volume 2011 ; 2011 ; >
 
   }
 
