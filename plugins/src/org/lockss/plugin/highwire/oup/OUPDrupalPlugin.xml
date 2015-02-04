@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development - Evan/??</string>
+    <string>development - Evan/Janice</string>
   </entry>
   <!-- compare to ClockssOUPDrupalPlugin, the added entries should be in synch -->
   <entry>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
