@@ -1,0 +1,89 @@
+# This is a legacy Maney Publishing file for titles previously hosted by HighWire Press
+
+{
+
+  publisher <
+    name = Maney Publishing
+  >
+
+  {
+
+    title <
+      name = Journal of Orthodontics ;
+      issn = 1465-3125 ;
+      eissn = 1465-3133
+    >
+
+    # This publication moved to Atypon Systems
+    
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://jorthod.maneyjournals.org/
+
+    {
+    
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      attr[au_coverage_depth] = tablesofcontents
+ 
+      au < down ; 1973-1974 ; Journal of Orthodontics Volume 1 [tables of contents only] ; 1 >
+      au < down ; 1975 ; Journal of Orthodontics Volume 2 [tables of contents only] ; 2 >
+      au < down ; 1976 ; Journal of Orthodontics Volume 3 [tables of contents only] ; 3 >
+      au < down ; 1977 ; Journal of Orthodontics Volume 4 [tables of contents only] ; 4 >
+      au < down ; 1978 ; Journal of Orthodontics Volume 5 [tables of contents only] ; 5 >
+      au < down ; 1979 ; Journal of Orthodontics Volume 6 [tables of contents only] ; 6 >
+      au < down ; 1980 ; Journal of Orthodontics Volume 7 [tables of contents only] ; 7 >
+
+    }
+
+    {
+    
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      attr[au_coverage_depth] = abstracts
+    
+      au < down ; 1981 ; Journal of Orthodontics Volume 8 [abstracts only] ; 8 >
+      au < down ; 1982 ; Journal of Orthodontics Volume 9 [abstracts only] ; 9 >
+      au < down ; 1983 ; Journal of Orthodontics Volume 10 [abstracts only] ; 10 >
+      au < down ; 1984 ; Journal of Orthodontics Volume 11 [abstracts only] ; 11 >
+      au < down ; 1985 ; Journal of Orthodontics Volume 12 [abstracts only] ; 12 >
+      au < down ; 1986 ; Journal of Orthodontics Volume 13 [abstracts only] ; 13 >
+      au < down ; 1987 ; Journal of Orthodontics Volume 14 [abstracts only] ; 14 >
+      au < down ; 1988 ; Journal of Orthodontics Volume 15 [abstracts only] ; 15 >
+      au < down ; 1989 ; Journal of Orthodontics Volume 16 [abstracts only] ; 16 >
+      au < down ; 1990 ; Journal of Orthodontics Volume 17 [abstracts only] ; 17 >
+      au < down ; 1991 ; Journal of Orthodontics Volume 18 [abstracts only] ; 18 >
+      au < down ; 1992 ; Journal of Orthodontics Volume 19 [abstracts only] ; 19 >
+      au < down ; 1993 ; Journal of Orthodontics Volume 20 [abstracts only] ; 20 >
+      au < down ; 1994 ; Journal of Orthodontics Volume 21 [abstracts only] ; 21 >
+      au < down ; 1995 ; Journal of Orthodontics Volume 22 [abstracts only] ; 22 >
+      au < down ; 1996 ; Journal of Orthodontics Volume 23 [abstracts only] ; 23 >
+
+    }
+
+    {
+    
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      attr[au_coverage_depth] = fulltext
+      
+      au < HighWirePressH20Plugin ; down ; 1997 ; Journal of Orthodontics Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Journal of Orthodontics Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Journal of Orthodontics Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Journal of Orthodontics Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Journal of Orthodontics Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Journal of Orthodontics Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Journal of Orthodontics Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Journal of Orthodontics Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Journal of Orthodontics Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Journal of Orthodontics Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Orthodontics Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Journal of Orthodontics Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Orthodontics Volume 36 ; 36 >
+      au < HighWirePressPlugin ; down ; 2010 ; Journal of Orthodontics Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Orthodontics Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Orthodontics Volume 39 ; 39 >
+
+    }
+
+  }
+
+}

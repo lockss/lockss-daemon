@@ -5,16 +5,13 @@
     info[tester] = 5
   >
 
-    plugin = org.lockss.plugin.atypon.maney.ManeyAtyponPlugin
-    param[base_url] = http://www.maneyonline.com/
-    implicit < status ; year ; name ; param[volume_name] >
+  # See http://www.maney.co.uk/index.php/online/journals_available_online/
+  # doNotProcess for AUs previously processed on Ingenta or HighWire
 
-  {
-    comment[publisher_list] = http://www.maney.co.uk/index.php/online/journals_available_online/
-    comment[Highwire]= only 1, exclude others listed above, see http://www.maney.co.uk/index.php/online_journals/  
-    comment[dnp] = released for old plugin
-  }
- 
+  plugin = org.lockss.plugin.atypon.maney.ManeyAtyponPlugin
+  param[base_url] = http://www.maneyonline.com/
+  implicit < status ; year ; name ; param[volume_name] >
+
   {
 
     title <
@@ -24,7 +21,6 @@
       issnl = 1743-6753 
     >
 
-    
     param[journal_id] = aac 
     comment[continues] = 0967-9782
 
