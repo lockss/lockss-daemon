@@ -4,8 +4,8 @@
     name = Bloomsbury Publishing
   >
 
-  comment[publisher] = journals purchased from Berg by Bloomsbury.
-  comment[home] = moved to http://www.bloomsbury.com/us/academic/journals/
+  # See http://www.bloomsbury.com/us/academic/journals/
+  # 17 titles were purchased from Berg Journals
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
   param[base_url] = http://www.ingentaconnect.com/
@@ -21,37 +21,76 @@
       eissn = 1753-0377 ;
       issnl = 0892-7936
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = azoos
-    param[journal_issn] = 1753-0377
 
-     au < doNotProcess ; 1987-1988 ; Anthrozoös Volume 1 ; 1 >
-     au < doNotProcess ; 1988-1989 ; Anthrozoös Volume 2 ; 2 >
-     au < doNotProcess ; 1989-1990 ; Anthrozoös Volume 3 ; 3 >
-     au < doNotProcess ; 1990-1991 ; Anthrozoös Volume 4 ; 4 >
-     au < doNotProcess ; 1992 ; Anthrozoös Volume 5 ; 5 >
-     au < doNotProcess ; 1993 ; Anthrozoös Volume 6 ; 6 >
-     au < doNotProcess ; 1994 ; Anthrozoös Volume 7 ; 7 >
-     au < doNotProcess ; 1995 ; Anthrozoös Volume 8 ; 8 >
-     au < doNotProcess ; 1996 ; Anthrozoös Volume 9 ; 9 >
-     au < doNotProcess ; 1997 ; Anthrozoös Volume 10 ; 10 >
-     au < doNotProcess ; 1998 ; Anthrozoös Volume 11 ; 11 >
-     au < doNotProcess ; 1999 ; Anthrozoös Volume 12 ; 12 >
-     au < doNotProcess ; 2000 ; Anthrozoös Volume 13 ; 13 >
-     au < doNotProcess ; 2001 ; Anthrozoös Volume 14 ; 14 >
-     au < doNotProcess ; 2002 ; Anthrozoös Volume 15 ; 15 >
-     au < doNotProcess ; 2003 ; Anthrozoös Volume 16 ; 16 >
-     au < doNotProcess ; 2004 ; Anthrozoös Volume 17 ; 17 >
-     au < doNotProcess ; 2005 ; Anthrozoös Volume 18 ; 18 >
-     au < doNotProcess ; 2006 ; Anthrozoös Volume 19 ; 19 >
-     au < doNotProcess ; 2007 ; Anthrozoös Volume 20 ; 20 >
-     au < doNotProcess ; 2008 ; Anthrozoös Volume 21 ; 21 >
-     au < doNotProcess ; 2009 ; Anthrozoös Volume 22 ; 22 >
-     au < doNotProcess ; 2010 ; Anthrozoös Volume 23 ; 23 >
-     au < doNotProcess ; 2011 ; Anthrozoös Volume 24 ; 24 >
-     au < doNotProcess ; 2012 ; Anthrozoös Volume 25 ; 25 >
-     au < released ; 2013 ; Anthrozoös Volume 26 ; 26 >
-     au < manifest ; 2014 ; Anthrozoös Volume 27 ; 27 >
+    {
+    
+      param[publisher_id] = berg
+      param[journal_id] = anthroz
+      param[journal_issn] = 0892-7936
+
+      au < down ; 1987-1988 ; Anthrozoös Volume 1 ; 1 >
+      au < down ; 1988-1989 ; Anthrozoös Volume 2 ; 2 >
+      au < down ; 1989-1990 ; Anthrozoös Volume 3 ; 3 >
+      au < down ; 1990-1991 ; Anthrozoös Volume 4 ; 4 >
+      au < down ; 1992 ; Anthrozoös Volume 5 ; 5 >
+      au < down ; 1993 ; Anthrozoös Volume 6 ; 6 >
+      au < down ; 1994 ; Anthrozoös Volume 7 ; 7 >
+      au < down ; 1995 ; Anthrozoös Volume 8 ; 8 >
+      au < down ; 1996 ; Anthrozoös Volume 9 ; 9 >
+      au < down ; 1997 ; Anthrozoös Volume 10 ; 10 >
+      au < down ; 1998 ; Anthrozoös Volume 11 ; 11 >
+      au < down ; 1999 ; Anthrozoös Volume 12 ; 12 >
+      au < down ; 2000 ; Anthrozoös Volume 13 ; 13 >
+      au < down ; 2001 ; Anthrozoös Volume 14 ; 14 >
+      au < down ; 2002 ; Anthrozoös Volume 15 ; 15 >
+      au < down ; 2003 ; Anthrozoös Volume 16 ; 16 >
+      au < down ; 2004 ; Anthrozoös Volume 17 ; 17 >
+      au < down ; 2005 ; Anthrozoös Volume 18 ; 18 >
+      au < down ; 2006 ; Anthrozoös Volume 19 ; 19 >
+      au < down ; 2007 ; Anthrozoös Volume 20 ; 20 >
+      au < down ; 2008 ; Anthrozoös Volume 21 ; 21 >
+      au < down ; 2009 ; Anthrozoös Volume 22 ; 22 >
+      au < down ; 2010 ; Anthrozoös Volume 23 ; 23 >
+      au < down ; 2011 ; Anthrozoös Volume 24 ; 24 >
+      au < down ; 2012 ; Anthrozoös Volume 25 ; 25 >
+
+    }
+
+    {
+    
+      param[publisher_id] = bloomsbury
+      param[journal_id] = azoos
+      param[journal_issn] = 1753-0377
+
+      au < doNotProcess ; 1987-1988 ; Anthrozoös Volume 1 ; 1 >
+      au < doNotProcess ; 1988-1989 ; Anthrozoös Volume 2 ; 2 >
+      au < doNotProcess ; 1989-1990 ; Anthrozoös Volume 3 ; 3 >
+      au < doNotProcess ; 1990-1991 ; Anthrozoös Volume 4 ; 4 >
+      au < doNotProcess ; 1992 ; Anthrozoös Volume 5 ; 5 >
+      au < doNotProcess ; 1993 ; Anthrozoös Volume 6 ; 6 >
+      au < doNotProcess ; 1994 ; Anthrozoös Volume 7 ; 7 >
+      au < doNotProcess ; 1995 ; Anthrozoös Volume 8 ; 8 >
+      au < doNotProcess ; 1996 ; Anthrozoös Volume 9 ; 9 >
+      au < doNotProcess ; 1997 ; Anthrozoös Volume 10 ; 10 >
+      au < doNotProcess ; 1998 ; Anthrozoös Volume 11 ; 11 >
+      au < doNotProcess ; 1999 ; Anthrozoös Volume 12 ; 12 >
+      au < doNotProcess ; 2000 ; Anthrozoös Volume 13 ; 13 >
+      au < doNotProcess ; 2001 ; Anthrozoös Volume 14 ; 14 >
+      au < doNotProcess ; 2002 ; Anthrozoös Volume 15 ; 15 >
+      au < doNotProcess ; 2003 ; Anthrozoös Volume 16 ; 16 >
+      au < doNotProcess ; 2004 ; Anthrozoös Volume 17 ; 17 >
+      au < doNotProcess ; 2005 ; Anthrozoös Volume 18 ; 18 >
+      au < doNotProcess ; 2006 ; Anthrozoös Volume 19 ; 19 >
+      au < doNotProcess ; 2007 ; Anthrozoös Volume 20 ; 20 >
+      au < doNotProcess ; 2008 ; Anthrozoös Volume 21 ; 21 >
+      au < doNotProcess ; 2009 ; Anthrozoös Volume 22 ; 22 >
+      au < doNotProcess ; 2010 ; Anthrozoös Volume 23 ; 23 >
+      au < doNotProcess ; 2011 ; Anthrozoös Volume 24 ; 24 >
+      au < doNotProcess ; 2012 ; Anthrozoös Volume 25 ; 25 >
+      au < released ; 2013 ; Anthrozoös Volume 26 ; 26 >
+      au < manifest ; 2014 ; Anthrozoös Volume 27 ; 27 >
+
+    }
 
   }
 
@@ -81,16 +120,35 @@
       issnl = 1756-1310
     >
 
-    param[publisher_id] = bloomsbury
-    param[journal_id] = aitj
-    param[journal_issn] = 1756-1310
+    {
+    
+      param[publisher_id] = berg
+      param[journal_id] = aitj 
+      param[journal_issn] = 1756-1310
 
-    au < doNotProcess ; 2009 ; Art In Translation Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; Art In Translation Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; Art In Translation Volume 3 ; 3 >
-    au < doNotProcess ; 2012 ; Art In Translation Volume 4 ; 4 >
-    au < released ; 2013 ; Art In Translation Volume 5 ; 5 >
-    au < manifest ; 2014 ; Art In Translation Volume 6 ; 6 >
+      comment[UX] = issues with images in html format of articles
+
+      au < down ; 2009 ; Art In Translation Volume 1 ; 1 >
+      au < down ; 2010 ; Art In Translation Volume 2 ; 2 >
+      au < down ; 2011 ; Art In Translation Volume 3 ; 3 >
+      au < down ; 2012 ; Art In Translation Volume 4 ; 4 >
+    
+    }
+
+    {
+
+      param[publisher_id] = bloomsbury
+      param[journal_id] = aitj
+      param[journal_issn] = 1756-1310
+      
+      au < doNotProcess ; 2009 ; Art In Translation Volume 1 ; 1 >
+      au < doNotProcess ; 2010 ; Art In Translation Volume 2 ; 2 >
+      au < doNotProcess ; 2011 ; Art In Translation Volume 3 ; 3 >
+      au < doNotProcess ; 2012 ; Art In Translation Volume 4 ; 4 >
+      au < released ; 2013 ; Art In Translation Volume 5 ; 5 >
+      au < manifest ; 2014 ; Art In Translation Volume 6 ; 6 >
+
+    }
 
   }
 
@@ -102,21 +160,46 @@
       eissn = 1478-0046 ;
       issnl = 1478-0038
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = cash
-    param[journal_issn] = 1478-0038
+    
+    {
 
-    au < doNotProcess ; 2004 ; Cultural and Social History Volume 1 ; 1 >
-    au < doNotProcess ; 2005 ; Cultural and Social History Volume 2 ; 2 >
-    au < doNotProcess ; 2006 ; Cultural and Social History Volume 3 ; 3 >
-    au < doNotProcess ; 2007 ; Cultural and Social History Volume 4 ; 4 >
-    au < doNotProcess ; 2008 ; Cultural and Social History Volume 5 ; 5 >
-    au < doNotProcess ; 2009 ; Cultural and Social History Volume 6 ; 6 >
-    au < doNotProcess ; 2010 ; Cultural and Social History Volume 7 ; 7 >
-    au < doNotProcess ; 2011 ; Cultural and Social History Volume 8 ; 8 >
-    au < doNotProcess ; 2012 ; Cultural and Social History Volume 9 ; 9 >
-    au < released ; 2013 ; Cultural and Social History Volume 10 ; 10 >
-    au < manifest ; 2014 ; Cultural and Social History Volume 11 ; 11 >
+      param[publisher_id] = berg
+      param[journal_id] = cash
+      param[journal_issn] = 1478-0038
+      
+      comment[UX] = complete
+      
+      au < down ; 2004 ; Cultural and Social History Volume 1 ; 1 >
+      au < down ; 2005 ; Cultural and Social History Volume 2 ; 2 >
+      au < down ; 2006 ; Cultural and Social History Volume 3 ; 3 >
+      au < down ; 2007 ; Cultural and Social History Volume 4 ; 4 >
+      au < down ; 2008 ; Cultural and Social History Volume 5 ; 5 >
+      au < down ; 2009 ; Cultural and Social History Volume 6 ; 6 >
+      au < down ; 2010 ; Cultural and Social History Volume 7 ; 7 >
+      au < down ; 2011 ; Cultural and Social History Volume 8 ; 8 >
+      au < down ; 2012 ; Cultural and Social History Volume 9 ; 9 >
+
+    }
+    
+    {
+
+      param[publisher_id] = bloomsbury
+      param[journal_id] = cash
+      param[journal_issn] = 1478-0038
+      
+      au < doNotProcess ; 2004 ; Cultural and Social History Volume 1 ; 1 >
+      au < doNotProcess ; 2005 ; Cultural and Social History Volume 2 ; 2 >
+      au < doNotProcess ; 2006 ; Cultural and Social History Volume 3 ; 3 >
+      au < doNotProcess ; 2007 ; Cultural and Social History Volume 4 ; 4 >
+      au < doNotProcess ; 2008 ; Cultural and Social History Volume 5 ; 5 >
+      au < doNotProcess ; 2009 ; Cultural and Social History Volume 6 ; 6 >
+      au < doNotProcess ; 2010 ; Cultural and Social History Volume 7 ; 7 >
+      au < doNotProcess ; 2011 ; Cultural and Social History Volume 8 ; 8 >
+      au < doNotProcess ; 2012 ; Cultural and Social History Volume 9 ; 9 >
+      au < released ; 2013 ; Cultural and Social History Volume 10 ; 10 >
+      au < manifest ; 2014 ; Cultural and Social History Volume 11 ; 11 >
+
+    }
 
   }
 
@@ -128,16 +211,36 @@
       eissn = 1754-7083 ;
       issnl = 1754-7075
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = dgcj
-    param[journal_issn] = 1754-7075
 
-    au < doNotProcess ; 2009 ; Design and Culture Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; Design and Culture Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; Design and Culture Volume 3 ; 3 >
-    au < doNotProcess ; 2012 ; Design and Culture Volume 4 ; 4 >
-    au < released ; 2013 ; Design and Culture Volume 5 ; 5 >
-    au < manifest ; 2014 ; Design and Culture Volume 6 ; 6 >
+    {
+        
+      param[publisher_id] = berg
+      param[journal_id] = dgcj
+      param[journal_issn] = 1754-7075
+  
+      comment[UX] = complete
+  
+      au < down ; 2009 ; Design and Culture Volume 1 ; 1 >
+      au < down ; 2010 ; Design and Culture Volume 2 ; 2 >
+      au < down ; 2011 ; Design and Culture Volume 3 ; 3 >
+      au < down ; 2012 ; Design and Culture Volume 4 ; 4 >
+  
+    }
+  
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = dgcj
+      param[journal_issn] = 1754-7075
+  
+      au < doNotProcess ; 2009 ; Design and Culture Volume 1 ; 1 >
+      au < doNotProcess ; 2010 ; Design and Culture Volume 2 ; 2 >
+      au < doNotProcess ; 2011 ; Design and Culture Volume 3 ; 3 >
+      au < doNotProcess ; 2012 ; Design and Culture Volume 4 ; 4 >
+      au < released ; 2013 ; Design and Culture Volume 5 ; 5 >
+      au < manifest ; 2014 ; Design and Culture Volume 6 ; 6 >
+  
+    }
 
   }
 
@@ -149,27 +252,58 @@
       eissn = 1756-3062 ;
       issnl = 1460-6925
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = dsgj
-    param[journal_issn] = 1460-6925
 
-    au < doNotProcess ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
-    au < doNotProcess ; 1999 ; The Design Journal Volume 2 ; 2 >
-    au < doNotProcess ; 2000 ; The Design Journal Volume 3 ; 3 >
-    au < doNotProcess ; 2001 ; The Design Journal Volume 4 ; 4 >
-    au < doNotProcess ; 2002 ; The Design Journal Volume 5 ; 5 >
-    au < doNotProcess ; 2003 ; The Design Journal Volume 6 ; 6 >
-    au < doNotProcess ; 2004 ; The Design Journal Volume 7 ; 7 >
-    au < doNotProcess ; 2005 ; The Design Journal Volume 8 ; 8 >
-    au < doNotProcess ; 2006 ; The Design Journal Volume 9 ; 9 >
-    au < doNotProcess ; 2007 ; The Design Journal Volume 10 ; 10 >
-    au < doNotProcess ; 2008 ; The Design Journal Volume 11 ; 11 >
-    au < doNotProcess ; 2009 ; The Design Journal Volume 12 ; 12 >
-    au < doNotProcess ; 2010 ; The Design Journal Volume 13 ; 13 >
-    au < doNotProcess ; 2011 ; The Design Journal Volume 14 ; 14 >
-    au < doNotProcess ; 2012 ; The Design Journal Volume 15 ; 15 >
-    au < released ; 2013 ; The Design Journal Volume 16 ; 16 >
-    au < manifest ; 2014 ; The Design Journal Volume 17 ; 17 >
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = dsgj
+      param[journal_issn] = 1460-6925
+  
+      comment[UX] = complete
+  
+      au < down ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
+      au < down ; 1999 ; The Design Journal Volume 2 ; 2 >
+      au < down ; 2000 ; The Design Journal Volume 3 ; 3 >
+      au < down ; 2001 ; The Design Journal Volume 4 ; 4 >
+      au < down ; 2002 ; The Design Journal Volume 5 ; 5 >
+      au < down ; 2003 ; The Design Journal Volume 6 ; 6 >
+      au < down ; 2004 ; The Design Journal Volume 7 ; 7 >
+      au < down ; 2005 ; The Design Journal Volume 8 ; 8 >
+      au < down ; 2006 ; The Design Journal Volume 9 ; 9 >
+      au < down ; 2007 ; The Design Journal Volume 10 ; 10 >
+      au < down ; 2008 ; The Design Journal Volume 11 ; 11 >
+      au < down ; 2009 ; The Design Journal Volume 12 ; 12 >
+      au < down ; 2010 ; The Design Journal Volume 13 ; 13 >
+      au < down ; 2011 ; The Design Journal Volume 14 ; 14 >
+      au < down ; 2012 ; The Design Journal Volume 15 ; 15 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = dsgj
+      param[journal_issn] = 1460-6925
+  
+      au < doNotProcess ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
+      au < doNotProcess ; 1999 ; The Design Journal Volume 2 ; 2 >
+      au < doNotProcess ; 2000 ; The Design Journal Volume 3 ; 3 >
+      au < doNotProcess ; 2001 ; The Design Journal Volume 4 ; 4 >
+      au < doNotProcess ; 2002 ; The Design Journal Volume 5 ; 5 >
+      au < doNotProcess ; 2003 ; The Design Journal Volume 6 ; 6 >
+      au < doNotProcess ; 2004 ; The Design Journal Volume 7 ; 7 >
+      au < doNotProcess ; 2005 ; The Design Journal Volume 8 ; 8 >
+      au < doNotProcess ; 2006 ; The Design Journal Volume 9 ; 9 >
+      au < doNotProcess ; 2007 ; The Design Journal Volume 10 ; 10 >
+      au < doNotProcess ; 2008 ; The Design Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2009 ; The Design Journal Volume 12 ; 12 >
+      au < doNotProcess ; 2010 ; The Design Journal Volume 13 ; 13 >
+      au < doNotProcess ; 2011 ; The Design Journal Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; The Design Journal Volume 15 ; 15 >
+      au < released ; 2013 ; The Design Journal Volume 16 ; 16 >
+      au < manifest ; 2014 ; The Design Journal Volume 17 ; 17 >
+  
+    }
 
   }
 
@@ -180,6 +314,7 @@
       issn = 1448-7136 ;
       issnl = 1448-7136
     >
+
     param[publisher_id] = bloomsbury
     param[journal_id] = dphp
     param[journal_issn] = 1448-7136
@@ -196,6 +331,7 @@
     au < ready ; 2012 ; Design Philosophy Papers Volume 10 ; 10 >
     au < ready ; 2013 ; Design Philosophy Papers Volume 11 ; 11 >
     au < manifest ; 2014 ; Design Philosophy Papers Volume 12 ; 12 >
+
   }
 
   {
@@ -206,16 +342,36 @@
       eissn = 1756-9389 ;
       issnl = 1756-9370
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = fpcj
-    param[journal_issn] = 1756-9370
 
-    au < doNotProcess ; 2009 ; Fashion Practice Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; Fashion Practice Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; Fashion Practice Volume 3 ; 3 >
-    au < doNotProcess ; 2012 ; Fashion Practice Volume 4 ; 4 >
-    au < released ; 2013 ; Fashion Practice Volume 5 ; 5 >
-    au < manifest ; 2014 ; Fashion Practice Volume 6 ; 6 >
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = fpcj
+      param[journal_issn] = 1756-9370
+  
+      comment[UX] = issues with images in html format of articles
+  
+      au < down ; 2009 ; Fashion Practice Volume 1 ; 1 >
+      au < down ; 2010 ; Fashion Practice Volume 2 ; 2 >
+      au < down ; 2011 ; Fashion Practice Volume 3 ; 3 >
+      au < down ; 2012 ; Fashion Practice Volume 4 ; 4 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = fpcj
+      param[journal_issn] = 1756-9370
+  
+      au < doNotProcess ; 2009 ; Fashion Practice Volume 1 ; 1 >
+      au < doNotProcess ; 2010 ; Fashion Practice Volume 2 ; 2 >
+      au < doNotProcess ; 2011 ; Fashion Practice Volume 3 ; 3 >
+      au < doNotProcess ; 2012 ; Fashion Practice Volume 4 ; 4 >
+      au < released ; 2013 ; Fashion Practice Volume 5 ; 5 >
+      au < manifest ; 2014 ; Fashion Practice Volume 6 ; 6 >
+  
+    }
 
   }
 
@@ -227,28 +383,60 @@
       eissn = 1751-7419 ;
       issnl = 1362-704X
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = jdbc
-    param[journal_issn] = 1362-704X
 
-    au < doNotProcess ; 1997 ; Fashion Theory Volume 1 ; 1 >
-    au < doNotProcess ; 1998 ; Fashion Theory Volume 2 ; 2 >
-    au < doNotProcess ; 1999 ; Fashion Theory Volume 3 ; 3 >
-    au < doNotProcess ; 2000 ; Fashion Theory Volume 4 ; 4 >
-    au < doNotProcess ; 2001 ; Fashion Theory Volume 5 ; 5 >
-    au < doNotProcess ; 2002 ; Fashion Theory Volume 6 ; 6 >
-    au < doNotProcess ; 2003 ; Fashion Theory Volume 7 ; 7 >
-    au < doNotProcess ; 2004 ; Fashion Theory Volume 8 ; 8 >
-    au < doNotProcess ; 2005 ; Fashion Theory Volume 9 ; 9 >
-    au < doNotProcess ; 2006 ; Fashion Theory Volume 10 ; 10 >
-    au < doNotProcess ; 2007 ; Fashion Theory Volume 11 ; 11 >
-    au < doNotProcess ; 2008 ; Fashion Theory Volume 12 ; 12 >
-    au < doNotProcess ; 2009 ; Fashion Theory Volume 13 ; 13 >
-    au < doNotProcess ; 2010 ; Fashion Theory Volume 14 ; 14 >
-    au < doNotProcess ; 2011 ; Fashion Theory Volume 15 ; 15 >
-    au < doNotProcess ; 2012 ; Fashion Theory Volume 16 ; 16 >
-    au < released ; 2013 ; Fashion Theory Volume 17 ; 17 >
-    au < manifest ; 2014 ; Fashion Theory Volume 18 ; 18 >
+    {
+        
+      param[publisher_id] = berg
+      param[journal_id] = jdbc
+      param[journal_issn] = 1362-704X
+  
+      comment[UX] = complete
+  
+      au < down ; 1997 ; Fashion Theory Volume 1 ; 1 >
+      au < down ; 1998 ; Fashion Theory Volume 2 ; 2 >
+      au < down ; 1999 ; Fashion Theory Volume 3 ; 3 >
+      au < down ; 2000 ; Fashion Theory Volume 4 ; 4 >
+      au < down ; 2001 ; Fashion Theory Volume 5 ; 5 >
+      au < down ; 2002 ; Fashion Theory Volume 6 ; 6 >
+      au < down ; 2003 ; Fashion Theory Volume 7 ; 7 >
+      au < down ; 2004 ; Fashion Theory Volume 8 ; 8 >
+      au < down ; 2005 ; Fashion Theory Volume 9 ; 9 >
+      au < down ; 2006 ; Fashion Theory Volume 10 ; 10 >
+      au < down ; 2007 ; Fashion Theory Volume 11 ; 11 >
+      au < down ; 2008 ; Fashion Theory Volume 12 ; 12 >
+      au < down ; 2009 ; Fashion Theory Volume 13 ; 13 >
+      au < down ; 2010 ; Fashion Theory Volume 14 ; 14 >
+      au < down ; 2011 ; Fashion Theory Volume 15 ; 15 >
+      au < down ; 2012 ; Fashion Theory Volume 16 ; 16 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = jdbc
+      param[journal_issn] = 1362-704X
+  
+      au < doNotProcess ; 1997 ; Fashion Theory Volume 1 ; 1 >
+      au < doNotProcess ; 1998 ; Fashion Theory Volume 2 ; 2 >
+      au < doNotProcess ; 1999 ; Fashion Theory Volume 3 ; 3 >
+      au < doNotProcess ; 2000 ; Fashion Theory Volume 4 ; 4 >
+      au < doNotProcess ; 2001 ; Fashion Theory Volume 5 ; 5 >
+      au < doNotProcess ; 2002 ; Fashion Theory Volume 6 ; 6 >
+      au < doNotProcess ; 2003 ; Fashion Theory Volume 7 ; 7 >
+      au < doNotProcess ; 2004 ; Fashion Theory Volume 8 ; 8 >
+      au < doNotProcess ; 2005 ; Fashion Theory Volume 9 ; 9 >
+      au < doNotProcess ; 2006 ; Fashion Theory Volume 10 ; 10 >
+      au < doNotProcess ; 2007 ; Fashion Theory Volume 11 ; 11 >
+      au < doNotProcess ; 2008 ; Fashion Theory Volume 12 ; 12 >
+      au < doNotProcess ; 2009 ; Fashion Theory Volume 13 ; 13 >
+      au < doNotProcess ; 2010 ; Fashion Theory Volume 14 ; 14 >
+      au < doNotProcess ; 2011 ; Fashion Theory Volume 15 ; 15 >
+      au < doNotProcess ; 2012 ; Fashion Theory Volume 16 ; 16 >
+      au < released ; 2013 ; Fashion Theory Volume 17 ; 17 >
+      au < manifest ; 2014 ; Fashion Theory Volume 18 ; 18 >
+  
+    }
 
   }
 
@@ -260,21 +448,46 @@
       eissn = 1751-7443 ;
       issnl = 1552-8014
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = fcs
-    param[journal_issn] = 1552-8014
 
-    au < doNotProcess ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
-    au < doNotProcess ; 2005 ; Food, Culture and Society Volume 8 ; 8 >
-    au < doNotProcess ; 2006 ; Food, Culture and Society Volume 9 ; 9 >
-    au < doNotProcess ; 2007 ; Food, Culture and Society Volume 10 ; 10 >
-    au < doNotProcess ; 2008 ; Food, Culture and Society Volume 11 ; 11 >
-    au < doNotProcess ; 2009 ; Food, Culture and Society Volume 12 ; 12 >
-    au < doNotProcess ; 2010 ; Food, Culture and Society Volume 13 ; 13 >
-    au < doNotProcess ; 2011 ; Food, Culture and Society Volume 14 ; 14 >
-    au < doNotProcess ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
-    au < released ; 2013 ; Food, Culture and Society Volume 16 ; 16 >
-    au < manifest ; 2014 ; Food, Culture and Society Volume 17 ; 17 >
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = fcs
+      param[journal_issn] = 1552-8014
+  
+      comment[UX] = complete
+  
+      au < down ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
+      au < down ; 2005 ; Food, Culture and Society Volume 8 ; 8 >
+      au < down ; 2006 ; Food, Culture and Society Volume 9 ; 9 >
+      au < down ; 2007 ; Food, Culture and Society Volume 10 ; 10 >
+      au < down ; 2008 ; Food, Culture and Society Volume 11 ; 11 >
+      au < down ; 2009 ; Food, Culture and Society Volume 12 ; 12 >
+      au < down ; 2010 ; Food, Culture and Society Volume 13 ; 13 >
+      au < down ; 2011 ; Food, Culture and Society Volume 14 ; 14 >
+      au < down ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = fcs
+      param[journal_issn] = 1552-8014
+  
+      au < doNotProcess ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
+      au < doNotProcess ; 2005 ; Food, Culture and Society Volume 8 ; 8 >
+      au < doNotProcess ; 2006 ; Food, Culture and Society Volume 9 ; 9 >
+      au < doNotProcess ; 2007 ; Food, Culture and Society Volume 10 ; 10 >
+      au < doNotProcess ; 2008 ; Food, Culture and Society Volume 11 ; 11 >
+      au < doNotProcess ; 2009 ; Food, Culture and Society Volume 12 ; 12 >
+      au < doNotProcess ; 2010 ; Food, Culture and Society Volume 13 ; 13 >
+      au < doNotProcess ; 2011 ; Food, Culture and Society Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
+      au < released ; 2013 ; Food, Culture and Society Volume 16 ; 16 >
+      au < manifest ; 2014 ; Food, Culture and Society Volume 17 ; 17 >
+  
+    }
 
   }
 
@@ -287,21 +500,45 @@
       issnl = 1740-6315
     >
 
-    param[publisher_id] = bloomsbury
-    param[journal_id] = hcu
-    param[journal_issn] = 1740-6315
-
-    au < doNotProcess ; 2004 ; Home Cultures Volume 1 ; 1 >
-    au < doNotProcess ; 2005 ; Home Cultures Volume 2 ; 2 >
-    au < doNotProcess ; 2006 ; Home Cultures Volume 3 ; 3 >
-    au < doNotProcess ; 2007 ; Home Cultures Volume 4 ; 4 >
-    au < doNotProcess ; 2008 ; Home Cultures Volume 5 ; 5 >
-    au < doNotProcess ; 2009 ; Home Cultures Volume 6 ; 6 >
-    au < doNotProcess ; 2010 ; Home Cultures Volume 7 ; 7 >
-    au < doNotProcess ; 2011 ; Home Cultures Volume 8 ; 8 >
-    au < doNotProcess ; 2012 ; Home Cultures Volume 9 ; 9 >
-    au < released ; 2013 ; Home Cultures Volume 10 ; 10 >
-    au < manifest ; 2014 ; Home Cultures Volume 11 ; 11 >
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = hcu
+      param[journal_issn] = 1740-6315
+      
+      comment[UX] = complete
+      
+      au < down ; 2004 ; Home Cultures Volume 1 ; 1 >
+      au < down ; 2005 ; Home Cultures Volume 2 ; 2 >
+      au < down ; 2006 ; Home Cultures Volume 3 ; 3 >
+      au < down ; 2007 ; Home Cultures Volume 4 ; 4 >
+      au < down ; 2008 ; Home Cultures Volume 5 ; 5 >
+      au < down ; 2009 ; Home Cultures Volume 6 ; 6 >
+      au < down ; 2010 ; Home Cultures Volume 7 ; 7 >
+      au < down ; 2011 ; Home Cultures Volume 8 ; 8 >
+      au < down ; 2012 ; Home Cultures Volume 9 ; 9 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = hcu
+      param[journal_issn] = 1740-6315
+  
+      au < doNotProcess ; 2004 ; Home Cultures Volume 1 ; 1 >
+      au < doNotProcess ; 2005 ; Home Cultures Volume 2 ; 2 >
+      au < doNotProcess ; 2006 ; Home Cultures Volume 3 ; 3 >
+      au < doNotProcess ; 2007 ; Home Cultures Volume 4 ; 4 >
+      au < doNotProcess ; 2008 ; Home Cultures Volume 5 ; 5 >
+      au < doNotProcess ; 2009 ; Home Cultures Volume 6 ; 6 >
+      au < doNotProcess ; 2010 ; Home Cultures Volume 7 ; 7 >
+      au < doNotProcess ; 2011 ; Home Cultures Volume 8 ; 8 >
+      au < doNotProcess ; 2012 ; Home Cultures Volume 9 ; 9 >
+      au < released ; 2013 ; Home Cultures Volume 10 ; 10 >
+      au < manifest ; 2014 ; Home Cultures Volume 11 ; 11 >
+  
+    }
 
   }
 
@@ -312,15 +549,34 @@
       issn = 2041-9112 ;
       eissn = 2041-9120
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = idacj
-    param[journal_issn] = 2041-9112
 
-    au < doNotProcess ; 2010 ; Interiors Volume 1 ; 1 >
-    au < doNotProcess ; 2011 ; Interiors Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; Interiors Volume 3 ; 3 >
-    au < released ; 2013 ; Interiors Volume 4 ; 4 >
-    au < manifest ; 2014 ; Interiors Volume 5 ; 5 >
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = idacj
+      param[journal_issn] = 2041-9112
+  
+      comment[UX] = complete
+  
+      au < down ; 2010 ; Interiors Volume 1 ; 1 >
+      au < down ; 2011 ; Interiors Volume 2 ; 2 >
+      au < down ; 2012 ; Interiors Volume 3 ; 3 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = idacj
+      param[journal_issn] = 2041-9112
+  
+      au < doNotProcess ; 2010 ; Interiors Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; Interiors Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; Interiors Volume 3 ; 3 >
+      au < released ; 2013 ; Interiors Volume 4 ; 4 >
+      au < manifest ; 2014 ; Interiors Volume 5 ; 5 >
+  
+    }
 
   }
 
@@ -332,6 +588,7 @@
       eissn = 2053-9339 ;
       issnl = 2053-9320
     >
+    
     param[publisher_id] = bloomsbury
     param[journal_id] = jap
     param[journal_issn] = 2053-9320
@@ -346,16 +603,81 @@
       name = Journal for the Study of Food and Society ;
       issn = 1528-9796
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = jasfs
-    param[journal_issn] = 1528-9796
 
-    au < doNotProcess ; 1996 ; Journal for the Study of Food and Society Volume 1 ; 1 >
-    au < doNotProcess ; 1998 ; Journal for the Study of Food and Society Volume 2 ; 2 >
-    au < doNotProcess ; 1999 ; Journal for the Study of Food and Society Volume 3 ; 3 >
-    au < doNotProcess ; 2000 ; Journal for the Study of Food and Society Volume 4 ; 4 >
-    au < doNotProcess ; 2001 ; Journal for the Study of Food and Society Volume 5 ; 5 >
-    au < doNotProcess ; 2002-2003 ; Journal for the Study of Food and Society Volume 6 ; 6 >
+    {
+      
+      param[publisher_id] = berg
+      param[journal_id] = jasfs
+      param[journal_issn] = 1528-9796
+  
+      comment[UX] = complete
+  
+      au < down ; 1996 ; Journal for the Study of Food and Society Volume 1 ; 1 >
+      au < down ; 1998 ; Journal for the Study of Food and Society Volume 2 ; 2 >
+      au < down ; 1999 ; Journal for the Study of Food and Society Volume 3 ; 3 >
+      au < down ; 2000 ; Journal for the Study of Food and Society Volume 4 ; 4 >
+      au < down ; 2001 ; Journal for the Study of Food and Society Volume 5 ; 5 >
+      au < down ; 2002 ; Journal for the Study of Food and Society Volume 6 ; 6 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = jasfs
+      param[journal_issn] = 1528-9796
+  
+      au < doNotProcess ; 1996 ; Journal for the Study of Food and Society Volume 1 ; 1 >
+      au < doNotProcess ; 1998 ; Journal for the Study of Food and Society Volume 2 ; 2 >
+      au < doNotProcess ; 1999 ; Journal for the Study of Food and Society Volume 3 ; 3 >
+      au < doNotProcess ; 2000 ; Journal for the Study of Food and Society Volume 4 ; 4 >
+      au < doNotProcess ; 2001 ; Journal for the Study of Food and Society Volume 5 ; 5 >
+      au < doNotProcess ; 2002-2003 ; Journal for the Study of Food and Society Volume 6 ; 6 >
+  
+    }
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Modern Craft ;
+      issn = 1749-6772 ;
+      eissn = 1749-6780 ;
+      issnl = 1749-6772
+    >
+
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = cftj
+      param[journal_issn] = 1749-6772
+  
+      comments[UX] = complete
+  
+      au < down ; 2008 ; The Journal of Modern Craft Volume 1 ; 1 >
+      au < down ; 2009 ; The Journal of Modern Craft Volume 2 ; 2 >
+      au < down ; 2010 ; The Journal of Modern Craft Volume 3 ; 3 >
+      au < down ; 2011 ; The Journal of Modern Craft Volume 4 ; 4 >
+      au < down ; 2012 ; The Journal of Modern Craft Volume 5 ; 5 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = cftj
+      param[journal_issn] = 1749-6772
+  
+      au < doNotProcess ; 2008 ; The Journal of Modern Craft Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; The Journal of Modern Craft Volume 2 ; 2 >
+      au < doNotProcess ; 2010 ; The Journal of Modern Craft Volume 3 ; 3 >
+      au < doNotProcess ; 2011 ; The Journal of Modern Craft Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; The Journal of Modern Craft Volume 5 ; 5 >
+      au < released ; 2013 ; The Journal of Modern Craft Volume 6 ; 6 >
+      au < manifest ; 2014 ; The Journal of Modern Craft Volume 7 ; 7 >
+  
+    }
 
   }
 
@@ -366,6 +688,7 @@
       issn = 2051-1787 ;
       issnl = 2051-1787
     >
+
     param[publisher_id] = bloomsbury
     param[journal_id] = jtex
     param[journal_issn] = 2051-1787
@@ -378,32 +701,11 @@
   {
 
     title <
-      name = The Journal of Modern Craft ;
-      issn = 1749-6772 ;
-      eissn = 1749-6780 ;
-      issnl = 1749-6772
-    >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = cftj
-    param[journal_issn] = 1749-6772
-
-    au < doNotProcess ; 2008 ; The Journal of Modern Craft Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; The Journal of Modern Craft Volume 2 ; 2 >
-    au < doNotProcess ; 2010 ; The Journal of Modern Craft Volume 3 ; 3 >
-    au < doNotProcess ; 2011 ; The Journal of Modern Craft Volume 4 ; 4 >
-    au < doNotProcess ; 2012 ; The Journal of Modern Craft Volume 5 ; 5 >
-    au < released ; 2013 ; The Journal of Modern Craft Volume 6 ; 6 >
-    au < manifest ; 2014 ; The Journal of Modern Craft Volume 7 ; 7 >
-
-  }
-
-  {
-
-    title <
       name = Luxury ;
       issn = 2051-1817 ;
       issnl = 2051-1817
     >
+
     param[publisher_id] = bloomsbury
     param[journal_id] = lux
     param[journal_issn] = 2051-1817
@@ -420,20 +722,44 @@
       eissn = 1751-8342 ;
       issnl = 1743-2200
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = mar
-    param[journal_issn] = 1743-2200
 
-    au < doNotProcess ; 2005 ; Material Religion Volume 1 ; 1 >
-    au < doNotProcess ; 2006 ; Material Religion Volume 2 ; 2 >
-    au < doNotProcess ; 2007 ; Material Religion Volume 3 ; 3 >
-    au < doNotProcess ; 2008 ; Material Religion Volume 4 ; 4 >
-    au < doNotProcess ; 2009 ; Material Religion Volume 5 ; 5 >
-    au < doNotProcess ; 2010 ; Material Religion Volume 6 ; 6 >
-    au < doNotProcess ; 2011 ; Material Religion Volume 7 ; 7 >
-    au < doNotProcess ; 2012 ; Material Religion Volume 8 ; 8 >
-    au < released ; 2013 ; Material Religion Volume 9 ; 9 >
-    au < manifest ; 2014 ; Material Religion Volume 10 ; 10 >
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = mar
+      param[journal_issn] = 1743-2200
+  
+      comment[UX] = complete
+  
+      au < down ; 2005 ; Material Religion Volume 1 ; 1 >
+      au < down ; 2006 ; Material Religion Volume 2 ; 2 >
+      au < down ; 2007 ; Material Religion Volume 3 ; 3 >
+      au < down ; 2008 ; Material Religion Volume 4 ; 4 >
+      au < down ; 2009 ; Material Religion Volume 5 ; 5 >
+      au < down ; 2010 ; Material Religion Volume 6 ; 6 >
+      au < down ; 2011 ; Material Religion Volume 7 ; 7 >
+      au < down ; 2012 ; Material Religion Volume 8 ; 8 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = mar
+      param[journal_issn] = 1743-2200
+  
+      au < doNotProcess ; 2005 ; Material Religion Volume 1 ; 1 >
+      au < doNotProcess ; 2006 ; Material Religion Volume 2 ; 2 >
+      au < doNotProcess ; 2007 ; Material Religion Volume 3 ; 3 >
+      au < doNotProcess ; 2008 ; Material Religion Volume 4 ; 4 >
+      au < doNotProcess ; 2009 ; Material Religion Volume 5 ; 5 >
+      au < doNotProcess ; 2010 ; Material Religion Volume 6 ; 6 >
+      au < doNotProcess ; 2011 ; Material Religion Volume 7 ; 7 >
+      au < doNotProcess ; 2012 ; Material Religion Volume 8 ; 8 >
+      au < released ; 2013 ; Material Religion Volume 9 ; 9 >
+      au < manifest ; 2014 ; Material Religion Volume 10 ; 10 >
+  
+    }
 
   }
 
@@ -445,17 +771,38 @@
       eissn = 1751-4525 ;
       issnl = 1751-4517
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = pgcj
-    param[journal_issn] = 1751-4517
 
-    au < doNotProcess ; 2008 ; Photography & Culture Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; Photography & Culture Volume 2 ; 2 >
-    au < doNotProcess ; 2010 ; Photography & Culture Volume 3 ; 3 >
-    au < doNotProcess ; 2011 ; Photography & Culture Volume 4 ; 4 >
-    au < doNotProcess ; 2012 ; Photography & Culture Volume 5 ; 5 >
-    au < released ; 2013 ; Photography & Culture Volume 6 ; 6 >
-    au < manifest ; 2014 ; Photography & Culture Volume 7 ; 7 >
+    {
+  
+      param[publisher_id] = berg
+      param[journal_id] = pgcj
+      param[journal_issn] = 1751-4517
+  
+      comment[UX] = complete
+  
+      au < down ; 2008 ; Photography & Culture Volume 1 ; 1 >
+      au < down ; 2009 ; Photography & Culture Volume 2 ; 2 >
+      au < down ; 2010 ; Photography & Culture Volume 3 ; 3 >
+      au < down ; 2011 ; Photography & Culture Volume 4 ; 4 >
+      au < down ; 2012 ; Photography & Culture Volume 5 ; 5 >
+  
+    }
+    
+    {
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = pgcj
+      param[journal_issn] = 1751-4517
+  
+      au < doNotProcess ; 2008 ; Photography & Culture Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; Photography & Culture Volume 2 ; 2 >
+      au < doNotProcess ; 2010 ; Photography & Culture Volume 3 ; 3 >
+      au < doNotProcess ; 2011 ; Photography & Culture Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Photography & Culture Volume 5 ; 5 >
+      au < released ; 2013 ; Photography & Culture Volume 6 ; 6 >
+      au < manifest ; 2014 ; Photography & Culture Volume 7 ; 7 >
+  
+    }
 
   }
 
@@ -467,19 +814,42 @@
       eissn = 1745-8935 ;
       issnl = 1745-8927
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = tsas
-    param[journal_issn] = 1745-8927
 
-    au < doNotProcess ; 2006 ; The Senses & Society Volume 1 ; 1 >
-    au < doNotProcess ; 2007 ; The Senses & Society Volume 2 ; 2 >
-    au < doNotProcess ; 2008 ; The Senses & Society Volume 3 ; 3 >
-    au < doNotProcess ; 2009 ; The Senses & Society Volume 4 ; 4 >
-    au < doNotProcess ; 2010 ; The Senses & Society Volume 5 ; 5 >
-    au < doNotProcess ; 2011 ; The Senses & Society Volume 6 ; 6 >
-    au < doNotProcess ; 2012 ; The Senses & Society Volume 7 ; 7 >
-    au < released ; 2013 ; The Senses & Society Volume 8 ; 8 >
-    au < manifest ; 2014 ; The Senses & Society Volume 9 ; 9 >
+    {
+      
+      param[publisher_id] = berg
+      param[journal_id] = tsas
+      param[journal_issn] = 1745-8927
+  
+      comment[UX] = complete
+  
+      au < down ; 2006 ; The Senses & Society Volume 1 ; 1 >
+      au < down ; 2007 ; The Senses & Society Volume 2 ; 2 >
+      au < down ; 2008 ; The Senses & Society Volume 3 ; 3 >
+      au < down ; 2009 ; The Senses & Society Volume 4 ; 4 >
+      au < down ; 2010 ; The Senses & Society Volume 5 ; 5 >
+      au < down ; 2011 ; The Senses & Society Volume 6 ; 6 >
+      au < down ; 2012 ; The Senses & Society Volume 7 ; 7 >
+  
+    }
+    
+    {
+      
+      param[publisher_id] = bloomsbury
+      param[journal_id] = tsas
+      param[journal_issn] = 1745-8927
+  
+      au < doNotProcess ; 2006 ; The Senses & Society Volume 1 ; 1 >
+      au < doNotProcess ; 2007 ; The Senses & Society Volume 2 ; 2 >
+      au < doNotProcess ; 2008 ; The Senses & Society Volume 3 ; 3 >
+      au < doNotProcess ; 2009 ; The Senses & Society Volume 4 ; 4 >
+      au < doNotProcess ; 2010 ; The Senses & Society Volume 5 ; 5 >
+      au < doNotProcess ; 2011 ; The Senses & Society Volume 6 ; 6 >
+      au < doNotProcess ; 2012 ; The Senses & Society Volume 7 ; 7 >
+      au < released ; 2013 ; The Senses & Society Volume 8 ; 8 >
+      au < manifest ; 2014 ; The Senses & Society Volume 9 ; 9 >
+  
+    }
 
   }
 
@@ -491,46 +861,49 @@
       eissn = 1751-8350 ;
       issnl = 1475-9756
     >
-    param[publisher_id] = bloomsbury
-    param[journal_id] = tjcc
-    param[journal_issn] = 1475-9756
 
-    au < doNotProcess ; 2003 ; Textile: The Journal of Cloth and Culture Volume 1 ; 1 >
-    au < doNotProcess ; 2004 ; Textile: The Journal of Cloth and Culture Volume 2 ; 2 >
-    au < doNotProcess ; 2005 ; Textile: The Journal of Cloth and Culture Volume 3 ; 3 >
-    au < doNotProcess ; 2006 ; Textile: The Journal of Cloth and Culture Volume 4 ; 4 >
-    au < doNotProcess ; 2007 ; Textile: The Journal of Cloth and Culture Volume 5 ; 5 >
-    au < doNotProcess ; 2008 ; Textile: The Journal of Cloth and Culture Volume 6 ; 6 >
-    au < doNotProcess ; 2009 ; Textile: The Journal of Cloth and Culture Volume 7 ; 7 >
-    au < doNotProcess ; 2010 ; Textile: The Journal of Cloth and Culture Volume 8 ; 8 >
-    au < doNotProcess ; 2011 ; Textile: The Journal of Cloth and Culture Volume 9 ; 9 >
-    au < doNotProcess ; 2012 ; Textile: The Journal of Cloth and Culture Volume 10 ; 10 >
-    au < released ; 2013 ; Textile: The Journal of Cloth and Culture Volume 11 ; 11 >
-    au < manifest ; 2014 ; Textile: The Journal of Cloth and Culture Volume 12 ; 12 >
-
-  }
-
-  {
-
-    title <
-      name = Time & Mind ;
-      issn = 1751-696X ;
-      eissn = 1751-6978 ;
-      issnl = 1751-696X
-    >
-    comment[moved] = moved to T&F
+    {
+      
+      param[publisher_id] = berg
+      param[journal_id] = tjcc
+      param[journal_issn] = 1475-9756
+  
+      comment[UX] = Still has html image isues, but otherwise okay
+  
+      au < down ; 2003 ; Textile: The Journal of Cloth and Culture Volume 1 ; 1 >
+      au < down ; 2004 ; Textile: The Journal of Cloth and Culture Volume 2 ; 2 >
+      au < down ; 2005 ; Textile: The Journal of Cloth and Culture Volume 3 ; 3 >
+      au < down ; 2006 ; Textile: The Journal of Cloth and Culture Volume 4 ; 4 >
+      au < down ; 2007 ; Textile: The Journal of Cloth and Culture Volume 5 ; 5 >
+      au < down ; 2008 ; Textile: The Journal of Cloth and Culture Volume 6 ; 6 >
+      au < down ; 2009 ; Textile: The Journal of Cloth and Culture Volume 7 ; 7 >
+      au < down ; 2010 ; Textile: The Journal of Cloth and Culture Volume 8 ; 8 >
+      au < down ; 2011 ; Textile: The Journal of Cloth and Culture Volume 9 ; 9 >
+      au < down ; 2012 ; Textile: The Journal of Cloth and Culture Volume 10 ; 10 >
     
-    param[publisher_id] = bloomsbury
-    param[journal_id] = tmdj
-    param[journal_issn] = 1751-696X
-
-    au < doNotProcess ; 2008 ; Time & Mind Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; Time & Mind Volume 2 ; 2 >
-    au < doNotProcess ; 2010 ; Time & Mind Volume 3 ; 3 >
-    au < doNotProcess ; 2011 ; Time & Mind Volume 4 ; 4 >
-    au < doNotProcess ; 2012 ; Time & Mind Volume 5 ; 5 >
-    au < released ; 2013 ; Time & Mind Volume 6 ; 6 >
-
+    }
+    
+    {
+      
+      param[publisher_id] = bloomsbury
+      param[journal_id] = tjcc
+      param[journal_issn] = 1475-9756
+  
+      au < doNotProcess ; 2003 ; Textile: The Journal of Cloth and Culture Volume 1 ; 1 >
+      au < doNotProcess ; 2004 ; Textile: The Journal of Cloth and Culture Volume 2 ; 2 >
+      au < doNotProcess ; 2005 ; Textile: The Journal of Cloth and Culture Volume 3 ; 3 >
+      au < doNotProcess ; 2006 ; Textile: The Journal of Cloth and Culture Volume 4 ; 4 >
+      au < doNotProcess ; 2007 ; Textile: The Journal of Cloth and Culture Volume 5 ; 5 >
+      au < doNotProcess ; 2008 ; Textile: The Journal of Cloth and Culture Volume 6 ; 6 >
+      au < doNotProcess ; 2009 ; Textile: The Journal of Cloth and Culture Volume 7 ; 7 >
+      au < doNotProcess ; 2010 ; Textile: The Journal of Cloth and Culture Volume 8 ; 8 >
+      au < doNotProcess ; 2011 ; Textile: The Journal of Cloth and Culture Volume 9 ; 9 >
+      au < doNotProcess ; 2012 ; Textile: The Journal of Cloth and Culture Volume 10 ; 10 >
+      au < released ; 2013 ; Textile: The Journal of Cloth and Culture Volume 11 ; 11 >
+      au < manifest ; 2014 ; Textile: The Journal of Cloth and Culture Volume 12 ; 12 >
+  
+    }
+  
   }
 
 }

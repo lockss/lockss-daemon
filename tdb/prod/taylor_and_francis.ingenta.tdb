@@ -1,0 +1,61 @@
+# This is a legacy Taylor & Francis file for titles previously hosted by Ingenta
+
+{
+
+  publisher <
+    name = Taylor & Francis
+  >
+  
+  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Time and Mind ;
+      issn = 1751-696X ;
+      eissn = 1751-6978 ;
+      issnl = 1751-696X
+    >
+
+    {
+
+      # This title moved from Berg Publishers to Bloomsbury Publishing, both on Ingenta
+  
+      param[publisher_id] = berg
+      param[journal_id] = tmdj
+      param[journal_issn] = 1751-696X
+  
+      comment[UX] = complete
+  
+      au < down ; 2008 ; Time and Mind Volume 1 ; 1 >
+      au < down ; 2009 ; Time and Mind Volume 2 ; 2 >
+      au < down ; 2010 ; Time and Mind Volume 3 ; 3 >
+      au < down ; 2011 ; Time and Mind Volume 4 ; 4 >
+      au < down ; 2012 ; Time and Mind Volume 5 ; 5 >
+  
+    }
+  
+    {
+  
+      # This title moved from Bloomsbury Publishing to Taylor & Francis
+  
+      param[publisher_id] = bloomsbury
+      param[journal_id] = tmdj
+      param[journal_issn] = 1751-696X
+  
+      au < doNotProcess ; 2008 ; Time and Mind Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; Time and Mind Volume 2 ; 2 >
+      au < doNotProcess ; 2010 ; Time and Mind Volume 3 ; 3 >
+      au < doNotProcess ; 2011 ; Time and Mind Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Time and Mind Volume 5 ; 5 >
+      au < released ; 2013 ; Time and Mind Volume 6 ; 6 >
+  
+    }
+
+  }
+
+}
