@@ -1,5 +1,5 @@
 /*
- * $Id: OUPHtmlCrawlFilterFactory.java,v 1.1 2015-01-23 23:43:16 etenbrink Exp $
+ * $Id: OUPHtmlCrawlFilterFactory.java,v 1.2 2015-02-04 07:12:37 etenbrink Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
@@ -60,7 +59,7 @@ public class OUPHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFact
         
     };
     
-    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
+    InputStream filtered = super.createFilteredInputStream(au, in, encoding, null);
     
     return filtered;
   }
