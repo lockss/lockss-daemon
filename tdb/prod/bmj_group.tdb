@@ -53,6 +53,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 >
 
   }
 
@@ -140,6 +141,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Annals of the Rheumatic Diseases Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
 
   }
 
@@ -253,6 +255,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Archives of Disease in Childhood Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Archives of Disease in Childhood Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Archives of Disease in Childhood Volume 100 ; 100 >
 
   }
 
@@ -278,6 +281,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Education and Practice Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Archives of Disease in Childhood - Education and Practice Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Archives of Disease in Childhood - Education and Practice Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Archives of Disease in Childhood - Education and Practice Volume 100 ; 100 >
 
   }
 
@@ -322,6 +326,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
 
   }
 
@@ -465,6 +470,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; BMJ Open Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; BMJ Open Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; BMJ Open Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Open Volume 5 ; 5 >
 
   }
   
@@ -484,6 +490,7 @@
 
       au < exists ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
       au < exists ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
+      au < exists ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
 
     }
 
@@ -499,6 +506,7 @@
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; BMJ Open Respiratory Research Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Open Respiratory Research Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Open Respiratory Research Volume 3 ; 3 >
 
   }
   
@@ -513,6 +521,7 @@
       au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
       
     }
 
@@ -525,6 +534,7 @@
     param[base_url] = http://stel.bmj.com/
     
     au < HighWirePressH20Plugin ; manifest ; 2014 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 >
 
   }
 
@@ -543,6 +553,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; BMJ Supportive & Palliative Care Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Supportive & Palliative Care Volume 5 ; 5 >
 
   }
 
@@ -656,6 +667,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; British Journal of Ophthalmology Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; British Journal of Ophthalmology Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; British Journal of Ophthalmology Volume 98 ; 98 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; British Journal of Ophthalmology Volume 99 ; 99 >
 
   }
 
@@ -717,6 +729,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; British Journal of Sports Medicine Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; British Journal of Sports Medicine Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; British Journal of Sports Medicine Volume 49 ; 49 >
 
   }
 
@@ -785,6 +798,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Drug and Therapeutics Bulletin Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Drug and Therapeutics Bulletin Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Drug and Therapeutics Bulletin Volume 53 ; 53 >
 
   }
 
@@ -831,6 +845,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Emergency Medicine Journal Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Emergency Medicine Journal Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Emergency Medicine Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 >
 
   }
 
@@ -846,6 +861,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Hospital Pharmacy: Science and Practice Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; European Journal of Hospital Pharmacy: Science and Practice Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; European Journal of Hospital Pharmacy: Science and Practice Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; European Journal of Hospital Pharmacy: Science and Practice Volume 22 ; 22 >
 
   }
 
@@ -862,6 +878,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Frontline Gastroenterology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Frontline Gastroenterology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Frontline Gastroenterology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Frontline Gastroenterology Volume 6 ; 6 >
 
   }
 
@@ -876,6 +893,7 @@
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; OpenHeart Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; OpenHeart Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; OpenHeart Volume 3 ; 3 >
 
   }
 
@@ -893,6 +911,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Heart Asia Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Heart Asia Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Heart Asia Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; Heart Asia Volume 7 ; 7 >
 
   }
 
@@ -913,6 +932,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; BMJ Case Reports Volume 2012 ; 2012 >
     au < HighWirePressH20Plugin ; exists ; 2013 ; BMJ Case Reports Volume 2013 ; 2013 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Case Reports Volume 2014 ; 2014 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Case Reports Volume 2015 ; 2015 >
 
   }
 
@@ -943,6 +963,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Evidence-Based Medicine Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Evidence-Based Medicine Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Evidence-Based Medicine Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Evidence-Based Medicine Volume 20 ; 20 >
 
   }
 
@@ -973,6 +994,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Evidence-Based Mental Health Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Evidence-Based Mental Health Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Evidence-Based Mental Health Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Evidence-Based Mental Health Volume 18 ; 18 >
 
   }
 
@@ -1003,6 +1025,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Evidence-Based Nursing Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Evidence-Based Nursing Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Evidence-Based Nursing Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Evidence-Based Nursing Volume 18 ; 18 >
 
   }
 
@@ -1079,6 +1102,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Gut Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Gut Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Gut Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Gut Volume 64 ; 64 >
 
   }
 
@@ -1235,6 +1259,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 2012 ; Injury Prevention Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Injury Prevention Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Injury Prevention Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Injury Prevention Volume 21 ; 21 >
       
     }
 
@@ -1271,6 +1296,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; JAMIA Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; JAMIA Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; JAMIA Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; JAMIA Volume 22 ; 22 >
 
   }
 
@@ -1351,6 +1377,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Clinical Pathology Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Clinical Pathology Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Clinical Pathology Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Clinical Pathology Volume 68 ; 68 >
 
   }
 
@@ -1432,6 +1459,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Epidemiology & Community Health Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Epidemiology & Community Health Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Epidemiology & Community Health Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Epidemiology & Community Health Volume 69 ; 69 >
 
   }
 
@@ -1459,6 +1487,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Family Planning and Reproductive Health Care Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Family Planning and Reproductive Health Care Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Family Planning and Reproductive Health Care Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Family Planning and Reproductive Health Care Volume 41 ; 41 >
 
   }
 
@@ -1512,6 +1541,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Ethics Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Medical Ethics Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Medical Ethics Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Medical Ethics Volume 41 ; 41 >
 
   }
 
@@ -1576,6 +1606,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Genetics Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Medical Genetics Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Medical Genetics Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Medical Genetics Volume 52 ; 52 >
 
   }
 
@@ -1595,6 +1626,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of NeuroInterventional Surgery Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of NeuroInterventional Surgery Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of NeuroInterventional Surgery Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of NeuroInterventional Surgery Volume 7 ; 7 >
 
   }
 
@@ -1693,6 +1725,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 86 ; 86 >
 
   }
 
@@ -1870,6 +1903,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < released ; 2012 ; Journal of the Royal Army Medical Corps Volume 158 ; 158 >
       au < doNotProcess ; 2013 ; Journal of the Royal Army Medical Corps Volume 159 ; 159 >
       au < doNotProcess ; 2014 ; Journal of the Royal Army Medical Corps Volume 160 ; 160 >
+      au < doNotProcess ; 2015 ; Journal of the Royal Army Medical Corps Volume 161 ; 161 >
 
     }
     
@@ -1892,6 +1926,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       implicit < status ; year ; name ; param[volume_name] >
 
       au < expected ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+      au < expected ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
 
     }
     
@@ -1924,6 +1959,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Medical Humanities Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Medical Humanities Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Medical Humanities Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; Medical Humanities Volume 41 ; 41 >
 
   }
 
@@ -2030,6 +2066,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Occupational and Environmental Medicine Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Occupational and Environmental Medicine Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Occupational and Environmental Medicine Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Occupational and Environmental Medicine Volume 72 ; 72 >
 
   }
 
@@ -2133,6 +2170,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Postgraduate Medical Journal Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Postgraduate Medical Journal Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Postgraduate Medical Journal Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 >
 
   }
 
@@ -2160,6 +2198,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Practical Neurology Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Practical Neurology Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Practical Neurology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Practical Neurology Volume 15 ; 15 >
 
   }
 
@@ -2209,6 +2248,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Quality and Safety in Health Care Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Quality and Safety in Health Care Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Quality and Safety in Health Care Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Quality and Safety in Health Care Volume 24 ; 24 >
       
     }
 
@@ -2319,6 +2359,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Sexually Transmitted Infections Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Sexually Transmitted Infections Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Sexually Transmitted Infections Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Sexually Transmitted Infections Volume 91 ; 91 >
 
   }
 
@@ -2401,6 +2442,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Thorax Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Thorax Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Thorax Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Thorax Volume 70 ; 70 >
 
   }
 
@@ -2449,6 +2491,7 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; released ; 2012 ; Tobacco Control Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Tobacco Control Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Tobacco Control Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Tobacco Control Volume 24 ; 24 >
 
     }
 
