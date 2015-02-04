@@ -4633,25 +4633,6 @@
   
   {
     title <
-      name = International Journal of Pediatric Endocrinology ;
-      issn = 1687-9848 ;
-      eissn = 1687-9856 ;
-      issnl = 1687-9848
-    >
-
-    comment[ijpe] = This journal is transferring to BMC
-    
-    param[journal_id] = ijpe
-
-    au < down ; 2008 ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 ; 2008 >
-    au < superseded ; 2009 ; International Journal of Pediatric Endocrinology Volume 2009 [superseded] ; 2009 ; 2009 >
-    au < superseded ; 2010 ; International Journal of Pediatric Endocrinology Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < superseded ; 2011 ; International Journal of Pediatric Endocrinology Volume 2011 [superseded] ; 2011 ; 2011 >
-
-  }
-
-  {
-    title <
       name = International Journal of Pediatrics ;
       issn = 1687-9740 ;
       eissn = 1687-9759 ;

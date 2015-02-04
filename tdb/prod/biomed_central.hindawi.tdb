@@ -1,0 +1,33 @@
+# This is a legacy BioMed Central file for titles previously hosted by Hindawi Publishing Corporation
+
+{
+  publisher <
+    name = BioMed Central
+  >
+  
+  {
+  
+    title <
+      name = International Journal of Pediatric Endocrinology ;
+      issn = 1687-9848 ;
+      eissn = 1687-9856 ;
+      issnl = 1687-9848
+    >
+
+    # This title has moved to BioMed Central
+
+    rights = openaccess
+    plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
+    param[base_url] = http://www.hindawi.com/
+    param[download_url] = http://downloads.hindawi.com/
+    param[journal_id] = ijpe
+    implicit < status ; year ; name ; param[volume_name] ; volume >
+
+    au < down ; 2008 ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 ; 2008 >
+    au < superseded ; 2009 ; International Journal of Pediatric Endocrinology Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < superseded ; 2010 ; International Journal of Pediatric Endocrinology Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < superseded ; 2011 ; International Journal of Pediatric Endocrinology Volume 2011 [superseded] ; 2011 ; 2011 >
+
+  }
+  
+}

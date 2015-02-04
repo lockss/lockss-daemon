@@ -4416,16 +4416,18 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
     }
 
     {
+    
       title <
         name = International Journal of Pediatric Endocrinology ;
         issn = 1687-9848 ;
         eissn = 1687-9856 ;
         issnl = 1687-9848
       >
+
+      # This publication moved from Hindawi Publishing Corporation
       
       param[base_url] = http://www.ijpeonline.com/
       param[journal_issn] = 1687-9856
-      comment[ijpe] = This journal is transferring to BMC 3/2011, but it's still available in Hindawi
 
       au < crawling ; exists ; 2009 ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 >
       au < crawling ; exists ; 2010 ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 >
