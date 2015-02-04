@@ -1,0 +1,133 @@
+# This is a legacy Alliance of Crop, Soil, and Environmental Science Societies (ACSESS) file for titles previously hosted by HighWire Press
+# This society is the merger of the American Society of Agronomy (ASA), Crop Science Society of America (CSSA) and Soil Science Society of America (SSSA)
+
+{
+
+  publisher <
+    name = Alliance of Crop, Soil, and Environmental Science Societies
+  >
+
+  # These titles are hosted by a platform under https://dl.sciencesocieties.org/
+
+  plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Agronomy Journal ;
+      issn = 0002-1962 ;
+      eissn = 1435-0645 ;
+      issnl = 0002-1962
+    >
+
+    # On behalf of American Society of Agronomy
+
+    param[base_url] = http://agron.scijournals.org/
+
+    au < down ; 1998 ; Agronomy Journal Volume 90 ; 90 >
+    au < down ; 1999 ; Agronomy Journal Volume 91 ; 91 >
+    au < down ; 2000 ; Agronomy Journal Volume 92 ; 92 >
+    au < down ; 2001 ; Agronomy Journal Volume 93 ; 93 >
+    au < down ; 2002 ; Agronomy Journal Volume 94 ; 94 >
+    au < down ; 2003 ; Agronomy Journal Volume 95 ; 95 >
+    au < down ; 2004 ; Agronomy Journal Volume 96 ; 96 >
+    au < down ; 2005 ; Agronomy Journal Volume 97 ; 97 >
+    au < down ; 2006 ; Agronomy Journal Volume 98 ; 98 >
+    au < down ; 2007 ; Agronomy Journal Volume 99 ; 99 >
+
+  }
+
+  {
+
+    title <
+      name = Crop Science ;
+      issn = 0011-183X ;
+      eissn = 1435-0653
+    >
+
+    # On behalf of Crop Science Society of America
+
+    param[base_url] = http://crop.scijournals.org/
+
+    au < down ; Crop Science Volume 38 ; 38 >
+    au < down ; Crop Science Volume 39 ; 39 >
+    au < down ; Crop Science Volume 40 ; 40 >
+    au < down ; Crop Science Volume 41 ; 41 >
+    au < down ; Crop Science Volume 42 ; 42 >
+    au < down ; Crop Science Volume 43 ; 43 >
+    au < down ; Crop Science Volume 44 ; 44 >
+    au < down ; Crop Science Volume 45 ; 45 >
+    au < down ; Crop Science Volume 46 ; 46 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Environmental Quality ;
+      issn = 0047-2425 ;
+      eissn = 1537-2537 ;
+      issnl = 0047-2425
+    >
+
+    # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/jeq
+
+    param[base_url] = http://jeq.scijournals.org/
+
+    au < down ; 2001 ; Journal of Environmental Quality Volume 30 ; 30 >
+    au < down ; 2002 ; Journal of Environmental Quality Volume 31 ; 31 >
+    au < down ; 2003 ; Journal of Environmental Quality Volume 32 ; 32 >
+    au < down ; 2004 ; Journal of Environmental Quality Volume 33 ; 33 >
+    au < down ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
+    au < down ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
+    au < down ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
+
+  }
+
+  {
+
+    title <
+      name = Soil Science Society of America Journal ;
+      issn = 0361-5995 ;
+      eissn = 1435-0661 ;
+      issnl = 0361-5995
+    >
+    
+    # On behalf of Soil Science Society of America
+    
+    param[base_url] = http://soil.scijournals.org/
+
+    au < down ; 1998 ; Soil Science Society of America Journal Volume 62 ; 62 >
+    au < down ; 1999 ; Soil Science Society of America Journal Volume 63 ; 63 >
+    au < down ; 2000 ; Soil Science Society of America Journal Volume 64 ; 64 >
+    au < down ; 2001 ; Soil Science Society of America Journal Volume 65 ; 65 >
+    au < down ; 2002 ; Soil Science Society of America Journal Volume 66 ; 66 >
+    au < down ; 2003 ; Soil Science Society of America Journal Volume 67 ; 67 >
+    au < down ; 2004 ; Soil Science Society of America Journal Volume 68 ; 68 >
+    au < down ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 >
+    au < down ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 >
+    au < down ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 >
+
+  }
+
+  {
+
+    title <
+      name = Vadose Zone Journal ;
+      eissn = 1539-1663 ;
+      issnl = 1539-1663
+    >
+
+    param[base_url] = http://vzj.scijournals.org/
+
+    au < down ; 2002 ; Vadose Zone Journal Volume 1 ; 1 >
+    au < down ; 2003 ; Vadose Zone Journal Volume 2 ; 2 >
+    au < down ; 2004 ; Vadose Zone Journal Volume 3 ; 3 >
+    au < down ; 2005 ; Vadose Zone Journal Volume 4 ; 4 >
+    au < down ; 2006 ; Vadose Zone Journal Volume 5 ; 5 >
+       
+  }
+    
+}

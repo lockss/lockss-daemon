@@ -1,0 +1,172 @@
+{
+
+  publisher <
+    name = Alliance of Crop, Soil, and Environmental Science Societies
+  >
+
+  # There are a few other titles:
+  # - Applied Turfgrass Science (ASA and CSSA): https://dl.sciencesocieties.org/publications/ats
+  # - Crop Management (ASA and CSSA): https://dl.sciencesocieties.org/publications/cm
+  # - Forage & Grazinglands (ASA and CSSA): https://dl.sciencesocieties.org/publications/fg
+  #
+  # The three combined into Crop, Forage & Turfgrass Management (ASA and CSSA) in 2015: https://dl.sciencesocieties.org/publications/cftm
+  #
+  # There is also the Journal of Animal Science: https://dl.sciencesocieties.org/publications/jas
+  # on behalf of the American Society of Animal Science (ASAS), not ASA/CSSA/SSSA;
+  # this might mean that ACSESS might need to be rephrased as a Provider in TDB files.
+  
+  {
+
+    title <
+      name = Agronomy Journal ;
+      issn = 0002-1962 ;
+      eissn = 1435-0645 ;
+      issnl = 0002-1962
+    >
+
+    # On behalf of American Society of Agronomy
+    # See https://dl.sciencesocieties.org/publications/aj
+
+  }
+
+  {
+  
+    title <
+      name = Crops & Soils ;
+      issn = 0162-5098 ;
+      eissn = 2325-3606
+    >
+
+    # On behalf of American Society of Agronomy
+    # See https://dl.sciencesocieties.org/publications/crops-and-soils
+
+  }
+
+  {
+
+    title <
+      name = Crop Science ;
+      issn = 0011-183X ;
+      eissn = 1435-0653
+    >
+
+    # On behalf of Crop Science Society of America
+    # See https://dl.sciencesocieties.org/publications/cs
+
+  }
+
+  {
+  
+    title <
+      name = CSA News ;
+      issn = 1529-9163 ;
+      eissn = 2325-3584
+    >
+
+    # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/csa-news
+    
+  }
+
+  {
+
+    title <
+      name = Journal of Environmental Quality ;
+      issn = 0047-2425 ;
+      eissn = 1537-2537 ;
+      issnl = 0047-2425
+    >
+
+    # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/jeq
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Plant Registrations ;
+      issn = 1940-3496
+    >
+
+    # On behalf of Crop Science Society of America
+    # See https://dl.sciencesocieties.org/publications/jpr
+
+  }
+
+  {
+
+    title <
+      name = Journal of Production Agriculture ;
+      issn = 0890-8524
+    >
+
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/jpa
+
+  }
+
+  {
+
+    title <
+      name = Natural Sciences Education ;
+      eissn = 2168-8281
+    >
+
+    # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/nse
+
+  }
+
+  {
+
+    title <
+      name = The Plant Genome ;
+      issn = 1940-3372
+    >
+
+    # On behalf of Crop Science Society of America
+    # See https://dl.sciencesocieties.org/publications/tpg
+
+  }
+
+  {
+
+    title <
+      name = Soil Horizons ;
+      eissn = 2163-2812
+    >
+
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/sh
+
+  }
+
+  {
+
+    title <
+      name = Soil Science Society of America Journal ;
+      issn = 0361-5995 ;
+      eissn = 1435-0661 ;
+      issnl = 0361-5995
+    >
+    
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/sssaj
+    
+  }
+
+  {
+
+    title <
+      name = Vadose Zone Journal ;
+      eissn = 1539-1663 ;
+      issnl = 1539-1663
+    >
+
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/sssaj
+       
+  }
+
+}
