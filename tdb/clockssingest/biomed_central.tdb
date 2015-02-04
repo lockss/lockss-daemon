@@ -3308,6 +3308,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://ccforum.com/
       param[journal_issn] = 1364-8535
+      comment[notReady] = Currently having a server problem. Can't reach the manifest page/Start URL
 
       au < manifest ; exists ; 1997 ; Critical Care Volume 1 ; 1 >
       au < manifest ; exists ; 1998 ; Critical Care Volume 2 ; 2 >
@@ -3325,7 +3326,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2010 ; Critical Care Volume 14 ; 14 >
       au < crawling ; exists ; 2011 ; Critical Care Volume 15 ; 15 >
       au < crawling ; exists ; 2012 ; Critical Care Volume 16 ; 16 >
-      au < testing ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
+      au < notReady ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
       au < manifest ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
       au < expected ; exists ; 2015 ; Critical Care Volume 19 ; 19 >
 
