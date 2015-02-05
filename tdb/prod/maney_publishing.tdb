@@ -1855,6 +1855,10 @@
       eissn = 1559-0909
     >
 
+    # This title moved from Michigan State University Press (Project Muse) to Maney Publishing (Ingenta)
+    # Then Maney Publishing moved from Ingenta to Atypon Systems
+    # See maney_publishing.muse.tdb and maney_publishing.ingenta.tdb
+
     param[journal_id] = itc 
 
     au < manifest ; 1978 ; Italian Culture Volume 1 ; 1 >

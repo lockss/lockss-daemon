@@ -115,23 +115,18 @@
 
   }
 
-  {
-    title <
-      name = Italian Culture ;
-      issn = 0161-4622 ;
-      eissn = 1559-0909 ;
-      issnl = 0161-4622
-    >
-
-    param[journal_dir] = italian_culture
-    attr[journal_id] = itc
-
-    au < released ; 2005 ; Italian Culture Volume 23 ; 23 ; 23 >
-    au < released ; 2006-2007 ; Italian Culture Volume 24-25 ; 24 ; 24-25 >
-    au < released ; 2008 ; Italian Culture Volume 26 ; 26 ; 26 >
-
-
-  }
+#  {
+#  
+#    title <
+#      name = Italian Culture ;
+#      issn = 0161-4622 ;
+#      eissn = 1559-0909 ;
+#      issnl = 0161-4622
+#    >
+#
+#    # This title moved from Michigan State University Press to Maney Publishing
+#
+#  }
 
   {
     title <

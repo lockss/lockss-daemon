@@ -1652,6 +1652,10 @@
       eissn = 1559-0909
     >
 
+    # This title moved from Michigan State University Press (Project Muse) to Maney Publishing (Ingenta)
+    # Then Maney Publishing moved from Ingenta to Atypon Systems
+    # See maney_publishing.tdb
+
     param[journal_id] = itc 
     param[journal_issn] = 0161-4622
 

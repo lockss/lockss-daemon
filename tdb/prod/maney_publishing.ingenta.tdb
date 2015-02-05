@@ -1690,7 +1690,11 @@
       eissn = 1559-0909
     >
 
-    param[journal_id] = itc 
+    # This title moved from Michigan State University Press (Project Muse) to Maney Publishing (Ingenta)
+    # Then Maney Publishing moved from Ingenta to Atypon Systems
+    # See maney_publishing.muse.tdb and maney_publishing.tdb
+
+    param[journal_id] = itc
     param[journal_issn] = 0161-4622
 
     au < doNotProcess ; 2009 ; Italian Culture Volume 27 ; 27 >
