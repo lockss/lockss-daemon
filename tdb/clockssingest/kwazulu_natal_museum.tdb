@@ -6,26 +6,37 @@
     info[tester] = 4
   >
 
-  param[base_url] = http://africaninvertebrates.org/ojs/
-  implicit < status ; status2 ; year ; name ; volume ; param[year] >
-
   {
  
     title < 
       name = African Invertebrates ;
       issn = 1681-5556 ;
-      issnl = 2305-2562
+      eissn = 2305-2562
     >
 
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] >
+
     {
+
+      # Do not create any more AUs with this base URL
     
-      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+      param[base_url] = http://africaninvertebrates.org/ojs/
       param[journal_id] = AI
  
       au < manifest ; exists ; 2012 ; African Invertebrates Volume 2012 ; 2012 ; 2012 >
       au < crawling ; exists ; 2013 ; African Invertebrates Volume 2013 ; 2013 ; 2013 >
       au < manifest ; exists ; 2014 ; African Invertebrates Volume 2014 ; 2014 ; 2014 >
 
+    }
+    
+    {
+
+      # Create any new AUs with this base URL
+    
+      param[base_url] = http://www.africaninvertebrates.org/ojs/
+      param[journal_id] = AI
+ 
     }
     
   }
