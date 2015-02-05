@@ -50,15 +50,15 @@
 
     param[base_url] = http://crop.scijournals.org/
 
-    au < down ; Crop Science Volume 38 ; 38 >
-    au < down ; Crop Science Volume 39 ; 39 >
-    au < down ; Crop Science Volume 40 ; 40 >
-    au < down ; Crop Science Volume 41 ; 41 >
-    au < down ; Crop Science Volume 42 ; 42 >
-    au < down ; Crop Science Volume 43 ; 43 >
-    au < down ; Crop Science Volume 44 ; 44 >
-    au < down ; Crop Science Volume 45 ; 45 >
-    au < down ; Crop Science Volume 46 ; 46 >
+    au < down ; 1998 ; Crop Science Volume 38 ; 38 >
+    au < down ; 1999 ; Crop Science Volume 39 ; 39 >
+    au < down ; 2000 ; Crop Science Volume 40 ; 40 >
+    au < down ; 2001 ; Crop Science Volume 41 ; 41 >
+    au < down ; 2002 ; Crop Science Volume 42 ; 42 >
+    au < down ; 2003 ; Crop Science Volume 43 ; 43 >
+    au < down ; 2004 ; Crop Science Volume 44 ; 44 >
+    au < down ; 2005 ; Crop Science Volume 45 ; 45 > # Verify year
+    au < down ; 2005 ; Crop Science Volume 46 ; 46 > # Verify year
 
   }
 
