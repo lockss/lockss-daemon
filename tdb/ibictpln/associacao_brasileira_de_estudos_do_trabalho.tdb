@@ -18,8 +18,6 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = abet
 
-      comment[duplicate] = this is a duplicate journal, accidentally released. The publisher is ufpb.
-
       au < released ; 2001 ; 1 ; Revista da ABET Volume 2001 ; 2001 >
       au < released ; 2002 ; 2 ; Revista da ABET Volume 2002 ; 2002 >
       au < released ; 2003 ; 3 ; Revista da ABET Volume 2003 ; 2003 >
