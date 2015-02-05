@@ -472,28 +472,18 @@
 
     param[publisher_id] = manup
 
-    {
-  
-    title <
-      name = Mediterranean Studies ;
-      issn = 1074-164X ;
-      eissn = 2161-4741 ;
-      issnl = 1074-164X
-    >
-
-    param[journal_issn] = 1074-164X 
-    param[journal_id] = medst 
-
-    comment[0] = Moving off of Ingenta 2012, move to Pennsylvania State University Press
-
-    au < down ; frozen ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
-    au < down ; crawling ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
-    au < down ; frozen ; 2007 ; Mediterranean Studies Volume 16 ; 16 >
-    au < down ; frozen ; 2008 ; Mediterranean Studies Volume 17 ; 17 >
-    au < down ; frozen ; 2009 ; Mediterranean Studies Volume 18 ; 18 >
-    au < down ; crawling ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
-
-    }
+#    {
+#  
+#      title <
+#        name = Mediterranean Studies ;
+#        issn = 1074-164X ;
+#        eissn = 2161-4741 ;
+#        issnl = 1074-164X
+#      >
+#      
+#      # This title moved from Manchester University Press to Pennsylvania State University Press
+#      
+#    }
 
     {
     title <

@@ -393,6 +393,9 @@
       issnl = 1074-164X
     >
 
+    # This title moved from Manchester University Press to Pennsylvania State University Press
+    # See pennsylvania_state_university_press.ingenta.tdb
+
       param[journal_id] = mediterraneanstu
 
       au < manifest ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
