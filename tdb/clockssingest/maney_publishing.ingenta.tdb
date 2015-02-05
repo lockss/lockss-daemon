@@ -4052,6 +4052,10 @@
       issnl = 1521-5385
     >
 
+    # This title moved from Ohio State University Press (Project Muse) to Maney Publishing (Ingenta)
+    # Then Maney Publishing moved from Ingenta to Atypon Systems
+    # See maney_publishing.tdb
+
     param[journal_id] = tcc 
     param[journal_issn] = 1521-5385
     

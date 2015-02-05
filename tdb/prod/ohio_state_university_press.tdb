@@ -1,11 +1,12 @@
 {
+
   publisher <
     name = Ohio State University Press
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; year ; name ; param[volume] >
 
   {
     title <
@@ -138,21 +139,17 @@
 
   }
 
-  {
-    title <
-      name = Twentieth-Century China ;
-      issn = 1521-5385 ;
-      eissn = 1940-5065 ;
-      issnl = 1521-5385
-    >
-
-    param[journal_dir] = twentiethcentury_china
-    attr[journal_id] = tcc
-
-    au < released ; 2007 ; Twentieth-Century China Volume 33 [Project MUSE] ; 33 >
-    au < released ; 2008 ; Twentieth-Century China Volume 34 [Project MUSE] ; 34 >
-    au < released ; 2009 ; Twentieth-Century China Volume 35 [Project MUSE] ; 35 >
-
-  }
+#  {
+#  
+#    title <
+#      name = Twentieth-Century China ;
+#      issn = 1521-5385 ;
+#      eissn = 1940-5065 ;
+#      issnl = 1521-5385
+#    >
+#
+#    # This title moved from Ohio State University Press to Maney Publishing
+#
+#  }
 
 }

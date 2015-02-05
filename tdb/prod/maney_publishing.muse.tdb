@@ -6,6 +6,10 @@
     name = Maney Publishing
   >
 
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+  implicit < status ; year ; volume ; name ; param[volume] >
+
   {
   
     title <
@@ -20,15 +24,35 @@
     # See maney_publishing.ingenta.tdb and maney_publishing.tdb
     # 2006-2008 still available at Project Muse
 
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = italian_culture
-    implicit < status ; year ; name ; param[volume] ; volume >
     attr[journal_id] = itc
 
-    au < released ; 2005 ; Italian Culture Volume 23 ; 23 ; 23 >
-    au < released ; 2006-2007 ; Italian Culture Volume 24-25 ; 24 ; 24-25 >
-    au < released ; 2008 ; Italian Culture Volume 26 ; 26 ; 26 >
+    au < released ; 2005 ; 23 ; Italian Culture Volume 23 ; 23 >
+    au < released ; 2006-2007 ; 24-25 ; Italian Culture Volume 24-25 ; 24 >
+    au < released ; 2008 ; 26 ; Italian Culture Volume 26 ; 26 >
+
+  }
+
+  {
+  
+    title <
+      name = Twentieth-Century China ;
+      issn = 1521-5385 ;
+      eissn = 1940-5065 ;
+      issnl = 1521-5385
+    >
+
+    # This title moved from Ohio State University Press (Project Muse) to Maney Publishing (Ingenta)
+    # Then Maney Publishing moved from Ingenta to Atypon Systems
+    # See maney_publishing.ingenta.tdb and maney_publishing.tdb
+    # 2007-2009 still available at Project Muse
+
+    param[journal_dir] = twentiethcentury_china
+    attr[journal_id] = tcc
+
+    au < released ; 2007 ; 33 ; Twentieth-Century China Volume 33 [Project MUSE] ; 33 >
+    au < released ; 2008 ; 34 ; Twentieth-Century China Volume 34 [Project MUSE] ; 34 >
+    au < released ; 2009 ; 35 ; Twentieth-Century China Volume 35 [Project MUSE] ; 35 >
 
   }
 
