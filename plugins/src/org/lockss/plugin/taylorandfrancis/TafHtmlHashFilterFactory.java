@@ -1,5 +1,5 @@
 /*
- * $Id: TafHtmlHashFilterFactory.java,v 1.4 2015-01-29 01:19:37 thib_gc Exp $
+ * $Id: TafHtmlHashFilterFactory.java,v 1.5 2015-02-05 22:19:51 thib_gc Exp $
  */
 
 /*
@@ -66,6 +66,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
          * KEEP: throw out everything but main content areas
          */
         HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+            // KEEP manifest page elements (no distinctive characteristics) [manifest]
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^(https?://[^/]+)?/toc/[^/]+/[^/]+/[^/]+/?$"),
             // KEEP top part of main content area [TOC, abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "overview"),
             // KEEP each article block [TOC]
@@ -73,13 +75,15 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // KEEP abstract and preview [abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "preview"),
-            // KEEP active content area
+            // KEEP active content area [abs, full, ref, suppl]
             HtmlNodeFilters.tagWithAttribute("div", "id", "informationPanel"), // article info [abs]
             HtmlNodeFilters.tagWithAttribute("div", "id", "fulltextPanel"), // full text [full]
             HtmlNodeFilters.tagWithAttribute("div", "id", "referencesPanel"), // references [ref]
             HtmlNodeFilters.tagWithAttribute("div", "id", "supplementaryPanel"), // supplementary materials [suppl]
             // KEEP citation format form [showCitFormats]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citationContainer"),
+            // KEEP popup window content area [showPopup]
+            HtmlNodeFilters.tagWithAttribute("body", "class", "popupBody"),
         })),
         /*
          * DROP: filter remaining content areas
@@ -123,6 +127,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // DROP "Jump to section" popup menus [full]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationNavigation"),
             // DROP tabular data used to be inline, is now separate (like a Figure) [full]
+            // (in showPopup table, <td class="NLM_table-wrap"> is not filtered)
             HtmlNodeFilters.tagWithAttribute("div", "class", "NLM_table-wrap"), // embedded tabular data
             HtmlNodeFilters.tagWithAttribute("center", "class", "fulltext"), // external tabular data
         }))
