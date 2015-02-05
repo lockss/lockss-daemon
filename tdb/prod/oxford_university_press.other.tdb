@@ -1,0 +1,31 @@
+# This is a legacy Oxford University Press file for titles previously hosted by other publishers or platforms
+
+{
+
+  title <
+    name = Oxford University Press
+  >
+ 
+  {
+  
+    title <
+      name = The American Historical Review ;
+      issn = 0002-8762 ;
+      eissn = 1937-5239 ;
+      issnl = 0002-8762
+    >
+
+    # This title moved from American Historical Association to Oxford University Press
+    # The domain historycooperative.org has been recycled by an unrelated Web site
+
+    rights = openaccess    
+    plugin = org.lockss.plugin.histcoop.HistoryCooperativePlugin
+    param[base_url] = http://www.historycooperative.org/
+    param[journal_dir] = ahr
+    implicit < status ; year ; name ; param[volume] >
+
+    au < down ; 2003 ; The American Historical Review Volume 108 ; 108 >
+
+  }
+   
+}
