@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development - Evan</string>
+    <string>testing - Evan</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -115,7 +115,8 @@
       <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.](mathjax|elifesciences)[.]org)/."</string>
       <!-- no gifs from other volumes -->
       <string>2,"^%scontent/(?!([^/]+/)?%s/)[^?]*[.]gif", base_url, volume_name</string>
-      <!-- all fonts, images, resources, css, js, etc. -->
+      <!-- all fonts, images, resources, css, js, etc. 
+      http://eurpub.oxfordjournals.org/sites/default/files/styles/2_grid/public/1.cover-source_3.jpg?itok=eKwbGaYh -->
       <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
