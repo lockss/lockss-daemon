@@ -7,6 +7,8 @@
 
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
   implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
+  
+  comment[lockss] = HighWire says that they don't have a method for providing access to books. No ETA for fix. See PD-534, RT6183.
 
   {
 
