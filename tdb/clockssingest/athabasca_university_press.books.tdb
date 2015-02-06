@@ -5,171 +5,21 @@
     info[contract] = 2014 ;
     info[tester] = 0
   >
-
-  plugin = needs.plugin
-  param[base_url] = http://www.aupress.ca/
-
+  
   {
-
-    implicit < status ; status2 ; year ; param[volume] ; isbn ; eisbn ; name ; author >
-    comment[isbn] = Paperback (SC) isbn 
-    comment[eisbn] = Ebook (pdf) isbn
-
-    {
   
-    title < 
-      name = Paperback ;
-      type = bookSeries 
-      
-      >
+    title <
+      name = Athabascau Books Source Content
+    >
 
-    au < exists ; exists ; 1985 ; cclh01 ; 0969206003 ;  ; Lectures in Canadian Labour and Working-Class History ; W.J.C. Cherwinski and Gregory S. Kealey > 
-    au < exists ; exists ; 1988 ; cclh02 ; 0969206046 ;  ; A Communist Life: Jack Scott and the Canadian Workers Movement, 1927-1985 ; Bryan D. Palmer > 
-    au < exists ; exists ; 1988 ; cclh03 ; 0969206038 ;  ; Class, Gender, and Region: Essays in Canadian Historical Sociology ; Gregory S. Kealey > 
-    au < exists ; exists ; 1988 ; cclh04 ; 0969206062 ;  ; Class, Community and the Labour Movement: Wales and Canada, 1850-1930 ; Deian R. Hopkin and Gregory S. Kealey, with an introduction by David Montgomery > 
-    au < exists ; exists ; 1990 ; cclh05 ; 0969206089 ;  ; Brother Max: Labour Organizer and Educator ; Max Swerdlow > 
-    au < exists ; exists ; 1994 ; cclh06 ; 0969583540 ;  ; Workers' Control on the Railroad: A Practical Example /"Right Under Your Nose/" ; R.E. (Lefty) Morgan > 
-    au < exists ; exists ; 1994 ; cclh07 ; 0969583524 ;  ; My Past Is Now: Further Memoirs of a Labour Lawyer ; John Stanton > 
-    au < exists ; exists ; 1995 ; cclh08 ; 0969583567 ;  ; For A Working-Class Culture in Canada: A Selection of Colin McKay's Writings on Sociology and Political Economy, 1897-1939 ; Ian McKay > 
-    au < exists ; exists ; 1997 ; cclh09 ; 0969583575 ;  ; Cold Warrior: C.S. Jackson and the United Electrical Workers ; Doug Smith > 
-    au < exists ; exists ; 1998 ; cclh10 ; 1894000005 ;  ; Patrick Lenihan: From Irish Rebel to Founder of Canadian Public Sector Unionism ; Gilbert Levine with an Introduction by Lorne Brown > 
-    au < exists ; exists ; 1999 ; cclh11 ; 1894000013 ;  ; The Woman Worker: 1926-1929 ; Margaret Hobbs and Joan Sangster > 
-    au < exists ; exists ; 2000 ; cclh12 ; 1894000021 ;  ; A Memoir of the Spanish Civil War: An Armenian-Canadian in the Lincoln Battalion ; D. P. (Pat) Stephens > 
-    au < exists ; exists ; 2000 ; cclh13 ; 189400003X ;  ; A Square Deal For All And No Railroading: Historical Essays on Labour in Brandon ; Errol Black and Tom Mitchell > 
-    au < exists ; exists ; 2000 ; cclh14 ; 1894000048 ;  ; Labouring the Canadian Millennium: Writings on Work and Workers, History and Historiography ; Bryan D. Palmer > 
-    au < exists ; exists ; 2001 ; cclh15 ; 1894000056 ;  ; A Very Red Life: The Story of Bill Walsh ; Cy Gonick > 
-    au < exists ; exists ; 2004 ; cclh16 ; 1894000064 ;  ; Fighting for Dignity: The Ginger Goodwin Story ; Roger Stonebanks > 
-    au < exists ; exists ; 2006 ; cclh17 ; 1894000072 ;  ; The Struggle against Wage Controls: The Saint John Story, 1975-1976 ; George Vair > 
-    au < exists ; exists ; 2007 ; cclh18 ;  ; 9781894000086 ; Confrontation, Struggle and Transformation: Organized Labour in the St. Catharines Area ; Carmela Patrias and Larry Savage > 
-    au < exists ; exists ; 2010 ; cclh19 ; 9781894000093 ;  ; Labour Landmarks in New Brunswick | Lieux historiques ouvriers au Nouveau-Brunswick ; David Frank and Nicole Lang > 
-    au < exists ; exists ; 1994 ; rcmp01 ; 0969206097 ;  ; R.C.M.P. Security Bulletins: The Early Years, 1919-1929 ; Gregory S. Kealey and Reg Whitaker > 
-    au < exists ; exists ; 1993 ; rcmp02 ; 0969583516 ;  ; R.C.M.P. Security Bulletins: The Depression Years, Part I, 1933-1934 ; Gregory S. Kealey and Reg Whitaker > 
-    au < exists ; exists ; 1995 ; rcmp03 ; 0969583532 ;  ; R.C.M.P. Security Bulletins: The Depression Years, Part II, 1935 ; Gregory S. Kealey and Reg Whitaker > 
-    au < exists ; exists ; 1996 ; rcmp04 ; 0969583559 ;  ; R.C.M.P. Security Bulletins: The Depression Years, Part III, 1936 ; Gregory S. Kealey and Reg Whitaker > 
-    au < exists ; exists ; 1997 ; rcmp05 ; 0969583583 ;  ; R.C.M.P. Security Bulletins: The Depression Years, Part IV, 1937 ; Gregory S. Kealey and Reg Whitaker > 
-    au < exists ; exists ; 1997 ; rcmp06 ; 0969583591 ;  ; R.C.M.P. Security Bulletins: The Depression Years, Part V, 1938-39 ; Gregory S. Kealey and Reg Whitaker > 
-    au < exists ; exists ; 1989 ; rcmp07 ; 0969206054 ;  ; R.C.M.P. Security Bulletins: The War Series, 1939-1941 ; Gregory S. Kealey and Reg Whitaker > 
-    au < exists ; exists ; 1993 ; rcmp08 ; 0969583508 ;  ; R.C.M.P. Security Bulletins: The War Series, Part II, 1942-1945 ; Gregory S. Kealey and Reg Whitaker > 
-    }
-
-    {
-  
-    title < 
-      name = EBook ;
-      type = bookSeries 
-      
-      >
-
-    au < exists ; exists ; 2008 ; 120137 ; 9781897425046 ; 9781897425091 ; Imagining Head-Smashed-In: Aboriginal Buffalo Hunting on the Northern Plains ; Jack W. Brink > 
-    au < exists ; exists ; 2008 ; 120138 ;  ; 9781897425060 ; Le conseiller pédagogique réflexif: Un journal de bord ; Michael Power > 
-    au < exists ; exists ; 2008 ; 120139 ; 9781897425107 ; 9781897425114 ; Lost Tracks: Buffalo National Park, 1909-1939 ; Jennifer Brower > 
-    au < exists ; exists ; 2008 ; 120140 ; 9781897425022 ; 9781897425152 ; Mountain Masculinity: The Life and Writing of Nello /"Tex/" Vernon-Wood in the Canadian Rockies, 1906–1938 ; Andrew Gow and Julie Rak > 
-    au < exists ; exists ; 2008 ; 120141 ; 9781897425015 ; 9781897425169 ; Northern Rover: The Life Story of Olaf Hanson ; A.L. Karras > 
-    au < exists ; exists ; 2008 ; 120142 ; 9781897425053 ; 9781897425121 ; Icon, Brand, Myth: The Calgary Stampede ; Max Foran > 
-    au < exists ; exists ; 2008 ; 120143 ; 9781897425220 ; 9781897425237 ; Northern Love: An Exploration of Canadian Masculinity ; Paul Nonnekes > 
-    au < exists ; exists ; 2008 ; 120144 ; 9780888644909 ; 9781897425190 ; The Importance of Being Monogamous: Marriage and Nation Building in Western Canada to 1915 ; Sarah Carter > 
-    au < exists ; exists ; 2008 ; 120145 ; 9780888645012 ; 9781897425206 ; One Step Over the Line: Toward a History of Women in the North American Wests ; Elizabeth Jameson and Sheila McManus > 
-    au < exists ; exists ; 2008 ; 120146 ; 9781897425084 ; 9781897425077 ; The Theory and Practice of Online Learning, second edition ; Terry Anderson > 
-    au < exists ; exists ; 2008 ; 120147 ; 9781897425176 ; 9781897425183 ; Before and After Radical Prostate Surgery: Information and Resource Guide ; Virginia Vandall-Walker with Katherine Moore and Diane Pyne > 
-    au < exists ; exists ; 2008 ; 120148 ; 9781897425268 ; 9781897425275 ; Hot Thespian Action!: Ten Premiere Plays from Walterdale Playhouse ; Robin C. Whittaker > 
-    au < exists ; exists ; 2008 ; 120149 ; 9781897425336 ; 9781897425343 ; Poems for a Small Park ; E. D. Blodgett > 
-    au < exists ; exists ; 2008 ; 120150 ; 9780889772205 ; 9781897425459 ; Views From Fort Battleford: Constructed Visions of an Anglo-Canadian West ; Walter Hildebrandt > 
-    au < exists ; exists ; 2009 ; 120151 ; 9781897425282 ; 9781897425299 ; Making Game: An Essay on Hunting, Familiar Things, and the Strangeness of Being Who One Is ; Peter L. Atkinson > 
-    au < exists ; exists ; 2009 ; 120152 ; 9781897425138 ; 9781897425145 ; Expansive Discourses: Urban Sprawl in Calgary, 1945-1978 ; Max Foran > 
-    au < exists ; exists ; 2009 ; 120153 ; 9781897425305 ; 9781897425312 ; Wild Words: Essays on Alberta Literature ; Donna Coates and George Melnyk > 
-    au < exists ; exists ; 2009 ; 120154 ; 9782895901372 ; 9781897425251 ; C'est le temps d'en parler: L'histoire de Marie-Louise Bouchard Labelle ; Claire Trépanier > 
-    au < exists ; exists ; 2009 ; 120155 ; 9781897425435 ; 9781897425442 ; Mobile Learning: Transforming the Delivery of Education and Training ; Mohamed Ally > 
-    au < exists ; exists ; 2009 ; 120156 ; 9781897425626 ; 9781897425633 ; Avant et Après La Prostatectomie Radicale: Guide d'information et de Ressources ; Virginia Vandall-Walker with Katherine Moore and Diane Pyne > 
-    au < exists ; exists ; 2009 ; 120157 ; 9781897425398 ; 9781897425404 ; Liberalism, Surveillance, and Resistance: Indigenous Communities in Western Canada, 1877-1927 ; Keith D. Smith > 
-    au < exists ; exists ; 2009 ; 120158 ; 9781897425510 ; 9781897425527 ; More Moments in Time: Images of Exemplary Nursing ; Beth Perry RN, PhD > 
-    au < exists ; exists ; 2009 ; 120159 ; 9781897425497 ; 9781897425503 ; Bomb Canada and Other Unkind Remarks in the American Media ; Chantal Allan > 
-    au < exists ; exists ; 2009 ; 120160 ; 9781897425374 ; 9781897425381 ; The Beaver Hills Country: A History of Land and Life ; Graham A. MacDonald > 
-    au < exists ; exists ; 2009 ; 120161 ; 9781897425619 ; 9781897425466 ; A Designer's Log: Case Studies in Instructional Design ; Michael Power > 
-    au < exists ; exists ; 2009 ; 120164 ; 9781897425411 ; 9781897425428 ; A Very Capable Life: The Autobiography of Zarah Petri ; John Leigh Walters > 
-    au < exists ; exists ; 2010 ; 120162 ; 9781897425473 ; 9781897425480 ; Accessible Elements: Teaching Science Online and at a Distance ; Dietmar Kennepohl and Lawton Shaw > 
-    au < exists ; exists ; 2010 ; 120163 ; 9781897425350 ; 9781897425367 ; Trail of Story, Traveller’s Path: Reflections on Ethnoecology and Landscape ; Leslie Main Johnson > 
-    au < exists ; exists ; 2010 ; 120165 ; 9781897425534 ; 9781897425541 ; Letters from the Lost: A Memoir of Discovery ; Helen Waldstein Wilkes > 
-    au < exists ; exists ; 2010 ; 120166 ; 9781897425701 ; 9781897425718 ; Dreamwork ; Jonathan Locke Hart > 
-    au < exists ; exists ; 2010 ; 120167 ; 9781897425596 ; 9781897425602 ; How Canadians Communicate III: Contexts of Canadian Popular Culture ; Bart Beaty, Derek Briton, Gloria Filax, and Rebecca Sullivan > 
-    au < exists ; exists ; 2010 ; 120168 ; 9781897425558 ; 9781897425565 ; Nightwood Theatre: A Woman’s Work Is Always Done ; Shelley Scott > 
-    au < exists ; exists ; 2010 ; 120169 ; 9781897425572 ; 9781897425589 ; Ecology & Wonder in the Canadian Rocky Mountain Parks World Heritage Site ; Robert W. Sandford > 
-    au < exists ; exists ; 2010 ; 120170 ; 9781897425862 ; 9781897425879 ; In/visible Sight: The Mixed-Descent Families of Southern New Zealand ; Angela Wanhalla > 
-    au < exists ; exists ; 2010 ; 120171 ; 9781897425886 ; 9781897425893 ; Windfall Apples: Tanka and Kyoka ; Richard Stevenson > 
-    au < exists ; exists ; 2010 ; 120172 ; 9781897425848 ; 9781897425855 ; A Woman of Valour: The Biography of Marie-Louise Bouchard Labelle ; Claire Trépanier > 
-    au < exists ; exists ; 2010 ; 120173 ; 9781897425688 ; 9781897425695 ; The ABCs of Human Survival: A Paradigm for Global Citizenship ; Arthur Clark > 
-    au < exists ; exists ; 2010 ; 120174 ; 9781897425725 ; 9781897425732 ; To Know Our Many Selves: From the Study of Canada to Canadian Studies ; Dirk Hoerder > 
-    au < exists ; exists ; 2010 ; 120175 ; 9781897425787 ; 9781897425794 ; From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots ; Michael Dawson, Brian Dupuis, and Michael Wilson > 
-    au < exists ; exists ; 2010 ; 120176 ; 9781897425800 ; 9781897425817 ; The West and Beyond: New Perspectives on an Imagined Region ; Alvin Finkel, Sarah Carter, and Peter Fortna > 
-    au < exists ; exists ; 2010 ; 120177 ; 9781897425763 ; 9781897425770 ; Emerging Technologies in Distance Education ; George Veletsianos > 
-    au < exists ; exists ; 2010 ; 120178 ; 9781926836003 ; 9781926836010 ; The Political Economy of Workplace Injury in Canada ; Bob Barnetson > 
-    au < exists ; exists ; 2010 ; 120179 ; 9781897425923 ; 9781897425930 ; The dust of just beginning ; Don Kerr > 
-    au < exists ; exists ; 2010 ; 120180 ; 9781926836102 ; 9781926836119 ; Roy & Me: This Is Not a Memoir ; Maurice Yacowar > 
-    au < exists ; exists ; 2011 ; 120181 ; 9781897425824 ; 9781897425831 ; Recollecting: Lives of Aboriginal Women of the Canadian Northwest and Borderlands ; Sarah Carter and Patricia A. McCormack > 
-    au < exists ; exists ; 2011 ; 120182 ; 9781926836027 ; 9781926836034 ; Alberta's Day Care Controversy: From 1908 to 2009 and Beyond ; Tom Langford > 
-    au < exists ; exists ; 2011 ; 120183 ; 9781926836027 ; 9781897425978 ; Light from Ancient Campfires: Archaeological Evidence for Native Lifeways on the Northern Plains ; Trevor R. Peck > 
-    au < exists ; exists ; 2011 ; 120184 ; 9781897425749 ; 9781897425756 ; The Anatomy of Ethical Leadership: To Lead Our Organizations in a Conscientious and Authentic Manner ; Lyse Langlois > 
-    au < exists ; exists ; 2011 ; 120185 ; 9781897425749 ; 9781926836096 ; Champagne and Meatballs: Adventures of a Canadian Communist ; Bert Whyte, edited and with an introduction by Larry Hannant > 
-    au < exists ; exists ; 2011 ; 120186 ; 9781897425947 ; 9781897425954 ; Zeus and the Giant Iced Tea ; Leopold McGinnis > 
-    au < exists ; exists ; 2011 ; 120187 ; 9781926836126 ; 9781926836133 ; Romancing the Revolution: The Myth of Soviet Democracy and the British Left ; Ian Bullock > 
-    au < exists ; exists ; 2011 ; 120188 ; 9781926836140 ; 9781926836157 ; Praha ; E.D. Blodgett with Czech translations by Marzia Paton > 
-    au < exists ; exists ; 2011 ; 120189 ; 9781926836225 ; 9781926836232 ; Dustship Glory ; Andreas Schroeder > 
-    au < exists ; exists ; 2011 ; 120190 ; 9781926836225 ; 9781897425916 ; Musing ; Jonathan Locke Hart > 
-    au < exists ; exists ; 2011 ; 120191 ; 9781926836188 ; 9781926836195 ; Through Feminist Eyes: Essays on Canadian Women’s History ; Joan Sangster > 
-    au < exists ; exists ; 2011 ; 120192 ; 9781897425985 ; 9781897425992 ; Goodlands: A Meditation and History on the Great Plains ; Frances W. Kaye > 
-    au < exists ; exists ; 2011 ; 120195 ; 9781926836430 ; 9781926836447 ; Our Union: UAW/CAW Local 27 from 1950 to 1990 ; Jason Russell > 
-    au < exists ; exists ; 2011 ; 120196 ; 9781926836263 ; 9781926836270 ; Controlling Knowledge: Freedom of Information and Privacy Protection in a Networked World ; Lorna Stefanick > 
-    au < exists ; exists ; 2011 ; 120201 ; 9781926836249 ; 9781926836256 ; The Kindness Colder Than the Elements ; Charles Noble > 
-    au < exists ; exists ; 2011 ; 120203 ; 9781926836201 ; 9781926836218 ; Flexible Pedagogy, Flexible Practice: Notes from the Trenches of Distance Education ; Elizabeth Burge, Chère Campbell Gibson, and Terry Gibson > 
-    au < exists ; exists ; 2012 ; 120193 ; 9781926836041 ; 9781926836058 ; Connecting Canadians: Investigations in Community Informatics ; Andrew Clement, Michael Gurstein, Graham Longford, Marita Moll, and Leslie Regan Shade > 
-    au < exists ; exists ; 2012 ; 120194 ; 9781926836584 ; 9781926836591 ; Working People in Alberta: A History ; Alvin Finkel, with contributions by Jason Foster, Winston Gereluk, Jennifer Kelly and Dan Cui, James Muir, Joan Schiebelbein, Jim Selby, and Eric Strikwerda > 
-    au < exists ; exists ; 2012 ; 120197 ; 9781926836492 ; 9781926836508 ; Selves and Subjectivities: Reflections on Canadian Arts and Culture ; Manijeh Mannani and Veronica Thompson > 
-    au < exists ; exists ; 2012 ; 120202 ; 9781926836461 ; 9781926836478 ; Valences of Interdisciplinarity: Theory, Practice, Pedagogy ; Raphael Foshay > 
-    au < exists ; exists ; 2012 ; 120204 ; 9781926836751 ; 9781926836768 ; Imperfection ; Patrick Grant > 
-    au < exists ; exists ; 2012 ; 120205 ; 9781926836812 ; 9781926836829 ; How Canadians Communicate IV: Media and Politics ; David Taras and Christopher Waddell > 
-    au < exists ; exists ; 2012 ; 120206 ; 9781926836874 ; 9781926836881 ; Social Democracy After the Cold War ; Bryan Evans and Ingo Schmidt > 
-    au < exists ; exists ; 2012 ; 120208 ; 9781926836782 ; 9781926836799 ; Union Power: Solidarity and Struggle in Niagara ; Carmela Patrias and Larry Savage > 
-    au < exists ; exists ; 2012 ; 120209 ; 9781926836966 ; 9781926836973 ; Hard Time: Reforming the Penitentiary in Nineteenth-Century Canada ; Ted McCoy > 
-    au < exists ; exists ; 2012 ; 120210 ; 9781926836690 ; 9781926836706 ; kiyâm ; Naomi McIlwraith > 
-    au < exists ; exists ; 2012 ; 120211 ; 9781926836843 ; 9781926836850 ; The Metabolism of Desire: The Poetry of Guido Cavalcanti ; translated by David R. Slavitt > 
-    au < exists ; exists ; 2012 ; 120212 ; 9781926836935 ; 9781926836942 ; Voices of the Land: The Seed Savers and Other Plays ; Katherine Koller, introduction by Anne Nothof > 
-    au < exists ; exists ; 2012 ; 120220 ; 9781927356029 ; 9781927356036 ; Sefer ; Ewa Lipska, translated by Barbara Bogoczek and Tony Howard > 
-    au < exists ; exists ; 2013 ; 120198 ; 9781926836522 ; 9781926836539 ; A Metaphoric Mind: Selected Writings of Joseph Couture ; Ruth Couture and Virginia McGowan > 
-    au < exists ; exists ; 2013 ; 120200 ; 9781926836553 ; 9781926836560 ; Man Proposes, God Disposes: Recollections of a French Pioneer ; Pierre Maturié, translated by Vivien Bosley > 
-    au < exists ; exists ; 2013 ; 120213 ; 9781926836997 ; 9781927356005 ; Reel Time: Movie Exhibitors and Movie Audiences in Prairie Canada, 1896 to 1986 ; Robert M. Seiler and Tamara P. Seiler > 
-    au < exists ; exists ; 2013 ; 120216 ; 9781927356050 ; 9781927356067 ; The Wages of Relief: Cities and the Unemployed in Prairie Canada, 1929–39 ; Eric Strikwerda > 
-    au < exists ; exists ; 2013 ; 120217 ; 9781927356234 ; 9781927356241 ; Provincial Solidarities: A History of the New Brunswick Federation of Labour ; David Frank > 
-    au < exists ; exists ; 2013 ; 120218 ; 9781927356296 ; 9781927356302 ; Solidarités provinciales: Histoire de la Fédération des travailleurs et travailleuses du Nouveau-Brunswick ; David Frank, traduit par Réjean Ouellette > 
-    au < exists ; exists ; 2013 ; 120219 ; 9781927356203 ; 9781927356210 ; Sociocultural Systems: Principles of Structure and Change ; Frank W. Elwell > 
-    au < exists ; exists ; 2013 ; 120221 ; 9781927356029 ; 9781927356272 ; The Acute-Care Nurse Practitioner: A Transformational Journey ; Judy Rashotte > 
-    au < exists ; exists ; 2013 ; 120222 ; 9781927356029 ; 9781927356098 ; Development Derailed: Calgary and the CPR, 1962–64 ; Max Foran > 
-    au < exists ; exists ; 2013 ; 120223 ; 9781927356326 ; 9781927356333 ; The Undiscovered Country: Essays in Canadian Intellectual Culture ; Ian Angus > 
-    au < exists ; exists ; 2013 ; 120224 ; 9781927356418 ; 9781927356425 ; Strategic Nonviolent Power: The Science of Satyagraha ; Mark A. Mattaini > 
-    au < exists ; exists ; 2013 ; 120225 ; 9781927356531 ; 9781927356548 ; Game-Day Gangsters: Crime and Deviance in Canadian Football ; Curtis Fogel > 
-    au < exists ; exists ; 2013 ; 120226 ; 9781927356388 ; 9781927356395 ; Open Data Structures: An Introduction ; Pat Morin > 
-    au < exists ; exists ; 2013 ; 120227 ; 9781927356173 ; 9781927356180 ; Mind, Body, World: Foundations of Cognitive Science ; Michael R. W. Dawson > 
-    au < exists ; exists ; 2013 ; 120228 ; 9781927356357 ; 9781927356364 ; The Lays of Marie de France ; Translated by David R. Slavitt > 
-    au < exists ; exists ; 2013 ; 120229 ; 9781927356470 ; 9781927356487 ; Teaching in Blended Learning Environments: Creating and Sustaining Communities of Inquiry ; Norman D. Vaughan, Martha Cleveland-Innes, and D. Randy Garrison > 
-    au < exists ; exists ; 2013 ; 120230 ; 9781927356562 ; 9781927356579 ; Xwelíqwiya: The Life of a Stó:lō Matriarch ; Rena Point Bolton and Richard Daly > 
-    au < exists ; exists ; 2013 ; 120234 ; 9781927356654 ; 9781927356661 ; Teaching Health Professionals Online: Frameworks and Strategies ; Sherri Melrose, Caroline Park, and Beth Perry > 
-    au < exists ; exists ; 2014 ; 120199 ; 9781926836065 ; 9781926836072 ; The Praying Man: Henry Bird Steinhauer, Ojibwe and Methodist Minister ; Isaac Mabindisa, with Daniel Johns > 
-    au < expected ; exists ; 2014 ; 120207 ; 9781926836904 ; 9781926836911 ; Alberta's Lower Athabasca Basin: Archaeology and Palaeoenvironments ; Brian M. Ronaghan > 
-    au < exists ; exists ; 2014 ; 120214 ; 9781927356142 ; 9781927356159 ; The Class Imperative ; Mas’ud Zavarzadeh > 
-    au < expected ; exists ; 2014 ; 120215 ; 9781926836287 ; 9781923836294 ; Hobohemia and the Crucifixion Machine: Rival Images of a New World in 1930s Vancouver ; Todd McCallum > 
-    au < expected ; exists ; 2014 ; 120231 ; 9781927356500 ; 9781927356517 ; The Teacher and the Superintendent: Native Schooling in the Alaskan Interior, 1904-1918 ; George E. Boulter II, Barbara Grigor-Taylor > 
-    au < expected ; exists ; 2014 ; 120232 ; 9781927356593 ; 9781927356609 ; Film and the City: The Urban Imaginary in Canadian Cinema ; George Melnyk > 
-    au < expected ; exists ; 2014 ; 120233 ; 9781927356623 ; 9781927356630 ; Online Distance Education: Towards a Research Agenda ; Olaf Zawacki-Richter and Terry Anderson > 
-    au < expected ; exists ; 2014 ; 120235 ; 9781927356807 ; 9781927356814 ; Teaching Crowds: Learning and Social Media ; Jon Dron and Terry Anderson > 
-    au < expected ; exists ; 2014 ; 120236 ; 9781927356746 ; 9781927356753 ; The Letters of Vincent van Gogh: A Critical Study ; Patrick Grant > 
-    au < expected ; exists ; 2014 ; 120237 ; 9781927356777 ; 9781927356784 ; Transparent Lives: Surveillance in Canada ; The New Transparency Project, edited by Colin J. Bennett, Kevin D. Haggerty, David Lyon, and Valerie Steeves > 
-    au < expected ; exists ; 2014 ; 120238 ; 9781927356838 ; 9781927356845 ; Vivre à nu: La surveillance au Canada ; Projet sur la Nouvelle transparence, publié sous la direction de Colin J. Bennett, Kevin D. Haggerty, David Lyon et Valerie Steeves > 
-    au < expected ; exists ; 2014 ; 120239 ; 9781927356715 ; 9781927356722 ; Fish Wars and Trout Travesties: Saving Southern Alberta’s Coldwater Streams in the 1920s ; George Colpitts > 
-    au < expected ; exists ; 2014 ; 120240 ; 9781927356449 ; 9781927356456 ; Legal Literacy: An Introduction to Legal Studies ; Archie Zariski > 
-      
-
-    }   
-
+    plugin = org.lockss.plugin.clockss.onixbooks.ClockssAthabascauOnix3SourcePlugin
+    param[base_url] = http://content5.lockss.org/sourcefiles/athabascau-released/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2014 ; Athabascau Books Source Content 2014 ; 2014 >
+    au < testing ; exists ; 2015 ; Athabascau Books Source Content 2015 ; 2015 >
       
  }
- 
 
 }
