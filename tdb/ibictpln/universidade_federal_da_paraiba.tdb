@@ -578,22 +578,20 @@
       comment[publisher] = Universidade Federal da Paraíba
       param[base_url] = http://www.ies.ufpb.br/ojs2/
       param[journal_id] = abet
-      
-      comment[duplicate] = this is a duplicate journal. Do not process.
 
-      au < doNotProcess ; 2001 ; 1 ; Revista da ABET Volume 2001 ; 2001 ; >
-      au < doNotProcess ; 2002 ; 2 ; Revista da ABET Volume 2002 ; 2002 ; >
-      au < doNotProcess ; 2003 ; 3 ; Revista da ABET Volume 2003 ; 2003 ; >
-      au < doNotProcess ; 2004 ; 4 ; Revista da ABET Volume 2004 ; 2004 ; >
-      au < doNotProcess ; 2005 ; 5 ; Revista da ABET Volume 2005 ; 2005 ; >
-      au < doNotProcess ; 2006 ; 6 ; Revista da ABET Volume 2006 ; 2006 ; >
-      au < doNotProcess ; 2007 ; 7 ; Revista da ABET Volume 2007 ; 2007 ; >
-      au < doNotProcess ; 2008 ; 8 ; Revista da ABET Volume 2008 ; 2008 ; >
-      au < doNotProcess ; 2009 ; 9 ; Revista da ABET Volume 2009 ; 2009 ; >
-      au < doNotProcess ; 2010 ; 10 ; Revista da ABET Volume 2010 ; 2010 ; >
-      au < doNotProcess ; 2011 ; 11 ; Revista da ABET Volume 2011 ; 2011 ; >
-      au < doNotProcess ; 2012 ; 12 ; Revista da ABET Volume 2012 ; 2012 ; >
-      au < doNotProcess ; 2013 ; 13 ; Revista da ABET Volume 2013 ; 2013 ; >
+      au < ready ; 2001 ; 1 ; Revista da ABET Volume 2001 [Universidade Federal da Paraíba] ; 2001 ; >
+      au < ready ; 2002 ; 2 ; Revista da ABET Volume 2002 [Universidade Federal da Paraíba] ; 2002 ; >
+      au < ready ; 2003 ; 3 ; Revista da ABET Volume 2003 [Universidade Federal da Paraíba] ; 2003 ; >
+      au < ready ; 2004 ; 4 ; Revista da ABET Volume 2004 [Universidade Federal da Paraíba] ; 2004 ; >
+      au < ready ; 2005 ; 5 ; Revista da ABET Volume 2005 [Universidade Federal da Paraíba] ; 2005 ; >
+      au < ready ; 2006 ; 6 ; Revista da ABET Volume 2006 [Universidade Federal da Paraíba] ; 2006 ; >
+      au < ready ; 2007 ; 7 ; Revista da ABET Volume 2007 [Universidade Federal da Paraíba] ; 2007 ; >
+      au < ready ; 2008 ; 8 ; Revista da ABET Volume 2008 [Universidade Federal da Paraíba] ; 2008 ; >
+      au < ready ; 2009 ; 9 ; Revista da ABET Volume 2009 [Universidade Federal da Paraíba] ; 2009 ; >
+      au < ready ; 2010 ; 10 ; Revista da ABET Volume 2010 [Universidade Federal da Paraíba] ; 2010 ; >
+      au < ready ; 2011 ; 11 ; Revista da ABET Volume 2011 [Universidade Federal da Paraíba] ; 2011 ; >
+      au < ready ; 2012 ; 12 ; Revista da ABET Volume 2012 [Universidade Federal da Paraíba] ; 2012 ; >
+      au < ready ; 2013 ; 13 ; Revista da ABET Volume 2013 [Universidade Federal da Paraíba] ; 2013 ; >
 
   }
 
