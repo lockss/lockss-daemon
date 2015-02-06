@@ -904,7 +904,7 @@
     au < finished ; crawling ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
-    au < testing ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
+    au < ready ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
     au < ready ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
     au < doNotProcess ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
 
@@ -950,7 +950,7 @@
     au < crawling ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
-    au < testing ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
+    au < ready ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2015 ; American Journal of Hypertension Volume 28 ; 28 ; >
 
   }
@@ -12912,7 +12912,7 @@
     au < finished ; crawling ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Journal of Islamic Studies Volume 24 ; 24 ; >
-    au < testing ; exists ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
+    au < ready ; exists ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
     au < manifest ; exists ; 2015 ; Journal of Islamic Studies Volume 26 ; 26 ; >
 
     }
@@ -23218,7 +23218,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2013 ; Conservation Physiology Volume 1 ; 1 ; >
-      au < testing ; exists ; 2014 ; Conservation Physiology Volume 2 ; 2 ; >
+      au < ready ; exists ; 2014 ; Conservation Physiology Volume 2 ; 2 ; >
       au < expected ; exists ; 2015 ; Conservation Physiology Volume 3 ; 3 ; >
 
     }
