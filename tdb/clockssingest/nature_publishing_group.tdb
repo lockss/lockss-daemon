@@ -2579,8 +2579,6 @@
     >
 
     param[journal_id] = ndigest
-    
-    comment[error] = 2010-2013 have no substance errors. PD-1243
 
     au < exists ; exists ; 2004 ; Nature Digest Volume 1 ; 2004 ; 1 >
     au < exists ; exists ; 2005 ; Nature Digest Volume 2 ; 2005 ; 2 >
@@ -2588,10 +2586,10 @@
     au < exists ; exists ; 2007 ; Nature Digest Volume 4 ; 2007 ; 4 >
     au < zapped ; finished ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < zapped ; finished ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
-    au < ingNotReady ; down ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
+    au < crawling ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
     au < zapped ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
-    au < ingNotReady ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
-    au < ingNotReady ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
+    au < crawling ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
+    au < crawling ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
     au < manifest ; exists ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 >
 
   }
