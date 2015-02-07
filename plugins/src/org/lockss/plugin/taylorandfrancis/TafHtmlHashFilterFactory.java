@@ -1,5 +1,5 @@
 /*
- * $Id: TafHtmlHashFilterFactory.java,v 1.5 2015-02-05 22:19:51 thib_gc Exp $
+ * $Id: TafHtmlHashFilterFactory.java,v 1.6 2015-02-07 02:28:16 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.Arrays;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.CountingInputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.tags.CompositeTag;
@@ -44,7 +45,7 @@ import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.util.*;
 
 /**
  * This filter will eventually replace
@@ -52,13 +53,15 @@ import org.lockss.util.ReaderInputStream;
  */
 public class TafHtmlHashFilterFactory implements FilterFactory {
 
+  private static final Logger log = Logger.getLogger(TafHtmlHashFilterFactory.class);
+  
   @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
+  public InputStream createFilteredInputStream(final ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
 
-    InputStream filtered = new HtmlFilterInputStream(
+    HtmlFilterInputStream filtered = new HtmlFilterInputStream(
       in,
       encoding,
       new HtmlCompoundTransform(
@@ -126,13 +129,12 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"), // [article block, full/ref referencesPanel]
             // DROP "Jump to section" popup menus [full]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationNavigation"),
-            // DROP tabular data used to be inline, is now separate (like a Figure) [full]
-            // (in showPopup table, <td class="NLM_table-wrap"> is not filtered)
-            HtmlNodeFilters.tagWithAttribute("div", "class", "NLM_table-wrap"), // embedded tabular data
-            HtmlNodeFilters.tagWithAttribute("center", "class", "fulltext"), // external tabular data
         }))
       )
-    ).registerTag(new CompositeTag() { @Override public String[] getIds() { return new String[] {"CENTER"}; } }); // FIXME 1.67.4
+    );
+    
+    // FIXME 1.67.4
+    filtered.registerTag(new CompositeTag() { @Override public String[] getIds() { return new String[] {"CENTER"}; } });
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
@@ -162,7 +164,24 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     Reader noTagFilter = new HtmlTagFilter(new StringFilter(tagFilter, "<", " <"), new TagPair("<", ">"));
     
     // Remove white space
-    return new ReaderInputStream(new WhiteSpaceFilter(noTagFilter));
+    Reader noWhiteSpace = new WhiteSpaceFilter(noTagFilter);
+    
+    InputStream ret = new ReaderInputStream(noWhiteSpace);
+
+    // Instrumentation
+    return new CountingInputStream(ret) {
+      @Override
+      public void close() throws IOException {
+        long bytes = getByteCount();
+        if (bytes <= 100L) {
+          log.debug(String.format("%d byte%s in %s", bytes, bytes == 1L ? "" : "s", au.getName()));
+        }
+        if (log.isDebug2()) {
+          log.debug2(String.format("%d byte%s in %s", bytes, bytes == 1L ? "" : "s", au.getName()));
+        }
+        super.close();
+      }
+    };
   }
 
 //  public static void main(String[] args) throws Exception {
