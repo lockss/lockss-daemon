@@ -28,9 +28,9 @@
     }
     au < manifest ; exists ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 >
-    au < ready ; exists ; 2012 ; Ancient Asia Volume 3 ; 3 ; 2012 >
-    au < ready ; exists ; 2013 ; Ancient Asia Volume 4 ; 4 ; 2013 >
-    au < ready ; exists ; 2014 ; Ancient Asia Volume 5 ; 5 ; 2014 >
+    au < crawling ; exists ; 2012 ; Ancient Asia Volume 3 ; 3 ; 2012 >
+    au < crawling ; exists ; 2013 ; Ancient Asia Volume 4 ; 4 ; 2013 >
+    au < crawling ; exists ; 2014 ; Ancient Asia Volume 5 ; 5 ; 2014 >
     
   }
   
@@ -56,7 +56,7 @@
     au < superseded ; exists ; 2011-2012 ; Archaeology International Volume 15 [to delete] ; 15 ; 2011 >
     au < testing ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2012 >
     au < crawling ; exists ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 >
-    au < ready ; exists ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 >
+    au < crawling ; exists ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 >
   
   }
   
@@ -133,7 +133,7 @@
     param[journal_id] = cg
     
     au < crawling ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
-    au < ready ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
+    au < crawling ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
   }
 
@@ -147,7 +147,7 @@
     param[base_url] = http://www.govafricajournal.org/
     param[journal_id] = gaj
     
-    au < ready ; exists ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 >
+    au < crawling ; exists ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 >
 
 
   }
@@ -196,13 +196,13 @@
     au < manifest ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005 >
     au < manifest ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006 >
     au < manifest ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007 >
-    au < ready ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 >
+    au < crawling ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 >
     au < testing ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 >
-    au < ready ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 >
-    au < ready ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 >
+    au < crawling ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 >
+    au < crawling ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 >
     au < testing ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
-    au < ready ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
+    au < crawling ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
+    au < crawling ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
 
   }
 
@@ -221,7 +221,7 @@
     au < manifest ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
     au < crawling ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
     
   }
 
@@ -267,7 +267,7 @@
     param[journal_id] = jopd
     
     au < crawling ; exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -311,7 +311,7 @@
     au < finished ; crawling ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
     au < finished ; crawling ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
     au < crawling ; exists ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 >
-    au < ready ; exists ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 >
+    au < crawling ; exists ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 >
     
   }
   
@@ -367,7 +367,7 @@
     au < finished ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     au < crawling ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
     au < crawling ; exists ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
-    au < ready ; exists ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
+    au < crawling ; exists ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
     
   }
   
@@ -408,7 +408,7 @@
     au < finished ; crawling ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     au < finished ; crawling ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
-    au < ready ; exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
+    au < crawling ; exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
     
   }
 
@@ -448,7 +448,7 @@
     
     au < crawling ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
-    au < ready ; exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
+    au < crawling ; exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
 
   }
   
