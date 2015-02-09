@@ -70,14 +70,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0004-8038
   
-      au < down ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 ; 117 >
-      au < down ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 ; 118 >
-      au < down ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 ; 119 >
-      au < down ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 ; 120 >
-      au < down ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 ; 121 >
-      au < down ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 ; 122 >
-      au < down ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 ; 123 >
-      au < down ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 ; 124 >
+      au < down ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 [BioOne] ; 117 >
+      au < down ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 [BioOne] ; 118 >
+      au < down ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 [BioOne] ; 119 >
+      au < down ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 [BioOne] ; 120 >
+      au < down ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 [BioOne] ; 121 >
+      au < down ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 [BioOne] ; 122 >
+      au < down ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 [BioOne] ; 123 >
+      au < down ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 [BioOne] ; 124 >
     }
 
     {
@@ -87,21 +87,21 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = tauk
       
-      au < doNotProcess ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 ; 117 >
-      au < doNotProcess ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 ; 118 >
-      au < doNotProcess ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 ; 119 >
-      au < doNotProcess ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 ; 120 >
-      au < doNotProcess ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 ; 121 >
-      au < doNotProcess ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 ; 122 >
-      au < doNotProcess ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 ; 123 >
-      au < doNotProcess ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 ; 124 > 
-      au < released ; 2008 ; The Auk: A Quarterly Journal of Ornithology Volume 125 ; 125 >
-      au < released ; 2009 ; The Auk: A Quarterly Journal of Ornithology Volume 126 ; 126 >
-      au < released ; 2010 ; The Auk: A Quarterly Journal of Ornithology Volume 127 ; 127 >
-      au < released ; 2011 ; The Auk: A Quarterly Journal of Ornithology Volume 128 ; 128 >
-      au < released ; 2012 ; The Auk: A Quarterly Journal of Ornithology Volume 129 ; 129 >
-      au < released ; 2013 ; The Auk: A Quarterly Journal of Ornithology Volume 130 ; 130 >
-      au < manifest ; 2014 ; The Auk: A Quarterly Journal of Ornithology Volume 131 ; 131 >
+      au < doNotProcess ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 [BioOne] ; 117 >
+      au < doNotProcess ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 [BioOne] ; 118 >
+      au < doNotProcess ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 [BioOne] ; 119 >
+      au < doNotProcess ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 [BioOne] ; 120 >
+      au < doNotProcess ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 [BioOne] ; 121 >
+      au < doNotProcess ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 [BioOne] ; 122 >
+      au < doNotProcess ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 [BioOne] ; 123 >
+      au < doNotProcess ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 [BioOne] ; 124 > 
+      au < released ; 2008 ; The Auk: A Quarterly Journal of Ornithology Volume 125 [BioOne] ; 125 >
+      au < released ; 2009 ; The Auk: A Quarterly Journal of Ornithology Volume 126 [BioOne] ; 126 >
+      au < released ; 2010 ; The Auk: A Quarterly Journal of Ornithology Volume 127 [BioOne] ; 127 >
+      au < released ; 2011 ; The Auk: A Quarterly Journal of Ornithology Volume 128 [BioOne] ; 128 >
+      au < released ; 2012 ; The Auk: A Quarterly Journal of Ornithology Volume 129 [BioOne] ; 129 >
+      au < released ; 2013 ; The Auk: A Quarterly Journal of Ornithology Volume 130 [BioOne] ; 130 >
+      au < manifest ; 2014 ; The Auk: A Quarterly Journal of Ornithology Volume 131 [BioOne] ; 131 >
 
     }
 
