@@ -120,15 +120,15 @@
       param[base_url] = http://www.birpublications.org/
       param[journal_id] = bjr
     
-      au < exists ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 >
-      au < exists ; exists ; 2001 ; British Journal of Radiology Volume 74 ; 74 >
-      au < exists ; exists ; 2002 ; British Journal of Radiology Volume 75 ; 75 >
-      au < exists ; exists ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
-      au < exists ; exists ; 2004 ; British Journal of Radiology Volume 77 ; 77 >
-      au < exists ; exists ; 2005 ; British Journal of Radiology Volume 78 ; 78 >
-      au < exists ; exists ; 2006 ; British Journal of Radiology Volume 79 ; 79 >
-      au < exists ; exists ; 2007 ; British Journal of Radiology Volume 80 ; 80 >
-      au < exists ; exists ; 2008 ; British Journal of Radiology Volume 81 ; 81 >
+      au < manifest ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 >
+      au < manifest ; exists ; 2001 ; British Journal of Radiology Volume 74 ; 74 >
+      au < manifest ; exists ; 2002 ; British Journal of Radiology Volume 75 ; 75 >
+      au < manifest ; exists ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
+      au < manifest ; exists ; 2004 ; British Journal of Radiology Volume 77 ; 77 >
+      au < manifest ; exists ; 2005 ; British Journal of Radiology Volume 78 ; 78 >
+      au < manifest ; exists ; 2006 ; British Journal of Radiology Volume 79 ; 79 >
+      au < manifest ; exists ; 2007 ; British Journal of Radiology Volume 80 ; 80 >
+      au < manifest ; exists ; 2008 ; British Journal of Radiology Volume 81 ; 81 >
       au < manifest ; exists ; 2009 ; British Journal of Radiology Volume 82 ; 82 >
       au < manifest ; exists ; 2010 ; British Journal of Radiology Volume 83 ; 83 >
       au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
@@ -214,7 +214,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
       au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 >
       au < manifest ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 >
-      au < expected ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 >
+      au < manifest ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 >
 
     }
 
