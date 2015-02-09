@@ -1,5 +1,5 @@
 /*
- * $Id: AuParamType.java,v 1.2 2014-10-22 19:39:38 thib_gc Exp $
+ * $Id: AuParamType.java,v 1.3 2015-02-09 05:42:23 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.daemon;
 import java.net.*;
 import java.util.*;
 import java.util.regex.*;
-import org.apache.commons.lang3.math.NumberUtils;
 
 import org.lockss.util.*;
 import static org.lockss.daemon.ConfigParamDescr.*;
@@ -149,14 +148,8 @@ public enum AuParamType {
       String s_min = (String)pair.firstElement();
       String s_max = (String)pair.lastElement();
       try {
-	/*
-	 * Caution: org.apache.commons.lang.math.NumberUtils.createLong(String)
-	 * (which returns Long) throws NumberFormatException, whereas
-	 * org.apache.commons.lang.math.NumberUtils.toLong(String)
-	 * (which returns long) returns 0L when parsing fails.
-	 */
-	Long l_min = NumberUtils.createLong(s_min);
-	Long l_max = NumberUtils.createLong(s_max);
+	Long l_min = parseLongOrNull(s_min);
+	Long l_max = parseLongOrNull(s_max);
 	if (l_min.compareTo(l_max) <= 0) {
 	  pair.setElementAt(l_min, 0);
 	  pair.setElementAt(l_max, 1);
@@ -197,6 +190,13 @@ public enum AuParamType {
     }
   }
   final int typeInt;
+
+  public static Long parseLongOrNull(String s) throws NumberFormatException {
+    if (s == null) {
+      return null;
+    }
+    return java.lang.Long.valueOf(s);
+  }
 
   /** Parse a String, return a type-dependent value type */
   abstract public Object parse(String val) throws InvalidFormatException;
