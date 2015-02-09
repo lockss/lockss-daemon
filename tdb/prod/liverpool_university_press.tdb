@@ -53,7 +53,7 @@
       param[journal_dir] = british_journal_of_canadian_studies
       attr[journal_id] = bjs
 
-      au < manifest ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
+      au < manifest ; 2014 ; British Journal of Canadian Studies Volume 27 [Project MUSE] ; 27 >
     
     }
     
@@ -100,8 +100,8 @@
       
       comment[0] = Only 2009 and 2010 are found on ProjectMuse web page. 
 
-      au < released ; 2009 ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
-      au < released ; 2010 ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
+      au < released ; 2009 ; The Bulletin of Hispanic Studies Volume 86 [Project MUSE] ; 86 >
+      au < released ; 2010 ; The Bulletin of Hispanic Studies Volume 87 [Project MUSE] ; 87 >
     
     }
     
@@ -165,11 +165,11 @@
       param[journal_dir] = byron_journal
       attr[journal_id] = byr
 
-      au < released ; 2009 ; The Byron Journal Volume 37 ; 37 >
-      au < released ; 2010 ; The Byron Journal Volume 38 ; 38 >
-      au < released ; 2011 ; The Byron Journal Volume 39 ; 39 >
-      au < released ; 2012 ; The Byron Journal Volume 40 ; 40 >
-      au < released ; 2013 ; The Byron Journal Volume 41 ; 41 >
+      au < released ; 2009 ; The Byron Journal Volume 37 [Project MUSE] ; 37 >
+      au < released ; 2010 ; The Byron Journal Volume 38 [Project MUSE] ; 38 >
+      au < released ; 2011 ; The Byron Journal Volume 39 [Project MUSE] ; 39 >
+      au < released ; 2012 ; The Byron Journal Volume 40 [Project MUSE] ; 40 >
+      au < released ; 2013 ; The Byron Journal Volume 41 [Project MUSE] ; 41 >
 
     }
 
@@ -379,12 +379,12 @@
       param[journal_dir] = journal_of_literary_and_cultural_disability_studies
       attr[journal_id] = jlc
 
-      au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
-      au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
-      au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
-      au < released ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
-      au < released ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
-      au < manifest ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
+      au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 [Project MUSE] ; 3 >
+      au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 [Project MUSE] ; 4 >
+      au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 [Project MUSE] ; 5 >
+      au < released ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 [Project MUSE] ; 6 >
+      au < released ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 [Project MUSE] ; 7 >
+      au < manifest ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 [Project MUSE] ; 8 >
     
     }
     
@@ -470,13 +470,13 @@
       param[journal_dir] = music_sound_and_the_moving_image
       attr[journal_id] = msm
       
-      au < released ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
-      au < released ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-      au < released ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
-      au < released ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
-      au < released ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
-      au < released ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
-      au < released ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
+      au < released ; 2007 ; Music, Sound, and the Moving Image Volume 1 [Project MUSE] ; 1 >
+      au < released ; 2008 ; Music, Sound, and the Moving Image Volume 2 [Project MUSE] ; 2 >
+      au < released ; 2009 ; Music, Sound, and the Moving Image Volume 3 [Project MUSE] ; 3 >
+      au < released ; 2010 ; Music, Sound, and the Moving Image Volume 4 [Project MUSE] ; 4 >
+      au < released ; 2011 ; Music, Sound, and the Moving Image Volume 5 [Project MUSE] ; 5 >
+      au < released ; 2012 ; Music, Sound, and the Moving Image Volume 6 [Project MUSE] ; 6 >
+      au < released ; 2013 ; Music, Sound, and the Moving Image Volume 7 [Project MUSE] ; 7 >
 
     }
    
@@ -536,11 +536,11 @@
       param[journal_dir] = romani_studies
       attr[journal_id] = rms
    
-      au < released ; 2009 ; Romani Studies Volume 19 ; 19 >
-      au < released ; 2010 ; Romani Studies Volume 20 ; 20 >
-      au < released ; 2011 ; Romani Studies Volume 21 ; 21 >
-      au < released ; 2012 ; Romani Studies Volume 22 ; 22 >
-      au < released ; 2013 ; Romani Studies Volume 23 ; 23 >
+      au < released ; 2009 ; Romani Studies Volume 19 [Project MUSE] ; 19 >
+      au < released ; 2010 ; Romani Studies Volume 20 [Project MUSE] ; 20 >
+      au < released ; 2011 ; Romani Studies Volume 21 [Project MUSE] ; 21 >
+      au < released ; 2012 ; Romani Studies Volume 22 [Project MUSE] ; 22 >
+      au < released ; 2013 ; Romani Studies Volume 23 [Project MUSE] ; 23 >
 
     }      
 
