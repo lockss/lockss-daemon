@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuParamType.java,v 1.1 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: TestAuParamType.java,v 1.1.2.1 2015-02-09 05:36:49 tlipkis Exp $
  */
 
 /*
@@ -214,6 +214,9 @@ public class TestAuParamType extends LockssTestCase {
     // NumRange
     assertEquals(ListUtil.list(1L, 99L), AuParamType.NumRange.parse("1-99"));
     assertEquals(ListUtil.list(1L, 1L), AuParamType.NumRange.parse("1-1"));
+    assertEquals(ListUtil.list(1L, 2L), AuParamType.NumRange.parse("1-02"));
+    assertEquals(ListUtil.list(8L, 9L), AuParamType.NumRange.parse("08-09"));
+    assertEquals(ListUtil.list(1L, 22L), AuParamType.NumRange.parse("1-022"));
     assertEquals(ListUtil.list("foo", "foo"),
 		 AuParamType.NumRange.parse("foo-foo"));
 
