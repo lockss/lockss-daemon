@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.13 2014-11-12 20:11:40 wkwilson Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.14 2015-02-09 05:42:07 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class TestCreativeCommonsPermissionChecker
     "</body>\n</html>\n";
 
   private String VALID_URL_STEM = "http://creativecommons.org/licenses";
+  private String VALID_URL_STEM_S = "https://creativecommons.org/licenses";
 
   private String[] VALID_TAGS = {"a", "link"};
   private String[] VALID_LICENSES = {
@@ -68,6 +69,10 @@ public class TestCreativeCommonsPermissionChecker
   // return a CC license URL for the specified license terms and version
   private String lu(String lic, String ver) {
     return VALID_URL_STEM + "/" + lic + "/" + ver + "/";
+  }
+
+  private String lus(String lic, String ver) {
+    return VALID_URL_STEM_S + "/" + lic + "/" + ver + "/";
   }
 
   // return a CC license tag element
@@ -100,13 +105,20 @@ public class TestCreativeCommonsPermissionChecker
     for (String lic : licenses) {
       for (String ver : versions) {
 	assertPerm("<a href=\"" + lu(lic, ver) + "\" rel=\"license\" />");
+	assertPerm("<a href=\"" + lus(lic, ver) + "\" rel=\"license\" />");
 	assertPerm("<link href=\"" + lu(lic, ver) + "\" rel=\"license\" />");
+	assertPerm("<link href=\"" + lus(lic, ver) + "\" rel=\"license\" />");
 	assertPerm("<a rel=\"license\" href=\"" + lu(lic, ver) + "\" />");
+	assertPerm("<a rel=\"license\" href=\"" + lus(lic, ver) + "\" />");
 	assertPerm("<link class=\"bar\" rel=\"license\" href=\"" +
 		   lu(lic, ver) + "\" />");
+	assertPerm("<link class=\"bar\" rel=\"license\" href=\"" +
+		   lus(lic, ver) + "\" />");
 
 	assertNoPerm("<a href=\"" + lu(lic + "fnord", ver) + "\" rel=\"license\" />");
+	assertNoPerm("<a href=\"" + lus(lic + "fnord", ver) + "\" rel=\"license\" />");
 	assertNoPerm("<a href=\"" + lu(lic, ver + "gorp") + "\" rel=\"license\" />");
+	assertNoPerm("<a href=\"" + lus(lic, ver + "gorp") + "\" rel=\"license\" />");
       }
     }
   }
@@ -132,10 +144,13 @@ public class TestCreativeCommonsPermissionChecker
   public void testCase() {
     assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
     assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />".toUpperCase());
+    assertPerm("<a href=\"" + lus("by", "3.0") + "\" rel=\"license\" />");
+    assertPerm("<a href=\"" + lus("by", "3.0") + "\" rel=\"license\" />".toUpperCase());
   }
 
   public void testWhitespace() {
     assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertPerm("<a href=\"" + lus("by", "3.0") + "\" rel=\"license\" />");
     assertPerm("<a\nhref=\"" + lu("by", "3.0") + "\"\nrel=\"license\"\n/>");
     assertPerm("<a\thref=\"" + lu("by", "3.0") + "\"\trel=\"license\"\t/>");
     assertPerm("<a\rhref=\"" + lu("by", "3.0") + "\"\rrel=\"license\"\r/>");
@@ -144,7 +159,9 @@ public class TestCreativeCommonsPermissionChecker
 
   public void testInvalidPermissions() {
     assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertPerm("<a href=\"" + lus("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<img href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertNoPerm("<img href=\"" + lus("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a nohref=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("not", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("by", "5.0") + "\" rel=\"license\" />");
