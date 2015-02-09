@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.271.2.6 2014-12-28 08:37:57 tlipkis Exp $
+ * $Id: PollManager.java,v 1.271.2.7 2015-02-09 05:37:02 tlipkis Exp $
  */
 
 /*
@@ -2462,7 +2462,7 @@ public class PollManager
 	handleIncomingMessage(msg);
       }
       catch (ProtocolException ex) {
-	theLog.error("handleIncomingMessage() threw", ex);
+	theLog.error("handleIncomingMessage() threw " + ex);
       }
       catch (IOException ex) {
 	theLog.error("handleIncomingMessage() threw", ex);
