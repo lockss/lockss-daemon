@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.15 2014-11-12 20:11:45 wkwilson Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.15.2.1 2015-02-09 05:36:14 tlipkis Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
     private static final String LICENSE = "license";
 
     private static Pattern CC_LICENSE_PAT =
-      Pattern.compile("http://creativecommons.org/licenses/([^/]+)/([^/]+).*",
+      Pattern.compile("https?://creativecommons.org/licenses/([^/]+)/([^/]+).*",
 		      Pattern.CASE_INSENSITIVE);
 
     protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
