@@ -3585,11 +3585,11 @@
       eissn = 2053-9517 ;
       issnl = 2053-9517
     >
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      pluginSuffix = ClockssHighWireDrupalPlugin
       param[base_url] = http://bds.sagepub.com/
 
       au < testing ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; >
+      au < exists ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; >
 
   }
 
@@ -15211,9 +15211,41 @@
   {
 
     title <
+      name = International Journal of Mechanical Engineering Education ;
+      issn = 0306-4190 ;
+      eissn = 2050-4586 ;
+      issnl = 0306-4190
+    >
+
+      param[base_url] = http://ijj.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1999 ; International Journal of Mechanical Engineering Education Volume 27 ; 27 ; >
+      au < exists ; exists ; 2000 ; International Journal of Mechanical Engineering Education Volume 28 ; 28 ; >
+      au < exists ; exists ; 2001 ; International Journal of Mechanical Engineering Education Volume 29 ; 29 ; >
+      au < exists ; exists ; 2002 ; International Journal of Mechanical Engineering Education Volume 30 ; 30 ; >
+      au < exists ; exists ; 2003 ; International Journal of Mechanical Engineering Education Volume 31 ; 31 ; >
+      au < exists ; exists ; 2004 ; International Journal of Mechanical Engineering Education Volume 32 ; 32 ; >
+      au < exists ; exists ; 2005 ; International Journal of Mechanical Engineering Education Volume 33 ; 33 ; >
+      au < exists ; exists ; 2006 ; International Journal of Mechanical Engineering Education Volume 34 ; 34 ; >
+      au < exists ; exists ; 2007 ; International Journal of Mechanical Engineering Education Volume 35 ; 35 ; >
+      au < exists ; exists ; 2008 ; International Journal of Mechanical Engineering Education Volume 36 ; 36 ; >
+      au < exists ; exists ; 2009 ; International Journal of Mechanical Engineering Education Volume 37 ; 37 ; >
+      au < exists ; exists ; 2010 ; International Journal of Mechanical Engineering Education Volume 38 ; 38 ; >
+      au < exists ; exists ; 2011 ; International Journal of Mechanical Engineering Education Volume 39 ; 39 ; >
+      au < exists ; exists ; 2012 ; International Journal of Mechanical Engineering Education Volume 40 ; 40 ; >
+      au < exists ; exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 ; >
+      au < exists ; exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 ; >
+      au < expected ; exists ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 ; >
+  }
+
+  {
+
+    title <
       name = International Journal of Music Education ;
       issn = 0255-7614 ;
-      eissn = 1744-795X
+      eissn = 1744-795X ;
+      issnl = 0255-7614
     >
 
     param[base_url] = http://ijm.sagepub.com/
@@ -19617,16 +19649,46 @@
   {
 
      title <
+      name = Journal of Drug Education ;
+      issn = 0047-2379 ;
+      eissn = 1541-4159 ;
+      issnl = 0047-2379 
+
+    >
+
+      param[base_url] = http://dre.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1999 ; Journal of Drug Education Volume 29 ; 29 ; >
+      au < exists ; exists ; 2000 ; Journal of Drug Education Volume 30 ; 30 ; >
+      au < exists ; exists ; 2001 ; Journal of Drug Education Volume 31 ; 31 ; >
+      au < exists ; exists ; 2002 ; Journal of Drug Education Volume 32 ; 32 ; >
+      au < exists ; exists ; 2003 ; Journal of Drug Education Volume 33 ; 33 ; >
+      au < exists ; exists ; 2004 ; Journal of Drug Education Volume 34 ; 34 ; >
+      au < exists ; exists ; 2005 ; Journal of Drug Education Volume 35 ; 35 ; >
+      au < exists ; exists ; 2006 ; Journal of Drug Education Volume 36 ; 36 ; >
+      au < exists ; exists ; 2007 ; Journal of Drug Education Volume 37 ; 37 ; >
+      au < exists ; exists ; 2008 ; Journal of Drug Education Volume 38 ; 38 ; >
+      au < exists ; exists ; 2009 ; Journal of Drug Education Volume 39 ; 39 ; >
+      au < exists ; exists ; 2010 ; Journal of Drug Education Volume 40 ; 40 ; >
+      au < exists ; exists ; 2011 ; Journal of Drug Education Volume 41 ; 41 ; >
+      au < exists ; exists ; 2012 ; Journal of Drug Education Volume 42 ; 42 ; >
+      au < exists ; exists ; 2013 ; Journal of Drug Education Volume 43 ; 43 ; >
+      au < expected ; exists ; 2014 ; Journal of Drug Education Volume 44 ; 44 ; >
+      au < expected ; exists ; 2015 ; Journal of Drug Education Volume 45 ; 45 ; >
+
+  }
+
+  {
+
+     title <
       name = Journal of Drug Issues ;
       issn = 0022-0426 ;
       eissn = 1945-1369
 
     >
 
-    param[base_url] = http://jod.sagepub.com/
-
-    {
-
+      param[base_url] = http://jod.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2001 ; Journal of Drug Issues Volume 31 ; 31 ; >
@@ -19644,8 +19706,6 @@
       au < crawling ; exists ; 2013 ; Journal of Drug Issues Volume 43 ; 43 ; >
       au < manifest ; exists ; 2014 ; Journal of Drug Issues Volume 44 ; 44 ; >
       au < manifest ; exists ; 2015 ; Journal of Drug Issues Volume 45 ; 45 ; >
-
-    }
 
   }
 
