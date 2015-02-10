@@ -1,0 +1,35 @@
+# This is a legacy Berghahn Journals file for titles previously hosted by Metapress
+
+{
+
+  publisher <
+    name = Berghahn Journals
+  >
+
+  {
+  
+    title <
+      name = European Comic Art ;
+      issn = 1754-3797 ;
+      eissn = 1754-3800 ; 
+      issnl = 1754-3797 
+    >
+
+    # This title moved from Liverpool University Press to Berghahn Journals
+
+    plugin = org.lockss.plugin.metapress.MetaPressPlugin    
+    param[base_url] = http://liverpool.metapress.com/
+    param[journal_issn] = 1754-3800 
+    implicit < status ; year ; name ; param[volume_name] > 
+
+    au < doNotProcess ; 2008 ; European Comic Art Volume 1 ; 1 >
+    au < doNotProcess ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < doNotProcess ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < superseded ; 2011 ; European Comic Art Volume 4 [superseded] ; 4 >
+    au < doNotProcess ; 2012 ; European Comic Art Volume 5 ; 5 >
+
+  }  
+  
+
+
+}

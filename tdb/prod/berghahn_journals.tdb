@@ -216,6 +216,9 @@
       eissn = 1754-3800
     >
     
+    # This title moved from Liverpool University Press to Berghahn Journals
+    # See berghahn_journals.metapress.tdb
+    
     param[journal_id] = eca
     param[journal_issn] = 1754-3797
      

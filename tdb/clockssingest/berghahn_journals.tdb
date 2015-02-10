@@ -228,7 +228,7 @@
     param[journal_id] = eca
     param[journal_issn] = 1754-3797
     
-    comment[0] = moved from Liverpool University.
+    # This title moved from Liverpool University Press
      
     au < manifest ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; European Comic Art Volume 2 ; 2 >
