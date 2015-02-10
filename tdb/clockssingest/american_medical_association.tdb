@@ -91,6 +91,18 @@
   {
 
     title <
+      name = JAMA Oncology
+    >
+
+    # New journal, hasn't published any content yet
+    # See http://oncology.jamanetwork.com/
+    # Hypothetical resource_id: 174
+    
+  }
+
+  {
+
+    title <
       name = JAMA Ophthalmology ;
       issn = 0003-9950 ;
       eissn = 0096-6339 ;
