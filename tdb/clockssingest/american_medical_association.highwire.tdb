@@ -137,10 +137,12 @@
 
     title <
       name = Disaster Medicine and Public Health Preparedness ;
-      issn = 1938-744X ;
-      eissn = 1935-7893 ;
-      issnl = 1938-744X
+      issn = 1935-7893 ;
+      eissn = 1938-744X
     >
+
+    # This publication has moved to Cambridge Journals
+    # See http://journals.cambridge.org/action/displayJournal?jid=DMP
 
     param[base_url] = http://www.dmphp.org/
     pluginSuffix = ClockssHighWirePlugin
