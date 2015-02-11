@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>101</string>
+    <string>102</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>27</string>
+        <string>28</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.63.0</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -215,5 +215,13 @@
         <string>X-Lockss-Source:publisher</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>[.](css|js)$</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>[.](css|js)$</string>
   </entry>
 </map>
