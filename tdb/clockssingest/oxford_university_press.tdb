@@ -1744,7 +1744,7 @@
     au < finished ; frozen ; 2012 ; Applied Linguistics Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; Applied Linguistics Volume 34 ; 34 ; >
     au < crawling ; exists ; 2014 ; Applied Linguistics Volume 35 ; 35 ; >
-    au < expected ; exists ; 2015 ; Applied Linguistics Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2015 ; Applied Linguistics Volume 36 ; 36 ; >
 
     }
 
@@ -1904,7 +1904,7 @@
     au < finished ; frozen ; 2012 ; Archives of Clinical Neuropsychology Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; Archives of Clinical Neuropsychology Volume 29 ; 29 ; >
-    au < expected ; exists ; 2015 ; Archives of Clinical Neuropsychology Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; Archives of Clinical Neuropsychology Volume 30 ; 30 ; >
 
     }
 
@@ -1923,14 +1923,14 @@
 
     au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 24 ; 24 ; >
     au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 25 ; 25 ; >
-    au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 26 ; 26 ; >
     au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 27 ; 27 ; >
-    au < exists ; exists ; 2004 ; Arthropod Management Tests Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 28 ; 28 ; >
     au < manifest ; exists ; 2004 ; Arthropod Management Tests Volume 29 ; 29 ; >
     au < manifest ; exists ; 2005 ; Arthropod Management Tests Volume 30 ; 30 ; >
     au < manifest ; exists ; 2006 ; Arthropod Management Tests Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Arthropod Management Tests Volume 32 ; 32 ; >
-    au < exists ; exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ; >
     au < manifest ; exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
     au < manifest ; exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ; >
     au < manifest ; exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; >
@@ -2623,7 +2623,7 @@
     au < finished ; frozen ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ; >
     au < notReady ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
-    au < expected ; exists ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ; >
 
     }
 
@@ -3107,7 +3107,7 @@
     au < finished ; crawling ; 2012 ; The British Journal of Social Work Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; The British Journal of Social Work Volume 43 ; 43 ; >
     au < crawling ; exists ; 2014 ; The British Journal of Social Work Volume 44 ; 44 ; >
-    au < expected ; exists ; 2015 ; The British Journal of Social Work Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2015 ; The British Journal of Social Work Volume 45 ; 45 ; >
 
     }
 
@@ -3351,11 +3351,11 @@
     au < manifest ; exists ; 1982 ; Bulletin of the Entomological Society of America Volume 28 ; 28 ; >
     au < manifest ; exists ; 1983 ; Bulletin of the Entomological Society of America Volume 29 ; 29 ; >
     au < manifest ; exists ; 1984 ; Bulletin of the Entomological Society of America Volume 30 ; 30 ; >
-    au < exists ; exists ; 1985 ; Bulletin of the Entomological Society of America Volume 31 ; 31 ; >
-    au < exists ; exists ; 1986 ; Bulletin of the Entomological Society of America Volume 32 ; 32 ; >
-    au < exists ; exists ; 1987 ; Bulletin of the Entomological Society of America Volume 33 ; 33 ; >
-    au < exists ; exists ; 1988 ; Bulletin of the Entomological Society of America Volume 34 ; 34 ; >
-    au < exists ; exists ; 1989 ; Bulletin of the Entomological Society of America Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1985 ; Bulletin of the Entomological Society of America Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1986 ; Bulletin of the Entomological Society of America Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1987 ; Bulletin of the Entomological Society of America Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1988 ; Bulletin of the Entomological Society of America Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1989 ; Bulletin of the Entomological Society of America Volume 35 ; 35 ; >
 
   }
 
@@ -4170,7 +4170,7 @@
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Chinese Journal of International Politics Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
-    au < expected ; exists ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
 
     }
 
@@ -5635,7 +5635,7 @@
     au < finished ; frozen ; 2012 ; Essays in Criticism Volume 62 ; 62 ; >
     au < crawling ; exists ; 2013 ; Essays in Criticism Volume 63 ; 63 ; >
     au < crawling ; exists ; 2014 ; Essays in Criticism Volume 64 ; 64 ; >
-    au < expected ; exists ; 2015 ; Essays in Criticism Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2015 ; Essays in Criticism Volume 65 ; 65 ; >
 
     }
 
@@ -5693,22 +5693,22 @@
     comment[notReady] = needs hash filter RU 4470
     comment[down] = Moved to Drupal platform
 
-    au < exists ; exists ; 1999 ; Europace Volume 1 ; 1 ; >
-    au < exists ; exists ; 2000 ; Europace Volume 2 ; 2 ; >
-    au < exists ; exists ; 2001 ; Europace Volume 3 ; 3 ; >
-    au < exists ; exists ; 2002 ; Europace Volume 4 ; 4 ; >
-    au < exists ; exists ; 2003 ; Europace Volume 5 ; 5 ; >
-    au < exists ; exists ; 2004 ; Europace Volume 6 ; 6 ; >
-    au < exists ; exists ; 2005 ; Europace Volume 7 ; 7 ; >
-    au < exists ; exists ; 2006 ; Europace Volume 8 ; 8 ; >
-    au < exists ; exists ; 2007 ; Europace Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1999 ; Europace Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2000 ; Europace Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2001 ; Europace Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2002 ; Europace Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2003 ; Europace Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2004 ; Europace Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2005 ; Europace Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; Europace Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2007 ; Europace Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Europace Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Europace Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Europace Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Europace Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Europace Volume 15 ; 15 ; >
-    au < exists ; exists ; 2014 ; Europace Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2014 ; Europace Volume 16 ; 16 ; >
     au < manifest ; exists ; 2015 ; Europace Volume 17 ; 17 ; >
 
     }
@@ -5784,42 +5784,42 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[down] = Moved to Drupal platform
 
-    au < exists ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
-    au < exists ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 ; >
-    au < exists ; exists ; 1982 ; European Heart Journal Volume 3 ; 3 ; >
-    au < exists ; exists ; 1983 ; European Heart Journal Volume 4 ; 4 ; >
-    au < exists ; exists ; 1984 ; European Heart Journal Volume 5 ; 5 ; >
-    au < exists ; exists ; 1985 ; European Heart Journal Volume 6 ; 6 ; >
-    au < exists ; exists ; 1986 ; European Heart Journal Volume 7 ; 7 ; >
-    au < exists ; exists ; 1987 ; European Heart Journal Volume 8 ; 8 ; >
-    au < exists ; exists ; 1988 ; European Heart Journal Volume 9 ; 9 ; >
-    au < exists ; exists ; 1989 ; European Heart Journal Volume 10 ; 10 ; >
-    au < exists ; exists ; 1990 ; European Heart Journal Volume 11 ; 11 ; >
-    au < exists ; exists ; 1991 ; European Heart Journal Volume 12 ; 12 ; >
-    au < exists ; exists ; 1992 ; European Heart Journal Volume 13 ; 13 ; >
-    au < exists ; exists ; 1993 ; European Heart Journal Volume 14 ; 14 ; >
-    au < exists ; exists ; 1994 ; European Heart Journal Volume 15 ; 15 ; >
-    au < exists ; exists ; 1995 ; European Heart Journal Volume 16 ; 16 ; >
-    au < exists ; exists ; 1996 ; European Heart Journal Volume 17 ; 17 ; >
-    au < exists ; exists ; 1997 ; European Heart Journal Volume 18 ; 18 ; >
-    au < exists ; exists ; 1998 ; European Heart Journal Volume 19 ; 19 ; >
-    au < exists ; exists ; 1999 ; European Heart Journal Volume 20 ; 20 ; >
-    au < exists ; exists ; 2000 ; European Heart Journal Volume 21 ; 21 ; >
-    au < exists ; exists ; 2001 ; European Heart Journal Volume 22 ; 22 ; >
-    au < exists ; exists ; 2002 ; European Heart Journal Volume 23 ; 23 ; >
-    au < exists ; exists ; 2003 ; European Heart Journal Volume 24 ; 24 ; >
-    au < exists ; exists ; 2004 ; European Heart Journal Volume 25 ; 25 ; >
-    au < exists ; exists ; 2005 ; European Heart Journal Volume 26 ; 26 ; >
-    au < exists ; exists ; 2006 ; European Heart Journal Volume 27 ; 27 ; >
-    au < exists ; exists ; 2007 ; European Heart Journal Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1982 ; European Heart Journal Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1983 ; European Heart Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1984 ; European Heart Journal Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1985 ; European Heart Journal Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1986 ; European Heart Journal Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1987 ; European Heart Journal Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1988 ; European Heart Journal Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1989 ; European Heart Journal Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1990 ; European Heart Journal Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1991 ; European Heart Journal Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1992 ; European Heart Journal Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1993 ; European Heart Journal Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1994 ; European Heart Journal Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1995 ; European Heart Journal Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1996 ; European Heart Journal Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1997 ; European Heart Journal Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1998 ; European Heart Journal Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1999 ; European Heart Journal Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2000 ; European Heart Journal Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2001 ; European Heart Journal Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2002 ; European Heart Journal Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2003 ; European Heart Journal Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2004 ; European Heart Journal Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2005 ; European Heart Journal Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2006 ; European Heart Journal Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2007 ; European Heart Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal Volume 34 ; 34 ; >
-    au < exists ; exists ; 2014 ; European Heart Journal Volume 35 ; 35 ; >
-    au < exists ; exists ; 2015 ; European Heart Journal Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2014 ; European Heart Journal Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2015 ; European Heart Journal Volume 36 ; 36 ; >
 
     }
 
@@ -6248,7 +6248,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Public Health Volume 23 ; 23 ; >
     au < manifest ; exists ; 2014 ; European Journal of Public Health Volume 24 ; 24 ; >
-    au < expected ; exists ; 2015 ; European Journal of Public Health Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2015 ; European Journal of Public Health Volume 25 ; 25 ; >
 
     }
 
@@ -6319,7 +6319,7 @@
     au < finished ; crawling ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ; >
     au < crawling ; exists ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ; >
-    au < expected ; exists ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ; >
 
     }
 
@@ -6413,7 +6413,7 @@
     au < finished ; frozen ; 2012 ; European Sociological Review Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; European Sociological Review Volume 29 ; 29 ; >
     au < crawling ; exists ; 2014 ; European Sociological Review Volume 30 ; 30 ; >
-    au < expected ; exists ; 2015 ; European Sociological Review Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2015 ; European Sociological Review Volume 31 ; 31 ; >
 
     }
 
@@ -6506,7 +6506,7 @@
     au < finished ; crawling ; 2012 ; Family Practice Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; Family Practice Volume 30 ; 30 ; >
     au < crawling ; exists ; 2014 ; Family Practice Volume 31 ; 31 ; >
-    au < expected ; exists ; 2015 ; Family Practice Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2015 ; Family Practice Volume 32 ; 32 ; >
 
     }
 
@@ -6898,7 +6898,7 @@
     au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 359 ; 359 ; >
     au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 360 ; 360 ; >
     au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 361 ; 361 ; >
-    au < expected ; exists ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 ; >
+    au < manifest ; exists ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 ; >
 
   }
 
@@ -7229,7 +7229,7 @@
     au < finished ; crawling ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 ; >
     au < crawling ; exists ; 2013 ; Forum for Modern Language Studies Volume 49 ; 49 ; >
     au < doNotProcess ; exists ; 2014 ; Forum for Modern Language Studies Volume 50 ; 50 ; >
-    au < expected ; exists ; 2015 ; Forum for Modern Language Studies Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2015 ; Forum for Modern Language Studies Volume 51 ; 51 ; >
 
     }
 
@@ -7481,7 +7481,7 @@
     au < finished ; crawling ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
-    au < expected ; exists ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
 
   }
 
@@ -7864,7 +7864,7 @@
     au < finished ; frozen ; 2012 ; The Gerontologist Volume 52 ; 52 ; >
     au < crawling ; exists ; 2013 ; The Gerontologist Volume 53 ; 53 ; >
     au < doNotProcess ; exists ; 2014 ; The Gerontologist Volume 54 ; 54 ; >
-    au < expected ; exists ; 2015 ; The Gerontologist Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2015 ; The Gerontologist Volume 55 ; 55 ; >
 
     }
 
@@ -8621,7 +8621,7 @@
     au < finished ; frozen ; 2012 ; ICES Journal of Marine Science Volume 69 ; 69 ; >
     au < crawling ; exists ; 2013 ; ICES Journal of Marine Science Volume 70 ; 70 ; >
     au < doNotProcess ; exists ; 2014 ; ICES Journal of Marine Science Volume 71 ; 71 ; >
-    au < expected ; exists ; 2015 ; ICES Journal of Marine Science Volume 72 ; 72 ; >
+    au < manifest ; exists ; 2015 ; ICES Journal of Marine Science Volume 72 ; 72 ; >
 
     }
 
@@ -8668,7 +8668,7 @@
     au < finished ; crawling ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ; >
-    au < expected ; exists ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ; >
 
   }
 
@@ -9143,7 +9143,7 @@
     au < finished ; frozen ; 2012 ; Industrial and Corporate Change Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Industrial and Corporate Change Volume 22 ; 22 ; >
     au < crawling ; exists ; 2014 ; Industrial and Corporate Change Volume 23 ; 23 ; >
-    au < expected ; exists ; 2015 ; Industrial and Corporate Change Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2015 ; Industrial and Corporate Change Volume 24 ; 24 ; >
 
     }
 
@@ -9431,7 +9431,7 @@
     au < finished ; frozen ; 2012 ; International Data Privacy Law Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; International Data Privacy Law Volume 3 ; 3 ; >
     au < crawling ; exists ; 2014 ; International Data Privacy Law Volume 4 ; 4 ; >
-    au < expected ; exists ; 2015 ; International Data Privacy Law Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2015 ; International Data Privacy Law Volume 5 ; 5 ; >
 
   }
 
@@ -9689,7 +9689,7 @@
     au < finished ; frozen ; 2012 ; International Journal of Law and Information Technology Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; International Journal of Law and Information Technology Volume 21 ; 21 ; >
     au < crawling ; exists ; 2014 ; International Journal of Law and Information Technology Volume 22 ; 22 ; >
-    au < expected ; exists ; 2015 ; International Journal of Law and Information Technology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2015 ; International Journal of Law and Information Technology Volume 23 ; 23 ; >
 
     }
 
@@ -9878,7 +9878,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Neuropsychopharmacology Volume 15 ; 15 ; >
     au < manifest ; exists ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 ; >
     au < manifest ; exists ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
-    au < expected ; exists ; 2015 ; International Journal of Neuropsychopharmacology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2015 ; International Journal of Neuropsychopharmacology Volume 18 ; 18 ; >
 
   }
 
@@ -11689,7 +11689,7 @@
     au < finished ; frozen ; 2012 ; Journal of Electron Microscopy Volume 61 ; 61 ; >
     au < crawling ; exists ; 2013 ; Journal of Electron Microscopy Volume 62 ; 62 ; >
     au < crawling ; exists ; 2014 ; Journal of Electron Microscopy Volume 63 ; 63 ; >
-    au < expected ; exists ; 2015 ; Journal of Electron Microscopy Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2015 ; Journal of Electron Microscopy Volume 64 ; 64 ; >
 
     }
 
@@ -12689,7 +12689,7 @@
     au < manifest ; exists ; 2012 ; Journal of Insect Science Volume 12 ; 12 ; >
     au < manifest ; exists ; 2013 ; Journal of Insect Science Volume 13 ; 13 ; >
     au < manifest ; exists ; 2014 ; Journal of Insect Science Volume 14 ; 14 ; >
-    au < expected ; exists ; 2015 ; Journal of Insect Science Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2015 ; Journal of Insect Science Volume 15 ; 15 ; >
 
     }
 
@@ -12748,7 +12748,7 @@
     au < finished ; frozen ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Intellectual Property Law & Practice Volume 8 ; 8 ; >
     au < crawling ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
-    au < expected ; exists ; 2015 ; Journal of Intellectual Property Law & Practice Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2015 ; Journal of Intellectual Property Law & Practice Volume 10 ; 10 ; >
 
     }
 
@@ -13053,7 +13053,7 @@
     au < finished ; frozen ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Logic and Computation Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
-    au < expected ; exists ; 2015 ; Journal of Logic and Computation Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2015 ; Journal of Logic and Computation Volume 25 ; 25 ; >
 
     }
 
@@ -13663,7 +13663,7 @@
     au < crawling ; exists ; 2012 ; Journal of the National Cancer Institute: JNCI Volume 104 ; 104 ; >
     au < crawling ; exists ; 2013 ; Journal of the National Cancer Institute: JNCI Volume 105 ; 105 ; >
     au < crawling ; exists ; 2014 ; Journal of the National Cancer Institute: JNCI Volume 106 ; 106 ; >
-    au < expected ; exists ; 2015 ; Journal of the National Cancer Institute: JNCI Volume 107 ; 107 ; >
+    au < manifest ; exists ; 2015 ; Journal of the National Cancer Institute: JNCI Volume 107 ; 107 ; >
 
     }
 
@@ -13879,7 +13879,7 @@
     au < crawling ; exists ; 2012 ; Journal of Petrology Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Petrology Volume 54 ; 54 ; >
     au < crawling ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
-    au < expected ; exists ; 2015 ; Journal of Petrology Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2015 ; Journal of Petrology Volume 56 ; 56 ; >
 
     }
 
@@ -13945,7 +13945,7 @@
     au < finished ; frozen ; 2012 ; Journal of Plankton Research Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Journal of Plankton Research Volume 35 ; 35 ; >
     au < ready ; exists ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
-    au < expected ; exists ; 2015 ; Journal of Plankton Research Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2015 ; Journal of Plankton Research Volume 37 ; 37 ; >
 
     }
 
@@ -13991,7 +13991,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < crawling ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
-    au < expected ; exists ; 2015 ; Journal of Professions and Organization Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2015 ; Journal of Professions and Organization Volume 2 ; 2 ; >
 
   }
 
@@ -14259,7 +14259,7 @@
     au < finished ; frozen ; 2012 ; Journal of Semantics Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; Journal of Semantics Volume 30 ; 30 ; >
     au < crawling ; exists ; 2014 ; Journal of Semantics Volume 31 ; 31 ; >
-    au < expected ; exists ; 2015 ; Journal of Semantics Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2015 ; Journal of Semantics Volume 32 ; 32 ; >
 
     }
 
@@ -14709,7 +14709,7 @@
     au < finished ; frozen ; 2012 ; Journal of Tropical Pediatrics Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; Journal of Tropical Pediatrics Volume 59 ; 59 ; >
     au < crawling ; exists ; 2014 ; Journal of Tropical Pediatrics Volume 60 ; 60 ; >
-    au < expected ; exists ; 2015 ; Journal of Tropical Pediatrics Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2015 ; Journal of Tropical Pediatrics Volume 61 ; 61 ; >
 
     }
 
@@ -15268,7 +15268,7 @@
     au < finished ; crawling ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 ; >
     au < crawling ; exists ; 2014 ; Logic Journal of the IGPL Volume 22 ; 22 ; >
-    au < expected ; exists ; 2015 ; Logic Journal of the IGPL Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2015 ; Logic Journal of the IGPL Volume 23 ; 23 ; >
 
     }
 
@@ -17343,16 +17343,16 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
 
-    au < exists ; exists ; 1965 ; Nutrition Reviews Volume 23 ; 23 ; >
-    au < exists ; exists ; 1966 ; Nutrition Reviews Volume 24 ; 24 ; >
-    au < exists ; exists ; 1967 ; Nutrition Reviews Volume 25 ; 25 ; >
-    au < exists ; exists ; 1968 ; Nutrition Reviews Volume 26 ; 26 ; >
-    au < exists ; exists ; 1969 ; Nutrition Reviews Volume 27 ; 27 ; >
-    au < exists ; exists ; 1970 ; Nutrition Reviews Volume 28 ; 28 ; >
-    au < exists ; exists ; 1971 ; Nutrition Reviews Volume 29 ; 29 ; >
-    au < exists ; exists ; 1972 ; Nutrition Reviews Volume 30 ; 30 ; >
-    au < exists ; exists ; 1973 ; Nutrition Reviews Volume 31 ; 31 ; >
-    au < exists ; exists ; 1974 ; Nutrition Reviews Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1965 ; Nutrition Reviews Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1966 ; Nutrition Reviews Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1967 ; Nutrition Reviews Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1968 ; Nutrition Reviews Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1969 ; Nutrition Reviews Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1970 ; Nutrition Reviews Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1971 ; Nutrition Reviews Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1972 ; Nutrition Reviews Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1973 ; Nutrition Reviews Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1974 ; Nutrition Reviews Volume 32 ; 32 ; >
     au < manifest ; exists ; 1975 ; Nutrition Reviews Volume 33 ; 33 ; >
     au < manifest ; exists ; 1976 ; Nutrition Reviews Volume 34 ; 34 ; >
     au < manifest ; exists ; 1977 ; Nutrition Reviews Volume 35 ; 35 ; >
@@ -20031,7 +20031,7 @@
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
     au < crawling ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
     au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
-    au < expected ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
+    au < manifest ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
 
     }
 
@@ -20504,7 +20504,7 @@
     au < finished ; crawling ; 2012 ; Review of Environmental Economics and Policy Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Review of Environmental Economics and Policy Volume 7 ; 7 ; >
     au < crawling ; exists ; 2014 ; Review of Environmental Economics and Policy Volume 8 ; 8 ; >
-    au < expected ; exists ; 2015 ; Review of Environmental Economics and Policy Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2015 ; Review of Environmental Economics and Policy Volume 9 ; 9 ; >
 
     }
 
@@ -22121,7 +22121,7 @@
     au < finished ; frozen ; 2012 ; Tree Physiology Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Tree Physiology Volume 33 ; 33 ; >
     au < ready ; exists ; 2014 ; Tree Physiology Volume 34 ; 34 ; >
-    au < expected ; exists ; 2015 ; Tree Physiology Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2015 ; Tree Physiology Volume 35 ; 35 ; >
 
     }
 
@@ -22364,7 +22364,7 @@
     au < ingNotReady ; exists ; 2012 ; The World Bank Economic Review Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; The World Bank Economic Review Volume 27 ; 27 ; >
     au < ready ; exists ; 2014 ; The World Bank Economic Review Volume 28 ; 28 ; >
-    au < expected ; exists ; 2015 ; The World Bank Economic Review Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2015 ; The World Bank Economic Review Volume 29 ; 29 ; >
 
     }
 
@@ -22423,7 +22423,7 @@
     au < finished ; crawling ; 2012 ; The World Bank Research Observer Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; The World Bank Research Observer Volume 28 ; 28 ; >
     au < ready ; exists ; 2014 ; The World Bank Research Observer Volume 29 ; 29 ; >
-    au < expected ; exists ; 2015 ; The World Bank Research Observer Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; The World Bank Research Observer Volume 30 ; 30 ; >
 
     }
 

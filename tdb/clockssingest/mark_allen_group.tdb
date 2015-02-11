@@ -46,7 +46,7 @@
     au < manifest ; exists ; 2012 ; British Journal of Cardiac Nursing Volume 7 ; 7 >
     au < manifest ; exists ; 2013 ; British Journal of Cardiac Nursing Volume 8 ; 8 >
     au < notReady ; exists ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 >
-    au < expected ; exists ; 2015 ; British Journal of Cardiac Nursing Volume 10 ; 10 >
+    au < manifest ; exists ; 2015 ; British Journal of Cardiac Nursing Volume 10 ; 10 >
 
 
   }
@@ -65,7 +65,7 @@
     au < manifest ; exists ; 2012 ; British Journal of Community Nursing Volume 17 ; 17 >
     au < manifest ; exists ; 2013 ; British Journal of Community Nursing Volume 18 ; 18 >
     au < manifest ; exists ; 2014 ; British Journal of Community Nursing Volume 19 ; 19 >
-    au < expected ; exists ; 2015 ; British Journal of Community Nursing Volume 20 ; 20 >
+    au < manifest ; exists ; 2015 ; British Journal of Community Nursing Volume 20 ; 20 >
 
 
   }
@@ -84,7 +84,7 @@
     au < manifest ; exists ; 2012 ; British Journal of Healthcare Assistants Volume 6 ; 6 >
     au < testing ; exists ; 2013 ; British Journal of Healthcare Assistants Volume 7 ; 7 >
     au < manifest ; exists ; 2014 ; British Journal of Healthcare Assistants Volume 8 ; 8 >
-    au < expected ; exists ; 2015 ; British Journal of Healthcare Assistants Volume 9 ; 9 >
+    au < manifest ; exists ; 2015 ; British Journal of Healthcare Assistants Volume 9 ; 9 >
 
 
   }
@@ -103,7 +103,7 @@
     au < manifest ; exists ; 2012 ; British Journal of Healthcare Management Volume 18 ; 18 >
     au < manifest ; exists ; 2013 ; British Journal of Healthcare Management Volume 19 ; 19 >
     au < testing ; exists ; 2014 ; British Journal of Healthcare Management Volume 20 ; 20 >
-    au < expected ; exists ; 2015 ; British Journal of Healthcare Management Volume 21 ; 21 >
+    au < manifest ; exists ; 2015 ; British Journal of Healthcare Management Volume 21 ; 21 >
 
 
   }
@@ -122,7 +122,7 @@
     au < manifest ; exists ; 2012 ; British Journal of Hospital Medicine Volume 73 ; 73 >
     au < manifest ; exists ; 2013 ; British Journal of Hospital Medicine Volume 74 ; 74 >
     au < manifest ; exists ; 2014 ; British Journal of Hospital Medicine Volume 75 ; 75 >
-    au < expected ; exists ; 2015 ; British Journal of Hospital Medicine Volume 76 ; 76 >
+    au < manifest ; exists ; 2015 ; British Journal of Hospital Medicine Volume 76 ; 76 >
 
 
   }
@@ -159,7 +159,7 @@
     au < manifest ; exists ; 2012 ; British Journal of Midwifery Volume 20 ; 20 >
     au < testing ; exists ; 2013 ; British Journal of Midwifery Volume 21 ; 21 >
     au < manifest ; exists ; 2014 ; British Journal of Midwifery Volume 22 ; 22 >
-    au < expected ; exists ; 2015 ; British Journal of Midwifery Volume 23 ; 23 >
+    au < manifest ; exists ; 2015 ; British Journal of Midwifery Volume 23 ; 23 >
 
 
   }
@@ -197,7 +197,7 @@
     au < manifest ; exists ; 2012 ; British Journal of Nursing Volume 21 ; 21 >
     au < manifest ; exists ; 2013 ; British Journal of Nursing Volume 22 ; 22 >
     au < testing ; exists ; 2014 ; British Journal of Nursing Volume 23 ; 23 >
-    au < expected ; exists ; 2015 ; British Journal of Nursing Volume 24 ; 24 >
+    au < manifest ; exists ; 2015 ; British Journal of Nursing Volume 24 ; 24 >
 
 
   }
@@ -247,7 +247,7 @@
     au < manifest ; exists ; 2012 ; Dental Nursing Volume 8 ; 8 >
     au < manifest ; exists ; 2013 ; Dental Nursing Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Dental Nursing Volume 10 ; 10 >
-    au < expected ; exists ; 2015 ; Dental Nursing Volume 11 ; 11 >
+    au < manifest ; exists ; 2015 ; Dental Nursing Volume 11 ; 11 >
 
   }
 
@@ -283,7 +283,7 @@
     au < manifest ; exists ; 2012 ; Independent Nurse Volume 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Independent Nurse Volume 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Independent Nurse Volume 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Independent Nurse Volume 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Independent Nurse Volume 2015 ; 2015 >
 
   }
 
@@ -315,11 +315,11 @@
     comment[base_url] = http://www.ijpn.co.uk/
     param[journal_id] = ijpn
 
-    au < exists ; exists ; 2011 ; International Journal of Palliative Nursing Volume 17 ; 17 >
-    au < exists ; exists ; 2012 ; International Journal of Palliative Nursing Volume 18 ; 18 >
-    au < exists ; exists ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 >
-    au < exists ; exists ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 >
-    au < expected ; exists ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 >
+    au < manifest ; exists ; 2011 ; International Journal of Palliative Nursing Volume 17 ; 17 >
+    au < manifest ; exists ; 2012 ; International Journal of Palliative Nursing Volume 18 ; 18 >
+    au < manifest ; exists ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 >
+    au < manifest ; exists ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 >
+    au < manifest ; exists ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 >
 
   }
 
@@ -333,11 +333,11 @@
     comment[base_url] = http://www.ijtr.co.uk/
     param[journal_id] = ijtr
 
-    au < exists ; exists ; 2011 ; International Journal of Therapy and Rehabilitation Volume 18 ; 18 >
-    au < exists ; exists ; 2012 ; International Journal of Therapy and Rehabilitation Volume 19 ; 19 >
-    au < exists ; exists ; 2013 ; International Journal of Therapy and Rehabilitation Volume 20 ; 20 >
-    au < exists ; exists ; 2014 ; International Journal of Therapy and Rehabilitation Volume 21 ; 21 >
-    au < expected ; exists ; 2015 ; International Journal of Therapy and Rehabilitation Volume 22 ; 22 >
+    au < manifest ; exists ; 2011 ; International Journal of Therapy and Rehabilitation Volume 18 ; 18 >
+    au < manifest ; exists ; 2012 ; International Journal of Therapy and Rehabilitation Volume 19 ; 19 >
+    au < manifest ; exists ; 2013 ; International Journal of Therapy and Rehabilitation Volume 20 ; 20 >
+    au < manifest ; exists ; 2014 ; International Journal of Therapy and Rehabilitation Volume 21 ; 21 >
+    au < manifest ; exists ; 2015 ; International Journal of Therapy and Rehabilitation Volume 22 ; 22 >
 
   }
 
@@ -368,10 +368,10 @@
     comment[base_url] = http://www.aestheticnursing.co.uk/
     param[journal_id] = joan
 
-    au < exists ; exists ; 2012 ; Journal of Aesthetic Nursing Volume 1 ; 1 >
-    au < exists ; exists ; 2013 ; Journal of Aesthetic Nursing Volume 2 ; 2 >
-    au < exists ; exists ; 2014 ; Journal of Aesthetic Nursing Volume 3 ; 3 >
-    au < expected ; exists ; 2015 ; Journal of Aesthetic Nursing Volume 4 ; 4 >
+    au < manifest ; exists ; 2012 ; Journal of Aesthetic Nursing Volume 1 ; 1 >
+    au < manifest ; exists ; 2013 ; Journal of Aesthetic Nursing Volume 2 ; 2 >
+    au < manifest ; exists ; 2014 ; Journal of Aesthetic Nursing Volume 3 ; 3 >
+    au < manifest ; exists ; 2015 ; Journal of Aesthetic Nursing Volume 4 ; 4 >
 
   }
 
@@ -384,8 +384,9 @@
 
     comment[base_url] = ???
     param[journal_id] = jcyn
-    au < exists ; exists ; 2007 ; Journal of Children's and Young People's Nursing Volume 1 ; 1 >
-    au < exists ; exists ; 2008 ; Journal of Children's and Young People's Nursing Volume 2 ; 2 >
+    
+    au < manifest ; exists ; 2007 ; Journal of Children's and Young People's Nursing Volume 1 ; 1 >
+    au < manifest ; exists ; 2008 ; Journal of Children's and Young People's Nursing Volume 2 ; 2 >
     au < expected ; exists ; 2009 ; Journal of Children's and Young People's Nursing Volume 3 ; 3 >
 
   }
@@ -400,9 +401,9 @@
     comment[base_url] = http://www.journalofhealthvisiting.com/
     param[journal_id] = johv
 
-    au < exists ; exists ; 2013 ; Journal of Health Visiting Volume 1 ; 1 >
-    au < exists ; exists ; 2014 ; Journal of Health Visiting Volume 2 ; 2 >
-    au < expected ; exists ; 2015 ; Journal of Health Visiting Volume 3 ; 3 >
+    au < manifest ; exists ; 2013 ; Journal of Health Visiting Volume 1 ; 1 >
+    au < manifest ; exists ; 2014 ; Journal of Health Visiting Volume 2 ; 2 >
+    au < manifest ; exists ; 2015 ; Journal of Health Visiting Volume 3 ; 3 >
 
   }
 
@@ -416,11 +417,11 @@
     comment[base_url] = http://www.paramedicpractice.com/
     param[journal_id] = jpar
 
-    au < exists ; exists ; 2011 ; Journal of Paramedic Practice Volume 3 ; 3 >
-    au < exists ; exists ; 2012 ; Journal of Paramedic Practice Volume 4 ; 4 >
-    au < exists ; exists ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 >
-    au < exists ; exists ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 >
-    au < expected ; exists ; 2015 ; Journal of Paramedic Practice Volume 7 ; 7 >
+    au < manifest ; exists ; 2011 ; Journal of Paramedic Practice Volume 3 ; 3 >
+    au < manifest ; exists ; 2012 ; Journal of Paramedic Practice Volume 4 ; 4 >
+    au < manifest ; exists ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 >
+    au < manifest ; exists ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 >
+    au < manifest ; exists ; 2015 ; Journal of Paramedic Practice Volume 7 ; 7 >
 
   }
 
@@ -434,11 +435,11 @@
     comment[base_url] = http://www.renalnursing.co.uk/
     param[journal_id] = jorn
 
-    au < exists ; exists ; 2011 ; Journal of Renal Nursing Volume 3 ; 3 >
-    au < exists ; exists ; 2012 ; Journal of Renal Nursing Volume 4 ; 4 >
-    au < exists ; exists ; 2013 ; Journal of Renal Nursing Volume 5 ; 5 >
-    au < exists ; exists ; 2014 ; Journal of Renal Nursing Volume 6 ; 6 >
-    au < expected ; exists ; 2015 ; Journal of Renal Nursing Volume 7 ; 7 >
+    au < manifest ; exists ; 2011 ; Journal of Renal Nursing Volume 3 ; 3 >
+    au < manifest ; exists ; 2012 ; Journal of Renal Nursing Volume 4 ; 4 >
+    au < manifest ; exists ; 2013 ; Journal of Renal Nursing Volume 5 ; 5 >
+    au < manifest ; exists ; 2014 ; Journal of Renal Nursing Volume 6 ; 6 >
+    au < manifest ; exists ; 2015 ; Journal of Renal Nursing Volume 7 ; 7 >
 
   }
 
@@ -452,11 +453,11 @@
     comment[base_url] = http://www.journalofwoundcare.com/
     param[journal_id] = jowc
 
-    au < exists ; exists ; 2011 ; Journal of Wound Care Volume 20 ; 20 >
-    au < exists ; exists ; 2012 ; Journal of Wound Care Volume 21 ; 21 >
-    au < exists ; exists ; 2013 ; Journal of Wound Care Volume 22 ; 22 >
-    au < exists ; exists ; 2014 ; Journal of Wound Care Volume 23 ; 23 >
-    au < expected ; exists ; 2015 ; Journal of Wound Care Volume 24 ; 24 >
+    au < manifest ; exists ; 2011 ; Journal of Wound Care Volume 20 ; 20 >
+    au < manifest ; exists ; 2012 ; Journal of Wound Care Volume 21 ; 21 >
+    au < manifest ; exists ; 2013 ; Journal of Wound Care Volume 22 ; 22 >
+    au < manifest ; exists ; 2014 ; Journal of Wound Care Volume 23 ; 23 >
+    au < manifest ; exists ; 2015 ; Journal of Wound Care Volume 24 ; 24 >
 
   }
 
@@ -470,11 +471,11 @@
     comment[base_url] = http://www.nurseprescribing.com/
     param[journal_id] = npre
 
-    au < exists ; exists ; 2011 ; Nurse Prescribing Volume 9 ; 9 >
-    au < exists ; exists ; 2012 ; Nurse Prescribing Volume 10 ; 10 >
-    au < exists ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 >
-    au < exists ; exists ; 2014 ; Nurse Prescribing Volume 12 ; 12 >
-    au < expected ; exists ; 2015 ; Nurse Prescribing Volume 13 ; 13 >
+    au < manifest ; exists ; 2011 ; Nurse Prescribing Volume 9 ; 9 >
+    au < manifest ; exists ; 2012 ; Nurse Prescribing Volume 10 ; 10 >
+    au < manifest ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 >
+    au < manifest ; exists ; 2014 ; Nurse Prescribing Volume 12 ; 12 >
+    au < manifest ; exists ; 2015 ; Nurse Prescribing Volume 13 ; 13 >
 
   }
 
@@ -488,11 +489,11 @@
     comment[base_url] = http://www.nursingresidentialcare.com/
     param[journal_id] = nrec
 
-    au < exists ; exists ; 2011 ; Nursing and Residential Care Volume 9 ; 9 >
-    au < exists ; exists ; 2012 ; Nursing and Residential Care Volume 10 ; 10 >
-    au < exists ; exists ; 2013 ; Nursing and Residential Care Volume 11 ; 11 >
-    au < exists ; exists ; 2014 ; Nursing and Residential Care Volume 12 ; 12 >
-    au < expected ; exists ; 2015 ; Nursing and Residential Care Volume 13 ; 13 >
+    au < manifest ; exists ; 2011 ; Nursing and Residential Care Volume 9 ; 9 >
+    au < manifest ; exists ; 2012 ; Nursing and Residential Care Volume 10 ; 10 >
+    au < manifest ; exists ; 2013 ; Nursing and Residential Care Volume 11 ; 11 >
+    au < manifest ; exists ; 2014 ; Nursing and Residential Care Volume 12 ; 12 >
+    au < manifest ; exists ; 2015 ; Nursing and Residential Care Volume 13 ; 13 >
 
   }
 
@@ -506,11 +507,11 @@
     comment[base_url] = http://www.practicenursing.com/
     param[journal_id] = pnur
 
-    au < exists ; exists ; 2011 ; Practice Nursing Volume 22 ; 22 >
-    au < exists ; exists ; 2012 ; Practice Nursing Volume 23 ; 23 >
-    au < exists ; exists ; 2013 ; Practice Nursing Volume 24 ; 24 >
-    au < exists ; exists ; 2014 ; Practice Nursing Volume 25 ; 25 >
-    au < expected ; exists ; 2015 ; Practice Nursing Volume 26 ; 26 >
+    au < manifest ; exists ; 2011 ; Practice Nursing Volume 22 ; 22 >
+    au < manifest ; exists ; 2012 ; Practice Nursing Volume 23 ; 23 >
+    au < manifest ; exists ; 2013 ; Practice Nursing Volume 24 ; 24 >
+    au < manifest ; exists ; 2014 ; Practice Nursing Volume 25 ; 25 >
+    au < manifest ; exists ; 2015 ; Practice Nursing Volume 26 ; 26 >
 
   }
 
@@ -526,9 +527,9 @@
 
     au < exists ; exists ; 2011 ; Companion Animal Volume 16 ; 16 >
     au < exists ; exists ; 2012 ; Companion Animal Volume 17 ; 17 >
-    au < exists ; exists ; 2013 ; Companion Animal Volume 18 ; 18 >
-    au < exists ; exists ; 2014 ; Companion Animal Volume 19 ; 19 >
-    au < expected ; exists ; 2015 ; Companion Animal Volume 20 ; 20 >
+    au < manifest ; exists ; 2013 ; Companion Animal Volume 18 ; 18 >
+    au < manifest ; exists ; 2014 ; Companion Animal Volume 19 ; 19 >
+    au < manifest ; exists ; 2015 ; Companion Animal Volume 20 ; 20 >
 
   }
 
@@ -560,9 +561,9 @@
 
     au < exists ; exists ; 2011 ; Livestock Volume 16 ; 16 >
     au < exists ; exists ; 2012 ; Livestock Volume 17 ; 17 >
-    au < exists ; exists ; 2013 ; Livestock Volume 18 ; 18 >
-    au < exists ; exists ; 2014 ; Livestock Volume 19 ; 19 >
-    au < expected ; exists ; 2015 ; Livestock Volume 20 ; 20 >
+    au < manifest ; exists ; 2013 ; Livestock Volume 18 ; 18 >
+    au < manifest ; exists ; 2014 ; Livestock Volume 19 ; 19 >
+    au < manifest ; exists ; 2015 ; Livestock Volume 20 ; 20 >
 
   }
 
@@ -576,10 +577,10 @@
     comment[base_url] = http://www.theveterinarynurse.com/
     param[journal_id] = vetn
 
-    au < exists ; exists ; 2011 ; The Veterinary Nurse Volume 2 ; 2 >
-    au < exists ; exists ; 2012 ; The Veterinary Nurse Volume 3 ; 3 >
-    au < exists ; exists ; 2013 ; The Veterinary Nurse Volume 4 ; 4 >
-    au < exists ; exists ; 2014 ; The Veterinary Nurse Volume 5 ; 5 >
+    au < manifest ; exists ; 2011 ; The Veterinary Nurse Volume 2 ; 2 >
+    au < manifest ; exists ; 2012 ; The Veterinary Nurse Volume 3 ; 3 >
+    au < manifest ; exists ; 2013 ; The Veterinary Nurse Volume 4 ; 4 >
+    au < manifest ; exists ; 2014 ; The Veterinary Nurse Volume 5 ; 5 >
     au < expected ; exists ; 2015 ; The Veterinary Nurse Volume 6 ; 6 >
 
   }
@@ -630,11 +631,11 @@
     comment[0] = need to update base_url 
     param[journal_id] = chca
 
-    au < exists ; exists ; 2011 ; Child Care Volume 8 ; 8 >
-    au < exists ; exists ; 2012 ; Child Care Volume 9 ; 9 >
-    au < exists ; exists ; 2013 ; Child Care Volume 10 ; 10 >
-    au < exists ; exists ; 2014 ; Child Care Volume 11 ; 11 >
-    au < expected ; exists ; 2015 ; Child Care Volume 12 ; 12 >
+    au < manifest ; exists ; 2011 ; Child Care Volume 8 ; 8 >
+    au < manifest ; exists ; 2012 ; Child Care Volume 9 ; 9 >
+    au < manifest ; exists ; 2013 ; Child Care Volume 10 ; 10 >
+    au < manifest ; exists ; 2014 ; Child Care Volume 11 ; 11 >
+    au < manifest ; exists ; 2015 ; Child Care Volume 12 ; 12 >
 
   }
 
@@ -660,11 +661,11 @@
     comment[base_url] = http://www.earlyyearseducator.co.uk/
     param[journal_id] = eyed
 
-    au < exists ; exists ; 2011 ; Early Years Educator (EYE) Volume 12 ; 12 >
-    au < exists ; exists ; 2012 ; Early Years Educator (EYE) Volume 13 ; 13 >
-    au < exists ; exists ; 2013 ; Early Years Educator (EYE) Volume 14 ; 14 >
-    au < exists ; exists ; 2014 ; Early Years Educator (EYE) Volume 15 ; 15 >
-    au < expected ; exists ; 2015 ; Early Years Educator (EYE) Volume 16 ; 16 >
+    au < manifest ; exists ; 2011 ; Early Years Educator (EYE) Volume 12 ; 12 >
+    au < manifest ; exists ; 2012 ; Early Years Educator (EYE) Volume 13 ; 13 >
+    au < manifest ; exists ; 2013 ; Early Years Educator (EYE) Volume 14 ; 14 >
+    au < manifest ; exists ; 2014 ; Early Years Educator (EYE) Volume 15 ; 15 >
+    au < manifest ; exists ; 2015 ; Early Years Educator (EYE) Volume 16 ; 16 >
 
   }
 
@@ -694,11 +695,11 @@
     comment[pdf] = file from http://content.yudu.com
     param[journal_id] = htup
 
-    au < exists ; exists ; 2011 ; Headteacher Update Volume 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Headteacher Update Volume 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Headteacher Update Volume 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Headteacher Update Volume 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Headteacher Update Volume 2015 ; 2015 >
+    au < manifest ; exists ; 2011 ; Headteacher Update Volume 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Headteacher Update Volume 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Headteacher Update Volume 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Headteacher Update Volume 2014 ; 2014 >
+    au < manifest ; exists ; 2015 ; Headteacher Update Volume 2015 ; 2015 >
 
   }
 
@@ -711,11 +712,11 @@
     comment[base_url] = http://www.nurseryworld.co.uk/
     param[journal_id] = nuwa
 
-    au < exists ; exists ; 2011 ; Nursery World Volume 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Nursery World Volume 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Nursery World Volume 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Nursery World Volume 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Nursery World Volume 2015 ; 2015 >
+    au < manifest ; exists ; 2011 ; Nursery World Volume 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Nursery World Volume 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Nursery World Volume 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Nursery World Volume 2014 ; 2014 >
+    au < manifest ; exists ; 2015 ; Nursery World Volume 2015 ; 2015 >
 
   }
 
@@ -763,7 +764,7 @@
     comment[notReady] = issues lumped into one volume.
 
     au < notReady ; exists ; 2014 ; SecEd Volume 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; SecEd Volume 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; SecEd Volume 2015 ; 2015 >
 
 
   }

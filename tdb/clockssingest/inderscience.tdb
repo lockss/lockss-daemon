@@ -383,7 +383,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Advanced Mechatronic Systems Volume 3 ; 3 > 
       au < zapped ; finished ; 2012 ; International Journal of Advanced Mechatronic Systems Volume 4 ; 4 > 
       au < crawling ; exists ; 2013 ; International Journal of Advanced Mechatronic Systems Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Advanced Mechatronic Systems Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; International Journal of Advanced Mechatronic Systems Volume 6 ; 6 >
 
     }
 
@@ -618,7 +618,7 @@
 
       param[journal_issn] = 1752-2870
       
-      au < exists ; exists ; 2013 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
+      au < manifest ; exists ; 2013 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 >
 
     }
@@ -2235,7 +2235,7 @@
       param[journal_issn] = 2046-3383
       comment[0] = title is not yet published on 9/19/2013
       
-      au < expected ; exists ; 2014 ; International Journal of the Digital Human Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -2270,7 +2270,7 @@
       au < manifest ; exists ; 2009 ;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Dynamical Systems and Differential Equations Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
+      au < manifest ; exists ; 2013 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
       au < expected ; exists ; 2014 ; International Journal of Dynamical Systems and Differential Equations Volume 6 ; 6 >
 
     }
@@ -4406,7 +4406,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Knowledge and Learning Volume 6 ; 6 >
       au < zapped ; finished ; 2011 ; International Journal of Knowledge and Learning Volume 7 ; 7 >
       au < finished ; frozen ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
-      au < expected ; exists ; 2013 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
+      au < manifest ; exists ; 2013 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
       au < expected ; exists ; 2014 ; International Journal of Knowledge and Learning Volume 10 ; 10 >
 
     }
@@ -6207,7 +6207,7 @@
       au < finished ; frozen ; 2012 ; International Journal of Product Development Volume 17 ; 17 >
       au < crawling ; exists ; 2013 ; International Journal of Product Development Volume 18 ; 18 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Product Development Volume 19 ; 19 >
-      au < expected ; exists ; 2014 ; International Journal of Product Development Volume 20 ; 20 >
+      au < manifest ; exists ; 2014 ; International Journal of Product Development Volume 20 ; 20 >
       au < expected ; exists ; 2014 ; International Journal of Product Development Volume 21 ; 21 >
 
     }
@@ -6552,7 +6552,7 @@
       au < finished ; frozen ; 2011 ; International Journal of Revenue Management Volume 5 ; 5 >
       au < finished ; frozen ; 2012 ; International Journal of Revenue Management Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 >
-      au < expected ; exists ; 2014 ; International Journal of Revenue Management Volume 8 ; 8 >
+      au < manifest ; exists ; 2014 ; International Journal of Revenue Management Volume 8 ; 8 >
 
     }
 
@@ -7425,7 +7425,7 @@
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 >
       au < zapped ; finished ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Technoentrepreneurship Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; International Journal of Technoentrepreneurship Volume 3 ; 3 >
 
     }
 
