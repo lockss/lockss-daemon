@@ -6,11 +6,11 @@
     info[tester] = 5
   >
   
-  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+  # Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
 
   {
 
-   title < 
+    title < 
       name = CLCWeb: Comparative Literature and Culture ;
       issn = 1481-4374 
     >
@@ -39,10 +39,10 @@
  
   }
   
-    {
+  {
 
     title <
-      name = Data Curation Profile ;
+      name = Data Curation Profiles Directory ;
       issn = 2326-6651 
     >
 
@@ -87,7 +87,7 @@
 
    title < 
       name = Journal of Aviation Technology and Engineering ;
-      issn = 2159-6670 
+      issn = 2159-6670
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
@@ -106,7 +106,7 @@
 
    title < 
       name = Journal of Human Performance in Extreme Environments ;
-      issn = 1529-5168 
+      issn = 1529-5168
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
@@ -129,7 +129,7 @@
   
    title < 
       name = Journal of Pre-College Engineering Education Research ;
-      issn = 2157-9288 
+      issn = 2157-9288
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
@@ -148,7 +148,7 @@
   
     title < 
       name = Journal of Problem Solving ;
-      issn = 1932-6246 
+      issn = 1932-6246
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
@@ -169,26 +169,49 @@
   {
   
     title < 
-      name = JTRP Technical Reports ;
-      issn = 2326-6325 
+      name = Journal of Southeast Asian American Education and Advancement ;
+      issn = 2153-8999
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://docs.lib.purdue.edu/
-    param[journal_abbr] = jtrp
+    param[journal_abbr] = jsaaea
     implicit < status ; status2 ; year ; name ; param[volume] >
-    comment[doNotProcess1] = publisher to update contract with Randy RT 5351
-    comment[doNotProcess2] = RT6707
-    comment[1] = Abbreviation stands for Joint Transportation Research Program
 
-    au < doNotProcess ; doNotProcess ; 1987 ; JTRP Other Publications and Reports Volume 1987 ; 1987 >
-    au < doNotProcess ; doNotProcess ; 2008 ; JTRP Other Publications and Reports Volume 2008 ; 2008 >
-    au < doNotProcess ; doNotProcess ; 2009 ; JTRP Other Publications and Reports Volume 2009 ; 2009 >
-    au < doNotProcess ; doNotProcess ; 2011 ; JTRP Other Publications and Reports Volume 2011 ; 2011 >
-    au < doNotProcess ; doNotProcess ; 2012 ; JTRP Other Publications and Reports Volume 2012 ; 2012 >
+    au < manifest ; exists ; 2006 ; Journal of Southeast Asian American Education and Advancement Volume 1 ; 1 >
+    au < manifest ; exists ; 2007 ; Journal of Southeast Asian American Education and Advancement Volume 2 ; 2 >
+    au < manifest ; exists ; 2008 ; Journal of Southeast Asian American Education and Advancement Volume 3 ; 3 >
+    au < manifest ; exists ; 2009 ; Journal of Southeast Asian American Education and Advancement Volume 4 ; 4 >
+    au < manifest ; exists ; 2010 ; Journal of Southeast Asian American Education and Advancement Volume 5 ; 5 >
+    au < manifest ; exists ; 2011 ; Journal of Southeast Asian American Education and Advancement Volume 6 ; 6 >
+    au < manifest ; exists ; 2012 ; Journal of Southeast Asian American Education and Advancement Volume 7 ; 7 >
+    au < manifest ; exists ; 2013 ; Journal of Southeast Asian American Education and Advancement Volume 8 ; 8 >
+    au < manifest ; exists ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 >
+
+  }
+  
+  {
+  
+    title < 
+      name = JTRP Technical Reports ;
+      issn = 2326-6325 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssDigitalCommonsRepositoryPlugin
+    param[base_url] = http://docs.lib.purdue.edu/
+    param[collection_type] = ir_series
+    param[collection] = jtrp
+    implicit < status ; status2 ; year ; name ; param[collection_heading] >
+
+    # There are more years than listed below; update later
+    # doNotProcess: awaiting site refresh from Bepress
+
+    au < doNotProcess ; doNotProcess ; 2008 ; JTRP Technical Reports Volume 2008 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; JTRP Technical Reports Volume 2009 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2011 ; JTRP Technical Reports Volume 2011 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; JTRP Technical Reports Volume 2012 ; 2012 >
    
 
   }
 
 }
-
