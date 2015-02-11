@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.14 2015-02-11 07:56:07 etenbrink Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.15 2015-02-11 08:06:04 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
