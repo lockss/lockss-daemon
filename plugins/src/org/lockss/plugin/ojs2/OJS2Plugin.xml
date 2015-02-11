@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -38,7 +38,7 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>17</string>
+        <string>18</string>
       </entry>
       <entry>
         <string>Metadata</string>
