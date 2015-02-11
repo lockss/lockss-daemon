@@ -1,50 +1,29 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>deprecated</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>edu.upenn.library.plugin.clcweb.CLCWebPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;CLCWeb Plugin, Base URL %s, Year %d, Volume %d&quot;, base_url, year, volume</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>CLCWeb Plugin</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>3628800000</long>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%smenue/menu_vol%d.htm&quot;, base_url, volume</string>
-      <string>1,&quot;^%sclcweb%02d.*$&quot;, base_url, au_short_year</string>
-      <string>1,&quot;^%s.*\.css&quot;, base_url</string>
-      <string>1,&quot;^%simages/.*$&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%smenue/menu_vol%d.htm&quot;, base_url, volume</string>
+    <string>CLCWeb Plugin (Retired)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>volume</key>
-        <displayName>Volume No.</displayName>
-        <type>6</type>
-        <size>8</size>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -58,14 +37,38 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"CLCWeb Plugin (Retired), Base URL %s, Year %d, Volume %d", base_url, year, volume</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sclcweb%02d", base_url, au_short_year</string>
+      <string>1,"^%simages/", base_url</string>
+      <string>1,"^%s.*\.css", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%smenue/menu_vol%d.htm", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>
