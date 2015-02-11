@@ -9,25 +9,9 @@
   </entry> 
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
-  <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Metadata</string>
-        <string>8</string>
-      </entry>
-      <entry>
-        <string>Poll</string>
-        <string>3</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-        <string>1</string>
-      </entry>
-    </map>
-  </entry> 
+<!--  run test on content5 before pushing out -->  
 <!--  REMOVE DEBUGGING ONLY -->
    <entry>
     <string>au_crawlrules</string>
@@ -47,18 +31,31 @@
       <string>1,"^%s%d/CLKS003", base_url, year</string>
     </list>
   </entry>
-<!-- END OF DEBUGGIN ONLY -->         
+<!-- END OF DEBUGGIN ONLY -->    
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.62.0</string>
-  </entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>9</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>      
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>au_name</string>
