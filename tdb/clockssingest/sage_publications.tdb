@@ -6324,6 +6324,35 @@
 
   }
 
+  {
+
+      title <
+        name = Competition & Change ;
+        issn = 1024-5294 ;
+        eissn = 2162-447X ;
+        issnl = 1024-5294
+      >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://cch.sagepub.com/
+
+      au < exists ; exists ; 2002 ; Competition & Change Volume 6 ; 6 ; >
+      au < exists ; exists ; 2003 ; Competition & Change Volume 7 ; 7 ; >
+      au < exists ; exists ; 2004 ; Competition & Change Volume 8 ; 8 ; >
+      au < exists ; exists ; 2005 ; Competition & Change Volume 9 ; 9 ; >
+      au < exists ; exists ; 2006 ; Competition & Change Volume 10 ; 10 ; >
+      au < exists ; exists ; 2007 ; Competition & Change Volume 11 ; 11 ; >
+      au < exists ; exists ; 2008 ; Competition & Change Volume 12 ; 12 ; >
+      au < exists ; exists ; 2009 ; Competition & Change Volume 13 ; 13 ; >
+      au < exists ; exists ; 2010 ; Competition & Change Volume 14 ; 14 ; >
+      au < exists ; exists ; 2011 ; Competition & Change Volume 15 ; 15 ; >
+      au < exists ; exists ; 2012 ; Competition & Change Volume 16 ; 16 ; >
+      au < exists ; exists ; 2013 ; Competition & Change Volume 17 ; 17 ; >
+      au < exists ; exists ; 2014 ; Competition & Change Volume 18 ; 18 ; >
+      au < exists ; exists ; 2015 ; Competition & Change Volume 19 ; 19 ; >
+
+  }
+
     {
 
       title <
@@ -14653,6 +14682,54 @@
   {
 
     title <
+      name = The International Journal of Aging and Human Development ;
+      issn = 0091-4150 ;
+      eissn = 1541-3535 ;
+      issnl = 0091-4150
+    >
+
+      param[base_url] = http://ahd.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[0] = content available from 1970 volume 1 to 1999 volume 49
+
+      au < exists ; exists ; 2000 ; The International Journal of Aging and Human Development Volume 50 ; 50 ; >
+      au < exists ; exists ; 2000 ; The International Journal of Aging and Human Development Volume 51 ; 51 ; >
+      au < exists ; exists ; 2001 ; The International Journal of Aging and Human Development Volume 52 ; 52 ; >
+      au < exists ; exists ; 2001 ; The International Journal of Aging and Human Development Volume 53 ; 53 ; >
+      au < exists ; exists ; 2002 ; The International Journal of Aging and Human Development Volume 54 ; 54 ; >
+      au < exists ; exists ; 2002 ; The International Journal of Aging and Human Development Volume 55 ; 55 ; >
+      au < exists ; exists ; 2003 ; The International Journal of Aging and Human Development Volume 56 ; 56 ; >
+      au < exists ; exists ; 2003 ; The International Journal of Aging and Human Development Volume 57 ; 57 ; >
+      au < exists ; exists ; 2004 ; The International Journal of Aging and Human Development Volume 58 ; 58 ; >
+      au < exists ; exists ; 2004 ; The International Journal of Aging and Human Development Volume 59 ; 59 ; >
+      au < exists ; exists ; 2005 ; The International Journal of Aging and Human Development Volume 60 ; 60 ; >
+      au < exists ; exists ; 2005 ; The International Journal of Aging and Human Development Volume 61 ; 61 ; >
+      au < exists ; exists ; 2006 ; The International Journal of Aging and Human Development Volume 62 ; 62 ; >
+      au < exists ; exists ; 2006 ; The International Journal of Aging and Human Development Volume 63 ; 63 ; >
+      au < exists ; exists ; 2007 ; The International Journal of Aging and Human Development Volume 64 ; 64 ; >
+      au < exists ; exists ; 2007 ; The International Journal of Aging and Human Development Volume 65 ; 65 ; >
+      au < exists ; exists ; 2008 ; The International Journal of Aging and Human Development Volume 66 ; 66 ; >
+      au < exists ; exists ; 2008 ; The International Journal of Aging and Human Development Volume 67 ; 67 ; >
+      au < exists ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 68 ; 68 ; >
+      au < exists ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 69 ; 69 ; >
+      au < exists ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 70 ; 70 ; >
+      au < exists ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 71 ; 71 ; >
+      au < exists ; exists ; 2011 ; The International Journal of Aging and Human Development Volume 72 ; 72 ; >
+      au < exists ; exists ; 2011 ; The International Journal of Aging and Human Development Volume 73 ; 73 ; >
+      au < exists ; exists ; 2012 ; The International Journal of Aging and Human Development Volume 74 ; 74 ; >
+      au < exists ; exists ; 2012 ; The International Journal of Aging and Human Development Volume 75 ; 75 ; >
+      au < exists ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 76 ; 76 ; >
+      au < exists ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 ; >
+      au < exists ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 ; >
+      au < exists ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; >
+      au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; >
+      au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Behavioral Development ;
       issn = 0165-0254 ;
       eissn = 1464-0651
@@ -15104,6 +15181,38 @@
       au < exists ; exists ; 2013 ; The International Journal of Evidence & Proof Volume 17 ; 17 ; >
       au < exists ; exists ; 2014 ; The International Journal of Evidence & Proof Volume 18 ; 18 ; >
       au < manifest ; exists ; 2015 ; The International Journal of Evidence & Proof Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Health Services ;
+      issn = 0020-7314 ;
+      eissn = 1541-4469 ;
+      issnl = 0020-7314
+    >
+
+      param[base_url] = http://joh.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+        au < exists ; exists ; 1999 ; International Journal of Health Services Volume 29 ; 29 ; >
+        au < exists ; exists ; 2000 ; International Journal of Health Services Volume 30 ; 30 ; >
+        au < exists ; exists ; 2001 ; International Journal of Health Services Volume 31 ; 31 ; >
+        au < exists ; exists ; 2002 ; International Journal of Health Services Volume 32 ; 32 ; >
+        au < exists ; exists ; 2003 ; International Journal of Health Services Volume 33 ; 33 ; >
+        au < exists ; exists ; 2004 ; International Journal of Health Services Volume 34 ; 34 ; >
+        au < exists ; exists ; 2005 ; International Journal of Health Services Volume 35 ; 35 ; >
+        au < exists ; exists ; 2006 ; International Journal of Health Services Volume 36 ; 36 ; >
+        au < exists ; exists ; 2007 ; International Journal of Health Services Volume 37 ; 37 ; >
+        au < exists ; exists ; 2008 ; International Journal of Health Services Volume 38 ; 38 ; >
+        au < exists ; exists ; 2009 ; International Journal of Health Services Volume 39 ; 39 ; >
+        au < exists ; exists ; 2010 ; International Journal of Health Services Volume 40 ; 40 ; >
+        au < exists ; exists ; 2011 ; International Journal of Health Services Volume 41 ; 41 ; >
+        au < exists ; exists ; 2012 ; International Journal of Health Services Volume 42 ; 42 ; >
+        au < exists ; exists ; 2013 ; International Journal of Health Services Volume 43 ; 43 ; >
+        au < exists ; exists ; 2014 ; International Journal of Health Services Volume 44 ; 44 ; >
+        au < expected ; exists ; 2015 ; International Journal of Health Services Volume 45 ; 45 ; >
 
   }
 
@@ -20031,6 +20140,54 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Journal of Educational Computing Research ;
+      issn = 0735-6331 ;
+      eissn = 1541-4140 ;
+      issnl = 0735-6331
+    >
+
+      param[base_url] = http://jec.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1999 ; Journal of Educational Computing Research Volume 20 ; 20 ; >
+      au < exists ; exists ; 1999 ; Journal of Educational Computing Research Volume 21 ; 21 ; >
+      au < exists ; exists ; 2000 ; Journal of Educational Computing Research Volume 22 ; 22 ; >
+      au < exists ; exists ; 2000 ; Journal of Educational Computing Research Volume 23 ; 23 ; >
+      au < exists ; exists ; 2001 ; Journal of Educational Computing Research Volume 24 ; 24 ; >
+      au < exists ; exists ; 2001 ; Journal of Educational Computing Research Volume 25 ; 25 ; >
+      au < exists ; exists ; 2002 ; Journal of Educational Computing Research Volume 26 ; 26 ; >
+      au < exists ; exists ; 2002 ; Journal of Educational Computing Research Volume 27 ; 27 ; >
+      au < exists ; exists ; 2003 ; Journal of Educational Computing Research Volume 28 ; 28 ; >
+      au < exists ; exists ; 2003 ; Journal of Educational Computing Research Volume 29 ; 29 ; >
+      au < exists ; exists ; 2004 ; Journal of Educational Computing Research Volume 30 ; 30 ; >
+      au < exists ; exists ; 2004 ; Journal of Educational Computing Research Volume 31 ; 31 ; >
+      au < exists ; exists ; 2005 ; Journal of Educational Computing Research Volume 32 ; 32 ; >
+      au < exists ; exists ; 2005 ; Journal of Educational Computing Research Volume 33 ; 33 ; >
+      au < exists ; exists ; 2006 ; Journal of Educational Computing Research Volume 34 ; 34 ; >
+      au < exists ; exists ; 2006 ; Journal of Educational Computing Research Volume 35 ; 35 ; >
+      au < exists ; exists ; 2007 ; Journal of Educational Computing Research Volume 36 ; 36 ; >
+      au < exists ; exists ; 2007 ; Journal of Educational Computing Research Volume 37 ; 37 ; >
+      au < exists ; exists ; 2008 ; Journal of Educational Computing Research Volume 38 ; 38 ; >
+      au < exists ; exists ; 2008 ; Journal of Educational Computing Research Volume 39 ; 39 ; >
+      au < exists ; exists ; 2009 ; Journal of Educational Computing Research Volume 40 ; 40 ; >
+      au < exists ; exists ; 2009 ; Journal of Educational Computing Research Volume 41 ; 41 ; >
+      au < exists ; exists ; 2010 ; Journal of Educational Computing Research Volume 42 ; 42 ; >
+      au < exists ; exists ; 2010 ; Journal of Educational Computing Research Volume 43 ; 43 ; >
+      au < exists ; exists ; 2011 ; Journal of Educational Computing Research Volume 44 ; 44 ; >
+      au < exists ; exists ; 2011 ; Journal of Educational Computing Research Volume 45 ; 45 ; >
+      au < exists ; exists ; 2012 ; Journal of Educational Computing Research Volume 46 ; 46 ; >
+      au < exists ; exists ; 2012 ; Journal of Educational Computing Research Volume 47 ; 47 ; >
+      au < exists ; exists ; 2013 ; Journal of Educational Computing Research Volume 48 ; 48 ; >
+      au < exists ; exists ; 2013 ; Journal of Educational Computing Research Volume 49 ; 49 ; >
+      au < exists ; exists ; 2014 ; Journal of Educational Computing Research Volume 50 ; 50 ; >
+      au < exists ; exists ; 2014 ; Journal of Educational Computing Research Volume 51 ; 51 ; >
+      au < expected ; exists ; 2015 ; Journal of Educational Computing Research Volume 52 ; 52 ; >
+      au < expected ; exists ; 2015 ; Journal of Educational Computing Research Volume 53 ; 53 ; >
   }
 
   {
@@ -29019,6 +29176,40 @@
   {
 
     title <
+      name = Nordic Journal of Nursing Research ;
+      issn = 0107-4083 ;
+      eissn = 2057-1593 ;
+      issnl = 0107-4083
+    >
+
+      param[base_url] = http://njn.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+        au < exists ; exists ; 1997 ; Nordic Journal of Nursing Research Volume 17 ; 17 ; >
+        au < exists ; exists ; 1998 ; Nordic Journal of Nursing Research Volume 18 ; 18 ; >
+        au < exists ; exists ; 1999 ; Nordic Journal of Nursing Research Volume 19 ; 19 ; >
+        au < exists ; exists ; 2000 ; Nordic Journal of Nursing Research Volume 20 ; 20 ; >
+        au < exists ; exists ; 2001 ; Nordic Journal of Nursing Research Volume 21 ; 21 ; >
+        au < exists ; exists ; 2002 ; Nordic Journal of Nursing Research Volume 22 ; 22 ; >
+        au < exists ; exists ; 2003 ; Nordic Journal of Nursing Research Volume 23 ; 23 ; >
+        au < exists ; exists ; 2004 ; Nordic Journal of Nursing Research Volume 24 ; 24 ; >
+        au < exists ; exists ; 2005 ; Nordic Journal of Nursing Research Volume 25 ; 25 ; >
+        au < exists ; exists ; 2006 ; Nordic Journal of Nursing Research Volume 26 ; 26 ; >
+        au < exists ; exists ; 2007 ; Nordic Journal of Nursing Research Volume 27 ; 27 ; >
+        au < exists ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; >
+        au < exists ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 ; 29 ; >
+        au < exists ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; >
+        au < exists ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; >
+        au < exists ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; >
+        au < exists ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; >
+        au < exists ; exists ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 ; >
+        au < expected ; exists ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 ; >
+
+  }
+
+  {
+
+    title <
       name = Nursing Ethics ;
       issn = 0969-7330 ;
       eissn = 1477-0989
@@ -29224,6 +29415,55 @@
       au < manifest ; exists ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 ; >
 
     }
+
+  }
+
+    {
+
+    title <
+      name = OMEGA - Journal of Death and Dying ;
+      issn = 0030-2228 ;
+      eissn = 1541-3764 ;
+      issnl = 0030-2228
+    >
+
+      param[base_url] = http://ome.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1998-1999 ; OMEGA - Journal of Death and Dying Volume 38 ; 38 ; >
+      au < exists ; exists ; 1999 ; OMEGA - Journal of Death and Dying Volume 39 ; 39 ; >
+      au < exists ; exists ; 1999-2000 ; OMEGA - Journal of Death and Dying Volume 40 ; 40 ; >
+      au < exists ; exists ; 2000 ; OMEGA - Journal of Death and Dying Volume 41 ; 41 ; >
+      au < exists ; exists ; 2000-2001 ; OMEGA - Journal of Death and Dying Volume 42 ; 42 ; >
+      au < exists ; exists ; 2001 ; OMEGA - Journal of Death and Dying Volume 43 ; 43 ; >
+      au < exists ; exists ; 2001-2002 ; OMEGA - Journal of Death and Dying Volume 44 ; 44 ; >
+      au < exists ; exists ; 2002 ; OMEGA - Journal of Death and Dying Volume 45 ; 45 ; >
+      au < exists ; exists ; 2002-2003 ; OMEGA - Journal of Death and Dying Volume 46 ; 46 ; >
+      au < exists ; exists ; 2003 ; OMEGA - Journal of Death and Dying Volume 47 ; 47 ; >
+      au < exists ; exists ; 2003-2004 ; OMEGA - Journal of Death and Dying Volume 48 ; 48 ; >
+      au < exists ; exists ; 2004 ; OMEGA - Journal of Death and Dying Volume 49 ; 49 ; >
+      au < exists ; exists ; 2004-2005 ; OMEGA - Journal of Death and Dying Volume 50 ; 50 ; >
+      au < exists ; exists ; 2005 ; OMEGA - Journal of Death and Dying Volume 51 ; 51 ; >
+      au < exists ; exists ; 2005-2006 ; OMEGA - Journal of Death and Dying Volume 52 ; 52 ; >
+      au < exists ; exists ; 2006 ; OMEGA - Journal of Death and Dying Volume 53 ; 53 ; >
+      au < exists ; exists ; 2006-2007 ; OMEGA - Journal of Death and Dying Volume 54 ; 54 ; >
+      au < exists ; exists ; 2007 ; OMEGA - Journal of Death and Dying Volume 55 ; 55 ; >
+      au < exists ; exists ; 2007-2008 ; OMEGA - Journal of Death and Dying Volume 56 ; 56 ; >
+      au < exists ; exists ; 2008 ; OMEGA - Journal of Death and Dying Volume 57 ; 57 ; >
+      au < exists ; exists ; 2008-2009 ; OMEGA - Journal of Death and Dying Volume 58 ; 58 ; >
+      au < exists ; exists ; 2009 ; OMEGA - Journal of Death and Dying Volume 59 ; 59 ; >
+      au < exists ; exists ; 2009-2010 ; OMEGA - Journal of Death and Dying Volume 60 ; 60 ; >
+      au < exists ; exists ; 2010 ; OMEGA - Journal of Death and Dying Volume 61 ; 61 ; >
+      au < exists ; exists ; 2010-2011 ; OMEGA - Journal of Death and Dying Volume 62 ; 62 ; >
+      au < exists ; exists ; 2011 ; OMEGA - Journal of Death and Dying Volume 63 ; 63 ; >
+      au < exists ; exists ; 2011-2012 ; OMEGA - Journal of Death and Dying Volume 64 ; 64 ; >
+      au < exists ; exists ; 2012 ; OMEGA - Journal of Death and Dying Volume 65 ; 65 ; >
+      au < exists ; exists ; 2012-2013 ; OMEGA - Journal of Death and Dying Volume 66 ; 66 ; >
+      au < exists ; exists ; 2013 ; OMEGA - Journal of Death and Dying Volume 67 ; 67 ; >
+      au < exists ; exists ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 ; >
+      au < exists ; exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 ; >
+      au < exists ; exists ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
+      au < expected ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
 
   }
 
