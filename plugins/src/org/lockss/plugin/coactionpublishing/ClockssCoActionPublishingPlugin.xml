@@ -1,5 +1,6 @@
 <map>
-  <!-- ClockssCoActionPublishingPlugin.xml inherited from ClockssOJS2Plugin.xml. -->  
+  <!-- ClockssCoActionPublishingPlugin.xml inherited from CoActionPublishingPlugin
+       check ClockssOJS2Plugin.xml for additional CLOCKSS entries/overrides. -->  
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
@@ -14,15 +15,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.ojs2.ClockssOJS2Plugin</string>
+    <string>org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>43</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,5 +32,14 @@
   <entry>
     <string>plugin_notes</string>
     <string>This publisher has a Creative Commons license on the start pages, unlike other CLOCKSS OJS publishers, so no separate CLOCKSS permission sentence is needed</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>
