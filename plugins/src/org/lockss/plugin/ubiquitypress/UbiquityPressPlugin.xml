@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -21,14 +21,14 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>34</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Metadata</string>
