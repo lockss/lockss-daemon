@@ -1,8 +1,8 @@
 /*
- * $Id: JournalOfResearchPracticeHtmlFilterFactory.java,v 1.2 2010-05-24 17:17:09 edwardsb1 Exp $
+ * $Id: JournalOfResearchPracticeHtmlFilterFactory.java,v 1.3 2015-02-11 08:12:25 etenbrink Exp $
  */
 /*
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,6 @@ package ca.athabascau.plugin.jrp;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -38,23 +37,22 @@ import org.lockss.plugin.*;
  *
  */
 public class JournalOfResearchPracticeHtmlFilterFactory extends org.lockss.plugin.ojs2.OJS2HtmlFilterFactory {
-
+  
+  private static final NodeFilter[] filters = new NodeFilter[] {
+      HtmlNodeFilters.tagWithAttribute("table", "id", "table1"),
+  };
+  
+  
   /* @Override
    * @see org.lockss.plugin.FilterFactory#createFilteredInputStream(org.lockss.plugin.ArchivalUnit, java.io.InputStream, java.lang.String)
-   */               
-  public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
-      String encoding) {
-    InputStream instr1;
+   */
+  @Override
+  public InputStream createFilteredInputStream(
+      ArchivalUnit au, InputStream in, String encoding)
+          throws PluginException {
     
-    instr1 = super.createFilteredInputStream(au, in, encoding);
-    
-    NodeFilter[] filters = new NodeFilter[] {
-        HtmlNodeFilters.tagWithAttribute("table", "id", "table1"),        
-    };
-    OrFilter orFilter = new OrFilter(filters);
-    return new HtmlFilterInputStream(instr1,
-                                   encoding,
-                                   HtmlNodeFilterTransform.exclude(orFilter));
-}
+    InputStream instr1 = super.createFilteredInputStream(au, in, encoding, filters);
+    return instr1;
+  }
 
 }
