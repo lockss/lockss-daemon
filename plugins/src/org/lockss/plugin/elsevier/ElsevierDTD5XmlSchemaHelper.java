@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.5 2014-12-02 21:00:36 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.6 2015-02-11 16:58:05 alexandraohlson Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ implements SourceXmlSchemaHelper {
   private static final String dataset_article_issn = "journal-item-unique-ids/jid-aid/issn";
   private static final String dataset_article_jid = "journal-item-unique-ids/jid-aid/jid";
   private static final String dataset_article_date = "journal-item-properties/online-publication-date";
-  private static final String dataset_article_metadata = "files-info/ml/pathname";
+  public static final String dataset_article_metadata = "files-info/ml/pathname";
   public static final String dataset_dtd_metadata = "files-info/ml/dtd-version";
   private static final String dataset_article_pdf = "files-info/web-pdf/pathname";
   // get the journal title from the closest preceeding journal-info node
@@ -145,7 +145,6 @@ implements SourceXmlSchemaHelper {
       return null;
     }
   };
-
 
   /* 1.  MAP associating xpath with value type with evaluator */
   static private final Map<String,XPathValue> articleMap = 

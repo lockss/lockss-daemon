@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.8 2015-01-08 01:09:38 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.9 2015-02-11 16:58:05 alexandraohlson Exp $
  */
 
 /*
@@ -64,6 +64,14 @@ import org.xml.sax.SAXException;
 public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   static Logger log = Logger.getLogger(ElsevierDTD5XmlSourceMetadataExtractorFactory.class);
 
+
+  //Use to identify the volume and optional issue and supplement information
+  // from the path stored in the dataset.xml file
+  //         03781119/v554i2/S0378111914011998/main.xml
+  // will have a "v" portion $1, may have "i" portion $2 and/or "s" portion $3
+  // there could be a hyphen in the volume or issue portion
+  static final Pattern ISSUE_INFO_PATTERN = Pattern.compile("^[^/]+/v([^is/]+)(?:i([^s/]+))?(?:s([^/]+))?/[^/]+/main\\.xml$", Pattern.CASE_INSENSITIVE);
+
   // Used in modifyAMList to identify the name for the current SET of tar files 
   static final Pattern TOP_METADATA_PATTERN = Pattern.compile("(.*/)[^/]+A\\.tar!/([^/]+)/dataset\\.xml$", Pattern.CASE_INSENSITIVE);
   // used to exclude underlying archives so we don't open them
@@ -71,7 +79,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
   static final Pattern DTD_PATTERN = Pattern.compile("^([A-Z]{2})\\s5\\.\\d(\\.\\d)?\\s([A-Z-]+)$", Pattern.CASE_INSENSITIVE);
   private static final String JOURNAL_ARTICLE = "JA";
 
-  
+
 
   // Use this map to determine which node to use for underlying article schema
   static private final Map<String, String> JASchemaMap =
@@ -176,8 +184,40 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
         log.debug3("Check for existence of " + full_article_pdf);
         if(fileCu != null && (fileCu.hasContent())) {
           thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+          /*
+           * 2. Now get the volume, issue and supplement status from the URL
+           * key_for_filename looks like this:
+           *      03781119/v554i2/S0378111914011998/main.xml
+           *   we want the second section which could have a v, i, and s component
+           *   v# or v#-# 
+           *   i# or i#-#
+           *   s#orLtr
+           *   will have at least v
+           *   exs: /v113-115sC/ or /v58i2-3/ or /v117i6/ or /v39sC/ or /v100i8sS/   
+           */
+          
+          Matcher vMat = ISSUE_INFO_PATTERN.matcher(thisAM.getRaw(ElsevierDTD5XmlSchemaHelper.dataset_article_metadata));
+          log.debug3("checking for volume information from path");
+          if (vMat.matches()) {
+            String vol = vMat.group(1);
+            String optIss = vMat.group(2);
+            String optSup = vMat.group(3);
+            log.debug3("found volume information: V" + vol + "I" + optIss + "S" + optSup);
+            thisAM.put(MetadataField.FIELD_VOLUME, vol);
+            if( (optIss != null) || (optSup != null)){
+              StringBuilder val = new StringBuilder();
+              if (optIss != null) {
+                 val.append(optIss);
+              }
+              if (optSup != null) {
+                val.append(optSup);
+              }
+              // there is no field equivalent to the suppl used by Elsevier
+              thisAM.put(MetadataField.FIELD_ISSUE, val.toString()); 
+            }
+          }
           /* 
-           * 2. Now get remaining metadata from the article xml file 
+           * 3. Now get remaining metadata from the article xml file 
            */
           mdCu = B_au.makeCachedUrl(full_article_md_file);
           /*
@@ -285,7 +325,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
         String pattern_string = "^" + mat.group(1) + mat.group(2) + "[A-Z]\\.tar!/" + mat.group(2) + "/.*/main\\.xml$";
         log.debug3("Iterate and find the pattern: " + pattern_string);
         ARTICLE_METADATA_PATTERN = Pattern.compile(pattern_string, Pattern.CASE_INSENSITIVE);
-        
+
         // Limit the scope of the iteration to only those TAR archives that share this tar number
         List<String> rootList = createRootList(datasetCu, mat);
         // Now create the map of files to the tarfile they're in
@@ -318,12 +358,12 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
       return  allAMs;
     }
   }
-  
+
   /* 
    * Create a list of strings, one for each unique tar within this tarset.
    * The passed in CU is for the A file of the list, the one that dataset.xml came off of.
    */
-  
+
   private List<String> createRootList(CachedUrl cu, Matcher mat) {
     String test_tar_name;
     String tar_begin = mat.group(1) + mat.group(2);

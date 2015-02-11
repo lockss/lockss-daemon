@@ -1,4 +1,4 @@
-/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.5 2015-01-13 19:33:15 alexandraohlson Exp $
+/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.6 2015-02-11 16:58:05 alexandraohlson Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -51,7 +51,7 @@ public class ElsevierDTD5XmlSourceArticleIteratorFactory
   // BASE_URL/2014/CLKS0000000000003A.tar!/CLKS0000000000003/dataset.xml
   protected static final String TOP_METADATA_PATTERN_TEMPLATE = "\"(%s%d/[^/]+)A\\.tar!/([^/]+)/dataset\\.xml$\",base_url,year";
   // set an exclude pattern to increase efficiency. dataset.xml is only in xxxA.tar 
-  protected static final String ALL_NOT_A_TAR_FILES_TEMPLATE = "\"(%s%d/[^/]+)[B-Z]\\.tar$\", base_url, year";
+  protected static final String ALL_NOT_A_TAR_FILES_TEMPLATE = "\"(%s%d/[^/]+)[^A]\\.tar$\", base_url, year";
   
   public static final Pattern DATASET_XML_PATTERN = Pattern.compile("/(dataset)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
