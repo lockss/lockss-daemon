@@ -1,5 +1,5 @@
 /*
- * $Id: UbiquityPressHtmlFilterFactory.java,v 1.3 2013-01-11 19:46:29 ldoan Exp $
+ * $Id: UbiquityPressHtmlFilterFactory.java,v 1.4 2015-02-11 08:17:50 etenbrink Exp $
  */
 
 /*
@@ -35,23 +35,21 @@ package org.lockss.plugin.ubiquitypress;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ojs2.OJS2HtmlFilterFactory;
-import org.lockss.util.Logger;
 
 public class UbiquityPressHtmlFilterFactory extends OJS2HtmlFilterFactory {
+    @Override
     public InputStream createFilteredInputStream(ArchivalUnit au,
                                                  InputStream in,
-                                                 String encoding) {
+                                                 String encoding) 
+                                                     throws PluginException {
         NodeFilter[] filters = new NodeFilter[] {
             HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
-            
         };
-        return new HtmlFilterInputStream(super.createFilteredInputStream(au, in, encoding),
-                                         encoding,
-                                         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+        return super.createFilteredInputStream(au, in, encoding, filters);
     }
     
 }
