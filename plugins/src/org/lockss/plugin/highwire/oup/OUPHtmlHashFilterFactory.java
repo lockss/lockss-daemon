@@ -1,5 +1,5 @@
 /*
- * $Id: OUPHtmlHashFilterFactory.java,v 1.2 2015-02-04 07:14:09 etenbrink Exp $
+ * $Id: OUPHtmlHashFilterFactory.java,v 1.3 2015-02-11 09:10:48 etenbrink Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   
   @Override
   public boolean doWSFiltering() {
-    return false;
+    return true;
   }
   @Override
   public boolean doTagAttributeFiltering() {
@@ -69,8 +69,14 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
         // content-header from QJM
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-header"),
-        // <div class="panel-pane pane-panels-mini pane-oup-explore-related-articles"
+        // do not hash citing and related section, nor keywords, by author, and eletters sections
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citing|related)-articles?"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-(keywords|by-author|eletters)"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "panel-separator"),
+        // OUP author section kept changing formating and spacing
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-article-citation"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-cite-title")),
         // don't remove any div tags with login, as they should not happen and we don't want to hide
         // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-login"),
     };
