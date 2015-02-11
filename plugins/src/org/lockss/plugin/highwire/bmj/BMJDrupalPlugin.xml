@@ -1,0 +1,76 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development - Evan</string>
+  </entry>
+  <!-- compare to ClockssBmjDrupalPlugin, the added entries should be in synch -->
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.bmj.BmjDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire BMJ Drupal Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>16</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <!-- entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry -->
+  <entry>
+    <string>au_name</string>
+    <string>"HighWire BMJ Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <!-- entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%scontent(?:/[^/]+)?/[^/]+/bmj[.][^/?]+([.]full[.]pdf$|/article-(data|info)|/.*/embed/)", base_url</string>
+    </list>
+  </entry -->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent/%s/bmj[.][^/]+([.]full([.]pdf([+]html)?)?)$", base_url, volume_name</string>
+    </list>
+  </entry>
+  <!-- entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.bmj.BmjDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.bmj.BmjDrupalHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.bmj.BmjDrupalHtmlCrawlFilterFactory</string>
+  </entry -->
+</map>
