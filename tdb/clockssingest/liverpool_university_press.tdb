@@ -182,23 +182,18 @@
 
   }
 
-  {
-
-    title <
-      name = European Comic Art ;
-      issn = 1754-3797 ;
-      eissn = 1754-3800 ;
-      issnl = 1754-3797
-    >
-
-    param[journal_issn] = 1754-3800
-    comment[down] = publisher has moved to Berghahn Journals
-
-    au < down ; frozen ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < down ; frozen ; 2010 ; European Comic Art Volume 3 ; 3 >
-    au < superseded ; down ; 2011 ; European Comic Art Volume 4 [superseded] ; 4 >
-
-  }
+#  {
+#
+#    title <
+#      name = European Comic Art ;
+#      issn = 1754-3797 ;
+#      eissn = 1754-3800 ;
+#      issnl = 1754-3797
+#    >
+#
+#    # This title moved from Liverpool University Press to Berghahn Journals
+#
+#  }
 
   {
 
