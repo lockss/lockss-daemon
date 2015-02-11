@@ -1,5 +1,5 @@
 /*
- * $Id: ScHtmlHashFilterFactory.java,v 1.1 2015-01-31 03:57:40 thib_gc Exp $
+ * $Id: ScHtmlHashFilterFactory.java,v 1.2 2015-02-11 03:57:26 thib_gc Exp $
  */
 
 /*
@@ -47,6 +47,11 @@ import org.lockss.util.ReaderInputStream;
 
 public class ScHtmlHashFilterFactory implements FilterFactory {
 
+  /*
+   * AMA = American Medical Association (http://jamanetwork.com/)
+   * SPIE = SPIE (http://spiedigitallibrary.org/)
+   */
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -61,11 +66,11 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
          * KEEP: throw out everything but main content areas
          */
         HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-            // KEEP manifest page content [AMA]
+            // KEEP manifest page content [AMA, SPIE]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssuesAndVolumeListManifest"),
-            // KEEP main area of TOCs [AMA]
+            // KEEP main area of TOCs [AMA, SPIE]
             HtmlNodeFilters.tagWithAttribute("div", "class", "articleBodyContainer"),
-            // KEEP main area of article [AMA]
+            // KEEP main area of article [AMA, SPIE]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "contentColumn"),
             // KEEP proper citation of article [AMA]
             HtmlNodeFilters.tagWithAttribute("span", "class", "citationCopyPaste"),
@@ -79,38 +84,46 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tag("noscript"),
             HtmlNodeFilters.tag("style"),
             HtmlNodeFilters.comment(),
-            // DROP eventual "Free" text-icon [AMA TOC/article]
-            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "freeArticle"),
-            // DROP RSS and e-mail alert buttons [AMA TOC]
+            // DROP eventual "Free"/"Open Access" text/icon [AMA/SPIE TOC/article]
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "freeArticle"), // [AMA TOC/article]
+            HtmlNodeFilters.tagWithText("h4", "Open Access"), // [SPIE TOC/article]
+            // DROP RSS and e-mail alert buttons [AMA/SPIE TOC]
             HtmlNodeFilters.tagWithAttribute("div", "class", "subscribe"),
-            // DROP expand/collapse buttons [AMA TOC]
+            // DROP expand/collapse buttons [AMA/SPIE TOC]
             HtmlNodeFilters.tagWithAttribute("div", "class", "expandCollapse"),
-            // DROP previous/next article links [AMA TOC/article]
-            HtmlNodeFilters.tagWithAttribute("div", "class", "pageHeaderInfo"), // [AMA TOC]
-            HtmlNodeFilters.tagWithAttribute("div", "class", "contentPageHeader"), // [AMA article]
-            // DROP decorative horizontal separator [AMA article]
+            // DROP previous/next article link text [AMA/SPIE TOC/article]
+            // (also in crawl filter)
+            HtmlNodeFilters.tagWithAttribute("a", "class", "prev"),
+            HtmlNodeFilters.tagWithAttribute("a", "class", "next"),
+            // DROP designated separator
+            // [AMA article]: vertical bar in breadcrumb
+            // [SPIE article]: semicolon between authors
             HtmlNodeFilters.tagWithAttribute("span", "class", "separator"),
-            // DROP text size picker [AMA article]
+            // DROP text size picker [AMA/SPIE article]
             HtmlNodeFilters.tagWithAttribute("div", "class", "textSize"),
-            // DROP internal jump links [AMA article]
+            // DROP internal jump links [AMA/SPIE article]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "contentJumpLinks"),
-            // DROP sections appended to end of main area [AMA article]
+            // DROP sections appended to end of main area [AMA/SPIE article]
             HtmlNodeFilters.tagWithAttribute("div", "id", "divSignInSubscriptionUpsell"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "relatedArticlesMobile"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "collectionsMobile"),
-            // DROP parts of figures/tables other than captions [AMA article/figures/tables]
+            // DROP parts of figures/tables other than captions [AMA/SPIE article/figures/tables]
             HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "figureSection"),
-                                             new OrFilter(HtmlNodeFilters.tagWithAttributeRegex("h6", "class", "figureLabel"),
-                                                          HtmlNodeFilters.tagWithAttribute("div", "class", "figureCaption"))),
+                                             new OrFilter(HtmlNodeFilters.tagWithAttributeRegex("h6", "class", "figureLabel"), // [AMA article/figures]
+                                                          HtmlNodeFilters.tagWithAttribute("div", "class", "figureCaption"))), // [AMA/SPIE article/figures]
             HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tableSection"),
-                                             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Table ")),
-            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Figure "), // freeform, e.g. http://jama.jamanetwork.com/article.aspx?articleid=1487499
+                                             new OrFilter(HtmlNodeFilters.tagWithAttribute("div", "class", "tableCaption"), // [SPIE article/tables]
+                                                          HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Table "))), // [AMA article/tables]
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Figure "), // freeform, e.g. http://jama.jamanetwork.com/article.aspx?articleid=1487499 [AMA]
             // DROP Letters (7), CME (8) and Responses (10) tabs and panels [AMA article]
+            // [SPIE]: not sure how these work there yet
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tab(7|8|10)Div"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^tab(7|8|10)$"),
-            // DROP external links in References [AMA article/references]
-            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "pubmedLink"),
-            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "crossrefDoi"),
+            // DROP external links in References [AMA/SPIE article/references]
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "pubmedLink"), // [AMA article/references]
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "crossrefDoi"), // [AMA/SPIE article/references]
+            // First page preview sometimes appears, sometimes not [AMA article]
+            HtmlNodeFilters.tagWithAttribute("div", "id", "divFirstPagePreview"),
         }))
       )
     );
