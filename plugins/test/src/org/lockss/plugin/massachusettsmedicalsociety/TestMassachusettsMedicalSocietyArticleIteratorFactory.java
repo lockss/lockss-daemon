@@ -48,6 +48,7 @@ import org.lockss.util.*;
  * PDF Full Text: http://www.nejm.org/doi/pdf/10.1056/NEJMoa042957
  * Citation (containing metadata): www.nejm.org/action/downloadCitation?format=(ris|endnote|bibTex|medlars|procite|referenceManager)&doi=10.1056%2FNEJMoa042957&include=cit&direct=checked
  * Supplemental Materials page: http://www.nejm.org/action/showSupplements?doi=10.1056%2FNEJMc1304053
+ *
  */
 public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends ArticleIteratorTestCase {
 
