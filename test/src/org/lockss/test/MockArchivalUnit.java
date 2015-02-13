@@ -725,7 +725,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   @Override
-  public CrawlSeed makeCrawlSeed() {
+  public CrawlSeed makeCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
     return new BaseCrawlSeed(this);
   }
 

@@ -193,7 +193,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return new DefaultUrlCacher(this, ud);
   }
   
-  public CrawlSeed makeCrawlSeed() {
+  public CrawlSeed makeCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
     return new BaseCrawlSeed(this);
   }
   

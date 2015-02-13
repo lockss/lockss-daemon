@@ -119,20 +119,12 @@ public class PluginUtil {
 	if (auConfig != null) {
 	  ArchivalUnit au = plug.createAu(auConfig);
 	  if (!attributes.isEmpty()) {
-	    CrawlSeed ci = null;
 	    for (String attr : attributes) {
 	      if ("start-url".equals(attr)) {
-	        ci = au.makeCrawlSeed();
-          pout.println("Start urls: " + ci.getStartUrls());
+          pout.println("Start urls: " + au.getStartUrls());
           continue;
 	      }
   		}
-	    if(ci == null && plug.findAuConfigDescr(
-	        DefinablePlugin.KEY_PLUGIN_CRAWL_SEED_FACTORY) == null){
-	      System.err.println("Error: plugin pname doesn't have "
-	          + "a start URL or CrawlInitializer");
-	    }
-		
 	      }
 	    }
 	  }
