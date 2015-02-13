@@ -108,7 +108,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Ambix Volume 57 ; 57 >
     au < doNotProcess ; doNotProcess ; 2011 ; Ambix Volume 58 ; 58 >
     au < doNotProcess ; doNotProcess ; 2012 ; Ambix Volume 59 ; 59 >
-    au < ready ; exists ; 2013 ; Ambix Volume 60 ; 60 >
+    au < manifest ; exists ; 2013 ; Ambix Volume 60 ; 60 >
     au < manifest ; exists ; 2014 ; Ambix Volume 61 ; 61 >
 
   }
@@ -159,7 +159,7 @@
     au < manifest ; exists ; 2008 ; Annals of Tropical Paediatrics: International Child Health Volume 28 ; 28 >
     au < manifest ; exists ; 2009 ; Annals of Tropical Paediatrics: International Child Health Volume 29 ; 29 >
     au < manifest ; exists ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 >
-    au < ready ; exists ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 >
+    au < manifest ; exists ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 >
 
   }
 
@@ -211,7 +211,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Arms & Armour Volume 7 ; 7 >
     au < doNotProcess ; doNotProcess ; 2011 ; Arms & Armour Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2012 ; Arms & Armour Volume 9 ; 9 >
-    au < ready ; exists ; 2013 ; Arms & Armour Volume 10 ; 10 >
+    au < manifest ; exists ; 2013 ; Arms & Armour Volume 10 ; 10 >
     au < manifest ; exists ; 2014 ; Arms & Armour Volume 11 ; 11 >
 
   }
@@ -400,7 +400,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Brontë Studies Volume 35 ; 35 >
     au < doNotProcess ; doNotProcess ; 2011 ; Brontë Studies Volume 36 ; 36 >
     au < doNotProcess ; doNotProcess ; 2012 ; Brontë Studies Volume 37 ; 37 >
-    au < ready ; exists ; 2013 ; Brontë Studies Volume 38 ; 38 >
+    au < manifest ; exists ; 2013 ; Brontë Studies Volume 38 ; 38 >
     au < manifest ; exists ; 2014 ; Brontë Studies Volume 39 ; 39 >
 
   }
@@ -2801,7 +2801,7 @@
     au < manifest ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 >
     au < manifest ; exists ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 >
-    au < manifest ; exists ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 >
+    au < testing ; exists ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 >
 
   }
 
@@ -2818,7 +2818,7 @@
 
     au < manifest ; exists ; 2012 ; Medical Writing Volume 21 ; 21 >
     au < manifest ; exists ; 2013 ; Medical Writing Volume 22 ; 22 >
-    au < manifest ; exists ; 2014 ; Medical Writing Volume 23 ; 23 >
+    au < testing ; exists ; 2014 ; Medical Writing Volume 23 ; 23 >
 
   }
 
@@ -2847,7 +2847,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Medieval Archaeology Volume 55 ; 55 >
     au < doNotProcess ; doNotProcess ; 2012 ; Medieval Archaeology Volume 56 ; 56 >
     au < manifest ; exists ; 2013 ; Medieval Archaeology Volume 57 ; 57 >
-    au < manifest ; exists ; 2014 ; Medieval Archaeology Volume 58 ; 58 >
+    au < testing ; exists ; 2014 ; Medieval Archaeology Volume 58 ; 58 >
 
   }
 
@@ -2870,7 +2870,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Medieval Sermon Studies Volume 55 ; 55 >
     au < doNotProcess ; doNotProcess ; 2012 ; Medieval Sermon Studies Volume 56 ; 56 >
     au < manifest ; exists ; 2013 ; Medieval Sermon Studies Volume 57 ; 57 >
-    au < manifest ; exists ; 2014 ; Medieval Sermon Studies Volume 58 ; 58 >
+    au < testing ; exists ; 2014 ; Medieval Sermon Studies Volume 58 ; 58 >
 
   }
 
