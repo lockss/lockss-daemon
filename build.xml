@@ -69,9 +69,9 @@ Args:
   -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
 
   post-commit-test args:
-  -Dcvstag=tag             Cvs tag to checkout (defaults to tag of current tree)
+  -Dbranch=tag             Branch to checkout (defaults to current branch)
   -Dcopylib=true           If true, lib jars are copied to temp build dir,
-                           not checked out from cvs.
+                           not checked out from svn.
   -Dtarget=target          Target that post-commit-test will build.
 
 
@@ -135,9 +135,10 @@ Args:
   <!--  Ignore system classpath, to ensure consistent builds -->
   <property name="build.sysclasspath" value="ignore" />
 
-  <!--  CVS-related -->
-  <property name="cvs.module.default" value="lockss-daemon-code" />
-  <property name="cvs.dir"       value="lockss-daemon" />
+  <!--  svn-related -->
+  <property name="svn.module.default" value="lockss-daemon" />
+  <property name="svn.dir"       value="lockss-daemon" />
+  <!-- XXX should get this from -->
 
   <!--  Directories -->
   <property name="java.lib"       value="${env.JAVA_HOME}/lib" />
@@ -1241,7 +1242,7 @@ The target you have selected requires compiling under JDK 1.7.
   </target>
 
   <!-- ==================================================================== -->
-  <!--  -->
+  <!-- Find default release version  -->
   <target name="-set.releasename">
     <loadfile property="releasename" srcfile="${default.releasename.file}"
         failonerror="no">
@@ -1255,7 +1256,36 @@ The target you have selected requires compiling under JDK 1.7.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="build-info" depends="build-info-if-needed,-set.hostname,-set.releasename"
+  <!-- Find currently checked out branch if no explicit arg supplied -->
+  <target name="set.branchname" depends="prepare,check.contrib">
+   <property name="branch" value="" />
+   <if>
+    <equals arg1="${branch}" arg2="" />
+    <then>
+      <exec executable="svn" dir="${basedir}" outputproperty="svn.info">
+	<arg value="info" />
+      </exec>
+      <propertyregex property="branch.name"
+		     input="${svn.info}"
+		     regexp="URL.*${svn.module.default}/(.*)"
+		     select="\1"
+		     defaultValue="trunkcc" />
+      <propertyregex property="svn.root"
+		     input="${svn.info}"
+		     regexp="Repository Root: (.*)"
+		     select="\1" />
+      <echo message="svn.info: ${svn.info}" />
+      <echo message="branch.name: ${branch.name}" />
+      <echo message="svn.root: ${svn.root}" />
+    </then>
+    <else>
+      <property name="branch.name" value="branches/${branch}"/>
+    </else>
+   </if>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="build-info" depends="build-info-if-needed,-set.hostname,-set.releasename,set.branchname"
        unless="jar.is.up.to.date">
     <!--  The prop names used here are also known to
           org.lockss.util.BuildInfo class -->
@@ -1276,7 +1306,7 @@ The target you have selected requires compiling under JDK 1.7.
       <entry key="build.user.name" value="${user.name}"/>
       <entry key="build.host" value="${hostname}"/>
       <entry key="build.releasename" value="${releasename}"/>
-      <entry key="build.cvs.tag" value="$Name: not supported by cvs2svn $"/>
+      <entry key="build.branch" value="$branchname"/>
     </propertyfile>
     <if>
       <isset property="releasename" />
@@ -1284,32 +1314,10 @@ The target you have selected requires compiling under JDK 1.7.
         <echo message="Building daemon ${releasename}" />
       </then>
     </if>
-    <!-- Build file with CVS revision info for all files -->
-
-    <!-- Concatenate all CVS/Entries files.   Not ideal, as dir names
-         must be inferred, but it's fast, done entirely within Ant,
-         and includes files that don't have cvs Id line -->
-    <concat destfile="${build.filerev.file}">
-       <fileset dir="${src}" includes="**/CVS/Entries" defaultexcludes="no" />
-    </concat>
-<!--
- Some other ways to do this.
-     Extract cvs Id lines from all files, with shell command:
-     sh -c "find . -type f -print0 | xargs -0 '"'egrep '\$Id(:.*)?\$'"'"
-    <exec executable="sh" dir="${src}" output="${build.filerev.file}">
-      <arg line="-c &quot;find . -type f  -print0 | xargs -0 egrep &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos;&quot;" />
+    <!-- Build file with SVN revision info for all files -->
+    <exec executable="svn" dir="${src}" output="${build.filerev.file}">
+      <arg line="--verbose status" />
     </exec>
-     Similar, slightly faster:
-     sh -c "egrep -r '"'\$Id(:.*)?\$'"'"
-    <exec executable="sh" dir="${src}" output="${build.filerev.file}">
-      <arg line="-c &quot;egrep -r &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos; .&quot;" />
-    </exec>
-     Concatenate CVS/Entries files, with header for each:
-     sh -c "find . -name CVS -type d -exec echo {} \; -exec grep '^/' {}/Entries \;"
-    <exec executable="sh" dir="${src}" output="${build.filerev.file}">
-      <arg line="-c &quot;find . -name CVS -type d -exec echo Dir \{\} \; -exec grep &apos;^/&apos; {}/Entries \;&quot;" />
-    </exec>
--->
   </target>
 
   <!-- Set hostname from HOSTNAME env var if set, else 'hostname' program -->
@@ -2710,148 +2718,89 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
-  <!-- Set up cvs.co.tag from cvstag arg if set, or cvs tag under which
-       this file was checked out -->
-  <target name="get.cvs.tag" depends="check.contrib" >
-   <property name="cvstag" value="" />
-   <if>
-    <equals arg1="${cvstag}" arg2="" />
-    <then>
-      <!-- Note: The following applies a regexp to the CVS expansion of the
-           Name keyword to determine the CVS tag on this file, if any.  The
-           keyword must not appear literally in the regexp, or it would be
-           expanded there too.  An equivalent regexp is used instead. -->
-      <!-- cvs.name.tag will get a value that looks like either
-	   "$ Name: branch_tag $" (or "$ Name: $" or $ Name$ for no tag).
-           (Except that there is no space between the $ and Name.)
-           The prefix and suffix are removed to yield the actual tag. -->
-      <property name="cvs.name.tag" value="$Name: not supported by cvs2svn $"/>
-      <propertyregex property="cvs.co.tag0"
-         input="${cvs.name.tag}"
-         regexp="\$[N]ame: *([^ ]*) *\$"
-         replace="\1"
-         defaultValue="" />
-      <!-- cvs expands the Name keyword to "BASE" when -r BASE is used to
-           revert to the checked out branch.  (Similarly when Revert to
-           Base is used in Eclipse.)  Recognize this and turn it back into
-           the empty string.) -->
-      <if>
-	<equals arg1="${cvs.co.tag0}" arg2="BASE" />
-	<then>
-	  <property name="cvs.co.tag" value=""/>
-	</then>
-	<else>
-	  <property name="cvs.co.tag" value="${cvs.co.tag0}"/>
-	</else>
-      </if>
-    </then>
-    <else>
-      <property name="cvs.co.tag" value="${cvstag}"/>
-    </else>
-   </if>
-  </target>
-
-  <!-- ==================================================================== -->
   <target name="checkout-and-build"
-     depends="require.release.java.version,check.contrib,get.cvs.tag"
-     description="Checkout current cvs into temp dir, build and test all." >
-   <property name="cvstag" value="" />
+     depends="require.release.java.version,check.contrib,set.branchname"
+     description="Checkout current svn into temp dir, build and test all." >
    <property name="target" value="test-all" />
    <mkdir dir="${temp.build}" />
    <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
    <mkdir dir="${temp.build.dir}" />
-   <property name="temp.proj.dir" value="${temp.build.dir}/${cvs.dir}" />
+   <property name="temp.proj.dir" value="${temp.build.dir}/${svn.dir}" />
 
    <trycatch property="recursive.error.msg">
-    <try>
-     <if>
-      <equals arg1="${cvs.co.tag}" arg2="" />
-      <then>
-       <echo>Checking out MAIN BRANCH
-  to ${temp.build.dir}</echo>
-      </then>
-      <else>
-       <echo>Checking out BRANCH TAG: ${cvs.co.tag}
-  to ${temp.build.dir}</echo>
-      </else>
-     </if>
-     <if>
-      <isfalse value="${nocvs}" />
-      <then>
-        <if>
-          <istrue value="${copylib}" />
-          <then>
-            <echo message="copying lib dir"/>
-            <property name="cvs.module" value="lockss-daemon-butlib" />
-            <copy todir="${temp.proj.dir}"
-                  preservelastmodified="true" >
-              <fileset dir="${basedir}" >
-                <include name="lib/"/>
-                <exclude name="lib/lockss.jar"/>
-                <exclude name="lib/lockss-*.jar"/>
-              </fileset>
-            </copy>
-          </then>
-          <else>        
-            <property name="cvs.module" value="${cvs.module.default}" />
-          </else>
-        </if>
-	<loadfile property="cvs.root" srcfile="${basedir}/CVS/Root"
-         failonerror="no">
-          <filterchain> <striplinebreaks/> </filterchain>
-        </loadfile>
-        <if>
-         <or>
-          <not> <isset property="cvs.root" /> </not>
-          <equals arg1="${cvs.root}" arg2="" />
-         </or>
-         <then>
-          <echo message="from default CVSROOT"/>
-	  <cvs command="-z3 -Q checkout"
-               package="${cvs.module}"
-	       dest="${temp.build.dir}"
-               tag="${cvs.co.tag}"
-               failonerror="true"/>
-         </then>
-         <else>
-          <!-- Eclipse creates CVS/Root files with :extssh: as the access
-               method.  Turn these into :ssh:  -->
-	  <propertyregex property="cvs.root1"
-	     input="${cvs.root}"
-	     regexp="^(:ext)ssh(:.*)$"
-	     replace="\1\2"
-             defaultValue="${cvs.root}" />
-          <echo message="CVSROOT=${cvs.root1}"/>
-          <cvs command="-z3 -d ${cvs.root1} -Q checkout"
-               package="${cvs.module}"
-               dest="${temp.build.dir}"
-               tag="${cvs.co.tag}"
-               failonerror="true"/>
-         </else>
-        </if>
-      </then>
-      <else>
-	<echo>No cvs, copying from ${basedir}</echo>
-	<mkdir dir="${temp.proj.dir}" />
-	<copy todir="${temp.proj.dir}" >
-	  <fileset dir="${basedir}" >
-	    <include name="build.xml"/>
-	    <include name="lib/"/>
-	    <include name="src/"/>
-	    <include name="test/src/"/>
-	    <include name="plugins/src/"/>
-	    <include name="plugins/test/src/"/>
-	    <include name="ant/src/"/>
-	    <include name="doclet/"/>
-	    <include name="tools/"/>
-	    <include name="scripts/"/>
-	    <include name="tdb/"/>
-	    <exclude name="**/classes/**"/>
-	  </fileset>
-	</copy>
-      </else>
-     </if>
-     <echo>Building and testing (${target}) in ${temp.build.dir}</echo>
+     <try>
+       <if>
+	 <equals arg1="${branch.name}" arg2="trunk" />
+	 <then>
+	   <echo>Checking out MAIN BRANCH
+	     to ${temp.build.dir}</echo>
+	 </then>
+	 <else>
+	   <echo>Checking out BRANCH: ${branch.name}
+	     to ${temp.build.dir}</echo>
+	 </else>
+       </if>
+       <if>
+	 <isfalse value="${nosvn}" />
+	 <then>
+           <if>
+             <istrue value="${copylib}" />
+             <then>
+	       <echo message="copylib not supported yet."/>
+<!--                <echo message="copying lib dir"/> -->
+<!--                <property name="cvs.module" value="lockss-daemon-butlib" /> -->
+<!--                <copy todir="${temp.proj.dir}" -->
+<!--                      preservelastmodified="true" > -->
+<!-- 		 <fileset dir="${basedir}" > -->
+<!--                    <include name="lib/"/> -->
+<!--                    <exclude name="lib/lockss.jar"/> -->
+<!--                    <exclude name="lib/lockss-*.jar"/> -->
+<!-- 		 </fileset> -->
+<!--                </copy> -->
+             </then>
+             <else>        
+             </else>
+           </if>
+           <if>
+             <or>
+               <not> <isset property="svn.root" /> </not>
+               <equals arg1="${svn.root}" arg2="" />
+             </or>
+             <then>
+               <fail message="Couldn't file root"/>
+             </then>
+           </if>
+	   <exec executable="svn" dir="${temp.build.dir}"
+		 failonerror="true">
+	     <arg value="checkout" />
+	     <arg value="-q" />
+	     <arg value="--non-interactive" />
+	     <arg value="svn://svn.code.sf.net/p/lockss/svn/lockss-daemon/${branch.name}" />
+	     <arg value="${svn.dir}" />
+	   </exec>
+	 </then>
+	 <else>
+	   <echo>No svn, copying from ${basedir}</echo>
+	   <mkdir dir="${temp.proj.dir}" />
+	   <copy todir="${temp.proj.dir}" >
+	     <fileset dir="${basedir}" >
+	       <include name="build.xml"/>
+	       <include name="lib/"/>
+	       <include name="src/"/>
+	       <include name="test/src/"/>
+	       <include name="plugins/src/"/>
+	       <include name="plugins/test/src/"/>
+	       <include name="ant/src/"/>
+	       <include name="doclet/"/>
+	       <include name="tools/"/>
+	       <include name="scripts/"/>
+	       <include name="tdb/"/>
+	       <exclude name="**/classes/**"/>
+	     </fileset>
+	   </copy>
+	 </else>
+       </if>
+       <echo>Building and testing (${target}) in ${temp.build.dir}</echo>
 <!--
 	Would prefer to run build in separate jvm, but ant task doesn't
 	support the fork= attribute.  Don't want to pass most properties
@@ -2905,7 +2854,7 @@ Test results in ${test.results}
    description="Clean, build and test all." />
 
   <target name="post-commit-test" depends="checkout-and-build"
-   description="Checkout current cvs into temp dir, build and test all." />
+   description="Checkout current svn into temp dir, build and test all." />
 
   <!-- ==================================================================== -->
   <target name="check.class.arg" unless="class.arg.specified" >

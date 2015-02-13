@@ -4,10 +4,9 @@ See http://www.lockss.org/ for information about the project.
 Obtaining Source
 ----------------
 
-The latest version of this code can be obtained via CVS with
+The latest version of this code can be obtained via Subversion with
 
- export CVSROOT=:pserver:anonymous@lockss.cvs.sourceforge.net:/cvsroot/lockss
- cvs checkout lockss-daemon
+ svn checkout svn://svn.code.sf.net/p/lockss/svn/lockss-daemon/trunk lockss-daemon
 
 Prerequisites
 -------------
