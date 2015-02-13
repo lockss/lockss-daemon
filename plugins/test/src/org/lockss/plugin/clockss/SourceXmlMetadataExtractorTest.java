@@ -288,7 +288,6 @@ extends LockssTestCase {
    * raw map, cooked map or both
    */
   public void debug3_MDList(List<ArticleMetadata> mdList) {
-    log.setLevel("debug3");
     Iterator<ArticleMetadata> mdIt = mdList.iterator();
     ArticleMetadata mdRecord = null;
     while (mdIt.hasNext()) {
