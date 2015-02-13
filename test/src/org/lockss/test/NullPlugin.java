@@ -680,7 +680,7 @@ public class NullPlugin {
       return null;
     }
 
-    public CrawlSeed makeCrawlSeed() {
+    public CrawlSeed makeCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
       return null;
     }
 

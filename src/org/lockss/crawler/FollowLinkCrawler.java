@@ -185,7 +185,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   /** Return true if crawler should fail if any start URL(s) can't be
    * fetched */
   protected boolean isFailOnStartUrlError() {
-    return crawlSeed.isFailOnStartUrlError();
+    return getCrawlSeed().isFailOnStartUrlError();
   }
 
   protected int getRefetchDepth() {
@@ -235,8 +235,8 @@ public class FollowLinkCrawler extends BaseCrawler {
  
 
   protected boolean doCrawl0() {
-    if (crawlAborted) {
-      return aborted();
+    if (isAborted()) {
+      return aborted(ABORTED_BEFORE_START_MSG);
     }
     logger.info("Beginning crawl, refetch depth: " + getRefetchDepth() +
         ", max depth: " + maxDepth + " " +
@@ -268,9 +268,10 @@ public class FollowLinkCrawler extends BaseCrawler {
 
     if (!populatePermissionMap()) {
       if(!crawlStatus.isCrawlError()) {
-        crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+        crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION,
+                                   "Unable to populate permission");
       }
-      return aborted();
+      return false;
     } else if (permissionProbeUrls != null) {
       for(CrawlUrlData pud : permissionProbeUrls) {
         UrlFetcher uf = makePermissionUrlFetcher(pud.getUrl());
@@ -280,13 +281,13 @@ public class FollowLinkCrawler extends BaseCrawler {
         try {
           if(uf.fetch() != FetchResult.FETCHED) {
             crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
-            return aborted();
+            return false;
           } else {
             updateCacheStats(FetchResult.FETCHED, pud);
           }
         } catch (CacheException e) {
-          crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
-          return aborted();
+          crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION, e.getMessage());
+          return false;
         }
       }
     }
@@ -317,16 +318,16 @@ public class FollowLinkCrawler extends BaseCrawler {
     }
 
     if (logger.isDebug3()) logger.debug3("Start URLs: " + fetchQueue );
-    if (crawlAborted) {
-      return aborted();
+    if (isAborted()) {
+      return aborted(ABORTED_BEFORE_START_MSG);
     }
 
-    while (!fetchQueue.isEmpty() && !(crawlAborted || crawlTerminated)) {
+    while (!fetchQueue.isEmpty() && !(isAborted() || crawlTerminated)) {
       // check crawl window during crawl
       if (!withinCrawlWindow()) {
         crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
         crawlStatus.setDepth(hiDepth);
-        return aborted();
+        return false;
       }
       if (logger.isDebug3()) logger.debug3("Fetch queue: " + fetchQueue);
       int len = fetchQueue.size();
@@ -350,10 +351,10 @@ public class FollowLinkCrawler extends BaseCrawler {
           }
         }
       } catch (RuntimeException e) {
-        if (crawlAborted) {
+        if (isAborted()) {
           logger.debug("Expected exception while aborting crawl: " + e);
           crawlStatus.setDepth(hiDepth);
-          return aborted();
+          return aborted(e.getMessage());
         }
         logger.warning("Unexpected exception processing: " + url, e);
         crawlStatus.signalErrorForUrl(url, e.toString(), Crawler.STATUS_ERROR);
@@ -362,7 +363,7 @@ public class FollowLinkCrawler extends BaseCrawler {
       while(!parseQueue.isEmpty()) {
         try {
           CrawlUrlData parseCurl = (CrawlUrlData) parseQueue.peek();
-          if(crawlAborted) {
+          if(isAborted()) {
             return aborted();
           }
           parseQueue.remove(parseCurl);
@@ -373,7 +374,7 @@ public class FollowLinkCrawler extends BaseCrawler {
           crawlStatus.signalErrorForUrl(url, e.toString(), Crawler.STATUS_ERROR);
         }
       }
-      if (crawlAborted) {
+      if (isAborted()) {
         return aborted();
       }
     }
@@ -391,7 +392,7 @@ public class FollowLinkCrawler extends BaseCrawler {
     }
     logger.debug("Max queue len: " + fqMaxLen + ", avg: "
         + Math.round((fqSumLen) / ((double)fqSamples)));
-
+    
     if (subChecker != null) {
       switch (subChecker.hasSubstance()) {
       case No:
@@ -434,7 +435,10 @@ public class FollowLinkCrawler extends BaseCrawler {
     } else {
       logger.info("Finished crawl of "+au.getName());
     }
-
+    
+    if(isAborted()) {
+      return aborted();
+    }
     doCrawlEndActions();
     return (!crawlStatus.isCrawlError());
   }
@@ -442,7 +446,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   // Overridable for testing
   protected void enqueueStartUrls() 
       throws ConfigurationException, PluginException {
-    for (String url : crawlSeed.getStartUrls()) {
+    for (String url : getCrawlSeed().getStartUrls()) {
       CrawlUrlData curl = newCrawlUrlData(url, 1);
       curl.setStartUrl(true);
       logger.debug2("setStartUrl(" + curl + ")");
@@ -533,19 +537,16 @@ public class FollowLinkCrawler extends BaseCrawler {
                 // fail if cannot fetch a StartUrl
                 String msg = "Failed to cache start url: "+ curl.getUrl();
                 logger.error(msg);
-                crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED, msg);
-                abortCrawl();
+                crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
                 return false;
               }
             } else {
               checkSubstanceCollected(au.makeCachedUrl(url));
             }
           } catch (CacheException ex) {
-            
             //XXX: we have a fatal exception, but we need to store it
-            crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR,
-                "Fatal error fetching url " + url);
-            crawlAborted = true;
+            crawlStatus.signalErrorForUrl(url, ex);
+            crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
             return false;
           }   
           parseQueue.put(curl);
@@ -574,6 +575,7 @@ public class FollowLinkCrawler extends BaseCrawler {
                 //IOException if the CU can't be read
                 InputStream in = null;
                 try {
+                  pokeWDog();
                   in = cu.getUnfilteredInputStream();
                   // Might be reparsing with new content (if depth reduced
                   // below refetch depth); clear any existing children

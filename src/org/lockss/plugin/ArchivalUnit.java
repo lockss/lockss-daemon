@@ -413,7 +413,7 @@ public interface ArchivalUnit {
   /**
    * Return genaric or plugin specific crawl seed to begin crawl from
    */
-  public CrawlSeed makeCrawlSeed();
+  public CrawlSeed makeCrawlSeed(Crawler.CrawlerFacade crawlFacade);
   
   public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url);
   

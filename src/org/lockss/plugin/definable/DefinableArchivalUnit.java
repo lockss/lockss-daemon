@@ -212,9 +212,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   }
 
   public Collection<String> getPermissionUrls() {
-    List<String> res = convertUrlListList(KEY_AU_PERMISSION_URL);
+    Collection<String> res = convertUrlListList(KEY_AU_PERMISSION_URL);
     if (res == null) {
-      return super.getPermissionUrls();
+      res = super.getPermissionUrls();
     }
     return res;
   }
@@ -277,6 +277,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   public Collection<String> getStartUrls() {
     List<String> res = convertUrlListList(KEY_AU_START_URL);
     log.debug2("Setting start urls " + res);
+    if(res == null) {
+      res = Collections.emptyList();
+    }
     return res;
   }
 
@@ -639,9 +642,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   }
   
   @Override
-  public CrawlSeed makeCrawlSeed() {
+  public CrawlSeed makeCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
     CrawlSeed ret;
-    ret = getDefinablePlugin().getCrawlSeed(this);
+    ret = getDefinablePlugin().getCrawlSeed(crawlFacade);
     if(ret == null) {
       ret = new BaseCrawlSeed(this);
     }

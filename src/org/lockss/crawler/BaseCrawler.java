@@ -97,7 +97,7 @@ public abstract class BaseCrawler implements Crawler {
   
   public static final String PARAM_PERMISSION_BUF_MAX =
       Configuration.PREFIX + "permissionBuf.max";
-  public static final int DEFAULT_PERMISSION_BUF_MAX = 50 * 1024;
+  public static final int DEFAULT_PERMISSION_BUF_MAX = 512 * 1024;
 
   /** The source address for crawler connections, or null to use the
    * machine's primary IP address.  Allows multiple daemons on a machine
@@ -125,6 +125,8 @@ public abstract class BaseCrawler implements Crawler {
   public static final String PARAM_PROXY_PORT =
     PREFIX + "proxy.port";
   public static final int DEFAULT_PROXY_PORT = -1;
+  
+  public static final String ABORTED_BEFORE_START_MSG = "Crawl aborted before start";
   
   protected int streamResetMax = DEFAULT_PERMISSION_BUF_MAX;
   protected int defaultRetries = DEFAULT_DEFAULT_RETRY_COUNT;
@@ -203,7 +205,6 @@ public abstract class BaseCrawler implements Crawler {
     this.aus = aus;
     alertMgr = getDaemon().getAlertManager();
     connectionPool = new LockssUrlConnectionPool();
-    crawlSeed = au.makeCrawlSeed();
   }
   
   protected abstract boolean doCrawl0();
@@ -350,7 +351,7 @@ public abstract class BaseCrawler implements Crawler {
     try {
       if (crawlAborted) {
         //don't start an aborted crawl
-        return aborted();
+        return aborted(ABORTED_BEFORE_START_MSG);
       }
       logger.info("Beginning crawl of "+au);
       boolean res = doCrawl0();
@@ -443,7 +444,7 @@ public abstract class BaseCrawler implements Crawler {
   protected boolean populatePermissionMap() {
     try {
       permissionMap = new PermissionMap(getCrawlerFacade(), getDaemonPermissionCheckers(),
-          au.makePermissionCheckers(), crawlSeed.getPermissionUrls());
+          au.makePermissionCheckers(), getCrawlSeed().getPermissionUrls());
       String perHost = au.getPerHostPermissionPath();
       if (perHost != null) {
         try {
@@ -479,8 +480,10 @@ public abstract class BaseCrawler implements Crawler {
   protected void updateCacheStats(FetchResult res, CrawlUrlData curl) {
     // Paranoia - assert that the rate limiter was actually used
     CrawlRateLimiter crl = getCrawlRateLimiter();
-    if(pauseCounter == crl.getPauseCounter()) {
-      logger.critical("CrawlRateLimiter not used after " + curl, new Throwable());
+    if(res != FetchResult.NOT_FETCHED &&
+       pauseCounter == crl.getPauseCounter()) {
+      logger.critical("CrawlRateLimiter not used after " + curl,
+                      new Throwable());
       if (throwIfRateLimiterNotUsed) {
         throw new RuntimeException("CrawlRateLimiter not used");
       }
@@ -642,12 +645,14 @@ public abstract class BaseCrawler implements Crawler {
       wdog.pokeWDog();
     }
   }
-
+  
   protected boolean aborted() {
+    return aborted("");
+  }
+  
+  protected boolean aborted(String msg) {
     logger.info("Crawl aborted: "+au);
-    if (!crawlStatus.isCrawlError()) {
-      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED);
-    }
+    crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED, msg);
     return false;
   }
 
@@ -665,6 +670,13 @@ public abstract class BaseCrawler implements Crawler {
     sb.append(au.toString());
     sb.append("]");
     return sb.toString();
+  }
+  
+  protected CrawlSeed getCrawlSeed() {
+    if(crawlSeed == null) {
+      crawlSeed = au.makeCrawlSeed(getCrawlerFacade());
+    }
+    return crawlSeed;
   }
   
   protected CrawlerFacade getCrawlerFacade() {

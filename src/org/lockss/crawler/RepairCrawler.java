@@ -39,8 +39,9 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
+import org.lockss.crawler.BaseCrawler.BaseCrawlerFacade;
 import org.lockss.daemon.*;
-import org.lockss.daemon.Crawler;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.protocol.*;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.plugin.*;
@@ -278,6 +279,23 @@ public class RepairCrawler extends BaseCrawler {
     }
     return true;
   }
-
+  
+  protected CrawlerFacade getCrawlerFacade() {
+    if(facade == null) {
+      facade = new BaseCrawlerFacade(this);
+    }
+    return facade;
+  };
+  
+  public static class RepairCrawlerFacade extends BaseCrawler.BaseCrawlerFacade{
+    public RepairCrawlerFacade(BaseCrawler crawler) {
+      super(crawler);
+    }
+    
+    @Override
+    public void addToFailedUrls(String url) {
+      //Do nothing. RepairCrawler does not care about the failed urls
+    }
+  }
 
 }

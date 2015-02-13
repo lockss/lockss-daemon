@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.daemon.Crawler;
 
 /** Factory to create a plugin-specific {@link CrawlSeed} */
 public interface CrawlSeedFactory {
@@ -40,6 +40,6 @@ public interface CrawlSeedFactory {
    * @param au the AU
    * @return a Crawl Initializer
    */
-  public CrawlSeed createCrawlSeed(ArchivalUnit au);
+  public CrawlSeed createCrawlSeed(Crawler.CrawlerFacade crawlFacade);
 }
 

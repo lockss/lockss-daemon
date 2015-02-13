@@ -37,7 +37,6 @@ import java.io.*;
 import java.net.*;
 
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 import org.lockss.config.Configuration;
@@ -981,12 +980,12 @@ public class DefinablePlugin extends BasePlugin {
     return urlFetcherFactory;
   }
   
-  protected CrawlSeed getCrawlSeed(ArchivalUnit au) {
+  protected CrawlSeed getCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
     CrawlSeedFactory fact = getCrawlSeedFactory();
     if (fact == null) {
       return null;
     }
-    return fact.createCrawlSeed(au);
+    return fact.createCrawlSeed(crawlFacade);
   }
   
   protected UrlConsumerFactory urlConsumerFactory = null;
