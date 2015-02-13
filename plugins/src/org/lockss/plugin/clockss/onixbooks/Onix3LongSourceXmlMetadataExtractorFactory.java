@@ -50,7 +50,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(Onix3LongSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(Onix3LongSourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper Onix3Helper = null;
 
@@ -76,10 +76,9 @@ public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (Onix3Helper != null) {
-        return Onix3Helper;
+      if (Onix3Helper == null) {
+        Onix3Helper = new Onix3LongSchemaHelper();
       }
-      Onix3Helper = new Onix3LongSchemaHelper();
       return Onix3Helper;
     }
 
