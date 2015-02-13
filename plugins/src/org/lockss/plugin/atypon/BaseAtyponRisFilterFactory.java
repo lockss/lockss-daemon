@@ -47,6 +47,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.io.input.BoundedInputStream;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.RisFilterReader;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
@@ -60,6 +61,7 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
   
   private static Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE);
 
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
       String encoding)
@@ -101,7 +103,7 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       inBuf.reset();
       // if we have  data, see if it matches the RIS pattern
       if (aLine != null && RIS_PATTERN.matcher(aLine).find()) {
-        return new RisFilterInputStream(inBuf, encoding, "Y2");
+        return getRisFilterReader(encoding, inBuf).toInputStream(encoding);
       } 
       return inBuf; // If not a RIS file, just return reset file
     } catch (UnsupportedEncodingException e) {
@@ -111,5 +113,10 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       log.debug2("Internal error (IO exception)", e);
       throw new PluginException("IO exception looking ahead in input stream", e);
     }
+  }
+
+  private RisFilterReader getRisFilterReader(String encoding, InputStream inBuf)
+      throws UnsupportedEncodingException {
+    return new RisFilterReader(inBuf, encoding, "Y2");
   }
 }
