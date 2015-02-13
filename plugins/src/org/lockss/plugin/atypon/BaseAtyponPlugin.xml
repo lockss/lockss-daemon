@@ -76,6 +76,7 @@
     <!--  CRAWL COMMENT BLOCK
     - "imgJawr" exclusion is Taylor&Francis child specific. See RU4586 - removeable after that gets dealt with
     - include all image/css/js files that live under base_url (but not as query arguments)
+    - include all content from cdn (getting js, css and common images)
     - specifically include images/figures/tables that live under
          <base>/na101/home/literatum/publisher/<publisher_id>/journals/<dirname>/<journal_id>/....
          in case it has a suffix not covered by the first rule
@@ -103,6 +104,7 @@
     <list>
       <string>2,"^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", base_url</string>
       <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
+      <string>1, "cdn\.%s\.org/.", journal_id</string>
       <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
       <string>1,"^%stoc/%s(\.[0-9]+)?/%s($|/)", base_url, journal_id, volume_name</string>
       <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>

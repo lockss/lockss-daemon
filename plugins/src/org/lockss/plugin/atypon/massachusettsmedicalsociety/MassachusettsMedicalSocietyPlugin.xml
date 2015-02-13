@@ -1,0 +1,84 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - Audrey PD-214</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <!-- needs globally permitted hosts (instead of base_url2/cdn) -->
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>6</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Massachusetts Medical Society Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>26</string>
+  </entry>  
+   <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Massachusetts Medical Society Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <!-- Necessary for using cdn (instead of using base_url2),
+       Also, au_permitted_host_pattern must find match in lockss-daemon config in
+       org.lockss.crawler.allowedPluginPermittedHosts -->
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <string>"cdn\.nejm\.org"</string>
+  </entry>
+  <entry>
+    <!-- if use cdn -->
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/(css|js)_[^/]+[.](css|js)$</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>/(css|js)_[^/]+[.](css|js)$</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyHtmlHashFilterFactory</string>
+  </entry>
+  <entry> <!-- using local  -->
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyHtmlCrawlFilterFactory</string>
+  </entry> 
+</map> 

@@ -34,9 +34,8 @@
     {
       
       comment[platform] = Atypon
-      plugin = org.lockss.plugin.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin
+      plugin = org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin
       param[base_url] = http://www.nejm.org/
-      param[base_url2] = http://cdn.nejm.org/
       param[journal_id] = nejm
       implicit < status ; year ; name ; param[volume_name] >
       comment[notReady] = PD-1189, hash filter needed for most view block
