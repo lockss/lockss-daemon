@@ -29,16 +29,12 @@
     </map>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.62.0</string>
-  </entry>
-  <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -51,7 +47,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%d/.+\.(pdf|epub)$", base_url, year</string>
+      <string>"^%s%d/.+\.pdf$", base_url, year</string>
     </list>
   </entry>
   <entry>
