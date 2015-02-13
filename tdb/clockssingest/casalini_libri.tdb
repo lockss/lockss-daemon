@@ -2,10 +2,11 @@
 
   publisher <
     name = Casalini Libri ;
-    info[contract] = 2011
+    info[contract] = 2011 ;
+    info[tester] = 0
   >
   
-  
+
   {
   
     title <
@@ -13,6 +14,7 @@
     >
 
     plugin = needs.plugin
+    
   }
 
 }
