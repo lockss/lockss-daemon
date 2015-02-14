@@ -92,12 +92,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-8101
   
-      au < down ; 2002 ; The Botanical Review Volume 68 ; 68 >
-      au < down ; 2003 ; The Botanical Review Volume 69 ; 69 >
-      au < down ; 2004 ; The Botanical Review Volume 70 ; 070 >
-      au < down ; 2005 ; The Botanical Review Volume 71 ; 71 >
-      au < down ; 2006 ; The Botanical Review Volume 72 ; 72 >
-      au < down ; 2007 ; The Botanical Review Volume 73 ; 73 >
+      au < down ; 2002 ; The Botanical Review Volume 68 [BioOne] ; 68 >
+      au < down ; 2003 ; The Botanical Review Volume 69 [BioOne] ; 69 >
+      au < down ; 2004 ; The Botanical Review Volume 70 [BioOne] ; 070 >
+      au < down ; 2005 ; The Botanical Review Volume 71 [BioOne] ; 71 >
+      au < down ; 2006 ; The Botanical Review Volume 72 [BioOne] ; 72 >
+      au < down ; 2007 ; The Botanical Review Volume 73 [BioOne] ; 73 >
     }
     {
       implicit < status ; year ; name ; param[volume_name] >
