@@ -9,15 +9,15 @@
   {
   
     title <
-      name = Athabascau Books Source Content
+      name = Athabasca University Press Books Source Content
     >
 
-    plugin = org.lockss.plugin.clockss.onixbooks.ClockssAthabascauOnix3SourcePlugin
+    plugin = org.lockss.plugin.clockss.onixbooks.ClockssAthabascaUniversityOnix3SourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/athabascau-released/
     comment[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < readySource ; crawling ; 2015 ; Athabascau Books Source Content 2015 ; 2015 >
+    au < readySource ; crawling ; 2015 ; Athabasca University Press Books Source Content 2015 ; 2015 >
       
  }
 
