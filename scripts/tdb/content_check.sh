@@ -48,7 +48,6 @@ uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "GLN. All plugin/names = $allAUs"
 echo "GLN. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-echo " "
 #
 # Find duplicate released names in the gln title database
 echo "---------------------"
@@ -81,7 +80,6 @@ uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "CLOCKSS. All plugin/names = $allAUs"
 echo "CLOCKSS. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-echo " "
 #
 # Find duplicate released names in the clockss title database
 echo "---------------------"
