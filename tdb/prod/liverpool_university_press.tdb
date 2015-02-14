@@ -408,19 +408,19 @@
     
     plugin = org.lockss.plugin.metapress.MetaPressPlugin
     param[base_url] = http://liverpool.metapress.com/
-    implicit < status ; year ; name ; param[volume_name] >      
-    param[journal_issn] = 1745-8188     
+    implicit < status ; year ; name ; param[volume_name] >
+    param[journal_issn] = 1745-8188
 
-	au < down ; 2005 ; Labour History Review Volume 70 ; 70 >
-	au < down ; 2006 ; Labour History Review Volume 71 ; 71 >
-	au < down ; 2007 ; Labour History Review Volume 72 ; 72 >
-	au < down ; 2008 ; Labour History Review Volume 73 ; 73 >
-	au < down ; 2009 ; Labour History Review Volume 74 ; 74 >
-	au < down ; 2010 ; Labour History Review Volume 75 ; 75 >
-	au < down ; 2011 ; Labour History Review Volume 76 ; 76 >
-	au < down ; 2012 ; Labour History Review Volume 77 ; 77 >
-	au < doNotProcess ; 2013 ; Labour History Review Volume 78 ; 78 >
-	au < manifest ; 2014 ; Labour History Review Volume 79 ; 79 >
+    au < down ; 2005 ; Labour History Review Volume 70 [MetaPress] ; 70 >
+    au < down ; 2006 ; Labour History Review Volume 71 [MetaPress] ; 71 >
+    au < down ; 2007 ; Labour History Review Volume 72 [MetaPress] ; 72 >
+    au < down ; 2008 ; Labour History Review Volume 73 [MetaPress] ; 73 >
+    au < down ; 2009 ; Labour History Review Volume 74 [MetaPress] ; 74 >
+    au < down ; 2010 ; Labour History Review Volume 75 [MetaPress] ; 75 >
+    au < down ; 2011 ; Labour History Review Volume 76 [MetaPress] ; 76 >
+    au < down ; 2012 ; Labour History Review Volume 77 [MetaPress] ; 77 >
+    au < doNotProcess ; 2013 ; Labour History Review Volume 78 ; 78 >
+    au < doNotProcess ; 2014 ; Labour History Review Volume 79 ; 79 >
 
   }
 
