@@ -41,8 +41,8 @@ import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
-public class AthabascauOnix3SourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(AthabascauOnix3SourceXmlMetadataExtractorFactory.class);
+public class AthabascaOnix3SourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(AthabascaOnix3SourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper Onix3Helper = null;
 
