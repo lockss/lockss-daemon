@@ -33,14 +33,18 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs2;
 
 import java.io.InputStream;
+import java.io.Reader;
 import java.util.Arrays;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class OJS2HtmlFilterFactory implements FilterFactory {
   
@@ -73,6 +77,11 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "commentsOnArticle"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citation-block"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "sidebar", true),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "alm"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "separator"),
+    HtmlNodeFilters.tagWithTextRegex("span", "Metrics powered by.+PLOS ALM", true),
+    new TagNameFilter("br"),
     // Some OJS sites have a tag cloud
     HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
     // Some OJS sites have a subscription status area
@@ -144,7 +153,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     filteredStream.registerTag(new bTag());
-    return filteredStream;
+    Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
   /** Create an array of NodeFilters that combines the parent with the given array
