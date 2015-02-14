@@ -158,7 +158,7 @@
       param[journal_id] = 0883-1351
       implicit < status ; year ; name ; param[volume] >
         
-      au < down ; 2005 ; PALAIOS Volume 20 ; 020 >
+      au < down ; 2005 ; PALAIOS Volume 20 [BioOne] ; 020 >
 
     }
 
@@ -169,21 +169,21 @@
       param[journal_id] = palo
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < released ; 2000 ; PALAIOS Volume 15 ; 15 >
-      au < released ; 2001 ; PALAIOS Volume 16 ; 16 >
-      au < released ; 2002 ; PALAIOS Volume 17 ; 17 >
-      au < released ; 2003 ; PALAIOS Volume 18 ; 18 >
-      au < released ; 2004 ; PALAIOS Volume 19 ; 19 >
-      au < doNotProcess ; 2005 ; PALAIOS Volume 20 ; 20 >
-      au < released ; 2006 ; PALAIOS Volume 21 ; 21 >
-      au < released ; 2007 ; PALAIOS Volume 22 ; 22 >
-      au < released ; 2008 ; PALAIOS Volume 23 ; 23 >
-      au < released ; 2009 ; PALAIOS Volume 24 ; 24 >
-      au < released ; 2010 ; PALAIOS Volume 25 ; 25 >
-      au < released ; 2011 ; PALAIOS Volume 26 ; 26 >
-      au < released ; 2012 ; PALAIOS Volume 27 ; 27 >
-      au < manifest ; 2013 ; PALAIOS Volume 28 ; 28 >
-      au < manifest ; 2014 ; PALAIOS Volume 29 ; 29 >
+      au < released ; 2000 ; PALAIOS Volume 15 [BioOne] ; 15 >
+      au < released ; 2001 ; PALAIOS Volume 16 [BioOne] ; 16 >
+      au < released ; 2002 ; PALAIOS Volume 17 [BioOne] ; 17 >
+      au < released ; 2003 ; PALAIOS Volume 18 [BioOne] ; 18 >
+      au < released ; 2004 ; PALAIOS Volume 19 [BioOne] ; 19 >
+      au < doNotProcess ; 2005 ; PALAIOS Volume 20 [BioOne]; 20 >
+      au < released ; 2006 ; PALAIOS Volume 21 [BioOne] ; 21 >
+      au < released ; 2007 ; PALAIOS Volume 22 [BioOne] ; 22 >
+      au < released ; 2008 ; PALAIOS Volume 23 [BioOne] ; 23 >
+      au < released ; 2009 ; PALAIOS Volume 24 [BioOne] ; 24 >
+      au < released ; 2010 ; PALAIOS Volume 25 [BioOne] ; 25 >
+      au < released ; 2011 ; PALAIOS Volume 26 [BioOne] ; 26 >
+      au < released ; 2012 ; PALAIOS Volume 27 [BioOne] ; 27 >
+      au < manifest ; 2013 ; PALAIOS Volume 28 [BioOne] ; 28 >
+      au < manifest ; 2014 ; PALAIOS Volume 29 [BioOne] ; 29 >
 
     }
 
