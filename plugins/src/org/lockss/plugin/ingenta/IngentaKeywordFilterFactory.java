@@ -37,7 +37,6 @@ import java.io.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.CssLinkFilter;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.StringFilter;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.*;
