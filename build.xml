@@ -138,6 +138,8 @@ Args:
   <!--  svn-related -->
   <property name="svn.module.default" value="lockss-daemon" />
   <property name="svn.dir"       value="lockss-daemon" />
+  <property name="svn.anon.root"
+		  value="svn://svn.code.sf.net/p/lockss/svn/lockss-daemon" />
   <!-- XXX should get this from -->
 
   <!--  Directories -->
@@ -2750,40 +2752,55 @@ Test results in ${test.results}
 	 <isfalse value="${nosvn}" />
 	 <then>
            <if>
-             <istrue value="${copylib}" />
+             <isfalse value="${copylib}" />
              <then>
-	       <echo message="copylib not supported yet."/>
-<!--                <echo message="copying lib dir"/> -->
-<!--                <property name="cvs.module" value="lockss-daemon-butlib" /> -->
-<!--                <copy todir="${temp.proj.dir}" -->
-<!--                      preservelastmodified="true" > -->
-<!-- 		 <fileset dir="${basedir}" > -->
-<!--                    <include name="lib/"/> -->
-<!--                    <exclude name="lib/lockss.jar"/> -->
-<!--                    <exclude name="lib/lockss-*.jar"/> -->
-<!-- 		 </fileset> -->
-<!--                </copy> -->
+	       <exec executable="svn" dir="${temp.build.dir}"
+		     failonerror="true">
+		 <arg value="checkout" />
+		 <arg value="-q" />
+		 <arg value="--non-interactive" />
+		 <arg value="${svn.anon.root}/${branch.name}" />
+		 <arg value="${svn.dir}" />
+	       </exec>
              </then>
              <else>        
+	       <!-- First check out just 1st-level files & dirs -->
+	       <exec executable="svn" dir="${temp.build.dir}"
+		     failonerror="true">
+		 <arg value="checkout" />
+		 <arg value="-q" />
+		 <arg value="--non-interactive" />
+		 <arg value="--depth=immediates" />
+		 <arg value="${svn.anon.root}/${branch.name}" />
+		 <arg value="${svn.dir}" />
+	       </exec>
+	       <!-- Then update to infinite depth all but lib dir -->
+	       <pathconvert pathsep=" " property="temp.proj.subdirs">
+		 <dirset dir="${temp.proj.dir}" >
+		   <include name="*" />
+		   <exclude name="lib" />
+		 </dirset>
+		 <map from="${temp.proj.dir}/" to=""/>
+	       </pathconvert>
+	       <exec executable="svn" dir="${temp.proj.dir}"
+		     failonerror="true">
+		 <arg value="update" />
+                 <arg value="-q" />
+		 <arg value="--non-interactive" />
+ 		 <arg value="--set-depth=infinity" />
+ 		 <arg line="${temp.proj.subdirs}" />
+	       </exec>
+               <echo message="copying lib dir"/>
+               <copy todir="${temp.proj.dir}"
+                     preservelastmodified="true" >
+		 <fileset dir="${basedir}" >
+                   <include name="lib/"/>
+                   <exclude name="lib/lockss.jar"/>
+                   <exclude name="lib/lockss-*.jar"/>
+		 </fileset>
+               </copy>
              </else>
            </if>
-           <if>
-             <or>
-               <not> <isset property="svn.root" /> </not>
-               <equals arg1="${svn.root}" arg2="" />
-             </or>
-             <then>
-               <fail message="Couldn't file root"/>
-             </then>
-           </if>
-	   <exec executable="svn" dir="${temp.build.dir}"
-		 failonerror="true">
-	     <arg value="checkout" />
-	     <arg value="-q" />
-	     <arg value="--non-interactive" />
-	     <arg value="svn://svn.code.sf.net/p/lockss/svn/lockss-daemon/${branch.name}" />
-	     <arg value="${svn.dir}" />
-	   </exec>
 	 </then>
 	 <else>
 	   <echo>No svn, copying from ${basedir}</echo>
