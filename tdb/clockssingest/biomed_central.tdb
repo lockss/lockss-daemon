@@ -448,7 +448,7 @@
       au < crawling ; exists ; 2012 ; BMC Dermatology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Dermatology Volume 13 ; 13 >
       au < manifest ; exists ; 2014 ; BMC Dermatology Volume 14 ; 14 >
-      au < expected ; exists ; 2015 ; BMC Dermatology Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; BMC Dermatology Volume 15 ; 15 >
 
     }
 
@@ -504,7 +504,7 @@
       au < crawling ; exists ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Ear, Nose and Throat Disorders Volume 13 ; 13 >
       au < manifest ; exists ; 2014 ; BMC Ear, Nose and Throat Disorders Volume 14 ; 14 >
-      au < expected ; exists ; 2015 ; BMC Ear, Nose and Throat Disorders Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; BMC Ear, Nose and Throat Disorders Volume 15 ; 15 >
 
     }
 
@@ -2178,7 +2178,7 @@
       au < finished ; crawling ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 >
       au < manifest ; exists ; 2014 ; Annals of Surgical Innovation and Research Volume 8 ; 8 >
-      au < expected ; exists ; 2015 ; Annals of Surgical Innovation and Research Volume 9 ; 9 >
+      au < manifest ; exists ; 2015 ; Annals of Surgical Innovation and Research Volume 9 ; 9 >
 
     }
 
@@ -2302,7 +2302,7 @@
       au < finished ; crawling ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
       au < manifest ; exists ; 2014 ; Asia Pacific Family Medicine Volume 13 ; 13 >
-      au < expected ; exists ; 2015 ; Asia Pacific Family Medicine Volume 14 ; 14 >
+      au < manifest ; exists ; 2015 ; Asia Pacific Family Medicine Volume 14 ; 14 >
 
     }
 
@@ -2728,7 +2728,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1470-7330
 
       au < manifest ; exists ; 2014 ; Cancer Imaging Volume 14 ; 14 >
-      au < expected ; exists ; 2015 ; Cancer Imaging Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; Cancer Imaging Volume 15 ; 15 >
       
     }
 
@@ -4673,7 +4673,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2241-5793
 
       au < manifest ; exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
-      au < expected ; exists ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
+      au < manifest ; exists ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
 
     }
 
@@ -4833,7 +4833,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Journal of Cardiovascular Magnetic Resonance Volume 15 ; 15 >
       au < manifest ; exists ; 2014 ; Journal of Cardiovascular Magnetic Resonance Volume 16 ; 16 >
-      au < expected ; exists ; 2015 ; Journal of Cardiovascular Magnetic Resonance Volume 17 ; 17 >
+      au < manifest ; exists ; 2015 ; Journal of Cardiovascular Magnetic Resonance Volume 17 ; 17 >
 
     }
 
