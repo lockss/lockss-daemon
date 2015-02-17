@@ -1282,9 +1282,6 @@ The target you have selected requires compiling under JDK 1.7.
 		     input="${svn.info}"
 		     regexp="Repository Root: (.*)"
 		     select="\1" />
-      <echo message="svn.info: ${svn.info}" />
-      <echo message="branch.name: ${branch.name}" />
-      <echo message="svn.root: ${svn.root}" />
     </then>
     <else>
       <property name="branch.name" value="branches/${branch}"/>
