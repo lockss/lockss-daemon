@@ -1,10 +1,10 @@
 /*
- * $Id: RisFilterReader.java,v 1.2 2014-11-12 00:13:20 thib_gc Exp $
+ * $Id$
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,12 +51,22 @@ public class RisFilterReader extends LineRewritingReader {
 
   /**
    * <p>
-   * Pattern to recognize tag lines.
+   * The default (preferred) pattern for recognizing tag lines.
    * </p>
    * 
    * @since 1.66
    */
-  protected static final Pattern TAG_PATTERN = Pattern.compile("^([A-Z][A-Z0-9])  - ");
+  protected static final Pattern DEFAULT_TAG_PATTERN = Pattern.compile("^([A-Z][A-Z0-9])  - ");
+  
+  /**
+   * <p>
+   * This instance's pattern for recognizing tag lines.
+   * </p>
+   * 
+   * @since 1.67.4
+   * @see #DEFAULT_TAG_PATTERN
+   */
+  protected Pattern tagPattern;
   
   /**
    * <p>
@@ -82,6 +92,29 @@ public class RisFilterReader extends LineRewritingReader {
    * given tags.
    * </p>
    * 
+   * @param tagPattern
+   *          A pattern for recognizing tag lines.
+   * @param inputStream
+   *          A RIS input stream.
+   * @param encoding
+   *          The encoding of the input stream.
+   * @param tags
+   *          Zero or more tags to be removed.
+   * @throws UnsupportedEncodingException
+   *           if the encoding is not supported
+   * @since 1.67.4
+   */
+  public RisFilterReader(Pattern tagPattern, InputStream inputStream, String encoding, String... tags)
+      throws UnsupportedEncodingException {
+    this(tagPattern, new InputStreamReader(inputStream, encoding), tags);
+  }
+  
+  /**
+   * <p>
+   * Builds a new filter from the given input stream and encoding, removing the
+   * given tags, using the default pattern for recognizing tag lines.
+   * </p>
+   * 
    * @param inputStream
    *          A RIS input stream.
    * @param encoding
@@ -91,15 +124,39 @@ public class RisFilterReader extends LineRewritingReader {
    * @throws UnsupportedEncodingException
    *           if the encoding is not supported
    * @since 1.66
+   * @see #DEFAULT_TAG_PATTERN
    */
   public RisFilterReader(InputStream inputStream, String encoding, String... tags)
       throws UnsupportedEncodingException {
-    this(new InputStreamReader(inputStream, encoding), tags);
+    this(DEFAULT_TAG_PATTERN, new InputStreamReader(inputStream, encoding), tags);
   }
   
   /**
    * <p>
-   * Builds a new filter from the given reader, removing the given tags.
+   * Builds a new filter from the given reader, removing the given tags, using
+   * the given pattern for recognizing tag lines.
+   * </p>
+   * 
+   * @param tagPattern
+   *          A pattern for recognizing tag lines.
+   * @param reader
+   *          A RIS reader.
+   * @param tags
+   *          Zero or more tags to be removed.
+   * @since 1.67.4
+   */
+  public RisFilterReader(Pattern tagPattern, Reader reader, String... tags) {
+    super(reader);
+    setTagPattern(tagPattern);
+    this.tagSet = new HashSet<String>();
+    addTags(tags);
+    this.removingTag = false;
+  }
+  
+  /**
+   * <p>
+   * Builds a new filter from the given reader, removing the given tags, using
+   * the default pattern for recognizing tag lines.
    * </p>
    * 
    * @param reader
@@ -107,12 +164,10 @@ public class RisFilterReader extends LineRewritingReader {
    * @param tags
    *          Zero or more tags to be removed.
    * @since 1.66
+   * @see #DEFAULT_TAG_PATTERN
    */
   public RisFilterReader(Reader reader, String... tags) {
-    super(reader);
-    this.tagSet = new HashSet<String>();
-    addTags(tags);
-    this.removingTag = false;
+    this(DEFAULT_TAG_PATTERN, reader, tags);
   }
   
   /**
@@ -129,9 +184,22 @@ public class RisFilterReader extends LineRewritingReader {
     }
   }
   
+  /**
+   * <p>
+   * Sets the pattern used for recognizing tag lines.
+   * </p>
+   * 
+   * @param tagPattern
+   *          A pattern for recognizing tag lines.
+   * @since 1.67.4
+   */
+  public void setTagPattern(Pattern tagPattern) {
+    this.tagPattern = tagPattern;
+  }
+  
   @Override
   public String rewriteLine(String line) {
-    Matcher mat = TAG_PATTERN.matcher(line);
+    Matcher mat = tagPattern.matcher(line);
     if (mat.find()) {
       String tag = mat.group(1);
       removingTag = tagSet.contains(tag);
