@@ -58,7 +58,7 @@ for p in $plugs; do
 done
 
 # do not recurse below requested directory. tardirs includes the directory and all files therein (ending with an extension)
-(cd $basedir; tar --create --exclude=CVS --file - --no-recursion $tardirs) | (cd $tmpdir; tar xfBp -)
+(cd $basedir; tar --create --exclude=.svn --file - --no-recursion $tardirs) | (cd $tmpdir; tar xfBp -)
 (cd $tmpdir; jar cfm $jar $manifest .)
 
 rm $manifest
