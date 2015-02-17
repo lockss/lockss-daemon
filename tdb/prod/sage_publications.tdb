@@ -7283,6 +7283,37 @@
     {
 
       title <
+        name = Contemporary Issues in Early Childhood ;
+        eissn = 1463-9491 ;
+        issnl = 1463-9491
+      >
+
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://cie.sagepub.com/
+
+      au < exists ; 2000 ; Contemporary Issues in Early Childhood Volume 1 ; 1 >
+      au < exists ; 2001 ; Contemporary Issues in Early Childhood Volume 2 ; 2 >
+      au < exists ; 2002 ; Contemporary Issues in Early Childhood Volume 3 ; 3 >
+      au < exists ; 2003 ; Contemporary Issues in Early Childhood Volume 4 ; 4 >
+      au < exists ; 2004 ; Contemporary Issues in Early Childhood Volume 5 ; 5 >
+      au < exists ; 2005 ; Contemporary Issues in Early Childhood Volume 6 ; 6 >
+      au < exists ; 2006 ; Contemporary Issues in Early Childhood Volume 7 ; 7 >
+      au < exists ; 2007 ; Contemporary Issues in Early Childhood Volume 8 ; 8 >
+      au < exists ; 2008 ; Contemporary Issues in Early Childhood Volume 9 ; 9 >
+      au < exists ; 2009 ; Contemporary Issues in Early Childhood Volume 10 ; 10 >
+      au < exists ; 2010 ; Contemporary Issues in Early Childhood Volume 11 ; 11 >
+      au < exists ; 2011 ; Contemporary Issues in Early Childhood Volume 12 ; 12 >
+      au < exists ; 2012 ; Contemporary Issues in Early Childhood Volume 13 ; 13 >
+      au < exists ; 2013 ; Contemporary Issues in Early Childhood Volume 14 ; 14 >
+      au < exists ; 2014 ; Contemporary Issues in Early Childhood Volume 15 ; 15 >
+      au < expected ; 2015 ; Contemporary Issues in Early Childhood Volume 16 ; 16 >
+
+    }
+
+    {
+
+      title <
         name = Contemporary Review of the Middle East ;
         issn = 2347-7989 ;
         eissn = 2349-0055
@@ -26345,6 +26376,29 @@ comment[mpj] = now published by Brill
         au < manifest ; 2015 ; Journal of Parenteral and Enteral Nutrition Volume 39 ; 39 >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Pastoral Care & Counseling ;
+        issn = 1542-3050 ;
+        eissn = 2167-7776 ;
+        issnl = 1542-3050
+      >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://pcc.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2009 ; Journal of Pastoral Care & Counseling Volume 63 ; 63 >
+      au < exists ; 2010 ; Journal of Pastoral Care & Counseling Volume 64 ; 64 >
+      au < exists ; 2011 ; Journal of Pastoral Care & Counseling Volume 65 ; 65 >
+      au < exists ; 2012 ; Journal of Pastoral Care & Counseling Volume 66 ; 66 >
+      au < exists ; 2013 ; Journal of Pastoral Care & Counseling Volume 67 ; 67 >
+      au < exists ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 >
+      au < expected ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 >
 
     }
 
