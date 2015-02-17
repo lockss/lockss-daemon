@@ -17,8 +17,25 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>13</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>21</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
+  </entry>  
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
   <entry>
     <string>plugin_parent</string>

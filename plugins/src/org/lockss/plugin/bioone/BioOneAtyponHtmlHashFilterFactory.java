@@ -33,9 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.bioone;
 
 import java.io.*;
+import java.util.regex.Pattern;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TagNode;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Div;
+import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Span;
 import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
@@ -47,7 +52,8 @@ import org.lockss.util.*;
 
 /*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
 public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
-
+  private static final String refNodeClassLabel = "refnumber";
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
                                                String encoding)
@@ -103,6 +109,16 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
             public void visitTag(Tag tag) {
               if (tag instanceof Span && tag.getAttribute("id") != null) {
                 tag.removeAttribute("id");
+              } else if (tag instanceof LinkTag) {
+                // remove href within references because of changing "tollfreelink" argument within link
+                // do it here instead of "accept" since we're already walking tree with visitTag
+                // go maximum of two levels - they have orphan <td> sets around the content...what?
+                Node linkParent = tag.getParent();
+                Node gParent = (linkParent != null) ? linkParent.getParent() : null;
+                if ((linkParent instanceof Div && (refNodeClassLabel.equals(((TagNode) linkParent).getAttribute("class")))) ||
+                    (gParent != null && (refNodeClassLabel.equals(((TagNode) gParent).getAttribute("class")))) ){
+                  tag.removeAttribute("href");
+                } 
               }
             }
           });
