@@ -35,6 +35,7 @@ package org.lockss.plugin.atypon.markallen;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -47,7 +48,12 @@ public class MarkAllenHtmlHashFilterFactory
       InputStream in, String encoding) {
     
     NodeFilter[] filters = new NodeFilter[] {
+        // handled by parent: script, sfxlink, stylesheet
         
+        // this is controversial - draconian; what about updated metadata
+        new TagNameFilter("head"),
+        new TagNameFilter("noscript"),
+
         // from toc - institution banner
         // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
