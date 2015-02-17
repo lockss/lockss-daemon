@@ -2485,6 +2485,27 @@
 
   }
 
+    {
+
+      title <
+        name = The Antitrust Bulletin ;
+        issn = 0003-603X ;
+        eissn = 1930-7969 ;
+        issnl = 0003-603X
+      >
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://abx.sagepub.com/
+
+        au < exists ; exists ; 2009 ; The Antitrust Bulletin Volume 54 ; 54 ; >
+        au < exists ; exists ; 2010 ; The Antitrust Bulletin Volume 55 ; 55 ; >
+        au < exists ; exists ; 2011 ; The Antitrust Bulletin Volume 56 ; 56 ; >
+        au < exists ; exists ; 2012 ; The Antitrust Bulletin Volume 57 ; 57 ; >
+        au < exists ; exists ; 2013 ; The Antitrust Bulletin Volume 58 ; 58 ; >
+        au < exists ; exists ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 ; >
+        au < expected ; exists ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 ; >
+    }
+
   {
 
     title <
@@ -6555,6 +6576,28 @@
       au < manifest ; exists ; 2015 ; Conflict Management and Peace Science Volume 32 ; 32 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Contemporary Drug Problems ;
+      issn = 0091-4509 ;
+      eissn = 2163-1808 ;
+      issnl = 0091-4509
+    >
+
+      param[base_url] = http://cdx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      au < exists ; exists ; 2009 ; Contemporary Drug Problems Volume 36 ; 36 ; >
+      au < exists ; exists ; 2010 ; Contemporary Drug Problems Volume 37 ; 37 ; >
+      au < exists ; exists ; 2011 ; Contemporary Drug Problems Volume 38 ; 38 ; >
+      au < exists ; exists ; 2012 ; Contemporary Drug Problems Volume 39 ; 39 ; >
+      au < exists ; exists ; 2013 ; Contemporary Drug Problems Volume 40 ; 40 ; >
+      au < exists ; exists ; 2014 ; Contemporary Drug Problems Volume 41 ; 41 ; >
+      au < expected ; exists ; 2015 ; Contemporary Drug Problems Volume 42 ; 42 ; >
 
   }
 
