@@ -16203,16 +16203,12 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://mplant.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = move to Cell Press 2015-01-01
+    comment[0] = move to Elsevier 2015-01-01
 
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Molecular Plant Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Plant Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Plant Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Plant Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Molecular Plant Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Molecular Plant Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Molecular Plant Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Molecular Plant Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Molecular Plant Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Plant Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Molecular Plant Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Molecular Plant Volume 5 ; 5 >
 
     }
 
