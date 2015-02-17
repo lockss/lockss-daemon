@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Omohundro Institute of Early American History and Culture
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The William and Mary Quarterly ;
+      issn = 0043-5597 ;
+      eissn = 1933-7698
+    >
+
+    param[journal_dir] = william_and_mary_quarterly
+    attr[journal_id] = wmq
+    
+    au < exists ; 2015 ; The William and Mary Quarterly Volume 72 ; 72 >
+    
+  }
+
+}
