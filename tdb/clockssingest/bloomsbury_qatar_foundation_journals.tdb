@@ -46,12 +46,11 @@
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = gcsp
-      comment[notReady] = content not completely online
  
       au < doNotProcess ; doNotProcess ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
       au < crawling ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
       au < crawling ; exists ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 ; 2013 > 
-      au < notReady ; exists ; 2014 ; Aswan Heart Centre: Science and Practice Series Volume 2014 ; 2014 > 
+      au < ready ; exists ; 2014 ; Aswan Heart Centre: Science and Practice Series Volume 2014 ; 2014 > 
       au < manifest ; exists ; 2015 ; Aswan Heart Centre: Science and Practice Series Volume 2015 ; 2015 > 
       
     }
@@ -310,8 +309,9 @@
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = qfarc
       comment[continues] = 2220-251X
+      comment[notReady] = PD-1290, XX on pdf compare
 
-      au < testing ; exists ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 >
+      au < notReady ; exists ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; Qatar Foundation Annual Research Conference Proceedings Volume 2 ; 2 >
 
   }
