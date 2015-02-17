@@ -367,8 +367,7 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
       "<span class=\"NLM_article-title\"> Foo Title.</span> " +
       "<span class=\"citation_source-journal\">Zool Sci</span> 17: " +
       "<span class=\"NLM_fpage\">1129</span>- <span class=\"NLM_lpage\">1136</span> " +
-      "<a >BioOne</a>" +
-      ", <a  target=\"new\">PubMed</a>" +
+      ", " +
       "</td>" +
       "</div>" +
       "<div valign=\"top\" class=\"refnumber\" id=\"bibr28\">";

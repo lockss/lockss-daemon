@@ -28,17 +28,14 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.bioone;
 
 import java.io.*;
-import java.util.regex.Pattern;
-
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TagNode;
-import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Span;
@@ -53,11 +50,11 @@ import org.lockss.util.*;
 /*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
 public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
   private static final String refNodeClassLabel = "refnumber";
-  
+
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
-                                               String encoding)
-      throws PluginException {
+      String encoding)
+          throws PluginException {
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
         /*
@@ -87,7 +84,7 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"), //stylesheets
         HtmlNodeFilters.tagWithAttribute("img", "class", "accessIcon"), //free or restricted   
         HtmlNodeFilters.tagWithAttribute("div", "class", "gWidgetContainer"), //google widget stuff
-        
+
         // Contains site-specific SFX code
         new TagNameFilter("script"),
         // Contains recent impact factors and journal rankings
@@ -96,9 +93,25 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // Contains institution-specific markup
         HtmlNodeFilters.tagWithAttribute("div", "id", "headerLogo"),
+
+        // when the <a href=> tag is a child or grandchild of a <div class="refnumber"> remove it
+        // both because the number of links to reference links could change and because
+        // the link arguments, especially 'tollfreelink' argument changes over time
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (!(node instanceof LinkTag)) return false;
+            Node linkParent = node.getParent();
+            Node gParent = (linkParent != null) ? linkParent.getParent() : null;
+            if ((linkParent instanceof Div && (refNodeClassLabel.equals(((TagNode) linkParent).getAttribute("class")))) ||
+                (gParent != null && (refNodeClassLabel.equals(((TagNode) gParent).getAttribute("class")))) ) {
+              return true;
+            } 
+            return false;
+          }
+        },
     };
     HtmlTransform xf1 = HtmlNodeFilterTransform.exclude(new OrFilter(filters));
-    
+
     //; The "id" attribute of <span> tags can have a gensym
     HtmlTransform xf2 = new HtmlTransform() {
       @Override
@@ -109,17 +122,7 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
             public void visitTag(Tag tag) {
               if (tag instanceof Span && tag.getAttribute("id") != null) {
                 tag.removeAttribute("id");
-              } else if (tag instanceof LinkTag) {
-                // remove href within references because of changing "tollfreelink" argument within link
-                // do it here instead of "accept" since we're already walking tree with visitTag
-                // go maximum of two levels - they have orphan <td> sets around the content...what?
-                Node linkParent = tag.getParent();
-                Node gParent = (linkParent != null) ? linkParent.getParent() : null;
-                if ((linkParent instanceof Div && (refNodeClassLabel.equals(((TagNode) linkParent).getAttribute("class")))) ||
-                    (gParent != null && (refNodeClassLabel.equals(((TagNode) gParent).getAttribute("class")))) ){
-                  tag.removeAttribute("href");
-                } 
-              }
+              } 
             }
           });
         } catch (ParserException pe) {
@@ -130,21 +133,21 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
         return nodeList;
       }
     };
-    
+
     InputStream is1 = new HtmlFilterInputStream(in,
-                                                encoding,
-                                                new HtmlCompoundTransform(xf1, xf2));
-    
+        encoding,
+        new HtmlCompoundTransform(xf1, xf2));
+
     Reader read1 = FilterUtil.getReader(is1, encoding);
     Reader read2 = HtmlTagFilter.makeNestedFilter(read1,
-                                                  ListUtil.list(// Debug output (or similar)
-                                                                new HtmlTagFilter.TagPair("<!--totalCount",
-                                                                                          "-->",
-                                                                                          true),
-                                                                // Time stamp (or similar)
-                                                                new HtmlTagFilter.TagPair("<!--modified:",
-                                                                                          "-->",
-                                                                                          true)));
+        ListUtil.list(// Debug output (or similar)
+        new HtmlTagFilter.TagPair("<!--totalCount",
+            "-->",
+            true),
+            // Time stamp (or similar)
+            new HtmlTagFilter.TagPair("<!--modified:",
+                "-->",
+                true)));
     return new ReaderInputStream(read2);
   }
 
