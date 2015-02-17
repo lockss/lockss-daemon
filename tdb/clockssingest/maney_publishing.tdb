@@ -749,19 +749,19 @@
 
     param[journal_id] = com 
 
-    au < manifest ; exists ; 2002 ; Competition & Change Volume 6 ; 6 >
-    au < manifest ; exists ; 2003 ; Competition & Change Volume 7 ; 7 >
-    au < manifest ; exists ; 2004 ; Competition & Change Volume 8 ; 8 >
-    au < manifest ; exists ; 2005 ; Competition & Change Volume 9 ; 9 >
-    au < manifest ; exists ; 2006 ; Competition & Change Volume 10 ; 10 >
-    au < manifest ; exists ; 2007 ; Competition & Change Volume 11 ; 11 >
-    au < manifest ; exists ; 2008 ; Competition & Change Volume 12 ; 12 >
-    au < manifest ; exists ; 2009 ; Competition & Change Volume 13 ; 13 >
+    au < doNotProcess ; exists ; 2002 ; Competition & Change Volume 6 ; 6 >
+    au < doNotProcess ; exists ; 2003 ; Competition & Change Volume 7 ; 7 >
+    au < doNotProcess ; exists ; 2004 ; Competition & Change Volume 8 ; 8 >
+    au < doNotProcess ; exists ; 2005 ; Competition & Change Volume 9 ; 9 >
+    au < doNotProcess ; exists ; 2006 ; Competition & Change Volume 10 ; 10 >
+    au < doNotProcess ; exists ; 2007 ; Competition & Change Volume 11 ; 11 >
+    au < doNotProcess ; exists ; 2008 ; Competition & Change Volume 12 ; 12 >
+    au < doNotProcess ; exists ; 2009 ; Competition & Change Volume 13 ; 13 >
     au < doNotProcess ; doNotProcess ; 2010 ; Competition & Change Volume 14 ; 14 >
     au < doNotProcess ; doNotProcess ; 2011 ; Competition & Change Volume 15 ; 15 >
     au < doNotProcess ; doNotProcess ; 2012 ; Competition & Change Volume 16 ; 16 >
-    au < manifest ; exists ; 2013 ; Competition & Change Volume 17 ; 17 >
-    au < manifest ; exists ; 2014 ; Competition & Change Volume 18 ; 18 >
+    au < doNotProcess ; exists ; 2013 ; Competition & Change Volume 17 ; 17 >
+    au < doNotProcess ; exists ; 2014 ; Competition & Change Volume 18 ; 18 >
 
   }
 
