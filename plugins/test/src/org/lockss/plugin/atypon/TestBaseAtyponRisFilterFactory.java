@@ -66,19 +66,19 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
   }
   
   private static final String notContent1 =
-      "\n  \n   \n\n NOT RIS\nTY - JOUR\nER\n"; // not first item in file
+      "\n  \n   \n\n NOT RIS\nTY - JOUR\nER  - \n"; // not first item in file
   private static final String notContent2 = 
-      "\n\n\n\nTY : JOUR\nY1 - gooddate  \nY2 - baddate\nER\n"; //missing the delimiter
+      "\n\n\n\nTY : JOUR\nY1 - gooddate  \nY2 - baddate\n  - ER \n"; //missing the delimiter
   
   private static final String yesContent1 = 
-      "\n\n\n\nTY - JOUR\nY1 - gooddate  \nY2  - baddate\nER\n";
+      "\n\n\n\nTY - JOUR\nY1 - gooddate  \nY2  - baddate\nER  - \n";
   private static final String yesContent1_expected =      
-      "\n\n\n\nTY - JOUR\nY1 - gooddate  \n";
+      "\n\n\n\nTY - JOUR\nY1 - gooddate  \nER  - \n";
 
   private static final String yesContent2 =      
-      "\n\n\n\n    TY - JOUR\nY1 - gooddate  \nY2  - baddate\nER\n"; // extra spaces before TY
+      "\n\n\n\n    TY - JOUR\nY1 - gooddate  \nY2  - baddate\nER  - \n"; // extra spaces before TY
   private static final String yesContent2_expected =      
-      "\n\n\n\n    TY - JOUR\nY1 - gooddate  \n"; // extra spaces before TY
+      "\n\n\n\n    TY - JOUR\nY1 - gooddate  \nER  - \n"; // extra spaces before TY
   
   
   public void testBasicContent() throws Exception {
