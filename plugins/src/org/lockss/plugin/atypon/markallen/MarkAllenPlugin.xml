@@ -28,6 +28,23 @@
     <string>Atypon</string>
   </entry>
   <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>13</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>21</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Mark Allen Group (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
