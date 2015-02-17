@@ -115,7 +115,7 @@
     au < manifest ; exists ; 2012 ; Advances in Acoustics and Vibration Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Acoustics and Vibration Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in Acoustics and Vibration Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Advances in Acoustics and Vibration Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Advances in Acoustics and Vibration Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -853,7 +853,7 @@
     param[journal_id] = aneu
 
     au < crawling ; exists ; 2014 ; Advances in Neuroscience Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Advances in Neuroscience Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Advances in Neuroscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -981,7 +981,7 @@
     au < manifest ; exists ; 2012 ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in OptoElectronics Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in OptoElectronics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Advances in OptoElectronics Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Advances in OptoElectronics Volume 2015 ; 2015 ; 2015 >
 
   }
  
@@ -1142,7 +1142,7 @@
     param[journal_id] = apsy
 
     au < testing ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1782,7 +1782,7 @@
     au < manifest ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -2703,7 +2703,7 @@
     au < manifest ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Diagnostic and Tehrapeutic Endoscopy Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Diagnostic and Therapeutic Endoscopy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3324,7 +3324,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Biodiversity Volume 2013 ; 2013 ; 2013 >
     au < notReady ; exists ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; International Journal of Biodiversity Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; International Journal of Biodiversity Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4062,7 +4062,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; International Journal of Metals Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; International Journal of Metals Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4269,7 +4269,7 @@
     param[journal_id] = ijpc
 
     au < ready ; exists ; 2014 ; International Journal of Palliative Care Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; International Journal of Palliative Care Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; International Journal of Palliative Care Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -4430,7 +4430,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Population Research Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; International Journal of Population Research Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; International Journal of Population Research Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; International Journal of Population Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6093,7 +6093,7 @@
     au < manifest ; exists ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Combustion Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Combustion Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -6749,7 +6749,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Industrial Engineering Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Industrial Engineering Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Industrial Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6990,7 +6990,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Nanoscience Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Nanoscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7044,7 +7044,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -9108,7 +9108,7 @@
     au < manifest ; exists ; 2012 ; Urban Studies Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Urban Studies Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Urban Studies Research Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Urban Studies Research Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Urban Studies Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
