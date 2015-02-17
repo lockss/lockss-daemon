@@ -6,7 +6,7 @@
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -320,7 +320,7 @@ Args:
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
   
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.8.7" />
+  <property name="pdfbox.version" value="1.8.8" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
   <!-- Next 9 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
