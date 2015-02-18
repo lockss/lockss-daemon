@@ -13612,6 +13612,26 @@
 
     }
 
+  {
+
+    title <
+      name = Global Studies of Childhood ;
+      eissn = 2043-6106 ;
+      issnl = 2043-6106
+    >
+
+      param[base_url] = http://gsc.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2011 ; Global Studies of Childhood Volume 1 ; 1 >
+      au < exists ; 2012 ; Global Studies of Childhood Volume 2 ; 2 >
+      au < exists ; 2013 ; Global Studies of Childhood Volume 3 ; 3 >
+      au < exists ; 2014 ; Global Studies of Childhood Volume 4 ; 4 >
+      au < expected ; 2015 ; Global Studies of Childhood Volume 5 ; 5 >
+
+  }
+
     {
 
       title <
@@ -34343,6 +34363,28 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = Power and Education ;
+      eissn = 1757-7438 ;
+      issnl = 1757-7438
+    >
+
+      param[base_url] = http://pae.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2009 ; Power and Education Volume 1 ; 1 >
+      au < exists ; 2010 ; Power and Education Volume 2 ; 2 >
+      au < exists ; 2011 ; Power and Education Volume 3 ; 3 >
+      au < exists ; 2012 ; Power and Education Volume 4 ; 4 >
+      au < exists ; 2013 ; Power and Education Volume 5 ; 5 >
+      au < exists ; 2014 ; Power and Education Volume 6 ; 6 >
+      au < expected ; 2015 ; Power and Education Volume 7 ; 7 >
+
+  }
+
     {
 
       title <
@@ -35701,6 +35743,35 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = Psychology Learning & Teaching ;
+      eissn = 1475-7257 ;
+      issnl = 1475-7257
+    >
+
+      param[base_url] = http://plj.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2001 ; Psychology Learning & Teaching Volume 1 ; 1 >
+      au < exists ; 2002 ; Psychology Learning & Teaching Volume 2 ; 2 >
+      au < exists ; 2003-2004 ; Psychology Learning & Teaching Volume 3 ; 3 >
+      au < exists ; 2004-2005 ; Psychology Learning & Teaching Volume 4 ; 4 >
+      au < exists ; 2005-2006 ; Psychology Learning & Teaching Volume 5 ; 5 >
+      au < exists ; 2007 ; Psychology Learning & Teaching Volume 6 ; 6 >
+      au < exists ; 2008 ; Psychology Learning & Teaching Volume 7 ; 7 >
+      au < exists ; 2009 ; Psychology Learning & Teaching Volume 8 ; 8 >
+      au < exists ; 2010 ; Psychology Learning & Teaching Volume 9 ; 9 >
+      au < exists ; 2011 ; Psychology Learning & Teaching Volume 10 ; 10 >
+      au < exists ; 2012 ; Psychology Learning & Teaching Volume 11 ; 11 >
+      au < exists ; 2013 ; Psychology Learning & Teaching Volume 12 ; 12 >
+      au < exists ; 2014 ; Psychology Learning & Teaching Volume 13 ; 13 >
+      au < expected ; 2015 ; Psychology Learning & Teaching Volume 14 ; 14 >
+
+  }
+
     {
 
       title <
@@ -36914,6 +36985,31 @@ comment[mpj] = now published by Brill
       }
 
     }
+
+  {
+
+    title <
+      name = Research in Comparative and International Education ;
+      eissn = 1745-4999 ;
+      issnl = 1745-4999
+    >
+
+      param[base_url] = http://rci.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < exists ; 2006 ; Research in Comparative and International Education Volume 1 ; 1 >
+      au < exists ; 2007 ; Research in Comparative and International Education Volume 2 ; 2 >
+      au < exists ; 2008 ; Research in Comparative and International Education Volume 3 ; 3 >
+      au < exists ; 2009 ; Research in Comparative and International Education Volume 4 ; 4 >
+      au < exists ; 2010 ; Research in Comparative and International Education Volume 5 ; 5 >
+      au < exists ; 2011 ; Research in Comparative and International Education Volume 6 ; 6 >
+      au < exists ; 2012 ; Research in Comparative and International Education Volume 7 ; 7 >
+      au < exists ; 2013 ; Research in Comparative and International Education Volume 8 ; 8 >
+      au < exists ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 >
+      au < expected ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 >
+
+  }
 
     {
 
