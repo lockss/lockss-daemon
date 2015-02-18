@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlMetadataExtractor.java,v 1.3 2014-12-30 22:44:30 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1.java,v 1.14 2015-01-12 20:40:44 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

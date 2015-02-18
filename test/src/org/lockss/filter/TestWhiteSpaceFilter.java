@@ -1,5 +1,5 @@
 /*
- * $Id: TestWhiteSpaceFilter.java,v 1.4 2005-02-21 03:03:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

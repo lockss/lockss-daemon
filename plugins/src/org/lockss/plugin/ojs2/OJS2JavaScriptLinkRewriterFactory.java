@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2JavaScriptLinkRewriterFactory.java,v 1.1 2013-04-12 17:53:42 pgust Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiHtmlMetadataExtractorFactory.java,v 1.2 2013-03-14 20:04:31 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

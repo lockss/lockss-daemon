@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireFilterRule.java,v 1.2 2006-07-19 16:57:14 thib_gc Exp $
+ * $Id$
  */
 
 /*

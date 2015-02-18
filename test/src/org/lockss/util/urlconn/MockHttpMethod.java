@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpMethod.java,v 1.5 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

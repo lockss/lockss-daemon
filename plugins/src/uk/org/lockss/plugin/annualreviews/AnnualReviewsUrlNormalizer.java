@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsUrlNormalizer.java,v 1.1 2007-08-20 18:00:07 thib_gc Exp $
+ * $Id$
  */
 
 /*

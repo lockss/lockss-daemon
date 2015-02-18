@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysSitemapsLinkExtractorFactory.java,v 1.5 2011-09-01 19:11:02 pgust Exp $
+ * $Id$
  */
 
 /*

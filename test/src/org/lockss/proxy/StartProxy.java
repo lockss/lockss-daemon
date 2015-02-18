@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.12 2005-11-09 18:46:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

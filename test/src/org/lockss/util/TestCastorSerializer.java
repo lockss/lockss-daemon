@@ -1,5 +1,5 @@
 /*
- * $Id: TestCastorSerializer.java,v 1.6 2006-05-31 17:54:50 thib_gc Exp $
+ * $Id$
  */
 
 /*

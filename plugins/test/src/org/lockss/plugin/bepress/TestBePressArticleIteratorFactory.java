@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressArticleIteratorFactory.java,v 1.8 2013-05-16 22:06:40 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

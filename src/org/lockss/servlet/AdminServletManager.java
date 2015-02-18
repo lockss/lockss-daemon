@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.40 2014-03-10 11:28:57 rwincewicz Exp $
+ * $Id$
  */
 
 /*

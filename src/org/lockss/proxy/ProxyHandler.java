@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.87 2014-08-04 23:13:15 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.87 2014-08-04 23:13:15 fergaloy-sf Exp $
+// $Id$
 // ========================================================================
 
 package org.lockss.proxy;

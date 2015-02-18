@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.21 2008-08-26 03:04:55 dshr Exp $
+ * $Id$
  */
 
 /*

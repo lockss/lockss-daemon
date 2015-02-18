@@ -1,5 +1,5 @@
 /*
- * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.6 2015-01-22 23:12:11 aishizaki Exp $
+ * $Id$
  */
 
 /*

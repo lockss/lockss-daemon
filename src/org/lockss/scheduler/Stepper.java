@@ -1,5 +1,5 @@
 /*
- * $Id: Stepper.java,v 1.1 2003-11-11 20:29:45 tlipkis Exp $
+ * $Id$
  */
 
 /*

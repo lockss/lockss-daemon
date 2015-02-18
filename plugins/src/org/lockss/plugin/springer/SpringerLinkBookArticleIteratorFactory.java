@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookArticleIteratorFactory.java,v 1.4 2014-09-19 22:50:39 pgust Exp $
+ * $Id$
  */
 
 /*

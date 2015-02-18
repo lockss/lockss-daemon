@@ -1,5 +1,5 @@
 /*
- * $Id: SortedProperties.java,v 1.1 2003-07-23 06:42:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

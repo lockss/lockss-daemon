@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.36 2010-04-02 23:33:49 pgust Exp $
+ * $Id$
  */
 
 /*

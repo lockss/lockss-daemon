@@ -1,5 +1,5 @@
 /*
- * $Id: TestTypedEntryMap.java,v 1.4 2009-04-07 04:53:35 tlipkis Exp $
+ * $Id$
  */
 
 /*

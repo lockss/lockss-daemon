@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.27 2011-01-10 09:14:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

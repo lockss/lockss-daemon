@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerMetadataExtractorFactory.java,v 1.8 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

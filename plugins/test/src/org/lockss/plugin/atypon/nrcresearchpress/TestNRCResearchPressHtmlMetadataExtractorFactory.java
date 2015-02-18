@@ -1,4 +1,4 @@
-/* $Id: TestNRCResearchPressHtmlMetadataExtractorFactory.java,v 1.2 2014-10-08 16:11:26 alexandraohlson Exp $
+/* $Id$
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

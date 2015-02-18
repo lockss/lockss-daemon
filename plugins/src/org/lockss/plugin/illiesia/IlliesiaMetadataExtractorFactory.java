@@ -1,5 +1,5 @@
 /*
- * $Id: IlliesiaMetadataExtractorFactory.java,v 1.3 2014-06-04 22:16:09 ldoan Exp $
+ * $Id$
  */
 
 /*

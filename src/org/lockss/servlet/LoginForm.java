@@ -1,5 +1,5 @@
 /*
- * $Id: LoginForm.java,v 1.3 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id$
  */
 
 /*

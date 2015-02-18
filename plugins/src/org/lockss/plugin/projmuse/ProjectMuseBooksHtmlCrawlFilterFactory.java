@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseBooksHtmlCrawlFilterFactory.java,v 1.1 2013-09-26 18:36:22 wkwilson Exp $*/
+ * $Id$*/
 
 /*
 

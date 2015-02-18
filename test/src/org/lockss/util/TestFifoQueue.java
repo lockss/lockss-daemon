@@ -1,5 +1,5 @@
 /*
- * $Id: TestFifoQueue.java,v 1.2 2006-06-01 23:57:09 tlipkis Exp $
+ * $Id$
  */
 
 /*

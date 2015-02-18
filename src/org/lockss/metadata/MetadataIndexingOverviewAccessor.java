@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataIndexingOverviewAccessor.java,v 1.1 2013-03-19 20:24:23 pgust Exp $
+ * $Id$
  */
 
 /*

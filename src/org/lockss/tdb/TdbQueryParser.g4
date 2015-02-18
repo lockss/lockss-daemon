@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryParser.g4,v 1.2 2014-09-03 22:07:48 thib_gc Exp $
+ * $Id$
  */
 
 /*

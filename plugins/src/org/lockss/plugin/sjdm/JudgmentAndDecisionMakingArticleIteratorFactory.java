@@ -1,5 +1,5 @@
 /*
- * $Id: JudgmentAndDecisionMakingArticleIteratorFactory.java,v 1.1 2013-01-31 00:44:20 thib_gc Exp $
+ * $Id$
  */
 
 /*

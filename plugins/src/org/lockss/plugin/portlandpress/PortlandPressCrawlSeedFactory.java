@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressCrawlSeedFactory.java,v 1.4 2015-02-04 19:05:23 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

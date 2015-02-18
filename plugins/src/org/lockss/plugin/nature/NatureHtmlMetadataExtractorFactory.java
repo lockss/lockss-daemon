@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.8 2013-03-14 20:04:31 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

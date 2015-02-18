@@ -1,5 +1,5 @@
 /*
- * $Id: ExtractingPdfFilterFactory.java,v 1.8 2014-11-05 01:02:43 thib_gc Exp $
+ * $Id$
  */
 
 /*

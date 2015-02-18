@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.12 2014-01-14 04:28:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

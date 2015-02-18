@@ -1,6 +1,6 @@
 /*
 
- * $Id: DigitalCommonsRepositoryMetadataExtractorFactory.java,v 1.1 2013-11-19 21:40:57 ldoan Exp $
+ * $Id$
  */
 
 /*

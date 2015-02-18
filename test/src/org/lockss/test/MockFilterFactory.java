@@ -1,5 +1,5 @@
 /*
- * $Id: MockFilterFactory.java,v 1.1 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginConfig.java,v 1.4 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.13 2015-01-21 23:14:50 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

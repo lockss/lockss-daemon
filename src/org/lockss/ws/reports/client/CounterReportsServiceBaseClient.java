@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsServiceBaseClient.java,v 1.3 2014-06-16 23:36:05 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

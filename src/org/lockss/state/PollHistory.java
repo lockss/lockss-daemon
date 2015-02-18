@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.14 2004-04-01 02:44:32 eaalto Exp $
+ * $Id$
  */
 
 /*

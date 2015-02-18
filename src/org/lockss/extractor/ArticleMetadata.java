@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.10 2014-01-14 08:55:50 tlipkis Exp $
+ * $Id$
  */
 
 /*

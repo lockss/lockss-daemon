@@ -8,7 +8,7 @@ import de.schlichtherle.truezip.file.TApplication;
  * An abstract class which configures the TrueZIP File* module.
  * 
  * @author  Christian Schlichtherle
- * @version $Id: Application.java,v 1.1 2012-06-20 04:48:12 tlipkis Exp $
+ * @version $Id$
  */
 abstract class Application<E extends Exception> extends TApplication<E> {
 

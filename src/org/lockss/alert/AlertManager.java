@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManager.java,v 1.5 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.4 2008-07-22 06:43:13 thib_gc Exp $
+ * $Id$
  */
 
 /*

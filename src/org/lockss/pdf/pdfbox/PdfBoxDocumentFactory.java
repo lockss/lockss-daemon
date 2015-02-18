@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocumentFactory.java,v 1.6 2014-11-05 01:19:23 thib_gc Exp $
+ * $Id$
  */
 
 /*

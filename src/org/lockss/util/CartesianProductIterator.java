@@ -1,5 +1,5 @@
 /*
- * $Id: CartesianProductIterator.java,v 1.1 2008-08-17 08:48:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

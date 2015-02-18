@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollState.java,v 1.1 2007-01-23 21:44:36 smorabito Exp $
+ * $Id$
  */
 
 /*

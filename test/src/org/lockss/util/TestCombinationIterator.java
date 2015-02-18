@@ -1,5 +1,5 @@
 /*
- * $Id: TestCombinationIterator.java,v 1.2 2012-09-21 20:46:25 clairegriffin Exp $
+ * $Id$
  */
 
 /*

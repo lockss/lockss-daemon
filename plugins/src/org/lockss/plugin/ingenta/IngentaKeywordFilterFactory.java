@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaKeywordFilterFactory.java,v 1.1 2015-01-30 23:41:00 etenbrink Exp $
+ * $Id$
  */
 
 /*

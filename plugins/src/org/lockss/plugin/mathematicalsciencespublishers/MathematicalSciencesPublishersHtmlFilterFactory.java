@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlFilterFactory.java,v 1.3 2014-05-19 23:22:30 etenbrink Exp $
+ * $Id$
  */ 
 
 /*

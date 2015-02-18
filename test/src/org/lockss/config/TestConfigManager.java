@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.46 2014-06-02 00:44:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,6 +1,6 @@
 /*
 
- * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.8 2014-06-02 17:37:03 etenbrink Exp $
+ * $Id$
  */
 
 /*

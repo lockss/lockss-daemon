@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.60 2014-02-26 08:09:06 tlipkis Exp $
+ * $Id$
  */
 
 /*

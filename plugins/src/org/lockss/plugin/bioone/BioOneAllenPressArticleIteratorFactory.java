@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAllenPressArticleIteratorFactory.java,v 1.1 2011-09-01 21:38:17 thib_gc Exp $
+ * $Id$
  */
 
 /*

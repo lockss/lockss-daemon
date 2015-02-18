@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldSubstancePredicate.java,v 1.3 2013-04-01 00:42:54 tlipkis Exp $
+ * $Id$
  */
 
 /*

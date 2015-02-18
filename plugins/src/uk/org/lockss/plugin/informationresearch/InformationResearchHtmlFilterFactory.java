@@ -1,5 +1,5 @@
 /*
- * $Id: InformationResearchHtmlFilterFactory.java,v 1.1 2011-11-14 21:25:13 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPattern.java,v 1.2 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id$
  */
 
 /*

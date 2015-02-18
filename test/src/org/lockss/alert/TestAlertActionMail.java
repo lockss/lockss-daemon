@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.9 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id$
  */
 
 /*

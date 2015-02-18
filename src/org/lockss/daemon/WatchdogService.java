@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.14 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,

@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagPdfMetadataExtractorFactory.java,v 1.2 2014-02-05 22:28:26 etenbrink Exp $
+ * $Id$
  */
 
 /*

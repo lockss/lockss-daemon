@@ -1,5 +1,5 @@
 /*
- * $Id: LCUserAccount.java,v 1.4 2009-06-13 09:10:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

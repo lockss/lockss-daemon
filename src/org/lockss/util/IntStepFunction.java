@@ -1,5 +1,5 @@
 /*
- * $Id: IntStepFunction.java,v 1.3 2013-02-25 08:52:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

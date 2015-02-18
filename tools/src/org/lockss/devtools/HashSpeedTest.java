@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.6 2006-07-11 17:42:24 thib_gc Exp $
+ * $Id$
  */
 
 /*

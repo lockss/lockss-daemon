@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureHtmlCrawlFilterFactory.java,v 1.1 2013-03-19 23:41:10 alexandraohlson Exp $
+ * $Id$
  */
 package org.lockss.plugin.nature;
 

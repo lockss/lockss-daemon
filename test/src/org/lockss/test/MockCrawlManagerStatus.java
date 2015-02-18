@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatus.java,v 1.6 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.22 2013-07-18 19:29:07 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: MockIcpMessage.java,v 1.10 2012-07-10 23:50:05 thib_gc Exp $
+ * $Id$
  */
 
 /*

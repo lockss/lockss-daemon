@@ -1,5 +1,5 @@
 /*
- * $Id: DisabledServlet.java,v 1.1 2012-05-17 18:03:42 tlipkis Exp $
+ * $Id$
  */
 
 /*

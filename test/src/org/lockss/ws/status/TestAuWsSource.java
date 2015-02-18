@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuWsSource.java,v 1.2 2014-06-09 23:28:13 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

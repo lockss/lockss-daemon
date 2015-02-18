@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagPdfFilterFactory.java,v 1.4 2014-08-22 12:28:37 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataException.java,v 1.2 2013-03-26 22:13:15 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

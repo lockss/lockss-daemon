@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.17 2013-10-23 01:13:03 thib_gc Exp $
+ * $Id$
  */
 
 /*

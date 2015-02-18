@@ -1,5 +1,5 @@
 /*
- * $Id: BuildInfo.java,v 1.5 2004-07-23 16:44:10 tlipkis Exp $
+ * $Id$
  */
 
 /*

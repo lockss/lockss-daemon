@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8 2008-11-26 01:10:53 edwardsb1 Exp $
+ * $Id$
  */
 
 /*

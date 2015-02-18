@@ -1,5 +1,5 @@
 /*
- * $Id: BloomsburyQatarHtmlMetadataExtractorFactory.java,v 1.2 2013-05-28 22:52:15 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

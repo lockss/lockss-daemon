@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.8 2013-08-14 23:27:15 barry409 Exp $
+ * $Id$
  */
 
 /*

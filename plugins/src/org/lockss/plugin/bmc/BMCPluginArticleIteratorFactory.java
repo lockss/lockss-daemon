@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginArticleIteratorFactory.java,v 1.4 2014-03-17 19:01:10 aishizaki Exp $
+ * $Id$
  */ 
 
 /*

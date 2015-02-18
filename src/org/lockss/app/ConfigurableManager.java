@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableManager.java,v 1.4 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id$
  */
 
 /*

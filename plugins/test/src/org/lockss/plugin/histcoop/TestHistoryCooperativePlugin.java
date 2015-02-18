@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativePlugin.java,v 1.4 2010-03-12 00:50:10 thib_gc Exp $
+ * $Id$
  */
 
 /*

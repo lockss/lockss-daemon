@@ -1,5 +1,5 @@
 /*
- * $Id: CoActionHtmlHashFilterFactory.java,v 1.1 2015-02-11 08:21:29 etenbrink Exp $
+ * $Id$
  */
 
 /*

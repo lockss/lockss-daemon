@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamStateMachine.java,v 1.2 2014-11-26 23:45:30 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.22 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id$
  */
 
 /*

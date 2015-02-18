@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.28 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

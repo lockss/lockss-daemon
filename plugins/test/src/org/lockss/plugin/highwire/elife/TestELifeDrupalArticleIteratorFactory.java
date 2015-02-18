@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalArticleIteratorFactory.java,v 1.2 2014-11-12 20:11:59 wkwilson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.39 2006-06-02 19:59:29 tlipkis Exp $
+ * $Id$
  */
 
 /*

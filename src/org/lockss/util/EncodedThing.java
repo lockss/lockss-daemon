@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedThing.java,v 1.1 2013-03-13 08:43:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

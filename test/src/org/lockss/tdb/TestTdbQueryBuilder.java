@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbQueryBuilder.java,v 1.1 2014-11-12 00:16:19 thib_gc Exp $
+ * $Id$
  */
 
 /*

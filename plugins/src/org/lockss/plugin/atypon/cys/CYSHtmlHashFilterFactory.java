@@ -1,5 +1,5 @@
 /* 
- * $Id: CYSHtmlHashFilterFactory.java,v 1.2 2015-01-31 20:18:13 ldoan Exp $ 
+ * $Id$ 
  */
 
 /*

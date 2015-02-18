@@ -1,5 +1,5 @@
 /*
- * $Id: PeerChannel.java,v 1.3 2009-02-05 05:09:33 tlipkis Exp $
+ * $Id$
  */
 
 /*

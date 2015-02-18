@@ -1,5 +1,5 @@
 /*
- * $Id: TestInternalSocket.java,v 1.1 2005-05-18 05:35:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

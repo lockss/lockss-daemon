@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunctionVote.java,v 1.6 2005-10-11 05:49:58 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.6 2013-10-03 17:36:35 etenbrink Exp $
+ * $Id$
  */
 
 /*

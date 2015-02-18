@@ -1,5 +1,5 @@
 /*
- * $Id: AuOrderComparator.java,v 1.1 2007-02-08 08:54:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

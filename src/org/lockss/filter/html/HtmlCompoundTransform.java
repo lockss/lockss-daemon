@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlCompoundTransform.java,v 1.3 2010-10-02 22:25:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

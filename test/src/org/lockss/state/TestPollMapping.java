@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollMapping.java,v 1.4 2005-10-11 05:51:35 tlipkis Exp $
+ * $Id$
  */
 
 /*

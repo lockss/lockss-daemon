@@ -1,5 +1,5 @@
 /*
- * $Id: TestResourceManager.java,v 1.8 2007-03-14 23:42:16 thib_gc Exp $
+ * $Id$
  */
 
 /*

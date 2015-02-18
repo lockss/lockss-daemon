@@ -1,5 +1,5 @@
 /*
- * $Id: LaserInstituteOfAmericaMetadataExtractorFactory.java,v 1.1 2012-03-08 21:59:40 pgust Exp $
+ * $Id$
  */
 
 /*

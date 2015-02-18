@@ -1,5 +1,5 @@
 /*
- * $Id: AuEventHandler.java,v 1.6 2013-02-25 08:49:49 tlipkis Exp $
+ * $Id$
  */
 
 /*

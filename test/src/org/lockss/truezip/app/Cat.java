@@ -9,7 +9,7 @@ import java.io.IOException;
  * 
  * @see     <a href="http://www.gnu.org/software/wget/">GNU Cat - Home Page</a>
  * @author  Christian Schlichtherle
- * @version $Id: Cat.java,v 1.1 2012-06-20 04:48:12 tlipkis Exp $
+ * @version $Id$
  */
 public class Cat extends Application<IOException> {
 

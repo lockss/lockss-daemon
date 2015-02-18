@@ -1,5 +1,5 @@
 /*
- * $Id: TestSitemapParser.java,v 1.2 2013-10-23 04:25:24 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.6 2006-11-07 20:44:47 troberts Exp $
+ * $Id$
  */
 
 /*

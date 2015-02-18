@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.11 2013-04-02 00:21:22 aishizaki Exp $
+ * $Id$
  */
 
 /*

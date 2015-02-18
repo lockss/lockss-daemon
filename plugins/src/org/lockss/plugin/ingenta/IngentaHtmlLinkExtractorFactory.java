@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkExtractorFactory.java,v 1.1 2009-06-30 22:39:30 thib_gc Exp $
+ * $Id$
  */
 
 /*

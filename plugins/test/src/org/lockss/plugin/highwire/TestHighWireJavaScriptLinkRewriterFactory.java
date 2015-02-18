@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireJavaScriptLinkRewriterFactory.java,v 1.4 2013-10-23 04:25:25 tlipkis Exp $
+ * $Id$
  */
 
 /*

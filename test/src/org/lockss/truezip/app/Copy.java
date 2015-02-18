@@ -17,7 +17,7 @@ import java.io.IOException;
  * already exists.
  * 
  * @author  Christian Schlichtherle
- * @version $Id: Copy.java,v 1.1 2012-06-20 04:48:12 tlipkis Exp $
+ * @version $Id$
  */
 public class Copy extends Application<IOException> {
 

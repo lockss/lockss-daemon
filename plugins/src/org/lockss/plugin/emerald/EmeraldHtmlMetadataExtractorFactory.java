@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.8 2013-06-03 21:17:53 aishizaki Exp $
+ * $Id$
  */
 
 /*

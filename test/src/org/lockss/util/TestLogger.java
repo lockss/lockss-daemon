@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.32 2014-11-19 08:21:04 tlipkis Exp $
+ * $Id$
  */
 
 /*

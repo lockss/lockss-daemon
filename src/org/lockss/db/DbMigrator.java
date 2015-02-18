@@ -1,5 +1,5 @@
 /*
- * $Id: DbMigrator.java,v 1.4 2014-08-28 19:11:07 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

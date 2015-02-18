@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.27 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

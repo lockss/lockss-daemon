@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.13 2014-07-11 23:34:25 tlipkis Exp $
+ * $Id$
  */
 
 /*

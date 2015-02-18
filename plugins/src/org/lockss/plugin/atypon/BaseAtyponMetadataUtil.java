@@ -1,4 +1,4 @@
-/* $Id: BaseAtyponMetadataUtil.java,v 1.2 2014-10-15 16:29:00 alexandraohlson Exp $
+/* $Id$
  */
 
 /*

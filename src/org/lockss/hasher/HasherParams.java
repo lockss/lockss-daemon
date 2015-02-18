@@ -1,5 +1,5 @@
 /*
- * $Id: HasherParams.java,v 1.1 2014-10-29 18:13:00 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

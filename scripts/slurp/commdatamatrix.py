@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: commdatamatrix.py,v 1.2 2012-10-24 21:18:43 thib_gc Exp $
+# $Id$
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,

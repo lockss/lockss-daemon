@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHttpResponseHandler.java,v 1.4 2015-01-23 08:06:12 etenbrink Exp $
+ * $Id$
  */
 
 /*

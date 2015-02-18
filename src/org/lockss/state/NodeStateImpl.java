@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.40 2011-06-30 19:06:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

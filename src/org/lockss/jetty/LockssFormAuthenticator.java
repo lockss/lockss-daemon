@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFormAuthenticator.java,v 1.7 2009-11-05 23:38:39 dshr Exp $
+ * $Id$
  */
 
 /*

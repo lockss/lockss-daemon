@@ -1,5 +1,5 @@
 /*
- * $Id: TestSyslogTarget.java,v 1.9 2014-01-14 04:33:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

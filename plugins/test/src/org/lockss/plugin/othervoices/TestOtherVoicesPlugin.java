@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesPlugin.java,v 1.4 2010-03-27 01:05:53 thib_gc Exp $
+ * $Id$
  */
 
 /*

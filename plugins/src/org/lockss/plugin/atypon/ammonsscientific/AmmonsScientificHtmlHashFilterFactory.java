@@ -1,5 +1,5 @@
 /*
- * $Id: AmmonsScientificHtmlHashFilterFactory.java,v 1.1 2014-10-08 16:11:24 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: UbiquityPressUrlNormalizer.java,v 1.6 2013-01-11 19:46:29 ldoan Exp $
+ * $Id$
  */
 
 /*

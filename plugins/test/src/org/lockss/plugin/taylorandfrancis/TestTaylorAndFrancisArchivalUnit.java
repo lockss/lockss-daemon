@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.10 2014-11-12 20:11:26 wkwilson Exp $
+ * $Id$
  */
 
 /*

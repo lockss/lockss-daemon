@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlCrawlFilterFactory.java,v 1.3 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

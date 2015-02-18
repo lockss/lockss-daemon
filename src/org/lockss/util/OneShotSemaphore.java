@@ -1,5 +1,5 @@
 /*
- * $Id: OneShotSemaphore.java,v 1.4 2006-06-01 23:57:09 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

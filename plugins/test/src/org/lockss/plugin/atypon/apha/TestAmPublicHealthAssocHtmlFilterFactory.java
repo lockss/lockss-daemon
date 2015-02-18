@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmPublicHealthAssocHtmlFilterFactory.java,v 1.1 2013-09-10 16:09:30 alexandraohlson Exp $
+ * $Id$
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.

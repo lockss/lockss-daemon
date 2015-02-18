@@ -1,5 +1,5 @@
 /*
- * $Id: SchemaDocDbCreator.java,v 1.5 2014-10-13 22:21:29 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

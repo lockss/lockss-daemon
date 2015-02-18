@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeEditor.java,v 1.5 2014-10-22 19:39:34 thib_gc Exp $
+ * $Id$
  */
 
 /*

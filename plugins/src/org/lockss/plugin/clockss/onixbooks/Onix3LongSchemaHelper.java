@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongSchemaHelper.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

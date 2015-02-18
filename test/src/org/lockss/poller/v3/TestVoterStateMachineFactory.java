@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.11 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id$
  */
 
 /*

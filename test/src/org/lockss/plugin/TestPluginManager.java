@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.109 2014-07-21 03:19:44 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicComparatorFactory.java,v 1.3 2012-11-14 12:05:09 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

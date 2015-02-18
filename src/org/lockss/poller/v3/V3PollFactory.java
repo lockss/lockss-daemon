@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.43 2015-01-06 22:39:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

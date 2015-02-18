@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHttpResponseHandler.java,v 1.2 2014-04-23 19:41:17 aishizaki Exp $
+ * $Id$
  */
 
 /*

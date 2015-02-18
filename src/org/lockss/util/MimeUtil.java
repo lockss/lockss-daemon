@@ -1,5 +1,5 @@
 /*
- * $Id: MimeUtil.java,v 1.3 2014-01-14 04:32:32 tlipkis Exp $
+ * $Id$
  */
 
 /*

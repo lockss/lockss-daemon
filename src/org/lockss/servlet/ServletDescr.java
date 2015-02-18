@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.18 2012-06-25 14:14:55 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

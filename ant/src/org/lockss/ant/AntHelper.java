@@ -1,5 +1,5 @@
 /*
- * $Id: AntHelper.java,v 1.2 2003-07-17 05:20:29 tlipkis Exp $
+ * $Id$
  */
 
 /*

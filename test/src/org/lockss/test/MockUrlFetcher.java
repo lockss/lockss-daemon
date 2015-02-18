@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlFetcher.java,v 1.3 2014-11-25 01:41:43 wkwilson Exp $
+ * $Id$
  */
 
 /*

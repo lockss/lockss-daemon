@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.9 2015-01-05 23:00:01 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXmlMetadataExtractorFactory.java,v 1.3 2015-01-15 05:06:47 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

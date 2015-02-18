@@ -1,5 +1,5 @@
 /*
- * $Id: GetPlatformConfigurationClient.java,v 1.1 2014-05-30 21:45:27 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

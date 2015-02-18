@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramComm.java,v 1.9 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

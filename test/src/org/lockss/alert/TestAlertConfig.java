@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.8 2014-10-22 19:39:37 thib_gc Exp $
+ * $Id$
  */
 
 /*

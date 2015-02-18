@@ -1,4 +1,4 @@
-/* $Id: TestASCEHtmlMetadataExtractorFactory.java,v 1.1 2013-05-13 21:16:06 ldoan Exp $
+/* $Id$
 
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.

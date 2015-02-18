@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmeraldHtmlFilterFactory.java,v 1.6 2013-04-15 22:07:23 thib_gc Exp $
+ * $Id$
  */
 
 /*

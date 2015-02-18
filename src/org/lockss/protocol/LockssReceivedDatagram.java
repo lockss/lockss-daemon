@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.13 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id$
  */
 
 /*

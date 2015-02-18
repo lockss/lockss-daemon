@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.14 2013-12-09 18:36:46 pgust Exp $
+ * $Id$
  */
 
 /*

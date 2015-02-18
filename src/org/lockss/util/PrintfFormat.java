@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfFormat.java,v 1.7 2011-05-11 22:16:42 pgust Exp $
+ * $Id$
  */
 
 //

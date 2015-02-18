@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.8 2013-04-29 19:55:12 thib_gc Exp $
+ * $Id$
  */
 
 /*

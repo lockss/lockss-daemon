@@ -1,5 +1,5 @@
 /*
- * $Id: CharsetUtil.java,v 1.2 2015-01-07 00:20:25 clairegriffin Exp $
+ * $Id$
  */
 
 /*

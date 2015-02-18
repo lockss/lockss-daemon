@@ -1,5 +1,5 @@
 /*
- * $Id: AMAVirtualMentorHtmlMetadataExtractorFactory.java,v 1.2 2011-06-27 23:12:25 pgust Exp $
+ * $Id$
  */
 
 /*

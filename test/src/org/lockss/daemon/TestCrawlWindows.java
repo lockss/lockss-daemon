@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlWindows.java,v 1.10 2014-08-21 22:41:03 thib_gc Exp $
+ * $Id$
  */
 
 /*

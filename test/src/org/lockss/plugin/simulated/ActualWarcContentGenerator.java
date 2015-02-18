@@ -1,5 +1,5 @@
 /*
- * $Id: ActualWarcContentGenerator.java,v 1.1 2011-05-09 02:34:01 tlipkis Exp $
+ * $Id$
  */
 
 /*

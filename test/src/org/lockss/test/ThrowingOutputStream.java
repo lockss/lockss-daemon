@@ -1,5 +1,5 @@
 /*
- * $Id: ThrowingOutputStream.java,v 1.1 2010-11-03 06:09:57 tlipkis Exp $
+ * $Id$
  */
 
 /*

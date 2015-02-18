@@ -1,5 +1,5 @@
 /*
- * $Id: AuParamFunctorWrapper.java,v 1.2 2014-10-01 08:14:36 tlipkis Exp $
+ * $Id$
  */
 
 /*

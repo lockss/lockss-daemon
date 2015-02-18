@@ -1,5 +1,5 @@
 /*
- * $Id: FailOverProxyManager.java,v 1.2 2004-10-18 03:38:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

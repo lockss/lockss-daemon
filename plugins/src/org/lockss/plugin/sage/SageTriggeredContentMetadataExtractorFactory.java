@@ -1,5 +1,5 @@
 /*
- * $Id: SageTriggeredContentMetadataExtractorFactory.java,v 1.3 2013-09-27 17:54:19 etenbrink Exp $
+ * $Id$
  */
 
 /*

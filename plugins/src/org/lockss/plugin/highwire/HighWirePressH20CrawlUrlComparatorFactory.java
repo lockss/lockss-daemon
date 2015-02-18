@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20CrawlUrlComparatorFactory.java,v 1.4 2015-01-16 23:08:05 etenbrink Exp $
+ * $Id$
  */
 
 /*

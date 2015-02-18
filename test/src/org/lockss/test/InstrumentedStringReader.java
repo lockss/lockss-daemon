@@ -1,5 +1,5 @@
 /*
- * $Id: InstrumentedStringReader.java,v 1.1 2005-02-21 03:11:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

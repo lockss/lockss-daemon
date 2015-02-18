@@ -1,5 +1,5 @@
 /*
- * $Id: LockssErrorHandler.java,v 1.3 2009-02-26 05:13:19 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright 1999-2004 Mort Bay Consulting Pty. Ltd.
-// $Id: LockssErrorHandler.java,v 1.3 2009-02-26 05:13:19 tlipkis Exp $
+// $Id$
 // ------------------------------------------------------------------------
 
 package org.lockss.jetty;

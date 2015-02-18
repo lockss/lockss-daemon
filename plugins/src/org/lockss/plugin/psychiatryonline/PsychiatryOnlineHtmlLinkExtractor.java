@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineHtmlLinkExtractor.java,v 1.5 2009-03-13 22:45:21 thib_gc Exp $
+ * $Id$
  */
 
 /*

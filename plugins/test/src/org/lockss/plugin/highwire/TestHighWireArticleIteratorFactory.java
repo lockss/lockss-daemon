@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.11 2014-01-06 22:09:39 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: delete_aus.py,v 1.4 2012-10-03 20:44:29 thib_gc Exp $
+# $Id$
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.

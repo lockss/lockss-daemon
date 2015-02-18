@@ -1,5 +1,5 @@
 /*
- * $Id: UserEditAccount.java,v 1.5 2013-10-17 07:48:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

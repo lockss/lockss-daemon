@@ -1,5 +1,5 @@
 /*
- * $Id: Wrapped.java,v 1.2 2003-12-17 02:09:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

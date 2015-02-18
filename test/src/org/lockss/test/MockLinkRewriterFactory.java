@@ -1,5 +1,5 @@
 /*
-* $Id: MockLinkRewriterFactory.java,v 1.6 2011-09-05 02:58:42 tlipkis Exp $
+* $Id$
 */
 
 /*

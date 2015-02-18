@@ -1,4 +1,4 @@
-/* $Id: TestPensoftUrlNormalizer.java,v 1.1 2014-01-22 23:29:36 aishizaki Exp $
+/* $Id$
 
 Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

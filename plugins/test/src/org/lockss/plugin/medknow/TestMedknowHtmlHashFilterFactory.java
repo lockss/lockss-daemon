@@ -1,4 +1,4 @@
-/* $Id: TestMedknowHtmlHashFilterFactory.java,v 1.1 2013-06-04 00:26:07 ldoan Exp $
+/* $Id$
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 

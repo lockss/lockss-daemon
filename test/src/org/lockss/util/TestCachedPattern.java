@@ -1,5 +1,5 @@
 /*
- * $Id: TestCachedPattern.java,v 1.1 2011-02-14 00:13:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

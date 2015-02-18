@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.24 2013-05-30 14:01:04 tlipkis Exp $
+ * $Id$
  */
 
 /*

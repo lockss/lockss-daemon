@@ -1,5 +1,5 @@
 /*
- * $Id: BMJDrupalHtmlHashFilterFactory.java,v 1.1 2015-02-11 09:15:03 etenbrink Exp $
+ * $Id$
  */
 
 /*

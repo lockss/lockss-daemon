@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.10 2014-10-03 23:04:46 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

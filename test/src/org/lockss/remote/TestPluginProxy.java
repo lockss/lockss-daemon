@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginProxy.java,v 1.2 2004-09-21 21:25:01 dshr Exp $
+ * $Id$
  */
 
 /*

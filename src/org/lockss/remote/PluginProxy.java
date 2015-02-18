@@ -1,5 +1,5 @@
 /*
- * $Id: PluginProxy.java,v 1.7 2012-07-10 04:35:42 tlipkis Exp $
+ * $Id$
  */
 
 /*

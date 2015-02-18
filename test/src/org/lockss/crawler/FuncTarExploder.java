@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder.java,v 1.15 2014-11-12 20:11:28 wkwilson Exp $
+ * $Id$
  */
 
 /*

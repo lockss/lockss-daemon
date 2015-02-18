@@ -1,5 +1,5 @@
 /*
- * $Id: DerbyUserAuthenticator.java,v 1.1 2013-04-18 19:49:11 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsXmlSchemaHelper.java,v 1.4 2014-01-29 17:19:39 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

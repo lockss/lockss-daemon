@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourcePdfFilterFactory.java,v 1.7 2012-11-20 01:31:18 thib_gc Exp $
+ * $Id$
  */
 
 /*

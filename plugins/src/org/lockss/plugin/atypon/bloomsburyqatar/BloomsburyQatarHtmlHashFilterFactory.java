@@ -1,5 +1,5 @@
 /*
- * $Id: BloomsburyQatarHtmlHashFilterFactory.java,v 1.1 2013-08-28 17:56:44 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

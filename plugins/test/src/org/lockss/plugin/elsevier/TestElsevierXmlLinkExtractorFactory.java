@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierXmlLinkExtractorFactory.java,v 1.3 2008-02-20 19:11:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

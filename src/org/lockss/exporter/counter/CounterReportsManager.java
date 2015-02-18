@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.17 2014-08-29 20:43:22 pgust Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ScRisMetadataExtractorFactory.java,v 1.1 2015-02-03 03:07:33 thib_gc Exp $
+ * $Id$
  */
 
 /*

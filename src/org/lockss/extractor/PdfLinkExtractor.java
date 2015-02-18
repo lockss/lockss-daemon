@@ -1,5 +1,5 @@
 /*
- * $Id: PdfLinkExtractor.java,v 1.2 2009-10-08 00:01:21 thib_gc Exp $
+ * $Id$
  */
 
 /*

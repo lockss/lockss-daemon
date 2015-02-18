@@ -18,7 +18,7 @@ import java.util.Arrays;
  * directory structure of this ZIP file gets printed.
  * 
  * @author  Christian Schlichtherle
- * @version $Id: Tree.java,v 1.1 2012-06-20 04:48:12 tlipkis Exp $
+ * @version $Id$
  */
 public class Tree extends Application<RuntimeException> {
 

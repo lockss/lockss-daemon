@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.14 2015-02-02 23:54:00 etenbrink Exp $
+ * $Id$
  */
 
 /*

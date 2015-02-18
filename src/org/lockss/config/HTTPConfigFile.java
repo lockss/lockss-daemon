@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.18 2013-03-14 06:38:03 tlipkis Exp $
+ * $Id$
  */
 
 /*

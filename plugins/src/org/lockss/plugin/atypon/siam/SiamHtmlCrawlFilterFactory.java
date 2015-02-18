@@ -1,4 +1,4 @@
-/* $Id: SiamHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:29 alexandraohlson Exp $
+/* $Id$
  */
 
 /*

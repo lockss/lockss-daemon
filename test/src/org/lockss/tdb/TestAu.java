@@ -1,5 +1,5 @@
 /*
- * $Id: TestAu.java,v 1.3 2015-01-22 22:36:28 thib_gc Exp $
+ * $Id$
  */
 
 /*

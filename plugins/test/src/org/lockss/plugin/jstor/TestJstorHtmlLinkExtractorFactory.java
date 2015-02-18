@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorHtmlLinkExtractorFactory.java,v 1.3 2014-05-30 21:47:10 alexandraohlson Exp $
+ * $Id$
  */
 /*
 

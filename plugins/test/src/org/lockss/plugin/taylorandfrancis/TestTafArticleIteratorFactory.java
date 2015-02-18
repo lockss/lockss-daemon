@@ -1,5 +1,5 @@
 /*
- * $Id: TestTafArticleIteratorFactory.java,v 1.1 2015-01-28 01:59:00 thib_gc Exp $
+ * $Id$
  */
 
 /*

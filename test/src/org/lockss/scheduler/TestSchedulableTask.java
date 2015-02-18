@@ -1,5 +1,5 @@
 /*
- * $Id: TestSchedulableTask.java,v 1.3 2006-09-16 22:59:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

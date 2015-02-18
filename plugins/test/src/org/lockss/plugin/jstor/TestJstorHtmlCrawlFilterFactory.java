@@ -1,4 +1,4 @@
-/*  $Id: TestJstorHtmlCrawlFilterFactory.java,v 1.1 2014-06-27 18:16:46 alexandraohlson Exp $
+/*  $Id$
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 

@@ -1,5 +1,5 @@
 /*
-* $Id: MockPoll.java,v 1.7 2009-12-22 02:19:43 tlipkis Exp $
+* $Id$
  */
 
 /*

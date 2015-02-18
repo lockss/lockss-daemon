@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerManager.java,v 1.3 2013-07-18 19:29:35 tlipkis Exp $
+ * $Id$
  */
 
 /*

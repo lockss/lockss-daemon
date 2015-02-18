@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlLinkExtractorFactory.java,v 1.3 2015-01-20 21:33:00 alexandraohlson Exp $
+ * $Id$
  */
 /*
 

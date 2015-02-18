@@ -1,5 +1,5 @@
 /*
- * $Id: MockDatagramSocketExtras.java,v 1.2 2003-06-20 22:34:55 claire Exp $
+ * $Id$
  */
 
 /*

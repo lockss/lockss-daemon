@@ -1,5 +1,5 @@
 /*
- * $Id: MaxDaemonVersion.java,v 1.1 2005-07-22 23:45:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

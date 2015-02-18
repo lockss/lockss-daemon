@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.36 2014-11-21 20:24:36 thib_gc Exp $
+ * $Id$
  */
 
 /*

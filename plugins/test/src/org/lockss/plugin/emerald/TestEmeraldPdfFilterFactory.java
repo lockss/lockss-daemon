@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmeraldPdfFilterFactory.java,v 1.5 2014-11-27 00:02:26 thib_gc Exp $
+ * $Id$
  */
 
 /*

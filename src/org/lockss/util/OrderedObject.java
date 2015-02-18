@@ -1,5 +1,5 @@
 /*
- * $Id: OrderedObject.java,v 1.2 2004-05-26 22:57:38 tlipkis Exp $
+ * $Id$
  */
 
 /*

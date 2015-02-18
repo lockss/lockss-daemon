@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.16 2013-07-07 04:05:44 dshr Exp $
+ * $Id$
  */
 
 /*

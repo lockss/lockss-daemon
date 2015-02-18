@@ -1,5 +1,5 @@
 /*
- * $Id: ExpectedRuntimeException.java,v 1.2 2004-08-21 06:54:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

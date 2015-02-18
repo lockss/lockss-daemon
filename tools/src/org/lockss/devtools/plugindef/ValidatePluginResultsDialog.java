@@ -1,5 +1,5 @@
 /*
- * $Id: ValidatePluginResultsDialog.java,v 1.12 2014-11-12 20:11:54 wkwilson Exp $
+ * $Id$
  */
 
 /*

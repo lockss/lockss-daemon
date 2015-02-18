@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceHtmlFilterFactory.java,v 1.5 2008-01-16 00:41:00 thib_gc Exp $
+ * $Id$
  */
 
 /*

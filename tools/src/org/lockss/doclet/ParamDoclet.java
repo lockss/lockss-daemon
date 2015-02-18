@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.12 2011-01-25 18:37:49 tlipkis Exp $
+ * $Id$
  */
 
 /*

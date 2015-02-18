@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerLinkCrawlUrlComparatorFactory.java,v 1.1 2012-12-08 01:21:04 thib_gc Exp $
+ * $Id$
  */
 
 /*

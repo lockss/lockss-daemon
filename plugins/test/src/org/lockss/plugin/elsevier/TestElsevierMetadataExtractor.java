@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierMetadataExtractor.java,v 1.7 2013-01-06 14:42:32 pgust Exp $
+ * $Id$
  */
 
 /*

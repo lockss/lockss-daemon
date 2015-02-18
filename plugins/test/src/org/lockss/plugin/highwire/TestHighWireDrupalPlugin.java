@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalPlugin.java,v 1.4 2014-12-30 22:44:49 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldUrlNormalizer.java,v 1.2 2012-05-22 23:30:46 wkwilson Exp $
+ * $Id$
  */
 
 /*

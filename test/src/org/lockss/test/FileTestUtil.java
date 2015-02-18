@@ -1,5 +1,5 @@
 /*
- * $Id: FileTestUtil.java,v 1.8 2010-04-05 17:22:57 pgust Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

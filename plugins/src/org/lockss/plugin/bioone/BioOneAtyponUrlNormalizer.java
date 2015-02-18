@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponUrlNormalizer.java,v 1.5 2013-08-23 20:20:39 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

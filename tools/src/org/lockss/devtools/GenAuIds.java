@@ -1,5 +1,5 @@
 /*
- * $Id: GenAuIds.java,v 1.2 2011-10-26 17:11:29 pgust Exp $
+ * $Id$
  */
 
 /*

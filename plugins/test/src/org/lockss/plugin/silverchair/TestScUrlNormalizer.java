@@ -1,5 +1,5 @@
 /*
- * $Id: TestScUrlNormalizer.java,v 1.1 2015-02-03 03:07:34 thib_gc Exp $
+ * $Id$
  */
 
 /*

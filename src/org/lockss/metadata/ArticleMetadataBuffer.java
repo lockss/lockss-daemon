@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.8 2014-09-09 22:50:47 pgust Exp $
+ * $Id$
  */
 
 /*

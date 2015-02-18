@@ -1,5 +1,5 @@
 /*
- * $Id: TestNRCResearchPressHtmlHashFilterFactory.java,v 1.4 2015-01-26 20:20:07 alexandraohlson Exp $
+ * $Id$
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.

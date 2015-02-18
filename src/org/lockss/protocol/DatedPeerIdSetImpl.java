@@ -1,5 +1,5 @@
 /*
- * $Id: DatedPeerIdSetImpl.java,v 1.5 2013-03-20 19:54:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponUrlNormalizer.java,v 1.6 2014-12-23 19:16:30 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

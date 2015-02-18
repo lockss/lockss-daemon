@@ -1,5 +1,5 @@
 /*
- * $Id: PdfCryptographyException.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id$
  */
 
 /*

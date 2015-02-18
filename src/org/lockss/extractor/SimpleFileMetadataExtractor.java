@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleFileMetadataExtractor.java,v 1.3 2011-06-20 07:02:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

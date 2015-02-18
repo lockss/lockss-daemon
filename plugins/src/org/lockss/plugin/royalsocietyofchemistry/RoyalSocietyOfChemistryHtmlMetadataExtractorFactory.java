@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryHtmlMetadataExtractorFactory.java,v 1.8 2014-04-07 20:30:28 etenbrink Exp $
+ * $Id$
  */
 
 /*

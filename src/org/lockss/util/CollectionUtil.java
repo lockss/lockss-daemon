@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.21 2014-07-25 07:01:48 tlipkis Exp $
+ * $Id$
  */
 
 /*

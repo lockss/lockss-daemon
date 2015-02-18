@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceURLConnection.java,v 1.1 2008-09-15 02:30:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

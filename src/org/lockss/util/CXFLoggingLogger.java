@@ -1,5 +1,5 @@
 /*
- * $Id: CXFLoggingLogger.java,v 1.1 2014-02-12 19:38:06 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

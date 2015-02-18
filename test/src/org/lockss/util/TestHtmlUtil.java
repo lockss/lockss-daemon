@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlUtil.java,v 1.5 2013-03-19 03:45:24 pgust Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAshdinPlugin.java,v 1.2 2012-06-06 23:04:32 dylanrhodes Exp $
+ * $Id$
  */
 
 /*

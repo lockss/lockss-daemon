@@ -1,5 +1,5 @@
 /*
- * $Id: GetTable.java,v 1.3 2005-10-11 05:47:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.12 2012-09-16 01:16:25 tlipkis Exp $
+ * $Id$
  */
 
 /*

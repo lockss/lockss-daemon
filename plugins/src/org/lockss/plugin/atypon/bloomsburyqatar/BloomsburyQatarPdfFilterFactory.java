@@ -1,5 +1,5 @@
 /*
- * $Id: BloomsburyQatarPdfFilterFactory.java,v 1.1 2015-01-28 23:24:38 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

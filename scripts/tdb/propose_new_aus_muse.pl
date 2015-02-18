@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# $Id: propose_new_aus_muse.pl,v 1.1 2014-05-05 20:05:47 mellen22 Exp $
+# $Id$
 #
 # Read in a list of AUs defined with the Project Muse plugin.
 # Propose new AUs, either before or after the range provided
@@ -21,7 +21,7 @@ my @Usage = ("$0 [-h] [--pre=<num1>] [--post=<num2>] auid_file\n",
 #    "-c            Use ClockssHighWirePressH20Plugin (default HighWirePressH20Plugin)\n",
     "-h            Print this help message.");
 sub usage {
-    print '$Revision: 1.1 $' . "\n";
+    print '$Revision$' . "\n";
     print "Usage:\n @Usage\n";
     exit(1);
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePollFactory.java,v 1.4 2007-10-09 00:49:55 smorabito Exp $
+ * $Id$
  */
 
 /*

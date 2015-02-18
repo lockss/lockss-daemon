@@ -1,5 +1,5 @@
 /*
- * $Id: MailService.java,v 1.4 2005-09-12 04:36:56 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,

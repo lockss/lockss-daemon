@@ -1,5 +1,5 @@
 /*
- * * $Id: ApiParameters.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
+ * * $Id$
  */
 
 /*

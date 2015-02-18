@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.26 2013-05-08 09:09:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

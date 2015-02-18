@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix3LongXmlMetadataExtractor.java,v 1.3 2014-06-27 18:21:35 alexandraohlson Exp $
+ * $Id$
  */
 /*
 

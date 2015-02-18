@@ -1,5 +1,5 @@
 /*
- * $Id: CastorSerializer.java,v 1.10 2006-09-28 05:12:00 thib_gc Exp $
+ * $Id$
  */
 
 /*

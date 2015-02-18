@@ -1,5 +1,5 @@
 /*
- * $Id: CopernicusHtmlMetadataExtractorFactory.java,v 1.1 2014-05-23 22:31:21 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

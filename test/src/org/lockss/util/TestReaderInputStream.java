@@ -1,5 +1,5 @@
 /*
- * $Id: TestReaderInputStream.java,v 1.7 2010-06-25 07:40:58 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: Noop.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.51 2015-01-02 06:02:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

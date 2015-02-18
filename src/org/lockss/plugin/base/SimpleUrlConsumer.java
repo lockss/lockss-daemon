@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleUrlConsumer.java,v 1.2 2014-11-20 01:53:01 wkwilson Exp $
+ * $Id$
  */
 
 /*

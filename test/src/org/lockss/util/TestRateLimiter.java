@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiter.java,v 1.13 2011-01-10 09:15:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

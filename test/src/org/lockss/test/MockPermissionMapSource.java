@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionMapSource.java,v 1.1 2005-03-18 18:04:27 troberts Exp $
+ * $Id$
  */
 
 /*

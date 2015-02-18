@@ -1,4 +1,4 @@
-/* $Id: AIAAHtmlLinkExtractorFactory.java,v 1.2 2014-12-23 19:16:30 alexandraohlson Exp $
+/* $Id$
  */
 
 /*

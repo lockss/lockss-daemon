@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleBinarySemaphore.java,v 1.6 2003-06-20 22:34:56 claire Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.6 2015-02-11 16:58:05 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

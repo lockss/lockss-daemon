@@ -1,5 +1,5 @@
 /*
- * $Id: AuStatus.java,v 1.3 2014-09-15 23:42:39 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

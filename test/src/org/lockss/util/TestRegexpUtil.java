@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpUtil.java,v 1.7 2014-11-24 10:18:10 tlipkis Exp $
+ * $Id$
  */
 
 /*

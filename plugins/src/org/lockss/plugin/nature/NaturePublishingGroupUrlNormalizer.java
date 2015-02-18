@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupUrlNormalizer.java,v 1.1 2013-09-11 15:51:22 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

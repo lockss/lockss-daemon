@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.42 2014-10-15 06:43:33 tlipkis Exp $
+ * $Id$
  */
 
 /*

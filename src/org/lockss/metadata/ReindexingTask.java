@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.17 2015-01-12 20:40:45 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ClassPathUtil.java,v 1.4 2009-08-03 04:36:32 tlipkis Exp $
+ * $Id$
  */
 
 /*

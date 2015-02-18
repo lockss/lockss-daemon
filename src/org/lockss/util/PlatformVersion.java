@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformVersion.java,v 1.5 2014-05-30 21:45:27 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: bulk_add.py,v 1.6 2012-08-17 23:53:28 aishizaki Exp $
+# $Id$
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.

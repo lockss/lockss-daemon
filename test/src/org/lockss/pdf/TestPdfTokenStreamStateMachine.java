@@ -1,5 +1,5 @@
 /*
- * $Id: TestPdfTokenStreamStateMachine.java,v 1.3 2014-11-26 23:45:30 thib_gc Exp $
+ * $Id$
  */
 
 /*

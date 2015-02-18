@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.11 2015-01-26 20:10:58 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

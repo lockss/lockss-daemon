@@ -1,5 +1,5 @@
 /*
- * $Id: TestASCEHtmlCrawlFilterFactory.java,v 1.1 2013-05-13 21:16:06 ldoan Exp $
+ * $Id$
  */
 package org.lockss.plugin.atypon.americansocietyofcivilengineers;
 

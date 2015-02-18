@@ -1,5 +1,5 @@
 /*
- * $Id: PluginCodeWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

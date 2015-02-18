@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersHtmlLinkExtractorFactory.java,v 1.2 2009-07-07 22:23:06 thib_gc Exp $
+ * $Id$
  */
 
 /*

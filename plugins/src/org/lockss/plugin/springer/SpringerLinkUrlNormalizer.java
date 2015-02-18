@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkUrlNormalizer.java,v 1.10 2013-03-08 02:07:25 thib_gc Exp $
+ * $Id$
  */
 
 /*

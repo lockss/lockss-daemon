@@ -1,5 +1,5 @@
 /*
- * $Id: Button.java,v 1.2 2012-07-19 13:56:43 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

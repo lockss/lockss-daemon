@@ -1,5 +1,5 @@
 /*
- * $Id: TestPublisher.java,v 1.2 2014-11-17 22:29:04 thib_gc Exp $
+ * $Id$
  */
 
 /*

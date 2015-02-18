@@ -1,5 +1,5 @@
 /*
- * $Id: Isbn.java,v 1.2 2013-05-07 14:15:24 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

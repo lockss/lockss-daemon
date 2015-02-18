@@ -1,5 +1,5 @@
 /*
- * $Id: LoadablePluginClassLoader.java,v 1.3 2010-03-25 07:34:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

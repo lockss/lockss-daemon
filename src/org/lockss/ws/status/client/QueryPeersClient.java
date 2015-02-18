@@ -1,5 +1,5 @@
 /*
- * $Id: QueryPeersClient.java,v 1.1 2014-04-25 23:11:00 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

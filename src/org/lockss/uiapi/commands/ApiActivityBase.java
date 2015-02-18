@@ -1,5 +1,5 @@
 /*
- * $Id: ApiActivityBase.java,v 1.2 2005-10-11 05:47:42 tlipkis Exp $
+ * $Id$
  */
 
 /*

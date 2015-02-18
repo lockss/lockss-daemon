@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJPdfFilterFactory.java,v 1.2 2014-10-01 21:07:48 thib_gc Exp $
+ * $Id$
  */
 
 /*

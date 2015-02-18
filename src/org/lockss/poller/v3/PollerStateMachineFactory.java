@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateMachineFactory.java,v 1.12 2013-04-14 05:25:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

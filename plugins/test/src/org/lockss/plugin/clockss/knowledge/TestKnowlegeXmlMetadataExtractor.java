@@ -1,5 +1,5 @@
 /*
- * $Id: TestKnowlegeXmlMetadataExtractor.java,v 1.3 2015-01-22 23:04:58 alexandraohlson Exp $
+ * $Id$
  */
 /*
 

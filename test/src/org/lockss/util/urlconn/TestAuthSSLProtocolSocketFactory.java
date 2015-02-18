@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuthSSLProtocolSocketFactory.java,v 1.2 2010-11-29 07:26:03 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.15 2015-01-12 20:40:44 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

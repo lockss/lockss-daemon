@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupTagExtractorFactory.java,v 1.4 2013-12-20 23:23:55 clairegriffin Exp $
+ * $Id$
  */
 
 /*

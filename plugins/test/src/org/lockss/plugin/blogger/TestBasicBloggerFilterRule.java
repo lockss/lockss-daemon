@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasicBloggerFilterRule.java,v 1.1 2007-07-18 20:58:01 thib_gc Exp $
+ * $Id$
  */
 
 /*

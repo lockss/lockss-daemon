@@ -1,5 +1,5 @@
 /*
- * $Id: I18nUtil.java,v 1.5 2012-08-29 00:25:44 tlipkis Exp $
+ * $Id$
  */
 
 /*

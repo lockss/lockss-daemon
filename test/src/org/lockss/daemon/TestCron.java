@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.11 2014-10-15 06:43:33 tlipkis Exp $
+ * $Id$
  */
 
 /*

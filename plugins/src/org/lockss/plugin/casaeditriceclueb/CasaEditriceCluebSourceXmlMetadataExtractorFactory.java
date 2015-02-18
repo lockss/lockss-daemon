@@ -1,5 +1,5 @@
 /*
- * $Id: CasaEditriceCluebSourceXmlMetadataExtractorFactory.java,v 1.2 2012-07-29 17:09:36 pgust Exp $
+ * $Id$
  */
 
 /*

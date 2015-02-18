@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.22 2014-10-29 20:35:36 thib_gc Exp $
+ * $Id$
  */
 /*
 

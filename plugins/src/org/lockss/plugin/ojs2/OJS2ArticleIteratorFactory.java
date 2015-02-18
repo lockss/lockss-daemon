@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.15 2015-01-30 09:23:51 etenbrink Exp $
+ * $Id$
  */
 
 /*

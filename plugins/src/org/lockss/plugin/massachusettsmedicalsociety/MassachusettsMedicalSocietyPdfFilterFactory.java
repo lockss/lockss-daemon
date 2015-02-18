@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyPdfFilterFactory.java,v 1.4 2013-06-12 23:54:24 thib_gc Exp $
+ * $Id$
  */
 
 /*

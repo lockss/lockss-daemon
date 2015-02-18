@@ -1,5 +1,5 @@
 /*
- * $Id: TestMapUtil.java,v 1.4 2013-04-01 00:45:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlCrawlFilterFactory.java,v 1.5 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

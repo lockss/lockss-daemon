@@ -1,5 +1,5 @@
 /*
- * $Id: FilterFactory.java,v 1.2 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id$
  */
 
 /*

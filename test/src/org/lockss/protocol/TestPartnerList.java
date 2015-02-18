@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.18 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

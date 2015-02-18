@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.4 2013-10-18 17:06:13 alexandraohlson Exp $
+ * $Id$
  */
 /*
 

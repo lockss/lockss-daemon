@@ -1,5 +1,5 @@
 /*
- * $Id: DefaultPdfDocumentFactory.java,v 1.2 2012-07-17 02:48:55 thib_gc Exp $
+ * $Id$
  */
 
 /*

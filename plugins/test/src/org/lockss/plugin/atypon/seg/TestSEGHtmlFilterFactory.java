@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGHtmlFilterFactory.java,v 1.6 2014-10-31 23:18:00 ldoan Exp $
+ * $Id$
  */
 
 /*

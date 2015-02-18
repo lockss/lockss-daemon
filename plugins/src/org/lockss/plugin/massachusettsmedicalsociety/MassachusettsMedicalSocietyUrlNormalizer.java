@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyUrlNormalizer.java,v 1.1 2010-11-17 00:14:44 pgust Exp $
+ * $Id$
  */
 
 /*

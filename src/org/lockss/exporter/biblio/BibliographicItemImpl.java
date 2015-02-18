@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.10 2014-10-02 19:39:00 pgust Exp $
+ * $Id$
  */
 
 /*

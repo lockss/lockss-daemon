@@ -1,5 +1,5 @@
 /*
- * $Id: UniversityOfCaliforniaPressUrlNormalizer.java,v 1.1 2008-06-03 00:32:31 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPMetadataExtractor.java,v 1.3 2013-10-10 00:09:50 etenbrink Exp $
+ * $Id$
  */
 
 /*

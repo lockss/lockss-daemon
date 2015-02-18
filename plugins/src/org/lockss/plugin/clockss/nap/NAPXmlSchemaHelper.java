@@ -1,5 +1,5 @@
 /*
- * $Id: NAPXmlSchemaHelper.java,v 1.5 2014-09-24 22:14:46 thib_gc Exp $
+ * $Id$
  */
 
 /*

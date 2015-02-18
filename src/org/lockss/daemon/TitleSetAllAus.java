@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetAllAus.java,v 1.1 2012-06-20 18:58:46 thib_gc Exp $
+ * $Id$
  */
 
 /*

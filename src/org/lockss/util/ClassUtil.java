@@ -1,5 +1,5 @@
 /*
- * $Id: ClassUtil.java,v 1.3 2014-04-23 21:11:19 clairegriffin Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

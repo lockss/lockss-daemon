@@ -1,5 +1,5 @@
 /*
- * $Id: IOPSciencePdfFilterFactory.java,v 1.2 2013-12-06 22:44:15 thib_gc Exp $
+ * $Id$
  */
 
 /*

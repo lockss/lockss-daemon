@@ -1,5 +1,5 @@
 /*
- * $Id: MockLinkExtractorFactory.java,v 1.1 2007-02-06 01:03:06 tlipkis Exp $
+ * $Id$
  */
 
 /*

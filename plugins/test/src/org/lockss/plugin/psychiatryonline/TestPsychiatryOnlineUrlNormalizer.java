@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsychiatryOnlineUrlNormalizer.java,v 1.5 2014-05-23 21:29:00 etenbrink Exp $
+ * $Id$
  */
 
 /*

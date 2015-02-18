@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseBooksArticleIteratorFactory.java,v 1.2 2013-09-26 18:36:22 wkwilson Exp $
+ * $Id$
  */
 
 /*

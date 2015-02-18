@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.9 2015-01-21 22:05:33 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

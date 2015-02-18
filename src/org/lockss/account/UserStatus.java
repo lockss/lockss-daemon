@@ -1,5 +1,5 @@
 /*
- * $Id: UserStatus.java,v 1.3 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id$
  */
 
 /*

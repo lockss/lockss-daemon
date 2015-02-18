@@ -1,5 +1,5 @@
 /*
- * $Id: OneShot.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

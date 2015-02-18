@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.26 2013-10-16 23:14:01 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

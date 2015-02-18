@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchivalUnitStatus.java,v 1.2 2012-03-12 21:33:18 barry409 Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: Api.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapDatagramComm.java,v 1.8 2006-06-04 06:25:53 tlipkis Exp $
+ * $Id$
  */
 
 /*

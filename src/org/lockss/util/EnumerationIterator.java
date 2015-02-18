@@ -1,5 +1,5 @@
 /*
- * $Id: EnumerationIterator.java,v 1.3 2005-03-22 06:23:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

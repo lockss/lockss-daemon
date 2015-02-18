@@ -1,5 +1,5 @@
 /*
- * $Id: DatagramSocketListener.java,v 1.11 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.66 2014-10-01 08:16:37 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,

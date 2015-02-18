@@ -1,5 +1,5 @@
 /*
- * $Id: DbVersion14To15Migrator.java,v 1.1 2014-10-13 22:21:28 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

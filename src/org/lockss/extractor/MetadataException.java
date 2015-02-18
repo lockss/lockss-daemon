@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataException.java,v 1.2 2011-01-20 08:37:43 tlipkis Exp $
+ * $Id$
  */
 
 /*

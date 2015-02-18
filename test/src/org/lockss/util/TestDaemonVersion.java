@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonVersion.java,v 1.4 2007-07-18 07:12:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

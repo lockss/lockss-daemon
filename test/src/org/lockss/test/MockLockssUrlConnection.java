@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.11 2014-11-22 08:42:32 tlipkis Exp $
+ * $Id$
  */
 
 /*

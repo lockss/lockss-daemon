@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineTextbooksLoginPageChecker.java,v 1.4 2014-05-23 21:34:00 etenbrink Exp $
+ * $Id$
  */
 
 /*

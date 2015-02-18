@@ -1,5 +1,5 @@
 /*
- * $Id: MediaWikiHtmlCrawlFilterFactory.java,v 1.2 2014-03-07 20:05:43 wkwilson Exp $
+ * $Id$
  */
 
 /*

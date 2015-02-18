@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.11 2010-11-29 07:24:33 tlipkis Exp $
+ * $Id$
  */
 
 /*

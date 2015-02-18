@@ -1,5 +1,5 @@
 /*
- * $Id: TestEndocrineSocietyHtmlFilterFactory.java,v 1.4 2015-01-14 23:04:29 ldoan Exp $
+ * $Id$
  */
 
 /*

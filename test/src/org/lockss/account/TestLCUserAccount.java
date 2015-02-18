@@ -1,5 +1,5 @@
 /*
- * $Id: TestLCUserAccount.java,v 1.5 2009-11-04 03:13:19 dshr Exp $
+ * $Id$
  */
 
 /*

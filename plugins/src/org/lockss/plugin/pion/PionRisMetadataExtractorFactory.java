@@ -1,5 +1,5 @@
 /*
- * $Id: PionRisMetadataExtractorFactory.java,v 1.5 2014-11-25 18:38:47 aishizaki Exp $
+ * $Id$
  */
 
 /*

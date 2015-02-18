@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.25 2013-02-15 16:43:31 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

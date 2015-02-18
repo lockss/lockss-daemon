@@ -1,5 +1,5 @@
 /*
- * $Id: TestSantaFePoetryBroadsideHtmlCrawlFilterFactory.java,v 1.2 2013-02-20 18:00:15 alexandraohlson Exp $
+ * $Id$
  */
 package org.lockss.plugin.sfpoetrybroadside;
 

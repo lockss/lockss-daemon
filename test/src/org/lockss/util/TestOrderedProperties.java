@@ -1,5 +1,5 @@
 /*
- * $Id: TestOrderedProperties.java,v 1.1 2004-01-03 06:10:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

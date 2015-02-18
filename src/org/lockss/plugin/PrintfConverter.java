@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfConverter.java,v 1.7 2014-10-01 08:11:57 tlipkis Exp $
+ * $Id$
  */
 
 /*

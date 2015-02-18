@@ -1,5 +1,5 @@
 /*
- * $Id: PsmToDot.java,v 1.4 2014-10-22 19:39:40 thib_gc Exp $
+ * $Id$
  */
 
 /*

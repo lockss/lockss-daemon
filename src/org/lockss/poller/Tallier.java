@@ -1,5 +1,5 @@
 /*
-* $Id: Tallier.java,v 1.9 2005-10-11 05:45:39 tlipkis Exp $
+* $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamListener.java,v 1.2 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id$
  */
 
 /*

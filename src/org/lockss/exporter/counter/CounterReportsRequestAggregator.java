@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

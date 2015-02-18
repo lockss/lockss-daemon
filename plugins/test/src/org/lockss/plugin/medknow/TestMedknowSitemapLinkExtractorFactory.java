@@ -1,4 +1,4 @@
-/* $Id: TestMedknowSitemapLinkExtractorFactory.java,v 1.2 2013-10-23 04:25:25 tlipkis Exp $
+/* $Id$
  
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

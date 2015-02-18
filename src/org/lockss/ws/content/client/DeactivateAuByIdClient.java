@@ -1,5 +1,5 @@
 /*
- * $Id: DeactivateAuByIdClient.java,v 1.1 2014-07-17 19:18:33 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

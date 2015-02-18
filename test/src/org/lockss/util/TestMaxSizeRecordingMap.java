@@ -1,5 +1,5 @@
 /*
- * $Id: TestMaxSizeRecordingMap.java,v 1.1 2007-01-14 08:52:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

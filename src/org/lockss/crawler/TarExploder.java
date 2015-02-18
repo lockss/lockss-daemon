@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.17 2014-11-12 20:11:26 wkwilson Exp $
+ * $Id$
  */
 
 /*

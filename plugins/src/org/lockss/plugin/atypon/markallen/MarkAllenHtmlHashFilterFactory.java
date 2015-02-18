@@ -1,5 +1,5 @@
 /*
- * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.5 2015-01-16 19:31:03 ldoan Exp $
+ * $Id$
  */
 
 /*

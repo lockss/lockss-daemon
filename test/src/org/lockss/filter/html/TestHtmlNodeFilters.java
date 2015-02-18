@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.15 2014-06-17 04:30:43 tlipkis Exp $
+ * $Id$
  */
 
 /*

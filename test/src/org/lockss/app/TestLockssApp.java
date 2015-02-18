@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssApp.java,v 1.5 2006-09-02 00:18:12 thib_gc Exp $
+ * $Id$
  */
 
 /*

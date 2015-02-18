@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.10 2014-12-18 23:00:43 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

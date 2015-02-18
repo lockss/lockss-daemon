@@ -1,5 +1,5 @@
 /*
- * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.5 2015-02-03 21:38:21 ldoan Exp $
+ * $Id$
  */
 
 /*

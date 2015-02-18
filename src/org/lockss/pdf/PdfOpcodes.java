@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOpcodes.java,v 1.4 2013-06-26 22:33:08 thib_gc Exp $
+ * $Id$
  */
 
 /*

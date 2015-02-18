@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.15 2012-08-29 00:17:31 tlipkis Exp $
+ * $Id$
  */
 
 /*

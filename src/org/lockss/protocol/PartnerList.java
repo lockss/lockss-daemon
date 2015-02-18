@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.28 2005-10-19 20:13:05 troberts Exp $
+ * $Id$
  */
 
 /*

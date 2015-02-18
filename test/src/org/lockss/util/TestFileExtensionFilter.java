@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileExtensionFilter.java,v 1.1 2006-05-20 23:24:48 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimerQueue.java,v 1.11 2007-08-10 07:28:02 tlipkis Exp $
+ * $Id$
  */
 
 /*

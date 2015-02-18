@@ -1,5 +1,5 @@
 /*
- * $Id: NobodyAccount.java,v 1.4 2009-06-15 07:51:09 tlipkis Exp $
+ * $Id$
  */
 
 /*

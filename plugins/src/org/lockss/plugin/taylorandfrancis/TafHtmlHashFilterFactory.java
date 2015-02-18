@@ -1,5 +1,5 @@
 /*
- * $Id: TafHtmlHashFilterFactory.java,v 1.6 2015-02-07 02:28:16 thib_gc Exp $
+ * $Id$
  */
 
 /*

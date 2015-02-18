@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssWatchdog.java,v 1.3 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

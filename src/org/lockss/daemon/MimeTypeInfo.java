@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.12 2011-09-25 04:16:44 tlipkis Exp $
+ * $Id$
  */
 
 /*

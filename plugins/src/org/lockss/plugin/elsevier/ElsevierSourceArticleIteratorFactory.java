@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierSourceArticleIteratorFactory.java,v 1.1 2014-12-09 00:50:51 thib_gc Exp $
+ * $Id$
  */
 
 /*

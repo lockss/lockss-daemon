@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultMap.java,v 1.7 2014-11-12 20:11:57 wkwilson Exp $
+ * $Id$
  */
 
 /*

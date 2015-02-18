@@ -1,5 +1,5 @@
 /*
- * $Id: SaxMetadataExtractor.java,v 1.3 2012-03-12 05:22:44 tlipkis Exp $
+ * $Id$
  */
 
 /*

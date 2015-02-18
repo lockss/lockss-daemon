@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExportManager.java,v 1.3 2014-06-26 00:51:07 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

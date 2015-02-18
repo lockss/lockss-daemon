@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghHtmlMetadataExtractorFactory.java,v 1.3 2013-08-23 20:20:39 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

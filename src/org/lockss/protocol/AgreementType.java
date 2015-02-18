@@ -1,5 +1,5 @@
 /*
- * $Id: AgreementType.java,v 1.3 2014-06-10 08:43:40 tlipkis Exp $
+ * $Id$
  */
 
 /*

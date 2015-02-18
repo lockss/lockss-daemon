@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlMetadataExtractorFactory.java,v 1.4 2014-03-26 17:17:44 etenbrink Exp $
+ * $Id$
  */
 
 /*

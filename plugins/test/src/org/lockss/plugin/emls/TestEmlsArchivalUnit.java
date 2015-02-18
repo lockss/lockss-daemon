@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.12 2014-11-12 20:12:02 wkwilson Exp $
+ * $Id$
  */
 
 /*

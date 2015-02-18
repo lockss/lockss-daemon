@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfUtil.java,v 1.9 2014-10-01 08:11:56 tlipkis Exp $
+ * $Id$
  */
 
 /*

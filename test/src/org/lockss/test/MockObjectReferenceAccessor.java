@@ -1,5 +1,5 @@
 /*
- * $Id: MockObjectReferenceAccessor.java,v 1.3 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id$
  */
 
 /*

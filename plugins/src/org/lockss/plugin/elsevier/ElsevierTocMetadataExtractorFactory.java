@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.11 2013-05-17 16:15:34 aishizaki Exp $
+ * $Id$
  */
 
 /*

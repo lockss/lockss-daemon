@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.11 2013-04-04 16:49:48 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

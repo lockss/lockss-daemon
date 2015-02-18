@@ -1,5 +1,5 @@
 /*
- * $Id: TestRandomManager.java,v 1.1 2009-09-03 00:53:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.9 2013-07-18 19:30:03 tlipkis Exp $
+ * $Id$
  */
 
 /*

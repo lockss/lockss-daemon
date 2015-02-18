@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.8 2015-01-13 20:33:58 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

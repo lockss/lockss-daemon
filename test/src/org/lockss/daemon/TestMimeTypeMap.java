@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeMap.java,v 1.11 2012-08-02 03:08:13 clairegriffin Exp $
+ * $Id$
  */
 
 /*

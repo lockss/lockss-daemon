@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.20 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

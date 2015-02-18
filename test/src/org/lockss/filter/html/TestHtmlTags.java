@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTags.java,v 1.7 2015-01-22 04:15:17 thib_gc Exp $
+ * $Id$
  */
 
 /*

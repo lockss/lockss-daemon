@@ -1,5 +1,5 @@
 /*
- * $Id: IlliesiaArticleIteratorFactory.java,v 1.2 2014-06-04 22:15:36 ldoan Exp $
+ * $Id$
  */
 
 /*

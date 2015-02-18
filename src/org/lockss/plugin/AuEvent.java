@@ -1,5 +1,5 @@
 /*
- * $Id: AuEvent.java,v 1.1 2012-12-20 18:05:33 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /* 
- * $Id: ACMSourceArticleIteratorFactory.java,v 1.2 2014-02-07 15:32:41 aishizaki Exp $
+ * $Id$
  */
 /*
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,

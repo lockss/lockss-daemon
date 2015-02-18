@@ -1,5 +1,5 @@
 /*
- * $Id: TestIDUtil.java,v 1.2 2007-06-28 07:14:26 smorabito Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksIterator.java,v 1.6 2008-07-22 07:17:58 tlipkis Exp $
+ * $Id$
  */
 
 /*

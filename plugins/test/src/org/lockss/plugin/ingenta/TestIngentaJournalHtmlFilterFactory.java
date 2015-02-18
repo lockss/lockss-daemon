@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.18 2014-08-21 19:32:16 etenbrink Exp $
+ * $Id$
  */
 
 /*

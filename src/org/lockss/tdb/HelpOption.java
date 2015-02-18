@@ -1,5 +1,5 @@
 /*
- * $Id: HelpOption.java,v 1.2 2014-11-12 00:15:40 thib_gc Exp $
+ * $Id$
  */
 
 /*

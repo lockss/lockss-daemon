@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitleHealthWrapper.java,v 1.3 2014-05-26 07:30:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.16 2005-10-11 05:44:50 tlipkis Exp $
+ * $Id$
  */
 
 /*

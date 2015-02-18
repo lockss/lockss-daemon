@@ -1,5 +1,5 @@
 /*
- * $Id: MockObjectCallback.java,v 1.2 2003-06-20 22:34:56 claire Exp $
+ * $Id$
  */
 
 /*

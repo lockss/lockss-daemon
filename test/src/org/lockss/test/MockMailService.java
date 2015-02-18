@@ -1,5 +1,5 @@
 /*
- * $Id: MockMailService.java,v 1.5 2005-09-06 20:06:31 tlipkis Exp $
+ * $Id$
  */
 
 /*

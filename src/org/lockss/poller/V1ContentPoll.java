@@ -1,5 +1,5 @@
 /*
- * $Id: V1ContentPoll.java,v 1.16 2006-08-09 02:04:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

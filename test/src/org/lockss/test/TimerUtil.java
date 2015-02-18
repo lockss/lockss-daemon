@@ -1,5 +1,5 @@
 /*
- * $Id: TimerUtil.java,v 1.8 2006-09-26 03:31:54 dshr Exp $
+ * $Id$
  */
 
 /*

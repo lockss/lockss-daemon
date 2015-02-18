@@ -1,5 +1,5 @@
 /*
- * $Id: MarkAllenHtmlCrawlFilterFactory.java,v 1.4 2015-01-16 19:30:42 ldoan Exp $
+ * $Id$
  */
 
 /*

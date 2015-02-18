@@ -1,5 +1,5 @@
 /*
- * $Id: UbiquityPressHtmlFilterFactory.java,v 1.4 2015-02-11 08:17:50 etenbrink Exp $
+ * $Id$
  */
 
 /*

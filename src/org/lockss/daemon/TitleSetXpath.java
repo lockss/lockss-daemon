@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetXpath.java,v 1.9 2013-01-09 09:38:56 tlipkis Exp $
+ * $Id$
  */
 
 /*

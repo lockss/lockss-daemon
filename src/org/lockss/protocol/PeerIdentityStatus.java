@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentityStatus.java,v 1.5 2008-01-30 01:11:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

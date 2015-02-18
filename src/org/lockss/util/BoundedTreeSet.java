@@ -1,5 +1,5 @@
 /*
- * $Id: BoundedTreeSet.java,v 1.2 2013-04-14 05:26:25 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,

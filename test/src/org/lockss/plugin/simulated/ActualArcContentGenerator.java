@@ -1,5 +1,5 @@
 /*
- * $Id: ActualArcContentGenerator.java,v 1.1 2007-03-17 21:31:31 dshr Exp $
+ * $Id$
  */
 
 /*

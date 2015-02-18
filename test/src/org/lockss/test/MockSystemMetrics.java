@@ -1,5 +1,5 @@
 /*
-* $Id: MockSystemMetrics.java,v 1.3 2008-11-02 21:11:52 tlipkis Exp $
+* $Id$
  */
 
 /*

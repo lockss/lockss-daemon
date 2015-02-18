@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneAtyponHtmlFilterFactory.java,v 1.3 2015-01-30 19:59:27 thib_gc Exp $
+ * $Id$
  */
 /*
 

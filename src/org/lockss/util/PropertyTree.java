@@ -1,5 +1,5 @@
 /*
- * $Id: PropertyTree.java,v 1.7 2014-05-28 00:16:06 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -35,7 +35,7 @@ in this Software without prior written authorization from Stanford University.
 
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: PropertyTree.java,v 1.7 2014-05-28 00:16:06 tlipkis Exp $
+// $Id$
 // ========================================================================
 
 package org.lockss.util;

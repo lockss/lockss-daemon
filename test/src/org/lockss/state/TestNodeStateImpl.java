@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.26 2007-01-24 01:54:15 smorabito Exp $
+ * $Id$
  */
 
 /*

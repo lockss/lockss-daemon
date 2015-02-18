@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.30 2013-07-15 07:38:20 tlipkis Exp $
+ * $Id$
  */
 
 /*

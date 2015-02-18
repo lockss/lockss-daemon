@@ -1,5 +1,5 @@
 /*
- * $Id: RecordingMessageDigest.java,v 1.3 2013-05-23 09:45:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

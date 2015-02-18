@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.19 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

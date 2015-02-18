@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.30 2014-02-26 08:09:06 tlipkis Exp $
+ * $Id$
  */
 
 /*

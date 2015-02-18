@@ -1,5 +1,5 @@
 /*
- * $Id: DateFormatter.java,v 1.4 2013-03-19 21:24:04 ldoan Exp $
+ * $Id$
  */
 
 /*

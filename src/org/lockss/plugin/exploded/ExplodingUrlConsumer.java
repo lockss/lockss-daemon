@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodingUrlConsumer.java,v 1.1 2014-11-12 20:12:00 wkwilson Exp $
+ * $Id$
  */
 
 /*

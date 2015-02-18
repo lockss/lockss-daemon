@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsinthePlugin.java,v 1.4 2008-12-08 18:00:15 thib_gc Exp $
+ * $Id$
  */
 
 /*

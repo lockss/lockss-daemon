@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014UrlNormalizer.java,v 1.1 2014-05-07 01:00:16 etenbrink Exp $
+ * $Id$
  */
 
 /*

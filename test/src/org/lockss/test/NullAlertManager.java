@@ -1,5 +1,5 @@
 /*
- * $Id: NullAlertManager.java,v 1.5 2005-10-07 23:42:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

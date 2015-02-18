@@ -1,5 +1,5 @@
 /*
- * $Id: FilterUtil.java,v 1.3 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

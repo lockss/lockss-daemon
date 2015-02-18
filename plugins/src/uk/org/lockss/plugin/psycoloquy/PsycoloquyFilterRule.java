@@ -1,5 +1,5 @@
 /*
- * $Id: PsycoloquyFilterRule.java,v 1.3 2007-10-26 07:39:22 thib_gc Exp $
+ * $Id$
  */
 
 /*

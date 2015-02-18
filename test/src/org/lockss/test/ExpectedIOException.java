@@ -1,5 +1,5 @@
 /*
- * $Id: ExpectedIOException.java,v 1.1 2004-12-12 22:59:10 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.17 2015-01-20 22:12:08 tlipkis Exp $
+ * $Id$
  */
 
 /*

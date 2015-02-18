@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.9 2014-06-30 04:58:14 tlipkis Exp $
+ * $Id$
  */
 
 /*

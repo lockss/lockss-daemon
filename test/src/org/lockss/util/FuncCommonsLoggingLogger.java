@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommonsLoggingLogger.java,v 1.4 2005-10-06 23:42:46 troberts Exp $
+ * $Id$
  */
 
 /*

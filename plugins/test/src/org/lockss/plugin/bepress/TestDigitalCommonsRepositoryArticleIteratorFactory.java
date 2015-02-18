@@ -1,5 +1,5 @@
 /* 
- * $Id: TestDigitalCommonsRepositoryArticleIteratorFactory.java,v 1.3 2014-12-06 01:33:11 thib_gc Exp $
+ * $Id$
  */
 /*
 

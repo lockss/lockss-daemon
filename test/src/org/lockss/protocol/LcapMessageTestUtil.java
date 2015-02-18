@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessageTestUtil.java,v 1.9 2006-11-08 16:42:59 smorabito Exp $
+ * $Id$
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

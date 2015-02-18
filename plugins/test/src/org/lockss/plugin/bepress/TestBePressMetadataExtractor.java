@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.18 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

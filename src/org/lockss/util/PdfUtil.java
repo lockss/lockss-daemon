@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.32 2012-07-10 23:53:32 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.11 2015-01-06 22:44:56 thib_gc Exp $
+ * $Id$
  */
 
 /*

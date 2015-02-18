@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeVersion.java,v 1.2 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

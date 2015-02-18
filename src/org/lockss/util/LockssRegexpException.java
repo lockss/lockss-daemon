@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRegexpException.java,v 1.3 2007-06-23 05:37:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

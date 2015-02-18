@@ -1,5 +1,5 @@
 /*
- * $Id: ContentParser.java,v 1.8 2013-12-03 00:47:58 thib_gc Exp $
+ * $Id$
  */
 
 /*

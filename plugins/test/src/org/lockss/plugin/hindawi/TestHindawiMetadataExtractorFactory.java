@@ -1,4 +1,4 @@
-/* $Id: TestHindawiMetadataExtractorFactory.java,v 1.2 2013-03-13 15:58:48 aishizaki Exp $
+/* $Id$
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

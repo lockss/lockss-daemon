@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockVoteBlockComparerFactory.java,v 1.2 2013-07-09 16:59:23 barry409 Exp $
+ * $Id$
  */
 
 /*

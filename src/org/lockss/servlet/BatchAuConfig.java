@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.57 2015-01-22 20:22:09 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

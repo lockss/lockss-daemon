@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMathematicalSocietyHtmlFilterFactory.java,v 1.2 2014-03-28 19:17:12 etenbrink Exp $
+ * $Id$
  */ 
 
 /*

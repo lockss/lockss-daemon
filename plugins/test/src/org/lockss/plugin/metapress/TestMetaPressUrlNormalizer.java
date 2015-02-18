@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressUrlNormalizer.java,v 1.2 2014-05-05 23:16:09 etenbrink Exp $
+ * $Id$
  */
 
 /*

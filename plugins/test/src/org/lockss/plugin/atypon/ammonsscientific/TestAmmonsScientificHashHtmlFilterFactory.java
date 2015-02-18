@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmmonsScientificHashHtmlFilterFactory.java,v 1.3 2014-10-22 21:51:13 alexandraohlson Exp $
+ * $Id$
  */
 
 /* Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.

@@ -1,5 +1,5 @@
 /*
- * $Id: AuActivityBase.java,v 1.6 2010-04-02 23:30:20 pgust Exp $
+ * $Id$
  */
 
 /*

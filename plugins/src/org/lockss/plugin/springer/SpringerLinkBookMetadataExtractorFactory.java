@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.6 2013-05-04 16:55:02 pgust Exp $
+ * $Id$
  */
 
 /*

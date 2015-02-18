@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJPreprintsArticleIteratorFactory.java,v 1.3 2014-10-17 22:44:38 ldoan Exp $
+ * $Id$
  */
 
 /*

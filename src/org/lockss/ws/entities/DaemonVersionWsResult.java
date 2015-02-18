@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersionWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

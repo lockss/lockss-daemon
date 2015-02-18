@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.11 2008-02-15 09:17:36 tlipkis Exp $
+ * $Id$
  */
 
 /*

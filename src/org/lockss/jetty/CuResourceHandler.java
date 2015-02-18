@@ -1,5 +1,5 @@
 /*
- * $Id: CuResourceHandler.java,v 1.5 2013-08-15 08:18:59 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: CuResourceHandler.java,v 1.5 2013-08-15 08:18:59 tlipkis Exp $
+// $Id$
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;

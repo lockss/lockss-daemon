@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultHandlerWrapper.java,v 1.5 2010-07-21 06:12:02 tlipkis Exp $
+ * $Id$
  */
 
 /*

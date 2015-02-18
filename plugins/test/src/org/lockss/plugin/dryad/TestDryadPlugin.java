@@ -1,5 +1,5 @@
 /*
- * $Id: TestDryadPlugin.java,v 1.2 2013-11-12 23:00:59 etenbrink Exp $
+ * $Id$
  */
 
 /*

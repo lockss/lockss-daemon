@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterSerializer.java,v 1.8 2006-11-14 22:15:57 tlipkis Exp $
+ * $Id$
  */
 
 /*

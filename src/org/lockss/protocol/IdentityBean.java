@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityBean.java,v 1.3 2003-06-20 22:34:51 claire Exp $
+ * $Id$
  */
 
 /*

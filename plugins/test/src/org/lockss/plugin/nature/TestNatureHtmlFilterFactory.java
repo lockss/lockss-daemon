@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureHtmlFilterFactory.java,v 1.4 2013-12-03 00:33:45 thib_gc Exp $
+ * $Id$
  */
 
 /*

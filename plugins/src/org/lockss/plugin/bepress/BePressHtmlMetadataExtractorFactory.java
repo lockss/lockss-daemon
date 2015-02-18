@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.12 2011-11-09 14:26:54 pgust Exp $
+ * $Id$
  */
 
 /*

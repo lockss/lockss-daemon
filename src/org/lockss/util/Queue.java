@@ -1,5 +1,5 @@
 /*
- * $Id: Queue.java,v 1.7 2004-09-19 01:28:37 tlipkis Exp $
+ * $Id$
  */
 
 /*

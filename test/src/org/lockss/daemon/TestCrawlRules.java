@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRules.java,v 1.6 2010-08-01 21:32:13 tlipkis Exp $
+ * $Id$
  */
 
 /*

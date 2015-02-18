@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysSitemapsUrlNormalizer.java,v 1.2 2011-04-04 18:48:33 thib_gc Exp $
+ * $Id$
  */
 
 /*

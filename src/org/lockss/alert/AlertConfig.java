@@ -1,5 +1,5 @@
 /*
- * $Id: AlertConfig.java,v 1.5 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id$
  */
 
 /*

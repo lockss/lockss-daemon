@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisJavaScriptLinkRewriterFactory.java,v 1.1 2014-03-03 23:29:07 pgust Exp $
+ * $Id$
  */
 
 /*

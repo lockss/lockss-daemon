@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePermissionCheckerFactory.java,v 1.6 2014-10-20 22:44:41 etenbrink Exp $
+ * $Id$
  */
 
 /*

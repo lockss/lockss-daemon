@@ -1,5 +1,5 @@
 /*
- * $Id: JSCMHtmlLinkExtractorFactory.java,v 1.1 2010-11-10 00:25:28 barry409 Exp $
+ * $Id$
  */
 
 /*

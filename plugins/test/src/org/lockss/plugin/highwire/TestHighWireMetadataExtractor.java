@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.16 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

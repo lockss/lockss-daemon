@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.11 2015-01-22 23:12:11 aishizaki Exp $
+ * $Id$
  */
 
 /*

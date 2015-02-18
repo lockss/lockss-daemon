@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssDaemonManager.java,v 1.3 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

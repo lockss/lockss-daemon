@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlMetadataExtractorFactory.java,v 1.2 2014-12-22 22:59:18 etenbrink Exp $
+ * $Id$
  */
 
 /*

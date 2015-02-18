@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.38 2004-12-07 05:16:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

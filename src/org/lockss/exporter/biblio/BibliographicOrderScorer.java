@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.11 2014-04-03 13:33:51 pgust Exp $
+ * $Id$
  */
 
 /*

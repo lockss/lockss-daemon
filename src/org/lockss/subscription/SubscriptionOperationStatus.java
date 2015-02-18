@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionOperationStatus.java,v 1.2 2013-05-28 16:31:07 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

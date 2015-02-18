@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMethodAction.java,v 1.6 2005-10-11 05:50:53 tlipkis Exp $
+ * $Id$
  */
 
 /*

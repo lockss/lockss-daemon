@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermutationIterator.java,v 1.1 2003-09-08 19:27:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

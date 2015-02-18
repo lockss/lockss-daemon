@@ -1,5 +1,5 @@
 /*
- * $Id: MockXmlPropertyLoader.java,v 1.4 2007-05-23 02:26:53 tlipkis Exp $
+ * $Id$
  */
 
 /*

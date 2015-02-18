@@ -1,5 +1,5 @@
 /*
- * $Id: ProbabilisticChoice.java,v 1.4 2003-06-20 22:34:53 claire Exp $
+ * $Id$
  */
 
 /*

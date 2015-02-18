@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleFromAuFactory.java,v 1.1 2004-09-02 01:20:50 troberts Exp $
+ * $Id$
  */
 
 /*

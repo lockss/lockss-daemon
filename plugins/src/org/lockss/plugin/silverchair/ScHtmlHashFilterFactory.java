@@ -1,5 +1,5 @@
 /*
- * $Id: ScHtmlHashFilterFactory.java,v 1.2 2015-02-11 03:57:26 thib_gc Exp $
+ * $Id$
  */
 
 /*

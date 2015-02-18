@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.13 2005-03-22 06:53:44 tlipkis Exp $
+ * $Id$
  */
 
 /*

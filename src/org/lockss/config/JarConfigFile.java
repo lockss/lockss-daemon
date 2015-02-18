@@ -1,5 +1,5 @@
 /*
- * $Id: JarConfigFile.java,v 1.8 2010-02-24 23:57:49 pgust Exp $
+ * $Id$
  */
 
 /*

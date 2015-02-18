@@ -1,5 +1,5 @@
 /*
- * $Id: TestOrderedObject.java,v 1.4 2005-10-05 23:12:40 troberts Exp $
+ * $Id$
  */
 
 /*

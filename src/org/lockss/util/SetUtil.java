@@ -1,5 +1,5 @@
 /*
- * $Id: SetUtil.java,v 1.7 2010-12-20 23:45:41 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRandomInputStream.java,v 1.1 2008-11-02 21:16:58 tlipkis Exp $
+ * $Id$
  */
 
 /*

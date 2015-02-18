@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerArticleIteratorFactory.java,v 1.4 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id$
  */
 
 /*

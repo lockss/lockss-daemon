@@ -1,5 +1,5 @@
 /*
- * $Id: TimeFilterRule.java,v 1.5 2005-09-19 19:22:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

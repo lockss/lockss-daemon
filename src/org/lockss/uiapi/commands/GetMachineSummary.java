@@ -1,5 +1,5 @@
 /*
- * $Id: GetMachineSummary.java,v 1.2 2005-10-11 05:47:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

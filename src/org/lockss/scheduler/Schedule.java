@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.8 2008-02-15 09:14:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

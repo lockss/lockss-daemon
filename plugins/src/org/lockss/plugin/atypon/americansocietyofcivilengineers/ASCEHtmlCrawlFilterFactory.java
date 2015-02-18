@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:28 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

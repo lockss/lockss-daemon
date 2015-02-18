@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamAssignment.java,v 1.3 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id$
  */
 
 /*

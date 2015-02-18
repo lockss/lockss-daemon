@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlDomBuilder.java,v 1.3 2005-10-10 23:48:55 troberts Exp $
+ * $Id$
  */
 
 /*

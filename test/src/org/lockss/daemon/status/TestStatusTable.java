@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.17 2013-01-02 21:01:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

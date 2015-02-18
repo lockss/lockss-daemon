@@ -1,5 +1,5 @@
 /*
- * $Id: PluginFetchEventResponse.java,v 1.2 2010-02-11 10:05:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

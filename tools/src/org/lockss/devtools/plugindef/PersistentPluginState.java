@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPluginState.java,v 1.6 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id$
  */
 
 /*

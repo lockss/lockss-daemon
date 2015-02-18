@@ -1,5 +1,5 @@
 /*
- * $Id: TestBoyerMoore.java,v 1.1 2005-05-17 23:11:46 troberts Exp $
+ * $Id$
  */
 
 /*

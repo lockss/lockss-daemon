@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.12 2015-01-15 03:42:26 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataExtractorFactoryWrapper.java,v 1.4 2012-08-21 08:37:32 tlipkis Exp $
+ * $Id$
  */
 
 /*

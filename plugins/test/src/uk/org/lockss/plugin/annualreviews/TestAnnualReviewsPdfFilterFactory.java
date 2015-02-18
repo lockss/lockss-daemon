@@ -1,5 +1,5 @@
 /*
- * $Id: TestAnnualReviewsPdfFilterFactory.java,v 1.4 2014-12-01 19:29:36 thib_gc Exp $
+ * $Id$
  */
 
 /*

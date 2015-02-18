@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaArticleIteratorFactory.java,v 1.4 2013-12-05 21:55:03 etenbrink Exp $
+ * $Id$
  */
 
 /*

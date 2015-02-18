@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectReferenceAccessor.java,v 1.5 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id$
  */
 
 /*

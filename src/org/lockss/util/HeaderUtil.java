@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.11 2013-04-01 00:43:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

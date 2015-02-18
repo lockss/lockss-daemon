@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlMetadataExtractorFactory.java,v 1.2 2013-10-10 00:08:22 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.23 2005-10-11 05:47:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

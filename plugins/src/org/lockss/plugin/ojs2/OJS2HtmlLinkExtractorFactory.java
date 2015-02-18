@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlLinkExtractorFactory.java,v 1.1 2008-10-28 09:19:07 thib_gc Exp $
+ * $Id$
  */
 
 /*

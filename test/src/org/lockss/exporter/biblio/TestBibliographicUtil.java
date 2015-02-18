@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.11 2014-10-02 19:40:54 pgust Exp $
+ * $Id$
  */
 
 /*

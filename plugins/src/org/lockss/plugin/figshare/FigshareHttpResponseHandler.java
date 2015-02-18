@@ -1,5 +1,5 @@
 /*
- * $Id: FigshareHttpResponseHandler.java,v 1.1 2014-05-05 15:25:01 aishizaki Exp $
+ * $Id$
  */
 
 /*

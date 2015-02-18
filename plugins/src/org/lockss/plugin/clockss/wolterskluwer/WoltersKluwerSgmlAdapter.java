@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSgmlAdapter.java,v 1.6 2014-10-21 18:41:09 aishizaki Exp $
+ * $Id$
  */
 
 /*

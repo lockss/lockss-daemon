@@ -1,4 +1,4 @@
-/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.6 2015-02-11 16:58:05 alexandraohlson Exp $
+/* $Id$
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

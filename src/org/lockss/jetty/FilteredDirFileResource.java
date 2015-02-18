@@ -1,5 +1,5 @@
 /*
- * $Id: FilteredDirFileResource.java,v 1.4 2009-06-01 07:32:33 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -61,7 +61,7 @@ import org.mortbay.log.LogFactory;
  * If alias checking is turned on, then aliased resources are
  * treated as if they do not exist, nor can they be created.
  *
- * @version $Revision: 1.4 $
+ * @version $Revision$
  * @author Greg Wilkins (gregw)
  */
 public class FilteredDirFileResource extends URLResource

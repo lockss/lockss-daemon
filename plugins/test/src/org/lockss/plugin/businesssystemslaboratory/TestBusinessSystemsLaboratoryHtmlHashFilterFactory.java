@@ -1,5 +1,5 @@
 /*
- * $Id: TestBusinessSystemsLaboratoryHtmlHashFilterFactory.java,v 1.1 2013-11-01 18:06:41 ldoan Exp $
+ * $Id$
  */
 
 /*

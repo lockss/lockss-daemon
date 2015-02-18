@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlCrawlFilterFactory.java,v 1.1 2014-05-05 23:15:50 etenbrink Exp $
+ * $Id$
  */
 package org.lockss.plugin.metapress;
 

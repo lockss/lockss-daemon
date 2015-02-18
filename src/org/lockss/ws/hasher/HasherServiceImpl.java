@@ -1,5 +1,5 @@
 /*
- * $Id: HasherServiceImpl.java,v 1.2 2014-12-18 18:42:15 tlipkis Exp $
+ * $Id$
  */
 
 /*

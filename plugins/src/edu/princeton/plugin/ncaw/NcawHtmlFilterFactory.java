@@ -1,5 +1,5 @@
 /*
- * $Id: NcawHtmlFilterFactory.java,v 1.2 2008-10-08 22:15:04 thib_gc Exp $
+ * $Id$
  */
 
 /*

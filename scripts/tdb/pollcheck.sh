@@ -1,5 +1,5 @@
 #! /bin/bash
-# $Id: pollcheck.sh,v 1.4 2014-03-11 23:59:06 mellen22 Exp $
+# $Id$
 #
 #Checks ingest machines to evaluate how busy they are.
 echo "Use the ingest machines with the lowest number of polls in progress."

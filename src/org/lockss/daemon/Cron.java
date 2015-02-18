@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.13 2014-10-15 06:43:33 tlipkis Exp $
+ * $Id$
  */
 
 /*

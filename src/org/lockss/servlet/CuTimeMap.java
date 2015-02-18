@@ -1,5 +1,5 @@
 /*
- * $Id: CuTimeMap.java,v 1.1 2013-03-11 05:43:11 clairegriffin Exp $
+ * $Id$
  */
 
 /*

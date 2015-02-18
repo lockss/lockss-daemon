@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.27 2014-11-19 08:19:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

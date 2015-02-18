@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.33 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

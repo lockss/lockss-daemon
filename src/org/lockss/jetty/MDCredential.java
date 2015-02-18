@@ -1,5 +1,5 @@
 /*
- * $Id: MDCredential.java,v 1.6 2006-01-13 23:21:06 thib_gc Exp $
+ * $Id$
  */
 
 /*

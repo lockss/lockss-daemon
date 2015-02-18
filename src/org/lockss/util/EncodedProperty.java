@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.13 2013-03-18 19:19:33 dshr Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierXmlLinkExtractorFactory.java,v 1.3 2008-01-23 00:44:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

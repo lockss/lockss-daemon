@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.5 2015-01-15 05:06:46 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

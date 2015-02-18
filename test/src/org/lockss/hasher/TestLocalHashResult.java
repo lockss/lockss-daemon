@@ -1,5 +1,5 @@
 /*
- * $Id: TestLocalHashResult.java,v 1.3 2014-12-28 08:42:56 tlipkis Exp $
+ * $Id$
  */
 
 /*

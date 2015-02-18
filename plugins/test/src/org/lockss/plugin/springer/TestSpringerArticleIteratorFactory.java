@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerArticleIteratorFactory.java,v 1.5 2012-11-13 22:49:40 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

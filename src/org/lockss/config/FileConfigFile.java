@@ -1,5 +1,5 @@
 /*
- * $Id: FileConfigFile.java,v 1.8 2006-04-05 22:29:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

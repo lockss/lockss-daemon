@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressHtmlLinkExtractorFactory.java,v 1.1 2009-11-07 00:51:19 thib_gc Exp $
+ * $Id$
  */
 
 /*

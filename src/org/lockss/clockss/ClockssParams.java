@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssParams.java,v 1.2 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

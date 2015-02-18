@@ -1,5 +1,5 @@
 /*
- * $Id: PermissiveSSLProtocolSocketFactory.java,v 1.1 2014-06-24 06:49:07 tlipkis Exp $
+ * $Id$
  */
 /*
 

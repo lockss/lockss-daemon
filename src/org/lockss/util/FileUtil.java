@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.15 2014-11-04 18:11:57 fergaloy-sf Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,

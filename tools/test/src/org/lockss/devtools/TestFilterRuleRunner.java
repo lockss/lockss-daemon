@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRuleRunner.java,v 1.2 2014-08-19 06:15:24 tlipkis Exp $
+ * $Id$
  */
 
 /*

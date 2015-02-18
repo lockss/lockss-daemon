@@ -1,5 +1,5 @@
 /*
- * $Id: JatsPublishingSourceXmlMetadataExtractorFactory.java,v 1.2 2014-11-26 20:28:15 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

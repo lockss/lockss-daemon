@@ -1,5 +1,5 @@
 /*
- * $Id: TestByteArray.java,v 1.10 2014-07-28 07:15:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlLinkExtractor.java,v 1.2 2012-12-19 01:06:38 thib_gc Exp $
+ * $Id$
  */
 
 /*

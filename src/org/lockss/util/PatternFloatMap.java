@@ -1,5 +1,5 @@
 /*
- * $Id: PatternFloatMap.java,v 1.1 2013-03-20 03:23:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

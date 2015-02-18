@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityAgreementList.java,v 1.3 2013-07-31 18:12:17 barry409 Exp $
+* $Id$
  */
 
 /*

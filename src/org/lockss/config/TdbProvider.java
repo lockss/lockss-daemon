@@ -1,5 +1,5 @@
 /*
- * $Id: TdbProvider.java,v 1.3 2014-09-24 00:32:39 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbProvider.java,v 1.3 2014-09-24 00:32:39 tlipkis Exp $
+ * @version $Id$
  */
 public class TdbProvider {
   /**

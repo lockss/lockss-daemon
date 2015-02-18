@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.16 2014-12-18 18:41:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

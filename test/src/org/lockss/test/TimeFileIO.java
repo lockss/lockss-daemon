@@ -1,5 +1,5 @@
 /*
- * $Id: TimeFileIO.java,v 1.4 2008-04-09 01:03:56 edwardsb1 Exp $
+ * $Id$
  */
 
 /*

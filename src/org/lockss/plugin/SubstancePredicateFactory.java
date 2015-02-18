@@ -1,5 +1,5 @@
 /*
- * $Id: SubstancePredicateFactory.java,v 1.1 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id$
  */
 
 /*

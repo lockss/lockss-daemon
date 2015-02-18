@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHttpResponseHandler.java,v 1.2 2015-01-09 20:51:19 thib_gc Exp $
+ * $Id$
  */
 
 /*

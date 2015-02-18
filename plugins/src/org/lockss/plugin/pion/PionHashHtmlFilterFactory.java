@@ -1,5 +1,5 @@
 /*
- * $Id: PionHashHtmlFilterFactory.java,v 1.4 2014-11-25 18:38:47 aishizaki Exp $
+ * $Id$
  */
 
 /*

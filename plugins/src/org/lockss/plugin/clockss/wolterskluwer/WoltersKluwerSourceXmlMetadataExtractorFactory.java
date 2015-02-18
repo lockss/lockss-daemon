@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.8 2015-01-15 05:06:46 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

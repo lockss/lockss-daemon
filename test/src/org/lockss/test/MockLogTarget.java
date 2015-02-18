@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.11 2005-10-10 23:48:55 troberts Exp $
+ * $Id$
  */
 
 /*

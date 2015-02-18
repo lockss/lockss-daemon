@@ -1,5 +1,5 @@
 /*
- * $Id: StringPool.java,v 1.5 2014-05-30 07:18:25 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSet.java,v 1.7 2012-08-29 21:11:45 tlipkis Exp $
+ * $Id$
  */
 
 /*

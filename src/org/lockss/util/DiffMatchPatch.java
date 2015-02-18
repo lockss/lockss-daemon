@@ -1,5 +1,5 @@
 /*
- * $Id: DiffMatchPatch.java,v 1.1 2013-10-17 07:51:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

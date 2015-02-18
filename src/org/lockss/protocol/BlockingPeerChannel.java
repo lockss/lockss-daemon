@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.33 2014-03-23 17:08:47 tlipkis Exp $
+ * $Id$
  */
 
 /*

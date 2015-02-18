@@ -1,5 +1,5 @@
 /*
- * $Id: CacheSuccess.java,v 1.3 2010-02-11 10:05:40 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,

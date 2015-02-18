@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.27 2014-04-23 20:44:31 tlipkis Exp $
+ * $Id$
  */
 
 /*

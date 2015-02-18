@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedZipContentGenerator.java,v 1.2 2007-09-24 18:37:14 dshr Exp $
+ * $Id$
  */
 
 /*

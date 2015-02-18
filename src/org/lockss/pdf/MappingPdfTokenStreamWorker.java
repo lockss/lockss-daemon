@@ -1,5 +1,5 @@
 /*
- * $Id: MappingPdfTokenStreamWorker.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id$
  */
 
 /*

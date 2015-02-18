@@ -1,5 +1,5 @@
 /*
- * $Id: SerialPublication.java,v 1.6 2014-10-03 23:04:44 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

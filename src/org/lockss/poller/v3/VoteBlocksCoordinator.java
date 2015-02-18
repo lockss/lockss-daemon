@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksCoordinator.java,v 1.5 2013-07-24 20:09:37 barry409 Exp $
+ * $Id$
  */
 
 /*

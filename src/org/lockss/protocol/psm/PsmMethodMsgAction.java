@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMethodMsgAction.java,v 1.2 2005-05-04 22:45:21 smorabito Exp $
+* $Id$
  */
 
 /*

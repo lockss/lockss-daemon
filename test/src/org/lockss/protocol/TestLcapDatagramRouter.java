@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramRouter.java,v 1.7 2005-03-23 07:01:12 smorabito Exp $
+ * $Id$
  */
 
 /*

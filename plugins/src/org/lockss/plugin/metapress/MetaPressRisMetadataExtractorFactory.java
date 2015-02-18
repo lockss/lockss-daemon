@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressRisMetadataExtractorFactory.java,v 1.4 2015-01-13 23:57:54 etenbrink Exp $
+ * $Id$
  */
 
 /*

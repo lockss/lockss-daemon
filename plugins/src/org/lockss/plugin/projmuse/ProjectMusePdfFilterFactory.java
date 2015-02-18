@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.9 2014-12-02 00:51:56 thib_gc Exp $
+ * $Id$
  */
 
 /*

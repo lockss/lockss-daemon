@@ -1,5 +1,5 @@
 /*
- * $Id: TestDiskVoteBlocks.java,v 1.8 2014-05-19 05:39:24 tlipkis Exp $
+ * $Id$
  */
 
 /*

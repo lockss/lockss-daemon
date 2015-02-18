@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.13 2006-09-07 09:06:47 thib_gc Exp $
+ * $Id$
  */
 
 /*

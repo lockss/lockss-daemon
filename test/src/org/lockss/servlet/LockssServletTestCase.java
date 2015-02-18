@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServletTestCase.java,v 1.7 2010-02-23 05:01:55 pgust Exp $
+ * $Id$
  */
 
 /*

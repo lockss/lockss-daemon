@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedTarContentGenerator.java,v 1.4 2012-02-16 10:40:40 tlipkis Exp $
+ * $Id$
  */
 
 /*

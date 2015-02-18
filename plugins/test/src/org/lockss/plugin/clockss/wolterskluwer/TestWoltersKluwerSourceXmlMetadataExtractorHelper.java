@@ -1,4 +1,4 @@
-/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.5 2014-12-18 23:00:43 alexandraohlson Exp $
+/* $Id$
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

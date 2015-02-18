@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.8 2013-05-13 18:14:35 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

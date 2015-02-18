@@ -1,5 +1,5 @@
 /*
- * $Id: MockRateLimiter.java,v 1.2 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

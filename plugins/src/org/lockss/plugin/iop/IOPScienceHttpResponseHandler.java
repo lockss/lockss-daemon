@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHttpResponseHandler.java,v 1.2 2014-12-04 19:52:31 etenbrink Exp $
+ * $Id$
  */
 
 /*

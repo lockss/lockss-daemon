@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.111 2014-12-27 03:42:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

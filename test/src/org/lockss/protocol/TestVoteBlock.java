@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlock.java,v 1.2 2007-05-09 10:34:06 smorabito Exp $
+ * $Id$
  */
 
 /*

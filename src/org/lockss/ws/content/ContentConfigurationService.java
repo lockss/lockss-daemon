@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationService.java,v 1.3 2014-07-17 19:18:34 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: JMIRFilterRule.java,v 1.3 2006-02-03 18:17:51 troberts Exp $
+ * $Id$
  */
 
 /*

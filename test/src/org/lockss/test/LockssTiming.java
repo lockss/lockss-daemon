@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.8 2013-06-26 04:48:20 tlipkis Exp $
+ * $Id$
  */
 
 /*

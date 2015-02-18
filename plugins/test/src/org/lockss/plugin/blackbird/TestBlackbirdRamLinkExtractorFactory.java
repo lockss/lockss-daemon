@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdRamLinkExtractorFactory.java,v 1.3 2012-02-16 20:28:42 thib_gc Exp $
+ * $Id$
  */
 
 /*

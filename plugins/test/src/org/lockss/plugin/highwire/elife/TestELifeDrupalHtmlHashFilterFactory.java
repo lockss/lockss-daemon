@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalHtmlHashFilterFactory.java,v 1.4 2014-12-31 00:08:54 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssSslListener.java,v 1.1 2014-12-08 04:10:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

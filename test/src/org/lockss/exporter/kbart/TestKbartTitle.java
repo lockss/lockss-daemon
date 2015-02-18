@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartTitle.java,v 1.8 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

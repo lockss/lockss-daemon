@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.6 2015/01/14 23:07:10 aishizaki Exp $
+ * $Id$
  */
 /*
 

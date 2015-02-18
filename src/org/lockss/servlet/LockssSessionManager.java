@@ -1,5 +1,5 @@
 /*
- * $Id: LockssSessionManager.java,v 1.4 2009-11-05 23:38:39 dshr Exp $
+ * $Id$
  */
 
 /*

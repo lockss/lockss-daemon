@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.14 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id$
  */
 
 /*

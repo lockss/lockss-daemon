@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlCrawlFilterFactory.java,v 1.1 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id$
  */
 package org.lockss.plugin.atypon.aiaa;
 

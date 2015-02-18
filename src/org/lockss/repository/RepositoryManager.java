@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.20 2013-07-14 03:05:20 dshr Exp $
+ * $Id$
  */
 
 /*

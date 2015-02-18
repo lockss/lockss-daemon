@@ -1,5 +1,5 @@
 /*
- * $Id: TestLinkRewriterFactoryWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

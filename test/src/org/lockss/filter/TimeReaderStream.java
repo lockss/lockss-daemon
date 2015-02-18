@@ -1,5 +1,5 @@
 /*
- * $Id: TimeReaderStream.java,v 1.3 2005-10-11 05:49:45 tlipkis Exp $
+ * $Id$
  */
 
 /*

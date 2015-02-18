@@ -1,5 +1,5 @@
 /*
- * $Id: TestZipFilterInputStream.java,v 1.2 2014-09-12 18:49:03 thib_gc Exp $
+ * $Id$
  */
 
 /*

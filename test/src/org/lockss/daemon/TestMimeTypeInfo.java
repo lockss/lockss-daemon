@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeInfo.java,v 1.9 2011-09-25 04:16:44 tlipkis Exp $
+ * $Id$
  */
 
 /*

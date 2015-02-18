@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.11 2013-10-07 15:29:58 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUserRealm.java,v 1.5 2009-10-11 19:07:09 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -37,7 +37,7 @@ in this Software without prior written authorization from Stanford University.
 // sure how thay might interact with Jetty
 
 // ========================================================================
-// $Id: LockssUserRealm.java,v 1.5 2009-10-11 19:07:09 tlipkis Exp $
+// $Id$
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 

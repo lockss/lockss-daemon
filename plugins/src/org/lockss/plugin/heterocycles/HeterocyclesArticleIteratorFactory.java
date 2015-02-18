@@ -1,5 +1,5 @@
 /*
- * $Id: HeterocyclesArticleIteratorFactory.java,v 1.2 2013-11-25 22:43:27 ldoan Exp $
+ * $Id$
  */
 
 /*

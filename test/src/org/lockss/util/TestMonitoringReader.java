@@ -1,5 +1,5 @@
 /*
- * $Id: TestMonitoringReader.java,v 1.1 2014-06-18 03:47:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

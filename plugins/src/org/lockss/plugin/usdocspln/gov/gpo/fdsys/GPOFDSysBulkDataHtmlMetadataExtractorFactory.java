@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysBulkDataHtmlMetadataExtractorFactory.java,v 1.1 2012-08-27 21:02:29 davidecorcoran Exp $
+ * $Id$
  */
 
 /*

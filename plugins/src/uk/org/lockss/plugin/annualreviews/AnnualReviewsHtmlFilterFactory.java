@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsHtmlFilterFactory.java,v 1.6 2010-02-23 14:24:11 arusbridge Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRateLimiter.java,v 1.4 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id$
  */
 
 /*

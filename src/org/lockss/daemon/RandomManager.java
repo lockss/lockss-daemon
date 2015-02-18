@@ -1,5 +1,5 @@
 /*
- * $Id: RandomManager.java,v 1.3 2013-05-23 09:52:05 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,

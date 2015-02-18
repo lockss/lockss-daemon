@@ -1,5 +1,5 @@
 /*
- * $Id: TestSitemap.java,v 1.1 2013-03-27 22:18:23 ldoan Exp $
+ * $Id$
  */
 
 /*

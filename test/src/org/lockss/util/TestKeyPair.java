@@ -1,5 +1,5 @@
 /*
- * $Id: TestKeyPair.java,v 1.1 2004-10-18 03:23:08 tlipkis Exp $
+ * $Id$
  */
 
 /*

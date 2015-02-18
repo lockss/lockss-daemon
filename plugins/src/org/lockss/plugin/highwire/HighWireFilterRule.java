@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.13 2009-09-09 00:22:46 thib_gc Exp $
+ * $Id$
  */
 
 /*

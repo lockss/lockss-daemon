@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveFileTypes.java,v 1.2 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

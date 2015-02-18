@@ -1,5 +1,5 @@
 /*
- * $Id: AuSearchSet.java,v 1.4 2013-02-27 06:01:05 tlipkis Exp $
+ * $Id$
  */
 
 /*

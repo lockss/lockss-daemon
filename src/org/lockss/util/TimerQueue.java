@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.33 2007-10-01 08:17:24 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

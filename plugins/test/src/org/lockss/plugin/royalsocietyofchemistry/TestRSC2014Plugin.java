@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014Plugin.java,v 1.2 2014-12-22 22:53:06 etenbrink Exp $
+ * $Id$
  */
 
 /*

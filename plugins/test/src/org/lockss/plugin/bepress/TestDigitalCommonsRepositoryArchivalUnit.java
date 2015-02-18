@@ -1,5 +1,5 @@
 /*
- * $Id: TestDigitalCommonsRepositoryArchivalUnit.java,v 1.4 2014-12-06 01:33:11 thib_gc Exp $
+ * $Id$
  */
 
 /*

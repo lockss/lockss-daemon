@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlFilteringInputStream.java,v 1.2 2014-01-23 21:07:27 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceManager.java,v 1.12 2008-07-01 07:47:11 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,

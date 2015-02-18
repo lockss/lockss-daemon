@@ -1,4 +1,4 @@
-/* $Id: TestPalgraveBookRisMetadataExtractorFactory.java,v 1.4 2014-07-29 17:09:38 aishizaki Exp $
+/* $Id$
 
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.

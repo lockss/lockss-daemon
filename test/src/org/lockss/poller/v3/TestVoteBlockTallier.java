@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.14 2013-07-16 04:00:17 dshr Exp $
+ * $Id$
  */
 
 /*

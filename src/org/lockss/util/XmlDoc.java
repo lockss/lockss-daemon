@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDoc.java,v 1.3 2003-12-17 02:49:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

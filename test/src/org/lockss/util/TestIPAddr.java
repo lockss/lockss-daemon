@@ -1,5 +1,5 @@
 /*
- * $Id: TestIPAddr.java,v 1.3 2005-07-18 07:59:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

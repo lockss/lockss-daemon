@@ -1,5 +1,5 @@
 /*
- * $Id: TestCacheResultHandlerWrapper.java,v 1.5 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

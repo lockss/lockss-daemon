@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleBinarySemaphore.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

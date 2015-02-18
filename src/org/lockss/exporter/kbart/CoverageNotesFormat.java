@@ -1,5 +1,5 @@
 /*
- * $Id: CoverageNotesFormat.java,v 1.6 2012-07-27 12:54:33 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

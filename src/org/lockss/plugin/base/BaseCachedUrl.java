@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.57 2014-08-07 06:53:53 tlipkis Exp $
+ * $Id$
  */
 
 /*

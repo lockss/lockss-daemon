@@ -1,5 +1,5 @@
 /*
- * $Id: AddAusByIdListClient.java,v 1.1 2014-07-03 19:49:03 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

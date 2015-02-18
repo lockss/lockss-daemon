@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.11 2013-01-06 06:35:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

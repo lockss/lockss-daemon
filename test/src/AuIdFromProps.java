@@ -1,5 +1,5 @@
 /*
- * $Id: AuIdFromProps.java,v 1.4 2005-03-15 07:42:42 tlipkis Exp $
+ * $Id$
  */
 
 /*

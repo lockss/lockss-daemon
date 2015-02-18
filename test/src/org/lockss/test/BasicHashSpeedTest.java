@@ -1,5 +1,5 @@
 /*
- * $Id: BasicHashSpeedTest.java,v 1.3 2003-09-16 23:28:34 eaalto Exp $
+ * $Id$
  */
 
 /*

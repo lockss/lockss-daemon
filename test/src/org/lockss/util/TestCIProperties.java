@@ -1,5 +1,5 @@
 /*
- * $Id: TestCIProperties.java,v 1.1 2004-03-09 22:58:42 tlipkis Exp $
+ * $Id$
  */
 
 /*

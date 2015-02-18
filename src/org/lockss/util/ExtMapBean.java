@@ -1,5 +1,5 @@
 /*
- * $Id: ExtMapBean.java,v 1.4 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id$
  */
 
 /*

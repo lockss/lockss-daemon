@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAgreementWsResult.java,v 1.1 2014-06-09 07:11:21 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

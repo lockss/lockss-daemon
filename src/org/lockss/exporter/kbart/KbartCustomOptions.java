@@ -1,5 +1,5 @@
 /*
- * $Id: KbartCustomOptions.java,v 1.6 2012-10-22 17:28:17 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

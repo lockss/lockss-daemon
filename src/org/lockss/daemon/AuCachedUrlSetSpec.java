@@ -1,5 +1,5 @@
 /*
- * $Id: AuCachedUrlSetSpec.java,v 1.3 2012-03-15 08:51:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

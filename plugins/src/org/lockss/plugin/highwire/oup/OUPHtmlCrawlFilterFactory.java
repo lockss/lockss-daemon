@@ -1,5 +1,5 @@
 /*
- * $Id: OUPHtmlCrawlFilterFactory.java,v 1.2 2015-02-04 07:12:37 etenbrink Exp $
+ * $Id$
  */
 
 /*

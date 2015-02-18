@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryList.java,v 1.4 2007-01-18 02:42:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

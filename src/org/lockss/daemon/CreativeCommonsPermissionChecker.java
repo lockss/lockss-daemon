@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.16 2015-02-09 05:42:07 tlipkis Exp $
+ * $Id$
  */
 
 /*

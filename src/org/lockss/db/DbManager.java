@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.47 2015-01-14 18:13:22 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

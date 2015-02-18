@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.20 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

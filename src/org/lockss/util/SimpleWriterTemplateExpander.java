@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleWriterTemplateExpander.java,v 1.2 2014-01-29 05:20:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

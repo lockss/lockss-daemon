@@ -1,5 +1,5 @@
 /*
-* $Id: AuUrl.java,v 1.8 2005-10-07 16:19:55 thib_gc Exp $
+* $Id$
  */
 
 /*

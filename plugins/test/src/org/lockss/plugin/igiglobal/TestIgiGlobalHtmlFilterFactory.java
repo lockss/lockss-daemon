@@ -1,5 +1,5 @@
 /*
- * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.10 2014-11-04 19:26:18 aishizaki Exp $
+ * $Id$
  */
 
 /*

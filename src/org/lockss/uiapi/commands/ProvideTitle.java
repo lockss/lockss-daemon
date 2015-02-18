@@ -1,5 +1,5 @@
 /*
- * $Id: ProvideTitle.java,v 1.4 2005-10-20 22:57:49 troberts Exp $
+ * $Id$
  */
 
 /*

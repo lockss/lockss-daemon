@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestDialog.java,v 1.14 2006-09-07 21:08:37 thib_gc Exp $
+ * $Id$
  */
 
 /*

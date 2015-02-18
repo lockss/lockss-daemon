@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharsetUtil.java,v 1.1 2015-01-07 00:20:25 clairegriffin Exp $
+ * $Id$
  */
 
 /*

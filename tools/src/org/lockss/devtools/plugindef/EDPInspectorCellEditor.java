@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.14 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

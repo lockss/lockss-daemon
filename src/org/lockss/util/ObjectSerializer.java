@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.30 2010-02-08 21:38:37 tlipkis Exp $
+ * $Id$
  */
 
 /*

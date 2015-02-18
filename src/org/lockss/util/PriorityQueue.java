@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.12 2004-07-12 06:22:29 tlipkis Exp $
+ * $Id$
  */
 
 /*

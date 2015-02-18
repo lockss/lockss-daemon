@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlUtil.java,v 1.7 2013-03-19 03:46:48 pgust Exp $
+ * $Id$
  */
 
 /*

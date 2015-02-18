@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindow.java,v 1.6 2006-11-11 06:52:53 tlipkis Exp $
+ * $Id$
  */
 
 /*

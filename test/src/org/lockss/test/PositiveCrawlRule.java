@@ -1,5 +1,5 @@
 /*
- * $Id: PositiveCrawlRule.java,v 1.1 2004-08-20 00:10:36 troberts Exp $
+ * $Id$
  */
 
 /*

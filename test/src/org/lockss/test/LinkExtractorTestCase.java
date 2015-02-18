@@ -1,5 +1,5 @@
 /*
- * $Id: LinkExtractorTestCase.java,v 1.5 2012-02-16 20:28:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

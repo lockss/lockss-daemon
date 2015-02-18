@@ -1,5 +1,5 @@
 /*
- * $Id: TestLineEndingBufferedReader.java,v 1.1 2014-07-22 02:07:28 thib_gc Exp $
+ * $Id$
  */
 
 /*

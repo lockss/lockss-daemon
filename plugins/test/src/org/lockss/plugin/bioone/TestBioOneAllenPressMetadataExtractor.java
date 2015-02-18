@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.7 2012-08-08 22:39:34 pgust Exp $
+ * $Id$
  */
 
 /*

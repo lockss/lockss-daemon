@@ -1,5 +1,5 @@
 /*
- * $Id: TestNAPXmlMetadataExtractor.java,v 1.3 2014-08-29 20:08:16 alexandraohlson Exp $
+ * $Id$
  */
 /*
 

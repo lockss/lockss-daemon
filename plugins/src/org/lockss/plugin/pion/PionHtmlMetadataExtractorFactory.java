@@ -1,5 +1,5 @@
 /*
- * $Id: PionHtmlMetadataExtractorFactory.java,v 1.5 2014-11-26 17:52:31 aishizaki Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.11 2013-07-16 13:53:39 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

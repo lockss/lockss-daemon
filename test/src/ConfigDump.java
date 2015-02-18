@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.16 2010-11-29 07:24:33 tlipkis Exp $
+ * $Id$
  */
 
 /*

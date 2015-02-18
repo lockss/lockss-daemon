@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpResultHandler.java,v 1.4 2010-02-11 10:05:40 tlipkis Exp $
+ * $Id$
  */
 
 /*

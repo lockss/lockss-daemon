@@ -1,5 +1,5 @@
 /*
- * $Id: AMAVirtualMentorArticleIteratorFactory.java,v 1.3 2011-06-27 23:13:37 pgust Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: XmlUtils.java,v 1.2 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id$
  */
 
 /*

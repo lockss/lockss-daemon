@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.16 2009-03-05 05:40:05 tlipkis Exp $
+ * $Id$
  */
 
 /*

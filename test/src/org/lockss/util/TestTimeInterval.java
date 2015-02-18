@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimeInterval.java,v 1.1 2003-12-12 02:38:27 eaalto Exp $
+ * $Id$
  */
 
 /*

@@ -1,4 +1,4 @@
-/* $Id: TestNationalWeatherAssociationArticleIteratorFactory.java,v 1.4 2014-09-15 08:09:24 ldoan Exp $ */
+/* $Id$ */
 
 /*
 

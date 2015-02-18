@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMsgEvent.java,v 1.3 2005-06-21 02:53:12 tlipkis Exp $
+* $Id$
  */
 
 /*

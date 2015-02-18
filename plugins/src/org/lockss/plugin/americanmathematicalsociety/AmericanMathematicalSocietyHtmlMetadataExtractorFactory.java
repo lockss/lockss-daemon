@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMathematicalSocietyHtmlMetadataExtractorFactory.java,v 1.1 2014-03-27 22:19:08 etenbrink Exp $
+ * $Id$
  */
 
 /*

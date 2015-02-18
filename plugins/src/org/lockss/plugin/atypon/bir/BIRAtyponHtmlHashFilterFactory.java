@@ -1,5 +1,5 @@
 /*
- * $Id: BIRAtyponHtmlHashFilterFactory.java,v 1.3 2015-01-30 06:06:41 ldoan Exp $
+ * $Id$
  */
 
 /*

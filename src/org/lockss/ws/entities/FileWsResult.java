@@ -1,5 +1,5 @@
 /*
- * $Id: FileWsResult.java,v 1.1 2015-01-15 21:45:20 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

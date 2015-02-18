@@ -1,5 +1,5 @@
 /*
- * $Id: MDHashUserRealm.java,v 1.4 2009-06-01 07:34:34 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -36,7 +36,7 @@ in this Software without prior written authorization from Stanford University.
 // are private
 
 // ========================================================================
-// $Id: MDHashUserRealm.java,v 1.4 2009-06-01 07:34:34 tlipkis Exp $
+// $Id$
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 

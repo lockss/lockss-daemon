@@ -1,5 +1,5 @@
 /*
- * $Id: PropKeyEncoder.java,v 1.5 2005-08-26 02:37:21 tlipkis Exp $
+ * $Id$
  */
 
 /*

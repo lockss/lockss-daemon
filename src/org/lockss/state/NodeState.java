@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.14 2004-04-08 01:11:58 eaalto Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.12 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.6 2014-12-30 21:50:03 etenbrink Exp $
+ * $Id$
  */
 
 /*

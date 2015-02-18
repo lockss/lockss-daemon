@@ -1,5 +1,5 @@
 /*
- * $Id: TestCachingComparator.java,v 1.2 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: UpdatedMinervaMetadataExtractorFactory.java,v 1.1 2012-05-11 21:24:15 dylanrhodes Exp $
+ * $Id$
  */
 
 /*

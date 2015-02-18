@@ -1,5 +1,5 @@
 /*
- * $Id: TestBIRAtyponHtmlFilterFactory.java,v 1.1 2015-01-30 06:09:03 ldoan Exp $
+ * $Id$
  */
 
 /*

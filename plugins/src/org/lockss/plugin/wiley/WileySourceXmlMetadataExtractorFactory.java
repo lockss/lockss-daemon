@@ -1,5 +1,5 @@
 /*
- * $Id: WileySourceXmlMetadataExtractorFactory.java,v 1.3 2014-03-06 17:19:33 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.22 2014-03-23 17:10:48 tlipkis Exp $
+ * $Id$
  */
 
 /*

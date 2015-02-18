@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanSocietyOfCivilEngineersMetadataExtractorFactory.java,v 1.4 2012-03-06 00:24:58 pgust Exp $
+ * $Id$
  */
 
 /*

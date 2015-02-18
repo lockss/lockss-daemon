@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport1L.java,v 1.9 2014-10-03 23:04:43 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

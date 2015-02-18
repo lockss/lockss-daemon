@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlHashFilterFactory.java,v 1.7 2014-08-27 17:35:04 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

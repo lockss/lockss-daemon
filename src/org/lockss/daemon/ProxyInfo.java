@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.31 2010-02-23 04:13:29 pgust Exp $
+ * $Id$
  */
 
 /*

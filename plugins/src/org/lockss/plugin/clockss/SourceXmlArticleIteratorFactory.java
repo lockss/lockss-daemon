@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlArticleIteratorFactory.java,v 1.1 2014-03-04 21:32:58 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

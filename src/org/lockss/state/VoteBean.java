@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBean.java,v 1.9 2005-10-11 05:47:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

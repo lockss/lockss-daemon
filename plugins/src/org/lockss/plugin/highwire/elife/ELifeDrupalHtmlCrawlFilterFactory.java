@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHtmlCrawlFilterFactory.java,v 1.3 2014-12-31 00:05:44 etenbrink Exp $
+ * $Id$
  */
 
 /*

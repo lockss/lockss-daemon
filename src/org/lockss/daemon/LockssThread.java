@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.29 2007-03-14 05:53:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

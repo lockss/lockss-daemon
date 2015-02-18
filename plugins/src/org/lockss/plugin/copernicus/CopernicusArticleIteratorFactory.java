@@ -1,5 +1,5 @@
 /*
- * $Id: CopernicusArticleIteratorFactory.java,v 1.3 2014-05-23 22:31:21 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsychiatryOnlineHtmlFilterFactory.java,v 1.1 2014-05-28 00:03:52 etenbrink Exp $
+ * $Id$
  */
 
 /*

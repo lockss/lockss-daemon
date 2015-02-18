@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressHtmlMetadataExtractorFactory.java,v 1.1 2013-01-24 22:40:18 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

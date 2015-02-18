@@ -1,5 +1,5 @@
 /*
- * $Id: TestKeyStoreUtil.java,v 1.5 2010-03-14 08:09:45 tlipkis Exp $
+ * $Id$
  */
 
 /*

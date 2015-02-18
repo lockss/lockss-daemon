@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.35 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

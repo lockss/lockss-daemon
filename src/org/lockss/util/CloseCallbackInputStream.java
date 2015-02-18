@@ -1,5 +1,5 @@
 /*
- * $Id: CloseCallbackInputStream.java,v 1.3 2012-04-04 23:43:33 thib_gc Exp $
+ * $Id$
  */
 
 /*

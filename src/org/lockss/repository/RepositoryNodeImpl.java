@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.95 2014-10-22 19:39:38 thib_gc Exp $
+ * $Id$
  */
 
 /*

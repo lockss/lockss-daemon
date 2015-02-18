@@ -1,5 +1,5 @@
 /*
- * $Id: TestPensoftHtmlMetadataExtractorFactory.java,v 1.4 2014-01-22 23:31:22 aishizaki Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: BusinessSystemsLaboratoryArticleIteratorFactory.java,v 1.2 2014-01-22 20:06:40 ldoan Exp $
+ * $Id$
  */
 
 /*

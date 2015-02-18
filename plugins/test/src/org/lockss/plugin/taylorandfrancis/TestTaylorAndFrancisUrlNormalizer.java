@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisUrlNormalizer.java,v 1.3 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

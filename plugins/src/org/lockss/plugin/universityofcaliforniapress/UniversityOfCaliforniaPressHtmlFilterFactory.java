@@ -1,5 +1,5 @@
 /*
- * $Id: UniversityOfCaliforniaPressHtmlFilterFactory.java,v 1.2 2012-10-24 22:05:14 thib_gc Exp $
+ * $Id$
  */
 
 /*

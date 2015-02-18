@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.40 2014-12-10 22:08:23 dshr Exp $
+ * $Id$
  */
 
 /*

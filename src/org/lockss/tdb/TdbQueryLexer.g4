@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryLexer.g4,v 1.3 2014-09-03 22:07:48 thib_gc Exp $
+ * $Id$
  */
 
 /*

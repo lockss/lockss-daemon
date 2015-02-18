@@ -1,5 +1,5 @@
 /*
- * $Id: MyTextArea.java,v 1.4 2007-05-01 23:35:13 tlipkis Exp $
+ * $Id$
  */
 
 /*

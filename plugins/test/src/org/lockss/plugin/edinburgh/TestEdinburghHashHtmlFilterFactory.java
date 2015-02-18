@@ -1,5 +1,5 @@
 /*
- * $Id: TestEdinburghHashHtmlFilterFactory.java,v 1.3 2013-08-23 20:20:42 alexandraohlson Exp $
+ * $Id$
  */
 
 package org.lockss.plugin.edinburgh;

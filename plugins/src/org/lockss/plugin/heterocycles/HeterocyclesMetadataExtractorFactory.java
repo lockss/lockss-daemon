@@ -1,6 +1,6 @@
 /*
 
- * $Id: HeterocyclesMetadataExtractorFactory.java,v 1.1 2013-11-25 23:29:27 ldoan Exp $
+ * $Id$
  */
 
 /*

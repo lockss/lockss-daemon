@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbabilisticChoice.java,v 1.5 2014-05-26 07:31:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

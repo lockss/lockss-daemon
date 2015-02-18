@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.12 2015-01-12 04:53:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

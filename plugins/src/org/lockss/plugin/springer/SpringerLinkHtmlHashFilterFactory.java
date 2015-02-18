@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.22 2012-10-27 01:11:20 thib_gc Exp $
+ * $Id$
  */
 
 /*

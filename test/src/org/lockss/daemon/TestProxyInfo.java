@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.24 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.13 2013-03-13 19:05:10 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

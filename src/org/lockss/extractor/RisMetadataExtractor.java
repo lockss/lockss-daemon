@@ -1,5 +1,5 @@
 /*
- * $Id: RisMetadataExtractor.java,v 1.4 2013-10-23 04:19:19 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryUtils.java,v 1.2 2005-10-11 05:47:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.13 2015-01-16 22:54:14 thib_gc Exp $
+ * $Id$
  */
 
 /*

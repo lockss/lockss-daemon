@@ -1,5 +1,5 @@
 /*
- * $Id: MockPdfTokenStream.java,v 1.5 2014-11-27 00:23:24 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: DryadArticleIteratorFactory.java,v 1.2 2014-01-29 22:55:02 etenbrink Exp $
+ * $Id$
  */
 
 /*

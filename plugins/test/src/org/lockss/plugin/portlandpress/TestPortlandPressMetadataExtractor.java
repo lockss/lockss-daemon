@@ -1,5 +1,5 @@
 /*
- * $Id: TestPortlandPressMetadataExtractor.java,v 1.2 2013-07-25 20:55:02 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

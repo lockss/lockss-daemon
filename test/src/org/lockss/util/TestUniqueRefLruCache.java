@@ -1,5 +1,5 @@
 /*
- * $Id: TestUniqueRefLruCache.java,v 1.2 2013-02-27 06:02:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVote.java,v 1.11 2005-10-11 05:44:50 tlipkis Exp $
+ * $Id$
  */
 
 /*

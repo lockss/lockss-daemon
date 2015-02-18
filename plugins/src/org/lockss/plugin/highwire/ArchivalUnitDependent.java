@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitDependent.java,v 1.1 2007-11-29 00:00:45 thib_gc Exp $
+ * $Id$
  */
 
 /*

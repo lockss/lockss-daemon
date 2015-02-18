@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.5 2014-09-23 20:36:59 pgust Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuSearchSet.java,v 1.3 2013-02-25 08:50:04 tlipkis Exp $
+ * $Id$
  */
 
 /*

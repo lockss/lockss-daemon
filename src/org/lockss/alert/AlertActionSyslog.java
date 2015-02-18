@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionSyslog.java,v 1.4 2014-01-14 04:26:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

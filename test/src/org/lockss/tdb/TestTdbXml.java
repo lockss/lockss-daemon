@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbXml.java,v 1.1 2014-10-29 20:22:31 thib_gc Exp $
+ * $Id$
  */
 
 /*

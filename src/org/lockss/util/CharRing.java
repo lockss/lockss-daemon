@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.11 2014-04-23 20:48:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

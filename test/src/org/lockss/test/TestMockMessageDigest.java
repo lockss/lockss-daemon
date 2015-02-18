@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockMessageDigest.java,v 1.4 2004-12-09 08:19:36 tlipkis Exp $
+ * $Id$
  */
 
 /*

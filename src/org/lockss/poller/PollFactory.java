@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.11 2012-07-09 18:53:40 barry409 Exp $
+* $Id$
  */
 
 /*

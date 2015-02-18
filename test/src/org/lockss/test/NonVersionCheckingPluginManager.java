@@ -1,5 +1,5 @@
 /*
- * $Id: NonVersionCheckingPluginManager.java,v 1.1 2009-12-09 00:07:21 tlipkis Exp $
+ * $Id$
  */
 
 /*

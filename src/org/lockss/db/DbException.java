@@ -1,5 +1,5 @@
 /*
- * $Id: DbException.java,v 1.1 2013-06-19 22:35:40 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

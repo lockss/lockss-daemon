@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseFilterRule.java,v 1.3 2009-06-17 22:51:59 thib_gc Exp $
+ * $Id$
  */
 
 /*

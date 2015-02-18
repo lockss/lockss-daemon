@@ -1,5 +1,5 @@
 /*
- * $Id: TafHtmlLinkExtractorFactory.java,v 1.1 2015-01-30 21:16:05 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSchedService.java,v 1.7 2005-10-11 05:51:20 tlipkis Exp $
+ * $Id$
  */
 
 /*

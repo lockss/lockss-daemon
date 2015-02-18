@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersCrawlHtmlFilterFactory.java,v 1.5 2009-06-17 22:09:47 thib_gc Exp $ */
+ * $Id$ */
 
 /*
 

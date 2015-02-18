@@ -1,5 +1,5 @@
 /*
- * $Id: PluginHelper.java,v 1.2 2014-05-29 16:53:45 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

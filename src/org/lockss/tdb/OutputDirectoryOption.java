@@ -1,5 +1,5 @@
 /*
- * $Id: OutputDirectoryOption.java,v 1.2 2014-11-12 00:15:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

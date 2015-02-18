@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJHtmlHashFilterFactory.java,v 1.5 2014-10-17 22:44:38 ldoan Exp $
+ * $Id$
  */
 
 /*

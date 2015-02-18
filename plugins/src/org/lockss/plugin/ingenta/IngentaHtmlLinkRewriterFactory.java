@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.6 2014-08-15 21:38:30 etenbrink Exp $
+ * $Id$
  */
 
 /*

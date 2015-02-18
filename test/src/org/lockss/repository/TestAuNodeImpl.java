@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.14 2013-06-26 04:45:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

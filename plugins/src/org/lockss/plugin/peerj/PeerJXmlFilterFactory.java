@@ -1,5 +1,5 @@
 /*
-* $Id: PeerJXmlFilterFactory.java,v 1.2 2014-10-15 21:20:17 thib_gc Exp $
+* $Id$
 */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartFieldOrderComparator.java,v 1.2 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

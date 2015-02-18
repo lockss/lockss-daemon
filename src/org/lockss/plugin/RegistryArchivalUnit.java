@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.34 2014-12-17 00:18:58 tlipkis Exp $
+ * $Id$
  */
 
 /*

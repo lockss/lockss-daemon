@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFaultOutInterceptor.java,v 1.1 2014-02-12 19:41:00 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.6 2014-01-03 21:05:54 etenbrink Exp $
+ * $Id$
  */
 
 /*

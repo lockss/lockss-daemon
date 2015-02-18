@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPermissionCheckerTestCase.java,v 1.2 2014-11-12 20:11:38 wkwilson Exp $
+ * $Id$
  */
 
 /*

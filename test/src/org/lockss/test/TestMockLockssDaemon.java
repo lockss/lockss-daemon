@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockLockssDaemon.java,v 1.2 2013-03-27 22:00:50 tlipkis Exp $
+ * $Id$
  */
 
 /*

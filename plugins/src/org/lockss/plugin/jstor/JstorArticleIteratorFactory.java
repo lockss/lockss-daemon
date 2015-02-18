@@ -1,5 +1,5 @@
 /*
- * $Id: JstorArticleIteratorFactory.java,v 1.4 2014-06-27 18:16:46 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

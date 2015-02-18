@@ -1,5 +1,5 @@
 /*
- * $Id: TestMichiganStateUniversityExtensionHtmlMetadataExtractorFactory.java,v 1.2 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id$
  */
 /*
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestManeyAtyponHtmlFilterFactory.java,v 1.1 2015-01-23 06:55:26 ldoan Exp $
+ * $Id$
  */
 
 /*

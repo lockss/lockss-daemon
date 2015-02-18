@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServletRunner.java,v 1.1 2003-08-06 06:28:56 tlipkis Exp $
+ * $Id$
  */
 
 /*

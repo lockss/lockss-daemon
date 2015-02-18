@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.11 2014-09-10 12:21:57 pgust Exp $
+ * $Id$
  */
 
 /*
@@ -43,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.11 2014-09-10 12:21:57 pgust Exp $
+ * @version $Id$
  */
 
 public class TestTdb extends LockssTestCase {

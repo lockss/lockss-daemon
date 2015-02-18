@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.14 2015-02-03 21:32:21 ldoan Exp $
+ * $Id$
  */
 
 /*

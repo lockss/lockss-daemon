@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.11 2014-07-13 04:16:28 tlipkis Exp $
+ * $Id$
  */
 
 /*

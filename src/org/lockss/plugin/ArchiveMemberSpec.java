@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveMemberSpec.java,v 1.2 2012-09-06 04:04:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

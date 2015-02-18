@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerLinkUrlNormalizer.java,v 1.4 2013-03-08 02:07:40 thib_gc Exp $
+ * $Id$
  */
 
 /*

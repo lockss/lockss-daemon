@@ -1,5 +1,5 @@
 /*
- * $Id: LockssSerializable.java,v 1.2 2006-06-22 04:31:44 thib_gc Exp $
+ * $Id$
  */
 
 /*

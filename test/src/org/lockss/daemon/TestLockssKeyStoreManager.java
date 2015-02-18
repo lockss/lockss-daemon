@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStoreManager.java,v 1.5 2010-11-29 07:25:09 tlipkis Exp $
+ * $Id$
  */
 
 /*

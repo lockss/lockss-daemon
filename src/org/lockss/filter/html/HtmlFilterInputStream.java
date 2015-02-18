@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.23 2015-01-22 11:30:17 thib_gc Exp $
+ * $Id$
  */
 
 /*

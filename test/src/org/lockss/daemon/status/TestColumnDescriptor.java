@@ -1,5 +1,5 @@
 /*
- * $Id: TestColumnDescriptor.java,v 1.3 2004-09-21 21:24:57 dshr Exp $
+ * $Id$
  */
 
 /*

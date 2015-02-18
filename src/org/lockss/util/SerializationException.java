@@ -1,5 +1,5 @@
 /*
- * $Id: SerializationException.java,v 1.4 2013-07-15 07:31:42 tlipkis Exp $
+ * $Id$
  */
 
 /*

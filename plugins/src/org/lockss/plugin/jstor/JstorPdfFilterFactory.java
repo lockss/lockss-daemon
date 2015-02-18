@@ -1,5 +1,5 @@
 /*
- * $Id: JstorPdfFilterFactory.java,v 1.6 2014-08-27 01:14:10 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

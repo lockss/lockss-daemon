@@ -1,5 +1,5 @@
 /*
- * $Id: MapUtil.java,v 1.6 2013-04-01 00:45:11 tlipkis Exp $
+ * $Id$
  *
 
  Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,

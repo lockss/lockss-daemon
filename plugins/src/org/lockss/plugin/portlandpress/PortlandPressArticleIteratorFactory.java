@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressArticleIteratorFactory.java,v 1.7 2015-02-04 19:00:47 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

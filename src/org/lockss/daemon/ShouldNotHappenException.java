@@ -1,5 +1,5 @@
 /*
- * $Id: ShouldNotHappenException.java,v 1.1 2011-11-15 21:38:44 barry409 Exp $
+ * $Id$
  */
 
 /*

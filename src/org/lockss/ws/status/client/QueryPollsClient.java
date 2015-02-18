@@ -1,5 +1,5 @@
 /*
- * $Id: QueryPollsClient.java,v 1.1 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

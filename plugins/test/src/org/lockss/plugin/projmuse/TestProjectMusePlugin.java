@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.5 2007-10-31 19:04:48 thib_gc Exp $
+ * $Id$
  */
 
 /*

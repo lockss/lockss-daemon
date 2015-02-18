@@ -1,5 +1,5 @@
 /*
- * $Id: WileyArticleIteratorFactory.java,v 1.9 2014-02-13 23:46:07 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

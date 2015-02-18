@@ -1,5 +1,5 @@
 /*
- * $Id: GetAsynchronousHashResultClient.java,v 1.1 2014-11-10 20:52:25 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

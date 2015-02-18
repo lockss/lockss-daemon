@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.16 2014-04-09 23:26:52 etenbrink Exp $
+ * $Id$
  */
 
 /*

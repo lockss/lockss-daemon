@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.9 2014-07-28 07:15:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

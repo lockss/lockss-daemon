@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1Poll.java,v 1.5 2005-12-01 01:54:43 smorabito Exp $
+ * $Id$
  */
 
 /*

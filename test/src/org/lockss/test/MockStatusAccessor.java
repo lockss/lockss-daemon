@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.16 2010-09-01 07:51:28 tlipkis Exp $
+ * $Id$
  */
 
 /*

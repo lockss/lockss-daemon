@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.35 2014-07-05 21:43:19 tlipkis Exp $
+ * $Id$
  */
 
 /*

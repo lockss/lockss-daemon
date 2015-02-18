@@ -1,5 +1,5 @@
 /*
- * $Id: NullLockssManager.java,v 1.4 2004-09-27 22:38:34 smorabito Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.8 2015-01-20 21:33:00 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

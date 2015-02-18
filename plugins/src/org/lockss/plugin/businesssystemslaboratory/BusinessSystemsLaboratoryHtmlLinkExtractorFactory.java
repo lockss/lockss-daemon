@@ -1,5 +1,5 @@
 /*
- * $Id: BusinessSystemsLaboratoryHtmlLinkExtractorFactory.java,v 1.2 2014-09-10 18:44:29 thib_gc Exp $
+ * $Id$
  */
 
 /*

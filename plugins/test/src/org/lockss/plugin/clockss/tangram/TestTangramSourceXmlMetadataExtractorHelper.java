@@ -1,4 +1,4 @@
-/* $Id: TestTangramSourceXmlMetadataExtractorHelper.java,v 1.2 2014-10-01 17:15:11 aishizaki Exp $
+/* $Id$
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

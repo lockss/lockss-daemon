@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.10 2014-12-27 03:37:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

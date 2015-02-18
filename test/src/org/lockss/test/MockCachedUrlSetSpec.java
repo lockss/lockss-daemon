@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetSpec.java,v 1.11 2003-09-26 23:47:45 eaalto Exp $
+ * $Id$
  */
 
 /*

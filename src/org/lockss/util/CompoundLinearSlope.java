@@ -1,5 +1,5 @@
 /*
- * $Id: CompoundLinearSlope.java,v 1.5 2009-01-07 22:59:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

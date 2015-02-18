@@ -1,5 +1,5 @@
 /*
- * $Id: TestPatternIntMap.java,v 1.1 2012-10-30 00:10:19 tlipkis Exp $
+ * $Id$
  */
 
 /*

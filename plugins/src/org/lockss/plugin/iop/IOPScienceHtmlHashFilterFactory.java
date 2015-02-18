@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.16 2015-01-21 23:05:24 thib_gc Exp $
+ * $Id$
  */
 
 /*

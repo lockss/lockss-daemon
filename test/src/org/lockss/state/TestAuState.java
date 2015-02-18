@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.26 2014-12-27 03:38:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

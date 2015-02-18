@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.23 2014-06-05 20:17:36 tlipkis Exp $
+ * $Id$
  */
 
 /*

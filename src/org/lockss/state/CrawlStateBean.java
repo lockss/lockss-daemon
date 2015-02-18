@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlStateBean.java,v 1.4 2004-04-01 02:44:31 eaalto Exp $
+ * $Id$
  */
 
 /*

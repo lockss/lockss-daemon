@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.20 2014-07-21 03:19:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

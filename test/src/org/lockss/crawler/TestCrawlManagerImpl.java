@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.100 2014-11-24 10:17:46 tlipkis Exp $
+ * $Id$
 */
 
 /*

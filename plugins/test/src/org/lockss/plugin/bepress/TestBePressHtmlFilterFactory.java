@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressHtmlFilterFactory.java,v 1.1 2014-04-09 13:56:04 aishizaki Exp $
+ * $Id$
  */
 
 /*

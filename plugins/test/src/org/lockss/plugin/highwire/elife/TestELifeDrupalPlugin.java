@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalPlugin.java,v 1.5 2015-01-29 01:30:49 etenbrink Exp $
+ * $Id$
  */
 
 /*

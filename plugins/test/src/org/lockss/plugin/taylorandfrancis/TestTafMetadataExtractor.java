@@ -1,5 +1,5 @@
 /*
- * $Id: TestTafMetadataExtractor.java,v 1.1 2015-01-28 01:58:59 thib_gc Exp $
+ * $Id$
  */
 
 /*

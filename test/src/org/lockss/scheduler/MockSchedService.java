@@ -1,5 +1,5 @@
 /*
- * $Id: MockSchedService.java,v 1.1 2008-02-15 09:10:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

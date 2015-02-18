@@ -1,5 +1,5 @@
 /*
- * $Id: TestInterval.java,v 1.3 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id$
  */
 
 /*

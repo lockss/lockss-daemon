@@ -1,5 +1,5 @@
 /*
- * $Id: TestWsInfrastructure.java,v 1.2 2014-12-04 19:33:59 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

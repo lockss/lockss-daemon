@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.14 2005-12-01 23:28:00 troberts Exp $
+ * $Id$
  */
 
 /*

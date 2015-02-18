@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.18 2014-12-08 04:11:21 tlipkis Exp $
+ * $Id$
  */
 
 /*

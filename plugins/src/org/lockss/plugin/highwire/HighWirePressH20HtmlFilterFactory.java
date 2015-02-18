@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.59 2015-01-15 03:50:06 etenbrink Exp $
+ * $Id$
  */
 
 /*

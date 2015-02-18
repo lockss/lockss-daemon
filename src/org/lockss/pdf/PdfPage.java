@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPage.java,v 1.4 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id$
  */
 
 /*

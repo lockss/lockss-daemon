@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.20 2013-01-16 21:53:08 pgust Exp $
+ * $Id$
  */
 
 /*

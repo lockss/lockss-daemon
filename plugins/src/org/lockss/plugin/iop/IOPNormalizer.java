@@ -1,5 +1,5 @@
 /*
- * $Id: IOPNormalizer.java,v 1.2 2011-08-01 22:29:50 thib_gc Exp $
+ * $Id$
  */
 
 /*

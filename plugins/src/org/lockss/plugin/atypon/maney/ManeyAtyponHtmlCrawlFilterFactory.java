@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlCrawlFilterFactory.java,v 1.4 2015-01-23 06:52:39 ldoan Exp $
+ * $Id$
  */
 
 /*

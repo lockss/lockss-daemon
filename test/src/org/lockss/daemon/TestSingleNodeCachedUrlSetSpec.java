@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleNodeCachedUrlSetSpec.java,v 1.7 2004-07-23 16:45:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

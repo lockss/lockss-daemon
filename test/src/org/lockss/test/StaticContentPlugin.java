@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.32 2014-11-12 20:11:44 wkwilson Exp $
+ * $Id$
  */
 
 /*

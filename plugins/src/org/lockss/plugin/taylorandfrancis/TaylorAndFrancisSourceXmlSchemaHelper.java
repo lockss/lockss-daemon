@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisSourceXmlSchemaHelper.java,v 1.1 2014-03-05 19:38:47 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

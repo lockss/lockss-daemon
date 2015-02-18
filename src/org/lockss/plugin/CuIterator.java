@@ -1,5 +1,5 @@
 /*
- * $Id: CuIterator.java,v 1.2 2014-07-29 22:01:49 tlipkis Exp $
+ * $Id$
  */
 
 /*

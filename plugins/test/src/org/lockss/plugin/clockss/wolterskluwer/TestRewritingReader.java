@@ -1,5 +1,5 @@
 /*
- * $Id: TestRewritingReader.java,v 1.2 2014-07-31 21:01:08 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

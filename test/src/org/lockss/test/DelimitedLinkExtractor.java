@@ -1,5 +1,5 @@
 /*
- * $Id: DelimitedLinkExtractor.java,v 1.1 2009-10-19 05:27:40 tlipkis Exp $
+ * $Id$
  */
 
 /*

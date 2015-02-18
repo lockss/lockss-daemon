@@ -1,5 +1,5 @@
 /*
- * $Id: PensoftArticleIteratorFactory.java,v 1.7 2014-04-04 17:49:12 aishizaki Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ScUrlNormalizer.java,v 1.1 2015-02-03 03:07:30 thib_gc Exp $
+ * $Id$
  */
 
 /*

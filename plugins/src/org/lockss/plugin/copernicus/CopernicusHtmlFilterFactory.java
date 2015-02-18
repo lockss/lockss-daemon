@@ -1,5 +1,5 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.9 2014-05-08 22:45:21 alexandraohlson Exp $
+* $Id$
 */
 
 /*

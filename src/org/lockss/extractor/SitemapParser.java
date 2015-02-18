@@ -1,5 +1,5 @@
 /*
- * $Id: SitemapParser.java,v 1.2 2013-03-27 22:28:43 ldoan Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: AuProxy.java,v 1.5 2004-09-28 08:53:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

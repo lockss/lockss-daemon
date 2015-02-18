@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashSvcSchedImpl.java,v 1.6 2014-10-01 08:33:10 tlipkis Exp $
+ * $Id$
  */
 
 /*

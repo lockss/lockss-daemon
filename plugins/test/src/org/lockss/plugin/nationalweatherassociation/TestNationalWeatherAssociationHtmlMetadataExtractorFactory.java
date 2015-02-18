@@ -1,4 +1,4 @@
-/* $Id: TestNationalWeatherAssociationHtmlMetadataExtractorFactory.java,v 1.2 2014-09-15 08:06:41 ldoan Exp $ */
+/* $Id$ */
 
 /*
 

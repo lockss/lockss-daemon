@@ -1,5 +1,5 @@
 /*
- * $Id: TestPensoftHtmlCrawlFilterFactory.java,v 1.2 2014-01-23 19:53:10 aishizaki Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.16 2006-10-03 05:47:36 thib_gc Exp $
+ * $Id$
  */
 
 /*

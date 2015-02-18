@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.44 2015-02-01 05:24:40 dshr Exp $
+# $Id$
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,

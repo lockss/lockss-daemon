@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlFetcher.java,v 1.6 2014-11-25 05:13:08 tlipkis Exp $
+ * $Id$
  */
 
 /*

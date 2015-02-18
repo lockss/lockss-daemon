@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommons.java,v 1.8 2010-04-02 23:38:11 pgust Exp $
+ * $Id$
  */
 
 /*

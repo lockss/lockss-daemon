@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpClient.java,v 1.9 2007-01-14 08:15:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

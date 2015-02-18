@@ -1,5 +1,5 @@
 /*
- * $Id: TestOJS2HtmlLinkExtractorFactory.java,v 1.2 2015-01-30 22:54:39 etenbrink Exp $
+ * $Id$
  */
 
 /*

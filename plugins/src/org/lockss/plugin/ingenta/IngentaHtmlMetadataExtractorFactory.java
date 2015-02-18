@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.8 2014-01-03 21:14:18 etenbrink Exp $
+ * $Id$
  */
 
 /*

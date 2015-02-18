@@ -1,5 +1,5 @@
 /*
- * $Id: CopernicusRisMetadataExtractorFactory.java,v 1.3 2014-05-08 22:45:21 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

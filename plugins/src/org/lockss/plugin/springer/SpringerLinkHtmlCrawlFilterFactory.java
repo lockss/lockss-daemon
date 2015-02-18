@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlCrawlFilterFactory.java,v 1.2 2012-10-25 08:29:08 thib_gc Exp $
+ * $Id$
  */
 
 /*

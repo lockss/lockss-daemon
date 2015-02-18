@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.6 2010-03-05 07:07:47 thib_gc Exp $
+ * $Id$
  */
 
 /*

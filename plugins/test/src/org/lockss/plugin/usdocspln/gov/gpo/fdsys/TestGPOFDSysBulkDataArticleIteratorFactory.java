@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysBulkDataArticleIteratorFactory.java,v 1.2 2014-08-12 21:42:43 thib_gc Exp $
+ * $Id$
  */
 
 /*

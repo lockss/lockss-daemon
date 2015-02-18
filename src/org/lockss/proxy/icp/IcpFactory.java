@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactory.java,v 1.7 2007-03-14 23:39:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

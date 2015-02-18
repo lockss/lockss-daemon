@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Events.java,v 1.5 2006-11-08 16:42:58 smorabito Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: AddDefaultRepo.java,v 1.1 2007-12-19 05:16:06 tlipkis Exp $
+ * $Id$
  */
 
 /*

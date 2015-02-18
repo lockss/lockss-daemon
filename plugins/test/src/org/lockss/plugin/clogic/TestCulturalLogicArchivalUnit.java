@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.7 2014-11-12 20:11:53 wkwilson Exp $
+ * $Id$
  */
 
 /*

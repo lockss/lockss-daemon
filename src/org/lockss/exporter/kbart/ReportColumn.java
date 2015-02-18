@@ -1,5 +1,5 @@
 /*
- * $Id: ReportColumn.java,v 1.2 2013-03-29 11:55:58 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

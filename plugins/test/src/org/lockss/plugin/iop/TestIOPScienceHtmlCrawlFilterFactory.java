@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceHtmlCrawlFilterFactory.java,v 1.2 2014-11-03 22:15:07 etenbrink Exp $
+ * $Id$
  */
 
 /*

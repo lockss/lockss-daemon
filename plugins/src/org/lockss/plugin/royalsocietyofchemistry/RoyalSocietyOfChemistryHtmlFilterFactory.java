@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryHtmlFilterFactory.java,v 1.4 2009-10-07 05:31:34 thib_gc Exp $
+ * $Id$
  */
 
 /*

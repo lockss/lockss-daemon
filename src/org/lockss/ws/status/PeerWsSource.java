@@ -1,5 +1,5 @@
 /*
- * $Id: PeerWsSource.java,v 1.1 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

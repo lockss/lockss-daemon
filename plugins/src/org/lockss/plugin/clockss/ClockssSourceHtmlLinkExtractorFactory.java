@@ -1,4 +1,4 @@
-/* $Id: ClockssSourceHtmlLinkExtractorFactory.java,v 1.2 2014-01-17 17:03:40 aishizaki Exp $
+/* $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBoundedTreeSet.java,v 1.2 2008-02-01 01:47:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

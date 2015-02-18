@@ -1,5 +1,5 @@
 /*
- * $Id: TimeEditor.java,v 1.5 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkCssFilterFactory.java,v 1.3 2011-08-22 23:50:46 thib_gc Exp $
+ * $Id$
  */
 
 /*

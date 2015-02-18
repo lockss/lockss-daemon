@@ -1,5 +1,5 @@
 /*
- * $Id: TestPersistentPeerIdSet.java,v 1.7 2013-03-20 19:54:10 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: AddAuByIdClient.java,v 1.3 2014-07-03 19:49:03 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

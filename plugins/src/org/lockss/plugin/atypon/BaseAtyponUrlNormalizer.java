@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.9 2014-09-05 19:40:34 alexandraohlson Exp $
+ * $Id$
  */
 /*
  Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,

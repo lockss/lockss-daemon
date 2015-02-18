@@ -1,5 +1,5 @@
 /*
- * $Id: SingleNodeCachedUrlSetSpec.java,v 1.8 2003-09-26 23:52:17 eaalto Exp $
+ * $Id$
  */
 
 /*

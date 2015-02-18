@@ -1,5 +1,5 @@
 /*
- * $Id: ZipFilterInputStream.java,v 1.4 2015-01-05 20:40:23 thib_gc Exp $
+ * $Id$
  */
 
 /*

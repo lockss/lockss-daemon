@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetapressTextAndRisFilterFactory.java,v 1.1 2013-11-27 02:31:23 thib_gc Exp $
+ * $Id$
  */
 
 /*

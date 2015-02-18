@@ -1,5 +1,5 @@
 /*
- * $Id: ACMXmlSchemaHelper.java,v 1.5 2014-08-20 23:50:14 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

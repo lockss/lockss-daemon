@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookEpubFilterFactory.java,v 1.3 2015-01-20 21:15:38 thib_gc Exp $
+ * $Id$
  */
 
 /*

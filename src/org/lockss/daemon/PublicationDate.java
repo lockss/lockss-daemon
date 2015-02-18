@@ -1,5 +1,5 @@
 /*
- * $Id: PublicationDate.java,v 1.7 2014-08-08 18:05:44 pgust Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: DbTable.java,v 1.1 2013-07-10 21:59:46 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

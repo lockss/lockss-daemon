@@ -1,5 +1,5 @@
 /*
- * $Id: TestCYSHtmlFilterFactory.java,v 1.2 2015-01-31 20:18:37 ldoan Exp $
+ * $Id$
  */
 
 /*

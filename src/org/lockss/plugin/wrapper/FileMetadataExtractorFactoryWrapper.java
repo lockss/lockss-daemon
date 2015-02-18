@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorFactoryWrapper.java,v 1.3 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

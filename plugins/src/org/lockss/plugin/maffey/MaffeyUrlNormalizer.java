@@ -1,5 +1,5 @@
 /*
- * $Id: MaffeyUrlNormalizer.java,v 1.1 2012-10-09 01:22:37 wkwilson Exp $
+ * $Id$
  */
 
 /*

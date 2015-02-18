@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicPlugin.java,v 1.3 2007-01-14 08:06:14 tlipkis Exp $
+ * $Id$
  */
 
 /*

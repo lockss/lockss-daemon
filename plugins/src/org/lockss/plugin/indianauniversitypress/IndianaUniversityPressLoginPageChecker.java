@@ -1,5 +1,5 @@
 /*
- * $Id: IndianaUniversityPressLoginPageChecker.java,v 1.2 2011-12-20 09:59:12 thib_gc Exp $
+ * $Id$
  */
 
 /*

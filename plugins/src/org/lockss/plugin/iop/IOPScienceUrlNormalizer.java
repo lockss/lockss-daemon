@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceUrlNormalizer.java,v 1.4 2015-01-14 00:42:06 etenbrink Exp $
+ * $Id$
  */
 
 /*

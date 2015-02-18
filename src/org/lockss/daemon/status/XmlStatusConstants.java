@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusConstants.java,v 1.5 2012-01-18 03:42:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

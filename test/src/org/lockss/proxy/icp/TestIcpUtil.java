@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpUtil.java,v 1.6 2007-03-14 23:39:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

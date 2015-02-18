@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireNewPdfFilterFactory.java,v 1.5 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id$
  */
 
 /*

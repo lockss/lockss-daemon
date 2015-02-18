@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.13 2010-12-01 01:42:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

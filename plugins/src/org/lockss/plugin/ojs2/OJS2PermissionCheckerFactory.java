@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.11 2015-01-30 09:28:15 etenbrink Exp $
+ * $Id$
  */
 
 /*

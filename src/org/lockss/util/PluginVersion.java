@@ -1,5 +1,5 @@
 /*
- * $Id: PluginVersion.java,v 1.1 2004-08-18 22:37:30 smorabito Exp $
+ * $Id$
  */
 
 /*

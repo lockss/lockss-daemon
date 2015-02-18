@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.10 2014-03-28 18:41:41 etenbrink Exp $
+ * $Id$
  */
 /*
 

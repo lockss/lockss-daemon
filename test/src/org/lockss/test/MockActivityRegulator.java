@@ -1,5 +1,5 @@
 /*
- * $Id: MockActivityRegulator.java,v 1.7 2004-10-19 19:18:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

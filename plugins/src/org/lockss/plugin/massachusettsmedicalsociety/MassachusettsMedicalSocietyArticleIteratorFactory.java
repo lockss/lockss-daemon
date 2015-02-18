@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyArticleIteratorFactory.java,v 1.3 2015-01-11 06:19:07 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

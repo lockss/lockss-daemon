@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.8 2014-11-12 20:11:36 wkwilson Exp $
+ * $Id$
  */
 
 /*

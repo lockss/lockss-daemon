@@ -1,5 +1,5 @@
 /*
- * $Id: Base64Utils.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id$
  */
 
 /*

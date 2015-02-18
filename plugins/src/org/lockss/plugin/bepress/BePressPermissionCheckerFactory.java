@@ -1,5 +1,5 @@
 /*
- * $Id: BePressPermissionCheckerFactory.java,v 1.3 2007-10-02 21:04:00 thib_gc Exp $
+ * $Id$
  */
 
 /*

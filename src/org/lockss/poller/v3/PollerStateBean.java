@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.39 2014-03-23 17:10:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

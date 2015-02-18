@@ -1,5 +1,5 @@
 /*
- * $Id: EasyX509TrustManager.java,v 1.1 2008-05-19 07:38:58 tlipkis Exp $
+ * $Id$
  */
 /*
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.6 2011-04-26 23:53:47 tlipkis Exp $
+ * $Id$
  */
 
 /*

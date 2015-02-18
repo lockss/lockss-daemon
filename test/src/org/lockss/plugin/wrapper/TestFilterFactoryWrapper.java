@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterFactoryWrapper.java,v 1.5 2013-06-11 20:15:06 thib_gc Exp $
+ * $Id$
  */
 
 /*

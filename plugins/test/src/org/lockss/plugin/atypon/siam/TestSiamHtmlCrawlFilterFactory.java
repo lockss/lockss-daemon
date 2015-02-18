@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlCrawlFilterFactory.java,v 1.2 2013-07-31 21:43:57 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

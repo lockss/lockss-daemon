@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssSubscriptionProbe.java,v 1.3 2014-11-12 20:11:27 wkwilson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: EndocrineSocietyHtmlCrawlFilterFactory.java,v 1.2 2014-11-08 22:58:52 ldoan Exp $
+ * $Id$
  */
 
 /*

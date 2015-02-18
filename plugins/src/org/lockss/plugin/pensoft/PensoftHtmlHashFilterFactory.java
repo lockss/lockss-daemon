@@ -1,4 +1,4 @@
-/* $Id: PensoftHtmlHashFilterFactory.java,v 1.10 2014-05-14 19:25:29 aishizaki Exp $ */
+/* $Id$ */
 /*
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,

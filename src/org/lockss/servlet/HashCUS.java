@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.61 2014-12-18 18:41:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

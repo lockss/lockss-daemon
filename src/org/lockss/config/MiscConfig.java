@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.15 2014-09-01 23:40:43 tlipkis Exp $
+ * $Id$
  */
 
 /*

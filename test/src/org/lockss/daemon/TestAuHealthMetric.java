@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuHealthMetric.java,v 1.6 2014-06-20 22:20:19 tlipkis Exp $
+ * $Id$
  */
 
 /*

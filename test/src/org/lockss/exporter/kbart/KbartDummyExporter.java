@@ -1,5 +1,5 @@
 /*
- * $Id: KbartDummyExporter.java,v 1.4 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

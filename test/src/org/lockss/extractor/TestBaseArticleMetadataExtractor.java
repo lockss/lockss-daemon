@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.17 2014-10-22 19:39:36 thib_gc Exp $
+ * $Id$
  */
 
 /*

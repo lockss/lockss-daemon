@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralPluginHtmlMetadataExtractorFactory.java,v 1.1 2012-03-08 00:04:32 akanshab01 Exp $
+ * $Id$
  */
 
 /*

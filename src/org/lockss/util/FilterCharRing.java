@@ -1,5 +1,5 @@
 /*
- * $Id: FilterCharRing.java,v 1.4 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

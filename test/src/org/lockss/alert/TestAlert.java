@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlert.java,v 1.8 2014-03-23 17:09:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

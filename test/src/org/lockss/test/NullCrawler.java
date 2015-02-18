@@ -1,5 +1,5 @@
 /*
- * $Id: NullCrawler.java,v 1.13 2014-11-12 20:11:42 wkwilson Exp $
+ * $Id$
  */
 
 /*

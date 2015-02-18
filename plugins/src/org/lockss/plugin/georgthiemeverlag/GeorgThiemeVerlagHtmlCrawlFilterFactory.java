@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlCrawlFilterFactory.java,v 1.3 2014-03-28 18:41:41 etenbrink Exp $
+ * $Id$
  */
 
 /*

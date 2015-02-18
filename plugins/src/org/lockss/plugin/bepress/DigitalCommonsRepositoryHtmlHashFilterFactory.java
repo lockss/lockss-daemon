@@ -1,5 +1,5 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlHashFilterFactory.java,v 1.4 2015-01-06 01:56:04 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCloseCallbackInputStream.java,v 1.1 2005-07-18 07:56:21 tlipkis Exp $
+ * $Id$
  */
 
 /*

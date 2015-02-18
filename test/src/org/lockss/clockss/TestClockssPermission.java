@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssPermission.java,v 1.7 2014-11-12 20:11:56 wkwilson Exp $
+ * $Id$
  */
 
 /*

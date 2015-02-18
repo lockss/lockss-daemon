@@ -1,5 +1,5 @@
 /*
- * $Id: AboutBox.java,v 1.6 2010-07-21 06:12:54 tlipkis Exp $
+ * $Id$
  */
 
 /*

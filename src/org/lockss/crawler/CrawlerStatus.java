@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.20 2014-10-22 19:39:35 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,4 +1,4 @@
-/* $Id: SiamHtmlLinkExtractorFactory.java,v 1.1 2013-07-31 21:43:56 alexandraohlson Exp $
+/* $Id$
  */
 
 /*

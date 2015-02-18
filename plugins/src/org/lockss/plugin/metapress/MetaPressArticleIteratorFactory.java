@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.9 2015-01-16 19:20:25 thib_gc Exp $
+ * $Id$
  */
 
 /*

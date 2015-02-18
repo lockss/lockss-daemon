@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.5 2014-05-19 23:21:31 etenbrink Exp $
+ * $Id$
  */
 
 /*

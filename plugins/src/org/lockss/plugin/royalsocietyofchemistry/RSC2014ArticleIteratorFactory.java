@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014ArticleIteratorFactory.java,v 1.4 2014-12-22 22:55:34 etenbrink Exp $
+ * $Id$
  */
 
 /*

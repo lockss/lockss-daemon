@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataTarget.java,v 1.3 2012-08-21 08:34:57 tlipkis Exp $
+ * $Id$
  */
 
 /*

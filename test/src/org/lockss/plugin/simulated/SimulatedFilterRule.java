@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedFilterRule.java,v 1.1 2005-02-21 03:10:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

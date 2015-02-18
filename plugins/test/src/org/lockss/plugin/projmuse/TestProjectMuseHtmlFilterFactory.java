@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseHtmlFilterFactory.java,v 1.1 2014-12-01 19:25:01 thib_gc Exp $
+ * $Id$
  */
 
 /*

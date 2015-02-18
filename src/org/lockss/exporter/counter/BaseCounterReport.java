@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCounterReport.java,v 1.4 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

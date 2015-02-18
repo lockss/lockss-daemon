@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeferredTempFileOutputStream.java,v 1.1 2007-08-27 06:50:10 tlipkis Exp $
+ * $Id$
  */
 
 /*

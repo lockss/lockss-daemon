@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlHashFilterFactory.java,v 1.7 2015-02-02 23:35:34 etenbrink Exp $
+ * $Id$
  */
 
 /*

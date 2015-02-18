@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.9 2014-11-12 20:11:36 wkwilson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.8 2014-05-05 23:16:09 etenbrink Exp $
+ * $Id$
  */
 
 /*

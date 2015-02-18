@@ -1,5 +1,5 @@
 /*
- * $Id: FigshareArticleIteratorFactory.java,v 1.1 2013-11-06 00:37:32 aishizaki Exp $
+ * $Id$
  */
 
 /*

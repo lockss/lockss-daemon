@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.20 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id$
  */
 
 /*

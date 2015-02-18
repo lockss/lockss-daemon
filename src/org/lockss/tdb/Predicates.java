@@ -1,5 +1,5 @@
 /*
- * $Id: Predicates.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationOctetStreamFilterFactory.java,v 1.2 2014-12-04 18:17:01 thib_gc Exp $
+ * $Id$
  */
 
 /*

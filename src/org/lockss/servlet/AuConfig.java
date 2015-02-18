@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.74 2014-10-22 19:39:33 thib_gc Exp $
+ * $Id$
  */
 
 /*

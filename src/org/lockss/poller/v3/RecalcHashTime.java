@@ -1,5 +1,5 @@
 /*
- * $Id: RecalcHashTime.java,v 1.4 2013-07-05 17:42:59 barry409 Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringPermissionChecker.java,v 1.5 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

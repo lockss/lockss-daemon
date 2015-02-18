@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkRewriterFactory.java,v 1.6 2014-10-22 19:39:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

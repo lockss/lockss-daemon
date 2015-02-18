@@ -1,5 +1,5 @@
 /*
- * $Id: TestClassUtil.java,v 1.1 2003-07-25 00:33:32 tyronen Exp $
+ * $Id$
  */
 
 /*

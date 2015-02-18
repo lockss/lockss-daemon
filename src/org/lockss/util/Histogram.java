@@ -1,5 +1,5 @@
 /*
- * $Id: Histogram.java,v 1.1 2012-06-25 05:53:14 tlipkis Exp $
+ * $Id$
  */
 
 /*

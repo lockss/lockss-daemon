@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJRisMetadataExtractorFactory.java,v 1.4 2014-05-30 20:56:17 thib_gc Exp $
+ * $Id$
  */
 
 /*

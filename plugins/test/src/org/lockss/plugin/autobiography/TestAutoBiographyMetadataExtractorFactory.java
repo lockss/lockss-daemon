@@ -1,5 +1,5 @@
 /*
- * $Id: TestAutoBiographyMetadataExtractorFactory.java,v 1.2 2013-12-04 23:03:40 thib_gc Exp $ 
+ * $Id$ 
  */
 
 /*

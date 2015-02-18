@@ -1,5 +1,5 @@
 /*
- * $Id: DublinCoreLinkExtractor.java,v 1.4 2014-10-16 06:57:20 tlipkis Exp $
+ * $Id$
  */
 
 /*

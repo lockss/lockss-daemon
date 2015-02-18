@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicKbartTitle.java,v 1.5 2013-12-09 20:58:52 pgust Exp $
+ * $Id$
  */
 
 /*

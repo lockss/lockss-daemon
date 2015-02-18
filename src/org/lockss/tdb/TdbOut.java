@@ -1,5 +1,5 @@
 /*
- * $Id: TdbOut.java,v 1.8 2015-02-03 23:43:47 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysCrawlWindow.java,v 1.3 2014-09-19 22:16:27 thib_gc Exp $
+ * $Id$
  */
 
 /*

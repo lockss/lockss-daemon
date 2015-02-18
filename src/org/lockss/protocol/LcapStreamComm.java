@@ -1,5 +1,5 @@
 /*
- * $Id: LcapStreamComm.java,v 1.4 2011-01-10 09:14:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

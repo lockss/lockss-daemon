@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.20 2012-07-23 21:17:21 thib_gc Exp $
+ * $Id$
  */
 
 /*

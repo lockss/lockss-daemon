@@ -1,5 +1,5 @@
 /*
- * $Id: TimeHtmlTagFilter.java,v 1.5 2005-10-11 05:49:45 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,4 +1,4 @@
-/* $Id: TestMassachusettsMedicalSocietyMetadataExtractor.java,v 1.4 2015-01-11 06:19:07 alexandraohlson Exp $ */
+/* $Id$ */
 /*
  Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.

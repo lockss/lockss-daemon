@@ -1,4 +1,4 @@
-/* $Id: TestPeerJRisMetadataExtractorFactory.java,v 1.4 2014-10-15 19:14:37 ldoan Exp $
+/* $Id$
 
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.

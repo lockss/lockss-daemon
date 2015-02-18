@@ -1,5 +1,5 @@
 /*
- * $Id: FileTypeCrawlRateLimiter.java,v 1.3 2014-10-01 08:33:47 tlipkis Exp $
+ * $Id$
  */
 
 /*

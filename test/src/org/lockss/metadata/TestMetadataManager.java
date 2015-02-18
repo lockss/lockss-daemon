@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.12 2015-01-12 20:40:46 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

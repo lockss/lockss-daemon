@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlMetadataExtractor.java,v 1.6 2012-03-12 04:30:17 pgust Exp $
+ * $Id$
  */
 
 /*

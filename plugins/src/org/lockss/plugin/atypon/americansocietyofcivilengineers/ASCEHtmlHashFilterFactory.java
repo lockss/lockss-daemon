@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlHashFilterFactory.java,v 1.5 2013-08-27 20:21:31 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

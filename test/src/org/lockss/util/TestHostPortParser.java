@@ -1,5 +1,5 @@
 /*
- * $Id: TestHostPortParser.java,v 1.2 2010-02-22 07:04:48 tlipkis Exp $
+ * $Id$
  */
 
 /*

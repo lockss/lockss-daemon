@@ -1,5 +1,5 @@
 /*
-* $Id: ProtocolException.java,v 1.4 2013-07-18 19:27:57 tlipkis Exp $
+* $Id$
  */
 
 /*

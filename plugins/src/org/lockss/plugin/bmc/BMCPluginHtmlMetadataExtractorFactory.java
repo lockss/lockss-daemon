@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlMetadataExtractorFactory.java,v 1.3 2013-01-15 23:15:01 aishizaki Exp $
+ * $Id$
  */
 
 /*

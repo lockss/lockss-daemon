@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.13 2015-01-02 06:02:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

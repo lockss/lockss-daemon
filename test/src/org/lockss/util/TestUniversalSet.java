@@ -1,5 +1,5 @@
 /*
- * $Id: TestUniversalSet.java,v 1.1 2007-01-21 22:05:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

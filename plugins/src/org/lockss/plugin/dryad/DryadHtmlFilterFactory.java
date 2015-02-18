@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlFilterFactory.java,v 1.6 2014-03-29 01:20:41 etenbrink Exp $
+ * $Id$
  */ 
 
 /*

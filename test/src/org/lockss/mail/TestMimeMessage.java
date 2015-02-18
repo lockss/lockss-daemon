@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeMessage.java,v 1.4 2005-10-11 05:49:44 tlipkis Exp $
+ * $Id$
  */
 
 /*

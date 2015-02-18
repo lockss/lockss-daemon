@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpMailer.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id$
  */
 
 /*

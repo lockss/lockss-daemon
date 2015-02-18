@@ -1,5 +1,5 @@
 /*
- * $Id: NoCrawlEndActionsFollowLinkCrawler.java,v 1.1 2014-11-12 20:11:42 wkwilson Exp $
+ * $Id$
  */
 
 /*

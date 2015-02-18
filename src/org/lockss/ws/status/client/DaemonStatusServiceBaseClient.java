@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceBaseClient.java,v 1.2 2014-06-16 23:36:05 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

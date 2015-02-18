@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.34 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookPdfFilterFactory.java,v 1.6 2015-01-14 18:08:02 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

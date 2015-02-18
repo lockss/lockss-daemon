@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlQueue.java,v 1.4 2010-08-01 21:31:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

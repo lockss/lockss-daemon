@@ -1,5 +1,5 @@
 /*
- * $Id: PensoftUrlNormalizer.java,v 1.2 2014-01-23 19:48:56 aishizaki Exp $
+ * $Id$
  */
 
 /*

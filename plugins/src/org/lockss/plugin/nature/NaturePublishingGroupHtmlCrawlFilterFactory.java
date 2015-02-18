@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlCrawlFilterFactory.java,v 1.1 2013-03-19 23:41:11 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

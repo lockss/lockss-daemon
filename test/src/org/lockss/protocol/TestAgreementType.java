@@ -1,5 +1,5 @@
 /*
- * $Id: TestAgreementType.java,v 1.2 2014-06-17 05:09:15 tlipkis Exp $
+ * $Id$
  */
 
 /*

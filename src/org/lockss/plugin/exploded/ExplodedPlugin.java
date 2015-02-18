@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedPlugin.java,v 1.5 2009-09-04 03:52:19 dshr Exp $
+ * $Id$
  */
 
 /*

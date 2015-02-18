@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssAmmonsScientificHtmlMetadataExtractorFactory.java,v 1.1 2013-08-06 21:09:32 aishizaki Exp $
+ * $Id$
  */
 
 /*

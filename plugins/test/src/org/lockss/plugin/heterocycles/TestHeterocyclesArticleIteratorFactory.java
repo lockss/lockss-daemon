@@ -1,5 +1,5 @@
 /* 
- * $Id: TestHeterocyclesArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

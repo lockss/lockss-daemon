@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginVersion.java,v 1.1 2004-09-25 00:49:10 smorabito Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDisplayConverter.java,v 1.1 2012-07-03 08:13:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

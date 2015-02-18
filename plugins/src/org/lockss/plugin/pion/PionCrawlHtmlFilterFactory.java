@@ -1,5 +1,5 @@
 /*
- * $Id: PionCrawlHtmlFilterFactory.java,v 1.1 2010-09-14 23:52:31 thib_gc Exp $
+ * $Id$
  */
 
 /*

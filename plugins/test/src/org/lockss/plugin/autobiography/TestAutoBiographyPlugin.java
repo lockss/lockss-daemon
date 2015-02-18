@@ -1,5 +1,5 @@
 /*
- * $Id: TestAutoBiographyPlugin.java,v 1.2 2013-10-18 21:25:22 etenbrink Exp $
+ * $Id$
  */
 
 /*

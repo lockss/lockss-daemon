@@ -1,5 +1,5 @@
 /*
- * $Id: ARRSHtmlCrawlFilterFactory.java,v 1.2 2015-01-16 07:54:34 ldoan Exp $
+ * $Id$
  */
 
 /*

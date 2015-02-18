@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringInputStream.java,v 1.7 2005-08-30 23:42:32 troberts Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestContentConfigurationServiceClient.java,v 1.4 2014-06-06 06:03:51 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

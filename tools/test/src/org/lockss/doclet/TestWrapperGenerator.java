@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.8 2004-12-09 08:21:43 tlipkis Exp $
+ * $Id$
  */
 
 /*

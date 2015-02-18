@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceUnavailableException.java,v 1.2 2006-03-02 19:45:01 tlipkis Exp $
+ * $Id$
  */
 
 /*

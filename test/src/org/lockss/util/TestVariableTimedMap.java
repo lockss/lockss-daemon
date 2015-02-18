@@ -1,5 +1,5 @@
 /*
- * $Id: TestVariableTimedMap.java,v 1.5 2006-12-06 05:19:01 tlipkis Exp $
+ * $Id$
  */
 
 /*

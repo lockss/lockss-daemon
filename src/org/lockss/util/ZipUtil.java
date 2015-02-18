@@ -1,5 +1,5 @@
 /*
- * $Id: ZipUtil.java,v 1.5 2009-06-01 07:37:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

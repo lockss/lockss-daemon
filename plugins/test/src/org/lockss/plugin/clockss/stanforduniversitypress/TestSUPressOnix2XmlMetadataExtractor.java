@@ -1,5 +1,5 @@
 /*
- * $Id: TestSUPressOnix2XmlMetadataExtractor.java,v 1.2 2014-05-20 03:28:55 aishizaki Exp $
+ * $Id$
  */
 /*
 

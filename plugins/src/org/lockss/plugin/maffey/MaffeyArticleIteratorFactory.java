@@ -1,5 +1,5 @@
 /*
- * $Id: MaffeyArticleIteratorFactory.java,v 1.3 2013-01-18 06:32:24 pgust Exp $
+ * $Id$
  */
 
 /*

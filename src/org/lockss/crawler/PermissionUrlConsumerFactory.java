@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionUrlConsumerFactory.java,v 1.1 2014-11-12 20:11:24 wkwilson Exp $
+ * $Id$
  */
 
 /*

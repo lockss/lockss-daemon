@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.14 2013-08-28 19:33:57 thib_gc Exp $
+# $Id$
 
 __copyright__ = '''\
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,

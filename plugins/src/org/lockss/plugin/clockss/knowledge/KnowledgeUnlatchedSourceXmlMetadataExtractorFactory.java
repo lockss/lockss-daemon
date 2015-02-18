@@ -1,5 +1,5 @@
 /*
- * $Id: KnowledgeUnlatchedSourceXmlMetadataExtractorFactory.java,v 1.3 2015-01-22 23:04:57 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

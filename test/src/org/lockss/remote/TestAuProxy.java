@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuProxy.java,v 1.3 2004-09-21 21:25:01 dshr Exp $
+ * $Id$
  */
 
 /*

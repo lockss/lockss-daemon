@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionException.java,v 1.2 2003-08-24 22:38:25 dshr Exp $
+ * $Id$
  */
 
 /*

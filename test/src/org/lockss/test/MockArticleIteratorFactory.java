@@ -1,5 +1,5 @@
 /*
- * $Id: MockArticleIteratorFactory.java,v 1.2 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

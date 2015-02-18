@@ -1,5 +1,5 @@
 /*
- * $Id: SecrecyNewsHtmlFilterFactory.java,v 1.3 2012-06-18 21:43:16 davidecorcoran Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedWarcContentGenerator.java,v 1.2 2012-06-06 17:33:58 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

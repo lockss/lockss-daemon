@@ -1,5 +1,5 @@
 /*
- * $Id: DepthFirstCrawlUrlComparatorFactory.java,v 1.2 2014-09-22 23:47:10 thib_gc Exp $
+ * $Id$
  */
 
 /*

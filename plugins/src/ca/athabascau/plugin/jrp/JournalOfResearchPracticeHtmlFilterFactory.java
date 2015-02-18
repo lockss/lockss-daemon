@@ -1,5 +1,5 @@
 /*
- * $Id: JournalOfResearchPracticeHtmlFilterFactory.java,v 1.3 2015-02-11 08:12:25 etenbrink Exp $
+ * $Id$
  */
 /*
  Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,

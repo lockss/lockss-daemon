@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.java,v 1.4 2013-05-23 21:54:21 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

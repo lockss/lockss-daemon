@@ -1,5 +1,5 @@
 /*
- * $Id: MailMessage.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id$
  */
 
 /*

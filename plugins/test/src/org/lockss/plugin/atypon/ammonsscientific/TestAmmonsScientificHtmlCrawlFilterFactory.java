@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmmonsScientificHtmlCrawlFilterFactory.java,v 1.1 2014-04-08 19:00:05 alexandraohlson Exp $
+ * $Id$
  */
 package org.lockss.plugin.atypon.ammonsscientific;
 

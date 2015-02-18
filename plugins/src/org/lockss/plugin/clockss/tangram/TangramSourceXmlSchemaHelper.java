@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXmlSchemaHelper.java,v 1.4 2014-09-09 19:53:14 aishizaki Exp $
+ * $Id$
  */
 
 /*

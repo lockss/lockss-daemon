@@ -1,5 +1,5 @@
 /*
- * $Id: Version.java,v 1.2 2004-06-14 03:08:44 smorabito Exp $
+ * $Id$
  */
 
 /*

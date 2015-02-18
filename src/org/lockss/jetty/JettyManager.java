@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.33 2014-06-05 20:17:37 tlipkis Exp $
+ * $Id$
  */
 
 /*

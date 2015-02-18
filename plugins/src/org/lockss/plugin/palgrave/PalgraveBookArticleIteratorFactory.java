@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.7 2015-01-15 22:07:30 aishizaki Exp $
+/* $Id$
  
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

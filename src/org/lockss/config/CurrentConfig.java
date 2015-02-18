@@ -1,5 +1,5 @@
 /*
- * $Id: CurrentConfig.java,v 1.6 2011-09-19 03:24:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

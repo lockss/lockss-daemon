@@ -1,5 +1,5 @@
 /*
- * $Id: TestPdfTokenStreamWorker.java,v 1.3 2014-11-25 02:11:59 thib_gc Exp $
+ * $Id$
  */
 
 /*

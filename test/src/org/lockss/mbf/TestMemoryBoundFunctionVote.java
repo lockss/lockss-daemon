@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.20 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionException.java,v 1.1 2013-05-22 23:40:20 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

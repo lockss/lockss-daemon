@@ -1,5 +1,5 @@
 /*
- * $Id: InformationResearchArticleIteratorFactory.java,v 1.1 2011-12-12 23:00:24 pgust Exp $
+ * $Id$
  */
 
 /*

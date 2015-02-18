@@ -1,5 +1,5 @@
 /*
- * $Id: LockssManager.java,v 1.8 2004-08-02 02:59:38 tlipkis Exp $
+ * $Id$
  */
 
 /*

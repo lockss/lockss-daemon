@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionFactory.java,v 1.8 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id$
  */
 
 /*

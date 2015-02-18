@@ -1,5 +1,5 @@
 /*
- * $Id: MockFile.java,v 1.6 2006-09-28 02:09:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

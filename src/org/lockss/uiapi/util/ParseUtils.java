@@ -1,5 +1,5 @@
 /*
- * $Id: ParseUtils.java,v 1.4 2005-10-11 05:47:56 tlipkis Exp $
+ * $Id$
  */
 
 /*

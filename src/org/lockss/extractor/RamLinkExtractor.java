@@ -1,5 +1,5 @@
 /*
- * $Id: RamLinkExtractor.java,v 1.4 2010-04-02 23:20:22 pgust Exp $
+ * $Id$
  */
 
 /*

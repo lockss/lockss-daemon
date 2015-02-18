@@ -1,5 +1,5 @@
 /*
- * $Id: TransformEachPageExceptFirst.java,v 1.8 2012-07-10 23:53:21 thib_gc Exp $
+ * $Id$
  */
 
 /*

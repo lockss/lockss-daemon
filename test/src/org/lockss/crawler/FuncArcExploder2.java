@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder2.java,v 1.11 2014-12-27 03:41:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

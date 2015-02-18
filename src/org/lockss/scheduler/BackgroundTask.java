@@ -1,5 +1,5 @@
 /*
- * $Id: BackgroundTask.java,v 1.9 2006-09-16 22:59:42 tlipkis Exp $
+ * $Id$
  */
 
 /*

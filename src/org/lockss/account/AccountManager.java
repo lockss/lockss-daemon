@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.16 2014-01-14 04:26:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

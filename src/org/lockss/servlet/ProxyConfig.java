@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.31 2014-10-22 19:39:33 thib_gc Exp $
+ * $Id$
  */
 
 /*

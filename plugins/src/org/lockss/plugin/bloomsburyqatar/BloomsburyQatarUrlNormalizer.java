@@ -1,5 +1,5 @@
 /*
- * $Id: BloomsburyQatarUrlNormalizer.java,v 1.1 2012-03-14 00:51:35 dylanrhodes Exp $
+ * $Id$
  */
 
 /*

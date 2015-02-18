@@ -1,4 +1,4 @@
-/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.8 2014-12-08 23:31:28 etenbrink Exp $
+/* $Id$
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

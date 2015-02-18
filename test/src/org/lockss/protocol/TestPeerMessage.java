@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerMessage.java,v 1.8 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id$
  */
 
 /*

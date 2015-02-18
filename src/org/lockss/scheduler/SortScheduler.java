@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.15 2008-03-23 00:53:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

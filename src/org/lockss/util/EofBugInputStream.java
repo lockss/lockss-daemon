@@ -1,5 +1,5 @@
 /*
- * $Id: EofBugInputStream.java,v 1.2 2010-02-22 07:04:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginException.java,v 1.3 2014-06-05 20:16:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

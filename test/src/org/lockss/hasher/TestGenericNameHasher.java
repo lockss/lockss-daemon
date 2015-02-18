@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.13 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

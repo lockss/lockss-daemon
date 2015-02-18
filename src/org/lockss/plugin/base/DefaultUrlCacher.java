@@ -1,5 +1,5 @@
 /*
- * $Id: DefaultUrlCacher.java,v 1.5 2014-12-27 03:38:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

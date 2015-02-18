@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.12 2013-08-15 08:18:58 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: DrogoResearchHtmlFilterFactory.java,v 1.3 2009-11-10 22:39:38 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFormExtractor.java,v 1.10 2014-05-08 00:06:43 clairegriffin Exp $
+ * $Id$
  */
 
 /*

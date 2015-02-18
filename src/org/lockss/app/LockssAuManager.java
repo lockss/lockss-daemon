@@ -1,5 +1,5 @@
 /*
- * $Id: LockssAuManager.java,v 1.3 2004-09-27 22:39:15 smorabito Exp $
+ * $Id$
  */
 
 /*

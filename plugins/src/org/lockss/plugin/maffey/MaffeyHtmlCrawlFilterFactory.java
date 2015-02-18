@@ -1,5 +1,5 @@
 /*
- * $Id: MaffeyHtmlCrawlFilterFactory.java,v 1.2 2015-01-13 01:08:53 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2ShortSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

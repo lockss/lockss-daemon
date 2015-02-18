@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTransform.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
+ * $Id$
  */
 
 /*

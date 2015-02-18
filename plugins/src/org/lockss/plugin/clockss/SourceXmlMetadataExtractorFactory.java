@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.19 2014-11-07 23:32:10 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

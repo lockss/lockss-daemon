@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeterocyclesHtmlHashFilterFactory.java,v 1.1 2013-10-15 23:26:31 ldoan Exp $
+ * $Id$
  */
 
 /*

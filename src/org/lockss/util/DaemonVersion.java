@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersion.java,v 1.8 2014-05-30 21:45:27 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

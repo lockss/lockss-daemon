@@ -1,5 +1,5 @@
 /*
- * $Id: SantaFePoetryBroadsideHtmlCrawlFilterFactory.java,v 1.1 2013-02-20 01:59:51 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

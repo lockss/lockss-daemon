@@ -1,4 +1,4 @@
-/* $Id: TestPensoftArticleIteratorFactory.java,v 1.5 2014-11-12 20:12:02 wkwilson Exp $  */
+/* $Id$  */
 /*
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,

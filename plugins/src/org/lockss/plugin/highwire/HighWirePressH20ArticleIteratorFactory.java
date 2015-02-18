@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.17 2015-01-15 03:48:33 etenbrink Exp $
+ * $Id$
  */
 
 /*

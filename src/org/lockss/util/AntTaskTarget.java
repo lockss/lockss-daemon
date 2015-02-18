@@ -1,5 +1,5 @@
 /*
- * $Id: AntTaskTarget.java,v 1.5 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestOJS2HtmlCrawlFilterFactory.java,v 1.1 2012-12-23 21:53:03 ldoan Exp $
+ * $Id$
  */
 package org.lockss.plugin.ojs2;
 

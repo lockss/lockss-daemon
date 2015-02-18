@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterpStateBean.java,v 1.4 2005-10-17 07:49:03 tlipkis Exp $
+* $Id$
  */
 
 /*

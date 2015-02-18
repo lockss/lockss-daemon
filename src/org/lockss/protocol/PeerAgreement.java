@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAgreement.java,v 1.1 2013-08-19 22:33:18 barry409 Exp $
+ * $Id$
  */
 
 /*

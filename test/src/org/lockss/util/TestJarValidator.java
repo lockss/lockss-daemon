@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.17 2013-10-23 04:25:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

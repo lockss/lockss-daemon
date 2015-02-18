@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArcContentGenerator.java,v 1.5 2012-06-06 17:33:58 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

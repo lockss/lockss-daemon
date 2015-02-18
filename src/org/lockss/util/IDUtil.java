@@ -1,5 +1,5 @@
 /*
- * $Id: IDUtil.java,v 1.6 2009-02-05 05:10:03 tlipkis Exp $
+ * $Id$
  *
 
  Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,

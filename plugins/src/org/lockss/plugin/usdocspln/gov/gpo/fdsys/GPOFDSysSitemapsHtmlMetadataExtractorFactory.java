@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysSitemapsHtmlMetadataExtractorFactory.java,v 1.1 2012-10-02 10:17:09 davidecorcoran Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: AuParamType.java,v 1.3 2015-02-09 05:42:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWsSource.java,v 1.2 2014-08-01 17:13:35 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

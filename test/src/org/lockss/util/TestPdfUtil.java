@@ -1,5 +1,5 @@
 /*
- * $Id: TestPdfUtil.java,v 1.2 2006-09-14 23:10:40 thib_gc Exp $
+ * $Id$
  */
 
 /*

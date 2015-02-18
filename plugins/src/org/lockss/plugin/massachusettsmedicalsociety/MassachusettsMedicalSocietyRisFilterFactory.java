@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyRisFilterFactory.java,v 1.3 2013-08-29 22:41:23 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

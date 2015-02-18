@@ -1,5 +1,5 @@
 /*
- * $Id: OverviewStatus.java,v 1.3 2012-12-07 07:22:12 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

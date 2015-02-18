@@ -1,5 +1,5 @@
 /*
- * $Id: GetAuIdsClient.java,v 1.1 2013-03-22 04:47:30 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

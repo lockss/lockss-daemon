@@ -1,5 +1,5 @@
 /*
- * $Id: AppUtil.java,v 1.2 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLineRewritingReader.java,v 1.1 2014-07-22 02:08:40 thib_gc Exp $
+ * $Id$
  */
 
 /*

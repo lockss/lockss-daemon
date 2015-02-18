@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollHistoryImpl.java,v 1.9 2004-12-08 00:44:26 troberts Exp $
+ * $Id$
  */
 
 /*

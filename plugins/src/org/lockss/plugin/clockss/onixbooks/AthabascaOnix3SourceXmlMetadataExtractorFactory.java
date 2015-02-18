@@ -1,5 +1,5 @@
 /*
- * $Id: AthabascauOnix3SourceXmlMetadataExtractorFactory.java,v 1.1 2015-01-15 05:06:47 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

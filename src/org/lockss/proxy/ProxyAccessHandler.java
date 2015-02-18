@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.11 2007-02-08 08:57:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

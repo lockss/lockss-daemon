@@ -1,5 +1,5 @@
 /*
- * $Id: TopazHtmlFilterFactory.java,v 1.5 2011-05-31 18:48:14 thib_gc Exp $
+ * $Id$
  */
 
 /*

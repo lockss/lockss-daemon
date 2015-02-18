@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.18 2005-11-16 04:25:52 tlipkis Exp $
+ * $Id$
  */
 
 /*

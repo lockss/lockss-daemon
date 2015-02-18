@@ -1,5 +1,5 @@
 /*
- * $Id: UserSession.java,v 1.2 2009-06-19 08:27:25 tlipkis Exp $
+ * $Id$
  */
 
 /*

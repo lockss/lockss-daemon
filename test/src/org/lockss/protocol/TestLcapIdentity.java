@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.34 2006-01-12 00:48:38 tlipkis Exp $
+ * $Id$
  */
 
 /*

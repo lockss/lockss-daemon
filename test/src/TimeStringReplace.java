@@ -1,5 +1,5 @@
 /*
- * $Id: TimeStringReplace.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.10 2011-06-26 20:20:47 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.10 2011-06-26 20:20:47 tlipkis Exp $
+// $Id$
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;

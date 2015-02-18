@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.31 2014-10-22 19:39:37 thib_gc Exp $
+* $Id$
  */
 
 /*

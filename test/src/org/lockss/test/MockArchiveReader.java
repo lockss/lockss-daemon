@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchiveReader.java,v 1.3 2007-03-17 21:57:55 dshr Exp $
+ * $Id$
  */
 
 /*

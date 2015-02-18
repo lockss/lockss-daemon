@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.253 2015-01-12 04:53:11 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.27 2014-07-29 22:02:50 tlipkis Exp $
+ * $Id$
  */
 
 /*

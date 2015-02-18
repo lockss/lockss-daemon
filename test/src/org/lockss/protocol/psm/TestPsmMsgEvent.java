@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMsgEvent.java,v 1.6 2006-11-08 16:42:59 smorabito Exp $
+ * $Id$
  */
 
 /*

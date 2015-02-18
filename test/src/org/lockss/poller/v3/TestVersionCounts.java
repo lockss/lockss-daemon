@@ -1,5 +1,5 @@
 /*
- * $Id: TestVersionCounts.java,v 1.5 2014-10-15 06:46:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

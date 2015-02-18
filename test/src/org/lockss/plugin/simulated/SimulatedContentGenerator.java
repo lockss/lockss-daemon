@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.39 2014-08-07 22:31:05 dshr Exp $
+ * $Id$
  */
 
 /*

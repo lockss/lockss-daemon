@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaPdfFilterFactory.java,v 1.4 2014-11-27 00:06:03 thib_gc Exp $
+ * $Id$
  */ 
 
 /*

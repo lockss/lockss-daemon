@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysZipFilterFactory.java,v 1.1 2014-09-02 17:59:43 thib_gc Exp $
+ * $Id$
  */
 
 /*

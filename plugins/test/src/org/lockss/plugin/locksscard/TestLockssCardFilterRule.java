@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssCardFilterRule.java,v 1.2 2006-04-05 17:41:53 thib_gc Exp $
+ * $Id$
  */
 
 /*

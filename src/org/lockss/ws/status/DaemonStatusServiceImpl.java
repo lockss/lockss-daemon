@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.11 2014-11-19 08:23:08 tlipkis Exp $
+ * $Id$
  */
 
 /*

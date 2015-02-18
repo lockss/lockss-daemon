@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireJavaScriptLinkRewriterFactory.java,v 1.3 2012-01-21 00:38:53 pgust Exp $
+ * $Id$
  */
 
 /*

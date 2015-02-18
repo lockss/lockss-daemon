@@ -1,5 +1,5 @@
 /*
- * $Id: TestSqlStoredProcedures.java,v 1.4 2013-06-19 22:56:49 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

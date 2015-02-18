@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireUrlNormalizer.java,v 1.2 2015-01-15 03:03:14 etenbrink Exp $
+ * $Id$
  */
 
 /*

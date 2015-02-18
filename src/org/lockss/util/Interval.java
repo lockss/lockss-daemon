@@ -1,5 +1,5 @@
 /*
- * $Id: Interval.java,v 1.4 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id$
  */
 
 /*

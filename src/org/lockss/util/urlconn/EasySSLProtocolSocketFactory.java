@@ -1,5 +1,5 @@
 /*
- * $Id: EasySSLProtocolSocketFactory.java,v 1.3 2010-11-29 07:26:03 tlipkis Exp $
+ * $Id$
  */
 /*
 

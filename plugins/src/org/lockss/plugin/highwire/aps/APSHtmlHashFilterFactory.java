@@ -1,5 +1,5 @@
 /*
- * $Id: APSHtmlHashFilterFactory.java,v 1.4 2015-02-03 00:14:26 etenbrink Exp $
+ * $Id$
  */
 
 /*

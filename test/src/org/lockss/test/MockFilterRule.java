@@ -1,5 +1,5 @@
 /*
- * $Id: MockFilterRule.java,v 1.2 2004-08-19 00:02:22 clairegriffin Exp $
+ * $Id$
  */
 
 /*

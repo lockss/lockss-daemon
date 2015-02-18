@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatusServiceClient.java,v 1.1 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

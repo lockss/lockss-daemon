@@ -1,5 +1,5 @@
 /*
- * $Id: AdminIpAccess.java,v 1.9 2013-10-17 07:48:18 tlipkis Exp $
+ * $Id$
  */
 
 /*

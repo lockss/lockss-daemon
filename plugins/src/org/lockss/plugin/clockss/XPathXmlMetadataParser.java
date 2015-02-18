@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.13 2015-01-15 05:06:46 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

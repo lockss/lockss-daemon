@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.5 2014-09-12 15:16:12 aishizaki Exp $
+ * $Id$
  */ 
 /*
 

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.128 2015-01-08 06:25:31 tlipkis Exp $
+ * $Id$
  */
 
 /*

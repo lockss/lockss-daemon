@@ -1,5 +1,5 @@
 /*
- * $Id: FixedTimedMap.java,v 1.6 2004-10-11 05:42:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

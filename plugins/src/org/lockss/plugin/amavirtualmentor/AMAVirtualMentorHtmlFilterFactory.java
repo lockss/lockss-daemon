@@ -1,5 +1,5 @@
 /*
- * $Id: AMAVirtualMentorHtmlFilterFactory.java,v 1.1 2010-09-16 01:03:37 thib_gc Exp $
+ * $Id$
  */
 
 /*

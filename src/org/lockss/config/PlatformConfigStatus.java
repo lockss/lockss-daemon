@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigStatus.java,v 1.7 2014-11-22 08:27:27 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.13 2008-03-31 22:34:42 edwardsb1 Exp $
+ * $Id$
  */
 
 /*

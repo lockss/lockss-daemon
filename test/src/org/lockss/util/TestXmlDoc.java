@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlDoc.java,v 1.2 2003-07-25 00:29:05 tyronen Exp $
+ * $Id$
  */
 
 /*

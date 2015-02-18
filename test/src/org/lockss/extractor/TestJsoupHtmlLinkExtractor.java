@@ -1,5 +1,5 @@
 /*
- * $Id: TestJsoupHtmlLinkExtractor.java,v 1.6 2014-08-20 19:46:26 clairegriffin Exp $
+ * $Id$
  */
 
 /*

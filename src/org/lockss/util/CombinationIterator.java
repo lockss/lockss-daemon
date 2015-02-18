@@ -1,5 +1,5 @@
 /*
- * $Id: CombinationIterator.java,v 1.2 2012-09-21 20:45:22 clairegriffin Exp $
+ * $Id$
  */
 /*
 

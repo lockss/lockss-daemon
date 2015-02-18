@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.30 2014-12-09 04:30:14 tlipkis Exp $
+ * $Id$
  */
 
 /*

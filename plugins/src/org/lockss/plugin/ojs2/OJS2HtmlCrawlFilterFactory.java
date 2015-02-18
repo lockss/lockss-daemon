@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlCrawlFilterFactory.java,v 1.3 2014-06-02 21:56:34 etenbrink Exp $
+ * $Id$
  */
 
 /*

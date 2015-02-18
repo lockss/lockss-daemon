@@ -1,5 +1,5 @@
 /*
- * $Id: Intermarium2014HtmlFilterFactory.java,v 1.1 2014-01-09 23:27:41 thib_gc Exp $
+ * $Id$
  */
 
 /*

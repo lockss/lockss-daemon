@@ -1,5 +1,5 @@
 /*
- * $Id: ChannelStats.java,v 1.1 2007-11-07 08:15:24 tlipkis Exp $
+ * $Id$
  */
 
 /*

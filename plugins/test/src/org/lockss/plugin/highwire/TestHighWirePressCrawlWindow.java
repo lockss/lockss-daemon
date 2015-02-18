@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressCrawlWindow.java,v 1.1 2012-01-04 21:39:23 thib_gc Exp $
+ * $Id$
  */
 
 /*

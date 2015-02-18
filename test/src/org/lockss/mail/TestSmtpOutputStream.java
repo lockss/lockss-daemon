@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpOutputStream.java,v 1.2 2005-10-06 08:21:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

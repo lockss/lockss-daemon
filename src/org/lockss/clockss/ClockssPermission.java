@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssPermission.java,v 1.5 2014-11-12 20:11:27 wkwilson Exp $
+ * $Id$
  */
 
 /*

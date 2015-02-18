@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.31 2012-07-10 23:55:48 thib_gc Exp $
+ * $Id$
  */
 
 /*

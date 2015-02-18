@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.27 2014-10-15 06:43:33 tlipkis Exp $
+ * $Id$
  */
 
 /*

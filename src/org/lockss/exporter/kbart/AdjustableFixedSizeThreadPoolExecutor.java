@@ -1,5 +1,5 @@
 /*
- * $Id: AdjustableFixedSizeThreadPoolExecutor.java,v 1.1 2012-11-16 14:32:08 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

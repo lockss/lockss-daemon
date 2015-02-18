@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiArticleIteratorFactory.java,v 1.4 2014-12-04 18:31:34 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

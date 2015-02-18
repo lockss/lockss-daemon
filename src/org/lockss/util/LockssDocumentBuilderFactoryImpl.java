@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.6 2013-10-23 04:19:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

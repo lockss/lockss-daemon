@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExporter.java,v 1.7 2012-10-22 17:24:06 easyonthemayo Exp $
+ * $Id$
  */
 
 /*

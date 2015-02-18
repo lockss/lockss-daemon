@@ -1,5 +1,5 @@
 /*
- * $Id: TestGZIPpedInputStream.java,v 1.1 2006-03-27 08:51:40 tlipkis Exp $
+ * $Id$
  */
 
 /*

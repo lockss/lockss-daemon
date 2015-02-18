@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.17 2012-09-25 23:01:42 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

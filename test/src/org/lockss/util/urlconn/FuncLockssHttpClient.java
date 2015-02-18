@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.18 2014-07-28 06:48:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHttpResponseHandler.java,v 1.4 2015-01-28 23:08:09 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkExtractor.java,v 1.3 2013-12-26 20:53:25 etenbrink Exp $
+ * $Id$
  */
 
 /*

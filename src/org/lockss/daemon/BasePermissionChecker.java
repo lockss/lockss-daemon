@@ -1,5 +1,5 @@
 /*
- * $Id: BasePermissionChecker.java,v 1.2 2014-11-12 20:11:45 wkwilson Exp $
+ * $Id$
  */
 
 /*

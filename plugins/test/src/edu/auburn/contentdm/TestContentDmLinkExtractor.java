@@ -1,5 +1,5 @@
 /*
- * $Id: TestContentDmLinkExtractor.java,v 1.2 2014-11-04 16:47:24 tlipkis Exp $
+ * $Id$
  */
 
 /*

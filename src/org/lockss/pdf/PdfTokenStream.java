@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStream.java,v 1.3 2012-07-12 03:57:05 thib_gc Exp $
+ * $Id$
  */
 
 /*

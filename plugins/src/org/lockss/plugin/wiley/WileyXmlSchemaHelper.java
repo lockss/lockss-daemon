@@ -1,5 +1,5 @@
 /*
- * $Id: WileyXmlSchemaHelper.java,v 1.2 2014-05-14 20:30:34 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

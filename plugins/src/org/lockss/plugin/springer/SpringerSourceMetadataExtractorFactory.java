@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.7 2013-06-03 23:28:50 ldoan Exp $
+ * $Id$
  */
 
 /*

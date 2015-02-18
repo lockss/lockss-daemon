@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.14 2013-05-22 16:43:33 barry409 Exp $
+ * $Id$
  */
 
 /*

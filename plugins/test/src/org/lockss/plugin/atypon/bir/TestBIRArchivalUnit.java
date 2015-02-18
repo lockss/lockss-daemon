@@ -1,5 +1,5 @@
 /*
- * $Id: TestBIRArchivalUnit.java,v 1.2 2014-09-17 21:06:11 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

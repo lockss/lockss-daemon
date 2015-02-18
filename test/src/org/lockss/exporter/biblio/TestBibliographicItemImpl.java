@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.8 2014-10-03 23:04:46 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

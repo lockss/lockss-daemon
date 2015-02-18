@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.13 2012-07-10 23:53:21 thib_gc Exp $
+ * $Id$
  */
 
 /*

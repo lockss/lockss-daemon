@@ -1,5 +1,5 @@
 /*
- * $Id: CommonsLoggingLogger.java,v 1.3 2005-08-23 22:01:35 tlipkis Exp $
+ * $Id$
  */
 
 /*

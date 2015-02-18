@@ -1,5 +1,5 @@
 /*
- * $Id: CuIterOptions.java,v 1.2 2014-07-22 00:23:19 tlipkis Exp $
+ * $Id$
  */
 
 /*

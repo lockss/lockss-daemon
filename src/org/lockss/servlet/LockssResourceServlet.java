@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceServlet.java,v 1.4 2013-02-27 06:00:53 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2004 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceServlet.java,v 1.4 2013-02-27 06:00:53 tlipkis Exp $
+// $Id$
 // ---------------------------------------------------------------------------
 
 package org.lockss.servlet;

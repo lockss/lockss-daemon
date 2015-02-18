@@ -1,5 +1,5 @@
 /*
- * $Id: IOUtil.java,v 1.5 2006-10-03 21:36:09 smorabito Exp $
+ * $Id$
  */
 
 /*

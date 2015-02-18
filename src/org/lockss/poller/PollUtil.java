@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.14 2013-08-19 22:33:16 barry409 Exp $
+ * $Id$
  */
 
 /*

@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
+/* $Id$
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

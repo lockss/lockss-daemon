@@ -1,5 +1,5 @@
 /*
- * $Id: HispanicIssuesOnLineHtmlFilterFactory.java,v 1.2 2008-01-23 08:08:13 thib_gc Exp $
+ * $Id$
  */
 
 /*

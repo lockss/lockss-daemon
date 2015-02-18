@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.39 2014-11-24 10:17:47 tlipkis Exp $
+ * $Id$
  */
 
 /*

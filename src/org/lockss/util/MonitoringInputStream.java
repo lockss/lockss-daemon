@@ -1,5 +1,5 @@
 /*
- * $Id: MonitoringInputStream.java,v 1.5 2014-07-25 07:05:15 tlipkis Exp $
+ * $Id$
  */
 
 /*

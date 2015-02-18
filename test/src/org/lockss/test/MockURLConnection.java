@@ -1,5 +1,5 @@
 /*
- * $Id: MockURLConnection.java,v 1.7 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id$
  */
 
 /*

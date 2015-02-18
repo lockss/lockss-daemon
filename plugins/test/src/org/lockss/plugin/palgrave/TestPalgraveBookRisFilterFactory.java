@@ -1,5 +1,5 @@
 /*
- * $Id: TestPalgraveBookRisFilterFactory.java,v 1.1 2014-07-29 17:09:38 aishizaki Exp $
+ * $Id$
  */
 
 /*

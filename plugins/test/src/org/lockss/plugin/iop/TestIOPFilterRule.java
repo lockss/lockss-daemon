@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPFilterRule.java,v 1.1 2005-03-15 07:43:21 tlipkis Exp $
+ * $Id$
  */
 
 /*

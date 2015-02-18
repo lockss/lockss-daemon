@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineMetadataExtractorFactory.java,v 1.1 2014-05-23 21:32:59 etenbrink Exp $
+ * $Id$
  */
 
 /*

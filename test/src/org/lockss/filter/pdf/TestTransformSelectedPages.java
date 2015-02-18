@@ -1,5 +1,5 @@
 /*
- * $Id: TestTransformSelectedPages.java,v 1.2 2012-07-19 00:16:15 thib_gc Exp $
+ * $Id$
  */
 
 /*

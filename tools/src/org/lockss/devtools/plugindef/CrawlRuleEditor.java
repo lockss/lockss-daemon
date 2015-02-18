@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.9 2006-09-07 18:31:28 thib_gc Exp $
+ * $Id$
  */
 
 /*

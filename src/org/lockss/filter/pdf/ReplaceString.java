@@ -1,5 +1,5 @@
 /*
- * $Id: ReplaceString.java,v 1.6 2012-07-10 23:53:21 thib_gc Exp $
+ * $Id$
  */
 
 /*

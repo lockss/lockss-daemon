@@ -1,5 +1,5 @@
 /*
- * $Id: Crc8.java,v 1.1 2007-03-17 04:19:30 smorabito Exp $
+ * $Id$
  *
 
  Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,

@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.7 2014-08-19 20:07:43 thib_gc Exp $
+ * $Id$
  */
 
 /*

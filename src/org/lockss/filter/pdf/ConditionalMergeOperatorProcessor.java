@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalMergeOperatorProcessor.java,v 1.4 2012-07-10 23:53:21 thib_gc Exp $
+ * $Id$
  */
 
 /*

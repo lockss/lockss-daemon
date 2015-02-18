@@ -1,5 +1,5 @@
 /*
- * $Id: HuffPoBlogHtmlFilterFactory.java,v 1.1 2007-02-10 06:50:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

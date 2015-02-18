@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlHashFilterFactory.java,v 1.5 2014-11-18 20:15:29 thib_gc Exp $
+ * $Id$
  */
 
 /*

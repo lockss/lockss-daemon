@@ -1,5 +1,5 @@
 /*
- * $Id: TestOrderedVoteBlocksIterator.java,v 1.1 2013-06-04 17:50:31 barry409 Exp $
+ * $Id$
  */
 
 /*

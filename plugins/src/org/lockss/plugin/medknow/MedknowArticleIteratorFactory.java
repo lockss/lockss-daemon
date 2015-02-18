@@ -1,5 +1,5 @@
 /**
- * $Id: MedknowArticleIteratorFactory.java,v 1.1 2013-05-06 17:01:16 ldoan Exp $
+ * $Id$
  */
 
 /**

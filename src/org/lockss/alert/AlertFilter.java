@@ -1,5 +1,5 @@
 /*
- * $Id: AlertFilter.java,v 1.4 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id$
  */
 
 /*

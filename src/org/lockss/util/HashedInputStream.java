@@ -1,5 +1,5 @@
 /*
- * $Id: HashedInputStream.java,v 1.5 2013-07-24 19:02:56 tlipkis Exp $
+ * $Id$
  */
 
 /*

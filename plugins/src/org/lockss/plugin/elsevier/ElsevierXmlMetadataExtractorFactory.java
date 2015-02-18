@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.6 2011-06-14 09:25:39 tlipkis Exp $
+ * $Id$
  */
 
 /*

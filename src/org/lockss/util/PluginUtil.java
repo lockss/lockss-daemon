@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.4 2012-02-16 10:42:29 tlipkis Exp $
+ * $Id$
  */
 
 /*

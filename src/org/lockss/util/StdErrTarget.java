@@ -1,5 +1,5 @@
 /*
- * $Id: StdErrTarget.java,v 1.10 2003-07-17 05:21:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

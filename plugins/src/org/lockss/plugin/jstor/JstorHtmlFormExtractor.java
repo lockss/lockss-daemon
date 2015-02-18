@@ -1,5 +1,5 @@
 /*
- * $Id: JstorHtmlFormExtractor.java,v 1.4 2014-08-27 01:14:10 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

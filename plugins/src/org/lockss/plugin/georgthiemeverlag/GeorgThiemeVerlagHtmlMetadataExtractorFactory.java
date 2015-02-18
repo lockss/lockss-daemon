@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlMetadataExtractorFactory.java,v 1.4 2014-02-05 22:31:03 etenbrink Exp $
+ * $Id$
  */
 
 /*

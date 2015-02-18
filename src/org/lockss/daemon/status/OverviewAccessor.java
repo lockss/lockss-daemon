@@ -1,5 +1,5 @@
 /*
- * $Id: OverviewAccessor.java,v 1.1 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginArticleIteratorFactory.java,v 1.3 2013-05-03 23:05:07 aishizaki Exp $
+ * $Id$
  */
 /*
 

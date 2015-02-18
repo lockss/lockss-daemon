@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.12 2011-02-23 08:41:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

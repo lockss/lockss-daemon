@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.21 2009-05-24 17:14:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.279 2015-02-09 05:42:40 tlipkis Exp $
+ * $Id$
  */
 
 /*

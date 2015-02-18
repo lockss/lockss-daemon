@@ -1,5 +1,5 @@
 /*
- * $Id: PionArticleIteratorFactory.java,v 1.10 2014-11-26 18:24:24 aishizaki Exp $
+ * $Id$
  */
 
 /*

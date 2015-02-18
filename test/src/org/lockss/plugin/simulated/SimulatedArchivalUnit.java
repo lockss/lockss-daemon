@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.79 2014-12-08 04:17:06 tlipkis Exp $
+ * $Id$
  */
 
 /*

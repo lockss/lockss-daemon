@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityListBean.java,v 1.6 2007-06-28 07:14:23 smorabito Exp $
+ * $Id$
  */
 
 /*

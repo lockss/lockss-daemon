@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.13 2015-01-30 22:14:09 thib_gc Exp $
+ * $Id$
  */
 
 /*

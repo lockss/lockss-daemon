@@ -1,5 +1,5 @@
 /*
- * $Id: NationalWeatherAssociationHtmlHashFilterFactory.java,v 1.3 2014-09-15 08:00:15 ldoan Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisFilterFactory.java,v 1.7 2014-01-27 20:38:22 thib_gc Exp $
+ * $Id$
  */
 
 /*

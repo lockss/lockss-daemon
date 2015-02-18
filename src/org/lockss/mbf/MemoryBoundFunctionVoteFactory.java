@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVoteFactory.java,v 1.5 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTemplate.java,v 1.3 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id$
  */
 
 /*

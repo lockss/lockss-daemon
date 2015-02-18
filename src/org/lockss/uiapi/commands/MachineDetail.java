@@ -1,5 +1,5 @@
 /*
- * $Id: MachineDetail.java,v 1.2 2005-10-11 05:47:40 tlipkis Exp $
+ * $Id$
  */
 
 /*

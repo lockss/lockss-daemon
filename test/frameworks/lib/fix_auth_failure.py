@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: fix_auth_failure.py,v 1.1 2011-02-15 20:28:38 barry409 Exp $
+# $Id$
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.

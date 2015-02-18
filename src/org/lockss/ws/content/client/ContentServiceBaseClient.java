@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServiceBaseClient.java,v 1.1 2014-12-08 19:16:22 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

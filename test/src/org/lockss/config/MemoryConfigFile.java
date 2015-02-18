@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryConfigFile.java,v 1.3 2009-07-22 06:36:28 tlipkis Exp $
+ * $Id$
  */
 
 /*

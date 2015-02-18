@@ -1,5 +1,5 @@
 /*
- * $Id: FigshareHtmlMetadataExtractorFactory.java,v 1.2 2014-02-27 22:09:59 aishizaki Exp $
+ * $Id$
  */
 
 /*

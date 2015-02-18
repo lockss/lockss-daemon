@@ -1,4 +1,4 @@
-/* $Id: BusinessSystemsLaboratoryMetadataExtractorFactory.java,v 1.3 2014-01-22 22:08:30 ldoan Exp $ */
+/* $Id$ */
 
 /*
 

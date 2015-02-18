@@ -1,5 +1,5 @@
 /*
- * $Id: LoggingJUnitTask.java,v 1.2 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id$
  */
 
 /*

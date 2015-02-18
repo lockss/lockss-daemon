@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.105 2014-12-08 04:15:56 tlipkis Exp $
+ * $Id$
  */
 
 /*

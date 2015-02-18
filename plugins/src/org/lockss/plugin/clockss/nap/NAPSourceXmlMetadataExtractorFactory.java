@@ -1,5 +1,5 @@
 /*
- * $Id: NAPSourceXmlMetadataExtractorFactory.java,v 1.4 2014-09-24 22:14:46 thib_gc Exp $
+ * $Id$
  */
 
 /*

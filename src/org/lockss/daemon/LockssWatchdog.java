@@ -1,5 +1,5 @@
 /*
- * $Id: LockssWatchdog.java,v 1.2 2006-10-07 23:12:07 tlipkis Exp $
+ * $Id$
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,

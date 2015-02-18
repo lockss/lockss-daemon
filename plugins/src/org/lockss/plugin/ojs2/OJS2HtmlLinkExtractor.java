@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlLinkExtractor.java,v 1.6 2015-01-30 22:22:00 etenbrink Exp $
+ * $Id$
  */
 
 /*

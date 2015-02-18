@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsResult.java,v 1.7 2015-01-21 22:05:33 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

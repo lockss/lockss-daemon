@@ -1,5 +1,5 @@
 /*
- * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.6 2014-05-14 19:25:29 aishizaki Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuWsSource.java,v 1.2 2014-07-18 16:51:49 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

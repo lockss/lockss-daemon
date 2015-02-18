@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.16 2013-06-26 17:37:51 barry409 Exp $
+ * $Id$
  */
 
 /*

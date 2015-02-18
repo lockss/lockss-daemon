@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.29 2011-11-15 00:58:19 barry409 Exp $
+ * $Id$
  */
 
 /*

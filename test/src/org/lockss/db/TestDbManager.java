@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.14 2014-11-20 18:20:30 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

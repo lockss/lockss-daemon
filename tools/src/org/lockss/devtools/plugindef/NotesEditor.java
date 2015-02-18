@@ -1,5 +1,5 @@
 /*
- * $Id: NotesEditor.java,v 1.4 2006-09-07 09:06:47 thib_gc Exp $
+ * $Id$
  */
 
 /*

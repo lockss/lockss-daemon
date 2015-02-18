@@ -1,5 +1,5 @@
 /*
- * $Id: PowerSetIterator.java,v 1.3 2013-02-08 23:26:11 clairegriffin Exp $
+ * $Id$
  */
 /*
 

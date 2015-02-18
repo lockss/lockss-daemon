@@ -1,4 +1,4 @@
-/* $Id: TestMedknowUrlNormalizer.java,v 1.3 2013-06-04 00:26:07 ldoan Exp $
+/* $Id$
 
 Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

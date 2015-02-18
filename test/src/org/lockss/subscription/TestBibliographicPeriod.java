@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicPeriod.java,v 1.3 2013-09-05 18:49:47 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDiffUtil.java,v 1.1 2013-10-17 07:51:38 tlipkis Exp $
+ * $Id$
  */
 
 /*

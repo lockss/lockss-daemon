@@ -1,5 +1,5 @@
 /*
- * $Id: CssLinkFilter.java,v 1.1 2008-07-12 08:36:02 dshr Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.8 2013-10-23 04:25:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationAuthorizer.java,v 1.3 2014-11-10 17:46:33 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

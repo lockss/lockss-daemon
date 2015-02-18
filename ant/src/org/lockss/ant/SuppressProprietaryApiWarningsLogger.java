@@ -1,5 +1,5 @@
 /*
- * $Id: SuppressProprietaryApiWarningsLogger.java,v 1.3 2012-09-18 19:10:19 tlipkis Exp $
+ * $Id$
  */
 
 /*

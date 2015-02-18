@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.10 2014-05-14 04:14:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

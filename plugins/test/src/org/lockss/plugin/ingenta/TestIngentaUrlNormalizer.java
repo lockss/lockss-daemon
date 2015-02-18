@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaUrlNormalizer.java,v 1.2 2014-08-15 21:41:12 etenbrink Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: NcawHtmlLinkExtractor.java,v 1.2 2008-10-28 09:19:36 thib_gc Exp $
+ * $Id$
  */
 
 /*

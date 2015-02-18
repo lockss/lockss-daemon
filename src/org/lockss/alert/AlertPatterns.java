@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPatterns.java,v 1.8 2014-06-23 22:41:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: APSHtmlCrawlFilterFactory.java,v 1.3 2015-01-23 08:35:05 etenbrink Exp $
+ * $Id$
  */
 
 /*

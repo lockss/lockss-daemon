@@ -1,5 +1,5 @@
 /*
- * $Id: AutoBiographyMetadataExtractorFactory.java,v 1.3 2013-10-21 17:46:56 etenbrink Exp $
+ * $Id$
  */
 
 /*

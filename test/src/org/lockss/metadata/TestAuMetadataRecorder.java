@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.12 2015-02-02 21:33:17 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

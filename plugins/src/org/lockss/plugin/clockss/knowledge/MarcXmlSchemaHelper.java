@@ -1,5 +1,5 @@
 /*
- * $Id: MarcXmlSchemaHelper.java,v 1.1 2014-08-14 21:22:51 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

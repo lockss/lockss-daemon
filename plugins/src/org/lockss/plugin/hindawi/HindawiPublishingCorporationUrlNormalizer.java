@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationUrlNormalizer.java,v 1.1 2009-01-26 21:18:18 thib_gc Exp $
+ * $Id$
  */
 
 /*

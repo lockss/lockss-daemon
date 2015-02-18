@@ -1,5 +1,5 @@
 /*
- * $Id: admin.js,v 1.13 2013-05-29 18:36:17 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPdfBoxTokens.java,v 1.2 2014-05-29 01:27:55 thib_gc Exp $
+ * $Id$
  */
 
 /*

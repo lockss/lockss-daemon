@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.19 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id$
  */
 
 /*

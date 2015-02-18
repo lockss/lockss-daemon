@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.11 2013-04-14 05:25:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

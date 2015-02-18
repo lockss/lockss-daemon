@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManagement.java,v 1.6 2014-09-16 19:55:44 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

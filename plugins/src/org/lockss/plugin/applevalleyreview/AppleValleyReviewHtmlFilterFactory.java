@@ -1,5 +1,5 @@
 /*
- * $Id: AppleValleyReviewHtmlFilterFactory.java,v 1.2 2009-04-13 18:53:09 thib_gc Exp $
+ * $Id$
  */
 
 /*

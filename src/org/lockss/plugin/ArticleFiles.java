@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.13 2013-06-05 23:21:45 thib_gc Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExporter.java,v 1.7 2012-06-06 17:33:58 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

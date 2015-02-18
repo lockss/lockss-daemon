@@ -1,5 +1,5 @@
 /*
- * $Id: AmPublicHealthAssocHtmlCrawlFilterFactory.java,v 1.3 2014-05-05 19:07:29 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

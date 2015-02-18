@@ -1,5 +1,5 @@
 /*
- * $Id: TestPalgraveBookHtmlHashFilterFactory.java,v 1.3 2015-01-22 23:26:16 aishizaki Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.24 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

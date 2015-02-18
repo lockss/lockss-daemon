@@ -1,5 +1,5 @@
 /*
- * $Id: TestAggregateDocumentTransform.java,v 1.3 2012-07-19 00:16:15 thib_gc Exp $
+ * $Id$
  */
 
 /*

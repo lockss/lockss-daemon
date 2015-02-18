@@ -1,5 +1,5 @@
 /*
- * $Id: TestBackgroundTask.java,v 1.1 2003-11-11 20:30:59 tlipkis Exp $
+ * $Id$
  */
 
 /*

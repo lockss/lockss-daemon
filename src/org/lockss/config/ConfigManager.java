@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.102 2014-12-27 03:35:32 tlipkis Exp $
+ * $Id$
  */
 
 /*

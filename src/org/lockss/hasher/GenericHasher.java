@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.28 2014-12-27 03:37:16 tlipkis Exp $
+ * $Id$
  */
 
 /*

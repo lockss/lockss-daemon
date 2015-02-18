@@ -1,5 +1,5 @@
 /*
- * $Id: TitleParams.java,v 1.7 2005-11-09 18:46:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

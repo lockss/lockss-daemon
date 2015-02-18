@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGPdfFilterFactory.java,v 1.3 2015-01-13 00:02:53 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

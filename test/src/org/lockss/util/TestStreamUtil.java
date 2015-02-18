@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.18 2014-11-22 08:42:08 tlipkis Exp $
+ * $Id$
  */
 
 /*

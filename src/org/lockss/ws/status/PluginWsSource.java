@@ -1,5 +1,5 @@
 /*
- * $Id: PluginWsSource.java,v 1.1 2014-04-04 22:00:45 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

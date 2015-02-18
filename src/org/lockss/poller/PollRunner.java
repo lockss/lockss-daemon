@@ -1,5 +1,5 @@
 /*
- * $Id: PollRunner.java,v 1.3 2007-08-30 09:55:44 smorabito Exp $
+ * $Id$
  */
 
 /*

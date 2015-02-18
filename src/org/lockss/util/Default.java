@@ -1,5 +1,5 @@
 /*
- * $Id: Default.java,v 1.1 2012-01-18 03:33:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

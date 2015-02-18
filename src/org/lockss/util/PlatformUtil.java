@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.26 2014-10-22 19:39:34 thib_gc Exp $
+ * $Id$
  */
 
 /*

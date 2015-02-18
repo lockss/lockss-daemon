@@ -1,5 +1,5 @@
 /*
- * $Id: ContentValidationException.java,v 1.1 2014-07-11 23:33:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamAssignment.java,v 1.2 2004-01-04 06:13:23 tlipkis Exp $
+ * $Id$
  */
 
 /*

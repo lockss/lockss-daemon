@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorUrlNormalizer.java,v 1.1 2014-06-27 18:16:46 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

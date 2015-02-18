@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryPeerMessage.java,v 1.3 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id$
  */
 
 /*

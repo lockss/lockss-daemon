@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20LoginPageChecker.java,v 1.2 2010-09-08 09:41:09 thib_gc Exp $
+ * $Id$
  */
 
 /*

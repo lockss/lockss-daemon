@@ -1,5 +1,5 @@
 /*
- * $Id: InactiveAuProxy.java,v 1.3 2004-09-27 22:39:08 smorabito Exp $
+ * $Id$
  */
 
 /*

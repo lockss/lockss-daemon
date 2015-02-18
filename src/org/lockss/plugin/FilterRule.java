@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRule.java,v 1.4 2012-09-25 18:42:08 tlipkis Exp $
+ * $Id$
  */
 
 /*

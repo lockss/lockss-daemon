@@ -1,5 +1,5 @@
 /*
- * $Id: JarTestUtils.java,v 1.1 2004-09-01 20:14:44 smorabito Exp $
+ * $Id$
  */
 
 /*

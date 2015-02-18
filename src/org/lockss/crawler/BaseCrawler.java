@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.58 2014-12-22 20:47:37 wkwilson Exp $
+ * $Id$
  */
 
 /*

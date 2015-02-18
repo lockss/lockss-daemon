@@ -1,5 +1,5 @@
 /*
- * $Id: NumericFilenameFilter.java,v 1.1 2006-05-27 06:33:26 tlipkis Exp $
+ * $Id$
  */
 
 /*

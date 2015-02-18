@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.17 2013-04-14 06:57:19 tlipkis Exp $
+ * $Id$
  */
 
 /*

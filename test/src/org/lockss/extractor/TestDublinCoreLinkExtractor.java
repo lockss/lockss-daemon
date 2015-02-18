@@ -1,5 +1,5 @@
 /*
- * $Id: TestDublinCoreLinkExtractor.java,v 1.5 2014-06-18 01:02:41 tlipkis Exp $
+ * $Id$
  */
 
 /*

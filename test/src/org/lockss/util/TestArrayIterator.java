@@ -1,5 +1,5 @@
 /*
- * $Id: TestArrayIterator.java,v 1.4 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id$
  */
 
 /*

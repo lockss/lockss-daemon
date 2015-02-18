@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.6 2013-10-18 17:06:12 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

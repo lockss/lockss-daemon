@@ -1,5 +1,5 @@
 /*
- * $Id: QueryAusClient.java,v 1.1 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

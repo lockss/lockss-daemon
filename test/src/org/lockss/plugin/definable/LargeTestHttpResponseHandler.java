@@ -1,5 +1,5 @@
 /*
- * $Id: LargeTestHttpResponseHandler.java,v 1.1 2010-11-03 06:08:12 tlipkis Exp $
+ * $Id$
  */
 
 /*

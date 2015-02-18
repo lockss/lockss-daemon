@@ -1,5 +1,5 @@
 /**
- * $Id: BaseAtyponSubstancePredicateFactory.java,v 1.4 2014-07-08 17:30:28 alexandraohlson Exp $
+ * $Id$
  */
 /*
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisherWsResult.java,v 1.1 2014-07-11 20:08:58 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ACMSourceXmlMetadataExtractorFactory.java,v 1.6 2014-03-06 17:19:34 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

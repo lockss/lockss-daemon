@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureMetadataExtractor.java,v 1.3 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

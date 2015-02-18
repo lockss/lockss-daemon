@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlHashFilterFactory.java,v 1.2 2013-10-11 20:03:33 alexandraohlson Exp $
+/* $Id$
  *  
  */
 

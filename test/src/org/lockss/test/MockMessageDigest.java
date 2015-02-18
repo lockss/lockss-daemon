@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.11 2013-07-24 19:03:10 tlipkis Exp $
+ * $Id$
  */
 
 /*

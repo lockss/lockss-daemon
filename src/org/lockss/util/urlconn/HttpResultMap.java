@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.17 2014-11-21 22:36:29 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpCssLinkExtractor.java,v 1.4 2010-07-01 04:04:58 tlipkis Exp $
+ * $Id$
  */
 
 /*

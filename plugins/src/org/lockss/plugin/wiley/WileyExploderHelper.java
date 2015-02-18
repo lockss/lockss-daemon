@@ -1,5 +1,5 @@
 /*
- * $Id: WileyExploderHelper.java,v 1.7 2014-11-12 20:11:59 wkwilson Exp $
+ * $Id$
  */
 
 /*

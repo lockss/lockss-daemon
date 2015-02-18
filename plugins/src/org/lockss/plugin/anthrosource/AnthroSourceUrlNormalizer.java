@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceUrlNormalizer.java,v 1.2 2008-01-16 00:41:00 thib_gc Exp $
+ * $Id$
  */
 
 /*

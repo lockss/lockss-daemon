@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDatagram.java,v 1.8 2004-09-22 19:13:04 dshr Exp $
+ * $Id$
  */
 
 /*

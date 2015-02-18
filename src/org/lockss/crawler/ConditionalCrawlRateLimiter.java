@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalCrawlRateLimiter.java,v 1.2 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id$
  */
 
 /*

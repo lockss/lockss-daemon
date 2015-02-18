@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.36 2015-01-12 20:40:46 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

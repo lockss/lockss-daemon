@@ -1,5 +1,5 @@
 /*
- * $Id: RisFilterInputStream.java,v 1.3 2014-07-22 20:38:54 thib_gc Exp $
+ * $Id$
  */
 
 /*

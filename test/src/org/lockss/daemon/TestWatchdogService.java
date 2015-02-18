@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.10 2004-09-29 18:58:17 tlipkis Exp $
+ * $Id$
  */
 
 /*

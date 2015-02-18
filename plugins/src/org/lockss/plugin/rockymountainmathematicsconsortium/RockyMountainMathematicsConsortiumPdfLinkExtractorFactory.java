@@ -1,5 +1,5 @@
 /*
- * $Id: RockyMountainMathematicsConsortiumPdfLinkExtractorFactory.java,v 1.1 2009-07-07 18:58:22 thib_gc Exp $
+ * $Id$
  */
 
 /*

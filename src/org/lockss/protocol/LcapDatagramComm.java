@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.19 2010-04-05 16:37:44 pgust Exp $
+ * $Id$
  */
 
 /*

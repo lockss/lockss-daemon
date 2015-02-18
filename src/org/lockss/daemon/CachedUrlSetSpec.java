@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetSpec.java,v 1.13 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id$
  */
 
 /*

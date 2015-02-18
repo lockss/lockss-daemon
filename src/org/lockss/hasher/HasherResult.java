@@ -1,5 +1,5 @@
 /*
- * $Id: HasherResult.java,v 1.4 2014-11-26 20:51:41 fergaloy-sf Exp $
+ * $Id$
  */
 
 /*

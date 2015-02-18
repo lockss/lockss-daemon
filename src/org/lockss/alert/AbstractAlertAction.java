@@ -1,5 +1,5 @@
 /*
- * $Id: AbstractAlertAction.java,v 1.3 2005-09-06 23:24:52 thib_gc Exp $
+ * $Id$
  */
 
 /*

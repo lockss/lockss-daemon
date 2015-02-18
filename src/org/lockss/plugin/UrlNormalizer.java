@@ -1,5 +1,5 @@
 /*
- * $Id: UrlNormalizer.java,v 1.3 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

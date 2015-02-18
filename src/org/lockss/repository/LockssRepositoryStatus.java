@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.31 2013-01-02 20:54:50 tlipkis Exp $
+ * $Id$
  */
 
 /*

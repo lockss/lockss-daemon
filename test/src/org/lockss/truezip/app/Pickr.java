@@ -13,7 +13,7 @@ import javax.swing.SwingUtilities;
  * you can double click it to browse its entries.
  *
  * @author  Christian Schlichtherle
- * @version $Id: Pickr.java,v 1.1 2012-06-20 04:48:12 tlipkis Exp $
+ * @version $Id$
  */
 public class Pickr extends Application<Exception> {
 

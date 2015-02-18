@@ -1,5 +1,5 @@
 /*
- * $Id: ZeroInputStream.java,v 1.2 2006-10-08 01:17:00 tlipkis Exp $
+ * $Id$
  */
 
 /*

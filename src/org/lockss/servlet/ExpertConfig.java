@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.10 2014-01-14 04:30:30 tlipkis Exp $
+ * $Id$
  */
 
 /*

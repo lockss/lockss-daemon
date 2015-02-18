@@ -1,5 +1,5 @@
 /*
- * $Id: TestCoverageNotesFormat.java,v 1.5 2015-01-02 06:02:22 tlipkis Exp $
+ * $Id$
  */
 
 /*

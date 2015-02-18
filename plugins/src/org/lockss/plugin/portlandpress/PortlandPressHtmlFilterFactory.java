@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressHtmlFilterFactory.java,v 1.7 2015-01-23 19:13:14 alexandraohlson Exp $
+ * $Id$
  */
 
 /*

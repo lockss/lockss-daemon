@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.31 2013-03-01 04:12:25 dshr Exp $
+ * $Id$
  */
 
 /*

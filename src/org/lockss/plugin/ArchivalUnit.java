@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.72 2014-12-24 00:25:10 wkwilson Exp $
+ * $Id$
  */
 
 /*

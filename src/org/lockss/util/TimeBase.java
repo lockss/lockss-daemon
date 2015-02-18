@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.13 2015-01-02 06:02:51 tlipkis Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.24 2014-11-21 20:24:36 thib_gc Exp $
+ * $Id$
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.24 2014-11-21 20:24:36 thib_gc Exp $
+ * @version $Id$
  */
 public class TdbTitle {
   /**

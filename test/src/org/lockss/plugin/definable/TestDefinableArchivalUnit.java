@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.72 2014-12-08 04:15:55 tlipkis Exp $
+ * $Id$
  */
 
 /*

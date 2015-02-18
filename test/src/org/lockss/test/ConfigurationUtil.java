@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.27 2014-06-30 04:58:14 tlipkis Exp $
+ * $Id$
  */
 
 /*

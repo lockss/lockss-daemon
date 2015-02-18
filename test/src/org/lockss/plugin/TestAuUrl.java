@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUrl.java,v 1.7 2004-09-29 18:58:03 tlipkis Exp $
+ * $Id$
  */
 
 /*

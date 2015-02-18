@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.11 2014-12-08 04:15:55 tlipkis Exp $
+n * $Id$
  */
 
 /*

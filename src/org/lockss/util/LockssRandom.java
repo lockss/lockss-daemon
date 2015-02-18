@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRandom.java,v 1.8 2013-07-08 22:16:11 barry409 Exp $
+ * $Id$
  */
 
 /*

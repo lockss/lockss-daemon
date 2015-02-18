@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder.java,v 1.14 2014-11-12 20:11:28 wkwilson Exp $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.15 2015-02-11 08:06:04 etenbrink Exp $
+ * $Id$
  */
 
 /*
