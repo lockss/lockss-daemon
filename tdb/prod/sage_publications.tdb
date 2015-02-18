@@ -14162,6 +14162,83 @@
 
     }
 
+  {
+
+    title <
+      name = International Journal of Christianity and Education ;
+      issn = 2056-9971 ;
+      eissn = 2056-998X ;
+      issnl = 2056-9971
+    >
+
+      param[base_url] = http://ice.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[merged_from] = 1366-5456 and 0021-9657
+      
+      au < expected ; 2015 ; International Journal of Christianity and Education Volume 19 ; 19 >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Education and Christian Belief ;
+      issn = 1366-5456 ;
+      issnl = 1366-5456
+    >
+
+      param[base_url] = http://ice.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[merged_into] = 2056-9971
+      
+      au < exists ; 2001 ; Journal of Education and Christian Belief Volume 5 ; 5 >
+      au < exists ; 2002 ; Journal of Education and Christian Belief Volume 6 ; 6 >
+      au < exists ; 2003 ; Journal of Education and Christian Belief Volume 7 ; 7 >
+      au < exists ; 2004 ; Journal of Education and Christian Belief Volume 8 ; 8 >
+      au < exists ; 2005 ; Journal of Education and Christian Belief Volume 9 ; 9 >
+      au < exists ; 2006 ; Journal of Education and Christian Belief Volume 10 ; 10 >
+      au < exists ; 2007 ; Journal of Education and Christian Belief Volume 11 ; 11 >
+      au < exists ; 2008 ; Journal of Education and Christian Belief Volume 12 ; 12 >
+      au < exists ; 2009 ; Journal of Education and Christian Belief Volume 13 ; 13 >
+      au < exists ; 2010 ; Journal of Education and Christian Belief Volume 14 ; 14 >
+      au < exists ; 2011 ; Journal of Education and Christian Belief Volume 15 ; 15 >
+      au < exists ; 2012 ; Journal of Education and Christian Belief Volume 16 ; 16 >
+      au < exists ; 2013 ; Journal of Education and Christian Belief Volume 17 ; 17 >
+      au < exists ; 2014 ; Journal of Education and Christian Belief Volume 18 ; 18 >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Christian Education ;
+      issn = 0021-9657 ;
+      issnl = 0021-9657
+    >
+
+      param[base_url] = http://ice.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[merged_into] = 2056-9971
+      comment[0] = content available 1974 volume 17, missing content from 1975 to 2000
+      
+      au < exists ; 2001 ; Journal of Christian Education Volume 44 ; 44 >
+      au < exists ; 2002 ; Journal of Christian Education Volume 45 ; 45 >
+      au < exists ; 2003 ; Journal of Christian Education Volume 46 ; 46 >
+      au < exists ; 2004 ; Journal of Christian Education Volume 47 ; 47 >
+      au < exists ; 2005 ; Journal of Christian Education Volume 48 ; 48 >
+      au < exists ; 2006 ; Journal of Christian Education Volume 49 ; 49 >
+      au < exists ; 2007 ; Journal of Christian Education Volume 50 ; 50 >
+      au < exists ; 2008 ; Journal of Christian Education Volume 51 ; 51 >
+      au < exists ; 2009 ; Journal of Christian Education Volume 52 ; 52 >
+      au < exists ; 2010 ; Journal of Christian Education Volume 53 ; 53 >
+      au < exists ; 2011 ; Journal of Christian Education Volume 54 ; 54 >
+      au < exists ; 2012 ; Journal of Christian Education Volume 55 ; 55 >
+      
+  }
+
     {
 
       title <
@@ -14226,6 +14303,43 @@
       }
 
     }
+
+  {
+
+    title <
+      name = The International Journal of Psychiatry in Medicine ;
+      issn = 0091-2174 ;
+      eissn = 1541-3527 ;
+      issnl = 0091-2174
+    >
+
+      param[base_url] = http://ijp.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1999 ; The International Journal of Psychiatry in Medicine Volume 29 ; 29 >
+      au < exists ; 2000 ; The International Journal of Psychiatry in Medicine Volume 30 ; 30 >
+      au < exists ; 2001 ; The International Journal of Psychiatry in Medicine Volume 31 ; 31 >
+      au < exists ; 2002 ; The International Journal of Psychiatry in Medicine Volume 32 ; 32 >
+      au < exists ; 2003 ; The International Journal of Psychiatry in Medicine Volume 33 ; 33 >
+      au < exists ; 2004 ; The International Journal of Psychiatry in Medicine Volume 34 ; 34 >
+      au < exists ; 2005 ; The International Journal of Psychiatry in Medicine Volume 35 ; 35 >
+      au < exists ; 2006 ; The International Journal of Psychiatry in Medicine Volume 36 ; 36 >
+      au < exists ; 2007 ; The International Journal of Psychiatry in Medicine Volume 37 ; 37 >
+      au < exists ; 2008 ; The International Journal of Psychiatry in Medicine Volume 38 ; 38 >
+      au < exists ; 2009 ; The International Journal of Psychiatry in Medicine Volume 39 ; 39 >
+      au < exists ; 2010 ; The International Journal of Psychiatry in Medicine Volume 40 ; 40 >
+      au < exists ; 2011 ; The International Journal of Psychiatry in Medicine Volume 41 ; 41 >
+      au < exists ; 2011 ; The International Journal of Psychiatry in Medicine Volume 42 ; 42 >
+      au < exists ; 2012 ; The International Journal of Psychiatry in Medicine Volume 43 ; 43 >
+      au < exists ; 2012 ; The International Journal of Psychiatry in Medicine Volume 44 ; 44 >
+      au < exists ; 2013 ; The International Journal of Psychiatry in Medicine Volume 45 ; 45 >
+      au < exists ; 2013 ; The International Journal of Psychiatry in Medicine Volume 46 ; 46 >
+      au < exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 47 ; 47 >
+      au < exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 48 ; 48 >
+      au < expected ; 2015 ; The International Journal of Psychiatry in Medicine Volume 49 ; 49 >
+
+  }
 
     {
       title <
@@ -28846,6 +28960,39 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = Journal of Technical Writing and Communication ;
+      issn = 0047-2816 ;
+      eissn = 1460-3667 ;
+      issnl = 0047-2816
+    >
+
+      param[base_url] = http://jtw.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1999 ; Journal of Technical Writing and Communication Volume 29 ; 29 >
+      au < exists ; 2000 ; Journal of Technical Writing and Communication Volume 30 ; 30 >
+      au < exists ; 2001 ; Journal of Technical Writing and Communication Volume 31 ; 31 >
+      au < exists ; 2002 ; Journal of Technical Writing and Communication Volume 32 ; 32 >
+      au < exists ; 2003 ; Journal of Technical Writing and Communication Volume 33 ; 33 >
+      au < exists ; 2004 ; Journal of Technical Writing and Communication Volume 34 ; 34 >
+      au < exists ; 2005 ; Journal of Technical Writing and Communication Volume 35 ; 35 >
+      au < exists ; 2006 ; Journal of Technical Writing and Communication Volume 36 ; 36 >
+      au < exists ; 2007 ; Journal of Technical Writing and Communication Volume 37 ; 37 >
+      au < exists ; 2008 ; Journal of Technical Writing and Communication Volume 38 ; 38 >
+      au < exists ; 2009 ; Journal of Technical Writing and Communication Volume 39 ; 39 >
+      au < exists ; 2010 ; Journal of Technical Writing and Communication Volume 40 ; 40 >
+      au < exists ; 2011 ; Journal of Technical Writing and Communication Volume 41 ; 41 >
+      au < exists ; 2012 ; Journal of Technical Writing and Communication Volume 42 ; 42 >
+      au < exists ; 2013 ; Journal of Technical Writing and Communication Volume 43 ; 43 >
+      au < exists ; 2014 ; Journal of Technical Writing and Communication Volume 44 ; 44 >
+      au < expected ; 2015 ; Journal of Technical Writing and Communication Volume 45 ; 45 >
+
+  }
+
     {
 
       title <
@@ -36947,12 +37094,12 @@ comment[mpj] = now published by Brill
           eissn = 2053-1680
       >
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = HighWireDrupalPlugin
         param[base_url] = http://rap.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2014 ; Research & Politics Volume 1 ; 1 >
-        au < expected ; 2015 ; Research & Politics Volume 2 ; 2 >
+        au < exists ; 2014 ; Research & Politics Volume 1 ; 1 >
+        au < exists ; 2015 ; Research & Politics Volume 2 ; 2 >
 
     }
 
