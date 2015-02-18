@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter;
 
 import java.io.*;
+import java.util.regex.*;
 
 import org.lockss.filter.RisFilterReader;
 import org.lockss.test.LockssTestCase;
@@ -70,6 +71,36 @@ public class TestRisFilterReader extends LockssTestCase {
     }
     assertEquals(9, keptLines);
     assertEquals(5, keptTags);
+  }
+  
+  public void testCustomTagPattern() throws Exception {
+    // Potential future use case: non-conforming RIS syntax
+    Reader r1 = new StringReader("KA -- keep single line [custom format]\r\n" +
+                                 "RB -- remove single line [custom format]\r\n" +
+                                 "KC -- keep single line [custom format]\r\n");
+    BufferedReader br1 = new BufferedReader(new RisFilterReader(Pattern.compile("^([KR][A-Z]) -- "), r1, "RB"));
+    assertEquals("KA -- keep single line [custom format]", br1.readLine());
+    assertEquals("KC -- keep single line [custom format]", br1.readLine());
+    assertNull(br1.readLine());
+    
+    // Potential future use case: specific tag without value (e.g. ER) sometimes without trailing dash
+    Reader r2 = new StringReader("KA  - keep single line\r\n" +
+                                 "RB\r\n" +
+                                 "RB \r\n" +
+                                 "RB  \r\n" +
+                                 "RB  -\r\n" +
+                                 "RB  - \r\n" +
+                                 "KC  - keep single line\r\n");
+    RisFilterReader rfr2 = new RisFilterReader(Pattern.compile("^((([A-Z]{2})  - )|((RB)( ( (-)?)?)?$))"), r2, "RB") {
+      @Override
+      protected String getTag(Matcher mat) {
+        return mat.group(2) != null ? mat.group(3) : mat.group(5);
+      }
+    };
+    BufferedReader br2 = new BufferedReader(rfr2);
+    assertEquals("KA  - keep single line", br2.readLine());
+    assertEquals("KC  - keep single line", br2.readLine());
+    assertNull(br2.readLine());
   }
   
 }
