@@ -614,7 +614,7 @@
 
       param[journal_issn] = 1752-2870
       
-      au < exists ; 2013 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
+      au < manifest ; 2013 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
       au < expected ; 2014 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 >
 
     }
@@ -4391,7 +4391,7 @@
       au < released ; 2010 ; International Journal of Knowledge and Learning Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Knowledge and Learning Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
-      au < expected ; 2013 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
+      au < manifest ; 2013 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
       au < expected ; 2014 ; International Journal of Knowledge and Learning Volume 10 ; 10 >
 
     }
@@ -6193,7 +6193,7 @@
       au < released ; 2012 ; International Journal of Product Development Volume 17 ; 17 >
       au < released ; 2013 ; International Journal of Product Development Volume 18 ; 18 >
       au < doNotProcess ; 2014 ; International Journal of Product Development Volume 19 ; 19 >
-      au < expected ; 2014 ; International Journal of Product Development Volume 20 ; 20 >
+      au < manifest ; 2014 ; International Journal of Product Development Volume 20 ; 20 >
       au < expected ; 2014 ; International Journal of Product Development Volume 21 ; 21 >
 
     }
@@ -6527,7 +6527,7 @@
       au < released ; 2011 ; International Journal of Revenue Management Volume 5 ; 5 >
       au < released ; 2012 ; International Journal of Revenue Management Volume 6 ; 6 >
       au < doNotProcess ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 >
-      au < expected ; 2014 ; International Journal of Revenue Management Volume 8 ; 8 >
+      au < manifest ; 2014 ; International Journal of Revenue Management Volume 8 ; 8 >
 
     }
 
