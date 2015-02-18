@@ -201,12 +201,12 @@ public class RisFilterReader extends LineRewritingReader {
   public String rewriteLine(String line) {
     Matcher mat = tagPattern.matcher(line);
     if (mat.find()) {
-      String tag = mat.group(1);
+      String tag = getTag(mat);
       removingTag = tagSet.contains(tag);
     }
     return removingTag ? null : line;
   }
-  
+
   /**
    * <p>
    * A convenience method to turn this {@link Reader} back into an
@@ -223,4 +223,25 @@ public class RisFilterReader extends LineRewritingReader {
     return new ReaderInputStream(this, encoding);
   }
 
+  /**
+   * <p>
+   * Returns the tag value for a {@link Matcher} instance created from this
+   * instance's {@link #tagPattern} after matching with {@link Matcher#find()}.
+   * </p>
+   * <p>
+   * This implementation works with the default pattern
+   * {@link #DEFAULT_TAG_PATTERN}. If this instance was created with a different
+   * tag line pattern, it may need to ovverride this method accordingly.
+   * </p>
+   * 
+   * @param mat
+   *          A {@link Matcher} instance created from {@link #tagPattern} for
+   *          which {@link Matcher#find()} was true.
+   * @return The tag matched by the {@link Matcher}.
+   * @since 1.67.4
+   */
+  protected String getTag(Matcher mat) {
+    return mat.group(1);
+  }
+  
 }
