@@ -80,7 +80,7 @@
     au < crawling ; exists ; 2011 ; AIAA Journal Volume 49 ; 49 >
     au < crawling ; exists ; 2012 ; AIAA Journal Volume 50 ; 50 >
     au < crawling ; exists ; 2013 ; AIAA Journal Volume 51 ; 51 >
-    au < testing ; exists ; 2014 ; AIAA Journal Volume 52 ; 52 >
+    au < ready ; exists ; 2014 ; AIAA Journal Volume 52 ; 52 >
     au < manifest ; exists ; 2015 ; AIAA Journal Volume 53 ; 53 >
 
   } 
@@ -169,7 +169,7 @@
     au < crawling ; exists ; 2011 ; Journal of Aircraft Volume 48 ; 48 >
     au < crawling ; exists ; 2012 ; Journal of Aircraft Volume 49 ; 49 >
     au < crawling ; exists ; 2013 ; Journal of Aircraft Volume 50 ; 50 >
-    au < testing ; exists ; 2014 ; Journal of Aircraft Volume 51 ; 51 >
+    au < ready ; exists ; 2014 ; Journal of Aircraft Volume 51 ; 51 >
     au < manifest ; exists ; 2015 ; Journal of Aircraft Volume 52 ; 52 >
 
   }
@@ -240,7 +240,7 @@
     au < manifest ; exists ; 2011 ; Journal of Guidance, Control, and Dynamics Volume 34 ; 34 >
     au < crawling ; exists ; 2012 ; Journal of Guidance, Control, and Dynamics Volume 35 ; 35 >
     au < crawling ; exists ; 2013 ; Journal of Guidance, Control, and Dynamics Volume 36 ; 36 >
-    au < testing ; exists ; 2014 ; Journal of Guidance, Control, and Dynamics Volume 37 ; 37 >
+    au < ready ; exists ; 2014 ; Journal of Guidance, Control, and Dynamics Volume 37 ; 37 >
     au < manifest ; exists ; 2015 ; Journal of Guidance, Control, and Dynamics Volume 38 ; 38 >
 
   }
@@ -312,7 +312,7 @@
     au < manifest ; exists ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
     au < manifest ; exists ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
     au < crawling ; exists ; 2013 ; Journal of Propulsion and Power Volume 29 ; 29 >
-    au < testing ; exists ; 2014 ; Journal of Propulsion and Power Volume 30 ; 30 >
+    au < ready ; exists ; 2014 ; Journal of Propulsion and Power Volume 30 ; 30 >
     au < manifest ; exists ; 2015 ; Journal of Propulsion and Power Volume 31 ; 31 >
 
   }
@@ -326,6 +326,7 @@
       issnl = 0022-4650
     >
     param[journal_id] = jsr
+    comment[notReady] = Can't fetch permission page on Content 3 and 4
 
     au < manifest ; exists ; 1964 ; Journal of Spacecraft and Rockets Volume 1 ; 1 >
     au < manifest ; exists ; 1965 ; Journal of Spacecraft and Rockets Volume 2 ; 2 >
@@ -377,7 +378,7 @@
     au < manifest ; exists ; 2011 ; Journal of Spacecraft and Rockets Volume 48 ; 48 >
     au < manifest ; exists ; 2012 ; Journal of Spacecraft and Rockets Volume 49 ; 49 >
     au < manifest ; exists ; 2013 ; Journal of Spacecraft and Rockets Volume 50 ; 50 >
-    au < testing ; exists ; 2014 ; Journal of Spacecraft and Rockets Volume 51 ; 51 >
+    au < notReady ; exists ; 2014 ; Journal of Spacecraft and Rockets Volume 51 ; 51 >
     au < expected ; exists ; 2015 ; Journal of Spacecraft and Rockets Volume 52 ; 52 >
 
   }
@@ -391,6 +392,7 @@
       issnl = 0887-8722
     >
     param[journal_id] = jtht
+    comment[notReady] = Can't fetch permission page
 
     au < manifest ; exists ; 1987 ; Journal of Thermophysics and Heat Transfer Volume 1 ; 1 >
     au < manifest ; exists ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 >
@@ -419,7 +421,7 @@
     au < manifest ; exists ; 2011 ; Journal of Thermophysics and Heat Transfer Volume 25 ; 25 >
     au < manifest ; exists ; 2012 ; Journal of Thermophysics and Heat Transfer Volume 26 ; 26 >
     au < manifest ; exists ; 2013 ; Journal of Thermophysics and Heat Transfer Volume 27 ; 27 >
-    au < testing ; exists ; 2014 ; Journal of Thermophysics and Heat Transfer Volume 28 ; 28 >
+    au < notReady ; exists ; 2014 ; Journal of Thermophysics and Heat Transfer Volume 28 ; 28 >
     au < manifest ; exists ; 2015 ; Journal of Thermophysics and Heat Transfer Volume 29 ; 29 >
 
   } 
