@@ -33,7 +33,7 @@
     au < released ; 2010 ; 14 ; Acta Semiótica et Lingvistica Volume 14; 2010 ; >
     au < released ; 2011 ; 15 ; Acta Semiótica et Lingvistica Volume 15; 2011 ; >
     au < released ; 2012 ; 16 ; Acta Semiótica et Lingvistica Volume 16; 2012 ; >
-    au < manifest ; 2013 ; 17 ; Acta Semiótica et Lingvistica Volume 17; 2013 ; >
+    au < testing ; 2013 ; 17 ; Acta Semiótica et Lingvistica Volume 17; 2013 ; >
 
   }
 
@@ -47,7 +47,7 @@
     param[journal_id] = archeion
 
     au < released ; 2013 ; 1 ; Archeion Online Volume 2013 ; 2013 ; >
-    au < manifest ; 2014 ; 2 ; Archeion Online Volume 2014 ; 2014 ; >
+    au < testing ; 2014 ; 2 ; Archeion Online Volume 2014 ; 2014 ; >
 
   }
 
@@ -61,7 +61,7 @@
 
     param[journal_id] = arf
 
-    au < manifest ; 2014 ; 1 ; Aufklärung: Revista de Filosofia Volume 1; 2014 ; >
+    au < testing ; 2014 ; 1 ; Aufklärung: Revista de Filosofia Volume 1; 2014 ; >
 
   }
 
@@ -83,7 +83,7 @@
     au < released ; 2011 ; 7 ; Biblionline Volume 7 ; 2011 ; >
     au < released ; 2012 ; 8 ; Biblionline Volume 8 ; 2012 ; >
     au < released ; 2013 ; 9 ; Biblionline Volume 9 ; 2013 ; >
-    au < manifest ; 2014 ; 10 ; Biblionline Volume 10 ; 2014 ; >
+    au < testing ; 2014 ; 10 ; Biblionline Volume 10 ; 2014 ; >
 
   }
 
@@ -98,7 +98,7 @@
 
     au < released ; 2010 ; 6 ; Cadernos Imbondeiro Volume 2010 ; 2010 ; >
     au < released ; 2012 ; 7 ; Cadernos Imbondeiro Volume 2012 ; 2012 ; >
-    au < manifest ; 2014 ; 8 ; Cadernos Imbondeiro Volume 2014 ; 2014 ; >
+    au < testing ; 2014 ; 8 ; Cadernos Imbondeiro Volume 2014 ; 2014 ; >
 
   }
 
@@ -112,7 +112,7 @@
     param[journal_id] = ct
 
     au < released ; 2011 ; 1 ; Cultura e Tradução Volume 2011 ; 2011 ; >
-    au < manifest ; 2014 ; 2 ; Cultura e Tradução Volume 2014 ; 2014 ; >
+    au < testing ; 2014 ; 2 ; Cultura e Tradução Volume 2014 ; 2014 ; >
 
   }
 
@@ -132,7 +132,7 @@
     au < released ; 2006 ; 5 ; CADERNOS DO LOGEPA Volume 2006 ; 2006 ; >
     au < released ; 2011 ; 6 ; CADERNOS DO LOGEPA Volume 2011 ; 2011 ; >
     au < released ; 2012 ; 7 ; CADERNOS DO LOGEPA Volume 2012 ; 2012 ; >
-    au < manifest ; 2013 ; 8 ; CADERNOS DO LOGEPA Volume 2013 ; 2013 ; >
+    au < testing ; 2013 ; 8 ; CADERNOS DO LOGEPA Volume 2013 ; 2013 ; >
 
   }
 
@@ -145,7 +145,7 @@
 
     param[journal_id] = co
 
-    au < manifest ; 2014 ; 1 ; Cultura Oriental Volume 1 ; 2014 ; >
+    au < testing ; 2014 ; 1 ; Cultura Oriental Volume 1 ; 2014 ; >
 
   }
 
@@ -164,7 +164,7 @@
     au < released ; 2011 ; 4 ; Culturas Midiáticas Volume 2011 ; 2011 ; >
     au < released ; 2012 ; 5 ; Culturas Midiáticas Volume 2012 ; 2012 ; >
     au < released ; 2013 ; 6 ; Culturas Midiáticas Volume 2013 ; 2013 ; >
-    au < manifest ; 2014 ; 7 ; Culturas Midiáticas Volume 2014 ; 2014 ; >
+    au < testing ; 2014 ; 7 ; Culturas Midiáticas Volume 2014 ; 2014 ; >
 
   }
 
@@ -201,7 +201,7 @@
     au < released ; 2011 ; 21 ; Informação & Sociedade: Estudos Volume 21 ; 2011 ; >
     au < released ; 2012 ; 22 ; Informação & Sociedade: Estudos Volume 22 ; 2012 ; >
     au < released ; 2013 ; 23 ; Informação & Sociedade: Estudos Volume 23 ; 2013 ; >
-    au < manifest ; 2014 ; 24 ; Informação & Sociedade: Estudos Volume 24 ; 2014 ; >
+    au < testing ; 2014 ; 24 ; Informação & Sociedade: Estudos Volume 24 ; 2014 ; >
 
   }
 
@@ -217,7 +217,7 @@
     au < released ; 2011 ; 1 ; Perspectivas em Gestão & Conhecimento Volume 1 ; 2011 ; >
     au < released ; 2012 ; 2 ; Perspectivas em Gestão & Conhecimento Volume 2 ; 2012 ; >
     au < released ; 2013 ; 3 ; Perspectivas em Gestão & Conhecimento Volume 3 ; 2013 ; >
-    au < manifest ; 2014 ; 4 ; Perspectivas em Gestão & Conhecimento Volume 4 ; 2014 ; >
+    au < testing ; 2014 ; 4 ; Perspectivas em Gestão & Conhecimento Volume 4 ; 2014 ; >
 
   }
 
@@ -233,7 +233,7 @@
     au < released ; 2011 ; 1 ; Teoria e Prática em Administração Volume 1 ; 2011 ; >
     au < released ; 2012 ; 2 ; Teoria e Prática em Administração Volume 2 ; 2012 ; >
     au < released ; 2013 ; 3 ; Teoria e Prática em Administração Volume 3 ; 2013 ; >
-    au < manifest ; 2014 ; 4 ; Teoria e Prática em Administração Volume 4 ; 2014 ; >
+    au < testing ; 2014 ; 4 ; Teoria e Prática em Administração Volume 4 ; 2014 ; >
 
   }
 
@@ -272,7 +272,7 @@
       au < released ; 2010 ; 4 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 5 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2011 ; 2011 ; >
       au < released ; 2013 ; 6 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 7 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 7 ; REVISTA AGROPECUÁRIA TÉCNICA Volume 2014 ; 2014 ; >
 
   }
 
@@ -297,7 +297,7 @@
       au < released ; 2011 ; 8 ; Revista Ártemis Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 9 ; Revista Ártemis Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 10 ; Revista Ártemis Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 11 ; Revista Ártemis Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 11 ; Revista Ártemis Volume 2014 ; 2014 ; >
 
   }
 
@@ -337,7 +337,7 @@
       au < notReady ; 2011 ; 5 ; Gaia Scientia Volume 2011 ; 2011 ; no articles >
       au < released ; 2012 ; 6 ; Gaia Scientia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Gaia Scientia Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Gaia Scientia Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 8 ; Gaia Scientia Volume 2014 ; 2014 ; >
 
   }
 
@@ -352,7 +352,7 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = itec
 
-      au < manifest ; 2014 ; 1 ; Informação & Tecnologia Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 1 ; Informação & Tecnologia Volume 2014 ; 2014 ; >
 
   }
 
@@ -374,7 +374,7 @@
       au < released ; 2011 ; 5 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 8 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2014 ; 2014 ; >
 
   }
 
@@ -415,7 +415,7 @@
       au < released ; 2011 ; 9 ; Língua, Linguística & Literatura Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 10 ; Língua, Linguística & Literatura Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Língua, Linguística & Literatura Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 12 ; Língua, Linguística & Literatura Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 12 ; Língua, Linguística & Literatura Volume 2014 ; 2014 ; >
 
   }
 
@@ -434,7 +434,7 @@
       au < released ; 2011 ; 2 ; Moringa: Artes do Espetáculo Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; Moringa: Artes do Espetáculo Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; Moringa: Artes do Espetáculo Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 5 ; Moringa: Artes do Espetáculo Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 5 ; Moringa: Artes do Espetáculo Volume 2014 ; 2014 ; >
 
   }
 
@@ -456,7 +456,7 @@
       au < released ; 2011 ; 5 ; Okara: Geograifa em Debate Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Okara: Geograifa em Debate Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Okara: Geograifa em Debate Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Okara: Geograifa em Debate Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 8 ; Okara: Geograifa em Debate Volume 2014 ; 2014 ; >
 
   }
 
@@ -542,7 +542,7 @@
       au < released ; 2010 ; 3 ; PROLÍNGUA Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 4 ; PROLÍNGUA Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; PROLÍNGUA Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 6 ; PROLÍNGUA Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 6 ; PROLÍNGUA Volume 2013 ; 2013 ; >
 
   }
 
@@ -614,7 +614,7 @@
       au < released ; 2011 ; 15 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 16 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 17 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 18 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 18 ; Revista Brasileira de Ciências da Saúde [2317-6032] Volume 2014 ; 2014 ; >
 
   }
 
@@ -679,7 +679,7 @@
       au < released ; 2011 ; 4 ; Revista Espaço do Currículo Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; Revista Espaço do Currículo Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Revista Espaço do Currículo Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 7 ; Revista Espaço do Currículo Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 7 ; Revista Espaço do Currículo Volume 2014 ; 2014 ; >
 
   }
 
@@ -695,7 +695,7 @@
       param[journal_id] = recfin
 
       au < released ; 2013 ; 1 ; Revista Evidenciação Contábil & Finanças Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 2 ; Revista Evidenciação Contábil & Finanças Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 2 ; Revista Evidenciação Contábil & Finanças Volume 2014 ; 2014 ; >
 
   }
 
@@ -712,7 +712,7 @@
 
       au < released ; 2010 ; 1 ; Revista Gênero & Direito Volume 2010 ; 2010 ; >
       au < released ; 2013 ; 2 ; Revista Gênero & Direito Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Revista Gênero & Direito Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; Revista Gênero & Direito Volume 2014 ; 2014 ; >
 
   }
 
@@ -745,7 +745,7 @@
       au < released ; 2011 ; 16 ; Revista Graphos Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 17 ; Revista Graphos Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 18 ; Revista Graphos Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 19 ; Revista Graphos Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 19 ; Revista Graphos Volume 2014 ; 2014 ; >
 
   }
 
@@ -771,7 +771,7 @@
       au < released ; 2011 ; 9 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 10 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 12 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 12 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2014 ; 2014 ; >
 
   }
 
@@ -787,7 +787,7 @@
       param[journal_id] = ricri
 
       au < released ; 2013 ; 11 ; Revista de Iniciação Científica em Relações Internacionais Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 12 ; Revista de Iniciação Científica em Relações Internacionais Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 12 ; Revista de Iniciação Científica em Relações Internacionais Volume 2014 ; 2014 ; >
 
   }
 
@@ -804,7 +804,7 @@
 
       au < released ; 2012 ; 1 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; Revista Logos & Existência: Revista da Associação Brasileira de Logoterapia e Análise Existencial Volume 2014 ; 2014 ; >
 
   }
 
@@ -823,7 +823,7 @@
       au < notReady ; 2011 ; 1 ; Revista Lugares de Educação Volume 2011 ; 2011 ; url missing http >
       au < notReady ; 2012 ; 2 ; Revista Lugares de Educação Volume 2012 ; 2012 ; url missing http >
       au < notReady ; 2013 ; 3 ; Revista Lugares de Educação Volume 2013 ; 2013 ; many recursive urls>
-      au < manifest ; 2014 ; 4 ; Revista Lugares de Educação Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 4 ; Revista Lugares de Educação Volume 2014 ; 2014 ; >
 
   }
 
@@ -840,7 +840,7 @@
 
       au < released ; 2012 ; 1 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; Revista do Mestrado Profissional Gestão em Organizações Aprendentes Volume 2014 ; 2014 ; >
 
   }
 
@@ -878,7 +878,7 @@
       au < released ; 2011 ; 20 ; Revista Nordestina de Biologia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 21 ; Revista Nordestina de Biologia Volume 2012 ; 2012 ; >
       au < notReady ; 2013 ; 22 ; Revista Nordestina de Biologia Volume 2013 ; 2013 ; recursive url: 	http://periodicos.ufpb.br/ojs2/index.php/revnebio/article/view/12155/www.ufpe.br/www.ufpe.br/>
-      au < manifest ; 2014 ; 23 ; Revista Nordestina de Biologia Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 23 ; Revista Nordestina de Biologia Volume 2014 ; 2014 ; >
 
   }
 
@@ -954,7 +954,7 @@
       au < released ; 2010 ; 1 ; Revista Temas em Educação Volume 2010 ; 2010 ; >
       au < released ; 2012 ; 2 ; Revista Temas em Educação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 3 ; Revista Temas em Educação Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 4 ; Revista Temas em Educação Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 4 ; Revista Temas em Educação Volume 2014 ; 2014 ; >
 
   }
 
@@ -986,7 +986,7 @@
       au < released ; 2011 ; 14 ; Sæculum – Revista de História Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 15 ; Sæculum – Revista de História Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 16 ; Sæculum – Revista de História Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 17 ; Sæculum – Revista de História Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 17 ; Sæculum – Revista de História Volume 2014 ; 2014 ; >
 
   }
 
@@ -1002,7 +1002,7 @@
       param[journal_id] = tematica
 
       au < released ; 2013 ; 1 ; Temática Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 2 ; Temática Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 2 ; Temática Volume 2014 ; 2014 ; >
 
   }
 
