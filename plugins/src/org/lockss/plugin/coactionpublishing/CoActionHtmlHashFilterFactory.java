@@ -33,18 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.coactionpublishing;
 
 import java.io.InputStream;
-import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ojs2.OJS2HtmlFilterFactory;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
 public class CoActionHtmlHashFilterFactory extends OJS2HtmlFilterFactory {
   
@@ -59,15 +54,8 @@ public class CoActionHtmlHashFilterFactory extends OJS2HtmlFilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "bannerBar"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "coactionBar"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "sidebar", true),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "alm"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "separator"),
-        HtmlNodeFilters.tagWithTextRegex("span", "Metrics powered by.+PLOS ALM", true),
-        new TagNameFilter("br"),
     };
     
-    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
-    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 }
