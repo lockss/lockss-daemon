@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -556,10 +556,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "(" + PLUGIN_ID_COLUMN
       + "," + AU_KEY_COLUMN
       + "," + PRIORITY_COLUMN
+      + "," + FULLY_REINDEX_COLUMN
       + ") values (?,?,"
       + "(select coalesce(max(" + PRIORITY_COLUMN + "), 0) + 1"
       + " from " + PENDING_AU_TABLE
-      + " where " + PRIORITY_COLUMN + " >= 0))";
+      + " where " + PRIORITY_COLUMN + " >= 0),?)";
 
   // Query to add an enabled pending AU at the bottom of the current priority
   // list using MySQL.
@@ -568,11 +569,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "(" + PLUGIN_ID_COLUMN
       + "," + AU_KEY_COLUMN
       + "," + PRIORITY_COLUMN
+      + "," + FULLY_REINDEX_COLUMN
       + ") values (?,?,"
       + "(select next_priority from "
       + "(select coalesce(max(" + PRIORITY_COLUMN + "), 0) + 1 as next_priority"
       + " from " + PENDING_AU_TABLE
-      + " where " + PRIORITY_COLUMN + " >= 0) as temp_pau_table))";
+      + " where " + PRIORITY_COLUMN + " >= 0) as temp_pau_table),?)";
 
   // Query to add a disabled pending AU.
   private static final String INSERT_DISABLED_PENDING_AU_QUERY = "insert into "
@@ -4722,7 +4724,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public boolean enableAndAddAuToReindex(ArchivalUnit au, Connection conn,
       PreparedStatement insertPendingAuBatchStatement, boolean inBatch,
       boolean fullReindex) {
-    final String DEBUG_HEADER = "addAuToReindex(): ";
+    final String DEBUG_HEADER = "enableAndAddAuToReindex(): ";
 
     synchronized (activeReindexingTasks) {
 
@@ -4745,14 +4747,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         // the pending list.
         if (!rescheduleAuTask(au.getAuId())) {
           addToPendingAusIfNotThere(conn, Collections.singleton(au),
-              insertPendingAuBatchStatement, inBatch);
+              insertPendingAuBatchStatement, inBatch, fullReindex);
         }
 
-        // force a full reindex for AU
-        if (fullReindex) {
-          updateAuFullReindexing(conn, au, true);
-        }
-        
         startReindexing(conn);
 
         DbManager.commitOrRollback(conn, log);
@@ -4881,17 +4878,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param aus
    *          A Collection<ArchivalUnit> with the AUs to add.
+   * @param fullReindex
+   *          A boolean indicating whether a full reindex of the Archival Unit
+   *          is required.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus)
-      throws DbException {
+  void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus,
+      boolean fullReindex) throws DbException {
     PreparedStatement insertPendingAuBatchStatement = null;
 
     try {
       insertPendingAuBatchStatement = getInsertPendingAuBatchStatement(conn);
-      addToPendingAusIfNotThere(conn, aus, insertPendingAuBatchStatement,
-	  false);
+      addToPendingAusIfNotThere(conn, aus, insertPendingAuBatchStatement, false,
+	  fullReindex);
     } finally {
       DbManager.safeCloseStatement(insertPendingAuBatchStatement);
     }
@@ -4911,19 +4911,27 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param inBatch
    *          A boolean indicating whether adding these AUs to the list of
    *          pending AUs to reindex should be performed as part of a batch.
+   * @param fullReindex
+   *          A boolean indicating whether a full reindex of the Archival Unit
+   *          is required.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus,
-      PreparedStatement insertPendingAuBatchStatement, boolean inBatch)
-      throws DbException {
+      PreparedStatement insertPendingAuBatchStatement, boolean inBatch,
+      boolean fullReindex) throws DbException {
     final String DEBUG_HEADER = "addToPendingAusIfNotThere(): ";
     PreparedStatement selectPendingAu =
 	dbManager.prepareStatement(conn, FIND_PENDING_AU_QUERY);
 
     ResultSet results = null;
-    log.debug2(DEBUG_HEADER + "maxPendingAuBatchSize = " + maxPendingAuBatchSize);
-    log.debug2(DEBUG_HEADER + "Number of pending aus to add: " + aus.size());
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "maxPendingAuBatchSize = "
+	  + maxPendingAuBatchSize);
+      log.debug2(DEBUG_HEADER + "Number of pending aus to add: " + aus.size());
+      log.debug2(DEBUG_HEADER + "inBatch = " + inBatch);
+      log.debug2(DEBUG_HEADER + "fullReindex = " + fullReindex);
+    }
 
     try {
       // Loop through all the AUs.
@@ -4948,6 +4956,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 		+ " to pending list");
             insertPendingAuBatchStatement.setString(1, pluginId);
             insertPendingAuBatchStatement.setString(2, auKey);
+            insertPendingAuBatchStatement.setBoolean(3, fullReindex);
             insertPendingAuBatchStatement.addBatch();
             pendingAuBatchCurrentSize++;
 	    log.debug3(DEBUG_HEADER + "pendingAuBatchCurrentSize = "
@@ -4963,8 +4972,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 		  + pendingAuBatchCurrentSize);
 	    }
           } else {
-            log.debug3(DEBUG_HEADER+ "Not adding au " + au.getName()
-                       + " to pending list because it is already on the list");
+            if (fullReindex) {
+              updateAuFullReindexing(conn, au, true);
+            } else {
+              log.debug3(DEBUG_HEADER+ "Not adding au " + au.getName()
+        	  + " to pending list because it is already on the list");
+            }
           }
 
           DbManager.safeCloseResultSet(results);

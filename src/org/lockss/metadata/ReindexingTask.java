@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -803,11 +803,6 @@ public class ReindexingTask extends StepTask {
               pokeWDog();
             }
 
-            // turn off full reindexing flag once full reindexing is complete
-            if (needFullReindex) {
-              mdManager.updateAuFullReindexing(conn, au, false);
-            }
-
             // Remove the AU just re-indexed from the list of AUs pending to be
             // re-indexed.
             mdManager.removeFromPendingAus(conn, auId);
@@ -871,13 +866,8 @@ public class ReindexingTask extends StepTask {
                   + au.getName());
 
               // Add the re-schedulable AU to the end of the pending list.
-              mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au));
-            }
-
-            // require full reindexing for reschedule task 
-            // if this task required full reindexing
-            if (needFullReindex) {
-              mdManager.updateAuFullReindexing(conn, au, true);
+              mdManager.addToPendingAusIfNotThere(conn,
+        	  Collections.singleton(au), needFullReindex);
             }
 
             // Complete the database transaction.
