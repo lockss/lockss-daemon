@@ -38,4 +38,22 @@
 
   }
 
+  {
+    title <
+      name = Blake An Illustrated Quarterly ;
+      eissn = 0160-628X
+    >
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
+      
+      param[base_url] = http://blake.lib.rochester.edu/blakeojs/
+      param[journal_id] = blake
+
+      au < exists ; 2011 ; Blake An Illustrated Quarterly Volume 45 ; 45 ; 2011 >
+      au < exists ; 2012 ; Blake An Illustrated Quarterly Volume 45-46 ; 45-46 ; 2012 >
+      au < exists ; 2013 ; Blake An Illustrated Quarterly Volume 46-47 ; 46-47 ; 2013 >
+      au < exists ; 2014 ; Blake An Illustrated Quarterly Volume 47-48 ; 47-48 ; 2014 >
+      au < exists ; 2015 ; Blake An Illustrated Quarterly Volume 48-49 ; 48-49 ; 2015 >
+
+  }
 }
