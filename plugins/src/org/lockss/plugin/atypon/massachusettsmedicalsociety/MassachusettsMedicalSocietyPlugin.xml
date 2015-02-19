@@ -12,11 +12,6 @@
     <string>1</string>
   </entry>
   <entry>
-    <!-- needs globally permitted hosts (instead of base_url2/cdn) -->
-    <string>required_daemon_version</string>
-    <string>1.67.0</string>
-  </entry>
-  <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
