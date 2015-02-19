@@ -75,8 +75,8 @@
     <string>au_crawlrules</string>
     <!--  CRAWL COMMENT BLOCK
     - "imgJawr" exclusion is Taylor&Francis child specific. See RU4586 - removeable after that gets dealt with
-    - include all image/css/js files that live under base_url (but not as query arguments)
-    - include all content from cdn (getting js, css and common images)
+    - include all content from cdn (eg js, css and common images) cdn.nejm.org 
+      (For now, OR in other global urls eg mathjax)
     - specifically include images/figures/tables that live under
          <base>/na101/home/literatum/publisher/<publisher_id>/journals/<dirname>/<journal_id>/....
          in case it has a suffix not covered by the first rule
@@ -104,7 +104,7 @@
     <list>
       <string>2,"^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", base_url</string>
       <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
-      <string>1,"^https?://cdn\.%s\.org/.", journal_id</string>
+      <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
       <string>1,"^%stoc/%s(\.[0-9]+)?/%s($|/)", base_url, journal_id, volume_name</string>
       <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
@@ -234,6 +234,26 @@
       </entry>
     </map>
   </entry>
+  <!-- au_permitted_host_pattern:
+       Necessary for using global hosts (eg cdn) (instead of using base_url2),
+       Until unwieldy, confine these settings to BaseAtyponParent
+       Also, au_permitted_host_pattern must find match in lockss-daemon config (eg):
+       org.lockss.crawler.allowedPluginPermittedHosts =cdn\.nejm\.org -->
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <string>"cdn\.nejm\.org"</string>
+  </entry>  
+  <!-- if use a global host AND that url differs from (eg) ip to ip, may need to 
+       use these patterns to either repair/exclude files from polling
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string></string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string></string>
+  </entry>
+  -->  
   <!-- GLN children require a plugin_au_config_user_msg, which is a printf -->
   <!-- Here is a default version, but plugins may need to customize -->
   <!-- CLOCKSS children must turn it off-->

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>1</string>
   </entry>
   <entry>
     <!-- needs globally permitted hosts (instead of base_url2/cdn) -->
@@ -25,7 +25,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -35,7 +35,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Massachusetts Medical Society Plugin</string>
+    <string>Massachusetts Medical Society (Atypon) Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>  
    <entry>
     <string>plugin_publishing_platform</string>
@@ -51,23 +51,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Massachusetts Medical Society Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-  </entry>
-  <!-- Necessary for using cdn (instead of using base_url2),
-       Also, au_permitted_host_pattern must find match in lockss-daemon config in
-       org.lockss.crawler.allowedPluginPermittedHosts -->
-  <entry>
-    <string>au_permitted_host_pattern</string>
-    <string>"cdn\.nejm\.org"</string>
-  </entry>
-  <entry>
-    <!-- if use cdn -->
-    <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>/(css|js)_[^/]+[.](css|js)$</string>
-  </entry>
-  <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>/(css|js)_[^/]+[.](css|js)$</string>
+    <string>"Massachusetts Medical Society Plugin (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
