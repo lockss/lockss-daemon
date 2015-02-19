@@ -32,12 +32,15 @@
 package org.lockss.metadata;
 
 import static org.lockss.db.SqlConstants.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.db.DbException;
@@ -120,7 +123,8 @@ public class MetadataStarter extends LockssRunnable {
 
     // Loop through all the AUs to see which need to be on the pending queue.
     for (ArchivalUnit au : pluginManager.getAllAus()) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "AU = " + au.getName());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Plugin AU = " + au.getName());
 
       // Check whether the AU has not been crawled.
       if (!AuUtil.hasCrawled(au)) {
@@ -144,19 +148,30 @@ public class MetadataStarter extends LockssRunnable {
     }
     log.debug2(DEBUG_HEADER + "Done examining AUs");
 
-    // Add the AUs to be indexed to the table of pending AUs, if not already
-    // there.
-    try {
-      mdManager.addToPendingAusIfNotThere(conn,
-	  (Collection<ArchivalUnit>) CollectionUtil
-	      .randomPermutation(toBeIndexed));
-      DbManager.commitOrRollback(conn, log);
-      log.debug2(DEBUG_HEADER + "Queue updated");
-    } catch (DbException dbe) {
-      log.error("Cannot add to pending AUs table \"" + PENDING_AU_TABLE + "\"",
-		dbe);
-      DbManager.safeRollbackAndClose(conn);
-      return;
+    // Loop in random order through all the AUs to to be added the pending
+    // queue.
+    for (ArchivalUnit au : (Collection<ArchivalUnit>)
+	    CollectionUtil.randomPermutation(toBeIndexed)) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Pending AU = " + au.getName());
+
+      try {
+      	// Determine whether the AU needs to be fully reindexed.
+	boolean fullReindex = mdManager.isAuMetadataForObsoletePlugin(conn, au);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "fullReindex = " + fullReindex);
+
+   	// Add the AU to the table of pending AUs, if not already there.
+	mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au),
+	    fullReindex);
+	DbManager.commitOrRollback(conn, log);
+	log.debug2(DEBUG_HEADER + "Queue updated");
+      } catch (DbException dbe) {
+	log.error("Cannot add to pending AUs table \"" + PENDING_AU_TABLE
+	    + "\"", dbe);
+	DbManager.safeRollbackAndClose(conn);
+	return;
+      }
     }
 
     // Start the reindexing process.

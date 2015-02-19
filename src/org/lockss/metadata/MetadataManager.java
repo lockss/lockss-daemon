@@ -2402,7 +2402,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public boolean enableAndAddAuToReindex(ArchivalUnit au, Connection conn,
       PreparedStatement insertPendingAuBatchStatement, boolean inBatch,
       boolean fullReindex) {
-    final String DEBUG_HEADER = "addAuToReindex(): ";
+    final String DEBUG_HEADER = "enableAndAddAuToReindex(): ";
 
     synchronized (activeReindexingTasks) {
 
@@ -2425,12 +2425,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         // the pending list.
         if (!rescheduleAuTask(au.getAuId())) {
           addToPendingAusIfNotThere(conn, Collections.singleton(au),
-              insertPendingAuBatchStatement, inBatch);
-        }
-
-        // force a full reindex for AU
-        if (fullReindex) {
-          mdManagerSql.updateAuFullReindexing(conn, au, true);
+              insertPendingAuBatchStatement, inBatch, fullReindex);
         }
         
         startReindexing(conn);
@@ -2542,18 +2537,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param aus
    *          A Collection<ArchivalUnit> with the AUs to add.
+   * @param fullReindex
+   *          A boolean indicating whether a full reindex of the Archival Unit
+   *          is required.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus)
-      throws DbException {
+  void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus,
+      boolean fullReindex) throws DbException {
     PreparedStatement insertPendingAuBatchStatement = null;
 
     try {
       insertPendingAuBatchStatement =
 	  mdManagerSql.getInsertPendingAuBatchStatement(conn);
-      addToPendingAusIfNotThere(conn, aus, insertPendingAuBatchStatement,
-	  false);
+      addToPendingAusIfNotThere(conn, aus, insertPendingAuBatchStatement, false,
+	  fullReindex);
     } finally {
       DbManager.safeCloseStatement(insertPendingAuBatchStatement);
     }
@@ -2573,16 +2571,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param inBatch
    *          A boolean indicating whether adding these AUs to the list of
    *          pending AUs to reindex should be performed as part of a batch.
+   * @param fullReindex
+   *          A boolean indicating whether a full reindex of the Archival Unit
+   *          is required.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus,
-      PreparedStatement insertPendingAuBatchStatement, boolean inBatch)
-      throws DbException {
+      PreparedStatement insertPendingAuBatchStatement, boolean inBatch,
+      boolean fullReindex) throws DbException {
     final String DEBUG_HEADER = "addToPendingAusIfNotThere(): ";
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER
-	+ "Number of pending aus to add: " + aus.size());
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "Number of pending aus to add: " + aus.size());
+      log.debug2(DEBUG_HEADER + "inBatch = " + inBatch);
+      log.debug2(DEBUG_HEADER + "fullReindex = " + fullReindex);
+    }
 
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "maxPendingAuBatchSize = "
 	  + maxPendingAuBatchSize);
@@ -2603,7 +2607,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             // Only insert if entry does not exist.
 	    log.debug3(DEBUG_HEADER + "Adding au " + au.getName()
 		+ " to pending list");
-            mdManagerSql.addAuToPendingAusBatch(pluginId, auKey,
+            mdManagerSql.addAuToPendingAusBatch(pluginId, auKey, fullReindex,
         	insertPendingAuBatchStatement);
             pendingAuBatchCurrentSize++;
 	    log.debug3(DEBUG_HEADER + "pendingAuBatchCurrentSize = "
@@ -2615,8 +2619,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	      addAuBatchToPendingAus(insertPendingAuBatchStatement);
 	    }
           } else {
-            log.debug3(DEBUG_HEADER+ "Not adding au " + au.getName()
-                       + " to pending list because it is already on the list");
+            if (fullReindex) {
+              mdManagerSql.updateAuFullReindexing(conn, au, true);
+            } else {
+              log.debug3(DEBUG_HEADER+ "Not adding au " + au.getName()
+        	  + " to pending list because it is already on the list");
+            }
           }
 	}
       }

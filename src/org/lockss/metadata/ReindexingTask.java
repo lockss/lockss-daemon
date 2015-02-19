@@ -808,11 +808,6 @@ public class ReindexingTask extends StepTask {
               pokeWDog();
             }
 
-            // turn off full reindexing flag once full reindexing is complete
-            if (needFullReindex) {
-              mdManagerSql.updateAuFullReindexing(conn, au, false);
-            }
-
             // Remove the AU just re-indexed from the list of AUs pending to be
             // re-indexed.
             mdManagerSql.removeFromPendingAus(conn, auId);
@@ -876,13 +871,8 @@ public class ReindexingTask extends StepTask {
                   + au.getName());
 
               // Add the re-schedulable AU to the end of the pending list.
-              mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au));
-            }
-
-            // require full reindexing for reschedule task 
-            // if this task required full reindexing
-            if (needFullReindex) {
-              mdManagerSql.updateAuFullReindexing(conn, au, true);
+              mdManager.addToPendingAusIfNotThere(conn,
+        	  Collections.singleton(au), needFullReindex);
             }
 
             // Complete the database transaction.

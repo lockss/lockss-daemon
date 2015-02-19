@@ -411,10 +411,11 @@ public class MetadataManagerSql {
       + "(" + PLUGIN_ID_COLUMN
       + "," + AU_KEY_COLUMN
       + "," + PRIORITY_COLUMN
+      + "," + FULLY_REINDEX_COLUMN
       + ") values (?,?,"
       + "(select coalesce(max(" + PRIORITY_COLUMN + "), 0) + 1"
       + " from " + PENDING_AU_TABLE
-      + " where " + PRIORITY_COLUMN + " >= 0))";
+      + " where " + PRIORITY_COLUMN + " >= 0),?)";
 
   // Query to add an enabled pending AU at the bottom of the current priority
   // list using MySQL.
@@ -423,11 +424,12 @@ public class MetadataManagerSql {
       + "(" + PLUGIN_ID_COLUMN
       + "," + AU_KEY_COLUMN
       + "," + PRIORITY_COLUMN
+      + "," + FULLY_REINDEX_COLUMN
       + ") values (?,?,"
       + "(select next_priority from "
       + "(select coalesce(max(" + PRIORITY_COLUMN + "), 0) + 1 as next_priority"
       + " from " + PENDING_AU_TABLE
-      + " where " + PRIORITY_COLUMN + " >= 0) as temp_pau_table))";
+      + " where " + PRIORITY_COLUMN + " >= 0) as temp_pau_table),?)";
 
   // Query to find a pending AU by its key and plugin identifier.
   private static final String FIND_PENDING_AU_QUERY = "select "
@@ -2918,6 +2920,9 @@ public class MetadataManagerSql {
    *          A String with the plugin identifier.
    * @param auKey
    *          A String with the Archival Unit key.
+   * @param fullReindex
+   *          A boolean indicating whether a full reindex of the Archival Unit
+   *          is required.
    * @param insertPendingAuBatchStatement
    *          A PreparedStatement with the SQL staement used to add Archival
    *          Units to the pending Archival Units table in the database.
@@ -2925,9 +2930,11 @@ public class MetadataManagerSql {
    *           if any problem occurred accessing the database.
    */
   void addAuToPendingAusBatch(String pluginId, String auKey,
-      PreparedStatement insertPendingAuBatchStatement) throws SQLException {
+      boolean fullReindex, PreparedStatement insertPendingAuBatchStatement)
+	  throws SQLException {
     insertPendingAuBatchStatement.setString(1, pluginId);
     insertPendingAuBatchStatement.setString(2, auKey);
+    insertPendingAuBatchStatement.setBoolean(3, fullReindex);
     insertPendingAuBatchStatement.addBatch();
   }
 
