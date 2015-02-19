@@ -135,6 +135,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"action/showPopup?citid=citart1&id=T0003&doi=10.1080/19416520.2010.495530", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"action/showPopup?citid=citart1&id=CIT0013&doi=10.1080/19416521003732362", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"action/showFullPopup?doi=10.1206%2F3743.2&id=m05", true, ABAu, cus);
+    // require option argument before doi has value
+    shouldCacheTest(ROOT_URL+"action/showFullPopup?id=foo&doi=10.1206%2F3743.2", true, ABAu, cus);
+    // missing value
+    shouldCacheTest(ROOT_URL+"action/showFullPopup?id=&doi=10.1206%2F3743.2", false, ABAu, cus);
     // images figures and tables can live here
     shouldCacheTest(ROOT_URL+"na101/home/literatum/publisher/apha/journals/covergifs/xxxx/2005/15200477-86.6/cover.jpg", true, ABAu, cus);   
     
