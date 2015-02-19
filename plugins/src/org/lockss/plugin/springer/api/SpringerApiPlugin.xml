@@ -81,7 +81,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Springer API Plugin, Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+    <string>"Springer API Plugin, Base URL %s, API URL %s, ISSN %s, Volume %s", base_url, api_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

@@ -150,7 +150,7 @@ class SpringerPamLinkExtractor implements LinkExtractor {
                              Attributes attributes)
         throws SAXException {
       super.startElement(uri, localName, qName, attributes);
-      if (!"prism:doi".equalsIgnoreCase(qName)) {
+      if ("prism:doi".equalsIgnoreCase(qName)) {
         doiBuilder = new StringBuilder();
       }
     }
