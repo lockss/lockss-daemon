@@ -112,7 +112,7 @@
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
       <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string>          
-      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
+      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
     </list>
   </entry>
   <entry>
