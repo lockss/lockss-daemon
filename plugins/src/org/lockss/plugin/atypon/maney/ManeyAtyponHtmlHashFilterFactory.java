@@ -34,6 +34,7 @@ package org.lockss.plugin.atypon.maney;
 
 import java.io.InputStream;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -49,9 +50,11 @@ public class ManeyAtyponHtmlHashFilterFactory
       InputStream in,
       String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
+        // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
         
-        // handled by parent:
-        // pdfplus file sise
+        // this is controversial - draconian; what about updated metadata
+        new TagNameFilter("head"),
+        new TagNameFilter("noscript"),
         
         // toc - pageHeader - top down to breadcrumbs, above journalHeader
         // http://www.maneyonline.com/toc/his/36/4
@@ -111,7 +114,11 @@ public class ManeyAtyponHtmlHashFilterFactory
         HtmlNodeFilters.tagWithAttribute("div",  "id", "MathJax_Message"),
         // full - right column, "Related Content Search"
         HtmlNodeFilters.tagWithAttributeRegex("section",  "class", 
-                                              "literatumRelatedContentSearch")
+                                              "literatumRelatedContentSearch"),
+        // all pages - verify email message appears in certain content
+        // machines but not all
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "literatumMailVerificationWidget"),
     };
 
     // super.createFilteredInputStream adds maney filters to the 
