@@ -164,7 +164,8 @@ public class PdfBoxPage implements PdfPage {
   public List<InputStream> getAllByteStreams() throws PdfException {
     List<InputStream> ret = new ArrayList<InputStream>();
     PdfTokenStream pageTokenStream = getPageTokenStream();
-    recursivelyFindByteStreams(pageTokenStream, pdPage.getResources(), ret);
+    // Use findResources(), not getResources() (inspired by getAllTokenStreams() below)
+    recursivelyFindByteStreams(pageTokenStream, pdPage.findResources(), ret);
     return ret;
   }
   
@@ -173,7 +174,8 @@ public class PdfBoxPage implements PdfPage {
     List<PdfTokenStream> ret = new ArrayList<PdfTokenStream>();
     PdfTokenStream pageTokenStream = getPageTokenStream();
     ret.add(pageTokenStream);
-    recursivelyFindTokenStreams(pageTokenStream, pdPage.getResources(), ret);
+    // Use findResources(), not getResources() (e.g. PDFBox 1.8.7 PDFTextStripper.java line 460)
+    recursivelyFindTokenStreams(pageTokenStream, pdPage.findResources(), ret);
     return ret;
   }
 
@@ -273,10 +275,15 @@ public class PdfBoxPage implements PdfPage {
             }
             else {
               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
-              PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
-              recursivelyFindByteStreams(referencedTokenStream,
-                                         pdxObjectForm.getResources(),
-                                         ret);
+              PDResources referencedResources = pdxObjectForm.getResources();
+              if (referencedResources == null) {
+                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm, pdResources);
+                recursivelyFindByteStreams(referencedTokenStream, pdResources, ret);
+              }
+              else {
+                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
+                recursivelyFindByteStreams(referencedTokenStream, referencedResources, ret);
+              }
             }
           }
           else {
@@ -317,11 +324,17 @@ public class PdfBoxPage implements PdfPage {
             PDXObject xObject = getPDXObjectByName(pdResources, operand.getName());
             if (isTokenStream(xObject)) {
               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
-              PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
-              ret.add(referencedTokenStream);
-              recursivelyFindTokenStreams(referencedTokenStream,
-                                          pdxObjectForm.getResources(),
-                                          ret);
+              PDResources referencedResources = pdxObjectForm.getResources();
+              if (referencedResources == null) {
+                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm, pdResources);
+                ret.add(referencedTokenStream);
+                recursivelyFindTokenStreams(referencedTokenStream, pdResources, ret);
+              }
+              else {
+                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
+                ret.add(referencedTokenStream);
+                recursivelyFindTokenStreams(referencedTokenStream, referencedResources, ret);
+              }
             }
           }
           else {
