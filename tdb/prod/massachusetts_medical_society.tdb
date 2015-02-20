@@ -38,22 +38,21 @@
       param[base_url] = http://www.nejm.org/
       param[journal_id] = nejm
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = PD-1189, hash filter needed for most view block
 
-      au < notReady ; 2008 ; New England Journal of Medicine Volume 358 ; 358 > 
+      au < testing ; 2008 ; New England Journal of Medicine Volume 358 ; 358 > 
       au < testing ; 2008 ; New England Journal of Medicine Volume 359 ; 359 > 
-      au < manifest ; 2009 ; New England Journal of Medicine Volume 360 ; 360 > 
-      au < manifest ; 2009 ; New England Journal of Medicine Volume 361 ; 361 > 
-      au < manifest ; 2010 ; New England Journal of Medicine Volume 362 ; 362 > 
-      au < manifest ; 2010 ; New England Journal of Medicine Volume 363 ; 363 > 
-      au < manifest ; 2011 ; New England Journal of Medicine Volume 364 ; 364 > 
-      au < manifest ; 2011 ; New England Journal of Medicine Volume 365 ; 365 > 
-      au < manifest ; 2012 ; New England Journal of Medicine Volume 366 ; 366 > 
-      au < manifest ; 2012 ; New England Journal of Medicine Volume 367 ; 367 > 
-      au < manifest ; 2013 ; New England Journal of Medicine Volume 368 ; 368 > 
-      au < manifest ; 2013 ; New England Journal of Medicine Volume 369 ; 369 > 
-      au < manifest ; 2014 ; New England Journal of Medicine Volume 370 ; 370 > 
-      au < manifest ; 2014 ; New England Journal of Medicine Volume 371 ; 371 > 
+      au < testing ; 2009 ; New England Journal of Medicine Volume 360 ; 360 > 
+      au < testing ; 2009 ; New England Journal of Medicine Volume 361 ; 361 > 
+      au < testing ; 2010 ; New England Journal of Medicine Volume 362 ; 362 > 
+      au < testing ; 2010 ; New England Journal of Medicine Volume 363 ; 363 > 
+      au < testing ; 2011 ; New England Journal of Medicine Volume 364 ; 364 > 
+      au < testing ; 2011 ; New England Journal of Medicine Volume 365 ; 365 > 
+      au < testing ; 2012 ; New England Journal of Medicine Volume 366 ; 366 > 
+      au < testing ; 2012 ; New England Journal of Medicine Volume 367 ; 367 > 
+      au < testing ; 2013 ; New England Journal of Medicine Volume 368 ; 368 > 
+      au < testing ; 2013 ; New England Journal of Medicine Volume 369 ; 369 > 
+      au < testing ; 2014 ; New England Journal of Medicine Volume 370 ; 370 > 
+      au < testing ; 2014 ; New England Journal of Medicine Volume 371 ; 371 > 
 
     }
 
