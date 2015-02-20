@@ -107,6 +107,8 @@ public class BaseAtyponMetadataUtil {
     // Now check journalTitle with some flexibility for string differences
     if (isInAu && !(StringUtils.isEmpty(foundJournalTitle) || StringUtils.isEmpty(AU_journal_title)) ) {
       // normalize titles to catch unimportant differences
+      log.debug3("pre-normalized title from AU is : " + AU_journal_title);
+      log.debug3("pre-normalized title from metadata is : " + foundJournalTitle);
       String normAuTitle = normalizeTitle(AU_journal_title);
       String normFoundTitle = normalizeTitle(foundJournalTitle);
       log.debug3("normalized title from AU is : " + normAuTitle);
@@ -125,6 +127,7 @@ public class BaseAtyponMetadataUtil {
   /* Because we compare a title from metadata with the title in the AU 
    * (as set in the tdb file) to make sure the item belongs in this AU,
    * we need to minimize potential for mismatch by normalizing the titles
+   * Remove any apostrophes - eg "T'ang" becomes "Tang"; "Freddy's" ==> "Freddys"
    */
   static private final Map<String, String> AtyponNormalizeMap =
       new HashMap<String,String>();
@@ -134,6 +137,10 @@ public class BaseAtyponMetadataUtil {
     AtyponNormalizeMap.put("\u2014", "-"); //em-dash to hyphen
     AtyponNormalizeMap.put("\u201c", "\""); //ldquo to basic quote
     AtyponNormalizeMap.put("\u201d", "\""); //rdquo to basic quote
+    AtyponNormalizeMap.put("'", ""); //apostrophe to nothing - remove
+    AtyponNormalizeMap.put("\u2018", ""); //single left quote to nothing - remove
+    AtyponNormalizeMap.put("\u2019", ""); //single right quote (apostrophe alternative) to nothing - remove
+    
   }  
 
 
@@ -157,7 +164,7 @@ public class BaseAtyponMetadataUtil {
     if (outTitle.startsWith("the "))  {
       outTitle = outTitle.substring(4);// get over the "the " 
     }
-
+    
     // Using the normalization map, substitute characters
     for (Map.Entry<String, String> norm_entry : AtyponNormalizeMap.entrySet())
     {
