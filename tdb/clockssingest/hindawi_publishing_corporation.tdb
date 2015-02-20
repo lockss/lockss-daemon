@@ -6055,7 +6055,7 @@
     param[journal_id] = jcli
     
     au < manifest ; exists ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Climatology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6071,7 +6071,7 @@
     param[journal_id] = jcoat
     
     au < manifest ; exists ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Coatings Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6092,7 +6092,7 @@
     au < manifest ; exists ; 2011 ; Journal of Combustion Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Combustion Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -6108,7 +6108,7 @@
     param[journal_id] = jca
     
     au < manifest ; exists ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Complex Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6124,7 +6124,7 @@
     param[journal_id] = jcs
     
     au < manifest ; exists ; 2013 ; Journal of Complex Systems Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Complex Systems Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Complex Systems Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Complex Systems Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6140,7 +6140,7 @@
     param[journal_id] = jcomp
     
     au < manifest ; exists ; 2013 ; Journal of Composites Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Composites Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6156,7 +6156,7 @@
     param[journal_id] = jcengi
     
     au < manifest ; exists ; 2013 ; Journal of Computational Engineering Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Computational Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Computational Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Computational Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6171,7 +6171,7 @@
 
     param[journal_id] = jces
     
-    au < testing ; exists ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Computational Environmental Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6187,7 +6187,7 @@
     param[journal_id] = jcm
     
     au < manifest ; exists ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Computational Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
