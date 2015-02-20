@@ -33,12 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.pdf.pdfbox;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 
+import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdfwriter.ContentStreamWriter;
 import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
-import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
+import org.apache.pdfbox.pdmodel.graphics.xobject.*;
 import org.lockss.pdf.*;
 
 /**
@@ -120,11 +121,22 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
   @Override
   public void setTokens(List<PdfToken> newTokens) throws PdfException {
     try {
+      PDXObjectForm oldForm = pdXObjectForm;
       PDStream newPdStream = makeNewPdStream();
-      newPdStream.getStream().setName("Subtype", PDXObjectForm.SUB_TYPE);
+      newPdStream.getStream().setName(COSName.SUBTYPE, PDXObjectForm.SUB_TYPE);
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
       tokenWriter.writeTokens(PdfBoxTokens.unwrapList(newTokens));
-      pdXObjectForm.getCOSStream().replaceWithStream(newPdStream.getStream());
+      pdXObjectForm = new PDXObjectForm(newPdStream);
+      pdXObjectForm.setResources(pdResources);
+      Map<String, PDXObject> xobjects = pdResources.getXObjects();
+      for (Map.Entry<String, PDXObject> ent : xobjects.entrySet()) {
+        String key = ent.getKey();
+        PDXObject val = ent.getValue();
+        if (val == oldForm) {
+          xobjects.put(key, pdXObjectForm);
+        }
+      }
+//      pdXObjectForm.getCOSStream().replaceWithStream(newPdStream.getStream());
     }
     catch (IOException ioe) {
       throw new PdfException("Error while writing XObject token stream", ioe);
