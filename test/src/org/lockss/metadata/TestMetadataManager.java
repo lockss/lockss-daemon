@@ -206,6 +206,7 @@ public class TestMetadataManager extends LockssTestCase {
 
   public void testAll() throws Exception {
     runCreateMetadataTest();
+    runTestPendingAu();
     runTestPendingAusBatch();
     runModifyMetadataTest();
     runDeleteMetadataTest();
@@ -343,8 +344,101 @@ public class TestMetadataManager extends LockssTestCase {
 	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus())
 	.size());
 
-    con.rollback();
-    con.commit();
+    DbManager.safeRollbackAndClose(con);
+  }
+
+  private void runTestPendingAu() throws Exception {
+    // We are only testing here the addition of AUs to the table of pending AUs,
+    // so disable re-indexing.
+    metadataManager.setIndexingEnabled(false);
+
+    Connection conn = dbManager.getConnection();
+
+    PreparedStatement insertPendingAuBatchStatement =
+	metadataManager.getInsertPendingAuBatchStatement(conn);
+
+    // Add one AU for incremental metadata indexing.
+    metadataManager.enableAndAddAuToReindex(sau0, conn,
+	insertPendingAuBatchStatement, false, false);
+    
+    // Check that the row is there.
+    String countPendingAuQuery = "select count(*) from " + PENDING_AU_TABLE;
+    checkRowCount(conn, countPendingAuQuery, 1);
+
+    // Make sure that it is marked for incremental metadata indexing.
+    assertFalse(metadataManagerSql.needAuFullReindexing(conn, sau0));
+
+    // Add the same AU for full metadata indexing.
+    metadataManager.enableAndAddAuToReindex(sau0, conn,
+	insertPendingAuBatchStatement, false, true);
+    
+    // Check that the same row is there.
+    checkRowCount(conn, countPendingAuQuery, 1);
+
+    // Make sure that it is marked for incremental metadata indexing.
+    assertTrue(metadataManagerSql.needAuFullReindexing(conn, sau0));
+
+    // Add the same AU for incremental metadata indexing.
+    metadataManager.enableAndAddAuToReindex(sau0, conn,
+	insertPendingAuBatchStatement, false, true);
+    
+    // Check that the same row is there.
+    checkRowCount(conn, countPendingAuQuery, 1);
+
+    // Make sure that it is still marked for full metadata indexing.
+    assertTrue(metadataManagerSql.needAuFullReindexing(conn, sau0));
+
+    // Add another AU for full metadata indexing.
+    metadataManager.enableAndAddAuToReindex(sau1, conn,
+	insertPendingAuBatchStatement, false, true);
+    
+    // Check that the new row is there.
+    checkRowCount(conn, countPendingAuQuery, 2);
+
+    // Verify the type of metadata indexing.
+    assertTrue(metadataManagerSql.needAuFullReindexing(conn, sau0));
+    assertTrue(metadataManagerSql.needAuFullReindexing(conn, sau1));
+
+    // Add a third AU for incremental metadata indexing.
+    metadataManager.enableAndAddAuToReindex(sau2, conn,
+	insertPendingAuBatchStatement, false, false);
+    
+    // Check that the row is there.
+    checkRowCount(conn, countPendingAuQuery, 3);
+
+    // Verify the type of metadata indexing.
+    assertTrue(metadataManagerSql.needAuFullReindexing(conn, sau0));
+    assertTrue(metadataManagerSql.needAuFullReindexing(conn, sau1));
+    assertFalse(metadataManagerSql.needAuFullReindexing(conn, sau2));
+
+    // Clear the table of pending AUs.
+    checkExecuteCount(conn, "delete from " + PENDING_AU_TABLE, 3);
+
+    conn.commit();
+    DbManager.safeRollbackAndClose(conn);
+
+    // Re-enable re-indexing.
+    metadataManager.setIndexingEnabled(true);
+  }
+
+  private void checkRowCount(Connection conn, String query, int expectedCount)
+      throws Exception {
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
+    int count = -1;
+
+    if (resultSet.next()) {
+      count = resultSet.getInt(1);
+    }
+
+    assertEquals(expectedCount, count);
+  }
+
+  private void checkExecuteCount(Connection conn, String query,
+      int expectedCount) throws Exception {
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    int count = dbManager.executeUpdate(stmt);
+    assertEquals(expectedCount, count);
   }
 
   private void runTestPendingAusBatch() throws Exception {
@@ -363,66 +457,40 @@ public class TestMetadataManager extends LockssTestCase {
 	metadataManager.getInsertPendingAuBatchStatement(con);
 
     // Add one AU.
-    metadataManager.enableAndAddAuToReindex(sau0, con, insertPendingAuBatchStatement,
-	true);
+    metadataManager.enableAndAddAuToReindex(sau0, con,
+	insertPendingAuBatchStatement, true);
     
     // Check that nothing has been added yet.
-    String query = "select count(*) from " + PENDING_AU_TABLE;
-    PreparedStatement stmt = dbManager.prepareStatement(con, query);
-    ResultSet resultSet = dbManager.executeQuery(stmt);
-    int count = -1;
-    if (resultSet.next()) {
-      count = resultSet.getInt(1);
-    }
-    assertEquals(0, count);
+    String countPendingAuQuery = "select count(*) from " + PENDING_AU_TABLE;
+    checkRowCount(con, countPendingAuQuery, 0);
 
     // Add the second AU.
-    metadataManager.enableAndAddAuToReindex(sau1, con, insertPendingAuBatchStatement,
-	true);
+    metadataManager.enableAndAddAuToReindex(sau1, con,
+	insertPendingAuBatchStatement, true);
     
     // Check that one batch has been executed.
-    resultSet = dbManager.executeQuery(stmt);
-    count = -1;
-    if (resultSet.next()) {
-      count = resultSet.getInt(1);
-    }
-    assertEquals(2, count);
+    checkRowCount(con, countPendingAuQuery, 2);
 
     // Add the third AU.
-    metadataManager.enableAndAddAuToReindex(sau2, con, insertPendingAuBatchStatement,
-	true);
+    metadataManager.enableAndAddAuToReindex(sau2, con,
+	insertPendingAuBatchStatement, true);
 
     // Check that the third AU has not been added yet.
-    resultSet = dbManager.executeQuery(stmt);
-    count = -1;
-    if (resultSet.next()) {
-      count = resultSet.getInt(1);
-    }
-    assertEquals(2, count);
+    checkRowCount(con, countPendingAuQuery, 2);
 
     // Add the fourth AU.
-    metadataManager.enableAndAddAuToReindex(sau3, con, insertPendingAuBatchStatement,
-	true);
+    metadataManager.enableAndAddAuToReindex(sau3, con,
+	insertPendingAuBatchStatement, true);
     
     // Check that the second batch has been executed.
-    resultSet = dbManager.executeQuery(stmt);
-    count = -1;
-    if (resultSet.next()) {
-      count = resultSet.getInt(1);
-    }
-    assertEquals(4, count);
+    checkRowCount(con, countPendingAuQuery, 4);
 
     // Add the last AU.
-    metadataManager.enableAndAddAuToReindex(sau4, con, insertPendingAuBatchStatement,
-	false);
+    metadataManager.enableAndAddAuToReindex(sau4, con,
+	insertPendingAuBatchStatement, false);
 
     // Check that all the AUs have been added.
-    resultSet = dbManager.executeQuery(stmt);
-    count = -1;
-    if (resultSet.next()) {
-      count = resultSet.getInt(1);
-    }
-    assertEquals(5, count);
+    checkRowCount(con, countPendingAuQuery, 5);
     
     // insert another pending AU that is not also in the metadata manager
     insertPendingAuBatchStatement.setString(1, "XyzzyPlugin");
@@ -456,12 +524,10 @@ public class TestMetadataManager extends LockssTestCase {
     assertTrue(auids.get(5).isNew);  // most recently added
 
     // Clear the table of pending AUs.
-    query = "delete from " + PENDING_AU_TABLE;
-    stmt = dbManager.prepareStatement(con, query);
-    count = dbManager.executeUpdate(stmt);
-    assertEquals(6, count);
+    checkExecuteCount(con, "delete from " + PENDING_AU_TABLE, 6);
 
     con.commit();
+    DbManager.safeRollbackAndClose(con);
 
     // Re-enable re-indexing.
     metadataManager.setIndexingEnabled(true);
@@ -524,6 +590,8 @@ public class TestMetadataManager extends LockssTestCase {
       results.add(resultSet.getString(1));
     }
     assertEquals(42, results.size());
+
+    DbManager.safeRollbackAndClose(con);
   }
   
   private void runDeleteMetadataTest() throws Exception {
@@ -572,6 +640,8 @@ public class TestMetadataManager extends LockssTestCase {
       results.add(resultSet.getString(1));
     }
     assertEquals(21, results.size());
+
+    DbManager.safeRollbackAndClose(con);
   }
 
   /**
@@ -731,6 +801,8 @@ public class TestMetadataManager extends LockssTestCase {
 
     runTestFindBookSeries(conn, journals, mdItems, publishers, names, pIssns,
 	eIssns,	pIsbns, eIsbns);
+
+    DbManager.safeRollbackAndClose(conn);
   }
 
   private void runTestFindJournal(Connection conn, List<Long> journals,
