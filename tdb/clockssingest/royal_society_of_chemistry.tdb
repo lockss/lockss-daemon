@@ -547,8 +547,8 @@
       param[base_url2] = http://www.rsc.org/
       
       au < ready ; exists ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
-      au < testing ; exists ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
-      au < testing ; exists ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
+      au < ready ; exists ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
+      au < ready ; exists ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
       au < ready ; exists ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
       au < crawling ; exists ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 >
       au < expected ; exists ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 >
@@ -594,28 +594,28 @@
       au < ready ; exists ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 >
       au < ready ; exists ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 >
       
-      au < manifest ; exists ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 >
-      au < manifest ; exists ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 >
-      au < manifest ; exists ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 >
-      au < manifest ; exists ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 >
-      au < manifest ; exists ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 >
-      au < manifest ; exists ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 >
+      au < testing ; exists ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 >
+      au < testing ; exists ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 >
+      au < testing ; exists ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 >
+      au < testing ; exists ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 >
+      au < testing ; exists ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 >
+      au < testing ; exists ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 >
       
-      au < manifest ; exists ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 >
-      au < manifest ; exists ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 >
-      au < manifest ; exists ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 >
-      au < manifest ; exists ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 >
-      au < manifest ; exists ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 >
-      au < manifest ; exists ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 >
+      au < testing ; exists ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 >
+      au < testing ; exists ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 >
+      au < testing ; exists ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 >
+      au < testing ; exists ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 >
+      au < testing ; exists ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 >
+      au < testing ; exists ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 >
       
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 >
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 >
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 162 ; 162 ; 2013 >
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 163 ; 163 ; 2013 >
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 164 ; 164 ; 2013 >
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 165 ; 165 ; 2013 >
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 >
-      au < manifest ; exists ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 162 ; 162 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 163 ; 163 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 164 ; 164 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 165 ; 165 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 >
+      au < testing ; exists ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 >
 
     }
   }
