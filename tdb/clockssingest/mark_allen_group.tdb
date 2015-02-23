@@ -26,7 +26,7 @@
     au < manifest ; exists ; 2012 ; African Journal of Midwifery and Women's Health Volume 6 ; 6 >
     au < notReady ; exists ; 2013 ; African Journal of Midwifery and Women's Health Volume 7 ; 7 >
     au < manifest ; exists ; 2014 ; African Journal of Midwifery and Women's Health Volume 8 ; 8 >
-    au < expected ; exists ; 2015 ; African Journal of Midwifery and Women's Health Volume 9 ; 9 >
+    au < manifest ; exists ; 2015 ; African Journal of Midwifery and Women's Health Volume 9 ; 9 >
 
 
   }
@@ -216,7 +216,7 @@
     au < manifest ; exists ; 2012 ; British Journal of School Nursing Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; British Journal of School Nursing Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; British Journal of School Nursing Volume 9 ; 9 >
-    au < expected ; exists ; 2015 ; British Journal of School Nursing Volume 10 ; 10 >
+    au < manifest ; exists ; 2015 ; British Journal of School Nursing Volume 10 ; 10 >
 
   }
 
@@ -265,7 +265,7 @@
     au < manifest ; exists ; 2012 ; Gastrointestinal Nursing Volume 10 ; 10 >
     au < ready ; exists ; 2013 ; Gastrointestinal Nursing Volume 11 ; 11 >
     au < manifest ; exists ; 2014 ; Gastrointestinal Nursing Volume 12 ; 12 >
-    au < expected ; exists ; 2015 ; Gastrointestinal Nursing Volume 13 ; 13 >
+    au < manifest ; exists ; 2015 ; Gastrointestinal Nursing Volume 13 ; 13 >
 
   }
 
@@ -732,7 +732,7 @@
     comment[notReady] = issues lumped into one volume.
 
     au < notReady ; exists ; 2014 ; Practical Pre-School Volume 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Practical Pre-School Volume 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Practical Pre-School Volume 2015 ; 2015 >
 
   }
 
