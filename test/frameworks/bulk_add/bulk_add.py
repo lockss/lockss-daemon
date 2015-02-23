@@ -96,7 +96,7 @@ def main():
     (options, host, port, auid_files) = _process_args()
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client(host, port,
-                                  options.user, options.password)
+                                  options.username, options.password)
     aus = _aus(auid_files)
     has = list()
     missing = list()
