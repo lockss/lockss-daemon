@@ -9,7 +9,7 @@
   param[base_url] = http://web2.msue.msu.edu/
   implicit < status ; year; name ; param[year] >
 
-  comment[progress] = still crawling successfully on delta machines 20140707
+  comment[progress] = still crawling successfully on delta machines 20150220
 
   {
     title <
