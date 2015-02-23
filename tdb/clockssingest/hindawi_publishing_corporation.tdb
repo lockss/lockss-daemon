@@ -6039,7 +6039,7 @@
     au < manifest ; exists ; 2011 ; E-Journal of Chemistry Volume 8 (2011) ; 2011 ; 8 >
     au < manifest ; exists ; 2012 ; E-Journal of Chemistry Volume 9 (2012) ; 2012 ; 9 >
     au < manifest ; exists ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Chemistry Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -6203,7 +6203,7 @@
     param[journal_id] = jcmp
     
     au < manifest ; exists ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Computational Methods in Physics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6224,7 +6224,7 @@
     au < manifest ; exists ; 2011 ; Journal of Computer Networks and Communications Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Computer Networks and Communications Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -6240,7 +6240,7 @@
     param[journal_id] = jcen
     
     au < manifest ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Construction Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6262,7 +6262,7 @@
     au < manifest ; exists ; 2011 ; Journal of Control Science and Engineering Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Control Science and Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6278,7 +6278,7 @@
     param[journal_id] = jcrim
     
     au < manifest ; exists ; 2013 ; Journal of Criminology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Criminology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Criminology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Criminology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6293,7 +6293,7 @@
 
     param[journal_id] = jccm
     
-    au < testing ; exists ; 2014 ; Journal of Critical Care Medicine Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Critical Care Medicine Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Critical Care Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6309,7 +6309,7 @@
     param[journal_id] = jcrys
     
     au < manifest ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Crystallography Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Crystallography Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Crystallography Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6324,7 +6324,7 @@
 
     param[journal_id] = jds
     
-    au < testing ; exists ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6352,7 +6352,7 @@
     au < manifest ; exists ; 2011 ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Diabetes Research Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6367,7 +6367,7 @@
 
     param[journal_id] = jde
     
-    au < testing ; exists ; 2014 ; Journal of Difference Equations Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Difference Equations Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Difference Equations Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6383,7 +6383,7 @@
     param[journal_id] = jdm
     
     au < manifest ; exists ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6401,7 +6401,7 @@
     au < manifest ; exists ; 2011 ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Drug Delivery Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6416,7 +6416,7 @@
 
     param[journal_id] = jearth
     
-    au < testing ; exists ; 2014 ; Journal of Earthquakes Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Earthquakes Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Earthquakes Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6432,7 +6432,7 @@
     param[journal_id] = jeco
     
     au < manifest ; exists ; 2013 ; Journal of Ecosystems Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Ecosystems Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Ecosystems Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Ecosystems Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6457,7 +6457,7 @@
     au < manifest ; exists ; 2011 ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Electrical and Computer Engineering Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -6473,7 +6473,7 @@
     param[journal_id] = jen
     
     au < manifest ; exists ; 2013 ; Journal of Energy Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Energy Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Energy Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Energy Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6489,7 +6489,7 @@
     param[journal_id] = je
     
     au < manifest ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6508,7 +6508,7 @@
     au < manifest ; exists ; 2010 ; Journal of Environmental and Public Health Volume 2010 ; 2010 ; 2010 >
     au < manifest ; exists ; 2012 ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Environmental and Public Health Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Environmental and Public Health Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Environmental and Public Health Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Environmental and Public Health Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6523,7 +6523,7 @@
 
     param[journal_id] = jep
     
-    au < testing ; exists ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6539,7 +6539,7 @@
     param[journal_id] = fluids
     
     au < manifest ; exists ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Fluids Volume 2015 ; 2015 ; 2015 >
 
   }
