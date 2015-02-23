@@ -180,7 +180,7 @@
       au < finished ; crawling ; 2011 ; BMC Biotechnology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Biotechnology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Biotechnology Volume 13 ; 13 >
-      au < testing ; exists ; 2014 ; BMC Biotechnology Volume 14 ; 14 >
+      au < ready ; exists ; 2014 ; BMC Biotechnology Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Biotechnology Volume 15 ; 15 >
 
     }
@@ -1078,7 +1078,7 @@
       comment[journal_code] = bmcmedphys
       comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
 
-      au < testing ; exists ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
+      au < ready ; exists ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
       au < crawling ; exists ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
       au < crawling ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
@@ -5076,7 +5076,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1752-1947
 
       au < manifest ; exists ; 2007 ; Journal of Medical Case Reports Volume 1 ; 1 >
-      au < testing ; exists ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 >
+      au < ready ; exists ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 >
