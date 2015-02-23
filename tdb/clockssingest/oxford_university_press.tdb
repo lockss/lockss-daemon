@@ -2616,13 +2616,12 @@
 
     param[base_url] = http://bfg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[notReady] = incorrect url on manifest page
 
     au < finished ; crawling ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
     au < finished ; crawling ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
     au < finished ; frozen ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ; >
-    au < notReady ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
+    au < testing ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
     au < manifest ; exists ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ; >
 
     }
