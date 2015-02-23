@@ -406,7 +406,7 @@
     param[journal_id] = acc
 
     au < crawling ; exists ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Advances in Critical Care Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Advances in Critical Care Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -453,7 +453,7 @@
     param[journal_id] = ae
 
     au < crawling ; exists ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Advances in Ecology Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Advances in Ecology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3051,7 +3051,7 @@
     au < manifest ; exists ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; HPB Surgery Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; HPB Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3382,7 +3382,7 @@
     param[journal_id] = ijbs
 
     au < crawling ; exists ; 2014 ; International Journal of Brain Science Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; International Journal of Brain Science Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; International Journal of Brain Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3420,7 +3420,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; International Journal of Carbohydrate Chemistry Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; International Journal of Carbohydrate Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4540,7 +4540,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Rotating Machinery Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; International Journal of Rotating Machinery Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; International Journal of Rotating Machinery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6433,7 +6433,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Ecosystems Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Journal of Ecosystems Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Ecosystems Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Ecosystems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6555,7 +6555,7 @@
     param[journal_id] = jfp
     
     au < testing ; exists ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6611,7 +6611,7 @@
     param[journal_id] = jg
     
     au < testing ; exists ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6919,7 +6919,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7028,7 +7028,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Neurodegenerative Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Neurodegenerative Diseases Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Neurodegenerative Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7760,7 +7760,7 @@
     param[journal_id] = jsb
 
     au < expected ; exists ; 2014 ; Journal of Synthetic Biology Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8160,7 +8160,7 @@
     au < manifest ; exists ; 2012 ; Minimally Invasive Surgery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Minimally Invasive Surgery Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Minimally Invasive Surgery Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Minimally Invasive Surgery Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Minimally Invasive Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
   
