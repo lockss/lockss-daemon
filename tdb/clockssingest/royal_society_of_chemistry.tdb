@@ -678,10 +678,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 >
-      au < manifest ; exists ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 >
-      au < manifest ; exists ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 >
-      au < manifest ; exists ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 >
+      au < testing ; exists ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 >
+      au < testing ; exists ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 >
+      au < testing ; exists ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 >
+      au < testing ; exists ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 >
       au < expected ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 >
 
@@ -714,10 +714,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
-      au < manifest ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 >
-      au < manifest ; exists ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 >
-      au < manifest ; exists ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 >
+      au < testing ; exists ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
+      au < testing ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 >
+      au < testing ; exists ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 >
+      au < testing ; exists ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 >
       au < crawling ; exists ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 >
       au < expected ; exists ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 >
 
@@ -761,10 +761,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 >
-      au < manifest ; exists ; 2011 ; Journal of Analytical Atomic Spectrometry Volume 26 ; 26 ; 2011 >
-      au < manifest ; exists ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
-      au < manifest ; exists ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
+      au < testing ; exists ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 >
+      au < testing ; exists ; 2011 ; Journal of Analytical Atomic Spectrometry Volume 26 ; 26 ; 2011 >
+      au < testing ; exists ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
+      au < testing ; exists ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
       au < crawling ; exists ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
       au < expected ; exists ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
 
