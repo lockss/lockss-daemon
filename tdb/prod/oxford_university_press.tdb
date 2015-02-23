@@ -5395,27 +5395,27 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://es.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[0] = moved to Cambridge University Press
 
-    au < HighWirePressH20Plugin ; released ; 2000 ; Enterprise & Society Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; 2001 ; Enterprise & Society Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; 2002 ; Enterprise & Society Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 2003 ; Enterprise & Society Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; released ; 2004 ; Enterprise & Society Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Enterprise & Society Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Enterprise & Society Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Enterprise & Society Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Enterprise & Society Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Enterprise & Society Volume 5 ; 5 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; Enterprise & Society Volume 6 [superseded] ; 6 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; Enterprise & Society Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; Enterprise & Society Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Enterprise & Society Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Enterprise & Society Volume 7 ; 7 >
     au < HighWirePressPlugin ; superseded ; 2007 ; Enterprise & Society Volume 8 [superseded] ; 8 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; Enterprise & Society Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Enterprise & Society Volume 8 ; 8 >
     au < HighWirePressPlugin ; superseded ; 2008 ; Enterprise & Society Volume 9 [superseded] ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; Enterprise & Society Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Enterprise & Society Volume 9 ; 9 >
     au < HighWirePressPlugin ; superseded ; 2009 ; Enterprise & Society Volume 10 [superseded] ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Enterprise & Society Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Enterprise & Society Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Enterprise & Society Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Enterprise & Society Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 2013 ; Enterprise & Society Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Enterprise & Society Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Enterprise & Society Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Enterprise & Society Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Enterprise & Society Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Enterprise & Society Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Enterprise & Society Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Enterprise & Society Volume 16 ; 16 >
 
     }
 
@@ -6185,44 +6185,44 @@
     param[base_url] = http://ejo.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; European Journal of Orthodontics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; European Journal of Orthodontics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; European Journal of Orthodontics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; European Journal of Orthodontics Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; European Journal of Orthodontics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; European Journal of Orthodontics Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; European Journal of Orthodontics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; European Journal of Orthodontics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; European Journal of Orthodontics Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; European Journal of Orthodontics Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; European Journal of Orthodontics Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; European Journal of Orthodontics Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; European Journal of Orthodontics Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; European Journal of Orthodontics Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; European Journal of Orthodontics Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; European Journal of Orthodontics Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; European Journal of Orthodontics Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; European Journal of Orthodontics Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; European Journal of Orthodontics Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; European Journal of Orthodontics Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; European Journal of Orthodontics Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; European Journal of Orthodontics Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; European Journal of Orthodontics Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; European Journal of Orthodontics Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; European Journal of Orthodontics Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Journal of Orthodontics Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; European Journal of Orthodontics Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 >
+    au < oup.OUPDrupalPlugin ; exists ; 1979 ; European Journal of Orthodontics Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; exists ; 1980 ; European Journal of Orthodontics Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; exists ; 1981 ; European Journal of Orthodontics Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; exists ; 1982 ; European Journal of Orthodontics Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; exists ; 1983 ; European Journal of Orthodontics Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; exists ; 1984 ; European Journal of Orthodontics Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; exists ; 1985 ; European Journal of Orthodontics Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; exists ; 1986 ; European Journal of Orthodontics Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; exists ; 1987 ; European Journal of Orthodontics Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; exists ; 1988 ; European Journal of Orthodontics Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; exists ; 1989 ; European Journal of Orthodontics Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; exists ; 1990 ; European Journal of Orthodontics Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; exists ; 1991 ; European Journal of Orthodontics Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; exists ; 1992 ; European Journal of Orthodontics Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; exists ; 1993 ; European Journal of Orthodontics Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; exists ; 1994 ; European Journal of Orthodontics Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; exists ; 1995 ; European Journal of Orthodontics Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; exists ; 1996 ; European Journal of Orthodontics Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; exists ; 1997 ; European Journal of Orthodontics Volume 19 ; 19 >
+    au < oup.OUPDrupalPlugin ; exists ; 1998 ; European Journal of Orthodontics Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; exists ; 1999 ; European Journal of Orthodontics Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; exists ; 2000 ; European Journal of Orthodontics Volume 22 ; 22 >
+    au < oup.OUPDrupalPlugin ; exists ; 2001 ; European Journal of Orthodontics Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; exists ; 2002 ; European Journal of Orthodontics Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; exists ; 2003 ; European Journal of Orthodontics Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; exists ; 2004 ; European Journal of Orthodontics Volume 26 ; 26 >
+    au < oup.OUPDrupalPlugin ; exists ; 2005 ; European Journal of Orthodontics Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 >
     au < HighWireStrVolPlugin ; superseded ; 2007 ; European Journal of Orthodontics Volume 29 [superseded] ; 29 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; European Journal of Orthodontics Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 >
+    au < oup.OUPDrupalPlugin ; exists ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 >
+    au < oup.OUPDrupalPlugin ; exists ; 2014 ; European Journal of Orthodontics Volume 36 ; 36 >
+    au < oup.OUPDrupalPlugin ; expected ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 >
 
     }
 
