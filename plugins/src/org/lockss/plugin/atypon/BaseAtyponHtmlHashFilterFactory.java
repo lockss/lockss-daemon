@@ -126,8 +126,12 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     }
   };   
 
+  /*
+   * Removes all "id' attributes and/or white space if activated by 
+   * child plugins.  The "id" attribute of various tags <span>, <section> .. 
+   * can have a gensym. Also removes pdf(plus) file sizes.
+   */
   HtmlTransform xform_allIDs = new HtmlTransform() {
-    //; The "id" attribute of <span> tags can have a gensym
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
       try {
@@ -210,6 +214,49 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform_spanID));
     }
     if (doWS) {
+      Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
+      return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
+    } else { 
+      return combinedFiltered;
+    }
+  }
+  
+  /*
+   * Takes include and exclude nodes as input. Removes all "id' attributes 
+   * and/or white space if activated by child plugins.  The "id" attribute of 
+   * various tags <span>, <section> .. can have a gensym.
+   * Also removes pdf(plus) file sizes.
+   */
+  public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
+      String encoding, NodeFilter[] includeNodes, NodeFilter[] excludeNodes) {
+    NodeFilter[] allExcludeNodes = baseAtyponFilters;
+    if (excludeNodes != null && excludeNodes.length > 0) {
+      // combine baseAtyponFilters and excludeNodes
+      allExcludeNodes = addTo(excludeNodes);
+    } else {
+      log.warning("excludeNodes array is null or empty!");
+    }
+    if (includeNodes != null && includeNodes.length > 0) {
+      log.warning("includeNodes array is null or empty!");
+    }
+    InputStream combinedFiltered;
+    // xform_allIDs filters out all "id" attributes and
+    // also removes pdf(plus) file sizes
+    if (doTagIDFiltering()) {
+      combinedFiltered = new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+            HtmlNodeFilterTransform.exclude(new OrFilter(allExcludeNodes)), 
+            xform_allIDs)
+        );
+    } else {
+      combinedFiltered = new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+            HtmlNodeFilterTransform.exclude(new OrFilter(allExcludeNodes)))
+        );
+    }
+    if (doWSFiltering()) {
       Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
       return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
     } else { 
