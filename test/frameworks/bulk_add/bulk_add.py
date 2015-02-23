@@ -2,7 +2,7 @@
 
 # $Id$
 
-# Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,20 +37,19 @@ import fix_auth_failure
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.1"
-
+__version__ = "1.0.2"
 
 def _parser():
     """Make a parser for the arguments."""
     #usage = "usage: %prog [options]"
     parser = optparse.OptionParser(
-        usage='%prog [options] host port [filename ...]',
+        usage='%prog --username=U --password=P [options] host port [filename ...]',
         description='Add AUs on a LOCKSS daemon. Each line in each file should '
                     'have an AUID. The filename \'-\' or an empty list will '
                     'read from stdin.'
         )
-    parser.add_option('-u', '--user', default='lockss-u')
-    parser.add_option('-p', '--password', default='lockss-p')
+    parser.add_option('-u', '--username', metavar='U', help='UI username')
+    parser.add_option('-p', '--password', metavar='P', help='UI password')
     parser.add_option('-v', '--verbose', dest='verbose', action='store_true',
                         default=False)
     parser.add_option('-q', '--quiet', dest='verbose', action='store_false')
