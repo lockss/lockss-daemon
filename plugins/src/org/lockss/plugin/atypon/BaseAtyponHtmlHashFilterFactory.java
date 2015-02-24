@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon;
 
 import java.io.IOException;
+
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.Arrays;
@@ -230,15 +231,14 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
       String encoding, NodeFilter[] includeNodes, NodeFilter[] excludeNodes) {
     NodeFilter[] allExcludeNodes = baseAtyponFilters;
-    if (excludeNodes != null && excludeNodes.length > 0) {
-      // combine baseAtyponFilters and excludeNodes
-      allExcludeNodes = addTo(excludeNodes);
-    } else {
-      log.warning("excludeNodes array is null or empty!");
-    }
-    if (includeNodes != null && includeNodes.length > 0) {
-      log.warning("includeNodes array is null or empty!");
-    }
+    if (excludeNodes == null) {
+      throw new NullPointerException("excludeNodes array is null");
+    }  
+    if (includeNodes == null) {
+      throw new NullPointerException("includeNodes array is null!");
+    }   
+    // combine baseAtyponFilters and excludeNodes
+    allExcludeNodes = addTo(excludeNodes);
     InputStream combinedFiltered;
     // xform_allIDs filters out all "id" attributes and
     // also removes pdf(plus) file sizes
