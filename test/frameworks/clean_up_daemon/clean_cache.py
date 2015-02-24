@@ -2,7 +2,7 @@
 
 # $Id$
 
-# Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,6 +26,12 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
+########
+#
+# This script is no longer supported and may be removed in the future.
+#
+########
+
 import optparse
 import ConfigParser
 import os
@@ -36,7 +42,7 @@ import lockss_daemon
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 
 class _SectionAdder(object):
@@ -59,8 +65,8 @@ def _parser():
     """Make a parser for the arguments."""
     parser = optparse.OptionParser(
         description='Move cache directories on a LOCKSS daemon')
-    parser.add_option('-u', '--user', default='lockss-u')
-    parser.add_option('-p', '--password', default='lockss-p')
+    parser.add_option('-u', '--username', metavar='U', help='UI username')
+    parser.add_option('-p', '--password', metavar='P', help='UI password')
     parser.add_option('-v', '--verbose', dest='verbose', action='store_true',
                         default=False)
     parser.add_option('-q', '--quiet', dest='verbose', action='store_false')
@@ -133,7 +139,7 @@ def main():
 
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client(ipAddr, port,
-                                  options.user, options.password)
+                                  options.username, options.password)
     repos = client._getStatusTable( 'RepositoryTable' )[ 1 ]
 
     no_auid = [r for r in repos if r['status'] == 'No AUID']
@@ -178,4 +184,5 @@ def main():
 
 
 if __name__ == '__main__':
+    print 'Warning: This script is no longer supported.'
     main()

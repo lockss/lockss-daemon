@@ -2,7 +2,7 @@
 
 # $Id: clean_cache_cron,v 1.6 2012-05-24 00:37:27 thib_gc Exp $
 
-# Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,9 +26,13 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-# THIS SCRIPT IS EXPERIMENTAL AND ASSUMES A PARTICULAR, UNDOCUMENTED
-# SYSTEM LAYOUT (DIRECTORY STRUCTURES, USERS AND GROUPS, CONFIGURATION
-# PARAMETERS, ETC.).
+########
+#
+# This script is no longer supported and may be removed in the future.
+#
+########
+
+echo "Warning: This script is no longer supported."
 
 LOCKSS_ROOT=/etc/lockss
 LOCKSS_CONFIG=$LOCKSS_ROOT/config.dat
@@ -48,6 +52,10 @@ if [ ! -r "${LOCKSS_CONFIG}" ]; then
 fi
 if [ ! -x "${LOCKSS_CLEANUPCACHE}" ]; then
   echo "${LOCKSS_CLEANUPCACHE} not found or not executable"
+  exit 1
+fi
+if [ "X${LOCKSS_UI_USER}" = "X" -o "X${LOCKSS_UI_PASS}" = "X" ]; then
+  echo "LOCKSS_UI_USER and LOCKSS_UI_PASS must be set"
   exit 1
 fi
 
@@ -96,7 +104,7 @@ for U in $LOCKSS_USER ; do
       # chgrp content $DEST
       touch "${DEST}/#deletion_timestamp"
       # May require an update later
-      $LOCKSS_CLEANUPCACHE --user="lockss-u" --password="lockss-p" --directory="${LOCKSS_DISK_PATHS}" --dest="${DEST}"
+      $LOCKSS_CLEANUPCACHE --user="${LOCKSS_UI_USER}" --password="${LOCKSS_UI_PASS}" --directory="${LOCKSS_DISK_PATHS}" --dest="${DEST}"
       for D in `find $LOCKSS_DELETED -mindepth 2 -maxdepth 2 -type f -name "#deletion_timestamp" -mtime +$LOCKSS_DAYS`; do
         nice rm -rf `dirname $D`
       done
