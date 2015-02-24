@@ -2263,7 +2263,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://rmdopen.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; 2015 ; RMD Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; RMD Open Volume 1 ; 1 >
 
   }
 
