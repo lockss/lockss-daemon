@@ -214,7 +214,6 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
           "</ul></div></div>" +
           "</div>";
     
-
     // id tag also got filtered
     private static final String articleToolsWidgetFiltered = 
       "<div class=\"block\">" +  
@@ -225,6 +224,17 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
           "doi=1.11111%2Fjid.2013.111\">Download Citation</a></li>" +
           "</ul></div></div>" +
           "</div>";
+    
+    private static final String withCitedby =
+      "<div class=\"block\">" + 
+          "<ul><li>" +
+          "<a href=\"/doi/citedby/11.1111/jid.20129999\"> Cited by </a>" +
+          "</li></ul>" +
+          "</div>"; 
+    private static final String withoutCitedby =
+      "<div class=\"block\">" + 
+          "<ul></ul>" +
+          "</div>";        
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -295,7 +305,8 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
         doFilterTest(bau, variantFact, withMathJaxMessage, filteredStr);         
         doFilterTest(bau, variantFact, 
                      withArticleToolsWidgetExceptDownloadCitation, 
-                     articleToolsWidgetFiltered);                 
+                     articleToolsWidgetFiltered);
+        doFilterTest(bau, variantFact, withCitedby, withoutCitedby); 
      }
   }
   
