@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.crawler;
 
@@ -46,43 +46,38 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
  * @author wkwilson
  */
 public class BaseCrawlSeed implements CrawlSeed {
-	protected ArchivalUnit au;
-	
-	/**
-	 * 
-	 * @param au
-	 * @param spec
-	 */
-	public BaseCrawlSeed(ArchivalUnit au){
-	  this.au = au;
-	}
-	
-	public Collection<String> getStartUrls() 
-	    throws ConfigurationException, PluginException{
-	  Collection<String> startUrls = au.getStartUrls();
-    if(startUrls == null || startUrls.isEmpty()) {
+  
+  protected ArchivalUnit au;
+
+  /**
+   * 
+   * @param au
+   * @param spec
+   */
+  public BaseCrawlSeed(ArchivalUnit au){
+    this.au = au;
+  }
+
+  public Collection<String> getStartUrls() throws ConfigurationException, PluginException{
+    Collection<String> startUrls = au.getStartUrls();
+    if (startUrls == null || startUrls.isEmpty()) {
       throw new PluginException.InvalidDefinition(
-          "CrawlInitializer expects the Plugin to " +
-          "define a non null start url list");
+          "CrawlSeed expects the Plugin to define a non-null start URL list");
     }
     return startUrls;
-	}
+  }
 
-	public Collection<String> getPermissionUrls() 
-	    throws ConfigurationException, PluginException{
-		Collection<String> permUrls = au.getPermissionUrls();
-	  if(permUrls == null || permUrls.isEmpty()) {
-	    throw new PluginException.InvalidDefinition(
-	        "CrawlInitializer expects the Plugin to " +
-	        "define a non null permission url list");
-	  }
-	  return permUrls; 
-	}
+  public Collection<String> getPermissionUrls() throws ConfigurationException, PluginException{
+    Collection<String> permUrls = au.getPermissionUrls();
+    if (permUrls == null || permUrls.isEmpty()) {
+      throw new PluginException.InvalidDefinition(
+          "CrawlSeed expects the Plugin to define a non-null permission URL list");
+    }
+    return permUrls; 
+  }
 
   public boolean isFailOnStartUrlError() {
     return true;
   }
 
 }
-
-
