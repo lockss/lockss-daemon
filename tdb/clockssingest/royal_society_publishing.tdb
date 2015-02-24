@@ -252,9 +252,9 @@
     au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Open Biology Volume 1 ; 1 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Open Biology Volume 2 ; 2 >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Open Biology Volume 3 [superseded] ; 3 >
-    au < ClockssHighWireDrupalPlugin ; manifest ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
-    au < ClockssHighWireDrupalPlugin ; manifest ; exists ; 2014 ; Open Biology Volume 4 ; 4 >
-    au < ClockssHighWireDrupalPlugin ; manifest ; exists ; 2015 ; Open Biology Volume 5 ; 5 >
+    au < ClockssHighWireDrupalPlugin ; exists ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
+    au < ClockssHighWireDrupalPlugin ; exists ; exists ; 2014 ; Open Biology Volume 4 ; 4 >
+    au < ClockssHighWireDrupalPlugin ; exists ; exists ; 2015 ; Open Biology Volume 5 ; 5 >
     
   }
 
