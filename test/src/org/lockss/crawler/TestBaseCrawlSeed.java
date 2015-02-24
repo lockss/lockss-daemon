@@ -62,7 +62,7 @@ public class TestBaseCrawlSeed extends LockssTestCase {
       bcs.getStartUrls();
       fail("null start url list should have thrown");
     } catch(InvalidDefinition e) {
-      assertMatchesRE("non null start url", e.getMessage());
+      assertMatchesRE("non-null start URL list", e.getMessage());
     }
     
     mau.setPermissionUrls(null);
@@ -70,7 +70,7 @@ public class TestBaseCrawlSeed extends LockssTestCase {
       bcs.getPermissionUrls();
       fail("null permission url list should have thrown");
     } catch(InvalidDefinition e) {
-      assertMatchesRE("non null permission url", e.getMessage());
+      assertMatchesRE("non-null permission URL list", e.getMessage());
     }
     
     mau.setStartUrls(ListUtils.EMPTY_LIST);
@@ -78,7 +78,7 @@ public class TestBaseCrawlSeed extends LockssTestCase {
       bcs.getStartUrls();
       fail("empty start url list should have thrown");
     } catch(InvalidDefinition e) {
-      assertMatchesRE("non null start url", e.getMessage());
+      assertMatchesRE("non-null start URL list", e.getMessage());
     }
     
     mau.setPermissionUrls(ListUtils.EMPTY_LIST);
@@ -86,7 +86,7 @@ public class TestBaseCrawlSeed extends LockssTestCase {
       bcs.getPermissionUrls();
       fail("empty permission url list should have thrown");
     } catch(InvalidDefinition e) {
-      assertMatchesRE("non null permission url", e.getMessage());
+      assertMatchesRE("non-null permission URL list", e.getMessage());
     }
   }
   
