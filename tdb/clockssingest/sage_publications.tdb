@@ -5010,7 +5010,7 @@
       param[base_url] = http://cno.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2014 ; Child Neurology Open Volume 1 ; 1 ; >
+      au < ready ; exists ; 2014 ; Child Neurology Open Volume 1 ; 1 ; >
 
   }
 
@@ -5057,7 +5057,7 @@
       au < finished ; frozen ; 2011 ; Childhood Volume 18 ; 18 ; >
       au < finished ; frozen ; 2012 ; Childhood Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Childhood Volume 20 ; 20 ; >
-      au < testing ; exists ; 2014 ; Childhood Volume 21 ; 21 ; >
+      au < ready ; exists ; 2014 ; Childhood Volume 21 ; 21 ; >
       au < manifest ; exists ; 2015 ; Childhood Volume 22 ; 22 ; >
 
     }
@@ -5114,7 +5114,7 @@
       au < finished ; frozen ; 2011 ; China Information Volume 25 ; 25 ; >
       au < finished ; crawling ; 2012 ; China Information Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; China Information Volume 27 ; 27 ; >
-      au < testing ; exists ; 2014 ; China Information Volume 28 ; 28 ; >
+      au < ready ; exists ; 2014 ; China Information Volume 28 ; 28 ; >
       au < expected ; exists ; 2015 ; China Information Volume 29 ; 29 ; >
 
     }
@@ -5514,7 +5514,7 @@
       au < finished ; crawling ; 2011 ; Clinical Case Studies Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Clinical Case Studies Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Clinical Case Studies Volume 12 ; 12 ; >
-      au < testing ; exists ; 2014 ; Clinical Case Studies Volume 13 ; 13 ; >
+      au < ready ; exists ; 2014 ; Clinical Case Studies Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Clinical Case Studies Volume 14 ; 14 ; >
 
     }
@@ -5607,7 +5607,7 @@
         au < zapped ; finished ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 ; >
         au < finished ; frozen ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 ; >
         au < crawling ; exists ; 2013 ; Clinical EEG and Neuroscience Volume 44 ; 44 ; >
-        au < testing ; exists ; 2014 ; Clinical EEG and Neuroscience Volume 45 ; 45 ; >
+        au < ready ; exists ; 2014 ; Clinical EEG and Neuroscience Volume 45 ; 45 ; >
         au < expected ; exists ; 2015 ; Clinical EEG and Neuroscience Volume 46 ; 46 ; >
 
     }
