@@ -6918,7 +6918,7 @@
     param[journal_id] = jmin
     
     au < manifest ; exists ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6934,7 +6934,7 @@
     param[journal_id] = jmy
     
     au < manifest ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Mycology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6957,7 +6957,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nanomaterials Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6973,7 +6973,7 @@
     param[journal_id] = jnp
     
     au < manifest ; exists ; 2013 ; Journal of Nanoparticles Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nanoparticles Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nanoparticles Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Nanoparticles Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6989,7 +6989,7 @@
     param[journal_id] = jns
     
     au < manifest ; exists ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nanoscience Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7011,7 +7011,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Nanotechnology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7027,7 +7027,7 @@
     param[journal_id] = jnd
     
     au < manifest ; exists ; 2013 ; Journal of Neurodegenerative Diseases Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Neurodegenerative Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7043,7 +7043,7 @@
     param[journal_id] = jndy
     
     au < manifest ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7059,7 +7059,7 @@
     param[journal_id] = jnc
     
     au < manifest ; exists ; 2013 ; Journal of Nuclear Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Nuclear Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7078,7 +7078,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nucleic Acids Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nucleic Acids Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7093,7 +7093,7 @@
 
     param[journal_id] = jn
     
-    au < manifest ; exists ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Numbers Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7112,7 +7112,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nutrition and Metabolism Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7131,7 +7131,7 @@
     au < manifest ; exists ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Obesity Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7152,7 +7152,7 @@
     au < manifest ; exists ; 2011 ; Journal of Oncology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7168,7 +7168,7 @@
     param[journal_id] = joper
     
     au < manifest ; exists ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Operators Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7188,7 +7188,7 @@
     au < manifest ; exists ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Ophthalmology Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7204,7 +7204,7 @@
     param[journal_id] = jopti
     
     au < manifest ; exists ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Optimization Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7220,7 +7220,7 @@
     param[journal_id] = jod
     
     au < manifest ; exists ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7235,7 +7235,7 @@
 
     param[journal_id] = joi
     
-    au < manifest ; exists ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7251,7 +7251,7 @@
     param[journal_id] = joo
     
     au < manifest ; exists ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
