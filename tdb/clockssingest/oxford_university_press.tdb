@@ -2470,6 +2470,7 @@
 
     param[base_url] = http://brain.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
+    comment[down] = Moved to Drupal platform
 
     au < doNotProcess ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 ; >
@@ -3745,7 +3746,73 @@
     param[base_url] = http://cardiovascres.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[notReady] = See RU4166 for author-index 503 error due to publisher database timing out
+    comment[down] = Moved to Drupal platform
 
+    au < doNotProcess ; doNotProcess ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Cardiovascular Research Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Cardiovascular Research Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Cardiovascular Research Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Cardiovascular Research Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Cardiovascular Research Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Cardiovascular Research Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Cardiovascular Research Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Cardiovascular Research Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Cardiovascular Research Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Cardiovascular Research Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Cardiovascular Research Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Cardiovascular Research Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Cardiovascular Research Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Cardiovascular Research Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Cardiovascular Research Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Cardiovascular Research Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Cardiovascular Research Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Cardiovascular Research Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Cardiovascular Research Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Cardiovascular Research Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Cardiovascular Research Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Cardiovascular Research Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Cardiovascular Research Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Cardiovascular Research Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Cardiovascular Research Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Cardiovascular Research Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Cardiovascular Research Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Cardiovascular Research Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Cardiovascular Research Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Cardiovascular Research Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 34 ; 34 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 35 ; 35 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 36 ; 36 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 37 ; 37 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 38 ; 38 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 39 ; 39 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 40 ; 40 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 42 ; 42 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 43 ; 43 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 46 ; 46 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 48 ; 48 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 49 ; 49 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 50 ; 50 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 51 ; 51 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 52 ; 52 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 53 ; 53 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 54 ; 54 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 55 ; 55 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 56 ; 56 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 57 ; 57 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 58 ; 58 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 59 ; 59 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 60 ; 60 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 61 ; 61 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 62 ; 62 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 63 ; 63 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 64 ; 64 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 68 ; 68 ; >
@@ -3761,9 +3828,9 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
-    au < down ; finished ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
-    au < down ; finished ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
-    au < down ; finished ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
+    au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
+    au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
+    au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
     au < down ; frozen ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
     au < down ; crawling ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
@@ -3781,119 +3848,11 @@
     au < down ; manifest ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
     au < down ; manifest ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
     au < down ; manifest ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
-
-    }
-
-    {
-
-    param[base_url] = http://cardiovascres.oxfordjournals.org/
-    pluginSuffix = oup.ClockssOUPDrupalPlugin
-
-    au < exists ; exists ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
-    au < exists ; exists ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
-    au < exists ; exists ; 1969 ; Cardiovascular Research Volume 3 ; 3 ; >
-    au < exists ; exists ; 1970 ; Cardiovascular Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 1971 ; Cardiovascular Research Volume 5 ; 5 ; >
-    au < exists ; exists ; 1972 ; Cardiovascular Research Volume 6 ; 6 ; >
-    au < exists ; exists ; 1973 ; Cardiovascular Research Volume 7 ; 7 ; >
-    au < exists ; exists ; 1974 ; Cardiovascular Research Volume 8 ; 8 ; >
-    au < exists ; exists ; 1975 ; Cardiovascular Research Volume 9 ; 9 ; >
-    au < exists ; exists ; 1976 ; Cardiovascular Research Volume 10 ; 10 ; >
-    au < exists ; exists ; 1977 ; Cardiovascular Research Volume 11 ; 11 ; >
-    au < exists ; exists ; 1978 ; Cardiovascular Research Volume 12 ; 12 ; >
-    au < exists ; exists ; 1979 ; Cardiovascular Research Volume 13 ; 13 ; >
-    au < exists ; exists ; 1980 ; Cardiovascular Research Volume 14 ; 14 ; >
-    au < exists ; exists ; 1981 ; Cardiovascular Research Volume 15 ; 15 ; >
-    au < exists ; exists ; 1982 ; Cardiovascular Research Volume 16 ; 16 ; >
-    au < exists ; exists ; 1983 ; Cardiovascular Research Volume 17 ; 17 ; >
-    au < exists ; exists ; 1984 ; Cardiovascular Research Volume 18 ; 18 ; >
-    au < exists ; exists ; 1985 ; Cardiovascular Research Volume 19 ; 19 ; >
-    au < exists ; exists ; 1986 ; Cardiovascular Research Volume 20 ; 20 ; >
-    au < exists ; exists ; 1987 ; Cardiovascular Research Volume 21 ; 21 ; >
-    au < exists ; exists ; 1988 ; Cardiovascular Research Volume 22 ; 22 ; >
-    au < exists ; exists ; 1989 ; Cardiovascular Research Volume 23 ; 23 ; >
-    au < exists ; exists ; 1990 ; Cardiovascular Research Volume 24 ; 24 ; >
-    au < exists ; exists ; 1991 ; Cardiovascular Research Volume 25 ; 25 ; >
-    au < exists ; exists ; 1992 ; Cardiovascular Research Volume 26 ; 26 ; >
-    au < exists ; exists ; 1993 ; Cardiovascular Research Volume 27 ; 27 ; >
-    au < exists ; exists ; 1994 ; Cardiovascular Research Volume 28 ; 28 ; >
-    au < exists ; exists ; 1995 ; Cardiovascular Research Volume 29 ; 29 ; >
-    au < exists ; exists ; 1995 ; Cardiovascular Research Volume 30 ; 30 ; >
-    au < exists ; exists ; 1996 ; Cardiovascular Research Volume 31 ; 31 ; >
-    au < exists ; exists ; 1996 ; Cardiovascular Research Volume 32 ; 32 ; >
-    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 33 ; 33 ; >
-    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 34 ; 34 ; >
-    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 35 ; 35 ; >
-    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 36 ; 36 ; >
-    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 37 ; 37 ; >
-    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 38 ; 38 ; >
-    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 39 ; 39 ; >
-    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 40 ; 40 ; >
-    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 41 ; 41 ; >
-    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 42 ; 42 ; >
-    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 43 ; 43 ; >
-    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 44 ; 44 ; >
-    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 45 ; 45 ; >
-    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 46 ; 46 ; >
-    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 47 ; 47 ; >
-    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 48 ; 48 ; >
-    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 49 ; 49 ; >
-    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 50 ; 50 ; >
-    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 51 ; 51 ; >
-    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 52 ; 52 ; >
-    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 53 ; 53 ; >
-    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 54 ; 54 ; >
-    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 55 ; 55 ; >
-    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 56 ; 56 ; >
-    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 57 ; 57 ; >
-    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 58 ; 58 ; >
-    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 59 ; 59 ; >
-    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 60 ; 60 ; >
-    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 61 ; 61 ; >
-    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 62 ; 62 ; >
-    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 63 ; 63 ; >
-    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 64 ; 64 ; >
-    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 65 ; 65 ; >
-    au < exists ; exists ; 2005 ; Cardiovascular Research Volume 66 ; 66 ; >
-    au < exists ; exists ; 2005 ; Cardiovascular Research Volume 67 ; 67 ; >
-    au < exists ; exists ; 2005 ; Cardiovascular Research Volume 68 ; 68 ; >
-    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 69 ; 69 ; >
-    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 70 ; 70 ; >
-    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 71 ; 71 ; >
-    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 72 ; 72 ; >
-    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 73 ; 73 ; >
-    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 74 ; 74 ; >
-    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 75 ; 75 ; >
-    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 76 ; 76 ; >
-    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
-    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
-    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
-    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
-    au < exists ; exists ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 87 ; 87 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 88 ; 88 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 89 ; 89 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 92 ; 92 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 97 ; 97 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
-    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
-    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
-    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
-    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
-    au < expected ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
 
     }
 
