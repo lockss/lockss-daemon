@@ -1,0 +1,41 @@
+{
+
+  publisher <
+    name = Longdom Publishing ;
+    info[contract] = 2013 ;
+    info[tester] = 0 ;
+    comment[platform] = custom
+  >
+  
+  plugin = needs.plugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  {
+    title <
+      name = Advances in Pediatric Research
+    >
+    param[base_url] = http://www.apr-journal.com/
+  }
+  
+  {
+    title <
+      name = Advances in Legal Medicine
+    >
+    param[base_url] = http://www.alm-journal.com/
+  }
+  
+  {
+    title <
+      name = Advances in Medical Ethics
+    >
+    param[base_url] = http://www.ame-journal.com/
+  }
+  
+  {
+    title <
+      name = Advances in Rare Diseases
+    >
+    param[base_url] = http://www.ard-journal.com/
+  }
+  
+}
