@@ -27050,6 +27050,26 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = The Journal of Psychiatry & Law ;
+      issn = 0093-1853 ;
+      eissn = 2163-1794 ;
+      issnl = 0093-1853
+    >
+
+      param[base_url] = http://plx.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2009 ; The Journal of Psychiatry & Law Volume 37 ; 37 >
+      au < exists ; 2010 ; The Journal of Psychiatry & Law Volume 38 ; 38 >
+      au < exists ; 2011 ; The Journal of Psychiatry & Law Volume 39 ; 39 >
+      au < exists ; 2012 ; The Journal of Psychiatry & Law Volume 40 ; 40 >
+
+  }
+
     {
 
       title <
