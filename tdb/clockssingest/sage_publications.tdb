@@ -24136,6 +24136,25 @@
   {
 
     title <
+      name = The Journal of Psychiatry & Law ;
+      issn = 0093-1853 ;
+      eissn = 2163-1794 ;
+      issnl = 0093-1853
+    >
+
+      param[base_url] = http://plx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2009 ; The Journal of Psychiatry & Law Volume 37 ; 37 ; >
+      au < exists ; exists ; 2010 ; The Journal of Psychiatry & Law Volume 38 ; 38 ; >
+      au < exists ; exists ; 2011 ; The Journal of Psychiatry & Law Volume 39 ; 39 ; >
+      au < exists ; exists ; 2012 ; The Journal of Psychiatry & Law Volume 40 ; 40 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Psychoeducational Assessment ;
       issn = 0734-2829 ;
       eissn = 1557-5144
