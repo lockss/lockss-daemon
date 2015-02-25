@@ -4,7 +4,7 @@
     name = Emerald Group Publishing
   >
 
-  plugin = org.lockss.plugin.atypon.emerald.EmeraldAtyponPlugin
+  plugin = org.lockss.plugin.atypon.emeraldgroup.EmeraldGroupPlugin
   param[base_url] = http://www.emeraldinsight.com/
   implicit < status ; year ; name ; param[volume_name] >
 
