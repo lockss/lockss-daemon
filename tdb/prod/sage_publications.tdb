@@ -37098,8 +37098,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://rap.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < ready ; 2014 ; Research & Politics Volume 1 ; 1 >
-        au < ready ; 2015 ; Research & Politics Volume 2 ; 2 >
+        au < exists ; 2014 ; Research & Politics Volume 1 ; 1 >
+        au < exists ; 2015 ; Research & Politics Volume 2 ; 2 >
 
     }
 
@@ -37931,8 +37931,8 @@ comment[mpj] = now published by Brill
 
           au < doNotProcess ; 2011 ; Sage Open Volume 1 ; 1 >
           au < doNotProcess ; 2012 ; Sage Open Volume 2 ; 2 >
-          au < manifest ; 2013 ; Sage Open Volume 3 ; 3 >
-          au < manifest ; 2014 ; Sage Open Volume 4 ; 4 >
+          au < exists ; 2013 ; Sage Open Volume 3 ; 3 >
+          au < exists ; 2014 ; Sage Open Volume 4 ; 4 >
           au < expected ; 2015 ; Sage Open Volume 5 ; 5 >
 
         }
