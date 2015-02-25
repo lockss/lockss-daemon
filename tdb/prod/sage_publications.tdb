@@ -10595,6 +10595,39 @@
 
     }
 
+  {
+
+    title <
+      name = Empirical Studies of the Arts ;
+      issn = 0276-2374 ;
+      eissn = 1541-4493 ;
+      issnl = 0276-2374 
+    >
+
+      param[base_url] = http://art.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[0] = content available from 1983 volume 1 to 1999 volume 17
+
+      au < exists ; 2000 ; Empirical Studies of the Arts Volume 18 ; 18 >
+      au < exists ; 2001 ; Empirical Studies of the Arts Volume 19 ; 19 >
+      au < exists ; 2002 ; Empirical Studies of the Arts Volume 20 ; 20 >
+      au < exists ; 2003 ; Empirical Studies of the Arts Volume 21 ; 21 >
+      au < exists ; 2004 ; Empirical Studies of the Arts Volume 22 ; 22 >
+      au < exists ; 2005 ; Empirical Studies of the Arts Volume 23 ; 23 >
+      au < exists ; 2006 ; Empirical Studies of the Arts Volume 24 ; 24 >
+      au < exists ; 2007 ; Empirical Studies of the Arts Volume 25 ; 25 >
+      au < exists ; 2008 ; Empirical Studies of the Arts Volume 26 ; 26 >
+      au < exists ; 2009 ; Empirical Studies of the Arts Volume 27 ; 27 >
+      au < exists ; 2010 ; Empirical Studies of the Arts Volume 28 ; 28 >
+      au < exists ; 2011 ; Empirical Studies of the Arts Volume 29 ; 29 >
+      au < exists ; 2012 ; Empirical Studies of the Arts Volume 30 ; 30 >
+      au < exists ; 2013 ; Empirical Studies of the Arts Volume 31 ; 31 >
+      au < exists ; 2014 ; Empirical Studies of the Arts Volume 32 ; 32 >
+      au < expected ; 2015 ; Empirical Studies of the Arts Volume 33 ; 33 >
+
+  }
+
     {
       title <
         name = Emotional & Behavioural Difficulties ;
@@ -32791,6 +32824,39 @@ comment[mpj] = now published by Brill
         au < exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 >
         au < manifest ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 >
         au < expected ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 >
+
+  }
+
+  {
+
+    title <
+      name = North American Archaeologist ;
+      issn = 0197-6931 ;
+      eissn = 1541-3543 ;
+      issnl = 0197-6931
+    >
+
+      param[base_url] = http://naa.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1999 ; North American Archaeologist Volume 20 ; 20 >
+      au < exists ; 2000 ; North American Archaeologist Volume 21 ; 21 >
+      au < exists ; 2001 ; North American Archaeologist Volume 22 ; 22 >
+      au < exists ; 2002 ; North American Archaeologist Volume 23 ; 23 >
+      au < exists ; 2003 ; North American Archaeologist Volume 24 ; 24 >
+      au < exists ; 2004 ; North American Archaeologist Volume 25 ; 25 >
+      au < exists ; 2005 ; North American Archaeologist Volume 26 ; 26 >
+      au < exists ; 2006 ; North American Archaeologist Volume 27 ; 27 >
+      au < exists ; 2007 ; North American Archaeologist Volume 28 ; 28 >
+      au < exists ; 2008 ; North American Archaeologist Volume 29 ; 29 >
+      au < exists ; 2009 ; North American Archaeologist Volume 30 ; 30 >
+      au < exists ; 2010 ; North American Archaeologist Volume 31 ; 31 >
+      au < exists ; 2011 ; North American Archaeologist Volume 32 ; 32 >
+      au < exists ; 2012 ; North American Archaeologist Volume 33 ; 33 >
+      au < exists ; 2013 ; North American Archaeologist Volume 34 ; 34 >
+      au < exists ; 2014 ; North American Archaeologist Volume 35 ; 35 >
+      au < expected ; 2015 ; North American Archaeologist Volume 36 ; 36 >
 
   }
 
