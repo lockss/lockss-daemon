@@ -2240,6 +2240,27 @@
   
     {
   
+      title <
+        name = Autoimmunity Highlights ;
+        issn = 2038-0305 ;
+        eissn = 2038-3274 ;
+        issnl = 2038-0305
+      >
+  
+      param[base_url] = http://www.springer.com/13317/
+      param[journal_issn] = 2038-0305
+      comment[platform] = Springer
+  
+      au < exists ; 2010 ; Autoimmunity Highlights Volume 1 ; 1 >
+      au < exists ; 2011 ; Autoimmunity Highlights Volume 2 ; 2 >
+      au < exists ; 2012 ; Autoimmunity Highlights Volume 3 ; 3 >
+      au < exists ; 2013 ; Autoimmunity Highlights Volume 4 ; 4 >
+      au < exists ; 2014 ; Autoimmunity Highlights Volume 5 ; 5 >
+  
+    }
+
+    {
+  
         title <
           name = Biointerphases ;
           issn = 1934-8630 ;
