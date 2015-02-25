@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,14 +34,11 @@ package org.lockss.test;
 
 import java.util.*;
 
+import org.lockss.crawler.*;
+import org.lockss.daemon.Crawler;
+import org.lockss.plugin.*;
 import org.lockss.util.Deadline;
 import org.lockss.util.urlconn.CacheException;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlData;
-import org.lockss.plugin.UrlFetcher;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 
 public class MockCrawler extends NullCrawler {
   ArchivalUnit au;
@@ -182,11 +179,11 @@ public class MockCrawler extends NullCrawler {
     private ArchivalUnit au;
     private CrawlerStatus cs;
     private Map<String, UrlFetcher> ufMap;
-    public List fetchQueue = new ArrayList();
-    public List permProbe = new ArrayList();
+    public List<String> fetchQueue = new ArrayList<String>();
+    public List<String> permProbe = new ArrayList<String>();
     private PermissionMap permissionMap;
-    private List<String> globallyPermittedHosts = Collections.EMPTY_LIST;
-    private List<String> allowedPluginPermittedHost = Collections.EMPTY_LIST;
+    private List<String> globallyPermittedHosts = Collections.emptyList();
+    private List<String> allowedPluginPermittedHost = Collections.emptyList();
 
     public MockCrawlerFacade() {
       au = new MockArchivalUnit();
@@ -249,13 +246,25 @@ public class MockCrawler extends NullCrawler {
       return wasAborted;
     }
 
-    public void setPermissionUrlFetcher(UrlFetcher uf) {
-      if(ufMap == null) {
-        ufMap = new HashMap();
+    public void setUrlFetcher(UrlFetcher uf) {
+      if (ufMap == null) {
+        ufMap = new HashMap<String, UrlFetcher>();
       }
       ufMap.put(uf.getUrl(), uf);
     }
     
+    public void setPermissionUrlFetcher(UrlFetcher uf) {
+      if (ufMap == null) {
+        ufMap = new HashMap<String, UrlFetcher>();
+      }
+      ufMap.put(uf.getUrl(), uf);
+    }
+    
+    @Override
+    public UrlFetcher makeUrlFetcher(String url) {
+      return ufMap.get(url);
+    }
+
     @Override
     public UrlFetcher makePermissionUrlFetcher(String url) {
       return ufMap.get(url);

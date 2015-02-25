@@ -701,6 +701,10 @@ public abstract class BaseCrawler implements Crawler {
       return crawler.getAu();
     }
 
+    public UrlFetcher makeUrlFetcher(String url) {
+      return crawler.makeUrlFetcher(url);
+    }
+    
     public UrlFetcher makePermissionUrlFetcher(String url) {
       return crawler.makePermissionUrlFetcher(url);
     }
