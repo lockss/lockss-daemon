@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = The American Academy of Implant Dentistry ;
+    comment[platform] = Allen Press ;
+    info[tester] = 0
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://www.joionline.org
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+    title <
+      name = Journal of Oral Implantology ;
+      issn = 0160-6972 ;
+      eissn = 1548-1336 ;
+      issnl = 0160-6972
+    >
+    
+    param[journal_id] = orim
+    
+    au < exists ; 1998 ; Journal of Oral Implantology Volume 24 ; 24 >
+    au < exists ; 1999 ; Journal of Oral Implantology Volume 25 ; 25 >
+    au < exists ; 2000 ; Journal of Oral Implantology Volume 26 ; 26 >
+    au < exists ; 2001 ; Journal of Oral Implantology Volume 27 ; 27 >
+    au < exists ; 2002 ; Journal of Oral Implantology Volume 28 ; 28 >
+    au < exists ; 2003 ; Journal of Oral Implantology Volume 29 ; 29 >
+    au < exists ; 2004 ; Journal of Oral Implantology Volume 30 ; 30 >
+    au < exists ; 2005 ; Journal of Oral Implantology Volume 31 ; 31 >
+    au < exists ; 2006 ; Journal of Oral Implantology Volume 32 ; 32 >
+    au < exists ; 2007 ; Journal of Oral Implantology Volume 33 ; 33 >
+    au < exists ; 2008 ; Journal of Oral Implantology Volume 34 ; 34 >
+    au < exists ; 2009 ; Journal of Oral Implantology Volume 35 ; 35 >
+    au < exists ; 2010 ; Journal of Oral Implantology Volume 36 ; 36 >
+    au < exists ; 2011 ; Journal of Oral Implantology Volume 37 ; 37 >
+    au < exists ; 2012 ; Journal of Oral Implantology Volume 38 ; 38 >
+    au < exists ; 2013 ; Journal of Oral Implantology Volume 39 ; 39 >
+    au < exists ; 2014 ; Journal of Oral Implantology Volume 40 ; 40 >
+    au < exists ; 2015 ; Journal of Oral Implantology Volume 41 ; 41 >
+    
+  }
+  
+}
