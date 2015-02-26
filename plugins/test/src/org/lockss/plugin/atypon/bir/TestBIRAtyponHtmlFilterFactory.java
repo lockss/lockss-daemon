@@ -234,7 +234,25 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
     private static final String withoutCitedby =
       "<div class=\"block\">" + 
           "<ul></ul>" +
-          "</div>";        
+          "</div>";    
+    
+    private static final String withSectionJumpTo =
+        "<div class=\"block\">" +
+            "<div class=\"sectionJumpTo\">" +
+            "<div class=\"sectionLabel\">Section:</div>" +
+            "<form style=\"margin-bottom:0\">" +
+            "<select class=\"ful\" onchange=\"GoTo(this, 'sf')\" name=\"s\">" +
+            "</form>" +
+            "<div class=\"nextPrevSec\">" +
+            "<a class=\"up\" href=\"#_i0\">" +
+            "<img width=\"11\" border=\"0\" hspace=\"5\" height=\"9\" " +
+            "alt=\"Previous section\" src=\"/imagesrc/aup.gif\"></a>" +
+            "<a class=\"down\" href=\"#citart1\">" +
+            "<img width=\"11\" border=\"0\" hspace=\"5\" height=\"9\" " +
+            "alt=\"Next section\" src=\"/imagesrc/adown.gif\"></a>" +
+            "</div>" +
+            "</div>" +
+            "</div>";
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -307,6 +325,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
                      withArticleToolsWidgetExceptDownloadCitation, 
                      articleToolsWidgetFiltered);
         doFilterTest(bau, variantFact, withCitedby, withoutCitedby); 
+        doFilterTest(bau, variantFact, withSectionJumpTo, filteredStr);         
      }
   }
   
