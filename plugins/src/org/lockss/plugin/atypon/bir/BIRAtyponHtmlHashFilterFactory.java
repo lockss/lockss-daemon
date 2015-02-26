@@ -95,6 +95,9 @@ public class BIRAtyponHtmlHashFilterFactory
         // ref - this seems unused but may get turned on
         // http://www.birpublications.org/doi/ref/10.1259/bjr.20130571
         HtmlNodeFilters.tagWithAttribute("div",  "id", "MathJax_Message"),
+        // full - section choose pulldown appeared in multiple sections
+        // http://www.birpublications.org/doi/full/10.1259/dmfr.20120050
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo"),
         // abs - right column all literatumArticleToolsWidget 
         // except Download Citation
         // http://www.birpublications.org/doi/abs/10.1259/bjr.20140472                                      
