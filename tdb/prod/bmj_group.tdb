@@ -2220,10 +2220,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     
     {
     
-      comment[v19] = Crawl failure
-      comment[v20] = Crawl failure
-
       param[base_url] = http://qshc.bmj.com/
+      comment[continued_by] = 2044-5423
 
       au < HighWirePressH20Plugin ; manifest ; 1992 ; Quality and Safety in Health Care Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; manifest ; 1993 ; Quality and Safety in Health Care Volume 2 ; 2 >
@@ -2243,15 +2241,26 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWireStrVolPlugin ; down ; 2007 ; Quality and Safety in Health Care Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Quality and Safety in Health Care Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Quality and Safety in Health Care Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; 2010 ; Quality and Safety in Health Care Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; 2011 ; Quality and Safety in Health Care Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; 2012 ; Quality and Safety in Health Care Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; 2013 ; Quality and Safety in Health Care Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; 2014 ; Quality and Safety in Health Care Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Quality and Safety in Health Care Volume 24 ; 24 >
-      
     }
+  }
 
+  {
+    title <
+      name = BMJ Quality & Safety ;
+      eissn = 2044-5423 ;
+      issnl = 2044-5423
+    >
+
+      param[base_url] = http://qualitysafety.bmj.com/
+      comment[continues] = 0963-8172
+      
+      au < HighWirePressH20Plugin ; exists ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Quality & Safety Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; exists ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; exists ; 2014 ; BMJ Quality & Safety Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
+      
   }
 
   {
