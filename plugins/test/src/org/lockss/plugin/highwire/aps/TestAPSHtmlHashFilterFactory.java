@@ -71,7 +71,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "<div id=\"zone-user-wrapper\" class=\"zone-wrapper\"></div>\n" + 
       "</header>\n" + 
       "</div>9";
-  private static final String headerFiltered = "A<div>\n</div>9";
+  private static final String headerFiltered = "A<div> </div>9";
   
   private static final String footer = "A<div> " + 
       "<footer id=\"section-footer\" class=\"section section-footer\">\n" + 
@@ -131,7 +131,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "<noscript type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</noscript>\n" +
       "</div>9";
   private static final String withoutScript =
-      "A<div>\n</div>9";
+      "A<div> </div>9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-tooltip")
 //  private static final String withToolTip =
@@ -152,7 +152,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "</aside>\n" +
       "9</div>";
   private static final String withoutAside = 
-      "<div>A\n9</div>";
+      "<div>A 9</div>";
   
   private static final String withForm = "<div id=\"page\">" +
       "A<aside>\n" + 
@@ -165,7 +165,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "</aside>\n" +
       "9</div>";
   private static final String withoutForm = 
-      "<div>A\n9</div>";
+      "<div>A 9</div>";
   
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^author-tooltip"),
