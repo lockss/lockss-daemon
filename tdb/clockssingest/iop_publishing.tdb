@@ -367,6 +367,7 @@
 
     param[journal_issn] = 0264-9381
     comment[param] = print issn preferred
+    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 1984 ; Classical and Quantum Gravity Volume 1 ; 1 > 
     au < manifest ; exists ; 1985 ; Classical and Quantum Gravity Volume 2 ; 2 > 
@@ -398,7 +399,7 @@
     au < finished ; crawling ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 
     au < finished ; crawling ; 2012 ; Classical and Quantum Gravity Volume 29 ; 29 > 
     au < crawling ; exists ; 2013 ; Classical and Quantum Gravity Volume 30 ; 30 > 
-    au < testing ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 > 
+    au < notReady ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 > 
     au < manifest ; exists ; 2015 ; Classical and Quantum Gravity Volume 32 ; 32 > 
 
   }
@@ -518,7 +519,8 @@
     >
 
     param[journal_issn] = 1748-9326
-    comment[notReady] = crawl failed, Fetch error - access denied, RU4441
+    comment[ingNotReady] = crawl failed, Fetch error - access denied, RU4441
+    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 2006 ; Environmental Research Letters Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
@@ -528,7 +530,7 @@
     au < finished ; crawling ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 > 
-    au < testing ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
+    au < notReady ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
     au < manifest ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
 
   }
