@@ -177,7 +177,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
       "</div></div></div></div>\n" +
       "</html>9";
-  private static final String withoutToolTip = "A<html>\n</html>9";
+  private static final String withoutToolTip = "A<html> </html>9";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
   private static final String withSidebar = "A<html> " +
