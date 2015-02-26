@@ -3,12 +3,12 @@
   publisher <
     name = IOP Publishing ;
     info[contract] = 2014 ;
-    info[tester] = 5
+    info[tester] = 0
   >
 
   plugin = needs.plugin
   param[base_url] = http://iopscience.iop.org/
-  implicit < status ; status2 ; year ; param[eisbn] ; eisbn ; isbn ; name ; author >
+  implicit < status ; status2 ; year ; param[eisbn] ; eisbn ; isbn ; name >
   
   {
 
@@ -17,18 +17,32 @@
       type = bookSeries
     >
     
-    au < exists ; exists ; 2014 ; 978-1-627-05309-9 ; 978-1-627-05309-9 ; 978-1-627-05308-2 ; AdS/CFT Correspondence in Condensed Matter ; Antonio Sergio Teixeira Pires >
-    au < exists ; exists ; 2014 ; 978-0-750-31050-5 ; 978-0-750-31050-5 ; 978-0-750-31051-2 ; Advanced Digital Imaging Laboratory Using MATLAB® ; Leonid P Yaroslavsky >
-    au < exists ; exists ; 2014 ; 978-1-627-05328-0 ; 978-1-627-05328-0 ; 978-1-627-05327-3 ; Advanced Solid State Theory ; Thomas Pruschke >
-    au < exists ; exists ; 2014 ; 978-1-627-05279-5 ; 978-1-627-05279-5 ; 978-1-627-05278-8 ; Defining and Measuring Nature ; Jeffrey H Williams >
-    au < exists ; exists ; 2014 ; 978-1-627-05273-3 ; 978-1-627-05273-3 ; 978-1-627-05272-6 ; Guide Through the Nanocarbon Jungle ; David Tománek >
-    au < exists ; exists ; 2014 ; 978-1-627-05276-4 ; 978-1-627-05276-4 ; 978-1-627-05275-7 ; Introduction to the Mathematical Physics of Nonlinear Waves ; Minoru Fujimoto >
-    au < exists ; exists ; 2014 ; 978-0-750-31056-7 ; 978-0-750-31056-7 ; 978-0-750-31057-4 ; Principles and Applications of Fourier Optics ; Robert K Tyson >
-    au < exists ; exists ; 2014 ; 978-1-627-05416-4 ; 978-1-627-05416-4 ; 978-1-627-05417-1 ; Quantum Chemistry ; Ajit J Thakkar >
-    au < exists ; exists ; 2014 ; 978-1-627-05330-3 ; 978-1-627-05330-3 ; 978-1-627-05329-7 ; Quantum Information in Gravitational Fields ; Marco Lanzagorta >
-    au < exists ; exists ; 2014 ; 978-0-750-31040-6 ; 978-0-750-31040-6 ; 978-0-750-31041-3 ; Renewables ; David Elliott >
-    au < exists ; exists ; 2014 ; 978-0-750-31044-4 ; 978-0-750-31044-4 ; 978-0-750-31045-1 ; Semiconductors ; David K Ferry >
-    au < exists ; exists ; 2014 ; 978-0-750-31062-8 ; 978-0-750-31062-8 ; 978-0-750-31063-5 ; Ultrafast Spectroscopy ; Joel Yuen-Zhou, Jacob J Krich, Ivan Kassal, Allan S Johnson, and Alán Aspuru-Guzik >
+    au < exists ; exists ; 2014 ; 978-0-750-31060-4 ; 978-0-750-31060-4 ; 978-0-750-31061-1 ; A Short Course on Relativistic Heavy Ion Collisions >
+    au < exists ; exists ; 2014 ; 978-1-627-05309-9 ; 978-1-627-05309-9 ; 978-1-627-05308-2 ; ADS/CFT Correspondence in Condensed Matter >
+    au < exists ; exists ; 2014 ; 978-0-750-31050-5 ; 978-0-750-31050-5 ; 978-0-750-31051-2 ; Advanced Digital Imaging Laboratory Using MATLAB® >
+    au < exists ; exists ; 2014 ; 978-1-627-05328-0 ; 978-1-627-05328-0 ; 978-1-627-05327-3 ; Advanced Solid State Theory >
+    au < exists ; exists ; 2014 ; 978-1-627-05532-1 ; 978-1-627-05532-1 ; 978-1-627-05531-4 ; Advances in Thermodynamics of the van der Waals Fluid >
+    au < exists ; exists ; 2014 ; 978-1-6270-5678-6 ; 978-1-6270-5678-6 ; 978-1-6270-5677-9 ; Analysis of the Alkali Metal Diatomic Spectra >
+    au < exists ; exists ; 2014 ; 978-1-6270-5573-4 ; 978-1-6270-5573-4 ; 978-1-6270-5572-7 ; Classical Theory of Free-Electron Lasers >
+    au < exists ; exists ; 2014 ; 978-1-627-05279-5 ; 978-1-627-05279-5 ; 978-1-627-05278-8 ; Defining and Measuring Nature >
+    au < exists ; exists ; 2014 ; 978-1-6270-5497-3 ; 978-1-6270-5497-3 ; 978-1-6270-5496-6 ; From Newton to Einstein >
+    au < exists ; exists ; 2014 ; 978-1-627-05273-3 ; 978-1-627-05273-3 ; 978-1-627-05272-6 ; Guide Through the Nanocarbon Jungle >
+    au < exists ; exists ; 2014 ; 978-1-627-05276-4 ; 978-1-627-05276-4 ; 978-1-627-05275-7 ; Introduction to the Mathematical Physics of Nonlinear Waves >
+    au < exists ; exists ; 2014 ; 978-1-6270-5303-7 ; 978-1-6270-5303-7 ; 978-1-6270-5302-0 ; Introduction to the Physics of the Cryosphere >
+    au < exists ; exists ; 2014 ; 978-1-6270-5300-6 ; 978-1-6270-5300-6 ; 978-1-6270-5299-3 ; Liquid Crystals through Experiments >
+    au < exists ; exists ; 2014 ; 978-1-627-05419-5 ; 978-1-627-05419-5 ; 978-1-627-05418-8 ; Modelling Physics with Microsoft Excel >
+    au < exists ; exists ; 2014 ; 978-1-627-05288-7 ; 978-1-627-05288-7 ; 978-1-627-05287-0 ; Molecular Photophysics and Spectroscopy >
+    au < exists ; exists ; 2014 ; 978-0-750-31100-7 ; 978-0-750-31100-7 ; 978-0-750-31101-4 ; Motions of Celestial Bodies >
+    au < exists ; exists ; 2014 ; 978-1-6270-5429-4 ; 978-1-6270-5429-4 ; 978-1-6270-5428-7 ; Nanoscopic Electrofocusing for Bio-Nanoelectronic Devices >
+    au < exists ; exists ; 2014 ; 978-0-750-31052-9 ; 978-0-750-31052-9 ; 978-0-750-31053-6 ; Physics of the Atmosphere >
+    au < exists ; exists ; 2014 ; 978-0-750-31056-7 ; 978-0-750-31056-7 ; 978-0-750-31057-4 ; Principles and Applications of Fourier Optics >
+    au < exists ; exists ; 2014 ; 978-1-627-05416-4 ; 978-1-627-05416-4 ; 978-1-627-05417-1 ; Quantum Chemistry >
+    au < exists ; exists ; 2014 ; 978-1-627-05330-3 ; 978-1-627-05330-3 ; 978-1-627-05329-7 ; Quantum Information in Gravitational Fields >
+    au < exists ; exists ; 2014 ; 978-0-750-31040-6 ; 978-0-750-31040-6 ; 978-0-750-31041-3 ; Renewables >
+    au < exists ; exists ; 2014 ; 978-0-7503-1058-1 ; 978-0-7503-1058-1 ; 978-0-7503-1059-8 ; Scientific Basis of the Royal College of Radiologists Fellowship >
+    au < exists ; exists ; 2014 ; 978-0-750-31044-4 ; 978-0-750-31044-4 ; 978-0-750-31045-1 ; Semiconductors >
+    au < exists ; exists ; 2014 ; 978-1-6270-5453-9 ; 978-1-6270-5453-9 ; 978-1-6270-5452-2 ; The Tao of Microelectronics >
+    au < exists ; exists ; 2014 ; 978-0-750-31062-8 ; 978-0-750-31062-8 ; 978-0-750-31063-5 ; Ultrafast Spectroscopy >
 
   }
 
