@@ -1,0 +1,80 @@
+{
+
+  publisher <
+    name = International Phycological Society ;
+    comment[platform] = Allen Press ;
+    info[tester] = 0
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://www.phycologia.org/
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+    title <
+      name = Phycologia ;
+      issn = 0031-8884 ;
+      eissn = 2330-2968 ;
+      issnl = 0031-8884
+    >
+    
+    param[journal_id] = phya
+    
+    au < exists ; 1961 ; Phycologia Volume 1 ; 1 >
+    au < exists ; 1963 ; Phycologia Volume 2 ; 2 >
+    au < exists ; 1964 ; Phycologia Volume 3 ; 3 >
+    au < exists ; 1965 ; Phycologia Volume 4 ; 4 >
+    au < exists ; 1966 ; Phycologia Volume 5 ; 5 >
+    au < exists ; 1967 ; Phycologia Volume 6 ; 6 >
+    au < exists ; 1968 ; Phycologia Volume 7 ; 7 >
+    au < exists ; 1969 ; Phycologia Volume 8 ; 8 >
+    au < exists ; 1970 ; Phycologia Volume 9 ; 9 >
+    au < exists ; 1971 ; Phycologia Volume 10 ; 10 >
+    au < exists ; 1972 ; Phycologia Volume 11 ; 11 >
+    au < exists ; 1973 ; Phycologia Volume 12 ; 12 >
+    au < exists ; 1974 ; Phycologia Volume 13 ; 13 >
+    au < exists ; 1975 ; Phycologia Volume 14 ; 14 >
+    au < exists ; 1976 ; Phycologia Volume 15 ; 15 >
+    au < exists ; 1977 ; Phycologia Volume 16 ; 16 >
+    au < exists ; 1978 ; Phycologia Volume 17 ; 17 >
+    au < exists ; 1979 ; Phycologia Volume 18 ; 18 >
+    au < exists ; 1980 ; Phycologia Volume 19 ; 19 >
+    au < exists ; 1981 ; Phycologia Volume 20 ; 20 >
+    au < exists ; 1982 ; Phycologia Volume 21 ; 21 >
+    au < exists ; 1983 ; Phycologia Volume 22 ; 22 >
+    au < exists ; 1984 ; Phycologia Volume 23 ; 23 >
+    au < exists ; 1985 ; Phycologia Volume 24 ; 24 >
+    au < exists ; 1986 ; Phycologia Volume 25 ; 25 >
+    au < exists ; 1987 ; Phycologia Volume 26 ; 26 >
+    au < exists ; 1988 ; Phycologia Volume 27 ; 27 >
+    au < exists ; 1989 ; Phycologia Volume 28 ; 28 >
+    au < exists ; 1990 ; Phycologia Volume 29 ; 29 >
+    au < exists ; 1991 ; Phycologia Volume 30 ; 30 >
+    au < exists ; 1992 ; Phycologia Volume 31 ; 31 >
+    au < exists ; 1993 ; Phycologia Volume 32 ; 32 >
+    au < exists ; 1994 ; Phycologia Volume 33 ; 33 >
+    au < exists ; 1995 ; Phycologia Volume 34 ; 34 >
+    au < exists ; 1996 ; Phycologia Volume 35 ; 35 >
+    au < exists ; 1997 ; Phycologia Volume 36 ; 36 >
+    au < exists ; 1998 ; Phycologia Volume 37 ; 37 >
+    au < exists ; 1999 ; Phycologia Volume 38 ; 38 >
+    au < exists ; 2000 ; Phycologia Volume 39 ; 39 >
+    au < exists ; 2001 ; Phycologia Volume 40 ; 40 >
+    au < exists ; 2002 ; Phycologia Volume 41 ; 41 >
+    au < exists ; 2003 ; Phycologia Volume 42 ; 42 >
+    au < exists ; 2004 ; Phycologia Volume 43 ; 43 >
+    au < exists ; 2005 ; Phycologia Volume 44 ; 44 >
+    au < exists ; 2006 ; Phycologia Volume 45 ; 45 >
+    au < exists ; 2007 ; Phycologia Volume 46 ; 46 >
+    au < exists ; 2008 ; Phycologia Volume 47 ; 47 >
+    au < exists ; 2009 ; Phycologia Volume 48 ; 48 >
+    au < exists ; 2010 ; Phycologia Volume 49 ; 49 >
+    au < exists ; 2011 ; Phycologia Volume 50 ; 50 >
+    au < exists ; 2012 ; Phycologia Volume 51 ; 51 >
+    au < exists ; 2013 ; Phycologia Volume 52 ; 52 >
+    au < exists ; 2014 ; Phycologia Volume 53 ; 53 >
+    au < exists ; 2015 ; Phycologia Volume 54 ; 54 >
+    
+  }
+  
+}
