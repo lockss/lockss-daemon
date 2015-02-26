@@ -47,7 +47,7 @@ public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   
   @Override
   public boolean doWSFiltering() {
-    return false;
+    return true;
   }
   @Override
   public boolean doTagAttributeFiltering() {
