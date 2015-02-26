@@ -1,0 +1,52 @@
+{
+
+  publisher <
+    name = The American Cleft Palate-Craniofacial Associations ;
+    comment[platform] = Allen Press ;
+    info[tester] = 0
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://cpcjournal.org/
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+    title <
+      name = The Cleft Palate-Craniofacial Journal ;
+      issn = 1055-6656 ;
+      eissn = 1545-1569 ;
+      issnl = 1055-6656
+    >
+    
+    param[journal_id] = cpcj
+    
+    au < exists ; 1990 ; The Cleft Palate-Craniofacial Journal Volume 27 ; 27 >
+    au < exists ; 1991 ; The Cleft Palate-Craniofacial Journal Volume 28 ; 28 >
+    au < exists ; 1992 ; The Cleft Palate-Craniofacial Journal Volume 29 ; 29 >
+    au < exists ; 1993 ; The Cleft Palate-Craniofacial Journal Volume 30 ; 30 >
+    au < exists ; 1994 ; The Cleft Palate-Craniofacial Journal Volume 31 ; 31 >
+    au < exists ; 1995 ; The Cleft Palate-Craniofacial Journal Volume 32 ; 32 >
+    au < exists ; 1996 ; The Cleft Palate-Craniofacial Journal Volume 33 ; 33 >
+    au < exists ; 1997 ; The Cleft Palate-Craniofacial Journal Volume 34 ; 34 >
+    au < exists ; 1998 ; The Cleft Palate-Craniofacial Journal Volume 35 ; 35 >
+    au < exists ; 1999 ; The Cleft Palate-Craniofacial Journal Volume 36 ; 36 >
+    au < exists ; 2000 ; The Cleft Palate-Craniofacial Journal Volume 37 ; 37 >
+    au < exists ; 2001 ; The Cleft Palate-Craniofacial Journal Volume 38 ; 38 >
+    au < exists ; 2002 ; The Cleft Palate-Craniofacial Journal Volume 39 ; 39 >
+    au < exists ; 2003 ; The Cleft Palate-Craniofacial Journal Volume 40 ; 40 >
+    au < exists ; 2004 ; The Cleft Palate-Craniofacial Journal Volume 41 ; 41 >
+    au < exists ; 2005 ; The Cleft Palate-Craniofacial Journal Volume 42 ; 42 >
+    au < exists ; 2006 ; The Cleft Palate-Craniofacial Journal Volume 43 ; 43 >
+    au < exists ; 2007 ; The Cleft Palate-Craniofacial Journal Volume 44 ; 44 >
+    au < exists ; 2008 ; The Cleft Palate-Craniofacial Journal Volume 45 ; 45 >
+    au < exists ; 2009 ; The Cleft Palate-Craniofacial Journal Volume 46 ; 46 >
+    au < exists ; 2010 ; The Cleft Palate-Craniofacial Journal Volume 47 ; 47 >
+    au < exists ; 2011 ; The Cleft Palate-Craniofacial Journal Volume 48 ; 48 >
+    au < exists ; 2012 ; The Cleft Palate-Craniofacial Journal Volume 49 ; 49 >
+    au < exists ; 2013 ; The Cleft Palate-Craniofacial Journal Volume 50 ; 50 >
+    au < exists ; 2014 ; The Cleft Palate-Craniofacial Journal Volume 51 ; 51 >
+    au < exists ; 2015 ; The Cleft Palate-Craniofacial Journal Volume 52 ; 52 >
+    
+  }
+  
+}
