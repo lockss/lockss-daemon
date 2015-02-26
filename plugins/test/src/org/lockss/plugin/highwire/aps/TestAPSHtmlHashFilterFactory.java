@@ -60,8 +60,8 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
   //  HtmlNodeFilters.comment(),
   private static final String comment = 
       "<!--[if lt IE 9]><script src=\"http://html5shiv.dd.com/svn/trunk/html5.js\">" +
-          "</script><![endif]-->\n";
-  private static final String commentFiltered = "\n";
+          "</script><![endif]--> ";
+  private static final String commentFiltered = " ";
   
   //  // No relevant content in header/footer
   //  new TagNameFilter("header"),
@@ -71,14 +71,14 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "<div id=\"zone-user-wrapper\" class=\"zone-wrapper\"></div>\n" + 
       "</header>\n" + 
       "</div>9";
-  private static final String headerFiltered = "A<div>\n\n</div>9";
+  private static final String headerFiltered = "A<div>\n</div>9";
   
-  private static final String footer = "A<div>\n" + 
+  private static final String footer = "A<div> " + 
       "<footer id=\"section-footer\" class=\"section section-footer\">\n" + 
       "<div id=\"zone-postscript\" class=\"zone zone-postscript clearfix container-30\"></div>\n" +
       "</footer>\n" + 
       "</div>9";
-  private static final String footerFiltered = "A<div>\n\n</div>9";
+  private static final String footerFiltered = "A<div> </div>9";
   
   //  // copyright statement may change
   //  HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
@@ -89,10 +89,10 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
   
   //// messages can appear arbitrarily
   //HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
-  private static final String messages = "A<div>\n" +
+  private static final String messages = "A<div> " +
       "<div id=\"messages\">arbitrary text" +
       "</div></div>9";
-  private static final String messagesFiltered = "A<div>\n</div>9";
+  private static final String messagesFiltered = "A<div> </div>9";
   
   //// extras, prev/next pager and right sidebar may change
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
@@ -110,7 +110,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
   private static final String withoutCitExtra = "A<html class=\"js\" lang=\"en\">\nx</html>9";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
-  private static final String withPager = "A<html>\n" +
+  private static final String withPager = "A<html> " +
       "<div class=\"panel-pane pane-highwire-node-pager\" >X\n" + 
       "<div class=\"pane-content\">\n" + 
       "<div class=\"pager highwire-pager pager-mini clearfix highwire-node-pager " +
@@ -121,17 +121,17 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "class=\"pager-link-next link-icon link-icon-right\">Next <i class=\"icon-circle-arrow-right\">" +
       "</i></a></span></div>  </div>\n" + 
       "</div></html>9";
-  private static final String withoutPager = "A<html>\n</html>9";
+  private static final String withoutPager = "A<html> </html>9";
   
   //new TagNameFilter("script"),
   //new TagNameFilter("noscript"),
   private static final String withScript =
       "A<div>\n" +
-      "<script type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</script> " +
-      "<noscript type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</noscript>" +
+      "<script type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</script>\n" +
+      "<noscript type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</noscript>\n" +
       "</div>9";
   private static final String withoutScript =
-      "A<div>\n </div>9";
+      "A<div>\n</div>9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-tooltip")
 //  private static final String withToolTip =
@@ -177,10 +177,10 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
       "</div></div></div></div>\n" +
       "</html>9";
-  private static final String withoutToolTip = "A<html>\n\n</html>9";
+  private static final String withoutToolTip = "A<html>\n</html>9";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-  private static final String withSidebar = "A<html>\n" +
+  private static final String withSidebar = "A<html> " +
       "<div class=\"sidebar-right-wrapper grid-10 omega\">X\n" + 
       "<div class=\"panel-panel panel-region-sidebar-right\">\n" + 
       "<div class=\"inside\">" +
@@ -188,7 +188,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
       "</div></div></div></div>\n" +
       "</html>9";
-  private static final String withoutSidebar = "A<html>\n\n</html>9";
+  private static final String withoutSidebar = "A<html> </html>9";
   
   
   @Override
