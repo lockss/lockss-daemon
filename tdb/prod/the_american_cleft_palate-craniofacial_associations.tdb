@@ -7,7 +7,7 @@
   >
   
   plugin = needs.plugin
-  param[base_url] = http://cpcjournal.org/
+  param[base_url] = http://www.cpcjournal.org/
   implicit < status ; year ; name ; param[volume_name] >
   
   {
