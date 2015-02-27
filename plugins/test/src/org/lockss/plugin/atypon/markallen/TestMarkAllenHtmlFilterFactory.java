@@ -196,7 +196,17 @@ public class TestMarkAllenHtmlFilterFactory
           "</div></div></div></div>" +
           "</div>";     
   
-
+  // http://www.magonlinelibrary.com/doi/full/10.12968/bjnn.2014.10.1.13
+  private static final String withCitedby =
+      "<div class=\"block\">" + 
+          "<ul><li>" +
+          "<a href=\"/doi/citedby/11.1111/jid.20129999\"> Cited by </a>" +
+          "</li></ul>" +
+          "</div>"; 
+  private static final String withoutCitedby =
+      "<div class=\"block\">" + 
+          "<ul></ul>" +
+          "</div>";  
   
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -264,6 +274,7 @@ public class TestMarkAllenHtmlFilterFactory
                    filteredStr);
       doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredStr);
       doFilterTest(maau, variantFact, withPageFooter, filteredStr);
+      doFilterTest(maau, variantFact, withCitedby, withoutCitedby); 
     }
   }
   
