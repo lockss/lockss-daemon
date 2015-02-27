@@ -85,7 +85,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
   private static final String withCopyright = "A<html class=\"js\" lang=\"en\">\n" +
       "<ul class=\"copyright-statement\">gone<li class=\"fn\">Copyright © 2012 American Society</li>" +
       "</ul></html>9";
-  private static final String withoutCopyright = "A<html class=\"js\" lang=\"en\">\n</html>9";
+  private static final String withoutCopyright = "A<html class=\"js\" lang=\"en\"> </html>9";
   
   //// messages can appear arbitrarily
   //HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
@@ -107,7 +107,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "class=\"cit-ref-sprinkles cit-ref-sprinkles-newisilink cit-ref-sprinkles-webofscience\">" +
       "<span>Web of Science</span></a>" +
       "</div></html>9";
-  private static final String withoutCitExtra = "A<html class=\"js\" lang=\"en\">\nx</html>9";
+  private static final String withoutCitExtra = "A<html class=\"js\" lang=\"en\"> x</html>9";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
   private static final String withPager = "A<html> " +
