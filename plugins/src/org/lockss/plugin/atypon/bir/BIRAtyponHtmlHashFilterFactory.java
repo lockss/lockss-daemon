@@ -47,10 +47,10 @@ import org.lockss.util.Logger;
 public class BIRAtyponHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
 
-  Logger log = Logger.getLogger(BIRAtyponHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(BIRAtyponHtmlHashFilterFactory.class);
   
-  protected static final Pattern citedBy = Pattern.compile("Cited by", 
-                                                    Pattern.CASE_INSENSITIVE);
+  protected static final Pattern CITED_BY =
+      Pattern.compile("Cited by", Pattern.CASE_INSENSITIVE);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -60,8 +60,8 @@ public class BIRAtyponHtmlHashFilterFactory
         // handled by parent: script, sfxlink, stylesheet
 
         // this is controversial - draconian; what about updated metadata
-        new TagNameFilter("head"),
-        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tag("noscript"),
         
         // toc - first top block ad
         // http://www.birpublications.org/toc/bjr/87/1044
@@ -111,7 +111,7 @@ public class BIRAtyponHtmlHashFilterFactory
           @Override public boolean accept(Node node) {
             if (!(node instanceof Bullet)) return false;
             String allText = ((CompositeTag)node).toPlainTextString();
-            return citedBy.matcher(allText).find();
+            return CITED_BY.matcher(allText).find();
           }
         },   
     };
