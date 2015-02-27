@@ -183,6 +183,8 @@ Thinks to look for:
 * full text right colummn - several locations with ids
   http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
 * Downloaded count from full text.
+* <li> item has the text "Cited by" should be removed
+  http://www.magonlinelibrary.com/doi/full/10.12968/bjnn.2014.10.1.13
 
 ---------------------LINK EXTRACTOR-----------------------------
 The BaseAtypon link extractor does two primary things - it generates the links on the "download citations" form so that we get the citations (RIS) and it generates the links needed to pick up the alternate sizes for the images. 

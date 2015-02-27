@@ -33,15 +33,24 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.markallen;
 
 import java.io.InputStream;
-
+import java.util.regex.Pattern;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.Bullet;
+import org.htmlparser.tags.CompositeTag;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
+import org.lockss.util.Logger;
 
 public class MarkAllenHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
+  
+  Logger log = Logger.getLogger(MarkAllenHtmlHashFilterFactory.class);
+  
+  protected static final Pattern citedBy = Pattern.compile("Cited by", 
+                                                    Pattern.CASE_INSENSITIVE);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -58,25 +67,19 @@ public class MarkAllenHtmlHashFilterFactory
         // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "literatumInstitutionBanner"),
-        
         // from toc - top page ad and all other ads with class LiteratumAd
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
-        
         // from toc - pageHeader - has links to current issue
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageHeader"),
-        
         // from toc - ad panel has link to other issue 
         // http://www.magonlinelibrary.com/toc/bjom/21/10
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "genericSlideshow"),
-            
         // for toc - social media
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                                               "general-bookmark-share"),
-            
         // from toc - access icon container 
         HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),      
-	           
         // middle column ad of an article - all article tools with 
         // class literatumArticleToolsWidget except Download Citations
         // http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
@@ -85,22 +88,26 @@ public class MarkAllenHtmlHashFilterFactory
                 "div", "class", "literatumArticleToolsWidget"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "a", "href", "/action/showCitFormats\\?")),   
-                    
         // from full text - Downloaded count
         // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.692            
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                                               "literatumContentItemDownloadCount"),            
-                    
         // toc, abs, full, text and ref right column - most read 
         // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "literatumMostReadWidget"),
-        
         // pageFooter
         HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
-        
+        // <li> item has the text "Cited by" should be removed
+        // http://www.magonlinelibrary.com/doi/full/10.12968/bjnn.2014.10.1.13
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (!(node instanceof Bullet)) return false;
+            String allText = ((CompositeTag)node).toPlainTextString();
+            return citedBy.matcher(allText).find();
+          }
+        },  
     };
-    
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
