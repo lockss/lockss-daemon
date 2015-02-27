@@ -8,6 +8,10 @@
     <string>org.lockss.plugin.springer.api.SpringerApiPlugin</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Springer API Plugin</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
     <string>1</string>
   </entry>
@@ -27,17 +31,6 @@
         <string>1</string>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Springer API Plugin</string>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <list>
-      <string>"%slockss.txt", base_url</string>
-      <string>"%slockss.txt", api_url</string> 
-    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -84,6 +77,17 @@
     <string>"Springer API Plugin, Base URL %s, API URL %s, ISSN %s, Volume %s", base_url, api_url, journal_issn, volume_name</string>
   </entry>
   <entry>
+    <string>au_permission_url</string>
+    <list>
+      <string>"%slockss.txt", base_url</string>
+      <string>"%slockss.txt", api_url</string> 
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.springer.api.SpringerApiCrawlSeedFactory</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"%s", api_url</string>
@@ -92,24 +96,20 @@
     </list>
   </entry>
   <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiHtmlHashFilterFactory</string>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.springer.api.SpringerApiUrlNormalizer</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.springer.api.SpringerApiHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiUrlNormalizer</string>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.springer.api.SpringerApiHtmlHashFilterFactory</string>
   </entry>
   <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiCrawlSeedFactory</string>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>au_def_pause_time</string>

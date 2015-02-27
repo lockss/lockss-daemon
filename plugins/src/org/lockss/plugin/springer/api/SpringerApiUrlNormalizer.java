@@ -1,10 +1,10 @@
 /*
- * $Id: SpringerLinkUrlNormalizer.java,v 1.10 2013/03/08 02:07:25 thib_gc Exp $
+ * $Id$
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,7 +44,7 @@ public class SpringerApiUrlNormalizer implements UrlNormalizer {
   //Original: http://link.springer.com/content/pdf/10.1186%2F1472-6947-8-61.pdf
   //Norm this to Orig: http://download.springer.com/static/pdf/28/art%253A10.1186%252F1472-6947-8-61.pdf?auth66=1421354172_185780df15b847df3052ec9a904a3b12&ext=.pdf
   //
-  protected static final Logger logger = Logger.getLogger(SpringerApiUrlNormalizer.class);
+  protected static final Logger log = Logger.getLogger(SpringerApiUrlNormalizer.class);
   public static final String ENDS_WITH = "&ext=.pdf";
   
   
@@ -53,8 +53,8 @@ public class SpringerApiUrlNormalizer implements UrlNormalizer {
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     if (!url.startsWith(SpringerApiCrawlSeed.CDN_URL)
         || !url.endsWith(ENDS_WITH)) {
-      if (logger.isDebug3()) {
-        logger.debug3(String.format("Non-matching: %s in %s", url, au.getName()));
+      if (log.isDebug3()) {
+        log.debug3(String.format("Non-matching: %s in %s", url, au.getName()));
       }
       return url;
     }
