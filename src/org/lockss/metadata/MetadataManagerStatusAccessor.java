@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
@@ -66,8 +65,12 @@ import org.lockss.util.TimeBase;
  *
  */
 public class MetadataManagerStatusAccessor implements StatusAccessor {
+  public static final String NEW_INDEX_TEXT = "New Index";
+  public static final String FULL_REINDEX_TEXT = "Full Reindex";
+  public static final String REINDEX_TEXT = "Reindex";
 
-  private static Logger log = Logger.getLogger(MetadataManagerStatusAccessor.class);
+  private static Logger log =
+      Logger.getLogger(MetadataManagerStatusAccessor.class);
 
   final MetadataManager metadataMgr;
   private String key = null;
@@ -96,7 +99,8 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         new ColumnDescriptor(INDEX_TYPE, "Index Type",
                              ColumnDescriptor.TYPE_STRING,
                              "Indicates whether new content is being indexed "
-                             + " or existing content index is being updated"),
+                        	 + "or existing content index is being fully "
+                        	 + "or partially updated"),
         new ColumnDescriptor(INDEX_STATUS_COL_NAME, "Status",
                              ColumnDescriptor.TYPE_STRING,
                              "Status of indexing operation."),
@@ -190,7 +194,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       res.add(new StatusTable.SummaryInfo(
           "Index Type",
           ColumnDescriptor.TYPE_STRING,
-          task.isNewAu() ? "New Index" : "Reindex"));
+          getIndexTypeDisplayString(task)));
   
       // show reindexing status string
       String status;
@@ -289,7 +293,19 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     
     return res;
   }
-  
+
+  /**
+   * Provides the index type text to be displayed.
+   * 
+   * @param task
+   *          A ReindexingTask with the indexing task.
+   * @return a String with the index type text to be displayed.
+   */
+  private String getIndexTypeDisplayString(ReindexingTask task) {
+    return task.isNewAu() ? NEW_INDEX_TEXT :
+      (task.needsFullReindex() ? FULL_REINDEX_TEXT : REINDEX_TEXT);
+  }
+
   /**
    * Get summary info that is displayed above a list of items.
    * @return a list of SummaryInfo objects to display
@@ -415,9 +431,10 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         Map<String,Object> row = new HashMap<String,Object>();
         row.put(AU_COL_NAME,
                 new StatusTable.Reference(auName,
-                                          ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+                                          ArchivalUnitStatus.
+                                          AU_STATUS_TABLE_NAME,
                                           pendingAuId.auId));
-        row.put(INDEX_TYPE, pendingAuId.isNew ? "New Index" : "Reindex");
+        row.put(INDEX_TYPE, getIndexTypeDisplayString(pendingAuId));
         row.put(INDEX_STATUS_COL_NAME, "Pending");
         rows.add(row);
       }
@@ -425,7 +442,19 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     
     return rows;
   }
-  
+
+  /**
+   * Provides the index type text to be displayed.
+   * 
+   * @param pAuId
+   *          A PrioritizedAuId with the indexed Archival Unit.
+   * @return a String with the index type text to be displayed.
+   */
+  String getIndexTypeDisplayString(PrioritizedAuId pAuId) {
+    return pAuId.isNew ? NEW_INDEX_TEXT :
+      pAuId.needFullReindex ? FULL_REINDEX_TEXT : REINDEX_TEXT;
+  }
+
   /**
    * Get status rows for reindexing tasks.
    * @param tasks the reindexing tasks
@@ -444,7 +473,6 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       ReindexingStatus indexStatus = task.getReindexingStatus();
       long numIndexed = task.getIndexedArticleCount();
       long numUpdated = task.getUpdatedArticleCount();
-      boolean isNewAu = task.isNewAu();      
       long curTime = TimeBase.nowMs();
       
       Map<String,Object> row = new HashMap<String,Object>();
@@ -452,11 +480,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
               new StatusTable.Reference(auName,
                                         ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
                                         auId));
-      if (isNewAu) {
-        row.put(INDEX_TYPE, "New Index");
-      } else {
-        row.put(INDEX_TYPE, "Reindex");
-      }
+      row.put(INDEX_TYPE, getIndexTypeDisplayString(task));
       
       if (startTime == 0) {
         // task hasn't started yet

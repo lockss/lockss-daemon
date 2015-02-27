@@ -502,7 +502,7 @@ public class ReindexingTask extends StepTask {
         tdbauIsbn = tdbau.getIsbn();
         tdbauIssn = tdbau.getPrintIssn();
         tdbauEissn = tdbau.getEissn();
-        tdbauJournalTitle = tdbau.getJournalTitle();
+        tdbauJournalTitle = tdbau.getPublicationTitle();
       }
 
       if (tdbau != null) {
@@ -811,6 +811,7 @@ public class ReindexingTask extends StepTask {
             // Remove the AU just re-indexed from the list of AUs pending to be
             // re-indexed.
             mdManagerSql.removeFromPendingAus(conn, auId);
+            mdManager.updatePendingAusCount(conn);
 
             // Complete the database transaction.
             DbManager.commitOrRollback(conn, log);
@@ -858,6 +859,7 @@ public class ReindexingTask extends StepTask {
             conn = dbManager.getConnection();
 
             mdManagerSql.removeFromPendingAus(conn, au.getAuId());
+            mdManager.updatePendingAusCount(conn);
 
             if (status == ReindexingStatus.Failed) {
               log.debug2(DEBUG_HEADER + "Marking as broken reindexing task au "

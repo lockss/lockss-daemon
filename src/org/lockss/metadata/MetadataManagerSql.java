@@ -115,6 +115,7 @@ public class MetadataManagerSql {
       + "," + PENDING_AU_TABLE + "." + AU_KEY_COLUMN
       + "," + PENDING_AU_TABLE + "." + PRIORITY_COLUMN
       + ",(" + AU_MD_TABLE + "." + AU_SEQ_COLUMN + " is null) " + ISNEW_COLUMN
+      + "," + PENDING_AU_TABLE + "." + FULLY_REINDEX_COLUMN
       + " from " + PENDING_AU_TABLE
       + "   left join " + PLUGIN_TABLE
       + "     on " + PLUGIN_TABLE + "." + PLUGIN_ID_COLUMN
@@ -975,6 +976,11 @@ public class MetadataManagerSql {
 	    boolean isNew = results.getBoolean(ISNEW_COLUMN);
 	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isNew = " + isNew);
 	    auToReindex.isNew = isNew;
+
+	    boolean needFullReindex = results.getBoolean(FULLY_REINDEX_COLUMN);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "needFullReindex = " + needFullReindex);
+	    auToReindex.needFullReindex = needFullReindex;
 
 	    auIds.add(auToReindex);
 	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Added auId = " + auId

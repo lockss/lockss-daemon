@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.metadata;
 
 import static org.lockss.db.SqlConstants.*;
+import static org.lockss.metadata.MetadataManagerStatusAccessor.*;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -44,6 +45,7 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.util.*;
@@ -214,6 +216,7 @@ public class TestMetadataManager extends LockssTestCase {
     runTestDisabledIndexingAu();
     runTestFailedIndexingAu();
     runTestFindPublication();
+    runTestGetIndexTypeDisplayString();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -470,6 +473,9 @@ public class TestMetadataManager extends LockssTestCase {
     
     // Check that one batch has been executed.
     checkRowCount(con, countPendingAuQuery, 2);
+    String countFullReindexQuery = "select count(*) from " + PENDING_AU_TABLE
+	+ " where " + FULLY_REINDEX_COLUMN + " = true";
+    checkRowCount(con, countFullReindexQuery, 2);
 
     // Add the third AU.
     metadataManager.enableAndAddAuToReindex(sau2, con,
@@ -477,6 +483,7 @@ public class TestMetadataManager extends LockssTestCase {
 
     // Check that the third AU has not been added yet.
     checkRowCount(con, countPendingAuQuery, 2);
+    checkRowCount(con, countFullReindexQuery, 2);
 
     // Add the fourth AU.
     metadataManager.enableAndAddAuToReindex(sau3, con,
@@ -484,6 +491,7 @@ public class TestMetadataManager extends LockssTestCase {
     
     // Check that the second batch has been executed.
     checkRowCount(con, countPendingAuQuery, 4);
+    checkRowCount(con, countFullReindexQuery, 4);
 
     // Add the last AU.
     metadataManager.enableAndAddAuToReindex(sau4, con,
@@ -491,20 +499,31 @@ public class TestMetadataManager extends LockssTestCase {
 
     // Check that all the AUs have been added.
     checkRowCount(con, countPendingAuQuery, 5);
-    
+    checkRowCount(con, countFullReindexQuery, 5);
+
     // insert another pending AU that is not also in the metadata manager
     insertPendingAuBatchStatement.setString(1, "XyzzyPlugin");
     insertPendingAuBatchStatement.setString(2, "journal_id=xyzzy");
+    insertPendingAuBatchStatement.setBoolean(3, Boolean.FALSE);
     insertPendingAuBatchStatement.execute();
-    
-    // ensure that the the most recently added "new" AU is prioritized last
+
+    // Check that the last AU has been added.
+    checkRowCount(con, countPendingAuQuery, 6);
+    checkRowCount(con, countFullReindexQuery, 5);
+
+    assertTrue(metadataManager.isPrioritizeIndexingNewAus());
+
+    // ensure that the the most recently added "new" AU is prioritized first
     List<MetadataManager.PrioritizedAuId> auids =
         metadataManagerSql.getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE,
             metadataManager.isPrioritizeIndexingNewAus());
     assertEquals(6, auids.size());
     assertTrue(auids.get(0).isNew);
+    assertFalse(auids.get(0).needFullReindex);
+
     for (int i = 1; i <= 5; i++) {
-      assertFalse(auids.get(5).isNew);
+      assertFalse(auids.get(i).isNew);
+      assertTrue(auids.get(i).needFullReindex);
     }
 
     // modify the metadata manager to not prioritize new AUs over existing ones
@@ -514,14 +533,19 @@ public class TestMetadataManager extends LockssTestCase {
     Differences diffs = newConf.differences(oldConf);
     metadataManager.setConfig(newConf, oldConf, diffs);
 
-    // ensure that the the most recently added "new" AU is prioritized first
+    assertFalse(metadataManager.isPrioritizeIndexingNewAus());
+
+    // ensure that the the most recently added "new" AU is prioritized last
     auids = metadataManagerSql.getPrioritizedAuIdsToReindex(con,
 	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus());
     assertEquals(6, auids.size());
     for (int i = 0; i < 5; i++) {
       assertFalse(auids.get(i).isNew);
+      assertTrue(auids.get(i).needFullReindex);
     }
+
     assertTrue(auids.get(5).isNew);  // most recently added
+    assertFalse(auids.get(5).needFullReindex);
 
     // Clear the table of pending AUs.
     checkExecuteCount(con, "delete from " + PENDING_AU_TABLE, 6);
@@ -1318,6 +1342,18 @@ public class TestMetadataManager extends LockssTestCase {
 
       assertNull(matchedPublicationSeq);
     }
+  }
+
+  private void runTestGetIndexTypeDisplayString() throws Exception {
+    MetadataManagerStatusAccessor mmsa =
+	new MetadataManagerStatusAccessor(metadataManager);
+
+    PrioritizedAuId pAuId = new PrioritizedAuId();
+    assertEquals(REINDEX_TEXT, mmsa.getIndexTypeDisplayString(pAuId));
+    pAuId.needFullReindex = true;
+    assertEquals(FULL_REINDEX_TEXT, mmsa.getIndexTypeDisplayString(pAuId));
+    pAuId.isNew = true;
+    assertEquals(NEW_INDEX_TEXT, mmsa.getIndexTypeDisplayString(pAuId));
   }
 
   public static class MySubTreeArticleIteratorFactory

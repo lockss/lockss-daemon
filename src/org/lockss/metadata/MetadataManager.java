@@ -688,6 +688,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     public String auId;
     long priority;
     boolean isNew;
+    boolean needFullReindex;
   }
   
   /**
@@ -1066,6 +1067,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public long getPendingAusCount() {
     return pendingAusCount;
+  }
+
+  /**
+   * Re-calculates the number of AUs pending to be reindexed.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void updatePendingAusCount(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updatePendingAusCount(): ";
+    pendingAusCount = mdManagerSql.getEnabledPendingAusCount(conn);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "pendingAusCount = " + pendingAusCount);
   }
 
   /**
