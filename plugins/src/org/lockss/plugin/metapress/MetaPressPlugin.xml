@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -103,13 +103,13 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
       <string>1,"^%sopenurl[.]asp[?]genre=volume&amp;eissn=%s&amp;volume=%s$", base_url, journal_issn, volume_name</string>
       <string>2,"^%scontent/[a-z0-9]{10,16}/(?:offerings/|fulltext[.]pdf[?]page=)", base_url</string>
       <string>2,"^%scontent/[a-z0-9]{10,16}/.*[?&amp;]sortorder=(?!.*[&amp;]p_o=[1-9])", base_url</string>
-      <string>1,"^%scontent/[a-z0-9]{10,16}/", base_url</string>
+      <string>1,"^%scontent/[a-z0-9]{10,16}($|/)", base_url</string>
       <string>1,"^%s(?:export[.]mpx[?]code=[^&amp;]+&amp;mode=|dynamic-file[.]axd[?]id=)", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
