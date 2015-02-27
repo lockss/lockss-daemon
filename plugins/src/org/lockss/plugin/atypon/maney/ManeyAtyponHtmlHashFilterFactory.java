@@ -43,7 +43,7 @@ import org.lockss.util.Logger;
 public class ManeyAtyponHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
 
-  Logger log = Logger.getLogger(ManeyAtyponHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(ManeyAtyponHtmlHashFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -53,8 +53,8 @@ public class ManeyAtyponHtmlHashFilterFactory
         // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
         
         // this is controversial - draconian; what about updated metadata
-        new TagNameFilter("head"),
-        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tag("noscript"),
         
         // toc - pageHeader - top down to breadcrumbs, above journalHeader
         // http://www.maneyonline.com/toc/his/36/4
