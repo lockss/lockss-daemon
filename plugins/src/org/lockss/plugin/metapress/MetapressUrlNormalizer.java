@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,25 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.UrlNormalizer;
-import org.lockss.util.Logger;
+import org.lockss.plugin.*;
 
-
-public class MetaPressUrlNormalizer implements UrlNormalizer {
-  
-  protected static Logger logger = Logger.getLogger(MetaPressUrlNormalizer.class);
-  
-  // Should not disqualify query where like  &p_o=10 or &p_o=20 (these are pages on TOC)
-  protected static Pattern PAT_DISQUALIFY =
-      Pattern.compile("^sortorder=(?!.*[&amp;]p_o=[1-9])");
+public class MetapressUrlNormalizer implements UrlNormalizer {
   
   /*
-   * arguments we want to remove
+   * keys we want to remove from the query
    * p: some random number/letter - seems to be date/time marker, not necessary to view item
    * pi: related to issue numbering to track previous/next. Not necessary to view
    * For example of above:
@@ -66,64 +56,9 @@ public class MetaPressUrlNormalizer implements UrlNormalizer {
    *  Turns out we need
    *    p_o: related to pages of articles in TOC, where p_o != 0
    */
-  protected static final String[] QUERY_REMOVE = new String[] {
-    "p=",
-    "pi=",
-    "p_o=0",
-    "mark=",
-    "sw=",
-    "sortorder="
+  protected static final String[] REMOVED_KEYS = {
+    "mark", "p", "pi", "p_o", "sw", "sortorder"
   };
-  
-  public static String normalizeQuery(String query) {
-    // Empty query string: empty result
-    if (query == null || query.length() == 0) {
-      return "";
-    }
-    
-    // Disqualifying prefix: empty result
-    Matcher mat = PAT_DISQUALIFY.matcher(query);
-    if (mat.find()) {
-      return "";
-    }
-    
-    // Potentially non-empty result
-    StringBuilder sb = new StringBuilder(query.length());
-    int begin = 0;
-    
-    while (begin < query.length()) {
-      // Move past an ampersand
-      if (query.charAt(begin) == '&') {
-        ++begin;
-        continue;
-      }
-      
-      // Isolate the query component query.substring(begin, end)
-      int end = query.indexOf('&', begin);
-      if (end < 0) {
-        end = query.length();
-      }
-      
-      // Signal removable argument by moving 'begin' past 'end'
-      for (String key : QUERY_REMOVE) {
-        if (query.startsWith(key, begin)) {
-          begin = end + 1;
-          break;
-        }
-      }
-      
-      // If 'begin' still before 'end', output non-removable query component
-      if (begin < end) {
-        if (sb.length() != 0) {
-          sb.append('&');
-        }
-        sb.append(query.substring(begin, end));
-        begin = end + 1;
-      }
-    }
-    
-    return sb.toString();
-  }
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
@@ -133,12 +68,62 @@ public class MetaPressUrlNormalizer implements UrlNormalizer {
     }
     
     String query = url.substring(questionMark + 1);
-    String simplifiedQuery = normalizeQuery(query);
-    if (simplifiedQuery == null || simplifiedQuery.length() == 0) {
+    String normalizedQuery = normalizeQuery(query);
+    if (normalizedQuery == null || normalizedQuery.length() == 0) {
       return url.substring(0, questionMark);
     }
-    
-    return url.substring(0, questionMark + 1) + simplifiedQuery;
+    return url.substring(0, questionMark + 1) + normalizedQuery;
+  }
+  
+  public String normalizeQuery(String query) {
+    Map<String, String> map = parseQuery(query);
+    for (String removedKey : REMOVED_KEYS) {
+      if ("p_o".equals(removedKey) && !"0".equals(map.get(removedKey))) {
+        continue; // keep non-zero p_0 values
+      }
+      map.remove(removedKey);
+    }
+    return outputQuery(map);
   }
 
+  public static Map<String, String> parseQuery(String query) {
+    // Empty query string: empty result
+    if (query == null || query.length() == 0) {
+      return Collections.emptyMap();
+    }
+
+    Map<String, String> map = new HashMap<String, String>();
+    String[] pairs = query.split("&");
+    for (String pair : pairs) {
+      if (pair.length() == 0) {
+        continue;
+      }
+      int e = pair.indexOf('=');
+      if (e < 0) {
+        map.put(pair, "");
+      }
+      else {
+        map.put(pair.substring(0, e), pair.substring(e + 1));
+      }
+    }
+    return map;
+  }
+
+  public static String outputQuery(Map<String, String> map) {
+    StringBuilder sb = new StringBuilder();
+    boolean first = true;
+    for (String key : new TreeSet<String>(map.keySet())) {
+      if (first) {
+        first = false;
+      }
+      else {
+        sb.append('&');
+      }
+      sb.append(key);
+      sb.append('=');
+      sb.append(map.get(key));
+    }
+    return sb.toString();
+  }
+  
 }

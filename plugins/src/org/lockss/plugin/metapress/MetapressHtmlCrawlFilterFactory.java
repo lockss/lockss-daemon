@@ -42,9 +42,9 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class MetaPressHtmlCrawlFilterFactory implements FilterFactory {
+public class MetapressHtmlCrawlFilterFactory implements FilterFactory {
   
-  protected static Logger log = Logger.getLogger(MetaPressHtmlCrawlFilterFactory.class);
+  protected static Logger log = Logger.getLogger(MetapressHtmlCrawlFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,

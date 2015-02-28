@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -101,6 +101,8 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
       <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|ashx)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sopenurl[.]asp[?]genre=volume&amp;eissn=%s&amp;volume=%s$", base_url, journal_issn, volume_name</string>
+      <!-- duplicates from before query sorting -->
+      <string>2,"^%s.*\?referencesMode=Show&amp;print=true$", base_url</string>
       <string>2,"^%scontent/[a-z0-9]{10,16}/(?:offerings/|fulltext[.]pdf[?]page=)", base_url</string>
       <string>2,"^%scontent/[a-z0-9]{10,16}/.*[?&amp;]sortorder=(?!.*[&amp;]p_o=[1-9])", base_url</string>
       <string>1,"^%scontent/[a-z0-9]{10,16}($|/)", base_url</string>
@@ -118,12 +120,12 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>500=org.lockss.plugin.metapress.MetaPressHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.metapress.MetapressHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.metapress.MetaPressUrlNormalizer</string>
+    <string>org.lockss.plugin.metapress.MetapressUrlNormalizer</string>
   </entry>
   <entry>
     <string>text/plain_filter_factory</string>
@@ -135,15 +137,15 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.metapress.MetaPressHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.metapress.MetapressHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.metapress.MetaPressHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.metapress.MetapressHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.metapress.MetaPressPdfFilterFactory</string>
+    <string>org.lockss.plugin.metapress.MetapressPdfFilterFactory</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -153,18 +155,18 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.metapress.MetaPressArticleIteratorFactory</string>
+    <string>org.lockss.plugin.metapress.MetapressArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.metapress.MetaPressArticleIteratorFactory</string>
+    <string>org.lockss.plugin.metapress.MetapressArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>
       <entry>
       <string>*;RIS</string>
-      <string>org.lockss.plugin.metapress.MetaPressRisMetadataExtractorFactory</string>
+      <string>org.lockss.plugin.metapress.MetapressRisMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

@@ -37,15 +37,15 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
-public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
+public class TestMetapressHtmlHashFilterFactory extends LockssTestCase {
   static String ENC = Constants.ENCODING_UTF_8;
 
-  private MetaPressHtmlHashFilterFactory fact;
+  private MetapressHtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new MetaPressHtmlHashFilterFactory();
+    fact = new MetapressHtmlHashFilterFactory();
     mau = new MockArchivalUnit();
   }
 

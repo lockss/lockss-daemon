@@ -7,15 +7,15 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
-public class TestMetaPressHtmlCrawlFilterFactory extends LockssTestCase {
+public class TestMetapressHtmlCrawlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
   
-  private MetaPressHtmlCrawlFilterFactory fact;
+  private MetapressHtmlCrawlFilterFactory fact;
   private MockArchivalUnit mau;
   
   public void setUp() throws Exception {
     super.setUp();
-    fact = new MetaPressHtmlCrawlFilterFactory();
+    fact = new MetapressHtmlCrawlFilterFactory();
     mau = new MockArchivalUnit();
   }
   

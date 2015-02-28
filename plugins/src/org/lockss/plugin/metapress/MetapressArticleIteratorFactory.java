@@ -44,11 +44,11 @@ import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
 
-public class MetaPressArticleIteratorFactory
+public class MetapressArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(MetaPressArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(MetapressArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%scontent\", base_url";
   

@@ -42,7 +42,7 @@ import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
-public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase {
+public class TestMetapressArticleIteratorFactory extends ArticleIteratorTestCase {
 	
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
 	

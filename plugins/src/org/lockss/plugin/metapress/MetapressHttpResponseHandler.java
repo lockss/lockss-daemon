@@ -32,37 +32,47 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
+import org.lockss.util.urlconn.*;
 
-/*
- * TY  - JOUR
-JF  - Electronic Government, an International Journal 
-T1  - Evaluating usability, user satisfaction and intention to revisit for successful e-government websites
-VL  - 8
-IS  - 1
-SP  - 1
-EP  - 19
-PY  - 2011/01/01/
-UR  - http://dx.doi.org/10.1504/EG.2011.037694
-DO  - 10.1504/EG.2011.037694
-AU  - Byun, Dae-Ho
-AU  - Finnie, Gavin
- */
-public class MetaPressRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(MetaPressRisMetadataExtractorFactory.class);
-  
-  @Override
-  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-                 String contentType)
-      throws PluginException {
-  
-    log.debug3("In createFileMetadataExtractor");
-    
-    RisMetadataExtractor ris = new RisMetadataExtractor();
-    ris.addRisTag("PY", MetadataField.FIELD_DATE);
-    
-    return ris;
+public class MetapressHttpResponseHandler implements CacheResultHandler {
+
+  protected static Logger logger = Logger.getLogger(MetapressHttpResponseHandler.class);
+
+  public void init(CacheResultMap crmap) {
+    logger.warning("Unexpected call to init()");
+    throw new UnsupportedOperationException("Unexpected call to init()");
   }
+  
+  public CacheException handleResult(ArchivalUnit au,
+                                     String url,
+                                     int responseCode)
+      throws PluginException {
+    
+    logger.debug2(url);
+    switch (responseCode) {
+      case 500:
+        logger.debug2("500");
+        if (url.contains("&mode=ris")) {
+          return new CacheException.RetryDeadLinkException("500 Internal Server Error (non-fatal)");
+        }
+        else {
+          return new CacheException.RetrySameUrlException("500 Internal Server Error");
+        }
+      default:
+        logger.warning(String.format("Unexpected response code %d for %s", responseCode, url));
+        throw new UnsupportedOperationException("Unpexpected response code: " + responseCode);
+    }
+  }
+  
+  public CacheException handleResult(ArchivalUnit au,
+      String url,
+      Exception ex)
+          throws PluginException {
+    logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
+    throw new UnsupportedOperationException();
+  }
+  
 }

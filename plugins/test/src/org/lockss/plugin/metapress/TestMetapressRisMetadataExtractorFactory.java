@@ -58,9 +58,9 @@ AU  - Liebowitz, Jay
 N2  - Knowledge management is the process of creating value from an organisation&#39;s intangible assets. The ability to share and leverage knowledge internally and externally to create knowledge and innovation is a cornerstone of knowledge management. Industry has been involved in formal knowledge management practices over the years, even hiring Chief Knowledge Officers to spearhead their knowledge management initiatives. The government has lagged behind a bit but realises the importance of knowledge management to their organisations in times of shrinking budgets, ensuing retirements and the need to better share information and knowledge within and across government organisations. The key question is whether knowledge management can succeed in the government. This paper explores some issues to help shed light on this subject.
 ER  -
   */ 
-public class TestMetaPressRisMetadataExtractorFactory extends LockssTestCase {
+public class TestMetapressRisMetadataExtractorFactory extends LockssTestCase {
 
-  static Logger log = Logger.getLogger(TestMetaPressRisMetadataExtractorFactory.class);
+  static Logger log = Logger.getLogger(TestMetapressRisMetadataExtractorFactory.class);
 
   private MockLockssDaemon theDaemon;
   private SimulatedArchivalUnit sau; // Simulated AU to generate content
@@ -169,7 +169,7 @@ public class TestMetaPressRisMetadataExtractorFactory extends LockssTestCase {
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
-    FileMetadataExtractor me = new MetaPressRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MetapressRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);

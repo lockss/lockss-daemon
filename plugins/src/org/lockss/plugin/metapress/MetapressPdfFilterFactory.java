@@ -43,7 +43,7 @@ import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class MetaPressPdfFilterFactory implements FilterFactory {
+public class MetapressPdfFilterFactory implements FilterFactory {
   
   /**
    * An enum for publisher IDs used by MetaPress
@@ -67,7 +67,7 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
     UKSG,
   }
   
-  private static final Logger log = Logger.getLogger(MetaPressPdfFilterFactory.class);
+  private static final Logger log = Logger.getLogger(MetapressPdfFilterFactory.class);
   
   private static Pattern PUBLISHER_ID = Pattern.compile("^https?://([^.]+)[.]metapress[.]com/");
   

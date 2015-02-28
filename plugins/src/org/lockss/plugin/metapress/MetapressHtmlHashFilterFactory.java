@@ -46,9 +46,9 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 
-public class MetaPressHtmlHashFilterFactory implements FilterFactory {
+public class MetapressHtmlHashFilterFactory implements FilterFactory {
   
-  protected static Logger log = Logger.getLogger(MetaPressHtmlHashFilterFactory.class);
+  protected static Logger log = Logger.getLogger(MetapressHtmlHashFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
