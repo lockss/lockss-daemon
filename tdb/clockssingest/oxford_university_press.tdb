@@ -2470,7 +2470,6 @@
 
     param[base_url] = http://brain.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[down] = Moved to Drupal platform
 
     au < doNotProcess ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 ; >
@@ -2621,7 +2620,7 @@
     au < finished ; crawling ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
     au < finished ; frozen ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ; >
-    au < testing ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
+    au < ready ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
     au < manifest ; exists ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ; >
 
     }
@@ -3746,7 +3745,54 @@
     param[base_url] = http://cardiovascres.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[notReady] = See RU4166 for author-index 503 error due to publisher database timing out
-    comment[down] = Moved to Drupal platform
+
+    au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 66 ; 66 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 67 ; 67 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 69 ; 69 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 73 ; 73 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 74 ; 74 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 76 ; 76 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
+    au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
+    au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
+    au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
+    au < down ; frozen ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
+    au < down ; crawling ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
+    au < down ; frozen ; 2010 ; Cardiovascular Research Volume 87 ; 87 ; >
+    au < down ; frozen ; 2010 ; Cardiovascular Research Volume 88 ; 88 ; >
+    au < down ; crawling ; 2011 ; Cardiovascular Research Volume 89 ; 89 ; >
+    au < down ; frozen ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
+    au < down ; crawling ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
+    au < down ; frozen ; 2011 ; Cardiovascular Research Volume 92 ; 92 ; >
+    au < ingNotReady ; exists ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
+    au < down ; crawling ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
+    au < down ; frozen ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
+    au < down ; frozen ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
+    au < down ; manifest ; 2013 ; Cardiovascular Research Volume 97 ; 97 ; >
+    au < down ; manifest ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
+    au < down ; manifest ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
+    au < down ; manifest ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
+
+    }
+
+    {
+
+    param[base_url] = http://cardiovascres.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < doNotProcess ; doNotProcess ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
