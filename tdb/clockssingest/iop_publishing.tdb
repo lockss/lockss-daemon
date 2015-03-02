@@ -119,6 +119,7 @@
 
     param[journal_issn] = 1748-3190
     comment[param] = eissn preferred
+    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 2006 ; Bioinspiration & Biomimetics Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Bioinspiration & Biomimetics Volume 2 ; 2 > 
@@ -128,7 +129,7 @@
     au < finished ; crawling ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 > 
-    au < testing ; exists ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 > 
+    au < notReady ; exists ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 > 
     au < manifest ; exists ; 2015 ; Bioinspiration & Biomimetics Volume 10 ; 10 > 
 
   }
@@ -366,6 +367,7 @@
 
     param[journal_issn] = 0264-9381
     comment[param] = print issn preferred
+    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 1984 ; Classical and Quantum Gravity Volume 1 ; 1 > 
     au < manifest ; exists ; 1985 ; Classical and Quantum Gravity Volume 2 ; 2 > 
@@ -397,7 +399,7 @@
     au < finished ; crawling ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 
     au < finished ; crawling ; 2012 ; Classical and Quantum Gravity Volume 29 ; 29 > 
     au < crawling ; exists ; 2013 ; Classical and Quantum Gravity Volume 30 ; 30 > 
-    au < manifest ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 > 
+    au < notReady ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 > 
     au < manifest ; exists ; 2015 ; Classical and Quantum Gravity Volume 32 ; 32 > 
 
   }
@@ -517,7 +519,8 @@
     >
 
     param[journal_issn] = 1748-9326
-    comment[notReady] = crawl failed, Fetch error - access denied, RU4441
+    comment[ingNotReady] = crawl failed, Fetch error - access denied, RU4441
+    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 2006 ; Environmental Research Letters Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
@@ -527,7 +530,7 @@
     au < finished ; crawling ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 > 
-    au < manifest ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
+    au < notReady ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
     au < manifest ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
 
   }
@@ -651,9 +654,9 @@
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
     au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
-    au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
-    au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
-    au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
+    au < ready ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
+    au < ready ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
+    au < testing ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
     au < manifest ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 ; 109 >
     au < expected ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 ; 110 >
     au < expected ; exists ; 2015 ; EPL (Europhysics Letters) Volume 111 ; 111 >
@@ -723,6 +726,7 @@
 
     param[journal_issn] = 1873-7005
     comment[param] = eissn preferred
+    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 1986 ; Fluid Dynamics Research Volume 1 ; 1 > 
     au < manifest ; exists ; 1987 ; Fluid Dynamics Research Volume 2 ; 2 > 
@@ -769,7 +773,7 @@
     au < finished ; crawling ; 2011 ; Fluid Dynamics Research Volume 43 ; 43 > 
     au < finished ; crawling ; 2012 ; Fluid Dynamics Research Volume 44 ; 44 > 
     au < crawling ; exists ; 2013 ; Fluid Dynamics Research Volume 45 ; 45 > 
-    au < testing ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 > 
+    au < notReady ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 > 
     au < manifest ; exists ; 2015 ; Fluid Dynamics Research Volume 47 ; 47 > 
 
   }
@@ -815,7 +819,7 @@
     au < finished ; crawling ; 2011 ; Inverse Problems Volume 27 ; 27 > 
     au < finished ; crawling ; 2012 ; Inverse Problems Volume 28 ; 28 > 
     au < crawling ; exists ; 2013 ; Inverse Problems Volume 29 ; 29 > 
-    au < manifest ; exists ; 2014 ; Inverse Problems Volume 30 ; 30 > 
+    au < ready ; exists ; 2014 ; Inverse Problems Volume 30 ; 30 > 
     au < manifest ; exists ; 2015 ; Inverse Problems Volume 31 ; 31 > 
 
   }
@@ -849,7 +853,7 @@
     au < finished ; crawling ; 2011 ; IOP Conference Series: Earth and Environmental Science Volume 14 ; 14 > 
     au < crawling ; exists ; 2012 ; IOP Conference Series: Earth and Environmental Science Volume 15 ; 15 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Earth and Environmental Science Volume 16 ; 16 > 
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 > 
+    au < ready ; exists ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Earth and Environmental Science Volume 18 ; 18 > 
 
   }
@@ -912,10 +916,10 @@
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 44 ; 44 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 45 ; 45 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 46 ; 46 >
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
+    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
+    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
+    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
+    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 51 ; 51 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 52 ; 52 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 53 ; 53 > 
@@ -981,13 +985,13 @@
     au < manifest ; exists ; 2005 ; Japanese Journal of Applied Physics Volume 44 ; 44 >
     au < manifest ; exists ; 2006 ; Japanese Journal of Applied Physics Volume 45 ; 45 >
     au < manifest ; exists ; 2007 ; Japanese Journal of Applied Physics Volume 46 ; 46 >
-    au < manifest ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
-    au < manifest ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
-    au < manifest ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
-    au < manifest ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
-    au < manifest ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
-    au < manifest ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
-    au < manifest ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
+    au < ready ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
+    au < ready ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
+    au < ready ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
+    au < testing ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
+    au < ready ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
+    au < testing ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
+    au < testing ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
     au < manifest ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
     
   }
@@ -1011,7 +1015,7 @@
     au < finished ; crawling ; 2011 ; Journal of Breath Research Volume 5 ; 5 > 
     au < finished ; crawling ; 2012 ; Journal of Breath Research Volume 6 ; 6 > 
     au < crawling ; exists ; 2013 ; Journal of Breath Research Volume 7 ; 7 > 
-    au < manifest ; exists ; 2014 ; Journal of Breath Research Volume 8 ; 8 > 
+    au < testing ; exists ; 2014 ; Journal of Breath Research Volume 8 ; 8 > 
     au < manifest ; exists ; 2015 ; Journal of Breath Research Volume 9 ; 9 > 
 
   }
@@ -1037,7 +1041,7 @@
     au < finished ; crawling ; 2011 ; Journal of Cosmology and Astroparticle Physics Volume 2011 ; 2011 > 
     au < finished ; crawling ; 2012 ; Journal of Cosmology and Astroparticle Physics Volume 2012 ; 2012 > 
     au < crawling ; exists ; 2013 ; Journal of Cosmology and Astroparticle Physics Volume 2013 ; 2013 > 
-    au < manifest ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 > 
+    au < testing ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 > 
     au < manifest ; exists ; 2015 ; Journal of Cosmology and Astroparticle Physics Volume 2015 ; 2015 > 
 
   }
@@ -1064,7 +1068,7 @@
     au < finished ; crawling ; 2011 ; Journal of Geophysics and Engineering Volume 8 ; 8 > 
     au < finished ; crawling ; 2012 ; Journal of Geophysics and Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Geophysics and Engineering Volume 10 ; 10 > 
-    au < manifest ; exists ; 2014 ; Journal of Geophysics and Engineering Volume 11 ; 11 > 
+    au < testing ; exists ; 2014 ; Journal of Geophysics and Engineering Volume 11 ; 11 > 
     au < manifest ; exists ; 2015 ; Journal of Geophysics and Engineering Volume 12 ; 12 > 
 
   }
@@ -1130,7 +1134,7 @@
     au < finished ; crawling ; 2011 ; Journal of Instrumentation Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; Journal of Instrumentation Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Journal of Instrumentation Volume 8 ; 8 > 
-    au < manifest ; exists ; 2014 ; Journal of Instrumentation Volume 9 ; 9 > 
+    au < testing ; exists ; 2014 ; Journal of Instrumentation Volume 9 ; 9 > 
     au < manifest ; exists ; 2015 ; Journal of Instrumentation Volume 10 ; 10 > 
 
   }
@@ -1171,7 +1175,7 @@
     au < finished ; crawling ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 > 
     au < ingNotReady ; exists ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 > 
     au < crawling ; exists ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 > 
-    au < manifest ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 > 
+    au < testing ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 > 
     au < manifest ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 ; 25 > 
 
   }
@@ -1198,7 +1202,7 @@
     au < finished ; crawling ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 > 
     au < finished ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 > 
-    au < manifest ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
+    au < testing ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
     au < manifest ; exists ; 2015 ; Journal of Neural Engineering Volume 12 ; 12 > 
 
   }
@@ -1238,16 +1242,11 @@
     comment[param] = eissn preferred
     comment[continues] = 1464-4258
  
-    au < exists ; exists ; 2005 ; Journal of Optics Volume 7 ; 7 > 
-    au < exists ; exists ; 2006 ; Journal of Optics Volume 8 ; 8 > 
-    au < exists ; exists ; 2007 ; Journal of Optics Volume 9 ; 9 > 
-    au < exists ; exists ; 2008 ; Journal of Optics Volume 10 ; 10 > 
-    au < exists ; exists ; 2009 ; Journal of Optics Volume 11 ; 11 > 
     au < finished ; crawling ; 2010 ; Journal of Optics Volume 12 ; 12 > 
     au < finished ; crawling ; 2011 ; Journal of Optics Volume 13 ; 13 > 
     au < finished ; crawling ; 2012 ; Journal of Optics Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Journal of Optics Volume 15 ; 15 > 
-    au < manifest ; exists ; 2014 ; Journal of Optics Volume 16 ; 16 > 
+    au < testing ; exists ; 2014 ; Journal of Optics Volume 16 ; 16 > 
     au < manifest ; exists ; 2015 ; Journal of Optics Volume 17 ; 17 > 
 
   }
@@ -1433,7 +1432,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics A: Mathematical and Theoretical Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics A: Mathematical and Theoretical Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 > 
-    au < manifest ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 > 
+    au < testing ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 > 
     au < manifest ; exists ; 2015 ; Journal of Physics A: Mathematical and Theoretical Volume 48 ; 48 > 
 
   }
@@ -1528,7 +1527,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 46 ; 46 > 
-    au < manifest ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
+    au < testing ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
     au < manifest ; exists ; 2015 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 48 ; 48 > 
 
   }
@@ -1625,7 +1624,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics D: Applied Physics Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics D: Applied Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics D: Applied Physics Volume 46 ; 46 > 
-    au < manifest ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
+    au < testing ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
     au < manifest ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 > 
 
   }
@@ -1736,7 +1735,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics G: Nuclear and Particle Physics Volume 38 ; 38 > 
     au < ingNotReady ; exists ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 > 
     au < crawling ; exists ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 > 
-    au < manifest ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 > 
+    au < testing ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 > 
     au < manifest ; exists ; 2015 ; Journal of Physics G: Nuclear and Particle Physics Volume 42 ; 42 > 
 
   }
@@ -2827,7 +2826,6 @@
 
     param[journal_issn] = 0957-4484
     comment[param] = print issn preferred
-    comment[notReady] = crawl failure
 
     au < manifest ; exists ; 1990 ; Nanotechnology Volume 1 ; 1 > 
     au < manifest ; exists ; 1991 ; Nanotechnology Volume 2 ; 2 > 
