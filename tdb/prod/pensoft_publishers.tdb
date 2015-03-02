@@ -13,9 +13,17 @@
    {
      title <
       name = Biodiversity Data Journal ;
+      issn = 1314-2836 ;
       eissn = 1314-2828 ;
-      comment[0] = This journal is at a different url http://biodiversitydatajournal.com
+      issnl = 1314-2836 
      >
+
+    comment[0] = This journal is at a different url http://biodiversitydatajournal.com
+    param[journal_name] = bdj
+
+    au < doNotProcess ; 2013 ; 2013 ; Biodiversity Data Journal Issue 1 ; 1 >
+    au < doNotProcess ; 2014 ; 2014 ; Biodiversity Data Journal Issue 2 ; 2 >
+    au < doNotProcess ; 2015 ; 2014 ; Biodiversity Data Journal Issue 3 ; 3 >
 
    }
 
