@@ -7339,7 +7339,7 @@
     param[journal_id] = jphar
     
     au < manifest ; exists ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Pharmaceutics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7387,7 +7387,7 @@
     param[journal_id] = jpt
     
     au < manifest ; exists ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Powder Technology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7421,7 +7421,7 @@
 
     param[journal_id] = jprob
     
-    au < testing ; exists ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 >
 
   }
