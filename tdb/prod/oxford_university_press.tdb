@@ -2298,144 +2298,144 @@
     param[base_url] = http://brain.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1878 ; Brain Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1879-1880 ; Brain Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1880-1881 ; Brain Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1881-1882 ; Brain Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1882-1883 ; Brain Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1883-1884 ; Brain Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1884-1885 ; Brain Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1885-1886 ; Brain Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1886-1887 ; Brain Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1887-1888 ; Brain Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1888-1889 ; Brain Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1889-1890 ; Brain Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1890 ; Brain Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1891 ; Brain Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1892 ; Brain Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1893 ; Brain Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1894 ; Brain Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1895 ; Brain Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1896 ; Brain Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1897 ; Brain Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1898 ; Brain Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1899 ; Brain Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1900 ; Brain Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1901 ; Brain Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1902 ; Brain Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1903 ; Brain Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1904 ; Brain Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1905 ; Brain Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1906 ; Brain Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1907 ; Brain Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1908 ; Brain Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1909 ; Brain Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1910 ; Brain Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1911 ; Brain Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1912 ; Brain Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1913 ; Brain Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1914 ; Brain Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1915 ; Brain Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1916 ; Brain Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1917 ; Brain Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1918 ; Brain Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1919 ; Brain Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1920 ; Brain Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1921 ; Brain Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1922 ; Brain Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 1923 ; Brain Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 1924 ; Brain Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 1925 ; Brain Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1926 ; Brain Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1927 ; Brain Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1928 ; Brain Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1929 ; Brain Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1930 ; Brain Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1931 ; Brain Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1932 ; Brain Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1933 ; Brain Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1934 ; Brain Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1935 ; Brain Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1936 ; Brain Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1937 ; Brain Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 1938 ; Brain Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; Brain Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; Brain Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; Brain Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 1942 ; Brain Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; Brain Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; Brain Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; Brain Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; Brain Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; Brain Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; Brain Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Brain Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Brain Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Brain Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Brain Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Brain Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Brain Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Brain Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; Brain Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; Brain Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Brain Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; Brain Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Brain Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Brain Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Brain Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Brain Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Brain Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Brain Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Brain Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Brain Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Brain Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Brain Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Brain Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Brain Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Brain Volume 95 ; 95 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Brain Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Brain Volume 97 ; 97 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Brain Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Brain Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Brain Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Brain Volume 101 ; 101 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Brain Volume 102 ; 102 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Brain Volume 103 ; 103 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Brain Volume 104 ; 104 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Brain Volume 105 ; 105 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Brain Volume 106 ; 106 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Brain Volume 107 ; 107 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Brain Volume 108 ; 108 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Brain Volume 109 ; 109 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Brain Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Brain Volume 111 ; 111 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Brain Volume 112 ; 112 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Brain Volume 113 ; 113 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Brain Volume 114 ; 114 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Brain Volume 115 ; 115 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Brain Volume 116 ; 116 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Brain Volume 117 ; 117 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Brain Volume 118 ; 118 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Brain Volume 119 ; 119 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Brain Volume 120 ; 120 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Brain Volume 121 ; 121 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Brain Volume 122 ; 122 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Brain Volume 123 ; 123 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Brain Volume 124 ; 124 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Brain Volume 125 ; 125 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Brain Volume 126 ; 126 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Brain Volume 127 ; 127 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1878 ; Brain Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1879-1880 ; Brain Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1880-1881 ; Brain Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1881-1882 ; Brain Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1882-1883 ; Brain Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1883-1884 ; Brain Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1884-1885 ; Brain Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1885-1886 ; Brain Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1886-1887 ; Brain Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1887-1888 ; Brain Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1888-1889 ; Brain Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1889-1890 ; Brain Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1890 ; Brain Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1891 ; Brain Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1892 ; Brain Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1893 ; Brain Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1894 ; Brain Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1895 ; Brain Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1896 ; Brain Volume 19 ; 19 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1897 ; Brain Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1898 ; Brain Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1899 ; Brain Volume 22 ; 22 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1900 ; Brain Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1901 ; Brain Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1902 ; Brain Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1903 ; Brain Volume 26 ; 26 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1904 ; Brain Volume 27 ; 27 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1905 ; Brain Volume 28 ; 28 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1906 ; Brain Volume 29 ; 29 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1907 ; Brain Volume 30 ; 30 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1908 ; Brain Volume 31 ; 31 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1909 ; Brain Volume 32 ; 32 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1910 ; Brain Volume 33 ; 33 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1911 ; Brain Volume 34 ; 34 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1912 ; Brain Volume 35 ; 35 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1913 ; Brain Volume 36 ; 36 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1914 ; Brain Volume 37 ; 37 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1915 ; Brain Volume 38 ; 38 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1916 ; Brain Volume 39 ; 39 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1917 ; Brain Volume 40 ; 40 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1918 ; Brain Volume 41 ; 41 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1919 ; Brain Volume 42 ; 42 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1920 ; Brain Volume 43 ; 43 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1921 ; Brain Volume 44 ; 44 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1922 ; Brain Volume 45 ; 45 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1923 ; Brain Volume 46 ; 46 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1924 ; Brain Volume 47 ; 47 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1925 ; Brain Volume 48 ; 48 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1926 ; Brain Volume 49 ; 49 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1927 ; Brain Volume 50 ; 50 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1928 ; Brain Volume 51 ; 51 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1929 ; Brain Volume 52 ; 52 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1930 ; Brain Volume 53 ; 53 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1931 ; Brain Volume 54 ; 54 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1932 ; Brain Volume 55 ; 55 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1933 ; Brain Volume 56 ; 56 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1934 ; Brain Volume 57 ; 57 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1935 ; Brain Volume 58 ; 58 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1936 ; Brain Volume 59 ; 59 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1937 ; Brain Volume 60 ; 60 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1938 ; Brain Volume 61 ; 61 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1939 ; Brain Volume 62 ; 62 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1940 ; Brain Volume 63 ; 63 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1941 ; Brain Volume 64 ; 64 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1942 ; Brain Volume 65 ; 65 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1943 ; Brain Volume 66 ; 66 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1944 ; Brain Volume 67 ; 67 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1945 ; Brain Volume 68 ; 68 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1946 ; Brain Volume 69 ; 69 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1947 ; Brain Volume 70 ; 70 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1948 ; Brain Volume 71 ; 71 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1949 ; Brain Volume 72 ; 72 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1950 ; Brain Volume 73 ; 73 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1951 ; Brain Volume 74 ; 74 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1952 ; Brain Volume 75 ; 75 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1953 ; Brain Volume 76 ; 76 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1954 ; Brain Volume 77 ; 77 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1955 ; Brain Volume 78 ; 78 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1956 ; Brain Volume 79 ; 79 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1957 ; Brain Volume 80 ; 80 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1958 ; Brain Volume 81 ; 81 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1959 ; Brain Volume 82 ; 82 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1960 ; Brain Volume 83 ; 83 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1961 ; Brain Volume 84 ; 84 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1962 ; Brain Volume 85 ; 85 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1963 ; Brain Volume 86 ; 86 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1964 ; Brain Volume 87 ; 87 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1965 ; Brain Volume 88 ; 88 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1966 ; Brain Volume 89 ; 89 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1967 ; Brain Volume 90 ; 90 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1968 ; Brain Volume 91 ; 91 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1969 ; Brain Volume 92 ; 92 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1970 ; Brain Volume 93 ; 93 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1971 ; Brain Volume 94 ; 94 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1972 ; Brain Volume 95 ; 95 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1973 ; Brain Volume 96 ; 96 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1974 ; Brain Volume 97 ; 97 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1975 ; Brain Volume 98 ; 98 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1976 ; Brain Volume 99 ; 99 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1977 ; Brain Volume 100 ; 100 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1978 ; Brain Volume 101 ; 101 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1979 ; Brain Volume 102 ; 102 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1980 ; Brain Volume 103 ; 103 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1981 ; Brain Volume 104 ; 104 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1982 ; Brain Volume 105 ; 105 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1983 ; Brain Volume 106 ; 106 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1984 ; Brain Volume 107 ; 107 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; Brain Volume 108 ; 108 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; Brain Volume 109 ; 109 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; Brain Volume 110 ; 110 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; Brain Volume 111 ; 111 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; Brain Volume 112 ; 112 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; Brain Volume 113 ; 113 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; Brain Volume 114 ; 114 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; Brain Volume 115 ; 115 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1993 ; Brain Volume 116 ; 116 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1994 ; Brain Volume 117 ; 117 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; Brain Volume 118 ; 118 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; Brain Volume 119 ; 119 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; Brain Volume 120 ; 120 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; Brain Volume 121 ; 121 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; Brain Volume 122 ; 122 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; Brain Volume 123 ; 123 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; Brain Volume 124 ; 124 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; Brain Volume 125 ; 125 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; Brain Volume 126 ; 126 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Brain Volume 127 ; 127 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Brain Volume 128 ; 128 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Brain Volume 129 ; 129 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Brain Volume 130 ; 130 >
-    au < HighWirePressPlugin ; down ; 2008 ; Brain Volume 131 ; 131 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Brain Volume 132 ; 132 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Brain Volume 133 ; 133 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Brain Volume 134 ; 134 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Brain Volume 135 ; 135 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Brain Volume 136 ; 136 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Brain Volume 137 ; 137 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Brain Volume 138 ; 138 >
+    au < HighWireStrVolPlugin ; doNotProcess ; 2006 ; Brain Volume 129 ; 129 >
+    au < HighWireStrVolPlugin ; doNotProcess ; 2007 ; Brain Volume 130 ; 130 >
+    au < HighWirePressPlugin ; doNotProcess ; 2008 ; Brain Volume 131 ; 131 >
+    au < oup.OUPDrupalPlugin ; exists ; 2009 ; Brain Volume 132 ; 132 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 >
+    au < oup.OUPDrupalPlugin ; exists ; 2013 ; Brain Volume 136 ; 136 >
+    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Brain Volume 137 ; 137 >
+    au < oup.OUPDrupalPlugin ; exists ; 2015 ; Brain Volume 138 ; 138 >
 
     }
 
@@ -5801,24 +5801,24 @@
     param[base_url] = http://europace.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Europace Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Europace Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Europace Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Europace Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Europace Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Europace Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; Europace Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; Europace Volume 8 ; 8 >
-    au < HighWireStrVolPlugin ; superseded ; 2007 ; Europace Volume 9 [superseded] ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; Europace Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; Europace Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Europace Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Europace Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Europace Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Europace Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Europace Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Europace Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Europace Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; exists ; 1999 ; Europace Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; exists ; 2000 ; Europace Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; exists ; 2001 ; Europace Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; exists ; 2002 ; Europace Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; exists ; 2003 ; Europace Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; exists ; 2004 ; Europace Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Europace Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Europace Volume 8 ; 8 >
+    au < HighWireStrVolPlugin ; doNotProcess ; 2007 ; Europace Volume 9 [superseded] ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Europace Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Europace Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Europace Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Europace Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; exists ; 2012 ; Europace Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; exists ; 2013 ; Europace Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Europace Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; exists ; 2015 ; Europace Volume 17 ; 17 >
 
     }
 
@@ -5839,42 +5839,42 @@
     param[base_url] = http://eurheartj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; European Heart Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; European Heart Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; European Heart Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; European Heart Journal Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; European Heart Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; European Heart Journal Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; European Heart Journal Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; European Heart Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; European Heart Journal Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; European Heart Journal Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; European Heart Journal Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; European Heart Journal Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; European Heart Journal Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; European Heart Journal Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; European Heart Journal Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; European Heart Journal Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; European Heart Journal Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; European Heart Journal Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; European Heart Journal Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; European Heart Journal Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; European Heart Journal Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; European Heart Journal Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; European Heart Journal Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; European Heart Journal Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; European Heart Journal Volume 25 ; 25 >
-    au < HighWireStrVolPlugin ; superseded ; 2005 ; European Heart Journal Volume 26 [superseded] ; 26 >
-    au < HighWirePressH20Plugin ; down ; 2005 ; European Heart Journal Volume 26 ; 26 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; European Heart Journal Volume 27 [superseded] ; 27 >
-    au < HighWirePressH20Plugin ; down ; 2006 ; European Heart Journal Volume 27 ; 27 >
-    au < HighWireStrVolPlugin ; superseded ; 2007 ; European Heart Journal Volume 28 [superseded] ; 28 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; European Heart Journal Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; European Heart Journal Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; down ; 2009 ; European Heart Journal Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; European Heart Journal Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; European Heart Journal Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; European Heart Journal Volume 33 ; 33 >
+    au < oup.OUPDrupalPlugin ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; exists ; 1982 ; European Heart Journal Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; exists ; 1983 ; European Heart Journal Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; exists ; 1984 ; European Heart Journal Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; exists ; 1985 ; European Heart Journal Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; exists ; 1986 ; European Heart Journal Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; exists ; 1987 ; European Heart Journal Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; exists ; 1988 ; European Heart Journal Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; exists ; 1989 ; European Heart Journal Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; exists ; 1990 ; European Heart Journal Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; exists ; 1991 ; European Heart Journal Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; exists ; 1992 ; European Heart Journal Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; exists ; 1993 ; European Heart Journal Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; exists ; 1994 ; European Heart Journal Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; exists ; 1995 ; European Heart Journal Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; exists ; 1996 ; European Heart Journal Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; exists ; 1997 ; European Heart Journal Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; exists ; 1998 ; European Heart Journal Volume 19 ; 19 >
+    au < oup.OUPDrupalPlugin ; exists ; 1999 ; European Heart Journal Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; exists ; 2000 ; European Heart Journal Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; exists ; 2001 ; European Heart Journal Volume 22 ; 22 >
+    au < oup.OUPDrupalPlugin ; exists ; 2002 ; European Heart Journal Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; exists ; 2003 ; European Heart Journal Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; exists ; 2004 ; European Heart Journal Volume 25 ; 25 >
+    au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; European Heart Journal Volume 26 [superseded] ; 26 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; European Heart Journal Volume 26 ; 26 >
+    au < HighWireStrVolPlugin ; doNotProcess ; 2006 ; European Heart Journal Volume 27 [superseded] ; 27 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; European Heart Journal Volume 27 ; 27 >
+    au < HighWireStrVolPlugin ; doNotProcess ; 2007 ; European Heart Journal Volume 28 [superseded] ; 28 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; European Heart Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; European Heart Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; European Heart Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; European Heart Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; European Heart Journal Volume 33 ; 33 >
     au < oup.OUPDrupalPlugin ; manifest ; 2013 ; European Heart Journal Volume 34 ; 34 >
     au < oup.OUPDrupalPlugin ; manifest ; 2014 ; European Heart Journal Volume 35 ; 35 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; European Heart Journal Volume 36 ; 36 >
@@ -6009,10 +6009,10 @@
     param[base_url] = http://ehjcimaging.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; released ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; exists ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 >
 
     }
 
@@ -6031,19 +6031,20 @@
     param[base_url] = http://ehjcimaging.oxfordjournals.org/
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[down] = Moved to Drupal platform
 
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
 
 
 
