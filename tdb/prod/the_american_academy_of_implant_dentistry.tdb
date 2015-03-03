@@ -7,7 +7,7 @@
   >
   
   plugin = needs.plugin
-  param[base_url] = http://www.joionline.org
+  param[base_url] = http://www.joionline.org/
   implicit < status ; year ; name ; param[volume_name] >
   
   {
