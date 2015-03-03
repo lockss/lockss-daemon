@@ -2426,13 +2426,13 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2003 ; Brain Volume 126 ; 126 >
     au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Brain Volume 127 ; 127 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Brain Volume 128 ; 128 >
-    au < HighWireStrVolPlugin ; doNotProcess ; 2006 ; Brain Volume 129 ; 129 >
-    au < HighWireStrVolPlugin ; doNotProcess ; 2007 ; Brain Volume 130 ; 130 >
-    au < HighWirePressPlugin ; doNotProcess ; 2008 ; Brain Volume 131 ; 131 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Brain Volume 129 ; 129 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Brain Volume 130 ; 130 >
+    au < HighWirePressPlugin ; down ; 2008 ; Brain Volume 131 ; 131 >
     au < oup.OUPDrupalPlugin ; exists ; 2009 ; Brain Volume 132 ; 132 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Brain Volume 133 ; 133 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Brain Volume 134 ; 134 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Brain Volume 135 ; 135 >
     au < oup.OUPDrupalPlugin ; exists ; 2013 ; Brain Volume 136 ; 136 >
     au < oup.OUPDrupalPlugin ; exists ; 2014 ; Brain Volume 137 ; 137 >
     au < oup.OUPDrupalPlugin ; exists ; 2015 ; Brain Volume 138 ; 138 >
@@ -5807,14 +5807,14 @@
     au < oup.OUPDrupalPlugin ; exists ; 2002 ; Europace Volume 4 ; 4 >
     au < oup.OUPDrupalPlugin ; exists ; 2003 ; Europace Volume 5 ; 5 >
     au < oup.OUPDrupalPlugin ; exists ; 2004 ; Europace Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Europace Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Europace Volume 8 ; 8 >
-    au < HighWireStrVolPlugin ; doNotProcess ; 2007 ; Europace Volume 9 [superseded] ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Europace Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Europace Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Europace Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Europace Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Europace Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Europace Volume 8 ; 8 >
+    au < HighWireStrVolPlugin ; superseded ; 2007 ; Europace Volume 9 [superseded] ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Europace Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Europace Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Europace Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Europace Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Europace Volume 13 ; 13 >
     au < oup.OUPDrupalPlugin ; exists ; 2012 ; Europace Volume 14 ; 14 >
     au < oup.OUPDrupalPlugin ; exists ; 2013 ; Europace Volume 15 ; 15 >
     au < oup.OUPDrupalPlugin ; exists ; 2014 ; Europace Volume 16 ; 16 >
@@ -5865,16 +5865,16 @@
     au < oup.OUPDrupalPlugin ; exists ; 2003 ; European Heart Journal Volume 24 ; 24 >
     au < oup.OUPDrupalPlugin ; exists ; 2004 ; European Heart Journal Volume 25 ; 25 >
     au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; European Heart Journal Volume 26 [superseded] ; 26 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; European Heart Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Heart Journal Volume 26 ; 26 >
     au < HighWireStrVolPlugin ; doNotProcess ; 2006 ; European Heart Journal Volume 27 [superseded] ; 27 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; European Heart Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Heart Journal Volume 27 ; 27 >
     au < HighWireStrVolPlugin ; doNotProcess ; 2007 ; European Heart Journal Volume 28 [superseded] ; 28 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; European Heart Journal Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; European Heart Journal Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; European Heart Journal Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; European Heart Journal Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; European Heart Journal Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Heart Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Heart Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Heart Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Heart Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Heart Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Heart Journal Volume 33 ; 33 >
     au < oup.OUPDrupalPlugin ; manifest ; 2013 ; European Heart Journal Volume 34 ; 34 >
     au < oup.OUPDrupalPlugin ; manifest ; 2014 ; European Heart Journal Volume 35 ; 35 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; European Heart Journal Volume 36 ; 36 >
@@ -10122,33 +10122,33 @@
     param[base_url] = http://intqhc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; International Journal for Quality in Health Care Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; International Journal for Quality in Health Care Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; International Journal for Quality in Health Care Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; International Journal for Quality in Health Care Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; International Journal for Quality in Health Care Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; International Journal for Quality in Health Care Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; International Journal for Quality in Health Care Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; International Journal for Quality in Health Care Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; International Journal for Quality in Health Care Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; International Journal for Quality in Health Care Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; International Journal for Quality in Health Care Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; International Journal for Quality in Health Care Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; International Journal for Quality in Health Care Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; International Journal for Quality in Health Care Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; International Journal for Quality in Health Care Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; International Journal for Quality in Health Care Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; exists ; 1989 ; International Journal for Quality in Health Care Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; exists ; 1990 ; International Journal for Quality in Health Care Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; exists ; 1991 ; International Journal for Quality in Health Care Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; exists ; 1992 ; International Journal for Quality in Health Care Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; exists ; 1993 ; International Journal for Quality in Health Care Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; exists ; 1994 ; International Journal for Quality in Health Care Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; exists ; 1995 ; International Journal for Quality in Health Care Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; exists ; 1996 ; International Journal for Quality in Health Care Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; exists ; 1997 ; International Journal for Quality in Health Care Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; exists ; 1998 ; International Journal for Quality in Health Care Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; exists ; 1999 ; International Journal for Quality in Health Care Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; exists ; 2000 ; International Journal for Quality in Health Care Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; exists ; 2001 ; International Journal for Quality in Health Care Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; exists ; 2002 ; International Journal for Quality in Health Care Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; exists ; 2003 ; International Journal for Quality in Health Care Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; exists ; 2004 ; International Journal for Quality in Health Care Volume 16 ; 16 >
     au < HighWireStrVolPlugin ; down ; 2005 ; International Journal for Quality in Health Care Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Journal for Quality in Health Care Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; 2007 ; International Journal for Quality in Health Care Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; exists ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; exists ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; exists ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 >
+    au < oup.OUPDrupalPlugin ; exists ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 >
 
     }
 
