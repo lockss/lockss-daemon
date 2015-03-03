@@ -2327,138 +2327,6 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[down] = Moved to Drupal platform
 
-    au < doNotProcess ; doNotProcess ; 1878 ; Brain Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1879-1880 ; Brain Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 1880-1881 ; Brain Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 1881-1882 ; Brain Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 1882-1883 ; Brain Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 1883-1884 ; Brain Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 1884-1885 ; Brain Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 1885-1886 ; Brain Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 1886-1887 ; Brain Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 1887-1888 ; Brain Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 1888-1889 ; Brain Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 1889-1890 ; Brain Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 1890 ; Brain Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 1891 ; Brain Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 1892 ; Brain Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 1893 ; Brain Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 1894 ; Brain Volume 17 ; 17 ; >
-    au < doNotProcess ; doNotProcess ; 1895 ; Brain Volume 18 ; 18 ; >
-    au < doNotProcess ; doNotProcess ; 1896 ; Brain Volume 19 ; 19 ; >
-    au < doNotProcess ; doNotProcess ; 1897 ; Brain Volume 20 ; 20 ; >
-    au < doNotProcess ; doNotProcess ; 1898 ; Brain Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 1899 ; Brain Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 1900 ; Brain Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 1901 ; Brain Volume 24 ; 24 ; >
-    au < doNotProcess ; doNotProcess ; 1902 ; Brain Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 1903 ; Brain Volume 26 ; 26 ; >
-    au < doNotProcess ; doNotProcess ; 1904 ; Brain Volume 27 ; 27 ; >
-    au < doNotProcess ; doNotProcess ; 1905 ; Brain Volume 28 ; 28 ; >
-    au < doNotProcess ; doNotProcess ; 1906 ; Brain Volume 29 ; 29 ; >
-    au < doNotProcess ; doNotProcess ; 1907 ; Brain Volume 30 ; 30 ; >
-    au < doNotProcess ; doNotProcess ; 1908 ; Brain Volume 31 ; 31 ; >
-    au < doNotProcess ; doNotProcess ; 1909 ; Brain Volume 32 ; 32 ; >
-    au < doNotProcess ; doNotProcess ; 1910 ; Brain Volume 33 ; 33 ; >
-    au < doNotProcess ; doNotProcess ; 1911 ; Brain Volume 34 ; 34 ; >
-    au < doNotProcess ; doNotProcess ; 1912 ; Brain Volume 35 ; 35 ; >
-    au < doNotProcess ; doNotProcess ; 1913 ; Brain Volume 36 ; 36 ; >
-    au < doNotProcess ; doNotProcess ; 1914 ; Brain Volume 37 ; 37 ; >
-    au < doNotProcess ; doNotProcess ; 1915 ; Brain Volume 38 ; 38 ; >
-    au < doNotProcess ; doNotProcess ; 1916 ; Brain Volume 39 ; 39 ; >
-    au < doNotProcess ; doNotProcess ; 1917 ; Brain Volume 40 ; 40 ; >
-    au < doNotProcess ; doNotProcess ; 1918 ; Brain Volume 41 ; 41 ; >
-    au < doNotProcess ; doNotProcess ; 1919 ; Brain Volume 42 ; 42 ; >
-    au < doNotProcess ; doNotProcess ; 1920 ; Brain Volume 43 ; 43 ; >
-    au < doNotProcess ; doNotProcess ; 1921 ; Brain Volume 44 ; 44 ; >
-    au < doNotProcess ; doNotProcess ; 1922 ; Brain Volume 45 ; 45 ; >
-    au < doNotProcess ; doNotProcess ; 1923 ; Brain Volume 46 ; 46 ; >
-    au < doNotProcess ; doNotProcess ; 1924 ; Brain Volume 47 ; 47 ; >
-    au < doNotProcess ; doNotProcess ; 1925 ; Brain Volume 48 ; 48 ; >
-    au < doNotProcess ; doNotProcess ; 1926 ; Brain Volume 49 ; 49 ; >
-    au < doNotProcess ; doNotProcess ; 1927 ; Brain Volume 50 ; 50 ; >
-    au < doNotProcess ; doNotProcess ; 1928 ; Brain Volume 51 ; 51 ; >
-    au < doNotProcess ; doNotProcess ; 1929 ; Brain Volume 52 ; 52 ; >
-    au < doNotProcess ; doNotProcess ; 1930 ; Brain Volume 53 ; 53 ; >
-    au < doNotProcess ; doNotProcess ; 1931 ; Brain Volume 54 ; 54 ; >
-    au < doNotProcess ; doNotProcess ; 1932 ; Brain Volume 55 ; 55 ; >
-    au < doNotProcess ; doNotProcess ; 1933 ; Brain Volume 56 ; 56 ; >
-    au < doNotProcess ; doNotProcess ; 1934 ; Brain Volume 57 ; 57 ; >
-    au < doNotProcess ; doNotProcess ; 1935 ; Brain Volume 58 ; 58 ; >
-    au < doNotProcess ; doNotProcess ; 1936 ; Brain Volume 59 ; 59 ; >
-    au < doNotProcess ; doNotProcess ; 1937 ; Brain Volume 60 ; 60 ; >
-    au < doNotProcess ; doNotProcess ; 1938 ; Brain Volume 61 ; 61 ; >
-    au < doNotProcess ; doNotProcess ; 1939 ; Brain Volume 62 ; 62 ; >
-    au < doNotProcess ; doNotProcess ; 1940 ; Brain Volume 63 ; 63 ; >
-    au < doNotProcess ; doNotProcess ; 1941 ; Brain Volume 64 ; 64 ; >
-    au < doNotProcess ; doNotProcess ; 1942 ; Brain Volume 65 ; 65 ; >
-    au < doNotProcess ; doNotProcess ; 1943 ; Brain Volume 66 ; 66 ; >
-    au < doNotProcess ; doNotProcess ; 1944 ; Brain Volume 67 ; 67 ; >
-    au < doNotProcess ; doNotProcess ; 1945 ; Brain Volume 68 ; 68 ; >
-    au < doNotProcess ; doNotProcess ; 1946 ; Brain Volume 69 ; 69 ; >
-    au < doNotProcess ; doNotProcess ; 1947 ; Brain Volume 70 ; 70 ; >
-    au < doNotProcess ; doNotProcess ; 1948 ; Brain Volume 71 ; 71 ; >
-    au < doNotProcess ; doNotProcess ; 1949 ; Brain Volume 72 ; 72 ; >
-    au < doNotProcess ; doNotProcess ; 1950 ; Brain Volume 73 ; 73 ; >
-    au < doNotProcess ; doNotProcess ; 1951 ; Brain Volume 74 ; 74 ; >
-    au < doNotProcess ; doNotProcess ; 1952 ; Brain Volume 75 ; 75 ; >
-    au < doNotProcess ; doNotProcess ; 1953 ; Brain Volume 76 ; 76 ; >
-    au < doNotProcess ; doNotProcess ; 1954 ; Brain Volume 77 ; 77 ; >
-    au < doNotProcess ; doNotProcess ; 1955 ; Brain Volume 78 ; 78 ; >
-    au < doNotProcess ; doNotProcess ; 1956 ; Brain Volume 79 ; 79 ; >
-    au < doNotProcess ; doNotProcess ; 1957 ; Brain Volume 80 ; 80 ; >
-    au < doNotProcess ; doNotProcess ; 1958 ; Brain Volume 81 ; 81 ; >
-    au < doNotProcess ; doNotProcess ; 1959 ; Brain Volume 82 ; 82 ; >
-    au < doNotProcess ; doNotProcess ; 1960 ; Brain Volume 83 ; 83 ; >
-    au < doNotProcess ; doNotProcess ; 1961 ; Brain Volume 84 ; 84 ; >
-    au < doNotProcess ; doNotProcess ; 1962 ; Brain Volume 85 ; 85 ; >
-    au < doNotProcess ; doNotProcess ; 1963 ; Brain Volume 86 ; 86 ; >
-    au < doNotProcess ; doNotProcess ; 1964 ; Brain Volume 87 ; 87 ; >
-    au < doNotProcess ; doNotProcess ; 1965 ; Brain Volume 88 ; 88 ; >
-    au < doNotProcess ; doNotProcess ; 1966 ; Brain Volume 89 ; 89 ; >
-    au < doNotProcess ; doNotProcess ; 1967 ; Brain Volume 90 ; 90 ; >
-    au < doNotProcess ; doNotProcess ; 1968 ; Brain Volume 91 ; 91 ; >
-    au < doNotProcess ; doNotProcess ; 1969 ; Brain Volume 92 ; 92 ; >
-    au < doNotProcess ; doNotProcess ; 1970 ; Brain Volume 93 ; 93 ; >
-    au < doNotProcess ; doNotProcess ; 1971 ; Brain Volume 94 ; 94 ; >
-    au < doNotProcess ; doNotProcess ; 1972 ; Brain Volume 95 ; 95 ; >
-    au < doNotProcess ; doNotProcess ; 1973 ; Brain Volume 96 ; 96 ; >
-    au < doNotProcess ; doNotProcess ; 1974 ; Brain Volume 97 ; 97 ; >
-    au < doNotProcess ; doNotProcess ; 1975 ; Brain Volume 98 ; 98 ; >
-    au < doNotProcess ; doNotProcess ; 1976 ; Brain Volume 99 ; 99 ; >
-    au < doNotProcess ; doNotProcess ; 1977 ; Brain Volume 100 ; 100 ; >
-    au < doNotProcess ; doNotProcess ; 1978 ; Brain Volume 101 ; 101 ; >
-    au < doNotProcess ; doNotProcess ; 1979 ; Brain Volume 102 ; 102 ; >
-    au < doNotProcess ; doNotProcess ; 1980 ; Brain Volume 103 ; 103 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; Brain Volume 104 ; 104 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; Brain Volume 105 ; 105 ; >
-    au < doNotProcess ; doNotProcess ; 1983 ; Brain Volume 106 ; 106 ; >
-    au < doNotProcess ; doNotProcess ; 1984 ; Brain Volume 107 ; 107 ; >
-    au < doNotProcess ; doNotProcess ; 1985 ; Brain Volume 108 ; 108 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; Brain Volume 109 ; 109 ; >
-    au < doNotProcess ; doNotProcess ; 1987 ; Brain Volume 110 ; 110 ; >
-    au < doNotProcess ; doNotProcess ; 1988 ; Brain Volume 111 ; 111 ; >
-    au < doNotProcess ; doNotProcess ; 1989 ; Brain Volume 112 ; 112 ; >
-    au < doNotProcess ; doNotProcess ; 1990 ; Brain Volume 113 ; 113 ; >
-    au < doNotProcess ; doNotProcess ; 1991 ; Brain Volume 114 ; 114 ; >
-    au < doNotProcess ; doNotProcess ; 1992 ; Brain Volume 115 ; 115 ; >
-    au < doNotProcess ; doNotProcess ; 1993 ; Brain Volume 116 ; 116 ; >
-    au < doNotProcess ; doNotProcess ; 1994 ; Brain Volume 117 ; 117 ; >
-    au < doNotProcess ; doNotProcess ; 1995 ; Brain Volume 118 ; 118 ; >
-    au < doNotProcess ; doNotProcess ; 1996 ; Brain Volume 119 ; 119 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; Brain Volume 120 ; 120 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; Brain Volume 121 ; 121 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; Brain Volume 122 ; 122 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; Brain Volume 123 ; 123 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; Brain Volume 124 ; 124 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; Brain Volume 125 ; 125 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; Brain Volume 126 ; 126 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; Brain Volume 127 ; 127 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; Brain Volume 128 ; 128 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; Brain Volume 129 ; 129 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; Brain Volume 130 ; 130 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Brain Volume 131 ; 131 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Brain Volume 132 ; 132 ; >
     au < down ; frozen ; 2010 ; Brain Volume 133 ; 133 ; >
     au < down ; crawling ; 2011 ; Brain Volume 134 ; 134 ; >
     au < down ; crawling ; 2012 ; Brain Volume 135 ; 135 ; >
@@ -2470,8 +2338,139 @@
 
     param[base_url] = http://brain.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[down] = Moved to Drupal platform
 
+    au < exists ; exists ; 1878 ; Brain Volume 1 ; 1 ; >
+    au < exists ; exists ; 1879-1880 ; Brain Volume 2 ; 2 ; >
+    au < exists ; exists ; 1880-1881 ; Brain Volume 3 ; 3 ; >
+    au < exists ; exists ; 1881-1882 ; Brain Volume 4 ; 4 ; >
+    au < exists ; exists ; 1882-1883 ; Brain Volume 5 ; 5 ; >
+    au < exists ; exists ; 1883-1884 ; Brain Volume 6 ; 6 ; >
+    au < exists ; exists ; 1884-1885 ; Brain Volume 7 ; 7 ; >
+    au < exists ; exists ; 1885-1886 ; Brain Volume 8 ; 8 ; >
+    au < exists ; exists ; 1886-1887 ; Brain Volume 9 ; 9 ; >
+    au < exists ; exists ; 1887-1888 ; Brain Volume 10 ; 10 ; >
+    au < exists ; exists ; 1888-1889 ; Brain Volume 11 ; 11 ; >
+    au < exists ; exists ; 1889-1890 ; Brain Volume 12 ; 12 ; >
+    au < exists ; exists ; 1890 ; Brain Volume 13 ; 13 ; >
+    au < exists ; exists ; 1891 ; Brain Volume 14 ; 14 ; >
+    au < exists ; exists ; 1892 ; Brain Volume 15 ; 15 ; >
+    au < exists ; exists ; 1893 ; Brain Volume 16 ; 16 ; >
+    au < exists ; exists ; 1894 ; Brain Volume 17 ; 17 ; >
+    au < exists ; exists ; 1895 ; Brain Volume 18 ; 18 ; >
+    au < exists ; exists ; 1896 ; Brain Volume 19 ; 19 ; >
+    au < exists ; exists ; 1897 ; Brain Volume 20 ; 20 ; >
+    au < exists ; exists ; 1898 ; Brain Volume 21 ; 21 ; >
+    au < exists ; exists ; 1899 ; Brain Volume 22 ; 22 ; >
+    au < exists ; exists ; 1900 ; Brain Volume 23 ; 23 ; >
+    au < exists ; exists ; 1901 ; Brain Volume 24 ; 24 ; >
+    au < exists ; exists ; 1902 ; Brain Volume 25 ; 25 ; >
+    au < exists ; exists ; 1903 ; Brain Volume 26 ; 26 ; >
+    au < exists ; exists ; 1904 ; Brain Volume 27 ; 27 ; >
+    au < exists ; exists ; 1905 ; Brain Volume 28 ; 28 ; >
+    au < exists ; exists ; 1906 ; Brain Volume 29 ; 29 ; >
+    au < exists ; exists ; 1907 ; Brain Volume 30 ; 30 ; >
+    au < exists ; exists ; 1908 ; Brain Volume 31 ; 31 ; >
+    au < exists ; exists ; 1909 ; Brain Volume 32 ; 32 ; >
+    au < exists ; exists ; 1910 ; Brain Volume 33 ; 33 ; >
+    au < exists ; exists ; 1911 ; Brain Volume 34 ; 34 ; >
+    au < exists ; exists ; 1912 ; Brain Volume 35 ; 35 ; >
+    au < exists ; exists ; 1913 ; Brain Volume 36 ; 36 ; >
+    au < exists ; exists ; 1914 ; Brain Volume 37 ; 37 ; >
+    au < exists ; exists ; 1915 ; Brain Volume 38 ; 38 ; >
+    au < exists ; exists ; 1916 ; Brain Volume 39 ; 39 ; >
+    au < exists ; exists ; 1917 ; Brain Volume 40 ; 40 ; >
+    au < exists ; exists ; 1918 ; Brain Volume 41 ; 41 ; >
+    au < exists ; exists ; 1919 ; Brain Volume 42 ; 42 ; >
+    au < exists ; exists ; 1920 ; Brain Volume 43 ; 43 ; >
+    au < exists ; exists ; 1921 ; Brain Volume 44 ; 44 ; >
+    au < exists ; exists ; 1922 ; Brain Volume 45 ; 45 ; >
+    au < exists ; exists ; 1923 ; Brain Volume 46 ; 46 ; >
+    au < exists ; exists ; 1924 ; Brain Volume 47 ; 47 ; >
+    au < exists ; exists ; 1925 ; Brain Volume 48 ; 48 ; >
+    au < exists ; exists ; 1926 ; Brain Volume 49 ; 49 ; >
+    au < exists ; exists ; 1927 ; Brain Volume 50 ; 50 ; >
+    au < exists ; exists ; 1928 ; Brain Volume 51 ; 51 ; >
+    au < exists ; exists ; 1929 ; Brain Volume 52 ; 52 ; >
+    au < exists ; exists ; 1930 ; Brain Volume 53 ; 53 ; >
+    au < exists ; exists ; 1931 ; Brain Volume 54 ; 54 ; >
+    au < exists ; exists ; 1932 ; Brain Volume 55 ; 55 ; >
+    au < exists ; exists ; 1933 ; Brain Volume 56 ; 56 ; >
+    au < exists ; exists ; 1934 ; Brain Volume 57 ; 57 ; >
+    au < exists ; exists ; 1935 ; Brain Volume 58 ; 58 ; >
+    au < exists ; exists ; 1936 ; Brain Volume 59 ; 59 ; >
+    au < exists ; exists ; 1937 ; Brain Volume 60 ; 60 ; >
+    au < exists ; exists ; 1938 ; Brain Volume 61 ; 61 ; >
+    au < exists ; exists ; 1939 ; Brain Volume 62 ; 62 ; >
+    au < exists ; exists ; 1940 ; Brain Volume 63 ; 63 ; >
+    au < exists ; exists ; 1941 ; Brain Volume 64 ; 64 ; >
+    au < exists ; exists ; 1942 ; Brain Volume 65 ; 65 ; >
+    au < exists ; exists ; 1943 ; Brain Volume 66 ; 66 ; >
+    au < exists ; exists ; 1944 ; Brain Volume 67 ; 67 ; >
+    au < exists ; exists ; 1945 ; Brain Volume 68 ; 68 ; >
+    au < exists ; exists ; 1946 ; Brain Volume 69 ; 69 ; >
+    au < exists ; exists ; 1947 ; Brain Volume 70 ; 70 ; >
+    au < exists ; exists ; 1948 ; Brain Volume 71 ; 71 ; >
+    au < exists ; exists ; 1949 ; Brain Volume 72 ; 72 ; >
+    au < exists ; exists ; 1950 ; Brain Volume 73 ; 73 ; >
+    au < exists ; exists ; 1951 ; Brain Volume 74 ; 74 ; >
+    au < exists ; exists ; 1952 ; Brain Volume 75 ; 75 ; >
+    au < exists ; exists ; 1953 ; Brain Volume 76 ; 76 ; >
+    au < exists ; exists ; 1954 ; Brain Volume 77 ; 77 ; >
+    au < exists ; exists ; 1955 ; Brain Volume 78 ; 78 ; >
+    au < exists ; exists ; 1956 ; Brain Volume 79 ; 79 ; >
+    au < exists ; exists ; 1957 ; Brain Volume 80 ; 80 ; >
+    au < exists ; exists ; 1958 ; Brain Volume 81 ; 81 ; >
+    au < exists ; exists ; 1959 ; Brain Volume 82 ; 82 ; >
+    au < exists ; exists ; 1960 ; Brain Volume 83 ; 83 ; >
+    au < exists ; exists ; 1961 ; Brain Volume 84 ; 84 ; >
+    au < exists ; exists ; 1962 ; Brain Volume 85 ; 85 ; >
+    au < exists ; exists ; 1963 ; Brain Volume 86 ; 86 ; >
+    au < exists ; exists ; 1964 ; Brain Volume 87 ; 87 ; >
+    au < exists ; exists ; 1965 ; Brain Volume 88 ; 88 ; >
+    au < exists ; exists ; 1966 ; Brain Volume 89 ; 89 ; >
+    au < exists ; exists ; 1967 ; Brain Volume 90 ; 90 ; >
+    au < exists ; exists ; 1968 ; Brain Volume 91 ; 91 ; >
+    au < exists ; exists ; 1969 ; Brain Volume 92 ; 92 ; >
+    au < exists ; exists ; 1970 ; Brain Volume 93 ; 93 ; >
+    au < exists ; exists ; 1971 ; Brain Volume 94 ; 94 ; >
+    au < exists ; exists ; 1972 ; Brain Volume 95 ; 95 ; >
+    au < exists ; exists ; 1973 ; Brain Volume 96 ; 96 ; >
+    au < exists ; exists ; 1974 ; Brain Volume 97 ; 97 ; >
+    au < exists ; exists ; 1975 ; Brain Volume 98 ; 98 ; >
+    au < exists ; exists ; 1976 ; Brain Volume 99 ; 99 ; >
+    au < exists ; exists ; 1977 ; Brain Volume 100 ; 100 ; >
+    au < exists ; exists ; 1978 ; Brain Volume 101 ; 101 ; >
+    au < exists ; exists ; 1979 ; Brain Volume 102 ; 102 ; >
+    au < exists ; exists ; 1980 ; Brain Volume 103 ; 103 ; >
+    au < exists ; exists ; 1981 ; Brain Volume 104 ; 104 ; >
+    au < exists ; exists ; 1982 ; Brain Volume 105 ; 105 ; >
+    au < exists ; exists ; 1983 ; Brain Volume 106 ; 106 ; >
+    au < exists ; exists ; 1984 ; Brain Volume 107 ; 107 ; >
+    au < exists ; exists ; 1985 ; Brain Volume 108 ; 108 ; >
+    au < exists ; exists ; 1986 ; Brain Volume 109 ; 109 ; >
+    au < exists ; exists ; 1987 ; Brain Volume 110 ; 110 ; >
+    au < exists ; exists ; 1988 ; Brain Volume 111 ; 111 ; >
+    au < exists ; exists ; 1989 ; Brain Volume 112 ; 112 ; >
+    au < exists ; exists ; 1990 ; Brain Volume 113 ; 113 ; >
+    au < exists ; exists ; 1991 ; Brain Volume 114 ; 114 ; >
+    au < exists ; exists ; 1992 ; Brain Volume 115 ; 115 ; >
+    au < exists ; exists ; 1993 ; Brain Volume 116 ; 116 ; >
+    au < exists ; exists ; 1994 ; Brain Volume 117 ; 117 ; >
+    au < exists ; exists ; 1995 ; Brain Volume 118 ; 118 ; >
+    au < exists ; exists ; 1996 ; Brain Volume 119 ; 119 ; >
+    au < exists ; exists ; 1997 ; Brain Volume 120 ; 120 ; >
+    au < exists ; exists ; 1998 ; Brain Volume 121 ; 121 ; >
+    au < exists ; exists ; 1999 ; Brain Volume 122 ; 122 ; >
+    au < exists ; exists ; 2000 ; Brain Volume 123 ; 123 ; >
+    au < exists ; exists ; 2001 ; Brain Volume 124 ; 124 ; >
+    au < exists ; exists ; 2002 ; Brain Volume 125 ; 125 ; >
+    au < exists ; exists ; 2003 ; Brain Volume 126 ; 126 ; >
+    au < exists ; exists ; 2004 ; Brain Volume 127 ; 127 ; >
+    au < exists ; exists ; 2005 ; Brain Volume 128 ; 128 ; >
+    au < exists ; exists ; 2006 ; Brain Volume 129 ; 129 ; >
+    au < exists ; exists ; 2007 ; Brain Volume 130 ; 130 ; >
+    au < exists ; exists ; 2008 ; Brain Volume 131 ; 131 ; >
+    au < exists ; exists ; 2009 ; Brain Volume 132 ; 132 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 ; >
@@ -3746,92 +3745,10 @@
     param[base_url] = http://cardiovascres.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[notReady] = See RU4166 for author-index 503 error due to publisher database timing out
-    comment[down] = Moved to Drupal platform
 
-    au < doNotProcess ; doNotProcess ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 1969 ; Cardiovascular Research Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 1970 ; Cardiovascular Research Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 1971 ; Cardiovascular Research Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 1972 ; Cardiovascular Research Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 1973 ; Cardiovascular Research Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 1974 ; Cardiovascular Research Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 1975 ; Cardiovascular Research Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 1976 ; Cardiovascular Research Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 1977 ; Cardiovascular Research Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 1978 ; Cardiovascular Research Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 1979 ; Cardiovascular Research Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 1980 ; Cardiovascular Research Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; Cardiovascular Research Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; Cardiovascular Research Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 1983 ; Cardiovascular Research Volume 17 ; 17 ; >
-    au < doNotProcess ; doNotProcess ; 1984 ; Cardiovascular Research Volume 18 ; 18 ; >
-    au < doNotProcess ; doNotProcess ; 1985 ; Cardiovascular Research Volume 19 ; 19 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; Cardiovascular Research Volume 20 ; 20 ; >
-    au < doNotProcess ; doNotProcess ; 1987 ; Cardiovascular Research Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 1988 ; Cardiovascular Research Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 1989 ; Cardiovascular Research Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 1990 ; Cardiovascular Research Volume 24 ; 24 ; >
-    au < doNotProcess ; doNotProcess ; 1991 ; Cardiovascular Research Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 1992 ; Cardiovascular Research Volume 26 ; 26 ; >
-    au < doNotProcess ; doNotProcess ; 1993 ; Cardiovascular Research Volume 27 ; 27 ; >
-    au < doNotProcess ; doNotProcess ; 1994 ; Cardiovascular Research Volume 28 ; 28 ; >
-    au < doNotProcess ; doNotProcess ; 1995 ; Cardiovascular Research Volume 29 ; 29 ; >
-    au < doNotProcess ; doNotProcess ; 1995 ; Cardiovascular Research Volume 30 ; 30 ; >
-    au < doNotProcess ; doNotProcess ; 1996 ; Cardiovascular Research Volume 31 ; 31 ; >
-    au < doNotProcess ; doNotProcess ; 1996 ; Cardiovascular Research Volume 32 ; 32 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 33 ; 33 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 34 ; 34 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 35 ; 35 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; Cardiovascular Research Volume 36 ; 36 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 37 ; 37 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 38 ; 38 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 39 ; 39 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; Cardiovascular Research Volume 40 ; 40 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 41 ; 41 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 42 ; 42 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 43 ; 43 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; Cardiovascular Research Volume 44 ; 44 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 45 ; 45 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 46 ; 46 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 47 ; 47 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; Cardiovascular Research Volume 48 ; 48 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 49 ; 49 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 50 ; 50 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 51 ; 51 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; Cardiovascular Research Volume 52 ; 52 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 53 ; 53 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 54 ; 54 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 55 ; 55 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; Cardiovascular Research Volume 56 ; 56 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 57 ; 57 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 58 ; 58 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 59 ; 59 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; Cardiovascular Research Volume 60 ; 60 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 61 ; 61 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 62 ; 62 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 63 ; 63 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 64 ; 64 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; Cardiovascular Research Volume 65 ; 65 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 66 ; 66 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 67 ; 67 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; Cardiovascular Research Volume 68 ; 68 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 69 ; 69 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 70 ; 70 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 71 ; 71 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; Cardiovascular Research Volume 72 ; 72 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 73 ; 73 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 74 ; 74 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 75 ; 75 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; Cardiovascular Research Volume 76 ; 76 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
     au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
     au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
     au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
     au < down ; frozen ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
     au < down ; crawling ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
     au < down ; frozen ; 2010 ; Cardiovascular Research Volume 87 ; 87 ; >
@@ -3848,11 +3765,119 @@
     au < down ; manifest ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
     au < down ; manifest ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
     au < down ; manifest ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
+
+    }
+
+    {
+
+    param[base_url] = http://cardiovascres.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < exists ; exists ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
+    au < exists ; exists ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
+    au < exists ; exists ; 1969 ; Cardiovascular Research Volume 3 ; 3 ; >
+    au < exists ; exists ; 1970 ; Cardiovascular Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 1971 ; Cardiovascular Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 1972 ; Cardiovascular Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 1973 ; Cardiovascular Research Volume 7 ; 7 ; >
+    au < exists ; exists ; 1974 ; Cardiovascular Research Volume 8 ; 8 ; >
+    au < exists ; exists ; 1975 ; Cardiovascular Research Volume 9 ; 9 ; >
+    au < exists ; exists ; 1976 ; Cardiovascular Research Volume 10 ; 10 ; >
+    au < exists ; exists ; 1977 ; Cardiovascular Research Volume 11 ; 11 ; >
+    au < exists ; exists ; 1978 ; Cardiovascular Research Volume 12 ; 12 ; >
+    au < exists ; exists ; 1979 ; Cardiovascular Research Volume 13 ; 13 ; >
+    au < exists ; exists ; 1980 ; Cardiovascular Research Volume 14 ; 14 ; >
+    au < exists ; exists ; 1981 ; Cardiovascular Research Volume 15 ; 15 ; >
+    au < exists ; exists ; 1982 ; Cardiovascular Research Volume 16 ; 16 ; >
+    au < exists ; exists ; 1983 ; Cardiovascular Research Volume 17 ; 17 ; >
+    au < exists ; exists ; 1984 ; Cardiovascular Research Volume 18 ; 18 ; >
+    au < exists ; exists ; 1985 ; Cardiovascular Research Volume 19 ; 19 ; >
+    au < exists ; exists ; 1986 ; Cardiovascular Research Volume 20 ; 20 ; >
+    au < exists ; exists ; 1987 ; Cardiovascular Research Volume 21 ; 21 ; >
+    au < exists ; exists ; 1988 ; Cardiovascular Research Volume 22 ; 22 ; >
+    au < exists ; exists ; 1989 ; Cardiovascular Research Volume 23 ; 23 ; >
+    au < exists ; exists ; 1990 ; Cardiovascular Research Volume 24 ; 24 ; >
+    au < exists ; exists ; 1991 ; Cardiovascular Research Volume 25 ; 25 ; >
+    au < exists ; exists ; 1992 ; Cardiovascular Research Volume 26 ; 26 ; >
+    au < exists ; exists ; 1993 ; Cardiovascular Research Volume 27 ; 27 ; >
+    au < exists ; exists ; 1994 ; Cardiovascular Research Volume 28 ; 28 ; >
+    au < exists ; exists ; 1995 ; Cardiovascular Research Volume 29 ; 29 ; >
+    au < exists ; exists ; 1995 ; Cardiovascular Research Volume 30 ; 30 ; >
+    au < exists ; exists ; 1996 ; Cardiovascular Research Volume 31 ; 31 ; >
+    au < exists ; exists ; 1996 ; Cardiovascular Research Volume 32 ; 32 ; >
+    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 33 ; 33 ; >
+    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 34 ; 34 ; >
+    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 35 ; 35 ; >
+    au < exists ; exists ; 1997 ; Cardiovascular Research Volume 36 ; 36 ; >
+    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 37 ; 37 ; >
+    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 38 ; 38 ; >
+    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 39 ; 39 ; >
+    au < exists ; exists ; 1998 ; Cardiovascular Research Volume 40 ; 40 ; >
+    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 41 ; 41 ; >
+    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 42 ; 42 ; >
+    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 43 ; 43 ; >
+    au < exists ; exists ; 1999 ; Cardiovascular Research Volume 44 ; 44 ; >
+    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 45 ; 45 ; >
+    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 46 ; 46 ; >
+    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 47 ; 47 ; >
+    au < exists ; exists ; 2000 ; Cardiovascular Research Volume 48 ; 48 ; >
+    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 49 ; 49 ; >
+    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 50 ; 50 ; >
+    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 51 ; 51 ; >
+    au < exists ; exists ; 2001 ; Cardiovascular Research Volume 52 ; 52 ; >
+    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 53 ; 53 ; >
+    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 54 ; 54 ; >
+    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 55 ; 55 ; >
+    au < exists ; exists ; 2002 ; Cardiovascular Research Volume 56 ; 56 ; >
+    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 57 ; 57 ; >
+    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 58 ; 58 ; >
+    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 59 ; 59 ; >
+    au < exists ; exists ; 2003 ; Cardiovascular Research Volume 60 ; 60 ; >
+    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 61 ; 61 ; >
+    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 62 ; 62 ; >
+    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 63 ; 63 ; >
+    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 64 ; 64 ; >
+    au < exists ; exists ; 2004 ; Cardiovascular Research Volume 65 ; 65 ; >
+    au < exists ; exists ; 2005 ; Cardiovascular Research Volume 66 ; 66 ; >
+    au < exists ; exists ; 2005 ; Cardiovascular Research Volume 67 ; 67 ; >
+    au < exists ; exists ; 2005 ; Cardiovascular Research Volume 68 ; 68 ; >
+    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 69 ; 69 ; >
+    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 70 ; 70 ; >
+    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 71 ; 71 ; >
+    au < exists ; exists ; 2006 ; Cardiovascular Research Volume 72 ; 72 ; >
+    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 73 ; 73 ; >
+    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 74 ; 74 ; >
+    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 75 ; 75 ; >
+    au < exists ; exists ; 2007 ; Cardiovascular Research Volume 76 ; 76 ; >
+    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
+    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
+    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
+    au < exists ; exists ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
+    au < exists ; exists ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 87 ; 87 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Cardiovascular Research Volume 88 ; 88 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 89 ; 89 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Cardiovascular Research Volume 92 ; 92 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 97 ; 97 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
+    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
+    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
+    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
+    au < exists ; exists ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
+    au < exists ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
 
     }
 
@@ -5689,8 +5714,6 @@
 
     param[base_url] = http://europace.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[notReady] = needs hash filter RU 4470
-    comment[down] = Moved to Drupal platform
 
     au < manifest ; exists ; 1999 ; Europace Volume 1 ; 1 ; >
     au < manifest ; exists ; 2000 ; Europace Volume 2 ; 2 ; >
@@ -5739,41 +5762,12 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[down] = Moved to Drupal platform
 
-    au < doNotProcess ; doNotProcess ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; European Heart Journal Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; European Heart Journal Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 1983 ; European Heart Journal Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 1984 ; European Heart Journal Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 1985 ; European Heart Journal Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; European Heart Journal Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 1987 ; European Heart Journal Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 1988 ; European Heart Journal Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 1989 ; European Heart Journal Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 1990 ; European Heart Journal Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 1991 ; European Heart Journal Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 1992 ; European Heart Journal Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 1993 ; European Heart Journal Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 1994 ; European Heart Journal Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 1995 ; European Heart Journal Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 1996 ; European Heart Journal Volume 17 ; 17 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; European Heart Journal Volume 18 ; 18 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; European Heart Journal Volume 19 ; 19 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; European Heart Journal Volume 20 ; 20 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; European Heart Journal Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; European Heart Journal Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; European Heart Journal Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; European Heart Journal Volume 24 ; 24 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; European Heart Journal Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; European Heart Journal Volume 26 ; 26 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; European Heart Journal Volume 27 ; 27 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; European Heart Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < down ; crawling ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
     au < down ; crawling ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
     au < down ; crawling ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
     au < down ; manifest ; 2013 ; European Heart Journal Volume 34 ; 34 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; European Heart Journal Volume 35 ; 35 ; >
 
     }
 
@@ -5781,7 +5775,6 @@
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[down] = Moved to Drupal platform
 
     au < manifest ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 ; >
@@ -5849,22 +5842,21 @@
 
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[down] = Moved to Drupal platform
 
-    au < doNotProcess ; doNotProcess ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
+    au < exists ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 ; >
+    au < exists ; exists ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 ; >
+    au < exists ; exists ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 ; >
+    au < exists ; exists ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 ; >
+    au < exists ; exists ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 ; >
+    au < exists ; exists ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 ; >
+    au < exists ; exists ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
+    au < exists ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 ; >
+    au < exists ; exists ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 ; >
+    au < exists ; exists ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 ; >
 
     }
 
@@ -5950,25 +5942,25 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[down] = Moved to Drupal platform
 
-    au < doNotProcess ; doNotProcess ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
     au < superseded ; down ; 2010 ; European Journal of Echocardiography Volume 11 [to delete] ; 11 ; >
     au < down ; frozen ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < down ; crawling ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
     au < down ; manifest ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 ; >
 
     }
 
+    {
+
+    param[base_url] = http://ehjcimaging.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
+    au < exists ; exists ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 ; >
+    au < exists ; exists ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 ; >
+
+    }
   }
 
   {
