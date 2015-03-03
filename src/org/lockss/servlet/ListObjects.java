@@ -175,6 +175,7 @@ public class ListObjects extends LockssServlet {
     }
 
     void begin() throws IOException {
+      resp.setCharacterEncoding(Constants.ENCODING_UTF_8);
       wrtr = resp.getWriter();
       resp.setContentType("text/plain");
       printHeader();
