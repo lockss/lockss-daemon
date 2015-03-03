@@ -312,7 +312,7 @@
 
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://perspectivesinmedicine.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >\
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       comment[notReady] = no permission from publisher
 
       au < exists ; exists ; 2011 ; Cold Spring Harbor Perspectives in Medicine Volume 1 ; 1 >
