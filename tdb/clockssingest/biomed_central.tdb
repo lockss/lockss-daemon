@@ -217,9 +217,10 @@
       {
       comment[journal_code] = bmchematol
       comment[journal_title] = journal name and journal code change in 2013, same issn used
+      comment[notReady] = no substance, though there appears to be some on the website.
 
       au < crawling ; exists ; 2013 ; BMC Hematology Volume 13 ; 13 >
-      au < testing ; exists ; 2014 ; BMC Hematology Volume 14 ; 14 >
+      au < notReady ; exists ; 2014 ; BMC Hematology Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Hematology Volume 15 ; 15 >
       
       }
