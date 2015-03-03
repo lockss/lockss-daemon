@@ -86,10 +86,12 @@
       plugin = needs.plugin
       param[base_url] = http://www.japmaonline.org/
       implicit < status ; year; name ; param[volume_name] >
+      comment[platform] = Allen Press
       param[journal_id] = apms
 
       au < exists ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 >
       au < exists ; 2014 ; Journal of the American Podiatric Medical Association Volume 104 ; 104 >
+      au < exists ; 2015 ; Journal of the American Podiatric Medical Association Volume 105 ; 105 >
 
     }
 
