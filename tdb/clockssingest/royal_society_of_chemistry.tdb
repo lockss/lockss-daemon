@@ -900,10 +900,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
-      au < manifest ; exists ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
-      au < manifest ; exists ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
-      au < manifest ; exists ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
+      au < testing ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
+      au < testing ; exists ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
+      au < testing ; exists ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
+      au < testing ; exists ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
       au < expected ; exists ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
 
@@ -947,9 +947,9 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Journal of Materials Chemistry Volume 20 ; 20 ; 2010 >
-      au < manifest ; exists ; 2011 ; Journal of Materials Chemistry Volume 21 ; 21 ; 2011 >
-      au < manifest ; exists ; 2012 ; Journal of Materials Chemistry Volume 22 ; 22 ; 2012 >
+      au < testing ; exists ; 2010 ; Journal of Materials Chemistry Volume 20 ; 20 ; 2010 >
+      au < testing ; exists ; 2011 ; Journal of Materials Chemistry Volume 21 ; 21 ; 2011 >
+      au < testing ; exists ; 2012 ; Journal of Materials Chemistry Volume 22 ; 22 ; 2012 >
       au < expected ; exists ; 2013 ; Journal of Materials Chemistry Volume 23 ; 23 ; 2013 >
       au < expected ; exists ; 2014 ; Journal of Materials Chemistry Volume 24 ; 24 ; 2014 >
 
