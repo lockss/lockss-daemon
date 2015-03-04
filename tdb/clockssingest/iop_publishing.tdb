@@ -1202,7 +1202,7 @@
     au < finished ; crawling ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 > 
     au < finished ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 > 
-    au < testing ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
+    au < ready ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
     au < manifest ; exists ; 2015 ; Journal of Neural Engineering Volume 12 ; 12 > 
 
   }
@@ -1806,7 +1806,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 > 
     au < finished ; crawling ; 2012 ; Journal of Physics: Condensed Matter Volume 24 ; 24 > 
     au < crawling ; exists ; 2013 ; Journal of Physics: Condensed Matter Volume 25 ; 25 > 
-    au < manifest ; exists ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 > 
+    au < testing ; exists ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 > 
     au < manifest ; exists ; 2015 ; Journal of Physics: Condensed Matter Volume 27 ; 27 > 
 
   }
@@ -2305,20 +2305,20 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 477 ; 477 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 481 ; 481 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 482 ; 482 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 483 ; 483 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 484 ; 484 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 486 ; 486 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 487 ; 487 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 488 ; 488 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 489 ; 489 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 491 ; 491 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 492 ; 492 >
-    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 493 ; 493 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 481 ; 481 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 482 ; 482 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 483 ; 483 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 484 ; 484 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 486 ; 486 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 487 ; 487 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 488 ; 488 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 489 ; 489 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 491 ; 491 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 492 ; 492 >
+    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 493 ; 493 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 494 ; 494 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 495 ; 495 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 496 ; 496 >
@@ -2466,7 +2466,7 @@
     au < finished ; crawling ; 2011 ; Journal of Radiological Protection Volume 31 ; 31 > 
     au < finished ; crawling ; 2012 ; Journal of Radiological Protection Volume 32 ; 32 > 
     au < crawling ; exists ; 2013 ; Journal of Radiological Protection Volume 33 ; 33 > 
-    au < manifest ; exists ; 2014 ; Journal of Radiological Protection Volume 34 ; 34 > 
+    au < testing ; exists ; 2014 ; Journal of Radiological Protection Volume 34 ; 34 > 
     au < manifest ; exists ; 2015 ; Journal of Radiological Protection Volume 35 ; 35 > 
 
   }
@@ -2545,7 +2545,8 @@
     au < finished ; crawling ; 2011 ; Journal of Semiconductors Volume 32 ; 32 >
     au < finished ; crawling ; 2012 ; Journal of Semiconductors Volume 33 ; 33 >
     au < crawling ; exists ; 2013 ; Journal of Semiconductors Volume 34 ; 34 >
-    au < manifest ; exists ; 2014 ; Journal of Semiconductors Volume 35 ; 35 >
+    au < testing ; exists ; 2014 ; Journal of Semiconductors Volume 35 ; 35 >
+    au < exists ; exists ; 2015 ; Journal of Semiconductors Volume 36 ; 36 >
     
   }
 
@@ -2570,7 +2571,8 @@
     au < finished ; crawling ; 2011 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2011 ; 2011 > 
     au < ingNotReady ; exists ; 2012 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2012 ; 2012 > 
     au < crawling ; exists ; 2013 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2013 ; 2013 > 
-    au < manifest ; exists ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 > 
+    au < testing ; exists ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 > 
+    au < exists ; exists ; 2015 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2015 ; 2015 > 
 
   }
 
@@ -2608,7 +2610,7 @@
     comment[param] = eissn preferred
 
     au < manifest ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
-    au < manifest ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
+    au < testing ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
     au < manifest ; exists ; 2015 ; Laser Physics Volume 25 ; 25 >
 
   }
