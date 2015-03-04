@@ -59,7 +59,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Adaptation Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Adaptation Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Adaptation Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Adaptation Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Adaptation Volume 8 ; 8 >
 
     }
 
@@ -2194,7 +2194,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Biometrika Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Biometrika Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Biometrika Volume 101 ; 101 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Biometrika Volume 102 ; 102 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Biometrika Volume 102 ; 102 >
 
     }
 
@@ -3913,7 +3913,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; CESifo Economic Studies Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; CESifo Economic Studies Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; CESifo Economic Studies Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; CESifo Economic Studies Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; CESifo Economic Studies Volume 61 ; 61 >
 
     }
 
@@ -5108,7 +5108,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; English: Journal of the English Association Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; English: Journal of the English Association Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; English: Journal of the English Association Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; English: Journal of the English Association Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; English: Journal of the English Association Volume 64 ; 64 >
 
   }
 
@@ -5262,7 +5262,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; English Historical Review Volume 127 ; 127 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; English Historical Review Volume 128 ; 128 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; English Historical Review Volume 129 ; 129 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; English Historical Review Volume 130 ; 130 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; English Historical Review Volume 130 ; 130 >
 
     }
 
@@ -6186,33 +6186,33 @@
     param[base_url] = http://ejo.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < oup.OUPDrupalPlugin ; exists ; 1979 ; European Journal of Orthodontics Volume 1 ; 1 >
-    au < oup.OUPDrupalPlugin ; exists ; 1980 ; European Journal of Orthodontics Volume 2 ; 2 >
-    au < oup.OUPDrupalPlugin ; exists ; 1981 ; European Journal of Orthodontics Volume 3 ; 3 >
-    au < oup.OUPDrupalPlugin ; exists ; 1982 ; European Journal of Orthodontics Volume 4 ; 4 >
-    au < oup.OUPDrupalPlugin ; exists ; 1983 ; European Journal of Orthodontics Volume 5 ; 5 >
-    au < oup.OUPDrupalPlugin ; exists ; 1984 ; European Journal of Orthodontics Volume 6 ; 6 >
-    au < oup.OUPDrupalPlugin ; exists ; 1985 ; European Journal of Orthodontics Volume 7 ; 7 >
-    au < oup.OUPDrupalPlugin ; exists ; 1986 ; European Journal of Orthodontics Volume 8 ; 8 >
-    au < oup.OUPDrupalPlugin ; exists ; 1987 ; European Journal of Orthodontics Volume 9 ; 9 >
-    au < oup.OUPDrupalPlugin ; exists ; 1988 ; European Journal of Orthodontics Volume 10 ; 10 >
-    au < oup.OUPDrupalPlugin ; exists ; 1989 ; European Journal of Orthodontics Volume 11 ; 11 >
-    au < oup.OUPDrupalPlugin ; exists ; 1990 ; European Journal of Orthodontics Volume 12 ; 12 >
-    au < oup.OUPDrupalPlugin ; exists ; 1991 ; European Journal of Orthodontics Volume 13 ; 13 >
-    au < oup.OUPDrupalPlugin ; exists ; 1992 ; European Journal of Orthodontics Volume 14 ; 14 >
-    au < oup.OUPDrupalPlugin ; exists ; 1993 ; European Journal of Orthodontics Volume 15 ; 15 >
-    au < oup.OUPDrupalPlugin ; exists ; 1994 ; European Journal of Orthodontics Volume 16 ; 16 >
-    au < oup.OUPDrupalPlugin ; exists ; 1995 ; European Journal of Orthodontics Volume 17 ; 17 >
-    au < oup.OUPDrupalPlugin ; exists ; 1996 ; European Journal of Orthodontics Volume 18 ; 18 >
-    au < oup.OUPDrupalPlugin ; exists ; 1997 ; European Journal of Orthodontics Volume 19 ; 19 >
-    au < oup.OUPDrupalPlugin ; exists ; 1998 ; European Journal of Orthodontics Volume 20 ; 20 >
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; European Journal of Orthodontics Volume 21 ; 21 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; European Journal of Orthodontics Volume 22 ; 22 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; European Journal of Orthodontics Volume 23 ; 23 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; European Journal of Orthodontics Volume 24 ; 24 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; European Journal of Orthodontics Volume 25 ; 25 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; European Journal of Orthodontics Volume 26 ; 26 >
-    au < oup.OUPDrupalPlugin ; exists ; 2005 ; European Journal of Orthodontics Volume 27 ; 27 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1979 ; European Journal of Orthodontics Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1980 ; European Journal of Orthodontics Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1981 ; European Journal of Orthodontics Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1982 ; European Journal of Orthodontics Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1983 ; European Journal of Orthodontics Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1984 ; European Journal of Orthodontics Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; European Journal of Orthodontics Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; European Journal of Orthodontics Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; European Journal of Orthodontics Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; European Journal of Orthodontics Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; European Journal of Orthodontics Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; European Journal of Orthodontics Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; European Journal of Orthodontics Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; European Journal of Orthodontics Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1993 ; European Journal of Orthodontics Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1994 ; European Journal of Orthodontics Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; European Journal of Orthodontics Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; European Journal of Orthodontics Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; European Journal of Orthodontics Volume 19 ; 19 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; European Journal of Orthodontics Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; European Journal of Orthodontics Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; European Journal of Orthodontics Volume 22 ; 22 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; European Journal of Orthodontics Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; European Journal of Orthodontics Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; European Journal of Orthodontics Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; European Journal of Orthodontics Volume 26 ; 26 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2005 ; European Journal of Orthodontics Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; down ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 >
     au < HighWireStrVolPlugin ; superseded ; 2007 ; European Journal of Orthodontics Volume 29 [superseded] ; 29 >
     au < HighWirePressH20Plugin ; down ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 >
@@ -6221,9 +6221,9 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 >
-    au < oup.OUPDrupalPlugin ; exists ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; European Journal of Orthodontics Volume 36 ; 36 >
-    au < oup.OUPDrupalPlugin ; expected ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; European Journal of Orthodontics Volume 36 ; 36 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 >
 
     }
 
@@ -8642,7 +8642,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Human Rights Law Review Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Human Rights Law Review Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Human Rights Law Review Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Human Rights Law Review Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Human Rights Law Review Volume 15 ; 15 >
 
     }
 
@@ -9800,7 +9800,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 >
 
     }
 
@@ -9970,7 +9970,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Lexicography Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Lexicography Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Lexicography Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal of Lexicography Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Lexicography Volume 28 ; 28 >
 
     }
 
@@ -11540,7 +11540,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Competition Law & Economics Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Competition Law & Economics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Competition Law & Economics Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Competition Law & Economics Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Competition Law & Economics Volume 11 ; 11 >
 
     }
 
@@ -12489,7 +12489,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the History of Collections Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the History of Collections Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the History of Collections Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of the History of Collections Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the History of Collections Volume 27 ; 27 >
 
     }
 
@@ -13066,7 +13066,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of International Dispute Settlement Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of International Dispute Settlement Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of International Dispute Settlement Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of International Dispute Settlement Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of International Dispute Settlement Volume 6 ; 6 >
 
   }
 
@@ -14303,7 +14303,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Public Health Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Public Health Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Public Health Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Public Health Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Public Health Volume 37 ; 37 >
 
     }
 
@@ -14859,7 +14859,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Topology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Topology Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Topology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Topology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Topology Volume 8 ; 8 >
 
     }
 
@@ -15979,7 +15979,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Mind Volume 121 ; 121 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Mind Volume 122 ; 122 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Mind Volume 123 ; 123 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Mind Volume 124 ; 124 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Mind Volume 124 ; 124 >
 
     }
 
@@ -17528,7 +17528,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Notes and Queries Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Notes and Queries Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Notes and Queries Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Notes and Queries Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Notes and Queries Volume 62 ; 62 >
 
     }
 
@@ -18834,7 +18834,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Philosophia Mathematica Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Philosophia Mathematica Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Philosophia Mathematica Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Philosophia Mathematica Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Philosophia Mathematica Volume 23 ; 23 >
 
     }
 
@@ -19033,7 +19033,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Policing: A Journal of Policy and Practice Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Policing: A Journal of Policy and Practice Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Policing: A Journal of Policy and Practice Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Policing: A Journal of Policy and Practice Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Policing: A Journal of Policy and Practice Volume 9 ; 9 >
 
     }
 
@@ -20444,7 +20444,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Refugee Survey Quarterly Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Refugee Survey Quarterly Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 >
 
     }
 
@@ -20890,7 +20890,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Review of Finance Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Review of Finance Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Review of Finance Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Review of Finance Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Review of Finance Volume 19 ; 19 >
 
     }
 
@@ -22492,7 +22492,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Trusts & Trustees Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Trusts & Trustees Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Trusts & Trustees Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Trusts & Trustees Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Trusts & Trustees Volume 21 ; 21 >
 
     }
 
@@ -22550,7 +22550,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Twentieth Century British History Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Twentieth Century British History Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Twentieth Century British History Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Twentieth Century British History Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Twentieth Century British History Volume 26 ; 26 >
 
     }
 
@@ -23545,7 +23545,7 @@
       au < released ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 >
       au < manifest ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 >
       au < manifest ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 >
-      au < expected ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 >
+      au < manifest ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 >
 
     }
 
