@@ -9969,36 +9969,49 @@
     param[base_url] = http://intqhc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1989 ; International Journal for Quality in Health Care Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1990 ; International Journal for Quality in Health Care Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1991 ; International Journal for Quality in Health Care Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1992 ; International Journal for Quality in Health Care Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1993 ; International Journal for Quality in Health Care Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1994 ; International Journal for Quality in Health Care Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1995 ; International Journal for Quality in Health Care Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1996 ; International Journal for Quality in Health Care Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1997 ; International Journal for Quality in Health Care Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1998 ; International Journal for Quality in Health Care Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1999 ; International Journal for Quality in Health Care Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2000 ; International Journal for Quality in Health Care Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2001 ; International Journal for Quality in Health Care Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2002 ; International Journal for Quality in Health Care Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2003 ; International Journal for Quality in Health Care Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2004 ; International Journal for Quality in Health Care Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2005 ; International Journal for Quality in Health Care Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2006 ; International Journal for Quality in Health Care Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2007 ; International Journal for Quality in Health Care Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; >
     au < finished ; crawling ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 ; >
     au < finished ; frozen ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 ; >
     au < finished ; frozen ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 ; >
-    au < doNotProcess ; exists ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 ; >
-    au < expected ; exists ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 ; >
 
     }
 
+    {
+
+    param[base_url] = http://intqhc.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < exists ; exists ; 1989 ; International Journal for Quality in Health Care Volume 1 ; 1 ; >
+    au < exists ; exists ; 1990 ; International Journal for Quality in Health Care Volume 2 ; 2 ; >
+    au < exists ; exists ; 1991 ; International Journal for Quality in Health Care Volume 3 ; 3 ; >
+    au < exists ; exists ; 1992 ; International Journal for Quality in Health Care Volume 4 ; 4 ; >
+    au < exists ; exists ; 1993 ; International Journal for Quality in Health Care Volume 5 ; 5 ; >
+    au < exists ; exists ; 1994 ; International Journal for Quality in Health Care Volume 6 ; 6 ; >
+    au < exists ; exists ; 1995 ; International Journal for Quality in Health Care Volume 7 ; 7 ; >
+    au < exists ; exists ; 1996 ; International Journal for Quality in Health Care Volume 8 ; 8 ; >
+    au < exists ; exists ; 1997 ; International Journal for Quality in Health Care Volume 9 ; 9 ; >
+    au < exists ; exists ; 1998 ; International Journal for Quality in Health Care Volume 10 ; 10 ; >
+    au < exists ; exists ; 1999 ; International Journal for Quality in Health Care Volume 11 ; 11 ; >
+    au < exists ; exists ; 2000 ; International Journal for Quality in Health Care Volume 12 ; 12 ; >
+    au < exists ; exists ; 2001 ; International Journal for Quality in Health Care Volume 13 ; 13 ; >
+    au < exists ; exists ; 2002 ; International Journal for Quality in Health Care Volume 14 ; 14 ; >
+    au < exists ; exists ; 2003 ; International Journal for Quality in Health Care Volume 15 ; 15 ; >
+    au < exists ; exists ; 2004 ; International Journal for Quality in Health Care Volume 16 ; 16 ; >
+    au < exists ; exists ; 2005 ; International Journal for Quality in Health Care Volume 17 ; 17 ; >
+    au < exists ; exists ; 2006 ; International Journal for Quality in Health Care Volume 18 ; 18 ; >
+    au < exists ; exists ; 2007 ; International Journal for Quality in Health Care Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 ; >
+    au < exists ; exists ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 ; >
+    au < exists ; exists ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 ; >
+
+    }
   }
 
   {
