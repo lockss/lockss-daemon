@@ -14450,15 +14450,26 @@
     >
 
     param[base_url] = http://jscr.oxfordjournals.org/
+    
+    {
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[nrR] = RT 5641 fetch error
 
-    au < crawling ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
-    au < crawling ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
-    au < doNotProcess ; exists ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 ; >
-    au < doNotProcess ; exists ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 ; >
+    au < down ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
+    au < down ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
+    au < down ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
+    au < down ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
+    }
+
+    {
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
+    au < exists ; exists ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 ; >
+    au < exists ; exists ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 ; >
+    }
 
   }
 
@@ -14485,7 +14496,6 @@
 
     param[base_url] = http://jts.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[nR] = RT 5641 fetch error
 
     au < manifest ; exists ; 1899-1900 ; The Journal of Theological Studies Volume os-I ; os-I ; >
     au < manifest ; exists ; 1900-1901 ; The Journal of Theological Studies Volume os-II ; os-II ; >
