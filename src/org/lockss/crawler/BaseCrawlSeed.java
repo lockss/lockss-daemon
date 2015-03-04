@@ -34,7 +34,8 @@ package org.lockss.crawler;
 
 import java.util.Collection;
 
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 
@@ -50,12 +51,19 @@ public class BaseCrawlSeed implements CrawlSeed {
   protected ArchivalUnit au;
 
   /**
-   * 
    * @param au
-   * @param spec
+   * @since 1.67
    */
   public BaseCrawlSeed(ArchivalUnit au){
     this.au = au;
+  }
+
+  /**
+   * @param crawlerFacade
+   * @since 1.67.5
+   */
+  public BaseCrawlSeed(CrawlerFacade crawlerFacade){
+    this(crawlerFacade.getAu());
   }
 
   public Collection<String> getStartUrls() throws ConfigurationException, PluginException{
