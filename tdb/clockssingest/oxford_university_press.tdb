@@ -6135,10 +6135,8 @@
     param[base_url] = http://ejo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; exists ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 ; >
-    au < down ; exists ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
-    au < down ; finished ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
+    au < zapped ; finished ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
     au < down ; crawling ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
     au < down ; crawling ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; >
     au < down ; frozen ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
