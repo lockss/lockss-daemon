@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCrawlSeed.java,v 1.1 2014-11-12 20:11:25 wkwilson Exp $
+ * $Id: BaseCrawlSeed.java 40192 2015-03-04 06:40:12Z thib_gc $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,13 +28,14 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.crawler;
 
 import java.util.Collection;
 
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 
@@ -46,43 +47,45 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
  * @author wkwilson
  */
 public class BaseCrawlSeed implements CrawlSeed {
-	protected ArchivalUnit au;
-	
-	/**
-	 * 
-	 * @param au
-	 * @param spec
-	 */
-	public BaseCrawlSeed(ArchivalUnit au){
-	  this.au = au;
-	}
-	
-	public Collection<String> getStartUrls() 
-	    throws ConfigurationException, PluginException{
-	  Collection<String> startUrls = au.getStartUrls();
-    if(startUrls == null || startUrls.isEmpty()) {
+  
+  protected ArchivalUnit au;
+
+  /**
+   * @param au
+   * @since 1.67
+   */
+  public BaseCrawlSeed(ArchivalUnit au){
+    this.au = au;
+  }
+
+  /**
+   * @param crawlerFacade
+   * @since 1.67.5
+   */
+  public BaseCrawlSeed(CrawlerFacade crawlerFacade){
+    this(crawlerFacade.getAu());
+  }
+
+  public Collection<String> getStartUrls() throws ConfigurationException, PluginException{
+    Collection<String> startUrls = au.getStartUrls();
+    if (startUrls == null || startUrls.isEmpty()) {
       throw new PluginException.InvalidDefinition(
-          "CrawlInitializer expects the Plugin to " +
-          "define a non null start url list");
+          "CrawlSeed expects the Plugin to define a non-null start URL list");
     }
     return startUrls;
-	}
+  }
 
-	public Collection<String> getPermissionUrls() 
-	    throws ConfigurationException, PluginException{
-		Collection<String> permUrls = au.getPermissionUrls();
-	  if(permUrls == null || permUrls.isEmpty()) {
-	    throw new PluginException.InvalidDefinition(
-	        "CrawlInitializer expects the Plugin to " +
-	        "define a non null permission url list");
-	  }
-	  return permUrls; 
-	}
+  public Collection<String> getPermissionUrls() throws ConfigurationException, PluginException{
+    Collection<String> permUrls = au.getPermissionUrls();
+    if (permUrls == null || permUrls.isEmpty()) {
+      throw new PluginException.InvalidDefinition(
+          "CrawlSeed expects the Plugin to define a non-null permission URL list");
+    }
+    return permUrls; 
+  }
 
   public boolean isFailOnStartUrlError() {
     return true;
   }
 
 }
-
-
