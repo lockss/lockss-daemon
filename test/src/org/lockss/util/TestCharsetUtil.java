@@ -279,7 +279,8 @@ public class TestCharsetUtil extends LockssTestCase {
     int str_length = buf_string.length();
     assertEquals(in_length - buf.length, bais.available());
     // create a new CharsetReader
-    Reader rdr = CharsetUtil.joinStreamsWithCharset(buf,bais,"UTF-8");
+    InputStream is = CharsetUtil.joinStreamsWithCharset(buf,bais,"UTF-8");
+    Reader rdr = new InputStreamReader(is,"UTF-8");
     char[] charbuf = new char[str_length];
     // read in the chars that we already read...
     rdr.read(charbuf);

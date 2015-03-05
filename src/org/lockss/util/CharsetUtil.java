@@ -108,15 +108,74 @@ public class CharsetUtil {
     in.reset();
     return charset;
   }
-
   /**
    * Given a byte stream, figure out an encoding and return a character stream
    * and the encoding used to convert bytes to characters. This will look for a
    * document based charset statement, then check for BOM, then use text
    * analysis to 'guess' the encoding.
    * @param inStream  the InputStream from which to determine the encoding
-   * @return a JoinedReader containing the consumed bytes and the inputstream
-   * and a new a String containing the name of the character encoding.
+   * @return a Pair containing a JoinedStream the consumed bytes and the
+   * inputstream and a new a String containing the name of the character
+   * encoding.
+   * @throws IOException
+   */
+  public static Pair<InputStream, String> getCharsetStream(InputStream inStream)
+      throws IOException {
+    ByteArrayOutputStream buffered = new ByteArrayOutputStream();
+    byte[] buf = new byte[1024];
+    int len = inStream.read(buf);
+    if (len <= 0) {
+      return new ImmutablePair<InputStream,String>(null, UTF8);
+    }
+    String charset = findCharsetInText(buf, len);
+    if (charset != null) {
+      // If the charset is specified in the document, use that.
+      buffered.write(buf, 0, len);
+      // Otherwise, look for a BOM at the start of the content.
+    } else if (hasUtf8BOM(buf, len)) {
+      charset = UTF8;
+      buffered.write(buf, 3, len - 3);
+      // Check UTF32 before UTF16 since a little endian UTF16 BOM is a prefix of
+      // a little endian UTF32 BOM.
+    } else if (hasUtf32BEBOM(buf, len)) {
+      charset = UTF32BE;
+      buffered.write(buf, 4, len - 4);
+    } else if (hasUtf32LEBOM(buf, len)) {
+      charset = UTF32LE;
+      buffered.write(buf, 4, len - 4);
+    } else if (hasUtf16BEBOM(buf, len)) {
+      charset = UTF16BE;
+      buffered.write(buf, 2, len - 2);
+    } else if (hasUtf16LEBOM(buf, len)) {
+      charset = UTF16LE;
+      buffered.write(buf, 2, len - 2);
+    } else if (hasUtf7BOM(buf, len)) {
+      charset = UTF7;
+      buffered.write(buf, 4, len - 4);
+    } else if (hasUtf1BOM(buf, len)) {
+      charset = UTF1;
+      buffered.write(buf, 3, len - 3);
+    } else {
+      // Use icu4j to choose an  encoding.
+      buffered.write(buf, 0, len);
+      charset = guessCharsetFromBytes(buf);
+    }
+    if (charset != null) { charset = supportedCharsetName(charset); }
+    if (charset == null) { charset = UTF8; }
+    InputStream is = joinStreamsWithCharset(buffered.toByteArray(),
+                                            inStream,
+                                            charset);
+      return new ImmutablePair<InputStream,String>(is, charset);
+
+    }
+  /**
+   * Given a byte stream, figure out an encoding and return a character stream
+   * and the encoding used to convert bytes to characters. This will look for a
+   * document based charset statement, then check for BOM, then use text
+   * analysis to 'guess' the encoding.
+   * @param inStream  the InputStream from which to determine the encoding
+   * @return a Pair of a JoinedReader containing the consumed bytes and the
+   * inputstreamand a new a String containing the name of the character encoding.
    * @throws IOException
    */
   public static Pair<Reader, String> getCharsetReader(InputStream inStream)
@@ -162,9 +221,10 @@ public class CharsetUtil {
     }
     if (charset != null) { charset = supportedCharsetName(charset); }
     if (charset == null) { charset = UTF8; }
-    Reader charsetReader = joinStreamsWithCharset(buffered.toByteArray(),
-                                                  inStream,
-                                                  charset);
+    InputStream is = joinStreamsWithCharset(buffered.toByteArray(),
+                                            inStream,
+                                            charset);
+    Reader charsetReader = new InputStreamReader(is,charset);
     return new ImmutablePair<Reader,String>(charsetReader, charset);
   }
 
@@ -346,12 +406,15 @@ public class CharsetUtil {
 
   /**
    * Produces a character stream from an underlying byte stream.
+   *
    * @param buffered lookahead bytes read from tail.
    * @param tail the unread portion of the stream
    * @param charset the character set to use to decode the bytes in buffered and
    *     tail.
+   * @return a joined input stream.
+   * @throws IOException
    */
-  public static Reader joinStreamsWithCharset(
+  public static InputStream joinStreamsWithCharset(
       byte[] buffered, InputStream tail, String charset)
     throws IOException {
 
@@ -404,7 +467,7 @@ public class CharsetUtil {
         tail.close();
       }
     }
-    return new InputStreamReader(new JoinedStream(buffered, tail), charset);
+    return new JoinedStream(buffered, tail);
   }
 
   public static boolean isAlnum(byte b) {
