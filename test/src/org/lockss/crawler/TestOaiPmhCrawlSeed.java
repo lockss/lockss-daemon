@@ -1,42 +1,51 @@
+/*
+ * $Id$
+ */
+
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.crawler;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Properties;
-import java.util.TimeZone;
+import java.io.IOException;
+import java.text.*;
+import java.util.*;
 
 import org.apache.commons.collections.ListUtils;
-import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.*;
 import org.lockss.daemon.PluginException.InvalidDefinition;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.test.ConfigurationUtil;
-import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
-import org.lockss.test.MockAuState;
-import org.lockss.test.MockCachedUrlSet;
-import org.lockss.test.MockCrawlRule;
-import org.lockss.test.MockCrawler;
-import org.lockss.test.MockCrawler.MockCrawlerFacade;
-import org.lockss.test.MockLinkExtractor;
-import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.MockPermissionChecker;
-import org.lockss.test.MockPlugin;
-import org.lockss.test.MockServiceProvider;
-import org.lockss.util.ListUtil;
-import org.lockss.util.TimeBase;
-import org.lockss.util.TypedEntryMap;
+import org.lockss.test.*;
+import org.lockss.util.*;
 
 import com.lyncode.xoai.model.oaipmh.Header;
 import com.lyncode.xoai.serviceprovider.ServiceProvider;
-
 
 public class TestOaiPmhCrawlSeed extends LockssTestCase {
   
@@ -86,7 +95,7 @@ public class TestOaiPmhCrawlSeed extends LockssTestCase {
   }
   
   public void testBadPermissionUrlListThrows() 
-      throws ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     
     mau.setPermissionUrls(null);
     try {
@@ -106,7 +115,7 @@ public class TestOaiPmhCrawlSeed extends LockssTestCase {
   }
   
   public void testPermissionUrl() 
-      throws ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     assertEquals(permissionUrls, cs.getPermissionUrls());
   }
   
@@ -181,14 +190,14 @@ public class TestOaiPmhCrawlSeed extends LockssTestCase {
   }
   
   public void testEmptyIdentifiers() 
-      throws ParseException, ConfigurationException, PluginException {
+      throws ParseException, ConfigurationException, PluginException, IOException {
     msp = (MockServiceProvider) cs.getServiceProvider();
     msp.setIdentifiers(buildHeaderIter(ListUtils.EMPTY_LIST));
     assertEquals(ListUtils.EMPTY_LIST, cs.getStartUrls());
   }
   
   public void testIdentifiers() 
-      throws ParseException, ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     msp = (MockServiceProvider) cs.getServiceProvider();
     msp.setIdentifiers(buildHeaderIter(ListUtil.list("1","2")));
     String prefix = "http://www.example.com/oai/oai/"
@@ -200,7 +209,8 @@ public class TestOaiPmhCrawlSeed extends LockssTestCase {
     assertEquals(expected, cs.getStartUrls());
   }
   
-  public void testLotsOfIdentifiers() throws ParseException, ConfigurationException, PluginException {
+  public void testLotsOfIdentifiers()
+      throws ConfigurationException, PluginException, IOException {
     msp = (MockServiceProvider) cs.getServiceProvider();
     List<String> idList = new ArrayList(1024);
     List<String> expected= new ArrayList(1024);

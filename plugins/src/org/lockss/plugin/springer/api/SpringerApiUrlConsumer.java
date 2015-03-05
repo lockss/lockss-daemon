@@ -32,14 +32,46 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer.api;
 
-import org.lockss.crawler.*;
-import org.lockss.daemon.Crawler.CrawlerFacade;
+import java.io.IOException;
+import java.util.regex.Pattern;
 
-public class SpringerApiCrawlSeedFactory implements CrawlSeedFactory {
+import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.plugin.FetchedUrlData;
+import org.lockss.plugin.base.SimpleUrlConsumer;
+
+public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
+
+  protected Pattern origPdfPat;
+  
+  protected Pattern destPdfPat;
+  
+  public SpringerApiUrlConsumer(CrawlerFacade facade,
+                                FetchedUrlData fud) {
+    super(facade, fud);
+    origPdfPat = Pattern.compile(String.format("^%scontent/pdf/.*\\.pdf$",
+                                               facade.getAu().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey())),
+                                 Pattern.CASE_INSENSITIVE);
+    destPdfPat = Pattern.compile(String.format("^%sstatic/pdf/.*\\.pdf?auth[^=]*=[^&]*&ext=.pdf$",
+                                               SpringerApiCrawlSeed.CDN_URL),
+                                 Pattern.CASE_INSENSITIVE);
+  }
 
   @Override
-    public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
-      return new SpringerApiCrawlSeed(facade);
+  public void consume() throws IOException {
+    if (storeRedirectsAtOrigUrl()) {
+      fud.fetchUrl = null;
+      fud.redirectUrls = null;
     }
+    super.consume();
+  }
 
+  protected boolean storeRedirectsAtOrigUrl() {
+    return fud.redirectUrls != null
+        && fud.redirectUrls.size() == 1
+        && fud.redirectUrls.get(0).equals(fud.fetchUrl)
+        && destPdfPat.matcher(fud.fetchUrl).find()
+        && origPdfPat.matcher(fud.origUrl).find();
+  }
+  
 }

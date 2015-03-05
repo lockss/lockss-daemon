@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -77,15 +77,15 @@
     <string>"Springer API Plugin, Base URL %s, API URL %s, ISSN %s, Volume %s", base_url, api_url, journal_issn, volume_name</string>
   </entry>
   <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.springer.api.SpringerApiCrawlSeedFactory</string>
+  </entry>
+  <entry>
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.txt", base_url</string>
       <string>"%slockss.txt", api_url</string> 
     </list>
-  </entry>
-  <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiCrawlSeedFactory</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -96,9 +96,15 @@
     </list>
   </entry>
   <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.springer.api.SpringerApiUrlConsumerFactory</string>
+  </entry>
+<!-- ********
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.springer.api.SpringerApiUrlNormalizer</string>
   </entry>
+******** -->
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.springer.api.SpringerApiHtmlCrawlFilterFactory</string>
@@ -113,6 +119,6 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>5000</long>
+    <long>3000</long>
   </entry>
 </map>

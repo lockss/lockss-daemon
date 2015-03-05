@@ -32,14 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer.api;
 
-import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.plugin.*;
 
-public class SpringerApiCrawlSeedFactory implements CrawlSeedFactory {
+public class SpringerApiUrlConsumerFactory implements UrlConsumerFactory {
 
   @Override
-    public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
-      return new SpringerApiCrawlSeed(facade);
-    }
+  public UrlConsumer createUrlConsumer(CrawlerFacade facade,
+                                       FetchedUrlData fud) {
+    return new SpringerApiUrlConsumer(facade, fud);
+  }
 
 }

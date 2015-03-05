@@ -32,9 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer.api;
 
-import java.util.*;
-import java.util.regex.Pattern;
-
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,18 +35,16 @@ package org.lockss.plugin.base;
 import java.io.IOException;
 
 import org.lockss.crawler.CrawlerStatus;
-import org.lockss.daemon.LockssWatchdog;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FetchedUrlData;
-import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlConsumer;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /**
  * This is a basic UrlConsumer. It stores the fetched url.
  * It does no processing.
  */
 public class SimpleUrlConsumer implements UrlConsumer {
+  
   protected UrlCacher cacher;
   protected ArchivalUnit au;
   protected CrawlerFacade crawlFacade;
@@ -61,14 +59,14 @@ public class SimpleUrlConsumer implements UrlConsumer {
     this.fud = fud;
   }
   
-  public void consume() throws IOException{
-    if(cacher == null) {
+  public void consume() throws IOException {
+    if (cacher == null) {
       cacher = au.makeUrlCacher(fud.getUrlData());
     }
-    if(fud.fetchUrl != null) {
+    if (fud.fetchUrl != null) {
       cacher.setFetchUrl(fud.fetchUrl);
     }
-    if(fud.storeRedirects() && fud.redirectUrls != null) {
+    if (fud.storeRedirects()) {
       cacher.setRedirectUrls(fud.redirectUrls);
     }
     cacher.setFetchFlags(fud.getFetchFlags());

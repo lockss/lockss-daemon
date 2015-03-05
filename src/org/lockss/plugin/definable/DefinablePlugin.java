@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -102,11 +102,10 @@ public class DefinablePlugin extends BasePlugin {
     "plugin_crawl_seed_factory";
   
   public static final String KEY_PLUGIN_URL_FETCHER_FACTORY = 
-      "plugin_url_fetcher_factory";
+    "plugin_url_fetcher_factory";
   
   public static final String KEY_PLUGIN_URL_CONSUMER_FACTORY = 
-	      "plugin_url_fetcher_factory";
-
+    "plugin_url_consumer_factory";
 
   public static final String KEY_PLUGIN_ARTICLE_METADATA_EXTRACTOR_FACTORY =
     "plugin_article_metadata_extractor_factory";

@@ -50,6 +50,9 @@ import static org.lockss.util.DateTimeUtil.GMT_DATE_FORMATTER;
  */
 
 public class SimulatedUrlFetcher extends BaseUrlFetcher {
+
+  private static final Logger log = Logger.getLogger(SimulatedUrlFetcher.class);
+  
   private String fileRoot;
   private File contentFile = null;
   private CIProperties props = null;
@@ -81,7 +84,7 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
 
   SimulatedContentGenerator getScgen(String root) {
     if (scgen == null) {
-      logger.debug2("Creating SimulatedContentGenerator at: " + contentFile);
+      log.debug2("Creating SimulatedContentGenerator at: " + contentFile);
       scgen = SimulatedContentGenerator.getInstance(fileRoot);
     }
     return scgen;
@@ -104,7 +107,7 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
       	String newUrlString = UrlUtil.resolveUri(fetchUrl, "index.html");
       	fetchUrl = newUrlString;
       	contentFile = null;
-      	logger.debug2("Following redirect to " + newUrlString);
+      	log.debug2("Following redirect to " + newUrlString);
       	return getUncachedInputStreamOnly(lastModified);
       } else {
       	File dirContentFile =
@@ -112,14 +115,14 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
       	if (dirContentFile.exists()) {
       	  return getDefaultStream(dirContentFile, lastModified);
       	} else {
-      	  logger.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
+      	  log.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
       	  return null;
       	}
       }
     } else if (!contentFile.exists() &&
 	       contentFile.toString().endsWith("/index.html") &&
 	       au.getConfiguration().getBoolean("autoGenIndexHtml", false)) {
-      logger.debug2("Generating index: " + new File(contentFile.getParent(),
+      log.debug2("Generating index: " + new File(contentFile.getParent(),
 						    "index.html"));
       String indexContent =
         	getScgen(fileRoot).getIndexContent(contentFile.getParentFile(),
@@ -138,7 +141,7 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
       try {
         long lastCached = GMT_DATE_PARSER.parse(lastModified).getTime();
     	  if ((file.lastModified() <= lastCached)) {
-    	    logger.debug3("Last-Modified: " + lastModified + " <= " +
+    	    log.debug3("Last-Modified: " + lastModified + " <= " +
     	          GMT_DATE_FORMATTER.format(file.lastModified()));
       	  return null;
       	}

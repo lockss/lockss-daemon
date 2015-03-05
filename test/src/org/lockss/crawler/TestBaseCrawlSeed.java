@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.apache.commons.collections.ListUtils;
@@ -89,7 +90,7 @@ public class TestBaseCrawlSeed extends LockssTestCase {
   }
   
   public void testBadUrlListThrows() 
-      throws ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     mau.setStartUrls(null);
     try {
       bcs.getStartUrls();
@@ -124,13 +125,13 @@ public class TestBaseCrawlSeed extends LockssTestCase {
   }
   
   public void testSingleUrl() 
-      throws ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     assertEquals(startUrls, bcs.getStartUrls());
     assertEquals(permissionUrls, bcs.getPermissionUrls());
   }
   
   public void testMultipleUrls() 
-      throws ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     //Adding to urls to mock AU lists
     startUrls.add("http://www.example2.com/index2.html");
     startUrls.add("http://www.example3.com/index3.html");

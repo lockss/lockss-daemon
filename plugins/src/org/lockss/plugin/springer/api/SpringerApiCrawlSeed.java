@@ -35,11 +35,11 @@ package org.lockss.plugin.springer.api;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.pdfbox.io.IOUtils;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.extractor.*;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.*;
 import org.lockss.plugin.UrlFetcher.FetchResult;
@@ -47,46 +47,45 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
 
-
 public class SpringerApiCrawlSeed extends BaseCrawlSeed {
+  
+  // Should become a definitional param
+  public static final String CDN_URL = "http://download.springer.com/";
+
+  public static final int EXPECTED_RECORDS_PER_RESPONSE = 100;
   
   private static final Logger log = Logger.getLogger(SpringerApiCrawlSeed.class);
   
   private static final String API_KEY;
   static {
     InputStream is = null;
+    BufferedReader br = null;
     try {
       is = SpringerApiCrawlSeed.class.getResourceAsStream("api-key.txt");
       if (is == null) {
-        throw new ExceptionInInitializerError();
+        throw new ExceptionInInitializerError("Plugin external not found");
       }
-      API_KEY = new String(IOUtils.toByteArray(is), "US-ASCII");
-      if (API_KEY == null || API_KEY.length() == 0) {
-        throw new ExceptionInInitializerError();
+      br = new BufferedReader(new InputStreamReader(is, Constants.ENCODING_US_ASCII));
+      API_KEY = br.readLine();
+      if (StringUtils.isEmpty(API_KEY)) {
+        throw new ExceptionInInitializerError("Plugin external not loaded");
       }
-    }
-    catch (UnsupportedEncodingException uee) {
-      throw new ExceptionInInitializerError(uee);
     }
     catch (IOException ioe) {
-      throw new ExceptionInInitializerError(ioe);
+      ExceptionInInitializerError eiie = new ExceptionInInitializerError("Error reading plugin external");
+      eiie.initCause(ioe);
+      throw eiie;
     }
     finally {
+      IOUtils.closeQuietly(br);
       IOUtils.closeQuietly(is);
     }
   }
 
-  // Might become a definitional param
-  protected static final String CDN_URL = "http://download.springer.com/";
-
-  protected static final int INCREMENT = 100;
-  
   // Overall: 50,000 hits per day or 1 hit per 1.728s
   // Over 100 boxes: 1 hit per 172.8s rounded to 1 hit per 173s
-  protected static final CrawlRateLimiter API_CRAWL_RATE_LIMITER =
-      new FileTypeCrawlRateLimiter(new RateLimiterInfo("SpringerApiCrawlSeed", "1/10s"));
-  
-  protected boolean initialized;
+  private static final CrawlRateLimiter API_CRAWL_RATE_LIMITER =
+      new FileTypeCrawlRateLimiter(new RateLimiterInfo("SpringerApiCrawlSeed", "1/173s"));
   
   protected String apiUrl;
   
@@ -94,127 +93,137 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
   
   protected String volume;
   
-  protected Crawler.CrawlerFacade crawlerFacade;
+  protected CrawlerFacade facade;
 
   protected List<String> urlList;
   
-  public SpringerApiCrawlSeed(CrawlerFacade crawlerFacade) {
-    super(crawlerFacade.getAu());
+  public SpringerApiCrawlSeed(CrawlerFacade facade) {
+    super(facade);
     if (au == null) {
       throw new IllegalArgumentException("Valid archival unit required for crawl seed");
     }
-    try {
-      initializeFromProps(au.getProperties());
-    }
-    catch (PluginException pe) {
-      log.error("Error creating crawl seed", pe);
-      // FIXME: cannot throw anything
-      // throw pe;
-    }
-    this.crawlerFacade = crawlerFacade;
+    this.facade = facade;
+    this.apiUrl = au.getConfiguration().get("api_url");
+    this.issn = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ISSN.getKey());
+    this.volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
     this.urlList = null;
-    this.initialized = true;
   }
   
-  /**
-   * Pulls needed params from the au props. Throws exceptions if
-   *  expected props do not exist
-   * @param props
-   */
-  protected void initializeFromProps(TypedEntryMap props) throws PluginException {
-    this.apiUrl = getOneParam(props, "api_url");
-    this.issn = getOneParam(props, ConfigParamDescr.JOURNAL_ISSN.getKey());
-    this.volume = getOneParam(props, ConfigParamDescr.VOLUME_NAME.getKey());
+  @Override
+  public Collection<String> getStartUrls() throws PluginException, IOException {
+    if (urlList == null) {
+      populateUrlList();
+    }
+    return urlList;
   }
   
-  protected void populateUrlList() {
-    urlList = new ArrayList<String>(5 * INCREMENT);
+  protected void populateUrlList() throws IOException {
+    boolean siteWarning = false;
+    urlList = new ArrayList<String>();
     int index = 1;
     SpringerApiPamLinkExtractor ple = new SpringerApiPamLinkExtractor();
-    while (ple.hasMore()) {
+    while (!ple.isDone()) {
       log.debug2("Beginning at index " + index);
       String url = makeApiUrl(index);
       UrlFetcher uf = makeApiUrlFetcher(ple, url);
+      url = logUrl(url);
+      facade.getCrawlerStatus().addPendingUrl(url);
+      FetchResult fr = null;
       try {
-    	FetchResult fr = uf.fetch(); // which also consumes the URL
-        if (fr != FetchResult.FETCHED) {
-          log.debug2("Stopping; fetch result was " + fr);
-          // FIXME How do we report crawl errors to the outside world?
-          break;
-        }
-        index += INCREMENT;
+        fr = uf.fetch();
       }
       catch (CacheException ce) {
-        log.debug("Stopping; CacheException", ce);
-        break;
+        log.debug2("Stopping due to fatal CacheException", ce);
+        Throwable cause = ce.getCause();
+        if (cause != null && IOException.class.equals(cause.getClass())) {
+          throw (IOException)cause; // Unwrap IOException
+        }
+        else {
+          throw ce;
+        }
       }
+      if (fr == FetchResult.FETCHED) {
+        facade.getCrawlerStatus().removePendingUrl(url);
+        facade.getCrawlerStatus().signalUrlFetched(url);
+      }
+      else {
+        log.debug2("Stopping due to fetch result " + fr);
+        if (!facade.getCrawlerStatus().getUrlsWithErrors().containsKey(url)) {
+          facade.getCrawlerStatus().signalErrorForUrl(url, "Cannot fetch seed URL");
+        }
+        throw new CacheException("Cannot fetch seed URL");
+      }
+      int pl = ple.getPageLength();
+      if (pl != EXPECTED_RECORDS_PER_RESPONSE && !siteWarning) {
+        siteWarning = true;
+        log.siteWarning(String.format("Unexpected number of records per response in %s: expected %d, got %d",
+                                      url,
+                                      EXPECTED_RECORDS_PER_RESPONSE,
+                                      pl));
+      }
+      index += pl;
     }
-    log.debug2("End; number of URLs: " + urlList.size());
+    log.debug2(String.format("Ending with %d URLs", urlList.size()));
+    if (log.isDebug3()) {
+      log.debug3("Start URLs: " + urlList.toString());
+    }
   }
   
-  protected UrlFetcher makeApiUrlFetcher(final LinkExtractor le,
-                                      final String url) {
-    UrlFetcher uf = crawlerFacade.makeUrlFetcher(url);
+  protected String makeApiUrl(int startingIndex) {
+    String url = String.format("%smeta/v1/pam?q=issn:%s%%20volume:%s&api_key=%s&p=%d&s=%d",
+                               apiUrl,
+                               issn,
+                               volume,
+                               API_KEY,
+                               EXPECTED_RECORDS_PER_RESPONSE,
+                               startingIndex);
+    log.debug2("Request URL: " + logUrl(url));
+    return url;
+  }
+  
+  protected UrlFetcher makeApiUrlFetcher(final SpringerApiPamLinkExtractor ple,
+                                         final String url) {
+    UrlFetcher uf = facade.makeUrlFetcher(url);
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(permFetchFlags);
     uf.setCrawlRateLimiter(API_CRAWL_RATE_LIMITER);
     uf.setUrlConsumerFactory(new UrlConsumerFactory() {
       @Override
-      public UrlConsumer createUrlConsumer(CrawlerFacade crawlerFacade,
-                                           FetchedUrlData fud) {
-        return new SimpleUrlConsumer(crawlerFacade, fud) {
+      public UrlConsumer createUrlConsumer(CrawlerFacade ucfFacade,
+                                           FetchedUrlData ucfFud) {
+        return new SimpleUrlConsumer(ucfFacade, ucfFud) {
           @Override
           public void consume() throws IOException {
+            final List<String> partial = new ArrayList<String>();
             try {
-              le.extractUrls(au,
+              ple.extractUrls(au,
                              fud.input,
-                             AuUtil.getCharsetOrDefault(fud.headers),
+                             AuUtil.getCharsetOrDefault(fud.headers), // FIXME
                              fud.origUrl,
                              new Callback() {
                                @Override
                                public void foundLink(String url) {
-                                 urlList.add(url);
+                                 partial.add(url);
                                }
                              });
             }
-            catch (PluginException pe) {
-              throw new IOException("Error while parsing PAM response for " + logUrl(url), pe);
+            catch (IOException ioe) {
+              log.debug2("Link extractor threw", ioe);
+              throw new IOException("Error while parsing PAM response for " + url, ioe);
+            }
+            finally {
+              log.debug2(String.format("Step ending with %d URLs", partial.size()));
+              if (log.isDebug3()) {
+                log.debug3("URLs from step: %s"+ partial.toString());
+              }
+              urlList.addAll(partial);
             }
           }
         };
-      };
+      }
     });
     return uf;
-  }
-  
-  protected String makeApiUrl(int startingIndex) {
-    String url = apiUrl + "meta/v1/pam?q=issn:" + issn + "%20volume:" + volume + "&api_key=" + API_KEY + "&p=" + INCREMENT + "&s=" + startingIndex;
-    log.debug3("Request URL: " + logUrl(url));
-    return url;
-  }
-  
-  @Override
-  public Collection<String> getStartUrls() throws PluginException {
-    if (!initialized) {
-      throw new PluginException("Crawl seed not initialized properly");
-    }
-    if (urlList == null) {
-      populateUrlList();
-      if (log.isDebug3()) {
-        for (String url : urlList) {
-          log.debug3(url);
-        }
-      }
-    }
-    return urlList;
-  }
-  
-  protected static String getOneParam(TypedEntryMap props, String key) throws PluginException {
-    if (!props.containsKey(key)) {
-      throw new PluginException.InvalidDefinition(String.format("Crawl seed expected %s", key));
-    }
-    return props.getString(key);
   }
   
   public static final String logUrl(String srcUrl) {

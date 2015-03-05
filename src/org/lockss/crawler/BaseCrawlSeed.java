@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
@@ -66,7 +67,7 @@ public class BaseCrawlSeed implements CrawlSeed {
     this(crawlerFacade.getAu());
   }
 
-  public Collection<String> getStartUrls() throws ConfigurationException, PluginException{
+  public Collection<String> getStartUrls() throws ConfigurationException, PluginException, IOException{
     Collection<String> startUrls = au.getStartUrls();
     if (startUrls == null || startUrls.isEmpty()) {
       throw new PluginException.InvalidDefinition(
@@ -75,7 +76,7 @@ public class BaseCrawlSeed implements CrawlSeed {
     return startUrls;
   }
 
-  public Collection<String> getPermissionUrls() throws ConfigurationException, PluginException{
+  public Collection<String> getPermissionUrls() throws ConfigurationException, PluginException, IOException{
     Collection<String> permUrls = au.getPermissionUrls();
     if (permUrls == null || permUrls.isEmpty()) {
       throw new PluginException.InvalidDefinition(

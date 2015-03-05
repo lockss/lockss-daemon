@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
+import java.io.IOException;
 import java.net.*;
 import java.util.*;
 
@@ -39,7 +40,6 @@ import org.lockss.app.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.UrlFetcher.FetchResult;
@@ -442,25 +442,40 @@ public abstract class BaseCrawler implements Crawler {
   }
 
   protected boolean populatePermissionMap() {
+    Collection<String> permissionUrls = null;
     try {
-      permissionMap = new PermissionMap(getCrawlerFacade(), getDaemonPermissionCheckers(),
-          au.makePermissionCheckers(), getCrawlSeed().getPermissionUrls());
-      String perHost = au.getPerHostPermissionPath();
-      if (perHost != null) {
-        try {
-          permissionMap.setPerHostPermissionPath(perHost);
-        } catch (MalformedURLException e) {
-          logger.error("Plugin error", e);
-        }
+      permissionUrls = getCrawlSeed().getPermissionUrls();
+    }
+    // FIXME Java 7
+    catch (ConfigurationException ce) {
+      logger.error("Could not compute permission URLs", ce);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+      return false;
+    }
+    catch (PluginException pe) {
+      logger.error("Could not compute permission URLs", pe);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+      return false;
+    }
+    catch (IOException ioe) {
+      logger.error("Could not compute permission URLs", ioe);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+      return false;
+    }
+
+    permissionMap = new PermissionMap(getCrawlerFacade(),
+                                      getDaemonPermissionCheckers(),
+                                      au.makePermissionCheckers(),
+                                      permissionUrls);
+    String perHost = au.getPerHostPermissionPath();
+    if (perHost != null) {
+      try {
+        permissionMap.setPerHostPermissionPath(perHost);
       }
-    } catch (ConfigurationException e) {
-      logger.error("Unable to start crawl due to invalid configuration" + e);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
-      return false;
-    } catch (PluginException e) {
-      logger.error("Unable to start crawl due to invalid plugin parameters" + e);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
-      return false;
+      catch (MalformedURLException mue) {
+        logger.error("Plugin error", mue);
+        // XXX we currently just go on, should we do something else?
+      }
     }
     return permissionMap.populate();
   }

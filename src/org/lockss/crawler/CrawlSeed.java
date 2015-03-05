@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import org.lockss.daemon.PluginException;
@@ -44,10 +45,10 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 public interface CrawlSeed {
 
   public Collection<String> getStartUrls() 
-      throws ConfigurationException, PluginException;
+      throws ConfigurationException, PluginException, IOException;
 
   public Collection<String> getPermissionUrls() 
-      throws ConfigurationException, PluginException;
+      throws ConfigurationException, PluginException, IOException;
 
   public boolean isFailOnStartUrlError();
 
