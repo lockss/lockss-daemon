@@ -93,7 +93,7 @@ public class TestOaiPmhCrawlSeed extends LockssTestCase {
       cs.getPermissionUrls();
       fail("null permission url list should have thrown");
     } catch(InvalidDefinition e) {
-      assertMatchesRE("non null permission url", e.getMessage());
+      assertMatchesRE("non-null permission URL list", e.getMessage());
     }
     
     mau.setPermissionUrls(ListUtils.EMPTY_LIST);
@@ -101,7 +101,7 @@ public class TestOaiPmhCrawlSeed extends LockssTestCase {
       cs.getPermissionUrls();
       fail("empty permission url list should have thrown");
     } catch(InvalidDefinition e) {
-      assertMatchesRE("non null permission url", e.getMessage());
+      assertMatchesRE("non-null permission URL list", e.getMessage());
     }
   }
   
