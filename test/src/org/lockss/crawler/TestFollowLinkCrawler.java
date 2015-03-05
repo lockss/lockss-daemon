@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
+
 import java.util.*;
 import java.io.*;
 
@@ -1282,7 +1283,8 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
     }
 
     @Override
-    protected void enqueueStartUrls() throws ConfigurationException, PluginException {
+    protected void enqueueStartUrls()
+        throws ConfigurationException, PluginException, IOException {
       super.enqueueStartUrls();
       if (nonStartUrlsToFollow != null) {
 	for (String url : nonStartUrlsToFollow) {

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -71,7 +71,7 @@ public class FetchedUrlData {
     this.fetcher = fetcher;
   }
   
-  public void setStoreRedirects(Boolean storeRedirects){
+  public void setStoreRedirects(boolean storeRedirects) {
     this.storeRedirects = storeRedirects;
   }
 

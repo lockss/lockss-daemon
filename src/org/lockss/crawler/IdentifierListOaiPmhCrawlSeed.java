@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,28 +32,22 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
+import java.io.IOException;
+import java.util.*;
 
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.util.Logger;
-import org.lockss.util.TypedEntryMap;
+import org.lockss.util.*;
 
 import com.lyncode.xoai.model.oaipmh.Header;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
 import com.lyncode.xoai.serviceprovider.parameters.ListIdentifiersParameters;
 
-public class IdentifierListOaiPmhCrawlSeed 
-    extends BaseOaiPmhCrawlSeed {
-  private static Logger logger = 
-      Logger.getLogger(IdentifierListOaiPmhCrawlSeed.class);
+public class IdentifierListOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed {
+  
+  private static final Logger log = Logger.getLogger(IdentifierListOaiPmhCrawlSeed.class);
+  
   public IdentifierListOaiPmhCrawlSeed (ArchivalUnit au) {
     super(au);
     if(au == null) {
@@ -64,9 +58,9 @@ public class IdentifierListOaiPmhCrawlSeed
     try {
       populateFromProps(props);
     } catch(ConfigurationException ex) {
-      logger.error("Error creating crawl seed", ex);
+      log.error("Error creating crawl seed", ex);
     } catch(PluginException ex) {
-      logger.error("Error creating crawl seed", ex);
+      log.error("Error creating crawl seed", ex);
     }
   }
   
@@ -155,7 +149,7 @@ public class IdentifierListOaiPmhCrawlSeed
    */
   @Override
   public Collection<String> getStartUrls() 
-      throws ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     return idsToUrls(getIdentifiersList(
         buildParams(from, until, set, metadataPrefix)));
   }

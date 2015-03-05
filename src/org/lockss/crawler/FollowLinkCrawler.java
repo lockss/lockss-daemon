@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,48 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.MalformedURLException;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 import java.util.Queue;
-import java.util.Set;
 
 import org.apache.commons.collections.map.LRUMap;
 import org.lockss.alert.Alert;
-import org.lockss.config.Configuration;
-import org.lockss.config.CurrentConfig;
+import org.lockss.config.*;
 import org.lockss.crawler.CrawlerStatus.ReferrerType;
-import org.lockss.daemon.Crawler;
-import org.lockss.daemon.PluginBehaviorException;
-import org.lockss.daemon.PluginException;
-import org.lockss.daemon.ShouldNotHappenException;
+import org.lockss.daemon.*;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.filter.FilterUtil;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.ContentValidationException;
-import org.lockss.plugin.UrlFetcher;
 import org.lockss.plugin.UrlFetcher.FetchResult;
 import org.lockss.plugin.base.PassiveUrlConsumerFactory;
-import org.lockss.state.AuState;
-import org.lockss.state.SubstanceChecker;
-import org.lockss.util.Constants;
-import org.lockss.util.FifoQueue;
-import org.lockss.util.HeaderUtil;
-import org.lockss.util.IOUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.PluginUtil;
-import org.lockss.util.StringUtil;
-import org.lockss.util.UrlUtil;
+import org.lockss.state.*;
+import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
 
 /**
@@ -295,25 +271,34 @@ public class FollowLinkCrawler extends BaseCrawler {
     // get the Urls to follow 
     try {
       enqueueStartUrls();
-    } catch (RuntimeException e) {
-      logger.warning("Unexpected exception, should have been caught lower", e);
+    }
+    catch (RuntimeException re) {
+      logger.warning("Unexpected exception, should have been caught lower", re);
       if (!crawlStatus.isCrawlError()) {
         crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
       }
       abortCrawl();
-    } catch (OutOfMemoryError e) {
+    }
+    catch (OutOfMemoryError oome) {
       // daemon may keep running after this, so make sure crawl doesn't
       // appear to be successful
       //logger.error("Crawl aborted", e);
       if (!crawlStatus.isCrawlError()) {
         crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
       }
-      throw e;
-    } catch (ConfigurationException e) {
-      logger.error("Unable to start crawl due to invalid configuration" + e);
+      throw oome;
+    }
+    // FIXME Java 7
+    catch (ConfigurationException ce) {
+      logger.error("Unable to compute start URLs", ce);
       abortCrawl();
-    } catch (PluginException e) {
-      logger.error("Unable to start crawl due to invalid plugin parameters" + e);
+    }
+    catch (PluginException pe) {
+      logger.error("Unable to compute start URLs", pe);
+      abortCrawl();
+    }
+    catch (IOException ioe) {
+      logger.error("Unable to compute start URLs", ioe);
       abortCrawl();
     }
 
@@ -445,7 +430,7 @@ public class FollowLinkCrawler extends BaseCrawler {
 
   // Overridable for testing
   protected void enqueueStartUrls() 
-      throws ConfigurationException, PluginException {
+      throws ConfigurationException, PluginException, IOException {
     for (String url : getCrawlSeed().getStartUrls()) {
       CrawlUrlData curl = newCrawlUrlData(url, 1);
       curl.setStartUrl(true);

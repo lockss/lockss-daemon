@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,15 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
-import java.util.TimeZone;
+import java.io.IOException;
+import java.text.*;
+import java.util.*;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
 
@@ -61,8 +58,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
     super(au);
   }
 
-  private static Logger logger = 
-      Logger.getLogger(BaseOaiPmhCrawlSeed.class);
+  private static final Logger log = Logger.getLogger(BaseOaiPmhCrawlSeed.class);
   
   public static final String DEFAULT_METADATA_PREFIX = "oai_dc";
   public static final String GRANULARITY_DAY = "YYYY-MM-DD";
@@ -167,6 +163,6 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   
   @Override
   public abstract Collection<String> getStartUrls() 
-      throws ConfigurationException, PluginException;
+      throws ConfigurationException, PluginException, IOException;
   
 }
