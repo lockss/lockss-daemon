@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
@@ -21,12 +21,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>    
-   <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
-  </entry>
  <!--  now out of sync with Atypon; must maintain own map -->  
   <entry>
     <string>plugin_feature_version_map</string>

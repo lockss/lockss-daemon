@@ -33,12 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.markallen;
 
 import java.io.InputStream;
-import java.util.regex.Pattern;
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.tags.Bullet;
-import org.htmlparser.tags.CompositeTag;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -47,10 +43,7 @@ import org.lockss.util.Logger;
 public class MarkAllenHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
   
-  Logger log = Logger.getLogger(MarkAllenHtmlHashFilterFactory.class);
-  
-  protected static final Pattern citedBy = Pattern.compile("Cited by", 
-                                                    Pattern.CASE_INSENSITIVE);
+  private static final Logger log = Logger.getLogger(MarkAllenHtmlHashFilterFactory.class);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -59,8 +52,6 @@ public class MarkAllenHtmlHashFilterFactory
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
         
-        // this is controversial - draconian; what about updated metadata
-        new TagNameFilter("head"),
         new TagNameFilter("noscript"),
 
         // from toc - institution banner
@@ -98,15 +89,7 @@ public class MarkAllenHtmlHashFilterFactory
                                               "literatumMostReadWidget"),
         // pageFooter
         HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
-        // <li> item has the text "Cited by" should be removed
-        // http://www.magonlinelibrary.com/doi/full/10.12968/bjnn.2014.10.1.13
-        new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            if (!(node instanceof Bullet)) return false;
-            String allText = ((CompositeTag)node).toPlainTextString();
-            return citedBy.matcher(allText).find();
-          }
-        },  
+ 
     };
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 

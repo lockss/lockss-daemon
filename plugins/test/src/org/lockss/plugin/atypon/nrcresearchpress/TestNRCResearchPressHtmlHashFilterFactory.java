@@ -234,12 +234,6 @@ public class TestNRCResearchPressHtmlHashFilterFactory extends LockssTestCase{
   
   private static final String resultingSanitizedFileHtml =
       "<html xmlns=\"http://www.w3.org/1999/xhtml\">" +
-          "<head>" +
-          "    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>" +
-          "    <title>Title </title>" +
-          "<meta name=\"robots\" content=\"noarchive,nofollow\" />" +
-          "<meta name=\"MSSmartTagsPreventParsing\" content=\"true\"/>" +
-          "</head>" +
           "<body >    <div class=\"leaderboard\">" +
           "</div>" +
           "     " +

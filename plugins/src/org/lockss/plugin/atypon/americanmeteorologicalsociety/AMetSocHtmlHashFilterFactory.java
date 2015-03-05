@@ -32,16 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.List;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
-import org.htmlparser.filters.*;
-import org.htmlparser.util.NodeList;
-import org.htmlparser.visitors.NodeVisitor;
-import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.StringFilter;
@@ -60,7 +54,7 @@ import org.lockss.util.ReaderInputStream;
  */
 public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
-  Logger log = Logger.getLogger(AMetSocHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(AMetSocHtmlHashFilterFactory.class);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,

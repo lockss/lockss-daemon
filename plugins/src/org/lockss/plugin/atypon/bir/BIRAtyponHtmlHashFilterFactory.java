@@ -33,12 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.bir;
 
 import java.io.InputStream;
-import java.util.regex.Pattern;
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.tags.Bullet;
-import org.htmlparser.tags.CompositeTag;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -49,8 +44,6 @@ public class BIRAtyponHtmlHashFilterFactory
 
   private static final Logger log = Logger.getLogger(BIRAtyponHtmlHashFilterFactory.class);
   
-  protected static final Pattern CITED_BY =
-      Pattern.compile("Cited by", Pattern.CASE_INSENSITIVE);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -59,8 +52,6 @@ public class BIRAtyponHtmlHashFilterFactory
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
 
-        // this is controversial - draconian; what about updated metadata
-        HtmlNodeFilters.tag("head"),
         HtmlNodeFilters.tag("noscript"),
         
         // toc - first top block ad
@@ -106,14 +97,7 @@ public class BIRAtyponHtmlHashFilterFactory
                 "div", "class", "literatumArticleToolsWidget"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "a", "href", "/action/showCitFormats\\?")),
-        // <li> item has the text "Cited by" should be removed 
-        new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            if (!(node instanceof Bullet)) return false;
-            String allText = ((CompositeTag)node).toPlainTextString();
-            return CITED_BY.matcher(allText).find();
-          }
-        },   
+ 
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 

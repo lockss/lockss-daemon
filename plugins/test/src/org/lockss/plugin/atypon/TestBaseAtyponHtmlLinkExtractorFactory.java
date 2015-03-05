@@ -241,7 +241,6 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
       "<br><strong>View larger image </strong>(64K)<br><br></a>";
     private static final String seg_doi =  "99.9999/gabc2013-0099.9";
     public void testSEGImages() throws Exception {
-
       Set<String> result_strings = parseSingleSource(segRefFull_input, "full", seg_doi);
       for (String url : result_strings) {
         log.debug3("segImages URL: " + url);
@@ -376,12 +375,45 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
             "</body>" +
             "</html>";
     
+    private static final String test_noLinks=
+
+        "<html><head><title>Test Title</title></head><body>" +
+    "<div class=\"holder\">" +
+    "<a title=\"Open Figure Viewer\" onclick=\"showFigures(this,event); return false;\" href=\"JavaScript:void(0);\" class=\"thumbnail\">" +
+    "</a>" +
+    "<a title=\"Open Figure Viewer\" onclick=\"showFigures(this,event); return false;\" class=\"foo\">" +
+    "</a>" +
+    "<a fooarg=\"fooval\"></a>" +
+    "</div></body></html>";
+    
+    private static final String test_nrc_links=
+        "<html><head><title>Test Title</title></head><body>" +
+        "<a href=\"/journal/gen\">" +
+            " <img class=\"pubCoverImg\" src=\"/na101/home/literatum/publisher/nrc/journals/covergifs/gen/cover.jpg\" alt=\"Genome\" />" +
+            "</a>" +
+            "<a class=\"ref aff\" href=\"javascript:popRef('aff1')\"><sup><i>a</i></sup></a>" +
+            "<a class=\"openLayerForItem\" itemid=\"tabX\" href=\"javascript:void(0);\">Table 1</a>" +
+            "<a class=\"ref openTablesLayer\" href=\"javascript:void(0);\" id=\"tabY\" doi=\"10.1139/g2012-037\">" +
+            "<img src=\"/templates/jsp/_style2/_nrc/images/dummy_table_thumb.gif\" width=\"150\" height=\"100\" " +
+            "align=\"bottom\" border=\"1\" alt=\"Data table\" /><p class=\"red-link-left\">&raquo;View table</p></a>" +
+            "<a name=\"f1\"><!--FIG--></a>" +
+            "<a doi=\"10.1111/test.doi\" id=\"f2\" class=\"red-link-left openFigLayer\"> " +
+            "<img src=\"/na101/home/literatum/publisher/nrc/journals/content/gen/2012/gen.2012.5507/g2012-037/production/images/small/g2012-037f1.gif\" " +
+            "align=\"bottom\" border=\"1\" alt=\"\" /><p>&raquo;View larger version</p></a>" +
+            "</div></body></html>";
+
+
+    public void testNoLinks() throws Exception {
+      Set<String> result_strings = parseSingleSource(test_noLinks, "full", null);
+
+      assertEquals(0, result_strings.size());
+      
+    }
+ 
     public void test1FigureLinks() throws Exception {
-      /* 
-       * the snippet of html used to set this up only establishes the small
-       * size for the first image. So it is correct that the other images, which
-       * come form the figureViewer only include medium and large
-       */
+       // the snippet of html used to set this up only establishes the small
+       // size for the first image. So it is correct that the other images, which
+       // come form the figureViewer only include medium and large
       expectedUrls = SetUtil.set(
           BASE_URL + test1_urlprefix + "/images/small/s3-g1.gif",
           BASE_URL + test1_urlprefix + "/images/medium/s3-g1.gif",
@@ -431,11 +463,45 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
         assertTrue(expectedUrls.contains(url));
       }
     }
+    
+    public void testNRCLinks() throws Exception {
+
+      expectedUrls = SetUtil.set(
+          // not yet doing the open "openLayerForItem\" 
+          //BASE_URL + "/action/showFullPopup?id=tabX&doi=",
+          // from the href= + image
+          BASE_URL + "na101/home/literatum/publisher/nrc/journals/covergifs/gen/cover.jpg",
+          BASE_URL + "journal/gen",
+          // from the popRef
+          BASE_URL + "action/showPopup?citid=citart1&id=aff1&doi=11.1111%2FTEST",
+          //from the openTablesLayer + img
+          BASE_URL + "action/showFullPopup?id=tabY&doi=10.1139%2Fg2012-037",          
+          BASE_URL + "templates/jsp/_style2/_nrc/images/dummy_table_thumb.gif",
+          // from the openFigLayer link + img 
+          BASE_URL + "action/showFullPopup?id=f2&doi=10.1111%2Ftest.doi",
+          BASE_URL + "na101/home/literatum/publisher/nrc/journals/content/gen/2012/gen.2012.5507/g2012-037/production/images/small/g2012-037f1.gif");
+      
+      Set<String> result_strings = parseSingleSource(test_nrc_links, "full", null);
+
+      log.debug3("in testNRCLinks");
+      if (log.isDebug3()) {
+        for (String url : result_strings) {
+          log.debug3("URL: " + url);
+        }
+      }
+      
+      assertEquals(7, result_strings.size());
+      // loop over the expected URLs and make sure each is in the result
+      for (String url : expectedUrls) {
+        log.debug3("expectedURL: " + url);
+        assertTrue(result_strings.contains(url));
+      }
+
+      
+    }
 
     
-    /*
-     * This test makes sure other base link extraction continues to work
-     */
+     //This test makes sure other base link extraction continues to work
      public void testfullHtml() throws Exception {
    
       Set<String> result_strings = parseSingleSource(fullHtml, "full", null);
@@ -453,10 +519,8 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
     }
     
      public void test3FigureLinks() throws Exception {
-       /* 
-        * Testing to make sure that the image extracgtor can handle spaces
-        * and newlines within the regexp section
-        */
+        //Testing to make sure that the image extracgtor can handle spaces
+        // and newlines within the regexp section
        expectedUrls = SetUtil.set(
            BASE_URL + test1_urlprefix + "/images/small/s3-g1.gif",
            BASE_URL + test1_urlprefix + "/images/medium/s3-g1.gif",
@@ -472,7 +536,6 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
        }
        
      }
-    
     
     // this is copied directory from the Jsoup test to make sure that our class extension
     // hasn't broken fallback behavior
@@ -492,7 +555,6 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
       assertEquals(SetUtil.set("http://www.example.com/xxx"),
           parseSingleSource(source, "full", null));
     }
-
 
   
   /*------------------SUPPORT FUNCTIONS --------------------- */

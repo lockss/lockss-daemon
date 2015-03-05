@@ -39,10 +39,12 @@ import java.io.Reader;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.Text;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.Bullet;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Span;
@@ -72,17 +74,22 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   // (?i) makes it case insensitive
   private static final String SIZE_REGEX = "PDF(\\s|-)?(Plus)?\\s?\\(\\s?[0-9]+";
   private static final Pattern SIZE_PATTERN = Pattern.compile(SIZE_REGEX, Pattern.CASE_INSENSITIVE);  
+  protected static final Pattern CITED_BY_PATTERN =
+      Pattern.compile("Cited by", Pattern.CASE_INSENSITIVE);
 
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     // 7/22/2013 starting to use a more aggressive hashing policy-
     // these are on both issue and article pages
     // leave only the content
-    HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+    HtmlNodeFilters.tag("head"),
     // filter out javascript
     new TagNameFilter("script"),
     //filter out comments
     HtmlNodeFilters.commentWithRegex(".*"),
+    
+    HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+
     // crossref to site library
     HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
     // stylesheets
@@ -94,6 +101,17 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // some size notes are within an identifying span
     // (see future science on an article page
     HtmlNodeFilters.tagWithAttribute("span", "class", "fileSize"),
+    
+    // A number of children add a link item "Cited By" only after the article
+    // has been cited...remove the entire list item - look for text pattern
+    new NodeFilter() {
+      @Override public boolean accept(Node node) {
+        if (!(node instanceof Bullet)) return false;
+        String allText = ((CompositeTag)node).toPlainTextString();
+        return CITED_BY_PATTERN.matcher(allText).find();
+      }
+    },
+    
   };
 
   HtmlTransform xform_spanID = new HtmlTransform() {

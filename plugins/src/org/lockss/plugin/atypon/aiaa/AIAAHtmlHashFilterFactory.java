@@ -54,8 +54,6 @@ import org.lockss.util.ReaderInputStream;
 
 public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
   
-  protected static final Pattern citedBy = Pattern.compile("Cited By", Pattern.CASE_INSENSITIVE);
-
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -77,22 +75,16 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // seems to be <option value="#citart1"..>
         HtmlNodeFilters.tagWithAttributeRegex("option", "value", "#citart"),
         
-        // When the <li> item has the text "Cited By" then it should be removed 
-        new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            if (!(node instanceof Bullet)) return false;
-            String allText = ((CompositeTag)node).toPlainTextString();
-            return citedBy.matcher(allText).find();
-          }
-        },
-        
     };
     // super.createFilteredInputStream adds aiaa filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters and then applies a white space filter
-    boolean doWS = true;
-    return super.createFilteredInputStream(au, in, encoding, afilters, doWS);
-
+    return super.createFilteredInputStream(au, in, encoding, afilters);
+  }
+  
+  @Override
+  public boolean doWSFiltering() {
+    return true;
   }
 
 }

@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,12 +21,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>26</string>
+    <string>29</string>
   </entry>  
-   <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
-  </entry>
   <entry>
     <string>au_name</string>
     <string>"SIAM Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>

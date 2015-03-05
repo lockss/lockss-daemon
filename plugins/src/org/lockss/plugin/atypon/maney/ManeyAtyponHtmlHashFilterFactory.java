@@ -34,7 +34,6 @@ package org.lockss.plugin.atypon.maney;
 
 import java.io.InputStream;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -51,10 +50,6 @@ public class ManeyAtyponHtmlHashFilterFactory
       String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
-        
-        // this is controversial - draconian; what about updated metadata
-        HtmlNodeFilters.tag("head"),
-        HtmlNodeFilters.tag("noscript"),
         
         // toc - pageHeader - top down to breadcrumbs, above journalHeader
         // http://www.maneyonline.com/toc/his/36/4

@@ -106,6 +106,7 @@ ArticleMetadataExtractorFactory {
   //  <atyponbase>.org/doi/ref/10.3366/drs.2011.0010  (page with references on it)
   //
   // note: at least one publisher has a doi suffix that includes a "/", eg:
+  // t&f,writing systems research - vol3, issue2 
   // <base>/doi/pdfplus/10.1093/wsr/wsr0023
   //
   //  There is the possibility of downloaded citation information which will get normalized to look something like this:

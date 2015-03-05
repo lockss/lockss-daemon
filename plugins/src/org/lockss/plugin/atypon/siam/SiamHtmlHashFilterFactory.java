@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,9 +66,13 @@ public class SiamHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     // super.createFilteredInputStream adds siamfilter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    boolean doWS = true; // do a white space filtering as well.
-    return super.createFilteredInputStream(au, in, encoding, siamfilter, doWS);
+    return super.createFilteredInputStream(au, in, encoding, siamfilter);
 
+  }
+  
+  @Override
+  public boolean doWSFiltering() {
+    return true;
   }
 }
 

@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -25,7 +25,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>19</string>
+        <string>20</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -39,12 +39,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>26</string>
+    <string>29</string>
   </entry>    
-   <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
-  </entry>
   <entry>
     <string>au_name</string>
     <string>"American Institute of Aeronautics and Astronautics Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>

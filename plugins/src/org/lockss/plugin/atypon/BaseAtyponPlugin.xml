@@ -17,9 +17,9 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
-   <entry>
+  <entry>
     <string>plugin_publishing_platform</string>
     <string>Atypon</string>
   </entry>
@@ -95,6 +95,8 @@
     - The following may not be needed by all Atypon publishers, but won't hurt:
     - exclude the article ending with a suffix that is now normalized off to handle previously collected
     - allow only downloadCitation format=ris and include=cit or abs in order to ignore previously collected mismatch
+    - allow the download of a figure (this is how ppt version of image comes down - 
+    - see http://www.nrcresearchpress.com/action/downloadFigures?doi=10.1139/p2012-099&id=f5
     - exclude a doi/<type>/<DOIprefix>/null?sequence=.... (taylor&francis)
     - exclude the popup image if the id is null (bioOneAtypon)        
     - some publishers show in-line images in larger format using URL with show*Image and variations for other formats
@@ -111,7 +113,8 @@
       <string>2,"^%sdoi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", base_url</string>  
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
       <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
-      <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string>          
+      <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
+      <string>1,"^%saction/downloadFigures\?doi=.+&amp;id=[^&amp;]+$", base_url</string>          
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
     </list>
   </entry>

@@ -65,6 +65,9 @@ implements LinkExtractorFactory {
       Logger.getLogger(BaseAtyponHtmlLinkExtractorFactory.class);
 
   private static final String HREF_NAME = "href";
+  private static final String CLASS_NAME = "class";
+  private static final String ID_NAME = "id";
+  private static final String DOI_NAME = "doi";
   private static final String LINK_TAG = "a";
   private static final String SCRIPT_TAG = "script";
   //Identify a URL as being one for a full text html version of the article
@@ -156,6 +159,12 @@ implements LinkExtractorFactory {
    *  additional or alternate extractors 
    */
   protected void registerExtractors(JsoupHtmlLinkExtractor extractor) {
+    // this is a little inefficient because the link extractor may get called TWICE
+    // if there is BOTH an href and a class attribute on the link tag
+    // but we can't guarantee that we'll have both so we need to ensure we catch link
+
+    // the super will still only use href (which is default)
+    // but this extractor tagBegin will get called for ALL link tags and we can check other attrs there 
     extractor.registerTagExtractor(LINK_TAG, createLinkTagExtractor(HREF_NAME));
     extractor.registerTagExtractor(SCRIPT_TAG, createScriptTagExtractor());
   }
@@ -206,6 +215,7 @@ implements LinkExtractorFactory {
    *     LINK_TAG ("<a href=>")
    *         javascript:popRef
    *         javascript:popRefFull
+   *     LINK_TAG ("<a class="... openFigLayer" or class="...openTablesLayer"...>
    *  fails over to the SimpleTagLinkExtractor super class           
    * 
    */
@@ -220,6 +230,8 @@ implements LinkExtractorFactory {
      */
     protected static final Pattern POPREF_PATTERN = Pattern.compile(
         "javascript:popRef(Full)?\\([\"']([^\"']+)[\"']\\)", Pattern.CASE_INSENSITIVE);
+    protected static final Pattern OPEN_CLASS_PATTERN = Pattern.compile(
+        "(openFigLayer|openTablesLayer)$", Pattern.CASE_INSENSITIVE);
 
     // define pieces used in the resulting URL
     private static final String ACTION_SHOWPOP = "/action/showPopup?citid=citart1&id=";
@@ -237,21 +249,58 @@ implements LinkExtractorFactory {
      *    ==> BASE/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3
      *  for <a class="ref" href="javascript:popRefFull('i1520-0469-66-1-187-f03')">
      *    ==> BASE/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1
+     *    
+     *  handle <a> tag with openFigLayer or openTablesLayer which otherwise
+     *  uses AJAX to generate a magnifier overlay for image viewing and 
+     *  ultimately showFullPopup for the each image or table. 
+     *  Catch the call and create the showFullPopup using the doi arg and the id arg.
+     *  examples from NRC: 
+     * <a doi="10.1139/g2012-037" id="f1" class="red-link-left openFigLayer">
+     * <a class="ref openTablesLayer" href="javascript:void(0);" id="tab3" doi="10.1139/g2012-037">   
+     *  href could be there or could be set to "javascript:void(0)...unused
+     *  
+     *  this could also be made handle the following because the doi comes from the url
+     *  is it necessary to do so?? 
+     * <a class="openLayerForItem" itemid="f3" href="javascript:void(0);">
      */
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
       String srcUrl = node.baseUri();
       Matcher fullArticleMat = PATTERN_FULL_ARTICLE_URL.matcher(srcUrl);
+
       // Are we a page for which this would be pertinent?
       if ( (srcUrl != null) && fullArticleMat.matches()) {
         // build up a DOI value with html encoding of the slash"
         String base_url = fullArticleMat.group(1);
         String doiVal = fullArticleMat.group(2) + "%2F" + fullArticleMat.group(3);
-        /*
-         * For now this is only called for LINK tags with href set
-         * <a href="...">
-         * But put in check so it can expand as needed
-         */
+
+        // This is currently redundant because we only come here on link tags
+        // but it might get extended to other tags later.
         if (LINK_TAG.equals(node.nodeName())) {
+          // 1. are we an openFigLayer or openTablesLayer link?
+          String classAttr = node.attr(CLASS_NAME);
+          if (!StringUtil.isNullString(classAttr)) {
+            Matcher classMat = null;
+            classMat = OPEN_CLASS_PATTERN.matcher(classAttr);
+            if (classMat.find()) {
+              String idAttr = node.attr(ID_NAME);
+              if (!StringUtil.isNullString(idAttr)) {
+                // we can only proceed if we have an id
+                String doiAttr = node.attr(DOI_NAME); 
+                // we can guess at the id from our current URL if this isn't there
+                if (!StringUtil.isNullString(doiAttr)) {
+                  // use this one, not the one from the URL
+                  doiVal = StringUtil.replaceString(doiAttr, "/", "%2F");
+                }
+                // we have an id and a doi, generate the link
+                String newUrl = base_url + ACTION_SHOWFULL + idAttr + DOI_ARG + doiVal;
+                log.debug3("new URL: " + newUrl);
+                cb.foundLink(newUrl);
+                // if it was this, no need to do anything further with this link
+                return;
+              }
+            }
+          } 
+          // 2. Fall through - it wasn't an openFigLayer or openTablesLayer - is it href with popref pattern?
           String href = node.attr(HREF_NAME);
           if (StringUtil.isNullString(href)) {
             //this is not the href you seek
@@ -278,13 +327,12 @@ implements LinkExtractorFactory {
             // if it was a popRef, no other link extraction needed
             return;
           }
-        }
-      }
+        } // end of check for if we are on a link tag
+      } // end of check for full text html page
       // we didn't handle it, fall back to parent 
       super.tagBegin(node, au, cb);
     }
   }
-
 
   /*
    * BaseAtypon script tag extractor

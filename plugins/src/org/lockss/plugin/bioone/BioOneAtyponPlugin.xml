@@ -1,23 +1,19 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bioone.BioOneAtyponPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
-  </entry>  
+  </entry> 
   <entry>
     <string>plugin_name</string>
     <string>BioOne Plugin (Atypon Systems Platform)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,7 +39,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>27</string>
+    <string>29</string>
   </entry>   
   <entry>
     <string>au_name</string>

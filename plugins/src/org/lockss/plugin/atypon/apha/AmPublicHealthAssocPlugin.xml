@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,12 +21,8 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>26</string>
-  </entry>
- <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
-  </entry>  
+    <string>29</string>
+  </entry> 
   <entry>
     <string>au_name</string>
     <string>"American Journal of Public Health Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
