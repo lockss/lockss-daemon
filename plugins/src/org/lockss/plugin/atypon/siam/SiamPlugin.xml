@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>SIAM Plugin</string>
+    <string>Society for Industrial and Applied Mathematics Plugin (Atypon)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -25,7 +25,7 @@
   </entry>  
   <entry>
     <string>au_name</string>
-    <string>"SIAM Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Society for Industrial and Applied Mathematics Plugin (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
