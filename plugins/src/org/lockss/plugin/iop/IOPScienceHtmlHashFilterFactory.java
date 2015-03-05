@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -97,7 +97,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         // Contains a jsessionid
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
         
-        // <div class="sideTabBar">
+        // <div class="sideTabBar"> & <div id="sideTabBox">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "sideTab(Bar|Box)"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sideTab(Bar|Box)"),
         // <p class="viewingLinks">
         HtmlNodeFilters.tagWithAttributeRegex("p", "class", "viewingLinks"),

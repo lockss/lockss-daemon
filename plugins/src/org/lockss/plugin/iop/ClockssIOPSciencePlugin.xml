@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>19</string>
+        <string>20</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.64.0</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -103,7 +103,7 @@
       <string>1,"^https?://%s/fonts/", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s.*;jsessionid=", base_url</string>
-      <string>2,"^%s%s/%s/[^/]+/[^/]+/(article\?|refs/[^/]+/)", base_url, journal_issn, volume_name</string>
+      <string>2,"^%s%s/%s/[^/]+/[^/]+/(article\?|powerpoint/|refs/[^/]+/)", base_url, journal_issn, volume_name</string>
       <string>2,"^%s%s/%s/[^/]+/[^/]+/(cites|related|metrics)$", base_url, journal_issn, volume_name</string>
       <string>1,"^%s%s/%s(/|$)", base_url, journal_issn, volume_name</string>
     </list>
@@ -168,5 +168,10 @@
     <!-- manifest to volume to issue -->
     <string>au_refetch_depth</string>
     <int>2</int>
+  </entry>
+  <entry>
+    <!-- We do not poll for download figures -->
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>/download(HR)?Figure/figure/</string>
   </entry>
 </map>
