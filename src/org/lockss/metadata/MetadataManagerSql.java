@@ -139,8 +139,8 @@ public class MetadataManagerSql {
       + " where " + PLUGIN_ID_COLUMN + " = ?"
       + " and " + AU_KEY_COLUMN + " = ?";
 
-  // Query to delete metadata items by Archival Unit key and plugin identifier.
-  private static final String DELETE_MD_ITEM_QUERY = "delete from "
+  // Query to delete the metadata items of an Archival Unit.
+  private static final String DELETE_AU_MD_ITEM_QUERY = "delete from "
       + MD_ITEM_TABLE
       + " where "
       + AU_MD_SEQ_COLUMN + " = ?";
@@ -599,6 +599,14 @@ public class MetadataManagerSql {
       + " from " + UNCONFIGURED_AU_TABLE
       + " where " + PLUGIN_ID_COLUMN + " = ?"
       + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to delete an Archival Unit child metadata item.
+  private static final String DELETE_AU_CHILD_MD_ITEM_QUERY = "delete from "
+      + MD_ITEM_TABLE
+      + " where "
+      + AU_MD_SEQ_COLUMN + " = ?"
+      + " and " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + PARENT_SEQ_COLUMN + " is not null";
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -1074,8 +1082,8 @@ public class MetadataManagerSql {
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
 
     if (auMdSeq != null) {
-      PreparedStatement deleteMetadataItems = dbManager.prepareStatement(conn,
-	  DELETE_MD_ITEM_QUERY);
+      PreparedStatement deleteMetadataItems =
+	  dbManager.prepareStatement(conn, DELETE_AU_MD_ITEM_QUERY);
 
       try {
 	deleteMetadataItems.setLong(1, auMdSeq);
@@ -1084,7 +1092,7 @@ public class MetadataManagerSql {
 	String message = "Cannot delete AU metadata items";
 	log.error(message, sqle);
 	log.error("auId = " + auId);
-	log.error("SQL = '" + DELETE_MD_ITEM_QUERY + "'.");
+	log.error("SQL = '" + DELETE_AU_MD_ITEM_QUERY + "'.");
 	log.error("auMdSeq = " + auMdSeq);
 	throw new DbException(message, sqle);
       } finally {
@@ -3968,5 +3976,52 @@ public class MetadataManagerSql {
     boolean result = rowCount > 0;
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
+  }
+
+  /**
+   * Removes an Archival Unit child metadata item from the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auMdSeq
+   *          A Long with the identifier of the Archival Unit metadata.
+   * @param mdItemSeq
+   *          A Long with the metadata identifier.
+   * @return an int with the number of metadata items deleted.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  int removeAuChildMetadataItem(Connection conn, Long auMdSeq, Long mdItemSeq)
+      throws DbException {
+    final String DEBUG_HEADER = "removeAuChildMetadataItem(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    }
+
+    int count = 0;
+
+    // Do nothing if any of the parameters are null.
+    if (auMdSeq != null && mdItemSeq != null) {
+      PreparedStatement deleteMetadataItem =
+	  dbManager.prepareStatement(conn, DELETE_AU_CHILD_MD_ITEM_QUERY);
+
+      try {
+	deleteMetadataItem.setLong(1, auMdSeq);
+	deleteMetadataItem.setLong(2, mdItemSeq);
+	count = dbManager.executeUpdate(deleteMetadataItem);
+      } catch (SQLException sqle) {
+	String message = "Cannot delete child metadata item";
+	log.error(message, sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("SQL = '" + DELETE_AU_CHILD_MD_ITEM_QUERY + "'.");
+	throw new DbException(message, sqle);
+      } finally {
+	DbManager.safeCloseStatement(deleteMetadataItem);
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
   }
 }

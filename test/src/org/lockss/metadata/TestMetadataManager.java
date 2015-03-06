@@ -211,12 +211,13 @@ public class TestMetadataManager extends LockssTestCase {
     runTestPendingAu();
     runTestPendingAusBatch();
     runModifyMetadataTest();
-    runDeleteMetadataTest();
+    runDeleteAuMetadataTest();
     runTestPriorityPatterns();
     runTestDisabledIndexingAu();
     runTestFailedIndexingAu();
     runTestFindPublication();
     runTestGetIndexTypeDisplayString();
+    runRemoveChildMetadataItemTest();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -618,7 +619,7 @@ public class TestMetadataManager extends LockssTestCase {
     DbManager.safeRollbackAndClose(con);
   }
   
-  private void runDeleteMetadataTest() throws Exception {
+  private void runDeleteAuMetadataTest() throws Exception {
     Connection con = dbManager.getConnection();
     
     // check unique plugin IDs
@@ -1354,6 +1355,57 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(FULL_REINDEX_TEXT, mmsa.getIndexTypeDisplayString(pAuId));
     pAuId.isNew = true;
     assertEquals(NEW_INDEX_TEXT, mmsa.getIndexTypeDisplayString(pAuId));
+  }
+  
+  private void runRemoveChildMetadataItemTest() throws Exception {
+    Connection conn = dbManager.getConnection();
+    
+    // Get the existing AU child metadata items.
+    String query = "select " + AU_MD_SEQ_COLUMN + "," + MD_ITEM_SEQ_COLUMN
+	+ " from " + MD_ITEM_TABLE
+        + " where " + PARENT_SEQ_COLUMN + " is not null"
+        + " and " + AU_MD_SEQ_COLUMN + " is not null"
+        + " and " + MD_ITEM_SEQ_COLUMN + " is not null";
+
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
+    Map<Long, Long> results = new HashMap<Long, Long>();
+
+    while (resultSet.next()) {
+      results.put(resultSet.getLong(2), resultSet.getLong(1));
+    }
+
+    assertEquals(84, results.size());
+
+    // Delete them one by one.
+    for (Long mdItemSeq : results.keySet()) {
+      assertEquals(1, metadataManagerSql.removeAuChildMetadataItem(conn,
+	  results.get(mdItemSeq), mdItemSeq));
+    }
+
+    assertFalse(dbManager.executeQuery(stmt).next());
+    
+    // Get the all the remaining metadata items.
+    query = "select " + AU_MD_SEQ_COLUMN + "," + MD_ITEM_SEQ_COLUMN
+	+ " from " + MD_ITEM_TABLE;
+
+    stmt = dbManager.prepareStatement(conn, query);
+    resultSet = dbManager.executeQuery(stmt);
+    results = new HashMap<Long, Long>();
+
+    while (resultSet.next()) {
+      results.put(resultSet.getLong(2), resultSet.getLong(1));
+    }
+
+    assertEquals(4, results.size());
+
+    // Fail to delete them because they are not children of an AU.
+    for (Long mdItemSeq : results.keySet()) {
+      assertEquals(0, metadataManagerSql.removeAuChildMetadataItem(conn,
+	  results.get(mdItemSeq), mdItemSeq));
+    }
+
+    DbManager.safeRollbackAndClose(conn);
   }
 
   public static class MySubTreeArticleIteratorFactory

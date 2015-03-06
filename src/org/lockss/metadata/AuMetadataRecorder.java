@@ -111,12 +111,6 @@ public class AuMetadataRecorder {
       + " from " + AU_MD_TABLE
       + " where " + AU_SEQ_COLUMN + " = ?";
 
-  // Query to find the DOIs of a metadata item.
-  private static final String FIND_MD_ITEM_DOI_QUERY = "select "
-      + DOI_COLUMN
-      + " from " + DOI_TABLE
-      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
-
   // Query to add a bibliographic item.
   private static final String INSERT_BIB_ITEM_QUERY = "insert into "
       + BIB_ITEM_TABLE
@@ -127,16 +121,6 @@ public class AuMetadataRecorder {
       + "," + END_PAGE_COLUMN
       + "," + ITEM_NO_COLUMN
       + ") values (?,?,?,?,?,?)";
-
-  // Query to update a bibliographic item.
-  private static final String UPDATE_BIB_ITEM_QUERY = "update "
-      + BIB_ITEM_TABLE
-      + " set " + VOLUME_COLUMN + " = ?"
-      + "," + ISSUE_COLUMN + " = ?"
-      + "," + START_PAGE_COLUMN + " = ?"
-      + "," + END_PAGE_COLUMN + " = ?"
-      + "," + ITEM_NO_COLUMN + " = ?"
-      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
   // Query to find a metadata item by its type, Archival Unit and access URL.
   private static final String FIND_MD_ITEM_QUERY = "select "
@@ -1009,8 +993,8 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "updated AU.");
     }
 
-    // Update or create the metadata item.
-    updateOrCreateMdItem(conn, mdinfo);
+    // Replace or create the metadata item.
+    replaceOrCreateMdItem(conn, mdinfo);
 
     log.debug3(DEBUG_HEADER + "Done.");
   }
@@ -1265,7 +1249,7 @@ public class AuMetadataRecorder {
   }
 
   /**
-   * Updates a metadata item if it exists in the database, otherwise it creates
+   * Replaces a metadata item if it exists in the database, otherwise it creates
    * it.
    * 
    * @param conn
@@ -1275,49 +1259,50 @@ public class AuMetadataRecorder {
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void updateOrCreateMdItem(Connection conn, ArticleMetadataInfo mdinfo)
-      throws DbException {
-    final String DEBUG_HEADER = "updateOrCreateMdItem(): ";
+  private void replaceOrCreateMdItem(Connection conn,
+      ArticleMetadataInfo mdinfo) throws DbException {
+    final String DEBUG_HEADER = "replaceOrCreateMdItem(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Get the publication date received in the metadata.
     String date = mdinfo.pubDate;
-    log.debug3(DEBUG_HEADER + "date = " + date);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
 
     // Get the issue received in the metadata.
     String issue = mdinfo.issue;
-    log.debug3(DEBUG_HEADER + "issue = " + issue);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issue = " + issue);
 
     // Get the start page received in the metadata.
     String startPage = mdinfo.startPage;
-    log.debug3(DEBUG_HEADER + "startPage = " + startPage);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "startPage = " + startPage);
 
     // Get the end page received in the metadata.
     String endPage = mdinfo.endPage;
-    log.debug3(DEBUG_HEADER + "endPage = " + endPage);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "endPage = " + endPage);
 
     // Get the item number received in the metadata.
     String itemNo = mdinfo.itemNumber;
-    log.debug3(DEBUG_HEADER + "itemNo = " + itemNo);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "itemNo = " + itemNo);
 
     // Get the item title received in the metadata.
     String itemTitle = mdinfo.articleTitle;
-    log.debug3(DEBUG_HEADER + "itemTitle = " + itemTitle);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "itemTitle = " + itemTitle);
 
     // Get the coverage received in the metadata.
     String coverage = mdinfo.coverage;
-    log.debug3(DEBUG_HEADER + "coverage = " + coverage);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "coverage = " + coverage);
 
     // Get the DOI received in the metadata.
     String doi = mdinfo.doi;
-    log.debug3(DEBUG_HEADER + "doi = " + doi);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "doi = " + doi);
 
     // Get the featured URLs received in the metadata.
     Map<String, String> featuredUrlMap = mdinfo.featuredUrlMap;
 
     if (log.isDebug3()) {
       for (String feature : featuredUrlMap.keySet()) {
-	log.debug3(DEBUG_HEADER + "feature = " + feature + ", URL = "
-	    + featuredUrlMap.get(feature));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "feature = " + feature
+	    + ", URL = " + featuredUrlMap.get(feature));
       }
     }
 
@@ -1335,7 +1320,7 @@ public class AuMetadataRecorder {
 
     // Get the access URL received in the metadata.
     String accessUrl = mdinfo.accessUrl;
-    log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
 
     // Determine what type of a metadata item it is.
     String mdItemType = mdinfo.articleType;
@@ -1346,11 +1331,12 @@ public class AuMetadataRecorder {
       return;
     }
     
-    log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
 
     // Find the metadata item type record sequence.
     Long mdItemTypeSeq = mdManager.findMetadataItemType(conn, mdItemType);
-    log.debug3(DEBUG_HEADER + "mdItemTypeSeq = " + mdItemTypeSeq);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "mdItemTypeSeq = " + mdItemTypeSeq);
 
     // sanity check -- type should be known in database
     if (mdItemTypeSeq == null) {
@@ -1359,96 +1345,65 @@ public class AuMetadataRecorder {
     }
     
     Long mdItemSeq = null;
-    boolean newMdItem = false;
 
-    // Check whether it is a metadata item for a new Archival Unit.
-    if (newAu) {
-      // Yes: Create the new metadata item in the database.
-      mdItemSeq = mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
-	  date, coverage, fetchTime);
-      log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
-
-      mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
-
-      newMdItem = true;
-    } else {
-      // No: Find the metadata item in the database.
+    // Check whether it is a metadata item for an existing Archival Unit.
+    if (!newAu) {
+      // Yes: Find the metadata item in the database.
       mdItemSeq = findMdItem(conn, mdItemTypeSeq, auMdSeq, accessUrl);
-      log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
-      // Check whether it is a new metadata item.
-      if (mdItemSeq == null) {
-	// Yes: Create it.
-	mdItemSeq = mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-	    auMdSeq, date, coverage, fetchTime);
-	log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
-
-	mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
-
-	newMdItem = true;
+      // Check whether it is an existing metadata item.
+      if (mdItemSeq != null) {
+	// Yes: Delete it.
+	int deletedCount =
+	    mdManagerSql.removeAuChildMetadataItem(conn, auMdSeq, mdItemSeq);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "deletedCount = " + deletedCount);
       }
     }
 
-    log.debug3(DEBUG_HEADER + "newMdItem = " + newMdItem);
+    // Create the new metadata item in the database.
+    mdItemSeq = mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
+	  date, coverage, fetchTime);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
+
+    mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
 
     // Get the volume received in the metadata.
     String volume = mdinfo.volume;
-    log.debug3(DEBUG_HEADER + "volume = " + volume);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "volume = " + volume);
+
+    // Add the bibliographic data.
+    int addedCount =
+	addBibItem(conn, mdItemSeq, volume, issue, startPage, endPage, itemNo);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "addedCount = " + addedCount);
+
+    // Add the item URLs.
+    mdManager.addMdItemUrls(conn, mdItemSeq, accessUrl, featuredUrlMap);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added AUItem URL.");
 
     // Get the authors received in the metadata.
     Collection<String> authors = mdinfo.authors;
-    log.debug3(DEBUG_HEADER + "authors = " + authors);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "authors = " + authors);
+
+    // Add the item authors.
+    mdManagerSql.addMdItemAuthors(conn, mdItemSeq, authors);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added AUItem authors.");
 
     // Get the keywords received in the metadata.
     Collection<String> keywords = mdinfo.keywords;
-    log.debug3(DEBUG_HEADER + "keywords = " + keywords);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "keywords = " + keywords);
 
-    // Check whether it is a new metadata item.
-    if (newMdItem) {
-      // Yes: Add the bibliographic data.
-      int addedCount =
-  	addBibItem(conn, mdItemSeq, volume, issue, startPage, endPage, itemNo);
-      log.debug3(DEBUG_HEADER + "addedCount = " + addedCount);
+    // Add the item keywords.
+    mdManagerSql.addMdItemKeywords(conn, mdItemSeq, keywords);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added AUItem keywords.");
 
-      // Add the item URLs.
-      mdManager.addMdItemUrls(conn, mdItemSeq, accessUrl, featuredUrlMap);
-      log.debug3(DEBUG_HEADER + "added AUItem URL.");
+    // Add the item DOI.
+    mdManager.addMdItemDoi(conn, mdItemSeq, doi);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added AUItem DOI.");
 
-      // Add the item authors.
-      mdManagerSql.addMdItemAuthors(conn, mdItemSeq, authors);
-      log.debug3(DEBUG_HEADER + "added AUItem authors.");
-
-      // Add the item keywords.
-      mdManagerSql.addMdItemKeywords(conn, mdItemSeq, keywords);
-      log.debug3(DEBUG_HEADER + "added AUItem keywords.");
-
-      // Add the item DOI.
-      mdManager.addMdItemDoi(conn, mdItemSeq, doi);
-      log.debug3(DEBUG_HEADER + "added AUItem DOI.");
-    } else {
-      // No: Since the record exists, only add the properties that are new.
-      int updatedCount = updateBibItem(conn, mdItemSeq, volume, issue,
-	  startPage, endPage, itemNo);
-      log.debug3(DEBUG_HEADER + "updatedCount = " + updatedCount);
-
-      // Add the item new URLs.
-      mdManager.addNewMdItemUrls(conn, mdItemSeq, accessUrl, featuredUrlMap);
-      log.debug3(DEBUG_HEADER + "added AUItem URL.");
-
-      // Add the item new authors.
-      mdManager.addNewMdItemAuthors(conn, mdItemSeq, authors);
-      log.debug3(DEBUG_HEADER + "updated AUItem authors.");
-
-      // Add the item new keywords.
-      mdManager.addNewMdItemKeywords(conn, mdItemSeq, keywords);
-      log.debug3(DEBUG_HEADER + "updated AUItem keywords.");
-
-      // Update the item DOI.
-      updateMdItemDoi(conn, mdItemSeq, doi);
-      log.debug3(DEBUG_HEADER + "updated AUItem DOI.");
-    }
-
-    log.debug3(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -1526,96 +1481,6 @@ public class AuMetadataRecorder {
 
     log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
     return auMdSeq;
-  }
-
-  /**
-   * Updates the DOI of a metadata item in the database.
-   * 
-   * @param conn
-   *          A Connection with the connection to the database
-   * @param mdItemSeq
-   *          A Long with the metadata item identifier.
-   * @param doi
-   *          A String with the metadata item DOI.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private void updateMdItemDoi(Connection conn, Long mdItemSeq, String doi)
-      throws DbException {
-    if (StringUtil.isNullString(doi)) {
-      return;
-    }
-
-    try {
-      PreparedStatement findMdItemDoi = dbManager.prepareStatement(conn,
-	  FIND_MD_ITEM_DOI_QUERY);
-
-      ResultSet resultSet = null;
-
-      try {
-	findMdItemDoi.setLong(1, mdItemSeq);
-	resultSet = dbManager.executeQuery(findMdItemDoi);
-
-	if (!resultSet.next()) {
-	  mdManager.addMdItemDoi(conn, mdItemSeq, doi);
-	}
-      } finally {
-	DbManager.safeCloseResultSet(resultSet);
-	findMdItemDoi.close();
-      }
-    } catch (SQLException sqle) {
-      throw new DbException("Cannot update AU metadata version", sqle);
-    }
-  }
-
-  /**
-   * Updates a bibliographic item.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param mdItemSeq
-   *          A Long with the metadata item identifier.
-   * @param volume
-   *          A String with the bibliographic volume.
-   * @param issue
-   *          A String with the bibliographic issue.
-   * @param startPage
-   *          A String with the bibliographic starting page.
-   * @param endPage
-   *          A String with the bibliographic ending page.
-   * @param itemNo
-   *          A String with the bibliographic item number.
-   * @return an int with the number of database rows updated.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private int updateBibItem(Connection conn, Long mdItemSeq, String volume,
-      String issue, String startPage, String endPage, String itemNo)
-      throws DbException {
-    final String DEBUG_HEADER = "updateBibItem(): ";
-    int updatedCount = 0;
-
-    try {
-      PreparedStatement updateBibItem = dbManager.prepareStatement(conn,
-	  UPDATE_BIB_ITEM_QUERY);
-
-      try {
-	updateBibItem.setString(1, volume);
-	updateBibItem.setString(2, issue);
-	updateBibItem.setString(3, startPage);
-	updateBibItem.setString(4, endPage);
-	updateBibItem.setString(5, itemNo);
-	updateBibItem.setLong(6, mdItemSeq);
-	updatedCount = dbManager.executeUpdate(updateBibItem);
-      } finally {
-	DbManager.safeCloseStatement(updateBibItem);
-      }
-    } catch (SQLException sqle) {
-      throw new DbException("Cannot update bibliographic item", sqle);
-    }
-
-    log.debug3(DEBUG_HEADER + "updatedCount = " + updatedCount);
-    return updatedCount;
   }
 
   /**

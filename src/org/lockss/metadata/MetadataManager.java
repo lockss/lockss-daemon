@@ -3207,33 +3207,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param mdItemSeq
    *          A Long with the metadata item identifier.
-   * @param accessUrl
-   *          A String with the access URL to be added.
-   * @param featuredUrlMap
-   *          A Map<String, String> with the URL/feature pairs to be added.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  void addNewMdItemUrls(Connection conn, Long mdItemSeq, String accessUrl,
-      Map<String, String> featuredUrlMap) throws DbException {
-    if (StringUtil.isNullString(accessUrl) && featuredUrlMap.size() == 0) {
-      return;
-    }
-
-    // Initialize the collection of URLs to be added.
-    Map<String, String> newUrls = new HashMap<String, String>(featuredUrlMap);
-    newUrls.put(ACCESS_URL_FEATURE, accessUrl);
-
-    addNewMdItemUrls(conn, mdItemSeq, newUrls);
-  }
-
-  /**
-   * Adds to the database the URLs of a metadata item, if they are new.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param mdItemSeq
-   *          A Long with the metadata item identifier.
    * @param featuredUrlMap
    *          A Map<String, String> with the URL/feature pairs to be added.
    * @throws DbException
@@ -3280,7 +3253,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void addNewMdItemAuthors(Connection conn, Long mdItemSeq,
+  private void addNewMdItemAuthors(Connection conn, Long mdItemSeq,
       Collection<String> authors) throws DbException {
     if (authors == null || authors.size() == 0) {
       return;
@@ -3312,7 +3285,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void addNewMdItemKeywords(Connection conn, Long mdItemSeq,
+  private void addNewMdItemKeywords(Connection conn, Long mdItemSeq,
       Collection<String> keywords) throws DbException {
     if (keywords == null || keywords.size() == 0) {
       return;
