@@ -73,7 +73,10 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
       
       tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
+      // 3/6/15 - remove cooking the dc.publisher as FIELD_PUBLISHER
+      // the value tends to be variable and a better result will 
+      // come from the TDB file if this isn't set
+      //tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
       
       tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
       tagMap.put("dc.Subject", 
