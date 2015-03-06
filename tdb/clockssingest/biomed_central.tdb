@@ -250,7 +250,7 @@
       au < finished ; crawling ; 2011 ; BMC Cancer Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Cancer Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Cancer Volume 13 ; 13 >
-      au < testing ; exists ; 2014 ; BMC Cancer Volume 14 ; 14 >
+      au < ready ; exists ; 2014 ; BMC Cancer Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Cancer Volume 15 ; 15 >
 
     }
@@ -1923,7 +1923,7 @@
       param[journal_issn] = 2051-5960
 
       au < crawling ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
-      au < testing ; exists ; 2014 ; Acta Neuropathologica Communications Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; Acta Neuropathologica Communications Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Acta Neuropathologica Communications Volume 3 ; 3 >
 
     }
@@ -1952,7 +1952,7 @@
       au < finished ; crawling ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
       au < finished ; crawling ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       au < crawling ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
-      au < testing ; exists ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
+      au < ready ; exists ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
       au < expected ; exists ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
       
     }
@@ -1970,7 +1970,7 @@
 
       au < finished ; crawling ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 >
-      au < testing ; exists ; 2014 ; Addiction Science & Clinical Practice Volume 9 ; 9 >
+      au < ready ; exists ; 2014 ; Addiction Science & Clinical Practice Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Addiction Science & Clinical Practice Volume 10 ; 10 >
 
     }
@@ -1988,7 +1988,7 @@
 
       au < finished ; crawling ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
-      au < testing ; exists ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
+      au < ready ; exists ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Agriculture & Food Security Volume 4 ; 4 >
 
     }
@@ -2015,7 +2015,7 @@
       au < finished ; crawling ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < finished ; crawling ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
-      au < testing ; exists ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
+      au < ready ; exists ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
       au < expected ; exists ; 2015 ; AIDS Research and Therapy Volume 12 ; 12 >
 
     }
@@ -2040,7 +2040,7 @@
       au < finished ; crawling ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < finished ; crawling ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 >
-      au < testing ; exists ; 2014 ; Algorithms for Molecular Biology Volume 9 ; 9 >
+      au < ready ; exists ; 2014 ; Algorithms for Molecular Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Algorithms for Molecular Biology Volume 10 ; 10 >
 
     }
@@ -2064,7 +2064,7 @@
       au < finished ; crawling ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
       au < finished ; crawling ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
-      au < testing ; exists ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 >
+      au < ready ; exists ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Allergy, Asthma & Clinical Immunology Volume 11 ; 11 >
 
     }
