@@ -7810,7 +7810,7 @@
     au < manifest ; exists ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Thermodynamics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7829,7 +7829,7 @@
     au < manifest ; exists ; 2011 ; Journal of Thyroid Research Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Thyroid Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Thyroid Research Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Thyroid Research Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Thyroid Research Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Thyroid Research Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7849,7 +7849,7 @@
     au < manifest ; exists ; 2011 ; Journal of Toxicology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Toxicology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Toxicology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Toxicology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Toxicology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Toxicology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7865,7 +7865,7 @@
     param[journal_id] = jtox
 
     au < manifest ; exists ; 2013 ; Journal of Toxins Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Toxins Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Toxins Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Toxins Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7885,7 +7885,7 @@
     au < manifest ; exists ; 2011 ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Transplantation Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Transplantation Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7905,7 +7905,7 @@
     au < manifest ; exists ; 2011 ; Journal of Tropical Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Tropical Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Tropical Medicine Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Tropical Medicine Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Tropical Medicine Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Tropical Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7921,7 +7921,7 @@
     param[journal_id] = jv
 
     au < manifest ; exists ; 2013 ; Journal of Vaccines Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Vaccines Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Vaccines Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Vaccines Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7953,7 +7953,7 @@
     param[journal_id] = jvm
 
     au < manifest ; exists ; 2013 ; Journal of Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Veterinary Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7968,7 +7968,7 @@
 
     param[journal_id] = jvi
 
-    au < testing ; exists ; 2014 ; Journal of Viruses Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Viruses Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Viruses Volume 2015 ; 2015 ; 2015 >
 
   }
