@@ -35,18 +35,16 @@ package org.lockss.plugin.base;
 import java.io.IOException;
 
 import org.lockss.crawler.CrawlerStatus;
-import org.lockss.daemon.LockssWatchdog;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FetchedUrlData;
-import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlConsumer;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /**
  * This is a basic UrlConsumer. It stores the fetched url.
  * It does no processing.
  */
 public class SimpleUrlConsumer implements UrlConsumer {
+  
   protected UrlCacher cacher;
   protected ArchivalUnit au;
   protected CrawlerFacade crawlFacade;

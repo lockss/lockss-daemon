@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,49 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Properties;
+import java.io.*;
+import java.net.*;
+import java.util.*;
 
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.Configuration;
-import org.lockss.config.CurrentConfig;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.Crawler;
-import org.lockss.daemon.LockssWatchdog;
-import org.lockss.daemon.LoginPageChecker;
-import org.lockss.daemon.PluginBehaviorException;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.FetchedUrlData;
-import org.lockss.plugin.Plugin;
-import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlConsumerFactory;
-import org.lockss.plugin.UrlFetcher;
-import org.lockss.util.CIProperties;
-import org.lockss.util.Deadline;
-import org.lockss.util.IOUtil;
-import org.lockss.util.IPAddr;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import org.lockss.util.TimeBase;
-import org.lockss.util.UrlUtil;
-import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.CacheResultMap;
-import org.lockss.util.urlconn.LockssUrlConnection;
-import org.lockss.util.urlconn.LockssUrlConnectionPool;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * Non abstract base class that holds all the basic logic for fetching
@@ -144,8 +112,8 @@ public class BaseUrlFetcher implements UrlFetcher {
     fetchFlags = new BitSet();
   }
   
-  public void setUrlConsumerFactory(UrlConsumerFactory cunsumer){
-    urlConsumerFactory = cunsumer;
+  public void setUrlConsumerFactory(UrlConsumerFactory consumer) {
+    urlConsumerFactory = consumer;
   }
   
   protected UrlConsumerFactory getUrlConsumerFactory() {
