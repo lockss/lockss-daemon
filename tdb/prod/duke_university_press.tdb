@@ -834,10 +834,10 @@
       param[base_url] = http://easts.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; released ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; released ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 [HighWire] ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 [HighWire] ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 [HighWire] ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 [HighWire] ; 4 >
       au < HighWirePressH20Plugin ; released ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 >
