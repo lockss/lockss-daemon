@@ -140,10 +140,14 @@
       
       comment[needs_plugin] = see PD-488
 
-      au < exists ; 2013 ; American Journal of Roentgenology Volume 200 ; 200 >
-      au < exists ; 2013 ; American Journal of Roentgenology Volume 201 ; 201 >
-      au < exists ; 2014 ; American Journal of Roentgenology Volume 202 ; 202 >
-      au < expected ; 2014 ; American Journal of Roentgenology Volume 203 ; 203 >
+      au < doNotProcess ; 2012 ; American Journal of Roentgenology Volume 198 ; 198 >
+      au < doNotProcess ; 2012 ; American Journal of Roentgenology Volume 199 ; 199 >
+      au < manifest ; 2013 ; American Journal of Roentgenology Volume 200 ; 200 >
+      au < manifest ; 2013 ; American Journal of Roentgenology Volume 201 ; 201 >
+      au < manifest ; 2014 ; American Journal of Roentgenology Volume 202 ; 202 >
+      au < manifest ; 2014 ; American Journal of Roentgenology Volume 203 ; 203 >
+      au < exists ; 2015 ; American Journal of Roentgenology Volume 204 ; 204 >
+      au < exists ; 2015 ; American Journal of Roentgenology Volume 205 ; 205 >
 
     }
 
