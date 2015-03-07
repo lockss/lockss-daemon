@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,7 +73,7 @@ ER  -
  */
 public class BaseAtyponRisMetadataExtractorFactory
 implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BaseAtyponRisMetadataExtractorFactory");
+  private static final Logger log = Logger.getLogger(BaseAtyponRisMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
@@ -89,7 +89,7 @@ implements FileMetadataExtractorFactory {
   }
 
   public static class BaseAtyponRisMetadataExtractor
-  extends RisMetadataExtractor {
+  extends EncodingRisMetadataExtractor {
 
     // override this to do some additional attempts to get valid data before emitting
     @Override
