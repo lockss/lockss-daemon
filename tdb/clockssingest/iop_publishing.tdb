@@ -2654,6 +2654,7 @@
     comment[param] = eissn preferred
 
     au < exists ; exists ; 2014 ; Materials Research Express Volume 1 ; 1 > 
+    au < expected ; exists ; 2015 ; Materials Research Express Volume 2 ; 2 > 
 
   }
 
@@ -2695,6 +2696,7 @@
     au < ingNotReady ; exists ; 2012 ; Measurement Science and Technology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Measurement Science and Technology Volume 24 ; 24 > 
     au < testing ; exists ; 2014 ; Measurement Science and Technology Volume 25 ; 25 > 
+    au < expected ; exists ; 2015 ; Measurement Science and Technology Volume 26 ; 26 > 
 
   }
 
@@ -2711,6 +2713,7 @@
 
     au < manifest ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
     au < testing ; exists ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
+    au < expected ; exists ; 2015 ; Methods and Applications in Fluorescence Volume 3 ; 3 >
 
   }
 
@@ -2777,6 +2780,7 @@
     au < finished ; crawling ; 2012 ; Metrologia Volume 49 ; 49 > 
     au < crawling ; exists ; 2013 ; Metrologia Volume 50 ; 50 > 
     au < testing ; exists ; 2014 ; Metrologia Volume 51 ; 51 > 
+    au < expected ; exists ; 2015 ; Metrologia Volume 52 ; 52 > 
 
   }
 
@@ -2814,6 +2818,7 @@
     au < finished ; crawling ; 2012 ; Modelling and Simulation in Materials Science and Engineering Volume 20 ; 20 > 
     au < crawling ; exists ; 2013 ; Modelling and Simulation in Materials Science and Engineering Volume 21 ; 21 > 
     au < testing ; exists ; 2014 ; Modelling and Simulation in Materials Science and Engineering Volume 22 ; 22 > 
+    au < expected ; exists ; 2015 ; Modelling and Simulation in Materials Science and Engineering Volume 23 ; 23 > 
 
   }
 
@@ -2854,6 +2859,7 @@
     au < crawling ; exists ; 2012 ; Nanotechnology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Nanotechnology Volume 24 ; 24 > 
     au < testing ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
+    au < expected ; exists ; 2015 ; Nanotechnology Volume 26 ; 26 > 
     
   }
 
@@ -2884,6 +2890,7 @@
     au < ingNotReady ; exists ; 2012 ; New Journal of Physics Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; New Journal of Physics Volume 15 ; 15 > 
     au < testing ; exists ; 2014 ; New Journal of Physics Volume 16 ; 16 > 
+    au < expected ; exists ; 2015 ; New Journal of Physics Volume 17 ; 17 > 
 
   }
 
@@ -2926,6 +2933,7 @@
     au < finished ; crawling ; 2012 ; Nonlinearity Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Nonlinearity Volume 26 ; 26 > 
     au < testing ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 > 
+    au < expected ; exists ; 2015 ; Nonlinearity Volume 28 ; 28 > 
 
   }
 
@@ -3031,6 +3039,7 @@
     au < finished ; crawling ; 2012 ; Nuclear Fusion Volume 52 ; 52 > 
     au < crawling ; exists ; 2013 ; Nuclear Fusion Volume 53 ; 53 > 
     au < manifest ; exists ; 2014 ; Nuclear Fusion Volume 54 ; 54 > 
+    au < expected ; exists ; 2015 ; Nuclear Fusion Volume 55 ; 55 > 
 
   }
 
@@ -3136,6 +3145,8 @@
     au < crawling ; exists ; 2013 ; Physica Scripta Volume 88 ; 88 > 
     au < manifest ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 > 
     au < manifest ; exists ; 2014 ; Physica Scripta Volume 90 ; 90 > 
+    au < expected ; exists ; 2015 ; Physica Scripta Volume 91 ; 91 > 
+    au < expected ; exists ; 2015 ; Physica Scripta Volume 92 ; 92 > 
 
   }
 
@@ -3163,6 +3174,7 @@
     au < finished ; crawling ; 2012 ; Physical Biology Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Physical Biology Volume 10 ; 10 > 
     au < manifest ; exists ; 2014 ; Physical Biology Volume 11 ; 11 > 
+    au < expected ; exists ; 2015 ; Physical Biology Volume 12 ; 12 > 
 
   }
 
@@ -3228,6 +3240,7 @@
     au < ingNotReady ; exists ; 2012 ; Physics Education Volume 47 ; 47 > 
     au < crawling ; exists ; 2013 ; Physics Education Volume 48 ; 48 > 
     au < manifest ; exists ; 2014 ; Physics Education Volume 49 ; 49 > 
+    au < expected ; exists ; 2015 ; Physics Education Volume 50 ; 50 > 
 
   }
 
@@ -3303,6 +3316,7 @@
     au < ingNotReady ; exists ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 > 
     au < crawling ; exists ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 > 
     au < manifest ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 ; 59 > 
+    au < expected ; exists ; 2015 ; Physics in Medicine and Biology Volume 60 ; 60 > 
 
   }
 
@@ -3371,6 +3385,7 @@
     au < finished ; crawling ; 2012 ; Physiological Measurement Volume 33 ; 33 >
     au < crawling ; exists ; 2013 ; Physiological Measurement Volume 34 ; 34 >
     au < manifest ; exists ; 2014 ; Physiological Measurement Volume 35 ; 35 >
+    au < expected ; exists ; 2015 ; Physiological Measurement Volume 36 ; 36 >
 
   }
 
@@ -3451,6 +3466,7 @@
     au < ingNotReady ; exists ; 2012 ; Plasma Physics and Controlled Fusion Volume 54 ; 54 >
     au < crawling ; exists ; 2013 ; Plasma Physics and Controlled Fusion Volume 55 ; 55 >
     au < manifest ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 >
+    au < expected ; exists ; 2015 ; Plasma Physics and Controlled Fusion Volume 57 ; 57 >
 
   }
 
@@ -3480,6 +3496,7 @@
     au < finished ; crawling ; 2012 ; Plasma Science and Technology Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Plasma Science and Technology Volume 15 ; 15 > 
     au < manifest ; exists ; 2014 ; Plasma Science and Technology Volume 16 ; 16 > 
+    au < expected ; exists ; 2015 ; Plasma Science and Technology Volume 17 ; 17 > 
 
   }
 
@@ -3518,6 +3535,7 @@
     au < finished ; crawling ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Plasma Sources Science and Technology Volume 22 ; 22 > 
     au < manifest ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 > 
+    au < expected ; exists ; 2015 ; Plasma Sources Science and Technology Volume 24 ; 24 > 
 
   }
 
@@ -3846,6 +3864,7 @@
     au < finished ; crawling ; 2012 ; Reports on Progress in Physics Volume 75 ; 75  > 
     au < crawling ; exists ; 2013 ; Reports on Progress in Physics Volume 76 ; 76  > 
     au < manifest ; exists ; 2014 ; Reports on Progress in Physics Volume 77 ; 77  > 
+    au < expected ; exists ; 2015 ; Reports on Progress in Physics Volume 78 ; 78  > 
 
   }
 
@@ -3913,6 +3932,7 @@
     au < finished ; crawling ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 > 
     au < crawling ; exists ; 2013 ; Science and Technology of Advanced Materials Volume 14 ; 14 > 
     au < manifest ; exists ; 2014 ; Science and Technology of Advanced Materials Volume 15 ; 15 > 
+    au < expected ; exists ; 2015 ; Science and Technology of Advanced Materials Volume 16 ; 16 > 
 
   }
 
@@ -3957,6 +3977,7 @@
     au < ingNotReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 > 
     au < crawling ; exists ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 > 
     au < manifest ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 > 
+    au < expected ; exists ; 2015 ; Semiconductor Science and Technology Volume 30 ; 30 > 
 
   }
 
@@ -3996,6 +4017,7 @@
     au < ingNotReady ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Smart Materials and Structures Volume 22 ; 22 > 
     au < manifest ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
+    au < expected ; exists ; 2015 ; Smart Materials and Structures Volume 24 ; 24 > 
 
   }
 
@@ -4038,7 +4060,8 @@
     au < finished ; crawling ; 2012 ; Superconductor Science and Technology Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Superconductor Science and Technology Volume 26 ; 26 > 
     au < manifest ; exists ; 2014 ; Superconductor Science and Technology Volume 27 ; 27 > 
-	    
+    au < expected ; exists ; 2015 ; Superconductor Science and Technology Volume 28 ; 28 > 
+
   }
 
   {
@@ -4054,6 +4077,7 @@
 
     au < manifest ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
     au < manifest ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
+    au < expected ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
 
   }
 
@@ -4116,6 +4140,7 @@
     comment[param] = eissn preferred
 
     au < exists ; exists ; 2014 ; Translational Materials Research Volume 1 ; 1 > 
+    au < expected ; exists ; 2015 ; Translational Materials Research Volume 2 ; 2 > 
 
   }
 
