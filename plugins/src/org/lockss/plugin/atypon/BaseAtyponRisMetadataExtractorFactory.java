@@ -89,7 +89,7 @@ implements FileMetadataExtractorFactory {
   }
 
   public static class BaseAtyponRisMetadataExtractor
-  extends EncodingRisMetadataExtractor {
+  extends RisMetadataExtractor {
 
     // override this to do some additional attempts to get valid data before emitting
     @Override
