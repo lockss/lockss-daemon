@@ -121,6 +121,20 @@
     
   {
     title <
+      name = Advances in Statistical Climatology, Meteorology and Oceanography ;
+      issn = 2364-3579 ;
+      eissn = 2364-3587
+    >
+      attr[journal_id] = ASCMO 
+      param[base_url] = http://www.adv-stat-clim-meteorol-oceanogr.net/
+      param[home_url] = http://www.advances-statistical-climatology-meteorology-oceanography.net/
+
+      au < exists ; exists ; 2015 ; 2015 ; AAdvances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 >
+
+   }
+    
+  {
+    title <
       name = Annales Geophysicae ;
       issn = 0992-7689 ;
       eissn = 1432-0576
@@ -156,6 +170,45 @@
       au < crawling ; exists ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
       au < manifest ; exists ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 >
     
+   }
+    
+  {
+    title <
+      name = Archives Animal Breeding ;
+      issn = 0003-9438 ;
+      eissn = 2363-9822 
+    >
+      attr[journal_id] = AAB
+      param[home_url] = http://archives-animal-breeding.net/
+      
+      {
+      param[base_url] = http://www.archanimbreed.com/content/
+      comment[pdf] = http://doi.fbn-dummerstorf.de/ for 2013 & 2014
+
+      au < exists ; exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 17 ; 17 >
+      au < exists ; exists ; 2000 ; 2000 ; Archives Animal Breeding Volume 18 ; 18 >
+      au < exists ; exists ; 2001 ; 2001 ; Archives Animal Breeding Volume 19 ; 19 >
+      au < exists ; exists ; 2002 ; 2002 ; Archives Animal Breeding Volume 20 ; 20 >
+      au < exists ; exists ; 2003 ; 2003 ; Archives Animal Breeding Volume 21 ; 21 >
+      au < exists ; exists ; 2004 ; 2004 ; Archives Animal Breeding Volume 22 ; 22 >
+      au < exists ; exists ; 2005 ; 2005 ; Archives Animal Breeding Volume 23 ; 23 >
+      au < exists ; exists ; 2006 ; 2006 ; Archives Animal Breeding Volume 24 ; 24 >
+      au < exists ; exists ; 2007 ; 2007 ; Archives Animal Breeding Volume 25 ; 25 >
+      au < exists ; exists ; 2008 ; 2008 ; Archives Animal Breeding Volume 26 ; 26 >
+      au < exists ; exists ; 2009 ; 2009 ; Archives Animal Breeding Volume 27 ; 27 >
+      au < exists ; exists ; 2010 ; 2010 ; Archives Animal Breeding Volume 28 ; 28 >
+      au < exists ; exists ; 2011 ; 2011 ; Archives Animal Breeding Volume 29 ; 29 >
+      au < exists ; exists ; 2012 ; 2012 ; Archives Animal Breeding Volume 30 ; 30 >
+      au < exists ; exists ; 2013 ; 2013 ; Archives Animal Breeding Volume 31 ; 31 >
+      au < exists ; exists ; 2014 ; 2014 ; Archives Animal Breeding Volume 32 ; 32 >
+      }
+
+      {
+      param[base_url] = http://www.arch-anim-breed.net/
+
+      au < exists ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
+      }
+
    }
     
   {
@@ -390,7 +443,7 @@
       issn = 1815-381X ;
       eissn = 1815-3828
     >
-      attr[journal_id] = eE   
+      attr[journal_id] = eE 
       param[base_url] = http://www.electronic-earth.net/
       param[home_url] = http://www.electronic-earth.net/
 
@@ -404,10 +457,26 @@
     
   {
     title <
+      name = eEarth Discussions;
+      eissn = 1815-3844
+    >
+      attr[journal_id] = eED 
+      param[base_url] = http://www.electronic-earth-discuss.net/
+      param[home_url] = http://www.electronic-earth.net/
+
+      au < exists ; exists ; 2006 ; 2006 ; eEarth Discussions Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; 2007 ; eEarth Discussions Volume 2 ; 2 >
+      au < exists ; exists ; 2008 ; 2008 ; eEarth Discussions Volume 3 ; 3 >
+      au < exists ; exists ; 2009 ; 2009 ; eEarth Discussions Volume 4 ; 4 >
+    
+   }
+
+  {
+    title <
       name = Field Actions Science Reports ;
       eissn = 1867-8521
     >
-      attr[journal_id] = FACTS   
+      attr[journal_id] = FACTS 
       param[base_url] = http://www.field-actions-sci-rep.net/
       param[home_url] = http://www.field-actions-science-reports.net/
 
@@ -750,9 +819,9 @@
       au < crawling ; exists ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W3 ; XL-5-W3 >
       au < crawling ; exists ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W1 ; XL-7-W1 >
       au < crawling ; exists ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W2 ; XL-7-W2 >
+      au < crawling ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 >
       au < crawling ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-3/W1 ; XL-3-W1 >
       au < crawling ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-5/W2 ; XL-5-W2 >
-      au < crawling ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 >
       au < crawling ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-1 ; XL-1 >
       au < crawling ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-2 ; XL-2 >
       au < crawling ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-3 ; XL-3 >
@@ -899,7 +968,7 @@
       issn = 1812-0784 ;
       eissn = 1812-0792
     >
-      attr[journal_id] = OS   
+      attr[journal_id] = OS 
       param[base_url] = http://www.ocean-sci.net/
       param[home_url] = http://www.ocean-science.net/
 
