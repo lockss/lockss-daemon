@@ -21,9 +21,10 @@
 
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = aabio
+    comment[moved] = no longer accepting submissions. See http://www.qscience.com/page/archived_titles
 
-      au < crawling ; exists ; 2013 ; Advances in Applied Biomedicine Volume 2013 ; 2013 > 
-      au < crawling ; exists ; 2014 ; Advances in Applied Biomedicine Volume 2014 ; 2014 > 
+      au < down ; exists ; 2013 ; Advances in Applied Biomedicine Volume 2013 ; 2013 > 
+      au < down ; exists ; 2014 ; Advances in Applied Biomedicine Volume 2014 ; 2014 > 
       au < expected ; exists ; 2015 ; Advances in Applied Biomedicine Volume 2015 ; 2015 > 
   }
 
