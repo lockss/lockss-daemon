@@ -1,4 +1,4 @@
-
+/* Id: $ */
 /*
 
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
@@ -37,6 +37,9 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
+/*
+ * This Crawl Filter is NOT BASED on BaseAtypon!
+ */
 public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory implements FilterFactory {
 
   @Override

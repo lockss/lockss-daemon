@@ -39,35 +39,30 @@ import org.htmlparser.tags.*;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
-public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterFactory {
+public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
   Logger log = Logger.getLogger(MassachusettsMedicalSocietyHtmlHashFilterFactory.class);
 
-  public static class FilteringException extends PluginException {
-    public FilteringException() { super(); }
-    public FilteringException(String msg, Throwable cause) { super(msg, cause); }
-    public FilteringException(String msg) { super(msg); }
-    public FilteringException(Throwable cause) { super(cause); }
+  // include a whitespace filter
+  @Override
+  public boolean doWSFiltering() {
+    return true;
   }
-
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
-      String encoding)
-  throws PluginException {
+      String encoding) {
 
     // First filter with HtmlParser
-    NodeFilter[] filters = new NodeFilter[] {
+    NodeFilter[] MmsFilters = new NodeFilter[] {
         /*
-         * Crawl filter
+         * Hash filter
          */
         // Contain cross-links to other articles in other journals/volumes
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
@@ -103,13 +98,7 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         HtmlNodeFilters.tagWithAttribute("div", "id", "galleryContent"),
         //constantly changing discussion thread with links to current article +?sort=newest...
         HtmlNodeFilters.tagWithAttribute("div", "class", "discussion"),
-        /*
-         * Hash filter
-         */
-        // Contains ad-specific cookies
-        new TagNameFilter("script"),
-        // Contains a modified id that changes
-        HtmlNodeFilters.commentWithRegex("modified"),
+
         // Contains the number of articles currently citing
         HtmlNodeFilters.tagWithAttribute("dt", "id", "citedbyTab"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleActivity"),
@@ -141,7 +130,12 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         HtmlNodeFilters.tagWithAttribute("div", "id", "toolsBox")
 
     };
-
+    
+    /*
+     * This removes a "will be temporarily unavailable" warning from the page,
+     * identified as <div> tag with the appropriate warning-type text 
+     * within a <div align="center"> tag 
+     */
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
@@ -150,9 +144,24 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
             @Override
             public void visitTag(Tag tag) {
               try {
-                if ("div".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("id") != null && tag.getAttribute("id").trim().startsWith("layerPlayer")) {
-                  tag.removeAttribute("id");
+                if (tag instanceof Div && (tag.getAttribute("align").equalsIgnoreCase("center"))) {
+                  if ((((CompositeTag) tag).getChildCount() > 1)) {
+                    String html;
+                    for (int i = 0; i < ((CompositeTag) tag).getChildCount(); i++) {
+                      log.debug3("CHILD TAG:"+i);
+                      if ((((CompositeTag) tag).getChild(i) instanceof Div)) {
+                        html = ((Div) ((CompositeTag) tag).getChild(i)).getStringText();
+                        log.debug3(html);
+                        if (html.contains("ATTENTION:") && 
+                            html.contains("temporarily unavailable")){
+                          log.debug3("FOUND IT!");
+                          ((CompositeTag) tag).removeChild(i);
+                        }
+                      }
+                    }
+                  }
                 } else {
+                  log.debug3("NOT FOUND");
                   super.visitTag(tag);
                 }
               } catch (Exception exc) {
@@ -168,9 +177,8 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
     };
     // initial html filtering
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-      new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
-    // whitespace filtering
-    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(filteredStream, encoding)));
+      new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(MmsFilters)),xform));
+    return super.createFilteredInputStream(au, filteredStream, encoding, MmsFilters);
   }
 
 }

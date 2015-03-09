@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>27</string>
+    <string>33</string>
   </entry>  
   <entry>
     <string>au_name</string>
@@ -48,7 +48,7 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyHtmlHashFilterFactory</string>
   </entry>
-  <entry> <!-- using local  -->
+  <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPdfFilterFactory</string>
   </entry>
