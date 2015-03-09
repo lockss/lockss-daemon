@@ -206,7 +206,7 @@
       {
       param[base_url] = http://www.arch-anim-breed.net/
 
-      au < exists ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
+      au < manifest ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
       }
 
    }
@@ -464,10 +464,10 @@
       param[base_url] = http://www.electronic-earth-discuss.net/
       param[home_url] = http://www.electronic-earth.net/
 
-      au < exists ; exists ; 2006 ; 2006 ; eEarth Discussions Volume 1 ; 1 >
-      au < exists ; exists ; 2007 ; 2007 ; eEarth Discussions Volume 2 ; 2 >
-      au < exists ; exists ; 2008 ; 2008 ; eEarth Discussions Volume 3 ; 3 >
-      au < exists ; exists ; 2009 ; 2009 ; eEarth Discussions Volume 4 ; 4 >
+      au < manifest ; exists ; 2006 ; 2006 ; eEarth Discussions Volume 1 ; 1 >
+      au < manifest ; exists ; 2007 ; 2007 ; eEarth Discussions Volume 2 ; 2 >
+      au < manifest ; exists ; 2008 ; 2008 ; eEarth Discussions Volume 3 ; 3 >
+      au < manifest ; exists ; 2009 ; 2009 ; eEarth Discussions Volume 4 ; 4 >
     
    }
 
@@ -1030,7 +1030,7 @@
       param[home_url] = http://www.proceedings-international-association-of-hydrological-sciences.net/
 
       au < crawling ; exists ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 >
-      au < expected ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 >
+      au < manifest ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 >
     
    }
 
