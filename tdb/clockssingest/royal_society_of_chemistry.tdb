@@ -990,10 +990,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 >
-      au < manifest ; exists ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 >
-      au < manifest ; exists ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
-      au < manifest ; exists ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
+      au < testing ; exists ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 >
+      au < testing ; exists ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 >
+      au < testing ; exists ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
+      au < testing ; exists ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
       au < crawling ; exists ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
       au < expected ; exists ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
 
@@ -1026,10 +1026,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 >
-      au < manifest ; exists ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 >
-      au < manifest ; exists ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
-      au < manifest ; exists ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
+      au < testing ; exists ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 >
+      au < testing ; exists ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 >
+      au < testing ; exists ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
+      au < testing ; exists ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
       au < crawling ; exists ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 >
       au < expected ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 >
 
