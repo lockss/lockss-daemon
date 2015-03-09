@@ -2406,7 +2406,7 @@
       au < crawling ; exists ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
       au < finished ; frozen ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
-      au < manifest ; exists ; 2014 ; Biological Procedures Online Volume 16 ; 16 >
+      au < testing ; exists ; 2014 ; Biological Procedures Online Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
 
     }
@@ -2421,7 +2421,7 @@
       param[base_url] = http://www.biolres.com/
       param[journal_issn] = 0717-6287
 
-      au < manifest ; exists ; 2014 ; Biological Research Volume 47 ; 47 >
+      au < testing ; exists ; 2014 ; Biological Research Volume 47 ; 47 >
       au < manifest ; exists ; 2015 ; Biological Research Volume 48 ; 48 >
 
     }
@@ -2458,7 +2458,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
         au < manifest ; exists ; 2011 ; Biology Direct Volume 6 ; 6 >
         au < manifest ; exists ; 2012 ; Biology Direct Volume 7 ; 7 >
         au < manifest ; exists ; 2013 ; Biology Direct Volume 8 ; 8 >
-        au < manifest ; exists ; 2014 ; Biology Direct Volume 9 ; 9 >
+        au < testing ; exists ; 2014 ; Biology Direct Volume 9 ; 9 >
         au < manifest ; exists ; 2015 ; Biology Direct Volume 10 ; 10 >
       }
 
@@ -2478,7 +2478,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < crawling ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
       au < finished ; crawling ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
-      au < manifest ; exists ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
+      au < testing ; exists ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
       au < expected ; exists ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 ; 5 >
 
     }
@@ -2498,7 +2498,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < finished ; crawling ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
-      au < manifest ; exists ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
+      au < testing ; exists ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
 
     }
@@ -2515,7 +2515,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       param[journal_issn] = 2050-7771
 
       au < crawling ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; Biomarker Research Volume 2 ; 2 >
+      au < testing ; exists ; 2014 ; Biomarker Research Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Biomarker Research Volume 3 ; 3 >
 
     }
@@ -2552,7 +2552,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.biomaterialsres.com/
       param[journal_issn] = 2055-7124
 
-      au < manifest ; exists ; 2014 ; Biomaterials Research Volume 18 ; 18 >
+      au < testing ; exists ; 2014 ; Biomaterials Research Volume 18 ; 18 >
       au < manifest ; exists ; 2015 ; Biomaterials Research Volume 19 ; 19 >
       
     }
@@ -2579,7 +2579,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; BioMedical engineering OnLine Volume 12 ; 12 >
-      au < manifest ; exists ; 2014 ; BioMedical engineering OnLine Volume 13 ; 13 >
+      au < testing ; exists ; 2014 ; BioMedical engineering OnLine Volume 13 ; 13 >
       au < manifest ; exists ; 2015 ; BioMedical engineering OnLine Volume 14 ; 14 >
 
     }
@@ -2601,7 +2601,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
-      au < manifest ; exists ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
+      au < testing ; exists ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
       
     }
@@ -2622,7 +2622,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
-      au < manifest ; exists ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
+      au < testing ; exists ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
       au < manifest ; exists ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
       
     }
