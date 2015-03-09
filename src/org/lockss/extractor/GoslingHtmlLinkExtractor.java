@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -77,7 +77,6 @@ import java.io.*;
 import org.apache.commons.io.IOUtils;
 import org.htmlparser.util.*;
 
-import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -101,28 +100,32 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected static final String AREATAG = "area";
   protected static final String BASETAG = "base";
   protected static final String BODYTAG = "body";
-  protected static final String BACKGROUNDSRC = "background";
-  protected static final String CODE = "code";
-  protected static final String CODEBASE = "codebase";
   protected static final String EMBEDTAG = "embed";
+  /** @since 1.67.5 */
+  protected static final String FORMTAG = "form";
   protected static final String FRAMETAG = "frame";
   protected static final String IFRAMETAG = "iframe";
   protected static final String IMGTAG = "img";
   protected static final String JSCRIPTTAG = "javascript";
-  protected static final String HREF = "href";
   protected static final String LINKTAG = "link";
   protected static final String METATAG = "meta";
   protected static final String OBJECTTAG = "object";
   protected static final String OPTIONTAG = "option";
   protected static final String SCRIPTTAG = "script";
   protected static final String STYLETAG = "style";
-  protected static final String SRC = "src";
   protected static final String TABLETAG = "table";
   protected static final String TDTAG = "td";
   protected static final String THTAG = "th";
   protected static final String VALUETAG = "value";
-
+  
   protected static final String SCRIPTTAGEND = "/script>";
+
+  protected static final String BACKGROUNDSRC = "background";
+  protected static final String CODE = "code";
+  protected static final String CODEBASE = "codebase";
+  protected static final String HREF = "href";
+  protected static final String SRC = "src";
+  
   /*
           Two Different charset specifications
    4.01: <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -132,6 +135,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected static final String REFRESH = "refresh";
   protected static final String HTTP_EQUIV = "http-equiv";
   protected static final String HTTP_EQUIV_CONTENT = "content";
+  
   protected static final char NEWLINE_CHAR = '\n';
   protected static final char CARRIAGE_RETURN_CHAR = '\r';
 
