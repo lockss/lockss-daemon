@@ -94,7 +94,7 @@
       au < crawling ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 >
-      au < testing ; exists ; 2014 ; BMC Bioinformatics Volume 15 ; 15 >
+      au < ready ; exists ; 2014 ; BMC Bioinformatics Volume 15 ; 15 >
       au < manifest ; exists ; 2015 ; BMC Bioinformatics Volume 16 ; 16 >
 
     }
@@ -2084,7 +2084,7 @@
       au < finished ; crawling ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
-      au < testing ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+      au < ready ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
       au < manifest ; exists ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
 
     }
@@ -2100,7 +2100,7 @@
       param[journal_issn] = 2050-3385
 
       au < crawling ; exists ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
-      au < testing ; exists ; 2014 ; Animal Biotelemetry Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; Animal Biotelemetry Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Animal Biotelemetry Volume 3 ; 3 >
 
     }
@@ -2129,7 +2129,7 @@
       au < finished ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
       au < finished ; crawling ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
-      au < testing ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
+      au < ready ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
       au < expected ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
 
     }
@@ -2156,7 +2156,7 @@
       au < finished ; crawling ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
       au < finished ; crawling ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 >
-      au < testing ; exists ; 2014 ; Annals of General Psychiatry Volume 13 ; 13 >
+      au < ready ; exists ; 2014 ; Annals of General Psychiatry Volume 13 ; 13 >
       au < manifest ; exists ; 2015 ; Annals of General Psychiatry Volume 14 ; 14 >
 
     }
@@ -2178,7 +2178,7 @@
       au < finished ; crawling ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
       au < finished ; crawling ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 >
-      au < testing ; exists ; 2014 ; Annals of Surgical Innovation and Research Volume 8 ; 8 >
+      au < ready ; exists ; 2014 ; Annals of Surgical Innovation and Research Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; Annals of Surgical Innovation and Research Volume 9 ; 9 >
 
     }
@@ -2198,7 +2198,7 @@
 
       au < finished ; crawling ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
-      au < testing ; exists ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 >
+      au < ready ; exists ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Antimicrobial Resistance and Infection Control Volume 4 ; 4 >
        
       }
@@ -2227,7 +2227,7 @@
       au < superseded ; exists ; 2011 ; Aquatic Biosystems Volume 7 [superseded] ; 7 >
       au < finished ; crawling ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
-      au < testing ; exists ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
+      au < ready ; exists ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Aquatic Biosystems Volume 11 ; 11 >
 
     }
@@ -2248,7 +2248,7 @@
       au < finished ; crawling ; 2011 ; Archives of Public Health Volume 69 ; 69 >
       au < finished ; crawling ; 2012 ; Archives of Public Health Volume 70 ; 70 >
       au < crawling ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 >
-      au < testing ; exists ; 2014 ; Archives of Public Health Volume 72 ; 72 >
+      au < ready ; exists ; 2014 ; Archives of Public Health Volume 72 ; 72 >
       au < manifest ; exists ; 2015 ; Archives of Public Health Volume 73 ; 73 >
 
     }
@@ -2281,7 +2281,7 @@
       au < finished ; crawling ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < ingNotReady ; exists ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
-      au < testing ; exists ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
+      au < ready ; exists ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; Arthritis Research & Therapy Volume 17 ; 17 >
 
     }
@@ -2302,7 +2302,7 @@
       au < finished ; crawling ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
       au < finished ; crawling ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
-      au < testing ; exists ; 2014 ; Asia Pacific Family Medicine Volume 13 ; 13 >
+      au < ready ; exists ; 2014 ; Asia Pacific Family Medicine Volume 13 ; 13 >
       au < manifest ; exists ; 2015 ; Asia Pacific Family Medicine Volume 14 ; 14 >
 
     }
@@ -2341,7 +2341,7 @@
       param[journal_issn] = 2051-4190
 
       au < crawling ; exists ; 2013 ; Basic and Clinical Andrology Volume 23 ; 23 >
-      au < testing ; exists ; 2014 ; Basic and Clinical Andrology Volume 24 ; 24 >
+      au < ready ; exists ; 2014 ; Basic and Clinical Andrology Volume 24 ; 24 >
       au < manifest ; exists ; 2015 ; Basic and Clinical Andrology Volume 25 ; 25 >
 
     }
@@ -2365,7 +2365,7 @@
       au < finished ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < finished ; crawling ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 >
-      au < testing ; exists ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
+      au < ready ; exists ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 >
 
     }
@@ -2386,7 +2386,7 @@
       au < finished ; crawling ; 2011 ; BioData Mining Volume 4 ; 4 >
       au < finished ; crawling ; 2012 ; BioData Mining Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; BioData Mining Volume 6 ; 6 >
-      au < testing ; exists ; 2014 ; BioData Mining Volume 7 ; 7 >
+      au < ready ; exists ; 2014 ; BioData Mining Volume 7 ; 7 >
       au < manifest ; exists ; 2015 ; BioData Mining Volume 8 ; 8 >
 
     }
