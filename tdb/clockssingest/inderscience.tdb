@@ -81,7 +81,7 @@
       au < crawling ; exists ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
       au < finished ; crawling ; 2010-2011 ; American Journal of Finance and Accounting Volume 2 ; 2 >
       au < crawling ; exists ; 2012-2013 ; American Journal of Finance and Accounting Volume 3 ; 3 >
-      au < expected ; exists ; 2014-2015 ; American Journal of Finance and Accounting Volume 4 ; 4 >
+      au < manifest ; exists ; 2014-2015 ; American Journal of Finance and Accounting Volume 4 ; 4 >
 
     }
 
@@ -1762,7 +1762,7 @@
       param[journal_issn] = 2046-3405
       
       au < finished ; frozen ; 2012-2013 ; International Journal of Computational Systems Engineering Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Computational Systems Engineering Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; International Journal of Computational Systems Engineering Volume 2 ; 2 >
 
     }
 
@@ -5497,7 +5497,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Modelling, Identification and Control Volume 20 ; 20 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 21 ; 21 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 22 ; 22 >
-      au < expected ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 23 ; 23 >
+      au < manifest ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 23 ; 23 >
 
     }
 
