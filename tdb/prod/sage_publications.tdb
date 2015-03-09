@@ -46248,21 +46248,6 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = SAGE Open Engineering ;
-        eissn = 2050-3113
-      >
-
-    pluginSuffix = HighWirePressH20Plugin
-    param[base_url] = http://seo.sagepub.com/
-    implicit < status ; year ; name ; param[volume_name] >
-
-    au < expected ; 2015 ; SAGE Open Engineering Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = SAGE Open Medicine ;
         eissn = 2050-3121
       >
