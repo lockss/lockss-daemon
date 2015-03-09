@@ -101,7 +101,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected static final String BASETAG = "base";
   protected static final String BODYTAG = "body";
   protected static final String EMBEDTAG = "embed";
-  /** @since 1.68 */
+  /** @since 1.67.5 */
   protected static final String FORMTAG = "form";
   protected static final String FRAMETAG = "frame";
   protected static final String IFRAMETAG = "iframe";
