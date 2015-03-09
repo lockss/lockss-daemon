@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,6 +80,8 @@ ArticleMetadataExtractorFactory {
   // Things not an "article" but in support of an article
   private static final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
   private static final String SUPPL_REPLACEMENT = "/doi/suppl/$1/$2";
+  // MassMedical uses this second form for SUPPL materials
+  private static final String SECOND_SUPPL_REPLACEMENT = "/action/showSupplements?doi=$1%2F$2";
   // link extractor used forms to pick up this URL
 
   /* TODO: Note that if the DOI suffix has a "/" this will not work because the 
@@ -168,7 +170,8 @@ ArticleMetadataExtractorFactory {
         ArticleFiles.ROLE_REFERENCES);
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
-    builder.addAspect(SUPPL_REPLACEMENT,
+    builder.addAspect(Arrays.asList(
+        SUPPL_REPLACEMENT, SECOND_SUPPL_REPLACEMENT),
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
