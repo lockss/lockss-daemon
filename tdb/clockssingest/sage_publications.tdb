@@ -42658,20 +42658,6 @@
     {
 
       title <
-        name = SAGE Open Engineering ;
-        eissn = 2050-3113
-      >
-
-    pluginSuffix = ClockssHighWirePressH20Plugin
-    param[base_url] = http://seo.sagepub.com/
-
-    au < expected ; exists ; 2015 ; SAGE Open Engineering Volume 1 ; 1 ; >
-
-    }
-
-    {
-
-      title <
         name = SAGE Open Medicine ;
         eissn = 2050-3121
       >
