@@ -578,6 +578,7 @@
     au < finished ; crawling ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
     au < crawling ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
     au < doNotProcess ; exists ; 2014 ; The American Historical Review Volume 119 ; 119 ; >
+    au < expected ; exists ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
 
     }
 
@@ -13744,6 +13745,7 @@
     au < crawling ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
+    au < expected ; exists ; 2015 ; Journal of the Pediatric Infectious Diseases Society Volume 4 ; 4 ; >
 
     }
 
@@ -17369,6 +17371,7 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
 
+    au < expected ; exists ; 1964 ; Nutrition Reviews Volume 24 ; 24 ; >
     au < manifest ; exists ; 1965 ; Nutrition Reviews Volume 23 ; 23 ; >
     au < manifest ; exists ; 1966 ; Nutrition Reviews Volume 24 ; 24 ; >
     au < manifest ; exists ; 1967 ; Nutrition Reviews Volume 25 ; 25 ; >
