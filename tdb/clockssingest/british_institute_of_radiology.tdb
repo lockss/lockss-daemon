@@ -134,7 +134,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
       au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Radiology Volume 85 ; 85 >
       au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Radiology Volume 86 ; 86 >
-      au < testing ; exists ; 2014 ; British Journal of Radiology Volume 87 ; 87 >
+      au < ready ; exists ; 2014 ; British Journal of Radiology Volume 87 ; 87 >
       au < manifest ; exists ; 2015 ; British Journal of Radiology Volume 88 ; 88 >
       
     }
@@ -213,7 +213,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 > 
       au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
       au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 >
-      au < testing ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 >
+      au < ready ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 >
       au < manifest ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 >
 
     }
@@ -270,7 +270,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Imaging Volume 20 ; 20 >
       au < doNotProcess ; doNotProcess ; 2009 ; Imaging Volume 21 ; 21 >
       au < manifest ; exists ; 2013 ; Imaging Volume 22 ; 22 >
-      au < testing ; exists ; 2014 ; Imaging Volume 23 ; 23 >
+      au < ready ; exists ; 2014 ; Imaging Volume 23 ; 23 >
       au < expected ; exists ; 2015 ; Imaging Volume 24 ; 24 >
     
     }
