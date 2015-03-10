@@ -42,6 +42,7 @@ import org.antlr.v4.runtime.tree.*;
 import org.lockss.tdb.AntlrUtil.NamedAntlrInputStream;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
 import org.lockss.tdb.TdbParser.*;
+import org.lockss.util.Constants;
 
 /**
  * <p>
@@ -332,14 +333,18 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @param fileName
    *          A file name.
+   * @param encoding
+   *          The encoding of the file.
    * @throws IOException
    *           if an I/O exception occurs.
    * @throws SyntaxError
    *           if there is a syntax error.
-   * @since 1.67
+   * @since 1.68
    */
-  public void parse(String fileName) throws IOException, SyntaxError {
-    parse(new ANTLRFileStream(fileName));
+  public void parse(String fileName,
+                    String encoding)
+      throws IOException, SyntaxError {
+    parse(new ANTLRFileStream(fileName, encoding));
   }
 
   /**
@@ -352,14 +357,21 @@ public class TdbBuilder extends TdbParserBaseListener {
    *          A source name.
    * @param inputStream
    *          An input stream.
+   * @param inputStream
+   *          The encoding of the input stream.
+   * @throws UnsupportedEncodingException
+   *           if the given encoding is invalid.
    * @throws IOException
-   *           if an I/O exception occurs.
+   *           if some other I/O exception occurs.
    * @throws SyntaxError
    *           if there is a syntax error.
-   * @since 1.67
+   * @since 1.68
    */
-  public void parse(String name, InputStream inputStream) throws IOException, SyntaxError {
-    parse(new NamedAntlrInputStream(name, inputStream));
+  public void parse(String name,
+                    InputStream inputStream,
+                    String encoding)
+      throws UnsupportedEncodingException, IOException, SyntaxError {
+    parse(new NamedAntlrInputStream(name, inputStream, encoding));
   }
 
   /**

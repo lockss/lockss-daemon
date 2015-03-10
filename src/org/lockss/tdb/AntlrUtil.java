@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.tdb;
 
 import java.io.*;
+import java.nio.charset.Charset;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.*;
@@ -166,12 +167,19 @@ public class AntlrUtil {
      *          The stream's name.
      * @param input
      *          An input stream.
+     * @param encoding
+     *          The encoding of the input stream.
+     * @throws UnsupportedEncodingException
+     *           if the given encoding is invalid.
      * @throws IOException
-     *           if an I/O exception occurs.
-     * @since 1.67
+     *           if some other I/O exception occurs.
+     * @since 1.68
      */
-    public NamedAntlrInputStream(String name, InputStream input) throws IOException {
-      super(input);
+    public NamedAntlrInputStream(String name,
+                                 InputStream input,
+                                 String encoding)
+        throws UnsupportedEncodingException, IOException {
+      super(new InputStreamReader(input, encoding));
       this.name = name;
     }
     

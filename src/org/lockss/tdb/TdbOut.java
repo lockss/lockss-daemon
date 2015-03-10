@@ -37,7 +37,7 @@ import java.util.*;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 public class TdbOut {
 
@@ -660,10 +660,10 @@ public class TdbOut {
       try {
         if ("-".equals(f)) {
           f = "<stdin>";
-          tdbBuilder.parse(f, System.in);
+          tdbBuilder.parse(f, System.in, Constants.ENCODING_UTF_8);
         }
         else {
-          tdbBuilder.parse(f);
+          tdbBuilder.parse(f, Constants.ENCODING_UTF_8);
         }
       }
       catch (FileNotFoundException fnfe) {
