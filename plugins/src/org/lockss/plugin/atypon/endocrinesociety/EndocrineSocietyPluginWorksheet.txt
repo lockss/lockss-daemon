@@ -284,9 +284,16 @@ Anything else you think might need to be removed from hashing??
 
   - pageHeader
   - nav journal - current past issues, about, authors
+  - breadcrumbs
+  - next/previous article
+  - free.gif image
+  - MathJax_Message
   - accessIconContainer (ex: http://press.endocrine.org/toc/edrv/35/3)
   - top panel with 'subscribe'
+  - choose drop box (sectionJumpTo in full text)
   - right column - all except Download Citation
+    http://press.endocrine.org/action/showCitFormats?doi=10.1210%2Fjc.2013-1811
+  - support and help block in showCitFormats pages
   - pageFooter
 
 -------------------HTML CRAWL FILTERING----------------------------------------

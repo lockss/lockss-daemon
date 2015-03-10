@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.endocrinesociety;
 
 import java.io.InputStream;
-
+import java.util.regex.Pattern;
 import org.htmlparser.NodeFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -41,44 +41,56 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
 public class EndocrineSocietyHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
-
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
     
     NodeFilter[] filters = new NodeFilter[] {
+        // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
+        // <head> tag, <li> item has the text "Cited by"
         
-        // covered by BaseAtypon = next/previous
-        //<td class="journalNavLeftTd"> - 
-        // <td class="journalNavRightTd"> - 
+        HtmlNodeFilters.tag("noscript"),
         
         // pageHeader
-        HtmlNodeFilters.tagWithAttribute("section", "id", "pageHeader"),
-  
-        // nav journal - current past issues, about, authors
-        // http://press.endocrine.org/doi/full/10.1210/en.2012-2147
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-            "nav-journal"),
-        
+        HtmlNodeFilters.tagWithAttribute("div", "id", "pageHeader"),
+        // pageFooter
+        HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
         // top panel with 'subscribe'
         // http://press.endocrine.org/doi/full/10.1210/en.2012-2147
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "gutterless"),
-        
+        // nav journal - current past issues, about, authors
+        // http://press.endocrine.org/doi/full/10.1210/en.2012-2147
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "nav-journal"),
+        // toc - breadcrumbs
+        // <div class="widget literatumBreadcrumbs
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "literatumBreadcrumbs"),
+        // from issue toc or article: previous issue / next issue
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "literatumBookIssueNavigation"),
+        // toc - free.gif image
+        HtmlNodeFilters.tagWithAttributeRegex("img",  "src", "free.gif"),
+        // toc - access icon container
+        HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
+        // toc - this seems unused but may get turned on
+        // http://press.endocrine.org/doi/full/10.1210/er.2013-1012
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "MathJax_Message"),
+        // full - section choose pulldown appeared in multiple sections
+        // http://press.endocrine.org/doi/full/10.1210/er.2013-1012
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo"),
+        // showCitFormats - Support and Help block
+        // http://press.endocrine.org/action/showCitFormats?
+        // doi=10.1210%2Fjc.2013-1811
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
+                                              "twoColumnRightDropZoneColor"),
         // right column of an article - all except Download Citations
         // note: institution banner is inside sidebar-right
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex( 
-                "section", "class", "literatumRightSidebar"),
+                "div", "class", "literatumRightSidebar"),
                 HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),     
-         
-        // from toc - access icon container
-        // http://press.endocrine.org/toc/edrv/35/3            
-        HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"), 
-        
-        // pageFooter
-        HtmlNodeFilters.tagWithAttribute("section", "id", "pageFooter"),
-	
+                    "a", "href", "/action/showCitFormats\\?"))                       
     };
     
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
@@ -87,9 +99,14 @@ public class EndocrineSocietyHtmlHashFilterFactory
     return super.createFilteredInputStream(au, in, encoding, filters);
     }
     
-    @Override
-    public boolean doWSFiltering() {
-      return true;
-    }
+  @Override
+  public boolean doTagIDFiltering() {
+    return true;
+  }
+    
+  @Override
+  public boolean doWSFiltering() {
+    return true;
+  }
     
 }
