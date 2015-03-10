@@ -75,12 +75,12 @@
     param[journal_issn] = 1882-0786
     comment[param] = eissn preferred
 
-    au < manifest ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
-    au < manifest ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
-    au < manifest ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
-    au < manifest ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
-    au < manifest ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
-    au < manifest ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
+    au < testing ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
+    au < testing ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
+    au < testing ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
+    au < testing ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
+    au < testing ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
+    au < testing ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
     au < testing ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
     au < manifest ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
 
@@ -277,12 +277,12 @@
     au < exists ; exists ; 2005 ; Chinese Physics B Volume 14 ; 14 >
     au < exists ; exists ; 2006 ; Chinese Physics B Volume 15 ; 15 >
     au < exists ; exists ; 2007 ; Chinese Physics B Volume 16 ; 16 >
-    au < manifest ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
-    au < manifest ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
-    au < manifest ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
-    au < manifest ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
-    au < manifest ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
-    au < manifest ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
+    au < testing ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
+    au < testing ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
+    au < testing ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
+    au < testing ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
+    au < testing ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
+    au < testing ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
     au < testing ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
     au < manifest ; exists ; 2015 ; Chinese Physics B Volume 24 ; 24 >
   }
@@ -2607,7 +2607,7 @@
     param[journal_issn] = 1555-6611
     comment[param] = eissn preferred
 
-    au < manifest ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
+    au < testing ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
     au < ready ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
     au < manifest ; exists ; 2015 ; Laser Physics Volume 25 ; 25 >
 
@@ -2629,12 +2629,12 @@
     au < manifest ; exists ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
     au < manifest ; exists ; 2006 ; Laser Physics Letters Volume 3 ; 3 >
     au < manifest ; exists ; 2007 ; Laser Physics Letters Volume 4 ; 4 >
-    au < manifest ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
-    au < manifest ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
-    au < manifest ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
-    au < manifest ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
-    au < manifest ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
-    au < manifest ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
+    au < testing ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
+    au < testing ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
+    au < testing ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
+    au < testing ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
+    au < testing ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
+    au < testing ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
     au < testing ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
     au < manifest ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
 
@@ -2709,7 +2709,7 @@
     param[journal_issn] = 2050-6120
     comment[param] = eissn preferred
 
-    au < manifest ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
+    au < testing ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
     au < ready ; exists ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Methods and Applications in Fluorescence Volume 3 ; 3 >
 
@@ -3141,7 +3141,7 @@
     au < crawling ; exists ; 2012 ; Physica Scripta Volume 86 ; 86 > 
     au < crawling ; exists ; 2013 ; Physica Scripta Volume 87 ; 87 > 
     au < crawling ; exists ; 2013 ; Physica Scripta Volume 88 ; 88 > 
-    au < testing ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 > 
+    au < ready ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 > 
     au < ready ; exists ; 2014 ; Physica Scripta Volume 90 ; 90 > 
     au < expected ; exists ; 2015 ; Physica Scripta Volume 91 ; 91 > 
     au < expected ; exists ; 2015 ; Physica Scripta Volume 92 ; 92 > 
@@ -4073,7 +4073,7 @@
     param[journal_issn] = 2051-672X
     comment[param] = eissn preferred
 
-    au < manifest ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
+    au < testing ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
     au < testing ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
 
