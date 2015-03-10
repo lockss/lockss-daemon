@@ -9,18 +9,19 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.48.0</string>
+    <!--  for JsoupLinkExtractor support -->
+    <string>1.62.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>45</string>
+    <string>46</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -143,6 +144,11 @@
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.nature.NaturePublishingGroupLoginPageChecker</string>
   </entry>
+  <entry>
+  <!--  default link extractor is Gosling. Use Jsoup to handle titles with unencoded greaterthan in them -->
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.extractor.JsoupHtmlLinkExtractor$Factory</string>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.nature.NaturePublishingGroupArticleIteratorFactory</string>

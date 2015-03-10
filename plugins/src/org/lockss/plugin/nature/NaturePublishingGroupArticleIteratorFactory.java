@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,12 +28,11 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.nature;
 
 import java.util.Iterator;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
@@ -44,20 +43,37 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.SubTreeArticleIterator;
+import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.util.Logger;
 
 public class NaturePublishingGroupArticleIteratorFactory
-    implements ArticleIteratorFactory,
-	       ArticleMetadataExtractorFactory {
+implements ArticleIteratorFactory,
+ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("NaturePublishingGroupArticleIteratorFactory");
+  private static final Logger log = Logger.getLogger(NaturePublishingGroupArticleIteratorFactory.class);
 
   protected static final String ROOT_TEMPLATE = "\"%s%s/journal/v%s/\", base_url, journal_id, volume_name";
 
-  // we trap both full html AND pdfs but are careful to take html as a first choice and to be sure not to double count
+  // we trap both full html AND pdfs as primary aspects
   protected static final String PATTERN_TEMPLATE = "\"^%s%s/journal/v[^/]+/n[^/]+/(full/[^/]+\\.html|pdf/[^/]+\\.pdf)$\", base_url, journal_id, volume_name";
+
+  // Primary aspects of article
+  // note that exlusion syntax (?!foo) doesn't count as a matching group
+  // Do not pick up the <vol>/<issue>/full/index.html which is a 404 served as 200
+  private static final Pattern HTML_PATTERN = Pattern.compile("/full/(?!index)([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
+  // Do not pick up the <vol>/<issue>/pdf/toc.pdf or masthead.pdf as articles there is one each
+  // per issue and they aren't really articles and they don't have metadata
+  private static final Pattern PDF_PATTERN = Pattern.compile("/pdf/(?!toc|masthead)([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+
+  // how to change from one form (aspect) of article to another
+  private static final String HTML_REPLACEMENT = "/full/$1.html";
+  private static final String PDF_REPLACEMENT = "/pdf/$1.pdf";
+
+  // Things not an "article" but in support of an article
+  private static final String ABSTRACT_REPLACEMENT = "/abs/$1.html";
+  private static final String RIS_REPLACEMENT = "/ris/$1.ris";
+  private static final String FIG_REPLACEMENT = "/fig_tab/$1_ft.html";
+  private static final String SUPPL_REPLACEMENT = "/suppinfo/$1.html";
 
   /*
    * The Nature URL structure means that the HTML for an article is
@@ -65,149 +81,66 @@ public class NaturePublishingGroupArticleIteratorFactory
    * ie <base_url>/<journal_id>/journal/v<volume> is the subtree we want.
    */
   @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-						      MetadataTarget target)
-      throws PluginException {
-    return new NaturePublishingGroupArticleIterator(au, new SubTreeArticleIterator.Spec()
-                                                        .setTarget(target)
-                                                        .setRootTemplate(ROOT_TEMPLATE)
-                                                        .setPatternTemplate(PATTERN_TEMPLATE));
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+
+    builder.setSpec(target,
+        ROOT_TEMPLATE,
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+
+    // The order in which these aspects are added is important. They determine which will trigger
+    // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
+    // lower aspects aren't looked for, once you get a match.
+
+    // set up PDF to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(PDF_PATTERN,
+        PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    // set up full text html to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(HTML_PATTERN,
+        HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
+
+    // an abstract alone should not be enough to trigger an ArticleFiles
+    builder.addAspect(ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
+    // First choice is &include=cit; second choice is &include=abs (AMetSoc)
+    builder.addAspect(RIS_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_RIS);
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
+    builder.addAspect(SUPPL_REPLACEMENT,
+        ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
+    builder.addAspect(FIG_REPLACEMENT,
+        ArticleFiles.ROLE_FIGURES_TABLES);
+
+    // Now prioritize various items
+
+    // The order in which we want to define full_text_cu.  
+    // First one that exists will get the job
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);  
+
+    // set the ROLE_ARTICLE_METADATA to the first one that exists
+    // 3/9/2015 - don't use RIS for metadata - it is very limited
+    // whereas the html metadata seems comprehensive
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+        //ArticleFiles.ROLE_CITATION_RIS,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+
+    return builder.getSubTreeArticleIterator();
   }
 
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
-  }
-
-  protected static class NaturePublishingGroupArticleIterator
-      extends SubTreeArticleIterator {
-
-    protected static Pattern HTML_PATTERN = Pattern.compile("/full/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
-
-    protected static Pattern PDF_PATTERN = Pattern.compile("/pdf/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-
-    protected static Pattern ABS_PATTERN = Pattern.compile("/abs/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
-
-    protected NaturePublishingGroupArticleIterator(ArchivalUnit au,
-                                                   SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
-
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-      ArticleFiles af = null; //new ArticleFiles();
-      boolean articleTarget = false;
-
-      /* minimize the work you do if you are just counting articles */
-      if ( (spec.getTarget() != null) && (spec.getTarget().isArticle())) {
-        articleTarget = true;
-      }
-
-      mat = HTML_PATTERN.matcher(url);
-      if (mat.find()) {
-        if ("index".equalsIgnoreCase(mat.group(1))) {
-          return null; // HTTP 404 served as HTTP 200
-        }
-        af = processFullTextHtml(cu, mat);
-      } else {
-        mat = PDF_PATTERN.matcher(url);
-        if (mat.find()) {
-          af = processFullTextPdf(cu, mat);
-        }
-      }
-
-      /* we have an article and we need to collect metadata */
-      if ((af != null) && !articleTarget) {
-        guessOtherParts(af, mat);
-      }
-
-      /*
-       * article files could be null if we found a PDF but realized that we will also find an equivalent html
-       * for this article.  In this case we don't want to base the AF on the PDF, so we do nothing.
-       */
-      return af;
-    }
-
-    /* this method only if there was .../full/<article>.html */
-    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
-      ArticleFiles af = new ArticleFiles();
-
-      af.setFullTextCu(htmlCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      guessFullTextPdf(af, htmlMat);
-      return af;
-    }
-
-    /* this method if there WAS a full text html, and now checking for pdf as well */
-    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/pdf/$1.pdf"));
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
-    }
-
-    /* this method if it matched a full text PDF, but if there will be or was an html, we will defer to that */
-    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
-
-      CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/full/$1.html"));
-      /*
-       * so that we don't get two articlefiles for one article, html, if it exists will take precedence
-       * we know it will also be caught by the pattern
-       */
-      if (htmlCu != null && htmlCu.hasContent()) {
-        log.debug3("PDF found but deferring to existing html" + htmlCu.getUrl());
-        return null;
-      }
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(pdfCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      return af;
-    }
-
-    /* this method if we have an af with full_text_cu of some sort and need metadata */
-    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
-      guessAbstract(af, mat);
-      guessFigures(af, mat);
-      guessSupplementaryMaterials(af, mat);
-      guessRisCitation(af, mat);
-    }
-
-
-
-    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abs/$1.html"));
-     if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
-          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
-        }
-      }
-    }
-
-    protected void guessFigures(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/fig_tab/$1_ft.html"));
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
-      }
-    }
-
-    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-      CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/suppinfo/$1.html"));
-      if (suppinfoCu != null && suppinfoCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
-      }
-    }
-
-    protected void guessRisCitation(ArticleFiles af, Matcher mat) {
-      CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris/$1.ris"));
-      if (risCu != null && risCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_ris", risCu);
-      }
-    }
-
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
 }

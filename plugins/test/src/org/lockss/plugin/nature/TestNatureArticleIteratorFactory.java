@@ -40,13 +40,11 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.repository.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 
 public class TestNatureArticleIteratorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestNatureArticleIteratorFactory");
+  private static final Logger log = Logger.getLogger("TestNatureArticleIteratorFactory");
 
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
   private ArchivalUnit nau;		// Nature AU
@@ -104,6 +102,7 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
 
   public void testArticleCountAndType() throws Exception {
     int expCount = 28;
+    //log.setLevel("debug3");
     PluginTestUtil.crawlSimAu(sau);
     String pat1 = "branch(\\d+)/(\\d+file\\.html)";
     String rep1 = "aps/journal/v123/n$1/full/$2";
@@ -129,36 +128,30 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
     int countPdfOnly = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
-      CachedUrl cu = af.getFullTextCu();
-      String url = cu.getUrl();
-      assertNotNull(cu);
-      String contentType = cu.getContentType();
-      log.debug("count " + count + " url " + url + " " + contentType);
+      //log.info(af.toString());
+      CachedUrl ftcu = af.getFullTextCu();
+      String fturl = ftcu.getUrl();
+      assertNotNull(ftcu);
+      String contentType = ftcu.getContentType();
+      log.debug3("count " + count + " FullTextCU " + fturl + " content type: " + contentType);
       count++;
+      // The full text CU will be the PDF unless one doesn't exist 
       if (af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) == null) {
         ++countHtmlOnly;
+        assertEquals(af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML), fturl);
       }
-      if (af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) == url) {
+      if (af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) == fturl) {
         ++countPdfOnly;
       }
     }
-    log.debug("Article count is " + count);
+    log.debug3("Article count is " + count);
     assertEquals(expCount, count);
     assertEquals(4, countHtmlOnly);
-    assertEquals(4, countPdfOnly);
+    assertEquals(24, countPdfOnly);
   }
 
-//  public void testArticleCountAndDefaultType() throws Exception {
-//    testArticleCountAndType("text/html", true, 24);
-//  }
-//
-//  public void testArticleCountAndPdf() throws Exception {
-//    testArticleCountAndType("application/pdf", false, 0);
-//  }
-
   private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
+    //log.info("deleting " + cu.getUrl());
     CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
     ArchivalUnit au = cu.getArchivalUnit();
     CachedUrlSet cus = au.makeCachedUrlSet(cuss);

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,7 +48,7 @@ import org.lockss.util.Logger;
 
 public class NatureHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("NatureMetadataExtractorFactory");
+  private static final Logger log = Logger.getLogger(NatureHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -71,7 +71,7 @@ public class NatureHtmlMetadataExtractorFactory
       // <meta name="citation_title" content="Altered arachidonic acid cascade enzymes in postmortem brain from bipolar disorder patients" />
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       // <meta name="citation_journal_title" content="Molecular Psychiatry" />
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField. FIELD_PUBLICATION_TITLE);
       // <meta name="citation_volume" content="19" />
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       // <meta name="citation_issue" content="2" />
