@@ -110,9 +110,9 @@
       param[base_url] = http://cajgh.pitt.edu/ojs/
       param[journal_id] = cajgh
 
-      au < exists ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 >
-      au < exists ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 >
-      au < exists ; 2014 ; 2014 ; Central Asian Journal of Global Health Volume 3 ; 3 >
+      au < manifest ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 >
+      au < manifest ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 >
+      au < manifest ; 2014 ; 2014 ; Central Asian Journal of Global Health Volume 3 ; 3 >
 
   }
 
