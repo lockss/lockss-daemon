@@ -1,5 +1,6 @@
 package org.lockss.test;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -13,7 +14,7 @@ import com.lyncode.xoai.serviceprovider.parameters.ListIdentifiersParameters;
 
 public class MockServiceProvider extends ServiceProvider {
   Context context;
-  Iterator<Header> li;
+  Collection<Header> li;
   
   public MockServiceProvider(Context context) {
     super(context);
@@ -25,13 +26,13 @@ public class MockServiceProvider extends ServiceProvider {
     if (!parameters.areValid())
         throw new BadArgumentException("ListIdentifiers verb requires the metadataPrefix");
     if (li != null) {
-      return li;
+      return li.iterator();
     }
     return new ItemIterator<Header>(null);
   }
   
-  public void setIdentifiers( Iterator<Header> header) {
-    li= header;
+  public void setIdentifiers( Collection<Header> header) {
+    li = header;
   }
 
 }

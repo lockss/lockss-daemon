@@ -50,6 +50,7 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 public class BaseCrawlSeed implements CrawlSeed {
   
   protected ArchivalUnit au;
+  boolean isInitialized = false;
 
   /**
    * @param au
@@ -66,8 +67,34 @@ public class BaseCrawlSeed implements CrawlSeed {
   public BaseCrawlSeed(CrawlerFacade crawlerFacade){
     this(crawlerFacade.getAu());
   }
-
-  public Collection<String> getStartUrls() throws ConfigurationException, PluginException, IOException{
+  
+  /**
+   * Add any initialization here for lazy initialization
+   */
+  protected void initialize() throws ConfigurationException, PluginException, IOException {
+  }
+  
+  /**
+   * Contains lazy initialization logic
+   */
+  public final Collection<String> getStartUrls() throws ConfigurationException, PluginException, IOException {
+    if(!isInitialized) {
+      initialize();
+      isInitialized = true;
+    }
+    return doGetStartUrls();
+  }
+  
+  /**
+   * Do the work of getting start URLs. By default get them from the AU.
+   * Override to provide custom start url generation.
+   * 
+   * @return startUrls
+   * @throws ConfigurationException
+   * @throws PluginException
+   * @throws IOException
+   */
+  public Collection<String> doGetStartUrls() throws ConfigurationException, PluginException, IOException {
     Collection<String> startUrls = au.getStartUrls();
     if (startUrls == null || startUrls.isEmpty()) {
       throw new PluginException.InvalidDefinition(
@@ -75,8 +102,27 @@ public class BaseCrawlSeed implements CrawlSeed {
     }
     return startUrls;
   }
+  
+  /**
+   * Contains lazy initialization logic
+   */
+  public final Collection<String> getPermissionUrls() throws ConfigurationException, PluginException, IOException{
+    if(!isInitialized) {
+      initialize();
+      isInitialized = true;
+    }
+    return doGetPermissionUrls();
+  }
 
-  public Collection<String> getPermissionUrls() throws ConfigurationException, PluginException, IOException{
+  /**
+   * Do the work of getting permission URLs. By default get them from the AU.
+   * Override to provide custom start url generation.
+   * @return permUrls
+   * @throws ConfigurationException
+   * @throws PluginException
+   * @throws IOException
+   */
+  public Collection<String> doGetPermissionUrls() throws ConfigurationException, PluginException, IOException{
     Collection<String> permUrls = au.getPermissionUrls();
     if (permUrls == null || permUrls.isEmpty()) {
       throw new PluginException.InvalidDefinition(
@@ -84,7 +130,12 @@ public class BaseCrawlSeed implements CrawlSeed {
     }
     return permUrls; 
   }
-
+  
+  /**
+   * If there is an error on fetch of a start Url should we abort?
+   * Crawl seeds that provide large lists of start URLs should override
+   * this and change to false.
+   */
   public boolean isFailOnStartUrlError() {
     return true;
   }
