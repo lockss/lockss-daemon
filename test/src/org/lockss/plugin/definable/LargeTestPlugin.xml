@@ -180,6 +180,18 @@
     <string>org.lockss.plugin.definable.MockFactories$SubstPredFact</string>
   </entry>
   <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$UrlFetFact</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$UrlConsFact</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$CrawlSeedFact</string>
+  </entry>
+  <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
     <list>
       <string>"%s.*/rotating_ad.*", base_url</string>

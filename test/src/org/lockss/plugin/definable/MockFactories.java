@@ -38,6 +38,7 @@ import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
@@ -119,6 +120,32 @@ public class MockFactories {
 	throws PluginException.LinkageError {
       return new SubstPred(au);
     }
+  }
+  
+  public static class UrlConsFact implements UrlConsumerFactory {
+
+    @Override
+    public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
+                                         FetchedUrlData fud) {
+      return null;
+    }
+  }
+  
+  public static class UrlFetFact implements UrlFetcherFactory {
+
+    @Override
+    public UrlFetcher createUrlFetcher(CrawlerFacade crawlFacade, String url) {
+      return new MockUrlFetcher(crawlFacade, url);
+    }
+  }
+  
+  public static class CrawlSeedFact implements CrawlSeedFactory {
+
+    @Override
+    public CrawlSeed createCrawlSeed(CrawlerFacade crawlFacade) {
+      return null;
+    }
+
   }
 
   private static final Set SUBSTANCE_TYPES = SetUtil.set("application/pdf",

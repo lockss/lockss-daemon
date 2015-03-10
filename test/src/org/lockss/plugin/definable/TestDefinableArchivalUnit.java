@@ -763,7 +763,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertNull(au.getFetchRateLimiterKey());
     assertEquals("au", au.getFetchRateLimiterSource());
     assertEquals(new RateLimiterInfo(null, "1/6000"), au.getRateLimiterInfo());
-
+    assertClass(SimpleUrlConsumerFactory.class, au.getUrlConsumerFactory());
+    assertClass(BaseCrawlSeed.class, au.makeCrawlSeed(null));
+    assertClass(BaseUrlFetcher.class, 
+                au.makeUrlFetcher(new MockCrawler().new MockCrawlerFacade(),
+                                  u1));
     assertNull(au.getPerHostPermissionPath());
 
     assertEmpty(au.getHttpCookies());
@@ -1365,6 +1369,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     ArticleIteratorFactory afact = defplug.getArticleIteratorFactory();
     assertTrue(afact instanceof ArticleIteratorFactoryWrapper);
+    assertTrue(defplug.getUrlConsumerFactory() instanceof UrlConsumerFactory);
+    assertTrue(defplug.getUrlFetcherFactory() instanceof UrlFetcherFactory);
+    assertTrue(defplug.getCrawlSeedFactory() instanceof CrawlSeedFactory);
+    
     assertTrue(""+WrapperUtil.unwrap(afact),
 	       WrapperUtil.unwrap(afact) instanceof MockFactories.ArtIterFact);
     assertEquals(CollectionUtil.EMPTY_ITERATOR, au.getArticleIterator());

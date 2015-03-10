@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.UrlFetcher.FetchResult;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.*;
@@ -103,6 +104,12 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
       throw new IllegalArgumentException("Valid archival unit required for crawl seed");
     }
     this.facade = facade;
+  }
+  
+  
+  
+  protected void initialize() 
+      throws ConfigurationException ,PluginException ,IOException {
     this.apiUrl = au.getConfiguration().get("api_url");
     this.issn = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ISSN.getKey());
     this.volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
@@ -110,7 +117,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
   }
   
   @Override
-  public Collection<String> getStartUrls() throws PluginException, IOException {
+  public Collection<String> doGetStartUrls() throws PluginException, IOException {
     if (urlList == null) {
       populateUrlList();
     }

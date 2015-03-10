@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.portlandpress;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
@@ -55,7 +56,7 @@ implements CrawlSeedFactory {
   private static final String WST_JID = "wst";
   private static final String WS_JID = "ws";
   private static final Set<String> issueJids = new HashSet<String>(Arrays.asList(WP_JID, WST_JID, WS_JID));
-
+  protected Collection<String> urls;
 
   public CrawlSeed createCrawlSeed(ArchivalUnit au) {
     return new PortlandPressCrawlSeed(au);
@@ -71,10 +72,8 @@ implements CrawlSeedFactory {
     public PortlandPressCrawlSeed(ArchivalUnit au) {
       super(au);
     }
-
-    @Override
-    public Collection<String> getStartUrls() 
-        throws ConfigurationException, PluginException {
+    
+    protected void initialize() throws ConfigurationException ,PluginException ,IOException {
       Configuration config = au.getConfiguration();
       if (config == null) {
         throw new PluginException("Null configuration, can't get start url");
@@ -101,12 +100,19 @@ implements CrawlSeedFactory {
         sb.append("01");
       }
       sb.append("/lockss.htm");
-      return Arrays.asList(sb.toString());
+      urls = Arrays.asList(sb.toString());
     }
 
     @Override
-    public Collection<String> getPermissionUrls() throws ConfigurationException, PluginException {
-      return getStartUrls();
+    public Collection<String> doGetStartUrls() 
+        throws ConfigurationException, PluginException, IOException {
+      return urls;
+    }
+
+    @Override
+    public Collection<String> doGetPermissionUrls() 
+        throws ConfigurationException, PluginException, IOException {
+      return urls;
     }
   }
 }
