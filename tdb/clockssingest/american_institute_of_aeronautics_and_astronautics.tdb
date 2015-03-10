@@ -80,7 +80,7 @@
     au < crawling ; exists ; 2011 ; AIAA Journal Volume 49 ; 49 >
     au < crawling ; exists ; 2012 ; AIAA Journal Volume 50 ; 50 >
     au < crawling ; exists ; 2013 ; AIAA Journal Volume 51 ; 51 >
-    au < ready ; exists ; 2014 ; AIAA Journal Volume 52 ; 52 >
+    au < crawling ; exists ; 2014 ; AIAA Journal Volume 52 ; 52 >
     au < manifest ; exists ; 2015 ; AIAA Journal Volume 53 ; 53 >
 
   } 
@@ -117,7 +117,6 @@
       issnl = 0021-8669
     >
     param[journal_id] = ja
-    comment[notReady] = fetch error
 
     au < manifest ; exists ; 1964 ; Journal of Aircraft Volume 1 ; 1 >
     au < manifest ; exists ; 1965 ; Journal of Aircraft Volume 2 ; 2 >
@@ -169,7 +168,7 @@
     au < crawling ; exists ; 2011 ; Journal of Aircraft Volume 48 ; 48 >
     au < crawling ; exists ; 2012 ; Journal of Aircraft Volume 49 ; 49 >
     au < crawling ; exists ; 2013 ; Journal of Aircraft Volume 50 ; 50 >
-    au < ready ; exists ; 2014 ; Journal of Aircraft Volume 51 ; 51 >
+    au < crawling ; exists ; 2014 ; Journal of Aircraft Volume 51 ; 51 >
     au < manifest ; exists ; 2015 ; Journal of Aircraft Volume 52 ; 52 >
 
   }
@@ -240,7 +239,7 @@
     au < manifest ; exists ; 2011 ; Journal of Guidance, Control, and Dynamics Volume 34 ; 34 >
     au < crawling ; exists ; 2012 ; Journal of Guidance, Control, and Dynamics Volume 35 ; 35 >
     au < crawling ; exists ; 2013 ; Journal of Guidance, Control, and Dynamics Volume 36 ; 36 >
-    au < ready ; exists ; 2014 ; Journal of Guidance, Control, and Dynamics Volume 37 ; 37 >
+    au < crawling ; exists ; 2014 ; Journal of Guidance, Control, and Dynamics Volume 37 ; 37 >
     au < manifest ; exists ; 2015 ; Journal of Guidance, Control, and Dynamics Volume 38 ; 38 >
 
   }
@@ -312,7 +311,7 @@
     au < manifest ; exists ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
     au < manifest ; exists ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
     au < crawling ; exists ; 2013 ; Journal of Propulsion and Power Volume 29 ; 29 >
-    au < ready ; exists ; 2014 ; Journal of Propulsion and Power Volume 30 ; 30 >
+    au < crawling ; exists ; 2014 ; Journal of Propulsion and Power Volume 30 ; 30 >
     au < manifest ; exists ; 2015 ; Journal of Propulsion and Power Volume 31 ; 31 >
 
   }
