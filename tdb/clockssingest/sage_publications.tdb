@@ -5194,6 +5194,21 @@
   {
 
     title <
+      name = Chinese Journal of Sociology ;
+      issn = 2057-150X ;
+      eissn = 2057-1518
+    >
+
+      param[base_url] = http://chs.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Christianity & Literature ;
       issn = 0148-3331 ;
       eissn = 2056-5666
