@@ -35,7 +35,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_name</string>
@@ -59,6 +59,10 @@
       <!--  some IWA concatenate 2-digit issue# to vol#: http://www.iwaponline.com/wst/06701/01/default.htm -->
       <string>1,"^%s%s(/ev)?/%s([0-9S]{2})?/", base_url, journal_id, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.portlandpress.PortlandPressCrawlSeedFactory</string>
   </entry>
 <!-- start url is determined by CrawlSeedFactory based on journal_id, it will be one of
   <entry>
@@ -122,10 +126,6 @@
     </list>
   </entry> 
   <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.portlandpress.PortlandPressCrawlSeedFactory</string>
-  </entry>
-  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -151,4 +151,3 @@
     <string>org.lockss.plugin.portlandpress.PortlandPressArticleIteratorFactory</string>
   </entry> 
 </map>
-

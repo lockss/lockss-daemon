@@ -28,79 +28,68 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
- */
+*/
 
 package org.lockss.plugin.portlandpress;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 import org.lockss.config.Configuration;
-import org.lockss.crawler.BaseCrawlSeed;
-import org.lockss.crawler.CrawlSeed;
-import org.lockss.crawler.CrawlSeedFactory;
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.Crawler;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.crawler.*;
+import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 
-public class PortlandPressCrawlSeedFactory  
-implements CrawlSeedFactory {
+/**
+ * @since 1.67.5
+ */
+public class PortlandPressCrawlSeedFactory implements CrawlSeedFactory {
 
-  /* currently these are three jids that warrant special base_url */
-  private static final String WP_JID = "wp";
-  private static final String WST_JID = "wst";
-  private static final String WS_JID = "ws";
-  private static final Set<String> issueJids = new HashSet<String>(Arrays.asList(WP_JID, WST_JID, WS_JID));
+  /* Currently these are three JIDs that warrant a special start URL */
+  protected static final String WP_JID = "wp";
+  protected static final String WS_JID = "ws";
+  protected static final String WST_JID = "wst";
+  protected static final Set<String> SPECIAL_JIDS =
+      new HashSet<String>(Arrays.asList(WP_JID, WST_JID, WS_JID));
+
   protected Collection<String> urls;
 
-  public CrawlSeed createCrawlSeed(ArchivalUnit au) {
-    return new PortlandPressCrawlSeed(au);
+  @Override
+  public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
+    return new PortlandPressCrawlSeed(facade);
   }
-  
-  public CrawlSeed createCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
-    return new PortlandPressCrawlSeed(crawlFacade.getAu());
-  }
-
 
   public class PortlandPressCrawlSeed extends BaseCrawlSeed {
 
-    public PortlandPressCrawlSeed(ArchivalUnit au) {
-      super(au);
+    public PortlandPressCrawlSeed(CrawlerFacade facade) {
+      super(facade);
     }
     
-    protected void initialize() throws ConfigurationException ,PluginException ,IOException {
+    protected void initialize()
+        throws ConfigurationException, PluginException, IOException {
+      super.initialize();
       Configuration config = au.getConfiguration();
       if (config == null) {
-        throw new PluginException("Null configuration, can't get start url");
+        throw new PluginException("Null configuration, can't get start URL");
       }
       String base_url = config.get(ConfigParamDescr.BASE_URL.getKey());
       String jid = config.get(ConfigParamDescr.JOURNAL_ID.getKey());
       String vol = config.get(ConfigParamDescr.VOLUME_NAME.getKey());
       if (base_url == null || jid == null || vol == null) {
         throw new PluginException.InvalidDefinition(
-            "CrawlSeed cannot set a starting URL based on the params");
+            "Crawl seed cannot set a start URL based on the params");
       }
       /* 
-       * start_url will be one of:
-       *    "<base>/<jid>/<volume>/lockss.htm"
-       * or
-       *   "<base>/<jid>/<volume>01/lockss.htm"
+       * Most start URLs are:    <base>/<jid>/<volume>/lockss.htm
+       * For special JIDs, it's: <base>/<jid>/<volume>01/lockss.htm
        */
-      StringBuilder sb = new StringBuilder();
-      sb.append(base_url);
-      sb.append(jid);
-      sb.append("/");
-      sb.append(vol);
-      if (issueJids.contains(jid)) {
-        sb.append("01");
-      }
-      sb.append("/lockss.htm");
-      urls = Arrays.asList(sb.toString());
+      String url = String.format("%s%s/%s%s/lockss.htm",
+                                 base_url,
+                                 jid,
+                                 vol,
+                                 (SPECIAL_JIDS.contains(jid) ? "01" : ""));
+      urls = Arrays.asList(url);
     }
 
     @Override
@@ -114,10 +103,7 @@ implements CrawlSeedFactory {
         throws ConfigurationException, PluginException, IOException {
       return urls;
     }
+
   }
+
 }
-
-
-
-
-
