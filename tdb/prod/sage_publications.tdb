@@ -3213,6 +3213,7 @@
       param[base_url] = http://aan.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < expected ; 2002 ; Asian Cardiovascular and Thoracic Annals Volume 10 ; 10 >
       au < manifest ; 2003 ; Asian Cardiovascular and Thoracic Annals Volume 11 ; 11 >
       au < manifest ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 >
       au < manifest ; 2005 ; Asian Cardiovascular and Thoracic Annals Volume 13 ; 13 >
