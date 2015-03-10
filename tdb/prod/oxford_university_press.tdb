@@ -411,7 +411,7 @@
     au < exists ; 2012 ; American Entomologist Volume 58 ; 58 >
     au < exists ; 2013 ; American Entomologist Volume 59 ; 59 >
     au < exists ; 2014 ; American Entomologist Volume 60 ; 60 >
-    au < expected ; 2015 ; American Entomologist Volume 61 ; 61 >
+    au < manifest ; 2015 ; American Entomologist Volume 61 ; 61 >
 
   }
 
@@ -1769,7 +1769,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Applied Mathematics Research eXpress (AMRX) Volume 2013 ; 2013 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Applied Mathematics Research eXpress (AMRX) Volume 2014 ; 2014 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Applied Mathematics Research eXpress (AMRX) Volume 2015 ; 2015 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Applied Mathematics Research eXpress (AMRX) Volume 2015 ; 2015 >
 
   }
 
@@ -2430,13 +2430,13 @@
     au < HighWireStrVolPlugin ; down ; 2006 ; Brain Volume 129 ; 129 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Brain Volume 130 ; 130 >
     au < HighWirePressPlugin ; down ; 2008 ; Brain Volume 131 ; 131 >
-    au < oup.OUPDrupalPlugin ; exists ; 2009 ; Brain Volume 132 ; 132 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2009 ; Brain Volume 132 ; 132 >
     au < HighWirePressH20Plugin ; down ; 2010 ; Brain Volume 133 ; 133 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Brain Volume 134 ; 134 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Brain Volume 135 ; 135 >
-    au < oup.OUPDrupalPlugin ; exists ; 2013 ; Brain Volume 136 ; 136 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Brain Volume 137 ; 137 >
-    au < oup.OUPDrupalPlugin ; exists ; 2015 ; Brain Volume 138 ; 138 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; Brain Volume 136 ; 136 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Brain Volume 137 ; 137 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Brain Volume 138 ; 138 >
 
     }
 
@@ -3236,7 +3236,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; British Medical Bulletin Volume 110 ; 110 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; British Medical Bulletin Volume 111 ; 111 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; British Medical Bulletin Volume 112 ; 112 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; British Medical Bulletin Volume 113 ; 113 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; British Medical Bulletin Volume 113 ; 113 >
 
     }
 
@@ -3574,7 +3574,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; The Cambridge Quarterly Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 >
 
     }
 
@@ -3712,71 +3712,71 @@
     param[base_url] = http://cardiovascres.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < oup.OUPDrupalPlugin ; exists ; 1967 ; Cardiovascular Research Volume 1 ; 1 >
-    au < oup.OUPDrupalPlugin ; exists ; 1968 ; Cardiovascular Research Volume 2 ; 2 >
-    au < oup.OUPDrupalPlugin ; exists ; 1969 ; Cardiovascular Research Volume 3 ; 3 >
-    au < oup.OUPDrupalPlugin ; exists ; 1970 ; Cardiovascular Research Volume 4 ; 4 >
-    au < oup.OUPDrupalPlugin ; exists ; 1971 ; Cardiovascular Research Volume 5 ; 5 >
-    au < oup.OUPDrupalPlugin ; exists ; 1972 ; Cardiovascular Research Volume 6 ; 6 >
-    au < oup.OUPDrupalPlugin ; exists ; 1973 ; Cardiovascular Research Volume 7 ; 7 >
-    au < oup.OUPDrupalPlugin ; exists ; 1974 ; Cardiovascular Research Volume 8 ; 8 >
-    au < oup.OUPDrupalPlugin ; exists ; 1975 ; Cardiovascular Research Volume 9 ; 9 >
-    au < oup.OUPDrupalPlugin ; exists ; 1976 ; Cardiovascular Research Volume 10 ; 10 >
-    au < oup.OUPDrupalPlugin ; exists ; 1977 ; Cardiovascular Research Volume 11 ; 11 >
-    au < oup.OUPDrupalPlugin ; exists ; 1978 ; Cardiovascular Research Volume 12 ; 12 >
-    au < oup.OUPDrupalPlugin ; exists ; 1979 ; Cardiovascular Research Volume 13 ; 13 >
-    au < oup.OUPDrupalPlugin ; exists ; 1980 ; Cardiovascular Research Volume 14 ; 14 >
-    au < oup.OUPDrupalPlugin ; exists ; 1981 ; Cardiovascular Research Volume 15 ; 15 >
-    au < oup.OUPDrupalPlugin ; exists ; 1982 ; Cardiovascular Research Volume 16 ; 16 >
-    au < oup.OUPDrupalPlugin ; exists ; 1983 ; Cardiovascular Research Volume 17 ; 17 >
-    au < oup.OUPDrupalPlugin ; exists ; 1984 ; Cardiovascular Research Volume 18 ; 18 >
-    au < oup.OUPDrupalPlugin ; exists ; 1985 ; Cardiovascular Research Volume 19 ; 19 >
-    au < oup.OUPDrupalPlugin ; exists ; 1986 ; Cardiovascular Research Volume 20 ; 20 >
-    au < oup.OUPDrupalPlugin ; exists ; 1987 ; Cardiovascular Research Volume 21 ; 21 >
-    au < oup.OUPDrupalPlugin ; exists ; 1988 ; Cardiovascular Research Volume 22 ; 22 >
-    au < oup.OUPDrupalPlugin ; exists ; 1989 ; Cardiovascular Research Volume 23 ; 23 >
-    au < oup.OUPDrupalPlugin ; exists ; 1990 ; Cardiovascular Research Volume 24 ; 24 >
-    au < oup.OUPDrupalPlugin ; exists ; 1991 ; Cardiovascular Research Volume 25 ; 25 >
-    au < oup.OUPDrupalPlugin ; exists ; 1992 ; Cardiovascular Research Volume 26 ; 26 >
-    au < oup.OUPDrupalPlugin ; exists ; 1993 ; Cardiovascular Research Volume 27 ; 27 >
-    au < oup.OUPDrupalPlugin ; exists ; 1994 ; Cardiovascular Research Volume 28 ; 28 >
-    au < oup.OUPDrupalPlugin ; exists ; 1995 ; Cardiovascular Research Volume 29 ; 29 >
-    au < oup.OUPDrupalPlugin ; exists ; 1995 ; Cardiovascular Research Volume 30 ; 30 >
-    au < oup.OUPDrupalPlugin ; exists ; 1996 ; Cardiovascular Research Volume 31 ; 31 >
-    au < oup.OUPDrupalPlugin ; exists ; 1996 ; Cardiovascular Research Volume 32 ; 32 >
-    au < oup.OUPDrupalPlugin ; exists ; 1997 ; Cardiovascular Research Volume 33 ; 33 >
-    au < oup.OUPDrupalPlugin ; exists ; 1997 ; Cardiovascular Research Volume 34 ; 34 >
-    au < oup.OUPDrupalPlugin ; exists ; 1997 ; Cardiovascular Research Volume 35 ; 35 >
-    au < oup.OUPDrupalPlugin ; exists ; 1997 ; Cardiovascular Research Volume 36 ; 36 >
-    au < oup.OUPDrupalPlugin ; exists ; 1998 ; Cardiovascular Research Volume 37 ; 37 >
-    au < oup.OUPDrupalPlugin ; exists ; 1998 ; Cardiovascular Research Volume 38 ; 38 >
-    au < oup.OUPDrupalPlugin ; exists ; 1998 ; Cardiovascular Research Volume 39 ; 39 >
-    au < oup.OUPDrupalPlugin ; exists ; 1998 ; Cardiovascular Research Volume 40 ; 40 >
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; Cardiovascular Research Volume 41 ; 41 >
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; Cardiovascular Research Volume 42 ; 42 >
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; Cardiovascular Research Volume 43 ; 43 >
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; Cardiovascular Research Volume 44 ; 44 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; Cardiovascular Research Volume 45 ; 45 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; Cardiovascular Research Volume 46 ; 46 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; Cardiovascular Research Volume 47 ; 47 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; Cardiovascular Research Volume 48 ; 48 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; Cardiovascular Research Volume 49 ; 49 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; Cardiovascular Research Volume 50 ; 50 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; Cardiovascular Research Volume 51 ; 51 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; Cardiovascular Research Volume 52 ; 52 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; Cardiovascular Research Volume 53 ; 53 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; Cardiovascular Research Volume 54 ; 54 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; Cardiovascular Research Volume 55 ; 55 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; Cardiovascular Research Volume 56 ; 56 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; Cardiovascular Research Volume 57 ; 57 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; Cardiovascular Research Volume 58 ; 58 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; Cardiovascular Research Volume 59 ; 59 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; Cardiovascular Research Volume 60 ; 60 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; Cardiovascular Research Volume 61 ; 61 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; Cardiovascular Research Volume 62 ; 62 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; Cardiovascular Research Volume 63 ; 63 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; Cardiovascular Research Volume 64 ; 64 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; Cardiovascular Research Volume 65 ; 65 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1967 ; Cardiovascular Research Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1968 ; Cardiovascular Research Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1969 ; Cardiovascular Research Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1970 ; Cardiovascular Research Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1971 ; Cardiovascular Research Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1972 ; Cardiovascular Research Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1973 ; Cardiovascular Research Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1974 ; Cardiovascular Research Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1975 ; Cardiovascular Research Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1976 ; Cardiovascular Research Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1977 ; Cardiovascular Research Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1978 ; Cardiovascular Research Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1979 ; Cardiovascular Research Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1980 ; Cardiovascular Research Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1981 ; Cardiovascular Research Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1982 ; Cardiovascular Research Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1983 ; Cardiovascular Research Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1984 ; Cardiovascular Research Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; Cardiovascular Research Volume 19 ; 19 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; Cardiovascular Research Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; Cardiovascular Research Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; Cardiovascular Research Volume 22 ; 22 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; Cardiovascular Research Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; Cardiovascular Research Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; Cardiovascular Research Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; Cardiovascular Research Volume 26 ; 26 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1993 ; Cardiovascular Research Volume 27 ; 27 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1994 ; Cardiovascular Research Volume 28 ; 28 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; Cardiovascular Research Volume 29 ; 29 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; Cardiovascular Research Volume 30 ; 30 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; Cardiovascular Research Volume 31 ; 31 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; Cardiovascular Research Volume 32 ; 32 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; Cardiovascular Research Volume 33 ; 33 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; Cardiovascular Research Volume 34 ; 34 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; Cardiovascular Research Volume 35 ; 35 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; Cardiovascular Research Volume 36 ; 36 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; Cardiovascular Research Volume 37 ; 37 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; Cardiovascular Research Volume 38 ; 38 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; Cardiovascular Research Volume 39 ; 39 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; Cardiovascular Research Volume 40 ; 40 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; Cardiovascular Research Volume 41 ; 41 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; Cardiovascular Research Volume 42 ; 42 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; Cardiovascular Research Volume 43 ; 43 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; Cardiovascular Research Volume 44 ; 44 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; Cardiovascular Research Volume 45 ; 45 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; Cardiovascular Research Volume 46 ; 46 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; Cardiovascular Research Volume 47 ; 47 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; Cardiovascular Research Volume 48 ; 48 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; Cardiovascular Research Volume 49 ; 49 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; Cardiovascular Research Volume 50 ; 50 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; Cardiovascular Research Volume 51 ; 51 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; Cardiovascular Research Volume 52 ; 52 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; Cardiovascular Research Volume 53 ; 53 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; Cardiovascular Research Volume 54 ; 54 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; Cardiovascular Research Volume 55 ; 55 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; Cardiovascular Research Volume 56 ; 56 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; Cardiovascular Research Volume 57 ; 57 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; Cardiovascular Research Volume 58 ; 58 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; Cardiovascular Research Volume 59 ; 59 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; Cardiovascular Research Volume 60 ; 60 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Cardiovascular Research Volume 61 ; 61 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Cardiovascular Research Volume 62 ; 62 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Cardiovascular Research Volume 63 ; 63 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Cardiovascular Research Volume 64 ; 64 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Cardiovascular Research Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; down ; 2005 ; Cardiovascular Research Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; down ; 2005 ; Cardiovascular Research Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; down ; 2005 ; Cardiovascular Research Volume 68 ; 68 >
@@ -3811,12 +3811,12 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Cardiovascular Research Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Cardiovascular Research Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Cardiovascular Research Volume 99 ; 99 >
-    au < oup.OUPDrupalPlugin ; exists ; 2013 ; Cardiovascular Research Volume 100 ; 100 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Cardiovascular Research Volume 101 ; 101 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Cardiovascular Research Volume 102 ; 102 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Cardiovascular Research Volume 103 ; 103 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Cardiovascular Research Volume 104 ; 104 >
-    au < oup.OUPDrupalPlugin ; expected ; 2015 ; Cardiovascular Research Volume 105 ; 105 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; Cardiovascular Research Volume 100 ; 100 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Cardiovascular Research Volume 101 ; 101 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Cardiovascular Research Volume 102 ; 102 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Cardiovascular Research Volume 103 ; 103 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Cardiovascular Research Volume 104 ; 104 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 105 ; 105 >
 
     }
 
@@ -4931,7 +4931,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Early Music Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Early Music Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Early Music Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Early Music Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Early Music Volume 43 ; 43 >
 
     }
 
@@ -5802,12 +5802,12 @@
     param[base_url] = http://europace.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; Europace Volume 1 ; 1 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; Europace Volume 2 ; 2 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; Europace Volume 3 ; 3 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; Europace Volume 4 ; 4 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; Europace Volume 5 ; 5 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; Europace Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; Europace Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; Europace Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; Europace Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; Europace Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; Europace Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; Europace Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; down ; 2005 ; Europace Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; down ; 2006 ; Europace Volume 8 ; 8 >
     au < HighWireStrVolPlugin ; superseded ; 2007 ; Europace Volume 9 [superseded] ; 9 >
@@ -5816,10 +5816,10 @@
     au < HighWirePressH20Plugin ; down ; 2009 ; Europace Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; down ; 2010 ; Europace Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Europace Volume 13 ; 13 >
-    au < oup.OUPDrupalPlugin ; exists ; 2012 ; Europace Volume 14 ; 14 >
-    au < oup.OUPDrupalPlugin ; exists ; 2013 ; Europace Volume 15 ; 15 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Europace Volume 16 ; 16 >
-    au < oup.OUPDrupalPlugin ; exists ; 2015 ; Europace Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2012 ; Europace Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; Europace Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Europace Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Europace Volume 17 ; 17 >
 
     }
 
@@ -5840,31 +5840,31 @@
     param[base_url] = http://eurheartj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < oup.OUPDrupalPlugin ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 >
-    au < oup.OUPDrupalPlugin ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 >
-    au < oup.OUPDrupalPlugin ; exists ; 1982 ; European Heart Journal Volume 3 ; 3 >
-    au < oup.OUPDrupalPlugin ; exists ; 1983 ; European Heart Journal Volume 4 ; 4 >
-    au < oup.OUPDrupalPlugin ; exists ; 1984 ; European Heart Journal Volume 5 ; 5 >
-    au < oup.OUPDrupalPlugin ; exists ; 1985 ; European Heart Journal Volume 6 ; 6 >
-    au < oup.OUPDrupalPlugin ; exists ; 1986 ; European Heart Journal Volume 7 ; 7 >
-    au < oup.OUPDrupalPlugin ; exists ; 1987 ; European Heart Journal Volume 8 ; 8 >
-    au < oup.OUPDrupalPlugin ; exists ; 1988 ; European Heart Journal Volume 9 ; 9 >
-    au < oup.OUPDrupalPlugin ; exists ; 1989 ; European Heart Journal Volume 10 ; 10 >
-    au < oup.OUPDrupalPlugin ; exists ; 1990 ; European Heart Journal Volume 11 ; 11 >
-    au < oup.OUPDrupalPlugin ; exists ; 1991 ; European Heart Journal Volume 12 ; 12 >
-    au < oup.OUPDrupalPlugin ; exists ; 1992 ; European Heart Journal Volume 13 ; 13 >
-    au < oup.OUPDrupalPlugin ; exists ; 1993 ; European Heart Journal Volume 14 ; 14 >
-    au < oup.OUPDrupalPlugin ; exists ; 1994 ; European Heart Journal Volume 15 ; 15 >
-    au < oup.OUPDrupalPlugin ; exists ; 1995 ; European Heart Journal Volume 16 ; 16 >
-    au < oup.OUPDrupalPlugin ; exists ; 1996 ; European Heart Journal Volume 17 ; 17 >
-    au < oup.OUPDrupalPlugin ; exists ; 1997 ; European Heart Journal Volume 18 ; 18 >
-    au < oup.OUPDrupalPlugin ; exists ; 1998 ; European Heart Journal Volume 19 ; 19 >
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; European Heart Journal Volume 20 ; 20 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; European Heart Journal Volume 21 ; 21 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; European Heart Journal Volume 22 ; 22 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; European Heart Journal Volume 23 ; 23 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; European Heart Journal Volume 24 ; 24 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; European Heart Journal Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1980 ; European Heart Journal Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1981 ; European Heart Journal Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1982 ; European Heart Journal Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1983 ; European Heart Journal Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1984 ; European Heart Journal Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1985 ; European Heart Journal Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1986 ; European Heart Journal Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1987 ; European Heart Journal Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1988 ; European Heart Journal Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; European Heart Journal Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; European Heart Journal Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; European Heart Journal Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; European Heart Journal Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1993 ; European Heart Journal Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1994 ; European Heart Journal Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; European Heart Journal Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; European Heart Journal Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; European Heart Journal Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; European Heart Journal Volume 19 ; 19 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; European Heart Journal Volume 20 ; 20 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; European Heart Journal Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; European Heart Journal Volume 22 ; 22 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; European Heart Journal Volume 23 ; 23 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; European Heart Journal Volume 24 ; 24 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; European Heart Journal Volume 25 ; 25 >
     au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; European Heart Journal Volume 26 [superseded] ; 26 >
     au < HighWirePressH20Plugin ; down ; 2005 ; European Heart Journal Volume 26 ; 26 >
     au < HighWireStrVolPlugin ; doNotProcess ; 2006 ; European Heart Journal Volume 27 [superseded] ; 27 >
@@ -6013,7 +6013,7 @@
     au < HighWirePressH20Plugin ; down ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; down ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; down ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 >
-    au < oup.OUPDrupalPlugin ; exists ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 >
 
     }
 
@@ -9359,7 +9359,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Industrial Law Journal Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Industrial Law Journal Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Industrial Law Journal Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Industrial Law Journal Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Industrial Law Journal Volume 44 ; 44 >
 
     }
 
@@ -9913,7 +9913,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Law, Policy and the Family Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Law, Policy and the Family Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Law, Policy and the Family Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal of Law, Policy and the Family Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Law, Policy and the Family Volume 29 ; 29 >
 
     }
 
@@ -10123,22 +10123,22 @@
     param[base_url] = http://intqhc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < oup.OUPDrupalPlugin ; exists ; 1989 ; International Journal for Quality in Health Care Volume 1 ; 1 >
-    au < oup.OUPDrupalPlugin ; exists ; 1990 ; International Journal for Quality in Health Care Volume 2 ; 2 >
-    au < oup.OUPDrupalPlugin ; exists ; 1991 ; International Journal for Quality in Health Care Volume 3 ; 3 >
-    au < oup.OUPDrupalPlugin ; exists ; 1992 ; International Journal for Quality in Health Care Volume 4 ; 4 >
-    au < oup.OUPDrupalPlugin ; exists ; 1993 ; International Journal for Quality in Health Care Volume 5 ; 5 >
-    au < oup.OUPDrupalPlugin ; exists ; 1994 ; International Journal for Quality in Health Care Volume 6 ; 6 >
-    au < oup.OUPDrupalPlugin ; exists ; 1995 ; International Journal for Quality in Health Care Volume 7 ; 7 >
-    au < oup.OUPDrupalPlugin ; exists ; 1996 ; International Journal for Quality in Health Care Volume 8 ; 8 >
-    au < oup.OUPDrupalPlugin ; exists ; 1997 ; International Journal for Quality in Health Care Volume 9 ; 9 >
-    au < oup.OUPDrupalPlugin ; exists ; 1998 ; International Journal for Quality in Health Care Volume 10 ; 10 >
-    au < oup.OUPDrupalPlugin ; exists ; 1999 ; International Journal for Quality in Health Care Volume 11 ; 11 >
-    au < oup.OUPDrupalPlugin ; exists ; 2000 ; International Journal for Quality in Health Care Volume 12 ; 12 >
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; International Journal for Quality in Health Care Volume 13 ; 13 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; International Journal for Quality in Health Care Volume 14 ; 14 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; International Journal for Quality in Health Care Volume 15 ; 15 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; International Journal for Quality in Health Care Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1989 ; International Journal for Quality in Health Care Volume 1 ; 1 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1990 ; International Journal for Quality in Health Care Volume 2 ; 2 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1991 ; International Journal for Quality in Health Care Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1992 ; International Journal for Quality in Health Care Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1993 ; International Journal for Quality in Health Care Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1994 ; International Journal for Quality in Health Care Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1995 ; International Journal for Quality in Health Care Volume 7 ; 7 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1996 ; International Journal for Quality in Health Care Volume 8 ; 8 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1997 ; International Journal for Quality in Health Care Volume 9 ; 9 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1998 ; International Journal for Quality in Health Care Volume 10 ; 10 >
+    au < oup.OUPDrupalPlugin ; manifest ; 1999 ; International Journal for Quality in Health Care Volume 11 ; 11 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2000 ; International Journal for Quality in Health Care Volume 12 ; 12 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; International Journal for Quality in Health Care Volume 13 ; 13 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; International Journal for Quality in Health Care Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; International Journal for Quality in Health Care Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; International Journal for Quality in Health Care Volume 16 ; 16 >
     au < HighWireStrVolPlugin ; down ; 2005 ; International Journal for Quality in Health Care Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Journal for Quality in Health Care Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; 2007 ; International Journal for Quality in Health Care Volume 19 ; 19 >
@@ -10147,9 +10147,9 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; down ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; down ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 >
-    au < oup.OUPDrupalPlugin ; exists ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 >
-    au < oup.OUPDrupalPlugin ; exists ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 >
 
     }
 
@@ -13043,7 +13043,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of International Criminal Justice Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of International Criminal Justice Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of International Criminal Justice Volume 13 ; 13 >
 
     }
 
@@ -13339,7 +13339,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Law and the Biosciences Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of the Law and the Biosciences Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the Law and the Biosciences Volume 2 ; 2 >
 
     }
 
@@ -14683,12 +14683,12 @@
     param[base_url] = http://jscr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < oup.OUPDrupalPlugin ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 >
-    au < oup.OUPDrupalPlugin ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 >
-    au < oup.OUPDrupalPlugin ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 >
-    au < oup.OUPDrupalPlugin ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 >
-    au < oup.OUPDrupalPlugin ; exists ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 >
 
   }
 
@@ -15023,7 +15023,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Law, Probability and Risk Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Law, Probability and Risk Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Law, Probability and Risk Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Law, Probability and Risk Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Law, Probability and Risk Volume 14 ; 14 >
 
     }
 
@@ -15456,7 +15456,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Literature and Theology Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Literature and Theology Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Literature and Theology Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Literature and Theology Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Literature and Theology Volume 29 ; 29 >
 
     }
 
@@ -18280,7 +18280,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Oxford Journal of Legal Studies Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Oxford Journal of Legal Studies Volume 35 ; 35 >
 
 
     }
@@ -20465,7 +20465,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2014 ; Regenerative Biomaterials Volume 1 ; 1 >
-    au < expected ; 2015 ; Regenerative Biomaterials Volume 2 ; 2 >
+    au < manifest ; 2015 ; Regenerative Biomaterials Volume 2 ; 2 >
 
   }
 
@@ -21485,7 +21485,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Social Politics Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Social Politics Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Social Politics Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Social Politics Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Social Politics Volume 22 ; 22 >
 
     }
 
@@ -22079,7 +22079,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Teaching Mathematics and its Applications Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Teaching Mathematics and its Applications Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Teaching Mathematics and its Applications Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Teaching Mathematics and its Applications Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Teaching Mathematics and its Applications Volume 34 ; 34 >
 
     }
 
