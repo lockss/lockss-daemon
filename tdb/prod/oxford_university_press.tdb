@@ -1909,6 +1909,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < expected ; 2012 ; Arthropod Management Tests Volume 37 ; 37 >
     au < manifest ; 2013 ; Arthropod Management Tests Volume 38 ; 38 >
     au < expected ; 2014 ; Arthropod Management Tests Volume 39 ; 39 >
     au < expected ; 2015 ; Arthropod Management Tests Volume 40 ; 40 >
