@@ -66,7 +66,7 @@ public class OneToOneNamespaceContext implements NamespaceContext {
   /**
    * <p>
    * Builds a new instance that initially maps
-   * {@link XMLConstants.DEFAULT_NS_PREFIX} to {XMLConstants.NULL_NS_URI}.
+   * {@link XMLConstants#DEFAULT_NS_PREFIX} to {@link XMLConstants#NULL_NS_URI}.
    * </p>
    * 
    * @since 1.67.5
@@ -79,8 +79,8 @@ public class OneToOneNamespaceContext implements NamespaceContext {
   /**
    * <p>
    * Builds a new instance that initially has the same mappings as the given
-   * map, and adds a mapping from {@link XMLConstants.DEFAULT_NS_PREFIX} to
-   * {XMLConstants.NULL_NS_URI} if there is no mapping for it initially.
+   * map, and adds a mapping from {@link XMLConstants#DEFAULT_NS_PREFIX} to
+   * {@link XMLConstants#NULL_NS_URI} if there is no mapping for it initially.
    * </p>
    * 
    * @param map
