@@ -2639,7 +2639,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       
       comment[error] = This url is currently banned as spam and cannot be sent through Stanford email.
 
-      au < manifest ; exists ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
+      au < testing ; exists ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Borderline Personality Disorder and Emotion Dysregulation Volume 2 ; 2 >
 
     }
@@ -2669,7 +2669,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < manifest ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < testing ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
 
     }
@@ -2685,7 +2685,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2049-3002
 
       au < crawling ; exists ; 2013 ; Cancer & Metabolism Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; Cancer & Metabolism Volume 2 ; 2 >
+      au < testing ; exists ; 2014 ; Cancer & Metabolism Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Cancer & Metabolism Volume 3 ; 3 >
 
     }
@@ -2713,7 +2713,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Cancer Cell International Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; Cancer Cell International Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; Cancer Cell International Volume 13 ; 13 >
-      au < manifest ; exists ; 2014 ; Cancer Cell International Volume 14 ; 14 >
+      au < testing ; exists ; 2014 ; Cancer Cell International Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; Cancer Cell International Volume 15 ; 15 >
 
     }
@@ -2728,7 +2728,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cancerimagingjournal.com/
       param[journal_issn] = 1470-7330
 
-      au < manifest ; exists ; 2014 ; Cancer Imaging Volume 14 ; 14 >
+      au < testing ; exists ; 2014 ; Cancer Imaging Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; Cancer Imaging Volume 15 ; 15 >
       
     }
@@ -2743,7 +2743,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cgejournal.org/
       param[journal_issn] = 2052-6687
 
-      au < manifest ; exists ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
+      au < testing ; exists ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 >
       
     }
@@ -2766,7 +2766,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Carbon Balance and Management Volume 8 ; 8 >
-      au < manifest ; exists ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
+      au < testing ; exists ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
 
     }
@@ -2793,7 +2793,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Cardiovascular Diabetology Volume 12 ; 12 >
-      au < manifest ; exists ; 2014 ; Cardiovascular Diabetology Volume 13 ; 13 >
+      au < testing ; exists ; 2014 ; Cardiovascular Diabetology Volume 13 ; 13 >
       au < manifest ; exists ; 2015 ; Cardiovascular Diabetology Volume 14 ; 14 >
 
     }
@@ -2819,7 +2819,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
+      au < testing ; exists ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Cardiovascular Ultrasound Volume 13 ; 13 >
 
     }
@@ -2855,7 +2855,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
-      au < manifest ; exists ; 2014 ; Cell & Bioscience Volume 4 ; 4 >
+      au < testing ; exists ; 2014 ; Cell & Bioscience Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Cell & Bioscience Volume 5 ; 5 >
 
     }
@@ -2881,7 +2881,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Cell Communication and Signaling Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Cell Communication and Signaling Volume 12 ; 12 >
+      au < testing ; exists ; 2014 ; Cell Communication and Signaling Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Cell Communication and Signaling Volume 13 ; 13 >
 
     }
@@ -2904,7 +2904,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Cell Division Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Cell Division Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Cell Division Volume 8 ; 8 >
-      au < manifest ; exists ; 2014 ; Cell Division Volume 9 ; 9 >
+      au < testing ; exists ; 2014 ; Cell Division Volume 9 ; 9 >
       au < expected ; exists ; 2015 ; Cell Division Volume 10 ; 10 >
 
     }
@@ -2922,7 +2922,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2012 ; Cell Regeneration Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Cell Regeneration Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; Cell Regeneration Volume 3 ; 3 >
+      au < testing ; exists ; 2014 ; Cell Regeneration Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Cell Regeneration Volume 4 ; 4 >
 
     }
@@ -2937,7 +2937,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cerebellumandataxias.com/
       param[journal_issn] = 2053-8871
 
-      au < manifest ; exists ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
+      au < testing ; exists ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
       
     }
@@ -2980,7 +2980,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 >
-      au < manifest ; exists ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
+      au < testing ; exists ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 ; 9 >
 
     }
@@ -3004,7 +3004,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Chinese Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Chinese Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Chinese Medicine Volume 8 ; 8 >
-      au < manifest ; exists ; 2014 ; Chinese Medicine Volume 9 ; 9 >
+      au < testing ; exists ; 2014 ; Chinese Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Chinese Medicine Volume 10 ; 10 >
 
     }
