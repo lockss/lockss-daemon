@@ -1,0 +1,140 @@
+{
+
+  publisher <
+    name = University of South Florida ;
+    info[tester] = 5
+  >
+  
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    param[base_url] = http://scholarcommons.usf.edu/
+    implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = ABO: Interactive Journal for Women in the Arts, 1640-1830 ;
+      eissn = 2157-7129 ;
+      issnl = 2157-7129
+    >
+    
+    param[journal_abbr] = abo
+
+    au < exists ; 2011 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 >
+    au < exists ; 2012 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 >
+    au < exists ; 2013 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 >
+    au < exists ; 2014 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 >
+    au < expected ; 2015 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 >
+
+  }
+
+  {
+  
+    title <
+      name = Alambique ;
+      eissn = 2167-6577 ;
+      issnl = 2167-6577
+    >
+    
+    param[journal_abbr] = alambique
+
+    au < exists ; 2013 ; ABO: Alambique Volume 1 ; 1 >
+    au < exists ; 2014 ; ABO: Alambique Volume 2 ; 2 >
+    au < expected ; 2015 ; ABO: Alambique Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
+      name = Genocide Studies and Prevention ;
+      issn = 1911-0359 ;
+      eissn = 1911-9933 ;
+      issnl = 1911-0359
+    >
+
+    attr[journal_id] = gsp
+
+    au < exists ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
+    au < exists ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
+    au < exists ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
+    au < exists ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
+    au < exists ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
+    au < exists ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
+    au < exists ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
+    au < exists ; 2014 ; Genocide Studies and Prevention Volume 8 ; 8 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Ecological Anthropology ;
+      issn = 1528-6509 ;
+      eissn = 2162-4593 ;
+      issnl = 1528-6509
+    >
+
+    attr[journal_id] = jea
+    comment[0] = titles changed in 2000
+
+    au < exists ; 1997 ; Georgia Journal of Ecological Anthropology Volume 1 ; 1 >
+    au < exists ; 1998 ; Georgia Journal of Ecological Anthropology Volume 2 ; 2 >
+    au < exists ; 1999 ; Georgia Journal of Ecological Anthropology Volume 3 ; 3 >
+    au < exists ; 2000 ; Journal of Ecological Anthropology Volume 4 ; 4 >
+    au < exists ; 2001 ; Journal of Ecological Anthropology Volume 5 ; 5 >
+    au < exists ; 2002 ; Journal of Ecological Anthropology Volume 6 ; 6 >
+    au < exists ; 2003 ; Journal of Ecological Anthropology Volume 7 ; 7 >
+    au < exists ; 2004 ; Journal of Ecological Anthropology Volume 8 ; 8 >
+    au < exists ; 2005 ; Journal of Ecological Anthropology Volume 9 ; 9 >
+    au < exists ; 2006 ; Journal of Ecological Anthropology Volume 10 ; 10 >
+    au < exists ; 2007 ; Journal of Ecological Anthropology Volume 11 ; 11 >
+    au < exists ; 2008 ; Journal of Ecological Anthropology Volume 12 ; 12 >
+    au < exists ; 2009 ; Journal of Ecological Anthropology Volume 13 ; 13 >
+    au < exists ; 2010 ; Journal of Ecological Anthropology Volume 14 ; 14 >
+    au < exists ; 2012 ; Journal of Ecological Anthropology Volume 15 ; 15 >
+    au < exists ; 2013 ; Journal of Ecological Anthropology Volume 16 ; 16 >
+    au < exists ; 2014 ; Journal of Ecological Anthropology Volume 17 ; 17 >
+    au < expected ; 2015 ; Journal of Ecological Anthropology Volume 18 ; 18 >
+
+  }
+
+  {
+  
+    title <
+      name = Numeracy ;
+      eissn = 1936-4660 ;
+      issnl = 1936-4660
+    >
+
+    attr[journal_id] = numeracy
+
+    au < exists ; 2008 ; Numeracy Volume 1 ; 1 >
+    au < exists ; 2009 ; Numeracy Volume 2 ; 2 >
+    au < exists ; 2010 ; Numeracy Volume 3 ; 3 >
+    au < exists ; 2011 ; Numeracy Volume 4 ; 4 >
+    au < exists ; 2012 ; Numeracy Volume 5 ; 5 >
+    au < exists ; 2013 ; Numeracy Volume 6 ; 6 >
+    au < exists ; 2014 ; Numeracy Volume 7 ; 7 >
+    au < exists ; 2015 ; Numeracy Volume 8 ; 8 >
+
+  }
+
+  {
+  
+    title <
+      name = Revista Surco Sur ;
+      issn = 2157-5223 ;
+      eissn = 2157-5231 ;
+      issnl = 2157-5223
+    >
+
+    attr[journal_id] = surcosur
+
+    au < exists ; 2011 ; Revista Surco Sur Volume 1 ; 1 >
+    au < exists ; 2012 ; Revista Surco Sur Volume 2 ; 2 >
+    au < exists ; 2013 ; Revista Surco Sur Volume 3 ; 3 >
+    au < exists ; 2014 ; Revista Surco Sur Volume 4 ; 4 >
+    au < expected ; 2015 ; Revista Surco Sur Volume 5 ; 5 >
+
+  }
+}
