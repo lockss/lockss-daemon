@@ -81,7 +81,7 @@
     au < testing ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
     au < testing ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
     au < testing ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
-    au < ready ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
+    au < crawling ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
     au < manifest ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
 
   }
@@ -653,9 +653,9 @@
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
     au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
-    au < ready ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
-    au < ready ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
-    au < ready ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
+    au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
+    au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
+    au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
     au < manifest ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 ; 109 >
     au < expected ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 ; 110 >
     au < expected ; exists ; 2015 ; EPL (Europhysics Letters) Volume 111 ; 111 >
@@ -709,7 +709,7 @@
     au < finished ; crawling ; 2011 ; European Journal of Physics Volume 32 ; 32 > 
     au < finished ; crawling ; 2012 ; European Journal of Physics Volume 33 ; 33 > 
     au < crawling ; exists ; 2013 ; European Journal of Physics Volume 34 ; 34 > 
-    au < ready ; exists ; 2014 ; European Journal of Physics Volume 35 ; 35 > 
+    au < crawling ; exists ; 2014 ; European Journal of Physics Volume 35 ; 35 > 
     au < manifest ; exists ; 2015 ; European Journal of Physics Volume 36 ; 36 > 
 
   }
@@ -818,7 +818,7 @@
     au < finished ; crawling ; 2011 ; Inverse Problems Volume 27 ; 27 > 
     au < finished ; crawling ; 2012 ; Inverse Problems Volume 28 ; 28 > 
     au < crawling ; exists ; 2013 ; Inverse Problems Volume 29 ; 29 > 
-    au < ready ; exists ; 2014 ; Inverse Problems Volume 30 ; 30 > 
+    au < crawling ; exists ; 2014 ; Inverse Problems Volume 30 ; 30 > 
     au < manifest ; exists ; 2015 ; Inverse Problems Volume 31 ; 31 > 
 
   }
@@ -852,7 +852,7 @@
     au < finished ; crawling ; 2011 ; IOP Conference Series: Earth and Environmental Science Volume 14 ; 14 > 
     au < crawling ; exists ; 2012 ; IOP Conference Series: Earth and Environmental Science Volume 15 ; 15 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Earth and Environmental Science Volume 16 ; 16 > 
-    au < ready ; exists ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 > 
+    au < crawling ; exists ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Earth and Environmental Science Volume 18 ; 18 > 
 
   }
@@ -915,10 +915,10 @@
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 44 ; 44 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 45 ; 45 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 46 ; 46 >
-    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
-    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
-    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
-    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
+    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
+    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
+    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
+    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 51 ; 51 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 52 ; 52 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 53 ; 53 > 
@@ -984,11 +984,11 @@
     au < manifest ; exists ; 2005 ; Japanese Journal of Applied Physics Volume 44 ; 44 >
     au < manifest ; exists ; 2006 ; Japanese Journal of Applied Physics Volume 45 ; 45 >
     au < manifest ; exists ; 2007 ; Japanese Journal of Applied Physics Volume 46 ; 46 >
-    au < ready ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
-    au < ready ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
-    au < ready ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
+    au < crawling ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
+    au < crawling ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
+    au < crawling ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
     au < testing ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
-    au < ready ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
+    au < crawling ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
     au < testing ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
     au < testing ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
     au < manifest ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
@@ -1014,7 +1014,7 @@
     au < finished ; crawling ; 2011 ; Journal of Breath Research Volume 5 ; 5 > 
     au < finished ; crawling ; 2012 ; Journal of Breath Research Volume 6 ; 6 > 
     au < crawling ; exists ; 2013 ; Journal of Breath Research Volume 7 ; 7 > 
-    au < ready ; exists ; 2014 ; Journal of Breath Research Volume 8 ; 8 > 
+    au < crawling ; exists ; 2014 ; Journal of Breath Research Volume 8 ; 8 > 
     au < manifest ; exists ; 2015 ; Journal of Breath Research Volume 9 ; 9 > 
 
   }
@@ -1067,7 +1067,7 @@
     au < finished ; crawling ; 2011 ; Journal of Geophysics and Engineering Volume 8 ; 8 > 
     au < finished ; crawling ; 2012 ; Journal of Geophysics and Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Geophysics and Engineering Volume 10 ; 10 > 
-    au < ready ; exists ; 2014 ; Journal of Geophysics and Engineering Volume 11 ; 11 > 
+    au < crawling ; exists ; 2014 ; Journal of Geophysics and Engineering Volume 11 ; 11 > 
     au < manifest ; exists ; 2015 ; Journal of Geophysics and Engineering Volume 12 ; 12 > 
 
   }
@@ -1133,7 +1133,7 @@
     au < finished ; crawling ; 2011 ; Journal of Instrumentation Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; Journal of Instrumentation Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Journal of Instrumentation Volume 8 ; 8 > 
-    au < ready ; exists ; 2014 ; Journal of Instrumentation Volume 9 ; 9 > 
+    au < crawling ; exists ; 2014 ; Journal of Instrumentation Volume 9 ; 9 > 
     au < manifest ; exists ; 2015 ; Journal of Instrumentation Volume 10 ; 10 > 
 
   }
@@ -1201,7 +1201,7 @@
     au < finished ; crawling ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 > 
     au < finished ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 > 
-    au < ready ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
+    au < crawling ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
     au < manifest ; exists ; 2015 ; Journal of Neural Engineering Volume 12 ; 12 > 
 
   }
@@ -1245,7 +1245,7 @@
     au < finished ; crawling ; 2011 ; Journal of Optics Volume 13 ; 13 > 
     au < finished ; crawling ; 2012 ; Journal of Optics Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Journal of Optics Volume 15 ; 15 > 
-    au < ready ; exists ; 2014 ; Journal of Optics Volume 16 ; 16 > 
+    au < crawling ; exists ; 2014 ; Journal of Optics Volume 16 ; 16 > 
     au < manifest ; exists ; 2015 ; Journal of Optics Volume 17 ; 17 > 
 
   }
@@ -1526,7 +1526,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 46 ; 46 > 
-    au < ready ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
+    au < crawling ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
     au < manifest ; exists ; 2015 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 48 ; 48 > 
 
   }
@@ -2303,99 +2303,99 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 477 ; 477 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 481 ; 481 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 482 ; 482 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 481 ; 481 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 482 ; 482 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 483 ; 483 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 484 ; 484 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 486 ; 486 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 487 ; 487 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 488 ; 488 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 489 ; 489 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 491 ; 491 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 484 ; 484 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 486 ; 486 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 487 ; 487 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 488 ; 488 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 489 ; 489 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 491 ; 491 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 492 ; 492 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 493 ; 493 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 494 ; 494 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 495 ; 495 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 496 ; 496 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 497 ; 497 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 498 ; 498 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 499 ; 499 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 500 ; 500 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 501 ; 501 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 502 ; 502 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 503 ; 503 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 504 ; 504 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 505 ; 505 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 506 ; 506 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 507 ; 507 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 508 ; 508 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 493 ; 493 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 494 ; 494 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 495 ; 495 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 496 ; 496 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 497 ; 497 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 498 ; 498 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 499 ; 499 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 500 ; 500 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 501 ; 501 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 502 ; 502 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 503 ; 503 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 504 ; 504 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 505 ; 505 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 506 ; 506 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 507 ; 507 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 508 ; 508 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 509 ; 509 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 510 ; 510 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 511 ; 511 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 510 ; 510 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 511 ; 511 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 512 ; 512 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 513 ; 513 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 514 ; 514 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 513 ; 513 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 514 ; 514 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 515 ; 515 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 516 ; 516 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 517 ; 517 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 518 ; 518 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 519 ; 519 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 520 ; 520 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 521 ; 521 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 522 ; 522 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 523 ; 523 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 524 ; 524 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 525 ; 525 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 526 ; 526 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 527 ; 527 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 528 ; 528 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 517 ; 517 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 518 ; 518 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 519 ; 519 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 520 ; 520 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 521 ; 521 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 522 ; 522 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 523 ; 523 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 524 ; 524 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 525 ; 525 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 526 ; 526 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 527 ; 527 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 528 ; 528 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 529 ; 529 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 530 ; 530 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 531 ; 531 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 532 ; 532 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 533 ; 533 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 534 ; 534 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 535 ; 535 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 536 ; 536 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 537 ; 537 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 538 ; 538 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 539 ; 539 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 540 ; 540 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 541 ; 541 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 542 ; 542 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 543 ; 543 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 544 ; 544 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 545 ; 545 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 546 ; 546 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 547 ; 547 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 548 ; 548 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 549 ; 549 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 530 ; 530 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 531 ; 531 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 532 ; 532 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 533 ; 533 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 534 ; 534 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 535 ; 535 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 536 ; 536 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 537 ; 537 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 538 ; 538 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 539 ; 539 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 540 ; 540 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 541 ; 541 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 542 ; 542 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 543 ; 543 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 544 ; 544 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 545 ; 545 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 546 ; 546 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 547 ; 547 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 548 ; 548 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 549 ; 549 >
     au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 550 ; 550 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 551 ; 551 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 552 ; 552 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 553 ; 553 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 554 ; 554 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 555 ; 555 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 556 ; 556 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 557 ; 557 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 558 ; 558 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 559 ; 559 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 560 ; 560 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 561 ; 561 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 562 ; 562 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 563 ; 563 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 564 ; 564 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 565 ; 565 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 566 ; 566 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 567 ; 567 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 568 ; 568 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 569 ; 569 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 570 ; 570 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 571 ; 571 >
-    au < ready ; exists ; 2014 ; Journal of Physics: Conference Series Volume 572 ; 572 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 551 ; 551 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 552 ; 552 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 553 ; 553 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 554 ; 554 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 555 ; 555 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 556 ; 556 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 557 ; 557 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 558 ; 558 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 559 ; 559 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 560 ; 560 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 561 ; 561 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 562 ; 562 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 563 ; 563 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 564 ; 564 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 565 ; 565 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 566 ; 566 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 567 ; 567 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 568 ; 568 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 569 ; 569 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 570 ; 570 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 571 ; 571 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 572 ; 572 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 573 ; 573 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 574 ; 574 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 575 ; 575 >
@@ -2543,7 +2543,7 @@
     au < finished ; crawling ; 2011 ; Journal of Semiconductors Volume 32 ; 32 >
     au < finished ; crawling ; 2012 ; Journal of Semiconductors Volume 33 ; 33 >
     au < crawling ; exists ; 2013 ; Journal of Semiconductors Volume 34 ; 34 >
-    au < ready ; exists ; 2014 ; Journal of Semiconductors Volume 35 ; 35 >
+    au < crawling ; exists ; 2014 ; Journal of Semiconductors Volume 35 ; 35 >
     au < manifest ; exists ; 2015 ; Journal of Semiconductors Volume 36 ; 36 >
     
   }
@@ -2608,7 +2608,7 @@
     comment[param] = eissn preferred
 
     au < testing ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
-    au < ready ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
+    au < crawling ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
     au < manifest ; exists ; 2015 ; Laser Physics Volume 25 ; 25 >
 
   }
@@ -2693,7 +2693,7 @@
     au < finished ; crawling ; 2011 ; Measurement Science and Technology Volume 22 ; 22 > 
     au < ingNotReady ; exists ; 2012 ; Measurement Science and Technology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Measurement Science and Technology Volume 24 ; 24 > 
-    au < ready ; exists ; 2014 ; Measurement Science and Technology Volume 25 ; 25 > 
+    au < crawling ; exists ; 2014 ; Measurement Science and Technology Volume 25 ; 25 > 
     au < manifest ; exists ; 2015 ; Measurement Science and Technology Volume 26 ; 26 > 
 
   }
@@ -2710,7 +2710,7 @@
     comment[param] = eissn preferred
 
     au < testing ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
-    au < ready ; exists ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
+    au < crawling ; exists ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Methods and Applications in Fluorescence Volume 3 ; 3 >
 
   }
@@ -2815,7 +2815,7 @@
     au < finished ; crawling ; 2011 ; Modelling and Simulation in Materials Science and Engineering Volume 19 ; 19 > 
     au < finished ; crawling ; 2012 ; Modelling and Simulation in Materials Science and Engineering Volume 20 ; 20 > 
     au < crawling ; exists ; 2013 ; Modelling and Simulation in Materials Science and Engineering Volume 21 ; 21 > 
-    au < ready ; exists ; 2014 ; Modelling and Simulation in Materials Science and Engineering Volume 22 ; 22 > 
+    au < crawling ; exists ; 2014 ; Modelling and Simulation in Materials Science and Engineering Volume 22 ; 22 > 
     au < manifest ; exists ; 2015 ; Modelling and Simulation in Materials Science and Engineering Volume 23 ; 23 > 
 
   }
@@ -2856,7 +2856,7 @@
     au < finished ; crawling ; 2011 ; Nanotechnology Volume 22 ; 22 > 
     au < crawling ; exists ; 2012 ; Nanotechnology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Nanotechnology Volume 24 ; 24 > 
-    au < ready ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
+    au < crawling ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
     au < manifest ; exists ; 2015 ; Nanotechnology Volume 26 ; 26 > 
     
   }
@@ -3141,8 +3141,8 @@
     au < crawling ; exists ; 2012 ; Physica Scripta Volume 86 ; 86 > 
     au < crawling ; exists ; 2013 ; Physica Scripta Volume 87 ; 87 > 
     au < crawling ; exists ; 2013 ; Physica Scripta Volume 88 ; 88 > 
-    au < ready ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 > 
-    au < ready ; exists ; 2014 ; Physica Scripta Volume 90 ; 90 > 
+    au < crawling ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 > 
+    au < crawling ; exists ; 2014 ; Physica Scripta Volume 90 ; 90 > 
     au < expected ; exists ; 2015 ; Physica Scripta Volume 91 ; 91 > 
     au < expected ; exists ; 2015 ; Physica Scripta Volume 92 ; 92 > 
 
@@ -3171,7 +3171,7 @@
     au < finished ; crawling ; 2011 ; Physical Biology Volume 8 ; 8 > 
     au < finished ; crawling ; 2012 ; Physical Biology Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Physical Biology Volume 10 ; 10 > 
-    au < ready ; exists ; 2014 ; Physical Biology Volume 11 ; 11 > 
+    au < crawling ; exists ; 2014 ; Physical Biology Volume 11 ; 11 > 
     au < manifest ; exists ; 2015 ; Physical Biology Volume 12 ; 12 > 
 
   }
@@ -3382,7 +3382,7 @@
     au < finished ; crawling ; 2011 ; Physiological Measurement Volume 32 ; 32 >
     au < finished ; crawling ; 2012 ; Physiological Measurement Volume 33 ; 33 >
     au < crawling ; exists ; 2013 ; Physiological Measurement Volume 34 ; 34 >
-    au < ready ; exists ; 2014 ; Physiological Measurement Volume 35 ; 35 >
+    au < crawling ; exists ; 2014 ; Physiological Measurement Volume 35 ; 35 >
     au < manifest ; exists ; 2015 ; Physiological Measurement Volume 36 ; 36 >
 
   }
@@ -3463,7 +3463,7 @@
     au < finished ; crawling ; 2011 ; Plasma Physics and Controlled Fusion Volume 53 ; 53 >
     au < ingNotReady ; exists ; 2012 ; Plasma Physics and Controlled Fusion Volume 54 ; 54 >
     au < crawling ; exists ; 2013 ; Plasma Physics and Controlled Fusion Volume 55 ; 55 >
-    au < ready ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 >
+    au < crawling ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 >
     au < manifest ; exists ; 2015 ; Plasma Physics and Controlled Fusion Volume 57 ; 57 >
 
   }
@@ -3493,7 +3493,7 @@
     au < finished ; crawling ; 2011 ; Plasma Science and Technology Volume 13 ; 13 > 
     au < finished ; crawling ; 2012 ; Plasma Science and Technology Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Plasma Science and Technology Volume 15 ; 15 > 
-    au < ready ; exists ; 2014 ; Plasma Science and Technology Volume 16 ; 16 > 
+    au < crawling ; exists ; 2014 ; Plasma Science and Technology Volume 16 ; 16 > 
     au < manifest ; exists ; 2015 ; Plasma Science and Technology Volume 17 ; 17 > 
 
   }
@@ -3861,7 +3861,7 @@
     au < finished ; crawling ; 2011 ; Reports on Progress in Physics Volume 74 ; 74  > 
     au < finished ; crawling ; 2012 ; Reports on Progress in Physics Volume 75 ; 75  > 
     au < crawling ; exists ; 2013 ; Reports on Progress in Physics Volume 76 ; 76  > 
-    au < ready ; exists ; 2014 ; Reports on Progress in Physics Volume 77 ; 77  > 
+    au < crawling ; exists ; 2014 ; Reports on Progress in Physics Volume 77 ; 77  > 
     au < manifest ; exists ; 2015 ; Reports on Progress in Physics Volume 78 ; 78  > 
 
   }
@@ -3882,7 +3882,7 @@
     au < finished ; crawling ; 2011 ; Research in Astronomy and Astrophysics Volume 11 ; 11 > 
     au < finished ; crawling ; 2012 ; Research in Astronomy and Astrophysics Volume 12 ; 12 > 
     au < crawling ; exists ; 2013 ; Research in Astronomy and Astrophysics Volume 13 ; 13 > 
-    au < ready ; exists ; 2014 ; Research in Astronomy and Astrophysics Volume 14 ; 14 > 
+    au < crawling ; exists ; 2014 ; Research in Astronomy and Astrophysics Volume 14 ; 14 > 
 
   }
 
@@ -3929,7 +3929,7 @@
     au < finished ; crawling ; 2011 ; Science and Technology of Advanced Materials Volume 12 ; 12 > 
     au < finished ; crawling ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 > 
     au < crawling ; exists ; 2013 ; Science and Technology of Advanced Materials Volume 14 ; 14 > 
-    au < ready ; exists ; 2014 ; Science and Technology of Advanced Materials Volume 15 ; 15 > 
+    au < crawling ; exists ; 2014 ; Science and Technology of Advanced Materials Volume 15 ; 15 > 
     au < manifest ; exists ; 2015 ; Science and Technology of Advanced Materials Volume 16 ; 16 > 
 
   }
