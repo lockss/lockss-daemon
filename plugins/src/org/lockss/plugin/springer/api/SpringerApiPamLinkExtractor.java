@@ -47,21 +47,58 @@ import org.lockss.util.*;
 import org.w3c.dom.*;
 import org.xml.sax.*;
 
+/**
+ * <p>
+ * A link extractor for Springer's PAM-based API responses (XML).
+ * </p>
+ * <p>
+ * A simple SAX parser does not mind that the response has imperfect
+ * namespace or schema/DTD declarations, but then the resulting tree cannot
+ * be processed using XPath, so a simple pre-processing step is applied by
+ * {@link PamRewritingReader} to make responses work with XPath. 
+ * </p>
+ * 
+ * @since 1.67.5
+ */
 public class SpringerApiPamLinkExtractor implements LinkExtractor {
 
+  /**
+   * <p>
+   * A simple line rewriting reader that adds namespace declarations to a bare
+   * top-level <code>&lt;response&gt;</code> node.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   public static class PamRewritingReader extends LineRewritingReader {
+
+    /**
+     * <p>
+     * A flag indicating if the single rewriting operation has taken place.
+     * </p>
+     * 
+     * @since 1.67.5
+     */
+    protected boolean rewritten;
     
-    protected boolean done;
-    
+    /**
+     * <p>
+     * Wraps an incoming reader.
+     * </p>
+     * 
+     * @param reader
+     *          A reader.
+     * @since 1.67.5
+     */
     public PamRewritingReader(Reader reader) {
       super(reader);
-      this.done = false;
+      this.rewritten = false;
     }
     
     @Override
     public String rewriteLine(String line) {
-      if (!done && line.startsWith("<response>")) {
-        done = true;
+      if (!rewritten && line.startsWith("<response>")) {
+        rewritten = true;
         StringBuilder sb = new StringBuilder();
         sb.append("<response");
         for (Map.Entry<String, String> ent : NAMESPACE_MAP.entrySet()) {
@@ -80,25 +117,107 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
   }
   
   // Will become a definitional param
-  public static final String CDN_URL = "http://download.springer.com/";
+  private static final String CDN_URL = "http://download.springer.com/";
 
+  /**
+   * <p>
+   * The map of namespaces used in responses. (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected static final Map<String, String> NAMESPACE_MAP;
+
+  /**
+   * <p>
+   * An XPath expression to select the total number of records from the result
+   * section of the response. (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected static final XPathExpression TOTAL;
+
+  /**
+   * <p>
+   * An XPath expression to select the page length from the result section of
+   * the response. (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected static final XPathExpression PAGE_LENGTH;
-  protected static final XPathExpression START;
-  protected static final XPathExpression ARTICLE;
-  protected static final XPathExpression DOI;
-  protected static final XPathExpression ABSTRACT;
-  protected static final XPathExpression HTML;
-  protected static final XPathExpression PDF;
   
+  /**
+   * <p>
+   * An XPath expression to select the starting index from the result section of
+   * the response. (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
+  protected static final XPathExpression START;
+  
+  /**
+   * <p>
+   * An XPath expression to select the articles from the records section of the
+   * response. (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
+  protected static final XPathExpression ARTICLE;
+  
+  /**
+   * <p>
+   * An XPath expression to select the DOI from an article. (See static
+   * initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
+  protected static final XPathExpression DOI;
+  
+  /**
+   * <p>
+   * An XPath expression to select the nominal abstract URL from an article.
+   * (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
+  protected static final XPathExpression ABSTRACT;
+
+  /**
+   * <p>
+   * An XPath expression to select the nominal full text HTML URL from an
+   * article. (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
+  protected static final XPathExpression HTML;
+
+  /**
+   * <p>
+   * An XPath expression to select the nominal full text PDF URL from an
+   * article. (See static initializer.)
+   * </p>
+   * 
+   * @since 1.67.5
+   */
+  protected static final XPathExpression PDF;
+
+  /*
+   * STATIC INITIALIZER
+   */
   static {
+    NAMESPACE_MAP = new HashMap<String, String>();
+    NAMESPACE_MAP.put("dc", "http://purl.org/dc/elements/1.1/");
+    NAMESPACE_MAP.put("pam", "http://prismstandard.org/namespaces/pam/2.0/");
+    NAMESPACE_MAP.put("prism", "http://prismstandard.org/namespaces/basic/2.0/");
+    NAMESPACE_MAP.put("xhtml", "http://www.w3.org/1999/xhtml");
     try {
-      NAMESPACE_MAP = new HashMap<String, String>();
-      NAMESPACE_MAP.put("dc", "http://purl.org/dc/elements/1.1/");
-      NAMESPACE_MAP.put("pam", "http://prismstandard.org/namespaces/pam/2.0/");
-      NAMESPACE_MAP.put("prism", "http://prismstandard.org/namespaces/basic/2.0/");
-      NAMESPACE_MAP.put("xhtml", "http://www.w3.org/1999/xhtml");
       XPath xpath = XPathFactory.newInstance().newXPath();
       xpath.setNamespaceContext(new OneToOneNamespaceContext(NAMESPACE_MAP));
       START = xpath.compile("/response/result/start");
@@ -114,13 +233,41 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
       throw new ExceptionInInitializerError(xpee);
     }
   }
-  
+
+  /**
+   * <p>
+   * A flag indicating whether work on this query is done. 
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected boolean done;
-  
+
+  /**
+   * <p>
+   * The starting index found in the parsed response.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected int start;
   
+  /**
+   * <p>
+   * The page length found in the parsed response.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected int pageLength;
   
+  /**
+   * <p>
+   * The total found in the parsed response.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected int total;
   
   public SpringerApiPamLinkExtractor() {
@@ -243,6 +390,19 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
     return pageLength;
   }
   
+  /**
+   * <p>
+   * Encode a DOI for use in URLs, using the encoding of
+   * <code>application/x-www-form-urlencoded</code> and {@link URLEncoder},
+   * except that a space (<code>' '</code>) is encoded as <code>"%20"</code>
+   * rather than <code>'+'</code>.
+   * </p>
+   * 
+   * @param doi
+   *          A DOI.
+   * @return An encoded DOI (URL-encoded with <code>"%20"</code> for a space).
+   * @since 1.67.5
+   */
   public static String encodeDoi(String doi) {
     try {
       return URLEncoder.encode(doi, Constants.ENCODING_UTF_8).replace("+", "%20");

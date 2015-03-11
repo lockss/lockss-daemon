@@ -48,15 +48,32 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
 
+/**
+ * <p>
+ * A crawl seed that queries Springer's Meta API to enumerate article metadata
+ * and synthesize start URLs for crawls.
+ * </p>
+ * <p>
+ * Note that this is the newer Meta API, not the older Metadata API.
+ * </p>
+ * 
+ * @since 1.67.5
+ * @see https://dev.springer.com/
+ */
 public class SpringerApiCrawlSeed extends BaseCrawlSeed {
-  
-  // Will become a definitional param
-  public static final String CDN_URL = "http://download.springer.com/";
 
-  public static final int EXPECTED_RECORDS_PER_RESPONSE = 100;
-  
+  /**
+   * <p>
+   * A logger for this class.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   private static final Logger log = Logger.getLogger(SpringerApiCrawlSeed.class);
   
+  // Will become a definitional param
+  private static final String CDN_URL = "http://download.springer.com/";
+
   private static final String API_KEY;
   static {
     InputStream is = null;
@@ -83,24 +100,93 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     }
   }
 
+  /**
+   * <p>
+   * A crawl rate limit for requests to the API service.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   // Overall: 50,000 hits per day or 1 hit per 1.728s
   // Over 100 boxes: 1 hit per 172.8s rounded to 1 hit per 173s
   private static final String API_CRAWL_RATE_LIMIT = "1/173s";
+  
+  /**
+   * <p>
+   * A crawl rate limiter for requests to the API service.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   private static final CrawlRateLimiter API_CRAWL_RATE_LIMITER =
       new FileTypeCrawlRateLimiter(
           new RateLimiterInfo(SpringerApiCrawlSeed.class.getSimpleName(),
                               API_CRAWL_RATE_LIMIT));
   
+  /**
+   * <p>
+   * A constant for the maximum number of records expected per response from the
+   * API. If the API behaves otherwise, a site warning will be logged.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
+  protected static final int EXPECTED_RECORDS_PER_RESPONSE = 100;
+
+  /**
+   * <p>
+   * The API URL (<code>api_url</code>) of this crawl seed's AU.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected String apiUrl;
   
+  /**
+   * <p>
+   * The journal ISSN (<code>journal_issn</code>) of this crawl seed's AU.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected String issn;
   
+  /**
+   * <p>
+   * The volume name (<code>volume_name</code>) of this crawl seed's AU.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected String volume;
-  
+
+  /**
+   * <p>
+   * This crawl seed's crawler façade.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected CrawlerFacade facade;
 
+  /**
+   * <p>
+   * This crawl seed's list of start URLs.
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   protected List<String> urlList;
-  
+
+  /**
+   * <p>
+   * Builds a new crawl seed with the given crawler façade.
+   * </p>
+   * 
+   * @param facade
+   *          A crawler façade for this crawl seed.
+   * @since 1.67.5
+   */
   public SpringerApiCrawlSeed(CrawlerFacade facade) {
     super(facade);
     if (au == null) {
@@ -108,9 +194,11 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     }
     this.facade = facade;
   }
-  
+
+  @Override
   protected void initialize() 
       throws ConfigurationException ,PluginException ,IOException {
+    super.initialize();
     this.apiUrl = au.getConfiguration().get("api_url");
     this.issn = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ISSN.getKey());
     this.volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
@@ -124,18 +212,34 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     }
     return urlList;
   }
-  
+
+  /**
+   * <p>
+   * Populates the URL list with start URLs.
+   * </p>
+   * 
+   * @throws IOException
+   * @since 1.67.5
+   */
   protected void populateUrlList() throws IOException {
+    // Initialization
     boolean siteWarning = false; // Flag to log the potential siteWarning only once
     urlList = new ArrayList<String>();
-    int index = 1;
+    int index = 1; // API numbers records starting with 1
     SpringerApiPamLinkExtractor ple = new SpringerApiPamLinkExtractor();
+    
+    // Query API until done
     while (!ple.isDone()) {
       log.debug2("Beginning at index " + index);
+      
+      // Make URL fetcher for this request
       String url = makeApiUrl(index);
       UrlFetcher uf = makeApiUrlFetcher(ple, url);
       url = logUrl(url);
+      log.debug2("Request URL: " + url);
       facade.getCrawlerStatus().addPendingUrl(url);
+
+      // Make request
       FetchResult fr = null;
       try {
         fr = uf.fetch();
@@ -161,6 +265,8 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
         }
         throw new CacheException("Cannot fetch seed URL");
       }
+      
+      // Site warning for unexpected response length
       int records = ple.getPageLength();
       if (records != EXPECTED_RECORDS_PER_RESPONSE && !siteWarning) {
         siteWarning = true;
@@ -169,6 +275,8 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
                                       EXPECTED_RECORDS_PER_RESPONSE,
                                       records));
       }
+      
+      // Next batch of records
       index += records;
     }
     log.debug2(String.format("Ending with %d URLs", urlList.size()));
@@ -176,7 +284,17 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
       log.debug3("Start URLs: " + urlList.toString());
     }
   }
-  
+
+  /**
+   * <p>
+   * Assembles the query URL for a given starting index.
+   * </p>
+   * 
+   * @param startingIndex
+   *          A starting index (starts at 1).
+   * @return The query URL for the given starting index.
+   * @since 1.67.5
+   */
   protected String makeApiUrl(int startingIndex) {
     String url = String.format("%smeta/v1/pam?q=issn:%s%%20volume:%s&api_key=%s&p=%d&s=%d",
                                apiUrl,
@@ -185,24 +303,46 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
                                API_KEY,
                                EXPECTED_RECORDS_PER_RESPONSE,
                                startingIndex);
-    log.debug2("Request URL: " + logUrl(url));
     return url;
   }
-  
+
+  /**
+   * <p>
+   * Makes a URL fetcher for the given API request, that will parse the result
+   * using the given {@link SpringerApiPamLinkExtractor} instance.
+   * </p>
+   * 
+   * @param ple
+   *          A {@link SpringerApiPamLinkExtractor} instance to parse the API
+   *          response with.
+   * @param url
+   *          A query URL.
+   * @return A URL fetcher for the given query URL.
+   * @since 1.67.5
+   */
   protected UrlFetcher makeApiUrlFetcher(final SpringerApiPamLinkExtractor ple,
                                          final String url) {
+    // Make a URL fetcher
     UrlFetcher uf = facade.makeUrlFetcher(url);
+
+    // Set refetch flag
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(permFetchFlags);
+    
+    // Set custom crawl rate limiter
     uf.setCrawlRateLimiter(API_CRAWL_RATE_LIMITER);
+    
+    // Set custom URL consumer factory
     uf.setUrlConsumerFactory(new UrlConsumerFactory() {
       @Override
       public UrlConsumer createUrlConsumer(CrawlerFacade ucfFacade,
                                            FetchedUrlData ucfFud) {
+        // Make custom URL consumer
         return new SimpleUrlConsumer(ucfFacade, ucfFud) {
           @Override
           public void consume() throws IOException {
+            // Apply link extractor to URL and output results into a list
             final List<String> partial = new ArrayList<String>();
             try {
               ple.extractUrls(au,
@@ -221,10 +361,12 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
               throw new IOException("Error while parsing PAM response for " + url, ioe);
             }
             finally {
+              // Logging
               log.debug2(String.format("Step ending with %d URLs", partial.size()));
               if (log.isDebug3()) {
                 log.debug3("URLs from step: " + partial.toString());
               }
+              // Output accumulated URLs to start URL list
               urlList.addAll(partial);
             }
           }

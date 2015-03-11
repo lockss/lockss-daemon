@@ -35,6 +35,14 @@ package org.lockss.plugin.springer.api;
 import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 
+/**
+ * <p>
+ * A crawl seed factory for Springer's custom crawl seed.
+ * </p>
+ * 
+ * @since 1.67.5
+ * @see SpringerApiCrawlSeed
+ */
 public class SpringerApiCrawlSeedFactory implements CrawlSeedFactory {
 
   @Override

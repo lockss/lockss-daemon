@@ -40,6 +40,15 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 
+/**
+ * <p>
+ * A custom URL consumer that identifies specific redirect chains and stores the
+ * content at the origin of the chain (e.g. to support collecting and repairing
+ * redirect chains that begin with fixed URLs but end with one-time URLs).
+ * </p>
+ * 
+ * @since 1.67.5
+ */
 public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
 
   // Will become a definitional param
