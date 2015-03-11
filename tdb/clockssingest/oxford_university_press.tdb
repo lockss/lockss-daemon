@@ -1611,7 +1611,7 @@
     au < finished ; crawling ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; Annals of Oncology Volume 23 ; 23 ; >
     au < ingNotReady ; exists ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
-    au < ready ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2015 ; Annals of Oncology Volume 26 ; 26 ; >
 
     }
@@ -1634,7 +1634,7 @@
     au < finished ; crawling ; 2011 ; AoB PLANTS Volume 2011 ; 2011 ; >
     au < finished ; frozen ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 ; >
-    au < ready ; exists ; 2014 ; AoB PLANTS Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2014 ; AoB PLANTS Volume 6 ; 6 ; >
     au < expected ; exists ; 2015 ; AoB PLANTS Volume 7 ; 7 ; >
 
   }
@@ -2621,7 +2621,7 @@
     au < finished ; crawling ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
     au < finished ; frozen ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ; >
-    au < ready ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
     au < manifest ; exists ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ; >
 
     }
