@@ -42,6 +42,9 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
 
 public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
 
+  // Will become a definitional param
+  public static final String CDN_URL = "http://download.springer.com/";
+
   protected Pattern origPdfPat;
   
   protected Pattern destPdfPat;
@@ -49,29 +52,37 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
   public SpringerApiUrlConsumer(CrawlerFacade facade,
                                 FetchedUrlData fud) {
     super(facade, fud);
-    origPdfPat = Pattern.compile(String.format("^%scontent/pdf/.*\\.pdf$",
-                                               facade.getAu().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey())),
-                                 Pattern.CASE_INSENSITIVE);
-    destPdfPat = Pattern.compile(String.format("^%sstatic/pdf/.*\\.pdf?auth[^=]*=[^&]*&ext=.pdf$",
-                                               SpringerApiCrawlSeed.CDN_URL),
-                                 Pattern.CASE_INSENSITIVE);
+    origPdfPat = makeOrigPdfPattern(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
+    destPdfPat = makeDestPdfPattern(CDN_URL);
   }
 
   @Override
   public void consume() throws IOException {
-    if (storeRedirectsAtOrigUrl()) {
+    if (shouldStoreRedirectsAtOrigUrl()) {
       fud.fetchUrl = null;
       fud.redirectUrls = null;
     }
     super.consume();
   }
 
-  protected boolean storeRedirectsAtOrigUrl() {
+  protected boolean shouldStoreRedirectsAtOrigUrl() {
     return fud.redirectUrls != null
         && fud.redirectUrls.size() == 1
         && fud.redirectUrls.get(0).equals(fud.fetchUrl)
         && destPdfPat.matcher(fud.fetchUrl).find()
         && origPdfPat.matcher(fud.origUrl).find();
+  }
+  
+  protected static Pattern makeOrigPdfPattern(String baseUrl) {
+    return Pattern.compile(String.format("^%scontent/pdf/.*\\.pdf$",
+                                         baseUrl),
+                           Pattern.CASE_INSENSITIVE);
+  }
+  
+  protected static Pattern makeDestPdfPattern(String cdnUrl) {
+    return Pattern.compile(String.format("^%sstatic/pdf/.*\\.pdf\\?auth[^=]*=[^&]*(&ext=\\.pdf)?$",
+                                         cdnUrl),
+                           Pattern.CASE_INSENSITIVE);
   }
   
 }

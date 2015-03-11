@@ -32,9 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer.api;
 
-import static org.lockss.plugin.springer.api.SpringerApiCrawlSeed.logUrl;
-
 import java.io.*;
+import java.net.URLEncoder;
+import java.util.*;
 
 import javax.xml.parsers.*;
 import javax.xml.xpath.*;
@@ -49,6 +49,40 @@ import org.xml.sax.*;
 
 public class SpringerApiPamLinkExtractor implements LinkExtractor {
 
+  public static class PamRewritingReader extends LineRewritingReader {
+    
+    protected boolean done;
+    
+    public PamRewritingReader(Reader reader) {
+      super(reader);
+      this.done = false;
+    }
+    
+    @Override
+    public String rewriteLine(String line) {
+      if (!done && line.startsWith("<response>")) {
+        done = true;
+        StringBuilder sb = new StringBuilder();
+        sb.append("<response");
+        for (Map.Entry<String, String> ent : NAMESPACE_MAP.entrySet()) {
+          sb.append(" xmlns:");
+          sb.append(ent.getKey());
+          sb.append("=\"");
+          sb.append(ent.getValue());
+          sb.append("\"");
+        }
+        sb.append(">");
+        line = sb.toString() + line.substring(10);
+      }
+      return line;
+    }
+    
+  }
+  
+  // Will become a definitional param
+  public static final String CDN_URL = "http://download.springer.com/";
+
+  protected static final Map<String, String> NAMESPACE_MAP;
   protected static final XPathExpression TOTAL;
   protected static final XPathExpression PAGE_LENGTH;
   protected static final XPathExpression START;
@@ -60,12 +94,13 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
   
   static {
     try {
+      NAMESPACE_MAP = new HashMap<String, String>();
+      NAMESPACE_MAP.put("dc", "http://purl.org/dc/elements/1.1/");
+      NAMESPACE_MAP.put("pam", "http://prismstandard.org/namespaces/pam/2.0/");
+      NAMESPACE_MAP.put("prism", "http://prismstandard.org/namespaces/basic/2.0/");
+      NAMESPACE_MAP.put("xhtml", "http://www.w3.org/1999/xhtml");
       XPath xpath = XPathFactory.newInstance().newXPath();
-      xpath.setNamespaceContext(new OneToOneNamespaceContext()
-                                .put("dc", "http://purl.org/dc/elements/1.1/")
-                                .put("pam", "http://prismstandard.org/namespaces/pam/2.0/")
-                                .put("prism", "http://prismstandard.org/namespaces/basic/2.0/")
-                                .put("xhtml", "http://www.w3.org/1999/xhtml"));
+      xpath.setNamespaceContext(new OneToOneNamespaceContext(NAMESPACE_MAP));
       START = xpath.compile("/response/result/start");
       PAGE_LENGTH = xpath.compile("/response/result/pageLength");
       TOTAL = xpath.compile("/response/result/total");
@@ -105,8 +140,7 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
     srcUrl = logUrl(srcUrl);
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     factory.setNamespaceAware(true);
-    InputSource inputSource = new InputSource(in);
-    inputSource.setEncoding(encoding);
+    InputSource inputSource = new InputSource(new PamRewritingReader(new InputStreamReader(in, encoding)));
     Document doc = null;
     try {
       DocumentBuilder builder = factory.newDocumentBuilder();
@@ -121,6 +155,7 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
 
     NodeList articles = null;
     try {
+      // XPathUtil should be beefed up so that parsing bad numbers actually throws.
       start = XPathUtil.evaluateNumber(START, doc).intValue();
       pageLength = XPathUtil.evaluateNumber(PAGE_LENGTH, doc).intValue();
       total = XPathUtil.evaluateNumber(TOTAL, doc).intValue();
@@ -131,6 +166,10 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
       throw new IOException("Error while parsing results for " + srcUrl, xpee);
     }
 
+    if (articles.getLength() == 0) {
+      throw new IOException("Internal error parsing results for " + srcUrl);
+    }
+    
     Node article = null;
     String doi = null;
     for (int i = 0 ; i < articles.getLength() ; ++i) {
@@ -165,7 +204,7 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
     if (!StringUtils.isEmpty(url)) {
       String absUrl = String.format("%sarticle/%s",
                                     au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
-                                    doi);
+                                    encodeDoi(doi));
       cb.foundLink(absUrl);
     }
   }
@@ -174,16 +213,16 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
     if (!StringUtils.isEmpty(url)) { 
       String htmlUrl = String.format("%sarticle/%s/fulltext.html",
                                      au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
-                                     doi);
+                                     encodeDoi(doi));
       cb.foundLink(htmlUrl);
     }
   }
   
   public void processPdf(ArchivalUnit au, Callback cb, String doi, String url) {
     if (!StringUtils.isEmpty(url)) { 
-      String pdfUrl = String.format("%sarticle/%s/fulltext.pdf",
-                                    SpringerApiCrawlSeed.CDN_URL,
-                                    doi);
+      String pdfUrl = String.format("%scontent/pdf/%s.pdf",
+                                    CDN_URL,
+                                    encodeDoi(doi));
       cb.foundLink(pdfUrl);
     }
   }
@@ -202,6 +241,19 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
 
   public int getPageLength() {
     return pageLength;
+  }
+  
+  public static String encodeDoi(String doi) {
+    try {
+      return URLEncoder.encode(doi, Constants.ENCODING_UTF_8).replace("+", "%20");
+    }
+    catch (UnsupportedEncodingException uee) {
+      throw new ShouldNotHappenException("Could not URL-encode '" + doi + "' as UTF-8");
+    }
+  }
+  
+  public static final String logUrl(String srcUrl) {
+    return srcUrl.replaceAll("&api_key=[^&]*", "");
   }
   
 }

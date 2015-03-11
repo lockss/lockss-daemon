@@ -50,7 +50,7 @@ import org.lockss.util.urlconn.CacheException;
 
 public class SpringerApiCrawlSeed extends BaseCrawlSeed {
   
-  // Should become a definitional param
+  // Will become a definitional param
   public static final String CDN_URL = "http://download.springer.com/";
 
   public static final int EXPECTED_RECORDS_PER_RESPONSE = 100;
@@ -85,8 +85,11 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
 
   // Overall: 50,000 hits per day or 1 hit per 1.728s
   // Over 100 boxes: 1 hit per 172.8s rounded to 1 hit per 173s
+  private static final String API_CRAWL_RATE_LIMIT = "1/173s";
   private static final CrawlRateLimiter API_CRAWL_RATE_LIMITER =
-      new FileTypeCrawlRateLimiter(new RateLimiterInfo("SpringerApiCrawlSeed", "1/173s"));
+      new FileTypeCrawlRateLimiter(
+          new RateLimiterInfo(SpringerApiCrawlSeed.class.getSimpleName(),
+                              API_CRAWL_RATE_LIMIT));
   
   protected String apiUrl;
   
@@ -106,8 +109,6 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     this.facade = facade;
   }
   
-  
-  
   protected void initialize() 
       throws ConfigurationException ,PluginException ,IOException {
     this.apiUrl = au.getConfiguration().get("api_url");
@@ -125,7 +126,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
   }
   
   protected void populateUrlList() throws IOException {
-    boolean siteWarning = false;
+    boolean siteWarning = false; // Flag to log the potential siteWarning only once
     urlList = new ArrayList<String>();
     int index = 1;
     SpringerApiPamLinkExtractor ple = new SpringerApiPamLinkExtractor();
@@ -160,15 +161,15 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
         }
         throw new CacheException("Cannot fetch seed URL");
       }
-      int pl = ple.getPageLength();
-      if (pl != EXPECTED_RECORDS_PER_RESPONSE && !siteWarning) {
+      int records = ple.getPageLength();
+      if (records != EXPECTED_RECORDS_PER_RESPONSE && !siteWarning) {
         siteWarning = true;
         log.siteWarning(String.format("Unexpected number of records per response in %s: expected %d, got %d",
                                       url,
                                       EXPECTED_RECORDS_PER_RESPONSE,
-                                      pl));
+                                      records));
       }
-      index += pl;
+      index += records;
     }
     log.debug2(String.format("Ending with %d URLs", urlList.size()));
     if (log.isDebug3()) {
@@ -222,7 +223,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
             finally {
               log.debug2(String.format("Step ending with %d URLs", partial.size()));
               if (log.isDebug3()) {
-                log.debug3("URLs from step: %s"+ partial.toString());
+                log.debug3("URLs from step: " + partial.toString());
               }
               urlList.addAll(partial);
             }

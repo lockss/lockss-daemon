@@ -38,8 +38,7 @@ import org.lockss.plugin.*;
 public class SpringerApiUrlConsumerFactory implements UrlConsumerFactory {
 
   @Override
-  public UrlConsumer createUrlConsumer(CrawlerFacade facade,
-                                       FetchedUrlData fud) {
+  public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
     return new SpringerApiUrlConsumer(facade, fud);
   }
 
