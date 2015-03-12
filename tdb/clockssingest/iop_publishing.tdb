@@ -75,12 +75,12 @@
     param[journal_issn] = 1882-0786
     comment[param] = eissn preferred
 
-    au < testing ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
-    au < testing ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
-    au < testing ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
-    au < testing ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
-    au < testing ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
-    au < testing ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
+    au < ready ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
+    au < ready ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
+    au < ready ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
+    au < ready ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
+    au < ready ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
+    au < ready ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
     au < manifest ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
 
@@ -4074,7 +4074,7 @@
     comment[param] = eissn preferred
 
     au < testing ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
-    au < testing ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
+    au < ready ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
 
   }
