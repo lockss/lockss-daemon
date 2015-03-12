@@ -57,6 +57,7 @@ import org.apache.commons.io.output.*;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import java.io.*;
 
 
@@ -175,6 +176,35 @@ public class DeferredTempFileOutputStream extends ThresholdingOutputStream {
   }
 
   /**
+   * Return an InputStream open on the contents written to the
+   * OutputStream.
+   *
+   * @return An InputStream open on the data written to the OutputStream
+   */
+  public InputStream getInputStream() throws IOException {
+    if (isInMemory()) {
+      return new ByteArrayInputStream(getData());
+    } else {
+      return new BufferedInputStream(new FileInputStream(getFile()));
+    }
+  }
+
+  /**
+   * Return an InputStream open on the contents written to the
+   * OutputStream.  If a file is present it will be deleted when this
+   * stream is closed.
+   *
+   * @return An InputStream open on the data written to the OutputStream
+   */
+  public InputStream getDeleteOnCloseInputStream() throws IOException {
+    if (isInMemory()) {
+      return new ByteArrayInputStream(getData());
+    } else {
+      return new BufferedInputStream(new DeleteFileOnCloseInputStream(getFile()));
+    }
+  }
+
+  /**
    * Returns the same output file specified in the constructor, even when
    * threashold has not been reached.
    *
@@ -199,11 +229,11 @@ public class DeferredTempFileOutputStream extends ThresholdingOutputStream {
    * Delete the temp file, if it exists; closes the stream first if it's
    * still open.
    */
-  public void deleteTempFile() throws IOException {
+  public void deleteTempFile() {
+    if (!closed) {
+      IOUtils.closeQuietly(this);
+    }
     if (tempFile != null) {
-      if (!closed) {
-	close();
-      }
       FileUtils.deleteQuietly(tempFile);
       tempFile = null;
     }

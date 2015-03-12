@@ -52,11 +52,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import java.io.*;
 import org.lockss.test.*;
 import org.apache.commons.io.output.*;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.io.IOUtils;
-import java.io.*;
 
 public class TestDeferredTempFileOutputStream extends LockssTestCase {
 
@@ -81,6 +81,8 @@ public class TestDeferredTempFileOutputStream extends LockssTestCase {
     dfos.close();
     assertTrue(dfos.isInMemory());
     assertEquals(testBytes, dfos.getData());
+    verifyResultStream(dfos.getInputStream());
+    verifyResultStream(dfos.getDeleteOnCloseInputStream());
     // ensure this is harmless
     dfos.deleteTempFile();
   }
@@ -97,6 +99,8 @@ public class TestDeferredTempFileOutputStream extends LockssTestCase {
     dfos.close();
     assertTrue(dfos.isInMemory());
     assertEquals(testBytes, dfos.getData());
+    verifyResultStream(dfos.getInputStream());
+    verifyResultStream(dfos.getDeleteOnCloseInputStream());
   }
 
   /**
@@ -114,6 +118,9 @@ public class TestDeferredTempFileOutputStream extends LockssTestCase {
     assertNull(dfos.getData());
     verifyResultFile(testFile);
     assertMatchesRE("deferred-temp-file", testFile.getName());
+    verifyResultStream(dfos.getInputStream());
+    assertTrue(testFile.exists());
+    verifyResultStream(dfos.getDeleteOnCloseInputStream());
   }
 
   public void testAboveThresholdNamed() throws IOException {
@@ -152,22 +159,21 @@ public class TestDeferredTempFileOutputStream extends LockssTestCase {
       new MyDeferredTempFileOutputStream(testBytes.length / 2);
     int chunkSize = testBytes.length / 3;
 
-    try
-      {
-	dfos.write(testBytes, 0, chunkSize);
-	dfos.write(testBytes, chunkSize, chunkSize);
-	dfos.write(testBytes, chunkSize * 2,
-		   testBytes.length - chunkSize * 2);
-	dfos.close();
-      }
-    catch (IOException e) {
-      fail("Unexpected IOException");
-    }
+    dfos.write(testBytes, 0, chunkSize);
+    dfos.write(testBytes, chunkSize, chunkSize);
+    dfos.write(testBytes, chunkSize * 2,
+	       testBytes.length - chunkSize * 2);
+    dfos.close();
     assertFalse(dfos.isInMemory());
     assertNull(dfos.getData());
 
     File testFile = dfos.getFile();
     verifyResultFile(testFile);
+
+    verifyResultStream(dfos.getInputStream());
+    assertTrue(testFile.exists());
+    verifyResultStream(dfos.getDeleteOnCloseInputStream());
+    assertFalse(testFile.exists());
   }
 
   /**
@@ -179,16 +185,21 @@ public class TestDeferredTempFileOutputStream extends LockssTestCase {
   private void verifyResultFile(File testFile) throws IOException {
     assertTrue(testFile.exists());
     FileInputStream fis = new FileInputStream(testFile);
-    assertTrue(fis.available() == testBytes.length);
+    verifyResultStream(fis);
+  }
+
+  private void verifyResultStream(InputStream is) throws IOException {
+
+    assertTrue(is.available() == testBytes.length);
 
     byte[] resultBytes = new byte[testBytes.length];
-    assertTrue(fis.read(resultBytes) == testBytes.length);
+    assertTrue(is.read(resultBytes) == testBytes.length);
 
     assertEquals(testBytes, resultBytes);
-    assertTrue(fis.read(resultBytes) == -1);
+    assertTrue(is.read(resultBytes) == -1);
 
     try {
-      fis.close();
+      is.close();
     } catch (IOException e) {
       // Ignore an exception on close
     }
