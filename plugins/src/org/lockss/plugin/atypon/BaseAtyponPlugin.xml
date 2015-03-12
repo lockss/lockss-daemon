@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -34,7 +34,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>22</string>
+        <string>23</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -74,6 +74,7 @@
   <entry>
     <string>au_crawlrules</string>
     <!--  CRAWL COMMENT BLOCK
+    - googleAnalyticsPlugin.js : TMP: ASCE recursing ever deeper incorrectly relative url
     - "imgJawr" exclusion is Taylor&Francis child specific. See RU4586 - removeable after that gets dealt with
     - include all content from cdn (eg js, css and common images) cdn.nejm.org 
       (For now, OR in other global urls eg mathjax)
@@ -105,6 +106,7 @@
      -->
     <list>
       <string>2,"^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", base_url</string>
+      <string>2,"^%sdoi/.*/googleAnalyticsPlugin\.js$", base_url</string>
       <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   

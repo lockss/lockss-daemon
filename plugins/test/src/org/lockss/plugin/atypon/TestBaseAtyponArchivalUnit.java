@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon;
 
@@ -55,12 +55,12 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String ROOT_URL = "http://www.BaseAtypon.com/"; //this is not a real url
-  
+
   private static final Logger log = Logger.getLogger(TestBaseAtyponArchivalUnit.class);
-  
+
   static final String PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponPlugin";
   static final String PluginName = "Base Atypon Plugin";
-  
+
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
@@ -82,7 +82,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    
+
     DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(getMockLockssDaemon(),
         PLUGIN_ID);
@@ -97,7 +97,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
     }
   }
-  
+
   //
   // Test the crawl rules
   //
@@ -141,7 +141,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"action/showFullPopup?id=&doi=10.1206%2F3743.2", false, ABAu, cus);
     // images figures and tables can live here
     shouldCacheTest(ROOT_URL+"na101/home/literatum/publisher/apha/journals/covergifs/xxxx/2005/15200477-86.6/cover.jpg", true, ABAu, cus);   
-    
+
     // Now a couple that shouldn't get crawled
     // wrong volume
     shouldCacheTest(ROOT_URL+"toc/xxxx/12/index.html", false, ABAu, cus);
@@ -150,7 +150,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     // LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, ABAu, cus);
     // other sites
-    
+
     // Later addition of crawl rules to avoid polling things we no longer collect or that we normalize off
     // this is normalized off but does exist in some aus from early crawls
     shouldCacheTest(ROOT_URL + "doi/abs/10.5504/50YRTIMB.2011.0036?queryID=%24%7BresultBean.queryID%7D", 
@@ -177,13 +177,26 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     // this one is valid 
     shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=ris&include=cit", 
         true, ABAu, cus);
+
+    // ASCE use of relative link where it should be absolute causes ever-deeper URLS because
+    // the "page not found" page uses the template with the same relative link problem.
+    // added to crawl rules to combat this until they fix it
+    shouldCacheTest(ROOT_URL + "action/showCart?backUri=/action/showLogin?uri=/action/showCart?backUri=/action/showLogin?uri=/doi/abs/10.1061/templates/jsp/js/googleAnalyticsPlugin.js", 
+        false, ABAu, cus); 
+    shouldCacheTest(ROOT_URL + "doi/abs/10.1061/templates/jsp/js/googleAnalyticsPlugin.js", 
+        false, ABAu, cus); 
+    shouldCacheTest(ROOT_URL + "doi/abs/10.1061/templates/jsp/js/templates/jsp/js/templates/jsp/js/templates/jsp/js/googleAnalyticsPlugin.js", 
+        false, ABAu, cus); 
+
   }
-  
+
+
+
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
-  
+
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL(ROOT_URL);
 
@@ -192,7 +205,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit ABAu = makeAu(url, 123, "xxxx");
     assertEquals(ListUtil.list(expected), ABAu.getStartUrls());
   }
-  
+
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     URL base = new URL("http://www.BaseAtypon.com/");
     int volume = 123;
@@ -210,7 +223,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
     ArchivalUnit ABAu =
-      makeAu(new URL("http://www.BaseAtypon.com/"), 33, "yyyy");
+        makeAu(new URL("http://www.BaseAtypon.com/"), 33, "yyyy");
 
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
 
@@ -219,7 +232,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   public void testShouldDoNewContentCrawlFor0() throws Exception {
     ArchivalUnit ABAu =
-      makeAu(new URL("http://www.BaseAtypon.com/"), 33, "yyyy");
+        makeAu(new URL("http://www.BaseAtypon.com/"), 33, "yyyy");
 
     AuState aus = new MockAuState(null, 0, -1, -1, null);
 
@@ -229,42 +242,42 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au =
-      makeAu(new URL("http://www.BaseAtypon.com/"), 33, "yyyy");
+        makeAu(new URL("http://www.BaseAtypon.com/"), 33, "yyyy");
     assertEquals(PluginName + ", Base URL http://www.BaseAtypon.com/, Journal ID yyyy, Volume 33", au.getName());
     DefinableArchivalUnit au1 =
-      makeAu(new URL("http://www.apha.com/"), 24, "apha");
+        makeAu(new URL("http://www.apha.com/"), 24, "apha");
     assertEquals(PluginName + ", Base URL http://www.apha.com/, Journal ID apha, Volume 24", au1.getName());
   }
-  
+
   private static final String gln_lockss_user_msg = 
       "Atypon Systems hosts this archival unit (AU) " +
           "and may require you to register the IP address "+
           "of this LOCKSS box as a crawler. For more information, visit the <a " +
           "href=\'http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/\'>" +
           "LOCKSS IP address registration page</a>.";
-  
+
   private static final String bq_msg = 
       "Atypon Systems hosts this archival unit (AU) and may require you to register the IP address of " +
-      "this LOCKSS box as a crawler, by sending e-mail to <a href=\'mailto:pcoyne@qf.org.qa\'>Paul Coyne</a>. " +
-      "Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, " +
-      "and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. " +
-      "You only need to register the IP address of your LOCKSS box once for all AUs published by Bloomsbury Qatar.";
+          "this LOCKSS box as a crawler, by sending e-mail to <a href=\'mailto:pcoyne@qf.org.qa\'>Paul Coyne</a>. " +
+          "Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, " +
+          "and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. " +
+          "You only need to register the IP address of your LOCKSS box once for all AUs published by Bloomsbury Qatar.";
 
   private static final String default_msg_part1 = 
       "Atypon Systems hosts this archival unit (AU) and requires " +
-  "that you <a href=\'";
-  
+          "that you <a href=\'";
+
   private static final String default_msg_part2 =
       "action/institutionLockssIpChange\'>register the " +
           "IP address of this LOCKSS box in your institutional account as a " +
-  "crawler</a> before allowing your LOCKSS box to harvest this AU. " +
+          "crawler</a> before allowing your LOCKSS box to harvest this AU. " +
           "Failure to comply with this publisher requirement may trigger crawler traps on the " +
-  "Atypon Systems platform, and your LOCKSS box or your entire institution may be " +
+          "Atypon Systems platform, and your LOCKSS box or your entire institution may be " +
           "temporarily banned from accessing the site. You only need to register the IP address " +
-  "of your LOCKSS box once for all AUs published by this publisher.";
-  
+          "of your LOCKSS box once for all AUs published by this publisher.";
 
-      
+
+
   private static final String BASE_ATYPON_BASE = "http://www.BaseAtypon.org/";
   /* test all the atypon child au_config_user_msgs
    * by first checking the gln message either against a specific passed-in message
@@ -278,7 +291,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
      *   "org.lockss.plugin.atypon.BaseAtyponPlugin",
      *   null);
      */        
-    
+
     //AMetSoc - points users at our web page with registration info
     testSpecificUserMsg("http://journals.ametsoc.org/", gln_lockss_user_msg, 
         "org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin",
@@ -353,9 +366,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.tandfonline.com/", null, 
         "org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin",
         "org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin");
-    
+
   }
-  
+
   // Associate the base_url with the publisher name for convenience
   static private final Map<String, String> pluginPubMap =
       new HashMap<String,String>();
@@ -379,8 +392,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     pluginPubMap.put("http://www.euppublishing.com/", "Edinburgh University Press");
     pluginPubMap.put("http://www.tandfonline.com/", "Taylor & Francis");
   }
-      
-  
+
+
   private void testSpecificUserMsg(String plugin_base_url, String full_msg, 
       String gln_plugin, String clockss_plugin) throws Exception {
 
@@ -418,7 +431,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
       log.debug3("testing CLOCKSS absence of user message");
       assertEquals(null, cAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
     }
-    
+
   }
 
 }
