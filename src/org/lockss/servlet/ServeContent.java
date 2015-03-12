@@ -1097,22 +1097,15 @@ public class ServeContent extends LockssServlet {
           new DeferredTempFileOutputStream(limit);
       try {
         StreamUtil.copy(input, dos);
-        if (dos.isInMemory()) {
-          input = new ByteArrayInputStream(dos.getData());
-        } else {
-          // create an input stream whose underlying file is deleted
-          // when the input stream closes.
-          File tempFile = dos.getFile();
-          try {
-            input = new FileInputStream(tempFile);
-          } catch (FileNotFoundException fnfe) {
-            FileUtils.deleteQuietly(tempFile);
-            throw fnfe;
-          }
-        }
       } finally {
         IOUtil.safeClose(oldInput);
         IOUtil.safeClose(dos);
+      }
+      try {
+	input = dos.getInputStream();
+      } catch (IOException e) {
+	dos.deleteTempFile();
+	throw e;
       }
 
       // create reader for input stream
@@ -1125,6 +1118,7 @@ public class ServeContent extends LockssServlet {
         if (checker.isLoginPage(headers, reader)) {
           IOUtil.safeClose(input);
           input = null;
+	  dos.deleteTempFile();
           throw new CacheException.PermissionException("Found a login page");
         }
       } catch (PluginException e) {
@@ -1133,19 +1127,16 @@ public class ServeContent extends LockssServlet {
         ex.initCause(e);
         IOUtil.safeClose(input);
         input = null;
+	dos.deleteTempFile();
         throw ex;
       } finally {
         if (input == null) {
           // delete the temp file immediately if not returning an input
           // stream open on it
           dos.deleteTempFile();
-        } else if (dos.isInMemory()) {
-          input.reset();
         } else {
-          // special treatment because cannot reset FileInputStream,
-          // so must close and re-open input stream from temp file
-          IOUtil.safeClose(input);
-          input = new DeleteFileOnCloseInputStream(dos.getFile());
+	  IOUtil.safeClose(input);
+	  return dos.getDeleteOnCloseInputStream();
         }
       }
     }

@@ -43,7 +43,6 @@ import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfPage;
 import org.lockss.pdf.PdfUtil;
 import org.lockss.plugin.*;
-import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.util.*;
 
 /**
@@ -412,27 +411,30 @@ public abstract class ExtractingPdfFilterFactory
                                                String encoding)
       throws PluginException {
     PdfDocument pdfDocument = null;
+    DeferredTempFileOutputStream os = null;
+
     try {
       pdfDocument = pdfDocumentFactory.parse(in);
       transform(au, pdfDocument);
       
-      DeferredTempFileOutputStream os = new DeferredTempFileOutputStream(PdfUtil.getPdfMemoryLimit());
+      os = new DeferredTempFileOutputStream(PdfUtil.getPdfMemoryLimit());
       PdfTransform<PdfDocument> scraper = getDocumentTransform(au, os);
       scraper.transform(au, pdfDocument);
       os.close();
       
-      if (os.isInMemory()) {
-        return new ByteArrayInputStream(os.getData());
-      }
-      else {
-        return new BufferedInputStream(new DeleteFileOnCloseInputStream(os.getFile()));
-      }
+      return os.getDeleteOnCloseInputStream();
     }
-    catch (IOException ioe) {
-      throw new PluginException(ioe);
+    catch (IOException | PdfException  e) {
+      if (os != null) {
+	os.deleteTempFile();
+      }
+      throw new PluginException(e);
     }
-    catch (PdfException pdfe) {
-      throw new PluginException(pdfe);
+    catch (Exception  e) {
+      if (os != null) {
+	os.deleteTempFile();
+      }
+      throw e;
     }
     finally {
       PdfUtil.safeClose(pdfDocument);

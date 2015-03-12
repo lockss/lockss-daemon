@@ -162,7 +162,6 @@ public class HtmlFilterInputStream
   private int wrFileThresh;
   private boolean useFile;
   private boolean adaptEncoding = DEFAULT_ADAPT_ENCODING;
-  private File outFile;
   private PrototypicalNodeFactory nodeFact;
 
   /**
@@ -295,35 +294,33 @@ public class HtmlFilterInputStream
       throws IOException {
     DeferredTempFileOutputStream dtfos =
       new DeferredTempFileOutputStream(wrFileThresh);
-    // write the data to file or into a buffer by using the same reader
-    // we formally used to read in the entire tree
-    for(int i=0; i < nl.size(); i++)
-    {
-      int                 ch;
-      ReaderInputStream ris;
-      Reader r = new StringReader(nl.elementAt(i).toHtml(verbatim));
-      if (outCharset != null) {
-        ris = new ReaderInputStream(r, outCharset);
-      } else {
-        ris = new ReaderInputStream(r);
-      }
-      while ((ch = ris.read()) != -1)
-      {
-        dtfos.write(ch);
-      }
-      dtfos.flush();
+    try {
+      // write the data to file or into a buffer by using the same reader
+      // we formerly used to read in the entire tree
+      for(int i=0; i < nl.size(); i++)
+	{
+	  int ch;
+	  ReaderInputStream ris;
+	  Reader r = new StringReader(nl.elementAt(i).toHtml(verbatim));
+	  if (outCharset != null) {
+	    ris = new ReaderInputStream(r, outCharset);
+	  } else {
+	    ris = new ReaderInputStream(r);
+	  }
+	  while ((ch = ris.read()) != -1)
+	    {
+	      dtfos.write(ch);
+	    }
+	  dtfos.flush();
+	}
+      dtfos.close();
+    } catch (IOException | RuntimeException e) {
+      dtfos.deleteTempFile();
+      throw e;
     }
-    dtfos.close();
-
     // return an input stream of either the in memory bytes
     // or the file
-    if(dtfos.isInMemory()) {
-      out = new ByteArrayInputStream(dtfos.getData());
-    }
-    else {
-      outFile = dtfos.getFile();
-      out = new BufferedInputStream(new FileInputStream(outFile));
-    }
+    out = dtfos.getDeleteOnCloseInputStream();
     if (CurrentConfig.getBooleanParam(RepositoryNodeImpl.PARAM_MONITOR_INPUT_STREAMS,
    					  RepositoryNodeImpl.DEFAULT_MONITOR_INPUT_STREAMS)) {
       out = new MonitoringInputStream(out,"HtmlFilterInputStream");
@@ -482,11 +479,6 @@ public class HtmlFilterInputStream
     in = null;
     IOUtil.safeClose(out);
     out = null;
-    if(outFile != null)
-    {
-      FileUtils.deleteQuietly(outFile);
-      outFile = null;
-    }
   }
 
   static class FeedbackLogger implements ParserFeedback{

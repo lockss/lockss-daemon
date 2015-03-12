@@ -140,13 +140,13 @@ public class PdfUtil {
                                           int memoryLimitMb) 
       throws PdfException, IOException {
     DeferredTempFileOutputStream os = new DeferredTempFileOutputStream(memoryLimitMb);
-    pdfDocument.save(os);
-    os.close();
-    if (os.isInMemory()) {
-      return new ByteArrayInputStream(os.getData());
-    }
-    else {
-      return new BufferedInputStream(new DeleteFileOnCloseInputStream(os.getFile()));
+    try {
+      pdfDocument.save(os);
+      os.close();
+      return os.getDeleteOnCloseInputStream();
+    } catch (PdfException | IOException | RuntimeException e) {
+      os.deleteTempFile();
+      throw e;
     }
   }
 
