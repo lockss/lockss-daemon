@@ -1065,10 +1065,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < testing ; exists ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
-      au < testing ; exists ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 >
-      au < testing ; exists ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 >
-      au < testing ; exists ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 >
+      au < ready ; exists ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
+      au < ready ; exists ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 >
+      au < ready ; exists ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 >
+      au < ready ; exists ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 >
       au < crawling ; exists ; 2014 ; Molecular BioSystems Volume 10 ; 10 ; 2014 >
       au < expected ; exists ; 2015 ; Molecular BioSystems Volume 11 ; 11 ; 2015 >
 
