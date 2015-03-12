@@ -32,7 +32,6 @@ import java.io.*;
 import java.util.ArrayList;
 
 import org.lockss.util.Constants;
-import org.lockss.util.DeferredTempFileOutputStream;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
