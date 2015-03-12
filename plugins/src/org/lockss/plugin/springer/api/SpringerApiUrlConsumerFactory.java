@@ -34,7 +34,9 @@ package org.lockss.plugin.springer.api;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-
+/**
+ * @since 1.67.5 
+ */
 public class SpringerApiUrlConsumerFactory implements UrlConsumerFactory {
 
   @Override

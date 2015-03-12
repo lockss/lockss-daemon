@@ -35,8 +35,8 @@ package org.lockss.plugin.springer.api;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.pdfbox.io.IOUtils;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
@@ -234,10 +234,10 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
       
       // Make URL fetcher for this request
       String url = makeApiUrl(index);
-      UrlFetcher uf = makeApiUrlFetcher(ple, url);
-      url = logUrl(url);
-      log.debug2("Request URL: " + url);
-      facade.getCrawlerStatus().addPendingUrl(url);
+      String loggerUrl = loggerUrl(url);
+      UrlFetcher uf = makeApiUrlFetcher(ple, url, loggerUrl);
+      log.debug2("Request URL: " + loggerUrl);
+      facade.getCrawlerStatus().addPendingUrl(loggerUrl);
 
       // Make request
       FetchResult fr = null;
@@ -255,13 +255,17 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
         }
       }
       if (fr == FetchResult.FETCHED) {
-        facade.getCrawlerStatus().removePendingUrl(url);
-        facade.getCrawlerStatus().signalUrlFetched(url);
+        facade.getCrawlerStatus().removePendingUrl(loggerUrl);
+        facade.getCrawlerStatus().signalUrlFetched(loggerUrl);
       }
       else {
         log.debug2("Stopping due to fetch result " + fr);
-        if (!facade.getCrawlerStatus().getUrlsWithErrors().containsKey(url)) {
-          facade.getCrawlerStatus().signalErrorForUrl(url, "Cannot fetch seed URL");
+        Map<String, String> errors = facade.getCrawlerStatus().getUrlsWithErrors();
+        if (errors.containsKey(url)) {
+          errors.put(loggerUrl, errors.remove(url));
+        }
+        else {
+          facade.getCrawlerStatus().signalErrorForUrl(loggerUrl, "Cannot fetch seed URL");
         }
         throw new CacheException("Cannot fetch seed URL");
       }
@@ -271,7 +275,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
       if (records != EXPECTED_RECORDS_PER_RESPONSE && !siteWarning) {
         siteWarning = true;
         log.siteWarning(String.format("Unexpected number of records per response in %s: expected %d, got %d",
-                                      url,
+                                      loggerUrl,
                                       EXPECTED_RECORDS_PER_RESPONSE,
                                       records));
       }
@@ -321,7 +325,8 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
    * @since 1.67.5
    */
   protected UrlFetcher makeApiUrlFetcher(final SpringerApiPamLinkExtractor ple,
-                                         final String url) {
+                                         final String url,
+                                         final String loggerUrl) {
     // Make a URL fetcher
     UrlFetcher uf = facade.makeUrlFetcher(url);
 
@@ -346,15 +351,15 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
             final List<String> partial = new ArrayList<String>();
             try {
               ple.extractUrls(au,
-                             fud.input,
-                             AuUtil.getCharsetOrDefault(fud.headers), // FIXME
-                             fud.origUrl,
-                             new Callback() {
-                               @Override
-                               public void foundLink(String url) {
-                                 partial.add(url);
-                               }
-                             });
+                              fud.input,
+                              AuUtil.getCharsetOrDefault(fud.headers), // FIXME
+                              loggerUrl, // rather than fud.origUrl
+                              new Callback() {
+                                @Override
+                                public void foundLink(String url) {
+                                  partial.add(url);
+                                }
+                              });
             }
             catch (IOException ioe) {
               log.debug2("Link extractor threw", ioe);
@@ -376,7 +381,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     return uf;
   }
   
-  public static final String logUrl(String srcUrl) {
+  public static final String loggerUrl(String srcUrl) {
     return srcUrl.replaceAll("&api_key=[^&]*", "");
   }
   

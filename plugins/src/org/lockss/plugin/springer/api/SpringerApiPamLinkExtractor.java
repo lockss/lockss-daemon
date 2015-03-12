@@ -44,6 +44,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException.UnknownExceptionException;
 import org.w3c.dom.*;
 import org.xml.sax.*;
 
@@ -270,6 +271,13 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
    */
   protected int total;
   
+  /**
+   * <p>
+   * Builds a link extractor for Springer's PAM-based API responses (XML).
+   * </p>
+   * 
+   * @since 1.67.5
+   */
   public SpringerApiPamLinkExtractor() {
     this.done = false;
     this.start = -1;
@@ -284,7 +292,7 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
                           String srcUrl,
                           Callback cb)
       throws IOException {
-    srcUrl = logUrl(srcUrl);
+    String loggerUrl = loggerUrl(srcUrl);
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     factory.setNamespaceAware(true);
     InputSource inputSource = new InputSource(new PamRewritingReader(new InputStreamReader(in, encoding)));
@@ -294,10 +302,10 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
       doc = builder.parse(inputSource);
     }
     catch (ParserConfigurationException pce) {
-      throw new IOException("Error configuring parser for " + srcUrl, pce);
+      throw new UnknownExceptionException("Error configuring parser for " + loggerUrl, pce);
     }
     catch (SAXException se) {
-      throw new IOException("Error while parsing " + srcUrl, se);
+      throw new UnknownExceptionException("Error while parsing " + loggerUrl, se);
     }
 
     NodeList articles = null;
@@ -310,11 +318,11 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
       articles = XPathUtil.evaluateNodeSet(ARTICLE, doc);
     }
     catch (XPathExpressionException xpee) {
-      throw new IOException("Error while parsing results for " + srcUrl, xpee);
+      throw new UnknownExceptionException("Error while parsing results for " + loggerUrl, xpee);
     }
 
     if (articles.getLength() == 0) {
-      throw new IOException("Internal error parsing results for " + srcUrl);
+      throw new UnknownExceptionException("Internal error parsing results for " + loggerUrl);
     }
     
     Node article = null;
@@ -328,10 +336,11 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
         }
       }
       catch (XPathExpressionException xpee) {
-        throw new IOException(String.format("Error while parsing stanza for %s in %s",
-                                            doi == null ? "first DOI" : "DOI immediately after " + doi,
-                                            srcUrl),
-                              xpee);
+        throw new UnknownExceptionException(
+            String.format("Error while parsing stanza for %s in %s",
+                          doi == null ? "first DOI" : "DOI immediately after " + doi,
+                          loggerUrl),
+            xpee);
       }
       try {
         processAbstract(au, cb, doi, XPathUtil.evaluateString(ABSTRACT, article));
@@ -339,53 +348,142 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
         processPdf(au, cb, doi, XPathUtil.evaluateString(PDF, article));
       }
       catch (XPathExpressionException xpee) {
-        throw new IOException(String.format("Error while parsing stanza for DOI %s in %s",
-                                            doi,
-                                            srcUrl),
-                              xpee);
+        throw new UnknownExceptionException(
+            String.format("Error while parsing stanza for DOI %s in %s",
+                          doi,
+                          loggerUrl),
+            xpee);
       }
     }
   }
-  
+
+  /**
+   * <p>
+   * If a nominal abstract URL is found, emits the desired abstract URLs based
+   * on the given DOI.
+   * </p>
+   * 
+   * @param au
+   *          The current AU.
+   * @param cb
+   *          The callback to emit into.
+   * @param doi
+   *          The current article's DOI.
+   * @param url
+   *          A nominal abstract URL (or null or an empty string if not
+   *          applicable).
+   * @since 1.67.5
+   */
   public void processAbstract(ArchivalUnit au, Callback cb, String doi, String url) {
     if (!StringUtils.isEmpty(url)) {
-      String absUrl = String.format("%sarticle/%s",
-                                    au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
-                                    encodeDoi(doi));
+      String absUrl =
+          String.format("%sarticle/%s",
+                        au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
+                        encodeDoi(doi));
       cb.foundLink(absUrl);
     }
   }
   
+  /**
+   * <p>
+   * If a nominal full text HTML URL is found, emits the desired full text HTML
+   * URLs based on the given DOI.
+   * </p>
+   * 
+   * @param au
+   *          The current AU.
+   * @param cb
+   *          The callback to emit into.
+   * @param doi
+   *          The current article's DOI.
+   * @param url
+   *          A nominal full text HTML URL (or null or an empty string if not
+   *          applicable).
+   * @since 1.67.5
+   */
   public void processHtml(ArchivalUnit au, Callback cb, String doi, String url) {
     if (!StringUtils.isEmpty(url)) { 
-      String htmlUrl = String.format("%sarticle/%s/fulltext.html",
-                                     au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
-                                     encodeDoi(doi));
+      String htmlUrl =
+          String.format("%sarticle/%s/fulltext.html",
+                        au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
+                        encodeDoi(doi));
       cb.foundLink(htmlUrl);
     }
   }
   
+  /**
+   * <p>
+   * If a nominal full text PDF URL is found, emits the desired full text PDF
+   * URLs based on the given DOI.
+   * </p>
+   * 
+   * @param au
+   *          The current AU.
+   * @param cb
+   *          The callback to emit into.
+   * @param doi
+   *          The current article's DOI.
+   * @param url
+   *          A nominal full text PDF URL (or null or an empty string if not
+   *          applicable).
+   * @since 1.67.5
+   */
   public void processPdf(ArchivalUnit au, Callback cb, String doi, String url) {
     if (!StringUtils.isEmpty(url)) { 
-      String pdfUrl = String.format("%scontent/pdf/%s.pdf",
-                                    CDN_URL,
-                                    encodeDoi(doi));
+      String pdfUrl =
+          String.format("%scontent/pdf/%s.pdf",
+                        CDN_URL,
+                        encodeDoi(doi));
       cb.foundLink(pdfUrl);
     }
   }
 
+  /**
+   * <p>
+   * Determines if this link extractor is done processing records for the
+   * current query.
+   * </p>
+   * 
+   * @return Whether this link extractor is done processing records for the
+   *         current query.
+   * @since 1.67.5
+   */
   public boolean isDone() {
     return done;
   }
 
+  /**
+   * <p>
+   * Retrieves the total from the result section of the latest response.
+   * </p>
+   * 
+   * @return The total from the result section of the latest response.
+   * @since 1.67.5
+   */
   public int getTotal() {
     return total;
   }
 
+  /**
+   * <p>
+   * Retrieves the starting index from the result section of the latest response.
+   * </p>
+   * 
+   * @return The starting index from the result section of the latest response.
+   * @since 1.67.5
+   */
   public int getStart() {
     return start;
   }
 
+  /**
+   * <p>
+   * Retrieves the page length from the result section of the latest response.
+   * </p>
+   * 
+   * @return The page length from the result section of the latest response.
+   * @since 1.67.5
+   */
   public int getPageLength() {
     return pageLength;
   }
@@ -412,7 +510,7 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
     }
   }
   
-  public static final String logUrl(String srcUrl) {
+  public static final String loggerUrl(String srcUrl) {
     return srcUrl.replaceAll("&api_key=[^&]*", "");
   }
   

@@ -68,12 +68,25 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
   @Override
   public void consume() throws IOException {
     if (shouldStoreRedirectsAtOrigUrl()) {
-      fud.fetchUrl = null;
+      // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
+      // chain if (fud.redirectUrls != null && fud.fetchUrl != null)
       fud.redirectUrls = null;
+      fud.fetchUrl = null;
     }
     super.consume();
   }
 
+  /**
+   * <p>
+   * Determines if a particular redirect chain should cause content to be stored
+   * only at the origin URL ({@link FetchedUrlData#origUrl}).
+   * </p>
+   * 
+   * @return True if and only if the fetched URL data represents a particular
+   *         redirect chain that should cause content to be stored only at the
+   *         origin URL.
+   * @since 1.67.5
+   */
   protected boolean shouldStoreRedirectsAtOrigUrl() {
     return fud.redirectUrls != null
         && fud.redirectUrls.size() == 1
