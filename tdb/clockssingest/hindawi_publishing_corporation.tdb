@@ -6677,7 +6677,7 @@
     param[journal_id] = jh
     
     au < manifest ; exists ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Histology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6693,7 +6693,7 @@
     param[journal_id] = jhor
     
     au < manifest ; exists ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Hormonoes Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6732,7 +6732,7 @@
     au < manifest ; exists ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Immunology Research Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6748,7 +6748,7 @@
     param[journal_id] = jie
     
     au < manifest ; exists ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Industrial Engineering Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Industrial Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Industrial Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6764,7 +6764,7 @@
     param[journal_id] = jim
     
     au < manifest ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6780,7 +6780,7 @@
     param[journal_id] = jic
     
     au < manifest ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6796,7 +6796,7 @@
     param[journal_id] = insects
     
     au < manifest ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6814,7 +6814,7 @@
     au < manifest ; exists ; 2011 ; Journal of Lipids Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Lipids Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Lipids Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Lipids Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Lipids Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6834,7 +6834,7 @@
     au < manifest ; exists ; 2011 ; Journal of Marine Biology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Marine Biology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Marine Biology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6850,7 +6850,7 @@
     param[journal_id] = jma
     
     au < manifest ; exists ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Materials Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6866,7 +6866,7 @@
     param[journal_id] = jmath
     
     au < manifest ; exists ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6882,7 +6882,7 @@
     param[journal_id] = jme
     
     au < manifest ; exists ; 2013 ; Journal of Medical Engineering Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Medical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Medical Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Medical Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6902,7 +6902,7 @@
     au < manifest ; exists ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6918,7 +6918,7 @@
     param[journal_id] = jmin
     
     au < manifest ; exists ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6934,7 +6934,7 @@
     param[journal_id] = jmy
     
     au < manifest ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Mycology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6957,7 +6957,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nanomaterials Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6973,7 +6973,7 @@
     param[journal_id] = jnp
     
     au < manifest ; exists ; 2013 ; Journal of Nanoparticles Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nanoparticles Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nanoparticles Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Nanoparticles Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6989,7 +6989,7 @@
     param[journal_id] = jns
     
     au < manifest ; exists ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nanoscience Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7011,7 +7011,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Nanotechnology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7027,7 +7027,7 @@
     param[journal_id] = jnd
     
     au < manifest ; exists ; 2013 ; Journal of Neurodegenerative Diseases Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Neurodegenerative Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7043,7 +7043,7 @@
     param[journal_id] = jndy
     
     au < manifest ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7059,7 +7059,7 @@
     param[journal_id] = jnc
     
     au < manifest ; exists ; 2013 ; Journal of Nuclear Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Nuclear Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7078,7 +7078,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nucleic Acids Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nucleic Acids Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7093,7 +7093,7 @@
 
     param[journal_id] = jn
     
-    au < ready ; exists ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Numbers Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7112,7 +7112,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Nutrition and Metabolism Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7131,7 +7131,7 @@
     au < manifest ; exists ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Obesity Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7152,7 +7152,7 @@
     au < manifest ; exists ; 2011 ; Journal of Oncology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7168,7 +7168,7 @@
     param[journal_id] = joper
     
     au < manifest ; exists ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Operators Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7188,7 +7188,7 @@
     au < manifest ; exists ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Ophthalmology Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7204,7 +7204,7 @@
     param[journal_id] = jopti
     
     au < manifest ; exists ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Optimization Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7220,7 +7220,7 @@
     param[journal_id] = jod
     
     au < manifest ; exists ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7235,7 +7235,7 @@
 
     param[journal_id] = joi
     
-    au < ready ; exists ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7269,7 +7269,7 @@
     au < manifest ; exists ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Osteoporosis Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7289,7 +7289,7 @@
     au < manifest ; exists ; 2011 ; Journal of Parasitology Research Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Parasitology Research Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Parasitology Research Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7307,7 +7307,7 @@
     au < manifest ; exists ; 2011 ; Journal of Pathogens Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7323,7 +7323,7 @@
     param[journal_id] = jpe
     
     au < manifest ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Petroleum Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7339,7 +7339,7 @@
     param[journal_id] = jphar
     
     au < manifest ; exists ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Pharmaceutics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7355,7 +7355,7 @@
     param[journal_id] = jpho
     
     au < manifest ; exists ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Photonics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7371,7 +7371,7 @@
     param[journal_id] = jpol
     
     au < manifest ; exists ; 2013 ; Journal of Polymers Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Polymers Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Polymers Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Polymers Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7387,7 +7387,7 @@
     param[journal_id] = jpt
     
     au < manifest ; exists ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Powder Technology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7406,7 +7406,7 @@
     au < manifest ; exists ; 2011 ; Journal of Pregnancy Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Pregnancy Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7421,7 +7421,7 @@
 
     param[journal_id] = jprob
     
-    au < ready ; exists ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7440,7 +7440,7 @@
     au < manifest ; exists ; 2010 ; Journal of Probability and Statistics Volume 2010 ; 2010 ; 2010 >
     au < manifest ; exists ; 2012 ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Probability and Statistics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Probability and Statistics Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Probability and Statistics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Probability and Statistics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7461,7 +7461,7 @@
     au < manifest ; exists ; 2011 ; Journal of Quality and Reliability Engineering Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Quality and Reliability Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7476,7 +7476,7 @@
 
     param[journal_id] = jqc
 
-    au < ready ; exists ; 2014 ; Journal of Quantum Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Quantum Chemistry Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Quantum Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7491,7 +7491,7 @@
 
     param[journal_id] = jra
 
-    au < ready ; exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7507,7 +7507,7 @@
     param[journal_id] = jre
 
     au < manifest ; exists ; 2013 ; Journal of Renewable Energy Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Renewable Energy Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Renewable Energy Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Renewable Energy Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7523,7 +7523,7 @@
     param[journal_id] = jrm
 
     au < manifest ; exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Respiratory Medicine Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Respiratory Medicine Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Respiratory Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7542,7 +7542,7 @@
     au < manifest ; exists ; 2010 ; Journal of Robotics Volume 2010 ; 2010 ; 2010 >
     au < manifest ; exists ; 2012 ; Journal of Robotics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Robotics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Robotics Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Robotics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Robotics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7563,7 +7563,7 @@
     au < manifest ; exists ; 2011 ; Journal of Sensors Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Sensors Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Sensors Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Sensors Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Sensors Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Sensors Volume 2015 ; 2015 ; 2015 >
 
   }
