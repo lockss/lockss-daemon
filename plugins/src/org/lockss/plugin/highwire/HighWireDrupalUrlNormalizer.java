@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,6 +64,8 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   
   protected static final String RSS_PARAM = "?rss=";
   protected static final String IJKEY_PARAM = "?ijkey=";
+  protected static final String ELTR_PARAM = ".e-letters?";
+  protected static final String EXPAND_PARAM = "/expansion?";
   
   
   @Override
@@ -126,11 +128,12 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     }
     
     if (url.contains(RSS_PARAM) ||
-        url.contains(IJKEY_PARAM)) {
+        url.contains(IJKEY_PARAM) ||
+        url.contains(ELTR_PARAM) || 
+        url.contains(EXPAND_PARAM)) {
       url = url.replaceFirst("[?].+$", "");
     }
     
     return(url);
   }
-  
 }
