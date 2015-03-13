@@ -66,7 +66,7 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
   // News & alerts
   private static final String withMigratedNews =
       "<div class=\"block\">" +
-          "<div class=\"widget general-rich-text none\" id=\"migrated_news\">" +
+          "<div class=\"widget general-rich-text \" id=\"migrated_news\">" +
           "<div class=\"wrapped 1_12\" id=\"news\">" +
           "<div class=\"widget-body body body-none \">" +
           "<div id=\"rich-text-migrated_news\" class=\"pb-rich-text\">" +
@@ -104,7 +104,7 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
       "<div class=\"block\">" +
           "<table class=\"references\" border=\"0\">" +
           "<tbody><tr><td id=\"C1\" class=\"refnumber\">1.</td>" +
-          "<td valign=\"top\">ABC<span class=\"title\">Targeting abc</span>J Xyz" +
+          "<td valign=\"top\">ABC<span class=\"title\">Targ abc</span>J Xyz" +
           "<script type=\"text/javascript\">" +
           "<a href=\"javascript:popRefLink(16,'C1','111.1371')\">xref</a>" +
           "<script type=\"text/javascript\">" +
@@ -216,6 +216,23 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
           "<span>Full access</span></li>" +
           "<li><img src=\"/imagesrc/openAccess.png\">" +
           "<span>Open access</span></li></ul>" +
+          "</div>";
+  
+  private static final String withPublicationToolContainer =
+      "<div class=\"block\">" + 
+          "<div class=\"publicationToolContainer\">" +
+          "<div class=\"publicationToolCheckboxContainer\">" +
+          "<input id=\"ma\" type=\"checkbox\" " +
+          "onclick=\"onClickMl(frmAbs,'')\" name=\"ma\">" +
+          "<span>Select All</span>" +
+          "</div>" +
+          "<div class=\"publicationTooldropdownContainer\">" +
+          "<select class=\"items-choice publicationToolSelect\" " +
+          "title=\"Article Tools\" name=\"articleTool\">" +
+          "<option value=\"\">For selected items</option>" +
+          "</select>" +
+          "</div>" +
+          "</div>" +
           "</div>";
  
   private static final String withAccessIconContainer =  
@@ -345,12 +362,66 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
           "</ul></section>" +
           "</div>";
     
+    private static final String withArticleMetaDrop =
+      "<div class=\"block\">" + 
+          "<div class=\"articleMetaDrop publicationContentDropZone\">" +
+          "<h1>blah blah</h1>" +
+          "</div>" +
+          "</div>";
+    
+    private static final String withLiteratumContentItemDownloadCount =
+      "<div class=\"block\">" +         
+          "<section id=\"2a\" class=\"w literatumContentItemDownloadCount\">" +
+          "<div class=\"wrapped\">" +
+          "<h1 class=\"widget-header header-titlebar header-disclosure\">" +
+          "Usage" +
+          "<div class=\"disclosure-icon\"></div>" +
+          "</h1>" +
+          "<div class=\"widget-body body body-titlebar body-disclosure\">" +
+          "Downloaded 44 times in the last 12 months</div>" +
+          "</div>" +
+          "</section>" +
+          "</div>";
+    
+    private static final String withLiteratumContentItemCitation =
+      "<div class=\"block\">" +          
+          "<div id=\"b9b\" class=\"widget literatumContentItemCitation\">" +
+          "<div class=\"widget-body  body-compact-horizontal\">" +
+          "<div class=\"citationFormat\">" +
+          "<h3>Citation:</h3>" +
+          "<p>blah blan</p>" +
+          "<p>DOI: 11.1111/abc123.00000000000</p>" +
+          "</div></div></div>" +
+          "</div>";
+    
+    private static final String withDecoratedLinks =
+      "<div class=\"block\">" +           
+          "<ul class=\"decoratedLinks\">" +
+          "<li><a href=\"/link/sub\">Subscriptions</a><li>" +
+          "</ul>" +
+          "</div>";
+    
+    private static final String withSectionJumpTo =
+        "<div class=\"block\">" +  
+            "<div class=\"sectionJumpTo\">" +
+            "<form style=\"margin-bottom:0\">" +
+            "<select class=\"f\" onchange=\"GoTo(this, 's')\" name=\"s23\">" +
+            "<option selected=\"#\" value=\"#\">Choose</option>" +
+            "<option value=\"#\">Top of page</option>" +
+            "<option value=\"#abs\">abs</option>" +
+            "<option value=\"#_i10\">bibli</option>" +
+            "</select>" +
+            "</form>" +
+            "</div>" +
+            "</div>";
+
+    
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
-    return PluginTestUtil.createAndStartAu(PLUGIN_ID,  arrsAuConfig());
+    return PluginTestUtil.createAndStartAu(PLUGIN_ID,  maneyAuConfig());
   }
   
-  private Configuration arrsAuConfig() {
+  private Configuration maneyAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.example.com/");
     conf.put("journal_id", "abc");
@@ -432,7 +503,16 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
                      filteredStr); 
         doFilterTest(mau, variantFact, 
                      withArticleToolsWidgetExceptDownloadCitation, 
-                     articleToolsWidgetFiltered);                 
+                     articleToolsWidgetFiltered);
+        doFilterTest(mau, variantFact, withPublicationToolContainer, 
+                     filteredStr);  
+        doFilterTest(mau, variantFact, withArticleMetaDrop, filteredStr);  
+        doFilterTest(mau, variantFact, withLiteratumContentItemDownloadCount, 
+                     filteredStr);  
+        doFilterTest(mau, variantFact, withLiteratumContentItemCitation, 
+                     filteredStr);  
+        doFilterTest(mau, variantFact, withDecoratedLinks, filteredStr);         
+        doFilterTest(mau, variantFact, withSectionJumpTo, filteredStr);             
      }
   }
   
