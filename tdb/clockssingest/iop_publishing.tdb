@@ -277,12 +277,12 @@
     au < exists ; exists ; 2005 ; Chinese Physics B Volume 14 ; 14 >
     au < exists ; exists ; 2006 ; Chinese Physics B Volume 15 ; 15 >
     au < exists ; exists ; 2007 ; Chinese Physics B Volume 16 ; 16 >
-    au < testing ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
-    au < testing ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
-    au < testing ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
-    au < testing ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
-    au < testing ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
-    au < testing ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
+    au < ready ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
+    au < ready ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
+    au < ready ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
+    au < ready ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
+    au < ready ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
+    au < ready ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
     au < testing ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
     au < manifest ; exists ; 2015 ; Chinese Physics B Volume 24 ; 24 >
   }
@@ -2629,10 +2629,10 @@
     au < manifest ; exists ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
     au < manifest ; exists ; 2006 ; Laser Physics Letters Volume 3 ; 3 >
     au < manifest ; exists ; 2007 ; Laser Physics Letters Volume 4 ; 4 >
-    au < testing ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
-    au < testing ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
-    au < testing ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
-    au < testing ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
+    au < ready ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
+    au < ready ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
+    au < ready ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
+    au < ready ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
     au < testing ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
     au < testing ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
     au < testing ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
@@ -4014,7 +4014,7 @@
     au < finished ; crawling ; 2011 ; Smart Materials and Structures Volume 20 ; 20 > 
     au < ingNotReady ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Smart Materials and Structures Volume 22 ; 22 > 
-    au < testing ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
+    au < ready ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
     au < manifest ; exists ; 2015 ; Smart Materials and Structures Volume 24 ; 24 > 
 
   }
