@@ -107,7 +107,7 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     }
   };
   
-  // Transform to remove attributes from select tags (div, )
+  // Transform to remove attributes from select tags (div, a, )
   // some attributes changed over time, either arbitrarily or sequentially
   protected static HtmlTransform xformAttributes = new HtmlTransform() {
     @Override
@@ -118,7 +118,8 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
           public void visitTag(Tag tag) {
             String tagName = tag.getTagName().toLowerCase();
             try {
-              if ("div".equals(tagName)) {
+              if ("div".equals(tagName) ||
+                  "a".equals(tagName)) {
                 Attribute a = tag.getAttributeEx(tagName);
                 Vector<Attribute> v = new Vector<Attribute>();
                 v.add(a);
