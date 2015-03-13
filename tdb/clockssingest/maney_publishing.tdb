@@ -109,7 +109,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Ambix Volume 58 ; 58 >
     au < doNotProcess ; doNotProcess ; 2012 ; Ambix Volume 59 ; 59 >
     au < manifest ; exists ; 2013 ; Ambix Volume 60 ; 60 >
-    au < testing ; exists ; 2014 ; Ambix Volume 61 ; 61 >
+    au < ready ; exists ; 2014 ; Ambix Volume 61 ; 61 >
 
   }
 
@@ -444,7 +444,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 >
     au < doNotProcess ; doNotProcess ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 >
     au < manifest ; exists ; 2013 ; Bulletin of the Council for British Research in the Levant Volume 8 ; 8 >
-    au < testing ; exists ; 2014 ; Bulletin of the Council for British Research in the Levant Volume 9 ; 9 >
+    au < ready ; exists ; 2014 ; Bulletin of the Council for British Research in the Levant Volume 9 ; 9 >
 
   }
 
@@ -656,7 +656,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Central Europe Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2012 ; Central Europe Volume 10 ; 10 >
     au < manifest ; exists ; 2013 ; Central Europe Volume 11 ; 11 >
-    au < testing ; exists ; 2014 ; Central Europe Volume 12 ; 12 >
+    au < ready ; exists ; 2014 ; Central Europe Volume 12 ; 12 >
 
   }
 
@@ -883,7 +883,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Costume Volume 45 ; 45 >
     au < doNotProcess ; doNotProcess ; 2012 ; Costume Volume 46 ; 46 >
     au < manifest ; exists ; 2013 ; Costume Volume 47 ; 47 >
-    au < testing ; exists ; 2014 ; Costume Volume 48 ; 48 >
+    au < ready ; exists ; 2014 ; Costume Volume 48 ; 48 >
 
     }
   
@@ -1060,8 +1060,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Early Medieval China Volume 2010 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2011 ; Early Medieval China Volume 2011 ; 2011 >
     au < doNotProcess ; doNotProcess ; 2012 ; Early Medieval China Volume 2012 ; 2012 >
-    au < manifest ; exists ; 2013 ; Early Medieval China Volume 19 ; 19 >
-    au < testing ; exists ; 2014 ; Early Medieval China Volume 20 ; 20 >
+    au < manifest ; exists ; 2013 ; Early Medieval China Volume 2013 ; 2013 >
+    au < testing ; exists ; 2014 ; Early Medieval China Volume 2014 ; 2014 >
 
   }
 
@@ -1562,7 +1562,7 @@
     au < manifest ; exists ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 >
     au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 >
     au < manifest ; exists ; 2013 ; Interdisciplinary Science Reviews Volume 38 ; 38 >
-    au < manifest ; exists ; 2014 ; Interdisciplinary Science Reviews Volume 39 ; 39 >
+    au < boost ; exists ; 2014 ; Interdisciplinary Science Reviews Volume 39 ; 39 >
 
   }
 
@@ -1585,7 +1585,7 @@
     au < manifest ; exists ; 2011 ; International Heat Treatment and Surface Engineering Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Heat Treatment and Surface Engineering Volume 6 ; 6 >
     au < manifest ; exists ; 2013 ; International Heat Treatment and Surface Engineering Volume 7 ; 7 >
-    au < manifest ; exists ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 >
+    au < boost ; exists ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 >
 
   }
 
@@ -1606,7 +1606,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 >
     au < manifest ; exists ; 2013 ; International Journal for the History of Engineering & Technology Volume 83 ; 83 >
-    au < manifest ; exists ; 2014 ; International Journal for the History of Engineering & Technology Volume 84 ; 84 >
+    au < boost ; exists ; 2014 ; International Journal for the History of Engineering & Technology Volume 84 ; 84 >
 
   }
 
@@ -1633,7 +1633,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 >
     au < manifest ; exists ; 2013 ; International Journal of Cast Metals Research Volume 26 ; 26 >
-    au < manifest ; exists ; 2014 ; International Journal of Cast Metals Research Volume 27 ; 27 >
+    au < boost ; exists ; 2014 ; International Journal of Cast Metals Research Volume 27 ; 27 >
 
   }
 
@@ -1651,7 +1651,7 @@
     
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 >
     au < manifest ; exists ; 2013 ; International Journal of Developmental Disabilities Volume 59 ; 59 >
-    au < manifest ; exists ; 2014 ; International Journal of Developmental Disabilities Volume 60 ; 60 >
+    au < boost ; exists ; 2014 ; International Journal of Developmental Disabilities Volume 60 ; 60 >
 
   }
 
@@ -1669,7 +1669,7 @@
     
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 >
     au < manifest ; exists ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 >
-    au < manifest ; exists ; 2014 ; International Journal of Healthcare Management Volume 7 ; 7 >
+    au < boost ; exists ; 2014 ; International Journal of Healthcare Management Volume 7 ; 7 >
 
   }  
 
@@ -1714,7 +1714,7 @@
     au < manifest ; exists ; 2011 ; International Materials Reviews Volume 56 ; 56 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Materials Reviews Volume 57 ; 57 >
     au < manifest ; exists ; 2013 ; International Materials Reviews Volume 58 ; 58 >
-    au < manifest ; exists ; 2014 ; International Materials Reviews Volume 59 ; 59 >
+    au < boost ; exists ; 2014 ; International Materials Reviews Volume 59 ; 59 >
 
   }
 
@@ -1782,7 +1782,7 @@
     au < manifest ; exists ; 2011 ; International Musculoskeletal Medicine Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 >
     au < manifest ; exists ; 2013 ; International Musculoskeletal Medicine Volume 35 ; 35 >
-    au < manifest ; exists ; 2014 ; International Musculoskeletal Medicine Volume 36 ; 36 >
+    au < boost ; exists ; 2014 ; International Musculoskeletal Medicine Volume 36 ; 36 >
 
   }
 
@@ -1802,7 +1802,7 @@
     au < manifest ; exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Wood Products Journal Volume 3 ; 3 >
     au < manifest ; exists ; 2013 ; International Wood Products Journal Volume 4 ; 4 >
-    au < manifest ; exists ; 2014 ; International Wood Products Journal Volume 5 ; 5 >
+    au < boost ; exists ; 2014 ; International Wood Products Journal Volume 5 ; 5 >
 
   }
 
@@ -1882,7 +1882,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Italian Culture Volume 29 ; 29 >
     au < doNotProcess ; doNotProcess ; 2012 ; Italian Culture Volume 30 ; 30 >
     au < manifest ; exists ; 2013 ; Italian Culture Volume 31 ; 31 >
-    au < manifest ; exists ; 2014 ; Italian Culture Volume 32 ; 32 >
+    au < boost ; exists ; 2014 ; Italian Culture Volume 32 ; 32 >
 
   }
 
