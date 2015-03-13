@@ -42,8 +42,6 @@ import org.lockss.util.Logger;
 public class ManeyAtyponHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
 
-  private static final Logger log = Logger.getLogger(ManeyAtyponHtmlHashFilterFactory.class);
-  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
@@ -58,8 +56,11 @@ public class ManeyAtyponHtmlHashFilterFactory
         HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
         //  toc - right below breadcrumbs, journal section with current
         HtmlNodeFilters.tagWithAttribute("div",  "id", "Journal Header"),
-        // under TOC issue information, select all access icons
+        // under TOC issue information, select all access icons and dropdown
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "access-options"),
+        // toc - For selected items dropdown next to Full/Open access
+        HtmlNodeFilters.tagWithAttribute("div", "class", 
+                                         "publicationToolContainer"),
         // toc - access icon status of article
         HtmlNodeFilters.tagWithAttribute("td", "class" ,"accessIconContainer"),
         //  toc - ad above News & Alerts
@@ -113,7 +114,23 @@ public class ManeyAtyponHtmlHashFilterFactory
         // all pages - verify email message appears in certain content
         // machines but not all
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumMailVerificationWidget"),
+                                            "literatumMailVerificationWidget"),
+        // abs - potential issue like 'corrigendum' from a figure page of
+        // Endocrine Society
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
+                                              "articleMetaDrop"), 
+        // abs, full - downloaded count                                
+        HtmlNodeFilters.tagWithAttributeRegex("section",  "class", 
+                                          "literatumContentItemDownloadCount"),
+        // abs - right sidebar - Citation part
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
+                                              "literatumContentItemCitation"),
+        // toc - right sidebar links under 'Journal sevices' and "For authors'
+        HtmlNodeFilters.tagWithAttributeRegex("ul",  "class", "decoratedLinks"),
+        // full - section choose pulldown appeared in multiple sections
+        // http://www.maneyonline.com/doi/full/
+        //                           10.1179/1547402X14Z.00000000026#allImages
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo")
     };
 
     // super.createFilteredInputStream adds maney filters to the 
