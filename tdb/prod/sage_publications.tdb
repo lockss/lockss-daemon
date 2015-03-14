@@ -3213,7 +3213,16 @@
       param[base_url] = http://aan.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < expected ; 2002 ; Asian Cardiovascular and Thoracic Annals Volume 10 ; 10 >
+      au < exists ; 1993 ; Asian Cardiovascular and Thoracic Annals Volume 1 ; 1 >
+      au < exists ; 1994 ; Asian Cardiovascular and Thoracic Annals Volume 2 ; 2 >
+      au < exists ; 1995 ; Asian Cardiovascular and Thoracic Annals Volume 3 ; 3 >
+      au < exists ; 1996 ; Asian Cardiovascular and Thoracic Annals Volume 4 ; 4 >
+      au < exists ; 1997 ; Asian Cardiovascular and Thoracic Annals Volume 5 ; 5 >
+      au < exists ; 1998 ; Asian Cardiovascular and Thoracic Annals Volume 6 ; 6 >
+      au < exists ; 1999 ; Asian Cardiovascular and Thoracic Annals Volume 7 ; 7 >
+      au < exists ; 2000 ; Asian Cardiovascular and Thoracic Annals Volume 8 ; 8 >
+      au < exists ; 2001 ; Asian Cardiovascular and Thoracic Annals Volume 9 ; 9 >
+      au < exists ; 2002 ; Asian Cardiovascular and Thoracic Annals Volume 10 ; 10 >
       au < manifest ; 2003 ; Asian Cardiovascular and Thoracic Annals Volume 11 ; 11 >
       au < manifest ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 >
       au < manifest ; 2005 ; Asian Cardiovascular and Thoracic Annals Volume 13 ; 13 >
