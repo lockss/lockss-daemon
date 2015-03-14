@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Yale Institute of Sacred Music ;
+    info[contract] = 2015 ;
+    info[tester] = 5
+  >
+  
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+
+  {
+  
+    title <
+      name = Yale Journal of Music and Religion ;
+      eissn = 2377-231X ;
+      issnl = 2377-231X
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://elischolar.library.yale.edu/
+    param[journal_abbr] = yjmr
+    implicit < status ; status2 ; year ; name ; param[volume] >
+
+    au < exists ; exists ; 2015 ; Yale Journal of Music and Religion Volume 1 ; 1 >
+
+  }
+
+}
