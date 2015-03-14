@@ -13,8 +13,8 @@ my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve 
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 my $clockss_tag = "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
 my $cc_license_tag = "rel..license";
-my $cc_license_url = "href=.http://creativecommons\.org/licenses/(by|by-sa|by-nc|by-nd|by-nc-sa|by-nc-nd)/(1\.0|2\.0|2\.5|3\.0|4\.0)/?.";
-my $cc_by_tag = "href..http://creativecommons.org/licenses/by";
+my $cc_license_url = "href=\"https?://creativecommons\.org/licenses/(by|by-sa|by-nc|by-nd|by-nc-sa|by-nc-nd)/(1\.0|2\.0|2\.5|3\.0|4\.0)/?.";
+my $cc_by_tag = "href=\"https?://creativecommons.org/licenses/by";
 my $bmc_tag = "<span>Archive</span>";
 my $bmc2_tag = "<span>Issues</span>";
 my $igi_tag = "/gateway/issue/";
