@@ -112,11 +112,15 @@ uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "IBICT. All plugin/names = $allAUs"
 echo "IBICT. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#
+# Find number of AUs ready for release in the ibictpln title database
+echo "----------------------"
+./scripts/tdb/tdbout -Y -t status tdb/ibictpln/*.tdb | sort | uniq -c
 echo " "
 #
 # Find duplicate auids in the whole database. Not exists or expected
-echo "---------------------"
-echo "---------------------"
+#echo "---------------------"
+#echo "---------------------"
 #scripts/tdb/tdbout -Aa tdb/*/*.tdb | sort > $tpath/allAUs
 #uniq $tpath/allAUs > $tpath/dedupedAUs
 #allAUs=`cat $tpath/allAUs | wc -l`
