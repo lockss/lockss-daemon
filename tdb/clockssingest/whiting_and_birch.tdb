@@ -6,10 +6,7 @@
     info[contract] = 2012 ;
     info[tester] = 8
   >
-    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
-    param[base_url] = http://essential.metapress.com/
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[moving] = moving from metapress to OJS on February 25, 2015
+    comment[moving] = moved from metapress to OJS on February 25, 2015
     
   {
   
@@ -18,21 +15,49 @@
       issn = 0951-824X ;
       eissn = 1746-6091
     >
-
-    param[journal_issn] = 1746-6091
     
-    au < manifest ; exists ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
-    au < manifest ; exists ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
-    au < manifest ; exists ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 >
-    au < manifest ; exists ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 >
-    au < manifest ; exists ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 >
-    au < manifest ; exists ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 >
-    au < manifest ; exists ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 >
-    au < crawling ; exists ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
-    au < crawling ; exists ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
-    au < crawling ; exists ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
-    au < doNotProcess ; exists ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
+    {
+    
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      param[journal_issn] = 1746-6091
+    
+      au < doNotProcess ; doNotProcess ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
+      au < doNotProcess ; doNotProcess ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
+      au < doNotProcess ; doNotProcess ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 >
+      au < doNotProcess ; doNotProcess ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 >
+      au < doNotProcess ; doNotProcess ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 >
+      au < doNotProcess ; doNotProcess ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 >
+      au < down ; exists ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
+      au < down ; exists ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
+      au < down ; exists ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
   
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+      param[base_url] = http://journals.whitingbirch.net/
+      implicit < status ; status2 ; year ; param[year] ; name ; volume >
+      param[journal_id] = GPWK
+      
+      au < exists ; exists ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
+      au < exists ; exists ; 2005 ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
+      au < exists ; exists ; 2006 ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 >
+      au < exists ; exists ; 2007 ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 >
+      au < exists ; exists ; 2008 ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 >
+      au < exists ; exists ; 2009 ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 >
+      au < exists ; exists ; 2010 ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
+      au < exists ; exists ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
+
+    }
+    
   }
 
   {
@@ -43,13 +68,20 @@
       eissn = 1746-6113
     >
     
-    comment[continued_by] = 1759-5150 
-    param[journal_issn] = 1759-5150
-    comment[jounral_issn] = manifest page use new issn
+    {
+    
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      comment[continued_by] = 1759-5150 
+      param[journal_issn] = 1759-5150
+      comment[jounral_issn] = doNotProcess page use new issn
 
-    au < manifest ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
-    au < manifest ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
 
+    }
+    
   }
 
   {
@@ -59,16 +91,40 @@
       issn = 1759-5150
     >
     
-    comment[continues] = 1460-6690 
-    param[journal_issn] = 1759-5150
+    {
+    
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      comment[continues] = 1460-6690 
+      param[journal_issn] = 1759-5150
       
-    au < manifest ; exists ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
-    au < manifest ; exists ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
-    au < manifest ; exists ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 >
-    au < crawling ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
-    au < crawling ; exists ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
-    au < crawling ; exists ; 2013-2014 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
-    au < doNotProcess ; exists ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 >
+      au < doNotProcess ; doNotProcess ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
+      au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
+      au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 >
+      au < down ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
+      au < down ; exists ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
+      au < down ; exists ; 2013-2014 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 >
+    
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+      param[base_url] = http://journals.whitingbirch.net/
+      implicit < status ; status2 ; year ; param[year] ; name ; volume >
+      param[journal_id] = JPTS
+      
+      au < exists ; exists ; 2006 ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
+      au < exists ; exists ; 2008 ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
+      au < exists ; exists ; 2009 ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 >
+      au < doNotProcess ; doNotProcess ; 2010-2011 ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
+      au < doNotProcess ; doNotProcess ; 2011-2013 ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; 2013-2014 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
+      au < exists ; exists ; 2014-2015 ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 >
+
+    }
     
   }    
   
@@ -80,16 +136,41 @@
       eissn = 1746-6105
     >
     
-    param[journal_issn] = 1746-6105
+    {
     
-    au < manifest ; exists ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
-    au < manifest ; exists ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
-    au < manifest ; exists ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
-    au < crawling ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
-    au < crawling ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
-    au < crawling ; exists ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 >
-    au < crawling ; exists ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 >
-    au < doNotProcess ; exists ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 >
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      param[journal_issn] = 1746-6105
+    
+      au < doNotProcess ; doNotProcess ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
+      au < doNotProcess ; doNotProcess ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
+      au < doNotProcess ; doNotProcess ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
+      au < down ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
+      au < down ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
+      au < down ; exists ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 >
+      au < down ; exists ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 >
+    
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+      param[base_url] = http://journals.whitingbirch.net/
+      implicit < status ; status2 ; year ; param[year] ; name ; volume >
+      param[journal_id] = SWSSR
+      
+      au < exists ; exists ; 2004 ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
+      au < exists ; exists ; 2005-2007 ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
+      au < exists ; exists ; 2007-2008 ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
+      au < doNotProcess ; doNotProcess ; 2010-2011 ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
+      au < doNotProcess ; doNotProcess ; 2011-2012 ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
+      au < doNotProcess ; doNotProcess ; 2012-2013 ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 >
+      au < exists ; exists ; 2014-2015 ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 >
+
+    }
     
   }
 
@@ -100,10 +181,27 @@
       issn = 1987-8710 
     >
     
-    param[journal_issn] = 1987-8710
+    {
+    
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      param[journal_issn] = 1987-8710
 
-    au < crawling ; exists ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
-    au < doNotProcess ; exists ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+      au < down ; exists ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+    
+    }
+    
+    {
+      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+      param[base_url] = http://journals.whitingbirch.net/
+      implicit < status ; status2 ; year ; param[year] ; name ; volume >
+      param[journal_id] = JSPW
+      
+      au < doNotProcess ; doNotProcess ; 2012-2013 ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+    }
     
   }
 
