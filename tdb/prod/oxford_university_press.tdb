@@ -1909,7 +1909,20 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2012 ; Arthropod Management Tests Volume 37 ; 37 >
+    au < exists ; 2004 ; Arthropod Management Tests Volume 24 ; 24 >
+    au < exists ; 2004 ; Arthropod Management Tests Volume 25 ; 25 >
+    au < exists ; 2004 ; Arthropod Management Tests Volume 26 ; 26 >
+    au < exists ; 2004 ; Arthropod Management Tests Volume 27 ; 27 >
+    au < exists ; 2004 ; Arthropod Management Tests Volume 28 ; 28 >
+    au < exists ; 2004 ; Arthropod Management Tests Volume 29 ; 29 >
+    au < exists ; 2005 ; Arthropod Management Tests Volume 30 ; 30 >
+    au < exists ; 2006 ; Arthropod Management Tests Volume 31 ; 31 >
+    au < exists ; 2007 ; Arthropod Management Tests Volume 32 ; 32 >
+    au < exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 >
+    au < exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 >
+    au < exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 >
+    au < exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 >
+    au < exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 >
     au < manifest ; 2013 ; Arthropod Management Tests Volume 38 ; 38 >
     au < expected ; 2014 ; Arthropod Management Tests Volume 39 ; 39 >
     au < expected ; 2015 ; Arthropod Management Tests Volume 40 ; 40 >
