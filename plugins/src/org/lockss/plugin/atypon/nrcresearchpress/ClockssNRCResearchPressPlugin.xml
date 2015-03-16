@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - mep/audrey</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -39,7 +39,7 @@
   </entry>
     <entry>
     <string>plugin_parent_version</string>
-    <string>30</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>au_name</string>
