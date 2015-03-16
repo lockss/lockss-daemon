@@ -207,10 +207,10 @@ public class TestOJS2Plugin extends LockssTestCase {
     
     shouldCacheTest(ROOT_URL + "index.php/j_id/article/viewFile/123/456/%20http://foo.edu", false, au);
     
-//    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/filelist.xml", true, au);
-//    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/filelist.xml", true, au);
-//    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/filelist.xml", false, au);
-//    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/Background_files/filelist.xml", false, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/filelist.xml", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/filelist.xml", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/filelist.xml", false, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/Background_files/filelist.xml", false, au);
     
   }
   
