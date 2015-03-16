@@ -3,7 +3,7 @@
  */
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,7 +46,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
 public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
-  Logger log = Logger.getLogger(MassachusettsMedicalSocietyHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(MassachusettsMedicalSocietyHtmlHashFilterFactory.class);
 
   // include a whitespace filter
   @Override
