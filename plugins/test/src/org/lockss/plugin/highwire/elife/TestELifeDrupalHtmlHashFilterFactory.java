@@ -58,19 +58,19 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
   // No relevant content in header/footer
   // new TagNameFilter("header"),
   // new TagNameFilter("footer"),
-  private static final String header = "<div>A\n" + 
+  private static final String header = "<div>A \n" + 
       "<header id=\"section-header\" class=\"section section-header\">\n" + 
       "<div id=\"zone-user-wrapper\" class=\"zone-wrapper\"></div>\n" + 
       "</header>\n9" + 
       "</div>";
   private static final String headerFiltered = "A 9";
   
-  private static final String footer = "<div>A\n" + 
+  private static final String footer = "<div>A \n" + 
       "<footer id=\"section-footer\" class=\"section section-footer\">\n" + 
       "<div id=\"zone-postscript\" class=\"zone zone-postscript clearfix container-30\"></div>\n" +
-      "</footer>9\n" + 
+      "</footer>9 \n" + 
       "</div>";
-  private static final String footerFiltered = "A 9 "; 
+  private static final String footerFiltered = "A 9 ";
   
   // new TagNameFilter("script"),
   private static final String withScript =
@@ -97,7 +97,7 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutRRHeader = " ";
   
   // HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
-  private static final String zheader = "<div>\n" +
+  private static final String zheader = "<div> \n" +
       "<div id=\"zone-header-wrapper\" class=\"zone-wrapper zone-header-wrapper clearfix\">" +
       "</div>" +
       "</div>";
@@ -109,12 +109,12 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
       "<a class=\"header__identity\" href=\"/\">\n" + 
       "<img alt=\"eLife\" src=\"http://dex3165296d6d.cloudfront.net/images/elife-identity-header.jpg\">\n" + 
       "</a>\n" + 
-      "</div>\n" + 
+      "</div>\n " + 
       "</div>";
   private static final String pheaderFiltered = " ";
   
   // HtmlNodeFilters.tagWithAttribute("ul", "class", "elife-article-categories"),
-  private static final String artcat = "<div>\nA" +
+  private static final String artcat = "<div> \nA" +
       "<ul class=\"elife-article-categories\">\n" + 
       "<li class=\"first\"><a class=\"category-display-channel\" href=\"/category/research-article\">Research article</a></li>\n" + 
       "<li><a class=\"category-heading\" href=\"/category/genes-and-chromosomes\">Genes and chromosomes</a></li>\n" + 
@@ -139,7 +139,7 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutRef = "9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
-  private static final String withSidebar = "<div>\n" +
+  private static final String withSidebar = "<div> \n" +
       "<div class=\"sidebar-wrapper grid-9 omega\">\n" + 
       "      <div class=\"panel-panel panel-region-sidebar-lens\">\n" + 
       "        <div class=\"panel-pane pane-elife-article-lens-icon hidden-small\">\n" + 
