@@ -11358,6 +11358,22 @@
   {
 
     title <
+      name = Journal of Consumer Research ;
+      issn = 0093-5301 ;
+      eissn = 1537-5277 ;
+      issnl = 0093-5301 
+    >
+
+    param[base_url] = http://jcr.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < expected ; exists ; 2015 ; Journal of Consumer Research Volume 41 ; 41 ; >
+    
+  }
+
+  {
+
+    title <
       name = Journal of Conflict and Security Law ;
       issn = 1467-7954 ;
       eissn = 1467-7962 ;
