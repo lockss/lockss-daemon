@@ -578,7 +578,7 @@
     au < finished ; crawling ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
     au < crawling ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
     au < doNotProcess ; exists ; 2014 ; The American Historical Review Volume 119 ; 119 ; >
-    au < expected ; exists ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
+    au < manifest ; exists ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
 
     }
 
@@ -3248,7 +3248,7 @@
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
-    au < expected ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
+    au < manifest ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
 
     }
 
@@ -4116,7 +4116,7 @@
 
     au < crawling ; exists ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 ; >
     au < crawling ; exists ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
-    au < expected ; exists ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 ; >
 
     }
 
@@ -7293,7 +7293,7 @@
     au < finished ; crawling ; 2012 ; French History Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; French History Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2014 ; French History Volume 28 ; 28 ; >
-    au < expected ; exists ; 2015 ; French History Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2015 ; French History Volume 29 ; 29 ; >
 
     }
 
@@ -7445,7 +7445,7 @@
     au < finished ; frozen ; 2012 ; French Studies Bulletin Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; French Studies Bulletin Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 2014 ; French Studies Bulletin Volume 35 ; 35 ; >
-    au < expected ; exists ; 2015 ; French Studies Bulletin Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2015 ; French Studies Bulletin Volume 36 ; 36 ; >
 
     }
 
@@ -9938,7 +9938,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Public Opinion Research Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Journal of Public Opinion Research Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 ; >
-    au < expected ; exists ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 ; >
 
     }
 
@@ -11527,7 +11527,7 @@
     au < finished ; crawling ; 2012 ; Journal of Design History Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Design History Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Design History Volume 27 ; 27 ; >
-    au < expected ; exists ; 2015 ; Journal of Design History Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2015 ; Journal of Design History Volume 28 ; 28 ; >
 
     }
 
@@ -12730,7 +12730,7 @@
     au < manifest ; exists ; 2012 ; Journal of Integrated Pest Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Integrated Pest Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Integrated Pest Management Volume 5 ; 5 ; >
-    au < expected ; exists ; 2015 ; Journal of Integrated Pest Management Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2015 ; Journal of Integrated Pest Management Volume 6 ; 6 ; >
 
   }
 
@@ -13745,7 +13745,7 @@
     au < crawling ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
-    au < expected ; exists ; 2015 ; Journal of the Pediatric Infectious Diseases Society Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2015 ; Journal of the Pediatric Infectious Diseases Society Volume 4 ; 4 ; >
 
     }
 
@@ -14218,7 +14218,7 @@
     au < finished ; crawling ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Refugee Studies Volume 26 ; 26 ; >
     au < crawling ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
-    au < expected ; exists ; 2015 ; Journal of Refugee Studies Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2015 ; Journal of Refugee Studies Volume 28 ; 28 ; >
 
     }
 
@@ -17371,7 +17371,7 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
 
-    au < expected ; exists ; 1964 ; Nutrition Reviews Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1964 ; Nutrition Reviews Volume 22 ; 22 ; >
     au < manifest ; exists ; 1965 ; Nutrition Reviews Volume 23 ; 23 ; >
     au < manifest ; exists ; 1966 ; Nutrition Reviews Volume 24 ; 24 ; >
     au < manifest ; exists ; 1967 ; Nutrition Reviews Volume 25 ; 25 ; >
@@ -19765,7 +19765,7 @@
     au < crawling ; exists ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Quarterly Journal of Mathematics Volume 64 ; 64 ; >
     au < crawling ; exists ; 2014 ; The Quarterly Journal of Mathematics Volume 65 ; 65 ; >
-    au < expected ; exists ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 ; >
 
     }
 
