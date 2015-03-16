@@ -211,7 +211,7 @@
     au < manifest ; exists ; 2012 ; Advances in Artificial Intelligence Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Artificial Intelligence Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in Artificial Intelligence Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Advances in Artificial Intelligence Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Advances in Artificial Intelligence Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1591,7 +1591,7 @@
     au < manifest ; exists ; 2012 ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Autoimmune Diseases Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Autoimmune Diseases Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Autoimmune Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2411,7 +2411,7 @@
     param[journal_id] = cjb
 
     au < crawling ; exists ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2564,7 +2564,7 @@
 
     au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3142,7 +3142,7 @@
     au < manifest ; exists ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7866,7 +7866,7 @@
 
     au < manifest ; exists ; 2013 ; Journal of Toxins Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Journal of Toxins Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Toxins Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Toxins Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8405,7 +8405,7 @@
     au < manifest ; exists ; 2012 ; Pain Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Pain Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Pain Research and Treatment Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Pain Research and Treatment Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Pain Research and Treatment Volume 2015 ; 2015 ; 2015 >
     
   }
 
