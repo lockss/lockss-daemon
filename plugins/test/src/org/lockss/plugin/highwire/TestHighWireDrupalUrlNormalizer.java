@@ -99,6 +99,11 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
         normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full.pdf%2Bhtml", null));
     assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html",
         normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf%2Bhtml", null));
+    
+    assertEquals("http://ajpcell.physiology.org/content/303/1/C1",
+        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?rss=foo", null));
+    assertEquals("http://ajpcell.physiology.org/content/303/1/C1",
+        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?rss=foo", null));
   }
   
 }
