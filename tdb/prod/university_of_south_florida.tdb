@@ -52,7 +52,7 @@
       issnl = 1911-0359
     >
 
-    attr[journal_abbr] = gsp
+    param[journal_abbr] = gsp
 
     au < exists ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
     au < exists ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
@@ -74,7 +74,7 @@
       issnl = 1528-6509
     >
 
-    attr[journal_abbr] = jea
+    param[journal_abbr] = jea
     comment[0] = titles changed in 2000
 
     au < exists ; 1997 ; Georgia Journal of Ecological Anthropology Volume 1 ; 1 >
@@ -106,7 +106,7 @@
       issnl = 1936-4660
     >
 
-    attr[journal_abbr] = numeracy
+    param[journal_abbr] = numeracy
 
     au < exists ; 2008 ; Numeracy Volume 1 ; 1 >
     au < exists ; 2009 ; Numeracy Volume 2 ; 2 >
@@ -128,7 +128,7 @@
       issnl = 2157-5223
     >
 
-    attr[journal_abbr] = surcosur
+    param[journal_abbr] = surcosur
 
     au < exists ; 2011 ; Revista Surco Sur Volume 1 ; 1 >
     au < exists ; 2012 ; Revista Surco Sur Volume 2 ; 2 >
