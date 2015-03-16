@@ -1149,10 +1149,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Natural Product Reports Volume 27 ; 27 ; 2010 >
-      au < manifest ; exists ; 2011 ; Natural Product Reports Volume 28 ; 28 ; 2011 >
-      au < manifest ; exists ; 2012 ; Natural Product Reports Volume 29 ; 29 ; 2012 >
-      au < manifest ; exists ; 2013 ; Natural Product Reports Volume 30 ; 30 ; 2013 >
+      au < testing ; exists ; 2010 ; Natural Product Reports Volume 27 ; 27 ; 2010 >
+      au < testing ; exists ; 2011 ; Natural Product Reports Volume 28 ; 28 ; 2011 >
+      au < testing ; exists ; 2012 ; Natural Product Reports Volume 29 ; 29 ; 2012 >
+      au < testing ; exists ; 2013 ; Natural Product Reports Volume 30 ; 30 ; 2013 >
       au < crawling ; exists ; 2014 ; Natural Product Reports Volume 31 ; 31 ; 2014 >
       au < expected ; exists ; 2015 ; Natural Product Reports Volume 32 ; 32 ; 2015 >
 
@@ -1196,11 +1196,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
-      au < manifest ; exists ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
-      au < manifest ; exists ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 >
-      au < manifest ; exists ; 2012 ; New Journal of Chemistry Volume 36 ; 36 ; 2012 >
-      au < manifest ; exists ; 2013 ; New Journal of Chemistry Volume 37 ; 37 ; 2013 >
+      au < testing ; exists ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+      au < testing ; exists ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
+      au < testing ; exists ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 >
+      au < testing ; exists ; 2012 ; New Journal of Chemistry Volume 36 ; 36 ; 2012 >
+      au < testing ; exists ; 2013 ; New Journal of Chemistry Volume 37 ; 37 ; 2013 >
       au < crawling ; exists ; 2014 ; New Journal of Chemistry Volume 38 ; 38 ; 2014 >
       au < expected ; exists ; 2015 ; New Journal of Chemistry Volume 39 ; 39 ; 2015 >
 
