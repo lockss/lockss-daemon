@@ -5922,23 +5922,23 @@
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; exists ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; exists ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; exists ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; European Heart Journal Supplements Volume 7 [superseded] ; 7 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 >
     au < HighWireStrVolPlugin ; superseded ; 2007 ; European Heart Journal Supplements Volume 9 [superseded] ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 >
+    au < oup.OUPDrupalPlugin ; doesNotExist ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 >
+    au < oup.OUPDrupalPlugin ; exists ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; exists ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 >
 
     }
 
