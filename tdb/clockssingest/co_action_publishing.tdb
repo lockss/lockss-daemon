@@ -52,11 +52,11 @@
     
       param[base_url] = http://journals.co-action.net/
       param[journal_id] = aie
+      comment[0] = discontinued in 2013
 
       au < crawling ; exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
       au < crawling ; exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
       au < crawling ; exists ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
-      au < expected ; exists ; 2014 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2014 >
     
     }
     
@@ -485,6 +485,7 @@
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
     comment[notReady] = no substance
+    comment[0] = discontinued in 2014
 
     au < finished ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
     au < finished ; frozen ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
