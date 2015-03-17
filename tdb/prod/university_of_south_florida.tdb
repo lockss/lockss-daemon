@@ -37,8 +37,8 @@
     
     param[journal_abbr] = alambique
 
-    au < exists ; 2013 ; ABO: Alambique Volume 1 ; 1 >
-    au < exists ; 2014 ; ABO: Alambique Volume 2 ; 2 >
+    au < manifest ; 2013 ; ABO: Alambique Volume 1 ; 1 >
+    au < manifest ; 2014 ; ABO: Alambique Volume 2 ; 2 >
     au < expected ; 2015 ; ABO: Alambique Volume 3 ; 3 >
 
   }
