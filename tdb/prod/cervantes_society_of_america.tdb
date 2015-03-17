@@ -19,7 +19,8 @@
     param[journal_dir] = cervantes
     attr[journal_id] = cer
 
-    au < manifest ; 2014 ; Cervantes: Bulletin of the Cervantes Society of America Volume 34 ; 34 >
+    au < testing ; 2014 ; Cervantes: Bulletin of the Cervantes Society of America Volume 34 ; 34 >
+    au < expected ; 2015 ; Cervantes: Bulletin of the Cervantes Society of America Volume 35 ; 35 >
 
   }
 
