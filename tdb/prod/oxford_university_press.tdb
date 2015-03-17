@@ -1909,20 +1909,20 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2004 ; Arthropod Management Tests Volume 24 ; 24 >
-    au < exists ; 2004 ; Arthropod Management Tests Volume 25 ; 25 >
-    au < exists ; 2004 ; Arthropod Management Tests Volume 26 ; 26 >
-    au < exists ; 2004 ; Arthropod Management Tests Volume 27 ; 27 >
-    au < exists ; 2004 ; Arthropod Management Tests Volume 28 ; 28 >
-    au < exists ; 2004 ; Arthropod Management Tests Volume 29 ; 29 >
-    au < exists ; 2005 ; Arthropod Management Tests Volume 30 ; 30 >
-    au < exists ; 2006 ; Arthropod Management Tests Volume 31 ; 31 >
-    au < exists ; 2007 ; Arthropod Management Tests Volume 32 ; 32 >
-    au < exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 >
-    au < exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 >
-    au < exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 >
-    au < exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 >
-    au < exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 >
+    au < manifest ; 2004 ; Arthropod Management Tests Volume 24 ; 24 >
+    au < manifest ; 2004 ; Arthropod Management Tests Volume 25 ; 25 >
+    au < manifest ; 2004 ; Arthropod Management Tests Volume 26 ; 26 >
+    au < manifest ; 2004 ; Arthropod Management Tests Volume 27 ; 27 >
+    au < manifest ; 2004 ; Arthropod Management Tests Volume 28 ; 28 >
+    au < manifest ; 2004 ; Arthropod Management Tests Volume 29 ; 29 >
+    au < manifest ; 2005 ; Arthropod Management Tests Volume 30 ; 30 >
+    au < manifest ; 2006 ; Arthropod Management Tests Volume 31 ; 31 >
+    au < manifest ; 2007 ; Arthropod Management Tests Volume 32 ; 32 >
+    au < manifest ; 2008 ; Arthropod Management Tests Volume 33 ; 33 >
+    au < manifest ; 2009 ; Arthropod Management Tests Volume 34 ; 34 >
+    au < manifest ; 2010 ; Arthropod Management Tests Volume 35 ; 35 >
+    au < manifest ; 2011 ; Arthropod Management Tests Volume 36 ; 36 >
+    au < manifest ; 2012 ; Arthropod Management Tests Volume 37 ; 37 >
     au < manifest ; 2013 ; Arthropod Management Tests Volume 38 ; 38 >
     au < expected ; 2014 ; Arthropod Management Tests Volume 39 ; 39 >
     au < expected ; 2015 ; Arthropod Management Tests Volume 40 ; 40 >
@@ -3608,7 +3608,7 @@
     au < released ; 2012 ; The Cambridge Quarterly Volume 41 [Project MUSE] ; 41 >
     au < released ; 2013 ; The Cambridge Quarterly Volume 42 [Project MUSE] ; 42 >
     au < manifest ; 2014 ; The Cambridge Quarterly Volume 43 [Project MUSE] ; 43 >
-    au < expected ; 2015 ; The Cambridge Quarterly Volume 44 [Project MUSE] ; 44 >
+    au < manifest ; 2015 ; The Cambridge Quarterly Volume 44 [Project MUSE] ; 44 >
 
     }
 
@@ -4070,7 +4070,7 @@
 
     au < manifest ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 >
     au < manifest ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 >
-    au < expected ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 >
+    au < manifest ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 >
 
   }
 
@@ -7310,7 +7310,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; French History Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; French History Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; French History Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; French History Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; French History Volume 29 ; 29 >
 
     }
 
@@ -7489,7 +7489,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; French Studies Bulletin Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; French Studies Bulletin Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; French Studies Bulletin Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; French Studies Bulletin Volume 36 ; 36 >
 
     }
 
@@ -9395,7 +9395,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Information and Inference: A Journal of the IMA Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Information and Inference: A Journal of the IMA Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Information and Inference: A Journal of the IMA Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Information and Inference: A Journal of the IMA Volume 4 ; 4 >
 
     }
 
@@ -10105,7 +10105,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Public Opinion Research Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Public Opinion Research Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 >
 
     }
 
@@ -10156,7 +10156,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Journal for Quality in Health Care Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; 2007 ; International Journal for Quality in Health Care Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; down ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 >
-    au < oup.OUPDrupalPlugin ; exists ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; down ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; down ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; down ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 >
@@ -11753,7 +11753,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Design History Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Design History Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Design History Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Design History Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Design History Volume 28 ; 28 >
 
     }
 
@@ -13002,7 +13002,7 @@
     au < manifest ; 2012 ; Journal of Integrated Pest Management Volume 3 ; 3 >
     au < manifest ; 2013 ; Journal of Integrated Pest Management Volume 4 ; 4 >
     au < manifest ; 2014 ; Journal of Integrated Pest Management Volume 5 ; 5 >
-    au < expected ; 2015 ; Journal of Integrated Pest Management Volume 6 ; 6 >
+    au < manifest ; 2015 ; Journal of Integrated Pest Management Volume 6 ; 6 >
 
   }
 
@@ -14425,7 +14425,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Refugee Studies Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Refugee Studies Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Refugee Studies Volume 28 ; 28 >
 
     }
 
@@ -15330,7 +15330,7 @@
     au < released ; 2012 ; The Library: The Transactions of the Bibliographical Society Volume 13 [Project MUSE] ; 13 >
     au < released ; 2013 ; The Library: The Transactions of the Bibliographical Society Volume 14 [Project MUSE] ; 14 >
     au < manifest ; 2014 ; The Library: The Transactions of the Bibliographical Society Volume 15 [Project MUSE] ; 15 >
-    au < expected ; 2015 ; The Library: The Transactions of the Bibliographical Society Volume 16 [Project MUSE] ; 16 >
+    au < manifest ; 2015 ; The Library: The Transactions of the Bibliographical Society Volume 16 [Project MUSE] ; 16 >
 
     }
 
@@ -15623,7 +15623,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Mathematical Medicine and Biology Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Mathematical Medicine and Biology Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Mathematical Medicine and Biology Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Mathematical Medicine and Biology Volume 32 ; 32 >
 
     }
 
@@ -20130,7 +20130,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Quarterly Journal of Mathematics Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Quarterly Journal of Mathematics Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 >
 
     }
 
@@ -21539,7 +21539,7 @@
     au < released ; 2012 ; Social Politics: International Studies in Gender, State and Society Volume 19 [Project MUSE] ; 19 >
     au < released ; 2013 ; Social Politics: International Studies in Gender, State and Society Volume 20 [Project MUSE] ; 20 >
     au < manifest ; 2014 ; Social Politics: International Studies in Gender, State and Society Volume 21 [Project MUSE] ; 21 >
-    au < expected ; 2015 ; Social Politics: International Studies in Gender, State and Society Volume 22 [Project MUSE] ; 22 >
+    au < manifest ; 2015 ; Social Politics: International Studies in Gender, State and Society Volume 22 [Project MUSE] ; 22 >
 
 
     }
@@ -21961,7 +21961,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Statute Law Review Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Statute Law Review Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Statute Law Review Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Statute Law Review Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Statute Law Review Volume 36 ; 36 >
 
     }
 
