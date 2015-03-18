@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,9 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.projmuse;
 
 import java.util.Iterator;
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
-import org.lockss.daemon.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
@@ -45,7 +45,7 @@ public class ProjectMuseBooksArticleIteratorFactory
 
   // http://muse.jhu.edu/books/9780299107635
   protected static final String ROOT_TEMPLATE = "\"%sbooks/\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"^%sbooks/%s$\", base_url, eisbn";
+  protected static final String PATTERN_TEMPLATE = "\"^%sbooks/%s/$\", base_url, eisbn";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,

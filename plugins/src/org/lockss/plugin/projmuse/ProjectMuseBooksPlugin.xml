@@ -45,18 +45,14 @@
     <!-- link based on volumes that is in css 
     http://muse.jhu.edu/about/reference/eliot/images/volume_1_overlay.gif -->
     <list>
-      <string>2,"%sabout/reference/\.*", base_url</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>1,"%sbooks/%s\.*", base_url, eisbn</string>
+      <string>2,"^https?://%s/about/reference/", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/books/%s/", url_host(base_url), eisbn</string>
     </list>
   </entry>
   <entry>
-    <string>au_permission_url</string>
-    <string>"%sbooks/lockss_books.html", base_url</string>
-  </entry>
-  <entry>
     <string>au_start_url</string>
-    <string>"%sbooks/%s", base_url, eisbn</string>
+    <string>"%sbooks/lockss_books.html", base_url</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -109,15 +105,6 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
   </entry>
-  <!--<entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.projmuse.ProjectMuseBooksHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>-->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.projmuse.ProjectMuseHtmlHashFilterFactory</string>

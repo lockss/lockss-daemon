@@ -66,8 +66,7 @@
       <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
       <string>4,"^https?://%s/", url_host(base_url)</string>
       <string>2,"^https?://%s/journals/%s/v%03d/[^/]+/$", url_host(base_url), journal_dir, volume</string>
-      <string>1,"^https?://%s/journals/%s/v%03d/", url_host(base_url), journal_dir, volume</string>
-      <string>1,"^https?://%s/journals/%s/summary/v%03d/", url_host(base_url), journal_dir, volume</string>
+      <string>1,"^https?://%s/journals/%s/(summary/)?v%03d/", url_host(base_url), journal_dir, volume</string>
       <string>1,"^https?://%s/journals/%s/toc/[^/]+\.?%d\.", url_host(base_url), journal_dir, volume</string>
     </list>
   </entry>
