@@ -753,7 +753,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/$param{journal_id}\/journal\/v$param{volume_name}/) || ($man_contents =~ m/\/$param{journal_id}\/archive\/date\/$param{year}/))) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/$param{journal_id}\/journal\/v$param{volume_name}/) || ($man_contents =~ m/\/$param{journal_id}\/archive\//) || ($man_contents =~ m/\/$param{journal_id}\/index_ja.html/))) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
