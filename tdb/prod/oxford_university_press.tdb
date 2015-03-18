@@ -6570,6 +6570,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = 1993 volume 6 to 1999 volume 26
 
+    au < manifest ; 1999 ; FEMS Immunology & Medical Microbiology Volume 26 ; 26 >
     au < manifest ; 2000 ; FEMS Immunology & Medical Microbiology Volume 27 ; 27 >
     au < manifest ; 2000 ; FEMS Immunology & Medical Microbiology Volume 28 ; 28 >
     au < manifest ; 2000 ; FEMS Immunology & Medical Microbiology Volume 29 ; 29 >
@@ -6743,6 +6744,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = 1977 volume 1 to 1999 volume 181
 
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 181 ; 181 >
     au < manifest ; 2000 ; FEMS Microbiology Letters Volume 182 ; 182 >
     au < manifest ; 2000 ; FEMS Microbiology Letters Volume 183 ; 183 >
     au < manifest ; 2000 ; FEMS Microbiology Letters Volume 184 ; 184 >
@@ -7749,6 +7751,7 @@
     au < manifest ; 2014 ; Geophysical Journal International Volume 198 ; 198 >
     au < manifest ; 2014 ; Geophysical Journal International Volume 199 ; 199 >
     au < manifest ; 2015 ; Geophysical Journal International Volume 200 ; 200 >
+    au < manifest ; 2015 ; Geophysical Journal International Volume 201 ; 201 >
 
   }
 
@@ -12216,6 +12219,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 70 ; 70 >
 
     }
 
@@ -12257,6 +12261,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 69B ; 69B >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 70 ; 70 >
 
     }
 
@@ -13543,6 +13548,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < manifest ; 2007 ; Journal of Mammalogy Volume 88 ; 88 >
     au < manifest ; 2008 ; Journal of Mammalogy Volume 89 ; 89 >
     au < manifest ; 2009 ; Journal of Mammalogy Volume 90 ; 90 >
     au < manifest ; 2010 ; Journal of Mammalogy Volume 91 ; 91 >
@@ -17696,6 +17702,7 @@
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < manifest ; 1974 ; Nutrition Reviews Volume 32 ; 32 >
     au < manifest ; 1975 ; Nutrition Reviews Volume 33 ; 33 >
     au < manifest ; 1976 ; Nutrition Reviews Volume 34 ; 34 >
     au < manifest ; 1977 ; Nutrition Reviews Volume 35 ; 35 >
@@ -18413,6 +18420,7 @@
     au < manifest ; 2014 ; Pathogens and Disease Volume 70 ; 70 >
     au < manifest ; 2014 ; Pathogens and Disease Volume 71 ; 71 >
     au < expected ; 2014 ; Pathogens and Disease Volume 72 ; 72 >
+    au < manifest ; 2015 ; Pathogens and Disease Volume 73 ; 73 >
 
   }
 
@@ -22283,6 +22291,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Toxicological Sciences Volume 141 ; 141 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Toxicological Sciences Volume 142 ; 142 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Toxicological Sciences Volume 143 ; 143 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Toxicological Sciences Volume 144 ; 144 >
 
     }
 
@@ -22874,6 +22883,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Yearbook of International Environmental Law Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Yearbook of International Environmental Law Volume 24 ; 24 >
 
   }
 
