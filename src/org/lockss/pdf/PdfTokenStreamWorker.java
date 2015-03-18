@@ -803,7 +803,7 @@ public abstract class PdfTokenStreamWorker {
    * @see String#contains(String)
    */
   protected boolean isShowTextGlyphPositioningContains(String substr) {
-    return isShowTextGlyphPositioning() && getSingleOperand().getString().contains(substr);
+    return isShowTextGlyphPositioning() && getSingleOperand().getString().contains(substr); // FIXME
   }
   
   /**
@@ -822,7 +822,7 @@ public abstract class PdfTokenStreamWorker {
    * @see String#endsWith(String)
    */
   protected boolean isShowTextGlyphPositioningEndsWith(String suffix) {
-    return isShowTextGlyphPositioning() && getSingleOperand().getString().endsWith(suffix);
+    return isShowTextGlyphPositioning() && getSingleOperand().getString().endsWith(suffix); // FIXME
   }
   
   /**
