@@ -21,7 +21,7 @@
     au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Electrochemical Society Volume 161 ; 161 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; Journal of the Electrochemical Society Volume 161 ; 161 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the Electrochemical Society Volume 162 ; 162 >
 
   }
@@ -71,7 +71,7 @@
 
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Solid State Letters Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Solid State Letters Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Solid State Letters Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Solid State Letters Volume 4 ; 4 >
     
   }
@@ -90,7 +90,7 @@
 
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Electrochemistry Letters Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Electrochemistry Letters Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Electrochemistry Letters Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Electrochemistry Letters Volume 4 ; 4 >
     
   }
@@ -109,7 +109,7 @@
 
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Journal of Solid State Science and Technology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Journal of Solid State Science and Technology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Journal of Solid State Science and Technology Volume 4 ; 4 >
     
   }
@@ -150,8 +150,10 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Meeting Abstracts Volume MA2012-02 ; MA2012-02 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Meeting Abstracts Volume MA2013-01 ; MA2013-01 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Meeting Abstracts Volume MA2013-02 ; MA2013-02 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-01 ; MA2014-01 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-02 ; MA2014-02 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Meeting Abstracts Volume MA2014-01 ; MA2014-01 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Meeting Abstracts Volume MA2014-02 ; MA2014-02 >
+    au < HighWirePressH20Plugin ; exists ; 2014 ; ECS Meeting Abstracts Volume MA2014-03 ; MA2014-03 >
+    au < HighWirePressH20Plugin ; exists ; 2014 ; ECS Meeting Abstracts Volume MA2014-04 ; MA2014-04 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Meeting Abstracts Volume MA2015-01 ; MA2015-01 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Meeting Abstracts Volume MA2015-02 ; MA2015-02 >
     
@@ -228,15 +230,19 @@
     au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Transactions Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Transactions Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Transactions Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; testing ; 2013 ; ECS Transactions Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Transactions Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Transactions Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Transactions Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Transactions Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Transactions Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 2014 ; ECS Transactions Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Transactions Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Transactions Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Transactions Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Transactions Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Transactions Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Transactions Volume 70 ; 70 >
     
   }
 
