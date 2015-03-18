@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import org.lockss.pdf.MockPdfTokenStream;
+import org.lockss.pdf.*;
 import org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory.FrontPageWorker;
 import org.lockss.test.LockssTestCase;
 
@@ -43,7 +43,7 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
    * http://muse.jhu.edu/journals/perspectives_on_science/v022/22.4.oberdan.pdf 12/01/14
    */
   public void testFrontPageWorker() throws Exception {
-    FrontPageWorker worker = new FrontPageWorker();
+    PdfTokenStreamStateMachine worker = new FrontPageWorker();
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
@@ -54,7 +54,7 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));
-    assertTrue(worker.result);
+    assertTrue(worker.getResult());
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
@@ -65,7 +65,7 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));
-    assertTrue(worker.result);
+    assertTrue(worker.getResult());
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
@@ -76,7 +76,7 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
@@ -87,7 +87,7 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
   }
   
 }

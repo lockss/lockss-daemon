@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -17,7 +17,11 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlFilterFactory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
@@ -28,21 +32,25 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Substance</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
         <string>2</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.62.0</string>
+    <string>1.67.5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Project Muse Plugin, Base URL %s, Journal ID %s, Volume %d&quot;, base_url, journal_dir, volume</string>
+    <string>"Project Muse Journals Plugin, Base URL %s, Journal ID %s, Volume %d", base_url, journal_dir, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -50,42 +58,46 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Project Muse Plugin</string>
+    <string>Project Muse Journals Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;%sjournals/%s/v%03d/[^/]+/$&quot;, base_url, journal_dir, volume</string>
-      <string>1,&quot;%sjournals/%s/v%03d/&quot;, base_url, journal_dir, volume</string>
-      <string>1,&quot;%sjournals/%s/summary/v%03d/&quot;, base_url, journal_dir, volume</string>
-      <string>1,&quot;%sjournals/%s/toc/[^/]+\.?%d\.&quot;, base_url, journal_dir, volume</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>2,"^https?://%s/journals/%s/v%03d/[^/]+/$", url_host(base_url), journal_dir, volume</string>
+      <string>1,"^https?://%s/journals/%s/v%03d/", url_host(base_url), journal_dir, volume</string>
+      <string>1,"^https?://%s/journals/%s/summary/v%03d/", url_host(base_url), journal_dir, volume</string>
+      <string>1,"^https?://%s/journals/%s/toc/[^/]+\.?%d\.", url_host(base_url), journal_dir, volume</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sjournals/%s/v%03d/&quot;, base_url, journal_dir, volume</string>
+    <string>"%sjournals/%s/v%03d/", base_url, journal_dir, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
-    <entry>
-      <string>au_title</string>
-      <string>&quot;%sjournals/%s&quot;, base_url, journal_dir</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>&quot;%sjournals/%s/v%03d/&quot;, base_url, journal_dir, volume</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-      <list>
-          <string>&quot;%sjournals/%s/toc/%s%s.%s.html&quot;, base_url, journal_dir, journal_id, volume, issue</string>
-          <string>&quot;%sjournals/%s/toc/%s.%s.%s.html&quot;, base_url, journal_dir, journal_id, volume, issue</string>
+      <entry>
+        <string>au_title</string>
+        <string>"%sjournals/%s", base_url, journal_dir</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sjournals/%s/v%03d/", base_url, journal_dir, volume</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <list>
+          <string>"%sjournals/%s/toc/%s%s.%s.html", base_url, journal_dir, journal_id, volume, issue</string>
+          <string>"%sjournals/%s/toc/%s.%s.%s.html", base_url, journal_dir, journal_id, volume, issue</string>
         </list>
-	  </entry>
-  	</map>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -121,7 +133,11 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;%sjournals/%s/v%03d/.*\.(html|pdf)$&quot;, base_url, journal_dir, volume</string>
+      <string>"%sjournals/%s/v%03d/.*\.(html|pdf)$", base_url, journal_dir, volume</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseUrlNormalizer</string>
   </entry>
 </map>

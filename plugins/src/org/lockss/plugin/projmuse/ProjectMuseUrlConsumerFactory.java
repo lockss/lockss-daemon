@@ -1,9 +1,10 @@
 /*
- * $Id$*/
+ * $Id$
+ */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,33 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.io.*;
-
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.filter.html.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.util.ReaderInputStream;
 
-public class ProjectMuseBooksHtmlCrawlFilterFactory implements FilterFactory {
+/**
+ * @since 1.67.5
+ */
+public class ProjectMuseUrlConsumerFactory implements UrlConsumerFactory {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-    	//don't grab the images in the related list because they will change
-        HtmlNodeFilters.tagWithAttribute("div", "class", "related"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "related-box"),
-    };
-    
-    // First filter with HtmlParser
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+  @Override
+  public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    return new ProjectMuseUrlConsumer(facade, fud);
   }
 
 }

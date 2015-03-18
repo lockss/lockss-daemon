@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import org.apache.commons.lang.StringUtils;
-import org.lockss.daemon.PluginException;
+import org.apache.commons.lang3.StringUtils;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /*
@@ -37,13 +41,13 @@ import org.lockss.plugin.*;
  * to this http://muse.jhu.edu/template2011/css/detail.css
  */
 
-public class ProjectMuseBooksUrlNormalizer implements UrlNormalizer {
-  protected static final String SUFFIX1 = "?v=";
+public class ProjectMuseBooksUrlNormalizer extends ProjectMuseUrlNormalizer {
+  
+  protected static final String VERSION_SUFFIX = "?v=";
 
-  public String normalizeUrl(String url, ArchivalUnit au)
-      throws PluginException {
-    url = StringUtils.substringBeforeLast(url, SUFFIX1);
-    return url;
+  @Override
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    return StringUtils.substringBeforeLast(super.normalizeUrl(url, au), VERSION_SUFFIX);
   }
 
 }

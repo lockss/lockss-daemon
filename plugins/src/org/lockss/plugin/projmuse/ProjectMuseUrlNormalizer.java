@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,35 +32,20 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.io.*;
-import java.util.*;
-import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.*;
 
 /**
- * Filters out menu, comments, javascript, html tags, and whitespace.
+ * @since 1.67.5
  */
-public class ProjectMuseFilterRule implements FilterRule {
-  static final String MENU_START =
-      "<!-- ================== BEGIN JUMP MENU ================== -->";
-  static final String MENU_END =
-      "<!-- =================== END JUMP MENU =================== -->";
+public class ProjectMuseUrlNormalizer implements UrlNormalizer {
 
-  public static Reader makeFilteredReader(Reader reader) {
-    List tagList = ListUtil.list(
-        new HtmlTagFilter.TagPair(MENU_START, MENU_END, true),
-        new HtmlTagFilter.TagPair("<!--", "-->", true),
-        new HtmlTagFilter.TagPair("<script", "</script>", true),
-        new HtmlTagFilter.TagPair("<", ">")
-        );
-    Reader filteredReader = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(filteredReader);
+  @Override
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    if (ProjectMuseUtil.isBaseUrlHttp(au)) {
+      url = ProjectMuseUtil.baseUrlHttpsToHttp(au, url);
+    }
+    return url;
   }
-  
-  public Reader createFilteredReader(Reader reader) throws PluginException {
-    return makeFilteredReader(reader);
-  }
-  
+
 }

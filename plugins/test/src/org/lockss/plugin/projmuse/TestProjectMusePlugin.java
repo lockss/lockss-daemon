@@ -110,7 +110,7 @@ public class TestProjectMusePlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "322");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Project Muse Plugin, Base URL http://www.example.com/, Journal ID journal_dir, Volume 322", au.getName());
+    assertEquals("Project Muse Journals Plugin, Base URL http://www.example.com/, Journal ID journal_dir, Volume 322", au.getName());
   }
 
   public void testGetPluginId() {

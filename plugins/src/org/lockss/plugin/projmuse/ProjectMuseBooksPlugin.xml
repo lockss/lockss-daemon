@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -24,17 +24,17 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.62.0</string>
+    <string>1.67.5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Project Muse Books Plugin, Base URL %s, EISBN %s", base_url, eisbn</string>
+    <string>"Project Muse Books Plugin, Base URL %s, eISBN %s", base_url, eisbn</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -46,7 +46,7 @@
     http://muse.jhu.edu/about/reference/eliot/images/volume_1_overlay.gif -->
     <list>
       <string>2,"%sabout/reference/\.*", base_url</string>
-      <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>1,"%sbooks/%s\.*", base_url, eisbn</string>
     </list>
   </entry>
@@ -120,11 +120,11 @@
   </entry>-->
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseBooksHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseBooksHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>

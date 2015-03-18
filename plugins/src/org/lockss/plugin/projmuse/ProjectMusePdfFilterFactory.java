@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,16 +41,13 @@ import org.lockss.util.Logger;
 
 public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
   
-  private static final Logger logger = Logger.getLogger(ProjectMusePdfFilterFactory.class);
+  private static final Logger log = Logger.getLogger(ProjectMusePdfFilterFactory.class);
   
-  /*
-   * FIXME 1.67: extend PdfTokenStreamStateMachine instead
-   */
   /*
    * Examples:
    * http://muse.jhu.edu/journals/perspectives_on_science/v022/22.4.oberdan.pdf 12/01/14
    */
-  public static class FrontPageWorker extends PdfTokenStreamWorker {
+  public static class FrontPageWorker extends PdfTokenStreamStateMachine {
     
     public static final Pattern ADDITIONAL_INFORMATION =
         Pattern.compile("For additional information about this", Pattern.CASE_INSENSITIVE);
@@ -58,79 +55,51 @@ public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
     public static final Pattern PROVIDED_BY =
         Pattern.compile("Access provided by", Pattern.CASE_INSENSITIVE);
     
-    protected boolean result;
-    
-    protected int state;
-    
     public FrontPageWorker() {
-      super(Direction.FORWARD);
+      super(log);
     }
     
     @Override
-    public void operatorCallback() throws PdfException {
-      if (logger.isDebug3()) {
-        logger.debug3("FrontPageWorker: initial: " + state);
-        logger.debug3("FrontPageWorker: index: " + getIndex());
-        logger.debug3("FrontPageWorker: operator: " + getOpcode());
+    public void state0() throws PdfException {
+      if (isBeginTextObject()) {
+        setState(1);
       }
-      
-      switch (state) {
-        
-        case 0: {
-          if (isBeginTextObject()) {
-            ++state; 
-          }
-        } break;
-        
-        case 1: {
-          // FIXME 1.67: isShowTextContains/isShowTextGlyphPositioningContains
-          if (isShowTextFind(ADDITIONAL_INFORMATION) || isShowTextGlyphPositioningFind(ADDITIONAL_INFORMATION)) {
-            ++state;
-          }
-          else if (isEndTextObject()) { 
-            state = 0;
-          }
-        } break;
-        
-        case 2: {
-          // FIXME 1.67: isShowTextContains/isShowTextGlyphPositioningContains
-          if (isShowTextFind(PROVIDED_BY) || isShowTextGlyphPositioningFind(PROVIDED_BY)) {
-            ++state;
-          }
-          else if (isEndTextObject()) { 
-            state = 0;
-          }
-        } break;
-        
-        case 3: {
-          if (isEndTextObject()) {
-            result = true;
-            stop(); 
-          }
-        } break;
-        
-        default: {
-          throw new PdfException("Invalid state in FrontPageWorker: " + state);
-        }
-    
-      }
-    
-      if (logger.isDebug3()) {
-        logger.debug3("FrontPageWorker: final: " + state);
-        logger.debug3("FrontPageWorker: result: " + result);
-      }
-      
     }
     
     @Override
-    public void setUp() throws PdfException {
-      super.setUp();
-      state = 0;
-      result = false;
+    public void state1() throws PdfException {
+      // FIXME 1.68: isShowTextContains/isShowTextGlyphPositioningContains
+      if (   isShowTextFind(ADDITIONAL_INFORMATION)
+          || isShowTextGlyphPositioningFind(ADDITIONAL_INFORMATION)) {
+        setState(2);
+      }
+      else if (isEndTextObject()) { 
+        setState(0);
+      }
     }
     
-  }
+    @Override
+    public void state2() throws PdfException {
+      // FIXME 1.68: isShowTextContains/isShowTextGlyphPositioningContains
+      if (   isShowTextFind(PROVIDED_BY)
+          || isShowTextGlyphPositioningFind(PROVIDED_BY)) {
+        setState(3);
+      }
+      else if (isEndTextObject()) { 
+        setState(0);
+      }
+    }
+    
+    @Override
+    public void state3() throws PdfException {
+      if (isEndTextObject()) {
+        setResult(true);
+        stop(); 
+      }
+    }
   
+  }
+    
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
     pdfDocument.unsetCreationDate();
@@ -141,9 +110,9 @@ public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
     PdfUtil.normalizeTrailerId(pdfDocument);
     
     if (pdfDocument.getNumberOfPages() > 0) {
-      FrontPageWorker worker = new FrontPageWorker();
+      PdfTokenStreamStateMachine worker = new FrontPageWorker();
       worker.process(pdfDocument.getPage(0).getPageTokenStream());
-      if (worker.result) {
+      if (worker.getResult()) {
         pdfDocument.removePage(0);
       }
     }

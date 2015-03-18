@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,35 +32,31 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.io.*;
-import org.lockss.util.*;
-import org.lockss.test.LockssTestCase;
+import org.lockss.plugin.UrlNormalizer;
 
-public class TestProjectMuseFilterRule extends LockssTestCase {
-  private ProjectMuseFilterRule rule;
+public class TestProjectMuseBooksUrlNormalizer extends TestProjectMuseUrlNormalizer {
 
-  public void setUp() throws Exception {
+  @Override
+  protected void setUp() throws Exception {
     super.setUp();
-    rule = new ProjectMuseFilterRule();
+  }
+  
+  public void testBooksUrlNormalizer() throws Exception {
+    // HTTP base URL: trim suffix and normalize HTTPS to HTTP
+    assertEquals("http://www.example.com/foo.css",
+                 norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttp));
+    assertEquals("http://www.example.com/foo.css",
+                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttp));
+    // HTTPS base URL: trim suffix only
+    assertEquals("http://www.example.com/foo.css",
+                 norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttps));
+    assertEquals("https://www.example.com/foo.css",
+                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttps));
   }
 
-  public void testFiltering() throws IOException {
-    String content = "This <!-- remove -->content";
-    String expectedContent = "This content";
-
-    Reader reader = ProjectMuseFilterRule.makeFilteredReader(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromReader(reader));
-
-    content = "This <script> remove </script>content";
-    reader = ProjectMuseFilterRule.makeFilteredReader(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromReader(reader));
-
-    content = "This <a href=remove>content";
-    reader = ProjectMuseFilterRule.makeFilteredReader(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromReader(reader));
-    content = "This " + ProjectMuseFilterRule.MENU_START + " remove all this " +
-        ProjectMuseFilterRule.MENU_END + "content";
-    reader = ProjectMuseFilterRule.makeFilteredReader(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromReader(reader));
+  @Override
+  public UrlNormalizer makeNormalizer() {
+    return new ProjectMuseBooksUrlNormalizer();
   }
+  
 }

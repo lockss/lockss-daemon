@@ -3,7 +3,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,35 +36,23 @@ import java.io.*;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ReaderInputStream;
 
-public class ProjectMuseBooksHtmlHashFilterFactory implements FilterFactory {
+public class ProjectMuseHtmlCrawlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-    	//right nav bar no info we need
-        HtmlNodeFilters.tagWithAttribute("div", "class", "right_nav"),
-        //make sure we remove the related articles
+    	// Contents (including images) change over time
+        HtmlNodeFilters.tagWithAttribute("div", "class", "related"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "related-box"),
-        //footer and header have no content
-        HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "header"),
     };
-    
-    // First filter with HtmlParser
-    InputStream filtered = new HtmlFilterInputStream(in,
-                                                     encoding,
-                                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-
-    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
