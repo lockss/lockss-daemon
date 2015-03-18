@@ -116,6 +116,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; American Literature Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; released ; 2013 ; American Literature Volume 85 ; 85 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; American Literature Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; American Literature Volume 87 ; 87 >
 
     }
 
@@ -168,6 +169,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; American Speech Volume 87 ; 87 >
       au < HighWirePressH20Plugin ; released ; 2013 ; American Speech Volume 88 ; 88 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; American Speech Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; American Speech Volume 90 ; 90 >
 
     }
 
@@ -220,6 +222,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; boundary 2 Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2013 ; boundary 2 Volume 40 ; 40 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; boundary 2 Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; boundary 2 Volume 42 ; 42 >
 
     }
 
@@ -288,6 +291,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 30 ; 30 >
 
     }
 
@@ -381,6 +385,7 @@
       au < released ; 2012 ; Common Knowledge Volume 18 [Project MUSE] ; 18 >
       au < released ; 2013 ; Common Knowledge Volume 19 [Project MUSE] ; 19 >
       au < manifest ; 2014 ; Common Knowledge Volume 20 [Project MUSE] ; 20 >
+      au < exists ; 2015 ; Common Knowledge Volume 21 [Project MUSE] ; 21 >
 
     }
 
@@ -403,6 +408,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; Common Knowledge Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Common Knowledge Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Common Knowledge Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; Common Knowledge Volume 21 ; 21 >
 
     }
 
@@ -438,6 +444,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; Comparative Literature Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Comparative Literature Volume 65 ; 65 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Comparative Literature Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; Comparative Literature Volume 67 ; 67 >
 
     }
 
@@ -474,6 +481,8 @@
       au < released ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 [Project MUSE] ; 31 >
       au < released ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 [Project MUSE] ; 32 >
       au < released ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 [Project MUSE] ; 33 >
+      au < exists ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [Project MUSE] ; 34 >
+      au < expected ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
 
     }
 
@@ -517,6 +526,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 ; 35 >
 
     }
 
@@ -630,7 +640,7 @@
     {
 
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/dmj/
+      param[base_url] = http://projecteuclid.org/euclid.dmj/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < doNotProcess ; 1935 ; Duke Mathematical Journal Volume 1 ; 1 >
@@ -794,8 +804,9 @@
       au < exists ; 2011 ; Duke Mathematical Journal Volume 159 ; 159 >
       au < exists ; 2011 ; Duke Mathematical Journal Volume 160 ; 160 >
       au < exists ; 2012 ; Duke Mathematical Journal Volume 161 ; 161 >
-      au < expected ; 2013 ; Duke Mathematical Journal Volume 162 ; 162 >
-      au < expected ; 2014 ; Duke Mathematical Journal Volume 163 ; 163 >
+      au < exists ; 2013 ; Duke Mathematical Journal Volume 162 ; 162 >
+      au < exists ; 2014 ; Duke Mathematical Journal Volume 163 ; 163 >
+      au < exists ; 2015 ; Duke Mathematical Journal Volume 164 ; 164 >
 
     }
   }
@@ -1362,7 +1373,7 @@
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
 
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/kjm/
+      param[base_url] = http://projecteuclid.org/euclid.kjm/
       param[journal_id] = kjm_2
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -1518,7 +1529,7 @@
 
       comment[continues] = 0023-608X
       plugin = needs.plugin
-      param[base_url] =  http://projecteuclid.org/kjm/
+      param[base_url] =  http://projecteuclid.org/euclid.kjm/
       param[journal_id] = kjm_3
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = formerly The Journal of Mathematics of Kyoto University, 1961-2009
@@ -1872,8 +1883,9 @@
 
      >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/nmj/
+      param[base_url] = http://projecteuclid.org/euclid.nmj/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[0] = volume # do not match, need to re-work
 
       au < doNotProcess ; 1950 ; Nagoya Mathematical Journal Volume 1 ; 1 >
       au < doNotProcess ; 1951 ; Nagoya Mathematical Journal Volume 2 ; 2 >
@@ -2079,7 +2091,7 @@
 
 >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/ndjfl/
+      param[base_url] = http://projecteuclid.org/euclid.ndjfl/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < doNotProcess ; 1960 ; Notre Dame Journal of Formal Logic Volume 1 ; 1 >
@@ -2135,8 +2147,8 @@
       au < exists ; 2010 ; Notre Dame Journal of Formal Logic Volume 51 ; 51 >
       au < exists ; 2011 ; Notre Dame Journal of Formal Logic Volume 52 ; 52 >
       au < exists ; 2012 ; Notre Dame Journal of Formal Logic Volume 53 ; 53 >
-      au < expected ; 2013 ; Notre Dame Journal of Formal Logic Volume 54 ; 54 >
-      au < expected ; 2014 ; Notre Dame Journal of Formal Logic Volume 55 ; 55 >
+      au < exists ; 2013 ; Notre Dame Journal of Formal Logic Volume 54 ; 54 >
+      au < exists ; 2014 ; Notre Dame Journal of Formal Logic Volume 55 ; 55 >
 
     }
 
@@ -2662,8 +2674,6 @@
       au < released ; 2011 ; Social Science History Volume 35 [Project MUSE] ; 35 >
       au < released ; 2012 ; Social Science History Volume 36 [Project MUSE] ; 36 >
       au < released ; 2013 ; Social Science History Volume 37 [Project MUSE] ; 37 >
-      au < expected ; 2014 ; Social Science History Volume 38 [Project MUSE] ; 38 >
-      au < expected ; 2015 ; Social Science History Volume 39 [Project MUSE] ; 39 >
 
     }
 
@@ -2687,7 +2697,6 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; Social Science History Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Social Science History Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Social Science History Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Social Science History Volume 38 ; 38 >
 
     }
 
@@ -2912,8 +2921,9 @@
 
       au < HighWirePressH20Plugin ; exists ; 2011 ; Tikkun Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; exists ; 2012 ; Tikkun Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; expected ; 2013 ; Tikkun Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Tikkun Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; exists ; 2013 ; Tikkun Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; exists ; 2014 ; Tikkun Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; exists ; 2015 ; Tikkun Volume 30 ; 30 >
 
      }
 
@@ -2933,6 +2943,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; expected ; 2015 ; Transgender Studies Quarterly Volume 2 ; 2 >
 
     }
 
