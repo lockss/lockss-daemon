@@ -53,12 +53,14 @@ public class DSpaceHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "ds-footer-wrapper"),
       // header
       HtmlNodeFilters.tagWithAttribute("div", "id", "ds-header-wrapper"),
-      //trail
+      //url trail
       HtmlNodeFilters.tagWithAttribute("div", "id", "ds-trail-wrapper"),
       //js warning
       HtmlNodeFilters.tagWithAttribute("div", "id", "no-js-warning-wrapper"),
       //sidebar
       HtmlNodeFilters.tagWithAttribute("div", "id", "ds-options-wrapper"),
+      //link to whole collection
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "ds-referenceSet-list"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

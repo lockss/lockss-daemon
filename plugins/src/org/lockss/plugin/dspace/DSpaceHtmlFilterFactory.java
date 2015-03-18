@@ -57,6 +57,8 @@ public class DSpaceHtmlFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "id", "no-js-warning-wrapper"),
      //sidebar
      HtmlNodeFilters.tagWithAttribute("div", "id", "ds-options-wrapper"),
+     //link to whole collection
+     HtmlNodeFilters.tagWithAttribute("ul", "class", "ds-referenceSet-list"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
