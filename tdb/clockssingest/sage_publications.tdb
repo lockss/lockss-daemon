@@ -12331,7 +12331,7 @@
       au < finished ; crawling ; 2011 ; Global Journal of Emerging Market Economies Volume 3 ; 3 ; >
       au < finished ; crawling ; 2012 ; Global Journal of Emerging Market Economies Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; Global Journal of Emerging Market Economies Volume 5 ; 5 ; >
-      au < testing ; exists ; 2014 ; Global Journal of Emerging Market Economies Volume 6 ; 6 ; >
+      au < ready ; exists ; 2014 ; Global Journal of Emerging Market Economies Volume 6 ; 6 ; >
       au < manifest ; exists ; 2015 ; Global Journal of Emerging Market Economies Volume 7 ; 7 ; >
 
     }
@@ -12371,7 +12371,7 @@
       au < finished ; crawling ; 2011 ; Global Media and Communication Volume 7 ; 7 ; >
       au < finished ; frozen ; 2012 ; Global Media and Communication Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Global Media and Communication Volume 9 ; 9 ; >
-      au < testing ; exists ; 2014 ; Global Media and Communication Volume 10 ; 10 ; >
+      au < ready ; exists ; 2014 ; Global Media and Communication Volume 10 ; 10 ; >
       au < expected ; exists ; 2015 ; Global Media and Communication Volume 11 ; 11 ; >
 
     }
@@ -12405,7 +12405,8 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://gqn.sagepub.com/
 
-      au < testing ; exists ; 2014 ; Global Qualitative Nursing Research Volume 1 ; 1 ; >
+      au < ready ; exists ; 2014 ; Global Qualitative Nursing Research Volume 1 ; 1 ; >
+      au < expected ; exists ; 2015 ; Global Qualitative Nursing Research Volume 2 ; 2 ; >
 
   }
 
@@ -12534,7 +12535,7 @@
       au < finished ; crawling ; 2011 ; Group & Organization Management Volume 36 ; 36 ; >
       au < finished ; crawling ; 2012 ; Group & Organization Management Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013 ; Group & Organization Management Volume 38 ; 38 ; >
-      au < testing ; exists ; 2014 ; Group & Organization Management Volume 39 ; 39 ; >
+      au < ready ; exists ; 2014 ; Group & Organization Management Volume 39 ; 39 ; >
       au < manifest ; exists ; 2015 ; Group & Organization Management Volume 40 ; 40 ; >
 
     }
@@ -12611,7 +12612,7 @@
       au < finished ; crawling ; 2011 ; Group Analysis Volume 44 ; 44 ; >
       au < finished ; crawling ; 2012 ; Group Analysis Volume 45 ; 45 ; >
       au < crawling ; exists ; 2013 ; Group Analysis Volume 46 ; 46 ; >
-      au < testing ; exists ; 2014 ; Group Analysis Volume 47 ; 47 ; >
+      au < ready ; exists ; 2014 ; Group Analysis Volume 47 ; 47 ; >
       au < manifest ; exists ; 2015 ; Group Analysis Volume 48 ; 48 ; >
 
     }
@@ -12658,7 +12659,7 @@
       au < finished ; crawling ; 2011 ; Group Processes & Intergroup Relations Volume 14 ; 14 ; >
       au < finished ; crawling ; 2012 ; Group Processes & Intergroup Relations Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; Group Processes & Intergroup Relations Volume 16 ; 16 ; >
-      au < testing ; exists ; 2014 ; Group Processes & Intergroup Relations Volume 17 ; 17 ; >
+      au < ready ; exists ; 2014 ; Group Processes & Intergroup Relations Volume 17 ; 17 ; >
       au < manifest ; exists ; 2015 ; Group Processes & Intergroup Relations Volume 18 ; 18 ; >
 
     }
@@ -12754,7 +12755,7 @@
       au < finished ; frozen ; 2011 ; Health Education & Behavior Volume 38 ; 38 ; >
       au < finished ; crawling ; 2012 ; Health Education & Behavior Volume 39 ; 39 ; >
       au < crawling ; exists ; 2013 ; Health Education & Behavior Volume 40 ; 40 ; >
-      au < testing ; exists ; 2014 ; Health Education & Behavior Volume 41 ; 41 ; >
+      au < ready ; exists ; 2014 ; Health Education & Behavior Volume 41 ; 41 ; >
       au < manifest ; exists ; 2015 ; Health Education & Behavior Volume 42 ; 42 ; >
 
     }
@@ -12857,7 +12858,7 @@
       au < finished ; crawling ; 2011 ; Health Education Journal Volume 70 ; 70 ; >
       au < finished ; crawling ; 2012 ; Health Education Journal Volume 71 ; 71 ; >
       au < crawling ; exists ; 2013 ; Health Education Journal Volume 72 ; 72 ; >
-      au < testing ; exists ; 2014 ; Health Education Journal Volume 73 ; 73 ; >
+      au < ready ; exists ; 2014 ; Health Education Journal Volume 73 ; 73 ; >
       au < manifest ; exists ; 2015 ; Health Education Journal Volume 74 ; 74 ; >
 
     }
@@ -13014,7 +13015,7 @@
       au < finished ; crawling ; 2011 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 15 ; 15 ; >
       au < finished ; crawling ; 2012 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 17 ; 17 ; >
-      au < testing ; exists ; 2014 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 18 ; 18 ; >
+      au < ready ; exists ; 2014 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 18 ; 18 ; >
       au < manifest ; exists ; 2015 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 19 ; 19 ; >
 
     }
