@@ -84,6 +84,10 @@ public class EndocrineSocietyHtmlHashFilterFactory
         // doi=10.1210%2Fjc.2013-1811
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
                                               "twoColumnRightDropZoneColor"),
+        // figure - corrigendum
+        // <div class="articleMetaDrop publicationContentDropZone" data-pb-dropzone="articleMetaDropZone">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "articleMetaDrop"),                                              
         // right column of an article - all except Download Citations
         // note: institution banner is inside sidebar-right
         HtmlNodeFilters.allExceptSubtree(
