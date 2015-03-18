@@ -16,7 +16,6 @@
     >
     
     param[journal_id] = afen
-    comment[notReady] = style sheet kept changing
   
     au < released ; 2007 ; African Entomology Volume 15 ; 15 >
     au < released ; 2008 ; African Entomology Volume 16 ; 16 >
@@ -26,6 +25,7 @@
     au < released ; 2012 ; African Entomology Volume 20 ; 20 >
     au < released ; 2013 ; African Entomology Volume 21 ; 21 >
     au < manifest ; 2014 ; African Entomology Volume 22 ; 22 >
+    au < expected ; 2015 ; African Entomology Volume 23 ; 23 >
 
   }
   
