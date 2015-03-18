@@ -322,6 +322,18 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</div></div></div></div>" +
           "</div>";
                
+  private static final String withArticleMetaDrop =
+      "<div class=\"block\">" +  
+          "<div class=\"articleMetaDrop publicationContentDropZone\" " +
+          "data-pb-dropzone=\"articleMetaDropZone\">" +
+          "<div id=\"3ab\" class=\"widget gwidget-compact-vertical\">" +
+          "<div class=\"wrapped \">" +
+          "<div class=\"widget-body body body-none body-compact-vertical\">" +
+          "<p><a href=\"/doi/11.1111/en.2014-1111\" " +
+          "title=\"Blah corrigendum in the journal\">" +
+          "<span style=\"color: red;\">Corrigendum</span></a></p>" +
+          "</div></div></div></div>" +
+          "</div>";     
   
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -393,7 +405,8 @@ public class TestEndocrineSocietyHtmlFilterFactory
       doFilterTest(esau, variantFact, withCitedby, withoutCitedby); 
       doFilterTest(esau, variantFact, withSectionJumpTo, filteredStr);
       doFilterTest(esau, variantFact, withTwoColumnRightDropZoneColor, 
-                   filteredStr);         
+                   filteredStr);
+      doFilterTest(esau, variantFact, withArticleMetaDrop, filteredStr);
     }
   }
   
