@@ -1,7 +1,7 @@
  <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.5</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -46,19 +46,31 @@
     http://muse.jhu.edu/about/reference/eliot/images/volume_1_overlay.gif -->
     <list>
       <string>2,"^https?://%s/about/reference/", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/books/lockss_books\.html$", url_host(base_url), eisbn</string>
       <string>1,"^https?://%s/books/%s/", url_host(base_url), eisbn</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sbooks/lockss_books.html", base_url</string>
+    <list>
+      <string>"%sbooks/lockss_books.html", to_http(base_url)</string>
+      <string>"%sbooks/lockss_books.html", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <string>"%sbooks/%s/%s-[\d]+.pdf", base_url, eisbn, eisbn</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"^https?://%s/.*\?auth=0$", url_host(base_url)</string>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Project Muse</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -96,7 +108,6 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
-
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
@@ -115,7 +126,7 @@
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseBooksUrlNormalizer</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseUrlNormalizer</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

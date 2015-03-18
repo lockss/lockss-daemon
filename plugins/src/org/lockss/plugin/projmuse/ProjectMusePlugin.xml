@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.5</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -63,20 +63,29 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.*)?$", url_host(base_url)</string>
       <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/journals/%s/v%03d/?$", url_host(base_url), journal_dir, volume</string>
       <string>2,"^https?://%s/journals/%s/v%03d/[^/]+/$", url_host(base_url), journal_dir, volume</string>
       <string>1,"^https?://%s/journals/%s/(summary/)?v%03d/", url_host(base_url), journal_dir, volume</string>
       <string>1,"^https?://%s/journals/%s/toc/[^/]+\.?%d\.", url_host(base_url), journal_dir, volume</string>
     </list>
   </entry>
+  <!-- Some volume numbers are now 4-digit years, but this works -->  
   <entry>
     <string>au_start_url</string>
-    <string>"%sjournals/%s/v%03d/", base_url, journal_dir, volume</string>
+    <list>
+      <string>"%sjournals/%s/v%03d/", to_http(base_url), journal_dir, volume</string>
+      <string>"%sjournals/%s/v%03d/", to_https(base_url), journal_dir, volume</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.projmuse.ProjectMuseUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Project Muse</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>

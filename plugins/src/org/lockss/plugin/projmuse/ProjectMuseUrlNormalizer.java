@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 
@@ -40,11 +41,12 @@ import org.lockss.plugin.*;
  */
 public class ProjectMuseUrlNormalizer implements UrlNormalizer {
 
+  protected static final String VERSION_SUFFIX = "?v=";
+
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-    if (ProjectMuseUtil.isBaseUrlHttp(au)) {
-      url = ProjectMuseUtil.baseUrlHttpsToHttp(au, url);
-    }
+    url = ProjectMuseUtil.baseUrlHttpsToHttp(au, url);
+    url = StringUtils.substringBeforeLast(url, VERSION_SUFFIX);
     return url;
   }
 

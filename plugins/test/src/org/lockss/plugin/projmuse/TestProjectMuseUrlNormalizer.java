@@ -47,7 +47,7 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    norm = makeNormalizer();
+    norm = new ProjectMuseUrlNormalizer();
     mauHttp = new MockArchivalUnit();
     mauHttp.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
                                                         "http://www.example.com/"));
@@ -56,7 +56,7 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
                                                          "https://www.example.com/"));
   }
 
-  public void testUrlNormalizer() throws Exception {
+  public void testBaseUrl() throws Exception {
     // Null
     assertNull(norm.normalizeUrl(null, mauHttp));
     assertNull(norm.normalizeUrl(null, mauHttps));
@@ -77,8 +77,17 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
                  norm.normalizeUrl("https://www.example.com/favicon.ico", mauHttps));
   }
   
-  public UrlNormalizer makeNormalizer() {
-    return new ProjectMuseUrlNormalizer();
+  public void testSuffix() throws Exception {
+    // HTTP base URL: trim suffix and normalize HTTPS to HTTP
+    assertEquals("http://www.example.com/foo.css",
+                 norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttp));
+    assertEquals("http://www.example.com/foo.css",
+                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttp));
+    // HTTPS base URL: trim suffix only
+    assertEquals("http://www.example.com/foo.css",
+                 norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttps));
+    assertEquals("https://www.example.com/foo.css",
+                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttps));
   }
-  
+
 }
