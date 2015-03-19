@@ -1,0 +1,29 @@
+# This Sage Publications file is for titles previously hosted by other platforms before being purchased by Sage
+
+{
+
+  publisher <
+    name = SAGE Publications ;
+    info[contract] = 2015 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+      name = SAGE Publications Baywood Publishing Company Source Content
+    >
+    
+    # This file-transfer content was originally owned by Baywood Publishing Company
+    # and hosted by Metapress.
+    
+    plugin = org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodSourcePlugin
+    param[base_url] = http://content5.lockss.org/sourcefiles/sage-baywood-released/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2015 ; SAGE Publications Baywood Publishing Company Source Content 2015 ; 2015 >
+
+  }
+
+}
