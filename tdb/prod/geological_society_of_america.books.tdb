@@ -816,9 +816,9 @@
     au < manifest ; 2014 ; 978-0-8137-0036-6 ; GSA Field Guides Volume 36 ; 36 >
     au < manifest ; 2014 ; 978-0-8137-0037-3 ; GSA Field Guides Volume 37 ; 37 >
     au < manifest ; 2014 ; 978-0-8137-0038-0 ; GSA Field Guides Volume 38 ; 38 >
-    au < manifest ; 2014 ; 978-0-8137-0039-7 ; GSA Field Guides Volume 39 ; 39 >
-    au < expected ; 2014 ;  ; GSA Field Guides Volume 40 ; 40 >
-    au < expected ; 2014 ;  ; GSA Field Guides Volume 41 ; 41 >
+    au < manifest ; 2015 ; 978-0-8137-0039-7 ; GSA Field Guides Volume 39 ; 39 >
+    au < expected ; 2015 ;  ; GSA Field Guides Volume 40 ; 40 >
+    au < expected ; 2015 ;  ; GSA Field Guides Volume 41 ; 41 >
 
   }
   
@@ -858,6 +858,7 @@
       au < manifest ; 2008 ;  ; 978-0-8137-4116-1 ; Reviews in Engineering Geology Volume 20 ; 20 >
       au < manifest ; 2013 ; 10.1130/9780813741215 ; 978-0-8137-4121-5 ; Reviews in Engineering Geology Volume 21 ; 21 >
       au < manifest ; 2014 ; 10.1130/9780813741222 ; 978-0-8137-4122-2 ; Reviews in Engineering Geology Volume 22 ; 22 >
+      au < expected ; 2015 ;  ;  ; Reviews in Engineering Geology Volume 23 ; 23 >
     }
    
   }
