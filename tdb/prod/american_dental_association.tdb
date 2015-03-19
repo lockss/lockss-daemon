@@ -12,90 +12,32 @@
       eissn = 1943-4723 ;
       issnl = 0002-8177
     >
+    
+    comment[moved] = moved to Elsevier
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://jada.ada.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1966 ; The Journal of the American Dental Association Volume 72 [tables of contents only] ; 72 >
-    au < manifest ; 1966 ; The Journal of the American Dental Association Volume 73 [tables of contents only] ; 73 >
-    au < manifest ; 1967 ; The Journal of the American Dental Association Volume 74 [tables of contents only] ; 74 >
-    au < manifest ; 1967 ; The Journal of the American Dental Association Volume 75 [tables of contents only] ; 75 >
-    au < manifest ; 1968 ; The Journal of the American Dental Association Volume 76 [tables of contents only] ; 76 >
-    au < manifest ; 1968 ; The Journal of the American Dental Association Volume 77 [tables of contents only] ; 77 >
-    au < manifest ; 1969 ; The Journal of the American Dental Association Volume 78 [tables of contents only] ; 78 >
-    au < manifest ; 1969 ; The Journal of the American Dental Association Volume 79 [tables of contents only] ; 79 >
-    au < manifest ; 1970 ; The Journal of the American Dental Association Volume 80 [tables of contents only] ; 80 >
-    au < manifest ; 1970 ; The Journal of the American Dental Association Volume 81 [tables of contents only] ; 81 >
-    au < manifest ; 1971 ; The Journal of the American Dental Association Volume 82 [tables of contents only] ; 82 >
-    au < manifest ; 1971 ; The Journal of the American Dental Association Volume 83 [tables of contents only] ; 83 >
-    au < manifest ; 1972 ; The Journal of the American Dental Association Volume 84 [tables of contents only] ; 84 >
-    au < manifest ; 1972 ; The Journal of the American Dental Association Volume 85 [tables of contents only] ; 85 >
-    au < manifest ; 1973 ; The Journal of the American Dental Association Volume 86 [tables of contents only] ; 86 >
-    au < manifest ; 1973 ; The Journal of the American Dental Association Volume 87 [tables of contents only] ; 87 >
-    au < manifest ; 1974 ; The Journal of the American Dental Association Volume 88 [tables of contents only] ; 88 >
-    au < manifest ; 1974 ; The Journal of the American Dental Association Volume 89 [tables of contents only] ; 89 >
-    {
-
-      attr[au_coverage_depth] = abstracts
-
-      au < manifest ; 1975 ; The Journal of the American Dental Association Volume 90 [abstracts only] ; 90 >
-      au < manifest ; 1975 ; The Journal of the American Dental Association Volume 91 [abstracts only] ; 91 >
-      au < manifest ; 1976 ; The Journal of the American Dental Association Volume 92 [abstracts only] ; 92 >
-      au < manifest ; 1976 ; The Journal of the American Dental Association Volume 93 [abstracts only] ; 93 >
-      au < manifest ; 1977 ; The Journal of the American Dental Association Volume 94 [abstracts only] ; 94 >
-      au < manifest ; 1977 ; The Journal of the American Dental Association Volume 95 [abstracts only] ; 95 >
-      au < manifest ; 1978 ; The Journal of the American Dental Association Volume 96 [abstracts only] ; 96 >
-      au < manifest ; 1978 ; The Journal of the American Dental Association Volume 97 [abstracts only] ; 97 >
-      au < manifest ; 1979 ; The Journal of the American Dental Association Volume 98 [abstracts only] ; 98 >
-      au < manifest ; 1979 ; The Journal of the American Dental Association Volume 99 [abstracts only] ; 99 >
-      au < manifest ; 1980 ; The Journal of the American Dental Association Volume 100 [abstracts only] ; 100 >
-      au < manifest ; 1980 ; The Journal of the American Dental Association Volume 101 [abstracts only] ; 101 >
-      au < manifest ; 1981 ; The Journal of the American Dental Association Volume 102 [abstracts only] ; 102 >
-      au < manifest ; 1981 ; The Journal of the American Dental Association Volume 103 [abstracts only] ; 103 >
-      au < manifest ; 1982 ; The Journal of the American Dental Association Volume 104 [abstracts only] ; 104 >
-      au < manifest ; 1982 ; The Journal of the American Dental Association Volume 105 [abstracts only] ; 105 >
-      au < manifest ; 1983 ; The Journal of the American Dental Association Volume 106 [abstracts only] ; 106 >
-      au < manifest ; 1983 ; The Journal of the American Dental Association Volume 107 [abstracts only] ; 107 >
-      au < manifest ; 1984 ; The Journal of the American Dental Association Volume 108 [abstracts only] ; 108 >
-      au < manifest ; 1984 ; The Journal of the American Dental Association Volume 109 [abstracts only] ; 109 >
-      au < manifest ; 1985 ; The Journal of the American Dental Association Volume 110 [abstracts only] ; 110 >
-      au < manifest ; 1985 ; The Journal of the American Dental Association Volume 111 [abstracts only] ; 111 >
-      au < manifest ; 1986 ; The Journal of the American Dental Association Volume 112 [abstracts only] ; 112 >
-      au < manifest ; 1986 ; The Journal of the American Dental Association Volume 113 [abstracts only] ; 113 >
-      au < manifest ; 1987 ; The Journal of the American Dental Association Volume 114 [abstracts only] ; 114 >
-      au < manifest ; 1987 ; The Journal of the American Dental Association Volume 115 [abstracts only] ; 115 >
-      au < manifest ; 1988 ; The Journal of the American Dental Association Volume 116 [abstracts only] ; 116 >
-      au < manifest ; 1988 ; The Journal of the American Dental Association Volume 117 [abstracts only] ; 117 >
-      au < manifest ; 1989 ; The Journal of the American Dental Association Volume 118 [abstracts only] ; 118 >
-      au < manifest ; 1989 ; The Journal of the American Dental Association Volume 119 [abstracts only] ; 119 >
-      au < manifest ; 1990 ; The Journal of the American Dental Association Volume 120 [abstracts only] ; 120 >
-      au < manifest ; 1990 ; The Journal of the American Dental Association Volume 121 [abstracts only] ; 121 >
-      au < manifest ; 1991 ; The Journal of the American Dental Association Volume 122 [abstracts only] ; 122 >
-      au < manifest ; 1992 ; The Journal of the American Dental Association Volume 123 [abstracts only] ; 123 >
-      au < manifest ; 1993 ; The Journal of the American Dental Association Volume 124 [abstracts only] ; 124 >
-      au < manifest ; 1994 ; The Journal of the American Dental Association Volume 125 [abstracts only] ; 125 >
-    }
-    au < released ; 1995 ; The Journal of the American Dental Association Volume 126 ; 126 >
-    au < released ; 1996 ; The Journal of the American Dental Association Volume 127 ; 127 >
-    au < released ; 1997 ; The Journal of the American Dental Association Volume 128 ; 128 >
-    au < released ; 1998 ; The Journal of the American Dental Association Volume 129 ; 129 >
-    au < released ; 1999 ; The Journal of the American Dental Association Volume 130 ; 130 >
-    au < released ; 2000 ; The Journal of the American Dental Association Volume 131 ; 131 >
-    au < released ; 2001 ; The Journal of the American Dental Association Volume 132 ; 132 >
-    au < released ; 2002 ; The Journal of the American Dental Association Volume 133 ; 133 >
-    au < released ; 2003 ; The Journal of the American Dental Association Volume 134 ; 134 >
-    au < released ; 2004 ; The Journal of the American Dental Association Volume 135 ; 135 >
-    au < released ; 2005 ; The Journal of the American Dental Association Volume 136 ; 136 >
-    au < released ; 2006 ; The Journal of the American Dental Association Volume 137 ; 137 >
-    au < released ; 2007 ; The Journal of the American Dental Association Volume 138 ; 138 >
-    au < released ; 2008 ; The Journal of the American Dental Association Volume 139 ; 139 >
-    au < released ; 2009 ; The Journal of the American Dental Association Volume 140 ; 140 >
-    au < released ; 2010 ; The Journal of the American Dental Association Volume 141 ; 141 >
-    au < released ; 2011 ; The Journal of the American Dental Association Volume 142 ; 142 >
-    au < released ; 2012 ; The Journal of the American Dental Association Volume 143 ; 143 >
-    au < released ; 2013 ; The Journal of the American Dental Association Volume 144 ; 144 >
-    au < doNotProcess ; 2014 ; The Journal of the American Dental Association Volume 145 ; 145 >
+    au < down ; 1995 ; The Journal of the American Dental Association Volume 126 ; 126 >
+    au < down ; 1996 ; The Journal of the American Dental Association Volume 127 ; 127 >
+    au < down ; 1997 ; The Journal of the American Dental Association Volume 128 ; 128 >
+    au < down ; 1998 ; The Journal of the American Dental Association Volume 129 ; 129 >
+    au < down ; 1999 ; The Journal of the American Dental Association Volume 130 ; 130 >
+    au < down ; 2000 ; The Journal of the American Dental Association Volume 131 ; 131 >
+    au < down ; 2001 ; The Journal of the American Dental Association Volume 132 ; 132 >
+    au < down ; 2002 ; The Journal of the American Dental Association Volume 133 ; 133 >
+    au < down ; 2003 ; The Journal of the American Dental Association Volume 134 ; 134 >
+    au < down ; 2004 ; The Journal of the American Dental Association Volume 135 ; 135 >
+    au < down ; 2005 ; The Journal of the American Dental Association Volume 136 ; 136 >
+    au < down ; 2006 ; The Journal of the American Dental Association Volume 137 ; 137 >
+    au < down ; 2007 ; The Journal of the American Dental Association Volume 138 ; 138 >
+    au < down ; 2008 ; The Journal of the American Dental Association Volume 139 ; 139 >
+    au < down ; 2009 ; The Journal of the American Dental Association Volume 140 ; 140 >
+    au < down ; 2010 ; The Journal of the American Dental Association Volume 141 ; 141 >
+    au < down ; 2011 ; The Journal of the American Dental Association Volume 142 ; 142 >
+    au < down ; 2012 ; The Journal of the American Dental Association Volume 143 ; 143 >
+    au < down ; 2013 ; The Journal of the American Dental Association Volume 144 ; 144 >
 
   }
 
