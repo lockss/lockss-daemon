@@ -58,6 +58,10 @@ uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "GLN. All Released names = $allAUs"
 echo "GLN. Released names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#
+# Find number of AUs ready for release in the prod title database
+echo "----------------------"
+./scripts/tdb/tdbout -Y -t status tdb/prod/*.tdb | sort | uniq -c
 echo " "
 #
 # Find duplicate auids in the clockss title database
@@ -90,6 +94,10 @@ uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "CLOCKSS. All Released names = $allAUs"
 echo "CLOCKSS. Released names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#
+# Find number of AUs ready for release in the clockssingest title database
+echo "----------------------"
+./scripts/tdb/tdbout -Y -t status tdb/clockssingest/*.tdb | sort | uniq -c
 echo " "
 #
 # Find duplicate auids in the ibictpln title database
