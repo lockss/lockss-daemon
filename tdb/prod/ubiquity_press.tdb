@@ -113,8 +113,8 @@
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
 
-    au < released ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
-    au < manifest ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
+    au < down ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
+    au < doNotProcess ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
   }
 
