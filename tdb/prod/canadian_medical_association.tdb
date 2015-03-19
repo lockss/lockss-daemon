@@ -116,7 +116,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Canadian Medical Association Journal Volume 183 ; 183 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Canadian Medical Association Journal Volume 184 ; 184 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Canadian Medical Association Journal Volume 185 ; 185 >
-    au < HighWirePressH20Plugin ; testing ; 2014 ; Canadian Medical Association Journal Volume 186 ; 186 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; Canadian Medical Association Journal Volume 186 ; 186 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Canadian Medical Association Journal Volume 187 ; 187 >
 
   }
@@ -133,7 +133,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < released ; 2013 ; CMAJ Open Volume 1 ; 1 >
-    au < testing ; 2014 ; CMAJ Open Volume 2 ; 2 >
+    au < ready ; 2014 ; CMAJ Open Volume 2 ; 2 >
     au < expected ; 2015 ; CMAJ Open Volume 3 ; 3 >
 
   }
