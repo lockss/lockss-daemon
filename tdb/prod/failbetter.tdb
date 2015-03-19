@@ -84,12 +84,16 @@ comment[fb3] = plugins should be simple so that publisher doesn't have to make a
       au < exists ; 2012 ; Failbetter Issue 45 ; 45 ; 45 >
       au < exists ; 2013 ; Failbetter Issue 46 ; 46 ; 46 >
       au < exists ; 2013 ; Failbetter Issue 47 ; 47 ; 47 >
-      au < expected ; 2013 ; Failbetter Issue 48 ; 48 ; 48 >
-      au < expected ; 2013 ; Failbetter Issue 49 ; 49 ; 49 >
-      au < expected ; 2014 ; Failbetter Issue 50 ; 50 ; 50 >
-      au < expected ; 2014 ; Failbetter Issue 51 ; 51 ; 51 >
-      au < expected ; 2014 ; Failbetter Issue 52 ; 52 ; 52 >
-      au < expected ; 2014 ; Failbetter Issue 53 ; 53 ; 53 >
+      au < exists ; 2013 ; Failbetter Issue 48 ; 48 ; 48 >
+      au < exists ; 2013 ; Failbetter Issue 49 ; 49 ; 49 >
+      au < exists ; 2014 ; Failbetter Issue 50 ; 50 ; 50 >
+      au < exists ; 2014 ; Failbetter Issue 51 ; 51 ; 51 >
+      au < exists ; 2014 ; Failbetter Issue 52 ; 52 ; 52 >
+      au < exists ; 2014 ; Failbetter Issue 53 ; 53 ; 53 >
+      au < exists ; 2015 ; Failbetter Issue 54 ; 54 ; 54 >
+      au < expected ; 2015 ; Failbetter Issue 55 ; 55 ; 55 >
+      au < expected ; 2015 ; Failbetter Issue 56 ; 56 ; 56 >
+      au < expected ; 2015 ; Failbetter Issue 57 ; 57 ; 57 >
     
     }
   
