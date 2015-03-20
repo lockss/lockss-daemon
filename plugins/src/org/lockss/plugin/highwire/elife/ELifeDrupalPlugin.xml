@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -58,7 +58,7 @@
       <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
-      <string>1,"^%s(highwire/(filestream|markup)/|elife/download-)", base_url</string>
+      <string>1,"^%s(highwire/(filestream|markup)/|elife/download-|content/elife/suppl/)", base_url</string>
       <string>1,"^%s(content/[^/]+/e[^/?]+($|(/[^/]+)?/DC))", base_url</string>
       <string>1,"^%scontent(/elife)?/[^/]+/e[^/?]+([.]full[.]pdf$|/article-(data|info)|/.*/embed/)", base_url</string>
       <string>1,"^%shighwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$", base_url</string>
