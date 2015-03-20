@@ -31,13 +31,22 @@
     au < released ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
     au < released ; 2013 ; Journal of Corporate Citizenship Volume 2013 ; 2013 >
     au < manifest ; 2014 ; Journal of Corporate Citizenship Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Journal of Corporate Citizenship Volume 2015 ; 2015 >
 
   }
 
   {
     title <
-      name = Business, Peace and Sustainable Development 
+      name = Business, Peace and Sustainable Development ;
+      issn = 2051-8757 
     >
+
+    param[journal_id] = bpsd
+    param[journal_issn] = 2051-8757
+
+    au < exists ; 2013 ; Business, Peace and Sustainable Development Volume 2013 ; 2013 >
+    au < exists ; 2014 ; Business, Peace and Sustainable Development Volume 2014 ; 2014 >
+    au < expected ; 2015 ; Business, Peace and Sustainable Development Volume 2015 ; 2015 >
 
   }
 
@@ -51,6 +60,12 @@
     param[journal_id] = gmi
     param[journal_issn] = 0966-9671
 
+    au < exists ; 1999 ; Greener Management International Volume 1999 ; 1999 >
+    au < exists ; 2000 ; Greener Management International Volume 2000 ; 2000 >
+    au < exists ; 2001 ; Greener Management International Volume 2001 ; 2001 >
+    au < exists ; 2002 ; Greener Management International Volume 2002 ; 2002 >
+    au < exists ; 2003 ; Greener Management International Volume 2003 ; 2003 >
+    au < exists ; 2004 ; Greener Management International Volume 2004 ; 2004 >
     au < released ; 2005 ; Greener Management International Volume 2005 ; 2005 >
     au < released ; 2006 ; Greener Management International Volume 2006 ; 2006 >
     au < released ; 2007 ; Greener Management International Volume 2007 ; 2007 >
