@@ -16,9 +16,9 @@
     param[base_url] = http://www.drogoresearch.com/
     comment[0] = Articles for 2006-2007 available at http://www.researchgate.net/journal/0968-0624_The_international_journal_of_psychiatric_nursing_research
     comment[ceased] = This title has ceased and is no longer available online.
-    implicit < status ; name >
+    implicit < status ; year ; name ; volume >
 
-    au < down ; International Journal of Psychiatric Nursing Research >
+    au < down ; 0 ; International Journal of Psychiatric Nursing Research Volume 1 ; 1 >
 
   }
 
