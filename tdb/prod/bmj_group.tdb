@@ -483,9 +483,8 @@
 
     {
 
-      plugin = needs.plugin
-      param[base_url] = http://diabetesrc.bmj.com/
-      comment[base_url] = what is the correct base_url. What about http://drc.bmj.com/
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://drc.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
