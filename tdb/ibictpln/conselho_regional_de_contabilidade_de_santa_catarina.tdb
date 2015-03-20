@@ -13,25 +13,34 @@
         issn = 1808-3781 ;
         eissn = 2237-7662
       >
+      
+      {
+         comment[publisher] = Conselho Regional de Contabilidade de Santa Catarina
+         param[base_url] = http://www.atena.org.br/revista/ojs-2.2.3-06/
+         param[journal_id] = CRCSC
 
-      comment[publisher] = Conselho Regional de Contabilidade de Santa Catarina
-      param[base_url] = http://www.atena.org.br/revista/ojs-2.2.3-06/
-      param[journal_id] = CRCSC
+         au < down ; 2001 ; 1 ; Revista Catarinense da Ciência Contábil Volume 1 (2001) ; 2001 ; journal moved >
+         au < down ; 2002 ; 1 ; Revista Catarinense da Ciência Contábil Volume 1 (2002) ; 2002 ; journal moved >
+         au < down ; 2003 ; 2-3 ; Revista Catarinense da Ciência Contábil Volume 2-3 ; 2003 ; journal moved >
+         au < down ; 2004 ; 3 ; Revista Catarinense da Ciência Contábil Volume 3 ; 2004 ; journal moved >
+         au < down ; 2005 ; 4 ; Revista Catarinense da Ciência Contábil Volume 4 ; 2005 ; journal moved >
+         au < down ; 2006 ; 5 ; Revista Catarinense da Ciência Contábil Volume 5 ; 2006 ; journal moved >
+         au < down ; 2007 ; 6 ; Revista Catarinense da Ciência Contábil Volume 6 ; 2007 ; journal moved >
+         au < down ; 2008 ; 7 ; Revista Catarinense da Ciência Contábil Volume 7 ; 2008 ; journal moved >
+         au < down ; 2009 ; 8 ; Revista Catarinense da Ciência Contábil Volume 8 ; 2009 ; journal moved >
+         au < down ; 2010 ; 9 ; Revista Catarinense da Ciência Contábil Volume 9 ; 2010 ; journal moved >
+         au < down ; 2011 ; 10 ; Revista Catarinense da Ciência Contábil Volume 10 ; 2011 ; journal moved >
+         au < down ; 2012 ; 11 ; Revista Catarinense da Ciência Contábil Volume 11 ; 2012 ; journal moved >
+         au < down ; 2013 ; 12 ; Revista Catarinense da Ciência Contábil Volume 12 ; 2013 ; journal moved >
+      }
+      
+      {
+         comment[publisher] = Conselho Regional de Contabilidade de Santa Catarina
+         param[base_url] = http://revista.crcsc.org.br/revista/ojs-2.2.3-06/
+         param[journal_id] = CRCSC
 
-      au < down ; 2001 ; 1 ; Revista Catarinense da Ciência Contábil Volume 1 (2001) ; 2001 ; journal gone >
-      au < down ; 2002 ; 1 ; Revista Catarinense da Ciência Contábil Volume 1 (2002) ; 2002 ; journal gone >
-      au < down ; 2003 ; 2-3 ; Revista Catarinense da Ciência Contábil Volume 2-3 ; 2003 ; journal gone >
-      au < down ; 2004 ; 3 ; Revista Catarinense da Ciência Contábil Volume 3 ; 2004 ; journal gone >
-      au < down ; 2005 ; 4 ; Revista Catarinense da Ciência Contábil Volume 4 ; 2005 ; journal gone >
-      au < down ; 2006 ; 5 ; Revista Catarinense da Ciência Contábil Volume 5 ; 2006 ; journal gone >
-      au < down ; 2007 ; 6 ; Revista Catarinense da Ciência Contábil Volume 6 ; 2007 ; journal gone >
-      au < down ; 2008 ; 7 ; Revista Catarinense da Ciência Contábil Volume 7 ; 2008 ; journal gone >
-      au < down ; 2009 ; 8 ; Revista Catarinense da Ciência Contábil Volume 8 ; 2009 ; journal gone >
-      au < down ; 2010 ; 9 ; Revista Catarinense da Ciência Contábil Volume 9 ; 2010 ; journal gone >
-      au < down ; 2011 ; 10 ; Revista Catarinense da Ciência Contábil Volume 10 ; 2011 ; journal gone >
-      au < down ; 2012 ; 11 ; Revista Catarinense da Ciência Contábil Volume 11 ; 2012 ; journal gone >
-      au < down ; 2013 ; 12 ; Revista Catarinense da Ciência Contábil Volume 12 ; 2013 ; journal gone >
-
+         au < exists ; 2014 ; 13 ; Revista Catarinense da Ciência Contábil Volume 13 ; 2014 ; >
+      }
   }
 
 }
