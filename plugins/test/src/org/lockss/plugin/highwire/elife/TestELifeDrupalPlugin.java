@@ -207,6 +207,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "elife/download-suppl/297/figure-10—source-data-1.media-3.xlsx/0/1", true, au);
     shouldCacheTest(ROOT_URL + "elife/download-video/http%253A%252F%252Fstatic-movie-usa.glencoesoftware.com%252Fmp4%252F10.7554%252F6873ae4599bf%252Felife00007v001.mp4", true, au);
     shouldCacheTest(ROOT_URL + "elife/download-suppl/23743/source-code-1.media-5.pl/0/1", true, au);
+    shouldCacheTest(ROOT_URL + "elife/suppl/2014/04/23/eLife.02130.DC1/elife02130_Supplemental_files.zip", true, au);
     
     shouldCacheTest("http://cdn-site.elifesciences.org/content/elife/1/e00003/F1.medium.gif", true, au);
     shouldCacheTest("http://cdn-site.elifesciences.org/content/elife/1/e00003/F3/F4.small.gif", true, au);
