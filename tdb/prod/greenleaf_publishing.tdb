@@ -13,25 +13,17 @@
 
   {
     title <
-      name = Journal of Corporate Citizenship ;
-      issn = 1470-5001 ;
-      eissn = 2051-4700 
+      name = Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation ;
+      issn = 2053-8898 ;
+      eissn = 2053-8901 
     >
-    
-    param[journal_id] = jcc
-    param[journal_issn] = 1470-5001
 
-    au < released ; 2005 ; Journal of Corporate Citizenship Volume 2005 ; 2005 >
-    au < released ; 2006 ; Journal of Corporate Citizenship Volume 2006 ; 2006 >
-    au < released ; 2007 ; Journal of Corporate Citizenship Volume 2007 ; 2007 >
-    au < released ; 2008 ; Journal of Corporate Citizenship Volume 2008 ; 2008 >
-    au < released ; 2009 ; Journal of Corporate Citizenship Volume 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Corporate Citizenship Volume 2010 ; 2010 >
-    au < released ; 2011 ; Journal of Corporate Citizenship Volume 2011 ; 2011 >
-    au < released ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
-    au < released ; 2013 ; Journal of Corporate Citizenship Volume 2013 ; 2013 >
-    au < manifest ; 2014 ; Journal of Corporate Citizenship Volume 2014 ; 2014 >
-    au < exists ; 2015 ; Journal of Corporate Citizenship Volume 2015 ; 2015 >
+    param[journal_id] = bsl
+    param[journal_issn] = 2053-8898
+
+    au < exists ; 2013 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2013 ; 2013 >
+    au < exists ; 2014 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2014 ; 2014 >
+    au < expected ; 2015 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2015 ; 2015 >
 
   }
 
@@ -69,6 +61,44 @@
     au < released ; 2005 ; Greener Management International Volume 2005 ; 2005 >
     au < released ; 2006 ; Greener Management International Volume 2006 ; 2006 >
     au < released ; 2007 ; Greener Management International Volume 2007 ; 2007 >
+
+  }
+
+  {
+    title <
+      name = Journal of Corporate Citizenship ;
+      issn = 1470-5001 ;
+      eissn = 2051-4700 
+    >
+    
+    param[journal_id] = jcc
+    param[journal_issn] = 1470-5001
+
+    au < released ; 2005 ; Journal of Corporate Citizenship Volume 2005 ; 2005 >
+    au < released ; 2006 ; Journal of Corporate Citizenship Volume 2006 ; 2006 >
+    au < released ; 2007 ; Journal of Corporate Citizenship Volume 2007 ; 2007 >
+    au < released ; 2008 ; Journal of Corporate Citizenship Volume 2008 ; 2008 >
+    au < released ; 2009 ; Journal of Corporate Citizenship Volume 2009 ; 2009 >
+    au < released ; 2010 ; Journal of Corporate Citizenship Volume 2010 ; 2010 >
+    au < released ; 2011 ; Journal of Corporate Citizenship Volume 2011 ; 2011 >
+    au < released ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
+    au < released ; 2013 ; Journal of Corporate Citizenship Volume 2013 ; 2013 >
+    au < manifest ; 2014 ; Journal of Corporate Citizenship Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Journal of Corporate Citizenship Volume 2015 ; 2015 >
+
+  }
+
+  {
+    title <
+      name = The Journal of Sustainable Mobility ;
+      issn = 2053-2350 
+    >
+
+    param[journal_id] = jsm
+    param[journal_issn] = 2053-2350 
+
+    au < exists ; 2014 ; The Journal of Sustainable Mobility Volume 2014 ; 2014 >
+    au < expected ; 2015 ; The Journal of Sustainable Mobility Volume 2015 ; 2015 >
 
   }
 
