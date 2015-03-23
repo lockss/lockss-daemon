@@ -2547,7 +2547,7 @@
     au < crawling ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
     au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
-    au < exists ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 >
+    au < manifest ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -2562,11 +2562,11 @@
      
      comment[error] = manifest for 2012, 2013, 2014 have same issues for 2013. PD-1244. No substance for V3.
 
-    au < exists ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
+    au < manifest ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
     au < crawling ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
     au < ingNotReady ; exists ; 2012 ; Nature Communications Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
-    au < expected ; exists ; 2014 ; Nature Communications Volume 5 ; 2014 ; 5 >
+    au < manifest ; exists ; 2014 ; Nature Communications Volume 5 ; 2014 ; 5 >
   
   }
   {
@@ -2585,7 +2585,7 @@
     au < zapped ; finished ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < zapped ; finished ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
     au < crawling ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
-    au < exists ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
+    au < manifest ; exists ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
     au < crawling ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
     au < crawling ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
     au < manifest ; exists ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 >
