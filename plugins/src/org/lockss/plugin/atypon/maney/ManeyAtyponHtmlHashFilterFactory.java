@@ -37,7 +37,6 @@ import org.htmlparser.NodeFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.util.Logger;
 
 public class ManeyAtyponHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
@@ -58,79 +57,58 @@ public class ManeyAtyponHtmlHashFilterFactory
         HtmlNodeFilters.tagWithAttribute("div",  "id", "Journal Header"),
         // under TOC issue information, select all access icons and dropdown
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "access-options"),
-        // toc - For selected items dropdown next to Full/Open access
-        HtmlNodeFilters.tagWithAttribute("div", "class", 
-                                         "publicationToolContainer"),
         // toc - access icon status of article
         HtmlNodeFilters.tagWithAttribute("td", "class" ,"accessIconContainer"),
         //  toc - ad above News & Alerts
         // http://www.maneyonline.com/toc/his/36/4
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
-        //  toc - top of right column, "published on behalf of"
-        HtmlNodeFilters.tagWithAttribute("div",  "id" ,"Society Logo"),
-        //  toc - right column, "journal services"
-        HtmlNodeFilters.tagWithAttribute("section", "id", 
-                                         "migrated_information"),
-        //  toc - right column, "For Authors"
-        HtmlNodeFilters.tagWithAttribute("section", "id", 
-                                         "migrated_forauthors"), 
-        //  toc - right column, "Most read"
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumMostReadWidget"),         
-        //  toc - right column, "Most cited"                                      
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumMostCitedWidget"),                                              
-        //  toc - right column, "Editor's Choice"
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "publicationListWidget"), 
-        //  toc - bottom right column, "Subject resources"
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  
-                                              "literatumSerialSubjects"),                                              
-        //  toc, abs, full, ref - News & alerts box near bottom
-        // with About this Journal and Editors & Editorial Board tabs  
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "migrated_news"),
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "migrated_aims"),
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "migrated_editors"),   
         // toc - Prev/Next - probably not a problem, but not content either
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
                                               "literatumBookIssueNavigation"),                                            
         // abs, full, ref - compact journal header box on right column
         // http://www.maneyonline.com/doi/abs/10.1179/1743676113Y.0000000112
         HtmlNodeFilters.tagWithAttribute("div", "id", "compactJournalHeader"),
-        // full - right column of an article - all article tools with 
-        // class literatumArticleToolsWidget except Download Citations
-        // http://www.maneyonline.com/doi/full/10.1179/0076609714Z.00000000032
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttributeRegex( 
-                "section", "class", "literatumArticleToolsWidget"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")), 
         // full - this seems unused but may get turned on
         // http://www.maneyonline.com/doi/full/10.1179/0076609714Z.00000000032
         HtmlNodeFilters.tagWithAttribute("div",  "id", "MathJax_Message"),
-        // full - right column, "Related Content Search"
-        HtmlNodeFilters.tagWithAttributeRegex("section",  "class", 
-                                              "literatumRelatedContentSearch"),
         // all pages - verify email message appears in certain content
         // machines but not all
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                             "literatumMailVerificationWidget"),
         // abs - potential issue like 'corrigendum' from a figure page of
         // Endocrine Society
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "articleMetaDrop"), 
-        // abs, full - downloaded count                                
-        HtmlNodeFilters.tagWithAttributeRegex("section",  "class", 
-                                          "literatumContentItemDownloadCount"),
         // abs - right sidebar - Citation part
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
                                               "literatumContentItemCitation"),
-        // toc - right sidebar links under 'Journal sevices' and "For authors'
-        HtmlNodeFilters.tagWithAttributeRegex("ul",  "class", "decoratedLinks"),
         // full - section choose pulldown appeared in multiple sections
-        // http://www.maneyonline.com/doi/full/
-        //                           10.1179/1547402X14Z.00000000026#allImages
-        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo")
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo"),
+        // toc - Full/Open access
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "tocListDropZone"),
+        // toc - unused - potential issue
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "tocListtDropZone2"),                                                                                    
+        // toc - For selected items dropdown next to Full/Open access                                   
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "publicationToolContainer"),       
+        // toc, abs, full, ref - News & alerts box near bottom
+        // with About this Journal and Editors & Editorial Board tabs  and
+        // right column Most read/Most cited/Editor's Choice
+        HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"), 
+        //  toc - bottom right column, "Subject resources"
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",  
+                                              "literatumSerialSubjects"),   
+        // toc - right column - Published on behalf of,  Journal services,
+        // For authors, Related content search,  Usage Downloaded count
+        // also abs, full - right column of an article - all article tools 
+        // except downloadCitations
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex( 
+                "section", "class", "widget-titlebar"),
+                HtmlNodeFilters.tagWithAttributeRegex(
+                    "a", "href", "/action/showCitFormats\\?"))
     };
 
     // super.createFilteredInputStream adds maney filters to the 
@@ -152,7 +130,4 @@ public class ManeyAtyponHtmlHashFilterFactory
   }
     
 }
-
-
-
 
