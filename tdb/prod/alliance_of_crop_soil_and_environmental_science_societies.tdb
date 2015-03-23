@@ -26,6 +26,7 @@
 
     # On behalf of American Society of Agronomy
     # See https://dl.sciencesocieties.org/publications/aj
+    plugin = needs.plugin # See PD-48
 
   }
 
