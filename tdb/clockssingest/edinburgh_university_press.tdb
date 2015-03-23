@@ -1012,22 +1012,87 @@
 
       param[journal_id] = scot
 
-      au < manifest ; exists ; 2000 ; Scottish Affairs Volume 30 ; 30 >
-      au < manifest ; exists ; 2000 ; Scottish Affairs Volume 31 ; 31 >
-      au < manifest ; exists ; 2000 ; Scottish Affairs Volume 32 ; 32 >
-      au < manifest ; exists ; 2000 ; Scottish Affairs Volume 33 ; 33 >
-      au < manifest ; exists ; 2001 ; Scottish Affairs Volume 34 ; 34 >
-      au < manifest ; exists ; 2001 ; Scottish Affairs Volume 35 ; 35 >
-      au < manifest ; exists ; 2001 ; Scottish Affairs Volume 36 ; 36 >
-      au < manifest ; exists ; 2001 ; Scottish Affairs Volume 37 ; 37 >
-      au < manifest ; exists ; 2002 ; Scottish Affairs Volume 38 ; 38 >
-      au < manifest ; exists ; 2002 ; Scottish Affairs Volume 39 ; 39 >
-      au < manifest ; exists ; 2002 ; Scottish Affairs Volume 40 ; 40 >
-      au < manifest ; exists ; 2002 ; Scottish Affairs Volume 41 ; 41 >
-      au < manifest ; exists ; 2003 ; Scottish Affairs Volume 42 ; 42 >
-      au < manifest ; exists ; 2003 ; Scottish Affairs Volume 43 ; 43 >
-      au < manifest ; exists ; 2003 ; Scottish Affairs Volume 44 ; 44 >
-      au < manifest ; exists ; 2003 ; Scottish Affairs Volume 45 ; 45 >
+      au < exists ; exists ; 1992 ; Scottish Affairs (First Series) Volume 1 ; 1+(First+Series) >
+      au < exists ; exists ; 1993 ; Scottish Affairs (First Series) Volume 2 ; 2+(First+Series) >
+      au < exists ; exists ; 1993 ; Scottish Affairs (First Series) Volume 3 ; 3+(First+Series) >
+      au < exists ; exists ; 1993 ; Scottish Affairs (First Series) Volume 4 ; 4+(First+Series) >
+      au < exists ; exists ; 1993 ; Scottish Affairs (First Series) Volume 5 ; 5+(First+Series) >
+      au < exists ; exists ; 1994 ; Scottish Affairs (First Series) Volume 6 ; 6+(First+Series) >
+      au < exists ; exists ; 1994 ; Scottish Affairs (First Series) Volume 7 ; 7+(First+Series) >
+      au < exists ; exists ; 1994 ; Scottish Affairs (First Series) Volume 8 ; 8+(First+Series) >
+      au < exists ; exists ; 1994 ; Scottish Affairs (First Series) Volume 9 ; 9+(First+Series) >
+      au < exists ; exists ; 1995 ; Scottish Affairs (First Series) Volume 10 ; 10+(First+Series) >
+      au < exists ; exists ; 1995 ; Scottish Affairs (First Series) Volume 11 ; 11+(First+Series) >
+      au < exists ; exists ; 1995 ; Scottish Affairs (First Series) Volume 12 ; 12+(First+Series) >
+      au < exists ; exists ; 1995 ; Scottish Affairs (First Series) Volume 13 ; 13+(First+Series) >
+      au < exists ; exists ; 1996 ; Scottish Affairs (First Series) Volume 14 ; 14+(First+Series) >
+      au < exists ; exists ; 1996 ; Scottish Affairs (First Series) Volume 15 ; 15+(First+Series) >
+      au < exists ; exists ; 1996 ; Scottish Affairs (First Series) Volume 16 ; 16+(First+Series) >
+      au < exists ; exists ; 1996 ; Scottish Affairs (First Series) Volume 17 ; 17+(First+Series) >
+      au < exists ; exists ; 1997 ; Scottish Affairs (First Series) Volume 18 ; 18+(First+Series) >
+      au < exists ; exists ; 1997 ; Scottish Affairs (First Series) Volume 19 ; 19+(First+Series) >
+      au < exists ; exists ; 1997 ; Scottish Affairs (First Series) Volume 20 ; 20+(First+Series) >
+      au < exists ; exists ; 1997 ; Scottish Affairs (First Series) Volume 21 ; 21+(First+Series) >
+      au < exists ; exists ; 1998 ; Scottish Affairs (First Series) Volume 22 ; 22+(First+Series) >
+      au < exists ; exists ; 1998 ; Scottish Affairs (First Series) Volume 23 ; 23+(First+Series) >
+      au < exists ; exists ; 1998 ; Scottish Affairs (First Series) Volume 24 ; 24+(First+Series) >
+      au < exists ; exists ; 1998 ; Scottish Affairs (First Series) Volume 25 ; 25+(First+Series) >
+      au < exists ; exists ; 1999 ; Scottish Affairs (First Series) Volume 26 ; 26+(First+Series) >
+      au < exists ; exists ; 1999 ; Scottish Affairs (First Series) Volume 27 ; 27+(First+Series) >
+      au < exists ; exists ; 1999 ; Scottish Affairs (First Series) Volume 28 ; 28+(First+Series) >
+      au < exists ; exists ; 1999 ; Scottish Affairs (First Series) Volume 29 ; 29+(First+Series) >
+      au < manifest ; exists ; 2000 ; Scottish Affairs (First Series) Volume 30 ; 30+(First+Series) >
+      au < manifest ; exists ; 2000 ; Scottish Affairs (First Series) Volume 31 ; 31+(First+Series) >
+      au < manifest ; exists ; 2000 ; Scottish Affairs (First Series) Volume 32 ; 32+(First+Series) >
+      au < manifest ; exists ; 2000 ; Scottish Affairs (First Series) Volume 33 ; 33+(First+Series) >
+      au < manifest ; exists ; 2001 ; Scottish Affairs (First Series) Volume 34 ; 34+(First+Series) >
+      au < manifest ; exists ; 2001 ; Scottish Affairs (First Series) Volume 35 ; 35+(First+Series) >
+      au < manifest ; exists ; 2001 ; Scottish Affairs (First Series) Volume 36 ; 36+(First+Series) >
+      au < manifest ; exists ; 2001 ; Scottish Affairs (First Series) Volume 37 ; 37+(First+Series) >
+      au < manifest ; exists ; 2002 ; Scottish Affairs (First Series) Volume 38 ; 38+(First+Series) >
+      au < manifest ; exists ; 2002 ; Scottish Affairs (First Series) Volume 39 ; 39+(First+Series) >
+      au < manifest ; exists ; 2002 ; Scottish Affairs (First Series) Volume 40 ; 40+(First+Series) >
+      au < manifest ; exists ; 2002 ; Scottish Affairs (First Series) Volume 41 ; 41+(First+Series) >
+      au < manifest ; exists ; 2003 ; Scottish Affairs (First Series) Volume 42 ; 42+(First+Series) >
+      au < manifest ; exists ; 2003 ; Scottish Affairs (First Series) Volume 43 ; 43+(First+Series) >
+      au < manifest ; exists ; 2003 ; Scottish Affairs (First Series) Volume 44 ; 44+(First+Series) >
+      au < manifest ; exists ; 2003 ; Scottish Affairs (First Series) Volume 45 ; 45+(First+Series) >
+      au < exists ; exists ; 2004 ; Scottish Affairs (First Series) Volume 46 ; 46+(First+Series) >
+      au < exists ; exists ; 2004 ; Scottish Affairs (First Series) Volume 47 ; 47+(First+Series) >
+      au < exists ; exists ; 2004 ; Scottish Affairs (First Series) Volume 48 ; 48+(First+Series) >
+      au < exists ; exists ; 2004 ; Scottish Affairs (First Series) Volume 49 ; 49+(First+Series) >
+      au < exists ; exists ; 2005 ; Scottish Affairs (First Series) Volume 50 ; 50+(First+Series) >
+      au < exists ; exists ; 2005 ; Scottish Affairs (First Series) Volume 51 ; 51+(First+Series) >
+      au < exists ; exists ; 2005 ; Scottish Affairs (First Series) Volume 52 ; 52+(First+Series) >
+      au < exists ; exists ; 2005 ; Scottish Affairs (First Series) Volume 53 ; 53+(First+Series) >
+      au < exists ; exists ; 2006 ; Scottish Affairs (First Series) Volume 54 ; 54+(First+Series) >
+      au < exists ; exists ; 2006 ; Scottish Affairs (First Series) Volume 55 ; 55+(First+Series) >
+      au < exists ; exists ; 2006 ; Scottish Affairs (First Series) Volume 56 ; 56+(First+Series) >
+      au < exists ; exists ; 2006 ; Scottish Affairs (First Series) Volume 57 ; 57+(First+Series) >
+      au < exists ; exists ; 2007 ; Scottish Affairs (First Series) Volume 58 ; 58+(First+Series) >
+      au < exists ; exists ; 2007 ; Scottish Affairs (First Series) Volume 59 ; 59+(First+Series) >
+      au < exists ; exists ; 2007 ; Scottish Affairs (First Series) Volume 60 ; 60+(First+Series) >
+      au < exists ; exists ; 2007 ; Scottish Affairs (First Series) Volume 61 ; 61+(First+Series) >
+      au < exists ; exists ; 2008 ; Scottish Affairs (First Series) Volume 62 ; 62+(First+Series) >
+      au < exists ; exists ; 2008 ; Scottish Affairs (First Series) Volume 63 ; 63+(First+Series) >
+      au < exists ; exists ; 2008 ; Scottish Affairs (First Series) Volume 64 ; 64+(First+Series) >
+      au < exists ; exists ; 2008 ; Scottish Affairs (First Series) Volume 65 ; 65+(First+Series) >
+      au < exists ; exists ; 2009 ; Scottish Affairs (First Series) Volume 66 ; 66+(First+Series) >
+      au < exists ; exists ; 2009 ; Scottish Affairs (First Series) Volume 67 ; 67+(First+Series) >
+      au < exists ; exists ; 2009 ; Scottish Affairs (First Series) Volume 68 ; 68+(First+Series) >
+      au < exists ; exists ; 2009 ; Scottish Affairs (First Series) Volume 69 ; 69+(First+Series) >
+      au < exists ; exists ; 2000 ; Scottish Affairs (First Series) Volume 70 ; 70+(First+Series) >
+      au < exists ; exists ; 2000 ; Scottish Affairs (First Series) Volume 71 ; 71+(First+Series) >
+      au < exists ; exists ; 2010 ; Scottish Affairs (First Series) Volume 72 ; 72+(First+Series) >
+      au < exists ; exists ; 2010 ; Scottish Affairs (First Series) Volume 73 ; 73+(First+Series) >
+      au < exists ; exists ; 2011 ; Scottish Affairs (First Series) Volume 74 ; 74+(First+Series) >
+      au < exists ; exists ; 2011 ; Scottish Affairs (First Series) Volume 75 ; 75+(First+Series) >
+      au < exists ; exists ; 2011 ; Scottish Affairs (First Series) Volume 76 ; 76+(First+Series) >
+      au < exists ; exists ; 2011 ; Scottish Affairs (First Series) Volume 77 ; 77+(First+Series) >
+      au < exists ; exists ; 2012 ; Scottish Affairs (First Series) Volume 78 ; 78+(First+Series) >
+      au < exists ; exists ; 2012 ; Scottish Affairs (First Series) Volume 79 ; 79+(First+Series) >
+      au < exists ; exists ; 2012 ; Scottish Affairs (First Series) Volume 80 ; 80+(First+Series) >
+      au < exists ; exists ; 2012 ; Scottish Affairs (First Series) Volume 81 ; 81+(First+Series) >
 
       au < testing ; exists ; 2014 ; Scottish Affairs Volume 23 ; 23 >
       au < manifest ; exists ; 2015 ; Scottish Affairs Volume 24 ; 24 >
