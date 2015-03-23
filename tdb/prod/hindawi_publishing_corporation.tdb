@@ -2310,21 +2310,6 @@
 
   {
     title <
-      name = Case Reports in Toxicology ;
-      issn = 2090-6927 ;
-      eissn = 2090-6935 ;
-      issnl = 2090-6927
-    >
-
-    param[journal_id] = critox
-    comment[2] = redirects to /crim subdir (still DNE, though)
-
-    au < doesNotExist ; 2011 ; Case Reports in Toxicology Volume 2011 ; 2011 ; 2011 >
-
-  }
-
-  {
-    title <
       name = Case Reports in Transplantation ;
       issn = 2090-6943 ;
       eissn = 2090-6951 ;
