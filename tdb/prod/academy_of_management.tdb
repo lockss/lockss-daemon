@@ -11,10 +11,16 @@
 
     title <
       name = Academy of Management Discoveries (AMD) ;
-      comment[0] = expected in 2015
+      eissn = 2168-1007
     >
     
-   }
+    {
+      param[base_url] = http://amd.aom.org/
+  
+      au < exists ; 2015 ; Academy of Management Discoveries (AMD) Volume 1 ; 1 >
+
+    }
+  }
 
   {
 
