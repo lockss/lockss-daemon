@@ -3,7 +3,7 @@
     name = BioMed Central;
     info[tester] = 4
   >
-  
+
   rights = openaccess
   implicit < status ; year ; name ; param[volume_name] >
 
@@ -36,7 +36,7 @@
       au < released ; 2012 ; BMC Anesthesiology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Anesthesiology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Anesthesiology Volume 14 ; 14 >
-      
+
     }
 
     {
@@ -126,11 +126,11 @@
         eissn = 2046-1682 ;
         issnl = 2046-1682
       >
-      
+
       {
-      
+
         comment[back_issues] = see physmath_central for volumes 1-3
-      
+
         param[journal_issn] = 2046-1682
         attr[journal_code] = bmcbiophys
 
@@ -141,7 +141,7 @@
         au < released ; 2012 ; BMC Biophysics Volume 5 ; 5 >
         au < manifest ; 2013 ; BMC Biophysics Volume 6 ; 6 >
         au < manifest ; 2014 ; BMC Biophysics Volume 7 ; 7 >
-      
+
       }
 
     }
@@ -181,7 +181,7 @@
       >
 
       param[journal_issn] = 1471-2326
-      
+
       {
       attr[journal_code] = bmcblooddisord
 
@@ -197,16 +197,16 @@
       au < released ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
       au < released ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
       au < manifest ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
-      
+
       }
-      
+
       {
       attr[journal_code] = bmchematol
       comment[journal_title] = journal name and journal code change in 2013, same issn used
 
       au < manifest ; 2013 ; BMC Hematology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Hematology Volume 14 ; 14 >
-      
+
       }
     }
 
@@ -246,7 +246,7 @@
 
       param[journal_issn] = 1471-2261
       attr[journal_code] = bmccardiovascdisord
-      
+
 
       au < released ; 2001 ; BMC Cardiovascular Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Cardiovascular Disorders Volume 2 ; 2 >
@@ -303,7 +303,7 @@
       param[journal_issn] = 1472-6769
       attr[journal_code] = bmcchembiol
       comment[0] = BMC Chemical Biology has now been fused with BMC Biochemistry, no publication after 2012
-      
+
       au < down ; 2001 ; BMC Chemical Biology Volume 1 ; 1 >
       au < down ; 2002 ; BMC Chemical Biology Volume 2 ; 2 >
       au < down ; 2003 ; BMC Chemical Biology Volume 3 ; 3 >
@@ -326,7 +326,7 @@
         issnl = 1472-6890
       >
 
-      param[journal_issn] = 1472-6890 
+      param[journal_issn] = 1472-6890
       attr[journal_code] = bmcclinpathol
 
       au < released ; 2001 ; BMC Clinical Pathology Volume 1 ; 1 >
@@ -370,7 +370,7 @@
       au < released ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
       au < released ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
       au < manifest ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
-      
+
     }
 
     {
@@ -451,7 +451,7 @@
       au < manifest ; 2012 ; BMC Developmental Biology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Developmental Biology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Developmental Biology Volume 14 ; 14 >
-      
+
     }
 
     {
@@ -808,7 +808,7 @@
       au < manifest ; 2014 ; BMC Infectious Diseases Volume 14 ; 14 >
 
     }
-    
+
     {
       title <
         name = BMC International Health and Human Rights ;
@@ -1390,7 +1390,7 @@
       attr[journal_code] = bmcpediatr
 
       au < released ; 2001 ; BMC Pediatrics Volume 1 ; 1 >
-      au < released ; 2002 ; BMC Pediatrics Volume 2 ; 2 > 
+      au < released ; 2002 ; BMC Pediatrics Volume 2 ; 2 >
       au < released ; 2003 ; BMC Pediatrics Volume 3 ; 3 >
       au < released ; 2004 ; BMC Pediatrics Volume 4 ; 4 >
       au < released ; 2005 ; BMC Pediatrics Volume 5 ; 5 >
@@ -1653,7 +1653,7 @@
         eissn = 2052-1847 ;
         issnl = 2052-1847
       >
-      
+
       comment[notReady] = links on the issue's toc have the base_url without the www. See volume toc http://www.biomedcentral.com/2052-1847/5
 
       attr[journal_code] = bmcsportsscimedrehabil
@@ -1665,9 +1665,9 @@
         au < notReady ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
         au < notReady ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
       }
-      
+
       {
-        param[journal_issn] = 2052-1847 
+        param[journal_issn] = 2052-1847
 
         au < notReady ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
         au < notReady ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
@@ -1825,9 +1825,9 @@
       au < manifest ; 2014 ; BMC Women's Health Volume 14 ; 14 >
 
     }
-    
+
   }
-  
+
   {
     plugin = org.lockss.plugin.bmc.BioMedCentralPlugin
 
@@ -1871,7 +1871,7 @@
       au < released ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       au < manifest ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
       au < manifest ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
-      
+
     }
 
     {
@@ -2021,7 +2021,7 @@
       >
 
 	  comment[ACMA11] = Journal manifest missing on 2011-04-21
-	  
+	
       param[base_url] = http://www.ann-clinmicrob.com/
       param[journal_issn] = 1476-0711
 
@@ -2151,7 +2151,7 @@
         eissn = 1478-6362 ;
         issnl = 1478-6354
       >
-      
+
       comment[ArResThe] = website restructured 2011-05
 
       param[base_url] = http://arthritis-research.com/
@@ -2283,7 +2283,7 @@
         eissn = 1480-9222 ;
         issnl = 1480-9222
       >
-      
+
       param[base_url] = http://www.biologicalproceduresonline.com/
       param[journal_issn] = 1480-9222
 
@@ -2302,7 +2302,7 @@
         eissn = 0717-6287 ;
         issnl = 0717-6287
       >
-      
+
       param[base_url] = http://www.biolres.com/
       param[journal_issn] = 0717-6287
 
@@ -2328,7 +2328,7 @@
       au < superseded ; 2009 ; Biology Direct Volume 4 [superseded] ; 4 >
       au < superseded ; 2011 ; Biology Direct Volume 6 [superseded] ; 6 >
       au < superseded ; 2012 ; Biology Direct Volume 7 [superseded] ; 7 >
-      
+
       }
 
       {
@@ -2343,7 +2343,7 @@
       au < doNotProcess ; 2012 ; Biology Direct Volume 7 ; 7 >
       au < manifest ; 2013 ; Biology Direct Volume 8 ; 8 >
       au < manifest ; 2014 ; Biology Direct Volume 9 ; 9 >
-      
+
       }
     }
 
@@ -2429,12 +2429,12 @@
         eissn = 2055-7124 ;
         issnl = 2055-7124
       >
-      
+
       param[base_url] = http://www.biomaterialsres.com/
       param[journal_issn] = 2055-7124
 
       au < manifest ; 2014 ; Biomaterials Research Volume 18 ; 18 >
-      
+
     }
 
     {
@@ -2469,7 +2469,7 @@
         eissn = 1751-0759 ;
         issnl = 1751-0759
       >
-      
+
       comment[BioPsySoc] = website being restructured? 2011-05
 
       param[base_url] = http://www.bpsmedicine.com/
@@ -2483,7 +2483,7 @@
       au < released ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       au < manifest ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
       au < manifest ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
-      
+
     }
 
     {
@@ -2492,7 +2492,7 @@
         eissn = 1754-6834 ;
         issnl = 1754-6834
       >
-      
+
       comment[Biofuels] = website being restructured? 2011-05
 
       param[base_url] = http://www.biotechnologyforbiofuels.com/
@@ -2505,7 +2505,7 @@
       au < released ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
       au < manifest ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
       au < manifest ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
-      
+
     }
 
     {
@@ -2604,7 +2604,7 @@
       param[journal_issn] = 1470-7330
 
       au < manifest ; 2014 ; Cancer Imaging Volume 14 ; 14 >
-      
+
     }
 
     {
@@ -2618,7 +2618,7 @@
       param[journal_issn] = 2052-6687
 
       au < manifest ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
-      
+
     }
 
     {
@@ -2627,7 +2627,7 @@
         issn = 1750-0680 ;
         issnl = 1750-0680
       >
-      
+
       comment[CBAM] = website being restructured? 2011-05
 
       param[base_url] = http://www.cbmjournal.com/
@@ -2651,7 +2651,7 @@
         issn = 1475-2840 ;
         issnl = 1475-2840
       >
-      
+
       comment[CardDia] = website being restructured? 2011-05
 
       param[base_url] = http://www.cardiab.com/
@@ -2679,7 +2679,7 @@
         eissn = 1476-7120 ;
         issnl = 1476-7120
       >
-      
+
       comment[CardUltra] = website being restructured? 2011-05
 
       param[base_url] = http://www.cardiovascularultrasound.com/
@@ -2709,7 +2709,7 @@
 
       param[base_url] = http://www.casesjournal.com/
       param[journal_issn] = 1757-1626
-      
+
       comment[v4] = V4 Released in error. No content as of 04/2013
 
       au < released ; 2008 ; Cases Journal Volume 1 ; 1 >
@@ -2742,7 +2742,7 @@
         eissn = 1478-811X ;
         issnl = 1478-811X
       >
-      
+
       comment[CellComm] = website being restructured? 2011-05
 
       param[base_url] = http://www.biosignaling.com/
@@ -2808,12 +2808,12 @@
         eissn = 2053-8871 ;
         issnl = 2053-8871
       >
-      
+
       param[journal_issn] = 2053-8871
       param[base_url] = http://www.cerebellumandataxias.com/
 
       au < manifest ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
-      
+
     }
 
     {
@@ -2822,7 +2822,7 @@
         eissn = 1743-8454 ;
         issnl = 1743-8454
       >
-      
+
       comment[continued_by] = 2045-8118
       param[journal_issn] = 1743-8454
 
@@ -2837,7 +2837,7 @@
       au < down ; 2009 ; Cerebrospinal Fluid Research Volume 6 [superseded] ; 6 >
       au < down ; 2010 ; Cerebrospinal Fluid Research Volume 7 [superseded] ; 7 >
       }
-      
+
       {
       param[base_url] = http://www.fluidsbarrierscns.com/
 
@@ -2848,7 +2848,7 @@
       au < doNotProcess ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
       au < doNotProcess ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
       au < doNotProcess ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
-      
+
       }
 
     }
@@ -2859,7 +2859,7 @@
         eissn = 1753-2000 ;
         issnl = 1753-2000
       >
-      
+
       comment[ChAdPsy] = website being restructured? 2011-05
 
       param[base_url] = http://www.capmh.com/
@@ -2906,10 +2906,10 @@
         eissn = 2045-709X ;
         issnl = 2045-709X
       >
-      
+
       comment[continues] = 1746-1340
       param[journal_issn] = 2045-709X
-      
+
       {
       param[base_url] = http://chiromt.com/
       comment[0] = wrong base_url, now changed to http://www.chiromt.com
@@ -2918,7 +2918,7 @@
 
       }
       {
-      
+
       param[base_url] = http://www.chiromt.com/
 
       au < released ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
@@ -2927,18 +2927,18 @@
       au < manifest ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
       }
     }
-    
+
     {
       title <
         name = Chiropractic & Osteopathy ;
         eissn = 1746-1340 ;
         issnl = 1746-1340
       >
-      
+
       param[journal_issn] = 1746-1340
 
       {
-      
+
         param[base_url] = http://www.chiroandosteo.com/
 
         au < down ; 2005 ; Chiropractic & Osteopathy Volume 13 [superseded] ; 13 >
@@ -2947,22 +2947,22 @@
         au < down ; 2008 ; Chiropractic & Osteopathy Volume 16 [superseded] ; 16 >
         au < down ; 2009 ; Chiropractic & Osteopathy Volume 17 [superseded] ; 17 >
         au < down ; 2010 ; Chiropractic & Osteopathy Volume 18 [superseded] ; 18 >
-      
+
       }
-      
+
       {
-      
+
         param[base_url] = http://www.chiromt.com/
-        
+
         au < released ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
         au < released ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
         au < released ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
         au < released ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
         au < released ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
         au < released ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
-      
+
       }
-      
+
     }
 
     {
@@ -3004,7 +3004,7 @@
       au < released ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < manifest ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < expected ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
-      
+
     }
 
     {
@@ -3053,8 +3053,9 @@
 
       param[base_url] = http://www.clinicalhypertension.com/
       param[journal_issn] = 2056-5909
-      
-      au < expected ; 2014 ; Clinical Hypertension Volume 1 ; 1 >
+
+      au < exists ; 2014 ; Clinical Hypertension Volume 20 ; 20 >
+      au < exists ; 2015 ; Clinical Hypertension Volume 21 ; 21 >
 
     }
 
@@ -3222,16 +3223,16 @@
       au < manifest ; 2014 ; Critical Care Volume 18 ; 18 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = DARU Journal of Pharmaceutical Sciences ;
       issn = 1560-8115 ;
       eissn = 2008-2231
-      
+
     >
-    
+
       param[base_url] = http://www.darujps.com/
       param[journal_issn] = 1560-8115
 
@@ -3242,8 +3243,8 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = Diabetology & Metabolic Syndrome ;
       eissn = 1758-5996 ;
       issnl = 1758-5996
@@ -3294,7 +3295,7 @@
 
       param[base_url] = http://www.dynamic-med.com/
       param[journal_issn] = 1476-5918
-      
+
       comment[0] = This journal stopped publishing through BioMedCentral after 2009.
 
       au < released ; 2002 ; Dynamic Medicine Volume 1 ; 1 >
@@ -3336,7 +3337,7 @@
 
     {
 
-      title < 
+      title <
         name = Environmental Evidence ;
         issn = 2047-2382 ;
         issnl = 2047-2382
@@ -3383,9 +3384,9 @@
         eissn = 1742-5573 ;
         issnl = 1742-5573
       >
-      
+
       {
-      
+
         param[base_url] = http://www.epi-perspectives.com/
         param[journal_issn] = 1742-5573
 
@@ -3397,9 +3398,9 @@
         au < down ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
         au < down ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
         au < down ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
-      
+
       }
-      
+
     }
 
     {
@@ -3447,7 +3448,7 @@
         issn = 2047-783X ;
         issnl = 2047-783X
       >
-      
+
       param[base_url] = http://www.eurjmedres.com/
       param[journal_issn] = 2047-783X
 
@@ -3466,7 +3467,7 @@
         issn = 2041-9139 ;
         issnl = 2041-9139
       >
-      
+
       param[base_url] = http://www.evodevojournal.com/
       param[journal_issn] = 2041-9139
 
@@ -3484,7 +3485,7 @@
         issn = 2040-7378 ;
         issnl = 2040-7378
       >
-      
+
       param[base_url] = http://www.etsmjournal.com/
       param[journal_issn] = 2040-7378
 
@@ -3503,7 +3504,7 @@
         issn = 2162-3619 ;
         issnl = 2162-3619
       >
-      
+
       param[base_url] = http://www.ehoonline.org/
       param[journal_issn] = 2162-3619
 
@@ -3519,7 +3520,7 @@
         issn = 2046-7648 ;
         issnl = 2046-7648
       >
-      
+
       param[base_url] = http://www.extremephysiolmed.com/
       param[journal_issn] = 2046-7648
 
@@ -3535,7 +3536,7 @@
         issn = 1755-1536 ;
         issnl = 1755-1536
       >
-      
+
       param[base_url] = http://www.fibrogenesis.com/
       param[journal_issn] = 1755-1536
 
@@ -3555,7 +3556,7 @@
         issn = 2044-7248 ;
         issnl = 2044-7248
       >
-      
+
       param[base_url] = http://www.flavourjournal.com/
       param[journal_issn] = 2044-7248
 
@@ -3571,17 +3572,17 @@
         eissn = 2045-8118 ;
         issnl = 2045-8118
       >
-      
+
       comment[continues] = 1743-8454
       param[base_url] = http://www.fluidsbarrierscns.com/
-      
+
       param[journal_issn] = 2045-8118
 
       au < released ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
       au < released ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < manifest ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
       au < manifest ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
-      
+
     }
 
     {
@@ -3605,7 +3606,7 @@
       au < released ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       au < manifest ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
       au < manifest ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
-      
+
     }
 
     {
@@ -3716,7 +3717,7 @@
       au < manifest ; 2012 ; Genome Biology Volume 13 ; 13 >
       au < manifest ; 2013 ; Genome Biology Volume 14 ; 14 >
       au < manifest ; 2014 ; Genome Biology Volume 15 ; 15 >
-      
+
     }
 
     {
@@ -3734,7 +3735,7 @@
       au < released ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < manifest ; 2013 ; Genome Integrity Volume 4 ; 4 >
       au < manifest ; 2014 ; Genome Integrity Volume 5 ; 5 >
-      
+
     }
 
     {
@@ -3910,8 +3911,8 @@
 
       param[base_url] = http://www.health-policy-systems.com/
       param[journal_issn] = 1478-4505
-      
-      comment[HRPS] = Volume 1 is from 2003 
+
+      comment[HRPS] = Volume 1 is from 2003
 
       au < released ; 2002 ; Health Research Policy and Systems Volume 1 ; 1 >
       au < released ; 2004 ; Health Research Policy and Systems Volume 2 ; 2 >
@@ -4038,7 +4039,7 @@
       au < manifest ; 2012 ; Immunity & Ageing Volume 9 ; 9 >
       au < manifest ; 2013 ; Immunity & Ageing Volume 10 ; 10 >
       au < manifest ; 2014 ; Immunity & Ageing Volume 11 ; 11 >
-      
+
     }
 
     {
@@ -4049,7 +4050,7 @@
 
       param[base_url] = http://www.immunome-research.com/
       param[journal_issn] = 1745-7580
-      
+
       comment[0] = Moved to Springer
 
       au < down ; 2005 ; Immunome Research Volume 1 ; 1 >
@@ -4092,7 +4093,7 @@
 
       param[base_url] = http://www.infectagentscancer.com/
       param[journal_issn] = 1750-9378
-      
+
       comment[notReady] = Volume 5, 500 Internal Server error http://www.infectagentscancer.com/content/5/1/19
 
       au < released ; 2006 ; Infectious Agents and Cancer Volume 1 ; 1 >
@@ -4267,7 +4268,7 @@
     }
 
     {
-    
+
       title <
         name = International Journal of Pediatric Endocrinology ;
         issn = 1687-9848 ;
@@ -4277,7 +4278,7 @@
 
       # This publication moved from Hindawi Publishing Corporation
       # See biomed_central.hindawi.tdb
-      
+
       param[base_url] = http://www.ijpeonline.com/
       param[journal_issn] = 1687-9856
 
@@ -4287,7 +4288,7 @@
       au < manifest ; 2012 ; International Journal of Pediatric Endocrinology Volume 2012 ; 2012 >
       au < manifest ; 2013 ; International Journal of Pediatric Endocrinology Volume 2013 ; 2013 >
       au < manifest ; 2014 ; International Journal of Pediatric Endocrinology Volume 2014 ; 2014 >
-      
+
     }
 
     {
@@ -4589,7 +4590,7 @@
         eissn = 1749-7221 ;
         issnl = 1749-7221
       >
-      
+
       comment[moved] = moved to Thieme.
 
       param[base_url] = http://www.jbppni.com/
@@ -4636,13 +4637,13 @@
         issn = 1532-429X ;
         issnl = 1532-429X
       >
-      
+
         param[journal_issn] = 1532-429X
 
       {
-      
+
         param[base_url] = http://jcmr-online.com/
-        
+
         comment[0] = released by accident with the wrong base_url, lacking the www.
 
         au < superseded ; 1999 ; Journal of Cardiovascular Magnetic Resonance Volume 1 [superseded] ; 1 >
@@ -4655,11 +4656,11 @@
         au < superseded ; 2006 ; Journal of Cardiovascular Magnetic Resonance Volume 8 [superseded] ; 8 >
         au < superseded ; 2007 ; Journal of Cardiovascular Magnetic Resonance Volume 9 [superseded] ; 9 >
         au < superseded ; 2008 ; Journal of Cardiovascular Magnetic Resonance Volume 10 [superseded] ; 10 >
-      
+
       }
-      
+
       {
-      
+
         param[base_url] = http://www.jcmr-online.com/
 
         au < manifest ; 1999 ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
@@ -4680,7 +4681,7 @@
         au < manifest ; 2014 ; Journal of Cardiovascular Magnetic Resonance Volume 16 ; 16 >
 
       }
-      
+
     }
 
     {
@@ -4692,7 +4693,7 @@
 
       param[base_url] = http://www.jcircadianrhythms.com/
       param[journal_issn] = 1740-3391
-      
+
       comment[moved] = to ubiquity press
 
       au < superseded ; 2003 ; Journal of Circadian Rhythms Volume 1 [superseded] ; 1 >
@@ -4848,7 +4849,7 @@
 
       param[base_url] = http://www.jibtherapies.com/
       param[journal_issn] = 1476-8518
-      
+
       comment[moved] = as of 1/1/2012 this journal has moved platforms.
 
       au < released ; 2003 ; Journal of Immune Based Therapies and Vaccines Volume 1 ; 1 >
@@ -4884,7 +4885,7 @@
       au < manifest ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
       au < manifest ; 2013 ; Journal of Inflammation Volume 10 ; 10 >
       au < manifest ; 2014 ; Journal of Inflammation Volume 11 ; 11 >
-      
+
     }
 
     {
@@ -4899,7 +4900,7 @@
 
       au < manifest ; 2013 ; Journal of Intensive Care Volume 1 ; 1 >
       au < manifest ; 2014 ; Journal of Intensive Care Volume 2 ; 2 >
-      
+
     }
 
     {
@@ -5317,7 +5318,7 @@
         name = Longevity & Healthspan ;
         issn = 2046-2395
       >
-      
+
       param[base_url] = http://www.longevityandhealthspan.com/
       param[journal_issn] = 2046-2395
 
@@ -5578,7 +5579,7 @@
       au < manifest ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
       au < manifest ; 2013 ; Molecular Neurodegeneration Volume 8 ; 8 >
       au < manifest ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 >
-      
+
     }
 
     {
@@ -5605,7 +5606,7 @@
     }
 
     {
-      title < 
+      title <
       name = Movement Ecology ;
       issn = 2051-3933 ;
       issnl = 2051-3933
@@ -5620,7 +5621,7 @@
     }
 
     {
-      title < 
+      title <
       name = Multidisciplinary Respiratory Medicine ;
       issn = 2049-6958 ;
       issnl = 2049-6958
@@ -5726,7 +5727,7 @@
       au < manifest ; 2012 ; Nutrition Journal Volume 11 ; 11 >
       au < manifest ; 2013 ; Nutrition Journal Volume 12 ; 12 >
       au < manifest ; 2014 ; Nutrition Journal Volume 13 ; 13 >
-      
+
     }
 
     {
@@ -5931,7 +5932,7 @@
 
       param[base_url] = http://www.pophealthmetrics.com/
       param[journal_issn] = 1478-7954
-      
+
       comment[notReady] = Volume 8, fetch error. Possible 500 error.
 
       au < released ; 2003 ; Population Health Metrics Volume 1 ; 1 >
@@ -6123,7 +6124,7 @@
       param[journal_issn] = 1746-1448
 
       {
-      
+
       param[base_url] = http://www.salinesystems.org/
 
       au < superseded ; 2005 ; Saline Systems Volume 1 [superseded] ; 1 >
@@ -6135,9 +6136,9 @@
       }
 
       {
-      
+
       comment[name_change] = After Volume 7, issues changed name/issn to Aquatic Biosystems
-      
+
       param[base_url] = http://www.aquaticbiosystems.org/
 
       au < manifest ; 2005 ; Saline Systems Volume 1 ; 1 >
@@ -6469,7 +6470,7 @@
         issn = 2045-824X ;
         issnl = 2045-824X
       >
-      
+
       param[base_url] = http://www.vascularcell.com/
       param[journal_issn] = 2045-824X
 
@@ -6488,7 +6489,7 @@
         issn = 1297-9716 ;
         issnl = 1297-9716
       >
-      
+
       param[base_url] = http://www.veterinaryresearch.org/
       param[journal_issn] = 1297-9716
 
@@ -6496,21 +6497,6 @@
       au < manifest ; 2012 ; Veterinary Research Volume 43 ; 43 >
       au < manifest ; 2013 ; Veterinary Research Volume 44 ; 44 >
       au < manifest ; 2014 ; Veterinary Research Volume 45 ; 45 >
-
-    }
-
-    {
-      title <
-        name = Video Journal of Endoscopic Surgery and Interventional Techniques ;
-        issn = 2050-7410 ;
-        issnl = 2050-7410
-      >
-
-      param[base_url] = http://www.vjoes.org/
-      param[journal_issn] = 2050-7410
-      comment[0] = no publication yet, 09/12/2013, 04/22/2014
-
-      au < expected ; 2014 ; Video Journal of Endoscopic Surgery and Interventional Techniques Volume 1 ; 1 >
 
     }
 
@@ -6530,7 +6516,7 @@
       au < released ; 2007 ; Virology Journal Volume 4 ; 4 >
       au < released ; 2008 ; Virology Journal Volume 5 ; 5 >
       au < released ; 2009 ; Virology Journal Volume 6 ; 6 >
-      au < released ; 2010 ; Virology Journal Volume 7 ; 7 >      
+      au < released ; 2010 ; Virology Journal Volume 7 ; 7 >
       au < released ; 2011 ; Virology Journal Volume 8 ; 8 >
       au < manifest ; 2012 ; Virology Journal Volume 9 ; 9>
       au < manifest ; 2013 ; Virology Journal Volume 10 ; 10 >
@@ -6604,7 +6590,7 @@
       au < manifest ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 >
 
     }
-        
+
   }
-  
+
 }
