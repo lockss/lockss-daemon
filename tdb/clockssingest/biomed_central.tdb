@@ -1954,7 +1954,7 @@
       au < finished ; crawling ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       au < crawling ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
       au < crawling ; exists ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
-      au < expected ; exists ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
+      au < manifest ; exists ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
       
     }
 
@@ -2017,7 +2017,7 @@
       au < finished ; crawling ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
-      au < expected ; exists ; 2015 ; AIDS Research and Therapy Volume 12 ; 12 >
+      au < manifest ; exists ; 2015 ; AIDS Research and Therapy Volume 12 ; 12 >
 
     }
 
@@ -2500,7 +2500,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < crawling ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
-      au < expected ; exists ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
+      au < manifest ; exists ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
 
     }
 
@@ -2907,7 +2907,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Cell Division Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Cell Division Volume 8 ; 8 >
       au < ready ; exists ; 2014 ; Cell Division Volume 9 ; 9 >
-      au < expected ; exists ; 2015 ; Cell Division Volume 10 ; 10 >
+      au < manifest ; exists ; 2015 ; Cell Division Volume 10 ; 10 >
 
     }
 
@@ -3163,7 +3163,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2056-5909
       
       au < ready ; exists ;2014 ; Clinical Hypertension Volume 20 ; 20 >
-      au < expected ; exists ; 2015 ; Clinical Hypertension Volume 21 ; 21 >
+      au < manifest ; exists ; 2015 ; Clinical Hypertension Volume 21 ; 21 >
 
     }
 
@@ -3333,7 +3333,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Critical Care Volume 16 ; 16 >
       au < notReady ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
       au < testing ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
-      au < expected ; exists ; 2015 ; Critical Care Volume 19 ; 19 >
+      au < manifest ; exists ; 2015 ; Critical Care Volume 19 ; 19 >
 
     }
     
@@ -3927,7 +3927,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Globalization and Health Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Globalization and Health Volume 9 ; 9 >
       au < manifest ; exists ; 2014 ; Globalization and Health Volume 10 ; 10 >
-      au < expected ; exists ; 2015 ; Globalization and Health Volume 11 ; 11 >
+      au < manifest ; exists ; 2015 ; Globalization and Health Volume 11 ; 11 >
 
     }
 
@@ -5400,7 +5400,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Journal of Therapeutic Ultrasound Volume 1 ; 1 >
       au < manifest ; exists ; 2014 ; Journal of Therapeutic Ultrasound Volume 2 ; 2 >
-      au < expected ; exists ; 2015 ; Journal of Therapeutic Ultrasound Volume 3 ; 3 >
+      au < manifest ; exists ; 2015 ; Journal of Therapeutic Ultrasound Volume 3 ; 3 >
 
     }
 
