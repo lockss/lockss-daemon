@@ -10,6 +10,8 @@
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = gse
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[list] = For list of publications see http://www.ingentaconnect.com/content/gse
 
   {
     title <
