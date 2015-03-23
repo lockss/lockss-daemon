@@ -105,10 +105,11 @@
 
     param[publisher_id] = bloomsbury
     param[journal_id] = arcul
-    param[journal_issn] = 2050-7836
+    param[journal_issn] = 2050-7828
 
     au < exists ; 2013 ; Architecture and Culture Volume 1 ; 1 >
     au < exists ; 2014 ; Architecture and Culture Volume 2 ; 2 >
+    au < exists ; 2015 ; Architecture and Culture Volume 3 ; 3 >
 
   }
 
