@@ -2479,7 +2479,7 @@
       au < zapped ; finished ; 2012 ; Anthropological Theory Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Anthropological Theory Volume 13 ; 13 ; >
       au < crawling ; exists ; 2014 ; Anthropological Theory Volume 14 ; 14 ; >
-      au < expected ; exists ; 2015 ; Anthropological Theory Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2015 ; Anthropological Theory Volume 15 ; 15 ; >
 
     }
 
@@ -5623,7 +5623,7 @@
         au < finished ; frozen ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 ; >
         au < crawling ; exists ; 2013 ; Clinical EEG and Neuroscience Volume 44 ; 44 ; >
         au < ready ; exists ; 2014 ; Clinical EEG and Neuroscience Volume 45 ; 45 ; >
-        au < expected ; exists ; 2015 ; Clinical EEG and Neuroscience Volume 46 ; 46 ; >
+        au < manifest ; exists ; 2015 ; Clinical EEG and Neuroscience Volume 46 ; 46 ; >
 
     }
 
@@ -6527,7 +6527,7 @@
       au < finished ; crawling ; 2012 ; Concurrent Engineering Volume 20 ; 20 ; >
       au < crawling ; exists ; 2013 ; Concurrent Engineering Volume 21 ; 21 ; >
       au < ready ; exists ; 2014 ; Concurrent Engineering Volume 22 ; 22 ; >
-      au < expected ; exists ; 2015 ; Concurrent Engineering Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2015 ; Concurrent Engineering Volume 23 ; 23 ; >
 
     }
 
@@ -7270,7 +7270,7 @@
       au < finished ; frozen ; 2012 ; Crime, Media, Culture Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Crime, Media, Culture Volume 9 ; 9 ; >
       au < ready ; exists ; 2014 ; Crime, Media, Culture Volume 10 ; 10 ; >
-      au < expected ; exists ; 2015 ; Crime, Media, Culture Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2015 ; Crime, Media, Culture Volume 11 ; 11 ; >
 
     }
 
@@ -8410,7 +8410,7 @@
       au < finished ; crawling ; 2012 ; Dialogues in Human Geography Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Dialogues in Human Geography Volume 3 ; 3 ; >
       au < ready ; exists ; 2014 ; Dialogues in Human Geography Volume 4 ; 4 ; >
-      au < expected ; exists ; 2015 ; Dialogues in Human Geography Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2015 ; Dialogues in Human Geography Volume 5 ; 5 ; >
 
     }
 
@@ -12248,7 +12248,7 @@
       au < exists ; exists ; 2012 ; Global Studies of Childhood Volume 2 ; 2 ; >
       au < exists ; exists ; 2013 ; Global Studies of Childhood Volume 3 ; 3 ; >
       au < exists ; exists ; 2014 ; Global Studies of Childhood Volume 4 ; 4 ; >
-      au < expected ; exists ; 2015 ; Global Studies of Childhood Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2015 ; Global Studies of Childhood Volume 5 ; 5 ; >
 
   }
 
@@ -12909,7 +12909,7 @@
       au < finished ; crawling ; 2012 ; Health Informatics Journal Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Health Informatics Journal Volume 19 ; 19 ; >
       au < testing ; exists ; 2014 ; Health Informatics Journal Volume 20 ; 20 ; >
-      au < expected ; exists ; 2015 ; Health Informatics Journal Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2015 ; Health Informatics Journal Volume 21 ; 21 ; >
 
     }
 
@@ -18690,7 +18690,7 @@
       au < finished ; crawling ; 2012 ; Journal of Child Health Care Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Journal of Child Health Care Volume 17 ; 17 ; >
       au < manifest ; exists ; 2014 ; Journal of Child Health Care Volume 18 ; 18 ; >
-      au < expected ; exists ; 2015 ; Journal of Child Health Care Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2015 ; Journal of Child Health Care Volume 19 ; 19 ; >
 
     }
 
@@ -22538,7 +22538,7 @@
       au < crawling ; exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 ; >
       au < manifest ; exists ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
-      au < expected ; exists ; 2015 ; Journal of Interdisciplinary Economics Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2015 ; Journal of Interdisciplinary Economics Volume 27 ; 27 ; >
 
       }
 
@@ -25059,7 +25059,7 @@
       au < finished ; crawling ; 2012 ; Journal of Sociology Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013 ; Journal of Sociology Volume 49 ; 49 ; >
       au < manifest ; exists ; 2014 ; Journal of Sociology Volume 50 ; 50 ; >
-      au < expected ; exists ; 2015 ; Journal of Sociology Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2015 ; Journal of Sociology Volume 51 ; 51 ; >
 
     }
 
@@ -25867,7 +25867,7 @@
       au < exists ; exists ; 2012 ; Journal of Technical Writing and Communication Volume 42 ; 42 ; >
       au < exists ; exists ; 2013 ; Journal of Technical Writing and Communication Volume 43 ; 43 ; >
       au < exists ; exists ; 2014 ; Journal of Technical Writing and Communication Volume 44 ; 44 ; >
-      au < expected ; exists ; 2015 ; Journal of Technical Writing and Communication Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2015 ; Journal of Technical Writing and Communication Volume 45 ; 45 ; >
 
   }
 
@@ -26881,7 +26881,7 @@
       au < finished ; frozen ; 2012 ; Language and Speech Volume 55 ; 55 ; >
       au < crawling ; exists ; 2013 ; Language and Speech Volume 56 ; 56 ; >
       au < manifest ; exists ; 2014 ; Language and Speech Volume 57 ; 57 ; >
-      au < expected ; exists ; 2015 ; Language and Speech Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2015 ; Language and Speech Volume 58 ; 58 ; >
 
     }
 
@@ -30245,7 +30245,7 @@
     param[base_url] = http://par.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2014 ; Paradigm Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2014 ; Paradigm Volume 18 ; 18 ; >
     au < expected ; exists ; 2015 ; Paradigm Volume 19 ; 19 ; >
 
   }
@@ -33994,7 +33994,7 @@
       au < exists ; exists ; 2012 ; Research in Comparative and International Education Volume 7 ; 7 ; >
       au < exists ; exists ; 2013 ; Research in Comparative and International Education Volume 8 ; 8 ; >
       au < exists ; exists ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 ; >
-      au < expected ; exists ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 ; >
 
   }
 
@@ -35016,7 +35016,7 @@
       au < finished ; frozen ; 2012 ; Science Technology & Society Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Science Technology & Society Volume 18 ; 18 ; >
       au < manifest ; exists ; 2014 ; Science Technology & Society Volume 19 ; 19 ; >
-      au < expected ; exists ; 2015 ; Science Technology & Society Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2015 ; Science Technology & Society Volume 20 ; 20 ; >
 
     }
 
@@ -36715,7 +36715,7 @@
       au < finished ; frozen ; 2012 ; State and Local Government Review Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; State and Local Government Review Volume 45 ; 45 ; >
       au < manifest ; exists ; 2014 ; State and Local Government Review Volume 46 ; 46 ; >
-      au < expected ; exists ; 2015 ; State and Local Government Review Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2015 ; State and Local Government Review Volume 47 ; 47 ; >
 
     }
 
@@ -38921,7 +38921,7 @@
       au < finished ; crawling ; 2012 ; Tourist Studies Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Tourist Studies Volume 13 ; 13 ; >
       au < manifest ; exists ; 2014 ; Tourist Studies Volume 14 ; 14 ; >
-      au < expected ; exists ; 2015 ; Tourist Studies Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2015 ; Tourist Studies Volume 15 ; 15 ; >
 
     }
 
@@ -39315,7 +39315,7 @@
       param[base_url] = http://epi.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Translational Epigenomics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Translational Epigenomics Volume 1 ; 1 ; >
       au < expected ; exists ; 2015 ; Translational Epigenomics Volume 2 ; 2 ; >
 
   }
@@ -40515,7 +40515,7 @@
       au < exists ; exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 ; >
       au < exists ; exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 ; >
       au < exists ; exists ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; >
-      au < expected ; exists ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; >
 
   }
 
