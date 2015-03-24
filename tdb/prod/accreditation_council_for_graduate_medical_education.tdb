@@ -6,6 +6,8 @@
     info[tester] = 0
   >
   
+  comment[plugin] = See PD-166
+  
   plugin = needs.plugin
   param[base_url] = http://www.jgme.org/
   implicit < status ; year ; name ; param[volume_name] >
