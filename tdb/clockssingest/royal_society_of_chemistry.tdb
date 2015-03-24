@@ -1371,10 +1371,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 >
-      au < manifest ; exists ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 >
-      au < manifest ; exists ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 >
-      au < manifest ; exists ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 >
+      au < testing ; exists ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 >
+      au < testing ; exists ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 >
+      au < testing ; exists ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 >
+      au < testing ; exists ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 >
       au < expected ; exists ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 >
 
@@ -1434,10 +1434,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; exists ; 2010 ; Soft Matter Volume 6 ; 7 ; 2010 >
-      au < manifest ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
-      au < manifest ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
-      au < manifest ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
+      au < testing ; exists ; 2010 ; Soft Matter Volume 6 ; 7 ; 2010 >
+      au < testing ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
+      au < testing ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
+      au < testing ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
       au < crawling ; exists ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 >
       au < expected ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 >
 
