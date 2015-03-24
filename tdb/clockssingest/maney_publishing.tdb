@@ -2628,7 +2628,7 @@
       issn = 0024-2306 
     >
 
-    param[journal_id] = lbh 
+    param[journal_id] = lib
     comment[continued_by] = 1758-3489
 
     au < exists ; exists ; 2005 ; Library History Volume 21 ; 21 >
@@ -2647,7 +2647,7 @@
       issnl = 1758-3489 
     >
 
-    param[journal_id] = lih 
+    param[journal_id] = lbh
     comment[continues] = 0024-2306
 
     au < exists ; exists ; 2009 ; Library & Information History Volume 25 ; 25 >
@@ -3430,7 +3430,7 @@
       issnl = 0169-1112 
     >
 
-    param[journal_id] = tpc 
+    param[journal_id] = pai
     comment[0] = publication ceased in 2007
         
     au < exists ; exists ; 2000 ; The Pain Clinic Volume 12 ; 12 >
