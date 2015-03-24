@@ -16,6 +16,10 @@
     <string>DSpace Plugin</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.5</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
   </entry>
