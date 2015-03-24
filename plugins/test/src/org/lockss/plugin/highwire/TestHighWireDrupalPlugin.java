@@ -51,6 +51,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   
+  private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
   
   public TestHighWireDrupalPlugin(String msg) {
@@ -60,6 +61,8 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   @Override
   public void setUp() throws Exception {
     super.setUp();
+    setUpDiskSpace();
+    theDaemon = getMockLockssDaemon();
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
         "org.lockss.plugin.highwire.HighWireDrupalPlugin");
@@ -131,6 +134,72 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn, 500, "foo");
     assertClass(RetrySameUrlException.class, exc);
     
+  }
+  
+  // Test the crawl rules for eLife
+  public void testShouldCacheProperPages() throws Exception {
+    String ROOT_URL = "http://highwire.org/";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(VOL_KEY, "2015");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    
+    // Test for pages that should get crawled or not
+    // permission page/start url
+    shouldCacheTest(ROOT_URL + "lockss-manifest/vol_2015_manifest.html", true, au);
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2015_manifest.html", false, au);
+    shouldCacheTest(ROOT_URL + "manifest/year=2015", false, au);
+    // toc page for a volume, issue
+    shouldCacheTest(ROOT_URL + "content/2015", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/2.toc", true, au);
+    // article files
+    shouldCacheTest(ROOT_URL + "content/2015/1/2", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.abstract", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.extract", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.full", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.full-text.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2/DC1", true, au);
+    
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.print", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.explore", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2/article-info", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2/submit?param=12", false, au);
+    
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/hw_tab_data/node:80746/1", true, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/hw_tab_art/node:80746/1", false, au);
+    
+    shouldCacheTest(ROOT_URL + "highwire/citation/12/ris", true, au);
+    shouldCacheTest(ROOT_URL + "highwire/citation/9/1/ris", false, au);
+    shouldCacheTest(ROOT_URL + "highwire/markup/113/expansion", true, au);
+    
+    shouldCacheTest(ROOT_URL + "sites/all/libraries/modernizr/modernizr.min.js", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/files/js/js_0j8_f76rvZ212f4rg.js", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/hw/font/fontawesome-webfont.eot", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", true, au);
+    
+    shouldCacheTest(ROOT_URL + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
+    shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", true, au);
+    shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", true, au);
+    shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", true, au);
+    shouldCacheTest("", false, au);
+    
+    // should not get crawled - LOCKSS
+    shouldCacheTest("http://lockss.stanford.edu", false, au);
+    
+  }
+  
+  private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
+    log.info ("shouldCacheTest url: " + url);
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
 }
