@@ -44,17 +44,17 @@
       implicit < status ; status2 ; year ; param[year] ; name ; volume >
       param[journal_id] = GPWK
       
-      au < exists ; exists ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
-      au < exists ; exists ; 2005 ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
-      au < exists ; exists ; 2006 ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 >
-      au < exists ; exists ; 2007 ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 >
-      au < exists ; exists ; 2008 ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 >
-      au < exists ; exists ; 2009 ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 >
-      au < exists ; exists ; 2010 ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 >
-      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
-      au < exists ; exists ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
+      au < exists ; exists ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2004 ; 2004 >
+      au < exists ; exists ; 2005 ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2005 ; 2005 >
+      au < exists ; exists ; 2006 ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2006 ; 2006 >
+      au < exists ; exists ; 2007 ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2010 ; 2010 >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2011 ; 2011 >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2012 ; 2012 >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2014 ; 2014 >
 
     }
     
