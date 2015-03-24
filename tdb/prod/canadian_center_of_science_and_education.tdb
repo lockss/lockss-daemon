@@ -308,20 +308,6 @@
   {
   
     title <
-      name = International Journal of Statistics and Probability ;
-      issn = 1927-7032 ;
-      eissn = 1927-7040
-    >
-    
-    param[journal_id] = ijsp
-
-    au < doNotProcess ; 2012 ; International Journal of Statistics and Probability Volume 1 ; 1 ; 2012 >
-    au < doNotProcess ; 2013 ; International Journal of Statistics and Probability Volume 2 ; 2 ; 2013 >
-  }
-  
-  {
-  
-    title <
       name = Journal of Agricultural Science ;
       issn = 1916-9752 ;
       eissn = 1916-9760
@@ -334,24 +320,6 @@
     au < released ; 2011 ; Journal of Agricultural Science Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Journal of Agricultural Science Volume 4 ; 4 ; 2012 >
     au < doNotProcess ; 2013 ; Journal of Agricultural Science Volume 5 ; 5 ; 2013 >
-  }
-  
-  {
-  
-    title <
-      name = Journal of Geography and Geology ;
-      issn = 1916-9779 ;
-      eissn = 1916-9787
-    >
-    
-    param[journal_id] = jgg
-
-    au < exists ; 2009 ; Journal of Geography and Geology Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Journal of Geography and Geology Volume 2 ; 2 ; 2010 >
-    au < exists ; 2011 ; Journal of Geography and Geology Volume 3 ; 3 ; 2011 >
-    au < exists ; 2012 ; Journal of Geography and Geology Volume 4 ; 4 ; 2012 >
-    au < exists ; 2013 ; Journal of Geography and Geology Volume 5 ; 5 ; 2013 >
-
   }
   
   {
