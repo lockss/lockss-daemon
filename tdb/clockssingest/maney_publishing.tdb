@@ -495,7 +495,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
     au < doNotProcess ; doNotProcess ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
-    au < testing ; exists ; 2013 ; Byzantine and Modern Greek Studies Volume 37 ; 37 >
+    au < ready ; exists ; 2013 ; Byzantine and Modern Greek Studies Volume 37 ; 37 >
     au < ready ; exists ; 2014 ; Byzantine and Modern Greek Studies Volume 38 ; 38 >
 
   }
@@ -655,7 +655,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Central Europe Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2011 ; Central Europe Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2012 ; Central Europe Volume 10 ; 10 >
-    au < testing ; exists ; 2013 ; Central Europe Volume 11 ; 11 >
+    au < ready ; exists ; 2013 ; Central Europe Volume 11 ; 11 >
     au < ready ; exists ; 2014 ; Central Europe Volume 12 ; 12 >
 
   }
@@ -918,7 +918,7 @@
     au < manifest ; exists ; 2010 ; Deafness & Education International Volume 12 ; 12 >
     au < manifest ; exists ; 2011 ; Deafness & Education International Volume 13 ; 13 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Deafness & Education International Volume 14 ; 14 >
-    au < testing ; exists ; 2013 ; Deafness & Education International Volume 15 ; 15 >
+    au < ready ; exists ; 2013 ; Deafness & Education International Volume 15 ; 15 >
     au < ready ; exists ; 2014 ; Deafness & Education International Volume 16 ; 16 >
 
     }
@@ -1135,7 +1135,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Environmental Archaeology Volume 15 ; 15 >
     au < doNotProcess ; doNotProcess ; 2011 ; Environmental Archaeology Volume 16 ; 16 >
     au < doNotProcess ; doNotProcess ; 2012 ; Environmental Archaeology Volume 17 ; 17 >
-    au < testing ; exists ; 2013 ; Environmental Archaeology Volume 18 ; 18 >
+    au < ready ; exists ; 2013 ; Environmental Archaeology Volume 18 ; 18 >
     au < ready ; exists ; 2014 ; Environmental Archaeology Volume 19 ; 19 >
 
   }
@@ -2706,7 +2706,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; The London Journal Volume 35 ; 35 >
     au < doNotProcess ; doNotProcess ; 2011 ; The London Journal Volume 36 ; 36 >
     au < doNotProcess ; doNotProcess ; 2012 ; The London Journal Volume 37 ; 37 >
-    au < manifest ; exists ; 2013 ; The London Journal Volume 38 ; 38 >
+    au < testing ; exists ; 2013 ; The London Journal Volume 38 ; 38 >
     au < ready ; exists ; 2014 ; The London Journal Volume 39 ; 39 >
 
   }
@@ -2730,7 +2730,7 @@
     au < manifest ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 >
     au < manifest ; exists ; 2011 ; Materials Research Innovations Volume 15 ; 15 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Research Innovations Volume 16 ; 16 >
-    au < manifest ; exists ; 2013 ; Materials Research Innovations Volume 17 ; 17 >
+    au < testing ; exists ; 2013 ; Materials Research Innovations Volume 17 ; 17 >
     au < testing ; exists ; 2014 ; Materials Research Innovations Volume 18 ; 18 >
 
   }
@@ -2776,7 +2776,7 @@
     au < manifest ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 >
     au < manifest ; exists ; 2011 ; Materials Science and Technology Volume 27 ; 27 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Science and Technology Volume 28 ; 28 >
-    au < manifest ; exists ; 2013 ; Materials Science and Technology Volume 29 ; 29 >
+    au < testing ; exists ; 2013 ; Materials Science and Technology Volume 29 ; 29 >
     au < ready ; exists ; 2014 ; Materials Science and Technology Volume 30 ; 30 >
 
   }
@@ -2800,7 +2800,7 @@
     au < manifest ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 >
     au < manifest ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 >
-    au < manifest ; exists ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 >
+    au < testing ; exists ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 >
     au < ready ; exists ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 >
 
   }
@@ -2816,9 +2816,10 @@
 
     param[journal_id] = mew 
 
-    au < manifest ; exists ; 2012 ; Medical Writing Volume 21 ; 21 >
-    au < manifest ; exists ; 2013 ; Medical Writing Volume 22 ; 22 >
+    au < testing ; exists ; 2012 ; Medical Writing Volume 21 ; 21 >
+    au < testing ; exists ; 2013 ; Medical Writing Volume 22 ; 22 >
     au < ready ; exists ; 2014 ; Medical Writing Volume 23 ; 23 >
+    au < exists ; exists ; 2015 ; Medical Writing Volume 24 ; 24 >
 
   }
 
@@ -2846,7 +2847,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Medieval Archaeology Volume 54 ; 54 >
     au < doNotProcess ; doNotProcess ; 2011 ; Medieval Archaeology Volume 55 ; 55 >
     au < doNotProcess ; doNotProcess ; 2012 ; Medieval Archaeology Volume 56 ; 56 >
-    au < manifest ; exists ; 2013 ; Medieval Archaeology Volume 57 ; 57 >
+    au < testing ; exists ; 2013 ; Medieval Archaeology Volume 57 ; 57 >
     au < ready ; exists ; 2014 ; Medieval Archaeology Volume 58 ; 58 >
 
   }
@@ -2869,7 +2870,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Medieval Sermon Studies Volume 54 ; 54 >
     au < doNotProcess ; doNotProcess ; 2011 ; Medieval Sermon Studies Volume 55 ; 55 >
     au < doNotProcess ; doNotProcess ; 2012 ; Medieval Sermon Studies Volume 56 ; 56 >
-    au < manifest ; exists ; 2013 ; Medieval Sermon Studies Volume 57 ; 57 >
+    au < testing ; exists ; 2013 ; Medieval Sermon Studies Volume 57 ; 57 >
     au < ready ; exists ; 2014 ; Medieval Sermon Studies Volume 58 ; 58 >
 
   }
@@ -2984,7 +2985,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Midland History Volume 35 ; 35 >
     au < doNotProcess ; doNotProcess ; 2011 ; Midland History Volume 36 ; 36 >
     au < doNotProcess ; doNotProcess ; 2012 ; Midland History Volume 37 ; 37 >
-    au < manifest ; exists ; 2013 ; Midland History Volume 38 ; 38 >
+    au < testing ; exists ; 2013 ; Midland History Volume 38 ; 38 >
     au < ready ; exists ; 2014 ; Midland History Volume 39 ; 39 >
 
   }
@@ -3015,7 +3016,7 @@
     au < manifest ; exists ; 2010 ; Mineral Processing and Extractive Metallurgy Volume 119 ; 119 >
     au < manifest ; exists ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 >
-    au < manifest ; exists ; 2013 ; Mineral Processing and Extractive Metallurgy Volume 122 ; 122 >
+    au < testing ; exists ; 2013 ; Mineral Processing and Extractive Metallurgy Volume 122 ; 122 >
     au < ready ; exists ; 2014 ; Mineral Processing and Extractive Metallurgy Volume 123 ; 123 >
 
   }
@@ -3069,7 +3070,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Ming Studies Volume 2010 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2011 ; Ming Studies Volume 2011 ; 2011 >
     au < doNotProcess ; doNotProcess ; 2012 ; Ming Studies Volume 2012 ; 2012 >
-    au < manifest ; exists ; 2013 ; Ming Studies Volume 2013 ; 2013 >
+    au < testing ; exists ; 2013 ; Ming Studies Volume 2013 ; 2013 >
     au < ready ; exists ; 2014 ; Ming Studies Volume 2014 ; 2014 >
 
   }
@@ -3100,7 +3101,7 @@
     au < manifest ; exists ; 2010 ; Mining Technology Volume 119 ; 119 >
     au < manifest ; exists ; 2011 ; Mining Technology Volume 120 ; 120 >
     au < doNotProcess ; doNotProcess ; 2012 ; Mining Technology Volume 121 ; 121 >
-    au < manifest ; exists ; 2013 ; Mining Technology Volume 122 ; 122 >
+    au < testing ; exists ; 2013 ; Mining Technology Volume 122 ; 122 >
     au < ready ; exists ; 2014 ; Mining Technology Volume 123 ; 123 >
 
   }
@@ -3176,7 +3177,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Names: A Journal of Onomastics Volume 58 ; 58 >
     au < doNotProcess ; doNotProcess ; 2011 ; Names: A Journal of Onomastics Volume 59 ; 59 >
     au < doNotProcess ; doNotProcess ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 >
-    au < manifest ; exists ; 2013 ; Names: A Journal of Onomastics Volume 61 ; 61 >
+    au < testing ; exists ; 2013 ; Names: A Journal of Onomastics Volume 61 ; 61 >
     au < ready ; exists ; 2014 ; Names: A Journal of Onomastics Volume 62 ; 62 >
 
   }
@@ -3206,7 +3207,7 @@
     au < manifest ; exists ; 2010 ; Neurological Research Volume 32 ; 32 >
     au < manifest ; exists ; 2011 ; Neurological Research Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2012 ; Neurological Research Volume 34 ; 34 >
-    au < manifest ; exists ; 2013 ; Neurological Research Volume 35 ; 35 >
+    au < testing ; exists ; 2013 ; Neurological Research Volume 35 ; 35 >
     au < ready ; exists ; 2014 ; Neurological Research Volume 36 ; 36 >
 
   }
@@ -3221,9 +3222,9 @@
     param[journal_id] = njb
     comment[dnp] = released for old plugin
 
-    au < manifest ; exists ; 2011 ; New Journal of Botany Volume 1 ; 1 >
+    au < testing ; exists ; 2011 ; New Journal of Botany Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2012 ; New Journal of Botany Volume 2 ; 2 >
-    au < manifest ; exists ; 2013 ; New Journal of Botany Volume 3 ; 3 >
+    au < testing ; exists ; 2013 ; New Journal of Botany Volume 3 ; 3 >
     au < ready ; exists ; 2014 ; New Journal of Botany Volume 4 ; 4 >
 
   }
@@ -3288,7 +3289,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Northern History Volume 47 ; 47 >
     au < doNotProcess ; doNotProcess ; 2011 ; Northern History Volume 48 ; 48 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Northern History Volume 49 ; 49 >
-    au < manifest ; exists ; 2013 ; Northern History Volume 50 ; 50 >
+    au < testing ; exists ; 2013 ; Northern History Volume 50 ; 50 >
     au < ready ; exists ; 2014 ; Northern History Volume 51 ; 51 >
 
   }
