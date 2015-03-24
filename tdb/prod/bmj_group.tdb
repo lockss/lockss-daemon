@@ -487,8 +487,8 @@
       param[base_url] = http://drc.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
-      au < exists ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
+      au < manifest ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
+      au < manifest ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
       au < exists ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
 
     }
@@ -1212,7 +1212,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2010 ; Heart Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Heart Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Heart Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; Heart Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; Heart Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Heart Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Heart Volume 101 ; 101 >
 
@@ -1484,7 +1484,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Family Planning and Reproductive Health Care Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Family Planning and Reproductive Health Care Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Family Planning and Reproductive Health Care Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; Journal of Family Planning and Reproductive Health Care Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; Journal of Family Planning and Reproductive Health Care Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Family Planning and Reproductive Health Care Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Family Planning and Reproductive Health Care Volume 41 ; 41 >
 
@@ -1538,7 +1538,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medical Ethics Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Medical Ethics Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Ethics Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; Journal of Medical Ethics Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; Journal of Medical Ethics Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Medical Ethics Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Medical Ethics Volume 41 ; 41 >
 
@@ -1603,7 +1603,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medical Genetics Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Medical Genetics Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Genetics Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; Journal of Medical Genetics Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; Journal of Medical Genetics Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Medical Genetics Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Medical Genetics Volume 52 ; 52 >
 
@@ -1956,7 +1956,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2010 ; Medical Humanities Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Medical Humanities Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Medical Humanities Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; Medical Humanities Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; Medical Humanities Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Medical Humanities Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Medical Humanities Volume 41 ; 41 >
 
@@ -2506,7 +2506,7 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; released ; 2010 ; Tobacco Control Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Tobacco Control Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Tobacco Control Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 2013 ; Tobacco Control Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; ready ; 2013 ; Tobacco Control Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Tobacco Control Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Tobacco Control Volume 24 ; 24 >
 
