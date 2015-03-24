@@ -11,6 +11,10 @@
   param[base_url] = http://www.magonlinelibrary.com/
   implicit < status ; year ; name ; param[volume_name] >
 
+  comment[doNotProcess] = 5 to 7 Educator. issn 1746-7500, eissn 2052-4595. moved to Primary Teacher Update 2047-8917
+  comment[doNotProcess] = Children & Young People Now. issn 1755-8093. http://www.cypnow.co.uk/ not on Atypon platform.
+  comment[doNotProcess] = Five to Eleven. issn 1744-7240. Old journal.
+
   {
     title <
       name = African Journal of Midwifery and Women's Health ;
@@ -330,6 +334,7 @@
 
     comment[base_url] = http://www.internationaljpp.com/
     param[journal_id] = ippr
+    comment[platform] = no longer Atypon.
 
     au < exists ; 2011 ; International Paramedic Practice Volume 18 ; 18 >
     au < exists ; 2012 ; International Paramedic Practice Volume 19 ; 19 >
@@ -567,28 +572,6 @@
 
   {
     title <
-      name = Five to Eleven ;
-      issn = 1744-7240
-    >
-
-    comment[0] = Old journal.
-
-  }
-
-  {
-    title <
-      name = 5 to 7 Educator ;
-      issn = 1746-7500 ;
-      eissn = 2052-4595
-    >
-
-    comment[0] = moved to Primary Teacher Update 2047-8917
-
-
-  }
-
-  {
-    title <
       name = Child Care ;
       issn = 1753-9900 ;
       eissn = 2052-4579
@@ -602,18 +585,6 @@
     au < manifest ; 2012 ; Child Care Volume 9 ; 9 >
     au < manifest ; 2013 ; Child Care Volume 10 ; 10 >
     au < manifest ; 2014 ; Child Care Volume 11 ; 11 >
-
-  }
-
-  {
-    title <
-      name = Children & Young People Now ;
-      issn = 1755-8093
-    >
-
-    comment[base_url] = http://www.cypnow.co.uk/
-    comment[0] = not on Atypon platform.
-
 
   }
 
