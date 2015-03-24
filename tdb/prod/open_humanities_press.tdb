@@ -67,30 +67,6 @@
     }
   
     {
-      title <
-        name = Fast Capitalism ;
-        eissn = 1930-014X ;
-        issnl = 1930-014X
-      >
-      
-	  comment[fastcapitalism] = RU4202
-      param[base_url] = http://www.fastcapitalism.com/
-
-    }
-
-    {
-      title <
-        name = Fibreculture ;
-        eissn = 1449-1443 ;
-        issnl = 1449-1443
-      >
-	  
-	  comment[fibreculturejournal] = RU4203
-      param[base_url] = http://fibreculturejournal.org/
-
-    }
-
-    {
   
       title <
         name = Film-Philosophy ;
@@ -197,18 +173,6 @@
        
     }
     
-    {
-      title <
-        name = Parrhesia ;
-        eissn = 1834-3287 ;
-        issnl = 1834-3287
-      >
-
-	  comment[parrhesiajournal] = RU4204
-      param[base_url] = http://www.parrhesiajournal.org/
-
-    }
-
     {
   
       title <
