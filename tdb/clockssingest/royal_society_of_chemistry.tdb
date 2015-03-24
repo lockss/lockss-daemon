@@ -1239,11 +1239,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < testing ; exists ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
-      au < testing ; exists ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 >
+      au < ready ; exists ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+      au < ready ; exists ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 >
       au < testing ; exists ; 2011 ; Organic & Biomolecular Chemistry Volume 9 ; 9 ; 2011 >
-      au < testing ; exists ; 2012 ; Organic & Biomolecular Chemistry Volume 10 ; 10 ; 2012 >
-      au < testing ; exists ; 2013 ; Organic & Biomolecular Chemistry Volume 11 ; 11 ; 2013 >
+      au < ready ; exists ; 2012 ; Organic & Biomolecular Chemistry Volume 10 ; 10 ; 2012 >
+      au < ready ; exists ; 2013 ; Organic & Biomolecular Chemistry Volume 11 ; 11 ; 2013 >
       au < crawling ; exists ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 >
       au < expected ; exists ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 >
 
@@ -1303,11 +1303,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < testing ; exists ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
-      au < testing ; exists ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 >
-      au < testing ; exists ; 2011 ; Photochemical & Photobiological Sciences Volume 10 ; 10 ; 2011 >
-      au < testing ; exists ; 2012 ; Photochemical & Photobiological Sciences Volume 11 ; 11 ; 2012 >
-      au < testing ; exists ; 2013 ; Photochemical & Photobiological Sciences Volume 12 ; 12 ; 2013 >
+      au < ready ; exists ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+      au < ready ; exists ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 >
+      au < ready ; exists ; 2011 ; Photochemical & Photobiological Sciences Volume 10 ; 10 ; 2011 >
+      au < ready ; exists ; 2012 ; Photochemical & Photobiological Sciences Volume 11 ; 11 ; 2012 >
+      au < ready ; exists ; 2013 ; Photochemical & Photobiological Sciences Volume 12 ; 12 ; 2013 >
       au < crawling ; exists ; 2014 ; Photochemical & Photobiological Sciences Volume 13 ; 13 ; 2014 >
       au < expected ; exists ; 2015 ; Photochemical & Photobiological Sciences Volume 14 ; 14 ; 2015 >
 
