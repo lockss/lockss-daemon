@@ -61,30 +61,6 @@
   }
 
   {
-   
-    title <
-      name = The Journal of Practice Teaching in Health and Social Work ;
-      issn = 1460-6690 ;
-      eissn = 1746-6113
-    >
-    
-    {
-    
-      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
-      param[base_url] = http://essential.metapress.com/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
-      comment[continued_by] = 1759-5150 
-      param[journal_issn] = 1759-5150
-      comment[jounral_issn] = doNotProcess page use new issn
-
-      au < doNotProcess ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
-
-    }
-    
-  }
-
-  {
   
     title <
       name = The Journal of Practice Teaching and Learning ;
