@@ -135,21 +135,6 @@ public class TestAPSDrupalArticleIteratorFactory extends ArticleIteratorTestCase
   }
   
   //
-  // We are set up to match any of "<base_url>content/<vol>/.*[.]body"
-  //
-  
-  //  public void testBookUrls() throws Exception {
-  //    SubTreeArticleIterator artIter = createSubTreeIter();
-  //    Pattern pat = getPattern(artIter);
-  //    
-  //    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC8.body");
-  //    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC131/SEC133.body");
-  //    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC131/SEC133/SEC178.body");
-  //    // but not to ...
-  //    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC131/SEC133.extract");
-  //  }
-  
-  //
   // simAU was created with only one depth
   // 1 filetype (html) and 2 files of each type
   // So the total number of files of all types is 2
