@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,69 +50,6 @@ public class TestAPSHtmlCrawlFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
   
-  private static final String withHeader = "<div id=\"page\">" +
-      "<header id=\"section-header\" class=\"section section-header\">" +
-      "<div class=\"zone-wrapper clearfix zone-wrapper-twotone-bg\" id=\"zone-user-wrapper\">  \n" + 
-      "    <div class=\"content clearfix user-menu-dropdown user-menu-dropdown-logo-only\">\n" + 
-      "<ul id=\"nice-menu-2\" class=\"nice-menu nice-menu-down sf-js-enabled\">" +
-      "<li class=\"menu-644 menuparent first odd last\">" +
-      "<a href=\"http://www.the-aps.org/mm/Publications/Journals\">Other Journals from APS</a>" +
-      "<ul style=\"display: none; visibility: hidden;\">" +
-      "<li class=\"menu-668 menu-path-ajpcellphysiologyorg- first odd \">" +
-      "<a title=\"\" href=\"http://ajpcell.physiology.org/\">AJP-Cell</a></li>\n" + 
-      "<li class=\"menu-645 menu-path-ajpendophysiologyorg-  even \">" +
-      "<a title=\"\" href=\"http://ajpendo.physiology.org/\">AJP-Endo</a></li>\n" + 
-      "<li class=\"menu-646 menu-path-ajpgiphysiologyorg-  odd \">" +
-      "<a href=\"http://ajpgi.physiology.org/\">AJP-GI</a></li>\n" + 
-      "<li class=\"menu-647 menu-path-ajpheartphysiologyorg-  even \">" +
-      "<a href=\"http://ajpheart.physiology.org/\">AJP-Heart</a></li>\n" + 
-      "<li class=\"menu-648 menu-path-ajplungphysiologyorg-  odd \">" +
-      "<a href=\"http://ajplung.physiology.org/\">AJP-Lung</a></li>\n" + 
-      "<li class=\"menu-649 menu-path-ajpreguphysiologyorg-  even \">" +
-      "<a href=\"http://ajpregu.physiology.org/\">AJP-Regu</a></li>\n" + 
-      "<li class=\"menu-652 menu-path-advanphysiologyorg-  odd \">" +
-      "<a href=\"http://advan.physiology.org/\">Advances</a></li>\n" + 
-      "<li class=\"menu-653 menu-path-japphysiologyorg-  even \">" +
-      "<a href=\"http://jap.physiology.org/\">JAPPL</a></li>\n" + 
-      "<li class=\"menu-654 menu-path-jnphysiologyorg-  odd \">" +
-      "<a title=\"\" href=\"http://jn.physiology.org/\">JN</a></li>\n" + 
-      "<li class=\"menu-655 menu-path-physiolgenomicsphysiologyorg-  even \">" +
-      "<a href=\"http://physiolgenomics.physiology.org/\">PG</a></li>\n" + 
-      "<li class=\"menu-656 menu-path-physrevphysiologyorg-  odd \">" +
-      "<a href=\"http://physrev.physiology.org/\">PRV</a></li>\n" + 
-      "</ul></li>\n" + 
-      "</ul>\n" + 
-      "    </div>\n" + 
-      "</div>\n" + 
-      "</header>\n" +
-      "</div>";
-  
-  private static final String withoutHeader = "<div id=\"page\">" +
-      "\n" +
-      "</div>";
-  
-  private static final String withFooter = "<div id=\"page\">" +
-      "<footer class=\"section section-footer\" id=\"section-footer\">\n" + 
-      "<section id=\"block-menu-menu-navigate\" class=\"block block-menu odd\">\n" + 
-      "  <div class=\"block-inner clearfix\">\n" + 
-      "    <div class=\"content clearfix\">\n" + 
-      "<ul class=\"menu\">" +
-      "<li class=\"first leaf\"><a href=\"/content/current\">Current Issue</a></li>\n" + 
-      "<li class=\"leaf\"><a href=\"/content/early/recent\">Articles in Press</a></li>\n" + 
-      "<li class=\"leaf\"><a href=\"/content/by/year\">Archives</a></li>\n" + 
-      "<li class=\"leaf\"><a href=\"/content/feedback\">Feedback</a></li>\n" + 
-      "<li class=\"last leaf\"><a href=\"/alerts\">Personal Alerts</a></li>\n" + 
-      "</ul>" +
-      "    </div>\n" + 
-      "  </div>\n" + 
-      "</section>\n" + 
-      "</footer>\n" +
-      "</div>";
-  
-  private static final String withoutFooter = "<div id=\"page\">" +
-      "\n" +
-      "</div>";
-  
   private static final String withPager = "<div id=\"page\">" +
       "<div class=\"panel-pane pane-highwire-node-pager\">\n" + 
       "  <div class=\"pane-content\">\n" + 
@@ -133,19 +70,22 @@ public class TestAPSHtmlCrawlFilterFactory extends LockssTestCase {
       "\n" +
       "</div>";
   
-  private static final String withAside = "<div id=\"page\">" +
-      "<aside>\n" + 
-      " <div class=\"panel-pane pane-service-links\">\n" + 
-      "  <div class=\"pane-content\">\n" + 
-      "    <div class=\"service-links\">" +
-      "    </div>" +
-      "  </div>\n" + 
-      " </div>\n" + 
-      "</aside>\n" +
+  private static final String withAuTT = "<div id=\"page\">\n" +
+      "<div class=\"author-tooltip-name\">" +
+      "<span class=\"nlm-given-names\">Nae</span>" +
+      " <span class=\"nlm-surname\">Soup</span> </div>" +
       "</div>";
   
-  private static final String withoutAside = "<div id=\"page\">" +
+  private static final String withoutAuTT = "<div id=\"page\">" +
       "\n" +
+      "</div>";
+  
+  private static final String withHwLink = "<div id=\"page\">" +
+      "<a class=\"hw-link hw-abstract\"" +
+      " href=\"http://ajpregu.physiology.org/content/304/3/R218.abstract\">View Abstract</a>" +
+      "</div>";
+  
+  private static final String withoutHwLink = "<div id=\"page\">" +
       "</div>";
   
   
@@ -153,29 +93,23 @@ public class TestAPSHtmlCrawlFilterFactory extends LockssTestCase {
     InputStream inA;
     String a;
     
-    // header
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(withHeader),
-        Constants.DEFAULT_ENCODING);
-    a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutHeader, a);
-    
-    // footer
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(withFooter),
-        Constants.DEFAULT_ENCODING);
-    a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutFooter, a);
-    
     // node pager
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withPager),
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutPager, a);
     
-    // aside
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(withAside),
+    // author tooltip
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withAuTT),
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutAside, a);
+    assertEquals(withoutAuTT, a);
+    
+    // HwLink
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withHwLink),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutHwLink, a);
     
   }
   
