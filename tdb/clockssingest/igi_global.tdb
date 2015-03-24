@@ -54,42 +54,6 @@
   {
 
     title <
-      name = Information Technology Management ;
-      issn = 1080-286X ;
-      issnl = 1080-286X
-    >
-  
-    param[journal_issn] = 1080-286X 
-    comment[0] = content out of print, 1/9/15
-
-    au < expected ; exists ; 1988 ; Information Technology Management Volume 1 ; 1 >
-    au < expected ; exists ; 1989 ; Information Technology Management Volume 2 ; 2 >
-    au < expected ; exists ; 1990 ; Information Technology Management Volume 3 ; 3 >
-    au < expected ; exists ; 1991 ; Information Technology Management Volume 4 ; 4 >
-    au < expected ; exists ; 1992 ; Information Technology Management Volume 5 ; 5 >
-    au < expected ; exists ; 1993 ; Information Technology Management Volume 6 ; 6 >
-    au < expected ; exists ; 1994 ; Information Technology Management Volume 7 ; 7 >
-    au < expected ; exists ; 1995 ; Information Technology Management Volume 8 ; 8 >
-    au < expected ; exists ; 1996 ; Information Technology Management Volume 9 ; 9 >
-    au < expected ; exists ; 1997 ; Information Technology Management Volume 10 ; 10 >
-    au < expected ; exists ; 1998 ; Information Technology Management Volume 11 ; 11 >
-    au < expected ; exists ; 1999 ; Information Technology Management Volume 12 ; 12 >
-    au < expected ; exists ; 2000 ; Information Technology Management Volume 13 ; 13 >
-    au < expected ; exists ; 2001 ; Information Technology Management Volume 14 ; 14 >
-    au < expected ; exists ; 2002 ; Information Technology Management Volume 15 ; 15 >
-    au < expected ; exists ; 2003 ; Information Technology Management Volume 16 ; 16 >
-    au < expected ; exists ; 2004 ; Information Technology Management Volume 17 ; 17 >
-    au < expected ; exists ; 2005 ; Information Technology Management Volume 18 ; 18 >
-    au < expected ; exists ; 2006 ; Information Technology Management Volume 19 ; 19 >
-    au < expected ; exists ; 2007 ; Information Technology Management Volume 20 ; 20 >
-    au < expected ; exists ; 2008 ; Information Technology Management Volume 21 ; 21 >
-    au < expected ; exists ; 2009 ; Information Technology Management Volume 22 ; 22 >
-
-  }
-
-  {
-
-    title <
       name = International Journal of 3-D Information Modeling (IJ3DIM) ;
       issn = 2156-1710 ;
       eissn = 2156-1702 ;
@@ -2117,22 +2081,6 @@
   {
 
     title <
-      name = International Journal of Pharmacology and Pharmaceutical Technology (IJPPT) ;
-      issn = 2166-7276 ;
-      eissn = 2166-7284 ;
-      issnl = 2166-7276
-    >
-
-    comment[0] = forthcoming in 2014 as of 1-9-2014
-    param[journal_issn] = 2166-7276
-
-    au < expected ; exists ; 2015 ; International Journal of Pharmacology and Pharmaceutical Technology (IJPPT) Volume 1 ; 1 > 
-
-  }
-
-  {
-
-    title <
       name = International Journal of Privacy and Health Information Management (IJPHIM) ;
       issn = 2155-5621 ;
       eissn = 2155-563X ;
@@ -2634,22 +2582,6 @@
     au < crawling ; exists ; 2013 ; International Journal of Technology Diffusion (IJTD) Volume 4 ; 4 > 
     au < crawling ; exists ; 2014 ; International Journal of Technology Diffusion (IJTD) Volume 5 ; 5 > 
     au < expected ; exists ; 2015 ; International Journal of Technology Diffusion (IJTD) Volume 6 ; 6 > 
-
-  }
-
-  {
-
-    title <
-      name = International Journal of Telework and Telecommuting Technologies (IJTTT) ;
-      issn = 2160-9896 ;
-      eissn = 2160-990X ;
-      issnl = 2160-9896
-    >
-
-    param[journal_issn] = 2160-9896 
-    comment[0] = out of print, 1/9/2015
-
-    au < expected ; exists ; 2015 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
 
   }
 
