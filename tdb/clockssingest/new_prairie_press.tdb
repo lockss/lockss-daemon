@@ -100,27 +100,6 @@
   {
 
     title <
-      name = International Journal of School Social Work ;
-      eissn = 2161-4148 ;
-      issnl = 2161-4148
-    >
-    
-    {
-
-      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
-      implicit < status ; status2 ; year ; name ; param[volume] >
-      param[base_url] = http://newprairiepress.org/
-      param[journal_abbr] = ijssw
-
-      au < expected ; exists ; 2014 ; International Journal of School Social Work Volume 1 ; 1 >
-
-    }
-
-  }
-
-  {
-
-    title <
       name = Journal for the History of Analytical Philosophy ;
       eissn = 2159-0303 ;
       issnl = 2159-0303
