@@ -1920,12 +1920,12 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     {
 
-      pluginSuffix = HighWireDrupalPlugin
+      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://lupus.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < expected ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
-      au < expected ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
+      au < exists ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+      au < exists ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
 
     }
     
