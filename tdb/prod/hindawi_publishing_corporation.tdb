@@ -7324,25 +7324,6 @@
   
   {
     title <
-      name = Journal of Magnetism ;
-      issn = 1687-9821 ;
-      eissn = 1687-983X ;
-      issnl = 1687-9821
-    >
-
-    comment[jmag] = this journal has ceased publication
-     
-    param[journal_id] = jmag
-
-    au < doesNotExist ; 2008 ; Journal of Magnetism Volume 2008 ; 2008 ; 2008 >
-    au < doesNotExist ; 2009 ; Journal of Magnetism Volume 2009 ; 2009 ; 2009 >
-    au < doesNotExist ; 2010 ; Journal of Magnetism Volume 2010 ; 2010 ; 2010 >
-    au < doesNotExist ; 2011 ; Journal of Magnetism Volume 2011 ; 2011 ; 2011 >
-
-  }
-
-  {
-    title <
       name = Journal of Marine Biology ;
       issn = 1687-9481 ;
       eissn = 1687-949X ;
@@ -8262,7 +8243,7 @@
 
     param[journal_id] = jsb
 
-    au < expected ; 2014 ; Journal of Synthetic Biology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
