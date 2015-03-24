@@ -3354,10 +3354,10 @@
     au < manifest ; 1983 ; Bulletin of the Entomological Society of America Volume 29 ; 29 >
     au < manifest ; 1984 ; Bulletin of the Entomological Society of America Volume 30 ; 30 >
     au < manifest ; 1985 ; Bulletin of the Entomological Society of America Volume 31 ; 31 >
-    au < exists ; 1986 ; Bulletin of the Entomological Society of America Volume 32 ; 32 >
-    au < exists ; 1987 ; Bulletin of the Entomological Society of America Volume 33 ; 33 >
-    au < exists ; 1988 ; Bulletin of the Entomological Society of America Volume 34 ; 34 >
-    au < exists ; 1989 ; Bulletin of the Entomological Society of America Volume 35 ; 35 >
+    au < manifest ; 1986 ; Bulletin of the Entomological Society of America Volume 32 ; 32 >
+    au < manifest ; 1987 ; Bulletin of the Entomological Society of America Volume 33 ; 33 >
+    au < manifest ; 1988 ; Bulletin of the Entomological Society of America Volume 34 ; 34 >
+    au < manifest ; 1989 ; Bulletin of the Entomological Society of America Volume 35 ; 35 >
 
   }
 
@@ -4186,7 +4186,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 >
 
     }
 
@@ -5927,10 +5927,10 @@
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < oup.OUPDrupalPlugin ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 >
-    au < oup.OUPDrupalPlugin ; exists ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 >
-    au < oup.OUPDrupalPlugin ; exists ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 >
-    au < oup.OUPDrupalPlugin ; exists ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; European Heart Journal Supplements Volume 7 [superseded] ; 7 >
     au < HighWirePressH20Plugin ; down ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; down ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 >
@@ -5942,8 +5942,8 @@
     au < HighWirePressH20Plugin ; down ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 >
     au < oup.OUPDrupalPlugin ; doesNotExist ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 >
-    au < oup.OUPDrupalPlugin ; exists ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 >
-    au < oup.OUPDrupalPlugin ; exists ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 >
 
     }
 
@@ -9180,7 +9180,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; IMA Journal of Mathematical Control and Information Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; IMA Journal of Mathematical Control and Information Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; IMA Journal of Mathematical Control and Information Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; IMA Journal of Mathematical Control and Information Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; IMA Journal of Mathematical Control and Information Volume 32 ; 32 >
 
     }
 
@@ -10227,7 +10227,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Refugee Law Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Refugee Law Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Refugee Law Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal of Refugee Law Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Refugee Law Volume 27 ; 27 >
 
     }
 
@@ -11021,7 +11021,7 @@
     au < manifest ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 >
     au < manifest ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 >
     au < manifest ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 >
-    au < expected ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 >
+    au < manifest ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 >
 
     }
 
@@ -13155,7 +13155,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of International Economic Law Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of International Economic Law Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of International Economic Law Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of International Economic Law Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of International Economic Law Volume 18 ; 18 >
 
     }
 
@@ -14638,7 +14638,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Semitic Studies Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 >
 
     }
 
@@ -15852,7 +15852,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 ; 40 >
 
   }
 
@@ -19612,7 +19612,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Public Health Ethics Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Public Health Ethics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Public Health Ethics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Public Health Ethics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Public Health Ethics Volume 8 ; 8 >
 
     }
 
@@ -21279,7 +21279,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Screen Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Screen Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Screen Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Screen Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Screen Volume 56 ; 56 >
 
     }
 
@@ -21908,7 +21908,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Sociology of Religion Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Sociology of Religion Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Sociology of Religion Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Sociology of Religion Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Sociology of Religion Volume 76 ; 76 >
 
     }
 
@@ -23713,7 +23713,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2013 ; National Science Review Volume 1 ; 1 >
-      au < expected ; 2014 ; National Science Review Volume 2 ; 2 >
+      au < manifest ; 2014 ; National Science Review Volume 2 ; 2 >
       au < expected ; 2015 ; National Science Review Volume 3 ; 3 >
 
   }
