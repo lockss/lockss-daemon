@@ -218,6 +218,7 @@ public class TestMetadataManager extends LockssTestCase {
     runTestFindPublication();
     runTestGetIndexTypeDisplayString();
     runRemoveChildMetadataItemTest();
+    runMetadataMonitorTest();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -1406,6 +1407,22 @@ public class TestMetadataManager extends LockssTestCase {
     }
 
     DbManager.safeRollbackAndClose(conn);
+  }
+
+  private void runMetadataMonitorTest() throws Exception {
+    assertEquals(4, metadataManager.getPublisherNames().size());
+    assertEquals(0,
+	metadataManager.getPublishersWithMultipleDoiPrefixes().size());
+    assertEquals(0,
+	metadataManager.getDoiPrefixesWithMultiplePublishers().size());
+    assertEquals(0, metadataManager.getAusWithMultipleDoiPrefixes().size());
+    assertEquals(0, metadataManager.getPublicationsWithMoreThan2Isbns().size());
+    assertEquals(0, metadataManager.getPublicationsWithMoreThan2Issns().size());
+    assertEquals(0, metadataManager.getIsbnsWithMultiplePublications().size());
+    assertEquals(0, metadataManager.getIssnsWithMultiplePublications().size());
+    assertEquals(0, metadataManager.getBooksWithIssns().size());
+    assertEquals(0, metadataManager.getPeriodicalsWithIsbns().size());
+    assertEquals(0, metadataManager.getUnknownProviderAuIds().size());
   }
 
   public static class MySubTreeArticleIteratorFactory

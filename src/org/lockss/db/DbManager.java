@@ -219,7 +219,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 22;
+  private int targetDatabaseVersion = 23;
 
   // The database version updates that are performed asynchronously.
   private int[] asynchronousUpdates = new int[] {10, 15, 17, 20, 22};
@@ -490,6 +490,26 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public boolean isReady() {
     return ready;
+  }
+
+  /**
+   * Provides an indication of whether the Derby database is being used.
+   * 
+   * @return <code>true</code> if the Derby database is being used,
+   *         <code>false</code> otherwise.
+   */
+  public boolean isTypeDerby() {
+    return dbManagerSql.isTypeDerby();
+  }
+
+  /**
+   * Provides an indication of whether the PostgreSQL database is being used.
+   * 
+   * @return <code>true</code> if the PostgreSQL database is being used,
+   *         <code>false</code> otherwise.
+   */
+  public boolean isTypePostgresql() {
+    return dbManagerSql.isTypePostgresql();
   }
 
   /**
@@ -1843,6 +1863,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  if (!skipAsynchronousUpdates) {
 	    dbManagerSql.updateDatabaseFrom21To22(conn);
 	  }
+	} else if (from == 22) {
+	  dbManagerSql.updateDatabaseFrom22To23(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");

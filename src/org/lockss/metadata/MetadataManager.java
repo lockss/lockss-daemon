@@ -3736,4 +3736,150 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public boolean isPrioritizeIndexingNewAus() {
     return prioritizeIndexingNewAus;
   }
+
+  /**
+   * Provides the names of the publishers in the database.
+   * 
+   * @return a Collection<String> with the publisher names.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<String> getPublisherNames() throws DbException {
+    return getMetadataManagerSql().getPublisherNames();
+  }
+
+  /**
+   * Provides the DOI prefixes for the publishers in the database with multiple
+   * DOI prefixes.
+   * 
+   * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
+   *         the publisher name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getPublishersWithMultipleDoiPrefixes()
+      throws DbException {
+    return getMetadataManagerSql().getPublishersWithMultipleDoiPrefixes();
+  }
+
+  /**
+   * Provides the publisher names linked to DOI prefixes in the database that
+   * are linked to multiple publishers.
+   * 
+   * @return a Map<String, Collection<String>> with the publisher names keyed by
+   *         the DOI prefixes to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getDoiPrefixesWithMultiplePublishers()
+      throws DbException {
+    return getMetadataManagerSql().getDoiPrefixesWithMultiplePublishers();
+  }
+
+  /**
+   * Provides the DOI prefixes for the Archival Units in the database with
+   * multiple DOI prefixes.
+   * 
+   * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
+   *         the Archival Unit name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getAusWithMultipleDoiPrefixes()
+      throws DbException {
+    return getMetadataManagerSql().getAusWithMultipleDoiPrefixes();
+  }
+
+  /**
+   * Provides the ISBNs for the publications in the database with more than two
+   * ISBNS.
+   * 
+   * @return a Map<String, Collection<Isbn>> with the ISBNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<Isbn>> getPublicationsWithMoreThan2Isbns()
+      throws DbException {
+    return getMetadataManagerSql().getPublicationsWithMoreThan2Isbns();
+  }
+
+  /**
+   * Provides the ISSNs for the publications in the database with more than two
+   * ISSNS.
+   * 
+   * @return a Map<String, Collection<Issn>> with the ISSNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<Issn>> getPublicationsWithMoreThan2Issns()
+      throws DbException {
+    return getMetadataManagerSql().getPublicationsWithMoreThan2Issns();
+  }
+
+  /**
+   * Provides the publication names linked to ISBNs in the database that are
+   * linked to multiple publications.
+   * 
+   * @return a Map<String, Collection<String>> with the publication names keyed
+   *         by the ISBNs to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getIsbnsWithMultiplePublications()
+      throws DbException {
+    return getMetadataManagerSql().getIsbnsWithMultiplePublications();
+  }
+
+  /**
+   * Provides the publication names linked to ISSNs in the database that are
+   * linked to multiple publications.
+   * 
+   * @return a Map<String, Collection<String>> with the publication names keyed
+   *         by the ISSNs to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getIssnsWithMultiplePublications()
+      throws DbException {
+    return getMetadataManagerSql().getIssnsWithMultiplePublications();
+  }
+
+  /**
+   * Provides the ISSNs for books in the database.
+   * 
+   * @return a Map<String, Collection<String>> with the ISSNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getBooksWithIssns()
+      throws DbException {
+    return getMetadataManagerSql().getBooksWithIssns();
+  }
+
+  /**
+   * Provides the ISBNs for periodicals in the database.
+   * 
+   * @return a Map<String, Collection<String>> with the ISBNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getPeriodicalsWithIsbns()
+      throws DbException {
+    return getMetadataManagerSql().getPeriodicalsWithIsbns();
+  }
+
+  /**
+   * Provides the Archival Units in the database with an unknown provider.
+   * 
+   * @return a Collection<String> with the sorted Archival Unit names.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<String> getUnknownProviderAuIds() throws DbException {
+    return getMetadataManagerSql().getUnknownProviderAuIds();
+  }
 }

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,7 +63,8 @@ public class TestAdminServletManager extends LockssTestCase {
     LINK_LOGOUT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_COUNTER_REPORTS,
-    SERVLET_CXF_WEB_SERVICES
+    SERVLET_CXF_WEB_SERVICES,
+    SERVLET_MD_MONITOR
   };
 
   ServletDescr userAdminDescrs[] = {
@@ -106,6 +107,7 @@ public class TestAdminServletManager extends LockssTestCase {
     LINK_LOGS,
     SERVLET_THREAD_DUMP,
     SERVLET_RAISE_ALERT,
+    SERVLET_MD_MONITOR
   };
 
 

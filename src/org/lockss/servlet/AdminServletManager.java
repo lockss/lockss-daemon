@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -531,6 +531,13 @@ public class AdminServletManager extends BaseServletManager {
 	  }
 	}};
 
+  protected static final ServletDescr SERVLET_MD_MONITOR =
+      new ServletDescr("MetadataMonitor",
+	  	       MetadataMonitor.class,
+	  	       "Metadata Monitor",
+	  	       ServletDescr.NEED_ROLE_DEBUG,
+	  	       "Metadata Monitor");
+
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
   }
@@ -581,7 +588,8 @@ public class AdminServletManager extends BaseServletManager {
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
-    SERVLET_CXF_WEB_SERVICES
+    SERVLET_CXF_WEB_SERVICES,
+    SERVLET_MD_MONITOR
   };
 
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
@@ -625,7 +633,8 @@ public class AdminServletManager extends BaseServletManager {
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
-    SERVLET_CXF_WEB_SERVICES
+    SERVLET_CXF_WEB_SERVICES,
+    SERVLET_MD_MONITOR
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
   static final ServletDescr servletDescrsTransitional[] = {
@@ -668,7 +677,8 @@ public class AdminServletManager extends BaseServletManager {
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
-    SERVLET_CXF_WEB_SERVICES
+    SERVLET_CXF_WEB_SERVICES,
+    SERVLET_MD_MONITOR
   };
 
   // XXXUI Show the transitional or new UI if param is enabled

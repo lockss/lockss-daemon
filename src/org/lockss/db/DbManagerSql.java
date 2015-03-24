@@ -2199,6 +2199,12 @@ public class DbManagerSql {
       + " and pr." + PROVIDER_NAME_COLUMN + " = '" + UNKNOWN_PROVIDER_NAME
       + "'";
 
+  // SQL statements that create the necessary version 23 indices.
+  private static final String[] VERSION_23_INDEX_CREATE_QUERIES = new String[] {
+    "create index idx4_" + AU_MD_TABLE + " on " + AU_MD_TABLE
+    + "(" + PROVIDER_SEQ_COLUMN + ")"
+    };
+
   // The database data source.
   private DataSource dataSource = null;
 
@@ -3263,8 +3269,8 @@ public class DbManagerSql {
    * @return a String with the localized table creation query.
    */
   private String localizeCreateQueryForMysql(String query) {
-    return StringUtil.replaceString(query, "--BigintSerialPk--",
-	BIGINT_SERIAL_PK_MYSQL);
+    return StringUtil.replaceString(query + " ENGINE = INNODB",
+	"--BigintSerialPk--", BIGINT_SERIAL_PK_MYSQL);
   }
 
   /**
@@ -7774,5 +7780,27 @@ public class DbManagerSql {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "populatedFlag = " + populatedFlag);
     return populatedFlag;
+  }
+
+  /**
+   * Updates the database from version 22 to version 23.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom22To23(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom22To23(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Create the necessary indices.
+    executeDdlQueries(conn, VERSION_23_INDEX_CREATE_QUERIES);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

@@ -46,6 +46,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager.PrioritizedAuId;
@@ -607,6 +608,464 @@ public class MetadataManagerSql {
       + AU_MD_SEQ_COLUMN + " = ?"
       + " and " + MD_ITEM_SEQ_COLUMN + " = ?"
       + " and " + PARENT_SEQ_COLUMN + " is not null";
+
+  // Query to retrieve all the publisher names.
+  private static final String GET_PUBLISHER_NAMES_QUERY = "select "
+      + PUBLISHER_NAME_COLUMN
+      + " from " + PUBLISHER_TABLE
+      + " order by " + PUBLISHER_NAME_COLUMN;
+
+  // Derby query to retrieve all the different DOI prefixes of all the
+  // publishers with multiple DOI prefixes.
+  private static final String GET_PUBLISHERS_MULTIPLE_DOI_PREFIXES_DERBY_QUERY =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, locate('/', d." + DOI_COLUMN
+      + ")-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and pr." + PUBLISHER_NAME_COLUMN + " in ("
+      + " select subq." + PUBLISHER_NAME_COLUMN
+      + " from ("
+      + "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, locate('/', d." + DOI_COLUMN
+      + ")-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + PUBLISHER_NAME_COLUMN
+      + " having count(subq." + PUBLISHER_NAME_COLUMN + ") > 1)"
+      + " order by pr." + PUBLISHER_NAME_COLUMN
+      + ", prefix";
+
+  // PostgreSQL query to retrieve all the different DOI prefixes of all the
+  // publishers with multiple DOI prefixes.
+  private static final String GET_PUBLISHERS_MULTIPLE_DOI_PREFIXES_PG_QUERY =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, strpos(d." + DOI_COLUMN
+      + ", '/')-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and pr." + PUBLISHER_NAME_COLUMN + " in ("
+      + " select subq." + PUBLISHER_NAME_COLUMN
+      + " from ("
+      + "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, strpos(d." + DOI_COLUMN
+      + ", '/')-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + PUBLISHER_NAME_COLUMN
+      + " having count(subq." + PUBLISHER_NAME_COLUMN + ") > 1)"
+      + " order by pr." + PUBLISHER_NAME_COLUMN
+      + ", prefix";
+
+  // MySQL query to retrieve all the different DOI prefixes of all the
+  // publishers with multiple DOI prefixes.
+  private static final String GET_PUBLISHERS_MULTIPLE_DOI_PREFIXES_MYSQL_QUERY =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substring_index(d." + DOI_COLUMN + ", '/', 1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and pr." + PUBLISHER_NAME_COLUMN + " in ("
+      + " select subq." + PUBLISHER_NAME_COLUMN
+      + " from ("
+      + "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substring_index(d." + DOI_COLUMN + ", '/', 1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + PUBLISHER_NAME_COLUMN
+      + " having count(subq." + PUBLISHER_NAME_COLUMN + ") > 1)"
+      + " order by pr." + PUBLISHER_NAME_COLUMN
+      + ", prefix";
+
+  // Derby query to retrieve all the different publishers linked to all the DOI
+  // prefixes that are linked to multiple publishers.
+  private static final String GET_DOI_PREFIXES_MULTIPLE_PUBLISHERS_DERBY_QUERY =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, locate('/', d." + DOI_COLUMN
+      + ")-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and substr(d." + DOI_COLUMN + ", 1, locate('/', d." + DOI_COLUMN
+      + ")-1) in ("
+      + " select subq.prefix"
+      + " from ("
+      + "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, locate('/', d." + DOI_COLUMN
+      + ")-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq.prefix"
+      + " having count(subq.prefix) > 1)"
+      + " order by prefix, pr."
+      + PUBLISHER_NAME_COLUMN;
+
+  // PostgreSql query to retrieve all the different publishers linked to all the
+  // DOI prefixes that are linked to multiple publishers.
+  private static final String GET_DOI_PREFIXES_MULTIPLE_PUBLISHERS_PG_QUERY =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, strpos(d." + DOI_COLUMN
+      + ", '/')-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and substr(d." + DOI_COLUMN + ", 1, strpos(d." + DOI_COLUMN
+      + ", '/')-1) in ("
+      + " select subq.prefix"
+      + " from ("
+      + "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, strpos(d." + DOI_COLUMN
+      + ", '/')-1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq.prefix"
+      + " having count(subq.prefix) > 1)"
+      + " order by prefix, pr."
+      + PUBLISHER_NAME_COLUMN;
+
+  // MySQL query to retrieve all the different publishers linked to all the DOI
+  // prefixes that are linked to multiple publishers.
+  private static final String GET_DOI_PREFIXES_MULTIPLE_PUBLISHERS_MYSQL_QUERY =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substring_index(d." + DOI_COLUMN + ", '/', 1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and substring_index(d." + DOI_COLUMN + ", '/', 1) in ("
+      + " select subq.prefix"
+      + " from ("
+      + "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ", substring_index(d." + DOI_COLUMN + ", '/', 1) as prefix"
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + DOI_TABLE + " d"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq.prefix"
+      + " having count(subq.prefix) > 1)"
+      + " order by prefix, pr."
+      + PUBLISHER_NAME_COLUMN;
+
+  // Derby query to retrieve all the different DOI prefixes of all the Archival
+  // Units with multiple DOI prefixes.
+  private static final String GET_AUS_MULTIPLE_DOI_PREFIXES_DERBY_QUERY =
+      "select distinct pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", au." + AU_SEQ_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, locate('/', d." + DOI_COLUMN
+      + ")-1) as prefix"
+      + " from " + PLUGIN_TABLE + " pl"
+      + ", " + AU_TABLE
+      + ", " + DOI_TABLE + " d"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pl." + PLUGIN_SEQ_COLUMN + " = au." + PLUGIN_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " in ("
+      + " select subq." + AU_SEQ_COLUMN
+      + " from ("
+      + "select distinct au." + AU_SEQ_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, locate('/', d." + DOI_COLUMN
+      + ")-1) as prefix"
+      + " from " + AU_TABLE
+      + ", " + DOI_TABLE + " d"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + AU_SEQ_COLUMN
+      + " having count(subq." + AU_SEQ_COLUMN + ") > 1)"
+      + " order by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", prefix";
+
+  // PostgreSQL query to retrieve all the different DOI prefixes of all the
+  // Archival Units with multiple DOI prefixes.
+  private static final String GET_AUS_MULTIPLE_DOI_PREFIXES_PG_QUERY =
+      "select distinct " + " pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", au." + AU_SEQ_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, strpos(d." + DOI_COLUMN
+      + ", '/')-1) as prefix"
+      + " from " + PLUGIN_TABLE + " pl"
+      + ", " + AU_TABLE
+      + ", " + DOI_TABLE + " d"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pl." + PLUGIN_SEQ_COLUMN + " = au." + PLUGIN_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " in ("
+      + " select subq." + AU_SEQ_COLUMN
+      + " from ("
+      + "select distinct au." + AU_SEQ_COLUMN
+      + ", substr(d." + DOI_COLUMN + ", 1, strpos(d." + DOI_COLUMN
+      + ", '/')-1) as prefix"
+      + " from " + AU_TABLE
+      + ", " + DOI_TABLE + " d"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + AU_SEQ_COLUMN
+      + " having count(subq." + AU_SEQ_COLUMN + ") > 1)"
+      + " order by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", prefix";
+
+  // MySQL query to retrieve all the different DOI prefixes of all the Archival
+  // Units with multiple DOI prefixes.
+  private static final String GET_AUS_MULTIPLE_DOI_PREFIXES_MYSQL_QUERY =
+      "select distinct pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", au." + AU_SEQ_COLUMN
+      + ", substring_index(d." + DOI_COLUMN + ", '/', 1) as prefix"
+      + " from " + PLUGIN_TABLE + " pl"
+      + ", " + AU_TABLE
+      + ", " + DOI_TABLE + " d"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where pl." + PLUGIN_SEQ_COLUMN + " = au." + PLUGIN_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " in ("
+      + " select subq." + AU_SEQ_COLUMN
+      + " from ("
+      + "select distinct au." + AU_SEQ_COLUMN
+      + ", substring_index(d." + DOI_COLUMN + ", '/', 1) as prefix"
+      + " from " + AU_TABLE
+      + ", " + DOI_TABLE + " d"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + AU_SEQ_COLUMN
+      + " having count(subq." + AU_SEQ_COLUMN + ") > 1)"
+      + " order by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", prefix";
+
+  // Query to retrieve all the different ISBNs of all the publications with more
+  // than 2 ISBNs.
+  private static final String GET_PUBLICATIONS_MORE_2_ISBNS_QUERY = "select"
+      + " distinct mn." + NAME_COLUMN
+      + ", isbn." + ISBN_COLUMN
+      + ", isbn." + ISBN_TYPE_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISBN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = isbn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + " and mn." + NAME_COLUMN + " in ("
+      + "select subq." + NAME_COLUMN + " from ("
+      + " select distinct mn." + NAME_COLUMN
+      + ", isbn." + ISBN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISBN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = isbn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + ") as subq"
+      + " group by subq." + NAME_COLUMN
+      + " having count(subq." + NAME_COLUMN + ") > 2)"
+      + " order by mn." + NAME_COLUMN
+      + ", isbn." + ISBN_COLUMN
+      + ", isbn." + ISBN_TYPE_COLUMN;
+
+  // Query to retrieve all the different ISSNs of all the publications with more
+  // than 2 ISSNs.
+  private static final String GET_PUBLICATIONS_MORE_2_ISSNS_QUERY = "select"
+      + " distinct mn." + NAME_COLUMN
+      + ", issn." + ISSN_COLUMN
+      + ", issn." + ISSN_TYPE_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISSN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = issn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + " and mn." + NAME_COLUMN + " in ("
+      + "select subq." + NAME_COLUMN + " from ("
+      + " select distinct mn." + NAME_COLUMN
+      + ", issn." + ISSN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISSN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = issn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + ") as subq"
+      + " group by subq." + NAME_COLUMN
+      + " having count(subq." + NAME_COLUMN + ") > 2)"
+      + " order by mn." + NAME_COLUMN
+      + ", issn." + ISSN_COLUMN
+      + ", issn." + ISSN_TYPE_COLUMN;
+
+  // Query to retrieve all the different publications linked to all the ISBNs
+  // that are linked to multiple publications.
+  private static final String GET_ISBNS_MULTIPLE_PUBLICATIONS_QUERY = "select"
+      + " distinct mn." + NAME_COLUMN
+      + ", isbn." + ISBN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISBN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = isbn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + " and isbn." + ISBN_COLUMN + " in ("
+      + "select subq." + ISBN_COLUMN + " from ("
+      + " select distinct mn." + NAME_COLUMN
+      + ", isbn." + ISBN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISBN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = isbn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + ") as subq"
+      + " group by subq." + ISBN_COLUMN
+      + " having count(subq." + ISBN_COLUMN + ") > 1)"
+      + " order by isbn." + ISBN_COLUMN
+      + ", mn." + NAME_COLUMN;
+
+  // Query to retrieve all the different publications linked to all the ISSNs
+  // that are linked to multiple publications.
+  private static final String GET_ISSNS_MULTIPLE_PUBLICATIONS_QUERY = "select"
+      + " distinct mn." + NAME_COLUMN
+      + ", issn." + ISSN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISSN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = issn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + " and issn." + ISSN_COLUMN + " in ("
+      + "select subq." + ISSN_COLUMN + " from ("
+      + " select distinct mn." + NAME_COLUMN
+      + ", issn." + ISSN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + ISSN_TABLE
+      + " where mn." + MD_ITEM_SEQ_COLUMN + " = issn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + ") as subq"
+      + " group by subq." + ISSN_COLUMN
+      + " having count(subq." + ISSN_COLUMN + ") > 1)"
+      + " order by issn." + ISSN_COLUMN
+      + ", mn." + NAME_COLUMN;
+
+  // Query to retrieve all the different ISSNs that are linked to books.
+  private static final String GET_BOOKS_WITH_ISSNS_QUERY = "select distinct"
+      + " mn." + NAME_COLUMN
+      + ", mit." + TYPE_NAME_COLUMN
+      + ", issn." + ISSN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + MD_ITEM_TYPE_TABLE + " mit"
+      + ", " + ISSN_TABLE
+      + ", " + PUBLICATION_TABLE + " p"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = mn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = issn." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " = mit." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mit." + TYPE_NAME_COLUMN + " != 'book_series'"
+      + " and mit." + TYPE_NAME_COLUMN + " != 'journal'"
+      + " order by mn." + NAME_COLUMN
+      + ", mit." + TYPE_NAME_COLUMN
+      + ", issn." + ISSN_COLUMN;
+
+  // Query to retrieve all the different ISBNs that are linked to periodicals.
+  private static final String GET_PERIODICALS_WITH_ISBNS_QUERY = "select"
+      + " distinct mn." + NAME_COLUMN
+      + ", mit." + TYPE_NAME_COLUMN
+      + ", isbn." + ISBN_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " mn"
+      + ", " + MD_ITEM_TYPE_TABLE + " mit"
+      + ", " + ISBN_TABLE
+      + ", " + PUBLICATION_TABLE + " p"
+      + ", " + MD_ITEM_TABLE + " m"
+      + " where p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = mn." + MD_ITEM_SEQ_COLUMN
+      + " and mn." + NAME_TYPE_COLUMN + " = 'primary'"
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = isbn." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " = mit." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mit." + TYPE_NAME_COLUMN + " != 'book'"
+      + " order by mn." + NAME_COLUMN
+      + ", mit." + TYPE_NAME_COLUMN
+      + ", isbn." + ISBN_COLUMN;
+
+  // Query to retrieve all the Archival Units with an unknown provider.
+  private static final String GET_UNKNOWN_PROVIDER_AUS_QUERY = "select"
+      + " pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + " from " + PLUGIN_TABLE + " pl"
+      + ", " + AU_TABLE
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + PROVIDER_TABLE + " pr"
+      + " where pl." + PLUGIN_SEQ_COLUMN + " = au." + PLUGIN_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
+      + " and pr." + PROVIDER_NAME_COLUMN
+      + " = '" + UNKNOWN_PROVIDER_NAME + "'";
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -4023,5 +4482,1037 @@ public class MetadataManagerSql {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
     return count;
+  }
+
+  /**
+   * Provides the names of the publishers in the database.
+   * 
+   * @return a Collection<String> with the publisher names.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<String> getPublisherNames() throws DbException {
+    final String DEBUG_HEADER = "getPublisherNames(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<String> publisherNames = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the publisher names.
+      publisherNames = getPublisherNames(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisherNames.size() = "
+	+ publisherNames.size());
+    return publisherNames;
+  }
+
+  /**
+   * Provides the names of the publishers in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<String> with the publisher names.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<String> getPublisherNames(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPublisherNames(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<String> publisherNames = new ArrayList<String>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      // Get the publisher names.
+      stmt = dbManager.prepareStatement(conn, GET_PUBLISHER_NAMES_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the publisher names. 
+      while (resultSet.next()) {
+	String publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	publisherNames.add(publisherName);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the publisher names";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_PUBLISHER_NAMES_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisherNames.size() = "
+	+ publisherNames.size());
+    return publisherNames;
+  }
+
+  /**
+   * Provides the DOI prefixes for the publishers in the database with multiple
+   * DOI prefixes.
+   * 
+   * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
+   *         the publisher name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getPublishersWithMultipleDoiPrefixes()
+      throws DbException {
+    final String DEBUG_HEADER = "getPublishersWithMultipleDoiPrefixes(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> publishersDoiPrefixes = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the publisher DOI prefixes.
+      publishersDoiPrefixes = getPublishersWithMultipleDoiPrefixes(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publishersDoiPrefixes.size() = " + publishersDoiPrefixes.size());
+    return publishersDoiPrefixes;
+  }
+
+  /**
+   * Provides the DOI prefixes for the publishers in the database with multiple
+   * DOI prefixes.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
+   *         the publisher name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getPublishersWithMultipleDoiPrefixes(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPublishersWithMultipleDoiPrefixes(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> publishersDoiPrefixes =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+    String sql = null;
+
+    try {
+      String previousPublisherName = null;
+
+      // Get the publisher DOI prefixes.
+      sql = GET_PUBLISHERS_MULTIPLE_DOI_PREFIXES_DERBY_QUERY;
+
+      if (dbManager.isTypePostgresql()) {
+	sql = GET_PUBLISHERS_MULTIPLE_DOI_PREFIXES_PG_QUERY;
+      } else if (dbManager.isTypeMysql()) {
+	sql = GET_PUBLISHERS_MULTIPLE_DOI_PREFIXES_MYSQL_QUERY;
+      }
+
+      stmt = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the publisher DOI prefixes. 
+      while (resultSet.next()) {
+	String publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	String prefix = resultSet.getString("prefix");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "prefix = " + prefix);
+
+	if (publisherName.equals(previousPublisherName)) {
+	  publishersDoiPrefixes.get(publisherName).add(prefix);
+	} else {
+	  Collection<String> publisherPrefixes = new ArrayList<String>();
+	  publisherPrefixes.add(prefix);
+	  publishersDoiPrefixes.put(publisherName, publisherPrefixes);
+	  previousPublisherName = publisherName;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the publishers DOI prefixes";
+      log.error(message, sqle);
+      log.error("SQL = '" + sql + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publishersDoiPrefixes.size() = " + publishersDoiPrefixes.size());
+    return publishersDoiPrefixes;
+  }
+
+  /**
+   * Provides the publisher names linked to DOI prefixes in the database that
+   * are linked to multiple publishers.
+   * 
+   * @return a Map<String, Collection<String>> with the publisher names keyed by
+   *         the DOI prefixes to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getDoiPrefixesWithMultiplePublishers()
+      throws DbException {
+    final String DEBUG_HEADER = "getDoiPrefixesWithMultiplePublishers(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> doiPrefixesPublishers = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the DOI prefix publishers.
+      doiPrefixesPublishers = getDoiPrefixesWithMultiplePublishers(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publishersDoiPrefixes.size() = " + doiPrefixesPublishers.size());
+    return doiPrefixesPublishers;
+  }
+
+  /**
+   * Provides the publisher names linked to DOI prefixes in the database that
+   * are linked to multiple publishers.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the publisher names keyed by
+   *         the DOI prefixes to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getDoiPrefixesWithMultiplePublishers(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getDoiPrefixesWithMultiplePublishers(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> doiPrefixesPublishers =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+    String sql = null;
+
+    try {
+      String previousDoiPrefix = null;
+
+      // Get the DOI prefix publishers.
+      sql = GET_DOI_PREFIXES_MULTIPLE_PUBLISHERS_DERBY_QUERY;
+
+      if (dbManager.isTypePostgresql()) {
+	sql = GET_DOI_PREFIXES_MULTIPLE_PUBLISHERS_PG_QUERY;
+      } else if (dbManager.isTypeMysql()) {
+	sql = GET_DOI_PREFIXES_MULTIPLE_PUBLISHERS_MYSQL_QUERY;
+      }
+
+      stmt = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the DOI prefix publishers.
+      while (resultSet.next()) {
+	String prefix = resultSet.getString("prefix");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "prefix = " + prefix);
+
+	String publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	if (prefix.equals(previousDoiPrefix)) {
+	  doiPrefixesPublishers.get(prefix).add(publisherName);
+	} else {
+	  Collection<String> prefixPublishers = new ArrayList<String>();
+	  prefixPublishers.add(publisherName);
+	  doiPrefixesPublishers.put(prefix, prefixPublishers);
+	  previousDoiPrefix = prefix;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the DOI prefixes publishers";
+      log.error(message, sqle);
+      log.error("SQL = '" + sql + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publishersDoiPrefixes.size() = " + doiPrefixesPublishers.size());
+    return doiPrefixesPublishers;
+  }
+
+  /**
+   * Provides the DOI prefixes for the Archival Units in the database with
+   * multiple DOI prefixes.
+   * 
+   * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
+   *         the Archival Unit name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getAusWithMultipleDoiPrefixes()
+      throws DbException {
+    final String DEBUG_HEADER = "getAusWithMultipleDoiPrefixes(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> ausDoiPrefixes = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the Archival Unit DOI prefixes.
+      ausDoiPrefixes = getAusWithMultipleDoiPrefixes(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ausDoiPrefixes.size() = "
+	+ ausDoiPrefixes.size());
+    return ausDoiPrefixes;
+  }
+
+  /**
+   * Provides the DOI prefixes for the Archival Units in the database with
+   * multiple DOI prefixes.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
+   *         the Archival Unit name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getAusWithMultipleDoiPrefixes(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "getAusWithMultipleDoiPrefixes(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> ausDoiPrefixes =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+    String sql = null;
+
+    try {
+      String previousAuId = null;
+
+      // Get the Archival Unit DOI prefixes.
+      sql = GET_AUS_MULTIPLE_DOI_PREFIXES_DERBY_QUERY;
+
+      if (dbManager.isTypePostgresql()) {
+	sql = GET_AUS_MULTIPLE_DOI_PREFIXES_PG_QUERY;
+      } else if (dbManager.isTypeMysql()) {
+	sql = GET_AUS_MULTIPLE_DOI_PREFIXES_MYSQL_QUERY;
+      }
+
+      stmt = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the Archival Unit DOI prefixes. 
+      while (resultSet.next()) {
+	String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	String auKey = resultSet.getString(AU_KEY_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	String auId = PluginManager.generateAuId(pluginId, auKey);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	String prefix = resultSet.getString("prefix");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "prefix = " + prefix);
+
+	if (auId.equals(previousAuId)) {
+	  ausDoiPrefixes.get(auId).add(prefix);
+	} else {
+	  Collection<String> auPrefixes = new ArrayList<String>();
+	  auPrefixes.add(prefix);
+	  ausDoiPrefixes.put(auId, auPrefixes);
+	  previousAuId = auId;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the Archival Units DOI prefixes";
+      log.error(message, sqle);
+      log.error("SQL = '" + sql + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ausDoiPrefixes.size() = "
+	+ ausDoiPrefixes.size());
+    return ausDoiPrefixes;
+  }
+
+  /**
+   * Provides the ISBNs for the publications in the database with more than two
+   * ISBNS.
+   * 
+   * @return a Map<String, Collection<Isbn>> with the ISBNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<Isbn>> getPublicationsWithMoreThan2Isbns()
+      throws DbException {
+    final String DEBUG_HEADER = "getPublicationsWithMoreThan2Isbns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<Isbn>> publicationsIsbns = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the publication ISBNs.
+      publicationsIsbns = getPublicationsWithMoreThan2Isbns(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publicationsIsbns.size() = " + publicationsIsbns.size());
+    return publicationsIsbns;
+  }
+
+  /**
+   * Provides the ISBNs for the publications in the database with more than two
+   * ISBNS.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<Isbn>> with the ISBNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<Isbn>> getPublicationsWithMoreThan2Isbns(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPublicationsWithMoreThan2Isbns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<Isbn>> publicationsIsbns =
+	new TreeMap<String, Collection<Isbn>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousPublicationName = null;
+
+      // Get the publication ISBNs.
+      stmt = dbManager.prepareStatement(conn,
+	  GET_PUBLICATIONS_MORE_2_ISBNS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the publication ISBNs.
+      while (resultSet.next()) {
+	String publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	String isbn = resultSet.getString(ISBN_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbn = " + isbn);
+
+	String isbnType = resultSet.getString(ISBN_TYPE_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbnType = " + isbnType);
+
+	if (publicationName.equals(previousPublicationName)) {
+	  publicationsIsbns.get(publicationName).add(new Isbn(isbn, isbnType));
+	} else {
+	  Collection<Isbn> publicationIsbns = new ArrayList<Isbn>();
+	  publicationIsbns.add(new Isbn(isbn, isbnType));
+	  publicationsIsbns.put(publicationName, publicationIsbns);
+	  previousPublicationName = publicationName;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the publication ISBNs";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_PUBLICATIONS_MORE_2_ISBNS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publicationsIsbns.size() = " + publicationsIsbns.size());
+    return publicationsIsbns;
+  }
+
+  /**
+   * Provides the ISSNs for the publications in the database with more than two
+   * ISSNS.
+   * 
+   * @return a Map<String, Collection<Issn>> with the ISSNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<Issn>> getPublicationsWithMoreThan2Issns()
+      throws DbException {
+    final String DEBUG_HEADER = "getPublicationsWithMoreThan2Issns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<Issn>> publicationsIssns = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the publication ISSNs.
+      publicationsIssns = getPublicationsWithMoreThan2Issns(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publicationsIssns.size() = " + publicationsIssns.size());
+    return publicationsIssns;
+  }
+
+  /**
+   * Provides the ISSNs for the publications in the database with more than two
+   * ISSNS.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<Issn>> with the ISSNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<Issn>> getPublicationsWithMoreThan2Issns(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPublicationsWithMoreThan2Issns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<Issn>> publicationsIssns =
+	new TreeMap<String, Collection<Issn>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousPublicationName = null;
+
+      // Get the publication ISSNs.
+      stmt = dbManager.prepareStatement(conn,
+	  GET_PUBLICATIONS_MORE_2_ISSNS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the publication ISSNs.
+      while (resultSet.next()) {
+	String publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	String issn = resultSet.getString(ISSN_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issn = " + issn);
+
+	String issnType = resultSet.getString(ISSN_TYPE_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issnType = " + issnType);
+
+	if (publicationName.equals(previousPublicationName)) {
+	  publicationsIssns.get(publicationName).add(new Issn(issn, issnType));
+	} else {
+	  Collection<Issn> publicationIssns = new ArrayList<Issn>();
+	  publicationIssns.add(new Issn(issn, issnType));
+	  publicationsIssns.put(publicationName, publicationIssns);
+	  previousPublicationName = publicationName;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the publication ISSNs";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_PUBLICATIONS_MORE_2_ISSNS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publicationsIssns.size() = " + publicationsIssns.size());
+    return publicationsIssns;
+  }
+
+  /**
+   * Provides the publication names linked to ISBNs in the database that are
+   * linked to multiple publications.
+   * 
+   * @return a Map<String, Collection<String>> with the publication names keyed
+   *         by the ISBNs to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getIsbnsWithMultiplePublications()
+      throws DbException {
+    final String DEBUG_HEADER = "getIsbnsWithMultiplePublications(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> isbnsPublications = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the ISBN publications.
+      isbnsPublications = getIsbnsWithMultiplePublications(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "isbnsPublications.size() = " + isbnsPublications.size());
+    return isbnsPublications;
+  }
+
+  /**
+   * Provides the publication names linked to ISBNs in the database that are
+   * linked to multiple publications.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the publication names keyed
+   *         by the ISBNs to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getIsbnsWithMultiplePublications(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getIsbnsWithMultiplePublications(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> isbnsPublications =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousIsbn = null;
+
+      // Get the ISBN publications.
+      stmt = dbManager.prepareStatement(conn,
+	  GET_ISBNS_MULTIPLE_PUBLICATIONS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the ISBN publications.
+      while (resultSet.next()) {
+	String isbn = resultSet.getString(ISBN_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbn = " + isbn);
+
+	String publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	if (isbn.equals(previousIsbn)) {
+	  isbnsPublications.get(isbn).add(publicationName);
+	} else {
+	  Collection<String> isbnPublications = new ArrayList<String>();
+	  isbnPublications.add(publicationName);
+	  isbnsPublications.put(isbn, isbnPublications);
+	  previousIsbn = isbn;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the ISBN publications";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_ISBNS_MULTIPLE_PUBLICATIONS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "isbnsPublications.size() = " + isbnsPublications.size());
+    return isbnsPublications;
+  }
+
+  /**
+   * Provides the publication names linked to ISSNs in the database that are
+   * linked to multiple publications.
+   * 
+   * @return a Map<String, Collection<String>> with the publication names keyed
+   *         by the ISSNs to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getIssnsWithMultiplePublications()
+      throws DbException {
+    final String DEBUG_HEADER = "getIssnsWithMultiplePublications(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> issnsPublications = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the ISSN publications.
+      issnsPublications = getIssnsWithMultiplePublications(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "issnsPublications.size() = " + issnsPublications.size());
+    return issnsPublications;
+  }
+
+  /**
+   * Provides the publication names linked to ISSNs in the database that are
+   * linked to multiple publications.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the publication names keyed
+   *         by the ISSNs to which they are linked.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getIssnsWithMultiplePublications(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getIssnsWithMultiplePublications(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> issnsPublications =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousIssn = null;
+
+      // Get the ISSN publications.
+      stmt = dbManager.prepareStatement(conn,
+	  GET_ISSNS_MULTIPLE_PUBLICATIONS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the ISSN publications.
+      while (resultSet.next()) {
+	String issn = resultSet.getString(ISSN_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issn = " + issn);
+
+	String publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	if (issn.equals(previousIssn)) {
+	  issnsPublications.get(issn).add(publicationName);
+	} else {
+	  Collection<String> issnPublications = new ArrayList<String>();
+	  issnPublications.add(publicationName);
+	  issnsPublications.put(issn, issnPublications);
+	  previousIssn = issn;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the ISSN publications";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_ISSNS_MULTIPLE_PUBLICATIONS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "issnsPublications.size() = " + issnsPublications.size());
+    return issnsPublications;
+  }
+
+  /**
+   * Provides the ISSNs for books in the database.
+   * 
+   * @return a Map<String, Collection<String>> with the ISSNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getBooksWithIssns()
+      throws DbException {
+    final String DEBUG_HEADER = "getBooksWithIssns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> booksWithIssns = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the books with ISSNs.
+      booksWithIssns = getBooksWithIssns(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "booksWithIssns.size() = "
+	+ booksWithIssns.size());
+    return booksWithIssns;
+  }
+
+  /**
+   * Provides the ISSNs for books in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the ISSNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getBooksWithIssns(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "getBooksWithIssns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> booksWithIssns =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousDisplayPublicationName = null;
+
+      // Get the publication ISSNs.
+      stmt = dbManager.prepareStatement(conn, GET_BOOKS_WITH_ISSNS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the book ISSNs.
+      while (resultSet.next()) {
+	String publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	String publicationTypeName = resultSet.getString(TYPE_NAME_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publicationTypeName = "
+	    + publicationTypeName);
+
+	String displayPublicationName =
+	    publicationName + " [" + publicationTypeName.substring(0, 1) + "]";
+
+	String issn = resultSet.getString(ISSN_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issn = " + issn);
+
+	if (displayPublicationName.equals(previousDisplayPublicationName)) {
+	  booksWithIssns.get(displayPublicationName).add(issn);
+	} else {
+	  Collection<String> publicationIssns = new ArrayList<String>();
+	  publicationIssns.add(issn);
+	  booksWithIssns.put(displayPublicationName, publicationIssns);
+	  previousDisplayPublicationName = displayPublicationName;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the book ISSNs";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_BOOKS_WITH_ISSNS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "booksWithIssns.size() = "
+	+ booksWithIssns.size());
+    return booksWithIssns;
+  }
+
+  /**
+   * Provides the ISBNs for periodicals in the database.
+   * 
+   * @return a Map<String, Collection<String>> with the ISBNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getPeriodicalsWithIsbns()
+      throws DbException {
+    final String DEBUG_HEADER = "getPeriodicalsWithIsbns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> periodicalsWithIsbns = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the periodicals with ISBNs.
+      periodicalsWithIsbns = getPeriodicalsWithIsbns(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "periodicalsWithIsbns.size() = " + periodicalsWithIsbns.size());
+    return periodicalsWithIsbns;
+  }
+
+  /**
+   * Provides the ISBNs for periodicals in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the ISBNs keyed by the
+   *         publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getPeriodicalsWithIsbns(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPeriodicalsWithIsbns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> periodicalsWithIsbns =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousDisplayPublicationName = null;
+
+      // Get the publication ISBNs.
+      stmt = dbManager.prepareStatement(conn, GET_PERIODICALS_WITH_ISBNS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the periodical ISBNs.
+      while (resultSet.next()) {
+	String publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	String publicationTypeName = resultSet.getString(TYPE_NAME_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publicationTypeName = "
+	    + publicationTypeName);
+
+	String displayPublicationName =
+	    publicationName + " [" + publicationTypeName.substring(0, 1) + "]";
+
+	String isbn = resultSet.getString(ISBN_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbn = " + isbn);
+
+	if (displayPublicationName.equals(previousDisplayPublicationName)) {
+	  periodicalsWithIsbns.get(displayPublicationName).add(isbn);
+	} else {
+	  Collection<String> publicationIsbns = new ArrayList<String>();
+	  publicationIsbns.add(isbn);
+	  periodicalsWithIsbns.put(displayPublicationName, publicationIsbns);
+	  previousDisplayPublicationName = displayPublicationName;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the periodical ISBNs";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_PERIODICALS_WITH_ISBNS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "periodicalsWithIsbns.size() = " + periodicalsWithIsbns.size());
+    return periodicalsWithIsbns;
+  }
+
+  /**
+   * Provides the Archival Units in the database with an unknown provider.
+   * 
+   * @return a Collection<String> with the sorted Archival Unit names.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<String> getUnknownProviderAuIds() throws DbException {
+    final String DEBUG_HEADER = "getUnknownProviderAus(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<String> unknownProviderAuIds = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the identifiers of the Archival Unitswith an unknown provider.
+      unknownProviderAuIds = getUnknownProviderAuIds(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "unknownProviderAuIds.size() = " + unknownProviderAuIds.size());
+    return unknownProviderAuIds;
+  }
+
+  /**
+   * Provides the Archival Units in the database with an unknown provider.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<String> with the sorted Archival Unit names.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<String> getUnknownProviderAuIds(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "getUnknownProviderAuIds(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<String> unknownProviderAuIds = new ArrayList<String>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+    String sql = GET_UNKNOWN_PROVIDER_AUS_QUERY;
+
+    try {
+      stmt = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the Archival Unit DOI prefixes. 
+      while (resultSet.next()) {
+	String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	String auKey = resultSet.getString(AU_KEY_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	String auId = PluginManager.generateAuId(pluginId, auKey);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	unknownProviderAuIds.add(auId);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the Archival Units with unknown provider";
+      log.error(message, sqle);
+      log.error("SQL = '" + sql + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "unknownProviderAuIds.size() = " + unknownProviderAuIds.size());
+    return unknownProviderAuIds;
   }
 }
