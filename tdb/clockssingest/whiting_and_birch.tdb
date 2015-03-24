@@ -116,13 +116,15 @@
       implicit < status ; status2 ; year ; param[year] ; name ; volume >
       param[journal_id] = JPTS
       
-      au < exists ; exists ; 2006 ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
-      au < exists ; exists ; 2008 ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
-      au < exists ; exists ; 2009 ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 >
-      au < doNotProcess ; doNotProcess ; 2010-2011 ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
-      au < doNotProcess ; doNotProcess ; 2011-2013 ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
-      au < doNotProcess ; doNotProcess ; 2013-2014 ; 2013-2014 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
-      au < exists ; exists ; 2014-2015 ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 >
+      au < exists ; exists ; 2003 ; 2003 ; The Journal of Practice Teaching and Learning Volume 2003 ; 2003 >
+      au < exists ; exists ; 2005 ; 2005 ; The Journal of Practice Teaching and Learning Volume 2005 ; 2005 >
+      au < exists ; exists ; 2006 ; 2006 ; The Journal of Practice Teaching and Learning Volume 2006 ; 2006 >
+      au < exists ; exists ; 2008 ; 2008 ; The Journal of Practice Teaching and Learning Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; 2009 ; The Journal of Practice Teaching and Learning Volume 2009 ; 2009 >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Practice Teaching and Learning Volume 2010 ; 2010 >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Practice Teaching and Learning Volume 2011 ; 2011 >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Practice Teaching and Learning Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; 2014 ; The Journal of Practice Teaching and Learning Volume 2014 ; 2014 >
 
     }
     
@@ -161,14 +163,15 @@
       implicit < status ; status2 ; year ; param[year] ; name ; volume >
       param[journal_id] = SWSSR
       
-      au < exists ; exists ; 2004 ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
-      au < exists ; exists ; 2005-2007 ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
-      au < exists ; exists ; 2007-2008 ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
-      au < doNotProcess ; doNotProcess ; 2010-2011 ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
-      au < doNotProcess ; doNotProcess ; 2011-2012 ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
-      au < doNotProcess ; doNotProcess ; 2012-2013 ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 >
-      au < doNotProcess ; doNotProcess ; 2013-2014 ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 >
-      au < exists ; exists ; 2014-2015 ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 >
+      au < exists ; exists ; 2004 ; 2004 ; Social Work and Social Sciences Review Volume 2004 ; 2004 >
+      au < exists ; exists ; 2005 ; 2005 ; Social Work and Social Sciences Review Volume 2005 ; 2005 >
+      au < exists ; exists ; 2007 ; 2007 ; Social Work and Social Sciences Review Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; 2008 ; Social Work and Social Sciences Review Volume 2008 ; 2008 >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Social Work and Social Sciences Review Volume 2010 ; 2010 >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Social Work and Social Sciences Review Volume 2011 ; 2011 >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Social Work and Social Sciences Review Volume 2012 ; 2012 >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Social Work and Social Sciences Review Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; 2014 ; Social Work and Social Sciences Review Volume 2014 ; 2014 >
 
     }
     
@@ -199,8 +202,8 @@
       implicit < status ; status2 ; year ; param[year] ; name ; volume >
       param[journal_id] = JSPW
       
-      au < doNotProcess ; doNotProcess ; 2012-2013 ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
-      au < exists ; exists ; 2014 ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 2012 ; 2012 >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 2013 ; 2013 >
     }
     
   }
