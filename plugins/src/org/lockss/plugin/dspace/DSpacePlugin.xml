@@ -1,27 +1,31 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.dspace.DSpacePlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>DSpace Plugin</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"DuraSpace Plugin, Base URL %s, Year %d, OAI Set %s", base_url, year, oai_set</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>1</string>
+    <string>"DSpace Plugin, Base URL %s, OAI Set %s, Year %d", base_url, oai_set, year</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>DuraSpace Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -45,20 +49,20 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
         <key>oai_set</key>
         <displayName>OAI Set</displayName>
         <description>OAI PMH set of this AU</description>
         <type>1</type>
         <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
