@@ -10,6 +10,48 @@
     pluginPrefix = org.lockss.plugin.highwire.
     attr[au_feature_key]=pdf
 
+  {
+
+    title <
+      name = Abstracts in Anthropology ;
+      issn = 0001-3455 ;
+      eissn = 1557-5136
+    >
+
+      param[base_url] = http://aax.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[0] = content available from 1970 volume 1 to 1999 volume 39
+
+      au < exists ; 2000 ; Abstracts in Anthropology Volume 40 ; 40 >
+      au < exists ; 2000 ; Abstracts in Anthropology Volume 41 ; 41 >
+
+      au < exists ; 2004 ; Abstracts in Anthropology Volume 49 ; 49 >
+      au < exists ; 2005 ; Abstracts in Anthropology Volume 50 ; 50 >
+      au < exists ; 2005 ; Abstracts in Anthropology Volume 51 ; 51 >
+      au < exists ; 2006 ; Abstracts in Anthropology Volume 52 ; 52 >
+      au < exists ; 2006 ; Abstracts in Anthropology Volume 53 ; 53 >
+      au < exists ; 2007 ; Abstracts in Anthropology Volume 54 ; 54 >
+      au < exists ; 2007 ; Abstracts in Anthropology Volume 55 ; 55 >
+      au < exists ; 2008 ; Abstracts in Anthropology Volume 56 ; 56 >
+      au < exists ; 2008 ; Abstracts in Anthropology Volume 57 ; 57 >
+      au < exists ; 2009 ; Abstracts in Anthropology Volume 58 ; 58 >
+      au < exists ; 2009 ; Abstracts in Anthropology Volume 59 ; 59 >
+      au < exists ; 2010 ; Abstracts in Anthropology Volume 60 ; 60 >
+      au < exists ; 2010 ; Abstracts in Anthropology Volume 61 ; 61 >
+      au < exists ; 2011 ; Abstracts in Anthropology Volume 62 ; 62 >
+      au < exists ; 2011 ; Abstracts in Anthropology Volume 63 ; 63 >
+      au < exists ; 2012 ; Abstracts in Anthropology Volume 64 ; 64 >
+      au < exists ; 2012 ; Abstracts in Anthropology Volume 65 ; 65 >
+      au < exists ; 2013 ; Abstracts in Anthropology Volume 66 ; 66 >
+      au < exists ; 2013 ; Abstracts in Anthropology Volume 67 ; 67 >
+      au < exists ; 2014 ; Abstracts in Anthropology Volume 68 ; 68 >
+      au < exists ; 2014 ; Abstracts in Anthropology Volume 69 ; 69 >
+      au < exists ; 2015 ; Abstracts in Anthropology Volume 70 ; 70 >
+      au < expected ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 >
+
+  }
+
     {
 
       title <
@@ -9305,6 +9347,21 @@
 
     }
 
+  {
+
+    title <
+      name = Digital Health ;
+      eissn = 2055-2076 
+    >
+
+      param[base_url] = http://dhj.sagepub.com/
+      pluginSuffix = HighWireDrupalPlugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Digital Health Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
@@ -14987,6 +15044,29 @@
       au < manifest ; 2015 ; Healthcare Management Forum Volume 28 ; 28 >
   }
 
+  {
+
+    title <
+      name = HERD: Health Environments Research & Design Journal ;
+      issn = 1937-5867 ;
+      eissn = 2167-5112
+    >
+
+      param[base_url] = http://her.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2007-2008 ; Healthcare Management Forum Volume 1 ; 1 >
+      au < exists ; 2008-2009 ; Healthcare Management Forum Volume 2 ; 2 >
+      au < exists ; 2009-2010 ; Healthcare Management Forum Volume 3 ; 3 >
+      au < exists ; 2010-2011 ; Healthcare Management Forum Volume 4 ; 4 >
+      au < exists ; 2011-2012 ; Healthcare Management Forum Volume 5 ; 5 >
+      au < exists ; 2012-2013 ; Healthcare Management Forum Volume 6 ; 6 >
+      au < exists ; 2013-2014 ; Healthcare Management Forum Volume 7 ; 7 >
+      au < exists ; 2014-2015 ; Healthcare Management Forum Volume 8 ; 8 >
+
+  }
+
     {
 
       title <
@@ -16044,6 +16124,38 @@
       au < exists ; 2013 ; Illness, Crisis & Loss Volume 21 ; 21 >
       au < exists ; 2014 ; Illness, Crisis & Loss Volume 22 ; 22 >
       au < exists ; 2015 ; Illness, Crisis & Loss Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Imagination, Cognition and Personality ;
+      issn = 0276-2366 ;
+      eissn = 1541-4477
+    >
+
+      param[base_url] = http://ica.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[0] = content available from 1981 volume 1 to 1999 volume 18
+
+      au < exists ; 1999-2000 ; Imagination, Cognition and Personality Volume 19 ; 19 >
+      au < exists ; 2000-2001 ; Imagination, Cognition and Personality Volume 20 ; 20 >
+      au < exists ; 2001-2002 ; Imagination, Cognition and Personality Volume 21 ; 21 >
+      au < exists ; 2002-2003 ; Imagination, Cognition and Personality Volume 22 ; 22 >
+      au < exists ; 2003-2004 ; Imagination, Cognition and Personality Volume 23 ; 23 >
+      au < exists ; 2004-2005 ; Imagination, Cognition and Personality Volume 24 ; 24 >
+      au < exists ; 2005-2006 ; Imagination, Cognition and Personality Volume 25 ; 25 >
+      au < exists ; 2006-2007 ; Imagination, Cognition and Personality Volume 26 ; 26 >
+      au < exists ; 2007-2008 ; Imagination, Cognition and Personality Volume 27 ; 27 >
+      au < exists ; 2008-2009 ; Imagination, Cognition and Personality Volume 28 ; 28 >
+      au < exists ; 2009-2010 ; Imagination, Cognition and Personality Volume 29 ; 29 >
+      au < exists ; 2010-2011 ; Imagination, Cognition and Personality Volume 30 ; 30 >
+      au < exists ; 2011-2012 ; Imagination, Cognition and Personality Volume 31 ; 31 >
+      au < exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 >
+      au < exists ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 >
+      au < exists ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 >
 
   }
 
@@ -22398,6 +22510,31 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of Cutaneous Medicine and Surgery ;
+      issn = 1203-4754 ;
+      eissn = 1615-7109
+    >
+
+      param[base_url] = http://cms.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2006 ; Journal of Cutaneous Medicine and Surgery Volume 10 ; 10 >
+      au < exists ; 2007 ; Journal of Cutaneous Medicine and Surgery Volume 11 ; 11 >
+      au < exists ; 2008 ; Journal of Cutaneous Medicine and Surgery Volume 12 ; 12 >
+      au < exists ; 2009 ; Journal of Cutaneous Medicine and Surgery Volume 13 ; 13 >
+      au < exists ; 2010 ; Journal of Cutaneous Medicine and Surgery Volume 14 ; 14 >
+      au < exists ; 2011 ; Journal of Cutaneous Medicine and Surgery Volume 15 ; 15 >
+      au < doesNotExist ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 >
+      au < exists ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 >
+      au < exists ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 >
+      au < exists ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 >
+      
+  }
+
     {
 
       title <
@@ -23337,6 +23474,43 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Journal of Endovascular Therapy ;
+      issn = 1526-6028 ;
+      eissn = 1545-1550
+    >
+
+      param[base_url] = http://jet.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1995 ; Journal of Endovascular Therapy Volume 1 ; 1 >
+      au < exists ; 1995 ; Journal of Endovascular Therapy Volume 2 ; 2 >
+      au < exists ; 1996 ; Journal of Endovascular Therapy Volume 3 ; 3 >
+      au < exists ; 1997 ; Journal of Endovascular Therapy Volume 4 ; 4 >
+      au < exists ; 1998 ; Journal of Endovascular Therapy Volume 5 ; 5 >
+      au < exists ; 1999 ; Journal of Endovascular Therapy Volume 6 ; 6 >
+      au < exists ; 2000 ; Journal of Endovascular Therapy Volume 7 ; 7 >
+      au < exists ; 2001 ; Journal of Endovascular Therapy Volume 8 ; 8 >
+      au < exists ; 2002 ; Journal of Endovascular Therapy Volume 9 ; 9 >
+      au < exists ; 2003 ; Journal of Endovascular Therapy Volume 10 ; 10 >
+      au < exists ; 2004 ; Journal of Endovascular Therapy Volume 11 ; 11 >
+      au < exists ; 2005 ; Journal of Endovascular Therapy Volume 12 ; 12 >
+      au < exists ; 2006 ; Journal of Endovascular Therapy Volume 13 ; 13 >
+      au < exists ; 2007 ; Journal of Endovascular Therapy Volume 14 ; 14 >
+      au < exists ; 2008 ; Journal of Endovascular Therapy Volume 15 ; 15 >
+      au < exists ; 2009 ; Journal of Endovascular Therapy Volume 16 ; 16 >
+      au < exists ; 2010 ; Journal of Endovascular Therapy Volume 17 ; 17 >
+      au < exists ; 2011 ; Journal of Endovascular Therapy Volume 18 ; 18 >
+      au < exists ; 2012 ; Journal of Endovascular Therapy Volume 19 ; 19 >
+      au < exists ; 2013 ; Journal of Endovascular Therapy Volume 20 ; 20 >
+      au < exists ; 2014 ; Journal of Endovascular Therapy Volume 21 ; 21 >
+      au < exists ; 2015 ; Journal of Endovascular Therapy Volume 22 ; 22 >
+
+  }
 
     {
 
