@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -18,14 +18,14 @@
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = arqcom
 
-      au < exists ; 2008 ; 1 ; Universitas: Arquitetura e Comunicação Social Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Universitas: Arquitetura e Comunicação Social Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Universitas: Arquitetura e Comunicação Social Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Universitas: Arquitetura e Comunicação Social Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Universitas: Arquitetura e Comunicação Social Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Universitas: Arquitetura e Comunicação Social Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Universitas: Arquitetura e Comunicação Social Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 8 ; Universitas: Arquitetura e Comunicação Social Volume 2015 ; 2015 >
+      au < exists ; 2008 ; 1 ; Universitas: Arquitetura e Comunicação Social Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Universitas: Arquitetura e Comunicação Social Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Universitas: Arquitetura e Comunicação Social Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Universitas: Arquitetura e Comunicação Social Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Universitas: Arquitetura e Comunicação Social Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Universitas: Arquitetura e Comunicação Social Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Universitas: Arquitetura e Comunicação Social Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Universitas: Arquitetura e Comunicação Social Volume 2015 ; 2015 ; >
 
   }
 
@@ -43,19 +43,19 @@
       comment[notReady] = no consistent access to content - "Host did not respond"
       comment[notReady2] = When host does respond, there is an download counter on every article
 
-      au < notReady ; 2003 ; 1 ; Universitas: Ciências da Saúde Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 2 ; Universitas: Ciências da Saúde Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 3 ; Universitas: Ciências da Saúde Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 4 ; Universitas: Ciências da Saúde Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 5 ; Universitas: Ciências da Saúde Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 6 ; Universitas: Ciências da Saúde Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 7 ; Universitas: Ciências da Saúde Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 8 ; Universitas: Ciências da Saúde Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 9 ; Universitas: Ciências da Saúde Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 10 ; Universitas: Ciências da Saúde Volume 2012 ; 2012 >
-      au < notReady ; 2013 ; 11 ; Universitas: Ciências da Saúde Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 12 ; Universitas: Ciências da Saúde Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 13 ; Universitas: Ciências da Saúde Volume 2015 ; 2015 >
+      au < notReady ; 2003 ; 1 ; Universitas: Ciências da Saúde Volume 2003 ; 2003 ; slow response. custom download counter >
+      au < notReady ; 2004 ; 2 ; Universitas: Ciências da Saúde Volume 2004 ; 2004 ; slow response. custom download counter >
+      au < notReady ; 2005 ; 3 ; Universitas: Ciências da Saúde Volume 2005 ; 2005 ; slow response. custom download counter >
+      au < notReady ; 2006 ; 4 ; Universitas: Ciências da Saúde Volume 2006 ; 2006 ; slow response. custom download counter >
+      au < notReady ; 2007 ; 5 ; Universitas: Ciências da Saúde Volume 2007 ; 2007 ; slow response. custom download counter >
+      au < notReady ; 2008 ; 6 ; Universitas: Ciências da Saúde Volume 2008 ; 2008 ; slow response. custom download counter >
+      au < notReady ; 2009 ; 7 ; Universitas: Ciências da Saúde Volume 2009 ; 2009 ; slow response. custom download counter >
+      au < notReady ; 2010 ; 8 ; Universitas: Ciências da Saúde Volume 2010 ; 2010 ; slow response. custom download counter >
+      au < notReady ; 2011 ; 9 ; Universitas: Ciências da Saúde Volume 2011 ; 2011 ; slow response. custom download counter >
+      au < notReady ; 2012 ; 10 ; Universitas: Ciências da Saúde Volume 2012 ; 2012 ; slow response. custom download counter >
+      au < notReady ; 2013 ; 11 ; Universitas: Ciências da Saúde Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 12 ; Universitas: Ciências da Saúde Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Universitas: Ciências da Saúde Volume 2015 ; 2015 ; >
 
   }
 
@@ -71,11 +71,11 @@
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = gti
 
-      au < exists ; 2011 ; 1 ; Universitas: Gestão e TI Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Universitas: Gestão e TI Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Universitas: Gestão e TI Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 4 ; Universitas: Gestão e TI Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 5 ; Universitas: Gestão e TI Volume 2015 ; 2015 >
+      au < exists ; 2011 ; 1 ; Universitas: Gestão e TI Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Universitas: Gestão e TI Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Universitas: Gestão e TI Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 4 ; Universitas: Gestão e TI Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 5 ; Universitas: Gestão e TI Volume 2015 ; 2015 ; >
 
   }
 
@@ -91,15 +91,15 @@
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = jus
 
-      au < exists ; 2007 ; 1 ; Universitas Jus (UniCEUB Law Journal) Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Universitas Jus (UniCEUB Law Journal) Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Universitas Jus (UniCEUB Law Journal) Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Universitas Jus (UniCEUB Law Journal) Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 5 ; Universitas Jus (UniCEUB Law Journal) Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Universitas Jus (UniCEUB Law Journal) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Universitas Jus (UniCEUB Law Journal) Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Universitas Jus (UniCEUB Law Journal) Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 9 ; Universitas Jus (UniCEUB Law Journal) Volume 2015 ; 2015 >
+      au < exists ; 2007 ; 1 ; Universitas Jus (UniCEUB Law Journal) Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Universitas Jus (UniCEUB Law Journal) Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; Universitas Jus (UniCEUB Law Journal) Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; Universitas Jus (UniCEUB Law Journal) Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; Universitas Jus (UniCEUB Law Journal) Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; Universitas Jus (UniCEUB Law Journal) Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Universitas Jus (UniCEUB Law Journal) Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 8 ; Universitas Jus (UniCEUB Law Journal) Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Universitas Jus (UniCEUB Law Journal) Volume 2015 ; 2015 ; >
 
   }
 
@@ -114,12 +114,12 @@
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = pade
 
-      au < exists ; 2006 ; 1 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 3 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 4 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 5 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 6 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2011 ; 2011 >
+      au < exists ; 2006 ; 1 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2010 ; 2010 ; >
+      au < expected ; 2011 ; 6 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2011 ; 2011 ; >
 
   }
 
@@ -136,18 +136,18 @@
       param[journal_id] = prisma
       comment[0] = No permission from publisher
 
-      au < exists ; 2004 ; 1 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 12 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2015 ; 2015 >
+      au < exists ; 2004 ; 1 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 12 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2015 ; 2015 ; >
 
   }
 
@@ -163,11 +163,11 @@
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = RBPP
 
-      au < released ; 2011 ; 1 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2011 ; 2011 >
-      au < released ; 2012 ; 2 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2012 ; 2012 >
-      au < released ; 2013 ; 3 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 4 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 5 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2015 ; 2015 >
+      au < released ; 2011 ; 1 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 2 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 3 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 4 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 5 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2015 ; 2015 ; >
 
   }
 
@@ -183,11 +183,11 @@
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = rdi
 
-      au < exists ; 2011 ; 1 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 4 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 5 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2015 ; 2015 >
+      au < exists ; 2011 ; 1 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 4 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 5 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2015 ; 2015 ; >
 
   }
 
@@ -203,14 +203,14 @@
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = universitashumanas
 
-      au < exists ; 2008 ; 1 ; Universitas Humanas Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Universitas Humanas Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Universitas Humanas Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Universitas Humanas Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Universitas Humanas Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Universitas Humanas Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Universitas Humanas Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 8 ; Universitas Humanas Volume 2015 ; 2015 >
+      au < exists ; 2008 ; 1 ; Universitas Humanas Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Universitas Humanas Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Universitas Humanas Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Universitas Humanas Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Universitas Humanas Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Universitas Humanas Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Universitas Humanas Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Universitas Humanas Volume 2015 ; 2015 ; >
 
   }
 
