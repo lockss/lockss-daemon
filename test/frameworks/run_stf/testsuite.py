@@ -1438,8 +1438,7 @@ symmetricV3Tests = unittest.TestSuite( ( SimpleV3SymmetricTestCase(),
                                          ) )
 
 popV3Tests = unittest.TestSuite( ( SimpleV3PoPTestCase(),
-                                   SimpleV3PoPCompatibilityTestCase(),
-                                   TotalLossRecoveryPoPV3TestCase() ) )
+                                   SimpleV3PoPCompatibilityTestCase() ) )
 
 pollPolicyV3Tests = unittest.TestSuite( ( PoRThenLocalV3TestCase(),
                                            PoRThenPoPV3TestCase() ) )
