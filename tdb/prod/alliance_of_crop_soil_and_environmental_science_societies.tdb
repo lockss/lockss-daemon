@@ -4,6 +4,8 @@
     name = Alliance of Crop, Soil, and Environmental Science Societies
   >
 
+    plugin = needs.plugin # See PD-48
+
   # There are a few other titles:
   # - Applied Turfgrass Science (ASA and CSSA): https://dl.sciencesocieties.org/publications/ats
   # - Crop Management (ASA and CSSA): https://dl.sciencesocieties.org/publications/cm
@@ -26,7 +28,6 @@
 
     # On behalf of American Society of Agronomy
     # See https://dl.sciencesocieties.org/publications/aj
-    plugin = needs.plugin # See PD-48
 
   }
 
