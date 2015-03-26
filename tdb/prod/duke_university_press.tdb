@@ -1289,6 +1289,28 @@
 
   {
     title <
+      name = Journal of Chinese Literature and Culture ;
+      issn = 2329-0048 ;
+      eissn = 2329-0056 ;
+      issnl = 2329-0048
+    >
+
+   {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_chinese_literature_and_culture
+      attr[journal_id] = clc
+
+      au < exists ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
+      au < expected ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
+
+     }
+
+  }
+
+  {
+    title <
       name = Journal of Health Politics, Policy and Law ;
       issn = 0361-6878 ;
       eissn = 1527-1927 ;
