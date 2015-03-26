@@ -11806,7 +11806,7 @@
     au < exists ; 2012 ; Journal of Economic Entomology Volume 105 ; 105 >
     au < exists ; 2013 ; Journal of Economic Entomology Volume 106 ; 106 >
     au < exists ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 >
-    au < expected ; 2015 ; Journal of Economic Entomology Volume 108 ; 108 >
+    au < exists ; 2015 ; Journal of Economic Entomology Volume 108 ; 108 >
 
   }
 
@@ -12183,7 +12183,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = expected to be online on 21 Jan 2015
 
-    au < expected ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 >
+    au < exists ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 >
 
   }
 
@@ -12283,7 +12283,10 @@
 
     param[base_url] = http://jogss.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
     comment[0] = expected to be online on 6 Jan 2016
+
+    au < expected ; 2016 ; Journal of Global Security Studies Volume 1 ; 1 >
 
   }
 
@@ -12473,7 +12476,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 >
 
     }
 
@@ -16266,12 +16269,13 @@
       issnl = 0026-9662
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = expected to be online on 15 Jan 2015
 
-    au < expected ; 2015 ; The Monist Volume 98 ; 98 >
+    au < exists ; 2013 ; The Monist Volume 96 ; 96 >
+    au < exists ; 2014 ; The Monist Volume 97 ; 97 >
+    au < exists ; 2015 ; The Monist Volume 98 ; 98 >
 
   }
 
@@ -17234,7 +17238,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 >
 
   }
 
@@ -22677,7 +22681,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2014 ; Work, Aging and Retirement Volume 1 ; 1 >
+    au < exists ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 >
 
   }
 
