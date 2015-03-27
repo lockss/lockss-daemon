@@ -41,22 +41,24 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
 
 public class ELifeDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFactory {
-
+  
+  protected static NodeFilter[] filters = new NodeFilter[] {
+    // Do not crawl responsive header or references as links not wanted here
+    HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
+    // The following sections were a source of over-crawl (http://elifesciences.org/content/1/e00067)
+    HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-elife-article-toolbox")),
+    // possible links out of AU
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-(corrections|criticalrelation)"),
+  };
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Do not crawl responsive header or references as links not wanted here
-        HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
-        // The following sections were a source of over-crawl (http://elifesciences.org/content/1/e00067)
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-elife-article-toolbox")),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
-    };
     
     InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
     
