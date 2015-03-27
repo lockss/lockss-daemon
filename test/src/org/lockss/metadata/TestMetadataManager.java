@@ -1415,7 +1415,7 @@ public class TestMetadataManager extends LockssTestCase {
 	metadataManager.getPublishersWithMultipleDoiPrefixes().size());
     assertEquals(0,
 	metadataManager.getDoiPrefixesWithMultiplePublishers().size());
-    assertEquals(0, metadataManager.getAusWithMultipleDoiPrefixes().size());
+    assertEquals(0, metadataManager.getAuNamesWithMultipleDoiPrefixes().size());
     assertEquals(0, metadataManager.getPublicationsWithMoreThan2Isbns().size());
     assertEquals(0, metadataManager.getPublicationsWithMoreThan2Issns().size());
     assertEquals(0, metadataManager.getIsbnsWithMultiplePublications().size());

@@ -44,6 +44,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.config.Configuration;
@@ -965,19 +966,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Provides a collection of auids for AUs pending reindexing.
    * The number of elements returned is controlled by a definable
-   * parameter {@link MetadataManager.PARAM_PENDING_AU_LIST_SIZE}.
+   * parameter {@link #PARAM_PENDING_AU_LIST_SIZE}.
    * 
    * @return default auids for AUs pending reindexing
    */
   public List<PrioritizedAuId> getPendingReindexingAus() { 
     return getPendingReindexingAus(pendingAuListSize);
   }
-  
+
   /**
    * Provides a collection of auids for AUs pending reindexing.
-   *
-   * @param  the maximum number of auids to return
-   * @return all auids for AUs pending reindexing
+   * 
+   * @param maxAuIds
+   *          An int with the maximum number of auids to return.
+   * @return a List<PrioritizedAuId> with the auids for AUs pending reindexing.
    */
   public List<PrioritizedAuId> getPendingReindexingAus(int maxAuIds) {
     final String DEBUG_HEADER = "getPendingReindexingAus(): ";
@@ -3070,7 +3072,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the print ISSN of the series.
    * @param eIssn
    *          A String with the electronic ISSN of the series.
-   * @param seriesTitle
+   * @param seriesName
    *          A String with the name of the series.
    * @return a Long with the identifier of the series publication.
    * @throws DbException
@@ -3777,17 +3779,57 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the DOI prefixes for the Archival Units in the database with
-   * multiple DOI prefixes.
+   * Provides the DOI prefixes linked to the Archival Unit name for the Archival
+   * Units in the database with multiple DOI prefixes.
    * 
    * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
    *         the Archival Unit name.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public Map<String, Collection<String>> getAusWithMultipleDoiPrefixes()
+  public Map<String, Collection<String>> getAuNamesWithMultipleDoiPrefixes()
       throws DbException {
-    return getMetadataManagerSql().getAusWithMultipleDoiPrefixes();
+    final String DEBUG_HEADER = "getAuNamesWithMultipleDoiPrefixes(): ";
+
+    // The Archival Units that have multiple DOI prefixes, sorted by name.
+    Map<String, Collection<String>> auNamesWithPrefixes =
+	new TreeMap<String, Collection<String>>();
+
+    // Get the DOI prefixes linked to the Archival Units.
+    Map<String, Collection<String>> ausDoiPrefixes =
+	getAuIdsWithMultipleDoiPrefixes();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "ausDoiPrefixes.size() = " + ausDoiPrefixes.size());
+
+    // Loop through the Archival Units.
+    for (String auId : ausDoiPrefixes.keySet()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+      ArchivalUnit au = pluginMgr.getAuFromId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+      if (au != null) {
+	auNamesWithPrefixes.put(au.getName(), ausDoiPrefixes.get(auId));
+      } else {
+	auNamesWithPrefixes.put(auId, ausDoiPrefixes.get(auId));
+      }
+    }
+
+    return auNamesWithPrefixes;
+  }
+
+  /**
+   * Provides the DOI prefixes linked to the Archival Unit identifier for the
+   * Archival Units in the database with multiple DOI prefixes.
+   * 
+   * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
+   *         the Archival Unit identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Map<String, Collection<String>> getAuIdsWithMultipleDoiPrefixes()
+      throws DbException {
+    return getMetadataManagerSql().getAuIdsWithMultipleDoiPrefixes();
   }
 
   /**

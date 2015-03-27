@@ -4760,17 +4760,17 @@ public class MetadataManagerSql {
   }
 
   /**
-   * Provides the DOI prefixes for the Archival Units in the database with
-   * multiple DOI prefixes.
+   * Provides the DOI prefixes linked to the Archival Unit identifier for the
+   * Archival Units in the database with multiple DOI prefixes.
    * 
    * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
-   *         the Archival Unit name.
+   *         the Archival Unit identifier.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  Map<String, Collection<String>> getAusWithMultipleDoiPrefixes()
+  Map<String, Collection<String>> getAuIdsWithMultipleDoiPrefixes()
       throws DbException {
-    final String DEBUG_HEADER = "getAusWithMultipleDoiPrefixes(): ";
+    final String DEBUG_HEADER = "getAuIdsWithMultipleDoiPrefixes(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     Map<String, Collection<String>> ausDoiPrefixes = null;
     Connection conn = null;
@@ -4780,7 +4780,7 @@ public class MetadataManagerSql {
       conn = dbManager.getConnection();
 
       // Get the Archival Unit DOI prefixes.
-      ausDoiPrefixes = getAusWithMultipleDoiPrefixes(conn);
+      ausDoiPrefixes = getAuIdsWithMultipleDoiPrefixes(conn);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -4791,19 +4791,19 @@ public class MetadataManagerSql {
   }
 
   /**
-   * Provides the DOI prefixes for the Archival Units in the database with
-   * multiple DOI prefixes.
+   * Provides the DOI prefixes linked to the Archival Unit identifier for the
+   * Archival Units in the database with multiple DOI prefixes.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
    * @return a Map<String, Collection<String>> with the DOI prefixes keyed by
-   *         the Archival Unit name.
+   *         the Archival Unit identifier.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  Map<String, Collection<String>> getAusWithMultipleDoiPrefixes(Connection conn)
-      throws DbException {
-    final String DEBUG_HEADER = "getAusWithMultipleDoiPrefixes(): ";
+  Map<String, Collection<String>> getAuIdsWithMultipleDoiPrefixes(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getAuIdsWithMultipleDoiPrefixes(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     Map<String, Collection<String>> ausDoiPrefixes =
 	new TreeMap<String, Collection<String>>();

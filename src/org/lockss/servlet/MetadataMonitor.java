@@ -38,7 +38,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import org.lockss.db.DbException;
@@ -514,30 +513,6 @@ public class MetadataMonitor extends LockssServlet {
     final String DEBUG_HEADER = "listMultipleDoiPrefixAus(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
-    // The Archival Units that have multiple DOI prefixes, sorted by name.
-    Map<String, Collection<String>> ausToList =
-	new TreeMap<String, Collection<String>>();
-
-    // Get the DOI prefixes linked to the Archival Units.
-    Map<String, Collection<String>> ausDoiPrefixes =
-	mdManager.getAusWithMultipleDoiPrefixes();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	+ "ausDoiPrefixes.size() = " + ausDoiPrefixes.size());
-
-    // Loop through the Archival Units.
-    for (String auId : ausDoiPrefixes.keySet()) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
-
-      ArchivalUnit au = pluginManager.getAuFromId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
-
-      if (au != null) {
-	ausToList.put(au.getName(), ausDoiPrefixes.get(auId));
-      } else {
-	ausToList.put(auId, ausDoiPrefixes.get(auId));
-      }
-    }
-
     String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
 
     // Create the results table.
@@ -547,6 +522,12 @@ public class MetadataMonitor extends LockssServlet {
     results.add("Archival Unit Name");
     results.newCell("align=\"left\" class=\"colhead\"");
     results.add("DOI Prefixes");
+
+    // The Archival Units that have multiple DOI prefixes, sorted by name.
+    Map<String, Collection<String>> ausToList =
+	mdManager.getAuNamesWithMultipleDoiPrefixes();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "ausToList.size() = " + ausToList.size());
 
     // Check whether there are results to display.
     if (ausToList.size() > 0) {
