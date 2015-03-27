@@ -86,7 +86,7 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
   // toc, abs, full - previous/next issue/article
   private static final String withLiteratumBookIssueNavigation =
       "<div class=\"block\">" +      
-          "<section id=\"4a1\" " +
+          "<div id=\"4a1\" " +
           "class=\"widget literatumBookIssueNavigation widget-compact-all\">" +
           "<div class=\"widget-body body body-none body-compact-all\">" +
           "<div class=\"prev\">" +
@@ -95,7 +95,7 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
           "<div class=\"next\">" +
           "<a href=\"/doi/full/11.1111/jid-1264\">Next Article</a>" +
           "</div></div>" +
-          "</section>" +
+          "</div>" +
           "</div>";
   
   // toc, abs, full -  right column
@@ -105,18 +105,13 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
   private static final String withDataPbDropzoneRight =
       "<div class=\"block\">" +
           "<div class=\"pb-autoheight\" data-pb-dropzone=\"right\">" +
-          "<section id=\"f84\" class=\"layout-tabs widget-compact-all\">" +
+          "<div id=\"f84\" class=\"layout-tabs widget-compact-all\">" +
           "<div class=\"widget-body body body-none body-compact-all\">" +
           "<div class=\"tabs tabs-widget\">" +
           "<ul class=\"tab-nav\">" +
-          "<li class=\"active\">" +
-          "<a href=\"#f59\">Most Read</a>" +
-          "</li>" +
+          "<li class=\"active\"><a href=\"#f59\">Most Read</a></li>" +
           "</ul>" +
-          "</div>" +
-          "</section>" +
-          "</div>" +
-          "</div>";
+          "</div></div></div></div></div>";
   
   // for testcrawl
   // from abs - all Articles Options and Tools except Download Citation   
@@ -150,11 +145,11 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
           "</div>" +
           "</div>";
     
-    // includeNodes has <section class="literatumTocWidget">
+    // includeNodes has <div class="literatumTocWidget">
     // exludeNodes has <div class="toc-actions">
     private static final String withTocActions = 
         "<div class=\"block\">" +  
-            "<section class=\"literatumTocWidget\">" +
+            "<div class=\"literatumTocWidget\">" +
             "<div class=\"toc-actions\">" +
             "<div class=\"pull-left\">" +
             "<ul class=\"linkList blockLinks verticalMarginless\">" +
@@ -165,18 +160,18 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "document.frmAbs, '/action/showMailPage');\"> " +
             "Email to a Friend </a></li>" +
             "</ul></div></div>" +
-            "</section>" +
+            "</div>" +
             "</div>";
     private static final String tocActionsFilteredStr =
-            "<section class=\"literatumTocWidget\">" +
-            "</section>";
+            "<div class=\"literatumTocWidget\">" +
+            "</div>";
     
-    // includeNodes has <section class="literatumPublicationContentWidget"
+    // includeNodes has <div class="literatumPublicationContentWidget"
     // excludeNodes has <a class="rightslink"
     // http://www.emeraldinsight.com/doi/abs/10.1108/AAAJ-05-2013-1360
     private static final String withRightsLink =
         "<div class=\"block\">" +  
-            "<section id=\"d2f\" " +
+            "<div id=\"d2f\" " +
             "class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
             "<ul class=\"tools3\">" +
@@ -187,24 +182,24 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "<img alt=\"Reprints & Permissions\" " +
             "src=\"/imagessrc/rightsLink.png\"></a></li>" +
             "</ul>" +
-            "</section>" +
+            "</div>" +
             "</div>";
     // id attribute also got filtered
     private static final String rightsLinkFilteredStr =
-        "<section " +
+        "<div " +
             "class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
             "<ul class=\"tools3\">" +
             "<li class=\"addToFav\"></li>" +
             "<li class=\"permissions\"></li>" +
             "</ul>" +
-            "</section>";  
+            "</div>";  
     
-    // includeNodes has <section class="literatumPublicationContentWidget"
+    // includeNodes has <div class="literatumPublicationContentWidget"
     // excludeNodes has <div class="downloadsCount">
     private static final String withDownloadsCount =
         "<div class=\"block\">" +
-            "<section id=\"d2f\" " +
+            "<div id=\"d2f\" " +
             "class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
             "<div class=\"downloadsCount\">" +
@@ -212,23 +207,55 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "<dd>The fulltext of this document has been " +
             "downloaded 429 times since 2013</dd>" +
             "</div>" +
-            "</section>" +
+            "</div>" +
             "</div>";
-    // id attribute also got filtere
+
     private static final String downloadsCountFilteredStr =
-        "<section " +
-            "class=\"widget literatumPublicationContentWidget none " +
+        "<div class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
-            "</section>";    
+            "</div>";  
+    
+    private static final String withSectionJumpTo =
+        "<div class=\"block\">" +
+            "<div id=\"d\" class=\"widget literatumPublicationContentWidget " +
+            "none widget-none widget-compact-all\">" +
+            "<div class=\"sectionInfo\">" +
+            "<div class=\"sectionHeading\">" +
+            "<h5>2. Literature review</h5>" +
+            "</div>" +
+            "<div class=\"sectionJumpTo\">" +
+            "<span class=\"fulltext\">Section:</span>" +
+            "<select class=\"fulltextdd\" onchange=\"GoTo(this, 'self')\" " +
+            "name=\"select23\">" +
+            "<option selected=\"#\" value=\"#\">Choose</option>" +
+            "<option value=\"#\">Top of page</option>" +
+            "<option value=\"#_i6\">1. Introduction</option>" +
+            "<option value=\"\">2. Literature review <<</option>" +
+            "</select>" +
+            "</div>" +
+            "</div>" +
+            "</div>" +
+            "</div>" +
+            "</div>";
+    
+    private static final String sectionJumpToFilteredStr =
+        "<div class=\"widget literatumPublicationContentWidget " +
+            "none widget-none widget-compact-all\">" +
+            "<div class=\"sectionInfo\">" +
+            "<div class=\"sectionHeading\">" +
+            "<h5>2. Literature review</h5>" +
+            "</div>" +
+            "</div>" +
+            "</div>";
     
     // for testhash
-    // includeNodes has <section class="literatumPublicationContentWidget"
+    // includeNodes has <div class="literatumPublicationContentWidget"
     // excludeNodes hash <div class="options">
     // from abs - all Articles Options and Tools except Download Citation   
     // http://www.emeraldinsight.com/doi/full/10.1108/AAAJ-03-2013-1264
     private static final String withArticleOptionsExceptDownloadCitation2 =
         "<div class=\"block\">" +  
-            "<section id=\"d2f\" " +
+            "<div id=\"d2f\" " +
             "class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
             "<div class=\"options\">" +
@@ -244,12 +271,11 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "<li class=\"permissions\"></li>" +
             "</ul>" +
             "</div>" +
-            "</section>" +
+            "</div>" +
             "</div>";  
-  // id tag also got filtered
+    // id tag also got filtered
     private static final String articleOptionsFilteredStr2 = 
-        "<section " +
-            "class=\"widget literatumPublicationContentWidget none " +
+        "<div class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
             "<div class=\"options\">" +
             "<ul class=\"tools3\">" +
@@ -260,36 +286,86 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</li>" +
             "</ul>" +
             "</div>" +
-            "</section>";
-
-
-  private static final String manifestList =
-      "<ul>" +
-      "<li>" +
-      "<a href=\"http://www.example.com/toc/abcj/123/4\">2012 (Vol. 123 Issue 4 Page 456-789)</a>" +
-      "</li>" +
-      "</ul>";
-  private static final String manifestListFiltered =
-      "<a href=\"http://www.example.com/toc/abcj/123/4\">2012 (Vol. 123 Issue 4 Page 456-789)</a>";
+            "</div>";
     
-  private static final String nonManifestList1 =
-      "<ul class=\"breadcrumbs\">" +
-      "<li>" +
-      "<a href=\"/toc/abcj/123/4\">Volume 123, Issue 4</a>" +
-      "</li>" +
-      "</ul>";
-  private static final String nonManifestList1Filtered = "";
+    // random class Z3988
+    private static final String withRandomClassZ3988 =
+        "<div class=\"block\">" +
+            "<div id=\"d2f\" " +
+            "class=\"widget literatumPublicationContentWidget none " +
+            "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
+            "<span class=\"Z3988\" title=\"rubbish_blah_blah_link\"></span>" +
+            "</div>" +
+            "</div>";  
+    
+    private static final String randomClassZ3988FilteredStr =
+        "<div class=\"widget literatumPublicationContentWidget none " +
+            "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
+            "</div>"; 
+    
+    private static final String withRefCitation =
+        "<div class=\"block\">" +
+            "<div id=\"d2f\" " +
+            "class=\"widget literatumPublicationContentWidget none " +
+            "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
+            "<div class=\"citation\">" +
+            "<span class=\"NLM_string-name\">ABC, J.R.</span>" +
+             "and" +
+             "<span class=\"NLM_string-name\">DEF, A.L.</span>" +
+             "(" +
+             "<span class=\"NLM_year\">2006</span>" +
+             "), " +
+             "<i>journal title</i>" +
+             ", Vol. 81 No. 3, pp." +
+             "<span class=\"NLM_fpage\">563</span>" +
+             "‐" +
+             "<span class=\"NLM_lpage\">94</span>" +
+             "." +
+             "<a onclick=\"newWindow(this.href);return false\" " +
+             "href=\"/servlet/linkout?suffix=b38&dbid=12\">[CrossRef]</a>" +
+             "," +
+             "<a onclick=\"newWindow(this.href);return false\" " +
+             "href=\"/servlet/linkout?suffix=b38&dbid=128\">[ISI]</a>" +
+             "<a target=\"_blank\" title=\"Infotrieve: blah.\" " +
+             "href=\"https://www.example.com/link\">[Infotrieve]</a>" +
+             "</div>" +
+             "</div>" +
+             "</div>";
+    
+    private static final String refCitationFilteredStr =
+        "<div class=\"widget literatumPublicationContentWidget none " +
+            "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
+            "</div>";   
+
+    private static final String manifestList =
+        "<ul>" +
+            "<li>" +
+            "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789)</a>" +
+            "</li>" +
+            "</ul>";
+    private static final String manifestListFilteredStr =
+        "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789)</a>";
+    
+    private static final String nonManifestList1 =
+        "<ul class=\"breadcrumbs\">" +
+            "<li>" +
+            "<a href=\"/toc/abcj/123/4\">Volume 123, Issue 4</a>" +
+            "</li>" +
+            "</ul>";
+  private static final String nonManifestList1FilteredStr = "";
     
   private static final String nonManifestList2 =
       "<ul>" +
-      "<li id=\"forthcomingIssue\">" +
-      "<a href=\"/toc/abcj/123/5\">EarlyCite</a>" +
-      "</li>" +
-      "<li id=\"currIssue\">" +
-      "<a href=\"/toc/abcj/199/1\">Current Issue</a>" +
-      "</li>" +
-      "</ul>";
-  private static final String nonManifestList2Filtered = "";
+          "<li id=\"forthcomingIssue\">" +
+          "<a href=\"/toc/abcj/123/5\">EarlyCite</a>" +
+          "</li>" +
+          "<li id=\"currIssue\">" +
+          "<a href=\"/toc/abcj/199/1\">Current Issue</a>" +
+          "</li>" +
+          "</ul>";
+  private static final String nonManifestList2FilteredStr = "";
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -310,10 +386,10 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
-    // ??ly - for debug
-    String actualStr = StringUtil.fromInputStream(actIn);
-    assertEquals(expectedStr, actualStr);
-    //assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
+    // for debug
+    // String actualStr = StringUtil.fromInputStream(actIn);
+    // assertEquals(expectedStr, actualStr);
+    assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
   }
   
   public void startMockDaemon() {
@@ -353,12 +429,20 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
       doFilterTest(eau, variantFact, withTocActions, tocActionsFilteredStr);         
       doFilterTest(eau, variantFact, withRightsLink, rightsLinkFilteredStr);         
       doFilterTest(eau, variantFact, withDownloadsCount, 
-                   downloadsCountFilteredStr);         
+                   downloadsCountFilteredStr); 
+      doFilterTest(eau, variantFact, withSectionJumpTo, 
+                   sectionJumpToFilteredStr);
       doFilterTest(eau, variantFact, withArticleOptionsExceptDownloadCitation2, 
           articleOptionsFilteredStr2);
-      doFilterTest(eau, variantFact, manifestList, manifestListFiltered);
-      doFilterTest(eau, variantFact, nonManifestList1, nonManifestList1Filtered);
-      doFilterTest(eau, variantFact, nonManifestList2, nonManifestList2Filtered);
+      doFilterTest(eau, variantFact, withRandomClassZ3988, 
+                   randomClassZ3988FilteredStr);
+      doFilterTest(eau, variantFact, withRefCitation, refCitationFilteredStr);
+      doFilterTest(eau, variantFact, manifestList, 
+                   manifestListFilteredStr);
+      doFilterTest(eau, variantFact, nonManifestList1, 
+                   nonManifestList1FilteredStr);
+      doFilterTest(eau, variantFact, nonManifestList2, 
+                   nonManifestList2FilteredStr);
      }
   }
   
