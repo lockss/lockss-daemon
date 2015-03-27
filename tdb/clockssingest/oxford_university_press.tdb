@@ -97,7 +97,7 @@
    >
 
     param[base_url] = http://asj.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
     au < expected ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
@@ -4760,10 +4760,9 @@
    >
 
     param[base_url] = http://dsh.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < expected ; exists ; 2014 ; Digital Scholarship in the Humanities Volume 1 ; 1 ; >
-    au < expected ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 2 ; 2 ; >
+    au < exists ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
 
   }
 
