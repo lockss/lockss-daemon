@@ -50,7 +50,7 @@ public class EmeraldGroupHtmlCrawlFilterFactory
     // http://www.emeraldinsight.com/toc/aaaj/26/8
     HtmlNodeFilters.tagWithAttributeRegex("li", "id", "currIssue"),
     // toc, abs, full - previous/next issue/article
-    HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                           "literatumBookIssueNavigation"),                                          
     // toc, abs, full -  right column
     // there are 2 data-pb-dropzone="right", one of them is part of the top ad
