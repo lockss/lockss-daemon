@@ -103,6 +103,25 @@ public class TestELifeDrupalHtmlCrawlFilterFactory extends LockssTestCase {
   private static final String withoutCorr = "<div id=\"page\">" +
       "</div>";
   
+  // <div class="panel-pane pane-elife-article-criticalrelation">
+  private static final String withRelation = "<div id=\"page\">" + 
+      "<div class=\"panel-pane pane-elife-article-criticalrelation\">\n" + 
+      " <div class=\"highwire-markup\">\n" + 
+      "  <div class=\"section inner\">\n" + 
+      "   <ol class=\"critical-relation-list\"><li class=\"critical-relation first last\">" +
+      "    <h3 class=\"critical-relation__title\">" +
+      "     <a href=\"/content/3/e03756\">\n" + 
+      "      <div>Complexin Ca<sup>2+</sup>-triggered fusion</div>\n" + 
+      "     </a>" +
+      "    </h3>\n" + 
+      "   </li>\n</ol>" +
+      "  </div>\n" + 
+      " </div>\n" + 
+      "</div>" + 
+      "</div>";
+  private static final String withoutRelation = "<div id=\"page\">" +
+      "</div>";
+  
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -131,7 +150,13 @@ public class TestELifeDrupalHtmlCrawlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutCorr, a);
-   
+    
+    // "div", "class", "elife-article-criticalrelation"
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withRelation),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutRelation, a);
+    
   }
   
 }
