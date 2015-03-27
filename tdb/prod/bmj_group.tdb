@@ -52,7 +52,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Acupuncture in Medicine Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; ready ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 >
 
   }
@@ -140,7 +140,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Annals of the Rheumatic Diseases Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; testing ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; testing ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
 
   }
@@ -280,7 +280,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood - Education and Practice Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Education and Practice Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; ready ; 2013 ; Archives of Disease in Childhood - Education and Practice Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; testing ; 2014 ; Archives of Disease in Childhood - Education and Practice Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; Archives of Disease in Childhood - Education and Practice Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Archives of Disease in Childhood - Education and Practice Volume 100 ; 100 >
 
   }
@@ -325,7 +325,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; ready ; 2013 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; testing ; 2014 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
 
   }
@@ -487,8 +487,8 @@
       param[base_url] = http://drc.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
-      au < testing ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
+      au < ready ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
+      au < ready ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
       au < exists ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
 
     }
@@ -551,7 +551,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 2013 ; BMJ Supportive & Palliative Care Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Supportive & Palliative Care Volume 5 ; 5 >
 
   }
@@ -796,7 +796,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Drug and Therapeutics Bulletin Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; ready ; 2013 ; Drug and Therapeutics Bulletin Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 2014 ; Drug and Therapeutics Bulletin Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; Drug and Therapeutics Bulletin Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Drug and Therapeutics Bulletin Volume 53 ; 53 >
 
   }
@@ -2195,7 +2195,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2010 ; Practical Neurology Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Practical Neurology Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Practical Neurology Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; Practical Neurology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; Practical Neurology Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Practical Neurology Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Practical Neurology Volume 15 ; 15 >
 
@@ -2257,7 +2257,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; manifest ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; manifest ; 2011 ; BMJ Quality & Safety Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; ready ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; BMJ Quality & Safety Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
       
