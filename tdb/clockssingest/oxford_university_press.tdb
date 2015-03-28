@@ -11465,6 +11465,21 @@
   {
 
     title <
+      name = Journal of Cybersecurity ;
+      issn = 2057-2085 ;
+      eissn = 2057-2093 ;
+      issnl = 2057-2085 
+    >
+
+    param[base_url] = http://cybersecurity.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < expected ; exists ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 ; >
+  }
+
+  {
+
+    title <
       name = Journal of Deaf Studies and Deaf Education ;
       issn = 1081-4159 ;
       eissn = 1465-7325 ;
@@ -16933,6 +16948,20 @@
     au < exists ; exists ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 ; >
     au < exists ; exists ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 ; >
 
+  }
+
+  {
+
+    title <
+      name = Neuroscience of Consciousness ;
+      eissn = 2057-2107  ;
+      issnl = 2057-2107 
+    >
+
+    param[base_url] = http://nc.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < exists ; exists ; 2015 ; Neuroscience of Consciousness Volume 1 ; 1 ; >
   }
 
   {
