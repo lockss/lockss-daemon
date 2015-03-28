@@ -5423,6 +5423,34 @@
 
   }
 
+    {
+
+      title <
+        name = Citizenship, Social and Economics Education ;
+        eissn = 2047-1734 ;
+        issnl = 2047-1734
+      >
+
+        param[base_url] = http://cse.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+        au < exists ; exists ; 1996 ; Citizenship, Social and Economics Education Volume 1 ; 1 ; >
+        au < exists ; exists ; 1997 ; Citizenship, Social and Economics Education Volume 2 ; 2 ; >
+        au < exists ; exists ; 1998 ; Citizenship, Social and Economics Education Volume 3 ; 3 ; >
+        au < exists ; exists ; 2000 ; Citizenship, Social and Economics Education Volume 4 ; 4 ; >
+        au < exists ; exists ; 2002 ; Citizenship, Social and Economics Education Volume 5 ; 5 ; >
+        au < exists ; exists ; 2004 ; Citizenship, Social and Economics Education Volume 6 ; 6 ; >
+        au < exists ; exists ; 2007 ; Citizenship, Social and Economics Education Volume 7 ; 7 ; >
+        au < exists ; exists ; 2009 ; Citizenship, Social and Economics Education Volume 8 ; 8 ; >
+        au < exists ; exists ; 2010 ; Citizenship, Social and Economics Education Volume 9 ; 9 ; >
+        au < exists ; exists ; 2011 ; Citizenship, Social and Economics Education Volume 10 ; 10 ; >
+        au < exists ; exists ; 2012 ; Citizenship, Social and Economics Education Volume 11 ; 11 ; >
+        au < exists ; exists ; 2013 ; Citizenship, Social and Economics Education Volume 12 ; 12 ; >
+        au < exists ; exists ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 ; >
+        au < expected ; exists ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 ; >
+
+    }
+
   {
 
     title <
