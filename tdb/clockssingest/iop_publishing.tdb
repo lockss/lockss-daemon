@@ -1028,6 +1028,7 @@
     >
     
     param[journal_issn] = 1475-7516
+    comment[notReady] = malformed PDFs
 
     au < manifest ; exists ; 2003 ; Journal of Cosmology and Astroparticle Physics Volume 2003 ; 2003 > 
     au < manifest ; exists ; 2004 ; Journal of Cosmology and Astroparticle Physics Volume 2004 ; 2004 > 
@@ -1040,7 +1041,7 @@
     au < finished ; crawling ; 2011 ; Journal of Cosmology and Astroparticle Physics Volume 2011 ; 2011 > 
     au < finished ; crawling ; 2012 ; Journal of Cosmology and Astroparticle Physics Volume 2012 ; 2012 > 
     au < crawling ; exists ; 2013 ; Journal of Cosmology and Astroparticle Physics Volume 2013 ; 2013 > 
-    au < testing ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 > 
+    au < notReady ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 > 
     au < manifest ; exists ; 2015 ; Journal of Cosmology and Astroparticle Physics Volume 2015 ; 2015 > 
 
   }
