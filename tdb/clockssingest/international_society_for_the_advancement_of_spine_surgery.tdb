@@ -2,9 +2,11 @@
 
   publisher <
     name = International Society for the Advancement of Spine Surgery ;
-    info[contract] = 0 ;
+    info[contract] = 2013 ;
     info[tester] = 0 
   >
+  
+    plugin = needs.plugin
 
     {
       title <
