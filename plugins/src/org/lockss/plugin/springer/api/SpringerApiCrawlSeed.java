@@ -232,6 +232,11 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     while (!ple.isDone()) {
       log.debug2("Beginning at index " + index);
       
+      if (facade.isAborted()) {
+        log.debug2("Crawl aborted");
+        return;
+      }
+      
       // Make URL fetcher for this request
       String url = makeApiUrl(index);
       String loggerUrl = loggerUrl(url);
