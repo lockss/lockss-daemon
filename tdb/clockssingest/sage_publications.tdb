@@ -46,7 +46,7 @@
       au < exists ; exists ; 2013 ; Abstracts in Anthropology Volume 67 ; 67 ; >
       au < exists ; exists ; 2014 ; Abstracts in Anthropology Volume 68 ; 68 ; >
       au < exists ; exists ; 2014 ; Abstracts in Anthropology Volume 69 ; 69 ; >
-      au < exists ; exists ; 2015 ; Abstracts in Anthropology Volume 70 ; 70 ; >
+      au < manifest ; exists ; 2015 ; Abstracts in Anthropology Volume 70 ; 70 ; >
       au < expected ; exists ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 ; >
 
   }
@@ -463,13 +463,13 @@
       param[base_url] = http://ade.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
-      au < exists ; exists ; 2010 ; Advances in Mechanical Engineering Volume 2 ; 2 ; >
-      au < exists ; exists ; 2011 ; Advances in Mechanical Engineering Volume 3 ; 3 ; >
-      au < exists ; exists ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
-      au < exists ; exists ; 2013 ; Advances in Mechanical Engineering Volume 5 ; 5 ; >
-      au < exists ; exists ; 2014 ; Advances in Mechanical Engineering Volume 6 ; 6 ; >
-      au < exists ; exists ; 2015 ; Advances in Mechanical Engineering Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2010 ; Advances in Mechanical Engineering Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2011 ; Advances in Mechanical Engineering Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; Advances in Mechanical Engineering Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2014 ; Advances in Mechanical Engineering Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2015 ; Advances in Mechanical Engineering Volume 7 ; 7 ; >
 
   }
 
@@ -4857,7 +4857,7 @@
         au < finished ; crawling ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
         au < crawling ; exists ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; >
         au < ready ; exists ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 ; >
-        au < expected ; exists ; 2015 ; Career Development and Transition for Exceptional Individuals Volume 38 ; 38 ; >
+        au < manifest ; exists ; 2015 ; Career Development and Transition for Exceptional Individuals Volume 38 ; 38 ; >
 
       }
 
@@ -5377,7 +5377,7 @@
       au < finished ; crawling ; 2012 ; Chronic Illness Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Chronic Illness Volume 9 ; 9 ; >
       au < ready ; exists ; 2014 ; Chronic Illness Volume 10 ; 10 ; >
-      au < expected ; exists ; 2015 ; Chronic Illness Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2015 ; Chronic Illness Volume 11 ; 11 ; >
 
     }
 
@@ -6700,7 +6700,7 @@
       au < exists ; exists ; 2012 ; Contemporary Drug Problems Volume 39 ; 39 ; >
       au < exists ; exists ; 2013 ; Contemporary Drug Problems Volume 40 ; 40 ; >
       au < exists ; exists ; 2014 ; Contemporary Drug Problems Volume 41 ; 41 ; >
-      au < expected ; exists ; 2015 ; Contemporary Drug Problems Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2015 ; Contemporary Drug Problems Volume 42 ; 42 ; >
 
   }
 
@@ -8854,7 +8854,7 @@
       au < exists ; exists ; 2012 ; E-Learning and Digital Media Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; E-Learning and Digital Media Volume 10 ; 10 ; >
       au < ready ; exists ; 2014 ; E-Learning and Digital Media Volume 11 ; 11 ; >
-      au < expected ; exists ; 2015 ; E-Learning and Digital Media Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2015 ; E-Learning and Digital Media Volume 12 ; 12 ; >
 
   }
 
@@ -11074,7 +11074,7 @@
       au < finished ; crawling ; 2012 ; Evaluation Review Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; Evaluation Review Volume 37 ; 37 ; >
       au < ready ; exists ; 2014 ; Evaluation Review Volume 38 ; 38 ; >
-      au < expected ; exists ; 2015 ; Evaluation Review Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2015 ; Evaluation Review Volume 39 ; 39 ; >
 
     }
 
@@ -11565,7 +11565,7 @@
       au < finished ; crawling ; 2012 ; Feminist Theory Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Feminist Theory Volume 14 ; 14 ; >
       au < ready ; exists ; 2014 ; Feminist Theory Volume 15 ; 15 ; >
-      au < expected ; exists ; 2015 ; Feminist Theory Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2015 ; Feminist Theory Volume 16 ; 16 ; >
 
     }
 
@@ -12491,7 +12491,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://gph.sagepub.com/
 
-      au < exists ; exists ; 2014 ; Global Pediatric Health Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Global Pediatric Health Volume 1 ; 1 ; >
       au < exists ; exists ; 2015 ; Global Pediatric Health Volume 2 ; 2 ; >
 
   }
@@ -14214,7 +14214,7 @@
       au < exists ; exists ; 2011-2012 ; Imagination, Cognition and Personality Volume 31 ; 31 ; >
       au < exists ; exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 ; >
       au < exists ; exists ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 ; >
-      au < exists ; exists ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; >
 
   }
 
@@ -14730,7 +14730,7 @@
       au < finished ; crawling ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; International Area Studies Review Volume 16 ; 16 ; >
       au < testing ; exists ; 2014 ; International Area Studies Review Volume 17 ; 17 ; >
-      au < expected ; exists ; 2015 ; International Area Studies Review Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2015 ; International Area Studies Review Volume 18 ; 18 ; >
 
     }
 
@@ -15618,7 +15618,7 @@
         au < exists ; exists ; 2012 ; International Journal of Health Services Volume 42 ; 42 ; >
         au < exists ; exists ; 2013 ; International Journal of Health Services Volume 43 ; 43 ; >
         au < exists ; exists ; 2014 ; International Journal of Health Services Volume 44 ; 44 ; >
-        au < expected ; exists ; 2015 ; International Journal of Health Services Volume 45 ; 45 ; >
+        au < manifest ; exists ; 2015 ; International Journal of Health Services Volume 45 ; 45 ; >
 
   }
 
@@ -16040,7 +16040,7 @@
       au < exists ; exists ; 2013 ; The International Journal of Psychiatry in Medicine Volume 45 ; 45 ; >
       au < exists ; exists ; 2013 ; The International Journal of Psychiatry in Medicine Volume 46 ; 46 ; >
       au < exists ; exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 47 ; 47 ; >
-      au < exists ; exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 48 ; 48 ; >
       au < expected ; exists ; 2015 ; The International Journal of Psychiatry in Medicine Volume 49 ; 49 ; >
 
   }
@@ -16491,7 +16491,7 @@
       au < exists ; exists ; 2012 ; International Quarterly of Community Health Education Volume 32 ; 32 ; >
       au < exists ; exists ; 2013 ; International Quarterly of Community Health Education Volume 33 ; 33 ; >
       au < exists ; exists ; 2014 ; International Quarterly of Community Health Education Volume 34 ; 34 ; >
-      au < exists ; exists ; 2014-2015 ; International Quarterly of Community Health Education Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2014-2015 ; International Quarterly of Community Health Education Volume 35 ; 35 ; >
 
   }
 
@@ -19953,7 +19953,7 @@
       au < doesNotExist ; doesNotExist ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 ; >
       au < exists ; exists ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 ; >
       au < exists ; exists ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 ; >
-      au < exists ; exists ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; >
       
   }
 
@@ -20979,12 +20979,12 @@
       au < exists ; exists ; 1996 ; Journal of Endovascular Therapy Volume 3 ; 3 ; >
       au < exists ; exists ; 1997 ; Journal of Endovascular Therapy Volume 4 ; 4 ; >
       au < exists ; exists ; 1998 ; Journal of Endovascular Therapy Volume 5 ; 5 ; >
-      au < exists ; exists ; 1999 ; Journal of Endovascular Therapy Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1999 ; Journal of Endovascular Therapy Volume 6 ; 6 ; >
       au < exists ; exists ; 2000 ; Journal of Endovascular Therapy Volume 7 ; 7 ; >
       au < exists ; exists ; 2001 ; Journal of Endovascular Therapy Volume 8 ; 8 ; >
       au < exists ; exists ; 2002 ; Journal of Endovascular Therapy Volume 9 ; 9 ; >
       au < exists ; exists ; 2003 ; Journal of Endovascular Therapy Volume 10 ; 10 ; >
-      au < exists ; exists ; 2004 ; Journal of Endovascular Therapy Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2004 ; Journal of Endovascular Therapy Volume 11 ; 11 ; >
       au < exists ; exists ; 2005 ; Journal of Endovascular Therapy Volume 12 ; 12 ; >
       au < exists ; exists ; 2006 ; Journal of Endovascular Therapy Volume 13 ; 13 ; >
       au < exists ; exists ; 2007 ; Journal of Endovascular Therapy Volume 14 ; 14 ; >
@@ -20995,7 +20995,7 @@
       au < exists ; exists ; 2012 ; Journal of Endovascular Therapy Volume 19 ; 19 ; >
       au < exists ; exists ; 2013 ; Journal of Endovascular Therapy Volume 20 ; 20 ; >
       au < exists ; exists ; 2014 ; Journal of Endovascular Therapy Volume 21 ; 21 ; >
-      au < exists ; exists ; 2015 ; Journal of Endovascular Therapy Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; Journal of Endovascular Therapy Volume 22 ; 22 ; >
 
   }
 
@@ -21911,7 +21911,7 @@
       au < finished ; frozen ; 2012 ; Journal of Health Management Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; Journal of Health Management Volume 15 ; 15 ; >
       au < manifest ; exists ; 2014 ; Journal of Health Management Volume 16 ; 16 ; >
-      au < expected ; exists ; 2015 ; Journal of Health Management Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2015 ; Journal of Health Management Volume 17 ; 17 ; >
 
     }
 
@@ -28778,7 +28778,7 @@
         au < exists ; exists ; 2012 ; Millennial Asia Volume 3 ; 3 ; >
         au < crawling ; exists ; 2013 ; Millennial Asia Volume 4 ; 4 ; >
         au < manifest ; exists ; 2014 ; Millennial Asia Volume 5 ; 5 ; >
-        au < expected ; exists ; 2015 ; Millennial Asia Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2015 ; Millennial Asia Volume 6 ; 6 ; >
 
       }
 
@@ -29341,7 +29341,7 @@
       au < finished ; frozen ; 2012 ; NASSP Bulletin Volume 96 ; 96 ; >
       au < crawling ; exists ; 2013 ; NASSP Bulletin Volume 97 ; 97 ; >
       au < manifest ; exists ; 2014 ; NASSP Bulletin Volume 98 ; 98 ; >
-      au < expected ; exists ; 2015 ; NASSP Bulletin Volume 99 ; 99 ; >
+      au < manifest ; exists ; 2015 ; NASSP Bulletin Volume 99 ; 99 ; >
 
     }
 
@@ -30393,7 +30393,7 @@
       au < finished ; crawling ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
       au < crawling ; exists ; 2013 ; Organization & Environment Volume 26 ; 26 ; >
       au < manifest ; exists ; 2014 ; Organization & Environment Volume 27 ; 27 ; >
-      au < expected ; exists ; 2015 ; Organization & Environment Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2015 ; Organization & Environment Volume 28 ; 28 ; >
 
     }
 
@@ -33203,7 +33203,7 @@
       au < finished ; frozen ; 2012 ; Psychology & Developing Societies Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Psychology & Developing Societies Volume 25 ; 25 ; >
       au < manifest ; exists ; 2014 ; Psychology & Developing Societies Volume 26 ; 26 ; >
-      au < expected ; exists ; 2015 ; Psychology & Developing Societies Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2015 ; Psychology & Developing Societies Volume 27 ; 27 ; >
 
     }
 
@@ -36800,7 +36800,7 @@
       param[base_url] = http://sre.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Sociology of Race and Ethnicity Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Sociology of Race and Ethnicity Volume 1 ; 1 ; >
 
   }
 
@@ -37236,7 +37236,7 @@
       au < finished ; frozen ; 2012 ; Statistical Methods in Medical Research Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Statistical Methods in Medical Research Volume 22 ; 22 ; >
       au < manifest ; exists ; 2014 ; Statistical Methods in Medical Research Volume 23 ; 23 ; >
-      au < expected ; exists ; 2015 ; Statistical Methods in Medical Research Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2015 ; Statistical Methods in Medical Research Volume 24 ; 24 ; >
 
     }
 
@@ -41273,7 +41273,7 @@
       au < finished ; crawling ; 2012 ; Youth Justice Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Youth Justice Volume 13 ; 13 ; >
       au < manifest ; exists ; 2014 ; Youth Justice Volume 14 ; 14 ; >
-      au < expected ; exists ; 2015 ; Youth Justice Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2015 ; Youth Justice Volume 15 ; 15 ; >
 
 
     }
@@ -42108,7 +42108,7 @@
       au < finished ; frozen ; 2012 ; Social Change Volume 42 ; 42 ; >
       au < crawling ; exists ; 2013 ; Social Change Volume 43 ; 43 ; >
       au < manifest ; exists ; 2014 ; Social Change Volume 44 ; 44 ; >
-      au < expected ; exists ; 2015 ; Social Change Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2015 ; Social Change Volume 45 ; 45 ; >
 
     }
 
@@ -42436,7 +42436,7 @@
     au < finished ; frozen ; 2012 ; Adoption & Fostering Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 ; >
     au < manifest ; exists ; 2014 ; Adoption & Fostering Volume 38 ; 38 ; >
-    au < expected ; exists ; 2015 ; Adoption & Fostering Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2015 ; Adoption & Fostering Volume 39 ; 39 ; >
 
     }
 
@@ -42463,7 +42463,7 @@
     au < finished ; frozen ; 2012 ; Asia-Pacific Journal of Management Research and Innovation Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; >
     au < manifest ; exists ; 2014 ; Asia-Pacific Journal of Management Research and Innovation Volume 10 ; 10 ; >
-    au < expected ; exists ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; >
 
     }
 
@@ -42483,7 +42483,7 @@
     au < exists ; exists ; 2012 ; ASN NEURO Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
     au < manifest ; exists ; 2014 ; ASN NEURO Volume 6 ; 6 ; >
-    au < expected ; exists ; 2015 ; ASN NEURO Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2015 ; ASN NEURO Volume 7 ; 7 ; >
 
     }
 
@@ -44573,7 +44573,7 @@
         comment[continues] = 1754-0453
 
         au < manifest ; exists ; 2014 ; Post Reproductive Health Volume 20 ; 20 ; >
-        au < expected ; exists ; 2015 ; Post Reproductive Health Volume 21 ; 21 ; >
+        au < manifest ; exists ; 2015 ; Post Reproductive Health Volume 21 ; 21 ; >
 
     }
 
