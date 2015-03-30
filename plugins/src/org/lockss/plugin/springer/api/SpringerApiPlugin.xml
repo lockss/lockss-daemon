@@ -84,15 +84,15 @@
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.txt", base_url</string>
-      <string>"%slockss.txt", api_url</string> 
+      <string>"%slockss.txt", api_url</string>
     </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"%s", api_url</string>
+      <string>1,"^%s", api_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
     </list>
   </entry>
   <entry>

@@ -67,7 +67,7 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
 
   @Override
   public void consume() throws IOException {
-    if (shouldStoreRedirectsAtOrigUrl()) {
+    if (shouldStoreRedirectsAtOrigUrl(fud)) {
       // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
       // chain if (fud.redirectUrls != null && fud.fetchUrl != null)
       fud.redirectUrls = null;
@@ -87,7 +87,7 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
    *         origin URL.
    * @since 1.67.5
    */
-  protected boolean shouldStoreRedirectsAtOrigUrl() {
+  protected boolean shouldStoreRedirectsAtOrigUrl(FetchedUrlData fud) {
     return fud.redirectUrls != null
         && fud.redirectUrls.size() == 1
         && fud.redirectUrls.get(0).equals(fud.fetchUrl)
@@ -95,12 +95,24 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
         && origPdfPat.matcher(fud.origUrl).find();
   }
   
+  /**
+   * 
+   * @param baseUrl
+   * @return
+   * @since 1.67.5
+   */
   protected static Pattern makeOrigPdfPattern(String baseUrl) {
     return Pattern.compile(String.format("^%scontent/pdf/.*\\.pdf$",
                                          baseUrl),
                            Pattern.CASE_INSENSITIVE);
   }
-  
+
+  /**
+   * 
+   * @param cdnUrl
+   * @return
+   * @since 1.67.5
+   */
   protected static Pattern makeDestPdfPattern(String cdnUrl) {
     return Pattern.compile(String.format("^%sstatic/pdf/.*\\.pdf\\?auth[^=]*=[^&]*(&ext=\\.pdf)?$",
                                          cdnUrl),
