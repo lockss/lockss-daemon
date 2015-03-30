@@ -35,22 +35,19 @@ package org.lockss.plugin.dspace;
 import java.io.IOException;
 import java.util.*;
 
-import org.lockss.config.Configuration;
-import org.lockss.config.Configuration.InvalidParam;
-import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.util.*;
+import org.lockss.util.Logger;
 
 import com.lyncode.xoai.model.oaipmh.Header;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
 import com.lyncode.xoai.serviceprovider.parameters.ListIdentifiersParameters;
 
-public class IdentifierListOaiPmhCrawlSeed 
-    extends BaseOaiPmhCrawlSeed {
-  private static final Logger logger = 
+public class IdentifierListOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed {
+  private static final Logger log = 
       Logger.getLogger(IdentifierListOaiPmhCrawlSeed.class);
+  
   protected Collection<String> permUrls = new ArrayList<String>();
   
   public IdentifierListOaiPmhCrawlSeed (CrawlerFacade cf) {
@@ -92,6 +89,9 @@ public class IdentifierListOaiPmhCrawlSeed
         Header h = idIter.next();
         idList.add(h.getIdentifier());
       }
+      if (log.isDebug3()) {
+        log.debug3("Identifiers: " + idList.toString());
+      }
       return idList;
     } catch (BadArgumentException e) {
       throw new ConfigurationException(
@@ -129,6 +129,9 @@ public class IdentifierListOaiPmhCrawlSeed
         }
         urlList.add(baseUrl + "xmlui/handle/" + id_num);
       }
+    }
+    if (log.isDebug3()) {
+      log.debug3("Start URLs: " + urlList.toString());
     }
     return urlList;
   }
