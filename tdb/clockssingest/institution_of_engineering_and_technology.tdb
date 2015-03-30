@@ -6,9 +6,9 @@
     info[tester] = 0
   >
 
-   plugin = needs.plugin
-  comment[plugin] = pluging will be a daughter of OJS2 plugin, possibly called ClockssIETLinkPlugin
-   
+    plugin = needs.plugin
+    comment[plugin] = plugin will be a daughter of OJS2 plugin, possibly called ClockssIETLinkPlugin
+
      {
   
     title < 
