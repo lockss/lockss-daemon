@@ -22411,7 +22411,19 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       param[base_url] = http://clj.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-
+      comment[0] = content available from 1939 volume 3 to 1999 volume 63
+     
+      au < exists ; 2003 ; The Journal of Criminal Law Volume 67 ; 67 >
+      au < exists ; 2004 ; The Journal of Criminal Law Volume 68 ; 68 >
+      au < exists ; 2005 ; The Journal of Criminal Law Volume 69 ; 69 >
+      au < exists ; 2006 ; The Journal of Criminal Law Volume 70 ; 70 >
+      au < exists ; 2007 ; The Journal of Criminal Law Volume 71 ; 71 >
+      au < exists ; 2008 ; The Journal of Criminal Law Volume 72 ; 72 >
+      au < exists ; 2009 ; The Journal of Criminal Law Volume 73 ; 73 >
+      au < exists ; 2010 ; The Journal of Criminal Law Volume 74 ; 74 >
+      au < exists ; 2011 ; The Journal of Criminal Law Volume 75 ; 75 >
+      au < exists ; 2012 ; The Journal of Criminal Law Volume 76 ; 76 >
+      au < exists ; 2013 ; The Journal of Criminal Law Volume 77 ; 77 >
       au < manifest ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 >
       au < manifest ; 2015 ; The Journal of Criminal Law Volume 79 ; 79 >
     }
