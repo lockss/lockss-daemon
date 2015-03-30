@@ -45,6 +45,33 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   
   private static final Logger log = Logger.getLogger(OUPHtmlHashFilterFactory.class);
   
+  protected static NodeFilter[] filters = new NodeFilter[] {
+    // don't remove any div tags with login, as they should not happen and we don't want to hide
+    // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-login"),
+    // right sidebar 
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
+    // content-header from QJM
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-header"),
+    // do not hash citing and related section, nor keywords, by author, and eletters sections
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citing|related)-articles?"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-(keywords|by-author|eletters)"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "panel-separator"),
+    // OUP author section kept changing formating and spacing
+    HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-article-citation"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-cite-title")),
+  };
+  
+  
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
+    
+    return super.createFilteredInputStream(au, in, encoding, filters);
+  }
+  
   @Override
   public boolean doWSFiltering() {
     return true;
@@ -56,33 +83,5 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   @Override
   public boolean doXformToText() {
     return false;
-  }
-  
-  @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
-        // right sidebar 
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-        // content-header from QJM
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-header"),
-        // do not hash citing and related section, nor keywords, by author, and eletters sections
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citing|related)-articles?"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-(keywords|by-author|eletters)"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "panel-separator"),
-        // OUP author section kept changing formating and spacing
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-article-citation"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-cite-title")),
-        // don't remove any div tags with login, as they should not happen and we don't want to hide
-        // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-login"),
-    };
-    
-    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
-    
-    return filtered;
   }
 }

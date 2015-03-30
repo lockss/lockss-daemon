@@ -44,23 +44,15 @@ public class OUPHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFact
   
   private static final Logger log = Logger.getLogger(OUPHtmlCrawlFilterFactory.class);
   
+  // XXX  When filters are added, remove 'null; // '
+  protected static NodeFilter[] filters = null; // new NodeFilter[] { };
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // except <div class="highwire-citation-formats-links">
-        // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
-        // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^author-tooltip"),
-        // OUP & APS articles sometimes had view links, need to find examples
-        // HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
-        // <li class="index-by-author first last">
-        
-    };
     
-    InputStream filtered = super.createFilteredInputStream(au, in, encoding, null);
-    
-    return filtered;
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 }
