@@ -39,10 +39,9 @@
       issnl = 2312-0541
     >
 
-    param[base_url] = http://ERJopenres.ersjournals.com/
+    param[base_url] = http://openres.ersjournals.com/
 
-    au < expected ; exists ; 2014 ; ERJ Open Research Volume 1 ; 1 >
-    au < expected ; exists ; 2015 ; ERJ Open Research Volume 2 ; 2 >
+    au < expected ; exists ; 2015 ; ERJ Open Research Volume 1 ; 1 >
 
   }
 
