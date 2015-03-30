@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Massachusetts Review, Inc
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Massachusetts Review ;
+      issn = 0025-4878 ;
+      eissn = 2330-0485 ;
+      issnl = 0025-4878
+    >
+
+    param[journal_dir] = massachusetts_review
+    attr[journal_id] = mar
+
+    au < exists ; 2015 ; The Massachusetts Review Volume 56 ; 56 >
+
+  }
+
+}
