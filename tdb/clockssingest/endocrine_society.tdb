@@ -481,28 +481,4 @@
 
   }
 
-  {
-
-    title <
-      name = Recent Progress in Hormone Research ;
-      issn = 0079-9963 ;
-      issnl = 0079-9963
-    >
-    
-    {
-
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
-      param[base_url] = http://rphr.endojournals.org/
-      
-      comment[discontinued] = After 2004 volume 59, RPHR will will appear as a Special issue of Endocrine Reviews.
-
-      au < doNotProcess ; exists ; 2001 ; Recent Progress in Hormone Research Volume 56 ; 56 >
-      au < doNotProcess ; exists ; 2002 ; Recent Progress in Hormone Research Volume 57 ; 57 >
-      au < doNotProcess ; exists ; 2003 ; Recent Progress in Hormone Research Volume 58 ; 58 >
-      au < doNotProcess ; exists ; 2004 ; Recent Progress in Hormone Research Volume 59 ; 59 >
-
-    }
-
-  }
-
 }
