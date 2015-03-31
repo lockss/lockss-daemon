@@ -4761,6 +4761,8 @@
       issnl = 2356-7872
     >
 
+    comment[0] = The ISRN journal will be collected as a single journal. The individual topics listed in the contract will not be separate.
+
     param[journal_id] = isrn
 
     au < manifest ; exists ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 >
