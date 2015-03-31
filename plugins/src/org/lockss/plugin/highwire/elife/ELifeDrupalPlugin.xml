@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - Evan/Ly</string>
+    <string>ready</string>
   </entry>
   <!-- compare to ClockssELifeDrupalPlugin, the added entries should be in synch -->
   <entry>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -94,6 +94,10 @@
     <!-- manifest to articles -->
     <string>au_refetch_depth</string>
     <int>1</int>
+  </entry>
+  <entry>
+    <string>plugin_crawl_url_comparator_factory</string>
+    <org.lockss.util.Default />
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>

@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - Evan/Ly</string>
+    <string>ready</string>
   </entry>
   <!-- compare to ELifeDrupalPlugin, the added entries should be in synch -->
   <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -23,7 +23,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>au_name</string>
