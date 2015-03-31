@@ -96,19 +96,6 @@
     param[journal_id] = ajh
     comment[doesNotExist] = this title is now published by Oxford University Press, effective 1/2013
 
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 8 ; 0 ; 8 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 9 ; 0 ; 9 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 10 ; 0 ; 10 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 11 ; 0 ; 11 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 12 ; 0 ; 12 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 13 ; 0 ; 13 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 14 ; 0 ; 14 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 15 ; 0 ; 15 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 16 ; 0 ; 16 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 17 ; 0 ; 17 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 18 ; 0 ; 18 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 19 ; 0 ; 19 >
-    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 20 ; 0 ; 20 >
     au < superseded ; exists ; 2008 ; American Journal of Hypertension Volume 21 [to delete] ; 2008 ; 21 >
     au < superseded ; exists ; 2009 ; American Journal of Hypertension Volume 22 [to delete] ; 2009 ; 22 >
     au < superseded ; down ; 2010 ; American Journal of Hypertension Volume 23 [superseded] ; 2010 ; 23 >
@@ -131,11 +118,11 @@
     param[journal_id] = aja
 
     au < zapped ; finished ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
-    au < finished ; frozen ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
-    au < finished ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
-    au < finished ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
-    au < finished ; crawling ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
-    au < frozen ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
+    au < down ; frozen ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
+    au < down ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
+    au < down ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
+    au < down ; crawling ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
+    au < down ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
 
   }
 
@@ -613,92 +600,18 @@
     param[journal_id] = clpt
     comment[publisher] = moving to Wiley Blackwell, effective on 2015-01-01
 
-    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Pharmacology & Therapeutics Volume 27 ; 1980 ; 27 >
-    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Pharmacology & Therapeutics Volume 28 ; 1980 ; 28 >
-    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Pharmacology & Therapeutics Volume 29 ; 1981 ; 29 >
-    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Pharmacology & Therapeutics Volume 30 ; 1981 ; 30 >
-    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Pharmacology & Therapeutics Volume 31 ; 1982 ; 31 >
-    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Pharmacology & Therapeutics Volume 32 ; 1982 ; 32 >
-    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Pharmacology & Therapeutics Volume 33 ; 1983 ; 33 >
-    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Pharmacology & Therapeutics Volume 34 ; 1983 ; 34 >
-    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Pharmacology & Therapeutics Volume 35 ; 1984 ; 35 >
-    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Pharmacology & Therapeutics Volume 36 ; 1984 ; 36 >
-    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Pharmacology & Therapeutics Volume 37 ; 1985 ; 37 >
-    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Pharmacology & Therapeutics Volume 38 ; 1985 ; 38 >
-    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Pharmacology & Therapeutics Volume 39 ; 1986 ; 39 >
-    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Pharmacology & Therapeutics Volume 40 ; 1986 ; 40 >
-    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Pharmacology & Therapeutics Volume 41 ; 1987 ; 41 >
-    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Pharmacology & Therapeutics Volume 42 ; 1987 ; 42 >
-    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Pharmacology & Therapeutics Volume 43 ; 1988 ; 43 >
-    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Pharmacology & Therapeutics Volume 44 ; 1988 ; 44 >
-    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Pharmacology & Therapeutics Volume 45 ; 1989 ; 45 >
-    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Pharmacology & Therapeutics Volume 46 ; 1989 ; 46 >
-    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Pharmacology & Therapeutics Volume 47 ; 1990 ; 47 >
-    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Pharmacology & Therapeutics Volume 48 ; 1990 ; 48 >
-    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Pharmacology & Therapeutics Volume 49 ; 1991 ; 49 >
-    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Pharmacology & Therapeutics Volume 50 ; 1991 ; 50 >
-    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Pharmacology & Therapeutics Volume 51 ; 1992 ; 51 >
-    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Pharmacology & Therapeutics Volume 52 ; 1992 ; 52 >
-    au < doNotProcess ; doNotProcess ; 1993 ; Clinical Pharmacology & Therapeutics Volume 53 ; 1993 ; 53 >
-    au < doNotProcess ; doNotProcess ; 1993 ; Clinical Pharmacology & Therapeutics Volume 54 ; 1993 ; 54 >
-    au < doNotProcess ; doNotProcess ; 1994 ; Clinical Pharmacology & Therapeutics Volume 55 ; 1994 ; 55 >
-    au < doNotProcess ; doNotProcess ; 1994 ; Clinical Pharmacology & Therapeutics Volume 56 ; 1994 ; 56 >
-    au < doNotProcess ; doNotProcess ; 1995 ; Clinical Pharmacology & Therapeutics Volume 57 ; 1995 ; 57 >
-    au < doNotProcess ; doNotProcess ; 1995 ; Clinical Pharmacology & Therapeutics Volume 58 ; 1995 ; 58 >
-    au < doNotProcess ; doNotProcess ; 1996 ; Clinical Pharmacology & Therapeutics Volume 59 ; 1996 ; 59 >
-    au < doNotProcess ; doNotProcess ; 1996 ; Clinical Pharmacology & Therapeutics Volume 60 ; 1996 ; 60 >
-    au < doNotProcess ; doNotProcess ; 1997 ; Clinical Pharmacology & Therapeutics Volume 61 ; 1997 ; 61 >
-    au < doNotProcess ; doNotProcess ; 1997 ; Clinical Pharmacology & Therapeutics Volume 62 ; 1997 ; 62 >
-    au < doNotProcess ; doNotProcess ; 1998 ; Clinical Pharmacology & Therapeutics Volume 63 ; 1998 ; 63 >
-    au < doNotProcess ; doNotProcess ; 1998 ; Clinical Pharmacology & Therapeutics Volume 64 ; 1998 ; 64 >
-    au < doNotProcess ; doNotProcess ; 1999 ; Clinical Pharmacology & Therapeutics Volume 65 ; 1999 ; 65 >
-    au < doNotProcess ; doNotProcess ; 1999 ; Clinical Pharmacology & Therapeutics Volume 66 ; 1999 ; 66 >
-    au < exists ; exists ; 2000 ; Clinical Pharmacology & Therapeutics Volume 67 ; 2000 ; 67 >
-    au < exists ; exists ; 2000 ; Clinical Pharmacology & Therapeutics Volume 68 ; 2000 ; 68 >
-    au < exists ; exists ; 2001 ; Clinical Pharmacology & Therapeutics Volume 69 ; 2001 ; 69 >
-    au < exists ; exists ; 2001 ; Clinical Pharmacology & Therapeutics Volume 70 ; 2001 ; 70 >
-    au < exists ; exists ; 2002 ; Clinical Pharmacology & Therapeutics Volume 71 ; 2002 ; 71 >
-    au < exists ; exists ; 2002 ; Clinical Pharmacology & Therapeutics Volume 72 ; 2002 ; 72 >
-    au < exists ; exists ; 2003 ; Clinical Pharmacology & Therapeutics Volume 73 ; 2003 ; 73 >
-    au < exists ; exists ; 2003 ; Clinical Pharmacology & Therapeutics Volume 74 ; 2003 ; 74 >
-    au < exists ; exists ; 2004 ; Clinical Pharmacology & Therapeutics Volume 75 ; 2004 ; 75 >
-    au < exists ; exists ; 2004 ; Clinical Pharmacology & Therapeutics Volume 76 ; 2004 ; 76 >
-    au < manifest ; exists ; 2005 ; Clinical Pharmacology & Therapeutics Volume 77 ; 2005 ; 77 >
-    au < manifest ; exists ; 2005 ; Clinical Pharmacology & Therapeutics Volume 78 ; 2005 ; 78 >
-    au < exists ; exists ; 2006 ; Clinical Pharmacology & Therapeutics Volume 79 ; 2006 ; 79 >
-    au < exists ; exists ; 2006 ; Clinical Pharmacology & Therapeutics Volume 80 ; 2006 ; 80 >
-    au < exists ; exists ; 2007 ; Clinical Pharmacology & Therapeutics Volume 81 ; 2007 ; 81 >
-    au < exists ; exists ; 2007 ; Clinical Pharmacology & Therapeutics Volume 82 ; 2007 ; 82 >
-    au < finished ; frozen ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 >
-    au < finished ; frozen ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 >
-    au < finished ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 >
-    au < finished ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 >
-    au < finished ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
-    au < finished ; frozen ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
+    au < down ; frozen ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 >
+    au < down ; frozen ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 >
+    au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 >
+    au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 >
+    au < down ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
+    au < down ; frozen ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
     au < zapped ; finished ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
-    au < finished ; frozen ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
-    au < finished ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 >
-    au < finished ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 92 ; 2012 ; 92 >
-    au < crawling ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 93 ; 2013 ; 93 >
-    au < crawling ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 94 ; 2013 ; 94 >
-    au < manifest ; exists ; 2014 ; Clinical Pharmacology & Therapeutics Volume 95 ; 2014 ; 95 >
-    au < manifest ; exists ; 2014 ; Clinical Pharmacology & Therapeutics Volume 96 ; 2014 ; 96 >
-
-  }
-
-  {
-
-    title <
-      name = CPT: Pharmacometrics & Systems Pharmacology ;
-      eissn = 2163-8306
-    >
-
-    param[journal_id] = psp
-    comment[publisher] = moving to Wiley Blackwell, effective on 2015-01-01
-    
-    au < manifest ; exists ; 2012 ; CPT: Pharmacometrics & Systems Pharmacology Volume 1 ; 2012 ; 1 >
-    au < manifest ; exists ; 2013 ; CPT: Pharmacometrics & Systems Pharmacology Volume 2 ; 2013 ; 2 >
-    au < manifest ; exists ; 2014 ; CPT: Pharmacometrics & Systems Pharmacology Volume 3 ; 2014 ; 3 >
+    au < down ; frozen ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
+    au < down ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 >
+    au < down ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 92 ; 2012 ; 92 >
+    au < down ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 93 ; 2013 ; 93 >
+    au < down ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 94 ; 2013 ; 94 >
 
   }
 
