@@ -3865,7 +3865,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Genome Integrity Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Genome Integrity Volume 4 ; 4 >
-      au < manifest ; exists ; 2014 ; Genome Integrity Volume 5 ; 5 >
+      au < testing ; exists ; 2014 ; Genome Integrity Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; Genome Integrity Volume 6 ; 6 >
       
     }
@@ -3885,7 +3885,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < manifest ; exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
-      au < manifest ; exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
+      au < testing ; exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
       au < manifest ; exists ; 2015 ; Genome Medicine Volume 7 ; 7 >
 
     }
@@ -3902,7 +3902,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2012 ; GigaScience Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; GigaScience Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; GigaScience Volume 3 ; 3 >
+      au < testing ; exists ; 2014 ; GigaScience Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; GigaScience Volume 4 ; 4 >
 
     }
@@ -3926,7 +3926,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Globalization and Health Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Globalization and Health Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Globalization and Health Volume 9 ; 9 >
-      au < manifest ; exists ; 2014 ; Globalization and Health Volume 10 ; 10 >
+      au < testing ; exists ; 2014 ; Globalization and Health Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Globalization and Health Volume 11 ; 11 >
 
     }
@@ -3946,7 +3946,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
-      au < manifest ; exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
+      au < testing ; exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
       au < manifest ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }
@@ -3971,7 +3971,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
-      au < manifest ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
+      au < testing ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
       au < manifest ; exists ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
 
     }
@@ -3995,7 +3995,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
-      au < manifest ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
+      au < testing ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
 
     }
@@ -4021,7 +4021,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Health and Quality of Life Outcomes Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 >
+      au < testing ; exists ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Health and Quality of Life Outcomes Volume 13 ; 13 >
 
     }
@@ -4037,7 +4037,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2047-2501
 
       au < crawling ; exists ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
+      au < testing ; exists ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
 
     }
@@ -4065,7 +4065,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
+      au < testing ; exists ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Health Research Policy and Systems Volume 13 ; 13 >
 
     }
