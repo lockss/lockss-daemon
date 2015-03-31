@@ -45,6 +45,24 @@ public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   
   private static final Logger log = Logger.getLogger(APSHtmlHashFilterFactory.class);
   
+  private static NodeFilter[] filters = new NodeFilter[] {
+      // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
+      // <div id="hw-article-author-popups-
+      // HtmlNodeFilters.tagWithAttributeRegex("div", "id", "hw-.{40}popup"),
+      // <div class="highwire-cite-access">
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cite-access"),
+  };
+  
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
+    
+    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
+    return filtered;
+  }
+  
   @Override
   public boolean doWSFiltering() {
     return true;
@@ -56,23 +74,5 @@ public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   @Override
   public boolean doXformToText() {
     return false;
-  }
-  
-  @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
-        // <div id="hw-article-author-popups-
-        // HtmlNodeFilters.tagWithAttributeRegex("div", "id", "hw-.{40}popup"),
-        // <div class="highwire-cite-access">
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cite-access"),
-    };
-    
-    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
-    
-    return filtered;
   }
 }

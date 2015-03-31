@@ -45,22 +45,22 @@ public class APSHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFact
   
   private static final Logger log = Logger.getLogger(APSHtmlCrawlFilterFactory.class);
   
+  protected static NodeFilter[] filters = new NodeFilter[] {
+    // Do not crawl prev/next pager for links from APS
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
+    // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^author-tooltip"),
+    // APS articles sometimes had view links, but not always
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
+  };
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Do not crawl prev/next pager for links from APS
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
-        // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^author-tooltip"),
-        // APS articles sometimes had view links, but not always
-        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
-    };
     
     InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
-    
     return filtered;
   }
 }
