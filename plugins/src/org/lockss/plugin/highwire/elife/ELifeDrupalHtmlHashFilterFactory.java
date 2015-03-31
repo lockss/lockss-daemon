@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,6 +45,22 @@ public class ELifeDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFa
   
   private static final Logger log = Logger.getLogger(ELifeDrupalHtmlHashFilterFactory.class);
   
+  protected static NodeFilter[] filters = new NodeFilter[] {
+    // Do not hash responsive header (from crawl filter)
+    HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
+    // this replaces references filter as references should not change
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-reflink-links-wrapper"),
+    // this was a source of over-crawl & can be simpler than (from crawl filter)
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
+    // The next filter is not needed, we care about the correction for the hash
+    // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
+    
+    // No relevant content in these headers
+    HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "page_header"),
+    HtmlNodeFilters.tagWithAttribute("ul", "class", "elife-article-categories"),
+  };
+  
   @Override
   public boolean doWSFiltering() {
     return true;
@@ -63,21 +79,6 @@ public class ELifeDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFa
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Do not hash responsive header (from crawl filter)
-        HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
-        // this replaces references filter as references should not change
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-reflink-links-wrapper"),
-        // this was a source of over-crawl & can be simpler than (from crawl filter)
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
-        // The next filter is not needed, we care about the correction for the hash
-        // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
-        
-        // No relevant content in these headers
-        HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "page_header"),
-        HtmlNodeFilters.tagWithAttribute("ul", "class", "elife-article-categories"),
-    };
     
     return super.createFilteredInputStream(au, in, encoding, filters);
   }

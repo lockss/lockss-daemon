@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,9 +60,7 @@ public class ELifeDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFi
                                                String encoding)
       throws PluginException {
     
-    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
-    
-    return filtered;
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
 }
