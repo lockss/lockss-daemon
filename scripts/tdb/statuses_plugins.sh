@@ -17,39 +17,39 @@ scripts/tdb/tdbout -t plugin `find tdb -name \*.tdb -print` | sed 's/\./\//g' | 
 #shopt -u extglob
 
 #To get the plugins with and without status:
-grep -r -A 1 --include "*.xml" "<string>plugin_status</string>" plugins/src | grep "\- " | sed 's/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo01.txt
-grep -rL --include "*.xml" "<string>plugin_status</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo01.txt
+grep -r -A 1 --include "*.xml" "<string>plugin_status</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo01.txt
+grep -rL --include "*.xml" "<string>plugin_status</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo01.txt
 
 #Create a base list of plugins
 cat $tpath/foo01.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/AllPlugins.txt
 
 #To get the plugins with and without substance checkers:
-grep -r --include "*.xml" "<string>au_substance_url_pattern</string>" plugins/src | sed 's/\(.*\).xml.*<string>.*<\/string>/\1,substance/' > $tpath/foo02.txt
-grep -rL --include "*.xml" "<string>au_substance_url_pattern</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo02.txt
+grep -r --include "*.xml" "<string>au_substance_url_pattern</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,substance/' > $tpath/foo02.txt
+grep -rL --include "*.xml" "<string>au_substance_url_pattern</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo02.txt
 
 #To get the plugins with and without article iterators:
-grep -r --include "*.xml" "<string>plugin_article_iterator_factory</string>" plugins/src | sed 's/\(.*\).xml.*<string>.*<\/string>/\1,artit/' > $tpath/foo03.txt
-grep -rL --include "*.xml" "<string>plugin_article_iterator_factory</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo03.txt
+grep -r --include "*.xml" "<string>plugin_article_iterator_factory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,artit/' > $tpath/foo03.txt
+grep -rL --include "*.xml" "<string>plugin_article_iterator_factory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo03.txt
 
 #To get the plugins with and without metadata extractors:
-grep -r --include "*.xml" "<string>plugin_article_metadata_extractor_factory</string>" plugins/src | sed 's/\(.*\).xml.*<string>.*<\/string>/\1,metadex/' > $tpath/foo04.txt
-grep -rL --include "*.xml" "<string>plugin_article_metadata_extractor_factory</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo04.txt
+grep -r --include "*.xml" "<string>plugin_article_metadata_extractor_factory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,metadex/' > $tpath/foo04.txt
+grep -rL --include "*.xml" "<string>plugin_article_metadata_extractor_factory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo04.txt
 
 #To get the plugins with and without OpenURL resolver feature URLs:
-grep -r --include "*.xml" "<string>au_feature_urls</string>" plugins/src | sed 's/\(.*\).xml.*<string>.*<\/string>/\1,openurl/' > $tpath/foo05.txt
-grep -rL --include "*.xml" "<string>au_feature_urls</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo05.txt
+grep -r --include "*.xml" "<string>au_feature_urls</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,openurl/' > $tpath/foo05.txt
+grep -rL --include "*.xml" "<string>au_feature_urls</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo05.txt
 
 #To get the plugins with and without the parent plugin:
-grep -r -A 1 --include "*.xml" "<string>plugin_parent</string>" plugins/src | grep "\- " | sed 's/\(.*\).xml-.*<string>.*\.\(.*\)<\/string>/\1,\2/' > $tpath/foo06.txt
-grep -rL --include "*.xml" "<string>plugin_parent</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo06.txt
+grep -r -A 1 --include "*.xml" "<string>plugin_parent</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>.*\.\(.*\)<\/string>/\1,\2/' > $tpath/foo06.txt
+grep -rL --include "*.xml" "<string>plugin_parent</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo06.txt
 
 #To get the plugins with and without the parent plugin version:
-grep -r -A 1 --include "*.xml" "<string>plugin_parent_version</string>" plugins/src | grep "\- " | sed 's/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo07.txt
-grep -rL --include "*.xml" "<string>plugin_parent_version</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo07.txt
+grep -r -A 1 --include "*.xml" "<string>plugin_parent_version</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo07.txt
+grep -rL --include "*.xml" "<string>plugin_parent_version</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo07.txt
 
 #To get the plugins with and without the plugin version:
-grep -r -A 1 --include "*.xml" "<string>plugin_version</string>" plugins/src | grep "\- " | sed 's/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo08.txt
-grep -rL --include "*.xml" "<string>plugin_version</string>" plugins/src | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo08.txt
+grep -r -A 1 --include "*.xml" "<string>plugin_version</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo08.txt
+grep -rL --include "*.xml" "<string>plugin_version</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo08.txt
 
 #To get the plugins on and not on the content machines 9-16 (gln testing)
 sh scripts/tdb/statuses_plugins_content_9-16.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo09.txt
