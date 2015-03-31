@@ -124,16 +124,16 @@
     param[journal_id] = atm
     comment[continued_by] = 2047-7724
 
-    au < exists ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 >
-    au < exists ; 2003 ; Annals of Tropical Medicine and Parasitology Volume 97 ; 97 >
-    au < exists ; 2004 ; Annals of Tropical Medicine and Parasitology Volume 98 ; 98 >
-    au < exists ; 2005 ; Annals of Tropical Medicine and Parasitology Volume 99 ; 99 >
-    au < exists ; 2006 ; Annals of Tropical Medicine and Parasitology Volume 100 ; 100 >
-    au < exists ; 2007 ; Annals of Tropical Medicine and Parasitology Volume 101 ; 101 >
-    au < exists ; 2008 ; Annals of Tropical Medicine and Parasitology Volume 102 ; 102 >
-    au < exists ; 2009 ; Annals of Tropical Medicine and Parasitology Volume 103 ; 103 >
-    au < exists ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 >
-    au < exists ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 >
+    au < manifest ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 >
+    au < manifest ; 2003 ; Annals of Tropical Medicine and Parasitology Volume 97 ; 97 >
+    au < manifest ; 2004 ; Annals of Tropical Medicine and Parasitology Volume 98 ; 98 >
+    au < manifest ; 2005 ; Annals of Tropical Medicine and Parasitology Volume 99 ; 99 >
+    au < manifest ; 2006 ; Annals of Tropical Medicine and Parasitology Volume 100 ; 100 >
+    au < manifest ; 2007 ; Annals of Tropical Medicine and Parasitology Volume 101 ; 101 >
+    au < manifest ; 2008 ; Annals of Tropical Medicine and Parasitology Volume 102 ; 102 >
+    au < manifest ; 2009 ; Annals of Tropical Medicine and Parasitology Volume 103 ; 103 >
+    au < manifest ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 >
+    au < manifest ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 >
 
   }
 
@@ -2618,10 +2618,10 @@
     param[journal_id] = lib
     comment[continued_by] = 1758-3489
 
-    au < exists ; 2005 ; Library History Volume 21 ; 21 >
-    au < exists ; 2006 ; Library History Volume 22 ; 22 >
-    au < exists ; 2007 ; Library History Volume 23 ; 23 >
-    au < exists ; 2008 ; Library History Volume 24 ; 24 >
+    au < manifest ; 2005 ; Library History Volume 21 ; 21 >
+    au < manifest ; 2006 ; Library History Volume 22 ; 22 >
+    au < manifest ; 2007 ; Library History Volume 23 ; 23 >
+    au < manifest ; 2008 ; Library History Volume 24 ; 24 >
 
   }
 
@@ -2637,11 +2637,11 @@
     param[journal_id] = lbh
     comment[continues] = 0024-2306
 
-    au < exists ; 2009 ; Library & Information History Volume 25 ; 25 >
+    au < manifest ; 2009 ; Library & Information History Volume 25 ; 25 >
     au < doNotProcess ; 2010 ; Library & Information History Volume 26 ; 26 >
     au < doNotProcess ; 2011 ; Library & Information History Volume 27 ; 27 >
     au < doNotProcess ; 2012 ; Library & Information History Volume 28 ; 28 >
-    au < exists ; 2013 ; Library & Information History Volume 29 ; 29 >
+    au < manifest ; 2013 ; Library & Information History Volume 29 ; 29 >
 
   }
 
@@ -3410,14 +3410,14 @@
     param[journal_id] = pai 
     comment[0] = ceased publication in 2007
 
-    au < exists ; 2000 ; The Pain Clinic Volume 12 ; 12 >
-    au < exists ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 >
-    au < exists ; 2002 ; The Pain Clinic Volume 14 ; 14 >
-    au < exists ; 2003 ; The Pain Clinic Volume 15 ; 15 >
-    au < exists ; 2004 ; The Pain Clinic Volume 16 ; 16 >
-    au < exists ; 2005 ; The Pain Clinic Volume 17 ; 17 >
-    au < exists ; 2006 ; The Pain Clinic Volume 18 ; 18 >
-    au < exists ; 2007 ; The Pain Clinic Volume 19 ; 19 >
+    au < manifest ; 2000 ; The Pain Clinic Volume 12 ; 12 >
+    au < manifest ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 >
+    au < manifest ; 2002 ; The Pain Clinic Volume 14 ; 14 >
+    au < manifest ; 2003 ; The Pain Clinic Volume 15 ; 15 >
+    au < manifest ; 2004 ; The Pain Clinic Volume 16 ; 16 >
+    au < manifest ; 2005 ; The Pain Clinic Volume 17 ; 17 >
+    au < manifest ; 2006 ; The Pain Clinic Volume 18 ; 18 >
+    au < manifest ; 2007 ; The Pain Clinic Volume 19 ; 19 >
     
   }
 

@@ -3054,8 +3054,8 @@
       param[base_url] = http://www.clinicalhypertension.com/
       param[journal_issn] = 2056-5909
 
-      au < exists ; 2014 ; Clinical Hypertension Volume 20 ; 20 >
-      au < exists ; 2015 ; Clinical Hypertension Volume 21 ; 21 >
+      au < manifest ; 2014 ; Clinical Hypertension Volume 20 ; 20 >
+      au < manifest ; 2015 ; Clinical Hypertension Volume 21 ; 21 >
 
     }
 

@@ -532,7 +532,7 @@
 
     param[base_url] = http://stel.bmj.com/
     
-    au < HighWirePressH20Plugin ; testing ; 2014 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 >
 
   }
@@ -1924,7 +1924,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       param[base_url] = http://lupus.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+      au < manifest ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
       au < exists ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
 
     }

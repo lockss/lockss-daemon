@@ -1302,7 +1302,7 @@
       param[journal_dir] = journal_of_chinese_literature_and_culture
       attr[journal_id] = clc
 
-      au < exists ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
+      au < manifest ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
       au < expected ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
 
      }
@@ -1589,7 +1589,7 @@
      au < HighWirePressH20Plugin ; released ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
      au < HighWirePressH20Plugin ; released ; 2013 ; Labor: Studies in Working-Class History of the Americas Volume 10 ; 10 >
      au < HighWirePressH20Plugin ; manifest ; 2014 ; Labor: Studies in Working-Class History of the Americas Volume 11 ; 11 >
-     au < HighWirePressH20Plugin ; expected ; 2015 ; Labor: Studies in Working-Class History of the Americas Volume 12 ; 12 >
+     au < HighWirePressH20Plugin ; manifest ; 2015 ; Labor: Studies in Working-Class History of the Americas Volume 12 ; 12 >
 
     }
 

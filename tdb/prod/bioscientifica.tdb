@@ -31,9 +31,9 @@
       param[base_url] = http://www.endocrineconnections.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; exists ; 2012 ; Endocrine Connections Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 2013 ; Endocrine Connections Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 2014 ; Endocrine Connections Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Endocrine Connections Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 2013 ; Endocrine Connections Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Endocrine Connections Volume 3 ; 3 >
 
     }
 
