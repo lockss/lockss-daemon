@@ -42975,7 +42975,7 @@
         param[base_url] = http://rcgp-innovait.oxfordjournals.org/
         pluginSuffix = ClockssHighWirePlugin
 
-        au < superseded ; crawling ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 [superseded] ; 1 ; >
+        au < superseded ; down ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 [superseded] ; 1 ; >
         au < zapped ; finished ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
       }
