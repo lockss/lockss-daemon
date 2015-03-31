@@ -936,6 +936,22 @@
 
     }
 
+  {
+    title <
+      name = Journal of Chinese Literature and Culture ;
+      issn = 2329-0048 ;
+      eissn = 2329-0056 
+    >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jclc.dukejournals.org
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+     au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
+     au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
+
+  }
+
     {
 
     title <
