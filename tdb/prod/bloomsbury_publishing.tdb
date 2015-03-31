@@ -322,15 +322,15 @@
 
     au < manifest ; 2003 ; Design Philosophy Papers Volume 1 ; 1 >
     au < manifest ; 2004 ; Design Philosophy Papers Volume 2 ; 2 >
-    au < ready ; 2005 ; Design Philosophy Papers Volume 3 ; 3 >
-    au < ready ; 2006 ; Design Philosophy Papers Volume 4 ; 4 >
-    au < ready ; 2007 ; Design Philosophy Papers Volume 5 ; 5 >
-    au < ready ; 2008 ; Design Philosophy Papers Volume 6 ; 6 >
-    au < ready ; 2009 ; Design Philosophy Papers Volume 7 ; 7 >
-    au < ready ; 2010 ; Design Philosophy Papers Volume 8 ; 8 >
-    au < ready ; 2011 ; Design Philosophy Papers Volume 9 ; 9 >
-    au < ready ; 2012 ; Design Philosophy Papers Volume 10 ; 10 >
-    au < ready ; 2013 ; Design Philosophy Papers Volume 11 ; 11 >
+    au < releasing ; 2005 ; Design Philosophy Papers Volume 3 ; 3 >
+    au < releasing ; 2006 ; Design Philosophy Papers Volume 4 ; 4 >
+    au < releasing ; 2007 ; Design Philosophy Papers Volume 5 ; 5 >
+    au < releasing ; 2008 ; Design Philosophy Papers Volume 6 ; 6 >
+    au < releasing ; 2009 ; Design Philosophy Papers Volume 7 ; 7 >
+    au < releasing ; 2010 ; Design Philosophy Papers Volume 8 ; 8 >
+    au < releasing ; 2011 ; Design Philosophy Papers Volume 9 ; 9 >
+    au < releasing ; 2012 ; Design Philosophy Papers Volume 10 ; 10 >
+    au < releasing ; 2013 ; Design Philosophy Papers Volume 11 ; 11 >
     au < manifest ; 2014 ; Design Philosophy Papers Volume 12 ; 12 >
 
   }
@@ -694,7 +694,7 @@
     param[journal_id] = jtex
     param[journal_issn] = 2051-1787
 
-    au < ready ; 2013 ; Journal of Textile Design Research and Practice Volume 1 ; 1 >
+    au < releasing ; 2013 ; Journal of Textile Design Research and Practice Volume 1 ; 1 >
     au < manifest ; 2014 ; Journal of Textile Design Research and Practice Volume 2 ; 2 >
 
   }

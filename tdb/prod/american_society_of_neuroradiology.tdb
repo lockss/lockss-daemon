@@ -79,9 +79,9 @@
     param[journal_issn] = 1541-6593
     implicit < status ; year ; name ; param[volume_name] >
  
-      au < ready ; 2011 ; Neurographics Volume 1 ; 1 >
-      au < ready ; 2012 ; Neurographics Volume 2 ; 2 >
-      au < ready ; 2013 ; Neurographics Volume 3 ; 3 >
+      au < releasing ; 2011 ; Neurographics Volume 1 ; 1 >
+      au < releasing ; 2012 ; Neurographics Volume 2 ; 2 >
+      au < releasing ; 2013 ; Neurographics Volume 3 ; 3 >
       au < manifest ; 2014 ; Neurographics Volume 4 ; 4 >
 
     }
