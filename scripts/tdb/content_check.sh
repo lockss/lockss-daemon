@@ -4,6 +4,7 @@
 tpath="/home/$LOGNAME/tmp"
 mkdir -p $tpath
 
+date
 # Find incorrect status
 echo "---------------------"
 echo "---------------------"
