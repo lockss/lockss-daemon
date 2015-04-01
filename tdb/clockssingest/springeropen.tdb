@@ -1614,6 +1614,7 @@
         au < manifest ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 ; 5 >
   
     }
   
@@ -1630,6 +1631,7 @@
   
         au < manifest ; exists ; 2013 ; Journal of Nanostructure in Chemistry Volume 3 ; 3 >
         au < expected ; exists ; 2014 ; Journal of Nanostructure in Chemistry Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Journal of Nanostructure in Chemistry Volume 5 ; 5 >
   
     }
   
@@ -1646,6 +1648,7 @@
   
         au < manifest ; exists ; 2013 ; Journal of Ophthalmic Inflammation and Infection Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Journal of Ophthalmic Inflammation and Infection Volume 5 ; 5 >
   
     }
   
@@ -1664,6 +1667,7 @@
         au < manifest ; exists ; 2012 ; Journal of Remanufacturing Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Remanufacturing Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Journal of Remanufacturing Volume 5 ; 5 >
   
     }
   
@@ -1680,6 +1684,7 @@
   
         au < manifest ; exists ; 2013 ; Journal of Software Engineering Research and Development Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 >
+        au < expected ; exists ; 2015 ; Journal of Software Engineering Research and Development Volume 3 ; 3 >
   
     }
   
@@ -1695,6 +1700,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Journal of Solid State Lighting Volume 2 ; 2 >
   
     }
 
@@ -1710,6 +1716,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Journal of Statistical Distributions and Applications Volume 2 ; 2 >
   
     }
   
@@ -1727,6 +1734,7 @@
         au < manifest ; exists ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 >
         au < manifest ; exists ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 >
         au < manifest ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
+        au < expected ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 >
   
     }
   
@@ -1742,6 +1750,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 >
   
     }
   
@@ -1758,6 +1767,7 @@
   
         au < manifest ; exists ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 >
+        au < expected ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 ; 3 >
   
     }
   
@@ -1776,6 +1786,7 @@
         au < manifest ; exists ; 2012 ; Language Testing in Asia Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Language Testing in Asia Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Language Testing in Asia Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Language Testing in Asia Volume 5 ; 5 >
   
     }
   
@@ -1792,6 +1803,7 @@
   
         au < manifest ; exists ; 2013 ; Life Sciences, Society and Policy Volume 9 ; 9 >
         au < manifest ; exists ; 2014 ; Life Sciences, Society and Policy Volume 10 ; 10 >
+        au < expected ; exists ; 2015 ; Life Sciences, Society and Policy Volume 11 ; 11 >
   
     }
 
@@ -1809,6 +1821,7 @@
         au < manifest ; exists ; 2012 ; Maritime Studies Volume 11 ; 11 >
         au < manifest ; exists ; 2013 ; Maritime Studies Volume 12 ; 12 >
         au < manifest ; exists ; 2014 ; Maritime Studies Volume 13 ; 13 >
+        au < expected ; exists ; 2015 ; Maritime Studies Volume 14 ; 14 >
   
     }
   
@@ -1826,6 +1839,7 @@
         au < manifest ; exists ; 2012 ; Mathematical Sciences Volume 6 ; 6 >
         au < manifest ; exists ; 2013 ; Mathematical Sciences Volume 7 ; 7 >
         au < expected ; exists ; 2014 ; Mathematical Sciences Volume 8 ; 8 >
+        au < expected ; exists ; 2015 ; Mathematical Sciences Volume 9 ; 9 >
   
     }
   
@@ -1842,6 +1856,7 @@
   
         au < manifest ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
+        au < expected ; exists ; 2015 ; Micro and Nano Systems Letters Volume 3 ; 3 >
   
     }
   
@@ -1860,6 +1875,7 @@
         au < manifest ; exists ; 2012 ; Multilingual Education Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Multilingual Education Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Multilingual Education Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Multilingual Education Volume 5 ; 5 >
   
     }
 
@@ -1876,6 +1892,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < manifest ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
 
     }
 
@@ -1900,6 +1917,7 @@
         au < manifest ; exists ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 >
         au < manifest ; exists ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 >
         au < manifest ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
+        au < expected ; exists ; 2015 ; Nanoscale Research Letters Volume 10 ; 10 >
   
     }
   
@@ -1916,6 +1934,7 @@
   
         au < manifest ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 >
         au < manifest ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 >
+        au < expected ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 ; 45 >
   
     }
   
@@ -1933,6 +1952,7 @@
         au < manifest ; exists ; 2012 ; Optical Nanoscopy Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Optical Nanoscopy Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Optical Nanoscopy Volume 3 ; 3 >
+        au < expected ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 >
   
     }
   
@@ -1951,6 +1971,7 @@
         au < manifest ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 >
   
     }
   
@@ -1969,6 +1990,7 @@
         au < manifest ; exists ; 2012 ; Pastoralism Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Pastoralism Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Pastoralism Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
   
     }
   
@@ -1986,6 +2008,7 @@
         au < manifest ; exists ; 2012 ; Planetary Science Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Planetary Science Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Planetary Science Volume 3 ; 3 >
+        au < expected ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
   
     }
   
@@ -2003,6 +2026,7 @@
         au < manifest ; exists ; 2012 ; Progress in Biomaterials Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Progress in Biomaterials Volume 2 ; 2 >
         au < expected ; exists ; 2014 ; Progress in Biomaterials Volume 3 ; 3 >
+        au < expected ; exists ; 2015 ; Progress in Biomaterials Volume 4 ; 4 >
   
     }
   
@@ -2018,6 +2042,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
   
     }
   
@@ -2034,6 +2059,7 @@
   
         au < manifest ; exists ; 2013 ; Progress in Orthodontics Volume 1 ; 1 >
         au < expected ; exists ; 2014 ; Progress in Orthodontics Volume 2 ; 2 >
+        au < expected ; exists ; 2015 ; Progress in Orthodontics Volume 3 ; 3 >
   
     }
   
@@ -2052,6 +2078,7 @@
         au < manifest ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
+        au < expected ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 >
   
     }
 
@@ -2067,6 +2094,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < manifest ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
 
     }
 
@@ -2083,6 +2111,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < manifest ; exists ; 2014 ; Revista Chilena de Historia Natural Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 2 ; 2 >
 
     }
 
@@ -2102,6 +2131,7 @@
         au < manifest ; exists ; 2012 ; Rice Volume 5 ; 5 >
         au < manifest ; exists ; 2013 ; Rice Volume 6 ; 6 >
         au < manifest ; exists ; 2014 ; Rice Volume 7 ; 7 >
+        au < expected ; exists ; 2015 ; Rice Volume 8 ; 8 >
   
     }
   
@@ -2117,6 +2147,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; ROBOMECH Journal Volume 2 ; 2 >
   
     }
   
@@ -2132,6 +2163,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Robotics and Biomimetics Volume 2 ; 2 >
   
     }
   
@@ -2147,6 +2179,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < expected ; exists ; 2014 ; Scalable Computing Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Scalable Computing Volume 2 ; 2 >
   
     }
   
@@ -2164,6 +2197,7 @@
         au < manifest ; exists ; 2012 ; Security Informatics Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Security Informatics Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Security Informatics Volume 3 ; 3 >
+        au < expected ; exists ; 2015 ; Security Informatics Volume 4 ; 4 >
   
     }
   
@@ -2181,6 +2215,7 @@
         au < manifest ; exists ; 2012 ; SpringerPlus Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; SpringerPlus Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; SpringerPlus Volume 3 ; 3 >
+        au < expected ; exists ; 2015 ; SpringerPlus Volume 4 ; 4 >
   
     }
   
@@ -2197,6 +2232,7 @@
   
         au < manifest ; exists ; 2013 ; Translational Respiratory Medicine Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 >
+        au < expected ; exists ; 2015 ; Translational Respiratory Medicine Volume 3 ; 3 >
   
     }
   
@@ -2213,6 +2249,7 @@
   
         au < manifest ; exists ; 2013 ; Visualization in Engineering Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Visualization in Engineering Volume 2 ; 2 >
+        au < expected ; exists ; 2015 ; Visualization in Engineering Volume 3 ; 3 >
   
     }
 
@@ -2229,6 +2266,7 @@
 
         au < manifest ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 >
         au < manifest ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
+        au < expected ; exists ; 2015 ; Zoological Studies Volume 54 ; 54 >
 
     }
 
