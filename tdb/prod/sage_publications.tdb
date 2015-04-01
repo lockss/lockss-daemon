@@ -4015,7 +4015,7 @@
         eissn = 2053-9517 ;
         issnl = 2053-9517
       >
-        pluginSuffix = HighWireDrupalPlugin
+        pluginSuffix = HWDrupalPlugin
         param[base_url] = http://bds.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -9400,7 +9400,7 @@
     >
 
       param[base_url] = http://dhj.sagepub.com/
-      pluginSuffix = HighWireDrupalPlugin
+      pluginSuffix = HWDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2015 ; Digital Health Volume 1 ; 1 >
@@ -37677,7 +37677,7 @@ comment[mpj] = now published by Brill
           eissn = 2053-1680
       >
 
-        pluginSuffix = HighWireDrupalPlugin
+        pluginSuffix = HWDrupalPlugin
         param[base_url] = http://rap.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -38510,7 +38510,7 @@ comment[mpj] = now published by Brill
 
         {
 
-          pluginSuffix = HighWireDrupalPlugin
+          pluginSuffix = HWDrupalPlugin
 
           au < doNotProcess ; 2011 ; Sage Open Volume 1 ; 1 >
           au < doNotProcess ; 2012 ; Sage Open Volume 2 ; 2 >
