@@ -130,8 +130,6 @@
       plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin
       param[base_url] = http://press.endocrine.org/
       param[journal_id] = endo
-      
-      comment[notReady] = PDF Hash Error (X X). Volume 152.
 
       au < manifest ; exists ; 1917 ; Endocrinology Volume 1 ; 1 >
       au < manifest ; exists ; 1918 ; Endocrinology Volume 2 ; 2 >
@@ -284,7 +282,7 @@
       au < manifest ; exists ; 2008 ; Endocrinology Volume 149 ; 149 >
       au < manifest ; exists ; 2009 ; Endocrinology Volume 150 ; 150 >
       au < manifest ; exists ; 2010 ; Endocrinology Volume 151 ; 151 >
-      au < notReady ; exists ; 2011 ; Endocrinology Volume 152 ; 152 > # PDF Hash Error (X X). Volume 152.
+      au < ready ; exists ; 2011 ; Endocrinology Volume 152 ; 152 > # OK to ignore PDF Hash Error (X X). PD-1296
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrinology Volume 153 ; 153 >
       au < doNotProcess ; doNotProcess ; 2013 ; Endocrinology Volume 154 ; 154 >
       au < testing ; exists ; 2014 ; Endocrinology Volume 155 ; 155 >
