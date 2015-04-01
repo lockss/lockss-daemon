@@ -12,7 +12,7 @@
       issnl = 2160-3251
     >
     
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin 
+    plugin = org.lockss.plugin.highwire.HWDrupalPlugin 
     param[base_url] = http://caseconnector.jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -143,7 +143,7 @@
       issnl = 2160-2204
     >
     
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin 
+    plugin = org.lockss.plugin.highwire.HWDrupalPlugin 
     param[base_url] = http://surgicaltechniques.jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -302,7 +302,7 @@
     }
     
     {
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin 
+    plugin = org.lockss.plugin.highwire.HWDrupalPlugin 
     param[base_url] = http://jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
