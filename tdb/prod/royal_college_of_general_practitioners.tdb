@@ -4,7 +4,7 @@
     name = Royal College of General Practitioners
   >
 
-  plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+  plugin = org.lockss.plugin.highwire.HWDrupalPlugin
   implicit < status ; year ; name ; param[volume_name] >
 
   {
