@@ -8155,6 +8155,21 @@
   {
 
     title <
+      name = A Current Bibliography on African Affairs ;
+      issn = 0011-3255 ;
+      eissn = 2376-6662
+    >
+
+      param[base_url] = http://cba.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; >
+
+  }
+
+  {
+
+    title <
       name = Current Directions in Psychological Science ;
       issn = 0963-7214 ;
       eissn = 1467-8721
