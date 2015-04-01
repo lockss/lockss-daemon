@@ -8993,6 +8993,22 @@
 
     }
 
+  {
+
+    title <
+      name = A Current Bibliography on African Affairs ;
+      issn = 0011-3255 ;
+      eissn = 2376-6662
+    >
+
+      param[base_url] = http://cba.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 >
+
+  }
+
     {
 
       title <
