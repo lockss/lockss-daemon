@@ -149,10 +149,10 @@
       au < HighWirePressH20Plugin ; down ; 2011 ; Blood Volume 118 ; 118 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Blood Volume 119 ; 119 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Blood Volume 120 ; 120 >
-      au < HighWireDrupalPlugin ; exists ; 2013 ; Blood Volume 121 ; 121 >
-      au < HighWireDrupalPlugin ; exists ; 2013 ; Blood Volume 122 ; 122 >
-      au < HighWireDrupalPlugin ; exists ; 2014 ; Blood Volume 123 ; 123 >
-      au < HighWireDrupalPlugin ; expected ; 2014 ; Blood Volume 124 ; 124 >
+      au < HWDrupalPlugin ; exists ; 2013 ; Blood Volume 121 ; 121 >
+      au < HWDrupalPlugin ; exists ; 2013 ; Blood Volume 122 ; 122 >
+      au < HWDrupalPlugin ; exists ; 2014 ; Blood Volume 123 ; 123 >
+      au < HWDrupalPlugin ; expected ; 2014 ; Blood Volume 124 ; 124 >
 
     }
 
