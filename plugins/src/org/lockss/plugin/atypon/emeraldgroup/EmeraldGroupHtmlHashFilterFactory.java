@@ -40,16 +40,12 @@ import org.htmlparser.tags.*;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.util.Logger;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
 public class EmeraldGroupHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory  {
-      
-  private static final Logger log = Logger.getLogger(
-                                      EmeraldGroupHtmlHashFilterFactory.class);
-
+     
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, 
