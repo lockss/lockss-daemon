@@ -253,8 +253,8 @@
     
     au < HighWirePressH20Plugin ; down ; 2011 ; Open Biology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Open Biology Volume 2 ; 2 >
-    au < HighWireDrupalPlugin ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
-    au < HighWireDrupalPlugin ; exists ; 2014 ; Open Biology Volume 4 ; 4 >
+    au < HWDrupalPlugin ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
+    au < HWDrupalPlugin ; exists ; 2014 ; Open Biology Volume 4 ; 4 >
   
   }
   
@@ -1589,7 +1589,7 @@
     >
 
     param[base_url] = http://rsos.royalsocietypublishing.org/
-    pluginSuffix = HighWireDrupalPlugin
+    pluginSuffix = HWDrupalPlugin
 
     au < exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 >
   }
