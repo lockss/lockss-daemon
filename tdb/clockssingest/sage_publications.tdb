@@ -3666,7 +3666,7 @@
       eissn = 2053-9517 ;
       issnl = 2053-9517
     >
-      pluginSuffix = ClockssHighWireDrupalPlugin
+      pluginSuffix = ClockssHWDrupalPlugin
       param[base_url] = http://bds.sagepub.com/
 
       au < exists ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
@@ -8527,7 +8527,7 @@
     >
 
       param[base_url] = http://dhj.sagepub.com/
-      pluginSuffix = ClockssHighWireDrupalPlugin
+      pluginSuffix = ClockssHWDrupalPlugin
 
       au < exists ; exists ; 2015 ; Digital Health Volume 1 ; 1 ; >
 
@@ -34385,7 +34385,7 @@
         eissn = 2053-1680
     >
 
-      pluginSuffix = ClockssHighWireDrupalPlugin
+      pluginSuffix = ClockssHWDrupalPlugin
       param[base_url] = http://rap.sagepub.com/
 
       au < exists ; exists ; 2014 ; Research & Politics Volume 1 ; 1 ; >
@@ -35180,7 +35180,7 @@
 
         {
 
-          pluginSuffix = ClockssHighWireDrupalPlugin
+          pluginSuffix = ClockssHWDrupalPlugin
 
           au < doNotProcess ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
           au < doNotProcess ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >

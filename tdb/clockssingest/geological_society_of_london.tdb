@@ -758,7 +758,7 @@
     >
 
     param[base_url] = http://trngl.lyellcollection.org/
-    plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
+    plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
 
     au < exists ; exists ; 1860-1863 ; Transactions of the Geological Society of Glasgow Volume 1 ; 1 >
     au < exists ; exists ; 1865-1867 ; Transactions of the Geological Society of Glasgow Volume 2 ; 2 >

@@ -6,7 +6,7 @@
     info[tester] = 8
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
+  plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
   comment[platform] = HighWire Drupal
   implicit < status ; status2 ; year ; name ; param[volume_name] >
 
