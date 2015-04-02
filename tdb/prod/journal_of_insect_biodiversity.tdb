@@ -17,16 +17,12 @@
       issnl = 2147-7612
     >
 
-    {
-    
       param[journal_id] = jib
 
       au < released ; 2013 ; Journal of Insect Biodiversity Volume 1 ; 2013 >
-      au < manifest ; 2014 ; Journal of Insect Biodiversity Volume 2 ; 2014 >
+      au < testing ; 2014 ; Journal of Insect Biodiversity Volume 2 ; 2014 >
+      au < expected ; 2015 ; Journal of Insect Biodiversity Volume 3 ; 2015 >
 
-    }
-    
-    
   }
 
 }
