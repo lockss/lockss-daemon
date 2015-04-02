@@ -26,6 +26,7 @@
     au < exists ; exists ; 2012 ; Journal of Applied Remote Sensing Volume 6 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Applied Remote Sensing Volume 8 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Applied Remote Sensing Volume 9 ; 2015 >
 
     }
     
@@ -40,6 +41,7 @@
     param[resource_id] = 166
     
     au < expected ; exists ; 2014 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 2 ; 2015 >
 
     }
     
@@ -72,6 +74,7 @@
     au < exists ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 >
 
     }
     
@@ -108,6 +111,7 @@
     au < exists ; exists ; 2012 ; Journal of Electronic Imaging Volume 21 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Electronic Imaging Volume 22 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Electronic Imaging Volume 23 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Electronic Imaging Volume 24 ; 2015 >
 
     }
     
@@ -122,6 +126,7 @@
     param[resource_id] = 165
     
     au < exists ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
 
     }
     
@@ -148,6 +153,7 @@
     au < exists ; exists ; 2012 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 11 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 >
 
     }
     
@@ -168,6 +174,7 @@
     au < exists ; exists ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 >
 
     } 
     
@@ -184,6 +191,7 @@
     au < exists ; exists ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 >
+    au < expected ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 >
 
     }
     
@@ -198,6 +206,7 @@
     param[resource_id] = 169
     
     au < exists ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 >
+    au < expected ; exists ; 2015 ; Neurophotonics Volume 2 ; 2015 >
 
     }
 
