@@ -82,6 +82,7 @@
     au < finished ; frozen ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 >
     au < crawling ; exists ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 >
     au < manifest ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 >
+    au < expected ; exists ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 >
 
   }
 
@@ -106,6 +107,7 @@
     au < finished ; crawling ; 2012 ; Biology Letters Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Biology Letters Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Biology Letters Volume 10 ; 10 >
+    au < expected ; exists ; 2015 ; Biology Letters Volume 11 ; 11 >
 
   }
 
@@ -127,6 +129,7 @@
     au < finished ; frozen ; 2012 ; Interface Focus Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Interface Focus Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Interface Focus Volume 4 ; 4 >
+    au < expected ; exists ; 2015 ; Interface Focus Volume 5 ; 5 >
    
   }
   
@@ -152,6 +155,7 @@
     au < finished ; crawling ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Journal of the Royal Society Interface Volume 10 ; 10 >
     au < manifest ; exists ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 >
+    au < expected ; exists ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 >
 
   }
 
@@ -235,6 +239,7 @@
     au < finished ; crawling ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
     au < crawling ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
     au < manifest ; exists ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 >
+    au < expected ; exists ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 >
 
   }
 
@@ -464,6 +469,7 @@
     au < finished ; crawling ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 >
     au < crawling ; exists ; 2013 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 371 ; 371 >
     au < manifest ; exists ; 2014 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 372 ; 372 >
+    au < expected ; exists ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 >
 
   }
 
@@ -670,6 +676,7 @@
     au < finished ; crawling ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 >
     au < crawling ; exists ; 2013 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 368 ; 368 >
     au < manifest ; exists ; 2014 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 369 ; 369 >
+    au < expected ; exists ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 >
 
   }
 
@@ -1269,6 +1276,7 @@
     au < finished ; crawling ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 >
     au < crawling ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 >
     au < manifest ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 >
+    au < expected ; exists ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 >
 
   }
 
@@ -1593,6 +1601,7 @@
     pluginSuffix = ClockssHWDrupalPlugin
 
     au < exists ; exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 >
+    au < expected ; exists ; 2015 ; Royal Society Open Science Volume 2 ; 2 >
   }
 
 }
