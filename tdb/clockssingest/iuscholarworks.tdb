@@ -23,6 +23,7 @@
       au < manifest ; exists ; 2008 ; 2008 ; Artifact Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 >
       au < crawling ; exists ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 >
+      au < expected ; exists ; 2015 ; 2015 ; Artifact Volume 4 ; 4 >
 
   }
 
@@ -66,6 +67,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 >
       au < crawling ; exists ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 >
       au < crawling ; exists ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 >
+      au < expected ; exists ; 2015 ; 2015 ; Anthropology of East Europe Review Volume 33 ; 33 >
 
   }
 
@@ -83,20 +85,44 @@
       au < manifest ; exists ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 >
       au < crawling ; exists ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 >
+      au < expected ; exists ; 2015 ; 2015 ; Black Diaspora Review Volume 5 ; 5 >
 
   }
 
   {
     title <
       name = Hindsight: Journal of Optometry History ;
+      eissn = 2374-3271 
+    >
+
+      param[journal_id] = hindsight
+      comment[continues] = 1948-4984
+
+      au < manifest ; exists ; 2010 ; 2010 ; Hindsight: Journal of Optemetry History Volume 41 ; 41 >
+      au < manifest ; exists ; 2011 ; 2011 ; Hindsight: Journal of Optemetry History Volume 42 ; 42 >
+
+  }
+
+  {
+    title <
+      name = Hindsight: newsletter of the Optometric Historical Society ;
       eissn = 1948-4984 
     >
 
       param[journal_id] = hindsight
+      comment[continued_by] = 2374-3271
+      comment[0] = content available from 1970 volume 1 to 1999 volume 30
 
-      au < manifest ; exists ; 2009 ; 2009 ; Hindsight: Journal of Optemetry History Volume 40 ; 40 >
-      au < manifest ; exists ; 2010 ; 2010 ; Hindsight: Journal of Optemetry History Volume 41 ; 41 >
-      au < manifest ; exists ; 2011 ; 2011 ; Hindsight: Journal of Optemetry History Volume 42 ; 42 >
+      au < exists ; exists ; 2000 ; 2000 ; Hindsight: newsletter of the Optometric Historical Society Volume 31 ; 31 >
+      au < exists ; exists ; 2001 ; 2001 ; Hindsight: newsletter of the Optometric Historical Society Volume 32 ; 32 >
+      au < exists ; exists ; 2002 ; 2002 ; Hindsight: newsletter of the Optometric Historical Society Volume 33 ; 33 >
+      au < exists ; exists ; 2003 ; 2003 ; Hindsight: newsletter of the Optometric Historical Society Volume 34 ; 34 >
+      au < exists ; exists ; 2004 ; 2004 ; Hindsight: newsletter of the Optometric Historical Society Volume 35 ; 35 >
+      au < exists ; exists ; 2005 ; 2005 ; Hindsight: newsletter of the Optometric Historical Society Volume 36 ; 36 >
+      au < exists ; exists ; 2006 ; 2006 ; Hindsight: newsletter of the Optometric Historical Society Volume 37 ; 37 >
+      au < exists ; exists ; 2007 ; 2007 ; Hindsight: newsletter of the Optometric Historical Society Volume 38 ; 38 >
+      au < exists ; exists ; 2008 ; 2008 ; Hindsight: newsletter of the Optometric Historical Society Volume 39 ; 39 >
+      au < manifest ; exists ; 2009 ; 2009 ; Hindsight: newsletter of the Optometric Historical Society Volume 40 ; 40 >
 
   }
 
@@ -112,6 +138,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; 2013 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 >
+      au < expected ; exists ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 >
 
   }
 
@@ -159,6 +186,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 >
+      au < expected ; exists ; 2015 ; 2015 ; Inter-American Journal of Education for Democracy Volume 7 ; 7 >
 
   }
 
@@ -175,6 +203,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; International Journal of Designs for Learning Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; International Journal of Designs for Learning Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 >
+      au < expected ; exists ; 2015 ; 2015 ; International Journal of Designs for Learning Volume 6 ; 6 >
 
   }
 
@@ -202,6 +231,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 >
       au < crawling ; exists ; 2013 ; 2013 ; InULA Notes: Indiana University Librarians Association Volume 25 ; 25 >
       au < crawling ; exists ; 2014 ; 2014 ; InULA Notes: Indiana University Librarians Association Volume 26 ; 26 >
+      au < expected ; exists ; 2015 ; 2015 ; InULA Notes: Indiana University Librarians Association Volume 27 ; 27 >
 
   }
 
@@ -234,6 +264,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 >
       au < crawling ; exists ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 >
+      au < expected ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 >
 
   }
 
@@ -287,6 +318,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; Museum Anthropology Review Volume 6 ; 6 >
       au < testing ; exists ; 2013 ; 2013 ; Museum Anthropology Review Volume 7 ; 7 >
       au < testing ; exists ; 2014 ; 2014 ; Museum Anthropology Review Volume 8 ; 8 >
+      au < expected ; exists ; 2015 ; 2015 ; Museum Anthropology Review Volume 9 ; 9 >
 
   }
 
@@ -303,6 +335,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; New Directions in Folklore Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; 2013 ; New Directions in Folklore Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; 2014 ; New Directions in Folklore Volume 12 ; 12 >
+      au < expected ; exists ; 2015 ; 2015 ; New Directions in Folklore Volume 13 ; 13 >
 
   }
 
@@ -327,6 +360,7 @@
 
       au < crawling ; exists ; 2013 ; 2013 ; The Workshop Volume 0 ; 0000 >
       au < crawling ; exists ; 2014 ; 2014 ; The Workshop Volume 2014 ; 2014 >
+      au < expected ; exists ; 2015 ; 2015 ; The Workshop Volume 2015 ; 2015 >
 
   }
 
@@ -339,6 +373,8 @@
       comment[issn] = missing
 
       au < manifest ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 >
+      au < exists ; exists ; 2010 ; 2010 ; The World is Our Home Volume 2 ; 2 >
+      au < exists ; exists ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 >
 
   }
 }
