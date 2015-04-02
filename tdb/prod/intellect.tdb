@@ -439,7 +439,7 @@
       au < released ; 2011 ; Film International Volume 9 ; 9 >
       au < released ; 2012 ; Film International Volume 10 ; 10 >
       au < released ; 2013 ; Film International Volume 11 ; 11 >
-      au < testing ; 2014 ; Film International Volume 12 ; 12 >
+      au < ready ; 2014 ; Film International Volume 12 ; 12 >
       au < expected ; 2015 ; Film International Volume 13 ; 13 >
 
     }
@@ -1080,7 +1080,7 @@
       param[journal_issn] = 2050-4039 
 
       au < released ; 2013 ; Journal of New Zealand & Pacific Studies Volume 1 ; 1 >
-      au < manifest ; 2014 ; Journal of New Zealand & Pacific Studies Volume 2 ; 2 >
+      au < testing ; 2014 ; Journal of New Zealand & Pacific Studies Volume 2 ; 2 >
       au < expected ; 2015 ; Journal of New Zealand & Pacific Studies Volume 3 ; 3 >
 
     }
@@ -1116,7 +1116,7 @@
       param[journal_issn] = 2046-9861
 
       au < released ; 2013 ; Journal of Popular Television Volume 1 ; 1 >
-      au < manifest ; 2014 ; Journal of Popular Television Volume 2 ; 2 >
+      au < testing ; 2014 ; Journal of Popular Television Volume 2 ; 2 >
       au < expected ; 2015 ; Journal of Popular Television Volume 3 ; 3 >
 
     }
@@ -1133,7 +1133,7 @@
       au < released ; 2010-2011 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
       au < released ; 2012 ; Journal of Scandinavian Cinema Volume 2 ; 2 >
       au < released ; 2013 ; Journal of Scandinavian Cinema Volume 3 ; 3 >
-      au < manifest ; 2014 ; Journal of Scandinavian Cinema Volume 4 ; 4 >
+      au < testing ; 2014 ; Journal of Scandinavian Cinema Volume 4 ; 4 >
       au < expected ; 2015 ; Journal of Scandinavian Cinema Volume 5 ; 5 >
 
     }
@@ -1216,7 +1216,7 @@
       au < released ; 2011-2012 ; Journal of Writing in Creative Practice Volume 4 ; 4 >
       au < released ; 2012 ; Journal of Writing in Creative Practice Volume 5 ; 5 >
       au < released ; 2013 ; Journal of Writing in Creative Practice Volume 6 ; 6 >
-      au < manifest ; 2014 ; Journal of Writing in Creative Practice Volume 7 ; 7 >
+      au < testing ; 2014 ; Journal of Writing in Creative Practice Volume 7 ; 7 >
       au < expected ; 2015 ; Journal of Writing in Creative Practice Volume 8 ; 8 >
 
     }
@@ -1240,7 +1240,7 @@
       au < released ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
       au < released ; 2012 ; Metaverse Creativity Volume 2 ; 2 >
       au < released ; 2013 ; Metaverse Creativity Volume 3 ; 3 >
-      au < manifest ; 2014 ; Metaverse Creativity Volume 4 ; 4 >
+      au < testing ; 2014 ; Metaverse Creativity Volume 4 ; 4 >
       au < expected ; 2015 ; Metaverse Creativity Volume 5 ; 5 >
 
     }
@@ -1256,7 +1256,7 @@
 
       au < released ; 2012 ; Moving Image Review & Art Journal (MIRAJ) Volume 1 ; 1 >
       au < released ; 2013 ; Moving Image Review & Art Journal (MIRAJ) Volume 2 ; 2 >
-      au < manifest ; 2014 ; Moving Image Review & Art Journal (MIRAJ) Volume 3 ; 3 >
+      au < testing ; 2014 ; Moving Image Review & Art Journal (MIRAJ) Volume 3 ; 3 >
       au < expected ; 2015 ; Moving Image Review & Art Journal (MIRAJ) Volume 4 ; 4 >
       
     }
@@ -1303,7 +1303,7 @@
       au < released ; 2011 ; Northern Lights: Film and Media Studies Yearbook Volume 9 ; 9 >
       au < released ; 2012 ; Northern Lights: Film and Media Studies Yearbook Volume 10 ; 10 >
       au < released ; 2013 ; Northern Lights: Film and Media Studies Yearbook Volume 11 ; 11 >
-      au < manifest ; 2014 ; Northern Lights: Film and Media Studies Yearbook Volume 12 ; 12 >
+      au < testing ; 2014 ; Northern Lights: Film and Media Studies Yearbook Volume 12 ; 12 >
       au < expected ; 2015 ; Northern Lights: Film and Media Studies Yearbook Volume 13 ; 13 >
 
     }
@@ -1380,7 +1380,7 @@
       au < released ; 2011 ; Portuguese Journal of Social Science Volume 10 ; 10 >
       au < released ; 2012 ; Portuguese Journal of Social Science Volume 11 ; 11 >
       au < released ; 2013 ; Portuguese Journal of Social Science Volume 12 ; 12 >
-      au < manifest ; 2014 ; Portuguese Journal of Social Science Volume 13 ; 13 >
+      au < testing ; 2014 ; Portuguese Journal of Social Science Volume 13 ; 13 >
       au < expected ; 2015 ; Portuguese Journal of Social Science Volume 14 ; 14 >
 
     }
@@ -1412,7 +1412,7 @@
 
       au < released ; 2012 ; PUBLIC: Art, Culture, Ideas Volume 23 ; 23 >
       au < released ; 2013 ; PUBLIC: Art, Culture, Ideas Volume 24 ; 24 >
-      au < manifest ; 2014 ; PUBLIC: Art, Culture, Ideas Volume 25 ; 25 >
+      au < testing ; 2014 ; PUBLIC: Art, Culture, Ideas Volume 25 ; 25 >
       au < expected ; 2015 ; PUBLIC: Art, Culture, Ideas Volume 26 ; 26 >
       
     }
@@ -1428,7 +1428,7 @@
     
       au < released ; 2011-2012 ; Punk & Post Punk Volume 1 ; 1 >
       au < released ; 2013 ; Punk & Post Punk Volume 2 ; 2 >
-      au < manifest ; 2014 ; Punk & Post Punk Volume 3 ; 3 >
+      au < testing ; 2014 ; Punk & Post Punk Volume 3 ; 3 >
       au < expected ; 2015 ; Punk & Post Punk Volume 4 ; 4 >
 
     }
@@ -1467,7 +1467,7 @@
       param[journal_issn] = 2044-3714
     
       au < released ; 2012-2013 ; Scene Volume 1 ; 1 >
-      au < manifest ; 2014 ; Scene Volume 2 ; 2 >
+      au < testing ; 2014 ; Scene Volume 2 ; 2 >
       au < expected ; 2015 ; Scene Volume 3 ; 3 >
 
     }
@@ -1485,7 +1485,7 @@
       au < released ; 2011-2012 ; Short Fiction in Theory & Practice Volume 1 ; 1 >
       au < released ; 2012 ; Short Fiction in Theory & Practice Volume 2 ; 2 >
       au < released ; 2013 ; Short Fiction in Theory & Practice Volume 3 ; 3 >
-      au < manifest ; 2014 ; Short Fiction in Theory & Practice Volume 4 ; 4 >
+      au < testing ; 2014 ; Short Fiction in Theory & Practice Volume 4 ; 4 >
       au < expected ; 2015 ; Short Fiction in Theory & Practice Volume 5 ; 5 >
 
     }
@@ -1502,9 +1502,8 @@
       au < released ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
       au < released ; 2012 ; Short Film Studies Volume 2 ; 2 >
       au < released ; 2012-2013 ; Short Film Studies Volume 3 ; 3 >
-      au < released ; 2013 ; Short Film Studies Volume 4 ; 4 >
-      au < manifest ; 2014 ; Short Film Studies Volume 5 ; 5 >
-      au < expected ; 2015 ; Short Film Studies Volume 6 ; 6 >
+      au < released ; 2014 ; Short Film Studies Volume 4 ; 4 >
+      au < manifest ; 2015 ; Short Film Studies Volume 5 ; 5 >
 
     }
 
@@ -1523,7 +1522,7 @@
       au < released ; 2010 ; The Soundtrack Volume 3 ; 3 >
       au < released ; 2011 ; The Soundtrack Volume 4 ; 4 >
       au < released ; 2013 ; The Soundtrack Volume 5 ; 5 >
-      au < manifest ; 2014 ; The Soundtrack Volume 6 ; 6 >
+      au < testing ; 2014 ; The Soundtrack Volume 6 ; 6 >
       au < expected ; 2015 ; The Soundtrack Volume 7 ; 7 >
 
     }
@@ -1562,7 +1561,7 @@
       au < released ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
       au < released ; 2012 ; Studies in Comics Volume 3 ; 3 >
       au < released ; 2013 ; Studies in Comics Volume 4 ; 4 >
-      au < manifest ; 2014 ; Studies in Comics Volume 5 ; 5 >
+      au < testing ; 2014 ; Studies in Comics Volume 5 ; 5 >
       au < expected ; 2015 ; Studies in Comics Volume 6 ; 6 >
 
     }
@@ -1701,7 +1700,7 @@
       au < released ; 2011-2012 ; Studies in Musical Theatre Volume 5 ; 5 >
       au < released ; 2012 ; Studies in Musical Theatre Volume 6 ; 6 >
       au < released ; 2013 ; Studies in Musical Theatre Volume 7 ; 7 >
-      au < manifest ; 2014 ; Studies in Musical Theatre Volume 8 ; 8 >
+      au < testing ; 2014 ; Studies in Musical Theatre Volume 8 ; 8 >
       au < expected ; 2015 ; Studies in Musical Theatre Volume 9 ; 9 >
 
     }
@@ -1742,7 +1741,7 @@
       au < released ; 2012 ; Studies in South Asian Film & Media Volume 3 ; 3 >
       au < released ; 2012 ; Studies in South Asian Film & Media Volume 4 ; 4 >
       au < released ; 2013 ; Studies in South Asian Film & Media Volume 5 ; 5 >
-      au < manifest ; 2014 ; Studies in South Asian Film & Media Volume 6 ; 6 >
+      au < testing ; 2014 ; Studies in South Asian Film & Media Volume 6 ; 6 >
       au < expected ; 2015 ; Studies in South Asian Film & Media Volume 7 ; 7 >
     
     }
@@ -1811,7 +1810,7 @@
       au < released ; 2011-2012 ; Technoetic Arts Volume 9 ; 9 >
       au < released ; 2012 ; Technoetic Arts Volume 10 ; 10 >
       au < released ; 2013 ; Technoetic Arts Volume 11 ; 11 >
-      au < manifest ; 2014 ; Technoetic Arts Volume 12 ; 12 >
+      au < testing ; 2014 ; Technoetic Arts Volume 12 ; 12 >
       au < expected ; 2015 ; Technoetic Arts Volume 13 ; 13 >
 
     }
@@ -1863,7 +1862,7 @@
       
       au < released ; 2011-2012 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
       au < released ; 2013 ; Visual Inquiry: Learning & Teaching Art Volume 2 ; 2 >
-      au < manifest ; 2014 ; Visual Inquiry: Learning & Teaching Art Volume 3 ; 3 >
+      au < testing ; 2014 ; Visual Inquiry: Learning & Teaching Art Volume 3 ; 3 >
       au < expected ; 2015 ; Visual Inquiry: Learning & Teaching Art Volume 4 ; 4 >
 
     }
