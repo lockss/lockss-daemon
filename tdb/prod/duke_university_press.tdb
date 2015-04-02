@@ -1310,7 +1310,7 @@
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
-      param[base_url] = http://jclc.dukejournals.org
+      param[base_url] = http://jclc.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
      au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
