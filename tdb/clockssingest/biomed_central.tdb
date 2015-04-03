@@ -3733,7 +3733,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
-      au < testing ; exists ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
+      au < ready ; exists ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
       au < manifest ; exists ; 2015 ; Frontiers in Zoology Volume 12 ; 12 >
       
     }
@@ -3885,7 +3885,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < manifest ; exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
-      au < testing ; exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
+      au < ready ; exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
       au < manifest ; exists ; 2015 ; Genome Medicine Volume 7 ; 7 >
 
     }
