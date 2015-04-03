@@ -75,12 +75,12 @@
     param[journal_issn] = 1882-0786
     comment[param] = eissn preferred
 
-    au < ready ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
-    au < ready ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
-    au < ready ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
-    au < ready ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
-    au < ready ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
-    au < ready ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
+    au < crawling ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
+    au < crawling ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
+    au < crawling ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
     au < manifest ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
 
@@ -277,12 +277,12 @@
     au < exists ; exists ; 2005 ; Chinese Physics B Volume 14 ; 14 >
     au < exists ; exists ; 2006 ; Chinese Physics B Volume 15 ; 15 >
     au < exists ; exists ; 2007 ; Chinese Physics B Volume 16 ; 16 >
-    au < ready ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
-    au < ready ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
-    au < ready ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
-    au < ready ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
-    au < ready ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
-    au < ready ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
+    au < crawling ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
+    au < crawling ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
+    au < crawling ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
+    au < crawling ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
+    au < crawling ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
+    au < crawling ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
     au < testing ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
     au < manifest ; exists ; 2015 ; Chinese Physics B Volume 24 ; 24 >
   }
@@ -1010,9 +1010,9 @@
     au < crawling ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
     au < crawling ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
     au < crawling ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
-    au < ready ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
+    au < crawling ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
     au < crawling ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
-    au < ready ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
+    au < crawling ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
     au < testing ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
     au < manifest ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
     
@@ -1455,7 +1455,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics A: Mathematical and Theoretical Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics A: Mathematical and Theoretical Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 > 
-    au < ready ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 > 
+    au < crawling ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 > 
     au < manifest ; exists ; 2015 ; Journal of Physics A: Mathematical and Theoretical Volume 48 ; 48 > 
 
   }
@@ -1758,7 +1758,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics G: Nuclear and Particle Physics Volume 38 ; 38 > 
     au < ingNotReady ; exists ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 > 
     au < crawling ; exists ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 > 
-    au < ready ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 > 
+    au < crawling ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 > 
     au < manifest ; exists ; 2015 ; Journal of Physics G: Nuclear and Particle Physics Volume 42 ; 42 > 
 
   }
@@ -2653,12 +2653,12 @@
     au < manifest ; exists ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
     au < manifest ; exists ; 2006 ; Laser Physics Letters Volume 3 ; 3 >
     au < manifest ; exists ; 2007 ; Laser Physics Letters Volume 4 ; 4 >
-    au < ready ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
-    au < ready ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
-    au < ready ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
-    au < ready ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
-    au < ready ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
-    au < ready ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
+    au < crawling ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
+    au < crawling ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
+    au < crawling ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
+    au < crawling ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
+    au < crawling ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
     au < testing ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
     au < manifest ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
 
@@ -2733,7 +2733,7 @@
     param[journal_issn] = 2050-6120
     comment[param] = eissn preferred
 
-    au < ready ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
     au < crawling ; exists ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Methods and Applications in Fluorescence Volume 3 ; 3 >
 
@@ -3998,7 +3998,7 @@
     au < finished ; crawling ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 > 
     au < ingNotReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 > 
     au < crawling ; exists ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 > 
-    au < ready ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 > 
+    au < crawling ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 > 
     au < manifest ; exists ; 2015 ; Semiconductor Science and Technology Volume 30 ; 30 > 
 
   }
@@ -4038,7 +4038,7 @@
     au < finished ; crawling ; 2011 ; Smart Materials and Structures Volume 20 ; 20 > 
     au < ingNotReady ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Smart Materials and Structures Volume 22 ; 22 > 
-    au < ready ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
+    au < crawling ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
     au < manifest ; exists ; 2015 ; Smart Materials and Structures Volume 24 ; 24 > 
 
   }
@@ -4081,7 +4081,7 @@
     au < finished ; crawling ; 2011 ; Superconductor Science and Technology Volume 24 ; 24 > 
     au < finished ; crawling ; 2012 ; Superconductor Science and Technology Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Superconductor Science and Technology Volume 26 ; 26 > 
-    au < ready ; exists ; 2014 ; Superconductor Science and Technology Volume 27 ; 27 > 
+    au < crawling ; exists ; 2014 ; Superconductor Science and Technology Volume 27 ; 27 > 
     au < manifest ; exists ; 2015 ; Superconductor Science and Technology Volume 28 ; 28 > 
 
   }
@@ -4097,8 +4097,8 @@
     param[journal_issn] = 2051-672X
     comment[param] = eissn preferred
 
-    au < ready ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
-    au < ready ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
+    au < crawling ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
 
   }
