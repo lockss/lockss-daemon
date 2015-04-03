@@ -900,10 +900,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
-      au < ready ; exists ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
-      au < ready ; exists ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
-      au < ready ; exists ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
+      au < crawling ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
+      au < crawling ; exists ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
+      au < crawling ; exists ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
+      au < crawling ; exists ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
       au < expected ; exists ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
 
@@ -947,9 +947,9 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2010 ; Journal of Materials Chemistry Volume 20 ; 20 ; 2010 >
-      au < ready ; exists ; 2011 ; Journal of Materials Chemistry Volume 21 ; 21 ; 2011 >
-      au < ready ; exists ; 2012 ; Journal of Materials Chemistry Volume 22 ; 22 ; 2012 >
+      au < crawling ; exists ; 2010 ; Journal of Materials Chemistry Volume 20 ; 20 ; 2010 >
+      au < crawling ; exists ; 2011 ; Journal of Materials Chemistry Volume 21 ; 21 ; 2011 >
+      au < crawling ; exists ; 2012 ; Journal of Materials Chemistry Volume 22 ; 22 ; 2012 >
       au < expected ; exists ; 2013 ; Journal of Materials Chemistry Volume 23 ; 23 ; 2013 >
       au < expected ; exists ; 2014 ; Journal of Materials Chemistry Volume 24 ; 24 ; 2014 >
 
@@ -990,10 +990,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 >
-      au < ready ; exists ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 >
-      au < ready ; exists ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
-      au < ready ; exists ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
+      au < crawling ; exists ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 >
+      au < crawling ; exists ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 >
+      au < crawling ; exists ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
+      au < crawling ; exists ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
       au < crawling ; exists ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
       au < expected ; exists ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
 
@@ -1026,10 +1026,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 >
-      au < ready ; exists ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 >
-      au < ready ; exists ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
-      au < ready ; exists ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
+      au < crawling ; exists ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 >
+      au < crawling ; exists ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 >
+      au < crawling ; exists ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
+      au < crawling ; exists ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
       au < crawling ; exists ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 >
       au < expected ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 >
 
@@ -1065,10 +1065,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
-      au < ready ; exists ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 >
-      au < ready ; exists ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 >
-      au < ready ; exists ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 >
+      au < crawling ; exists ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
+      au < crawling ; exists ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 >
+      au < crawling ; exists ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 >
+      au < crawling ; exists ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 >
       au < crawling ; exists ; 2014 ; Molecular BioSystems Volume 10 ; 10 ; 2014 >
       au < expected ; exists ; 2015 ; Molecular BioSystems Volume 11 ; 11 ; 2015 >
 
@@ -1101,10 +1101,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2010 ; Nanoscale Volume 2 ; 2 ; 2010 >
-      au < ready ; exists ; 2011 ; Nanoscale Volume 3 ; 3 ; 2011 >
-      au < ready ; exists ; 2012 ; Nanoscale Volume 4 ; 4 ; 2012 >
-      au < ready ; exists ; 2013 ; Nanoscale Volume 5 ; 5 ; 2013 >
+      au < crawling ; exists ; 2010 ; Nanoscale Volume 2 ; 2 ; 2010 >
+      au < crawling ; exists ; 2011 ; Nanoscale Volume 3 ; 3 ; 2011 >
+      au < crawling ; exists ; 2012 ; Nanoscale Volume 4 ; 4 ; 2012 >
+      au < crawling ; exists ; 2013 ; Nanoscale Volume 5 ; 5 ; 2013 >
       au < crawling ; exists ; 2014 ; Nanoscale Volume 6 ; 6 ; 2014 >
       au < expected ; exists ; 2015 ; Nanoscale Volume 7 ; 7 ; 2015 >
 
@@ -1149,10 +1149,10 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2010 ; Natural Product Reports Volume 27 ; 27 ; 2010 >
-      au < ready ; exists ; 2011 ; Natural Product Reports Volume 28 ; 28 ; 2011 >
-      au < ready ; exists ; 2012 ; Natural Product Reports Volume 29 ; 29 ; 2012 >
-      au < ready ; exists ; 2013 ; Natural Product Reports Volume 30 ; 30 ; 2013 >
+      au < crawling ; exists ; 2010 ; Natural Product Reports Volume 27 ; 27 ; 2010 >
+      au < crawling ; exists ; 2011 ; Natural Product Reports Volume 28 ; 28 ; 2011 >
+      au < crawling ; exists ; 2012 ; Natural Product Reports Volume 29 ; 29 ; 2012 >
+      au < crawling ; exists ; 2013 ; Natural Product Reports Volume 30 ; 30 ; 2013 >
       au < crawling ; exists ; 2014 ; Natural Product Reports Volume 31 ; 31 ; 2014 >
       au < expected ; exists ; 2015 ; Natural Product Reports Volume 32 ; 32 ; 2015 >
 
@@ -1196,11 +1196,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
-      au < ready ; exists ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
-      au < ready ; exists ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 >
-      au < ready ; exists ; 2012 ; New Journal of Chemistry Volume 36 ; 36 ; 2012 >
-      au < ready ; exists ; 2013 ; New Journal of Chemistry Volume 37 ; 37 ; 2013 >
+      au < crawling ; exists ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+      au < crawling ; exists ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
+      au < crawling ; exists ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 >
+      au < crawling ; exists ; 2012 ; New Journal of Chemistry Volume 36 ; 36 ; 2012 >
+      au < crawling ; exists ; 2013 ; New Journal of Chemistry Volume 37 ; 37 ; 2013 >
       au < crawling ; exists ; 2014 ; New Journal of Chemistry Volume 38 ; 38 ; 2014 >
       au < expected ; exists ; 2015 ; New Journal of Chemistry Volume 39 ; 39 ; 2015 >
 
@@ -1239,11 +1239,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
-      au < ready ; exists ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 >
-      au < ready ; exists ; 2011 ; Organic & Biomolecular Chemistry Volume 9 ; 9 ; 2011 >
-      au < ready ; exists ; 2012 ; Organic & Biomolecular Chemistry Volume 10 ; 10 ; 2012 >
-      au < ready ; exists ; 2013 ; Organic & Biomolecular Chemistry Volume 11 ; 11 ; 2013 >
+      au < crawling ; exists ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+      au < crawling ; exists ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 >
+      au < crawling ; exists ; 2011 ; Organic & Biomolecular Chemistry Volume 9 ; 9 ; 2011 >
+      au < crawling ; exists ; 2012 ; Organic & Biomolecular Chemistry Volume 10 ; 10 ; 2012 >
+      au < crawling ; exists ; 2013 ; Organic & Biomolecular Chemistry Volume 11 ; 11 ; 2013 >
       au < crawling ; exists ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 >
       au < expected ; exists ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 >
 
@@ -1303,11 +1303,11 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < ready ; exists ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
-      au < ready ; exists ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 >
-      au < ready ; exists ; 2011 ; Photochemical & Photobiological Sciences Volume 10 ; 10 ; 2011 >
-      au < ready ; exists ; 2012 ; Photochemical & Photobiological Sciences Volume 11 ; 11 ; 2012 >
-      au < ready ; exists ; 2013 ; Photochemical & Photobiological Sciences Volume 12 ; 12 ; 2013 >
+      au < crawling ; exists ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+      au < crawling ; exists ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 >
+      au < crawling ; exists ; 2011 ; Photochemical & Photobiological Sciences Volume 10 ; 10 ; 2011 >
+      au < crawling ; exists ; 2012 ; Photochemical & Photobiological Sciences Volume 11 ; 11 ; 2012 >
+      au < crawling ; exists ; 2013 ; Photochemical & Photobiological Sciences Volume 12 ; 12 ; 2013 >
       au < crawling ; exists ; 2014 ; Photochemical & Photobiological Sciences Volume 13 ; 13 ; 2014 >
       au < expected ; exists ; 2015 ; Photochemical & Photobiological Sciences Volume 14 ; 14 ; 2015 >
 
@@ -1372,9 +1372,9 @@
       param[base_url2] = http://www.rsc.org/
       
       au < testing ; exists ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 >
-      au < ready ; exists ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 >
-      au < ready ; exists ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 >
-      au < ready ; exists ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 >
+      au < crawling ; exists ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 >
+      au < crawling ; exists ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 >
+      au < crawling ; exists ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 >
       au < expected ; exists ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 >
 
@@ -1436,8 +1436,8 @@
       
       au < testing ; exists ; 2010 ; Soft Matter Volume 6 ; 7 ; 2010 >
       au < testing ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
-      au < ready ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
-      au < ready ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
+      au < crawling ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
+      au < crawling ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
       au < crawling ; exists ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 >
       au < expected ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 >
 
