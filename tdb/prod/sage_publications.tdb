@@ -4822,6 +4822,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://bos.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        comment[0] = moving to Taylor and Francis effective on 2016-01-01
 
         au < manifest ; 1999 ; Bulletin of the Atomic Scientists Volume 55 ; 55 >
         au < manifest ; 2000 ; Bulletin of the Atomic Scientists Volume 56 ; 56 >
@@ -4836,10 +4837,10 @@
         au < released ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 >
         au < released ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 >
         au < released ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 >
-        au < expected ; 2012 ; Bulletin of the Atomic Scientists Volume 68 ; 68 >
-        au < expected ; 2013 ; Bulletin of the Atomic Scientists Volume 69 ; 69 >
-        au < expected ; 2014 ; Bulletin of the Atomic Scientists Volume 70 ; 70 >
-        au < expected ; 2015 ; Bulletin of the Atomic Scientists Volume 71 ; 71 >
+        au < exists ; 2012 ; Bulletin of the Atomic Scientists Volume 68 ; 68 >
+        au < exists ; 2013 ; Bulletin of the Atomic Scientists Volume 69 ; 69 >
+        au < exists ; 2014 ; Bulletin of the Atomic Scientists Volume 70 ; 70 >
+        au < exists ; 2015 ; Bulletin of the Atomic Scientists Volume 71 ; 71 >
 
       }
 
