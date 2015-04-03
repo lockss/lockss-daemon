@@ -1504,7 +1504,6 @@
     au < finished ; frozen ; 2012 ; Organic Chemistry Insights Volume 4 ; 4 ; 2012 >
     au < expected ; exists ; 2015 ; Organic Chemistry Insights Volume 5 ; 5 ; 2015 >
     
-    
   }
   
   {
@@ -1537,7 +1536,7 @@
     >
 
     param[journal_id] = 105
-    comment[0] = no years 2013, 2014 as of 04/02/15
+    comment[0] = no years 2014 as of 04/02/15
 
     au < manifest ; exists ; 2008 ; Particle Physics Insights Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Particle Physics Insights Volume 2 ; 2 ; 2009 >
