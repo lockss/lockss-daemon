@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.FetchedUrlData;
+import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 
 /**
@@ -72,6 +72,7 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
       // chain if (fud.redirectUrls != null && fud.fetchUrl != null)
       fud.redirectUrls = null;
       fud.fetchUrl = null;
+      fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
     }
     super.consume();
   }
