@@ -2286,6 +2286,21 @@
     {
   
         title <
+          name = Bulletin of the Malaysian Mathematical Sciences Society ;
+          issn = 0126-6705 ;
+          eissn = 2180-4206
+        >
+  
+        param[base_url] = http://www.springer.com/40840/
+        param[journal_issn] = 0126-6705
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; Bulletin of the Malaysian Mathematical Sciences Society Volume 38 ; 38 >
+    }
+
+    {
+  
+        title <
           name = Bulletin of Mathematical Sciences ;
           eissn = 1664-3615
         >
@@ -2329,9 +2344,69 @@
         au < exists ; 2010 ; Chinese Science Bulletin Volume 55 ; 55 >
         au < exists ; 2011 ; Chinese Science Bulletin Volume 56 ; 56 >
         au < exists ; 2012 ; Chinese Science Bulletin Volume 57 ; 57 >
-        au < expected ; 2013 ; Chinese Science Bulletin Volume 58 ; 58 >
+        au < exists ; 2013 ; Chinese Science Bulletin Volume 58 ; 58 >
         au < expected ; 2014 ; Chinese Science Bulletin Volume 59 ; 59 >
   
+    }
+  
+    {
+  
+        title <
+          name = Economia e Politica Industriale ;
+          issn = 0391-2078 ;
+          eissn = 1972-4977
+        >
+  
+        param[base_url] = http://www.springer.com/40812/
+        param[journal_issn] = 0391-2078
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; Economia e Politica Industriale Volume 42 ; 42 >
+    }
+
+    {
+  
+        title <
+          name = Economia Politica ;
+          issn = 1120-2890 ;
+          eissn = 1973-820X
+        >
+  
+        param[base_url] = http://www.springer.com/40888/
+        param[journal_issn] = 1120-2890
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; Economia Politica Volume 32 ; 32 >
+    }
+
+    {
+  
+        title <
+          name = European Business Organization Law Review ;
+          issn = 1566-7529 ;
+          eissn = 1741-6205
+        >
+  
+        param[base_url] = http://www.springer.com/40804/
+        param[journal_issn] = 1566-7529
+        comment[platform] = Springer
+
+        au < exists ; 2000 ; European Business Organization Law Review Volume 1 ; 1 >
+        au < exists ; 2001 ; European Business Organization Law Review Volume 2 ; 2 >
+        au < exists ; 2002 ; European Business Organization Law Review Volume 3 ; 3 >
+        au < exists ; 2003 ; European Business Organization Law Review Volume 4 ; 4 >
+        au < exists ; 2004 ; European Business Organization Law Review Volume 5 ; 5 >
+        au < exists ; 2005 ; European Business Organization Law Review Volume 6 ; 6 >
+        au < exists ; 2006 ; European Business Organization Law Review Volume 7 ; 7 >
+        au < exists ; 2007 ; European Business Organization Law Review Volume 8 ; 8 >
+        au < exists ; 2008 ; European Business Organization Law Review Volume 9 ; 9 >
+        au < exists ; 2009 ; European Business Organization Law Review Volume 10 ; 10 >
+        au < exists ; 2010 ; European Business Organization Law Review Volume 11 ; 11 >
+        au < exists ; 2011 ; European Business Organization Law Review Volume 12 ; 12 >
+        au < exists ; 2012 ; European Business Organization Law Review Volume 13 ; 13 >
+        au < exists ; 2013 ; European Business Organization Law Review Volume 14 ; 14 >
+        au < exists ; 2014 ; European Business Organization Law Review Volume 15 ; 15 >
+        au < expected ; 2015 ; European Business Organization Law Review Volume 16 ; 16 >
     }
   
     {
@@ -2530,6 +2605,22 @@
     {
   
         title <
+          name = Journal of Medical and Biological Engineering ;
+          issn = 1609-0985 ;
+          eissn = 2199-4757
+        >
+  
+        param[base_url] = http://www.springer.com/40846/
+        param[journal_issn] = 1609-0985
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; Journal of Medical and Biological Engineering Volume 35 ; 35 >
+
+    }
+
+    {
+  
+        title <
           name = Journal of Orthopaedics and Traumatology ;
           issn = 1590-9921 ;
           eissn = 1590-9999
@@ -2634,6 +2725,54 @@
   
     }
   
+    {
+  
+        title <
+          name = Netherlands International Law Review ;
+          issn = 0165-070X ;
+          eissn = 1741-6191
+        >
+  
+        param[base_url] = http://www.springer.com/40802/
+        param[journal_issn] = 0165-070X
+        comment[platform] = Springer
+
+        au < exists ; 1998 ; Netherlands International Law Review Volume 45 ; 45 >
+        au < exists ; 1999 ; Netherlands International Law Review Volume 46 ; 46 >
+        au < exists ; 2000 ; Netherlands International Law Review Volume 47 ; 47 >
+        au < exists ; 2001 ; Netherlands International Law Review Volume 48 ; 48 >
+        au < exists ; 2002 ; Netherlands International Law Review Volume 49 ; 49 >
+        au < exists ; 2003 ; Netherlands International Law Review Volume 50 ; 50 >
+        au < exists ; 2004 ; Netherlands International Law Review Volume 51 ; 51 >
+        au < exists ; 2005 ; Netherlands International Law Review Volume 52 ; 52 >
+        au < exists ; 2006 ; Netherlands International Law Review Volume 53 ; 53 >
+        au < exists ; 2007 ; Netherlands International Law Review Volume 54 ; 54 >
+        au < exists ; 2008 ; Netherlands International Law Review Volume 55 ; 55 >
+        au < exists ; 2009 ; Netherlands International Law Review Volume 56 ; 56 >
+        au < exists ; 2010 ; Netherlands International Law Review Volume 57 ; 57 >
+        au < exists ; 2011 ; Netherlands International Law Review Volume 58 ; 58 >
+        au < exists ; 2012 ; Netherlands International Law Review Volume 59 ; 59 >
+        au < exists ; 2013 ; Netherlands International Law Review Volume 60 ; 60 >
+        au < exists ; 2014 ; Netherlands International Law Review Volume 61 ; 61 >
+        au < expected ; 2015 ; Netherlands International Law Review Volume 62 ; 62 >
+    }
+  
+    {
+  
+        title <
+          name = New Zealand Journal of Educational Studies ;
+          issn = 0028-8276 ;
+          eissn = 2199-4714
+        >
+  
+        param[base_url] = http://www.springer.com/40841/
+        param[journal_issn] = 0028-8276
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; New Zealand Journal of Educational Studies Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
