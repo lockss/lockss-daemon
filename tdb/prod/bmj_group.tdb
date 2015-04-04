@@ -480,15 +480,26 @@
         name = BMJ Open Diabetes Research & Care ;
         eissn = 2052-4897
     >
+      
+      comment[Drupal] = moving to Drupal during 2015
+      param[base_url] = http://drc.bmj.com/
+      implicit < status ; year ; name ; param[volume_name] >
 
     {
 
       pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://drc.bmj.com/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
       au < released ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
+
+    }
+
+    {
+
+      pluginSuffix = HWDrupalPlugin
+
+      au < doNotProcess ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
       au < exists ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
 
     }
@@ -1920,11 +1931,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
+      pluginSuffix = HWDrupalPlugin
       param[base_url] = http://lupus.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+      au < exists ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
       au < exists ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
 
     }
