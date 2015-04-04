@@ -52,23 +52,26 @@ public class ELifeDrupalHttpResponseHandler extends HighWireDrupalHttpResponseHa
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode) {
-    logger.debug2(url);
+    logger.debug3(url);
     switch (responseCode) {
       case 403:
-        logger.debug2("403");
+        // no example as HighWire did 'fix' the problem url
+        logger.debug3("403");
         if (url.contains("/download")) {
           return new CacheException.RetryDeadLinkException("403 Forbidden (non-fatal)");
         }
         return new CacheException.RetrySameUrlException("403 Forbidden");
         
       case 500:
-        logger.debug2("500");
+        // ex. http://elifesciences.org/highwire/citation/8378/ris
+        logger.debug3("500");
         if (url.contains("lockss-manifest/")) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
         return super.handleResult(au, url, responseCode);
         
       case 504:
+        // JIC: parent handles, as we get Gateway Timeout often enough
         return super.handleResult(au, url, responseCode);
         
       default:
