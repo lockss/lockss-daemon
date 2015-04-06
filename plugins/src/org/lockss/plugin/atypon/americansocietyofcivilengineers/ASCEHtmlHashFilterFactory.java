@@ -41,7 +41,12 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
 public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
-
+  // include a whitespace filter
+  @Override
+  public boolean doWSFiltering() {
+    return true;
+  }
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {

@@ -246,7 +246,7 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "</div>"
           + "<div id=\"footer_message\"><span style=\"color: rgb(0, 0, 0);\">"
           + "<span class=\"fontSize2\"><span style=\"color: rgb(0, 0, 0);\">"
-          + "Copyright © 1996-2013, American So</span>"
+          + "Copyright ï¿½ 1996-2013, American So</span>"
           + "ciety of Civil Engineers</span>"
           + "<br>"
           + "</span></div>"
@@ -291,10 +291,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutStylesheets ="Hello World";
 
   private static final String withAccessIcon =
-    "<div class=\"block\"><img src=\"/templates/jsp/images/access_full.gif\""
-    +"\" class=\"accessIcon\">Hello World</div>";
+    "   <div class=\"block\">  <img src=\"/templates/jsp/images/access_full.gif\""
+    +"\" class=\"accessIcon\">  Hello World  </div>  ";
   private static final String withoutAccessIcon =
-    "<div class=\"block\">Hello World</div>";
+    " <div class=\"block\"> Hello World </div> ";
   
   private static final String withJScript =
       "<script type=\"text/javascript\">"
