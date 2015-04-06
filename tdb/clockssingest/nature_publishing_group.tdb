@@ -46,7 +46,6 @@
     >
     
     param[journal_id] = ajg
-    comment[notReady] = fetch error on ingest 3 RT 4106
 
     au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Gastroenterology Volume 93 ; 1998 ; 93 >
     au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Gastroenterology Volume 94 ; 1999 ; 94 >
@@ -2428,22 +2427,6 @@
     au < crawling ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
     au < crawling ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
     au < manifest ; exists ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 >
-
-  }
-
-  {
-    title <
-      name = Nature Reports Climate Change ;
-      eissn = 1753-9315
-    >
-    
-    param[journal_id] = climate
-    comment[1] = online-only publication 2007-2010
-
-    au < exists ; exists ; 2007 ; Nature Reports Climate Change Volume 1 ; 2007 ; 1 >
-    au < exists ; exists ; 2008 ; Nature Reports Climate Change Volume 2 ; 2008 ; 2 >
-    au < exists ; exists ; 2009 ; Nature Reports Climate Change Volume 3 ; 2009 ; 3 >
-    au < exists ; exists ; 2010 ; Nature Reports Climate Change Volume 4 ; 2010 ; 4 >
 
   }
 
