@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,85 +36,125 @@ package org.lockss.pdf;
  * <p>
  * Opcodes of various PDF operators.
  * </p>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  */
 public class PdfOpcodes {
 
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String BEGIN_IMAGE_DATA = "ID";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String BEGIN_IMAGE_OBJECT = "BI";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String BEGIN_TEXT_OBJECT = "BT";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String END_TEXT_OBJECT = "ET";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String INVOKE_XOBJECT = "Do";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String NEXT_LINE_SHOW_TEXT = "'";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56.3
    */
   public static final String RESTORE_GRAPHICS_STATE = "Q";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56.3
    */
   public static final String SAVE_GRAPHICS_STATE = "q";
   
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String SET_SPACING_NEXT_LINE_SHOW_TEXT = "\"";
 
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.62
    */
   public static final String SET_TEXT_FONT = "Tf";
 
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.62
    */
   public static final String SET_TEXT_MATRIX = "Tm";
 
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String SHOW_TEXT = "Tj";
 
   /**
-   * <p>The {@value} opcode.</p>
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
   public static final String SHOW_TEXT_GLYPH_POSITIONING = "TJ";
@@ -123,11 +163,11 @@ public class PdfOpcodes {
    * <p>
    * This class cannot be instantiated.
    * </p>
+   * 
    * @since 1.56
    */
   private PdfOpcodes() {
     // Prevent instantiation
   }
-  
 
 }
