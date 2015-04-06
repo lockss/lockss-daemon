@@ -3831,6 +3831,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://genomebiology.com/
       param[journal_issn] = 1465-6906
+      comment[notReady] = Crawl completed with no substance
 
       au < manifest ; exists ; 2000 ; Genome Biology Volume 1 ; 1 >
       au < manifest ; exists ; 2001 ; Genome Biology Volume 2 ; 2 >
@@ -3846,7 +3847,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Genome Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; Genome Biology Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; Genome Biology Volume 14 ; 14 >
-      au < testing ; exists ; 2014 ; Genome Biology Volume 15 ; 15 >
+      au < notReady ; exists ; 2014 ; Genome Biology Volume 15 ; 15 >
       au < manifest ; exists ; 2015 ; Genome Biology Volume 16 ; 16 >
       
     }
@@ -3902,7 +3903,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2012 ; GigaScience Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; GigaScience Volume 2 ; 2 >
-      au < testing ; exists ; 2014 ; GigaScience Volume 3 ; 3 >
+      au < ready ; exists ; 2014 ; GigaScience Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; GigaScience Volume 4 ; 4 >
 
     }
@@ -3946,7 +3947,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
-      au < testing ; exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
+      au < ready ; exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
       au < manifest ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }
@@ -3971,7 +3972,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
-      au < testing ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
+      au < ready ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
       au < manifest ; exists ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
 
     }
@@ -3995,7 +3996,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
-      au < testing ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
+      au < ready ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
 
     }
@@ -4021,7 +4022,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Health and Quality of Life Outcomes Volume 11 ; 11 >
-      au < testing ; exists ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 >
+      au < ready ; exists ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Health and Quality of Life Outcomes Volume 13 ; 13 >
 
     }
@@ -4037,7 +4038,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2047-2501
 
       au < crawling ; exists ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
-      au < testing ; exists ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
 
     }
@@ -4065,7 +4066,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 >
-      au < testing ; exists ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
+      au < ready ; exists ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Health Research Policy and Systems Volume 13 ; 13 >
 
     }
