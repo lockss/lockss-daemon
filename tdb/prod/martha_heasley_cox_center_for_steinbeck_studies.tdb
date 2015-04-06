@@ -34,9 +34,13 @@
 
     param[journal_dir] = steinbeck_review
     attr[journal_id] = str
+    comment[0] = no issue from volume 5 to 9
 
     au < released ; 2006 ; Steinbeck Review Volume 3 ; 3 >
     au < released ; 2007 ; Steinbeck Review Volume 4 ; 4 >
+    au < exists ; 2013 ; Steinbeck Review Volume 10 ; 10 >
+    au < exists ; 2014 ; Steinbeck Review Volume 11 ; 11 >
+    au < expected ; 2015 ; Steinbeck Review Volume 12 ; 12 >
 
   }
 
