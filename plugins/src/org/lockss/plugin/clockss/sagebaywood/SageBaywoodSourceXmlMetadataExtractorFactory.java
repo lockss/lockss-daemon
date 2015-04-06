@@ -59,8 +59,6 @@ public class SageBaywoodSourceXmlMetadataExtractorFactory extends SourceXmlMetad
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    log.setLevel("debug3");
-    log.debug3("SBFactory: createFileMDExtractor");
     return new SageBaywoodSourceXmlMetadataExtractor();
   }
 
@@ -83,7 +81,6 @@ public class SageBaywoodSourceXmlMetadataExtractorFactory extends SourceXmlMetad
         log.debug3("setting up SB schema helper");
         SageBaywoodHelper = new SageBaywoodSchemaHelper();
       }
-      log.debug3("returning SB schema helper");
       return SageBaywoodHelper;
     }
 
@@ -95,10 +92,10 @@ public class SageBaywoodSourceXmlMetadataExtractorFactory extends SourceXmlMetad
         ArticleMetadata oneAM) {
 
       String url_string = cu.getUrl();
-      String filenameValue = FilenameUtils.getBaseName(url_string);
-      String cuBase = FilenameUtils.getFullPath(url_string);
+      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("pdfName is " + pdfName);
       ArrayList<String> returnList = new ArrayList<String>();
-      returnList.add(cuBase + filenameValue + ".pdf");
+      returnList.add(pdfName);
       return returnList;
     }
 
