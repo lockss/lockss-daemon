@@ -67,6 +67,7 @@
     >
 
     param[base_url] = http://ard.bmj.com/
+    comment[notReady] = Site exceeds max crawl depth
 
     au < HighWirePressH20Plugin ; released ; 1939 ; Annals of the Rheumatic Diseases Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1940-1941 ; Annals of the Rheumatic Diseases Volume 2 ; 2 >
@@ -139,7 +140,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of the Rheumatic Diseases Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Annals of the Rheumatic Diseases Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; notReady ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
 
