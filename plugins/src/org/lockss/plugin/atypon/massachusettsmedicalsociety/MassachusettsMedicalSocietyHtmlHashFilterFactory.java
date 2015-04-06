@@ -64,6 +64,14 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtypon
         /*
          * Hash filter
          */
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "authInfo"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "topNav"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "corners dropDown"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "boxContent"),
+
+
         // Contain cross-links to other articles in other journals/volumes
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "trendsBox"),
@@ -76,6 +84,7 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtypon
         HtmlNodeFilters.tagWithAttribute("div", "class", "audioTitle"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "topLeftAniv"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "ad"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "rightRail"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "rightRailAd"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "rightAd"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "rightAd"),
