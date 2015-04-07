@@ -12195,11 +12195,10 @@
     >
 
     param[base_url] = http://jfr.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = expected to be online on 21 Jan 2015
 
-    au < exists ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 >
+    au < manifest ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 >
 
   }
 
