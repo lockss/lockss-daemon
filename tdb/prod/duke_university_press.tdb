@@ -1313,7 +1313,7 @@
       param[base_url] = http://jclc.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-     au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
+     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
      au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
 
      }
@@ -2427,7 +2427,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; positions: asia critique Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2013 ; positions: asia critique Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; positions: asia critique Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; expected ; 2015 ; positions: asia critique Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; positions: asia critique Volume 23 ; 23 >
 
     }
 

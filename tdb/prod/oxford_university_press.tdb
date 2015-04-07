@@ -1924,7 +1924,7 @@
     au < manifest ; 2011 ; Arthropod Management Tests Volume 36 ; 36 >
     au < manifest ; 2012 ; Arthropod Management Tests Volume 37 ; 37 >
     au < manifest ; 2013 ; Arthropod Management Tests Volume 38 ; 38 >
-    au < expected ; 2014 ; Arthropod Management Tests Volume 39 ; 39 >
+    au < manifest ; 2014 ; Arthropod Management Tests Volume 39 ; 39 >
     au < expected ; 2015 ; Arthropod Management Tests Volume 40 ; 40 >
 
   }
@@ -6174,7 +6174,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of International Law Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of International Law Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; European Journal of International Law Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; European Journal of International Law Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; European Journal of International Law Volume 26 ; 26 >
 
     }
 
@@ -8307,7 +8307,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; History Workshop Journal Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; History Workshop Journal Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; History Workshop Journal Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; History Workshop Journal Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; History Workshop Journal Volume 79 ; 79 >
 
     }
 
@@ -9568,7 +9568,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Interdisciplinary Studies in Literature and Environment Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Interdisciplinary Studies in Literature and Environment Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Interdisciplinary Studies in Literature and Environment Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Interdisciplinary Studies in Literature and Environment Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Interdisciplinary Studies in Literature and Environment Volume 22 ; 22 >
 
     }
 
@@ -12016,7 +12016,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Environmental Law Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Environmental Law Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Environmental Law Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Environmental Law Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Environmental Law Volume 27 ; 27 >
 
     }
 
@@ -12491,8 +12491,8 @@
     param[base_url] = http://jhps.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 >
 
     }
 
@@ -15339,7 +15339,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; The Library Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Library Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Library Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The Library Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Library Volume 16 ; 16 >
 
     }
 
@@ -17253,8 +17253,8 @@
     param[base_url] = http://nop.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 >
 
   }
 
@@ -18376,8 +18376,8 @@
     param[base_url] = http://omcr.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 >
-    au < exists ; 2015 ; Oxford Medical Case Reports Volume 2015 ; 2015 >
+    au < manifest ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 >
+    au < manifest ; 2015 ; Oxford Medical Case Reports Volume 2015 ; 2015 >
 
   }
 
@@ -22693,7 +22693,7 @@
     au < released ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 >
     au < manifest ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 >
     au < manifest ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 >
-    au < expected ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 >
+    au < manifest ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 >
 
     }
 
@@ -22712,7 +22712,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 >
+    au < manifest ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 >
 
   }
 
@@ -23214,7 +23214,7 @@
 
       au < manifest ; 2013 ; Journal of Survey Statistics and Methodology Volume 1 ; 1 >
       au < manifest ; 2014 ; Journal of Survey Statistics and Methodology Volume 2 ; 2 >
-      au < expected ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 >
+      au < manifest ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 >
 
     }
 
