@@ -9006,7 +9006,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 >
+      au < manifest ; 2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 >
 
   }
 
@@ -13945,7 +13945,7 @@
         au < released ; 2012 ; Global Media and Communication Volume 8 ; 8 >
         au < manifest ; 2013 ; Global Media and Communication Volume 9 ; 9 >
         au < manifest ; 2014 ; Global Media and Communication Volume 10 ; 10 >
-        au < expected ; 2015 ; Global Media and Communication Volume 11 ; 11 >
+        au < manifest ; 2015 ; Global Media and Communication Volume 11 ; 11 >
 
       }
 
@@ -33564,7 +33564,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 >
         au < manifest ; 2013 ; Nutrition in Clinical Practice Volume 28 ; 28 >
         au < manifest ; 2014 ; Nutrition in Clinical Practice Volume 29 ; 29 >
-        au < expected ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 >
+        au < manifest ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 >
 
       }
 
@@ -35112,7 +35112,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; Power and Education Volume 4 ; 4 >
       au < exists ; 2013 ; Power and Education Volume 5 ; 5 >
       au < manifest ; 2014 ; Power and Education Volume 6 ; 6 >
-      au < expected ; 2015 ; Power and Education Volume 7 ; 7 >
+      au < manifest ; 2015 ; Power and Education Volume 7 ; 7 >
 
   }
 
@@ -47949,7 +47949,7 @@ comment[mpj] = now published by Brill
         comment[continues] = 2040-4026
 
         au < manifest ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 >
-        au < expected ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 >
+        au < manifest ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 >
 
     }
 
