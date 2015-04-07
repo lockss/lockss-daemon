@@ -11989,10 +11989,9 @@
     >
 
     param[base_url] = http://jfr.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = expected to be online on 21 Jan 2015
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < expected ; exists ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 ; >
 
   }
 
