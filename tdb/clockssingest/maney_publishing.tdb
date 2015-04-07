@@ -109,7 +109,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Ambix Volume 57 ; 57 >
     au < doNotProcess ; doNotProcess ; 2011 ; Ambix Volume 58 ; 58 >
     au < doNotProcess ; doNotProcess ; 2012 ; Ambix Volume 59 ; 59 >
-    au < testing ; exists ; 2013 ; Ambix Volume 60 ; 60 >
+    au < ready ; exists ; 2013 ; Ambix Volume 60 ; 60 >
     au < crawling ; exists ; 2014 ; Ambix Volume 61 ; 61 >
     au < expected ; exists ; 2015 ; Ambix Volume 62 ; 62 >
 
@@ -135,8 +135,8 @@
     au < manifest ; exists ; 2007 ; Annals of Tropical Medicine and Parasitology Volume 101 ; 101 >
     au < manifest ; exists ; 2008 ; Annals of Tropical Medicine and Parasitology Volume 102 ; 102 >
     au < manifest ; exists ; 2009 ; Annals of Tropical Medicine and Parasitology Volume 103 ; 103 >
-    au < testing ; exists ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 >
-    au < testing ; exists ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 >
+    au < ready ; exists ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 >
+    au < ready ; exists ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 >
 
   }
 
@@ -160,7 +160,7 @@
     au < manifest ; exists ; 2007 ; Annals of Tropical Paediatrics: International Child Health Volume 27 ; 27 >
     au < manifest ; exists ; 2008 ; Annals of Tropical Paediatrics: International Child Health Volume 28 ; 28 >
     au < manifest ; exists ; 2009 ; Annals of Tropical Paediatrics: International Child Health Volume 29 ; 29 >
-    au < testing ; exists ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 >
+    au < ready ; exists ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 >
     au < testing ; exists ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 >
 
   }
@@ -1410,8 +1410,8 @@
     au < manifest ; exists ; 2007 ; Hematology Volume 12 ; 12 >
     au < manifest ; exists ; 2008 ; Hematology Volume 13 ; 13 >
     au < manifest ; exists ; 2009 ; Hematology Volume 14 ; 14 >
-    au < testing ; exists ; 2010 ; Hematology Volume 15 ; 15 >
-    au < testing ; exists ; 2011 ; Hematology Volume 16 ; 16 >
+    au < ready ; exists ; 2010 ; Hematology Volume 15 ; 15 >
+    au < ready ; exists ; 2011 ; Hematology Volume 16 ; 16 >
     au < doNotProcess ; doNotProcess ; 2012 ; Hematology Volume 17 ; 17 >
     au < ready ; exists ; 2013 ; Hematology Volume 18 ; 18 >
     au < crawling ; exists ; 2014 ; Hematology Volume 19 ; 19 >
@@ -1488,8 +1488,8 @@
     au < manifest ; exists ; 2007 ; The Imaging Science Journal Volume 55 ; 55 >
     au < manifest ; exists ; 2008 ; The Imaging Science Journal Volume 56 ; 56 >
     au < manifest ; exists ; 2009 ; The Imaging Science Journal Volume 57 ; 57 >
-    au < testing ; exists ; 2010 ; The Imaging Science Journal Volume 58 ; 58 >
-    au < testing ; exists ; 2011 ; The Imaging Science Journal Volume 59 ; 59 > 
+    au < ready ; exists ; 2010 ; The Imaging Science Journal Volume 58 ; 58 >
+    au < ready ; exists ; 2011 ; The Imaging Science Journal Volume 59 ; 59 > 
     au < doNotProcess ; doNotProcess ; 2012 ; The Imaging Science Journal Volume 60 ; 60 >
     au < ready ; exists ; 2013 ; The Imaging Science Journal Volume 61 ; 61 >
     au < ready ; exists ; 2014 ; The Imaging Science Journal Volume 62 ; 62 >
@@ -1594,8 +1594,8 @@
     au < manifest ; exists ; 2007 ; Interdisciplinary Science Reviews Volume 32 ; 32 >
     au < manifest ; exists ; 2008 ; Interdisciplinary Science Reviews Volume 33 ; 33 >
     au < manifest ; exists ; 2009 ; Interdisciplinary Science Reviews Volume 34 ; 34 >
-    au < testing ; exists ; 2010 ; Interdisciplinary Science Reviews Volume 35 ; 35 >
-    au < testing ; exists ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 >
+    au < ready ; exists ; 2010 ; Interdisciplinary Science Reviews Volume 35 ; 35 >
+    au < ready ; exists ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 >
     au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 >
     au < ready ; exists ; 2013 ; Interdisciplinary Science Reviews Volume 38 ; 38 >
     au < ready ; exists ; 2014 ; Interdisciplinary Science Reviews Volume 39 ; 39 >
@@ -1618,8 +1618,8 @@
     au < manifest ; exists ; 2007 ; International Heat Treatment and Surface Engineering Volume 1 ; 1 >
     au < manifest ; exists ; 2008 ; International Heat Treatment and Surface Engineering Volume 2 ; 2 >
     au < manifest ; exists ; 2009 ; International Heat Treatment and Surface Engineering Volume 3 ; 3 >
-    au < testing ; exists ; 2010 ; International Heat Treatment and Surface Engineering Volume 4 ; 4 >
-    au < testing ; exists ; 2011 ; International Heat Treatment and Surface Engineering Volume 5 ; 5 >
+    au < ready ; exists ; 2010 ; International Heat Treatment and Surface Engineering Volume 4 ; 4 >
+    au < ready ; exists ; 2011 ; International Heat Treatment and Surface Engineering Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Heat Treatment and Surface Engineering Volume 6 ; 6 >
     au < ready ; exists ; 2013 ; International Heat Treatment and Surface Engineering Volume 7 ; 7 >
     au < ready ; exists ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 >
@@ -1668,8 +1668,8 @@
     au < manifest ; exists ; 2007 ; International Journal of Cast Metals Research Volume 20 ; 20 >
     au < manifest ; exists ; 2008 ; International Journal of Cast Metals Research Volume 21 ; 21 >
     au < manifest ; exists ; 2009 ; International Journal of Cast Metals Research Volume 22 ; 22 >
-    au < testing ; exists ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 >
-    au < testing ; exists ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 >
+    au < ready ; exists ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 >
+    au < ready ; exists ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 >
     au < ready ; exists ; 2013 ; International Journal of Cast Metals Research Volume 26 ; 26 >
     au < ready ; exists ; 2014 ; International Journal of Cast Metals Research Volume 27 ; 27 >
@@ -1752,8 +1752,8 @@
     au < manifest ; exists ; 2007 ; International Materials Reviews Volume 52 ; 52 >
     au < manifest ; exists ; 2008 ; International Materials Reviews Volume 53 ; 53 >
     au < manifest ; exists ; 2009 ; International Materials Reviews Volume 54 ; 54 >
-    au < testing ; exists ; 2010 ; International Materials Reviews Volume 55 ; 55 >
-    au < testing ; exists ; 2011 ; International Materials Reviews Volume 56 ; 56 >
+    au < ready ; exists ; 2010 ; International Materials Reviews Volume 55 ; 55 >
+    au < ready ; exists ; 2011 ; International Materials Reviews Volume 56 ; 56 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Materials Reviews Volume 57 ; 57 >
     au < ready ; exists ; 2013 ; International Materials Reviews Volume 58 ; 58 >
     au < ready ; exists ; 2014 ; International Materials Reviews Volume 59 ; 59 >
@@ -1821,8 +1821,8 @@
 
     au < manifest ; exists ; 2008 ; International Musculoskeletal Medicine Volume 30 ; 30 >
     au < manifest ; exists ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 >
-    au < testing ; exists ; 2010 ; International Musculoskeletal Medicine Volume 32 ; 32 >
-    au < testing ; exists ; 2011 ; International Musculoskeletal Medicine Volume 33 ; 33 >
+    au < ready ; exists ; 2010 ; International Musculoskeletal Medicine Volume 32 ; 32 >
+    au < ready ; exists ; 2011 ; International Musculoskeletal Medicine Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 >
     au < ready ; exists ; 2013 ; International Musculoskeletal Medicine Volume 35 ; 35 >
     au < ready ; exists ; 2014 ; International Musculoskeletal Medicine Volume 36 ; 36 >
@@ -1842,8 +1842,8 @@
     comment[continues] = 0020-3203
     comment[dnp] = released for old plugin
     
-    au < testing ; exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 >
-    au < testing ; exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 >
+    au < ready ; exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 >
+    au < ready ; exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Wood Products Journal Volume 3 ; 3 >
     au < ready ; exists ; 2013 ; International Wood Products Journal Volume 4 ; 4 >
     au < ready ; exists ; 2014 ; International Wood Products Journal Volume 5 ; 5 >
@@ -2102,8 +2102,8 @@
     au < manifest ; exists ; 2007 ; Journal of Bryology Volume 29 ; 29 >
     au < manifest ; exists ; 2008 ; Journal of Bryology Volume 30 ; 30 >
     au < manifest ; exists ; 2009 ; Journal of Bryology Volume 31 ; 31 >
-    au < testing ; exists ; 2010 ; Journal of Bryology Volume 32 ; 32 >
-    au < testing ; exists ; 2011 ; Journal of Bryology Volume 33 ; 33 >
+    au < ready ; exists ; 2010 ; Journal of Bryology Volume 32 ; 32 >
+    au < ready ; exists ; 2011 ; Journal of Bryology Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Bryology Volume 34 ; 34 >
     au < ready ; exists ; 2013 ; Journal of Bryology Volume 35 ; 35 >
     au < ready ; exists ; 2014 ; Journal of Bryology Volume 36 ; 36 >
@@ -2199,8 +2199,8 @@
     
     au < manifest ; exists ; 2008 ; Journal of Communication in Healthcare Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 >
-    au < testing ; exists ; 2010 ; Journal of Communication in Healthcare Volume 3 ; 3 >
-    au < testing ; exists ; 2011 ; Journal of Communication in Healthcare Volume 4 ; 4 >
+    au < ready ; exists ; 2010 ; Journal of Communication in Healthcare Volume 3 ; 3 >
+    au < ready ; exists ; 2011 ; Journal of Communication in Healthcare Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 >
     au < ready ; exists ; 2013 ; Journal of Communication in Healthcare Volume 6 ; 6 >
     au < ready ; exists ; 2014 ; Journal of Communication in Healthcare Volume 7 ; 7 >
@@ -2350,8 +2350,8 @@
     
     au < manifest ; exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 >
-    au < testing ; exists ; 2010 ; Journal of Management & Marketing in Healthcare Volume 3 ; 3 >
-    au < testing ; exists ; 2011 ; Journal of Management & Marketing in Healthcare Volume 4 ; 4 >
+    au < ready ; exists ; 2010 ; Journal of Management & Marketing in Healthcare Volume 3 ; 3 >
+    au < ready ; exists ; 2011 ; Journal of Management & Marketing in Healthcare Volume 4 ; 4 >
 
   }
 
@@ -2383,8 +2383,8 @@
     au < manifest ; exists ; 2007 ; Journal of Manual & Manipulative Therapy Volume 15 ; 15 >
     au < manifest ; exists ; 2008 ; Journal of Manual & Manipulative Therapy Volume 16 ; 16 >
     au < manifest ; exists ; 2009 ; Journal of Manual & Manipulative Therapy Volume 17 ; 17 >
-    au < testing ; exists ; 2010 ; Journal of Manual & Manipulative Therapy Volume 18 ; 18 >
-    au < testing ; exists ; 2011 ; Journal of Manual & Manipulative Therapy Volume 19 ; 19 >
+    au < ready ; exists ; 2010 ; Journal of Manual & Manipulative Therapy Volume 18 ; 18 >
+    au < ready ; exists ; 2011 ; Journal of Manual & Manipulative Therapy Volume 19 ; 19 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Manual & Manipulative Therapy Volume 20 ; 20 >
     au < ready ; exists ; 2013 ; Journal of Manual & Manipulative Therapy Volume 21 ; 21 >
     au < ready ; exists ; 2014 ; Journal of Manual & Manipulative Therapy Volume 22 ; 22 >
@@ -2435,7 +2435,7 @@
 
     param[journal_id] = scm 
 
-    au < manifest ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 >
+    au < testing ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 >
     au < ready ; exists ; 2013 ; Journal of Spinal Cord Medicine Volume 36 ; 36 >
     au < ready ; exists ; 2014 ; Journal of Spinal Cord Medicine Volume 37 ; 37 >
@@ -2511,8 +2511,8 @@
     au < manifest ; exists ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 >
     au < manifest ; exists ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 >
     au < manifest ; exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 >
-    au < manifest ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 >
-    au < manifest ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 >
+    au < testing ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 >
+    au < testing ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 >
     au < ready ; exists ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 >
 
@@ -2675,7 +2675,7 @@
     au < manifest ; exists ; 2008 ; Levant Volume 40 ; 40 >
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 >
     au < doNotProcess ; doNotProcess ; 2010 ; Levant Volume 42 ; 42 >
-    au < manifest ; exists ; 2011 ; Levant Volume 43 ; 43 >
+    au < testing ; exists ; 2011 ; Levant Volume 43 ; 43 >
     au < doNotProcess ; doNotProcess ; 2012 ; Levant Volume 44 ; 44 >
     au < ready ; exists ; 2013 ; Levant Volume 45 ; 45 >
     au < ready ; exists ; 2014 ; Levant Volume 46 ; 46 >
@@ -2792,8 +2792,8 @@
     au < manifest ; exists ; 2007 ; Materials Research Innovations Volume 11 ; 11 >
     au < manifest ; exists ; 2008 ; Materials Research Innovations Volume 12 ; 12 >
     au < manifest ; exists ; 2009 ; Materials Research Innovations Volume 13 ; 13 >
-    au < manifest ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 >
-    au < manifest ; exists ; 2011 ; Materials Research Innovations Volume 15 ; 15 >
+    au < testing ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 >
+    au < testing ; exists ; 2011 ; Materials Research Innovations Volume 15 ; 15 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Research Innovations Volume 16 ; 16 >
     au < ready ; exists ; 2013 ; Materials Research Innovations Volume 17 ; 17 >
     au < testing ; exists ; 2014 ; Materials Research Innovations Volume 18 ; 18 >
@@ -2839,8 +2839,8 @@
     au < manifest ; exists ; 2007 ; Materials Science and Technology Volume 23 ; 23 >
     au < manifest ; exists ; 2008 ; Materials Science and Technology Volume 24 ; 24 >
     au < manifest ; exists ; 2009 ; Materials Science and Technology Volume 25 ; 25 >
-    au < manifest ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 >
-    au < manifest ; exists ; 2011 ; Materials Science and Technology Volume 27 ; 27 >
+    au < testing ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 >
+    au < testing ; exists ; 2011 ; Materials Science and Technology Volume 27 ; 27 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Science and Technology Volume 28 ; 28 >
     au < ready ; exists ; 2013 ; Materials Science and Technology Volume 29 ; 29 >
     au < ready ; exists ; 2014 ; Materials Science and Technology Volume 30 ; 30 >
@@ -2864,8 +2864,8 @@
     au < manifest ; exists ; 2007 ; Materials Technology: Advanced Performance Materials Volume 22 ; 22 >
     au < manifest ; exists ; 2008 ; Materials Technology: Advanced Performance Materials Volume 23 ; 23 >
     au < manifest ; exists ; 2009 ; Materials Technology: Advanced Performance Materials Volume 24 ; 24 >
-    au < manifest ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 >
-    au < manifest ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 >
+    au < testing ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 >
+    au < testing ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 >
     au < ready ; exists ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 >
     au < ready ; exists ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 >
@@ -3084,8 +3084,8 @@
     au < manifest ; exists ; 2007 ; Mineral Processing and Extractive Metallurgy Volume 116 ; 116 >
     au < manifest ; exists ; 2008 ; Mineral Processing and Extractive Metallurgy Volume 117 ; 117 >
     au < manifest ; exists ; 2009 ; Mineral Processing and Extractive Metallurgy Volume 118 ; 118 >
-    au < manifest ; exists ; 2010 ; Mineral Processing and Extractive Metallurgy Volume 119 ; 119 >
-    au < manifest ; exists ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 > 
+    au < testing ; exists ; 2010 ; Mineral Processing and Extractive Metallurgy Volume 119 ; 119 >
+    au < testing ; exists ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 >
     au < ready ; exists ; 2013 ; Mineral Processing and Extractive Metallurgy Volume 122 ; 122 >
     au < ready ; exists ; 2014 ; Mineral Processing and Extractive Metallurgy Volume 123 ; 123 >
@@ -3171,8 +3171,8 @@
     au < manifest ; exists ; 2007 ; Mining Technology Volume 116 ; 116 >
     au < manifest ; exists ; 2008 ; Mining Technology Volume 117 ; 117 >
     au < manifest ; exists ; 2009 ; Mining Technology Volume 118 ; 118 >
-    au < manifest ; exists ; 2010 ; Mining Technology Volume 119 ; 119 >
-    au < manifest ; exists ; 2011 ; Mining Technology Volume 120 ; 120 >
+    au < testing ; exists ; 2010 ; Mining Technology Volume 119 ; 119 >
+    au < testing ; exists ; 2011 ; Mining Technology Volume 120 ; 120 >
     au < doNotProcess ; doNotProcess ; 2012 ; Mining Technology Volume 121 ; 121 >
     au < ready ; exists ; 2013 ; Mining Technology Volume 122 ; 122 >
     au < ready ; exists ; 2014 ; Mining Technology Volume 123 ; 123 >
@@ -3279,8 +3279,8 @@
     au < manifest ; exists ; 2007 ; Neurological Research Volume 29 ; 29 >
     au < manifest ; exists ; 2008 ; Neurological Research Volume 30 ; 30 >
     au < manifest ; exists ; 2009 ; Neurological Research Volume 31 ; 31 >
-    au < manifest ; exists ; 2010 ; Neurological Research Volume 32 ; 32 >
-    au < manifest ; exists ; 2011 ; Neurological Research Volume 33 ; 33 >
+    au < testing ; exists ; 2010 ; Neurological Research Volume 32 ; 32 >
+    au < testing ; exists ; 2011 ; Neurological Research Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2012 ; Neurological Research Volume 34 ; 34 >
     au < ready ; exists ; 2013 ; Neurological Research Volume 35 ; 35 >
     au < ready ; exists ; 2014 ; Neurological Research Volume 36 ; 36 >
@@ -3392,8 +3392,8 @@
     au < manifest ; exists ; 2007 ; Nutritional Neuroscience Volume 10 ; 10 >
     au < manifest ; exists ; 2008 ; Nutritional Neuroscience Volume 11 ; 11 >
     au < manifest ; exists ; 2009 ; Nutritional Neuroscience Volume 12 ; 12 >
-    au < manifest ; exists ; 2010 ; Nutritional Neuroscience Volume 13 ; 13 >
-    au < manifest ; exists ; 2011 ; Nutritional Neuroscience Volume 14 ; 14 > 
+    au < testing ; exists ; 2010 ; Nutritional Neuroscience Volume 13 ; 13 >
+    au < testing ; exists ; 2011 ; Nutritional Neuroscience Volume 14 ; 14 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Nutritional Neuroscience Volume 15 ; 15 >
     au < ready ; exists ; 2013 ; Nutritional Neuroscience Volume 16 ; 16 >
     au < ready ; exists ; 2014 ; Nutritional Neuroscience Volume 17 ; 17 >
