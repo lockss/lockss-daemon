@@ -5,8 +5,6 @@
     info[contract] = 2008 ;
     info[tester] = 4
   >
-  
-  comment[doNotProcess] = Scientific American
 
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
   param[base_url] = http://www.nature.com/
@@ -78,8 +76,8 @@
 
     param[journal_id] = ajgsup
 
-    au < exists ; exists ; 2013 ; American Journal of Gastroenterology Supplements Volume 1 ; 2013 ; 1 >
-    au < expected ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 >
+    au < exists ; exists ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 >
+    au < exists ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 >
 
   }
 
@@ -1739,6 +1737,27 @@
 
   }
 
+ {
+
+    title <
+      name = Lab Animal ;
+      issn = 0093-7355 ;
+      eissn = 1548-4475
+    >
+
+    param[journal_id] = laban
+
+    au < exists ; exists ; 2008 ; Lab Animal Volume 37 ; 2008 ; 37 >
+    au < exists ; exists ; 2009 ; Lab Animal Volume 38 ; 2009 ; 38 >
+    au < exists ; exists ; 2010 ; Lab Animal Volume 39 ; 2010 ; 39 >
+    au < exists ; exists ; 2011 ; Lab Animal Volume 40 ; 2011 ; 40 >
+    au < exists ; exists ; 2012 ; Lab Animal Volume 41 ; 2012 ; 41 >
+    au < exists ; exists ; 2013 ; Lab Animal Volume 42 ; 2013 ; 42 >
+    au < exists ; exists ; 2014 ; Lab Animal Volume 43 ; 2014 ; 43 >
+    au < exists ; exists ; 2015 ; Lab Animal Volume 44 ; 2015 ; 44 >
+
+  }
+
   {
 
     title <
@@ -1789,6 +1808,39 @@
     au < finished ; frozen ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
     au < crawling ; exists ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 >
     au < manifest ; exists ; 2014 ; Leukemia Volume 28 ; 2014 ; 28 >
+  }
+
+  {
+
+    title <
+      name = Leukemia Supplements ;
+      issn = 2044-5210 ;
+      eissn = 2044-5229 ;
+      issnl = 2044-5210
+    >
+
+    param[journal_id] = leusup
+
+    au < exists ; exists ; 2012 ; Leukemia Supplements Volume 1 ; 2012 ; 1 >
+    au < exists ; exists ; 2013 ; Leukemia Supplements Volume 2 ; 2013 ; 2 >
+    au < exists ; exists ; 2014 ; Leukemia Supplements Volume 3 ; 2014 ; 3 >
+  }
+
+  {
+
+    title <
+      name = Light: Science & Applications ;
+      eissn = 2047-7538 ;
+      issnl = 2047-7538
+    >
+
+    param[journal_id] = lsa
+
+    au < exists ; exists ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 >
+    au < exists ; exists ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 >
+    au < exists ; exists ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 >
+    au < exists ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 >
+
   }
 
   {
@@ -3386,7 +3438,7 @@
     >
     param[journal_id] = oncsis
     
-    au < testing ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
+    au < exists ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
     au < crawling ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
     au < manifest ; exists ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 >
 
@@ -3566,9 +3618,81 @@
   {
 
     title <
+      name = Scientific American ;
+      issn = 0036-8733 ;
+      issnl = 0036-8733
+    >
+
+    param[journal_id] = scientificamerican
+
+    au < exists ; exists ; 2008 ; Scientific American Volume 298 ; 2008 ; 298 >
+    au < exists ; exists ; 2008 ; Scientific American Volume 299 ; 2008 ; 299 >
+    au < exists ; exists ; 2009 ; Scientific American Volume 300 ; 2009 ; 300 >
+    au < exists ; exists ; 2009 ; Scientific American Volume 301 ; 2009 ; 301 >
+    au < exists ; exists ; 2010 ; Scientific American Volume 302 ; 2010 ; 302 >
+    au < exists ; exists ; 2010 ; Scientific American Volume 303 ; 2010 ; 303 >
+    au < exists ; exists ; 2011 ; Scientific American Volume 304 ; 2011 ; 304 >
+    au < exists ; exists ; 2011 ; Scientific American Volume 305 ; 2011 ; 305 >
+    au < exists ; exists ; 2012 ; Scientific American Volume 306 ; 2012 ; 306 >
+    au < exists ; exists ; 2012 ; Scientific American Volume 307 ; 2012 ; 307 >
+    au < exists ; exists ; 2013 ; Scientific American Volume 308 ; 2013 ; 308 >
+    au < exists ; exists ; 2013 ; Scientific American Volume 309 ; 2013 ; 309 >
+    au < exists ; exists ; 2014 ; Scientific American Volume 310 ; 2014 ; 310 >
+    au < exists ; exists ; 2014 ; Scientific American Volume 311 ; 2014 ; 311 >
+    au < exists ; exists ; 2015 ; Scientific American Volume 312 ; 2015 ; 312 >
+    au < expected ; exists ; 2015 ; Scientific American Volume 313 ; 2015 ; 313 >
+
+  }
+
+  {
+
+    title <
+      name = Scientific American Mind ;
+      issn = 1555-2284 ;
+      issnl = 1555-2284
+    >
+
+    param[journal_id] = scientificamericanmind
+
+    au < exists ; exists ; 2008 ; Scientific American Mind Volume 19 ; 2008 ; 19 >
+    au < exists ; exists ; 2009 ; Scientific American Mind Volume 20 ; 2009 ; 20 >
+    au < exists ; exists ; 2010 ; Scientific American Mind Volume 20 ; 2010 ; 20 >
+    au < exists ; exists ; 2010 ; Scientific American Mind Volume 21 ; 2010 ; 21 >
+    au < exists ; exists ; 2011 ; Scientific American Mind Volume 21 ; 2011 ; 21 >
+    au < exists ; exists ; 2011 ; Scientific American Mind Volume 22 ; 2011 ; 22 >
+    au < exists ; exists ; 2012 ; Scientific American Mind Volume 22 ; 2012 ; 22 >
+    au < exists ; exists ; 2012 ; Scientific American Mind Volume 23 ; 2012 ; 23 >
+    au < exists ; exists ; 2013 ; Scientific American Mind Volume 23 ; 2013 ; 23 >
+    au < exists ; exists ; 2013 ; Scientific American Mind Volume 24 ; 2013 ; 24 >
+    au < exists ; exists ; 2014 ; Scientific American Mind Volume 25 ; 2014 ; 25 >
+    au < exists ; exists ; 2015 ; Scientific American Mind Volume 26 ; 2015 ; 26 >
+
+  }
+
+  {
+
+    title <
+      name = Scientific Reports ;
+      issn = 2045-2322 ;
+      issnl = 2045-2322
+    >
+    
+    comment[0] = not standard format. Conference papers.
+
+    param[journal_id] = srep
+
+    au < exists ; exists ; 2015 ; Scientific Reports Volume 1 ; 2015 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = SciBX: Science-Business eXchange ;
       eissn = 1945-3477
     >
+    
+    comment[0] = moving to BioCentury as of 1/1/2015
 
     param[journal_id] = scibx
 
@@ -3672,6 +3796,8 @@
       issnl = 1741-7503
     >
     
+    comment[0] = stopped publishing 2013. Moved to BDJ Team.
+    
     param[journal_id] = vital
 
     au < manifest ; exists ; 2003 ; Vital Volume 1 (2003) ; 2003 ; 1 >
@@ -3690,9 +3816,25 @@
     au < finished ; crawling ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 >
     au < finished ; crawling ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 >
     au < crawling ; exists ; 2013 ; Vital Volume 10 (2013) ; 2013 ; 10 >
-    au < testing ; exists ; 2013 ; Vital Volume 11 (2013) ; 2013 ; 11 >
-    au < expected ; exists ; 2014 ; Vital Volume 11 (2014) ; 2014 ; 11 >
-    au < expected ; exists ; 2014 ; Vital Volume 12 (2014) ; 2014 ; 12 >
+    au < exists ; exists ; 2013 ; Vital Volume 11 (2013) ; 2013 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = Translational Psychiatry ;
+      eissn = 2158-3188 ;
+      issnl = 2158-3188
+    >
+    
+    param[journal_id] = tp
+
+    au < exists ; exists ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 >
+    au < exists ; exists ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 >
+    au < exists ; exists ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 >
+    au < exists ; exists ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 >
 
   }
 
