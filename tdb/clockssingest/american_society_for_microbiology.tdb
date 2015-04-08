@@ -7,7 +7,7 @@
   >
 
   {
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.asm.ClockssASMscienceJournalPlugin
     param[base_url] = http://www.asmscience.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[platform] = Pub2Web
@@ -43,11 +43,11 @@
         eissn = 2165-0497
       >
       
-      param[journal_id] = cm
+      param[journal_id] = microbiolspec
       
-      au < exists ; exists ; 2013 ; Microbiology Spectrum 2013 ; 2013 >
-      au < exists ; exists ; 2014 ; Microbiology Spectrum 2014 ; 2014 >
-      au < expected ; exists ; 2015 ; Microbiology Spectrum 2015 ; 2015 >
+      au < testing ; exists ; 2013 ; Microbiology Spectrum 2013 ; 1 >
+      au < testing ; exists ; 2014 ; Microbiology Spectrum 2014 ; 2 >
+      au < testing ; exists ; 2015 ; Microbiology Spectrum 2015 ; 3 >
 
     }
 
