@@ -627,6 +627,7 @@
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://stroke.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = Site depth exceeds max crawl depth.
 
       au < manifest ; 1970 ; Stroke Volume 1 ; 1 >
       au < manifest ; 1971 ; Stroke Volume 2 ; 2 >
@@ -672,7 +673,7 @@
       au < released ; 2011 ; Stroke Volume 42 ; 42 >
       au < released ; 2012 ; Stroke Volume 43 ; 43 >
       au < testing ; 2013 ; Stroke Volume 44 ; 44 >
-      au < testing ; 2014 ; Stroke Volume 45 ; 45 >
+      au < notReady ; 2014 ; Stroke Volume 45 ; 45 >
       au < manifest ; 2015 ; Stroke Volume 46 ; 46 >
 
     }
