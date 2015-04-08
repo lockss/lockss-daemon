@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -521,419 +521,406 @@ public abstract class PdfTokenStreamWorker {
 
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#BEGIN_IMAGE_DATA}.
+   * Convenience call to
+   * {@link PdfUtil#isBeginImageData(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#BEGIN_IMAGE_DATA}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#BEGIN_IMAGE_DATA}
    * @since 1.60
    */
   protected boolean isBeginImageData() {
-    return PdfOpcodes.BEGIN_IMAGE_DATA.equals(getOpcode());
+    return PdfUtil.isBeginImageData(getOperator());
   }
 
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#BEGIN_IMAGE_OBJECT}.
+   * Convenience call to
+   * {@link PdfUtil#isBeginImageObject(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#BEGIN_IMAGE_OBJECT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#BEGIN_IMAGE_OBJECT}
    * @since 1.60
    */
   protected boolean isBeginImageObject() {
-    return PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(getOpcode());
+    return PdfUtil.isBeginImageObject(getOperator());
   }
 
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#BEGIN_TEXT_OBJECT}.
+   * Convenience call to
+   * {@link PdfUtil#isBeginTextObject(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#BEGIN_TEXT_OBJECT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#BEGIN_TEXT_OBJECT}
    * @since 1.60
    */
   protected boolean isBeginTextObject() {
-    return PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode());
+    return PdfUtil.isBeginTextObject(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#END_TEXT_OBJECT}.
+   * Convenience call to
+   * {@link PdfUtil#isEndTextObject(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#END_TEXT_OBJECT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#END_TEXT_OBJECT}
    * @since 1.60
    */
   protected boolean isEndTextObject() {
-    return PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode());
+    return PdfUtil.isEndTextObject(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#INVOKE_XOBJECT}.
+   * Convenience call to
+   * {@link PdfUtil#isInvokeXObject(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#INVOKE_XOBJECT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#INVOKE_XOBJECT}
    * @since 1.60
    */
   protected boolean isInvokeXObject() {
-    return PdfOpcodes.INVOKE_XOBJECT.equals(getOpcode());
+    return PdfUtil.isInvokeXObject(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#NEXT_LINE_SHOW_TEXT}.
+   * Convenience call to
+   * {@link PdfUtil#isNextLineShowText(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#NEXT_LINE_SHOW_TEXT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#NEXT_LINE_SHOW_TEXT}
    * @since 1.60
    */
   protected boolean isNextLineShowText() {
-    return PdfOpcodes.NEXT_LINE_SHOW_TEXT.equals(getOpcode());
+    return PdfUtil.isNextLineShowText(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#RESTORE_GRAPHICS_STATE}.
+   * Convenience call to
+   * {@link PdfUtil#isRestoreGraphicsState(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#RESTORE_GRAPHICS_STATE}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#RESTORE_GRAPHICS_STATE}
    * @since 1.60
    */
   protected boolean isRestoreGraphicsState() {
-    return PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode());
+    return PdfUtil.isRestoreGraphicsState(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SAVE_GRAPHICS_STATE}.
+   * Convenience call to
+   * {@link PdfUtil#isSaveGraphicsState(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SAVE_GRAPHICS_STATE}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SAVE_GRAPHICS_STATE}
    * @since 1.60
    */
   protected boolean isSaveGraphicsState() {
-    return PdfOpcodes.SAVE_GRAPHICS_STATE.equals(getOpcode());
+    return PdfUtil.isSaveGraphicsState(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SET_SPACING_NEXT_LINE_SHOW_TEXT}.
+   * Convenience call to
+   * {@link PdfUtil#isSetSpacingNextLineShowText(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SET_SPACING_NEXT_LINE_SHOW_TEXT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SET_SPACING_NEXT_LINE_SHOW_TEXT}
    * @since 1.60
    */
   protected boolean isSetSpacingNextLineShowText() {
-    return PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT.equals(getOpcode());
+    return PdfUtil.isSetSpacingNextLineShowText(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SET_TEXT_FONT}.
+   * Convenience call to
+   * {@link PdfUtil#isSetTextFont(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SET_TEXT_FONT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SET_TEXT_FONT}
    * @since 1.62
    */
   protected boolean isSetTextFont() {
-    return PdfOpcodes.SET_TEXT_FONT.equals(getOpcode());
+    return PdfUtil.isSetTextFont(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SET_TEXT_MATRIX}.
+   * Convenience call to
+   * {@link PdfUtil#isSetTextMatrix(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SET_TEXT_MATRIX}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SET_TEXT_MATRIX}
    * @since 1.62
    */
   protected boolean isSetTextMatrix() {
-    return PdfOpcodes.SET_TEXT_MATRIX.equals(getOpcode());
+    return PdfUtil.isSetTextMatrix(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT}.
+   * Convenience call to
+   * {@link PdfUtil#isShowText(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT}
    * @since 1.60
    */
   protected boolean isShowText() {
-    return PdfOpcodes.SHOW_TEXT.equals(getOpcode());
+    return PdfUtil.isShowText(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand contains the given substring.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextContains(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given substring.
    * </p>
    * 
    * @param substr
    *          A given substring.
-   * @return <code>true</code> if the current opcode is
+   * @return <code>true</code> if the current operator is the opcode
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand contains
    *         <code>substr</code>.
    * @since 1.67
-   * @see String#contains(String)
    */
   protected boolean isShowTextContains(String substr) {
-    return isShowText() && getSingleOperand().getString().contains(substr);
+    return PdfUtil.isShowTextContains(getOperator(), getSingleOperand(), substr);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand ends with the given suffix.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextEndsWith(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given suffix.
    * </p>
    * 
    * @param suffix
    *          A given suffix.
-   * @return <code>true</code> if the current opcode is
+   * @return <code>true</code> if the current operator is the opcode
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand ends with
    *         <code>suffix</code>.
    * @since 1.60
-   * @see String#endsWith(String)
    */
   protected boolean isShowTextEndsWith(String suffix) {
-    return isShowText() && getSingleOperand().getString().endsWith(suffix);
+    return PdfUtil.isShowTextEndsWith(getOperator(), getSingleOperand(), suffix);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand equals the given string.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextEquals(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given string.
    * </p>
    * 
    * @param str
    *          A given string.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand is
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand is equal to
    *         <code>str</code>.
    * @since 1.60
-   * @see String#equals(Object)
    */
   protected boolean isShowTextEquals(String str) {
-    return isShowText() && getSingleOperand().getString().equals(str);
+    return PdfUtil.isShowTextEquals(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand equals the given string (ignoring case).
+   * Convenience call to
+   * {@link PdfUtil#isShowTextEqualsIgnoreCase(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given string.
    * </p>
    * 
    * @param str
    *          A given string.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand is
-   *         <code>str</code> (ignoring case).
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand is equal to
+   *         <code>str</code> (case-independently).
    * @since 1.60
-   * @see String#equalsIgnoreCase(String)
    */
   protected boolean isShowTextEqualsIgnoreCase(String str) {
-    return isShowText() && getSingleOperand().getString().equalsIgnoreCase(str);
+    return PdfUtil.isShowTextEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand matches the given pattern according to
-   * {@link Matcher#find()}.
-   * </p>
-   * <p>
-   * This method uses {@link Matcher#find()}, which implicitly does not anchor
-   * at the beginning of the input string.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextFind(PdfToken, PdfToken, Pattern)}
+   * using the current operator, its single operand and the given pattern.
    * </p>
    * 
    * @param pattern
-   *          A regular expression expressed as a {@link Pattern}.
-   * @return <code>true</code> if the current opcode is
+   *          A given pattern.
+   * @return <code>true</code> if the current operator is the opcode
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
-   *         <code>pattern</code>.
+   *         <code>pattern</code> (using {@link Matcher#find()}, which does not
+   *         implicitly anchor).
    * @since 1.62
    * @see Matcher#find()
    */
   protected boolean isShowTextFind(Pattern pattern) {
-    return isShowText() && pattern.matcher(getSingleOperand().getString()).find();
+    return PdfUtil.isShowTextFind(getOperator(), getSingleOperand(), pattern);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING}.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextGlyphPositioning(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING}.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING}
    * @since 1.60
    */
   protected boolean isShowTextGlyphPositioning() {
-    return PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(getOpcode());
+    return PdfUtil.isShowTextGlyphPositioning(getOperator());
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
-   * contains the given substring.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextGlyphPositioningContains(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given substring.
    * </p>
    * 
    * @param substr
    *          A given substring.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
-   *         operand contains <code>substr</code>.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
+   *         string operand contains <code>substr</code>.
    * @since 1.67
-   * @see String#contains(String)
    */
   protected boolean isShowTextGlyphPositioningContains(String substr) {
-    return isShowTextGlyphPositioning() && getSingleOperand().getString().contains(substr); // FIXME
+    return PdfUtil.isShowTextGlyphPositioningContains(getOperator(), getSingleOperand(), substr);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand ends
-   * with the given suffix.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextGlyphPositioningEndsWith(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given suffix.
    * </p>
    * 
    * @param suffix
    *          A given suffix.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
-   *         operand ends with <code>suffix</code>.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
+   *         string operand ends with <code>suffix</code>.
    * @since 1.60
-   * @see String#endsWith(String)
    */
   protected boolean isShowTextGlyphPositioningEndsWith(String suffix) {
-    return isShowTextGlyphPositioning() && getSingleOperand().getString().endsWith(suffix); // FIXME
+    return PdfUtil.isShowTextGlyphPositioningEndsWith(getOperator(), getSingleOperand(), suffix);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and the concatenation of the
-   * strings in its array operand equals the given string.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextGlyphPositioningEquals(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given suffix.
    * </p>
    * 
    * @param str
    *          A given string.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and the
-   *         concatenation of the strings in its array operand equals
-   *         <code>str</code>.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
+   *         string operand is equal to <code>str</code>.
    * @since 1.60
-   * @see String#equals(Object)
    */
   protected boolean isShowTextGlyphPositioningEquals(String str) {
-    if (!isShowTextGlyphPositioning()) {
-      return false;
-    }
-    StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getSingleOperand().getArray()) {
-      if (tok.isString()) {
-        sb.append(tok.getString());
-      }
-    }
-    return sb.toString().equals(str);
+    return PdfUtil.isShowTextGlyphPositioningEquals(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and the concatenation of the
-   * strings in its array operand equals the given string (ignoring case).
+   * Convenience call to
+   * {@link PdfUtil#isShowTextGlyphPositioningEqualsIgnoreCase(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given suffix.
    * </p>
    * 
    * @param str
    *          A given string.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and the
-   *         concatenation of the strings in its array operand equals
-   *         <code>str</code> (ignoring case).
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
+   *         string operand is equal to <code>str</code> (case-independently).
    * @since 1.60
-   * @see String#equalsIgnoreCase(String)
    */
   protected boolean isShowTextGlyphPositioningEqualsIgnoreCase(String str) {
-    if (!isShowTextGlyphPositioning()) {
-      return false;
-    }
-    StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getSingleOperand().getArray()) {
-      if (tok.isString()) {
-        sb.append(tok.getString());
-      }
-    }
-    return sb.toString().equalsIgnoreCase(str);
+    return PdfUtil.isShowTextGlyphPositioningEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
-   * matches the given pattern according to {@link Matcher#find()}.
-   * </p>
-   * <p>
-   * This method uses {@link Matcher#find()}, which implicitly does not anchor
-   * at the beginning of the input string.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextGlyphPositioningFind(PdfToken, PdfToken, Pattern)
+   * using the current operator, its single operand and the givenpattern.
    * </p>
    * 
    * @param pattern
-   *          A regular expression expressed as a {@link Pattern}.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
-   *         operand matches <code>regex</code>.
+   *          A given pattern.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
+   *         string operand matches <code>pattern</code> (using
+   *         {@link Matcher#find()}, which does not implicitly anchor).
    * @since 1.62
    * @see Matcher#find()
    */
   protected boolean isShowTextGlyphPositioningFind(Pattern pattern) {
-    if (!isShowTextGlyphPositioning()) {
-      return false;
-    }
-    StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getSingleOperand().getArray()) {
-      if (tok.isString()) {
-        sb.append(tok.getString());
-      }
-    }
-    return pattern.matcher(sb.toString()).find();
+    return PdfUtil.isShowTextGlyphPositioningFind(getOperator(), getSingleOperand(), pattern);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is
+   * Determines if the current operator is
    * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
    * matches the given pattern according to {@link Matcher#matches()}.
    * </p>
    * <p>
-   * This method uses {@link Matcher#matches()}, which implicitly anchors at
-   * the beginning of the input string.
+   * This method uses {@link Matcher#matches()}, which implicitly anchors at the
+   * beginning of the input string.
    * </p>
    * 
    * @param pattern
    *          A regular expression expressed as a {@link Pattern}.
-   * @return <code>true</code> if the current opcode is
+   * @return <code>true</code> if the current operator is
    *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
    *         operand matches <code>regex</code>.
    * @since 1.60
    * @see Matcher#matches()
+   * @deprecated Adapt your code to using
+   *             {@link #isShowTextGlyphPositioningFind(Pattern)} instead.
+   *             This method will be removed in a future release.
    */
+  @Deprecated
   protected boolean isShowTextGlyphPositioningMatches(Pattern pattern) {
     if (!isShowTextGlyphPositioning()) {
       return false;
@@ -949,7 +936,7 @@ public abstract class PdfTokenStreamWorker {
   
   /**
    * <p>
-   * Determines if the current opcode is
+   * Determines if the current operator is
    * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
    * matches the given regular expression.
    * </p>
@@ -962,13 +949,17 @@ public abstract class PdfTokenStreamWorker {
    * 
    * @param regex
    *          A regular expression expressed as a string.
-   * @return <code>true</code> if the current opcode is
+   * @return <code>true</code> if the current operator is
    *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
    *         operand matches <code>regex</code>.
    * @since 1.60
    * @see #isShowTextGlyphPositioningMatches(Pattern)
    * @see String#matches(String)
+   * @deprecated Adapt your code to using
+   *             {@link #isShowTextGlyphPositioningFind(Pattern)} instead.
+   *             This method will be removed in a future release.
    */
+  @Deprecated
   protected boolean isShowTextGlyphPositioningMatches(String regex) {
     if (!isShowTextGlyphPositioning()) {
       return false;
@@ -984,62 +975,51 @@ public abstract class PdfTokenStreamWorker {
   
   /**
    * <p>
-   * Determines if the current opcode is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and the concatenation of
-   * enough strings in its array operand starts with the given prefix.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextGlyphPositioningStartsWith(PdfToken, PdfToken, String)
+   * using the current operator, its single operand and the given prefix.
    * </p>
    * 
    * @param prefix
    *          A given prefix.
-   * @return <code>true</code> if the current opcode is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and the
-   *         concatenation of enough strings in its array operand starts with
-   *         <code>prefix</code>.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
+   *         string operand starts with <code>prefix</code>.
    * @since 1.60
-   * @see String#equals(Object)
    */
   protected boolean isShowTextGlyphPositioningStartsWith(String prefix) {
-    if (!isShowTextGlyphPositioning()) {
-      return false;
-    }
-    StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getSingleOperand().getArray()) {
-      if (tok.isString()) {
-        sb.append(tok.getString());
-        if (prefix.length() <= sb.length()) {
-          return sb.toString().startsWith(prefix);
-        }
-      }
-    }
-    return false;
+    return PdfUtil.isShowTextGlyphPositioningStartsWith(getOperator(), getSingleOperand(), prefix);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
+   * Determines if the current operator is {@link PdfOpcodes#SHOW_TEXT} and its
    * string operand matches the given pattern according to
    * {@link Matcher#matches()}.
    * </p>
    * <p>
-   * This method uses {@link Matcher#matches()}, which implicitly anchors at
-   * the beginning of the input string.
+   * This method uses {@link Matcher#matches()}, which implicitly anchors at the
+   * beginning of the input string.
    * </p>
    * 
    * @param pattern
    *          A regular expression expressed as a {@link Pattern}.
-   * @return <code>true</code> if the current opcode is
+   * @return <code>true</code> if the current operator is
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
    *         <code>pattern</code>.
    * @since 1.60
    * @see Matcher#matches()
+   * @deprecated Adapt your code to using {@link #isShowTextFind(Pattern)}
+   *             instead. This method will be removed in a future release.
    */
+  @Deprecated
   protected boolean isShowTextMatches(Pattern pattern) {
     return isShowText() && pattern.matcher(getSingleOperand().getString()).matches();
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
+   * Determines if the current operator is {@link PdfOpcodes#SHOW_TEXT} and its
    * string operand matches the given regular expression.
    * </p>
    * <p>
@@ -1051,33 +1031,36 @@ public abstract class PdfTokenStreamWorker {
    * 
    * @param regex
    *          A regular expression expressed as a string.
-   * @return <code>true</code> if the current opcode is
+   * @return <code>true</code> if the current operator is
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
    *         <code>regex</code>.
    * @since 1.60
    * @see #isShowTextMatches(Pattern)
    * @see String#matches(String)
+   * @deprecated Adapt your code to using {@link #isShowTextFind(Pattern)}
+   *             instead. This method will be removed in a future release.
    */
+  @Deprecated
   protected boolean isShowTextMatches(String regex) {
     return isShowText() && getSingleOperand().getString().matches(regex);
   }
   
   /**
    * <p>
-   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand starts with the given prefix.
+   * Convenience call to
+   * {@link PdfUtil#isShowTextStartsWith(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given prefix.
    * </p>
    * 
    * @param prefix
    *          A given prefix.
-   * @return <code>true</code> if the current opcode is
+   * @return <code>true</code> if the current operator is the opcode
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand starts with
    *         <code>prefix</code>.
    * @since 1.60
-   * @see String#startsWith(String)
    */
   protected boolean isShowTextStartsWith(String prefix) {
-    return isShowText() && getSingleOperand().getString().startsWith(prefix);
+    return PdfUtil.isShowTextStartsWith(getOperator(), getSingleOperand(), prefix);
   }
   
   /**

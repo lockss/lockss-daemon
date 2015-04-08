@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -142,6 +142,7 @@ public class TestPdfTokenStreamWorker extends LockssTestCase {
   
   private PdfTokenFactory tf;
   
+  @Override
   public void setUp() {
     this.tf = new MockPdfTokenFactory();
     this.lot = new ArrayList<PdfToken>();
@@ -243,12 +244,12 @@ public class TestPdfTokenStreamWorker extends LockssTestCase {
   }
 
   public void testStartsWithOperandsEndsWithNone() throws PdfException {
-    /* 00 */ lot.add(tf.makeBoolean(true));
-    /* 01 */ lot.add(tf.makeOperator("boolean1"));
-    /* 02 */ lot.add(tf.makeFloat(1.0f));
-    /* 03 */ lot.add(tf.makeFloat(2.0f));
-    /* 04 */ lot.add(tf.makeOperator("float2"));
-    /* 05 */ lot.add(tf.makeOperator("opA"));
+    /* 0 */ lot.add(tf.makeBoolean(true));
+    /* 1 */ lot.add(tf.makeOperator("boolean1"));
+    /* 2 */ lot.add(tf.makeFloat(1.0f));
+    /* 3 */ lot.add(tf.makeFloat(2.0f));
+    /* 4 */ lot.add(tf.makeOperator("float2"));
+    /* 5 */ lot.add(tf.makeOperator("opA"));
     
     class MyPdfTokenStreamWorker extends TwoWayStateMachineWorker {
             
