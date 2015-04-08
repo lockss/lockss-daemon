@@ -42,7 +42,7 @@
     au < released ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2011 >
     au < superseded ; 2012-2013 ; Archaeology International Volume 16 [superseded] ; 16 ; 2012 >
     au < released ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 >
-    au < manifest ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 >
+    au < testing ;2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 >
     
   }
   
@@ -97,7 +97,7 @@
       au < released ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
       au < released ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
       au < released ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
-      au < manifest ; 2014 ; The Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 >
+      au < testing ;2014 ; The Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 >
     
     }
     
@@ -149,7 +149,7 @@
     au < released ; 2011 ; Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
     au < released ; 2012 ; Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
     au < released ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
-    au < manifest ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
+    au < testing ;2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
     
   }
 
@@ -174,7 +174,7 @@
     au < released ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011>
     au < released ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
     au < released ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
-    au < manifest ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
+    au < testing ;2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
 
   }
 
@@ -205,7 +205,7 @@
     au < released ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
     au < released ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
     au < released ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
-    au < manifest ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
+    au < testing ;2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
     
   }
 
@@ -221,7 +221,7 @@
     
     au < released ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
     au < released ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
-    au < manifest ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
+    au < testing ;2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
 
   }
   
@@ -236,7 +236,7 @@
     param[journal_id] = jophd
     
     au < released ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
-    au < manifest ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
+    au < testing ;2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -251,7 +251,7 @@
     param[journal_id] = jopd
     
     au < released ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
-    au < manifest ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
+    au < testing ;2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -266,7 +266,7 @@
     param[journal_id] = jors
 
     au < released ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
-    au < manifest ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
+    au < testing ;2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
     
   }
   
@@ -281,7 +281,7 @@
     param[journal_id] = ojb
 
     
-    au < manifest ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 >
+    au < testing ;2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 >
     
   }
 
@@ -303,7 +303,7 @@
     au < released ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
     au < released ; 2012 ; Opticon1826 Volume 12-14 ; 12-14 ; 2012 >
     au < released ; 2013 ; Opticon1826 Volume 15 ; 15 ; 2013 >
-    au < manifest ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 >
+    au < testing ;2014 ; Opticon1826 Volume 14 ; 14 ; 2014 >
     
   }
   
@@ -353,7 +353,7 @@
       au < released ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
       au < released ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
       au < released ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
-      au < manifest ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
+      au < testing ;2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
     
     }
     
@@ -375,7 +375,7 @@
       au < released ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
       au < released ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
-      au < manifest ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
+      au < testing ;2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
     
     }
     
@@ -400,7 +400,7 @@
     au < released ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
     au < released ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
     au < released ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
-    au < manifest ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
+    au < testing ;2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
 
   }
 
@@ -416,7 +416,7 @@
     
     au < released ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
     au < released ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
-    au < manifest ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
+    au < testing ;2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
 
   }
   
@@ -432,7 +432,7 @@
 
     au < released ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
     au < released ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
-    au < manifest ; 2014 ; Stability: International Journal of Security & Development Volume 3 ; 3 ; 2014 >
+    au < testing ;2014 ; Stability: International Journal of Security & Development Volume 3 ; 3 ; 2014 >
     
   }
 
