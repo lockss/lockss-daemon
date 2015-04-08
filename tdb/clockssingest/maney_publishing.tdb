@@ -1192,7 +1192,7 @@
     au < manifest ; exists ; 2007 ; European Journal of Archaeology Volume 10 ; 10 >
     au < manifest ; exists ; 2008 ; European Journal of Archaeology Volume 11 ; 11 >
     au < manifest ; exists ; 2009 ; European Journal of Archaeology Volume 12 ; 12 >
-    au < manifest ; exists ; 2010 ; European Journal of Archaeology Volume 13 ; 13 >
+    au < testing ; exists ; 2010 ; European Journal of Archaeology Volume 13 ; 13 >
     au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Archaeology Volume 14 ; 14 >
     au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Archaeology Volume 15 ; 15 >
     au < ready ; exists ; 2013 ; European Journal of Archaeology Volume 16 ; 16 >
@@ -2435,7 +2435,7 @@
 
     param[journal_id] = scm 
 
-    au < testing ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 >
+    au < ready ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 >
     au < ready ; exists ; 2013 ; Journal of Spinal Cord Medicine Volume 36 ; 36 >
     au < ready ; exists ; 2014 ; Journal of Spinal Cord Medicine Volume 37 ; 37 >
@@ -2511,7 +2511,7 @@
     au < manifest ; exists ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 >
     au < manifest ; exists ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 >
     au < manifest ; exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 >
-    au < testing ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 >
+    au < ready ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 >
     au < testing ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 >
     au < ready ; exists ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 >
@@ -2675,7 +2675,7 @@
     au < manifest ; exists ; 2008 ; Levant Volume 40 ; 40 >
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 >
     au < doNotProcess ; doNotProcess ; 2010 ; Levant Volume 42 ; 42 >
-    au < testing ; exists ; 2011 ; Levant Volume 43 ; 43 >
+    au < ready ; exists ; 2011 ; Levant Volume 43 ; 43 >
     au < doNotProcess ; doNotProcess ; 2012 ; Levant Volume 44 ; 44 >
     au < ready ; exists ; 2013 ; Levant Volume 45 ; 45 >
     au < ready ; exists ; 2014 ; Levant Volume 46 ; 46 >
@@ -2792,7 +2792,7 @@
     au < manifest ; exists ; 2007 ; Materials Research Innovations Volume 11 ; 11 >
     au < manifest ; exists ; 2008 ; Materials Research Innovations Volume 12 ; 12 >
     au < manifest ; exists ; 2009 ; Materials Research Innovations Volume 13 ; 13 >
-    au < testing ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 >
+    au < ready ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 >
     au < testing ; exists ; 2011 ; Materials Research Innovations Volume 15 ; 15 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Research Innovations Volume 16 ; 16 >
     au < ready ; exists ; 2013 ; Materials Research Innovations Volume 17 ; 17 >
@@ -2839,7 +2839,7 @@
     au < manifest ; exists ; 2007 ; Materials Science and Technology Volume 23 ; 23 >
     au < manifest ; exists ; 2008 ; Materials Science and Technology Volume 24 ; 24 >
     au < manifest ; exists ; 2009 ; Materials Science and Technology Volume 25 ; 25 >
-    au < testing ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 >
+    au < ready ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 >
     au < testing ; exists ; 2011 ; Materials Science and Technology Volume 27 ; 27 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Science and Technology Volume 28 ; 28 >
     au < ready ; exists ; 2013 ; Materials Science and Technology Volume 29 ; 29 >
@@ -2864,8 +2864,8 @@
     au < manifest ; exists ; 2007 ; Materials Technology: Advanced Performance Materials Volume 22 ; 22 >
     au < manifest ; exists ; 2008 ; Materials Technology: Advanced Performance Materials Volume 23 ; 23 >
     au < manifest ; exists ; 2009 ; Materials Technology: Advanced Performance Materials Volume 24 ; 24 >
-    au < testing ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 >
-    au < testing ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 >
+    au < ready ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 >
+    au < ready ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 >
     au < ready ; exists ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 >
     au < ready ; exists ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 >
@@ -4096,7 +4096,7 @@
     au < manifest ; exists ; 2007 ; Studies in Conservation Volume 52 ; 52 >
     au < manifest ; exists ; 2008 ; Studies in Conservation Volume 53 ; 53 >
     au < manifest ; exists ; 2009 ; Studies in Conservation Volume 54 ; 54 >
-    au < manifest ; exists ; 2010 ; Studies in Conservation Volume 55 ; 55 >
+    au < testing ; exists ; 2010 ; Studies in Conservation Volume 55 ; 55 >
     au < doNotProcess ; doNotProcess ; 2011 ; Studies in Conservation Volume 56 ; 56 >
     au < doNotProcess ; doNotProcess ; 2012 ; Studies in Conservation Volume 57 ; 57 >
     au < ready ; exists ; 2013 ; Studies in Conservation Volume 58 ; 58 >
