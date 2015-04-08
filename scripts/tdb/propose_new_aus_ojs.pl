@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# $Id: propose_new_aus.pl 39864 2015-02-18 09:10:24Z thib_gc $
+# $Id$
 #
 # Read in a list of AUs defined with the OJS plugin.
 # Propose new AUs, either before or after the range provided
@@ -20,7 +20,7 @@ my @Usage = ("$0 [-h] [--pre=<num1>] [--post=<num2>] auid_file\n",
     "-c            Use ClockssOJS2Plugin (default OJS2Plugin)\n",
     "-h            Print this help message.");
 sub usage {
-    print '$Revision: 39864 $' . "\n";
+    print '$Revision$' . "\n";
     print "Usage:\n @Usage\n";
     exit(1);
 }
