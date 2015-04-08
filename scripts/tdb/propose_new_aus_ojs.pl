@@ -68,12 +68,14 @@ while (my $line = <>) {
   }
 }
 
-foreach my $base_url (sort(keys(%au_volume))) {
-    for (my $x = $au_volume{$base_url}{$journal_id}{min} - $opt_pre; $x < $au_volume{$base_url}{$journal_id}{min}; ++$x) {
-      &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
-    }
-    for (my $x = $au_volume{$base_url}{$journal_id}{max} + 1; $x <= $au_volume{$base_url}{$journal_id}{max} + $opt_post; ++$x) {
-      &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
+foreach my $base_url {
+    foreach my $journal_id (%{$au_volume{$base_url}}) {
+      for (my $x = $au_volume{$base_url}{$journal_id}{min} - $opt_pre; $x < $au_volume{$base_url}{$journal_id}{min}; ++$x) {
+        &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
+      }
+      for (my $x = $au_volume{$base_url}{$journal_id}{max} + 1; $x <= $au_volume{$base_url}{$journal_id}{max} + $opt_post; ++$x) {
+        &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
+      }
     }
 }
 
