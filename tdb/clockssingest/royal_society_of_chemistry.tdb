@@ -1433,9 +1433,10 @@
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
+      comment[notReady] = crawl completed with no substance
       
-      au < testing ; exists ; 2010 ; Soft Matter Volume 6 ; 7 ; 2010 >
-      au < testing ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
+      au < notReady ; exists ; 2010 ; Soft Matter Volume 6 ; 7 ; 2010 >
+      au < ready ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
       au < crawling ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
       au < crawling ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
       au < crawling ; exists ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 >
