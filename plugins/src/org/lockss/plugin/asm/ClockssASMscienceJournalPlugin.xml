@@ -1,0 +1,158 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.asm.ClockssASMscienceJournalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>ASMscience Journal Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"ASMscience Journal Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%scontent/journal/%s/clockssissues?volume=%s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!-- examples
+      start: http://www.asmscience.org/content/journal/microbiolspec/clockssissues?volume=2
+      issue toc: http://www.asmscience.org/content/journal/microbiolspec/2/2
+      guts of toc actually live at:
+         http://www.asmscience.org/content/journal/microbiolspec/2/2/articles?...
+      article landing: http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.AID-0003-2012
+         note that the above doesn't limit with current volume, so be as restrictive as possible, may need crawl filter
+      fulltext pdf & xml live at 
+        http://www.asmscience.org/deliver/fulltext/microbiolspec/2/2/AID-0003-2012.(pdf|xml)?... but goes through redirect
+           docserver/fulltext/microbiolspec/2/2/AID-0003-2012.pdf?expires=...
+      citation:http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.AID-0003-2012/cite/(bibtex, endnote, plaintext, refworks)
+      supporting:http://www.asmscience.org/docserver/preview/fulltext/microbiolspec/2/2/AID-0003-2012-1.gif
+      http://www.asmscience.org/docserver/fulltext/microbiolspec/2/6/EHEC-0014-2013-fig1(_thmb)?.gif
+      note that the following table/figure pages don't have the "journal" part of the url
+        http://www.asmscience.org/content/microbiolspec/10.1128/microbiolspec.PLAS-0022-2014.fig1
+        http://www.asmscience.org/content/microbiolspec/10.1128/microbiolspec.PLAS-0023-2014.T1
+      fulltext html 
+      do NOT collect:
+        /content/journal/microbiolspec/10.1128/microbiolspec.OH-0017-2012?term=...&db=pubmed
+        deliver/fulltext/microbiolspec/2/1/OH-0017-2012.html?itemId=...&mimeType=html&isFastTrackArticle=
+      (TODO: FULLTEXTHTML - not currently turned on)
+      DO need:
+        deliver/fulltext/microbiolspec/2/1/OH-0017-2012.html?itemId=...&mimeType=html&fmt=ahah
+    -->
+    <list>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^%scontent/journal/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>2,"^%scontent/journal/%s/[0-9]{2}\.[0-9]{4}/[^?]+\?term=.*&amp;db=pubmed$", base_url, journal_id</string>
+      <string>1,"^%scontent/journal/%s/[0-9]{2}\.[0-9]{4}/", base_url, journal_id</string>
+      <string>1,"^%scontent/%s/[0-9]{2}\.[0-9]{4}/[^/]+\.(fig|T)[A-Za-z0-9]+$", base_url, journal_id</string>
+      <string>2,"^%sdeliver/fulltext/%s/%s/[0-9]+/[^?]+\.html\?itemId=[^&amp;]+&amp;mimeType=html&amp;isFastTrackArticle=$", base_url, journal_id, volume_name</string>
+      <string>1,"^%sdeliver/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>1,"^%sdocserver(/ahah)?/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <!-- examples
+    http://www.asmscience.org/deliver/fulltext/microbiolspec/2/2/AID-0003-2012.pdf?itemId=/content/journal/microbiolspec/10.1128/microbiolspec.AID-0003-2012&mimeType=pdf&isFastTrackArticle=
+      this redirects to a one-time URL but we cache this one as conanonical
+    -->
+    <list>
+      <string>"^%sdeliver/fulltext/%s/%s/.*\.pdf(\?itemId=[^&amp;]+&amp;mimeType=[^&amp;]+&amp;isFastTrackArticle=)?$", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>100</long>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string> 
+    <string>org.lockss.plugin.asm.ASMHtmlCrawlFilterFactory</string>
+    </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.asm.ASMscienceUrlConsumerFactory</string>
+  </entry>  
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.asm.ASMscienceHtmlLinkExtractorFactory</string>
+  </entry>  
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.asm.ASMscienceHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.asm.ASMscienceJournalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.asm.ASMscienceJournalArticleIteratorFactory</string>
+  </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.asm.ASMscienceHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
+</map>
