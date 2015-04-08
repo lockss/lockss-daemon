@@ -68,8 +68,8 @@ while (my $line = <>) {
   }
 }
 
-foreach my $base_url {
-    foreach my $journal_id (%{$au_volume{$base_url}}) {
+foreach my $base_url (sort(keys(%au_volume))) {
+    foreach my $journal_id (keys(%{$au_volume{$base_url}})) {
       for (my $x = $au_volume{$base_url}{$journal_id}{min} - $opt_pre; $x < $au_volume{$base_url}{$journal_id}{min}; ++$x) {
         &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
       }
