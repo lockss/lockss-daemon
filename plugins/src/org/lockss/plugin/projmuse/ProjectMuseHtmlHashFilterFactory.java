@@ -63,7 +63,7 @@ public class ProjectMuseHtmlHashFilterFactory implements FilterFactory {
       Collections.unmodifiableSet(new HashSet<String>(Arrays.asList("frame",
                                                                     "iframe",
                                                                     "img",
-                                                                    "src")));
+                                                                    "script")));
   
   @Override
   public InputStream createFilteredInputStream(final ArchivalUnit au,

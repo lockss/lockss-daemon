@@ -45,9 +45,6 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
 public class ProjectMuseUrlConsumer extends SimpleUrlConsumer {
 
   /**
-   * 
-   * @param facade
-   * @param fud
    * @since 1.67.5
    */
   public ProjectMuseUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
@@ -56,38 +53,27 @@ public class ProjectMuseUrlConsumer extends SimpleUrlConsumer {
 
   @Override
   public void consume() throws IOException {
-    if (shouldStoreRedirectsAtOrigUrl(au, fud)) {
-      // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
-      // chain if (fud.redirectUrls != null && fud.fetchUrl != null)
+    if (shouldStoreAtOrigUrl()) {
+      // FIXME 1.68: call storeAtOrigUrl() instead of these 4 lines 
       fud.redirectUrls = null;
       fud.fetchUrl = null;
+      fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
+      fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.origUrl);
     }
     super.consume();
   }
   
   /**
-   * 
-   * @param fud
-   * @return
    * @since 1.67.5
    */
-  protected static boolean shouldStoreRedirectsAtOrigUrl(ArchivalUnit au,
-                                                         FetchedUrlData fud) {
-    if (ProjectMuseUtil.isBaseUrlHttps(au)) {
-      return false;
-    }
-    List<String> redirectUrls = fud.redirectUrls;
-    if (redirectUrls != null && redirectUrls.size() == 1) {
-      String redirectUrl = redirectUrls.get(0);
-      String fetchUrl = fud.fetchUrl;
-      if (redirectUrl.equals(fetchUrl)) {
-        String origUrl = fud.origUrl;
-        return origUrl.startsWith(ProjectMuseUtil.HTTP)
-            && fetchUrl.startsWith(ProjectMuseUtil.HTTPS)
-            && ProjectMuseUtil.baseUrlHttpsToHttp(au, fud.fetchUrl).equals(origUrl);
-      }
-    }
-    return false;
+  protected boolean shouldStoreAtOrigUrl() {
+    return ProjectMuseUtil.isBaseUrlHttp(au)
+           && fud.redirectUrls != null
+           && fud.redirectUrls.size() == 1
+           && fud.fetchUrl.equals(fud.redirectUrls.get(0))
+           && fud.origUrl.startsWith(ProjectMuseUtil.HTTP)
+           && fud.fetchUrl.startsWith(ProjectMuseUtil.HTTPS)
+           && fud.origUrl.substring(ProjectMuseUtil.HTTP.length()).equals(fud.fetchUrl.substring(ProjectMuseUtil.HTTPS.length()));
   }
   
 }

@@ -67,19 +67,16 @@ public class ProjectMuseUtil {
   }
 
   /**
+   * <p>
+   * If the AU is HTTP-based and the given URL is HTTPS, converts it to an
+   * equivalent HTTP URL, otherwise returns the URL unchanged.
+   * </p>
    * 
-   * @param url
-   * @return
    * @since 1.67.5
    */
   public static String baseUrlHttpsToHttp(ArchivalUnit au, String url) {
-    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    if (url != null && url.startsWith(HTTPS) && baseUrl.startsWith(HTTP)) {
-      String urlNoProto = url.substring(HTTPS.length());
-      String baseUrlNoProto = baseUrl.substring(HTTP.length());
-      if (urlNoProto.startsWith(baseUrlNoProto)) {
-        url = HTTP + urlNoProto;
-      }
+    if (isBaseUrlHttp(au) && url != null && url.startsWith(HTTPS)) {
+      url = HTTP + url.substring(HTTPS.length());
     }
     return url;
   }
