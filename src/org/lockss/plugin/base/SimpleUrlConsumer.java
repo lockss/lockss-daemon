@@ -38,12 +38,15 @@ import org.lockss.crawler.CrawlerStatus;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /**
  * This is a basic UrlConsumer. It stores the fetched url.
  * It does no processing.
  */
 public class SimpleUrlConsumer implements UrlConsumer {
+  
+  private static final Logger log = Logger.getLogger(SimpleUrlConsumer.class);
   
   protected UrlCacher cacher;
   protected ArchivalUnit au;
@@ -59,6 +62,7 @@ public class SimpleUrlConsumer implements UrlConsumer {
     this.fud = fud;
   }
   
+  @Override
   public void consume() throws IOException {
     if (cacher == null) {
       cacher = au.makeUrlCacher(fud.getUrlData());
@@ -73,8 +77,47 @@ public class SimpleUrlConsumer implements UrlConsumer {
     cacher.storeContent();
   }
   
+  @Override
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;
+  }
+
+  /**
+   * <p>
+   * Causes {@link DefaultUrlCacher} to store a redirect chain at the origin URL
+   * only, which entails:
+   * <p>
+   * <ul>
+   * <li>Setting the redirect URL list to null.</li>
+   * <li>Setting the fetch URL to null.</li>
+   * <li>Removing the redirected-to property from the headers.</li>
+   * <li>Setting the content URL property in the headers to the origin URL.</li>
+   * </ul>
+   * 
+   * @since 1.68
+   * @see DefaultUrlCacher#storeContent(java.io.InputStream, org.lockss.util.CIProperties)
+   */
+  public void storeAtOrigUrl() {
+    if (log.isDebug2()) {
+      log.debug2(String.format("Storing redirect chain %s (fetch URL %s) at origin URL %s",
+                               fud.redirectUrls.toString(),
+                               fud.fetchUrl,
+                               fud.origUrl));
+    }
+    /*
+     * DefaultUrlCacher stores at fud.origUrl, and processes the redirect
+     * chain if (fud.redirectUrls != null && fud.fetchUrl != null)
+     */
+    fud.redirectUrls = null;
+    fud.fetchUrl = null;
+    /*
+     * Don't store the redirect property with the headers 
+     */
+    fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
+    /*
+     * Set the content URL property to the URL under which the content is stored
+     */
+    fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.origUrl);
   }
   
 }
