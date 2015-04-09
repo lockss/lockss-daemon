@@ -70,7 +70,10 @@ implements LinkExtractorFactory {
   // Identify an article landing page from which all article aspect links originate
   protected static final Pattern PATTERN_TOC_LANDING_URL = Pattern.compile("^(https?://[^/]+)/content/journal/[^/]+/[0-9]+/[0-9]+$", Pattern.CASE_INSENSITIVE);
 
-  protected static final Pattern PATTERN_ARTICLE_LANDING_URL = Pattern.compile("^(https?://[^/]+)/content/journal/[^/]+/10.1128/[^/?&]+$", Pattern.CASE_INSENSITIVE);
+  //main book chapter or journal article landing page - extract other information from tags here
+  // www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.PLAS-0022-2014
+  // www.asmscience.org/content/book/10.1128/9781555818289.chap4
+  protected static final Pattern PATTERN_ARTICLE_LANDING_URL = Pattern.compile("^(https?://[^/]+)/content/(book|journal/[^/]+)/[0-1]{2}\\.[0-9]{4}/[^/?&]+$", Pattern.CASE_INSENSITIVE);
   
   // TODO: FULLTEXTHTML
   // This Div tag creates a link which returns a page with a one time URL for full-text html

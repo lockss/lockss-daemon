@@ -90,6 +90,7 @@ public class ASMscienceJournalArticleIteratorFactory
    
    // these can be created from the PDF url
    protected static String HTML_ABSTRACT_REPLACEMENT = "/content/journal/$3/$4/$5";
+   protected static String HTML_REPLACEMENT = "/content/journal/$3/$4/$5?crawler=true";
    protected static String CITATION_BIB_REPLACEMENT = "/content/journal/$3/$4/$5/cite/bibtex";
    protected static String CITATION_END_REPLACEMENT = "/content/journal/$3/$4/$5/cite/endnote";
    protected static String CITATION_REF_REPLACEMENT = "/content/journal/$3/$4/$5/cite/refworks";
@@ -114,7 +115,11 @@ public class ASMscienceJournalArticleIteratorFactory
      * make this secondary.... pdf uses args that we can't guess
      */
     builder.addAspect(HTML_ABSTRACT_REPLACEMENT,
-                      ArticleFiles.ROLE_ABSTRACT);
+        ArticleFiles.ROLE_ABSTRACT);
+
+    // This isn't viewable because of a doctype declaration, but all the html is there
+    builder.addAspect(HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     // secondary roles don't have enough info to trigger an article
     builder.addAspect(CITATION_BIB_REPLACEMENT,

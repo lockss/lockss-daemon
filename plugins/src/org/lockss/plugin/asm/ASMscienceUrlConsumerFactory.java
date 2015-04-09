@@ -106,6 +106,7 @@ public class ASMscienceUrlConsumerFactory implements UrlConsumerFactory {
         fud.redirectUrls = null;
         fud.fetchUrl = null;
         fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
+        fud.headers.setProperty(CachedUrl.PROPERTY_CONTENT_URL, fud.origUrl);
       }
       super.consume();
     }
