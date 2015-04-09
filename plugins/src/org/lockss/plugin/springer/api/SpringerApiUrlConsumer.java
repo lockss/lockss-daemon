@@ -67,12 +67,12 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
 
   @Override
   public void consume() throws IOException {
-    if (shouldStoreRedirectsAtOrigUrl(fud)) {
-      // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
-      // chain if (fud.redirectUrls != null && fud.fetchUrl != null)
+    if (shouldStoreAtOrigUrl()) {
+      // FIXME 1.68: call storeAtOrigUrl() instead of these 4 lines 
       fud.redirectUrls = null;
       fud.fetchUrl = null;
       fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
+      fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.origUrl);
     }
     super.consume();
   }
@@ -88,7 +88,7 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
    *         origin URL.
    * @since 1.67.5
    */
-  protected boolean shouldStoreRedirectsAtOrigUrl(FetchedUrlData fud) {
+  protected boolean shouldStoreAtOrigUrl() {
     return fud.redirectUrls != null
         && fud.redirectUrls.size() == 1
         && fud.redirectUrls.get(0).equals(fud.fetchUrl)
