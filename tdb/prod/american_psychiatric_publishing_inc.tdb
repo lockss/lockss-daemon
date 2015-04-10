@@ -77,12 +77,10 @@
       param[base_url] = http://ajp.psychiatryonline.org/
       param[resource_id] = 13
       comment[0] = content starts from 1844 to current
-        
-        comment[smoketest] = created one au for testing
     
-      au < testing ; 2011 ; The American Journal of Psychiatry Volume 168 ; 2011 >
+      au < exists ; 2011 ; The American Journal of Psychiatry Volume 168 ; 2011 >
       au < exists ; 2012 ; The American Journal of Psychiatry Volume 169 ; 2012 >
-      au < testing ; 2013 ; The American Journal of Psychiatry Volume 170 ; 2013 >
+      au < exists ; 2013 ; The American Journal of Psychiatry Volume 170 ; 2013 >
       au < exists ; 2014 ; The American Journal of Psychiatry Volume 171 ; 2014 >
     
       }
