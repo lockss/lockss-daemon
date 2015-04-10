@@ -1208,7 +1208,7 @@ while (my $line = <>) {
     }
     sleep(4);
                 
-  } elsif (($plugin eq "SilverchairJournalsPlugin") || ($plugin eq "ClockssSilverchairJournalsPlugin")) {
+  } elsif ($plugin eq "SilverchairJournalsPlugin") {
     $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d", 
       $param{base_url}, $param{resource_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -1216,7 +1216,25 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$clockss_tag/))) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+                
+  } elsif ($plugin eq "ClockssSilverchairJournalsPlugin") {
+    $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d", 
+      $param{base_url}, $param{resource_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
