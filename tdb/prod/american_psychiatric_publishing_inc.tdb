@@ -267,11 +267,9 @@
       param[base_url] = http://ps.psychiatryonline.org/
       param[resource_id] = 18
       comment[0] = content starts from year 1950 to current
-        
-        comment[smoketest] = created one au for testing
     
       au < exists ; 2012 ; Psychiatric Services Volume 63 ; 2012 >
-      au < testing ; 2013 ; Psychiatric Services Volume 64 ; 2013 >
+      au < exists ; 2013 ; Psychiatric Services Volume 64 ; 2013 >
       au < exists ; 2014 ; Psychiatric Services Volume 65 ; 2014 >
       }
     
