@@ -1208,6 +1208,24 @@ while (my $line = <>) {
     }
     sleep(4);
                 
+  } elsif (($plugin eq "SilverchairJournalsPlugin") || ($plugin eq "ClockssSilverchairJournalsPlugin")) {
+    $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", 
+      $param{base_url}, $param{resource_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/..\/Issue.aspx?issueid=\d*&amp;journalid=$param{resource_id}/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+                
   } 
   if ($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
