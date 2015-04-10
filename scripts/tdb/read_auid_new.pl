@@ -1216,7 +1216,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/..\/Issue.aspx?issueid=\d*&amp;journalid=$param{resource_id}/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/..\/Issue.aspx\?issueid=\d*&amp;journalid=$param{resource_id}/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
