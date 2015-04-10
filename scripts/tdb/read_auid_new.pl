@@ -1209,7 +1209,7 @@ while (my $line = <>) {
     sleep(4);
                 
   } elsif (($plugin eq "SilverchairJournalsPlugin") || ($plugin eq "ClockssSilverchairJournalsPlugin")) {
-    $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", 
+    $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d", 
       $param{base_url}, $param{resource_id}, $param{year});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
