@@ -53,10 +53,11 @@
       au < doNotProcess ; 2008 ; Chest Volume 133-134 ; 2008 >
       au < doNotProcess ; 2009 ; Chest Volume 135-136 ; 2009 >
       au < doNotProcess ; 2010 ; Chest Volume 137-138 ; 2010 >
-      au < exists ; 2011 ; Chest Volume 139-140 ; 2011 >
-      au < exists ; 2012 ; Chest Volume 141-142 ; 2012 >
-      au < exists ; 2013 ; Chest Volume 143-144 ; 2013 >
-      au < exists ; 2014 ; Chest Volume 145-146 ; 2014 >
+      au < manifest ; 2011 ; Chest Volume 139-140 ; 2011 >
+      au < manifest ; 2012 ; Chest Volume 141-142 ; 2012 >
+      au < manifest ; 2013 ; Chest Volume 143-144 ; 2013 >
+      au < manifest ; 2014 ; Chest Volume 145-146 ; 2014 >
+      au < expected ; 2015 ; Chest Volume 147-148 ; 2015 >
     
     }
 
