@@ -63,7 +63,7 @@
       param[base_url] = http://interventions.onlinejacc.org/
       param[resource_id] = 103
 
-      au < exists ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 2013 >
+      au < manifest ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 2013 >
       au < exists ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 2014 >
   
     }
@@ -172,8 +172,8 @@
       param[base_url] = http://content.onlinejacc.org/
       param[resource_id] = 101
 
-      au < exists ; 2012 ; Journal of the American College of Cardiology Volume 59-60 ; 2012 >
-      au < exists ; 2013 ; Journal of the American College of Cardiology Volume 61-62 ; 2013 >
+      au < manifest ; 2012 ; Journal of the American College of Cardiology Volume 59-60 ; 2012 >
+      au < manifest ; 2013 ; Journal of the American College of Cardiology Volume 61-62 ; 2013 >
       au < exists ; 2014 ; Journal of the American College of Cardiology Volume 63-64 ; 2014 >
   
     }
