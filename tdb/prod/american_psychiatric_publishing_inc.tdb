@@ -3,6 +3,8 @@
   publisher <
     name = American Psychiatric Publishing Inc.
   >
+  
+  comment[platform] = Moved from HW (to Silverchair) thence to Atypon.
 
   {
   
@@ -72,7 +74,8 @@
       
       {
     
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+      plugin = needs.plugin
+      comment[platform] = Atypon
       implicit < status ; year ; name ; param[year] >
       param[base_url] = http://ajp.psychiatryonline.org/
       param[resource_id] = 13
@@ -112,7 +115,8 @@
       }
       
       {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+      plugin = needs.plugin
+      comment[platform] = Atypon
       implicit < status ; year ; name ; param[year] >
       param[base_url] = http://focus.psychiatryonline.org/
       param[resource_id] = 21
@@ -155,7 +159,8 @@
       }
       
       {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+      plugin = needs.plugin
+      comment[platform] = Atypon
       implicit < status ; year ; name ; param[year] >
       param[base_url] = http://neuro.psychiatryonline.org/
       param[resource_id] = 62
@@ -219,7 +224,8 @@
       }
       
       {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+      plugin = needs.plugin
+      comment[platform] = Atypon
       implicit < status ; year ; name ; param[year] >
       param[base_url] = http://psychnews.psychiatryonline.org/
       param[resource_id] = 61
@@ -262,7 +268,8 @@
       }
       
       {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+      plugin = needs.plugin
+      comment[platform] = Atypon
       implicit < status ; year ; name ; param[year] >
       param[base_url] = http://ps.psychiatryonline.org/
       param[resource_id] = 18
