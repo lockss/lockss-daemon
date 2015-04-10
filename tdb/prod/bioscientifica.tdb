@@ -55,8 +55,6 @@
       param[base_url] = http://www.eje-online.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      comment[eje130_136] = 4/19/2012 manifests present, but AUs have login pages. 9/22/2014 v169 has login page http://www.eje-online.org/content/169/5/L1.short
-
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
       au < HighWirePressH20Plugin ; manifest ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
@@ -98,10 +96,10 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Endocrinology Volume 166 ; 166 >
       au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Endocrinology Volume 167 ; 167 >
       au < HighWirePressH20Plugin ; released ; 2013 ; European Journal of Endocrinology Volume 168 ; 168 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of Endocrinology Volume 169 ; 169 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; European Journal of Endocrinology Volume 170 ; 170 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; European Journal of Endocrinology Volume 171 ; 171 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; European Journal of Endocrinology Volume 172 ; 172 >
+      au < HighWirePressH20Plugin ; ready ; 2013 ; European Journal of Endocrinology Volume 169 ; 169 >
+      au < HighWirePressH20Plugin ; testing ; 2014 ; European Journal of Endocrinology Volume 170 ; 170 >
+      au < HighWirePressH20Plugin ; testing ; 2014 ; European Journal of Endocrinology Volume 171 ; 171 >
+      au < HighWirePressH20Plugin ; testing ; 2015 ; European Journal of Endocrinology Volume 172 ; 172 >
       au < HighWirePressH20Plugin ; expected ; 2015 ; European Journal of Endocrinology Volume 173 ; 173 >
 
     }
