@@ -33,6 +33,7 @@
 
       au < exists ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 2013 >
       au < exists ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 2014 >
+      au < expected ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 2015 >
   
     }
 
@@ -65,6 +66,7 @@
 
       au < manifest ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 2013 >
       au < exists ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 2014 >
+      au < expected ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 2015 >
   
     }
 
@@ -82,8 +84,9 @@
       param[base_url] = http://heartfailure.onlinejacc.org/
       param[resource_id] = 139
 
-      au < exists ; 2013 ; JACC: Heart Failure Volume 1 ; 2013 >
+      au < manifest ; 2013 ; JACC: Heart Failure Volume 1 ; 2013 >
       au < exists ; 2014 ; JACC: Heart Failure Volume 2 ; 2014 >
+      au < expected ; 2015 ; JACC: Heart Failure Volume 3 ; 2015 >
   
     }
   }
@@ -175,6 +178,7 @@
       au < manifest ; 2012 ; Journal of the American College of Cardiology Volume 59-60 ; 2012 >
       au < manifest ; 2013 ; Journal of the American College of Cardiology Volume 61-62 ; 2013 >
       au < exists ; 2014 ; Journal of the American College of Cardiology Volume 63-64 ; 2014 >
+      au < expected ; 2015 ; Journal of the American College of Cardiology Volume 65-66 ; 2015 >
   
     }
   }
