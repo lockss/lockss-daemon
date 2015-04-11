@@ -33,7 +33,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 >
     au < doNotProcess ; doNotProcess ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 >
     au < doNotProcess ; doNotProcess ; 2012 ; Advances in Applied Ceramics Volume 111 ; 111 >
-    au < ready ; exists ; 2013 ; Advances in Applied Ceramics Volume 112 ; 112 >
+    au < crawling ; exists ; 2013 ; Advances in Applied Ceramics Volume 112 ; 112 >
     au < crawling ; exists ; 2014 ; Advances in Applied Ceramics Volume 113 ; 113 >
     au < expected ; exists ; 2015 ; Advances in Applied Ceramics Volume 114 ; 114 >
 
@@ -109,7 +109,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Ambix Volume 57 ; 57 >
     au < doNotProcess ; doNotProcess ; 2011 ; Ambix Volume 58 ; 58 >
     au < doNotProcess ; doNotProcess ; 2012 ; Ambix Volume 59 ; 59 >
-    au < ready ; exists ; 2013 ; Ambix Volume 60 ; 60 >
+    au < crawling ; exists ; 2013 ; Ambix Volume 60 ; 60 >
     au < crawling ; exists ; 2014 ; Ambix Volume 61 ; 61 >
     au < expected ; exists ; 2015 ; Ambix Volume 62 ; 62 >
 
@@ -135,8 +135,8 @@
     au < manifest ; exists ; 2007 ; Annals of Tropical Medicine and Parasitology Volume 101 ; 101 >
     au < manifest ; exists ; 2008 ; Annals of Tropical Medicine and Parasitology Volume 102 ; 102 >
     au < manifest ; exists ; 2009 ; Annals of Tropical Medicine and Parasitology Volume 103 ; 103 >
-    au < ready ; exists ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 >
-    au < ready ; exists ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 >
+    au < crawling ; exists ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 >
+    au < crawling ; exists ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 >
 
   }
 
@@ -160,7 +160,7 @@
     au < manifest ; exists ; 2007 ; Annals of Tropical Paediatrics: International Child Health Volume 27 ; 27 >
     au < manifest ; exists ; 2008 ; Annals of Tropical Paediatrics: International Child Health Volume 28 ; 28 >
     au < manifest ; exists ; 2009 ; Annals of Tropical Paediatrics: International Child Health Volume 29 ; 29 >
-    au < ready ; exists ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 >
+    au < crawling ; exists ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 >
     au < testing ; exists ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 >
 
   }
@@ -189,8 +189,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 >
     au < doNotProcess ; doNotProcess ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 >
     au < doNotProcess ; doNotProcess ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 >
-    au < ready ; exists ; 2013 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 >
-    au < ready ; exists ; 2014 ; Applied Earth Science: IMM Transactions section B Volume 123 ; 123 >
+    au < crawling ; exists ; 2013 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 >
+    au < crawling ; exists ; 2014 ; Applied Earth Science: IMM Transactions section B Volume 123 ; 123 >
     au < expected ; exists ; 2015 ; Applied Earth Science: IMM Transactions section B Volume 124 ; 124 >
 
   }
@@ -288,7 +288,7 @@
     au < manifest ; exists ; 2007 ; The British Journal of Development Disabilities Volume 53 ; 53 >
     au < manifest ; exists ; 2008 ; The British Journal of Development Disabilities Volume 54 ; 54 >
     au < manifest ; exists ; 2009 ; The British Journal of Development Disabilities Volume 55 ; 55 >
-    au < ready ; exists ; 2010 ; The British Journal of Development Disabilities Volume 56 ; 56 >
+    au < crawling ; exists ; 2010 ; The British Journal of Development Disabilities Volume 56 ; 56 >
     au < doNotProcess ; doNotProcess ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
@@ -451,7 +451,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 >
     au < doNotProcess ; doNotProcess ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 >
-    au < ready ; exists ; 2013 ; Bulletin of the Council for British Research in the Levant Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Bulletin of the Council for British Research in the Levant Volume 8 ; 8 >
     au < crawling ; exists ; 2014 ; Bulletin of the Council for British Research in the Levant Volume 9 ; 9 >
     au < expected ; exists ; 2015 ; Bulletin of the Council for British Research in the Levant Volume 10 ; 10 >
 
@@ -504,7 +504,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
     au < doNotProcess ; doNotProcess ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
-    au < ready ; exists ; 2013 ; Byzantine and Modern Greek Studies Volume 37 ; 37 >
+    au < crawling ; exists ; 2013 ; Byzantine and Modern Greek Studies Volume 37 ; 37 >
     au < crawling ; exists ; 2014 ; Byzantine and Modern Greek Studies Volume 38 ; 38 >
     au < expected ; exists ; 2015 ; Byzantine and Modern Greek Studies Volume 39 ; 39 >
 
@@ -571,9 +571,9 @@
     au < manifest ; exists ; 2008 ; Canadian Metallurgical Quarterly Volume 47 ; 47 >
     au < manifest ; exists ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
     au < testing ; exists ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
-    au < ready ; exists ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
+    au < crawling ; exists ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
     au < doNotProcess ; doNotProcess ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 >
-    au < ready ; exists ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 >
+    au < crawling ; exists ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 >
     au < crawling ; exists ; 2014 ; Canadian Metallurgical Quarterly Volume 53 ; 53 >
     au < manifest ; exists ; 2015 ; Canadian Metallurgical Quarterly Volume 54 ; 54 >
 
@@ -637,10 +637,10 @@
     au < manifest ; exists ; 2007 ; The Cartographic Journal Volume 44 ; 44 >
     au < manifest ; exists ; 2008 ; The Cartographic Journal Volume 45 ; 45 >
     au < manifest ; exists ; 2009 ; The Cartographic Journal Volume 46 ; 46 >
-    au < ready ; exists ; 2010 ; The Cartographic Journal Volume 47 ; 47 >
-    au < ready ; exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 >
+    au < crawling ; exists ; 2010 ; The Cartographic Journal Volume 47 ; 47 >
+    au < crawling ; exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 >
     au < doNotProcess ; doNotProcess ; 2012 ; The Cartographic Journal Volume 49 ; 49 >
-    au < ready ; exists ; 2013 ; The Cartographic Journal Volume 50 ; 50 >
+    au < crawling ; exists ; 2013 ; The Cartographic Journal Volume 50 ; 50 >
     au < crawling ; exists ; 2014 ; The Cartographic Journal Volume 51 ; 51 >
     au < manifest ; exists ; 2015 ; The Cartographic Journal Volume 52 ; 52 >
 
@@ -667,7 +667,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Central Europe Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2011 ; Central Europe Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2012 ; Central Europe Volume 10 ; 10 >
-    au < ready ; exists ; 2013 ; Central Europe Volume 11 ; 11 >
+    au < crawling ; exists ; 2013 ; Central Europe Volume 11 ; 11 >
     au < crawling ; exists ; 2014 ; Central Europe Volume 12 ; 12 >
     au < expected ; exists ; 2015 ; Central Europe Volume 13 ; 13 >
 
@@ -687,10 +687,10 @@
     au < manifest ; exists ; 2007 ; The Chinese Historical Review Volume 14 ; 14 >
     au < manifest ; exists ; 2008 ; The Chinese Historical Review Volume 15 ; 15 >
     au < manifest ; exists ; 2009 ; The Chinese Historical Review Volume 16 ; 16 >
-    au < ready ; exists ; 2010 ; The Chinese Historical Review Volume 17 ; 17 >
+    au < crawling ; exists ; 2010 ; The Chinese Historical Review Volume 17 ; 17 >
     au < doNotProcess ; doNotProcess ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >
     au < doNotProcess ; doNotProcess ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >
-    au < ready ; exists ; 2013 ; The Chinese Historical Review Volume 20 ; 20 >
+    au < crawling ; exists ; 2013 ; The Chinese Historical Review Volume 20 ; 20 >
     au < crawling ; exists ; 2014 ; The Chinese Historical Review Volume 21 ; 21 >
     au < expected ; exists ; 2015 ; The Chinese Historical Review Volume 22 ; 22 >
     
@@ -718,10 +718,10 @@
     au < manifest ; exists ; 2007 ; Cochlear Implants International Volume 8 ; 8 >
     au < manifest ; exists ; 2008 ; Cochlear Implants International Volume 9 ; 9 >
     au < manifest ; exists ; 2009 ; Cochlear Implants International Volume 10 ; 10 >
-    au < ready ; exists ; 2010 ; Cochlear Implants International Volume 11 ; 11 >
-    au < ready ; exists ; 2011 ; Cochlear Implants International Volume 12 ; 12 >
+    au < crawling ; exists ; 2010 ; Cochlear Implants International Volume 11 ; 11 >
+    au < crawling ; exists ; 2011 ; Cochlear Implants International Volume 12 ; 12 >
     au < doNotProcess ; doNotProcess ; 2012 ; Cochlear Implants International Volume 13 ; 13 >
-    au < ready ; exists ; 2013 ; Cochlear Implants International Volume 14 ; 14 >
+    au < crawling ; exists ; 2013 ; Cochlear Implants International Volume 14 ; 14 >
     au < crawling ; exists ; 2014 ; Cochlear Implants International Volume 15 ; 15 >
     au < manifest ; exists ; 2015 ; Cochlear Implants International Volume 16 ; 16 >
 
@@ -748,7 +748,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Comparative American Studies Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2011 ; Comparative American Studies Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2012 ; Comparative American Studies Volume 10 ; 10 >
-    au < ready ; exists ; 2013 ; Comparative American Studies Volume 11 ; 11 >
+    au < crawling ; exists ; 2013 ; Comparative American Studies Volume 11 ; 11 >
     au < crawling ; exists ; 2014 ; Comparative American Studies Volume 12 ; 12 >
     au < expected ; exists ; 2015 ; Comparative American Studies Volume 13 ; 13 >
 
@@ -805,8 +805,8 @@
     au < manifest ; exists ; 2009 ; Conservation and Management of Archaeological Sites Volume 11 ; 11 >
     au < doNotProcess ; doNotProcess ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 >
     au < doNotProcess ; doNotProcess ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 >
-    au < ready ; exists ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 >
-    au < ready ; exists ; 2013 ; Conservation and Management of Archaeological Sites Volume 15 ; 15 >
+    au < crawling ; exists ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 >
+    au < crawling ; exists ; 2013 ; Conservation and Management of Archaeological Sites Volume 15 ; 15 >
     au < crawling ; exists ; 2014 ; Conservation and Management of Archaeological Sites Volume 16 ; 16 >
     au < expected ; exists ; 2015 ; Conservation and Management of Archaeological Sites Volume 17 ; 17 >
 
@@ -900,7 +900,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Costume Volume 44 ; 44 >
     au < doNotProcess ; doNotProcess ; 2011 ; Costume Volume 45 ; 45 >
     au < doNotProcess ; doNotProcess ; 2012 ; Costume Volume 46 ; 46 >
-    au < ready ; exists ; 2013 ; Costume Volume 47 ; 47 >
+    au < crawling ; exists ; 2013 ; Costume Volume 47 ; 47 >
     au < crawling ; exists ; 2014 ; Costume Volume 48 ; 48 >
     au < manifest ; exists ; 2015 ; Costume Volume 49 ; 49 >
 
@@ -934,10 +934,10 @@
     au < manifest ; exists ; 2007 ; Deafness & Education International Volume 9 ; 9 >
     au < manifest ; exists ; 2008 ; Deafness & Education International Volume 10 ; 10 >
     au < manifest ; exists ; 2009 ; Deafness & Education International Volume 11 ; 11 >
-    au < ready ; exists ; 2010 ; Deafness & Education International Volume 12 ; 12 >
-    au < ready ; exists ; 2011 ; Deafness & Education International Volume 13 ; 13 > 
+    au < crawling ; exists ; 2010 ; Deafness & Education International Volume 12 ; 12 >
+    au < crawling ; exists ; 2011 ; Deafness & Education International Volume 13 ; 13 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Deafness & Education International Volume 14 ; 14 >
-    au < ready ; exists ; 2013 ; Deafness & Education International Volume 15 ; 15 >
+    au < crawling ; exists ; 2013 ; Deafness & Education International Volume 15 ; 15 >
     au < crawling ; exists ; 2014 ; Deafness & Education International Volume 16 ; 16 >
     au < manifest ; exists ; 2015 ; Deafness & Education International Volume 17 ; 17 >
 
@@ -971,7 +971,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Dix-Neuf Volume 14 ; 14 >
     au < doNotProcess ; doNotProcess ; 2011 ; Dix-Neuf Volume 15 ; 15 >
     au < doNotProcess ; doNotProcess ; 2012 ; Dix-Neuf Volume 16 ; 16 >
-    au < ready ; exists ; 2013 ; Dix-Neuf Volume 17 ; 17 >
+    au < crawling ; exists ; 2013 ; Dix-Neuf Volume 17 ; 17 >
     au < crawling ; exists ; 2014 ; Dix-Neuf Volume 18 ; 18 >
     au < manifest ; exists ; 2015 ; Dix-Neuf Volume 19 ; 19 >
 
@@ -1026,7 +1026,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Dress Volume 36 ; 36 >
     au < doNotProcess ; doNotProcess ; 2011 ; Dress Volume 37 ; 37 >
     au < doNotProcess ; doNotProcess ; 2012 ; Dress Volume 38 ; 38 >
-    au < ready ; exists ; 2013 ; Dress Volume 39 ; 39 >
+    au < crawling ; exists ; 2013 ; Dress Volume 39 ; 39 >
     au < crawling ; exists ; 2014 ; Dress Volume 40 ; 40 >
     au < expected ; exists ; 2015 ; Dress Volume 41 ; 41 >
 
@@ -1047,7 +1047,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 >
     au < doNotProcess ; doNotProcess ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 >
-    au < ready ; exists ; 2013 ; Dutch Crossing: Journal of Low Countries Studies Volume 37 ; 37 >
+    au < crawling ; exists ; 2013 ; Dutch Crossing: Journal of Low Countries Studies Volume 37 ; 37 >
     au < crawling ; exists ; 2014 ; Dutch Crossing: Journal of Low Countries Studies Volume 38 ; 38 >
     au < manifest ; exists ; 2015 ; Dutch Crossing: Journal of Low Countries Studies Volume 39 ; 39 >
 
@@ -1083,7 +1083,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Early Medieval China Volume 2010 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2011 ; Early Medieval China Volume 2011 ; 2011 >
     au < doNotProcess ; doNotProcess ; 2012 ; Early Medieval China Volume 2012 ; 2012 >
-    au < ready ; exists ; 2013 ; Early Medieval China Volume 2013 ; 2013 >
+    au < crawling ; exists ; 2013 ; Early Medieval China Volume 2013 ; 2013 >
     au < testing ; exists ; 2014 ; Early Medieval China Volume 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Early Medieval China Volume 2015 ; 2015 >
 
@@ -1104,10 +1104,10 @@
     au < manifest ; exists ; 2007 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 2 ; 2 >
     au < manifest ; exists ; 2008 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 3 ; 3 >
     au < manifest ; exists ; 2009 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 4 ; 4 >
-    au < ready ; exists ; 2010 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 5 ; 5 >
-    au < ready ; exists ; 2011 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 6 ; 6 >
-    au < ready ; exists ; 2012 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 7 ; 7 >
-    au < ready ; exists ; 2013 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 8 ; 8 >
+    au < crawling ; exists ; 2010 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 5 ; 5 >
+    au < crawling ; exists ; 2011 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 6 ; 6 >
+    au < crawling ; exists ; 2012 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 7 ; 7 >
+    au < crawling ; exists ; 2013 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 8 ; 8 >
     au < crawling ; exists ; 2014 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 9 ; 9 >
     au < manifest ; exists ; 2015 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 10 ; 10 >
 
@@ -1127,9 +1127,9 @@
     au < manifest ; exists ; 2008 ; English Heritage Historical Review Volume 3 ; 3 >
     au < manifest ; exists ; 2009 ; English Heritage Historical Review Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2010 ; English Heritage Historical Review Volume 5 ; 5 > 
-    au < ready ; exists ; 2011 ; English Heritage Historical Review Volume 6 ; 6 >
-    au < ready ; exists ; 2012 ; English Heritage Historical Review Volume 7 ; 7 >
-    au < ready ; exists ; 2013 ; English Heritage Historical Review Volume 8 ; 8 >
+    au < crawling ; exists ; 2011 ; English Heritage Historical Review Volume 6 ; 6 >
+    au < crawling ; exists ; 2012 ; English Heritage Historical Review Volume 7 ; 7 >
+    au < crawling ; exists ; 2013 ; English Heritage Historical Review Volume 8 ; 8 >
     au < expected ; exists ; 2014 ; English Heritage Historical Review Volume 9 ; 9 >
    
   }
@@ -1162,7 +1162,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Environmental Archaeology Volume 15 ; 15 >
     au < doNotProcess ; doNotProcess ; 2011 ; Environmental Archaeology Volume 16 ; 16 >
     au < doNotProcess ; doNotProcess ; 2012 ; Environmental Archaeology Volume 17 ; 17 >
-    au < ready ; exists ; 2013 ; Environmental Archaeology Volume 18 ; 18 >
+    au < crawling ; exists ; 2013 ; Environmental Archaeology Volume 18 ; 18 >
     au < crawling ; exists ; 2014 ; Environmental Archaeology Volume 19 ; 19 >
     au < manifest ; exists ; 2015 ; Environmental Archaeology Volume 20 ; 20 >
 
@@ -1195,7 +1195,7 @@
     au < testing ; exists ; 2010 ; European Journal of Archaeology Volume 13 ; 13 >
     au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Archaeology Volume 14 ; 14 >
     au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Archaeology Volume 15 ; 15 >
-    au < ready ; exists ; 2013 ; European Journal of Archaeology Volume 16 ; 16 >
+    au < crawling ; exists ; 2013 ; European Journal of Archaeology Volume 16 ; 16 >
     au < crawling ; exists ; 2014 ; European Journal of Archaeology Volume 17 ; 17 >
     au < manifest ; exists ; 2015 ; European Journal of Archaeology Volume 18 ; 18 >
     
@@ -1255,7 +1255,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Exemplaria Volume 22 ; 22 >
     au < doNotProcess ; doNotProcess ; 2011 ; Exemplaria Volume 23 ; 23 >
     au < doNotProcess ; doNotProcess ; 2012 ; Exemplaria Volume 24 ; 24 >
-    au < ready ; exists ; 2013 ; Exemplaria Volume 25 ; 25 >
+    au < crawling ; exists ; 2013 ; Exemplaria Volume 25 ; 25 >
     au < crawling ; exists ; 2014 ; Exemplaria Volume 26 ; 26 >
     au < expected ; exists ; 2015 ; Exemplaria Volume 27 ; 27 >
 
@@ -1279,7 +1279,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Family & Community History Volume 13 ; 13 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Family & Community History Volume 14 ; 14 >
     au < doNotProcess ; doNotProcess ; 2012 ; Family & Community History Volume 15 ; 15 >
-    au < ready ; exists ; 2013 ; Family & Community History Volume 16 ; 16 >
+    au < crawling ; exists ; 2013 ; Family & Community History Volume 16 ; 16 >
     au < crawling ; exists ; 2014 ; Family & Community History Volume 17 ; 17 >
     au < expected ; exists ; 2015 ; Family & Community History Volume 18 ; 18 >
 
@@ -1347,7 +1347,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 >
     au < doNotProcess ; doNotProcess ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
-    au < ready ; exists ; 2013 ; Folk Life: Journal of Ethnological Studies Volume 51 ; 51 >
+    au < crawling ; exists ; 2013 ; Folk Life: Journal of Ethnological Studies Volume 51 ; 51 >
     au < crawling ; exists ; 2014 ; Folk Life: Journal of Ethnological Studies Volume 52 ; 52 >
     au < expected ; exists ; 2015 ; Folk Life: Journal of Ethnological Studies Volume 53 ; 53 >
 
@@ -1385,8 +1385,8 @@
     au < manifest ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 >
     au < manifest ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 >
     au < manifest ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 >
-    au < ready ; exists ; 2010 ; The Hardy Review Volume 12 ; 12 >
-    au < ready ; exists ; 2011 ; The Hardy Review Volume 13 ; 13 > 
+    au < crawling ; exists ; 2010 ; The Hardy Review Volume 12 ; 12 >
+    au < crawling ; exists ; 2011 ; The Hardy Review Volume 13 ; 13 > 
 
   }
 
@@ -1410,10 +1410,10 @@
     au < manifest ; exists ; 2007 ; Hematology Volume 12 ; 12 >
     au < manifest ; exists ; 2008 ; Hematology Volume 13 ; 13 >
     au < manifest ; exists ; 2009 ; Hematology Volume 14 ; 14 >
-    au < ready ; exists ; 2010 ; Hematology Volume 15 ; 15 >
-    au < ready ; exists ; 2011 ; Hematology Volume 16 ; 16 >
+    au < crawling ; exists ; 2010 ; Hematology Volume 15 ; 15 >
+    au < crawling ; exists ; 2011 ; Hematology Volume 16 ; 16 >
     au < doNotProcess ; doNotProcess ; 2012 ; Hematology Volume 17 ; 17 >
-    au < ready ; exists ; 2013 ; Hematology Volume 18 ; 18 >
+    au < crawling ; exists ; 2013 ; Hematology Volume 18 ; 18 >
     au < crawling ; exists ; 2014 ; Hematology Volume 19 ; 19 >
     au < manifest ; exists ; 2015 ; Hematology Volume 20 ; 20 >
 
@@ -1443,8 +1443,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Hispanic Research Journal Volume 11 ; 11 >
     au < doNotProcess ; doNotProcess ; 2011 ; Hispanic Research Journal Volume 12 ; 12 >
     au < doNotProcess ; doNotProcess ; 2012 ; Hispanic Research Journal Volume 13 ; 13 >
-    au < ready ; exists ; 2013 ; Hispanic Research Journal Volume 14 ; 14 >
-    au < ready ; exists ; 2014 ; Hispanic Research Journal Volume 15 ; 15 >
+    au < crawling ; exists ; 2013 ; Hispanic Research Journal Volume 14 ; 14 >
+    au < crawling ; exists ; 2014 ; Hispanic Research Journal Volume 15 ; 15 >
     au < manifest ; exists ; 2015 ; Hispanic Research Journal Volume 16 ; 16 >
 
   }
@@ -1463,8 +1463,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 >
-    au < ready ; exists ; 2013 ; The Historic Environment: Policy & Practice Volume 4 ; 4 >
-    au < ready ; exists ; 2014 ; The Historic Environment: Policy & Practice Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; The Historic Environment: Policy & Practice Volume 4 ; 4 >
+    au < crawling ; exists ; 2014 ; The Historic Environment: Policy & Practice Volume 5 ; 5 >
     au < expected ; exists ; 2015 ; The Historic Environment: Policy & Practice Volume 6 ; 6 >
 
   }
@@ -1488,11 +1488,11 @@
     au < manifest ; exists ; 2007 ; The Imaging Science Journal Volume 55 ; 55 >
     au < manifest ; exists ; 2008 ; The Imaging Science Journal Volume 56 ; 56 >
     au < manifest ; exists ; 2009 ; The Imaging Science Journal Volume 57 ; 57 >
-    au < ready ; exists ; 2010 ; The Imaging Science Journal Volume 58 ; 58 >
-    au < ready ; exists ; 2011 ; The Imaging Science Journal Volume 59 ; 59 > 
+    au < crawling ; exists ; 2010 ; The Imaging Science Journal Volume 58 ; 58 >
+    au < crawling ; exists ; 2011 ; The Imaging Science Journal Volume 59 ; 59 > 
     au < doNotProcess ; doNotProcess ; 2012 ; The Imaging Science Journal Volume 60 ; 60 >
-    au < ready ; exists ; 2013 ; The Imaging Science Journal Volume 61 ; 61 >
-    au < ready ; exists ; 2014 ; The Imaging Science Journal Volume 62 ; 62 >
+    au < crawling ; exists ; 2013 ; The Imaging Science Journal Volume 61 ; 61 >
+    au < crawling ; exists ; 2014 ; The Imaging Science Journal Volume 62 ; 62 >
     au < manifest ; exists ; 2015 ; The Imaging Science Journal Volume 63 ; 63 >
 
   }
@@ -1542,8 +1542,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Industrial Archaeology Review Volume 32 ; 32 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Industrial Archaeology Review Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2012 ; Industrial Archaeology Review Volume 34 ; 34 >
-    au < ready ; exists ; 2013 ; Industrial Archaeology Review Volume 35 ; 35 >
-    au < ready ; exists ; 2014 ; Industrial Archaeology Review Volume 36 ; 36 >
+    au < crawling ; exists ; 2013 ; Industrial Archaeology Review Volume 35 ; 35 >
+    au < crawling ; exists ; 2014 ; Industrial Archaeology Review Volume 36 ; 36 >
     au < expected ; exists ; 2015 ; Industrial Archaeology Review Volume 37 ; 37 >
 
   }
@@ -1594,11 +1594,11 @@
     au < manifest ; exists ; 2007 ; Interdisciplinary Science Reviews Volume 32 ; 32 >
     au < manifest ; exists ; 2008 ; Interdisciplinary Science Reviews Volume 33 ; 33 >
     au < manifest ; exists ; 2009 ; Interdisciplinary Science Reviews Volume 34 ; 34 >
-    au < ready ; exists ; 2010 ; Interdisciplinary Science Reviews Volume 35 ; 35 >
-    au < ready ; exists ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 >
+    au < crawling ; exists ; 2010 ; Interdisciplinary Science Reviews Volume 35 ; 35 >
+    au < crawling ; exists ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 >
     au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 >
-    au < ready ; exists ; 2013 ; Interdisciplinary Science Reviews Volume 38 ; 38 >
-    au < ready ; exists ; 2014 ; Interdisciplinary Science Reviews Volume 39 ; 39 >
+    au < crawling ; exists ; 2013 ; Interdisciplinary Science Reviews Volume 38 ; 38 >
+    au < crawling ; exists ; 2014 ; Interdisciplinary Science Reviews Volume 39 ; 39 >
     au < manifest ; exists ; 2015 ; Interdisciplinary Science Reviews Volume 40 ; 40 >
 
   }
@@ -1618,11 +1618,11 @@
     au < manifest ; exists ; 2007 ; International Heat Treatment and Surface Engineering Volume 1 ; 1 >
     au < manifest ; exists ; 2008 ; International Heat Treatment and Surface Engineering Volume 2 ; 2 >
     au < manifest ; exists ; 2009 ; International Heat Treatment and Surface Engineering Volume 3 ; 3 >
-    au < ready ; exists ; 2010 ; International Heat Treatment and Surface Engineering Volume 4 ; 4 >
-    au < ready ; exists ; 2011 ; International Heat Treatment and Surface Engineering Volume 5 ; 5 >
+    au < crawling ; exists ; 2010 ; International Heat Treatment and Surface Engineering Volume 4 ; 4 >
+    au < crawling ; exists ; 2011 ; International Heat Treatment and Surface Engineering Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Heat Treatment and Surface Engineering Volume 6 ; 6 >
-    au < ready ; exists ; 2013 ; International Heat Treatment and Surface Engineering Volume 7 ; 7 >
-    au < ready ; exists ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; International Heat Treatment and Surface Engineering Volume 7 ; 7 >
+    au < crawling ; exists ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 >
     au < expected ; exists ; 2015 ; International Heat Treatment and Surface Engineering Volume 9 ; 9 >
 
   }
@@ -1643,8 +1643,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 >
-    au < ready ; exists ; 2013 ; International Journal for the History of Engineering & Technology Volume 83 ; 83 >
-    au < ready ; exists ; 2014 ; International Journal for the History of Engineering & Technology Volume 84 ; 84 >
+    au < crawling ; exists ; 2013 ; International Journal for the History of Engineering & Technology Volume 83 ; 83 >
+    au < crawling ; exists ; 2014 ; International Journal for the History of Engineering & Technology Volume 84 ; 84 >
     au < manifest ; exists ; 2015 ; International Journal for the History of Engineering & Technology Volume 85 ; 85 >
 
   }
@@ -1668,11 +1668,11 @@
     au < manifest ; exists ; 2007 ; International Journal of Cast Metals Research Volume 20 ; 20 >
     au < manifest ; exists ; 2008 ; International Journal of Cast Metals Research Volume 21 ; 21 >
     au < manifest ; exists ; 2009 ; International Journal of Cast Metals Research Volume 22 ; 22 >
-    au < ready ; exists ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 >
-    au < ready ; exists ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 >
+    au < crawling ; exists ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 >
+    au < crawling ; exists ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 >
-    au < ready ; exists ; 2013 ; International Journal of Cast Metals Research Volume 26 ; 26 >
-    au < ready ; exists ; 2014 ; International Journal of Cast Metals Research Volume 27 ; 27 >
+    au < crawling ; exists ; 2013 ; International Journal of Cast Metals Research Volume 26 ; 26 >
+    au < crawling ; exists ; 2014 ; International Journal of Cast Metals Research Volume 27 ; 27 >
     au < manifest ; exists ; 2015 ; International Journal of Cast Metals Research Volume 28 ; 28 >
 
   }
@@ -1690,7 +1690,7 @@
     comment[continues] = 0969-7950
     
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 >
-    au < ready ; exists ; 2013 ; International Journal of Developmental Disabilities Volume 59 ; 59 >
+    au < crawling ; exists ; 2013 ; International Journal of Developmental Disabilities Volume 59 ; 59 >
     au < ready ; exists ; 2014 ; International Journal of Developmental Disabilities Volume 60 ; 60 >
     au < manifest ; exists ; 2015 ; International Journal of Developmental Disabilities Volume 61 ; 61 >
 
