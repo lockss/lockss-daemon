@@ -77,7 +77,7 @@
     au < finished ; frozen ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; 2013 >
-    au < manifest ; exists ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 >
+    au < ready ; exists ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 ; 2015 >
 
   }
@@ -156,7 +156,7 @@
     au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
-    au < manifest ; exists ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 >
+    au < ready ; exists ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 >
     au < manifest ; exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 ; 2015 >
 
   } 
@@ -179,7 +179,7 @@
     au < finished ; frozen ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; 2013 >
-    au < manifest ; exists ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 >
+    au < ready ; exists ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 >
     au < manifest ; exists ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; 2015 >
     
   }
@@ -195,7 +195,7 @@
     param[base_url] = http://www.ecrj.net/
     param[journal_id] = ecrj
 
-    au < manifest ; exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
+    au < ready ; exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
     au < manifest ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
 
   }
@@ -323,7 +323,7 @@
     au < finished ; frozen ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
     au < finished ; frozen ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
     au < crawling ; exists ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
-    au < manifest ; exists ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
   }
 
@@ -368,7 +368,7 @@
     au < finished ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 >
   }
 
@@ -420,7 +420,7 @@
     param[base_url] = http://www.jmahp.net/
     param[journal_id] = jmahp
 
-    au < manifest ; exists ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
+    au < ready ; exists ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; 2015 >
 
