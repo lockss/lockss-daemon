@@ -76,6 +76,17 @@ public class ASMscienceUrlConsumerFactory implements UrlConsumerFactory {
    * http://www.asmscience.org/docserver/fulltext/microbiolspec/2/6/AID-0022-2014.pdf
    *      ?expires=1427934811&id=id&accname=guest&checksum=0288048D2DD65A740231D10DDF18CE58
    *      
+   * also found an example where supplementary data redirects
+   * <base>/deliver/fulltext/microbiolspec/3/2/PLAS_0039_2014_supp.xlsx?
+   *   itemId=/content/suppdata/microbiolspec/10.1128/microbiolspec.PLAS-0039-2014-1
+   *   &mimeType=vnd.openxmlformats-officedocument.spreadsheetml.sheet
+   *   &isFastTrackArticle=
+   *   <base>/docserver/fulltext/microbiolspec/3/2/PLAS_0039_2014_supp.xlsx
+   *   ?expires=1428810292
+   *   &id=id
+   *   &accname=guest
+   *   &checksum=13930B0F0BDC404265CC8B6FB17F3FB3
+   *      
    * @since 1.67.5
    */
   public class ASMscienceUrlConsumer extends SimpleUrlConsumer {
@@ -86,8 +97,10 @@ public class ASMscienceUrlConsumerFactory implements UrlConsumerFactory {
     public static final String DOC_URL = "docserver/fulltext/";
     public static final String DOC_ARGS = "\\?expires=[^&]+&id=id&accname=[^&]+&checksum=.+$";
 
-    public static final String ORIG_FULLTEXT_STRING = "^" + ASM_BASE + DEL_URL + ".*\\.(xml|pdf|html)"; // it has arguments...
-    public static final String DEST_FULLTEXT_STRING = "^" + ASM_BASE + DOC_URL + ".*\\.(xml|pdf|html)" + DOC_ARGS;
+    // allow for <article>.xml|pdf|html OR <article>_supp.<anything>
+    // because we can't assume about supplement filetype
+    public static final String ORIG_FULLTEXT_STRING = "^" + ASM_BASE + DEL_URL + ".*(_supp\\.[^?]+|\\.(xml|pdf|html))"; // it has arguments...
+    public static final String DEST_FULLTEXT_STRING = "^" + ASM_BASE + DOC_URL + ".*(_supp\\.[^?]+|\\.(xml|pdf|html))" + DOC_ARGS;
 
     protected Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
     protected Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
