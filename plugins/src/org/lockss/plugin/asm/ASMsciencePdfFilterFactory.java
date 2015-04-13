@@ -83,7 +83,7 @@ public class ASMsciencePdfFilterFactory extends SimplePdfFilterFactory {
       worker.process(nextTokStream);      
       if (worker.getResult()) {
         List<PdfToken> pdfTokens = nextTokStream.getTokens();
-        log.debug3("removing from " + worker.getBegin() + " to " + worker.getEnd() + 1);        
+        log.debug3("removing from " + worker.getBegin() + " to " + (worker.getEnd() + 1));        
         pdfTokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
         nextTokStream.setTokens(pdfTokens);
         break; // out of the stream loop, go on to next page
@@ -95,7 +95,8 @@ public class ASMsciencePdfFilterFactory extends SimplePdfFilterFactory {
 
   /*
    * The state machine to remove the BT-ET pairs that are variable
-   * BT
+   * 
+BT
 1 0 0 1 230.42 34 Tm
 /F1 8 Tf
 0.86275 0.86275 0.86275 rg
@@ -126,6 +127,8 @@ ET
     public void state0() throws PdfException {
       if (isBeginTextObject()) {
         setBegin(getIndex());
+        log.debug3("setting beginindex");
+        log.debug3("token " + getIndex() + ": " + this.getOpcode() );
         setState(1);
       }
     } 
@@ -135,6 +138,7 @@ ET
     public void state1() throws PdfException {
       if (isShowTextFind(DOWNLOAD_PATTERN)) {
         log.debug3("state1 - we have a BT with the Downloaded by");
+        log.debug3("token " + getIndex() + ": " + this.getOpcode() );
         setState(2);
       }
       else if (isBeginTextObject()) { // not the initial BT-ET we were looking for
@@ -146,6 +150,7 @@ ET
     @Override
     public void state2() throws PdfException {
       log.debug3("state2 - now looking for the next BT");
+      log.debug3("token " + getIndex() + ": " + this.getOpcode() );
       if (isBeginTextObject()) {  
         setState(3);
       }      
@@ -155,6 +160,7 @@ ET
     @Override
     public void state3() throws PdfException {
       log.debug3("state3 - we have a 2nd BT, checking text");
+      log.debug3("token " + getIndex() + ": " + this.getOpcode() );
       if (isShowTextFind(ONDATE_PATTERN)) {
         setState(4);
       }
@@ -165,6 +171,7 @@ ET
     @Override
     public void state4() throws PdfException {
       log.debug3("state4 - we have all our text, looking for the next end");
+      log.debug3("token " + getIndex() + ": " + this.getOpcode() );
       if (isEndTextObject()) {  // we need to remove this BT-ET chunk
         log.debug3("in state4 at final ET...prepare to remove");
         setEnd(getIndex());
