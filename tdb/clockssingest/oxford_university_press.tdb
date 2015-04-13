@@ -99,6 +99,7 @@
     param[base_url] = http://asj.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
+    au < manifest ; exists ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ; >
     au < exists ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
     au < expected ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
 
