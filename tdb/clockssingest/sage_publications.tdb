@@ -468,7 +468,7 @@
       au < manifest ; exists ; 2011 ; Advances in Mechanical Engineering Volume 3 ; 3 ; >
       au < manifest ; exists ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
       au < manifest ; exists ; 2013 ; Advances in Mechanical Engineering Volume 5 ; 5 ; >
-      au < ready ; exists ; 2014 ; Advances in Mechanical Engineering Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2014 ; Advances in Mechanical Engineering Volume 6 ; 6 ; >
       au < manifest ; exists ; 2015 ; Advances in Mechanical Engineering Volume 7 ; 7 ; >
 
   }
@@ -6443,7 +6443,7 @@
       au < finished ; crawling ; 2011 ; Compensation & Benefits Review Volume 43 ; 43 ; >
       au < finished ; crawling ; 2012 ; Compensation & Benefits Review Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Compensation & Benefits Review Volume 45 ; 45 ; >
-      au < ready ; exists ; 2014 ; Compensation & Benefits Review Volume 46 ; 46 ; >
+      au < crawling ; exists ; 2014 ; Compensation & Benefits Review Volume 46 ; 46 ; >
       au < expected ; exists ; 2015 ; Compensation & Benefits Review Volume 47 ; 47 ; >
 
     }
@@ -6564,7 +6564,7 @@
       au < finished ; crawling ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 ; >
       au < finished ; frozen ; 2012 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 18 ; 18 ; >
-      au < ready ; exists ; 2014 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2014 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 19 ; 19 ; >
       au < manifest ; exists ; 2015 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 20 ; 20 ; >
 
     }
@@ -6616,7 +6616,7 @@
       au < finished ; crawling ; 2011 ; Concurrent Engineering Volume 19 ; 19 ; >
       au < finished ; crawling ; 2012 ; Concurrent Engineering Volume 20 ; 20 ; >
       au < crawling ; exists ; 2013 ; Concurrent Engineering Volume 21 ; 21 ; >
-      au < ready ; exists ; 2014 ; Concurrent Engineering Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2014 ; Concurrent Engineering Volume 22 ; 22 ; >
       au < manifest ; exists ; 2015 ; Concurrent Engineering Volume 23 ; 23 ; >
 
     }
@@ -6677,7 +6677,7 @@
       au < finished ; crawling ; 2011 ; Conflict Management and Peace Science Volume 28 ; 28 ; >
       au < finished ; crawling ; 2012 ; Conflict Management and Peace Science Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; Conflict Management and Peace Science Volume 30 ; 30 ; >
-      au < ready ; exists ; 2014 ; Conflict Management and Peace Science Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2014 ; Conflict Management and Peace Science Volume 31 ; 31 ; >
       au < manifest ; exists ; 2015 ; Conflict Management and Peace Science Volume 32 ; 32 ; >
 
     }
@@ -6730,7 +6730,7 @@
       au < finished ; frozen ; 2011 ; Contemporary Education Dialogue Volume 8 ; 8 ; >
       au < finished ; crawling ; 2012 ; Contemporary Education Dialogue Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; Contemporary Education Dialogue Volume 10 ; 10 ; >
-      au < ready ; exists ; 2014 ; Contemporary Education Dialogue Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2014 ; Contemporary Education Dialogue Volume 11 ; 11 ; >
       au < manifest ; exists ; 2015 ; Contemporary Education Dialogue Volume 12 ; 12 ; >
 
     }
@@ -6778,7 +6778,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://cme.sagepub.com/
 
-      au < ready ; exists ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 ; >
       au < expected ; exists ; 2015 ; Contemporary Review of the Middle East Volume 2 ; 2 ; >
 
     }
@@ -6807,7 +6807,7 @@
       au < finished ; frozen ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 ; >
       au < finished ; crawling ; 2012 ; Contemporary Sociology: A Journal of Reviews Volume 41 ; 41 ; >
       au < crawling ; exists ; 2013 ; Contemporary Sociology: A Journal of Reviews Volume 42 ; 42 ; >
-      au < ready ; exists ; 2014 ; Contemporary Sociology: A Journal of Reviews Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2014 ; Contemporary Sociology: A Journal of Reviews Volume 43 ; 43 ; >
       au < manifest ; exists ; 2015 ; Contemporary Sociology: A Journal of Reviews Volume 44 ; 44 ; >
 
     }
@@ -6840,7 +6840,7 @@
       au < finished ; crawling ; 2011 ; Contexts Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Contexts Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Contexts Volume 12 ; 12 ; >
-      au < ready ; exists ; 2014 ; Contexts Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2014 ; Contexts Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Contexts Volume 14 ; 14 ; >
 
     }
@@ -6918,7 +6918,7 @@
       au < finished ; crawling ; 2011 ; Contributions to Indian Sociology Volume 45 ; 45 ; >
       au < finished ; frozen ; 2012 ; Contributions to Indian Sociology Volume 46 ; 46 ; >
       au < crawling ; exists ; 2013 ; Contributions to Indian Sociology Volume 47 ; 47 ; >
-      au < ready ; exists ; 2014 ; Contributions to Indian Sociology Volume 48 ; 48 ; >
+      au < crawling ; exists ; 2014 ; Contributions to Indian Sociology Volume 48 ; 48 ; >
       au < manifest ; exists ; 2015 ; Contributions to Indian Sociology Volume 49 ; 49 ; >
 
     }
@@ -6968,7 +6968,7 @@
       au < finished ; crawling ; 2011 ; Convergence: The International Journal of Research into New Media Technologies Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Convergence: The International Journal of Research into New Media Technologies Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Convergence: The International Journal of Research into New Media Technologies Volume 19 ; 19 ; >
-      au < ready ; exists ; 2014 ; Convergence: The International Journal of Research into New Media Technologies Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2014 ; Convergence: The International Journal of Research into New Media Technologies Volume 20 ; 20 ; >
       au < manifest ; exists ; 2015 ; Convergence: The International Journal of Research into New Media Technologies Volume 21 ; 21 ; >
 
     }
@@ -7047,7 +7047,7 @@
       au < finished ; crawling ; 2011 ; Cooperation and Conflict Volume 46 ; 46 ; >
       au < finished ; frozen ; 2012 ; Cooperation and Conflict Volume 47 ; 47 ; >
       au < crawling ; exists ; 2013 ; Cooperation and Conflict Volume 48 ; 48 ; >
-      au < ready ; exists ; 2014 ; Cooperation and Conflict Volume 49 ; 49 ; >
+      au < crawling ; exists ; 2014 ; Cooperation and Conflict Volume 49 ; 49 ; >
       au < manifest ; exists ; 2015 ; Cooperation and Conflict Volume 50 ; 50 ; >
 
     }
@@ -7132,7 +7132,7 @@
       au < finished ; frozen ; 2011 ; Cornell Hospitality Quarterly Volume 52 ; 52 ; >
       au < finished ; frozen ; 2012 ; Cornell Hospitality Quarterly Volume 53 ; 53 ; >
       au < crawling ; exists ; 2013 ; Cornell Hospitality Quarterly Volume 54 ; 54 ; >
-      au < ready ; exists ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; >
+      au < crawling ; exists ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; >
       au < manifest ; exists ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; >
 
     }
@@ -7157,7 +7157,7 @@
       au < finished ; crawling ; 2011 ; Counseling Outcome Research and Evaluation Volume 2 ; 2 ; >
       au < zapped ; finished ; 2012 ; Counseling Outcome Research and Evaluation Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Counseling Outcome Research and Evaluation Volume 4 ; 4 ; >
-      au < ready ; exists ; 2014 ; Counseling Outcome Research and Evaluation Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2014 ; Counseling Outcome Research and Evaluation Volume 5 ; 5 ; >
       au < expected ; exists ; 2015 ; Counseling Outcome Research and Evaluation Volume 6 ; 6 ; >
 
     }
@@ -7229,7 +7229,7 @@
       au < finished ; crawling ; 2011 ; The Counseling Psychologist Volume 39 ; 39 ; >
       au < finished ; crawling ; 2012 ; The Counseling Psychologist Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; The Counseling Psychologist Volume 41 ; 41 ; >
-      au < ready ; exists ; 2014 ; The Counseling Psychologist Volume 42 ; 42 ; >
+      au < crawling ; exists ; 2014 ; The Counseling Psychologist Volume 42 ; 42 ; >
       au < manifest ; exists ; 2015 ; The Counseling Psychologist Volume 43 ; 43 ; >
 
     }
@@ -7319,7 +7319,7 @@
       au < finished ; frozen ; 2011 ; Crime & Delinquency Volume 57 ; 57 ; >
       au < finished ; crawling ; 2012 ; Crime & Delinquency Volume 58 ; 58 ; >
       au < crawling ; exists ; 2013 ; Crime & Delinquency Volume 59 ; 59 ; >
-      au < ready ; exists ; 2014 ; Crime & Delinquency Volume 60 ; 60 ; >
+      au < crawling ; exists ; 2014 ; Crime & Delinquency Volume 60 ; 60 ; >
       au < manifest ; exists ; 2015 ; Crime & Delinquency Volume 61 ; 61 ; >
 
     }
@@ -7359,7 +7359,7 @@
       au < finished ; crawling ; 2011 ; Crime, Media, Culture Volume 7 ; 7 ; >
       au < finished ; frozen ; 2012 ; Crime, Media, Culture Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Crime, Media, Culture Volume 9 ; 9 ; >
-      au < ready ; exists ; 2014 ; Crime, Media, Culture Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2014 ; Crime, Media, Culture Volume 10 ; 10 ; >
       au < manifest ; exists ; 2015 ; Crime, Media, Culture Volume 11 ; 11 ; >
 
     }
@@ -7430,7 +7430,7 @@
       au < finished ; frozen ; 2011 ; Criminal Justice and Behavior Volume 38 ; 38 ; >
       au < finished ; frozen ; 2012 ; Criminal Justice and Behavior Volume 39 ; 39 ; >
       au < crawling ; exists ; 2013 ; Criminal Justice and Behavior Volume 40 ; 40 ; >
-      au < ready ; exists ; 2014 ; Criminal Justice and Behavior Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2014 ; Criminal Justice and Behavior Volume 41 ; 41 ; >
       au < manifest ; exists ; 2015 ; Criminal Justice and Behavior Volume 42 ; 42 ; >
 
     }
@@ -7485,7 +7485,7 @@
       au < finished ; crawling ; 2011 ; Criminal Justice Policy Review Volume 22 ; 22 ; >
       au < zapped ; finished ; 2012 ; Criminal Justice Policy Review Volume 23 ; 23 ; >
       au < crawling ; exists ; 2013 ; Criminal Justice Policy Review Volume 24 ; 24 ; >
-      au < ready ; exists ; 2014 ; Criminal Justice Policy Review Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2014 ; Criminal Justice Policy Review Volume 25 ; 25 ; >
       au < manifest ; exists ; 2015 ; Criminal Justice Policy Review Volume 26 ; 26 ; >
 
     }
@@ -7554,7 +7554,7 @@
       au < finished ; crawling ; 2011 ; Criminal Justice Review Volume 36 ; 36 ; >
       au < finished ; crawling ; 2012 ; Criminal Justice Review Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013 ; Criminal Justice Review Volume 38 ; 38 ; >
-      au < ready ; exists ; 2014 ; Criminal Justice Review Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2014 ; Criminal Justice Review Volume 39 ; 39 ; >
       au < manifest ; exists ; 2015 ; Criminal Justice Review Volume 40 ; 40 ; >
 
     }
@@ -7598,7 +7598,7 @@
       au < finished ; crawling ; 2011 ; Criminology and Criminal Justice Volume 11 ; 11 ; >
       au < finished ; crawling ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Criminology and Criminal Justice Volume 13 ; 13 ; >
-      au < ready ; exists ; 2014 ; Criminology and Criminal Justice Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2014 ; Criminology and Criminal Justice Volume 14 ; 14 ; >
       au < manifest ; exists ; 2015 ; Criminology and Criminal Justice Volume 15 ; 15 ; >
 
     }
@@ -7696,7 +7696,7 @@
       au < finished ; crawling ; 2011 ; Critical Social Policy Volume 31 ; 31 ; >
       au < finished ; crawling ; 2012 ; Critical Social Policy Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; Critical Social Policy Volume 33 ; 33 ; >
-      au < ready ; exists ; 2014 ; Critical Social Policy Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2014 ; Critical Social Policy Volume 34 ; 34 ; >
       au < manifest ; exists ; 2015 ; Critical Social Policy Volume 35 ; 35 ; >
 
     }
@@ -7766,7 +7766,7 @@
       au < finished ; crawling ; 2011 ; Critical Sociology Volume 37 ; 37 ; >
       au < finished ; crawling ; 2012 ; Critical Sociology Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; Critical Sociology Volume 39 ; 39 ; >
-      au < ready ; exists ; 2014 ; Critical Sociology Volume 40 ; 40 ; >
+      au < crawling ; exists ; 2014 ; Critical Sociology Volume 40 ; 40 ; >
       au < manifest ; exists ; 2015 ; Critical Sociology Volume 41 ; 41 ; >
 
     }
@@ -7830,7 +7830,7 @@
       au < finished ; crawling ; 2011 ; Critique of Anthropology Volume 31 ; 31 ; >
       au < finished ; crawling ; 2012 ; Critique of Anthropology Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; Critique of Anthropology Volume 33 ; 33 ; >
-      au < ready ; exists ; 2014 ; Critique of Anthropology Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2014 ; Critique of Anthropology Volume 34 ; 34 ; >
       au < manifest ; exists ; 2015 ; Critique of Anthropology Volume 35 ; 35 ; >
 
     }
@@ -7908,7 +7908,7 @@
       au < finished ; crawling ; 2011 ; Cross-Cultural Research Volume 45 ; 45 ; >
       au < finished ; crawling ; 2012 ; Cross-Cultural Research Volume 46 ; 46 ; >
       au < crawling ; exists ; 2013 ; Cross-Cultural Research Volume 47 ; 47 ; >
-      au < ready ; exists ; 2014 ; Cross-Cultural Research Volume 48 ; 48 ; >
+      au < crawling ; exists ; 2014 ; Cross-Cultural Research Volume 48 ; 48 ; >
       au < manifest ; exists ; 2015 ; Cross-Cultural Research Volume 49 ; 49 ; >
 
     }
@@ -7964,7 +7964,7 @@
       au < finished ; crawling ; 2011 ; Cultural Dynamics Volume 23 ; 23 ; >
       au < zapped ; finished ; 2012 ; Cultural Dynamics Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Cultural Dynamics Volume 25 ; 25 ; >
-      au < ready ; exists ; 2014 ; Cultural Dynamics Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2014 ; Cultural Dynamics Volume 26 ; 26 ; >
       au < manifest ; exists ; 2015 ; Cultural Dynamics Volume 27 ; 27 ; >
 
     }
@@ -8015,7 +8015,7 @@
       au < finished ; crawling ; 2011 ; Cultural Geographies Volume 18 ; 18 ; >
       au < finished ; frozen ; 2012 ; Cultural Geographies Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Cultural Geographies Volume 20 ; 20 ; >
-      au < ready ; exists ; 2014 ; Cultural Geographies Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2014 ; Cultural Geographies Volume 21 ; 21 ; >
       au < manifest ; exists ; 2015 ; Cultural Geographies Volume 22 ; 22 ; >
 
     }
@@ -8053,7 +8053,7 @@
       au < finished ; crawling ; 2011 ; Cultural Sociology Volume 5 ; 5 ; >
       au < finished ; frozen ; 2012 ; Cultural Sociology Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; Cultural Sociology Volume 7 ; 7 ; >
-      au < ready ; exists ; 2014 ; Cultural Sociology Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2014 ; Cultural Sociology Volume 8 ; 8 ; >
       au < manifest ; exists ; 2015 ; Cultural Sociology Volume 9 ; 9 ; >
 
     }
@@ -8097,7 +8097,7 @@
       au < zapped ; finished ; 2011 ; Cultural Studies <=\> Critical Methodologies Volume 11 ; 11 ; >
       au < finished ; crawling ; 2012 ; Cultural Studies <=\> Critical Methodologies Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Cultural Studies <=\> Critical Methodologies Volume 13 ; 13 ; >
-      au < ready ; exists ; 2014 ; Cultural Studies <=\> Critical Methodologies Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2014 ; Cultural Studies <=\> Critical Methodologies Volume 14 ; 14 ; >
       au < manifest ; exists ; 2015 ; Cultural Studies <=\> Critical Methodologies Volume 15 ; 15 ; >
 
     }
@@ -8147,7 +8147,7 @@
       au < finished ; crawling ; 2011 ; Culture & Psychology Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Culture & Psychology Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Culture & Psychology Volume 19 ; 19 ; >
-      au < ready ; exists ; 2014 ; Culture & Psychology Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2014 ; Culture & Psychology Volume 20 ; 20 ; >
       au < manifest ; exists ; 2015 ; Culture & Psychology Volume 21 ; 21 ; >
 
     }
@@ -8205,7 +8205,7 @@
       au < finished ; crawling ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 ; >
       au < finished ; crawling ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Current Directions in Psychological Science Volume 22 ; 22 ; >
-      au < ready ; exists ; 2014 ; Current Directions in Psychological Science Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2014 ; Current Directions in Psychological Science Volume 23 ; 23 ; >
       au < manifest ; exists ; 2015 ; Current Directions in Psychological Science Volume 24 ; 24 ; >
 
     }
@@ -8297,7 +8297,7 @@
       au < finished ; crawling ; 2011 ; Current Sociology Volume 59 ; 59 ; >
       au < finished ; crawling ; 2012 ; Current Sociology Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Current Sociology Volume 61 ; 61 ; >
-      au < ready ; exists ; 2014 ; Current Sociology Volume 62 ; 62 ; >
+      au < crawling ; exists ; 2014 ; Current Sociology Volume 62 ; 62 ; >
       au < manifest ; exists ; 2015 ; Current Sociology Volume 63 ; 63 ; >
 
     }
@@ -8341,7 +8341,7 @@
       au < finished ; frozen ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012-2013 ; Currents in Biblical Research Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013-2014 ; Currents in Biblical Research Volume 12 ; 12 ; >
-      au < ready ; exists ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; >
 
     }
 
@@ -8383,7 +8383,7 @@
       au < finished ; crawling ; 2011 ; Dementia Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012 ; Dementia Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Dementia Volume 12 ; 12 ; >
-      au < ready ; exists ; 2014 ; Dementia Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2014 ; Dementia Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Dementia Volume 14 ; 14 ; >
 
     }
@@ -8424,7 +8424,7 @@
       au < zapped ; finished ; 2011 ; Diabetes and Vascular Disease Research Volume 8 ; 8 ; >
       au < finished ; crawling ; 2012 ; Diabetes and Vascular Disease Research Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; Diabetes and Vascular Disease Research Volume 10 ; 10 ; >
-      au < ready ; exists ; 2014 ; Diabetes and Vascular Disease Research Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2014 ; Diabetes and Vascular Disease Research Volume 11 ; 11 ; >
       au < manifest ; exists ; 2015 ; Diabetes and Vascular Disease Research Volume 12 ; 12 ; >
 
     }
@@ -8490,7 +8490,7 @@
       au < finished ; frozen ; 2011 ; The Diabetes Educator Volume 37 ; 37 ; >
       au < finished ; frozen ; 2012 ; The Diabetes Educator Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; The Diabetes Educator Volume 39 ; 39 ; >
-      au < ready ; exists ; 2014 ; The Diabetes Educator Volume 40 ; 40 ; >
+      au < crawling ; exists ; 2014 ; The Diabetes Educator Volume 40 ; 40 ; >
       au < manifest ; exists ; 2015 ; The Diabetes Educator Volume 41 ; 41 ; >
 
     }
@@ -8514,7 +8514,7 @@
       au < finished ; frozen ; 2011 ; Dialogues in Human Geography Volume 1 ; 1 ; >
       au < finished ; crawling ; 2012 ; Dialogues in Human Geography Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Dialogues in Human Geography Volume 3 ; 3 ; >
-      au < ready ; exists ; 2014 ; Dialogues in Human Geography Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2014 ; Dialogues in Human Geography Volume 4 ; 4 ; >
       au < manifest ; exists ; 2015 ; Dialogues in Human Geography Volume 5 ; 5 ; >
 
     }
@@ -8655,7 +8655,7 @@
       au < finished ; crawling ; 2011 ; Discourse & Communication Volume 5 ; 5 ; >
       au < finished ; frozen ; 2012 ; Discourse & Communication Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; Discourse & Communication Volume 7 ; 7 ; >
-      au < ready ; exists ; 2014 ; Discourse & Communication Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2014 ; Discourse & Communication Volume 8 ; 8 ; >
       au < manifest ; exists ; 2015 ; Discourse & Communication Volume 9 ; 9 ; >
 
     }
@@ -8710,7 +8710,7 @@
       au < finished ; frozen ; 2011 ; Discourse & Society Volume 22 ; 22 ; >
       au < finished ; crawling ; 2012 ; Discourse & Society Volume 23 ; 23 ; >
       au < crawling ; exists ; 2013 ; Discourse & Society Volume 24 ; 24 ; >
-      au < ready ; exists ; 2014 ; Discourse & Society Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2014 ; Discourse & Society Volume 25 ; 25 ; >
       au < manifest ; exists ; 2015 ; Discourse & Society Volume 26 ; 26 ; >
 
     }
@@ -8756,7 +8756,7 @@
       au < finished ; frozen ; 2011 ; Discourse Studies Volume 13 ; 13 ; >
       au < finished ; frozen ; 2012 ; Discourse Studies Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; Discourse Studies Volume 15 ; 15 ; >
-      au < ready ; exists ; 2014 ; Discourse Studies Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2014 ; Discourse Studies Volume 16 ; 16 ; >
       au < manifest ; exists ; 2015 ; Discourse Studies Volume 17 ; 17 ; >
 
     }
@@ -8843,7 +8843,7 @@
         comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
 
       au < crawling ; exists ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 ; >
-      au < ready ; exists ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 ; >
+      au < crawling ; exists ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 ; >
       au < manifest ; exists ; 2015 ; Therapeutic Innovation & Regulatory Science Volume 49 ; 49 ; >
 
     }
@@ -8870,7 +8870,7 @@
       au < exists ; exists ; 2011 ; E-Learning and Digital Media Volume 8 ; 8 ; >
       au < exists ; exists ; 2012 ; E-Learning and Digital Media Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; E-Learning and Digital Media Volume 10 ; 10 ; >
-      au < ready ; exists ; 2014 ; E-Learning and Digital Media Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2014 ; E-Learning and Digital Media Volume 11 ; 11 ; >
       au < manifest ; exists ; 2015 ; E-Learning and Digital Media Volume 12 ; 12 ; >
 
   }
@@ -8927,7 +8927,7 @@
       au < finished ; crawling ; 2011 ; East European Politics & Societies Volume 25 ; 25 ; >
       au < finished ; frozen ; 2012 ; East European Politics & Societies Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; East European Politics & Societies Volume 27 ; 27 ; >
-      au < ready ; exists ; 2014 ; East European Politics & Societies Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2014 ; East European Politics & Societies Volume 28 ; 28 ; >
       au < manifest ; exists ; 2015 ; East European Politics & Societies Volume 29 ; 29 ; >
 
     }
@@ -8992,7 +8992,7 @@
       au < finished ; frozen ; 2011 ; Economic and Industrial Democracy Volume 32 ; 32 ; >
       au < finished ; frozen ; 2012 ; Economic and Industrial Democracy Volume 33 ; 33 ; >
       au < crawling ; exists ; 2013 ; Economic and Industrial Democracy Volume 34 ; 34 ; >
-      au < ready ; exists ; 2014 ; Economic and Industrial Democracy Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2014 ; Economic and Industrial Democracy Volume 35 ; 35 ; >
       au < manifest ; exists ; 2015 ; Economic and Industrial Democracy Volume 36 ; 36 ; >
 
     }
@@ -9038,7 +9038,7 @@
         au < crawling ; exists ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
         au < crawling ; exists ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
         au < crawling ; exists ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
-        au < ready ; exists ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
+        au < crawling ; exists ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
         au < manifest ; exists ; 2015 ; The Economic and Labour Relations Review Volume 26 ; 26 >
 
       }
@@ -9096,7 +9096,7 @@
       au < finished ; crawling ; 2011 ; Economic Development Quarterly Volume 25 ; 25 ; >
       au < finished ; crawling ; 2012 ; Economic Development Quarterly Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; Economic Development Quarterly Volume 27 ; 27 ; >
-      au < ready ; exists ; 2014 ; Economic Development Quarterly Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2014 ; Economic Development Quarterly Volume 28 ; 28 ; >
       au < manifest ; exists ; 2015 ; Economic Development Quarterly Volume 29 ; 29 ; >
 
     }
@@ -9172,7 +9172,7 @@
       au < finished ; frozen ; 2011 ; Education and Urban Society Volume 43 ; 43 ; >
       au < finished ; crawling ; 2012 ; Education and Urban Society Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Education and Urban Society Volume 45 ; 45 ; >
-      au < ready ; exists ; 2014 ; Education and Urban Society Volume 46 ; 46 ; >
+      au < crawling ; exists ; 2014 ; Education and Urban Society Volume 46 ; 46 ; >
       au < manifest ; exists ; 2015 ; Education and Urban Society Volume 47 ; 47 ; >
 
     }
@@ -9211,7 +9211,7 @@
       au < finished ; crawling ; 2011 ; Education, Citizenship and Social Justice Volume 6 ; 6 ; >
       au < finished ; frozen ; 2012 ; Education, Citizenship and Social Justice Volume 7 ; 7 ; >
       au < crawling ; exists ; 2013 ; Education, Citizenship and Social Justice Volume 8 ; 8 ; >
-      au < ready ; exists ; 2014 ; Education, Citizenship and Social Justice Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2014 ; Education, Citizenship and Social Justice Volume 9 ; 9 ; >
       au < manifest ; exists ; 2015 ; Education, Citizenship and Social Justice Volume 10 ; 10 ; >
 
     }
@@ -9291,7 +9291,7 @@
       au < finished ; crawling ; 2011 ; Educational Administration Quarterly Volume 47 ; 47 ; >
       au < finished ; frozen ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013 ; Educational Administration Quarterly Volume 49 ; 49 ; >
-      au < ready ; exists ; 2014 ; Educational Administration Quarterly Volume 50 ; 50 ; >
+      au < crawling ; exists ; 2014 ; Educational Administration Quarterly Volume 50 ; 50 ; >
       au < manifest ; exists ; 2015 ; Educational Administration Quarterly Volume 51 ; 51 ; >
 
     }
@@ -9395,7 +9395,7 @@
       au < finished ; crawling ; 2011 ; Educational and Psychological Measurement Volume 71 ; 71 ; >
       au < finished ; frozen ; 2012 ; Educational and Psychological Measurement Volume 72 ; 72 ; >
       au < crawling ; exists ; 2013 ; Educational and Psychological Measurement Volume 73 ; 73 ; >
-      au < ready ; exists ; 2014 ; Educational and Psychological Measurement Volume 74 ; 74 ; >
+      au < crawling ; exists ; 2014 ; Educational and Psychological Measurement Volume 74 ; 74 ; >
       au < manifest ; exists ; 2015 ; Educational and Psychological Measurement Volume 75 ; 75 ; >
 
     }
@@ -9461,7 +9461,7 @@
       au < finished ; frozen ; 2011 ; Educational Evaluation and Policy Analysis Volume 33 ; 33 ; >
       au < finished ; frozen ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013 ; Educational Evaluation and Policy Analysis Volume 35 ; 35 ; >
-      au < ready ; exists ; 2014 ; Educational Evaluation and Policy Analysis Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2014 ; Educational Evaluation and Policy Analysis Volume 36 ; 36 ; >
       au < manifest ; exists ; 2015 ; Educational Evaluation and Policy Analysis Volume 37 ; 37 ; >
 
     }
