@@ -74,8 +74,18 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
    * 
    * @since 1.67
    */
-  private static final Logger defaultLogger = Logger.getLogger(PdfTokenStreamStateMachine.class);
+  private static final Logger DEFAULT_LOGGER = Logger.getLogger(PdfTokenStreamStateMachine.class);
 
+  /**
+   * <p>
+   * A logger for this instance (set to {@link #DEFAULT_LOGGER} if the subclass
+   * does not provide one).
+   * </p>
+   * 
+   * @since 1.67.6
+   */
+  private Logger log;
+  
   /**
    * <p>
    * A result flag (initially false).
@@ -114,16 +124,6 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
   
   /**
    * <p>
-   * A logger for this instance (set to {@link #defaultLogger} if the subclass
-   * does not provide one).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected Logger logger;
-  
-  /**
-   * <p>
    * Creates a new state machine in the default direction with the default
    * logger.
    * </p>
@@ -131,7 +131,7 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
    * @since 1.67
    */
   public PdfTokenStreamStateMachine() {
-    this(defaultLogger);
+    this(DEFAULT_LOGGER);
   }
 
   /**
@@ -144,7 +144,7 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
    * @since 1.67
    */
   public PdfTokenStreamStateMachine(Direction direction) {
-    this(direction, defaultLogger);
+    this(direction, DEFAULT_LOGGER);
   }
 
   /**
@@ -152,13 +152,13 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
    * Creates a new state machine in the default direction with the given logger.
    * </p>
    * 
-   * @param logger
+   * @param log
    *          A logger.
    * @since 1.67
    */
-  public PdfTokenStreamStateMachine(Logger logger) {
+  public PdfTokenStreamStateMachine(Logger log) {
     super();
-    this.logger = logger;
+    this.log = log;
   }
   
   /**
@@ -168,14 +168,14 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
    * 
    * @param direction
    *          A direction.
-   * @param logger
+   * @param log
    *          A logger.
    * @since 1.67
    */
   public PdfTokenStreamStateMachine(Direction direction,
-                                    Logger logger) {
+                                    Logger log) {
     super(direction);
-    this.logger = logger;
+    this.log = log;
   }
 
   @Override
@@ -289,22 +289,22 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
 
   @Override
   public void operatorCallback() throws PdfException {
-    if (logger != null && logger.isDebug3()) {
-      logger.debug3("initial: " + state);
-      logger.debug3("index: " + getIndex());
-      logger.debug3("operator: " + getOpcode());
+    if (log != null && log.isDebug3()) {
+      log.debug3("initial: " + state);
+      log.debug3("index: " + getIndex());
+      log.debug3("operator: " + getOpcode());
     }
     stateDispatch();
-    if (logger != null && logger.isDebug3()) {
-      logger.debug3("final: " + state);
-      logger.debug3("result: " + result);
+    if (log != null && log.isDebug3()) {
+      log.debug3("final: " + state);
+      log.debug3("result: " + result);
     }
   }
   
   @Override
   public void process(List<PdfToken> tokens, PdfTokenFactory factory) throws PdfException {
-    if (logger == defaultLogger) {
-      logger.debug3("actual class: " + getClass().getName());
+    if (log == DEFAULT_LOGGER) {
+      log.debug3("actual class: " + getClass().getName());
     }
     super.process(tokens, factory);
   }
