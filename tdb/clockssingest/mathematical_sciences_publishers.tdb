@@ -197,7 +197,7 @@
      au < manifest ; exists ; 2010 ; Journal of Software for Algebra and Geometry Volume 2 ; 2 ; 2010 >
      au < manifest ; exists ; 2011 ; Journal of Software for Algebra and Geometry Volume 3 ; 3 ; 2011 >
      au < manifest ; exists ; 2012 ; Journal of Software for Algebra and Geometry Volume 4 ; 4 ; 2012 >
-     au < manifest ; exists ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 >
+     au < testing ; exists ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 >
      au < manifest ; exists ; 2014 ; Journal of Software for Algebra and Geometry Volume 6 ; 6 ; 2014 >
      au < expected ; exists ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 >
 
@@ -213,7 +213,7 @@
     
       param[journal_id] = memocs
  
-     au < manifest ; exists ; 2013 ; Mathematics and Mechanics of Computer Systems Volume 1 ; 1 ; 2013 >
+     au < testing ; exists ; 2013 ; Mathematics and Mechanics of Computer Systems Volume 1 ; 1 ; 2013 >
      au < manifest ; exists ; 2014 ; Mathematics and Mechanics of Computer Systems Volume 2 ; 2 ; 2014 >
      au < expected ; exists ; 2015 ; Mathematics and Mechanics of Computer Systems Volume 3 ; 3 ; 2015 >
 
