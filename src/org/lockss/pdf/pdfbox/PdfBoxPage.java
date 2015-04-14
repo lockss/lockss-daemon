@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +60,7 @@ public class PdfBoxPage implements PdfPage {
    * </p>
    * @since 1.56
    */
-  private static final Logger logger = Logger.getLogger(PdfBoxPage.class);
+  private static final Logger log = Logger.getLogger(PdfBoxPage.class);
   
   /**
    * <p>
@@ -78,7 +78,8 @@ public class PdfBoxPage implements PdfPage {
    * @since 1.61
    */
   protected static PDXObject getPDXObjectByName(PDResources pdResources,
-                                                String name) throws PdfException {
+                                                String name)
+      throws PdfException {
     /*
      * IMPLEMENTATION NOTE
      * 
@@ -270,24 +271,23 @@ public class PdfBoxPage implements PdfPage {
                 ret.add(xObject.getCOSStream().getUnfilteredStream());
               }
               catch (IOException ioe) {
-                logger.debug2("recursivelyFindByteStreams: Error retrieving a byte stream", ioe);
+                log.debug2("recursivelyFindByteStreams: Error retrieving a byte stream", ioe);
               }
             }
             else {
               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
-              PDResources referencedResources = pdxObjectForm.getResources();
-              if (referencedResources == null) {
-                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm, pdResources);
-                recursivelyFindByteStreams(referencedTokenStream, pdResources, ret);
-              }
-              else {
-                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
-                recursivelyFindByteStreams(referencedTokenStream, referencedResources, ret);
-              }
+              PdfBoxXObjectTokenStream referencedTokenStream =
+                  new PdfBoxXObjectTokenStream(PdfBoxPage.this,
+                                               pdxObjectForm,
+                                               pdResources,
+                                               pdxObjectForm.getResources());
+              recursivelyFindByteStreams(referencedTokenStream,
+                                         referencedTokenStream.getStreamResources(), // pdxObjectForm.getResources() or pdResources if null
+                                         ret);
             }
           }
           else {
-            logger.debug2("getAllByteStreams: invalid input");
+            log.debug2("recursivelyFindByteStreams: invalid input");
           }
         }
       }
@@ -324,21 +324,19 @@ public class PdfBoxPage implements PdfPage {
             PDXObject xObject = getPDXObjectByName(pdResources, operand.getName());
             if (isTokenStream(xObject)) {
               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
-              PDResources referencedResources = pdxObjectForm.getResources();
-              if (referencedResources == null) {
-                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm, pdResources);
-                ret.add(referencedTokenStream);
-                recursivelyFindTokenStreams(referencedTokenStream, pdResources, ret);
-              }
-              else {
-                PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
-                ret.add(referencedTokenStream);
-                recursivelyFindTokenStreams(referencedTokenStream, referencedResources, ret);
-              }
+              PdfBoxXObjectTokenStream referencedTokenStream =
+                  new PdfBoxXObjectTokenStream(PdfBoxPage.this,
+                                               pdxObjectForm,
+                                               pdResources,
+                                               pdxObjectForm.getResources());
+              ret.add(referencedTokenStream);
+              recursivelyFindTokenStreams(referencedTokenStream,
+                                          referencedTokenStream.getStreamResources(), // pdxObjectForm.getResources() or pdResources if null
+                                          ret);
             }
           }
           else {
-            logger.debug2("recursivelyFindTokenStreams: invalid input");
+            log.debug2("recursivelyFindTokenStreams: invalid input");
           }
         }
       }
