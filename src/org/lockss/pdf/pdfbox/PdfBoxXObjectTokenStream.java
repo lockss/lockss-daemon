@@ -41,6 +41,7 @@ import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.apache.pdfbox.pdmodel.graphics.xobject.*;
 import org.lockss.pdf.*;
+import org.lockss.util.Logger;
 
 /**
  * <p>
@@ -59,6 +60,15 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
 
   /**
    * <p>
+   * A logger for use by this class.
+   * </p>
+   * 
+   * @since 1.67.6
+   */
+  private static final Logger log = Logger.getLogger(PdfBoxXObjectTokenStream.class);
+  
+  /**
+   * <p>
    * The {@link PDXObjectForm} instance underpinning this instance.
    * </p>
    * 
@@ -72,14 +82,22 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * or those of an enclosing context.
    * </p>
    * 
-   * @since 1.67.4
+   * @since 1.67.6
    */
-  protected PDResources pdResources;
+  protected PDResources parentResources;
   
   /**
    * <p>
-   * Builds a new instance using the underlying form's own resources
-   * with {@link PDXObjectForm#getResources()}.
+   * The form's own resources.
+   * </p>
+   * 
+   * @since 1.67.6
+   */
+  protected PDResources ownResources;
+  
+  /**
+   * <p>
+   * Builds a new instance using the given parent and own resources.
    * </p>
    * <p>
    * This constructor is accessible to classes in this package and subclasses.
@@ -89,33 +107,20 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    *          The parent PDF page.
    * @param pdXObjectForm
    *          The {@link PDXObjectForm} being wrapped.
-   * @since 1.56
-   * @see #PdfBoxXObjectTokenStream(PdfBoxPage, PDXObjectForm, PDResources)
+   * @param parentResources
+   *          The parent resources.
+   * @param ownResources
+   *          The form's own resources.
+   * @since 1.67.6
    */
   protected PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage,
                                      PDXObjectForm pdXObjectForm,
-                                     PDResources pdResources) {
+                                     PDResources parentResources,
+                                     PDResources ownResources) {
     super(pdfBoxPage);
     this.pdXObjectForm = pdXObjectForm;
-    this.pdResources = pdResources;
-  }
-
-  /**
-   * <p>
-   * This constructor is accessible to classes in this package and subclasses.
-   * </p>
-   * 
-   * @param pdfBoxPage
-   *          The parent PDF page.
-   * @param pdXObjectForm
-   *          The {@link PDXObjectForm} being wrapped.
-   * @param pdResources
-   *          The form's resources ({@link PDXObjectForm#getResources()} or from
-   *          an enclosing context).
-   * @since 1.67.4
-   */
-  protected PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage, PDXObjectForm pdXObjectForm) {
-    this(pdfBoxPage, pdXObjectForm, pdXObjectForm.getResources());
+    this.parentResources = parentResources;
+    this.ownResources = ownResources;
   }
 
   @Override
@@ -127,16 +132,21 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
       tokenWriter.writeTokens(PdfBoxTokens.unwrapList(newTokens));
       pdXObjectForm = new PDXObjectForm(newPdStream);
-      pdXObjectForm.setResources(pdResources);
-      Map<String, PDXObject> xobjects = pdResources.getXObjects();
+      pdXObjectForm.setResources(getStreamResources());
+      Map<String, PDXObject> xobjects = parentResources.getXObjects();
+      boolean found = true;
       for (Map.Entry<String, PDXObject> ent : xobjects.entrySet()) {
         String key = ent.getKey();
         PDXObject val = ent.getValue();
         if (val == oldForm) {
           xobjects.put(key, pdXObjectForm);
+          parentResources.setXObjects(xobjects);
+          break;
         }
       }
-//      pdXObjectForm.getCOSStream().replaceWithStream(newPdStream.getStream());
+      if (!found) {
+        log.debug2("No mapping found while replacing form token stream");
+      }
     }
     catch (IOException ioe) {
       throw new PdfException("Error while writing XObject token stream", ioe);
@@ -150,7 +160,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
 
   @Override
   protected PDResources getStreamResources() {
-    return pdResources;
+    return ownResources != null ? ownResources : parentResources;
   }
   
 }
