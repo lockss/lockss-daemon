@@ -28,11 +28,11 @@
     au < manifest ; 1997 ; Environment and History Volume 3 ; 3 >
     au < manifest ; 1998 ; Environment and History Volume 4 ; 4 >
     au < manifest ; 1999 ; Environment and History Volume 5 ; 5 >
-    au < manifest ; 2000 ; Environment and History Volume 6 ; 6 >
-    au < manifest ; 2001 ; Environment and History Volume 7 ; 7 >
-    au < manifest ; 2002 ; Environment and History Volume 8 ; 8 >
-    au < manifest ; 2003 ; Environment and History Volume 9 ; 9 >
-    au < manifest ; 2004 ; Environment and History Volume 10 ; 10 >
+    au < testing ; 2000 ; Environment and History Volume 6 ; 6 >
+    au < testing ; 2001 ; Environment and History Volume 7 ; 7 >
+    au < testing ; 2002 ; Environment and History Volume 8 ; 8 >
+    au < testing ; 2003 ; Environment and History Volume 9 ; 9 >
+    au < testing ; 2004 ; Environment and History Volume 10 ; 10 >
     au < released ; 2005 ; Environment and History Volume 11 ; 11 >
     au < released ; 2006 ; Environment and History Volume 12 ; 12 >
     au < released ; 2007 ; Environment and History Volume 13 ; 13 >
@@ -42,7 +42,8 @@
     au < released ; 2011 ; Environment and History Volume 17 ; 17 >
     au < released ; 2012 ; Environment and History Volume 18 ; 18 >
     au < released ; 2013 ; Environment and History Volume 19 ; 19 >
-    au < manifest ; 2014 ; Environment and History Volume 20 ; 20 >
+    au < testing ; 2014 ; Environment and History Volume 20 ; 20 >
+    au < expected ; 2015 ; Environment and History Volume 21 ; 21 >
   
   }
   
@@ -81,7 +82,8 @@
     au < released ; 2011 ; Environmental Values Volume 20 ; 20 >
     au < released ; 2012 ; Environmental Values Volume 21 ; 21 >
     au < released ; 2013 ; Environmental Values Volume 22 ; 22 >
-    au < manifest ; 2014 ; Environmental Values Volume 23 ; 23 >
+    au < testing ; 2014 ; Environmental Values Volume 23 ; 23 >
+    au < expected ; 2015 ; Environmental Values Volume 24 ; 24 >
   
   }
 
@@ -114,8 +116,9 @@
     au < doNotProcess ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
     au < doNotProcess ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
     au < doNotProcess ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
-    au < manifest ; 2013 ; Nomadic Peoples Volume 17 ; 17 >
-    au < manifest ; 2014 ; Nomadic Peoples Volume 18 ; 18 >
+    au < testing ; 2013 ; Nomadic Peoples Volume 17 ; 17 >
+    au < testing ; 2014 ; Nomadic Peoples Volume 18 ; 18 >
+    au < expected ; 2015 ; Nomadic Peoples Volume 19 ; 19 >
     
   }
 
