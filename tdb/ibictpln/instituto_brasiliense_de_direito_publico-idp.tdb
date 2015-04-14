@@ -45,13 +45,14 @@
       param[base_url] = http://www.direitopublico.idp.edu.br/
       param[journal_id] = direitopublico
 
-      au < notReady ; 2008 ; 1 ; Direito Público Volume 1 ; 2008 ; no http on www.iob.com.br >
-      au < notReady ; 2009 ; 2 ; Direito Público Volume 2 ; 2009 ; no http on www.iob.com.br >
-      au < notReady ; 2010 ; 3 ; Direito Público Volume 3 ; 2010 ; no http on www.iob.com.br >
-      au < notReady ; 2011 ; 4 ; Direito Público Volume 4 ; 2011 ; no http on www.iob.com.br >
-      au < notReady ; 2012 ; 5 ; Direito Público Volume 5 ; 2012 ; no http on www.iob.com.br >
-      au < notReady ; 2013 ; 6 ; Direito Público Volume 6 ; 2013 ; no http on www.iob.com.br >
-      au < manifest ; 2014 ; 7 ; Direito Público Volume 7 ; 2014 ; >
+      au < manifest ; 2007 ; 1 ; Direito Público Volume 1 ; 2007 ; >
+      au < notReady ; 2008 ; 2 ; Direito Público Volume 2 ; 2008 ; no http on www.iob.com.br >
+      au < notReady ; 2009 ; 3 ; Direito Público Volume 3 ; 2009 ; no http on www.iob.com.br >
+      au < notReady ; 2010 ; 4 ; Direito Público Volume 4 ; 2010 ; no http on www.iob.com.br >
+      au < notReady ; 2011 ; 5 ; Direito Público Volume 5 ; 2011 ; no http on www.iob.com.br >
+      au < notReady ; 2012 ; 6 ; Direito Público Volume 6 ; 2012 ; no http on www.iob.com.br >
+      au < notReady ; 2013 ; 7 ; Direito Público Volume 7 ; 2013 ; no http on www.iob.com.br >
+      au < manifest ; 2014 ; 8 ; Direito Público Volume 8 ; 2014 ; >
 
   }
 

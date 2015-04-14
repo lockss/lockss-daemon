@@ -71,6 +71,7 @@
       au < released ; 2012 ; 16 ; Ambiente Construído Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 17 ; Ambiente Construído Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 18 ; Ambiente Construído Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 19 ; Ambiente Construído Volume 2015 ; 2015 ; >
 
   }
 
@@ -118,6 +119,7 @@
       au < released ; 2012 ; 30 ; Análise Econômica Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 31 ; Análise Econômica Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 32 ; Análise Econômica Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 33 ; Análise Econômica Volume 2015 ; 2015 ; >
 
   }
 
@@ -219,6 +221,7 @@
       au < notReady ; 2012 ; 39 ; Boletim Gaúcho de Geografia Volume 2012 ; 2012 ; css has background image with login page >
       au < notReady ; 2013 ; 40 ; Boletim Gaúcho de Geografia Volume 2013 ; 2013 ; css has background image with login page >
       au < notReady ; 2014 ; 41 ; Boletim Gaúcho de Geografia Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 42 ; Boletim Gaúcho de Geografia Volume 2015 ; 2015 ; >
 
   }
 
@@ -488,20 +491,22 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = educacaoerealidade
 
-      au < released ; 2001 ; 1 ; Educação & Realidade Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 2 ; Educação & Realidade Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 3 ; Educação & Realidade Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 4 ; Educação & Realidade Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 5 ; Educação & Realidade Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 6 ; Educação & Realidade Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 7 ; Educação & Realidade Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 8 ; Educação & Realidade Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 9 ; Educação & Realidade Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 10 ; Educação & Realidade Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 11 ; Educação & Realidade Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 12 ; Educação & Realidade Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 13 ; Educação & Realidade Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 14 ; Educação & Realidade Volume 2014 ; 2014 ; >
+      au < manifest ; 2000 ; 1 ; Educação & Realidade Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 2 ; Educação & Realidade Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 3 ; Educação & Realidade Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 4 ; Educação & Realidade Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 5 ; Educação & Realidade Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 6 ; Educação & Realidade Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 7 ; Educação & Realidade Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 8 ; Educação & Realidade Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 9 ; Educação & Realidade Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 10 ; Educação & Realidade Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 11 ; Educação & Realidade Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 12 ; Educação & Realidade Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 13 ; Educação & Realidade Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 14 ; Educação & Realidade Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 15 ; Educação & Realidade Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 16 ; Educação & Realidade Volume 2015 ; 2015 ; >
 
   }
 
@@ -663,6 +668,7 @@
       au < released ; 2002 ; 6 ; History of Education Journal Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 7 ; History of Education Journal Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 8 ; History of Education Journal Volume 2004 ; 2004 ; >
+      au < manifest ; 2005 ; 9 ; History of Education Journal Volume 2005 ; 2005 ; >
 
   }
 
@@ -677,13 +683,15 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = iluminuras
 
-      au < released ; 2008 ; 1 ; ILUMINURAS Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 2 ; ILUMINURAS Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 3 ; ILUMINURAS Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 4 ; ILUMINURAS Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 5 ; ILUMINURAS Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 6 ; ILUMINURAS Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 7 ; ILUMINURAS Volume 2014 ; 2014 ; >
+      au < manifest ; 2007 ; 1 ; ILUMINURAS Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; ILUMINURAS Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; ILUMINURAS Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; ILUMINURAS Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; ILUMINURAS Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; ILUMINURAS Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 7 ; ILUMINURAS Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 8 ; ILUMINURAS Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 9 ; ILUMINURAS Volume 2015 ; 2015 ; >
 
   }
 
@@ -760,6 +768,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = Movimento
 
+      au < manifest ; 1997 ; 1 ; Movimento (ESEF/UFRGS) Volume 1997 ; 1997 ; >
       au < notReady ; 1998 ; 1 ; Movimento (ESEF/UFRGS) Volume 1998 ; 1998 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
       au < notReady ; 1999 ; 2 ; Movimento (ESEF/UFRGS) Volume 1999 ; 1999 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
       au < notReady ; 2000 ; 3 ; Movimento (ESEF/UFRGS) Volume 2000 ; 2000 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
@@ -777,6 +786,7 @@
       au < notReady ; 2012 ; 15 ; Movimento (ESEF/UFRGS) Volume 2012 ; 2012 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
       au < notReady ; 2013 ; 16 ; Movimento (ESEF/UFRGS) Volume 2013 ; 2013 ; redirected to login page >
       au < released ; 2014 ; 17 ; Movimento (ESEF/UFRGS) Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 18 ; Movimento (ESEF/UFRGS) Volume 2015 ; 2015 ; >
 
   }
 
@@ -1027,6 +1037,7 @@
       au < released ; 2012 ; 2 ; Revista Brasileira de Estudos da Presença Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 3 ; Revista Brasileira de Estudos da Presença Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 4 ; Revista Brasileira de Estudos da Presença Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 5 ; Revista Brasileira de Estudos da Presença Volume 2015 ; 2015 ; >
 
   }
 
@@ -1164,6 +1175,7 @@
       param[journal_id] = revistadoscursos
 
       au < released ; 1915 ; 1 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1915 ; 1915 ; >
+      au < manifest ; 1916 ; 2 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1916 ; 1916 ; >
 
   }
 
@@ -1192,6 +1204,7 @@
       au < released ; 2012 ; 11 ; Revista Eletrônica de Administração Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Revista Eletrônica de Administração Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 13 ; Revista Eletrônica de Administração Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 14 ; Revista Eletrônica de Administração Volume 2015 ; 2015 ; >
 
   }
 
@@ -1239,6 +1252,7 @@
       au < released ; 2012 ; 30 ; Revista Gaúcha de Enfermagem Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 31 ; Revista Gaúcha de Enfermagem Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 32 ; Revista Gaúcha de Enfermagem Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 33 ; Revista Gaúcha de Enfermagem Volume 2015 ; 2015 ; >
 
   }
 
@@ -1348,6 +1362,7 @@
       au < released ; 2012 ; 14 ; Sociologias Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 15 ; Sociologias Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 16 ; Sociologias Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 17 ; Sociologias Volume 2015 ; 2015 ; >
 
   }
 

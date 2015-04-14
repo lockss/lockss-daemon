@@ -42,11 +42,13 @@
       param[base_url] = http://revistas.unicentro.br/
       param[journal_id] = analecta
 
-      au < released ; 2006 ; 1 ; Analecta Volume 2006 ; 2006 >
-      au < released ; 2007 ; 2 ; Analecta Volume 2007 ; 2007 >
-      au < released ; 2008 ; 3 ; Analecta Volume 2008 ; 2008 >
-      au < released ; 2009 ; 4 ; Analecta Volume 2009 ; 2009 >
-      au < released ; 2010 ; 5 ; Analecta Volume 2010 ; 2010 >
+      au < manifest ; 2005 ; 1 ; Analecta Volume 2005 ; 2005 >
+      au < released ; 2006 ; 2 ; Analecta Volume 2006 ; 2006 >
+      au < released ; 2007 ; 3 ; Analecta Volume 2007 ; 2007 >
+      au < released ; 2008 ; 4 ; Analecta Volume 2008 ; 2008 >
+      au < released ; 2009 ; 5 ; Analecta Volume 2009 ; 2009 >
+      au < released ; 2010 ; 6 ; Analecta Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 7 ; Analecta Volume 2011 ; 2011 >
 
   }
 

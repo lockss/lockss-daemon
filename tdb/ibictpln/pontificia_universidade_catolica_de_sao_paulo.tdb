@@ -285,10 +285,12 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = delta
 
-      au < released ; 2011 ; 1 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 2 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 3 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2013 ; 2013 ; >
-      au < ready ;2014 ; 4 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2014 ; 2014 ; >
+      au < manifest ; 2010 ; 1 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 5 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 6 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2015 ; 2015 ; >
 
   }
 
@@ -682,6 +684,7 @@
       au < released ; 2011 ; 1 ; Revista Nexi Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Revista Nexi Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 4 ; Revista Nexi Volume 2014 ; 2014 ; >
 
   }
 
@@ -1075,6 +1078,7 @@
       au < released ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 16 ; Pesquisa & Debate Volume 2013 ; 2013 ; >
       au < ready ;2014 ; 17 ; Pesquisa & Debate Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 18 ; Pesquisa & Debate Volume 2015 ; 2015 >
 
   }
 

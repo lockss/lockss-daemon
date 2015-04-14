@@ -56,6 +56,7 @@
       au < released ; 2012 ; 13 ; Revista Teias Volume 13 ; 2012 ; >
       au < released ; 2013 ; 14 ; Revista Teias Volume 14 ; 2013 ; >
       au < released ; 2014 ; 15 ; Revista Teias Volume 15 ; 2014 ; >
+      au < manifest ; 2015 ; 16 ; Revista Teias Volume 16 ; 2015 ; >
 
   }
 
@@ -256,6 +257,7 @@
       au < released ; 2011 ; 6 ; Interagir: Pensando a Extensão Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 7 ; Interagir: Pensando a Extensão Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 8 ; Interagir: Pensando a Extensão Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 9 ; Interagir: Pensando a Extensão Volume 2014 ; 2014 ; >
 
   }
 
@@ -309,13 +311,14 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = logos
 
-      au < released ; 2008 ; 1 ; Logos: Comunicação e Universidade Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 2 ; Logos: Comunicação e Universidade Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 3 ; Logos: Comunicação e Universidade Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 4 ; Logos: Comunicação e Universidade Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 5 ; Logos: Comunicação e Universidade Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 6 ; Logos: Comunicação e Universidade Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 7 ; Logos: Comunicação e Universidade Volume 2014 ; 2014 ; >
+      au < manifest ; 2007 ; 1 ; Logos: Comunicação e Universidade Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; Logos: Comunicação e Universidade Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; Logos: Comunicação e Universidade Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; Logos: Comunicação e Universidade Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; Logos: Comunicação e Universidade Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Logos: Comunicação e Universidade Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 7 ; Logos: Comunicação e Universidade Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 8 ; Logos: Comunicação e Universidade Volume 2014 ; 2014 ; >
 
   }
 
@@ -481,22 +484,23 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = rcmccuerj
 
-      au < released ; 1996 ; 1 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1996 ; 1996 ; >
-      au < released ; 1997 ; 2 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 3 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 4 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1999 ; 1999 ; >
-      au < released ; 2003 ; 5 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 6 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 7 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 8 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 9 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 10 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 11 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 12 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 13 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 14 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 15 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 16 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2014 ; 2014 ; >
+      au < manifest ; 1995 ; 1 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 2 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 3 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 4 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 5 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1999 ; 1999 ; >
+      au < released ; 2003 ; 6 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 7 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 8 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 9 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 10 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 11 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 12 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 13 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 14 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 15 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 16 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 17 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2014 ; 2014 ; >
 
   }
 
@@ -516,6 +520,7 @@
       au < released ; 2012 ; 3 ; Revista Direito e Práxis Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; Revista Direito e Práxis Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 5 ; Revista Direito e Práxis Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 6 ; Revista Direito e Práxis Volume 2015 ; 2015 ; >
 
   }
 
@@ -593,6 +598,7 @@
 
       au < released ; 2013 ; 1 ; Revista de Finanças Públicas, Tributação e Desenvolvimento Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Revista de Finanças Públicas, Tributação e Desenvolvimento Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 3 ; Revista de Finanças Públicas, Tributação e Desenvolvimento Volume 2015 ; 2015 ; >
 
   }
 
@@ -631,6 +637,7 @@
       au < released ; 2012 ; 4 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 5 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 6 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2015 ; 2015 ; >
 
   }
 

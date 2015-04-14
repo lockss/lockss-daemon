@@ -205,7 +205,8 @@
       au < released ; 2011 ; 13 ; Estudos de Literatura Brasileira Contemporânea Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 14 ; Estudos de Literatura Brasileira Contemporânea Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 15 ; Estudos de Literatura Brasileira Contemporânea Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 16 ; Estudos de Literatura Brasileira Contemporânea Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 16 ; Estudos de Literatura Brasileira Contemporânea Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 17 ; Estudos de Literatura Brasileira Contemporânea Volume 2015 ; 2015 ; >
       }
   }
 
@@ -330,8 +331,9 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < released ; 2013 ; 1 ; Linhas Críticas Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 2 ; Linhas Críticas Volume 2014 ; 2014 ; >
+      au < manifest ; 2012 ; 1 ; Linhas Críticas Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 2 ; Linhas Críticas Volume 2013 ; 2013 ; >
+      au < released ;2014 ; 3 ; Linhas Críticas Volume 2014 ; 2014 ; >
       }
   }
 
@@ -379,7 +381,8 @@
       au < released ; 2011 ; 12 ; Boletim Meridiano 47 Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 13 ; Boletim Meridiano 47 Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 14 ; Boletim Meridiano 47 Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 15 ; Boletim Meridiano 47 Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 15 ; Boletim Meridiano 47 Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 16 ; Boletim Meridiano 47 Volume 2015 ; 2015 ; >
       }
   }
 
@@ -452,7 +455,8 @@
       au < released ; 2010 ; 4 ; Música em Contexto Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 5 ; Música em Contexto Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Música em Contexto Volume 2012 ; 2012 ; >
-      au < released ;2013 ; 7 ; Música em Contexto Volume 2013 ; 2013 ; >
+      au < released ; 2013 ; 7 ; Música em Contexto Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 8 ; Música em Contexto Volume 2014 ; 2014 ; >
       }
   }
 
@@ -916,8 +920,9 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < released ; 2013 ; 1 ; Traduzires Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 2 ; Traduzires Volume 2014 ; 2014 ; >
+      au < manifest ; 2012 ; 1 ; Traduzires Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 2 ; Traduzires Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Traduzires Volume 2014 ; 2014 ; >
       }
   }
 
@@ -951,6 +956,7 @@
       au < released ; 2002 ; 5 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 6 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2003 ; 2003 ; >
       au < released ; 2007 ; 7 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2007 ; 2007 ; >
+      au < manifest ; 2008 ; 8 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2008 ; 2008 ; >
       }
   }
 
