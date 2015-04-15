@@ -298,13 +298,13 @@ while (my $line = <>) {
         $url_e = sprintf("%s%s/gateway/lockss?year=%d", 
             $param{base_url}, $param{journal_id}, $param{year});
         $man_url_e = uri_unescape($url_e);
-        printf("man_url_e: %s\n", $man_url_e);
+        #printf("man_url_e: %s\n", $man_url_e);
         
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            printf("resp-request-uri: %s\n", $resp->request->uri);
+            #printf("resp-request-uri: %s\n", $resp->request->uri);
             if ($req->url ne $resp->request->uri && ($resp->request->uri ne $man_url_d && $resp->request->uri ne $man_url_e)) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
