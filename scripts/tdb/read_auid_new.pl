@@ -303,7 +303,7 @@ while (my $line = <>) {
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            if ($req->url ne $resp->request->uri && $resp->request->uri ne $man_url_d && $resp->request->uri ne $man_url_e) {
+            if ($req->url ne $resp->request->uri && ($resp->request->uri ne $man_url_d && $resp->request->uri ne $man_url_e)) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
             } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
