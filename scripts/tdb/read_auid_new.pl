@@ -46,9 +46,11 @@ while (my $line = <>) {
   }
   my $url = "cant_create_url";
   my $url_d = "cant_create_url";
+  my $url_e = "cant_create_url";
   #my $url_permission = "cant_create_url";
   my $man_url = "cant_create_url";
   my $man_url_d = "cant_create_url";
+  my $man_url_e = "cant_create_url";
   my $vol_title = "NO TITLE FOUND";
   my $result = "Plugin Unknown";
   
@@ -288,11 +290,20 @@ while (my $line = <>) {
         $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
             $param{base_url}, $param{journal_id}, $param{year});
         $man_url = uri_unescape($url);
+        # default url if no manifest pages set up.
+        $url_d = sprintf("%sindex.php/%s/index", 
+            $param{base_url}, $param{journal_id});
+        $man_url_d = uri_unescape($url_d);
+        # no index.php.
+        $url_e = sprintf("%s%s/gateway/lockss?year=%d", 
+            $param{base_url}, $param{journal_id}, $param{year});
+        $man_url_e = uri_unescape($url_e);
+        
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            if ($req->url ne $resp->request->uri) {
+            if ($req->url ne $resp->request->uri && $resp->request->uri ne $man_url_d && $resp->request->uri ne $man_url_e) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
             } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
