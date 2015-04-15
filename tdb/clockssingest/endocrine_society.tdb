@@ -98,8 +98,8 @@
       au < manifest ; exists ; 2010 ; Endocrine Reviews Volume 31 ; 31 >
       au < manifest ; exists ; 2011 ; Endocrine Reviews Volume 32 ; 32 >
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrine Reviews Volume 33 ; 33 >
-      au < ready ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 >
-      au < testing ; exists ; 2014 ; Endocrine Reviews Volume 35 ; 35 >
+      au < crawling ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 >
+      au < notReady ; exists ; 2014 ; Endocrine Reviews Volume 35 ; 35 >
       au < manifest ; exists ; 2015 ; Endocrine Reviews Volume 36 ; 36 >
 
     }
@@ -282,10 +282,10 @@
       au < manifest ; exists ; 2008 ; Endocrinology Volume 149 ; 149 >
       au < manifest ; exists ; 2009 ; Endocrinology Volume 150 ; 150 >
       au < manifest ; exists ; 2010 ; Endocrinology Volume 151 ; 151 >
-      au < ready ; exists ; 2011 ; Endocrinology Volume 152 ; 152 > # OK to ignore PDF Hash Error (X X). PD-1296
+      au < crawling ; exists ; 2011 ; Endocrinology Volume 152 ; 152 > # OK to ignore PDF Hash Error (X X). PD-1296
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrinology Volume 153 ; 153 >
       au < doNotProcess ; doNotProcess ; 2013 ; Endocrinology Volume 154 ; 154 >
-      au < ready ; exists ; 2014 ; Endocrinology Volume 155 ; 155 >
+      au < crawling ; exists ; 2014 ; Endocrinology Volume 155 ; 155 >
       au < manifest ; exists ; 2015 ; Endocrinology Volume 156 ; 156 >
 
     }
@@ -412,10 +412,10 @@
       au < manifest ; exists ; 2008 ; Journal of Clinical Endocrinology & Metabolism Volume 93 ; 93 >
       au < manifest ; exists ; 2009 ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 >
       au < manifest ; exists ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 >
-      au < ready ; exists ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 >
+      au < crawling ; exists ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 >
-      au < ready ; exists ; 2014 ; Journal of Clinical Endocrinology & Metabolism Volume 99 ; 99 >
+      au < crawling ; exists ; 2014 ; Journal of Clinical Endocrinology & Metabolism Volume 99 ; 99 >
       au < manifest ; exists ; 2015 ; Journal of Clinical Endocrinology & Metabolism Volume 100 ; 100 >
 
     }
@@ -471,10 +471,10 @@
       au < manifest ; exists ; 2008 ; Molecular Endocrinology Volume 22 ; 22 >
       au < manifest ; exists ; 2009 ; Molecular Endocrinology Volume 23 ; 23 >
       au < manifest ; exists ; 2010 ; Molecular Endocrinology Volume 24 ; 24 >
-      au < ready ; exists ; 2011 ; Molecular Endocrinology Volume 25 ; 25 >
+      au < crawling ; exists ; 2011 ; Molecular Endocrinology Volume 25 ; 25 >
       au < doNotProcess ; doNotProcess ; 2012 ; Molecular Endocrinology Volume 26 ; 26 >
       au < doNotProcess ; doNotProcess ; 2013 ; Molecular Endocrinology Volume 27 ; 27 >
-      au < ready ; exists ; 2014 ; Molecular Endocrinology Volume 28 ; 28 >
+      au < crawling ; exists ; 2014 ; Molecular Endocrinology Volume 28 ; 28 >
       au < manifest ; exists ; 2015 ; Molecular Endocrinology Volume 29 ; 29 >
 
     }
