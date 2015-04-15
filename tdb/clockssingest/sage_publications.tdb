@@ -2406,7 +2406,7 @@
       au < crawling ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 656 ; 656 ; >
       au < manifest ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 657 ; 657 ; >
       au < manifest ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 658 ; 658 ; >
-      au < expected ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 659 ; 659 ; >
+      au < manifest ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 659 ; 659 ; >
       au < expected ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 660 ; 660 ; >
       au < expected ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 661 ; 661 ; >
       au < expected ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 662 ; 662 ; >
@@ -9712,7 +9712,7 @@
       au < finished ; crawling ; 2012 ; Electronic News Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; Electronic News Volume 7 ; 7 ; >
       au < ready ; exists ; 2014 ; Electronic News Volume 8 ; 8 ; >
-      au < expected ; exists ; 2015 ; Electronic News Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2015 ; Electronic News Volume 9 ; 9 ; >
 
     }
 
@@ -11385,7 +11385,7 @@
       au < manifest ; exists ; 2005 ; The Family Journal Volume 13 ; 13 ; >
       au < manifest ; exists ; 2006 ; The Family Journal Volume 14 ; 14 ; >
       au < manifest ; exists ; 2007 ; The Family Journal Volume 15 ; 15 ; >
-      au < exists ; exists ; 2008 ; The Family Journal Volume 16 ; 16 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; The Family Journal Volume 16 ; 16 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; The Family Journal Volume 17 ; 17 ; >
       au < zapped ; finished ; 2010 ; The Family Journal Volume 18 ; 18 ; >
       au < finished ; crawling ; 2011 ; The Family Journal Volume 19 ; 19 ; >
@@ -12491,7 +12491,7 @@
       au < finished ; frozen ; 2012 ; Global Media and Communication Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Global Media and Communication Volume 9 ; 9 ; >
       au < ready ; exists ; 2014 ; Global Media and Communication Volume 10 ; 10 ; >
-      au < expected ; exists ; 2015 ; Global Media and Communication Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2015 ; Global Media and Communication Volume 11 ; 11 ; >
 
     }
 
@@ -13438,7 +13438,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ready ; exists ; 2014 ; History of Science Volume 52 ; 52 ; >
-      au < expected ; exists ; 2015 ; History of Science Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2015 ; History of Science Volume 53 ; 53 ; >
 
   }
 
@@ -15022,7 +15022,7 @@
       au < finished ; crawling ; 2012 ; International Criminal Justice Review Volume 22 ; 22 ; >
       au < crawling ; exists ; 2013 ; International Criminal Justice Review Volume 23 ; 23 ; >
       au < ready ; exists ; 2014 ; International Criminal Justice Review Volume 24 ; 24 ; >
-      au < expected ; exists ; 2015 ; International Criminal Justice Review Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2015 ; International Criminal Justice Review Volume 25 ; 25 ; >
 
     }
 
@@ -15747,7 +15747,7 @@
       au < finished ; frozen ; 2012 ; The International Journal of Lower Extremity Wounds Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; The International Journal of Lower Extremity Wounds Volume 12 ; 12 ; >
       au < ready ; exists ; 2014 ; The International Journal of Lower Extremity Wounds Volume 13 ; 13 ; >
-      au < expected ; exists ; 2015 ; The International Journal of Lower Extremity Wounds Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2015 ; The International Journal of Lower Extremity Wounds Volume 14 ; 14 ; >
 
     }
 
@@ -16792,7 +16792,7 @@
       au < manifest ; exists ; 2005 ; International Review of Administrative Sciences Volume 71 ; 71 ; >
       au < manifest ; exists ; 2006 ; International Review of Administrative Sciences Volume 72 ; 72 ; >
       au < manifest ; exists ; 2007 ; International Review of Administrative Sciences Volume 73 ; 73 ; >
-      au < exists ; exists ; 2008 ; International Review of Administrative Sciences Volume 74 ; 74 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; International Review of Administrative Sciences Volume 74 ; 74 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; International Review of Administrative Sciences Volume 75 ; 75 ; >
       au < finished ; crawling ; 2010 ; International Review of Administrative Sciences Volume 76 ; 76 ; >
       au < finished ; crawling ; 2011 ; International Review of Administrative Sciences Volume 77 ; 77 ; >
@@ -18134,7 +18134,7 @@
       au < manifest ; exists ; 2006 ; Journal of Biological Rhythms Volume 21 ; 21 ; >
       au < manifest ; exists ; 2007 ; Journal of Biological Rhythms Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 ; >
-      au < exists ; exists ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 ; > # bad probe link
       au < zapped ; finished ; 2010 ; Journal of Biological Rhythms Volume 25 ; 25 ; >
       au < finished ; crawling ; 2011 ; Journal of Biological Rhythms Volume 26 ; 26 ; >
       au < finished ; crawling ; 2012 ; Journal of Biological Rhythms Volume 27 ; 27 ; >
@@ -18240,7 +18240,7 @@
       au < manifest ; exists ; 2005 ; Journal of Biomolecular Screening Volume 10 ; 10 ; >
       au < manifest ; exists ; 2006 ; Journal of Biomolecular Screening Volume 11 ; 11 ; >
       au < manifest ; exists ; 2007 ; Journal of Biomolecular Screening Volume 12 ; 12 ; >
-      au < exists ; exists ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 ; >
       au < finished ; frozen ; 2010 ; Journal of Biomolecular Screening Volume 15 ; 15 ; >
       au < finished ; crawling ; 2011 ; Journal of Biomolecular Screening Volume 16 ; 16 ; >
@@ -18509,7 +18509,7 @@
       au < manifest ; exists ; 2005 ; Journal of Business and Technical Communication Volume 19 ; 19 ; >
       au < manifest ; exists ; 2006 ; Journal of Business and Technical Communication Volume 20 ; 20 ; >
       au < manifest ; exists ; 2007 ; Journal of Business and Technical Communication Volume 21 ; 21 ; >
-      au < exists ; exists ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 ; >
       au < zapped ; finished ; 2010 ; Journal of Business and Technical Communication Volume 24 ; 24 ; >
       au < finished ; crawling ; 2011 ; Journal of Business and Technical Communication Volume 25 ; 25 ; >
@@ -18955,7 +18955,7 @@
       au < manifest ; exists ; 2006 ; Journal of Child Health Care Volume 10 ; 10 ; >
       au < manifest ; exists ; 2007 ; Journal of Child Health Care Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
-      au < exists ; exists ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; > # bad probe link
       au < zapped ; finished ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ; >
       au < finished ; frozen ; 2011 ; Journal of Child Health Care Volume 15 ; 15 ; >
       au < finished ; crawling ; 2012 ; Journal of Child Health Care Volume 16 ; 16 ; >
@@ -19057,7 +19057,7 @@
       au < manifest ; exists ; 2005 ; Journal of Classical Sociology Volume 5 ; 5 ; >
       au < manifest ; exists ; 2006 ; Journal of Classical Sociology Volume 6 ; 6 ; >
       au < manifest ; exists ; 2007 ; Journal of Classical Sociology Volume 7 ; 7 ; >
-      au < exists ; exists ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
       au < finished ; crawling ; 2010 ; Journal of Classical Sociology Volume 10 ; 10 ; >
       au < finished ; crawling ; 2011 ; Journal of Classical Sociology Volume 11 ; 11 ; >
@@ -19491,7 +19491,7 @@
       au < manifest ; exists ; 2006 ; Journal of Conflict Resolution Volume 50 ; 50 ; >
       au < manifest ; exists ; 2007 ; Journal of Conflict Resolution Volume 51 ; 51 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 ; >
-      au < exists ; exists ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 ; >
       au < finished ; crawling ; 2011 ; Journal of Conflict Resolution Volume 55 ; 55 ; >
       au < finished ; crawling ; 2012 ; Journal of Conflict Resolution Volume 56 ; 56 ; >
@@ -19797,7 +19797,7 @@
       au < manifest ; exists ; 2006 ; Journal of Correctional Health Care Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Journal of Correctional Health Care Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 ; >
-      au < exists ; exists ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; > # bad probe link
       au < zapped ; finished ; 2010 ; Journal of Correctional Health Care Volume 16 ; 16 ; >
       au < finished ; crawling ; 2011 ; Journal of Correctional Health Care Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Journal of Correctional Health Care Volume 18 ; 18 ; >
@@ -20275,7 +20275,7 @@
       au < manifest ; exists ; 2005 ; Journal of Diagnostic Medical Sonography Volume 21 ; 21 ; >
       au < manifest ; exists ; 2006 ; Journal of Diagnostic Medical Sonography Volume 22 ; 22 ; >
       au < manifest ; exists ; 2007 ; Journal of Diagnostic Medical Sonography Volume 23 ; 23 ; >
-      au < exists ; exists ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 ; >
       au < finished ; crawling ; 2010 ; Journal of Diagnostic Medical Sonography Volume 26 ; 26 ; >
       au < finished ; crawling ; 2011 ; Journal of Diagnostic Medical Sonography Volume 27 ; 27 ; >
@@ -21487,7 +21487,7 @@
       au < manifest ; exists ; 2006 ; Journal of Family Issues Volume 27 ; 27 ; >
       au < manifest ; exists ; 2007 ; Journal of Family Issues Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Family Issues Volume 29 ; 29 ; >
-      au < exists ; exists ; 2009 ; Journal of Family Issues Volume 30 ; 30 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Family Issues Volume 30 ; 30 ; > # bad probe link
       au < finished ; frozen ; 2010 ; Journal of Family Issues Volume 31 ; 31 ; >
       au < finished ; crawling ; 2011 ; Journal of Family Issues Volume 32 ; 32 ; >
       au < finished ; crawling ; 2012 ; Journal of Family Issues Volume 33 ; 33 ; >
@@ -21537,7 +21537,7 @@
       au < manifest ; exists ; 2006 ; Journal of Family Nursing Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Journal of Family Nursing Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Family Nursing Volume 14 ; 14 ; >
-      au < exists ; exists ; 2009 ; Journal of Family Nursing Volume 15 ; 15 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Family Nursing Volume 15 ; 15 ; > # bad probe link
       au < zapped ; finished ; 2010 ; Journal of Family Nursing Volume 16 ; 16 ; >
       au < finished ; crawling ; 2011 ; Journal of Family Nursing Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Journal of Family Nursing Volume 18 ; 18 ; >
@@ -21689,7 +21689,7 @@
       au < manifest ; exists ; 2006 ; Journal of Fire Sciences Volume 24 ; 24 ; >
       au < manifest ; exists ; 2007 ; Journal of Fire Sciences Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 ; >
-      au < exists ; exists ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Journal of Fire Sciences Volume 28 ; 28 ; >
       au < finished ; crawling ; 2011 ; Journal of Fire Sciences Volume 29 ; 29 ; >
       au < finished ; crawling ; 2012 ; Journal of Fire Sciences Volume 30 ; 30 ; >
@@ -22578,7 +22578,7 @@
       au < manifest ; exists ; 2005-2006 ; Journal of Industrial Textiles Volume 35 ; 35 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Industrial Textiles Volume 36 ; 36 ; >
       au < finished ; frozen ; 2007-2008 ; Journal of Industrial Textiles Volume 37 ; 37 ; > # bad probe link
-      au < exists ; exists ; 2008-2009 ; Journal of Industrial Textiles Volume 38 ; 38 ; > # bad probe link
+      au < manifest ; exists ; 2008-2009 ; Journal of Industrial Textiles Volume 38 ; 38 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Journal of Industrial Textiles Volume 39 ; 39 ; >
       au < zapped ; finished ; 2010-2011 ; Journal of Industrial Textiles Volume 40 ; 40 ; >
       au < finished ; crawling ; 2011-2012 ; Journal of Industrial Textiles Volume 41 ; 41 ; >
@@ -22724,7 +22724,7 @@
       au < manifest ; exists ; 2005 ; Journal of Information Science Volume 31 ; 31 ; >
       au < manifest ; exists ; 2006 ; Journal of Information Science Volume 32 ; 32 ; >
       au < manifest ; exists ; 2007 ; Journal of Information Science Volume 33 ; 33 ; >
-      au < exists ; exists ; 2008 ; Journal of Information Science Volume 34 ; 34 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Information Science Volume 34 ; 34 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Information Science Volume 35 ; 35 ; >
       au < finished ; crawling ; 2010 ; Journal of Information Science Volume 36 ; 36 ; >
       au < finished ; crawling ; 2011 ; Journal of Information Science Volume 37 ; 37 ; >
@@ -23208,7 +23208,7 @@
       au < manifest ; exists ; 2005 ; Journal of Leadership & Organizational Studies Volume 12 ; 12 ; >
       au < manifest ; exists ; 2006 ; Journal of Leadership & Organizational Studies Volume 13 ; 13 ; >
       au < manifest ; exists ; 2007 ; Journal of Leadership & Organizational Studies Volume 14 ; 14 ; >
-      au < exists ; exists ; 2008 ; Journal of Leadership & Organizational Studies Volume 15 ; 15 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Leadership & Organizational Studies Volume 15 ; 15 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Leadership & Organizational Studies Volume 16 ; 16 ; >
       au < zapped ; finished ; 2010 ; Journal of Leadership & Organizational Studies Volume 17 ; 17 ; >
       au < finished ; frozen ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 ; >
@@ -24623,7 +24623,7 @@
       au < manifest ; exists ; 2006 ; Journal of Psychoeducational Assessment Volume 24 ; 24 ; >
       au < manifest ; exists ; 2007 ; Journal of Psychoeducational Assessment Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 ; >
-      au < exists ; exists ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 ; > # bad probe link
       au < finished ; frozen ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 ; >
       au < finished ; frozen ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 ; >
       au < finished ; crawling ; 2012 ; Journal of Psychoeducational Assessment Volume 30 ; 30 ; >
@@ -24744,7 +24744,7 @@
       au < manifest ; exists ; 2006 ; Journal of Reinforced Plastics and Composites Volume 25 ; 25 ; >
       au < manifest ; exists ; 2007 ; Journal of Reinforced Plastics and Composites Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Reinforced Plastics and Composites Volume 27 ; 27 ; >
-      au < exists ; exists ; 2009 ; Journal of Reinforced Plastics and Composites Volume 28 ; 28 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Reinforced Plastics and Composites Volume 28 ; 28 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Journal of Reinforced Plastics and Composites Volume 29 ; 29 ; >
       au < finished ; crawling ; 2011 ; Journal of Reinforced Plastics and Composites Volume 30 ; 30 ; >
       au < finished ; frozen ; 2012 ; Journal of Reinforced Plastics and Composites Volume 31 ; 31 ; >
@@ -24934,7 +24934,7 @@
       au < finished ; crawling ; 2012 ; Journal of Research in International Education Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in International Education Volume 12 ; 12 ; >
       au < manifest ; exists ; 2014 ; Journal of Research in International Education Volume 13 ; 13 ; >
-      au < expected ; exists ; 2015 ; Journal of Research in International Education Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2015 ; Journal of Research in International Education Volume 14 ; 14 ; >
 
     }
 
@@ -25019,7 +25019,7 @@
       au < manifest ; exists ; 2005 ; Journal of Research in Music Education Volume 53 ; 53 ; >
       au < manifest ; exists ; 2006 ; Journal of Research in Music Education Volume 54 ; 54 ; >
       au < manifest ; exists ; 2007 ; Journal of Research in Music Education Volume 55 ; 55 ; >
-      au < exists ; exists ; 2008 ; Journal of Research in Music Education Volume 56 ; 56 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Research in Music Education Volume 56 ; 56 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Research in Music Education Volume 57 ; 57 ; >
       au < finished ; crawling ; 2010 ; Journal of Research in Music Education Volume 58 ; 58 ; >
       au < finished ; crawling ; 2011 ; Journal of Research in Music Education Volume 59 ; 59 ; >
@@ -25068,7 +25068,7 @@
       au < manifest ; exists ; 2005 ; Journal of Research in Nursing Volume 10 ; 10 ; >
       au < manifest ; exists ; 2006 ; Journal of Research in Nursing Volume 11 ; 11 ; >
       au < manifest ; exists ; 2007 ; Journal of Research in Nursing Volume 12 ; 12 ; >
-      au < exists ; exists ; 2008 ; Journal of Research in Nursing Volume 13 ; 13 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Research in Nursing Volume 13 ; 13 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Research in Nursing Volume 14 ; 14 ; >
       au < finished ; frozen ; 2010 ; Journal of Research in Nursing Volume 15 ; 15 ; >
       au < finished ; crawling ; 2011 ; Journal of Research in Nursing Volume 16 ; 16 ; >
@@ -25099,7 +25099,7 @@
     au < finished ; frozen ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Research on Leadership Education Volume 8 ; 8 ; >
     au < manifest ; exists ; 2014 ; Journal of Research on Leadership Education Volume 9 ; 9 ; >
-    au < expected ; exists ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 ; >
 
   }
 
@@ -25503,7 +25503,7 @@
       au < finished ; frozen ; 2012 ; Journal of South Asian Development Volume 7 ; 7 ; >
       au < crawling ; exists ; 2013 ; Journal of South Asian Development Volume 8 ; 8 ; >
       au < manifest ; exists ; 2014 ; Journal of South Asian Development Volume 9 ; 9 ; >
-      au < expected ; exists ; 2015 ; Journal of South Asian Development Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2015 ; Journal of South Asian Development Volume 10 ; 10 ; >
 
     }
 
@@ -25642,8 +25642,8 @@
       au < manifest ; exists ; 2005 ; Journal of Sport & Social Issues Volume 29 ; 29 ; >
       au < manifest ; exists ; 2006 ; Journal of Sport & Social Issues Volume 30 ; 30 ; >
       au < manifest ; exists ; 2007 ; Journal of Sport & Social Issues Volume 31 ; 31 ; >
-      au < exists ; exists ; 2008 ; Journal of Sport & Social Issues Volume 32 ; 32 ; > # bad probe link
-      au < exists ; exists ; 2009 ; Journal of Sport & Social Issues Volume 33 ; 33 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journal of Sport & Social Issues Volume 32 ; 32 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of Sport & Social Issues Volume 33 ; 33 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Journal of Sport & Social Issues Volume 34 ; 34 ; >
       au < finished ; crawling ; 2011 ; Journal of Sport & Social Issues Volume 35 ; 35 ; >
       au < finished ; frozen ; 2012 ; Journal of Sport & Social Issues Volume 36 ; 36 ; >
@@ -26120,7 +26120,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
-      au < expected ; exists ; 2015 ; Journal for the History of Astronomy Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2015 ; Journal for the History of Astronomy Volume 46 ; 46 ; >
 
   }
 
@@ -26232,7 +26232,7 @@
       au < manifest ; exists ; 2006 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 7 ; 7 ; >
-      au < exists ; exists ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 ; >
       au < finished ; crawling ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 ; >
@@ -27075,7 +27075,7 @@
       au < manifest ; exists ; 2005 ; Journalism: Theory, Practice, and Criticism Volume 6 ; 6 ; >
       au < manifest ; exists ; 2006 ; Journalism: Theory, Practice, and Criticism Volume 7 ; 7 ; >
       au < manifest ; exists ; 2007 ; Journalism: Theory, Practice, and Criticism Volume 8 ; 8 ; >
-      au < exists ; exists ; 2008 ; Journalism: Theory, Practice, and Criticism Volume 9 ; 9 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Journalism: Theory, Practice, and Criticism Volume 9 ; 9 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Journalism: Theory, Practice, and Criticism Volume 10 ; 10 ; >
       au < finished ; crawling ; 2010 ; Journalism: Theory, Practice, and Criticism Volume 11 ; 11 ; >
       au < finished ; crawling ; 2011 ; Journalism: Theory, Practice, and Criticism Volume 12 ; 12 ; >
@@ -30039,7 +30039,7 @@
       au < manifest ; exists ; 2005 ; Nursing Ethics Volume 12 ; 12 ; >
       au < manifest ; exists ; 2006 ; Nursing Ethics Volume 13 ; 13 ; >
       au < manifest ; exists ; 2007 ; Nursing Ethics Volume 14 ; 14 ; >
-      au < exists ; exists ; 2008 ; Nursing Ethics Volume 15 ; 15 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Nursing Ethics Volume 15 ; 15 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Nursing Ethics Volume 16 ; 16 ; >
       au < finished ; frozen ; 2010 ; Nursing Ethics Volume 17 ; 17 ; >
       au < finished ; crawling ; 2011 ; Nursing Ethics Volume 18 ; 18 ; >
@@ -30257,7 +30257,7 @@
       au < exists ; exists ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 ; >
       au < exists ; exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 ; >
       au < manifest ; exists ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
-      au < expected ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
+      au < manifest ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
 
   }
 
@@ -30870,7 +30870,7 @@
       au < manifest ; exists ; 2005 ; Personality and Social Psychology Bulletin Volume 31 ; 31 ; >
       au < manifest ; exists ; 2006 ; Personality and Social Psychology Bulletin Volume 32 ; 32 ; >
       au < manifest ; exists ; 2007 ; Personality and Social Psychology Bulletin Volume 33 ; 33 ; >
-      au < exists ; exists ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 ; >
       au < finished ; crawling ; 2010 ; Personality and Social Psychology Bulletin Volume 36 ; 36 ; >
       au < finished ; crawling ; 2011 ; Personality and Social Psychology Bulletin Volume 37 ; 37 ; >
@@ -31416,7 +31416,7 @@
       au < manifest ; exists ; 2005 ; Planning Theory Volume 4 ; 4 ; >
       au < manifest ; exists ; 2006 ; Planning Theory Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Planning Theory Volume 6 ; 6 ; >
-      au < exists ; exists ; 2008 ; Planning Theory Volume 7 ; 7 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Planning Theory Volume 7 ; 7 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Planning Theory Volume 8 ; 8 ; >
       au < zapped ; finished ; 2010 ; Planning Theory Volume 9 ; 9 ; >
       au < finished ; crawling ; 2011 ; Planning Theory Volume 10 ; 10 ; >
@@ -31677,7 +31677,7 @@
       au < manifest ; exists ; 2006 ; Political Research Quarterly Volume 59 ; 59 ; >
       au < manifest ; exists ; 2007 ; Political Research Quarterly Volume 60 ; 60 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Political Research Quarterly Volume 61 ; 61 ; >
-      au < exists ; exists ; 2009 ; Political Research Quarterly Volume 62 ; 62 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Political Research Quarterly Volume 62 ; 62 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Political Research Quarterly Volume 63 ; 63 ; >
       au < finished ; crawling ; 2011 ; Political Research Quarterly Volume 64 ; 64 ; >
       au < finished ; frozen ; 2012 ; Political Research Quarterly Volume 65 ; 65 ; >
@@ -31821,7 +31821,7 @@
       au < manifest ; exists ; 2006 ; Politics & Society Volume 34 ; 34 ; >
       au < manifest ; exists ; 2007 ; Politics & Society Volume 35 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Politics & Society Volume 36 ; 36 ; >
-      au < exists ; exists ; 2009 ; Politics & Society Volume 37 ; 37 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Politics & Society Volume 37 ; 37 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Politics & Society Volume 38 ; 38 ; >
       au < finished ; crawling ; 2011 ; Politics & Society Volume 39 ; 39 ; >
       au < finished ; crawling ; 2012 ; Politics & Society Volume 40 ; 40 ; >
@@ -31893,7 +31893,7 @@
       au < exists ; exists ; 2012 ; Power and Education Volume 4 ; 4 ; >
       au < exists ; exists ; 2013 ; Power and Education Volume 5 ; 5 ; >
       au < exists ; exists ; 2014 ; Power and Education Volume 6 ; 6 ; >
-      au < expected ; exists ; 2015 ; Power and Education Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2015 ; Power and Education Volume 7 ; 7 ; >
 
   }
 
@@ -32010,7 +32010,7 @@
       au < manifest ; exists ; 2006 ; The Prison Journal Volume 86 ; 86 ; >
       au < manifest ; exists ; 2007 ; The Prison Journal Volume 87 ; 87 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 ; >
-      au < exists ; exists ; 2009 ; The Prison Journal Volume 89 ; 89 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; The Prison Journal Volume 89 ; 89 ; > # bad probe link
       au < finished ; crawling ; 2010 ; The Prison Journal Volume 90 ; 90 ; >
       au < finished ; frozen ; 2011 ; The Prison Journal Volume 91 ; 91 ; >
       au < finished ; crawling ; 2012 ; The Prison Journal Volume 92 ; 92 ; >
@@ -33635,7 +33635,7 @@
       au < manifest ; exists ; 2006 ; Public Understanding of Science Volume 15 ; 15 ; >
       au < manifest ; exists ; 2007 ; Public Understanding of Science Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Public Understanding of Science Volume 17 ; 17 ; >
-      au < exists ; exists ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; > # bad probe link
       au < finished ; frozen ; 2010 ; Public Understanding of Science Volume 19 ; 19 ; >
       au < finished ; frozen ; 2011 ; Public Understanding of Science Volume 20 ; 20 ; >
       au < finished ; frozen ; 2012 ; Public Understanding of Science Volume 21 ; 21 ; >
@@ -33730,7 +33730,7 @@
       au < manifest ; exists ; 2006 ; Punishment & Society Volume 8 ; 8 ; >
       au < manifest ; exists ; 2007 ; Punishment & Society Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
-      au < exists ; exists ; 2009 ; Punishment & Society Volume 11 ; 11 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Punishment & Society Volume 11 ; 11 ; > # bad probe link
       au < zapped ; finished ; 2010 ; Punishment & Society Volume 12 ; 12 ; >
       au < finished ; crawling ; 2011 ; Punishment & Society Volume 13 ; 13 ; >
       au < zapped ; finished ; 2012 ; Punishment & Society Volume 14 ; 14 ; >
@@ -33833,7 +33833,7 @@
       au < manifest ; exists ; 2005 ; Qualitative Inquiry Volume 11 ; 11 ; >
       au < manifest ; exists ; 2006 ; Qualitative Inquiry Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Qualitative Inquiry Volume 13 ; 13 ; >
-      au < exists ; exists ; 2008 ; Qualitative Inquiry Volume 14 ; 14 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Qualitative Inquiry Volume 14 ; 14 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
       au < finished ; crawling ; 2010 ; Qualitative Inquiry Volume 16 ; 16 ; >
       au < finished ; frozen ; 2011 ; Qualitative Inquiry Volume 17 ; 17 ; >
@@ -33919,7 +33919,7 @@
       au < manifest ; exists ; 2005 ; Qualitative Social Work Volume 4 ; 4 ; >
       au < manifest ; exists ; 2006 ; Qualitative Social Work Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Qualitative Social Work Volume 6 ; 6 ; >
-      au < exists ; exists ; 2008 ; Qualitative Social Work Volume 7 ; 7 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Qualitative Social Work Volume 7 ; 7 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; >
       au < zapped ; finished ; 2010 ; Qualitative Social Work Volume 9 ; 9 ; >
       au < finished ; crawling ; 2011 ; Qualitative Social Work Volume 10 ; 10 ; >
@@ -34919,7 +34919,7 @@
       au < finished ; crawling ; 2011 ; Review of Market Integration Volume 3 ; 3 ; >
       au < finished ; crawling ; 2012 ; Review of Market Integration Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; Review of Market Integration Volume 5 ; 5 ; >
-      au < expected ; exists ; 2014 ; Review of Market Integration Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2014 ; Review of Market Integration Volume 6 ; 6 ; >
       au < expected ; exists ; 2015 ; Review of Market Integration Volume 7 ; 7 ; >
 
     }
@@ -35414,7 +35414,7 @@
       au < manifest ; exists ; 2005 ; Science Communication Volume 27 ; 27 ; >
       au < manifest ; exists ; 2006 ; Science Communication Volume 28 ; 28 ; >
       au < manifest ; exists ; 2007 ; Science Communication Volume 29 ; 29 ; >
-      au < exists ; exists ; 2008 ; Science Communication Volume 30 ; 30 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Science Communication Volume 30 ; 30 ; > # bad probe link
       au < finished ; crawling ; 2009 ; Science Communication Volume 31 ; 31 ; > # bad probe link
       au < zapped ; finished ; 2010 ; Science Communication Volume 32 ; 32 ; >
       au < finished ; crawling ; 2011 ; Science Communication Volume 33 ; 33 ; >
@@ -38631,7 +38631,7 @@
       au < manifest ; exists ; 2005 ; Theory, Culture & Society Volume 22 ; 22 ; >
       au < manifest ; exists ; 2006 ; Theory, Culture & Society Volume 23 ; 23 ; >
       au < manifest ; exists ; 2007 ; Theory, Culture & Society Volume 24 ; 24 ; >
-      au < exists ; exists ; 2008 ; Theory, Culture & Society Volume 25 ; 25 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Theory, Culture & Society Volume 25 ; 25 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Theory, Culture & Society Volume 26 ; 26 ; >
       au < finished ; crawling ; 2010 ; Theory, Culture & Society Volume 27 ; 27 ; >
       au < finished ; frozen ; 2011 ; Theory, Culture & Society Volume 28 ; 28 ; >
@@ -39300,7 +39300,7 @@
       au < manifest ; exists ; 2005 ; Topics in Early Childhood Special Education Volume 25 ; 25 ; >
       au < manifest ; exists ; 2006 ; Topics in Early Childhood Special Education Volume 26 ; 26 ; >
       au < manifest ; exists ; 2007 ; Topics in Early Childhood Special Education Volume 27 ; 27 ; >
-      au < exists ; exists ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 ; >
       au < finished ; crawling ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 ; >
       au < zapped ; finished ; 2011 ; Topics in Early Childhood Special Education Volume 31 ; 31 ; >
@@ -39812,7 +39812,7 @@
       au < manifest ; exists ; 2005 ; Trauma Volume 7 ; 7 ; >
       au < manifest ; exists ; 2006 ; Trauma Volume 8 ; 8 ; >
       au < manifest ; exists ; 2007 ; Trauma Volume 9 ; 9 ; >
-      au < exists ; exists ; 2008 ; Trauma Volume 10 ; 10 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Trauma Volume 10 ; 10 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Trauma Volume 11 ; 11 ; >
       au < finished ; crawling ; 2010 ; Trauma Volume 12 ; 12 ; >
       au < zapped ; finished ; 2011 ; Trauma Volume 13 ; 13 ; >
@@ -39907,7 +39907,7 @@
       au < manifest ; exists ; 2005 ; Traumatology Volume 11 ; 11 ; >
       au < manifest ; exists ; 2006 ; Traumatology Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Traumatology Volume 13 ; 13 ; >
-      au < exists ; exists ; 2008 ; Traumatology Volume 14 ; 14 ; > # bad probe link
+      au < manifest ; exists ; 2008 ; Traumatology Volume 14 ; 14 ; > # bad probe link
       au < doNotProcess ; doNotProcess ; 2009 ; Traumatology Volume 15 ; 15 ; >
       au < finished ; crawling ; 2010 ; Traumatology Volume 16 ; 16 ; >
       au < zapped ; finished ; 2011 ; Traumatology Volume 17 ; 17 ; >
@@ -40625,7 +40625,7 @@
       au < manifest ; exists ; 2006 ; War in History Volume 13 ; 13 ; >
       au < manifest ; exists ; 2007 ; War in History Volume 14 ; 14 ; >
       au < finished ; crawling ; 2008 ; War in History Volume 15 ; 15 ; > # bad probe link
-      au < exists ; exists ; 2009 ; War in History Volume 16 ; 16 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; War in History Volume 16 ; 16 ; > # bad probe link
       au < zapped ; finished ; 2010 ; War in History Volume 17 ; 17 ; >
       au < zapped ; finished ; 2011 ; War in History Volume 18 ; 18 ; >
       au < finished ; frozen ; 2012 ; War in History Volume 19 ; 19 ; >
@@ -40688,7 +40688,7 @@
       au < manifest ; exists ; 2006 ; Waste Management & Research Volume 24 ; 24 ; >
       au < manifest ; exists ; 2007 ; Waste Management & Research Volume 25 ; 25 ; >
       au < zapped ; finished ; 2008 ; Waste Management & Research Volume 26 ; 26 ; >
-      au < exists ; exists ; 2009 ; Waste Management & Research Volume 27 ; 27 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Waste Management & Research Volume 27 ; 27 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Waste Management & Research Volume 28 ; 28 ; >
       au < zapped ; finished ; 2011 ; Waste Management & Research Volume 29 ; 29 ; >
       au < finished ; frozen ; 2012 ; Waste Management & Research Volume 30 ; 30 ; >
@@ -40755,7 +40755,7 @@
       au < manifest ; exists ; 2006 ; Western Journal of Nursing Research Volume 28 ; 28 ; >
       au < manifest ; exists ; 2007 ; Western Journal of Nursing Research Volume 29 ; 29 ; >
       au < zapped ; finished ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
-      au < exists ; exists ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; > # bad probe link
+      au < manifest ; exists ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; > # bad probe link
       au < finished ; crawling ; 2010 ; Western Journal of Nursing Research Volume 32 ; 32 ; >
       au < finished ; frozen ; 2011 ; Western Journal of Nursing Research Volume 33 ; 33 ; >
       au < finished ; crawling ; 2012 ; Western Journal of Nursing Research Volume 34 ; 34 ; >

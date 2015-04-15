@@ -94,6 +94,7 @@
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circ.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = site exceeds max crawl depth
 
       au < manifest ; 1950 ; Circulation Volume 1 ; 1 >
       au < manifest ; 1950 ; Circulation Volume 2 ; 2 >
@@ -224,7 +225,7 @@
       au < released ; 2013 ; Circulation Volume 127 ; 127 >
       au < released ; 2013 ; Circulation Volume 128 ; 128 >
       au < testing ; 2014 ; Circulation Volume 129 ; 129 >
-      au < testing ; 2014 ; Circulation Volume 130 ; 130 >
+      au < notReady ; 2014 ; Circulation Volume 130 ; 130 >
       au < manifest ; 2015 ; Circulation Volume 131 ; 131 >
       au < expected ; 2015 ; Circulation Volume 132 ; 132 >
 

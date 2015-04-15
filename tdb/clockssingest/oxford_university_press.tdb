@@ -100,8 +100,8 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ; >
-    au < exists ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
-    au < expected ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
 
   }
 
@@ -1454,7 +1454,7 @@
     au < exists ; exists ; 1996 ; Annals of the Entomological Society of America Volume 89 ; 89 ; >
     au < exists ; exists ; 1997 ; Annals of the Entomological Society of America Volume 90 ; 90 ; >
     au < exists ; exists ; 1998 ; Annals of the Entomological Society of America Volume 91 ; 91 ; >
-    au < exists ; exists ; 1999 ; Annals of the Entomological Society of America Volume 92 ; 92 ; >
+    au < manifest ; exists ; 1999 ; Annals of the Entomological Society of America Volume 92 ; 92 ; >
     au < exists ; exists ; 2000 ; Annals of the Entomological Society of America Volume 93 ; 93 ; >
     au < exists ; exists ; 2001 ; Annals of the Entomological Society of America Volume 94 ; 94 ; >
     au < exists ; exists ; 2002 ; Annals of the Entomological Society of America Volume 95 ; 95 ; >
@@ -1470,7 +1470,7 @@
     au < exists ; exists ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 ; >
     au < exists ; exists ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 ; >
     au < exists ; exists ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 ; >
-    au < expected ; exists ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 ; >
+    au < manifest ; exists ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 ; >
 
   }
 
@@ -4763,7 +4763,7 @@
     param[base_url] = http://dsh.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
 
   }
 
@@ -10762,15 +10762,15 @@
     au < exists ; exists ; 2004 ; JAMIA Volume 11 ; 11 ; >
     au < exists ; exists ; 2005 ; JAMIA Volume 12 ; 12 ; >
     au < exists ; exists ; 2006 ; JAMIA Volume 13 ; 13 ; >
-    au < exists ; exists ; 2007 ; JAMIA Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2007 ; JAMIA Volume 14 ; 14 ; >
     au < exists ; exists ; 2008 ; JAMIA Volume 15 ; 15 ; >
     au < exists ; exists ; 2009 ; JAMIA Volume 16 ; 16 ; >
-    au < exists ; exists ; 2010 ; JAMIA Volume 17 ; 17 ; >
-    au < exists ; exists ; 2011 ; JAMIA Volume 18 ; 18 ; >
-    au < exists ; exists ; 2012 ; JAMIA Volume 19 ; 19 ; >
-    au < exists ; exists ; 2013 ; JAMIA Volume 20 ; 20 ; >
-    au < exists ; exists ; 2014 ; JAMIA Volume 21 ; 21 ; >
-    au < expected ; exists ; 2015 ; JAMIA Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2010 ; JAMIA Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2011 ; JAMIA Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2012 ; JAMIA Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2013 ; JAMIA Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2014 ; JAMIA Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2015 ; JAMIA Volume 22 ; 22 ; >
 
   }
 
@@ -11621,7 +11621,7 @@
     au < exists ; exists ; 2011 ; Journal of Economic Entomology Volume 104 ; 104 ; >
     au < exists ; exists ; 2012 ; Journal of Economic Entomology Volume 105 ; 105 ; >
     au < exists ; exists ; 2013 ; Journal of Economic Entomology Volume 106 ; 106 ; >
-    au < exists ; exists ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 ; >
+    au < manifest ; exists ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 ; >
 
   }
 
@@ -12304,8 +12304,8 @@
     param[base_url] = http://jhps.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
-    au < expected ; exists ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 ; >
 
     }
 
@@ -14662,7 +14662,7 @@
     au < crawling ; exists ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Journal of Theological Studies Volume 64 ; 64 ; >
     au < crawling ; exists ; 2014 ; The Journal of Theological Studies Volume 65 ; 65 ; >
-    au < expected ; exists ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 ; >
 
     }
 
@@ -16945,8 +16945,8 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://nop.oxfordjournals.org/
 
-    au < exists ; exists ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 ; >
-    au < exists ; exists ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 ; >
 
   }
 
@@ -18028,8 +18028,8 @@
     param[base_url] = http://omcr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 ; >
-    au < exists ; exists ; 2015 ; Oxford Medical Case Reports Volume 2015 ; 2015 ; >
+    au < manifest ; exists ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; Oxford Medical Case Reports Volume 2015 ; 2015 ; >
 
     }
 
@@ -22408,7 +22408,7 @@
     param[base_url] = http://workar.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 2014 ; Work, Aging and Retirement Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2014 ; Work, Aging and Retirement Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Work, Aging and Retirement Volume 2 ; 2 ; >
 
   }
@@ -23339,7 +23339,7 @@
 
       au < crawling ; exists ; 2013 ; Evolution, Medicine, and Public Health Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; Evolution, Medicine, and Public Health Volume 2014 ; 2014 ; >
-      au < expected ; exists ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 ; >
   }
 
   {
