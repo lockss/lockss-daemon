@@ -48,14 +48,14 @@ import org.lockss.util.Logger;
  * BT (IP:  156.56.241.164) ET
  * BT (On: Sun, 12 Apr 2015 05:59:48) ET
  * 
- * These are located in stream0, followed by the content stream
+ * These are located in stream0, defined in the resource dictionary, followed by the content stream
  * and located on each page of the document
  * @author alexohlson
  *
  */
 public class ASMsciencePdfFilterFactory extends SimplePdfFilterFactory {
   private static final Logger log = Logger.getLogger(ASMsciencePdfFilterFactory.class);
-  
+
   private static final String DOWNLOAD_REGEX = "^Downloaded from ";
   //private static final String IPADDRESS_REGEX = "^IP: ";
   private static final String ONDATE_REGEX = "^On: ";
@@ -63,34 +63,32 @@ public class ASMsciencePdfFilterFactory extends SimplePdfFilterFactory {
   private static final Pattern DOWNLOAD_PATTERN = Pattern.compile(DOWNLOAD_REGEX);
   //private static final Pattern IPADDRESS_PATTERN = Pattern.compile(IPADDRESS_REGEX);
   private static final Pattern ONDATE_PATTERN = Pattern.compile(ONDATE_REGEX);
-  
 
 
 
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) 
       throws PdfException {
-    log.setLevel("debug3");
-    
-  ASMDownloadedFromStateMachine worker = new ASMDownloadedFromStateMachine();
-  
-  for (PdfPage pdfPage : pdfDocument.getPages()) {
-    log.debug3("BEGIN PAGE");
-    List<PdfTokenStream> pdfTokenStreams = pdfPage.getAllTokenStreams();
-    for (Iterator<PdfTokenStream> iter = pdfTokenStreams.iterator(); iter.hasNext();) {
-      log.debug3("...STREAM");
-      PdfTokenStream nextTokStream = iter.next();
-      worker.process(nextTokStream);      
-      if (worker.getResult()) {
-        List<PdfToken> pdfTokens = nextTokStream.getTokens();
-        log.debug3("removing from " + worker.getBegin() + " to " + (worker.getEnd() + 1));        
-        pdfTokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
-        nextTokStream.setTokens(pdfTokens);
-        break; // out of the stream loop, go on to next page
+    //log.setLevel("debug3");
+
+    ASMDownloadedFromStateMachine worker = new ASMDownloadedFromStateMachine();
+
+    for (PdfPage pdfPage : pdfDocument.getPages()) {
+      log.debug3("BEGIN PAGE");
+      List<PdfTokenStream> pdfTokenStreams = pdfPage.getAllTokenStreams();
+      for (Iterator<PdfTokenStream> iter = pdfTokenStreams.iterator(); iter.hasNext();) {
+        PdfTokenStream nextTokStream = iter.next();
+        worker.process(nextTokStream);      
+        if (worker.getResult()) {
+          List<PdfToken> pdfTokens = nextTokStream.getTokens();
+          log.debug3("removing from " + worker.getBegin() + " thru " + worker.getEnd());        
+          pdfTokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
+          nextTokStream.setTokens(pdfTokens);
+          break; // out of the stream loop, go on to next page
+        }
       }
+      log.debug3("END PAGE");
     }
-    log.debug3("END PAGE");
-  }
   }
 
   /*
@@ -122,13 +120,16 @@ ET
   public static class ASMDownloadedFromStateMachine extends PdfTokenStreamStateMachine {
 
 
-
+    public ASMDownloadedFromStateMachine() {
+      // the default direction is FORWARD, but make the logger the one for this class
+      super(log);
+    }
+    
+    
     @Override
     public void state0() throws PdfException {
       if (isBeginTextObject()) {
         setBegin(getIndex());
-        log.debug3("setting beginindex");
-        log.debug3("token " + getIndex() + ": " + this.getOpcode() );
         setState(1);
       }
     } 
@@ -138,7 +139,6 @@ ET
     public void state1() throws PdfException {
       if (isShowTextFind(DOWNLOAD_PATTERN)) {
         log.debug3("state1 - we have a BT with the Downloaded by");
-        log.debug3("token " + getIndex() + ": " + this.getOpcode() );
         setState(2);
       }
       else if (isBeginTextObject()) { // not the initial BT-ET we were looking for
@@ -150,7 +150,6 @@ ET
     @Override
     public void state2() throws PdfException {
       log.debug3("state2 - now looking for the next BT");
-      log.debug3("token " + getIndex() + ": " + this.getOpcode() );
       if (isBeginTextObject()) {  
         setState(3);
       }      
@@ -160,7 +159,6 @@ ET
     @Override
     public void state3() throws PdfException {
       log.debug3("state3 - we have a 2nd BT, checking text");
-      log.debug3("token " + getIndex() + ": " + this.getOpcode() );
       if (isShowTextFind(ONDATE_PATTERN)) {
         setState(4);
       }
@@ -171,7 +169,6 @@ ET
     @Override
     public void state4() throws PdfException {
       log.debug3("state4 - we have all our text, looking for the next end");
-      log.debug3("token " + getIndex() + ": " + this.getOpcode() );
       if (isEndTextObject()) {  // we need to remove this BT-ET chunk
         log.debug3("in state4 at final ET...prepare to remove");
         setEnd(getIndex());
@@ -181,6 +178,6 @@ ET
     }
 
   }  
-  
+
 
 }

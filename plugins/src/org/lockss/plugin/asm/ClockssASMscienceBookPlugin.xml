@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -78,11 +78,15 @@
        http://www.asmscience.org/docserver/fulltext/10.1128/9781555816896/f0101-01.gif
        http://www.asmscience.org/docserver/preview/fulltext/10.1128/9781555818289/9781555811303_Chap03-1.gif
        eot, svg, ttf & woff are font support files
+     NOT
+       http://www.asmscience.org/deliver/fulltext/10.1128/9781555818265/chap1.html
+          ?itemId=/content/book/10.1128/9781555818265.chap1&mimeType=html&isFastTrackArticle=    
     -->
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>1,"^%scontent/book/%s", base_url, doi</string>
       <string>1,"^%scontent/%s", base_url, doi</string>
+      <string>2,"^%sdeliver/fulltext/%s/[^?/]+\.html\?itemId=[^&amp;]+&amp;mimeType=html&amp;isFastTrackArticle=$", base_url, doi</string>
       <string>1,"^%sdeliver/fulltext/%s", base_url, doi</string>
       <string>1,"^%sdocserver(/ahah)?/fulltext/%s", base_url, doi</string>
     </list>
@@ -110,6 +114,10 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.asm.ASMscienceHtmlHashFilterFactory</string>
   </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.asm.ASMsciencePdfFilterFactory</string>
+  </entry>    
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.asm.ASMscienceBookArticleIteratorFactory</string>
