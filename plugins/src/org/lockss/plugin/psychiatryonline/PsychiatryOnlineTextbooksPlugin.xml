@@ -1,7 +1,11 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>deprecated</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -26,11 +30,11 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Psychiatry Online Textbooks Plugin, Base URL %s, Resource ID %d", base_url, resource_id</string>
+    <string>"Psychiatry Online Textbooks Plugin (retired Silverchair site), Base URL %s, Resource ID %d", base_url, resource_id</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -38,7 +42,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Psychiatry Online Textbooks Plugin</string>
+    <string>Psychiatry Online Textbooks Plugin (retired Silverchair site)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
