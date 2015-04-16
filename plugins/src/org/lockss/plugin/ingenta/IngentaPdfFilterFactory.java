@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -82,90 +82,63 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   private FilterFactory whpFiltFact = new WhiteHorsePressPdfFilterFactory();
   
   /*
-   * FIXME 1.67: extend PdfTokenStreamStateMachine
-   */
-  /*
    * Example: PDF from http://www.ingentaconnect.com/content/whp/eh/2014/00000020/00000001/art00005
    */
   protected static class WhiteHorsePressPdfFilterFactory extends SimplePdfFilterFactory {
     
-    protected static class WhiteHorsePressWorker extends PdfTokenStreamWorker {
+    protected static class WhiteHorsePressWorker extends PdfTokenStreamStateMachine {
       
-      protected boolean result;
-      
-      protected int beginIndex;
-      
-      protected int endIndex;
-      
-      protected int state;
+      private static final Logger log = Logger.getLogger(WhiteHorsePressWorker.class);
+      private static final String str1 = " = IP address";
+      private static final String str2 = " = Date & Time";
       
       public WhiteHorsePressWorker() {
-        super(Direction.BACKWARD);
+        super(log);
       }
       
       @Override
-      public void setUp() throws PdfException {
-        super.setUp();
-        this.state = 0;
-        this.result = false;
-        this.beginIndex = -1;
-        this.endIndex = -1;
+      public void state0() throws PdfException {
+        if (isBeginTextObject()) {
+          setBegin(getIndex());
+          setState(1);
+        }
       }
       
       @Override
-      public void operatorCallback() throws PdfException {
-        if (logger.isDebug3()) {
-          logger.debug3("WhiteHorsePressWorker: initial: " + state);
-          logger.debug3("WhiteHorsePressWorker: index: " + getIndex());
-          logger.debug3("WhiteHorsePressWorker: operator: " + getOpcode());
+      public void state1() throws PdfException {
+        if (isShowTextEndsWith(str1)) {
+          setState(2);
         }
-        
-        switch (state) {
-          case 0: {
-            if (isEndTextObject()) {
-              endIndex = getIndex();
-              ++state; 
-            }
-          } break;
-          
-          case 1: {
-            if (isShowTextEndsWith(" = Date & Time")) {
-              ++state;
-            }
-            else if (isBeginTextObject()) {
-              stop();
-            }
-          } break;
-          
-          case 2: {
-            if (isShowTextEndsWith(" = IP address")) {
-              ++state;
-            }
-            else if (isBeginTextObject()) {
-              stop();
-            }
-          } break;
-          
-          case 3: {
-            if (isBeginTextObject()) {
-              beginIndex = getIndex();
-              result = true;
-              stop(); 
-            }
-          } break;
-          
-          default: {
-            throw new PdfException("Invalid state in WhiteHorsePressWorker: " + state);
-          }
+        else if (isEndTextObject()) {
+          // don't stop ...
+          setState(0);
         }
-        
-        if (logger.isDebug3()) {
-          logger.debug3("WhiteHorsePressWorker: final: " + state);
-          logger.debug3("WhiteHorsePressWorker: result: " + result);
-        }
-        
       }
       
+      @Override
+      public void state2() throws PdfException {
+        if (isShowTextEndsWith(str2)) {
+          setState(3);
+        }
+        else if (isEndTextObject()) {
+          stop();
+          // if order of tokens or streams change, don't stop() ...
+          // setState(0);
+        }
+      }
+      
+      @Override
+      public void state3() throws PdfException {
+        if (isEndTextObject()) {
+          setEnd(getIndex());
+          setResult(true);
+          stop(); 
+        }
+        else if (isBeginTextObject()) {
+          setBegin(getIndex());
+          setState(1);
+        }
+      }
     }
     
     public void transform(ArchivalUnit au, PdfDocument pdfDocument)
@@ -175,95 +148,59 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
-        if (worker.result) {
+        if (worker.getResult()) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
           // clear tokens including text markers
-          tokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
+          tokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
           pdfTokenStream.setTokens(tokens);
+        }
+        else {
+          PdfUtil.normalizeTokenStream(pdfTokenStream);
         }
       }
     }
-    
   }
   
-  /*
-   * FIXME 1.67: extend PdfTokenStreamStateMachine
-   */
   /*
    * Example: http://api.ingentaconnect.com/content/maney/aac/2012/00000111/00000003/art00002?crawler=true&mimetype=application/pdf
    */
   protected static class ManeyPublishingPdfFilterFactory extends ExtractingPdfFilterFactory {
     
-    protected static class ManeyPublishingWorker extends PdfTokenStreamWorker {
+    protected static class ManeyPublishingWorker extends PdfTokenStreamStateMachine {
       
-      protected boolean result;
-      
-      protected int beginIndex;
-      
-      protected int endIndex;
-      
-      protected int state;
+      private static final Logger log = Logger.getLogger(ManeyPublishingWorker.class);
+      private static final String str1 = "Published by Maney Publishing";
       
       public ManeyPublishingWorker() {
-        super(Direction.BACKWARD);
+        super(Direction.BACKWARD, log);
       }
       
       @Override
-      public void setUp() throws PdfException {
-        super.setUp();
-        this.state = 0;
-        this.result = false;
-        this.beginIndex = -1;
-        this.endIndex = -1;
+      public void state0() throws PdfException {
+        if (isEndTextObject()) {
+          setEnd(getIndex());
+          setState(1);
+        }
       }
       
       @Override
-      public void operatorCallback() throws PdfException {
-        if (logger.isDebug3()) {
-          logger.debug3("ManeyPublishingWorker: initial: " + state);
-          logger.debug3("ManeyPublishingWorker: index: " + getIndex());
-          logger.debug3("ManeyPublishingWorker: operator: " + getOpcode());
+      public void state1() throws PdfException {
+        if (isShowTextStartsWith(str1)) {
+          setState(2);
         }
-        
-        switch (state) {
-          
-          case 0: {
-            if (isEndTextObject()) {
-              endIndex = getIndex();
-              ++state; 
-            }
-          } break;
-          
-          case 1: {
-            if (isShowTextStartsWith("Published by Maney Publishing")) {
-              ++state;
-            }
-            else if (isBeginTextObject()) {
-              stop();
-            }
-          } break;
-          
-          case 2: {
-            if (isBeginTextObject()) {
-              beginIndex = getIndex();
-              result = true;
-              stop(); 
-            }
-          } break;
-          
-          default: {
-            throw new PdfException("Invalid state in ManeyPublishingWorker: " + state);
-          }
-          
+        else if (isBeginTextObject()) {
+          stop();
         }
-        
-        if (logger.isDebug3()) {
-          logger.debug3("ManeyPublishingWorker: final: " + state);
-          logger.debug3("ManeyPublishingWorker: result: " + result);
-        }
-        
       }
       
+      @Override
+      public void state2() throws PdfException {
+        if (isBeginTextObject()) {
+          setBegin(getIndex());
+          setResult(true);
+          stop(); 
+        }
+      }
     }
     
     public void transform(ArchivalUnit au, PdfDocument pdfDocument)
@@ -273,10 +210,10 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
-        if (worker.result) {
+        if (worker.getResult()) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
           // clear tokens including text markers
-          tokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
+          tokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
           pdfTokenStream.setTokens(tokens);
         }
       }
@@ -289,122 +226,75 @@ public class IngentaPdfFilterFactory implements FilterFactory {
    */
   
   /*
-   * FIXME 1.67: extends PdfTokenStreamStateMachine
-   */
-  /*
    * Examples:
    * http://api.ingentaconnect.com/content/paaf/paaf/2013/00000086/00000003/art00006?crawler=true ingest1 15:20:29 09/10/13
    * http://api.ingentaconnect.com/content/paaf/paaf/2013/00000086/00000003/art00006?crawler=true 11/25/14
    */
   protected static class PacificAffairsPdfFilterFactory extends ExtractingPdfFilterFactory {
     
-    public static class PacificAffairsWorker extends PdfTokenStreamWorker {
+    public static class PacificAffairsWorker extends PdfTokenStreamStateMachine {
+      
+      private static final Logger log = Logger.getLogger(PacificAffairsWorker.class);
       
       protected static final Pattern DELIVERED_BY =
           Pattern.compile("Delivered by .* to: .* IP: .* on:");
       
-      protected boolean result;
-      
-      protected int state;
-      
-      protected int beginIndex;
-      
-      protected int endIndex;
-      
-      @Override
-      public void setUp() throws PdfException {
-        super.setUp();
-        this.state = 0;
-        this.result = false;
-        this.beginIndex = -1;
-        this.endIndex = -1;
+      public PacificAffairsWorker() {
+        super(log);
       }
       
       @Override
-      public void operatorCallback()
-          throws PdfException {
-        if (logger.isDebug3()) {
-          logger.debug3("PacificAffairsWorker: initial: " + state);
-          logger.debug3("PacificAffairsWorker: index: " + getIndex());
-          logger.debug3("PacificAffairsWorker: operator: " + getOpcode());
-        }
-        
-        switch (state) {
-        
-        case 0: {
-          if (isBeginTextObject()) {
-            beginIndex = getIndex();
-            state = 1;
-          }
-        } break;
-        
-        case 1: {
-          if (isShowTextFind(DELIVERED_BY)) {
-            state = 2;
-          }
-          else if (isEndTextObject()) {
-            state = 0;
-          }
-        } break;
-        
-        case 2: {
-          if (isEndTextObject()) {
-            endIndex = getIndex();
-            result = true;
-            stop(); 
-          }
-        } break;
-        
-        default: {
-          throw new PdfException("Invalid state in PacificAffairsWorker: " + state);
-        }
-        
-        }
-        
-        if (logger.isDebug3()) {
-          logger.debug3("PacificAffairsWorker: final: " + state);
-          logger.debug3("PacificAffairsWorker: result: " + result);
+      public void state0() throws PdfException {
+        if (isBeginTextObject()) {
+          setBegin(getIndex());
+          setState(1);
         }
       }
       
+      @Override
+      public void state1() throws PdfException {
+        if (isShowTextFind(DELIVERED_BY)) {
+          setState(2);
+        }
+        else if (isEndTextObject()) {
+          setState(0);
+        }
+      }
+      
+      @Override
+      public void state2() throws PdfException {
+        if (isEndTextObject()) {
+          setEnd(getIndex());
+          setResult(true);
+          stop(); 
+        }
+      }
     }
     
     public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
-      /* FIXME 1.67: use the getDocumentTransform/outputDocumentInformation override instead */
-      pdfDocument.unsetCreationDate();
-      pdfDocument.unsetModificationDate();
-      pdfDocument.unsetMetadata();
-      pdfDocument.unsetCreator();
-      pdfDocument.unsetProducer();
-      pdfDocument.unsetAuthor();
-      pdfDocument.unsetTitle();
-      pdfDocument.unsetSubject();
-      pdfDocument.unsetKeywords();
-      /* end FIXME 1.67 */
       PacificAffairsWorker worker = new PacificAffairsWorker();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
-        if (worker.result) {
+        if (worker.getResult()) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
+          tokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
           pdfTokenStream.setTokens(tokens);
         }
       }
     }
-
-    /* FIXME 1.67 */
-//    @Override
-//    public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
-//      return new BaseDocumentExtractingTransform(os) {
-//        @Override
-//        public void outputDocumentInformation() throws PdfException {
-//          // Intentionally left blank
-//        }
-//      };
-//    }
-    /* end FIXME 1.67 */
     
+    @Override
+    public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au,
+        OutputStream os) {
+      return new BaseDocumentExtractingTransform(os) {
+        
+        @Override
+        public void outputDocumentInformation() throws PdfException {
+          // do not output anything, rather than unset all fields
+        }
+      };
+    }
   }
   
   private class NormalizingExtractingPdfFilterFactory extends ExtractingPdfFilterFactory {
@@ -464,5 +354,4 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         return in;
     }
   }
-
 }

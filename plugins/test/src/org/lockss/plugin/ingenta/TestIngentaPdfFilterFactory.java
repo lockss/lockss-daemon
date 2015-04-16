@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,9 +64,10 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 /* 42 */ "q 1 0 0 1 0 0 cm /Xf1 Do Q"
 // ---- end PDF stream ----
     ));
-    assertTrue(worker.result);
-    assertEquals(21, worker.beginIndex); // inclusive
-    assertEquals(34, worker.endIndex); // inclusive
+    assertTrue(worker.getResult());
+    assertEquals(21, worker.getBegin()); // inclusive
+    assertEquals(34, worker.getEnd()); // inclusive
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "q " +
@@ -86,7 +87,8 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 "q 1 0 0 1 0 0 cm /Xf1 Do Q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDf stream ----
 "q " +
@@ -110,7 +112,7 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 "q 1 0 0 1 0 0 cm /Xf1 Do Q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
   }
   
   public void testPacificAffairsWorker() throws Exception {
@@ -137,9 +139,10 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 /* 51 */ "q 1 0 0 1 0 0 cm /Xf1 Do Q"
 // ---- send PDF stream ----
     ));
-    assertTrue(worker.result);
-    assertEquals(21, worker.beginIndex);
-    assertEquals(43, worker.endIndex);
+    assertTrue(worker.getResult());
+    assertEquals(21, worker.getBegin());
+    assertEquals(43, worker.getEnd());
+    
     // Example: http://api.ingentaconnect.com/content/paaf/paaf/2013/00000086/00000003/art00006?crawler=true 11/25/14
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
@@ -168,9 +171,10 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 /* 67 */ "Q"
 // ---- send PDF stream ----
     ));
-    assertTrue(worker.result);
-    assertEquals(15, worker.beginIndex);
-    assertEquals(37, worker.endIndex);
+    assertTrue(worker.getResult());
+    assertEquals(15, worker.getBegin());
+    assertEquals(37, worker.getEnd());
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "q " +
@@ -198,7 +202,8 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 "Q"
 // ---- send PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "q " +
@@ -224,7 +229,7 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 "Q"
 // ---- send PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
   }  
   
   /*
@@ -232,6 +237,51 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
    */
   public void testWhiteHorsePressWorker() throws Exception {
     WhiteHorsePressWorker worker = new WhiteHorsePressWorker();
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+/* 00 */ "q\n" +
+/* 01 */ "0.86275 0.86275 0.86275 rg\n" +
+/* 05 */ "/Xi0 10 Tf\n" +
+/* 08 */ "BT\n" +
+/* 09 */ "1 0 0 1 188.79 25 Tm\n" +
+/* 16 */ "/Xi0 10 Tf\n" +
+/* 19 */ "(? = username)Tj\n" +
+/* 21 */ "1 0 0 1 149.33 15 Tm\n" +
+/* 28 */ "($REMOTE_ASSR = IP address)Tj\n" +
+/* 30 */ "1 0 0 1 126.53 5 Tm\n" +
+/* 37 */ "(Thu, 16 Apr 2015 00:25:16 = Date & Time)Tj\n" +
+/* 39 */ "ET\n" +
+/* 40 */ "Q\n" +
+/* 41 */ "q\n"
+    ));
+    assertTrue(worker.getResult());
+    assertEquals(8, worker.getBegin()); // inclusive
+    assertEquals(39, worker.getEnd()); // inclusive
+    
+    worker.process(MockPdfTokenStream.parse(
+/* 00 */ "q\n" + 
+/* 01 */ "BT\n" + 
+/* 02 */ "36 624 Td\n" + 
+/* 05 */ "ET\n" + 
+/* 06 */ "Q\n" + 
+/* 07 */ "0.86275 0.86275 0.86275 rg\n" + 
+/* 11 */ "/F1 10 Tf\n" + 
+/* 14 */ "BT\n" + 
+/* 15 */ "1 0 0 1 188.79 25 Tm\n" + 
+/* 22 */ "/F1 10 Tf\n" + 
+/* 25 */ "(? = username)Tj\n" + 
+/* 27 */ "1 0 0 1 163.49 15 Tm\n" + 
+/* 34 */ "(99.99.99.99 = IP address)Tj\n" + 
+/* 36 */ "1 0 0 1 125.42 5 Tm\n" + 
+/* 43 */ "(Tue, 16 Sep 2014 08:41:35 = Date & Time)Tj\n" + 
+/* 45 */ "ET\n" + 
+/* 46 */ "q 1 0 0 1 0 0 cm /Xf1 Do Q\n"
+// ---- end PDF stream ----
+    ));
+    assertTrue(worker.getResult());
+    assertEquals(14, worker.getBegin()); // inclusive
+    assertEquals(45, worker.getEnd()); // inclusive
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 /* 00 */ "q " +
@@ -250,9 +300,10 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 /* 41 */ "q"
 // ---- end PDF stream ----
     ));
-    assertTrue(worker.result);
-    assertEquals(8, worker.beginIndex); // inclusive
-    assertEquals(39, worker.endIndex); // inclusive
+    assertTrue(worker.getResult());
+    assertEquals(8, worker.getBegin()); // inclusive
+    assertEquals(39, worker.getEnd()); // inclusive
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "q " +
@@ -271,7 +322,8 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 "q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "q " +
@@ -290,7 +342,8 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 "q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "q " +
@@ -307,7 +360,7 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 "q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.result);
+    assertFalse(worker.getResult());
   }
   
 }
