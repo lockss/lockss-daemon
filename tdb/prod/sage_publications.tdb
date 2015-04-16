@@ -10717,7 +10717,7 @@
         au < released ; 2012 ; Electronic News Volume 6 ; 6 >
         au < manifest ; 2013 ; Electronic News Volume 7 ; 7 >
         au < manifest ; 2014 ; Electronic News Volume 8 ; 8 >
-        au < expected ; 2015 ; Electronic News Volume 9 ; 9 >
+        au < manifest ; 2015 ; Electronic News Volume 9 ; 9 >
 
       }
 
@@ -10963,7 +10963,7 @@
         au < released ; 2012 ; Environment and Urbanization Volume 24 ; 24 >
         au < manifest ; 2013 ; Environment and Urbanization Volume 25 ; 25 >
         au < manifest ; 2014 ; Environment and Urbanization Volume 26 ; 26 >
-        au < expected ; 2015 ; Environment and Urbanization Volume 27 ; 27 >
+        au < manifest ; 2015 ; Environment and Urbanization Volume 27 ; 27 >
 
       }
 
@@ -15395,7 +15395,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2014 ; History of Science Volume 52 ; 52 >
-      au < expected ; 2015 ; History of Science Volume 53 ; 53 >
+      au < manifest ; 2015 ; History of Science Volume 53 ; 53 >
 
     }
 
@@ -17117,7 +17117,7 @@
         au < released ; 2012 ; International Criminal Justice Review Volume 22 ; 22 >
         au < manifest ; 2013 ; International Criminal Justice Review Volume 23 ; 23 >
         au < manifest ; 2014 ; International Criminal Justice Review Volume 24 ; 24 >
-        au < expected ; 2015 ; International Criminal Justice Review Volume 25 ; 25 >
+        au < manifest ; 2015 ; International Criminal Justice Review Volume 25 ; 25 >
 
       }
 
@@ -17831,7 +17831,7 @@
         au < released ; 2012 ; The International Journal of Lower Extremity Wounds Volume 11 ; 11 >
         au < manifest ; 2013 ; The International Journal of Lower Extremity Wounds Volume 12 ; 12 >
         au < manifest ; 2014 ; The International Journal of Lower Extremity Wounds Volume 13 ; 13 >
-        au < expected ; 2015 ; The International Journal of Lower Extremity Wounds Volume 14 ; 14 >
+        au < manifest ; 2015 ; The International Journal of Lower Extremity Wounds Volume 14 ; 14 >
 
       }
 
@@ -25899,7 +25899,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < manifest ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 >
         au < manifest ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 >
-        au < expected ; 2015 ; Journal of Land and Rural Studies Volume 3 ; 3 >
+        au < manifest ; 2015 ; Journal of Land and Rural Studies Volume 3 ; 3 >
 
       }
 
@@ -27870,7 +27870,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Journal of Research in International Education Volume 11 ; 11 >
         au < manifest ; 2013 ; Journal of Research in International Education Volume 12 ; 12 >
         au < manifest ; 2014 ; Journal of Research in International Education Volume 13 ; 13 >
-        au < expected ; 2015 ; Journal of Research in International Education Volume 14 ; 14 >
+        au < manifest ; 2015 ; Journal of Research in International Education Volume 14 ; 14 >
 
       }
 
@@ -28036,7 +28036,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 >
         au < manifest ; 2013 ; Journal of Research on Leadership Education Volume 8 ; 8 >
         au < manifest ; 2014 ; Journal of Research on Leadership Education Volume 9 ; 9 >
-        au < expected ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 >
+        au < manifest ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 >
 
       }
 
@@ -28467,7 +28467,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Journal of South Asian Development Volume 7 ; 7 >
         au < manifest ; 2013 ; Journal of South Asian Development Volume 8 ; 8 >
         au < manifest ; 2014 ; Journal of South Asian Development Volume 9 ; 9 >
-        au < expected ; 2015 ; Journal of South Asian Development Volume 10 ; 10 >
+        au < manifest ; 2015 ; Journal of South Asian Development Volume 10 ; 10 >
 
       }
 
@@ -29088,7 +29088,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 >
-      au < expected ; 2015 ; Journal for the History of Astronomy Volume 46 ; 46 >
+      au < manifest ; 2015 ; Journal for the History of Astronomy Volume 46 ; 46 >
 
     }
 
@@ -30091,7 +30091,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Journal of Visual Culture Volume 11 ; 11 >
         au < manifest ; 2013 ; Journal of Visual Culture Volume 12 ; 12 >
         au < manifest ; 2014 ; Journal of Visual Culture Volume 13 ; 13 >
-        au < expected ; 2015 ; Journal of Visual Culture Volume 14 ; 14 >
+        au < manifest ; 2015 ; Journal of Visual Culture Volume 14 ; 14 >
 
       }
 
@@ -33617,7 +33617,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 >
       au < exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 >
       au < manifest ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 >
-      au < expected ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 >
+      au < manifest ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 >
 
   }
 
@@ -38233,7 +38233,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Review of Market Integration Volume 3 ; 3 >
         au < released ; 2012 ; Review of Market Integration Volume 4 ; 4 >
         au < manifest ; 2013 ; Review of Market Integration Volume 5 ; 5 >
-        au < expected ; 2014 ; Review of Market Integration Volume 6 ; 6 >
+        au < manifest ; 2014 ; Review of Market Integration Volume 6 ; 6 >
         au < expected ; 2015 ; Review of Market Integration Volume 7 ; 7 >
 
       }

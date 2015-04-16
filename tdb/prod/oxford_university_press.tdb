@@ -1451,7 +1451,7 @@
     au < exists ; 1996 ; Annals of the Entomological Society of America Volume 89 ; 89 >
     au < exists ; 1997 ; Annals of the Entomological Society of America Volume 90 ; 90 >
     au < exists ; 1998 ; Annals of the Entomological Society of America Volume 91 ; 91 >
-    au < exists ; 1999 ; Annals of the Entomological Society of America Volume 92 ; 92 >
+    au < manifest ; 1999 ; Annals of the Entomological Society of America Volume 92 ; 92 >
     au < exists ; 2000 ; Annals of the Entomological Society of America Volume 93 ; 93 >
     au < exists ; 2001 ; Annals of the Entomological Society of America Volume 94 ; 94 >
     au < exists ; 2002 ; Annals of the Entomological Society of America Volume 95 ; 95 >
@@ -1467,7 +1467,7 @@
     au < exists ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 >
     au < exists ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 >
     au < exists ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 >
-    au < expected ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 >
+    au < manifest ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 >
 
   }
 
@@ -4581,7 +4581,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Contemporary Women's Writing Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Contemporary Women's Writing Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 >
 
     }
 
@@ -5504,7 +5504,7 @@
     au < exists ; 2012 ; Environmental Entomology Volume 41 ; 41 >
     au < exists ; 2013 ; Environmental Entomology Volume 42 ; 42 >
     au < exists ; 2014 ; Environmental Entomology Volume 43 ; 43 >
-    au < expected ; 2015 ; Environmental Entomology Volume 44 ; 44 >
+    au < manifest ; 2015 ; Environmental Entomology Volume 44 ; 44 >
 
   }
 
@@ -10919,15 +10919,15 @@
     au < exists ; 2004 ; JAMIA Volume 11 ; 11 >
     au < exists ; 2005 ; JAMIA Volume 12 ; 12 >
     au < exists ; 2006 ; JAMIA Volume 13 ; 13 >
-    au < exists ; 2007 ; JAMIA Volume 14 ; 14 >
+    au < manifest ; 2007 ; JAMIA Volume 14 ; 14 >
     au < exists ; 2008 ; JAMIA Volume 15 ; 15 >
     au < exists ; 2009 ; JAMIA Volume 16 ; 16 >
-    au < exists ; 2010 ; JAMIA Volume 17 ; 17 >
-    au < exists ; 2011 ; JAMIA Volume 18 ; 18 >
-    au < exists ; 2012 ; JAMIA Volume 19 ; 19 >
-    au < exists ; 2013 ; JAMIA Volume 20 ; 20 >
-    au < exists ; 2014 ; JAMIA Volume 21 ; 21 >
-    au < expected ; 2015 ; JAMIA Volume 22 ; 22 >
+    au < manifest ; 2010 ; JAMIA Volume 17 ; 17 >
+    au < manifest ; 2011 ; JAMIA Volume 18 ; 18 >
+    au < manifest ; 2012 ; JAMIA Volume 19 ; 19 >
+    au < manifest ; 2013 ; JAMIA Volume 20 ; 20 >
+    au < manifest ; 2014 ; JAMIA Volume 21 ; 21 >
+    au < manifest ; 2015 ; JAMIA Volume 22 ; 22 >
 
   }
 
@@ -11824,8 +11824,8 @@
     au < exists ; 2011 ; Journal of Economic Entomology Volume 104 ; 104 >
     au < exists ; 2012 ; Journal of Economic Entomology Volume 105 ; 105 >
     au < exists ; 2013 ; Journal of Economic Entomology Volume 106 ; 106 >
-    au < exists ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 >
-    au < exists ; 2015 ; Journal of Economic Entomology Volume 108 ; 108 >
+    au < manifest ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 >
+    au < manifest ; 2015 ; Journal of Economic Entomology Volume 108 ; 108 >
 
   }
 
@@ -14895,7 +14895,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Journal of Theological Studies Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Journal of Theological Studies Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 >
 
     }
 
@@ -16292,9 +16292,9 @@
     param[base_url] = http://monist.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; The Monist Volume 96 ; 96 >
+    au < manifest ; 2013 ; The Monist Volume 96 ; 96 >
     au < exists ; 2014 ; The Monist Volume 97 ; 97 >
-    au < exists ; 2015 ; The Monist Volume 98 ; 98 >
+    au < manifest ; 2015 ; The Monist Volume 98 ; 98 >
 
   }
 
