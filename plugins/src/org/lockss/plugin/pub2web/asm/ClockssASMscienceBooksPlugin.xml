@@ -91,7 +91,7 @@
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>1,"^%scontent/book/%s", base_url, doi</string>
       <string>1,"^%scontent/%s", base_url, doi</string>
-      <string>2,"^%sdeliver/fulltext/%s/[^?/]+\.html\?itemId=[^&amp;]+&amp;mimeType=html&amp;isFastTrackArticle=$", base_url, doi</string>
+      <string>2,"^%sdeliver/fulltext/%s/[^?/]+\.html\?itemId=[^&amp;]+&amp;mimeType=html(&amp;isFastTrackArticle=)?$", base_url, doi</string>
       <string>1,"^%sdeliver/fulltext/%s", base_url, doi</string>
       <string>1,"^%sdocserver(/ahah)?/fulltext/%s", base_url, doi</string>
     </list>
@@ -100,11 +100,12 @@
     <string>au_substance_url_pattern</string>
     <!-- examples
       pdf of book - will be available if a full text tab is available
-      http://www.asmscience.org/deliver/fulltext/10.1128/9781555816896/9781555815370_Chap05.pdf?itemId=/content/book/10.1128/9781555816896.ch05&mimeType=pdf&isFastTrackArticle=
+      http://www.asmscience.org/deliver/fulltext/10.1128/9781555816896/9781555815370_Chap05.pdf?itemId=/content/book/10.1128/9781555816896.ch05&mimeType=pdf
         which redirects to docserver but we capture only the original URL because of one-time arguments on the docserver version
+        we normalize off the "&isFastTrackArticle=" suffix
     -->
     <list>
-      <string>"^%sdeliver/fulltext/%s.*\.pdf(\?itemId=[^&amp;]+&amp;mimeType=[^&amp;]+&amp;isFastTrackArticle=)?$", base_url, doi</string>
+      <string>"^%sdeliver/fulltext/%s.*\.pdf(\?itemId=[^&amp;]+&amp;mimeType=[^&amp;]+)?$", base_url, doi</string>
     </list>
   </entry>
   <!--  au_crawl_depth is 1...the start url is the book landing page  -->
