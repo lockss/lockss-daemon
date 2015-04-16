@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>102</string>
+    <string>103</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>28</string>
+        <string>29</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -140,6 +140,10 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20HtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20HtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_crawl_url_comparator_factory</string>
