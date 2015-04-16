@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,6 +50,10 @@ import org.lockss.plugin.*;
 public class PsychiatryOnlineMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(PsychiatryOnlineMetadataExtractorFactory.class);
   
+  private static final String TITLE = "title";
+  private static final String AUTHOR = "author";
+  private static final String DOI = "doi";
+  
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType)
@@ -63,9 +67,9 @@ public class PsychiatryOnlineMetadataExtractorFactory implements FileMetadataExt
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("title", MetadataField.FIELD_PUBLICATION_TITLE);
-      tagMap.put("author", MetadataField.FIELD_AUTHOR);
-      tagMap.put("doi", MetadataField.FIELD_DOI);
+      tagMap.put(TITLE, MetadataField.FIELD_PUBLICATION_TITLE);
+      tagMap.put(AUTHOR, MetadataField.FIELD_AUTHOR);
+      tagMap.put(DOI, MetadataField.FIELD_DOI);
     }
     
     @Override
@@ -76,19 +80,19 @@ public class PsychiatryOnlineMetadataExtractorFactory implements FileMetadataExt
       String url = cu.getUrl();
       
       if        (url.contains("resourceID=5")) {
-        am.putRaw("title", "The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition)");
-        am.putRaw("author", "Edited by; Robert E. Hales, M.D.; M.B.A.; Stuart C. Yudofsky, M.D.");
-        am.putRaw("doi", "10.1176/appi.books.9781585622689");
+        am.putRaw(TITLE, "The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition)");
+        am.putRaw(AUTHOR, "Edited by; Robert E. Hales, M.D.; M.B.A.; Stuart C. Yudofsky, M.D.");
+        am.putRaw(DOI, "10.1176/appi.books.9781585622689");
       } else if (url.contains("resourceID=7")) {
-        am.putRaw("title", "Essentials of Clinical Psychopharmacology, Second Edition");
-        am.putRaw("author", "Edited by; Alan F. Schatzberg, M.D.; Charles B. Nemeroff, M.D., Ph.D.");
-        am.putRaw("doi", "10.1176/appi.books.9781585623167");
+        am.putRaw(TITLE, "Essentials of Clinical Psychopharmacology, Second Edition");
+        am.putRaw(AUTHOR, "Edited by; Alan F. Schatzberg, M.D.; Charles B. Nemeroff, M.D., Ph.D.");
+        am.putRaw(DOI, "10.1176/appi.books.9781585623167");
       } else if (url.contains("resourceID=29")) {
-        am.putRaw("title", "Manual of Clinical Psychopharmacology, Sixth Edition");
-        am.putRaw("author", "Alan F. Schatzberg, M.D.; Jonathan O. Cole, M.D.; Charles DeBattista, D.M.H., M.D.");
-        am.putRaw("doi", "10.1176/appi.books.9781585622825");
+        am.putRaw(TITLE, "Manual of Clinical Psychopharmacology, Sixth Edition");
+        am.putRaw(AUTHOR, "Alan F. Schatzberg, M.D.; Jonathan O. Cole, M.D.; Charles DeBattista, D.M.H., M.D.");
+        am.putRaw(DOI, "10.1176/appi.books.9781585622825");
       } else {
-        am.putRaw("title", "Metadata not available");
+        am.putRaw(TITLE, "Metadata not available");
         am.putRaw("metadata", "not available: see plugins/src/org/lockss/" +
             "plugin/psychiatryonline/PsychiatryOnlineMetadataExtractorFactory.java");
       }
