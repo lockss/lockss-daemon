@@ -19,7 +19,7 @@
 
       au < released ; 2012 ; 1 ; Abakós Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Abakós Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Abakós Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; Abakós Volume 2014 ; 2014 ; >
 
   }
 
@@ -113,7 +113,7 @@
       au < released ; 2011 ; 12 ; Cadernos de História Volume 2011 [issn 2237-8871] ; 2011 ; >
       au < released ; 2012 ; 13 ; Cadernos de História Volume 2012 [issn 2237-8871] ; 2012 ; >
       au < released ; 2013 ; 14 ; Cadernos de História Volume 2013 [issn 2237-8871] ; 2013 ; >
-      au < manifest ; 2014 ; 15 ; Cadernos de História Volume 2014 [issn 2237-8871] ; 2014 ; >
+      au < testing ; 2014 ; 15 ; Cadernos de História Volume 2014 [issn 2237-8871] ; 2014 ; >
 
   }
 
@@ -130,7 +130,7 @@
 
       au < released ; 2012 ; 1 ; Conjuntura Internacional Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Conjuntura Internacional Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Conjuntura Internacional Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; Conjuntura Internacional Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 4 ; Conjuntura Internacional Volume 2015 ; 2015 ; >
 
   }
@@ -169,7 +169,7 @@
       au < released ; 2011 ; 3 ; Revista da Faculdade Mineira de Direito Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Revista da Faculdade Mineira de Direito Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 5 ; Revista da Faculdade Mineira de Direito Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 6 ; Revista da Faculdade Mineira de Direito Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 6 ; Revista da Faculdade Mineira de Direito Volume 2014 ; 2014 ; >
 
   }
 
@@ -188,7 +188,7 @@
       au < released ; 2011 ; 2 ; Revista Eletrônica do Curso de Direito Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; Revista Eletrônica do Curso de Direito Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; Revista Eletrônica do Curso de Direito Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 5 ; Revista Eletrônica do Curso de Direito Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 5 ; Revista Eletrônica do Curso de Direito Volume 2014 ; 2014 ; >
 
   }
 
@@ -230,7 +230,7 @@
       au < released ; 2011 ; 8 ; Revista Economia & Gestão Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 9 ; Revista Economia & Gestão Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 10 ; Revista Economia & Gestão Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 11 ; Revista Economia & Gestão Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 11 ; Revista Economia & Gestão Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 12 ; Revista Economia & Gestão Volume 2015 ; 2015 ; >
 
   }
@@ -248,7 +248,7 @@
 
       au < released ; 2012 ; 1 ; Enfermagem Revista Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Enfermagem Revista Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Enfermagem Revista Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; Enfermagem Revista Volume 2014 ; 2014 ; >
 
   }
 
@@ -264,7 +264,7 @@
       param[journal_id] = estudosinternacionais
 
       au < released ; 2013 ; 1 ; Estudos Internacionais: Revista de Relações Internacionais da PUC Minas Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 2 ; Estudos Internacionais: Revista de Relações Internacionais da PUC Minas Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 2 ; Estudos Internacionais: Revista de Relações Internacionais da PUC Minas Volume 2014 ; 2014 ; >
 
   }
 
@@ -311,7 +311,7 @@
       au < released ; 2011 ; 5 ; Caderno de Geografia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Caderno de Geografia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Caderno de Geografia Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Caderno de Geografia Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 8 ; Caderno de Geografia Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 9 ; Caderno de Geografia Volume 2015 ; 2015 ; >
 
   }
@@ -357,7 +357,7 @@
       au < released ; 2011 ; 10 ; Horizonte Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 11 ; Horizonte Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Horizonte Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 13 ; Horizonte Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 13 ; Horizonte Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 14 ; Horizonte Volume 2015 ; 2015 ; >
 
   }
@@ -378,7 +378,7 @@
       au < released ; 2011 ; 3 ; Pedagogia em Ação Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Pedagogia em Ação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 5 ; Pedagogia em Ação Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 6 ; Pedagogia em Ação Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 6 ; Pedagogia em Ação Volume 2014 ; 2014 ; >
 
   }
 
@@ -396,7 +396,7 @@
       au < released ; 2011 ; 1 ; Percurso Acadêmico Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Percurso Acadêmico Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 3 ; Percurso Acadêmico Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 4 ; Percurso Acadêmico Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 4 ; Percurso Acadêmico Volume 2014 ; 2014 ; >
 
   }
 
@@ -423,7 +423,7 @@
       au < released ; 2011 ; 10 ; Psicologia em Revista Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 11 ; Psicologia em Revista Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Psicologia em Revista Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 13 ; Psicologia em Revista Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 13 ; Psicologia em Revista Volume 2014 ; 2014 ; >
 
   }
 
@@ -442,7 +442,7 @@
       au < released ; 2011 ; 2 ; Sapere Aude Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; Sapere Aude Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; Sapere Aude Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 5 ; Sapere Aude Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 5 ; Sapere Aude Volume 2014 ; 2014 ; >
 
   }
 
@@ -463,7 +463,7 @@
       au < released ; 2011 ; 4 ; Scripta Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; Scripta Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Scripta Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 7 ; Scripta Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 7 ; Scripta Volume 2014 ; 2014 ; >
 
   }
 
@@ -480,7 +480,7 @@
 
       au < released ; 2012 ; 1 ; Sinapse Múltipla Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Sinapse Múltipla Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Sinapse Múltipla Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; Sinapse Múltipla Volume 2014 ; 2014 ; >
 
   }
 
