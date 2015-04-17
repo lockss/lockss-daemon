@@ -17,10 +17,12 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = criacaoecritica
 
-    au < manifest ; 2010 ; 1 ; Revista Criação & Crítica Volume 1 ; 2010 >
-    au < released ; 2011 ; 2 ; Revista Criação & Crítica Volume 2 ; 2011 >
-    au < released ; 2012 ; 3 ; Revista Criação & Crítica Volume 3 ; 2012 >
-    au < manifest ; 2013 ; 4 ; Revista Criação & Crítica Volume 4 ; 2013 >
+    au < manifest ; 2009 ; 1 ; Revista Criação & Crítica Volume 1 ; 2009 >
+    au < manifest ; 2010 ; 2 ; Revista Criação & Crítica Volume 2 ; 2010 >
+    au < released ; 2011 ; 3 ; Revista Criação & Crítica Volume 3 ; 2011 >
+    au < released ; 2012 ; 4 ; Revista Criação & Crítica Volume 4 ; 2012 >
+    au < manifest ; 2013 ; 5 ; Revista Criação & Crítica Volume 5 ; 2013 >
+    au < manifest ; 2014 ; 6 ; Revista Criação & Crítica Volume 6 ; 2014 >
   
   }
 
@@ -35,10 +37,12 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
-    au < manifest ; 2010 ; 1 ; Revista de História Volume 1 ; 2010 >
-    au < released ; 2011 ; 2 ; Revista de História Volume 2 ; 2011 >
-    au < released ; 2012 ; 3 ; Revista de História Volume 3 ; 2012 >
-    au < manifest ; 2013 ; 4 ; Revista de História Volume 4 ; 2013 >
+    au < manifest ; 2009 ; 1 ; Revista de História Volume 1 ; 2009 >
+    au < manifest ; 2010 ; 2 ; Revista de História Volume 2 ; 2010 >
+    au < released ; 2011 ; 3 ; Revista de História Volume 3 ; 2011 >
+    au < released ; 2012 ; 4 ; Revista de História Volume 4 ; 2012 >
+    au < manifest ; 2013 ; 5 ; Revista de História Volume 5 ; 2013 >
+    au < manifest ; 2014 ; 6 ; Revista de História Volume 6 ; 2014 >
 
   }
 
@@ -53,10 +57,12 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = estic
 
-    au < manifest ; 2010 ; 1 ; Estílos da Clínica Volume 1 ; 2010 >
-    au < released ; 2011 ; 2 ; Estílos da Clínica Volume 2 ; 2011 >
-    au < released ; 2012 ; 3 ; Estílos da Clínica Volume 3 ; 2012 >
-    au < manifest ; 2013 ; 4 ; Estílos da Clínica Volume 4 ; 2013 >
+    au < manifest ; 2009 ; 1 ; Estílos da Clínica Volume 1 ; 2009 >
+    au < manifest ; 2010 ; 2 ; Estílos da Clínica Volume 2 ; 2010 >
+    au < released ; 2011 ; 3 ; Estílos da Clínica Volume 3 ; 2011 >
+    au < released ; 2012 ; 4 ; Estílos da Clínica Volume 4 ; 2012 >
+    au < manifest ; 2013 ; 5 ; Estílos da Clínica Volume 5 ; 2013 >
+    au < manifest ; 2014 ; 6 ; Estílos da Clínica Volume 6 ; 2014 >
 
   }
 
