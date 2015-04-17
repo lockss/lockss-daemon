@@ -91,7 +91,7 @@
       citation:http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.AID-0003-2012/cite/(bibtex, endnote, plaintext, refworks)
       supporting:http://www.asmscience.org/docserver/preview/fulltext/microbiolspec/2/2/AID-0003-2012-1.gif
       http://www.asmscience.org/docserver/fulltext/microbiolspec/2/6/EHEC-0014-2013-fig1(_thmb)?.gif
-      note that the following table/figure pages don't have the "journal" part of the url
+      note that the following table/figure pages don't have the "/journal/" part of the url
         http://www.asmscience.org/content/microbiolspec/10.1128/microbiolspec.PLAS-0022-2014.fig1
         http://www.asmscience.org/content/microbiolspec/10.1128/microbiolspec.PLAS-0023-2014.T1
       fulltext html 
@@ -107,7 +107,8 @@
       <string>1,"^%scontent/journal/%s/%s/", base_url, journal_id, volume_name</string>
       <string>2,"^%scontent/journal/%s/[0-9]{2}\.[0-9]{4}/[^?]+\?term=.*&amp;db=pubmed$", base_url, journal_id</string>
       <string>1,"^%scontent/journal/%s/[0-9]{2}\.[0-9]{4}/", base_url, journal_id</string>
-      <string>1,"^%scontent/%s/[0-9]{2}\.[0-9]{4}/[^/]+\.(fig|T)[A-Za-z0-9]+$", base_url, journal_id</string>
+      <!--  trying to keep it restricted to media but this may be too limiting -->
+      <string>1,"^%scontent/%s/[0-9]{2}\.[0-9]{4}/[^/]+\.(ufig|fig||tab|T)[A-Za-z0-9-]+$", base_url, journal_id</string>
       <string>2,"^%sdeliver/fulltext/%s/%s/[0-9]+/[^?]+\.html\?itemId=[^&amp;]+&amp;mimeType=html(&amp;isFastTrackArticle=)?$", base_url, journal_id, volume_name</string>
       <string>1,"^%sdeliver/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
       <string>1,"^%sdocserver(/ahah)?/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
@@ -152,7 +153,11 @@
   <entry>
     <string>text/html_crawl_filter_factory</string> 
     <string>org.lockss.plugin.pub2web.asm.AsmHtmlCrawlFilterFactory</string>
-    </entry>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pub2web.asm.AsmUrlNormalizer</string>
+  </entry>      
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.pub2web.asm.AsmUrlConsumerFactory</string>
