@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,6 @@ package org.lockss.plugin.clockss.nap;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -46,7 +45,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(NAPSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(NAPSourceXmlMetadataExtractorFactory.class);
   
   private static SourceXmlSchemaHelper NAPHelper = null;
   
@@ -60,13 +59,6 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
   public class NAPSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
     Logger log = Logger.getLogger(NAPSourceXmlMetadataExtractor.class);
     
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      // this version of this routine is abstract, but should not get called 
-      // because we have the other implementation (with the CachedUrl argument)
-      return null; // will cause a plugin exception to get thrown
-    }
-
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.

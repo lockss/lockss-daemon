@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -101,12 +101,6 @@ extends SourceXmlMetadataExtractorFactory {
       }
     }
 
-    // This version shouldn't get called. Ultimately it will get removed
-    // in favor of the version that takes a CachedUrl argument
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      return null; // cause a plugin exception to get thrown
-    }
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {

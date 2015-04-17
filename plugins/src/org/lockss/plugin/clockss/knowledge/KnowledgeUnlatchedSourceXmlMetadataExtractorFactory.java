@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 public class KnowledgeUnlatchedSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(KnowledgeUnlatchedSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(KnowledgeUnlatchedSourceXmlMetadataExtractorFactory.class);
   private static final String KNOWLEDGE_UNLATCHED_PROVIDER = "Knowledge Unlatched";
   
   private static SourceXmlSchemaHelper MARCHelper = null;
@@ -58,13 +58,6 @@ public class KnowledgeUnlatchedSourceXmlMetadataExtractorFactory extends SourceX
   }
 
   public class KnowledgeSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      // this version of this routine is abstract, but should not get called 
-      // because we have the other implementation (with the CachedUrl argument)
-      return null; // will cause a plugin exception to get thrown
-    }
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {

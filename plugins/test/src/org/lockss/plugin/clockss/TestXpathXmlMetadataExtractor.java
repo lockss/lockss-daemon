@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,7 +56,7 @@ import org.lockss.util.Logger;
 public class TestXpathXmlMetadataExtractor
 extends SourceXmlMetadataExtractorTest {
   
-  private static Logger log = Logger.getLogger(TestXpathXmlMetadataExtractor.class);
+  private static final Logger log = Logger.getLogger(TestXpathXmlMetadataExtractor.class);
 
   private static final Pattern schemaAPATTERN = Pattern.compile("schemaA\\.xml$");
 
@@ -119,12 +119,6 @@ extends SourceXmlMetadataExtractorTest {
   // a basic schema for testing
   private class MyXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
-
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      // Once you have it, just keep returning the same one. It won't change.
-      return new schemaAXmlSchemaHelper();
-    }
 
     // choose the schema based on the URL - for publishers that use > 1
     @Override

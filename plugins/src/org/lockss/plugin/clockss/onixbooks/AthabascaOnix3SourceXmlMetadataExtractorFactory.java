@@ -57,16 +57,6 @@ public class AthabascaOnix3SourceXmlMetadataExtractorFactory extends SourceXmlMe
 
   public class Onix3LongSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
-    /*
-    * This version of the method is abstract and must be implemented but should
-    * be deprecated and ultimately removed in favor of the one that takes a 
-    * CachedUrl
-    */
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      return null; // cause a plugin exception to get thrown
-    }
-
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.

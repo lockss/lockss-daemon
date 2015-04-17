@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,7 +49,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(TaylorAndFrancisSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(TaylorAndFrancisSourceXmlMetadataExtractorFactory.class);
   
   private static SourceXmlSchemaHelper TandFHelper = null;
   private static SourceXmlSchemaHelper TandF16Helper = null;
@@ -69,17 +69,6 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
 
   public class TaylorAndFrancisSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
-    // This must be implemented because it is abstract in the parent
-    // but we don't actually use it. This method is deprecated and will get 
-    // removed later. There is an alternate with a "cu"  
-    // argument which we also override so that we can base the schema on 
-    // URL of the XML.
-    // This publisher was inconsistent in choice of XML schema within the AU
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      return null; //will cause a plugin exception to get thrown
-    }
-    
     
     //In the bulk source we were given, for 2013/UACP and 2013/WJPT, the V16 of
     // UACP had xml files in a schema different from all the others! So this

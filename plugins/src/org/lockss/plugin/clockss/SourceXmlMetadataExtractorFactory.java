@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +55,7 @@ import org.xml.sax.SAXException;
  */
 public abstract class SourceXmlMetadataExtractorFactory
 implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(SourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(SourceXmlMetadataExtractorFactory.class);
 
 
   /**
@@ -104,7 +104,7 @@ implements FileMetadataExtractorFactory {
                 schemaHelper.getArticleNode(), 
                 schemaHelper.getArticleMetaMap());
         // 4. Gather all the metadata in to a list of AM records
-        List<ArticleMetadata> amList = xmlParser.extractMetadataFromDocument(xmlDoc); 
+        List<ArticleMetadata> amList = xmlParser.extractMetadataFromDocument(target,xmlDoc); 
 
         //5. Optional consolidation of duplicate records within one XML file
         // a child plugin can leave the default (no deduplication) or 
@@ -257,39 +257,16 @@ implements FileMetadataExtractorFactory {
      */
     protected Collection<ArticleMetadata> modifyAMList(SourceXmlSchemaHelper helper,
         CachedUrl cu, List<ArticleMetadata> allAMs) {
-        return  getConsolidatedAMList(helper, allAMs);
+        return allAMs; 
     }
     
-/**
- * @deprecated
- */
-    protected Collection<ArticleMetadata> getConsolidatedAMList(SourceXmlSchemaHelper helper,
-        List<ArticleMetadata> allAMs) {
-      return allAMs;
-    }
-
-    /* 
-     * A particular XML extractor might inherit the rest of the base methods
-     * but it MUST implement a definition for a specific schema
-     * This version with no arguments is deprecated in favor of the version that
-     * takes the CachedUrl which can allow for plugins that need to choose
-     * a specific schema based on url
-     * TODO - change all definitions of this version to that with the argument
-     * and remove this abstract method.
-     */
-    protected abstract SourceXmlSchemaHelper setUpSchema();
-
-    // The version of setUpSchema() with no arguments is deprecated in favor 
+    // A particular XML extractor might inherit the rest of the base methods
+    // but it MUST implement a definition for a specific schema
     // of this version. Having the CU can allow a plugin to choose a schema
-    // based on information in the URL.
-    // They can simply disregard the cu if there is only one schema 
-    // See TaylorAndFrancisSourceXmlMetadataExtractor as an example
-    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-      return setUpSchema();
-    }
+    // based on information in the URL. They can simply disregard the cu if there is only one schema 
+    // See TaylorAndFrancisSourceXmlMetadataExtractor as an example where it varies based on CU
+    protected abstract SourceXmlSchemaHelper setUpSchema(CachedUrl cu);
     
-    // The version of setUpSchema() with no arguments is deprecated in favor 
-    // one of the versions that takes an argument. 
     // This version allows for decisions between schemas based on information
     // somewhere within the xml doc. 
     // They can simply disregard the argument if there is only one schema

@@ -129,15 +129,6 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
       TarContentsMap = new HashMap<String, String>();
     }
 
-    /*
-     * This version of the method is abstract and must be implemented but should
-     * be deprecated and ultimately removed in favor of the one that takes a 
-     * CachedUrl
-     */
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      return null; // cause a plugin exception to get thrown
-    }
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
@@ -302,7 +293,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
             new XPathXmlMetadataParser(null, 
                 top_node,
                 ElsevierDTD5XmlSchemaHelper.articleLevelMDMap,
-                false).extractMetadataFromCu(mdCu);
+                false).extractMetadataFromCu(MetadataTarget.Any(), mdCu);
         /*
          * There should only be ONE top_node per main.xml; don't verify
          * but just access first one.

@@ -43,7 +43,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 public class TangramSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(TangramSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(TangramSourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper tangramHelper = null;
 
@@ -55,13 +55,6 @@ public class TangramSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
   }
 
   public static class TangramSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
-    // this version shouldn't get called. It will ultimately get removed
-    // in favor of the version that takes a CachedUrl
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      return null; // cause a plugin exception to get thrown
-    }
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {

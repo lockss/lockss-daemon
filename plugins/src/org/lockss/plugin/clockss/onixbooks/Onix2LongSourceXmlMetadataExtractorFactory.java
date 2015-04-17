@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,7 +46,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 public class Onix2LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(Onix2LongSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(Onix2LongSourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper Onix2Helper = null;
 
@@ -58,16 +58,6 @@ public class Onix2LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
   }
 
   public class Onix3LongSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
-    
-    // This form of the method (with no arguments) is abstract and must
-    // be implemented, but should not be called. It is deprecated and should
-    // ultimately go away. Use instead the version with the CachedUrl argument
-    //
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-        return null; // this will cause a plugin exception to get thrown
-    }
 
     
     @Override

@@ -167,35 +167,7 @@ public class XPathXmlMetadataParser  {
       String articleNode, 
       Map<String, XPathValue> articleMap)
           throws XPathExpressionException {
-    gXPathList = new XPathInfo[getMapSize(globalMap)];
-    aXPathList = new XPathInfo[getMapSize(articleMap)];
-    articlePath = null;
-    doXmlFiltering = false; // default behavior
-
-    XPath xpath = XPathFactory.newInstance().newXPath();
-    if (globalMap != null) {
-      int i = 0;
-      for (Map.Entry<String, XPathValue> entry : globalMap.entrySet()) {
-        gXPathList[i] = new XPathInfo(entry.getKey(), 
-            xpath.compile(entry.getKey()),
-            entry.getValue());
-        i++;
-      }
-    }
-
-    if (articleMap != null) {
-      int i = 0;
-      for (Map.Entry<String, XPathValue> entry : articleMap.entrySet()) {
-        aXPathList[i] = new XPathInfo(entry.getKey(), 
-            xpath.compile(entry.getKey()),
-            entry.getValue());
-        i++;
-      }
-    }
-
-    if (articleNode != null) {
-      articlePath = xpath.compile(articleNode);
-    }
+    setXmlParsingSchema(globalMap, articleNode, articleMap);
   }
 
   /*
@@ -275,14 +247,6 @@ public class XPathXmlMetadataParser  {
     return doXmlFiltering;
   }
 
-  /**
-   * @deprecated Use {@link #isDoXmlFiltering()} instead.
-   */
-  @Deprecated
-  public boolean getDoXmlFiltering() {
-    return isDoXmlFiltering();
-  }
-
   public void setDoXmlFiltering(boolean doXmlFiltering) {
     this.doXmlFiltering = doXmlFiltering;
   }
@@ -295,27 +259,12 @@ public class XPathXmlMetadataParser  {
   }
 
   /**
-   * A wrapper for backwards compatability - allow plugins to use default behavior
-   * This is now replaced by extractMetadataFromCu(cu)
-   * @param target - not used 
-   * @param cu the CachedUrl for the XML source file
-   * @return list of ArticleMetadata objects; one per record in the XML
-   * @throws IOException
-   * @throws SAXException 
-   */
-  @Deprecated
-  public List<ArticleMetadata> extractMetadata(MetadataTarget target, CachedUrl cu)
-      throws IOException, SAXException {
-    return extractMetadataFromCu(cu);
-  }
-
-  /**
    * Extract metadata from the XML Document
    * using the constructor-set xPath definitions.
    * @param cu the CachedUrl for the XML source file
    * @return list of ArticleMetadata objects; one per record in the XML
    */
-  public List<ArticleMetadata> extractMetadataFromDocument(Document doc)
+  public List<ArticleMetadata> extractMetadataFromDocument(MetadataTarget target, Document doc)
   {
 
     if((gXPathList == null) || (aXPathList == null)) {
@@ -383,7 +332,7 @@ public class XPathXmlMetadataParser  {
    * @throws IOException
    * @throws SAXException 
    */
-  public List<ArticleMetadata> extractMetadataFromCu(CachedUrl cu)
+  public List<ArticleMetadata> extractMetadataFromCu(MetadataTarget target, CachedUrl cu)
       throws IOException, SAXException {
     if (cu == null) {
       throw new IllegalArgumentException("Null CachedUrl");
@@ -395,7 +344,7 @@ public class XPathXmlMetadataParser  {
     Document doc = null;
     // this could throw IO or SAX exception - handled  upstream
     doc = createDocumentTree(cu);
-    return extractMetadataFromDocument(doc);
+    return extractMetadataFromDocument(target, doc);
   }
 
   /*

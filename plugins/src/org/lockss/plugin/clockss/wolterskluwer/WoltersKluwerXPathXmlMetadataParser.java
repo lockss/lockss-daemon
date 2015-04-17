@@ -50,7 +50,7 @@ import org.lockss.util.Constants;
 
 
 public class WoltersKluwerXPathXmlMetadataParser extends XPathXmlMetadataParser {
-  private static Logger log = Logger.getLogger(WoltersKluwerXPathXmlMetadataParser.class);
+  private static final Logger log = Logger.getLogger(WoltersKluwerXPathXmlMetadataParser.class);
 
   public WoltersKluwerXPathXmlMetadataParser(Map<String, XPathValue> globalMap,
       String articleNode, Map<String, XPathValue> articleMap)

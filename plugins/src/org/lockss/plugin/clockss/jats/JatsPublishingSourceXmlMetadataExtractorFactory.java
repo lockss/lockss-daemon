@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,6 @@ package org.lockss.plugin.clockss.jats;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -53,7 +52,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
  */
 
 public class JatsPublishingSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(JatsPublishingSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(JatsPublishingSourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
@@ -65,16 +64,6 @@ public class JatsPublishingSourceXmlMetadataExtractorFactory extends SourceXmlMe
   }
 
   public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
-    /*
-    * This version of the method is abstract and must be implemented but should
-    * be deprecated and ultimately removed in favor of the one that takes a 
-    * CachedUrl
-    */
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      return null; // cause a plugin exception to get thrown
-    }
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {

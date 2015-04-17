@@ -51,7 +51,7 @@ import org.xml.sax.SAXException;
 
 
 public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(WoltersKluwerSourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(WoltersKluwerSourceXmlMetadataExtractorFactory.class);
   private static SourceXmlSchemaHelper WKHelper = null;
 
   @Override
@@ -62,13 +62,6 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
   }
 
   public static class WoltersKluwerSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
-    // this version shouldn't get called. It will ultimately get removed
-    // in favor of the version that takes a CachedUrl
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema() {
-      return null; // cause a plugin exception to get thrown
-    }
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
@@ -104,7 +97,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
         List<ArticleMetadata> amList = 
             new WoltersKluwerXPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(), 
                 schemaHelper.getArticleNode(), 
-                schemaHelper.getArticleMetaMap()).extractMetadata(target, cu);
+                schemaHelper.getArticleMetaMap()).extractMetadataFromCu(target, cu);
 
         //3. Optional consolidation of duplicate records within one XML file
         // a child plugin can leave the default (no deduplication) or 
@@ -113,7 +106,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
         // 3. Consolidate identical records based on DeDuplicationXPathKey
         // consolidating as specified by the consolidateRecords() method
        
-        Collection<ArticleMetadata> AMCollection = getConsolidatedAMList(schemaHelper,
+        Collection<ArticleMetadata> AMCollection = modifyAMList(schemaHelper, cu,
             amList);
 
         // 4. check, cook, and emit every item in resulting AM collection (list)
