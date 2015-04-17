@@ -98,6 +98,7 @@ implements SourceXmlSchemaHelper {
   static public final String common_title = "title";
   static public final String common_author_group = "author-group";
   static public final String common_dochead = "dochead/textfn";
+  static public final String common_copyright = "copyright[@year]";
 
   /* 
    * Date values look like this: 2014-09-22T00:54:27Z
@@ -180,7 +181,7 @@ implements SourceXmlSchemaHelper {
     // but cooked with the rest
     cookMap.put(common_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(common_author_group, 
-        new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));  
+        new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));
   }
 
   /*
@@ -318,6 +319,7 @@ implements SourceXmlSchemaHelper {
     articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_title, TITLE_VALUE);
     articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_author_group, AUTHOR_VALUE);
     articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_dochead, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_copyright, XmlDomMetadataExtractor.TEXT_VALUE);
   }
   /*
    * END OF DEFINITION OF SCHEMA FOR LOW-LEVEL ARTICLE XML

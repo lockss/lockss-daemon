@@ -33,6 +33,7 @@
 package org.lockss.plugin.taylorandfrancis;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -110,7 +111,7 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
     // use the filename in the XML file and when it's not available (UACP V16)
     // send back the name of the current XML file with .pdf instead of .xml
     @Override
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
       
       String filenameValue = null;
@@ -125,7 +126,7 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
        filenameValue = FilenameUtils.getBaseName(cu.getUrl()) + ".pdf";
       }
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      ArrayList<String> returnList = new ArrayList<String>();
+      List<String> returnList = new ArrayList<String>();
       returnList.add(cuBase + filenameValue);
       return returnList;
     }

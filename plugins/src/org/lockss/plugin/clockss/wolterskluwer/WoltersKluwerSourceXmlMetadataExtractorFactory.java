@@ -143,7 +143,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
    * @param oneAM
    * @return
    */
-  protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
+  protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
       CachedUrl cu,
       ArticleMetadata oneAM) {
     final String ZERO = "0";
@@ -163,7 +163,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
       filenameValue = "NOFILEINMETADATA"; // we expected a value, but got none
     }
     log.debug3("filename("+filenameValue.length()+") "+ filenameValue);    
-    ArrayList<String> returnList = new ArrayList<String>();
+    List<String> returnList = new ArrayList<String>();
     String cuBase = FilenameUtils.getFullPath(cu.getUrl());
     // MUST add "0" to the front (ONLY if the total number of chars < 24)
     // to make it match the pdf in the zipfile.  GRRR

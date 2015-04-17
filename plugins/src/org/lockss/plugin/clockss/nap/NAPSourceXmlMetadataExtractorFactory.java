@@ -33,6 +33,8 @@
 package org.lockss.plugin.clockss.nap;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
@@ -77,16 +79,16 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
     
     // TODO - if we get full text XML without a matching pdf we must still emit
     @Override
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
       // filename is just the same a the XML filename but with .stamped.pdf 
       // instead of .xml
       String url_string = cu.getUrl();
-      String filenameValue = FilenameUtils.getBaseName(url_string);
-      String cuBase = FilenameUtils.getFullPath(url_string);
-      ArrayList<String> returnList = new ArrayList<String>();
-      returnList.add(cuBase + filenameValue + ".stamped.pdf");
+      String pdfName = url_string.substring(0,url_string.length() - 3) + "stamped.pdf";
+      log.debug3("pdfName is " + pdfName);
+      List<String> returnList = new ArrayList<String>();
+      returnList.add(pdfName);
       return returnList;
     }
     

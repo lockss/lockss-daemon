@@ -33,6 +33,7 @@
 package org.lockss.plugin.clockss.onixbooks;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
@@ -84,12 +85,12 @@ public class Onix2LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
      * with suffix either .pdf or .epub
      */
     @Override
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
       String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      ArrayList<String> returnList = new ArrayList<String>();
+      List<String> returnList = new ArrayList<String>();
       returnList.add(cuBase + filenameValue + ".pdf");
       returnList.add(cuBase + filenameValue + ".epub");
       return returnList;

@@ -33,6 +33,8 @@
 package org.lockss.plugin.clockss.onixbooks;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -80,13 +82,13 @@ public class AthabascaOnix3SourceXmlMetadataExtractorFactory extends SourceXmlMe
      * isn't the naming convention for this plugin
      */
     @Override
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
   
       String xmlFilename = cu.getUrl();
       String filenameValue = xmlFilename.substring(0,xmlFilename.length() - 3) + "pdf";
-      ArrayList<String> returnList = new ArrayList<String>();
+      List<String> returnList = new ArrayList<String>();
       returnList.add(filenameValue);
       return returnList;
     }

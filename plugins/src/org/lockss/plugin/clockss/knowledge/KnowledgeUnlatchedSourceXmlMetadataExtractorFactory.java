@@ -33,6 +33,8 @@
 package org.lockss.plugin.clockss.knowledge;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -77,16 +79,15 @@ public class KnowledgeUnlatchedSourceXmlMetadataExtractorFactory extends SourceX
     
     // TODO - if we get full text XML without a matching pdf we must still emit
     @Override
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      // filename is just the same a the XML filename but with .stamped.pdf 
-      // instead of .xml
+      // filename is just the same a the XML filename but with
       String url_string = cu.getUrl();
-      String filenameValue = FilenameUtils.getBaseName(url_string);
-      String cuBase = FilenameUtils.getFullPath(url_string);
-      ArrayList<String> returnList = new ArrayList<String>();
-      returnList.add(cuBase + filenameValue + ".pdf");
+      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("pdfName is " + pdfName);
+      List<String> returnList = new ArrayList<String>();
+      returnList.add(pdfName);
       return returnList;
     }
     

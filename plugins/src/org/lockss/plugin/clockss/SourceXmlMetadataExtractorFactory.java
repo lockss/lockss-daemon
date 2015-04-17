@@ -33,7 +33,6 @@
 package org.lockss.plugin.clockss;
 
 import org.apache.commons.io.FilenameUtils;
-import org.apache.cxf.common.util.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -46,6 +45,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
+import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 
@@ -87,24 +87,26 @@ implements FileMetadataExtractorFactory {
       try {
 
         SourceXmlSchemaHelper schemaHelper;
-        // 1. figure out which XmlMetadataExtractorHelper class to use to get
-        // the schema specific information
-        if ((schemaHelper = setUpSchema(cu)) == null) {
+        // 1. Create the xmlParser without setting a schema yet 
+        // XPathXmlMetadataParser is not thread safe, must be called each time
+        XPathXmlMetadataParser xmlParser = new XPathXmlMetadataParser(getDoXmlFiltering());
+        // 2. create an XML document tree using the parser
+        Document xmlDoc = xmlParser. createDocumentTree(cu);
+        // 3. Set an xml parsing schema on the parser before extracting metadata
+        // do this *after* creating the document tree in order to handle those cases
+        // where one publisher/plugin handles schema variants (eg. books vs journals)
+        // either based on information in the URL or the Document
+        if ((schemaHelper = setUpSchema(cu, xmlDoc)) == null) {
           log.debug("Unable to set up XML schema. Cannot extract from XML");
           throw new PluginException("XML schema not set up for " + cu.getUrl());
         }     
-
-        // 2. Gather all the metadata in to a list of AM records
-        // XPathXmlMetadataParser is not thread safe, must be called each time
-        List<ArticleMetadata> amList = 
-            new XPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(), 
+        xmlParser.setXmlParsingSchema(schemaHelper.getGlobalMetaMap(), 
                 schemaHelper.getArticleNode(), 
-                schemaHelper.getArticleMetaMap(),
-                getDoXmlFiltering()).extractMetadata(target, cu);
+                schemaHelper.getArticleMetaMap());
+        // 4. Gather all the metadata in to a list of AM records
+        List<ArticleMetadata> amList = xmlParser.extractMetadataFromDocument(xmlDoc); 
 
-
- 
-        //3. Optional consolidation of duplicate records within one XML file
+        //5. Optional consolidation of duplicate records within one XML file
         // a child plugin can leave the default (no deduplication) or 
         // AMCollection pointing to just a subset of the full
         // AM list
@@ -112,7 +114,7 @@ implements FileMetadataExtractorFactory {
         // now deprecated in favor of this more general method which takes a cu as well.
         Collection<ArticleMetadata> AMCollection = modifyAMList(schemaHelper, cu, amList);
 
-        // 4. check, cook, and emit every item in resulting AM collection (list)
+        // 6.. check, cook, and emit every item in resulting AM collection (list)
         for ( ArticleMetadata oneAM : AMCollection) {
           if (preEmitCheck(schemaHelper, cu, oneAM)) {
             oneAM.cook(schemaHelper.getCookMap());
@@ -170,7 +172,7 @@ implements FileMetadataExtractorFactory {
 
       log.debug3("in SourceXmlMetadataExtractor preEmitCheck");
       
-      ArrayList<String> filesToCheck;
+      List<String> filesToCheck;
 
       // If no files get returned in the list, nothing to check
       if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
@@ -219,7 +221,7 @@ implements FileMetadataExtractorFactory {
      * @param oneAM
      * @return
      */
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
       
@@ -284,6 +286,16 @@ implements FileMetadataExtractorFactory {
     // See TaylorAndFrancisSourceXmlMetadataExtractor as an example
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       return setUpSchema();
+    }
+    
+    // The version of setUpSchema() with no arguments is deprecated in favor 
+    // one of the versions that takes an argument. 
+    // This version allows for decisions between schemas based on information
+    // somewhere within the xml doc. 
+    // They can simply disregard the argument if there is only one schema
+    // See ElsevierDTD5SourceXmlMetadataExtractor as an example.
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document doc) {
+      return setUpSchema(cu);
     }
 
   }

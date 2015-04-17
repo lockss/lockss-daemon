@@ -33,6 +33,7 @@
 package org.lockss.plugin.associationforcomputingmachinery;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
@@ -76,7 +77,7 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
     }
     
     @Override
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
       
@@ -99,7 +100,7 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       }
       
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      ArrayList<String> returnList = new ArrayList<String>();
+      List<String> returnList = new ArrayList<String>();
       // default version is just the filename associated with the key, in this directory
       returnList.add(cuBase + filenameValue);
       return returnList;

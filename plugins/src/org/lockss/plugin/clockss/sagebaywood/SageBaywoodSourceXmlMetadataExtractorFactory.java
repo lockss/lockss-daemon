@@ -33,7 +33,8 @@
 package org.lockss.plugin.clockss.sagebaywood;
 
 import java.util.ArrayList;
-import org.apache.commons.io.FilenameUtils;
+import java.util.List;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -88,13 +89,13 @@ public class SageBaywoodSourceXmlMetadataExtractorFactory extends SourceXmlMetad
     /* In this case, the filename is the same as the xml filename
      */
     @Override
-    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
       String url_string = cu.getUrl();
       String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
       log.debug3("pdfName is " + pdfName);
-      ArrayList<String> returnList = new ArrayList<String>();
+      List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
       return returnList;
     }

@@ -59,6 +59,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -141,6 +142,38 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
+      if (ElsevierDTD5PublishingHelper == null) {
+        ElsevierDTD5PublishingHelper = new ElsevierDTD5XmlSchemaHelper();
+      }
+      return ElsevierDTD5PublishingHelper;
+    }
+    
+    /*
+     * Choose a schema depending on information in the loaded xml Document tree
+     * For Elsevier, this could be a 
+     *     journal article schema
+     *     book schema
+     *     ...
+     * There is no obvious attribute, but there is the top node
+     * <dataset schema-version="2015.1" xmlns="foo" xsi:schemaLocation="blah"
+     * 
+     * xmlns="http://www.elsevier.com/xml/schema/transport/ew-xcr/book-2015.1/book-projects"
+     * xsi:schemLocation="http://www.elsevier.com/xml/schema/transport/ew-xcr/book-2015.1/book-projects
+     * has <dataset>/<dataset-content>/<book-project> node
+     * 
+     * xmlns="http://www.elsevier.com/xml/schema/transport/ew-xcr/journal-2015.1/issues" 
+     * xsi:schemaLocation="http://www.elsevier.com/xml/schema/transport/ew-xcr/journal-2015.1/issues
+     * has <dataset>/<dataset-content>/<journal-issue> node  
+     *   as well as <dataset>/<dataset-content>/<journal-item> nodes                                                       
+     *
+     * xmlns="http://www.elsevier.com/xml/schema/transport/ew-xcr/journal-2015.1/items" 
+     * xsi:schemaLocation="http://www.elsevier.com/xml/schema/transport/ew-xcr/journal-2015.1/items                                                           
+     * has <dataset>/<dataset-content>/<journal-item> 
+     *   with no <journal-issue> node
+     */
+    
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
       if (ElsevierDTD5PublishingHelper == null) {
         ElsevierDTD5PublishingHelper = new ElsevierDTD5XmlSchemaHelper();
       }
@@ -269,7 +302,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
             new XPathXmlMetadataParser(null, 
                 top_node,
                 ElsevierDTD5XmlSchemaHelper.articleLevelMDMap,
-                false).extractMetadata(MetadataTarget.Any(), mdCu);
+                false).extractMetadataFromCu(mdCu);
         /*
          * There should only be ONE top_node per main.xml; don't verify
          * but just access first one.
@@ -291,6 +324,11 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
           rawVal = oneAM.getRaw(ElsevierDTD5XmlSchemaHelper.common_author_group);
           if ( rawVal != null) {
             thisAM.putRaw(ElsevierDTD5XmlSchemaHelper.common_author_group, rawVal);
+          }
+          // in case the top file didn't have a date for the issue, use this article's copyright
+          rawVal = oneAM.getRaw(ElsevierDTD5XmlSchemaHelper.common_copyright);
+          if ( rawVal != null) {
+            thisAM.putRaw(ElsevierDTD5XmlSchemaHelper.common_copyright, rawVal);
           }
         } else {
           log.debug3("no md extracted from " + mdCu.getUrl());
@@ -358,6 +396,24 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
       return  allAMs;
     }
   }
+
+  
+  /*
+   * There are a few cases where a date isn't provided in the top file. 
+   * In this case fall back to the common copyright date if its there in the raw
+   * data
+   */
+  protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+      CachedUrl cu, ArticleMetadata thisAM) {
+
+    log.debug3("in postEmitProcess");
+    //If we didn't get a valid date, check the common_copyright                                                                                                                                 
+    if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+      log.debug3("using the main.xml copyright date");
+      thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(ElsevierDTD5XmlSchemaHelper.common_copyright));
+    }
+  }
+
 
   /* 
    * Create a list of strings, one for each unique tar within this tarset.

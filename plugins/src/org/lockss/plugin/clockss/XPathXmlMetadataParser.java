@@ -77,7 +77,7 @@ import org.apache.commons.lang3.tuple.Pair;
  *
  */
 public class XPathXmlMetadataParser  {
-  
+
   private static Logger log = Logger.getLogger(XPathXmlMetadataParser.class);
 
 
@@ -90,14 +90,14 @@ public class XPathXmlMetadataParser  {
    *
    */
   protected class XPathInfo {
-    
+
     String xKey;
     XPathExpression xExpr;
     XPathValue xVal;
 
     public XPathInfo(String keyVal,
-                     XPathExpression exprVal,
-                     XPathValue evalVal) {
+        XPathExpression exprVal,
+        XPathValue evalVal) {
       xKey = keyVal;
       xExpr = exprVal;
       xVal = evalVal;
@@ -105,16 +105,16 @@ public class XPathXmlMetadataParser  {
 
   }
 
-  protected final XPathInfo[] gXPathList;
-  
-  protected final XPathInfo[] aXPathList;
-  
+  protected  XPathInfo[] gXPathList;
+
+  protected  XPathInfo[] aXPathList;
+
   protected XPathExpression articlePath;
-  
+
   protected boolean doXmlFiltering;
 
   /**
-   *  Create an XPath based XML parser that will extract the textContent of
+   * This class is an XPath based XML parser that will extract the textContent of
    * the nodes specified by the XPath expressions by applying the 
    * corresponding NodeValue evaluators.
    * <p>
@@ -128,15 +128,45 @@ public class XPathXmlMetadataParser  {
    *     If the articleNodeDef is set, the articleMap paths should be relative 
    *       to that (not from the top of the document)
    *
+   * The constructor can be called with no schema arguments, 
+   * allowing for delayed setting of the schema, after the document tree has been
+   * created. This allows for switching between schemas (books vs. journals) under one publisher.
+   * 
+   * There are convenience (legacy) constructors that allow for the setting of the schema information at construction.
+   */
+
+
+  /* 
+   * Bare bones constructor that allows for delayed setting of the schema
+   */
+  public XPathXmlMetadataParser() {
+    gXPathList = null;
+    aXPathList = null;
+    articlePath = null;
+    doXmlFiltering = false; // default behavior
+  }
+  
+  /* 
+   * Bare bones constructor that allows for delayed setting of the schema
+   * but sets up the document filtering
+   */
+  public XPathXmlMetadataParser(boolean doXmlFiltering) {
+    this();
+    setDoXmlFiltering(doXmlFiltering);
+   }
+  
+  /*       
+   * Convenience constructor (legacy) when only one schema is used across the plugin       
+   *
    * @param globalMap xPaths for data that should be applied across entire XML
    * @param articleNode defines a path to the top of an individual article node
    * @param articleMap path relative to articleNode to apply to each article
    * @throws XPathExpressionException
    */
   public XPathXmlMetadataParser(Map<String, XPathValue> globalMap, 
-                                String articleNode, 
-                                Map<String, XPathValue> articleMap)
-      throws XPathExpressionException {
+      String articleNode, 
+      Map<String, XPathValue> articleMap)
+          throws XPathExpressionException {
     gXPathList = new XPathInfo[getMapSize(globalMap)];
     aXPathList = new XPathInfo[getMapSize(articleMap)];
     articlePath = null;
@@ -147,8 +177,8 @@ public class XPathXmlMetadataParser  {
       int i = 0;
       for (Map.Entry<String, XPathValue> entry : globalMap.entrySet()) {
         gXPathList[i] = new XPathInfo(entry.getKey(), 
-                                      xpath.compile(entry.getKey()),
-                                      entry.getValue());
+            xpath.compile(entry.getKey()),
+            entry.getValue());
         i++;
       }
     }
@@ -157,12 +187,12 @@ public class XPathXmlMetadataParser  {
       int i = 0;
       for (Map.Entry<String, XPathValue> entry : articleMap.entrySet()) {
         aXPathList[i] = new XPathInfo(entry.getKey(), 
-                                      xpath.compile(entry.getKey()),
-                                      entry.getValue());
+            xpath.compile(entry.getKey()),
+            entry.getValue());
         i++;
       }
     }
-    
+
     if (articleNode != null) {
       articlePath = xpath.compile(articleNode);
     }
@@ -170,14 +200,62 @@ public class XPathXmlMetadataParser  {
 
   /*
    *  A constructor that allows for the xml filtering of the input stream
+   *  This is the convenience (legacy) constructor for when there is only one 
+   *  schema every used by the plugin 
+   *  
+   * @param globalMap xPaths for data that should be applied across entire XML
+   * @param articleNode defines a path to the top of an individual article node
+   * @param articleMap path relative to articleNode to apply to each article
+   * @param doXmlFiltering whether to pre-filter the xml at Document creation
+   * @throws XPathExpressionException
    */
   public XPathXmlMetadataParser(Map<String, XPathValue> globalMap, 
-                                String articleNode, 
-                                Map<String, XPathValue> articleMap,
-                                boolean doXmlFiltering)
-      throws XPathExpressionException {
+      String articleNode, 
+      Map<String, XPathValue> articleMap,
+      boolean doXmlFiltering)
+          throws XPathExpressionException {
     this(globalMap, articleNode, articleMap);
     setDoXmlFiltering(doXmlFiltering);
+  }
+
+
+  
+  public void setXmlParsingSchema(Map<String, XPathValue> globalMap, 
+      String articleNode, 
+      Map<String, XPathValue> articleMap) 
+      throws XPathExpressionException {
+    if (gXPathList != null) {
+      log.warning("Resetting the global XPath list for this file extraction");
+    }
+    if (aXPathList != null) {
+      log.warning("Resetting the article XPath list for this file extraction");
+    }
+    gXPathList = new XPathInfo[getMapSize(globalMap)];
+    XPath xpath = XPathFactory.newInstance().newXPath();
+    if (globalMap != null) {
+      int i = 0;
+      for (Map.Entry<String, XPathValue> entry : globalMap.entrySet()) {
+        gXPathList[i] = new XPathInfo(entry.getKey(), 
+            xpath.compile(entry.getKey()),
+            entry.getValue());
+        i++;
+      }
+    }
+
+    aXPathList = new XPathInfo[getMapSize(articleMap)];
+    if (articleMap != null) {
+      int i = 0;
+      for (Map.Entry<String, XPathValue> entry : articleMap.entrySet()) {
+        aXPathList[i] = new XPathInfo(entry.getKey(), 
+            xpath.compile(entry.getKey()),
+            entry.getValue());
+        i++;
+      }
+    }
+
+    if (articleNode != null) {
+      articlePath = xpath.compile(articleNode);
+    }
   }
 
   /*
@@ -196,7 +274,7 @@ public class XPathXmlMetadataParser  {
   public boolean isDoXmlFiltering() {
     return doXmlFiltering;
   }
-  
+
   /**
    * @deprecated Use {@link #isDoXmlFiltering()} instead.
    */
@@ -217,28 +295,35 @@ public class XPathXmlMetadataParser  {
   }
 
   /**
-   * Extract metadata from the XML source specified by the input stream using
-   * the constructor-set xPath definitions.
-   * @param target 
+   * A wrapper for backwards compatability - allow plugins to use default behavior
+   * This is now replaced by extractMetadataFromCu(cu)
+   * @param target - not used 
    * @param cu the CachedUrl for the XML source file
    * @return list of ArticleMetadata objects; one per record in the XML
    * @throws IOException
    * @throws SAXException 
    */
+  @Deprecated
   public List<ArticleMetadata> extractMetadata(MetadataTarget target, CachedUrl cu)
       throws IOException, SAXException {
-    if (cu == null) {
-      throw new IllegalArgumentException("Null CachedUrl");
-    }
-    if (!cu.hasContent()) {
-      throw new IllegalArgumentException("CachedUrl has no content: " + cu.getUrl());
+    return extractMetadataFromCu(cu);
+  }
+
+  /**
+   * Extract metadata from the XML Document
+   * using the constructor-set xPath definitions.
+   * @param cu the CachedUrl for the XML source file
+   * @return list of ArticleMetadata objects; one per record in the XML
+   */
+  public List<ArticleMetadata> extractMetadataFromDocument(Document doc)
+  {
+
+    if((gXPathList == null) || (aXPathList == null)) {
+      log.warning("The XML schema was not set for this XML Document");
+      return null; // no articles extacted
     }
     List<ArticleMetadata> amList = makeNewAMList();
     ArticleMetadata globalAM = null;
-
-    Document doc = null;
-    // this could throw IO or SAX exception - handled  upstream
-    doc = createDocumentTree(cu);
 
     // no exception thrown but the document wasn't succesfully created
     if (doc == null) return amList; // return empty list
@@ -288,6 +373,29 @@ public class XPathXmlMetadataParser  {
       log.warning("ignoring xpath error - " + e.getMessage());
     }
     return amList;
+  }
+
+  /**
+   * Extract metadata from the XML source specified by the input stream using
+   * the constructor-set xPath definitions.
+   * @param cu the CachedUrl for the XML source file
+   * @return list of ArticleMetadata objects; one per record in the XML
+   * @throws IOException
+   * @throws SAXException 
+   */
+  public List<ArticleMetadata> extractMetadataFromCu(CachedUrl cu)
+      throws IOException, SAXException {
+    if (cu == null) {
+      throw new IllegalArgumentException("Null CachedUrl");
+    }
+    if (!cu.hasContent()) {
+      throw new IllegalArgumentException("CachedUrl has no content: " + cu.getUrl());
+    }
+
+    Document doc = null;
+    // this could throw IO or SAX exception - handled  upstream
+    doc = createDocumentTree(cu);
+    return extractMetadataFromDocument(doc);
   }
 
   /*
@@ -407,7 +515,7 @@ public class XPathXmlMetadataParser  {
     dbf.setFeature("http://apache.org/xml/features/dom/defer-node-expansion", false);
     return dbf;
   }
-  
+
   /**
    * <p>
    * Subclasses can override this method to make and configure a
@@ -431,7 +539,7 @@ public class XPathXmlMetadataParser  {
       throws ParserConfigurationException {
     return dbf.newDocumentBuilder();
   }
-  
+
   /**
    * <p>
    * Subclasses can override this method to make an {@link InputSource} from the
@@ -454,7 +562,7 @@ public class XPathXmlMetadataParser  {
    * @since 1.67
    */
   protected InputSource makeInputSource(CachedUrl cu) throws IOException {
- 
+
     // first create a reader so child classes can 
     // do filtering on the reader if they need to
     Pair<Reader, String> iReaderPair = makeInputSourceReader(cu);
@@ -462,7 +570,7 @@ public class XPathXmlMetadataParser  {
     iSource.setEncoding(iReaderPair.getRight());
     return iSource;
   }
-  
+
   /**
    *  Given a CU for an XML file, load and return the XML as a Document "tree". 
    * @param cu to the XML file
@@ -512,8 +620,8 @@ public class XPathXmlMetadataParser  {
       return cu.getUnfilteredInputStream();
     }
   }
-  
-  
+
+
   /*
    * Return a reader from the inputstream on the CU
    *  - do XML filtering on the stream if the flag is set
@@ -523,7 +631,7 @@ public class XPathXmlMetadataParser  {
    *  return the reader with the charset set
    */
   protected Pair<Reader, String> makeInputSourceReader(CachedUrl cu) throws UnsupportedEncodingException {
-  
+
     String guessed_cset = cu.getEncoding(); // set a default
     try {
       /* 
@@ -535,25 +643,25 @@ public class XPathXmlMetadataParser  {
        *  creates a reader from the inputStream during charset evaluation that
        *  it never uses. 
        */
-     Pair<Reader, String> retInfoPair = CharsetUtil.getCharsetReader(cu.getUnfilteredInputStream());
-     guessed_cset = retInfoPair.getRight();
-     log.debug3("guessed cset is: " + guessed_cset);
-     } catch (IOException ex){
-       log.debug3("Was not able to get a Reader/Charset from util");
-     }
-     Reader inputReader;
-     if (guessed_cset == Constants.ENCODING_UTF_8) {
-       /* this is utf-8, so clear out any initial BOM chars */
-       log.debug3("UTF-8 input stream - remove any BOM chars");
-       BOMInputStream cuInputStream = new BOMInputStream(cu.getUnfilteredInputStream());
-       inputReader = new InputStreamReader(cuInputStream, Constants.ENCODING_UTF_8);
-     } else {
-       log.debug3("Not UTF-8; create reader, possibly doing XML filtering.");
-       inputReader = new InputStreamReader(getInputStreamFromCU(cu), guessed_cset);
-     }
-     return new ImmutablePair<Reader,String>(inputReader, guessed_cset);
+      Pair<Reader, String> retInfoPair = CharsetUtil.getCharsetReader(cu.getUnfilteredInputStream());
+      guessed_cset = retInfoPair.getRight();
+      log.debug3("guessed cset is: " + guessed_cset);
+    } catch (IOException ex){
+      log.debug3("Was not able to get a Reader/Charset from util");
+    }
+    Reader inputReader;
+    if (guessed_cset == Constants.ENCODING_UTF_8) {
+      /* this is utf-8, so clear out any initial BOM chars */
+      log.debug3("UTF-8 input stream - remove any BOM chars");
+      BOMInputStream cuInputStream = new BOMInputStream(cu.getUnfilteredInputStream());
+      inputReader = new InputStreamReader(cuInputStream, Constants.ENCODING_UTF_8);
+    } else {
+      log.debug3("Not UTF-8; create reader, possibly doing XML filtering.");
+      inputReader = new InputStreamReader(getInputStreamFromCU(cu), guessed_cset);
+    }
+    return new ImmutablePair<Reader,String>(inputReader, guessed_cset);
   }
-  
+
   /**
    * A wrapper around ArticleMetadata creation to allow for override
    * @return newly created ArticleMetadata object
