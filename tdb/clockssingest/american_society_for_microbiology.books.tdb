@@ -6,7 +6,7 @@
     info[tester] = 3
 
   >
-    plugin = org.lockss.plugin.asm.ClockssASMscienceBookPlugin
+    plugin = org.lockss.plugin.pub2web.asm.ClockssASMscienceBooksPlugin
     param[base_url] = http://www.asmscience.org/
     implicit < status ; status2 ; year ; isbn ; eisbn ; param[doi] ; name >
 
@@ -25,7 +25,7 @@
       au < exists ; exists ; 1994 ; 9781555810726 ; 9781555818357 ; 10.1128/9781555818357 ; Tuberculosis: Pathogenesis, Protection, and Control > 
       au < exists ; exists ; 1994 ; 9781555810672 ; 9781555818364 ; 10.1128/9781555818364 ; Vibrio cholerae and Cholera > 
       au < exists ; exists ; 1995 ; 9781555810986 ; 9781555818302 ; 10.1128/9781555818302 ; DNA Provirus, The  > 
-      au < exists ; exists ; 1995 ; 9781555810894 ; 9781555818319 ; 10.1128/9781555818319 ; Two-Component-Signal Transduction > 
+      au < testing ; exists ; 1995 ; 9781555810894 ; 9781555818319 ; 10.1128/9781555818319 ; Two-Component-Signal Transduction > 
       au < exists ; exists ; 1995 ; 9781555810924 ; 9781555818326 ; 10.1128/9781555818326 ; Human Enterovirus Infections > 
       au < exists ; exists ; 1995 ; 9781555810733 ; 9781555818333 ; 10.1128/9781555818333 ; tRNA: Structure, Biosynthesis, and Function > 
       au < testing ; exists ; 1998 ; 9781555811440 ; 9781555818265 ; 10.1128/9781555818265 ; Pasteur and Modern Science > 
@@ -54,7 +54,7 @@
       au < exists ; exists ; 2000 ; 9781555811907 ; 9781555818128 ; 10.1128/9781555818128 ; Many Faces, Many Microbes > 
       au < exists ; exists ; 2000 ; 9781555811785 ; 9781555818135 ; 10.1128/9781555818135 ; Biotechnology Explorations > 
       au < exists ; exists ; 2000 ; 9781555811846 ; 9781555818142 ; 10.1128/9781555818142 ; Ribosome, The > 
-      au < exists ; exists ; 2000 ; 9781555811631 ; 9781555818159 ; 10.1128/9781555818159 ; Intimate Strangers  > 
+      au < testing ; exists ; 2000 ; 9781555811631 ; 9781555818159 ; 10.1128/9781555818159 ; Intimate Strangers  > 
       au < exists ; exists ; 2000 ; 9781555811587 ; 9781555818166 ; 10.1128/9781555818166 ; Prokaryotic Development > 
       au < exists ; exists ; 2001 ; 9781555812164 ; 9781555816988 ; 10.1128/9781555816988 ; Emerging Infections 5 > 
       au < exists ; exists ; 2001 ; 9781555812133 ; 9781555818005 ; 10.1128/9781555818005 ; Helicobacter pylori > 
@@ -79,7 +79,7 @@
       au < exists ; exists ; 2003 ; 9781555812317 ; 9781555817817 ; 10.1128/9781555817817 ; Quinolone Antimicrobial Agents, Third Edition > 
       au < exists ; exists ; 2003 ; 9781555812669 ; 9781555817824 ; 10.1128/9781555817824 ; Natural Pathogens of Laboratory Animals: Their Effects on Research > 
       au < exists ; exists ; 2003 ; 9781555812409 ; 9781555817831 ; 10.1128/9781555817831 ; Viral Encephalitis in Humans > 
-      au < exists ; exists ; 2003 ; 9781555812614 ; 9781555817848 ; 10.1128/9781555817848 ; Microbial Pathogenesis and the Intestinal Epithelial Cell > 
+      au < testing ; exists ; 2003 ; 9781555812614 ; 9781555817848 ; 10.1128/9781555817848 ; Microbial Pathogenesis and the Intestinal Epithelial Cell > 
       au < exists ; exists ; 2003 ; 9781555812645 ; 9781555817855 ; 10.1128/9781555817855 ; Microbes: An Invisible Universe > 
       au < exists ; exists ; 2003 ; 9781555812256 ; 9781555817862 ; 10.1128/9781555817862 ; Global Disease Eradication > 
       au < exists ; exists ; 2003 ; 9781555812607 ; 9781555817879 ; 10.1128/9781555817879 ; Granulomatous Infection and Inflammations > 
@@ -110,7 +110,7 @@
       au < exists ; exists ; 2005 ; 9781555813277 ; 9781555817589 ; 10.1128/9781555817589 ; Petroleum Microbiology > 
       au < exists ; exists ; 2005 ; 9781555812393 ; 9781555817596 ; 10.1128/9781555817596 ; Bioremediation > 
       au < exists ; exists ; 2005 ; 9781555813017 ; 9781555818395 ; 10.1128/9781555818395 ; Structural Biology of Bacterial Pathogensis > 
-      au < exists ; exists ; 2005 ; 9781555812386 ; 9781555816490 ; 10.1128/9781555816490 ; Tick-Borne Diseases of Humans > 
+      au < testing ; exists ; 2005 ; 9781555812386 ; 9781555816490 ; 10.1128/9781555816490 ; Tick-Borne Diseases of Humans > 
       au < exists ; exists ; 2005 ; 9781555812980 ; 9781555817602 ; 10.1128/9781555817602 ; Revenge of the Microbes > 
       au < exists ; exists ; 2005 ; 9781555813239 ; 9781555817619 ; 10.1128/9781555817619 ; Colonization of Mucosal Surfaces > 
       au < exists ; exists ; 2005 ; 9781555813093 ; 9781555817626 ; 10.1128/9781555817626 ; Viruses and the Evolution of Life > 
@@ -133,7 +133,7 @@
       au < exists ; exists ; 2006 ; 9781555813420 ; 9781555817541 ; 10.1128/9781555817541 ; Enterobacteria Second Edition, The > 
       au < exists ; exists ; 2006 ; 9781555813451 ; 9781555816520 ; 10.1128/9781555816520 ; Biomedical Scientist as Expert Witness, The > 
       au < exists ; exists ; 2006 ; 9781555813192 ; 9781555816704 ; 10.1128/9781555816704 ; DNA Repair and Mutagensis, Second Edition > 
-      au < exists ; exists ; 2007 ; 9781555814663 ; 9781555816346 ; 10.1128/9781555816346 ; Twelve Diseases that Changed Our World > 
+      au < testing ; exists ; 2007 ; 9781555814663 ; 9781555816346 ; 10.1128/9781555816346 ; Twelve Diseases that Changed Our World > 
       au < exists ; exists ; 2007 ; 9781555814212 ; 9781555815837 ; 10.1128/9781555815837 ; Sex in Fungi: Molecular Determination and Evolutionary Implications > 
       au < exists ; exists ; 2007 ; 9781555812232 ; 9781555817497 ; 10.1128/9781555817497 ; Methods for General and Molecular Microbiology, Third Edition > 
       au < exists ; exists ; 2007 ; 9781555814694 ; 9781555815851 ; 10.1128/9781555815851 ; Virulence Mechanisms of Bacterial Pathogens, Fourth Edition > 
