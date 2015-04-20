@@ -13,19 +13,19 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Intermarium Plugin (Retired in 2014), Base URL %s, Volume %d, Year %d", base_url, volume, year</string>
+    <string>"Intermarium Plugin (legacy), Base URL %s, Volume %d, Year %d", base_url, volume, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Intermarium Plugin (Retired in 2014)</string>
+    <string>Intermarium Plugin (legacy)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
