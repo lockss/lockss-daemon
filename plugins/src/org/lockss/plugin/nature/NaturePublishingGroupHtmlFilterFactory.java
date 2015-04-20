@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,10 +62,10 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
          * Broad area filtering
          */
         // Document header
-        new TagNameFilter("head"),
+        HtmlNodeFilters.tag("head"),
         // Scripting
-        new TagNameFilter("script"),
-        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("noscript"),
         // Header
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "constrain-header"),
         // Right column (advertising, jobs ticker, news ticker...)
@@ -122,20 +122,16 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "comments "),
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^comments "), // (old)
         HtmlNodeFilters.tagWithText("p", "There are currently no comments."),
-        
+        HtmlNodeFilters.comment(),
+
         /*
          * Other
          */
-        // HTML comments (FIXME 1.64)
-        new NodeFilter() {
-          public boolean accept(org.htmlparser.Node node) {
-            return (node instanceof Remark);
-          };
-        },
+
         // Modernized markup of images, significant changes
-        new TagNameFilter("img"),
+        HtmlNodeFilters.tag("img"),
         // Slightly changed search form components
-        new TagNameFilter("input"),
+        HtmlNodeFilters.tag("input"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/search/executeSearch"),
         // ?
         HtmlNodeFilters.tagWithAttribute("div", "class", "baseline-wrapper"),

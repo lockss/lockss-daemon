@@ -9,12 +9,12 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <!--  for JsoupLinkExtractor support -->
-    <string>1.62.0</string>
+    <!--  for JsoupLinkExtractor 1.62 and use of HtmlNodeFilter.comment() 1.64 -->
+    <string>1.64.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>46</string>
+    <string>47</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -180,7 +180,7 @@
   </entry>  
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>clockss_override</string>
