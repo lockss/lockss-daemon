@@ -16012,11 +16012,26 @@
       issnl = 0026-9662
     >
 
-    pluginSuffix = ClockssHighWirePressH20Plugin
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
-    comment[0] = expected to be online on 15 Jan 2015
+    comment[0] = content available from 1890 volume 1 to 1999 volume 82
 
-    au < expected ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
+    au < exists ; exists ; 2000 ; The Monist Volume 83 ; 83 ; >
+    au < exists ; exists ; 2001 ; The Monist Volume 84 ; 84 ; >
+    au < exists ; exists ; 2002 ; The Monist Volume 85 ; 85 ; >
+    au < exists ; exists ; 2003 ; The Monist Volume 86 ; 86 ; >
+    au < exists ; exists ; 2004 ; The Monist Volume 87 ; 87 ; >
+    au < exists ; exists ; 2005 ; The Monist Volume 88 ; 88 ; >
+    au < exists ; exists ; 2006 ; The Monist Volume 89 ; 89 ; >
+    au < exists ; exists ; 2007 ; The Monist Volume 90 ; 90 ; >
+    au < exists ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
+    au < exists ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
+    au < exists ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
+    au < exists ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
+    au < exists ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
+    au < exists ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
+    au < exists ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
+    au < exists ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
 
   }
 
