@@ -30,7 +30,6 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ambi
-      comment[ambi41] = V41 not online yet. 20130406
   
       au < released ; 2000 ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
       au < released ; 2001 ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
@@ -44,8 +43,6 @@
       au < released ; 2009 ; AMBIO: A Journal of the Human Environment Volume 38 ; 38 >
       au < released ; 2010 ; AMBIO: A Journal of the Human Environment Volume 39 ; 39 >
       au < released ; 2011 ; AMBIO: A Journal of the Human Environment Volume 40 ; 40 >
-      au < expected ; 2012 ; AMBIO: A Journal of the Human Environment Volume 41 ; 41 >
-      au < expected ; 2013 ; AMBIO: A Journal of the Human Environment Volume 42 ; 42 >
 
     }
 
