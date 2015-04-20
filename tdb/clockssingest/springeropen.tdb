@@ -428,7 +428,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 >
-        au < expected ; exists ; 2015 ; Earth Perspectives Volume 2 ; 2 >
+        au < manifest ; exists ; 2015 ; Earth Perspectives Volume 2 ; 2 >
   
     }
 
@@ -2197,7 +2197,7 @@
         au < manifest ; exists ; 2012 ; Security Informatics Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Security Informatics Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Security Informatics Volume 3 ; 3 >
-        au < expected ; exists ; 2015 ; Security Informatics Volume 4 ; 4 >
+        au < manifest ; exists ; 2015 ; Security Informatics Volume 4 ; 4 >
   
     }
   

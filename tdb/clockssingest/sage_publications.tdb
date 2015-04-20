@@ -6444,7 +6444,7 @@
       au < finished ; crawling ; 2012 ; Compensation & Benefits Review Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Compensation & Benefits Review Volume 45 ; 45 ; >
       au < crawling ; exists ; 2014 ; Compensation & Benefits Review Volume 46 ; 46 ; >
-      au < expected ; exists ; 2015 ; Compensation & Benefits Review Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2015 ; Compensation & Benefits Review Volume 47 ; 47 ; >
 
     }
 
@@ -9909,7 +9909,7 @@
       au < finished ; frozen ; 2012 ; Environment and Urbanization Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Environment and Urbanization Volume 25 ; 25 ; >
       au < ready ; exists ; 2014 ; Environment and Urbanization Volume 26 ; 26 ; >
-      au < expected ; exists ; 2015 ; Environment and Urbanization Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2015 ; Environment and Urbanization Volume 27 ; 27 ; >
 
     }
 
@@ -15070,7 +15070,7 @@
       au < exists ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 76 ; 76 ; >
       au < exists ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 ; >
       au < exists ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 ; >
-      au < exists ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; >
       au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; >
       au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; >
 
@@ -17951,7 +17951,7 @@
       param[base_url] = http://aia.sagepub.com/
 
       au < ready ; exists ; 2014 ; Journal of Asian Security and International Affairs Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; Journal of Asian Security and International Affairs Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2015 ; Journal of Asian Security and International Affairs Volume 2 ; 2 ; >
 
   }
 
@@ -21725,7 +21725,7 @@
       au < finished ; frozen ; 2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 ; >
       au < zapped ; finished ; 2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
       au < finished ; frozen ; 2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 ; >
-      au < expected ; exists ; 2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 ; >
       au < expected ; exists ; 2015 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 12 ; 12 ; >
 
     }
@@ -23101,7 +23101,7 @@
 
         au < crawling ; exists ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
         au < manifest ; exists ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 ; >
-        au < expected ; exists ; 2015 ; Journal of Land and Rural Studies Volume 3 ; 3 ; >
+        au < manifest ; exists ; 2015 ; Journal of Land and Rural Studies Volume 3 ; 3 ; >
 
       }
 
@@ -26833,7 +26833,7 @@
       au < finished ; frozen ; 2012 ; Journal of Visual Culture Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Visual Culture Volume 12 ; 12 ; >
       au < manifest ; exists ; 2014 ; Journal of Visual Culture Volume 13 ; 13 ; >
-      au < expected ; exists ; 2015 ; Journal of Visual Culture Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2015 ; Journal of Visual Culture Volume 14 ; 14 ; >
 
     }
 
@@ -35838,7 +35838,7 @@
       au < finished ; frozen ; 2012 ; Sexualities Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; Sexualities Volume 16 ; 16 ; >
       au < manifest ; exists ; 2014 ; Sexualities Volume 17 ; 17 ; >
-      au < expected ; exists ; 2015 ; Sexualities Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2015 ; Sexualities Volume 18 ; 18 ; >
 
     }
 
