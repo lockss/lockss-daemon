@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -117,12 +117,10 @@
     <string>au_def_pause_time</string>
     <long>3000</long>
   </entry>
-  <!-- TURN THIS OFF FOR TESTING 
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:pub2web</string>
   </entry>
-  -->  
   <entry>
     <string>text/html_crawl_filter_factory</string> 
     <string>org.lockss.plugin.pub2web.asm.AsmHtmlCrawlFilterFactory</string>
