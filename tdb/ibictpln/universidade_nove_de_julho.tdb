@@ -18,20 +18,20 @@
       param[base_url] = http://www4.uninove.br/ojs/
       param[journal_id] = dialogia
 
-      au < manifest ; 2001 ; 1 ; Dialogia Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 2 ; Dialogia Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 3 ; Dialogia Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 4 ; Dialogia Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 5 ; Dialogia Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 6 ; Dialogia Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 7 ; Dialogia Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 8 ; Dialogia Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 9 ; Dialogia Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 10 ; Dialogia Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 11 ; Dialogia Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 12 ; Dialogia Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 13 ; Dialogia Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 14 ; Dialogia Volume 2014 ; 2014 >
+      au < testing ; 2001 ; 1 ; Dialogia Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 2 ; Dialogia Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 3 ; Dialogia Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 4 ; Dialogia Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 5 ; Dialogia Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 6 ; Dialogia Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 7 ; Dialogia Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 8 ; Dialogia Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 9 ; Dialogia Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 10 ; Dialogia Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 11 ; Dialogia Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 12 ; Dialogia Volume 2012 ; 2012 >
+      au < testing ; 2013 ; 13 ; Dialogia Volume 2013 ; 2013 >
+      au < testing ; 2014 ; 14 ; Dialogia Volume 2014 ; 2014 >
 
   }
 
@@ -116,7 +116,7 @@
       au < released ; 2011 ; 10 ; Prisma Jurídico Volume 2011 ; 2011 >
       au < released ; 2012 ; 11 ; Prisma Jurídico Volume 2012 ; 2012 >
       au < released ; 2013 ; 12 ; Prisma Jurídico Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 13 ; Prisma Jurídico Volume 2014 ; 2014 >
+      au < testing ; 2014 ; 13 ; Prisma Jurídico Volume 2014 ; 2014 >
 
   }
 
