@@ -24,7 +24,7 @@
       au < released ; 2011 ; Entomologica Americana Volume 117 ; 117 >
       au < released ; 2012 ; Entomologica Americana Volume 118 ; 118 >
       au < released ; 2013 ; Entomologica Americana Volume 119 ; 119 >
-      au < manifest ; 2014 ; Entomologica Americana Volume 120 ; 120 >
+      au < testing ; 2014 ; Entomologica Americana Volume 120 ; 120 >
       au < expected ; 2015 ; Entomologica Americana Volume 121 ; 121 >
     }
 
@@ -55,7 +55,6 @@
       param[journal_id] = nynt
       
       comment[continued_by] = 1947-5136 Entomologica Americana after 2007
-      comment[notReady] = metadata not match
   
       au < released ; 2000 ; Journal of the New York Entomological Society Volume 108 ; 108 >
       au < released ; 2001 ; Journal of the New York Entomological Society Volume 109 ; 109 >
