@@ -309,7 +309,7 @@
       au < released ; 2011 ; Critical Studies in Fashion & Beauty Volume 2 ; 2 >
       au < released ; 2012 ; Critical Studies in Fashion & Beauty Volume 3 ; 3 >
       au < released ; 2013 ; Critical Studies in Fashion & Beauty Volume 4 ; 4 >
-      au < manifest ; 2014 ; Critical Studies in Fashion & Beauty Volume 5 ; 5 >
+      au < testing ; 2014 ; Critical Studies in Fashion & Beauty Volume 5 ; 5 >
       au < expected ; 2015 ; Critical Studies in Fashion & Beauty Volume 6 ; 6 >
 
     }
@@ -1757,8 +1757,8 @@
       param[journal_issn] = 2050-4837
       comment[continus] = 1478-0488
      
-      au < manifest ; 2013 ; Studies in Spanish & Latin American Cinemas Volume 10 ; 10 >
-      au < manifest ; 2014 ; Studies in Spanish & Latin American Cinemas Volume 11 ; 11 >
+      au < testing ; 2013 ; Studies in Spanish & Latin American Cinemas Volume 10 ; 10 >
+      au < testing ; 2014 ; Studies in Spanish & Latin American Cinemas Volume 11 ; 11 >
       au < manifest ; 2015 ; Studies in Spanish & Latin American Cinemas Volume 12 ; 12 >
 
     }
