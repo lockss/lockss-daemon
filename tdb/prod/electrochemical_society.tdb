@@ -17,8 +17,19 @@
 
     param[base_url] = http://jes.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[0] = content available from 1931 volume 57 to 1999 volume 146
 
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the Electrochemical Society Volume 157 ; 157 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of the Electrochemical Society Volume 147 ; 147 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of the Electrochemical Society Volume 148 ; 148 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of the Electrochemical Society Volume 149 ; 149 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of the Electrochemical Society Volume 150 ; 150 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of the Electrochemical Society Volume 151 ; 151 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of the Electrochemical Society Volume 152 ; 152 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of the Electrochemical Society Volume 153 ; 153 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of the Electrochemical Society Volume 154 ; 154 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of the Electrochemical Society Volume 155 ; 155 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of the Electrochemical Society Volume 156 ; 156 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of the Electrochemical Society Volume 157 ; 157 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
