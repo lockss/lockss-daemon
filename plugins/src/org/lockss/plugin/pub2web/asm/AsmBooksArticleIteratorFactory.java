@@ -67,11 +67,7 @@ public class AsmBooksArticleIteratorFactory
    * chapter citation page(s):
    *   http://www.asmscience.org/content/book/10.1128/9781555818289.chap1/cite/(bibtex|endnote|plaintext|ris)
    * full-text html:
-   *   /deliver/fulltext/10.1128/9781555818289/chap1.html\\
-   *       ?itemId=/content/book/10.1128/9781555818289.chap1&mimeType=html
-   * full-text xml:
-   *   /deliver/fulltext/10.1128/9781555818289/chap1.xml\\
-   *       ?itemId=/content/book/10.1128/9781555818289.chap1&mimeType=xml
+   *   http://www.asmscience.org/content/book/10.1128/9781555818289.chap1?crawler=true
    *
    */
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";

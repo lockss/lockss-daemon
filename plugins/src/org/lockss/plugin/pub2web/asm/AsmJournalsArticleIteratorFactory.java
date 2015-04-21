@@ -65,10 +65,7 @@ public class AsmJournalsArticleIteratorFactory
    * article citation page(s):
    *   http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.AID-0022-2014/cite/(bibtex|endnote|plaintext|ris)
    * full-text html:
-   *   /deliver/fulltext/
-   * full-text xml:
-   *   /deliver/fulltext/
-   *
+   *   http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.AID-0022-2014?crawler=true
    */
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   
