@@ -38,6 +38,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.jsoup.nodes.Node;
+import org.jsoup.nodes.TextNode;
 import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
@@ -70,7 +71,6 @@ implements LinkExtractorFactory {
   private static final String META_TAG = "meta";
   private static final String NAME_NAME = "name";
   private static final String CONTENT_NAME = "content";
-  private static final String TEXT_NODE = "#text";
 
 
   // and for table of contents article listing
@@ -141,8 +141,8 @@ implements LinkExtractorFactory {
               String figure_table_val = null; 
               // the value is the text of this node
               for (Node tnode : node.childNodes()) {
-                if (tnode.nodeName().equalsIgnoreCase(TEXT_NODE)) {
-                  String full_val = tnode.toString();
+                if (tnode instanceof TextNode) {
+                  String full_val = ((TextNode)tnode).text();
                   figure_table_val = (full_val != null) ? full_val.trim() : null;
                 break;
                 }
@@ -175,8 +175,8 @@ implements LinkExtractorFactory {
           if ( classAttr != null && classAttr.contains(ART_LISTING_CLASS)) {
             String val = null;
             for (Node tnode : node.childNodes()) {
-              if (tnode.nodeName().equalsIgnoreCase(TEXT_NODE)) {
-                val = tnode.toString();
+              if (tnode instanceof TextNode) {
+                val = ((TextNode)tnode).text();
                 break;
               }
             }
