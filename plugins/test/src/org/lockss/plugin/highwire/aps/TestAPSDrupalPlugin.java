@@ -178,7 +178,7 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     shouldCacheTest(ROOT_URL + "content/303/2/X3.", true, au);
     
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_data/node:433/1", true, au);
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_info/node:433/1", true, au);
+//    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_info/node:433/1", true, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_pdf/node:433/1", true, au);
     
     shouldCacheTest(ROOT_URL + "highwire/markup/58493/expansion", true, au);
