@@ -628,9 +628,9 @@
     au < HighWirePressH20Plugin ; released ; 1962 ; British Journal of Ophthalmology Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 1963 ; British Journal of Ophthalmology Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; testing ; 1964 ; British Journal of Ophthalmology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1965 ; British Journal of Ophthalmology Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 1966 ; British Journal of Ophthalmology Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 1967 ; British Journal of Ophthalmology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 1965 ; British Journal of Ophthalmology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1966 ; British Journal of Ophthalmology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 1967 ; British Journal of Ophthalmology Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; testing ; 1968 ; British Journal of Ophthalmology Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; testing ; 1969 ; British Journal of Ophthalmology Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; testing ; 1970 ; British Journal of Ophthalmology Volume 54 ; 54 >
@@ -640,18 +640,18 @@
     au < HighWirePressH20Plugin ; testing ; 1974 ; British Journal of Ophthalmology Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; testing ; 1975 ; British Journal of Ophthalmology Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; testing ; 1976 ; British Journal of Ophthalmology Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; British Journal of Ophthalmology Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; British Journal of Ophthalmology Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; British Journal of Ophthalmology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; British Journal of Ophthalmology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; British Journal of Ophthalmology Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; British Journal of Ophthalmology Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; British Journal of Ophthalmology Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; British Journal of Ophthalmology Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; testing ; 1981 ; British Journal of Ophthalmology Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; British Journal of Ophthalmology Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; British Journal of Ophthalmology Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; British Journal of Ophthalmology Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; British Journal of Ophthalmology Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; British Journal of Ophthalmology Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; British Journal of Ophthalmology Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; testing ; 1985 ; British Journal of Ophthalmology Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; testing ; 1986 ; British Journal of Ophthalmology Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; testing ; 1987 ; British Journal of Ophthalmology Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; testing ; 1988 ; British Journal of Ophthalmology Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; ready ; 1988 ; British Journal of Ophthalmology Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; testing ; 1989 ; British Journal of Ophthalmology Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; testing ; 1990 ; British Journal of Ophthalmology Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; British Journal of Ophthalmology Volume 75 ; 75 >
@@ -2265,9 +2265,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       param[base_url] = http://qualitysafety.bmj.com/
       comment[continues] = 0963-8172
       
-      au < HighWirePressH20Plugin ; testing ; 2008 ; BMJ Quality & Safety Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; BMJ Quality & Safety Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; BMJ Quality & Safety Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Quality & Safety Volume 18 ; 18 > #unable to populate permission
+      au < HighWirePressH20Plugin ; notReady ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 > #unable to populate permission
       au < HighWirePressH20Plugin ; testing ; 2011 ; BMJ Quality & Safety Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; testing ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 >
