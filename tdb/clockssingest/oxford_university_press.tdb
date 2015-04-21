@@ -22432,6 +22432,21 @@
   {
 
     title <
+      name = Virus Evolution ;
+      eissn = 2057-1577 ;
+      issnl = 2057-1577
+    >
+
+    param[base_url] = http://ve.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+    au < exists ; exists ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Work, Aging and Retirement ;
       issn = 2054-4642 ;
       eissn = 2054-4650 ;
@@ -22441,8 +22456,7 @@
     param[base_url] = http://workar.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < manifest ; exists ; 2014 ; Work, Aging and Retirement Volume 1 ; 1 ; >
-    au < expected ; exists ; 2015 ; Work, Aging and Retirement Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 ; >
 
   }
 
