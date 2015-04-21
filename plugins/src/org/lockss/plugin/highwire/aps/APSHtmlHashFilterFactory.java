@@ -51,6 +51,8 @@ public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
       // HtmlNodeFilters.tagWithAttributeRegex("div", "id", "hw-.{40}popup"),
       // <div class="highwire-cite-access">
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cite-access"),
+      // No need to hash any comments; displayed or adding
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comments"),
   };
   
   @Override
