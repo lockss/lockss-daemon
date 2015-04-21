@@ -87,7 +87,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; released ; 2013 ; Cancer Immunology Research Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 2014 ; Cancer Immunology Research Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 2014 ; Cancer Immunology Research Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; manifest ; 2015 ; Cancer Immunology Research Volume 3 ; 3 >
 
     }
@@ -114,7 +114,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; Cancer Prevention Research Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Cancer Prevention Research Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Cancer Prevention Research Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 2014 ; Cancer Prevention Research Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 2014 ; Cancer Prevention Research Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; manifest ; 2015 ; Cancer Prevention Research Volume 8 ; 8 >
 
     }
