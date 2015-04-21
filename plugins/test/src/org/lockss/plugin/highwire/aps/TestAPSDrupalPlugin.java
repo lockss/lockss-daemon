@@ -176,7 +176,11 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     shouldCacheTest(ROOT_URL + "content/303/2/X3.article-info", true, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.figures-only", true, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.", true, au);
+    
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_data/node:433/1", true, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_info/node:433/1", true, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_pdf/node:433/1", true, au);
+    
     shouldCacheTest(ROOT_URL + "highwire/markup/58493/expansion", true, au);
     shouldCacheTest(ROOT_URL + "highwire/article_citation_preview/19403", true, au);
     
@@ -186,8 +190,6 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     shouldCacheTest(ROOT_URL + "content/early/2012/11/09/ex.00163.2012", false, au);
     shouldCacheTest(ROOT_URL + "lookup/external-ref?link_type=GEN", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_art/node:433/1", false, au);
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_pdf/node:433/1", false, au);
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_info/node:433/1", false, au);
     
     shouldCacheTest("http://cdn-site.elifesciences.org/content/elife/1/e00003/F1.medium.gif", true, au);
     shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", true, au);

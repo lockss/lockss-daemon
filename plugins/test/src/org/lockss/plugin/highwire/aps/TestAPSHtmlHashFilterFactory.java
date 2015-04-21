@@ -190,6 +190,14 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "</html>9";
   private static final String withoutSidebar = "A<html> </html>9";
   
+  private static final String withComments = "A<html> " +
+      "  <div class=\"panel-pane pane-highwire-article-comments-list\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    No eLetters have been published for this article.  </div>\n" + 
+      "  </div>\n" + 
+      "</html>9";
+  private static final String withoutComments = "A<html> </html>9";
+  
   
   @Override
   public void testFiltering() throws Exception {
@@ -207,6 +215,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
     
     assertFilterToString(withToolTip, withoutToolTip);
     assertFilterToString(withSidebar, withoutSidebar);
+    assertFilterToString(withComments, withoutComments);
     // HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
     
   }
