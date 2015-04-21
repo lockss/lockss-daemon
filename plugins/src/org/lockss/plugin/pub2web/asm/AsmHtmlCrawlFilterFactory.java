@@ -48,7 +48,8 @@ public class AsmHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("li",  "class", "indexLinkContainer"),
     HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),
 
-
+    // they don't seem internal, but just to be safe, don't crawl links within reference containers
+    HtmlNodeFilters.tagWithAttribute("div",  "class", "refcontainer"),
     
   };
 
