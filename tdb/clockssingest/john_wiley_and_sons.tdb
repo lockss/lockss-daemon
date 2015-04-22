@@ -19,9 +19,10 @@
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; frozen ; 2011 ; Wiley Source Content 2011 ; 2011 >
-    au < readySource ; crawling ; 2012 ; Wiley Source Content 2012 ; 2012 >
-    au < readySource ; crawling ; 2013 ; Wiley Source Content 2013 ; 2013 >
+    au < readySource ; frozen ; 2012 ; Wiley Source Content 2012 ; 2012 >
+    au < readySource ; frozen ; 2013 ; Wiley Source Content 2013 ; 2013 >
     au < readySource ; crawling ; 2014 ; Wiley Source Content 2014 ; 2014 >
+    au < testing ; exists ; 2015 ; Wiley Source Content 2015 ; 2015 >
     
   }
 
