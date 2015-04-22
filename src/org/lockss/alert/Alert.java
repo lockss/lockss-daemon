@@ -122,6 +122,10 @@ public class Alert {
     cAlert("CrawlCollectedNoSubstantialContent").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
+  public static final Alert CRAWL_UNLINKED_SUBSTANCE =
+    cAlert("NoSubstantialContentLinked").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
   public static final Alert NEW_CONTENT =
     cAlert("NewContent").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
