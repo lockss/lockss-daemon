@@ -254,6 +254,21 @@ public class SubstanceChecker {
     checkSubstanceUrl(url);
   }
 
+  /** Iterate through AU until substance found. */ 
+  public void findSubstance() {
+    if (isStateFullyDetermined()) {
+      log.debug("findSubstance() already known");
+      return;
+    }
+    log.debug("findSubstance() searching");
+    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+      checkSubstance(cu);
+      if (isStateFullyDetermined()) {
+	return;
+      }
+    }
+  }
+
   private void foundSubstanceUrl(String url) {
     switch (hasSubstance) {
     case No:
