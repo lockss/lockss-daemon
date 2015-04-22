@@ -170,6 +170,23 @@ public class MockArchivalUnit implements ArchivalUnit {
     }
   }
 
+  /** Set up the CuIterator in this MockAU's AuCachedUrlSet to iterator
+   * over all the CUs in cuHash.  Note only the CuIterator is currently set
+   * up, not the other iterators. */
+  public CachedUrlSet populateAuCachedUrlSet() {
+    MockCachedUrlSet mcus = (MockCachedUrlSet)cus;
+    if (cus == null) {
+      cus = makeCachedUrlSet(new AuCachedUrlSetSpec());
+    }
+    Collection<String> urls = new TreeSet(cuHash.keySet());
+    Collection culist = new ArrayList();
+    for (String url : urls) {
+      culist.add(cuHash.get(url));
+    }
+    mcus.setHashItSource(culist);
+    return cus;
+  }
+
   public void setAuCachedUrlSet(CachedUrlSet cus) {
     this.cus = cus;
   }
