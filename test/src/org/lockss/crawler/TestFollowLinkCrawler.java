@@ -462,6 +462,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(nsurl3, false, true, props);
 
     mau.addUrl(nsurl4, true, true);
+    mau.populateAuCachedUrlSet();
 
     assertTrue(crawler.doCrawl());
     AuState aus1 = AuUtil.getAuState(mau);
@@ -489,6 +490,20 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     testNoSubstance(State.Yes, ListUtil.list("important","two"), null);
   }
 
+  public void testNoSubstanceNoCrawledUrlsMatchSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_IS_FULL_SUBSTANCE_CHECK,
+				  "false");
+    setSubstanceMode("Crawl");
+    testNoSubstance(State.No, ListUtil.list("important","redir"), null);
+  }
+
+  public void testNoSubstanceFullWhenNoCrawledUrlsMatchSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_IS_FULL_SUBSTANCE_CHECK,
+				  "true");
+    setSubstanceMode("Crawl");
+    testNoSubstance(State.Yes, ListUtil.list("important","redir"), null);
+  }
+
   // Same as previous but disabled
   public void testNoSubstanceDisabled() throws Exception {
     setSubstanceMode("None");
@@ -514,7 +529,17 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
   public void testNoSubstanceAllUrlsMatchNonSubstancePatterns() throws Exception {
     setSubstanceMode("Crawl");
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_IS_FULL_SUBSTANCE_CHECK,
+				  "false");
     testNoSubstance(State.No, null,
+		    ListUtil.list("one","two","three", "four"));
+  }
+
+  public void testNoSubstanceFullUrlsDontAllMatchNonSubstancePatterns() throws Exception {
+    setSubstanceMode("Crawl");
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_IS_FULL_SUBSTANCE_CHECK,
+				  "true");
+    testNoSubstance(State.Yes, null,
 		    ListUtil.list("one","two","three", "four"));
   }
 

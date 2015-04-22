@@ -97,6 +97,13 @@ public class FollowLinkCrawler extends BaseCrawler {
     PREFIX + "refetchEmptyFiles";
   public static final boolean DEFAULT_REFETCH_EMPTY_FILES = false;
 
+  /** If true, crawls that end with no substance
+   * (SubstanceChecker.State.No) will perform a more complete substance
+   * check by iterating through the AU. */
+  public static final String PARAM_IS_FULL_SUBSTANCE_CHECK =
+    PREFIX + "doFullSubstanceCheck";
+  public static final boolean DEFAULT_IS_FULL_SUBSTANCE_CHECK = true;
+
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
 
   protected int hiDepth = 0;		// maximum depth seen
@@ -117,6 +124,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   protected boolean crawlTerminated = false;
   protected boolean isRefetchEmptyFiles = false;
   protected boolean shouldFollowLink = true;
+  protected boolean isFullSubstanceCheck = false;
   
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialized, it's initialized here to a
@@ -207,6 +215,10 @@ public class FollowLinkCrawler extends BaseCrawler {
           null,
           new ContentValidationException.EmptyFile(),
           null));
+
+    isFullSubstanceCheck =
+      config.getBoolean(PARAM_IS_FULL_SUBSTANCE_CHECK,
+			DEFAULT_IS_FULL_SUBSTANCE_CHECK);
   }
  
 
@@ -381,21 +393,37 @@ public class FollowLinkCrawler extends BaseCrawler {
     if (subChecker != null) {
       switch (subChecker.hasSubstance()) {
       case No:
-        String msg =
-            "No files containing substantial content were collected.";
-        if (!aus.hasNoSubstance()) {
-          // Alert only on transition to no substance from other than no
-          // substance.
-          // XXX should raise this alert only if at least one new file (not
-          // just new version) was collected
-          if (alertMgr != null) {
-            alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE, au),
-                msg);
-          }
-	  log.siteWarning("" + au + ": " + msg);
-        }
-	// update AuState unconditionally to record possible FeatureVersion
-	// change
+        if (!isAbbreviatedCrawlTest && isFullSubstanceCheck) {
+	  // The AU might have substance even if we didn't find it while
+	  // traversing the link graph, as there may be files that are no
+	  // longer linked from a start page.  Check for that here.  This
+	  // is potentially very expensive, but it's unlikely that an AU
+	  // with a large number of files has no substance.  If we had a
+	  // count of files in the AU we'd do this only if (au.countFiles()
+	  // > numberOfFilesTraversed)
+
+	  subChecker.findSubstance();
+	  switch (subChecker.hasSubstance()) {
+	  case Yes:
+	    String msg = "Unlinked substance only.";
+	    log.siteWarning(msg + ": " + au.getName());
+	    if (alertMgr != null)
+	      // When keep track of UnlinkedSubstance status, alert only on
+	      // transition to it.
+	      alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_UNLINKED_SUBSTANCE,
+						au), msg);
+	  }
+	}
+      }
+      switch (subChecker.hasSubstance()) {
+      case No:
+	String msg = "No files containing substantial content were collected.";
+	log.siteWarning(msg + ": " + au.getName());
+	if (alertMgr != null && !aus.hasNoSubstance()) {
+	  // Alert only on transition to no substance from other than no
+	  // substance.
+	  alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE, au), msg);
+	}
 	aus.setSubstanceState(SubstanceChecker.State.No);
         break;
       case Yes:
