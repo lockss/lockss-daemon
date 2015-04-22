@@ -135,6 +135,27 @@ public class TestSubstanceChecker extends LockssTestCase {
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
+  public void testFindSubstNo() throws Exception {
+    mau.setSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "two" )));
+    mau.addUrl("http://four/", false, true);
+    mau.addUrl("http://three/", false, true);
+    mau.populateAuCachedUrlSet();
+    checker = new SubstanceChecker(mau);
+    checker.findSubstance();
+    assertEquals(State.No, checker.hasSubstance());
+  }
+
+  public void testFindSubstYes() throws Exception {
+    mau.setSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "two" )));
+    mau.addUrl("http://four/", false, true);
+    mau.addUrl("http://two/", false, true);
+    mau.addUrl("http://three/", false, true);
+    mau.populateAuCachedUrlSet();
+    checker = new SubstanceChecker(mau);
+    checker.findSubstance();
+    assertEquals(State.Yes, checker.hasSubstance());
+  }
+
   public void testCountSubst() throws Exception {
     mau.setSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "two" )));
     checker = new SubstanceChecker(mau);
