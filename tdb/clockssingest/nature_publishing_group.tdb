@@ -30,7 +30,7 @@
     au < finished ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
     au < finished ; frozen ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
     au < crawling ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 >
-    au < testing ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 >
+    au < ready ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 >
 
   }
 
@@ -62,7 +62,7 @@
     au < finished ; frozen ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
     au < superseded ; exists ; 2013 ; American Journal of Gastroenterology Volume 107 [to delete] ; 2013 ; 107 >
     au < crawling ; exists ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 >
-    au < testing ; exists ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 >
+    au < ready ; exists ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 >
 
   }
 
@@ -135,7 +135,7 @@
     au < finished ; frozen ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
     au < finished ; frozen ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
     au < manifest ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
-    au < testing ; exists ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 >
+    au < ready ; exists ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -181,7 +181,7 @@
     au < finished ; crawling ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
     au < finished ; crawling ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
     au < crawling ; exists ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 >
-    au < testing ; exists ; 2014 ; Bone Marrow Transplantation Volume 49 ; 2014 ; 49 >
+    au < ready ; exists ; 2014 ; Bone Marrow Transplantation Volume 49 ; 2014 ; 49 >
 
   }
 
