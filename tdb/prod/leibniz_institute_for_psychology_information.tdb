@@ -16,6 +16,7 @@
 
       param[base_url] = http://ejop.psychopen.eu/
       param[journal_id] = ejop
+      comment[notReady] = unknown pic link capture with no access permission
   
       au < released ; 2005 ; Europe's Journal of Psychology Volume 1 ; 1 ; 2005 >
       au < released ; 2006 ; Europe's Journal of Psychology Volume 2 ; 2 ; 2006 >
@@ -26,7 +27,7 @@
       au < released ; 2011 ; Europe's Journal of Psychology Volume 7 ; 7 ; 2011 >
       au < released ; 2012 ; Europe's Journal of Psychology Volume 8 ; 8 ; 2012 >
       au < released ; 2013 ; Europe's Journal of Psychology Volume 9 ; 9 ; 2013 >
-      au < testing ; 2014 ; Europe's Journal of Psychology Volume 10 ; 10 ; 2014 >
+      au < notReady ; 2014 ; Europe's Journal of Psychology Volume 10 ; 10 ; 2014 >
       au < manifest ; 2015 ; Europe's Journal of Psychology Volume 11 ; 11 ; 2015 >
 
   }
