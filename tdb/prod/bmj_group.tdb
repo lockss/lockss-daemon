@@ -862,6 +862,39 @@
 
   {
     title <
+      name = End of Life Care ;
+      issn = 1754-1069
+      >
+
+    param[base_url] = http://eolj.bmj.com/
+    comment[continued_by] = 2047-6361
+
+    au < HighWirePressH20Plugin ; exists ; 2007 ; End of Life Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; End of Life Care Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; End of Life Care Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; End of Life Care Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = End of Life Journal ;
+      eissn = 2047-6361
+      >
+
+    param[base_url] = http://eolj.bmj.com/
+    comment[continues] = 1754-1069
+
+    au < HighWirePressH20Plugin ; exists ; 2011 ; End of Life Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; End of Life Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; End of Life Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2014 ; End of Life Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; End of Life Journal Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
       name = European Journal of Hospital Pharmacy: Science and Practice ;
       issn = 2047-9956 ;
       eissn = 2047-9964
