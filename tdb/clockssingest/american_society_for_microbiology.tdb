@@ -21,10 +21,10 @@
       param[journal_id] = ecosalplus
       
       au < testing ; exists ; 2004-2005 ; EcoSal Plus Volume 1 ; 1 >
-      au < testing ; exists ; 2006-2007 ; EcoSal Plus Volume 2 ; 2 >
+      au < ready ; exists ; 2006-2007 ; EcoSal Plus Volume 2 ; 2 >
       au < testing ; exists ; 2008-2009 ; EcoSal Plus Volume 3 ; 3 >
       au < ready ; exists ; 2010-2011 ; EcoSal Plus Volume 4 ; 4 >
-      au < testing ; exists ; 2012-2013 ; EcoSal Plus Volume 5 ; 5 >
+      au < ready ; exists ; 2012-2013 ; EcoSal Plus Volume 5 ; 5 >
       au < testing ; exists ; 2014-2015 ; EcoSal Plus Volume 6 ; 6 >
 
     }
@@ -37,9 +37,9 @@
       
       param[journal_id] = microbiolspec
       
-      au < testing ; exists ; 2013 ; Microbiology Spectrum 2013 ; 1 >
+      au < ready ; exists ; 2013 ; Microbiology Spectrum 2013 ; 1 >
       au < ready ; exists ; 2014 ; Microbiology Spectrum 2014 ; 2 >
-      au < testing ; exists ; 2015 ; Microbiology Spectrum 2015 ; 3 >
+      au < ready ; exists ; 2015 ; Microbiology Spectrum 2015 ; 3 >
 
     }
 
