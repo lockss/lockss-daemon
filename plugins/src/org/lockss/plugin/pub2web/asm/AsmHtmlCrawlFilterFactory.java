@@ -59,6 +59,12 @@ public class AsmHtmlCrawlFilterFactory implements FilterFactory {
     // content/journal/ecosalplus/10.1128/ecosalplus.ESP-0005-2013 - full text version
     HtmlNodeFilters.tagWithAttribute("a", "target", "xrefwindow"),
     
+    //don't pick up cover images for books in "ASM recommends" and "Customers also bought"
+    //at the bottom of book landing page
+    HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
+    // similar for a journal article landing page
+    HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
+    
   };
 
   @Override

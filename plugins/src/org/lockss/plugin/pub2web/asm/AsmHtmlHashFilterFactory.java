@@ -49,6 +49,11 @@ public class AsmHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "hiddenjsdiv metricsEndDate"),
         //<input type="hidden" name="copyright" value="American Society For Microbiology &copy; Sat Apr 11 05:23:38 UTC 2015"/>
         HtmlNodeFilters.tagWithAttribute("input",  "name", "copyright"),
+        // take out the "ASM recommends" and "customers also bought" section at bottom of book landing
+        HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
+        //and similar on a journal article page
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
+
     };
     return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
 
