@@ -86,7 +86,7 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
     logger.debug2(url);
     switch (responseCode) {
       case 500:
-        logger.debug2("500");
+        logger.debug2("500: " + url);
         if (url.endsWith("_manifest.html") || 
             url.endsWith(".toc")) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
@@ -94,14 +94,14 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
         return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
         
       case 502:
-        logger.debug2("502");
+        logger.debug2("502: " + url);
         if (url.endsWith(".index-by-author")) {
           return new NoFailRetryableNetworkException_3_5M("502 Bad Gateway Error (non-fatal)");
         }
         return new CacheException.RetryableNetworkException_3_60S("502 Bad Gateway Error");
         
       case 504:
-        logger.debug2("504");
+        logger.debug2("504: " + url);
         if (url.contains("/content/")) {
           return new CacheException.RetryableNetworkException_3_60S("504 Gateway Time-out Error");
         }
