@@ -33,7 +33,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; testing ; 2012 ; Endocrine Connections Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 2013 ; Endocrine Connections Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 2013 ; Endocrine Connections Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; testing ; 2014 ; Endocrine Connections Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; manifest ; 2015 ; Endocrine Connections Volume 4 ; 4 >
 
@@ -58,9 +58,9 @@
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
       au < HighWirePressH20Plugin ; testing ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; European Journal of Endocrinology Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; European Journal of Endocrinology Volume 133 ; 133 >
       au < HighWirePressH20Plugin ; testing ; 1996 ; European Journal of Endocrinology Volume 134 ; 134 >
       au < HighWirePressH20Plugin ; testing ; 1996 ; European Journal of Endocrinology Volume 135 ; 135 >
       au < HighWirePressH20Plugin ; testing ; 1997 ; European Journal of Endocrinology Volume 136 ; 136 >
