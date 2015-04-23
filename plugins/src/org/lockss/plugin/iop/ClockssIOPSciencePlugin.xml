@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>20</string>
+        <string>21</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -173,5 +173,13 @@
     <!-- We do not poll for download figures -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>/download(HR)?Figure/figure/</string>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/(css|js)/[^?]+[.](css|js|png)$</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_poll_results_pattern</string>
+    <string>/((css|js)/[^?]+[.](css|js|png)|/refs)$</string>
   </entry>
 </map>

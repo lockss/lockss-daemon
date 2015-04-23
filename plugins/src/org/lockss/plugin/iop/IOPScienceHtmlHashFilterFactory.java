@@ -98,10 +98,13 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
         
         // <div class="sideTabBar"> & <div id="sideTabBox">
+        // <div class="sideTabBlock citBlock">
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "sideTab(Bar|Box)"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sideTab(Bar|Box)"),
         // <p class="viewingLinks">
         HtmlNodeFilters.tagWithAttributeRegex("p", "class", "viewingLinks"),
+        // <dl class="videoList"> PACS & Subjects appear, disappear, reappear
+        HtmlNodeFilters.tagWithAttribute("dl", "class", "videoList"),
         // <div class=" metrics-panel">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "metrics-panel"),
         // <dd> <p> Total article downloads: <strong>1193</strong> </p>...</dd>
@@ -144,7 +147,6 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "free-article"),
         // citation link was always not present, and display link is not content
         HtmlNodeFilters.tagWithAttributeRegex("a", "id", "DisplayLink"),
-        // <div class="sideTabBlock citBlock">
     };
     
     InputStream filtered = new HtmlFilterInputStream(in,
