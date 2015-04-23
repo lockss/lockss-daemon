@@ -101,7 +101,8 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     // http://ajpcell.physiology.org/highwire/citation/1814/papers
     // http://ajpcell.physiology.org/highwire/citation/1814/reference-manager
     // http://ajpcell.physiology.org/highwire/citation/1814/zotero
-    // to http://ajpcell.physiology.org/highwire/citation/1814/ris
+    // to
+    // http://ajpcell.physiology.org/highwire/citation/1814/ris
     
     if (url.contains(WEB_VIEWER)) { 
       url = url.replace(WEB_VIEWER, "/");
@@ -121,7 +122,7 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     } else if (url.contains(PDF)) {
       if (url.endsWith(PDF_HTML_VARIANT_SUFFIX)) {
         url = StringUtil.replaceLast(url, PDF_HTML_VARIANT_SUFFIX, PDF_HTML_SUFFIX);
-      }  
+      }
       if (url.contains(FT_PDF)) {
         url = StringUtil.replaceLast(url, FT_PDF, FULL_PDF_SUFFIX);
       }
