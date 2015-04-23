@@ -17,11 +17,11 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = criacaoecritica
 
-    au < testing ; 2009 ; 1 ; Revista Criação & Crítica Volume 1 ; 2009 >
+    au < ready ; 2009 ; 1 ; Revista Criação & Crítica Volume 1 ; 2009 >
     au < testing ; 2010 ; 2 ; Revista Criação & Crítica Volume 2 ; 2010 >
     au < released ; 2011 ; 3 ; Revista Criação & Crítica Volume 3 ; 2011 >
     au < released ; 2012 ; 4 ; Revista Criação & Crítica Volume 4 ; 2012 >
-    au < testing ; 2013 ; 5 ; Revista Criação & Crítica Volume 5 ; 2013 >
+    au < ready ; 2013 ; 5 ; Revista Criação & Crítica Volume 5 ; 2013 >
     au < testing ; 2014 ; 6 ; Revista Criação & Crítica Volume 6 ; 2014 >
   
   }
@@ -41,7 +41,7 @@
     au < testing ; 2010 ; 2 ; Revista de História Volume 2 ; 2010 >
     au < released ; 2011 ; 3 ; Revista de História Volume 3 ; 2011 >
     au < released ; 2012 ; 4 ; Revista de História Volume 4 ; 2012 >
-    au < testing ; 2013 ; 5 ; Revista de História Volume 5 ; 2013 >
+    au < ready ; 2013 ; 5 ; Revista de História Volume 5 ; 2013 >
     au < testing ; 2014 ; 6 ; Revista de História Volume 6 ; 2014 >
 
   }

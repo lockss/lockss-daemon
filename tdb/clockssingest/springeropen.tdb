@@ -359,7 +359,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Crime Science Volume 1 ; 1 >
-        au < testing ; exists ; 2013 ; Crime Science Volume 2 ; 2 >
+        au < ready ; exists ; 2013 ; Crime Science Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Crime Science Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Crime Science Volume 4 ; 4 >
   
@@ -512,7 +512,7 @@
         param[journal_issn] = 1877-6345 
         comment[platform] = BioMedCentralPlugin
   
-        au < testing ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
+        au < ready ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
         au < manifest ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 >
         au < manifest ; exists ; 2015 ; Empirical Research in Vocational Education and Training Volume 7 ; 7 >
   
