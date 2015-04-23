@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>13</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -60,8 +60,8 @@
       <string>4,"^%s", base_url</string>
       <string>1,"^%s(highwire/(filestream|markup)/|elife/download-|content/elife/suppl/)", base_url</string>
       <string>1,"^%s(content/[^/]+/e[^/?]+($|(/[^/]+)?/DC))", base_url</string>
-      <string>1,"^%scontent(/elife)?/[^/]+/e[^/?]+([.]full[.]pdf$|/article-(data|info)|/.*/embed/)", base_url</string>
-      <string>1,"^%shighwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$", base_url</string>
+      <string>1,"^%scontent(/elife)?/[^/]+/e[^/?]+([.]full[.]pdf$|/article-data|/.*/embed/)", base_url</string>
+      <string>1,"^%s(panels_ajax_tab/[^/]+_(figdata)/node:|highwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$)", base_url</string>
     </list>
   </entry>
   <entry>

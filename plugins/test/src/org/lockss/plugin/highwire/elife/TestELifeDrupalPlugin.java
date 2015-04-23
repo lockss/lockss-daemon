@@ -184,7 +184,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     // article files
     shouldCacheTest(ROOT_URL + "content/1/e00002", true, au);
     shouldCacheTest(ROOT_URL + "content/1/e00003/article-data", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/e00003/article-info", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/e00003/article-info", false, au);
     shouldCacheTest(ROOT_URL + "content/1/e00003.abstract", true, au);
     shouldCacheTest(ROOT_URL + "content/1/e00003.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/1/2/e00003.full.pdf", false, au);
@@ -199,6 +199,12 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "sites/default/files/js/js_0j8_f76rvZ212f4rg.js", true, au);
     shouldCacheTest(ROOT_URL + "sites/default/themes/elife/font/fontawesome-webfont.eot", true, au);
     shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", true, au);
+    
+    shouldCacheTest(ROOT_URL + "content/1/e00003/article-metrics", false, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_elife_article_article/node:8375/0", false, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_elife_article_figdata/node:8375/1", true, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_elife_article_metrics/node:8375/1", false, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_elife_article_author/node:8375/1", false, au);
     
     shouldCacheTest(ROOT_URL + "elife/download-pdf/content/1/e00352/n/Nerve%20diversity%20in%20skin.pdf/1", true, au);
     shouldCacheTest(ROOT_URL + "elife/download-suppl/250/supplementary-file-1.media-1.pdf/0/1", true, au);
