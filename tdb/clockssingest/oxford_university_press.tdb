@@ -43,7 +43,7 @@
     au < finished ; crawling ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
     au < finished ; crawling ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 ; >
     au < crawling ; exists ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ; >
-    au < testing ; exists ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ; >
+    au < ready ; exists ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ; >
     au < manifest ; exists ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 ; >
 
     }
@@ -1088,7 +1088,7 @@
     au < finished ; crawling ; 2011 ; American Law and Economics Review Volume 13 ; 13 ; >
     au < finished ; frozen ; 2012 ; American Law and Economics Review Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; American Law and Economics Review Volume 15 ; 15 ; >
-    au < testing ; exists ; 2014 ; American Law and Economics Review Volume 16 ; 16 ; >
+    au < ready ; exists ; 2014 ; American Law and Economics Review Volume 16 ; 16 ; >
     au < doNotProcess ; exists ; 2015 ; American Law and Economics Review Volume 17 ; 17 ; >
 
     }
@@ -1442,8 +1442,8 @@
     au < finished ; frozen ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
     au < crawling ; exists ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
     au < crawling ; exists ; 2013 ; Annals of Botany Volume 112 ; 112 ; >
-    au < testing ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
-    au < testing ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
+    au < ready ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
+    au < ready ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
     au < doNotProcess ; exists ; 2015 ; Annals of Botany Volume 115 ; 115 ; >
 
     }
@@ -2234,7 +2234,7 @@
     au < finished ; crawling ; 2011 ; Biometrika Volume 98 ; 98 ; >
     au < finished ; frozen ; 2012 ; Biometrika Volume 99 ; 99 ; >
     au < crawling ; exists ; 2013 ; Biometrika Volume 100 ; 100 ; >
-    au < testing ; exists ; 2014 ; Biometrika Volume 101 ; 101 ; >
+    au < ready ; exists ; 2014 ; Biometrika Volume 101 ; 101 ; >
     au < doNotProcess ; exists ; 2015 ; Biometrika Volume 102 ; 102 ; >
 
     }
@@ -3050,7 +3050,7 @@
     au < finished ; frozen ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 ; >
     au < finished ; frozen ; 2012 ; The British Journal for the Philosophy of Science Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The British Journal for the Philosophy of Science Volume 64 ; 64 ; >
-    au < testing ; exists ; 2014 ; The British Journal for the Philosophy of Science Volume 65 ; 65 ; >
+    au < ready ; exists ; 2014 ; The British Journal for the Philosophy of Science Volume 65 ; 65 ; >
     au < doNotProcess ; exists ; 2015 ; The British Journal for the Philosophy of Science Volume 66 ; 66 ; >
 
     }
@@ -3446,7 +3446,7 @@
     au < finished ; crawling ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
     au < finished ; frozen ; 2012 ; Bulletin of the London Mathematical Society Volume 44 ; 44 ; >
     au < crawling ; exists ; 2013 ; Bulletin of the London Mathematical Society Volume 45 ; 45 ; >
-    au < testing ; exists ; 2014 ; Bulletin of the London Mathematical Society Volume 46 ; 46 ; >
+    au < ready ; exists ; 2014 ; Bulletin of the London Mathematical Society Volume 46 ; 46 ; >
     au < doNotProcess ; exists ; 2015 ; Bulletin of the London Mathematical Society Volume 47 ; 47 ; >
 
     }
@@ -3624,7 +3624,7 @@
     au < finished ; crawling ; 2011 ; The Cambridge Quarterly Volume 40 ; 40 ; >
     au < finished ; crawling ; 2012 ; The Cambridge Quarterly Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 ; >
-    au < testing ; exists ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 ; >
+    au < ready ; exists ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 ; >
     au < doNotProcess ; exists ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
 
     }
@@ -4266,7 +4266,7 @@
     au < finished ; crawling ; 2011 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 17 ; 17 ; >
     au < finished ; crawling ; 2012 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 19 ; 19 ; >
-    au < testing ; exists ; 2014 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 20 ; 20 ; >
+    au < ready ; exists ; 2014 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2015 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 ; >
 
     }
@@ -4367,7 +4367,7 @@
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
     au < testing ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
-    au < testing ; exists ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; >
+    au < ready ; exists ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; >
 
     }
