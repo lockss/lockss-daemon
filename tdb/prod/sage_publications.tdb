@@ -9658,6 +9658,33 @@
 
     }
 
+  {
+
+      title <
+        name = Dose-Response ;
+        eissn = 1559-3258
+    >
+
+      param[base_url] = http://dos.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; Dose-Response Volume 1 ; 1 >
+      au < exists ; 2004 ; Dose-Response Volume 2 ; 2 >
+      au < exists ; 2005 ; Dose-Response Volume 3 ; 3 >
+      au < exists ; 2006 ; Dose-Response Volume 4 ; 4 >
+      au < exists ; 2007 ; Dose-Response Volume 5 ; 5 >
+      au < exists ; 2008 ; Dose-Response Volume 6 ; 6 >
+      au < exists ; 2009 ; Dose-Response Volume 7 ; 7 >
+      au < exists ; 2010 ; Dose-Response Volume 8 ; 8 >
+      au < exists ; 2011 ; Dose-Response Volume 9 ; 9 >
+      au < exists ; 2012 ; Dose-Response Volume 10 ; 10 >
+      au < exists ; 2013 ; Dose-Response Volume 11 ; 11 >
+      au < exists ; 2014 ; Dose-Response Volume 12 ; 12 >
+      au < expected ; 2015 ; Dose-Response Volume 13 ; 13 >
+
+  }
+
     {
 
         title <
