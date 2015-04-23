@@ -10558,6 +10558,19 @@
   {
 
     title <
+      name = European Journal of Inflammation ;
+      issn = 1721-727X
+    >
+
+      param[base_url] = http://eji.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; European Journal of Inflammation Volume 13 ; 13 ; >
+  }
+
+  {
+
+    title <
       name = European Journal of International Relations ;
       issn = 1354-0661 ;
       eissn = 1460-3713
