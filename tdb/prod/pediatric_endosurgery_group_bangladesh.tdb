@@ -17,11 +17,9 @@
 
     >
     param[journal_id] = bje
-    comment[0] = base_url gone
+    comment[down] = journal gone from base_url. Do not process further content.
     
-    au < released ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 ; 2013 >
-    au < manifest ; 2014 ; Bangladesh Journal of Endosurgery Volume 2 ; 2 ; 2014 >
-    au < expected ; 2015 ; Bangladesh Journal of Endosurgery Volume 3 ; 3 ; 2015 >
+    au < down ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 ; 2013 >
    
   }
 
