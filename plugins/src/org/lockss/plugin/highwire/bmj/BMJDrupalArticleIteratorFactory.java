@@ -49,22 +49,21 @@ public class BMJDrupalArticleIteratorFactory
   protected static final String ROOT_TEMPLATE =
     "\"%scontent/\", base_url";
   
+  // Cannot use volume_name as the BMJ mixes articles (ie. /346/bmj.f4217 in vol 347, issue 7915)
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/bmj[.](?:[^./?&]+)$\", base_url, volume_name";
+    "\"^%scontent/[^/]{1,4}/bmj[.](?:[^./?&]+)$\", base_url";
   
   // various aspects of an article
   // http://www.bmj.com/content/345/bmj.e7558
+  // http://www.bmj.com/content/345/bmj.e7558.full.pdf
   // http://www.bmj.com/content/345/bmj.f7558.full.pdf+html
   
-  // these kinds of urls are not used as part of the AI
-  // 
   
   protected static final Pattern LANDING_PATTERN = Pattern.compile(
       "/(bmj[.][^./?&]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String LANDING_REPLACEMENT = "/$1";
-  // protected static final String HTML_REPLACEMENT = "/$1.full";
   protected static final String PDF_REPLACEMENT = "/$1.full.pdf";
   protected static final String PDF_LANDING_REPLACEMENT = "/$1.full.pdf+html";
   
@@ -78,11 +77,14 @@ public class BMJDrupalArticleIteratorFactory
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
     // set up landing page to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
     // until this is deprecated
     builder.addAspect(
         LANDING_PATTERN, LANDING_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
     
     builder.addAspect(
@@ -91,17 +93,6 @@ public class BMJDrupalArticleIteratorFactory
     
     builder.addAspect(
         PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
-    
-    // add metadata role from html
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
-    
-    // The order in which we want to define full_text_cu.
-    // First one that exists will get the job
-    builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     return builder.getSubTreeArticleIterator();
