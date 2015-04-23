@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>53</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -212,6 +212,11 @@
         <string>org.lockss.plugin.ingenta.IngentaHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
