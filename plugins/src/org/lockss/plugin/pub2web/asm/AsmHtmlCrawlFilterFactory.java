@@ -51,6 +51,14 @@ public class AsmHtmlCrawlFilterFactory implements FilterFactory {
     // they don't seem internal, but just to be safe, don't crawl links within reference containers
     HtmlNodeFilters.tagWithAttribute("div",  "class", "refcontainer"),
     
+    // shows earlier or later versions of the same article - see
+    // content/journal/ecosalplus/10.1128/(ecosalplus.5.5 & ecosalplus.ESP-0002-2013) 
+    HtmlNodeFilters.tagWithAttribute("div",  "class", "consanguinityContainer"),
+    
+    //agh. In-line references to other articles from this journal
+    // content/journal/ecosalplus/10.1128/ecosalplus.ESP-0005-2013 - full text version
+    HtmlNodeFilters.tagWithAttribute("a", "target", "xrefwindow"),
+    
   };
 
   @Override
