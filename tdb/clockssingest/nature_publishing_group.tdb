@@ -307,7 +307,7 @@
     au < finished ; frozen ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
     au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
-    au < testing ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 >
+    au < notReady ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 > #crawl completed with no substance
 
   }
   {
@@ -623,7 +623,7 @@
 
     au < manifest ; exists ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 >
     au < manifest ; exists ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 >
-    au < testing ; exists ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 >
+    au < ready ; exists ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 >
 
   }
 

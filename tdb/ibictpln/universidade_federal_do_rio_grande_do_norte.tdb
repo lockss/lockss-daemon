@@ -19,7 +19,7 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = artresearchjournal
 
-      au < testing ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 >
+      au < ready ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 >
 
   }
 
@@ -81,7 +81,7 @@
       au < released ; 2011 ; 5 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2011 ; 2011 >
       au < released ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 >
 
   }
 
@@ -292,7 +292,7 @@
       param[journal_id] = turismocontemporaneo
 
       au < testing ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 >
 
   }
 
@@ -329,7 +329,7 @@
       au < released ; 2011 ; 1 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2011 ; 2011 >
       au < released ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2012 ; 2012 >
       au < doNotProcess ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 >
 
   }
 
@@ -447,7 +447,7 @@
       au < released ; 2011 ; 5 ; Revista Inter-Legere Volume 2011 ; 2011 >
       au < released ; 2012 ; 6 ; Revista Inter-Legere Volume 2012 ; 2012 >
       au < notReady ; 2013 ; 7 ; Revista Inter-Legere Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 8 ; Revista Inter-Legere Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 8 ; Revista Inter-Legere Volume 2014 ; 2014 >
 
   }
 
