@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -111,22 +111,20 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!-- all content from CDN -->
+      <!-- Do not crawl these variations -->
+      <string>2,"content/.+([.](print|explore)|/(article-info|submit))"</string>
+      <string>2,"(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))"</string>
+      <!-- otherwise, all content from CDN -->
       <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com)/."</string>
-      <!-- no gifs from other volumes -->
-      <string>2,"^%scontent/(?!([^0-9][^/]+/)?(%s|suppl)/)[^?]*[.]gif", base_url, volume_name</string>
-      <!-- all fonts, images, resources, css, js, etc. 
-      http://eurpub.oxfordjournals.org/sites/default/files/styles/2_grid/public/1.cover-source_3.jpg?itok=eKwbGaYh -->
+      <!-- no gifs from other volumes
+      <string>2,"^%scontent/(?!([^0-9][^/]+/)?(%s|suppl)/)[^?]*[.]gif", base_url, volume_name</string> -->
+      <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
-      <!-- Do not crawl these BMJ & OUP variations -->
-      <string>2,"^%scontent/.+([.](print|explore)|/(article-info|submit))", base_url</string>
-      <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
-      <string>2,"^%s(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^0-9][^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
-      <string>1,"^%s(panels_ajax_tab/[^/]+_tab_data/node:|highwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$)", base_url</string>
+      <string>1,"^%s(panels_ajax_tab/[^/]+_tab_(data|info|pdf)/node:|highwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$)", base_url</string>
     </list>
   </entry>
   <entry>
