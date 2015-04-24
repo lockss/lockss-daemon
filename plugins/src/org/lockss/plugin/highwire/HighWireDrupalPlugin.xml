@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -108,23 +108,30 @@
       </entry>
     </map>
   </entry>
+  <!-- entry>
+  -->
   <entry>
     <string>au_crawlrules</string>
     <list>
       <!-- Do not crawl these variations -->
-      <string>2,"content/.+([.](print|explore)|/(article-info|submit))"</string>
+      <string>2,"content/.+([.](print|explore)|/(article-info|rapid-responses|related|rr/|submit))"</string>
       <string>2,"(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))"</string>
+      <string>2,"^https?://static[.]www[.]bmj[.]com/content/"</string>
+      <string>2,"^https?://%s/content/(?!%s/)[0-9]+/[^/.?]+([.]toc)?$", url_host(base_url), volume_name</string>
       <!-- otherwise, all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com)/."</string>
-      <!-- no gifs from other volumes
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com)/."</string>
+      <!-- no gifs from other volumes (use au_exclude_urls_from_poll_results_pattern if needed)
       <string>2,"^%scontent/(?!([^0-9][^/]+/)?(%s|suppl)/)[^?]*[.]gif", base_url, volume_name</string> -->
       <!-- all fonts, images, resources, css, js, etc. -->
-      <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", base_url_host</string>
-      <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
+      <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", url_host(base_url)</string>
+      <string>1,"^https?://%s[^?]*/highwire/jcore", url_host(base_url)</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
       <string>1,"^%s(?:content(?:/[^0-9][^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
-      <string>1,"^%s(panels_ajax_tab/[^/]+_tab_(data|info|pdf)/node:|highwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$)", base_url</string>
+      <string>1,"^%s(panels_ajax_tab/[^/]+_tab_(data|info|pdf|peer_review)/node:|highwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$)", base_url</string>
+      <!-- articles with other volumes can appear in BMJ -->
+      <string>1,"^https?://www[.]bmj[.]com/(content(/[^0-9][^/]+)?/([0-9]{1,4}|suppl)|highwire/(?:filestream|markup|article_citation_preview))/"</string>
+      <string>1,"^https?://www[.]bmj[.]com/content(?:/[^/]+)?/[^/]+/bmj[.][^/?]+([.]full[.]pdf$|/article-(data)|/.*/embed/)"</string>
     </list>
   </entry>
   <entry>
@@ -216,7 +223,7 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com</string>
+    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static.www.bmj.com</string>
   </entry>
   <entry>
     <!-- APS & OUP use cdn -->
