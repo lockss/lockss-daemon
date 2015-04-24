@@ -181,7 +181,7 @@
         param[journal_issn] = 2197-4365 
         comment[platform] = BioMedCentralPlugin
   
-        au < testing ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 >
+        au < notReady ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 > #crawl completed with no substance
         au < manifest ; exists ; 2015 ; Bioresources and Bioprocessing Volume 2 ; 2 >
   
     }
