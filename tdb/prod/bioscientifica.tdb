@@ -14,7 +14,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.echorespract.com/
 
-      au < testing ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
+      au < ready ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
       au < expected ; 2015 ; Echo Research and Practice Volume 2 ; 2 >
 
   }
@@ -32,9 +32,9 @@
       param[base_url] = http://www.endocrineconnections.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; testing ; 2012 ; Endocrine Connections Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; Endocrine Connections Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; Endocrine Connections Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 2014 ; Endocrine Connections Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 2014 ; Endocrine Connections Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; manifest ; 2015 ; Endocrine Connections Volume 4 ; 4 >
 
     }
@@ -57,13 +57,13 @@
 
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
       au < HighWirePressH20Plugin ; ready ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
       au < HighWirePressH20Plugin ; ready ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
       au < HighWirePressH20Plugin ; ready ; 1995 ; European Journal of Endocrinology Volume 133 ; 133 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; European Journal of Endocrinology Volume 134 ; 134 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; European Journal of Endocrinology Volume 135 ; 135 >
-      au < HighWirePressH20Plugin ; testing ; 1997 ; European Journal of Endocrinology Volume 136 ; 136 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; European Journal of Endocrinology Volume 134 ; 134 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; European Journal of Endocrinology Volume 135 ; 135 >
+      au < HighWirePressH20Plugin ; ready ; 1997 ; European Journal of Endocrinology Volume 136 ; 136 >
       au < HighWirePressPlugin ; down ; 1997 ; European Journal of Endocrinology Volume 137 ; 137 >
       au < HighWirePressPlugin ; down ; 1998 ; European Journal of Endocrinology Volume 138 ; 138 >
       au < HighWirePressPlugin ; down ; 1998 ; European Journal of Endocrinology Volume 139 ; 139 >
@@ -266,7 +266,7 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; Reproduction Volume 144 ; 144 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Reproduction Volume 145 ; 145 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Reproduction Volume 146 ; 146 >
-      au < HighWirePressH20Plugin ; testing ; 2014 ; Reproduction Volume 147 ; 147 >
+      au < HighWirePressH20Plugin ; ready ; 2014 ; Reproduction Volume 147 ; 147 >
       au < HighWirePressH20Plugin ; testing ; 2014 ; Reproduction Volume 148 ; 148 >
       au < HighWirePressH20Plugin ; manifest ; 2015 ; Reproduction Volume 149 ; 149 >
       au < HighWirePressH20Plugin ; expected ; 2015 ; Reproduction Volume 150 ; 150 >
