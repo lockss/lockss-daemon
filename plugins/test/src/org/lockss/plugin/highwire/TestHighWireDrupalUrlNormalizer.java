@@ -103,7 +103,18 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
     assertEquals("http://ajpcell.physiology.org/content/303/1/C1",
         normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?rss=foo", null));
     assertEquals("http://ajpcell.physiology.org/content/303/1/C1",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?rss=foo", null));
+        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?ijkey=foo", null));
+    assertEquals("http://ajpcell.physiology.org/content/303/1/C1.e-letters",
+        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1.e-letters?foo", null));
+    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.eot",
+        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.eot?-2mifpm", null));
+    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.svg",
+        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.svg?-2mifpm", null));
+    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff",
+        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff?-2mifpm", null));
+    
+    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
+        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", null));
   }
   
 }
