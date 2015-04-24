@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -56,7 +56,7 @@
       <!-- otherwise, all content from CDN -->
       <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com)/."</string>
       <!-- all fonts, images, resources, css, js, etc. -->
-      <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
+      <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
