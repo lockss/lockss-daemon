@@ -55,6 +55,10 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   protected static final String LARGE_JPG = ".large.jpg?";
   protected static final String JS_SUFFIX = ".js?";
   protected static final String CSS_SUFFIX = ".css?";
+  protected static final String EOT_SUFFIX = ".eot?";
+  protected static final String SVG_SUFFIX = ".svg?";
+  protected static final String TTF_SUFFIX = ".ttf?";
+  protected static final String WOFF_SUFFIX = ".woff?";
   
   protected static final String PDF_HTML_VARIANT_SUFFIX = ".pdf%2Bhtml";
   protected static final String PDF_HTML_SUFFIX = ".pdf+html";
@@ -117,7 +121,11 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     
     if (url.contains(LARGE_JPG) ||
         url.contains(JS_SUFFIX) ||
-        url.contains(CSS_SUFFIX)) {
+        url.contains(CSS_SUFFIX) ||
+        url.contains(EOT_SUFFIX) ||
+        url.contains(SVG_SUFFIX) ||
+        url.contains(TTF_SUFFIX) ||
+        url.contains(WOFF_SUFFIX)) {
       url = url.replaceFirst("[?].+$", "");
     } else if (url.contains(PDF)) {
       if (url.endsWith(PDF_HTML_VARIANT_SUFFIX)) {
