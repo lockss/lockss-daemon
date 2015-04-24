@@ -36,6 +36,8 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
@@ -44,17 +46,9 @@ public class BMJDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilt
   
   private static final Logger log = Logger.getLogger(BMJDrupalHtmlCrawlFilterFactory.class);
   
-  private static final NodeFilter[] filters = new NodeFilter[] {
-      // while we collect rapid-responses, do not crawl for links
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "rapid-responses"),
-      // BMJ had tags on http://www.bmj.com/content/330/7506/0.8/rapid-responses
-//      HtmlNodeFilters.tagWithAttribute("div", "id", "skip-link"),
-//      HtmlNodeFilters.tagWithAttribute("div", "id", "cookie-notice"),
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "vote-widget"),
-      // <div class="panel-panel panel-region-content-header">
-      // <div class="panel-pane pane-panels-mini pane-oup-explore-citing-articles">
-      // <div class="panel-pane pane-panels-mini pane-oup-explore-related-articles">
-      // <div class="ui-dialog ui-widget
+  protected static NodeFilter[] filters = new NodeFilter[] {
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
   };
   
   @Override
@@ -63,7 +57,8 @@ public class BMJDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilt
                                                String encoding)
       throws PluginException {
     
-    InputStream filtered = super.createFilteredInputStream(au, in, encoding, null);
+    HtmlFilterInputStream filtered =
+        (HtmlFilterInputStream) super.createFilteredInputStream(au, in, encoding, filters);
     return filtered;
   }
 }
