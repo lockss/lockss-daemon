@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
-    <string>British Institute of Radiology Publishing Plugin (Atypon)</string>
+    <string>British Institute of Radiology Publishing Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>30</string>
+    <string>34</string>
   </entry>   
   <entry>
     <string>plugin_feature_version_map</string>
@@ -42,7 +42,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"British Institute of Radiology Publishing Plugin (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"British Institute of Radiology Publishing Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

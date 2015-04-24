@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>  
   <entry>
     <string>plugin_parent</string>
@@ -17,16 +17,16 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioOne Plugin (Atypon Systems Platform for CLOCKSS)</string>
+    <string>BioOne Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
 
   <entry>
     <string>au_name</string>
-    <string>"BioOne Plugin (Atypon Systems Platform for CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"BioOne Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

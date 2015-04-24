@@ -38,11 +38,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Emerald Group Publishing Plugin, Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+    <string>"Emerald Group Publishing Plugin (retired site), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Emerald Group Publishing Plugin</string>
+    <string>Emerald Group Publishing Plugin (retired site)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

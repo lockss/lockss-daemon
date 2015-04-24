@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Massachusetts Medical Society (Atypon) Plugin</string>
+    <string>Massachusetts Medical Society Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -42,7 +42,7 @@
   </entry>  
   <entry>
     <string>au_name</string>
-    <string>"Massachusetts Medical Society Plugin (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Massachusetts Medical Society Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

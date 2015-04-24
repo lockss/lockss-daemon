@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Mark Allen Group Plugin (Atypon)</string>
+    <string>Mark Allen Group Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>29</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Mark Allen Group (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Mark Allen Group Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
  <entry>
     <string>text/html_filter_factory</string>

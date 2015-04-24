@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>SpringerLink Book Plugin (CLOCKSS)</string>
+    <string>SpringerLink Books Plugin (retired Metapress site for CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -61,7 +61,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"SpringerLink Book Plugin (CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
+    <string>"SpringerLink Books Plugin (retired Metapress site for CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
   </entry>
   <entry>
     <string>au_start_url</string>

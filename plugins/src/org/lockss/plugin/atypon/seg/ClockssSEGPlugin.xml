@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Society Of Exploration Geophysicists Plugin (CLOCKSS)</string>
+    <string>Society of Exploration Geophysicists Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>29</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -42,7 +42,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Society Of Exploration Geophysicists (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Society of Exploration Geophysicists (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

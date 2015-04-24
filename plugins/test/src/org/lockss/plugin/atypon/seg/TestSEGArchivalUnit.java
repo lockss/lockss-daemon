@@ -71,7 +71,7 @@ public class TestSEGArchivalUnit
       "org.lockss.plugin.atypon.seg.ClockssSEGPlugin";
   
   private static final String PLUGIN_NAME = 
-                "Society Of Exploration Geophysicists (CLOCKSS)";
+                "Society of Exploration Geophysicists (CLOCKSS)";
 
   private static final String BASE_URL_KEY = 
       ConfigParamDescr.BASE_URL.getKey();
@@ -192,7 +192,7 @@ public class TestSEGArchivalUnit
     assertTrue(segAu.shouldCrawlForNewContent(aus));
   }
 
-  public void testgetName() throws Exception {
+  public void testGetName() throws Exception {
     DefinableArchivalUnit au1 =
       makeAu(new URL("http://www.example1.com/"), "aaajid", "25");
     assertEquals(PLUGIN_NAME + ", Base URL http://www.example1.com/,"

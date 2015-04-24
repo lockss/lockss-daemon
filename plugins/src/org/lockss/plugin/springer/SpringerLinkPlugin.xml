@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>49</string>
+    <string>50</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>SpringerLink Plugin</string>
+    <string>SpringerLink Journals Plugin (retired Metapress site)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -73,7 +73,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;SpringerLink Plugin, Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>&quot;SpringerLink Journals Plugin (retired Metapress site), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

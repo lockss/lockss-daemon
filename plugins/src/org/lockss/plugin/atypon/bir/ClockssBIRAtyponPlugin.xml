@@ -13,19 +13,19 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>British Institute of Radiology Publishing Plugin (Atypon for CLOCKSS)</string>
+    <string>British Institute of Radiology Publishing Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"British Institute of Radiology Publishing Plugin (Atypon for CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"British Institute of Radiology Publishing Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
     <entry>
     <string>au_start_url</string>

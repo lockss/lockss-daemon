@@ -9,11 +9,11 @@
   </entry> 
   <entry>
     <string>plugin_name</string>
-    <string>BioOne Plugin (Atypon Systems Platform)</string>
+    <string>BioOne Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -39,11 +39,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>29</string>
+    <string>34</string>
   </entry>   
   <entry>
     <string>au_name</string>
-    <string>"BioOne Plugin (Atypon Systems Platform), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"BioOne Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
 <!--  This needs to be in the child because of the special case for the 'coas' journal -->  
   <entry>
