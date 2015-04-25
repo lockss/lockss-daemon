@@ -100,7 +100,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     String starturl =
         "http://www.example.com/lockss-manifest/vol_313_manifest.html";
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire BMJ Drupal Plugin, Base URL http://www.example.com/, Volume 313",
+    assertEquals("BMJ Plugin, Base URL http://www.example.com/, Volume 313",
         au.getName());
     assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
@@ -140,7 +140,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
   
   // Test the crawl rules for BMJ
   public void testShouldCacheProperPages() throws Exception {
-    String ROOT_URL = "http://www.example.com/";
+    String ROOT_URL = "http://www.bmj.com/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(VOL_KEY, "321");
@@ -189,6 +189,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_art/node:725123/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_info/node:728958/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_related_art/node:735423/1", false, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_peer_review/node:735423/1", true, au);
     shouldCacheTest(ROOT_URL + "", false, au);
   }
   
