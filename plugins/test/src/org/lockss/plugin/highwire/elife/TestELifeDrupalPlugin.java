@@ -100,7 +100,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     String starturl =
         "http://www.example.com/lockss-manifest/elife_2013.html";
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire eLife Drupal Plugin, Base URL http://www.example.com/, Volume 2013",
+    assertEquals("eLife Sciences Plugin, Base URL http://www.example.com/, Volume 2013",
         au.getName());
     assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }

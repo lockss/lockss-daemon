@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire eLife Drupal Plugin</string>
+    <string>eLife Sciences Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>19</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,26 +43,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"HighWire eLife Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"eLife Sciences Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>"%slockss-manifest/elife_%s.html", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <!-- all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com)/."</string>
-      <!-- all fonts, images, resources, css, js, etc. -->
-      <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
-      <!-- Do not crawl unless from base url -->
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(highwire/(filestream|markup)/|elife/download-|content/elife/suppl/)", base_url</string>
-      <string>1,"^%s(content/[^/]+/e[^/?]+($|(/[^/]+)?/DC))", base_url</string>
-      <string>1,"^%scontent(/elife)?/[^/]+/e[^/?]+([.]full[.]pdf$|/article-data|/.*/embed/)", base_url</string>
-      <string>1,"^%s(panels_ajax_tab/[^/]+_(figdata)/node:|highwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$)", base_url</string>
-    </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
