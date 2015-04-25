@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire BMJ Drupal Plugin</string>
+    <string>BMJ Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,28 +43,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"HighWire BMJ Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <!-- Do not crawl these variations -->
-      <string>2,"content/.+([.](print|explore)|/(article-info|related|submit|rapid-responses|rr/))"</string>
-      <string>2,"(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))"</string>
-      <string>2,"^https?://static[.]www[.]bmj[.]com/content/"</string>
-      <string>2,"^https?://%s/content/(?!%s/)[0-9]+/[^/.?]+([.]toc)?$", base_url_host, volume_name</string>
-      <!-- otherwise, all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com)/."</string>
-      <!-- all fonts, images, resources, css, js, etc. -->
-      <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", base_url_host</string>
-      <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
-      <!-- Do not crawl unless from base url -->
-      <string>4,"^%s", base_url</string>
-      <!-- articles with other volumes can appear -->
-      <string>1,"^%s(?:content(?:/[^0-9][^/]+)?/(?:[0-9]{1,4}|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url</string>
-      <string>1,"^%s(panels_ajax_tab/[^/]+_tab_peer_review/node:|highwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$)", base_url</string>
-      <string>1,"^%scontent(?:/[^/]+)?/[^/]+/bmj[.][^/?]+([.]full[.]pdf$|/article-(data)|/.*/embed/)", base_url</string>
-    </list>
+    <string>"BMJ Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>plugin_crawl_url_comparator_factory</string>
@@ -91,11 +70,5 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.bmj.BMJDrupalHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts -->
-    <string>au_permitted_host_pattern</string>
-    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static.www.bmj.com</string>
   </entry>
 </map>
