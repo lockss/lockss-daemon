@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire APS Drupal Plugin</string>
+    <string>American Physiological Society Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>19</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"HighWire APS Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Physiological Society Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
