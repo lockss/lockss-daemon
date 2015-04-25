@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire OUP Drupal Plugin</string>
+    <string>Oxford University Press Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>18</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"HighWire OUP Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Oxford University Press Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
