@@ -32,9 +32,9 @@ for file in `cat $tpath/glnAndclockss`
 do
   if ! grep $file $tpath/glnfilter > /dev/null
   then
-    scripts/tdb/tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin ~ "OJS" or plugin ~ "ProjectMuse"' tdb/prod/$file >> $tpath/glntest
+    scripts/tdb/tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin ~ "ProjectMuse"' tdb/prod/$file >> $tpath/glntest
 # Add in AUs in manifest status in files that are in both gln & clockss, with a * to mark them
-#    scripts/tdb/tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin !~ "OJS" or plugin !~ "ProjectMuse"' tdb/prod/$file | sed 's/^/*/' >> $tpath/glntest
+#    scripts/tdb/tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin !~ "ProjectMuse"' tdb/prod/$file | sed 's/^/*/' >> $tpath/glntest
 
 #    scripts/tdb/tdbout -M -t auid,publisher,plugin,publisher:info[tester],status tdb/prod/$file > $tpath/glnM
 #    cat $tpath/glnM | sed 's/\t.*$//' | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnauids
