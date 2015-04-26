@@ -93,17 +93,21 @@ public class TestHighWirePressH20HtmlCrawlFilterFactory extends LockssTestCase {
       "</div>";
   private static final String withoutRefList = "<div>B</div>";
   
-  private static final String withNavArticle =
+  private static final String withNavArticle = "" +
+      "<head>\n" +
+      "<link rel=\"prev\" href=\"/content/130/Suppl_2/A11492.short\">" +
+      "</head>\n" +
       "<div id=\"col-x\">" +
-          "<div class=\"article-nav sidebar-nav\">\n" + 
-          "<a class=\"previous\" title=\"Previous article\" " +
-          "href=\"/content/1/6/2.short\">« Previous</a>\n" + 
-          "<span class=\"article-nav-sep\"> | </span>\n" + 
-          "<a class=\"next\" title=\"Next article\" " +
-          "href=\"/content/1/6/8.short\">Next Article »</a>\n" + 
-          "<span class=\"toc-link\">\n" + 
-          "</span></div></div>";
+      "<div class=\"article-nav sidebar-nav\">\n" + 
+      "<a class=\"previous\" title=\"Previous article\" " +
+      "href=\"/content/1/6/2.short\">« Previous</a>\n" + 
+      "<span class=\"article-nav-sep\"> | </span>\n" + 
+      "<a class=\"next\" title=\"Next article\" " +
+      "href=\"/content/1/6/8.short\">Next Article »</a>\n" + 
+      "<span class=\"toc-link\">\n" + 
+      "</span></div></div>";
   private static final String withoutNavArticle = // div attributes are removed
+      "<head>\n</head>\n" +
       "<div id=\"col-x\"></div>";
   
   private static final String col3Html =

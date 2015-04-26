@@ -43,14 +43,17 @@ import org.lockss.plugin.*;
 public class HighWirePressH20HtmlCrawlFilterFactory implements FilterFactory {
   
   protected static NodeFilter[] baseHWFilters = new NodeFilter[] {
-    // Do not crawl header or footer for links 
+    // Do not crawl next/prev links
+    HtmlNodeFilters.tagWithAttribute("link", "rel", "prev"),
+    HtmlNodeFilters.tagWithAttribute("link", "rel", "next"),
+    // Do not crawl header or footer for links
     new TagNameFilter("header"),
     new TagNameFilter("footer"),
     // Do not crawl for links from leaderboard-ads
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "leaderboard-ads"),
     // Do not crawl reference section, sidebar-nav for links
     HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-[nav|qs]"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-(nav|qs)"),
     // Do not crawl for links in col3
     HtmlNodeFilters.tagWithAttribute("div", "id", "col-3"),
   };
