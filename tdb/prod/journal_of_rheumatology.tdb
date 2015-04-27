@@ -18,15 +18,34 @@
 
     {
     
-      comment[processing] = only available to lockss from 2012 forward.
-        
       param[base_url] = http://jrheum.org/
         
       au < doNotProcess ; 2011 ; Journal of Rheumatology Volume 38 ; 38 >
-      au < released ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
-      au < released ; 2013 ; Journal of Rheumatology Volume 40 ; 40 >
-      au < testing ; 2014 ; Journal of Rheumatology Volume 41 ; 41 >
-      au < manifest ; 2015 ; Journal of Rheumatology Volume 42 ; 42 >
+      au < down ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
+      au < down ; 2013 ; Journal of Rheumatology Volume 40 ; 40 >
+
+     }
+
+    {
+    
+      param[base_url] = http://www.jrheum.org/
+      comment[base_url] = with www since 2015
+        
+      au < exists ; 2001 ; Journal of Rheumatology Volume 28 ; 28 >
+      au < exists ; 2002 ; Journal of Rheumatology Volume 29 ; 29 >
+      au < exists ; 2003 ; Journal of Rheumatology Volume 30 ; 30 >
+      au < exists ; 2004 ; Journal of Rheumatology Volume 31 ; 31 >
+      au < exists ; 2005 ; Journal of Rheumatology Volume 32 ; 32 >
+      au < exists ; 2006 ; Journal of Rheumatology Volume 33 ; 33 >
+      au < exists ; 2007 ; Journal of Rheumatology Volume 34 ; 34 >
+      au < exists ; 2008 ; Journal of Rheumatology Volume 35 ; 35 >
+      au < exists ; 2009 ; Journal of Rheumatology Volume 36 ; 36 >
+      au < exists ; 2010 ; Journal of Rheumatology Volume 37 ; 37 >
+      au < exists ; 2011 ; Journal of Rheumatology Volume 38 ; 38 >
+      au < doNotProcess ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
+      au < doNotProcess ; 2013 ; Journal of Rheumatology Volume 40 ; 40 >
+      au < ready ; 2014 ; Journal of Rheumatology Volume 41 ; 41 >
+      au < exists ; 2015 ; Journal of Rheumatology Volume 42 ; 42 >
 
      }
    
