@@ -243,11 +243,10 @@
 
       param[base_url] = http://jotlt.indiana.edu/
       param[journal_id] = jotlt
-      comment[0] = no index.php in manifest page.
 
-      au < notReady ; exists ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 >
-      au < notReady ; exists ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 >
-      au < notReady ; exists ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 >
+      au < exists ; exists ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 >
 
   }
 
@@ -274,8 +273,6 @@
       issn = 1527-9316
     >
     
-    comment[notReady] = permission page and content are at different base_urls
-    
     {
       param[journal_id] = josotl
       comment[notReady] = no substance. base_url is incorrect.
@@ -296,9 +293,9 @@
       au < exists ; exists ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 >
       au < exists ; exists ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 >
       au < exists ; exists ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 >
-      au < notReady ; exists ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 >
-      au < notReady ; exists ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 >
-      au < notReady ; exists ; 2014 ; 2014 ; Journal of the Scholarship of Teaching and Learning Volume 14 ; 14 >
+      au < exists ; exists ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of the Scholarship of Teaching and Learning Volume 14 ; 14 >
     }
   }
 
