@@ -22,8 +22,8 @@
 
     au < manifest ; exists ; 2009 ; Advances in Tumor Virology Volume 1 ; 1 ; 2009 >
     au < finished ; frozen ; 2011 ; Advances in Tumor Virology Volume 2 ; 2 ; 2011 >
-    au < ready ; exists ; 2013 ; Advances in Tumor Virology Volume 3 ; 3 ; 2013 >
-    au < ready ; exists ; 2014 ; Advances in Tumor Virology Volume 4 ; 4 ; 2014 >
+    au < crawling ; exists ; 2013 ; Advances in Tumor Virology Volume 3 ; 3 ; 2013 >
+    au < crawling ; exists ; 2014 ; Advances in Tumor Virology Volume 4 ; 4 ; 2014 >
     au < manifest ; exists ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 >
 
   }
@@ -1564,7 +1564,7 @@
     au < manifest ; exists ; 2009 ; Perspectives in Medicinal Chemistry Volume 3 ; 3 ; 2009 >
     au < manifest ; exists ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 4 ; 2010 >
     au < finished ; frozen ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 5 ; 2011 >
-    au < ready ; exists ; 2014 ; Perspectives in Medicinal Chemistry Volume 6 ; 6 ; 2014 >
+    au < crawling ; exists ; 2014 ; Perspectives in Medicinal Chemistry Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Perspectives in Medicinal Chemistry Volume 7 ; 7 ; 2015 >
     
   }
@@ -1622,7 +1622,7 @@
     
     au < manifest ; exists ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2 ; 2010 >
-    au < ready ; exists ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; 2014 >
+    au < crawling ; exists ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; 2014 >
     au < expected ; exists ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; 2015 >
     
   }
@@ -1681,7 +1681,7 @@
     
     au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; 2010 >
-    au < ready ; exists ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 >
+    au < crawling ; exists ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 >
     au < expected ; exists ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 >
     
   }
