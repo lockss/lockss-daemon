@@ -1,0 +1,47 @@
+diff --git a/xoai-service-provider/src/main/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParser.java b/xoai-service-provider/src/main/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParser.java
+index 6f9545b..808f90e 100644
+--- a/xoai-service-provider/src/main/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParser.java
++++ b/xoai-service-provider/src/main/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParser.java
+@@ -53,7 +53,7 @@
+ 
+     private Element parseElement(XmlReader reader) throws XmlReaderException {
+         Element element = new Element(reader.getAttributeValue(name()));
+-        while (reader.next(startElement(), startField(), endOfMetadata()).current(startElement())) {
++        while (reader.next(startElement(), startField(), endOfMetadata(), endElement()).current(startElement())) {
+             element.withElement(parseElement(reader));
+         }
+ 
+diff --git a/xoai-service-provider/src/test/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParserTest.java b/xoai-service-provider/src/test/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParserTest.java
+index a6711fa..036e39d 100644
+--- a/xoai-service-provider/src/test/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParserTest.java
++++ b/xoai-service-provider/src/test/java/com/lyncode/xoai/serviceprovider/parsers/MetadataParserTest.java
+@@ -19,6 +19,7 @@
+         MetadataSearch<String> searcher = metadata.searcher();
+         assertThat(metadata.getElements().size(), equalTo(1));
+         assertThat(searcher.findOne("dc.creator"), equalTo("Sousa, Jesus Maria Angélica Fernandes"));
++        assertThat(searcher.findOne("dc.date.submitted"), equalTo("1995"));
+         assertThat(searcher.findAll("dc.subject").size(), equalTo(5));
+     }
+     
+diff --git a/xoai-service-provider/src/test/resources/test/xoai.xml b/xoai-service-provider/src/test/resources/test/xoai.xml
+index ce0a3d2..9bcf96f 100644
+--- a/xoai-service-provider/src/test/resources/test/xoai.xml
++++ b/xoai-service-provider/src/test/resources/test/xoai.xml
+@@ -4,7 +4,9 @@
+             <field name="value">Sousa, Jesus Maria Angélica Fernandes</field>
+         </element>
+         <element name="date">
+-            <field name="value">1995</field>
++	    	<element name="submitted">
++            	<field name="value">1995</field>
++	    	</element>
+         </element>
+         <element name="identifier">
+             <field name="value">http://www.rcaap.pt/detail.jsp?id=oai:digituma.uma.pt:10400.13/9</field>
+@@ -46,4 +48,4 @@
+             <field name="value">info:eu-repo/semantics/doctoralThesis</field>
+         </element>
+     </element>
+-</metadata>
+\ No newline at end of file
++</metadata>

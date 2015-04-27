@@ -1,0 +1,34 @@
+diff --git a/src/main/java/com/lyncode/xml/XmlReader.java b/src/main/java/com/lyncode/xml/XmlReader.java
+index 6d1716d..28cfaaa 100644
+--- a/src/main/java/com/lyncode/xml/XmlReader.java
++++ b/src/main/java/com/lyncode/xml/XmlReader.java
+@@ -129,11 +129,12 @@
+ 
+     public XmlReader next(Matcher<XMLEvent>... possibleEvents) throws XmlReaderException {
+         try {
+-            xmlEventParser.nextEvent();
+-            while (!anyOf(possibleEvents).matches(getPeek()))
+-                xmlEventParser.nextEvent();
+-
+-            return this;
++            if(getPeek() != null) {
++              xmlEventParser.nextEvent();
++              while (!anyOf(possibleEvents).matches(getPeek()) && getPeek() != null)
++                  xmlEventParser.nextEvent();
++            }
++            return this;    
+         } catch (XMLStreamException e) {
+             throw new XmlReaderException(e);
+         }
+@@ -179,9 +180,10 @@
+ 
+                 } else if (event.isEndElement()) {
+                     count--;
++                    writer.writeEndElement();
+                     if (count == 0) {
+                         break;
+-                    } else writer.writeEndElement();
++                    }
+                 } else if (event.isCharacters()) {
+                     writer.writeCharacters(event.asCharacters().getData());
+                 }
