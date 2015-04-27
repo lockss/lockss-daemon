@@ -2871,7 +2871,7 @@
     au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 109 ; 109 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
-    au < testing ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
+    au < ready ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
     au < ready ; exists ; 2014 ; British Journal of Anaesthesia Volume 113 ; 113 ; >
     au < doNotProcess ; exists ; 2015 ; British Journal of Anaesthesia Volume 114 ; 114 ; >
 
@@ -4836,7 +4836,7 @@
     au < crawling ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
     au < ingNotReady ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
-    au < testing ; exists ; 2014 ; Diplomatic History Volume 38 ; 38 ; >
+    au < ready ; exists ; 2014 ; Diplomatic History Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2015 ; Diplomatic History Volume 39 ; 39 ; >
 
   }
@@ -5942,9 +5942,10 @@
     au < finished ; crawling ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43 ; 43 ; >
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
+    au < testing ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
+    au < testing ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
     au < manifest ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
+    au < expected ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 48 ; 48 ; >
 
   }
 
@@ -6139,7 +6140,7 @@
     au < finished ; crawling ; 2011 ; European Journal of International Law Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; European Journal of International Law Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; European Journal of International Law Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2014 ; European Journal of International Law Volume 25 ; 25 ; >
+    au < testing ; exists ; 2014 ; European Journal of International Law Volume 25 ; 25 ; >
     au < manifest ; exists ; 2015 ; European Journal of International Law Volume 26 ; 26 ; >
 
     }
@@ -6933,12 +6934,13 @@
     au < manifest ; exists ; 2014 ; FEMS Microbiology Letters Volume 354 ; 354 ; >
     au < manifest ; exists ; 2014 ; FEMS Microbiology Letters Volume 355 ; 355 ; >
     au < manifest ; exists ; 2014 ; FEMS Microbiology Letters Volume 356 ; 356 ; >
-    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 357 ; 357 ; >
-    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 358 ; 358 ; >
-    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 359 ; 359 ; >
-    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 360 ; 360 ; >
-    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 361 ; 361 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 357 ; 357 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 358 ; 358 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 359 ; 359 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 360 ; 360 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 361 ; 361 ; >
     au < manifest ; exists ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 ; >
+    au < expected ; exists ; 2015 ; FEMS Microbiology Letters Volume 363 ; 363 ; >
 
   }
 
@@ -7188,7 +7190,7 @@
     au < finished ; crawling ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 ; >
     au < finished ; crawling ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 ; >
     au < crawling ; exists ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ; >
-    au < manifest ; exists ; 2014 ; Forestry: An International Journal of Forest Research Volume 87 ; 87 ; >
+    au < testing ; exists ; 2014 ; Forestry: An International Journal of Forest Research Volume 87 ; 87 ; >
     au < manifest ; exists ; 2015 ; Forestry: An International Journal of Forest Research Volume 88 ; 88 ; >
 
     }
@@ -7268,7 +7270,7 @@
     au < finished ; crawling ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; >
     au < finished ; crawling ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 ; >
     au < crawling ; exists ; 2013 ; Forum for Modern Language Studies Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2014 ; Forum for Modern Language Studies Volume 50 ; 50 ; >
+    au < testing ; exists ; 2014 ; Forum for Modern Language Studies Volume 50 ; 50 ; >
     au < manifest ; exists ; 2015 ; Forum for Modern Language Studies Volume 51 ; 51 ; >
 
     }
@@ -7326,7 +7328,7 @@
     au < finished ; crawling ; 2011 ; French History Volume 25 ; 25 ; >
     au < finished ; crawling ; 2012 ; French History Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; French History Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2014 ; French History Volume 28 ; 28 ; >
+    au < testing ; exists ; 2014 ; French History Volume 28 ; 28 ; >
     au < manifest ; exists ; 2015 ; French History Volume 29 ; 29 ; >
 
     }
@@ -7424,7 +7426,7 @@
     au < finished ; crawling ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
     au < finished ; frozen ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 ; >
+    au < testing ; exists ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 ; >
     au < manifest ; exists ; 2015 ; French Studies: A Quarterly Review Volume 69 ; 69 ; >
 
     }
@@ -7478,7 +7480,7 @@
     au < finished ; crawling ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     au < finished ; frozen ; 2012 ; French Studies Bulletin Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; French Studies Bulletin Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2014 ; French Studies Bulletin Volume 35 ; 35 ; >
+    au < testing ; exists ; 2014 ; French Studies Bulletin Volume 35 ; 35 ; >
     au < manifest ; exists ; 2015 ; French Studies Bulletin Volume 36 ; 36 ; >
 
     }
@@ -7500,7 +7502,7 @@
     comment[status] = May be moving to Drupal soon?
 
     au < crawling ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
+    au < testing ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
 
   }
 
