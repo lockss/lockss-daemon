@@ -1920,6 +1920,28 @@
   {
   
     title <
+      name = Studies in American Humor ;
+      issn = 0095-280X ;
+      eissn = 2333-9934 ;
+      issnl = 0095-280X
+    >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = studies_in_american_humor
+      attr[journal_id] = sah
+
+      au < exists ; 2015 ; Studies in American Humor Volume 1 ; 1 >
+      
+    }
+
+  }
+
+  {
+  
+    title <
       name = Studies in American Jewish Literature (1981-) ;
       issn = 0271-9274 ;
       eissn = 1948-5077 ;
