@@ -193,8 +193,6 @@
       >
 
       param[journal_issn] = 1471-2326
-      
-      {
       comment[journal_code] = bmcblooddisord
       
       au < manifest ; exists ; 2001 ; BMC Blood Disorders Volume 1 ; 1 >
@@ -209,19 +207,24 @@
       au < crawling ; exists ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
       au < crawling ; crawling ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
-      
-      }
-      
-      {
-      comment[journal_code] = bmchematol
-      comment[journal_title] = journal name and journal code change in 2013, same issn used
-      comment[notReady] = no substance, though there appears to be some on the website.
+      au < superseded ; exists ; 2013 ; BMC Hematology Volume 13 [to delete] ; 13 >
 
-      au < crawling ; exists ; 2013 ; BMC Hematology Volume 13 ; 13 >
-      au < notReady ; exists ; 2014 ; BMC Hematology Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; BMC Hematology Volume 15 ; 15 >
-      
-      }
+    }
+
+    {
+      title <
+        name = BMC Hematology ;
+        eissn = 2052-1839 ;
+        issnl = 2052-1839
+      >
+
+      param[journal_issn] = 2052-1839
+      comment[journal_code] = bmchematol
+      comment[continues] = 1471-2326
+
+      au < exists ; exists ; 2013 ; BMC Hematology Volume 13 ; 13 >
+      au < exists ; exists ; 2014 ; BMC Hematology Volume 14 ; 14 >
+      au < exists ; exists ; 2015 ; BMC Hematology Volume 15 ; 15 >
 
     }
 
