@@ -868,11 +868,12 @@
 
     param[base_url] = http://eolj.bmj.com/
     comment[continued_by] = 2047-6361
+    comment[doNotProcess] = duplicate volume numbers. waiting for feedback from HW
 
-    au < HighWirePressH20Plugin ; exists ; 2007 ; End of Life Care Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; End of Life Care Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; End of Life Care Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; End of Life Care Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; End of Life Care Volume 1 ; 2007 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; End of Life Care Volume 2 ; 2008 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; End of Life Care Volume 3 ; 2009 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; End of Life Care Volume 4 ; 2010 >
 
   }
 
