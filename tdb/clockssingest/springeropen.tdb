@@ -531,7 +531,7 @@
   
         au < manifest ; exists ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 >
-        au < manifest ; exists ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
+        au < testing ; exists ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 >
   
@@ -550,7 +550,7 @@
   
         au < manifest ; exists ; 2011 ; Environmental Sciences Europe Volume 23 ; 23 >
         au < manifest ; exists ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 >
-        au < manifest ; exists ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 >
+        au < testing ; exists ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 >
         au < manifest ; exists ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 >
         au < manifest ; exists ; 2015 ; Environmental Sciences Europe Volume 27 ; 27 >
   
@@ -568,7 +568,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Environmental Systems Research Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Environmental Systems Research Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Environmental Systems Research Volume 4 ; 4 >
   
@@ -586,7 +586,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; EPJ Data Science Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; EPJ Data Science Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; EPJ Data Science Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; EPJ Data Science Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; EPJ Data Science Volume 4 ; 4 >
   
@@ -603,7 +603,7 @@
         param[journal_issn] = 2195-0008 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 ; 3 >
   
@@ -656,7 +656,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Advances in Signal Processing Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Advances in Signal Processing Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Advances in Signal Processing Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 ; 2015 >
   
@@ -680,7 +680,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 ; 2015 >
   
@@ -705,7 +705,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 ; 2015 >
   
@@ -730,7 +730,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Embedded Systems Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Embedded Systems Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 ; 2015 >
   
@@ -754,7 +754,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Image and Video Processing Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 ; 2015 >
   
