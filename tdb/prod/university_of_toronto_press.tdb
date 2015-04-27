@@ -55,6 +55,22 @@
   {
   
     title <
+      name = Canadian Journal of History ;
+      issn = 0008-4107 ;
+      eissn = 2292-8502 ;
+      issnl = 0008-4107
+    >
+
+    param[journal_dir] = canadian_journal_of_history
+    attr[journal_id] = cnh
+
+    au < exists ; 2015 ; Canadian Journal of History Volume 50 ; 50 >
+
+  }
+
+  {
+  
+    title <
       name = Canadian Journal of Criminology and Criminal Justice ;
       issn = 1707-7753 ;
       eissn = 1911-0219 ;
