@@ -112,7 +112,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revcaititu
 
-      au < manifest ; 2013 ; 1 ; Revista CAITITU - UFBA Volume 1 ; 2013 ; >
+      au < testing ; 2013 ; 1 ; Revista CAITITU - UFBA Volume 1 ; 2013 ; >
 
   }
 
@@ -127,7 +127,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revcetrama
 
-      au < manifest ; 2003 ; 1 ; Revista CETRAMA Volume 1 ; 2003 ; >
+      au < testing ; 2003 ; 1 ; Revista CETRAMA Volume 1 ; 2003 ; >
 
   }
 
@@ -143,7 +143,7 @@
       param[journal_id] = gesta
 
       au < released ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 ; >
-      au < manifest ; 2014 ; 2 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 2 ; 2014 ; >
+      au < testing ; 2014 ; 2 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 2 ; 2014 ; >
 
   }
 
@@ -259,7 +259,7 @@
       param[journal_id] = nit
 
       au < released ; 2008 ; 1 ; Cadernos de Prospecção Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 2 ; Cadernos de Prospecção Volume 2009 ; 2009 ; >
+      au < testing ; 2009 ; 2 ; Cadernos de Prospecção Volume 2009 ; 2009 ; >
 
   }
 
@@ -375,8 +375,8 @@
       au < doNotProcess ; 2010 ; 2 ; GERMINAL: Marxismo e Educação em Debate Volume 2010 ; 2010 ; >
       au < doNotProcess ; 2011 ; 3 ; GERMINAL: Marxismo e Educação em Debate Volume 2011 ; 2011 ; >
       au < doNotProcess ; 2012 ; 4 ; GERMINAL: Marxismo e Educação em Debate Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 5 ; GERMINAL: Marxismo e Educação em Debate Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 6 ; GERMINAL: Marxismo e Educação em Debate Volume 2014 ; 2014 ; >
+      au < testing ; 2013 ; 5 ; GERMINAL: Marxismo e Educação em Debate Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 6 ; GERMINAL: Marxismo e Educação em Debate Volume 2014 ; 2014 ; >
 
   }
 
@@ -474,7 +474,7 @@
       au < released ; 2011 ; 5 ; Ponto de Acesso Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Ponto de Acesso Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Ponto de Acesso Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Ponto de Acesso Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 8 ; Ponto de Acesso Volume 2014 ; 2014 ; >
 
   }
 
@@ -496,7 +496,7 @@
       au < released ; 2011 ; 4 ; Repertório: teatro & Dança Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; Repertório: teatro & Dança Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Repertório: teatro & Dança Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 7 ; Repertório: teatro & Dança Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 7 ; Repertório: teatro & Dança Volume 2014 ; 2014 ; >
 
   }
 
@@ -551,7 +551,7 @@
       au < released ; 2011 ; 10 ; Revista de Ciências Médicas e Biológicas Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 11 ; Revista de Ciências Médicas e Biológicas Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Revista de Ciências Médicas e Biológicas Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 13 ; Revista de Ciências Médicas e Biológicas Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 13 ; Revista de Ciências Médicas e Biológicas Volume 2014 ; 2014 ; >
 
   }
 
@@ -573,7 +573,7 @@
       au < released ; 2011 ; 5 ; Revista de Contabilidade de UFBA Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Revista de Contabilidade de UFBA Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Revista de Contabilidade de UFBA Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Revista de Contabilidade de UFBA Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 8 ; Revista de Contabilidade de UFBA Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 9 ; Revista de Contabilidade de UFBA Volume 2015 ; 2015 ; >
 
   }
@@ -623,7 +623,7 @@
       au < released ; 2011 ; 18 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 19 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 20 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 21 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 21 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2014 ; 2014 ; >
 
   }
 
@@ -655,7 +655,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistaperiodicus
 
-      au < manifest ; 2014 ; 1 ; Revista Periódicus Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 1 ; Revista Periódicus Volume 2014 ; 2014 ; >
 
   }
 
