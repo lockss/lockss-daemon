@@ -475,7 +475,26 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jmmcr.sgmjournals.org/
 
-      au < expected ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 >
+      au < exists ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 >
+      au < exists ; exists ; 2015 ; JMM Case Reports Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Microbial Genomics ;
+      eissn = 
+    >
+
+    {
+
+      rights = openaccess
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://mgen.sgmjournals.org/
+
+      au < expected ; exists ; 2015 ; Microbial Genomics Volume 1 ; 1 >
 
     }
 
