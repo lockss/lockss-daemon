@@ -495,6 +495,26 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 2015 ; JMM Case Reports Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Microbial Genomics ;
+      eissn = 
+    >
+
+    {
+
+      rights = openaccess
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://mgen.sgmjournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; expected ; 2015 ; Microbial Genomics Volume 1 ; 1 >
 
     }
 
