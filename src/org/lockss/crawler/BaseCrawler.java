@@ -591,6 +591,12 @@ public abstract class BaseCrawler implements Crawler {
     uc.setWatchdog(wdog);
     return uc;
   }
+  
+  public UrlFetcher makeUrlFetcher(CrawlUrlData curl) {
+    UrlFetcher uf = makeUrlFetcher(curl.getUrl());
+    uf.setCrawlUrl(curl);
+    return uf;
+  }
 
   /** All UrlFetchers should be made via this method, so they get their
    * connection pool set. */
@@ -789,6 +795,15 @@ public abstract class BaseCrawler implements Crawler {
     public boolean isAllowedPluginPermittedHost(String host) {
       return crawler.crawlMgr.isAllowedPluginPermittedHost(host);
     }
+
+    @Override
+    public CrawlUrl addChild(CrawlUrl curl, String url) {
+      CrawlUrlData curld = (CrawlUrlData)curl;
+      CrawlUrlData child = new CrawlUrlData(url, curld.getDepth()+1);
+      curld.addChild(child);
+      return child;
+    }
+
   }
 
 }

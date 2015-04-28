@@ -541,7 +541,7 @@ public class FollowLinkCrawler extends BaseCrawler {
             }
             return false;
           }
-          fetcher = makeUrlFetcher(url);
+          fetcher = makeUrlFetcher(curl);
           try {
             res = fetcher.fetch();
             updateCacheStats(res, curl);

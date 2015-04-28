@@ -80,7 +80,11 @@ public class ClockssUrlFetcher implements UrlFetcher {
   public void setLocalAddress(IPAddr addr) {
     uf.setLocalAddress(addr);
   }
-
+  
+  public void setCrawlUrl(CrawlUrl curl) {
+    uf.setCrawlUrl(curl);
+  }
+  
   public void setFetchFlags(BitSet fetchFlags) {
     uf.setFetchFlags(fetchFlags);
   }

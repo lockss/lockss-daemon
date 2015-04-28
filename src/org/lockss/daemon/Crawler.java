@@ -194,6 +194,8 @@ public interface Crawler {
     public boolean isGloballyPermittedHost(String host);
 
     public boolean isAllowedPluginPermittedHost(String host);
+    
+    public CrawlUrl addChild(CrawlUrl curl, String url);
   }
   
 

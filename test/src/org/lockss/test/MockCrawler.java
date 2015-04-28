@@ -319,5 +319,10 @@ public class MockCrawler extends NullCrawler {
     public boolean isAllowedPluginPermittedHost(String host) {
       return allowedPluginPermittedHost.contains(host);
     }
+
+    @Override
+    public CrawlUrl addChild(CrawlUrl curl, String url) {
+      return null;
+    }
   }
 }

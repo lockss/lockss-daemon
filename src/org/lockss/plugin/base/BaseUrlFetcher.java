@@ -100,6 +100,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   protected CrawlerStatus crawlStatus;
   protected Crawler.CrawlerFacade crawlFacade;
   protected LockssWatchdog wdog;
+  protected CrawlUrl curl;
   
   public BaseUrlFetcher(Crawler.CrawlerFacade crawlFacade, String url) {
     this.origUrl = url;
@@ -281,6 +282,12 @@ public class BaseUrlFetcher implements UrlFetcher {
   public void setRedirectScheme(RedirectScheme scheme) {
     if (log.isDebug3()) log.debug3("setRedirectScheme: " + scheme);
     this.redirectScheme = scheme;
+  }
+  
+  public void setCrawlUrl(CrawlUrl curl) {
+    if(curl.getUrl().equals(origUrl)) {
+      this.curl = curl;
+    }
   }
   
   public void setProxy(String proxyHost, int proxyPort) {

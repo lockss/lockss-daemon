@@ -38,6 +38,7 @@ import java.util.BitSet;
 
 import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlRateLimiter;
+import org.lockss.crawler.CrawlUrl;
 import org.lockss.daemon.LockssWatchdog;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
@@ -104,6 +105,13 @@ public interface UrlFetcher {
 
   /** Set the host and port the UrlCacher should proxy through */
   public void setProxy(String proxyHost, int proxyPort);
+  
+  /**
+   * Provides the crawl url for UrlFetchers created within the crawl 
+   * @param curl
+   */
+  public void setCrawlUrl(CrawlUrl curl);
+  
   
   /**
    * Sets various attributes of the fetch operation
