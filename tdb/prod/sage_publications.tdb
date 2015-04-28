@@ -32460,6 +32460,22 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = Multiple Sclerosis Journal – Experimental, Translational and Clinical ;
+        eissn = 2055-2173 ;
+        issnl = 2055-2173
+    >
+
+      param[base_url] = http://mso.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Multiple Sclerosis Journal – Experimental, Translational and Clinical Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
@@ -33365,6 +33381,22 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; New Solutions Volume 23 ; 23 >
       au < manifest ; 2014 ; New Solutions Volume 24 ; 24 >
       au < expected ; 2015 ; New Solutions Volume 25 ; 25 >
+
+  }
+
+  {
+
+    title <
+      name = Newspaper Research Journal ;
+      issn = 0739-5329 ;
+      eissn = 2376-4791
+    >
+
+      param[base_url] = http://nrj.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 >
 
   }
 
