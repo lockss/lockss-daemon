@@ -52,7 +52,7 @@
     au < released ; 2011 ; In Practice Volume 33 ; 33 >
     au < released ; 2012 ; In Practice Volume 34 ; 34 >
     au < released ; 2013 ; In Practice Volume 35 ; 35 >
-    au < manifest ; 2014 ; In Practice Volume 36 ; 36 >
+    au < testing ; 2014 ; In Practice Volume 36 ; 36 >
     au < manifest ; 2015 ; In Practice Volume 37 ; 37 >
     au < manifest ; 2015 ; In Practice Volume 38 ; 38 >
 
@@ -184,8 +184,8 @@
     au < released ; 2012 ; Veterinary Record Volume 171 ; 171 >
     au < released ; 2013 ; Veterinary Record Volume 172 ; 172 >
     au < released ; 2013 ; Veterinary Record Volume 173 ; 173 >
-    au < manifest ; 2014 ; Veterinary Record Volume 174 ; 174 >
-    au < manifest ; 2014 ; Veterinary Record Volume 175 ; 175 >
+    au < testing ; 2014 ; Veterinary Record Volume 174 ; 174 >
+    au < testing ; 2014 ; Veterinary Record Volume 175 ; 175 >
     au < manifest ; 2015 ; Veterinary Record Volume 176 ; 176 >
 
   }
@@ -215,7 +215,7 @@
     param[base_url] = http://vetrecordcasereports.bmj.com/
 
     au < released ; 2013 ; Veterinary Record Case Reports Volume 1 ; 1 >
-    au < manifest ; 2014 ; Veterinary Record Case Reports Volume 2 ; 2 >
+    au < testing ; 2014 ; Veterinary Record Case Reports Volume 2 ; 2 >
 
   }
 
