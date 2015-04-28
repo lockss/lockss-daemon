@@ -78,27 +78,27 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
-    au < exists ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
-    au < exists ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
-    au < exists ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
-    au < exists ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
-    au < exists ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
-    au < exists ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
-    au < exists ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
-    au < exists ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
-    au < exists ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
-    au < exists ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
-    au < exists ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
-    au < exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
-    au < exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 >
-    au < exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
-    au < exists ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
-    au < exists ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
-    au < exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 >
-    au < exists ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 >
-    au < exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
-    au < expected ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 >
+    au < manifest ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
+    au < manifest ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
+    au < manifest ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
+    au < manifest ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
+    au < manifest ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
+    au < manifest ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
+    au < manifest ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
+    au < manifest ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
+    au < manifest ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
+    au < manifest ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
+    au < manifest ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
+    au < manifest ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
+    au < manifest ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
+    au < manifest ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 >
+    au < manifest ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
+    au < manifest ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
+    au < manifest ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
+    au < manifest ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 >
+    au < manifest ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 >
+    au < manifest ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
+    au < manifest ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 >
 
   }
 
@@ -1833,7 +1833,7 @@
     au < manifest ; 2012 ; Arbitration International Volume 28 ; 28 >
     au < manifest ; 2013 ; Arbitration International Volume 29 ; 29 >
     au < manifest ; 2014 ; Arbitration International Volume 30 ; 30 >
-    au < expected ; 2015 ; Arbitration International Volume 31 ; 31 >
+    au < manifest ; 2015 ; Arbitration International Volume 31 ; 31 >
 
   }
 
@@ -8411,7 +8411,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Holocaust and Genocide Studies Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 >
 
     }
 
@@ -8435,7 +8435,7 @@
     au < released ; 2012 ; Holocaust and Genocide Studies Volume 26 [Project MUSE] ; 26 >
     au < released ; 2013 ; Holocaust and Genocide Studies Volume 27 [Project MUSE] ; 27 >
     au < manifest ; 2014 ; Holocaust and Genocide Studies Voluem 28 [Project MUSE] ; 28 >
-    au < expected ; 2015 ; Holocaust and Genocide Studies Voluem 29 [Project MUSE] ; 29 >
+    au < manifest ; 2015 ; Holocaust and Genocide Studies Voluem 29 [Project MUSE] ; 29 >
 
     }
 
@@ -12491,7 +12491,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Journal of Hindu Studies Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Journal of Hindu Studies Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The Journal of Hindu Studies Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Journal of Hindu Studies Volume 8 ; 8 >
 
     }
 
@@ -16310,17 +16310,17 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1890 volume 1 to 1999 volume 82
 
-    au < exists ; 2000 ; The Monist Volume 83 ; 83 >
-    au < exists ; 2001 ; The Monist Volume 84 ; 84 >
-    au < exists ; 2002 ; The Monist Volume 85 ; 85 >
-    au < exists ; 2003 ; The Monist Volume 86 ; 86 >
-    au < exists ; 2004 ; The Monist Volume 87 ; 87 >
+    au < manifest ; 2000 ; The Monist Volume 83 ; 83 >
+    au < manifest ; 2001 ; The Monist Volume 84 ; 84 >
+    au < manifest ; 2002 ; The Monist Volume 85 ; 85 >
+    au < manifest ; 2003 ; The Monist Volume 86 ; 86 >
+    au < manifest ; 2004 ; The Monist Volume 87 ; 87 >
     au < exists ; 2005 ; The Monist Volume 88 ; 88 >
-    au < exists ; 2006 ; The Monist Volume 89 ; 89 >
-    au < exists ; 2007 ; The Monist Volume 90 ; 90 >
+    au < manifest ; 2006 ; The Monist Volume 89 ; 89 >
+    au < manifest ; 2007 ; The Monist Volume 90 ; 90 >
     au < exists ; 2008 ; The Monist Volume 91 ; 91 >
     au < exists ; 2009 ; The Monist Volume 92 ; 92 >
-    au < exists ; 2010 ; The Monist Volume 93 ; 93 >
+    au < manifest ; 2010 ; The Monist Volume 93 ; 93 >
     au < exists ; 2011 ; The Monist Volume 94 ; 94 >
     au < exists ; 2012 ; The Monist Volume 95 ; 95 >
     au < manifest ; 2013 ; The Monist Volume 96 ; 96 >
@@ -16851,7 +16851,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Music Therapy Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Music Therapy Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Music Therapy Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of Music Therapy Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Music Therapy Volume 52 ; 52 >
 
     }
 
@@ -16904,7 +16904,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Music Therapy Perspectives Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 >
 
     }
 
@@ -18128,7 +18128,7 @@
     au < released ; 2012 ; The Oral History Review Volume 39 [Project MUSE] ; 39 >
     au < released ; 2013 ; The Oral History Review Volume 40 [Project MUSE] ; 40 >
     au < manifest ; 2014 ; The Oral History Review Volume 41 [Project MUSE] ; 41 >
-    au < expected ; 2015 ; The Oral History Review Volume 42 [Project MUSE] ; 42 >
+    au < manifest ; 2015 ; The Oral History Review Volume 42 [Project MUSE] ; 42 >
 
     }
 
@@ -22748,7 +22748,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Virus Evolution Volume 1 ; 1 >
+    au < manifest ; 2015 ; Virus Evolution Volume 1 ; 1 >
 
   }
 

@@ -99,24 +99,24 @@
     param[base_url] = http://asj.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 ; >
-    au < exists ; exists ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
-    au < exists ; exists ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
-    au < exists ; exists ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
-    au < exists ; exists ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 ; >
-    au < exists ; exists ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
-    au < exists ; exists ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
-    au < exists ; exists ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
-    au < exists ; exists ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 ; >
-    au < exists ; exists ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 ; >
-    au < exists ; exists ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
-    au < exists ; exists ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
-    au < exists ; exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
-    au < exists ; exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
-    au < exists ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
-    au < exists ; exists ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
-    au < exists ; exists ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
-    au < exists ; exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; >
     au < manifest ; exists ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ; >
     au < manifest ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
     au < manifest ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
@@ -8358,7 +8358,7 @@
     au < finished ; frozen ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 ; >
     au < manifest ; exists ; 2014 ; Holocaust and Genocide Studies Volume 28 ; 28 ; >
-    au < expected ; exists ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ; >
 
     }
 
@@ -12308,7 +12308,7 @@
     au < finished ; frozen ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Journal of Hindu Studies Volume 6 ; 6 ; >
     au < manifest ; exists ; 2014 ; The Journal of Hindu Studies Volume 7 ; 7 ; >
-    au < expected ; exists ; 2015 ; The Journal of Hindu Studies Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2015 ; The Journal of Hindu Studies Volume 8 ; 8 ; >
 
     }
 
@@ -16039,22 +16039,22 @@
     param[base_url] = http://monist.oxfordjournals.org/
     comment[0] = content available from 1890 volume 1 to 1999 volume 82
 
-    au < exists ; exists ; 2000 ; The Monist Volume 83 ; 83 ; >
-    au < exists ; exists ; 2001 ; The Monist Volume 84 ; 84 ; >
-    au < exists ; exists ; 2002 ; The Monist Volume 85 ; 85 ; >
-    au < exists ; exists ; 2003 ; The Monist Volume 86 ; 86 ; >
-    au < exists ; exists ; 2004 ; The Monist Volume 87 ; 87 ; >
-    au < exists ; exists ; 2005 ; The Monist Volume 88 ; 88 ; >
-    au < exists ; exists ; 2006 ; The Monist Volume 89 ; 89 ; >
-    au < exists ; exists ; 2007 ; The Monist Volume 90 ; 90 ; >
-    au < exists ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
-    au < exists ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
-    au < exists ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
-    au < exists ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
-    au < exists ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
-    au < exists ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
-    au < exists ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
-    au < exists ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
+    au < manifest ; exists ; 2000 ; The Monist Volume 83 ; 83 ; >
+    au < manifest ; exists ; 2001 ; The Monist Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2002 ; The Monist Volume 85 ; 85 ; >
+    au < manifest ; exists ; 2003 ; The Monist Volume 86 ; 86 ; >
+    au < manifest ; exists ; 2004 ; The Monist Volume 87 ; 87 ; >
+    au < manifest ; exists ; 2005 ; The Monist Volume 88 ; 88 ; >
+    au < manifest ; exists ; 2006 ; The Monist Volume 89 ; 89 ; >
+    au < manifest ; exists ; 2007 ; The Monist Volume 90 ; 90 ; >
+    au < manifest ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
+    au < manifest ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
+    au < manifest ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
+    au < manifest ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
+    au < manifest ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
 
   }
 
@@ -16606,7 +16606,7 @@
     au < crawling ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
     au < crawling ; exists ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 ; >
     au < manifest ; exists ; 2014 ; Music Therapy Perspectives Volume 32 ; 32 ; >
-    au < exists ; exists ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 ; >
 
     }
 
@@ -22449,7 +22449,7 @@
     param[base_url] = http://ve.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
 
   }
 
