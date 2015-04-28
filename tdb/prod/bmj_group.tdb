@@ -1312,41 +1312,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
   {
     title <
-      name = JAMIA ;
-      issn = 1067-5027 ;
-      eissn = 1527-974X ;
-      issnl = 1067-5027
-    >
-
-    param[base_url] = http://jamia.bmj.com/
-
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; JAMIA Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; JAMIA Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; JAMIA Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; JAMIA Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; JAMIA Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; JAMIA Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; JAMIA Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; JAMIA Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; JAMIA Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; JAMIA Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; JAMIA Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; JAMIA Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; JAMIA Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; JAMIA Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; JAMIA Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; JAMIA Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; JAMIA Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; JAMIA Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; exists ; 2012 ; JAMIA Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; exists ; 2013 ; JAMIA Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; exists ; 2014 ; JAMIA Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; JAMIA Volume 22 ; 22 >
-
-  }
-
-  {
-    title <
       name = Journal of Clinical Pathology ;
       issn = 0021-9746 ;
       eissn = 1472-4146 ;
