@@ -93,6 +93,7 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
   static final String ACTION_START_DEEP_CRAWL = "Deep Crawl";
   static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
+  static final String ACTION_CHECK_SUBSTANCE = "Check Substance";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
   static final String ACTION_SLEEP = "Sleep";
@@ -198,6 +199,9 @@ public class DebugPanel extends LockssServlet {
     }
     if (ACTION_FORCE_START_DEEP_CRAWL.equals(action)) {
       doCrawl(true, true);
+    }
+    if (ACTION_CHECK_SUBSTANCE.equals(action)) {
+      doCheckSubstance();
     }
     if (ACTION_CRAWL_PLUGINS.equals(action)) {
       crawlPluginRegistries();
@@ -359,6 +363,45 @@ public class DebugPanel extends LockssServlet {
     cmi.startNewContentCrawl(req, null);
     statusMsg = deepMsg + "Crawl requested for " + au.getName() + delayMsg;
     return true;
+  }
+
+  private void doCheckSubstance() {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    try {
+      checkSubstance(au);
+    } catch (RuntimeException e) {
+      log.error("Error in SubstanceChecker", e);
+      errMsg = "Error in SubstanceChecker; see log.";
+    }
+  }
+
+  private void checkSubstance(ArchivalUnit au) {
+    SubstanceChecker subChecker = new SubstanceChecker(au);
+    if (!subChecker.isEnabled()) {
+      errMsg = "No substance patterns defined for plugin.";
+      return;
+    }
+    AuState auState = AuUtil.getAuState(au);
+    SubstanceChecker.State oldState = auState.getSubstanceState();
+    SubstanceChecker.State newState = subChecker.findSubstance();
+    String chtxt = (newState == oldState
+		    ? "(unchanged)"
+		    : "(was " + oldState.toString() + ")");
+    switch (newState) {
+    case Unknown:
+      log.error("Shouldn't happen: SubstanceChecker returned Unknown");
+      errMsg = "Error in SubstanceChecker; see log.";
+      break;
+    case Yes:
+      statusMsg = "AU has substance " + chtxt + ": " + au.getName();
+      auState.setSubstanceState(SubstanceChecker.State.Yes);
+      break;
+    case No:
+      statusMsg = "AU has no substance " + chtxt + ": " + au.getName();
+      auState.setSubstanceState(SubstanceChecker.State.No);
+      break;
+    }
   }
 
   private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {
@@ -560,6 +603,23 @@ public class DebugPanel extends LockssServlet {
     frm.add(v3Poll);
     frm.add(" ");
     frm.add(crawl);
+    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_DEEP_CRAWL,
+				      DEFAULT_ENABLE_DEEP_CRAWL)) {
+      Input deepCrawl = new Input(Input.Submit, KEY_ACTION,
+				  ( showForceCrawl
+				    ? ACTION_FORCE_START_DEEP_CRAWL
+				    : ACTION_START_DEEP_CRAWL));
+      Input depthText = new Input(Input.Text, KEY_REFETCH_DEPTH, formDepth);
+      depthText.setSize(4);
+      setTabOrder(depthText);
+      frm.add(" ");
+      frm.add(deepCrawl);
+      frm.add(depthText);
+    }
+      Input checkSubstance = new Input(Input.Submit, KEY_ACTION,
+				       ACTION_CHECK_SUBSTANCE);
+      frm.add("<br>");
+      frm.add(checkSubstance);
     if (metadataMgr != null) {
       Input reindex = new Input(Input.Submit, KEY_ACTION,
                                 ( showForceReindexMetadata
@@ -573,17 +633,6 @@ public class DebugPanel extends LockssServlet {
       frm.add(disableIndexing);
     }
     frm.add("</center>");
-    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_DEEP_CRAWL,
-				      DEFAULT_ENABLE_DEEP_CRAWL)) {
-      Input deepCrawl = new Input(Input.Submit, KEY_ACTION,
-				  ( showForceCrawl
-				    ? ACTION_FORCE_START_DEEP_CRAWL
-				    : ACTION_START_DEEP_CRAWL));
-      Input depthText = new Input(Input.Text, KEY_REFETCH_DEPTH, formDepth);
-      depthText.setSize(4);
-      setTabOrder(depthText);
-      frm.add("<br><center>"+deepCrawl+" " + depthText + "</center>");
-    }
 
     comp.add(frm);
     return comp;
