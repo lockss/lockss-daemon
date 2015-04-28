@@ -709,6 +709,20 @@
   {
 
     title <
+      name = AERA Open ;
+      eissn = 2332-8584
+    >
+
+      param[base_url] = http://ero.sagepub.com/
+      pluginSuffix = ClockssHWDrupalPlugin
+
+      au < exists ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Aesthetic Surgery Journal ;
       issn = 1090-820X ;
       eissn = 1527-330X
@@ -17243,8 +17257,44 @@
       au < finished ; crawling ; 2012-2013 ; Intervention in School and Clinic Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013-2014 ; Intervention in School and Clinic Volume 49 ; 49 ; >
       au < manifest ; exists ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 ; >
+      au < expected ; exists ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Interventional Neuroradiology ;
+      issn = 1591-0199 ;
+      eissn = 2385-2011
+    >
+
+      param[base_url] = http://ine.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1995 ; Interventional Neuroradiology Volume 1 ; 1 ; >
+      au < exists ; exists ; 1996 ; Interventional Neuroradiology Volume 2 ; 2 ; >
+      au < exists ; exists ; 1997 ; Interventional Neuroradiology Volume 3 ; 3 ; >
+      au < exists ; exists ; 1998 ; Interventional Neuroradiology Volume 4 ; 4 ; >
+      au < exists ; exists ; 1999 ; Interventional Neuroradiology Volume 5 ; 5 ; >
+      au < exists ; exists ; 2000 ; Interventional Neuroradiology Volume 6 ; 6 ; >
+      au < exists ; exists ; 2001 ; Interventional Neuroradiology Volume 7 ; 7 ; >
+      au < exists ; exists ; 2002 ; Interventional Neuroradiology Volume 8 ; 8 ; >
+      au < exists ; exists ; 2003 ; Interventional Neuroradiology Volume 9 ; 9 ; >
+      au < exists ; exists ; 2004 ; Interventional Neuroradiology Volume 10 ; 10 ; >
+      au < exists ; exists ; 2005 ; Interventional Neuroradiology Volume 11 ; 11 ; >
+      au < exists ; exists ; 2006 ; Interventional Neuroradiology Volume 12 ; 12 ; >
+      au < exists ; exists ; 2007 ; Interventional Neuroradiology Volume 13 ; 13 ; >
+      au < exists ; exists ; 2008 ; Interventional Neuroradiology Volume 14 ; 14 ; >
+      au < exists ; exists ; 2009 ; Interventional Neuroradiology Volume 15 ; 15 ; >
+      au < exists ; exists ; 2010 ; Interventional Neuroradiology Volume 16 ; 16 ; >
+      au < exists ; exists ; 2011 ; Interventional Neuroradiology Volume 17 ; 17 ; >
+      au < exists ; exists ; 2012 ; Interventional Neuroradiology Volume 18 ; 18 ; >
+      au < exists ; exists ; 2013 ; Interventional Neuroradiology Volume 19 ; 19 ; >
+      au < exists ; exists ; 2014 ; Interventional Neuroradiology Volume 20 ; 20 ; >
+      au < expected ; exists ; 2015 ; Interventional Neuroradiology Volume 21 ; 21 ; >
 
   }
 
@@ -17343,6 +17393,21 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jnr.sagepub.com/
 
+      au < exists ; exists ; 1995 ; Jadavpur Journal of International Relations Volume 1 ; 1 ; >
+      au < exists ; exists ; 1996 ; Jadavpur Journal of International Relations Volume 2 ; 2 ; >
+      au < exists ; exists ; 1997 ; Jadavpur Journal of International Relations Volume 3 ; 3 ; >
+      au < exists ; exists ; 1998 ; Jadavpur Journal of International Relations Volume 4 ; 4 ; >
+      au < exists ; exists ; 2000 ; Jadavpur Journal of International Relations Volume 5 ; 5 ; >
+      au < exists ; exists ; 2002 ; Jadavpur Journal of International Relations Volume 6 ; 6 ; >
+      au < exists ; exists ; 2003 ; Jadavpur Journal of International Relations Volume 7 ; 7 ; >
+      au < exists ; exists ; 2004 ; Jadavpur Journal of International Relations Volume 8 ; 8 ; >
+      au < exists ; exists ; 2005 ; Jadavpur Journal of International Relations Volume 9 ; 9 ; >
+      au < exists ; exists ; 2006 ; Jadavpur Journal of International Relations Volume 10 ; 10 ; >
+      au < exists ; exists ; 2008 ; Jadavpur Journal of International Relations Volume 11-12 ; 11-12 ; >
+      au < exists ; exists ; 2009 ; Jadavpur Journal of International Relations Volume 13 ; 13 ; >
+      au < exists ; exists ; 2010 ; Jadavpur Journal of International Relations Volume 14 ; 14 ; >
+      au < exists ; exists ; 2011 ; Jadavpur Journal of International Relations Volume 15 ; 15 ; >
+      au < exists ; exists ; 2012 ; Jadavpur Journal of International Relations Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 ; >
       au < ready ; exists ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 ; >
       au < expected ; exists ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 ; >
@@ -17409,6 +17474,7 @@
       au < finished ; crawling ; 2012-2013 ; Journal for the Study of the New Testament Volume 35 ; 35 ; >
       au < crawling ; exists ; 2013-2014 ; Journal for the Study of the New Testament Volume 36 ; 36 ; >
       au < manifest ; exists ; 2014-2015 ; Journal for the Study of the New Testament Volume 37 ; 37 ; >
+      au < expected ; exists ; 2015-2016 ; Journal for the Study of the New Testament Volume 38 ; 38 ; >
 
     }
 
@@ -29694,6 +29760,47 @@
       au < manifest ; exists ; 2015 ; The Neurohospitalist Volume 5 ; 5 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The Neuroradiology Journal ;
+      issn = 1971-4009 ;
+      eissn = 2385-1996
+    >
+
+      param[base_url] = http://neu.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[0] = no issue on 1997 & 1998
+
+      au < exists ; exists ; 1988 ; The Neuroradiology Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 1989 ; The Neuroradiology Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 1990 ; The Neuroradiology Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 1991 ; The Neuroradiology Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 1992 ; The Neuroradiology Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 1993 ; The Neuroradiology Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 1994 ; The Neuroradiology Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 1995 ; The Neuroradiology Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 1996 ; The Neuroradiology Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 1999 ; The Neuroradiology Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 2000 ; The Neuroradiology Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 2001 ; The Neuroradiology Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 2002 ; The Neuroradiology Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 2003 ; The Neuroradiology Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 2004 ; The Neuroradiology Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 2005 ; The Neuroradiology Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 2006 ; The Neuroradiology Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 2007 ; The Neuroradiology Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 2008 ; The Neuroradiology Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 2009 ; The Neuroradiology Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 2010 ; The Neuroradiology Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 2011 ; The Neuroradiology Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 2012 ; The Neuroradiology Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 2013 ; The Neuroradiology Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 2014 ; The Neuroradiology Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 2015 ; The Neuroradiology Journal Volume 28 ; 28 ; >
 
   }
 
