@@ -141,7 +141,7 @@ public class TestSubstanceChecker extends LockssTestCase {
     mau.addUrl("http://three/", false, true);
     mau.populateAuCachedUrlSet();
     checker = new SubstanceChecker(mau);
-    checker.findSubstance();
+    assertEquals(State.No, checker.findSubstance());
     assertEquals(State.No, checker.hasSubstance());
   }
 
@@ -152,7 +152,7 @@ public class TestSubstanceChecker extends LockssTestCase {
     mau.addUrl("http://three/", false, true);
     mau.populateAuCachedUrlSet();
     checker = new SubstanceChecker(mau);
-    checker.findSubstance();
+    assertEquals(State.Yes, checker.findSubstance());
     assertEquals(State.Yes, checker.hasSubstance());
   }
 

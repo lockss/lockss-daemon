@@ -175,13 +175,21 @@ public class SubstanceChecker {
     substanceMin = min;
   }
 
-  public boolean isEnabledFor(String context) {
+  public boolean isEnabled() {
     if (substancePred == null) {
-      log.debug3("isEnabledFor(" + context + "): false, no predicate");
+      log.debug3("isEnabled(): false, no predicate");
+      return false;
+    }
+    return true;
+  }
+
+  public boolean isEnabledFor(String context) {
+    if (!isEnabled()) {
       return false;
     }
     boolean res = enabledContexts.equalsIgnoreCase(CONTEXT_ALL)
       || StringUtil.indexOfIgnoreCase(enabledContexts, context) >= 0;
+
     log.debug("isEnabledFor(" + context + "): " + res);
     return res;
   }
@@ -255,18 +263,20 @@ public class SubstanceChecker {
   }
 
   /** Iterate through AU until substance found. */ 
-  public void findSubstance() {
+  public State findSubstance() {
     if (isStateFullyDetermined()) {
       log.debug("findSubstance() already known");
-      return;
+      return hasSubstance;
     }
     log.debug("findSubstance() searching");
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
       checkSubstance(cu);
       if (isStateFullyDetermined()) {
-	return;
+	break;
       }
     }
+    log.debug("hasSubstance: " + hasSubstance);
+    return hasSubstance;
   }
 
   private void foundSubstanceUrl(String url) {
