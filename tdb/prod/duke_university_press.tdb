@@ -1516,6 +1516,21 @@
 
   }
 
+   {
+
+    title <
+      name = Journal of Middle East Women's Studies ;
+      issn = 1552-5864 ;
+      eissn = 1558-9579
+
+   >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jmews.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 >
+   }
+
   {
     title <
       name = Journal of Music Theory ;
