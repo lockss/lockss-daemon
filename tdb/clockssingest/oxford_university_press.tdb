@@ -4367,7 +4367,7 @@
     au < finished ; crawling ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
-    au < testing ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
+    au < ready ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
     au < ready ; exists ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; >
 
@@ -5944,7 +5944,7 @@
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43 ; 43 ; >
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; >
     au < testing ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
-    au < testing ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
+    au < ready ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
     au < manifest ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
     au < expected ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 48 ; 48 ; >
 
@@ -6141,7 +6141,7 @@
     au < finished ; crawling ; 2011 ; European Journal of International Law Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; European Journal of International Law Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; European Journal of International Law Volume 24 ; 24 ; >
-    au < testing ; exists ; 2014 ; European Journal of International Law Volume 25 ; 25 ; >
+    au < ready ; exists ; 2014 ; European Journal of International Law Volume 25 ; 25 ; >
     au < manifest ; exists ; 2015 ; European Journal of International Law Volume 26 ; 26 ; >
 
     }
@@ -7191,7 +7191,7 @@
     au < finished ; crawling ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 ; >
     au < finished ; crawling ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 ; >
     au < crawling ; exists ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ; >
-    au < testing ; exists ; 2014 ; Forestry: An International Journal of Forest Research Volume 87 ; 87 ; >
+    au < ready ; exists ; 2014 ; Forestry: An International Journal of Forest Research Volume 87 ; 87 ; >
     au < manifest ; exists ; 2015 ; Forestry: An International Journal of Forest Research Volume 88 ; 88 ; >
 
     }
@@ -7481,7 +7481,7 @@
     au < finished ; crawling ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     au < finished ; frozen ; 2012 ; French Studies Bulletin Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; French Studies Bulletin Volume 34 ; 34 ; >
-    au < testing ; exists ; 2014 ; French Studies Bulletin Volume 35 ; 35 ; >
+    au < ready ; exists ; 2014 ; French Studies Bulletin Volume 35 ; 35 ; >
     au < manifest ; exists ; 2015 ; French Studies Bulletin Volume 36 ; 36 ; >
 
     }
@@ -7523,7 +7523,7 @@
     au < finished ; crawling ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 ; >
     au < finished ; crawling ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
+    au < testing ; exists ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
     au < manifest ; exists ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
 
   }
@@ -7735,10 +7735,10 @@
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 193 ; 193 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 194 ; 194 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 195 ; 195 ; >
-    au < manifest ; exists ; 2014 ; Geophysical Journal International Volume 196 ; 196 ; >
-    au < manifest ; exists ; 2014 ; Geophysical Journal International Volume 197 ; 197 ; >
-    au < manifest ; exists ; 2014 ; Geophysical Journal International Volume 198 ; 198 ; >
-    au < manifest ; exists ; 2014 ; Geophysical Journal International Volume 199 ; 199 ; >
+    au < testing ; exists ; 2014 ; Geophysical Journal International Volume 196 ; 196 ; >
+    au < testing ; exists ; 2014 ; Geophysical Journal International Volume 197 ; 197 ; >
+    au < testing ; exists ; 2014 ; Geophysical Journal International Volume 198 ; 198 ; >
+    au < testing ; exists ; 2014 ; Geophysical Journal International Volume 199 ; 199 ; >
     au < manifest ; exists ; 2015 ; Geophysical Journal International Volume 200 ; 200 ; >
     au < manifest ; exists ; 2015 ; Geophysical Journal International Volume 201 ; 201 ; >
     au < exists ; exists ; 2015 ; Geophysical Journal International Volume 202 ; 202 ; >
@@ -7826,7 +7826,7 @@
     au < finished ; crawling ; 2011 ; German History Volume 29 ; 29 ; >
     au < finished ; frozen ; 2012 ; German History Volume 30 ; 30 ; >
     au < crawling ; exists ; 2013 ; German History Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2014 ; German History Volume 32 ; 32 ; >
+    au < testing ; exists ; 2014 ; German History Volume 32 ; 32 ; >
     au < manifest ; exists ; 2015 ; German History Volume 33 ; 33 ; >
 
     }
@@ -7909,7 +7909,7 @@
     au < finished ; crawling ; 2011 ; The Gerontologist Volume 51 ; 51 ; >
     au < finished ; frozen ; 2012 ; The Gerontologist Volume 52 ; 52 ; >
     au < crawling ; exists ; 2013 ; The Gerontologist Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2014 ; The Gerontologist Volume 54 ; 54 ; >
+    au < testing ; exists ; 2014 ; The Gerontologist Volume 54 ; 54 ; >
     au < manifest ; exists ; 2015 ; The Gerontologist Volume 55 ; 55 ; >
 
     }
@@ -8136,7 +8136,7 @@
     au < finished ; crawling ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
     au < finished ; crawling ; 2012 ; Health Policy and Planning Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2014 ; Health Policy and Planning Volume 29 ; 29 ; >
+    au < testing ; exists ; 2014 ; Health Policy and Planning Volume 29 ; 29 ; >
     au < manifest ; exists ; 2015 ; Health Policy and Planning Volume 30 ; 30 ; >
 
     }
@@ -8298,9 +8298,10 @@
     au < finished ; frozen ; 2012 ; History Workshop Journal Volume 74 ; 74 ; >
     au < crawling ; exists ; 2013 ; History Workshop Journal Volume 75 ; 75 ; >
     au < crawling ; exists ; 2013 ; History Workshop Journal Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2014 ; History Workshop Journal Volume 77 ; 77 ; >
-    au < manifest ; exists ; 2014 ; History Workshop Journal Volume 78 ; 78 ; >
+    au < testing ; exists ; 2014 ; History Workshop Journal Volume 77 ; 77 ; >
+    au < testing ; exists ; 2014 ; History Workshop Journal Volume 78 ; 78 ; >
     au < manifest ; exists ; 2015 ; History Workshop Journal Volume 79 ; 79 ; >
+    au < expected ; exists ; 2015 ; History Workshop Journal Volume 80 ; 80 ; >
 
     }
 
@@ -8357,7 +8358,7 @@
     au < finished ; crawling ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
     au < finished ; frozen ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2014 ; Holocaust and Genocide Studies Volume 28 ; 28 ; >
+    au < testing ; exists ; 2014 ; Holocaust and Genocide Studies Volume 28 ; 28 ; >
     au < manifest ; exists ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ; >
 
     }
@@ -8470,7 +8471,7 @@
     au < finished ; crawling ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < finished ; frozen ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Human Reproduction Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2014 ; Human Reproduction Volume 29 ; 29 ; >
+    au < testing ; exists ; 2014 ; Human Reproduction Volume 29 ; 29 ; >
     au < manifest ; exists ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
 
     }
@@ -8666,7 +8667,7 @@
     au < finished ; crawling ; 2011 ; ICES Journal of Marine Science Volume 68 ; 68 ; >
     au < finished ; frozen ; 2012 ; ICES Journal of Marine Science Volume 69 ; 69 ; >
     au < crawling ; exists ; 2013 ; ICES Journal of Marine Science Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2014 ; ICES Journal of Marine Science Volume 71 ; 71 ; >
+    au < testing ; exists ; 2014 ; ICES Journal of Marine Science Volume 71 ; 71 ; >
     au < manifest ; exists ; 2015 ; ICES Journal of Marine Science Volume 72 ; 72 ; >
 
     }
@@ -8713,7 +8714,7 @@
     au < crawling ; crawling ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ; >
     au < finished ; crawling ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ; >
+    au < testing ; exists ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ; >
     au < manifest ; exists ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ; >
 
   }
