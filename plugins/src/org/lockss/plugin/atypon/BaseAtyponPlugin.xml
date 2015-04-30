@@ -12,12 +12,13 @@
     <string>Base Atypon Plugin</string>
   </entry>
   <entry>
+  <!--  for jsoup extractor support for script tags  -->
     <string>required_daemon_version</string>
     <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -158,6 +159,15 @@
     </list>
   </entry>
   <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+<!--  this is actually used to look for redirection  -->  
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
   </entry>  
