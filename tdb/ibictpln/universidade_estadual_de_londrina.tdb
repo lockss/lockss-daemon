@@ -205,10 +205,10 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = germinal
 
-      au < down ; 2009 ; 1 ; GERMINAL: Marxismo e Educação em Debate Volume 1 ; 2009 ; >
-      au < down ; 2010 ; 2 ; GERMINAL: Marxismo e Educação em Debate Volume 2 ; 2010 ; >
-      au < down ; 2011 ; 3 ; GERMINAL: Marxismo e Educação em Debate Volume 3 ; 2011 ; >
-      au < down ; 2012 ; 4 ; GERMINAL: Marxismo e Educação em Debate Volume 4 ; 2012 ; >
+      au < superseded ; 2009 ; 1 ; GERMINAL: Marxismo e Educação em Debate Volume 1 [superseded] ; 2009 ; collect from ufba >
+      au < superseded ; 2010 ; 2 ; GERMINAL: Marxismo e Educação em Debate Volume 2 [superseded] ; 2010 ; collect from ufba >
+      au < superseded ; 2011 ; 3 ; GERMINAL: Marxismo e Educação em Debate Volume 3 [superseded] ; 2011 ; collect from ufba >
+      au < superseded ; 2012 ; 4 ; GERMINAL: Marxismo e Educação em Debate Volume 4 [superseded] ; 2012 ; collect from ufba >
 
   }
 
