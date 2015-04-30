@@ -7,7 +7,7 @@
     comment[platform] = Atypon
   >
   
-  plugin = needs.plugin
+  plugin = needs.plugin # see PD-166
   param[base_url] = http://www.jgme.org/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   
