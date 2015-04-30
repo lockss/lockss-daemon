@@ -5,7 +5,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,8 +31,7 @@
 
  */
 
-package org.lockss.plugin.clockss.jats;
-
+package org.lockss.plugin.clockss.schweizerbart;
 import java.io.InputStream;
 import java.util.*;
 
@@ -41,17 +40,17 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.onixbooks.Onix3LongSourceXmlMetadataExtractorFactory;
+import org.lockss.plugin.clockss.schweizerbart.SchweizerbartXmlMetadataExtractorFactory;
 
 
-public class TestJatsPublishingXmlMetadataExtractor extends LockssTestCase {
+public class TestSchweizerbartXmlMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger(TestJatsPublishingXmlMetadataExtractor.class);
+  private static final Logger log = Logger.getLogger(TestSchweizerbartXmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.jats.ClockssJatsPublishingSourcePlugin";
+  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.schweizerbart.ClockssSchweizerbartPublishingSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
 
   public void setUp() throws Exception {
@@ -87,41 +86,6 @@ public class TestJatsPublishingXmlMetadataExtractor extends LockssTestCase {
   }
   
 
- // An XML snippet to test a specific issue as needed.
- private static final String XMLsnippet = 
-     "";
- /*
- public void testFromXMLSnippet() throws Exception {
-   
-
-     CIProperties xmlHeader = new CIProperties();    
-     String xml_url = "http://www.source.com/TestXML.xml";
-     xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-     MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
-     mau.addUrl("http://www.source.com/TestXML.pdf", true, true, xmlHeader);
-     
-     mcu.setContent(XMLsnippet);
-     mcu.setContentSize(XMLsnippet.length());
-     mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-
-   FileMetadataExtractor me = new JatsPublishingSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
-     FileMetadataListExtractor mle =
-         new FileMetadataListExtractor(me);
-     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
-
-     // There should be one record from the snippet
-     assertNotEmpty(mdlist);
-     assertEquals(1, mdlist.size());
-
-     // Pick up the one record
-     Iterator<ArticleMetadata> mdIt = mdlist.iterator();
-     ArticleMetadata mdRecord = null;
-     mdRecord = (ArticleMetadata) mdIt.next();
-     
-     //Check snippet item you want to verify
-     assertEquals(mdRecord.get(MetadataField.FIELD_JOURNAL_TITLE), "The Publication Title");
- }
- */
 
  private static final String realXMLFile = "JatsPublishingSourceTest.xml";
 
@@ -143,7 +107,7 @@ public class TestJatsPublishingXmlMetadataExtractor extends LockssTestCase {
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-    FileMetadataExtractor me = new  JatsPublishingSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+    FileMetadataExtractor me = new  SchweizerbartXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);

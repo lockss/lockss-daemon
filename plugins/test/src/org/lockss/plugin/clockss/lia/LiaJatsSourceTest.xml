@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="article" dtd-version="1.0" specific-use="syndication">
+<front>
+<journal-meta>
+<journal-id journal-id-type="coden">JLAPEN</journal-id>
+<journal-title-group>
+<journal-title>Journal of Laser Applications</journal-title>
+<abbrev-journal-title>J. Laser Appl.</abbrev-journal-title></journal-title-group>
+<issn pub-type="epub">1111-0000</issn>
+<publisher>
+<publisher-name>Laser Institute of America</publisher-name>
+<publisher-name specific-use="short-name">LIA</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1111/1.23456</article-id>
+<article-id pub-id-type="publisher-id:aipkey">1.23456</article-id>
+<article-id pub-id-type="publisher-id:aipid">00xxxJLA</article-id>
+<article-id pub-id-type="manuscript">xxxx</article-id>
+<article-categories><subj-group subj-group-type="toc-heading"><subject>Letters</subject></subj-group></article-categories>
+<title-group>
+<article-title>Laser article title</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author"><name name-style="western"><surname>Foo</surname>
+<given-names>B.</given-names></name><xref ref-type="author-note" rid="n1">a)</xref></contrib>
+<contrib contrib-type="author"><name name-style="western"><surname>Barr</surname>
+<given-names>D. J.</given-names></name></contrib>
+<contrib contrib-type="author"><name name-style="western"><surname>Pixel</surname>
+<given-names>M.</given-names></name></contrib>
+<contrib contrib-type="author"><name name-style="western"><surname>Widget</surname>
+<given-names>J. A.</given-names></name></contrib>
+<aff>Research Centre, <institution>University of Research</institution>, Research, SO17 1BJ, <country>United Kingdom</country></aff></contrib-group>
+<author-notes><fn id="n1">
+<label>a)</label>
+<p>Author to whom correspondence should be addressed; electronic mail: <ext-link ext-link-type="email" xlink:href="mailto:xxx@or.uk">xxx@or.uk</ext-link>. Telephone: (+44) </p></fn></author-notes>
+<pub-date pub-type="ppub"><month>11</month><year>2014</year></pub-date>
+<volume>26</volume><issue>4</issue><elocation-id seq="1">041501</elocation-id>
+<history>
+<date date-type="received"><day>03</day><month>06</month><year>2014</year></date>
+<date date-type="accepted"><day>12</day><month>08</month><year>2014</year></date>
+<date date-type="published"><day>22</day><month>08</month><year>2014</year></date>
+</history>
+<permissions>
+<copyright-year>2014</copyright-year>
+<copyright-holder>Laser Institute of America</copyright-holder>
+<license license-type="ccc">
+<license-p>1938-xxxx/2014/26(4)/041501/6/<price>$28.00</price></license-p>
+</license>
+</permissions><abstract>
+<p>A digital abstract informatin would go here<named-content content-type="sem:AIPTh1.2" rid="kwd1.8">more information</named-content> and the abstract information ends here.</p>
+</abstract><kwd-group kwd-group-type="inspec">
+<kwd>diamond</kwd>
+<kwd>high-speed optical techniques</kwd>
+<kwd>laser ablation</kwd>
+<kwd>laser beam machining</kwd>
+<kwd>micromirrors</kwd>
+<kwd>optical images</kwd>
+<kwd>spatial light modulators</kwd>
+</kwd-group>
+<kwd-group kwd-group-type="pacs-codes">
+<compound-kwd><compound-kwd-part content-type="code">4262Cf</compound-kwd-part><compound-kwd-part content-type="value">Industrial applications</compound-kwd-part></compound-kwd>
+<compound-kwd><compound-kwd-part content-type="code">4279Bh</compound-kwd-part><compound-kwd-part content-type="value">Lenses, prisms and mirrors</compound-kwd-part></compound-kwd>
+<compound-kwd><compound-kwd-part content-type="code">4279Hp</compound-kwd-part><compound-kwd-part content-type="value">Optical processors, correlators, and modulators</compound-kwd-part></compound-kwd>
+<compound-kwd><compound-kwd-part content-type="code">4265Re</compound-kwd-part><compound-kwd-part content-type="value">Ultrafast processes; optical pulse generation and pulse compression</compound-kwd-part></compound-kwd>
+<compound-kwd><compound-kwd-part content-type="code">4230-d</compound-kwd-part><compound-kwd-part content-type="value">Imaging and optical processing</compound-kwd-part></compound-kwd>
+</kwd-group>
+<kwd-group kwd-group-type="ipc-codes">
+<compound-kwd><compound-kwd-part content-type="code">B23K26/00</compound-kwd-part><compound-kwd-part content-type="value">Working by laser beam, e.g. welding, cutting, boring</compound-kwd-part></compound-kwd>
+<compound-kwd><compound-kwd-part content-type="code">G02B5/08</compound-kwd-part><compound-kwd-part content-type="value">Mirrors</compound-kwd-part></compound-kwd>
+<compound-kwd><compound-kwd-part content-type="code">G02F2/00</compound-kwd-part><compound-kwd-part content-type="value">Demodulating light; Transferring the modulation of modulated light; Frequency-changing of light</compound-kwd-part></compound-kwd>
+</kwd-group>
+
+<kwd-group kwd-group-type="lia">
+<title>Key words</title><kwd>ultrafast</kwd><kwd>laser ablation</kwd><kwd>laser machining</kwd><kwd>diamond</kwd><kwd>yttrium iron garnet</kwd><kwd>digital micromirror device</kwd><kwd>spatial light modulator</kwd><kwd>image-projection</kwd>
+</kwd-group>
+
+<counts>
+<page-count count="6"/>
+</counts>
+<custom-meta-group><custom-meta><meta-name>crossmark</meta-name><meta-value/></custom-meta></custom-meta-group></article-meta>
+</front>
+<body><sec id="s1">
+<label>I.</label>
+<title>INTRODUCTION</title>
+<p>The technological 
+</p>
+</sec>
+</body>
+<back>
+<ack>
+<title>ACKNOWLEDGMENTS</title>
+<p>The authors are grateful.</p>
+</ack>
+<ref-list content-type="numbered">
+<title>References</title>
+<ref id="c1">
+<label>1.</label>
+<mixed-citation publication-type="journal">
+<string-name name-style="western">
+<given-names>E. G.</given-names> <surname>Reference</surname>
+</string-name><article-title>Reference title</article-title>,” <source>Phys. Plasmas</source> 
+<volume>9</volume>, <fpage>949</fpage>–<lpage>957</lpage> (<year>2002</year>).<pub-id pub-id-type="doi" specific-use="metadata">10.1063/xxxxx</pub-id></mixed-citation>
+</ref>
+</ref-list></back><floats-group>
+<fig fig-type="figure" id="f1" orientation="portrait" position="float">
+<label>FIG. 1.</label>
+<caption><p>Schematic.</p></caption>
+<graphic orientation="portrait" position="float" xlink:href="f1"/>
+</fig>
+</floats-group></article>

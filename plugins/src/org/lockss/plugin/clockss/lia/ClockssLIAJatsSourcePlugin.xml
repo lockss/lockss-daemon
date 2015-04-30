@@ -1,0 +1,96 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - initial development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.lia.ClockssLIAJatsSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>11</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Laser Institute of America JATS Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Laser Institute of America JATS Source Plugin (CLOCKSS)</string>
+  </entry>
+<!--  DEBUGGING ONLY - REMOVE -->
+<!-- 
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
+      <string>2,"^%s%d/datastore/paper_pdf/[ac-z][a-z_0]+/$",base_url, year</string>
+      <string>1,"^%s%d/", base_url, year</string>
+    </list>
+  </entry>
+-->    
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/liajats-released/2015/76_CLOCKSS_lia_2014-08-22_233000.zip -->
+      <string>"^%s%d/.+\.zip", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.lia.LiaJatsXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+    <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.lia.LiaJatsXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>    
+</map>    

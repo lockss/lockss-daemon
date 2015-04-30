@@ -30,7 +30,7 @@
 
  */
 
-package org.lockss.plugin.clockss.jats;
+package org.lockss.plugin.clockss.schweizerbart;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,19 +40,18 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 /*
- * A helper to handle JATS publishing schema.
- * This provides support for the simplest case - where the pdf substance file is
- * in the same directory as, and has the same filename as the xml file.
- * eg - foo.xml maps to foo.pdf
+ * Use the common Jats schema
+ * The pdf filename is the same as the XML filename but with a .pdf suffix
  */
 
-public class JatsPublishingSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(JatsPublishingSourceXmlMetadataExtractorFactory.class);
+public class SchweizerbartXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(SchweizerbartXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
@@ -60,10 +59,10 @@ public class JatsPublishingSourceXmlMetadataExtractorFactory extends SourceXmlMe
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new JatsPublishingSourceXmlMetadataExtractor();
+    return new SchweizerbartXmlMetadataExtractor();
   }
 
-  public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class SchweizerbartXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {

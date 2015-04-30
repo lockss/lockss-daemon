@@ -1,10 +1,12 @@
 /*
+
+
  * $Id$
  */
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,7 +32,7 @@
 
  */
 
-package org.lockss.plugin.clockss.jats;
+package org.lockss.plugin.clockss;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -53,7 +55,7 @@ import org.w3c.dom.NodeList;
  */
 public class JatsPublishingSchemaHelper
 implements SourceXmlSchemaHelper {
-  static Logger log = Logger.getLogger(JatsPublishingSchemaHelper.class);
+  private static final Logger log = Logger.getLogger(JatsPublishingSchemaHelper.class);
 
   private static final String AUTHOR_SEPARATOR = ",";
 
@@ -122,8 +124,16 @@ implements SourceXmlSchemaHelper {
   
   /* 
    * DATE INFORMATION
+   * This has variations according to when the tag set was used
+   * earlier combined both type of publication and type of date
+   * @date-type = (ppub, epub, epub-ppub) <- mean print or epublication
+   *     as opposed to pcorrection, or pretraction
+   * later, the tag set separated type of publication from type of date    
+   * @date-type = pub, corrected
+   * @publication-format = print or electronic 
+   * 
    * We're at the top level of a "<pub-date>" and 
-   * @date-type = "pub"
+   * @date-type = "pub",  "epub", "ppub", "epub-ppub"
    *   <pub-date date-type="pub"> or
    *   <pub-date date-type="pub" iso-8601-date="1999-03-27">
    *     <day>27</day> optional
@@ -241,7 +251,14 @@ implements SourceXmlSchemaHelper {
   private static String JATS_issue = JATS_ameta + "/issue";
   private static String JATS_fpage = JATS_ameta + "/fpage";
   private static String JATS_lpage = JATS_ameta + "/lpage";
-  private static String JATS_date = JATS_ameta + "/pub-date[@pub-type = \"pub\"]";
+  
+  public static String JATS_copydate = JATS_ameta + "/permissions/copyright-year";
+  // The date could be identified by new or by older tag attributes
+  // as a backup
+  private static String pubdate_attr_options = "@date-type = \"pub\" or @pub-type = \"ppub\"" +
+      " or @pub-type = \"epub\" or @pub-type = \"epub-ppub\" or @pub-type = \"pub\"";
+
+  public static String JATS_date = JATS_ameta + "/pub-date[" + pubdate_attr_options +"]";
   private static String JATS_contrib = JATS_ameta + "/contrib-group/contrib/name";
   
   /*
@@ -262,6 +279,7 @@ implements SourceXmlSchemaHelper {
     JATS_articleMap.put(JATS_fpage, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_lpage, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_date, JATS_DATE_VALUE);
+    JATS_articleMap.put(JATS_copydate, XmlDomMetadataExtractor.TEXT_VALUE); 
     JATS_articleMap.put(JATS_contrib, JATS_AUTHOR_VALUE);
 
   }
@@ -288,7 +306,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(JATS_fpage, MetadataField.FIELD_START_PAGE);
     cookMap.put(JATS_lpage, MetadataField.FIELD_END_PAGE);
     cookMap.put(JATS_contrib, MetadataField.FIELD_AUTHOR);
-    cookMap.put(JATS_date, MetadataField.FIELD_DATE);
+    cookMap.put(JATS_copydate, MetadataField.FIELD_DATE);
     
   }
 
