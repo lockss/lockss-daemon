@@ -4,9 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
-    
-    comment[doNotProcess] = changed from manifest to doNotProcess as we are waiting to hear on the base_url
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -19,7 +17,7 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = artresearchjournal
 
-      au < ready ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 >
+      au < ready ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 ; >
 
   }
 
@@ -34,12 +32,12 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = Ambiente
 
-      au < doNotProcess ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 >
-      au < doNotProcess ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 >
-      au < doNotProcess ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 >
-      au < doNotProcess ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 >
-      au < doNotProcess ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
-      au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 6 ; 2014 >
+      au < exists ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 ; >
+      au < exists ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 ; >
+      au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 6 ; 2014 ; >
 
   }
 
@@ -54,12 +52,12 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = ambiente
 
-      au < released ; 2009 ; 1 ; Revista Ambiente Contábil Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Revista Ambiente Contábil Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Revista Ambiente Contábil Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 5 ; Revista Ambiente Contábil Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 2014 ; 2014 >
+      au < released ; 2009 ; 1 ; Revista Ambiente Contábil Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Revista Ambiente Contábil Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Revista Ambiente Contábil Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 5 ; Revista Ambiente Contábil Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 2014 ; 2014 ; >
 
   }
 
@@ -74,14 +72,14 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = bagoas
 
-      au < released ; 2007 ; 1 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2007 ; 2007 >
-      au < released ; 2008 ; 2 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2008 ; 2008 >
-      au < released ; 2009 ; 3 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2009 ; 2009 >
-      au < released ; 2010 ; 4 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2010 ; 2010 >
-      au < released ; 2011 ; 5 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2011 ; 2011 >
-      au < released ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 >
+      au < released ; 2007 ; 1 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 ; >
 
   }
 
@@ -97,16 +95,16 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = cronos
 
-      au < released ; 2003 ; 1 ; Revista meuip Cronos Volume 2003 ; 2003 >
-      au < released ; 2004 ; 2 ; Revista meuip Cronos Volume 2004 ; 2004 >
-      au < released ; 2006 ; 4 ; Revista meuip Cronos Volume 2006 ; 2006 >
-      au < released ; 2007 ; 5 ; Revista meuip Cronos Volume 2007 ; 2007 >
-      au < released ; 2008 ; 6 ; Revista meuip Cronos Volume 2008 ; 2008 >
-      au < released ; 2009 ; 7 ; Revista meuip Cronos Volume 2009 ; 2009 >
-      au < released ; 2010 ; 8 ; Revista meuip Cronos Volume 2010 ; 2010 >
-      au < released ; 2011 ; 9 ; Revista meuip Cronos Volume 2011 ; 2011 >
-      au < released ; 2012 ; 10 ; Revista meuip Cronos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 >
+      au < released ; 2003 ; 1 ; Revista meuip Cronos Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Revista meuip Cronos Volume 2004 ; 2004 ; >
+      au < released ; 2006 ; 4 ; Revista meuip Cronos Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 5 ; Revista meuip Cronos Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 6 ; Revista meuip Cronos Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Revista meuip Cronos Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Revista meuip Cronos Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Revista meuip Cronos Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 10 ; Revista meuip Cronos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 ; >
 
   }
 
@@ -121,8 +119,8 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = aletheia
 
-      au < ready ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 >
+      au < ready ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 ; >
 
   }
 
@@ -136,12 +134,12 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = educacaoemquestao
 
-      au < exists ; 2008 ; 1 ; Revista Educação em Questão Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Revista Educação em Questão Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Revista Educação em Questão Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Revista Educação em Questão Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Revista Educação em Questão Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Revista Educação em Questão Volume 2013 ; 2013 >
+      au < exists ; 2008 ; 1 ; Revista Educação em Questão Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Revista Educação em Questão Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Revista Educação em Questão Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Revista Educação em Questão Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Revista Educação em Questão Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Revista Educação em Questão Volume 2013 ; 2013 ; >
 
   }
 
@@ -156,11 +154,11 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = extensaoesociedade
 
-      au < released ; 2010 ; 1 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 4 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 5 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2014 ; 2014 >
+      au < released ; 2010 ; 1 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 4 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 5 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2014 ; 2014 ; >
 
   }
 
@@ -175,10 +173,10 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = imburana
 
-      au < released ; 2010 ; 1 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2013 ; 2013 >
+      au < released ; 2010 ; 1 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2013 ; 2013 ; >
 
   }
 
@@ -193,10 +191,10 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = jscr
 
-      au < exists ; 2010 ; 1 ; The Journal of Surgical and Clinical Research, Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; The Journal of Surgical and Clinical Research, Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; The Journal of Surgical and Clinical Research, Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; The Journal of Surgical and Clinical Research, Volume 2013 ; 2013 >
+      au < exists ; 2010 ; 1 ; The Journal of Surgical and Clinical Research, Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; The Journal of Surgical and Clinical Research, Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; The Journal of Surgical and Clinical Research, Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; The Journal of Surgical and Clinical Research, Volume 2013 ; 2013 ; >
 
   }
 
@@ -211,17 +209,17 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = mneme
 
-      au < released ; 2003 ; 1 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 >
-      au < released ; 2004 ; 2 ; Mneme-Revista de Humanidades Volume 2004 ; 2004 >
-      au < released ; 2005 ; 3 ; Mneme-Revista de Humanidades Volume 2005 ; 2005 >
-      au < released ; 2006 ; 4 ; Mneme-Revista de Humanidades Volume 2006 ; 2006 >
-      au < released ; 2008 ; 6 ; Mneme-Revista de Humanidades Volume 2008 ; 2008 >
-      au < released ; 2009 ; 7 ; Mneme-Revista de Humanidades Volume 2009 ; 2009 >
-      au < released ; 2010 ; 8 ; Mneme-Revista de Humanidades Volume 2010 ; 2010 >
-      au < released ; 2011 ; 9 ; Mneme-Revista de Humanidades Volume 2011 ; 2011 >
-      au < released ; 2012 ; 10 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 11 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 12 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 >
+      au < released ; 2003 ; 1 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Mneme-Revista de Humanidades Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 3 ; Mneme-Revista de Humanidades Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 4 ; Mneme-Revista de Humanidades Volume 2006 ; 2006 ; >
+      au < released ; 2008 ; 6 ; Mneme-Revista de Humanidades Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Mneme-Revista de Humanidades Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Mneme-Revista de Humanidades Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Mneme-Revista de Humanidades Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 10 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 11 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 12 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 ; >
 
   }
 
@@ -236,12 +234,12 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = odisseia
 
-      au < released ; 2008 ; 1 ; Revista Odisseia Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Revista Odisseia Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Revista Odisseia Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Revista Odisseia Volume 2011 ; 2011 >
-      au < doNotProcess ; 2012 ; 5 ; Revista Odisseia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Revista Odisseia Volume 2013 ; 2013 >
+      au < released ; 2008 ; 1 ; Revista Odisseia Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Revista Odisseia Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Revista Odisseia Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Revista Odisseia Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Revista Odisseia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Revista Odisseia Volume 2013 ; 2013 ; >
 
   }
 
@@ -257,26 +255,26 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = principios
 
-      au < exists ; 1994 ; 1 ; Princípios: Revista de Filosofia (UFRN) Volume 1994 ; 1994 >
-      au < exists ; 1995 ; 2 ; Princípios: Revista de Filosofia (UFRN) Volume 1995 ; 1995 >
-      au < exists ; 1996 ; 3 ; Princípios: Revista de Filosofia (UFRN) Volume 1996 ; 1996 >
-      au < exists ; 1997 ; 4 ; Princípios: Revista de Filosofia (UFRN) Volume 1997 ; 1997 >
-      au < exists ; 1998 ; 5 ; Princípios: Revista de Filosofia (UFRN) Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 6 ; Princípios: Revista de Filosofia (UFRN) Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 7 ; Princípios: Revista de Filosofia (UFRN) Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 8 ; Princípios: Revista de Filosofia (UFRN) Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 9 ; Princípios: Revista de Filosofia (UFRN) Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 10 ; Princípios: Revista de Filosofia (UFRN) Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 11 ; Princípios: Revista de Filosofia (UFRN) Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 12 ; Princípios: Revista de Filosofia (UFRN) Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 13 ; Princípios: Revista de Filosofia (UFRN) Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 14 ; Princípios: Revista de Filosofia (UFRN) Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 15 ; Princípios: Revista de Filosofia (UFRN) Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 16 ; Princípios: Revista de Filosofia (UFRN) Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 17 ; Princípios: Revista de Filosofia (UFRN) Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 18 ; Princípios: Revista de Filosofia (UFRN) Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 19 ; Princípios: Revista de Filosofia (UFRN) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 20 ; Princípios: Revista de Filosofia (UFRN) Volume 2013 ; 2013 >
+      au < exists ; 1994 ; 1 ; Princípios: Revista de Filosofia (UFRN) Volume 1994 ; 1994 ; >
+      au < exists ; 1995 ; 2 ; Princípios: Revista de Filosofia (UFRN) Volume 1995 ; 1995 ; >
+      au < exists ; 1996 ; 3 ; Princípios: Revista de Filosofia (UFRN) Volume 1996 ; 1996 ; >
+      au < exists ; 1997 ; 4 ; Princípios: Revista de Filosofia (UFRN) Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 5 ; Princípios: Revista de Filosofia (UFRN) Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 6 ; Princípios: Revista de Filosofia (UFRN) Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 7 ; Princípios: Revista de Filosofia (UFRN) Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 8 ; Princípios: Revista de Filosofia (UFRN) Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 9 ; Princípios: Revista de Filosofia (UFRN) Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 10 ; Princípios: Revista de Filosofia (UFRN) Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 11 ; Princípios: Revista de Filosofia (UFRN) Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 12 ; Princípios: Revista de Filosofia (UFRN) Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 13 ; Princípios: Revista de Filosofia (UFRN) Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 14 ; Princípios: Revista de Filosofia (UFRN) Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 15 ; Princípios: Revista de Filosofia (UFRN) Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 16 ; Princípios: Revista de Filosofia (UFRN) Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 17 ; Princípios: Revista de Filosofia (UFRN) Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 18 ; Princípios: Revista de Filosofia (UFRN) Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 19 ; Princípios: Revista de Filosofia (UFRN) Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 20 ; Princípios: Revista de Filosofia (UFRN) Volume 2013 ; 2013 ; >
 
   }
 
@@ -291,8 +289,8 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = turismocontemporaneo
 
-      au < ready ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 >
+      au < ready ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 ; >
 
   }
 
@@ -307,11 +305,11 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = publica
 
-      au < exists ; 2005 ; 1 ; Revista PublICa Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Revista PublICa Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Revista PublICa Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Revista PublICa Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Revista PublICa Volume 2009 ; 2009 >
+      au < exists ; 2005 ; 1 ; Revista PublICa Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Revista PublICa Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Revista PublICa Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Revista PublICa Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Revista PublICa Volume 2009 ; 2009 ; >
 
   }
 
@@ -326,10 +324,10 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = reb
 
-      au < released ; 2011 ; 1 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2011 ; 2011 >
-      au < released ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 >
+      au < released ; 2011 ; 1 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 ; >
 
   }
 
@@ -344,9 +342,9 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = revistadefisioterapia
 
-      au < released ; 2012 ; 1 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 2 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 3 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2014 ; 2014 >
+      au < released ; 2012 ; 1 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 2 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2014 ; 2014 ; >
 
   }
 
@@ -363,11 +361,11 @@
       
       comment[manifest] = manifest pages are now gone.
 
-      au < released ; 2009 ; 1 ; Sociedade e Território Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Sociedade e Território Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Sociedade e Território Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Sociedade e Território Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Sociedade e Território Volume 2013 ; 2013 >
+      au < released ; 2009 ; 1 ; Sociedade e Território Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Sociedade e Território Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Sociedade e Território Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Sociedade e Território Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Sociedade e Território Volume 2013 ; 2013 ; >
 
   }
 
@@ -382,8 +380,8 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = vivencia
 
-      au < exists ; 2012 ; 1 ; Vivência: Revista de Antropologia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Vivência: Revista de Antropologia Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 1 ; Vivência: Revista de Antropologia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Vivência: Revista de Antropologia Volume 2013 ; 2013 ; >
 
   }
 
@@ -398,13 +396,13 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = constituicaoegarantiadedireitos
 
-      au < exists ; 2007 ; 1 ; Revista Constituição e Garantia de Direitos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Revista Constituição e Garantia de Direitos Volume 2008 ; 2008 >
-      au < exists ; 2010 ; 3 ; Revista Constituição e Garantia de Direitos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Revista Constituição e Garantia de Direitos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Revista Constituição e Garantia de Direitos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Revista Constituição e Garantia de Direitos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Revista Constituição e Garantia de Direitos Volume 2014 ; 2014 >
+      au < exists ; 2007 ; 1 ; Revista Constituição e Garantia de Direitos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Revista Constituição e Garantia de Direitos Volume 2008 ; 2008 ; >
+      au < exists ; 2010 ; 3 ; Revista Constituição e Garantia de Direitos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Revista Constituição e Garantia de Direitos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Revista Constituição e Garantia de Direitos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Revista Constituição e Garantia de Direitos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Revista Constituição e Garantia de Direitos Volume 2014 ; 2014 ; >
 
   }
 
@@ -419,12 +417,12 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = direitoenergia
 
-      au < doNotProcess ; 2009 ; 1 ; Revista Direito E-nergia Volume 2009 ; 2009 >
-      au < doNotProcess ; 2010 ; 2 ; Revista Direito E-nergia Volume 2010 ; 2010 >
-      au < doNotProcess ; 2011 ; 3 ; Revista Direito E-nergia Volume 2011 ; 2011 >
-      au < doNotProcess ; 2012 ; 4 ; Revista Direito E-nergia Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 5 ; Revista Direito E-nergia Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 6 ; Revista Direito E-nergia Volume 2014 ; 2014 >
+      au < exists ; 2009 ; 1 ; Revista Direito E-nergia Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Revista Direito E-nergia Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Revista Direito E-nergia Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Revista Direito E-nergia Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 5 ; Revista Direito E-nergia Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 6 ; Revista Direito E-nergia Volume 2014 ; 2014 ; >
 
   }
 
@@ -438,16 +436,15 @@
       comment[publisher] = Universidade Federal do Rio Grande do Norte
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = interlegere
-      comment[notReady] = no substance
 
-      au < released ; 2007 ; 1 ; Revista Inter-Legere Volume 2007 ; 2007 >
-      au < released ; 2008 ; 2 ; Revista Inter-Legere Volume 2008 ; 2008 >
-      au < released ; 2009 ; 3 ; Revista Inter-Legere Volume 2009 ; 2009 >
-      au < released ; 2010 ; 4 ; Revista Inter-Legere Volume 2010 ; 2010 >
-      au < released ; 2011 ; 5 ; Revista Inter-Legere Volume 2011 ; 2011 >
-      au < released ; 2012 ; 6 ; Revista Inter-Legere Volume 2012 ; 2012 >
-      au < notReady ; 2013 ; 7 ; Revista Inter-Legere Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 8 ; Revista Inter-Legere Volume 2014 ; 2014 >
+      au < released ; 2007 ; 1 ; Revista Inter-Legere Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; Revista Inter-Legere Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; Revista Inter-Legere Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; Revista Inter-Legere Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; Revista Inter-Legere Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Revista Inter-Legere Volume 2012 ; 2012 ; >
+      au < notReady ; 2013 ; 7 ; Revista Inter-Legere Volume 2013 ; 2013 ; no substance >
+      au < ready ; 2014 ; 8 ; Revista Inter-Legere Volume 2014 ; 2014 ; >
 
   }
 
@@ -462,10 +459,10 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = porto
 
-      au < doNotProcess ; 2011 ; 1 ; Revista Porto Volume 2011 ; 2011 >
-      au < doNotProcess ; 2012 ; 2 ; Revista Porto Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 3 ; Revista Porto Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 4 ; Revista Porto Volume 2014 ; 2014 >
+      au < exists ; 2011 ; 1 ; Revista Porto Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista Porto Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; Revista Porto Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 4 ; Revista Porto Volume 2014 ; 2014 ; >
 
   }
 
@@ -480,13 +477,13 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = saberes
 
-      au < doNotProcess ; 2008 ; 1 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2008 ; 2008 >
-      au < doNotProcess ; 2009 ; 2 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2009 ; 2009 >
-      au < doNotProcess ; 2010 ; 3 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2010 ; 2010 >
-      au < doNotProcess ; 2011 ; 4 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2011 ; 2011 >
-      au < doNotProcess ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 >
-      au < doNotProcess ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 >
+      au < exists ; 2008 ; 1 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 ; >
 
   }
 
