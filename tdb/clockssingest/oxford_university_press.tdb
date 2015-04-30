@@ -7271,7 +7271,7 @@
     au < finished ; crawling ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; >
     au < finished ; crawling ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 ; >
     au < crawling ; exists ; 2013 ; Forum for Modern Language Studies Volume 49 ; 49 ; >
-    au < testing ; exists ; 2014 ; Forum for Modern Language Studies Volume 50 ; 50 ; >
+    au < ready ; exists ; 2014 ; Forum for Modern Language Studies Volume 50 ; 50 ; >
     au < manifest ; exists ; 2015 ; Forum for Modern Language Studies Volume 51 ; 51 ; >
 
     }
@@ -7329,7 +7329,7 @@
     au < finished ; crawling ; 2011 ; French History Volume 25 ; 25 ; >
     au < finished ; crawling ; 2012 ; French History Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; French History Volume 27 ; 27 ; >
-    au < testing ; exists ; 2014 ; French History Volume 28 ; 28 ; >
+    au < ready ; exists ; 2014 ; French History Volume 28 ; 28 ; >
     au < manifest ; exists ; 2015 ; French History Volume 29 ; 29 ; >
 
     }
@@ -7427,7 +7427,7 @@
     au < finished ; crawling ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
     au < finished ; frozen ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 ; >
-    au < testing ; exists ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 ; >
+    au < ready ; exists ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 ; >
     au < manifest ; exists ; 2015 ; French Studies: A Quarterly Review Volume 69 ; 69 ; >
 
     }
@@ -7503,7 +7503,8 @@
     comment[status] = May be moving to Drupal soon?
 
     au < crawling ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
-    au < testing ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
+    au < ready ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
+    au < expected ; exists ; 2015 ; Gastroenterology Report Volume 3 ; 3 ; >
 
   }
 
