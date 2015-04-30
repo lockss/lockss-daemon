@@ -6593,6 +6593,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = 1993 volume 6 to 1999 volume 26
 
+    au < manifest ; 1997 ; FEMS Immunology & Medical Microbiology Volume 24 ; 24 >
     au < manifest ; 1998 ; FEMS Immunology & Medical Microbiology Volume 25 ; 25 >
     au < manifest ; 1999 ; FEMS Immunology & Medical Microbiology Volume 26 ; 26 >
     au < manifest ; 2000 ; FEMS Immunology & Medical Microbiology Volume 27 ; 27 >
@@ -6768,6 +6769,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = 1977 volume 1 to 1999 volume 181
 
+    au < manifest ; 1997 ; FEMS Microbiology Letters Volume 179 ; 179 >
     au < manifest ; 1998 ; FEMS Microbiology Letters Volume 180 ; 180 >
     au < manifest ; 1999 ; FEMS Microbiology Letters Volume 181 ; 181 >
     au < manifest ; 2000 ; FEMS Microbiology Letters Volume 182 ; 182 >
@@ -16310,6 +16312,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1890 volume 1 to 1999 volume 82
 
+    au < manifest ; 1999 ; The Monist Volume 82 ; 82 >
     au < manifest ; 2000 ; The Monist Volume 83 ; 83 >
     au < manifest ; 2001 ; The Monist Volume 84 ; 84 >
     au < manifest ; 2002 ; The Monist Volume 85 ; 85 >
@@ -17776,6 +17779,7 @@
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < manifest ; 1972 ; Nutrition Reviews Volume 30 ; 30 >
     au < manifest ; 1973 ; Nutrition Reviews Volume 31 ; 31 >
     au < manifest ; 1974 ; Nutrition Reviews Volume 32 ; 32 >
     au < manifest ; 1975 ; Nutrition Reviews Volume 33 ; 33 >
@@ -22369,6 +22373,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Toxicological Sciences Volume 142 ; 142 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Toxicological Sciences Volume 143 ; 143 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Toxicological Sciences Volume 144 ; 144 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Toxicological Sciences Volume 145 ; 145 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; Toxicological Sciences Volume 146 ; 146 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; Toxicological Sciences Volume 147 ; 147 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; Toxicological Sciences Volume 148 ; 148 >
 
     }
 
