@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,11 +17,11 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = biota
 
-      au < released ; 2011 ; 1 ; Biota Amazônia Volume 1 ; 2011 >
-      au < released ; 2012 ; 2 ; Biota Amazônia Volume 2 ; 2012 >
-      au < released ; 2013 ; 3 ; Biota Amazônia Volume 3 ; 2013 >
-      au < ready ; 2014 ; 4 ; Biota Amazônia Volume 4 ; 2014 >
-      au < manifest ; 2015 ; 5 ; Biota Amazônia Volume 5 ; 2015 >
+      au < released ; 2011 ; 1 ; Biota Amazônia Volume 1 ; 2011 ; >
+      au < released ; 2012 ; 2 ; Biota Amazônia Volume 2 ; 2012 ; >
+      au < released ; 2013 ; 3 ; Biota Amazônia Volume 3 ; 2013 ; >
+      au < ready ; 2014 ; 4 ; Biota Amazônia Volume 4 ; 2014 ; >
+      au < manifest ; 2015 ; 5 ; Biota Amazônia Volume 5 ; 2015 ; >
 
   }
 
@@ -36,9 +36,9 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = cienciaequatorial
 
-      au < exists ; 2011 ; 1 ; Ciência Equatorial Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Ciência Equatorial Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Ciência Equatorial Volume 3 ; 2013 >
+      au < exists ; 2011 ; 1 ; Ciência Equatorial Volume 1 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Ciência Equatorial Volume 2 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Ciência Equatorial Volume 3 ; 2013 ; >
 
   }
 
@@ -53,10 +53,10 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = estacao
 
-      au < released ; 2011 ; 1 ; Estação Científica Volume 1 ; 2011 >
-      au < released ; 2012 ; 2 ; Estação Científica Volume 2 ; 2012 >
-      au < ready ; 2013 ; 3 ; Estação Científica Volume 3 ; 2013 >
-      au < notReady ; 2014 ; 4 ; Estação Científica Volume 4 ; 2014 > #no substance
+      au < released ; 2011 ; 1 ; Estação Científica Volume 1 ; 2011 ; >
+      au < released ; 2012 ; 2 ; Estação Científica Volume 2 ; 2012 ; >
+      au < ready ; 2013 ; 3 ; Estação Científica Volume 3 ; 2013 ; >
+      au < notReady ; 2014 ; 4 ; Estação Científica Volume 4 ; 2014 ; no substance > 
 
   }
 
@@ -71,9 +71,9 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = letras
 
-      au < ready ; 2011 ; 2011 ; Letras Escreve Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2012 ; Letras Escreve Volume 2012 ; 2012 >
-      au < ready ; 2013 ; 2013 ; Letras Escreve Volume 2013 ; 2013 >
+      au < ready ; 2011 ; 2011 ; Letras Escreve Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 2012 ; Letras Escreve Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 2013 ; Letras Escreve Volume 2013 ; 2013 ; >
 
   }
 
@@ -88,9 +88,9 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = planeta
 
-      au < exists ; 2009 ; 1 ; Planeta Amazônia Volume 1 ; 2009 >
-      au < exists ; 2010 ; 2 ; Planeta Amazônia Volume 2 ; 2010 >
-      au < exists ; 2011 ; 3 ; Planeta Amazônia Volume 3 ; 2011 >
+      au < exists ; 2009 ; 1 ; Planeta Amazônia Volume 1 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Planeta Amazônia Volume 2 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Planeta Amazônia Volume 3 ; 2011 ; >
 
   }
 
@@ -105,13 +105,13 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = pracs
 
-      au < ready ; 2008 ; 1 ; PRACS Volume 1 ; 2008 >
-      au < ready ; 2009 ; 2 ; PRACS Volume 2 ; 2009 >
-      au < ready ; 2010 ; 3 ; PRACS Volume 3 ; 2010 >
-      au < ready ; 2011 ; 4 ; PRACS Volume 4 ; 2011 >
-      au < ready ; 2012 ; 5 ; PRACS Volume 5 ; 2012 >
-      au < ready ; 2013 ; 6 ; PRACS Volume 6 ; 2013 >
-      au < ready ; 2014 ; 7 ; PRACS Volume 7 ; 2014 >
+      au < ready ; 2008 ; 1 ; PRACS Volume 1 ; 2008 ; >
+      au < ready ; 2009 ; 2 ; PRACS Volume 2 ; 2009 ; >
+      au < ready ; 2010 ; 3 ; PRACS Volume 3 ; 2010 ; >
+      au < ready ; 2011 ; 4 ; PRACS Volume 4 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; PRACS Volume 5 ; 2012 ; >
+      au < ready ; 2013 ; 6 ; PRACS Volume 6 ; 2013 ; >
+      au < ready ; 2014 ; 7 ; PRACS Volume 7 ; 2014 ; >
 
   }
 
@@ -126,7 +126,7 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = bioterra
 
-      au < expected ; 2013 ; 1 ; Revista BIOTERRA Volume 1 ; 2013 >
+      au < expected ; 2013 ; 1 ; Revista BIOTERRA Volume 1 ; 2013 ; >
 
   }
 
