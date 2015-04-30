@@ -4,10 +4,10 @@
     name = Alliance for Children and Families
   >
   
-  comment[moving] = from MetaPress to Atypon
+  comment[moving] = from MetaPress to Atypon, Allen Press
   
   plugin = needs.plugin
-  param[base_url] = 
+  param[base_url] = http://familiesinsocietyjournal.org/
   implicit < status ; year ; name ; param[volume_name] >  
   
   {
