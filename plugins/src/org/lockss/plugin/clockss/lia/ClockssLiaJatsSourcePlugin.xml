@@ -44,18 +44,6 @@
     <string>plugin_name</string>
     <string>Laser Institute of America JATS Source Plugin (CLOCKSS)</string>
   </entry>
-<!--  DEBUGGING ONLY - REMOVE -->
-<!-- 
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,"^%s", base_url</string>
-      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
-      <string>2,"^%s%d/datastore/paper_pdf/[ac-z][a-z_0]+/$",base_url, year</string>
-      <string>1,"^%s%d/", base_url, year</string>
-    </list>
-  </entry>
--->    
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
