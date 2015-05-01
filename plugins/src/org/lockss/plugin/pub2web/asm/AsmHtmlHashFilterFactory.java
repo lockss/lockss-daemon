@@ -53,6 +53,8 @@ public class AsmHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
         //and similar on a journal article page
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
+        //every now and then the order of the xml, html, pdf links are different - dynamically generated
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "contentTypeOptions"),
 
     };
     return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
