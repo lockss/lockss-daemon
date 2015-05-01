@@ -1,0 +1,43 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down - in development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.allenpress.AllenPressPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Allen Press Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>35</string>
+  </entry>  
+  <entry>
+    <string>au_name</string>
+    <string>"Allen Press Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.allenpress.AllenPressHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.allenpress.AllenPressHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.allenpress.AllenPressCrawlFilterFactory</string>
+  </entry>
+<!--  plugin_au_config_user_message comes from BaseAtypon which inserts correct base_url -->
+</map>

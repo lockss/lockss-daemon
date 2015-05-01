@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,7 +68,7 @@ import org.lockss.util.ReaderInputStream;
  */
 
 public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
-  Logger log = Logger.getLogger(BaseAtyponHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(BaseAtyponHtmlHashFilterFactory.class);
   // String used to see if text matches a size description of an article
   // usually "PDF Plus (527 KB)" or similar (PDFPlus, PDF-Plus)
   // (?i) makes it case insensitive
@@ -83,9 +83,9 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // leave only the content
     HtmlNodeFilters.tag("head"),
     // filter out javascript
-    new TagNameFilter("script"),
+    HtmlNodeFilters.tag("script"),
     //filter out comments
-    HtmlNodeFilters.commentWithRegex(".*"),
+    HtmlNodeFilters.comment(),
     
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),

@@ -1,0 +1,217 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down - abstract parent only</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Base Atypon Books Plugin</string>
+  </entry>
+<!--  full figure/table extraction support in JSoup -->  
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>
+  <!-- When you update parent version #'s, update children -->
+  <!-- Children: atypon/*, BioOneAtypon, EdinburghUniversityPress, TaylorAndFrancis -->
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Base Atypon Books Plugin, Base URL %s, ISBN %s", base_url, book_isbn</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/eisbn/%s", base_url, book_isbn</string>
+  </entry>
+  <entry>
+  <!-- manifest to book landing page with chapters -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>  
+  <entry>
+    <string>au_crawlrules</string>
+    <!--  CRAWL COMMENT BLOCK
+    support files
+    images and data:<base>/na101v1/home/midtierbeta/publisher/fum/books/content/books/2011/9781780840000/ebo.11.115/production/images/large/figure1.jpeg
+    exclude traps
+    book landing page: <base>/doi/book/<doi> - where doi seems to be <prefix>/<eisbn>
+    entire book pdf: <base>/doi/pdf/<doi>
+    chapter pages: <base>/doi/(abs|full|pdf)/<doi>
+    image access: <base>/action/showPopup?citid=citart1&id=ch1-f1.1&doi=10.2217%2Febo.11.115
+    citation extraction page: <base>/action/showCitFormats?doi=10.2217%2F9781780840246
+    citation RIS page (normalized by us): <base>/action/downloadCitation?doi=10.2217/ebo.11.122&format=ris&include=cit
+     -->
+    <list>
+      <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
+      <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_isbn</string>   
+      <string>2,"^%sdoi/book/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
+      <string>1,"^%sdoi/book/[0-9.]+/%s", base_url, book_isbn</string>
+      <string>1,"^%sdoi/(abs|full|pdf)/[0-9.]+/", base_url</string>
+      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
+      <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+   <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>book_isbn</key>
+        <displayName>Book ISBN</displayName>
+        <description>International Standard Book Number</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <!-- child plugin must define a publisher-specific key if they support both books and journals -->
+<!-- 
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:PUBNAMEKEYHERE</string>
+  </entry>
+ -->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      	<string>"^%sdoi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_substance_predicate_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
+  </entry>  
+<!--  Children will probably need to extend these and then use their own crawl/hash filters -->  
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string> 
+    <string>org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory</string>
+  </entry>
+  <!--  by default, use the simple pdf filter factory, not the scraping alternative -->    
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponRisFilterFactory</string>
+  </entry>
+<!--  RIS citation URLs come in as text/plain; we do additional RIS check in the factory -->
+  <entry>
+    <string>text/plain_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponRisFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory</string>
+  </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+<!--  oddly, ris files are text/plain -->
+  <entry>
+  <string>text/plain_metadata_extractor_factory_map</string>
+  <map>
+    <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
+   </entry>
+  </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
+   </entry>
+  </map>
+  </entry> 
+  <entry>
+    <string>application/pdf_metadata_extractor_factory_map</string>
+    <!-- if full_text_cu PDF is only aspect of article (due to overcrawl) -->
+    <!-- suppress emit so TDB default info isn't used -->
+    <map>
+      <entry>
+        <string>*;</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponNullMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <!-- GLN children require a plugin_au_config_user_msg, which is a printf -->
+  <!-- Here is a default version, but plugins may need to customize -->
+  <!-- CLOCKSS children must turn it off-->
+  <!--  TURN THIS OFF UNTIL 1.67
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>"Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;%saction/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by this publisher.", base_url</string>
+  </entry>
+   TURN THIS OFF UNTIL 1.67 -->
+</map>
