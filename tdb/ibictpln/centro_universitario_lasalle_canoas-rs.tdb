@@ -19,7 +19,7 @@
 
       au < released ; 2012 ; 1 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 1 ; 2012 ; >
       au < released ; 2013 ; 2 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 2 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 3 ; 2014 ; >
+      au < testing ; 2014 ; 3 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 3 ; 2014 ; >
       au < expected ; 2015 ; 4 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 4 ; 2015 ; >
 
   }
@@ -40,7 +40,7 @@
       au < released ; 2011 ; 3 ; Conhecimento & Diversidade Volume 3 ; 2011 ; >
       au < released ; 2012 ; 4 ; Conhecimento & Diversidade Volume 4 ; 2012 ; >
       au < released ; 2013 ; 5 ; Conhecimento & Diversidade Volume 5 ; 2013 ; >
-      au < manifest ; 2014 ; 6 ; Conhecimento & Diversidade Volume 6 ; 2014 ; >
+      au < testing ; 2014 ; 6 ; Conhecimento & Diversidade Volume 6 ; 2014 ; >
       au < expected ; 2015 ; 7 ; Conhecimento & Diversidade Volume 7 ; 2015 ; >
 
   }
@@ -58,8 +58,8 @@
 
       au < released ; 2012 ; 1 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 1 ; 2012 ; >
       au < released ; 2013 ; 2 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 2 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 3 ; 2014 ; >
-      au < manifest ; 2015 ; 4 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 4 ; 2015 ; >
+      au < testing ; 2014 ; 3 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 3 ; 2014 ; >
+      au < testing ; 2015 ; 4 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 4 ; 2015 ; >
 
   }
 
@@ -79,7 +79,7 @@
       au < released ; 2011 ; 18-19 ; DIÁLOGO Volume 18-19 ; 2011 ; >
       au < released ; 2012 ; 20-21 ; DIÁLOGO Volume 20-21 ; 2012 ; >
       au < released ; 2013 ; 22 ; DIÁLOGO Volume 22 ; 2013 ; >
-      au < manifest ; 2014 ; 23 ; DIÁLOGO Volume 23 ; 2014 ; >
+      au < testing ; 2014 ; 23 ; DIÁLOGO Volume 23 ; 2014 ; >
       au < manifest ; 2015 ; 24 ; DIÁLOGO Volume 24 ; 2015 ; >
 
   }
@@ -102,7 +102,7 @@
       au < released ; 2011 ; 16 ; Educação, Ciência e Cultura Volume 16 ; 2011 ; >
       au < released ; 2012 ; 17 ; Educação, Ciência e Cultura Volume 17 ; 2012 ; >
       au < released ; 2013 ; 18 ; Educação, Ciência e Cultura Volume 18 ; 2013 ; >
-      au < manifest ; 2014 ; 19 ; Educação, Ciência e Cultura Volume 19 ; 2014 ; >
+      au < testing ; 2014 ; 19 ; Educação, Ciência e Cultura Volume 19 ; 2014 ; >
       au < expected ; 2015 ; 20 ; Educação, Ciência e Cultura Volume 20 ; 2015 ; >
 
   }
@@ -131,7 +131,7 @@
       au < released ; 2011 ; 11 ; Interfaces Brasil/Canadá Volume 11 ; 2011 ; >
       au < released ; 2012 ; 12 ; Interfaces Brasil/Canadá Volume 12 ; 2012 ; >
       au < released ; 2013 ; 13 ; Interfaces Brasil/Canadá Volume 13 ; 2013 ; >
-      au < manifest ; 2014 ; 14 ; Interfaces Brasil/Canadá Volume 14 ; 2014 ; >
+      au < testing ; 2014 ; 14 ; Interfaces Brasil/Canadá Volume 14 ; 2014 ; >
       au < expected ; 2015 ; 15 ; Interfaces Brasil/Canadá Volume 15 ; 2015 ; >
 
   }
@@ -154,7 +154,7 @@
       au < released ; 2011 ; 9-10 ; Mouseion Volume 9-10 ; 2011 ; >
       au < released ; 2012 ; 11-13 ; Mouseion Volume 11-13 ; 2012 ; >
       au < released ; 2013 ; 14 ; Mouseion Volume 14 ; 2013 ; >
-      au < manifest ; 2014 ; 15 ; Mouseion Volume 15 ; 2014 ; >
+      au < testing ; 2014 ; 15 ; Mouseion Volume 15 ; 2014 ; >
       au < expected ; 2015 ; 16 ; Mouseion Volume 16 ; 2015 ; >
 
   }
@@ -177,7 +177,7 @@
       au < released ; 2011 ; 5 ; Revista de Ciências Ambientais Volume 5 ; 2011 ; >
       au < released ; 2012 ; 6 ; Revista de Ciências Ambientais Volume 6 ; 2012 ; >
       au < released ; 2013 ; 7 ; Revista de Ciências Ambientais Volume 7 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Revista de Ciências Ambientais Volume 8 ; 2014 ; >
+      au < testing ; 2014 ; 8 ; Revista de Ciências Ambientais Volume 8 ; 2014 ; >
       au < expected ; 2015 ; 9 ; Revista de Ciências Ambientais Volume 9 ; 2015 ; >
 
   }
@@ -194,7 +194,7 @@
       param[journal_id] = saude_desenvolvimento
 
       au < released ; 2013 ; 1 ; Saúde e Desenvolvimento Humano Volume 1 ; 2013 ; >
-      au < manifest ; 2014 ; 2 ; Saúde e Desenvolvimento Humano Volume 2 ; 2014 ; >
+      au < testing ; 2014 ; 2 ; Saúde e Desenvolvimento Humano Volume 2 ; 2014 ; >
       au < expected ; 2015 ; 3 ; Saúde e Desenvolvimento Humano Volume 3 ; 2015 ; >
 
   }
