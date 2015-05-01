@@ -8,7 +8,7 @@
   
   comment[plugin] = See PD-166
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
   param[base_url] = http://www.jgme.org/
   implicit < status ; year ; name ; param[volume_name] >
   
@@ -25,9 +25,9 @@
     au < exists ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 >
     au < exists ; 2011 ; Journal of Graduate Medical Education Volume 3 ; 3 >
     au < exists ; 2012 ; Journal of Graduate Medical Education Volume 4 ; 4 >
-    au < expected ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 >
-    au < expected ; 2014 ; Journal of Graduate Medical Education Volume 6 ; 6 >
-    au < expected ; 2015 ; Journal of Graduate Medical Education Volume 7 ; 7 >
+    au < exists ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 >
+    au < exists ; 2014 ; Journal of Graduate Medical Education Volume 6 ; 6 >
+    au < exists ; 2015 ; Journal of Graduate Medical Education Volume 7 ; 7 >
     
   }
   
