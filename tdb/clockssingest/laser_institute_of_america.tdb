@@ -21,9 +21,22 @@
     implicit < status ; status2 ; year ; name ; param[year] >    
 
     au < readySource ; crawling ; 2012 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2012 >
-    au < readySource ; crawling ; 2013 ; Journal of Laser Applications Volume 25 Issue 1-5 ; 2013 >
-    au < expected ; exists ; 2014 ; Journal of Laser Applications Volume 26 Issue 1-5 ; 2014 >
+    au < readySource ; crawling ; 2013 ; Journal of Laser Applications Volume 25 Issue 1-5 ; 2013 >    
+
+  }
+  {
+  
+    title <
+       name = Laser Institute of America Source Content
+    >
     
+    plugin = org.lockss.plugin.clockss.lia.ClockssLiaJatsSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/liajats-released/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2014 ; Laser Institute of America Source Content 2014 ; 2014 >
+    au < testing ; exists ; 2015 ; Laser Institute of America Source Content 2015 ; 2015 >
 
   }
 

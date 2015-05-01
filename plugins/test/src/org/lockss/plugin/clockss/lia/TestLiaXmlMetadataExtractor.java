@@ -49,7 +49,7 @@ public class TestLiaXmlMetadataExtractor extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.lia.ClockssLIAJatsSourcePlugin";
+  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.lia.ClockssLiaJatsSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static final String xml_url = BASE_URL + "JLA/v26/i4/041501_1/Markup/VOR_10.2351_1.4893749.xml";
   private static final String pdf_url = BASE_URL + "JLA/v26/i4/041501_1/Page_Renditions/online.pdf";
