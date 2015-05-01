@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.io.File;
 import java.net.URL;
 import java.util.*;
 
@@ -45,7 +44,6 @@ import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.wrapper.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.state.AuState;
-import org.lockss.repository.LockssRepositoryImpl;
 
 public class TestProjectMuseArchivalUnit extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
