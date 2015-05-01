@@ -8,39 +8,27 @@
     <string>org.lockss.plugin.projmuse.ProjectMusePlugin</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Project Muse Journals Plugin</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>25</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -51,14 +39,6 @@
   <entry>
     <string>au_name</string>
     <string>"Project Muse Journals Plugin, Base URL %s, Journal ID %s, Volume %d", base_url, journal_dir, volume</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Project Muse Journals Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -78,34 +58,6 @@
       <string>"%sjournals/%s/v%03d/", to_http(base_url), journal_dir, volume</string>
       <string>"%sjournals/%s/v%03d/", to_https(base_url), journal_dir, volume</string>
     </list>
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseUrlConsumerFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:Project Muse</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>"%sjournals/%s", base_url, journal_dir</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%sjournals/%s/v%03d/", base_url, journal_dir, volume</string>
-      </entry>
-      <entry>
-        <string>au_issue</string>
-        <list>
-          <string>"%sjournals/%s/toc/%s%s.%s.html", base_url, journal_dir, journal_id, volume, issue</string>
-          <string>"%sjournals/%s/toc/%s.%s.%s.html", base_url, journal_dir, journal_id, volume, issue</string>
-        </list>
-      </entry>
-    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -139,13 +91,83 @@
     </list>
   </entry>
   <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Project Muse</string>
+  </entry>
+  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"%sjournals/%s/v%03d/.*\.(html|pdf)$", base_url, journal_dir, volume</string>
+      <string>"%sjournals/%s/v%03d/[^_/]+\.(html|pdf)$", base_url, journal_dir, volume</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.projmuse.ProjectMuseUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.projmuse.ProjectMuseHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sjournals/%s", base_url, journal_dir</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sjournals/%s/v%03d/", base_url, journal_dir, volume</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <list>
+          <string>"%sjournals/%s/toc/%s%s.%s.html", base_url, journal_dir, journal_id, volume, issue</string>
+          <string>"%sjournals/%s/toc/%s.%s.%s.html", base_url, journal_dir, journal_id, volume, issue</string>
+        </list>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
 </map>
