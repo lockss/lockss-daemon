@@ -25882,6 +25882,21 @@
   {
 
     title <
+      name = Journal of Strategic Contracting and Negotiation ;
+      issn = 2055-5636 ;
+      eissn = 2055-5644
+    >
+
+      param[base_url] = http://jsc.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Studies in International Education ;
       issn = 1028-3153 ;
       eissn = 1552-7808
