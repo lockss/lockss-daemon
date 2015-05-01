@@ -13,7 +13,7 @@
       name = Schweizerbart Science Publishers Source Content
     >
     
-    plugin = org.lockss.plugin.clockss.jats.ClockssSchweizerbartJatsSourcePlugin
+    plugin = org.lockss.plugin.clockss.schweizerbart.ClockssSchweizerbartJatsSourcePlugin
     param[base_url] = http://content5.lockss.org/sourcefiles/schweizerbart-released/
     comment[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
