@@ -28780,6 +28780,22 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = Journal of Strategic Contracting and Negotiation ;
+      issn = 2055-5636 ;
+      eissn = 2055-5644
+    >
+
+      param[base_url] = http://jsc.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
