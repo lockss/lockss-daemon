@@ -164,4 +164,25 @@ public class TestListUtil extends LockssTestCase {
     assertNotSame(l0, r0);
     assertEquals(ListUtil.list(new Integer(7), "bar", "foo"), r0);
   }
+
+  public void testEnsureMinimalArrayList() {
+    List l1 = new ArrayList(4);
+    l1.add("1");
+    l1.add("2");
+    l1.add("3");
+    List l1c = new ArrayList(l1);
+    List l1a = ListUtil.ensureMinimalArrayList(l1);
+    assertEquals(l1a, l1c);
+    assertSame(l1a, l1);
+
+    List l2 = new LinkedList();
+    l2.add("1");
+    l2.add("2");
+    l2.add("3");
+    List l2a = ListUtil.ensureMinimalArrayList(l2);
+    assertEquals(l2, l2a);
+    assertClass(ArrayList.class, l1a);
+  }
+
+
 }

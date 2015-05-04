@@ -263,6 +263,17 @@ public class ListUtil {
     return toList;
   }
 
+  /** Return a trimmed Arraylist equal to lst */
+  public static ArrayList ensureMinimalArrayList(List lst) {
+    if (lst instanceof ArrayList) {
+      ArrayList alst = (ArrayList)lst;
+      alst.trimToSize();
+      return alst;
+    } else {
+      return new ArrayList(lst);
+    }
+  }
+
   /** Create a list containing the elements of an iterator */
   public static List fromIterator(Iterator iterator) {
     List l = list();
