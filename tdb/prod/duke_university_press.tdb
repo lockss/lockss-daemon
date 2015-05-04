@@ -2997,4 +2997,28 @@
 
   }
 
+  {
+    title <
+      name = Twentieth-Century Literature ;
+      issn = 0041-462X ;
+      eissn = 2325-8101 ;
+      issnl = 0041-462X
+
+    >
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
+
+    param[journal_dir] = twentieth_century_literature
+    attr[journal_id] = tcl
+
+    au < exists ; 2015 ; Twentieth-Century Literature Volume 61 [Project MUSE] ; 61 >
+
+    }
+
+  }
+
 }
