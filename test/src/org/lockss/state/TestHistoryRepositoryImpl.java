@@ -292,7 +292,6 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertTrue(xmlFile.exists());
   }
 
-
   public void testStoreAuState() throws Exception {
     HashSet strCol = new HashSet();
     strCol.add("test");
@@ -312,6 +311,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    444777, // numAgreePeersLastPoR
 				    777444, // numWillingRepairers
 				    747474, // numCurrentSuspectVersions
+				    ListUtil.list("http://hos.t/pa/th"),
 				    repository);
 
     assertEquals("SubstVer3",
@@ -347,6 +347,10 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 
     assertEquals(444777, loadedState.getNumAgreePeersLastPoR());
     assertEquals(777444, loadedState.getNumWillingRepairers());
+    assertEquals(747474, loadedState.getNumCurrentSuspectVersions());
+    assertEquals(ListUtil.list("http://hos.t/pa/th"),
+		 loadedState.getCdnStems());
+
     assertEquals(12345, loadedState.getPollDuration());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
     assertEquals(AuState.AccessType.OpenAccess, loadedState.getAccessType());
@@ -448,6 +452,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				  27, // numAgreePeersLastPoR
 				  72, // numWillingRepirers
 				  19, // numCurrentSuspectVersions
+				  ListUtil.list("http://foo/"), // cdnStems
 				  repository);
 
     repository.storeAuState(auState);
@@ -489,6 +494,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  13, // numAgreePeersLastPoR
 			  31, // numWillingRepairers
 			  91, // numCurrentSuspectVersions
+			  ListUtil.list("http://foo/"), // cdnStems
 			  repository);
     repository.storeAuState(auState);
     assertEquals(1234, auState.getLastCrawlTime());
@@ -499,6 +505,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(31, auState.getNumWillingRepairers());
     assertEquals(91, auState.getNumCurrentSuspectVersions());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
+    assertEquals(ListUtil.list("http://foo/"), auState.getCdnStems());
 
     fis = new FileInputStream(xmlFile);
     baos = new ByteArrayOutputStream(expectedStr.length());
@@ -545,6 +552,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  27, // numAgreePeersLastPoR
 			  72, // numWillingRepairers
 			  19, // numCurrentSuspectVersions
+			  ListUtil.list("http://foo/"), // cdnStems
 			  repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);

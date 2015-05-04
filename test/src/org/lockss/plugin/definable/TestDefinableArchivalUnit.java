@@ -103,6 +103,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 	configMap.setMapElement((String)ent.getKey(), ent.getValue());
       }
     }
+    MockNodeManager nm = new MockNodeManager();
+    nm.setAuState(new MockAuState(cau));
+    getMockLockssDaemon().setNodeManager(nm, cau);
+
     return cau;
   }
 
@@ -1058,6 +1062,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertIsomorphic(ListUtil.list("vol125\\.unstable",
 				   "http\\:\\/\\/si\\.te\\/path\\//toc"),
 		     RegexpUtil.regexpCollection(cau.makeExcludeUrlsFromPollsPatterns()));
+  }
+
+  public void testMakeExcludeUrlsFromPollResultsPatterns() throws Exception {
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN,
+			 ListUtil.list("\"vol%d\\.ancillary\",volume",
+				       "\"%s/toc\",base_url"));
+    additionalAuConfig.putInt("volume", 125);
+    additionalAuConfig.putString("base_url", "http://si.te/path/");
+    setupAu(additionalAuConfig);
+
+    assertIsomorphic(ListUtil.list("vol125\\.ancillary",
+				   "http\\:\\/\\/si\\.te\\/path\\//toc"),
+		     RegexpUtil.regexpCollection(cau.makeExcludeUrlsFromPollResultsPatterns()));
   }
 
   public void testMakeNonSubstanceUrlPatterns() throws Exception {

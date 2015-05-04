@@ -194,9 +194,10 @@ public interface Crawler {
     public boolean isGloballyPermittedHost(String host);
 
     public boolean isAllowedPluginPermittedHost(String host);
-    
+
+    public void updateCdnStems(String url);
+
     public CrawlUrl addChild(CrawlUrl curl, String url);
   }
-  
 
 }

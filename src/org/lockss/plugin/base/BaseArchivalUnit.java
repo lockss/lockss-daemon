@@ -144,8 +144,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   /**
-   * Checks that the configuration is legal (doesn't change any of the defining
-   * properties), and stores the configuration
+   * Checks that the configuration is legal (doesn't change any of the
+   * defining properties), stores the new configuration and causes any
+   * cached info to be recomputed.  If called with current config, just
+   * clears cached info.
    * @param config new Configuration
    * @throws ArchivalUnit.ConfigurationException if the configuration change is
    * illegal or for other configuration errors
@@ -155,13 +157,19 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (config == null) {
       throw new ConfigurationException("Null Configuration");
     }
-    if (logger.isDebug3()) logger.debug3("setConfiguration: " + config);
-    checkLegalConfigChange(config);
-    auConfig = config;
-    loadAuConfigDescrs(config);
-    addImpliedConfigParams();
-    setBaseAuParams(config);
-    fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
+    if (config.equals(auConfig)) {
+      if (logger.isDebug3()) logger.debug3("setConfiguration (unchanged): " +
+					   config);
+    } else {
+      if (logger.isDebug3()) logger.debug3("setConfiguration: " + config);
+      checkLegalConfigChange(config);
+      auConfig = config.copy();
+      loadAuConfigDescrs(config);
+      addImpliedConfigParams();
+      setBaseAuParams(config);
+      fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
+    }
+    urlStems = null;
   }
 
   public Configuration getConfiguration() {
@@ -425,8 +433,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	    set.add(stem);
 	  }
 	}
-	ArrayList<String> res = new ArrayList<String>(set.size());
+	AuState aus = AuUtil.getAuState(this);
+	// XXX Many plugin tests don't set up AuState
+	List cdnStems = (aus != null
+			 ? aus.getCdnStems() : Collections.EMPTY_LIST);
+	ArrayList<String> res = new ArrayList<String>(set.size() +
+						      cdnStems.size());
 	res.addAll(set);
+	res.addAll(cdnStems);
 	urlStems = res;
       } catch (MalformedURLException e) {
 	logger.error("getUrlStems(" + getName() + ")", e);

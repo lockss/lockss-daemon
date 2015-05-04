@@ -104,6 +104,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 
   public static final String KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN =
     "au_exclude_urls_from_polls_pattern";
+  public static final String KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN =
+    "au_exclude_urls_from_poll_results_pattern";
   public static final String KEY_AU_SUBSTANCE_URL_PATTERN =
     "au_substance_url_pattern";
   public static final String KEY_AU_NON_SUBSTANCE_URL_PATTERN =
@@ -180,6 +182,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_CRAWL_RULES, PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN,
+			  PrintfContext.Regexp);
+    printfKeysContext.put(KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN,
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_SUBSTANCE_URL_PATTERN, PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
@@ -352,6 +356,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   public List<Pattern> makeExcludeUrlsFromPollsPatterns()
       throws ArchivalUnit.ConfigurationException {
     return compileRegexpList(KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN,
+			     RegexpContext.Url);
+  }
+
+  public List<Pattern> makeExcludeUrlsFromPollResultsPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return compileRegexpList(KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN,
 			     RegexpContext.Url);
   }
 

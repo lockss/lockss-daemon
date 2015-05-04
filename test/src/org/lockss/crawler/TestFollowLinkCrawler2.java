@@ -63,7 +63,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
   protected CrawlManagerImpl crawlMgr;
   protected MyMockArchivalUnit mau = null;
   protected MockCachedUrlSet mcus = null;
-  protected MockAuState aus = new MockAuState();
+  protected MockAuState aus;
   protected static List testUrlList = ListUtil.list("http://example.com");
   protected MockCrawlRule crawlRule = null;
   protected String startUrl = "http://www.example.com/index.html";
@@ -90,6 +90,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau = newMyMockArchivalUnit();
     mau.setPlugin(plug);
     mau.setAuId("MyMockTestAu");
+    aus = new MockAuState(mau);
     startUrls = ListUtil.list(startUrl);
     mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 
@@ -177,7 +178,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setPermissionUrls(ListUtil.list(permissionPage));
     mau.setCrawlRule(crawlRule);
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, aus);
     crawler.setDaemonPermissionCheckers(
         ListUtil.list(new MockPermissionChecker(1)));
 
@@ -270,7 +271,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setPermissionUrls(permissionList);
     mau.setCrawlRule(crawlRule);
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, AuUtil.getAuState(mau));
     crawler.setDaemonPermissionCheckers(
         ListUtil.list(new MockPermissionChecker(2)));
 
@@ -667,7 +668,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setPermissionUrls(permissionList);
     mau.setCrawlRule(crawlRule);
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, aus);
     crawler.setDaemonPermissionCheckers(
         ListUtil.list(new MockPermissionChecker(2)));
 
@@ -687,7 +688,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setCrawlRule(crawlRule);
     mau.setRefetchDepth(2);
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, aus);
     crawler.setDaemonPermissionCheckers(
         ListUtil.list(new MockPermissionChecker(1)));
 
@@ -730,7 +731,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setCrawlRule(crawlRule);
     mau.setRefetchDepth(2);
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, aus);
     crawler.setDaemonPermissionCheckers(
       ListUtil.list(new MockPermissionChecker(2)));
 
@@ -802,7 +803,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setCrawlUrlComparator(cmp);
 
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, aus);
     crawler.setDaemonPermissionCheckers(
       ListUtil.list(new MockPermissionChecker(1)));
 
@@ -970,7 +971,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setPermissionUrls(ListUtil.list(permissionPage));
     mau.setCrawlRule(crawlRule);
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, aus);
     MyMockPermissionChecker perm = new MyMockPermissionChecker();
     crawler.setDaemonPermissionCheckers(ListUtil.list(perm));
 
@@ -1013,7 +1014,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     mau.setPermissionUrls(ListUtil.list(permissionPage));
     mau.setCrawlRule(crawlRule);
 
-    crawler = new MyFollowLinkCrawler(mau, new MockAuState());
+    crawler = new MyFollowLinkCrawler(mau, aus);
     MyMockPermissionChecker perm = new MyMockPermissionChecker();
     crawler.setDaemonPermissionCheckers(ListUtil.list(perm));
 

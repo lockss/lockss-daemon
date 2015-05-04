@@ -103,6 +103,7 @@ public class MockAuState extends AuState {
 	  -1, // numAgreePeersLastPoR
 	  -1, // numWillingRepairers
 	  -1, // numCurrentSuspectVersions
+	  null, // cdnStems
 	  historyRepo);
   }
 

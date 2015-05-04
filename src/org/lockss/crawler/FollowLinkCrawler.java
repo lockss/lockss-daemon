@@ -272,6 +272,7 @@ public class FollowLinkCrawler extends BaseCrawler {
             return false;
           } else {
             updateCacheStats(FetchResult.FETCHED, pud);
+	    updateCdnStems(pud.getUrl());
           }
         } catch (CacheException e) {
           crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION, e.getMessage());
@@ -554,6 +555,9 @@ public class FollowLinkCrawler extends BaseCrawler {
                 return false;
               }
             } else {
+	      if (res == FetchResult.FETCHED) {
+		updateCdnStems(url);
+	      }
               checkSubstanceCollected(au.makeCachedUrl(url));
             }
           } catch (CacheException ex) {

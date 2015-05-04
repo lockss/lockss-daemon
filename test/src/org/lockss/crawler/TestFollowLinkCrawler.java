@@ -102,16 +102,19 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     
     crawlMgr.newCrawlRateLimiter(mau);
     
-    crawler = new TestableFollowLinkCrawler(mau, aus);
-
-    crawler.setDaemonPermissionCheckers(
-        ListUtil.list(new MyMockPermissionChecker(1)));
+    crawler = makeTestableCrawler();
 
     mau.setLinkExtractor("text/html", extractor);
     Properties p = new Properties();
     p.setProperty(FollowLinkCrawler.PARAM_DEFAULT_RETRY_DELAY, "0");
     p.setProperty(FollowLinkCrawler.PARAM_MIN_RETRY_DELAY, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
+  TestableFollowLinkCrawler makeTestableCrawler() {
+    TestableFollowLinkCrawler res = new TestableFollowLinkCrawler(mau, aus);
+    res.setDaemonPermissionCheckers(ListUtil.list(new MyMockPermissionChecker(1)));
+    return res;
   }
 
   public void testFlcThrowsForNullAu() {
@@ -350,6 +353,31 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     Set expectedSrcUrls = SetUtil.set("http://www.example.com/extra_level/", startUrl);
     assertEquals(expectedSrcUrls,extractor.getSrcUrls());
+  }
+
+  public void testCdnHost() throws Exception {
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
+				  "foo\\.com");
+
+    String url1="http://www.example.com/one.html";
+    String url2="http://foo.com/two";
+    String url3="http://www.example.com/three";
+
+    mau.setUrlStems(ListUtil.list("http://www.example.com/"));
+    mau.setStartUrls(ListUtil.list(url1));
+    crawler = makeTestableCrawler();
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, false, true);
+    mau.addUrl(url1);
+    mau.addUrl(url2);
+    mau.addUrl(url3);
+    crawler.setUrlsToFollow(ListUtil.list(url2, url3));
+    assertEmpty(aus.getCdnStems());
+    assertTrue(crawler.doCrawl());
+    // url2 should have been eliminated by the crawl filter
+    assertEquals(SetUtil.set(url1, url2, url3), crawler.fetched);
+    assertEquals(ListUtil.list(UrlUtil.getUrlPrefix(url2)), aus.getCdnStems());
   }
 
   CIProperties fromArgs(String prop, String val) {
@@ -658,7 +686,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
   private void setUpCrawlWindowTest(CrawlWindow myCrawlWindow) {
     mau.setCrawlWindow(myCrawlWindow);
-    crawler = new TestableFollowLinkCrawler(mau, aus);
+    crawler = makeTestableCrawler();
 
     mau.addUrl(startUrl);
     
@@ -1033,9 +1061,7 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
 		mmau.setRefetchDepth(1);
 
     //set Crawler
-    crawler = new TestableFollowLinkCrawler(mmau, new MockAuState());
-    crawler.setDaemonPermissionCheckers(ListUtil.list(
-        new MyMockPermissionChecker(passPermissionCheck)));
+    crawler = makeTestableCrawler();
 
     //set extractor
     mmau.setLinkExtractor("text/html", extractor);

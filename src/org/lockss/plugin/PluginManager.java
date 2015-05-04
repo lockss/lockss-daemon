@@ -1193,7 +1193,7 @@ public class PluginManager
       synchronized (hostAus) {
 	for (String stem : stems) {
 	  log.debug2("Adding stem: " + stem + ", " + au);
-	  addStem(stem, au);
+	  addAuStem(stem, au);
 	}
       }
     } catch (Exception e) {
@@ -1207,7 +1207,7 @@ public class PluginManager
       synchronized (hostAus) {
 	for (String stem : stems) {
 	  log.debug2("Removing stem: " + stem + ", " + au);
-	  delStem(stem, au);
+	  delAuStem(stem, au);
 	}
       }
     } catch (Exception e) {
@@ -1215,7 +1215,7 @@ public class PluginManager
     }
   }
 
-  private void addStem(String stem, ArchivalUnit au) {
+  public void addAuStem(String stem, ArchivalUnit au) {
     AuSearchSet searchSet = hostAus.get(stem);
     if (searchSet == null) {
       searchSet = new AuSearchSet(this);
@@ -1224,7 +1224,7 @@ public class PluginManager
     searchSet.addAu(au);
   }
 
-  private void delStem(String stem, ArchivalUnit au) {
+  private void delAuStem(String stem, ArchivalUnit au) {
     AuSearchSet searchSet = hostAus.get(stem);
     if (searchSet != null) {
       searchSet.delAu(au);

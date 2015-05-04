@@ -285,6 +285,7 @@ public class HistoryRepositoryImpl
 				auState.getNumAgreePeersLastPoR(),
 				auState.getNumWillingRepairers(),
 				auState.getNumCurrentSuspectVersions(),
+				auState.getCdnStems(),
 				this);
       return res;
     }

@@ -193,6 +193,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 			      -1, // numAgreePeersLastPoR
 			      -1, // numWillingRepairers
 			      -1, // numCurrentSuspectVersions
+			      null, // cdnStems
 			      (HistoryRepository)null);
     assertFalse(au.shouldCallTopLevelPoll(aus));
     ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,

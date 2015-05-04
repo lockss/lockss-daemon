@@ -107,6 +107,7 @@ public class TestAuState extends LockssTestCase {
 		       -1, // numWillingRepairers
 		       -1, // numCurrentSuspectVersions
 		       0,
+		       null,
 		       historyRepo);
   }
 
@@ -524,6 +525,17 @@ public class TestAuState extends LockssTestCase {
     assertEquals(5, aus.getNumCurrentSuspectVersions());
   }
 
+  public void testCdnStems() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertEquals(Collections.EMPTY_LIST, aus.getCdnStems());
+    aus.setCdnStems(new LinkedList(ListUtil.list("a", "b")));
+    List val = aus.getCdnStems();
+    assertClass(ArrayList.class, val);
+    assertEquals(ListUtil.list("a", "b"), val);
+    aus.addCdnStem("ccc");
+    assertEquals(ListUtil.list("a", "b", "ccc"), aus.getCdnStems());
+  }
+
   public void testBatch() {
     AuState aus = new AuState(mau, historyRepo);
     assertEquals(0, historyRepo.getAuStateStoreCount());
@@ -576,6 +588,7 @@ public class TestAuState extends LockssTestCase {
     log.debug2("new: " + edser);
     AuState newaus = deser(edser);
     assertEquals(-1, newaus.getNumAgreePeersLastPoR());
+    assertEquals(Collections.EMPTY_LIST, newaus.getCdnStems());
   }
 
   public static void main(String[] argv) {

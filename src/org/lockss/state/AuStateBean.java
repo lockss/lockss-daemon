@@ -78,6 +78,7 @@ public class AuStateBean extends AuState {
 				      auState.numAgreePeersLastPoR,
 				      auState.numWillingRepairers,
 				      auState.numCurrentSuspectVersions,
+				      auState.cdnStems,
 				      null);
   }
 

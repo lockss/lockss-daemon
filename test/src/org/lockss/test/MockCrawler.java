@@ -321,6 +321,10 @@ public class MockCrawler extends NullCrawler {
     }
 
     @Override
+    public void updateCdnStems(String url) {
+    }
+
+    @Override
     public CrawlUrl addChild(CrawlUrl curl, String url) {
       return null;
     }

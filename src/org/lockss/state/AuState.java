@@ -84,6 +84,8 @@ public class AuState implements LockssSerializable {
   protected int numAgreePeersLastPoR = -1; // Number of agreeing peers last PoR
   protected int numWillingRepairers = -1; // Number of willing repairers
   protected int numCurrentSuspectVersions = -1; // # URLs w/ current version suspect
+  protected List<String> cdnStems;	// URL stems of content on hosts
+					// not predicted by permission URLs
 
   // XXX not used in 1.62 - made transient so not committed to having it in
   // state file
@@ -150,6 +152,7 @@ public class AuState implements LockssSerializable {
 	 0,  // numAgreePeersLastPoR
 	 0,  // numWillingRepairers
 	 0,  // numCurrentSuspectVersions
+	 null, // cdnStems
 	 historyRepo);
   }
 
@@ -176,6 +179,7 @@ public class AuState implements LockssSerializable {
 		 int numAgreePeersLastPoR,
 		 int numWillingRepairers,
 		 int numCurrentSuspectVersions,
+		 List cdnStems,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -205,7 +209,12 @@ public class AuState implements LockssSerializable {
     this.numAgreePeersLastPoR = numAgreePeersLastPoR;
     this.numWillingRepairers = numWillingRepairers;
     this.numCurrentSuspectVersions = numCurrentSuspectVersions;
+    this.cdnStems = cdnStems;
     this.historyRepo = historyRepo;
+
+    if (cdnStems != null) {
+      flushAuCaches();
+    }
   }
 
   /**
@@ -470,6 +479,29 @@ public class AuState implements LockssSerializable {
     return n;
   }
 
+  public List<String> getCdnStems() {
+    return cdnStems == null ? (List<String>)Collections.EMPTY_LIST : cdnStems;
+  }
+
+  public synchronized void setCdnStems(List<String> stems) {
+    if (!getCdnStems().equals(stems)) {
+      cdnStems = ListUtil.ensureMinimalArrayList(stems);
+      flushAuCaches();
+      needSave();
+    }
+  }
+
+  public synchronized void addCdnStem(String stem) {
+    if (!getCdnStems().contains(stem)) {
+      if (cdnStems == null) {
+	cdnStems = new ArrayList(4);
+      }
+      cdnStems.add(stem);
+      flushAuCaches();
+      AuUtil.getDaemon(au).getPluginManager().addAuStem(stem, au);
+      needSave();
+    }
+  }
 
   /**
    * Returns the running average poll duration, or 0 if unknown
@@ -576,6 +608,7 @@ public class AuState implements LockssSerializable {
 		       numAgreePeersLastPoR,
 		       numWillingRepairers,
 		       numCurrentSuspectVersions,
+		       cdnStems,
 		       null);
   }
 
@@ -834,8 +867,19 @@ public class AuState implements LockssSerializable {
     }
     StringPool cPool = CrawlerStatus.CRAWL_STATUS_POOL;
     lastCrawlResultMsg = cPool.intern(lastCrawlResultMsg);
+    if (cdnStems != null && !cdnStems.isEmpty()) {
+      cdnStems = StringPool.URL_STEMS.internList(cdnStems);
+    }
   }
 
+  protected void flushAuCaches() {
+    try {
+      au.setConfiguration(au.getConfiguration());
+    } catch (ArchivalUnit.ConfigurationException e) {
+      logger.error("Shouldn't happen: au.setConfiguration(au.getConfiguration())",
+		   e);
+    }
+  }
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
