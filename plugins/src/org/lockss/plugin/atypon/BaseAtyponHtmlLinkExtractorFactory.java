@@ -195,7 +195,7 @@ implements LinkExtractorFactory {
      */
     
     /* now set up an exclude restriction on "format" */ 
-    exclude_args = SetUtil.fromCSV("refworks,refworks-cn,bibtex,medlars,endnote"); 
+    exclude_args = SetUtil.fromCSV("refworks,refworks-cn,bibtex,medlars,endnote,txt"); 
     HtmlFormExtractor.FormFieldRestrictions exclude_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null, exclude_args);
     restrictor.put("format", exclude_restrictions);
     
