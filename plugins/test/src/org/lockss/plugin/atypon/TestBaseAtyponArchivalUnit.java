@@ -286,11 +286,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
    * and then checking that the clockss plugin has a null message
    */
   public void testUserMsgs() throws Exception {
-    /* TURN THIS OFF UNTIL 1.67
-     *    testSpecificUserMsg(BASE_ATYPON_BASE, default_msg_part1 + BASE_ATYPON_BASE + default_msg_part2, 
-     *   "org.lockss.plugin.atypon.BaseAtyponPlugin",
-     *   null);
-     */        
+    // the default when a child doesn't set
+    testSpecificUserMsg(BASE_ATYPON_BASE, default_msg_part1 + BASE_ATYPON_BASE + default_msg_part2, 
+       "org.lockss.plugin.atypon.BaseAtyponPlugin",
+       null);
 
     //AMetSoc - points users at our web page with registration info
     testSpecificUserMsg("http://journals.ametsoc.org/", gln_lockss_user_msg, 
