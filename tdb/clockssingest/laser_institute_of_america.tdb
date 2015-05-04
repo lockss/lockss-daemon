@@ -9,34 +9,33 @@
   {
   
     title <
-      name = Journal of Laser Applications ;
-      issn = 1042-346X
-      
-    >
-    
-    plugin = org.lockss.plugin.laserinstituteofamerica.ClockssLaserInstituteOfAmericaSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/lia-released/
-    comment[proxy] = DIRECT
-    comment[publishing_platform] = Another publisher on the AIP platform
-    implicit < status ; status2 ; year ; name ; param[year] >    
-
-    au < readySource ; crawling ; 2012 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2012 >
-    au < readySource ; crawling ; 2013 ; Journal of Laser Applications Volume 25 Issue 1-5 ; 2013 >    
-
-  }
-  {
-  
-    title <
        name = Laser Institute of America Source Content
     >
     
-    plugin = org.lockss.plugin.clockss.lia.ClockssLiaJatsSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/liajats-released/
-    comment[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
+    {
     
-    au < testing ; exists ; 2014 ; Laser Institute of America Source Content 2014 ; 2014 >
-    au < testing ; exists ; 2015 ; Laser Institute of America Source Content 2015 ; 2015 >
+      plugin = org.lockss.plugin.laserinstituteofamerica.ClockssLaserInstituteOfAmericaSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/lia-released/
+      comment[proxy] = DIRECT
+      comment[publishing_platform] = Another publisher on the AIP platform
+      implicit < status ; status2 ; year ; name ; param[year] >    
+
+      au < readySource ; frozen ; 2012 ; Laser Institute of America Source Content 2012 ; 2012 >
+      au < readySource ; frozen ; 2013 ; Laser Institute of America Source Content 2013 ; 2013 >    
+
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.clockss.lia.ClockssLiaJatsSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/liajats-released/
+      comment[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+    
+      au < testing ; exists ; 2014 ; Laser Institute of America Source Content 2014 ; 2014 >
+      au < testing ; exists ; 2015 ; Laser Institute of America Source Content 2015 ; 2015 >
+
+    }
 
   }
 
