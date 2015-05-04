@@ -63,6 +63,8 @@ public class StringPool {
 							   "au_feature_key",
 							   "year",
 							   "rights"));
+  /** Pool for URL stems. */
+  public static StringPool URL_STEMS = new StringPool("URL stems");
   /** Pool for HTTP header names. */
   public static StringPool HTTP_HEADERS = new StringPool("HTTP headers");
   /** Pool for plugin IDs. */
@@ -153,6 +155,14 @@ public class StringPool {
     }
     map.put(str, str);
     return str;
+  }
+
+  public ArrayList<String> internList(List<String> strs) {
+    ArrayList<String> res = new ArrayList(strs.size());
+    for (String str : strs) {
+      res.add(intern(str));
+    }
+    return res;
   }
 
   /** Intern the value iff the key is a member of this StringPool's set of
