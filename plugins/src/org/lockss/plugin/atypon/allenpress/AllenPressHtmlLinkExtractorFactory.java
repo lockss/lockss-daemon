@@ -55,7 +55,7 @@ extends BaseAtyponHtmlLinkExtractorFactory {
     = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
     
     //excluding the direct=on
-    exclude = SetUtil.fromCSV("on");
+    exclude = SetUtil.set("on");
     HtmlFormExtractor.FormFieldRestrictions direct_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null,exclude);
     restrictor.put("direct", direct_restrictions);
 

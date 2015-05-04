@@ -55,8 +55,8 @@ public class AllenPressCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFacto
     // http://www.jgme.org/doi/full/10.4300/1949-8357-6.1.192
     // <a class="errata" href=...> (Original|Errata) </a> 
     HtmlNodeFilters.tagWithAttribute("a", "class", "errata"),
-    //full text page has references with links at the bottom
-    HtmlNodeFilters.tagWithAttribute("table",  "class", "refernces"),
+    //full text page has references with links at the bottom - just being careful
+    HtmlNodeFilters.tagWithAttribute("table",  "class", "references"),
   };
 
   @Override
