@@ -19,10 +19,10 @@
     
     param[journal_abbr] = abo
 
-    au < manifest ; 2011 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 >
-    au < manifest ; 2012 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 >
-    au < testing ; 2013 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 >
-    au < testing ; 2014 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 >
+    au < testing ; 2011 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 >
+    au < testing ; 2012 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 >
+    au < ready ; 2013 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 >
+    au < ready ; 2014 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 >
     au < manifest ; 2015 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 >
 
   }
@@ -37,8 +37,8 @@
     
     param[journal_abbr] = alambique
 
-    au < testing ; 2013 ; ABO: Alambique Volume 1 ; 1 >
-    au < testing ; 2014 ; ABO: Alambique Volume 2 ; 2 >
+    au < ready ; 2013 ; ABO: Alambique Volume 1 ; 1 >
+    au < ready ; 2014 ; ABO: Alambique Volume 2 ; 2 >
     au < expected ; 2015 ; ABO: Alambique Volume 3 ; 3 >
 
   }
@@ -54,14 +54,14 @@
 
     param[journal_abbr] = gsp
 
-    au < manifest ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
-    au < manifest ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
-    au < manifest ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
-    au < manifest ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
-    au < manifest ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
-    au < manifest ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
-    au < manifest ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
-    au < testing ; 2014 ; Genocide Studies and Prevention Volume 8 ; 8 >
+    au < testing ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
+    au < testing ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
+    au < testing ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
+    au < testing ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
+    au < testing ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
+    au < testing ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
+    au < testing ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
+    au < ready ; 2014 ; Genocide Studies and Prevention Volume 8 ; 8 >
     au < expected ; 2015 ; Genocide Studies and Prevention Volume 9 ; 9 >
 
   }
@@ -92,8 +92,8 @@
     au < manifest ; 2008 ; Journal of Ecological Anthropology Volume 12 ; 12 >
     au < manifest ; 2009 ; Journal of Ecological Anthropology Volume 13 ; 13 >
     au < manifest ; 2010 ; Journal of Ecological Anthropology Volume 14 ; 14 >
-    au < manifest ; 2012 ; Journal of Ecological Anthropology Volume 15 ; 15 >
-    au < testing ; 2013 ; Journal of Ecological Anthropology Volume 16 ; 16 >
+    au < testing ; 2012 ; Journal of Ecological Anthropology Volume 15 ; 15 >
+    au < ready ; 2013 ; Journal of Ecological Anthropology Volume 16 ; 16 >
     au < testing ; 2014 ; Journal of Ecological Anthropology Volume 17 ; 17 >
     au < manifest ; 2015 ; Journal of Ecological Anthropology Volume 18 ; 18 >
 
@@ -109,13 +109,13 @@
 
     param[journal_abbr] = numeracy
 
-    au < manifest ; 2008 ; Numeracy Volume 1 ; 1 >
-    au < manifest ; 2009 ; Numeracy Volume 2 ; 2 >
-    au < manifest ; 2010 ; Numeracy Volume 3 ; 3 >
-    au < manifest ; 2011 ; Numeracy Volume 4 ; 4 >
-    au < manifest ; 2012 ; Numeracy Volume 5 ; 5 >
-    au < testing ; 2013 ; Numeracy Volume 6 ; 6 >
-    au < testing ; 2014 ; Numeracy Volume 7 ; 7 >
+    au < testing ; 2008 ; Numeracy Volume 1 ; 1 >
+    au < testing ; 2009 ; Numeracy Volume 2 ; 2 >
+    au < testing ; 2010 ; Numeracy Volume 3 ; 3 >
+    au < testing ; 2011 ; Numeracy Volume 4 ; 4 >
+    au < testing ; 2012 ; Numeracy Volume 5 ; 5 >
+    au < ready ; 2013 ; Numeracy Volume 6 ; 6 >
+    au < ready ; 2014 ; Numeracy Volume 7 ; 7 >
     au < manifest ; 2015 ; Numeracy Volume 8 ; 8 >
 
   }
@@ -131,10 +131,10 @@
 
     param[journal_abbr] = surcosur
 
-    au < manifest ; 2011 ; Revista Surco Sur Volume 1 ; 1 >
-    au < manifest ; 2012 ; Revista Surco Sur Volume 2 ; 2 >
-    au < testing ; 2013 ; Revista Surco Sur Volume 3 ; 3 >
-    au < testing ; 2014 ; Revista Surco Sur Volume 4 ; 4 >
+    au < testing ; 2011 ; Revista Surco Sur Volume 1 ; 1 >
+    au < testing ; 2012 ; Revista Surco Sur Volume 2 ; 2 >
+    au < ready ; 2013 ; Revista Surco Sur Volume 3 ; 3 >
+    au < ready ; 2014 ; Revista Surco Sur Volume 4 ; 4 >
     au < manifest ; 2015 ; Revista Surco Sur Volume 5 ; 5 >
 
   }
