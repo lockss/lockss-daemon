@@ -482,7 +482,7 @@
       au < released ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 [Project MUSE] ; 32 >
       au < released ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 [Project MUSE] ; 33 >
       au < manifest ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [Project MUSE] ; 34 >
-      au < expected ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
+      au < manifest ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
 
     }
 
@@ -1528,7 +1528,7 @@
       param[base_url] = http://jmews.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 >
    }
 
   {
