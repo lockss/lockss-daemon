@@ -19,8 +19,8 @@
     
     param[journal_abbr] = abo
 
-    au < testing ; 2011 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 >
-    au < testing ; 2012 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 >
+    au < ready ; 2011 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 >
+    au < ready ; 2012 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 >
     au < ready ; 2013 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 >
     au < ready ; 2014 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 >
     au < manifest ; 2015 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 >
@@ -54,13 +54,13 @@
 
     param[journal_abbr] = gsp
 
-    au < testing ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
-    au < testing ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
-    au < testing ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
-    au < testing ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
-    au < testing ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
-    au < testing ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
-    au < testing ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
+    au < ready ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
+    au < ready ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
+    au < ready ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
+    au < ready ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
+    au < ready ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
+    au < ready ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
+    au < ready ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
     au < ready ; 2014 ; Genocide Studies and Prevention Volume 8 ; 8 >
     au < expected ; 2015 ; Genocide Studies and Prevention Volume 9 ; 9 >
 
@@ -78,21 +78,21 @@
     param[journal_abbr] = jea
     comment[0] = titles changed in 2000
 
-    au < manifest ; 1997 ; Georgia Journal of Ecological Anthropology Volume 1 ; 1 >
-    au < manifest ; 1998 ; Georgia Journal of Ecological Anthropology Volume 2 ; 2 >
-    au < manifest ; 1999 ; Georgia Journal of Ecological Anthropology Volume 3 ; 3 >
-    au < manifest ; 2000 ; Journal of Ecological Anthropology Volume 4 ; 4 >
-    au < manifest ; 2001 ; Journal of Ecological Anthropology Volume 5 ; 5 >
-    au < manifest ; 2002 ; Journal of Ecological Anthropology Volume 6 ; 6 >
-    au < manifest ; 2003 ; Journal of Ecological Anthropology Volume 7 ; 7 >
-    au < manifest ; 2004 ; Journal of Ecological Anthropology Volume 8 ; 8 >
-    au < manifest ; 2005 ; Journal of Ecological Anthropology Volume 9 ; 9 >
-    au < manifest ; 2006 ; Journal of Ecological Anthropology Volume 10 ; 10 >
-    au < manifest ; 2007 ; Journal of Ecological Anthropology Volume 11 ; 11 >
-    au < manifest ; 2008 ; Journal of Ecological Anthropology Volume 12 ; 12 >
-    au < manifest ; 2009 ; Journal of Ecological Anthropology Volume 13 ; 13 >
-    au < manifest ; 2010 ; Journal of Ecological Anthropology Volume 14 ; 14 >
-    au < testing ; 2012 ; Journal of Ecological Anthropology Volume 15 ; 15 >
+    au < testing ; 1997 ; Georgia Journal of Ecological Anthropology Volume 1 ; 1 >
+    au < testing ; 1998 ; Georgia Journal of Ecological Anthropology Volume 2 ; 2 >
+    au < testing ; 1999 ; Georgia Journal of Ecological Anthropology Volume 3 ; 3 >
+    au < testing ; 2000 ; Journal of Ecological Anthropology Volume 4 ; 4 >
+    au < testing ; 2001 ; Journal of Ecological Anthropology Volume 5 ; 5 >
+    au < testing ; 2002 ; Journal of Ecological Anthropology Volume 6 ; 6 >
+    au < testing ; 2003 ; Journal of Ecological Anthropology Volume 7 ; 7 >
+    au < testing ; 2004 ; Journal of Ecological Anthropology Volume 8 ; 8 >
+    au < testing ; 2005 ; Journal of Ecological Anthropology Volume 9 ; 9 >
+    au < testing ; 2006 ; Journal of Ecological Anthropology Volume 10 ; 10 >
+    au < testing ; 2007 ; Journal of Ecological Anthropology Volume 11 ; 11 >
+    au < testing ; 2008 ; Journal of Ecological Anthropology Volume 12 ; 12 >
+    au < testing ; 2009 ; Journal of Ecological Anthropology Volume 13 ; 13 >
+    au < testing ; 2010 ; Journal of Ecological Anthropology Volume 14 ; 14 >
+    au < ready ; 2012 ; Journal of Ecological Anthropology Volume 15 ; 15 >
     au < ready ; 2013 ; Journal of Ecological Anthropology Volume 16 ; 16 >
     au < testing ; 2014 ; Journal of Ecological Anthropology Volume 17 ; 17 >
     au < manifest ; 2015 ; Journal of Ecological Anthropology Volume 18 ; 18 >
@@ -109,11 +109,11 @@
 
     param[journal_abbr] = numeracy
 
-    au < testing ; 2008 ; Numeracy Volume 1 ; 1 >
+    au < ready ; 2008 ; Numeracy Volume 1 ; 1 >
     au < testing ; 2009 ; Numeracy Volume 2 ; 2 >
-    au < testing ; 2010 ; Numeracy Volume 3 ; 3 >
-    au < testing ; 2011 ; Numeracy Volume 4 ; 4 >
-    au < testing ; 2012 ; Numeracy Volume 5 ; 5 >
+    au < ready ; 2010 ; Numeracy Volume 3 ; 3 >
+    au < ready ; 2011 ; Numeracy Volume 4 ; 4 >
+    au < ready ; 2012 ; Numeracy Volume 5 ; 5 >
     au < ready ; 2013 ; Numeracy Volume 6 ; 6 >
     au < ready ; 2014 ; Numeracy Volume 7 ; 7 >
     au < manifest ; 2015 ; Numeracy Volume 8 ; 8 >
@@ -131,8 +131,8 @@
 
     param[journal_abbr] = surcosur
 
-    au < testing ; 2011 ; Revista Surco Sur Volume 1 ; 1 >
-    au < testing ; 2012 ; Revista Surco Sur Volume 2 ; 2 >
+    au < ready ; 2011 ; Revista Surco Sur Volume 1 ; 1 >
+    au < ready ; 2012 ; Revista Surco Sur Volume 2 ; 2 >
     au < ready ; 2013 ; Revista Surco Sur Volume 3 ; 3 >
     au < ready ; 2014 ; Revista Surco Sur Volume 4 ; 4 >
     au < manifest ; 2015 ; Revista Surco Sur Volume 5 ; 5 >
