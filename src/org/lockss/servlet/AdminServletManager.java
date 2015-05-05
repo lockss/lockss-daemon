@@ -39,6 +39,12 @@ import javax.servlet.http.*;
 import org.mortbay.http.*;
 import org.mortbay.jetty.servlet.*;
 import com.planetj.servlet.filter.compression.*;
+import dk.itst.oiosaml.common.SAMLUtil;
+import dk.itst.oiosaml.configuration.FileConfiguration;
+import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
+import dk.itst.oiosaml.sp.service.DispatcherServlet;
+import dk.itst.oiosaml.sp.service.session.SessionDestroyListener;
+import dk.itst.oiosaml.sp.service.util.Constants;
 import org.apache.cxf.transport.servlet.CXFServlet;
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -201,6 +207,64 @@ public class AdminServletManager extends BaseServletManager {
   static final String DEFAULT_INFRAME_CONTENT_TYPES =
           "text;image;application/pdf;application/xhtml+xml";
 
+  static final String OIOSAML_PREFIX = Configuration.PREFIX + "oiosaml.";
+
+  /**
+   * Default value of the OIOSAML operation configuration parameter.
+   * <p />
+   * <code>false</code> to disable, <code>true</code> to enable.
+   */
+  public static final String PARAM_OIOSAML_ENABLED =
+      OIOSAML_PREFIX + "enabled";
+  public static final boolean DEFAULT_OIOSAML_ENABLED = false;
+
+  /**
+   * OIOSAML home directory parent directory name.
+   * <p />
+   * Defaults to <code><i>daemon_tmpdir</i></code>.
+   */
+  public static final String PARAM_OIOSAML_HOMEDIR_PATH = OIOSAML_PREFIX
+      + "homeDirectoryPath";
+
+  /**
+   * Default value of the OIOSAML home directory configuration parameter.
+   */
+  public static final String DEFAULT_OIOSAML_HOMEDIR = "oiosaml";
+
+  /**
+   * Default full path of the name of the OIOSAML home directory configuration
+   * parameter.
+   */
+  public static final String DEFAULT_OIOSAML_HOMEDIR_PATH = "<tmpdir>/"
+      + DEFAULT_OIOSAML_HOMEDIR;
+
+  /**
+   * OIOSAML configuration file name.
+   * <p />
+   * Defaults to <code><i>oiosaml-sp.properties</i></code>.
+   */
+  public static final String PARAM_OIOSAML_CONFIG_FILE = OIOSAML_PREFIX
+      + "configFileName";
+
+  /**
+   * Default value of the OIOSAML configuration file name configuration
+   * parameter.
+   */
+  public static final String DEFAULT_OIOSAML_CONFIG_FILE =
+      SAMLUtil.OIOSAML_DEFAULT_CONFIGURATION_FILE;
+
+  /**
+   * OIOSAML protected URL mapping.
+   * <p />
+   * Defaults to <code><i>/*</i></code>.
+   */
+  public static final String PARAM_OIOSAML_PROTECTED_URLS = OIOSAML_PREFIX
+      + "protectedUrls";
+
+  /**
+   * Default value of the OIOSAML protected URL mapping configuration parameter.
+   */
+  public static final String DEFAULT_OIOSAML_PROTECTED_URLS = "/*";
 
   // Descriptors for all admin servlets.
 
@@ -538,6 +602,18 @@ public class AdminServletManager extends BaseServletManager {
 	  	       ServletDescr.NEED_ROLE_DEBUG,
 	  	       "Metadata Monitor");
 
+  protected static final ServletDescr SERVLET_OIOSAML =
+      new ServletDescr("SAMLDispatcherServlet",
+	  		DispatcherServlet.class,
+                       "OIOSAML Dispatcher Servlet",
+		       "saml/*",
+		       0,
+	               "OIOSAML") {
+	public boolean isEnabled(LockssDaemon daemon) {
+          return CurrentConfig.getBooleanParam(PARAM_OIOSAML_ENABLED,
+              DEFAULT_OIOSAML_ENABLED);
+	}};
+
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
   }
@@ -589,7 +665,8 @@ public class AdminServletManager extends BaseServletManager {
     LINK_LOGOUT,
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
-    SERVLET_MD_MONITOR
+    SERVLET_MD_MONITOR,
+    SERVLET_OIOSAML
   };
 
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
@@ -634,7 +711,8 @@ public class AdminServletManager extends BaseServletManager {
     LINK_LOGOUT,
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
-    SERVLET_MD_MONITOR
+    SERVLET_MD_MONITOR,
+    SERVLET_OIOSAML
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
   static final ServletDescr servletDescrsTransitional[] = {
@@ -678,7 +756,8 @@ public class AdminServletManager extends BaseServletManager {
     LINK_LOGOUT,
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
-    SERVLET_MD_MONITOR
+    SERVLET_MD_MONITOR,
+    SERVLET_OIOSAML
   };
 
   // XXXUI Show the transitional or new UI if param is enabled
@@ -714,6 +793,11 @@ public class AdminServletManager extends BaseServletManager {
   private boolean hasIsoFiles = false;
   private boolean compressorEnabled = DEFAULT_COMPRESSOR_ENABLED;
   private boolean exportEnabled = ExportContent.DEFAULT_ENABLE_EXPORT;
+  private boolean oiosamlEnabled = DEFAULT_OIOSAML_ENABLED;
+  private File oiosamlHomeDir = null;
+  private String oiosamlConfigFileName = DEFAULT_OIOSAML_CONFIG_FILE;
+  private String oiosamlProtectedUrls = null;
+
 
   public AdminServletManager() {
     super(SERVER_NAME);
@@ -721,6 +805,7 @@ public class AdminServletManager extends BaseServletManager {
 
   public void setConfig(Configuration config, Configuration prevConfig,
           Configuration.Differences changedKeys) {
+    final String DEBUG_HEADER = "setConfig(): ";
     super.setConfig(config, prevConfig, changedKeys);
     isodir = config.get(PARAM_ISODIR);
     logdir = config.get(PARAM_LOGDIR);
@@ -755,6 +840,34 @@ public class AdminServletManager extends BaseServletManager {
               DEFAULT_COMPRESSOR_ENABLED);
       exportEnabled = config.getBoolean(ExportContent.PARAM_ENABLE_EXPORT,
               ExportContent.DEFAULT_ENABLE_EXPORT);
+      oiosamlEnabled = config.getBoolean(PARAM_OIOSAML_ENABLED,
+          DEFAULT_OIOSAML_ENABLED);
+
+      if (oiosamlEnabled) {
+	// Specify the configured base directory for the OIOSAML home directory.
+	oiosamlHomeDir = new File(config.get(PARAM_OIOSAML_HOMEDIR_PATH,
+	    getDefaultTempRootDirectory()), DEFAULT_OIOSAML_HOMEDIR);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "oiosamHomeDir = '"
+	    + oiosamlHomeDir.getAbsolutePath() + "'.");
+
+	if (!oiosamlHomeDir.exists()) {
+	  boolean oiosamlHomeDirCreated = oiosamlHomeDir.mkdirs();
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "oiosamlHomeDirCreated = " + oiosamlHomeDirCreated);
+	}
+
+	oiosamlConfigFileName = config.get(PARAM_OIOSAML_CONFIG_FILE,
+	    DEFAULT_OIOSAML_CONFIG_FILE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "oiosamlConfigFileName = '" + oiosamlConfigFileName + "'.");
+
+	// Specify the URLs protected by OIOSAML.
+	oiosamlProtectedUrls = config.get(PARAM_OIOSAML_PROTECTED_URLS,
+	   DEFAULT_OIOSAML_PROTECTED_URLS);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "oiosamlProtectedUrls = '"
+	    + oiosamlProtectedUrls + "'.");
+      }
+
       if (changedKeys.contains(PARAM_INFRAME_CONTENT_TYPES)) {
         inFrameContentTypes = config.getList(PARAM_INFRAME_CONTENT_TYPES);
         if (inFrameContentTypes == null || inFrameContentTypes.isEmpty()) {
@@ -827,6 +940,8 @@ public class AdminServletManager extends BaseServletManager {
   }
 
   void setupAdminContext(HttpServer server) throws MalformedURLException {
+    final String DEBUG_HEADER = "setupAdminContext(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     HttpContext context = makeContext(server, "/");
 
     // add handlers in the order they should be tried.
@@ -845,6 +960,11 @@ public class AdminServletManager extends BaseServletManager {
     // (e.g., compression) around servlets.
     ContextListenerWebApplicationHandler handler = makeWebAppHandler(context);
     addCompressionFilter(handler);
+
+    // Initialize the OIOSAML system.
+    if (oiosamlEnabled) {
+      initializeOiosaml(handler);
+    }
 
     // Add the Spring context listener needed for CXF web services.
     handler.addEventListener(new ContextLoaderListener());
@@ -883,6 +1003,10 @@ public class AdminServletManager extends BaseServletManager {
 //     context.addHandler(new NotFoundHandler());
 
     //       context.addHandler(new DumpHandler());
+
+    if (log.isDebug3())
+      log.debug3("handler.getFilters() = " + handler.getFilters());
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   void addCompressionFilter(WebApplicationHandler handler) {
@@ -913,6 +1037,64 @@ public class AdminServletManager extends BaseServletManager {
 
       handler.addFilterPathMapping("/*", filterName, Dispatcher.__DEFAULT);
     }
+  }
+
+  private void initializeOiosaml(WebApplicationHandler handler) {
+    final String DEBUG_HEADER = "initializeOiosaml(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    try {
+      // The OIOSAML configuration file.
+      File configFile = new File(oiosamlHomeDir, oiosamlConfigFileName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "configFile = "
+	  + configFile.getAbsolutePath());
+
+      // Write the OIOSAML configuration file if it does not exist.
+      if (!configFile.exists()) {
+	FileOutputStream fos = null;
+
+	try {
+	  fos = new FileOutputStream(configFile);
+	  fos.write("# Properties used by OIOSAML\n".getBytes());
+	} finally {
+	  fos.close();
+	}
+      }
+
+      // Notify the OIOSAML system of the configuration file location.
+      // OIOSAML expects to receive this information via JNDI entries in the
+      // web.xml file. Unfortunately, the version of Jetty being used does not
+      // seem to be able to use JNDI properly, so we use the
+      // setInitConfiguration() method of FileConfiguration as a workaround.
+      Map<String, String> params = new HashMap<String, String>();
+      params.put(Constants.INIT_OIOSAML_FILE, configFile.getCanonicalPath());
+
+      ((FileConfiguration)SAMLConfigurationFactory.getConfiguration()).
+      setInitConfiguration(params);
+
+      // Add the OIOSAML filter.
+      addOiosamlFilter(handler);
+
+      // Add the OIOSAML context listener.
+      handler.addEventListener(new SessionDestroyListener());
+    } catch (Exception e) {
+      log.error("Exception caught initializing OIOSAML: ", e);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  private void addOiosamlFilter(WebApplicationHandler handler) {
+    final String DEBUG_HEADER = "addOiosamlFilter(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "oiosamlProtectedUrls = '"
+	+ oiosamlProtectedUrls + "'.");
+
+    String filterName = "OiosamlFilter";
+    handler.defineFilter(filterName, LockssOiosamlSpFilter.class.getName());
+    handler.addFilterPathMapping(oiosamlProtectedUrls, filterName,
+	Dispatcher.__DEFAULT);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
 //   void setupImageContext(HttpServer server) throws MalformedURLException {

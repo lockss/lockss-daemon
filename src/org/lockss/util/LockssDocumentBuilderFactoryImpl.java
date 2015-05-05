@@ -35,6 +35,7 @@ package org.lockss.util;
 import java.util.*;
 import java.lang.reflect.*;
 import javax.xml.parsers.*;
+import javax.xml.validation.Schema;
 import org.xml.sax.*;
 import org.lockss.util.*;
 
@@ -81,6 +82,11 @@ public class LockssDocumentBuilderFactoryImpl extends DocumentBuilderFactory {
   @Override
   public void setNamespaceAware(boolean awareness) {
     fact.setNamespaceAware(awareness);
+  }
+
+  @Override
+  public void setSchema(Schema schema) {
+    fact.setSchema(schema);
   }
 
   @Override

@@ -64,7 +64,8 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_EDIT_ACCOUNT,
     SERVLET_COUNTER_REPORTS,
     SERVLET_CXF_WEB_SERVICES,
-    SERVLET_MD_MONITOR
+    SERVLET_MD_MONITOR,
+    SERVLET_OIOSAML
   };
 
   ServletDescr userAdminDescrs[] = {
