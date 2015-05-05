@@ -3,7 +3,7 @@
   publisher <
     name = Liverpool University Press
   >
-  
+
   comment[moving] = from MetaPress to Atypon
   comment[param_journal_issn] = MetaPress param journal_issn is set to the journal's eISSN, not print ISSN
 
@@ -12,13 +12,15 @@
   implicit < status ; year ; name ; param[volume_name] >
 
   {
-  
+
     title <
       name = Australian Journal of French Studies ;
       issn = 0004-9468 ;
       eissn = 2046-2913 ;
-      issnl = 0004-9468 
+      issnl = 0004-9468
     >
+
+    param[journal_id] = ajfs
 
     au < doNotProcess ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 >
     au < doNotProcess ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 >
@@ -33,40 +35,64 @@
     au < exists ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
     au < expected ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
 
-    
   }
 
   {
-  
+
+    title <
+      name = Before Farming ;
+      issn = 1476-4253 ;
+      eissn = 2056-3264 ;
+      issnl = 1476-4253
+    >
+
+    param[journal_id] = bfarm
+
+    comment[continued_by] = Hunter Gatherer Research
+
+    au < exists ; 2002 ; Before Farming Volume 2002 ; 2002 >
+    au < exists ; 2003 ; Before Farming Volume 2003 ; 2003 >
+    au < exists ; 2004 ; Before Farming Volume 2004 ; 2004 >
+    au < exists ; 2005 ; Before Farming Volume 2005 ; 2005 >
+    au < exists ; 2006 ; Before Farming Volume 2006 ; 2006 >
+    au < exists ; 2007 ; Before Farming Volume 2007 ; 2007 >
+    au < exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
+    au < exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
+    au < exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
+
+  }
+
+  {
+
     title <
       name = British Journal of Canadian Studies ;
       issn = 0269-9222 ;
       eissn = 1757-8078 ;
-      issnl = 0269-9222 
+      issnl = 0269-9222
     >
-    
-    {
-    
-      au < doNotProcess ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
-      au < doNotProcess ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
-      au < doNotProcess ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 >
-      au < doNotProcess ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 >
-      au < doNotProcess ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
-      au < doNotProcess ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
-      au < doNotProcess ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
-      au < doNotProcess ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >
-      au < doNotProcess ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
-      au < doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
-      au < exists ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
-      au < exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
-      au < expected ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
-    
-    }
-    
+
+    param[journal_id] = bjcs
+
+    au < doNotProcess ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
+    au < doNotProcess ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
+    au < doNotProcess ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 >
+    au < doNotProcess ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 >
+    au < doNotProcess ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
+    au < doNotProcess ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
+    au < doNotProcess ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
+    au < doNotProcess ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >
+    au < doNotProcess ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
+    au < doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
+    au < exists ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
+    au < exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
+    au < expected ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
+
   }
 
   {
-  
+
     title <
       name = Bulletin of Hispanic Studies ;
       issn = 1475-3839 ;
@@ -74,45 +100,43 @@
       issnl = 1475-3839
     >
 
-    {
-     
-      au < doNotProcess ; 1985 ; Bulletin of Hispanic Studies Volume 62 ; 62 >
-      au < doNotProcess ; 1986 ; Bulletin of Hispanic Studies Volume 63 ; 63 >
-      au < doNotProcess ; 1987 ; Bulletin of Hispanic Studies Volume 64 ; 64 >
-      au < doNotProcess ; 1988 ; Bulletin of Hispanic Studies Volume 65 ; 65 >
-      au < doNotProcess ; 1989 ; Bulletin of Hispanic Studies Volume 66 ; 66 >
-      au < doNotProcess ; 1990 ; Bulletin of Hispanic Studies Volume 67 ; 67 >
-      au < doNotProcess ; 1991 ; Bulletin of Hispanic Studies Volume 68 ; 68 >
-      au < doNotProcess ; 1992 ; Bulletin of Hispanic Studies Volume 69 ; 69 >
-      au < doNotProcess ; 1993 ; Bulletin of Hispanic Studies Volume 70 ; 70 >
-      au < doNotProcess ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
-      au < doNotProcess ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
-      au < doNotProcess ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 >
-      au < doNotProcess ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 >
-      au < doNotProcess ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
-      au < doNotProcess ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
-      au < exists ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
-      au < exists ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
-      au < doNotProcess ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
-      au < doNotProcess ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
-      au < doNotProcess ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
-      au < doNotProcess ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 >
-      au < doNotProcess ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 >
-      au < doNotProcess ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 >
-      au < doNotProcess ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
-      au < doNotProcess ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
-      au < doNotProcess ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
-      au < doNotProcess ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
-      au < doNotProcess ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
-      au < exists ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
-      au < exists ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 >
-   
-    }
+    param[journal_id] = bhs
+
+    au < doNotProcess ; 1985 ; Bulletin of Hispanic Studies Volume 62 ; 62 >
+    au < doNotProcess ; 1986 ; Bulletin of Hispanic Studies Volume 63 ; 63 >
+    au < doNotProcess ; 1987 ; Bulletin of Hispanic Studies Volume 64 ; 64 >
+    au < doNotProcess ; 1988 ; Bulletin of Hispanic Studies Volume 65 ; 65 >
+    au < doNotProcess ; 1989 ; Bulletin of Hispanic Studies Volume 66 ; 66 >
+    au < doNotProcess ; 1990 ; Bulletin of Hispanic Studies Volume 67 ; 67 >
+    au < doNotProcess ; 1991 ; Bulletin of Hispanic Studies Volume 68 ; 68 >
+    au < doNotProcess ; 1992 ; Bulletin of Hispanic Studies Volume 69 ; 69 >
+    au < doNotProcess ; 1993 ; Bulletin of Hispanic Studies Volume 70 ; 70 >
+    au < doNotProcess ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
+    au < doNotProcess ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
+    au < doNotProcess ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 >
+    au < doNotProcess ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 >
+    au < doNotProcess ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
+    au < doNotProcess ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
+    au < exists ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
+    au < exists ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
+    au < doNotProcess ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
+    au < doNotProcess ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
+    au < doNotProcess ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
+    au < doNotProcess ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 >
+    au < doNotProcess ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 >
+    au < doNotProcess ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 >
+    au < doNotProcess ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
+    au < doNotProcess ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
+    au < doNotProcess ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
+    au < doNotProcess ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
+    au < doNotProcess ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
+    au < exists ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
+    au < exists ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 >
 
   }
 
   {
-  
+
     title <
       name = The Byron Journal ;
       issn = 0301-7257 ;
@@ -120,33 +144,33 @@
       issnl = 0301-7257
     >
 
-    {
-    
-      au < doNotProcess ; 2004 ; The Byron Journal Volume 32 ; 32 >
-      au < doNotProcess ; 2005 ; The Byron Journal Volume 33 ; 33 >
-      au < doNotProcess ; 2006 ; The Byron Journal Volume 34 ; 34 >
-      au < doNotProcess ; 2007 ; The Byron Journal Volume 35 ; 35 >
-      au < doNotProcess ; 2008 ; The Byron Journal Volume 36 ; 36 >
-      au < doNotProcess ; 2009 ; The Byron Journal Volume 37 ; 37 >
-      au < doNotProcess ; 2010 ; The Byron Journal Volume 38 ; 38 >
-      au < doNotProcess ; 2011 ; The Byron Journal Volume 39 ; 39 >
-      au < doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 >
-      au < exists ; 2013 ; The Byron Journal Volume 41 ; 41 >
-      au < exists ; 2014 ; The Byron Journal Volume 42 ; 42 >
+    param[journal_id] = bj
 
-    }
+    au < doNotProcess ; 2004 ; The Byron Journal Volume 32 ; 32 >
+    au < doNotProcess ; 2005 ; The Byron Journal Volume 33 ; 33 >
+    au < doNotProcess ; 2006 ; The Byron Journal Volume 34 ; 34 >
+    au < doNotProcess ; 2007 ; The Byron Journal Volume 35 ; 35 >
+    au < doNotProcess ; 2008 ; The Byron Journal Volume 36 ; 36 >
+    au < doNotProcess ; 2009 ; The Byron Journal Volume 37 ; 37 >
+    au < doNotProcess ; 2010 ; The Byron Journal Volume 38 ; 38 >
+    au < doNotProcess ; 2011 ; The Byron Journal Volume 39 ; 39 >
+    au < doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 >
+    au < exists ; 2013 ; The Byron Journal Volume 41 ; 41 >
+    au < exists ; 2014 ; The Byron Journal Volume 42 ; 42 >
 
   }
 
   {
-  
+
     title <
       name = Comma ;
-      issn = 1680-1865 ; 
+      issn = 1680-1865 ;
       eissn = 2049-3355 ;
       issnl = 1680-1865
     >
-    
+
+    param[journal_id] = coma
+
     au < doNotProcess ; 2004 ; Comma Volume 2004 ; 2004 >
     au < doNotProcess ; 2005 ; Comma Volume 2005 ; 2005 >
     au < doNotProcess ; 2006 ; Comma Volume 2006 ; 2006 >
@@ -155,16 +179,19 @@
     au < doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Comma Volume 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Comma Volume 2011 ; 2011 >
-    
+
   }
-  
+
   {
-  
+
     title <
       name = Contemporary French Civilization ;
-      issn = 0147-9156 ; 
+      issn = 0147-9156 ;
+      eissn = 2044-396X ;
       issnl = 0147-9156
     >
+
+    param[journal_id] = cfc
 
     au < doNotProcess ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
     au < doNotProcess ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
@@ -180,30 +207,55 @@
     au < expected ; 2014 ; Contemporary French Civilization Volume 40 ; 40 >
     au < expected ; 2014 ; Contemporary French Civilization Volume 41 ; 41 >
 
-  }  
-  
-#  {
-#  
-#    title <
-#      name = European Comic Art ;
-#      issn = 1754-3797 ;
-#      eissn = 1754-3800 ; 
-#      issnl = 1754-3797 
-#    >
-#
-#    # This publication moved from Liverpool University to Berghahn Journals
-#
-#  }  
-  
+  }
+
+  {
+
+    title <
+      name = Essays in Romanticism ;
+      issn = 2049-6699 ;
+      eissn = 2049-6702 ;
+      issnl = 2049-6699
+    >
+
+    param[journal_id] = eir
+
+    au < exists ; 1993 ; Essays in Romanticism Volume 1 ; 1 >
+    au < exists ; 1994 ; Essays in Romanticism Volume 2 ; 2 >
+    au < exists ; 1995 ; Essays in Romanticism Volume 3 ; 3 >
+    au < exists ; 1996 ; Essays in Romanticism Volume 4 ; 4 >
+    au < exists ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
+    au < exists ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
+    au < exists ; 1999 ; Essays in Romanticism Volume 7 ; 7 >
+    au < exists ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
+    au < exists ; 2001 ; Essays in Romanticism Volume 9 ; 9 >
+    au < exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 >
+    au < exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 >
+    au < exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 >
+    au < exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
+    au < exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
+    au < exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
+    au < exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
+    au < exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
+    au < exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
+    au < exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
+    au < exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
+
+  }
+
   {
 
     title <
       name = European Journal of Language Policy / Revue européenne de politique linguistique ;
       issn = 1757-6822 ;
-      eissn = 1757-6830 ;  
+      eissn = 1757-6830 ;
       issnl = 1757-6822
     >
- 
+
+    param[journal_id] = ejlp
+
     au < doNotProcess ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
@@ -214,7 +266,7 @@
   }
 
   {
-  
+
     title <
       name = Extrapolation ;
       issn = 0014-5483 ;
@@ -222,14 +274,73 @@
       issnl = 0014-5483
     >
 
-    {
-    
-      au < doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
-      au < doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
-      au < exists ; 2013 ; Extrapolation Volume 54 ; 54 >
-      au < exists ; 2014 ; Extrapolation Volume 55 ; 55 >
+    param[journal_id] = extr
 
-    }
+    au < doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
+    au < doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
+    au < exists ; 2013 ; Extrapolation Volume 54 ; 54 >
+    au < exists ; 2014 ; Extrapolation Volume 55 ; 55 >
+
+  }
+
+  {
+
+    title <
+      name = Francosphères ;
+      issn = 2046-3820 ;
+      eissn = 2046-3839 ;
+      issnl = 2046-3820
+    >
+
+    param[journal_id] = franc
+
+    au < exists ; 2012 ; Francosphères Volume 1 ; 1 >
+    au < exists ; 2013 ; Francosphères Volume 2 ; 2 >
+    au < exists ; 2014 ; Francosphères Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Historical Studies in Industrial Relations ;
+      issn = 1362-1572 ;
+      eissn = 2049-4459 ;
+      issnl = 1362-1572
+    >
+
+    param[journal_id] = hsir
+
+    au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
+    au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
+    au < exists ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 >
+    au < exists ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 >
+    au < exists ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 >
+    au < exists ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 >
+    au < exists ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
+    au < exists ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
+    au < exists ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 >
+    au < exists ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
+    au < exists ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 >
+    au < exists ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 >
+    au < exists ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 >
+    au < exists ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 >
+    au < exists ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 >
+    au < exists ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 >
+    au < exists ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 >
+    au < exists ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 >
+    au < exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 >
+    au < exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 >
+    au < exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 >
+    au < exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 >
+    au < exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 >
+    au < exists ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 >
+    au < exists ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 >
+    au < exists ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 >
+    au < exists ; 2011 ; Historical Studies in Industrial Relations Volume 31-32 ; 31-32 >
+    au < exists ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 >
+    au < exists ; 2013 ; Historical Studies in Industrial Relations Volume 34 ; 34 >
+    au < exists ; 2014 ; Historical Studies in Industrial Relations Volume 35 ; 35 >
 
   }
 
@@ -238,10 +349,12 @@
     title <
       name = International Development Planning Review ;
       issn = 1474-6743 ;
-      eissn = 1478-3401 ;  
+      eissn = 1478-3401 ;
       issnl = 1474-6743
     >
-    
+
+    param[journal_id] = idpr
+
     au < doNotProcess ; 2002 ; International Development Planning Review Volume 24 ; 24 >
     au < doNotProcess ; 2003 ; International Development Planning Review Volume 25 ; 25 >
     au < doNotProcess ; 2004 ; International Development Planning Review Volume 26 ; 26 >
@@ -257,9 +370,23 @@
     au < exists ; 2014 ; International Development Planning Review Volume 36 ; 36 >
 
   }
-    
+
   {
-  
+
+    title <
+      name = Hunter Gatherer Research ;
+      eissn = 1476-4261 ;
+      issnl = 1476-4261
+    >
+
+    param[journal_id] = hgr
+
+    au < expected ; 2015 ; Francosphères Volume 1 ; 1 >
+
+  }
+
+  {
+
     title <
       name = Journal of Literary & Cultural Disability Studies ;
       issn = 1757-6458 ;
@@ -268,15 +395,17 @@
     >
 
     {
-    
-      au < doNotProcess ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
-      au < doNotProcess ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
-      au < doNotProcess ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
-      au < doNotProcess ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
-      au < doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
-      au < doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
-      au < exists ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
-      au < exists ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
+
+    param[journal_id] = jlcds
+
+    au < doNotProcess ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
+    au < doNotProcess ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
+    au < doNotProcess ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
+    au < doNotProcess ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
+    au < doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+    au < doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
+    au < exists ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
+    au < exists ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
 
     }
 
@@ -290,7 +419,9 @@
       eissn = 1745-8188 ;
       issnl = 0961-5652
     >
-    
+
+    param[journal_id] = lhr
+
     au < doNotProcess ; 2005 ; Labour History Review Volume 70 [MetaPress] ; 70 >
     au < doNotProcess ; 2006 ; Labour History Review Volume 71 [MetaPress] ; 71 >
     au < doNotProcess ; 2007 ; Labour History Review Volume 72 [MetaPress] ; 72 >
@@ -305,21 +436,27 @@
   }
 
   {
-  
+
     title <
-      name = Modern Languages Open 
+      name = Modern Believing ;
+      issn = 1353-1425 ;
+      eissn = 2053-633X ;
+      issnl = 1353-1425
     >
 
-    {
-    
-    au < ready ; 2014 ; Modern Languages Open Volume 1 ; 1 >
-    au < expected ; 2015 ; Modern Languages Open Volume 2 ; 2 >
-    
-    }
+    param[journal_id] = mb
+
+    au < exists ; 2010 ; Modern Believing Volume 51 ; 51 >
+    au < exists ; 2011 ; Modern Believing Volume 52 ; 52 >
+    au < exists ; 2012 ; Modern Believing Volume 53 ; 53 >
+    au < exists ; 2013 ; Modern Believing Volume 54 ; 54 >
+    au < exists ; 2014 ; Modern Believing Volume 55 ; 55 >
+    au < exists ; 2015 ; Modern Believing Volume 56 ; 56 >
+
   }
 
   {
-  
+
     title <
       name = Music, Sound, and the Moving Image ;
       issn = 1753-0768 ;
@@ -327,68 +464,60 @@
       issnl = 1753-0768
     >
 
-    {
-     
-      au < doNotProcess ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
-      au < doNotProcess ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-      au < doNotProcess ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
-      au < doNotProcess ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
-      au < doNotProcess ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
-      au < doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
-      au < exists ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
-      au < exists ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
+    au < doNotProcess ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
+    au < doNotProcess ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
+    au < doNotProcess ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
+    au < doNotProcess ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
+    au < doNotProcess ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+    au < doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
+    au < exists ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
+    au < exists ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
 
-    }
-    
   }
 
   {
-  
+
     title <
       name = Popular Narrative Media ;
       issn = 1754-3819 ;
-      eissn = 1754-3827 ;  
+      eissn = 1754-3827 ;
       issnl = 1754-3819
     >
-    
+
     au < doNotProcess ; 2008 ; Popular Narrative Media Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
 
   }
 
   {
-  
+
     title <
       name = Romani Studies ;
       issn = 1528-0748 ;
       eissn = 1757-2274 ;
       issnl = 1528-0748
     >
-    
-    {
-         
-      au < exists ; 2000 ; Romani Studies Volume 10 ; 10 >
-      au < exists ; 2001 ; Romani Studies Volume 11 ; 11 >
-      au < doNotProcess ; 2002 ; Romani Studies Volume 12 ; 12 >
-      au < doNotProcess ; 2003 ; Romani Studies Volume 13 ; 13 >
-      au < doNotProcess ; 2004 ; Romani Studies Volume 14 ; 14 >
-      au < doNotProcess ; 2005 ; Romani Studies Volume 15 ; 15 >
-      au < doNotProcess ; 2006 ; Romani Studies Volume 16 ; 16 >
-      au < doNotProcess ; 2007 ; Romani Studies Volume 17 ; 17 >
-      au < doNotProcess ; 2008 ; Romani Studies Volume 18 ; 18 >
-      au < doNotProcess ; 2009 ; Romani Studies Volume 19 ; 19 >
-      au < doNotProcess ; 2010 ; Romani Studies Volume 20 ; 20 >
-      au < doNotProcess ; 2011 ; Romani Studies Volume 21 ; 21 >
-      au < doNotProcess ; 2012 ; Romani Studies Volume 22 ; 22 >
-      au < exists ; 2013 ; Romani Studies Volume 23 ; 23 >
-      au < exists ; 2014 ; Romani Studies Volume 24 ; 24 >
 
-    }
-    
+    au < exists ; 2000 ; Romani Studies Volume 10 ; 10 >
+    au < exists ; 2001 ; Romani Studies Volume 11 ; 11 >
+    au < doNotProcess ; 2002 ; Romani Studies Volume 12 ; 12 >
+    au < doNotProcess ; 2003 ; Romani Studies Volume 13 ; 13 >
+    au < doNotProcess ; 2004 ; Romani Studies Volume 14 ; 14 >
+    au < doNotProcess ; 2005 ; Romani Studies Volume 15 ; 15 >
+    au < doNotProcess ; 2006 ; Romani Studies Volume 16 ; 16 >
+    au < doNotProcess ; 2007 ; Romani Studies Volume 17 ; 17 >
+    au < doNotProcess ; 2008 ; Romani Studies Volume 18 ; 18 >
+    au < doNotProcess ; 2009 ; Romani Studies Volume 19 ; 19 >
+    au < doNotProcess ; 2010 ; Romani Studies Volume 20 ; 20 >
+    au < doNotProcess ; 2011 ; Romani Studies Volume 21 ; 21 >
+    au < doNotProcess ; 2012 ; Romani Studies Volume 22 ; 22 >
+    au < exists ; 2013 ; Romani Studies Volume 23 ; 23 >
+    au < exists ; 2014 ; Romani Studies Volume 24 ; 24 >
+
   }
 
   {
-  
+
     title <
       name = Science Fiction Film and Television ;
       issn = 1754-3770 ;
@@ -396,48 +525,44 @@
       issnl = 1754-3770
     >
 
-    {
-    
-      au < doNotProcess ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
-      au < doNotProcess ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
-      au < doNotProcess ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
-      au < doNotProcess ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
-      au < doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
-      au < exists ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
-      au < exists ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
-
-    }        
+    au < doNotProcess ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
+    au < doNotProcess ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
+    au < doNotProcess ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
+    au < doNotProcess ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
+    au < doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
+    au < exists ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
+    au < exists ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
 
   }
 
   {
-  
+
     title <
       name = Sculpture Journal ;
       issn = 1366-2724 ;
-      eissn = 1756-9923 ;  
+      eissn = 1756-9923 ;
       issnl = 1366-2724
     >
-    
+
     au < doNotProcess ; 2005 ; Sculpture Journal Volume 13 ; 13 >
     au < doNotProcess ; 2005 ; Sculpture Journal Volume 14 ; 14 >
     au < doNotProcess ; 2006 ; Sculpture Journal Volume 15 ; 15 >
     au < doNotProcess ; 2007 ; Sculpture Journal Volume 16 ; 16 >
     au < doNotProcess ; 2008 ; Sculpture Journal Volume 17 ; 17 >
     au < doNotProcess ; 2009 ; Sculpture Journal Volume 18 ; 18 >
-    au < doNotProcess ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
+    au < doNotProcess ; 2010 ; Sculpture Journal Volume 19 ; 19 >
     au < doNotProcess ; 2011 ; Sculpture Journal Volume 20 ; 20 >
     au < doNotProcess ; 2012 ; Sculpture Journal Volume 21 ; 21 >
     au < exists ; 2013 ; Sculpture Journal Volume 22 ; 22 >
     au < exists ; 2014 ; Sculpture Journal Volume 23 ; 23 >
 
   }
-  
+
   {
-  
+
     title <
       name = Third World Planning Review ;
-      issn = 0142-7849 ; 
+      issn = 0142-7849 ;
       issnl = 0142-7849
     >
 
@@ -451,13 +576,13 @@
     au < doNotProcess ; 2000 ; Third World Planning Review Volume 22 ; 22 >
 
   }
-  
+
   {
-  
+
     title <
       name = Town Planning Review ;
       issn = 0041-0020 ;
-      eissn = 1478-341X ; 
+      eissn = 1478-341X ;
       issnl = 0041-0020
     >
 
