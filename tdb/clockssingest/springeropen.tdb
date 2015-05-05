@@ -778,7 +778,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Information Security Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Information Security Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Information Security Volume 2015 ; 2015 >
   
@@ -799,7 +799,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Wireless Communications and Networking Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 ; 2015 >
   
@@ -818,7 +818,7 @@
         param[journal_issn] = 1936-6434 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 >
+        au < testing ; exists ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 >
         au < manifest ; exists ; 2014 ; Evolution: Education and Outreach Volume 7 ; 7 >
         au < manifest ; exists ; 2015 ; Evolution: Education and Outreach Volume 8 ; 8 >
   
@@ -836,7 +836,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Fire Science Reviews Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; Fire Science Reviews Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; Fire Science Reviews Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Fire Science Reviews Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Fire Science Reviews Volume 4 ; 4 >
   
@@ -864,7 +864,7 @@
         au < manifest ; exists ; 2010 ; Fixed Point Theory and Applications Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; Fixed Point Theory and Applications Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; Fixed Point Theory and Applications Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; Fixed Point Theory and Applications Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; Fixed Point Theory and Applications Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; Fixed Point Theory and Applications Volume 2015 ; 2015 >
   
@@ -929,7 +929,7 @@
         param[journal_issn] = 2195-9706 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Geothermal Energy Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Geothermal Energy Volume 3 ; 3 >
   
@@ -946,7 +946,7 @@
         param[journal_issn] = 2194-7899 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Health and Justice Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; Health and Justice Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Health and Justice Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Health and Justice Volume 3 ; 3 >
   
@@ -965,7 +965,7 @@
   
         au < manifest ; exists ; 2011 ; Health Economics Review Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Health Economics Review Volume 2 ; 2 >
-        au < manifest ; exists ; 2013 ; Health Economics Review Volume 3 ; 3 >
+        au < testing ; exists ; 2013 ; Health Economics Review Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Health Economics Review Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Health Economics Review Volume 5 ; 5 >
   
@@ -985,7 +985,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 >
-        au < manifest ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 >
+        au < testing ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 >
         au < manifest ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 >
         au < expected ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 >
   
@@ -1004,7 +1004,7 @@
   
         au < manifest ; exists ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 >
-        au < manifest ; exists ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 >
+        au < testing ; exists ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Human-centric Computing and Information Sciences Volume 5 ; 5 >
   
