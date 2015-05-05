@@ -1,0 +1,86 @@
+Index: src/dk/itst/oiosaml/sp/model/OIOAssertion.java
+===================================================================
+--- src/dk/itst/oiosaml/sp/model/OIOAssertion.java	2013-10-03 11:32:36.000000000 -1000
++++ src/dk/itst/oiosaml/sp/model/OIOAssertion.java	2015-05-04 11:59:44.947466948 -1000
+@@ -215,7 +215,7 @@
+     	
+     	log.debug("Using validator: " + validator);
+     	if (validator != null) {
+-    		validator.validate(this, spEntityID, spAssertionConsumerURL);
++    	// TODO - LOCKSS - Original Line: validator.validate(this, spEntityID, spAssertionConsumerURL);
+     	}
+     }
+ 
+Index: src/dk/itst/oiosaml/sp/model/OIOResponse.java
+===================================================================
+--- src/dk/itst/oiosaml/sp/model/OIOResponse.java	2013-10-03 11:32:36.000000000 -1000
++++ src/dk/itst/oiosaml/sp/model/OIOResponse.java	2015-05-04 11:59:58.271466390 -1000
+@@ -105,7 +105,8 @@
+ 				}
+ 			}
+ 			if (!valid) {
+-				throw new ValidationException("The response is not signed correctly");
++			  // TODO - LOCKSS - Original Line: throw new ValidationException("The response is not signed correctly");
++			  log.warn("The response is not signed correctly");
+ 			}
+ 		} else {
+ 			if (!response.getAssertions().isEmpty()) {
+Index: src/dk/itst/oiosaml/sp/UserAssertionImpl.java
+===================================================================
+--- src/dk/itst/oiosaml/sp/UserAssertionImpl.java	2009-02-06 12:55:06.000000000 -1000
++++ src/dk/itst/oiosaml/sp/UserAssertionImpl.java	2015-05-04 12:01:20.167462967 -1000
+@@ -36,14 +36,19 @@
+ import org.joda.time.DateTime;
+ import org.opensaml.saml2.core.Attribute;
+ import org.opensaml.saml2.core.AttributeStatement;
++import org.opensaml.saml2.core.NameID;
+ 
+ import dk.itst.oiosaml.common.OIOSAMLConstants;
++import dk.itst.oiosaml.logging.Logger;
++import dk.itst.oiosaml.logging.LoggerFactory;
+ import dk.itst.oiosaml.security.SecurityHelper;
+ import dk.itst.oiosaml.sp.model.OIOAssertion;
+ import dk.itst.oiosaml.sp.util.AttributeUtil;
+ 
+ public class UserAssertionImpl implements UserAssertion, Serializable {
+-	
++	// TODO - LOCKSS
++	private static final Logger log = LoggerFactory.getLogger(UserAssertionImpl.class);
++
+ 	private Map<String, UserAttribute> attributes = new HashMap<String, UserAttribute>();
+ 	private Date issueTime;
+ 	private String issuer;
+@@ -75,8 +80,31 @@
+ 			}
+ 		}
+ 		if (assertion.getAssertion().getSubject() != null) {
+-			nameIDFormat = NameIDFormat.getNameID(assertion.getAssertion().getSubject().getNameID().getFormat());
+-			nameID = assertion.getAssertion().getSubject().getNameID().getValue();
++		  // TODO - LOCKSS Begin
++		  NameID nameId =
++		      assertion.getAssertion().getSubject().getNameID();
++
++		  if (nameId != null) {
++		    nameIDFormat = NameIDFormat.getNameID(nameId.getFormat());
++		    nameID = nameId.getValue();
++		  } else {
++		    for (String key : attributes.keySet()) {
++		      try {
++			UserAttribute attribute = attributes.get(key);
++			nameID = attribute.getValue();
++			nameIDFormat =
++			    NameIDFormat.getNameID(attribute.getFormat());
++			break;
++		      } catch (Exception e) {
++			log.warn(e);
++			nameIDFormat = NameIDFormat.UNSPECIFIED;
++		      }
++		    }
++		  }
++
++		  log.debug("nameID = " + nameID);
++		  log.debug("nameIDFormat = " + nameIDFormat);
++		  // TODO - LOCKSS End
+ 		}
+ 		signed = assertion.getAssertion().getSignature() != null;
+ 		try {

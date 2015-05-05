@@ -225,7 +225,7 @@ Args:
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
-  <property name="xerces.jar"     value="${lib}/xercesImpl-2.7.1.jar"/>
+  <property name="xerces.jar"     value="${lib}/xerces-xercesImpl.jar"/>
   <property name="xml-apis.jar"   value="${lib}/xml-apis.jar"/>
   <property name="jimi.jar"       value="${lib}/JimiProClasses.jar"/>
   <property name="jetty.jar"      value="${lib}/jetty-5.1.5L.jar"/>
@@ -418,6 +418,35 @@ Args:
   <property name="JoSQL.jar" value="${lib}/JoSQL-2.2.jar" />
   <property name="gentlyWEB-utils.jar" value="${lib}/gentlyWEB-utils-1.1.jar" />
 
+  <!-- Needed by OIOSAML -->
+  <property name="commons-digester-commons-digester.jar"
+    value="${lib}/commons-digester-commons-digester.jar" />
+  <property name="commons-fileupload-commons-fileupload.jar"
+  	value="${lib}/commons-fileupload-commons-fileupload.jar" />
+  <property name="esapi-2.0GA.jar" value="${lib}/esapi-2.0GA.jar" />
+  <property name="joda-time-joda-time.jar"
+  	value="${lib}/joda-time-joda-time.jar" />
+  <property name="not-yet-commons-ssl-0.3.9.jar"
+  	value="${lib}/not-yet-commons-ssl-0.3.9.jar" />
+  <property name="oiosaml.java-21188-PATCHED.jar"
+  	value="${lib}/oiosaml.java-21188-PATCHED.jar" />
+  <property name="opensaml-2.5.1.jar" value="${lib}/opensaml-2.5.1.jar" />
+  <property name="openws-1.4.2.jar" value="${lib}/openws-1.4.2.jar" />
+  <property name="org.apache.santuario-xmlsec.jar"
+    value="${lib}/org.apache.santuario-xmlsec.jar" />
+  <property name="org.bouncycastle-pkix.jar"
+    value="${lib}/org.bouncycastle-bcpkix-jdk15on.jar" />
+  <property name="org.fishwife-jrugged-core.jar"
+    value="${lib}/org.fishwife-jrugged-core.jar" />
+  <property name="org.slf4j-slf4j-api.jar"
+  	value="${lib}/org.slf4j-slf4j-api.jar" />
+  <property name="org.slf4j-slf4j-log4j12.jar"
+  	value="${lib}/org.slf4j-slf4j-log4j12.jar" />
+  <property name="xml-resolver-xml-resolver.jar"
+    value="${lib}/xml-resolver-xml-resolver.jar" />
+  <property name="xalan-serializer.jar" value="${lib}/xalan-serializer.jar" />
+  <property name="xmltooling-1.3.2.jar" value="${lib}/xmltooling-1.3.2.jar" />
+
   <property name="empty.db.parent.dir" value="${tmpdir}" />
   <property name="empty.db.dir" value="${empty.db.parent.dir}/db" />
   <property name="empty.db.archive"
@@ -549,6 +578,23 @@ Args:
     <pathelement path="${stax2-api.jar}" />
     <pathelement path="${test-support.jar}" />
     <pathelement path="${httpclient.jar}" />
+    <!-- Needed by OIOSAML -->
+    <pathelement path="${commons-digester-commons-digester.jar}" />
+    <pathelement path="${commons-fileupload-commons-fileupload.jar}" />
+    <pathelement path="${esapi-2.0GA.jar}" />
+    <pathelement path="${joda-time-joda-time.jar}" />
+    <pathelement path="${not-yet-commons-ssl-0.3.9.jar}" />
+    <pathelement path="${oiosaml.java-21188-PATCHED.jar}" />
+    <pathelement path="${opensaml-2.5.1.jar}" />
+    <pathelement path="${openws-1.4.2.jar}" />
+    <pathelement path="${org.apache.santuario-xmlsec.jar}" />
+    <pathelement path="${org.bouncycastle-pkix.jar}" />
+    <pathelement path="${org.fishwife-jrugged-core.jar}" />
+  	<pathelement path="${org.slf4j-slf4j-api.jar}" />
+    <pathelement path="${org.slf4j-slf4j-log4j12.jar}" />
+    <pathelement path="${xalan-serializer.jar}" />
+    <pathelement path="${xml-resolver-xml-resolver.jar}" />
+    <pathelement path="${xmltooling-1.3.2.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -1056,6 +1102,7 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="i18n.properties"/> <!-- gettext-commons config -->
           <include name="DefaultBundle.properties"/> <!-- default resource bundle -->
           <include name="org/lockss/htdocs/**/*"/>
+          <include name="oiosaml.tar" /> <!-- OIOSAML (Shibboleth) support -->
 	  <include name="**/errorpagetemplate.html"/>
 	  <include name="**/urlrewriter.js"/> <!-- IA/WERA javascript -->
        </fileset>
