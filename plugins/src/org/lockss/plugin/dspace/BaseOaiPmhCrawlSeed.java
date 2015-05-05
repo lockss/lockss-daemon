@@ -65,7 +65,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   public static final String DATETIME_FORMAT = "yyyy-MM-dd'T'hh:mm:ss";
   public static final String KEY_AU_OAI_FROM_DATE = "oai_from_date";
   public static final String KEY_AU_OAI_UNTIL_DATE = "oai_until_date";
-  public static final String KEY_AU_OAI_SET = "oai_set";
+  public static final String KEY_AU_OAI_SET = "au_oai_set";
   public static final String KEY_AU_OAI_URL_POSTFIX = "oai_url_postfix";
   public static final String KEY_AU_OAI_METADATA_PREFIX = "oai_metadata_prefix";
   public static final String KEY_AU_OAI_GRANULARITY = "oai_granularity";
@@ -87,6 +87,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected boolean usesDateRange = true;
   protected boolean usesSet = true;
   protected CrawlerFacade facade;
+  protected Collection<String> permUrls = new ArrayList<String>();
   
   public BaseOaiPmhCrawlSeed(CrawlerFacade cf) {
     super(cf);

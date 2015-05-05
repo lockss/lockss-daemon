@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"DSpace Plugin, Base URL %s, OAI Set %s, Year %d", base_url, oai_set, year</string>
+    <string>"DSpace Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -41,6 +41,13 @@
     </list>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sxmlui/handle/[0-9]+/[0-9]+$", base_url</string>
+      <string>"^%s/handle/[0-9]+/[0-9]+", base_url</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -53,24 +60,28 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>oai_set</key>
+        <key>au_oai_set</key>
         <displayName>OAI Set</displayName>
-        <description>OAI PMH set of this AU</description>
+        <description>OAI PMH set of this AU. [NONE] if you would like to include all sets</description>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
+        <key>au_oai_date</key>
+        <displayName>OAI Date</displayName>
+        <description>Rules to filter records based upon metadata</description>
+        <type>1</type>
+        <size>128</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.dspace.DSpaceCrawlSeedFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
@@ -79,9 +90,5 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.dspace.DSpaceHtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.dspace.DSpaceCrawlSeedFactory</string>
   </entry>
 </map>

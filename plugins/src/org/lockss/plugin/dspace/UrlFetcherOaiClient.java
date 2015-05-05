@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.BitSet;
 
+import org.lockss.crawler.CrawlUrlData;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlFetcher;
@@ -55,7 +56,7 @@ public class UrlFetcherOaiClient implements OAIClient {
   
   @Override
   public InputStream execute(Parameters parameters) throws HttpException {
-    UrlFetcher uf = facade.makeUrlFetcher(parameters.toUrl(baseUrl));
+    UrlFetcher uf = facade.makeUrlFetcher(baseUrl);
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(permFetchFlags);
