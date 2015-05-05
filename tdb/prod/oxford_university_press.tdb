@@ -4785,11 +4785,10 @@
    >
 
     param[base_url] = http://dsh.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2014 ; Digital Scholarship in the Humanities Volume 1 ; 1 >
-    au < expected ; 2015 ; Digital Scholarship in the Humanities Volume 2 ; 2 >
+    au < expected ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 >
 
   }
 
