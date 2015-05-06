@@ -886,10 +886,10 @@
     param[base_url] = http://eolj.bmj.com/
     comment[continues] = 1754-1069
 
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; End of Life Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; End of Life Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; End of Life Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; End of Life Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; End of Life Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; End of Life Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; End of Life Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; End of Life Journal Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; End of Life Journal Volume 5 ; 5 >
 
   }
@@ -1465,7 +1465,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Epidemiology & Community Health Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Epidemiology & Community Health Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of Epidemiology & Community Health Volume 68 ; 68 >
