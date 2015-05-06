@@ -34,8 +34,6 @@ package org.lockss.plugin.pub2web.asm;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.regex.Pattern;
-
 import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -59,11 +57,21 @@ public class AsmPdfFilterFactory extends SimplePdfFilterFactory {
   private static final String DOWNLOAD_STRING = "Downloaded from ";
   private static final String ONDATE_STRING = "On: ";
   //private static final String temp= "^On: Sun, 12 Apr";
+  
+  private static void doBaseTransforms(PdfDocument pdfDocument) 
+      throws PdfException {
+       pdfDocument.unsetCreationDate();
+       pdfDocument.unsetModificationDate();
+       pdfDocument.unsetMetadata();
+       PdfUtil.normalizeTrailerId(pdfDocument);
+     }
 
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) 
       throws PdfException {
     //log.setLevel("debug3");
+    
+    doBaseTransforms(pdfDocument);
 
     ASMDownloadedFromStateMachine worker = new ASMDownloadedFromStateMachine();
 
@@ -170,8 +178,9 @@ ET
         stop(); // found what we needed, stop processing this page
       }      
     }
+    
 
   }  
-
+  
 
 }
