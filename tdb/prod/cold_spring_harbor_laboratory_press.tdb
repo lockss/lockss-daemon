@@ -274,7 +274,7 @@
   {
   
     title <
-      name = Perspectives in Biology ;
+      name = Cold Spring Harbor Perspectives in Biology ;
       eissn = 1943-0264 ;
       issnl = 1943-0264
     >
@@ -285,13 +285,13 @@
       param[base_url] = http://cshperspectives.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2009 ; Perspectives in Biology Volume 1 ; 1 >
-      au < released ; 2010 ; Perspectives in Biology Volume 2 ; 2 >
-      au < released ; 2011 ; Perspectives in Biology Volume 3 ; 3 >
-      au < released ; 2012 ; Perspectives in Biology Volume 4 ; 4 >
-      au < released ; 2013 ; Perspectives in Biology Volume 5 ; 5 >
-      au < manifest ; 2014 ; Perspectives in Biology Volume 6 ; 6 >
-      au < manifest ; 2015 ; Perspectives in Biology Volume 7 ; 7 >
+      au < released ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 >
+      au < released ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 >
+      au < released ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 >
+      au < released ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 >
+      au < released ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 >
+      au < manifest ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 >
+      au < manifest ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 >
 
     }
     
@@ -300,7 +300,7 @@
   {
   
     title <
-      name = Perspectives in Medicine ;
+      name = Cold Spring Harbor Perspectives in Medicine ;
       eissn = 2157-1422 ;
       issnl = 2157-1422
     >
@@ -311,11 +311,11 @@
       param[base_url] = http://perspectivesinmedicine.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2011 ; Perspectives in Medicine Volume 1 ; 1 >
-      au < released ; 2012 ; Perspectives in Medicine Volume 2 ; 2 >
-      au < released ; 2013 ; Perspectives in Medicine Volume 3 ; 3 >
-      au < manifest ; 2014 ; Perspectives in Medicine Volume 4 ; 4 >
-      au < manifest ; 2015 ; Perspectives in Medicine Volume 5 ; 5 >
+      au < released ; 2011 ; Cold Spring Harbor Perspectives in Medicine Volume 1 ; 1 >
+      au < released ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 >
+      au < released ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 >
+      au < manifest ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 >
+      au < manifest ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 >
 
     }
     
