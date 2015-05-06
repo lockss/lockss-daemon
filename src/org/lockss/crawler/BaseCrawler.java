@@ -133,7 +133,7 @@ public abstract class BaseCrawler implements Crawler {
   protected int maxRetries = DEFAULT_MAX_RETRY_COUNT;
   protected long defaultRetryDelay = DEFAULT_DEFAULT_RETRY_DELAY;
   protected long minRetryDelay = DEFAULT_MIN_RETRY_DELAY;
-  protected Set<String> stems;
+  protected Set<String> origStems;
   protected Set<String> cdnStems;
   
   public enum StorePermissionScheme {Legacy, StoreAllInSpec};
@@ -207,7 +207,7 @@ public abstract class BaseCrawler implements Crawler {
     this.aus = aus;
     alertMgr = getDaemon().getAlertManager();
     connectionPool = new LockssUrlConnectionPool();
-    stems = new HashSet(au.getUrlStems());
+    origStems = new HashSet(au.getUrlStems());
     cdnStems = new HashSet();
   }
   
@@ -502,7 +502,7 @@ public abstract class BaseCrawler implements Crawler {
   protected void updateCdnStems(String url) {
     try {
       String stem = UrlUtil.getUrlPrefix(url);
-      if (!stems.contains(stem) && !cdnStems.contains(stem)) {
+      if (!origStems.contains(stem) && !cdnStems.contains(stem)) {
 	aus.addCdnStem(stem);
 	cdnStems.add(stem);
       }

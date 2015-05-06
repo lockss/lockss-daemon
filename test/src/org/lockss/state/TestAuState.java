@@ -528,12 +528,22 @@ public class TestAuState extends LockssTestCase {
   public void testCdnStems() {
     AuState aus = new AuState(mau, historyRepo);
     assertEquals(Collections.EMPTY_LIST, aus.getCdnStems());
-    aus.setCdnStems(new LinkedList(ListUtil.list("a", "b")));
-    List val = aus.getCdnStems();
-    assertClass(ArrayList.class, val);
-    assertEquals(ListUtil.list("a", "b"), val);
+    aus.addCdnStem("http://fff.uselesstld");
+    assertClass(ArrayList.class, aus.getCdnStems());
+    assertEquals(ListUtil.list("http://fff.uselesstld"), aus.getCdnStems());
     aus.addCdnStem("ccc");
-    assertEquals(ListUtil.list("a", "b", "ccc"), aus.getCdnStems());
+    assertEquals(ListUtil.list("http://fff.uselesstld", "ccc"),
+		 aus.getCdnStems());
+
+    aus.setCdnStems(new LinkedList(ListUtil.list("a", "b")));
+    assertClass(ArrayList.class, aus.getCdnStems());
+    assertEquals(ListUtil.list("a", "b"), aus.getCdnStems());
+    aus.setCdnStems(null);
+    assertEmpty(aus.getCdnStems());
+    aus.addCdnStem("https://a.b/");
+    aus.addCdnStem("https://b.a/");
+    assertEquals(ListUtil.list("https://a.b/", "https://b.a/"),
+		 aus.getCdnStems());
   }
 
   public void testBatch() {

@@ -264,7 +264,7 @@ public class ListUtil {
   }
 
   /** Return a trimmed Arraylist equal to lst */
-  public static ArrayList ensureMinimalArrayList(List lst) {
+  public static ArrayList minimalArrayList(List lst) {
     if (lst instanceof ArrayList) {
       ArrayList alst = (ArrayList)lst;
       alst.trimToSize();

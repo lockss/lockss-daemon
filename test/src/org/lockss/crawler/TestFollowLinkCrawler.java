@@ -367,7 +367,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.setStartUrls(ListUtil.list(url1));
     crawler = makeTestableCrawler();
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, false, true);
     mau.addUrl(url1);
     mau.addUrl(url2);
@@ -377,6 +376,31 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertTrue(crawler.doCrawl());
     // url2 should have been eliminated by the crawl filter
     assertEquals(SetUtil.set(url1, url2, url3), crawler.fetched);
+    assertEquals(ListUtil.list(UrlUtil.getUrlPrefix(url2)), aus.getCdnStems());
+  }
+
+  public void testRefindCdnHost() throws Exception {
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
+				  "cdn\\.host");
+    String url1="http://www.example.com/blah.html";
+    String url2="http://cdn.host/halb.html";
+    mau.setUrlStems(ListUtil.list("http://www.example.com/"));
+    mau.setStartUrls(ListUtil.list(url1));
+    crawler = makeTestableCrawler();
+
+    mau.addUrl(startUrl, false, true);
+    mau.addUrl(url1);
+    mau.addUrl(url2, "foo");		// has content so won't get fetched
+    crawler.setUrlsToFollow(ListUtil.list(url2));
+    assertEmpty(aus.getCdnStems());
+    
+    assertTrue(crawler.doCrawl());
+    assertEmpty(aus.getCdnStems());
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_REFIND_CDN_STEMS,
+				  "true");
+    crawler = makeTestableCrawler();
+    crawler.setUrlsToFollow(ListUtil.list(url2));
+    assertTrue(crawler.doCrawl());
     assertEquals(ListUtil.list(UrlUtil.getUrlPrefix(url2)), aus.getCdnStems());
   }
 

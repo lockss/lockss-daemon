@@ -21,6 +21,10 @@
     </ElementValue>
   </MapElement>
   <MapElement>
+    <ElementKey>au_start_url</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">&quot;%sstart&quot;, base_url</ElementValue>
+  </MapElement>
+  <MapElement>
     <ElementKey>plugin_config_props</ElementKey>
     <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
       <ConfigParamDescr>

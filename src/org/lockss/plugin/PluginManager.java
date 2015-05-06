@@ -1192,7 +1192,6 @@ public class PluginManager
       Collection<String> stems = normalizeStems(au.getUrlStems());
       synchronized (hostAus) {
 	for (String stem : stems) {
-	  log.debug2("Adding stem: " + stem + ", " + au);
 	  addAuStem(stem, au);
 	}
       }
@@ -1206,7 +1205,6 @@ public class PluginManager
       Collection<String> stems = normalizeStems(au.getUrlStems());
       synchronized (hostAus) {
 	for (String stem : stems) {
-	  log.debug2("Removing stem: " + stem + ", " + au);
 	  delAuStem(stem, au);
 	}
       }
@@ -1216,6 +1214,7 @@ public class PluginManager
   }
 
   public void addAuStem(String stem, ArchivalUnit au) {
+    log.debug2("Adding stem: " + stem + ", " + au);
     AuSearchSet searchSet = hostAus.get(stem);
     if (searchSet == null) {
       searchSet = new AuSearchSet(this);
@@ -1225,6 +1224,7 @@ public class PluginManager
   }
 
   private void delAuStem(String stem, ArchivalUnit au) {
+    log.debug2("Removing stem: " + stem + ", " + au);
     AuSearchSet searchSet = hostAus.get(stem);
     if (searchSet != null) {
       searchSet.delAu(au);
@@ -1956,7 +1956,7 @@ public class PluginManager
       if (searchSet != null) {
 	return searchSet.getSortedAus();
       }
-      return null;
+      return Collections.EMPTY_LIST;
     }
   }  
 

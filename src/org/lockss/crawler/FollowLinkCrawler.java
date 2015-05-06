@@ -104,6 +104,12 @@ public class FollowLinkCrawler extends BaseCrawler {
     PREFIX + "doFullSubstanceCheck";
   public static final boolean DEFAULT_IS_FULL_SUBSTANCE_CHECK = true;
 
+  /** If true, missing CDN stems will be picked up from all URLs
+   * encountered during the graph traversal.  If false, only newly fetched
+   * files contribute to new CDN stems. */
+  public static final String PARAM_REFIND_CDN_STEMS = PREFIX + "refindCdnStems";
+  public static final boolean DEFAULT_REFIND_CDN_STEMS = false;
+
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
 
   protected int hiDepth = 0;		// maximum depth seen
@@ -125,7 +131,8 @@ public class FollowLinkCrawler extends BaseCrawler {
   protected boolean isRefetchEmptyFiles = false;
   protected boolean shouldFollowLink = true;
   protected boolean isFullSubstanceCheck = false;
-  
+  protected boolean refindCdnStems   = false;
+
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialized, it's initialized here to a
   // simple map for the sake of test code, which doesn't call
@@ -219,6 +226,8 @@ public class FollowLinkCrawler extends BaseCrawler {
     isFullSubstanceCheck =
       config.getBoolean(PARAM_IS_FULL_SUBSTANCE_CHECK,
 			DEFAULT_IS_FULL_SUBSTANCE_CHECK);
+    refindCdnStems =
+      config.getBoolean(PARAM_REFIND_CDN_STEMS, DEFAULT_REFIND_CDN_STEMS);
   }
  
 
@@ -555,11 +564,16 @@ public class FollowLinkCrawler extends BaseCrawler {
                 return false;
               }
             } else {
-	      if (res == FetchResult.FETCHED) {
+	      if (res == FetchResult.FETCHED && !refindCdnStems) {
 		updateCdnStems(url);
 	      }
               checkSubstanceCollected(au.makeCachedUrl(url));
             }
+	    if (refindCdnStems &&
+		res != FetchResult.FETCHED && 
+		au.makeCachedUrl(url).hasContent()) {
+	      updateCdnStems(url);
+	    }
           } catch (CacheException ex) {
             //XXX: we have a fatal exception, but we need to store it
             crawlStatus.signalErrorForUrl(url, ex);
@@ -572,6 +586,9 @@ public class FollowLinkCrawler extends BaseCrawler {
     } else {
       // If didn't fetch, check for existing substance file
       checkSubstanceCollected(au.makeCachedUrl(url));
+      if (refindCdnStems) {
+	updateCdnStems(url);
+      }
       parseQueue.put(curl);
       return true;
     }

@@ -1030,7 +1030,7 @@ public class TestPluginManager extends LockssTestCase {
     String h1 = "http://www.foo.org/";
     String h2 = "http://www.bar.org/";
 
-    assertNull(mgr.getCandidateAus(h1 + " foo.html"));
+    assertEmpty(mgr.getCandidateAus(h1 + " foo.html"));
 
     MockArchivalUnit au0 = new MockArchivalUnit("au0");
     au0.setName("The Little Prince");
@@ -1063,6 +1063,12 @@ public class TestPluginManager extends LockssTestCase {
     assertIsomorphic(ListUtil.list(au1, au0),
 		     mgr.getCandidateAus(h2 + " foo.html"));
     assertIsomorphic(ListUtil.list(h2, h1), mgr.getAllStems());
+
+    mgr.deactivateAu(au0);
+    assertIsomorphic(ListUtil.list(au1),
+		     mgr.getCandidateAus(h2 + " foo.html"));
+    mgr.deactivateAu(au1);
+    assertEmpty(mgr.getCandidateAus(h2 + " foo.html"));
   }
 
 
@@ -1728,6 +1734,48 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("V2: http://example.com/a/, 1942", au2.getName());
     assertEquals(0, mgr.getNumFailedAuRestarts());
   }
+
+  public void testStartAuLoadsCdnStems() throws Exception {
+    String cdnStem = "http://cdn.host/";
+    String baseStem = "http://example.com/";
+
+    theDaemon.setStartAuManagers(true);
+    mgr.startService();
+    minimalConfig();
+    String pname = "org.lockss.test.TestXmlPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(mgr.ensurePluginLoaded(key));
+    Plugin plug = mgr.getPlugin(key);
+    assertNotNull(plug);
+    Configuration config = ConfigurationUtil.fromArgs("base_url",
+						      baseStem + "a/");
+    ArchivalUnit au = mgr.createAu(plug, config,
+                                   new AuEvent(AuEvent.Type.Create, false));
+    AuState aus = AuUtil.getAuState(au);
+    assertEmpty(aus.getCdnStems());
+    aus.addCdnStem(cdnStem);
+    assertEquals(ListUtil.list(baseStem, cdnStem), au.getUrlStems());
+    assertEquals(ListUtil.list(cdnStem), aus.getCdnStems());
+    assertSameElements(ListUtil.list(au),
+		       mgr.getCandidateAusFromStem(cdnStem));
+    assertSameElements(ListUtil.list(au),
+		       mgr.getCandidateAus(cdnStem + "aaa"));
+    assertSameElements(ListUtil.list(au),
+		       mgr.getCandidateAusFromStem(baseStem));
+
+
+    PluginTestUtil.unregisterArchivalUnit(au);
+    assertEmpty(mgr.getCandidateAusFromStem(cdnStem));
+    // Ensure AUs CDN stems are set before addHostAus() is called
+    ArchivalUnit au2 = mgr.createAu(plug, config,
+				    new AuEvent(AuEvent.Type.Create, false));
+    assertNotSame(au2, au);
+    assertSameElements(ListUtil.list(au2),
+		       mgr.getCandidateAusFromStem(cdnStem));
+    assertSameElements(ListUtil.list(au2),
+		       mgr.getCandidateAusFromStem(baseStem));
+  }
+
 
   public void testRegistryAuEventHandler() throws Exception {
     mgr.setLoadablePluginsReady(false);

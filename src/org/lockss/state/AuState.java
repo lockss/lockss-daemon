@@ -179,7 +179,7 @@ public class AuState implements LockssSerializable {
 		 int numAgreePeersLastPoR,
 		 int numWillingRepairers,
 		 int numCurrentSuspectVersions,
-		 List cdnStems,
+		 List<String> cdnStems,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -485,7 +485,7 @@ public class AuState implements LockssSerializable {
 
   public synchronized void setCdnStems(List<String> stems) {
     if (!getCdnStems().equals(stems)) {
-      cdnStems = ListUtil.ensureMinimalArrayList(stems);
+      cdnStems = stems == null ? null : ListUtil.minimalArrayList(stems);
       flushAuCaches();
       needSave();
     }
