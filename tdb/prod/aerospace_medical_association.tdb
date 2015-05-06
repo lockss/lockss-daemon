@@ -5,38 +5,55 @@
     info[tester] = 5
   >
 
+  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = asma
+  implicit < status ; year ; volume ; name ; param[volume_name] >
+
   {
+  
     title <
       name = Aviation, Space, and Environmental Medicine ;
       issn = 0095-6562
     >
 
-    {
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = asma
+    # Continued by 2375-6314
+
     param[journal_id] = asem 
     param[journal_issn] = 0095-6562
-    implicit < status ; year ; name ; param[volume_name] >
   
-    au < released ; 2003 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
-    au < released ; 2004 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
-    au < released ; 2005 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
-    au < released ; 2006 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
-    au < released ; 2007 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
-    au < released ; 2008 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
-    au < released ; 2009 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
-    au < released ; 2010 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
-    au < released ; 2011 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
-    au < released ; 2012 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
-    au < manifest ; 2013 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 >
-    au < manifest ; 2014 ; Aviation, Space, and Environmental Medicine Volume 85 ; 85 >
+    au < released ; 2003 ; 74 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
+    au < released ; 2004 ; 75 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
+    au < released ; 2005 ; 76 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
+    au < released ; 2006 ; 77 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
+    au < released ; 2007 ; 78 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
+    au < released ; 2008 ; 79 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
+    au < released ; 2009 ; 80 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
+    au < released ; 2010 ; 81 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
+    au < released ; 2011 ; 82 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
+    au < released ; 2012 ; 83 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
+    au < manifest ; 2013 ; 84 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 >
+    au < manifest ; 2014 ; 85 ; Aviation, Space, and Environmental Medicine Volume 85 ; 85 >
       
-    }
+  }
+
+  {
+  
+    title <
+      name = Aerospace Medicine and Human Performance ; 
+      issn = 2375-6314 ;
+      eissn = 2375-6322
+    >
+    
+    # Continues 0095-6562
+
+    param[journal_id] = amhp 
+    param[journal_issn] = 2375-6314
+
+    au < expected ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 >
 
   }
 
 }
-
