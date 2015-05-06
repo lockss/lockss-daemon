@@ -4576,7 +4576,8 @@
     {
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[continues] = 1080-5699
-
+      
+      au < crawling ; exists ; 2014 ; Business and Professional Communication Quarterly Volume 76 ; 76 ; >
       au < crawling ; exists ; 2014 ; Business and Professional Communication Quarterly Volume 77 ; 77 ; >
       au < manifest ; exists ; 2015 ; Business and Professional Communication Quarterly Volume 78 ; 78 ; >
 
@@ -6475,7 +6476,9 @@
         eissn = 1477-2221 ;
         issnl = 1024-5294
       >
-
+      # moved to Sage in 2015, previously part of Maney and T&F
+      # 5/6/2015: waiting for Sage to put up manifest pages to crawl 2013, 2014
+      
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://cch.sagepub.com/
 
@@ -43001,7 +43004,8 @@
 
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://dsp.sagepub.com/
-
+    # 2013 content published in 2014
+    
     au < manifest ; exists ; 2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
 
@@ -44119,6 +44123,8 @@
         param[base_url] = http://icp.sagepub.com/
         comment[continues] = 2040-4026
 
+        # skips 2013
+        
         au < exists ; exists ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
         au < expected ; exists ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; >
 
