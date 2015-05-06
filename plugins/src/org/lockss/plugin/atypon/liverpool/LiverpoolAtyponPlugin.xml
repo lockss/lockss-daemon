@@ -1,0 +1,44 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.liverpool.LiverpoolAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Liverpool University Press Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>35</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Liverpool University Press, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <!--
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.liverpool.LiverpoolAtyponHtmlHashFilterFactory</string>
+  </entry>
+  -->
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.liverpool.LiverpoolAtyponHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://online.liverpooluniversitypress.co.uk/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by Liverpool University Press.</string>
+  </entry>
+</map>    
