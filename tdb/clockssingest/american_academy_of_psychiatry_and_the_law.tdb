@@ -18,13 +18,9 @@
     param[base_url] = http://www.jaapl.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    {
-
-    comment[1975] = as of 2011-11-29 this is not a typo, the site show nothing in 1975 and two overlapping volumes in 1976
-
     au < finished ; frozen ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
     au < finished ; frozen ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 >
-    au < zapped ; finished ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 >
+    au < zapped ; finished ; 1975 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 >
     au < zapped ; finished ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 4 ; 4 >
     au < finished ; frozen ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 >
     au < finished ; frozen ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 >
@@ -68,9 +64,6 @@
     au < crawling ; exists ; 2014 ; Journal of the American Academy of Psychiatry and the Law Online Volume 42 ; 42 >
     au < manifest ; exists ; 2015 ; Journal of the American Academy of Psychiatry and the Law Online Volume 43 ; 43 >
 
-    }
-
   }
 
 }
-
