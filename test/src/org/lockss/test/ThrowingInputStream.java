@@ -39,6 +39,7 @@ import java.util.*;
 public class ThrowingInputStream extends FilterInputStream {
   private IOException throwOnRead;
   private IOException throwOnClose;
+  private Error errorOnRead;
 
   public ThrowingInputStream(InputStream in,
 			     IOException throwOnRead,
@@ -48,30 +49,35 @@ public class ThrowingInputStream extends FilterInputStream {
     this.throwOnClose = throwOnClose;
   }
 
-  public int read() throws IOException {
+  public void setErrorOnRead(Error err) {
+    errorOnRead = err;
+  }
+
+  public void setThrowOnRead(IOException ioe) {
+    throwOnRead = ioe;
+  }
+
+  private void checkReadError() throws IOException {
     if (throwOnRead != null) {
       throw throwOnRead;
-    } else {
-      return in.read();
+    } else if (errorOnRead != null) {
+      throw errorOnRead;
     }
+  }
+
+  public int read() throws IOException {
+    checkReadError();
+    return in.read();
   }
 
   public int read(byte[] b, int off, int len) throws IOException {
-    int ret = in.read(b, off, len);
-    if (throwOnRead != null) {
-      throw throwOnRead;
-    } else {
-      return ret;
-    }
+    checkReadError();
+    return in.read(b, off, len);
   }
 
   public int read(byte[] b) throws IOException {
-    int ret = in.read(b);
-    if (throwOnRead != null) {
-      throw throwOnRead;
-    } else {
-      return ret;
-    }
+    checkReadError();
+    return in.read(b);
   }
 
   public void close() throws IOException {
