@@ -46,7 +46,7 @@ public class ProjectMuseHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-    	// Contents (including images) change over time
+        // Contents (including images) change over time
         HtmlNodeFilters.tagWithAttribute("div", "class", "related"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "related-box"),
     };
