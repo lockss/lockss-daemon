@@ -76,15 +76,18 @@ public class TestSimpleHasher extends LockssTestCase {
   MockLockssDaemon daemon;
   String tempDirPath;
   MockArchivalUnit mau = null;
+  MockAuState maus;
 
   public void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon();
     tempDirPath = setUpDiskSpace();
-    mau = new MockArchivalUnit(new MockPlugin(daemon));
+    mau = new MockArchivalUnit(new MockPlugin(daemon), "maud");
     MockNodeManager nodeMgr = new MockNodeManager();
     daemon.setNodeManager(nodeMgr, mau);
-    nodeMgr.setAuState(new MockAuState(mau));
+    maus = new MockAuState(mau);
+    nodeMgr.setAuState(maus);
+    PluginTestUtil.registerArchivalUnit(mau);
   }
 
   MockArchivalUnit setupContentTree() {
@@ -320,6 +323,45 @@ public class TestSimpleHasher extends LockssTestCase {
     assertEquals(result.getRunnerError(), errorMessage);
     assertEquals("WrongEncoding", params.getResultEncoding());
     assertNull(result.getResultEncoding());
+  }
+
+  public void testOOMESetsResult() throws Exception {
+    HasherParams params = new HasherParams("foo", false);
+    SimpleHasher hasher = new SimpleHasher(null);
+    HasherResult result = new HasherResult();
+    params.setAuId(mau.getAuId());
+    mau.addUrl("http://foo.bar/", "cont");
+    mau.populateAuCachedUrlSet();
+    maus.setSuppressRecomputeNumCurrentSuspectVersions(true);
+    hasher.hash(params, result);
+    assertEquals(HasherStatus.Done, result.getRunnerStatus());
+
+    MockFilterFactory mfilt = new MockFilterFactory();
+    ThrowingInputStream tis =
+      new ThrowingInputStream(new StringInputStream("foo"),
+			      null /* new IOException("foobar")*/,
+			      null);
+    tis.setErrorOnRead(new OutOfMemoryError("Test OOME"));
+    mfilt.setFilteredInputStream(tis);
+    mau.setHashFilterFactory(mfilt);
+    mau.populateAuCachedUrlSet();
+    result = new HasherResult();
+    hasher = new SimpleHasher(null);
+    try {
+      hasher.hash(params, result);
+      fail("Error didn't abort hash");
+    } catch (OutOfMemoryError e) {
+      assertEquals(HasherStatus.Error, result.getRunnerStatus());
+      assertEquals("Error hashing: Test OOME", result.getRunnerError());
+    } // any other error causes failure
+
+    tis.setErrorOnRead(null);
+    tis.setThrowOnRead(new IOException("Test IOException"));
+    result = new HasherResult();
+    hasher = new SimpleHasher(null);
+    hasher.hash(params, result);
+    assertEquals(HasherStatus.Done, result.getRunnerStatus());
+    assertNull(result.getRunnerError());
   }
 
   public void testProcessParams() throws Exception {

@@ -401,8 +401,20 @@ public class SimpleHasher {
 	log.warning("hash()", e);
 	result.setRunnerStatus(HasherStatus.Error);
 	result.setRunnerError("Error hashing: " + e.getMessage());
+      } catch (Error e) {
+	try {
+	  log.warning("hash()", e);
+	} catch (Error ee) {
+	}
+	result.setRunnerStatus(HasherStatus.Error);
+	result.setRunnerError("Error hashing: " + e.getMessage());
+	throw e;
       }
     } finally {
+      if (result.getRunnerStatus() == HasherStatus.Running) {
+	result.setRunnerStatus(HasherStatus.Error);
+	result.setRunnerError("Unexpected abort");
+      }
       IOUtil.safeClose(result.getRecordStream());
     }
 
