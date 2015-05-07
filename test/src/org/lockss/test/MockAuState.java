@@ -176,6 +176,20 @@ public class MockAuState extends AuState {
     updatedCrawlUrlsCalled++;
   }
 
+  boolean suppressRecomputeNumCurrentSuspectVersions = false;
+
+  public void setSuppressRecomputeNumCurrentSuspectVersions(boolean val) {
+    suppressRecomputeNumCurrentSuspectVersions = val;
+  }
+
+  @Override
+  public synchronized int recomputeNumCurrentSuspectVersions() {
+    if (suppressRecomputeNumCurrentSuspectVersions) {
+      return 0;
+    }
+    return super.recomputeNumCurrentSuspectVersions();
+  }
+
   public void assertUpdatedCrawlListCalled(int numTimes) {
     if (numTimes != updatedCrawlUrlsCalled) {
       Assert.fail("updatedCrawlUrls was only called "+updatedCrawlUrlsCalled
