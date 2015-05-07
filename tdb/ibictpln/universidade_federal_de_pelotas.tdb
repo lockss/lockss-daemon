@@ -17,9 +17,9 @@
       param[base_url] = http://www2.ufpel.tche.br/revistas/
       param[journal_id] = enfermagemesaude
 
-      au < testing ; 2011 ; 1 ; Journal of Nursing and Health Volume 1 ; 2011 ; >
-      au < testing ; 2012 ; 2 ; Journal of Nursing and Health Volume 2 ; 2012 ; >
-      au < testing ; 2013 ; 3 ; Journal of Nursing and Health Volume 3 ; 2013 ; >
+      au < ready ; 2011 ; 1 ; Journal of Nursing and Health Volume 1 ; 2011 ; >
+      au < ready ; 2012 ; 2 ; Journal of Nursing and Health Volume 2 ; 2012 ; >
+      au < ready ; 2013 ; 3 ; Journal of Nursing and Health Volume 3 ; 2013 ; >
       au < expected ; 2014 ; 4 ; Journal of Nursing and Health Volume 4 ; 2014 ; >
 
   }
@@ -35,11 +35,11 @@
       param[base_url] = http://www2.ufpel.tche.br/revistas/
       param[journal_id] = cienciadamadeira
 
-      au < testing ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 ; >
-      au < testing ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 ; >
-      au < testing ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 ; >
-      au < testing ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 ; >
-      au < testing ; 2014 ; 5 ; Revista Ciência da Madeira Volume 5 ; 2014 ; >
+      au < ready ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 ; >
+      au < ready ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 ; >
+      au < ready ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 ; >
+      au < ready ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 ; >
+      au < ready ; 2014 ; 5 ; Revista Ciência da Madeira Volume 5 ; 2014 ; >
 
   }
 

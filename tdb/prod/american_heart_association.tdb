@@ -665,11 +665,11 @@
       au < manifest ; 2002 ; Stroke Volume 33 ; 33 >
       au < manifest ; 2003 ; Stroke Volume 34 ; 34 >
       au < manifest ; 2004 ; Stroke Volume 35 ; 35 >
-      au < manifest ; 2005 ; Stroke Volume 36 ; 36 >
-      au < manifest ; 2006 ; Stroke Volume 37 ; 37 >
-      au < manifest ; 2007 ; Stroke Volume 38 ; 38 >
-      au < manifest ; 2008 ; Stroke Volume 39 ; 39 >
-      au < manifest ; 2009 ; Stroke Volume 40 ; 40 >
+      au < testing ; 2005 ; Stroke Volume 36 ; 36 >
+      au < testing ; 2006 ; Stroke Volume 37 ; 37 >
+      au < ready ; 2007 ; Stroke Volume 38 ; 38 >
+      au < ready ; 2008 ; Stroke Volume 39 ; 39 >
+      au < ready ; 2009 ; Stroke Volume 40 ; 40 >
       au < ready ; 2010 ; Stroke Volume 41 ; 41 >
       au < released ; 2011 ; Stroke Volume 42 ; 42 >
       au < released ; 2012 ; Stroke Volume 43 ; 43 >
