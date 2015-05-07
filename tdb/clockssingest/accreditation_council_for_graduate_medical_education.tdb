@@ -3,7 +3,7 @@
   publisher <
     name = Accreditation Council for Graduate Medical Education ;
     info[contract] = 2013 ;
-    info[tester] = 0 ;
+    info[tester] = 5 ;
     comment[platform] = Atypon
   >
   
@@ -19,7 +19,6 @@
     >
     
     param[journal_id] = jgme
-    comment[dnp] = manifests up but pending plugin
     
     au < doNotProcess ; exists ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 >
