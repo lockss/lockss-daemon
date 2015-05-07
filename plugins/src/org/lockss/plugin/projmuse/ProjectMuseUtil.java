@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
+import java.util.Iterator;
+
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.ArchivalUnit;
 
@@ -66,17 +68,35 @@ public class ProjectMuseUtil {
     return baseUrl != null && baseUrl.startsWith(HTTPS);
   }
 
+  public static boolean isBaseUrlHost(ArchivalUnit au, String url) {
+    if (url != null) {
+      Iterator<String> it = au.getUrlStems().iterator();
+      while (it.hasNext()) {
+        if (url.startsWith(it.next())) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   /**
    * <p>
    * If the AU is HTTP-based and the given URL is HTTPS, converts it to an
-   * equivalent HTTP URL, otherwise returns the URL unchanged.
+   * equivalent HTTP URL and
+   * If the AU is HTTPS-based and the given URL is HTTP, converts it to an
+   * equivalent HTTPS URL, otherwise returns the URL unchanged.
    * </p>
    * 
    * @since 1.67.5
    */
-  public static String baseUrlHttpsToHttp(ArchivalUnit au, String url) {
-    if (isBaseUrlHttp(au) && url != null && url.startsWith(HTTPS)) {
-      url = HTTP + url.substring(HTTPS.length());
+  public static String baseUrlHttpsCheck(ArchivalUnit au, String url) {
+    if (isBaseUrlHost(au, url)) {
+      if (isBaseUrlHttp(au) && url.startsWith(HTTPS)) {
+        url = HTTP + url.substring(HTTPS.length());
+      } else if (isBaseUrlHttps(au) && url.startsWith(HTTP)) {
+        url = HTTPS + url.substring(HTTP.length());
+      }
     }
     return url;
   }

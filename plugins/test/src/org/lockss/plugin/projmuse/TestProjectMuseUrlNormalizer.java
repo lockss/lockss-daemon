@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
+import java.util.Arrays;
+
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.test.*;
+
 
 public class TestProjectMuseUrlNormalizer extends LockssTestCase {
 
@@ -48,10 +51,14 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     norm = new ProjectMuseUrlNormalizer();
+    String[] stems = {"http://www.example.com","https://www.example.com/"};
     mauHttp = new MockArchivalUnit();
+    mauHttp.setUrlStems(Arrays.asList(stems));
     mauHttp.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
                                                         "http://www.example.com/"));
+    mauHttp.setUrlStems(Arrays.asList(stems));
     mauHttps = new MockArchivalUnit();
+    mauHttps.setUrlStems(Arrays.asList(stems));
     mauHttps.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
                                                          "https://www.example.com/"));
   }
@@ -68,13 +75,14 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
     // On-site HTTP URL stays the same
     assertEquals("http://www.example.com/favicon.ico",
                  norm.normalizeUrl("http://www.example.com/favicon.ico", mauHttp));
-    assertEquals("http://www.example.com/favicon.ico",
-                 norm.normalizeUrl("http://www.example.com/favicon.ico", mauHttps));
-    // On-site HTTPS URL: stays the same if HTTPS base URL, normalized to HTTP if HTTP base URL
+    // On-site HTTPS URL stays the same
+    assertEquals("https://www.example.com/favicon.ico",
+                 norm.normalizeUrl("https://www.example.com/favicon.ico", mauHttps));
+    // Normalized to HTTP/S if base URL protocol does not match
     assertEquals("http://www.example.com/favicon.ico",
                  norm.normalizeUrl("https://www.example.com/favicon.ico", mauHttp));
     assertEquals("https://www.example.com/favicon.ico",
-                 norm.normalizeUrl("https://www.example.com/favicon.ico", mauHttps));
+                 norm.normalizeUrl("http://www.example.com/favicon.ico", mauHttps));
   }
   
   public void testSuffix() throws Exception {
@@ -83,8 +91,8 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
                  norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttp));
     assertEquals("http://www.example.com/foo.css",
                  norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttp));
-    // HTTPS base URL: trim suffix only
-    assertEquals("http://www.example.com/foo.css",
+    // HTTPS base URL: trim suffix and normalize HTTP to HTTPS
+    assertEquals("https://www.example.com/foo.css",
                  norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttps));
     assertEquals("https://www.example.com/foo.css",
                  norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttps));

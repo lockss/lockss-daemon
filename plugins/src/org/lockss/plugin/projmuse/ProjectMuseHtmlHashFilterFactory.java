@@ -80,9 +80,10 @@ public class ProjectMuseHtmlHashFilterFactory implements FilterFactory {
         /*
          * Broad area filtering
          */
-        // Scripts, comments
+        // Scripts, comments, head
         HtmlNodeFilters.tag("script"),
         HtmlNodeFilters.comment(),
+        HtmlNodeFilters.tag("head"),
         // Header and footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "header"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
@@ -94,21 +95,18 @@ public class ProjectMuseHtmlHashFilterFactory implements FilterFactory {
         /*
          * From older versions of the filter (may be moot) 
          */
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sliver"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "toolbar"), // ?
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"), // ?
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar1"), // ?
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar2"), // ?
         HtmlNodeFilters.tagWithAttribute("div", "id", "credits"), // ?
         HtmlNodeFilters.tagWithAttribute("div", "class", "main_footer"), // ?
     };
     
     HtmlTransform xform = null;
-    if (ProjectMuseUtil.isBaseUrlHttp(au)) {
-      xform = new HtmlTransform() {
-        @Override
-        public NodeList transform(NodeList nodeList) throws IOException {
-          return nodeList; // Do nothing
-        }
-      };
-    }
-    else {
       xform = new HtmlTransform() {
         @Override
         public NodeList transform(NodeList nodeList) throws IOException {
@@ -120,28 +118,28 @@ public class ProjectMuseHtmlHashFilterFactory implements FilterFactory {
                 if ("meta".equals(name)) {
                   String val = tag.getAttribute("content");
                   if (val != null) {
-                    tag.setAttribute("content", ProjectMuseUtil.baseUrlHttpsToHttp(au, val));
+                    tag.setAttribute("content", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
                   }
                   return;
                 }
                 if (backgroundTags.contains(name)) {
                   String val = tag.getAttribute("background");
                   if (val != null) {
-                    tag.setAttribute("background", ProjectMuseUtil.baseUrlHttpsToHttp(au, val));
+                    tag.setAttribute("background", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
                   }
                   return;
                 }
                 if (hrefTags.contains(name)) {
                   String val = tag.getAttribute("href");
                   if (val != null) {
-                    tag.setAttribute("href", ProjectMuseUtil.baseUrlHttpsToHttp(au, val));
+                    tag.setAttribute("href", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
                   }
                   return;
                 }
                 if (srcTags.contains(name)) {
                   String val = tag.getAttribute("src");
                   if (val != null) {
-                    tag.setAttribute("src", ProjectMuseUtil.baseUrlHttpsToHttp(au, val));
+                    tag.setAttribute("src", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
                   }
                   return;
                 }
@@ -154,7 +152,6 @@ public class ProjectMuseHtmlHashFilterFactory implements FilterFactory {
           }
         }
       };
-    }
     
     // First filter with HtmlParser
     InputStream filtered = new HtmlFilterInputStream(in,
