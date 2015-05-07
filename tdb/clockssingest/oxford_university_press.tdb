@@ -8472,7 +8472,7 @@
     au < finished ; crawling ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < finished ; frozen ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Human Reproduction Volume 28 ; 28 ; >
-    au < testing ; exists ; 2014 ; Human Reproduction Volume 29 ; 29 ; >
+    au < ready ; exists ; 2014 ; Human Reproduction Volume 29 ; 29 ; >
     au < manifest ; exists ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
 
     }
@@ -9073,7 +9073,7 @@
     au < finished ; crawling ; 2011 ; IMA Journal of Mathematical Control and Information Volume 28 ; 28 ; >
     au < finished ; crawling ; 2012 ; IMA Journal of Mathematical Control and Information Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Mathematical Control and Information Volume 30 ; 30 ; >
-    au < testing ; exists ; 2014 ; IMA Journal of Mathematical Control and Information Volume 31 ; 31 ; >
+    au < ready ; exists ; 2014 ; IMA Journal of Mathematical Control and Information Volume 31 ; 31 ; >
     au < manifest ; exists ; 2015 ; IMA Journal of Mathematical Control and Information Volume 32 ; 32 ; >
 
     }
@@ -9137,7 +9137,7 @@
     au < finished ; frozen ; 2011 ; IMA Journal of Numerical Analysis Volume 31 ; 31 ; >
     au < finished ; frozen ; 2012 ; IMA Journal of Numerical Analysis Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Numerical Analysis Volume 33 ; 33 ; >
-    au < testing ; exists ; 2014 ; IMA Journal of Numerical Analysis Volume 34 ; 34 ; >
+    au < ready ; exists ; 2014 ; IMA Journal of Numerical Analysis Volume 34 ; 34 ; >
     au < manifest ; exists ; 2015 ; IMA Journal of Numerical Analysis Volume 35 ; 35 ; >
 
     }
@@ -9407,7 +9407,7 @@
     au < finished ; frozen ; 2011 ; Integrative and Comparative Biology Volume 51 ; 51 ; >
     au < finished ; frozen ; 2012 ; Integrative and Comparative Biology Volume 52 ; 52 ; >
     au < crawling ; exists ; 2013 ; Integrative and Comparative Biology Volume 53 ; 53 ; >
-    au < testing ; exists ; 2014 ; Integrative and Comparative Biology Volume 54 ; 54 ; >
+    au < ready ; exists ; 2014 ; Integrative and Comparative Biology Volume 54 ; 54 ; >
     au < manifest ; exists ; 2015 ; Integrative and Comparative Biology Volume 55 ; 55 ; >
 
     }
@@ -9502,7 +9502,7 @@
     au < crawling ; exists ; 2011 ; International Health Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; International Health Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; International Health Volume 5 ; 5 ; >
-    au < testing ; exists ; 2014 ; International Health Volume 6 ; 6 ; >
+    au < ready ; exists ; 2014 ; International Health Volume 6 ; 6 ; >
     au < manifest ; exists ; 2015 ; International Health Volume 7 ; 7 ; >
 
   }
@@ -10432,9 +10432,10 @@
     au < finished ; frozen ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 8 ; 8 ; >
-    au < testing ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 9 ; 9 ; >
+    au < ready ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 9 ; 9 ; >
     au < testing ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 10 ; 10 ; >
     au < expected ; exists ; 2015 ; Jerusalem Review of Legal Studies Volume 11 ; 11 ; >
+    au < expected ; exists ; 2015 ; Jerusalem Review of Legal Studies Volume 12 ; 12 ; >
 
   }
 
