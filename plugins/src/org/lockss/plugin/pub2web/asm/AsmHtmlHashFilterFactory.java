@@ -47,6 +47,7 @@ public class AsmHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "pubtopright"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "hiddenjsdiv metricsEndDate"),
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "^metrics "),
         //<input type="hidden" name="copyright" value="American Society For Microbiology &copy; Sat Apr 11 05:23:38 UTC 2015"/>
         HtmlNodeFilters.tagWithAttribute("input",  "name", "copyright"),
         // take out the "ASM recommends" and "customers also bought" section at bottom of book landing
