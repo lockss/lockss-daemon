@@ -23,7 +23,7 @@
         param[journal_issn] = 2213-7467 
         comment[platform] = BioMedCentralPlugin
   
-        au < boost ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 >
   
     }
@@ -61,7 +61,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 >
-        au < boost ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 >
+        au < crawling ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Agricultural and Food Economics Volume 3 ; 3 >
   
     }
@@ -80,7 +80,7 @@
         au < manifest ; exists ; 2011 ; AMB Express Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; AMB Express Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; AMB Express Volume 3 ; 3 >
-        au < boost ; exists ; 2014 ; AMB Express Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; AMB Express Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; AMB Express Volume 5 ; 5 >
   
     }
@@ -99,7 +99,7 @@
         au < manifest ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
-        au < boost ; exists ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Annals of Intensive Care Volume 5 ; 5 >
   
     }
@@ -116,7 +116,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
-        au < boost ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
+        au < crawling ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 >
 
     }
@@ -132,7 +132,7 @@
         param[journal_issn] = 2196-0089 
         comment[platform] = BioMedCentralPlugin
 
-        au < boost ; exists ; 2014 ; Applied Informatics Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Applied Informatics Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 >
 
     }
@@ -148,7 +148,7 @@
         param[journal_issn] = 2196-1166
         comment[platform] = BioMedCentralPlugin
   
-        au < boost ; exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
         au < expected ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
   
     }
@@ -165,7 +165,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 >
-        au < boost ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 ; 5 >
   
     }
@@ -325,7 +325,7 @@
         param[journal_issn] = 2194-3206 
         comment[platform] = BioMedCentralPlugin
   
-        au < boost ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 >
+        au < crawling ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 ; 3 >
   
@@ -359,7 +359,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Crime Science Volume 1 ; 1 >
-        au < boost ; exists ; 2013 ; Crime Science Volume 2 ; 2 >
+        au < crawling ; exists ; 2013 ; Crime Science Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Crime Science Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Crime Science Volume 4 ; 4 >
   
