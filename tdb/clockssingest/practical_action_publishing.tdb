@@ -19,8 +19,10 @@
       eissn = 1755-1986 ;
       comment[continues] = 0957-1329
     >
+    
+    comment[change] = Volume 18 split between new name and old name.
 
-    param[journal_issn] = 1755-1978
+    param[journal_id] = sed
 
     au < exists ; exists ; 2007 ; Enterprise Development & Microfinance Volume 18 ; 18 >
     au < exists ; exists ; 2008 ; Enterprise Development & Microfinance Volume 19 ; 19 >
@@ -41,7 +43,7 @@
       eissn = 2046-1887
     >
 
-    param[journal_issn] = 2046-1879
+    param[journal_id] = fc
 
     au < exists ; exists ; 2011 ; Foodchain Volume 1 ; 1 >
     au < exists ; exists ; 2012 ; Foodchain Volume 2 ; 2 >
@@ -58,7 +60,7 @@
       comment[continued_by] = 1755-1978
     >
 
-    param[journal_issn] = 0957-1329
+    param[journal_id] = 0957-1329
 
     au < exists ; exists ; 1990 ; Small Enterprise Development Volume 1 ; 1 >
     au < exists ; exists ; 1991 ; Small Enterprise Development Volume 2 ; 2 >
@@ -88,7 +90,7 @@
       eissn = 1756-3488
     >
 
-    param[journal_issn] = 0262-8104
+    param[journal_id] = wl
 
     au < exists ; exists ; 1982-1983 ; Waterlines Volume 1 ; 1 >
     au < exists ; exists ; 1983-1984 ; Waterlines Volume 2 ; 2 >
