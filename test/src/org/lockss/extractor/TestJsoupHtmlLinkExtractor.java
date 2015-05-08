@@ -203,7 +203,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     singleTagShouldNotParse("http://www.example.com/web_link.jpg",
                             "<option  value=", "</option>", m_mau);
     singleTagShouldNotParse("http://www.example.com/web_link.jpg",
-                               "<option a=b value=", "</option>", m_mau);
+                            "<option a=b value=", "</option>", m_mau);
   }
 
   public void testParsesOptionNegative() throws Exception {
@@ -215,9 +215,9 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
 
   public void testDoCrawlImageWithSrcInAltTag() throws Exception {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                            "<img alt=src src=", "</img>");
+                         "<img alt=src src=", "</img>");
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                            "<img alt = src src=", "</img>");
+                         "<img alt = src src=", "</img>");
   }
 
   public void testDoCrawlImageWithSrcInAltTagAfterSrcProper()
@@ -249,18 +249,29 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
 
   }
 
+  public void testAnchorTagWithClass() throws Exception {
+    String source =
+      "<html><head><title>Test Title</title></head><body>" +
+      "<div class=\"holder\">" +
+      "<a title=\"Open Figure Viewer\" onclick=\"showFigures(this,event); " +
+      "return false;\" href=\"JavaScript:void(0);\" class=\"thumbnail\">" +
+      "</a>" +
+      "</div></body></html>";
+    assertEmpty(parseSingleSource(source));
+  }
+
   public void testDoCrawlLink() throws Exception {
     singleTagShouldParse("http://www.example.com/web_link.css",
                          "<link href=", "</link>");
     singleTagShouldParse(
-      "http://www.example.com/web_link.css",
-      "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\"  href=",
-      "</link>");
+                          "http://www.example.com/web_link.css",
+                          "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\"  href=",
+                          "</link>");
   }
 
   public void testDoCrawlStyleAbsolute() throws Exception {
     performDoCrawlStyle("<style>", "http://www.example.com/",
-                           "http://www.example.com/");
+                        "http://www.example.com/");
   }
 
   public void testDoCrawlStyleRelative() throws Exception {
@@ -279,8 +290,9 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
 
   public void testDoCrawlStyleAbsoluteShort() throws Exception {
     performDoCrawlStyleShort("<style>", "http://www.example.com/",
-			     "http://www.example.com/");
+                             "http://www.example.com/");
   }
+
 
   protected void performDoCrawlStyle(String openingStyleTag,
                                      String givenPrefix, String expectedPrefix)
