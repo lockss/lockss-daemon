@@ -7,24 +7,24 @@
 
   >
   
-  plugin = org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyPlugin
-  implicit < status ; status2 ; year ; name ; param[year] >
-  param[base_url] = http://www.ams.org/
-  
-  comment[0] = Only include journals in contract.
-  comment[1] = Do not include Abstracts of Papers Presented to the AMS 0192-5857
-  comment[2] = Do not include Asterisque 0303-1179
-  comment[3] = Do not include Bulletin de la Société Mathématique de France 0037-9484
-  comment[4] = Do not include Journal of Operator Theory 1841-7744
-  comment[5] = Do not include Journal of the Ramanujan Mathematical Society. 2320-3110
-  comment[6] = Do not include Memoires de la Société Mathématique de France. 0249-633X
-  comment[7] = Do not include Moscow Mathematical Journal. 1609-4514
-  comment[8] = Do not include Sugaku Expositions. 0898-9583
-  comment[9] = Do not include Electronic Research Announcements. 1079-6762
-  comment[10] = Do not include Journal of Algebraic Geometry. 1056-3911
-  comment[11] = Do not include Quarterly of Applied Mathematics. 0033-569X. 1552-4485
+  # Only include journals in contract.
+  # Do not include Abstracts of Papers Presented to the AMS 0192-5857
+  # Do not include Asterisque 0303-1179
+  # Do not include Bulletin de la Société Mathématique de France 0037-9484
+  # Do not include Journal of Operator Theory 1841-7744
+  # Do not include Journal of the Ramanujan Mathematical Society. 2320-3110
+  # Do not include Memoires de la Société Mathématique de France. 0249-633X
+  # Do not include Moscow Mathematical Journal. 1609-4514
+  # Do not include Sugaku Expositions. 0898-9583
+  # Do not include Electronic Research Announcements. 1079-6762
+  # Do not include Journal of Algebraic Geometry. 1056-3911
+  # Do not include Quarterly of Applied Mathematics. 0033-569X. 1552-4485
 
-    {
+  plugin = org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyPlugin
+  param[base_url] = http://www.ams.org/
+  implicit < status ; status2 ; year ; name ; param[year] >
+  
+  {
   
     title < 
       name = Bulletin of the American Mathematical Society ;
@@ -32,7 +32,8 @@
       eissn = 1088-9485
     >
     
-    comment[type] = regular journal
+    # Type: regular journal
+    
     param[journal_id] = bull
       
     au < manifest ; exists ; 1891 ; Bulletin of the American Mathematical Society Volume 0-1 (1891) ; 1891 >
@@ -161,16 +162,17 @@
     au < crawling ; exists ; 2014 ; Bulletin of the American Mathematical Society Volume 51 (2014) ; 2014 >
     au < manifest ; exists ; 2015 ; Bulletin of the American Mathematical Society Volume 52 (2015) ; 2015 >
      
-    }
+  }
     
-    {
+  {
   
     title < 
       name = Conformal Geometry Dynamics and An Electronic Journal of the AMS ; 
       issn = 1088-4173 
     >
     
-    comment[type] = ejournal only
+    # Type: ejournal only
+    
     param[journal_id] = ecgd
     
     au < manifest ; exists ; 1997 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 1 ; 1997 >
@@ -193,9 +195,9 @@
     au < crawling ; exists ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 >
     au < manifest ; exists ; 2015 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 19 ; 2015 >
 
-    }
+  }
     
-    {
+  {
   
     title < 
       name = Journal of the American Mathematical Society ;
@@ -203,7 +205,8 @@
       eissn = 1088-6834
     >
 
-    comment[type] = regular journal
+    # Type: regular journal
+    
     param[journal_id] = jams
     
     au < manifest ; exists ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1988 >
@@ -235,9 +238,9 @@
     au < crawling ; exists ; 2014 ; Journal of the American Mathematical Society Volume 27 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of the American Mathematical Society Volume 28 ; 2015 >
       
-   }
+  }
     
-   {
+  {
   
     title < 
       name = Mathematics of Computation ;
@@ -245,7 +248,8 @@
       eissn = 1088-6842
     >
     
-    comment[type] = regular journal
+    # Type: regular journal
+
     param[journal_id] = mcom
     
     au < manifest ; exists ; 1943 ; Mathematics of Computation Volume 1 (1943) ; 1943 >
@@ -322,9 +326,9 @@
     au < crawling ; exists ; 2014 ; Mathematics of Computation Volume 83 ; 2014 >
     au < manifest ; exists ; 2015 ; Mathematics of Computation Volume 84 ; 2015 >
 
-    }
+  }
     
-    {
+  {
   
     title < 
       name = Notices of the American Mathematical Society ;
@@ -332,8 +336,9 @@
       eissn = 1088-9477
     >
     
+    # doNotProcess: PD-1209, no substance found
+    
     param[journal_id] = notices
-    comment[doNotProcess] = PD-1209, no substance found
     
     au < doNotProcess ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 >
     au < doNotProcess ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 1996 >
@@ -356,9 +361,9 @@
     au < doNotProcess ; exists ; 2013 ; Notices of the American Mathematical Society Volume 60 ; 2013 >
     au < doNotProcess ; exists ; 2014 ; Notices of the American Mathematical Society Volume 61 ; 2014 >
 
-    }
+  }
 
-    {
+  {
   
     title < 
       name = Proceedings of the American Mathematical Society ;
@@ -366,7 +371,8 @@
       eissn = 1088-6826
     >
     
-    comment[type] = regular journal
+    # Type: regular journal
+    
     param[journal_id] = proc
       
     au < manifest ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 2007 >
@@ -379,24 +385,25 @@
     au < crawling ; exists ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 >
     au < manifest ; exists ; 2015 ; Proceedings of the American Mathematical Society Volume 143 ; 2015 >
 
-    }
+  }
     
-    {
+  {
   
     title < 
       name = Proceedings of the American Mathematical Society B ;
       eissn = 2330-1511
     >
     
-    comment[type] = ejournal only
+    # Type: ejournal only
+    
     param[journal_id] = bproc
       
     au < crawling ; exists ; 2014 ; Proceedings of the American Mathematical Society B Volume 1 ; 2014 >
     au < manifest ; exists ; 2015 ; Proceedings of the American Mathematical Society B Volume 2 ; 2015 >
 
-    }
+  }
     
-    {
+  {
   
     title < 
       name = Representation Theory ;
@@ -404,7 +411,8 @@
       
     >
     
-    comment[type] = ejournal only
+    # Type: ejournal only
+    
     param[journal_id] = ert
 
     au < manifest ; exists ; 1997 ; Representation Theory Volume 1 ; 1997 >
@@ -427,9 +435,9 @@
     au < crawling ; exists ; 2014 ; Representation Theory Volume 18 ; 2014 >
     au < manifest ; exists ; 2015 ; Representation Theory Volume 19 ; 2015 >
 
-    }
+  }
     
-    {
+  {
   
     title < 
       name = St. Petersburg Mathematical Journal ;
@@ -437,7 +445,8 @@
       eissn = 1547-7371
     >
     
-    comment[type] = regular journal?
+    # Type: regular journal?
+    
     param[journal_id] = spmj
 
     au < manifest ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 2004 >
@@ -453,9 +462,9 @@
     au < crawling ; exists ; 2014 ; St. Petersburg Mathematical Journal Volume 25 ; 2014 >
     au < manifest ; exists ; 2015 ; St. Petersburg Mathematical Journal Volume 26 ; 2015 >
 
-    }
+  }
     
-    {
+  {
   
     title < 
       name = Theory of Probability and Mathematical Statistics ;
@@ -463,7 +472,8 @@
       eissn = 1547-7363
     >
     
-    comment[type] = regular journal
+    # Type: regular journal
+    
     param[journal_id] = tpms
     
     au < manifest ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 2004 >
@@ -479,9 +489,9 @@
     au < crawling ; exists ; 2014 ; Theory of Probability and Mathematical Statistics Volume 86 ; 2014 >
     au < expected ; exists ; 2015 ; Theory of Probability and Mathematical Statistics Volume 87 ; 2015 >
       
-    }   
+  }   
 
-    {
+  {
   
     title < 
       name = Transactions of the American Mathematical Society ;
@@ -489,7 +499,8 @@
       eissn = 1088-6850
     >
     
-    comment[type] = regular journal
+    # Type: regular journal
+    
     param[journal_id] = tran
     
     au < manifest ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 2007 >
@@ -502,24 +513,25 @@
     au < crawling ; exists ; 2014 ; Transactions of the American Mathematical Society Volume 366 ; 2014 >
     au < manifest ; exists ; 2015 ; Transactions of the American Mathematical Society Volume 367 ; 2015 >
 
-    }
+  }
     
-        {
+  {
   
     title < 
       name = Transactions of the American Mathematical Society B;
       eissn =  2330-0000
     >
     
-    comment[type] = ejournal only
+    # Type: ejournal only
+    
     param[journal_id] = btran
 
     au < crawling ; exists ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
     au < manifest ; exists ; 2015 ; Transactions of the American Mathematical Society B Volume 2 ; 2015 >
 
-    }
+  }
    
-    {
+  {
   
     title < 
       name = Transactions of the Moscow Mathematical Society ;
@@ -542,5 +554,6 @@
     au < crawling ; exists ; 2014 ; Transactions of the Moscow Mathematical Society Volume 75 ; 2014 >
     au < expected ; exists ; 2015 ; Transactions of the Moscow Mathematical Society Volume 76 ; 2015 >
 
-    }
+  }
+  
 }
