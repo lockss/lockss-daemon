@@ -9768,6 +9768,20 @@
   {
 
     title <
+      name = Emerging Economy Studies ;
+      issn = 2394-9015
+    >
+
+      param[base_url] = http://emi.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Emerging Economy Studies Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Emotion Review ;
       issn = 1754-0739 ;
       eissn = 1754-0747
@@ -10612,6 +10626,18 @@
       param[base_url] = http://eji.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2003 ; European Journal of Inflammation Volume 1 ; 1 ; >
+      au < exists ; exists ; 2004 ; European Journal of Inflammation Volume 2 ; 2 ; >
+      au < exists ; exists ; 2005 ; European Journal of Inflammation Volume 3 ; 3 ; >
+      au < exists ; exists ; 2006 ; European Journal of Inflammation Volume 4 ; 4 ; >
+      au < exists ; exists ; 2007 ; European Journal of Inflammation Volume 5 ; 5 ; >
+      au < exists ; exists ; 2008 ; European Journal of Inflammation Volume 6 ; 6 ; >
+      au < exists ; exists ; 2009 ; European Journal of Inflammation Volume 7 ; 7 ; >
+      au < exists ; exists ; 2010 ; European Journal of Inflammation Volume 8 ; 8 ; >
+      au < exists ; exists ; 2011 ; European Journal of Inflammation Volume 9 ; 9 ; >
+      au < exists ; exists ; 2012 ; European Journal of Inflammation Volume 10 ; 10 ; >
+      au < exists ; exists ; 2013 ; European Journal of Inflammation Volume 11 ; 11 ; >
+      au < exists ; exists ; 2014 ; European Journal of Inflammation Volume 12 ; 12 ; >
       au < exists ; exists ; 2015 ; European Journal of Inflammation Volume 13 ; 13 ; >
   }
 
@@ -19918,6 +19944,20 @@
       au < manifest ; exists ; 2015 ; Journal of Correctional Health Care Volume 21 ; 21 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Creating Value ;
+      issn = 2394-9643
+    >
+
+      param[base_url] = http://jcv.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Journal of Creating Value Volume 1 ; 1 ; >
 
   }
 
