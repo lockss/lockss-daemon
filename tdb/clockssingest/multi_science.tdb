@@ -7,8 +7,8 @@
     info[tester] = 8
   >
 
-  plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
-  param[base_url] = http://multi-science.metapress.com/
+  plugin = org.lockss.plugin.atypon.multiscience.ClockssMultiScienceAtyponPlugin
+  param[base_url] = http://multi-science.atypon.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
@@ -18,7 +18,7 @@
       issn = 0263-6174
     >
 
-    param[journal_issn] = 0263-6174
+    param[journal_id] = ast
 
     au < doNotProcess ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
     au < doNotProcess ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
@@ -30,11 +30,12 @@
     au < doNotProcess ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
     au < doNotProcess ; exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
     au < doNotProcess ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
-    au < finished ; frozen ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
-    au < finished ; frozen ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
-    au < finished ; crawling ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
-    au < down ; exists ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 >
-    au < doNotProcess ; exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 >
+    au < exists ; exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 >
+    au < expected ; exists ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 >
 
   }
 
@@ -45,7 +46,7 @@
       issn = 1369-4332
     >
 
-    param[journal_issn] = 1369-4332
+    param[journal_id] = ase
 
     au < doNotProcess ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
     au < doNotProcess ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
@@ -57,11 +58,12 @@
     au < doNotProcess ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 >
     au < doNotProcess ; exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 >
     au < doNotProcess ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 >
-    au < finished ; frozen ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >
-    au < finished ; frozen ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
-    au < finished ; crawling ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
-    au < down ; exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
-    au < doNotProcess ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
+    au < exists ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
+    au < expected ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 >
 
   }
 
@@ -72,7 +74,7 @@
       issn = 1351-010X
     >
 
-    param[journal_issn] = 1351-010X
+    param[journal_id] = ba
 
     au < doNotProcess ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 >
     au < doNotProcess ; exists ; 2000 ; Building Acoustics Volume 7 ; 7 >
@@ -85,11 +87,12 @@
     au < doNotProcess ; exists ; 2007 ; Building Acoustics Volume 14 ; 14 >
     au < doNotProcess ; exists ; 2008 ; Building Acoustics Volume 15 ; 15 >
     au < doNotProcess ; exists ; 2009 ; Building Acoustics Volume 16 ; 16 >
-    au < finished ; frozen ; 2010 ; Building Acoustics Volume 17 ; 17 >
-    au < finished ; frozen ; 2011 ; Building Acoustics Volume 18 ; 18 >
-    au < finished ; crawling ; 2012 ; Building Acoustics Volume 19 ; 19 >
-    au < down ; exists ; 2013 ; Building Acoustics Volume 20 ; 20 >
-    au < doNotProcess ; exists ; 2014 ; Building Acoustics Volume 21 ; 21 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Building Acoustics Volume 17 ; 17 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Building Acoustics Volume 20 ; 20 >
+    au < exists ; exists ; 2014 ; Building Acoustics Volume 21 ; 21 >
+    au < expected ; exists ; 2015 ; Building Acoustics Volume 22 ; 22 >
 
   }
 
@@ -100,7 +103,7 @@
       issn = 0958-305X
     >
 
-    param[journal_issn] = 0958-305X
+    param[journal_id] = ee
 
     au < doNotProcess ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 >
     au < doNotProcess ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 >
@@ -113,11 +116,12 @@
     au < doNotProcess ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 >
     au < doNotProcess ; exists ; 2008 ; Energy & Environment Volume 19 ; 19 >
     au < doNotProcess ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 >
-    au < finished ; frozen ; 2010 ; Energy & Environment Volume 21 ; 21 >
-    au < finished ; frozen ; 2011 ; Energy & Environment Volume 22 ; 22 >
-    au < finished ; crawling ; 2012 ; Energy & Environment Volume 23 ; 23 >
-    au < down ; exists ; 2013 ; Energy & Environment Volume 24 ; 24 >
-    au < doNotProcess ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Energy & Environment Volume 21 ; 21 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Energy & Environment Volume 22 ; 22 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Energy & Environment Volume 23 ; 23 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Energy & Environment Volume 24 ; 24 >
+    au < exists ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 >
+    au < expected ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 >
 
   }
 
@@ -128,7 +132,7 @@
       issn = 0144-5987
     >
 
-    param[journal_issn] = 0144-5987
+    param[journal_id] = eee
 
     au < doNotProcess ; exists ; 2000 ; Energy, Exploration & Exploitation Volume 18 ; 18 >
     au < doNotProcess ; exists ; 2001 ; Energy, Exploration & Exploitation Volume 19 ; 19 >
@@ -140,11 +144,12 @@
     au < doNotProcess ; exists ; 2007 ; Energy, Exploration & Exploitation Volume 25 ; 25 >
     au < doNotProcess ; exists ; 2008 ; Energy, Exploration & Exploitation Volume 26 ; 26 >
     au < doNotProcess ; exists ; 2009 ; Energy, Exploration & Exploitation Volume 27 ; 27 >
-    au < finished ; frozen ; 2010 ; Energy, Exploration & Exploitation Volume 28 ; 28 >
-    au < finished ; frozen ; 2011 ; Energy, Exploration & Exploitation Volume 29 ; 29 >
-    au < finished ; crawling ; 2012 ; Energy, Exploration & Exploitation Volume 30 ; 30 >
-    au < down ; exists ; 2013 ; Energy, Exploration & Exploitation Volume 31 ; 31 >
-    au < doNotProcess ; exists ; 2014 ; Energy, Exploration & Exploitation Volume 32 ; 32 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Energy, Exploration & Exploitation Volume 28 ; 28 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Energy, Exploration & Exploitation Volume 29 ; 29 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Energy, Exploration & Exploitation Volume 30 ; 30 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Energy, Exploration & Exploitation Volume 31 ; 31 >
+    au < exists ; exists ; 2014 ; Energy, Exploration & Exploitation Volume 32 ; 32 >
+    au < expected ; exists ; 2015 ; Energy, Exploration & Exploitation Volume 33 ; 33 >
 
   }
 
@@ -155,7 +160,7 @@
       issn = 1475-472X
     >
 
-    param[journal_issn] = 1475-472X
+    param[journal_id] = ija
 
     au < doNotProcess ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 >
@@ -165,11 +170,12 @@
     au < doNotProcess ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 >
     au < doNotProcess ; exists ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 >
     au < doNotProcess ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 >
-    au < finished ; frozen ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 >
-    au < finished ; frozen ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 >
-    au < finished ; crawling ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 >
-    au < down ; exists ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
+    au < exists ; exists ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
+    au < expected ; exists ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 >
 
   }
 
@@ -181,14 +187,15 @@
       issn = 1757-2258
     >
 
-    param[journal_issn] = 1757-2258
+    param[journal_id] = ijai
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
-    au < finished ; frozen ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
-    au < finished ; frozen ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
-    au < down ; exists ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Aerospace Innovations Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; International Journal of Aerospace Innovations Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; International Journal of Aerospace Innovations Volume 7 ; 7 >
 
   }
 
@@ -200,7 +207,7 @@
       issn = 1478-0771
     >
 
-    param[journal_issn] = 1478-0771
+    param[journal_id] = ijac
 
     au < doNotProcess ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 >
@@ -209,11 +216,12 @@
     au < doNotProcess ; exists ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 >
     au < doNotProcess ; exists ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 >
     au < doNotProcess ; exists ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 >
-    au < finished ; frozen ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 >
-    au < finished ; frozen ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 >
-    au < finished ; crawling ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 >
-    au < down ; exists ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
+    au < exists ; exists ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
+    au < expected ; exists ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 >
 
   }
 
@@ -225,14 +233,15 @@
       issn = 1756-8315
     >
 
-    param[journal_issn] = 1756-8315
+    param[journal_id] = ijemf
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
-    au < finished ; frozen ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
-    au < finished ; frozen ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
     au < expected ; exists ; 2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 4 ; 4 >
     au < expected ; exists ; 2013 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 6 ; 6 >
+    au < exists ; exists ; 2014 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 7 ; 7 >
 
   }
 
@@ -244,14 +253,15 @@
       issn = 1756-8250
     >
 
-    param[journal_issn] = 1756-8250
+    param[journal_id] = 1756-8250
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
-    au < finished ; frozen ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
-    au < finished ; frozen ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
-    au < down ; exists ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
 
   }
 
@@ -263,10 +273,10 @@
       issn = 1759-3107
     >
 
-    param[journal_issn] = 1759-3107
+    param[journal_id] = 1759-3107
 
-    au < finished ; frozen ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
-    au < down ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
 
   }
 
@@ -278,14 +288,15 @@
       issn = 1757-2223
     >
 
-    param[journal_issn] = 1757-2223
+    param[journal_id] = 1757-2223
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
-    au < finished ; frozen ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
-    au < finished ; frozen ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
-    au < finished ; crawling ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 >
 
   }
 
@@ -297,14 +308,15 @@
       issn = 1756-8293
     >
 
-    param[journal_issn] = 1756-8293
+    param[journal_id] = 1756-8293
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
-    au < finished ; frozen ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
-    au < finished ; frozen ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 >
-    au < finished ; crawling ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 >
 
   }
 
@@ -316,13 +328,14 @@
       issn = 1759-3093
     >
 
-    param[journal_issn] = 1759-3093
+    param[journal_id] = 1759-3093
 
-    au < finished ; crawling ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
-    au < finished ; frozen ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
-    au < down ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
+    au < exists ; exists ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
+    au < expected ; exists ; 2015 ; International Journal of Micro-Nano Scale Transport Volume 6 ; 6 >
 
   }
 
@@ -334,13 +347,14 @@
       issn = 2041-4196
     >
 
-    param[journal_issn] = 2041-4196
+    param[journal_id] = 2041-4196
 
-    au < finished ; frozen ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 >
-    au < finished ; frozen ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
-    au < finished ; crawling ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
+    au < exists ; exists ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 >
+    au < expected ; exists ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 >
 
   }
 
@@ -352,7 +366,7 @@
       issn = 0266-3511
     >
 
-    param[journal_issn] = 0266-3511
+    param[journal_id] = 0266-3511
 
     au < doNotProcess ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 >
     au < doNotProcess ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 >
@@ -365,11 +379,12 @@
     au < doNotProcess ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 >
     au < doNotProcess ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 >
     au < doNotProcess ; exists ; 2009 ; International Journal of Space Structures Volume 24 ; 24 >
-    au < finished ; frozen ; 2010 ; International Journal of Space Structures Volume 25 ; 25 >
-    au < finished ; frozen ; 2011 ; International Journal of Space Structures Volume 26 ; 26 >
-    au < finished ; crawling ; 2012 ; International Journal of Space Structures Volume 27 ; 27 >
-    au < down ; exists ; 2013 ; International Journal of Space Structures Volume 28 ; 28 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Space Structures Volume 29 ; 29 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Space Structures Volume 25 ; 25 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Space Structures Volume 26 ; 26 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Space Structures Volume 27 ; 27 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Space Structures Volume 28 ; 28 >
+    au < exists ; exists ; 2014 ; International Journal of Space Structures Volume 29 ; 29 >
+    au < expected ; exists ; 2015 ; International Journal of Space Structures Volume 30 ; 30 >
 
   }
 
@@ -381,17 +396,18 @@
       issn = 1747-9541
     >
 
-    param[journal_issn] = 1747-9541
+    param[journal_id] = 1747-9541
 
     au < doNotProcess ; exists ; 2006 ; International Journal of Sport Science and Coaching Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2007 ; International Journal of Sport Science and Coaching Volume 2 ; 2 >
     au < doNotProcess ; exists ; 2008 ; International Journal of Sport Science and Coaching Volume 3 ; 3 >
     au < doNotProcess ; exists ; 2009 ; International Journal of Sport Science and Coaching Volume 4 ; 4 >
-    au < finished ; frozen ; 2010 ; International Journal of Sport Science and Coaching Volume 5 ; 5 >
-    au < finished ; frozen ; 2011 ; International Journal of Sport Science and Coaching Volume 6 ; 6 >
-    au < finished ; crawling ; 2012 ; International Journal of Sport Science and Coaching Volume 7 ; 7 >
-    au < down ; exists ; 2013 ; International Journal of Sport Science and Coaching Volume 8 ; 8 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Sport Science and Coaching Volume 9 ; 9 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sport Science and Coaching Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sport Science and Coaching Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sport Science and Coaching Volume 7 ; 7 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Sport Science and Coaching Volume 8 ; 8 >
+    au < exists ; exists ; 2014 ; International Journal of Sport Science and Coaching Volume 9 ; 9 >
+    au < expected ; exists ; 2015 ; International Journal of Sport Science and Coaching Volume 10 ; 10 >
 
   }
 
@@ -403,14 +419,15 @@
       issn = 1756-8277
     >
 
-    param[journal_issn] = 1756-8277
+    param[journal_id] = 1756-8277
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
-    au < finished ; frozen ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
-    au < finished ; frozen ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 >
-    au < finished ; crawling ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 >
 
   }
 
@@ -422,16 +439,17 @@
       issn = 1748-3018
     >
 
-    param[journal_issn] = 1748-3018
+    param[journal_id] = 1748-3018
 
     au < doNotProcess ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
     au < doNotProcess ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 >
-    au < finished ; frozen ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 >
-    au < finished ; frozen ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 >
-    au < finished ; crawling ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 >
-    au < down ; exists ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 >
-    au < doNotProcess ; exists ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 >
+    au < exists ; exists ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 >
+    au < expected ; exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 >
 
   }
 
@@ -443,13 +461,14 @@
       issn = 2040-2295
     >
 
-    param[journal_issn] = 2040-2295
+    param[journal_id] = 2040-2295
 
-    au < finished ; frozen ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
-    au < finished ; frozen ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
-    au < finished ; crawling ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
+    au < exists ; exists ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 >
+    au < expected ; exists ; 2015 ; Journal of Healthcare Engineering Volume 6 ; 6 >
 
   }
 
@@ -461,13 +480,14 @@
       issn = 2040-2317
     >
 
-    param[journal_issn] = 2040-2317
+    param[journal_id] = 2040-2317
 
-    au < finished ; frozen ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
-    au < finished ; frozen ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
-    au < finished ; crawling ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
+    au < exists ; exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 >
+    au < expected ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 >
 
   }
 
@@ -479,7 +499,7 @@
       issn = 0263-0923
     >
 
-    param[journal_issn] = 0263-0923
+    param[journal_id] = 0263-0923
 
     au < doNotProcess ; exists ; 2000 ; Low Frequency Noise & Vibration and Active Control Volume 19 ; 19 >
     au < doNotProcess ; exists ; 2001 ; Low Frequency Noise & Vibration and Active Control Volume 20 ; 20 >
@@ -491,11 +511,12 @@
     au < doNotProcess ; exists ; 2007 ; Low Frequency Noise & Vibration and Active Control Volume 26 ; 26 >
     au < doNotProcess ; exists ; 2008 ; Low Frequency Noise & Vibration and Active Control Volume 27 ; 27 >
     au < doNotProcess ; exists ; 2009 ; Low Frequency Noise & Vibration and Active Control Volume 28 ; 28 >
-    au < finished ; frozen ; 2010 ; Low Frequency Noise & Vibration and Active Control Volume 29 ; 29 >
-    au < finished ; frozen ; 2011 ; Low Frequency Noise & Vibration and Active Control Volume 30 ; 30 >
-    au < finished ; crawling ; 2012 ; Low Frequency Noise & Vibration and Active Control Volume 31 ; 31 >
-    au < down ; exists ; 2013 ; Low Frequency Noise & Vibration and Active Control Volume 32 ; 32 >
-    au < doNotProcess ; exists ; 2014 ; Low Frequency Noise & Vibration and Active Control Volume 33 ; 33 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Low Frequency Noise & Vibration and Active Control Volume 29 ; 29 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Low Frequency Noise & Vibration and Active Control Volume 30 ; 30 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Low Frequency Noise & Vibration and Active Control Volume 31 ; 31 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Low Frequency Noise & Vibration and Active Control Volume 32 ; 32 >
+    au < exists ; exists ; 2014 ; Low Frequency Noise & Vibration and Active Control Volume 33 ; 33 >
+    au < expected ; exists ; 2015 ; Low Frequency Noise & Vibration and Active Control Volume 34 ; 34 >
 
   }
 
@@ -507,12 +528,13 @@
       issn = 0957-4565
     >
 
-    param[journal_issn] = 0957-4565
+    param[journal_id] = 0957-4565
 
-    au < finished ; frozen ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
-    au < finished ; crawling ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
-    au < down ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 >
-    au < doNotProcess ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 >
+    au < exists ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 >
+    au < expected ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 >
 
   }
 
@@ -524,7 +546,7 @@
       issn = 1475-4738
     >
 
-    param[journal_issn] = 1475-4738
+    param[journal_id] = 1475-4738
 
     au < doNotProcess ; exists ; 2002 ; Noise Notes Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2003 ; Noise Notes Volume 2 ; 2 >
@@ -535,10 +557,11 @@
     au < doNotProcess ; exists ; 2008 ; Noise Notes Volume 7 ; 7 >
     au < doNotProcess ; exists ; 2009 ; Noise Notes Volume 8 ; 8 >
     au < doNotProcess ; exists ; 2010 ; Noise Notes Volume 9 ; 9 >
-    au < down ; exists ; 2011 ; Noise Notes Volume 10 ; 10 >
-    au < down ; exists ; 2012 ; Noise Notes Volume 11 ; 11 >
-    au < down ; exists ; 2013 ; Noise Notes Volume 12 ; 12 >
-    au < doNotProcess ; exists ; 2014 ; Noise Notes Volume 13 ; 13 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Noise Notes Volume 10 ; 10 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Noise Notes Volume 11 ; 11 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Noise Notes Volume 12 ; 12 >
+    au < exists ; exists ; 2014 ; Noise Notes Volume 13 ; 13 >
+    au < expected ; exists ; 2015 ; Noise Notes Volume 14 ; 14 >
 
   }
 
@@ -549,16 +572,17 @@
       issn = 1750-9548
     >
 
-    param[journal_issn] = 1750-9548
+    param[journal_id] = 1750-9548
 
     au < doNotProcess ; exists ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
     au < doNotProcess ; exists ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
-    au < finished ; frozen ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 >
-    au < finished ; frozen ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 >
-    au < finished ; crawling ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 >
-    au < down ; exists ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 >
-    au < doNotProcess ; exists ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 >
+    au < doNotProcess ; doNotProcess ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 >
+    au < exists ; exists ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 >
+    au < expected ; exists ; 2015 ; The International Journal of Multiphysics Volume 9 ; 9 >
 
   }
 
@@ -570,13 +594,14 @@
       issn = 1759-3131
     >
 
-    param[journal_issn] = 1759-3131
+    param[journal_id] = 1759-3131
 
-    au < finished ; frozen ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 >
-    au < finished ; frozen ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 >
-    au < finished ; crawling ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 >
+    au < exists ; exists ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 >
+    au < expected ; exists ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 ; 6 >
 
   }
 
@@ -588,14 +613,15 @@
       issn = 1757-482X
     >
 
-    param[journal_issn] = 1757-482X
+    param[journal_id] = 1757-482X
 
     au < doNotProcess ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
-    au < finished ; frozen ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
-    au < finished ; frozen ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
-    au < finished ; crawling ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
+    au < exists ; exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 >
 
   }
 
@@ -607,7 +633,7 @@
       issn = 0309-524X
     >
 
-    param[journal_issn] = 0309-524X
+    param[journal_id] = 0309-524X
 
     au < doNotProcess ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 >
     au < doNotProcess ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 >
@@ -619,11 +645,12 @@
     au < doNotProcess ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 >
     au < doNotProcess ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 >
     au < doNotProcess ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 >
-    au < finished ; frozen ; 2010 ; Wind Engineering Volume 34 ; 34 >
-    au < finished ; frozen ; 2011 ; Wind Engineering Volume 35 ; 35 >
-    au < finished ; crawling ; 2012 ; Wind Engineering Volume 36 ; 36 >
-    au < down ; exists ; 2013 ; Wind Engineering Volume 37 ; 37 >
-    au < doNotProcess ; exists ; 2014 ; Wind Engineering Volume 38 ; 38 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Wind Engineering Volume 34 ; 34 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Wind Engineering Volume 37 ; 37 >
+    au < exists ; exists ; 2014 ; Wind Engineering Volume 38 ; 38 >
+    au < expected ; exists ; 2015 ; Wind Engineering Volume 39 ; 39 >
 
   }
 
@@ -634,12 +661,13 @@
       issn = 1708-5284
     >
 
-    param[journal_issn] = 1708-5284
+    param[journal_id] = 1708-5284
 
-    au < finished ; frozen ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
-    au < finished ; crawling ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
-    au < down ; exists ; 2013 ; World Journal of Engineering Volume 10 ; 10 >
-    au < doNotProcess ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 >
+    au < doNotProcess ; doNotProcess ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
+    au < doNotProcess ; doNotProcess ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
+    au < doNotProcess ; doNotProcess ; 2013 ; World Journal of Engineering Volume 10 ; 10 >
+    au < exists ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 >
+    au < expected ; exists ; 2015 ; World Journal of Engineering Volume 12 ; 12 >
 
   }
 
