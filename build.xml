@@ -287,7 +287,7 @@ Args:
   <property name="javatar.jar" value="${lib}/javagnutar.jar" />
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
-  <property name="jsoup.jar" value="${lib}/jsoup-1.7.3.jar"/>
+  <property name="jsoup.jar" value="${lib}/jsoup-1.8.2.jar"/>
   <property name="apiviz.jar"     value="${lib}/apiviz-1.3.1.jar"/>
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
