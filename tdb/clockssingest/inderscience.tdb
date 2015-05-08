@@ -92,7 +92,7 @@
         issnl = 1741-640X
       >
 
-      param[journal_id] = 1741-6418
+      param[journal_id] = afp
 
       au < doNotProcess ; doNotProcess ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
@@ -111,7 +111,7 @@
         issnl = 1754-7318
       >
 
-      param[journal_id] = 1754-7326
+      param[journal_id] = tbj
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2011-2013 ; The Botulinum Journal Volume 2 ; 2 >
@@ -128,7 +128,7 @@
         issnl = 1740-7494
       >
 
-      param[journal_id] = 1740-7508
+      param[journal_id] = eg
 
       au < doNotProcess ; exists ; 2004 ; Electronic Government, an International Journal Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2005 ; Electronic Government, an International Journal Volume 2 ; 2 >
@@ -153,7 +153,7 @@
         issnl = 1758-1508
       >
 
-      param[journal_id] = 1758-1516
+      param[journal_id] = ejccm
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
@@ -170,7 +170,7 @@
         issnl = 1751-5254
       >
 
-      param[journal_id] = 1751-5262
+      param[journal_id] = ejie
 
       au < doNotProcess ; exists ; 2007 ; European Journal of Industrial Engineering Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2008 ; European Journal of Industrial Engineering Volume 2 ; 2 >
@@ -192,7 +192,7 @@
         issnl = 1751-6757
       >
 
-      param[journal_id] = 1751-6765
+      param[journal_id] = ejim
 
       au < doNotProcess ; exists ; 2007 ; European Journal of International Management Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2008 ; European Journal of International Management Volume 2 ; 2 >
@@ -214,7 +214,7 @@
         issnl = 1097-4954
       >
 
-      param[journal_id] = 1745-1329
+      param[journal_id] = gber
 
       au < doNotProcess ; exists ; 1999 ; Global Business and Economics Review Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2000 ; Global Business and Economics Review Volume 2 ; 2 >
@@ -244,7 +244,7 @@
         issnl = 1752-2641
       >
 
-      param[journal_id] = 1752-265X
+      param[journal_id] = ijat
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Abrasive Technology Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 >
@@ -265,7 +265,7 @@
         issnl = 1752-8224
       >
 
-      param[journal_id] = 1752-8232
+      param[journal_id] = ijaf
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
@@ -284,7 +284,7 @@
         issnl = 1740-8008
       >
 
-      param[journal_id] = 1740-8016
+      param[journal_id] = ijaape
 
       au < doNotProcess ; exists ; 2004 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2005 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 2 ; 2 >
@@ -308,7 +308,7 @@
         issnl = 1743-8225
       >
 
-      param[journal_id] = 1743-8233
+      param[journal_id] = ijahuc
 
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 2 ; 2 >
@@ -339,9 +339,10 @@
         issnl = 1740-2107
       >
 
-      param[journal_id] = 1740-2115
+      param[journal_id] = ijais
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
+      au < exists ; exists ; 2014 ; International Journal of Adaptive and Innovative Systems Volume 2 ; 2 >
 
     }
 
@@ -354,7 +355,7 @@
         issnl = 1755-0386
       >
 
-      param[journal_id] = 1755-0394
+      param[journal_id] = ijaip
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Advanced Intelligence Paradigms Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Advanced Intelligence Paradigms Volume 2 ; 2 >
@@ -374,7 +375,7 @@
         issnl = 1756-8412
       >
 
-      param[journal_id] = 1756-8420
+      param[journal_id] = ijamechs
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Advanced Mechatronic Systems Volume 1 ; 1 > 
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Advanced Mechatronic Systems Volume 2 ; 2 > 
@@ -394,7 +395,7 @@
         issnl = 1462-4613
       >
 
-      param[journal_id] = 1741-8003
+      param[journal_id] = ijamc
       comment[0] = no issue in 2011 & 2012
 
       au < doNotProcess ; exists ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 >
@@ -415,7 +416,7 @@
         issnl = 1758-938X
       >
 
-      param[journal_id] = 1758-9398
+      param[journal_id] = ijaom
 
       au < doNotProcess ; exists ; 2009 ; International Journal of Advanced Operations Management Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 >
@@ -435,7 +436,7 @@
         issnl = 1743-5447
       >
 
-      param[journal_id] = 1743-5455
+      param[journal_id] = ijad
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Aerodynamics Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aerodynamics Volume 2 ; 2 >
@@ -453,7 +454,7 @@
         issnl = 1746-1375
       >
 
-      param[journal_id] = 1746-1383
+      param[journal_id] = ijaose
       comment[0] = no issue in 2012
 
       au < doNotProcess ; exists ; 2007 ; International Journal of Agent-Oriented Software Engineering Volume 1 ; 1 >
@@ -474,7 +475,7 @@
         issnl = 1743-5137
       >
 
-      param[journal_id] = 1743-5145
+      param[journal_id] = ijaesd
 
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Agile and Extreme Software Development Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Agile and Extreme Software Development Volume 2 ; 2 >
@@ -491,7 +492,7 @@
         issnl = 1741-9174
       >
 
-      param[journal_id] = 1741-9182
+      param[journal_id] = ijasm
 
       au < doNotProcess ; exists ; 2006 ; International Journal of Agile Systems and Management Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007 ; International Journal of Agile Systems and Management Volume 2 ; 2 >
@@ -512,7 +513,7 @@
         issnl = 1462-4605
       >
 
-      param[journal_id] = 1741-5004
+      param[journal_id] = ijarge
       comment[0] = no issue in 2010, 2013
 
       au < doNotProcess ; exists ; 2000-2001 ; International Journal of Agricultural Resources, Governance and Ecology Volume 1 ; 1 >
@@ -537,7 +538,7 @@
         issnl = 1471-0234
       >
 
-      param[journal_id] = 1741-8011
+      param[journal_id] = ijap
 
       au < doNotProcess ; exists ; 2006-2007 ; International Journal of Alternative Propulsion Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2008-2012 ; International Journal of Alternative Propulsion Volume 2 ; 2 >
@@ -555,7 +556,7 @@
         issnl = 1753-0563
       >
 
-      param[journal_id] = 1753-0571
+      param[journal_id] = ijact
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Applied Cryptography Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Applied Cryptography Volume 2 ; 2 >
@@ -573,7 +574,7 @@
         issnl = 1755-8077
       >
 
-      param[journal_id] = 1755-8085
+      param[journal_id] = ijads
 
       au < doNotProcess ; exists ; 2008 ; International Journal of Applied Decision Sciences Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Applied Decision Sciences Volume 2 ; 2 >
@@ -594,7 +595,7 @@
         issnl = 1755-8913
       >
 
-      param[journal_id] = 1755-8921
+      param[journal_id] = ijams
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Applied Management Science Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Applied Management Science Volume 2 ; 2 >
@@ -614,7 +615,7 @@
         issnl = 1752-2862
       >
 
-      param[journal_id] = 1752-2870
+      param[journal_id] = ijans
 
       au < doNotProcess ; exists ; 2013 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 >
@@ -630,7 +631,7 @@
         issnl = 2049-887X
       >
 
-      param[journal_id] = 2049-8888
+      param[journal_id] = ijapr
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; International Journal of Applied Pattern Recognition Volume 2 ; 2 >
@@ -8226,7 +8227,7 @@
         issnl = 1521-0227
       >
 
-      param[journal_id] = 2042-6992
+      param[journal_id] = ier
 
       au < doNotProcess ; doNotProcess ; 2010 ; Interdisciplinary Environmental Review Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2011 ; Interdisciplinary Environmental Review Volume 12 ; 12 >
