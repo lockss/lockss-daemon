@@ -22,13 +22,13 @@
     
     param[journal_issn] = 1755-1978
     
-    au < manifest ; exists ; 2007 ; Enterprise Development & Microfinance Volume 18 ; 18 >
-    au < manifest ; exists ; 2008 ; Enterprise Development & Microfinance Volume 19 ; 19 >
-    au < manifest ; exists ; 2009 ; Enterprise Development & Microfinance Volume 20 ; 20 >
-    au < manifest ; exists ; 2010 ; Enterprise Development & Microfinance Volume 21 ; 21 >
-    au < manifest ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 >
-    au < manifest ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 >
-    au < crawling ; exists ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 >
+    au < doNotProcess ; exists ; 2007 ; Enterprise Development & Microfinance Volume 18 ; 18 >
+    au < doNotProcess ; exists ; 2008 ; Enterprise Development & Microfinance Volume 19 ; 19 >
+    au < doNotProcess ; exists ; 2009 ; Enterprise Development & Microfinance Volume 20 ; 20 >
+    au < doNotProcess ; exists ; 2010 ; Enterprise Development & Microfinance Volume 21 ; 21 >
+    au < doNotProcess ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 >
+    au < doNotProcess ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 >
+    au < down ; exists ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 >
     au < doNotProcess ; exists ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 >
     
   }
@@ -42,9 +42,9 @@
     
     param[journal_issn] = 2046-1879
     
-    au < manifest ; exists ; 2011 ; Foodchain Volume 1 ; 1 >
-    au < manifest ; exists ; 2012 ; Foodchain Volume 2 ; 2 >
-    au < crawling ; exists ; 2013 ; Foodchain Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 2011 ; Foodchain Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 2012 ; Foodchain Volume 2 ; 2 >
+    au < down ; exists ; 2013 ; Foodchain Volume 3 ; 3 >
     au < doNotProcess ; exists ; 2014 ; Foodchain Volume 4 ; 4 >
   }
   
@@ -57,24 +57,24 @@
     
     param[journal_issn] = 0957-1329
     
-    au < manifest ; exists ; 1990 ; Small Enterprise Development Volume 1 ; 1 >
-    au < manifest ; exists ; 1991 ; Small Enterprise Development Volume 2 ; 2 >
-    au < manifest ; exists ; 1992 ; Small Enterprise Development Volume 3 ; 3 >
-    au < manifest ; exists ; 1993 ; Small Enterprise Development Volume 4 ; 4 >
-    au < manifest ; exists ; 1994 ; Small Enterprise Development Volume 5 ; 5 >
-    au < manifest ; exists ; 1995 ; Small Enterprise Development Volume 6 ; 6 >
-    au < manifest ; exists ; 1996 ; Small Enterprise Development Volume 7 ; 7 >
-    au < manifest ; exists ; 1997 ; Small Enterprise Development Volume 8 ; 8 >
-    au < manifest ; exists ; 1998 ; Small Enterprise Development Volume 9 ; 9 >
-    au < manifest ; exists ; 1999 ; Small Enterprise Development Volume 10 ; 10 >
-    au < manifest ; exists ; 2000 ; Small Enterprise Development Volume 11 ; 11 >
-    au < manifest ; exists ; 2001 ; Small Enterprise Development Volume 12 ; 12 >
-    au < manifest ; exists ; 2002 ; Small Enterprise Development Volume 13 ; 13 >
-    au < manifest ; exists ; 2003 ; Small Enterprise Development Volume 14 ; 14 >
-    au < manifest ; exists ; 2004 ; Small Enterprise Development Volume 15 ; 15 >
-    au < manifest ; exists ; 2005 ; Small Enterprise Development Volume 16 ; 16 >
-    au < manifest ; exists ; 2006 ; Small Enterprise Development Volume 17 ; 17 >
-    au < manifest ; exists ; 2007 ; Small Enterprise Development Volume 18 ; 18 >
+    au < doNotProcess ; exists ; 1990 ; Small Enterprise Development Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 1991 ; Small Enterprise Development Volume 2 ; 2 >
+    au < doNotProcess ; exists ; 1992 ; Small Enterprise Development Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 1993 ; Small Enterprise Development Volume 4 ; 4 >
+    au < doNotProcess ; exists ; 1994 ; Small Enterprise Development Volume 5 ; 5 >
+    au < doNotProcess ; exists ; 1995 ; Small Enterprise Development Volume 6 ; 6 >
+    au < doNotProcess ; exists ; 1996 ; Small Enterprise Development Volume 7 ; 7 >
+    au < doNotProcess ; exists ; 1997 ; Small Enterprise Development Volume 8 ; 8 >
+    au < doNotProcess ; exists ; 1998 ; Small Enterprise Development Volume 9 ; 9 >
+    au < doNotProcess ; exists ; 1999 ; Small Enterprise Development Volume 10 ; 10 >
+    au < doNotProcess ; exists ; 2000 ; Small Enterprise Development Volume 11 ; 11 >
+    au < doNotProcess ; exists ; 2001 ; Small Enterprise Development Volume 12 ; 12 >
+    au < doNotProcess ; exists ; 2002 ; Small Enterprise Development Volume 13 ; 13 >
+    au < doNotProcess ; exists ; 2003 ; Small Enterprise Development Volume 14 ; 14 >
+    au < doNotProcess ; exists ; 2004 ; Small Enterprise Development Volume 15 ; 15 >
+    au < doNotProcess ; exists ; 2005 ; Small Enterprise Development Volume 16 ; 16 >
+    au < doNotProcess ; exists ; 2006 ; Small Enterprise Development Volume 17 ; 17 >
+    au < doNotProcess ; exists ; 2007 ; Small Enterprise Development Volume 18 ; 18 >
   }
   
   {
@@ -86,38 +86,38 @@
     
     param[journal_issn] = 0262-8104
     
-    au < manifest ; exists ; 1982-1983 ; Waterlines Volume 1 ; 1 >
-    au < manifest ; exists ; 1983-1984 ; Waterlines Volume 2 ; 2 >
-    au < manifest ; exists ; 1984-1985 ; Waterlines Volume 3 ; 3 >
-    au < manifest ; exists ; 1985-1986 ; Waterlines Volume 4 ; 4 >
-    au < manifest ; exists ; 1986-1987 ; Waterlines Volume 5 ; 5 >
-    au < manifest ; exists ; 1987-1988 ; Waterlines Volume 6 ; 6 >
-    au < manifest ; exists ; 1988-1989 ; Waterlines Volume 7 ; 7 >
-    au < manifest ; exists ; 1989-1990 ; Waterlines Volume 8 ; 8 >
-    au < manifest ; exists ; 1990-1991 ; Waterlines Volume 9 ; 9 >
-    au < manifest ; exists ; 1991-1992 ; Waterlines Volume 10 ; 10 >
-    au < manifest ; exists ; 1992-1993 ; Waterlines Volume 11 ; 11 >
-    au < manifest ; exists ; 1993-1994 ; Waterlines Volume 12 ; 12 >
-    au < manifest ; exists ; 1994-1995 ; Waterlines Volume 13 ; 13 >
-    au < manifest ; exists ; 1995-1996 ; Waterlines Volume 14 ; 14 >
-    au < manifest ; exists ; 1996-1997 ; Waterlines Volume 15 ; 15 >
-    au < manifest ; exists ; 1997-1998 ; Waterlines Volume 16 ; 16 >
-    au < manifest ; exists ; 1998-1999 ; Waterlines Volume 17 ; 17 >
-    au < manifest ; exists ; 1999-2000 ; Waterlines Volume 18 ; 18 >
-    au < manifest ; exists ; 2000-2001 ; Waterlines Volume 19 ; 19 >
-    au < manifest ; exists ; 2001-2002 ; Waterlines Volume 20 ; 20 >
-    au < manifest ; exists ; 2002-2003 ; Waterlines Volume 21 ; 21 >
-    au < manifest ; exists ; 2003-2004 ; Waterlines Volume 22 ; 22 >
-    au < manifest ; exists ; 2004-2005 ; Waterlines Volume 23 ; 23 >
-    au < manifest ; exists ; 2005-2006 ; Waterlines Volume 24 ; 24 >
-    au < manifest ; exists ; 2006-2007 ; Waterlines Volume 25 ; 25 >
-    au < manifest ; exists ; 2007 ; Waterlines Volume 26 ; 26 >
-    au < manifest ; exists ; 2008 ; Waterlines Volume 27 ; 27 >
-    au < manifest ; exists ; 2009 ; Waterlines Volume 28 ; 28 >
-    au < manifest ; exists ; 2010 ; Waterlines Volume 29 ; 29 >
-    au < manifest ; exists ; 2011 ; Waterlines Volume 30 ; 30 >
-    au < manifest ; exists ; 2012 ; Waterlines Volume 31 ; 31 >
-    au < crawling ; exists ; 2013 ; Waterlines Volume 32 ; 32 >
+    au < doNotProcess ; exists ; 1982-1983 ; Waterlines Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 1983-1984 ; Waterlines Volume 2 ; 2 >
+    au < doNotProcess ; exists ; 1984-1985 ; Waterlines Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 1985-1986 ; Waterlines Volume 4 ; 4 >
+    au < doNotProcess ; exists ; 1986-1987 ; Waterlines Volume 5 ; 5 >
+    au < doNotProcess ; exists ; 1987-1988 ; Waterlines Volume 6 ; 6 >
+    au < doNotProcess ; exists ; 1988-1989 ; Waterlines Volume 7 ; 7 >
+    au < doNotProcess ; exists ; 1989-1990 ; Waterlines Volume 8 ; 8 >
+    au < doNotProcess ; exists ; 1990-1991 ; Waterlines Volume 9 ; 9 >
+    au < doNotProcess ; exists ; 1991-1992 ; Waterlines Volume 10 ; 10 >
+    au < doNotProcess ; exists ; 1992-1993 ; Waterlines Volume 11 ; 11 >
+    au < doNotProcess ; exists ; 1993-1994 ; Waterlines Volume 12 ; 12 >
+    au < doNotProcess ; exists ; 1994-1995 ; Waterlines Volume 13 ; 13 >
+    au < doNotProcess ; exists ; 1995-1996 ; Waterlines Volume 14 ; 14 >
+    au < doNotProcess ; exists ; 1996-1997 ; Waterlines Volume 15 ; 15 >
+    au < doNotProcess ; exists ; 1997-1998 ; Waterlines Volume 16 ; 16 >
+    au < doNotProcess ; exists ; 1998-1999 ; Waterlines Volume 17 ; 17 >
+    au < doNotProcess ; exists ; 1999-2000 ; Waterlines Volume 18 ; 18 >
+    au < doNotProcess ; exists ; 2000-2001 ; Waterlines Volume 19 ; 19 >
+    au < doNotProcess ; exists ; 2001-2002 ; Waterlines Volume 20 ; 20 >
+    au < doNotProcess ; exists ; 2002-2003 ; Waterlines Volume 21 ; 21 >
+    au < doNotProcess ; exists ; 2003-2004 ; Waterlines Volume 22 ; 22 >
+    au < doNotProcess ; exists ; 2004-2005 ; Waterlines Volume 23 ; 23 >
+    au < doNotProcess ; exists ; 2005-2006 ; Waterlines Volume 24 ; 24 >
+    au < doNotProcess ; exists ; 2006-2007 ; Waterlines Volume 25 ; 25 >
+    au < doNotProcess ; exists ; 2007 ; Waterlines Volume 26 ; 26 >
+    au < doNotProcess ; exists ; 2008 ; Waterlines Volume 27 ; 27 >
+    au < doNotProcess ; exists ; 2009 ; Waterlines Volume 28 ; 28 >
+    au < doNotProcess ; exists ; 2010 ; Waterlines Volume 29 ; 29 >
+    au < doNotProcess ; exists ; 2011 ; Waterlines Volume 30 ; 30 >
+    au < doNotProcess ; exists ; 2012 ; Waterlines Volume 31 ; 31 >
+    au < down ; exists ; 2013 ; Waterlines Volume 32 ; 32 >
     au < doNotProcess ; exists ; 2014 ; Waterlines Volume 33 ; 33 >
   }
   
