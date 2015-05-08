@@ -50,7 +50,39 @@ public class TestAsmHtmlCrawlFilterFactory extends LockssTestCase {
           "(<span class=\"xref\"><a href=\"#b5\">5</a></span>, <span class=\"xref\"><a href=\"#b6\">6</a></span>)." +
           "</p>"; 
 
+  private static final String navigatorJournalHtml=
+  "    <div class=\"articlenav\">" +
+  "<ul class=\"flat navigate-resources bobby\">" +
+  "<li class=\"previousLinkContainer\">" +
+ " <a title=\"\" href=\"/content/journal/\">« Previous Article</a>" +
+  "</li>" +
+  "<li class=\"indexLinkContainer\">" +
+  "<a title=\"\" href=\"/content/journal/microbiolspec/3/2\">Table of Contents</a>" +
+  "</li>" +
+  "<li class=\"nextLinkContainer\">" +
+  "<a title=\"\" href=\"/content/journal/\">Next Article »</a>" +
+  "</li>" +
+  "</ul>" +
+  "</div>";
+  
+  private static final String navJournalFiltered=
+  "    ";
 
+  private static final String navigatorBookHtml=
+  "<div id=\"nextprevChapter\">" +
+  "    <ul class=\"flat navigate-resources bobby\">" +
+  "<li class=\"previousLinkContainer\"><a title=\"\" href=\"/content/book/\">« Previous Chapter</a></li>" +
+  "<li class=\"indexLinkContainer\"><a title=\"\" href=\"/content/book/\">Table of Contents</a></li>" +
+  "<li class=\"nextLinkContainer\"><a title=\"\" href=\"/content/book/\">Next Chapter »</a></li>" +
+  "</ul>" +
+  "</div>";
+  
+  private static final String navBookFiltered=
+  "<div id=\"nextprevChapter\">" +
+  "    <ul class=\"flat navigate-resources bobby\">" +
+  "</ul>" +
+  "</div>";
+  
   public void testXrefFiltering() throws Exception {
     InputStream inStream;
     inStream = fact.createFilteredInputStream(mau,
@@ -65,8 +97,20 @@ public class TestAsmHtmlCrawlFilterFactory extends LockssTestCase {
         new StringInputStream(withArticleUpdate),
         Constants.DEFAULT_ENCODING);
     assertEquals(withArticleUpdateFiltered, StringUtil.fromInputStream(inStream));
+  }
 
-
+    public void testNavigatorFiltering() throws Exception {
+      InputStream inStream;
+      inStream = fact.createFilteredInputStream(mau,
+          new StringInputStream(navigatorJournalHtml),
+          Constants.DEFAULT_ENCODING);
+      assertEquals(navJournalFiltered, StringUtil.fromInputStream(inStream));
+      inStream = fact.createFilteredInputStream(mau,
+          new StringInputStream(navigatorBookHtml),
+          Constants.DEFAULT_ENCODING);
+      assertEquals(navBookFiltered, StringUtil.fromInputStream(inStream));
+    
+    
   }
 
 

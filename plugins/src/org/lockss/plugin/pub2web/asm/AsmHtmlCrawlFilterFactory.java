@@ -44,6 +44,8 @@ public class AsmHtmlCrawlFilterFactory implements FilterFactory {
     
     HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
     // prev article, toc, next article links - just in case of overcrawl
+    HtmlNodeFilters.tagWithAttribute("div",  "class", "articlenav"),
+    //must keep these in for books which don't have a top div for this navigator
     HtmlNodeFilters.tagWithAttribute("li",  "class", "previousLinkContainer"),
     HtmlNodeFilters.tagWithAttribute("li",  "class", "indexLinkContainer"),
     HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),

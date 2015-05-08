@@ -56,6 +56,13 @@ public class AsmHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
         //every now and then the order of the xml, html, pdf links are different - dynamically generated
         HtmlNodeFilters.tagWithAttribute("div",  "class", "contentTypeOptions"),
+        //every now and then the server fails to serve the next/prev link...what? - on journals
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "articlenav"),
+        // books don't have a top level div class for navigation
+        //must keep these in for books which don't have a top div for this navigator
+        HtmlNodeFilters.tagWithAttribute("li",  "class", "previousLinkContainer"),
+        HtmlNodeFilters.tagWithAttribute("li",  "class", "indexLinkContainer"),
+        HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),
 
     };
     return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
