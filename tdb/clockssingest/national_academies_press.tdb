@@ -18,8 +18,8 @@
     comment[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < readySource ; crawling ; 2014 ; National Academies Press Books Source Content 2014 ; 2014 >
-    au < testing ; exists ; 2015 ; National Academies Press Books Source Content 2015 ; 2015 >
+    au < readySource ; frozen ; 2014 ; National Academies Press Books Source Content 2014 ; 2014 >
+    au < readySource ; crawling ; 2015 ; National Academies Press Books Source Content 2015 ; 2015 >
 
   }
 
