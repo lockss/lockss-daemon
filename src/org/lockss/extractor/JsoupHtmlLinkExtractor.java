@@ -78,7 +78,12 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
 
   static {
     theTagTable = new HashMap<String, LinkExtractor>();
-    theTagTable.put("a", new SimpleTagLinkExtractor("href"));
+    theTagTable.put("a", new SimpleTagLinkExtractor(new String[]
+                                                        {
+                                                          "href",
+                                                          "download"
+                                                        })
+                   );
     theTagTable.put("applet",
                     new SimpleTagLinkExtractor(new String[]
                                                    {

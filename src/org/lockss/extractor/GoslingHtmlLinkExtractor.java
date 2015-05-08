@@ -542,10 +542,6 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
       return;
     }
     String newBase = getAttributeValue(HREF, link);
-    if (StringUtil.isNullString(newBase)) {
-      logger.siteWarning("Ignoring base tag with missing/empty href: " + link);
-      return;
-    }
     if (!UrlUtil.isAbsoluteUrl(newBase)) {
       logger.siteWarning("Ignoring base tag with relative URL: " + link);
       return;
@@ -821,9 +817,6 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
 
   boolean isWhitespace(String token) {
     if (Character.isWhitespace(token.charAt(0))) {
-      if (token.length() != 1) {
-	logger.warning("Multi-char token begins with white: " + token);
-      }
       return true;
     }
     return false;
