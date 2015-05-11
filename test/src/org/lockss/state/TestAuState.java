@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,7 +100,6 @@ public class TestAuState extends LockssTestCase {
 		       null,                          // metadataFeatureVersion
 		       -1,                            // lastMetadataIndex
 		       TimeBase.nowMs(),              // lastContentChange
-		       -1,
 		       -1,
 		       -1,
 		       -1,

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1480,6 +1480,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list(".*\\.css$",
 				   "http\\:\\/\\/base\\.foo\\/base_path\\/img/"),
 		 RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
+
+    assertEquals(ListUtil.list("http://resolv.er/",
+			       "http://base.foo/"),
+		 au.getUrlStems());
   }
 
   public void testFeatureUrls() throws Exception {

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -87,14 +87,11 @@ public class AuState implements LockssSerializable {
   protected List<String> cdnStems;	// URL stems of content on hosts
 					// not predicted by permission URLs
 
-  // XXX not used in 1.62 - made transient so not committed to having it in
-  // state file
-  protected transient long lastLocalHashMismatch; // last time a new local
-						  // hash mismatch was
-						  // detected
-
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
+
+  // Note - the copy constructor (AuState(ArchivalUnit, HistoryRepository))
+  // must be udpated whenever a new persistent field is added
 
   // Non-persistent state vars
 
@@ -148,12 +145,50 @@ public class AuState implements LockssSerializable {
 	 -1, // lastPoPPoll
 	 -1, // lastPoPPollResult
 	 -1, // lastLocalHashScan
-	 -1, // lastLocalHashMismatch
 	 0,  // numAgreePeersLastPoR
 	 0,  // numWillingRepairers
 	 0,  // numCurrentSuspectVersions
 	 null, // cdnStems
 	 historyRepo);
+  }
+
+  /** Copy constructor adds au and historyRepo, used after state loaded
+   * from file.  This constructor *must* be updated whenever new fields are
+   * added to the calss. */
+  public AuState(AuState aus, ArchivalUnit au, HistoryRepository historyRepo) {
+    this.au = au;
+    this.historyRepo = historyRepo;
+    this.lastCrawlTime = aus.lastCrawlTime;
+    this.lastCrawlAttempt = aus.lastCrawlAttempt;
+    this.lastCrawlResult = aus.lastCrawlResult;
+    this.lastCrawlResultMsg = aus.lastCrawlResultMsg;
+    this.lastTopLevelPoll = aus.lastTopLevelPoll;
+    this.lastPollStart = aus.lastPollStart;
+    this.lastPollResult = aus.lastPollResult;
+    this.lastPollResultMsg = aus.lastPollResultMsg;
+    this.pollDuration = aus.pollDuration;
+    this.lastTreeWalk = aus.lastTreeWalk;
+    this.crawlUrls = aus.crawlUrls;
+    this.accessType = aus.accessType;
+    this.clockssSubscriptionStatus = aus.clockssSubscriptionStatus;
+    this.v3Agreement = aus.v3Agreement;
+    this.highestV3Agreement = aus.highestV3Agreement;
+    this.hasSubstance = aus.hasSubstance;
+    this.substanceVersion = aus.substanceVersion;
+    this.metadataVersion = aus.metadataVersion;
+    this.lastMetadataIndex = aus.lastMetadataIndex;
+    this.lastContentChange = aus.lastContentChange;
+    this.lastPoPPoll = aus.lastPoPPoll;
+    this.lastPoPPollResult = aus.lastPoPPollResult;
+    this.lastLocalHashScan = aus.lastLocalHashScan;
+    this.numAgreePeersLastPoR = aus.numAgreePeersLastPoR;
+    this.numWillingRepairers = aus.numWillingRepairers;
+    this.numCurrentSuspectVersions = aus.numCurrentSuspectVersions;
+    this.cdnStems = aus.cdnStems;
+
+    if (cdnStems != null) {
+      flushAuCaches();
+    }
   }
 
   public AuState(ArchivalUnit au,
@@ -175,7 +210,6 @@ public class AuState implements LockssSerializable {
 		 long lastPoPPoll,
 		 int lastPoPPollResult,
 		 long lastLocalHashScan,
-		 long lastLocalHashMismatch,
 		 int numAgreePeersLastPoR,
 		 int numWillingRepairers,
 		 int numCurrentSuspectVersions,
@@ -205,7 +239,6 @@ public class AuState implements LockssSerializable {
     this.lastPoPPoll = lastPoPPoll;
     this.lastPoPPollResult = lastPoPPollResult;
     this.lastLocalHashScan = lastLocalHashScan;
-    this.lastLocalHashMismatch = lastLocalHashMismatch;
     this.numAgreePeersLastPoR = numAgreePeersLastPoR;
     this.numWillingRepairers = numWillingRepairers;
     this.numCurrentSuspectVersions = numCurrentSuspectVersions;
@@ -338,15 +371,6 @@ public class AuState implements LockssSerializable {
    */
   public long getLastLocalHashScan() {
     return lastLocalHashScan;
-  }
-
-  /**
-   * Returns the last time a Local hash scan found a new mismatch (thus
-   * marked a new suspect version)
-   * @return the last new mismatch time in ms
-   */
-  public long getLastLocalHashMismatch() {
-    return lastLocalHashMismatch;
   }
 
   /**
@@ -604,7 +628,6 @@ public class AuState implements LockssSerializable {
 		       lastContentChange,
 		       lastPoPPoll, lastPoPPollResult,
 		       lastLocalHashScan,
-		       lastLocalHashMismatch,
 		       numAgreePeersLastPoR,
 		       numWillingRepairers,
 		       numCurrentSuspectVersions,
@@ -867,8 +890,12 @@ public class AuState implements LockssSerializable {
     }
     StringPool cPool = CrawlerStatus.CRAWL_STATUS_POOL;
     lastCrawlResultMsg = cPool.intern(lastCrawlResultMsg);
-    if (cdnStems != null && !cdnStems.isEmpty()) {
-      cdnStems = StringPool.URL_STEMS.internList(cdnStems);
+    if (cdnStems != null) {
+      if (cdnStems.isEmpty()) {
+	cdnStems = null;
+      } else {
+	cdnStems = StringPool.URL_STEMS.internList(cdnStems);
+      }
     }
   }
 

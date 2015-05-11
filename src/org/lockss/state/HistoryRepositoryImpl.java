@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -257,36 +257,7 @@ public class HistoryRepositoryImpl
     try {
       // CASTOR: remove unwrap() when Castor is phased out
       AuState auState = (AuState)unwrap(deserializer.deserialize(auFile));
-      AuState res = new AuState(storedAu,
-				auState.getLastCrawlTime(),
-				auState.getLastCrawlAttempt(),
-				auState.getLastCrawlResult(),
-				auState.getLastCrawlResultMsg(),
-				auState.getLastTopLevelPollTime(),
-				auState.getLastPollStart(),
-				auState.getLastPollResult(),
-				auState.getLastPollResultMsg(),
-				auState.getPollDuration(),
-				-1,
-				auState.getCrawlUrls(),
-				auState.getAccessType(),
-				auState.getClockssSubscriptionStatus(),
-				auState.getV3Agreement(),
-				auState.getHighestV3Agreement(),
-				auState.getSubstanceState(),
-				auState.getFeatureVersion(Plugin.Feature.Substance),
-				auState.getFeatureVersion(Plugin.Feature.Metadata),
-				auState.getLastMetadataIndex(),
-				auState.getLastContentChange(),
-				auState.getLastPoPPoll(),
-				auState.getLastPoPPollResult(),
-				auState.getLastLocalHashScan(),
-				auState.getLastLocalHashMismatch(),
-				auState.getNumAgreePeersLastPoR(),
-				auState.getNumWillingRepairers(),
-				auState.getNumCurrentSuspectVersions(),
-				auState.getCdnStems(),
-				this);
+      AuState res = new AuState(auState, storedAu, this);
       return res;
     }
     catch (SerializationException.FileNotFound fnf) {
