@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -197,6 +197,9 @@ public class TestCollectionUtil extends LockssTestCase {
       s.add(element);
     }
     assertEquals(expectedElements, s);
+    assertEquals("one", CollectionUtil.getAnElement(ListUtil.list("one")));
+    assertEquals("two", CollectionUtil.getAnElement(ListUtil.list("two",
+								  "one")));
   }
 
   public void testRandomSelectionFromColl() throws Exception {

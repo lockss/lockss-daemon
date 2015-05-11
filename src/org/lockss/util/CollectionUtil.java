@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -141,6 +141,9 @@ public class CollectionUtil {
       throw new IllegalArgumentException("Called with null collection");
     } else if (coll.size() == 0) {
       return null;
+    }
+    if (coll instanceof List) {
+      return ((List<T>)coll).get(0);
     }
     Iterator<T> it = coll.iterator();
     return it.next();
