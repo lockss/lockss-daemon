@@ -181,6 +181,7 @@ public class TestLockssThread extends LockssTestCase {
     }
     assertTrue(threadHung);
     assertEquals(Constants.EXIT_CODE_THREAD_HUNG, daemonExitCode);
+    assertEquals("Thread hung for 2000ms", daemonExitMsg);
   }
 
   // Same, but should produce a thread dump.
@@ -242,11 +243,34 @@ public class TestLockssThread extends LockssTestCase {
     thr.join(TIMEOUT_SHOULDNT);
     assertTrue(threadExited);
     assertEquals(Constants.EXIT_CODE_THREAD_EXIT, daemonExitCode);
+    assertEquals("Thread exited", daemonExitMsg);
+  }
+
+  public void testTriggerOnOome() throws Exception {
+    ConfigurationUtil.addFromArgs(LockssThread.PARAM_EXIT_DAEMON_ON_OOME, "true");
+    TestThread thr = new TestThread("Test");
+    goOn = true;
+    triggerOnExit = false;
+    dogInterval = 0;
+    stepTime = 1000;
+    toThrow = new OutOfMemoryError("Test OOME");
+    thr.start();
+    if (!startSem.take(TIMEOUT_SHOULDNT)) {
+      fail("Thread didn't start");
+    }
+    if (!stopSem.take(TIMEOUT_SHOULDNT)) {
+      fail("Thread didn't stop");
+    }
+    // wait until thread exits, make sure it triggered threadExited()
+    thr.join(TIMEOUT_SHOULDNT);
+    assertEquals(Constants.EXIT_CODE_THREAD_EXIT, daemonExitCode);
+    assertEquals("Thread exited with OutOfMemoryError", daemonExitMsg);
   }
 
   SimpleBinarySemaphore startSem;
   SimpleBinarySemaphore stopSem;
   SimpleBinarySemaphore runSem;
+  Error toThrow;
   volatile boolean goOn;
   volatile long dogInterval;
   volatile long stepTime;
@@ -254,6 +278,8 @@ public class TestLockssThread extends LockssTestCase {
   volatile boolean threadHung;
   volatile boolean threadExited;
   volatile int daemonExitCode;
+  volatile String daemonExitMsg;
+  
 
   private class TestThread extends LockssThread {
     private boolean runSuper = false;
@@ -267,34 +293,40 @@ public class TestLockssThread extends LockssTestCase {
     }
 
     public void lockssRun() {
-
-      if (dogInterval != 0) {
-	startWDog(dogInterval);
-      }
-      if (triggerOnExit) {
-	triggerWDogOnExit(true);
-      }
-      nowRunning();
-      startSem.give();
-      if (runSem != null) {
-	runSem.take();
-      }
-      if (dogInterval != 0) {
-	for (int ix = 0; ix < 10; ix++) {
-	  if (stepTime != 0) {
-	    TimeBase.step(stepTime);
-	  }
-	  if (dogInterval != 0) {
-	    pokeWDog();
-	  }
-	  TimerUtil.guaranteedSleep(10);
+      try {
+	if (dogInterval != 0) {
+	  startWDog(dogInterval);
 	}
+	if (triggerOnExit) {
+	  triggerWDogOnExit(true);
+	}
+	nowRunning();
+	startSem.give();
+	if (toThrow != null) {
+	  throw toThrow;
+	}
+	if (runSem != null) {
+	  runSem.take();
+	}
+	if (dogInterval != 0) {
+	  for (int ix = 0; ix < 10; ix++) {
+	    if (stepTime != 0) {
+	      TimeBase.step(stepTime);
+	    }
+	    if (dogInterval != 0) {
+	      pokeWDog();
+	    }
+	    TimerUtil.guaranteedSleep(10);
+	  }
+	}
+      } finally {
+	stopSem.give();
       }
-      stopSem.give();
     }
 
     protected void exitDaemon(int exitCode, String msg) {
       daemonExitCode = exitCode;
+      daemonExitMsg = msg;
     }
 
     protected void threadHung() {
