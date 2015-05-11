@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1389,7 +1389,7 @@ public class ArchivalUnitStatus
 	Object val = entry.getValue();
 	Map row = new HashMap();
 	row.put("key", key);
-	row.put("val", val != null ? val.toString() : "(null)");
+	row.put("val", val != null ? valString(val) : "(null)");
 	putTypeSort(row, key, au, plug);
 	rows.add(row);
       }
@@ -1404,6 +1404,13 @@ public class ArchivalUnitStatus
       }
 
       return rows;
+    }
+
+    String valString(Object val) {
+      if (val instanceof org.apache.oro.text.regex.Perl5Pattern) {
+	return ((org.apache.oro.text.regex.Perl5Pattern)val).getPattern();
+      }
+      return val.toString();
     }
 
     void addTdbRows(List rows, Map<String,String> tdbMap,
