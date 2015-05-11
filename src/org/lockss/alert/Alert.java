@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,6 +51,7 @@ public class Alert {
   public static final String ATTR_GENERIC_TEXT = "generic_text";
   public static final String ATTR_TEXT = "text";
   public static final String ATTR_CACHE = "cache";
+  public static final String ATTR_URL = "url";
   public static final String ATTR_AUID = "auid";
   public static final String ATTR_AU_NAME = "au_name";
   public static final String ATTR_AU_TITLE = "au_title";
@@ -125,6 +126,14 @@ public class Alert {
   public static final Alert CRAWL_UNLINKED_SUBSTANCE =
     cAlert("NoSubstantialContentLinked").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
+  public static final Alert FILE_VERIFICATION =
+    cAlert("FileVerification").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
+  public static final Alert NEW_FILE_VERSION =
+    cAlert("NewFileVersion").
+    setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
 
   public static final Alert NEW_CONTENT =
     cAlert("NewContent").

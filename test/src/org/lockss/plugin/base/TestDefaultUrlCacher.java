@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.app.*;
+import org.lockss.alert.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.repository.*;
@@ -75,10 +76,12 @@ public class TestDefaultUrlCacher extends LockssTestCase {
   private MyMockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
+  private MockAlertManager alertMgr;
   private int pauseBeforeFetchCounter;
   private UrlData ud;
   private MockNodeManager nodeMgr = new MockNodeManager();
   private MockAuState maus;
+
 
   private static final String TEST_URL = "http://www.example.com/testDir/leaf1";
   private boolean saveDefaultSuppressStackTrace;
@@ -116,7 +119,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     mau.setAuCachedUrlSet(mcus);
     saveDefaultSuppressStackTrace =
       CacheException.setDefaultSuppressStackTrace(false);
-    getMockLockssDaemon().getAlertManager();
+    alertMgr = new MockAlertManager();
+    getMockLockssDaemon().setAlertManager(alertMgr);
     
     theDaemon.setNodeManager(nodeMgr, mau);
     maus = new MockAuState(mau);
@@ -200,6 +204,55 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     cacher = new MyMockBaseUrlCacher(mau, ud);
     cacher.storeContent();
     assertTrue(cacher.wasStored);
+  }
+
+  public void testCacheSizeDisagreesAlert() throws IOException {
+    CIProperties props = new CIProperties();
+    props.setProperty("Content-Length", "8");
+    ud = new UrlData(new StringInputStream("123456789"), props, TEST_URL);
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    assertTrue(cacher.wasStored);
+    assertEquals(1, alertMgr.getAlerts().size());
+    Alert alert = alertMgr.getAlerts().get(0);
+    assertEquals("FileVerification", alert.getAttribute(Alert.ATTR_NAME));
+    assertEquals(mau.getAuId(), alert.getAttribute(Alert.ATTR_AUID));
+    assertEquals(TEST_URL, alert.getAttribute(Alert.ATTR_URL));
+    assertEquals(Alert.SEVERITY_WARNING,
+		 alert.getAttribute(Alert.ATTR_SEVERITY));
+    assertEquals("File size (9) differs from Content-Length header (8): " + TEST_URL,
+		 alert.getAttribute(Alert.ATTR_TEXT));
+  }
+
+  public void testNewVersionAlert() throws IOException {
+    CIProperties props = new CIProperties();
+    ud = new UrlData(new StringInputStream("123456789"), props, TEST_URL);
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    assertTrue(cacher.wasStored);
+    assertEquals(0, alertMgr.getAlerts().size());
+    ud = new UrlData(new StringInputStream("987"), props, TEST_URL);
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    assertEquals(1, alertMgr.getAlerts().size());
+    Alert alert = alertMgr.getAlerts().get(0);
+    assertEquals("NewFileVersion", alert.getAttribute(Alert.ATTR_NAME));
+    assertEquals(mau.getAuId(), alert.getAttribute(Alert.ATTR_AUID));
+    assertEquals(TEST_URL, alert.getAttribute(Alert.ATTR_URL));
+    assertEquals(Alert.SEVERITY_INFO,
+		 alert.getAttribute(Alert.ATTR_SEVERITY));
+    assertEquals("Collected an edditional version: " + TEST_URL,
+		 alert.getAttribute(Alert.ATTR_TEXT));
+  }
+
+  public void testCacheSizeAgrees() throws IOException {
+    CIProperties props = new CIProperties();
+    props.setProperty("Content-Length", "9");
+    ud = new UrlData(new StringInputStream("123456789"), props, TEST_URL);
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    assertTrue(cacher.wasStored);
+    assertEquals(0, alertMgr.getAlerts().size());
   }
 
   public void testFileCache() throws IOException {

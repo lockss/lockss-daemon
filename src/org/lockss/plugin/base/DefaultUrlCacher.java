@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,7 @@ import java.security.NoSuchAlgorithmException;
 
 import org.lockss.app.*;
 import org.lockss.state.*;
+import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
@@ -78,6 +79,7 @@ public class DefaultUrlCacher implements UrlCacher {
   private InputStream input;
   private CIProperties headers;
   private boolean markLastContentChanged = true;
+  private boolean alreadyHasContent;
   
   /**
    * Uncached url object and Archival Unit owner 
@@ -106,6 +108,13 @@ public class DefaultUrlCacher implements UrlCacher {
    */
   public String getUrl() {
     return origUrl;
+  }
+
+  /**
+   * Return the URL that returned content
+   */
+  String getFetchUrl() {
+    return fetchUrl != null ? fetchUrl : origUrl;
   }
 
   /**
@@ -258,6 +267,7 @@ public class DefaultUrlCacher implements UrlCacher {
     boolean currentWasSuspect = isCurrentVersionSuspect();
     try {
       leaf = repository.createNewNode(url);
+      alreadyHasContent = leaf.hasContent();
       leaf.makeNewVersion();
       
       MessageDigest checksumProducer = null;
@@ -308,6 +318,13 @@ public class DefaultUrlCacher implements UrlCacher {
       if (aus != null && markLastContentChanged) {
         aus.contentChanged();
       }
+      if (alreadyHasContent) {
+	Alert alert = Alert.auAlert(Alert.NEW_FILE_VERSION, au);
+	alert.setAttribute(Alert.ATTR_URL, getFetchUrl());
+	String msg = "Collected an edditional version: " + getFetchUrl();
+	alert.setAttribute(Alert.ATTR_TEXT, msg);
+	raiseAlert(alert);
+      }
     } catch (StreamUtil.OutputException ex) {
       if (leaf != null) {
         try {
@@ -351,6 +368,16 @@ public class DefaultUrlCacher implements UrlCacher {
   // XXX need to make it possible for validator to access CU before seal(),
   // so it can prevent file from being committed.
   protected CacheException validate(long size) throws CacheException {
+    long contLen = getContentLength();
+    if (contLen >= 0 && contLen != size) {
+      Alert alert = Alert.auAlert(Alert.FILE_VERIFICATION, au);
+      alert.setAttribute(Alert.ATTR_URL, getFetchUrl());
+      String msg = "File size (" + size +
+	") differs from Content-Length header (" + contLen + "): "
+	+ getFetchUrl();
+      alert.setAttribute(Alert.ATTR_TEXT, msg);
+      raiseAlert(alert);
+    }
 //     try {
       if (size == 0) {
         Exception ex =
@@ -363,4 +390,20 @@ public class DefaultUrlCacher implements UrlCacher {
 //     }
   }
 
+
+  private void raiseAlert(Alert alert) {
+    try {
+      au.getPlugin().getDaemon().getAlertManager().raiseAlert(alert);
+    } catch (RuntimeException e) {
+      logger.error("Couldn't raise alert", e);
+    }
+  }
+
+  public long getContentLength() {
+    try {
+      return Long.parseLong(headers.getProperty("content-length"));
+    } catch (Exception e) {
+      return -1;
+    }
+  }  
 }
