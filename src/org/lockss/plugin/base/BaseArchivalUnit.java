@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -417,6 +417,23 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return getStartUrls();
   }
   
+  void addUrlParamStems(Set toSet) {
+    for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
+      if (descr.getTypeEnum() == AuParamType.Url) {
+	String key = descr.getKey();
+	try {
+	  String url = auConfig.get(key);
+	  if (!StringUtil.isNullString(url)) {
+	    String stem = UrlUtil.getUrlPrefix(url);
+	    toSet.add(stem);
+	  }
+	} catch (MalformedURLException ex) {
+	  logger.error("addUrlParamStems key: " + key);
+	}
+      }
+    }
+  }
+
   /**
    * Return the Url stems (proto, host & port) of potential content within
    * this AU
@@ -433,6 +450,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	    set.add(stem);
 	  }
 	}
+	addUrlParamStems(set);
 	AuState aus = AuUtil.getAuState(this);
 	// XXX Many plugin tests don't set up AuState
 	List cdnStems = (aus != null

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -629,7 +629,26 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 		       stems);
     // and that they're not recomputed if cdn hosts haven't changed
     assertSame(stems, mbau.getUrlStems());
+
+    ConfigParamDescr nondefUrl = new ConfigParamDescr();
+    nondefUrl.setDefinitional(false)
+      .setKey("base_url17")
+      .setType(ConfigParamDescr.TYPE_URL);
+
+    // Add another param of type URL, ensure its value gets added to stems
+    // even though isn't used in start or permission URLs
+    mplug.setAuConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
+					  ConfigParamDescr.VOLUME_NUMBER,
+					  nondefUrl));
+    config.put(nondefUrl.getKey(), "http://base2.url/");
+    mbau.setConfiguration(config);
+    assertSameElements(ListUtil.list("http://www.example.com/",
+				     "http://foo.other.com:8080/",
+				     "http://cdn.host/",
+				     "http://base2.url/"),
+		       mbau.getUrlStems());
   }
+
 
 
   public void testSiteNormalizeUrl() {
