@@ -71,7 +71,7 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
       "<span class=\"divider\">></span></li>" +
       "<li class=\"\"><a href=\"/loi/jid\">issues</a>" +
       "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/toc/bjcs/26/1\">Volume 9, Issue 9</a>" +
+      "<li class=\"\"><a href=\"/toc/jid/26/1\">Volume 9, Issue 9</a>" +
       "<span class=\"divider\">></span></li>" +
       "<li class=\"\"> DOI: 11.1111/jid.2013.2 </li>" +
       "</ul>" +
@@ -79,7 +79,7 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
   
     // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
     // Current Issue, and the right sidebar top block of abs and ref
-    // http://online.liverpooluniversitypress.co.uk/toc/bjcs/26/1
+    // http://online.liverpooluniversitypress.co.uk/toc/jid/26/1
   private static final String withBodyEmphasis =
       "<div class=\"block\">" +
       "<div class=\"widget-body body body-emphasis \">" +
@@ -95,9 +95,9 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
       "<div id=\"e38\" class=\"widget general-html none widget-none widget-compact-all\">" +
       "<div class=\"widget-body body body-none body-compact-all\">" +
       "<ul>" +
-      "<li><a href=\"/toc/bjcs/0/0\">Ahead of print</a></li>" +
-      "<li><a href=\"/toc/bjcs/current\">Current issue</a></li>" +
-      "<li><a href=\"/loi/bjcs\">List of issues</a></li>" +
+      "<li><a href=\"/toc/jid/0/0\">Ahead of print</a></li>" +
+      "<li><a href=\"/toc/jid/current\">Current issue</a></li>" +
+      "<li><a href=\"/loi/jid\">List of issues</a></li>" +
       "</ul>" +
       "</div></div>" +
       "</div></div></div></div></div></div></div></div></div></div>" +
@@ -139,7 +139,7 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
       "<li class=\"addToFavs\"><a href=\"/linktoaddfav\">Add to Fav</a></li>" +
       "<li class=\"email\"><a href=\"/linktoemail\">Email friends</a></li>" +
       "<li class=\"downloadCitations\">" +
-      "<a href=\"/action/showCitFormats?doi=10.3828%2Fbjcs.2013.2\">Send to Citation Mgr</a>" +
+      "<a href=\"/action/showCitFormats?doi=10.3828%2Fjid.2013.2\">Send to Citation Mgr</a>" +
       "</li></ul></div>" +
       "</div>";
   
@@ -149,7 +149,7 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
       "<div class=\"articleTools\">" +
       "<ul class=\"linkList blockLinks separators centered\">" +
       "<li class=\"downloadCitations\">" +
-      "<a href=\"/action/showCitFormats?doi=10.3828%2Fbjcs.2013.2\">Send to Citation Mgr</a>" +
+      "<a href=\"/action/showCitFormats?doi=10.3828%2Fjid.2013.2\">Send to Citation Mgr</a>" +
       "</li></ul></div>" +
       "</div>";
     
