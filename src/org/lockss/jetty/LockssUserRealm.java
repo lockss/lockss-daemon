@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -238,6 +238,14 @@ public class LockssUserRealm implements UserRealm {
 	res = false;
       } else {
 	res = acct.check(credentials);
+	if (!res) {
+	  // Delay failing password response a little
+	  try {
+	    Deadline.in(250).sleep();
+	  } catch (InterruptedException e) {
+	    // ignore
+	  }
+	}
       }
       if (res) {
 	if (acct.isPasswordExpired()) {
