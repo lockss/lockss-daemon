@@ -9285,7 +9285,7 @@
 
     au < finished ; frozen ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Information and Inference: A Journal of the IMA Volume 2 ; 2 ; >
-    au < testing ; exists ; 2014 ; Information and Inference: A Journal of the IMA Volume 3 ; 3 ; >
+    au < ready ; exists ; 2014 ; Information and Inference: A Journal of the IMA Volume 3 ; 3 ; >
     au < manifest ; exists ; 2015 ; Information and Inference: A Journal of the IMA Volume 4 ; 4 ; >
 
     }
@@ -9556,7 +9556,7 @@
     au < finished ; frozen ; 2011 ; International Immunology Volume 23 ; 23 ; >
     au < finished ; crawling ; 2012 ; International Immunology Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Immunology Volume 25 ; 25 ; >
-    au < testing ; exists ; 2014 ; International Immunology Volume 26 ; 26 ; >
+    au < ready ; exists ; 2014 ; International Immunology Volume 26 ; 26 ; >
     au < manifest ; exists ; 2015 ; International Immunology Volume 27 ; 27 ; >
 
     }
@@ -10755,7 +10755,7 @@
     au < finished ; crawling ; 2011 ; Journal of American History Volume 98 ; 98 ; >
     au < finished ; frozen ; 2012 ; Journal of American History Volume 99 ; 99 ; >
     au < crawling ; exists ; 2013 ; Journal of American History Volume 100 ; 100 ; >
-    au < testing ; exists ; 2014 ; Journal of American History Volume 101 ; 101 ; >
+    au < ready ; exists ; 2014 ; Journal of American History Volume 101 ; 101 ; >
     au < expected ; exists ; 2015 ; Journal of American History Volume 102 ; 102 ; >
 
     }
@@ -10990,7 +10990,7 @@
     au < finished ; frozen ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; >
     au < finished ; frozen ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 ; >
-    au < testing ; exists ; 2014 ; Journal of Antimicrobial Chemotherapy Volume 69 ; 69 ; >
+    au < ready ; exists ; 2014 ; Journal of Antimicrobial Chemotherapy Volume 69 ; 69 ; >
     au < manifest ; exists ; 2015 ; Journal of Antimicrobial Chemotherapy Volume 70 ; 70 ; >
 
     }
@@ -11177,8 +11177,8 @@
     au < finished ; frozen ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 ; >
     au < crawling ; exists ; 2013 ; The Journal of Biochemistry Volume 153 ; 153 ; >
     au < crawling ; exists ; 2013 ; The Journal of Biochemistry Volume 154 ; 154 ; >
-    au < testing ; exists ; 2014 ; The Journal of Biochemistry Volume 155 ; 155 ; >
-    au < testing ; exists ; 2014 ; The Journal of Biochemistry Volume 156 ; 156 ; >
+    au < ready ; exists ; 2014 ; The Journal of Biochemistry Volume 155 ; 155 ; >
+    au < ready ; exists ; 2014 ; The Journal of Biochemistry Volume 156 ; 156 ; >
     au < manifest ; exists ; 2015 ; The Journal of Biochemistry Volume 157 ; 157 ; >
     au < expected ; exists ; 2015 ; The Journal of Biochemistry Volume 158 ; 158 ; >
 
@@ -11332,7 +11332,7 @@
     au < finished ; frozen ; 2011 ; Journal of Church and State Volume 53 ; 53 ; >
     au < finished ; frozen ; 2012 ; Journal of Church and State Volume 54 ; 54 ; >
     au < crawling ; exists ; 2013 ; Journal of Church and State Volume 55 ; 55 ; >
-    au < testing ; exists ; 2014 ; Journal of Church and State Volume 56 ; 56 ; >
+    au < ready ; exists ; 2014 ; Journal of Church and State Volume 56 ; 56 ; >
     au < manifest ; exists ; 2015 ; Journal of Church and State Volume 57 ; 57 ; >
 
     }
@@ -11603,7 +11603,7 @@
     au < finished ; frozen ; 2011 ; Journal of Design History Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; Journal of Design History Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Design History Volume 26 ; 26 ; >
-    au < testing ; exists ; 2014 ; Journal of Design History Volume 27 ; 27 ; >
+    au < ready ; exists ; 2014 ; Journal of Design History Volume 27 ; 27 ; >
     au < manifest ; exists ; 2015 ; Journal of Design History Volume 28 ; 28 ; >
 
     }
@@ -12117,7 +12117,7 @@
     au < finished ; frozen ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B ; >
     au < crawling ; exists ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 68 ; 68 ; >
-    au < testing ; exists ; 2014 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 69B ; 69B ; >
+    au < ready ; exists ; 2014 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 69B ; 69B ; >
     au < manifest ; exists ; 2015 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 70 ; 70 ; >
 
     }
@@ -12311,7 +12311,7 @@
     au < finished ; crawling ; 2011 ; The Journal of Hindu Studies Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Journal of Hindu Studies Volume 6 ; 6 ; >
-    au < testing ; exists ; 2014 ; The Journal of Hindu Studies Volume 7 ; 7 ; >
+    au < ready ; exists ; 2014 ; The Journal of Hindu Studies Volume 7 ; 7 ; >
     au < manifest ; exists ; 2015 ; The Journal of Hindu Studies Volume 8 ; 8 ; >
 
     }
@@ -12331,7 +12331,7 @@
     param[base_url] = http://jhps.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
     au < manifest ; exists ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 ; >
 
     }
@@ -12751,7 +12751,7 @@
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 ; >
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 208 ; 208 ; >
     au < testing ; exists ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; >
-    au < testing ; exists ; 2014 ; Journal of Infectious Diseases Volume 210 ; 210 ; >
+    au < ready ; exists ; 2014 ; Journal of Infectious Diseases Volume 210 ; 210 ; >
     au < manifest ; exists ; 2015 ; Journal of Infectious Diseases Volume 211 ; 211 ; >
     au < expected ; exists ; 2015 ; Journal of Infectious Diseases Volume 212 ; 212 ; >
 
@@ -13068,7 +13068,7 @@
     au < finished ; frozen ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Journal of Law, Economics, and Organization Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; >
+    au < testing ; exists ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; >
     au < manifest ; exists ; 2015 ; Journal of Law, Economics, and Organization Volume 31 ; 31 ; >
 
     }
@@ -13094,7 +13094,7 @@
     au < finished ; crawling ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Legal Analysis Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; Journal of Legal Analysis Volume 6 ; 6 ; >
+    au < testing ; exists ; 2014 ; Journal of Legal Analysis Volume 6 ; 6 ; >
     au < exists ; exists ; 2015 ; Journal of Legal Analysis Volume 7 ; 7 ; >
 
     }
@@ -13167,7 +13167,7 @@
     param[base_url] = http://jlb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2014 ; Journal of the Law and the Biosciences Volume 1 ; 1 ; >
+    au < testing ; exists ; 2014 ; Journal of the Law and the Biosciences Volume 1 ; 1 ; >
     au < manifest ; exists ; 2015 ; Journal of the Law and the Biosciences Volume 2 ; 2 ; >
 
     }
@@ -13333,8 +13333,8 @@
     au < finished ; crawling ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 ; >
     au < crawling ; exists ; 2013 ; Journal of the London Mathematical Society Volume 87 ; 87 ; >
     au < crawling ; exists ; 2013 ; Journal of the London Mathematical Society Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2014 ; Journal of the London Mathematical Society Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2014 ; Journal of the London Mathematical Society Volume 90 ; 90 ; >
+    au < testing ; exists ; 2014 ; Journal of the London Mathematical Society Volume 89 ; 89 ; >
+    au < testing ; exists ; 2014 ; Journal of the London Mathematical Society Volume 90 ; 90 ; >
     au < manifest ; exists ; 2015 ; Journal of the London Mathematical Society Volume 91 ; 91 ; >
     au < expected ; exists ; 2015 ; Journal of the London Mathematical Society Volume 92 ; 92 ; >
 
@@ -13477,7 +13477,7 @@
     au < finished ; crawling ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 ; >
     au < finished ; frozen ; 2012 ; The Journal of Medicine and Philosophy Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; The Journal of Medicine and Philosophy Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; The Journal of Medicine and Philosophy Volume 39 ; 39 ; >
+    au < testing ; exists ; 2014 ; The Journal of Medicine and Philosophy Volume 39 ; 39 ; >
     au < manifest ; exists ; 2015 ; The Journal of Medicine and Philosophy Volume 40 ; 40 ; >
 
     }
@@ -13512,7 +13512,7 @@
     au < finished ; crawling ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; Journal of Molecular Cell Biology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Molecular Cell Biology Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; Journal of Molecular Cell Biology Volume 6 ; 6 ; >
+    au < testing ; exists ; 2014 ; Journal of Molecular Cell Biology Volume 6 ; 6 ; >
     au < manifest ; exists ; 2015 ; Journal of Molecular Cell Biology Volume 7 ; 7 ; >
 
     }
@@ -13622,7 +13622,7 @@
     au < finished ; crawling ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 ; >
     au < finished ; frozen ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 ; >
     au < crawling ; exists ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 ; >
-    au < manifest ; exists ; 2014 ; Journal of Molluscan Studies Volume 80 ; 80 ; >
+    au < testing ; exists ; 2014 ; Journal of Molluscan Studies Volume 80 ; 80 ; >
     au < manifest ; exists ; 2015 ; Journal of Molluscan Studies Volume 81 ; 81 ; >
 
     }
@@ -13815,13 +13815,12 @@
 
     param[base_url] = http://jpids.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[nR] = RT 5641 fetch error
 
     {
 
     au < crawling ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
+    au < testing ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
     au < manifest ; exists ; 2015 ; Journal of the Pediatric Infectious Diseases Society Volume 4 ; 4 ; >
 
     }
@@ -13890,7 +13889,7 @@
     au < finished ; frozen ; 2011 ; Journal of Pediatric Psychology Volume 36 ; 36 ; >
     au < finished ; frozen ; 2012 ; Journal of Pediatric Psychology Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Journal of Pediatric Psychology Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; Journal of Pediatric Psychology Volume 39 ; 39 ; >
+    au < testing ; exists ; 2014 ; Journal of Pediatric Psychology Volume 39 ; 39 ; >
     au < manifest ; exists ; 2015 ; Journal of Pediatric Psychology Volume 40 ; 40 ; >
 
     }
@@ -14068,7 +14067,7 @@
     au < finished ; frozen ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Journal of Plant Ecology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Plant Ecology Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2014 ; Journal of Plant Ecology Volume 7 ; 7 ; >
+    au < testing ; exists ; 2014 ; Journal of Plant Ecology Volume 7 ; 7 ; >
     au < manifest ; exists ; 2015 ; Journal of Plant Ecology Volume 8 ; 8 ; >
 
     }
@@ -14205,7 +14204,7 @@
     au < finished ; frozen ; 2011 ; Journal of Public Health Volume 33 ; 33 ; >
     au < finished ; frozen ; 2012 ; Journal of Public Health Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Health Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2014 ; Journal of Public Health Volume 36 ; 36 ; >
+    au < testing ; exists ; 2014 ; Journal of Public Health Volume 36 ; 36 ; >
     au < manifest ; exists ; 2015 ; Journal of Public Health Volume 37 ; 37 ; >
 
     }
@@ -14239,7 +14238,7 @@
     au < exists ; exists ; 2011 ; Journal of Radiation Research Volume 52 ; 52 ; >
     au < finished ; frozen ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Radiation Research Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2014 ; Journal of Radiation Research Volume 55 ; 55 ; >
+    au < testing ; exists ; 2014 ; Journal of Radiation Research Volume 55 ; 55 ; >
     au < manifest ; exists ; 2015 ; Journal of Radiation Research Volume 56 ; 56 ; >
 
   }
@@ -14444,7 +14443,7 @@
     au < finished ; frozen ; 2011 ; Journal of Semitic Studies Volume 56 ; 56 ; >
     au < finished ; frozen ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; Journal of Semitic Studies Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 ; >
+    au < testing ; exists ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 ; >
     au < manifest ; exists ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 ; >
 
     }
@@ -14725,7 +14724,7 @@
     au < zapped ; finished ; 2011 ; Journal of Topology Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Journal of Topology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Topology Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
+    au < testing ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
     au < manifest ; exists ; 2015 ; Journal of Topology Volume 8 ; 8 ; >
 
     }
