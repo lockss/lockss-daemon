@@ -353,7 +353,7 @@ public class TestMultiScienceAtyponHtmlFilterFactory extends LockssTestCase {
   
   public static Test suite() {
     return variantSuites(new Class[] {
-        //TestCrawl.class,
+        TestCrawl.class,
         TestHash.class
       });
   }
