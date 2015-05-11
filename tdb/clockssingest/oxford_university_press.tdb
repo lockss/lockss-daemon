@@ -3341,12 +3341,12 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 1955 ; Bulletin of the Entomological Society of America Volume 1 ; 1 ; >
-    au < doesNotExist ; doesNotExist ; 1956 ; Bulletin of the Entomological Society of America Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1956 ; Bulletin of the Entomological Society of America Volume 2 ; 2 ; >
     au < manifest ; exists ; 1957 ; Bulletin of the Entomological Society of America Volume 3 ; 3 ; >
     au < manifest ; exists ; 1958 ; Bulletin of the Entomological Society of America Volume 4 ; 4 ; >
     au < manifest ; exists ; 1959 ; Bulletin of the Entomological Society of America Volume 5 ; 5 ; >
     au < manifest ; exists ; 1960 ; Bulletin of the Entomological Society of America Volume 6 ; 6 ; >
-    au < doesNotExist ; doesNotExist ; 1961 ; Bulletin of the Entomological Society of America Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1961 ; Bulletin of the Entomological Society of America Volume 7 ; 7 ; >
     au < manifest ; exists ; 1962 ; Bulletin of the Entomological Society of America Volume 8 ; 8 ; >
     au < manifest ; exists ; 1963 ; Bulletin of the Entomological Society of America Volume 9 ; 9 ; >
     au < manifest ; exists ; 1964 ; Bulletin of the Entomological Society of America Volume 10 ; 10 ; >
@@ -3357,7 +3357,7 @@
     au < manifest ; exists ; 1969 ; Bulletin of the Entomological Society of America Volume 15 ; 15 ; >
     au < manifest ; exists ; 1970 ; Bulletin of the Entomological Society of America Volume 16 ; 16 ; >
     au < manifest ; exists ; 1971 ; Bulletin of the Entomological Society of America Volume 17 ; 17 ; >
-    au < doesNotExist ; doesNotExist ; 1972 ; Bulletin of the Entomological Society of America Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1972 ; Bulletin of the Entomological Society of America Volume 18 ; 18 ; >
     au < manifest ; exists ; 1973 ; Bulletin of the Entomological Society of America Volume 19 ; 19 ; >
     au < manifest ; exists ; 1974 ; Bulletin of the Entomological Society of America Volume 20 ; 20 ; >
     au < manifest ; exists ; 1975 ; Bulletin of the Entomological Society of America Volume 21 ; 21 ; >
@@ -6595,7 +6595,7 @@
     au < manifest ; exists ; 2001 ; FEMS Immunology & Medical Microbiology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2001-2002 ; FEMS Immunology & Medical Microbiology Volume 32 ; 32 ; >
     au < manifest ; exists ; 2002 ; FEMS Immunology & Medical Microbiology Volume 33 ; 33 ; >
-    au < doesNotExist ; doesNotExist ; 2002 ; FEMS Immunology & Medical Microbiology Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2002 ; FEMS Immunology & Medical Microbiology Volume 34 ; 34 ; >
     au < manifest ; exists ; 2003 ; FEMS Immunology & Medical Microbiology Volume 35 ; 35 ; >
     au < manifest ; exists ; 2003 ; FEMS Immunology & Medical Microbiology Volume 36 ; 36 ; >
     au < manifest ; exists ; 2003 ; FEMS Immunology & Medical Microbiology Volume 37 ; 37 ; >
@@ -6699,10 +6699,10 @@
     au < manifest ; exists ; 2007 ; FEMS Microbiology Ecology Volume 62 ; 62 ; >
     au < manifest ; exists ; 2008 ; FEMS Microbiology Ecology Volume 63 ; 63 ; >
     au < manifest ; exists ; 2008 ; FEMS Microbiology Ecology Volume 64 ; 64 ; >
-    au < doesNotExist ; doesNotExist ; 2008 ; FEMS Microbiology Ecology Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2008 ; FEMS Microbiology Ecology Volume 65 ; 65 ; >
     au < manifest ; exists ; 2008 ; FEMS Microbiology Ecology Volume 66 ; 66 ; >
-    au < doesNotExist ; doesNotExist ; 2009 ; FEMS Microbiology Ecology Volume 67 ; 67 ; >
-    au < doesNotExist ; doesNotExist ; 2009 ; FEMS Microbiology Ecology Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2009 ; FEMS Microbiology Ecology Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2009 ; FEMS Microbiology Ecology Volume 68 ; 68 ; >
     au < manifest ; exists ; 2009 ; FEMS Microbiology Ecology Volume 69 ; 69 ; >
     au < manifest ; exists ; 2009 ; FEMS Microbiology Ecology Volume 70 ; 70 ; >
     au < manifest ; exists ; 2010 ; FEMS Microbiology Ecology Volume 71 ; 71 ; >
