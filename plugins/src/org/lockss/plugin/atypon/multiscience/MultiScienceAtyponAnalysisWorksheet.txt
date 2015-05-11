@@ -194,6 +194,9 @@ Thinks to look for:
     // http://multi-science.atypon.com/doi/ref/10.1260/1756-8250.6.1.61
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                       "literatumPublicationContentWidget"),
+    // abs, ref - right side bar - Article/Chapter tools 
+    HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
+                                          "literatumArticleToolsWidget"),                                        
     // showCitFormats
     // http://multi-science.atypon.com/action/
     //                      showCitFormats?doi=10.1260%2F1756-8250.6.1.43                                     
