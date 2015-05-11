@@ -5,7 +5,7 @@
     info[tester] = 4
   >
 
-    plugin = org.lockss.plugin.atypon.futurescience.ClockssInderscienceAtyponPlugin
+    plugin = org.lockss.plugin.atypon.inderscience.ClockssInderscienceAtyponPlugin
     param[base_url] = http://www.inderscienceonline.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
