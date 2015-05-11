@@ -97,6 +97,15 @@ public class LockssUrlConnectionPool {
     hcConnManager.getParams().setSoTimeout(this.dataTimeout);
   }
 
+  /** Set the so_keepalive value for future connections.  (This should be
+   * set for every use of the socket but
+   * org.apache.commons.httpclient.HttpConnection doesn't set that option
+   * and there no other convenient hook */
+  public void setKeepAlive(boolean val) {
+    hcConnManager.getParams().setBooleanParameter(HttpClientUrlConnection.SO_KEEPALIVE,
+						  val);
+  }
+
   /** Set the SecureProtocolSocketFactory to be used for authenticated
    * connections. */
   public void setSecureProtocolSocketFactory(SecureProtocolSocketFactory

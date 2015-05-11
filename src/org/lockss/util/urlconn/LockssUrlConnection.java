@@ -122,6 +122,9 @@ public interface LockssUrlConnection {
   /** Set the cookie policy to "rfc2109", "netscape" or "compatibility". */
   public void setCookiePolicy(String policy);
 
+  /** Set the SO_KEEPALIVE flags for the socket factory. */
+  public void setKeepAlive(boolean val);
+
   /** Add a cookie to the request.  Cookies are normally processed
    * automatically; this is used only to send a cookie that wasn't
    * originally recieved in a Set-Cookie: response header.  The cookie's

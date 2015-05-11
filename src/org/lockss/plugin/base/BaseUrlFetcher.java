@@ -52,6 +52,11 @@ public class BaseUrlFetcher implements UrlFetcher {
   
   private static final Logger log = Logger.getLogger("BaseUrlFetcher");
   
+  /** If true, use so_keepalive on server connections. */
+  public static final String PARAM_SO_KEEPALIVE =
+    Configuration.PREFIX + "baseuc.socketKeepAlive";
+  public static final boolean DEFAULT_SO_KEEPALIVE = false;
+  
   /** Limit on rewinding the network input stream after checking for a
    * login page.  If LoginPageChecker returns false after reading father
    * than this the page will be refetched. */
@@ -452,6 +457,10 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       if (localAddr != null) {
         conn.setLocalAddress(localAddr);
+      }
+      if (CurrentConfig.getBooleanParam(PARAM_SO_KEEPALIVE,
+					DEFAULT_SO_KEEPALIVE)) {
+	conn.setKeepAlive(true);
       }
       for (String cookie : au.getHttpCookies()) {
         int pos = cookie.indexOf("=");

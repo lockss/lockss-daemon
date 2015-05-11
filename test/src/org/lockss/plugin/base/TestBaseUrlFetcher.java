@@ -505,6 +505,32 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     }
   }
 
+  public void testKeepAlive(boolean exp) throws IOException {
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muf.addConnection(mconn);
+    muf.getUncachedInputStream();
+    assertEquals(exp, mconn.getKeepAlive());
+  }
+
+
+  public void testKeepAliveDefault() throws IOException {
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    testKeepAlive(false);
+  }
+
+  public void testKeepAliveTrue() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlFetcher.PARAM_SO_KEEPALIVE, "true");
+    testKeepAlive(true);
+  }
+
+  public void testKeepAliveFalse() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlFetcher.PARAM_SO_KEEPALIVE, "false");
+    testKeepAlive(false);
+  }
+
   public void testNoProxy() throws Exception {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);

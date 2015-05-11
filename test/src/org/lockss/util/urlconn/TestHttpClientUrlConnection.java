@@ -654,7 +654,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       methods.add(nextMethod);
     }
 
-    SecureProtocolSocketFactory getDefaultSocketFactory() {
+    ProtocolSocketFactory getDefaultSocketFactory() {
       String host = url.getHost();
       int port = url.getPort();
       if (port <= 0) {

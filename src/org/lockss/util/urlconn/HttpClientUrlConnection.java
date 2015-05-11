@@ -2,7 +2,7 @@
  * $Id$
  *
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
-import java.util.Properties;
+import java.util.*;
 
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.auth.*;
@@ -40,6 +40,7 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.*;
 import org.apache.commons.httpclient.protocol.*;
 import org.apache.commons.httpclient.util.*;
+import org.apache.commons.collections4.map.*;
 
 import org.lockss.config.*;
 import org.lockss.util.*;
@@ -55,6 +56,14 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   static final String PARAM_ACCEPT_HEADER = PREFIX + "acceptHeader";
   static final String DEFAULT_ACCEPT_HEADER =
     "text/html, image/gif, image/jpeg; q=.2, */*; q=.2";
+
+  /** Repeated response headers normally get combined on receipe into a
+   * single header with a comma-separated value.  Headers in this list do
+   * not get that treatment - the value in the last occurrence of the
+   * header is used. */
+  static final String PARAM_SINGLE_VALUED_HEADERS =
+    PREFIX + "singleValuedHeaders";
+  static final List DEFAULT_SINGLE_VALUED_HEADERS = Collections.emptyList();
 
   /* If true, the InputStream returned from getResponseInputStream() will
    * be wrapped in an EofBugInputStream */
@@ -85,6 +94,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   public static final ServerTrustLevel DEFAULT_SERVER_TRUST_LEVEL =
     ServerTrustLevel.Untrusted;
 
+  /** Key used in HttpParams to communicate so_keepalive value to
+   * LockssDefaultProtocolSocketFactory */
+  public static String SO_KEEPALIVE = "lockss_so_keepalive";
+
   // Set up a flexible SSL protocol factory.  It doesn't work to set the
   // Protocol in the HostConfiguration - HttpClient.executeMethod()
   // overwrites it.  So we must communicate the per-host policies to a
@@ -92,14 +105,24 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   static DispatchingSSLProtocolSocketFactory DISP_FACT =
     new DispatchingSSLProtocolSocketFactory();
   static {
-    Protocol proto = new Protocol("https", DISP_FACT, 443);
-    Protocol.registerProtocol("https", proto);
+    // Install our http factory
+    Protocol http_proto =
+      new Protocol("http",
+		   LockssDefaultProtocolSocketFactory.getSocketFactory(),
+		   80);
+    Protocol.registerProtocol("http", http_proto);
+
+    // Install our https factory
+    Protocol https_proto = new Protocol("https", DISP_FACT, 443);
+    Protocol.registerProtocol("https", https_proto);
 
     DISP_FACT.setDefaultFactory(getDefaultSocketFactory(DEFAULT_SERVER_TRUST_LEVEL));
   }
 
   private static ServerTrustLevel serverTrustLevel;
   private static String acceptHeader = DEFAULT_ACCEPT_HEADER;
+  private static Set<String> singleValuedHdrs =
+    new HashSet(DEFAULT_SINGLE_VALUED_HEADERS);
 
   private static SecureProtocolSocketFactory
     getDefaultSocketFactory(ServerTrustLevel stl) {
@@ -122,7 +145,15 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     if (diffs.contains(PREFIX)) {
       acceptHeader = config.get(PARAM_ACCEPT_HEADER, DEFAULT_ACCEPT_HEADER);
 
+      Set<String> set = new HashSet();
+      for (String s : (List<String>)config.getList(PARAM_SINGLE_VALUED_HEADERS,
+						   DEFAULT_SINGLE_VALUED_HEADERS)) {
+	set.add(s.toLowerCase());
+      }
+      singleValuedHdrs = set;
+
       HttpParams params = DefaultHttpParams.getDefaultParams();
+
       if (diffs.contains(PARAM_COOKIE_POLICY)) {
 	String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
 	params.setParameter(HttpMethodParams.COOKIE_POLICY,
@@ -273,7 +304,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private int executeOnce(HttpMethod method) throws IOException {
     try {
       return client.executeMethod(method);
-    } catch (ConnectTimeoutException e) {
+    } catch (ConnectTimeoutException /*| java.net.SocketTimeoutException*/ e) {
       // Thrown by HttpClient if the connect timeout elapses before
       // socket.connect() returns.
       // Turn this into a non HttpClient-specific exception
@@ -323,6 +354,15 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     HttpParams params = method.getParams();
     params.setParameter(HttpMethodParams.COOKIE_POLICY,
 			getCookiePolicy(policy));
+  }
+
+  public void setKeepAlive(boolean val) {
+    assertNotExecuted();
+    HttpParams params = method.getParams();
+    params.setBooleanParameter(SO_KEEPALIVE, val);
+    // method params don't current work, set in connection pool also,
+    // though that won't affect already-open sockets
+    connectionPool.setKeepAlive(val);
   }
 
   public void addCookie(String domain, String path, String name, String value) {
@@ -443,6 +483,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   public void storeResponseHeaderInto(Properties props, String prefix) {
     // store all header properties (this is the only way to iterate)
+    // first collect all values for any repeated headers.
+    MultiValueMap<String,String> map = new MultiValueMap<String,String>();
     Header[] headers = method.getResponseHeaders();
     for (int ix = 0; ix < headers.length; ix++) {
       Header hdr = headers[ix];
@@ -451,12 +493,23 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       if (value!=null) {
         // only store headers with values
         // qualify header names to avoid conflict with our properties
-	String propKey = (key != null) ? key : ("header_" + ix);
-	if (prefix != null) {
-	  propKey = prefix + propKey;
+	if (key == null) {
+	  key = "header_" + ix;
 	}
-	props.setProperty(propKey, value);
+	String propKey = (prefix == null) ? key : prefix + key;
+	if (!singleValuedHdrs.isEmpty() &&
+	    singleValuedHdrs.contains(key.toLowerCase())) {
+	  map.remove(propKey);
+	}
+	map.put(propKey, value);
       }
+    }
+    // now combine multiple values into comma-separated string
+    for (String key : map.keySet()) {
+      Collection<String> val = map.getCollection(key);
+      props.setProperty(key, ((val.size() > 1)
+			      ? StringUtil.separatedString(val, ",")
+			      : CollectionUtil.getAnElement(val)));
     }
   }
 

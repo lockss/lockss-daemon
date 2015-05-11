@@ -111,6 +111,10 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
     throw new UnsupportedOperationException();
   }
 
+  public void setKeepAlive(boolean val) {
+    throw new UnsupportedOperationException();
+  }
+
   public final void addCookie(String name, String value) {
     addCookie("/", name, value);
   }

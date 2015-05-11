@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -119,6 +119,28 @@ public class FuncLockssHttpClient extends LockssTestCase {
       conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				    URL_CONN_TIMEOUT, connectionPool);
       aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.execute();
+      fail("Expected connect to " + URL_CONN_TIMEOUT +
+	   " to timeout, but got: " + conn.getResponseCode() + ": " +
+	   conn.getResponseMessage());
+    } catch (HttpClientUrlConnection.ConnectionTimeoutException e) {
+      // expected
+    } catch (Exception e) {
+      log.debug2("Unexpected Connect exception", e);
+      fail("Expected connect to " + URL_CONN_TIMEOUT +
+	   " to timeout, but got: " + e);
+      throw e;
+    }
+  }
+
+  public void testKeepAlive() throws Exception {
+    if (isSkipNetworkTests()) return;
+    connectionPool.setConnectTimeout(1);
+    try {
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				    URL_CONN_TIMEOUT, connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.setKeepAlive(true);
       conn.execute();
       fail("Expected connect to " + URL_CONN_TIMEOUT +
 	   " to timeout, but got: " + conn.getResponseCode() + ": " +
@@ -282,6 +304,50 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertMatchesRE("^GET / HTTP/", req);
     assertEquals(200, conn.getResponseCode());
     assertHeaderLine("^Cookie: .*cooktop=eggs", req);
+    conn.release();
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  // Ensure repeated headers get combined into one
+  public void testMultiValueHeader() throws Exception {
+    ConfigurationUtil.addFromArgs(HttpClientUrlConnection.PARAM_SINGLE_VALUED_HEADERS,
+				  "Single");
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200 + "Dup: vvv1\r\nDup: vvv2\r\n"
+			 + "Single: sss1\r\nSingle: sss2\r\n"));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port), connectionPool);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req = th.getRequest(0);
+    assertMatchesRE("^GET / HTTP/", req);
+    // check for the standard default request headers
+    assertHeaderLine("^Accept:", req);
+    assertHeaderLine("^Connection:", req);
+    assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+
+    assertEquals(200, conn.getResponseCode());
+    for (int i = 0; true; i++) {
+      String key = conn.getResponseHeaderFieldKey(i);
+      String val = conn.getResponseHeaderFieldVal(i);
+      if ((key == null) && (val == null)) {
+	break;
+      }
+      log.debug2("hdr: " + key + ": " + val);
+    }
+    CIProperties props = new CIProperties();
+    conn.storeResponseHeaderInto(props, "x_");
+    assertEquals("Keep-Alive", props.getProperty("x_Connection"));
+    assertEquals("Keep-Alive", props.getProperty("x_Connection"));
+    assertEquals("vvv1,vvv2", props.getProperty("x_Dup"));
+    assertEquals("sss2", props.getProperty("x_Single"));
+
     conn.release();
     th.stopServer();
     assertEquals(1, th.getNumConnects());
