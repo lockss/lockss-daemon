@@ -32,6 +32,20 @@
   {
 
     title <
+      name = ERJ Open Research ;
+      eissn = 2312-0541 ;
+      issnl = 2312-0541
+    >
+
+    param[base_url] = http://openres.ersjournals.com/
+
+    au < exists ; 2015 ; ERJ Open Research Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = European Respiratory Journal ;
       issn = 0903-1936 ;
       eissn = 1399-3003 ;
