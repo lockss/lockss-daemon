@@ -24419,6 +24419,25 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     {
 
+        title <
+        name = Journal of Feline Medicine and Surgery Open Reports ;
+        eissn = 2055-1169
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jor.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 ; >
+
+      }
+
+    }
+
+    {
+
       title <
         name = Journal of Fire Protection Engineering ;
         issn = 1042-3915 ;
