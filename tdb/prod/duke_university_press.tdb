@@ -3015,7 +3015,7 @@
     param[journal_dir] = twentieth_century_literature
     attr[journal_id] = tcl
 
-    au < exists ; 2015 ; Twentieth-Century Literature Volume 61 [Project MUSE] ; 61 >
+    au < manifest ; 2015 ; Twentieth-Century Literature Volume 61 [Project MUSE] ; 61 >
 
     }
 
