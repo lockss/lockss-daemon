@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,16 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.util.*;
-
-import org.lockss.app.LockssApp;
-import org.lockss.config.Configuration;
-import org.lockss.test.*;
-import org.lockss.util.*;
-import org.lockss.plugin.*;
-import org.lockss.filter.*;
-import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
+import org.lockss.rewriter.*;
+import org.lockss.test.*;
 
 /**
  * This is the test class for org.lockss.daemon.MimeTypeMap
@@ -51,6 +44,7 @@ public class TestMimeTypeMap extends LockssTestCase {
   MimeTypeMap map;
   MimeTypeInfo.Mutable mti;
 
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     map = new MimeTypeMap();
@@ -83,39 +77,50 @@ public class TestMimeTypeMap extends LockssTestCase {
   }
 
   public void testDefault() {
-    MimeTypeInfo mt1 = MimeTypeMap.DEFAULT.getMimeTypeInfo("text/html");
+    // -------- CSS --------
+    MimeTypeInfo mt1 = MimeTypeMap.DEFAULT.getMimeTypeInfo("text/css");
     assertNull(mt1.getHashFilterFactory());
     assertNull(mt1.getCrawlFilterFactory());
-    assertTrue(mt1.getLinkExtractorFactory()
-	       instanceof GoslingHtmlLinkExtractor.Factory);
-
-    MimeTypeInfo mt2 = MimeTypeMap.DEFAULT.getMimeTypeInfo("text/css");
-    assertNull(mt2.getHashFilterFactory());
-    assertNull(mt2.getCrawlFilterFactory());
-    assertTrue(mt2.getLinkExtractorFactory()
-	       instanceof RegexpCssLinkExtractor.Factory);
-
-    MimeTypeInfo mt3 =
-      MimeTypeMap.DEFAULT.getMimeTypeInfo("application/xhtml+xml");
-    assertNull(mt3.getHashFilterFactory());
-    assertNull(mt3.getCrawlFilterFactory());
-    assertTrue(mt3.getLinkExtractorFactory()
-	       instanceof GoslingHtmlLinkExtractor.Factory);
+    assertTrue(mt1.getLinkExtractorFactory() instanceof RegexpCssLinkExtractor.Factory);
+    assertTrue(mt1.getLinkRewriterFactory() instanceof RegexpCssLinkRewriterFactory);
 
     ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
-				  "No.Such.Class");
-    assertClass(RegexpCssLinkExtractor.Factory.class,
-		mt2.getLinkExtractorFactory());
+                                  "No.Such.Class");
+    assertClass(RegexpCssLinkExtractor.Factory.class, mt1.getLinkExtractorFactory());
 
     ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_CSS_REWRITER_FACTORY,
-				  "No.Such.Class");
-    assertClass(RegexpCssLinkRewriterFactory.class,
-		mt2.getLinkRewriterFactory());
+                                  "No.Such.Class");
+    assertClass(RegexpCssLinkRewriterFactory.class, mt1.getLinkRewriterFactory());
 
     ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_CSS_REWRITER_FACTORY,
-				  "org.lockss.rewriter.StringFilterCssLinkRewriterFactory");
-    assertClass(StringFilterCssLinkRewriterFactory.class,
-		mt2.getLinkRewriterFactory());
+                                  "org.lockss.rewriter.StringFilterCssLinkRewriterFactory");
+    assertClass(StringFilterCssLinkRewriterFactory.class, mt1.getLinkRewriterFactory());
+
+    // -------- HTML --------
+    MimeTypeInfo mt2 = MimeTypeMap.DEFAULT.getMimeTypeInfo("text/html");
+    assertNull(mt2.getHashFilterFactory());
+    assertNull(mt2.getCrawlFilterFactory());
+    assertTrue(mt2.getLinkExtractorFactory() instanceof GoslingHtmlLinkExtractor.Factory);
+    assertTrue(mt2.getLinkRewriterFactory() instanceof NodeFilterHtmlLinkRewriterFactory);
+
+    MimeTypeInfo mt3 = MimeTypeMap.DEFAULT.getMimeTypeInfo("application/xhtml+xml");
+    assertNull(mt3.getHashFilterFactory());
+    assertNull(mt3.getCrawlFilterFactory());
+    assertTrue(mt3.getLinkExtractorFactory() instanceof GoslingHtmlLinkExtractor.Factory);
+    assertTrue(mt3.getLinkRewriterFactory() instanceof NodeFilterHtmlLinkRewriterFactory);
+
+    // -------- XML --------
+    MimeTypeInfo mt4 = MimeTypeMap.DEFAULT.getMimeTypeInfo("text/xml");
+    assertNull(mt4.getHashFilterFactory());
+    assertNull(mt4.getCrawlFilterFactory());
+    assertTrue(mt4.getLinkExtractorFactory() instanceof XmlLinkExtractorFactory);
+    assertNull(mt4.getLinkRewriterFactory());
+
+    MimeTypeInfo mt5 = MimeTypeMap.DEFAULT.getMimeTypeInfo("application/xml");
+    assertNull(mt5.getHashFilterFactory());
+    assertNull(mt5.getCrawlFilterFactory());
+    assertTrue(mt5.getLinkExtractorFactory() instanceof XmlLinkExtractorFactory);
+    assertNull(mt5.getLinkRewriterFactory());
   }
 
   public void testModifyMimeTypeInfo() {

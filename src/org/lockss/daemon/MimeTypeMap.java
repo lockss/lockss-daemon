@@ -3,42 +3,49 @@
  */
 
 /*
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
- */
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
 
 package org.lockss.daemon;
 
 import java.util.*;
 
-import org.lockss.util.*;
-import org.lockss.config.*;
+import org.lockss.config.Configuration;
 import org.lockss.extractor.*;
 import org.lockss.rewriter.*;
+import org.lockss.util.*;
 
 /**
  * Record of MIME type-specific factories (<i>eg</i>, FilterFactory,
  * LinkExtractorFactory), and static global defaults
  */
 public class MimeTypeMap {
-  static Logger log = Logger.getLogger("MimeTypeMap");
+  
+  private static final Logger log = Logger.getLogger(MimeTypeMap.class);
 
   public static MimeTypeMap DEFAULT = new MimeTypeMap();
 
@@ -46,6 +53,10 @@ public class MimeTypeMap {
 
   static final String PREFIX = Configuration.PREFIX + "mimeInfo.";
 
+  /*
+   * -------- CSS --------
+   */
+  
   public static final String PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY =
       PREFIX + "defaultCssExtractorFactory";
   public static final String DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY =
@@ -56,49 +67,74 @@ public class MimeTypeMap {
   public static final String DEFAULT_DEFAULT_CSS_REWRITER_FACTORY =
       "org.lockss.rewriter.RegexpCssLinkRewriterFactory";
 
+  private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
+
+  /*
+   * -------- HTML --------
+   */
+  
   public static final String PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY =
       PREFIX + "defaultHtmlExtractorFactory";
   public static final String DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY =
       "org.lockss.extractor.GoslingHtmlLinkExtractor$Factory";
+  
   public static final String PARAM_DEFAULT_HTML_REWRITER_FACTORY =
       PREFIX + "defaultHtmlRewriterFactory";
   public static final String DEFAULT_DEFAULT_HTML_REWRITER_FACTORY =
       "org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory";
 
   private static MimeTypeInfo.Mutable HTML = new MimeTypeInfo.Impl();
-  private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
+
+  /*
+   * -------- XML --------
+   */
+  
+  /**
+   * @since 1.68
+   */
+  public static final String PARAM_DEFAULT_XML_EXTRACTOR_FACTORY =
+      PREFIX + "defaultXmlExtractorFactory";
+
+  /**
+   * @since 1.68
+   */
+  public static final String DEFAULT_DEFAULT_XML_EXTRACTOR_FACTORY =
+      "org.lockss.extractor.XmlLinkExtractorFactory";
+  
+  /**
+   * @since 1.68
+   */
+  private static MimeTypeInfo.Mutable XML = new MimeTypeInfo.Impl();
 
   static {
+    setLinkExtractorFactory(CSS,
+                            DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY,
+                            null);
+    setLinkRewriterFactory(CSS,
+                           DEFAULT_DEFAULT_CSS_REWRITER_FACTORY,
+                           null);
+    DEFAULT.putMimeTypeInfo("text/css", CSS);
+
     setLinkExtractorFactory(HTML,
-        DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY, null);
+                            DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY,
+                            null);
     setLinkRewriterFactory(HTML,
-        DEFAULT_DEFAULT_HTML_REWRITER_FACTORY, null);
+                           DEFAULT_DEFAULT_HTML_REWRITER_FACTORY,
+                           null);
     DEFAULT.putMimeTypeInfo("text/html", HTML);
     DEFAULT.putMimeTypeInfo("application/xhtml+xml", HTML);
 
-    setLinkExtractorFactory(CSS,
-        DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY, null);
-    setLinkRewriterFactory(CSS,
-        DEFAULT_DEFAULT_CSS_REWRITER_FACTORY, null);
-    DEFAULT.putMimeTypeInfo("text/css", CSS);
-  }
+    setLinkExtractorFactory(XML,
+                            DEFAULT_DEFAULT_XML_EXTRACTOR_FACTORY,
+                            null);
+    DEFAULT.putMimeTypeInfo("text/xml", XML);
+    DEFAULT.putMimeTypeInfo("application/xml", XML);
+ }
 
   /** Called by org.lockss.config.MiscConfig */
   public static void setConfig(Configuration config,
                                Configuration oldConfig,
                                Configuration.Differences diffs) {
-    if (diffs.contains(PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY)) {
-      setLinkExtractorFactory(HTML,
-          config.get(PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY,
-              DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY),
-          new GoslingHtmlLinkExtractor.Factory());
-    }
-    if (diffs.contains(PARAM_DEFAULT_HTML_REWRITER_FACTORY)) {
-      setLinkRewriterFactory(HTML,
-          config.get(PARAM_DEFAULT_HTML_REWRITER_FACTORY,
-              DEFAULT_DEFAULT_HTML_REWRITER_FACTORY),
-          new NodeFilterHtmlLinkRewriterFactory());
-    }
     if (diffs.contains(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY)) {
       setLinkExtractorFactory(CSS,
           config.get(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
@@ -110,6 +146,18 @@ public class MimeTypeMap {
           config.get(PARAM_DEFAULT_CSS_REWRITER_FACTORY,
               DEFAULT_DEFAULT_CSS_REWRITER_FACTORY),
           new RegexpCssLinkRewriterFactory());
+    }
+    if (diffs.contains(PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY)) {
+      setLinkExtractorFactory(HTML,
+          config.get(PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY,
+              DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY),
+          new GoslingHtmlLinkExtractor.Factory());
+    }
+    if (diffs.contains(PARAM_DEFAULT_XML_EXTRACTOR_FACTORY)) {
+      setLinkExtractorFactory(XML,
+          config.get(PARAM_DEFAULT_XML_EXTRACTOR_FACTORY,
+              DEFAULT_DEFAULT_XML_EXTRACTOR_FACTORY),
+          new XmlLinkExtractorFactory());
     }
   }
 
