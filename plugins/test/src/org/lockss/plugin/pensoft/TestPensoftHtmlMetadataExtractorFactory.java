@@ -76,7 +76,7 @@ import org.lockss.plugin.simulated.*;
 
 <meta name="prism.publicationName" content="Journal of ZZZ Research" />
 <meta name="prism.issn" content="1314-2607" />
-<meta name="prism.publicationDate" content="2011-10-21" /> 
+<meta name="prism.publicationDate" content="2011-10-21" />
 <meta name="prism.volume" content="23" />
 
 <meta name="prism.doi" content="10.3897/ZZZ.23.1548" />
@@ -87,7 +87,7 @@ import org.lockss.plugin.simulated.*;
 <meta name="prism.rightsAgent" content="Journal of ZZZ Research@pensoft.net" />
 
 <meta name="eprints.title" content="Review of Article title for this Example" />
-<meta name="eprints.creators_name" content="Davids, Smith " /> <meta name="eprints.creators_name" content="Stuvwxy, Abcde " /> 
+<meta name="eprints.creators_name" content="Davids, Smith " /> <meta name="eprints.creators_name" content="Stuvwxy, Abcde " />
 <meta name="eprints.type" content="Research Article" />
 <meta name="eprints.datestamp" content="2011-10-21" />
 <meta name="eprints.ispublished" content="pub" />
@@ -99,7 +99,7 @@ import org.lockss.plugin.simulated.*;
 
 <meta name="citation_journal_title" content="Journal of ZZZ Research" />
 <meta name="citation_publisher" content="Pensoft Publishers" />
-<meta name="citation_author" content="Smith Davids" /> <meta name="citation_author" content="Abcde  Stuvwxy" /> 
+<meta name="citation_author" content="Smith Davids" /> <meta name="citation_author" content="Abcde  Stuvwxy" />
 <meta name="citation_title" content="Review of Article title for this Example" />
 <meta name="citation_volume" content="23" />
 
@@ -143,7 +143,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
   }
 
   /**
-   * Configuration method. 
+   * Configuration method.
    * @return
    */
   Configuration pensoftAuConfig() {
@@ -160,7 +160,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
   String goodStartPage = "1";
   String goodEndPage = "22";
   String goodDate = "2005/05/05";
-  String[] goodAuthors = {"María Poggio", "Julia Bressa", "Papeschi, Alba"};
+  String[] goodAuthors = {"Mar√≠a Poggio", "Julia Bressa", "Papeschi, Alba"};
   String goodArticleTitle = "Male meiosis, heterochromatin characterization and chromosomal location of rDNA in Microtomus lunifer (Berg, 1900) (Hemiptera: Reduviidae: Hammacerinae)";
   String goodJournalTitle = "Analytical Comparative Cytogenetics";
   String goodKeywords = "meiosis, heterochromatin, rDNA";
@@ -169,7 +169,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
   String goodXML = "http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=World";
   String goodHTML = "http://www.pensoft.net/journals/helloworld/article/2065/Hello-world-as-a-title";
   String goodABS = "http://www.pensoft.net/journals/helloworld/article/2065/abstract/Hello-world-as-a-title";
-  
+
 
   final String crawlRegExp = "(http://www.pensoft.net/inc/journals/download.php\\?)(fileId=[\\d]+)(\\&)(fileTable=J_GALLEYS)$";
   final String metadataRegExp = "(http://www.pensoft.net/inc/journals/download.php\\?)(fileTable=J_GALLEYS)(\\&)(fileId=[\\d]+)$";
@@ -183,16 +183,16 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
         crawlPdf = mat.replaceFirst("$1$4$3$2");
         mat = crawlPattern.matcher(crawlPdf);
         assertTrue(mat.matches());
-      } 
+      }
       assertEquals(crawlPdf, goodCrawlPDF);
-     
+
  }
 
-  
-  // a chunk of metadata html source code from where the 
+
+  // a chunk of metadata html source code from where the
   // metadata should be extracted
 
-  String goodContent = 
+  String goodContent =
     "<meta content=\"Sitefinity 3.6.1936.2:1\" name=\"Generator\">\n"
     + "<meta content=\"" + goodJournalTitle + "\" name=\"citation_journal_title\">\n"
     + authorHtml()
@@ -204,13 +204,13 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
     + "<meta content=\"" + goodEndPage + "\" name=\"citation_lastpage\">\n"
     + "<meta content=\"en\" name=\"citation_language\">\n"
     + "<meta content=\"" + goodKeywords + "\"name=\"keywords\">\n"
-    + "<meta content=\"" + goodDate + "\" name=\"citation_date\">\n"    
+    + "<meta content=\"" + goodDate + "\" name=\"citation_date\">\n"
     + "<meta name=\"citation_pdf_url\" content=\"" + goodMetaPDF + "\"/>"
     + "<meta name=\"citation_xml_url\" content=\""+ goodXML + "\"/>"
     + "<meta name=\"citation_fulltext_html_url\" content=\"" + goodHTML + "\"/>"
     + "<meta name=\"citation_abstract_html_url\" content=\"" + goodABS + "\"/>"
-   ;       
-   
+   ;
+
         public String authorHtml() {
                   String authorHtml = "";
                   for(String auth : goodAuthors) {
@@ -219,9 +219,9 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
                   return authorHtml;
         }
   /**
-   * Method that creates a simulated Cached URL from the source code provided by 
+   * Method that creates a simulated Cached URL from the source code provided by
    * the goodContent String. It then asserts that the metadata extracted, by using
-   * the PensoftHtmlMetadataExtractorFactory, match the metadata in the source code. 
+   * the PensoftHtmlMetadataExtractorFactory, match the metadata in the source code.
    * @throws Exception
    */
   public void testExtractFromGoodContent() throws Exception {
@@ -250,7 +250,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodXML, md.getRaw("citation_xml_url"));
     assertEquals(goodHTML, md.getRaw("citation_fulltext_html_url"));
     assertEquals(goodABS, md.getRaw("citation_abstract_html_url"));
-  
+
   }
 
   // a chunk of html source code from where the PensoftHtmlMetadataExtractorFactory should NOT be able to extract metadata
@@ -264,7 +264,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
     + goodVolume + " </div>\n";
 
   /**
-   * Method that creates a simulated Cached URL from the source code provided by the badContent Sring. It then asserts that NO metadata is extracted by using 
+   * Method that creates a simulated Cached URL from the source code provided by the badContent Sring. It then asserts that NO metadata is extracted by using
    * the NatureHtmlMetadataExtractorFactory as the source code is broken.
    * @throws Exception
    */
@@ -289,6 +289,6 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
 
     assertEquals(1, md.rawSize());
     assertEquals("bar", md.getRaw("foo"));
-  }     
+  }
 
 }

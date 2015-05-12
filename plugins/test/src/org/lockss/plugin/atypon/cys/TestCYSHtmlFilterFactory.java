@@ -47,19 +47,19 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
 public class TestCYSHtmlFilterFactory extends LockssTestCase {
-  
+
   FilterFactory variantFact;
   ArchivalUnit cau;
   String tempDirPath;
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
-  
-  private static final String PLUGIN_NAME = 
+
+  private static final String PLUGIN_NAME =
       "org.lockss.plugin.atypon.cys.ClockssCYSPlugin";
-  
-  private static final String filteredStr = 
+
+  private static final String filteredStr =
       "<div class=\"block\"></div>";
-  
+
   private static final String withHead =
       "<div class=\"block\">" +
       "<head>" +
@@ -73,7 +73,7 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
       "<meta content=\"XYZ Journal\" name=\"citation_journal_title\">" +
       "</head>" +
       "</div>";
-  
+
   private static final String withNavWrapper =
       "<div class=\"block\">"
           + "<div id=\"nav-wrapper\">"
@@ -87,7 +87,7 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "<li><a class=\"language\" href=\"/action/blah\">Other language</a>"
           + "</li></ul></div>"
           + "</div>";
-  
+
   private static final String withBreadcrumbs =
       "<div class=\"block\">" +
           "<div id=\"breadcrumbs\">" +
@@ -103,7 +103,7 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           "</span>" +
           "</div>" +
           "</div>";
-  private static final String withSidebarLeft = 
+  private static final String withSidebarLeft =
       "<div class=\"block\">"
           + "<div id=\"sidebar-left\">"
           + "<a href=\"/journal/xxx\">"
@@ -117,7 +117,7 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "/xxxx-2013-005\">Recommend to public</a></li>"
           + "</ul></li></ul><div></div></div>"
           + "</div>";
-  
+
   // toc - table of contents box with full issue pdf,
   // previous/next issue, current issue - no unique name found
   // http://www.cysjournal.ca/toc/cysj/2013/2
@@ -132,19 +132,19 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "href=\"/doi/pdf/11.11111/xxxx2013-2\">"
           + "</a></div></div>"
           + "</div>";
-  
+
   // abs, full - previous/toc/next article
   // http://www.cysjournal.ca/doi/full/10.13034/cysj-2013-006
-  private static final String withPreviousNextArticle = 
+  private static final String withPreviousNextArticle =
       "<div class=\"block\">" +
           "<a class=\"white-link-right\" title=\"Previous Article\" " +
-          "href=\"/doi/full/11.11111/jid-2013-001\"> Ç Previous</a>" +
+          "href=\"/doi/full/11.11111/jid-2013-001\"> &laquo; Previous</a>" +
           "<a class=\"white-link-right\" " +
           "href=\"http://www.xxx.com/toc/jid/2013/2\"> TOC </a>" +
           "<a class=\"white-link-right\" title=\"Next Article\" " +
-          "href=\"/doi/full/11.11111/jid-2013-005\"> Next È </a>" +
+          "href=\"/doi/full/11.11111/jid-2013-005\"> Next &raquo; </a>" +
           "</div>";
-  
+
   private static final String withSpiderTrap =
       "<div class=\"block\">"
           + "<span id=\"hide\"><a href=\"/doi/pdf/10.xxxx/9999-9999.99999\">"
@@ -158,7 +158,7 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           "<img src=\"/imgsrc/Bond_Banner.jpg\" alt=\"Bond Banner\"></a>" +
           "</div>" +
           "</div>";
-  
+
   private static final String withTopBarWrapper =
       "<div class=\"block\">"
           + "<div id=\"top-bar-wrapper\">"
@@ -166,15 +166,15 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "<div class=\"headerAd\"><img src=\"/yyy/logo.gif\">"
           + "</div></div></div>"
           + "</div>";
-  
+
   private static final String withBanner =
        "<div class=\"block\">" +
           "<div class=\"banner\">" +
           "<h1> XYZ Journal</h1>" +
           "</div>" +
           "</div>";
-      
-  private static final String withAllSidebarRightExceptDownloadCitation = 
+
+  private static final String withAllSidebarRightExceptDownloadCitation =
       "<div class=\"block\">"
           + "<div id=\"sidebar-right\">"
           + "<div class=\"article-tools\">"
@@ -188,22 +188,22 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "href=\"http://www.citeulike.org/blah\">CiteULike</a></li>"
           + "</ul></div></div>"
           + "</div>";
-  
-  private static final String sidebarRightFiltered = 
+
+  private static final String sidebarRightFiltered =
       "<div class=\"block\">"
           + "<div id=\"sidebar-right\">"
           + "<div class=\"article-tools\">"
           + "<ul class=\"article-tools-list\">"
           + "<li><a title=\"Download Citation\" class=\"icon-citation\""
           + "href=\"/action/showCitFormats?blah\">Download Citation</a></li>"
-          + "</ul></div></div>" 
-          + "</div>"; 
-  
+          + "</ul></div></div>"
+          + "</div>";
+
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(PLUGIN_NAME,  cysAuConfig());
   }
-  
+
   private Configuration cysAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.example.com/");
@@ -211,16 +211,16 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
     conf.put("volume_name", "99");
     return conf;
   }
-  
-  private static void doFilterTest(ArchivalUnit au, 
-      FilterFactory fact,String nameToHash, String expectedStr) 
+
+  private static void doFilterTest(ArchivalUnit au,
+      FilterFactory fact,String nameToHash, String expectedStr)
           throws PluginException, IOException {
-    InputStream actIn; 
-    actIn = fact.createFilteredInputStream(au, 
+    InputStream actIn;
+    actIn = fact.createFilteredInputStream(au,
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
       assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void startMockDaemon() {
     daemon = getMockLockssDaemon();
     pluginMgr = daemon.getPluginManager();
@@ -230,14 +230,14 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
     daemon.getAlertManager();
     daemon.getCrawlManager();
   }
-  
+
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = setUpDiskSpace();
     startMockDaemon();
     cau = createAu();
-  }  
-          		
+  }
+
   // Variant to test with Crawl Filter
   public static class TestCrawl extends TestCYSHtmlFilterFactory {
     public void testFiltering() throws Exception {
@@ -246,11 +246,11 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
       doFilterTest(cau, variantFact, withPreviousNextArticle, filteredStr);
       doFilterTest(cau, variantFact, withFullListIssues, filteredStr);
       doFilterTest(cau, variantFact, withSpiderTrap, filteredStr);
-    }    
+    }
   }
 
   // Variant to test with Hash Filter
-   public static class TestHash extends TestCYSHtmlFilterFactory {   
+   public static class TestHash extends TestCYSHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new CYSHtmlHashFilterFactory();
       doFilterTest(cau, variantFact, withHead, filteredStr);
@@ -260,20 +260,20 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
       doFilterTest(cau, variantFact, withNavWrapper, filteredStr);
       doFilterTest(cau, variantFact, withBreadcrumbs, filteredStr);
       doFilterTest(cau, variantFact, withSidebarLeft, filteredStr);
-      doFilterTest(cau, variantFact, withAllSidebarRightExceptDownloadCitation, 
+      doFilterTest(cau, variantFact, withAllSidebarRightExceptDownloadCitation,
                    sidebarRightFiltered);
       doFilterTest(cau, variantFact, withFullListIssues, filteredStr);
       doFilterTest(cau, variantFact, withPreviousNextArticle, filteredStr);
       doFilterTest(cau, variantFact, withSpiderTrap, filteredStr);
     }
   }
-  
+
   public static Test suite() {
     return variantSuites(new Class[] {
         TestCrawl.class,
         TestHash.class
       });
   }
-  
+
 }
 

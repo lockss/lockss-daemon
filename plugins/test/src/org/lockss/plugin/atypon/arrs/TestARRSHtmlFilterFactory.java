@@ -48,27 +48,27 @@ import org.lockss.test.*;
 
 public class TestARRSHtmlFilterFactory
   extends LockssTestCase {
-  
+
   FilterFactory variantFact;
   ArchivalUnit arrsau;
   String tempDirPath;
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
-        
-  private static final String PLUGIN_ID = 
+
+  private static final String PLUGIN_ID =
       "org.lockss.plugin.atypon.arrs.ARRSPlugin";
-  
-  private static final String filteredStr = 
+
+  private static final String filteredStr =
       "<div class=\"block\"></div>";
-  
+
   // test for pdf and pdfplus file size
   // is in TestBaseAtyponHtmlHashFilterFactory since the html is similar
-  // <a class="ref nowrap" target="_blank" title="Opens new window" 
+  // <a class="ref nowrap" target="_blank" title="Opens new window"
   // href="/doi/pdf/10.2214/AJR.12.9355">PDF (823 KB)</a>
-  
+
   // from toc, abs, full - whole left sidebar
   // http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
-  private static final String withLeftSidebar = 
+  private static final String withLeftSidebar =
       "<div class=\"block\">" +
           "<div id=\"dropzone-Left-Sidebar\" >" +
           "<div id=\"widget1\" class=\"widget ui-helper-clearfix\">" +
@@ -90,22 +90,22 @@ public class TestARRSHtmlFilterFactory
           "</div></div>" +
           "</div>" +
           "</div>";
-  
+
   // from abs, full - Previous Article|Next Article:
   // http://www.ajronline.org/doi/abs/10.2214/AJR.12.10039
-  private static final String withArticleToolsNav = 
+  private static final String withArticleToolsNav =
       "<div class=\"block\">" +
           "<div id=\"articleToolsNav\" class=\"stackContents\">" +
           "<a class=\"ref nowrap\" href=\"/doi/abs/11.1111/AJR.11.11111\">" +
-          "<span>Ç prev article</span></a>" +
+          "<span>&laquo; prev article</span></a>" +
           "<a href=\"/doi/abs/11.1111/AJR.11.11111\">" +
-          "<span>next art È</span></a>" +
+          "<span>next art  &raquo;</span></a>" +
           "</div>" +
           "</div>";
-  
+
   // from abs, full - Recommended Articles
   // http://www.ajronline.org/doi/full/10.2214/AJR.12.9120
-  private static final String withRecommendedArticles = 
+  private static final String withRecommendedArticles =
       "<div class=\"block\">" +
           "<div id=\"widget1\" class=\"widget type-recommendedArticles\">" +
           "<div class=\"header \"><h3>rec art</h3></div>" +
@@ -115,23 +115,23 @@ public class TestARRSHtmlFilterFactory
           "</div>" +
           "</div>" +
           "</div>";
-      
-  // from toc - accessIcon  
-  private static final String withAccessIcon = 
+
+  // from toc - accessIcon
+  private static final String withAccessIcon =
       "<div class=\"block\">" +
           "<img class=\"accessIcon fullAccess\" title=\"full\" " +
           "alt=\"full\" src=\"/imagessrc/accessfull.gif\">" +
           "</div>";
-  
+
   // from toc - credit icon
-  private static final String withCreditIcon = 
+  private static final String withCreditIcon =
       "<div class=\"block\">" +
           "<img class=\"CMESAM\" src=\"/imagessrc/CREDITicon.gif\">" +
           "</div>";
-  
+
   // from abs - share/email button below article title
   // http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
-  private static final String withArticleAdditionalLinks = 
+  private static final String withArticleAdditionalLinks =
       "<div class=\"block\">" +
           "<div class=\"articleAdditionalLinks\">" +
           "<a class=\"emailLink\" " +
@@ -139,11 +139,11 @@ public class TestARRSHtmlFilterFactory
           "<img alt=\"Share\" src=\"/imagessrc/email.gif\">Share</a>" +
           "</div>" +
           "</div>";
-  
+
   // from abs, full - 'Choose' pulldown near References section
   // some page collected with 'CITING ARTICLES', some without
   // http://www.ajronline.org/doi/full/10.2214/AJR.12.9121
-  private static final String withSectionHeading = 
+  private static final String withSectionHeading =
       "<div class=\"block\">" +
           "<table class=\"sectionHeading\"" +
           "<tr>" +
@@ -161,12 +161,12 @@ public class TestARRSHtmlFilterFactory
           "</tr>" +
           "</table>" +
           "</div>";
-  
+
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(PLUGIN_ID,  arrsAuConfig());
   }
-  
+
   private Configuration arrsAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.example.com/");
@@ -174,16 +174,16 @@ public class TestARRSHtmlFilterFactory
     conf.put("volume_name", "99");
     return conf;
   }
-  
-  private static void doFilterTest(ArchivalUnit au, 
-      FilterFactory fact, String nameToHash, String expectedStr) 
+
+  private static void doFilterTest(ArchivalUnit au,
+      FilterFactory fact, String nameToHash, String expectedStr)
           throws PluginException, IOException {
-    InputStream actIn; 
-    actIn = fact.createFilteredInputStream(au, 
+    InputStream actIn;
+    actIn = fact.createFilteredInputStream(au,
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
     assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void startMockDaemon() {
     daemon = getMockLockssDaemon();
     pluginMgr = daemon.getPluginManager();
@@ -193,45 +193,45 @@ public class TestARRSHtmlFilterFactory
     daemon.getAlertManager();
     daemon.getCrawlManager();
   }
-  
+
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = setUpDiskSpace();
     startMockDaemon();
     arrsau = createAu();
   }
-  
+
   // Variant to test with Crawl Filter
   public static class TestCrawl extends TestARRSHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new ARRSHtmlCrawlFilterFactory();
-      doFilterTest(arrsau, variantFact, withLeftSidebar, filteredStr); 
-      doFilterTest(arrsau, variantFact, withArticleToolsNav, filteredStr); 
-      doFilterTest(arrsau, variantFact, withRecommendedArticles, filteredStr);       
-    }    
+      doFilterTest(arrsau, variantFact, withLeftSidebar, filteredStr);
+      doFilterTest(arrsau, variantFact, withArticleToolsNav, filteredStr);
+      doFilterTest(arrsau, variantFact, withRecommendedArticles, filteredStr);
+    }
   }
 
   // Variant to test with Hash Filter
-   public static class TestHash extends TestARRSHtmlFilterFactory {   
+   public static class TestHash extends TestARRSHtmlFilterFactory {
      public void testFiltering() throws Exception {
       variantFact = new ARRSHtmlHashFilterFactory();
-      doFilterTest(arrsau, variantFact, withAccessIcon, filteredStr); 
-      doFilterTest(arrsau, variantFact, withCreditIcon, filteredStr); 
-      doFilterTest(arrsau, variantFact, withLeftSidebar, filteredStr); 
-      doFilterTest(arrsau, variantFact, withArticleToolsNav, filteredStr); 
-      doFilterTest(arrsau, variantFact, withRecommendedArticles, filteredStr); 
-      doFilterTest(arrsau, variantFact, withArticleAdditionalLinks, 
-                   filteredStr); 
-      doFilterTest(arrsau, variantFact, withSectionHeading, filteredStr); 
+      doFilterTest(arrsau, variantFact, withAccessIcon, filteredStr);
+      doFilterTest(arrsau, variantFact, withCreditIcon, filteredStr);
+      doFilterTest(arrsau, variantFact, withLeftSidebar, filteredStr);
+      doFilterTest(arrsau, variantFact, withArticleToolsNav, filteredStr);
+      doFilterTest(arrsau, variantFact, withRecommendedArticles, filteredStr);
+      doFilterTest(arrsau, variantFact, withArticleAdditionalLinks,
+                   filteredStr);
+      doFilterTest(arrsau, variantFact, withSectionHeading, filteredStr);
     }
   }
-  
+
   public static Test suite() {
     return variantSuites(new Class[] {
         TestCrawl.class,
         TestHash.class
       });
   }
-  
+
 }
 

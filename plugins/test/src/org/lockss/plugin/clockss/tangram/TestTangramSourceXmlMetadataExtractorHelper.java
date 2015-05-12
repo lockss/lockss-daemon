@@ -53,8 +53,8 @@ import org.lockss.plugin.definable.DefinablePlugin;
 
 public class TestTangramSourceXmlMetadataExtractorHelper
   extends LockssTestCase {
-  
-  static Logger log = 
+
+  static Logger log =
       Logger.getLogger(TestTangramSourceXmlMetadataExtractorHelper.class);
 
   private MockLockssDaemon theDaemon;
@@ -70,14 +70,13 @@ public class TestTangramSourceXmlMetadataExtractorHelper
 
   private static final String YEAR = "2014";
 
-  private static final String BASE_URL = 
+  private static final String BASE_URL =
       "http://clockss-ingest.lockss.org/sourcefiles/tangram-dev/"+ YEAR + "/";
-  
+
   private static final String BASIC_CONTENT_FILE_NAME = "fromXlsx.xml";
   final static String pdfUrl = "test.pdf";
   final static String GOOD_AUTHOR1 = "John B. Lastname";
   final static String GOOD_AUTHOR1_INV = "Lastname, John B.";
-  //final static String GOOD_BOOK_TITLE = "Abitare ai margini della città";
   final static String GOOD_BOOK_TITLE = "Abitare ai margini della citt%C3%A0";
   final static String GOOD_SUBTITLE = "Trasformazione dei modelli insediativi residenziali moderni";
   final static String GOOD_CATEGORY = "Category";
@@ -122,10 +121,10 @@ public class TestTangramSourceXmlMetadataExtractorHelper
         "</node>" +
       "</xml>" +
     "</catalogo>";
-  
+
   // the following content does not have the "section" level -
   // should work with and without
-  private static final String BASIC_MULTIROW_CONTENT = 
+  private static final String BASIC_MULTIROW_CONTENT =
     "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
     "<catalogo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">" +
       "<xml>" +
@@ -148,7 +147,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       "<Elenco_autori_curatori_principali_INV>Magliacane Alessia J., Rubino Francesco</Elenco_autori_curatori_principali_INV>" +
       "<Titolo>"+GOOD_BOOK_TITLE2+"</Titolo>" +
       "<Sottotitolo>" +GOOD_SUBTITLE2+"</Sottotitolo>" +
-      "<Categoria>Politica e Società</Categoria>" +
+      "<Categoria>Politica e Societ√†</Categoria>" +
       "<Formato>cm 14,8 x 21</Formato>" +
       "<Numero_pagine>168</Numero_pagine>" +
       "<ISBN>"+GOOD_ISBN2+"</ISBN>" +
@@ -160,7 +159,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       "</node>" +
     "</xml>" +
   "</catalogo>";
-  
+
   private static final String EMPTY_CONTENT =
     "<catalogo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">" +
     "<xml>" +
@@ -168,7 +167,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       "</node>" +
     "</xml>" +
   "</catalogo>";
- 
+
 
   public void setUp() throws Exception {
     super.setUp();
@@ -181,19 +180,19 @@ public class TestTangramSourceXmlMetadataExtractorHelper
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-    
+
     mau = new MockArchivalUnit();
     mau.setConfiguration(auConfig());
-    
+
   }
-  
+
   public void tearDown() throws Exception {
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
   /**
-   * Configuration method. 
+   * Configuration method.
    * @return
    */
   Configuration auConfig() {
@@ -202,18 +201,18 @@ public class TestTangramSourceXmlMetadataExtractorHelper
     conf.put("year", YEAR);
     return conf;
   }
-  
+
   public TestTangramSourceXmlMetadataExtractorHelper() throws Exception {
     super.setUp();
     setUp();
   }
-  
+
   //final static String TEST_XML_URL = "http://clockss-ingest.lockss.org/sourcefiles/tangram-dev/2014/Tes.xml";
   //final static String TEST_PDF_URL = "http://clockss-ingest.lockss.org/sourcefiles/tangram-dev/2014/"+GOOD_PDF;
   //final static String TEST_PDF2_URL = "http://clockss-ingest.lockss.org/sourcefiles/tangram-dev/2014/"+GOOD_PDF2;
   final static String TEST_XML_URL = BASE_URL + "Tes.xml";
   final static String TEST_PDF_URL = BASE_URL+GOOD_PDF;
-  final static String TEST_PDF2_URL = BASE_URL+GOOD_PDF2; 
+  final static String TEST_PDF2_URL = BASE_URL+GOOD_PDF2;
   public void testExtractFromEmptyContent() throws Exception {
     String xml_url = TEST_XML_URL;
     String pdf_url = TEST_PDF_URL;
@@ -223,7 +222,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
     URL base = new URL(BASE_URL);
     theDaemon.getLockssRepository(mau);
     theDaemon.getNodeManager(mau);
-    
+
     MockCachedUrl xml_cu = mau.addUrl(xml_url, EMPTY_CONTENT);
     // doesn't matter what content the fake pdf_cu has
     MockCachedUrl pdf_cu = mau.addUrl(pdf_url, EMPTY_CONTENT);
@@ -238,7 +237,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
     assertEmpty(mdlist);
 
   }
-  
+
   /*
   public void testExtractFromBadContent() throws Exception {
     String xml_url = TEST_XML_URL;
@@ -262,7 +261,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xml_cu);
     assertEmpty(mdlist);
-  
+
   }
   */
 
@@ -280,7 +279,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       // need to check for this file before emitting, but contents don't matter
       MockCachedUrl pcu = mau.addUrl(pdf_url, EMPTY_CONTENT);
       MockCachedUrl pcu2 = mau.addUrl(pdf2_url, EMPTY_CONTENT);
-      
+
       String string_input = BASIC_ROW_CONTENT;
 
       cu.setContent(string_input);
@@ -295,25 +294,25 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       assertNotEmpty(mdlist);
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
-      
+
       log.info(md.get(MetadataField.FIELD_DATE));
       log.info("from cooked: "+md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       log.info("from metadata: "+GOOD_BOOK_TITLE+":"+GOOD_SUBTITLE);
 
-      
+
       assertEquals(GOOD_PUBYEAR, md.get(MetadataField.FIELD_DATE));
       //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
       assertEquals(GOOD_BOOK_TITLE+":"+GOOD_SUBTITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(GOOD_ISBN, md.get(MetadataField.FIELD_ISBN));
       assertEquals(GOOD_AUTHOR1, md.get(MetadataField.FIELD_AUTHOR));
-      
+
 
     } finally {
       //IOUtil.safeClose(file_input);
     }
   }
 
- /* 
+ /*
   // from original xml file from the publisher
   public void testExtractFromMultiRowContent() throws Exception {
     CIProperties xmlHeader = new CIProperties();
@@ -328,7 +327,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       MockCachedUrl pcu = mau.addUrl(pdf_url, EMPTY_CONTENT);
       MockCachedUrl pcu2 = mau.addUrl(pdf2_url, EMPTY_CONTENT);
 
-      
+
       String string_input = BASIC_MULTIROW_CONTENT;
 
       cu.setContent(string_input);
@@ -343,20 +342,20 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       assertNotEmpty(mdlist);
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
-           
+
       assertEquals(GOOD_PUBYEAR, md.get(MetadataField.FIELD_DATE));
       assertEquals(GOOD_BOOK_TITLE+":"+GOOD_SUBTITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(GOOD_ISBN, md.get(MetadataField.FIELD_ISBN));
       assertEquals(GOOD_AUTHOR1, md.get(MetadataField.FIELD_AUTHOR));
       assertEquals(BASE_URL+GOOD_PDF, md.get(MetadataField.FIELD_ACCESS_URL));
-     
+
        md = mdlist.get(1);
        assertNotNull(md);
        List <String> GOOD_AUTHORL = new ArrayList<String>();
        GOOD_AUTHORL.add(GOOD_AUTHOR2a);
        GOOD_AUTHORL.add(GOOD_AUTHOR2b);
 
-       
+
        assertEquals(GOOD_PUBYEAR2, md.get(MetadataField.FIELD_DATE));
        assertEquals(GOOD_BOOK_TITLE2+":"+GOOD_SUBTITLE2, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
        assertEquals(GOOD_ISBN2, md.get(MetadataField.FIELD_ISBN));
@@ -365,14 +364,14 @@ public class TestTangramSourceXmlMetadataExtractorHelper
          assertEquals(GOOD_AUTHORL.get(i), alist.get(i));
        }
        assertEquals(BASE_URL+GOOD_PDF2, md.get(MetadataField.FIELD_ACCESS_URL));
-      
+
     } finally {
       //IOUtil.safeClose(file_input);
     }
   }
 */
-  
- /* 
+
+ /*
   String realXMLFile = "TES.xml";
   public void testFromRealXMLFile() throws Exception {
     CIProperties xmlHeader = new CIProperties();
@@ -388,7 +387,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
       // need to check for this file before emitting
       mau.addUrl(xml_url, true, true, xmlHeader); //doesn't matter what content-type
-      
+
       cu.setContent(string_input);
       cu.setContentSize(string_input.length());
       cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
@@ -413,6 +412,6 @@ public class TestTangramSourceXmlMetadataExtractorHelper
 
   }
   */
-  
+
 
 }

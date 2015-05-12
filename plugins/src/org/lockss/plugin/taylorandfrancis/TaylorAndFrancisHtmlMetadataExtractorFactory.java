@@ -228,11 +228,12 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
         // comma in title
         //<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"One, Two &amp; Three, Vol. 19, No. 6, December 2010, pp. 555-567\"></meta>"                
         // no comma after title
-        //<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Title Name Vol. 31, No. 2, June 2012, pp. 175Ð190\"></meta>
+        //<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Title Name Vol. 31, No. 2, June 2012, pp. 175-190\"></meta>
         // no title at all and alternately formatted info
-        //<meta name="dc.Identifier" scheme="coden" content="Volume 17, Comment 1 Ð January 2011"></meta>
+        //<meta name="dc.Identifier" scheme="coden" content="Volume 17, Comment 1 Â© January 2011"></meta>
         // no Vol., because it was preprint
-        //<meta name="dc.Identifier" scheme="coden" content="Language and Education, preprint, 2012, pp. 1Ð24"></meta>
+        //<meta name="dc.Identifier" scheme="coden" content="Language and
+        // Education, preprint, 2012, pp. 1-24"></meta>
         if (cookedIdentifierList.get(j).contains(",")) {
           String content = cookedIdentifierList.get(j);
           String[] biblioInfo = content.split(",");

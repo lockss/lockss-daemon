@@ -45,28 +45,28 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
 
   public FilterFactory fact;
   public MockArchivalUnit mau;
-  
+
   public static class TestCrawl extends TestAmPublicHealthAssocHtmlFilterFactory {
-    
- 
+
+
      // toc to original article
-    private static final String tocErrataHtml1 = 
+    private static final String tocErrataHtml1 =
         "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
         "<tbody><tr><td valign=\"top\">" +
         "<div class=\"art_title\">ERRATUM</div>" +
         "<div class=\"art_meta\">American Journal of Public Health: January 2011, Vol. 101, No. 1:  5-5.</div>" +
-        "<a class=\"ref nowrap\" href=\"/doi/abs/10.2105/AJPH.2009.blahe\">Citation</a> |" + 
+        "<a class=\"ref nowrap\" href=\"/doi/abs/10.2105/AJPH.2009.blahe\">Citation</a> |" +
         "<a class=\"ref\" href=\"/doi/abs/10.2105/AJPH.2009.blah\">Original Article</a>&nbsp;" +
         "</td></tr></tbody></table>";
-    private static final String tocErrataHtml1Filtered = 
+    private static final String tocErrataHtml1Filtered =
         "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
         "<tbody><tr><td valign=\"top\">" +
         "<div class=\"art_title\">ERRATUM</div>" +
         "<div class=\"art_meta\">American Journal of Public Health: January 2011, Vol. 101, No. 1:  5-5.</div>" +
-        "<a class=\"ref nowrap\" href=\"/doi/abs/10.2105/AJPH.2009.blahe\">Citation</a> |" + 
+        "<a class=\"ref nowrap\" href=\"/doi/abs/10.2105/AJPH.2009.blahe\">Citation</a> |" +
         "&nbsp;" +
         "</td></tr></tbody></table>";
-       
+
     // toc to erratum
    private static final String tocErrataHtml4=
    "<div class=\"art_title\">Examination of Stuff</div>" +
@@ -75,8 +75,8 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
    private static final String tocErrataHtml4Filtered=
    "<div class=\"art_title\">Examination of Stuff</div>" +
    "<span class=\"linkDemarcator\"> | </span>";
-   
-   
+
+
      // article page to erratum
     private static final String articleErrataHtml2 =
         "<ul id=\"articleToolsFormats\"><li>" +
@@ -88,7 +88,7 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
         "<ul id=\"articleToolsFormats\"><li>" +
             "</li></ul>";
 
-       // article page to original 
+       // article page to original
     private static final String articleErrataHtml3 =
         "<ul id=\"articleToolsFormats\">" +
         "<li><a href=\"/doi/pdf/10.2105/ajph.2009.blahe\">PDF</a></li>" +
@@ -99,7 +99,7 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
         "<li><a href=\"/doi/pdf/10.2105/ajph.2009.blahe\">PDF</a></li>" +
             "<li></li>" +
         "</ul>";
-     
+
 
 
     public void setUp() throws Exception {
@@ -134,9 +134,9 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
           ENC);
             assertEquals(articleErrataHtml3Filtered,StringUtil.fromInputStream(inA));
     }
-    
+
   }
-  
+
   public static class TestHash extends TestAmPublicHealthAssocHtmlFilterFactory {
 
     private static final String footerHtml =
@@ -144,7 +144,7 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
             "<!-- ============= start snippet ============= -->" +
             "<div><cite>American Journal of Public Health<span class=\"fontSize1\"></div>" +
             "<div>Print ISSN: 0090-0036 | Electronic ISSN: 1541-0048</div>" +
-            "<div>Copyright © 2012 by the <a class=\"inserted\" target=\"_blank\" title=\"APHA home\" " +
+            "<div>Copyright &copy; 2012 by the <a class=\"inserted\" target=\"_blank\" title=\"APHA home\" " +
             "href=\"http://www.apha.org\">American Public Health Association</a><span class=\"fontSize1\"></div>" +
             "<!-- ============= end snippet ============= -->" +
             "<div id=\"atyponNote\">" +
@@ -163,8 +163,8 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
     }
 
 
-    
-    
+
+
     public void testHashFiltering() throws Exception {
       InputStream actIn = fact.createFilteredInputStream(mau,
           new StringInputStream(footerHtml),
@@ -172,7 +172,7 @@ public class TestAmPublicHealthAssocHtmlFilterFactory extends LockssTestCase{
 
       assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
     }
-      
+
   }
   public static Test suite() {
     return variantSuites(new Class[] {

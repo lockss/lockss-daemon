@@ -74,7 +74,7 @@ public class TestAMetSocHtmlHashFilterFactory extends LockssTestCase {
           "<ul>" +
           "<li><img src=\"/templates/jsp/_style2/_AP/_ams/images/amsseal-blue3.jpg\" /></li>" +
           "<li>" +
-          "<b><a target=\"_blank\" href=\"http://www.ametsoc.org/pubs/cr_2005.html\">© 2012</a> American Meteorological Society <a target=\"_blank\" href=\"http://www.ametsoc.org/disclaim.html\">Privacy Policy and Disclaimer</a>" +
+          "<b><a target=\"_blank\" href=\"http://www.ametsoc.org/pubs/cr_2005.html\">Â© 2012</a> American Meteorological Society <a target=\"_blank\" href=\"http://www.ametsoc.org/disclaim.html\">Privacy Policy and Disclaimer</a>" +
           "<br />" +
           "Headquarters: 45 Beacon Street Boston, MA 02108-3693" +
           "<br />" +

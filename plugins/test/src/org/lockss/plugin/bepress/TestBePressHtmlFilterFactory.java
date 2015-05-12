@@ -53,16 +53,16 @@ public class TestBePressHtmlFilterFactory extends LockssTestCase {
   //
   private static final String HtmlHashA =
    "<div id='custom-fields'>" +
-   "<p>The above text, published by Hello University Press ©Hello" +
+   "<p>The above text, published by Hello University Press &copy;Hello" +
    "University, has been downloaded 2370 times as of 04/07/14. "+
    "Note: the download counts of the journal's material are since Issue 9.1 "+
    "(March 2007), since the journal's format in pdf (instead of in html 1999-2007).</p>"+
    "</div>Hello World";
- 
+
   private static final String HtmlHashAFiltered =
-    "Hello World"; 
-  
-  // 
+    "Hello World";
+
+  //
   private static final String HtmlHashB =
     "<div id='doi' class='element'>"+
     "<div class='altmetric-embed' data-doi=\"10.7771/1481-4374.1211\"></div>"+
@@ -71,27 +71,27 @@ public class TestBePressHtmlFilterFactory extends LockssTestCase {
 
   private static final String HtmlHashBFiltered =
     " Hello World";
-  
+
   public void testFilterA() throws Exception {
     InputStream inA;
 
-    /* viewed-by test  */ 
-    inA = fact.createFilteredInputStream(mau, 
+    /* viewed-by test  */
+    inA = fact.createFilteredInputStream(mau,
           new StringInputStream(HtmlHashA), ENC);
     String filtStrA = StringUtil.fromInputStream(inA);
 
     assertEquals(HtmlHashAFiltered, filtStrA);
-   
+
   }
 
   public void testFilterB() throws Exception {
     InputStream inB;
 
-    inB = fact.createFilteredInputStream(mau, 
-        new StringInputStream(HtmlHashB), ENC);    
+    inB = fact.createFilteredInputStream(mau,
+        new StringInputStream(HtmlHashB), ENC);
     String filtStrB = StringUtil.fromInputStream(inB);
     assertEquals(HtmlHashBFiltered, filtStrB);
-   
+
   }
 
 }

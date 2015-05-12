@@ -66,7 +66,7 @@ T3  -
 Y1  - 2010/11/01
 SP  - 532
 CR  - Copyright &#169; 2010 National Association of Biology Teachers
-M1  - ArticleType: research-article / Full publication date: November/December 2010 / Copyright © 2010 National Association of Biology Teachers
+M1  - ArticleType: research-article / Full publication date: November/December 2010 / Copyright Â© 2010 National Association of Biology Teachers
 ER  -
  */ 
 

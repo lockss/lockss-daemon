@@ -37,7 +37,7 @@ import org.lockss.test.*;
 
 public class TestNationalWeatherAssociationHtmlHashFilterFactory
   extends LockssTestCase {
-  
+
   private NationalWeatherAssociationHtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
 
@@ -55,18 +55,18 @@ public class TestNationalWeatherAssociationHtmlHashFilterFactory
        + "</script>"
        + "</div>";
   private static final String withoutScript = "<div class=\"block\"></div>";
-  
+
   private static final String withComments =
       "<div class=\"block\">"
         + "<!-- comment comment comment -->"
         + "</div>";
   private static final String withoutComments = "<div class=\"block\"></div>";
-  
+
   private static final String withStylesheets =
       "<div class=\"block\">"
         + "<link href=\"/css/xxx.css\" type=\"text/css\" rel=\"stylesheet\">"
         + "</div>";
-  private static final String withoutStylesheets = 
+  private static final String withoutStylesheets =
       "<div class=\"block\"></div>";
 
   private static final String withHeader =
@@ -81,9 +81,9 @@ public class TestNationalWeatherAssociationHtmlHashFilterFactory
         + "<div id=\"sub3\">"
         + "<div id=\"subtitle3\"><a href=\"/index3.php\"></div>"
         + "</div></div></div>";
-  private static final String withoutHeader = 
+  private static final String withoutHeader =
       "<div class=\"block\"></div>";
-  
+
   private static final String withFooter =
       "<div class=\"block\">"
         + "<div id=\"footer\">"
@@ -93,36 +93,36 @@ public class TestNationalWeatherAssociationHtmlHashFilterFactory
         + "<td valign=\"middle\">"
         + "<a href=\"/about.php\">about</a></td>"
         + "<td valign=\"middle\">"
-        + "<div align=\"right\">Copyright © 2014, All rights are reserved"
+        + "<div align=\"right\">Copyright &#169; 2014, All rights are reserved"
         + "</div></td></tr></tbody></table>"
-        + "</div></div>"  
+        + "</div></div>"
 	+ "</div>";
   private static final String withoutFooter =
       "<div class=\"block\"></div>";
-  
+
   private static final String withLeftSidebar =
       "<div class=\"block\">"
         + "<div id=\"left\">"
         + "<div id=\"moreleft\">"
         + "<div><a href=\"/membership.php\">become member</a></div>"
         + "</div></div></div>";
-  private static final String withoutLeftSidebar = 
+  private static final String withoutLeftSidebar =
       "<div class=\"block\"></div>";
-  
+
   private static final String withDeadlines =
       "<div class=\"block\">"
         + "<div id=\"deadlines\">"
         + "blah blah blah"
         + "<p>JID <a href=\"/email_notify.php\">email</a></p>"
         + "</div></div>";
-  private static final String withoutDeadlines = 
+  private static final String withoutDeadlines =
       "<div class=\"block\"></div>";
 
   private static final String withBanner =
       "<div class=\"block\">"
         + "<img src=\"http://www.xxx.org/xjid/xjid_banner.png\">"
         + "</div>";
-  private static final String withoutBanner = 
+  private static final String withoutBanner =
       "<div class=\"block\"></div>";
 
   private static final String withLastUpdated =
@@ -131,10 +131,10 @@ public class TestNationalWeatherAssociationHtmlHashFilterFactory
         + "<em>Last updated 1/11/2011 by XXX.</em>"
         + "</p>"
         + "</div>";
-  private static final String withoutLastUpdated = 
+  private static final String withoutLastUpdated =
       "<div class=\"block\"></div>";
-  
-  
+
+
   public void testScriptFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withScript), Constants.DEFAULT_ENCODING);

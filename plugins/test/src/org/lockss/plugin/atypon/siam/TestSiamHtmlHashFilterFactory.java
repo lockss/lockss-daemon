@@ -151,7 +151,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
   private static final String footer =
       "<div id=\"footer\">" +
           "<div id=\"footer\">" +
-          "<div class=\"copyright\">©" +
+          "<div class=\"copyright\">Â© " +
           "2013 SIAM By using <i>SIAM Publications Online</i> you agree to abide by the" +
           "<a href=\"http://www.siam.org\" style=\"text-decoration: underline;\">" +
           "Terms and Conditions of Use.</a> <span class=\"footerRight\"><a href=\"http://www.siam.org/\" " +
@@ -159,7 +159,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "<br />" +
           "<i>Banner art .</i>" +
           "<br />" +
-          "Powered by <a href=\"http://www.atypon.com\" target=\"_blank\">Atypon¨ Literatum</a>" +
+          "Powered by <a href=\"http://www.atypon.com\" target=\"_blank\">Atypon&reg; Literatum</a>" +
           "<br />" +
           "</div>" +
           "    </div>" +
@@ -273,7 +273,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
   private static final String headerFiltered =
       "BOOM";
 
-  private static final String free = 
+  private static final String free =
       "<!--totalCount12--><!--modified:1374685645000-->" +
           "<div><div><div id=\"art110842545\" class=\"notSelectedRow\">" +
           "<table class=\"articleEntry\">" +
@@ -290,7 +290,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</span>" +
           "<a href=\"http://dx.doi.org/10.1137/110842545\" class=\"ref doi\">http://dx.doi.org/10.1137/110842545" +
           "</a> |  Cited " +
-          "<b>1" +                                                                                                                                                                            
+          "<b>1" +
           "</b> time" +
           "</div>" +
           "<div class=\"doiCrossRef\">" +

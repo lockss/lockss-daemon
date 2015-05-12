@@ -716,7 +716,7 @@ Args:
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
-           encoding="iso8859-1"
+           encoding="utf-8"
            fork="${forkc}"
            listfiles="${listfiles}"
            nowarn="${nowarn}"

@@ -50,9 +50,9 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
   private static String BASE_URL = "http://www.jstor.org/";
   //this is funky but true
   private static String BASE_URL2 = "https://www.jstor.org/";
-  private CIProperties pdfHeader = new CIProperties();    
-  private CIProperties textHeader = new CIProperties();    
-  
+  private CIProperties pdfHeader = new CIProperties();
+  private CIProperties textHeader = new CIProperties();
+
   public void setUp() throws Exception {
     super.setUp();
 
@@ -70,7 +70,7 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
   }
 
   /**
-   * Configuration method. 
+   * Configuration method.
    * @return
    */
   Configuration auConfig() {
@@ -81,7 +81,7 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
     conf.put("volume_name","123");
     return conf;
   }
-  
+
   // the metadata that should be extracted
   String goodDate = "2010/11/01";
   String[] goodAuthors = new String[] {"D. Author", "S. Author2"};
@@ -90,8 +90,8 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
   String goodType = "research-article";
   String goodPublisher = "University of California Press on behalf of the National Association of Biology Teachers";
   static String goodDOI = "10.1137/10081839X";
-  
-  String goodJournal = "Journal Name"; 
+
+  String goodJournal = "Journal Name";
   String goodStartPage = "532";
   String goodVolume = "72";
   String goodIssue = "9";
@@ -103,7 +103,7 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
   private static String PDFPLUS_URL = BASE_URL + "stable/pdfplus/" + goodDOI + ".pdf";
 
   /*
-   *  A ris file example 
+   *  A ris file example
 Provider: JSTOR http://www.jstor.org
 Database: JSTOR
 Content: text/plain
@@ -120,22 +120,22 @@ SN  - 00027685
 UR  - http://www.jstor.org/stable/10.1525/abt.2010.72.9.1
 AU  - Jaskot, Bunny
 DO  - 10.1525/abt.2010.72.9.1
-T3  - 
+T3  -
 Y1  - 2010/11/01
 SP  - 532
 CR  - Copyright &#169; 2010 National Association of Biology Teachers
-M1  - ArticleType: research-article / Full publication date: November/December 2010 / Copyright © 2010 National Association of Biology Teachers
-ER  - 
+M1  - ArticleType: research-article / Full publication date: November/December 2010 / Copyright &#169; 2010 National Association of Biology Teachers
+ER  -
 
    */
-      
+
 
   private String createGoodRisContent() {
     StringBuilder sb = new StringBuilder();
     sb.append("Provider: JSTOR http://www.jstor.org\n");
     sb.append("Database: JSTOR\n");
     sb.append("Content: text/plain\n\n\n");
-    
+
     sb.append("TY  - JOUR");
     sb.append("\nJO  - ");
     sb.append(goodJournal);
@@ -167,27 +167,27 @@ ER  -
     sb.append("\nCR  - ");
     sb.append("Copyright &#169; 2010 National Association of Biology Teachers");
     sb.append("\nM1  - ");
-    sb.append("ArticleType: research-article / Full publication date: November/December 2010 / Copyright © 2010 National Association of Biology Teachers");
+    sb.append("ArticleType: research-article / Full publication date: November/December 2010 / Copyright &#169; 2010 National Association of Biology Teachers");
 
     sb.append("\nER  -");
     return sb.toString();
   }
   /**
-   * Method that creates a simulated Cached URL from the source code provided by 
+   * Method that creates a simulated Cached URL from the source code provided by
    * the goodContent String. It then asserts that the metadata extracted, by using
-   * the MetaPressRisMetadataExtractorFactory, match the metadata in the source code. 
+   * the MetaPressRisMetadataExtractorFactory, match the metadata in the source code.
    * @throws Exception
    */
   public void testExtractGoodRisContent() throws Exception {
     String goodContent = createGoodRisContent();
     log.debug3(goodContent);
-    
+
     MockCachedUrl mcu = mau.addUrl(RIS_URL, true, true, textHeader);
     mcu.setContent(goodContent);
     mcu.setContentSize(goodContent.length());
     // add a content file because the emitter checks for one
-    mau.addUrl(PDFPLUS_URL, true, true, pdfHeader);    
-    
+    mau.addUrl(PDFPLUS_URL, true, true, pdfHeader);
+
     FileMetadataExtractor me = new JstorRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
@@ -215,14 +215,14 @@ ER  -
     */
 
   }
-  
+
   /* the extractor checks if data is missing it uses possible alternate RIS tags */
   private String createEmptyRisContent() {
     StringBuilder sb = new StringBuilder();
     sb.append("Provider: JSTOR http://www.jstor.org\n");
     sb.append("Database: JSTOR\n");
     sb.append("Content: text/plain\n\n\n");
-    
+
     sb.append("TY  - JOUR");
     sb.append("\nJO  - ");
     sb.append("\nT1  - ");
@@ -236,18 +236,18 @@ ER  -
     sb.append("\nY1  - ");
     sb.append("\nSP  - ");
     sb.append("\nM1  - ");
-    sb.append("ArticleType: / Full publication date: /"); 
+    sb.append("ArticleType: / Full publication date: /");
     sb.append("\nER  -");
     return sb.toString();
   }
   /**
-   * Method that creates a simulated Cached URL from the source code provided by 
+   * Method that creates a simulated Cached URL from the source code provided by
    * the goodContent String. It then asserts that the metadata extracted, by using
-   * the MetaPressRisMetadataExtractorFactory, match the metadata in the source code. 
+   * the MetaPressRisMetadataExtractorFactory, match the metadata in the source code.
    * @throws Exception
    */
 
-  
+
   /*
    * Since the plugin creates the URL used for citation (metadata) information,
    * in the event that we come up with a "bad" url it returns just an empty RIS
@@ -260,20 +260,20 @@ Content: text/plain
 
 
 TY  - JOUR
-JO  - 
-TI  - 
-VL  - 
-IS  - 
-PB  - 
-SN  - 
-UR  - 
-DO  - 
-T3  - 
-Y1  - 
-SP  - 
-M1  - ArticleType:  / Full publication date:  / 
-ER  - 
-   *  
+JO  -
+TI  -
+VL  -
+IS  -
+PB  -
+SN  -
+UR  -
+DO  -
+T3  -
+Y1  -
+SP  -
+M1  - ArticleType:  / Full publication date:  /
+ER  -
+   *
    */
   public void testExtractEmptyContent() throws Exception {
     String emptyContent = createEmptyRisContent();
@@ -282,7 +282,7 @@ ER  -
     mcu.setContent(emptyContent);
     mcu.setContentSize(emptyContent.length());
     // no need to add a full content URL, there isn't any content
-    
+
     FileMetadataExtractor me = new JstorRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
