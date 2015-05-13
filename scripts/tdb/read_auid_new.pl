@@ -435,9 +435,12 @@ while (my $line = <>) {
            ($plugin eq "EmeraldGroupPlugin") || 
            ($plugin eq "EndocrineSocietyPlugin") || 
            ($plugin eq "FutureSciencePlugin") || 
+           ($plugin eq "InderscienceAtyponPlugin") || 
            ($plugin eq "JstorPlugin") || 
+           ($plugin eq "LiverpoolAtyponPlugin") || 
            ($plugin eq "ManeyAtyponPlugin") || 
            ($plugin eq "MarkAllenPlugin") || 
+           ($plugin eq "MetaPressPlugin") || 
            ($plugin eq "MassachusettsMedicalSocietyPlugin") || 
            ($plugin eq "SiamPlugin")) {
       $url = sprintf("%slockss/%s/%s/index.html", 
@@ -478,9 +481,12 @@ while (my $line = <>) {
            ($plugin eq "ClockssBIRAtyponPlugin") || 
            ($plugin eq "ClockssFutureSciencePlugin") || 
            ($plugin eq "ClockssEndocrineSocietyPlugin") || 
+           ($plugin eq "ClockssInderscienceAtyponPlugin") || 
            ($plugin eq "ClockssJstorPlugin") || 
+           ($plugin eq "ClockssLiverpoolAtyponPlugin") || 
            ($plugin eq "ClockssManeyAtyponPlugin") || 
            ($plugin eq "ClockssMarkAllenPlugin") || 
+           ($plugin eq "ClockssMetaPressPlugin") || 
            ($plugin eq "ClockssNRCResearchPressPlugin") || 
            ($plugin eq "ClockssSEGPlugin") || 
            ($plugin eq "ClockssSiamPlugin")) {
