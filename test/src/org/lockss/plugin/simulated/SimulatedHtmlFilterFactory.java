@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: SimulatedHtmlFilterFactory.java 39864 2015-02-18 09:10:24Z thib_gc $
  */
 
 /*
@@ -34,21 +34,56 @@ package org.lockss.plugin.simulated;
 
 import java.io.*;
 import java.util.List;
+import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.*;
 
-public class SimulatedFilterRule implements FilterRule {
+public class SimulatedHtmlFilterFactory implements FilterFactory {
+  static final Logger log = Logger.getLogger("SimulatedHtmlFilterFactory");
+
   static final String CITATION_STRING = "Citation String";
 
-  public Reader createFilteredReader(Reader reader) {
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+					       InputStream in,
+					       String encoding) {
+
     List tagList = ListUtil.list(
         new HtmlTagFilter.TagPair("<!--", "-->", true),
         new HtmlTagFilter.TagPair("<script", "</script>", true),
         new HtmlTagFilter.TagPair("<", ">")
         );
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
+
+    Reader rdr = FilterUtil.getReader(in, encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
     Reader citeFilter = new StringFilter(tagFilter, CITATION_STRING);
-    return new WhiteSpaceFilter(citeFilter);
+
+    InputStream res = new ReaderInputStream(new WhiteSpaceFilter(citeFilter));
+
+    Configuration auConfig = au.getConfiguration();
+    String filtThrow = auConfig.get(SimulatedPlugin.PD_FILTER_THROW.getKey());
+    String msg = null;
+    if (!StringUtil.isNullString(filtThrow)) {
+      List<String> l = StringUtil.breakAt(filtThrow, ":");
+      if (l.size() == 2) {
+	msg = l.get(1);
+      }
+      filtThrow = l.get(0);
+      try {
+	Throwable th =
+	  (Throwable)PrivilegedAccessor.invokeConstructor(filtThrow, msg);
+	ThrowingInputStream tis = new ThrowingInputStream(res, null, null);
+	if (th instanceof Error) {
+	  tis.setErrorOnRead((Error)th);
+	} else if (th instanceof IOException) {
+	  tis.setThrowOnRead((IOException)th);
+	}
+	res = tis;
+      } catch (Exception e) {
+	log.error("Couldn't instantiate throwable: " + filtThrow, e);
+      }
+    }
+    return res;
   }
 }

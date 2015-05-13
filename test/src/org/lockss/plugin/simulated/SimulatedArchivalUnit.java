@@ -495,9 +495,9 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit
     return null;
   }
 
-  public FilterRule getFilterRule(String contentType) {
+  public FilterFactory getHashFilterFactory(String contentType) {
     if (doFilter) {
-      return new SimulatedFilterRule();
+      return new SimulatedHtmlFilterFactory();
     }
     return null;
   }

@@ -285,6 +285,21 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     PD_MIXED_CASE.getKey();
 
   /**
+   * The default article mime type for the ArticleIterator
+   */
+  static final ConfigParamDescr PD_FILTER_THROW =
+    new ConfigParamDescr();
+  static {
+    PD_FILTER_THROW.setKey("filter_throw");
+    PD_FILTER_THROW.setDisplayName("FilterThrow");
+    PD_FILTER_THROW.setType(ConfigParamDescr.TYPE_STRING);
+    PD_FILTER_THROW.setSize(30);
+    PD_FILTER_THROW.setDefinitional(false);
+  }
+  public static final String AU_PARAM_FILTER_THROW =
+    PD_FILTER_THROW.getKey();
+
+  /**
    * Patterns of URLs that should be repaired from peer if vote it too close
    */
   static final ConfigParamDescr PD_REPAIR_FROM_PEER_PATS =
@@ -353,6 +368,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
 			 PD_MAXFILE_NAME,
 			 PD_FILE_TYPES, PD_ODD_BRANCH_CONTENT,
                          PD_BAD_FILE_LOC, PD_BAD_FILE_NUM,
+			 PD_HASH_FILTER_SPEC, PD_FILTER_THROW,
 			 PD_REPAIR_FROM_PEER_PATS);
   }
 
