@@ -262,6 +262,30 @@ public class TestLockssRunnable extends LockssTestCase {
     // wait until thread exits, make sure it triggered threadExited()
     thr.join(TIMEOUT_SHOULDNT);
     assertTrue(threadExited);
+    assertEquals(null, threadExitCause);
+    assertEquals(Constants.EXIT_CODE_THREAD_EXIT, daemonExitCode);
+    assertEquals("Thread exited", daemonExitMsg);
+  }
+
+  public void testTriggerOnError() throws Exception {
+    TestRunnable runabl = new TestRunnable("Test");
+    goOn = true;
+    triggerOnExit = true;
+    dogInterval = 20000;
+    stepTime = 1000;
+    toThrow = new RuntimeException("Test RE");
+    Thread thr = start(runabl);
+    if (!startSem.take(TIMEOUT_SHOULDNT)) {
+      fail("Thread didn't start");
+    }
+    if (!stopSem.take(TIMEOUT_SHOULDNT)) {
+      fail("Thread didn't stop");
+    }
+    // wait until thread exits, make sure it triggered threadExited()
+    thr.join(TIMEOUT_SHOULDNT);
+    assertTrue(threadExited);
+    assertEquals("java.lang.RuntimeException: Test RE",
+		 threadExitCause.toString());
     assertEquals(Constants.EXIT_CODE_THREAD_EXIT, daemonExitCode);
     assertEquals("Thread exited", daemonExitMsg);
   }
@@ -292,7 +316,7 @@ public class TestLockssRunnable extends LockssTestCase {
     triggerOnExit = false;
     dogInterval = 0;
     stepTime = 1000;
-    toThrow = new OutOfMemoryError("Test OOME");
+    toError = new OutOfMemoryError("Test OOME");
     Thread thr = start(runabl);
     if (!startSem.take(TIMEOUT_SHOULDNT)) {
       fail("Thread didn't start");
@@ -309,13 +333,15 @@ public class TestLockssRunnable extends LockssTestCase {
   SimpleBinarySemaphore startSem;
   SimpleBinarySemaphore stopSem;
   SimpleBinarySemaphore runSem;
-  Error toThrow;
+  Error toError;
+  RuntimeException toThrow;
   volatile boolean goOn;
   volatile long dogInterval;
   volatile long stepTime;
   volatile boolean triggerOnExit;
   volatile boolean threadHung;
   volatile boolean threadExited;
+  volatile Throwable threadExitCause;
   volatile int daemonExitCode;
   volatile String daemonExitMsg;
 
@@ -330,6 +356,7 @@ public class TestLockssRunnable extends LockssTestCase {
       runSuper = flg;
     }
 
+    @Override
     public void lockssRun() {
       try {
 	if (dogInterval != 0) {
@@ -340,6 +367,9 @@ public class TestLockssRunnable extends LockssTestCase {
 	}
 	nowRunning();
 	startSem.give();
+	if (toError != null) {
+	  throw toError;
+	}
 	if (toThrow != null) {
 	  throw toThrow;
 	}
@@ -362,19 +392,23 @@ public class TestLockssRunnable extends LockssTestCase {
       }
     }
 
+    @Override
     protected void exitDaemon(int exitCode, String msg) {
       daemonExitCode = exitCode;
       daemonExitMsg = msg;
     }
 
+    @Override
     protected void threadHung() {
       threadHung = true;
       super.threadHung();
     }
 
-    protected void threadExited() {
+    @Override
+    protected void threadExited(Throwable cause) {
       threadExited = true;
-      super.threadExited();
+      threadExitCause = cause;
+      super.threadExited(cause);
     }
   }
 }

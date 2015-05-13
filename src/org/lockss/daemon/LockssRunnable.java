@@ -320,7 +320,7 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
   /** Called if thread exited unexpectedly.  Default action is to exit the
    * daemon; can be overridden is thread is able to take some less drastic
    * corrective action. */
-  protected void threadExited() {
+  protected void threadExited(Throwable cause) {
     exitDaemon(Constants.EXIT_CODE_THREAD_EXIT, "Thread exited");
   }
 
@@ -422,6 +422,8 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
     boolean exitDaemonOnOome =
       CurrentConfig.getBooleanParam(PARAM_EXIT_DAEMON_ON_OOME,
 				    DEFAULT_EXIT_DAEMON_ON_OOME);
+    Throwable exitCause = null;
+
     try {
       thread = Thread.currentThread();
       if (name != null) {
@@ -440,23 +442,25 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	log.debug2(msg);
       }
     } catch (Exception e) {
+      exitCause = e;
       log.error("Thread threw", e);
     } catch (OutOfMemoryError e) {
+      exitCause = e;
       if (exitDaemonOnOome && !triggerOnExit) {
 	exitDaemon(Constants.EXIT_CODE_THREAD_EXIT,
 		   "Thread exited with OutOfMemoryError");
       }
       log.error("Thread threw", e);
     } catch (Throwable e) {
+      exitCause = e;
       log.error("Thread threw Throwable", e);
     } finally {
       try {
 	if (triggerOnExit) {
-	  threadExited();
-	} else {
-	  stopWDog();
+	  threadExited(exitCause);
 	}
       } finally {
+	stopWDog();
 	thread = null;
 	// Signal thread exited.  This is too early.  If it ever matters,
 	// use another thread to join() this one, then call nowExited();
