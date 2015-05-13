@@ -15155,7 +15155,7 @@
       au < exists ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 76 ; 76 ; >
       au < exists ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 ; >
       au < exists ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 ; >
-      au < testing ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; >
+      au < ready ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; >
       au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; >
       au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; >
 
@@ -21162,7 +21162,7 @@
       au < exists ; exists ; 2011 ; Journal of Endovascular Therapy Volume 18 ; 18 ; >
       au < exists ; exists ; 2012 ; Journal of Endovascular Therapy Volume 19 ; 19 ; >
       au < exists ; exists ; 2013 ; Journal of Endovascular Therapy Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2014 ; Journal of Endovascular Therapy Volume 21 ; 21 ; >
+      au < testing ; exists ; 2014 ; Journal of Endovascular Therapy Volume 21 ; 21 ; >
       au < manifest ; exists ; 2015 ; Journal of Endovascular Therapy Volume 22 ; 22 ; >
 
   }
@@ -21890,7 +21890,7 @@
       au < finished ; frozen ; 2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 ; >
       au < zapped ; finished ; 2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
       au < finished ; frozen ; 2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 ; >
-      au < testing ; exists ; 2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 ; >
+      au < ready ; exists ; 2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 ; >
       au < expected ; exists ; 2015 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 12 ; 12 ; >
 
     }
@@ -23057,7 +23057,7 @@
       au < zapped ; finished ; 2011 ; Journal of Intensive Care Medicine Volume 26 ; 26 ; >
       au < finished ; frozen ; 2012 ; Journal of Intensive Care Medicine Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Journal of Intensive Care Medicine Volume 28 ; 28 ; >
-      au < testing ; exists ; 2014 ; Journal of Intensive Care Medicine Volume 29 ; 29 ; >
+      au < ready ; exists ; 2014 ; Journal of Intensive Care Medicine Volume 29 ; 29 ; >
       au < manifest ; exists ; 2015 ; Journal of Intensive Care Medicine Volume 30 ; 30 ; >
 
     }
@@ -23086,7 +23086,7 @@
       au < exists ; exists ; 2011 ; Journal of the Intensive Care Society Volume 12 ; 12 ; >
       au < exists ; exists ; 2012 ; Journal of the Intensive Care Society Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Journal of the Intensive Care Society Volume 14 ; 14 ; >
-      au < testing ; exists ; 2014 ; Journal of the Intensive Care Society Volume 15 ; 15 ; >
+      au < ready ; exists ; 2014 ; Journal of the Intensive Care Society Volume 15 ; 15 ; >
       au < manifest ; exists ; 2015 ; Journal of the Intensive Care Society Volume 16 ; 16 ; >
 
   }
@@ -23107,7 +23107,7 @@
 
       au < crawling ; exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 ; >
-      au < testing ; exists ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
+      au < ready ; exists ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
       au < manifest ; exists ; 2015 ; Journal of Interdisciplinary Economics Volume 27 ; 27 ; >
 
       }
@@ -23134,7 +23134,7 @@
     au < exists ; exists ; 2011 ; Journal of International Political Theory Volume 7 ; 7 ; >
     au < exists ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; Journal of International Political Theory Volume 9 ; 9 ; >
-    au < testing ; exists ; 2014 ; Journal of International Political Theory Volume 10 ; 10 ; >
+    au < ready ; exists ; 2014 ; Journal of International Political Theory Volume 10 ; 10 ; >
     au < manifest ; exists ; 2015 ; Journal of International Political Theory Volume 11 ; 11 ; >
 
   }
@@ -23191,7 +23191,7 @@
       au < finished ; frozen ; 2011 ; Journal of Interpersonal Violence Volume 26 ; 26 ; >
       au < finished ; crawling ; 2012 ; Journal of Interpersonal Violence Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Journal of Interpersonal Violence Volume 28 ; 28 ; >
-      au < testing ; exists ; 2014 ; Journal of Interpersonal Violence Volume 29 ; 29 ; >
+      au < ready ; exists ; 2014 ; Journal of Interpersonal Violence Volume 29 ; 29 ; >
       au < manifest ; exists ; 2015 ; Journal of Interpersonal Violence Volume 30 ; 30 ; >
 
     }
@@ -23245,7 +23245,7 @@
       au < finished ; frozen ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 ; >
       au < finished ; crawling ; 2012 ; Journal of Laboratory Automation Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Journal of Laboratory Automation Volume 18 ; 18 ; >
-      au < testing ; exists ; 2014 ; Journal of Laboratory Automation Volume 19 ; 19 ; >
+      au < ready ; exists ; 2014 ; Journal of Laboratory Automation Volume 19 ; 19 ; >
       au < manifest ; exists ; 2015 ; Journal of Laboratory Automation Volume 20 ; 20 ; >
 
     }
@@ -23265,7 +23265,7 @@
         param[base_url] = http://lrs.sagepub.com/
 
         au < crawling ; exists ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
-        au < testing ; exists ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 ; >
+        au < ready ; exists ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 ; >
         au < manifest ; exists ; 2015 ; Journal of Land and Rural Studies Volume 3 ; 3 ; >
 
       }
@@ -23328,7 +23328,7 @@
       au < finished ; crawling ; 2011 ; Journal of Language and Social Psychology Volume 30 ; 30 ; >
       au < finished ; crawling ; 2012 ; Journal of Language and Social Psychology Volume 31 ; 31 ; >
       au < crawling ; exists ; 2013 ; Journal of Language and Social Psychology Volume 32 ; 32 ; >
-      au < testing ; exists ; 2014 ; Journal of Language and Social Psychology Volume 33 ; 33 ; >
+      au < ready ; exists ; 2014 ; Journal of Language and Social Psychology Volume 33 ; 33 ; >
       au < manifest ; exists ; 2015 ; Journal of Language and Social Psychology Volume 34 ; 34 ; >
 
     }
@@ -23379,7 +23379,7 @@
       au < finished ; frozen ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 ; >
       au < finished ; crawling ; 2012 ; Journal of Leadership & Organizational Studies Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Journal of Leadership & Organizational Studies Volume 20 ; 20 ; >
-      au < testing ; exists ; 2014 ; Journal of Leadership & Organizational Studies Volume 21 ; 21 ; >
+      au < ready ; exists ; 2014 ; Journal of Leadership & Organizational Studies Volume 21 ; 21 ; >
       au < manifest ; exists ; 2015 ; Journal of Leadership & Organizational Studies Volume 22 ; 22 ; >
 
     }
@@ -23455,7 +23455,7 @@
       au < finished ; frozen ; 2011 ; Journal of Learning Disabilities Volume 44 ; 44 ; >
       au < finished ; crawling ; 2012 ; Journal of Learning Disabilities Volume 45 ; 45 ; >
       au < crawling ; exists ; 2013 ; Journal of Learning Disabilities Volume 46 ; 46 ; >
-      au < testing ; exists ; 2014 ; Journal of Learning Disabilities Volume 47 ; 47 ; >
+      au < ready ; exists ; 2014 ; Journal of Learning Disabilities Volume 47 ; 47 ; >
       au < manifest ; exists ; 2015 ; Journal of Learning Disabilities Volume 48 ; 48 ; >
 
     }
@@ -23531,7 +23531,7 @@
       au < finished ; crawling ; 2011 ; Journal of Librarianship and Information Science Volume 43 ; 43 ; >
       au < finished ; crawling ; 2012 ; Journal of Librarianship and Information Science Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Journal of Librarianship and Information Science Volume 45 ; 45 ; >
-      au < testing ; exists ; 2014 ; Journal of Librarianship and Information Science Volume 46 ; 46 ; >
+      au < ready ; exists ; 2014 ; Journal of Librarianship and Information Science Volume 46 ; 46 ; >
       au < manifest ; exists ; 2015 ; Journal of Librarianship and Information Science Volume 47 ; 47 ; >
 
     }
@@ -23553,7 +23553,7 @@
       au < finished ; crawling ; 2011 ; Journal of Literacy Research Volume 43 ; 43 ; >
       au < finished ; crawling ; 2012 ; Journal of Literacy Research Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Journal of Literacy Research Volume 45 ; 45 ; >
-      au < testing ; exists ; 2014 ; Journal of Literacy Research Volume 46 ; 46 ; >
+      au < ready ; exists ; 2014 ; Journal of Literacy Research Volume 46 ; 46 ; >
       au < expected ; exists ; 2015 ; Journal of Literacy Research Volume 47 ; 47 ; >
 
   }
@@ -23615,7 +23615,7 @@
       au < finished ; crawling ; 2011 ; Journal of Macromarketing Volume 31 ; 31 ; >
       au < finished ; frozen ; 2012 ; Journal of Macromarketing Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; Journal of Macromarketing Volume 33 ; 33 ; >
-      au < testing ; exists ; 2014 ; Journal of Macromarketing Volume 34 ; 34 ; >
+      au < ready ; exists ; 2014 ; Journal of Macromarketing Volume 34 ; 34 ; >
       au < manifest ; exists ; 2015 ; Journal of Macromarketing Volume 35 ; 35 ; >
 
     }
@@ -23685,7 +23685,7 @@
       au < finished ; frozen ; 2011 ; Journal of Management Volume 37 ; 37 ; >
       au < finished ; frozen ; 2012 ; Journal of Management Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; Journal of Management Volume 39 ; 39 ; >
-      au < testing ; exists ; 2014 ; Journal of Management Volume 40 ; 40 ; >
+      au < ready ; exists ; 2014 ; Journal of Management Volume 40 ; 40 ; >
       au < manifest ; exists ; 2015 ; Journal of Management Volume 41 ; 41 ; >
 
     }
@@ -23753,7 +23753,7 @@
       au < finished ; crawling ; 2011 ; Journal of Management Education Volume 35 ; 35 ; >
       au < finished ; crawling ; 2012 ; Journal of Management Education Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; Journal of Management Education Volume 37 ; 37 ; >
-      au < testing ; exists ; 2014 ; Journal of Management Education Volume 38 ; 38 ; >
+      au < ready ; exists ; 2014 ; Journal of Management Education Volume 38 ; 38 ; >
       au < manifest ; exists ; 2015 ; Journal of Management Education Volume 39 ; 39 ; >
 
     }
@@ -23806,7 +23806,7 @@
       au < finished ; frozen ; 2011 ; Journal of Management Inquiry Volume 20 ; 20 ; >
       au < finished ; frozen ; 2012 ; Journal of Management Inquiry Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Journal of Management Inquiry Volume 22 ; 22 ; >
-      au < testing ; exists ; 2014 ; Journal of Management Inquiry Volume 23 ; 23 ; >
+      au < ready ; exists ; 2014 ; Journal of Management Inquiry Volume 23 ; 23 ; >
       au < manifest ; exists ; 2015 ; Journal of Management Inquiry Volume 24 ; 24 ; >
 
     }
@@ -23872,7 +23872,7 @@
       au < finished ; crawling ; 2011 ; Journal of Marketing Education Volume 33 ; 33 ; >
       au < finished ; frozen ; 2012 ; Journal of Marketing Education Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013 ; Journal of Marketing Education Volume 35 ; 35 ; >
-      au < testing ; exists ; 2014 ; Journal of Marketing Education Volume 36 ; 36 ; >
+      au < ready ; exists ; 2014 ; Journal of Marketing Education Volume 36 ; 36 ; >
       au < manifest ; exists ; 2015 ; Journal of Marketing Education Volume 37 ; 37 ; >
 
     }
@@ -23921,7 +23921,7 @@
       au < finished ; frozen ; 2011 ; Journal of Material Culture Volume 16 ; 16 ; >
       au < finished ; frozen ; 2012 ; Journal of Material Culture Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Journal of Material Culture Volume 18 ; 18 ; >
-      au < testing ; exists ; 2014 ; Journal of Material Culture Volume 19 ; 19 ; >
+      au < ready ; exists ; 2014 ; Journal of Material Culture Volume 19 ; 19 ; >
       au < manifest ; exists ; 2015 ; Journal of Material Culture Volume 20 ; 20 ; >
 
     }
@@ -23955,7 +23955,7 @@
       au < finished ; crawling ; 2011 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 11 ; 11 ; >
       au < finished ; frozen ; 2012 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 ; >
-      au < testing ; exists ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 ; >
+      au < ready ; exists ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 ; >
       au < expected ; exists ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 ; >
 
     }
@@ -23993,7 +23993,7 @@
       au < finished ; crawling ; 2011 ; Journal of Mixed Methods Research Volume 5 ; 5 ; >
       au < finished ; frozen ; 2012 ; Journal of Mixed Methods Research Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; Journal of Mixed Methods Research Volume 7 ; 7 ; >
-      au < testing ; exists ; 2014 ; Journal of Mixed Methods Research Volume 8 ; 8 ; >
+      au < ready ; exists ; 2014 ; Journal of Mixed Methods Research Volume 8 ; 8 ; >
       au < manifest ; exists ; 2015 ; Journal of Mixed Methods Research Volume 9 ; 9 ; >
 
     }
@@ -24095,7 +24095,7 @@
       au < finished ; frozen ; 2011 ; Journal of Oncology Pharmacy Practice Volume 17 ; 17 ; >
       au < finished ; frozen ; 2012 ; Journal of Oncology Pharmacy Practice Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Journal of Oncology Pharmacy Practice Volume 19 ; 19 ; >
-      au < testing ; exists ; 2014 ; Journal of Oncology Pharmacy Practice Volume 20 ; 20 ; >
+      au < ready ; exists ; 2014 ; Journal of Oncology Pharmacy Practice Volume 20 ; 20 ; >
       au < manifest ; exists ; 2015 ; Journal of Oncology Pharmacy Practice Volume 21 ; 21 ; >
 
     }
@@ -24163,7 +24163,7 @@
       au < finished ; crawling ; 2011 ; Journal of Parenteral and Enteral Nutrition Volume 35 ; 35 ; >
       au < finished ; crawling ; 2012 ; Journal of Parenteral and Enteral Nutrition Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; Journal of Parenteral and Enteral Nutrition Volume 37 ; 37 ; >
-      au < testing ; exists ; 2014 ; Journal of Parenteral and Enteral Nutrition Volume 38 ; 38 ; >
+      au < ready ; exists ; 2014 ; Journal of Parenteral and Enteral Nutrition Volume 38 ; 38 ; >
       au < manifest ; exists ; 2015 ; Journal of Parenteral and Enteral Nutrition Volume 39 ; 39 ; >
 
     }
@@ -24266,7 +24266,7 @@
       au < finished ; crawling ; 2011 ; Journal of Peace Research Volume 48 ; 48 ; >
       au < finished ; crawling ; 2012 ; Journal of Peace Research Volume 49 ; 49 ; >
       au < crawling ; exists ; 2013 ; Journal of Peace Research Volume 50 ; 50 ; >
-      au < testing ; exists ; 2014 ; Journal of Peace Research Volume 51 ; 51 ; >
+      au < ready ; exists ; 2014 ; Journal of Peace Research Volume 51 ; 51 ; >
       au < manifest ; exists ; 2015 ; Journal of Peace Research Volume 52 ; 52 ; >
 
     }
@@ -24327,7 +24327,7 @@
       au < finished ; crawling ; 2011 ; Journal of Pediatric Oncology Nursing Volume 28 ; 28 ; >
       au < finished ; crawling ; 2012 ; Journal of Pediatric Oncology Nursing Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; Journal of Pediatric Oncology Nursing Volume 30 ; 30 ; >
-      au < testing ; exists ; 2014 ; Journal of Pediatric Oncology Nursing Volume 31 ; 31 ; >
+      au < ready ; exists ; 2014 ; Journal of Pediatric Oncology Nursing Volume 31 ; 31 ; >
       au < manifest ; exists ; 2015 ; Journal of Pediatric Oncology Nursing Volume 32 ; 32 ; >
 
     }
@@ -24384,7 +24384,7 @@
       au < finished ; frozen ; 2011 ; Journal of Pharmacy Practice Volume 24 ; 24 ; >
       au < finished ; frozen ; 2012 ; Journal of Pharmacy Practice Volume 25 ; 25 ; >
       au < crawling ; exists ; 2013 ; Journal of Pharmacy Practice Volume 26 ; 26 ; >
-      au < testing ; exists ; 2014 ; Journal of Pharmacy Practice Volume 27 ; 27 ; >
+      au < ready ; exists ; 2014 ; Journal of Pharmacy Practice Volume 27 ; 27 ; >
       au < manifest ; exists ; 2015 ; Journal of Pharmacy Practice Volume 28 ; 28 ; >
 
     }
@@ -24418,7 +24418,7 @@
       au < crawling ; exists ; 2011 ; Journal of Pharmacy Technology Volume 27 ; 27 ; >
       au < crawling ; exists ; 2012 ; Journal of Pharmacy Technology Volume 28 ; 28 ; >
       au < crawling ; exists ; 2013 ; Journal of Pharmacy Technology Volume 29 ; 29 ; >
-      au < testing ; exists ; 2014 ; Journal of Pharmacy Technology Volume 30 ; 30 ; >
+      au < ready ; exists ; 2014 ; Journal of Pharmacy Technology Volume 30 ; 30 ; >
       au < manifest ; exists ; 2015 ; Journal of Pharmacy Technology Volume 31 ; 31 ; >
 
     }
@@ -24481,7 +24481,7 @@
       au < finished ; crawling ; 2011 ; Journal of Planning Education and Research Volume 31 ; 31 ; >
       au < finished ; crawling ; 2012 ; Journal of Planning Education and Research Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; Journal of Planning Education and Research Volume 33 ; 33 ; >
-      au < testing ; exists ; 2014 ; Journal of Planning Education and Research Volume 34 ; 34 ; >
+      au < ready ; exists ; 2014 ; Journal of Planning Education and Research Volume 34 ; 34 ; >
       au < manifest ; exists ; 2015 ; Journal of Planning Education and Research Volume 35 ; 35 ; >
 
     }
@@ -24524,7 +24524,7 @@
       au < finished ; crawling ; 2011 ; Journal of Planning History Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012 ; Journal of Planning History Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Planning History Volume 12 ; 12 ; >
-      au < testing ; exists ; 2014 ; Journal of Planning History Volume 13 ; 13 ; >
+      au < ready ; exists ; 2014 ; Journal of Planning History Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Journal of Planning History Volume 14 ; 14 ; >
 
     }
@@ -24582,7 +24582,7 @@
       au < finished ; crawling ; 2011 ; Journal of Planning Literature Volume 26 ; 26 ; >
       au < finished ; crawling ; 2012 ; Journal of Planning Literature Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Journal of Planning Literature Volume 28 ; 28 ; >
-      au < testing ; exists ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; >
+      au < ready ; exists ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; >
       au < manifest ; exists ; 2015 ; Journal of Planning Literature Volume 30 ; 30 ; >
 
     }
@@ -24641,7 +24641,7 @@
       au < finished ; crawling ; 2011 ; Journal of Plastic Film and Sheeting Volume 27 ; 27 ; >
       au < finished ; frozen ; 2012 ; Journal of Plastic Film and Sheeting Volume 28 ; 28 ; >
       au < crawling ; exists ; 2013 ; Journal of Plastic Film and Sheeting Volume 29 ; 29 ; >
-      au < testing ; exists ; 2014 ; Journal of Plastic Film and Sheeting Volume 30 ; 30 ; >
+      au < ready ; exists ; 2014 ; Journal of Plastic Film and Sheeting Volume 30 ; 30 ; >
       au < manifest ; exists ; 2015 ; Journal of Plastic Film and Sheeting Volume 31 ; 31 ; >
 
     }
@@ -24687,7 +24687,7 @@
       au < zapped ; finished ; 2011 ; Journal of Positive Behavior Interventions Volume 13 ; 13 ; >
       au < finished ; frozen ; 2012 ; Journal of Positive Behavior Interventions Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; Journal of Positive Behavior Interventions Volume 15 ; 15 ; >
-      au < testing ; exists ; 2014 ; Journal of Positive Behavior Interventions Volume 16 ; 16 ; >
+      au < ready ; exists ; 2014 ; Journal of Positive Behavior Interventions Volume 16 ; 16 ; >
       au < manifest ; exists ; 2015 ; Journal of Positive Behavior Interventions Volume 17 ; 17 ; >
 
     }
@@ -24712,7 +24712,7 @@
       au < finished ; frozen ; 2011 ; Journal of Primary Care & Community Health Volume 2 ; 2 ; >
       au < finished ; crawling ; 2012 ; Journal of Primary Care & Community Health Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Journal of Primary Care & Community Health Volume 4 ; 4 ; >
-      au < testing ; exists ; 2014 ; Journal of Primary Care & Community Health Volume 5 ; 5 ; >
+      au < ready ; exists ; 2014 ; Journal of Primary Care & Community Health Volume 5 ; 5 ; >
       au < manifest ; exists ; 2015 ; Journal of Primary Care & Community Health Volume 6 ; 6 ; >
 
     }
@@ -24793,7 +24793,7 @@
       au < finished ; frozen ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 ; >
       au < finished ; crawling ; 2012 ; Journal of Psychoeducational Assessment Volume 30 ; 30 ; >
       au < crawling ; exists ; 2013 ; Journal of Psychoeducational Assessment Volume 31 ; 31 ; >
-      au < testing ; exists ; 2014 ; Journal of Psychoeducational Assessment Volume 32 ; 32 ; >
+      au < ready ; exists ; 2014 ; Journal of Psychoeducational Assessment Volume 32 ; 32 ; >
       au < manifest ; exists ; 2015 ; Journal of Psychoeducational Assessment Volume 33 ; 33 ; >
 
     }
@@ -24851,7 +24851,7 @@
       au < finished ; crawling ; 2011 ; Journal of Psychopharmacology Volume 25 ; 25 ; >
       au < finished ; frozen ; 2012 ; Journal of Psychopharmacology Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; Journal of Psychopharmacology Volume 27 ; 27 ; >
-      au < testing ; exists ; 2014 ; Journal of Psychopharmacology Volume 28 ; 28 ; >
+      au < ready ; exists ; 2014 ; Journal of Psychopharmacology Volume 28 ; 28 ; >
       au < manifest ; exists ; 2015 ; Journal of Psychopharmacology Volume 29 ; 29 ; >
 
     }
@@ -24914,7 +24914,7 @@
       au < finished ; crawling ; 2011 ; Journal of Reinforced Plastics and Composites Volume 30 ; 30 ; >
       au < finished ; frozen ; 2012 ; Journal of Reinforced Plastics and Composites Volume 31 ; 31 ; >
       au < crawling ; exists ; 2013 ; Journal of Reinforced Plastics and Composites Volume 32 ; 32 ; >
-      au < testing ; exists ; 2014 ; Journal of Reinforced Plastics and Composites Volume 33 ; 33 ; >
+      au < ready ; exists ; 2014 ; Journal of Reinforced Plastics and Composites Volume 33 ; 33 ; >
       au < manifest ; exists ; 2015 ; Journal of Reinforced Plastics and Composites Volume 34 ; 34 ; >
 
     }
@@ -24931,7 +24931,7 @@
     param[base_url] = http://jrt.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 2 ; 2 ; >
 
   }
@@ -24975,7 +24975,7 @@
       au < finished ; frozen ; 2011 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 12 ; 12 ; >
       au < finished ; frozen ; 2012 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 14 ; 14 ; >
-      au < testing ; exists ; 2014 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 15 ; 15 ; >
+      au < ready ; exists ; 2014 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 15 ; 15 ; >
       au < manifest ; exists ; 2015 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 16 ; 16 ; >
 
     }
@@ -25056,7 +25056,7 @@
       au < finished ; crawling ; 2011 ; Journal of Research in Crime and Delinquency Volume 48 ; 48 ; >
       au < finished ; crawling ; 2012 ; Journal of Research in Crime and Delinquency Volume 49 ; 49 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in Crime and Delinquency Volume 50 ; 50 ; >
-      au < testing ; exists ; 2014 ; Journal of Research in Crime and Delinquency Volume 51 ; 51 ; >
+      au < ready ; exists ; 2014 ; Journal of Research in Crime and Delinquency Volume 51 ; 51 ; >
       au < manifest ; exists ; 2015 ; Journal of Research in Crime and Delinquency Volume 52 ; 52 ; >
 
     }
@@ -25099,7 +25099,7 @@
       au < finished ; crawling ; 2011 ; Journal of Research in International Education Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Journal of Research in International Education Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in International Education Volume 12 ; 12 ; >
-      au < testing ; exists ; 2014 ; Journal of Research in International Education Volume 13 ; 13 ; >
+      au < ready ; exists ; 2014 ; Journal of Research in International Education Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Journal of Research in International Education Volume 14 ; 14 ; >
 
     }
@@ -25191,7 +25191,7 @@
       au < finished ; crawling ; 2011 ; Journal of Research in Music Education Volume 59 ; 59 ; >
       au < finished ; frozen ; 2012 ; Journal of Research in Music Education Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in Music Education Volume 61 ; 61 ; >
-      au < manifest ; exists ; 2014 ; Journal of Research in Music Education Volume 62 ; 62 ; >
+      au < testing ; exists ; 2014 ; Journal of Research in Music Education Volume 62 ; 62 ; >
       au < expected ; exists ; 2015 ; Journal of Research in Music Education Volume 63 ; 63 ; >
 
     }
@@ -25240,7 +25240,7 @@
       au < finished ; crawling ; 2011 ; Journal of Research in Nursing Volume 16 ; 16 ; >
       au < finished ; crawling ; 2012 ; Journal of Research in Nursing Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in Nursing Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2014 ; Journal of Research in Nursing Volume 19 ; 19 ; >
+      au < testing ; exists ; 2014 ; Journal of Research in Nursing Volume 19 ; 19 ; >
       au < manifest ; exists ; 2015 ; Journal of Research in Nursing Volume 20 ; 20 ; >
 
     }
@@ -25264,7 +25264,7 @@
     au < zapped ; finished ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 ; >
     au < finished ; frozen ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Research on Leadership Education Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; Journal of Research on Leadership Education Volume 9 ; 9 ; >
+    au < testing ; exists ; 2014 ; Journal of Research on Leadership Education Volume 9 ; 9 ; >
     au < manifest ; exists ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 ; >
 
   }
@@ -25308,7 +25308,7 @@
       au < finished ; crawling ; 2011 ; Journal of Sandwich Structures and Materials Volume 13 ; 13 ; >
       au < finished ; frozen ; 2012 ; Journal of Sandwich Structures and Materials Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; Journal of Sandwich Structures and Materials Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2014 ; Journal of Sandwich Structures and Materials Volume 16 ; 16 ; >
+      au < testing ; exists ; 2014 ; Journal of Sandwich Structures and Materials Volume 16 ; 16 ; >
       au < manifest ; exists ; 2015 ; Journal of Sandwich Structures and Materials Volume 17 ; 17 ; >
 
     }
@@ -25353,7 +25353,7 @@
       au < finished ; crawling ; 2011 ; The Journal of School Nursing Volume 27 ; 27 ; >
       au < finished ; crawling ; 2012 ; The Journal of School Nursing Volume 28 ; 28 ; >
       au < crawling ; exists ; 2013 ; The Journal of School Nursing Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2014 ; The Journal of School Nursing Volume 30 ; 30 ; >
+      au < testing ; exists ; 2014 ; The Journal of School Nursing Volume 30 ; 30 ; >
       au < manifest ; exists ; 2015 ; The Journal of School Nursing Volume 31 ; 31 ; >
 
     }
@@ -25400,7 +25400,7 @@
       au < finished ; crawling ; 2011 ; Journal of Service Research Volume 14 ; 14 ; >
       au < finished ; frozen ; 2012 ; Journal of Service Research Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; Journal of Service Research Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2014 ; Journal of Service Research Volume 17 ; 17 ; >
+      au < testing ; exists ; 2014 ; Journal of Service Research Volume 17 ; 17 ; >
       au < manifest ; exists ; 2015 ; Journal of Service Research Volume 18 ; 18 ; >
 
     }
@@ -25461,7 +25461,7 @@
       au < finished ; crawling ; 2011 ; Journal of Social and Personal Relationships Volume 28 ; 28 ; >
       au < finished ; crawling ; 2012 ; Journal of Social and Personal Relationships Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; Journal of Social and Personal Relationships Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2014 ; Journal of Social and Personal Relationships Volume 31 ; 31 ; >
+      au < testing ; exists ; 2014 ; Journal of Social and Personal Relationships Volume 31 ; 31 ; >
       au < manifest ; exists ; 2015 ; Journal of Social and Personal Relationships Volume 32 ; 32 ; >
 
     }
@@ -25505,7 +25505,7 @@
       au < finished ; crawling ; 2011 ; Journal of Social Archaeology Volume 11 ; 11 ; >
       au < finished ; frozen ; 2012 ; Journal of Social Archaeology Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Journal of Social Archaeology Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2014 ; Journal of Social Archaeology Volume 14 ; 14 ; >
+      au < testing ; exists ; 2014 ; Journal of Social Archaeology Volume 14 ; 14 ; >
       au < manifest ; exists ; 2015 ; Journal of Social Archaeology Volume 15 ; 15 ; >
 
     }
@@ -25549,7 +25549,7 @@
       au < finished ; crawling ; 2011 ; Journal of Social Work Volume 11 ; 11 ; >
       au < finished ; frozen ; 2012 ; Journal of Social Work Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Journal of Social Work Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2014 ; Journal of Social Work Volume 14 ; 14 ; >
+      au < testing ; exists ; 2014 ; Journal of Social Work Volume 14 ; 14 ; >
       au < manifest ; exists ; 2015 ; Journal of Social Work Volume 15 ; 15 ; >
 
     }
@@ -25629,7 +25629,7 @@
       au < finished ; crawling ; 2011 ; Journal of Sociology Volume 47 ; 47 ; >
       au < finished ; crawling ; 2012 ; Journal of Sociology Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013 ; Journal of Sociology Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2014 ; Journal of Sociology Volume 50 ; 50 ; >
+      au < testing ; exists ; 2014 ; Journal of Sociology Volume 50 ; 50 ; >
       au < manifest ; exists ; 2015 ; Journal of Sociology Volume 51 ; 51 ; >
 
     }
@@ -25668,7 +25668,7 @@
       au < finished ; crawling ; 2011 ; Journal of South Asian Development Volume 6 ; 6 ; >
       au < finished ; frozen ; 2012 ; Journal of South Asian Development Volume 7 ; 7 ; >
       au < crawling ; exists ; 2013 ; Journal of South Asian Development Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2014 ; Journal of South Asian Development Volume 9 ; 9 ; >
+      au < testing ; exists ; 2014 ; Journal of South Asian Development Volume 9 ; 9 ; >
       au < manifest ; exists ; 2015 ; Journal of South Asian Development Volume 10 ; 10 ; >
 
     }
@@ -25746,7 +25746,7 @@
       au < finished ; crawling ; 2011 ; The Journal of Special Education Volume 45 ; 45 ; >
       au < finished ; crawling ; 2012 ; The Journal of Special Education Volume 46 ; 46 ; >
       au < crawling ; exists ; 2013 ; The Journal of Special Education Volume 47 ; 47 ; >
-      au < manifest ; exists ; 2014 ; The Journal of Special Education Volume 48 ; 48 ; >
+      au < testing ; exists ; 2014 ; The Journal of Special Education Volume 48 ; 48 ; >
       au < manifest ; exists ; 2015 ; The Journal of Special Education Volume 49 ; 49 ; >
 
     }
@@ -25814,7 +25814,7 @@
       au < finished ; crawling ; 2011 ; Journal of Sport & Social Issues Volume 35 ; 35 ; >
       au < finished ; frozen ; 2012 ; Journal of Sport & Social Issues Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; Journal of Sport & Social Issues Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2014 ; Journal of Sport & Social Issues Volume 38 ; 38 ; >
+      au < testing ; exists ; 2014 ; Journal of Sport & Social Issues Volume 38 ; 38 ; >
       au < manifest ; exists ; 2015 ; Journal of Sport & Social Issues Volume 39 ; 39 ; >
 
     }
@@ -25859,7 +25859,7 @@
       au < finished ; crawling ; 2011 ; Journal of Sports Economics Volume 12 ; 12 ; >
       au < finished ; crawling ; 2012 ; Journal of Sports Economics Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Journal of Sports Economics Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2014 ; Journal of Sports Economics Volume 15 ; 15 ; >
+      au < testing ; exists ; 2014 ; Journal of Sports Economics Volume 15 ; 15 ; >
       au < manifest ; exists ; 2015 ; Journal of Sports Economics Volume 16 ; 16 ; >
 
     }
@@ -25928,7 +25928,7 @@
       au < finished ; crawling ; 2011 ; Journal of Strain Analysis for Engineering Design Volume 46 ; 46 ; >
       au < finished ; frozen ; 2012 ; Journal of Strain Analysis for Engineering Design Volume 47 ; 47 ; >
       au < crawling ; exists ; 2013 ; Journal of Strain Analysis for Engineering Design Volume 48 ; 48 ; >
-      au < manifest ; exists ; 2014 ; Journal of Strain Analysis for Engineering Design Volume 49 ; 49 ; >
+      au < testing ; exists ; 2014 ; Journal of Strain Analysis for Engineering Design Volume 49 ; 49 ; >
       au < manifest ; exists ; 2015 ; Journal of Strain Analysis for Engineering Design Volume 50 ; 50 ; >
 
     }
@@ -25991,7 +25991,7 @@
       au < finished ; crawling ; 2011 ; Journal of Studies in International Education Volume 15 ; 15 ; >
       au < finished ; crawling ; 2012 ; Journal of Studies in International Education Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Journal of Studies in International Education Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2014 ; Journal of Studies in International Education Volume 18 ; 18 ; >
+      au < testing ; exists ; 2014 ; Journal of Studies in International Education Volume 18 ; 18 ; >
       au < manifest ; exists ; 2015 ; Journal of Studies in International Education Volume 19 ; 19 ; >
 
     }
@@ -26086,7 +26086,7 @@
       au < finished ; crawling ; 2011 ; Journal of Teacher Education Volume 62 ; 62 ; >
       au < finished ; frozen ; 2012 ; Journal of Teacher Education Volume 63 ; 63 ; >
       au < crawling ; exists ; 2013 ; Journal of Teacher Education Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2014 ; Journal of Teacher Education Volume 65 ; 65 ; >
+      au < testing ; exists ; 2014 ; Journal of Teacher Education Volume 65 ; 65 ; >
       au < manifest ; exists ; 2015 ; Journal of Teacher Education Volume 66 ; 66 ; >
 
     }
@@ -26190,7 +26190,7 @@
       au < finished ; crawling ; 2011 ; Journal of the American Psychiatric Nurses Association Volume 17 ; 17 ; >
       au < finished ; frozen ; 2012 ; Journal of the American Psychiatric Nurses Association Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Journal of the American Psychiatric Nurses Association Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 ; >
+      au < testing ; exists ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 ; >
       au < manifest ; exists ; 2015 ; Journal of the American Psychiatric Nurses Association Volume 21 ; 21 ; >
 
     }
@@ -26282,7 +26282,7 @@
       au < finished ; crawling ; 2011 ; Journal of the American Psychoanalytic Association Volume 59 ; 59 ; >
       au < finished ; crawling ; 2012 ; Journal of the American Psychoanalytic Association Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Journal of the American Psychoanalytic Association Volume 61 ; 61 ; >
-      au < manifest ; exists ; 2014 ; Journal of the American Psychoanalytic Association Volume 62 ; 62 ; >
+      au < testing ; exists ; 2014 ; Journal of the American Psychoanalytic Association Volume 62 ; 62 ; >
       au < manifest ; exists ; 2015 ; Journal of the American Psychoanalytic Association Volume 63 ; 63 ; >
 
     }
@@ -26300,7 +26300,7 @@
       param[base_url] = http://jha.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
+      au < testing ; exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
       au < manifest ; exists ; 2015 ; Journal for the History of Astronomy Volume 46 ; 46 ; >
 
   }
@@ -26418,7 +26418,7 @@
       au < finished ; crawling ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2014 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 13 ; 13 ; >
+      au < testing ; exists ; 2014 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 14 ; 14 ; >
 
     }
@@ -26506,7 +26506,7 @@
       au < finished ; crawling ; 2011 ; Journal of Theoretical Politics Volume 23 ; 23 ; >
       au < finished ; frozen ; 2012 ; Journal of Theoretical Politics Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Journal of Theoretical Politics Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2014 ; Journal of Theoretical Politics Volume 26 ; 26 ; >
+      au < testing ; exists ; 2014 ; Journal of Theoretical Politics Volume 26 ; 26 ; >
       au < manifest ; exists ; 2015 ; Journal of Theoretical Politics Volume 27 ; 27 ; >
 
     }
@@ -26563,7 +26563,7 @@
       au < finished ; crawling ; 2011 ; Journal of Thermoplastic Composite Materials Volume 24 ; 24 ; >
       au < finished ; frozen ; 2012 ; Journal of Thermoplastic Composite Materials Volume 25 ; 25 ; >
       au < crawling ; exists ; 2013 ; Journal of Thermoplastic Composite Materials Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2014 ; Journal of Thermoplastic Composite Materials Volume 27 ; 27 ; >
+      au < testing ; exists ; 2014 ; Journal of Thermoplastic Composite Materials Volume 27 ; 27 ; >
       au < manifest ; exists ; 2015 ; Journal of Thermoplastic Composite Materials Volume 28 ; 28 ; >
 
     }
@@ -26584,7 +26584,7 @@
       au < finished ; crawling ; 2011 ; Journal of Tissue Engineering Volume 2 ; 2 ; >
       au < finished ; frozen ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Journal of Tissue Engineering Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2014 ; Journal of Tissue Engineering Volume 5 ; 5 ; >
+      au < testing ; exists ; 2014 ; Journal of Tissue Engineering Volume 5 ; 5 ; >
       au < expected ; exists ; 2015 ; Journal of Tissue Engineering Volume 6 ; 6 ; >
 
   }
@@ -26637,7 +26637,7 @@
       au < finished ; frozen ; 2011 ; Journal of Transcultural Nursing Volume 22 ; 22 ; >
       au < finished ; frozen ; 2012 ; Journal of Transcultural Nursing Volume 23 ; 23 ; >
       au < crawling ; exists ; 2013 ; Journal of Transcultural Nursing Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2014 ; Journal of Transcultural Nursing Volume 25 ; 25 ; >
+      au < testing ; exists ; 2014 ; Journal of Transcultural Nursing Volume 25 ; 25 ; >
       au < manifest ; exists ; 2015 ; Journal of Transcultural Nursing Volume 26 ; 26 ; >
 
     }
@@ -26679,7 +26679,7 @@
       au < finished ; crawling ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
       au < finished ; frozen ; 2012 ; Journal of Transformative Education Volume 10 ; 10 ; >
       au < crawling ; exists ; 2013 ; Journal of Transformative Education Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2014 ; Journal of Transformative Education Volume 12 ; 12 ; >
+      au < testing ; exists ; 2014 ; Journal of Transformative Education Volume 12 ; 12 ; >
       au < manifest ; exists ; 2015 ; Journal of Transformative Education Volume 13 ; 13 ; >
 
     }
@@ -26756,7 +26756,7 @@
       au < finished ; crawling ; 2011 ; Journal of Travel Research Volume 50 ; 50 ; >
       au < finished ; frozen ; 2012 ; Journal of Travel Research Volume 51 ; 51 ; >
       au < crawling ; exists ; 2013 ; Journal of Travel Research Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2014 ; Journal of Travel Research Volume 53 ; 53 ; >
+      au < testing ; exists ; 2014 ; Journal of Travel Research Volume 53 ; 53 ; >
       au < manifest ; exists ; 2015 ; Journal of Travel Research Volume 54 ; 54 ; >
 
     }
@@ -26825,7 +26825,7 @@
       au < finished ; frozen ; 2011 ; Journal of Urban History Volume 37 ; 37 ; >
       au < finished ; frozen ; 2012 ; Journal of Urban History Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; Journal of Urban History Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2014 ; Journal of Urban History Volume 40 ; 40 ; >
+      au < testing ; exists ; 2014 ; Journal of Urban History Volume 40 ; 40 ; >
       au < manifest ; exists ; 2015 ; Journal of Urban History Volume 41 ; 41 ; >
 
     }
@@ -26875,7 +26875,7 @@
       au < finished ; crawling ; 2011 ; Journal of Vacation Marketing Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Journal of Vacation Marketing Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Journal of Vacation Marketing Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2014 ; Journal of Vacation Marketing Volume 20 ; 20 ; >
+      au < testing ; exists ; 2014 ; Journal of Vacation Marketing Volume 20 ; 20 ; >
       au < manifest ; exists ; 2015 ; Journal of Vacation Marketing Volume 21 ; 21 ; >
 
     }
@@ -26920,7 +26920,7 @@
       au < finished ; crawling ; 2011 ; Journal of Veterinary Diagnostic Investigation Volume 23 ; 23 ; >
       au < finished ; frozen ; 2012 ; Journal of Veterinary Diagnostic Investigation Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Journal of Veterinary Diagnostic Investigation Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2014 ; Journal of Veterinary Diagnostic Investigation Volume 26 ; 26 ; >
+      au < testing ; exists ; 2014 ; Journal of Veterinary Diagnostic Investigation Volume 26 ; 26 ; >
       au < manifest ; exists ; 2015 ; Journal of Veterinary Diagnostic Investigation Volume 27 ; 27 ; >
 
     }
@@ -26970,7 +26970,7 @@
       au < finished ; crawling ; 2011 ; Journal of Vibration and Control Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Journal of Vibration and Control Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Journal of Vibration and Control Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2014 ; Journal of Vibration and Control Volume 20 ; 20 ; >
+      au < testing ; exists ; 2014 ; Journal of Vibration and Control Volume 20 ; 20 ; >
       au < manifest ; exists ; 2015 ; Journal of Vibration and Control Volume 21 ; 21 ; >
 
     }
@@ -27013,7 +27013,7 @@
       au < finished ; crawling ; 2011 ; Journal of Visual Culture Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012 ; Journal of Visual Culture Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Visual Culture Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2014 ; Journal of Visual Culture Volume 13 ; 13 ; >
+      au < testing ; exists ; 2014 ; Journal of Visual Culture Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Journal of Visual Culture Volume 14 ; 14 ; >
 
     }
@@ -27105,7 +27105,7 @@
         au < zapped ; finished ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
         au < finished ; crawling ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 ; >
         au < crawling ; exists ; 2013 ; Journalism & Mass Communication Educator Volume 68 ; 68 ; >
-        au < manifest ; exists ; 2014 ; Journalism & Mass Communication Educator Volume 69 ; 69 ; >
+        au < testing ; exists ; 2014 ; Journalism & Mass Communication Educator Volume 69 ; 69 ; >
         au < manifest ; exists ; 2015 ; Journalism & Mass Communication Educator Volume 70 ; 70 ; >
 
       }
@@ -27141,7 +27141,7 @@
       au < zapped ; finished ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 ; >
       au < finished ; crawling ; 2012 ; Journalism & Communication Monographs Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; Journalism & Communication Monographs Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2014 ; Journalism & Communication Monographs Volume 16 ; 16 ; >
+      au < testing ; exists ; 2014 ; Journalism & Communication Monographs Volume 16 ; 16 ; >
       au < manifest ; exists ; 2015 ; Journalism & Communication Monographs Volume 17 ; 17 ; >
 
     }
@@ -27219,7 +27219,7 @@
       au < zapped ; finished ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 ; >
       au < finished ; frozen ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 ; >
       au < crawling ; exists ; 2013 ; Journalism & Mass Communication Quarterly Volume 90 ; 90 ; >
-      au < manifest ; exists ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 ; >
+      au < testing ; exists ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 ; >
       au < manifest ; exists ; 2015 ; Journalism & Mass Communication Quarterly Volume 92 ; 92 ; >
 
   }
@@ -27262,7 +27262,7 @@
       au < finished ; crawling ; 2011 ; Journalism: Theory, Practice, and Criticism Volume 12 ; 12 ; >
       au < finished ; frozen ; 2012 ; Journalism: Theory, Practice, and Criticism Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Journalism: Theory, Practice, and Criticism Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2014 ; Journalism: Theory, Practice, and Criticism Volume 15 ; 15 ; >
+      au < testing ; exists ; 2014 ; Journalism: Theory, Practice, and Criticism Volume 15 ; 15 ; >
       au < manifest ; exists ; 2015 ; Journalism: Theory, Practice, and Criticism Volume 16 ; 16 ; >
 
     }
@@ -27309,7 +27309,7 @@
       au < finished ; crawling ; 2011 ; Labor Studies Journal Volume 36 ; 36 ; >
       au < finished ; crawling ; 2012 ; Labor Studies Journal Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013 ; Labor Studies Journal Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2014 ; Labor Studies Journal Volume 39 ; 39 ; >
+      au < testing ; exists ; 2014 ; Labor Studies Journal Volume 39 ; 39 ; >
       au < manifest ; exists ; 2015 ; Labor Studies Journal Volume 40 ; 40 ; >
 
     }
@@ -27328,7 +27328,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://lin.sagepub.com/
 
-      au < manifest ; exists ; 2014 ; Language and Linguistics Volume 15 ; 15 ; >
+      au < testing ; exists ; 2014 ; Language and Linguistics Volume 15 ; 15 ; >
       au < manifest ; exists ; 2015 ; Language and Linguistics Volume 16 ; 16 ; >
 
   }
@@ -27379,7 +27379,7 @@
       au < finished ; crawling ; 2011 ; Language and Literature Volume 20 ; 20 ; >
       au < finished ; frozen ; 2012 ; Language and Literature Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Language and Literature Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2014 ; Language and Literature Volume 23 ; 23 ; >
+      au < testing ; exists ; 2014 ; Language and Literature Volume 23 ; 23 ; >
       au < manifest ; exists ; 2015 ; Language and Literature Volume 24 ; 24 ; >
 
     }
@@ -27466,7 +27466,7 @@
       au < finished ; crawling ; 2011 ; Language and Speech Volume 54 ; 54 ; >
       au < finished ; frozen ; 2012 ; Language and Speech Volume 55 ; 55 ; >
       au < crawling ; exists ; 2013 ; Language and Speech Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2014 ; Language and Speech Volume 57 ; 57 ; >
+      au < testing ; exists ; 2014 ; Language and Speech Volume 57 ; 57 ; >
       au < manifest ; exists ; 2015 ; Language and Speech Volume 58 ; 58 ; >
 
     }
