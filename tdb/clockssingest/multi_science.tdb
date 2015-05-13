@@ -253,7 +253,7 @@
       issn = 1756-8250
     >
 
-    param[journal_id] = 1756-8250
+    param[journal_id] = ijfc
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
@@ -269,11 +269,27 @@
   {
 
     title <
+      name = International Journal of Heritage in the Digital Era ;
+      issn = 2047-4970
+    >
+
+    param[journal_id] = ijhde
+
+    au < exists ; exists ; 2012 ; International Journal of Hypersonics Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; International Journal of Hypersonics Volume 2 ; 2 >
+    au < exists ; exists ; 2014 ; International Journal of Hypersonics Volume 3 ; 3 >
+
+  }
+
+
+  {
+
+    title <
       name = International Journal of Hypersonics ;
       issn = 1759-3107
     >
 
-    param[journal_id] = 1759-3107
+    param[journal_id] = ijh
 
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
@@ -288,7 +304,7 @@
       issn = 1757-2223
     >
 
-    param[journal_id] = 1757-2223
+    param[journal_id] = ijis
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
@@ -308,7 +324,7 @@
       issn = 1756-8293
     >
 
-    param[journal_id] = 1756-8293
+    param[journal_id] = ijmav
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
@@ -328,7 +344,26 @@
       issn = 1759-3093
     >
 
-    param[journal_id] = 1759-3093
+    param[journal_id] = ijmnst
+
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
+    au < exists ; exists ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
+    au < expected ; exists ; 2015 ; International Journal of Micro-Nano Scale Transport Volume 6 ; 6 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Micro-Nano Scale Transport ;
+      issn = 1759-3093
+    >
+
+    param[journal_id] = ijmnst
 
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
@@ -347,7 +382,7 @@
       issn = 2041-4196
     >
 
-    param[journal_id] = 2041-4196
+    param[journal_id] = ijps
 
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
@@ -366,7 +401,7 @@
       issn = 0266-3511
     >
 
-    param[journal_id] = 0266-3511
+    param[journal_id] = ijss
 
     au < doNotProcess ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 >
     au < doNotProcess ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 >
@@ -385,6 +420,29 @@
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Space Structures Volume 28 ; 28 >
     au < exists ; exists ; 2014 ; International Journal of Space Structures Volume 29 ; 29 >
     au < expected ; exists ; 2015 ; International Journal of Space Structures Volume 30 ; 30 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Sports Science and Coaching ;
+      issn = 1747-9541
+    >
+
+    param[journal_id] = ijssc
+
+    au < exists ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 >
+    au < exists ; exists ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 >
+    au < exists ; exists ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 >
+    au < exists ; exists ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 >
 
   }
 
@@ -419,7 +477,7 @@
       issn = 1756-8277
     >
 
-    param[journal_id] = 1756-8277
+    param[journal_id] = ijscd
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
@@ -435,11 +493,28 @@
   {
 
     title <
+      name = International Journal of Transportation Science and Technology ;
+      issn = 2046-0430
+    >
+
+    param[journal_id] = ijtst
+
+    au < exists ; exists ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 >
+    au < exists ; exists ; 2014 ; International Journal of Transportation Science and Technology Volume 3 ; 3 >
+    au < exists ; exists ; 2015 ; International Journal of Transportation Science and Technology Volume 4 ; 4 >
+
+  }
+
+
+  {
+
+    title <
       name = Journal of Algorithms & Computational Technology ;
       issn = 1748-3018
     >
 
-    param[journal_id] = 1748-3018
+    param[journal_id] = jact
 
     au < doNotProcess ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
@@ -572,7 +647,7 @@
       issn = 1750-9548
     >
 
-    param[journal_id] = 1750-9548
+    param[journal_id] = ijm
 
     au < doNotProcess ; exists ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
@@ -594,7 +669,7 @@
       issn = 1759-3131
     >
 
-    param[journal_id] = 1759-3131
+    param[journal_id] = ijocs
 
     au < doNotProcess ; doNotProcess ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 >
