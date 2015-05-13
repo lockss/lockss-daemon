@@ -1005,14 +1005,15 @@
       param[journal_issn] = 1756-6649
       attr[journal_code] = bmcmedphys
       comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
+      comment[1] = This journal archived.
 
-      au < manifest ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
-      au < manifest ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
-      au < manifest ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
-      au < manifest ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
-      au < manifest ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
-      au < manifest ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
-      au < manifest ; 2014 ; BMC Medical Physics Volume 14 ; 14 >
+      au < doNotProcess ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
+      au < doNotProcess ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
+      au < doNotProcess ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
+      au < doNotProcess ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
+      au < doNotProcess ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
+      au < doNotProcess ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
+      au < doNotProcess ; 2014 ; BMC Medical Physics Volume 14 ; 14 >
 
     }
 
