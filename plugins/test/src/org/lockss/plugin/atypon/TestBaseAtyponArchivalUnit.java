@@ -323,6 +323,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.qscience.com/", bq_msg, 
         "org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPlugin",
         "org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin");
+    //emeraldgroup
+    testSpecificUserMsg("http://www.emeraldinsight.com/", null, 
+        "org.lockss.plugin.atypon.emeraldgroup.EmeraldGroupPlugin",
+        null);
     //endocrine society
     testSpecificUserMsg("http://press.endocrine.org/", null, 
         "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyPlugin",
@@ -331,6 +335,14 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.future-science.com/", null,
         "org.lockss.plugin.atypon.futurescience.FutureSciencePlugin",
         "org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin");
+    //inderscience
+    testSpecificUserMsg("http://www.inderscienceonline.com/", null, 
+        "org.lockss.plugin.atypon.inderscience.InderscienceAtyponPlugin",
+        "org.lockss.plugin.atypon.inderscience.ClockssInderscienceAtyponPlugin");    
+    //liverpool
+    testSpecificUserMsg("http://online.liverpooluniversitypress.co.uk/", null, 
+        "org.lockss.plugin.atypon.liverpool.LiverpoolAtyponPlugin",
+        "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolAtyponPlugin");
     //maney
     testSpecificUserMsg("http://www.maneyonline.com/", null, 
         "org.lockss.plugin.atypon.maney.ManeyAtyponPlugin",
@@ -339,10 +351,18 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.magonlinelibrary.com/", null, 
         "org.lockss.plugin.atypon.markallen.MarkAllenPlugin",
         "org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin");
+    //multiscience
+    testSpecificUserMsg("http://multi-science.atypon.com/", null, 
+        "org.lockss.plugin.atypon.multiscience.MultiScienceAtyponPlugin",
+        "org.lockss.plugin.atypon.multiscience.ClockssMultiScienceAtyponPlugin");    
     //nrcresearch
     testSpecificUserMsg("http://www.nrcresearchpress.com/", null, 
         null,
         "org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin");
+    //practicalaction
+    testSpecificUserMsg("http://www.developmentbookshelf.com/", null, 
+        null,
+        "org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionAtyponPlugin");    
     //seg
     testSpecificUserMsg("http://library.seg.org/", null, 
         null,
@@ -365,7 +385,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.tandfonline.com/", null, 
         "org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin",
         "org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin");
-
+    //wageningen
+    testSpecificUserMsg("http://www.wageningenacademic.com/", null, 
+        null,
+        "org.lockss.plugin.atypon.wageningen.ClockssWageningenAtyponPlugin");    
   }
 
   // Associate the base_url with the publisher name for convenience
@@ -381,15 +404,21 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     pluginPubMap.put("http://www.birpublications.org/", "British Institute of Radiology");
     pluginPubMap.put("http://www.qscience.com/", "Bloomsbury Qatar Foundation Journals");
     pluginPubMap.put("http://press.endocrine.org/", "Endocrine Society");
+    pluginPubMap.put("http://www.emeraldinsight.com/", "Emerald Group Publishing");
     pluginPubMap.put("http://www.future-science.com/", "Future Science");
+    pluginPubMap.put("http://www.inderscienceonline.com/", "Inderscience");
+    pluginPubMap.put("http://online.liverpooluniversitypress.co.uk/", "Liverpool University Press");
     pluginPubMap.put("http://www.maneyonline.com/", "Maney Publishing");
     pluginPubMap.put("http://www.magonlinelibrary.com/", "Mark Allen Group");
+    pluginPubMap.put("http://multi-science.atypon.com/", "Multi-Science");    
     pluginPubMap.put("http://www.nrcresearchpress.com/", "NRC Research Press");
+    pluginPubMap.put("http://www.developmentbookshelf.com/", "Practical Action Publishing");
     pluginPubMap.put("http://library.seg.org/", "Society of Exploration Geophysicists");
     pluginPubMap.put("http://epubs.siam.org/", "Society for Industrial and Applied Mathematics");
     pluginPubMap.put("http://www.bioone.org/", "BioOne");
     pluginPubMap.put("http://www.euppublishing.com/", "Edinburgh University Press");
     pluginPubMap.put("http://www.tandfonline.com/", "Taylor & Francis");
+    pluginPubMap.put("http://www.wageningenacademic.com/", "Wageningen Academic Publishers");
   }
 
 
