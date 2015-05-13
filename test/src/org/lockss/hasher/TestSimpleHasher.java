@@ -352,7 +352,8 @@ public class TestSimpleHasher extends LockssTestCase {
       fail("Error didn't abort hash");
     } catch (OutOfMemoryError e) {
       assertEquals(HasherStatus.Error, result.getRunnerStatus());
-      assertEquals("Error hashing: Test OOME", result.getRunnerError());
+      assertEquals("Error hashing: java.lang.OutOfMemoryError: Test OOME",
+		   result.getRunnerError());
     } // any other error causes failure
 
     tis.setErrorOnRead(null);

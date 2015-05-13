@@ -400,14 +400,14 @@ public class SimpleHasher {
       } catch (Exception e) {
 	log.warning("hash()", e);
 	result.setRunnerStatus(HasherStatus.Error);
-	result.setRunnerError("Error hashing: " + e.getMessage());
+	result.setRunnerError("Error hashing: " + e.toString());
       } catch (Error e) {
 	try {
 	  log.warning("hash()", e);
 	} catch (Error ee) {
 	}
 	result.setRunnerStatus(HasherStatus.Error);
-	result.setRunnerError("Error hashing: " + e.getMessage());
+	result.setRunnerError("Error hashing: " + e.toString());
 	throw e;
       }
     } finally {
@@ -951,13 +951,25 @@ public class SimpleHasher {
     }
 
     LockssRunnable runnable =
-	new LockssRunnable(AuUtil.getThreadNameFor("HashCUS", result.getAu())) {
-      public void lockssRun() {
-	setPriority(CurrentConfig.getIntParam(PARAM_THREADPOOL_PRIORITY,
-	    DEFAULT_THREADPOOL_PRIORITY));
-	hash(params, result);
-	setThreadName("HashCUS: idle");
-      }
+      new LockssRunnable(AuUtil.getThreadNameFor("HashCUS", result.getAu())) {
+	public void lockssRun() {
+	  setPriority(CurrentConfig.getIntParam(PARAM_THREADPOOL_PRIORITY,
+						DEFAULT_THREADPOOL_PRIORITY));
+	  triggerWDogOnExit(true);
+	  hash(params, result);
+	  setThreadName("HashCUS: idle");
+	}
+
+	@Override
+	protected void threadExited(Throwable cause) {
+	  if (cause instanceof OutOfMemoryError) {
+	    // Don't let OOME in asynchronous hash cause daemon exit
+	    log.warning("Asynchronous hash threw OOME, not exiting");
+	  } else {
+	    super.threadExited(cause);
+	  }
+	}
+
     };
 
     result.setRequestTime(TimeBase.nowMs());
