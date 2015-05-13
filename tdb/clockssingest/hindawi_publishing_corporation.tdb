@@ -8392,22 +8392,18 @@
     >
 
     param[journal_id] = vlsi
+    comment[0] = no volume 6, 2003, 2004, 2005
 
-    au < exists ; exists ; 1992 ; VLSI Design Volume 1 (1992) ; 1992 ; 1 >
-    au < manifest ; exists ; 1993 ; VLSI Design Volume 2 (1993) ; 1993 ; 2 >
-    au < manifest ; exists ; 1994 ; VLSI Design Volume 3 (1994) ; 1994 ; 3 >
-    au < manifest ; exists ; 1995 ; VLSI Design Volume 4 (1995) ; 1995 ; 4 >
-    au < manifest ; exists ; 1996 ; VLSI Design Volume 5 (1996) ; 1996 ; 5 >
-    au < manifest ; exists ; 1997 ; VLSI Design Volume 6 (1997) ; 1997 ; 6 >
-    au < manifest ; exists ; 1998 ; VLSI Design Volume 7 (1998) ; 1998 ; 7 >
-    au < manifest ; exists ; 1999 ; VLSI Design Volume 8 (1999) ; 1999 ; 8 >
-    au < manifest ; exists ; 2000 ; VLSI Design Volume 9 (2000) ; 2000 ; 9 >
-    au < manifest ; exists ; 2001 ; VLSI Design Volume 10 (2001) ; 2001 ; 10 >
-    au < manifest ; exists ; 2002 ; VLSI Design Volume 11 (2002) ; 2002 ; 11 >
-    au < manifest ; exists ; 2003 ; VLSI Design Volume 12 (2003) ; 2003 ; 12 >
-    au < manifest ; exists ; 2004 ; VLSI Design Volume 13 (2004) ; 2004 ; 13 >
-    au < manifest ; exists ; 2005 ; VLSI Design Volume 14 (2005) ; 2005 ; 14 >
-    au < manifest ; exists ; 2006 ; VLSI Design Volume 15 (2006) ; 2006 ; 15 >
+    au < manifest ; exists ; 1993 ; VLSI Design Volume 1 (1993) ; 1993 ; 1 >
+    au < manifest ; exists ; 1994 ; VLSI Design Volume 1-2 (1994) ; 1994 ; 1-2 >
+    au < manifest ; exists ; 1995 ; VLSI Design Volume 2-3 (1995) ; 1995 ; 2-3 >
+    au < manifest ; exists ; 1996 ; VLSI Design Volume 4-5 (1996) ; 1996 ; 4-5 >
+    au < manifest ; exists ; 1997 ; VLSI Design Volume 5 (1997) ; 1997 ; 5 >
+    au < manifest ; exists ; 1998 ; VLSI Design Volume 7-8 (1998) ; 1998 ; 7-8 >
+    au < manifest ; exists ; 1999 ; VLSI Design Volume 9-10 (1999) ; 1999 ; 9-10 >
+    au < manifest ; exists ; 2000 ; VLSI Design Volume 10-11 (2000) ; 2000 ; 10-11 >
+    au < manifest ; exists ; 2001 ; VLSI Design Volume 12-13 (2001) ; 2001 ; 12-13 >
+    au < manifest ; exists ; 2002 ; VLSI Design Volume 14-15 (2002) ; 2002 ; 14-15 >
     au < manifest ; exists ; 2007 ; VLSI Design Volume 2007 ; 2007 ; 2007 >
     au < manifest ; exists ; 2008 ; VLSI Design Volume 2008 ; 2008 ; 2008 >
     au < manifest ; exists ; 2009 ; VLSI Design Volume 2009 ; 2009 ; 2009 >
