@@ -7172,7 +7172,7 @@
         issnl = 1743-8284
       >
 
-      param[journal_id] = ijsd
+      param[journal_id] = ijsdes
 
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
@@ -7190,7 +7190,7 @@
         issnl = 0960-1406
       >
 
-      param[journal_id] = 1741-5268
+      param[journal_id] = ijsd
 
       au < doNotProcess ; exists ; 1998 ; International Journal of Sustainable Development Volume 1 ; 1 >
       au < doNotProcess ; exists ; 1999 ; International Journal of Sustainable Development Volume 2 ; 2 >
@@ -7221,7 +7221,7 @@
         issnl = 1756-5804
       >
 
-      param[journal_id] = 1756-5812
+      param[journal_id] = ijse
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Sustainable Economy Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sustainable Economy Volume 2 ; 2 >
@@ -7241,7 +7241,7 @@
         issnl = 1742-7223
       >
 
-      param[journal_id] = 1742-7231
+      param[journal_id] = ijsm
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Sustainable Manufacturing Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Sustainable Manufacturing Volume 2 ; 2 >
@@ -7259,7 +7259,7 @@
         issnl = 2043-8621
       >
 
-      param[journal_id] = 2043-863X
+      param[journal_id] = ijsmss
 
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 >
@@ -7275,7 +7275,7 @@
         issnl = 1756-2538
       >
 
-      param[journal_id] = 1756-2546
+      param[journal_id] = ijssoc
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Sustainable Society Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sustainable Society Volume 2 ; 2 >
@@ -7295,7 +7295,7 @@
         issnl = 1753-3600
       >
 
-      param[journal_id] = 1753-3619
+      param[journal_id] = ijssm
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Sustainable Strategic Management Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sustainable Strategic Management Volume 2 ; 2 >
@@ -7314,7 +7314,7 @@
         issnl = 2049-4041
       >
 
-      param[journal_id] = 2049-4041
+      param[journal_id] = ijsi
       comment[issn] = doNotProcess page use issn
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Swarm Intelligence Volume 1 ; 1 >
@@ -7331,7 +7331,7 @@
         issnl = 1748-0671
       >
 
-      param[journal_id] = 1748-068X
+      param[journal_id] = ijsse
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of System of Systems Engineering Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of System of Systems Engineering Volume 2 ; 2 >
@@ -7365,7 +7365,7 @@
         issnl = 1755-9340
       >
 
-      param[journal_id] = 1755-9359
+      param[journal_id] = ijscc
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Systems, Control and Communications Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Systems, Control and Communications Volume 2 ; 2 >
@@ -7385,7 +7385,7 @@
         issnl = 1749-9151
       >
 
-      param[journal_id] = 1749-916X
+      param[journal_id] = ijtcs
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Teaching and Case Studies Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
@@ -7404,7 +7404,7 @@
         issnl = 1746-5370
       >
 
-      param[journal_id] = 1746-5389
+      param[journal_id] = ijte
       comment[0] = no issue in 2012, 2013
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 >
@@ -7422,7 +7422,7 @@
         issnl = 1753-1942
       >
 
-      param[journal_id] = 1753-1950
+      param[journal_id] = ijtlid
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Technological Learning, Innovation and Development Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Technological Learning, Innovation and Development Volume 2 ; 2 >
@@ -7443,7 +7443,7 @@
         issnl = 1476-5667
       >
 
-      param[journal_id] = 1741-8194
+      param[journal_id] = ijtg
 
       au < doNotProcess ; exists ; 2004-2005 ; International Journal of Technology and Globalisation Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006 ; International Journal of Technology and Globalisation Volume 2 ; 2 >
@@ -7465,7 +7465,7 @@
         issnl = 1753-5255
       >
 
-      param[journal_id] = 1753-5263
+      param[journal_id] = ijtel
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Technology Enhanced Learning Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Technology Enhanced Learning Volume 2 ; 2 >
@@ -7485,7 +7485,7 @@
         issnl = 1740-2832
       >
 
-      param[journal_id] = 1740-2840
+      param[journal_id] = ijtip
 
       au < doNotProcess ; exists ; 2004-2005 ; International Journal of Technology Intelligence and Planning Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006 ; International Journal of Technology Intelligence and Planning Volume 2 ; 2 >
@@ -7509,7 +7509,7 @@
         issnl = 0267-5730
       >
       {
-      param[journal_id] = 1741-5276
+      param[journal_id] = ijtm
 
       au < doNotProcess ; exists ; 1986 ; International Journal of Technology Management Volume 1 ; 1 >
       au < doNotProcess ; exists ; 1987 ; International Journal of Technology Management Volume 2 ; 2 >
@@ -7591,7 +7591,7 @@
         issnl = 1741-878X
       >
 
-      param[journal_id] = 1741-8798
+      param[journal_id] = ijtm
 
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Technology Marketing Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007 ; International Journal of Technology Marketing Volume 2 ; 2 >
@@ -7614,7 +7614,7 @@
         issnl = 1742-4240
       >
 
-      param[journal_id] = 1742-4259
+      param[journal_id] = ijtpl
 
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2013 ; International Journal of Technology Policy and Law Volume 2 ; 2 >
@@ -7631,7 +7631,7 @@
         issnl = 1470-6075
       >
 
-      param[journal_id] = 1741-5284
+      param[journal_id] = ijttc
 
       au < doNotProcess ; exists ; 2002 ; International Journal of Technology Transfer and Commercialisation Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2003 ; International Journal of Technology Transfer and Commercialisation Volume 2 ; 2 >
@@ -7658,7 +7658,7 @@
         issnl = 1468-4322
       >
 
-      param[journal_id] = 1741-5292
+      param[journal_id] = ijtpm
 
       au < doNotProcess ; exists ; 2001 ; International Journal of Technology, Policy and Management Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2002 ; International Journal of Technology, Policy and Management Volume 2 ; 2 >
@@ -7686,7 +7686,7 @@
         issnl = 2046-4533
       >
 
-      param[journal_id] = 2046-4541
+      param[journal_id] = ijbeam
       comment[0] = no issue in 2012
 
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
@@ -7704,7 +7704,7 @@
         issnl = 1755-9995
       >
 
-      param[journal_id] = 1756-0004
+      param[journal_id] = ijtamm
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
@@ -7722,7 +7722,7 @@
         issnl = 1759-0442
       >
 
-      param[journal_id] = 1759-0450
+      param[journal_id] = ijta
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Tourism Anthropology Volume 2 ; 2 >
@@ -7740,7 +7740,7 @@
         issnl = 1750-4090
       >
 
-      param[journal_id] = 1750-4104
+      param[journal_id] = ijtp
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
@@ -7760,7 +7760,7 @@
         issnl = 1742-7541
       >
 
-      param[journal_id] = 1742-755X
+      param[journal_id] = ijtgm
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Trade and Global Markets Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Trade and Global Markets Volume 2 ; 2 >
@@ -7781,7 +7781,7 @@
         issnl = 1745-0071
       >
 
-      param[journal_id] = 1745-008X
+      param[journal_id] = ijtis
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 >
@@ -7799,7 +7799,7 @@
         issnl = 2048-8378
       >
 
-      param[journal_id] = 2048-8386
+      param[journal_id] = ijtmcc
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
       au < exists ; exists ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 >
@@ -7815,7 +7815,7 @@
         issnl = 1758-728X
       >
 
-      param[journal_id] = 1758-7298
+      param[journal_id] = ijuwbcs
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 >
@@ -7832,7 +7832,7 @@
         issnl = 1741-5357
       >
 
-      param[journal_id] = 1741-5365
+      param[journal_id] = ijvcm
 
       au < doNotProcess ; exists ; 2006-2007 ; International Journal of Value Chain Management Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2008 ; International Journal of Value Chain Management Volume 2 ; 2 >
@@ -7854,7 +7854,7 @@
         issnl = 1471-0226
       >
 
-      param[journal_id] = 1741-5306
+      param[journal_id] = ijvas
 
       au < doNotProcess ; exists ; 2002-2003 ; International Journal of Vehicle Autonomous Systems Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2004 ; International Journal of Vehicle Autonomous Systems Volume 2 ; 2 >
@@ -7880,7 +7880,7 @@
         issnl = 0143-3369
       >
 
-      param[journal_id] = 1741-5314
+      param[journal_id] = ijvd
 
       au < doNotProcess ; exists ; 1998 ; International Journal of Vehicle Design Volume 20 ; 20 >
       au < doNotProcess ; exists ; 1999 ; International Journal of Vehicle Design Volume 21 ; 21 >
@@ -7941,7 +7941,7 @@
         issnl = 1471-0242
       >
 
-      param[journal_id] = 1741-8208
+      param[journal_id] = ijvics
       comment[0] = no issue in 2012
 
       au < doNotProcess ; exists ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 >
@@ -7960,7 +7960,7 @@
         issnl = 1479-1471
       >
 
-      param[journal_id] = 1479-1471
+      param[journal_id] = ijvnv
 
       au < doNotProcess ; exists ; 2004-2005 ; International Journal of Vehicle Noise and Vibration Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006 ; International Journal of Vehicle Noise and Vibration Volume 2 ; 2 >
@@ -7984,7 +7984,7 @@
         issnl = 1745-3194
       >
 
-      param[journal_id] = 1745-3208
+      param[journal_id] = ijvp
       comment[0] = title is not yet published on 9/28/2013
 
       au < exists ; exists ; 2014 ; International Journal of Vehicle Performance Volume 1 ; 1 >
@@ -8000,7 +8000,7 @@
         issnl = 1479-3105
       >
 
-      param[journal_id] = 1479-3113
+      param[journal_id] = ijvs
 
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Vehicle Safety Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007 ; International Journal of Vehicle Safety Volume 2 ; 2 >
@@ -8021,7 +8021,7 @@
         issnl = 1745-6436
       >
 
-      param[journal_id] = 1745-6444
+      param[journal_id] = ijvsmt
 
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Vehicle Systems Modelling and Testing Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007 ; International Journal of Vehicle Systems Modelling and Testing Volume 2 ; 2 >
@@ -8044,7 +8044,7 @@
         issnl = 1741-1874
       >
 
-      param[journal_id] = 1741-1882
+      param[journal_id] = ijvtm
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Virtual Technology and Multimedia Volume 1 ; 1 >
 
@@ -8059,7 +8059,7 @@
         issnl = 1465-6620
       >
 
-      param[journal_id] = 1741-5322
+      param[journal_id] = ijw
 
       au < doNotProcess ; exists ; 2000-2001 ; International Journal of Water Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2002-2004 ; International Journal of Water Volume 2 ; 2 >
@@ -8081,7 +8081,7 @@
         issnl = 1741-1106
       >
 
-      param[journal_id] = 1741-1114
+      param[journal_id] = ijwgs
 
       au < doNotProcess ; exists ; 2005 ; International Journal of Web and Grid Services Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006 ; International Journal of Web and Grid Services Volume 2 ; 2 >
@@ -8105,7 +8105,7 @@
         issnl = 1477-8394
       >
 
-      param[journal_id] = 1741-8216
+      param[journal_id] = ijwbc
 
       au < doNotProcess ; exists ; 2004-2005 ; International Journal of Web Based Communities Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006 ; International Journal of Web Based Communities Volume 2 ; 2 >
@@ -8129,7 +8129,7 @@
         issnl = 1476-1289
       >
 
-      param[journal_id] = 1741-9212
+      param[journal_id] = ijwet
 
       au < doNotProcess ; exists ; 2003-2004 ; International Journal of Web Engineering and Technology Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Web Engineering and Technology Volume 2 ; 2 >
@@ -8152,7 +8152,7 @@
         issnl = 1757-8795
       >
 
-      param[journal_id] = 1757-8809
+      param[journal_id] = ijws
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Web Science Volume 2 ; 2 >
@@ -8169,7 +8169,7 @@
         issnl = 1741-1084
       >
 
-      param[journal_id] = 1741-1092
+      param[journal_id] = ijwmc
 
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Wireless and Mobile Computing Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007 ; International Journal of Wireless and Mobile Computing Volume 2 ; 2 >
@@ -8190,7 +8190,7 @@
         issnl = 2043-9032
       >
 
-      param[journal_id] = 2043-9040
+      param[journal_id] = ijwi
 
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Work Innovation Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Work Innovation Volume 2 ; 2 >
@@ -8207,7 +8207,7 @@
         issnl = 1740-8938
       >
 
-      param[journal_id] = 1740-8946
+      param[journal_id] = ijwoe
 
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Work Organisation and Emotion Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Work Organisation and Emotion Volume 2 ; 2 >
@@ -8246,7 +8246,7 @@
         issnl = 1746-966X
       >
 
-      param[journal_id] = 1746-9678
+      param[journal_id] = jgba
 
       au < doNotProcess ; exists ; 2007-2008 ; Journal for Global Business Advancement Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; Journal for Global Business Advancement Volume 2 ; 2 >
@@ -8267,7 +8267,7 @@
         issnl = 1549-9324
       >
 
-      param[journal_id] = 1747-6763
+      param[journal_id] = jibed
 
       au < doNotProcess ; exists ; 2003 ; Journal for International Business and Entrepreneurship Development Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2004 ; Journal for International Business and Entrepreneurship Development Volume 2 ; 2 >
@@ -8289,7 +8289,7 @@
         issnl = 1748-3050
       >
 
-      param[journal_id] = 1569-1551
+      param[journal_id] = jdr
 
       au < exists ; exists ; 2001 ; Journal of Design Research Volume 1 ; 1 >
       au < exists ; exists ; 2002 ; Journal of Design Research Volume 2 ; 2 >
@@ -8315,7 +8315,7 @@
         issnl = 2052-0336
       >
 
-      param[journal_id] = 2052-0336
+      param[journal_id] = lajmsd
 
       au < exists ; exists ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 >
 
@@ -8346,7 +8346,7 @@
         issnl = 1468-4349
       >
 
-      param[journal_id] = 1741-5233
+      param[journal_id] = pcfd
 
       au < doNotProcess ; exists ; 2001 ; Progress in Computational Fluid Dynamics, An International Journal Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2002 ; Progress in Computational Fluid Dynamics, An International Journal Volume 2 ; 2 >
@@ -8374,7 +8374,7 @@
         issnl = 1476-8917
       >
 
-      param[journal_id] = 1478-8764
+      param[journal_id] = pie
 
       au < doNotProcess ; exists ; 2004 ; Progress in Industrial Ecology, An International Journal Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2005 ; Progress in Industrial Ecology, An International Journal Volume 2 ; 2 >
@@ -8397,7 +8397,7 @@
         issnl = 1746-0573
       >
 
-      param[journal_id] = 1746-0581
+      param[journal_id] = wremsd
 
       au < doNotProcess ; exists ; 2005 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 2 ; 2 >
@@ -8421,7 +8421,7 @@
         issnl = 1749-4729
       >
 
-      param[journal_id] = 1749-4737
+      param[journal_id] = writr
 
       au < doNotProcess ; exists ; 2006-2007 ; World Review of Intermodal Transportation Research Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2008-2009 ; World Review of Intermodal Transportation Research Volume 2 ; 2 >
@@ -8440,7 +8440,7 @@
         issnl = 1741-2242
       >
 
-      param[journal_id] = 1741-2234
+      param[journal_id] = wrstsd
 
       au < doNotProcess ; exists ; 2004 ; World Review of Science, Technology and Sustainable Development Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2005 ; World Review of Science, Technology and Sustainable Development Volume 2 ; 2 >
