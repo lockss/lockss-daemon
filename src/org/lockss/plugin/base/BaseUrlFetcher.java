@@ -129,6 +129,7 @@ public class BaseUrlFetcher implements UrlFetcher {
     return urlConsumerFactory;
   }
   
+  //This should only rethrow the CacheException if it is fatal
   public FetchResult fetch() throws CacheException {
     /*
      * If a RepositoryException is thrown, adds the URL to the fail set and

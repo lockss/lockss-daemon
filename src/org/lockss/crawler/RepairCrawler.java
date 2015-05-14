@@ -282,7 +282,7 @@ public class RepairCrawler extends BaseCrawler {
   
   protected CrawlerFacade getCrawlerFacade() {
     if(facade == null) {
-      facade = new BaseCrawlerFacade(this);
+      facade = new RepairCrawlerFacade(this);
     }
     return facade;
   };
