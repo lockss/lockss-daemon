@@ -8,23 +8,27 @@
     <string>org.lockss.plugin.projmuse.ProjectMuseBooksPlugin</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Project Muse Books Plugin</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -37,18 +41,14 @@
     <string>"Project Muse Books Plugin, Base URL %s, eISBN %s", base_url, eisbn</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Project Muse Books Plugin</string>
-  </entry>
-  <entry>
     <string>au_crawlrules</string>
     <!-- link based on volumes that is in css 
     http://muse.jhu.edu/about/reference/eliot/images/volume_1_overlay.gif -->
     <list>
       <string>2,"^https?://%s/about/reference/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.*)?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/books/lockss_books\.html$", url_host(base_url), eisbn</string>
-      <string>1,"^https?://%s/books/%s/", url_host(base_url), eisbn</string>
+      <string>1,"^https?://%s/books/lockss_books\.html$", url_host(base_url)</string>
+      <string>1,"^https?://%s/books/%s/?", url_host(base_url), eisbn</string>
     </list>
   </entry>
   <entry>
@@ -57,33 +57,6 @@
       <string>"%sbooks/lockss_books.html", to_http(base_url)</string>
       <string>"%sbooks/lockss_books.html", to_https(base_url)</string>
     </list>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"%sbooks/%s/%s-[\d]+.pdf", base_url, eisbn, eisbn</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_redirect_to_login_url_pattern</string>
-    <string>"^https?://%s/.*\?auth=0$", url_host(base_url)</string>
-  </entry>
-  <entry>
-    <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:Project Muse</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-    <entry>
-      <string>au_title</string>
-      <string>"%sbooks/%s", base_url, eisbn</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>"%sbooks/%s", base_url, eisbn</string>
-    </entry>
-    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -109,6 +82,16 @@
     </list>
   </entry>
   <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Project Muse</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"%sbooks/%s/%s-[\d]+\.pdf", base_url, eisbn, eisbn</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
   </entry> 
@@ -131,5 +114,35 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"^https?://%s/.*\?auth=0$", url_host(base_url)</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>"%sbooks/%s", base_url, eisbn</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>"%sbooks/%s", base_url, eisbn</string>
+    </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to chapter landing page -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
 </map>

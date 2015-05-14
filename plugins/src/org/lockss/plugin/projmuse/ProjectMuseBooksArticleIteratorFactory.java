@@ -45,7 +45,7 @@ public class ProjectMuseBooksArticleIteratorFactory
 
   // http://muse.jhu.edu/books/9780299107635
   protected static final String ROOT_TEMPLATE = "\"%sbooks/\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"^%sbooks/%s/$\", base_url, eisbn";
+  protected static final String PATTERN_TEMPLATE = "\"^%sbooks/%s/?$\", base_url, eisbn";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
