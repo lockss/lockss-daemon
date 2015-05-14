@@ -10889,7 +10889,7 @@
     au < crawling ; exists ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
-    au < testing ; exists ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
+    au < ready ; exists ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
     au < manifest ; exists ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 ; >
 
     }
@@ -13068,7 +13068,7 @@
     au < finished ; frozen ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Journal of Law, Economics, and Organization Volume 29 ; 29 ; >
-    au < testing ; exists ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; >
+    au < ready ; exists ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; >
     au < manifest ; exists ; 2015 ; Journal of Law, Economics, and Organization Volume 31 ; 31 ; >
 
     }
@@ -13816,14 +13816,10 @@
     param[base_url] = http://jpids.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    {
-
     au < crawling ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 ; >
-    au < testing ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
+    au < ready ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
     au < manifest ; exists ; 2015 ; Journal of the Pediatric Infectious Diseases Society Volume 4 ; 4 ; >
-
-    }
 
   }
 
@@ -14067,7 +14063,7 @@
     au < finished ; frozen ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Journal of Plant Ecology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Plant Ecology Volume 6 ; 6 ; >
-    au < testing ; exists ; 2014 ; Journal of Plant Ecology Volume 7 ; 7 ; >
+    au < ready ; exists ; 2014 ; Journal of Plant Ecology Volume 7 ; 7 ; >
     au < manifest ; exists ; 2015 ; Journal of Plant Ecology Volume 8 ; 8 ; >
 
     }
@@ -14443,7 +14439,7 @@
     au < finished ; frozen ; 2011 ; Journal of Semitic Studies Volume 56 ; 56 ; >
     au < finished ; frozen ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; Journal of Semitic Studies Volume 58 ; 58 ; >
-    au < testing ; exists ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 ; >
+    au < ready ; exists ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 ; >
     au < manifest ; exists ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 ; >
 
     }
@@ -14724,7 +14720,7 @@
     au < zapped ; finished ; 2011 ; Journal of Topology Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Journal of Topology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Topology Volume 6 ; 6 ; >
-    au < testing ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
+    au < ready ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
     au < manifest ; exists ; 2015 ; Journal of Topology Volume 8 ; 8 ; >
 
     }
