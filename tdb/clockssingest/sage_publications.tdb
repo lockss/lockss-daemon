@@ -27272,6 +27272,37 @@
   {
 
     title <
+      name = Justice Research and Policy ;
+      issn = 1525-1071 ;
+      eissn = 1942-8022
+    >
+
+      param[base_url] = http://jrx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1999 ; Labor Studies Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 2000 ; Labor Studies Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 2001 ; Labor Studies Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 2002 ; Labor Studies Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 2003 ; Labor Studies Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 2004 ; Labor Studies Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 2005 ; Labor Studies Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 2006 ; Labor Studies Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 2007 ; Labor Studies Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 2008 ; Labor Studies Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 2009 ; Labor Studies Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2010 ; Labor Studies Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 2011 ; Labor Studies Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 2012 ; Labor Studies Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 2013 ; Labor Studies Journal Volume 15 ; 15 ; >
+      au < expected ; exists ; 2014 ; Labor Studies Journal Volume 16 ; 16 ; >
+      au < expected ; exists ; 2015 ; Labor Studies Journal Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+    title <
       name = Labor Studies Journal ;
       issn = 0160-449X ;
       eissn = 1538-9758
