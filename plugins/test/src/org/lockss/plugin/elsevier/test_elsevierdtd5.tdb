@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Elsevier
+  >
+  
+  {
+  
+   title <
+     name = Elsevier Source Content
+    >
+
+    {
+
+    plugin = org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin
+    param[base_url] = http://www.source.org/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+  
+    au < readySource ; crawling ; 2014 ; Elsevier Source Content 2014 ; 2014 >
+  
+    }
+  
+  }
+  
+}

@@ -37,7 +37,6 @@ import java.util.regex.Pattern;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 
@@ -72,13 +71,19 @@ public class TestElsevierDTD5TarSourceArticleIteratorFactory extends ArticleIter
       PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
   }
   
+  // The article iterator picks up all top-level dataset.xml files and all end-level main.xml files
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat,"http://www.example.com/2014/CLKS0000000000003A.tar!/CLKS0000000000003/dataset.xml");
-    assertNotMatchesRE(pat,"http://www.example.com/2014/CLKS0000000000003B.tar!/CLKS0000000000003/dataset.xml");
+    // this will never happen, but it's not excluded in the pattern
+    assertMatchesRE(pat,"http://www.example.com/2014/CLKS0000000000003B.tar!/CLKS0000000000003/dataset.xml");
     assertMatchesRE(pat,"http://www.example.com/2014/CLKS0000000000237A.tar!/CLKS0000000000003/dataset.xml");
+    assertMatchesRE(pat,"http://www.example.com/2014/CLKS0000000000237A.tar!/CLKS0000000000003/21735794/v89i9/S2173579414001698/main.xml");
+    // these shouldn't get picked up...
+    assertNotMatchesRE(pat,"http://www.example.com/2014/CLKS0000000000237A.tar!/CLKS0000000000003/21735794/v89i9/issue.xml");
+    assertNotMatchesRE(pat,"http://www.example.com/2014/CLKS0000000000237A.tar!/CLKS0000000000003/21735794/v89i9/S2173579414001698/dataset.xml");
    }
 
 
