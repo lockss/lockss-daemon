@@ -2136,4 +2136,23 @@
 
     }
 
+    {
+    title <
+      name = Twentieth-Century Literature ;
+      issn = 0041-462X ;
+      eissn = 2325-8101 ;
+      issnl = 0041-462X
+    >
+
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tcl.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 >
+
+     }
+
+    }
+
 }
