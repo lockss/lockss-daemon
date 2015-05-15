@@ -3007,6 +3007,15 @@
     >
 
     {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tsq.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 >
+
+    }
+
+    {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
