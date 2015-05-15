@@ -65,7 +65,6 @@ public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
     
     @Override
     public void state1() throws PdfException {
-      // FIXME 1.68: isShowTextContains/isShowTextGlyphPositioningContains
       if (isShowTextFind(ACCESS) ||
           isShowTextGlyphPositioningFind(ACCESS)) {
         setState(2);
