@@ -51,7 +51,7 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     norm = new ProjectMuseUrlNormalizer();
-    String[] stems = {"http://www.example.com","https://www.example.com/"};
+    String[] stems = {"http://www.example.com","https://www.example.com/","http://cdn.example.com"};
     mauHttp = new MockArchivalUnit();
     mauHttp.setUrlStems(Arrays.asList(stems));
     mauHttp.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),

@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.projmuse;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
@@ -54,7 +53,8 @@ public class ProjectMuseUrlConsumer extends SimpleUrlConsumer {
   @Override
   public void consume() throws IOException {
     if (shouldStoreAtOrigUrl()) {
-      // FIXME 1.68: call storeAtOrigUrl() instead of these 4 lines 
+      // FIXME 1.68: call storeAtOrigUrl() instead of these 4 lines
+      // storeAtOrigUrl();
       fud.redirectUrls = null;
       fud.fetchUrl = null;
       fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);

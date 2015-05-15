@@ -47,10 +47,20 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
-"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
-"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T* (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ] TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm [ (For additional information about this article) ] TJ /HelvCBK~1416394845 10 Tf 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm [ (                                                      Access provided by <something> (1 Dec 2014 14:32 GMT)) ] TJ  ET " + 
+"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S" +
+" 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
+"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T*" +
+" (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm" +
+" (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm" +
+" [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ]" +
+" TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm" +
+" (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm" +
+" [ (For additional information about this article) ] TJ /HelvCBK~1416394845 10 Tf" +
+" 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm" +
+" [ (       Access provided by <something> (1 Dec 2014 14:32 GMT)) ] TJ  ET " + 
 "q 7 0 0 7 35 266.50 cm /GxCBG Do Q " +
-"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
+"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm" +
+" [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));
@@ -58,10 +68,20 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
-"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
-"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T* (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ] TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm (For additional information about this article) Tj /HelvCBK~1416394845 10 Tf 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm (                                                      Access provided by <something> (1 Dec 2014 14:32 GMT)) Tj  ET " + 
+"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S" +
+" 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
+"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T*" +
+" (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm" +
+" (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm" +
+" [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ]" +
+" TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm" +
+" (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm" +
+" (For additional information about this article) Tj /HelvCBK~1416394845 10 Tf" +
+" 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm" +
+" (          Access provided by <something> (1 Dec 2014 14:32 GMT)) Tj  ET " + 
 "q 7 0 0 7 35 266.50 cm /GxCBG Do Q " +
-"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
+"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm" +
+" [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));
@@ -69,21 +89,41 @@ public class TestProjectMusePdfFilterFactory extends LockssTestCase {
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
-"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
-"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T* (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ] TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm [ (Not the right string) ] TJ /HelvCBK~1416394845 10 Tf 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm [ (                                                      Access provided by <something> (1 Dec 2014 14:32 GMT)) ] TJ  ET " + 
+"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S" +
+" 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
+"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T*" +
+" (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm" +
+" (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm" +
+" [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ]" +
+" TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm" +
+" (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm" +
+" [ (No longer checked for this string) ] TJ /HelvCBK~1416394845 10 Tf" +
+" 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm" +
+" [ (            Accessed (1 Dec 2014 14:32 GMT)) ] TJ  ET " + 
 "q 7 0 0 7 35 266.50 cm /GxCBG Do Q " +
-"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
+"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm" +
+" [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.getResult());
+    assertTrue(worker.getResult());
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
-"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
-"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T* (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ] TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm [ (For additional information about this article) ] TJ /HelvCBK~1416394845 10 Tf 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm [ (                                                      Not the right string (1 Dec 2014 14:32 GMT)) ] TJ  ET " + 
+"q 375.12 0 0 174.96 5 607 cm /JxCBB Do Q 0.674510 0.658824 0.619608 RG 15 592 m 597 592 l S" +
+" 0.674510 0.658824 0.619608 RG 15 75 m 597 75 l S " + 
+"BT  /DeSaBoCBC~1416394845 16 Tf 20 TL 1 0 0 1 30 567 Tm (<something something something>) Tj T*" +
+" (<something something something>) Tj T* /DeSaCBD~1416394845 10 Tf 1 0 0 1 30 517 Tm" +
+" (<something something something>) Tj T* /HelvCBE~1416394845 12 Tf 16 TL 1 0 0 1 30 472 Tm" +
+" [ (Journal Title, Volume 123, Number 4, Winter 2014, pp. 12-34) ] TJ T* [ (\\(Article\\)) ]" +
+" TJ T* /DeSaCBF~1416394845 12 Tf 15 TL 1 0 0 1 30 418 Tm" +
+" (<something something something>) Tj T* /HelvCBH~1416394845 12 Tf 1 0 0 1 50 268 Tm" +
+" [ (For additional information about this article) ] TJ /HelvCBK~1416394845 10 Tf" +
+" 0.674510 0.658824 0.619608 rg 1 0 0 1 15 37.500 Tm" +
+" [ (       Not the right string (1 Dec 2014 14:32 GMT)) ] TJ  ET " + 
 "q 7 0 0 7 35 266.50 cm /GxCBG Do Q " +
-"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
+"BT  /HelvCBI~1416394845 9 Tf 0.325490 0.427451 0.494118 rg 1 0 0 1 50 253 Tm" +
+" [ (http://www.example.com/journals/jabc/summary/v123/123.4.author.html) ] TJ  ET " + 
 "0.662745 0.662745 0.662745 rg 478 426 86.400 124.56 re f q 86.400 0 0 124.56 477 427 cm /JxCBJ Do Q"
 // ---- end PDF stream ----
     ));

@@ -70,12 +70,10 @@ public class ProjectMuseUtil {
 
   public static boolean isBaseUrlHost(ArchivalUnit au, String url) {
     if (url != null) {
-      Iterator<String> it = au.getUrlStems().iterator();
-      while (it.hasNext()) {
-        if (url.startsWith(it.next())) {
-          return true;
-        }
-      }
+      String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+      baseUrl = baseUrl.replace(HTTPS, HTTP);
+      url = url.replace(HTTPS, HTTP);
+      return url.startsWith(baseUrl);
     }
     return false;
   }
@@ -90,7 +88,7 @@ public class ProjectMuseUtil {
    * 
    * @since 1.67.5
    */
-  public static String baseUrlHttpsCheck(ArchivalUnit au, String url) {
+  public static String baseUrlHostCheck(ArchivalUnit au, String url) {
     if (isBaseUrlHost(au, url)) {
       if (isBaseUrlHttp(au) && url.startsWith(HTTPS)) {
         url = HTTP + url.substring(HTTPS.length());

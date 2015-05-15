@@ -118,28 +118,28 @@ public class ProjectMuseHtmlHashFilterFactory implements FilterFactory {
                 if ("meta".equals(name)) {
                   String val = tag.getAttribute("content");
                   if (val != null) {
-                    tag.setAttribute("content", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
+                    tag.setAttribute("content", ProjectMuseUtil.baseUrlHostCheck(au, val));
                   }
                   return;
                 }
                 if (backgroundTags.contains(name)) {
                   String val = tag.getAttribute("background");
                   if (val != null) {
-                    tag.setAttribute("background", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
+                    tag.setAttribute("background", ProjectMuseUtil.baseUrlHostCheck(au, val));
                   }
                   return;
                 }
                 if (hrefTags.contains(name)) {
                   String val = tag.getAttribute("href");
                   if (val != null) {
-                    tag.setAttribute("href", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
+                    tag.setAttribute("href", ProjectMuseUtil.baseUrlHostCheck(au, val));
                   }
                   return;
                 }
                 if (srcTags.contains(name)) {
                   String val = tag.getAttribute("src");
                   if (val != null) {
-                    tag.setAttribute("src", ProjectMuseUtil.baseUrlHttpsCheck(au, val));
+                    tag.setAttribute("src", ProjectMuseUtil.baseUrlHostCheck(au, val));
                   }
                   return;
                 }
