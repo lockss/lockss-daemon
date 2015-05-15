@@ -491,7 +491,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = educacaoerealidade
 
-      au < manifest ; 2000 ; 1 ; Educação & Realidade Volume 2000 ; 2000 ; >
+      au < testing ; 2000 ; 1 ; Educação & Realidade Volume 2000 ; 2000 ; >
       au < released ; 2001 ; 2 ; Educação & Realidade Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 3 ; Educação & Realidade Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 4 ; Educação & Realidade Volume 2003 ; 2003 ; >
@@ -644,7 +644,7 @@
 
       au < released ; 2011 ; 1 ; FINEDUCA-Revista de Financiamento da Educação Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; FINEDUCA-Revista de Financiamento da Educação Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 3 ; FINEDUCA-Revista de Financiamento da Educação Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 3 ; FINEDUCA-Revista de Financiamento da Educação Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 4 ; FINEDUCA-Revista de Financiamento da Educação Volume 2014 ; 2014 ; >
 
   }
@@ -668,8 +668,8 @@
       au < released ; 2002 ; 6 ; History of Education Journal Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 7 ; History of Education Journal Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 8 ; History of Education Journal Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 9 ; History of Education Journal Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 10 ; History of Education Journal Volume 2006 ; 2006 ; >
+      au < testing ; 2005 ; 9 ; History of Education Journal Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 10 ; History of Education Journal Volume 2006 ; 2006 ; >
 
   }
 
@@ -684,8 +684,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = iluminuras
 
-      au < manifest ; 2006 ; 1 ; ILUMINURAS Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 2 ; ILUMINURAS Volume 2007 ; 2007 ; >
+      au < testing ; 2006 ; 1 ; ILUMINURAS Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 2 ; ILUMINURAS Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 3 ; ILUMINURAS Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 4 ; ILUMINURAS Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 5 ; ILUMINURAS Volume 2010 ; 2010 ; >
@@ -770,8 +770,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = Movimento
 
-      au < manifest ; 1996 ; 1 ; Movimento (ESEF/UFRGS) Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 2 ; Movimento (ESEF/UFRGS) Volume 1997 ; 1997 ; >
+      au < testing ; 1996 ; 1 ; Movimento (ESEF/UFRGS) Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 2 ; Movimento (ESEF/UFRGS) Volume 1997 ; 1997 ; >
       au < notReady ; 1998 ; 3 ; Movimento (ESEF/UFRGS) Volume 1998 ; 1998 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
       au < notReady ; 1999 ; 4 ; Movimento (ESEF/UFRGS) Volume 1999 ; 1999 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
       au < notReady ; 2000 ; 5 ; Movimento (ESEF/UFRGS) Volume 2000 ; 2000 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
@@ -1040,7 +1040,7 @@
       au < released ; 2012 ; 2 ; Revista Brasileira de Estudos da Presença Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 3 ; Revista Brasileira de Estudos da Presença Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 4 ; Revista Brasileira de Estudos da Presença Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 5 ; Revista Brasileira de Estudos da Presença Volume 2015 ; 2015 ; >
+      au < testing ; 2015 ; 5 ; Revista Brasileira de Estudos da Presença Volume 2015 ; 2015 ; >
 
   }
 
@@ -1178,8 +1178,8 @@
       param[journal_id] = revistadoscursos
 
       au < released ; 1915 ; 1 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1915 ; 1915 ; >
-      au < manifest ; 1916 ; 2 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1916 ; 1916 ; >
-      au < manifest ; 1917 ; 3 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1917 ; 1917 ; >
+      au < testing ; 1916 ; 2 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1916 ; 1916 ; >
+      au < testing ; 1917 ; 3 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1917 ; 1917 ; >
 
   }
 
