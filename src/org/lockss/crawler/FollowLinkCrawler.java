@@ -353,7 +353,7 @@ public class FollowLinkCrawler extends BaseCrawler {
           if (!crawlStatus.isCrawlError()) {
             log.warning("fetch() failed, didn't set error status: "
                 + curl);
-            crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
+            crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
             crawlStatus.signalErrorForUrl(url, "Failed to fetch url", Crawler.STATUS_ERROR);
           }
         }
@@ -558,9 +558,9 @@ public class FollowLinkCrawler extends BaseCrawler {
             if (res == FetchResult.NOT_FETCHED) {
               if(curl.isStartUrl() && isFailOnStartUrlError()) {
                 // fail if cannot fetch a StartUrl
-                String msg = "Failed to cache start url: "+ curl.getUrl();
-                log.error(msg);
-                crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
+                String msg = "Failed to fetch start url";
+                log.error(msg + ": " + curl.getUrl());
+                crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR, msg);
                 return false;
               }
             } else {
@@ -575,9 +575,12 @@ public class FollowLinkCrawler extends BaseCrawler {
 	      updateCdnStems(url);
 	    }
           } catch (CacheException ex) {
-            //XXX: we have a fatal exception, but we need to store it
-            crawlStatus.signalErrorForUrl(url, ex);
-            crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
+            if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+              //XXX: we have a fatal exception, but we need to store it
+              crawlStatus.signalErrorForUrl(url, ex);
+              crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR, ex.getMessage());
+              abortCrawl();
+            }
             return false;
           }   
           parseQueue.put(curl);
