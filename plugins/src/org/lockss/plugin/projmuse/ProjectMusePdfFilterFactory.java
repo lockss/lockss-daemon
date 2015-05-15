@@ -49,11 +49,8 @@ public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
    */
   public static class FrontPageWorker extends PdfTokenStreamStateMachine {
     
-    public static final Pattern ACCESS_2 =
-        Pattern.compile("^          +Access", Pattern.CASE_INSENSITIVE);
-    
-    public static final Pattern PROVIDED_BY =
-        Pattern.compile("Access provided by", Pattern.CASE_INSENSITIVE);
+    public static final Pattern ACCESS =
+        Pattern.compile("^ *(Access provided by|Accessed) ", Pattern.CASE_INSENSITIVE);
     
     public FrontPageWorker() {
       super(log);
@@ -69,14 +66,9 @@ public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
     @Override
     public void state1() throws PdfException {
       // FIXME 1.68: isShowTextContains/isShowTextGlyphPositioningContains
-      if (isShowTextFind(PROVIDED_BY) ||
-          isShowTextGlyphPositioningFind(PROVIDED_BY)) {
+      if (isShowTextFind(ACCESS) ||
+          isShowTextGlyphPositioningFind(ACCESS)) {
         setState(2);
-      }
-      else if (isShowTextFind(ACCESS_2) ||
-               isShowTextGlyphPositioningFind(ACCESS_2)) {
-        setState(2);
-        log.info("got Access text");
       }
       else if (isEndTextObject()) { 
         setState(0);
