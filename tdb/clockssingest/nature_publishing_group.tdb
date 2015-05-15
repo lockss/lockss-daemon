@@ -134,7 +134,7 @@
 
     au < finished ; frozen ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
     au < finished ; frozen ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
+    au < testing ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
     au < crawling ; exists ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 >
 
   }
@@ -561,7 +561,7 @@
     au < finished ; crawling ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
     au < finished ; crawling ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
     au < finished ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
-    au < manifest ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
+    au < testing ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 >
 
   }
@@ -622,7 +622,7 @@
     param[journal_id] = cti
 
     au < manifest ; exists ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 >
-    au < manifest ; exists ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 >
+    au < testing ; exists ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 >
     au < crawling ; exists ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 >
 
   }
@@ -680,7 +680,7 @@
     param[journal_id] = emi
 
     au < manifest ; exists ; 2012 ; Emerging Microbes & Infections Volume 1 ; 2012 ; 1 >
-    au < manifest ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 >
+    au < testing ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 >
     au < crawling ; exists ; 2014 ; Emerging Microbes & Infections Volume 3 ; 2014 ; 3 >
 
   }
@@ -783,7 +783,7 @@
     au < manifest ; exists ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 >
     au < manifest ; exists ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 >
     au < manifest ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 >
-    au < manifest ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 >
+    au < testing ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 >
     au < crawling ; exists ; 2014 ; Experimental & Molecular Medicine Volume 46 ; 2014 ; 46 >
 
 
@@ -889,7 +889,7 @@
     au < finished ; frozen ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 >
     au < finished ; crawling ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 >
     au < crawling ; exists ; 2013 ; Genes and Immunity Volume 14 ; 2013 ; 14 >
-    au < manifest ; exists ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 >
+    au < testing ; exists ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 >
 
   }
 
@@ -908,7 +908,7 @@
     au < crawling ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
     au < crawling ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
     au < finished ; frozen ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
-    au < manifest ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
+    au < testing ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
     au < manifest ; exists ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 >
 
   }
@@ -1711,8 +1711,8 @@
     au < crawling ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
     au < exists ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 >
-    au < manifest ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 >
-    au < manifest ; exists ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 >
+    au < testing ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 >
+    au < testing ; exists ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 >
     au < manifest ; exists ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 >
     au < manifest ; exists ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 >
     au < manifest ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 >
@@ -1732,7 +1732,7 @@
 
     au < finished ; frozen ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
     au < manifest ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
+    au < testing ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
     au < exists ; exists ; 2014 ; Kidney International Supplements Volume 4 ; 2014 ; 4 >
     au < expected ; exists ; 2015 ; Kidney International Supplements Volume 5 ; 2015 ; 5 >
 
@@ -1968,7 +1968,7 @@
     param[journal_id] = mtna
 
     au < finished ; frozen ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 >
-    au < manifest ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 >
+    au < testing ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 >
     au < manifest ; exists ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 >
 
   }
@@ -2346,9 +2346,9 @@
     au < crawling ; exists ; 2013 ; Nature Volume 499 ; 2013 ; 499 >
     au < crawling ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 >
     au < crawling ; exists ; 2013 ; Nature Volume 501 ; 2013 ; 501 >
-    au < manifest ; exists ; 2013 ; Nature Volume 502 ; 2013 ; 502 >
-    au < manifest ; exists ; 2013 ; Nature Volume 503 ; 2013 ; 503 >
-    au < manifest ; exists ; 2013 ; Nature Volume 504 ; 2013 ; 504 >
+    au < testing ; exists ; 2013 ; Nature Volume 502 ; 2013 ; 502 >
+    au < testing ; exists ; 2013 ; Nature Volume 503 ; 2013 ; 503 >
+    au < testing ; exists ; 2013 ; Nature Volume 504 ; 2013 ; 504 >
     au < manifest ; exists ; 2014 ; Nature Volume 505 ; 2014 ; 505 >
     au < manifest ; exists ; 2014 ; Nature Volume 506 ; 2014 ; 506 >
     au < manifest ; exists ; 2014 ; Nature Volume 507 ; 2014 ; 507 >
@@ -3377,7 +3377,7 @@
     
     au < finished ; crawling ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
     au < finished ; crawling ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 >
+    au < testing ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 >
     au < manifest ; exists ; 2014 ; Nutrition & Diabetes Volume 4 ; 2014 ; 4 >
     au < manifest ; exists ; 2015 ; Nutrition & Diabetes Volume 5 ; 2015 ; 5 >
   
@@ -3844,7 +3844,7 @@
     au < finished ; crawling ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 >
     au < finished ; crawling ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 >
     au < crawling ; exists ; 2013 ; Vital Volume 10 (2013) ; 2013 ; 10 >
-    au < manifest ; exists ; 2013 ; Vital Volume 11 (2013) ; 2013 ; 11 >
+    au < testing ; exists ; 2013 ; Vital Volume 11 (2013) ; 2013 ; 11 >
 
   }
 
