@@ -957,6 +957,7 @@ public class SimpleHasher {
 						DEFAULT_THREADPOOL_PRIORITY));
 	  triggerWDogOnExit(true);
 	  hash(params, result);
+	  triggerWDogOnExit(false);
 	  setThreadName("HashCUS: idle");
 	}
 
