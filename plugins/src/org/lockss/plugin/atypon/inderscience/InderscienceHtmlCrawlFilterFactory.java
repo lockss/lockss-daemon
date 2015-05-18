@@ -40,7 +40,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-public class InderscienceAtyponHtmlCrawlFilterFactory 
+public class InderscienceHtmlCrawlFilterFactory 
   extends BaseAtyponHtmlCrawlFilterFactory {
   
   static NodeFilter[] filters = new NodeFilter[] {

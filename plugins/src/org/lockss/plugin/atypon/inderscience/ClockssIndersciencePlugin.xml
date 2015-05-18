@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.inderscience.ClockssInderscienceAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.inderscience.ClockssIndersciencePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -17,7 +17,7 @@
   </entry>  
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.inderscience.InderscienceAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.inderscience.IndersciencePlugin</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>

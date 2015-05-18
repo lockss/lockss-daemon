@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.inderscience.InderscienceAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.inderscience.IndersciencePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -29,11 +29,11 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.atypon.inderscience.InderscienceAtyponHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.atypon.inderscience.InderscienceHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.inderscience.InderscienceAtyponHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.atypon.inderscience.InderscienceHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
