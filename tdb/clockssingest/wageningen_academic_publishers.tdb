@@ -5,8 +5,8 @@
     info[tester] = 0
   >
   {
-    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
-    param[base_url] = http://wageningenacademic.metapress.com/
+    plugin = org.lockss.plugin.atypon.wegeningen.ClockssWageningenAtyponPlugin
+    param[base_url] = http://www.wageningenacademic.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     {
@@ -17,8 +17,15 @@
         eissn = 1876-2891 
       >
 
-      param[journal_issn] = 1876-2891
-      
+      param[journal_id] = bm
+    
+      au < exists ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 >
+      au < exists ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; Beneficial Microbes Volume 3 ; 3 >
+      au < exists ; exists ; 2013 ; Beneficial Microbes Volume 4 ; 4 >
+      au < exists ; exists ; 2014 ; Beneficial Microbes Volume 5 ; 5 >
+      au < exists ; exists ; 2015 ; Beneficial Microbes Volume 6 ; 6 >
+
 
     }
 
@@ -30,8 +37,25 @@
         eissn = 1755-2559 
       >
 
-      param[journal_issn] = 1755-2559 
-      
+      param[journal_id] = cep
+
+      au < exists ; exists ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 >
+      au < exists ; exists ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 >
+      au < exists ; exists ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 >
+      au < exists ; exists ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 >
+
+    }
+
+    {
+
+      title <
+        name =  Journal of Insects as Food and Feed ;
+        eissn = 2352-4588 
+      >
+
+      param[journal_id] = jiff
+
+      au < exists ; exists ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 >
 
     }
 
@@ -43,7 +67,23 @@
         eissn = 1875-0931 
       >
 
-      param[journal_issn] = 1875-0931
+      param[journal_id] = jcns
+
+      au < exists ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 >
+      au < exists ; exists ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 >
+      au < exists ; exists ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 >
+      au < exists ; exists ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 >
+      au < exists ; exists ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 >
+      au < exists ; exists ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 >
+      au < exists ; exists ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 >
+      au < exists ; exists ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 >
+      au < exists ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 >
+      au < exists ; exists ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 >
+      au < exists ; exists ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 >
+      au < exists ; exists ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 >
+      au < exists ; exists ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 >
+      au < exists ; exists ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 >
+      au < expected ; exists ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 >
 
     }
 
@@ -55,8 +95,12 @@
         eissn = 1757-837X 
       >
 
-      param[journal_issn] = 1757-837X
-      
+      param[journal_id] = qas
+
+      au < exists ; exists ; 2013 ; Comparative Exercise Physiology Volume 5 ; 5 >
+      au < exists ; exists ; 2014 ; Comparative Exercise Physiology Volume 6 ; 6 >
+      au < exists ; exists ; 2015 ; Comparative Exercise Physiology Volume 7 ; 7 >
+
     }
 
     {
@@ -67,8 +111,16 @@
         eissn = 1875-0796 
       >
 
-      param[journal_issn] = 1875-0796
-      
+      param[journal_id] = wmj
+
+      au < exists ; exists ; 2008 ; Comparative Exercise Physiology Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Comparative Exercise Physiology Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Comparative Exercise Physiology Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Comparative Exercise Physiology Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Comparative Exercise Physiology Volume 5 ; 5 >
+      au < exists ; exists ; 2013 ; Comparative Exercise Physiology Volume 6 ; 6 >
+      au < exists ; exists ; 2014 ; Comparative Exercise Physiology Volume 7 ; 7 >
+      au < exists ; exists ; 2015 ; Comparative Exercise Physiology Volume 8 ; 8 >
 
     }
 
