@@ -413,39 +413,16 @@
 
     param[journal_id] = ijssc
 
-    au < exists ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
-    au < exists ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
-    au < exists ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 >
-    au < exists ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 >
-    au < exists ; exists ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 >
-    au < exists ; exists ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 >
-    au < exists ; exists ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 >
-    au < exists ; exists ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 >
+    au < doNotProcess ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 >
     au < exists ; exists ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 >
-    au < exists ; exists ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 >
-
-  }
-
-
-  {
-
-    title <
-      name = International Journal of Sport Science and Coaching ;
-      issn = 1747-9541
-    >
-
-    param[journal_id] = 1747-9541
-
-    au < doNotProcess ; exists ; 2006 ; International Journal of Sport Science and Coaching Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2007 ; International Journal of Sport Science and Coaching Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2008 ; International Journal of Sport Science and Coaching Volume 3 ; 3 >
-    au < doNotProcess ; exists ; 2009 ; International Journal of Sport Science and Coaching Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sport Science and Coaching Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sport Science and Coaching Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sport Science and Coaching Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Sport Science and Coaching Volume 8 ; 8 >
-    au < exists ; exists ; 2014 ; International Journal of Sport Science and Coaching Volume 9 ; 9 >
-    au < expected ; exists ; 2015 ; International Journal of Sport Science and Coaching Volume 10 ; 10 >
+    au < expected ; exists ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 >
 
   }
 
@@ -516,7 +493,7 @@
       issn = 2040-2295
     >
 
-    param[journal_id] = 2040-2295
+    param[journal_id] = jhe
 
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
@@ -535,7 +512,7 @@
       issn = 2040-2317
     >
 
-    param[journal_id] = 2040-2317
+    param[journal_id] = jsfe
 
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
@@ -554,7 +531,7 @@
       issn = 0263-0923
     >
 
-    param[journal_id] = 0263-0923
+    param[journal_id] = jlfnvac
 
     au < doNotProcess ; exists ; 2000 ; Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
     au < doNotProcess ; exists ; 2001 ; Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
@@ -583,7 +560,7 @@
       issn = 0957-4565
     >
 
-    param[journal_id] = 0957-4565
+    param[journal_id] = nvww
 
     au < doNotProcess ; doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
     au < doNotProcess ; doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
@@ -601,7 +578,7 @@
       issn = 1475-4738
     >
 
-    param[journal_id] = 1475-4738
+    param[journal_id] = nn
 
     au < doNotProcess ; exists ; 2002 ; Noise Notes Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2003 ; Noise Notes Volume 2 ; 2 >
@@ -668,7 +645,7 @@
       issn = 1757-482X
     >
 
-    param[journal_id] = 1757-482X
+    param[journal_id] = jcmf
 
     au < doNotProcess ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
@@ -688,7 +665,7 @@
       issn = 0309-524X
     >
 
-    param[journal_id] = 0309-524X
+    param[journal_id] = we
 
     au < doNotProcess ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 >
     au < doNotProcess ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 >
@@ -716,7 +693,7 @@
       issn = 1708-5284
     >
 
-    param[journal_id] = 1708-5284
+    param[journal_id] = wjoe
 
     au < doNotProcess ; doNotProcess ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
