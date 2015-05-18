@@ -594,6 +594,9 @@ public class XPathXmlMetadataParser  {
        */
       Pair<Reader, String> retInfoPair = CharsetUtil.getCharsetReader(cu.getUnfilteredInputStream());
       guessed_cset = retInfoPair.getRight();
+      // inefficient, unused reader needs to be closed. waiting for improvement to charsetUtil
+      // will not be null
+      retInfoPair.getLeft().close();
       log.debug3("guessed cset is: " + guessed_cset);
     } catch (IOException ex){
       log.debug3("Was not able to get a Reader/Charset from util");
