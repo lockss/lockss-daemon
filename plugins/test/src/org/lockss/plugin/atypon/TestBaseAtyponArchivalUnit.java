@@ -337,12 +337,12 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin");
     //inderscience
     testSpecificUserMsg("http://www.inderscienceonline.com/", null, 
-        "org.lockss.plugin.atypon.inderscience.InderscienceAtyponPlugin",
-        "org.lockss.plugin.atypon.inderscience.ClockssInderscienceAtyponPlugin");    
+        "org.lockss.plugin.atypon.inderscience.IndersciencePlugin",
+        "org.lockss.plugin.atypon.inderscience.ClockssIndersciencePlugin");    
     //liverpool
     testSpecificUserMsg("http://online.liverpooluniversitypress.co.uk/", null, 
-        "org.lockss.plugin.atypon.liverpool.LiverpoolAtyponPlugin",
-        "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolAtyponPlugin");
+        "org.lockss.plugin.atypon.liverpool.LiverpoolJournalsPlugin",
+        "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolJournalsPlugin");
     //maney
     testSpecificUserMsg("http://www.maneyonline.com/", null, 
         "org.lockss.plugin.atypon.maney.ManeyAtyponPlugin",
@@ -353,8 +353,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin");
     //multiscience
     testSpecificUserMsg("http://multi-science.atypon.com/", null, 
-        "org.lockss.plugin.atypon.multiscience.MultiScienceAtyponPlugin",
-        "org.lockss.plugin.atypon.multiscience.ClockssMultiScienceAtyponPlugin");    
+        "org.lockss.plugin.atypon.multiscience.MultiSciencePlugin",
+        "org.lockss.plugin.atypon.multiscience.ClockssMultiSciencePlugin");    
     //nrcresearch
     testSpecificUserMsg("http://www.nrcresearchpress.com/", null, 
         null,
@@ -362,7 +362,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     //practicalaction
     testSpecificUserMsg("http://www.developmentbookshelf.com/", null, 
         null,
-        "org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionAtyponPlugin");    
+        "org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionJournalsPlugin");    
     //seg
     testSpecificUserMsg("http://library.seg.org/", null, 
         null,
@@ -388,7 +388,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     //wageningen
     testSpecificUserMsg("http://www.wageningenacademic.com/", null, 
         null,
-        "org.lockss.plugin.atypon.wageningen.ClockssWageningenAtyponPlugin");    
+        "org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin");    
   }
 
   // Associate the base_url with the publisher name for convenience
