@@ -237,6 +237,7 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
       "            </p>\n" + 
       "  </dd>\n" + 
       "  </dl>" +
+      "<div id=\"articleOALicense\">Open Access</div>" +
       "</body>\n";
   private static final String miscHtmlFiltered =
       " <body>stuff</body> ";
