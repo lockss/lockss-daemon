@@ -29,7 +29,7 @@ RU:
 
 JIRA: 
 
-Plugin name suggestion: org.lockss.plugin.atypon.liverpool.LiverpoolAtyponPlugin
+Plugin name suggestion: org.lockss.plugin.atypon.liverpool.LiverpoolJournalsPlugin
 
 Clockss? [yes/no]: yes
 GLN? [yes/no]:	yes
@@ -254,12 +254,11 @@ For an example, look at
 
 Note that if you need to use the scraping filter, you also need to be sure that the size information (eg "PDF Plus (237 KB)") on the TOC and possibly article page must be hashed as well. BaseAtypon probably handles this, but check.
  
-* downloaded Loss and longing in Alice Munro’s ‘Queenie’ in 2 different days
+* downloaded pdfs from 2 different journals in different days and they
+are idendical from "diff -au"
 http://online.liverpooluniversitypress.co.uk/doi/pdf/10.3828/bjcs.2014.2
-and 'diff -au' the 2 pdfs, and found differences:
-** need pdf filter which extends from BaseAtyponScrapingPdfFilterFactory -
-tried to use the default BaseAtyponPdfFilter and remove all document info, 
-but there are still diffrences (ID, ...)
+http://online.liverpooluniversitypress.co.uk/doi/pdf/10.3828/idpr.2014.3
+so no pdf filter needed.
 
 -------------------------DONE-----------------------------
 

@@ -36,7 +36,7 @@ import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
 
 // Example:
 // http://online.liverpooluniversitypress.co.uk/doi/pdf/10.3828/bjcs.2014.2
-public class LiverpoolAtyponPdfFilterFactory 
+public class LiverpoolJournalsPdfFilterFactory 
   extends BaseAtyponScrapingPdfFilterFactory {
 
   @Override
