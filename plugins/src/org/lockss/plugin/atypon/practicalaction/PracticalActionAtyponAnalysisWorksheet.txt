@@ -234,8 +234,9 @@ For an example, look at
 
 Note that if you need to use the scraping filter, you also need to be sure that the size information (eg "PDF Plus (237 KB)") on the TOC and possibly article page must be hashed as well. BaseAtypon probably handles this, but check.
 
-* pdf has watermark
+* pdf has watermark - need pdf scraping filter
 http://www.developmentbookshelf.com/doi/pdf/10.3362/1756-3488.2014.005
+watermark text: "http://www.developmentbookshelf.com/doi/pdf/10.3362/2046-1887.2014.004 - Saturday, May 16, 2015 9:28:48 PM - Stanford University Libraries IP Address:171.66.236.16"
 
 -------------------------DONE-----------------------------
 
