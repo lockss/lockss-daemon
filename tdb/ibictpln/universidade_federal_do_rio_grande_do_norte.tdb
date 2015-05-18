@@ -38,6 +38,7 @@
       au < manifest ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 ; >
       au < manifest ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 ; >
       au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 6 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Revista Ambiente Contábil Volume 7 ; 2015 ; >
 
   }
 
@@ -58,6 +59,7 @@
       au < released ; 2012 ; 4 ; Revista Ambiente Contábil Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 5 ; Revista Ambiente Contábil Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Revista Ambiente Contábil Volume 2015 ; 2015 ; >
 
   }
 
@@ -121,6 +123,7 @@
 
       au < ready ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 3 ; Revista Alétheia Volume 2015 ; 2015 ; >
 
   }
 
@@ -177,6 +180,7 @@
       au < released ; 2011 ; 2 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2013 ; 2013 ; >
+      au < manifest ; 2015 ; 5 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2014 ; 2014 ; >
 
   }
 
@@ -209,17 +213,18 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = mneme
 
-      au < released ; 2003 ; 1 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 2 ; Mneme-Revista de Humanidades Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 3 ; Mneme-Revista de Humanidades Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 4 ; Mneme-Revista de Humanidades Volume 2006 ; 2006 ; >
-      au < released ; 2008 ; 6 ; Mneme-Revista de Humanidades Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 7 ; Mneme-Revista de Humanidades Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 8 ; Mneme-Revista de Humanidades Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 9 ; Mneme-Revista de Humanidades Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 10 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 11 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 12 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 ; >
+      au < manifest ; 2002 ; 3 ; Mneme-Revista de Humanidades Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 4 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 5 ; Mneme-Revista de Humanidades Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 6 ; Mneme-Revista de Humanidades Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 7 ; Mneme-Revista de Humanidades Volume 2006 ; 2006 ; >
+      au < released ; 2008 ; 8 ; Mneme-Revista de Humanidades Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Mneme-Revista de Humanidades Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Mneme-Revista de Humanidades Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Mneme-Revista de Humanidades Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 13 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 14 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 ; >
 
   }
 
@@ -328,6 +333,7 @@
       au < released ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 5 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2015 ; 2015 ; >
 
   }
 
@@ -484,6 +490,7 @@
       au < manifest ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 8 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2015 ; 2015 ; >
 
   }
 

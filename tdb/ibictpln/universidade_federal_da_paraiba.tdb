@@ -205,6 +205,7 @@
     au < released ; 2012 ; 22 ; Informação & Sociedade: Estudos Volume 22 ; 2012 ; >
     au < released ; 2013 ; 23 ; Informação & Sociedade: Estudos Volume 23 ; 2013 ; >
     au < released ; 2014 ; 24 ; Informação & Sociedade: Estudos Volume 24 ; 2014 ; >
+    au < manifest ; 2015 ; 25 ; Informação & Sociedade: Estudos Volume 25 ; 2015 ; >
 
   }
 
@@ -342,6 +343,7 @@
       au < released ; 2012 ; 6 ; Gaia Scientia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Gaia Scientia Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 8 ; Gaia Scientia Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 9 ; Gaia Scientia Volume 2015 ; 2015 ; >
 
   }
 
@@ -498,19 +500,19 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = primafacie
 
-      au < manifest ; 2004 ; 1 ; Prim@ Facie Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 2 ; Prim@ Facie Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 3 ; Prim@ Facie Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 4 ; Prim@ Facie Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 5 ; Prim@ Facie Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 6 ; Prim@ Facie Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 7 ; Prim@ Facie Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 8 ; Prim@ Facie Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 9 ; Prim@ Facie Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 10 ; Prim@ Facie Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 11 ; Prim@ Facie Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 12 ; Prim@ Facie Volume 2015 ; 2015 ; >
-
+      au < manifest ; 2003 ; 2 ; Prim@ Facie Volume 2003 ; 2003 ; >
+      au < manifest ; 2004 ; 3 ; Prim@ Facie Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Prim@ Facie Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Prim@ Facie Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Prim@ Facie Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Prim@ Facie Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Prim@ Facie Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Prim@ Facie Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Prim@ Facie Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Prim@ Facie Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Prim@ Facie Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 13 ; Prim@ Facie Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 14 ; Prim@ Facie Volume 2015 ; 2015 ; >
   }
 
   {
@@ -549,6 +551,7 @@
       au < released ; 2011 ; 4 ; PROLÍNGUA Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; PROLÍNGUA Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; PROLÍNGUA Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 7 ; PROLÍNGUA Volume 2014 ; 2014 ; >
 
   }
 
@@ -687,6 +690,7 @@
       au < released ; 2012 ; 5 ; Revista Espaço do Currículo Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Revista Espaço do Currículo Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; Revista Espaço do Currículo Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 8 ; Revista Espaço do Currículo Volume 2015 ; 2015 ; >
 
   }
 
@@ -703,6 +707,7 @@
 
       au < released ; 2013 ; 1 ; Revista Evidenciação Contábil & Finanças Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Revista Evidenciação Contábil & Finanças Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 3 ; Revista Evidenciação Contábil & Finanças Volume 2015 ; 2015 ; >
 
   }
 
@@ -779,6 +784,7 @@
       au < released ; 2012 ; 10 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 12 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 13 ; Revista de Iniciação Científica em Odontologia - RevICO Volume 2015 ; 2015 ; >
 
   }
 

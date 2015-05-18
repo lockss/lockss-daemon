@@ -128,11 +128,12 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = conjuntura
 
-      au < ready ;2011 ; 1 ; Conjuntura Internacional Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 2 ; Conjuntura Internacional Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 3 ; Conjuntura Internacional Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 4 ; Conjuntura Internacional Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 5 ; Conjuntura Internacional Volume 2015 ; 2015 ; >
+      au < manifest ; 2010 ; 7 ; Conjuntura Internacional Volume 2010 ; 2010 ; >
+      au < ready ;2011 ; 8 ; Conjuntura Internacional Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Conjuntura Internacional Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Conjuntura Internacional Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 11 ; Conjuntura Internacional Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 12 ; Conjuntura Internacional Volume 2015 ; 2015 ; >
 
   }
 
@@ -221,19 +222,20 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = economiaegestao
 
-      au < ready ;2003 ; 1 ; Revista Economia & Gestão Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 2 ; Revista Economia & Gestão Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 3 ; Revista Economia & Gestão Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 4 ; Revista Economia & Gestão Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 5 ; Revista Economia & Gestão Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 6 ; Revista Economia & Gestão Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 7 ; Revista Economia & Gestão Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 8 ; Revista Economia & Gestão Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 9 ; Revista Economia & Gestão Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 10 ; Revista Economia & Gestão Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 12 ; Revista Economia & Gestão Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 12 ; Revista Economia & Gestão Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 13 ; Revista Economia & Gestão Volume 2015 ; 2015 ; >
+      au < manifest ; 2002 ; 2 ; Revista Economia & Gestão Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 3 ; Revista Economia & Gestão Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 4 ; Revista Economia & Gestão Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 5 ; Revista Economia & Gestão Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 6 ; Revista Economia & Gestão Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 7 ; Revista Economia & Gestão Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 8 ; Revista Economia & Gestão Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Revista Economia & Gestão Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Revista Economia & Gestão Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Revista Economia & Gestão Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Revista Economia & Gestão Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 13 ; Revista Economia & Gestão Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 14 ; Revista Economia & Gestão Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 15 ; Revista Economia & Gestão Volume 2015 ; 2015 ; >
 
   }
 

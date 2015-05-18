@@ -403,6 +403,7 @@
       au < released ; 2012 ; 7 ; Revista do Direito Público Volume 7 ; 2012 ; >
       au < released ; 2013 ; 8 ; Revista do Direito Público Volume 8 ; 2013 ; >
       au < ready ; 2014 ; 9 ; Revista do Direito Público Volume 9 ; 2014 ; >
+      au < manifest ; 2015 ; 10 ; Revista do Direito Público Volume 10 ; 2015 ; >
 
   }
 
@@ -602,6 +603,7 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = seminasoc
 
+      au < manifest ; 1989 ; 10 ; Semina: Ciências Sociais e Humanas Volume 10 ; 1989 ; >
       au < manifest ; 1990 ; 11 ; Semina: Ciências Sociais e Humanas Volume 11 ; 1990 ; >
       au < manifest ; 1991 ; 12 ; Semina: Ciências Sociais e Humanas Volume 12 ; 1991 ; >
       au < released ; 1992 ; 13 ; Semina: Ciências Sociais e Humanas Volume 13 ; 1992 ; >

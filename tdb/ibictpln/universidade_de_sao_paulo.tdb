@@ -17,12 +17,13 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = criacaoecritica
 
-    au < ready ; 2009 ; 1 ; Revista Criação & Crítica Volume 1 ; 2009 >
-    au < ready ; 2010 ; 2 ; Revista Criação & Crítica Volume 2 ; 2010 >
-    au < released ; 2011 ; 3 ; Revista Criação & Crítica Volume 3 ; 2011 >
-    au < released ; 2012 ; 4 ; Revista Criação & Crítica Volume 4 ; 2012 >
-    au < ready ; 2013 ; 5 ; Revista Criação & Crítica Volume 5 ; 2013 >
-    au < ready ; 2014 ; 6 ; Revista Criação & Crítica Volume 6 ; 2014 >
+    au < manifest ; 2008 ; 2008 ; Revista Criação & Crítica Volume 2008 ; 2008 >
+    au < ready ; 2009 ; 2009 ; Revista Criação & Crítica Volume 2009 ; 2009 >
+    au < ready ; 2010 ; 2010 ; Revista Criação & Crítica Volume 2010 ; 2010 >
+    au < released ; 2011 ; 2011 ; Revista Criação & Crítica Volume 2011 ; 2011 >
+    au < released ; 2012 ; 2012 ; Revista Criação & Crítica Volume 2012 ; 2012 >
+    au < ready ; 2013 ; 2013 ; Revista Criação & Crítica Volume 2013 ; 2013 >
+    au < ready ; 2014 ; 2014 ; Revista Criação & Crítica Volume 2014 ; 2014 >
   
   }
 
@@ -37,12 +38,14 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
-    au < ready ; 2009 ; 1 ; Revista de História Volume 1 ; 2009 >
-    au < ready ; 2010 ; 2 ; Revista de História Volume 2 ; 2010 >
-    au < released ; 2011 ; 3 ; Revista de História Volume 3 ; 2011 >
-    au < released ; 2012 ; 4 ; Revista de História Volume 4 ; 2012 >
-    au < ready ; 2013 ; 5 ; Revista de História Volume 5 ; 2013 >
-    au < ready ; 2014 ; 6 ; Revista de História Volume 6 ; 2014 >
+    au < manifest ; 2008 ; 2008 ; Revista de História Volume 2008 ; 2008 >
+    au < ready ; 2009 ; 2009 ; Revista de História Volume 2009 ; 2009 >
+    au < ready ; 2010 ; 2010 ; Revista de História Volume 2010 ; 2010 >
+    au < released ; 2011 ; 2011 ; Revista de História Volume 2011 ; 2011 >
+    au < released ; 2012 ; 2012 ; Revista de História Volume 2012 ; 2012 >
+    au < ready ; 2013 ; 2013 ; Revista de História Volume 2013 ; 2013 >
+    au < ready ; 2014 ; 2014 ; Revista de História Volume 2014 ; 2014 >
+    au < manifest ; 2015 ; 2015 ; Revista de História Volume 2015 ; 2015 >
 
   }
 
