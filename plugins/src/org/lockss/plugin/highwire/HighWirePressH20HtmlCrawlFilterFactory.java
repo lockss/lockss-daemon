@@ -43,9 +43,6 @@ import org.lockss.plugin.*;
 public class HighWirePressH20HtmlCrawlFilterFactory implements FilterFactory {
   
   protected static NodeFilter[] baseHWFilters = new NodeFilter[] {
-    // Do not crawl next/prev links
-    HtmlNodeFilters.tagWithAttribute("link", "rel", "prev"),
-    HtmlNodeFilters.tagWithAttribute("link", "rel", "next"),
     // Do not crawl header or footer for links
     new TagNameFilter("header"),
     new TagNameFilter("footer"),

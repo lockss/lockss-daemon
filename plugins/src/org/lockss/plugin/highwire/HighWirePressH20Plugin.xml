@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>104</string>
+    <string>105</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>29</string>
+        <string>30</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -131,6 +131,7 @@
       <string>1,"^%s[^?]*DC(Supplemental|[0-9])", base_url</string>
       <string>2,"^%shighwire/filestream/powerpoint/", base_url</string>
       <string>1,"^%shighwire/filestream/", base_url</string>
+      <!-- future crawl rule for eolj string>1, "%slockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", base_url, volume_name</string -->
     </list>
   </entry>
   <entry>

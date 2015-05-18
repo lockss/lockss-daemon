@@ -94,9 +94,6 @@ public class TestHighWirePressH20HtmlCrawlFilterFactory extends LockssTestCase {
   private static final String withoutRefList = "<div>B</div>";
   
   private static final String withNavArticle = "" +
-      "<head>\n" +
-      "<link rel=\"prev\" href=\"/content/130/Suppl_2/A11492.short\">" +
-      "</head>\n" +
       "<div id=\"col-x\">" +
       "<div class=\"article-nav sidebar-nav\">\n" + 
       "<a class=\"previous\" title=\"Previous article\" " +
@@ -107,7 +104,6 @@ public class TestHighWirePressH20HtmlCrawlFilterFactory extends LockssTestCase {
       "<span class=\"toc-link\">\n" + 
       "</span></div></div>";
   private static final String withoutNavArticle = // div attributes are removed
-      "<head>\n</head>\n" +
       "<div id=\"col-x\"></div>";
   
   private static final String col3Html =
