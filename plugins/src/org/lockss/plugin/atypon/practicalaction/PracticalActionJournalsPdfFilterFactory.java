@@ -41,11 +41,11 @@ import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
  * left side of the page.
  * Example: hhttp://www.wageningenacademic.com/doi/pdf/10.3920/JCNS2014.0233
  */
-public class PracticalActionAtyponPdfFilterFactory 
+public class PracticalActionJournalsPdfFilterFactory 
   extends BaseAtyponScrapingPdfFilterFactory {
   // watermark:
   // http://www.developmentbookshelf.com/doi/pdf/10.3362/2046-1887.2014.004 - Saturday, May 16, 2015 9:28:48 PM - Stanford University Libraries IP Address:171.66.236.16
-  public static final Pattern DOWNLOAD_PATTERN = Pattern.compile("^http://www\\.developmentbookshelf\\.com.*IP Address:\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}");
+  public static final Pattern DOWNLOAD_PATTERN = Pattern.compile("^https?://.*IP Address: *\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}");
 
   @Override
   public boolean doRemoveDownloadStrip() {
