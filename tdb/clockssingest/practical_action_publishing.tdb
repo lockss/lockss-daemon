@@ -8,7 +8,7 @@
   >
 
 
-  plugin = org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionAtyponPlugin
+  plugin = org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionJournalsPlugin
   param[base_url] = http://www.developmentbookshelf.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
 
