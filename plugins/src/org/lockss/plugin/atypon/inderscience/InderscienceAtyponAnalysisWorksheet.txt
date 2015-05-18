@@ -272,6 +272,12 @@ For an example, look at
 
 Note that if you need to use the scraping filter, you also need to be sure that the size information (eg "PDF Plus (237 KB)") on the TOC and possibly article page must be hashed as well. BaseAtypon probably handles this, but check.
 
+* downloaded pdfs in 2 different days, and they are identical from "diff -au"
+http://www.inderscienceonline.com/doi/pdf/10.1504/AJAAF.2014.065176
+http://www.inderscienceonline.com/doi/pdf/10.1504/AJESD.2013.053053
+
+
+
 -------------------------DONE-----------------------------
 
 And with that, your plugin is probably 95% of the way done.  
