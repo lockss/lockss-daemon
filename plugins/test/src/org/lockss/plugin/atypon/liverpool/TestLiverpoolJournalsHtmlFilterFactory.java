@@ -46,7 +46,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
-public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
+public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
   
   FilterFactory variantFact;
   ArchivalUnit lau;
@@ -55,7 +55,7 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
   PluginManager pluginMgr;
         
   private static final String PLUGIN_ID = 
-      "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolAtyponPlugin";
+      "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolJournalsPlugin";
   
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
@@ -299,9 +299,9 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
   }
   
   // Variant to test with Crawl Filter
-  public static class TestCrawl extends TestLiverpoolAtyponHtmlFilterFactory {
+  public static class TestCrawl extends TestLiverpoolJournalsHtmlFilterFactory {
     public void testFiltering() throws Exception {
-      variantFact = new LiverpoolAtyponHtmlCrawlFilterFactory();
+      variantFact = new LiverpoolJournalsHtmlCrawlFilterFactory();
       doFilterTest(lau, variantFact, withBreadcrumbs, filteredStr); 
       doFilterTest(lau, variantFact, withBodyEmphasis, filteredStr); 
       doFilterTest(lau, variantFact, withAriaRelevant, filteredStr); 
@@ -312,9 +312,9 @@ public class TestLiverpoolAtyponHtmlFilterFactory extends LockssTestCase {
   }
 
   // Variant to test with Hash Filter
-  public static class TestHash extends TestLiverpoolAtyponHtmlFilterFactory {   
+  public static class TestHash extends TestLiverpoolJournalsHtmlFilterFactory {   
     public void testFiltering() throws Exception {
-      variantFact = new LiverpoolAtyponHtmlHashFilterFactory();
+      variantFact = new LiverpoolJournalsHtmlHashFilterFactory();
       doFilterTest(lau, variantFact, withPublicationToolContainer, 
                    publicationToolContainerFilteredStr);         
       doFilterTest(lau, variantFact, withArticleMetaDrop,
