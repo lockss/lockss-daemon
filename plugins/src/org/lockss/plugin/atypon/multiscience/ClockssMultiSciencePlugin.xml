@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.multiscience.ClockssMultiScienceAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.multiscience.ClockssMultiSciencePlugin</string>
   </entry>
   <entry>
   <string>plugin_version</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.multiscience.MultiScienceAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.multiscience.MultiSciencePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
