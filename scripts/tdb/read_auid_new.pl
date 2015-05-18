@@ -446,8 +446,9 @@ while (my $line = <>) {
            ($plugin eq "LiverpoolAtyponPlugin") || 
            ($plugin eq "ManeyAtyponPlugin") || 
            ($plugin eq "MarkAllenPlugin") || 
-           ($plugin eq "MetaPressPlugin") || 
+           ($plugin eq "MultiScienceAtyponPlugin") || 
            ($plugin eq "MassachusettsMedicalSocietyPlugin") || 
+           ($plugin eq "PracticalActionAtyponPlugin") || 
            ($plugin eq "SiamPlugin")) {
       $url = sprintf("%slockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -492,10 +493,12 @@ while (my $line = <>) {
            ($plugin eq "ClockssLiverpoolAtyponPlugin") || 
            ($plugin eq "ClockssManeyAtyponPlugin") || 
            ($plugin eq "ClockssMarkAllenPlugin") || 
-           ($plugin eq "ClockssMetaPressPlugin") || 
+           ($plugin eq "ClockssMultiScienceAtyponPlugin") || 
            ($plugin eq "ClockssNRCResearchPressPlugin") || 
+           ($plugin eq "ClockssPracticalActionAtyponPlugin") || 
            ($plugin eq "ClockssSEGPlugin") || 
-           ($plugin eq "ClockssSiamPlugin")) {
+           ($plugin eq "ClockssSiamPlugin")) ||
+           ($plugin eq "ClockssWageningenAtyponPlugin")) {
       $url = sprintf("%sclockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
