@@ -46,7 +46,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
-public class TestWageningenAtyponHtmlFilterFactory extends LockssTestCase {
+public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
   
   FilterFactory variantFact;
   ArchivalUnit wau;
@@ -287,9 +287,9 @@ public class TestWageningenAtyponHtmlFilterFactory extends LockssTestCase {
   
   // Variant to test with Crawl Filter
   public static class TestCrawl 
-    extends TestWageningenAtyponHtmlFilterFactory {
+    extends TestWageningenJournalsHtmlFilterFactory {
     public void testFiltering() throws Exception {
-      variantFact = new WageningenAtyponHtmlCrawlFilterFactory();
+      variantFact = new WageningenJournalsHtmlCrawlFilterFactory();
       doFilterTest(wau, variantFact, withBreadcrumbs, filteredStr); 
       doFilterTest(wau, variantFact, withAriaRelevant, filteredStr); 
       doFilterTest(wau, variantFact, withRelatedContent, filteredStr);      
@@ -300,9 +300,9 @@ public class TestWageningenAtyponHtmlFilterFactory extends LockssTestCase {
 
   // Variant to test with Hash Filter
   public static class TestHash 
-    extends TestWageningenAtyponHtmlFilterFactory {   
+    extends TestWageningenJournalsHtmlFilterFactory {   
     public void testFiltering() throws Exception {
-      variantFact = new WageningenAtyponHtmlHashFilterFactory();
+      variantFact = new WageningenJournalsHtmlHashFilterFactory();
       doFilterTest(wau, variantFact, withPublicationToolContainer, 
                    publicationToolContainerFilteredStr);         
       doFilterTest(wau, variantFact, withArticleMetaDrop,
