@@ -40,6 +40,10 @@
     <string>org.lockss.plugin.atypon.wageningen.WageningenAtyponHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.wageningen.WageningenAtyponPdfFilterFactory</string>
+  </entry>  
+  <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
     <org.lockss.util.Default />
