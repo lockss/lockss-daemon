@@ -46,7 +46,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
-public class TestMultiScienceAtyponHtmlFilterFactory extends LockssTestCase {
+public class TestMultiScienceHtmlFilterFactory extends LockssTestCase {
   
   FilterFactory variantFact;
   ArchivalUnit mau;
@@ -319,9 +319,9 @@ public class TestMultiScienceAtyponHtmlFilterFactory extends LockssTestCase {
   
   // Variant to test with Crawl Filter
   public static class TestCrawl 
-    extends TestMultiScienceAtyponHtmlFilterFactory {
+    extends TestMultiScienceHtmlFilterFactory {
     public void testFiltering() throws Exception {
-      variantFact = new MultiScienceAtyponHtmlCrawlFilterFactory();
+      variantFact = new MultiScienceHtmlCrawlFilterFactory();
       doFilterTest(mau, variantFact, withBreadcrumbs, filteredStr); 
       doFilterTest(mau, variantFact, withBodyEmphasis, filteredStr); 
       doFilterTest(mau, variantFact, withAriaRelevant, filteredStr); 
@@ -333,9 +333,9 @@ public class TestMultiScienceAtyponHtmlFilterFactory extends LockssTestCase {
 
   // Variant to test with Hash Filter
   public static class TestHash 
-    extends TestMultiScienceAtyponHtmlFilterFactory {   
+    extends TestMultiScienceHtmlFilterFactory {   
     public void testFiltering() throws Exception {
-      variantFact = new MultiScienceAtyponHtmlHashFilterFactory();
+      variantFact = new MultiScienceHtmlHashFilterFactory();
       doFilterTest(mau, variantFact, withPublicationToolContainer, 
                    publicationToolContainerFilteredStr);         
       doFilterTest(mau, variantFact, withArticleMetaDrop,
