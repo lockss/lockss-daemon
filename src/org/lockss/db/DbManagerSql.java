@@ -7316,19 +7316,23 @@ public class DbManagerSql {
 	tdbAu = au.getTdbAu();
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
 
-	// Get the provider LOCKSS identifier.
-	// TODO: Replace with tdbAu.getProvider().getLid() when available.
-	providerLid = null;
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+	if (tdbAu != null) {
+	  // Get the provider LOCKSS identifier.
+	  // TODO: Replace with tdbAu.getProvider().getLid() when available.
+	  providerLid = null;
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
 
-	// Get the provider name.
-	providerName = tdbAu.getProviderName();
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "providerName = '" + providerName + "'");
+	  // Get the provider name.
+	  providerName = tdbAu.getProviderName();
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerName = '" + providerName + "'");
 
-	// Determine the provider.
-	providerSeq = findOrCreateProvider(conn, providerLid, providerName);
+	  // Determine the provider.
+	  providerSeq = findOrCreateProvider(conn, providerLid, providerName);
+	} else {
+	  if (log.isDebug()) log.debug("Cannot find tdbAU for au = " + au);
+	}
       } else {
 	if (log.isDebug()) log.debug("Cannot find archival unit for pluginId = "
 	    + pluginId + ", auKey = " + auKey);
