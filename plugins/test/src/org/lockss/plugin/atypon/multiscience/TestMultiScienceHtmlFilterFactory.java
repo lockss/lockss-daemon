@@ -55,7 +55,7 @@ public class TestMultiScienceHtmlFilterFactory extends LockssTestCase {
   PluginManager pluginMgr;
         
   private static final String PLUGIN_ID = 
-      "org.lockss.plugin.atypon.multiscience.ClockssMultiScienceAtyponPlugin";
+      "org.lockss.plugin.atypon.multiscience.ClockssMultiSciencePlugin";
   
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
