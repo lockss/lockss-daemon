@@ -46,7 +46,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
-public class TestPracticalActionAtyponHtmlFilterFactory extends LockssTestCase {
+public class TestPracticalActionJournalsHtmlFilterFactory extends LockssTestCase {
   
   FilterFactory variantFact;
   ArchivalUnit pau;
@@ -55,7 +55,7 @@ public class TestPracticalActionAtyponHtmlFilterFactory extends LockssTestCase {
   PluginManager pluginMgr;
         
   private static final String PLUGIN_ID = 
-      "org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionAtyponPlugin";
+      "org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionJournalsPlugin";
   
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
@@ -266,9 +266,9 @@ public class TestPracticalActionAtyponHtmlFilterFactory extends LockssTestCase {
   
   // Variant to test with Crawl Filter
   public static class TestCrawl 
-    extends TestPracticalActionAtyponHtmlFilterFactory {
+    extends TestPracticalActionJournalsHtmlFilterFactory {
     public void testFiltering() throws Exception {
-      variantFact = new PracticalActionAtyponHtmlCrawlFilterFactory();
+      variantFact = new PracticalActionJournalsHtmlCrawlFilterFactory();
       doFilterTest(pau, variantFact, withBreadcrumbs, filteredStr); 
       doFilterTest(pau, variantFact, withBodyEmphasis, filteredStr); 
       doFilterTest(pau, variantFact, withAriaRelevant, filteredStr); 
@@ -278,9 +278,9 @@ public class TestPracticalActionAtyponHtmlFilterFactory extends LockssTestCase {
 
   // Variant to test with Hash Filter
   public static class TestHash 
-    extends TestPracticalActionAtyponHtmlFilterFactory {   
+    extends TestPracticalActionJournalsHtmlFilterFactory {   
     public void testFiltering() throws Exception {
-      variantFact = new PracticalActionAtyponHtmlHashFilterFactory();
+      variantFact = new PracticalActionJournalsHtmlHashFilterFactory();
       doFilterTest(pau, variantFact, withPublicationToolContainer, 
                    publicationToolContainerFilteredStr);         
       doFilterTest(pau, variantFact, withArticleMetaDrop,
