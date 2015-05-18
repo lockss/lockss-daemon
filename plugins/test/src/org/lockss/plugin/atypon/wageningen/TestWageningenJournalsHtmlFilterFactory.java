@@ -55,7 +55,7 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
   PluginManager pluginMgr;
         
   private static final String PLUGIN_ID = 
-      "org.lockss.plugin.atypon.wageningen.ClockssWageningenAtyponPlugin";
+      "org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin";
   
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
