@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -33,15 +33,15 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.atypon.practicalaction.PracticalActionAtyponHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.atypon.practicalaction.PracticalActionJournalsHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.practicalaction.PracticalActionAtyponHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.atypon.practicalaction.PracticalActionJournalsHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.atypon.practicalaction.PracticalActionAtyponPdfFilterFactory</string>
+    <string>org.lockss.plugin.atypon.practicalaction.PracticalActionJournalsPdfFilterFactory</string>
   </entry>  
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
