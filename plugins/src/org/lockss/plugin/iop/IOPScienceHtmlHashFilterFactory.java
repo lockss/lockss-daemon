@@ -74,6 +74,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "header-content"), // (old)
         HtmlNodeFilters.tagWithAttribute("div", "id", "banner"), // (old)
         // Right column
+        // missed filter maybe due to malformed html?? <li xmlns:job="http://brightrecruits.com/ns/job/">
+        HtmlNodeFilters.tagWithAttributeRegex("li", "xmlns:job", "."),
         HtmlNodeFilters.tagWithAttribute("div", "id", "rightCol"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"), // (now within)
         HtmlNodeFilters.tagWithAttribute("div", "id", "tacticalBanners"), // (now within)
@@ -147,6 +149,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "free-article"),
         // citation link was always not present, and display link is not content
         HtmlNodeFilters.tagWithAttributeRegex("a", "id", "DisplayLink"),
+        // Open Access can change http://iopscience.iop.org/1674-1137/38/6/063103 (was there/not now)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "articleOALicense"),
     };
     
     InputStream filtered = new HtmlFilterInputStream(in,
