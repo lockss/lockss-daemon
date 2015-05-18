@@ -41,11 +41,11 @@ import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
  * left side of the page.
  * Example: hhttp://www.wageningenacademic.com/doi/pdf/10.3920/JCNS2014.0233
  */
-public class WageningenAtyponPdfFilterFactory 
+public class WageningenJournalsPdfFilterFactory 
   extends BaseAtyponScrapingPdfFilterFactory {
   // watermark:
   // http://www.wageningenacademic.com/doi/pdf/10.3920/BM2012.0069 - Wednesday, May 13, 2015 11:31:47 AM - Stanford University Libraries IP Address:171.66.236.234
-  public static final Pattern DOWNLOAD_PATTERN = Pattern.compile("^http://www\\.wageningenacademic\\.com.*IP Address:\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}");
+  public static final Pattern DOWNLOAD_PATTERN = Pattern.compile("^https?://.*IP Address: *\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}");
 
   @Override
   public boolean doRemoveDownloadStrip() {
