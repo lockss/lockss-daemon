@@ -46,7 +46,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
-public class TestInderscienceAtyponHtmlFilterFactory extends LockssTestCase {
+public class TestInderscienceHtmlFilterFactory extends LockssTestCase {
   
   FilterFactory variantFact;
   ArchivalUnit iau;
@@ -55,7 +55,7 @@ public class TestInderscienceAtyponHtmlFilterFactory extends LockssTestCase {
   PluginManager pluginMgr;
         
   private static final String PLUGIN_ID = 
-      "org.lockss.plugin.atypon.inderscience.ClockssInderscienceAtyponPlugin";
+      "org.lockss.plugin.atypon.inderscience.ClockssIndersciencePlugin";
   
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
@@ -339,9 +339,9 @@ public class TestInderscienceAtyponHtmlFilterFactory extends LockssTestCase {
   
   // Variant to test with Crawl Filter
   public static class TestCrawl 
-    extends TestInderscienceAtyponHtmlFilterFactory {
+    extends TestInderscienceHtmlFilterFactory {
     public void testFiltering() throws Exception {
-      variantFact = new InderscienceAtyponHtmlCrawlFilterFactory();
+      variantFact = new InderscienceHtmlCrawlFilterFactory();
       doFilterTest(iau, variantFact, withBreadcrumbs, filteredStr); 
       doFilterTest(iau, variantFact, withBodyEmphasis, filteredStr); 
       doFilterTest(iau, variantFact, withAriaRelevant, filteredStr); 
@@ -353,9 +353,9 @@ public class TestInderscienceAtyponHtmlFilterFactory extends LockssTestCase {
 
   // Variant to test with Hash Filter
   public static class TestHash 
-    extends TestInderscienceAtyponHtmlFilterFactory {   
+    extends TestInderscienceHtmlFilterFactory {   
     public void testFiltering() throws Exception {
-      variantFact = new InderscienceAtyponHtmlHashFilterFactory();
+      variantFact = new InderscienceHtmlHashFilterFactory();
       doFilterTest(iau, variantFact, withPublicationToolContainer, 
                    publicationToolContainerFilteredStr);         
       doFilterTest(iau, variantFact, withArticleMetaDrop,
