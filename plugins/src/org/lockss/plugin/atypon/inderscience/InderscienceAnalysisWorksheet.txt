@@ -272,11 +272,12 @@ For an example, look at
 
 Note that if you need to use the scraping filter, you also need to be sure that the size information (eg "PDF Plus (237 KB)") on the TOC and possibly article page must be hashed as well. BaseAtypon probably handles this, but check.
 
-* downloaded pdfs in 2 different days, and they are identical from "diff -au"
+* downloaded pdfs from 3 different journals in different days and they
+are idendical from "diff -au"
 http://www.inderscienceonline.com/doi/pdf/10.1504/AJAAF.2014.065176
 http://www.inderscienceonline.com/doi/pdf/10.1504/AJESD.2013.053053
-
-
+http://www.inderscienceonline.com/doi/pdf/10.1504/AAJFA.2014.059501
+so no pdf filter needed.
 
 -------------------------DONE-----------------------------
 
