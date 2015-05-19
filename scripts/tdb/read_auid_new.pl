@@ -441,14 +441,14 @@ while (my $line = <>) {
            ($plugin eq "EmeraldGroupPlugin") || 
            ($plugin eq "EndocrineSocietyPlugin") || 
            ($plugin eq "FutureSciencePlugin") || 
-           ($plugin eq "InderscienceAtyponPlugin") || 
+           ($plugin eq "IndersciencePlugin") || 
            ($plugin eq "JstorPlugin") || 
-           ($plugin eq "LiverpoolAtyponPlugin") || 
+           ($plugin eq "LiverpoolJournalsPlugin") || 
            ($plugin eq "ManeyAtyponPlugin") || 
            ($plugin eq "MarkAllenPlugin") || 
-           ($plugin eq "MultiScienceAtyponPlugin") || 
+           ($plugin eq "MultiSciencePlugin") || 
            ($plugin eq "MassachusettsMedicalSocietyPlugin") || 
-           ($plugin eq "PracticalActionAtyponPlugin") || 
+           ($plugin eq "PracticalActionPlugin") || 
            ($plugin eq "SiamPlugin")) {
       $url = sprintf("%slockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -488,17 +488,17 @@ while (my $line = <>) {
            ($plugin eq "ClockssBIRAtyponPlugin") || 
            ($plugin eq "ClockssFutureSciencePlugin") || 
            ($plugin eq "ClockssEndocrineSocietyPlugin") || 
-           ($plugin eq "ClockssInderscienceAtyponPlugin") || 
+           ($plugin eq "ClockssIndersciencePlugin") || 
            ($plugin eq "ClockssJstorPlugin") || 
-           ($plugin eq "ClockssLiverpoolAtyponPlugin") || 
+           ($plugin eq "ClockssLiverpoolJournalsPlugin") || 
            ($plugin eq "ClockssManeyAtyponPlugin") || 
            ($plugin eq "ClockssMarkAllenPlugin") || 
-           ($plugin eq "ClockssMultiScienceAtyponPlugin") || 
+           ($plugin eq "ClockssMultiSciencePlugin") || 
            ($plugin eq "ClockssNRCResearchPressPlugin") || 
-           ($plugin eq "ClockssPracticalActionAtyponPlugin") || 
+           ($plugin eq "ClockssPracticalActionPlugin") || 
            ($plugin eq "ClockssSEGPlugin") || 
-           ($plugin eq "ClockssSiamPlugin")) ||
-           ($plugin eq "ClockssWageningenAtyponPlugin")) {
+           ($plugin eq "ClockssSiamPlugin") ||
+           ($plugin eq "ClockssWageningenPlugin")) {
       $url = sprintf("%sclockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
