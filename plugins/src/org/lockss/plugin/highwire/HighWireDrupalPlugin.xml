@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -233,10 +233,10 @@
   <entry>
     <!-- APS & OUP use cdn -->
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>/(css|js)_[^/]+[.](css|js)$</string>
+    <string>/((css|js)_[^/]+[.](css|js)$|panels_ajax_tab/)</string>
   </entry>
   <entry>
     <string>au_exclude_urls_from_poll_results_pattern</string>
-    <string>/(css|js)_[^/]+[.](css|js)$</string>
+    <string>/((css|js)_[^/]+[.](css|js)$|panels_ajax_tab/)</string>
   </entry>
 </map>
