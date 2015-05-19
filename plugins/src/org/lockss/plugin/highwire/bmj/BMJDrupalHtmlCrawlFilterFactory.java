@@ -49,6 +49,7 @@ public class BMJDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilt
   protected static NodeFilter[] filters = new NodeFilter[] {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
   };
   
   @Override
