@@ -77,9 +77,9 @@ public class MetapressPdfFilterFactory implements FilterFactory {
    * Filter factory for each different transform because some publisher transforms are
    * simple transforms and some not.
    */
-  private class PracticalActionPdfFilterFactory extends SimplePdfFilterFactory {
+  protected static class PracticalActionPdfFilterFactory extends SimplePdfFilterFactory {
     
-    protected class MetaPressStateMachine extends PdfTokenStreamStateMachine {
+    protected static class MetaPressStateMachine extends PdfTokenStreamStateMachine {
       
       protected static final String DELIVERED_BY = "Delivered by ";
       protected static final String IP_ADDRESS = "IP Address: ";
@@ -101,18 +101,12 @@ public class MetapressPdfFilterFactory implements FilterFactory {
         if (isShowTextStartsWith(DELIVERED_BY)) {
           setState(2);
         }
-        else if (isEndTextObject()) {
-          setState(0);
-        }
       }
 
       @Override
       public void state2() throws PdfException {
         if (isShowTextStartsWith(IP_ADDRESS)) {
           setState(3);
-        }
-        else if (isEndTextObject()) {
-          setState(0);
         }
       }
 
