@@ -47,7 +47,7 @@
       eissn =  1937-9145
     >
     
-      plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
+      plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
       param[base_url] = http://stke.sciencemag.org/
 
       au < exists ; exists ; 2008 ; Science Signaling Volume 1 ; 1 >
@@ -89,7 +89,7 @@
       eissn = 2375-2548
     >
     
-      plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
+      plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
       param[base_url] = http://advances.sciencemag.org/
 
       au < exists ; exists ; 2015 ; Science Advances Volume 1 ; 1 >
