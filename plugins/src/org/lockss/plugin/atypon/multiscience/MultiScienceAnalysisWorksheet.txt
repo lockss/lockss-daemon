@@ -254,13 +254,12 @@ For an example, look at
 
 Note that if you need to use the scraping filter, you also need to be sure that the size information (eg "PDF Plus (237 KB)") on the TOC and possibly article page must be hashed as well. BaseAtypon probably handles this, but check.
  
-* downloaded "Control of a three-dimensional blunt body
-wake using low and high frequency pulsed
-jets" - http://multi-science.atypon.com/doi/pdf/10.1260/1756-8250.6.1.61
-- need to use BaseAtyponScrapingPdfFilterFactory
-- tried the following but still got differences:
-  . BaseAtyponPdfFilterFactory - doBaseTransform()
-  . BaseAtyponPdfFilterFactory - doAllBaseTransform() - doRemoveAllDocumentInfo
+* * downloaded pdfs from 3 different journals in different days and they
+are idendical from "diff -au"
+http://multi-science.atypon.com/doi/pdf/10.1260/1756-8250.6.1.61
+http://multi-science.atypon.com/doi/pdf/10.1260/1351-010X.20.1.1
+http://multi-science.atypon.com/doi/pdf/10.1260/1351-010X.20.1.1
+so no pdf filter needed.
   
 -------------------------DONE-----------------------------
 
