@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -198,6 +198,14 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "</html>9";
   private static final String withoutComments = "A<html> </html>9";
   
+  private static final String withStats = "A<html> " +
+      "  <div class=\"panel-pane pane-highwire-stats\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    No Stats for this article.  </div>\n" + 
+      "  </div>\n" + 
+      "</html>9";
+  private static final String withoutStats = "A<html> </html>9";
+  
   
   @Override
   public void testFiltering() throws Exception {
@@ -216,6 +224,7 @@ public class TestAPSHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
     assertFilterToString(withToolTip, withoutToolTip);
     assertFilterToString(withSidebar, withoutSidebar);
     assertFilterToString(withComments, withoutComments);
+    assertFilterToString(withStats, withoutStats);
     // HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
     
   }
