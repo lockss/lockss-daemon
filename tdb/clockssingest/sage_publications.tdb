@@ -14285,7 +14285,7 @@
       au < exists ; exists ; 2012 ; Illness, Crisis & Loss Volume 20 ; 20 ; >
       au < exists ; exists ; 2013 ; Illness, Crisis & Loss Volume 21 ; 21 ; >
       au < exists ; exists ; 2014 ; Illness, Crisis & Loss Volume 22 ; 22 ; >
-      au < exists ; exists ; 2015 ; Illness, Crisis & Loss Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2015 ; Illness, Crisis & Loss Volume 23 ; 23 ; >
 
   }
 
@@ -19956,7 +19956,7 @@
       param[base_url] = http://jcv.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Journal of Creating Value Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Journal of Creating Value Volume 1 ; 1 ; >
 
   }
 
@@ -25192,7 +25192,7 @@
       au < finished ; frozen ; 2012 ; Journal of Research in Music Education Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in Music Education Volume 61 ; 61 ; >
       au < testing ; exists ; 2014 ; Journal of Research in Music Education Volume 62 ; 62 ; >
-      au < expected ; exists ; 2015 ; Journal of Research in Music Education Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2015 ; Journal of Research in Music Education Volume 63 ; 63 ; >
 
     }
 
@@ -34705,7 +34705,7 @@
       au < finished ; frozen ; 2012 ; Research Ethics Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Research Ethics Volume 9 ; 9 ; >
       au < manifest ; exists ; 2014 ; Research Ethics Volume 10 ; 10 ; >
-      au < expected ; exists ; 2015 ; Research Ethics Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2015 ; Research Ethics Volume 11 ; 11 ; >
 
     }
 
@@ -39590,7 +39590,7 @@
       au < finished ; crawling ; 2012 ; Topics in Early Childhood Special Education Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; Topics in Early Childhood Special Education Volume 33 ; 33 ; >
       au < manifest ; exists ; 2014 ; Topics in Early Childhood Special Education Volume 34 ; 34 ; >
-      au < expected ; exists ; 2015 ; Topics in Early Childhood Special Education Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2015 ; Topics in Early Childhood Special Education Volume 35 ; 35 ; >
 
     }
 
