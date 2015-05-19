@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   comment[0] = all moving to Drupal by June 1 2015
     
@@ -18,19 +17,23 @@
       eissn =  1095-9203
     >
     
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://www.sciencemag.org/
 
-      au < exists ; exists ; 2012 ; Science Volume 338 ; 338 >
-      au < exists ; exists ; 2013 ; Science Volume 339 ; 339 >
-      au < exists ; exists ; 2013 ; Science Volume 340 ; 340 >
-      au < exists ; exists ; 2013 ; Science Volume 341 ; 341 >
-      au < exists ; exists ; 2013 ; Science Volume 342 ; 342 >
-      au < exists ; exists ; 2014 ; Science Volume 343 ; 343 >
-      au < exists ; exists ; 2014 ; Science Volume 344 ; 344 >
-      au < exists ; exists ; 2014 ; Science Volume 345 ; 345 >
-      au < exists ; exists ; 2014 ; Science Volume 346 ; 346 >
-      au < exists ; exists ; 2015 ; Science Volume 347 ; 347 >
-      au < exists ; exists ; 2015 ; Science Volume 348 ; 348 >
+      au < manifest ; exists ; 2012 ; Science Volume 335 ; 335 >
+      au < manifest ; exists ; 2012 ; Science Volume 336 ; 336 >
+      au < manifest ; exists ; 2012 ; Science Volume 337 ; 337 >
+      au < manifest ; exists ; 2012 ; Science Volume 338 ; 338 >
+      au < manifest ; exists ; 2013 ; Science Volume 339 ; 339 >
+      au < manifest ; exists ; 2013 ; Science Volume 340 ; 340 >
+      au < manifest ; exists ; 2013 ; Science Volume 341 ; 341 >
+      au < manifest ; exists ; 2013 ; Science Volume 342 ; 342 >
+      au < manifest ; exists ; 2014 ; Science Volume 343 ; 343 >
+      au < manifest ; exists ; 2014 ; Science Volume 344 ; 344 >
+      au < manifest ; exists ; 2014 ; Science Volume 345 ; 345 >
+      au < manifest ; exists ; 2014 ; Science Volume 346 ; 346 >
+      au < manifest ; exists ; 2015 ; Science Volume 347 ; 347 >
+      au < manifest ; exists ; 2015 ; Science Volume 348 ; 348 >
       au < expected ; exists ; 2015 ; Science Volume 349 ; 349 >
       au < expected ; exists ; 2015 ; Science Volume 350 ; 350 >
 
@@ -44,8 +47,14 @@
       eissn =  1937-9145
     >
     
+      plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
       param[base_url] = http://stke.sciencemag.org/
 
+      au < exists ; exists ; 2008 ; Science Signaling Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Science Signaling Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Science Signaling Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Science Signaling Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Science Signaling Volume 5 ; 5 >
       au < exists ; exists ; 2013 ; Science Signaling Volume 6 ; 6 >
       au < exists ; exists ; 2014 ; Science Signaling Volume 7 ; 7 >
       au < exists ; exists ; 2015 ; Science Signaling Volume 8 ; 8 >
@@ -60,15 +69,16 @@
       eissn = 1946-6242
     >
     
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://stm.sciencemag.org/
 
-      au < exists ; exists ; 2009 ; Science Translational Medicine Volume 1 ; 1 >
-      au < exists ; exists ; 2010 ; Science Translational Medicine Volume 2 ; 2 >
-      au < exists ; exists ; 2011 ; Science Translational Medicine Volume 3 ; 3 >
-      au < exists ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 >
-      au < exists ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 >
-      au < exists ; exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 >
-      au < exists ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 >
+      au < manifest ; exists ; 2009 ; Science Translational Medicine Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Science Translational Medicine Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Science Translational Medicine Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 >
+      au < manifest ; exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 >
+      au < manifest ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 >
 
   }
 
@@ -79,6 +89,7 @@
       eissn = 2375-2548
     >
     
+      plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
       param[base_url] = http://advances.sciencemag.org/
 
       au < exists ; exists ; 2015 ; Science Advances Volume 1 ; 1 >
