@@ -84,7 +84,12 @@ public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory implements Filter
             //Letter possible from a future au
             HtmlNodeFilters.tagWithAttribute("dd", "id", "letters"),
             //may contain direct links to articles outside the au
-            HtmlNodeFilters.tagWithAttribute("dd", "id", "article")
+            HtmlNodeFilters.tagWithAttribute("dd", "id", "article"),
+            /*
+             * within the showImage viewer there are "downloadFigure" links that generate .ppt files
+             * we do not want them because they are variable.
+             */
+            HtmlNodeFilters.tagWithAttributeRegex("li", "class", "^downloadSlides"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

@@ -27,7 +27,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.massachusettsmedicalsociety;
 
@@ -42,209 +42,193 @@ import org.lockss.test.*;
 public class TestMassachusettsMedicalSocietyHtmlCrawlFilterFactory extends LockssTestCase {
   public FilterFactory fact;
   private static MockArchivalUnit mau;
-  
+
+  public void setUp() throws Exception {
+    super.setUp();
+    fact = new MassachusettsMedicalSocietyHtmlCrawlFilterFactory();
+  }
+
   //Example instances mostly from pages of strings of HTMl that should be filtered
   //and the expected post filter HTML strings. These are shared crawl & hash filters
-  
+
   private static final String relatedTrendsHtml =
-                  "<div id=\"related\">related</div>\n" +
-                  "<div id=\"trendsBox\">\n" +
-                        "<div class=\"bottomAd\" style=\"display: none;\">\n" +
-                                "<div class=\"ad\"></div>\n" +
-                        "</div>\n" +
-                  "</div>\n" +
-                  "<!-- placeholder id=null, description=N-siteWide-email -->\n" +
-                  "<div class=\"emailAlert\"></div>\n" +
-                  "<!-- placeholder id=null, description=N-ad-article-rightRail-1 -->\n";
+      "<div id=\"related\">related</div>\n" +
+          "<div id=\"trendsBox\">\n" +
+          "<div class=\"bottomAd\" style=\"display: none;\">\n" +
+          "<div class=\"ad\"></div>\n" +
+          "</div>\n" +
+          "</div>\n" +
+          "<!-- placeholder id=null, description=N-siteWide-email -->\n" +
+          "<div class=\"emailAlert\"></div>\n" +
+          "<!-- placeholder id=null, description=N-ad-article-rightRail-1 -->\n";
   private static final String relatedTrendsHtmlFiltered =
-                  "\n" +
-                  "\n" +
-                  "<!-- placeholder id=null, description=N-siteWide-email -->\n" +
-                  "<div class=\"emailAlert\"></div>\n" +
-                  "<!-- placeholder id=null, description=N-ad-article-rightRail-1 -->\n";
+      "\n" +
+          "\n" +
+          "<!-- placeholder id=null, description=N-siteWide-email -->\n" +
+          "<div class=\"emailAlert\"></div>\n" +
+          "<!-- placeholder id=null, description=N-ad-article-rightRail-1 -->\n";
 
   private static final String clickTroughHtml =
-                  "<test>\n" +
-                  "<a href=\"/action/clickThrough?id=3052&amp;url=%2Fclinical-practice-center%3Fquery%3Dcm&amp;loc=%2Fdoi%2Ffull%2F10.1056%2FNEJMicm040442&amp;pubId=40058838\"><img src=\"/sda/3052/Marketing_CPCenter_NewResource_300x150.jpg\"></a>\n" +
-                  "<a href=\"/action/clickNotThrough?id=3052&amp;url\"></a>\n" +
-                  "</test>";
+      "<test>\n" +
+          "<a href=\"/action/clickThrough?id=3052&amp;url=%2Fclinical-practice-center%3Fquery%3Dcm&amp;loc=%2Fdoi%2Ffull%2F10.1056%2FNEJMicm040442&amp;pubId=40058838\"><img src=\"/sda/3052/Marketing_CPCenter_NewResource_300x150.jpg\"></a>\n" +
+          "<a href=\"/action/clickNotThrough?id=3052&amp;url\"></a>\n" +
+          "</test>";
   private static final String clickTroughHtmlFiltered =
-                  "<test>\n" +
-                  "\n" +
-                  "<a href=\"/action/clickNotThrough?id=3052&amp;url\"></a>\n" +
-                  "</test>";
+      "<test>\n" +
+          "\n" +
+          "<a href=\"/action/clickNotThrough?id=3052&amp;url\"></a>\n" +
+          "</test>";
 
   private static final String tabsHtml =
-                  "<dl class=\"articleTabs tabPanel lastChild\">\n" +
-                          "<dd id=\"article\" style=\"display: block;\">\n" +
-                                "<div class=\"section\"></div>\n" +
-                                "I have some text in me yay!\n" +
-                          "</dd>\n" +
-                          "<dd id=\"references\" style=\"display: none;\">\n" +
-                                "<div class=\"section\"></div>\n" +
-                          "</dd>\n" +
-                          "<dd id=\"citedby\" style=\"display: none;\">\n" +
-                                "<div class=\"section\"></div>\n" +
-                          "</dd>\n" +
-                          "<dd id=\"comments\" style=\"display: none;\">\n" +
-                                "<div class=\"section\"></div>\n" +
-                          "</dd>\n" +
-                          "<dd id=\"letters\" class=\"lastChild\" style=\"display: none;\">\n" +
-                                "<div class=\"letterContent\" rel=\"10.1056/NEJMoa1004409\"></div>\n" +
-                          "</dd>\n" +
-                  "</dl>";
+      "<dl class=\"articleTabs tabPanel lastChild\">\n" +
+          "<dd id=\"article\" style=\"display: block;\">\n" +
+          "<div class=\"section\"></div>\n" +
+          "I have some text in me yay!\n" +
+          "</dd>\n" +
+          "<dd id=\"references\" style=\"display: none;\">\n" +
+          "<div class=\"section\"></div>\n" +
+          "</dd>\n" +
+          "<dd id=\"citedby\" style=\"display: none;\">\n" +
+          "<div class=\"section\"></div>\n" +
+          "</dd>\n" +
+          "<dd id=\"comments\" style=\"display: none;\">\n" +
+          "<div class=\"section\"></div>\n" +
+          "</dd>\n" +
+          "<dd id=\"letters\" class=\"lastChild\" style=\"display: none;\">\n" +
+          "<div class=\"letterContent\" rel=\"10.1056/NEJMoa1004409\"></div>\n" +
+          "</dd>\n" +
+          "</dl>";
+
+
   private static final String tabsHtmlFiltered =
-                  "<dl class=\"articleTabs tabPanel lastChild\"> " +
-                          "<dd id=\"article\" style=\"display: block;\"> " +
-                                "<div class=\"section\"></div> " +
-                                "I have some text in me yay! " +
-                          "</dd> " +
-                          "<dd id=\"references\" style=\"display: none;\"> " +
-                                "<div class=\"section\"></div> " +
-                          "</dd> " +
-                          //"\n" +
-                         // "\n" +
-                          //"\n" +
-                  "</dl>";
-  
+      "<dl class=\"articleTabs tabPanel lastChild\">\n" +
+          "\n" +
+          "<dd id=\"references\" style=\"display: none;\">\n" +
+          "<div class=\"section\"></div>\n" +
+          "</dd>\n" +
+          "\n\n\n" +
+          "</dl>";  
+
   private static final String correctionHtml =
-                  "<a rel=\"10.1056/NEJMoa1002617\" name=\"articleTop\"></a>\n" +
-                  "<div class=\"articleCorrection\">\n" +
-                          "<span class=\"moreLink\">\n" +
-                                "<a class=\"tab-article-correctionHasBeenPublished\" href=\"/doi/full/10.1056/NEJMx100104\">A Correction Has Been Published</a>\n" +
-                          "</span>\n" +
-                  "</div>\n" +
-                  "<p class=\"articleType\">Original Article</p>";
-  
+      "<a rel=\"10.1056/NEJMoa1002617\" name=\"articleTop\"></a>\n" +
+          "<div class=\"articleCorrection\">\n" +
+          "<span class=\"moreLink\">\n" +
+          "<a class=\"tab-article-correctionHasBeenPublished\" href=\"/doi/full/10.1056/NEJMx100104\">A Correction Has Been Published</a>\n" +
+          "</span>\n" +
+          "</div>\n" +
+          "<p class=\"articleType\">Original Article</p>";
+
   private static final String correctionHtmlFiltered =
-                  "<a rel=\"10.1056/NEJMoa1002617\" name=\"articleTop\"></a>\n" +
-                  "\n" +
-                  "<p class=\"articleType\">Original Article</p>";
-  
+      "<a rel=\"10.1056/NEJMoa1002617\" name=\"articleTop\"></a>\n" +
+          "\n" +
+          "<p class=\"articleType\">Original Article</p>";
+
   private static final String galleryHtml =
-                  "<div class=\" jcarousel-skin-vcmicm\">" +
-                          "<div id=\"galleryContent\" class=\"carousel-type-icm jcarousel-container jcarousel-container-horizontal\" style=\"display: block;\">" +
-                                  "<div class=\"jcarousel-prev jcarousel-prev-horizontal\" style=\"display: block;\" disabled=\"false\"></div>" +
-                                  "<div class=\"jcarousel-next jcarousel-next-horizontal\" style=\"display: block;\" disabled=\"false\"></div>" +
-                                  "<div id=\"galleryNav\" class=\"prev_next_bt\"></div>" +
-                          "</div>" +
-                  "</div>";
+      "<div class=\" jcarousel-skin-vcmicm\">" +
+          "<div id=\"galleryContent\" class=\"carousel-type-icm jcarousel-container jcarousel-container-horizontal\" style=\"display: block;\">" +
+          "<div class=\"jcarousel-prev jcarousel-prev-horizontal\" style=\"display: block;\" disabled=\"false\"></div>" +
+          "<div class=\"jcarousel-next jcarousel-next-horizontal\" style=\"display: block;\" disabled=\"false\"></div>" +
+          "<div id=\"galleryNav\" class=\"prev_next_bt\"></div>" +
+          "</div>" +
+          "</div>";
   private static final String galleryHtmlFiltered =
-                  "<div class=\" jcarousel-skin-vcmicm\">" +
-                  "</div>";
-  
+      "<div class=\" jcarousel-skin-vcmicm\">" +
+          "</div>";
+
   private static final String discussionHtml =
-                  "<div class=\" test\">" +
-                          "<div class=\"discussion\" style=\"display: block;\">" +
-                                  "Content" +
-                          "</div>" +
-                          "<div class=\"notdiscussion\" style=\"display: block;\">" +
-                                  "Content" +
-                          "</div>" +
-                  "</div>";
+      "<div class=\" test\">" +
+          "<div class=\"discussion\" style=\"display: block;\">" +
+          "Content" +
+          "</div>" +
+          "<div class=\"notdiscussion\" style=\"display: block;\">" +
+          "Content" +
+          "</div>" +
+          "</div>";
   private static final String discussionHtmlFiltered =
-                  "<div class=\" test\">" +
-                          "<div class=\"notdiscussion\" style=\"display: block;\">" +
-                                  "Content" +
-                          "</div>" +
-                  "</div>";
+      "<div class=\" test\">" +
+          "<div class=\"notdiscussion\" style=\"display: block;\">" +
+          "Content" +
+          "</div>" +
+          "</div>";
+
+  private static final String downloadFiguresPPT = 
+      "<div style=\"display: block;\" class=\"newContent ImageViewerLayerContent boxy-content\">" +
+          "<ul class=\"imageViewerTools\">" +
+          "<li class=\"downloadSlides firstChild lastChild\">" +
+          "<a href=\"/action/downloadFigures?doi=10.1056%2FNEJMsa1204720&amp;id=t01\" id=\"t01slideLink\" class=\"table-slide\">" +
+          "Slide</a></li></ul>" +
+          "<div id=\"\">" +
+          "</div></div>";
+
+  private static final String downloadFiguresPPTFiltered = 
+      "<div style=\"display: block;\" class=\"newContent ImageViewerLayerContent boxy-content\">" +
+          "<ul class=\"imageViewerTools\">" +
+          "</ul>" +
+          "<div id=\"\">" +
+          "</div></div>";      
 
 
-  // Variant to test with Crawl Filter
-  public static class TestCrawl extends TestMassachusettsMedicalSocietyHtmlCrawlFilterFactory {
-          
-          //Example instances mostly from pages of strings of HTMl that should be filtered
-          //and the expected post filter HTML strings.
-          private static final String tabsHtmlCrawlFiltered =
-                          "<dl class=\"articleTabs tabPanel lastChild\">\n" +
-                                  "\n" +
-                                  "<dd id=\"references\" style=\"display: none;\">\n" +
-                                        "<div class=\"section\"></div>\n" +
-                                  "</dd>\n" +
-                                  "\n" +
-                                  "\n" +
-                                  "\n" +
-                          "</dl>";
-          
-          public void setUp() throws Exception {
-                  super.setUp();
-                  fact = new MassachusettsMedicalSocietyHtmlCrawlFilterFactory();
-          }
-          @Override
-          public void testTabsHtmlFiltering() throws Exception {
-            InputStream actIn = fact.createFilteredInputStream(mau,
-                                                                                                           new StringInputStream(tabsHtml),
-                                                                                                           Constants.DEFAULT_ENCODING);
-            
-            assertEquals(tabsHtmlCrawlFiltered, StringUtil.fromInputStream(actIn));
-          }
-  }
 
-  public static Test suite() {
-    return variantSuites(new Class[] {
-        TestCrawl.class,
-      });
-  }
+
+
+
+
 
   public void testAdsIdFiltering() throws Exception {
-        String[] adTags = {"rightRailAd", "topAdBar", "rightAd"};
-        String adIdHtml;
-        String adIdHtmlFiltered;
-        for(String adTag : adTags) {
-                adIdHtml = 
-                        "<test>\n" +
-                                "<div id=\"" + adTag + "\">\n" +
-                                        "This is an add." +
-                                "</div>\n" +
-                                "<div id=\"not" + adTag + "\"></div>\n" +
-                        "</test>";
-                adIdHtmlFiltered = 
-                        "<test>\n" +"\n" +
-                                "<div id=\"not" + adTag + "\"></div>\n" +
-                        "</test>";
-                
-                InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(adIdHtml), Constants.DEFAULT_ENCODING);
-                    String str = StringUtil.fromInputStream(actIn);
-                    assertEquals(str, adIdHtmlFiltered);
-                //assertEquals(StringUtil.fromInputStream(actIn), adIdHtmlFiltered);
-                        System.out.println("FINISHED");
-        }
-    
+    String[] adTags = {"rightRailAd", "topAdBar", "rightAd"};
+    String adIdHtml;
+    String adIdHtmlFiltered;
+    for(String adTag : adTags) {
+      adIdHtml = 
+          "<test>\n" +
+              "<div id=\"" + adTag + "\">\n" +
+              "This is an add." +
+              "</div>\n" +
+              "<div id=\"not" + adTag + "\"></div>\n" +
+              "</test>";
+      adIdHtmlFiltered = 
+          "<test>\n" +"\n" +
+              "<div id=\"not" + adTag + "\"></div>\n" +
+              "</test>";
+
+      InputStream actIn = fact.createFilteredInputStream(mau, 
+          new StringInputStream(adIdHtml), Constants.DEFAULT_ENCODING);
+      assertEquals(adIdHtmlFiltered, StringUtil.fromInputStream(actIn));
+    }
+
   }
-  
+
   public void testAdsClassFiltering() throws Exception {
-        String[] adTags = {"toolsAd", "bottomAd", "bannerAdTower", "topLeftAniv", "ad", "rightAd"};
-        String adClassHtml;
-        String adClassHtmlFiltered;
-        for(String adTag : adTags) {
-                adClassHtml = 
-                        "<test>\n" +
-                                "<div class=\"" + adTag + "\">\n" +
-                                        "This is an add." +
-                                "</div>\n" +
-                                "<div class=\"not" + adTag + "\"></div>\n" +
-                        "</test>";
-                adClassHtmlFiltered = 
-                        "<test>\n" +"\n" +
-                                "<div class=\"not" + adTag + "\"></div>\n" +
-                        "</test>";
-                
-                InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(adClassHtml), Constants.DEFAULT_ENCODING);
-                String str = StringUtil.fromInputStream(actIn);
-                assertEquals(str, adClassHtmlFiltered);
-                //assertEquals(StringUtil.fromInputStream(actIn), adClassHtmlFiltered);
-        }
-    
+    String[] adTags = {"toolsAd", "bottomAd", "bannerAdTower", "topLeftAniv", "ad", "rightAd"};
+    String adClassHtml;
+    String adClassHtmlFiltered;
+    for(String adTag : adTags) {
+      adClassHtml = 
+          "<test>\n" +
+              "<div class=\"" + adTag + "\">\n" +
+              "This is an add." +
+              "</div>\n" +
+              "<div class=\"not" + adTag + "\"></div>\n" +
+              "</test>";
+      adClassHtmlFiltered = 
+          "<test>\n" +"\n" +
+              "<div class=\"not" + adTag + "\"></div>\n" +
+              "</test>";
+
+      InputStream actIn = fact.createFilteredInputStream(mau, 
+          new StringInputStream(adClassHtml), Constants.DEFAULT_ENCODING);
+      assertEquals(adClassHtmlFiltered, StringUtil.fromInputStream(actIn));
+    }
+
   }
-  
+
   public void testRelatedTrendsHtmlFiltering() throws Exception {
     InputStream actIn =
-      fact.createFilteredInputStream(mau, new StringInputStream(relatedTrendsHtml),
-                                     Constants.DEFAULT_ENCODING);
-    assertEquals(StringUtil.fromInputStream(actIn),
-                relatedTrendsHtmlFiltered);
+        fact.createFilteredInputStream(mau, new StringInputStream(relatedTrendsHtml),
+            Constants.DEFAULT_ENCODING);
+    assertEquals(relatedTrendsHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testClickTroughHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(clickTroughHtml),
@@ -252,14 +236,13 @@ public class TestMassachusettsMedicalSocietyHtmlCrawlFilterFactory extends Locks
 
     assertEquals(clickTroughHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testTabsHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, 
         new StringInputStream(tabsHtml),
         Constants.DEFAULT_ENCODING);
-    String str = StringUtil.fromInputStream(actIn);
-    assertEquals(str, tabsHtmlFiltered);
-    //assertEquals(tabsHtmlFiltered, StringUtil.fromInputStream(actIn));
+
+    assertEquals(tabsHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
   public void testGalleryHtmlFiltering() throws Exception {
@@ -285,5 +268,13 @@ public class TestMassachusettsMedicalSocietyHtmlCrawlFilterFactory extends Locks
 
     assertEquals(discussionHtmlFiltered, StringUtil.fromInputStream(actIn));
   }  
-  
+
+  public void testDownloadFigures() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(downloadFiguresPPT), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(downloadFiguresPPTFiltered, StringUtil.fromInputStream(actIn));
+
+  }
+
 }
