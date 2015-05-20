@@ -42,14 +42,14 @@
       param[base_url] = http://revistas.unicentro.br/
       param[journal_id] = analecta
 
-      au < manifest ; 2005 ; 1 ; Analecta Volume 2005 ; 2005 >
+      au < testing ; 2005 ; 1 ; Analecta Volume 2005 ; 2005 >
       au < released ; 2006 ; 2 ; Analecta Volume 2006 ; 2006 >
       au < released ; 2007 ; 3 ; Analecta Volume 2007 ; 2007 >
       au < released ; 2008 ; 4 ; Analecta Volume 2008 ; 2008 >
       au < released ; 2009 ; 5 ; Analecta Volume 2009 ; 2009 >
       au < released ; 2010 ; 6 ; Analecta Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 7 ; Analecta Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 8 ; Analecta Volume 2012 ; 2012 >
+      au < testing ; 2011 ; 7 ; Analecta Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 8 ; Analecta Volume 2012 ; 2012 >
 
   }
 
@@ -71,7 +71,7 @@
       au < released ; 2011 ; 4 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2012 ; 2012 >
       au < released ; 2013 ; 6 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 7 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2014 ; 2014 >
+      au < testing ; 2014 ; 7 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2014 ; 2014 >
 
   }
 
@@ -142,7 +142,7 @@
       au < released ; 2011 ; 2 ; Revista Interfaces Volume 2011 ; 2011 >
       au < released ; 2012 ; 3 ; Revista Interfaces Volume 2012 ; 2012 >
       au < released ; 2013 ; 4 ; Revista Interfaces Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 5 ; Revista Interfaces Volume 2014 ; 2014 >
+      au < testing ; 2014 ; 5 ; Revista Interfaces Volume 2014 ; 2014 >
 
   }
 
