@@ -41,6 +41,7 @@ import org.lockss.extractor.XmlDomMetadataExtractor.TextValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.util.*;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -132,6 +133,21 @@ implements SourceXmlSchemaHelper {
       return familyName + AUTHOR_SEPARATOR + " " + givenName;
     }
   };
+  
+  private static final Pattern LEADING_REGEX =  Pattern.compile("^(file:(//)?)?(.*\\.pdf).*", Pattern.CASE_INSENSITIVE);
+    
+  // The filename often has leading "file:" or "file://" 
+  static private final XPathValue PDF_NAME_VALUE = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
+      String eVal = node.getTextContent();
+      Matcher pMat = LEADING_REGEX.matcher(eVal);
+      if (pMat.matches()) {
+        return pMat.group(3);
+      }
+      return eVal;
+    }
+  };
 
   // Matches issue number ranges of integers separated by a unicode dash
   // There are variety of dashes. To match a dash, we just match a non-digit
@@ -181,7 +197,7 @@ implements SourceXmlSchemaHelper {
     //WML_articleMap.put(XPATH_KEYWORDS, XmlDomMetadataExtractor.TEXT_VALUE);
     WML_articleMap.put(XPATH_AUTHOR, AUTHOR_VALUE);
       // name of PDF file relative to path of XML file
-    WML_articleMap.put(XPATH_PDF_FILE_NAME, XmlDomMetadataExtractor.TEXT_VALUE);
+    WML_articleMap.put(XPATH_PDF_FILE_NAME, PDF_NAME_VALUE);
     WML_articleMap.put(XPATH_PUBLISHER, PUBLISHER_VALUE); //hardcoded
     }
 
