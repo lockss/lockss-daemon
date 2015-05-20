@@ -4,7 +4,7 @@
     name = Multi-Science
   >
 
-  plugin = org.lockss.plugin.atypon.multiscience.MultiScienceAtyponPlugin
+  plugin = org.lockss.plugin.atypon.multiscience.MultiSciencePlugin
   param[base_url] = http://multi-science.atypon.com/
   implicit < status ; year ; name ; param[volume_name] >
 

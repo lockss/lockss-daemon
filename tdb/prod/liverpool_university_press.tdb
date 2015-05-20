@@ -6,7 +6,7 @@
 
   comment[moving] = from MetaPress to Atypon
 
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.liverpool.LiverpoolPlugin
   param[base_url] = http://online.liverpooluniversitypress.co.uk/
   implicit < status ; year ; name ; param[volume_name] >
 
