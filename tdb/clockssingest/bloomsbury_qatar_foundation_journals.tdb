@@ -388,7 +388,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rels
 
-    au < ready ; exists ; 2012 ; Religions: A Scholarly Journal Volume Environment ; Environment >
+    au < exists ; exists ; 2012 ; Religions: A Scholarly Journal Volume Environment ; Environment >
     au < manifest ; exists ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 >
 
   }
