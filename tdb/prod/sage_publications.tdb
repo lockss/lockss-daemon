@@ -9703,7 +9703,7 @@
       au < exists ; 2012 ; Dose-Response Volume 10 ; 10 >
       au < exists ; 2013 ; Dose-Response Volume 11 ; 11 >
       au < exists ; 2014 ; Dose-Response Volume 12 ; 12 >
-      au < expected ; 2015 ; Dose-Response Volume 13 ; 13 >
+      au < manifest ; 2015 ; Dose-Response Volume 13 ; 13 >
 
   }
 
@@ -16298,7 +16298,7 @@
       au < exists ; 2012 ; Illness, Crisis & Loss Volume 20 ; 20 >
       au < exists ; 2013 ; Illness, Crisis & Loss Volume 21 ; 21 >
       au < manifest ; 2014 ; Illness, Crisis & Loss Volume 22 ; 22 >
-      au < exists ; 2015 ; Illness, Crisis & Loss Volume 23 ; 23 >
+      au < manifest ; 2015 ; Illness, Crisis & Loss Volume 23 ; 23 >
 
   }
 
@@ -28129,7 +28129,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Journal of Research in Music Education Volume 60 ; 60 >
         au < manifest ; 2013 ; Journal of Research in Music Education Volume 61 ; 61 >
         au < manifest ; 2014 ; Journal of Research in Music Education Volume 62 ; 62 >
-        au < expected ; 2015 ; Journal of Research in Music Education Volume 63 ; 63 >
+        au < manifest ; 2015 ; Journal of Research in Music Education Volume 63 ; 63 >
 
       }
 
@@ -30573,23 +30573,23 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1999 ; Labor Studies Journal Volume 1 ; 1 >
-      au < exists ; 2000 ; Labor Studies Journal Volume 2 ; 2 >
-      au < exists ; 2001 ; Labor Studies Journal Volume 3 ; 3 >
-      au < exists ; 2002 ; Labor Studies Journal Volume 4 ; 4 >
-      au < exists ; 2003 ; Labor Studies Journal Volume 5 ; 5 >
-      au < exists ; 2004 ; Labor Studies Journal Volume 6 ; 6 >
-      au < exists ; 2005 ; Labor Studies Journal Volume 7 ; 7 >
-      au < exists ; 2006 ; Labor Studies Journal Volume 8 ; 8 >
-      au < exists ; 2007 ; Labor Studies Journal Volume 9 ; 9 >
-      au < exists ; 2008 ; Labor Studies Journal Volume 10 ; 10 >
-      au < exists ; 2009 ; Labor Studies Journal Volume 11 ; 11 >
-      au < exists ; 2010 ; Labor Studies Journal Volume 12 ; 12 >
-      au < exists ; 2011 ; Labor Studies Journal Volume 13 ; 13 >
-      au < exists ; 2012 ; Labor Studies Journal Volume 14 ; 14 >
-      au < exists ; 2013 ; Labor Studies Journal Volume 15 ; 15 >
-      au < expected ; 2014 ; Labor Studies Journal Volume 16 ; 16 >
-      au < expected ; 2015 ; Labor Studies Journal Volume 17 ; 17 >
+      au < exists ; 1999 ; Justice Research and Policy Volume 1 ; 1 >
+      au < exists ; 2000 ; Justice Research and Policy Volume 2 ; 2 >
+      au < exists ; 2001 ; Justice Research and Policy Volume 3 ; 3 >
+      au < exists ; 2002 ; Justice Research and Policy Volume 4 ; 4 >
+      au < exists ; 2003 ; Justice Research and Policy Volume 5 ; 5 >
+      au < exists ; 2004 ; Justice Research and Policy Volume 6 ; 6 >
+      au < exists ; 2005 ; Justice Research and Policy Volume 7 ; 7 >
+      au < exists ; 2006 ; Justice Research and Policy Volume 8 ; 8 >
+      au < exists ; 2007 ; Justice Research and Policy Volume 9 ; 9 >
+      au < exists ; 2008 ; Justice Research and Policy Volume 10 ; 10 >
+      au < exists ; 2009 ; Justice Research and Policy Volume 11 ; 11 >
+      au < exists ; 2010 ; Justice Research and Policy Volume 12 ; 12 >
+      au < exists ; 2011 ; Justice Research and Policy Volume 13 ; 13 >
+      au < exists ; 2012 ; Justice Research and Policy Volume 14 ; 14 >
+      au < manifest ; 2013 ; Justice Research and Policy Volume 15 ; 15 >
+      au < expected ; 2014 ; Justice Research and Policy Volume 16 ; 16 >
+      au < expected ; 2015 ; Justice Research and Policy Volume 17 ; 17 >
 
   }
 
@@ -38014,7 +38014,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Research Ethics Volume 8 ; 8 >
         au < manifest ; 2013 ; Research Ethics Volume 9 ; 9 >
         au < manifest ; 2014 ; Research Ethics Volume 10 ; 10 >
-        au < expected ; 2015 ; Research Ethics Volume 11 ; 11 >
+        au < manifest ; 2015 ; Research Ethics Volume 11 ; 11 >
 
       }
 
@@ -43003,7 +43003,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Topics in Early Childhood Special Education Volume 32 ; 32 >
         au < manifest ; 2013 ; Topics in Early Childhood Special Education Volume 33 ; 33 >
         au < manifest ; 2014 ; Topics in Early Childhood Special Education Volume 34 ; 34 >
-        au < expected ; 2015 ; Topics in Early Childhood Special Education Volume 35 ; 35 >
+        au < manifest ; 2015 ; Topics in Early Childhood Special Education Volume 35 ; 35 >
 
       }
 
