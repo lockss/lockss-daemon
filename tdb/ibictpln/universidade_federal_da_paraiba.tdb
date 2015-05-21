@@ -34,7 +34,7 @@
     au < released ; 2011 ; 15 ; Acta Semiótica et Lingvistica Volume 15; 2011 ; >
     au < released ; 2012 ; 16 ; Acta Semiótica et Lingvistica Volume 16; 2012 ; >
     au < released ; 2013 ; 17 ; Acta Semiótica et Lingvistica Volume 17; 2013 ; >
-    au < manifest ; 2014 ; 18 ; Acta Semiótica et Lingvistica Volume 18 ; 2014 ; >
+    au < testing ; 2014 ; 18 ; Acta Semiótica et Lingvistica Volume 18 ; 2014 ; >
 
   }
 
@@ -500,8 +500,8 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = primafacie
 
-      au < manifest ; 2003 ; 2 ; Prim@ Facie Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 3 ; Prim@ Facie Volume 2004 ; 2004 ; >
+      au < testing ; 2003 ; 2 ; Prim@ Facie Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 3 ; Prim@ Facie Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 4 ; Prim@ Facie Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 5 ; Prim@ Facie Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 6 ; Prim@ Facie Volume 2007 ; 2007 ; >
@@ -551,7 +551,7 @@
       au < released ; 2011 ; 4 ; PROLÍNGUA Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; PROLÍNGUA Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; PROLÍNGUA Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 7 ; PROLÍNGUA Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 7 ; PROLÍNGUA Volume 2014 ; 2014 ; >
 
   }
 
@@ -649,7 +649,7 @@
       au < released ; 2011 ; 10 ; Revista Economia e Desenvolvimento Volume 2011 [Universidade Federal da Paraíba] ; 2011 ; >
       au < released ; 2012 ; 11 ; Revista Economia e Desenvolvimento Volume 2012 [Universidade Federal da Paraíba] ; 2012 ; >
       au < released ; 2013 ; 12 ; Revista Economia e Desenvolvimento Volume 2013 [Universidade Federal da Paraíba] ; 2013 ; >
-      au < manifest ; 2014 ; 13 ; Revista Economia e Desenvolvimento Volume 2014 [Universidade Federal da Paraíba] ; 2014 ; >
+      au < testing ; 2014 ; 13 ; Revista Economia e Desenvolvimento Volume 2014 [Universidade Federal da Paraíba] ; 2014 ; >
 
   }
 
@@ -952,7 +952,7 @@
       au < released ; 2011 ; 3 ; Revista Religare Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Revista Religare Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 5 ; Revista Religare Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 6 ; Revista Religare Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 6 ; Revista Religare Volume 2014 ; 2014 ; >
 
   }
 
@@ -1017,7 +1017,7 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = tematica
 
-      au < manifest ; 2012 ; 1 ; Temática Volume 2012 ; 2012 ; >
+      au < testing ; 2012 ; 1 ; Temática Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 1 ; Temática Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Temática Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 3 ; Temática Volume 2015 ; 2015 ; >
