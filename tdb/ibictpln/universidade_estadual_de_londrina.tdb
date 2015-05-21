@@ -157,10 +157,10 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = eip
 
-      au < exists ; 2010 ; 1 ; Estudos Interdisciplinares em Psicologia Volume 1 ; 2010 ; >
-      au < exists ; 2011 ; 2 ; Estudos Interdisciplinares em Psicologia Volume 2 ; 2011 ; >
-      au < exists ; 2012 ; 3 ; Estudos Interdisciplinares em Psicologia Volume 3 ; 2012 ; >
-      au < expected ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 ; >
+      au < manifest ; 2010 ; 1 ; Estudos Interdisciplinares em Psicologia Volume 1 ; 2010 ; >
+      au < manifest ; 2011 ; 2 ; Estudos Interdisciplinares em Psicologia Volume 2 ; 2011 ; >
+      au < manifest ; 2012 ; 3 ; Estudos Interdisciplinares em Psicologia Volume 3 ; 2012 ; >
+      au < manifest ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 ; >
 
   }
 
