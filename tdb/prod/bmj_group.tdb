@@ -2233,24 +2233,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       param[base_url] = http://qshc.bmj.com/
       comment[continued_by] = 2044-5423
 
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Quality and Safety in Health Care Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Quality and Safety in Health Care Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Quality and Safety in Health Care Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Quality and Safety in Health Care Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Quality and Safety in Health Care Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Quality and Safety in Health Care Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Quality and Safety in Health Care Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Quality and Safety in Health Care Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Quality and Safety in Health Care Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Quality and Safety in Health Care Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Quality and Safety in Health Care Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Quality and Safety in Health Care Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Quality and Safety in Health Care Volume 13 ; 13 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Quality and Safety in Health Care Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Quality and Safety in Health Care Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Quality and Safety in Health Care Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Quality and Safety in Health Care Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Quality and Safety in Health Care Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Quality and Safety in Health Care Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Quality and Safety in Health Care Volume 18 ; 18 >
     }
   }
 
@@ -2264,6 +2251,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       param[base_url] = http://qualitysafety.bmj.com/
       comment[continues] = 0963-8172
       
+      au < HighWirePressH20Plugin ; exists ; 2007 ; BMJ Quality & Safety Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; ready ; 2008 ; BMJ Quality & Safety Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Quality & Safety Volume 18 ; 18 > #unable to populate permission
       au < HighWirePressH20Plugin ; notReady ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 > #unable to populate permission
