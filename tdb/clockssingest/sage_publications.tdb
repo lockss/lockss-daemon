@@ -459,7 +459,8 @@
       issn = 1687-8132 ;
       eissn = 1687-8140
     >
-
+    # this title was previously published by Hindawi and apparently moved to Sage in 2015
+    # though Sage has archived back volumes
       param[base_url] = http://ade.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
