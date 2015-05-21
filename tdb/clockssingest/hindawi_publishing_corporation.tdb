@@ -744,12 +744,12 @@
     # This journal has apparently moved to Sage Publishing for 2015 (and past content)
     param[journal_id] = ame
 
-    au < manifest ; exists ; 2009 ; Advances in Mechanical Engineering Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; exists ; 2010 ; Advances in Mechanical Engineering Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; exists ; 2011 ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; exists ; 2012 ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; exists ; 2013 ; Advances in Mechanical Engineering Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Advances in Mechanical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < doNotProces ; exists ; 2009 ; Advances in Mechanical Engineering Volume 2009 ; 2009 ; 2009 >
+    au < doNotProces ; exists ; 2010 ; Advances in Mechanical Engineering Volume 2010 ; 2010 ; 2010 >
+    au < doNotProces ; exists ; 2011 ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 >
+    au < doNotProces ; exists ; 2012 ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProces ; exists ; 2013 ; Advances in Mechanical Engineering Volume 2013 ; 2013 ; 2013 >
+    au < down ; exists ; 2014 ; Advances in Mechanical Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
