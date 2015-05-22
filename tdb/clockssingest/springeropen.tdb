@@ -1021,7 +1021,7 @@
         param[journal_issn] = 2193-9616 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; In Silico Pharmacology Volume 3 ; 3 >
   
@@ -1055,7 +1055,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 >
   
@@ -1072,7 +1072,7 @@
         param[journal_issn] = 2197-425X 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 ; 3 >
   
@@ -1090,7 +1090,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 >
-        au < manifest ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 >
+        au < testing ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 >
         au < manifest ; exists ; 2014 ; International Aquatic Research Volume 6 ; 6 >
         au < expected ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 >
   
@@ -1109,7 +1109,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 >
-        au < manifest ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
+        au < testing ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
         au < manifest ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
         au < expected ; exists ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 >
   
