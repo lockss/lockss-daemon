@@ -34,7 +34,8 @@ package org.lockss.plugin.pub2web.asm;
 
 import java.util.Iterator;
 import java.util.List;
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
+
+import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
@@ -50,8 +51,11 @@ import org.lockss.util.Logger;
  * and located on each page of the document
  * @author alexohlson
  *
+ * Making this extracting due to some (hopefully temporary) platform dependence
+ * issue that was causing map ordering to vary across three of the production machines
+ *
  */
-public class AsmPdfFilterFactory extends SimplePdfFilterFactory {
+public class AsmPdfFilterFactory extends ExtractingPdfFilterFactory {
   private static final Logger log = Logger.getLogger(AsmPdfFilterFactory.class);
 
   private static final String DOWNLOAD_STRING = "Downloaded from ";
@@ -181,6 +185,5 @@ ET
     
 
   }  
-  
 
 }
