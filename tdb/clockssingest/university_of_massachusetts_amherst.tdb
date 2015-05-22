@@ -206,7 +206,7 @@
   {
   
     title < 
-      name = Journal of Hospitality Financial Management ;
+      name = The Journal of Hospitality Financial Management ;
       issn = 1091-3211 ;
       eissn = 2152-2790
     >
@@ -216,23 +216,23 @@
     param[journal_abbr] = jhfm
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < manifest ; exists ; 1997 ; Journal of Hospitality Financial Management Volume 5 ; 5 >
-    au < manifest ; exists ; 1998 ; Journal of Hospitality Financial Management Volume 6 ; 6 >
-    au < manifest ; exists ; 1999 ; Journal of Hospitality Financial Management Volume 7 ; 7 >
-    au < manifest ; exists ; 2000 ; Journal of Hospitality Financial Management Volume 8 ; 8 >
-    au < manifest ; exists ; 2001 ; Journal of Hospitality Financial Management Volume 9 ; 9  >
-    au < manifest ; exists ; 2002 ; Journal of Hospitality Financial Management Volume 10 ; 10 >
-    au < manifest ; exists ; 2003 ; Journal of Hospitality Financial Management Volume 11 ; 11 >
-    au < manifest ; exists ; 2004 ; Journal of Hospitality Financial Management Volume 12 ; 12 >
-    au < manifest ; exists ; 2005 ; Journal of Hospitality Financial Management Volume 13 ; 13 >
-    au < manifest ; exists ; 2006 ; Journal of Hospitality Financial Management Volume 14 ; 14 >
-    au < manifest ; exists ; 2007 ; Journal of Hospitality Financial Management Volume 15 ; 15 >
-    au < manifest ; exists ; 2008 ; Journal of Hospitality Financial Management Volume 16 ; 16 >
-    au < manifest ; exists ; 2009 ; Journal of Hospitality Financial Management Volume 17 ; 17 >
-    au < manifest ; exists ; 2010 ; Journal of Hospitality Financial Management Volume 18 ; 18 >
-    au < manifest ; exists ; 2011 ; Journal of Hospitality Financial Management Volume 19 ; 19 >
-    au < finished ; crawling ; 2012 ; Journal of Hospitality Financial Management Volume 20 ; 20 >
-    au < expected ; exists ; 2015 ; Journal of Hospitality Financial Management Volume 21 ; 21 >
+    au < manifest ; exists ; 1997 ; The Journal of Hospitality Financial Management Volume 5 ; 5 >
+    au < manifest ; exists ; 1998 ; The Journal of Hospitality Financial Management Volume 6 ; 6 >
+    au < manifest ; exists ; 1999 ; The Journal of Hospitality Financial Management Volume 7 ; 7 >
+    au < manifest ; exists ; 2000 ; The Journal of Hospitality Financial Management Volume 8 ; 8 >
+    au < manifest ; exists ; 2001 ; The Journal of Hospitality Financial Management Volume 9 ; 9  >
+    au < manifest ; exists ; 2002 ; The Journal of Hospitality Financial Management Volume 10 ; 10 >
+    au < manifest ; exists ; 2003 ; The Journal of Hospitality Financial Management Volume 11 ; 11 >
+    au < manifest ; exists ; 2004 ; The Journal of Hospitality Financial Management Volume 12 ; 12 >
+    au < manifest ; exists ; 2005 ; The Journal of Hospitality Financial Management Volume 13 ; 13 >
+    au < manifest ; exists ; 2006 ; The Journal of Hospitality Financial Management Volume 14 ; 14 >
+    au < manifest ; exists ; 2007 ; The Journal of Hospitality Financial Management Volume 15 ; 15 >
+    au < manifest ; exists ; 2008 ; The Journal of Hospitality Financial Management Volume 16 ; 16 >
+    au < manifest ; exists ; 2009 ; The Journal of Hospitality Financial Management Volume 17 ; 17 >
+    au < manifest ; exists ; 2010 ; The Journal of Hospitality Financial Management Volume 18 ; 18 >
+    au < manifest ; exists ; 2011 ; The Journal of Hospitality Financial Management Volume 19 ; 19 >
+    au < finished ; crawling ; 2012 ; The Journal of Hospitality Financial Management Volume 20 ; 20 >
+    au < expected ; exists ; 2015 ; The Journal of Hospitality Financial Management Volume 21 ; 21 >
     
   }
   
