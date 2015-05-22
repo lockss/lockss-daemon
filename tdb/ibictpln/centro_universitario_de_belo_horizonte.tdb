@@ -23,7 +23,7 @@
       au < released ; 2011 ; 4 ; e-Scientia Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Scientia Volume 2012 ; 2012 >
       au < released ; 2013 ; 6 ; e-Scientia Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 7 ; e-Scientia Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 7 ; e-Scientia Volume 2014 ; 2014 >
       au < expected ; 2015 ; 8 ; e-Scientia Volume 2015 ; 2015 >
 
   }
@@ -45,7 +45,7 @@
       au < released ; 2011 ; 4 ; e-Xacta Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Xacta Volume 2012 ; 2012 >
       au < released ; 2013 ; 6 ; e-Xacta Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 7 ; e-Xacta Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 7 ; e-Xacta Volume 2014 ; 2014 >
       au < expected ; 2015 ; 8 ; e-Xacta Volume 2015 ; 2015 >
 
   }
@@ -60,6 +60,7 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dchla
+      comment[error] = recursive urls
 
       au < released ; 2008 ; 1 ; e-Hum Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; e-Hum Volume 2009 ; 2009 >
@@ -67,7 +68,7 @@
       au < released ; 2011 ; 4 ; e-Hum Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Hum Volume 2012 ; 2012 >
       au < released ; 2013 ; 6 ; e-Hum Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 7 ; e-Hum Volume 2014 ; 2014 >
+      au < notReady ; 2014 ; 7 ; e-Hum Volume 2014 ; 2014 >
       au < expected ; 2015 ; 8 ; e-Hum Volume 2015 ; 2015 >
 
   }
@@ -89,7 +90,7 @@
       au < released ; 2011 ; 4 ; e-Cevitas Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Cevitas Volume 2012 ; 2012 >
       au < released ; 2013 ; 6 ; e-Cevitas Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 7 ; e-Cevitas Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 7 ; e-Cevitas Volume 2014 ; 2014 >
       au < expected ; 2015 ; 8 ; e-Cevitas Volume 2015 ; 2015 >
 
   }
@@ -130,7 +131,7 @@
       au < released ; 2011 ; 5 ; e-Com Volume 2011 ; 2011 >
       au < released ; 2012 ; 6 ; e-Com Volume 2012 ; 2012 >
       au < released ; 2013 ; 7 ; e-Com Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 8 ; e-Com Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 8 ; e-Com Volume 2014 ; 2014 >
       au < expected ; 2015 ; 9 ; e-Com Volume 2015 ; 2015 >
 
   }

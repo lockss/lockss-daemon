@@ -52,11 +52,11 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = educacao
 
-      au < testing ; 2010 ; 1 ; Revista Educação e Fronteiras On-Line Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 2 ; Revista Educação e Fronteiras On-Line Volume 2011 ; 2011 >
+      au < ready ; 2010 ; 1 ; Revista Educação e Fronteiras On-Line Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 2 ; Revista Educação e Fronteiras On-Line Volume 2011 ; 2011 >
       au < released ; 2012 ; 3 ; Revista Educação e Fronteiras On-Line Volume 2012 ; 2012 >
       au < released ; 2013 ; 4 ; Revista Educação e Fronteiras On-Line Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 5 ; Revista Educação e Fronteiras On-Line Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 5 ; Revista Educação e Fronteiras On-Line Volume 2014 ; 2014 >
 
   }
 
@@ -117,7 +117,7 @@
       au < released ; 2011 ; 5 ; Revista Eletrônica História em Reflexão Volume 2011 ; 2011 >
       au < released ; 2012 ; 6 ; Revista Eletrônica História em Reflexão Volume 2012 ; 2012 >
       au < released ; 2013 ; 7 ; Revista Eletrônica História em Reflexão Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 8 ; Revista Eletrônica História em Reflexão Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 8 ; Revista Eletrônica História em Reflexão Volume 2014 ; 2014 >
 
   }
 
