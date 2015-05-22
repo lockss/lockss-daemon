@@ -5586,8 +5586,8 @@
     au < doNotProcess ; 2010 ; Journal of Consumer Marketing Volume 27 ; 27 >
     au < doNotProcess ; 2011 ; Journal of Consumer Marketing Volume 28 ; 28 >
     au < doNotProcess ; 2012 ; Journal of Consumer Marketing Volume 29 ; 29 >
-    au < testing ; 2013 ; Journal of Consumer Marketing Volume 30 ; 30 >
-    au < testing ; 2014 ; Journal of Consumer Marketing Volume 31 ; 31 >
+    au < ready ; 2013 ; Journal of Consumer Marketing Volume 30 ; 30 >
+    au < ready ; 2014 ; Journal of Consumer Marketing Volume 31 ; 31 >
     au < expected ; 2015 ; Journal of Consumer Marketing Volume 32 ; 32 >
 
   }
@@ -5616,9 +5616,9 @@
     au < doNotProcess ; 2009 ; Journal of Corporate Real Estate Volume 11 ; 11 >
     au < doNotProcess ; 2010 ; Journal of Corporate Real Estate Volume 12 ; 12 >
     au < doNotProcess ; 2011 ; Journal of Corporate Real Estate Volume 13 ; 13 >
-    au < testing ; 2012 ; Journal of Corporate Real Estate Volume 14 ; 14 >
-    au < testing ; 2013 ; Journal of Corporate Real Estate Volume 15 ; 15 >
-    au < testing ; 2014 ; Journal of Corporate Real Estate Volume 16 ; 16 >
+    au < ready ; 2012 ; Journal of Corporate Real Estate Volume 14 ; 14 >
+    au < ready ; 2013 ; Journal of Corporate Real Estate Volume 15 ; 15 >
+    au < ready ; 2014 ; Journal of Corporate Real Estate Volume 16 ; 16 >
     au < expected ; 2015 ; Journal of Corporate Real Estate Volume 17 ; 17 >
 
   }
@@ -5634,8 +5634,8 @@
 
     au < doNotProcess ; 2011 ; Journal of Criminal Psychology Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Criminal Psychology Volume 2 ; 2 >
-    au < testing ; 2013 ; Journal of Criminal Psychology Volume 3 ; 3 >
-    au < testing ; 2014 ; Journal of Criminal Psychology Volume 4 ; 4 >
+    au < ready ; 2013 ; Journal of Criminal Psychology Volume 3 ; 3 >
+    au < ready ; 2014 ; Journal of Criminal Psychology Volume 4 ; 4 >
     au < expected ; 2015 ; Journal of Criminal Psychology Volume 5 ; 5 >
 
   }
@@ -5652,8 +5652,8 @@
 
     au < doNotProcess ; 2011 ; Journal of Cultural Heritage Management and Sustainable Development Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Cultural Heritage Management and Sustainable Development Volume 2 ; 2 >
-    au < testing ; 2013 ; Journal of Cultural Heritage Management and Sustainable Development Volume 3 ; 3 >
-    au < testing ; 2014 ; Journal of Cultural Heritage Management and Sustainable Development Volume 4 ; 4 >
+    au < ready ; 2013 ; Journal of Cultural Heritage Management and Sustainable Development Volume 3 ; 3 >
+    au < ready ; 2014 ; Journal of Cultural Heritage Management and Sustainable Development Volume 4 ; 4 >
     au < expected ; 2015 ; Journal of Cultural Heritage Management and Sustainable Development Volume 5 ; 5 >
 
   }
@@ -5737,7 +5737,7 @@
     au < doNotProcess ; 2010 ; Journal of Documentation Volume 66 ; 66 >
     au < doNotProcess ; 2011 ; Journal of Documentation Volume 67 ; 67 >
     au < doNotProcess ; 2012 ; Journal of Documentation Volume 68 ; 68 >
-    au < testing ; 2013 ; Journal of Documentation Volume 69 ; 69 >
+    au < ready ; 2013 ; Journal of Documentation Volume 69 ; 69 >
     au < testing ; 2014 ; Journal of Documentation Volume 70 ; 70 >
     au < expected ; 2015 ; Journal of Documentation Volume 71 ; 71 >
 
@@ -5763,8 +5763,8 @@
     au < doNotProcess ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
     au < doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
     au < doNotProcess ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
-    au < testing ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
-    au < testing ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
+    au < ready ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
+    au < ready ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
     au < expected ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 >
 
   }
@@ -5886,8 +5886,8 @@
     au < doNotProcess ; 2010 ; Journal of Educational Administration Volume 48 ; 48 >
     au < doNotProcess ; 2011 ; Journal of Educational Administration Volume 49 ; 49 >
     au < doNotProcess ; 2012 ; Journal of Educational Administration Volume 50 ; 50 >
-    au < testing ; 2013 ; Journal of Educational Administration Volume 51 ; 51 >
-    au < testing ; 2014 ; Journal of Educational Administration Volume 52 ; 52 >
+    au < ready ; 2013 ; Journal of Educational Administration Volume 51 ; 51 >
+    au < ready ; 2014 ; Journal of Educational Administration Volume 52 ; 52 >
     au < expected ; 2015 ; Journal of Educational Administration Volume 53 ; 53 >
 
   }
@@ -5964,7 +5964,7 @@
     au < doNotProcess ; 2011 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 6 ; 6 >
     au < testing ; 2013 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 7 ; 7 >
-    au < testing ; 2014 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 8 ; 8 >
+    au < ready ; 2014 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 8 ; 8 >
     au < expected ; 2015 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 9 ; 9 >
 
   }
@@ -5979,7 +5979,7 @@
     param[journal_id] = jepp
 
     au < doNotProcess ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 >
-    au < testing ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 >
+    au < ready ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 >
     au < testing ; 2014 ; Journal of Entrepreneurship and Public Policy Volume 3 ; 3 >
     au < expected ; 2015 ; Journal of Entrepreneurship and Public Policy Volume 4 ; 4 >
 
