@@ -868,7 +868,7 @@
 
     param[base_url] = http://eolj.bmj.com/
     comment[continued_by] = 2047-6361
-    comment[doNotProcess] = duplicate volume numbers. waiting for feedback from HW
+    comment[doNotProcess] = duplicate volume numbers. see https://na7.salesforce.com/500A000000Q4Ua3
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; End of Life Care Volume 1 ; 2007 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; End of Life Care Volume 2 ; 2008 >
