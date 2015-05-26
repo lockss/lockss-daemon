@@ -163,18 +163,18 @@
     param[base_url] = http://www.jcircadianrhythms.com/
     param[journal_id] = jcr
 
-    au < released ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003>
-    au < released ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004>
-    au < released ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005>
-    au < released ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006>
-    au < released ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007>
-    au < released ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008>
-    au < released ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009>
-    au < released ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010>
-    au < released ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011>
-    au < released ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
-    au < released ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
-    au < ready ;2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
+    au < down ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003>
+    au < down ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004>
+    au < down ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005>
+    au < down ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006>
+    au < down ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007>
+    au < down ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008>
+    au < down ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009>
+    au < down ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010>
+    au < down ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011>
+    au < down ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
+    au < down ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
+    au < exists ;2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
 
   }
 
@@ -295,15 +295,15 @@
     param[base_url] = http://www.opticon1826.com/
     param[journal_id] = opt
 
-    au < released ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
-    au < released ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
-    au < released ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
-    au < released ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
-    au < released ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
-    au < released ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
-    au < released ; 2012 ; Opticon1826 Volume 12-14 ; 12-14 ; 2012 >
-    au < released ; 2013 ; Opticon1826 Volume 15 ; 15 ; 2013 >
-    au < ready ;2014 ; Opticon1826 Volume 14 ; 14 ; 2014 >
+    au < down ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
+    au < down ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
+    au < down ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
+    au < down ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
+    au < down ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
+    au < down ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
+    au < down ; 2012 ; Opticon1826 Volume 12-14 ; 12-14 ; 2012 >
+    au < down ; 2013 ; Opticon1826 Volume 15 ; 15 ; 2013 >
+    au < exists ;2014 ; Opticon1826 Volume 14 ; 14 ; 2014 >
     
   }
   
