@@ -16068,6 +16068,7 @@
 
     param[base_url] = http://mnras.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[0] = max 5 AU testing at a time 
 
     au < manifest ; exists ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 278 ; 278 ; >
     au < manifest ; exists ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 279 ; 279 ; >
