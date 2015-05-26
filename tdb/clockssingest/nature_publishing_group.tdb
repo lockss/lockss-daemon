@@ -296,8 +296,8 @@
     au < manifest ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 >
     au < manifest ; exists ; 2007 ; British Dental Journal Volume 202 ; 2007 ; 202 >
     au < manifest ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 >
-    au < testing ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
-    au < testing ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
+    au < ready ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
+    au < ready ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
     au < crawling ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
     au < ready ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
     au < ready ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
@@ -778,11 +778,11 @@
 
     param[journal_id] = emm
 
-    au < testing ; exists ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 >
-    au < testing ; exists ; 2009 ; Experimental & Molecular Medicine Volume 41 ; 2009 ; 41 >
-    au < testing ; exists ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 >
-    au < testing ; exists ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 >
-    au < testing ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 >
+    au < ready ; exists ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 >
+    au < ready ; exists ; 2009 ; Experimental & Molecular Medicine Volume 41 ; 2009 ; 41 >
+    au < ready ; exists ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 >
+    au < ready ; exists ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 >
+    au < ready ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 >
     au < ready ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 >
     au < crawling ; exists ; 2014 ; Experimental & Molecular Medicine Volume 46 ; 2014 ; 46 >
 
@@ -903,13 +903,13 @@
 
     param[journal_id] = gim
 
-    au < testing ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
-    au < testing ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
+    au < ready ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
+    au < ready ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
     au < crawling ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
     au < crawling ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
     au < finished ; frozen ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
     au < ready ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
-    au < testing ; exists ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 >
+    au < ready ; exists ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 >
 
   }
 
@@ -1035,8 +1035,8 @@
     au < finished ; crawling ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
     au < crawling ; exists ; 2013 ; Heredity Volume 110 ; 2013 ; 110 >
     au < crawling ; exists ; 2013 ; Heredity Volume 111 ; 2013 ; 111 >
-    au < testing ; exists ; 2014 ; Heredity Volume 112 ; 2014 ; 112 >
-    au < testing ; exists ; 2014 ; Heredity Volume 113 ; 2014 ; 113 >
+    au < ready ; exists ; 2014 ; Heredity Volume 112 ; 2014 ; 112 >
+    au < ready ; exists ; 2014 ; Heredity Volume 113 ; 2014 ; 113 >
 
   }
 
@@ -1060,7 +1060,7 @@
     au < finished ; frozen ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
     au < finished ; crawling ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
     au < crawling ; exists ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 >
-    au < testing ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 >
+    au < ready ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 >
  
   }
 
