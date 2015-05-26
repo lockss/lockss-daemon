@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Archive-It Plugin, Base URL %s, Collection %s&quot;, base_url, collection</string>
+    <string>"Archive-It Plugin, Base URL %s, Collection %s", base_url, collection</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -34,13 +34,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^%s.*&quot;, base_url</string>
-      <string>1,&quot;http://.*\.%s/.*&quot;, content_domain</string>
+      <string>1,"^%s", base_url</string>
+      <string>1,"^https?://[^/]+\.%s/", content_domain</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%scgi-bin/getarcs.pl?coll=%s&quot;, base_url, collection</string>
+    <string>"%scgi-bin/getarcs.pl?coll=%s", base_url, collection</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -50,11 +50,11 @@
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>collection</key>
-        <displayName>Collection</displayName>
-        <description>Collection identifier</description>
-        <type>1</type>
-        <size>20</size>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -68,11 +68,11 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
+        <key>collection</key>
+        <displayName>Collection</displayName>
+        <description>Collection identifier</description>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -85,5 +85,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.archiveit.ArchiveItHtmlFilterFactory</string>
   </entry>
 </map>
