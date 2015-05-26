@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Canadian Government Information Private LOCKSS Network
+  >
+
+  {
+
+    title <
+      name = Archive-It Collections
+    >
+
+    plugin = org.lockss.plugin.archiveit.ArchiveItPlugin
+    param[base_url] = https://partner.archive-it.org/
+    nondefparam[content_domain] = partner.archive-it.org
+    implicit < status ; name ; param[collection] >
+
+    au < released ; Government of Canada Publications ; 3572 >
+    au < testing ; Government of Canada Web Content ; 5060 >
+
+  }
+
+}
