@@ -60,32 +60,58 @@
       eissn = 2176-1744
     >
 
-    param[base_url] = http://www.fae.unicamp.br/revista/
     param[journal_id] = zetetike
+    {
+    param[base_url] = http://www.fae.unicamp.br/revista/
 
-    au < released ; 1993 ; 1 ; Zetetiké: Revista de Educação Matemática Volume 1 ; 1993 ; >
-    au < released ; 1994 ; 2 ; Zetetiké: Revista de Educação Matemática Volume 2 ; 1994 ; >
-    au < released ; 1995 ; 3 ; Zetetiké: Revista de Educação Matemática Volume 3 ; 1995 ; >
-    au < released ; 1996 ; 4 ; Zetetiké: Revista de Educação Matemática Volume 4 ; 1996 ; >
-    au < released ; 1997 ; 5 ; Zetetiké: Revista de Educação Matemática Volume 5 ; 1997 ; >
-    au < released ; 1998 ; 6 ; Zetetiké: Revista de Educação Matemática Volume 6 ; 1998 ; >
-    au < released ; 1999 ; 7 ; Zetetiké: Revista de Educação Matemática Volume 7 ; 1999 ; >
-    au < released ; 2000 ; 8 ; Zetetiké: Revista de Educação Matemática Volume 8 ; 2000 ; >
-    au < released ; 2001 ; 9 ; Zetetiké: Revista de Educação Matemática Volume 9 ; 2001 ; >
-    au < released ; 2002 ; 10 ; Zetetiké: Revista de Educação Matemática Volume 10 ; 2002 ; >
-    au < released ; 2003 ; 11 ; Zetetiké: Revista de Educação Matemática Volume 11 ; 2003 ; >
-    au < released ; 2004 ; 12 ; Zetetiké: Revista de Educação Matemática Volume 12 ; 2004 ; >
-    au < released ; 2005 ; 13 ; Zetetiké: Revista de Educação Matemática Volume 13 ; 2005 ; >
-    au < released ; 2006 ; 14 ; Zetetiké: Revista de Educação Matemática Volume 14 ; 2006 ; >
-    au < released ; 2007 ; 15 ; Zetetiké: Revista de Educação Matemática Volume 15 ; 2007 ; >
-    au < released ; 2008 ; 16 ; Zetetiké: Revista de Educação Matemática Volume 16 ; 2008 ; >
-    au < released ; 2009 ; 17 ; Zetetiké: Revista de Educação Matemática Volume 17 ; 2009 ; >
-    au < released ; 2010 ; 18 ; Zetetiké: Revista de Educação Matemática Volume 18 ; 2010 ; >
-    au < released ; 2011 ; 19 ; Zetetiké: Revista de Educação Matemática Volume 19 ; 2011 ; >
-    au < released ; 2012 ; 20 ; Zetetiké: Revista de Educação Matemática Volume 20 ; 2012 ; >
-    au < released ; 2013 ; 21 ; Zetetiké: Revista de Educação Matemática Volume 21 ; 2013 ; >
-    au < manifest ; 2014 ; 22 ; Zetetiké: Revista de Educação Matemática Volume 22 ; 2014 ; >
+    au < superseded ; 1993 ; 1 ; Zetetiké: Revista de Educação Matemática Volume 1 [superseded] ; 1993 ; moved to new url >
+    au < superseded ; 1994 ; 2 ; Zetetiké: Revista de Educação Matemática Volume 2 [superseded] ; 1994 ; moved to new url >
+    au < superseded ; 1995 ; 3 ; Zetetiké: Revista de Educação Matemática Volume 3 [superseded] ; 1995 ; moved to new url >
+    au < superseded ; 1996 ; 4 ; Zetetiké: Revista de Educação Matemática Volume 4 [superseded] ; 1996 ; moved to new url >
+    au < superseded ; 1997 ; 5 ; Zetetiké: Revista de Educação Matemática Volume 5 [superseded] ; 1997 ; moved to new url >
+    au < superseded ; 1998 ; 6 ; Zetetiké: Revista de Educação Matemática Volume 6 [superseded] ; 1998 ; moved to new url >
+    au < superseded ; 1999 ; 7 ; Zetetiké: Revista de Educação Matemática Volume 7 [superseded] ; 1999 ; moved to new url >
+    au < superseded ; 2000 ; 8 ; Zetetiké: Revista de Educação Matemática Volume 8 [superseded] ; 2000 ; moved to new url >
+    au < superseded ; 2001 ; 9 ; Zetetiké: Revista de Educação Matemática Volume 9 [superseded] ; 2001 ; moved to new url >
+    au < superseded ; 2002 ; 10 ; Zetetiké: Revista de Educação Matemática Volume 10 [superseded] ; 2002 ; moved to new url >
+    au < superseded ; 2003 ; 11 ; Zetetiké: Revista de Educação Matemática Volume 11 [superseded] ; 2003 ; moved to new url >
+    au < superseded ; 2004 ; 12 ; Zetetiké: Revista de Educação Matemática Volume 12 [superseded] ; 2004 ; moved to new url >
+    au < superseded ; 2005 ; 13 ; Zetetiké: Revista de Educação Matemática Volume 13 [superseded] ; 2005 ; moved to new url >
+    au < superseded ; 2006 ; 14 ; Zetetiké: Revista de Educação Matemática Volume 14 [superseded] ; 2006 ; moved to new url >
+    au < superseded ; 2007 ; 15 ; Zetetiké: Revista de Educação Matemática Volume 15 [superseded] ; 2007 ; moved to new url >
+    au < superseded ; 2008 ; 16 ; Zetetiké: Revista de Educação Matemática Volume 16 [superseded] ; 2008 ; moved to new url >
+    au < superseded ; 2009 ; 17 ; Zetetiké: Revista de Educação Matemática Volume 17 [superseded] ; 2009 ; moved to new url >
+    au < superseded ; 2010 ; 18 ; Zetetiké: Revista de Educação Matemática Volume 18 [superseded] ; 2010 ; moved to new url >
+    au < superseded ; 2011 ; 19 ; Zetetiké: Revista de Educação Matemática Volume 19 [superseded] ; 2011 ; moved to new url >
+    au < superseded ; 2012 ; 20 ; Zetetiké: Revista de Educação Matemática Volume 20 [superseded] ; 2012 ; moved to new url >
+    au < superseded ; 2013 ; 21 ; Zetetiké: Revista de Educação Matemática Volume 21 [superseded] ; 2013 ; moved to new url >
+    }
+    {
+    param[base_url] = https://www.fe.unicamp.br/revistas/ged/
 
+    au < exists ; 1993 ; 1 ; Zetetiké: Revista de Educação Matemática Volume 1 ; 1993 ; >
+    au < exists ; 1994 ; 2 ; Zetetiké: Revista de Educação Matemática Volume 2 ; 1994 ; >
+    au < exists ; 1995 ; 3 ; Zetetiké: Revista de Educação Matemática Volume 3 ; 1995 ; >
+    au < exists ; 1996 ; 4 ; Zetetiké: Revista de Educação Matemática Volume 4 ; 1996 ; >
+    au < exists ; 1997 ; 5 ; Zetetiké: Revista de Educação Matemática Volume 5 ; 1997 ; >
+    au < exists ; 1998 ; 6 ; Zetetiké: Revista de Educação Matemática Volume 6 ; 1998 ; >
+    au < exists ; 1999 ; 7 ; Zetetiké: Revista de Educação Matemática Volume 7 ; 1999 ; >
+    au < exists ; 2000 ; 8 ; Zetetiké: Revista de Educação Matemática Volume 8 ; 2000 ; >
+    au < exists ; 2001 ; 9 ; Zetetiké: Revista de Educação Matemática Volume 9 ; 2001 ; >
+    au < exists ; 2002 ; 10 ; Zetetiké: Revista de Educação Matemática Volume 10 ; 2002 ; >
+    au < exists ; 2003 ; 11 ; Zetetiké: Revista de Educação Matemática Volume 11 ; 2003 ; >
+    au < exists ; 2004 ; 12 ; Zetetiké: Revista de Educação Matemática Volume 12 ; 2004 ; >
+    au < exists ; 2005 ; 13 ; Zetetiké: Revista de Educação Matemática Volume 13 ; 2005 ; >
+    au < exists ; 2006 ; 14 ; Zetetiké: Revista de Educação Matemática Volume 14 ; 2006 ; >
+    au < exists ; 2007 ; 15 ; Zetetiké: Revista de Educação Matemática Volume 15 ; 2007 ; >
+    au < exists ; 2008 ; 16 ; Zetetiké: Revista de Educação Matemática Volume 16 ; 2008 ; >
+    au < exists ; 2009 ; 17 ; Zetetiké: Revista de Educação Matemática Volume 17 ; 2009 ; >
+    au < exists ; 2010 ; 18 ; Zetetiké: Revista de Educação Matemática Volume 18 ; 2010 ; >
+    au < exists ; 2011 ; 19 ; Zetetiké: Revista de Educação Matemática Volume 19 ; 2011 ; >
+    au < exists ; 2012 ; 20 ; Zetetiké: Revista de Educação Matemática Volume 20 ; 2012 ; >
+    au < exists ; 2013 ; 21 ; Zetetiké: Revista de Educação Matemática Volume 21 ; 2013 ; >
+    au < exists ; 2014 ; 22 ; Zetetiké: Revista de Educação Matemática Volume 22 ; 2014 ; >
+    }
   }
 
   {
