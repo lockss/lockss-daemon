@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -92,12 +92,8 @@
     </list>
   </entry>
   <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
-  </entry> 
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -108,12 +104,24 @@
     <string>org.lockss.plugin.projmuse.ProjectMuseHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseUrlConsumerFactory</string>
+  </entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.projmuse.ProjectMuseUrlNormalizer</string>
   </entry>
   <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory</string>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
