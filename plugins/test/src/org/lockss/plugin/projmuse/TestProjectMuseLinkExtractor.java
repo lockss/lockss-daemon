@@ -41,6 +41,8 @@ import org.lockss.test.*;
 
 public class TestProjectMuseLinkExtractor extends LockssTestCase {
   
+  private static final MockArchivalUnit mau = new MockArchivalUnit();
+  
   public void testGoodInput() throws Exception {
     String input =
         "<HTML>\n" + 
@@ -52,7 +54,7 @@ public class TestProjectMuseLinkExtractor extends LockssTestCase {
         "<meta name=\"citation_journal_title\" content=\"Advertising & Society Review\">\n" + 
         "<meta name=\"citation_volume\" content=\"7\">\n" + 
         "<meta name=\"citation_issue\" content=\"1\">\n" + 
-        "<meta name=\"citation_fulltext_html_url\" content=\"https://muse.jhu.edu/journals/american_imago/v007/7.11s.html\">\n" + 
+        "<meta name=\"citation_fulltext_html_url\" content=\"http://muse.jhu.edu/journals/american_imago/v007/7.11s.html\">\n" + 
         "<meta name=\"citation_issn\" content=\"1534-7311\">\n" + 
         "</head>\n" + 
         "<body>  \n" + 
@@ -64,6 +66,7 @@ public class TestProjectMuseLinkExtractor extends LockssTestCase {
         "  </tr>\n" + 
         "  <tr> \n" + 
         "    <td valign=\"top\">\n" + 
+        "    <a href=\"http://muse.jhu.edu/journals/american_imago/v007/7.11s.pdf\">\n</a>" + 
         "     </td>\n" + 
         "    <td valign=\"top\">\n" + 
         "        <table width=\"550\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n" + 
@@ -71,7 +74,6 @@ public class TestProjectMuseLinkExtractor extends LockssTestCase {
         "          <td class=\"content\"> \n" + 
         "            <!--TITLE-->\n" + 
         "           <p class=\"style1\">An Anthropology</p>\n" + 
-        "            <p><a href=\"#S\" name=\"author\">M S</a></p><br />\n" + 
         "            <p>in the store.<a name=\"NOTE1\" href=\"#FOOT1\"><sup>1</sup></a></p>\n" + 
         " <hr>\n" + 
         "<hr>\n" + 
@@ -88,12 +90,23 @@ public class TestProjectMuseLinkExtractor extends LockssTestCase {
     
     ProjectMuseHtmlLinkExtractorFactory plef = new ProjectMuseHtmlLinkExtractorFactory();
     LinkExtractor ple = plef.createLinkExtractor("any");
-    List<String> out = doExtractUrls(ple, input);
+    mau.setConfiguration(ConfigurationUtil.fromArgs(
+        ConfigParamDescr.BASE_URL.getKey(), "http://muse.jhu.edu/"));
+    List<String> out = doExtractUrls(ple, input, mau);
     assertTrue(out.size() != 0);
     assertIsomorphic(Arrays.asList("http://muse.jhu.edu/images/journals/banners/asr/logo.gif",
-                                   "http://muse.jhu.edu/journals/american_imago/v007/7.11s.html#S",
-                                   "http://muse.jhu.edu/journals/american_imago/v007/7.11s.html#FOOT1",
+                                   "http://muse.jhu.edu/journals/american_imago/v007/7.11s.pdf",
+                                   "http://muse.jhu.edu/journals/american_imago/v007/7.11s.foo#FOOT1",
                                    "http://muse.jhu.edu/images/journals/navigational/asr/nav_bottom.gif"),
+                     out);
+    mau.setConfiguration(ConfigurationUtil.fromArgs(
+        ConfigParamDescr.BASE_URL.getKey(), "https://muse.jhu.edu/"));
+    out = doExtractUrls(ple, input, mau);
+    assertTrue(out.size() != 0);
+    assertIsomorphic(Arrays.asList("https://muse.jhu.edu/images/journals/banners/asr/logo.gif",
+                                   "https://muse.jhu.edu/journals/american_imago/v007/7.11s.pdf",
+                                   "https://muse.jhu.edu/journals/american_imago/v007/7.11s.foo#FOOT1",
+                                   "https://muse.jhu.edu/images/journals/navigational/asr/nav_bottom.gif"),
                      out);
   }
   
@@ -112,26 +125,30 @@ public class TestProjectMuseLinkExtractor extends LockssTestCase {
     
     ProjectMuseHtmlLinkExtractorFactory plef = new ProjectMuseHtmlLinkExtractorFactory();
     LinkExtractor ple = plef.createLinkExtractor("mimetype");
+    mau.setConfiguration(ConfigurationUtil.fromArgs(
+        ConfigParamDescr.BASE_URL.getKey(), "http://muse.jhu.edu/"));
     try {
-      List<String> out = doExtractUrls(ple, input);
+      List<String> out = doExtractUrls(ple, input, mau);
       assertTrue(out.size() == 0);
     }
     catch (Exception unexpected) {
       fail("Exception ");
     }
+    mau.setConfiguration(ConfigurationUtil.fromArgs(
+        ConfigParamDescr.BASE_URL.getKey(), "https://muse.jhu.edu/"));
+    List<String> out = doExtractUrls(ple, input, mau);
+    assertTrue(out.size() == 0);
   }
   
   protected List<String> doExtractUrls(LinkExtractor le,
-                                       String input)
+                                       String input,
+                                       MockArchivalUnit mau)
       throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
-    mau.setConfiguration(ConfigurationUtil.fromArgs(
-        ConfigParamDescr.BASE_URL.getKey(), "http://muse.jhu.edu/"));
     final List<String> out = new ArrayList<String>();
     le.extractUrls(mau,
                    new StringInputStream(input),
                    "UTF-8",
-                   "http://muse.jhu.edu/journals/american_imago/v007/7.11s.html",
+                   "https://muse.jhu.edu/journals/american_imago/v007/7.11s.foo",
                    new Callback() {
                      @Override public void foundLink(String url) {
                        out.add(url);
