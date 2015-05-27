@@ -2251,7 +2251,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       param[base_url] = http://qualitysafety.bmj.com/
       comment[continues] = 0963-8172
       
-      au < HighWirePressH20Plugin ; exists ; 2007 ; BMJ Quality & Safety Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 2007 ; BMJ Quality & Safety Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; ready ; 2008 ; BMJ Quality & Safety Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Quality & Safety Volume 18 ; 18 > #unable to populate permission
       au < HighWirePressH20Plugin ; notReady ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 > #unable to populate permission
