@@ -69,30 +69,19 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
     assertNull(norm.normalizeUrl(null, mauHttps));
     // Off-site URL stays the same
     assertEquals("http://other.example.com/favicon.ico",
-                 norm.normalizeUrl("http://other.example.com/favicon.ico", mauHttp));
+                 norm.normalizeUrl("http://other.example.com/favicon.ico", mauHttps));
     assertEquals("https://other.example.com/favicon.ico",
-                 norm.normalizeUrl("https://other.example.com/favicon.ico", mauHttps));
-    // On-site HTTP URL stays the same
-    assertEquals("http://www.example.com/favicon.ico",
-                 norm.normalizeUrl("http://www.example.com/favicon.ico", mauHttp));
-    // On-site HTTPS URL stays the same
-    assertEquals("https://www.example.com/favicon.ico",
-                 norm.normalizeUrl("https://www.example.com/favicon.ico", mauHttps));
-    // Normalized to HTTP/S if base URL protocol does not match
-    assertEquals("http://www.example.com/favicon.ico",
-                 norm.normalizeUrl("https://www.example.com/favicon.ico", mauHttp));
-    assertEquals("https://www.example.com/favicon.ico",
-                 norm.normalizeUrl("http://www.example.com/favicon.ico", mauHttps));
+                 norm.normalizeUrl("https://other.example.com/favicon.ico", mauHttp));
   }
   
   public void testSuffix() throws Exception {
-    // HTTP base URL: trim suffix and normalize HTTPS to HTTP
+    // HTTP base URL: trim suffix and nothing else
     assertEquals("http://www.example.com/foo.css",
                  norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttp));
-    assertEquals("http://www.example.com/foo.css",
-                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttp));
-    // HTTPS base URL: trim suffix and normalize HTTP to HTTPS
     assertEquals("https://www.example.com/foo.css",
+                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttp));
+    // HTTPS base URL: trim suffix and nothing else
+    assertEquals("http://www.example.com/foo.css",
                  norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttps));
     assertEquals("https://www.example.com/foo.css",
                  norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttps));

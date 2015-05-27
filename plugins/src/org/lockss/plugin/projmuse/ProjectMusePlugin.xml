@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -99,6 +99,10 @@
     <list>
       <string>"%sjournals/%s/v%03d/[^_/]+\.(html|pdf)$", base_url, journal_dir, volume</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

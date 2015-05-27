@@ -32,8 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.util.Iterator;
-
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.ArchivalUnit;
 

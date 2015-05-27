@@ -143,7 +143,7 @@ public class TestProjectMuseHtmlFilterFactory extends LockssTestCase {
           "</table>\n" + 
           "<div class=\"footer\">THIS CONTENT GOES</div>\n" +
           "<div class=\"legend\">THIS CONTENT STAYS</div>\n" +
-          "</body></head>";
+          "</body></html>";
   // All html tags get removed by the projmuse filter rule after hash filtering
   private static final String frequentHtmlFiltered =
       "<HTML> " + 
@@ -179,7 +179,7 @@ public class TestProjectMuseHtmlFilterFactory extends LockssTestCase {
       "</tr> " + 
       "</table> " + 
       "<div class=\"legend\">THIS CONTENT STAYS</div> " +
-      "</body></head>";
+      "</body></html>";
   
   public void testFiltering() throws Exception {
     InputStream inA;

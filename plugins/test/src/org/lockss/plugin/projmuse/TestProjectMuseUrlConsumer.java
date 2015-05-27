@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: TestProjectMuseUrlConsumer.java 40407 2015-03-11 01:28:09Z thib_gc $
  */
 
 /*
@@ -32,21 +32,20 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import org.apache.commons.lang3.StringUtils;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.*;
+import org.lockss.plugin.FetchedUrlData;
+import org.lockss.test.*;
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 
-/**
- * @since 1.67.5
- */
-public class ProjectMuseUrlNormalizer implements UrlNormalizer {
+public class TestProjectMuseUrlConsumer extends LockssTestCase {
 
-  protected static final String VERSION_SUFFIX = "?v=";
-
-  @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-    url = StringUtils.substringBeforeLast(url, VERSION_SUFFIX);
-    return url;
+  public void testCreation() throws Exception {
+    ProjectMuseUrlConsumerFactory pucf = new ProjectMuseUrlConsumerFactory();
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockCrawlerFacade facade = new MockCrawler(mau).new MockCrawlerFacade();
+    FetchedUrlData fud = new FetchedUrlData(
+        "/tmp/foo", "/tmp/foo", new StringInputStream(""), new org.lockss.util.CIProperties(),
+        null, null);
+    pucf.createUrlConsumer(facade, fud);
   }
-
+  
 }
