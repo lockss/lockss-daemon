@@ -90,6 +90,19 @@
     {
 
       title <
+        name = Journal of Insects as Food and Feed ;
+        eissn = 2352-4588 
+      >
+
+      param[journal_id] = jiff
+
+      au < exists ; exists ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = Quality Assurance and Safety of Crops & Foods ;
         issn = 1757-8361 ;
         eissn = 1757-837X 
