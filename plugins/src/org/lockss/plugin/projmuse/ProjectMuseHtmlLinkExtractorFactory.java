@@ -55,41 +55,30 @@ public class ProjectMuseHtmlLinkExtractorFactory implements LinkExtractorFactory
   private static final Logger log = Logger.getLogger(ProjectMuseHtmlLinkExtractorFactory.class);
   
   @Override
-  public LinkExtractor createLinkExtractor(String mimeType)
-      throws PluginException {
-    
-    return new ProjectMuseHtmlLinkExtractor();
-  }
-  
-  public class ProjectMuseHtmlLinkExtractor extends JsoupHtmlLinkExtractor {
-    
-    protected ArchivalUnit au = null;
-    
-    protected class LclCallback implements Callback {
-      Callback cb;
-      
-      public void setOriginal(Callback cb) {
-        this.cb = cb;
-      }
-      
+  public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
+    return new JsoupHtmlLinkExtractor() {
       @Override
-      public void foundLink(String url) {
-        if (au != null) {
-          url = ProjectMuseUtil.baseUrlHostCheck(au, url);
-        }
-        cb.foundLink(url);
+      public void extractUrls(final ArchivalUnit au,
+                              InputStream in,
+                              String encoding,
+                              String srcUrl,
+                              final Callback cb)
+          throws IOException, PluginException {
+        super.extractUrls(au,
+                          in,
+                          encoding,
+                          srcUrl,
+                          new Callback() {
+                              @Override
+                              public void foundLink(String url) {
+                                if (au != null) {
+                                  url = ProjectMuseUtil.baseUrlHostCheck(au, url);
+                                }
+                                cb.foundLink(url);
+                              }
+                          });
       }
     };
-    
-    
-    @Override
-    public void extractUrls(ArchivalUnit au, InputStream in, String encoding,
-        String srcUrl, Callback cb) throws IOException, PluginException {
-      this.au = au;
-      LclCallback wrap = new LclCallback();
-      wrap.setOriginal(cb);
-      super.extractUrls(au, in, encoding, srcUrl, wrap);
-    }
-    
   }
+  
 }

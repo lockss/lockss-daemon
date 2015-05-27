@@ -37,7 +37,6 @@ import java.util.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.extractor.LinkExtractor.Callback;
-import org.lockss.plugin.projmuse.ProjectMuseHtmlLinkExtractorFactory.ProjectMuseHtmlLinkExtractor;
 import org.lockss.test.*;
 
 public class TestProjectMuseLinkExtractor extends LockssTestCase {
@@ -88,8 +87,7 @@ public class TestProjectMuseLinkExtractor extends LockssTestCase {
         "</body></html>";
     
     ProjectMuseHtmlLinkExtractorFactory plef = new ProjectMuseHtmlLinkExtractorFactory();
-    ProjectMuseHtmlLinkExtractor ple = 
-        (ProjectMuseHtmlLinkExtractor) plef.createLinkExtractor("any");
+    LinkExtractor ple = plef.createLinkExtractor("any");
     List<String> out = doExtractUrls(ple, input);
     assertTrue(out.size() != 0);
     assertIsomorphic(Arrays.asList("http://muse.jhu.edu/images/journals/banners/asr/logo.gif",
@@ -113,8 +111,7 @@ public class TestProjectMuseLinkExtractor extends LockssTestCase {
         "</response>";
     
     ProjectMuseHtmlLinkExtractorFactory plef = new ProjectMuseHtmlLinkExtractorFactory();
-    ProjectMuseHtmlLinkExtractor ple = 
-        (ProjectMuseHtmlLinkExtractor)plef.createLinkExtractor("mimetype");
+    LinkExtractor ple = plef.createLinkExtractor("mimetype");
     try {
       List<String> out = doExtractUrls(ple, input);
       assertTrue(out.size() == 0);
