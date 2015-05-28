@@ -266,7 +266,6 @@ public class XPathXmlMetadataParser  {
    */
   public List<ArticleMetadata> extractMetadataFromDocument(MetadataTarget target, Document doc)
   {
-
     if((gXPathList == null) || (aXPathList == null)) {
       log.warning("The XML schema was not set for this XML Document");
       return null; // no articles extacted
@@ -297,16 +296,30 @@ public class XPathXmlMetadataParser  {
           // if no articles, this returns an empty nodelist, not null
           result = articlePath.evaluate(doc, XPathConstants.NODESET);
           NodeList nodeList = (NodeList)result;
+          log.debug3("Beginning article nodeList loop: " + nodeList.getLength() + " items");
+          long startTime = 0;
+          long endTime = 0;
           for (int j = 0; j < nodeList.getLength(); j++) {
             Node articleNode = nodeList.item(j);
-            log.debug3("Article node");
+            if ( log.isDebug3()) { 
+              startTime = System.currentTimeMillis();
+              log.debug3("Article node " + j);
+            }
             if (articleNode == null) {
               log.debug3("NULL article node");
               continue;
             } else {
               ArticleMetadata singleAM = extractDataFromNode(articleNode, aXPathList);
+              // detach the node from the parent - huge performance improvement
+              // do this AFTER extraction which allows for finding information up the tree
+              // but previous article nodes will have been removed, cannot search previous article siblings
+              articleNode.getParentNode().removeChild(articleNode);
               addGlobalToArticleAM(globalAM, singleAM);
               amList.add(singleAM); // before going on to the next individual item
+            }
+            if (log.isDebug3()) {
+              endTime = System.currentTimeMillis();
+              log.debug3("#" + j + " node eval: " + ((endTime - startTime)) + " millisecs");
             }
           }
         }

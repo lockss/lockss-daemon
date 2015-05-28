@@ -62,7 +62,7 @@ implements SourceXmlSchemaHelper {
    *  the remaining metadata from the article metadata file 
    */
 
-  private static final String top_node = "(/article | /simple-article | /exam | /book-review)";
+  private static final String top_node = "(/article | /simple-article | /converted-article | /exam | /book-review)";
   
   // relative to the top_node, these two nodes are siblings and contain all the info we need
   private static final String top_head = "(head | simple-head | book-review-head)";
