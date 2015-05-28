@@ -15,8 +15,10 @@
     nondefparam[content_domain] = partner.archive-it.org
     implicit < status ; name ; param[collection] >
 
+    nondefparam[user_pass]=Ca.GovDocs:webarchive1
+
     au < released ; Government of Canada Publications ; 3572 >
-    au < testing ; Government of Canada Web Content ; 5060 >
+    au < ready ; Government of Canada Web Content ; 5060 >
 
   }
 
