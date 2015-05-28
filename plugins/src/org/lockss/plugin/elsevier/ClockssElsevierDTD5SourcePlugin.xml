@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,14 +9,14 @@
   </entry> 
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>      
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -28,27 +28,6 @@
       </entry>
     </map>
   </entry>
-<!--  REMOVE DEBUGGING ONLY -->
-   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,"^%s", base_url</string>
-      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
-      <!--  for local testing so I don't kill my machine -->
-<!--  <string>1,"^%s%d/CLKS0000000000003([A-Z]\.tar)", base_url, year</string> -->   
-<!-- for official testing on content5 -->
-      <string>1,"^%s%d/CLKS0000000000023([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKS000000000000[1-3]([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKSOA0000000000[1-3]([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKSOA0010000000[1-3]([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKSOA0020000000[1-3]([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKSOA0030000000[1-3]([A-Z]\.tar)", base_url, year</string>
-<!--  -->      
-<!-- this one is for the local test files -->
-      <string>1,"^%s%d/CLKS003", base_url, year</string>
-    </list>
-  </entry>
-<!-- END OF DEBUGGIN ONLY -->            
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
