@@ -1,0 +1,187 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.acsess.ACSESSJournalsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+    <entry>
+    <string>plugin_name</string>
+    <string>Alliance of Crop, Soil, and Environmental Science Societies Journals Plugin</string>
+  </entry>
+  <entry>
+  <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Alliance of Crop, Soil, and Environmental Science Societies Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <!-- https://dl.sciencesocieties.org/publications/aj/tocs/103 -->
+    <string>au_start_url</string>
+    <string>"%spublications/%s/tocs/%s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- /sites/all/modules/cck/theme/content-module.css?D -->
+      <!-- /webscripts/acs.js?D -->
+      <string>1,"^%s.*\.(bmp|css(\?D)?|gif|ico|jpe?g|js(\?D)?|png|tif?f|swf)$", base_url</string>
+      <string>4,"^%s", base_url</string>
+      <!-- 
+        - toc: https://dl.sciencesocieties.org/publications/aj/tocs/106
+        - issue: https://dl.sciencesocieties.org/publications/aj/tocs/106/1
+        - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
+        - preview pdf (abs 2): https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/26/preview
+			  - html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
+			  - pdf: https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
+			  - tables only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=tables&wrapper=no
+			  - figures only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=figures&wrapper=no
+			  - citation manager: https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/1/57
+			                      https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/cns/47/1/12
+        - EndNote: https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
+        - ProCite Ris: https://dl.sciencesocieties.org/publications/citation-manager/down/pc/aj/106/5/1677
+        - Zotero Ris: https://dl.sciencesocieties.org/publications/citation-manager/down/zt/aj/106/5/1677
+        - MARC: https://dl.sciencesocieties.org/publications/citation-manager/down/marc/aj/106/5/1677
+        - RefWorks: https://dl.sciencesocieties.org/publications/citation-manager/down/refworks/aj/106/5/1677
+      -->
+      <string>1,"%spublications/%s/tocs/%s(/[0-9]+)?$", base_url, journal_id, volume_name</string>
+      <string>1,"%spublications/%s/(abstracts|articles|pdfs)/%s/[0-9]+/[0-9]+(/preview)?$", base_url, journal_id, volume_name</string>
+      <string>1,"%spublications/%s/articles/[0-9]+/[0-9]+/[0-9]+\?show-t-f=(tables|figures)&amp;wrapper=no", base_url, journal_id, volume_name</string>
+      <string>1,"%spublications/citation-manager/prev/zt/%s/%s/[0-9]+/[0-9]+/[0-9]+$", base_url, journal_id, volume_name</string>a
+      <string>1,"%spublications/citation-manager/down/(en|pc|zt|marc|refworks)/%s/%s/[0-9]+/[0-9]+$", base_url, journal_id, volume_name</string>    
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"%spublications/%s/(articles|pdfs)/%s/[0-9]+/[0-9]+$", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <!-- https://dl.sciencesocieties.org/publications/ -->
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <!-- https://dl.sciencesocieties.org/publications/aj/tocs/103 -->
+        <string>au_volume</string>
+        <string>"%s%s/tocs/%s", base_url, , journal_id, volume</string>
+      </entry>
+      <entry>
+        <!-- https://dl.sciencesocieties.org/publications/aj/tocs/103/1 -->
+        <string>au_issue</string>
+        <string>"%s%s/tocs/%s/%s", base_url, journal_id, volume, issue</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.acsess.ACSESSJournalsHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.acsess.ACSESSJournalsUrlNormalizer</string>
+  </entry>  
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.acsess.ACSESSJournalsArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.acsess.ACSESSJournalsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.acsess.ACSESSJournalsRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.acsess.ACSESSJournalsRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.acsess.ACSESSJournalsHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+</map>
