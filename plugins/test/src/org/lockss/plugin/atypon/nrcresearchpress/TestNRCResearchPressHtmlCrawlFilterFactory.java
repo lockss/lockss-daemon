@@ -146,7 +146,7 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
           "<li id=\"ref1\"><span class=\"numbering\"></span>" +
           "</li>" +
           "</ul>";
-  
+
   private static final String articleNav=
       "<p class=\"float-right no-margin\">" +
           "<a title=\"Previous Article\" class=\"white-link-right\" href=\"/doi/abs/10.1111/z90-092\">" +
@@ -161,7 +161,7 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
   private static final String articleNavFiltered=
       "<p class=\"float-right no-margin\">" +
           "   </p>";  
-  
+
   private static final String issueNav=
       "<p class=\"float-right\">" +
           " <a title=\"Previous Issue\" class=\"red-link-right\" href=\"/toc/cjb/91/5\">" +
@@ -171,24 +171,29 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
           " </p>";        
   private static final String issueNavFiltered=
       "<p class=\"float-right\">" +
-          "   </p>";        
+          "   </p>";      
 
+  private static final String pptLinks=
+      "<div>" +
+          "<a target=\"_blank\" id=\"highResImg\" href=\"/na101/home/literatum/foo/larg/foo.jpeg\">High Resolution Image</a>" +
+          "<a id=\"pptLink\" href=\"/action/downloadFigures?doi=10.1139/foo&amp;id=f2\">Download PowerPoint Slide</a>" +
+          "</div>";
+  private static final String pptLinksFiltered=
+      "<div>" +
+          "<a target=\"_blank\" id=\"highResImg\" href=\"/na101/home/literatum/foo/larg/foo.jpeg\">High Resolution Image</a>" +
+          "</div>";
 
-  //Variant to test with Crawl Filter
-  public static class TestCrawl extends TestNRCResearchPressHtmlCrawlFilterFactory {
-
-    public void setUp() throws Exception {
-      super.setUp();
-      fact = new ClockssNRCResearchPressHtmlCrawlFilterFactory();
-    }
-
+  public void setUp() throws Exception {
+    super.setUp();
+    fact = new ClockssNRCResearchPressHtmlCrawlFilterFactory();
   }
 
+  public void testPPTLinks() throws Exception {
+    InputStream actIn1 = fact.createFilteredInputStream(mau,
+        new StringInputStream(pptLinks), Constants.DEFAULT_ENCODING);
+    assertEquals(pptLinksFiltered, StringUtil.fromInputStream(actIn1));
 
-  public static Test suite() {
-    return variantSuites(new Class[] {
-        TestCrawl.class,
-    });
+
   }
 
   public void testAlsoReadHtmlFiltering() throws Exception {
@@ -218,7 +223,7 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
     actIn1 = fact.createFilteredInputStream(mau,
         new StringInputStream(HtmlTestCrossLinks), Constants.DEFAULT_ENCODING);
     assertEquals(HtmlTestCrossLinksFiltered, StringUtil.fromInputStream(actIn1));
-    
+
     actIn1 = fact.createFilteredInputStream(mau,
         new StringInputStream(articleNav), Constants.DEFAULT_ENCODING);
     assertEquals(articleNavFiltered, StringUtil.fromInputStream(actIn1));

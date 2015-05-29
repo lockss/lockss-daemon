@@ -72,6 +72,9 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory extends BaseAtyponHtm
       HtmlNodeFilters.tagWithAttribute("a",  "class", "white-link-right"),
       // in case of overcrawl, don't follow next-prev issue links on toc
       HtmlNodeFilters.tagWithAttributeRegex("a",  "title", "(Previous|Next) Issue"),
+      // download of image now seems to be ppt slides which can cause hash issues
+      // and are currently causing 500 errors. Just dont' collect
+      HtmlNodeFilters.tagWithAttribute("a",  "id", "pptLink"),
       
     };
     @Override
