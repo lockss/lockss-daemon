@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -25,14 +25,14 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Wiley Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>"Wiley Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>13</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%d&quot;, base_url, year</string>
+    <string>"%s%d", base_url, year</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

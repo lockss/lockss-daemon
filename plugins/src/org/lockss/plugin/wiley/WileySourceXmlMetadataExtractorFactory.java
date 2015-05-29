@@ -33,9 +33,12 @@
 package org.lockss.plugin.wiley;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -69,6 +72,8 @@ extends SourceXmlMetadataExtractorFactory {
   // they don't follow this pattern so can't be decoded
   static private final Pattern JOURNAL_PATTERN = Pattern.compile(
       "/wiley-[^/]+/[0-9]{4}/[A-Z]/([A-Z]+)([0-9]+)\\.([0-9]+)");
+  static private final Pattern XML_SUFFIX = Pattern.compile(
+      "/([^/]+?)(\\.wml(2)?)?\\.xml$");
 
   static Logger log = Logger.getLogger(WileySourceXmlMetadataExtractorFactory.class);
 
@@ -112,7 +117,41 @@ extends SourceXmlMetadataExtractorFactory {
       return WileyHelper;
     }
 
-
+    
+    /*
+     * Sometimes Wiley doesn't list the pdf file associated with the metadata.
+     * See if the pdf exists with just the suffix changed to pdf. The possible
+     * suffixes to remove are (.xml|.wml.xml|.wml2.xml)
+     * TODO: the xml might be sufficient - if it's abstract only or full-text
+     * xml 
+     */
+    
+    
+    @Override
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
+        CachedUrl cu,
+        ArticleMetadata oneAM) {
+      
+      String md_url = cu.getUrl();
+      String cuBase = FilenameUtils.getFullPath(md_url);
+      
+      List<String> returnList = new ArrayList<String>();
+      String fn_key = helper.getFilenameXPathKey();  
+      String filenameValue = oneAM.getRaw(fn_key);
+      if (filenameValue != null) {
+        log.debug3("add " + filenameValue + " to filenames to check");
+        returnList.add(cuBase + filenameValue);
+      }
+      /* go for an alternate */
+      Matcher mat = XML_SUFFIX.matcher(md_url);
+      if (mat.find()) {
+        filenameValue = mat.group(1);
+        log.debug3("add " + filenameValue + " to filenames to check");
+        returnList.add(cuBase + filenameValue + ".pdf");
+      }
+      return returnList;
+    }
+    
   }
 }
 
