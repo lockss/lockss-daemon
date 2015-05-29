@@ -1310,7 +1310,7 @@
     au < zapped ; finished ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
     au < finished ; frozen ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
     au < crawling ; exists ; 2013 ; The ISME Journal Volume 7 ; 2013 ; 7 >
-    au < testing ; exists ; 2014 ; The ISME Journal Volume 8 ; 2014 ; 8 >
+    au < ready ; exists ; 2014 ; The ISME Journal Volume 8 ; 2014 ; 8 >
 
   }
 
@@ -1404,7 +1404,7 @@
     au < finished ; crawling ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
     au < finished ; crawling ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
     au < crawling ; exists ; 2013 ; Journal of Cerebral Blood Flow and Metabolism Volume 33 ; 2013 ; 33 >
-    au < testing ; exists ; 2014 ; Journal of Cerebral Blood Flow and Metabolism Volume 34 ; 2014 ; 34 >
+    au < ready ; exists ; 2014 ; Journal of Cerebral Blood Flow and Metabolism Volume 34 ; 2014 ; 34 >
 
   }
 
@@ -1479,7 +1479,7 @@
     au < finished ; crawling ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
     au < finished ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
     au < crawling ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 >
-    au < testing ; exists ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 >
+    au < ready ; exists ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 >
 
   }
 
@@ -1511,7 +1511,7 @@
     au < finished ; crawling ; 2011 ; Journal of Human Hypertension Volume 25 ; 2011 ; 25 >
     au < finished ; crawling ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
     au < crawling ; exists ; 2013 ; Journal of Human Hypertension Volume 27 ; 2013 ; 27 >
-    au < testing ; exists ; 2014 ; Journal of Human Hypertension Volume 28 ; 2014 ; 28 >
+    au < ready ; exists ; 2014 ; Journal of Human Hypertension Volume 28 ; 2014 ; 28 >
 
   }
 
@@ -1689,7 +1689,7 @@
     au < finished ; crawling ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 >
     au < finished ; crawling ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
     au < crawling ; exists ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 >
-    au < testing ; exists ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 >
+    au < ready ; exists ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 >
  
   }
 
@@ -1704,7 +1704,7 @@
 
     param[journal_id] = ki
 
-    au < testing ; exists ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 >
+    au < ready ; exists ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 >
     au < testing ; exists ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 >
     au < testing ; exists ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 >
     au < testing ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
