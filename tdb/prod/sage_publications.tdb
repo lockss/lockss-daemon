@@ -5287,6 +5287,22 @@
 
     }
 
+  {
+
+    title <
+      name = Cardiovascular and Thoracic Open ;
+      eissn = 2055-5520 ;
+      issnl = 2055-5520
+    >
+
+      param[base_url] = http://cto.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
