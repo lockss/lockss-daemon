@@ -34,11 +34,10 @@ package org.lockss.plugin.acsess;
 
 import java.io.InputStream;
 import java.io.Reader;
-import java.util.Vector;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
-import org.htmlparser.tags.*;
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.HtmlCompoundTransform;
@@ -47,7 +46,6 @@ import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 import org.lockss.util.ReaderInputStream;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
@@ -59,68 +57,59 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in, 
                                                String encoding) {
     NodeFilter[] includeNodes = new NodeFilter[] {
-        // ?? review when able to crawl from manifest pages
-        // <ul> and <li> without attributes (unlike TOC/abs/ref breadcrumbs)
-        // https://dl.sciencesocieties.org/publications/aj/tocs/106
-        new NodeFilter() {
-          @Override
-          public boolean accept(Node node) {
-            if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-                                                      "/toc/").accept(node)) {
-              Node liParent = node.getParent();
-              if (liParent instanceof Bullet) {
-                Bullet li = (Bullet)liParent;
-                Vector liAttr = li.getAttributesEx();
-                if (liAttr != null && liAttr.size() == 1) {
-                  Node ulParent = li.getParent();
-                  if (ulParent instanceof BulletList) {
-                    BulletList ul = (BulletList)ulParent;
-                    Vector ulAttr = ul.getAttributesEx();
-                    return ulAttr != null && ulAttr.size() == 1;
-                  }
-                }
-              }
-            }
-            return false;
-          }
-        },
         // toc - content
         // <div class="acsMarkLogicWrapper">
         HtmlNodeFilters.tagWithAttribute("div", "class", "acsMarkLogicWrapper"),        
         // abs, full - content block
         // <div id="content-block"
         HtmlNodeFilters.tagWithAttribute("div", "id", "content-block"),
+        // abs, full - content box - left sidebar
+        // <div class"content-box"
+        HtmlNodeFilters.tagWithAttribute("div", "class", "content-box"),
         // tables-only - tables
         // <div class="table-expansion"
         HtmlNodeFilters.tagWithAttribute("div", "class", "table-expansion"),
         // figures-only - images
         // <div class="fig-expansion"
         HtmlNodeFilters.tagWithAttribute("div", "class", "fig-expansion"),
-                                                                  
+        // ?? citation manager - footer - what to include - no unique class/id            
+        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
+        // <body class="not-front not-logged-in page-publications no-sidebars lightbox-processed">
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "no-sidebars"),                                                          
     };
     
-    // handled by parent: script, sfxlink, stylesheet, pdf file sise
-    // <head> tag, <li> item has the text "Cited by", accessIcon, 
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // filter out javascript
-        HtmlNodeFilters.tag("script"),
+        // generally we should not remove the whole <head> tag
+        // since it contains metadata and css. However, since ris file is 
+        // used to extract metadata and css paths looks varied, it makes
+        // sense to remove the whole <head> tag
+        new TagNameFilter("head"),
+        new TagNameFilter("script"),
+        new TagNameFilter("noscript"),
+        // stylesheets
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         //filter out comments
         HtmlNodeFilters.comment(),
         // toc - links to facebook and twitter near footer
-         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),  
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),  
         // abs, full - all left column except Citation Mgr (download citations)
         HtmlNodeFilters.allExceptSubtree(
-           HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article-cb-main"),
+           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cb-contents"),
              HtmlNodeFilters.tagWithAttributeRegex(
                     "a", "href", "/publications/citation-manager/")),                                           
           
         // ?? citation manager - footer - what to include - no unique class/id            
         // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
-
+        // <div id="footer"> 
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),    
+        // ?? hash out because it might be consistent at different download time
+        // <div class="openAccess">OPEN ACCESS</div>
+        HtmlNodeFilters.tagWithAttribute("div", "class", "openAccess"),   
+        
     };
     
     return getFilteredInputStream(au, in, encoding, 
-                                   includeNodes, excludeNodes);
+                                  includeNodes, excludeNodes);
   }
   
   // Takes include and exclude nodes as input. Removes white spaces.
