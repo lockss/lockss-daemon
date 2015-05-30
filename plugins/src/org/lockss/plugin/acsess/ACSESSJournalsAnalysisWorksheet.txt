@@ -311,10 +311,8 @@ it with what you find---------
   Prev Article/Next Article links (sometimes these dead end at the 
   ends of an issue, sometimes not)
 
-* Article urls are non-deterministic: https://peerj.com/articles/46/
-  However currently only 2013 content exists, it's too soon to tell 
-  whether or not a crawl filter is needed.  We wait until the publisher adds 
-  2014 content then revisit.
+* Article urls are deterministic: 
+https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
   
 -----------------------LINK EXTRACTOR-------------------------------  
 Link extractor might not needed from visual verification.  Tables and 
