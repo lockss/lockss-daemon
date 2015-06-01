@@ -238,7 +238,7 @@
     param[base_url] = http://interface.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 2014 ; Interface Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Interface Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Interface Volume 24 ; 24 >
 
   }
