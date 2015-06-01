@@ -587,15 +587,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   int startReindexing(Connection conn) {
     final String DEBUG_HEADER = "startReindexing(): ";
+    if (log.isDebug2()) log.debug2("Starting...");
 
     if (!getDaemon().isDaemonInited()) {
-      log.debug(DEBUG_HEADER + "Daemon not initialized: No reindexing tasks.");
+      if (log.isDebug()) log.debug(DEBUG_HEADER
+	  + "Daemon not initialized: No reindexing tasks.");
       return 0;
     }
 
     // Don't run reindexing tasks run if reindexing is disabled.
     if (!reindexingEnabled) {
-      log.debug(DEBUG_HEADER
+      if (log.isDebug()) log.debug(DEBUG_HEADER
 	  + "Metadata manager reindexing is disabled: No reindexing tasks.");
       return 0;
     }
@@ -606,6 +608,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Try to add more concurrent reindexing tasks as long as the maximum
       // number of them is not reached.
       while (activeReindexingTasks.size() < maxReindexingTasks) {
+	if (log.isDebug3()) {
+	  log.debug3("activeReindexingTasks.size() = "
+	      + activeReindexingTasks.size());
+	  log.debug3("maxReindexingTasks = " + maxReindexingTasks);
+	}
         // Get the list of pending AUs to reindex.
 	List<PrioritizedAuId> auIdsToReindex = new ArrayList<PrioritizedAuId>();
 
@@ -613,6 +620,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  auIdsToReindex = mdManagerSql.getPrioritizedAuIdsToReindex(conn,
 	      maxReindexingTasks - activeReindexingTasks.size(),
 	      prioritizeIndexingNewAus);
+	  if (log.isDebug3()) log.debug3("auIdsToReindex.size() = "
+	      + auIdsToReindex.size());
 	}
 
 	// Nothing more to do if there are no pending AUs to reindex.
@@ -622,8 +631,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
         // Loop through all the pending AUs. 
         for (PrioritizedAuId auIdToReindex : auIdsToReindex) {
+	  if (log.isDebug3())
+	    log.debug3("auIdToReindex.auId = " + auIdToReindex.auId);
+
           // Get the next pending AU.
           ArchivalUnit au = pluginMgr.getAuFromId(auIdToReindex.auId);
+	  if (log.isDebug3()) log.debug3("au = " + au);
 
           // Check whether it does not exist.
           if (au == null) {
@@ -657,9 +670,57 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               }
             } else {
               // No: Schedule the pending AU.
-	      log.debug3(DEBUG_HEADER + "Creating the reindexing task for AU: "
-		  + au.getName());
+              if (log.isDebug3()) log.debug3(DEBUG_HEADER
+        	  + "Creating the reindexing task for AU: " + au.getName());
               ReindexingTask task = new ReindexingTask(au, ae);
+
+              // Get the AU database identifier, if any.
+              Long auSeq = null;
+
+              try {
+        	auSeq = findAuSeq(conn, au.getAuId());
+        	if (log.isDebug3())
+        	  log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+              } catch (DbException dbe) {
+                log.error("Error trying to locate in the database AU "
+                    + au.getName(), dbe);
+                break;
+              }
+
+              task.setNewAu(auSeq == null);
+
+              if (auSeq != null) {
+                // Only allow incremental extraction if not doing full reindex
+                boolean fullReindex = true;
+
+        	try {
+        	  fullReindex = mdManagerSql.needAuFullReindexing(conn, au);
+        	  if (log.isDebug3())
+        	    log.debug3(DEBUG_HEADER + "fullReindex = " + fullReindex);
+                } catch (DbException dbe) {
+                  log.warning("Error getting from the database the full "
+                      + "re-indexing flag for AU " + au.getName()
+                      + ": Doing full re-index", dbe);
+                }
+
+        	if (fullReindex) {
+        	  task.setFullReindex(fullReindex);
+        	} else {
+        	  long lastExtractTime = 0;
+
+        	  try {
+        	    lastExtractTime =
+        		mdManagerSql.getAuExtractionTime(conn, au);
+        	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+        		+ "lastExtractTime = " + lastExtractTime);
+        	  } catch (DbException dbe) {
+        	    log.warning("Error getting the last extraction time for AU "
+        		+ au.getName() + ": Doing a full re-index", dbe);
+        	  }
+
+        	  task.setLastExtractTime(lastExtractTime);
+        	}
+              }
 
               activeReindexingTasks.put(au.getAuId(), task);
 
@@ -2414,7 +2475,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A boolean indicating whether the reindexing of this AU should be
    *          performed as part of a batch.
    * @param fullReindex
-   *          Causes a full reindex by removing that AU from the database. 
+   *          Causes a full reindex by ignoring the last extraction time and
+   *          removing from the database the metadata of that AU. 
    * @return <code>true</code> if au was added for reindexing
    */
   public boolean enableAndAddAuToReindex(ArchivalUnit au, Connection conn,
@@ -2450,7 +2512,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
         DbManager.commitOrRollback(conn, log);
         return true;
-        
       } catch (DbException dbe) {
         log.error("Cannot add au to pending AUs: " + au.getName(), dbe);
         return false;
@@ -3923,5 +3984,36 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public Collection<String> getUnknownProviderAuIds() throws DbException {
     return getMetadataManagerSql().getUnknownProviderAuIds();
+  }
+
+  /**
+   * Provides the database identifier of an AU.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Long with the identifier of the AU.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findAuSeq(Connection conn, String auId) throws DbException {
+    final String DEBUG_HEADER = "findAuSeq(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    Long auSeq = null;
+
+    // Find the plugin.
+    Long pluginSeq =
+	  mdManagerSql.findPlugin(conn, PluginManager.pluginIdFromAuId(auId));
+
+    // Check whether the plugin exists.
+    if (pluginSeq != null) {
+      // Yes: Get the database identifier of the AU.
+      String auKey = PluginManager.auKeyFromAuId(auId);
+
+      auSeq = mdManagerSql.findAu(conn, pluginSeq, auKey);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
+    return auSeq;
   }
 }
