@@ -431,8 +431,8 @@
     au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 >
     au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 >
     au < crawling ; exists ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 >
-    au < exists ; exists ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 >
-    au < exists ; exists ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 >
+    au < manifest ; exists ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 >
+    au < manifest ; exists ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 >
     au < expected ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 >
 
   }
@@ -1659,7 +1659,7 @@
     au < finished ; frozen ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 >
     au < finished ; frozen ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
     au < crawling ; exists ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 >
-    au < testing ; exists ; 2014 ; The Journal of Investigative Dermatology Volume 134 ; 2014 ; 134 >
+    au < ready ; exists ; 2014 ; The Journal of Investigative Dermatology Volume 134 ; 2014 ; 134 >
 
   }
 
@@ -1705,19 +1705,19 @@
     param[journal_id] = ki
 
     au < ready ; exists ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 >
-    au < testing ; exists ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 >
-    au < testing ; exists ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 >
-    au < testing ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
-    au < testing ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
-    au < testing ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
+    au < ready ; exists ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 >
+    au < ready ; exists ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 >
+    au < ready ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
+    au < ready ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
+    au < ready ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
     au < finished ; crawling ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
     au < crawling ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
     au < exists ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 >
     au < ready ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 >
     au < ready ; exists ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 >
-    au < testing ; exists ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 >
-    au < testing ; exists ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 >
+    au < ready ; exists ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 >
+    au < ready ; exists ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 >
     au < manifest ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 >
     au < expected ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 >
 
