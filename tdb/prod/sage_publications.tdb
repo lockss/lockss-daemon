@@ -6744,7 +6744,7 @@
       au < exists ; 2012 ; Common Law World Review Volume 41 ; 41 >
       au < exists ; 2013 ; Common Law World Review Volume 42 ; 42 >
       au < manifest ; 2014 ; Common Law World Review Volume 43 ; 43 >
-      au < expected ; 2015 ; Common Law World Review Volume 44 ; 44 >
+      au < manifest ; 2015 ; Common Law World Review Volume 44 ; 44 >
 
   }
 
@@ -7142,18 +7142,18 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://cch.sagepub.com/
 
-      au < exists ; 2002 ; Competition & Change Volume 6 ; 6 >
-      au < exists ; 2003 ; Competition & Change Volume 7 ; 7 >
-      au < exists ; 2004 ; Competition & Change Volume 8 ; 8 >
-      au < exists ; 2005 ; Competition & Change Volume 9 ; 9 >
-      au < exists ; 2006 ; Competition & Change Volume 10 ; 10 >
-      au < exists ; 2007 ; Competition & Change Volume 11 ; 11 >
-      au < exists ; 2008 ; Competition & Change Volume 12 ; 12 >
-      au < exists ; 2009 ; Competition & Change Volume 13 ; 13 >
-      au < exists ; 2010 ; Competition & Change Volume 14 ; 14 >
-      au < exists ; 2011 ; Competition & Change Volume 15 ; 15 >
-      au < exists ; 2012 ; Competition & Change Volume 16 ; 16 >
-      au < exists ; 2013 ; Competition & Change Volume 17 ; 17 >
+      au < manifest ; 2002 ; Competition & Change Volume 6 ; 6 >
+      au < manifest ; 2003 ; Competition & Change Volume 7 ; 7 >
+      au < manifest ; 2004 ; Competition & Change Volume 8 ; 8 >
+      au < manifest ; 2005 ; Competition & Change Volume 9 ; 9 >
+      au < manifest ; 2006 ; Competition & Change Volume 10 ; 10 >
+      au < manifest ; 2007 ; Competition & Change Volume 11 ; 11 >
+      au < manifest ; 2008 ; Competition & Change Volume 12 ; 12 >
+      au < manifest ; 2009 ; Competition & Change Volume 13 ; 13 >
+      au < manifest ; 2010 ; Competition & Change Volume 14 ; 14 >
+      au < manifest ; 2011 ; Competition & Change Volume 15 ; 15 >
+      au < manifest ; 2012 ; Competition & Change Volume 16 ; 16 >
+      au < manifest ; 2013 ; Competition & Change Volume 17 ; 17 >
       au < manifest ; 2014 ; Competition & Change Volume 18 ; 18 >
       au < manifest ; 2015 ; Competition & Change Volume 19 ; 19 >
 
@@ -38803,7 +38803,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 >
         au < manifest ; 2013 ; Reviews of Human Factors and Ergonomics Volume 8 ; 8 >
         au < manifest ; 2014 ; Reviews of Human Factors and Ergonomics Volume 9 ; 9 >
-        au < expected ; 2015 ; Reviews of Human Factors and Ergonomics Volume 10 ; 10 >
+        au < manifest ; 2015 ; Reviews of Human Factors and Ergonomics Volume 10 ; 10 >
 
       }
 
@@ -40622,7 +40622,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2014 ; South Asian Journal of Human Resources Management Volume 1 ; 1 >
-        au < expected ; 2015 ; South Asian Journal of Human Resources Management Volume 2 ; 2 >
+        au < manifest ; 2015 ; South Asian Journal of Human Resources Management Volume 2 ; 2 >
 
     }
 
@@ -41217,7 +41217,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2013 ; Studies in Indian Politics Volume 1 ; 1 >
         au < manifest ; 2014 ; Studies in Indian Politics Volume 2 ; 2 >
-        au < expected ; 2015 ; Studies in Indian Politics Volume 3 ; 3 >
+        au < manifest ; 2015 ; Studies in Indian Politics Volume 3 ; 3 >
 
       }
 
@@ -47096,7 +47096,7 @@ comment[mpj] = now published by Brill
     au < released ; 2012 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 >
     au < manifest ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 >
     au < manifest ; 2014 ; South Asian Journal of Macroeconomics and Public Finance Volume 3 ; 3 >
-    au < expected ; 2015 ; South Asian Journal of Macroeconomics and Public Finance Volume 4 ; 4 >
+    au < manifest ; 2015 ; South Asian Journal of Macroeconomics and Public Finance Volume 4 ; 4 >
 
     }
 
