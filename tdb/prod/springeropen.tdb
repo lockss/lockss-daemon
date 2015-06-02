@@ -2301,6 +2301,21 @@
     {
   
         title <
+          name = Biophysics Reports ;
+          issn = 2364-3439 ;
+          eissn = 2364-3420
+        >
+  
+        param[base_url] = http://www.springer.com/41048/
+        param[journal_issn] = 2364-3439
+        comment[platform] = Springer
+
+        au < expected ; 2015 ; Biophysics Reports Volume 1 ; 1 >
+    }
+
+    {
+  
+        title <
           name = Bulletin of the Malaysian Mathematical Sciences Society ;
           issn = 0126-6705 ;
           eissn = 2180-4206
@@ -2342,6 +2357,7 @@
         param[base_url] = http://www.springer.com/11434/
         param[journal_issn] = 1001-6538
         comment[platform] = Springer
+        comment[continued_by] = 2095-9273
   
         au < exists ; 1997 ; Chinese Science Bulletin Volume 42 ; 42 >
         au < exists ; 1998 ; Chinese Science Bulletin Volume 43 ; 43 >
@@ -2360,7 +2376,7 @@
         au < exists ; 2011 ; Chinese Science Bulletin Volume 56 ; 56 >
         au < exists ; 2012 ; Chinese Science Bulletin Volume 57 ; 57 >
         au < exists ; 2013 ; Chinese Science Bulletin Volume 58 ; 58 >
-        au < expected ; 2014 ; Chinese Science Bulletin Volume 59 ; 59 >
+        au < exists ; 2014 ; Chinese Science Bulletin Volume 59 ; 59 >
   
     }
   
@@ -2516,7 +2532,24 @@
         au < exists ; 2011 ; Gold Bulletin Volume 44 ; 44 >
         au < exists ; 2012 ; Gold Bulletin Volume 45 ; 45 >
         au < exists ; 2013 ; Gold Bulletin Volume 46 ; 46 >
-        au < expected ; 2014 ; Gold Bulletin Volume 47 ; 47 >
+        au < exists ; 2014 ; Gold Bulletin Volume 47 ; 47 >
+        au < expected ; 2015 ; Gold Bulletin Volume 48 ; 48 >
+
+    }
+  
+    {
+  
+        title <
+          name = Huisarts Nu ;
+          issn = 0775-0501 ;
+          eissn = 2405-7827
+        >
+  
+        param[base_url] = http://www.springer.com/40954/
+        param[journal_issn] = 0775-0501
+        comment[platform] = Springer
+  
+        au < exists ; 2015 ; Huisarts Nu Volume 44 ; 44 >
   
     }
   
@@ -2590,7 +2623,22 @@
         param[journal_issn] = 1562-2479
         comment[platform] = Springer
   
-        au < expected ; 2015 ; International Journal of Fuzzy Systems Volume 1 ; 1 >
+        au < exists ; 2015 ; International Journal of Fuzzy Systems Volume 17 ; 17 >
+
+    }
+
+    {
+  
+        title <
+          name = JA Clinical Reports ;
+          eissn = 2363-9024
+        >
+  
+        param[base_url] = http://www.springer.com/40981/
+        param[journal_issn] = 2363-9024
+        comment[platform] = Springer
+  
+        au < expected ; 2015 ; JA Clinical Reports Volume 1 ; 1 >
 
     }
 
@@ -2630,6 +2678,23 @@
         au < exists ; 2011 ; Journal of Children's Orthopaedics Volume 5 ; 5 >
         au < exists ; 2012 ; Journal of Children's Orthopaedics Volume 6 ; 6 >
         au < exists ; 2013 ; Journal of Children's Orthopaedics Volume 7 ; 7 >
+        au < exists ; 2014 ; Journal of Children's Orthopaedics Volume 8 ; 8 >
+        au < exists ; 2015 ; Journal of Children's Orthopaedics Volume 9 ; 9 >
+
+    }
+
+    {
+  
+        title <
+          name = Journal of Health, Population and Nutrition ;
+          eissn = 2072-1315
+        >
+  
+        param[base_url] = http://www.springer.com/41043/
+        param[journal_issn] = 2072-1315
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; Journal of Health, Population and Nutrition Volume 34 ; 34 >
 
     }
 
@@ -2646,6 +2711,21 @@
         comment[platform] = Springer
 
         au < exists ; 2015 ; Journal of Indian Council of Philosophical Research Volume 1 ; 1 >
+
+    }
+
+    {
+  
+        title <
+          name = Journal of International Humanitarian Action ;
+          eissn = 2364-3404
+        >
+  
+        param[base_url] = http://www.springer.com/41018/
+        param[journal_issn] = 2364-3404
+        comment[platform] = Springer
+
+        au < expected ; 2015 ; Journal of International Humanitarian Action Volume 1 ; 1 >
 
     }
 
@@ -2863,8 +2943,9 @@
   
         au < exists ; 2011 ; Photonic Sensors Volume 1 ; 1 >
         au < exists ; 2012 ; Photonic Sensors Volume 2 ; 2 >
-        au < expected ; 2013 ; Photonic Sensors Volume 3 ; 3 >
-        au < expected ; 2014 ; Photonic Sensors Volume 4 ; 4 >
+        au < exists ; 2013 ; Photonic Sensors Volume 3 ; 3 >
+        au < exists ; 2014 ; Photonic Sensors Volume 4 ; 4 >
+        au < exists ; 2015 ; Photonic Sensors Volume 5 ; 5 >
   
     }
   
@@ -2910,6 +2991,40 @@
         au < exists ; 2011 ; Protein & Cell Volume 2 ; 2 >
         au < exists ; 2012 ; Protein & Cell Volume 3 ; 3 >
         au < exists ; 2013 ; Protein & Cell Volume 4 ; 4 >
+        au < exists ; 2014 ; Protein & Cell Volume 5 ; 5 >
+        au < exists ; 2015 ; Protein & Cell Volume 6 ; 6 >
+
+    }
+  
+    {
+  
+        title <
+          name = Public Health Reviews ;
+          eissn = 2107-6952
+        >
+  
+        param[base_url] = http://www.springer.com/40985/
+        param[journal_issn] = 2107-6952
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; Public Health Reviews Volume 36 ; 36 >
+
+    }
+
+    {
+  
+        title <
+          name = Science Bulletin ;
+          issn = 2095-9273 ;
+          eissn = 2095-9281
+        >
+  
+        param[base_url] = http://www.springer.com/11434/
+        param[journal_issn] = 2095-9273
+        comment[platform] = Springer
+        comment[continues] = 1001-6538
+
+        au < exists ; 2015 ; Science Bulletin Volume 60 ; 60 >
 
     }
 
@@ -3005,5 +3120,20 @@
 
     }
 
+    {
+  
+        title <
+          name = Zeitschrift für Weiterbildungsforschung - Report ;
+          issn =  2364-0014 ;
+          eissn = 2364-0022
+        >
+  
+        param[base_url] = http://www.springer.com/40955/
+        param[journal_issn] =  2364-0014
+        comment[platform] = Springer
+
+        au < exists ; 2015 ; Zeitschrift für Weiterbildungsforschung - Report Volume 38 ; 38 >
+
+    }
   }
 }
