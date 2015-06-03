@@ -140,7 +140,21 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
         PDXObject val = ent.getValue();
         if (val == oldForm) {
           xobjects.put(key, pdXObjectForm);
-          parentResources.setXObjects(xobjects);
+          /*
+           * IMPLEMENTATION NOTE
+           * 
+           * The map returned by getXObjects() (PDFBox 1.8.9: PDResources.java
+           * lines 326-339) is a HashMap that caches the stored COSDictionary of
+           * XObjects. When setXObjects is called, the supplied map is used to
+           * supplant the cached map and to regenerate the stored COSDictionary.
+           * We observed identical original bytes being filtered to results that
+           * differ only in the ordering of resource dictionaries in the
+           * ASMscience Journals Plugin on the CLOCKSS production machines after
+           * this code was introduced. It turns out that the machines running
+           * Java 6 agreed together and those running Java 7 agreed together.
+           * Use a sorted map instead (added in 1.68.3).
+           */ 
+          parentResources.setXObjects(new TreeMap<String, PDXObject>(xobjects));
           break;
         }
       }
