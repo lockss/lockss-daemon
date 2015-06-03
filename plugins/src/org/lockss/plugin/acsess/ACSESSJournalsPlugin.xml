@@ -83,11 +83,18 @@
         - toc: https://dl.sciencesocieties.org/publications/aj/tocs/106
         - issue: https://dl.sciencesocieties.org/publications/aj/tocs/106/1
         - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
+               https://dl.sciencesocieties.org/publications/jeq/abstracts/27/5/JEQ0270051094
         - preview pdf (abs 2): https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/26/preview
 			  - html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
+									        https://dl.sciencesocieties.org/publications/aj/articles/106/3/1070a
+									        https://dl.sciencesocieties.org/publications/aj/pdfs/106/3/1070a                          
+                          https://dl.sciencesocieties.org/publications/aj/abstracts/106/3/1070a/preview
 			  - pdf: https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
 			  - tables only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=tables&wrapper=no
 			  - figures only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=figures&wrapper=no
+        - supplement: https://dl.sciencesocieties.org/publications/aj/supplements/106/1593-supplement.pdf
+                      https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
+                      https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement2.pdf
 			  - citation manager: https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/1/57
 			                      https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/cns/47/1/12
         - EndNote: https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
@@ -96,17 +103,18 @@
         - MARC: https://dl.sciencesocieties.org/publications/citation-manager/down/marc/aj/106/5/1677
         - RefWorks: https://dl.sciencesocieties.org/publications/citation-manager/down/refworks/aj/106/5/1677
       -->
-      <string>1,"%spublications/%s/tocs/%s(/[0-9]+)?$", base_url, journal_id, volume_name</string>
-      <string>1,"%spublications/%s/(abstracts|articles|pdfs)/%s/[0-9]+/[0-9]+(/preview)?$", base_url, journal_id, volume_name</string>
-      <string>1,"%spublications/%s/articles/[0-9]+/[0-9]+/[0-9]+\?show-t-f=(tables|figures)&amp;wrapper=no", base_url, journal_id, volume_name</string>
-      <string>1,"%spublications/citation-manager/prev/zt/%s/%s/[0-9]+/[0-9]+/[0-9]+$", base_url, journal_id, volume_name</string>a
-      <string>1,"%spublications/citation-manager/down/(en|pc|zt|marc|refworks)/%s/%s/[0-9]+/[0-9]+$", base_url, journal_id, volume_name</string>    
+      <string>1,"^%spublications/%s/tocs/%s(/[0-9]+)?", base_url, journal_id, volume_name</string>
+      <string>1,"^%spublications/%s/(abstracts|articles|pdfs)/%s/[0-9]+/[^/]+(/preview)?", base_url, journal_id, volume_name</string>      
+      <string>1,"^%spublications/%s/supplements/%s/", base_url, journal_id, volume_name</string>
+      <string>1,"^%spublications/%s/articles/%s/[0-9]+/[^/]+\?show-t-f=(tables|figures)&amp;wrapper=no", base_url, journal_id, volume_name</string>
+      <string>1,"^%spublications/citation-manager/prev/zt/%s/%s/[0-9]+/[^/]+", base_url, journal_id, volume_name</string>a
+      <string>1,"^%spublications/citation-manager/down/(en|pc|zt|marc|refworks)/%s/%s/[0-9]+/[^/]+", base_url, journal_id, volume_name</string>    
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"%spublications/%s/(articles|pdfs)/%s/[0-9]+/[0-9]+$", base_url, journal_id, volume_name</string>
+      <string>"^%spublications/%s/(articles|pdfs)/%s/[0-9]+/[^/]+", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -156,6 +164,19 @@
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.acsess.ACSESSJournalsRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
+  <!-- ACSESS ris Content-Type: application/x-Research-Info-Systems
+       Note capital RIS in Research-Info-Systems, hence a duplicate
+       entry for ris, one lower case and other capitalized
+  -->
+  <entry>
+    <string>application/x-Research-Info-Systems_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;RIS</string>

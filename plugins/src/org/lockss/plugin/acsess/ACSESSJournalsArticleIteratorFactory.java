@@ -44,63 +44,87 @@ import org.lockss.plugin.*;
 /*
  Article files:
 - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
+       https://dl.sciencesocieties.org/publications/jeq/abstracts/27/5/JEQ0270051094
 - preview pdf (abs 2): https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
 - html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
+                  https://dl.sciencesocieties.org/publications/aj/articles/106/3/1070a
 - pdf: https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
 - tables only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=tables&wrapper=no
 - figures only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=figures&wrapper=no
+- supplement: https://dl.sciencesocieties.org/publications/jeq/supplements/43/177-supplement.pdf
+                https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
+                https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement2.pdf
 - EndNote: https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
 - ProCite Ris: https://dl.sciencesocieties.org/publications/citation-manager/down/pc/aj/106/5/1677
-- Zotero Ris: https://dl.sciencesocieties.org/publications/citation-manager/down/zt/aj/106/5/1677
 - MARC: https://dl.sciencesocieties.org/publications/citation-manager/down/marc/aj/106/5/1677
 - RefWorks: https://dl.sciencesocieties.org/publications/citation-manager/down/refworks/aj/106/5/1677
  */
 public class ACSESSJournalsArticleIteratorFactory
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   
+  public static final String ROLE_HTML_ABSTRACT = "HtmlAbstract";
+  public static final String ROLE_PREVIEW_PDF_ABSTRACT = "PreviewPdfAbstract";
   public static final String ROLE_CITATION_REFWORKS = "CitationRefworks";
-  // since both TABLES and FIGURES aspects exist, and only one if them
-  // can get ArticleFiles.ROLE_FIGURES_TABLES
-  public static final String ROLE_FIGURES = "Figures";
-  public static final String ROLE_PREVIEW_PDF_ABS = "PreviewPdfAbstract";
-  public static final String ROLE_ZOTERO_CITATION_RIS = "ZoteroCitationRis";
+  public static final String ROLE_TABLES_ONLY = "TablesOnly";
+  public static final String ROLE_PDF_SUPPLEMENT = "PdfSupplement";
+  public static final String ROLE_PDF_SUPPLEMENT_1 = "PdfSupplement1";
+  public static final String ROLE_PDF_SUPPLEMENT_2 = "PdfSupplement2";
+  public static final String ROLE_XLSX_SUPPLEMENT = "XlsxSupplement";
+  public static final String ROLE_XLSX_SUPPLEMENT_1 = "XlsxSupplement1";
+  public static final String ROLE_XLSX_SUPPLEMENT_2 = "XlsxSupplement2";
+  public static final String ROLE_FIGURES_ONLY = "FiguresOnly";
   public static final String ROLE_CITATION_MARC = "CitationMarc";
 
   private static final String ROOT_TEMPLATE = "\"%spublications/\", base_url";
   
-  // https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
-  // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
+  // pattern template must include all primary aspects
+  // abstracts, preview pdf abstracts, html full text, and pdf full text  
   private static final String PATTERN_TEMPLATE = 
-      "\"^%spublications/([^/]+)?/(abstracts|articles|pdfs|citation-manager)(/down/[^/]+/[^/]+)?/\\d+/\\d+/\\d+$\", base_url";  
-
-  // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
+      "\"^%spublications/%s/(abstracts|articles|pdfs)/\\d+/\\d+/[^?/]+(/preview)?$\", base_url, journal_id";
+  
+  // primary aspects need their own patterns
+  // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57  
   private Pattern HTML_PATTERN = Pattern.compile(      
-      "/articles/(\\d+/\\d+/\\d+)$", Pattern.CASE_INSENSITIVE);
-  private static final String HTML_REPLACEMENT = "/articles/$1";
+      "/publications/([^/]+)/articles/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+  private static final String HTML_REPLACEMENT = "/publications/$1/articles/$2/$3/$4";
   // https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
-  private static final String ABS_REPLACEMENT = "/abstracts/$1";
+  private Pattern ABSTRACT_PATTERN = Pattern.compile(      
+      "/publications/([^/]+)/abstracts/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+  private static final String ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4";    
   // https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
-  private static final String PREVIEW_PDF_ABS_REPLACEMENT = "/abstracts/$1/preview";
+  private Pattern PREVIEW_PDF_ABSTRACT_PATTERN = Pattern.compile(      
+      "/publications/([^/]+)/abstracts/(\\d+)/(\\d+)/([^/]+)/preview$", Pattern.CASE_INSENSITIVE);
+  private static final String PREVIEW_PDF_ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4/preview";
   // https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
-  private static final String PDF_REPLACEMENT = "/pdfs/$1";
+  private Pattern PDF_PATTERN = Pattern.compile(      
+      "/publications/([^/]+)/pdfs/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+  private static final String PDF_REPLACEMENT = "/publications/$1/pdfs/$2/$3/$4";
+
   // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=tables&wrapper=no
-  private static final String TABLES_REPLACEMENT = "/articles/$1?show-t-f=tables&wrapper=no";
+  private static final String TABLES_REPLACEMENT = "/publications/$1/articles/$2/$3/$4?show-t-f=tables&wrapper=no";
   // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=figures&wrapper=no
-  private static final String FIGURES_REPLACEMENT = "/articles/$1?show-t-f=figures&wrapper=no";
+  private static final String FIGURES_REPLACEMENT = "/publications/$1/articles/$2/$3/$4?show-t-f=figures&wrapper=no";
+  // https://dl.sciencesocieties.org/publications/jeq/supplements/43/177-supplement.pdf
+  private static final String PDF_SUPPLEMENT_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement.pdf";
+  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.pdf
+  private static final String PDF_SUPPLEMENT_1_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement1.pdf";
+  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement2.pdf
+  private static final String PDF_SUPPLEMENT_2_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement2.pdf";
+ // ??guess - no url found yet
+  private static final String XLSX_SUPPLEMENT_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement.xlsx";
+  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
+  private static final String XLSX_SUPPLEMENT_1_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement1.xlsx";
+  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
+  private static final String XLSX_SUPPLEMENT_2_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement2.xlsx";
     
   // https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
-  private Pattern CITATION_PATTERN = Pattern.compile(
-      "/citation-manager/down/[^/]/([^/])/(\\d+/\\d+/\\d+)$", Pattern.CASE_INSENSITIVE);      
-  // https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
-  private static final String ENDNOTE_REPLACEMENT = "/citation-manager/down/en/$1/$2";
+  private static final String ENDNOTE_REPLACEMENT = "/publications/citation-manager/down/en/$1/$2/$3/$4";
   // https://dl.sciencesocieties.org/publications/citation-manager/down/pc/aj/106/5/1677
-  private static final String RIS_REPLACEMENT = "/citation-manager/down/pc/$1/$2";
-  // https://dl.sciencesocieties.org/publications/citation-manager/down/zt/aj/106/5/1677
-  private static final String ZOTERO_RIS_REPLACEMENT = "/citation-manager/down/zt/$1/$2";
+  private static final String PROCITE_RIS_REPLACEMENT = "/publications/citation-manager/down/pc/$1/$2/$3/$4";
   // https://dl.sciencesocieties.org/publications/citation-manager/down/marc/aj/106/5/1677
-  private static final String MARC_REPLACEMENT = "/citation-manager/down/marc/$1/$2";
+  private static final String MARC_REPLACEMENT = "/publications/citation-manager/down/marc/$1/$2/$3/$4";
   // https://dl.sciencesocieties.org/publications/citation-manager/down/refworks/aj/106/5/1677
-  private static final String REFWORKS_REPLACEMENT = "/citation-manager/down/refworks/$1/$2";
+  private static final String REFWORKS_REPLACEMENT = "/publications/citation-manager/down/refworks/$1/$2/$3/$4";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, 
@@ -115,28 +139,51 @@ public class ACSESSJournalsArticleIteratorFactory
     builder.addAspect(HTML_PATTERN, 
                       HTML_REPLACEMENT, 
                       ArticleFiles.ROLE_FULL_TEXT_HTML);
-    builder.addAspect(ABS_REPLACEMENT,
-                      ArticleFiles.ROLE_ABSTRACT);  
-    builder.addAspect(PREVIEW_PDF_ABS_REPLACEMENT,
-                      ROLE_PREVIEW_PDF_ABS);   
-    builder.addAspect(PDF_REPLACEMENT, 
-                      ArticleFiles.ROLE_FULL_TEXT_PDF); 
+    builder.addAspect(PDF_PATTERN,
+                      PDF_REPLACEMENT, 
+                      ArticleFiles.ROLE_FULL_TEXT_PDF);     
+    builder.addAspect(ABSTRACT_PATTERN,
+                      ABSTRACT_REPLACEMENT,
+                      ROLE_HTML_ABSTRACT);
+    builder.addAspect(PREVIEW_PDF_ABSTRACT_PATTERN,
+                      PREVIEW_PDF_ABSTRACT_REPLACEMENT,
+                      ROLE_PREVIEW_PDF_ABSTRACT);  
+    
     builder.addAspect(TABLES_REPLACEMENT, 
-                      ArticleFiles.ROLE_FIGURES_TABLES);  
+                      ROLE_TABLES_ONLY);  
     builder.addAspect(FIGURES_REPLACEMENT, 
-                      ROLE_FIGURES);  
-    builder.addAspect(CITATION_PATTERN,
-                      ENDNOTE_REPLACEMENT,
+                      ROLE_FIGURES_ONLY);
+    builder.addAspect(PDF_SUPPLEMENT_REPLACEMENT, 
+                      ROLE_PDF_SUPPLEMENT);
+    builder.addAspect(PDF_SUPPLEMENT_1_REPLACEMENT, 
+                      ROLE_PDF_SUPPLEMENT_1);
+    builder.addAspect(PDF_SUPPLEMENT_2_REPLACEMENT, 
+                      ROLE_PDF_SUPPLEMENT_2);
+    builder.addAspect(XLSX_SUPPLEMENT_REPLACEMENT, 
+                      ROLE_XLSX_SUPPLEMENT);
+    builder.addAspect(XLSX_SUPPLEMENT_1_REPLACEMENT, 
+                      ROLE_XLSX_SUPPLEMENT_1);
+    builder.addAspect(XLSX_SUPPLEMENT_2_REPLACEMENT, 
+                      ROLE_XLSX_SUPPLEMENT_2);
+    
+    builder.addAspect(ENDNOTE_REPLACEMENT,
                       ArticleFiles.ROLE_CITATION_ENDNOTE);
-    builder.addAspect(RIS_REPLACEMENT,
+    builder.addAspect(PROCITE_RIS_REPLACEMENT,
                       ArticleFiles.ROLE_CITATION_RIS);
-    builder.addAspect(ZOTERO_RIS_REPLACEMENT,
-                      ROLE_ZOTERO_CITATION_RIS);
     builder.addAspect(MARC_REPLACEMENT,
                       ROLE_CITATION_MARC);
     builder.addAspect(REFWORKS_REPLACEMENT,
                       ROLE_CITATION_REFWORKS);
     
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
+                                 ArticleFiles.ROLE_FULL_TEXT_PDF,
+                                 ROLE_HTML_ABSTRACT,
+                                 ROLE_PREVIEW_PDF_ABSTRACT);
+    
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ABSTRACT,
+                                  ROLE_HTML_ABSTRACT,
+                                  ROLE_PREVIEW_PDF_ABSTRACT);
+   
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
                                   ArticleFiles.ROLE_CITATION_RIS,
                                   ArticleFiles.ROLE_ABSTRACT,

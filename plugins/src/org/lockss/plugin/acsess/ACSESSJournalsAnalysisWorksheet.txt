@@ -73,11 +73,15 @@ c) Journal of Environmental Quality
    
 Article files:
 - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
+       https://dl.sciencesocieties.org/publications/jeq/abstracts/18/2/JEQ0180020232 
 - preview pdf (abs 2): https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
 - html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
 - pdf: https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
 - tables only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=tables&wrapper=no
 - figures only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=figures&wrapper=no
+- supplement: https://dl.sciencesocieties.org/publications/jeq/supplements/43/177-supplement.pdf
+              https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
+              https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement2.pdf
 - citation manager: https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/1/57
                     https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/cns/47/1/12
 - EndNote: https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
@@ -106,6 +110,9 @@ Article files:
 - pdf: https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
 - tables only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=tables&wrapper=no
 - figures only: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=figures&wrapper=no
+- supplement: https://dl.sciencesocieties.org/publications/aj/supplements/106/1593-supplement.pdf
+              https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
+              https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement2.pdf
 - citation manager: https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/1/57
                     https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/cns/47/1/12
 - EndNote: https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
@@ -215,6 +222,9 @@ Give examples of URLs with arguments that we might need to remove.
 to extract metadata.  So urlnormalize Zotero to ProCite Ris.
   ProCite Ris: https://dl.sciencesocieties.org/publications/citation-manager/down/pc/aj/106/5/1677
   Zotero Ris: https://dl.sciencesocieties.org/publications/citation-manager/down/zt/aj/106/5/1677
+* ris mime-type is application/x-Research-Info-Systems.  Note the "RIS"
+are capitalized, so need duplicate entries in plugin xml, one all lower case,
+and the other capitalized.
 
 ----------------------HTML HASH FILTERING---------------------------
 Look at several types of html pages and look for types of items that 
