@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +34,7 @@ package org.lockss.plugin;
 
 import java.util.*;
 
-import org.apache.commons.collections.map.UnmodifiableMap;
 import org.lockss.util.StringUtil;
-
 
 /**
  * Describes the files comprising one <i>article</i> in an AU, or a subset
@@ -73,9 +71,35 @@ public class ArticleFiles {
    * materials, if applicable */
   public static final String ROLE_SUPPLEMENTARY_MATERIALS = "SupplementaryMaterials";
   
-  /** Role for the CU representing the article's figures and tables,
-   * if there is a single CU just for them */
+  /**
+   * <p>
+   * Role for a CU containing an article's figures/illustrations only.
+   * </p>
+   * 
+   * @since 1.68.3
+   */
+  public static final String ROLE_FIGURES = "Figures";
+  
+  /**
+   * <p>
+   * Role for the CU representing the article's figures and tables, if there is
+   * a single CU just for them
+   * </p>
+   * 
+   * @deprecated As of 1.68.3, use {@link #ROLE_FIGURES} or {@link #ROLE_TABLES}
+   *             instead.
+   */
+  @Deprecated
   public static final String ROLE_FIGURES_TABLES = "FiguresTables";
+  
+  /**
+   * <p>
+   * Role for a CU containing an article's tables/tabular data only.
+   * </p>
+   * 
+   * @since 1.68.3
+   */
+  public static final String ROLE_TABLES = "Tables";
   
   /** Role for the CU representing the article's full text HTML */
   public static final String ROLE_FULL_TEXT_HTML = "FullTextHtml";
@@ -206,7 +230,7 @@ public class ArticleFiles {
 
   /** Return an unmodifiable view of the role map */
   public Map<String,Object> getRoleMap() {
-    return (Map<String,Object>)UnmodifiableMap.decorate(roles);
+    return Collections.unmodifiableMap(roles);
   }
 
   /**
@@ -227,6 +251,7 @@ public class ArticleFiles {
     return obj.toString();
   }
   
+  @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[af: ft=");
