@@ -1288,7 +1288,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 >
     au < finished ; crawling ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 >
     au < crawling ; exists ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 >
-    au < testing ; exists ; 2014 ; International Journal of Oral Science Volume 6 ; 2014 ; 6 >
+    au < ready ; exists ; 2014 ; International Journal of Oral Science Volume 6 ; 2014 ; 6 >
 
   }
 
@@ -1734,7 +1734,7 @@
     param[journal_id] = kisup
 
     au < finished ; frozen ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
-    au < testing ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
+    au < ready ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
     au < ready ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
     au < exists ; exists ; 2014 ; Kidney International Supplements Volume 4 ; 2014 ; 4 >
     au < expected ; exists ; 2015 ; Kidney International Supplements Volume 5 ; 2015 ; 5 >
