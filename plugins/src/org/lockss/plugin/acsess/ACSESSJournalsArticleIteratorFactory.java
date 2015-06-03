@@ -65,14 +65,12 @@ public class ACSESSJournalsArticleIteratorFactory
   public static final String ROLE_HTML_ABSTRACT = "HtmlAbstract";
   public static final String ROLE_PREVIEW_PDF_ABSTRACT = "PreviewPdfAbstract";
   public static final String ROLE_CITATION_REFWORKS = "CitationRefworks";
-  public static final String ROLE_TABLES_ONLY = "TablesOnly";
   public static final String ROLE_PDF_SUPPLEMENT = "PdfSupplement";
   public static final String ROLE_PDF_SUPPLEMENT_1 = "PdfSupplement1";
   public static final String ROLE_PDF_SUPPLEMENT_2 = "PdfSupplement2";
   public static final String ROLE_XLSX_SUPPLEMENT = "XlsxSupplement";
   public static final String ROLE_XLSX_SUPPLEMENT_1 = "XlsxSupplement1";
   public static final String ROLE_XLSX_SUPPLEMENT_2 = "XlsxSupplement2";
-  public static final String ROLE_FIGURES_ONLY = "FiguresOnly";
   public static final String ROLE_CITATION_MARC = "CitationMarc";
 
   private static final String ROOT_TEMPLATE = "\"%spublications/\", base_url";
@@ -150,9 +148,9 @@ public class ACSESSJournalsArticleIteratorFactory
                       ROLE_PREVIEW_PDF_ABSTRACT);  
     
     builder.addAspect(TABLES_REPLACEMENT, 
-                      ROLE_TABLES_ONLY);  
+                      ArticleFiles.ROLE_TABLES);  
     builder.addAspect(FIGURES_REPLACEMENT, 
-                      ROLE_FIGURES_ONLY);
+                      ArticleFiles.ROLE_FIGURES);
     builder.addAspect(PDF_SUPPLEMENT_REPLACEMENT, 
                       ROLE_PDF_SUPPLEMENT);
     builder.addAspect(PDF_SUPPLEMENT_1_REPLACEMENT, 
