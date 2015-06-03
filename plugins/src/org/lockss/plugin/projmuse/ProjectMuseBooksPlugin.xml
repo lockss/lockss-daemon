@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -152,5 +152,9 @@
     <!-- manifest to chapter landing page -->
     <string>au_refetch_depth</string>
     <int>2</int>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>https?://muse\.jhu\.edu/books/lockss_books\.html$</string>
   </entry>
 </map>
