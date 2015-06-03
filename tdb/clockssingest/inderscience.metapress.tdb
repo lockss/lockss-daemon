@@ -2058,38 +2058,6 @@
     {
 
       title <
-        name = International Journal of Cultural Management ;
-        issn = 1756-5669 ;
-        eissn = 1756-5677 ;
-        issnl = 1756-5669
-      >
-
-      param[journal_issn] = 1756-5677
-      comment[0] = title is not yet published on 9/30/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Cultural Management Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Cyberspace Sciences and Emergency Management ;
-        issn = 2048-2175 ;
-        eissn = 2048-2183 ;
-        issnl = 2048-2175
-      >
-
-      param[journal_issn] = 2048-2183
-      comment[0] = title is not yet published on 9/19/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Cyberspace Sciences and Emergency Management Volume 4 ; 4 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Data Analysis Techniques and Strategies ;
         issn = 1755-8050 ;
         eissn = 1755-8069 ;
@@ -2204,38 +2172,6 @@
       param[journal_issn] = 1753-5220
       
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Digital Culture and Electronic Tourism Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Digital Enterprise Technology ;
-        issn = 1756-2554 ;
-        eissn = 1756-2562 ;
-        issnl = 1756-2554
-      >
-
-      param[journal_issn] = 1756-2562
-      comment[0] = title is not yet published on 9/19/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of the Digital Human ;
-        issn = 2046-3375 ;
-        eissn = 2046-3383 ;
-        issnl = 2046-3375
-      >
-
-      param[journal_issn] = 2046-3383
-      comment[0] = title is not yet published on 9/19/2013
-      
-      au < doNotProcess ; exists ; 2014 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -2562,22 +2498,6 @@
     {
 
       title <
-        name = International Journal of Electronic Trade ;
-        issn = 1742-7525 ;
-        eissn = 1742-7533 ;
-        issnl = 1742-7525
-      >
-
-      param[journal_issn] = 1742-7533
-      comment[0] = title is not yet published on 9/20/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Electronic Trade Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Electronic Transport ;
         issn = 1742-6952 ;
         eissn = 1742-6960 ;
@@ -2717,38 +2637,6 @@
       au < zapped ; finished ; 2010-2011 ; International Journal of Enterprise Network Management Volume 4 ; 4 >
       au < finished ; crawling ; 2012 ; International Journal of Enterprise Network Management Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Enterprise Network Management Volume 6 ; 6 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Enterprise Systems Integration and Interoperability ;
-        issn = 1745-3143 ;
-        eissn = 1745-3151 ;
-        issnl = 1745-3143
-      >
-
-      param[journal_issn] = 1745-3151
-      comment[0] = title is not yet published on 9/20/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Entertainment Technology and Management ;
-        issn = 1475-8954 ;
-        eissn = 1741-8046 ;
-        issnl = 1475-8954
-      >
-
-      param[journal_issn] = 1741-8046
-      comment[0] = title is not yet published on 9/20/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
 
     }
 
@@ -3224,34 +3112,6 @@
 
       au < zapped ; finished ; 2012-2013 ; International Journal of Forensic Engineering Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Forensic Engineering Volume 2 ; 2 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Forensic Engineering and Management ;
-        issn = 1478-1476 ;
-        eissn = 1479-3091 ;
-        issnl = 1478-1476
-      >
-
-    comment[0] = no journal page on Apr 23, 2012. journal_issn may be issn or eissn
-    comment[1] = title is not yet published on 9/20/2013
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Forensic Software Engineering ;
-        issn = 1743-5099 ;
-        eissn = 1743-5102 ;
-        issnl = 1743-5099
-      >
-
-    comment[0] = no journal page on Apr 23, 2012. journal_issn may be issn or eissn
-    comment[1] = title is not yet published on 9/20/2013
 
     }
 
@@ -4488,22 +4348,6 @@
     {
 
       title <
-        name = International Journal of Knowledge Management in Tourism and Hospitality ;
-        issn = 1756-0322 ;
-        eissn = 1756-0330 ;
-        issnl = 1756-0322
-      >
-
-      param[journal_issn] = 1756-0330
-      comment[0] = title is not yet published on 4/11/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Knowledge Management Studies ;
         issn = 1743-8268 ;
         eissn = 1743-8276 ;
@@ -4604,22 +4448,6 @@
       au < zapped ; finished ; 2012 ; International Journal of Learning Technology Volume 7 ; 7 >
       au < down ; exists ; 2013 ; International Journal of Learning Technology Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Learning Technology Volume 9 ; 9 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Legal Information Design ;
-        issn = 1750-8142 ;
-        eissn = 1750-8150 ;
-        issnl = 1750-8142
-      >
-
-      param[journal_issn] = 1750-8150
-      comment[0] = title is not yet published on 9/20/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Legal Information Design Volume 1 ; 1 >
 
     }
 
@@ -5504,22 +5332,6 @@
     {
 
       title <
-        name = International Journal of Molecular Engineering ;
-        issn = 1743-8241 ;
-        eissn = 1743-825X ;
-        issnl = 1743-8241
-      >
-
-      param[journal_issn] = 1743-825X
-      comment[0] = title is not yet published up on 4/11/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Molecular Engineering Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Monetary Economics and Finance ;
         issn = 1752-0479 ;
         eissn = 1752-0487 ;
@@ -5816,22 +5628,6 @@
     {
 
       title <
-        name = International Journal of Nuclear Safety and Security ;
-        issn = 2043-0329 ;
-        eissn = 2043-0337 ;
-        issnl = 2043-0329
-      >
-
-      param[journal_issn] = 2043-0337
-      comment[0] = title is not yet published on 4/11/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Ocean Systems Management ;
         issn = 1752-6582 ;
         eissn = 1752-6590 ;
@@ -5917,22 +5713,6 @@
       au < zapped ; finished ; 2012 ; International Journal of Organisational Design and Engineering Volume 2 ; 2 >
       au < down ; exists ; 2013 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 >
       au < expected ; exists ; 2014 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Petroleum Engineering ;
-        issn = 1754-8888 ;
-        eissn = 1754-8896 ;
-        issnl = 1754-8888
-      >
-
-      param[journal_issn] = 1754-8896
-      comment[0] = title is not yet published on 9/26/2013
-      
-      au < doNotProcess ; exists ; 2014 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
 
     }
 
@@ -6236,22 +6016,6 @@
     {
 
       title <
-        name = International Journal of Product Sound Quality ;
-        issn = 1742-6758 ;
-        eissn = 1742-6766 ;
-        issnl = 1742-6758
-      >
-
-      param[journal_issn] = 1742-6766
-      comment[0] = title is not yet published on 9/26/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Product Sound Quality Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Productivity and Quality Management ;
         issn = 1746-6474 ;
         eissn = 1746-6482 ;
@@ -6496,22 +6260,6 @@
       au < zapped ; finished ; 2012 ; International Journal of Reliability and Safety Volume 6 ; 6 >
       au < down ; exists ; 2013 ; International Journal of Reliability and Safety Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Reliability and Safety Volume 8 ; 8 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Remanufacturing ;
-        issn = 1758-7964 ;
-        eissn = 1758-7972 ;
-        issnl = 1758-7964
-      >
-
-      param[journal_issn] = 1758-7972
-      comment[0] = title is not yet published on 9/26/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Remanufacturing Volume 1 ; 1 >
 
     }
 
@@ -7137,23 +6885,6 @@
       au < finished ; frozen ; 2012 ; International Journal of Structural Engineering Volume 3 ; 3 >
       au < down ; exists ; 2013 ; International Journal of Structural Engineering Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Structural Engineering Volume 5 ; 5 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Sudan Research, Policy and Sustainable Development ;
-        issn = 2040-4247 ;
-        eissn = 2040-4255 ;
-        issnl = 2040-4247
-      >
-
-	  comment[0] = title is not yet published on 9/26/2013
-	  
-      param[journal_issn] = 2040-4255
-
-      au < expected ; exists ; 2014 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 >
 
     }
 
@@ -7999,22 +7730,6 @@
     {
 
       title <
-        name = International Journal of Vehicle Performance ;
-        issn = 1745-3194 ;
-        eissn = 1745-3208 ;
-        issnl = 1745-3194
-      >
-
-      param[journal_issn] = 1745-3208
-      comment[0] = title is not yet published on 9/28/2013
-      
-      au < doNotProcess ; exists ; 2014 ; International Journal of Vehicle Performance Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Vehicle Safety ;
         issn = 1479-3105 ;
         eissn = 1479-3113 ;
@@ -8339,22 +8054,6 @@
       param[journal_issn] = 2052-0336
 
       au < doNotProcess ; exists ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
-        name = Luxury Intelligence, An International Journal ;
-        issn = 2041-3831 ;
-        eissn = 2041-384X ;
-        issnl = 2041-3831
-      >
-
-      param[journal_issn] = 2041-384X
-      comment[0] = title is not yet published on 9/28/2013
-      
-      au < expected ; exists ; 2014 ; Luxury Intelligence, An International Journal Volume 1 ; 1 >
 
     }
 
