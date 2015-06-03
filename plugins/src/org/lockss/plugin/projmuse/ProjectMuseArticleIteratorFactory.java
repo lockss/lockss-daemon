@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -52,6 +53,7 @@ public class ProjectMuseArticleIteratorFactory
   // various aspects of an article
   // http://muse.jhu.edu/journals/advertising_and_society_review/v008/8.1gao.html
   // http://muse.jhu.edu/journals/advertising_and_society_review/v008/8.1intro.pdf
+  // https://muse.jhu.edu/journals/ecotone/summary/v004/4.1-2.branch.html               
   
   // these kinds of urls are not used as part of the AI
   // http://muse.jhu.edu/journals/advertising_and_society_review/toc/asr8.1.html
@@ -60,11 +62,12 @@ public class ProjectMuseArticleIteratorFactory
   // http://muse.jhu.edu/journals/advertising_and_society_review/v008/videos/8.1gao_nike.mov
   
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/([^_/]+)[.]html$", Pattern.CASE_INSENSITIVE);
+      "/(v[0-9]+)/([^_/]+)[.]html$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String HTML_REPLACEMENT = "/$1.html";
-  protected static final String PDF_REPLACEMENT = "/$1.pdf";
+  protected static final String HTML_REPLACEMENT = "/$1/$2.html";
+  protected static final String SUMM_REPLACEMENT = "/summary/$1/$2.html";
+  protected static final String PDF_REPLACEMENT  = "/$1/$2.pdf";
   
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -80,8 +83,12 @@ public class ProjectMuseArticleIteratorFactory
     // Note: Often the html page is also the fulltext html
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_ARTICLE_METADATA,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    builder.addAspect(
+        SUMM_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT);
     
     builder.addAspect(
         PDF_REPLACEMENT,

@@ -54,6 +54,9 @@ public class ProjectMuseHtmlLinkExtractorFactory implements LinkExtractorFactory
   
   private static final Logger log = Logger.getLogger(ProjectMuseHtmlLinkExtractorFactory.class);
   
+  private static final String SUMM = "/summary/";
+  private static final String HTML = ".html";
+  
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
     return new JsoupHtmlLinkExtractor() {
@@ -73,6 +76,10 @@ public class ProjectMuseHtmlLinkExtractorFactory implements LinkExtractorFactory
                               public void foundLink(String url) {
                                 if (au != null) {
                                   url = ProjectMuseUtil.baseUrlHostCheck(au, url);
+                                  if (url.contains(SUMM) && url.endsWith(HTML)) {
+                                    String purl = url.replace(SUMM, "/");
+                                    cb.foundLink(purl);
+                                  }
                                 }
                                 cb.foundLink(url);
                               }

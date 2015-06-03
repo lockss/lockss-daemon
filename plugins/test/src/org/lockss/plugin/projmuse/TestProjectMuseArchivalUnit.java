@@ -129,6 +129,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
     // article html
     shouldCacheTest(baseUrl+"v060/60.2zimmerman.html", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"summary/v060/60.2zimmerman.html", true, pmAu, cus);
 
     // article pdf
     shouldCacheTest(baseUrl+"v060/60.2zimmerman.pdf", true, pmAu, cus);
