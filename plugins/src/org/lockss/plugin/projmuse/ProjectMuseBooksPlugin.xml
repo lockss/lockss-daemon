@@ -155,6 +155,6 @@
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>https?://muse\.jhu\.edu/books/lockss_books\.html$</string>
+    <string>/books/lockss_books\.html$</string>
   </entry>
 </map>
