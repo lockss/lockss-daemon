@@ -1188,7 +1188,7 @@
     au < finished ; crawling ; 2011 ; Immunology & Cell Biology Volume 89 ; 2011 ; 89 >
     au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 >
     au < crawling ; exists ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 >
-    au < testing ; exists ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 >
+    au < readyf ; exists ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 >
   }
 
   {
@@ -1269,7 +1269,7 @@
     au < crawling ; exists ; 2011 ; International Journal of Obesity Supplements Volume 1 ; 2011 ; 1 >
     au < crawling ; crawling ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 >
     au < crawling ; exists ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 >
-    au < testing ; exists ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 >
+    au < ready ; exists ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -1780,7 +1780,7 @@
     au < finished ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
     au < finished ; crawling ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
     au < crawling ; exists ; 2013 ; Laboratory Investigation Volume 93 ; 2013 ; 93 >
-    au < testing ; exists ; 2014 ; Laboratory Investigation Volume 94 ; 2014 ; 94 >
+    au < ready ; exists ; 2014 ; Laboratory Investigation Volume 94 ; 2014 ; 94 >
 
   }
 
@@ -1841,9 +1841,9 @@
 
     param[journal_id] = lsa
 
-    au < testing ; exists ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 >
+    au < ready ; exists ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 >
     au < exists ; exists ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 >
-    au < testing ; exists ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 >
+    au < ready ; exists ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 >
     au < manifest ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 >
 
   }
@@ -1874,7 +1874,7 @@
     au < finished ; crawling ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
     au < crawling ; exists ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 >
-    au < testing ; exists ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 >
+    au < ready ; exists ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 >
 
   }
 
