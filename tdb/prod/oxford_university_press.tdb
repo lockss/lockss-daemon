@@ -2307,6 +2307,23 @@
   {
 
     title <
+      name = BJA Education ;
+      issn = 2058-5349 ;
+      eissn = 2058-5357 ;
+      issnl = 2058-5349 
+    >
+
+    param[base_url] = http://bjaed.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+
+    au < exists ; 2015 ; BJA Education Volume 15 ; 15 >
+
+  }
+
+  {
+
+    title <
       name = Brain ;
       issn = 0006-8950 ;
       eissn = 1460-2156 ;
@@ -5916,6 +5933,23 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; European Heart Journal Volume 36 ; 36 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = European Heart Journal - Quality of Care and Clinical Outcomes ;
+      issn = 2058-5225 ;
+      eissn = 2058-1742 ;
+      issnl = 2058-5225 
+    >
+
+    param[base_url] = http://ehjqcco.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2015 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 1 ; 1 >
 
   }
 
