@@ -288,6 +288,20 @@ Anything else you think might need to be removed from hashing??
            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article-cb-main"),
              HtmlNodeFilters.tagWithAttributeRegex(
                     "a", "href", "/publications/citation-manager/")), 
+        // ?? citation manager - footer - what to include - no unique class/id            
+        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
+        // <div id="footer"> 
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),    
+        // ?? hash out because it might be consistent at different download time
+        // <div class="openAccess">OPEN ACCESS</div>
+        HtmlNodeFilters.tagWithAttribute("div", "class", "openAccess"),  
+        // full - article footnotes
+        // <div id="articleFootnotes"
+        HtmlNodeFilters.tagWithAttribute("div", "id", "articleFootnotes"),         
+        // abs - bottom 
+        // https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/1
+        // ?? how to hash out copyright
+        // <span><span xmlns="">Copyright © 2014. </span>.&nbsp;</span>                    
 
 ----------------------XML HASH FILTERING---------------------------
 
@@ -348,12 +362,16 @@ different versions of the same PDF file and run:
 If there is a difference note that here and give the URL to the URL 
 you tested.
 
-* no need for pdf filter - downloaded pdfs from different days and "diff -a"
-yields no differences.
+* the mime type is different for pdfs and preview-abstract-pdfs.
+- application/pdf
 https://dl.sciencesocieties.org/publications/cns/pdfs/47/1/22
-https://dl.sciencesocieties.org/publications/aj/pdfs/103/1/169
-https://dl.sciencesocieties.org/publications/jeq/pdfs/43/1/1
-  
+
+application/x-download_
+https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
+
+since the creation dates and trailing ids are different, a simple pdf filter
+is necessary.
+
 -----------------------METADATA EXTRACTION--------------------------
 Metadata is provided in a variety of ways depending on the 
 publisher. 
