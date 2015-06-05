@@ -84,6 +84,7 @@ import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.PlatformUtil;
+import org.lockss.util.RateLimiter;
 import org.lockss.util.StringUtil;
 
 /**
@@ -114,17 +115,36 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   public static final boolean DEFAULT_SUBSCRIPTION_ENABLED = false;
 
   /**
-   * Maximum number of retries for transient SQL exceptions.
+   * Repository available space threshold.
+   * <p />
+   * Defaults to 0.
    */
   public static final String PARAM_REPOSITORY_AVAIL_SPACE_THRESHOLD =
       PREFIX + "repositoryAvailSpaceThreshold";
+
+  /**
+   * Default value of the repository available space threshold configuration
+   * parameter.
+   */
   public static final int DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD = 0;
+
+  /**
+   * Maximum rate at which we will configure archival unit batches.
+   * <p />
+   * Defaults to 1000/1m.
+   */
+  public static final String PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE =
+      PREFIX + "batchConfigurationRate";
+
+  /**
+   * Default value of the maximum rate at which we will configure archival unit
+   * batches configuration parameter.
+   */
+  public static final String DEFAULT_SUBSCRIPTION_BATCH_CONFIGURATION_RATE =
+      "1000/1m";
 
   private static final String CANNOT_CONNECT_TO_DB_ERROR_MESSAGE =
       "Cannot connect to the database";
-
-  private static final String CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE = "Cannot "
-      + "determine whether this is the first run of the subscription manager";
 
   private static final String CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE =
       "Cannot rollback the connection";
@@ -150,19 +170,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   // An indication of whether this object is ready to be used.
   private boolean ready = false;
 
-  // The current TdbTitle when processing multiple TdbAus.
-  private TdbTitle currentTdbTitle;
-
-  // The current list of subscribed ranges when processing multiple TdbAus.
-  private List<BibliographicPeriod> currentSubscribedRanges;
-
-  // The current list of unsubscribed ranges when processing multiple TdbAus.
-  private List<BibliographicPeriod> currentUnsubscribedRanges;
-
-  // The current set of TdbAus matched by the subscribed ranges and not matched
-  // by the unsubscribed ranges when processing multiple TdbAus.
-  private Set<TdbAu> currentCoveredTdbAus;
-
   // The list of repositories to use when configuring AUs.
   private List<String> repositories = null;
 
@@ -171,6 +178,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   // The handler for Archival Unit events.
   private AuEventHandler auEventHandler;
+
+  // Pacer used to limit the rate at which archival units are configured.
+  private RateLimiter configureAuRateLimiter;
+
+  // TODO - How is this determined?
+  public boolean isTotalSubscription = false; 
+
+  // The thread that processes archival units that appear in a configuration
+  // changeset.
+  private SubscriptionStarter starter = null;
+  private Thread starterThread = null;
 
   // Sorter of publications.
   private static Comparator<SerialPublication> PUBLICATION_COMPARATOR =
@@ -310,17 +328,58 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     // Force a re-calculation of the relative weights of the repositories.
     repositories = null;
 
-    // On daemon startup, perform the handling of configuration changes in its
-    // own thread.
-    if (!isReady()) {
-      SubscriptionStarter starter =
-	  new SubscriptionStarter(this, newConfig, prevConfig, changedKeys);
-      new Thread(starter).start();
+    if (changedKeys.contains(PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE)) {
+      configureAuRateLimiter = RateLimiter.getConfiguredRateLimiter(newConfig,
+	  configureAuRateLimiter, PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE,
+	  DEFAULT_SUBSCRIPTION_BATCH_CONFIGURATION_RATE);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "configureAuRateLimiter = "
+		+ configureAuRateLimiter);
+    }
+
+    // Check whether the handling of configuration changes should be done in a
+    // new thread.
+    if (!isReady() || starter == null || starterThread == null
+	|| !starterThread.isAlive()) {
+      // Yes: Create it and start it.
+      starter = new SubscriptionStarter(this, /*maxAuConfigurationBatchSize,
+	  waitBetweenAuConfigurationBatches,*/ isTotalSubscription, configureAuRateLimiter,
+	  changedKeys.getTdbDifferences().newTdbAuIterator());
+
+      starterThread = new Thread(starter);
+      starterThread.start();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Created new SubscriptionStarter.");
     } else {
-      handleConfigurationChange(newConfig, prevConfig, changedKeys);
+      // No: Reuse the existing thread.
+      if (changedKeys.contains(PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE)) {
+	starter.setConfigureAuRateLimiter(configureAuRateLimiter);
+      }
+
+      // Add the new workload to the existing thread.
+      boolean added = starter.addTdbAuIterator(changedKeys.getTdbDifferences()
+	  .newTdbAuIterator());
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added = " + added);
+
+      // Check whether the new workload was successfully added.
+      if (added) {
+	// Yes.
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Reused existing SubscriptionStarter.");
+      } else {
+	// No: Create a new thread and start it.
+	starter = new SubscriptionStarter(this, /*maxAuConfigurationBatchSize,
+	waitBetweenAuConfigurationBatches,*/ isTotalSubscription, configureAuRateLimiter,
+	changedKeys.getTdbDifferences().newTdbAuIterator());
+
+	starterThread = new Thread(starter);
+	starterThread.start();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Created new SubscriptionStarter.");
+      }
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return;
   }
 
   /**
@@ -331,201 +390,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    */
   public boolean isReady() {
     return ready;
-  }
-
-  /**
-   * Performs the necessary work on configuration changes.
-   * 
-   * @param newConfig
-   *          A Configuration with the new configuration.
-   * @param prevConfig
-   *          A Configuration with the previous configuration.
-   * @param changedKeys
-   *          A Configuration.Differences with the keys of the configuration
-   *          elements that have changed.
-   */
-  void handleConfigurationChange(Configuration newConfig,
-      Configuration prevConfig, Configuration.Differences changedKeys) {
-    final String DEBUG_HEADER = "handleConfigurationChange(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    // Sanity check.
-    if (dbManager == null || !dbManager.isReady()) {
-      if (log.isDebug()) log.debug(DEBUG_HEADER + "DbManager is not ready.");
-      return;
-    }
-
-    Connection conn = null;
-    boolean isFirstRun = false;
-    String message = CANNOT_CONNECT_TO_DB_ERROR_MESSAGE;
-
-    try {
-      // Get a connection to the database.
-      conn = dbManager.getConnection();
-
-      message = CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE;
-
-      // Determine whether this is the first run of the subscription manager.
-      isFirstRun = mdManager.countUnconfiguredAus(conn) == 0;
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
-    } catch (DbException dbe) {
-      log.error(message, dbe);
-      if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
-      return;
-    }
-
-    TdbAu tdbAu = null;
-    currentTdbTitle = null;
-    currentSubscribedRanges = null;
-    currentUnsubscribedRanges = null;
-
-    // Initialize the configuration used to configure the archival units.
-    Configuration config = ConfigManager.newConfiguration();
-
-    try {
-      // Get access to the changed archival units.
-      Iterator<TdbAu> tdbAuIterator = changedKeys.getTdbDifferences()
-  	.newTdbAuIterator();
-
-      // Loop through all the changed archival units.
-      while (tdbAuIterator.hasNext()) {
-	try {
-	  // Get the archival unit.
-	  tdbAu = tdbAuIterator.next();
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
-
-	  // Process the archival unit.
-	  processNewTdbAu(tdbAu, conn, isFirstRun, config);
-	  DbManager.commitOrRollback(conn, log);
-	} catch (DbException dbe) {
-	  log.error("Error handling archival unit " + tdbAu, dbe);
-	  conn.rollback();
-	} catch (RuntimeException re) {
-	  log.error("Error handling archival unit " + tdbAu, re);
-	  conn.rollback();
-	}
-      }
-    } catch (SQLException sqle) {
-      log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
-    } finally {
-      DbManager.safeRollbackAndClose(conn);
-    }
-
-    // Configure the archival units.
-    try {
-      configureAuBatch(config);
-    } catch (IOException ioe) {
-      log.error("Exception caught configuring a batch of archival units. "
-	  + "Config = " + config, ioe);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Performs the necessary processing for an archival unit that appears in the
-   * configuration changeset.
-   * 
-   * @param tdbAu
-   *          A TdbAu for the archival unit to be processed.
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param isFirstRun
-   *          A boolean with <code>true</code> if this is the first run of the
-   *          subscription manager, <code>false</code> otherwise.
-   * @param config
-   *          A Configuration to which to add the archival unit configuration.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private void processNewTdbAu(TdbAu tdbAu, Connection conn, boolean isFirstRun,
-      Configuration config) throws DbException {
-    final String DEBUG_HEADER = "processNewTdbAu(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "tdbAu = " + tdbAu);
-      log.debug2(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
-      log.debug2(DEBUG_HEADER + "config = " + config);
-    }
-
-    // Get the archival unit identifier.
-    String auId;
-
-    try {
-      auId = tdbAu.getAuId(pluginManager);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
-    } catch (IllegalStateException ise) {
-      log.debug2("Ignored " + tdbAu
-	  + " because of problems getting its identifier: " + ise.getMessage());
-      return;
-    } catch (RuntimeException re) {
-      log.error("Ignored " + tdbAu
-	  + " because of problems getting its identifier: " + re.getMessage());
-      return;
-    }
-
-    // Check whether the archival unit is already configured.
-    if (pluginManager.getAuFromId(auId) != null) {
-      // Yes: Nothing more to do.
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu
-	  + "' is already configured.");
-      return;
-    }
-
-    // Check whether this is the first run of the subscription manager.
-    if (isFirstRun) {
-      // Yes: Add the archival unit to the table of unconfigured archival units.
-      mdManager.persistUnconfiguredAu(conn, auId);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return;
-    }
-
-    // Nothing to do if the archival unit is in the table of unconfigured
-    // archival units already.
-    if (mdManager.isAuInUnconfiguredAuTable(conn, auId)) {
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return;
-    }
-
-    if (log.isDebug3()) {
-      log.debug3(DEBUG_HEADER + "currentTdbTitle = " + currentTdbTitle);
-      log.debug3(DEBUG_HEADER + "tdbAu.getTdbTitle() = " + tdbAu.getTdbTitle());
-    }
-
-    // Check whether this archival unit belongs to a different title than the
-    // previous archival unit processed.
-    if (!tdbAu.getTdbTitle().equals(currentTdbTitle)) {
-      // Yes: Update the title data for this archival unit.
-      currentTdbTitle = tdbAu.getTdbTitle();
-
-      // Get the subscription ranges for the archival unit title.
-      currentSubscribedRanges = new ArrayList<BibliographicPeriod>();
-      currentUnsubscribedRanges = new ArrayList<BibliographicPeriod>();
-
-      populateTitleSubscriptionRanges(conn, currentTdbTitle,
-	  currentSubscribedRanges, currentUnsubscribedRanges);
-
-      // Get the archival units covered by the subscription.
-      currentCoveredTdbAus = getCoveredTdbAus(currentTdbTitle,
-	  currentSubscribedRanges, currentUnsubscribedRanges);
-    } else {
-      // No: Reuse the title data from the previous archival unit.
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Reusing data from title = "
-	  + currentTdbTitle);
-    }
-
-    // Check whether the archival unit covers a subscribed range and it does not
-    // cover any unsubscribed range.
-    if (currentCoveredTdbAus.contains(tdbAu)) {
-      // Yes: Add the archival unit configuration to those to be configured.
-      config = addAuConfiguration(tdbAu, auId, config);
-    } else {
-      // No: Add it to the table of unconfigured archival units.
-      mdManager.persistUnconfiguredAu(conn, auId);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-    return;
   }
 
   /**
@@ -546,7 +410,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Set<Long> populateTitleSubscriptionRanges(Connection conn,
+  Set<Long> populateTitleSubscriptionRanges(Connection conn,
       TdbTitle title, List<BibliographicPeriod> subscribedRanges,
       List<BibliographicPeriod> unsubscribedRanges) throws DbException {
     final String DEBUG_HEADER = "populateTitleSubscriptionRanges(): ";
@@ -838,7 +702,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws IOException
    *           if there are problems configuring the batch of archival units.
    */
-  private BatchAuStatus configureAuBatch(Configuration config)
+  BatchAuStatus configureAuBatch(Configuration config)
       throws IOException {
     final String DEBUG_HEADER = "configureAuBatch(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "config = " + config);
@@ -883,7 +747,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @return a Configuration with the archival unit configuration added to the
    *         passed configuration.
    */
-  private Configuration addAuConfiguration(TdbAu tdbAu, String auId,
+  Configuration addAuConfiguration(TdbAu tdbAu, String auId,
       Configuration config) {
     final String DEBUG_HEADER = "addAuConfiguration(): ";
     if (log.isDebug2()) {
