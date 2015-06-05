@@ -96,39 +96,6 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
           "</div></div></div>" +
           "</div>";
   
-  private static final String withCbContents =
-      "<div class=\"block\">" +
-          "<div id=\"article-cb-main\" class=\"content-box\">" +
-          "<div class=\"cb-contents\" style=\"text-align: left;\">" +
-          "<h3 class=\"cb-contents-header\">" +
-          "<span>This article in AJ</span>" +
-          "</h3>" +
-          "<div style=\"background-color: #eee; font-size: 12px; margin:0; " +
-          "padding: 5px; font-weight: bold;\"> View</div>" +
-          "<div style=\"margin: 0px; padding: 0px 5px\">" +
-          "<a href=\"/publications/aj/abstracts/106/1/24\">»Abstract</a>" +
-          "</div>" +
-          "<div style=\"margin: 0px; padding: 0px 5px\">" +
-          "<a href=\"/publications/aj/articles/106/1/24\">»Full Text</a>" +
-          "</div>" +
-          "<div style=\"background-color: #eee; font-size: 12px; margin:0; " +
-          "padding: 5px; font-weight: bold;\"> Download</div>" +
-          "<div style=\"margin: 0px; padding: 0px 0px 0px 5px;\">" +
-          "<a href=\"/publications/citation-manager/prev/zt/aj/106/1/24\">Citation</a>" +
-          "</div>" +
-          "</div>" +
-          "</div>" +
-          "</div>";
-  
-  private static final String cbContentsFilteredStr =
-      "<div id=\"article-cb-main\" class=\"content-box\">" +
-          "<div class=\"cb-contents\" style=\"text-align: left;\">" +
-          "<div style=\"margin: 0px; padding: 0px 0px 0px 5px;\">" +
-          "<a href=\"/publications/citation-manager/prev/zt/aj/106/1/24\">Citation</a>" +
-          "</div>" +
-          "</div>" +
-          "</div>";
-
     private static final String withCitationFooter =
         "<body class=\"not-front page-publications no-sidebars\">" +
             "<div id=\"content\">" +
@@ -171,7 +138,6 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
     doFilterTest(aau, fact, withScript, filteredStr);
     doFilterTest(aau, fact, withComments, filteredStr);
     doFilterTest(aau, fact, withNoPrint, filteredStr);
-    doFilterTest(aau, fact, withCbContents, cbContentsFilteredStr);
     doFilterTest(aau, fact, withCitationFooter, citationFooterFilteredStr);
     doFilterTest(aau, fact, withOpenAccess, filteredStr);
     doFilterTest(aau, fact, withArticleFootnotes, filteredStr);
