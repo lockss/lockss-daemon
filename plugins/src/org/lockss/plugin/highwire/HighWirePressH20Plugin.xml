@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>105</string>
+    <string>106</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -131,7 +131,7 @@
       <string>1,"^%s[^?]*DC(Supplemental|[0-9])", base_url</string>
       <string>2,"^%shighwire/filestream/powerpoint/", base_url</string>
       <string>1,"^%shighwire/filestream/", base_url</string>
-      <!-- future crawl rule for eolj string>1, "%slockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", base_url, volume_name</string -->
+      <string>1, "%sc?lockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", base_url</string>
     </list>
   </entry>
   <entry>
@@ -149,6 +149,10 @@
   <entry>
     <string>plugin_crawl_url_comparator_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20CrawlUrlComparatorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20CrawlSeedFactory</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
