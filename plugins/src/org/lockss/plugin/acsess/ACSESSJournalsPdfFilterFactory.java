@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,15 @@ import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 
+/*
+ * Two mime types found
+ * - application/pdf
+ *      https://dl.sciencesocieties.org/publications/cns/pdfs/47/1/22
+ * - application/x-download
+ *      https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
+ *   
+ * Preview abstract pdfs have differences in creation dates and ids. 
+*/
 public class ACSESSJournalsPdfFilterFactory extends SimplePdfFilterFactory {
 
   @Override
