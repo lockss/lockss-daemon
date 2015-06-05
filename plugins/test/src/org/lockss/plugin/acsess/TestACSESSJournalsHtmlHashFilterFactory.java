@@ -153,6 +153,19 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
             "<div class=\"openAccess\">OPEN ACCESS</div>" +
             "</div>" +
             "</div>";
+    
+    private static final String withArticleFootnotes =
+        "<div class=\"block\">" +
+            "<div class=\"acsMarkLogicWrapper\">" +
+            "<div id=\"articleFootnotes\">" +
+            "<h2>Footnotes</h2>" +
+            "<ul style=\"margin-top: 0; padding-top: 0;\">" +
+            "<li class=\"copyright-statement\">" +
+            "<span>Copyright © 2014 by the A Journal Inc.All rights reserved." +
+            "<div style=\"clear: both;\"></div></span>" +
+            "</li></ul></div>" +
+            "</div>" +
+            "</div>";
         
   public void testFiltering() throws Exception {
     doFilterTest(aau, fact, withScript, filteredStr);
@@ -161,6 +174,7 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
     doFilterTest(aau, fact, withCbContents, cbContentsFilteredStr);
     doFilterTest(aau, fact, withCitationFooter, citationFooterFilteredStr);
     doFilterTest(aau, fact, withOpenAccess, filteredStr);
+    doFilterTest(aau, fact, withArticleFootnotes, filteredStr);
   }
 
 }
