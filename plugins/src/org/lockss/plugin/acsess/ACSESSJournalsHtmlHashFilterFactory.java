@@ -60,9 +60,12 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
         // toc - content
         // <div class="acsMarkLogicWrapper">
         HtmlNodeFilters.tagWithAttribute("div", "class", "acsMarkLogicWrapper"),        
-        // abs, full - content block
+        // abs, full - content block - ?? use inside_one to cover citation-manager page
         // <div id="content-block"
         HtmlNodeFilters.tagWithAttribute("div", "id", "content-block"),
+        // abs, full - content
+        // <div class="inside_one">
+        //HtmlNodeFilters.tagWithAttribute("div", "class", "inside_one"),
         // abs, full - content box - left sidebar
         // <div class"content-box"
         HtmlNodeFilters.tagWithAttribute("div", "class", "content-box"),
@@ -90,6 +93,12 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         //filter out comments
         HtmlNodeFilters.comment(),
+        // citation-manager - header
+        // <div id="header">
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        // citation-manager - has generated id
+        // <div id="member_panel"
+        HtmlNodeFilters.tagWithAttribute("div", "id", "member_panel"),
         // toc - links to facebook and twitter near footer
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),  
         // abs, full - all left column except Citation Mgr (download citations)
@@ -104,8 +113,15 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),    
         // ?? hash out because it might be consistent at different download time
         // <div class="openAccess">OPEN ACCESS</div>
-        HtmlNodeFilters.tagWithAttribute("div", "class", "openAccess"),   
+        HtmlNodeFilters.tagWithAttribute("div", "class", "openAccess"),  
+        // full - article footnotes
+        // <div id="articleFootnotes"
+        HtmlNodeFilters.tagWithAttribute("div", "id", "articleFootnotes"), 
         
+        // abs - bottom 
+        // ttps://dl.sciencesocieties.org/publications/aj/abstracts/106/1/1
+        // ?? how to hash out copyright
+        // <span><span xmlns="">Copyright © 2014. </span>.&nbsp;</span>
     };
     
     return getFilteredInputStream(au, in, encoding, 
