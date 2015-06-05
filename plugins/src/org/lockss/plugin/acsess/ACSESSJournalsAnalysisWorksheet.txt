@@ -261,47 +261,38 @@ Anything else you think might need to be removed from hashing??
 
 * include nodes:
 - links from manifest page
-        // toc - content
-        // <div class="acsMarkLogicWrapper">
+        // toc, issue - content
+        // https://dl.sciencesocieties.org/publications/aj/tocs/106
+        // https://dl.sciencesocieties.org/publications/aj/tocs/106/1
         HtmlNodeFilters.tagWithAttribute("div", "class", "acsMarkLogicWrapper"),        
         // abs, full - content block
-        // <div id="content-block"
         HtmlNodeFilters.tagWithAttribute("div", "id", "content-block"),
         // tables-only - tables
-        // <div class="table-expansion"
         HtmlNodeFilters.tagWithAttribute("div", "class", "table-expansion"),
         // figures-only - images
-        // <div class="fig-expansion"
         HtmlNodeFilters.tagWithAttribute("div", "class", "fig-expansion"),
-
+        // citation manager - footer      
+        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "no-sidebars"),  
 * exclude nodes:
-        HtmlNodeFilters.tag("script"),
+        new TagNameFilter("script"),
+        new TagNameFilter("noscript"),
         //filter out comments
         HtmlNodeFilters.comment(),
         // toc - links to facebook and twitter near footer
-        // <div style="display: block; margin: 10px 0px; clear: both;" class="noPrint">
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),  
-        // abs, full - all left column except Citation Mgr (download citations)
-        // <div class="content-box" id="article-cb-main">
-        //   <a href="/publications/citation-manager/prev/zt/aj/106/5/1574">»Citation</a></div>
-        HtmlNodeFilters.allExceptSubtree(
-           HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article-cb-main"),
-             HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/publications/citation-manager/")), 
-        // ?? citation manager - footer - what to include - no unique class/id            
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),
+        // citation-manager - header
         // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
-        // <div id="footer"> 
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        // citation-manager - has generated id
+        HtmlNodeFilters.tagWithAttribute("div", "id", "member_panel"),
+        // citation manager - footer 
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),    
-        // ?? hash out because it might be consistent at different download time
-        // <div class="openAccess">OPEN ACCESS</div>
+        // issue - hash out because it might be consistent at different download time
+        // https://dl.sciencesocieties.org/publications/aj/tocs/106/1
         HtmlNodeFilters.tagWithAttribute("div", "class", "openAccess"),  
         // full - article footnotes
-        // <div id="articleFootnotes"
-        HtmlNodeFilters.tagWithAttribute("div", "id", "articleFootnotes"),         
-        // abs - bottom 
-        // https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/1
-        // ?? how to hash out copyright
-        // <span><span xmlns="">Copyright © 2014. </span>.&nbsp;</span>                    
+        HtmlNodeFilters.tagWithAttribute("div", "id", "articleFootnotes"),                     
 
 ----------------------XML HASH FILTERING---------------------------
 
