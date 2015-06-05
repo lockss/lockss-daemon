@@ -64,7 +64,8 @@ public class ACSESSJournalsArticleIteratorFactory
   
   public static final String ROLE_HTML_ABSTRACT = "HtmlAbstract";
   public static final String ROLE_PREVIEW_PDF_ABSTRACT = "PreviewPdfAbstract";
-  public static final String ROLE_CITATION_REFWORKS = "CitationRefworks";
+  public static final String ROLE_TABLES_ONLY = "TablesOnly";
+  public static final String ROLE_FIGURES_ONLY = "FiguresOnly";
   public static final String ROLE_PDF_SUPPLEMENT = "PdfSupplement";
   public static final String ROLE_PDF_SUPPLEMENT_1 = "PdfSupplement1";
   public static final String ROLE_PDF_SUPPLEMENT_2 = "PdfSupplement2";
@@ -72,6 +73,7 @@ public class ACSESSJournalsArticleIteratorFactory
   public static final String ROLE_XLSX_SUPPLEMENT_1 = "XlsxSupplement1";
   public static final String ROLE_XLSX_SUPPLEMENT_2 = "XlsxSupplement2";
   public static final String ROLE_CITATION_MARC = "CitationMarc";
+  public static final String ROLE_CITATION_REFWORKS = "CitationRefworks";
 
   private static final String ROOT_TEMPLATE = "\"%spublications/\", base_url";
   
@@ -81,47 +83,31 @@ public class ACSESSJournalsArticleIteratorFactory
       "\"^%spublications/%s/(abstracts|articles|pdfs)/\\d+/\\d+/[^?/]+(/preview)?$\", base_url, journal_id";
   
   // primary aspects need their own patterns
-  // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57  
   private Pattern HTML_PATTERN = Pattern.compile(      
       "/publications/([^/]+)/articles/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/publications/$1/articles/$2/$3/$4";
-  // https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
   private Pattern ABSTRACT_PATTERN = Pattern.compile(      
       "/publications/([^/]+)/abstracts/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
   private static final String ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4";    
-  // https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
   private Pattern PREVIEW_PDF_ABSTRACT_PATTERN = Pattern.compile(      
       "/publications/([^/]+)/abstracts/(\\d+)/(\\d+)/([^/]+)/preview$", Pattern.CASE_INSENSITIVE);
   private static final String PREVIEW_PDF_ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4/preview";
-  // https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
   private Pattern PDF_PATTERN = Pattern.compile(      
       "/publications/([^/]+)/pdfs/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
   private static final String PDF_REPLACEMENT = "/publications/$1/pdfs/$2/$3/$4";
 
-  // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=tables&wrapper=no
   private static final String TABLES_REPLACEMENT = "/publications/$1/articles/$2/$3/$4?show-t-f=tables&wrapper=no";
-  // https://dl.sciencesocieties.org/publications/aj/articles/106/1/57?show-t-f=figures&wrapper=no
   private static final String FIGURES_REPLACEMENT = "/publications/$1/articles/$2/$3/$4?show-t-f=figures&wrapper=no";
-  // https://dl.sciencesocieties.org/publications/jeq/supplements/43/177-supplement.pdf
   private static final String PDF_SUPPLEMENT_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement.pdf";
-  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.pdf
   private static final String PDF_SUPPLEMENT_1_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement1.pdf";
-  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement2.pdf
   private static final String PDF_SUPPLEMENT_2_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement2.pdf";
- // ??guess - no url found yet
   private static final String XLSX_SUPPLEMENT_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement.xlsx";
-  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
   private static final String XLSX_SUPPLEMENT_1_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement1.xlsx";
-  // https://dl.sciencesocieties.org/publications/aj/supplements/106/645-supplement1.xlsx
   private static final String XLSX_SUPPLEMENT_2_REPLACEMENT = "/publications/$1/supplements/$2/$4-supplement2.xlsx";
     
-  // https://dl.sciencesocieties.org/publications/citation-manager/down/en/aj/106/5/1677
   private static final String ENDNOTE_REPLACEMENT = "/publications/citation-manager/down/en/$1/$2/$3/$4";
-  // https://dl.sciencesocieties.org/publications/citation-manager/down/pc/aj/106/5/1677
   private static final String PROCITE_RIS_REPLACEMENT = "/publications/citation-manager/down/pc/$1/$2/$3/$4";
-  // https://dl.sciencesocieties.org/publications/citation-manager/down/marc/aj/106/5/1677
   private static final String MARC_REPLACEMENT = "/publications/citation-manager/down/marc/$1/$2/$3/$4";
-  // https://dl.sciencesocieties.org/publications/citation-manager/down/refworks/aj/106/5/1677
   private static final String REFWORKS_REPLACEMENT = "/publications/citation-manager/down/refworks/$1/$2/$3/$4";
   
   @Override
@@ -148,9 +134,9 @@ public class ACSESSJournalsArticleIteratorFactory
                       ROLE_PREVIEW_PDF_ABSTRACT);  
     
     builder.addAspect(TABLES_REPLACEMENT, 
-                      ArticleFiles.ROLE_TABLES);  
+                      ROLE_TABLES_ONLY);  
     builder.addAspect(FIGURES_REPLACEMENT, 
-                      ArticleFiles.ROLE_FIGURES);
+                      ROLE_FIGURES_ONLY);
     builder.addAspect(PDF_SUPPLEMENT_REPLACEMENT, 
                       ROLE_PDF_SUPPLEMENT);
     builder.addAspect(PDF_SUPPLEMENT_1_REPLACEMENT, 
