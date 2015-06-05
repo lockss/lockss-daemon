@@ -39,7 +39,6 @@ import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.HtmlCompoundTransform;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
@@ -57,71 +56,40 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in, 
                                                String encoding) {
     NodeFilter[] includeNodes = new NodeFilter[] {
-        // toc - content
-        // <div class="acsMarkLogicWrapper">
+        // toc, issue - content
+        // https://dl.sciencesocieties.org/publications/aj/tocs/106
+        // https://dl.sciencesocieties.org/publications/aj/tocs/106/1
         HtmlNodeFilters.tagWithAttribute("div", "class", "acsMarkLogicWrapper"),        
-        // abs, full - content block - ?? use inside_one to cover citation-manager page
-        // <div id="content-block"
+        // abs, full - content block
         HtmlNodeFilters.tagWithAttribute("div", "id", "content-block"),
-        // abs, full - content
-        // <div class="inside_one">
-        //HtmlNodeFilters.tagWithAttribute("div", "class", "inside_one"),
-        // abs, full - content box - left sidebar
-        // <div class"content-box"
-        HtmlNodeFilters.tagWithAttribute("div", "class", "content-box"),
         // tables-only - tables
-        // <div class="table-expansion"
         HtmlNodeFilters.tagWithAttribute("div", "class", "table-expansion"),
         // figures-only - images
-        // <div class="fig-expansion"
         HtmlNodeFilters.tagWithAttribute("div", "class", "fig-expansion"),
-        // ?? citation manager - footer - what to include - no unique class/id            
+        // citation manager - footer      
         // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
-        // <body class="not-front not-logged-in page-publications no-sidebars lightbox-processed">
         HtmlNodeFilters.tagWithAttributeRegex("body", "class", "no-sidebars"),                                                          
     };
     
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // generally we should not remove the whole <head> tag
-        // since it contains metadata and css. However, since ris file is 
-        // used to extract metadata and css paths looks varied, it makes
-        // sense to remove the whole <head> tag
-        new TagNameFilter("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
-        // stylesheets
-        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         //filter out comments
         HtmlNodeFilters.comment(),
+        // toc - links to facebook and twitter near footer
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),
         // citation-manager - header
-        // <div id="header">
+        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         // citation-manager - has generated id
-        // <div id="member_panel"
         HtmlNodeFilters.tagWithAttribute("div", "id", "member_panel"),
-        // toc - links to facebook and twitter near footer
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),  
-        // abs, full - all left column except Citation Mgr (download citations)
-        HtmlNodeFilters.allExceptSubtree(
-           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cb-contents"),
-             HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/publications/citation-manager/")),                                           
-          
-        // ?? citation manager - footer - what to include - no unique class/id            
-        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
-        // <div id="footer"> 
+        // citation manager - footer 
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),    
-        // ?? hash out because it might be consistent at different download time
-        // <div class="openAccess">OPEN ACCESS</div>
+        // issue - hash out because it might be consistent at different download time
+        // https://dl.sciencesocieties.org/publications/aj/tocs/106/1
         HtmlNodeFilters.tagWithAttribute("div", "class", "openAccess"),  
         // full - article footnotes
-        // <div id="articleFootnotes"
         HtmlNodeFilters.tagWithAttribute("div", "id", "articleFootnotes"), 
-        
-        // abs - bottom 
-        // ttps://dl.sciencesocieties.org/publications/aj/abstracts/106/1/1
-        // ?? how to hash out copyright
-        // <span><span xmlns="">Copyright © 2014. </span>.&nbsp;</span>
     };
     
     return getFilteredInputStream(au, in, encoding, 
@@ -145,7 +113,7 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
                );
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
+    return new ReaderInputStream(reader); 
   }
 
 }
