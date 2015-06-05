@@ -49,7 +49,6 @@ import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
-import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
