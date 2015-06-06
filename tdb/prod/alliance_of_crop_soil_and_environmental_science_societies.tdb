@@ -19,7 +19,7 @@
   
   plugin = org.lockss.plugin.acsess.ACSESSJournalsPlugin
   param[base_url] = https://dl.sciencesocieties.org/
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   
   {
 
