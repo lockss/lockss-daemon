@@ -17,6 +17,10 @@
   # on behalf of the American Society of Animal Science (ASAS), not ASA/CSSA/SSSA;
   # this might mean that ACSESS might need to be rephrased as a Provider in TDB files.
   
+  plugin = org.lockss.plugin.acsess.ACSESSJournalsPlugin
+  param[base_url] = https://dl.sciencesocieties.org/
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
   {
 
     title <
@@ -28,6 +32,10 @@
 
     # On behalf of American Society of Agronomy
     # See https://dl.sciencesocieties.org/publications/aj
+    
+    param[journal_id] = aj
+
+    au < manifest ; 2014 ; Agronomy Journal Volume 106 ; 106 >
 
   }
 
@@ -41,6 +49,10 @@
 
     # On behalf of American Society of Agronomy
     # See https://dl.sciencesocieties.org/publications/crops-and-soils
+    
+    param[journal_id] = cns
+
+    au < manifest ; 2014 ; Crops & Soils Magazine - Volume 47 ; 47 >
 
   }
 
@@ -81,6 +93,10 @@
 
     # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
     # See https://dl.sciencesocieties.org/publications/jeq
+    
+    param[journal_id] = jeq
+
+    au < manifest ; 2014 ; Journal of Environmental Quality - Volume 43 ; 43 >
 
   }
   
