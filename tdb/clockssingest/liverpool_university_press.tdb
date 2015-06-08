@@ -34,8 +34,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
     au < doNotProcess ; doNotProcess ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
     au < doNotProcess ; doNotProcess ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
-    au < exists ; exists ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
-    au < exists ; exists ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
+    au < manifest ; exists ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
+    au < manifest ; exists ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
 
   }
 
@@ -52,17 +52,17 @@
 
     comment[continued_by] = Hunter Gatherer Research
 
-    au < exists ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 >
-    au < exists ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 >
-    au < exists ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 >
-    au < exists ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 >
-    au < exists ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
+    au < manifest ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 >
+    au < manifest ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 >
+    au < manifest ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 >
+    au < manifest ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 >
+    au < manifest ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
 
   }
 
@@ -88,7 +88,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
     au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
     au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
-    au < exists ; exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
+    au < manifest ; exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
     au < exists ; exists ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
 
   }
@@ -133,8 +133,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
     au < doNotProcess ; doNotProcess ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
     au < doNotProcess ; doNotProcess ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
-    au < exists ; exists ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 >
-    au < exists ; exists ; 2015 ; Bulletin of Hispanic Studies Volume 92 ; 92 >
+    au < manifest ; exists ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 >
+    au < manifest ; exists ; 2015 ; Bulletin of Hispanic Studies Volume 92 ; 92 >
 
   }
 
@@ -159,7 +159,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; The Byron Journal Volume 39 ; 39 >
     au < doNotProcess ; doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 >
     au < doNotProcess ; doNotProcess ; 2013 ; The Byron Journal Volume 41 ; 41 >
-    au < exists ; exists ; 2014 ; The Byron Journal Volume 42 ; 42 >
+    au < manifest ; exists ; 2014 ; The Byron Journal Volume 42 ; 42 >
     au < exists ; exists ; 2015 ; The Byron Journal Volume 43 ; 43 >
 
   }
@@ -208,7 +208,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
     au < doNotProcess ; doNotProcess ; 2013 ; Contemporary French Civilization Volume 38 ; 38 >
     au < doNotProcess ; exists ; 2014 ; Contemporary French Civilization Volume 39 ; 39 >
-    au < exists ; exists ; 2015 ; Contemporary French Civilization Volume 40 ; 40 >
+    au < manifest ; exists ; 2015 ; Contemporary French Civilization Volume 40 ; 40 >
 
   }
 
@@ -223,28 +223,28 @@
 
     param[journal_id] = eir
 
-    au < exists ; exists ; 1993 ; Essays in Romanticism Volume 1 ; 1 >
-    au < exists ; exists ; 1994 ; Essays in Romanticism Volume 2 ; 2 >
-    au < exists ; exists ; 1995 ; Essays in Romanticism Volume 3 ; 3 >
-    au < exists ; exists ; 1996 ; Essays in Romanticism Volume 4 ; 4 >
-    au < exists ; exists ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
-    au < exists ; exists ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
-    au < exists ; exists ; 1999 ; Essays in Romanticism Volume 7 ; 7 >
-    au < exists ; exists ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
-    au < exists ; exists ; 2001 ; Essays in Romanticism Volume 9 ; 9 >
-    au < exists ; exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 >
-    au < exists ; exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 >
-    au < exists ; exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 >
-    au < exists ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
-    au < exists ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
-    au < exists ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
-    au < exists ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
-    au < exists ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
-    au < exists ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
-    au < exists ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
-    au < exists ; exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
-    au < exists ; exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
-    au < exists ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
+    au < manifest ; exists ; 1993 ; Essays in Romanticism Volume 1 ; 1 >
+    au < manifest ; exists ; 1994 ; Essays in Romanticism Volume 2 ; 2 >
+    au < manifest ; exists ; 1995 ; Essays in Romanticism Volume 3 ; 3 >
+    au < manifest ; exists ; 1996 ; Essays in Romanticism Volume 4 ; 4 >
+    au < manifest ; exists ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
+    au < manifest ; exists ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
+    au < manifest ; exists ; 1999 ; Essays in Romanticism Volume 7 ; 7 >
+    au < manifest ; exists ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
+    au < manifest ; exists ; 2001 ; Essays in Romanticism Volume 9 ; 9 >
+    au < manifest ; exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 >
+    au < manifest ; exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 >
+    au < manifest ; exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 >
+    au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
+    au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
+    au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
+    au < manifest ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < manifest ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
+    au < manifest ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < manifest ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
+    au < manifest ; exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
+    au < manifest ; exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
+    au < manifest ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
 
   }
 
@@ -264,8 +264,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
-    au < exists ; exists ; 2014 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 6 ; 6 >
-    au < expected ; exists ; 2015 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 7 ; 7 >
+    au < manifest ; exists ; 2014 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 6 ; 6 >
+    au < manifest ; exists ; 2015 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 7 ; 7 >
 
   }
 
@@ -283,8 +283,8 @@
       au < doNotProcess ; doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
       au < doNotProcess ; doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
       au < doNotProcess ; doNotProcess ; 2013 ; Extrapolation Volume 54 ; 54 >
-      au < exists ; exists ; 2014 ; Extrapolation Volume 55 ; 55 >
-      au < expected ; exists ; 2015 ; Extrapolation Volume 56 ; 56 >
+      au < manifest ; exists ; 2014 ; Extrapolation Volume 55 ; 55 >
+      au < manifest ; exists ; 2015 ; Extrapolation Volume 56 ; 56 >
 
   }
 
@@ -299,9 +299,9 @@
 
     param[journal_id] = franc
 
-    au < exists ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
-    au < exists ; exists ; 2013 ; Francosphères Volume 2 ; 2 >
-    au < exists ; exists ; 2014 ; Francosphères Volume 3 ; 3 >
+    au < manifest ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
+    au < manifest ; exists ; 2013 ; Francosphères Volume 2 ; 2 >
+    au < manifest ; exists ; 2014 ; Francosphères Volume 3 ; 3 >
     au < expected ; exists ; 2015 ; Francosphères Volume 4 ; 4 >
 
   }
@@ -374,8 +374,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; International Development Planning Review Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Development Planning Review Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2013 ; International Development Planning Review Volume 35 ; 35 >
-    au < exists ; exists ; 2014 ; International Development Planning Review Volume 36 ; 36 >
-    au < exists ; exists ; 2015 ; International Development Planning Review Volume 37 ; 37 >
+    au < manifest ; exists ; 2014 ; International Development Planning Review Volume 36 ; 36 >
+    au < manifest ; exists ; 2015 ; International Development Planning Review Volume 37 ; 37 >
 
   }
 
@@ -411,8 +411,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
-    au < exists ; exists ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
-    au < expected ; exists ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 >
+    au < manifest ; exists ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
+    au < manifest ; exists ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 >
 
   }
 
@@ -436,8 +436,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Labour History Review Volume 76 [Atypon]; 76 >
     au < doNotProcess ; doNotProcess ; 2012 ; Labour History Review Volume 77 [Atypon]; 77 >
     au < doNotProcess ; doNotProcess ; 2013 ; Labour History Review Volume 78 [Atypon]; 78 >
-    au < exists ; exists ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 >
-    au < exists ; exists ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 >
+    au < manifest ; exists ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 >
+    au < manifest ; exists ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 >
 
   }
 
@@ -452,12 +452,12 @@
 
     param[journal_id] = mb
 
-    au < exists ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
-    au < exists ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
-    au < exists ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
-    au < exists ; exists ; 2013 ; Modern Believing Volume 54 ; 54 >
-    au < exists ; exists ; 2014 ; Modern Believing Volume 55 ; 55 >
-    au < exists ; exists ; 2015 ; Modern Believing Volume 56 ; 56 >
+    au < manifest ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
+    au < manifest ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
+    au < manifest ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
+    au < manifest ; exists ; 2013 ; Modern Believing Volume 54 ; 54 >
+    au < manifest ; exists ; 2014 ; Modern Believing Volume 55 ; 55 >
+    au < manifest ; exists ; 2015 ; Modern Believing Volume 56 ; 56 >
 
   }
 
@@ -473,7 +473,7 @@
 
     comment[continued_by] = Modern Believing
 
-    au < exists ; exists ; 1992 ; The Modern Churchman Volume 34 ; 34 >
+    au < manifest ; exists ; 1992 ; The Modern Churchman Volume 34 ; 34 >
 
   }
 
@@ -495,7 +495,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
     au < doNotProcess ; doNotProcess ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
-    au < exists ; exists ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
+    au < manifest ; exists ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
     au < exists ; exists ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 >
 
   }
@@ -510,9 +510,9 @@
 
     param[journal_id] = newsletter
 
-    au < exists ; exists ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
-    au < exists ; exists ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
-    au < exists ; exists ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 >
+    au < manifest ; exists ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
+    au < manifest ; exists ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
+    au < manifest ; exists ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 >
     au < expected ; exists ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
 
   }
@@ -542,7 +542,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Romani Studies Volume 21 ; 21 >
     au < doNotProcess ; doNotProcess ; 2012 ; Romani Studies Volume 22 ; 22 >
     au < doNotProcess ; doNotProcess ; 2013 ; Romani Studies Volume 23 ; 23 >
-    au < exists ; exists ; 2014 ; Romani Studies Volume 24 ; 24 >
+    au < manifest ; exists ; 2014 ; Romani Studies Volume 24 ; 24 >
     au < expected ; exists ; 2015 ; Romani Studies Volume 25 ; 25 >
 
   }
@@ -558,21 +558,21 @@
 
     param[journal_id] = qs
 
-    au < exists ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
-    au < exists ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
-    au < exists ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
-    au < exists ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
-    au < exists ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
-    au < exists ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
-    au < exists ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
-    au < exists ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
-    au < exists ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
-    au < exists ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
-    au < exists ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
-    au < exists ; exists ; 2013 ; Quebec Studies Volume 55 ; 55 >
-    au < exists ; exists ; 2013 ; Quebec Studies Volume 56 ; 56 >
-    au < exists ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 >
-    au < exists ; exists ; 2014 ; Quebec Studies Volume 58 ; 58 >
+    au < manifest ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
+    au < manifest ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
+    au < manifest ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
+    au < manifest ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
+    au < manifest ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
+    au < manifest ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
+    au < manifest ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
+    au < manifest ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
+    au < manifest ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
+    au < manifest ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
+    au < manifest ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
+    au < manifest ; exists ; 2013 ; Quebec Studies Volume 55 ; 55 >
+    au < manifest ; exists ; 2013 ; Quebec Studies Volume 56 ; 56 >
+    au < manifest ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 >
+    au < manifest ; exists ; 2014 ; Quebec Studies Volume 58 ; 58 >
     au < expected ; exists ; 2015 ; Quebec Studies Volume 59 ; 59 >
     au < expected ; exists ; 2015 ; Quebec Studies Volume 60 ; 60 >
 
@@ -595,8 +595,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
-    au < exists ; exists ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
-    au < expected ; exists ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
+    au < manifest ; exists ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
+    au < manifest ; exists ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
 
   }
 
@@ -621,7 +621,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Sculpture Journal Volume 20 ; 20 >
     au < doNotProcess ; doNotProcess ; 2012 ; Sculpture Journal Volume 21 ; 21 >
     au < doNotProcess ; doNotProcess ; 2013 ; Sculpture Journal Volume 22 ; 22 >
-    au < exists ; exists ; 2014 ; Sculpture Journal Volume 23 ; 23 >
+    au < manifest ; exists ; 2014 ; Sculpture Journal Volume 23 ; 23 >
     au < expected ; exists ; 2015 ; Sculpture Journal Volume 24 ; 24 >
 
   }
@@ -743,8 +743,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Town Planning Review Volume 82 ; 82 >
     au < doNotProcess ; doNotProcess ; 2012 ; Town Planning Review Volume 83 ; 83 >
     au < doNotProcess ; doNotProcess ; 2013 ; Town Planning Review Volume 84 ; 84 >
-    au < exists ; exists ; 2014 ; Town Planning Review Volume 85 ; 85 >
-    au < expected ; exists ; 2015 ; Town Planning Review Volume 86 ; 86 >
+    au < manifest ; exists ; 2014 ; Town Planning Review Volume 85 ; 85 >
+    au < manifest ; exists ; 2015 ; Town Planning Review Volume 86 ; 86 >
 
   }
 
