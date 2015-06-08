@@ -486,7 +486,12 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       // Find the directory associated with this poll's state.
       File stateDir =
         ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
-      m_voteBlocks = new DiskVoteBlocks(voteBlockCount, dis, stateDir);
+      // If no state dir, this poll has ended; don't store voteblocks.
+      // (They would get stored in the system tempdir, where they would
+      // accumulate because nothing knows to delete them.)
+      if (stateDir != null) {
+	m_voteBlocks = new DiskVoteBlocks(voteBlockCount, dis, stateDir);
+      }
     }
 
     // Read in the Repair Data, if any
@@ -849,9 +854,16 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       // Find the directory associated with this poll's state for our voteblocks
       File stateDir =
         ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
-      m_voteBlocks = new DiskVoteBlocks(stateDir);
+      if (stateDir != null) {
+	m_voteBlocks = new DiskVoteBlocks(stateDir);
+      } else {
+	// This happens in testing, shouldn't happen in a real poll
+	log.warning("No state dir, key: " + m_key);
+      }
     }
-    m_voteBlocks.addVoteBlock(vb);
+    if (m_voteBlocks != null) {
+      m_voteBlocks.addVoteBlock(vb);
+    }
   }
 
   /** Used for testing only */
