@@ -19,7 +19,7 @@
     param[journal_id] = arla
 
     au < ready ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 >
-    au < testing ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 >
+    au < ready ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 >
     au < manifest ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 >
 
   }
@@ -58,7 +58,7 @@
     au < doNotProcess ; 2010 ; Accounting Research Journal Volume 23 ; 23 >
     au < doNotProcess ; 2011 ; Accounting Research Journal Volume 24 ; 24 >
     au < doNotProcess ; 2012 ; Accounting Research Journal Volume 25 ; 25 >
-    au < testing ; 2013 ; Accounting Research Journal Volume 26 ; 26 >
+    au < ready ; 2013 ; Accounting Research Journal Volume 26 ; 26 >
     au < ready ; 2014 ; Accounting Research Journal Volume 27 ; 27 >
     au < manifest ; 2015 ; Accounting Research Journal Volume 28 ; 28 >
 
@@ -100,7 +100,7 @@
     au < doNotProcess ; 2010 ; Accounting, Auditing & Accountability Journal Volume 23 ; 23 >
     au < doNotProcess ; 2011 ; Accounting, Auditing & Accountability Journal Volume 24 ; 24 >
     au < doNotProcess ; 2012 ; Accounting, Auditing & Accountability Journal Volume 25 ; 25 >
-    au < testing ; 2013 ; Accounting, Auditing & Accountability Journal Volume 26 ; 26 >
+    au < ready ; 2013 ; Accounting, Auditing & Accountability Journal Volume 26 ; 26 >
     au < ready ; 2014 ; Accounting, Auditing & Accountability Journal Volume 27 ; 27 >
     au < manifest ; 2015 ; Accounting, Auditing & Accountability Journal Volume 28 ; 28 >
 
@@ -212,7 +212,7 @@
     au < doNotProcess ; 2011 ; Agricultural Finance Review Volume 71 ; 71 >
     au < doNotProcess ; 2012 ; Agricultural Finance Review Volume 72 ; 72 >
     au < ready ; 2013 ; Agricultural Finance Review Volume 73 ; 73 >
-    au < testing ; 2014 ; Agricultural Finance Review Volume 74 ; 74 >
+    au < ready ; 2014 ; Agricultural Finance Review Volume 74 ; 74 >
     au < manifest ; 2015 ; Agricultural Finance Review Volume 75 ; 75 >
 
   }
@@ -9318,7 +9318,7 @@
     au < doNotProcess ; 2010 ; Pigment & Resin Technology Volume 39 ; 39 >
     au < doNotProcess ; 2011 ; Pigment & Resin Technology Volume 40 ; 40 >
     au < doNotProcess ; 2012 ; Pigment & Resin Technology Volume 41 ; 41 >
-    au < testing ; 2013 ; Pigment & Resin Technology Volume 42 ; 42 >
+    au < ready ; 2013 ; Pigment & Resin Technology Volume 42 ; 42 >
     au < ready ; 2014 ; Pigment & Resin Technology Volume 43 ; 43 >
     au < manifest ; 2015 ; Pigment & Resin Technology Volume 44 ; 44 >
 
@@ -10648,7 +10648,7 @@
     au < doNotProcess ; 2011 ; The TQM Journal Volume 23 ; 23 >
     au < doNotProcess ; 2012 ; The TQM Journal Volume 24 ; 24 >
     au < ready ; 2013 ; The TQM Journal Volume 25 ; 25 >
-    au < testing ; 2014 ; The TQM Journal Volume 26 ; 26 >
+    au < ready ; 2014 ; The TQM Journal Volume 26 ; 26 >
     au < expected ; 2015 ; The TQM Journal Volume 27 ; 27 >
 
   }
