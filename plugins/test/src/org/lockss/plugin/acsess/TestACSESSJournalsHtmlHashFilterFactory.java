@@ -114,6 +114,18 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
             "</div>" +
             "</body>";
     
+    private static final String withBelowHeader =
+        "<body class=\"not-front page-publications no-sidebars\">" +
+            "<div id=\"below_header\">" +
+            "<div id=\"block-acsMarkLogic-2\" class=\"clear-block block block-acsMarkLogic \">" +
+            "<div class=\"content\">" +
+            "<span class=\"note\">Subscription brought to you by Stanford University</span>" +
+            "</div></div></div>" +
+            "</body>";
+    private static final String belowHeaderFilteredStr =
+        "<body class=\"not-front page-publications no-sidebars\">" +
+            "</body>";
+    
     private static final String withOpenAccess =
         "<div class=\"block\">" +
             "<div class=\"acsMarkLogicWrapper\">" +
@@ -139,6 +151,7 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
     doFilterTest(aau, fact, withComments, filteredStr);
     doFilterTest(aau, fact, withNoPrint, filteredStr);
     doFilterTest(aau, fact, withCitationFooter, citationFooterFilteredStr);
+    doFilterTest(aau, fact, withBelowHeader, belowHeaderFilteredStr);
     doFilterTest(aau, fact, withOpenAccess, filteredStr);
     doFilterTest(aau, fact, withArticleFootnotes, filteredStr);
   }
