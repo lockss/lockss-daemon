@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = The Filson Historical Society and Cincinnati Museum Center
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Ohio Valley History ;
+      issn = 1544-4058 
+    >
+
+    param[journal_dir] = ohio_valley_history
+    attr[journal_id] = ovh
+    
+    au < exists ; 2015 ; Ohio Valley History Volume 15 ; 15 >
+  }
+
+}
