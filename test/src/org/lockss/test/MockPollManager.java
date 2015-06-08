@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.io.IOException;
-import java.util.Hashtable;
+import java.io.*;
+import java.util.*;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -49,6 +49,8 @@ public class MockPollManager extends PollManager {
   public static final String CONTENT_REQUESTED = "content_requested";
   public static final String SUSPENDED = "suspended";
   public static final String RESUMED = "resumed";
+
+  private Map<String,File> stateDirs = new HashMap<String,File>();
 
   public MockPollManager() {
     super();
@@ -127,4 +129,15 @@ public class MockPollManager extends PollManager {
     return ret;
   }
 
+  public File getStateDir(String pollKey) {
+    File res = stateDirs.get(pollKey);
+    if (res == null) {
+      res = super.getStateDir(pollKey);
+    }
+    return res;
+  }
+
+  public void setStateDir(String pollKey, File dir) {
+    stateDirs.put(pollKey, dir);
+  }
 }

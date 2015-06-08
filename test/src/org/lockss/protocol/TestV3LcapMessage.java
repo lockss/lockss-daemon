@@ -59,8 +59,9 @@ public class TestV3LcapMessage extends LockssTestCase {
   private PeerIdentity m_testID;
   private V3LcapMessage m_testMsg;
   private List m_testVoteBlocks;
+  private MockPollManager mPollMgr;
 
-  private LockssDaemon theDaemon;
+  private MockLockssDaemon theDaemon;
 
   private File tempDir;
 
@@ -87,6 +88,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager idmgr = theDaemon.getIdentityManager();
     idmgr.startService();
+    mPollMgr = new MockPollManager();
+    theDaemon.setPollManager(mPollMgr);
     try {
       m_testID = idmgr.stringToPeerIdentity("127.0.0.1");
     } catch (IOException ex) {
@@ -427,6 +430,7 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   private V3LcapMessage makeTestVoteMessage(Collection voteBlocks)
       throws IOException {
+    mPollMgr.setStateDir("key", tempDir);
     V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
                                           m_testBytes,
                                           m_testBytes,
