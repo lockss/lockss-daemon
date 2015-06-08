@@ -81,6 +81,10 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
         // citation-manager - header
         // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        // toc, issue, citatton-manager - 
+        // containing "Subscription brought to you by Stanford University"
+        // or other University
+        HtmlNodeFilters.tagWithAttribute("div", "id", "below_header"),
         // citation-manager - has generated id
         HtmlNodeFilters.tagWithAttribute("div", "id", "member_panel"),
         // citation manager - footer 
