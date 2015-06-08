@@ -38,28 +38,47 @@ import java.security.*;
 
 import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.util.*;
+import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 
 /** Miscellaneous testing utilities */
 public class MiscTestUtil {
   protected static Logger log = Logger.getLogger("MiscTestUtil");
 
-  public static boolean hasPermission(List checkers, String page,
+  public static boolean hasPermission(List<PermissionChecker> checkers,
+				      String page,
 				      MockCrawlerFacade mcf)
       throws IOException {
-    int len = page.length() * 2;
-    Reader rdr = new BufferedReader(new StringReader(page), len);
-
-    for (Iterator it = checkers.iterator(); it.hasNext(); ) {
-      PermissionChecker checker = (PermissionChecker)it.next();
-      rdr.mark(len);
-      if (checker.checkPermission(mcf, rdr, null)) {
+    Reader rdr = null;
+    for (PermissionChecker checker : checkers) {
+      if (rdr == null) {
+	rdr = newReader(page);
+      }
+      if (checker.checkPermission(mcf, rdr, "http://example.com/")) {
 	return true;
       }
-      rdr.reset();
+      try {
+        rdr.reset();
+      } catch(IOException ex) {
+        //unable to reset for some reason
+	rdr = null;			// force new one
+      }
     }
     return false;
   }
+
+  static Reader newReader(String page) throws IOException {
+    InputStream in = new StringInputStream(page);
+//     in = new StreamUtil.IgnoreCloseInputStream(in);
+
+    Reader rdr = new InputStreamReader(in, Constants.ENCODING_UTF_8);
+    int len = page.length() * 2;
+    rdr = new BufferedReader(rdr, len);
+//     rdr = new MonitoringReader(rdr, "foo", true);
+    rdr.mark(len);
+    return rdr;
+  }
+
 
   // Return a SecureRandom that doesn't depend on kernel randomness.  Some
   // tests create a large number of SecureRandom instances; if each one

@@ -41,7 +41,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import org.lockss.crawler.PermissionMap.IgnoreCloseInputStream;
 import org.lockss.crawler.PermissionRecord.PermissionStatus;
 import org.lockss.daemon.Crawler;
 import org.lockss.daemon.LockssWatchdog;
@@ -53,6 +52,7 @@ import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlConsumer;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
+import org.lockss.util.StreamUtil;
 
 public class PermissionUrlConsumer extends SimpleUrlConsumer {
   static Logger logger = Logger.getLogger(PermissionUrlConsumer.class);
@@ -119,8 +119,9 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
 
       // XXX Some PermissionCheckers close their stream.  This is a
       // workaround until they're fixed.
-      Reader reader = new InputStreamReader(new IgnoreCloseInputStream(is),
-              charset);
+      Reader reader =
+	new InputStreamReader(new StreamUtil.IgnoreCloseInputStream(is),
+			      charset);
       boolean perm = checker.checkPermission(crawlFacade, reader, fud.fetchUrl);
       try {
         is.reset();

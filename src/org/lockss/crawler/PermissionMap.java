@@ -538,15 +538,6 @@ public class PermissionMap {
     return perHostPermissionPath;
   }
 
-  static class IgnoreCloseInputStream extends FilterInputStream {
-    public IgnoreCloseInputStream(InputStream stream) {
-      super(stream);
-    }
-    public void close() throws IOException {
-      // ignore
-    }
-  }
-
   //PermissionUrlConsumer calls these
   public Collection<PermissionChecker> getDaemonPermissionCheckers() {
     return daemonPermissionCheckers;

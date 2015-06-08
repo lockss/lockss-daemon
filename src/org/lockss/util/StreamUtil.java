@@ -402,5 +402,18 @@ public class StreamUtil {
     os.write(0xBF);   // last byte of BOM
   }
 
+  /** Wrapper InputStream which swallows calls to <code>close()</code>,
+   * leaving the wrapped stream open */
+
+
+  public static class IgnoreCloseInputStream extends FilterInputStream {
+    public IgnoreCloseInputStream(InputStream stream) {
+      super(stream);
+    }
+    public void close() throws IOException {
+      // ignore
+    }
+  }
+
 
 }
