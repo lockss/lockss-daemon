@@ -118,9 +118,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // distinguish invalidated from never-been-set.
   static final String INVALID = "U";
 
-  public static final String PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE =
-    Configuration.PREFIX + "repository.keepAllPropsForDupeFile";
-  public static final boolean DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE = false;
+  public static final String PARAM_KEEP_ALL_PROPS_FOR_DUP_FILE =
+    Configuration.PREFIX + "repository.keepAllPropsForDupFile";
+  public static final boolean DEFAULT_KEEP_ALL_PROPS_FOR_DUP_FILE = false;
+
+  public static final String PARAM_INVALIDATE_CACHED_SIZE_ON_DUP_STORE =
+    Configuration.PREFIX + "repository.invalidateCachedSizeOnDupStore";
+  public static final boolean DEFAULT_INVALIDATE_CACHED_SIZE_ON_DUP_STORE =
+    true;
+
+
 
   // the agreement history file
   static final String AGREEMENT_FILENAME = "#agreement";
@@ -667,6 +674,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // trim the final '/', if present
       childUrl = childUrl.substring(0, childUrl.length()-1);
     }
+    // We're operating on the URL, so looking for the last slash doesn't
+    // work if there's a query arg containing a slash.  Should really
+    // operate on the path, but then need to handle long components, and
+    // the node cache is keyed by URL.  As a hack, strip off any query arg.
+    int queryIx = childUrl.indexOf("?");
+    if (queryIx >= 0) {
+      childUrl = childUrl.substring(0, queryIx);
+    }
     int index = childUrl.lastIndexOf(UrlUtil.URL_PATH_SEPARATOR);
     try {
       if (index >= 0) {
@@ -866,8 +881,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
         verPropsFile = getVersionedPropsFile(currentVersion);
       }
 
-      if (CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
-                                        DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE)
+      if (CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUP_FILE,
+                                        DEFAULT_KEEP_ALL_PROPS_FOR_DUP_FILE)
                                         || !identicalVersion) {
 	// rename current properties to chosen file name
 	if (currentPropsFile.exists() &&
@@ -933,7 +948,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
       newVersionOpen = false;
       versionTimeout.expire();
       // blank the stored sizes for this and its parents
-      if (!identicalVersion) {
+      if (!identicalVersion ||
+	  CurrentConfig.getBooleanParam(PARAM_INVALIDATE_CACHED_SIZE_ON_DUP_STORE,
+                                        DEFAULT_INVALIDATE_CACHED_SIZE_ON_DUP_STORE)) {
         invalidateCachedValues(true);
       }
     }

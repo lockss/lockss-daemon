@@ -1157,7 +1157,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testMakeNewIdenticalVersionOldWay() throws Exception {
-    props.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
+    props.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUP_FILE,
                       "true");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -1200,7 +1200,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testMakeNewIdenticalVersionNewWay() throws Exception {
-    props.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
+    props.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUP_FILE,
                       "false");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -1642,6 +1642,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(AuUrl.PROTOCOL, node.getNodeUrl());
     node = node.determineParentNode();
     assertEquals(AuUrl.PROTOCOL, node.getNodeUrl());
+
+    // query args containing slash formerly caused determineParentNode() to
+    // return wrong result
+    RepositoryNodeImpl node2 = (RepositoryNodeImpl)repo.createNewNode(
+      "http://www.example.com/test/branch/file?http://foo.bar/path/to/file");
+    node = node2.determineParentNode();
+    assertEquals("http://www.example.com/test/branch", node.getNodeUrl());
   }
 
   public void testCacheInvalidation() throws Exception {
@@ -1694,6 +1701,28 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(isPropValid(root.nodeProps.getProperty(CHILD_COUNT_PROPERTY)));
     assertEquals("789", root.nodeProps.getProperty(TREE_SIZE_PROPERTY));
     assertEquals("3", root.nodeProps.getProperty(CHILD_COUNT_PROPERTY));
+  }
+
+  // Add a first child after #node_props have been created
+  public void testCacheInvalidationIncremental() throws Exception {
+    RepositoryNodeImpl root =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com",
+                                       "test", null);
+    RepositoryNodeImpl branch =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch",
+                                       "test", null);
+    assertFalse(isPropValid(branch.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
+    assertTrue(branch.isLeaf());
+    assertEquals(0, branch.getChildCount());
+    assertEquals(4, branch.getTreeContentSize(null, true));
+    assertTrue(isPropValid(branch.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
+
+
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/leaf?http://foo/bar/baz",
+                                       "test", null);
+    assertEquals(8, branch.getTreeContentSize(null, true));
+    assertFalse(branch.isLeaf());
   }
 
   boolean isPropValid(String val) {
