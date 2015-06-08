@@ -7424,7 +7424,22 @@
     au < manifest ; exists ; 2015 ; Minimally Invasive Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
-  
+
+  {
+    title <
+      name = Mobile Information Systems ;
+      issn = 1574-017X ;
+      eissn = 1875-905X ;
+      issnl = 1875-905X
+    >
+
+    param[journal_id] = misy
+
+    au < exists ; exists ; 2014 ; Mobile Information Systems Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Mobile Information Systems Volume 2015 ; 2015 ; 2015 >
+
+  }
+
   {
     title <
       name = Modelling and Simulation in Engineering ;
@@ -8113,6 +8128,21 @@
     au < manifest ; exists ; 2013 ; Science and Technology of Nuclear Installations Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Science and Technology of Nuclear Installations Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Science and Technology of Nuclear Installations Volume 2015 ; 2015 ; 2015 >
+
+  }
+
+  {
+    title <
+      name = Scientific Programming ;
+      issn = 1058-9244 ;
+      eissn = 1875-919X ;
+      issnl = 1875-919X
+    >
+
+    param[journal_id] = sp
+
+    au < exists ; exists ; 2014 ; Scientific Programming Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2015 ; Scientific Programming Volume 2015 ; 2015 ; 2015 >
 
   }
 
