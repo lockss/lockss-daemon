@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
@@ -48,7 +47,7 @@ import org.lockss.util.Logger;
 public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataExtractor{
 
   private ElsevierEmitter emit = null;
-  private static Logger log = Logger.getLogger("ElsevierSourceArticleMetadataExtractor");
+  private static final Logger log = Logger.getLogger(ElsevierSourceArticleMetadataExtractor.class);
 
   protected void addAccessUrl(ArticleMetadata am, ArticleFiles af) 
   {
@@ -117,8 +116,9 @@ public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataEx
     }
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-      if (collectedArticles.contains(cu.getUrl()))
+      if (collectedArticles.contains(cu.getUrl())) 
         return;
+      
       collectedArticles.add(cu.getUrl());
       addAccessUrl(am, af);
       if (log.isDebug3()) {

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <!-- support for guessing at encoding, setting provider -->
@@ -90,4 +90,9 @@
       <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
   </entry>
+  <!--  do not extract external references from file-transfer xml files -->
+  <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceXmlLinkExtractorFactory</string>
+  </entry>  
 </map>

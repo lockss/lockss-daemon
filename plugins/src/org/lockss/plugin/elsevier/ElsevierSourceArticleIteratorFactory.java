@@ -48,7 +48,7 @@ public class ElsevierSourceArticleIteratorFactory implements ArticleIteratorFact
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+\\.tar!/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+\\.tar!/[\\d]+/[\\dX]+/main.pdf$\",base_url,year";
 
 //  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/[^/]+/[\\d]+\\.tar!/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
   protected static final String NESTED_ARCHIVE_PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+\\.tar!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$\",base_url,year";
@@ -58,7 +58,7 @@ public class ElsevierSourceArticleIteratorFactory implements ArticleIteratorFact
   //http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXM30010/dataset.toc
   //http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXM30010/00029343.tar!/01250008/12000332/main.pdf
   //http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXM30010/00029343.tar!/01250008/12000332/main.xml
-
+  // could be ...tar!/00220004/1400079X/main.pdf - with X in 2nd to last directory
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -72,9 +72,18 @@ public class ElsevierSourceArticleIteratorFactory implements ArticleIteratorFact
 //                                       .setIncludeSubTreePatternTemplate(INCLUDE_SUBTREE_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
+  /*
+   * The file metadata extractor is called when a 
+   * base_url/year/TAR_DIR/TARNUM.tar!/[\\d]+/[\\dX]+/main.pdf is found
+   * The first one will use the URL pattern to discover the 
+   * base_url/year/TAR_DIR/dataset.toc
+   * and will extract all necessary metadata information from this unarchived file
+   * for every file within every tar archive living in the TAR_DIR subdirectory.
+   */
+  
   protected static class ElsevierSourceArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("([^/]+[\\d]+)(/[\\d]+[^/]+/[\\d]+/[\\d]+/main.)pdf$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PATTERN = Pattern.compile("([^/]+[\\d]+)(/[\\d]+[^/]+/[\\d]+/[\\dX]+/main.)pdf$", Pattern.CASE_INSENSITIVE);
     
     protected ElsevierSourceArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {

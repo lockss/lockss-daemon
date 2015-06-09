@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,10 +37,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
-
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -51,11 +47,22 @@ import org.lockss.plugin.*;
 /**
  * Files from Elsevier archive used to write this class:
  * dataset.toc
- *
+ * 
+ * EXPLANATION:
+ * The article iterator associated with this plugin will find and return for EACH
+ * base_url/year/TAR_DIR/TARNUM.tar!/[\\d]+/[\\dX]+/main.pdf found
+ * The first one it finds will use the URL pattern to discover the 
+ * base_url/year/TAR_DIR/dataset.toc
+ * and will extract all necessary metadata information from this unarchived file
+ * for every file within every tar archive living in the TAR_DIR subdirectory.
+ * So really, it would be sufficient for the iterator to find just ONE of the
+ * main.pdf sub-files because after it extracts the metadata it does nothing for
+ * all the remaining iterator hits until it goes in to a different subdirectory
+ * but this is old code, so leaving it relatively stable
  */
 public class ElsevierTocMetadataExtractorFactory
 implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("ElsevierTocMetadataExtractorFactory");
+  private static final Logger log = Logger.getLogger("ElsevierTocMetadataExtractorFactory");
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
@@ -127,7 +134,7 @@ implements FileMetadataExtractorFactory {
     private MetadataField[] metadataFields = {
         MetadataField.FIELD_ISSN, 
         MetadataField.FIELD_VOLUME, 
-        MetadataField.FIELD_JOURNAL_TITLE, 
+        MetadataField.FIELD_PUBLICATION_TITLE, 
         MetadataField.DC_FIELD_RIGHTS,
         MetadataField.FIELD_ISSUE,
         MetadataField.FIELD_DATE,
@@ -164,7 +171,7 @@ implements FileMetadataExtractorFactory {
 
       base_url = cu.getArchivalUnit().getConfiguration().get("base_url");
       year = cu.getArchivalUnit().getConfiguration().get("year");
-
+      log.debug3("Parsing metadata from " + metadata.getUrl());
       BufferedReader bReader = new BufferedReader(metadata.openForReading());
       try {
         for (String line = bReader.readLine(); line != null; line = bReader.readLine()) { 
@@ -372,7 +379,7 @@ implements FileMetadataExtractorFactory {
      */
     protected String getToc(String url)
     {
-      Pattern pattern = Pattern.compile("(.*/[^/]+/)[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$",Pattern.CASE_INSENSITIVE);
+      Pattern pattern = Pattern.compile("(.*/[^/]+/)[\\d]+[^/]+/[\\d]+/[\\dX]+/main.pdf$",Pattern.CASE_INSENSITIVE);
       Matcher matcher = pattern.matcher(url);
       return matcher.replaceFirst("$1dataset.toc");
     }

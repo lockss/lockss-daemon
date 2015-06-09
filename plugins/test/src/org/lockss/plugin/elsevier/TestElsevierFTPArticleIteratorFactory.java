@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.elsevier;
 
-import java.io.File;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
@@ -36,7 +35,6 @@ import org.lockss.config.Configuration;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -110,9 +108,11 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/X00000/000000/main.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/000X0000/000000/main.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000X/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/X000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000X000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000X/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/Z000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000Z000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000Z/main.pdf");
+    // these can have an X as the final character and so we allow it
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000X/main.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000/wrong.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000/main.wrong");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000.tar");
