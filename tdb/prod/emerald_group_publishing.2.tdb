@@ -2861,7 +2861,7 @@
     au < doNotProcess ; 2011 ; Industrial and Commercial Training Volume 43 ; 43 >
     au < doNotProcess ; 2012 ; Industrial and Commercial Training Volume 44 ; 44 >
     au < ready ; 2013 ; Industrial and Commercial Training Volume 45 ; 45 >
-    au < testing ; 2014 ; Industrial and Commercial Training Volume 46 ; 46 >
+    au < ready ; 2014 ; Industrial and Commercial Training Volume 46 ; 46 >
     au < manifest ; 2015 ; Industrial and Commercial Training Volume 47 ; 47 >
 
   }
@@ -7078,7 +7078,7 @@
     param[journal_id] = joe
 
     au < doNotProcess ; 2012 ; Journal of Organizational Ethnography Volume 1 ; 1 >
-    au < testing ; 2013 ; Journal of Organizational Ethnography Volume 2 ; 2 >
+    au < ready ; 2013 ; Journal of Organizational Ethnography Volume 2 ; 2 >
     au < ready ; 2014 ; Journal of Organizational Ethnography Volume 3 ; 3 >
     au < manifest ; 2015 ; Journal of Organizational Ethnography Volume 4 ; 4 >
 
@@ -7683,7 +7683,7 @@
     au < doNotProcess ; 2011 ; Kybernetes Volume 40 ; 40 >
     au < ready ; 2012 ; Kybernetes Volume 41 ; 41 >
     au < ready ; 2013 ; Kybernetes Volume 42 ; 42 >
-    au < testing ; 2014 ; Kybernetes Volume 43 ; 43 >
+    au < ready ; 2014 ; Kybernetes Volume 43 ; 43 >
     au < manifest ; 2015 ; Kybernetes Volume 44 ; 44 >
 
   }
@@ -10033,7 +10033,6 @@
 
     comment[journal_issn] = 1750-8614
     param[journal_id] = sej
-    comment[notReady] = PDF hash problem
 
     au < doNotProcess ; 2005 ; Social Enterprise Journal Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; Social Enterprise Journal Volume 2 ; 2 >
@@ -10043,7 +10042,7 @@
     au < doNotProcess ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
     au < doNotProcess ; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
     au < doNotProcess ; 2012 ; Social Enterprise Journal Volume 8 ; 8 >
-    au < notReady ; 2013 ; Social Enterprise Journal Volume 9 ; 9 >
+    au < ready ; 2013 ; Social Enterprise Journal Volume 9 ; 9 >
     au < ready ; 2014 ; Social Enterprise Journal Volume 10 ; 10 >
     au < manifest ; 2015 ; Social Enterprise Journal Volume 11 ; 11 >
 
