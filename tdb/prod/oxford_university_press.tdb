@@ -1020,7 +1020,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; ready ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The American Journal of Jurisprudence Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The American Journal of Jurisprudence Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The American Journal of Jurisprudence Volume 60 ; 60 >
 
   }
 
@@ -2317,7 +2317,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
 
-    au < exists ; 2015 ; BJA Education Volume 15 ; 15 >
+    au < manifest ; 2015 ; BJA Education Volume 15 ; 15 >
 
   }
 
@@ -4724,7 +4724,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Contributions to Political Economy Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Contributions to Political Economy Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Contributions to Political Economy Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Contributions to Political Economy Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Contributions to Political Economy Volume 34 ; 34 >
 
     }
 
@@ -18094,7 +18094,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; The Opera Quarterly Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Opera Quarterly Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Opera Quarterly Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The Opera Quarterly Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Opera Quarterly Volume 31 ; 31 >
 
     }
 
@@ -18119,7 +18119,7 @@
     au < released ; 2012 ; The Opera Quarterly Volume 28 [Project MUSE] ; 28 >
     au < released ; 2013 ; The Opera Quarterly Volume 29 [Project MUSE] ; 29 >
     au < manifest ; 2014 ; The Opera Quarterly Volume 30 [Project MUSE] ; 30 >
-    au < expected ; 2015 ; The Opera Quarterly Volume 31 [Project MUSE] ; 31 >
+    au < manifest ; 2015 ; The Opera Quarterly Volume 31 [Project MUSE] ; 31 >
 
     }
 

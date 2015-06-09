@@ -21,8 +21,8 @@
     param[base_url] = http://www.jaoa.osteopathic.org/
     comment[moved] = changed url at start of 2015
 
-    au < manifest ; 2013 ; JAOA: Journal of the American Osteopathic Association Volume 113 ; 113 >
-    au < manifest ; 2014 ; JAOA: Journal of the American Osteopathic Association Volume 114 ; 114 >
+    au < testing ; 2013 ; JAOA: Journal of the American Osteopathic Association Volume 113 ; 113 >
+    au < testing ; 2014 ; JAOA: Journal of the American Osteopathic Association Volume 114 ; 114 >
     au < manifest ; 2015 ; JAOA: Journal of the American Osteopathic Association Volume 115 ; 115 >
 
     }
