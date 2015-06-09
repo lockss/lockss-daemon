@@ -40,7 +40,6 @@ import java.io.InputStream;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
-import org.lockss.extractor.XmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
@@ -54,8 +53,7 @@ implements LinkExtractorFactory {
     return new ClockssSourceXmlLinkExtractor();
   }
 
-  /* an implementation of default XmlLinkExtractor to handle utf-8 character encodings */
-  protected class ClockssSourceXmlLinkExtractor extends XmlLinkExtractor {
+  protected class ClockssSourceXmlLinkExtractor implements LinkExtractor {
 
     @Override
     public void extractUrls(ArchivalUnit au,
