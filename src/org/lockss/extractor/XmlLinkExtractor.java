@@ -38,7 +38,6 @@ import java.util.regex.*;
 
 import javax.xml.parsers.*;
 
-import org.brownell.xml.DefaultHandler;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.XmlLinkExtractor.XmlLinkExtractorHandler.DoneProcessing;
 import org.lockss.plugin.ArchivalUnit;
@@ -79,7 +78,7 @@ public class XmlLinkExtractor implements LinkExtractor {
    * @since 1.68
    * @see DoneProcessing
    */
-  protected static class XmlLinkExtractorHandler extends DefaultHandler {
+  protected static class XmlLinkExtractorHandler extends org.xml.sax.helpers.DefaultHandler {
 
     /**
      * <p>
@@ -174,9 +173,12 @@ public class XmlLinkExtractor implements LinkExtractor {
       }
     }
     
-    /**
-     * @since 1.68
-     */
+    @Override
+    public InputSource resolveEntity(String publicId, String systemId)
+        throws IOException, SAXException {
+      return new InputSource(new StringReader("")); // suppress DOCTYPE DTD parsing
+    }
+
     @Override
     public void startElement(String uri,
                              String localName,
@@ -186,38 +188,26 @@ public class XmlLinkExtractor implements LinkExtractor {
       throw new DoneProcessing(); // Intentionally end processing early
     }
     
-    /**
-     * @since 1.68
-     */
     @Override
     public void warning(SAXParseException spe) throws SAXException {
       log.debug2("Internal warning", spe);
       super.warning(spe);
     }
     
-    /**
-     * @since 1.68
-     */
     @Override
     public void error(SAXParseException spe) throws SAXException {
       log.debug2("Internal error", spe);
       super.error(spe);
     }
     
-    /**
-     * @since 1.68
-     */
     @Override
     public void fatalError(SAXParseException spe) throws SAXException {
       log.debug2("Internal fatal error", spe);
       super.fatalError(spe);
     }
-    
+
   }
   
-  /**
-   * @since 1.68
-   */
   @Override
   public void extractUrls(ArchivalUnit au,
                           InputStream in,
@@ -226,9 +216,9 @@ public class XmlLinkExtractor implements LinkExtractor {
                           Callback cb)
       throws IOException, PluginException {
     try {
-      SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
-      SAXParser saxParser = saxParserFactory.newSAXParser();
-      saxParser.parse(in, new XmlLinkExtractorHandler(cb, au, srcUrl));
+      SAXParserFactory saxParserFactory = makeSaxParserFactory();
+      SAXParser saxParser = makeSaxParser(saxParserFactory);
+      saxParser.parse(in, makeDefaultHandler(au, srcUrl, cb));
     }
     catch (ParserConfigurationException pce) {
       throw new IOException(pce);
@@ -240,5 +230,59 @@ public class XmlLinkExtractor implements LinkExtractor {
       throw new IOException(se);
     }
   }
-  
+
+  /**
+   * <p>
+   * Makes a new {@link DefaultHandler} instance with the given input arguments
+   * (to be passed to {@link SAXParser#parse(InputStream, DefaultHandler)}).
+   * </p>
+   * 
+   * @param au
+   *          An archival unit
+   * @param srcUrl
+   *          The document's source URL
+   * @param cb
+   *          A link extractor callback
+   * @return A {@link DefaultHandler} instance
+   * @since 1.68
+   */
+  protected org.xml.sax.helpers.DefaultHandler makeDefaultHandler(ArchivalUnit au,
+                                                                  String srcUrl,
+                                                                  Callback cb) {
+    return new XmlLinkExtractorHandler(cb, au, srcUrl);
+  }
+
+  /**
+   * <p>
+   * Makes a new SAX parser from the given SAX parser factory (by default simply
+   * {@link SAXParserFactory#newSAXParser()}).
+   * </p>
+   * 
+   * @param saxParserFactory
+   *          A SAX parser factory
+   * @return A SAX parser
+   * @throws ParserConfigurationException
+   *           if a parser configuration error occurs
+   * @throws SAXException
+   *           if a SAX error occurs
+   * @since 1.68
+   */
+  protected SAXParser makeSaxParser(SAXParserFactory saxParserFactory)
+      throws ParserConfigurationException, SAXException {
+    return saxParserFactory.newSAXParser();
+  }
+
+  /**
+   * <p>
+   * Makes a SAX parser factory (by default simply
+   * {@link SAXParserFactory#newInstance()}).
+   * </p>
+   * 
+   * @return A SAX parer factory
+   * @since 1.68
+   */
+  protected SAXParserFactory makeSaxParserFactory() {
+    return SAXParserFactory.newInstance();
+  }
+
 }

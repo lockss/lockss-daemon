@@ -32,11 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
+import java.io.*;
 import java.util.*;
 
 import org.lockss.extractor.LinkExtractor.Callback;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.test.*;
 import org.lockss.uiapi.util.Constants;
+import org.xml.sax.*;
+import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * @since 1.68
@@ -114,6 +118,51 @@ public class TestXmlLinkExtractor extends LockssTestCase {
                              "http://www.example.com/path/to/alt.css",
                              "http://www.example.com/path/to/single-col.css"));
   }
+
+  /**
+   * @since 1.68
+   */
+  public void testSkipsDtdParsing() throws Exception {
+    String srcUrl = "http://www.example.com/path/to/base";
+    String srcStr = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                    "<!DOCTYPE article PUBLIC \"-//NLM//DTD Journal Publishing DTD v2.3 20070202//EN\" \"journalpublishing.dtd\">\n" +
+                    "<article xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" article-type=\"research-article\" dtd-version=\"2.3\">\n" +
+                    "</article>\n";
+    expectNoUrls(srcStr, srcUrl);
+    
+    // Show that this doesn't work unless resolveEntity returns an empty-string reader
+    this.xle = new XmlLinkExtractor() {
+      @Override
+      protected DefaultHandler makeDefaultHandler(ArchivalUnit au, String srcUrl, Callback cb) {
+        return new XmlLinkExtractorHandler(cb, au, srcUrl) {
+          @Override
+          public InputSource resolveEntity(String publicId, String systemId) throws IOException, SAXException {
+            return null;
+          }
+        };
+      }
+    };
+    try {
+      expectNoUrls(srcStr, srcUrl);
+      fail("Should have thrown a FileNotFoundException from (bad) relative URL");
+    }
+    catch (FileNotFoundException fnfe) {
+      assertMatchesRE("journalpublishing\\.dtd", fnfe.getMessage());
+    }
+  }
+
+  /**
+   * @since 1.68
+   */
+  public void testIgnoresMalformedBody() throws Exception {
+    String srcUrl = "http://www.example.com/path/to/base";
+    expectNoUrls("<?xml version=\"1.0\"?>\n" +
+                 "<greeting>Malformed\n",
+                 srcUrl);
+    expectNoUrls("<?xml version=\"1.0\"?>\n" +
+                 "<greeting>Mal&mdash;formed</greeting>\n",
+                 srcUrl);
+  }
   
   /**
    * @since 1.68
@@ -145,21 +194,10 @@ public class TestXmlLinkExtractor extends LockssTestCase {
      * LOCAL INNER CLASS
      */
     class MyCallback implements Callback {
-      
       protected List<String> urls;
-      
-      MyCallback() {
-        this.urls = new ArrayList<String>();
-      }
-      
-      @Override
-      public void foundLink(String url) {
-        urls.add(url);
-      }
-      
-      public List<String> getUrls() {
-        return urls;
-      }
+      MyCallback() { this.urls = new ArrayList<String>(); }
+      @Override public void foundLink(String url) { urls.add(url); }
+      public List<String> getUrls() { return urls; }
     }
     
     MyCallback mcb = new MyCallback();
