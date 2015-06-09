@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: FuncMetadataMonitorService.java $
  */
 
 /*
@@ -83,6 +83,11 @@ public class FuncMetadataMonitorService extends LockssTestCase {
 
     String tempDirPath = setUpDiskSpace();
 
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ConfigurationUtil.addFromArgs(AdminServletManager.PARAM_PORT, "" + port,
+	ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME,
+	ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1);
+
     ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
 	"true");
 
@@ -155,11 +160,6 @@ public class FuncMetadataMonitorService extends LockssTestCase {
     long maxWaitTime = expectedAuCount * 10000; // 10 sec. per au
     int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
     assertEquals(expectedAuCount, ausCount);
-
-    int port = TcpTestUtil.findUnboundTcpPort();
-    ConfigurationUtil.addFromArgs(AdminServletManager.PARAM_PORT, "" + port,
-	ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME,
-	ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1);
 
     // The client authentication.
     Authenticator.setDefault(new Authenticator() {
