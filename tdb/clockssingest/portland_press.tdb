@@ -479,15 +479,22 @@
     au < crawling ; exists ; 2013 ; Biochemical Journal Volume 454 ; 454 >
     au < crawling ; exists ; 2013 ; Biochemical Journal Volume 455 ; 455 >
     au < crawling ; exists ; 2013 ; Biochemical Journal Volume 456 ; 456 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 457 ; 457 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 458 ; 458 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 459 ; 459 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 460 ; 460 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 461 ; 461 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 462 ; 462 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 463 ; 463 >
-    au < manifest ; exists ; 2014 ; Biochemical Journal Volume 464 ; 464 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 457 ; 457 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 458 ; 458 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 459 ; 459 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 460 ; 460 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 461 ; 461 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 462 ; 462 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 463 ; 463 >
+    au < testing ; exists ; 2014 ; Biochemical Journal Volume 464 ; 464 >
     au < manifest ; exists ; 2015 ; Biochemical Journal Volume 465 ; 465 >
+    au < exists ; exists ; 2015 ; Biochemical Journal Volume 466 ; 466 >
+    au < exists ; exists ; 2015 ; Biochemical Journal Volume 467 ; 467 >
+    au < exists ; exists ; 2015 ; Biochemical Journal Volume 468 ; 468 >
+    au < exists ; exists ; 2015 ; Biochemical Journal Volume 469 ; 469 >
+    au < exists ; exists ; 2015 ; Biochemical Journal Volume 470 ; 470 >
+    au < exists ; exists ; 2015 ; Biochemical Journal Volume 471 ; 471 >
+    au < exists ; exists ; 2015 ; Biochemical Journal Volume 472 ; 472 >
 
   }
   
@@ -544,7 +551,7 @@
     au < manifest ; exists ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
     au < crawling ; exists ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
     au < crawling ; exists ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
-    au < manifest ; exists ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 >
+    au < testing ; exists ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 >
     au < manifest ; exists ; 2015 ; Biochemical Society Transactions Volume 43 ; 043 >
     
   }
@@ -667,7 +674,7 @@
     au < manifest ; exists ; 2011 ; Bioscience Reports Volume 31 ; 031 >
     au < crawling ; exists ; 2012 ; Bioscience Reports Volume 32 ; 032 >
     au < crawling ; exists ; 2013 ; Bioscience Reports Volume 33 ; 033 >
-    au < manifest ; exists ; 2014 ; Bioscience Reports Volume 34 ; 034 >
+    au < testing ; exists ; 2014 ; Bioscience Reports Volume 34 ; 034 >
     au < manifest ; exists ; 2015 ; Bioscience Reports Volume 35 ; 035 >
 
   }
@@ -820,9 +827,10 @@
     au < crawling ; exists ; 2012 ; Clinical Science Volume 123 ; 123 >
     au < crawling ; exists ; 2013 ; Clinical Science Volume 124 ; 124 >
     au < crawling ; exists ; 2013 ; Clinical Science Volume 125 ; 125 >
-    au < manifest ; exists ; 2014 ; Clinical Science Volume 126 ; 126 >
-    au < manifest ; exists ; 2014 ; Clinical Science Volume 127 ; 127 >
+    au < testing ; exists ; 2014 ; Clinical Science Volume 126 ; 126 >
+    au < testing ; exists ; 2014 ; Clinical Science Volume 127 ; 127 >
     au < manifest ; exists ; 2015 ; Clinical Science Volume 128 ; 128 >
+    au < exists ; exists ; 2015 ; Clinical Science Volume 129 ; 129 >
         
   }
   
@@ -861,9 +869,10 @@
     au < crawling ; exists ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
     au < crawling ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
     au < crawling ; exists ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
-    au < manifest ; exists ; 2014 ; Essays in Biochemistry Volume 56 ; 056 >
-    au < manifest ; exists ; 2014 ; Essays in Biochemistry Volume 57 ; 057 >
+    au < testing ; exists ; 2014 ; Essays in Biochemistry Volume 56 ; 056 >
+    au < testing ; exists ; 2014 ; Essays in Biochemistry Volume 57 ; 057 >
     au < expected ; exists ; 2015 ; Essays in Biochemistry Volume 58 ; 058 >
+    au < expected ; exists ; 2015 ; Essays in Biochemistry Volume 59 ; 059 >
 
   }
   
