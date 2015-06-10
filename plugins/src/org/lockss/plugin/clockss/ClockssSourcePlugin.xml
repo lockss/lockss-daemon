@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <!-- support for guessing at encoding, setting provider -->
@@ -94,5 +94,9 @@
   <entry>
     <string>application/xml_link_extractor_factory</string>
     <string>org.lockss.plugin.clockss.ClockssSourceXmlLinkExtractorFactory</string>
-  </entry>  
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceXmlLinkExtractorFactory</string>
+  </entry>    
 </map>
