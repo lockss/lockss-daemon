@@ -14573,10 +14573,7 @@
       eissn = 0975-5977
     >
 
-    param[base_url] = http://ihr.sagepub.com/
-
-    {
-
+      param[base_url] = http://ihr.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1999 ; Indian Historical Review Volume 26 ; 26 ; >
@@ -14597,7 +14594,19 @@
       au < crawling ; exists ; 2014 ; Indian Historical Review Volume 41 ; 41 ; >
       au < expected ; exists ; 2015 ; Indian Historical Review Volume 42 ; 42 ; >
 
-    }
+  }
+
+  {
+
+    title <
+      name = Indian Journal of Corporate Governance ;
+      issn = 0974-6862
+    >
+
+      param[base_url] = http://ijc.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 ; >
 
   }
 
