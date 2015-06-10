@@ -16638,6 +16638,21 @@
 
     }
 
+  {
+
+    title <
+      name = Indian Journal of Corporate Governance ;
+      issn = 0974-6862
+    >
+
+      param[base_url] = http://ijc.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 >
+
+  }
+
     {
 
       title <
