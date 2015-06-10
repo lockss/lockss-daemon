@@ -14,14 +14,14 @@
       <string>4,"^%s", base_url</string>
       <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string> 
 <!-- for official testing on content6; limit to subset of all the subdirectories -->
-      <string>1,"^%s%d/OXH[0-9]+", base_url, year</string> 
+      <string>1,"^%s%d/OXH33[0-9]+", base_url, year</string> 
 <!--  -->      
     </list>
   </entry>
 <!-- END OF DEBUGGIN ONLY -->              
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -42,7 +42,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_name</string>
