@@ -286,7 +286,7 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = delta
 
-      au < testing ; 2010 ; 1 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 1 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 2 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2013 ; 2013 ; >
@@ -686,7 +686,7 @@
       au < released ; 2011 ; 1 ; Revista Nexi Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Revista Nexi Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 4 ; Revista Nexi Volume 2014 ; 2014 ; >
+      au < ready ; 2014 ; 4 ; Revista Nexi Volume 2014 ; 2014 ; >
 
   }
 
@@ -709,7 +709,7 @@
       au < released ; 2010 ; 6 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 7 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 8 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 9 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2013 ; 2013 ; >
+      au < ready ; 2013 ; 9 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2013 ; 2013 ; >
 
   }
 

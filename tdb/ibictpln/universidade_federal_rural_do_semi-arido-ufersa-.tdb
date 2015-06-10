@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment >
 
   {
 
@@ -17,13 +17,13 @@
       param[base_url] = http://periodicos.ufersa.edu.br/revistas/
       param[journal_id] = acta
 
-      au < exists ; 2007 ; 1 ; Acta Veterinaria Brasilica Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Acta Veterinaria Brasilica Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Acta Veterinaria Brasilica Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Acta Veterinaria Brasilica Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 5 ; Acta Veterinaria Brasilica Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Acta Veterinaria Brasilica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Acta Veterinaria Brasilica Volume 2013 ; 2013 >
+      au < exists ; 2007 ; 1 ; Acta Veterinaria Brasilica Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Acta Veterinaria Brasilica Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; Acta Veterinaria Brasilica Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; Acta Veterinaria Brasilica Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; Acta Veterinaria Brasilica Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; Acta Veterinaria Brasilica Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Acta Veterinaria Brasilica Volume 2013 ; 2013 ; >
 
   }
 
@@ -38,9 +38,9 @@
       param[base_url] = http://periodicos.ufersa.edu.br/revistas/
       param[journal_id] = jabb
 
-      au < released ; 2013 ; 1 ; Journal of Animal Behaviour and Biometeorology Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 2 ; Journal of Animal Behaviour and Biometeorology Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 3 ; Journal of Animal Behaviour and Biometeorology Volume 2015 ; 2015 >
+      au < released ; 2013 ; 1 ; Journal of Animal Behaviour and Biometeorology Volume 2013 ; 2013 ; >
+      au < notReady ; 2014 ; 2 ; Journal of Animal Behaviour and Biometeorology Volume 2014 ; 2014 ; Unknown host>
+      au < manifest ; 2015 ; 3 ; Journal of Animal Behaviour and Biometeorology Volume 2015 ; 2015 ; >
 
   }
 
@@ -56,26 +56,26 @@
       param[base_url] = http://periodicos.ufersa.edu.br/revistas/
       param[journal_id] = sistema
 
-      au < released ; 1976 ; 1 ; Revista Caatinga Volume 1976 ; 1976 >
-      au < released ; 1977 ; 2 ; Revista Caatinga Volume 1977 ; 1977 >
-      au < released ; 1978 ; 3 ; Revista Caatinga Volume 1978 ; 1978 >
-      au < released ; 1984 ; 9 ; Revista Caatinga Volume 1984 ; 1984 >
-      au < released ; 1985 ; 10 ; Revista Caatinga Volume 1985 ; 1985 >
-      au < released ; 1989 ; 14 ; Revista Caatinga Volume 1989 ; 1989 >
-      au < released ; 1990 ; 15 ; Revista Caatinga Volume 1990 ; 1990 >
-      au < released ; 1994 ; 19 ; Revista Caatinga Volume 1994 ; 1994 >
-      au < released ; 1996 ; 21 ; Revista Caatinga Volume 1996 ; 1996 >
-      au < released ; 1997 ; 22 ; Revista Caatinga Volume 1997 ; 1997 >
-      au < released ; 1998 ; 23 ; Revista Caatinga Volume 1998 ; 1998 >
-      au < released ; 2006 ; 31 ; Revista Caatinga Volume 2006 ; 2006 >
-      au < released ; 2007 ; 32 ; Revista Caatinga Volume 2007 ; 2007 >
-      au < released ; 2008 ; 33 ; Revista Caatinga Volume 2008 ; 2008 >
-      au < released ; 2009 ; 34 ; Revista Caatinga Volume 2009 ; 2009 >
-      au < released ; 2010 ; 35 ; Revista Caatinga Volume 2010 ; 2010 >
-      au < released ; 2011 ; 36 ; Revista Caatinga Volume 2011 ; 2011 >
-      au < released ; 2012 ; 37 ; Revista Caatinga Volume 2012 ; 2012 >
-      au < released ; 2013 ; 38 ; Revista Caatinga Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 39 ; Revista Caatinga Volume 2014 ; 2014 >
+      au < released ; 1976 ; 1 ; Revista Caatinga Volume 1976 ; 1976 ; >
+      au < released ; 1977 ; 2 ; Revista Caatinga Volume 1977 ; 1977 ; >
+      au < released ; 1978 ; 3 ; Revista Caatinga Volume 1978 ; 1978 ; >
+      au < released ; 1984 ; 9 ; Revista Caatinga Volume 1984 ; 1984 ; >
+      au < released ; 1985 ; 10 ; Revista Caatinga Volume 1985 ; 1985 ; >
+      au < released ; 1989 ; 14 ; Revista Caatinga Volume 1989 ; 1989 ; >
+      au < released ; 1990 ; 15 ; Revista Caatinga Volume 1990 ; 1990 ; >
+      au < released ; 1994 ; 19 ; Revista Caatinga Volume 1994 ; 1994 ; >
+      au < released ; 1996 ; 21 ; Revista Caatinga Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 22 ; Revista Caatinga Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 23 ; Revista Caatinga Volume 1998 ; 1998 ; >
+      au < released ; 2006 ; 31 ; Revista Caatinga Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 32 ; Revista Caatinga Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 33 ; Revista Caatinga Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 34 ; Revista Caatinga Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 35 ; Revista Caatinga Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 36 ; Revista Caatinga Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 37 ; Revista Caatinga Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 38 ; Revista Caatinga Volume 2013 ; 2013 ; >
+      au < notReady ; 2014 ; 39 ; Revista Caatinga Volume 2014 ; 2014 ; unknown host>
 
   }
 
