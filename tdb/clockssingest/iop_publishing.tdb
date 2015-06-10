@@ -16,7 +16,7 @@
   comment[doNotInclude2] = Izvestiya: Mathematics 1064-5632,
   comment[doNotInclude3] = Physics-Uspekhi 1063-7869, Quantum Electronics 1063-7818,
   comment[doNotInclude4] = Russian Chemical Reviews 0036-021X, Russian Mathematical Surveys 0036-0279,
-  comment[doNotInclude5] = Sbornik: Mathematics 1064-5616, Science Foundation in China 1005-0841,
+  comment[doNotInclude5] = Sbornik: Mathematics 1064-5616, 
   
   
   
@@ -3955,6 +3955,26 @@
     au < crawling ; exists ; 2013 ; Science and Technology of Advanced Materials Volume 14 ; 14 > 
     au < crawling ; exists ; 2014 ; Science and Technology of Advanced Materials Volume 15 ; 15 > 
     au < manifest ; exists ; 2015 ; Science and Technology of Advanced Materials Volume 16 ; 16 > 
+
+  }
+
+  {
+
+    title <
+      name = Science Foundation in China ;
+      issn = 1005-0841 ;
+      issnl = 1005-0841 
+    >
+
+    param[journal_issn] = 1005-0841 
+    comment[param] = print issn preferred
+
+    au < exists ; exists ; 2008 ; Science Foundation in China Volume 16 ; 16 >
+    au < exists ; exists ; 2009 ; Science Foundation in China Volume 17 ; 17 >
+    au < exists ; exists ; 2010 ; Science Foundation in China Volume 18 ; 18 >
+    au < exists ; exists ; 2011 ; Science Foundation in China Volume 19 ; 19 >
+    au < exists ; exists ; 2012 ; Science Foundation in China Volume 20 ; 20 >
+    au < exists ; exists ; 2013 ; Science Foundation in China Volume 21 ; 21 >
 
   }
 
