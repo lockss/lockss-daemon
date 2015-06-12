@@ -518,80 +518,6 @@ comment[bj1] = no permission from publisher
   }
   
   {
- 
-    title <
-      name = Biology of the Cell ;
-      issn = 0248-4900 ;
-      eissn = 1768-322X ;
-      issnl = 0248-4900
-    >
-
-    param[base_url] = http://www.biolcell.org/
-
-    comment[boc_notReady] = V101 401 Unauthorized http://www.biolcell.org/boc/ev/101/0617/boc1010617_ev.htm
-    comment[notReady] = other volumes likely 500 errors
-    comment[ownership] = moved to Wiley
-
-    au < doNotProcess ; 1984 ; Biology of the Cell Volume 48 [abstracts only] ; 48 >
-    au < exists ; 1984 ; Biology of the Cell Volume 49 [abstracts only] ; 49 >
-    au < doNotProcess ; 1984 ; Biology of the Cell Volume 50 [abstracts only] ; 50 >
-    au < doNotProcess ; 1984 ; Biology of the Cell Volume 51 [abstracts only] ; 51 >
-    au < doNotProcess ; 1985 ; Biology of the Cell Volume 52 [abstracts only] ; 52 >
-    au < doNotProcess ; 1985 ; Biology of the Cell Volume 53 [abstracts only] ; 53 >
-    au < doNotProcess ; 1985 ; Biology of the Cell Volume 54 [abstracts only] ; 54 >
-    au < doNotProcess ; 1985 ; Biology of the Cell Volume 55 [abstracts only] ; 55 >
-    au < doNotProcess ; 1986 ; Biology of the Cell Volume 56 [abstracts only] ; 56 >
-    au < exists ; 1986 ; Biology of the Cell Volume 57 [abstracts only] ; 57 >
-    au < doNotProcess ; 1986 ; Biology of the Cell Volume 58 [abstracts only] ; 58 >
-    au < doNotProcess ; 1987 ; Biology of the Cell Volume 59 [abstracts only] ; 59 >
-    au < doNotProcess ; 1987 ; Biology of the Cell Volume 60 [abstracts only] ; 60 >
-    au < doNotProcess ; 1987 ; Biology of the Cell Volume 61 [abstracts only] ; 61 >
-    au < doNotProcess ; 1988 ; Biology of the Cell Volume 62 ; 62 >
-    au < doNotProcess ; 1988 ; Biology of the Cell Volume 63 ; 63 >
-    au < doNotProcess ; 1988 ; Biology of the Cell Volume 64 ; 64 >
-    au < doNotProcess ; 1989 ; Biology of the Cell Volume 65 ; 65 >
-    au < doNotProcess ; 1989 ; Biology of the Cell Volume 66 ; 66 >
-    au < doNotProcess ; 1989 ; Biology of the Cell Volume 67 ; 67 >
-    au < doNotProcess ; 1990 ; Biology of the Cell Volume 68 ; 68 >
-    au < doNotProcess ; 1990 ; Biology of the Cell Volume 69 ; 69 >
-    au < exists ; 1990 ; Biology of the Cell Volume 70 ; 70 >
-    au < doNotProcess ; 1991 ; Biology of the Cell Volume 71 ; 71 >
-    au < doNotProcess ; 1991 ; Biology of the Cell Volume 72 ; 72 >
-    au < doNotProcess ; 1991 ; Biology of the Cell Volume 73 ; 73 >
-    au < doNotProcess ; 1992 ; Biology of the Cell Volume 74 ; 74 >
-    au < doNotProcess ; 1992 ; Biology of the Cell Volume 75 ; 75 >
-    au < doNotProcess ; 1992 ; Biology of the Cell Volume 76 ; 76 >
-    au < doNotProcess ; 1993 ; Biology of the Cell Volume 77 ; 77 >
-    au < doNotProcess ; 1993 ; Biology of the Cell Volume 78 ; 78 >
-    au < doNotProcess ; 1993 ; Biology of the Cell Volume 79 ; 79 >
-    au < doNotProcess ; 1994 ; Biology of the Cell Volume 80 ; 80 >
-    au < doNotProcess ; 1994 ; Biology of the Cell Volume 81 ; 81 >
-    au < doNotProcess ; 1994 ; Biology of the Cell Volume 82 ; 82 >
-    au < doNotProcess ; 1995 ; Biology of the Cell Volume 83 ; 83 >
-    au < exists ; 1995 ; Biology of the Cell Volume 84 ; 84 >
-    au < doNotProcess ; 1995 ; Biology of the Cell Volume 85 ; 85 >
-    au < doNotProcess ; 1996 ; Biology of the Cell Volume 86 ; 86 >
-    au < doNotProcess ; 1996 ; Biology of the Cell Volume 87 ; 87 >
-    au < doNotProcess ; 1996 ; Biology of the Cell Volume 88 ; 88 >
-    au < doNotProcess ; 1997 ; Biology of the Cell Volume 89 ; 89 >
-    au < doNotProcess ; 1998 ; Biology of the Cell Volume 90 ; 90 >
-    au < doNotProcess ; 1999 ; Biology of the Cell Volume 91 ; 91 >
-    au < doNotProcess ; 2000 ; Biology of the Cell Volume 92 ; 92 >
-    au < doNotProcess ; 2001 ; Biology of the Cell Volume 93 ; 93 >
-    au < doNotProcess ; 2002 ; Biology of the Cell Volume 94 ; 94 >
-    au < doNotProcess ; 2003 ; Biology of the Cell Volume 95 ; 95 >
-    au < doNotProcess ; 2004 ; Biology of the Cell Volume 96 ; 96 >
-    au < doNotProcess ; 2005 ; Biology of the Cell Volume 97 ; 97 >
-    au < doNotProcess ; 2006 ; Biology of the Cell Volume 98 ; 98 >
-    au < doNotProcess ; 2007 ; Biology of the Cell Volume 99 ; 99 >
-    au < doNotProcess ; 2008 ; Biology of the Cell Volume 100 ; 100 >
-    au < exists ; 2009 ; Biology of the Cell Volume 101 ; 101 >
-    au < doNotProcess ; 2010 ; Biology of the Cell Volume 102 ; 102 >
-    au < doNotProcess ; 2011 ; Biology of the Cell Volume 103 ; 103 >
-    
-  } 
-  
-  {
   
     title <
       name = Biochemical Society Transactions ;
@@ -705,71 +631,6 @@ comment[bj1] = no permission from publisher
     au < exists ; 2014 ; Bioscience Reports Volume 34 ; 34 >
     au < exists ; 2015 ; Bioscience Reports Volume 35 ; 35 >
 
-  }
-
-  {
-  
-    title <
-      name = Biotechnology and Applied Biochemistry ;
-      issn = 0885-4513 ;
-      eissn = 1470-8744 ;
-      issnl = 0885-4513
-    >
-
-    comment[publisher] = After 2010 moved to Wiley Blackwell.
-
-    param[base_url] = http://www.babonline.org/
-
-    au < doNotProcess ; 1987 ; Biotechnology and Applied Biochemistry Volume 9 [abstracts only] ; 9 >
-    au < doNotProcess ; 1988 ; Biotechnology and Applied Biochemistry Volume 10 [abstracts only] ; 10 >
-    au < doNotProcess ; 1989 ; Biotechnology and Applied Biochemistry Volume 11 [abstracts only] ; 11 >
-    au < doNotProcess ; 1990 ; Biotechnology and Applied Biochemistry Volume 12 [abstracts only] ; 12 >
-    au < doNotProcess ; 1991 ; Biotechnology and Applied Biochemistry Volume 13 [abstracts only] ; 13 >
-    au < doNotProcess ; 1991 ; Biotechnology and Applied Biochemistry Volume 14 [abstracts only] ; 14 >
-    au < doNotProcess ; 1992 ; Biotechnology and Applied Biochemistry Volume 15 [abstracts only] ; 15 >
-    au < doNotProcess ; 1992 ; Biotechnology and Applied Biochemistry Volume 16 [abstracts only] ; 16 >
-    au < doNotProcess ; 1993 ; Biotechnology and Applied Biochemistry Volume 17 [abstracts only] ; 17 >
-    au < doNotProcess ; 1993 ; Biotechnology and Applied Biochemistry Volume 18 [abstracts only] ; 18 >
-    au < doNotProcess ; 1994 ; Biotechnology and Applied Biochemistry Volume 19 [abstracts only] ; 19 >
-    au < doNotProcess ; 1994 ; Biotechnology and Applied Biochemistry Volume 20 [abstracts only] ; 20 >
-    au < doNotProcess ; 1995 ; Biotechnology and Applied Biochemistry Volume 21 [abstracts only] ; 21 >
-    au < doNotProcess ; 1995 ; Biotechnology and Applied Biochemistry Volume 22 [abstracts only] ; 22 >
-    au < doNotProcess ; 1996 ; Biotechnology and Applied Biochemistry Volume 23 [abstracts only] ; 23 >
-    au < doNotProcess ; 1996 ; Biotechnology and Applied Biochemistry Volume 24 [abstracts only] ; 24 >
-    au < doNotProcess ; 1997 ; Biotechnology and Applied Biochemistry Volume 25 [abstracts only] ; 25 >
-    au < doNotProcess ; 1997 ; Biotechnology and Applied Biochemistry Volume 26 [abstracts only] ; 26 >
-    au < doNotProcess ; 1998 ; Biotechnology and Applied Biochemistry Volume 27 [abstracts only] ; 27 >
-    au < doNotProcess ; 1998 ; Biotechnology and Applied Biochemistry Volume 28 ; 28 >
-    au < doNotProcess ; 1999 ; Biotechnology and Applied Biochemistry Volume 29 ; 29 >
-    au < doNotProcess ; 1999 ; Biotechnology and Applied Biochemistry Volume 30 ; 30 >
-    au < doNotProcess ; 2000 ; Biotechnology and Applied Biochemistry Volume 31 ; 31 >
-    au < doNotProcess ; 2000 ; Biotechnology and Applied Biochemistry Volume 32 ; 32 >
-    au < doNotProcess ; 2001 ; Biotechnology and Applied Biochemistry Volume 33 ; 33 >
-    au < doNotProcess ; 2001 ; Biotechnology and Applied Biochemistry Volume 34 ; 34 >
-    au < doNotProcess ; 2002 ; Biotechnology and Applied Biochemistry Volume 35 ; 35 >
-    au < doNotProcess ; 2002 ; Biotechnology and Applied Biochemistry Volume 36 ; 36 >
-    au < doNotProcess ; 2003 ; Biotechnology and Applied Biochemistry Volume 37 ; 37 >
-    au < doNotProcess ; 2003 ; Biotechnology and Applied Biochemistry Volume 38 ; 38 >
-    au < doNotProcess ; 2004 ; Biotechnology and Applied Biochemistry Volume 39 ; 39 >
-    au < doNotProcess ; 2004 ; Biotechnology and Applied Biochemistry Volume 40 ; 40 >
-    au < doNotProcess ; 2005 ; Biotechnology and Applied Biochemistry Volume 41 ; 41 >
-    au < doNotProcess ; 2005 ; Biotechnology and Applied Biochemistry Volume 42 ; 42 >
-    au < doNotProcess ; 2006 ; Biotechnology and Applied Biochemistry Volume 43 ; 43 >
-    au < doNotProcess ; 2006 ; Biotechnology and Applied Biochemistry Volume 44 ; 44 >
-    au < doNotProcess ; 2006 ; Biotechnology and Applied Biochemistry Volume 45 ; 45 >
-    au < doNotProcess ; 2007 ; Biotechnology and Applied Biochemistry Volume 46 ; 46 >
-    au < doNotProcess ; 2007 ; Biotechnology and Applied Biochemistry Volume 47 ; 47 >
-    au < doNotProcess ; 2007 ; Biotechnology and Applied Biochemistry Volume 48 ; 48 >
-    au < doNotProcess ; 2008 ; Biotechnology and Applied Biochemistry Volume 49 ; 49 >
-    au < doNotProcess ; 2008 ; Biotechnology and Applied Biochemistry Volume 50 ; 50 >
-    au < doNotProcess ; 2008 ; Biotechnology and Applied Biochemistry Volume 51 ; 51 >
-    au < doNotProcess ; 2009 ; Biotechnology and Applied Biochemistry Volume 52 ; 52 >
-    au < doNotProcess ; 2009 ; Biotechnology and Applied Biochemistry Volume 53 ; 53 >
-    au < doNotProcess ; 2009 ; Biotechnology and Applied Biochemistry Volume 54 ; 54 >
-    au < doNotProcess ; 2010 ; Biotechnology and Applied Biochemistry Volume 55 ; 55 >
-    au < doNotProcess ; 2010 ; Biotechnology and Applied Biochemistry Volume 56 ; 56 >
-    au < doNotProcess ; 2010 ; Biotechnology and Applied Biochemistry Volume 57 ; 57 >
-    
   }
 
   {
@@ -901,6 +762,30 @@ comment[bj1] = no permission from publisher
     au < exists ; 2014 ; Essays in Biochemistry Volume 57 ; 57 >
     au < exists ; 2015 ; Essays in Biochemistry Volume 58 ; 58 >
     au < exists ; 2015 ; Essays in Biochemistry Volume 59 ; 59 >
+
+  }
+  
+  {
+  
+    title <
+      name = Biochemical Society Symposia ;
+      issn = 0067-8694 ;
+      eissn = 1744-1439 ;
+      issnl = 0067-8694
+    >
+
+    param[base_url] = http://symposia.biochemistry.org/
+
+    au < exists ; 1995 ; Biochemical Society Symposia Volume 61 ; 61 >
+    au < exists ; 1999 ; Biochemical Society Symposia Volume 66 ; 66 >
+    au < exists ; 2001 ; Biochemical Society Symposia Volume 67 ; 67 >
+    au < exists ; 2001 ; Biochemical Society Symposia Volume 68 ; 68 >
+    au < exists ; 2002 ; Biochemical Society Symposia Volume 69 ; 69 >
+    au < exists ; 2003 ; Biochemical Society Symposia Volume 70 ; 70 >
+    au < exists ; 2004 ; Biochemical Society Symposia Volume 71 ; 71 >
+    au < exists ; 2005 ; Biochemical Society Symposia Volume 72 ; 72 >
+    au < exists ; 2006 ; Biochemical Society Symposia Volume 73 ; 73 >
+    au < exists ; 2007 ; Biochemical Society Symposia Volume 74 ; 74 >
 
   }
   
