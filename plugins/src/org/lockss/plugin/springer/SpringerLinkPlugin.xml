@@ -20,7 +20,7 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -81,20 +81,20 @@
   </entry>
   <entry>
     <string>au_feature_urls</string>
-  	<map>
-	  <entry>
-      <string>au_title</string>
-	  <string>&quot;%scontent/%s/&quot;, base_url, journal_issn</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-	  <string>&quot;%scontent/%s/%s&quot;, base_url, journal_issn, volume_name</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-	  <string>&quot;%scontent/%s/%s/%s/&quot;, base_url, journal_issn, volume_name, issue</string>
-    </entry>
-  	</map>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%scontent/%s/&quot;, base_url, journal_issn</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%scontent/%s/%s&quot;, base_url, journal_issn, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>&quot;%scontent/%s/%s/%s/&quot;, base_url, journal_issn, volume_name, issue</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -154,11 +154,7 @@
     <string>org.lockss.plugin.springer.SpringerLinkHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.springer.SpringerLinkUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>plugin_delete_extra_files</string>
-    <boolean>true</boolean>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/dynamic-file\.axd\?id=[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}</string>
   </entry>
 </map>

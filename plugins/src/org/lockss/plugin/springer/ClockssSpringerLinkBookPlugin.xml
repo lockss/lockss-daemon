@@ -16,11 +16,11 @@
     <map>
      <entry>
         <string>Metadata</string>
-	    <string>5</string>
+	<string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -160,7 +160,7 @@
     <string>org.lockss.plugin.springer.SpringerLinkHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.springer.SpringerLinkUrlNormalizer</string>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/dynamic-file\.axd\?id=[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}</string>
   </entry>
 </map>
