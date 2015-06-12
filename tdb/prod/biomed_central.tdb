@@ -2169,27 +2169,50 @@
       >
 
       comment[ArResThe] = website restructured 2011-05
-
-      param[base_url] = http://arthritis-research.com/
       param[journal_issn] = 1478-6354
 
-      au < released ; 1999 ; Arthritis Research & Therapy Volume 1 ; 1 >
-      au < released ; 2000 ; Arthritis Research & Therapy Volume 2 ; 2 >
-      au < released ; 2001 ; Arthritis Research & Therapy Volume 3 ; 3 >
-      au < released ; 2002 ; Arthritis Research & Therapy Volume 4 ; 4 >
-      au < released ; 2003 ; Arthritis Research & Therapy Volume 5 ; 5 >
-      au < released ; 2004 ; Arthritis Research & Therapy Volume 6 ; 6 >
-      au < released ; 2005 ; Arthritis Research & Therapy Volume 7 ; 7 >
-      au < released ; 2006 ; Arthritis Research & Therapy Volume 8 ; 8 >
-      au < released ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 >
-      au < released ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
-      au < released ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
-      au < released ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
-      au < released ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
-      au < released ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
-      au < manifest ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
-      au < manifest ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
+      {
+      param[base_url] = http://www.arthritis-research.com/
+      comment[0] = base url changed to add www.
 
+      au < doNotProcess ; 1999 ; Arthritis Research & Therapy Volume 1 ; 1 >
+      au < doNotProcess ; 2000 ; Arthritis Research & Therapy Volume 2 ; 2 >
+      au < doNotProcess ; 2001 ; Arthritis Research & Therapy Volume 3 ; 3 >
+      au < doNotProcess ; 2002 ; Arthritis Research & Therapy Volume 4 ; 4 >
+      au < doNotProcess ; 2003 ; Arthritis Research & Therapy Volume 5 ; 5 >
+      au < doNotProcess ; 2004 ; Arthritis Research & Therapy Volume 6 ; 6 >
+      au < doNotProcess ; 2005 ; Arthritis Research & Therapy Volume 7 ; 7 >
+      au < doNotProcess ; 2006 ; Arthritis Research & Therapy Volume 8 ; 8 >
+      au < doNotProcess ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 >
+      au < doNotProcess ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
+      au < doNotProcess ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
+      au < doNotProcess ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
+      au < doNotProcess ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
+      au < exists ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
+      au < exists ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
+      au < exists ; 2015 ; Arthritis Research & Therapy Volume 17 ; 17 >
+      }
+      {
+      param[base_url] = http://arthritis-research.com/
+
+      au < down ; 1999 ; Arthritis Research & Therapy Volume 1 ; 1 >
+      au < down ; 2000 ; Arthritis Research & Therapy Volume 2 ; 2 >
+      au < down ; 2001 ; Arthritis Research & Therapy Volume 3 ; 3 >
+      au < down ; 2002 ; Arthritis Research & Therapy Volume 4 ; 4 >
+      au < down ; 2003 ; Arthritis Research & Therapy Volume 5 ; 5 >
+      au < down ; 2004 ; Arthritis Research & Therapy Volume 6 ; 6 >
+      au < down ; 2005 ; Arthritis Research & Therapy Volume 7 ; 7 >
+      au < down ; 2006 ; Arthritis Research & Therapy Volume 8 ; 8 >
+      au < down ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 >
+      au < down ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
+      au < down ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
+      au < down ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
+      au < down ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
+      au < down ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
+      au < doNotProcess ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
+      au < doNotProcess ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
+      }
     }
 
     {
