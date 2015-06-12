@@ -42,7 +42,7 @@
       au < manifest ; exists ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 >
       au < manifest ; exists ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
       au < crawling ; exists ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
-      au < testing ; exists ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 >
+      au < ready ; exists ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 >
       au < manifest ; exists ; 2014-2015 ; The Chaucer Review Volume 49 ; 49 >
       au < expected ; exists ; 2015-2016 ; The Chaucer Review Volume 50 ; 50 >
       
@@ -200,7 +200,7 @@
 
       au < crawling ; exists ; 2013 ; Journal of Africana Religions Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Journal of Africana Religions Volume 2 ; 2 >
-      au < testing ; exists ; 2014 ; Journal of Africana Religions Volume 3 ; 3 >
+      au < ready ; exists ; 2014 ; Journal of Africana Religions Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; Journal of Africana Religions Volume 4 ; 4 >
       
   }
@@ -219,7 +219,7 @@
       au < manifest ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 3 >
-      au < testing ; exists ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 4 >
+      au < ready ; exists ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 4 >
       au < expected ; exists ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5 ; 5 >
       
   }
@@ -254,7 +254,7 @@
 
       param[journal_id] = jeasmedarcherstu
 
-      au < testing ; exists ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 >
+      au < ready ; exists ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 3 >
 
@@ -273,7 +273,7 @@
 
       au < manifest ; exists ; 2010 ; The Journal of General Education Volume 59 ; 59 >
       au < manifest ; exists ; 2011 ; The Journal of General Education Volume 60 ; 60 >
-      au < testing ; exists ; 2012 ; The Journal of General Education Volume 61 ; 61 >
+      au < ready ; exists ; 2012 ; The Journal of General Education Volume 61 ; 61 >
       au < crawling ; exists ; 2013 ; The Journal of General Education Volume 62 ; 62 >
       au < crawling ; exists ; 2014 ; The Journal of General Education Volume 63 ; 63 >
       au < manifest ; exists ; 2015 ; The Journal of General Education Volume 64 ; 64 >
@@ -423,7 +423,7 @@
       au < manifest ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
       au < crawling ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 20 >
       au < crawling ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 21 >
-      au < testing ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 22 >
+      au < ready ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 22 >
       au < manifest ; exists ; 2015 ; Mediterranean Studies Volume 23 ; 23 >
       
   }
