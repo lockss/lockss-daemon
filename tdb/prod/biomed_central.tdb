@@ -1986,17 +1986,32 @@
         eissn = 1758-9193 ;
         issnl = 1758-9193
       >
-
-      param[base_url] = http://alzres.com/
       param[journal_issn] = 1758-9193
+      
+      {
+        param[base_url] = http://www.alzres.com/
 
-      au < released ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
-      au < released ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
-      au < released ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
-      au < released ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
-      au < manifest ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
-      au < manifest ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+        au < doNotProcess ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+        au < doNotProcess ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
+        au < doNotProcess ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
+        au < doNotProcess ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
+        au < exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+        au < exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+        au < exists ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
 
+      }
+      {
+        param[base_url] = http://alzres.com/
+        comment[0] = journal moved to http://www.alzres.com/
+
+        au < down ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+        au < down ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
+        au < down ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
+        au < down ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
+        au < doNotProcess ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+        au < doNotProcess ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+
+      }
     }
 
     {

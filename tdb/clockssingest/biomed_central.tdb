@@ -2075,18 +2075,28 @@
         eissn = 1758-9193 ;
         issnl = 1758-9193
       >
-
-      param[base_url] = http://alzres.com/
       param[journal_issn] = 1758-9193
+      {
+      param[base_url] = http://www.alzres.com/
 
-      au < crawling ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
-      au < finished ; crawling ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
-      au < finished ; crawling ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
-      au < crawling ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
-      au < crawling ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
-      au < manifest ; exists ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
+      au < doNotProcess ; crawling ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
+      au < doNotProcess ; crawling ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+      au < exists ; exists ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
+      }
+      {
+      param[base_url] = http://alzres.com/
 
+      au < down ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+      au < down ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
+      au < down ; crawling ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
+      au < down ; crawling ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
+      au < down ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+      au < down ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+      }
     }
 
     {
