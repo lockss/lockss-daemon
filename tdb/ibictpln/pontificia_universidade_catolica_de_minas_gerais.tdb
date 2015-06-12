@@ -45,7 +45,7 @@
       au < released ; 2011 ; 9 ; Cadernos de Arquitetura e Urbanismo Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 10 ; Cadernos de Arquitetura e Urbanismo Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Cadernos de Arquitetura e Urbanismo Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 12 ; Cadernos de Arquitetura e Urbanismo Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 12 ; Cadernos de Arquitetura e Urbanismo Volume 2014 ; 2014 ; >
 
   }
 
@@ -128,7 +128,7 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = conjuntura
 
-      au < manifest ; 2010 ; 7 ; Conjuntura Internacional Volume 2010 ; 2010 ; >
+      au < testing ; 2010 ; 7 ; Conjuntura Internacional Volume 2010 ; 2010 ; >
       au < ready ;2011 ; 8 ; Conjuntura Internacional Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 9 ; Conjuntura Internacional Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 10 ; Conjuntura Internacional Volume 2013 ; 2013 ; >
@@ -222,7 +222,7 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = economiaegestao
 
-      au < manifest ; 2002 ; 2 ; Revista Economia & Gestão Volume 2002 ; 2002 ; >
+      au < testing ; 2002 ; 2 ; Revista Economia & Gestão Volume 2002 ; 2002 ; >
       au < ready ; 2003 ; 3 ; Revista Economia & Gestão Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 4 ; Revista Economia & Gestão Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 5 ; Revista Economia & Gestão Volume 2005 ; 2005 ; >
