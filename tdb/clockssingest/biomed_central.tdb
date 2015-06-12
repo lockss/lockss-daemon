@@ -3050,8 +3050,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       {
       param[base_url] = http://chiromt.com/
-      comment[0] = This journal does not have a stable base_url and will not get substance.
-      comment[1] = Volume home page, and issue home page url do not have www, all others do.
+      comment[url] = This base_url is incorrect. base_url is http://www.chiromt.com
 
       au < superseded ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 [to delete] ; 16 >
       au < superseded ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 [to delete] ; 17 >
@@ -4504,6 +4503,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
         au < manifest ; exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
         au < manifest ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
+
       }
     }
 
@@ -4701,17 +4701,18 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://jbiol.com/
       param[journal_issn] = 1475-4924
-      comment[0] = no publication after 2010
+      comment[continued_by] = BMC Biology
+      comment[0] = no publication after 2010. Journal archived and moved to http://www.jbiol.com/
 
-      au < manifest ; exists ; 2002 ; Journal of Biology Volume 1 ; 1 >
-      au < manifest ; exists ; 2003 ; Journal of Biology Volume 2 ; 2 >
-      au < manifest ; exists ; 2004 ; Journal of Biology Volume 3 ; 3 >
-      au < manifest ; exists ; 2005 ; Journal of Biology Volume 4 ; 4 >
-      au < manifest ; exists ; 2006 ; Journal of Biology Volume 5 ; 5 >
-      au < manifest ; exists ; 2007 ; Journal of Biology Volume 6 ; 6 >
-      au < crawling ; exists ; 2008 ; Journal of Biology Volume 7 ; 7 >
-      au < crawling ; exists ; 2009 ; Journal of Biology Volume 8 ; 8 >
-      au < crawling ; exists ; 2010 ; Journal of Biology Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2002 ; Journal of Biology Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2003 ; Journal of Biology Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2004 ; Journal of Biology Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2005 ; Journal of Biology Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2006 ; Journal of Biology Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2007 ; Journal of Biology Volume 6 ; 6 >
+      au < down ; exists ; 2008 ; Journal of Biology Volume 7 ; 7 >
+      au < down ; exists ; 2009 ; Journal of Biology Volume 8 ; 8 >
+      au < down ; exists ; 2010 ; Journal of Biology Volume 9 ; 9 >
 
     }
 

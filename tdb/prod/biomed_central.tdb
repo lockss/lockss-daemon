@@ -4517,16 +4517,17 @@
       param[base_url] = http://jbiol.com/
       param[journal_issn] = 1475-4924
       comment[continued_by] = BMC Biology
+      comment[0] = no publication after 2010. Journal archived and moved to http://www.jbiol.com/
 
-      au < released ; 2002 ; Journal of Biology Volume 1 ; 1 >
-      au < released ; 2003 ; Journal of Biology Volume 2 ; 2 >
-      au < released ; 2004 ; Journal of Biology Volume 3 ; 3 >
-      au < released ; 2005 ; Journal of Biology Volume 4 ; 4 >
-      au < released ; 2006 ; Journal of Biology Volume 5 ; 5 >
-      au < released ; 2007 ; Journal of Biology Volume 6 ; 6 >
-      au < released ; 2008 ; Journal of Biology Volume 7 ; 7 >
-      au < released ; 2009 ; Journal of Biology Volume 8 ; 8 >
-      au < manifest ; 2010 ; Journal of Biology Volume 9 ; 9 >
+      au < down ; 2002 ; Journal of Biology Volume 1 ; 1 >
+      au < down ; 2003 ; Journal of Biology Volume 2 ; 2 >
+      au < down ; 2004 ; Journal of Biology Volume 3 ; 3 >
+      au < down ; 2005 ; Journal of Biology Volume 4 ; 4 >
+      au < down ; 2006 ; Journal of Biology Volume 5 ; 5 >
+      au < down ; 2007 ; Journal of Biology Volume 6 ; 6 >
+      au < down ; 2008 ; Journal of Biology Volume 7 ; 7 >
+      au < down ; 2009 ; Journal of Biology Volume 8 ; 8 >
+      au < doNotProcess ; 2010 ; Journal of Biology Volume 9 ; 9 >
 
     }
 
