@@ -30,6 +30,7 @@ package org.lockss.plugin.bmc;
 
 //import java.io.File;
 import java.util.Iterator;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
@@ -100,6 +101,28 @@ public class TestBMCPluginArticleIteratorFactory extends ArticleIteratorTestCase
 	             "" + (SimulatedContentGenerator.FILE_TYPE_PDF));
     conf.put("binFileSize", ""+DEFAULT_FILESIZE);
     return conf;
+  }
+  
+  
+  //http://www.biomedcentral.com/content/pdf/1472-6831-12-60.pdf
+  //http://www.biomedcentral.com/content/pdf/1471-2253-14-S1-A12.pdf
+
+  public void testReplacement() {
+    Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([\\d]+-[\\d]+)-([\\d]+)-([\\dS]+)(-([\\dA-Z]+))?\\.pdf$", Pattern.CASE_INSENSITIVE);
+    String url = "http://www.biomedcentral.com/content/pdf/1472-6831-12-60.pdf";
+    String expectedUrl = "http://www.biomedcentral.com/1472-6831/12/60/abstract";
+    String newUrl;
+    Matcher mat = PDF_PATTERN.matcher(url);
+    if (mat.find()) {
+      if (mat.group(5) != null) {
+        // supplement article has extra level
+        newUrl = mat.replaceFirst("/$1/$2/$3/$5/abstract");
+      } else {
+        newUrl = mat.replaceFirst("/$1/$2/$3/abstract");
+      }
+      log.debug3("newUrl is " + newUrl);
+      assertEquals(expectedUrl,newUrl);
+    }
   }
 
   public void _testRoots() throws Exception {      

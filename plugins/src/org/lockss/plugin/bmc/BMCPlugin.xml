@@ -3,7 +3,7 @@
 <map>
   <entry>
    <string>plugin_status</string>
-   <string>ready</string>
+   <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -15,14 +15,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>40</string>
+    <string>41</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
        <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -30,7 +30,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>15</string>
+        <string>16</string>
       </entry>
     </map>
   </entry>
@@ -44,8 +44,12 @@
     <string>BioMed Central Plugin (BMC Series, PhysMath Central)</string>
   </entry>
   <entry>
+<!--  supplements now start from their own page; crawl rules limit to just the correct volume -->  
     <string>au_start_url</string>
+    <list>
     <string>"%s%s/%s", base_url, journal_issn, volume_name</string>
+    <string>"%s%s/supplements/all", base_url, journal_issn</string>
+    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -97,7 +101,14 @@
       -->
       <string>1, "^%scontent/(epub|pdf)/%s-%s[\w-]*(\.pdf)?", base_url, journal_issn, volume_name</string>      
       <string>1, "^%s%s/%s/[\d]+", base_url, journal_issn, volume_name</string>      
-      <string>1, "^%s%s/%s/[\d]+/[\d]+/abstract", base_url, journal_issn, volume_name</string>    
+      <string>1, "^%s%s/%s/[\d]+/[\d]+/abstract", base_url, journal_issn, volume_name</string>  
+      <!-- supplement issues start from a page containing ALL supplement issues
+           http://www.biomedcentral.com/bmcgenomics/supplements/all 
+           http://www.biomedcentral.com/bmcgenomics/supplements/14/S8 
+           http://www.biomedcentral.com/1471-20164/14/S8/S2(/abstract)?  
+           but we don't know the specific journal_id so we have to wildcard 
+           risk of going to other journal supplement if they have same volume -->
+      <string>1, "^%s[^/]+/supplements/%s/", base_url, volume_name</string>        
     </list>
   </entry>
   <entry>

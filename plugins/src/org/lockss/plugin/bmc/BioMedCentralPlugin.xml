@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -17,14 +17,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
        <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
       <string>Substance</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>15</string>
+        <string>16</string>
       </entry>
     </map>
   </entry>
@@ -50,11 +50,11 @@
   </entry>
    <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.bmc.BioMedCentralPluginArticleIteratorFactory</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralTOCArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.bmc.BioMedCentralPluginArticleIteratorFactory</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralTOCArticleIteratorFactory</string>
   </entry>
   <!-- not ready for prime time...
   <entry>
@@ -114,8 +114,12 @@
  </list>
   </entry>
   <entry>
+    <!--  supplements now start from different page: base_url/supplements/all; crawl rules limit to volume-->
     <string>au_start_url</string>
+    <list>
     <string>"%scontent/%s", base_url, volume_name</string>
+    <string>"%ssupplements/all", base_url, volume_name</string>
+    </list>
    </entry>
   <entry>
     <string>au_substance_url_pattern</string>

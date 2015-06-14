@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,14 +39,30 @@ import java.util.regex.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
+
+/*
+ * This iterator cannot use the Builder because the PDF filename is occasionally
+ * inconsistent and the only sure way of getting it is from the metadata/doi.
+ * Therefore we iterate on the article landing page and from that generate the
+ * abstract (if there is one) and from that, pull the metadata to get the pdf name.
+ * There are two main flavors of URL layout 
+ *    BASE/content/VOL/#/ID
+ *    BASE/YEAR/VOL/#/ID
+ * The number after the VOL may be issue#, but sometimes is always 1, regardless of month
+ * Or the # after the VOL could be S#, to indicate a supplement 
+ * The ID is usually a number (eg startpage) but may be a combination of letters/nums, especially 
+ * in a supplement where it indicates proceeding (P3) or meeting abstract (A2), etc
+ * 
+ * NOTE - This iterator will not handle very early versions of a one (or a very small number)
+ * of the journals.  For example,  
+ */
 
 public class BioMedCentralPluginArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("BioMedCentralPluginArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(BioMedCentralPluginArticleIteratorFactory.class);
   // example pdf
   //http://www.jcheminf.com/content/pdf/1758-2946-2-7.pdf
   //http://breast-cancer-research.com/content/pdf/bcr3224.pdf
