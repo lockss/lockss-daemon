@@ -126,7 +126,7 @@
     au < released ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
     au < released ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
     au < released ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
-    au < releasing ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
+    au < released ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
 
   }
 
@@ -144,8 +144,8 @@
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
-    au < releasing ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
+    au < released ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
+    au < released ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
     au < doNotProcess ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
 
   }
