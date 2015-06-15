@@ -20974,7 +20974,7 @@
     au < finished ; crawling ; 2011 ; Schizophrenia Bulletin Volume 37 ; 37 ; >
     au < crawling ; exists ; 2012 ; Schizophrenia Bulletin Volume 38 ; 38 ; >
     au < crawling ; exists ; 2013 ; Schizophrenia Bulletin Volume 39 ; 39 ; >
-    au < testing ; exists ; 2014 ; Schizophrenia Bulletin Volume 40 ; 40 ; >
+    au < ready ; exists ; 2014 ; Schizophrenia Bulletin Volume 40 ; 40 ; >
     au < doNotProcess ; exists ; 2015 ; Schizophrenia Bulletin Volume 41 ; 41 ; >
 
     }
@@ -21107,7 +21107,7 @@
     au < finished ; frozen ; 2011 ; Screen Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Screen Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Screen Volume 54 ; 54 ; >
-    au < testing ; exists ; 2014 ; Screen Volume 55 ; 55 ; >
+    au < ready ; exists ; 2014 ; Screen Volume 55 ; 55 ; >
     au < doNotProcess ; exists ; 2015 ; Screen Volume 56 ; 56 ; >
 
     }
@@ -22119,7 +22119,7 @@
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 135 ; 135 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
     au < testing ; exists ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; >
-    au < testing ; exists ; 2014 ; Toxicological Sciences Volume 138 ; 138 ; >
+    au < ready ; exists ; 2014 ; Toxicological Sciences Volume 138 ; 138 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 139 ; 139 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 140 ; 140 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 141 ; 141 ; >
@@ -22146,7 +22146,7 @@
     param[base_url] = http://tlms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 ; >
 
   }
@@ -22498,7 +22498,7 @@
     au < crawling ; exists ; 2011 ; Uniform Law Review - Revue de droit uniforme Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ; >
+    au < testing ; exists ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ; >
 
     }
@@ -22787,7 +22787,7 @@
     au < finished ; crawling ; 2011 ; The Year's Work in Critical and Cultural Theory Volume 19 ; 19 ; >
     au < finished ; crawling ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; The Year's Work in Critical and Cultural Theory Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2014 ; The Year's Work in Critical and Cultural Theory Volume 22 ; 22 ; >
+    au < testing ; exists ; 2014 ; The Year's Work in Critical and Cultural Theory Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2015 ; The Year's Work in Critical and Cultural Theory Volume 23 ; 23 ; >
 
     }
@@ -22909,7 +22909,7 @@
     au < finished ; crawling ; 2011 ; The Year's Work in English Studies Volume 90 ; 90 ; >
     au < finished ; crawling ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; The Year's Work in English Studies Volume 92 ; 92 ; >
-    au < manifest ; exists ; 2014 ; The Year's Work in English Studies Volume 93 ; 93 ; >
+    au < testing ; exists ; 2014 ; The Year's Work in English Studies Volume 93 ; 93 ; >
     au < doNotProcess ; exists ; 2015 ; The Year's Work in English Studies Volume 94 ; 94 ; >
 
     }
@@ -23518,7 +23518,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < crawling ; exists ; 2013 ; National Science Review Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; National Science Review Volume 2 ; 2 ; >
+    au < testing ; exists ; 2014 ; National Science Review Volume 2 ; 2 ; >
 
   }
 
@@ -23730,7 +23730,7 @@
     au < crawling ; exists ; 2011 ; Poultry Science Volume 90 ; 90 ; >
     au < crawling ; exists ; 2012 ; Poultry Science Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; Poultry Science Volume 92 ; 92 ; >
-    au < manifest ; exists ; 2014 ; Poultry Science Volume 93 ; 93 ; >
+    au < testing ; exists ; 2014 ; Poultry Science Volume 93 ; 93 ; >
     au < doNotProcess ; exists ; 2015 ; Poultry Science Volume 94 ; 94 ; >
 
   }
