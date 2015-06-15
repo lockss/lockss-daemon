@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = The Society for Renaissance and Baroque Hispanic Poetry
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry ;
+      issn = 1084-1490 ;
+      eissn = 2377-9551
+    >
+
+    param[journal_dir] = caliope
+    attr[journal_id] = clp
+    
+    au < exists ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 ; 20 >
+  }
+
+}
