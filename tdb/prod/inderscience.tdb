@@ -4300,16 +4300,14 @@
         issnl = 1755-1587
       >
 
-      param[journal_id] = ijipm
+      param[journal_id] = ijidss
 
       au < doNotProcess ; 2008 ; International Journal of Intelligent Defence Support Systems Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; International Journal of Intelligent Defence Support Systems Volume 2 ; 2 >
       au < doNotProcess ; 2010 ; International Journal of Intelligent Defence Support Systems Volume 3 ; 3 >
       au < doNotProcess ; 2011 ; International Journal of Intelligent Defence Support Systems Volume 4 ; 4 >
-      au < exists ; 2012 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
-      au < expected ; 2013 ; International Journal of Intelligent Defence Support Systems Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Intelligent Defence Support Systems Volume 7 ; 7 >
-      au < expected ; 2015 ; International Journal of Intelligent Defence Support Systems Volume 8 ; 8 >
+      au < exists ; 2012-2014 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
+      au < expected ; 2015 ; International Journal of Intelligent Defence Support Systems Volume 6 ; 6 >
 
     }
 
