@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.nature;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
@@ -42,12 +45,20 @@ public class NaturePublishingGroupUrlNormalizer implements UrlNormalizer {
   protected static final Logger log = 
       Logger.getLogger(NaturePublishingGroupUrlNormalizer.class);  
   
-  private static final String MESSAGE_ENDING = "?message=remove";  
+  protected static final Pattern MSG_ENDING_PATTERN = Pattern.compile("\\?message(-global)?=remove$");
+  //private static final String MESSAGE_ENDING = "?message=remove";  
 
   public String normalizeUrl(String url,
                              ArchivalUnit au)
       throws PluginException {
-    return StringUtils.chomp(url, MESSAGE_ENDING);
+    // don't waste time if there is no ? argument
+    if (url.contains("?")) {
+      Matcher mat = MSG_ENDING_PATTERN.matcher(url);
+      if (mat.find()) {
+        return url.substring(0, mat.start());
+      }
+    }
+    return url;
   }
 
 }

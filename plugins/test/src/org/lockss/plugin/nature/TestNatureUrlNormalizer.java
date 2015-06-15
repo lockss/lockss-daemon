@@ -41,7 +41,14 @@ public class TestNatureUrlNormalizer extends LockssTestCase {
     assertEquals("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html",
     			 normalizer.normalizeUrl("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html", null));
     assertEquals("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html",
-    			 normalizer.normalizeUrl("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html?message=remove", null));
+        normalizer.normalizeUrl("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html?message=remove", null));
+    assertEquals("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html",
+        normalizer.normalizeUrl("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html?message-global=remove", null));
+    assertEquals("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html?message-foo=remove",
+        normalizer.normalizeUrl("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html?message-foo=remove", null));
+    assertEquals("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html?other=blah",
+        normalizer.normalizeUrl("http://www.nature.com/onc/journal/v29/n37/full/onc2010273a.html?other=blah", null));
+
   }
   
 }
