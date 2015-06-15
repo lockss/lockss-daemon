@@ -45,8 +45,8 @@
       param[base_url] = http://www.direitopublico.idp.edu.br/
       param[journal_id] = direitopublico
 
-      au < testing ; 2003 ; 2003 ; Direito Público Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 2004 ; Direito Público Volume 2004 ; 2004 ; >
+      au < notReady ; 2003 ; 2003 ; Direito Público Volume 2003 ; 2003 ; recursive URLs>
+      au < notReady ; 2004 ; 2004 ; Direito Público Volume 2004 ; 2004 ; recursive URLs>
       au < notReady ; 2005 ; 2005 ; Direito Público Volume 2005 ; 2005 ; recursive URLs >
       au < notReady ; 2006 ; 2006 ; Direito Público Volume 2006 ; 2006 ; recursive URLs >
       au < notReady ; 2007 ; 2007 ; Direito Público Volume 2007 ; 2007 ; recursive URLs >
