@@ -3870,7 +3870,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Geophysics Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -5586,7 +5586,7 @@
     param[journal_id] = jds
     
     au < crawling ; exists ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6512,7 +6512,7 @@
     param[journal_id] = joo
     
     au < manifest ; exists ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7278,7 +7278,7 @@
     au < manifest ; exists ; 2012 ; Leukemia Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Leukemia Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Leukemia Research and Treatment Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Leukemia Research and Treatment Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Leukemia Research and Treatment Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7435,8 +7435,8 @@
 
     param[journal_id] = misy
 
-    au < exists ; exists ; 2014 ; Mobile Information Systems Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Mobile Information Systems Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2014 ; Mobile Information Systems Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2015 ; Mobile Information Systems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8141,8 +8141,8 @@
 
     param[journal_id] = sp
 
-    au < exists ; exists ; 2014 ; Scientific Programming Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Scientific Programming Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2014 ; Scientific Programming Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2015 ; Scientific Programming Volume 2015 ; 2015 ; 2015 >
 
   }
 

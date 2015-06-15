@@ -2085,7 +2085,7 @@
       au < doNotProcess ; exists ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
-      au < exists ; exists ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
+      au < manifest ; exists ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
       }
       {
       param[base_url] = http://alzres.com/
@@ -2278,23 +2278,23 @@
       param[base_url] = http://www.arthritis-research.com/
       comment[0] = base url changed to add www.
 
-      au < exists ; exists ; 1999 ; Arthritis Research & Therapy Volume 1 ; 1 >
-      au < exists ; exists ; 2000 ; Arthritis Research & Therapy Volume 2 ; 2 >
-      au < exists ; exists ; 2001 ; Arthritis Research & Therapy Volume 3 ; 3 >
-      au < exists ; exists ; 2002 ; Arthritis Research & Therapy Volume 4 ; 4 >
-      au < exists ; exists ; 2003 ; Arthritis Research & Therapy Volume 5 ; 5 >
-      au < exists ; exists ; 2004 ; Arthritis Research & Therapy Volume 6 ; 6 >
-      au < exists ; exists ; 2005 ; Arthritis Research & Therapy Volume 7 ; 7 >
-      au < exists ; exists ; 2006 ; Arthritis Research & Therapy Volume 8 ; 8 >
-      au < exists ; exists ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 >
+      au < manifest ; exists ; 1999 ; Arthritis Research & Therapy Volume 1 ; 1 >
+      au < manifest ; exists ; 2000 ; Arthritis Research & Therapy Volume 2 ; 2 >
+      au < manifest ; exists ; 2001 ; Arthritis Research & Therapy Volume 3 ; 3 >
+      au < manifest ; exists ; 2002 ; Arthritis Research & Therapy Volume 4 ; 4 >
+      au < manifest ; exists ; 2003 ; Arthritis Research & Therapy Volume 5 ; 5 >
+      au < manifest ; exists ; 2004 ; Arthritis Research & Therapy Volume 6 ; 6 >
+      au < manifest ; exists ; 2005 ; Arthritis Research & Therapy Volume 7 ; 7 >
+      au < manifest ; exists ; 2006 ; Arthritis Research & Therapy Volume 8 ; 8 >
+      au < manifest ; exists ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 >
       au < doNotProcess ; exists ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
-      au < exists ; exists ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
+      au < manifest ; exists ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
       au < doNotProcess ; exists ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
       au < doNotProcess ; exists ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
-      au < exists ; exists ; 2015 ; Arthritis Research & Therapy Volume 17 ; 17 >
+      au < manifest ; exists ; 2015 ; Arthritis Research & Therapy Volume 17 ; 17 >
       }
       {
       param[base_url] = http://arthritis-research.com/
@@ -2688,23 +2688,23 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.breast-cancer-research.com/
       comment[0] = base url changed to add www.
 
-      au < exists ; exists ; 1999 ; Breast Cancer Research Volume 1 ; 1 >
-      au < exists ; exists ; 2000 ; Breast Cancer Research Volume 2 ; 2 >
-      au < exists ; exists ; 2001 ; Breast Cancer Research Volume 3 ; 3 >
-      au < exists ; exists ; 2002 ; Breast Cancer Research Volume 4 ; 4 >
-      au < exists ; exists ; 2003 ; Breast Cancer Research Volume 5 ; 5 >
-      au < exists ; exists ; 2004 ; Breast Cancer Research Volume 6 ; 6 >
-      au < exists ; exists ; 2005 ; Breast Cancer Research Volume 7 ; 7 >
-      au < exists ; exists ; 2006 ; Breast Cancer Research Volume 8 ; 8 >
-      au < exists ; exists ; 2007 ; Breast Cancer Research Volume 9 ; 9 >
+      au < manifest ; exists ; 1999 ; Breast Cancer Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2000 ; Breast Cancer Research Volume 2 ; 2 >
+      au < manifest ; exists ; 2001 ; Breast Cancer Research Volume 3 ; 3 >
+      au < manifest ; exists ; 2002 ; Breast Cancer Research Volume 4 ; 4 >
+      au < manifest ; exists ; 2003 ; Breast Cancer Research Volume 5 ; 5 >
+      au < manifest ; exists ; 2004 ; Breast Cancer Research Volume 6 ; 6 >
+      au < manifest ; exists ; 2005 ; Breast Cancer Research Volume 7 ; 7 >
+      au < manifest ; exists ; 2006 ; Breast Cancer Research Volume 8 ; 8 >
+      au < manifest ; exists ; 2007 ; Breast Cancer Research Volume 9 ; 9 >
       au < doNotProcess ; exists ; 2008 ; Breast Cancer Research Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2009 ; Breast Cancer Research Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
       au < doNotProcess ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < exists ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
-      au < exists ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
+      au < manifest ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < manifest ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
       }
       {
       param[base_url] = http://breast-cancer-research.com/
@@ -3368,25 +3368,25 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ccforum.com/
       comment[0] = base url changed to add www.
 
-      au < exists ; exists ; 1997 ; Critical Care Volume 1 ; 1 >
-      au < exists ; exists ; 1998 ; Critical Care Volume 2 ; 2 >
-      au < exists ; exists ; 1999 ; Critical Care Volume 3 ; 3 >
-      au < exists ; exists ; 2000 ; Critical Care Volume 4 ; 4 >
-      au < exists ; exists ; 2001 ; Critical Care Volume 5 ; 5 >
-      au < exists ; exists ; 2002 ; Critical Care Volume 6 ; 6 >
-      au < exists ; exists ; 2003 ; Critical Care Volume 7 ; 7 >
-      au < exists ; exists ; 2004 ; Critical Care Volume 8 ; 8 >
-      au < exists ; exists ; 2005 ; Critical Care Volume 9 ; 9 >
-      au < exists ; exists ; 2006 ; Critical Care Volume 10 ; 10 >
-      au < exists ; exists ; 2007 ; Critical Care Volume 11 ; 11 >
+      au < manifest ; exists ; 1997 ; Critical Care Volume 1 ; 1 >
+      au < manifest ; exists ; 1998 ; Critical Care Volume 2 ; 2 >
+      au < manifest ; exists ; 1999 ; Critical Care Volume 3 ; 3 >
+      au < manifest ; exists ; 2000 ; Critical Care Volume 4 ; 4 >
+      au < manifest ; exists ; 2001 ; Critical Care Volume 5 ; 5 >
+      au < manifest ; exists ; 2002 ; Critical Care Volume 6 ; 6 >
+      au < manifest ; exists ; 2003 ; Critical Care Volume 7 ; 7 >
+      au < manifest ; exists ; 2004 ; Critical Care Volume 8 ; 8 >
+      au < manifest ; exists ; 2005 ; Critical Care Volume 9 ; 9 >
+      au < manifest ; exists ; 2006 ; Critical Care Volume 10 ; 10 >
+      au < manifest ; exists ; 2007 ; Critical Care Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2008 ; Critical Care Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2009 ; Critical Care Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2010 ; Critical Care Volume 14 ; 14 >
       au < doNotProcess ; exists ; 2011 ; Critical Care Volume 15 ; 15 >
       au < doNotProcess ; exists ; 2012 ; Critical Care Volume 16 ; 16 >
-      au < exists ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
-      au < exists ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
-      au < exists ; exists ; 2015 ; Critical Care Volume 19 ; 19 >
+      au < manifest ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
+      au < manifest ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
+      au < manifest ; exists ; 2015 ; Critical Care Volume 19 ; 19 >
       }
       {
       param[base_url] = http://ccforum.com/
@@ -3911,22 +3911,22 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.genomebiology.com/
       comment[0] = base url changed to add www.
 
-      au < exists ; exists ; 2000 ; Genome Biology Volume 1 ; 1 >
-      au < exists ; exists ; 2001 ; Genome Biology Volume 2 ; 2 >
-      au < exists ; exists ; 2002 ; Genome Biology Volume 3 ; 3 >
-      au < exists ; exists ; 2003 ; Genome Biology Volume 4 ; 4 >
-      au < exists ; exists ; 2004 ; Genome Biology Volume 5 ; 5 >
-      au < exists ; exists ; 2005 ; Genome Biology Volume 6 ; 6 >
-      au < exists ; exists ; 2006 ; Genome Biology Volume 7 ; 7 >
-      au < exists ; exists ; 2007 ; Genome Biology Volume 8 ; 8 >
+      au < manifest ; exists ; 2000 ; Genome Biology Volume 1 ; 1 >
+      au < manifest ; exists ; 2001 ; Genome Biology Volume 2 ; 2 >
+      au < manifest ; exists ; 2002 ; Genome Biology Volume 3 ; 3 >
+      au < manifest ; exists ; 2003 ; Genome Biology Volume 4 ; 4 >
+      au < manifest ; exists ; 2004 ; Genome Biology Volume 5 ; 5 >
+      au < manifest ; exists ; 2005 ; Genome Biology Volume 6 ; 6 >
+      au < manifest ; exists ; 2006 ; Genome Biology Volume 7 ; 7 >
+      au < manifest ; exists ; 2007 ; Genome Biology Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2008 ; Genome Biology Volume 9 ; 9 >
       au < doNotProcess ; exists ; 2009 ; Genome Biology Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2010 ; Genome Biology Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2011 ; Genome Biology Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2012 ; Genome Biology Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2013 ; Genome Biology Volume 14 ; 14 >
-      au < exists ; exists ; 2014 ; Genome Biology Volume 15 ; 15 >
-      au < exists ; exists ; 2015 ; Genome Biology Volume 16 ; 16 >
+      au < manifest ; exists ; 2014 ; Genome Biology Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; Genome Biology Volume 16 ; 16 >
       }
       {
       param[base_url] = http://genomebiology.com/
@@ -3982,13 +3982,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.genomemedicine.com/
       comment[0] = base url changed to add www.
 
-      au < exists ; exists ; 2009 ; Genome Medicine Volume 1 ; 1 >
-      au < exists ; exists ; 2010 ; Genome Medicine Volume 2 ; 2 >
-      au < exists ; exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
-      au < exists ; exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
+      au < manifest ; exists ; 2009 ; Genome Medicine Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Genome Medicine Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
-      au < exists ; exists ; 2015 ; Genome Medicine Volume 7 ; 7 >
+      au < manifest ; exists ; 2015 ; Genome Medicine Volume 7 ; 7 >
       }
       {
       param[base_url] = http://genomemedicine.com/
@@ -6410,22 +6410,22 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.respiratory-research.com/
       comment[0] = base url changed to add www.
 
-      au < exists ; exists ; 2000 ; Respiratory Research Volume 1 ; 1 >
-      au < exists ; exists ; 2001 ; Respiratory Research Volume 2 ; 2 >
-      au < exists ; exists ; 2002 ; Respiratory Research Volume 3 ; 3 >
-      au < exists ; exists ; 2003 ; Respiratory Research Volume 4 ; 4 >
-      au < exists ; exists ; 2004 ; Respiratory Research Volume 5 ; 5 >
-      au < exists ; exists ; 2005 ; Respiratory Research Volume 6 ; 6 >
-      au < exists ; exists ; 2006 ; Respiratory Research Volume 7 ; 7 >
-      au < exists ; exists ; 2007 ; Respiratory Research Volume 8 ; 8 >
+      au < manifest ; exists ; 2000 ; Respiratory Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2001 ; Respiratory Research Volume 2 ; 2 >
+      au < manifest ; exists ; 2002 ; Respiratory Research Volume 3 ; 3 >
+      au < manifest ; exists ; 2003 ; Respiratory Research Volume 4 ; 4 >
+      au < manifest ; exists ; 2004 ; Respiratory Research Volume 5 ; 5 >
+      au < manifest ; exists ; 2005 ; Respiratory Research Volume 6 ; 6 >
+      au < manifest ; exists ; 2006 ; Respiratory Research Volume 7 ; 7 >
+      au < manifest ; exists ; 2007 ; Respiratory Research Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2008 ; Respiratory Research Volume 9 ; 9 >
       au < doNotProcess ; exists ; 2009 ; Respiratory Research Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2010 ; Respiratory Research Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2011 ; Respiratory Research Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2012 ; Respiratory Research Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2013 ; Respiratory Research Volume 14 ; 14 >
-      au < exists ; exists ; 2014 ; Respiratory Research Volume 15 ; 15 >
-      au < exists ; exists ; 2015 ; Respiratory Research Volume 16 ; 16 >
+      au < manifest ; exists ; 2014 ; Respiratory Research Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; Respiratory Research Volume 16 ; 16 >
       }
       {
       param[base_url] = http://respiratory-research.com/
@@ -6621,12 +6621,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.stemcellres.com/
       comment[0] = base url changed to add www.
 
-      au < exists ; exists ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
-      au < exists ; exists ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
-      au < exists ; exists ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
+      au < manifest ; exists ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
-      au < exists ; exists ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
-      au < exists ; exists ; 2015 ; Stem Cell Research & Therapy Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
+      au < manifest ; exists ; 2015 ; Stem Cell Research & Therapy Volume 6 ; 6 >
       }
       {
       param[base_url] = http://stemcellres.com/
