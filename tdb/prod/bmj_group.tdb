@@ -255,7 +255,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Archives of Disease in Childhood Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Archives of Disease in Childhood Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Archives of Disease in Childhood Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Archives of Disease in Childhood Volume 100 ; 100 >
 
   }
@@ -470,7 +470,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; BMJ Open Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2012 ; BMJ Open Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Open Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; BMJ Open Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; BMJ Open Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Open Volume 5 ; 5 >
 
   }
@@ -560,8 +560,8 @@
     
     comment[notReady] = Found a logon page for V1. Low agreement for V2
 
-    au < HighWirePressH20Plugin ; ready ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Supportive & Palliative Care Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Supportive & Palliative Care Volume 5 ; 5 >
@@ -627,33 +627,33 @@
     au < HighWirePressH20Plugin ; released ; 1961 ; British Journal of Ophthalmology Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; released ; 1962 ; British Journal of Ophthalmology Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 1963 ; British Journal of Ophthalmology Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; ready ; 1964 ; British Journal of Ophthalmology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; ready ; 1965 ; British Journal of Ophthalmology Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; ready ; 1966 ; British Journal of Ophthalmology Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; ready ; 1967 ; British Journal of Ophthalmology Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; ready ; 1968 ; British Journal of Ophthalmology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; ready ; 1969 ; British Journal of Ophthalmology Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; ready ; 1970 ; British Journal of Ophthalmology Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; ready ; 1971 ; British Journal of Ophthalmology Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; ready ; 1972 ; British Journal of Ophthalmology Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; ready ; 1973 ; British Journal of Ophthalmology Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; ready ; 1974 ; British Journal of Ophthalmology Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; ready ; 1975 ; British Journal of Ophthalmology Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; ready ; 1976 ; British Journal of Ophthalmology Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; ready ; 1977 ; British Journal of Ophthalmology Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; ready ; 1978 ; British Journal of Ophthalmology Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; ready ; 1979 ; British Journal of Ophthalmology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; ready ; 1980 ; British Journal of Ophthalmology Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; ready ; 1981 ; British Journal of Ophthalmology Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; ready ; 1982 ; British Journal of Ophthalmology Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; ready ; 1983 ; British Journal of Ophthalmology Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; ready ; 1984 ; British Journal of Ophthalmology Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; ready ; 1985 ; British Journal of Ophthalmology Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; ready ; 1986 ; British Journal of Ophthalmology Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; ready ; 1987 ; British Journal of Ophthalmology Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; ready ; 1988 ; British Journal of Ophthalmology Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; ready ; 1989 ; British Journal of Ophthalmology Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; ready ; 1990 ; British Journal of Ophthalmology Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; releasing ; 1964 ; British Journal of Ophthalmology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; releasing ; 1965 ; British Journal of Ophthalmology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; releasing ; 1966 ; British Journal of Ophthalmology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; releasing ; 1967 ; British Journal of Ophthalmology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; releasing ; 1968 ; British Journal of Ophthalmology Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; releasing ; 1969 ; British Journal of Ophthalmology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; releasing ; 1970 ; British Journal of Ophthalmology Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; releasing ; 1971 ; British Journal of Ophthalmology Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; releasing ; 1972 ; British Journal of Ophthalmology Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; releasing ; 1973 ; British Journal of Ophthalmology Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; releasing ; 1974 ; British Journal of Ophthalmology Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; releasing ; 1975 ; British Journal of Ophthalmology Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; releasing ; 1976 ; British Journal of Ophthalmology Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; releasing ; 1977 ; British Journal of Ophthalmology Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; releasing ; 1978 ; British Journal of Ophthalmology Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; releasing ; 1979 ; British Journal of Ophthalmology Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; releasing ; 1980 ; British Journal of Ophthalmology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; releasing ; 1981 ; British Journal of Ophthalmology Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; releasing ; 1982 ; British Journal of Ophthalmology Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; releasing ; 1983 ; British Journal of Ophthalmology Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; releasing ; 1984 ; British Journal of Ophthalmology Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; releasing ; 1985 ; British Journal of Ophthalmology Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; releasing ; 1986 ; British Journal of Ophthalmology Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; releasing ; 1987 ; British Journal of Ophthalmology Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; releasing ; 1988 ; British Journal of Ophthalmology Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; releasing ; 1989 ; British Journal of Ophthalmology Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; releasing ; 1990 ; British Journal of Ophthalmology Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; British Journal of Ophthalmology Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; British Journal of Ophthalmology Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; British Journal of Ophthalmology Volume 77 ; 77 >
@@ -674,10 +674,10 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; British Journal of Ophthalmology Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Ophthalmology Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Ophthalmology Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; British Journal of Ophthalmology Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; British Journal of Ophthalmology Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2012 ; British Journal of Ophthalmology Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2013 ; British Journal of Ophthalmology Volume 97 ; 97 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; British Journal of Ophthalmology Volume 98 ; 98 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; British Journal of Ophthalmology Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; British Journal of Ophthalmology Volume 99 ; 99 >
 
   }
@@ -737,7 +737,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Sports Medicine Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Sports Medicine Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Journal of Sports Medicine Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 2013 ; British Journal of Sports Medicine Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2014 ; British Journal of Sports Medicine Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; British Journal of Sports Medicine Volume 49 ; 49 >
@@ -806,7 +806,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Drug and Therapeutics Bulletin Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Drug and Therapeutics Bulletin Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Drug and Therapeutics Bulletin Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Drug and Therapeutics Bulletin Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Drug and Therapeutics Bulletin Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Drug and Therapeutics Bulletin Volume 53 ; 53 >
@@ -870,10 +870,10 @@
     comment[continued_by] = 2047-6361
     comment[0] = requires special CrawlSeed. duplicate volume numbers. see https://na7.salesforce.com/500A000000Q4Ua3
 
-    au < HighWirePressH20Plugin ; ready ; 2007 ; End of Life Care Volume 1 ; eolcare/1 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; End of Life Care Volume 2 ; eolcare/2 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; End of Life Care Volume 3 ; eolcare/3 >
-    au < HighWirePressH20Plugin ; ready ; 2010 ; End of Life Care Volume 4 ; eolcare/4 >
+    au < HighWirePressH20Plugin ; releasing ; 2007 ; End of Life Care Volume 1 ; eolcare/1 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; End of Life Care Volume 2 ; eolcare/2 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; End of Life Care Volume 3 ; eolcare/3 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; End of Life Care Volume 4 ; eolcare/4 >
 
   }
 
@@ -886,10 +886,10 @@
     param[base_url] = http://eolj.bmj.com/
     comment[continues] = 1754-1069
 
-    au < HighWirePressH20Plugin ; ready ; 2011 ; End of Life Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; End of Life Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; ready ; 2013 ; End of Life Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; End of Life Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; End of Life Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; End of Life Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; releasing ; 2013 ; End of Life Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; End of Life Journal Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; End of Life Journal Volume 5 ; 5 >
 
   }
@@ -918,9 +918,9 @@
 
     param[base_url] = http://fg.bmj.com/
 
-    au < HighWirePressH20Plugin ; ready ; 2010 ; Frontline Gastroenterology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; Frontline Gastroenterology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Frontline Gastroenterology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; Frontline Gastroenterology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; Frontline Gastroenterology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Frontline Gastroenterology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Frontline Gastroenterology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Frontline Gastroenterology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Frontline Gastroenterology Volume 6 ; 6 >
@@ -951,11 +951,11 @@
     param[base_url] = http://heartasia.bmj.com/
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Heart Asia Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 2010 ; Heart Asia Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; Heart Asia Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Heart Asia Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; Heart Asia Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; Heart Asia Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Heart Asia Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Heart Asia Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Heart Asia Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Heart Asia Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Heart Asia Volume 7 ; 7 >
 
   }
@@ -973,8 +973,8 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; BMJ Case Reports Volume 2008 ; 2008 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; BMJ Case Reports Volume 2009 ; 2009 >
     au < HighWirePressH20Plugin ; notReady ; 2010 ; BMJ Case Reports Volume 2010 ; 2010 > #only picks up 4 pages
-    au < HighWirePressH20Plugin ; ready ; 2011 ; BMJ Case Reports Volume 2011 ; 2011 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; BMJ Case Reports Volume 2012 ; 2012 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; BMJ Case Reports Volume 2011 ; 2011 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; BMJ Case Reports Volume 2012 ; 2012 >
     au < HighWirePressH20Plugin ; exists ; 2013 ; BMJ Case Reports Volume 2013 ; 2013 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Case Reports Volume 2014 ; 2014 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Case Reports Volume 2015 ; 2015 >
@@ -1007,7 +1007,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Evidence-Based Medicine Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Evidence-Based Medicine Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Evidence-Based Medicine Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Evidence-Based Medicine Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Evidence-Based Medicine Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Evidence-Based Medicine Volume 20 ; 20 >
 
   }
@@ -1038,7 +1038,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Evidence-Based Mental Health Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Evidence-Based Mental Health Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Evidence-Based Mental Health Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Evidence-Based Mental Health Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Evidence-Based Mental Health Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Evidence-Based Mental Health Volume 18 ; 18 >
 
   }
@@ -1069,7 +1069,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Evidence-Based Nursing Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Evidence-Based Nursing Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Evidence-Based Nursing Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Evidence-Based Nursing Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Evidence-Based Nursing Volume 18 ; 18 >
 
   }
@@ -1146,7 +1146,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Gut Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Gut Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Gut Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Gut Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Gut Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Gut Volume 64 ; 64 >
 
   }
@@ -1259,7 +1259,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Heart Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Heart Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Heart Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Heart Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Heart Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Heart Volume 101 ; 101 >
 
   }
@@ -1303,7 +1303,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 2011 ; Injury Prevention Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Injury Prevention Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Injury Prevention Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; ready ; 2014 ; Injury Prevention Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; releasing ; 2014 ; Injury Prevention Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Injury Prevention Volume 21 ; 21 >
       
     }
@@ -1386,7 +1386,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Clinical Pathology Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Clinical Pathology Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of Clinical Pathology Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of Clinical Pathology Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Clinical Pathology Volume 68 ; 68 >
 
   }
@@ -1465,10 +1465,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Epidemiology & Community Health Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Epidemiology & Community Health Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of Epidemiology & Community Health Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of Epidemiology & Community Health Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Epidemiology & Community Health Volume 69 ; 69 >
 
   }
@@ -1496,7 +1496,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Family Planning and Reproductive Health Care Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Family Planning and Reproductive Health Care Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Family Planning and Reproductive Health Care Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of Family Planning and Reproductive Health Care Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of Family Planning and Reproductive Health Care Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Family Planning and Reproductive Health Care Volume 41 ; 41 >
 
   }
@@ -1550,7 +1550,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Medical Ethics Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Ethics Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Medical Ethics Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of Medical Ethics Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of Medical Ethics Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Medical Ethics Volume 41 ; 41 >
 
   }
@@ -1615,7 +1615,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Medical Genetics Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Genetics Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Medical Genetics Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of Medical Genetics Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of Medical Genetics Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Medical Genetics Volume 52 ; 52 >
 
   }
@@ -1635,7 +1635,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of NeuroInterventional Surgery Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of NeuroInterventional Surgery Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of NeuroInterventional Surgery Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of NeuroInterventional Surgery Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of NeuroInterventional Surgery Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of NeuroInterventional Surgery Volume 7 ; 7 >
 
   }
@@ -1734,7 +1734,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 86 ; 86 >
 
   }
@@ -1968,7 +1968,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Medical Humanities Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Medical Humanities Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Medical Humanities Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Medical Humanities Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Medical Humanities Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Medical Humanities Volume 41 ; 41 >
 
   }
@@ -2075,7 +2075,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Occupational and Environmental Medicine Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Occupational and Environmental Medicine Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Occupational and Environmental Medicine Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Occupational and Environmental Medicine Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Occupational and Environmental Medicine Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Occupational and Environmental Medicine Volume 72 ; 72 >
 
   }
@@ -2179,7 +2179,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Postgraduate Medical Journal Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Postgraduate Medical Journal Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Postgraduate Medical Journal Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Postgraduate Medical Journal Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Postgraduate Medical Journal Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 >
 
   }
@@ -2207,7 +2207,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Practical Neurology Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Practical Neurology Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Practical Neurology Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Practical Neurology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Practical Neurology Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Practical Neurology Volume 15 ; 15 >
 
   }
@@ -2252,13 +2252,13 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       comment[continues] = 0963-8172
       
       au < HighWirePressH20Plugin ; manifest ; 2007 ; BMJ Quality & Safety Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; ready ; 2008 ; BMJ Quality & Safety Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; releasing ; 2008 ; BMJ Quality & Safety Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Quality & Safety Volume 18 ; 18 > #unable to populate permission
       au < HighWirePressH20Plugin ; notReady ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 > #unable to populate permission
-      au < HighWirePressH20Plugin ; ready ; 2011 ; BMJ Quality & Safety Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; ready ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; BMJ Quality & Safety Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; releasing ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; ready ; 2014 ; BMJ Quality & Safety Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; releasing ; 2014 ; BMJ Quality & Safety Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
       
   }
@@ -2375,7 +2375,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Sexually Transmitted Infections Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Sexually Transmitted Infections Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Sexually Transmitted Infections Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Sexually Transmitted Infections Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Sexually Transmitted Infections Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Sexually Transmitted Infections Volume 91 ; 91 >
 
   }
@@ -2458,7 +2458,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Thorax Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Thorax Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Thorax Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Thorax Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Thorax Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Thorax Volume 70 ; 70 >
 
   }
@@ -2507,7 +2507,7 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; released ; 2011 ; Tobacco Control Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Tobacco Control Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Tobacco Control Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; ready ; 2014 ; Tobacco Control Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; releasing ; 2014 ; Tobacco Control Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Tobacco Control Volume 24 ; 24 >
 
     }

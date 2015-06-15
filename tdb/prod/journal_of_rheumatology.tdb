@@ -31,20 +31,20 @@
       param[base_url] = http://www.jrheum.org/
       comment[base_url] = with www since 2015
         
-      au < ready ; 2001 ; Journal of Rheumatology Volume 28 ; 28 >
-      au < ready ; 2002 ; Journal of Rheumatology Volume 29 ; 29 >
-      au < ready ; 2003 ; Journal of Rheumatology Volume 30 ; 30 >
-      au < ready ; 2004 ; Journal of Rheumatology Volume 31 ; 31 >
-      au < ready ; 2005 ; Journal of Rheumatology Volume 32 ; 32 >
-      au < ready ; 2006 ; Journal of Rheumatology Volume 33 ; 33 >
-      au < ready ; 2007 ; Journal of Rheumatology Volume 34 ; 34 >
-      au < ready ; 2008 ; Journal of Rheumatology Volume 35 ; 35 >
-      au < ready ; 2009 ; Journal of Rheumatology Volume 36 ; 36 >
-      au < ready ; 2010 ; Journal of Rheumatology Volume 37 ; 37 >
+      au < releasing ; 2001 ; Journal of Rheumatology Volume 28 ; 28 >
+      au < releasing ; 2002 ; Journal of Rheumatology Volume 29 ; 29 >
+      au < releasing ; 2003 ; Journal of Rheumatology Volume 30 ; 30 >
+      au < releasing ; 2004 ; Journal of Rheumatology Volume 31 ; 31 >
+      au < releasing ; 2005 ; Journal of Rheumatology Volume 32 ; 32 >
+      au < releasing ; 2006 ; Journal of Rheumatology Volume 33 ; 33 >
+      au < releasing ; 2007 ; Journal of Rheumatology Volume 34 ; 34 >
+      au < releasing ; 2008 ; Journal of Rheumatology Volume 35 ; 35 >
+      au < releasing ; 2009 ; Journal of Rheumatology Volume 36 ; 36 >
+      au < releasing ; 2010 ; Journal of Rheumatology Volume 37 ; 37 >
       au < testing ; 2011 ; Journal of Rheumatology Volume 38 ; 38 >
       au < doNotProcess ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
       au < doNotProcess ; 2013 ; Journal of Rheumatology Volume 40 ; 40 >
-      au < ready ; 2014 ; Journal of Rheumatology Volume 41 ; 41 >
+      au < releasing ; 2014 ; Journal of Rheumatology Volume 41 ; 41 >
       au < manifest ; 2015 ; Journal of Rheumatology Volume 42 ; 42 >
 
      }

@@ -88,7 +88,8 @@
       au < doNotProcess ; 2011 ; Anthrozoös Volume 24 ; 24 >
       au < doNotProcess ; 2012 ; Anthrozoös Volume 25 ; 25 >
       au < released ; 2013 ; Anthrozoös Volume 26 ; 26 >
-      au < ready ; 2014 ; Anthrozoös Volume 27 ; 27 >
+      au < releasing ; 2014 ; Anthrozoös Volume 27 ; 27 >
+      au < expected ; 2015 ; Anthrozoös Volume 28 ; 28 >
 
     }
 
@@ -107,8 +108,8 @@
     param[journal_id] = arcul
     param[journal_issn] = 2050-7828
 
-    au < ready ; 2013 ; Architecture and Culture Volume 1 ; 1 >
-    au < ready ; 2014 ; Architecture and Culture Volume 2 ; 2 >
+    au < releasing ; 2013 ; Architecture and Culture Volume 1 ; 1 >
+    au < releasing ; 2014 ; Architecture and Culture Volume 2 ; 2 >
     au < manifest ; 2015 ; Architecture and Culture Volume 3 ; 3 >
 
   }
@@ -147,7 +148,8 @@
       au < doNotProcess ; 2011 ; Art In Translation Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; Art In Translation Volume 4 ; 4 >
       au < released ; 2013 ; Art In Translation Volume 5 ; 5 >
-      au < ready ; 2014 ; Art In Translation Volume 6 ; 6 >
+      au < releasing ; 2014 ; Art In Translation Volume 6 ; 6 >
+      au < expected ; 2015 ; Art In Translation Volume 7 ; 7 >
 
     }
 
@@ -198,7 +200,8 @@
       au < doNotProcess ; 2011 ; Cultural and Social History Volume 8 ; 8 >
       au < doNotProcess ; 2012 ; Cultural and Social History Volume 9 ; 9 >
       au < released ; 2013 ; Cultural and Social History Volume 10 ; 10 >
-      au < ready ; 2014 ; Cultural and Social History Volume 11 ; 11 >
+      au < releasing ; 2014 ; Cultural and Social History Volume 11 ; 11 >
+      au < expected ; 2015 ; Cultural and Social History Volume 12 ; 12 >
 
     }
 
@@ -239,7 +242,8 @@
       au < doNotProcess ; 2011 ; Design and Culture Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; Design and Culture Volume 4 ; 4 >
       au < released ; 2013 ; Design and Culture Volume 5 ; 5 >
-      au < ready ; 2014 ; Design and Culture Volume 6 ; 6 >
+      au < releasing ; 2014 ; Design and Culture Volume 6 ; 6 >
+      au < expected ; 2015 ; Design and Culture Volume 7 ; 7 >
   
     }
 
@@ -302,7 +306,8 @@
       au < doNotProcess ; 2011 ; The Design Journal Volume 14 ; 14 >
       au < doNotProcess ; 2012 ; The Design Journal Volume 15 ; 15 >
       au < released ; 2013 ; The Design Journal Volume 16 ; 16 >
-      au < ready ; 2014 ; The Design Journal Volume 17 ; 17 >
+      au < releasing ; 2014 ; The Design Journal Volume 17 ; 17 >
+      au < expected ; 2015 ; The Design Journal Volume 18 ; 18 >
   
     }
 
@@ -320,8 +325,8 @@
     param[journal_id] = dphp
     param[journal_issn] = 1448-7136
 
-    au < ready ; 2003 ; Design Philosophy Papers Volume 1 ; 1 >
-    au < ready ; 2004 ; Design Philosophy Papers Volume 2 ; 2 >
+    au < releasing ; 2003 ; Design Philosophy Papers Volume 1 ; 1 >
+    au < releasing ; 2004 ; Design Philosophy Papers Volume 2 ; 2 >
     au < released ; 2005 ; Design Philosophy Papers Volume 3 ; 3 >
     au < released ; 2006 ; Design Philosophy Papers Volume 4 ; 4 >
     au < released ; 2007 ; Design Philosophy Papers Volume 5 ; 5 >
@@ -331,7 +336,8 @@
     au < released ; 2011 ; Design Philosophy Papers Volume 9 ; 9 >
     au < released ; 2012 ; Design Philosophy Papers Volume 10 ; 10 >
     au < released ; 2013 ; Design Philosophy Papers Volume 11 ; 11 >
-    au < ready ; 2014 ; Design Philosophy Papers Volume 12 ; 12 >
+    au < releasing ; 2014 ; Design Philosophy Papers Volume 12 ; 12 >
+    au < expected ; 2015 ; Design Philosophy Papers Volume 13 ; 13 >
 
   }
 
@@ -370,7 +376,8 @@
       au < doNotProcess ; 2011 ; Fashion Practice Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; Fashion Practice Volume 4 ; 4 >
       au < released ; 2013 ; Fashion Practice Volume 5 ; 5 >
-      au < ready ; 2014 ; Fashion Practice Volume 6 ; 6 >
+      au < releasing ; 2014 ; Fashion Practice Volume 6 ; 6 >
+      au < expected ; 2015 ; Fashion Practice Volume 7 ; 7 >
   
     }
 
@@ -435,7 +442,8 @@
       au < doNotProcess ; 2011 ; Fashion Theory Volume 15 ; 15 >
       au < doNotProcess ; 2012 ; Fashion Theory Volume 16 ; 16 >
       au < released ; 2013 ; Fashion Theory Volume 17 ; 17 >
-      au < ready ; 2014 ; Fashion Theory Volume 18 ; 18 >
+      au < releasing ; 2014 ; Fashion Theory Volume 18 ; 18 >
+      au < expected ; 2015 ; Fashion Theory Volume 19 ; 19 >
   
     }
 
@@ -486,7 +494,8 @@
       au < doNotProcess ; 2011 ; Food, Culture and Society Volume 14 ; 14 >
       au < doNotProcess ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
       au < released ; 2013 ; Food, Culture and Society Volume 16 ; 16 >
-      au < ready ; 2014 ; Food, Culture and Society Volume 17 ; 17 >
+      au < releasing ; 2014 ; Food, Culture and Society Volume 17 ; 17 >
+      au < expected ; 2015 ; Food, Culture and Society Volume 18 ; 18 >
   
     }
 
@@ -537,7 +546,8 @@
       au < doNotProcess ; 2011 ; Home Cultures Volume 8 ; 8 >
       au < doNotProcess ; 2012 ; Home Cultures Volume 9 ; 9 >
       au < released ; 2013 ; Home Cultures Volume 10 ; 10 >
-      au < ready ; 2014 ; Home Cultures Volume 11 ; 11 >
+      au < releasing ; 2014 ; Home Cultures Volume 11 ; 11 >
+      au < expected ; 2015 ; Home Cultures Volume 12 ; 12 >
   
     }
 
@@ -575,7 +585,8 @@
       au < doNotProcess ; 2011 ; Interiors Volume 2 ; 2 >
       au < doNotProcess ; 2012 ; Interiors Volume 3 ; 3 >
       au < released ; 2013 ; Interiors Volume 4 ; 4 >
-      au < ready ; 2014 ; Interiors Volume 5 ; 5 >
+      au < releasing ; 2014 ; Interiors Volume 5 ; 5 >
+      au < expected ; 2015 ; Interiors Volume 6 ; 6 >
   
     }
 
@@ -594,7 +605,8 @@
     param[journal_id] = jap
     param[journal_issn] = 2053-9320
 
-    au < ready ; 2014 ; Journal of Aesthetics and Phenomenology Volume 1 ; 1 >
+    au < releasing ; 2014 ; Journal of Aesthetics and Phenomenology Volume 1 ; 1 >
+    au < expected ; 20154 ; Journal of Aesthetics and Phenomenology Volume 2 ; 2 >
 
   }
 
@@ -676,7 +688,8 @@
       au < doNotProcess ; 2011 ; The Journal of Modern Craft Volume 4 ; 4 >
       au < doNotProcess ; 2012 ; The Journal of Modern Craft Volume 5 ; 5 >
       au < released ; 2013 ; The Journal of Modern Craft Volume 6 ; 6 >
-      au < ready ; 2014 ; The Journal of Modern Craft Volume 7 ; 7 >
+      au < releasing ; 2014 ; The Journal of Modern Craft Volume 7 ; 7 >
+      au < expected ; 2015 ; The Journal of Modern Craft Volume 8 ; 8 >
   
     }
 
@@ -695,7 +708,8 @@
     param[journal_issn] = 2051-1787
 
     au < released ; 2013 ; Journal of Textile Design Research and Practice Volume 1 ; 1 >
-    au < ready ; 2014 ; Journal of Textile Design Research and Practice Volume 2 ; 2 >
+    au < releasing ; 2014 ; Journal of Textile Design Research and Practice Volume 2 ; 2 >
+    au < expected ; 2015 ; Journal of Textile Design Research and Practice Volume 3 ; 3 >
 
   }
 
@@ -711,7 +725,8 @@
     param[journal_id] = lux
     param[journal_issn] = 2051-1817
 
-    au < ready ; 2014 ; Luxury Volume 1 ; 1 >
+    au < releasing ; 2014 ; Luxury Volume 1 ; 1 >
+    au < expected ; 2014 ; Luxury Volume 2 ; 2 >
 
   }
 
@@ -758,7 +773,8 @@
       au < doNotProcess ; 2011 ; Material Religion Volume 7 ; 7 >
       au < doNotProcess ; 2012 ; Material Religion Volume 8 ; 8 >
       au < released ; 2013 ; Material Religion Volume 9 ; 9 >
-      au < ready ; 2014 ; Material Religion Volume 10 ; 10 >
+      au < releasing ; 2014 ; Material Religion Volume 10 ; 10 >
+      au < expected ; 2015 ; Material Religion Volume 11 ; 11 >
   
     }
 
@@ -801,7 +817,8 @@
       au < doNotProcess ; 2011 ; Photography & Culture Volume 4 ; 4 >
       au < doNotProcess ; 2012 ; Photography & Culture Volume 5 ; 5 >
       au < released ; 2013 ; Photography & Culture Volume 6 ; 6 >
-      au < ready ; 2014 ; Photography & Culture Volume 7 ; 7 >
+      au < releasing ; 2014 ; Photography & Culture Volume 7 ; 7 >
+      au < expected ; 2015 ; Photography & Culture Volume 8 ; 8 >
   
     }
 
@@ -848,7 +865,8 @@
       au < doNotProcess ; 2011 ; The Senses & Society Volume 6 ; 6 >
       au < doNotProcess ; 2012 ; The Senses & Society Volume 7 ; 7 >
       au < released ; 2013 ; The Senses & Society Volume 8 ; 8 >
-      au < ready ; 2014 ; The Senses & Society Volume 9 ; 9 >
+      au < releasing ; 2014 ; The Senses & Society Volume 9 ; 9 >
+      au < expected ; 2015 ; The Senses & Society Volume 10 ; 10 >
   
     }
 
@@ -901,7 +919,8 @@
       au < doNotProcess ; 2011 ; Textile: The Journal of Cloth and Culture Volume 9 ; 9 >
       au < doNotProcess ; 2012 ; Textile: The Journal of Cloth and Culture Volume 10 ; 10 >
       au < released ; 2013 ; Textile: The Journal of Cloth and Culture Volume 11 ; 11 >
-      au < ready ; 2014 ; Textile: The Journal of Cloth and Culture Volume 12 ; 12 >
+      au < releasing ; 2014 ; Textile: The Journal of Cloth and Culture Volume 12 ; 12 >
+      au < expected ; 2015 ; Textile: The Journal of Cloth and Culture Volume 13 ; 13 >
   
     }
   

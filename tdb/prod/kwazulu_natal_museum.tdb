@@ -26,7 +26,7 @@
  
         au < released ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
         au < released ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
-        au < ready ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
+        au < releasing ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
 
       }
       
@@ -36,6 +36,8 @@
     
         param[base_url] = http://www.africaninvertebrates.org/ojs/
         param[journal_id] = AI
+
+        au < expected ; 2015 ; African Invertebrates Volume 2015 ; 2015 >
 
       }
 

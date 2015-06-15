@@ -238,7 +238,7 @@
     param[base_url] = http://interface.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 2014 ; Interface Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; releasing ; 2014 ; Interface Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Interface Volume 24 ; 24 >
 
   }
@@ -266,7 +266,7 @@
     au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of the Electrochemical Society Volume 154 ; 154 >
     au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of the Electrochemical Society Volume 155 ; 155 >
     au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of the Electrochemical Society Volume 156 ; 156 >
-    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of the Electrochemical Society Volume 157 ; 157 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of the Electrochemical Society Volume 157 ; 157 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
