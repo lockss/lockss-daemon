@@ -130,17 +130,18 @@ ArticleMetadataExtractorFactory {
     private static final String ABSTRACT_LABEL = "abstract";
     private static final String FULLTEXT_LABEL = "full text";
     private static final String PDF_LABEL = "pdf";
-    static private final Map<String, String> classLabelMap =
+    private static final Map<String, String> classLabelMap =
         new HashMap<String,String>();
     static {
       classLabelMap.put("abstract-link", ABSTRACT_LABEL);
       classLabelMap.put("fulltext-link", FULLTEXT_LABEL); 
       classLabelMap.put("pdf-link", PDF_LABEL);
-      classLabelMap.put("pubmed-link", "pubmed"); 
     } 
 
-
-
+    private static final Set<String> ASPECT_SET =
+        Collections.unmodifiableSet(new HashSet<String>(Arrays.asList(ABSTRACT_LABEL,
+                                                                      FULLTEXT_LABEL,
+                                                                      PDF_LABEL)));
     // Constructor
     public BioMedCentralTOCArticleIterator(ArchivalUnit au,
         SubTreeArticleIterator.Spec spec, String base_url) {
@@ -162,20 +163,21 @@ ArticleMetadataExtractorFactory {
 
     protected void processToc(InputStream in, String encoding, String url) {
 
+      Elements art_els;
       try {
         Document doc = Jsoup.parse(in, encoding, url);
 
-        Elements art_els = doc.select("td.article-entry"); // td with class="article-entry"
+        art_els = doc.select("td.article-entry"); // td with class="article-entry"
         log.debug3("Processing articles");
-
-        for (Element art_el : art_els) {
-          log.debug3("Processing one article");
-          log.debug3(art_el.ownText());
-          processArticle(art_el);
-        }
+      } catch (IOException e) {
+        log.debug3("Error parsing TOC", e);
+        return;
       }
-      catch (IOException e) {
-        e.printStackTrace();
+
+      for (Element art_el : art_els) {
+        log.debug3("Processing one article");
+        //log.debug3(art_el.ownText());
+        processArticle(art_el);
       }
 
     }
@@ -183,7 +185,7 @@ ArticleMetadataExtractorFactory {
 
     protected void processArticle(Element art_el) {
       Map<String, CachedUrl> map = new HashMap<String, CachedUrl>();
-      Elements el_links = art_el.select("a[href]"); // a with href
+      Elements el_links = art_el.select("a[href]"); // a with href - only throws if query is invalid
 
       for (Element link : el_links) {
         CachedUrl linkCu = null;
@@ -198,8 +200,8 @@ ArticleMetadataExtractorFactory {
           label = link.text().trim().toLowerCase();
         }
         // Don't pick up links that we don't care about
-        if (!(ABSTRACT_LABEL.equals(label) || FULLTEXT_LABEL.equals(label) ||
-            PDF_LABEL.equals(label))) {
+        // if it's not in the set of aspects we understand then just ignore it
+        if (! ASPECT_SET.contains(label) ){
           continue;
         }
 
