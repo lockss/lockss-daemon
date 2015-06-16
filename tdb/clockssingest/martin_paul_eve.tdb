@@ -35,10 +35,12 @@
      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
      param[base_url] = https://www.pynchon.net/
      param[journal_id] = owap
+     comment[platform] = moving from standard OJS to special OJS
      implicit < status ; status2 ; year ; param[year] ; name ; volume >
      
+
      au < finished ; crawling ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >
-     au < crawling ; exists ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >
+     au < down ; exists ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >
      au < manifest ; exists ; 2014 ; 2014 ; Orbit: Writing Around Pynchon Volume 3 ; 3 >
      
   }
