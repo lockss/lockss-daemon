@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>13</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -236,7 +236,7 @@
     <string>/((css|js)_[^/]+[.](css|js)$|panels_ajax_tab/)</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_poll_results_pattern</string>
+    <string>au_exclude_urls_from_polls_pattern</string>
     <string>/((css|js)_[^/]+[.](css|js)$|panels_ajax_tab/)</string>
   </entry>
 </map>

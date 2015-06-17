@@ -47,28 +47,12 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException("Unexpected call to HighWireDrupalHttpResponseHandler.init()");
   }
   
-  public static class NoFailRetryableNetworkException_3_60S
-  extends CacheException.RetryableNetworkException_3_60S {
+  public static class NoFailRetryableNetworkException_2_30S
+  extends CacheException.RetryableNetworkException_2_30S {
     
     private static final long serialVersionUID = 1L;
     
-    public NoFailRetryableNetworkException_3_60S(String message) {
-      super(message);
-    }
-    
-    @Override
-    protected void setAttributes() {
-      super.setAttributes();
-      attributeBits.clear(ATTRIBUTE_FAIL);
-    }
-  }
-  
-  public static class NoFailRetryableNetworkException_3_5M
-  extends CacheException.RetryableNetworkException_3_5M {
-    
-    private static final long serialVersionUID = 1L;
-    
-    public NoFailRetryableNetworkException_3_5M(String message) {
+    public NoFailRetryableNetworkException_2_30S(String message) {
       super(message);
     }
     
@@ -91,21 +75,21 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
             url.endsWith(".toc")) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
-        return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
+        return new CacheException.UnexpectedNoRetryNoFailException("500 Internal Server Error (non-fatal)");
         
       case 502:
         logger.debug2("502: " + url);
         if (url.endsWith(".index-by-author")) {
-          return new NoFailRetryableNetworkException_3_5M("502 Bad Gateway Error (non-fatal)");
+          return new NoFailRetryableNetworkException_2_30S("502 Bad Gateway Error (non-fatal)");
         }
         return new CacheException.RetryableNetworkException_3_60S("502 Bad Gateway Error");
         
       case 504:
         logger.debug2("504: " + url);
         if (url.contains("/content/")) {
-          return new CacheException.RetryableNetworkException_3_60S("504 Gateway Time-out Error");
+          return new CacheException.RetryableNetworkException_2_60S("504 Gateway Time-out Error");
         }
-        return new NoFailRetryableNetworkException_3_60S("504 Gateway Time-out Error (non-fatal)");
+        return new NoFailRetryableNetworkException_2_30S("504 Gateway Time-out Error (non-fatal)");
         
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
