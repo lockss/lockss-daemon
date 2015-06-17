@@ -32,10 +32,12 @@
      param[journal_id] = owap
      implicit < status ; year ; param[year] ; name ; volume >
      
-      au < released ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >
-      au < released ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >
-      au < released ; 2014 ; 2014 ; Orbit: Writing Around Pynchon Volume 3 ; 3 >
-      au < expected ; 2015 ; 2015 ; Orbit: Writing Around Pynchon Volume 4 ; 4 >
+     comment[0] = Is on ubiquity press platform which has moved to hibrid version of OJS. See error at https://www.pynchon.net/index.php/owap/gateway/lockss?year=2013
+     
+      au < down ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >
+      au < down ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >
+      au < down ; 2014 ; 2014 ; Orbit: Writing Around Pynchon Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; 2015 ; Orbit: Writing Around Pynchon Volume 4 ; 4 >
      
   }
     
