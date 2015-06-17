@@ -989,7 +989,7 @@
         au < released ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 >
         au < manifest ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 >
         au < manifest ; 2014 ; Agrarian South: Journal of Political Economy Volume 3 ; 3 >
-        au < expected ; 2015 ; Agrarian South: Journal of Political Economy Volume 4 ; 4 >
+        au < manifest ; 2015 ; Agrarian South: Journal of Political Economy Volume 4 ; 4 >
 
       }
 
@@ -2724,7 +2724,7 @@
         au < manifest ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 657 ; 657 >
         au < manifest ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 658 ; 658 >
         au < manifest ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 659 ; 659 >
-        au < expected ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 660 ; 660 >
+        au < manifest ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 660 ; 660 >
         au < expected ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 661 ; 661 >
         au < expected ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 662 ; 662 >
 
@@ -3404,7 +3404,7 @@
         au < manifest ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 >
         au < manifest ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 >
         au < manifest ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 >
-        au < expected ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 >
+        au < manifest ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 >
 
       }
 
@@ -6041,7 +6041,7 @@
         au < exists ; 2012 ; Citizenship, Social and Economics Education Volume 11 ; 11 >
         au < exists ; 2013 ; Citizenship, Social and Economics Education Volume 12 ; 12 >
         au < exists ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 >
-        au < expected ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 >
+        au < manifest ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 >
 
     }
 
@@ -16649,7 +16649,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 >
+      au < manifest ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 >
 
   }
 
@@ -18224,7 +18224,7 @@
       au < exists ; 2012 ; International Journal of Police Science & Management Volume 14 ; 14 >
       au < exists ; 2013 ; International Journal of Police Science & Management Volume 15 ; 15 >
       au < manifest ; 2014 ; International Journal of Police Science & Management Volume 16 ; 16 >
-      au < expected ; 2015 ; International Journal of Police Science & Management Volume 17 ; 17 >
+      au < manifest ; 2015 ; International Journal of Police Science & Management Volume 17 ; 17 >
 
   }
 
@@ -40598,7 +40598,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; South Asia Economic Journal Volume 13 ; 13 >
         au < manifest ; 2013 ; South Asia Economic Journal Volume 14 ; 14 >
         au < manifest ; 2014 ; South Asia Economic Journal Volume 15 ; 15 >
-        au < expected ; 2015 ; South Asia Economic Journal Volume 16 ; 16 >
+        au < manifest ; 2015 ; South Asia Economic Journal Volume 16 ; 16 >
 
       }
 
@@ -41254,7 +41254,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2013 ; Studies in Microeconomics Volume 1 ; 1 >
         au < manifest ; 2014 ; Studies in Microeconomics Volume 2 ; 2 >
-        au < expected ; 2015 ; Studies in Microeconomics Volume 3 ; 3 >
+        au < manifest ; 2015 ; Studies in Microeconomics Volume 3 ; 3 >
 
       }
 
@@ -45542,7 +45542,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Political Science Volume 64 ; 64 >
         au < manifest ; 2013 ; Political Science Volume 65 ; 65 >
         au < manifest ; 2014 ; Political Science Volume 66 ; 66 >
-        au < expected ; 2015 ; Political Science Volume 67 ; 67 >
+        au < manifest ; 2015 ; Political Science Volume 67 ; 67 >
 
       }
 

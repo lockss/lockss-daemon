@@ -17,7 +17,7 @@
     param[journal_dir] = ohio_valley_history
     attr[journal_id] = ovh
     
-    au < exists ; 2015 ; Ohio Valley History Volume 15 ; 15 >
+    au < manifest ; 2015 ; Ohio Valley History Volume 15 ; 15 >
   }
 
 }
