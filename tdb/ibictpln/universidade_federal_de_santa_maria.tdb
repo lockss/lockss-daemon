@@ -85,7 +85,8 @@
     au < released ; 2011 ; 11 ; Fragmentum Volume 11 ; 2011 ; >
     au < released ; 2012 ; 12 ; Fragmentum Volume 12 ; 2012 ; >
     au < released ; 2013 ; 13 ; Fragmentum Volume 13 ; 2013 ; >
-    au < notReady ; 2014 ; 14 ; Fragmentum Volume 14 ; 2014 ; no permission from publisher >
+    au < exists ; 2014 ; 14 ; Fragmentum Volume 14 ; 2014 ; >
+    au < exists ; 2015 ; 15 ; Fragmentum Volume 15 ; 2015 ; >
 
   }
   
@@ -123,6 +124,7 @@
     au < released ; 2012 ; 7 ; Revista Eletrônica do Curso de Direito da UFSM Volume 7 ; 2012 ; >
     au < released ; 2013 ; 8 ; Revista Eletrônica do Curso de Direito da UFSM Volume 8 ; 2013 ; >
     au < released ; 2014 ; 9 ; Revista Eletrônica do Curso de Direito da UFSM Volume 9 ; 2014 ; >
+    au < expected ; 2015 ; 10 ; Revista Eletrônica do Curso de Direito da UFSM Volume 10 ; 2015 ; >
   }
 
   {
@@ -156,6 +158,7 @@
     au < released ; 2012 ; 3 ; Revista InterAção Volume 3 ; 2012 ; >
     au < released ; 2013 ; 4 ; Revista InterAção Volume 4 ; 2013 ; >
     au < released ; 2014 ; 5 ; Revista InterAção Volume 5 ; 2014 ; >
+    au < expected ; 2015 ; 6 ; Revista InterAção Volume 6 ; 2015 ; >
 
   }
 
@@ -186,6 +189,7 @@
     au < released ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 ; 2012 ; >
     au < released ; 2013 ; 2 ; Revista Direitos Emergentes na Sociedade Global Volume 2 ; 2013 ; >
     au < released ; 2014 ; 3 ; Revista Direitos Emergentes na Sociedade Global Volume 3 ; 2014 ; >
+    au < expected ; 2015 ; 4 ; Revista Direitos Emergentes na Sociedade Global Volume 4 ; 2015 ; >
 
   }
   
@@ -241,6 +245,7 @@
     au < released ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 ; >
     au < released ; 2013 ; 9-17 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 9-17 ; 2013 ; >
     au < released ; 2014 ; 18 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 18 ; 2014 ; >
+    au < expected ; 2015 ; 19 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 19 ; 2015 ; >
 
   }
   
@@ -347,6 +352,7 @@
       au < released ; 2012 ; 11 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 13 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 14 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2015 ; 2015 ; >
 
   }
 
@@ -380,6 +386,7 @@
       au < released ; 2012 ; 17 ; Cadernos de Comunicação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 18 ; Cadernos de Comunicação Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 19 ; Cadernos de Comunicação Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 20 ; Cadernos de Comunicação Volume 2015 ; 2015 ; >
 
   }
 
@@ -394,6 +401,7 @@
       param[journal_id] = rgc
 
       au < released ; 2014 ; 1 ; Revista de Gestão e Organizações Cooperativasa Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 2 ; Revista de Gestão e Organizações Cooperativasa Volume 2015 ; 2015 ; >
 
   }
 
@@ -449,6 +457,7 @@
       au < released ; 2012 ; 14 ; ECONOMIA E DESENVOLVIMENTO Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 15 ; ECONOMIA E DESENVOLVIMENTO Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 16 ; ECONOMIA E DESENVOLVIMENTO Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 17 ; ECONOMIA E DESENVOLVIMENTO Volume 2015 ; 2015 ; >
 
   }
 
@@ -464,6 +473,7 @@
 
       au < released ; 2013 ; 1 ; Literatura e Autoritarismo Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Literatura e Autoritarismo Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 3 ; Literatura e Autoritarismo Volume 2015 ; 2015 ; >
 
   }
 
@@ -539,6 +549,7 @@
       au < released ; 2012 ; 22 ; Letras Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 23 ; Letras Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 24 ; Letras Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 25 ; Letras Volume 2015 ; 2015 ; >
 
   }
 
@@ -569,6 +580,7 @@
       au < released ; 2012 ; 15 ; Revista Sociais e Humanas Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 16 ; Revista Sociais e Humanas Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 17 ; Revista Sociais e Humanas Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 18 ; Revista Sociais e Humanas Volume 2015 ; 2015 ; >
 
   }
 
@@ -589,6 +601,7 @@
       au < released ; 2012 ; 5 ; Revista de Administração da UFSM Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Revista de Administração da UFSM Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; Revista de Administração da UFSM Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Revista de Administração da UFSM Volume 2015 ; 2015 ; >
 
   }
 
@@ -672,6 +685,7 @@
       au < released ; 2012 ; 29 ; Revista Kinesis Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 30 ; Revista Kinesis Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 31 ; Revista Kinesis Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 32 ; Revista Kinesis Volume 2015 ; 2015 ; >
 
   }
 
@@ -716,6 +730,7 @@
       au < ready ; 2012 ; 2 ; Século XXI: Revista de Ciências Sociais Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 3 ; Século XXI: Revista de Ciências Sociais Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 4 ; Século XXI: Revista de Ciências Sociais Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 5 ; Século XXI: Revista de Ciências Sociais Volume 2015 ; 2015 ; >
 
   }
 
