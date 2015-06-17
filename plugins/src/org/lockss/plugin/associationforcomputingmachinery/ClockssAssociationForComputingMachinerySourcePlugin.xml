@@ -9,11 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
-  </entry>
-  <entry>
-    <string>required_daemon_version</string>
-    <string>1.62.0</string>  <!-- version needed for builder -->
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>8</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,24 +28,13 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"Association for Computing Machinery Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
-  </entry>
-  <entry>  <!-- From ClockssSourcePlugin; check for any changes!  -->
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,"^%s", base_url</string>
-      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
-      <!-- now preserving these extraneous "backup" metadata, but not processing
-      <string>2,"^%s%d/nsa_backfiles.*/", base_url, year</string>  
-       -->   
-      <string>1,"^%s%d/", base_url, year</string>
-    </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

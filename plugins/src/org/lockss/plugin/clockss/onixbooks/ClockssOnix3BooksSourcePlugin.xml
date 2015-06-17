@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -29,16 +29,12 @@
     </map>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.62.0</string>
-  </entry>
-  <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>7</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>au_name</string>
