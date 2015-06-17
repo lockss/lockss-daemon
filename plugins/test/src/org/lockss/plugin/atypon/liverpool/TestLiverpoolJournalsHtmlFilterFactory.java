@@ -201,60 +201,36 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
       "<div class=\"widget literatumPublicationContentWidget none widget-none\" >" +
       "</div>";
             
-   private static final String withArticleToolsExceptDownloadCitation2 =
-       "<div class=\"block\">" +  
-       "<section class=\"widget literatumArticleToolsWidget none " +
-       "margin-bottom-15px widget-regular  widget-border-toggle\" id=\"3a3\">" +
-       "<div class=\"articleTools\">" +
-       "<ul class=\"linkList blockLinks separators centered\">" +
-       "<li class=\"addToFavs\"><a href=\"/linktoaddfav\">Add to Fav</a></li>" +
-       "<li class=\"email\"><a href=\"/linktoemail\">Email friends</a></li>" +
-       "<li class=\"downloadCitations\">" +
-       "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
-       "Send to Citation Mgr</a>" +
-       "</li></ul></div>" +
-       "</section>" +
-       "</div>";
-  
-  private static final String articleToolsFilteredStr2 = 
-      "<section class=\"widget literatumArticleToolsWidget none " +
-      "margin-bottom-15px widget-regular widget-border-toggle\" >" +
-      "<div class=\"articleTools\">" +
-      "<ul class=\"linkList blockLinks separators centered\">" +
-      "<li class=\"downloadCitations\">" +
-      "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
-      "Send to Citation Mgr</a></li></ul></div></section>";
-
-// ?? use this block when manifest pages are up  
-//    private static final String manifestList =
-//        "<ul>" +
-//            "<li>" +
-//            "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
-//            "2012 (Vol. 123 Issue 4 Page 456-789)</a>" +
-//            "</li>" +
-//            "</ul>";
-//    private static final String manifestListFilteredStr =
-//        "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
-//            "2012 (Vol. 123 Issue 4 Page 456-789)</a>";
-//    
-//    private static final String nonManifestList1 =
-//        "<ul class=\"breadcrumbs\">" +
-//            "<li>" +
-//            "<a href=\"/toc/abcj/123/4\">Volume 123, Issue 4</a>" +
-//            "</li>" +
-//            "</ul>";
-//  private static final String nonManifestList1FilteredStr = "";
-//    
-//  private static final String nonManifestList2 =
-//      "<ul>" +
-//          "<li id=\"forthcomingIssue\">" +
-//          "<a href=\"/toc/abcj/123/5\">EarlyCite</a>" +
-//          "</li>" +
-//          "<li id=\"currIssue\">" +
-//          "<a href=\"/toc/abcj/199/1\">Current Issue</a>" +
-//          "</li>" +
-//          "</ul>";
-//  private static final String nonManifestList2FilteredStr = "";
+  // ?? use this block when manifest pages are up  
+  private static final String manifestList =
+      "<ul>" +
+          "<li>" +
+            "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789)</a>" +
+            "</li>" +
+            "</ul>";
+  private static final String manifestListFilteredStr =
+        "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789)</a>";
+    
+  private static final String nonManifestList1 =
+        "<ul class=\"breadcrumbs\">" +
+            "<li>" +
+            "<a href=\"/toc/abcj/123/4\">Volume 123, Issue 4</a>" +
+            "</li>" +
+            "</ul>";
+  private static final String nonManifestList1FilteredStr = "";
+    
+  private static final String nonManifestList2 =
+      "<ul>" +
+          "<li id=\"forthcomingIssue\">" +
+          "<a href=\"/toc/abcj/123/5\">EarlyCite</a>" +
+          "</li>" +
+          "<li id=\"currIssue\">" +
+          "<a href=\"/toc/abcj/199/1\">Current Issue</a>" +
+          "</li>" +
+          "</ul>";
+  private static final String nonManifestList2FilteredStr = "";
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -319,14 +295,12 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
                    publicationToolContainerFilteredStr);         
       doFilterTest(lau, variantFact, withArticleMetaDrop,
                    articleMetaDropFilteredStr);         
-      doFilterTest(lau, variantFact, withArticleToolsExceptDownloadCitation2, 
-                   articleToolsFilteredStr2);
-//      doFilterTest(eau, variantFact, manifestList, 
-//                   manifestListFilteredStr);
-//      doFilterTest(eau, variantFact, nonManifestList1, 
-//                   nonManifestList1FilteredStr);
-//      doFilterTest(eau, variantFact, nonManifestList2, 
-//                   nonManifestList2FilteredStr);
+      doFilterTest(lau, variantFact, manifestList, 
+                   manifestListFilteredStr);
+      doFilterTest(lau, variantFact, nonManifestList1, 
+                   nonManifestList1FilteredStr);
+      doFilterTest(lau, variantFact, nonManifestList2, 
+                   nonManifestList2FilteredStr);
     }
   }
   
