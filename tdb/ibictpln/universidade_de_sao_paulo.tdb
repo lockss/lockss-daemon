@@ -17,7 +17,7 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = criacaoecritica
 
-    au < manifest ; 2008 ; 2008 ; Revista Criação & Crítica Volume 2008 ; 2008 >
+    au < testing ; 2008 ; 2008 ; Revista Criação & Crítica Volume 2008 ; 2008 >
     au < ready ; 2009 ; 2009 ; Revista Criação & Crítica Volume 2009 ; 2009 >
     au < ready ; 2010 ; 2010 ; Revista Criação & Crítica Volume 2010 ; 2010 >
     au < released ; 2011 ; 2011 ; Revista Criação & Crítica Volume 2011 ; 2011 >
@@ -38,7 +38,7 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
-    au < manifest ; 2008 ; 2008 ; Revista de História Volume 2008 ; 2008 >
+    au < testing ; 2008 ; 2008 ; Revista de História Volume 2008 ; 2008 >
     au < ready ; 2009 ; 2009 ; Revista de História Volume 2009 ; 2009 >
     au < ready ; 2010 ; 2010 ; Revista de História Volume 2010 ; 2010 >
     au < released ; 2011 ; 2011 ; Revista de História Volume 2011 ; 2011 >
