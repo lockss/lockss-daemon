@@ -43,7 +43,6 @@ import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
 import org.lockss.util.urlconn.HttpResultMap;
 
 public class TestHighWireDrupalPlugin extends LockssTestCase {
@@ -128,11 +127,11 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     CacheException exc =
         ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
             500, "foo");
-    assertClass(HighWireDrupalHttpResponseHandler.NoFailRetryableNetworkException_3_60S.class, exc);
+    assertClass(CacheException.UnexpectedNoRetryNoFailException.class, exc);
     
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn, 500, "foo");
-    assertClass(RetrySameUrlException.class, exc);
+    assertClass(CacheException.RetrySameUrlException.class, exc);
     
   }
   

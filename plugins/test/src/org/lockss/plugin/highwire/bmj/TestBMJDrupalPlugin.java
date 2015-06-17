@@ -40,7 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler.NoFailRetryableNetworkException_3_60S;
+import org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.urlconn.CacheException;
@@ -129,7 +129,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     CacheException exc =
         ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
             500, "foo");
-    assertClass(NoFailRetryableNetworkException_3_60S.class, exc);
+    assertClass(CacheException.UnexpectedNoRetryNoFailException.class, exc);
     
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
