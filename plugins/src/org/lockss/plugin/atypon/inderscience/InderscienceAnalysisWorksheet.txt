@@ -201,7 +201,7 @@ Thinks to look for:
     // showCitFormats
     // http://www.inderscienceonline.com/action/
     //                     showCitFormats?doi=10.1504%2FAJAAF.2014.065176                                      
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+    HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                           "downloadCitationsWidget"),
 * exclude nodes (drop nodes)
      // handled by parent:
@@ -221,13 +221,7 @@ Thinks to look for:
      // full - section choose pulldown appeared in multiple sections 
      // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176                                     
      // <div class="sectionJumpTo"                                       
-     HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),                                         
-     // abs, full, ref - all right column except Citation Mgr
-     // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176                                      
-     HtmlNodeFilters.allExceptSubtree(
-         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-           HtmlNodeFilters.tagWithAttributeRegex(
-                  "a", "href", "/action/showCitFormats\\?")),                                              
+     HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),                                                                                    
 
 ---------------------LINK EXTRACTOR-----------------------------
 The BaseAtypon link extractor does two primary things - it generates the links on the "download citations" form so that we get the citations (RIS) and it generates the links needed to pick up the alternate sizes for the images. 

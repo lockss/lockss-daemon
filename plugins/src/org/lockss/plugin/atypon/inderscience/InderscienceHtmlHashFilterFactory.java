@@ -76,6 +76,8 @@ public class InderscienceHtmlHashFilterFactory
             return false;
           }
         },
+        
+        // ?? why current issue still exists after hashcus toc ??
         // toc - contents only
         // http://www.inderscienceonline.com/toc/ajaaf/3/1
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
@@ -84,14 +86,11 @@ public class InderscienceHtmlHashFilterFactory
         // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176
         // http://www.inderscienceonline.com/doi/ref/10.1504/AJAAF.2014.065176
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumPublicationContentWidget"),
-        // abs, ref - right side bar - Article/Chapter tools 
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-                                              "literatumArticleToolsWidget"),                                            
+                                          "literatumPublicationContentWidget"),                                           
         // showCitFormats
         // http://www.inderscienceonline.com/action/
         //                     showCitFormats?doi=10.1504%2FAJAAF.2014.065176
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
                                                                   
     };
@@ -111,13 +110,7 @@ public class InderscienceHtmlHashFilterFactory
                                               "articleMetaDrop"),   
         // full - section choose pulldown appeared in multiple sections 
         // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176                                     
-        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
-       // abs, full, ref - all right column except Citation Mgr
-       // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176                                      
-       HtmlNodeFilters.allExceptSubtree(
-           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-             HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),                                           
+        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),                                     
                                                     
     };
     return super.createFilteredInputStream(au, in, encoding, 
