@@ -59,9 +59,6 @@
     
     param[journal_id] = cns
 
-    au < exists ; exists ; 2010 ; Crops & Soils Magazine Volume 43 ; 43 >
-    au < exists ; exists ; 2011 ; Crops & Soils Magazine Volume 44 ; 44 >
-    au < exists ; exists ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 >
     au < exists ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
     au < manifest ; exists ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
     au < exists ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
@@ -184,12 +181,12 @@
     
     param[journal_id] = nse
 
-    au < exists ; exists ; 2010 ; Natural Sciences Education Volume 3 ; 3 >
-    au < exists ; exists ; 2011 ; Natural Sciences Education Volume 4 ; 4 >
-    au < exists ; exists ; 2012 ; Natural Sciences Education Volume 5 ; 5 >
-    au < exists ; exists ; 2013 ; Natural Sciences Education Volume 6 ; 6 >
-    au < exists ; exists ; 2014 ; Natural Sciences Education Volume 7 ; 7 >
-    au < exists ; exists ; 2015 ; Natural Sciences Education Volume 8 ; 8 >
+    au < exists ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 >
+    au < exists ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 >
+    au < exists ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
+    au < exists ; exists ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
+    au < exists ; exists ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
+    au < exists ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 >
 
   }
 
@@ -205,12 +202,12 @@
     
     param[journal_id] = tpg
 
-    au < exists ; exists ; 2010 ; The Plant Genome Volume 39 ; 39 >
-    au < exists ; exists ; 2011 ; The Plant Genome Volume 40 ; 40 >
-    au < exists ; exists ; 2012 ; The Plant Genome Volume 41 ; 41 >
-    au < exists ; exists ; 2013 ; The Plant Genome Volume 42 ; 42 >
-    au < exists ; exists ; 2014 ; The Plant Genome Volume 43 ; 43 >
-    au < exists ; exists ; 2015 ; The Plant Genome Volume 44 ; 44 >
+    au < exists ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 >
+    au < exists ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 >
+    au < exists ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 >
+    au < exists ; exists ; 2013 ; The Plant Genome Volume 6 ; 6 >
+    au < exists ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 >
+    au < exists ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 >
 
   }
 
