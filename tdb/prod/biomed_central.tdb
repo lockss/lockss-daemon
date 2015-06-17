@@ -6836,6 +6836,35 @@
     {
 
       title <
+        name = Chinese Journal of Cancer ;
+        issn = 1000-467X ;
+        eissn = 1944-446X
+      >
+
+      param[base_url] = http://www.cjcjournal.com/
+      param[journal_issn] = 1944-446X
+      comment[platform] = BioMedCentral
+
+      au < exists ; 2002 ; Chinese Journal of Cancer Volume 21 ; 21 >
+      au < exists ; 2003 ; Chinese Journal of Cancer Volume 22 ; 22 >
+      au < exists ; 2004 ; Chinese Journal of Cancer Volume 23 ; 23 >
+      au < exists ; 2005 ; Chinese Journal of Cancer Volume 24 ; 24 >
+      au < exists ; 2006 ; Chinese Journal of Cancer Volume 25 ; 25 >
+      au < exists ; 2007 ; Chinese Journal of Cancer Volume 26 ; 26 >
+      au < exists ; 2008 ; Chinese Journal of Cancer Volume 27 ; 27 >
+      au < exists ; 2009 ; Chinese Journal of Cancer Volume 28 ; 28 >
+      au < exists ; 2010 ; Chinese Journal of Cancer Volume 29 ; 29 >
+      au < exists ; 2011 ; Chinese Journal of Cancer Volume 30 ; 30 >
+      au < exists ; 2012 ; Chinese Journal of Cancer Volume 31 ; 31 >
+      au < exists ; 2013 ; Chinese Journal of Cancer Volume 32 ; 32 >
+      au < exists ; 2014 ; Chinese Journal of Cancer Volume 33 ; 33 >
+      au < expected ; 2015 ; Chinese Journal of Cancer Volume 34 ; 34 >
+
+    }
+
+    {
+
+      title <
         name = Climate Change Responses ;
         issn = 2053-7565 ;
         eissn = 2053-7565
