@@ -14,23 +14,13 @@
   
     title <
       name = Expert Review of Anti-infective Therapy ;
-      issn = 1478-7210 
+      issn = 1478-7210 ;
+      eissn = 1744-8336 
     >
     
     param[journal_id] = eri
 
-    au < doNotProcess ; doNotProcess ; 2003 ; Expert Review of Anti-infective Therapy Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Anti-infective Therapy Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Anti-infective Therapy Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Anti-infective Therapy Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Anti-infective Therapy Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Anti-infective Therapy Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Anti-infective Therapy Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Anti-infective Therapy Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Anti-infective Therapy Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Anti-infective Therapy Volume 10 ; 10 >
     au < down ; exists ; 2013 ; Expert Review of Anti-infective Therapy Volume 11 ; 11 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Anti-infective Therapy Volume 12 ; 12 >
     
   }
 
@@ -38,25 +28,13 @@
   
     title < 
       name = Expert Review of Anticancer Therapy ;
-      issn = 1473-7140
+      issn = 1473-7140 ;
+      eissn = 1744-8328
     >
     
     param[journal_id] = era
 
-    au < doNotProcess ; doNotProcess ; 2001 ; Expert Review of Anticancer Therapy Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2002 ; Expert Review of Anticancer Therapy Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2003 ; Expert Review of Anticancer Therapy Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Anticancer Therapy Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Anticancer Therapy Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Anticancer Therapy Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Anticancer Therapy Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Anticancer Therapy Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Anticancer Therapy Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Anticancer Therapy Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Anticancer Therapy Volume 11 ; 11 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Anticancer Therapy Volume 12 ; 12 >
     au < down ; exists ; 2013 ; Expert Review of Anticancer Therapy Volume 13 ; 13 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Anticancer Therapy Volume 14 ; 14 >
    
   }
 
@@ -64,23 +42,13 @@
   
     title < 
       name = Expert Review of Cardiovascular Therapy ;
-      issn = 1477-9072
+      issn = 1477-9072 ;
+      eissn = 1744-8344
     >
     
     param[journal_id] = erc
 
-    au < doNotProcess ; doNotProcess ; 2003 ; Expert Review of Cardiovascular Therapy Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Cardiovascular Therapy Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Cardiovascular Therapy Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Cardiovascular Therapy Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Cardiovascular Therapy Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Cardiovascular Therapy Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Cardiovascular Therapy Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Cardiovascular Therapy Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Cardiovascular Therapy Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Cardiovascular Therapy Volume 10 ; 10 >
     au < down ; exists ; 2013 ; Expert Review of Cardiovascular Therapy Volume 11 ; 11 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Cardiovascular Therapy Volume 12 ; 12 >
   
   }
 
@@ -94,16 +62,7 @@
     
     param[journal_id] = eci
 
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Clinical Immunology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Clinical Immunology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Clinical Immunology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Clinical Immunology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Clinical Immunology Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Clinical Immunology Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Clinical Immunology Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Clinical Immunology Volume 8 ; 8 >
     au < down ; exists ; 2013 ; Expert Review of Clinical Immunology Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Clinical Immunology Volume 10 ; 10 >
     
   }
 
@@ -111,18 +70,13 @@
   
     title < 
       name = Expert Review of Clinical Pharmacology ;
-      issn = 1751-2433
+      issn = 1751-2433 ;
+      eissn = 1751-2441
     >
     
     param[journal_id] = ecp
 
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Clinical Pharmacology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Clinical Pharmacology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Clinical Pharmacology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Clinical Pharmacology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Clinical Pharmacology Volume 5 ; 5 >
     au < down ; exists ; 2013 ; Expert Review of Clinical Pharmacology Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Clinical Pharmacology Volume 7 ; 7 >
     
   }
 
@@ -130,20 +84,13 @@
   
     title < 
       name = Expert Review of Dermatology ;
-      issn = 1746-9872
+      issn = 1746-9872 ;
+      eissn = 1746-9880
     >
     
     param[journal_id] = edm
 
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Dermatology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Dermatology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Dermatology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Dermatology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Dermatology Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Dermatology Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Dermatology Volume 7 ; 7 >
     au < down ; exists ; 2013 ; Expert Review of Dermatology Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Dermatology Volume 9 ; 9 >
     
   }
 
@@ -157,15 +104,7 @@
     
     param[journal_id] = eem
 
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Endocrinology & Metabolism Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Endocrinology & Metabolism Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Endocrinology & Metabolism Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Endocrinology & Metabolism Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Endocrinology & Metabolism Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Endocrinology & Metabolism Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Endocrinology & Metabolism Volume 7 ; 7 >
     au < down ; exists ; 2013 ; Expert Review of Endocrinology & Metabolism Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Endocrinology & Metabolism Volume 9 ; 9 >
     
   }
 
@@ -173,19 +112,13 @@
   
     title < 
       name = Expert Review of Gastroenterology & Hepatology ;
-      issn = 1747-4124
+      issn = 1747-4124 ;
+      eissn = 1747-4132
     >
     
     param[journal_id] = egh
 
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Gastroenterology & Hepatology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Gastroenterology & Hepatology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Gastroenterology & Hepatology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Gastroenterology & Hepatology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Gastroenterology & Hepatology Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Gastroenterology & Hepatology Volume 6 ; 6 >
     au < down ; exists ; 2013 ; Expert Review of Gastroenterology & Hepatology Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Gastroenterology & Hepatology Volume 8 ; 8 >
     
   }
 
@@ -193,18 +126,13 @@
   
     title < 
       name = Expert Review of Hematology ;
-      issn = 1747-4086
+      issn = 1747-4086 ;
+      eissn = 1747-4094
     >
     
     param[journal_id] = ehm
 
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Hematology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Hematology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Hematology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Hematology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Hematology Volume 5 ; 5 >
     au < down ; exists ; 2013 ; Expert Review of Hematology Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Hematology Volume 7 ; 7 >
     
   }
 
@@ -212,22 +140,13 @@
   
     title < 
       name = Expert Review of Medical Devices ;
-      issn = 1743-4440
+      issn = 1743-4440 ;
+      eissn = 1745-2422
     >
     
     param[journal_id] = erd
 
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Medical Devices Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Medical Devices Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Medical Devices Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Medical Devices Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Medical Devices Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Medical Devices Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Medical Devices Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Medical Devices Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Medical Devices Volume 9 ; 9 >
     au < down ; exists ; 2013 ; Expert Review of Medical Devices Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Medical Devices Volume 11 ; 11 >
     
   }
 
@@ -235,25 +154,13 @@
   
     title < 
       name = Expert Review of Molecular Diagnostics ;
-      issn = 1473-7159
+      issn = 1473-7159 ;
+      eissn = 1744-8352
     >
     
     param[journal_id] = erm
 
-    au < doNotProcess ; doNotProcess ; 2001 ; Expert Review of Molecular Diagnostics Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2002 ; Expert Review of Molecular Diagnostics Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2003 ; Expert Review of Molecular Diagnostics Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Molecular Diagnostics Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Molecular Diagnostics Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Molecular Diagnostics Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Molecular Diagnostics Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Molecular Diagnostics Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Molecular Diagnostics Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Molecular Diagnostics Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Molecular Diagnostics Volume 11 ; 11 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Molecular Diagnostics Volume 12 ; 12 >
     au < down ; exists ; 2013 ; Expert Review of Molecular Diagnostics Volume 13 ; 13 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Molecular Diagnostics Volume 14 ; 14 >
    
   }
 
@@ -261,25 +168,13 @@
   
     title < 
       name = Expert Review of Neurotherapeutics ;
-      issn = 1473-7175
+      issn = 1473-7175 ;
+      eissn = 1744-8360
     >
     
     param[journal_id] = ern
 
-    au < doNotProcess ; doNotProcess ; 2001 ; Expert Review of Neurotherapeutics Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2002 ; Expert Review of Neurotherapeutics Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2003 ; Expert Review of Neurotherapeutics Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Neurotherapeutics Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Neurotherapeutics Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Neurotherapeutics Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Neurotherapeutics Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Neurotherapeutics Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Neurotherapeutics Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Neurotherapeutics Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Neurotherapeutics Volume 11 ; 11 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Neurotherapeutics Volume 12 ; 12 >
     au < down ; exists ; 2013 ; Expert Review of Neurotherapeutics Volume 13 ; 13 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Neurotherapeutics Volume 14 ; 14 >
    
   }
 
@@ -287,20 +182,13 @@
   
     title < 
       name = Expert Review of Obstetrics & Gynecology ;
-      issn = 1747-4108
+      issn = 1747-4108 ;
+      eissn = 1747-4116
     >
     
     param[journal_id] = eog
 
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Obstetrics & Gynecology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Obstetrics & Gynecology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Obstetrics & Gynecology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Obstetrics & Gynecology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Obstetrics & Gynecology Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Obstetrics & Gynecology Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Obstetrics & Gynecology Volume 7 ; 7 >
     au < down ; exists ; 2013 ; Expert Review of Obstetrics & Gynecology Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Obstetrics & Gynecology Volume 9 ; 9 >
     
   }
 
@@ -308,20 +196,13 @@
   
     title < 
       name = Expert Review of Ophthalmology ;
-      issn = 1746-9899
+      issn = 1746-9899 ;
+      eissn = 1746-9902
     >
     
     param[journal_id] = eop
 
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Ophthalmology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Ophthalmology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Ophthalmology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Ophthalmology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Ophthalmology Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Ophthalmology Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Ophthalmology Volume 7 ; 7 >
     au < down ; exists ; 2013 ; Expert Review of Ophthalmology Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Ophthalmology Volume 9 ; 9 >
     
   }
 
@@ -329,25 +210,13 @@
   
     title < 
       name = Expert Review of Pharmacoeconomics & Outcomes Research ;
-      issn = 1473-7167
+      issn = 1473-7167 ;
+      eissn = 1744-8379
     >
     
     param[journal_id] = erp
 
-    au < doNotProcess ; doNotProcess ; 2001 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2002 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2003 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 11 ; 11 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 12 ; 12 >
     au < down ; exists ; 2013 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 13 ; 13 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 14 ; 14 >
   
   }
 
@@ -355,22 +224,13 @@
   
     title < 
       name = Expert Review of Proteomics ;
-      issn = 1478-9450
+      issn = 1478-9450 ;
+      eissn = 1744-8387
     >
     
     param[journal_id] = epr
 
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Proteomics Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Proteomics Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Proteomics Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Proteomics Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Proteomics Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Proteomics Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Proteomics Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Proteomics Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Proteomics Volume 9 ; 9 >
     au < down ; exists ; 2013 ; Expert Review of Proteomics Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Proteomics Volume 11 ; 11 >
      
   }
 
@@ -378,19 +238,13 @@
   
     title < 
       name = Expert Review of Respiratory Medicine ;
-      issn = 1747-6348
+      issn = 1747-6348 ;
+      eissn = 1747-6356
     >
     
     param[journal_id] = ers
 
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Respiratory Medicine Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Respiratory Medicine Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Respiratory Medicine Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Respiratory Medicine Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Respiratory Medicine Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Respiratory Medicine Volume 6 ; 6 >
     au < down ; exists ; 2013 ; Expert Review of Respiratory Medicine Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Respiratory Medicine Volume 8 ; 8 >
     
   }
 
@@ -398,24 +252,13 @@
   
     title < 
       name = Expert Review of Vaccines ;
-      issn = 1476-0584
+      issn = 1476-0584 ;
+      eissn = 1744-8395
     >
     
     param[journal_id] = erv
 
-    au < doNotProcess ; doNotProcess ; 2002 ; Expert Review of Vaccines Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2003 ; Expert Review of Vaccines Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2004 ; Expert Review of Vaccines Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2005 ; Expert Review of Vaccines Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Expert Review of Vaccines Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Expert Review of Vaccines Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Expert Review of Vaccines Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Expert Review of Vaccines Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Expert Review of Vaccines Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Expert Review of Vaccines Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Expert Review of Vaccines Volume 11 ; 11 >
     au < down ; exists ; 2013 ; Expert Review of Vaccines Volume 12 ; 12 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Expert Review of Vaccines Volume 13 ; 13 >
    
   }
 
