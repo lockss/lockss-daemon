@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>21</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -87,6 +87,5 @@
   <entry>
     <string>au_permission_checker_factory</string>
     <org.lockss.util.Default />
-    <!-- string>org.lockss.plugin.highwire.elife.ELifeDrupalPermissionCheckerFactory</string -->
   </entry>
 </map>
