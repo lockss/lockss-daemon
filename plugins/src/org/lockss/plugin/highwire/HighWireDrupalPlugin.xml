@@ -117,7 +117,7 @@
       <string>2,"^https?://static[.]www[.]bmj[.]com/content/"</string>
       <string>2,"^https?://(?!elife)%s/content/(?!%s/)[0-9]+/[^/.?]+([.]toc)?$", url_host(base_url), volume_name</string>
       <!-- otherwise, all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com)/."</string>
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com||.+[.]gstatic[.]com)/."</string>
       <!-- no gifs from other volumes (use au_exclude_urls_from_poll_results_pattern if needed)
       <string>2,"^%scontent/(?!([^0-9][^/]+/)?(%s|suppl)/)[^?]*[.]gif", base_url, volume_name</string> -->
       <!-- all fonts, images, resources, css, js, etc. -->
@@ -228,7 +228,7 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static.www.bmj.com</string>
+    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static.www.bmj.com|.+[.]gstatic[.]com</string>
   </entry>
   <entry>
     <!-- APS & OUP use cdn -->
