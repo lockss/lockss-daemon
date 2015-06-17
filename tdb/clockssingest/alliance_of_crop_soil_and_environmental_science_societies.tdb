@@ -37,12 +37,13 @@
     
     param[journal_id] = aj
 
-    au < exists ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 >
-    au < exists ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 >
-    au < exists ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 >
-    au < exists ; exists ; 2013 ; Agronomy Journal Volume 105 ; 105 >
+    au < manifest ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 >
+    au < manifest ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 >
+    au < manifest ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 >
+    au < manifest ; exists ; 2013 ; Agronomy Journal Volume 105 ; 105 >
     au < manifest ; exists ; 2014 ; Agronomy Journal Volume 106 ; 106 >
-    au < exists ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 >
+    au < manifest ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 >
+    au < expected ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 >
 
   }
 
@@ -59,9 +60,9 @@
     
     param[journal_id] = cns
 
-    au < exists ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
+    au < manifest ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
     au < manifest ; exists ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
-    au < exists ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
+    au < manifest ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
 
 
   }
@@ -79,12 +80,12 @@
 
     param[journal_id] = cs
 
-    au < exists ; exists ; 2010 ; Crop Science Volume 50 ; 50 >
-    au < exists ; exists ; 2011 ; Crop Science Volume 51 ; 51 >
-    au < exists ; exists ; 2012 ; Crop Science Volume 52 ; 52 >
-    au < exists ; exists ; 2013 ; Crop Science Volume 53 ; 53 >
-    au < exists ; exists ; 2014 ; Crop Science Volume 54 ; 54 >
-    au < exists ; exists ; 2015 ; Crop Science Volume 55 ; 55 >
+    au < manifest ; exists ; 2010 ; Crop Science Volume 50 ; 50 >
+    au < manifest ; exists ; 2011 ; Crop Science Volume 51 ; 51 >
+    au < manifest ; exists ; 2012 ; Crop Science Volume 52 ; 52 >
+    au < manifest ; exists ; 2013 ; Crop Science Volume 53 ; 53 >
+    au < manifest ; exists ; 2014 ; Crop Science Volume 54 ; 54 >
+    au < manifest ; exists ; 2015 ; Crop Science Volume 55 ; 55 >
 
   }
 
@@ -101,9 +102,9 @@
     
     param[journal_id] = csa
 
-    au < exists ; exists ; 2013 ; CSA News Volume 58 ; 58 >
-    au < exists ; exists ; 2014 ; CSA News Volume 59 ; 59 >
-    au < exists ; exists ; 2015 ; CSA News Volume 60 ; 60 >
+    au < manifest ; exists ; 2013 ; CSA News Volume 58 ; 58 >
+    au < manifest ; exists ; 2014 ; CSA News Volume 59 ; 59 >
+    au < manifest ; exists ; 2015 ; CSA News Volume 60 ; 60 >
 
   }
 
@@ -121,12 +122,12 @@
     
     param[journal_id] = jeq
 
-    au < exists ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 >
-    au < exists ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
-    au < exists ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
-    au < exists ; exists ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
+    au < manifest ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 >
+    au < manifest ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
+    au < manifest ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
+    au < manifest ; exists ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
     au < manifest ; exists ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
-    au < exists ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
+    au < manifest ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
 
 
   }
@@ -143,12 +144,12 @@
     
     param[journal_id] = jpr
 
-    au < exists ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
-    au < exists ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
-    au < exists ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
-    au < exists ; exists ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
-    au < exists ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
-    au < exists ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
+    au < manifest ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
+    au < manifest ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
+    au < manifest ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
+    au < manifest ; exists ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
+    au < manifest ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
+    au < manifest ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
 
   }
 
@@ -165,7 +166,7 @@
 
     param[journal_id] = jpa
 
-    au < exists ; exists ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 >
+    au < manifest ; exists ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 >
 
   }
 
@@ -202,11 +203,11 @@
     
     param[journal_id] = tpg
 
-    au < exists ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 >
-    au < exists ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 >
-    au < exists ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 >
-    au < exists ; exists ; 2013 ; The Plant Genome Volume 6 ; 6 >
-    au < exists ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 >
+    au < manifest ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 >
+    au < manifest ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 >
+    au < manifest ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 >
+    au < manifest ; exists ; 2013 ; The Plant Genome Volume 6 ; 6 >
+    au < manifest ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 >
     au < exists ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 >
 
   }
@@ -223,10 +224,10 @@
     
     param[journal_id] = sh
 
-    au < exists ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 >
-    au < exists ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 >
+    au < manifest ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 >
+    au < manifest ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 >
     au < exists ; exists ; 2014 ; Soil Horizons Volume 55 ; 55 >
-    au < exists ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 >
+    au < manifest ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 >
 
   }
 
@@ -244,12 +245,12 @@
     
     param[journal_id] = sssaj
 
-    au < exists ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 >
-    au < exists ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
-    au < exists ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
-    au < exists ; exists ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
-    au < exists ; exists ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
-    au < exists ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
+    au < manifest ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 >
+    au < manifest ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
+    au < manifest ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
+    au < manifest ; exists ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
+    au < manifest ; exists ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
+    au < manifest ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
 
   }
 
@@ -266,12 +267,12 @@
     
     param[journal_id] = vzj
 
-    au < exists ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 >
-    au < exists ; exists ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
-    au < exists ; exists ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
-    au < exists ; exists ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
-    au < exists ; exists ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
-    au < exists ; exists ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
+    au < manifest ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 >
+    au < manifest ; exists ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
+    au < manifest ; exists ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
+    au < manifest ; exists ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
+    au < manifest ; exists ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
+    au < manifest ; exists ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
 
   }
 
