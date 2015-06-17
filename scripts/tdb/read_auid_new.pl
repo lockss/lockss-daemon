@@ -1250,6 +1250,9 @@ while (my $line = <>) {
       if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
+          $vol_title =~ s/ | Digital Library//;
+          $vol_title =~ s/ - / /;  &amp;
+          $vol_title =~ s/&amp\;/&/;  
           }
         $result = "Manifest"
       } else {
@@ -1271,6 +1274,9 @@ while (my $line = <>) {
       if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
+          $vol_title =~ s/ | Digital Library//;
+          $vol_title =~ s/ - / /;
+          $vol_title =~ s/&amp\;/&/;  
           }
         $result = "Manifest"
       } else {
