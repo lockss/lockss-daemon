@@ -102,7 +102,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
-      au < aps.ClockssAPSDrupalPlugin ; testing ; exists ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; >
+      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; >
 
     }
@@ -1995,8 +1995,8 @@
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
-      au < aps.ClockssAPSDrupalPlugin ; testing ; exists ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; >
-      au < aps.ClockssAPSDrupalPlugin ; testing ; exists ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; >
+      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; >
+      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2015 ; Journal of Applied Physiology Volume 118 ; 118 ; >
       au < aps.ClockssAPSDrupalPlugin ; expected ; exists ; 2015 ; Journal of Applied Physiology Volume 119 ; 119 ; >
 
