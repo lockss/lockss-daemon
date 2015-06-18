@@ -89,28 +89,28 @@
     {
     param[base_url] = https://www.fe.unicamp.br/revistas/ged/
 
-    au < testing ; 1993 ; 1 ; Zetetiké: Revista de Educação Matemática Volume 1 ; 1993 ; >
-    au < testing ; 1994 ; 2 ; Zetetiké: Revista de Educação Matemática Volume 2 ; 1994 ; >
-    au < testing ; 1995 ; 3 ; Zetetiké: Revista de Educação Matemática Volume 3 ; 1995 ; >
-    au < testing ; 1996 ; 4 ; Zetetiké: Revista de Educação Matemática Volume 4 ; 1996 ; >
-    au < testing ; 1997 ; 5 ; Zetetiké: Revista de Educação Matemática Volume 5 ; 1997 ; >
-    au < testing ; 1998 ; 6 ; Zetetiké: Revista de Educação Matemática Volume 6 ; 1998 ; >
-    au < testing ; 1999 ; 7 ; Zetetiké: Revista de Educação Matemática Volume 7 ; 1999 ; >
-    au < testing ; 2000 ; 8 ; Zetetiké: Revista de Educação Matemática Volume 8 ; 2000 ; >
-    au < testing ; 2001 ; 9 ; Zetetiké: Revista de Educação Matemática Volume 9 ; 2001 ; >
-    au < testing ; 2002 ; 10 ; Zetetiké: Revista de Educação Matemática Volume 10 ; 2002 ; >
-    au < testing ; 2003 ; 11 ; Zetetiké: Revista de Educação Matemática Volume 11 ; 2003 ; >
-    au < testing ; 2004 ; 12 ; Zetetiké: Revista de Educação Matemática Volume 12 ; 2004 ; >
-    au < testing ; 2005 ; 13 ; Zetetiké: Revista de Educação Matemática Volume 13 ; 2005 ; >
-    au < testing ; 2006 ; 14 ; Zetetiké: Revista de Educação Matemática Volume 14 ; 2006 ; >
-    au < testing ; 2007 ; 15 ; Zetetiké: Revista de Educação Matemática Volume 15 ; 2007 ; >
-    au < testing ; 2008 ; 16 ; Zetetiké: Revista de Educação Matemática Volume 16 ; 2008 ; >
-    au < testing ; 2009 ; 17 ; Zetetiké: Revista de Educação Matemática Volume 17 ; 2009 ; >
-    au < testing ; 2010 ; 18 ; Zetetiké: Revista de Educação Matemática Volume 18 ; 2010 ; >
-    au < testing ; 2011 ; 19 ; Zetetiké: Revista de Educação Matemática Volume 19 ; 2011 ; >
-    au < testing ; 2012 ; 20 ; Zetetiké: Revista de Educação Matemática Volume 20 ; 2012 ; >
-    au < testing ; 2013 ; 21 ; Zetetiké: Revista de Educação Matemática Volume 21 ; 2013 ; >
-    au < testing ; 2014 ; 22 ; Zetetiké: Revista de Educação Matemática Volume 22 ; 2014 ; >
+    au < notReady ; 1993 ; 1 ; Zetetiké: Revista de Educação Matemática Volume 1 ; 1993 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 1994 ; 2 ; Zetetiké: Revista de Educação Matemática Volume 2 ; 1994 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 1995 ; 3 ; Zetetiké: Revista de Educação Matemática Volume 3 ; 1995 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 1996 ; 4 ; Zetetiké: Revista de Educação Matemática Volume 4 ; 1996 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 1997 ; 5 ; Zetetiké: Revista de Educação Matemática Volume 5 ; 1997 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 1998 ; 6 ; Zetetiké: Revista de Educação Matemática Volume 6 ; 1998 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 1999 ; 7 ; Zetetiké: Revista de Educação Matemática Volume 7 ; 1999 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2000 ; 8 ; Zetetiké: Revista de Educação Matemática Volume 8 ; 2000 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2001 ; 9 ; Zetetiké: Revista de Educação Matemática Volume 9 ; 2001 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2002 ; 10 ; Zetetiké: Revista de Educação Matemática Volume 10 ; 2002 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2003 ; 11 ; Zetetiké: Revista de Educação Matemática Volume 11 ; 2003 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2004 ; 12 ; Zetetiké: Revista de Educação Matemática Volume 12 ; 2004 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2005 ; 13 ; Zetetiké: Revista de Educação Matemática Volume 13 ; 2005 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2006 ; 14 ; Zetetiké: Revista de Educação Matemática Volume 14 ; 2006 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2007 ; 15 ; Zetetiké: Revista de Educação Matemática Volume 15 ; 2007 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2008 ; 16 ; Zetetiké: Revista de Educação Matemática Volume 16 ; 2008 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2009 ; 17 ; Zetetiké: Revista de Educação Matemática Volume 17 ; 2009 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2010 ; 18 ; Zetetiké: Revista de Educação Matemática Volume 18 ; 2010 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2011 ; 19 ; Zetetiké: Revista de Educação Matemática Volume 19 ; 2011 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2012 ; 20 ; Zetetiké: Revista de Educação Matemática Volume 20 ; 2012 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2013 ; 21 ; Zetetiké: Revista de Educação Matemática Volume 21 ; 2013 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
+    au < notReady ; 2014 ; 22 ; Zetetiké: Revista de Educação Matemática Volume 22 ; 2014 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name >
     }
   }
 
