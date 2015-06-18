@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>23</string>
+        <string>24</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -99,6 +99,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- content from CDN -->
+      <string>1,"^https?://(cdn[.]mathjax[.]org|cdn[^.]*[.]iopscience[.]com/images/%s)/.", journal_issn</string>
       <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>1,"^https?://%s/fonts/", base_url_host</string>
       <string>4,"^%s", base_url</string>
@@ -173,6 +175,12 @@
     <!-- We do not poll for download figures -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>/download(HR)?Figure/figure/</string>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>cdn[.]mathjax[.]org|cdn[^.]*[.]iopscience[.]com</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
