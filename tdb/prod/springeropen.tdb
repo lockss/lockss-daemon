@@ -2140,6 +2140,211 @@
 
     }
 
+    {
+
+      title <
+        name = China Finance and Economic Review ;
+        issn = 2095-4638
+      >
+
+      param[base_url] = http://www.chinafinanceandeconomicreview.com/
+      param[journal_issn] = 2095-4638
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2013 ; China Finance and Economic Review Volume 1 ; 1 >
+      au < exists ; 2014 ; China Finance and Economic Review Volume 2 ; 2 >
+      au < expected ; 2015 ; China Finance and Economic Review Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = Computational Social Networks ;
+        issn = 2197-4314 ;
+        eissn = 2197-4314
+      >
+
+      param[base_url] = http://www.computationalsocialnetworks.com/
+      param[journal_issn] = 2197-4314
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Computational Social Networks Volume 1 ; 1 >
+      au < expected ; 2015 ; Computational Social Networks Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Geoenvironmental Disasters ;
+        issn = 2197-8670 ;
+        eissn = 2197-8670
+      >
+
+      param[base_url] = http://www.geoenvironmental-disasters.com/
+      param[journal_issn] = 2197-8670
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 >
+      au < expected ; 2015 ; Geoenvironmental Disasters Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = In Silico Cell and Tissue Science ;
+        issn = 2196-050X
+      >
+
+      param[base_url] = http://www.in-silico-cell-and-tissue-science.com/
+      param[journal_issn] = 2196-050X
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 >
+      au < expected ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Chinese Management ;
+        issn = 2195-9897 ;
+        eissn = 2195-9897
+      >
+
+      param[base_url] = http://www.journalofchinesemanagement.com/
+      param[journal_issn] = 2195-9897
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Journal of Chinese Management Volume 1 ; 1 >
+      au < expected ; 2015 ; Journal of Chinese Management Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Chinese Sociology ;
+        issn = 2198-2635
+      >
+
+      param[base_url] = http://www.journalofchinesesociology.com/
+      param[journal_issn] = 2198-2635
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Journal of Chinese Sociology Volume 1 ; 1 >
+      au < expected ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Global Entrepreneurship Research ;
+        issn = 2251-7316 ;
+        eissn = 2251-7316
+      >
+
+      param[base_url] = http://www.journal-jger.com/
+      param[journal_issn] = 2251-7316
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 >
+      au < exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 >
+      au < expected ; 2015 ; Journal of Global Entrepreneurship Research Volume 5 ; 5 >
+
+    }
+
+    {
+
+      title <
+        name = Large-scale Assessments in Education ;
+        issn = 2196-0739 ;
+        eissn = 2196-0739
+      >
+
+      param[base_url] = http://www.largescaleassessmentsineducation.com/
+      param[journal_issn] = 2196-0739
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 >
+      au < exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 >
+      au < expected ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = Molecular and Cellular Pediatrics ;
+        issn = 2194-7791 ;
+        eissn = 2194-7791
+      >
+
+      param[base_url] = http://www.molcellped.com/
+      param[journal_issn] = 2194-7791
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 >
+      au < expected ; 2015 ; Molecular and Cellular Pediatrics Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Pacific Journal of Mathematics for Industry ;
+        issn = 2198-4115 ;
+        eissn = 2198-4115
+      >
+
+      param[base_url] = http://www.pacific-mathforindustry.com/
+      param[journal_issn] = 2198-4115
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
+      au < expected ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
+
+    }
+
+    {
+
+      title <
+        name = Progress in Orthodontics ;
+        issn = 2196-1042 ;
+        eissn = 2196-1042
+      >
+
+      param[base_url] = http://www.progressinorthodontics.com/
+      param[journal_issn] = 2196-1042
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
+      au < exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
+      au < expected ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
+
+    }
+
+    {
+
+      title <
+        name = Smart Learning Environments ;
+        issn = 2196-7091 ;
+        eissn = 2196-7091
+      >
+
+      param[base_url] = http://www.slejournal.com/
+      param[journal_issn] = 2196-7091
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; 2014 ; Smart Learning Environments Volume 1 ; 1 >
+      au < expected ; 2015 ; Smart Learning Environments Volume 2 ; 2 >
+
+    }
+
   }
   
   {
@@ -3135,5 +3340,210 @@
         au < exists ; 2015 ; Zeitschrift für Weiterbildungsforschung - Report Volume 38 ; 38 >
 
     }
+
+    {
+
+      title <
+        name = Computational Astrophysics and Cosmology ;
+        issn = 2197-7909 ;
+        eissn = 2197-7909
+      >
+
+      param[base_url] = http://link.springer.com/journal/40668/
+      param[journal_issn] = 2197-7909
+      comment[platform] = Springer
+
+      au < exists ; 2014 ; Computational Astrophysics and Cosmology Volume 1 ; 1 >
+      au < expected ; 2015 ; Computational Astrophysics and Cosmology Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Fashion and Textiles ;
+        issn = 2198-0802 ;
+        eissn = 2198-0802
+      >
+
+      param[base_url] = http://link.springer.com/journal/40691
+      param[journal_issn] = 2198-0802
+      comment[platform] = Springer
+
+      au < exists ; 2014 ; Fashion and Textiles Volume 1 ; 1 >
+      au < expected ; 2015 ; Fashion and Textiles Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Infrastructure Complexity ;
+        issn = 2196-3258 ;
+        eissn = 2196-3258
+      >
+
+      param[base_url] = http://link.springer.com/journal/40551
+      param[journal_issn] = 2196-3258
+      comment[platform] = Springer
+
+      au < exists ; 2014 ; Infrastructure Complexity Volume 1 ; 1 >
+      au < expected ; 2015 ; Infrastructure Complexity Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Dharma Studies ;
+        issn = 2196-8802 ;
+        eissn = 2196-8802
+      >
+
+      param[base_url] = http://link.springer.com/journal/40613
+      param[journal_issn] = 2196-8802
+      comment[platform] = Springer
+
+      au < exists ; 2013 ; International Journal of Dharma Studies Volume 1 ; 1 >
+      au < exists ; 2014 ; International Journal of Dharma Studies Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Dharma Studies Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Mechanical and Materials Engineering ;
+        issn = 1823-0334 ;
+        eissn = 2198-2791
+      >
+
+      param[base_url] = http://link.springer.com/journal/40712
+      param[journal_issn] = 2198-2791
+      comment[platform] = Springer
+
+      au < exists ; 2014 ; International Journal of Mechanical and Materials Engineering Volume 1 ; 1 >
+      au < expected ; 2015 ; International Journal of Mechanical and Materials Engineering Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Analytical Science & Technology ;
+        eissn = 2093-3371
+      >
+
+      param[base_url] = http://link.springer.com/journal/40543
+      param[journal_issn] = 2093-3371
+      comment[platform] = Springer
+
+      au < exists ; 2013 ; Journal of Analytical Science & Technology Volume 4 ; 4 >
+      au < exists ; 2014 ; Journal of Analytical Science & Technology Volume 5 ; 5 >
+      au < expected ; 2015 ; Journal of Analytical Science & Technology Volume 6 ; 6 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Cheminformatics ;
+        issn = 1758-2946 ;
+        eissn = 1758-2946
+      >
+
+      param[base_url] = http://link.springer.com/journal/13321
+      param[journal_issn] = 1758-2946
+      comment[platform] = Springer
+
+      au < exists ; 2009 ; Journal of Cheminformatics Volume 1 ; 1 >
+      au < exists ; 2010 ; Journal of Cheminformatics Volume 2 ; 2 >
+      au < exists ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 >
+      au < exists ; 2012 ; Journal of Cheminformatics Volume 4 ; 4 >
+      au < exists ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 >
+      au < exists ; 2014 ; Journal of Cheminformatics Volume 6 ; 6 >
+      au < expected ; 2015 ; Journal of Cheminformatics Volume 7 ; 7 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Systems Chemistry ;
+        issn = 1759-2208 ;
+        eissn = 1759-2208
+      >
+
+      param[base_url] = http://link.springer.com/journal/13322/
+      param[journal_issn] = 1759-2208
+      comment[platform] = Springer
+
+      au < exists ; 2010 ; Journal of Systems Chemistry Volume 1 ; 1 >
+      au < exists ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 >
+      au < exists ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 >
+      au < exists ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 >
+      au < exists ; 2014 ; Journal of Systems Chemistry Volume 5 ; 5 >
+      au < expected ; 2015 ; Journal of Systems Chemistry Volume 6 ; 6 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Brazilian Computer Society ;
+        eissn = 1678-4804
+      >
+
+      param[base_url] = http://link.springer.com/journal/13173
+      param[journal_issn] = 1678-4804
+      comment[platform] = Springer
+
+      au < exists ; 2004 ; Journal of the Brazilian Computer Society Volume 10 ; 10 >
+      au < exists ; 2005 ; Journal of the Brazilian Computer Society Volume 11 ; 11 >
+      au < exists ; 2006 ; Journal of the Brazilian Computer Society Volume 12 ; 12 >
+      au < exists ; 2007 ; Journal of the Brazilian Computer Society Volume 13 ; 13 >
+      au < exists ; 2008 ; Journal of the Brazilian Computer Society Volume 14 ; 14 >
+      au < exists ; 2009 ; Journal of the Brazilian Computer Society Volume 15 ; 15 >
+      au < exists ; 2010 ; Journal of the Brazilian Computer Society Volume 16 ; 16 >
+      au < exists ; 2011 ; Journal of the Brazilian Computer Society Volume 17 ; 17 >
+      au < exists ; 2012 ; Journal of the Brazilian Computer Society Volume 18 ; 18 >
+      au < exists ; 2013 ; Journal of the Brazilian Computer Society Volume 19 ; 19 >
+      au < exists ; 2014 ; Journal of the Brazilian Computer Society Volume 20 ; 20 >
+      au < expected ; 2015 ; Journal of the Brazilian Computer Society Volume 21 ; 21 >
+
+    }
+
+    {
+
+      title <
+        name = Maxillofacial Plastic and Reconstructive Surgery ;
+        issn = 2288-8101 ;
+        eissn = 2288-8586
+      >
+
+      param[base_url] = http://link.springer.com/journal/40902
+      param[journal_issn] = 2288-8586
+      comment[platform] = Springer
+
+      au < expected ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Triple Helix ;
+        issn = 2197-1927
+      >
+
+      param[base_url] = http://link.springer.com/journal/40604
+      param[journal_issn] = 2197-1927
+      comment[platform] = Springer
+
+      au < exists ; 2014 ; Triple Helix Volume 1 ; 1 >
+      au < expected ; 2015 ; Triple Helix Volume 2 ; 2 >
+
+    }
+
   }
 }
