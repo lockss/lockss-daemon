@@ -2271,6 +2271,211 @@
 
     }
 
+    {
+
+      title <
+        name = China Finance and Economic Review ;
+        issn = 2095-4638
+      >
+
+      param[base_url] = http://www.chinafinanceandeconomicreview.com/
+      param[journal_issn] = 2095-4638
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2013 ; China Finance and Economic Review Volume 1 ; 1 >
+      au < exists ; exists ; 2014 ; China Finance and Economic Review Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; China Finance and Economic Review Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = Computational Social Networks ;
+        issn = 2197-4314 ;
+        eissn = 2197-4314
+      >
+
+      param[base_url] = http://www.computationalsocialnetworks.com/
+      param[journal_issn] = 2197-4314
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Computational Social Networks Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; Computational Social Networks Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Geoenvironmental Disasters ;
+        issn = 2197-8670 ;
+        eissn = 2197-8670
+      >
+
+      param[base_url] = http://www.geoenvironmental-disasters.com/
+      param[journal_issn] = 2197-8670
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; Geoenvironmental Disasters Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = In Silico Cell and Tissue Science ;
+        issn = 2196-050X
+      >
+
+      param[base_url] = http://www.in-silico-cell-and-tissue-science.com/
+      param[journal_issn] = 2196-050X
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Chinese Management ;
+        issn = 2195-9897 ;
+        eissn = 2195-9897
+      >
+
+      param[base_url] = http://www.journalofchinesemanagement.com/
+      param[journal_issn] = 2195-9897
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Journal of Chinese Management Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; Journal of Chinese Management Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Chinese Sociology ;
+        issn = 2198-2635
+      >
+
+      param[base_url] = http://www.journalofchinesesociology.com/
+      param[journal_issn] = 2198-2635
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Journal of Chinese Sociology Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Global Entrepreneurship Research ;
+        issn = 2251-7316 ;
+        eissn = 2251-7316
+      >
+
+      param[base_url] = http://www.journal-jger.com/
+      param[journal_issn] = 2251-7316
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 >
+      au < exists ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 >
+      au < expected ; exists ; 2015 ; Journal of Global Entrepreneurship Research Volume 5 ; 5 >
+
+    }
+
+    {
+
+      title <
+        name = Large-scale Assessments in Education ;
+        issn = 2196-0739 ;
+        eissn = 2196-0739
+      >
+
+      param[base_url] = http://www.largescaleassessmentsineducation.com/
+      param[journal_issn] = 2196-0739
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 >
+      au < exists ; exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = Molecular and Cellular Pediatrics ;
+        issn = 2194-7791 ;
+        eissn = 2194-7791
+      >
+
+      param[base_url] = http://www.molcellped.com/
+      param[journal_issn] = 2194-7791
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; Molecular and Cellular Pediatrics Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Pacific Journal of Mathematics for Industry ;
+        issn = 2198-4115 ;
+        eissn = 2198-4115
+      >
+
+      param[base_url] = http://www.pacific-mathforindustry.com/
+      param[journal_issn] = 2198-4115
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
+      au < expected ; exists ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
+
+    }
+
+    {
+
+      title <
+        name = Progress in Orthodontics ;
+        issn = 2196-1042 ;
+        eissn = 2196-1042
+      >
+
+      param[base_url] = http://www.progressinorthodontics.com/
+      param[journal_issn] = 2196-1042
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
+      au < exists ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
+      au < expected ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
+
+    }
+
+    {
+
+      title <
+        name = Smart Learning Environments ;
+        issn = 2196-7091 ;
+        eissn = 2196-7091
+      >
+
+      param[base_url] = http://www.slejournal.com/
+      param[journal_issn] = 2196-7091
+      comment[platform] = BioMedCentralPlugin
+
+      au < exists ; exists ; 2014 ; Smart Learning Environments Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; Smart Learning Environments Volume 2 ; 2 >
+
+    }
+
   }
   
   {
