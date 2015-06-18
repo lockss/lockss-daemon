@@ -363,7 +363,7 @@ public class TestIOPSciencePdfFilterFactory extends LockssTestCase {
         "Q\n"
 // ---- end PDF stream ----
     ));
-    assertFalse(worker.getResult());
+    assertTrue(worker.getResult());
     
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----

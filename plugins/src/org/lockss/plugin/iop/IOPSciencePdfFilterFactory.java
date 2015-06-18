@@ -51,8 +51,7 @@ public class IOPSciencePdfFilterFactory extends ExtractingPdfFilterFactory {
     
     @Override
     public void state0() throws PdfException {
-      if (isShowTextStartsWith("This article has been downloaded from IOPscience. Please scroll down to see the full text article.")) {
-//      if (isShowTextContains(" has been downloaded from IOPscience. Please scroll down to see the full text")) {
+      if (isShowTextContains(" has been downloaded from IOPscience. Please scroll down to see the full text")) {
         result = true;
         stop();
       }
@@ -61,10 +60,6 @@ public class IOPSciencePdfFilterFactory extends ExtractingPdfFilterFactory {
   
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
-//    pdfDocument.unsetCreationDate();
-//    pdfDocument.unsetModificationDate();
-//    pdfDocument.unsetMetadata();
-//    PdfUtil.normalizeTrailerId(pdfDocument);
     
     RecognizeFirstPageWorker worker = new RecognizeFirstPageWorker();
     worker.process(pdfDocument.getPage(0).getPageTokenStream());
