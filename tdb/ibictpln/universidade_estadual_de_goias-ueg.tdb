@@ -251,6 +251,7 @@
       comment[publisher] = Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = economia
+      comment[notReady] = no permission from publisher
 
       au < exists ; 2005 ; 1 ; Revista de Economia da UEG Volume 1 ; 2005 >
       au < exists ; 2006 ; 2 ; Revista de Economia da UEG Volume 2 ; 2006 >
@@ -261,7 +262,7 @@
       au < exists ; 2011 ; 7 ; Revista de Economia da UEG Volume 7 ; 2011 >
       au < exists ; 2012 ; 8 ; Revista de Economia da UEG Volume 8 ; 2012 >
       au < expected ; 2013 ; 9 ; Revista de Economia da UEG Volume 9 ; 2013 >
-      au < testing ; 2014 ; 10 ; Revista de Economia da UEG Volume 10 ; 2014 >
+      au < notReady ; 2014 ; 10 ; Revista de Economia da UEG Volume 10 ; 2014 >
 
   }
 

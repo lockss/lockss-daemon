@@ -34,13 +34,14 @@
       comment[publisher] = Universidade Estadual de Campinas, Faculdade de Educação
       param[base_url] = http://www.fae.unicamp.br/revista/
       param[journal_id] = rfe
+      comment[notReady] = no permission from publisher
 
       au < released ; 2009 ; 1 ; Filosofia e Educação Volume 2009 ; 2009 >
       au < released ; 2010 ; 2 ; Filosofia e Educação Volume 2010 ; 2010 >
       au < released ; 2011 ; 3 ; Filosofia e Educação Volume 2011 ; 2011 >
       au < released ; 2012 ; 4 ; Filosofia e Educação Volume 2012 ; 2012 >
       au < released ; 2013 ; 5 ; Filosofia e Educação Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 6 ; Filosofia e Educação Volume 2014 ; 2014 >
+      au < notReady ; 2014 ; 6 ; Filosofia e Educação Volume 2014 ; 2014 >
 
   }
 
