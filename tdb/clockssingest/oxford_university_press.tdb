@@ -116,9 +116,9 @@
     au < manifest ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
     au < manifest ; exists ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
     au < manifest ; exists ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
+    au < testing ; exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; >
+    au < testing ; exists ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ; >
+    au < testing ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
     au < manifest ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
 
   }
@@ -413,7 +413,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; >
+    au < testing ; exists ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; >
     au < manifest ; exists ; 2015 ; Alcohol and Alcoholism Volume 50 ; 50 ; >
 
     }
@@ -1486,9 +1486,9 @@
     au < manifest ; exists ; 2009 ; Annals of the Entomological Society of America Volume 102 ; 102 ; >
     au < manifest ; exists ; 2010 ; Annals of the Entomological Society of America Volume 103 ; 103 ; >
     au < manifest ; exists ; 2011 ; Annals of the Entomological Society of America Volume 104 ; 104 ; >
-    au < manifest ; exists ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 ; >
-    au < manifest ; exists ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 ; >
-    au < manifest ; exists ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 ; >
+    au < testing ; exists ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 ; >
+    au < testing ; exists ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 ; >
+    au < testing ; exists ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 ; >
     au < manifest ; exists ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 ; >
 
   }
@@ -1838,9 +1838,9 @@
     au < manifest ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
     au < exists ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
     au < manifest ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
+    au < testing ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
+    au < testing ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
+    au < testing ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
     au < manifest ; exists ; 2015 ; Arbitration International Volume 31 ; 31 ; >
 
   }
@@ -1955,9 +1955,9 @@
     au < manifest ; exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
     au < manifest ; exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ; >
     au < manifest ; exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; >
+    au < testing ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
+    au < testing ; exists ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; >
+    au < testing ; exists ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; >
     au < expected ; exists ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
 
   }
@@ -3910,10 +3910,10 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
-    au < testing ; exists ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
-    au < testing ; exists ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
-    au < manifest ; exists ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
-    au < manifest ; exists ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
+    au < ready ; exists ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
+    au < ready ; exists ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
+    au < testing ; exists ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
+    au < testing ; exists ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
     au < manifest ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
     au < manifest ; exists ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; >
     au < expected ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
@@ -5018,7 +5018,7 @@
     au < manifest ; exists ; 2009 ; Economic Policy Volume 24 ; 24 ; >
     au < manifest ; exists ; 2010 ; Economic Policy Volume 25 ; 25 ; >
     au < manifest ; exists ; 2011 ; Economic Policy Volume 26 ; 26 ; >
-    au < testing ; exists ; 2012 ; Economic Policy Volume 27 ; 27 ; >
+    au < ready ; exists ; 2012 ; Economic Policy Volume 27 ; 27 ; >
     au < testing ; exists ; 2013 ; Economic Policy Volume 28 ; 28 ; >
     au < ready ; exists ; 2014 ; Economic Policy Volume 29 ; 29 ; >
     au < manifest ; exists ; 2015 ; Economic Policy Volume 30 ; 30 ; >
@@ -12022,7 +12022,7 @@
     au < finished ; crawling ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 ; >
     au < finished ; crawling ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; Journal of Experimental Botany Volume 64 ; 64 ; >
-    au < testing ; exists ; 2014 ; Journal of Experimental Botany Volume 65 ; 65 ; >
+    au < ready ; exists ; 2014 ; Journal of Experimental Botany Volume 65 ; 65 ; >
     au < manifest ; exists ; 2015 ; Journal of Experimental Botany Volume 66 ; 66 ; >
 
     }
@@ -22498,7 +22498,7 @@
     au < crawling ; exists ; 2011 ; Uniform Law Review - Revue de droit uniforme Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 ; >
-    au < testing ; exists ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ; >
+    au < ready ; exists ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ; >
 
     }
@@ -22787,7 +22787,7 @@
     au < finished ; crawling ; 2011 ; The Year's Work in Critical and Cultural Theory Volume 19 ; 19 ; >
     au < finished ; crawling ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; The Year's Work in Critical and Cultural Theory Volume 21 ; 21 ; >
-    au < testing ; exists ; 2014 ; The Year's Work in Critical and Cultural Theory Volume 22 ; 22 ; >
+    au < ready ; exists ; 2014 ; The Year's Work in Critical and Cultural Theory Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2015 ; The Year's Work in Critical and Cultural Theory Volume 23 ; 23 ; >
 
     }
@@ -22909,7 +22909,7 @@
     au < finished ; crawling ; 2011 ; The Year's Work in English Studies Volume 90 ; 90 ; >
     au < finished ; crawling ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; The Year's Work in English Studies Volume 92 ; 92 ; >
-    au < testing ; exists ; 2014 ; The Year's Work in English Studies Volume 93 ; 93 ; >
+    au < ready ; exists ; 2014 ; The Year's Work in English Studies Volume 93 ; 93 ; >
     au < doNotProcess ; exists ; 2015 ; The Year's Work in English Studies Volume 94 ; 94 ; >
 
     }
@@ -23731,7 +23731,7 @@
     au < crawling ; exists ; 2011 ; Poultry Science Volume 90 ; 90 ; >
     au < crawling ; exists ; 2012 ; Poultry Science Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; Poultry Science Volume 92 ; 92 ; >
-    au < testing ; exists ; 2014 ; Poultry Science Volume 93 ; 93 ; >
+    au < ready ; exists ; 2014 ; Poultry Science Volume 93 ; 93 ; >
     au < doNotProcess ; exists ; 2015 ; Poultry Science Volume 94 ; 94 ; >
 
   }
