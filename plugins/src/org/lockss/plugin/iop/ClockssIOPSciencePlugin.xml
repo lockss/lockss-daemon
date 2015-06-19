@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>24</string>
+        <string>25</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -188,6 +188,6 @@
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>/((css|js)/[^?]+[.](css|js|png)|refs)$</string>
+    <string>/((css|js)/[^?]+[.](css|js|png)$|refs$|download(HR)?Figure/figure/)</string>
   </entry>
 </map>
