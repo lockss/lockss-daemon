@@ -109,6 +109,10 @@ public class FollowLinkCrawler extends BaseCrawler {
    * files contribute to new CDN stems. */
   public static final String PARAM_REFIND_CDN_STEMS = PREFIX + "refindCdnStems";
   public static final boolean DEFAULT_REFIND_CDN_STEMS = false;
+  
+  /** If true will parse an existing file if permission check fails*/
+  public static final String PARAM_PARSE_ON_PERM_FAIL = PREFIX + "parseOnPermFail";
+  public static final boolean DEFAULT_PARSE_ON_PERM_FAIL = true;
 
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
 
@@ -132,6 +136,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   protected boolean shouldFollowLink = true;
   protected boolean isFullSubstanceCheck = false;
   protected boolean refindCdnStems   = false;
+  protected boolean parseOnPermFail = DEFAULT_PARSE_ON_PERM_FAIL;
 
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialized, it's initialized here to a
@@ -228,6 +233,8 @@ public class FollowLinkCrawler extends BaseCrawler {
 			DEFAULT_IS_FULL_SUBSTANCE_CHECK);
     refindCdnStems =
       config.getBoolean(PARAM_REFIND_CDN_STEMS, DEFAULT_REFIND_CDN_STEMS);
+    parseOnPermFail =
+        config.getBoolean(PARAM_PARSE_ON_PERM_FAIL, DEFAULT_PARSE_ON_PERM_FAIL);
   }
  
 
@@ -556,6 +563,9 @@ public class FollowLinkCrawler extends BaseCrawler {
                                        CrawlerStatus.HOST_PERM_ERR_MSG);
           }
           failedUrls.add(url);
+          if(!parseOnPermFail) {
+            return false;
+          }
         } else {
           fetcher = makeUrlFetcher(curl);
           try {

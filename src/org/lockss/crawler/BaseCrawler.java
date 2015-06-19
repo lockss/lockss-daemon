@@ -677,7 +677,7 @@ public abstract class BaseCrawler implements Crawler {
   }
   
   protected boolean aborted() {
-    return aborted("");
+    return aborted(null);
   }
   
   protected boolean aborted(String msg) {
