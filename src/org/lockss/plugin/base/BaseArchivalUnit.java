@@ -54,7 +54,8 @@ import org.lockss.util.*;
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
-  static Logger logger = Logger.getLogger(BaseArchivalUnit.class);
+  
+  private static final Logger log = Logger.getLogger(BaseArchivalUnit.class);
 
   public static final long
     DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
@@ -158,10 +159,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       throw new ConfigurationException("Null Configuration");
     }
     if (config.equals(auConfig)) {
-      if (logger.isDebug3()) logger.debug3("setConfiguration (unchanged): " +
-					   config);
+      if (log.isDebug3()) log.debug3("setConfiguration (unchanged): " +
+                                           config);
     } else {
-      if (logger.isDebug3()) logger.debug3("setConfiguration: " + config);
+      if (log.isDebug3()) log.debug3("setConfiguration: " + config);
       checkLegalConfigChange(config);
       auConfig = config.copy();
       loadAuConfigDescrs(config);
@@ -217,21 +218,21 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       throws ArchivalUnit.ConfigurationException {
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       if (descr.isDefinitional()) {
-	String key = descr.getKey();
-	String newVal = newConfig.get(key);
-	if (newVal == null) {
-	    throw new ConfigurationException("Missing required parameter: " +
-					     key);
-	}
-	if (auConfig != null) {
-	  String oldVal = auConfig.get(key);
-	  if (!StringUtil.equalStrings(oldVal, newVal)) {
-	    throw new
-	      ConfigurationException("Attempt to modify defining property " +
-				     "of existing ArchivalUnit: " + key +
-				     ". old: "+oldVal+" new: "+newVal);
-	  }
-	}
+        String key = descr.getKey();
+        String newVal = newConfig.get(key);
+        if (newVal == null) {
+            throw new ConfigurationException("Missing required parameter: " +
+                                             key);
+        }
+        if (auConfig != null) {
+          String oldVal = auConfig.get(key);
+          if (!StringUtil.equalStrings(oldVal, newVal)) {
+            throw new
+              ConfigurationException("Attempt to modify defining property " +
+                                     "of existing ArchivalUnit: " + key +
+                                     ". old: "+oldVal+" new: "+newVal);
+          }
+        }
       }
     }
   }
@@ -241,12 +242,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
       if (config.containsKey(key)) {
-	try {
-	  Object val = descr.getValueOfType(config.get(key));
-	  paramMap.setMapElement(key, val);
-	} catch (Exception ex) {
-	  throw new ConfigurationException("Error configuring: " + key, ex);
-	}
+        try {
+          Object val = descr.getValueOfType(config.get(key));
+          paramMap.setMapElement(key, val);
+        } catch (Exception ex) {
+          throw new ConfigurationException("Error configuring: " + key, ex);
+        }
       }
     }
   }
@@ -271,23 +272,23 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get the fetch delay
     long minFetchDelay = CurrentConfig.getLongParam(PARAM_MIN_FETCH_DELAY,
-						    DEFAULT_MIN_FETCH_DELAY);
+                                                    DEFAULT_MIN_FETCH_DELAY);
     long fetchDelay =
       Math.max(minFetchDelay,
-	       (config.containsKey(KEY_PAUSE_TIME)
-		? config.getTimeInterval(KEY_PAUSE_TIME, defaultFetchDelay)
-		: paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay)));
-    logger.debug2("Set fetch delay to " + fetchDelay);
+               (config.containsKey(KEY_PAUSE_TIME)
+                ? config.getTimeInterval(KEY_PAUSE_TIME, defaultFetchDelay)
+                : paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay)));
+    log.debug2("Set fetch delay to " + fetchDelay);
     paramMap.putLong(KEY_AU_FETCH_DELAY, fetchDelay);
 
     // get the new content crawl interval
     newContentCrawlIntv =
       (config.containsKey(KEY_NEW_CONTENT_CRAWL_INTERVAL)
        ? config.getTimeInterval(KEY_NEW_CONTENT_CRAWL_INTERVAL,
-				defaultContentCrawlIntv)
+                                defaultContentCrawlIntv)
        : paramMap.getLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, defaultContentCrawlIntv));
-    logger.debug2("Setting new content crawl interval to " +
-		  StringUtil.timeIntervalToString(newContentCrawlIntv));
+    log.debug2("Setting new content crawl interval to " +
+                  StringUtil.timeIntervalToString(newContentCrawlIntv));
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlIntv);
     
     rule = makeRule();
@@ -306,37 +307,37 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
       try {
-	if (auConfig.containsKey(key)) {
-	  Object val = descr.getValueOfType(auConfig.get(key));
-	  // we store years in two formats - short and long
-	  if (descr.getTypeEnum() == AuParamType.Year) {
-	    int year = ((Integer)val).intValue() % 100;
-	    paramMap.putInt(pool.intern(PREFIX_AU_SHORT_YEAR + key),
-			    year);
-	    if (logger.isDebug3()) {
-	      logger.debug3("Inferred " + PREFIX_AU_SHORT_YEAR + key +
-			    " = " + year);
-	    }
-	  }
-	  // store separate host and path of URLs
-	  if (descr.getTypeEnum() == AuParamType.Url) {
-	    URL url = (URL)val;
-	    if(url != null) {
-	      paramMap.putString(pool.intern(key + SUFFIX_AU_HOST),
-				 url.getHost());
-	      paramMap.putString(pool.intern(key + SUFFIX_AU_PATH),
-				 url.getPath());
-	      if (logger.isDebug3()) {
-		logger.debug3("Inferred " + key + SUFFIX_AU_HOST +
-			      " = " + url.getHost());
-		logger.debug3("Inferred " + key + SUFFIX_AU_PATH +
-			      " = " + url.getPath());
-	      }
-	    }
-	  }
-	}
+        if (auConfig.containsKey(key)) {
+          Object val = descr.getValueOfType(auConfig.get(key));
+          // we store years in two formats - short and long
+          if (descr.getTypeEnum() == AuParamType.Year) {
+            int year = ((Integer)val).intValue() % 100;
+            paramMap.putInt(pool.intern(PREFIX_AU_SHORT_YEAR + key),
+                            year);
+            if (log.isDebug3()) {
+              log.debug3("Inferred " + PREFIX_AU_SHORT_YEAR + key +
+                            " = " + year);
+            }
+          }
+          // store separate host and path of URLs
+          if (descr.getTypeEnum() == AuParamType.Url) {
+            URL url = (URL)val;
+            if(url != null) {
+              paramMap.putString(pool.intern(key + SUFFIX_AU_HOST),
+                                 url.getHost());
+              paramMap.putString(pool.intern(key + SUFFIX_AU_PATH),
+                                 url.getPath());
+              if (log.isDebug3()) {
+                log.debug3("Inferred " + key + SUFFIX_AU_HOST +
+                              " = " + url.getHost());
+                log.debug3("Inferred " + key + SUFFIX_AU_PATH +
+                              " = " + url.getPath());
+              }
+            }
+          }
+        }
       } catch (Exception ex) {
-	logger.error("Adding implied config params", ex);
+        log.error("Adding implied config params", ex);
       }
     }
   }
@@ -354,20 +355,20 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       auTitle = titleConfig.getDisplayName();
     }
     auName = makeName();
-    if (logger.isDebug3()) {
-      logger.debug3("auTitle: " + auTitle + ", auConfig: "
-		    + (auConfig != null
-		       ? auConfig.get(PluginManager.AU_PARAM_DISPLAY_NAME)
-		       : "(null)")
-		    + ", auName: " + auName);
+    if (log.isDebug3()) {
+      log.debug3("auTitle: " + auTitle + ", auConfig: "
+                    + (auConfig != null
+                       ? auConfig.get(PluginManager.AU_PARAM_DISPLAY_NAME)
+                       : "(null)")
+                    + ", auName: " + auName);
     }
     paramMap.putString(KEY_AU_TITLE,
-		       (auTitle != null
-			? auTitle
-			: (auConfig != null
-			   ? auConfig.get(PluginManager.AU_PARAM_DISPLAY_NAME,
-					  auName)
-			   : auName)));
+                       (auTitle != null
+                        ? auTitle
+                        : (auConfig != null
+                           ? auConfig.get(PluginManager.AU_PARAM_DISPLAY_NAME,
+                                          auName)
+                           : auName)));
   }
 
   public TitleConfig getTitleConfig() {
@@ -420,16 +421,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   void addUrlParamStems(Set toSet) {
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       if (descr.getTypeEnum() == AuParamType.Url) {
-	String key = descr.getKey();
-	try {
-	  String url = auConfig.get(key);
-	  if (!StringUtil.isNullString(url)) {
-	    String stem = UrlUtil.getUrlPrefix(url);
-	    toSet.add(stem);
-	  }
-	} catch (MalformedURLException ex) {
-	  logger.error("addUrlParamStems key: " + key);
-	}
+        String key = descr.getKey();
+        try {
+          String url = auConfig.get(key);
+          if (!StringUtil.isNullString(url)) {
+            String stem = UrlUtil.getUrlPrefix(url);
+            toSet.add(stem);
+          }
+        } catch (MalformedURLException ex) {
+          log.error("addUrlParamStems key: " + key);
+        }
       }
     }
   }
@@ -442,32 +443,32 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public Collection<String> getUrlStems() {
     if (urlStems == null) {
       try {
-	Collection<String> perms = getPermissionUrls();
-	Set<String> set = new HashSet<String>();
-	if (perms != null) {
-	  for (String url : perms) {
-	    String stem = UrlUtil.getUrlPrefix(url);
-	    set.add(stem);
-	  }
-	}
-	addUrlParamStems(set);
-	AuState aus = AuUtil.getAuState(this);
-	// XXX Many plugin tests don't set up AuState
-	List cdnStems = (aus != null
-			 ? aus.getCdnStems() : Collections.EMPTY_LIST);
-	ArrayList<String> res = new ArrayList<String>(set.size() +
-						      cdnStems.size());
-	res.addAll(set);
-	res.addAll(cdnStems);
-	urlStems = res;
+        Collection<String> perms = getPermissionUrls();
+        Set<String> set = new HashSet<String>();
+        if (perms != null) {
+          for (String url : perms) {
+            String stem = UrlUtil.getUrlPrefix(url);
+            set.add(stem);
+          }
+        }
+        addUrlParamStems(set);
+        AuState aus = AuUtil.getAuState(this);
+        // XXX Many plugin tests don't set up AuState
+        List cdnStems = (aus != null
+                         ? aus.getCdnStems() : Collections.EMPTY_LIST);
+        ArrayList<String> res = new ArrayList<String>(set.size() +
+                                                      cdnStems.size());
+        res.addAll(set);
+        res.addAll(cdnStems);
+        urlStems = res;
       } catch (MalformedURLException e) {
-	logger.error("getUrlStems(" + getName() + ")", e);
-	// XXX should throw
-	urlStems = Collections.<String>emptyList();
+        log.error("getUrlStems(" + getName() + ")", e);
+        // XXX should throw
+        urlStems = Collections.<String>emptyList();
       } catch (RuntimeException e) {
-	logger.error("getUrlStems(" + getName() + ")", e);
-	// XXX should throw
-	urlStems = Collections.<String>emptyList();
+        log.error("getUrlStems(" + getName() + ")", e);
+        // XXX should throw
+        urlStems = Collections.<String>emptyList();
       }
     }
     return urlStems;
@@ -536,32 +537,32 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public final String getFetchRateLimiterKey() {
     String limiterSource = getFetchRateLimiterSource();
-    if (logger.isDebug3()) logger.debug3("Limiter source: " + limiterSource);
+    if (log.isDebug3()) log.debug3("Limiter source: " + limiterSource);
     if ("au".equalsIgnoreCase(limiterSource)) {
       return null;
     } else {
       String key = null;
       if ("plugin".equalsIgnoreCase(limiterSource)) {
-	key = plugin.getPluginId();
+        key = plugin.getPluginId();
       } else if (StringUtil.startsWithIgnoreCase(limiterSource,
-						 "title_attribute:")) {
-	String attr = limiterSource.substring("title_attribute:".length());
-	key = AuUtil.getTitleAttribute(this, attr);
-	if (key != null) {
-	  key = attr + ":" + key;
-	}
+                                                 "title_attribute:")) {
+        String attr = limiterSource.substring("title_attribute:".length());
+        key = AuUtil.getTitleAttribute(this, attr);
+        if (key != null) {
+          key = attr + ":" + key;
+        }
       } else if (StringUtil.startsWithIgnoreCase(limiterSource, "key:")) {
-	key = limiterSource.substring("key:".length());
+        key = limiterSource.substring("key:".length());
       } else if (StringUtil.startsWithIgnoreCase(limiterSource, "host:")) {
-	String param = limiterSource.substring("host:".length());
-	key = paramMap.getString(param + SUFFIX_AU_HOST);
-	if (key != null) {
-	  key = "host:" + key;
-	}
+        String param = limiterSource.substring("host:".length());
+        key = paramMap.getString(param + SUFFIX_AU_HOST);
+        if (key != null) {
+          key = "host:" + key;
+        }
       }
       if (key == null) {
-	logger.warning("Rate limiter source (" + limiterSource +
-		       ") is null, using AU");
+        log.warning("Rate limiter source (" + limiterSource +
+                       ") is null, using AU");
       }
       return key;
     }
@@ -570,15 +571,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected String getFetchRateLimiterSource() {
     String defaultSource =
       CurrentConfig.getParam(PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
-			     DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
+                             DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
     String auSrc =
       paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, defaultSource);
     return CurrentConfig.getParam(PARAM_OVERRIDE_FETCH_RATE_LIMITER_SOURCE,
-				  auSrc);
+                                  auSrc);
   }
 
   private RateLimiter getLimiterWithRate(RateLimiter oldLimiter,
-					 int events, long interval) {
+                                         int events, long interval) {
     if (oldLimiter != null) {
       oldLimiter.setRate(events, interval);
       return oldLimiter;
@@ -656,7 +657,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return CrawlWindow or null
    */
   protected CrawlWindow makeCrawlWindow() {
-	  return null;
+          return null;
   }
 
   public boolean inCrawlWindow() {
@@ -696,16 +697,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public boolean shouldCrawlForNewContent(AuState aus) {
     if (AuUtil.isPubDown(this)) {
-      if (logger.isDebug2()) {
-	logger.debug2("Pub down: no new content crawl possible for "+aus);
+      if (log.isDebug2()) {
+        log.debug2("Pub down: no new content crawl possible for "+aus);
       }
       return false;
     }
     long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
     boolean res = !aus.hasCrawled() || timeDiff > (newContentCrawlIntv);
-    if (logger.isDebug2()) {
-      logger.debug2("New content crawl" + (res ? "" : " not") +
-		    " needed for "+ aus);
+    if (log.isDebug2()) {
+      log.debug2("New content crawl" + (res ? "" : " not") +
+                    " needed for "+ aus);
     }
     return res;
   }
@@ -791,10 +792,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (aif != null) try {
       Iterator<ArticleFiles> it = aif.createArticleIterator(this, target);
       if (it != null) {
-	ret = it;
+        ret = it;
       }
     } catch (PluginException ex) {
-      logger.warning("createArticleIterator(" + target + ") threw " + ex);
+      log.warning("createArticleIterator(" + target + ") threw " + ex);
     }
     return ret;
   }
@@ -807,7 +808,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return A FileMetadataExtractor or null
    */
   public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target,
-							String contentType) {
+                                                        String contentType) {
     return plugin.getFileMetadataExtractor(target, contentType, this);
   }
 
@@ -847,7 +848,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     String urlStr = config.get(key);
     if (urlStr == null) {
       throw new ConfigurationException("No configuration value for " +
-				       paramString(descr));
+                                       paramString(descr));
     }
     try {
       url = new URL(urlStr);
@@ -875,8 +876,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       value = config.getInt(key);
     } catch (Configuration.InvalidParam ip) {
       throw new ConfigurationException("Invalid value for " +
-				       paramString(descr) +
-				       ": " + ip.getMessage());
+                                       paramString(descr) +
+                                       ": " + ip.getMessage());
     }
     return value;
   }
@@ -896,7 +897,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     value = config.get(key);
     if (value == null) {
       throw new ConfigurationException("Null String for " +
-				       paramString(descr));
+                                       paramString(descr));
     }
     return value;
   }
