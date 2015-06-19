@@ -28,9 +28,9 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
-from DaemonStatusServiceImplService_client import *
+import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
 
 import getpass
@@ -62,8 +62,8 @@ class DaemonStatusServiceOptions(object):
   def __setup_port(self):
     url = 'http://%s/ws/DaemonStatusService' % (self.get_host(),)
     auth = self.get_auth()
-    self.__port = DaemonStatusServiceImplServiceLocator().getDaemonStatusServiceImplPort(url=url, auth=auth)
-#    self.__port = DaemonStatusServiceImplServiceLocator().getDaemonStatusServiceImplPort(url=url, auth=auth, tracefile=sys.stdout)
+    self.__port = DaemonStatusServiceImplService_client.DaemonStatusServiceImplServiceLocator().getDaemonStatusServiceImplPort(url=url, auth=auth)
+#    self.__port = DaemonStatusServiceImplService_client.DaemonStatusServiceImplServiceLocator().getDaemonStatusServiceImplPort(url=url, auth=auth, tracefile=sys.stdout)
   def get_query(self): return self.__query
   def set_query(self, query): self.__query = query
 
@@ -98,19 +98,52 @@ def get_au_status(options):
   - SubstanceState (string)
   - Volume (string) (the AU name)
   - Year (string)'''
-  req = getAuStatus()
+  req = DaemonStatusServiceImplService_client.getAuStatus()
   req.AuId = options.get_auid()
   return options.get_port().getAuStatus(req).Return
 
 def get_auids(options):
-  '''Convenience call to get_auids_names: returns a list of AUIDs.'''
+  '''Convenience call to get_auids_names(). Returns a list of AUIDs.'''
   return [r.Id for r in get_auids_names(options)]
 
 def get_auids_names(options):
   '''Returns a list of records with these fields:
   - Id (string)
   - Name (string)'''
-  return options.get_port().getAuIds(getAuIds()).Return
+  return options.get_port().getAuIds(DaemonStatusServiceImplService_client.getAuIds()).Return
+
+def get_peer_agreements(options):
+  '''Convenience call to get_platform_configuration(). Queries the options for
+  this input:
+  - get_auid() (string) (the desired AUID)
+  Returns None if no such AUID, or the the PeerAgreements list from the single
+  record returned by get_platform_configuration(), which is a list of records
+  with these fields:
+  - Agreements, a record with these fields:
+      - Entry, a list of records with these fields:
+          - Key, a string among:
+              - "POR"
+              - "POP"
+              - "SYMMETRIC_POR"
+              - "SYMMETRIC_POP"
+              - "POR_HINT"
+              - "POP_HINT"
+              - "SYMMETRIC_POR_HINT"
+              - "SYMMETRIC_POP_HINT"
+          - Value, a record with these fields:
+              - HighestPercentAgreement (floating point)
+              - HighestPercentAgreementTimestamp (numeric)
+              - PercentAgreement (floating point)
+              - PercentAgreementTimestamp (numeric)
+  - PeerId (string)'''
+  saved_query = options.get_query()
+  try:
+    options.set_query('SELECT peerAgreements WHERE auId = "%s"' % (options.get_auid(),))
+    resp = query_aus(options)
+    if len(resp) == 0: return None
+    else: return resp[0].PeerAgreements
+  finally:
+    options.set_query(saved_query)
 
 def get_platform_configuration(options):
   '''Returns a record with these fields:
@@ -142,11 +175,11 @@ def get_platform_configuration(options):
   - Properties (list of strings)
   - Uptime (numeric)
   - V3Identity (string)'''
-  return options.get_port().getPlatformConfiguration(getPlatformConfiguration()).Return
+  return options.get_port().getPlatformConfiguration(DaemonStatusServiceImplService_client.getPlatformConfiguration()).Return
 
 def is_daemon_ready(options):
   '''Returns True of False'''
-  return options.get_port().isDaemonReady(isDaemonReady()).Return
+  return options.get_port().isDaemonReady(DaemonStatusServiceImplService_client.isDaemonReady()).Return
 
 def query_aus(options):
   '''Queries the options for this input:
@@ -207,7 +240,7 @@ def query_aus(options):
   - TdbYear (string)
   - UrlStems (list of strings)
   - Volume (string)'''
-  req = queryAus()
+  req = DaemonStatusServiceImplService_client.queryAus()
   req.AuQuery = options.get_query()
   return options.get_port().queryAus(req).Return
 
@@ -215,9 +248,9 @@ def query_aus(options):
 # Internal (command line tool)
 #
 
-class DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
+class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
   def __init__(self):
-    super(DaemonStatusServiceToolOptions, self).__init__()
+    super(_DaemonStatusServiceToolOptions, self).__init__()
     self.__get_au_status = False
     self.__get_auids = False
     self.__get_auids_names = False
@@ -258,7 +291,7 @@ def __make_parser():
   return parser
 
 def __process_options(parser, opts, args):
-  tooloptions = DaemonStatusServiceToolOptions()
+  tooloptions = _DaemonStatusServiceToolOptions()
   if len(args) != 1: parser.error('A host is required')
   tooloptions.set_host(args[0])
   if len(filter(None, [opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus])) != 1:
@@ -288,7 +321,6 @@ def __output_record(tooloptions, lst):
   print '\t'.join([str(x) for x in lst])
 
 def __do_get_au_status(tooloptions):
-  '''Outputs the status of a given AU.'''
   r = get_au_status(tooloptions)
   print 'AUID: %s' % (tooloptions.get_auid(),)
   print
@@ -321,23 +353,22 @@ def __do_get_au_status(tooloptions):
   print 'Year: %s' % (r.Year,)
 
 def __do_get_auids(tooloptions):
-  '''Outputs the AUID of all AUs.'''
   for auid in get_auids(tooloptions): print auid
 
 def __do_get_auids_names(tooloptions):
-  '''Outputs the AUID and the name of all AUs.'''
   for r in get_auids_names(tooloptions): __output_record(tooloptions, [r.Id, r.Name])
 
 def __do_get_peer_agreements(tooloptions):
-  '''Outputs the peer agreements for the given AU.'''
-  tooloptions.set_query('SELECT peerAgreements WHERE auId= "%s"' % (tooloptions.get_auid(),))
-  peer_agreements = query_aus(tooloptions)[0].PeerAgreements
-  for pa in peer_agreements:
-    for ae in pa.Agreements.Entry:
-      __output_record(tooloptions, [pa.PeerId, ae.Key, ae.Value.PercentAgreement, ae.Value.PercentAgreementTimestamp, ae.Value.HighestPercentAgreement, ae.Value.HighestPercentAgreementTimestamp])
+  pa = get_peer_agreements(tooloptions)
+  if pa is None:
+    print 'No such AUID'
+    return
+  if len(pa) == 0: print 'ZERO' #DEBUG
+  for pae in pa:
+    for ae in pae.Agreements.Entry:
+      __output_record(tooloptions, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, ae.Value.PercentAgreementTimestamp, ae.Value.HighestPercentAgreement, ae.Value.HighestPercentAgreementTimestamp])
 
 def __do_get_platform_configuration(tooloptions):
-  '''Outputs the platform configuration.'''
   r = get_platform_configuration(tooloptions)
   print 'Admin e-mail: %s' % (r.AdminEmail,)
   print 'Build host: %s' % (r.BuildHost,)
