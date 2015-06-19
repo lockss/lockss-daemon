@@ -436,14 +436,17 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     TestableBaseArchivalUnit mbau2 = new TestableBaseArchivalUnit(mplug);
     TestableBaseArchivalUnit mbau3 = new TestableBaseArchivalUnit(mplug);
     TestableBaseArchivalUnit mbau4 = new TestableBaseArchivalUnit(mplug);
+    TestableBaseArchivalUnit mbau5 = new TestableBaseArchivalUnit(mplug);
     mbau.getParamMap().putString(src, "title_attribute:server");
     mbau2.getParamMap().putString(src, "title_attribute:server");
     mbau3.getParamMap().putString(src, "title_attribute:client");
     mbau4.getParamMap().putString(src, "title_attribute:server");
+    mbau5.getParamMap().putString(src, "title_attribute:server:s1");
     setTCAttrs(mbau, "server", "s1");
     setTCAttrs(mbau2, "server", "s2");
     setTCAttrs(mbau3, "server", "s1").put("client", "s1");
     setTCAttrs(mbau4, "server", "s1");
+    // None for mbau5
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
@@ -452,14 +455,17 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau2.setConfiguration(config);
     mbau3.setConfiguration(config);
     mbau4.setConfiguration(config);
+    mbau5.setConfiguration(config);
 
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
     RateLimiter limit3 = mbau3.findFetchRateLimiter();
     RateLimiter limit4 = mbau4.findFetchRateLimiter();
+    RateLimiter limit5 = mbau5.findFetchRateLimiter();
     assertNotSame(limit, limit2);
     assertNotSame(limit, limit3);
     assertSame(limit, limit4);
+    assertSame(limit, limit5);
     RateLimiter.Pool pool = RateLimiter.getPool();
     assertSame(pool.findNamedRateLimiter("server:s1", 1, 1),
 	       limit);
@@ -468,6 +474,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertSame(pool.findNamedRateLimiter("client:s1", 1, 1),
 	       limit3);
     assertEquals("server:s1", mbau.getFetchRateLimiterKey());
+    assertEquals("server:s1", mbau5.getFetchRateLimiterKey());
   }
 
   public Map setTCAttrs(TestableBaseArchivalUnit mau, String key, String val) {

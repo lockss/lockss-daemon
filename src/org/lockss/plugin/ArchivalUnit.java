@@ -62,15 +62,37 @@ public interface ArchivalUnit {
 
   static final String KEY_AU_BASE_URL  = "au_base_url";
   static final String KEY_AU_FETCH_DELAY = "au_fetch_delay";
-  /** One of:<br>
-   * au<br>
-   * plugin<br>
-   * key:&lt;key&gt;<br>
-   * host:&lt;param&gt;<br>
-   * title_attr:&lt;attr&gt;
+  
+  /**
+   * <p>
+   * One of:
+   * </p>
+   * <ul>
+   * <li><code>au</code> (each AU has its own pool)</li>
+   * <li><code>plugin</code> (pool name is the AU's plugin identifier)</li>
+   * <li><code>key:<i>&lt;str&gt;</i></code> (pool name is the string
+   * <i>str</i>)</li>
+   * <li><code>host:<i>&lt;urlparam&gt;</i></code> (pool name is
+   * <code>host:</code> followed by the value of the AU's parameter named
+   * <i>urlparam</i>; if there is no such parameter or the parameter is not of
+   * type URL, defaults to
+   * {@link BaseArchivalUnit#PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE})</li>
+   * <li><code>title_attribute:<i>attr</i></code> and
+   * <code>title_attribute:<i>attr</i>:<i>dflt</i></code> (pool name is
+   * <code>A:B</code> where <code>A</code> is <i>attr</i> and <code>B</code> is
+   * the value of the AU's attribute named <i>attr</i>; if the attribute is
+   * unset, use <i>dflt</i> as the value instead if the longer form is used,
+   * otherwise defaults to
+   * {@link BaseArchivalUnit#PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE})</li>
+   * </ul>
+   * <p>
+   * The longer form of <code>title_attribute:</code> with a default value was
+   * added in 1.68.4.
+   * </p>
    */
   static final String KEY_AU_FETCH_RATE_LIMITER_SOURCE =
     "au_fetch_rate_limiter_source";
+  
   static final String KEY_AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
   static final String KEY_AU_NEW_CONTENT_CRAWL_INTERVAL = "au_new_crawl_interval";
   static final String KEY_AU_CRAWL_RULE = "au_crawl_rule";
