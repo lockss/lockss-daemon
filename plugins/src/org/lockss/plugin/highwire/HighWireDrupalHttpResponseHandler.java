@@ -75,7 +75,7 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
             url.endsWith(".toc")) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
-        return new CacheException.UnexpectedNoRetryNoFailException("500 Internal Server Error (non-fatal)");
+        return new CacheException.RetryDeadLinkException("500 Internal Server Error (non-fatal)");
         
       case 502:
         logger.debug2("502: " + url);
