@@ -28,14 +28,14 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
 
+import datetime
 import getpass
 import optparse
-from pprint import pprint
 import sys
 
 #
@@ -66,6 +66,22 @@ class DaemonStatusServiceOptions(object):
 #    self.__port = DaemonStatusServiceImplService_client.DaemonStatusServiceImplServiceLocator().getDaemonStatusServiceImplPort(url=url, auth=auth, tracefile=sys.stdout)
   def get_query(self): return self.__query
   def set_query(self, query): self.__query = query
+
+def datetime_from_epoch_ms(epoch_ms):
+  return datetime.datetime.fromtimestamp(epoch_ms / 1000)
+
+def duration_from_ms(ms):
+  s, ms = divmod(ms, 1000)
+  if s == 0: return '%dms' % (ms,)
+  m, s = divmod(s, 60)
+  if m == 0: return '%ds' % (s,)
+  h, m = divmod(m, 60)
+  if h == 0: return '%dm%ds' % (m, s)
+  d, h = divmod(h, 24)
+  if d == 0: return '%dh%dm%ds' % (h, m, s)
+  w, d = divmod(d, 7)
+  if w == 0: return '%dd%dh%dm' % (d, h, m)
+  else: return '%dw%dd%dh' % (w, d, h)
 
 def get_au_status(options):
   '''Queries the options for this input:
@@ -249,73 +265,50 @@ def query_aus(options):
 #
 
 class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
-  def __init__(self):
+  def __init__(self, parser, opts, args):
     super(_DaemonStatusServiceToolOptions, self).__init__()
-    self.__get_au_status = False
-    self.__get_auids = False
-    self.__get_auids_names = False
-    self.__get_peer_agreements = False
-    self.__get_platform_configuration = False
-    self.__is_daemon_ready = False
-    self.__is_daemon_ready_quiet = False
-    self.__query_aus = False
+    if len(args) != 1: parser.error('A host is required')
+    self.set_host(args[0])
+    if len(filter(None, [opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus])) != 1:
+      parser.error('One of --get-au-status, --get-auids, --get-auids-names, --get-platform-configuration, --get-peer-agreements, --is-daemon-ready, --is-daemon-ready-quiet, --query_aus is required')
+    self.__get_au_status = opts.get_au_status is not None
+    if self.__get_au_status: self.set_auid(opts.get_au_status)
+    self.__get_auids = opts.get_auids
+    self.__get_auids_names = opts.get_auids_names
+    self.__get_peer_agreements = opts.get_peer_agreements is not None
+    if self.__get_peer_agreements: self.set_auid(opts.get_peer_agreements)
+    self.__get_platform_configuration = opts.get_platform_configuration
+    self.__is_daemon_ready = opts.is_daemon_ready
+    self.__is_daemon_ready_quiet = opts.is_daemon_ready_quiet
+    self.__query_aus = opts.query_aus is not None
+    if self.__query_aus: self.set_query(opts.query_aus)
+    if opts.username is None: u = raw_input('UI username: ')
+    else: u = opts.username
+    if opts.password is None: p = getpass.getpass('UI password: ')
+    else: p = opts.password
+    self.set_auth(u, p)
   def is_get_au_status(self): return self.__get_au_status
-  def set_get_au_status(self, get_au_status): self.__get_au_status = get_au_status
   def is_get_peer_agreements(self): return self.__get_peer_agreements
-  def set_get_peer_agreements(self, get_peer_agreements): self.__get_peer_agreements = get_peer_agreements
   def is_get_platform_configuration(self): return self.__get_platform_configuration
-  def set_get_platform_configuration(self, get_platform_configuration): self.__get_platform_configuration = get_platform_configuration
   def is_get_auids(self): return self.__get_auids
-  def set_get_auids(self, get_auids): self.__get_auids = get_auids
   def is_get_auids_names(self): return self.__get_auids_names
-  def set_get_auids_names(self, get_auids_names): self.__get_auids_names = get_auids_names
   def is_is_daemon_ready(self): return self.__is_daemon_ready
-  def set_is_daemon_ready(self, is_daemon_ready): self.__is_daemon_ready = is_daemon_ready
   def is_is_daemon_ready_quiet(self): return self.__is_daemon_ready_quiet
-  def set_is_daemon_ready_quiet(self, is_daemon_ready_quiet): self.__is_daemon_ready_quiet = is_daemon_ready_quiet
   def is_query_aus(self): return self.__query_aus
-  def set_query_aus(self, query_aus): self.__query_aus = query_aus
-
-def __make_parser():
-  parser = optparse.OptionParser(version=__version__, usage='%prog [OPTIONS] HOST')
-  parser.add_option('--get-au-status', metavar='AUID', help='Outputs all status information for the AUID')
-  parser.add_option('--get-auids', action='store_true', default=False, help='Outputs all AUIDs')
-  parser.add_option('--get-auids-names', action='store_true', default=False, help='Outputs all AUIDs and names')
-  parser.add_option('--get-peer-agreements', metavar='AUID', help='Outputs the peer agreements for the AUID')
-  parser.add_option('--get-platform-configuration', action='store_true', default=False, help='Outputs the platform configuration')
-  parser.add_option('--is-daemon-ready', action='store_true', default=False, help='Outputs True or False, always exits with 0')
-  parser.add_option('--is-daemon-ready-quiet', action='store_true', default=False, help='Outputs nothing, exits with 0 for True and 1 for False')
-  parser.add_option('--password', metavar='PASS', help='UI password')
-  parser.add_option('--query-aus', metavar='QUERY', help='Performs the given AU query')
-  parser.add_option('--username', metavar='USER', help='UI username')
-  return parser
-
-def __process_options(parser, opts, args):
-  tooloptions = _DaemonStatusServiceToolOptions()
-  if len(args) != 1: parser.error('A host is required')
-  tooloptions.set_host(args[0])
-  if len(filter(None, [opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus])) != 1:
-    parser.error('One of --get-au-status, --get-auids, --get-auids-names, --get-platform-configuration, --get-peer-agreements, --is-daemon-ready, --is-daemon-ready-quiet, --query_aus is required')
-  if opts.get_au_status is not None:
-    tooloptions.set_get_au_status(True)
-    tooloptions.set_auid(opts.get_au_status)
-  if opts.get_peer_agreements is not None:
-    tooloptions.set_get_peer_agreements(True)
-    tooloptions.set_auid(opts.get_peer_agreements)
-  if opts.query_aus is not None:
-    tooloptions.set_query_aus(True)
-    tooloptions.set_query(opts.query_aus)
-  tooloptions.set_get_auids(opts.get_auids)
-  tooloptions.set_get_auids_names(opts.get_auids_names)
-  tooloptions.set_get_platform_configuration(opts.get_platform_configuration)
-  tooloptions.set_is_daemon_ready(opts.is_daemon_ready)
-  tooloptions.set_is_daemon_ready_quiet(opts.is_daemon_ready_quiet)
-  if opts.username is None: u = raw_input('UI username: ')
-  else: u = opts.username
-  if opts.password is None: p = getpass.getpass('UI password: ')
-  else: p = opts.password
-  tooloptions.set_auth(u, p)
-  return tooloptions
+  @staticmethod
+  def make_parser():
+    parser = optparse.OptionParser(version=__version__, usage='%prog [OPTIONS] HOST')
+    parser.add_option('--get-au-status', metavar='AUID', help='Outputs all status information for the AUID')
+    parser.add_option('--get-auids', action='store_true', default=False, help='Outputs all AUIDs')
+    parser.add_option('--get-auids-names', action='store_true', default=False, help='Outputs all AUIDs and names')
+    parser.add_option('--get-peer-agreements', metavar='AUID', help='Outputs the peer agreements for the AUID')
+    parser.add_option('--get-platform-configuration', action='store_true', default=False, help='Outputs the platform configuration')
+    parser.add_option('--is-daemon-ready', action='store_true', default=False, help='Outputs True or False, always exits with 0')
+    parser.add_option('--is-daemon-ready-quiet', action='store_true', default=False, help='Outputs nothing, exits with 0 for True and 1 for False')
+    parser.add_option('--password', metavar='PASS', help='UI password')
+    parser.add_option('--query-aus', metavar='QUERY', help='Performs the given AU query')
+    parser.add_option('--username', metavar='USER', help='UI username')
+    return parser
 
 def __output_record(tooloptions, lst):
   print '\t'.join([str(x) for x in lst])
@@ -330,16 +323,16 @@ def __do_get_au_status(tooloptions):
   print 'Crawl pool: %s' % (r.CrawlPool,)
   print 'Crawl proxy: %s' % (r.CrawlProxy,)
   print 'Crawl window: %s' % (r.CrawlWindow,)
-  print 'Creation time: %s' % (r.CreationTime,)
+  print 'Creation time: %s' % (datetime_from_epoch_ms(r.CreationTime),)
   print 'Currently crawling: %s' % (r.CurrentlyCrawling,)
   print 'Currently polling: %s' % (r.CurrentlyPolling,)
   print 'Disk usage: %s' % (r.DiskUsage,)
   print 'Journal title: %s' % (r.JournalTitle,)
-  print 'Last completed crawl: %s' % (r.LastCompletedCrawl,)
-  print 'Last completed poll: %s' % (r.LastCompletedPoll,)
-  print 'Last crawl: %s' % (r.LastCrawl,)
+  print 'Last completed crawl: %s' % (datetime_from_epoch_ms(r.LastCompletedCrawl),)
+  print 'Last completed poll: %s' % (datetime_from_epoch_ms(r.LastCompletedPoll),)
+  print 'Last crawl: %s' % (datetime_from_epoch_ms(r.LastCrawl),)
   print 'Last crawl result: %s' % (r.LastCrawlResult,)
-  print 'Last poll: %s' % (r.LastPoll,)
+  print 'Last poll: %s' % (datetime_from_epoch_ms(r.LastPoll),)
   print 'Last poll result: %s' % (r.LastPollResult,)
   print 'Plugin name: %s' % (r.PluginName,)
   print 'Publisher: %s' % (r.Publisher,)
@@ -363,17 +356,16 @@ def __do_get_peer_agreements(tooloptions):
   if pa is None:
     print 'No such AUID'
     return
-  if len(pa) == 0: print 'ZERO' #DEBUG
   for pae in pa:
     for ae in pae.Agreements.Entry:
-      __output_record(tooloptions, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, ae.Value.PercentAgreementTimestamp, ae.Value.HighestPercentAgreement, ae.Value.HighestPercentAgreementTimestamp])
+      __output_record(tooloptions, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetime_from_epoch_ms(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetime_from_epoch_ms(ae.Value.HighestPercentAgreementTimestamp)])
 
 def __do_get_platform_configuration(tooloptions):
   r = get_platform_configuration(tooloptions)
   print 'Admin e-mail: %s' % (r.AdminEmail,)
   print 'Build host: %s' % (r.BuildHost,)
-  print 'Build timestamp: %s' % (r.BuildTimestamp,)
-  print 'Current time: %s' % (r.CurrentTime,)
+  print 'Build timestamp: %s' % (datetime_from_epoch_ms(r.BuildTimestamp),)
+  print 'Current time: %s' % (datetime_from_epoch_ms(r.CurrentTime),)
   print 'Current working directory: %s' % (r.CurrentWorkingDirectory,)
   print 'Daemon version:'
   print '\tBuild version: %s' % (r.DaemonVersion.BuildVersion,)
@@ -396,7 +388,7 @@ def __do_get_platform_configuration(tooloptions):
   print '\tVersion: %s' % (r.Platform.Version,)
   print 'Project: %s' % (r.Project,)
   print 'Properties: %s' % (', '.join(r.Properties),)
-  print 'Uptime: %s' % (r.Uptime,)
+  print 'Uptime: %s' % (duration_from_ms(r.Uptime),)
   print 'V3 identity: %s' % (r.V3Identity,)
 
 def __do_is_daemon_ready(tooloptions):
@@ -412,9 +404,9 @@ def __do_query_aus(tooloptions):
   print '%d matching AUs' % (len(query_aus(tooloptions)),)
 
 if __name__ == '__main__':
-  parser = __make_parser()
+  parser = _DaemonStatusServiceToolOptions.make_parser()
   (opts, args) = parser.parse_args()
-  tooloptions = __process_options(parser, opts, args)
+  tooloptions = _DaemonStatusServiceToolOptions(parser, opts, args)
   if tooloptions.is_get_au_status(): __do_get_au_status(tooloptions)
   elif tooloptions.is_get_auids(): __do_get_auids(tooloptions)
   elif tooloptions.is_get_auids_names(): __do_get_auids_names(tooloptions)
