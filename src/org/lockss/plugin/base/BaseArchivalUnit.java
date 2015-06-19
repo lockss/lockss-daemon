@@ -538,34 +538,46 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public final String getFetchRateLimiterKey() {
     String limiterSource = getFetchRateLimiterSource();
     if (log.isDebug3()) log.debug3("Limiter source: " + limiterSource);
+
+    String key = null;
     if ("au".equalsIgnoreCase(limiterSource)) {
-      return null;
-    } else {
-      String key = null;
-      if ("plugin".equalsIgnoreCase(limiterSource)) {
-        key = plugin.getPluginId();
-      } else if (StringUtil.startsWithIgnoreCase(limiterSource,
-                                                 "title_attribute:")) {
-        String attr = limiterSource.substring("title_attribute:".length());
-        key = AuUtil.getTitleAttribute(this, attr);
-        if (key != null) {
-          key = attr + ":" + key;
-        }
-      } else if (StringUtil.startsWithIgnoreCase(limiterSource, "key:")) {
-        key = limiterSource.substring("key:".length());
-      } else if (StringUtil.startsWithIgnoreCase(limiterSource, "host:")) {
-        String param = limiterSource.substring("host:".length());
-        key = paramMap.getString(param + SUFFIX_AU_HOST);
-        if (key != null) {
-          key = "host:" + key;
-        }
-      }
-      if (key == null) {
-        log.warning("Rate limiter source (" + limiterSource +
-                       ") is null, using AU");
-      }
-      return key;
+      key = null;
     }
+    else if ("plugin".equalsIgnoreCase(limiterSource)) {
+      key = plugin.getPluginId();
+    }
+    else if (StringUtil.startsWithIgnoreCase(limiterSource, "title_attribute:")) {
+      // "title_attribute:attr" or "title_attribute:attr:dflt"
+      String attr = limiterSource.substring("title_attribute:".length());
+      String dflt = null;
+      int ix = attr.indexOf(':');
+      if (ix >= 0) {
+        dflt = attr.substring(ix + 1);
+        attr = attr.substring(0, ix);
+      }
+      key = AuUtil.getTitleAttribute(this, attr, dflt);
+      if (key != null) {
+        key = attr + ":" + key;
+      }
+    }
+    else if (StringUtil.startsWithIgnoreCase(limiterSource, "key:")) {
+      key = limiterSource.substring("key:".length());
+    }
+    else if (StringUtil.startsWithIgnoreCase(limiterSource, "host:")) {
+      String param = limiterSource.substring("host:".length());
+      key = paramMap.getString(param + SUFFIX_AU_HOST);
+      if (key != null) {
+        key = "host:" + key;
+      }
+    }
+    
+    if (key == null) {
+      log.warning("Rate limiter source (" + limiterSource + ") is null, using AU");
+    }
+    if (log.isDebug3()) {
+      log.debug3("Final rate limiter source is " + key);
+    }
+    return key;
   }
 
   protected String getFetchRateLimiterSource() {
