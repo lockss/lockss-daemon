@@ -2514,12 +2514,13 @@
      param[journal_id] = ncomms
      
      comment[error] = manifest for 2012, 2013, 2014 have same issues for 2013. PD-1244. No substance for V3.
+     comment[notReady] = crawl completed with no substance
 
     au < manifest ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
     au < crawling ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
     au < ingNotReady ; exists ; 2012 ; Nature Communications Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
-    au < testing ; exists ; 2014 ; Nature Communications Volume 5 ; 2014 ; 5 >
+    au < notReady ; exists ; 2014 ; Nature Communications Volume 5 ; 2014 ; 5 >
   
   }
   {
@@ -2861,7 +2862,7 @@
     au < finished ; crawling ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 >
     au < crawling ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 >
     au < crawling ; exists ; 2013 ; Nature Protocols Volume 8 ; 2013 ; 8 >
-    au < testing ; exists ; 2014 ; Nature Protocols Volume 9 ; 2014 ; 9 >
+    au < ready ; exists ; 2014 ; Nature Protocols Volume 9 ; 2014 ; 9 >
 
   }
 
