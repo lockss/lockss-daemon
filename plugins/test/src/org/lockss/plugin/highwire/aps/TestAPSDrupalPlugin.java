@@ -129,7 +129,7 @@ public class TestAPSDrupalPlugin extends LockssTestCase {
     CacheException exc =
         ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
             500, "foo");
-    assertClass(CacheException.UnexpectedNoRetryNoFailException.class, exc);
+    assertClass(CacheException.RetryDeadLinkException.class, exc);
     
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
