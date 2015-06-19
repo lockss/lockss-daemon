@@ -20,9 +20,9 @@
       param[base_url] = http://www.llcsjournal.org/
       param[journal_id] = llcs
       
-      au < manifest ; exists ; 2009 ; Society for Longitudinal and Life Course Studies 2009 ; 1 ; 2009 >
-      au < manifest ; exists ; 2010 ; Society for Longitudinal and Life Course Studies 2010 ; 1 ; 2010 >
-      au < manifest ; exists ; 2011 ; Society for Longitudinal and Life Course Studies 2011 ; 2 ; 2011 >
+      au < testing ; exists ; 2009 ; Society for Longitudinal and Life Course Studies 2009 ; 1 ; 2009 >
+      au < testing ; exists ; 2010 ; Society for Longitudinal and Life Course Studies 2010 ; 1 ; 2010 >
+      au < testing ; exists ; 2011 ; Society for Longitudinal and Life Course Studies 2011 ; 2 ; 2011 >
       au < testing ; exists ; 2012 ; Society for Longitudinal and Life Course Studies 2012 ; 3 ; 2012 >
       au < crawling ; exists ; 2013 ; Society for Longitudinal and Life Course Studies 2013 ; 4 ; 2013 >
       au < testing ; exists ; 2014 ; Society for Longitudinal and Life Course Studies 2014 ; 5 ; 2014 >
