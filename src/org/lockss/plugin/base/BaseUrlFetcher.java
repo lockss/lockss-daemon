@@ -163,22 +163,22 @@ public class BaseUrlFetcher implements UrlFetcher {
       // Failed.  Don't try this one again during this crawl.
       crawlFacade.addToFailedUrls(origUrl);
       log.error("Repository error with "+this, ex);
-      crawlStatus.signalErrorForUrl(origUrl,
-				    "Can't store page: " + ex.getMessage(),
-				    Crawler.STATUS_REPO_ERR);
+      crawlStatus.signalErrorForUrl(origUrl, ex);
+      if(!crawlStatus.isCrawlError()) {
+        crawlStatus.setCrawlStatus(Crawler.STATUS_REPO_ERR);
+      }
     } catch (CacheException.RedirectOutsideCrawlSpecException ex) {
       // Count this as an excluded URL
       crawlStatus.signalUrlExcluded(origUrl, ex.getMessage());
     } catch (CacheException ex) {
       // Failed.  Don't try this one again during this crawl.
-      crawlStatus.signalErrorForUrl(origUrl, ex);
       crawlFacade.addToFailedUrls(origUrl);
+      crawlStatus.signalErrorForUrl(origUrl, ex);
       if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
         log.siteError("Problem caching "+this+". Continuing", ex);
-        crawlStatus.signalErrorForUrl(origUrl, ex.getMessage(),
-				      Crawler.STATUS_FETCH_ERROR);
-      } else {
-        crawlStatus.signalErrorForUrl(origUrl, ex.getMessage());
+        if(!crawlStatus.isCrawlError()) {
+          crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR, ex.getMessage());
+        }
       }
       if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
         throw ex;
@@ -188,8 +188,11 @@ public class BaseUrlFetcher implements UrlFetcher {
         log.debug("Expected exception while aborting crawl: " + ex);
       } else {
         crawlFacade.addToFailedUrls(origUrl);
-        crawlStatus.signalErrorForUrl(origUrl, ex.toString(),
-				      Crawler.STATUS_FETCH_ERROR);
+        crawlStatus.signalErrorForUrl(origUrl, ex.getMessage(),
+                                      CrawlerStatus.Severity.Error);
+        if(!crawlStatus.isCrawlError()) {
+          crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
+        }
         //XXX not expected
         log.error("Unexpected Exception during crawl, continuing", ex);
       }

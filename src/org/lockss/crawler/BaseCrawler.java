@@ -449,21 +449,10 @@ public abstract class BaseCrawler implements Crawler {
     Collection<String> permissionUrls = null;
     try {
       permissionUrls = getCrawlSeed().getPermissionUrls();
-    }
-    // FIXME Java 7
-    catch (ConfigurationException ce) {
-      logger.error("Could not compute permission URLs", ce);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
-      return false;
-    }
-    catch (PluginException pe) {
-      logger.error("Could not compute permission URLs", pe);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
-      return false;
-    }
-    catch (IOException ioe) {
-      logger.error("Could not compute permission URLs", ioe);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+    } catch (ConfigurationException|PluginException|IOException e) {
+      logger.error("Could not compute permission URLs", e);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR, 
+                                 "Plugin failed to provide permission URLs");
       return false;
     }
 
@@ -692,8 +681,10 @@ public abstract class BaseCrawler implements Crawler {
   }
   
   protected boolean aborted(String msg) {
-    logger.info("Crawl aborted: "+au);
-    crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED, msg);
+    logger.info("Crawl aborted: " + au);
+    if(!crawlStatus.isCrawlError()) {
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED, msg);
+    } 
     return false;
   }
 

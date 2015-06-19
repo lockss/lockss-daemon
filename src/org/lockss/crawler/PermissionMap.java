@@ -341,14 +341,14 @@ public class PermissionMap {
 
   PermissionStatus probe0(PermissionRecord rec) {
     String pUrl = rec.getUrl();
-    logger.debug("Probing for permission on " + pUrl);
+    logger.debug("Checking for permission on " + pUrl);
     try {
       if (!au.shouldBeCached(pUrl)) {
         logger.error("Permission page not within CrawlSpec: "+ pUrl);
         rec.setStatus(PermissionStatus.PERMISSION_NOT_IN_CRAWL_SPEC);
-        crawlStatus.signalErrorForUrl(pUrl,
-              "Permission page not within CrawlSpec",
-              Crawler.STATUS_PLUGIN_ERROR);
+        String msg = "Permission page not within CrawlSpec";
+        crawlStatus.signalErrorForUrl(pUrl, msg,
+                                      Crawler.STATUS_PLUGIN_ERROR, msg);
       } else if (!au.inCrawlWindow()) {
         logger.debug("Crawl window closed, aborting permission check.");
         crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
@@ -362,7 +362,7 @@ public class PermissionMap {
         if (rec.getStatus() == PermissionStatus.PERMISSION_NOT_OK) {
           logger.siteError("No permission statement at " + pUrl);
           signalErrorForUrlNoOverride(pUrl,
-              "No permission statement on manifest page.",
+              CrawlerStatus.NO_PERM_STATMENT_ERR_MSG,
               Crawler.STATUS_NO_PUB_PERMISSION);
 
           raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION, au).
@@ -385,11 +385,11 @@ public class PermissionMap {
       rec.setStatus(PermissionStatus.PERMISSION_FETCH_FAILED);
       crawlStatus.signalErrorForUrl(pUrl, ex.getMessage(),
             Crawler.STATUS_NO_PUB_PERMISSION,
-            "Can't fetch permission page");
+            CrawlerStatus.UNABLE_TO_FETCH_PERM_ERR_MSG);
     } catch (Exception ex) {
       logger.error("Exception reading permission page at " + pUrl, ex);
       rec.setStatus(PermissionStatus.PERMISSION_FETCH_FAILED);
-      crawlStatus.signalErrorForUrl(pUrl, ex.toString(),
+      crawlStatus.signalErrorForUrl(pUrl, ex.getMessage(),
             Crawler.STATUS_FETCH_ERROR);
       raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR, au).
      setAttribute(Alert.ATTR_TEXT,
@@ -444,9 +444,11 @@ public class PermissionMap {
     try {
       rec = get(url);
     } catch (MalformedURLException e) {
-      logger.error("Malformed permission page url: " + url);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
-				 "Malformed permission page url: " + url);
+      String msg = "Malformed permission page url";
+      logger.error(msg + ": " + url);
+      crawlStatus.signalErrorForUrl(url, msg + ": " + url,
+                                    Crawler.STATUS_PLUGIN_ERROR,
+                                    msg);
       return false;
     }
     PermissionStatus stat;
@@ -468,14 +470,18 @@ public class PermissionMap {
       case PERMISSION_MISSING:
         logger.error("Plugin error: no permission page specified for host of: "
 		     + url);
-        crawlStatus.signalErrorForUrl(url,
-				      "No permission URL for this host",
-				      Crawler.STATUS_NO_PUB_PERMISSION,
-				      "Plugin error (missing permission URL)");
+        if (crawlStatus.getErrorForUrl(pUrl) == null) {
+          crawlStatus.signalErrorForUrl(url, "No permission URL for this host");
+        } 
+        crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION,
+				                   "Plugin error (missing permission URL)");
         return false;
       case PERMISSION_NOT_IN_CRAWL_SPEC:
-        String err1 = "Permission page not in crawl spec: "+ url;
-        logger.error(err1);
+        String err1 = "Permission page not in crawl spec";
+        logger.error(err1 + ": " + url);
+        if (crawlStatus.getErrorForUrl(pUrl) == null) {
+          crawlStatus.signalErrorForUrl(url, err1);
+        }   
         crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR, err1);
         return false;
       case PERMISSION_UNCHECKED:
@@ -496,13 +502,10 @@ public class PermissionMap {
           if (crawlStatus.getErrorForUrl(pUrl) == null) {
             crawlStatus.signalErrorForUrl(pUrl,
                 "Cannot fetch permission page "
-                + "on the second attempt",
-                Crawler.STATUS_NO_PUB_PERMISSION,
-                "Cannot fetch permission page.");
-          } else {
-            crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION,
-				       "Cannot fetch permission page.");
+                + "on the second attempt");
           }
+          crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION,
+				       "Cannot fetch permission page.");
           return false;
         }
       case PERMISSION_CRAWL_WINDOW_CLOSED:
@@ -512,12 +515,11 @@ public class PermissionMap {
         return false;
       case PERMISSION_REPOSITORY_ERROR:
         logger.error("Error trying to store: " + pUrl);
+        String msg = "Repository error storing permission page";
         if (crawlStatus.getErrorForUrl(pUrl) == null) {
-          crawlStatus.signalErrorForUrl(pUrl, "Repository error",
-              Crawler.STATUS_REPO_ERR);
-        } else {
-          crawlStatus.setCrawlStatus(Crawler.STATUS_REPO_ERR);
+          crawlStatus.signalErrorForUrl(pUrl, msg);
         }
+        crawlStatus.setCrawlStatus(Crawler.STATUS_REPO_ERR, msg);
         return false;
       default :
         logger.error("Unknown Permission Status! Shouldn't happen");
@@ -555,8 +557,11 @@ public class PermissionMap {
       }
     } catch (MalformedURLException e) {
       logger.error("Malformed permission page url: " + url);
+      if (crawlStatus.getErrorForUrl(url) == null) {
+        crawlStatus.signalErrorForUrl(url, "Malformed permission page url");
+      }
       crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
-         "Malformed permission page url: " + url);
+         "Malformed permission page url");
     }
   }
 }

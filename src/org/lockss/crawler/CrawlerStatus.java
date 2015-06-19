@@ -137,7 +137,12 @@ public class CrawlerStatus {
 
   public enum ReferrerType {Included, Excluded};
 
-
+  public static String HOST_PERM_ERR_MSG = "No permission for host";
+  public static String NO_PERM_STATMENT_ERR_MSG = "No permission statement on permission page";
+  public static String UNABLE_TO_FETCH_PERM_ERR_MSG = "Unable to fetch permission page";
+  public static String UNABLE_TO_FETCH_PROBE_PERM_ERR_MSG = "Unable to fetch probe permission page";
+  public static String START_URL_ERR_MSG = "Failed to fetch start url"; 
+  
   static Map<Integer,String> DEFAULT_MESSAGES = new HashMap();
   public static StringPool CRAWL_STATUS_POOL = new StringPool("Crawl Status");
 
@@ -745,7 +750,11 @@ public class CrawlerStatus {
       return "[UE: " + sev + ": " + message + "]";
     }
   }
-
+  
+  private UrlErrorInfo errInfo(String urlMsg, Severity sev) {
+    return new UrlErrorInfo(urlMsg, sev);
+  }
+  
   private UrlErrorInfo errInfo(String urlMsg) {
     return new UrlErrorInfo(urlMsg, Severity.Warning);
   }
@@ -793,6 +802,10 @@ public class CrawlerStatus {
     incrSeverity(ei.getSeverity());
   }
 
+  public synchronized void signalErrorForUrl(String url, String urlMsg, Severity sev) {
+    signalErrorForUrl(url, errInfo(urlMsg, sev));
+  }
+  
   public synchronized void signalErrorForUrl(String url, CacheException ex) {
     signalErrorForUrl(url, errInfo(ex));
   }
