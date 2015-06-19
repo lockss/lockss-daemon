@@ -25,6 +25,7 @@
       au < released ; 2012 ; 6 ; revista Ateliê Geográfico Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; revista Ateliê Geográfico Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 8 ; revista Ateliê Geográfico Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 9 ; revista Ateliê Geográfico Volume 2015 ; 2015 ; >
 
   }
 
@@ -214,9 +215,10 @@
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = interacao
 
-      au < manifest ; 1995 ; 19 ; Revista Inter Ação Volume 1995 ; 1995 ; >
-      au < manifest ; 1996 ; 20 ; Revista Inter Ação Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 21 ; Revista Inter Ação Volume 1997 ; 1997 ; >
+      au < manifest ; 1994 ; 18 ; Revista Inter Ação Volume 1994 ; 1994 ; >
+      au < testing ; 1995 ; 19 ; Revista Inter Ação Volume 1995 ; 1995 ; >
+      au < testing ; 1996 ; 20 ; Revista Inter Ação Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 21 ; Revista Inter Ação Volume 1997 ; 1997 ; >
       au < released ; 1998 ; 22 ; Revista Inter Ação Volume 1998 ; 1998 ; >
       au < released ; 1999 ; 23 ; Revista Inter Ação Volume 1999 ; 1999 ; >
       au < released ; 2000 ; 24 ; Revista Inter Ação Volume 2000 ; 2000 ; >
@@ -406,6 +408,7 @@
       au < released ; 2012 ; 10 ; Poíesis Pedagógica Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Poíesis Pedagógica Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 12 ; Poíesis Pedagógica Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 13 ; Poíesis Pedagógica Volume 2015 ; 2015 ; >
 
   }
 

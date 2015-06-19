@@ -36,6 +36,7 @@
       au < released ; 2012 ; 20 ; Anuário de Literatura Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 21 ; Anuário de Literatura Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 22 ; Anuário de Literatura Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 23 ; Anuário de Literatura Volume 2015 ; 2015 ; >
 
   }
 
@@ -183,6 +184,7 @@
       au < released ; 2012 ; 29 ; Caderno Brasileiro de Ensino de Física Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 30 ; Caderno Brasileiro de Ensino de Física Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 31 ; Caderno Brasileiro de Ensino de Física Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 32 ; Caderno Brasileiro de Ensino de Física Volume 2015 ; 2015 ; >
 
   }
 
@@ -497,6 +499,7 @@
       au < released ; 2012 ; 11 ; Política & Sociedade Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Política & Sociedade Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 13 ; Política & Sociedade Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 14 ; Política & Sociedade Volume 2015 ; 2015 ; >
 
   }
 
@@ -629,7 +632,7 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = contabilidade
 
-      au < manifest ; 2004 ; 0 ; Revista Contemporânea de Contabilidade Volume 2004 ; 2004 ; >
+      au < testing ; 2004 ; 0 ; Revista Contemporânea de Contabilidade Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 1 ; Revista Contemporânea de Contabilidade Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 2 ; Revista Contemporânea de Contabilidade Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 3 ; Revista Contemporânea de Contabilidade Volume 2007 ; 2007 ; >
@@ -750,6 +753,7 @@
       au < released ; 2012 ; 17 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 18 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 19 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 20 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2015 ; 2015 ; >
 
   }
 
@@ -1265,7 +1269,7 @@
       au < released ; 2011 ; 26 ; Textos de Economia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 27 ; Textos de Economia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 28 ; Textos de Economia Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 29 ; Textos de Economia Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 29 ; Textos de Economia Volume 2014 ; 2014 ; >
 
   }
 

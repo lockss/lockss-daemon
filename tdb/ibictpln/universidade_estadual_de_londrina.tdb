@@ -161,6 +161,7 @@
       au < ready ; 2011 ; 2 ; Estudos Interdisciplinares em Psicologia Volume 2 ; 2011 ; >
       au < ready ; 2012 ; 3 ; Estudos Interdisciplinares em Psicologia Volume 3 ; 2012 ; >
       au < ready ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 ; >
+      au < manifest ; 2014 ; 5 ; Estudos Interdisciplinares em Psicologia Volume 5 ; 2014 ; >
 
   }
 
@@ -434,6 +435,7 @@
       au < released ; 2012 ; 16 ; Scientia Iuris Volume 16 ; 2012 ; >
       au < released ; 2013 ; 17 ; Scientia Iuris Volume 17 ; 2013 ; >
       au < ready ; 2014 ; 18 ; Scientia Iuris Volume 18 ; 2014 ; >
+      au < manifest ; 2015 ; 19 ; Scientia Iuris Volume 19 ; 2015 ; >
 
   }
 
@@ -588,6 +590,7 @@
       au < released ; 2012 ; 34 ; Semina: Ciências Exatas e Tecnológicas Volume 34 ; 2012 ; >
       au < released ; 2013 ; 35 ; Semina: Ciências Exatas e Tecnológicas Volume 35 ; 2013 ; >
       au < ready ; 2014 ; 36 ; Semina: Ciências Exatas e Tecnológicas Volume 36 ; 2014 ; >
+      au < manifest ; 2015 ; 37 ; Semina: Ciências Exatas e Tecnológicas Volume 37 ; 2015 ; >
 
   }
 
@@ -603,6 +606,7 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = seminasoc
 
+      au < manifest ; 1988 ; 9 ; Semina: Ciências Sociais e Humanas Volume 9 ; 1988 ; >
       au < ready ; 1989 ; 10 ; Semina: Ciências Sociais e Humanas Volume 10 ; 1989 ; >
       au < ready ; 1990 ; 11 ; Semina: Ciências Sociais e Humanas Volume 11 ; 1990 ; >
       au < ready ; 1991 ; 12 ; Semina: Ciências Sociais e Humanas Volume 12 ; 1991 ; >
