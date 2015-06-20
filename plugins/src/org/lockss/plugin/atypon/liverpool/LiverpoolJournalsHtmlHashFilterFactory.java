@@ -57,8 +57,10 @@ public class LiverpoolJournalsHtmlHashFilterFactory
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
+//            if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
+//                                                      "/toc/").accept(node)) {
             if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-                                                      "/toc/").accept(node)) {
+                                                      "/toc/.*[^(0\\/0)|current]$").accept(node)) {
               Node liParent = node.getParent();
               if (liParent instanceof Bullet) {
                 Bullet li = (Bullet)liParent;
@@ -84,20 +86,17 @@ public class LiverpoolJournalsHtmlHashFilterFactory
         // http://online.liverpooluniversitypress.co.uk/doi/ref/10.3828/bjcs.2013.3
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                           "literatumPublicationContentWidget"),
-        // abs, ref - right side bar - Article/Chapter tools 
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-                                              "literatumArticleToolsWidget"),
         // showCitFormats
         // http://online.liverpooluniversitypress.co.uk/action/
         //                           showCitFormats?doi=10.3828%2Fbjcs.2013.3                                      
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
                                                                                                                 
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
-    NodeFilter[] excludeNodes = new NodeFilter[] {
+    NodeFilter[] excludeNodes = new NodeFilter[] {       
         // toc - select pulldown menu under volume title
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                                               "publicationToolContainer"),
@@ -105,14 +104,15 @@ public class LiverpoolJournalsHtmlHashFilterFactory
         // Endocrine Society)                                      
         // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.5
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),                                      
-       // abs - all right column except Citation Mgr (download citations)
-       // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.2                                       
-       HtmlNodeFilters.allExceptSubtree(
-           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-             HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),                                           
-                                                    
+                                              "articleMetaDrop"),    
+           
+        // ?? but it does not remove Ahead of print and Current issue 
+        // also, do we even need it filter, since only include tocListWidget ??                                      
+        // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
+        // Current Issue, and the right sidebar top block of abs and ref
+        // http://online.liverpooluniversitypress.co.uk/toc/bjcs/26/1
+        //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "body-emphasis"),
+    
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
