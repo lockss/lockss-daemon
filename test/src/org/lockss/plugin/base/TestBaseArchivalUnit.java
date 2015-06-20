@@ -441,7 +441,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau2.getParamMap().putString(src, "title_attribute:server");
     mbau3.getParamMap().putString(src, "title_attribute:client");
     mbau4.getParamMap().putString(src, "title_attribute:server");
-    mbau5.getParamMap().putString(src, "title_attribute:server:s1");
+    mbau5.getParamMap().putString(src, "title_attribute:server:defaultserver");
     setTCAttrs(mbau, "server", "s1");
     setTCAttrs(mbau2, "server", "s2");
     setTCAttrs(mbau3, "server", "s1").put("client", "s1");
@@ -465,16 +465,14 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertNotSame(limit, limit2);
     assertNotSame(limit, limit3);
     assertSame(limit, limit4);
-    assertSame(limit, limit5);
+    assertNotSame(limit, limit5);
     RateLimiter.Pool pool = RateLimiter.getPool();
-    assertSame(pool.findNamedRateLimiter("server:s1", 1, 1),
-	       limit);
-    assertSame(pool.findNamedRateLimiter("server:s2", 1, 1),
-	       limit2);
-    assertSame(pool.findNamedRateLimiter("client:s1", 1, 1),
-	       limit3);
+    assertSame(pool.findNamedRateLimiter("server:s1", 1, 1), limit);
+    assertSame(pool.findNamedRateLimiter("server:s2", 1, 1), limit2);
+    assertSame(pool.findNamedRateLimiter("client:s1", 1, 1), limit3);
+    assertSame(pool.findNamedRateLimiter("server:defaultserver", 1, 1), limit5);
     assertEquals("server:s1", mbau.getFetchRateLimiterKey());
-    assertEquals("server:s1", mbau5.getFetchRateLimiterKey());
+    assertEquals("server:defaultserver", mbau5.getFetchRateLimiterKey());
   }
 
   public Map setTCAttrs(TestableBaseArchivalUnit mau, String key, String val) {
