@@ -57,8 +57,10 @@ public class InderscienceHtmlHashFilterFactory
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
+//            if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
+//                                                      "/toc/").accept(node)) {
             if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-                                                      "/toc/").accept(node)) {
+                                                      "/toc/.*[^(0\\/0)|current]$").accept(node)) {
               Node liParent = node.getParent();
               if (liParent instanceof Bullet) {
                 Bullet li = (Bullet)liParent;
