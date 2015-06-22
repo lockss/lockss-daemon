@@ -40,7 +40,7 @@
 
       au < crawling ; exists ; 2009-2010 ; The Chaucer Review Volume 44 ; 44 >
       au < manifest ; exists ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 >
-      au < testing ; exists ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
+      au < crawling ; exists ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
       au < crawling ; exists ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
       au < crawling ; exists ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 >
       au < manifest ; exists ; 2014-2015 ; The Chaucer Review Volume 49 ; 49 >
@@ -116,7 +116,7 @@
     >
       param[journal_id] = eugeoneirevi
 
-      au < notReady ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 32 >
+      au < doNotProcess ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 32 >
       au < crawling ; exists ; 2012 ; The Eugene O'Neill Review Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 >
       au < crawling ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 ; 35 >
@@ -136,8 +136,8 @@
       param[journal_id] = fscotfitzrevi
       comment[notReady] = V8-10, no substance. Url on manifest page is dead.
 
-      au < notReady ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 >
-      au < notReady ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 >
       au < notReady ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 12 >
@@ -457,8 +457,8 @@
 
       param[journal_id] = pacicoasphil
 
-      au < notReady ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 >
-      au < notReady ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 >
+      au < doNotProcess ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 >
+      au < doNotProcess ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 >
       au < notReady ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 47 >
       au < crawling ; exists ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
       au < crawling ; exists ; 2014 ; Pacific Coast Philology Volume 49 ; 49 >
@@ -536,8 +536,8 @@
     
       param[journal_id] = reception
 
-      au < notReady ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2 >
-      au < notReady ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 3 >
       au < notReady ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 6 >
@@ -555,8 +555,9 @@
     >
 
       param[journal_id] = shaw
+      comment[0] = Volume 30 has an error
 
-      au < notReady ; exists ; 2010 ; SHAW Volume 30 ; 30 >
+      au < doNotProcess ; exists ; 2010 ; SHAW Volume 30 ; 30 >
       au < manifest ; exists ; 2011 ; SHAW Volume 31 ; 31 >
       au < crawling ; exists ; 2012 ; SHAW Volume 32 ; 32 >
       au < crawling ; exists ; 2013 ; SHAW Volume 33 ; 33 >
