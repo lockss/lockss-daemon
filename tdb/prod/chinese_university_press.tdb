@@ -11,6 +11,22 @@
   {
   
     title <
+      name = Asian Journal of English Language Teaching ;
+      issn = 1026-2652 
+    >
+
+    param[journal_dir] = asian_journal_of_english_language_teaching
+    attr[journal_id] = aje
+
+    au < exists ; 2013 ; Asian Journal of English Language Teaching Volume 23 ; 23 >
+    au < exists ; 2014 ; Asian Journal of English Language Teaching Volume 24 ; 24 >
+    au < expected ; 2015 ; Asian Journal of English Language Teaching Volume 25 ; 25 >
+
+  }
+
+  {
+  
+    title <
       name = China Review ;
       issn = 1680-2012 
     >
@@ -24,5 +40,18 @@
 
   }
 
+  {
+  
+    title <
+      name = Journal of Chinese Linguistics ;
+      issn = 0091-3723 
+    >
+
+    param[journal_dir] = journal_of_chinese_linguistics
+    attr[journal_id] = jcl
+
+    au < exists ; 2015 ; Journal of Chinese Linguistics Volume 43 ; 43 >
+
+  }
 
 }
