@@ -188,8 +188,6 @@ Thinks to look for:
 
 * include nodes (or keep nodes)
   - manifest pages links
-      HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-                                            "/toc/.*[^(0\\/0)|current]$").accept(node))
   - toc - contents only
     // http://online.liverpooluniversitypress.co.uk/toc/bjcs/26/1
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
