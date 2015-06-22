@@ -58,50 +58,7 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
       "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolJournalsPlugin";
   
   private static final String filteredStr = 
-      "<div class=\"block\"></div>";
-  
-  // breadcrumbs
-  // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.2
-  private static final String withBreadcrumbs =
-      "<div class=\"block\">" +
-      "<ul class=\"breadcrumbs\">" +
-      "<li class=\"\"><a href=\"/\">Home</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/loi/jid\">ABC Journals</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/loi/jid\">issues</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/toc/jid/26/1\">Volume 9, Issue 9</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"> DOI: 11.1111/jid.2013.2 </li>" +
-      "</ul>" +
-      "</div>";  
-  
-    // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
-    // Current Issue, and the right sidebar top block of abs and ref
-    // http://online.liverpooluniversitypress.co.uk/toc/jid/26/1
-  private static final String withBodyEmphasis =
-      "<div class=\"block\">" +
-      "<div class=\"widget-body body body-emphasis \">" +
-      "<div class=\"pb-columns row-fluid\">" +
-      "<div data-pb-dropzone=\"center\">" +
-      "<div id=\"8b3\" class=\"widget general-heading none widget-none widget-compact-vertical\">" +
-      "<div id=\"bc8\" class=\"widget literatumCoverDisplayWidget alignCenter widget-none\">" +
-      "<div id=\"797\" class=\"widget literatumSerialDetails alignCenter widget-none widget-compact-all\">" +
-      "<div id=\"a60\" class=\"widget layout-two-columns none widget-none widget-compact-all\">" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<div class=\"pb-columns row-fluid \">" +
-      "<div class=\"pb-autoheight\" data-pb-dropzone=\"left\">" +
-      "<div id=\"e38\" class=\"widget general-html none widget-none widget-compact-all\">" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<ul>" +
-      "<li><a href=\"/toc/jid/0/0\">Ahead of print</a></li>" +
-      "<li><a href=\"/toc/jid/current\">Current issue</a></li>" +
-      "<li><a href=\"/loi/jid\">List of issues</a></li>" +
-      "</ul>" +
-      "</div></div>" +
-      "</div></div></div></div></div></div></div></div></div></div>" +
-      "</div>";     
+      "<div class=\"block\"></div>";    
   
   private static final String withAriaRelevant =
       "<div class=\"block\">" +
@@ -278,8 +235,6 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
   public static class TestCrawl extends TestLiverpoolJournalsHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new LiverpoolJournalsHtmlCrawlFilterFactory();
-      doFilterTest(lau, variantFact, withBreadcrumbs, filteredStr); 
-      doFilterTest(lau, variantFact, withBodyEmphasis, filteredStr); 
       doFilterTest(lau, variantFact, withAriaRelevant, filteredStr); 
       doFilterTest(lau, variantFact, withRelatedContent, filteredStr);      
       doFilterTest(lau, variantFact, withArticleToolsExceptDownloadCitation1, 
