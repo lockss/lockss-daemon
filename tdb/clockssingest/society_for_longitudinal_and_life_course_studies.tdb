@@ -6,10 +6,6 @@
     info[tester] = 4
   >
   
-     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-     implicit < status ; status2 ; year ; name ; volume ; param[year] >
-
- 
   {
   
     title < 
@@ -17,17 +13,19 @@
       issn = 1757-9597 
     >
       
-      param[base_url] = http://www.llcsjournal.org/
-      param[journal_id] = llcs
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.llcsjournal.org/
+    param[journal_id] = llcs
+    implicit < status ; status2 ; year ; name ; volume ; param[year] >
       
-      au < crawling ; exists ; 2009 ; Society for Longitudinal and Life Course Studies 2009 ; 1 ; 2009 >
-      au < crawling ; exists ; 2010 ; Society for Longitudinal and Life Course Studies 2010 ; 1 ; 2010 >
-      au < crawling ; exists ; 2011 ; Society for Longitudinal and Life Course Studies 2011 ; 2 ; 2011 >
-      au < crawling ; exists ; 2012 ; Society for Longitudinal and Life Course Studies 2012 ; 3 ; 2012 >
-      au < crawling ; exists ; 2013 ; Society for Longitudinal and Life Course Studies 2013 ; 4 ; 2013 >
-      au < crawling ; exists ; 2014 ; Society for Longitudinal and Life Course Studies 2014 ; 5 ; 2014 >
-      au < manifest ; exists ; 2015 ; Society for Longitudinal and Life Course Studies 2015 ; 6 ; 2015 >
+    au < finished ; crawling ; 2009 ; Longitudinal and Life Course Studies Volume 1 (2009) ; 1 ; 2009 >
+    au < finished ; crawling ; 2010 ; Longitudinal and Life Course Studies Volume 1 (2010) ; 1 ; 2010 >
+    au < finished ; crawling ; 2011 ; Longitudinal and Life Course Studies Volume 2 ; 2 ; 2011 >
+    au < finished ; crawling ; 2012 ; Longitudinal and Life Course Studies Volume 3 ; 3 ; 2012 >
+    au < finished ; crawling ; 2013 ; Longitudinal and Life Course Studies Volume 4 ; 4 ; 2013 >
+    au < finished ; crawling ; 2014 ; Longitudinal and Life Course Studies Volume 5 ; 5 ; 2014 >
+    au < manifest ; exists ; 2015 ; Longitudinal and Life Course Studies Volume 6 ; 6 ; 2015 >
       
-    }
+  }
 
 }
