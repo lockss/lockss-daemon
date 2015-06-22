@@ -46,14 +46,8 @@ public class LiverpoolJournalsHtmlCrawlFilterFactory
   static NodeFilter[] filters = new NodeFilter[] {
     // handled by parent:
     // toc previous/next issue and article - <td class="journalNavRightTd">
-    
     // toc, abs, ref - breadcrumbs
-    // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.2
-    HtmlNodeFilters.tagWithAttribute("ul", "class", "breadcrumbs"),
-    // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
-    // Current Issue, and the right sidebar top block of abs and ref
-    // http://online.liverpooluniversitypress.co.uk/toc/bjcs/26/1
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "body-emphasis"),
+    
     // toc - right column most read/most cited
     HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
     // abs - below abstract keywords

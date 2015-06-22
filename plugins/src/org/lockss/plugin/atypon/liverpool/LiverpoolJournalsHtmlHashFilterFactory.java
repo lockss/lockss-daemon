@@ -57,10 +57,8 @@ public class LiverpoolJournalsHtmlHashFilterFactory
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
-//            if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-//                                                      "/toc/").accept(node)) {
             if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-                                                      "/toc/.*[^(0\\/0)|current]$").accept(node)) {
+                                                      "/toc/").accept(node)) {
               Node liParent = node.getParent();
               if (liParent instanceof Bullet) {
                 Bullet li = (Bullet)liParent;
@@ -104,14 +102,7 @@ public class LiverpoolJournalsHtmlHashFilterFactory
         // Endocrine Society)                                      
         // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.5
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),    
-           
-        // ?? but it does not remove Ahead of print and Current issue 
-        // also, do we even need it filter, since only include tocListWidget ??                                      
-        // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
-        // Current Issue, and the right sidebar top block of abs and ref
-        // http://online.liverpooluniversitypress.co.uk/toc/bjcs/26/1
-        //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "body-emphasis"),
+                                              "articleMetaDrop"),            
     
     };
     return super.createFilteredInputStream(au, in, encoding, 

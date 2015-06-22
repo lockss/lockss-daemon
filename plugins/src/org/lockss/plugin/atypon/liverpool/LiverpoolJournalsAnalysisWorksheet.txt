@@ -122,10 +122,7 @@ ARTICLE pages:
      most cited
  
  * from toc - http://online.liverpooluniversitypress.co.uk/toc/bjcs/27/1
- - breadcrumbs
- - panel under breadcrumbs and right sidebar top block: panel under breadcrubms 
-with link to Ahead of print, and Current issue - 
-<div class="widget-body body body-emphasis ">
+ - breadcrumbs handled by parent
 - previous/next issue/article - <td class="journalNavLeftTd">
 - right colunm most read/most cited -
 <div class="tabs tabs-widget" aria-live="polite" aria-atomic="true" aria-relevant="additions">
