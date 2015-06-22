@@ -57,10 +57,8 @@ public class InderscienceHtmlHashFilterFactory
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
-//            if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-//                                                      "/toc/").accept(node)) {
             if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-                                                      "/toc/.*[^(0\\/0)|current]$").accept(node)) {
+                                                      "/toc/").accept(node)) {
               Node liParent = node.getParent();
               if (liParent instanceof Bullet) {
                 Bullet li = (Bullet)liParent;
@@ -79,8 +77,7 @@ public class InderscienceHtmlHashFilterFactory
           }
         },
         
-        // ?? why current issue still exists after hashcus toc ??
-        // toc - contents only
+         // toc - contents only
         // http://www.inderscienceonline.com/toc/ajaaf/3/1
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
         // full, abs, ref - contents only

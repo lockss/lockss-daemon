@@ -46,15 +46,8 @@ public class InderscienceHtmlCrawlFilterFactory
   static NodeFilter[] filters = new NodeFilter[] {
     // handled by parent:
     // toc previous/next issue and article - <td class="journalNavRightTd">
-    
     // toc, full, abs, ref - breadcrumbs
-    // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176
-    HtmlNodeFilters.tagWithAttribute("ul", "class", "breadcrumbs"),  
-    // toc, full, abs, ref - panel under breadcrumbs with link to
-    // Current Issue, or right sidebar top block of abstract, full text and ref
-    // http://www.inderscienceonline.com/toc/ajaaf/3/1
-    // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "body-emphasis"),
+
     // toc, full, abs, ref - right column most read/most cited
     // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176
     // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176
