@@ -60,53 +60,6 @@ public class TestInderscienceHtmlFilterFactory extends LockssTestCase {
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
   
-  // breadcrumbs
-  // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176
-  private static final String withBreadcrumbs =
-      "<div class=\"block\">" +
-      "<ul class=\"breadcrumbs\">" +
-      "<li class=\"\"><a href=\"/\">Home</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/loi/jid\">ABC Journals</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/loi/jid\">issues</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/toc/jid/26/1\">Volume 9, Issue 9</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"> DOI: 11.1111/jid.2013.2 </li>" +
-      "</ul>" +
-      "</div>";  
-  
-    // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
-    // Current Issue, and the right sidebar top block of abs and ref
-    // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176
-  private static final String withBodyEmphasis =
-      "<div class=\"block\">" +
-      "<div class=\"widget-body body body-emphasis \">" +
-      "<div class=\"pb-columns row-fluid\">" +
-      "<div data-pb-dropzone=\"center\">" +
-      "<div id=\"8b3\" class=\"widget general-heading none widget-none " +
-      "widget-compact-vertical\">" +
-      "<div id=\"bc8\" class=\"widget literatumCoverDisplayWidget " +
-      "alignCenter widget-none\">" +
-      "<div id=\"797\" class=\"widget literatumSerialDetails alignCenter " +
-      "widget-none widget-compact-all\">" +
-      "<div id=\"a60\" class=\"widget layout-two-columns none widget-none " +
-      "widget-compact-all\">" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<div class=\"pb-columns row-fluid \">" +
-      "<div class=\"pb-autoheight\" data-pb-dropzone=\"left\">" +
-      "<div id=\"e38\" class=\"widget general-html none widget-none " +
-      "widget-compact-all\">" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<ul>" +
-      "<li><a href=\"/toc/jid/current\">Current issue</a></li>" +
-      "<li><a href=\"/loi/jid\">List of issues</a></li>" +
-      "</ul>" +
-      "</div></div>" +
-      "</div></div></div></div></div></div></div></div></div></div>" +
-      "</div>";     
-  
   private static final String withAriaRelevant =
       "<div class=\"block\">" +
       "<div class=\"tabs tabs-widget\" aria-relevant=\"additions\" " +
@@ -316,8 +269,6 @@ public class TestInderscienceHtmlFilterFactory extends LockssTestCase {
     extends TestInderscienceHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new InderscienceHtmlCrawlFilterFactory();
-      doFilterTest(iau, variantFact, withBreadcrumbs, filteredStr); 
-      doFilterTest(iau, variantFact, withBodyEmphasis, filteredStr); 
       doFilterTest(iau, variantFact, withAriaRelevant, filteredStr); 
       doFilterTest(iau, variantFact, withRelatedContent, filteredStr);      
       doFilterTest(iau, variantFact, withArticleToolsExceptDownloadCitation1, 
