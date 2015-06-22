@@ -109,6 +109,7 @@
       param[base_url] = http://www.seer.ufu.br/
       param[journal_id] = caminhosdegeografia
 
+      au < manifest ; 2002 ; 3 ; Caminhos de Geografia Volume 2002 ; 2002 ; >
       au < manifest ; 2003 ; 4 ; Caminhos de Geografia Volume 2003 ; 2003 ; >
       au < testing ; 2004 ; 5 ; Caminhos de Geografia Volume 2004 ; 2004 ; >
       au < ready ; 2005 ; 6 ; Caminhos de Geografia Volume 2005 ; 2005 ; >
@@ -491,7 +492,7 @@
       au < released ; 2011 ; 12 ; Olhares & Trilhas Volume 2011 ; 2011 ; >
       au < ready ; 2012 ; 13 ; Olhares & Trilhas Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 14 ; Olhares & Trilhas Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 15 ; Olhares & Trilhas Volume 2014 ; 2014 ; >
+      au < ready ; 2014 ; 15 ; Olhares & Trilhas Volume 2014 ; 2014 ; >
 
   }
 

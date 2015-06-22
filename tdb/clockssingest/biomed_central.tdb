@@ -2710,6 +2710,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.breast-cancer-research.com/
       comment[0] = base url changed to add www.
+      comment[notReady] = crawl completed with no substance
 
       au < manifest ; exists ; 1999 ; Breast Cancer Research Volume 1 ; 1 >
       au < manifest ; exists ; 2000 ; Breast Cancer Research Volume 2 ; 2 >
@@ -2726,7 +2727,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
       au < doNotProcess ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < testing ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < notReady ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
       }
       {
@@ -3171,6 +3172,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.clinicalmolecularallergy.com/
       param[journal_issn] = 1476-7961
+      comment[notReady] = crawl completed with no substance
 
       au < manifest ; exists ; 2003 ; Clinical and Molecular Allergy Volume 1 ; 1 >
       au < manifest ; exists ; 2004 ; Clinical and Molecular Allergy Volume 2 ; 2 >
@@ -3183,7 +3185,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
-      au < testing ; exists ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
+      au < notReady ; exists ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
       
     }
@@ -3390,6 +3392,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.ccforum.com/
       comment[0] = base url changed to add www.
+      comment[notReady] = crawl completed with no substance
 
       au < manifest ; exists ; 1997 ; Critical Care Volume 1 ; 1 >
       au < manifest ; exists ; 1998 ; Critical Care Volume 2 ; 2 >
@@ -3408,7 +3411,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2011 ; Critical Care Volume 15 ; 15 >
       au < doNotProcess ; exists ; 2012 ; Critical Care Volume 16 ; 16 >
       au < manifest ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
-      au < testing ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
+      au < notReady ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
       au < manifest ; exists ; 2015 ; Critical Care Volume 19 ; 19 >
       }
       {
@@ -7033,9 +7036,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2052-4374
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2013 ; Annals of Occupational and Environmental Medicine Volume 25 ; 25 >
-      au < exists ; exists ; 2014 ; Annals of Occupational and Environmental Medicine Volume 26 ; 26 >
-      au < expected ; exists ; 2015 ; Annals of Occupational and Environmental Medicine Volume 27 ; 27 >
+      au < manifest ; exists ; 2013 ; Annals of Occupational and Environmental Medicine Volume 25 ; 25 >
+      au < manifest ; exists ; 2014 ; Annals of Occupational and Environmental Medicine Volume 26 ; 26 >
+      au < manifest ; exists ; 2015 ; Annals of Occupational and Environmental Medicine Volume 27 ; 27 >
 
     }
 
@@ -7050,8 +7053,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-7166
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Avian Research Volume 5 ; 5 >
-      au < expected ; exists ; 2015 ; Avian Research Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; Avian Research Volume 5 ; 5 >
+      au < manifest ; exists ; 2015 ; Avian Research Volume 6 ; 6 >
 
     }
 
@@ -7066,8 +7069,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2054-3581
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 >
 
     }
 
@@ -7083,20 +7086,20 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1944-446X
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2002 ; Chinese Journal of Cancer Volume 21 ; 21 >
-      au < exists ; exists ; 2003 ; Chinese Journal of Cancer Volume 22 ; 22 >
-      au < exists ; exists ; 2004 ; Chinese Journal of Cancer Volume 23 ; 23 >
-      au < exists ; exists ; 2005 ; Chinese Journal of Cancer Volume 24 ; 24 >
-      au < exists ; exists ; 2006 ; Chinese Journal of Cancer Volume 25 ; 25 >
-      au < exists ; exists ; 2007 ; Chinese Journal of Cancer Volume 26 ; 26 >
-      au < exists ; exists ; 2008 ; Chinese Journal of Cancer Volume 27 ; 27 >
-      au < exists ; exists ; 2009 ; Chinese Journal of Cancer Volume 28 ; 28 >
-      au < exists ; exists ; 2010 ; Chinese Journal of Cancer Volume 29 ; 29 >
-      au < exists ; exists ; 2011 ; Chinese Journal of Cancer Volume 30 ; 30 >
-      au < exists ; exists ; 2012 ; Chinese Journal of Cancer Volume 31 ; 31 >
-      au < exists ; exists ; 2013 ; Chinese Journal of Cancer Volume 32 ; 32 >
-      au < exists ; exists ; 2014 ; Chinese Journal of Cancer Volume 33 ; 33 >
-      au < expected ; exists ; 2015 ; Chinese Journal of Cancer Volume 34 ; 34 >
+      au < manifest ; exists ; 2002 ; Chinese Journal of Cancer Volume 21 ; 21 >
+      au < manifest ; exists ; 2003 ; Chinese Journal of Cancer Volume 22 ; 22 >
+      au < manifest ; exists ; 2004 ; Chinese Journal of Cancer Volume 23 ; 23 >
+      au < manifest ; exists ; 2005 ; Chinese Journal of Cancer Volume 24 ; 24 >
+      au < manifest ; exists ; 2006 ; Chinese Journal of Cancer Volume 25 ; 25 >
+      au < manifest ; exists ; 2007 ; Chinese Journal of Cancer Volume 26 ; 26 >
+      au < manifest ; exists ; 2008 ; Chinese Journal of Cancer Volume 27 ; 27 >
+      au < manifest ; exists ; 2009 ; Chinese Journal of Cancer Volume 28 ; 28 >
+      au < manifest ; exists ; 2010 ; Chinese Journal of Cancer Volume 29 ; 29 >
+      au < manifest ; exists ; 2011 ; Chinese Journal of Cancer Volume 30 ; 30 >
+      au < manifest ; exists ; 2012 ; Chinese Journal of Cancer Volume 31 ; 31 >
+      au < manifest ; exists ; 2013 ; Chinese Journal of Cancer Volume 32 ; 32 >
+      au < manifest ; exists ; 2014 ; Chinese Journal of Cancer Volume 33 ; 33 >
+      au < manifest ; exists ; 2015 ; Chinese Journal of Cancer Volume 34 ; 34 >
 
     }
 
@@ -7111,8 +7114,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-7565
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Climate Change Responses Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; Climate Change Responses Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Climate Change Responses Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; Climate Change Responses Volume 2 ; 2 >
 
     }
 
@@ -7127,8 +7130,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2326-0254
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Eye and Vision Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; Eye and Vision Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Eye and Vision Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; Eye and Vision Volume 2 ; 2 >
 
     }
 
@@ -7143,8 +7146,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2054-3085
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Fungal Biology and Biotechnology Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; Fungal Biology and Biotechnology Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Fungal Biology and Biotechnology Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; Fungal Biology and Biotechnology Volume 2 ; 2 >
 
     }
 
@@ -7159,8 +7162,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-6844
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Gynecologic Oncology Research and Practice Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; Gynecologic Oncology Research and Practice Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Gynecologic Oncology Research and Practice Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; Gynecologic Oncology Research and Practice Volume 2 ; 2 >
 
     }
 
@@ -7191,7 +7194,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-2393
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Journal of Compassionate Health Care Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; Journal of Compassionate Health Care Volume 1 ; 1 >
 
     }
 
@@ -7206,8 +7209,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1944-3277
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 >
-      au < expected ; exists ; 2015 ; Standards in Genomic Sciences Volume 10 ; 10 >
+      au < manifest ; exists ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 >
+      au < manifest ; exists ; 2015 ; Standards in Genomic Sciences Volume 10 ; 10 >
 
     }
 

@@ -215,10 +215,11 @@
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = interacao
 
+      au < manifest ; 1993 ; 17 ; Revista Inter Ação Volume 1993 ; 1993 ; >
       au < manifest ; 1994 ; 18 ; Revista Inter Ação Volume 1994 ; 1994 ; >
-      au < testing ; 1995 ; 19 ; Revista Inter Ação Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 20 ; Revista Inter Ação Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 21 ; Revista Inter Ação Volume 1997 ; 1997 ; >
+      au < ready ; 1995 ; 19 ; Revista Inter Ação Volume 1995 ; 1995 ; >
+      au < ready ; 1996 ; 20 ; Revista Inter Ação Volume 1996 ; 1996 ; >
+      au < ready ; 1997 ; 21 ; Revista Inter Ação Volume 1997 ; 1997 ; >
       au < released ; 1998 ; 22 ; Revista Inter Ação Volume 1998 ; 1998 ; >
       au < released ; 1999 ; 23 ; Revista Inter Ação Volume 1999 ; 1999 ; >
       au < released ; 2000 ; 24 ; Revista Inter Ação Volume 2000 ; 2000 ; >

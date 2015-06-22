@@ -213,6 +213,7 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = mneme
 
+      au < manifest ; 2000 ; 1 ; Mneme-Revista de Humanidades Volume 2000 ; 2000 ; >
       au < manifest ; 2001 ; 2 ; Mneme-Revista de Humanidades Volume 2001 ; 2001 ; >
       au < ready ; 2002 ; 3 ; Mneme-Revista de Humanidades Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 4 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 ; >

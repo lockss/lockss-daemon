@@ -119,12 +119,13 @@
       comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = interfaces
+      comment[notReady] = no permission from publisher
 
       au < exists ; 2010 ; 1 ; Revista Interfaces da Educação Volume 1 ; 0001 >
       au < exists ; 2011 ; 2 ; Revista Interfaces da Educação Volume 2 ; 0002 >
       au < exists ; 2012 ; 3 ; Revista Interfaces da Educação Volume 3 ; 0003 >
       au < expected ; 2013 ; 4 ; Revista Interfaces da Educação Volume 4 ; 0004 >
-      au < testing ; 2014 ; 5 ; Revista Interfaces da Educação Volume 5 ; 0005 >
+      au < notReady ; 2014 ; 5 ; Revista Interfaces da Educação Volume 5 ; 0005 >
       au < manifest ; 2015 ; 6 ; Revista Interfaces da Educação Volume 6 ; 0006 >
 
   }

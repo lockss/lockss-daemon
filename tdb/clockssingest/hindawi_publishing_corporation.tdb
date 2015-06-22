@@ -2909,7 +2909,7 @@
     au < manifest ; exists ; 2011 ; Evidence-based Complementary and Alternative Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Evidence-based Complementary and Alternative Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Evidence-based Complementary and Alternative Medicine Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Evidence-based Complementary and Alternative Medicine Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Evidence-based Complementary and Alternative Medicine Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Evidence-based Complementary and Alternative Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3366,7 +3366,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Biomedical Imaging Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3512,7 +3512,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Combinatorics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3527,7 +3527,7 @@
 
     param[journal_id] = ijcm
 
-    au < testing ; exists ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Computational Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3548,7 +3548,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Computer Games Technology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Computer Games Technology Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Computer Games Technology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3567,7 +3567,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Corrosion Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -4860,7 +4860,7 @@
     au < manifest ; exists ; 2012 ; Journal of Amino Acids Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Amino Acids Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Journal of Amino Acids Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Amino Acids Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Amino Acids Volume 2015 ; 2015 ; 2015 >
     
   }
 

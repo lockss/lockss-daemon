@@ -477,6 +477,7 @@
       au < released ; 2012 ; 16 ; Debates do NER Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 17 ; Debates do NER Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 18 ; Debates do NER Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 19 ; Debates do NER Volume 2015 ; 2015 ; >
 
   }
 
@@ -492,7 +493,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = educacaoerealidade
 
-      au < testing ; 1999 ; 24 ; Educação & Realidade Volume 1999 ; 1999 ; >
+      au < ready ; 1999 ; 24 ; Educação & Realidade Volume 1999 ; 1999 ; >
       au < ready ; 2000 ; 25 ; Educação & Realidade Volume 2000 ; 2000 ; >
       au < released ; 2001 ; 26 ; Educação & Realidade Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 27 ; Educação & Realidade Volume 2002 ; 2002 ; >
@@ -673,8 +674,9 @@
       au < released ; 2004 ; 8 ; History of Education Journal Volume 2004 ; 2004 ; >
       au < ready ; 2005 ; 9 ; History of Education Journal Volume 2005 ; 2005 ; >
       au < ready ; 2006 ; 10 ; History of Education Journal Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 11 ; History of Education Journal Volume 2007 ; 2007 ; >
+      au < ready ; 2007 ; 11 ; History of Education Journal Volume 2007 ; 2007 ; >
       au < manifest ; 2008 ; 12 ; History of Education Journal Volume 2008 ; 2008 ; >
+      au < manifest ; 2009 ; 13 ; History of Education Journal Volume 2009 ; 2009 ; >
 
   }
 
@@ -689,8 +691,9 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = iluminuras
 
+      au < manifest ; 2003 ; 4 ; ILUMINURAS Volume 2003 ; 2003 ; >
       au < manifest ; 2004 ; 5 ; ILUMINURAS Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 6 ; ILUMINURAS Volume 2005 ; 2005 ; >
+      au < ready ; 2005 ; 6 ; ILUMINURAS Volume 2005 ; 2005 ; >
       au < ready ; 2006 ; 7 ; ILUMINURAS Volume 2006 ; 2006 ; >
       au < ready ; 2007 ; 8 ; ILUMINURAS Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 9 ; ILUMINURAS Volume 2008 ; 2008 ; >
@@ -779,7 +782,7 @@
       param[journal_id] = Movimento
 
       au < manifest ; 1994 ; 1 ; Movimento (ESEF/UFRGS) Volume 1994 ; 1994 ; >
-      au < testing ; 1995 ; 2 ; Movimento (ESEF/UFRGS) Volume 1995 ; 1995 ; >
+      au < ready ; 1995 ; 2 ; Movimento (ESEF/UFRGS) Volume 1995 ; 1995 ; >
       au < ready ; 1996 ; 3 ; Movimento (ESEF/UFRGS) Volume 1996 ; 1996 ; >
       au < ready ; 1997 ; 4 ; Movimento (ESEF/UFRGS) Volume 1997 ; 1997 ; >
       au < notReady ; 1998 ; 5 ; Movimento (ESEF/UFRGS) Volume 1998 ; 1998 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
@@ -1150,7 +1153,7 @@
       au < released ; 2011 ; 1 ; Revista de Iniciação Científica Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Revista de Iniciação Científica Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 3 ; Revista de Iniciação Científica Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 4 ; Revista de Iniciação Científica Volume 2014 ; 2014 ; >
+      au < ready ; 2014 ; 4 ; Revista de Iniciação Científica Volume 2014 ; 2014 ; >
 
   }
 

@@ -3135,7 +3135,7 @@
     au < manifest ; exists ; 2005 ; The British Journal of Social Work Volume 35 ; 35 ; >
     au < manifest ; exists ; 2006 ; The British Journal of Social Work Volume 36 ; 36 ; >
     au < manifest ; exists ; 2007 ; The British Journal of Social Work Volume 37 ; 37 ; >
-    au < exists ; exists ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
     au < zapped ; finished ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
     au < finished ; frozen ; 2010 ; The British Journal of Social Work Volume 40 ; 40 ; >
     au < finished ; frozen ; 2011 ; The British Journal of Social Work Volume 41 ; 41 ; >
@@ -3256,10 +3256,10 @@
     au < manifest ; exists ; 2007 ; British Medical Bulletin Volume 81-82 ; 81-82 ; >
     au < manifest ; exists ; 2007 ; British Medical Bulletin Volume 83 ; 83 ; >
     au < manifest ; exists ; 2007 ; British Medical Bulletin Volume 84 ; 84 ; >
-    au < exists ; exists ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
-    au < exists ; exists ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
-    au < exists ; exists ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
-    au < exists ; exists ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
+    au < manifest ; exists ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
+    au < manifest ; exists ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
+    au < manifest ; exists ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
+    au < manifest ; exists ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
     au < zapped ; finished ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; >
     au < finished ; crawling ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; >
@@ -3457,7 +3457,7 @@
     au < manifest ; exists ; 2005 ; Bulletin of the London Mathematical Society Volume 37 ; 37 ; >
     au < manifest ; exists ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; >
     au < manifest ; exists ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; >
-    au < exists ; exists ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
     au < finished ; crawling ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
     au < finished ; frozen ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
     au < finished ; crawling ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
@@ -4075,7 +4075,7 @@
     au < manifest ; exists ; 2005 ; Chemical Senses Volume 30 ; 30 ; >
     au < manifest ; exists ; 2006 ; Chemical Senses Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Chemical Senses Volume 32 ; 32 ; >
-    au < exists ; exists ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
     au < finished ; crawling ; 2009 ; Chemical Senses Volume 34 ; 34 ; >
     au < finished ; crawling ; 2010 ; Chemical Senses Volume 35 ; 35 ; >
     au < finished ; crawling ; 2011 ; Chemical Senses Volume 36 ; 36 ; >
@@ -5764,7 +5764,7 @@
     au < manifest ; exists ; 2005 ; Europace Volume 7 ; 7 ; >
     au < manifest ; exists ; 2006 ; Europace Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; Europace Volume 9 ; 9 ; >
-    au < exists ; exists ; 2008 ; Europace Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2008 ; Europace Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Europace Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Europace Volume 13 ; 13 ; >
@@ -5844,7 +5844,7 @@
     au < manifest ; exists ; 2005 ; European Heart Journal Volume 26 ; 26 ; >
     au < manifest ; exists ; 2006 ; European Heart Journal Volume 27 ; 27 ; >
     au < manifest ; exists ; 2007 ; European Heart Journal Volume 28 ; 28 ; >
-    au < exists ; exists ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
@@ -8608,7 +8608,7 @@
     au < manifest ; exists ; 2005 ; Human Rights Law Review Volume 5 ; 5 ; >
     au < manifest ; exists ; 2006 ; Human Rights Law Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Human Rights Law Review Volume 7 ; 7 ; >
-    au < exists ; exists ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
     au < finished ; crawling ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; >
     au < zapped ; finished ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
     au < finished ; crawling ; 2011 ; Human Rights Law Review Volume 11 ; 11 ; >
@@ -10804,7 +10804,7 @@
     au < finished ; frozen ; 2012 ; Journal of American History Volume 99 ; 99 ; >
     au < crawling ; exists ; 2013 ; Journal of American History Volume 100 ; 100 ; >
     au < ready ; exists ; 2014 ; Journal of American History Volume 101 ; 101 ; >
-    au < expected ; exists ; 2015 ; Journal of American History Volume 102 ; 102 ; >
+    au < manifest ; exists ; 2015 ; Journal of American History Volume 102 ; 102 ; >
 
     }
 
@@ -10822,22 +10822,22 @@
     param[base_url] = http://jamia.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 1994 ; JAMIA Volume 1 ; 1 ; >
-    au < exists ; exists ; 1995 ; JAMIA Volume 2 ; 2 ; >
-    au < exists ; exists ; 1996 ; JAMIA Volume 3 ; 3 ; >
-    au < exists ; exists ; 1997 ; JAMIA Volume 4 ; 4 ; >
-    au < exists ; exists ; 1998 ; JAMIA Volume 5 ; 5 ; >
-    au < exists ; exists ; 1999 ; JAMIA Volume 6 ; 6 ; >
-    au < exists ; exists ; 2000 ; JAMIA Volume 7 ; 7 ; >
-    au < exists ; exists ; 2001 ; JAMIA Volume 8 ; 8 ; >
-    au < exists ; exists ; 2002 ; JAMIA Volume 9 ; 9 ; >
-    au < exists ; exists ; 2003 ; JAMIA Volume 10 ; 10 ; >
-    au < exists ; exists ; 2004 ; JAMIA Volume 11 ; 11 ; >
-    au < exists ; exists ; 2005 ; JAMIA Volume 12 ; 12 ; >
-    au < exists ; exists ; 2006 ; JAMIA Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1994 ; JAMIA Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1995 ; JAMIA Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1996 ; JAMIA Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1997 ; JAMIA Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1998 ; JAMIA Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1999 ; JAMIA Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2000 ; JAMIA Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2001 ; JAMIA Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2002 ; JAMIA Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2003 ; JAMIA Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2004 ; JAMIA Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2005 ; JAMIA Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2006 ; JAMIA Volume 13 ; 13 ; >
     au < manifest ; exists ; 2007 ; JAMIA Volume 14 ; 14 ; >
-    au < exists ; exists ; 2008 ; JAMIA Volume 15 ; 15 ; >
-    au < exists ; exists ; 2009 ; JAMIA Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2008 ; JAMIA Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2009 ; JAMIA Volume 16 ; 16 ; >
     au < manifest ; exists ; 2010 ; JAMIA Volume 17 ; 17 ; >
     au < manifest ; exists ; 2011 ; JAMIA Volume 18 ; 18 ; >
     au < manifest ; exists ; 2012 ; JAMIA Volume 19 ; 19 ; >
@@ -11604,7 +11604,7 @@
     au < manifest ; exists ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 ; >
     au < manifest ; exists ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 ; >
-    au < exists ; exists ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
     au < crawling ; exists ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
     au < finished ; frozen ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
     au < finished ; frozen ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 ; >
@@ -11749,7 +11749,7 @@
     au < manifest ; exists ; 2005 ; Journal of Economic Geography Volume 5 ; 5 ; >
     au < manifest ; exists ; 2006 ; Journal of Economic Geography Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Journal of Economic Geography Volume 7 ; 7 ; >
-    au < exists ; exists ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
     au < crawling ; exists ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
     au < finished ; crawling ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
     au < finished ; crawling ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
@@ -12175,7 +12175,7 @@
     au < manifest ; exists ; 2006 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 61 ; 61 ; >
     au < manifest ; exists ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 ; >
     au < manifest ; exists ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 ; >
-    au < exists ; exists ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B ; >
+    au < manifest ; exists ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B ; >
     au < finished ; crawling ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B ; >
     au < finished ; crawling ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B ; >
     au < finished ; frozen ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B ; >
@@ -12445,7 +12445,7 @@
     au < manifest ; exists ; 2005 ; Journal of the History of Collections Volume 17 ; 17 ; >
     au < manifest ; exists ; 2006 ; Journal of the History of Collections Volume 18 ; 18 ; >
     au < manifest ; exists ; 2007 ; Journal of the History of Collections Volume 19 ; 19 ; >
-    au < exists ; exists ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
     au < crawling ; exists ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
     au < finished ; crawling ; 2010 ; Journal of the History of Collections Volume 22 ; 22 ; >
     au < finished ; crawling ; 2011 ; Journal of the History of Collections Volume 23 ; 23 ; >
@@ -16307,7 +16307,7 @@
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 448 ; 448 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 449 ; 449 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 450 ; 450 ; >
-    au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 451 ; 451 ; >
+    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 451 ; 451 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 452 ; 452 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 453 ; 453 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 ; >
@@ -16420,7 +16420,7 @@
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 448 ; 448 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 449 ; 449 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 450 ; 450 ; >
-    au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 451 ; 451 ; >
+    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 451 ; 451 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 452 ; 452 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 453 ; 453 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 ; >
@@ -18017,8 +18017,8 @@
     au < manifest ; exists ; 2005 ; Oxford Economic Papers Volume 57 ; 57 ; >
     au < manifest ; exists ; 2006 ; Oxford Economic Papers Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; Oxford Economic Papers Volume 59 ; 59 ; >
-    au < exists ; exists ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
-    au < exists ; exists ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
     au < finished ; frozen ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
     au < finished ; frozen ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
     au < finished ; crawling ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
@@ -19393,8 +19393,8 @@
     param[base_url] = http://phe.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
-    au < exists ; exists ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
     au < finished ; crawling ; 2010 ; Public Health Ethics Volume 3 ; 3 ; >
     au < finished ; crawling ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
@@ -19932,7 +19932,7 @@
     au < manifest ; exists ; 2006 ; The Quarterly Journal of Mathematics Volume 57 ; 57 ; >
     au < manifest ; exists ; 2007 ; The Quarterly Journal of Mathematics Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
-    au < exists ; exists ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
     au < finished ; crawling ; 2010 ; The Quarterly Journal of Mathematics Volume 61 ; 61 ; >
     au < finished ; crawling ; 2011 ; The Quarterly Journal of Mathematics Volume 62 ; 62 ; >
     au < crawling ; exists ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
@@ -20029,7 +20029,7 @@
     au < manifest ; exists ; 2006 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 ; >
     au < manifest ; exists ; 2007 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 ; >
     au < manifest ; exists ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
-    au < exists ; exists ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
     au < finished ; crawling ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
     au < finished ; frozen ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
     au < crawling ; exists ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
@@ -21140,7 +21140,7 @@
 
     au < manifest ; exists ; 2006 ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 ; >
     au < manifest ; exists ; 2007 ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 ; >
-    au < exists ; exists ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
     au < zapped ; finished ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; >
     au < finished ; frozen ; 2010 ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 ; >
     au < finished ; frozen ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
