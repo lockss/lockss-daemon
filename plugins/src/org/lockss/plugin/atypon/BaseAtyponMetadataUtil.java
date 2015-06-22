@@ -165,6 +165,9 @@ public class BaseAtyponMetadataUtil {
       outTitle = outTitle.substring(4);// get over the "the " 
     }
     
+    //reduce interior multiple space characters to only one
+    outTitle = outTitle.replaceAll("\\s+", " ");
+    
     // Using the normalization map, substitute characters
     for (Map.Entry<String, String> norm_entry : AtyponNormalizeMap.entrySet())
     {

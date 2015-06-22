@@ -113,6 +113,25 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     theDaemon.stopDaemon();
     super.tearDown();
   }
+  
+  
+  /*
+   * Test the functionality of the MetadataUtilities
+   *
+   */
+  public void testNormalizeTitleValue() throws Exception {
+
+    assertEquals(BaseAtyponMetadataUtil.normalizeTitle("The title goes here"), 
+        BaseAtyponMetadataUtil.normalizeTitle("Title Goes Here"));
+    assertEquals(BaseAtyponMetadataUtil.normalizeTitle("Title    with     random spaces"), 
+        BaseAtyponMetadataUtil.normalizeTitle("Title with random spaces"));
+    assertEquals(BaseAtyponMetadataUtil.normalizeTitle("Normalize -- hyphen"), 
+        BaseAtyponMetadataUtil.normalizeTitle("normalize \u2013\u2013 hyphen"));
+    assertEquals(BaseAtyponMetadataUtil.normalizeTitle("Title and title"), 
+        BaseAtyponMetadataUtil.normalizeTitle("Title & title"));
+    assertEquals(BaseAtyponMetadataUtil.normalizeTitle("   leading spaces"), 
+        BaseAtyponMetadataUtil.normalizeTitle("leading spaces"));
+  }
 
   /**
    * Configuration method. 

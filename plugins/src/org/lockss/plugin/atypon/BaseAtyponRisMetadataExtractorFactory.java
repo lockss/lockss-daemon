@@ -123,6 +123,14 @@ implements FileMetadataExtractorFactory {
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
         }
       }
+      /*
+       * In books, the chapter (article) title seems to come from tag "ti" not "t1"
+       */
+      if (am.get(MetadataField.FIELD_ARTICLE_TITLE) == null) {
+        if (am.getRaw("TI") != null) { // if T1 wasn't there, use TI
+          am.put(MetadataField.FIELD_ARTICLE_TITLE, am.getRaw("TI"));
+        }
+      }
            
       // Only emit if this item is likely to be from this AU
       // protect against counting overcrawled articles
