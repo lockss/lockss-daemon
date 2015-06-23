@@ -125,8 +125,8 @@ public class BaseAtyponMetadataUtil {
         String rawTextFoundTitle = generateRawTitle(normFoundTitle);
         log.debug3("raw AuTitle: " + rawTextAuTitle);
         log.debug3("raw foundTitle: " + rawTextFoundTitle);
-        isInAu =( ( (StringUtils.contains(normAuTitle,normFoundTitle)) || 
-            (StringUtils.contains(normFoundTitle,normAuTitle))) );
+        isInAu =( ( (StringUtils.contains(rawTextAuTitle,rawTextFoundTitle)) || 
+            (StringUtils.contains(rawTextFoundTitle,rawTextAuTitle))) );
       }
     }
 
