@@ -116,7 +116,18 @@ public class BaseAtyponMetadataUtil {
       // If the titles are a subset of each other or are equal after normalization
       isInAu = ( 
           ( (StringUtils.contains(normAuTitle,normFoundTitle)) || 
-              (StringUtils.contains(normFoundTitle,normAuTitle))) ); 
+              (StringUtils.contains(normFoundTitle,normAuTitle))) );
+      // last chance... cover weird cases, such as when the publisher mistakenly
+      // converts multi-byte in to ? in their text output
+      if (!isInAu) {
+        log.debug3("one last attempt to match");
+        String rawTextAuTitle = generateRawTitle(normAuTitle);
+        String rawTextFoundTitle = generateRawTitle(normFoundTitle);
+        log.debug3("raw AuTitle: " + rawTextAuTitle);
+        log.debug3("raw foundTitle: " + rawTextFoundTitle);
+        isInAu =( ( (StringUtils.contains(normAuTitle,normFoundTitle)) || 
+            (StringUtils.contains(normFoundTitle,normAuTitle))) );
+      }
     }
 
     log.debug3("After metadata check, isInAu is " + isInAu);
@@ -175,6 +186,25 @@ public class BaseAtyponMetadataUtil {
       // StringUtils.replace is MUCH faster than String.replace
       outTitle = StringUtils.replace(outTitle, norm_entry.getKey(), norm_entry.getValue());
     }
+    return outTitle;
+  }
+
+  /*
+   * A last ditch effort to avoid false negatives due to odd characters
+   * It is assumed it will already have gone through normalizeTitle which lets us make
+   * assumptions
+   * remove spaces
+   * remove ?,-,:,"
+   * 'this is a text:title-for "questions"?' in to
+   * 'thisisatextitleforquestions'
+   * 
+   */
+  public static String generateRawTitle(String inTitle) {
+    String outTitle;
+    if (inTitle == null) return null;
+
+    //reduce interior multiple space characters to only one
+    outTitle = inTitle.replaceAll("(\\s|\"|\\?|-|:)", "");
     return outTitle;
   }
 

@@ -131,6 +131,16 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
         BaseAtyponMetadataUtil.normalizeTitle("Title & title"));
     assertEquals(BaseAtyponMetadataUtil.normalizeTitle("   leading spaces"), 
         BaseAtyponMetadataUtil.normalizeTitle("leading spaces"));
+    
+    // now checking the fall-back last ditch attempt
+    assertEquals(BaseAtyponMetadataUtil.generateRawTitle("leading spaces:colon?"), 
+        BaseAtyponMetadataUtil.generateRawTitle("leadingspacescolon"));
+    assertEquals(BaseAtyponMetadataUtil.generateRawTitle("relapsing-remitting"), 
+        BaseAtyponMetadataUtil.generateRawTitle("relapsing?remitting"));
+    assertEquals(BaseAtyponMetadataUtil.generateRawTitle("foo\"blah"), 
+        BaseAtyponMetadataUtil.generateRawTitle("foo-blah"));
+
+    
   }
 
   /**
