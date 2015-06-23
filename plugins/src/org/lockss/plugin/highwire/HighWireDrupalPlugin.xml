@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.0</string>
+    <string>1.68.4</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -204,7 +204,7 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:HighWire</string>
+    <string>title_attribute:highwire_crawl_pool:HighWire</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -228,7 +228,7 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static.www.bmj.com|.+[.]gstatic[.]com</string>
+    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com|.+[.]gstatic[.]com</string>
   </entry>
   <entry>
     <!-- APS & OUP use cdn -->
