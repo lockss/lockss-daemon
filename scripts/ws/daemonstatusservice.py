@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.3'
+__version__ = '0.1.4'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
@@ -67,8 +67,8 @@ class DaemonStatusServiceOptions(object):
   def get_query(self): return self.__query
   def set_query(self, query): self.__query = query
 
-def datetime_from_epoch_ms(epoch_ms):
-  return datetime.datetime.fromtimestamp(epoch_ms / 1000)
+def datetime_from_ms(ms):
+  return datetime.datetime.fromtimestamp(ms / 1000)
 
 def duration_from_ms(ms):
   s, ms = divmod(ms, 1000)
@@ -249,7 +249,7 @@ def query_aus(options):
   - PluginName (string)
   - PublishingPlatform (string)
   - RecentPollAgreement (numeric)
-  - Repository (string)
+  - RepositoryPath (string)
   - SubscriptionStatus (string)
   - SubstanceState (string)
   - TdbPublisher (string)
@@ -270,7 +270,10 @@ class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
     if len(args) != 1: parser.error('A host is required')
     self.set_host(args[0])
     if len(filter(None, [opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus])) != 1:
-      parser.error('One of --get-au-status, --get-auids, --get-auids-names, --get-platform-configuration, --get-peer-agreements, --is-daemon-ready, --is-daemon-ready-quiet, --query_aus is required')
+      parser.error('Exactly one of --get-au-status, --get-auids, --get-auids-names, --get-platform-configuration, --get-peer-agreements, --is-daemon-ready, --is-daemon-ready-quiet, --query_aus is required')
+    if opts.where and not any([opts.query_aus]):
+      parser.error('--where can only be applied to --query-aus')
+    self.__fields = None
     self.__get_au_status = opts.get_au_status is not None
     if self.__get_au_status: self.set_auid(opts.get_au_status)
     self.__get_auids = opts.get_auids
@@ -281,12 +284,17 @@ class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
     self.__is_daemon_ready = opts.is_daemon_ready
     self.__is_daemon_ready_quiet = opts.is_daemon_ready_quiet
     self.__query_aus = opts.query_aus is not None
-    if self.__query_aus: self.set_query(opts.query_aus)
-    if opts.username is None: u = raw_input('UI username: ')
-    else: u = opts.username
-    if opts.password is None: p = getpass.getpass('UI password: ')
-    else: p = opts.password
+    if self.__query_aus:
+      fields = [s.strip() for s in opts.query_aus.split(',')]
+      for f in fields:
+        if f not in _QUERY_AUS: parser.error('Unknown field: %s' % (f,))
+      self.__fields = fields
+    self.__where = opts.where or None
+    u = opts.username or raw_input('UI username: ')
+    p = opts.password or getpass.getpass('UI password: ')
     self.set_auth(u, p)
+  def get_fields(self): return self.__fields
+  def set_fields(self, fields): self.__fields = fields
   def is_get_au_status(self): return self.__get_au_status
   def is_get_peer_agreements(self): return self.__get_peer_agreements
   def is_get_platform_configuration(self): return self.__get_platform_configuration
@@ -295,6 +303,8 @@ class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
   def is_is_daemon_ready(self): return self.__is_daemon_ready
   def is_is_daemon_ready_quiet(self): return self.__is_daemon_ready_quiet
   def is_query_aus(self): return self.__query_aus
+  def get_where(self): return self.__where
+  def set_where(self, where): return self.__where
   @staticmethod
   def make_parser():
     parser = optparse.OptionParser(version=__version__, usage='%prog [OPTIONS] HOST')
@@ -306,14 +316,15 @@ class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
     parser.add_option('--is-daemon-ready', action='store_true', default=False, help='Outputs True or False, always exits with 0')
     parser.add_option('--is-daemon-ready-quiet', action='store_true', default=False, help='Outputs nothing, exits with 0 for True and 1 for False')
     parser.add_option('--password', metavar='PASS', help='UI password')
-    parser.add_option('--query-aus', metavar='QUERY', help='Performs the given AU query')
+    parser.add_option('--query-aus', metavar='CSFIELDS', help='Performs an AU query and outputs the given fields, supplied comma-separated among %s' % (_QUERY_AUS.keys(),))
     parser.add_option('--username', metavar='USER', help='UI username')
+    parser.add_option('--where', help='optional WHERE clause for --query-aus')
     return parser
 
-def __output_record(tooloptions, lst):
+def _output_record(tooloptions, lst):
   print '\t'.join([str(x) for x in lst])
 
-def __do_get_au_status(tooloptions):
+def _do_get_au_status(tooloptions):
   r = get_au_status(tooloptions)
   print 'AUID: %s' % (tooloptions.get_auid(),)
   print
@@ -323,16 +334,16 @@ def __do_get_au_status(tooloptions):
   print 'Crawl pool: %s' % (r.CrawlPool,)
   print 'Crawl proxy: %s' % (r.CrawlProxy,)
   print 'Crawl window: %s' % (r.CrawlWindow,)
-  print 'Creation time: %s' % (datetime_from_epoch_ms(r.CreationTime),)
+  print 'Creation time: %s' % (datetime_from_ms(r.CreationTime),)
   print 'Currently crawling: %s' % (r.CurrentlyCrawling,)
   print 'Currently polling: %s' % (r.CurrentlyPolling,)
   print 'Disk usage: %s' % (r.DiskUsage,)
   print 'Journal title: %s' % (r.JournalTitle,)
-  print 'Last completed crawl: %s' % (datetime_from_epoch_ms(r.LastCompletedCrawl),)
-  print 'Last completed poll: %s' % (datetime_from_epoch_ms(r.LastCompletedPoll),)
-  print 'Last crawl: %s' % (datetime_from_epoch_ms(r.LastCrawl),)
+  print 'Last completed crawl: %s' % (datetime_from_ms(r.LastCompletedCrawl),)
+  print 'Last completed poll: %s' % (datetime_from_ms(r.LastCompletedPoll),)
+  print 'Last crawl: %s' % (datetime_from_ms(r.LastCrawl),)
   print 'Last crawl result: %s' % (r.LastCrawlResult,)
-  print 'Last poll: %s' % (datetime_from_epoch_ms(r.LastPoll),)
+  print 'Last poll: %s' % (datetime_from_ms(r.LastPoll),)
   print 'Last poll result: %s' % (r.LastPollResult,)
   print 'Plugin name: %s' % (r.PluginName,)
   print 'Publisher: %s' % (r.Publisher,)
@@ -345,27 +356,27 @@ def __do_get_au_status(tooloptions):
   print 'Volume: %s' % (r.Volume,)
   print 'Year: %s' % (r.Year,)
 
-def __do_get_auids(tooloptions):
+def _do_get_auids(tooloptions):
   for auid in get_auids(tooloptions): print auid
 
-def __do_get_auids_names(tooloptions):
-  for r in get_auids_names(tooloptions): __output_record(tooloptions, [r.Id, r.Name])
+def _do_get_auids_names(tooloptions):
+  for r in get_auids_names(tooloptions): _output_record(tooloptions, [r.Id, r.Name])
 
-def __do_get_peer_agreements(tooloptions):
+def _do_get_peer_agreements(tooloptions):
   pa = get_peer_agreements(tooloptions)
   if pa is None:
     print 'No such AUID'
     return
   for pae in pa:
     for ae in pae.Agreements.Entry:
-      __output_record(tooloptions, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetime_from_epoch_ms(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetime_from_epoch_ms(ae.Value.HighestPercentAgreementTimestamp)])
+      _output_record(tooloptions, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetime_from_ms(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetime_from_ms(ae.Value.HighestPercentAgreementTimestamp)])
 
-def __do_get_platform_configuration(tooloptions):
+def _do_get_platform_configuration(tooloptions):
   r = get_platform_configuration(tooloptions)
   print 'Admin e-mail: %s' % (r.AdminEmail,)
   print 'Build host: %s' % (r.BuildHost,)
-  print 'Build timestamp: %s' % (datetime_from_epoch_ms(r.BuildTimestamp),)
-  print 'Current time: %s' % (datetime_from_epoch_ms(r.CurrentTime),)
+  print 'Build timestamp: %s' % (datetime_from_ms(r.BuildTimestamp),)
+  print 'Current time: %s' % (datetime_from_ms(r.CurrentTime),)
   print 'Current working directory: %s' % (r.CurrentWorkingDirectory,)
   print 'Daemon version:'
   print '\tBuild version: %s' % (r.DaemonVersion.BuildVersion,)
@@ -391,28 +402,68 @@ def __do_get_platform_configuration(tooloptions):
   print 'Uptime: %s' % (duration_from_ms(r.Uptime),)
   print 'V3 identity: %s' % (r.V3Identity,)
 
-def __do_is_daemon_ready(tooloptions):
+def _do_is_daemon_ready(tooloptions):
   '''Outputs "True" or "False", then returns.'''
   print is_daemon_ready(tooloptions)
 
-def __do_is_daemon_ready_quiet(tooloptions):
+def _do_is_daemon_ready_quiet(tooloptions):
   '''Outputs nothing, exits with 1 for "False" and returns for "True".'''
   if not is_daemon_ready(tooloptions): sys.exit(1)
 
-def __do_query_aus(tooloptions):
-  # Needs much improvement
-  print '%d matching AUs' % (len(query_aus(tooloptions)),)
+_QUERY_AUS = {
+  'accessType': lambda r: r.AccessType,
+  'auConfiguration': lambda r: '<AuConfiguration>',
+  'auId': lambda r: r.AuId,
+  'availableFromPublisher': lambda r: r.AvailableFromPublisher,
+  'contentSize': lambda r: r.ContentSize,
+  'crawlPool': lambda r: r.CrawlPool,
+  'crawlProxy': lambda r: r.CrawlProxy,
+  'crawlWindow': lambda r: r.CrawlWindow,
+  'creationTime': lambda r: datetime_from_ms(r.CreationTime),
+  'currentlyCrawling': lambda r: r.CurrentlyCrawling,
+  'currentlyPolling': lambda r: r.CurrentlyPolling,
+  'diskUsage': lambda r: r.DiskUsage,
+  'isBulkContent': lambda r: r.IsBulkContent,
+  'lastCompletedCrawl': lambda r: datetime_from_ms(r.LastCompletedCrawl),
+  'lastCompletedPoll': lambda r: datetime_from_ms(r.LastCompletedPoll),
+  'lastCrawl': lambda r: datetime_from_ms(r.LastCrawl),
+  'lastCrawlResult': lambda r: r.LastCrawlResult,
+  'lastPoll': lambda r: datetime_from_ms(r.LastPoll),
+  'lastPollResult': lambda r: r.LastPollResult,
+  'name': lambda r: r.Name,
+  'newContentCrawlUrls': lambda r: r.NewContentCrawlUrls,
+  'peerAgreements': lambda r: '<PeerAgreements>',
+  'pluginName': lambda r: r.PluginName,
+  'publishingPlatform': lambda r: r.PublishingPlatform,
+  'recentPollAgreement': lambda r: r.RecentPollAgreement,
+  'repositoryPath': lambda r: r.RepositoryPath,
+  'subscriptionStatus': lambda r: r.SubscriptionStatus,
+  'substanceState': lambda r: r.SubstanceState,
+  'tdbPublisher': lambda r: r.TdbPublisher,
+  'tdbYear': lambda r: r.TdbYear,
+  'urlStems': lambda r: r.UrlStems,
+  'volume': lambda r: r.Volume
+}
+
+def _do_query_aus(tooloptions):
+  query = 'SELECT %s' % (', '.join(tooloptions.get_fields()),)
+  where = tooloptions.get_where()
+  if where: query = '%s WHERE %s' % (query, where)
+  tooloptions.set_query(query)
+  recs = query_aus(tooloptions)
+  fieldfuncs = [_QUERY_AUS[f] for f in tooloptions.get_fields()]
+  for r in recs: _output_record(tooloptions, [f(r) for f in fieldfuncs])
 
 if __name__ == '__main__':
   parser = _DaemonStatusServiceToolOptions.make_parser()
   (opts, args) = parser.parse_args()
   tooloptions = _DaemonStatusServiceToolOptions(parser, opts, args)
-  if tooloptions.is_get_au_status(): __do_get_au_status(tooloptions)
-  elif tooloptions.is_get_auids(): __do_get_auids(tooloptions)
-  elif tooloptions.is_get_auids_names(): __do_get_auids_names(tooloptions)
-  elif tooloptions.is_get_peer_agreements(): __do_get_peer_agreements(tooloptions)
-  elif tooloptions.is_get_platform_configuration(): __do_get_platform_configuration(tooloptions)
-  elif tooloptions.is_is_daemon_ready(): __do_is_daemon_ready(tooloptions)
-  elif tooloptions.is_is_daemon_ready_quiet(): __do_is_daemon_ready_quiet(tooloptions)
-  elif tooloptions.is_query_aus(): __do_query_aus(tooloptions)
+  if tooloptions.is_get_au_status(): _do_get_au_status(tooloptions)
+  elif tooloptions.is_get_auids(): _do_get_auids(tooloptions)
+  elif tooloptions.is_get_auids_names(): _do_get_auids_names(tooloptions)
+  elif tooloptions.is_get_peer_agreements(): _do_get_peer_agreements(tooloptions)
+  elif tooloptions.is_get_platform_configuration(): _do_get_platform_configuration(tooloptions)
+  elif tooloptions.is_is_daemon_ready(): _do_is_daemon_ready(tooloptions)
+  elif tooloptions.is_is_daemon_ready_quiet(): _do_is_daemon_ready_quiet(tooloptions)
+  elif tooloptions.is_query_aus(): _do_query_aus(tooloptions)
 
