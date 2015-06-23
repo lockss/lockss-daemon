@@ -20,10 +20,9 @@
     param[base_url] = http://globalsummitry.org/
     param[journal_abbr] = gsj
     implicit < status ; status2 ; year ; name ; param[volume] >
+    comment[down] = website gone
 
-    au < crawling ; exists ; 2013 ; Global Summitry Journal Volume 1 ; 1 >
-    au < expected ; exists ; 2014 ; Global Summitry Journal Volume 2 ; 2 >
-    au < expected ; exists ; 2015 ; Global Summitry Journal Volume 3 ; 3 >
+    au < down ; exists ; 2013 ; Global Summitry Journal Volume 1 ; 1 >
 
   }
 
