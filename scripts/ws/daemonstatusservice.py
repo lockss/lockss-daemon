@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.4'
+__version__ = '0.1.5'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
@@ -68,6 +68,7 @@ class DaemonStatusServiceOptions(object):
   def set_query(self, query): self.__query = query
 
 def datetime_from_ms(ms):
+  if ms is None: return None
   return datetime.datetime.fromtimestamp(ms / 1000)
 
 def duration_from_ms(ms):
@@ -81,7 +82,7 @@ def duration_from_ms(ms):
   if d == 0: return '%dh%dm%ds' % (h, m, s)
   w, d = divmod(d, 7)
   if w == 0: return '%dd%dh%dm' % (d, h, m)
-  else: return '%dw%dd%dh' % (w, d, h)
+  return '%dw%dd%dh' % (w, d, h)
 
 def get_au_status(options):
   '''Queries the options for this input:
