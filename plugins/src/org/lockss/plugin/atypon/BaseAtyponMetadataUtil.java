@@ -204,7 +204,8 @@ public class BaseAtyponMetadataUtil {
     if (inTitle == null) return null;
 
     //reduce interior multiple space characters to only one
-    outTitle = inTitle.replaceAll("(\\s|\"|\\?|-|:)", "");
+    //outTitle = inTitle.replaceAll("(\\s|\"|\\?|-|:)", "");
+    outTitle = inTitle.replaceAll("\\W", "");
     return outTitle;
   }
 
