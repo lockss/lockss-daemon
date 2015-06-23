@@ -4,7 +4,7 @@
     name = American College of Cardiology
   >
 
-  comment[down] = publisher moved to Silverchair. 
+  comment[down] = publisher moved to Silverchair -- not collecting.
 
   {
     title <
@@ -23,18 +23,6 @@
     au < down ; 2010 ; JACC: Cardiovascular Imaging Volume 3 ; 3 >
     au < down ; 2011 ; JACC: Cardiovascular Imaging Volume 4 ; 4 >
     au < down ; 2012 ; JACC: Cardiovascular Imaging Volume 5 ; 5 >
-    }
-
-    {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      implicit < status ; year ; name ; param[year] >
-      param[base_url] = http://imaging.onlinejacc.org/
-      param[resource_id] = 102
-
-      au < exists ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 2013 >
-      au < exists ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 2014 >
-      au < manifest ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 2015 >
-  
     }
 
   }
@@ -58,37 +46,6 @@
     au < down ; 2012 ; JACC: Cardiovascular Interventions Volume 5 ; 5 >
     }
 
-    {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      implicit < status ; year ; name ; param[year] >
-      param[base_url] = http://interventions.onlinejacc.org/
-      param[resource_id] = 103
-
-      au < manifest ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 2013 >
-      au < exists ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 2014 >
-      au < manifest ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 2015 >
-  
-    }
-
-  }
-
-  {
-    title <
-      name = JACC: Heart Failure ;
-      issn = 2213-1779 
-    >
-
-    {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      implicit < status ; year ; name ; param[year] >
-      param[base_url] = http://heartfailure.onlinejacc.org/
-      param[resource_id] = 139
-
-      au < manifest ; 2013 ; JACC: Heart Failure Volume 1 ; 2013 >
-      au < exists ; 2014 ; JACC: Heart Failure Volume 2 ; 2014 >
-      au < manifest ; 2015 ; JACC: Heart Failure Volume 3 ; 2015 >
-  
-    }
   }
 
   {
@@ -169,17 +126,5 @@
     au < down ; 2012 ; Journal of the American College of Cardiology Volume 59 ; 59 >
     }
 
-    {
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      implicit < status ; year ; name ; param[year] >
-      param[base_url] = http://content.onlinejacc.org/
-      param[resource_id] = 101
-
-      au < manifest ; 2012 ; Journal of the American College of Cardiology Volume 59-60 ; 2012 >
-      au < manifest ; 2013 ; Journal of the American College of Cardiology Volume 61-62 ; 2013 >
-      au < exists ; 2014 ; Journal of the American College of Cardiology Volume 63-64 ; 2014 >
-      au < manifest ; 2015 ; Journal of the American College of Cardiology Volume 65-66 ; 2015 >
-  
-    }
   }
 }
