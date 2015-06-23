@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>106</string>
+    <string>107</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>30</string>
+        <string>31</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.0</string>
+    <string>1.68.4</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -110,11 +110,15 @@
       RU4166: exclude oxford supplement author-index pages, e.g.: 
             http://humrep.oxfordjournals.org/content/26/suppl_1.author-index
             http://europace.oxfordjournals.org/content/7/Supplement_1.author-index
-      RU4399: exclude with-ds & rss args until normalizer written, eg. 
-            http://jcb.rupress.org/cgi/content/short/195/5/704?rss=1&amp;ssource=mfr and 
+      RU4399: exclude rss args until normalizer written, eg. 
+            http://jcb.rupress.org/cgi/content/short/195/5/704?rss=1&amp;ssource=mfr
+            do not exclude with-ds args like
             http://jcb.rupress.org content/195/1/113.full.pdf+html?with-ds=yes
+            turns out not the same content http://jcb.rupress.org content/195/1/113.full.pdf+html
+            
      -->
     <list>
+      <string>1,"^https?://.+(cdn[.]mathjax[.]org|[.]googleapis[.]com|(cdn.*|journals)[.]bmj[.]com|[.]cloudfront[.]net|[.]glencoesoftware[.]com)[^?]*[.](css|gif|ico|jpe?g|js)$"</string>
       <string>2,"^%s.*[.]cover[.]gif$", base_url</string>
       <string>1,"^https?://%s/[^?]*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
@@ -123,7 +127,7 @@
       <string>2,"^%scontent/%s/.*/href/?$", base_url, volume_name</string>
       <string>2,"^%slookup/volpage/%s(/[^/]+)?$", base_url, volume_name</string>
       <string>2,"^%scontent/%s/[Ss]uppl(ement)?_[0-9]*[.]author-index$", base_url, volume_name</string>
-      <string>2,"^%s(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](with-ds=|rss=)", base_url, volume_name</string>
+      <string>2,"^%s(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](rss=)", base_url, volume_name</string>
       <!-- Do not crawl any most-read links -->
       <string>2,"^%s.*/most-read", base_url</string>
       <string>1,"^%s(content|lookup/volpage)/%s(/|[.])", base_url, volume_name</string>
@@ -167,7 +171,7 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:HighWire</string>
+    <string>title_attribute:highwire_crawl_pool:HighWire</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -217,6 +221,11 @@
     </map>
   </entry>
   <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
     <string>content-testing_override</string>
     <map>
       <entry>
@@ -224,6 +233,12 @@
         <string>X-Lockss-Source:publisher</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>cdn[.]mathjax[.]org|[.]googleapis[.]com|(cdn.*|journals)[.]bmj[.]com|[.]cloudfront[.]net|[.]glencoesoftware[.]com</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
