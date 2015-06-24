@@ -6578,8 +6578,8 @@
       au < manifest ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
       au < manifest ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
       au < manifest ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
-      au < doesNotExist ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 >
-      au < doesNotExist ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 >
+      au < doNotProcess ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 > #malformed
+      au < doNotProcess ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 > #malformed
       au < manifest ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
       au < manifest ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
       au < manifest ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >

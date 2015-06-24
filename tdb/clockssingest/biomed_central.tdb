@@ -6797,8 +6797,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < manifest ; exists ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
       au < crawling ; exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
       au < crawling ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
-      au < doesNotExist ; doesNotExist ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 >
-      au < doesNotExist ; doesNotExist ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 >
+      au < doNotProcess ; doNotProcess ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 > #malformed
+      au < doNotProcess ; doNotProcess ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 > #malformed
       au < crawling ; exists ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
