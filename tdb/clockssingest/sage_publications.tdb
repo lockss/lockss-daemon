@@ -11871,6 +11871,21 @@
   {
 
     title <
+      name = Food and Nutrition Bulletin ;
+      issn = 0379-5721 ;
+      eissn = 1564-8265
+    >
+
+      param[base_url] = http://fnb.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Food and Nutrition Bulletin Volume 36 ; 36 ; >
+
+  }
+
+  {
+
+    title <
       name = Food Science and Technology International ;
       issn = 1082-0132 ;
       eissn = 1532-1738
