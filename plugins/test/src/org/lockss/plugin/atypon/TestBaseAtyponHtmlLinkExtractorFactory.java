@@ -388,7 +388,7 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
     
     private static final String test_nrc_links=
         "<html><head><title>Test Title</title></head><body>" +
-        "<a href=\"/journal/gen\">" +
+            "<a href=\"/journal/gen\">" +
             " <img class=\"pubCoverImg\" src=\"/na101/home/literatum/publisher/nrc/journals/covergifs/gen/cover.jpg\" alt=\"Genome\" />" +
             "</a>" +
             "<a class=\"ref aff\" href=\"javascript:popRef('aff1')\"><sup><i>a</i></sup></a>" +
@@ -401,6 +401,13 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
             "<img src=\"/na101/home/literatum/publisher/nrc/journals/content/gen/2012/gen.2012.5507/g2012-037/production/images/small/g2012-037f1.gif\" " +
             "align=\"bottom\" border=\"1\" alt=\"\" /><p>&raquo;View larger version</p></a>" +
             "</div></body></html>";
+
+    private static final String test_popRefVariants=
+        "<html><head><title>Test Title</title></head><body>" +
+            "<a class=\"FOO\" href=\"javascript:popRef('foo1')\"><sup><i>a</i></sup></a>" +
+            "<a class=\"FOO\" href=\"javascript:popRef2('foo2')\"><sup><i>a</i></sup></a>" +
+            "<a class=\"FOO\" href=\"javascript:popRefFull('foo3')\"><sup><i>a</i></sup></a>" +
+                "</div></body></html>";
 
 
     public void testNoLinks() throws Exception {
@@ -500,6 +507,34 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
       
     }
 
+    public void testPopRefVariants() throws Exception {
+
+      expectedUrls = SetUtil.set(
+          // from the popRef
+          BASE_URL + "action/showPopup?citid=citart1&id=foo1&doi=11.1111%2FTEST",
+          //from the popRef2
+          BASE_URL + "action/showPopup?citid=citart1&id=foo2&doi=11.1111%2FTEST",
+          // from the popRefFull
+          BASE_URL + "action/showFullPopup?id=foo3&doi=11.1111%2FTEST");
+      
+      Set<String> result_strings = parseSingleSource(test_popRefVariants, "full", null);
+
+      log.debug3("in testPopRefVariants");
+      if (log.isDebug3()) {
+        for (String url : result_strings) {
+          log.debug3("URL: " + url);
+        }
+      }
+      
+      assertEquals(3, result_strings.size());
+      // loop over the expected URLs and make sure each is in the result
+      for (String url : expectedUrls) {
+        log.debug3("expectedURL: " + url);
+        assertTrue(result_strings.contains(url));
+      }
+
+      
+    }
     
      //This test makes sure other base link extraction continues to work
      public void testfullHtml() throws Exception {

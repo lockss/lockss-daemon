@@ -214,6 +214,7 @@ implements LinkExtractorFactory {
    * handles:
    *     LINK_TAG ("<a href=>")
    *         javascript:popRef
+   *         javascript:popRef2
    *         javascript:popRefFull
    *     LINK_TAG ("<a class="... openFigLayer" or class="...openTablesLayer"...>
    *  fails over to the SimpleTagLinkExtractor super class           
@@ -229,7 +230,7 @@ implements LinkExtractorFactory {
      *  double quotes - but that's extremely unlikely for an id value
      */
     protected static final Pattern POPREF_PATTERN = Pattern.compile(
-        "javascript:popRef(Full)?\\([\"']([^\"']+)[\"']\\)", Pattern.CASE_INSENSITIVE);
+        "javascript:popRef2?(Full)?\\([\"']([^\"']+)[\"']\\)", Pattern.CASE_INSENSITIVE);
     protected static final Pattern OPEN_CLASS_PATTERN = Pattern.compile(
         "(openFigLayer|openTablesLayer)$", Pattern.CASE_INSENSITIVE);
 
