@@ -37,7 +37,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
     </map>
   </entry>
@@ -57,6 +57,10 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
   </entry>
   <entry>

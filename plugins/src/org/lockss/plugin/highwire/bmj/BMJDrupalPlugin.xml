@@ -37,7 +37,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -61,6 +61,10 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.bmj.BMJDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.highwire.bmj.BMJDrupalArticleIteratorFactory</string>
   </entry>
   <entry>
