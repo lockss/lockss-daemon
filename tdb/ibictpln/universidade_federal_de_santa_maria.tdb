@@ -85,8 +85,8 @@
     au < released ; 2011 ; 11 ; Fragmentum Volume 11 ; 2011 ; >
     au < released ; 2012 ; 12 ; Fragmentum Volume 12 ; 2012 ; >
     au < released ; 2013 ; 13 ; Fragmentum Volume 13 ; 2013 ; >
-    au < exists ; 2014 ; 14 ; Fragmentum Volume 14 ; 2014 ; >
-    au < exists ; 2015 ; 15 ; Fragmentum Volume 15 ; 2015 ; >
+    au < manifest ; 2014 ; 14 ; Fragmentum Volume 14 ; 2014 ; >
+    au < manifest ; 2015 ; 15 ; Fragmentum Volume 15 ; 2015 ; >
 
   }
   
@@ -473,7 +473,7 @@
 
       au < released ; 2013 ; 1 ; Literatura e Autoritarismo Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Literatura e Autoritarismo Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 3 ; Literatura e Autoritarismo Volume 2015 ; 2015 ; >
+      au < manifest ; 2015 ; 3 ; Literatura e Autoritarismo Volume 2015 ; 2015 ; >
 
   }
 
@@ -685,7 +685,7 @@
       au < released ; 2012 ; 29 ; Revista Kinesis Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 30 ; Revista Kinesis Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 31 ; Revista Kinesis Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 32 ; Revista Kinesis Volume 2015 ; 2015 ; >
+      au < manifest ; 2015 ; 32 ; Revista Kinesis Volume 2015 ; 2015 ; >
 
   }
 
