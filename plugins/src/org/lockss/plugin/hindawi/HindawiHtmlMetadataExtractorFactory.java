@@ -93,6 +93,8 @@ public class HindawiHtmlMetadataExtractorFactory implements
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_author", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
+      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      
      /*
        tagMap.put("citation_mjid", new MetadataField(
          MetadataField.FIELD_PROPRIETARY_IDENTIFIER,

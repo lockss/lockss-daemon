@@ -113,6 +113,7 @@ public class TestHindawiMetadataExtractorFactory extends LockssTestCase {
   String goodPublisher = "Hippie Publishing Corporation";
   String goodVolume = "2008";
   String goodIssn = "1687-5893";
+  String goodDoi = "10.1155/2015/708915";
   String goodAbstract = "This paper presents vegetably enhanced sports entertainment" +
                 "applications: AR VPic Presentation System and InterVegetable AR" +
                 "Troweling System. We utilize vegetable-based augmented reality for" +
@@ -136,6 +137,7 @@ public class TestHindawiMetadataExtractorFactory extends LockssTestCase {
                 "<meta name=\"citation_year\" content=\"2008\"/>" +
                 "<meta name=\"citation_volume\" content=\"2008\"/>" +
                 "<meta name=\"citation_issn\" content=\"1687-5893\"/>" +
+                "<meta name=\"citation_doi\" content=\"10.1155/2015/708915\"/>" +
                 "<meta name=\"citation_abstract\" content=\"This paper presents vegetably enhanced sports entertainment" +
                 "applications: AR VPic Presentation System and InterVegetable AR" +
                 "Troweling System. We utilize vegetable-based augmented reality for" +
@@ -172,6 +174,7 @@ public class TestHindawiMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     // for some reason, the following assert did not work, but...
     //assertEquals(md.getList(MetadataField.FIELD_AUTHOR), goodAuthors);
     // changing the compare to .toString()  did work...
