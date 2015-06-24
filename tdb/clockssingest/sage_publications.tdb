@@ -13191,6 +13191,7 @@
       param[base_url] = http://hme.sagepub.com/
 
       au < crawling ; exists ; 2014 ; Health Services Research and Managerial Epidemiology Volume 1 ; 1 ; >
+      au < expected ; exists ; 2015 ; Health Services Research and Managerial Epidemiology Volume 2 ; 2 ; >
 
   }
 
@@ -26902,7 +26903,7 @@
       au < finished ; crawling ; 2011 ; Journal of Vacation Marketing Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Journal of Vacation Marketing Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Journal of Vacation Marketing Volume 19 ; 19 ; >
-      au < notReady ; exists ; 2014 ; Journal of Vacation Marketing Volume 20 ; 20 ; >
+      au < ready ; exists ; 2014 ; Journal of Vacation Marketing Volume 20 ; 20 ; >
       au < manifest ; exists ; 2015 ; Journal of Vacation Marketing Volume 21 ; 21 ; >
 
     }
@@ -28461,7 +28462,7 @@
       au < finished ; crawling ; 2011 ; Measurement and Evaluation in Counseling and Development Volume 44 ; 44 ; >
       au < finished ; frozen ; 2012 ; Measurement and Evaluation in Counseling and Development Volume 45 ; 45 ; >
       au < crawling ; exists ; 2013 ; Measurement and Evaluation in Counseling and Development Volume 46 ; 46 ; >
-      au < notReady ; exists ; 2014 ; Measurement and Evaluation in Counseling and Development Volume 47 ; 47 ; >
+      au < ready ; exists ; 2014 ; Measurement and Evaluation in Counseling and Development Volume 47 ; 47 ; >
       au < manifest ; exists ; 2015 ; Measurement and Evaluation in Counseling and Development Volume 48 ; 48 ; >
 
     }
@@ -42631,6 +42632,7 @@
       au < crawling ; exists ; 2012 ; Vision: The Journal of Business Perspective Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Vision: The Journal of Business Perspective Volume 17 ; 17 ; >
       au < manifest ; exists ; 2014 ; Vision: The Journal of Business Perspective Volume 18 ; 18 ; >
+      au < expected ; exists ; 2015 ; Vision: The Journal of Business Perspective Volume 19 ; 19 ; >
 
   }
 
