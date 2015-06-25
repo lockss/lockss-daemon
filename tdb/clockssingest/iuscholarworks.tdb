@@ -64,7 +64,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Anthropology of East Europe Review Volume 27 ; 27 >
       au < manifest ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 >
       au < manifest ; exists ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 >
-      au < manifest ; exists ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 >
+      au < testing ; exists ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 >
       au < crawling ; exists ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 >
       au < crawling ; exists ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 >
       au < expected ; exists ; 2015 ; 2015 ; Anthropology of East Europe Review Volume 33 ; 33 >
@@ -82,7 +82,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Black Diaspora Review Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; 2010 ; Black Diaspora Review Volume 1-2 ; 1-2 >
       au < manifest ; exists ; 2011 ; 2011 ; Black Diaspora Review Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 >
+      au < testing ; exists ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 >
       au < crawling ; exists ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 >
       au < expected ; exists ; 2015 ; 2015 ; Black Diaspora Review Volume 5 ; 5 >
@@ -135,7 +135,7 @@
       param[journal_id] = illuminare
 
       au < manifest ; exists ; 2011 ; 2011 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 9 ; 9 >
-      au < manifest ; exists ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 >
+      au < testing ; exists ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; 2013 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 >
@@ -183,7 +183,7 @@
       au < manifest ; exists ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 >
       au < manifest ; exists ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 >
+      au < testing ; exists ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 >
       au < expected ; exists ; 2015 ; 2015 ; Inter-American Journal of Education for Democracy Volume 7 ; 7 >
@@ -200,7 +200,7 @@
 
       au < manifest ; exists ; 2010 ; 2010 ; International Journal of Designs for Learning Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; 2011 ; International Journal of Designs for Learning Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; 2012 ; International Journal of Designs for Learning Volume 3 ; 3 >
+      au < testing ; exists ; 2012 ; 2012 ; International Journal of Designs for Learning Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; International Journal of Designs for Learning Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; 2015 ; International Journal of Designs for Learning Volume 6 ; 6 >
@@ -228,7 +228,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 >
       au < manifest ; exists ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 >
       au < manifest ; exists ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 >
-      au < manifest ; exists ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 >
+      au < testing ; exists ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 >
       au < crawling ; exists ; 2013 ; 2013 ; InULA Notes: Indiana University Librarians Association Volume 25 ; 25 >
       au < crawling ; exists ; 2014 ; 2014 ; InULA Notes: Indiana University Librarians Association Volume 26 ; 26 >
       au < manifest ; exists ; 2015 ; 2015 ; InULA Notes: Indiana University Librarians Association Volume 27 ; 27 >
@@ -244,8 +244,8 @@
       param[base_url] = http://jotlt.indiana.edu/
       param[journal_id] = jotlt
 
-      au < manifest ; exists ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 >
-      au < manifest ; exists ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 >
+      au < testing ; exists ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 >
+      au < testing ; exists ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 >
       au < ready ; exists ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; 2015 ; Journal of Teaching and Learning with Technology Volume 4 ; 4 >
 
@@ -261,7 +261,7 @@
 
       au < manifest ; exists ; 2006 ; 2006 ; Journal of the Indiana University Student Personnel Association Volume 2006 ; 2006 >
       au < manifest ; exists ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 >
+      au < testing ; exists ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 >
       au < crawling ; exists ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 >
       au < expected ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 >
@@ -294,8 +294,8 @@
       au < manifest ; exists ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 >
       au < manifest ; exists ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 >
-      au < manifest ; exists ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 >
-      au < manifest ; exists ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 >
+      au < testing ; exists ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 >
+      au < testing ; exists ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 >
       au < ready ; exists ; 2014 ; 2014 ; Journal of the Scholarship of Teaching and Learning Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; 2015 ; Journal of the Scholarship of Teaching and Learning Volume 15 ; 15 >
 
@@ -315,9 +315,9 @@
       au < manifest ; exists ; 2009 ; 2009 ; Museum Anthropology Review Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; 2010 ; Museum Anthropology Review Volume 4 ; 4 >
       au < manifest ; exists ; 2011 ; 2011 ; Museum Anthropology Review Volume 5 ; 5 >
-      au < manifest ; exists ; 2012 ; 2012 ; Museum Anthropology Review Volume 6 ; 6 >
-      au < manifest ; exists ; 2013 ; 2013 ; Museum Anthropology Review Volume 7 ; 7 >
-      au < manifest ; exists ; 2014 ; 2014 ; Museum Anthropology Review Volume 8 ; 8 >
+      au < testing ; exists ; 2012 ; 2012 ; Museum Anthropology Review Volume 6 ; 6 >
+      au < testing ; exists ; 2013 ; 2013 ; Museum Anthropology Review Volume 7 ; 7 >
+      au < testing ; exists ; 2014 ; 2014 ; Museum Anthropology Review Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; 2015 ; Museum Anthropology Review Volume 9 ; 9 >
 
   }
@@ -332,7 +332,7 @@
 
       au < manifest ; exists ; 2010 ; 2010 ; New Directions in Folklore Volume 8 ; 8 >
       au < manifest ; exists ; 2011 ; 2011 ; New Directions in Folklore Volume 9 ; 9 >
-      au < manifest ; exists ; 2012 ; 2012 ; New Directions in Folklore Volume 10 ; 10 >
+      au < testing ; exists ; 2012 ; 2012 ; New Directions in Folklore Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; 2013 ; New Directions in Folklore Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; 2014 ; New Directions in Folklore Volume 12 ; 12 >
       au < expected ; exists ; 2015 ; 2015 ; New Directions in Folklore Volume 13 ; 13 >
