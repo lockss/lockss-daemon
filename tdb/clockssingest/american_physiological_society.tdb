@@ -101,8 +101,8 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Advances in Physiology Education Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; >
 
     }
@@ -1993,10 +1993,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2015 ; Journal of Applied Physiology Volume 118 ; 118 ; >
       au < aps.ClockssAPSDrupalPlugin ; expected ; exists ; 2015 ; Journal of Applied Physiology Volume 119 ; 119 ; >
 
@@ -2237,10 +2237,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2015 ; Journal of Neurophysiology Volume 113 ; 113 ; >
       au < aps.ClockssAPSDrupalPlugin ; expected ; exists ; 2015 ; Journal of Neurophysiology Volume 114 ; 114 ; >
 
@@ -2356,8 +2356,8 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42A ; 42A ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Physiological Genomics Volume 43 ; 43 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Physiological Genomics Volume 44 ; 44 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Physiological Genomics Volume 46 ; 46 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Physiological Genomics Volume 46 ; 46 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2015 ; Physiological Genomics Volume 47 ; 47 ; >
 
     }
@@ -2566,9 +2566,9 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Physiological Reviews Volume 92 ; 92 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2013 ; Physiological Reviews Volume 93 ; 93 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Physiological Reviews Volume 94 ; 94 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2015 ; Physiological Reviews Volume 95 ; 95 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Physiological Reviews Volume 93 ; 93 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Physiological Reviews Volume 94 ; 94 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2015 ; Physiological Reviews Volume 95 ; 95 ; >
 
     }
 
@@ -2646,8 +2646,8 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Physiology Volume 25 ; 25 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Physiology Volume 26 ; 26 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Physiology Volume 27 ; 27 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2013 ; Physiology Volume 28 ; 28 ; >
-      au < aps.ClockssAPSDrupalPlugin ; ready ; exists ; 2014 ; Physiology Volume 29 ; 29 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Physiology Volume 28 ; 28 ; >
+      au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Physiology Volume 29 ; 29 ; >
       au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2015 ; Physiology Volume 30 ; 30 ; >
 
     }
