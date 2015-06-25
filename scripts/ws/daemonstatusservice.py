@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
@@ -295,7 +295,6 @@ class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
     p = opts.password or getpass.getpass('UI password: ')
     self.set_auth(u, p)
   def get_fields(self): return self.__fields
-  def set_fields(self, fields): self.__fields = fields
   def is_get_au_status(self): return self.__get_au_status
   def is_get_peer_agreements(self): return self.__get_peer_agreements
   def is_get_platform_configuration(self): return self.__get_platform_configuration
@@ -305,7 +304,6 @@ class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
   def is_is_daemon_ready_quiet(self): return self.__is_daemon_ready_quiet
   def is_query_aus(self): return self.__query_aus
   def get_where(self): return self.__where
-  def set_where(self, where): return self.__where
   @staticmethod
   def make_parser():
     parser = optparse.OptionParser(version=__version__, usage='%prog [OPTIONS] HOST')
@@ -317,7 +315,7 @@ class _DaemonStatusServiceToolOptions(DaemonStatusServiceOptions):
     parser.add_option('--is-daemon-ready', action='store_true', default=False, help='Outputs True or False, always exits with 0')
     parser.add_option('--is-daemon-ready-quiet', action='store_true', default=False, help='Outputs nothing, exits with 0 for True and 1 for False')
     parser.add_option('--password', metavar='PASS', help='UI password')
-    parser.add_option('--query-aus', metavar='CSFIELDS', help='Performs an AU query and outputs the given fields, supplied comma-separated among %s' % (_QUERY_AUS.keys(),))
+    parser.add_option('--query-aus', metavar='CSFIELDS', help='Comma-separated fields to be used in the SELECT clause of an AU query; chosen among %s ' % (sorted(_QUERY_AUS.keys()),))
     parser.add_option('--username', metavar='USER', help='UI username')
     parser.add_option('--where', help='optional WHERE clause for --query-aus')
     return parser
