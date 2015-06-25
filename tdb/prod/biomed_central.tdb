@@ -1075,6 +1075,7 @@
       au < manifest ; 2012 ; BMC Medical Research Methodology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Medical Research Methodology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Medical Research Methodology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Medical Research Methodology Volume 15 ; 15 >
 
     }
 
@@ -1100,6 +1101,7 @@
       au < manifest ; 2012 ; BMC Medicine Volume 10 ; 10 >
       au < manifest ; 2013 ; BMC Medicine Volume 11 ; 11 >
       au < manifest ; 2014 ; BMC Medicine Volume 12 ; 12 >
+      au < expected ; 2015 ; BMC Medicine Volume 13 ; 13 >
 
     }
 
@@ -1127,6 +1129,7 @@
       au < manifest ; 2012 ; BMC Microbiology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Microbiology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Microbiology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Microbiology Volume 15 ; 15 >
 
     }
 
@@ -1155,6 +1158,7 @@
       au < manifest ; 2012 ; BMC Molecular Biology Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Molecular Biology Volume 14 ; 14 >
       au < manifest ; 2014 ; BMC Molecular Biology Volume 15 ; 15 >
+      au < expected ; 2015 ; BMC Molecular Biology Volume 16 ; 16 >
 
     }
 
@@ -1183,6 +1187,7 @@
       au < manifest ; 2012 ; BMC Musculoskeletal Disorders Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Musculoskeletal Disorders Volume 14 ; 14 >
       au < manifest ; 2014 ; BMC Musculoskeletal Disorders Volume 15 ; 15 >
+      au < expected ; 2015 ; BMC Musculoskeletal Disorders Volume 16 ; 16 >
 
     }
 
@@ -1211,6 +1216,7 @@
       au < manifest ; 2012 ; BMC Nephrology Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Nephrology Volume 14 ; 14 >
       au < manifest ; 2014 ; BMC Nephrology Volume 15 ; 15 >
+      au < expected ; 2015 ; BMC Nephrology Volume 16 ; 16 >
 
     }
 
@@ -1238,6 +1244,7 @@
       au < manifest ; 2012 ; BMC Neurology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Neurology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Neurology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Neurology Volume 15 ; 15 >
 
     }
 
@@ -1266,6 +1273,7 @@
       au < manifest ; 2012 ; BMC Neuroscience Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Neuroscience Volume 14 ; 14 >
       au < manifest ; 2014 ; BMC Neuroscience Volume 15 ; 15 >
+      au < expected ; 2015 ; BMC Neuroscience Volume 16 ; 16 >
 
     }
 
@@ -1318,6 +1326,7 @@
       au < manifest ; 2012 ; BMC Nursing Volume 11 ; 11 >
       au < manifest ; 2013 ; BMC Nursing Volume 12 ; 12 >
       au < manifest ; 2014 ; BMC Nursing Volume 13 ; 13 >
+      au < expected ; 2015 ; BMC Nursing Volume 14 ; 14 >
 
     }
 
@@ -1332,6 +1341,7 @@
       attr[journal_code] = bmcobes
 
       au < manifest ; 2014 ; BMC Obesity Volume 1 ; 1 >
+      au < expected ; 2015 ; BMC Obesity Volume 2 ; 2 >
 
     }
 
@@ -1359,6 +1369,7 @@
       au < manifest ; 2012 ; BMC Ophthalmology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Ophthalmology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Ophthalmology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Ophthalmology Volume 15 ; 15 >
 
     }
 
@@ -1386,6 +1397,7 @@
       au < manifest ; 2012 ; BMC Oral Health Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Oral Health Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Oral Health Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Oral Health Volume 15 ; 15 >
 
     }
 
@@ -1411,6 +1423,7 @@
       au < released ; 2012 ; BMC Palliative Care Volume 11 ; 11 >
       au < manifest ; 2013 ; BMC Palliative Care Volume 12 ; 12 >
       au < manifest ; 2014 ; BMC Palliative Care Volume 13 ; 13 >
+      au < expected ; 2015 ; BMC Palliative Care Volume 14 ; 14 >
 
     }
 
@@ -1438,6 +1451,7 @@
       au < manifest ; 2012 ; BMC Pediatrics Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Pediatrics Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Pediatrics Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Pediatrics Volume 15 ; 15 >
 
     }
 
@@ -1482,6 +1496,7 @@
       au < manifest ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Pharmacology and Toxicology Volume 14 ; 14 >
       au < manifest ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 >
+      au < expected ; 2015 ; BMC Pharmacology and Toxicology Volume 16 ; 16 >
 
     }
 
@@ -1509,6 +1524,7 @@
       au < manifest ; 2012 ; BMC Physiology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Physiology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Physiology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Physiology Volume 15 ; 15 >
 
     }
 
@@ -1536,6 +1552,7 @@
       au < manifest ; 2012 ; BMC Plant Biology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Plant Biology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Plant Biology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Plant Biology Volume 15 ; 15 >
 
     }
 
@@ -1563,6 +1580,7 @@
       au < manifest ; 2012 ; BMC Pregnancy and Childbirth Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Pregnancy and Childbirth Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Pregnancy and Childbirth Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Pregnancy and Childbirth Volume 15 ; 15 >
 
     }
 
@@ -1612,6 +1630,7 @@
       au < manifest ; 2012 ; BMC Psychiatry Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Psychiatry Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Psychiatry Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Psychiatry Volume 15 ; 15 >
 
     }
 
@@ -1627,6 +1646,7 @@
 
       au < manifest ; 2013 ; BMC Psychology Volume 1 ; 1 >
       au < manifest ; 2014 ; BMC Psychology Volume 2 ; 2 >
+      au < expected ; 2015 ; BMC Psychology Volume 3 ; 3 >
 
     }
 
@@ -1654,6 +1674,7 @@
       au < manifest ; 2012 ; BMC Public Health Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Public Health Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Public Health Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Public Health Volume 15 ; 15 >
 
     }
 
@@ -1681,6 +1702,7 @@
       au < manifest ; 2012 ; BMC Pulmonary Medicine Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Pulmonary Medicine Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Pulmonary Medicine Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Pulmonary Medicine Volume 15 ; 15 >
 
     }
 
@@ -1701,6 +1723,7 @@
       au < manifest ; 2012 ; BMC Research Notes Volume 5 ; 5 >
       au < manifest ; 2013 ; BMC Research Notes Volume 6 ; 6 >
       au < manifest ; 2014 ; BMC Research Notes Volume 7 ; 7 >
+      au < expected ; 2015 ; BMC Research Notes Volume 8 ; 8 >
 
     }
 
@@ -1755,6 +1778,7 @@
       au < manifest ; 2012 ; BMC Structural Biology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Structural Biology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Structural Biology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Structural Biology Volume 15 ; 15 >
 
     }
 
@@ -1782,6 +1806,7 @@
       au < manifest ; 2012 ; BMC Surgery Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Surgery Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Surgery Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Surgery Volume 15 ; 15 >
 
     }
 
@@ -1803,6 +1828,7 @@
       au < down ; 2012 ; BMC Systems Biology Volume 6 ; 6 >
       au < down ; 2013 ; BMC Systems Biology Volume 7 ; 7 >
       au < down ; 2014 ; BMC Systems Biology Volume 8 ; 8 >
+      au < expected ; 2015 ; BMC Systems Biology Volume 9 ; 9 >
 
     }
 
@@ -1830,6 +1856,7 @@
       au < manifest ; 2012 ; BMC Urology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Urology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Urology Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Urology Volume 15 ; 15 >
 
     }
 
@@ -1853,6 +1880,7 @@
       au < down ; 2012 ; BMC Veterinary Research Volume 8 ; 8 >
       au < down ; 2013 ; BMC Veterinary Research Volume 9 ; 9 >
       au < down ; 2014 ; BMC Veterinary Research Volume 10 ; 10 >
+      au < expected ; 2015 ; BMC Veterinary Research Volume 11 ; 11 >
 
     }
 
@@ -1880,6 +1908,7 @@
       au < manifest ; 2012 ; BMC Women's Health Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Women's Health Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Women's Health Volume 14 ; 14 >
+      au < expected ; 2015 ; BMC Women's Health Volume 15 ; 15 >
 
     }
 
@@ -1900,6 +1929,7 @@
 
       au < manifest ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
       au < manifest ; 2014 ; Acta Neuropathologica Communications Volume 2 ; 2 >
+      au < expected ; 2015 ; Acta Neuropathologica Communications Volume 3 ; 3 >
 
     }
 
@@ -1928,6 +1958,7 @@
       au < released ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       au < manifest ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
       au < manifest ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
+      au < expected ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
 
     }
 
@@ -1964,6 +1995,7 @@
       au < released ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
       au < manifest ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
       au < manifest ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
+      au < expected ; 2015 ; Agriculture & Food Security Volume 4 ; 4 >
 
     }
 
@@ -1990,6 +2022,7 @@
       au < released ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
       au < manifest ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
       au < manifest ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
+      au < expected ; 2015 ; AIDS Research and Therapy Volume 12 ; 12 >
 
     }
 
@@ -2012,6 +2045,7 @@
       au < released ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
       au < manifest ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 >
       au < manifest ; 2014 ; Algorithms for Molecular Biology Volume 9 ; 9 >
+      au < expected ; 2015 ; Algorithms for Molecular Biology Volume 10 ; 10 >
 
     }
 
@@ -2035,6 +2069,7 @@
       au < released ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
       au < manifest ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
       au < manifest ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 >
+      au < expected ; 2015 ; Allergy, Asthma & Clinical Immunology Volume 11 ; 11 >
 
     }
 
@@ -2084,6 +2119,7 @@
 
       au < manifest ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
       au < manifest ; 2014 ; Animal Biotelemetry Volume 2 ; 2 >
+      au < expected ; 2015 ; Animal Biotelemetry Volume 3 ; 3 >
 
     }
 
@@ -2112,6 +2148,7 @@
       au < released ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
       au < manifest ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
       au < manifest ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
+      au < expected ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
 
     }
 
@@ -2138,6 +2175,7 @@
       au < released ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
       au < manifest ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 >
       au < manifest ; 2014 ; Annals of General Psychiatry Volume 13 ; 13 >
+      au < expected ; 2015 ; Annals of General Psychiatry Volume 14 ; 14 >
 
     }
 
@@ -2159,6 +2197,7 @@
       au < released ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
       au < manifest ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 >
       au < manifest ; 2014 ; Annals of Surgical Innovation and Research Volume 8 ; 8 >
+      au < expected ; 2015 ; Annals of Surgical Innovation and Research Volume 9 ; 9 >
 
     }
 
@@ -2176,6 +2215,7 @@
       au < released ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
       au < manifest ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
       au < manifest ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 >
+      au < expected ; 2015 ; Antimicrobial Resistance and Infection Control Volume 4 ; 4 >
 
     }
 
@@ -2195,6 +2235,7 @@
       au < released ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
       au < manifest ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
       au < manifest ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
+      au < expected ; 2015 ; Aquatic Biosystems Volume 11 ; 11 >
 
     }
 
@@ -2215,6 +2256,7 @@
       au < released ; 2012 ; Archives of Public Health Volume 70 ; 70 >
       au < manifest ; 2013 ; Archives of Public Health Volume 71 ; 71 >
       au < manifest ; 2014 ; Archives of Public Health Volume 72 ; 72 >
+      au < expected ; 2015 ; Archives of Public Health Volume 73 ; 73 >
 
     }
 
@@ -2290,6 +2332,7 @@
       au < released ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < manifest ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
       au < manifest ; 2014 ; Asia Pacific Family Medicine Volume 13 ; 13 >
+      au < expected ; 2015 ; Asia Pacific Family Medicine Volume 14 ; 14 >
 
     }
 
@@ -2328,6 +2371,7 @@
 
       au < manifest ; 2013 ; Basic and Clinical Andrology Volume 23 ; 23 >
       au < manifest ; 2014 ; Basic and Clinical Andrology Volume 24 ; 24 >
+      au < expected ; 2015 ; Basic and Clinical Andrology Volume 25 ; 25 >
 
     }
 
@@ -2351,6 +2395,7 @@
       au < released ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
       au < manifest ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 >
       au < manifest ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
+      au < expected ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 >
 
     }
 
@@ -2371,6 +2416,7 @@
       au < released ; 2012 ; BioData Mining Volume 5 ; 5 >
       au < manifest ; 2013 ; BioData Mining Volume 6 ; 6 >
       au < manifest ; 2014 ; BioData Mining Volume 7 ; 7 >
+      au < expected ; 2015 ; BioData Mining Volume 8 ; 8 >
 
     }
 
@@ -2390,6 +2436,7 @@
       au < released ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
       au < manifest ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
       au < manifest ; 2014 ; Biological Procedures Online Volume 16 ; 16 >
+      au < expected ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
 
     }
 
@@ -2404,6 +2451,7 @@
       param[journal_issn] = 0717-6287
 
       au < manifest ; 2014 ; Biological Research Volume 47 ; 47 >
+      au < expected ; 2015 ; Biological Research Volume 48 ; 48 >
 
     }
 
@@ -2440,6 +2488,7 @@
       au < doNotProcess ; 2012 ; Biology Direct Volume 7 ; 7 >
       au < manifest ; 2013 ; Biology Direct Volume 8 ; 8 >
       au < manifest ; 2014 ; Biology Direct Volume 9 ; 9 >
+      au < expected ; 2015 ; Biology Direct Volume 10 ; 10 >
 
       }
     }
@@ -2459,6 +2508,7 @@
       au < released ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
       au < manifest ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
       au < manifest ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
+      au < expected ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 ; 5 >
 
     }
 
@@ -2478,6 +2528,7 @@
       au < released ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < manifest ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
       au < manifest ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
+      au < expected ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
 
     }
 
@@ -2494,6 +2545,7 @@
 
       au < manifest ; 2013 ; Biomarker Research Volume 1 ; 1 >
       au < manifest ; 2014 ; Biomarker Research Volume 2 ; 2 >
+      au < expected ; 2015 ; Biomarker Research Volume 3 ; 3 >
 
     }
 
@@ -2531,6 +2583,7 @@
       param[journal_issn] = 2055-7124
 
       au < manifest ; 2014 ; Biomaterials Research Volume 18 ; 18 >
+      au < expected ; 2015 ; Biomaterials Research Volume 19 ; 19 >
 
     }
 
@@ -2557,6 +2610,7 @@
       au < released ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
       au < manifest ; 2013 ; BioMedical Engineering OnLine Volume 12 ; 12 >
       au < manifest ; 2014 ; BioMedical Engineering OnLine Volume 13 ; 13 >
+      au < expected ; 2015 ; BioMedical Engineering OnLine Volume 14 ; 14 >
 
     }
 
@@ -2580,6 +2634,7 @@
       au < released ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       au < manifest ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
       au < manifest ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
+      au < expected ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
 
     }
 
@@ -2602,6 +2657,7 @@
       au < released ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
       au < manifest ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
       au < manifest ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
+      au < expected ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
 
     }
 
@@ -2616,6 +2672,7 @@
       param[journal_issn] = 2051-6673
 
       au < manifest ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
+      au < expected ; 2015 ; Borderline Personality Disorder and Emotion Dysregulation Volume 2 ; 2 >
 
     }
 
@@ -2683,6 +2740,7 @@
 
       au < manifest ; 2013 ; Cancer & Metabolism Volume 1 ; 1 >
       au < manifest ; 2014 ; Cancer & Metabolism Volume 2 ; 2 >
+      au < expected ; 2015 ; Cancer & Metabolism Volume 3 ; 3 >
 
     }
 
@@ -2710,6 +2768,7 @@
       au < released ; 2012 ; Cancer Cell International Volume 12 ; 12 >
       au < manifest ; 2013 ; Cancer Cell International Volume 13 ; 13 >
       au < manifest ; 2014 ; Cancer Cell International Volume 14 ; 14 >
+      au < expected ; 2015 ; Cancer Cell International Volume 15 ; 15 >
 
     }
 
@@ -2724,6 +2783,7 @@
       param[journal_issn] = 1470-7330
 
       au < manifest ; 2014 ; Cancer Imaging Volume 14 ; 14 >
+      au < expected ; 2015 ; Cancer Imaging Volume 15 ; 15 >
 
     }
 
@@ -2738,6 +2798,7 @@
       param[journal_issn] = 2052-6687
 
       au < manifest ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
+      au < expected ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 >
 
     }
 
@@ -2762,6 +2823,7 @@
       au < released ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
       au < manifest ; 2013 ; Carbon Balance and Management Volume 8 ; 8 >
       au < manifest ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
+      au < expected ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
 
     }
 
@@ -2790,6 +2852,7 @@
       au < released ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
       au < manifest ; 2013 ; Cardiovascular Diabetology Volume 12 ; 12 >
       au < manifest ; 2014 ; Cardiovascular Diabetology Volume 13 ; 13 >
+      au < expected ; 2015 ; Cardiovascular Diabetology Volume 14 ; 14 >
 
     }
 
@@ -2817,6 +2880,7 @@
       au < released ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
       au < manifest ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 >
       au < manifest ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
+      au < expected ; 2015 ; Cardiovascular Ultrasound Volume 13 ; 13 >
 
     }
 
@@ -2853,6 +2917,7 @@
       au < released ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
       au < manifest ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
       au < manifest ; 2014 ; Cell & Bioscience Volume 4 ; 4 >
+      au < expected ; 2015 ; Cell & Bioscience Volume 5 ; 5 >
 
     }
 
@@ -2880,6 +2945,7 @@
       au < released ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
       au < manifest ; 2013 ; Cell Communication and Signaling Volume 11 ; 11 >
       au < manifest ; 2014 ; Cell Communication and Signaling Volume 12 ; 12 >
+      au < expected ; 2015 ; Cell Communication and Signaling Volume 13 ; 13 >
 
     }
 
@@ -2902,6 +2968,7 @@
       au < released ; 2012 ; Cell Division Volume 7 ; 7 >
       au < manifest ; 2013 ; Cell Division Volume 8 ; 8 >
       au < manifest ; 2014 ; Cell Division Volume 9 ; 9 >
+      au < expected ; 2015 ; Cell Division Volume 10 ; 10 >
 
     }
 
@@ -2919,6 +2986,7 @@
       au < manifest ; 2012 ; Cell Regeneration Volume 1 ; 1 >
       au < manifest ; 2013 ; Cell Regeneration Volume 2 ; 2 >
       au < manifest ; 2014 ; Cell Regeneration Volume 3 ; 3 >
+      au < expected ; 2015 ; Cell Regeneration Volume 4 ; 4 >
 
     }
 
@@ -2933,6 +3001,7 @@
       param[base_url] = http://www.cerebellumandataxias.com/
 
       au < manifest ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
+      au < expected ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
 
     }
 
@@ -2993,6 +3062,7 @@
       au < released ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
       au < manifest ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 >
       au < manifest ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
+      au < expected ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 ; 9 >
 
     }
 
@@ -3016,6 +3086,7 @@
       au < released ; 2012 ; Chinese Medicine Volume 7 ; 7 >
       au < manifest ; 2013 ; Chinese Medicine Volume 8 ; 8 >
       au < manifest ; 2014 ; Chinese Medicine Volume 9 ; 9 >
+      au < expected ; 2015 ; Chinese Medicine Volume 10 ; 10 >
 
     }
 
@@ -3045,6 +3116,7 @@
       au < released ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
       au < released ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < manifest ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
+      au < expected ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
       }
     }
 
@@ -3080,6 +3152,7 @@
         au < released ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
         au < released ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
         au < released ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+        au < expected ; 2011 ; Chiropractic & Osteopathy Volume 19 ; 19 >
 
       }
 
@@ -3099,6 +3172,7 @@
       au < released ; 2012 ; Cilia Volume 1 ; 1 >
       au < released ; 2013 ; Cilia Volume 2 ; 2 >
       au < manifest ; 2014 ; Cilia Volume 3 ; 3 >
+      au < expected ; 2015 ; Cilia Volume 4 ; 4 >
 
     }
 
@@ -3124,6 +3198,7 @@
       au < released ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < manifest ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < manifest ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
+      au < expected ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
 
     }
 
@@ -3142,6 +3217,7 @@
       au < released ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < manifest ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
       au < manifest ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 >
+      au < expected ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
 
     }
 
@@ -3161,6 +3237,7 @@
       au < released ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
       au < manifest ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
       au < manifest ; 2014 ; Clinical Epigenetics Volume 6 ; 6 >
+      au < expected ; 2015 ; Clinical Epigenetics Volume 7 ; 7 >
 
     }
 
@@ -3198,6 +3275,7 @@
       au < released ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < manifest ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
       au < manifest ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
+      au < expected ; 2015 ; Clinical Proteomics Volume 12 ; 12 >
 
     }
 
@@ -3216,6 +3294,7 @@
       au < released ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
       au < manifest ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
       au < manifest ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
+      au < expected ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
 
     }
 
@@ -3262,6 +3341,7 @@
       au < released ; 2012 ; Conflict and Health Volume 6 ; 6 >
       au < manifest ; 2013 ; Conflict and Health Volume 7 ; 7 >
       au < manifest ; 2014 ; Conflict and Health Volume 8 ; 8 >
+      au < expected ; 2015 ; Conflict and Health Volume 9 ; 9 >
 
     }
 
@@ -3287,6 +3367,7 @@
       au < released ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
       au < manifest ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 >
       au < manifest ; 2014 ; Cost Effectiveness and Resource Allocation Volume 12 ; 12 >
+      au < expected ; 2015 ; Cost Effectiveness and Resource Allocation Volume 13 ; 13 >
 
     }
 
@@ -3310,6 +3391,7 @@
       au < released ; 2012 ; Cough Volume 8 ; 8 >
       au < manifest ; 2013 ; Cough Volume 9 ; 9 >
       au < manifest ; 2014 ; Cough Volume 10 ; 10 >
+      au < expected ; 2015 ; Cough Volume 11 ; 11 >
 
     }
 
@@ -3386,6 +3468,7 @@
       au < released ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
       au < manifest ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
       au < manifest ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 >
+      au < expected ; 2015 ; DARU Journal of Pharmaceutical Sciences Volume 23 ; 23 >
 
     }
 
@@ -3406,6 +3489,7 @@
       au < released ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
       au < manifest ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
       au < manifest ; 2014 ; Diabetology & Metabolic Syndrome Volume 6 ; 6 >
+      au < expected ; 2015 ; Diabetology & Metabolic Syndrome Volume 7 ; 7 >
 
     }
 
@@ -3430,6 +3514,7 @@
       au < notReady ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
       au < manifest ; 2013 ; Diagnostic Pathology Volume 8 ; 8 >
       au < manifest ; 2014 ; Diagnostic Pathology Volume 9 ; 9 >
+      au < expected ; 2015 ; Diagnostic Pathology Volume 10 ; 10 >
 
     }
 
@@ -3479,6 +3564,7 @@
       au < released ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
       au < manifest ; 2013 ; Emerging Themes in Epidemiology Volume 10 ; 10 >
       au < manifest ; 2014 ; Emerging Themes in Epidemiology Volume 11 ; 11 >
+      au < expected ; 2015 ; Emerging Themes in Epidemiology Volume 12 ; 12 >
 
     }
 
@@ -3496,6 +3582,7 @@
       au < released ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
       au < manifest ; 2013 ; Environmental Evidence Volume 2 ; 2 >
       au < manifest ; 2014 ; Environmental Evidence Volume 3 ; 3 >
+      au < expected ; 2015 ; Environmental Evidence Volume 4 ; 4 >
 
     }
 
@@ -3522,6 +3609,7 @@
       au < released ; 2012 ; Environmental Health Volume 11 ; 11 >
       au < manifest ; 2013 ; Environmental Health Volume 12 ; 12 >
       au < manifest ; 2014 ; Environmental Health Volume 13 ; 13 >
+      au < expected ; 2015 ; Environmental Health Volume 14 ; 14 >
 
     }
 
@@ -3568,6 +3656,7 @@
       au < released ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
       au < manifest ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
       au < manifest ; 2014 ; Epigenetics & Chromatin Volume 7 ; 7 >
+      au < expected ; 2015 ; Epigenetics & Chromatin Volume 8 ; 8 >
 
     }
 
@@ -3586,6 +3675,7 @@
       au < released ; 2012 ; The EPMA Journal Volume 3 ; 3 >
       au < manifest ; 2013 ; The EPMA Journal Volume 4 ; 4 >
       au < manifest ; 2014 ; The EPMA Journal Volume 5 ; 5 >
+      au < expected ; 2015 ; The EPMA Journal Volume 6 ; 6 >
 
     }
 
@@ -3605,6 +3695,7 @@
       au < released ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
       au < manifest ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
       au < manifest ; 2014 ; European Journal of Medical Research Volume 19 ; 19 >
+      au < expected ; 2015 ; European Journal of Medical Research Volume 20 ; 20 >
 
     }
 
@@ -3623,6 +3714,7 @@
       au < released ; 2012 ; EvoDevo Volume 3 ; 3 >
       au < manifest ; 2013 ; EvoDevo Volume 4 ; 4 >
       au < manifest ; 2014 ; EvoDevo Volume 5 ; 5 >
+      au < expected ; 2015 ; EvoDevo Volume 6 ; 6 >
 
     }
 
@@ -3642,6 +3734,7 @@
       au < released ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
       au < manifest ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
       au < manifest ; 2014 ; Experimental & Translational Stroke Medicine Volume 6 ; 6 >
+      au < expected ; 2015 ; Experimental & Translational Stroke Medicine Volume 7 ; 7 >
 
     }
 
@@ -3658,6 +3751,7 @@
       au < released ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
       au < manifest ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
       au < manifest ; 2014 ; Experimental Hematology & Oncology Volume 3 ; 3 >
+      au < expected ; 2015 ; Experimental Hematology & Oncology Volume 4 ; 4 >
 
     }
 
@@ -3674,6 +3768,7 @@
       au < released ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
       au < manifest ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 >
       au < manifest ; 2014 ; Extreme Physiology & Medicine Volume 3 ; 3 >
+      au < expected ; 2015 ; Extreme Physiology & Medicine Volume 4 ; 4 >
 
     }
 
@@ -3694,6 +3789,7 @@
       au < released ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
       au < manifest ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
       au < manifest ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 >
+      au < expected ; 2015 ; Fibrogenesis & Tissue Repair Volume 8 ; 8 >
 
     }
 
@@ -3710,6 +3806,7 @@
       au < released ; 2012 ; Flavour Volume 1 ; 1 >
       au < manifest ; 2013 ; Flavour Volume 2 ; 2 >
       au < manifest ; 2014 ; Flavour Volume 3 ; 3 >
+      au < expected ; 2015 ; Flavour Volume 4 ; 4 >
 
     }
 
@@ -3729,6 +3826,7 @@
       au < released ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < manifest ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
       au < manifest ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
+      au < expected ; 2015 ; Fluids and Barriers of the CNS Volume 12 ; 12 >
 
     }
 
@@ -3753,6 +3851,7 @@
       au < released ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       au < manifest ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
       au < manifest ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
+      au < expected ; 2015 ; Frontiers in Zoology Volume 12 ; 12 >
 
     }
 
@@ -3908,6 +4007,7 @@
       au < released ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < manifest ; 2013 ; Genome Integrity Volume 4 ; 4 >
       au < manifest ; 2014 ; Genome Integrity Volume 5 ; 5 >
+      au < expected ; 2015 ; Genome Integrity Volume 6 ; 6 >
 
     }
 
@@ -3930,6 +4030,7 @@
       au < manifest ; 2012 ; Genome Medicine Volume 4 ; 4 >
       au < manifest ; 2013 ; Genome Medicine Volume 5 ; 5 >
       au < manifest ; 2014 ; Genome Medicine Volume 6 ; 6 >
+      au < expected ; 2015 ; Genome Medicine Volume 7 ; 7 >
       }
       {
       param[base_url] = http://genomemedicine.com/
@@ -3953,6 +4054,7 @@
       au < manifest ; 2012 ; GigaScience Volume 1 ; 1 >
       au < manifest ; 2013 ; GigaScience Volume 2 ; 2 >
       au < manifest ; 2014 ; GigaScience Volume 3 ; 3 >
+      au < expected ; 2015 ; GigaScience Volume 4 ; 4 >
 
     }
 
@@ -3976,6 +4078,7 @@
       au < released ; 2012 ; Globalization and Health Volume 8 ; 8 >
       au < manifest ; 2013 ; Globalization and Health Volume 9 ; 9 >
       au < manifest ; 2014 ; Globalization and Health Volume 10 ; 10 >
+      au < expected ; 2015 ; Globalization and Health Volume 11 ; 11 >
 
     }
 
@@ -3995,6 +4098,7 @@
       au < released ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < manifest ; 2013 ; Gut Pathogens Volume 5 ; 5 >
       au < manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
+      au < expected ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }
 
@@ -4019,6 +4123,7 @@
       au < released ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
       au < manifest ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
       au < manifest ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
+      au < expected ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
 
     }
 
@@ -4042,6 +4147,7 @@
       au < manifest ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
       au < manifest ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
       au < manifest ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
+      au < expected ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
 
     }
 
@@ -4067,6 +4173,7 @@
       au < manifest ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 >
       au < manifest ; 2013 ; Health and Quality of Life Outcomes Volume 11 ; 11 >
       au < manifest ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 >
+      au < expected ; 2015 ; Health and Quality of Life Outcomes Volume 13 ; 13 >
 
     }
 
@@ -4082,6 +4189,7 @@
 
       au < manifest ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
       au < manifest ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
+      au < expected ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
 
     }
 
@@ -4109,6 +4217,7 @@
       au < manifest ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
       au < manifest ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 >
       au < manifest ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
+      au < expected ; 2015 ; Health Research Policy and Systems Volume 13 ; 13 >
 
     }
 
@@ -4134,6 +4243,7 @@
       au < manifest ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
       au < manifest ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
       au < manifest ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 >
+      au < expected ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 ; 13 >
 
     }
 
@@ -4152,6 +4262,7 @@
       au < manifest ; 2012 ; Herpesviridae Volume 3 ; 3 >
       au < manifest ; 2013 ; Herpesviridae Volume 4 ; 4 >
       au < manifest ; 2014 ; Herpesviridae Volume 5 ; 5 >
+      au < expected ; 2015 ; Herpesviridae Volume 6 ; 6 >
 
     }
 
@@ -4200,6 +4311,7 @@
       au < manifest ; 2012 ; Human Resources for Health Volume 10 ; 10 >
       au < manifest ; 2013 ; Human Resources for Health Volume 11 ; 11 >
       au < manifest ; 2014 ; Human Resources for Health Volume 12 ; 12 >
+      au < expected ; 2015 ; Human Resources for Health Volume 13 ; 13 >
 
     }
 
@@ -4224,6 +4336,7 @@
       au < manifest ; 2012 ; Immunity & Ageing Volume 9 ; 9 >
       au < manifest ; 2013 ; Immunity & Ageing Volume 10 ; 10 >
       au < manifest ; 2014 ; Immunity & Ageing Volume 11 ; 11 >
+      au < expected ; 2015 ; Immunity & Ageing Volume 12 ; 12 >
 
     }
 
@@ -4266,6 +4379,7 @@
       au < manifest ; 2012 ; Implementation Science Volume 7 ; 7 >
       au < manifest ; 2013 ; Implementation Science Volume 8 ; 8 >
       au < manifest ; 2014 ; Implementation Science Volume 9 ; 9 >
+      au < expected ; 2015 ; Implementation Science Volume 10 ; 10 >
 
     }
 
@@ -4290,6 +4404,7 @@
       au < released ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
       au < manifest ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
       au < manifest ; 2014 ; Infectious Agents and Cancer Volume 9 ; 9 >
+      au < expected ; 2015 ; Infectious Agents and Cancer Volume 10 ; 10 >
 
     }
 
@@ -4307,6 +4422,7 @@
       au < manifest ; 2012 ; Infectious Diseases of Poverty Volume 1 ; 1 >
       au < manifest ; 2013 ; Infectious Diseases of Poverty Volume 2 ; 2 >
       au < manifest ; 2014 ; Infectious Diseases of Poverty Volume 3 ; 3 >
+      au < expected ; 2015 ; Infectious Diseases of Poverty Volume 4 ; 4 >
 
     }
 
@@ -4328,6 +4444,7 @@
       au < manifest ; 2012 ; International Archives of Medicine Volume 5 ; 5 >
       au < manifest ; 2013 ; International Archives of Medicine Volume 6 ; 6 >
       au < manifest ; 2014 ; International Archives of Medicine Volume 7 ; 7 >
+      au < expected ; 2015 ; International Archives of Medicine Volume 8 ; 8 >
 
     }
 
@@ -4350,6 +4467,7 @@
       au < manifest ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
       au < manifest ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 >
       au < manifest ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
+      au < expected ; 2015 ; International Breastfeeding Journal Volume 10 ; 10 >
 
     }
 
@@ -4376,6 +4494,7 @@
       au < manifest ; 2012 ; International Journal for Equity in Health Volume 11 ; 11 >
       au < manifest ; 2013 ; International Journal for Equity in Health Volume 12 ; 12 >
       au < manifest ; 2014 ; International Journal for Equity in Health Volume 13 ; 13 >
+      au < expected ; 2015 ; International Journal for Equity in Health Volume 14 ; 14 >
 
     }
 
@@ -4400,6 +4519,7 @@
       au < manifest ; 2012 ; International Journal of Behavioral Nutrition and Physical Activity Volume 9 ; 9 >
       au < manifest ; 2013 ; International Journal of Behavioral Nutrition and Physical Activity Volume 10 ; 10 >
       au < manifest ; 2014 ; International Journal of Behavioral Nutrition and Physical Activity Volume 11 ; 11 >
+      au < expected ; 2015 ; International Journal of Behavioral Nutrition and Physical Activity Volume 12 ; 12 >
 
     }
 
@@ -4428,6 +4548,7 @@
       au < manifest ; 2012 ; International Journal of Health Geographics Volume 11 ; 11 >
       au < manifest ; 2013 ; International Journal of Health Geographics Volume 12 ; 12 >
       au < manifest ; 2014 ; International Journal of Health Geographics Volume 13 ; 13 >
+      au < expected ; 2015 ; International Journal of Health Geographics Volume 14 ; 14 >
 
     }
 
@@ -4449,6 +4570,7 @@
       au < manifest ; 2012 ; International Journal of Mental Health Systems Volume 6 ; 6 >
       au < manifest ; 2013 ; International Journal of Mental Health Systems Volume 7 ; 7 >
       au < manifest ; 2014 ; International Journal of Mental Health Systems Volume 8 ; 8 >
+      au < expected ; 2015 ; International Journal of Mental Health Systems Volume 9 ; 9 >
 
     }
 
@@ -4473,6 +4595,7 @@
       au < manifest ; 2012 ; International Journal of Pediatric Endocrinology Volume 2012 ; 2012 >
       au < manifest ; 2013 ; International Journal of Pediatric Endocrinology Volume 2013 ; 2013 >
       au < manifest ; 2014 ; International Journal of Pediatric Endocrinology Volume 2014 ; 2014 >
+      au < expected ; 2015 ; International Journal of Pediatric Endocrinology Volume 2015 ; 2015 >
 
     }
 
@@ -4493,6 +4616,7 @@
       au < released ; 2008 ; International Seminars in Surgical Oncology Volume 5 ; 5 >
       au < released ; 2009 ; International Seminars in Surgical Oncology Volume 6 ; 6 >
       au < manifest ; 2010 ; International Seminars in Surgical Oncology Volume 7 ; 7 >
+      au < expected ; 2011 ; International Seminars in Surgical Oncology Volume 8 ; 8 >
 
     }
 
@@ -4511,6 +4635,7 @@
       au < manifest ; 2012 ; Investigative Genetics Volume 3 ; 3 >
       au < manifest ; 2013 ; Investigative Genetics Volume 4 ; 4 >
       au < manifest ; 2014 ; Investigative Genetics Volume 5 ; 5 >
+      au < expected ; 2015 ; Investigative Genetics Volume 6 ; 6 >
 
     }
 
@@ -4527,6 +4652,7 @@
       au < manifest ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
       au < manifest ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
       au < manifest ; 2014 ; Iranian Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
+      au < expected ; 2015 ; Iranian Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
 
     }
 
@@ -4570,6 +4696,7 @@
       au < manifest ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
       au < manifest ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
       au < manifest ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
+      au < expected ; 2015 ; Israel Journal of Health Policy Research Volume 4 ; 4 >
 
     }
 
@@ -4590,6 +4717,7 @@
       au < manifest ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
       au < manifest ; 2013 ; Italian Journal of Pediatrics Volume 39 ; 39 >
       au < manifest ; 2014 ; Italian Journal of Pediatrics Volume 40 ; 40 >
+      au < expected ; 2015 ; Italian Journal of Pediatrics Volume 41 ; 41 >
 
     }
 
@@ -4605,6 +4733,7 @@
 
       au < manifest ; 2013 ; Journal for ImmunoTherapy of Cancer Volume 1 ; 1 >
       au < manifest ; 2014 ; Journal for ImmunoTherapy of Cancer Volume 2 ; 2 >
+      au < expected ; 2015 ; Journal for ImmunoTherapy of Cancer Volume 3 ; 3 >
 
     }
 
@@ -4621,6 +4750,7 @@
       au < manifest ; 2012 ; Journal of Animal Science and Biotechnology Volume 3 ; 3 >
       au < manifest ; 2013 ; Journal of Animal Science and Biotechnology Volume 4 ; 4 >
       au < manifest ; 2014 ; Journal of Animal Science and Biotechnology Volume 5 ; 5 >
+      au < expected ; 2015 ; Journal of Animal Science and Biotechnology Volume 6 ; 6 >
 
     }
 
@@ -4656,6 +4786,7 @@
       au < released ; 2007 ; Journal of Autoimmune Diseases Volume 4 ; 4 >
       au < released ; 2008 ; Journal of Autoimmune Diseases Volume 5 ; 5 >
       au < manifest ; 2009 ; Journal of Autoimmune Diseases Volume 6 ; 6 >
+      au < expected ; 2010 ; Journal of Autoimmune Diseases Volume 7 ; 7 >
 
     }
 
@@ -4677,6 +4808,7 @@
       au < manifest ; 2012 ; Journal of Biological Engineering Volume 6 ; 6 >
       au < manifest ; 2013 ; Journal of Biological Engineering Volume 7 ; 7 >
       au < manifest ; 2014 ; Journal of Biological Engineering Volume 8 ; 8 >
+      au < expected ; 2015 ; Journal of Biological Engineering Volume 9 ; 9 >
 
     }
 
@@ -4692,6 +4824,7 @@
       param[journal_issn] = 2241-5793
 
       au < manifest ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
+      au < expected ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
 
     }
 
@@ -4733,6 +4866,7 @@
       au < released ; 2007 ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
       au < released ; 2008 ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
       au < manifest ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 >
+      au < expected ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 >
 
     }
 
@@ -4753,6 +4887,7 @@
       au < manifest ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
       au < manifest ; 2013 ; Journal of Biomedical Science Volume 20 ; 20 >
       au < manifest ; 2014 ; Journal of Biomedical Science Volume 21 ; 21 >
+      au < expected ; 2015 ; Journal of Biomedical Science Volume 22 ; 22 >
 
     }
 
@@ -4771,6 +4906,7 @@
       au < manifest ; 2012 ; Journal of Biomedical Semantics Volume 3 ; 3 >
       au < manifest ; 2013 ; Journal of Biomedical Semantics Volume 4 ; 4 >
       au < manifest ; 2014 ; Journal of Biomedical Semantics Volume 5 ; 5 >
+      au < expected ; 2015 ; Journal of Biomedical Semantics Volume 6 ; 6 >
 
     }
 
@@ -4818,6 +4954,7 @@
       au < manifest ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 >
       au < manifest ; 2013 ; Journal of Cardiothoracic Surgery Volume 8 ; 8 >
       au < manifest ; 2014 ; Journal of Cardiothoracic Surgery Volume 9 ; 9 >
+      au < expected ; 2015 ; Journal of Cardiothoracic Surgery Volume 10 ; 10 >
 
     }
 
@@ -4916,6 +5053,7 @@
       au < manifest ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
       au < manifest ; 2013 ; Journal of Clinical Bioinformatics Volume 3 ; 3 >
       au < manifest ; 2014 ; Journal of Clinical Bioinformatics Volume 4 ; 4 >
+      au < expected ; 2015 ; Journal of Clinical Bioinformatics Volume 5 ; 5 >
 
     }
 
@@ -4931,6 +5069,7 @@
       au < manifest ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
       au < manifest ; 2013 ; Journal of Diabetes & Metabolic Disorders Volume 12 ; 12 >
       au < manifest ; 2014 ; Journal of Diabetes & Metabolic Disorders Volume 13 ; 13 >
+      au < expected ; 2015 ; Journal of Diabetes & Metabolic Disorders Volume 14 ; 14 >
 
     }
 
@@ -4946,6 +5085,7 @@
 
       au < manifest ; 2013 ; Journal of Eating Disorders Volume 1 ; 1 >
       au < manifest ; 2014 ; Journal of Eating Disorders Volume 2 ; 2 >
+      au < expected ; 2015 ; Journal of Eating Disorders Volume 3 ; 3 >
 
     }
 
@@ -4969,6 +5109,7 @@
       au < manifest ; 2012 ; Journal of Ethnobiology and Ethnomedicine Volume 8 ; 8 >
       au < manifest ; 2013 ; Journal of Ethnobiology and Ethnomedicine Volume 9 ; 9 >
       au < manifest ; 2014 ; Journal of Ethnobiology and Ethnomedicine Volume 10 ; 10 >
+      au < expected ; 2015 ; Journal of Ethnobiology and Ethnomedicine Volume 11 ; 11 >
 
     }
 
@@ -4989,6 +5130,7 @@
       au < manifest ; 2012 ; Journal of Experimental & Clinical Cancer Research Volume 31 ; 31 >
       au < manifest ; 2013 ; Journal of Experimental & Clinical Cancer Research Volume 32 ; 32 >
       au < manifest ; 2014 ; Journal of Experimental & Clinical Cancer Research Volume 33 ; 33 >
+      au < expected ; 2015 ; Journal of Experimental & Clinical Cancer Research Volume 34 ; 34 >
 
     }
 
@@ -5009,6 +5151,7 @@
       au < manifest ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
       au < manifest ; 2013 ; Journal of Foot and Ankle Research Volume 6 ; 6 >
       au < manifest ; 2014 ; Journal of Foot and Ankle Research Volume 7 ; 7 >
+      au < expected ; 2015 ; Journal of Foot and Ankle Research Volume 8 ; 8 >
 
     }
 
@@ -5029,6 +5172,7 @@
       au < manifest ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
       au < manifest ; 2013 ; Journal of Hematology & Oncology Volume 6 ; 6 >
       au < manifest ; 2014 ; Journal of Hematology & Oncology Volume 7 ; 7 >
+      au < expected ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
 
     }
 
@@ -5077,6 +5221,7 @@
       au < manifest ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
       au < manifest ; 2013 ; Journal of Inflammation Volume 10 ; 10 >
       au < manifest ; 2014 ; Journal of Inflammation Volume 11 ; 11 >
+      au < expected ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
 
     }
 
@@ -5092,6 +5237,7 @@
 
       au < manifest ; 2013 ; Journal of Intensive Care Volume 1 ; 1 >
       au < manifest ; 2014 ; Journal of Intensive Care Volume 2 ; 2 >
+      au < expected ; 2015 ; Journal of Intensive Care Volume 3 ; 3 >
 
     }
 
@@ -5113,6 +5259,7 @@
       au < manifest ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
       au < manifest ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 >
       au < manifest ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 >
+      au < expected ; 2015 ; Journal of Medical Case Reports Volume 9 ; 9 >
 
     }
 
@@ -5128,6 +5275,7 @@
 
       au < manifest ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
       au < manifest ; 2014 ; Journal of Molecular Psychiatry Volume 2 ; 2 >
+      au < expected ; 2015 ; Journal of Molecular Psychiatry Volume 3 ; 3 >
 
     }
 
@@ -5150,6 +5298,7 @@
       au < manifest ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 >
       au < manifest ; 2013 ; Journal of Molecular Signaling Volume 8 ; 8 >
       au < manifest ; 2014 ; Journal of Molecular Signaling Volume 9 ; 9 >
+      au < expected ; 2015 ; Journal of Molecular Signaling Volume 10 ; 10 >
 
     }
 
@@ -5175,6 +5324,7 @@
       au < manifest ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
       au < manifest ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
       au < manifest ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 >
+      au < expected ; 2015 ; Journal of Nanobiotechnology Volume 13 ; 13 >
 
     }
 
@@ -5201,6 +5351,7 @@
       au < manifest ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
       au < manifest ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
       au < manifest ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 >
+      au < expected ; 2015 ; Journal of Negative Results in BioMedicine Volume 14 ; 14 >
 
     }
 
@@ -5219,6 +5370,7 @@
       au < manifest ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
       au < manifest ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
       au < manifest ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
+      au < expected ; 2015 ; Journal of Neurodevelopmental Disorders Volume 7 ; 7 >
 
     }
 
@@ -5243,6 +5395,7 @@
       au < manifest ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
       au < manifest ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 >
       au < manifest ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 >
+      au < expected ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 ; 12 >
 
     }
 
@@ -5267,6 +5420,7 @@
       au < manifest ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
       au < manifest ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
       au < manifest ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 >
+      au < expected ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
 
     }
 
@@ -5289,6 +5443,7 @@
       au < manifest ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
       au < manifest ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 >
       au < manifest ; 2014 ; Journal of Occupational Medicine and Toxicology Volume 9 ; 9 >
+      au < expected ; 2015 ; Journal of Occupational Medicine and Toxicology Volume 10 ; 10 >
 
     }
 
@@ -5311,6 +5466,7 @@
       au < manifest ; 2012 ; Journal of Orthopaedic Surgery and Research Volume 7 ; 7 >
       au < manifest ; 2013 ; Journal of Orthopaedic Surgery and Research Volume 8 ; 8 >
       au < manifest ; 2014 ; Journal of Orthopaedic Surgery and Research Volume 9 ; 9 >
+      au < expected ; 2015 ; Journal of Orthopaedic Surgery and Research Volume 10 ; 10 >
 
     }
 
@@ -5326,6 +5482,7 @@
 
       au < manifest ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
       au < manifest ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
+      au < expected ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 ; 44 >
 
     }
 
