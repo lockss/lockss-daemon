@@ -1,45 +1,40 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - RU 3564</string>
+    <string>development testing - Evan - RU 3564</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>edu.princeton.plugin.bmcr.BMCRPlugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>2</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;%s %d&quot;, base_url, year</string>
-  </entry>
-  <entry>
     <string>plugin_name</string>
     <string>Bryn Mawr Classical Review</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%smanifest%d&quot;, base_url, year</string>
-      <string>1,&quot;%s%d/indexb.html&quot;, base_url, year</string>
-      <string>1,&quot;^lockss[0-9]+\.html&quot;</string>
-      <string>1,&quot;^manifest[0-9]+\.html$&quot;</string>
-      <string>1,&quot;^%s%d/?$&quot;, base_url, year</string>
-      <string>1,&quot;^%sd/index\.html$&quot;, base_url, year</string>
-      <string>1,&quot;%s.*\.gif&quot;, base_url</string>
-      <string>1,&quot;^%s$&quot;, base_url</string>
-      <string>2,&quot;^%sindex\.html$&quot;, base_url</string>
-      <string>1,&quot;^%s\.html$&quot;, base_url</string>
-      <string>1,&quot;%s%d/%d-[0-9]+-[0-9]+.*\.html&quot;, base_url, year, year</string>
-      <string>1,&quot;%s%d/[0-9]+.[0-9]+.[0-9]+.*\.html&quot;, base_url, year</string>
-    </list>
+    <string>plugin_version</string>
+    <string>3</string>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <string>&quot;%smanifest%d.html&quot;, base_url, year</string>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>3</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -63,5 +58,67 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"BMCR Plugin, Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sarchive.html", base_url</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+      <list>
+        <string>"%smanifest%d.html", base_url, year</string>
+        <string>"%smanifest1990.html", base_url, </string>
+      </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%s%d", base_url, year</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>html</string>
+            <string>"%s%d/%d-%s.html", base_url, year, year, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s(manifest)?%d/?$", base_url, year</string>
+      <string>1,"^%s.*\.gif", base_url</string>
+      <string>1,"^%s%d/%d-[0-9]+-[0-9]+.*\.html", base_url, year, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <string>"^%s%d/%d-[0-9]+-[0-9]+.*\.html", base_url, year, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>edu.princeton.plugin.bmcr.BMCRArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>edu.princeton.plugin.bmcr.BMCRArticleIteratorFactory</string>
   </entry>
 </map>
