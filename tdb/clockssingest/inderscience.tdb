@@ -5906,7 +5906,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Networking and Virtual Organisations Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Networking and Virtual Organisations Volume 13 ; 13 >
       au < manifest ; exists ; 2014 ; International Journal of Networking and Virtual Organisations Volume 14 ; 14 >
-      au < manifest ; exists ; 2014 ; International Journal of Networking and Virtual Organisations Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; International Journal of Networking and Virtual Organisations Volume 15 ; 15 >
       au < expected ; exists ; 2015 ; International Journal of Networking and Virtual Organisations Volume 16 ; 16 >
 
     }
@@ -5921,14 +5921,11 @@
       >
 
       param[journal_id] = ijnd
-      comment[0] = no issue in 2012
 
       au < doNotProcess ; exists ; 2003-2005 ; International Journal of Nuclear Desalination Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006-2007 ; International Journal of Nuclear Desalination Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Nuclear Desalination Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Nuclear Desalination Volume 4 ; 4 >
-      au < expected ; exists ; 2014 ; International Journal of Nuclear Desalination Volume 5 ; 5 >
-      au < expected ; exists ; 2015 ; International Journal of Nuclear Desalination Volume 6 ; 6 >
 
     }
 
@@ -5969,9 +5966,8 @@
       au < doNotProcess ; exists ; 2006-2007 ; International Journal of Nuclear Governance, Economy and Ecology Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Nuclear Governance, Economy and Ecology Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Nuclear Governance, Economy and Ecology Volume 3 ; 3 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nuclear Governance, Economy and Ecology Volume 4 ; 4 >
-      au < expected ; exists ; 2014 ; International Journal of Nuclear Governance, Economy and Ecology Volume 5 ; 5 >
-      au < expected ; exists ; 2015 ; International Journal of Nuclear Governance, Economy and Ecology Volume 6 ; 6 >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Nuclear Governance, Economy and Ecology Volume 4 ; 4 >
+      au < expected ; exists ; 2015 ; International Journal of Nuclear Governance, Economy and Ecology Volume 5 ; 5 >
 
     }
 
@@ -5985,10 +5981,9 @@
       >
 
       param[journal_id] = ijnhpa
-      comment[0] = no issue in 2012
 
       au < doNotProcess ; exists ; 2006-2008 ; International Journal of Nuclear Hydrogen Production and Applications Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Nuclear Hydrogen Production and Applications Volume 2 ; 2 >
+      au < doNotProcess ; doNotProcess ; 2009-2013 ; International Journal of Nuclear Hydrogen Production and Applications Volume 2 ; 2 >
       au < expected ; exists ; 2014 ; International Journal of Nuclear Hydrogen Production and Applications Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; International Journal of Nuclear Hydrogen Production and Applications Volume 4 ; 4 >
 
@@ -6011,9 +6006,8 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Nuclear Knowledge Management Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Nuclear Knowledge Management Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Nuclear Knowledge Management Volume 5 ; 5 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 >
-      au < expected ; exists ; 2014 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 >
-      au < expected ; exists ; 2015 ; International Journal of Nuclear Knowledge Management Volume 8 ; 8 >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 >
+      au < expected ; exists ; 2015 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 >
 
     }
 
@@ -6066,9 +6060,6 @@
       param[journal_id] = ijosm
 
       au < doNotProcess ; doNotProcess ; 2008-2012 ; International Journal of Ocean Systems Management Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Ocean Systems Management Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Ocean Systems Management Volume 3 ; 3 >
-      au < expected ; exists ; 2015 ; International Journal of Ocean Systems Management Volume 4 ; 4 >
 
     }
 
@@ -6090,7 +6081,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Oil, Gas and Coal Technology Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Oil, Gas and Coal Technology Volume 6 ; 6 >
       au < manifest ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 7 ; 7 >
-      au < expected ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 >
+      au < exists ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 >
+      au < exists ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 >
 
     }
 
