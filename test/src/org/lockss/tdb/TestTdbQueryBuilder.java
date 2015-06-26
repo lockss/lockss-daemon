@@ -191,11 +191,12 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     Predicate<Au> predicate = tdbq.getAuPredicate(options);
     assertNotNull(predicate);
     assertFalse(predicate instanceof TruePredicate);
-    Set<String> statusSet = new HashSet<String>(statuses);
     for (String status : Au.STATUSES) {
       Au au = new Au();
       au.put(Au.STATUS, status);
-      assertEquals(statusSet.contains(status), predicate.test(au));
+      assertEquals(String.format("%s is not in the set %s", status, statuses),
+                   statuses.contains(status),
+                   predicate.test(au));
     }
   }
 

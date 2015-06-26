@@ -43,6 +43,15 @@ public class TdbOut {
 
   /**
    * <p>
+   * A version string for the TdbOut tool ({@value}).
+   * </p>
+   * 
+   * @since 1.68
+   */
+  public static final String VERSION = "[TdbOut:0.2.1]";
+  
+  /**
+   * <p>
    * Key for the style option ({@value}).
    * </p>
    * 
@@ -495,6 +504,7 @@ public class TdbOut {
   public void addOptions(Options options) {
     // Options from other modules
     HelpOption.addOptions(options);
+    VersionOption.addOptions(options);
     VerboseOption.addOptions(options);
     KeepGoingOption.addOptions(options);
     InputOption.addOptions(options);
@@ -816,7 +826,13 @@ public class TdbOut {
     addOptions(options);
     CommandLine clicmd = new PosixParser().parse(options, mainArgs);
     CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
+    // Short-circuit options
     HelpOption.processCommandLine(cmd, options, getClass());
+    VersionOption.processCommandLine(cmd,
+                                     VERSION,
+                                     TdbBuilder.VERSION,
+                                     TdbQueryBuilder.VERSION);
+    // Normal options
     run(cmd);
   }
   

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,6 +62,15 @@ import org.lockss.util.Constants;
  */
 public class TdbBuilder extends TdbParserBaseListener {
 
+  /**
+   * <p>
+   * A version string for the TdbBuilder module ({@value}).
+   * </p>
+   * 
+   * @since 1.68
+   */
+  public static final String VERSION = "[TdbBuilder:0.2.1]";
+  
   /**
    * <p>
    * The {@link Tdb} structure being built by this instance.

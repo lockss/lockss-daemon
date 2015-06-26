@@ -49,6 +49,15 @@ public class TdbXml {
 
   /**
    * <p>
+   * A version string for the TdbXml tool ({@value}).
+   * </p>
+   * 
+   * @since 1.68
+   */
+  public static final String VERSION = "[TdbXml:0.2.1]";
+  
+  /**
+   * <p>
    * Key for the no-pub-down option ({@value}).
    * </p>
    * 
@@ -187,9 +196,16 @@ public class TdbXml {
     * </p>
     *
     * @since 1.67
+    * @see Au#STATUS_FROZEN
+    * @see Au#STATUS_DEEP_CRAWL
+    * @see Au#STATUS_FINISHED
+    * @see Au#STATUS_DOWN
+    * @see Au#STATUS_SUPERSEDED
+    * @see Au#STATUS_ZAPPED
     */  
   protected static final Set<String> PUB_DOWN_STATUSES =
       Collections.unmodifiableSet(new HashSet<String>(Arrays.asList(Au.STATUS_FROZEN,
+                                                                    Au.STATUS_DEEP_CRAWL,
                                                                     Au.STATUS_FINISHED,
                                                                     Au.STATUS_DOWN,
                                                                     Au.STATUS_SUPERSEDED,
@@ -253,6 +269,7 @@ public class TdbXml {
   public void addOptions(Options options) {
     // Options from other modules
     HelpOption.addOptions(options);
+    VersionOption.addOptions(options);
     VerboseOption.addOptions(options);
     KeepGoingOption.addOptions(options);
     InputOption.addOptions(options);
@@ -763,7 +780,13 @@ public class TdbXml {
     addOptions(options);
     CommandLine clicmd = new PosixParser().parse(options, mainArgs);
     CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
+    // Short-circuit options
     HelpOption.processCommandLine(cmd, options, getClass());
+    VersionOption.processCommandLine(cmd,
+                                     VERSION,
+                                     TdbBuilder.VERSION,
+                                     TdbQueryBuilder.VERSION);
+    // Normal options
     run(cmd);
   }
   

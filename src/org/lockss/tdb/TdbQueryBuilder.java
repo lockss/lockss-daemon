@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -72,6 +72,15 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
 
   /**
    * <p>
+   * A version string for the TdbQueryBuilder module ({@value}).
+   * </p>
+   * 
+   * @since 1.68
+   */
+  public static final String VERSION = "[TdbQueryBuilder:0.2.1]";
+  
+  /**
+   * <p>
    * Key for the all option ({@value}).
    * </p>
    * 
@@ -101,8 +110,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @see Au#STATUS_READY
    * @see Au#STATUS_READY_SOURCE
    * @see Au#STATUS_CRAWLING
-   * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_FROZEN
+   * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_ING_NOT_READY
    * @see Au#STATUS_RELEASING
    * @see Au#STATUS_FINISHED
@@ -118,8 +127,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  Au.STATUS_READY,
                  Au.STATUS_READY_SOURCE,
                  Au.STATUS_CRAWLING,
-                 Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_FROZEN,
+                 Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_ING_NOT_READY,
                  Au.STATUS_RELEASING,
                  Au.STATUS_FINISHED,
@@ -233,6 +242,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @see Au#STATUS_TESTING
    * @see Au#STATUS_NOT_READY
    * @see Au#STATUS_FROZEN
+   * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_FINISHED
    * @see Au#STATUS_DOWN
    * @see Au#STATUS_SUPERSEDED
@@ -242,6 +252,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  Au.STATUS_TESTING,
                  Au.STATUS_NOT_READY,
                  Au.STATUS_FROZEN,
+                 Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_FINISHED,
                  Au.STATUS_DOWN,
                  Au.STATUS_SUPERSEDED);
@@ -972,8 +983,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @see Au#STATUS_READY
    * @see Au#STATUS_READY_SOURCE
    * @see Au#STATUS_CRAWLING
-   * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_FROZEN
+   * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_ING_NOT_READY
    * @see Au#STATUS_RELEASING
    */
@@ -985,8 +996,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  Au.STATUS_READY,
                  Au.STATUS_READY_SOURCE,
                  Au.STATUS_CRAWLING,
-                 Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_FROZEN,
+                 Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_ING_NOT_READY,
                  Au.STATUS_RELEASING);
   
