@@ -116,7 +116,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
-        au < crawling ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
+        au < frozen ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 >
 
     }

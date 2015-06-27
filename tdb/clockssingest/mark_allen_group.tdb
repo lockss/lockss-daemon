@@ -125,7 +125,7 @@
     au < manifest ; exists ; 2011 ; British Journal of Hospital Medicine Volume 72 ; 72 >
     au < manifest ; exists ; 2012 ; British Journal of Hospital Medicine Volume 73 ; 73 >
     au < crawling ; exists ; 2013 ; British Journal of Hospital Medicine Volume 74 ; 74 >
-    au < crawling ; exists ; 2014 ; British Journal of Hospital Medicine Volume 75 ; 75 >
+    au < frozen ; exists ; 2014 ; British Journal of Hospital Medicine Volume 75 ; 75 >
     au < manifest ; exists ; 2015 ; British Journal of Hospital Medicine Volume 76 ; 76 >
 
 
@@ -143,7 +143,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; British Journal of Mental Health Nursing Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2014 ; British Journal of Mental Health Nursing Volume 2 ; 2 >
-    au < crawling ; exists ; 2014 ; British Journal of Mental Health Nursing Volume 3 ; 3 >
+    au < frozen ; exists ; 2014 ; British Journal of Mental Health Nursing Volume 3 ; 3 >
     au < manifest ; exists ; 2015 ; British Journal of Mental Health Nursing Volume 4 ; 4 >
 
 
@@ -162,7 +162,7 @@
     au < manifest ; exists ; 2011 ; British Journal of Midwifery Volume 19 ; 19 >
     au < manifest ; exists ; 2012 ; British Journal of Midwifery Volume 20 ; 20 >
     au < crawling ; exists ; 2013 ; British Journal of Midwifery Volume 21 ; 21 >
-    au < crawling ; exists ; 2014 ; British Journal of Midwifery Volume 22 ; 22 >
+    au < frozen ; exists ; 2014 ; British Journal of Midwifery Volume 22 ; 22 >
     au < manifest ; exists ; 2015 ; British Journal of Midwifery Volume 23 ; 23 >
 
 
@@ -181,7 +181,7 @@
     au < manifest ; exists ; 2011 ; British Journal of Neuroscience Nursing Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; British Journal of Neuroscience Nursing Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; British Journal of Neuroscience Nursing Volume 9 ; 9 >
-    au < crawling ; exists ; 2014 ; British Journal of Neuroscience Nursing Volume 10 ; 10 >
+    au < frozen ; exists ; 2014 ; British Journal of Neuroscience Nursing Volume 10 ; 10 >
     au < manifest ; exists ; 2015 ; British Journal of Neuroscience Nursing Volume 11 ; 11 >
 
 
@@ -219,7 +219,7 @@
     au < manifest ; exists ; 2011 ; British Journal of School Nursing Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; British Journal of School Nursing Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; British Journal of School Nursing Volume 8 ; 8 >
-    au < crawling ; exists ; 2014 ; British Journal of School Nursing Volume 9 ; 9 >
+    au < frozen ; exists ; 2014 ; British Journal of School Nursing Volume 9 ; 9 >
     au < manifest ; exists ; 2015 ; British Journal of School Nursing Volume 10 ; 10 >
 
   }
@@ -304,7 +304,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Ophthalmic Practice Volume 2 ; 2 >
     au < manifest ; exists ; 2012 ; International Journal of Ophthalmic Practice Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; International Journal of Ophthalmic Practice Volume 4 ; 4 >
-    au < crawling ; exists ; 2014 ; International Journal of Ophthalmic Practice Volume 5 ; 5 >
+    au < frozen ; exists ; 2014 ; International Journal of Ophthalmic Practice Volume 5 ; 5 >
     au < manifest ; exists ; 2015 ; International Journal of Ophthalmic Practice Volume 6 ; 6 >
 
   }
@@ -322,7 +322,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Palliative Nursing Volume 17 ; 17 >
     au < manifest ; exists ; 2012 ; International Journal of Palliative Nursing Volume 18 ; 18 >
     au < crawling ; exists ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 >
-    au < crawling ; exists ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 >
+    au < frozen ; exists ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 >
     au < manifest ; exists ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 >
 
   }
@@ -426,7 +426,7 @@
     au < manifest ; exists ; 2011 ; Journal of Paramedic Practice Volume 3 ; 3 >
     au < manifest ; exists ; 2012 ; Journal of Paramedic Practice Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 >
-    au < crawling ; exists ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 >
+    au < frozen ; exists ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 >
     au < manifest ; exists ; 2015 ; Journal of Paramedic Practice Volume 7 ; 7 >
 
   }
@@ -444,7 +444,7 @@
     au < manifest ; exists ; 2011 ; Journal of Renal Nursing Volume 3 ; 3 >
     au < manifest ; exists ; 2012 ; Journal of Renal Nursing Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Journal of Renal Nursing Volume 5 ; 5 >
-    au < crawling ; exists ; 2014 ; Journal of Renal Nursing Volume 6 ; 6 >
+    au < frozen ; exists ; 2014 ; Journal of Renal Nursing Volume 6 ; 6 >
     au < manifest ; exists ; 2015 ; Journal of Renal Nursing Volume 7 ; 7 >
 
   }
@@ -462,7 +462,7 @@
     au < manifest ; exists ; 2011 ; Journal of Wound Care Volume 20 ; 20 >
     au < manifest ; exists ; 2012 ; Journal of Wound Care Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; Journal of Wound Care Volume 22 ; 22 >
-    au < crawling ; exists ; 2014 ; Journal of Wound Care Volume 23 ; 23 >
+    au < frozen ; exists ; 2014 ; Journal of Wound Care Volume 23 ; 23 >
     au < manifest ; exists ; 2015 ; Journal of Wound Care Volume 24 ; 24 >
 
   }
@@ -480,7 +480,7 @@
     au < manifest ; exists ; 2011 ; Nurse Prescribing Volume 9 ; 9 >
     au < manifest ; exists ; 2012 ; Nurse Prescribing Volume 10 ; 10 >
     au < crawling ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 >
-    au < crawling ; exists ; 2014 ; Nurse Prescribing Volume 12 ; 12 >
+    au < frozen ; exists ; 2014 ; Nurse Prescribing Volume 12 ; 12 >
     au < manifest ; exists ; 2015 ; Nurse Prescribing Volume 13 ; 13 >
 
   }
@@ -498,7 +498,7 @@
     au < manifest ; exists ; 2011 ; Nursing and Residential Care Volume 9 ; 9 >
     au < manifest ; exists ; 2012 ; Nursing and Residential Care Volume 10 ; 10 >
     au < crawling ; exists ; 2013 ; Nursing and Residential Care Volume 11 ; 11 >
-    au < crawling ; exists ; 2014 ; Nursing and Residential Care Volume 12 ; 12 >
+    au < frozen ; exists ; 2014 ; Nursing and Residential Care Volume 12 ; 12 >
     au < manifest ; exists ; 2015 ; Nursing and Residential Care Volume 13 ; 13 >
 
   }
@@ -534,7 +534,7 @@
     au < exists ; exists ; 2011 ; Companion Animal Volume 16 ; 16 >
     au < exists ; exists ; 2012 ; Companion Animal Volume 17 ; 17 >
     au < crawling ; exists ; 2013 ; Companion Animal Volume 18 ; 18 >
-    au < crawling ; exists ; 2014 ; Companion Animal Volume 19 ; 19 >
+    au < frozen ; exists ; 2014 ; Companion Animal Volume 19 ; 19 >
     au < manifest ; exists ; 2015 ; Companion Animal Volume 20 ; 20 >
 
   }
@@ -570,7 +570,7 @@
     au < exists ; exists ; 2011 ; Livestock Volume 16 ; 16 >
     au < exists ; exists ; 2012 ; Livestock Volume 17 ; 17 >
     au < crawling ; exists ; 2013 ; Livestock Volume 18 ; 18 >
-    au < crawling ; exists ; 2014 ; Livestock Volume 19 ; 19 >
+    au < frozen ; exists ; 2014 ; Livestock Volume 19 ; 19 >
     au < manifest ; exists ; 2015 ; Livestock Volume 20 ; 20 >
 
   }
@@ -588,7 +588,7 @@
     au < manifest ; exists ; 2011 ; The Veterinary Nurse Volume 2 ; 2 >
     au < manifest ; exists ; 2012 ; The Veterinary Nurse Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; The Veterinary Nurse Volume 4 ; 4 >
-    au < crawling ; exists ; 2014 ; The Veterinary Nurse Volume 5 ; 5 >
+    au < frozen ; exists ; 2014 ; The Veterinary Nurse Volume 5 ; 5 >
     au < manifest ; exists ; 2015 ; The Veterinary Nurse Volume 6 ; 6 >
 
   }
@@ -620,7 +620,7 @@
     au < manifest ; exists ; 2011 ; Child Care Volume 8 ; 8 >
     au < manifest ; exists ; 2012 ; Child Care Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Child Care Volume 10 ; 10 >
-    au < crawling ; exists ; 2014 ; Child Care Volume 11 ; 11 >
+    au < frozen ; exists ; 2014 ; Child Care Volume 11 ; 11 >
     au < manifest ; exists ; 2015 ; Child Care Volume 12 ; 12 >
 
   }
@@ -672,7 +672,7 @@
     au < manifest ; exists ; 2011 ; Headteacher Update Volume 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Headteacher Update Volume 2012 ; 2012 >
     au < crawling ; exists ; 2013 ; Headteacher Update Volume 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Headteacher Update Volume 2014 ; 2014 >
+    au < frozen ; exists ; 2014 ; Headteacher Update Volume 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Headteacher Update Volume 2015 ; 2015 >
 
   }
@@ -689,7 +689,7 @@
     au < manifest ; exists ; 2011 ; Nursery World Volume 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Nursery World Volume 2012 ; 2012 >
     au < crawling ; exists ; 2013 ; Nursery World Volume 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Nursery World Volume 2014 ; 2014 >
+    au < frozen ; exists ; 2014 ; Nursery World Volume 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Nursery World Volume 2015 ; 2015 >
 
   }

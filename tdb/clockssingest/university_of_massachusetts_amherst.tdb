@@ -23,7 +23,7 @@
     au < manifest ; exists ; 2007 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; Rasenna: Journal of the Center for Etruscan Studies volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 >
-    au < crawling ; exists ; 2014 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 >
+    au < frozen ; exists ; 2014 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 >
     au < expected ; exists ; 2015 ; Rasenna: Journal of the Center for Etruscan Studies Volume 5 ; 5 >
 
   }
@@ -59,7 +59,7 @@
 
     au < crawling ; exists ; 2012 ; communication +1 Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; communication +1 Volume 2 ; 2 >
-    au < crawling ; exists ; 2014 ; communication +1 Volume 3 ; 3 >
+    au < frozen ; exists ; 2014 ; communication +1 Volume 3 ; 3 >
     au < expected ; exists ; 2015 ; communication +1 Volume 4 ; 4 >
 
   }
@@ -109,7 +109,7 @@
     au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 >
-    au < crawling ; exists ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
+    au < frozen ; exists ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
     au < manifest ; exists ; 2015 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 5 ; 5 >
 
   }
