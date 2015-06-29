@@ -5968,7 +5968,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Movement Ecology Volume 1 ; 1 >
       au < manifest ; exists ; 2014 ; Movement Ecology Volume 2 ; 2 >
-      au < expected ; exists ; 2015 ; Movement Ecology Volume 3 ; 3 >
+      au < manifest ; exists ; 2015 ; Movement Ecology Volume 3 ; 3 >
 
     }
 
@@ -7179,8 +7179,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2054-7072
       comment[platform] = BioMedCentral
 
-      au < exists ; exists ; 2014 ; Journal of Clinical Movement Disorders Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; Journal of Clinical Movement Disorders Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Journal of Clinical Movement Disorders Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; Journal of Clinical Movement Disorders Volume 2 ; 2 >
 
     }
 
@@ -7196,7 +7196,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       comment[platform] = BioMedCentral
 
       au < manifest ; exists ; 2014 ; Journal of Compassionate Health Care Volume 1 ; 1 >
-      au < exists ; exists ; 2015 ; Journal of Compassionate Health Care Volume 2 ; 2 >
+      au < manifest ; exists ; 2015 ; Journal of Compassionate Health Care Volume 2 ; 2 >
 
     }
 
