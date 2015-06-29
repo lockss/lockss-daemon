@@ -219,7 +219,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 23;
+  private int targetDatabaseVersion = 24;
 
   // The database version updates that are performed asynchronously.
   private int[] asynchronousUpdates = new int[] {10, 15, 17, 20, 22};
@@ -1865,6 +1865,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  }
 	} else if (from == 22) {
 	  dbManagerSql.updateDatabaseFrom22To23(conn);
+	} else if (from == 23) {
+	  dbManagerSql.updateDatabaseFrom23To24(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -2248,5 +2250,126 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the identifier of a publisher if existing or after creating it
+   * otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findOrCreatePublisher(Connection conn, String publisherName)
+      throws DbException {
+    final String DEBUG_HEADER = "findOrCreatePublisher(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
+
+    Long publisherSeq = null;
+
+    try {
+      publisherSeq = dbManagerSql.findOrCreatePublisher(conn, publisherName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    } catch (SQLException sqle) {
+      String message = "Cannot find or create publisher";
+      log.error(message);
+      log.error("publisherName = '" + publisherName + "'");
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot find or create publisher";
+      log.error(message);
+      log.error("publisherName = '" + publisherName + "'");
+      throw new DbException(message, re);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    return publisherSeq;
+  }
+
+  /**
+   * Provides the identifier of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findPublisher(Connection conn, String publisherName)
+      throws DbException {
+    final String DEBUG_HEADER = "findPublisher(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
+
+    Long publisherSeq = null;
+
+    try {
+      publisherSeq = dbManagerSql.findPublisher(conn, publisherName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    } catch (SQLException sqle) {
+      String message = "Cannot find publisher";
+      log.error(message);
+      log.error("publisherName = '" + publisherName + "'");
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot find publisher";
+      log.error(message);
+      log.error("publisherName = '" + publisherName + "'");
+      throw new DbException(message, re);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    return publisherSeq;
+  }
+
+  /**
+   * Adds a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher just added.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long addPublisher(Connection conn, String publisherName)
+      throws DbException {
+    final String DEBUG_HEADER = "addPublisher(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
+
+    Long publisherSeq = null;
+
+    try {
+      publisherSeq = dbManagerSql.addPublisher(conn, publisherName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    } catch (SQLException sqle) {
+      String message = "Cannot add publisher";
+      log.error(message);
+      log.error("publisherName = '" + publisherName + "'");
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot add publisher";
+      log.error(message);
+      log.error("publisherName = '" + publisherName + "'");
+      throw new DbException(message, re);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    return publisherSeq;
   }
 }

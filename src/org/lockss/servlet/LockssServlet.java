@@ -1289,9 +1289,10 @@ public abstract class LockssServlet extends HttpServlet
    *          A Page representing the HTML page.
    */
   protected void addJQueryLocations(Page page) {
-    addJavaScriptLocation(page, "js/jquery.min-1.5.js");
+    addJavaScriptLocation(page, "js/jquery-1.6.2.js");
     addJavaScriptLocation(page, "js/jquery-ui.min-1.8.js");
     addJavaScriptLocation(page, "js/auDetails.js");
+    addJavaScriptLocation(page, "js/jquery.tristate.js");
   }
 
   /**
@@ -1349,5 +1350,20 @@ public abstract class LockssServlet extends HttpServlet
     return new LinkWithExplanation(
       enabled ? srvLink(descr, linkText, linkAction)
 	  : ServletUtil.gray(linkText), linkExpl);
+  }
+
+  /**
+   * Adds a JavaScript file location to a form.
+   * 
+   * @param form
+   *          A Form representing the HTML form.
+   * @param jsLocation
+   *          A String with the location of the JavaScript file.
+   */
+  protected void addFormJavaScriptLocation(Form form, String jsLocation) {
+    Script ajaxScript = new Script("");
+    ajaxScript.attribute("src", jsLocation);
+    ajaxScript.attribute("type", "text/javascript");
+    form.add(ajaxScript);
   }
 }

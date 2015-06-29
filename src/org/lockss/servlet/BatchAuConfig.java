@@ -263,7 +263,8 @@ public class BatchAuConfig extends LockssServlet {
 
       // Only show the update link if there are subscriptions already.
       try {
-	if (subManager.hasSubscriptionRanges()) {
+	if (subManager.hasSubscriptionRanges()
+	    || subManager.hasPublisherSubscriptions()) {
 	  // Add titles to subscription management.
 	  list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
 	      			     SubscriptionManagement
@@ -274,7 +275,7 @@ public class BatchAuConfig extends LockssServlet {
 	      			     .SHOW_UPDATE_PAGE_HELP_TEXT));
 	}
       } catch (DbException dbe) {
-	log.error("Error counting subscribedPublications", dbe);
+	log.error("Error counting subscribed publishers or publications", dbe);
       }
 
       // Add titles to subscription management.

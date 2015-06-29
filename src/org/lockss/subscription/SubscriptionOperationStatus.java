@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,9 +42,38 @@ import org.lockss.remote.RemoteApi.BatchAuStatus;
  */
 public class SubscriptionOperationStatus {
   /*
+   * The status entry for the total subscription option.
+   */
+  private PublisherStatusEntry totalSubscriptionStatusEntry = null;
+
+  /*
+   * The list of publisher subscription status entries.
+   */
+  private List<PublisherStatusEntry> publisherSubscriptionStatusEntries =
+      new ArrayList<PublisherStatusEntry>();
+
+  /*
    * The list of status entries resulting from the operation.
    */
   private List<StatusEntry> statusEntries = new ArrayList<StatusEntry>();
+
+  /**
+   * Provides the status entry for the total subscription option.
+   * 
+   * @return a PublisherStatusEntry with the status entry.
+   */
+  public PublisherStatusEntry getTotalSubscriptionStatusEntry() {
+    return totalSubscriptionStatusEntry;
+  }
+
+  /**
+   * Provides the list of publisher subscription status entries.
+   * 
+   * @return a List<PublisherStatusEntry> with the status entries.
+   */
+  public List<PublisherStatusEntry> getPublisherSubscriptionStatusEntries() {
+    return publisherSubscriptionStatusEntries;
+  }
 
   /**
    * Provides the list of status entries resulting from the operation.
@@ -53,6 +82,67 @@ public class SubscriptionOperationStatus {
    */
   public List<StatusEntry> getStatusEntries() {
     return statusEntries;
+  }
+
+  /**
+   * Creates the status entry for the total subscription option.
+   * 
+   * @param subscriptionSuccess
+   *          A boolean with the indication of whether the processing of the
+   *          subscription succeeded.
+   * @param subscriptionErrorMessage
+   *          A String with an error message if the processing of the
+   *          subscription failed.
+   * @param subscriptionStatus
+   *          A Boolean with the publisher subscription status.
+   * @return a PublisherStatusEntry with the status entry just created.
+   */
+  public PublisherStatusEntry createTotalSubscriptionStatusEntry(
+      boolean subscriptionSuccess, String subscriptionErrorMessage,
+      Boolean subscriptionStatus) {
+    totalSubscriptionStatusEntry =
+	new PublisherStatusEntry(SubscriptionManager.ALL_PUBLISHERS_NAME,
+	subscriptionSuccess, subscriptionErrorMessage, subscriptionStatus);
+
+    return totalSubscriptionStatusEntry;
+  }
+
+  /**
+   * Adds a new empty publisher status entry.
+   * 
+   * @return a PublisherStatusEntry with the status entry just created.
+   */
+  public PublisherStatusEntry addPublisherStatusEntry() {
+    PublisherStatusEntry entry = new PublisherStatusEntry();
+    publisherSubscriptionStatusEntries.add(entry);
+
+    return entry;
+  }
+
+  /**
+   * Adds a new fully-populated publisher status entry.
+   * 
+   * @param publisherName
+   *          A String with the name of the publisher involved in the
+   *          subscription.
+   * @param subscriptionSuccess
+   *          A boolean with the indication of whether the processing of the
+   *          subscription succeeded.
+   * @param subscriptionErrorMessage
+   *          A String with an error message if the processing of the
+   *          subscription failed.
+   * @param subscriptionStatus
+   *          A Boolean with the publisher subscription status.
+   * @return a PublisherStatusEntry with the status entry just created.
+   */
+  public PublisherStatusEntry addPublisherStatusEntry(String publisherName,
+      boolean subscriptionSuccess, String subscriptionErrorMessage,
+      Boolean subscriptionStatus) {
+    PublisherStatusEntry entry = new PublisherStatusEntry(publisherName,
+	subscriptionSuccess, subscriptionErrorMessage, subscriptionStatus);
+    publisherSubscriptionStatusEntries.add(entry);
+
+    return entry;
   }
 
   /**
@@ -92,7 +182,7 @@ public class SubscriptionOperationStatus {
    * @param publicationName
    *          A String with the name of the publication involved in the
    *          subscription.
-   * @param susbcriptionSuccess
+   * @param subscriptionSuccess
    *          A boolean with the indication of whether the processing of the
    *          subscription succeeded.
    * @param subscriptionErrorMessage
@@ -104,9 +194,9 @@ public class SubscriptionOperationStatus {
    * @return a StatusEntry with the status entry just created.
    */
   public StatusEntry addStatusEntry(String publicationName,
-      boolean susbcriptionSuccess, String subscriptionErrorMessage,
+      boolean subscriptionSuccess, String subscriptionErrorMessage,
       BatchAuStatus auStatus) {
-    StatusEntry entry = new StatusEntry(publicationName, susbcriptionSuccess,
+    StatusEntry entry = new StatusEntry(publicationName, subscriptionSuccess,
 	subscriptionErrorMessage, auStatus);
     statusEntries.add(entry);
 
@@ -115,7 +205,106 @@ public class SubscriptionOperationStatus {
 
   @Override
   public String toString() {
-    return "SubscriptionOperationStatus [statusEntries=" + statusEntries + "]";
+    return "SubscriptionOperationStatus [totalSubscriptionStatusEntry="
+	+ totalSubscriptionStatusEntry + ", publisherSubscriptionStatusEntries="
+	+ publisherSubscriptionStatusEntries + ", statusEntries="
+	+ statusEntries + "]";
+  }
+
+  /**
+   * Status representation of the operation on one publisher subscription.
+   * 
+   * @author Fernando Garcia-Loygorri
+   */
+  public static class PublisherStatusEntry {
+    /*
+     * The name of the publisher involved in the subscription.
+     */
+    private String publisherName;
+
+    /*
+     * The indication of whether the processing of the subscription succeeded.
+     */
+    private boolean subscriptionSuccess = true;
+
+    /*
+     * The error message if the processing of the subscription failed.
+     */
+    private String subscriptionErrorMessage = null;
+
+    /*
+     * The publisher subscription status.
+     */
+    private Boolean subscriptionStatus;
+
+    /**
+     * Default constructor.
+     */
+    PublisherStatusEntry() {
+    }
+
+    /**
+     * Constructor of a new fully-populated status entry.
+     * 
+     * @param publisherName
+     *          A String with the name of the publisher involved in the
+     *          subscription.
+     * @param subscriptionSuccess
+     *          A boolean with the indication of whether the processing of the
+     *          subscription succeeded.
+     * @param subscriptionErrorMessage
+     *          A String with an error message if the processing of the
+     *          subscription failed.
+     * @param subscriptionStatus
+     *          A Boolean with the publisher subscription status.
+     */
+    PublisherStatusEntry(String publisherName, boolean subscriptionSuccess,
+	String subscriptionErrorMessage, Boolean subscriptionStatus) {
+      this.publisherName = publisherName;
+      this.subscriptionSuccess = subscriptionSuccess;
+      this.subscriptionErrorMessage = subscriptionErrorMessage;
+      this.subscriptionStatus = subscriptionStatus;
+    }
+
+    public boolean isSubscriptionSuccess() {
+      return subscriptionSuccess;
+    }
+
+    public void setSubscriptionSuccess(boolean subscriptionSuccess) {
+      this.subscriptionSuccess = subscriptionSuccess;
+    }
+
+    public String getSubscriptionErrorMessage() {
+      return subscriptionErrorMessage;
+    }
+
+    public void setSubscriptionErrorMessage(String subscriptionErrorMessage) {
+      this.subscriptionErrorMessage = subscriptionErrorMessage;
+    }
+
+    public String getPublisherName() {
+      return publisherName;
+    }
+
+    public void setPublisherName(String publisherName) {
+      this.publisherName = publisherName;
+    }
+
+    public Boolean getSubscriptionStatus() {
+      return subscriptionStatus;
+    }
+
+    public void setSubscriptionStatus(Boolean subscriptionStatus) {
+      this.subscriptionStatus = subscriptionStatus;
+    }
+
+    @Override
+    public String toString() {
+      return "PublisherStatusEntry [publisherName=" + publisherName
+	  + ", subscriptionSuccess=" + subscriptionSuccess
+	  + ", subscriptionFailureMessage=" + subscriptionErrorMessage
+	  + ", subscriptionStatus=" + subscriptionStatus + "]";
+    }
   }
 
   /**
@@ -132,7 +321,7 @@ public class SubscriptionOperationStatus {
     /*
      * The indication of whether the processing of the subscription succeeded.
      */
-    private boolean susbcriptionSuccess = true;
+    private boolean subscriptionSuccess = true;
 
     /*
      * The error message if the processing of the subscription failed.
@@ -171,7 +360,7 @@ public class SubscriptionOperationStatus {
      * @param publicationName
      *          A String with the name of the publication involved in the
      *          subscription.
-     * @param susbcriptionSuccess
+     * @param subscriptionSuccess
      *          A boolean with the indication of whether the processing of the
      *          subscription succeeded.
      * @param subscriptionErrorMessage
@@ -181,20 +370,20 @@ public class SubscriptionOperationStatus {
      *          A BatchAuStatus with the status resulting from configuring
      *          archival units.
      */
-    StatusEntry(String publicationName, boolean susbcriptionSuccess,
+    StatusEntry(String publicationName, boolean subscriptionSuccess,
 	String subscriptionErrorMessage, BatchAuStatus auStatus) {
       this.publicationName = publicationName;
-      this.susbcriptionSuccess = susbcriptionSuccess;
+      this.subscriptionSuccess = subscriptionSuccess;
       this.subscriptionErrorMessage = subscriptionErrorMessage;
       this.auStatus = auStatus;
     }
 
-    public boolean isSusbcriptionSuccess() {
-      return susbcriptionSuccess;
+    public boolean isSubscriptionSuccess() {
+      return subscriptionSuccess;
     }
 
-    public void setSusbcriptionSuccess(boolean susbcriptionSuccess) {
-      this.susbcriptionSuccess = susbcriptionSuccess;
+    public void setSubscriptionSuccess(boolean subscriptionSuccess) {
+      this.subscriptionSuccess = subscriptionSuccess;
     }
 
     public String getSubscriptionErrorMessage() {
@@ -224,7 +413,7 @@ public class SubscriptionOperationStatus {
     @Override
     public String toString() {
       return "StatusEntry [publicationName=" + publicationName
-	  + ", susbcriptionSuccess=" + susbcriptionSuccess
+	  + ", subscriptionSuccess=" + subscriptionSuccess
 	  + ", subscriptionFailureMessage=" + subscriptionErrorMessage
 	  + ", auStatus=" + auStatus + "]";
     }

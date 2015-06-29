@@ -1023,7 +1023,7 @@ public class AuMetadataRecorder {
     // Check whether the publisher is in the metadata.
     if (publisherName != null) {
       // Yes: Find the publisher or create it.
-      publisherSeq = mdManager.findOrCreatePublisher(conn, publisherName);
+      publisherSeq = dbManager.findOrCreatePublisher(conn, publisherName);
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
     } else {
@@ -1060,7 +1060,7 @@ public class AuMetadataRecorder {
 	  // Check whether there is an unknown publisher already for this AU.
 	  if (problem.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
 	    // Yes: Get the corresponding publisher identifier.
-	    publisherSeq = mdManager.findPublisher(conn, problem);
+	    publisherSeq = dbManager.findPublisher(conn, problem);
 	    if (log.isDebug3())
 	      log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
@@ -1085,7 +1085,7 @@ public class AuMetadataRecorder {
 	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
 	  // Create the publisher.
-	  publisherSeq = mdManager.addPublisher(conn, publisherName);
+	  publisherSeq = dbManager.addPublisher(conn, publisherName);
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 	}
@@ -1850,7 +1850,7 @@ public class AuMetadataRecorder {
 
     // Get the identifier of the unknown publisher.
     Long unknownPublisherSeq =
-	mdManager.findPublisher(conn, unknownPublisherName);
+	dbManager.findPublisher(conn, unknownPublisherName);
     log.debug3(DEBUG_HEADER + "unknownPublisherSeq = " + unknownPublisherSeq);
 
     // Check whether the unknown publisher is not the current one.

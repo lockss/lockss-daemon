@@ -228,3 +228,9 @@ div.au-error {
     bottom: -20px;
     top: auto;
 }
+
+.total-subscription {
+	padding-bottom: 10px;
+	padding-top: 15px;
+	vertical-align: middle;
+}

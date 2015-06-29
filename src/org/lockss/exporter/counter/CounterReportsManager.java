@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -331,7 +331,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 	  + "aggregation of all title requests";
 
       Long publisherSeq =
-	  metadataManager.findOrCreatePublisher(conn, ALL_PUBLISHERS_NAME);
+	  dbManager.findOrCreatePublisher(conn, ALL_PUBLISHERS_NAME);
       log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
       if (publisherSeq == null) {

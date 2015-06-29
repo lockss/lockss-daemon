@@ -66,6 +66,9 @@ public class SubscriptionStarter extends LockssRunnable {
   private static final String CANNOT_CONNECT_TO_DB_ERROR_MESSAGE =
       "Cannot connect to the database";
 
+  private static final String CANNOT_GET_TOTAL_SUBSCRIPTION_ERROR_MESSAGE =
+      "Cannot determine the Total Subscription setting from the database";
+
   private static final String CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE = "Cannot "
       + "determine whether this is the first run of the subscription manager";
 
@@ -75,8 +78,11 @@ public class SubscriptionStarter extends LockssRunnable {
   // The subscription manager.
   private final SubscriptionManager subscriptionManager;
 
-  // The indication of whether the Total Subscription option is in operation.
-  private final boolean isTotalSubscription;
+  // The setting of the Total Subscription feature.
+  private Boolean isTotalSubscription = null;
+
+  // The indication of whether the Total Subscription feature is turned on.
+  private boolean isTotalSubscriptionOn = false;
 
   // Limiter for the rate at which archival units are configured.
   private RateLimiter configureAuRateLimiter;
@@ -105,7 +111,7 @@ public class SubscriptionStarter extends LockssRunnable {
 
   // The iterators pointing to the TdbAus that may need to be configured
   // depending on the current subscriptions.
-  private Queue<Iterator<TdbAu>> tdbAuIterators;
+  private Queue<Iterator<TdbAu>> tdbAuIterators = null;
 
   // An indication that this thread is exiting and no more TdbAu iterators
   // should be added to it.
@@ -116,9 +122,6 @@ public class SubscriptionStarter extends LockssRunnable {
    * 
    * @param subscriptionManager
    *          A SubscriptionManager with the subscription manager.
-   * @param isTotalSubscription
-   *          A boolean with the indication of whether the Total Subscription
-   *          option is in operation.
    * @param configureAuRateLimiter
    *          A RateLimiter for the rate at which archival units are configured.
    * @param tdbAuIterator
@@ -126,12 +129,10 @@ public class SubscriptionStarter extends LockssRunnable {
    *          depending on applicable subscriptions.
    */
   public SubscriptionStarter(SubscriptionManager subscriptionManager,
-      boolean isTotalSubscription, RateLimiter configureAuRateLimiter,
-      Iterator<TdbAu> tdbAuIterator) {
+      RateLimiter configureAuRateLimiter, Iterator<TdbAu> tdbAuIterator) {
     super("SubscriptionStarter");
 
     this.subscriptionManager = subscriptionManager;
-    this.isTotalSubscription = isTotalSubscription;
     this.configureAuRateLimiter = configureAuRateLimiter;
 
     tdbAuIterators = new LinkedList<Iterator<TdbAu>>();
@@ -186,12 +187,26 @@ public class SubscriptionStarter extends LockssRunnable {
       return;
     }
 
+    // Get the Total Subscription feature setting.
+    message = CANNOT_GET_TOTAL_SUBSCRIPTION_ERROR_MESSAGE;
+
+    try {
+      queryTotalSubscriptionSetting(conn);
+    } catch (DbException dbe) {
+      log.error(message, dbe);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+      return;
+    }
+
+    // Nothing more to do if the Total Subscription feature is set to off.
+    if (isTotalSubscription != null && !isTotalSubscription.booleanValue()) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+      return;
+    }
+
     boolean isFirstRun = false;
 
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "isTotalSubscription = " + isTotalSubscription);
-
-    if (!isTotalSubscription) {
+    if (!isTotalSubscriptionOn) {
       message = CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE;
 
       try {
@@ -252,7 +267,7 @@ public class SubscriptionStarter extends LockssRunnable {
 	  return;
 	}
 
-	if (!isTotalSubscription) {
+	if (!isTotalSubscriptionOn) {
 	  // Make sure the flag that indicates this is the first run of the
 	  // subscription manager is reset after the first iterator.
 	  if (afterFirstIterator) {
@@ -306,6 +321,49 @@ public class SubscriptionStarter extends LockssRunnable {
 	log.debug3(DEBUG_HEADER + "overallConfiguredAuCountRate = "
 	    + (overallConfiguredAuCount * 60000.0D)
 	    / (currentTime - overallConfiguredAuCountStartTime));
+      }
+    }
+  }
+
+  /**
+   * Determines the setting of the Total Subscription feature.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void queryTotalSubscriptionSetting(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "queryTotalSubscriptionSetting(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Check whether the Total Subscription feature is enabled.
+    if (subscriptionManager.isTotalSubscriptionEnabled()) {
+      // Yes: Check whether the Subscription Manager is ready.
+      if (subscriptionManager.isReady()) {
+	// Yes: Get the cached setting of the Total Subscription feature.
+	isTotalSubscription = subscriptionManager.isTotalSubscription();
+      } else {
+	// No: Get the setting of the Total Subscription feature from the
+	// database. 
+	isTotalSubscription = subscriptionManager.findTotalSubscription(conn);
+      }
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isTotalSubscription = "
+	  + isTotalSubscriptionOn);
+
+      if (isTotalSubscription != null) {
+	if (!isTotalSubscription.booleanValue()) {
+	  if (log.isDebug2())
+	    log.debug2(DEBUG_HEADER + "Total Unsubscription.");
+	} else {
+	  isTotalSubscriptionOn = true;
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Total Subscription.");
+	}
+      } else {
+	if (log.isDebug2())
+	  log.debug2(DEBUG_HEADER + "Total Subscription not set.");
       }
     }
   }
@@ -435,7 +493,7 @@ public class SubscriptionStarter extends LockssRunnable {
       return toBeConfigured;
     }
 
-    if (!isTotalSubscription) {
+    if (!isTotalSubscriptionOn) {
       // Check whether this is the first run of the subscription manager.
       if (isFirstRun) {
 	// Yes: Add the archival unit to the table of unconfigured archival
@@ -484,7 +542,7 @@ public class SubscriptionStarter extends LockssRunnable {
     }
 
     // Check whether the archival unit needs to be configured.
-    if (isTotalSubscription || currentCoveredTdbAus.contains(tdbAu)) {
+    if (isTotalSubscriptionOn || currentCoveredTdbAus.contains(tdbAu)) {
       // Yes: Add the archival unit configuration to those to be configured.
       config = subscriptionManager.addAuConfiguration(tdbAu, auId, config);
       toBeConfigured = true;
@@ -517,6 +575,15 @@ public class SubscriptionStarter extends LockssRunnable {
 	tdbAuIterators.add(tdbAuIterator);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	    + "After: tdbAuIterators.size() = " + tdbAuIterators.size());
+
+	if (subscriptionManager.isTotalSubscriptionEnabled()
+	    && subscriptionManager.isReady()) {
+	  isTotalSubscription = subscriptionManager.isTotalSubscription();
+	  isTotalSubscriptionOn =
+	      isTotalSubscription != null && isTotalSubscription.booleanValue();
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isTotalSubscription = "
+	      + isTotalSubscriptionOn);
+	}
       }
 
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "return = " + !exiting);

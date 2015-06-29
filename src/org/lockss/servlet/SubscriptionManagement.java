@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,6 +55,7 @@ import org.lockss.subscription.SerialPublication;
 import org.lockss.subscription.Subscription;
 import org.lockss.subscription.SubscriptionManager;
 import org.lockss.subscription.SubscriptionOperationStatus;
+import org.lockss.subscription.SubscriptionOperationStatus.PublisherStatusEntry;
 import org.lockss.subscription.SubscriptionOperationStatus.StatusEntry;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
@@ -103,6 +104,8 @@ public class SubscriptionManagement extends LockssServlet {
   public static final String SHOW_UPDATE_PAGE_ACTION = "showUpdate";
   public static final String SHOW_UPDATE_PAGE_HELP_TEXT =
       "Change existing title subscription options";
+  public static final String TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX = "Hidden";
+  public static final String TRI_STATE_WIDGET_HIDDEN_ID_UNSET_VALUE = "unset";
   private static final String ADD_SUBSCRIPTIONS_ACTION = "Add";
   private static final String UPDATE_SUBSCRIPTIONS_ACTION = "Update";
 
@@ -113,6 +116,8 @@ public class SubscriptionManagement extends LockssServlet {
   private static final String UNSUBSCRIBE_ALL_PARAM_NAME = "unsubscribeAll";
 
   private static final String SUBSCRIPTIONS_SESSION_KEY = "subscriptions";
+  private static final String TOTAL_SUBSCRIPTION_SESSION_KEY =
+      "totalSubscription";
   private static final String UNDECIDED_TITLES_SESSION_KEY = "undecidedTitles";
   private static final String BACK_LINK_TEXT_PREFIX = "Back to ";
 
@@ -124,6 +129,8 @@ public class SubscriptionManagement extends LockssServlet {
       "Invalid unsubscribed ranges";
   private static final String MISSING_TITLE_AUS_MSG =
       "Could not find title AUs";
+  private static final String TOTAL_SUBSCRIPTION_WIDGET_ID =
+      "totalSubscription";
   private static final int LETTERS_IN_ALPHABET = 26;
   private static final int DEFAULT_LETTERS_PER_TAB = 3;
 
@@ -257,54 +264,107 @@ public class SubscriptionManagement extends LockssServlet {
 
     ServletUtil.layoutExplanationBlock(page,
 	"Add new serial title subscription options");
-    layoutErrorBlock(page);
 
-    // Create the form.
-    Form form = ServletUtil.newForm(srvURL(myServletDescr()));
+    // Get the current value of the total subscription setting.
+    Boolean totalSubscriptionSetting = null;
 
-    // Get the publications for which no subscription decision has been made.
-    List<SerialPublication> publications =
-	subManager.getUndecidedPublications();
-
-    // Determine whether to use a single-tab or multiple-tab interface.
-    int lettersPerTab = DEFAULT_LETTERS_PER_TAB;
-
-    if (publications.size() <= maxSingleTabCount) {
-      lettersPerTab = LETTERS_IN_ALPHABET;
+    if (subManager.isTotalSubscriptionEnabled()) {
+      totalSubscriptionSetting = subManager.isTotalSubscription();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "totalSubscriptionSetting = " + totalSubscriptionSetting);
     }
 
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "lettersPerTab = " + lettersPerTab);
+    if (totalSubscriptionSetting != null) {
+      layoutErrorBlock(page);
 
-    // Create the tabs container, an HTML division element, as required by
-    // jQuery tabs.
-    Block tabsDiv = new Block(Block.Div, "id=\"tabs\"");
+      // Create the form.
+      Form form = ServletUtil.newForm(srvURL(myServletDescr()));
 
-    // Add it to the form.
-    form.add(tabsDiv);
+      form.add(getTotalSubscriptionTable(totalSubscriptionSetting));
 
-    // Create the tabs on the page, add them to the tabs container and obtain a
-    // map of the tab tables keyed by the letters they cover.
-    Map<String, Table> divTableMap =
-	ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
-	    getTabColumnHeaderNames(), "sub-row-title",
-	    getColumnHeaderCssClasses(), tabsDiv);
+      // Save the undecided publications in the session to compare after the
+      // form is submitted.
+      HttpSession session = getSession();
 
-    // Populate the tabs content with the publications for which no subscription
-    // decision has been made.
-    populateTabsPublications(publications, divTableMap);
+      session.setAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY,
+	  totalSubscriptionSetting);
 
-    // Save the undecided publications in the session to compare after the form
-    // is submitted.
-    HttpSession session = getSession();
-    session.setAttribute(UNDECIDED_TITLES_SESSION_KEY, publications);
+      // Add the submit button.
+      ServletUtil.layoutSubmitButton(this, form, ACTION_TAG,
+	  ADD_SUBSCRIPTIONS_ACTION, "Update");
 
-    // Add the submit button.
-    ServletUtil.layoutSubmitButton(this, form, ACTION_TAG,
-	ADD_SUBSCRIPTIONS_ACTION, ADD_SUBSCRIPTIONS_ACTION);
+      // Add the tribox javascript.
+      addFormJavaScriptLocation(form, "js/tribox.js");
 
-    // Add the form to the page.
-    page.add(form);
+      // Add the form to the page.
+      page.add(form);
+    } else {
+      // Get the publications for which no subscription decision has been made.
+      List<SerialPublication> publications =
+	  subManager.getUndecidedPublications();
+
+      if (publications.size() > 0) {
+	layoutErrorBlock(page);
+
+	// Create the form.
+	Form form = ServletUtil.newForm(srvURL(myServletDescr()));
+
+	if (subManager.isTotalSubscriptionEnabled()) {
+	  form.add(getTotalSubscriptionTable(totalSubscriptionSetting));
+	}
+
+	// Determine whether to use a single-tab or multiple-tab interface.
+	int lettersPerTab = DEFAULT_LETTERS_PER_TAB;
+
+	if (publications.size() <= maxSingleTabCount) {
+	  lettersPerTab = LETTERS_IN_ALPHABET;
+	}
+
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "lettersPerTab = " + lettersPerTab);
+
+	// Create the tabs container, an HTML division element, as required by
+	// jQuery tabs.
+	Block tabsDiv = new Block(Block.Div, "id=\"tabs\"");
+
+	// Add it to the form.
+	form.add(tabsDiv);
+
+	// Create the tabs on the page, add them to the tabs container and
+	// obtain a map of the tab tables keyed by the letters they cover.
+	Map<String, Table> divTableMap =
+	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
+		getTabColumnHeaderNames(), "sub-row-title",
+		getColumnHeaderCssClasses(), tabsDiv);
+
+	// Populate the tabs content with the publications for which no
+	// subscription decision has been made.
+	populateTabsPublications(publications, divTableMap);
+
+	// Save the undecided publications in the session to compare after the
+	// form is submitted.
+	HttpSession session = getSession();
+	session.setAttribute(UNDECIDED_TITLES_SESSION_KEY, publications);
+
+	if (subManager.isTotalSubscriptionEnabled()) {
+	  session.setAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY,
+	      totalSubscriptionSetting);
+	}
+
+	// Add the submit button.
+	ServletUtil.layoutSubmitButton(this, form, ACTION_TAG,
+	    ADD_SUBSCRIPTIONS_ACTION, ADD_SUBSCRIPTIONS_ACTION);
+
+	// Add the tribox javascript.
+	addFormJavaScriptLocation(form, "js/tribox.js");
+
+	// Add the form to the page.
+	page.add(form);
+      } else {
+	errMsg = "There are no subscriptions to add";
+	layoutErrorBlock(page);
+      }
+    }
 
     // Add the link to go back to the previous page.
     ServletUtil.layoutBackLink(page,
@@ -316,6 +376,85 @@ public class SubscriptionManagement extends LockssServlet {
     endPage(page);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the HTML table with the Total Subscription widget.
+   * 
+   * @param totalSubscriptionSetting
+   *          A Boolean with the state of the Total Subscription widget.
+   * @return a Table representing the HTML table.
+   */
+  private Table getTotalSubscriptionTable(Boolean totalSubscriptionSetting) {
+    String tsClassName = "total-subscription";
+    Table tsTable = new Table(0, "class=\"" + tsClassName + "\"");
+    tsTable.newRow();
+
+    Block triBoxLabel = new Block(Block.Bold);
+    triBoxLabel.add("Total Subscription");
+
+    tsTable.addCell(triBoxLabel,
+	"class=\"" + tsClassName + "\" align=\"right\" width=\"49%\"");
+
+    Input checkBox = new Input(Input.Checkbox, TOTAL_SUBSCRIPTION_WIDGET_ID);
+    checkBox.attribute("class", "tribox");
+    checkBox.attribute("id", TOTAL_SUBSCRIPTION_WIDGET_ID);
+
+    tsTable.addCell(checkBox,
+	"class=\"" + tsClassName + "\" align=\"center\" width=\"1%\"");
+
+    tsTable.addCell(getTriStateDisplayTextSpan(TOTAL_SUBSCRIPTION_WIDGET_ID,
+	totalSubscriptionSetting),
+	"class=\"" + tsClassName + "\" align=\"left\" width=\"49%\"");
+
+    tsTable.addCell(getTriStateHiddenInput(TOTAL_SUBSCRIPTION_WIDGET_ID,
+	totalSubscriptionSetting), "class=\"" + tsClassName + "\" width=\"0\"");
+
+    return tsTable;
+  }
+
+  /**
+   * Provides a span widget used to display the text that represents the state
+   * of a tri-state widget.
+   * 
+   * @param baseName
+   *          A String with the name of the tri-state widget.
+   * @param value
+   *          A Boolean with the state of the widget.
+   * @return a Block with the span showing the text that represents the state of
+   *         the tri-state widget.
+   */
+  private Block getTriStateDisplayTextSpan(String baseName, Boolean value) {
+    Block triStateDisplayTextSpan = new Block(Block.Span);
+    triStateDisplayTextSpan.attribute("id", baseName + "Text");
+
+    return triStateDisplayTextSpan;
+  }
+
+  /**
+   * Provides a hidden input widget used to initialize and submit the state of a
+   * tri-state widget.
+   * 
+   * @param baseName
+   *          A String with the name of the tri-state widget.
+   * @param value
+   *          A Boolean with the state of the widget.
+   * @return an Input representing the hidden input widget.
+   */
+  private Input getTriStateHiddenInput(String baseName, Boolean value) {
+    Input triStateHiddenInput;
+    String name = baseName + TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX;
+
+    if (value == null) {
+      triStateHiddenInput =
+	  new Input(Input.Hidden, name, TRI_STATE_WIDGET_HIDDEN_ID_UNSET_VALUE);
+    } else {
+      triStateHiddenInput = new Input(Input.Hidden, name, value.toString());
+    }
+
+    triStateHiddenInput.attribute("id", name);
+
+    return triStateHiddenInput;
   }
 
   /**
@@ -723,49 +862,124 @@ public class SubscriptionManagement extends LockssServlet {
       session = getSession();
     }
 
+    // Get the Total Subscription setting presented in the form just submitted.
+    Boolean totalSubscriptionSetting = null;
+
+    if (subManager.isTotalSubscriptionEnabled()) {
+      totalSubscriptionSetting =
+	  (Boolean)session.getAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "totalSubscriptionSetting = "
+	  + totalSubscriptionSetting);
+    }
+
     // Get the undecided publications presented in the form just submitted.
     List<SerialPublication> publications = (List<SerialPublication>) session
 	.getAttribute(UNDECIDED_TITLES_SESSION_KEY);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publications = " + publications);
 
     // Handle session expiration.
-    if (publications == null || publications.size() == 0) {
+    if (totalSubscriptionSetting == null
+	&& (publications == null || publications.size() == 0)) {
       status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
       return status;
     }
 
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publications.size() = "
-	+ publications.size());
-
     // Get the map of parameters received from the submitted form.
     Map<String,String> parameterMap = getParamsAsMap();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "parameterMap = " + parameterMap);
 
-    Subscription subscription;
-    Collection<Subscription> subscriptions = new ArrayList<Subscription>();
+    boolean totalSubscriptionChanged = false;
+    Boolean updatedTotalSubscriptionSetting = null;
 
-    // Loop through all the publications presented in the form.
-    for (SerialPublication publication : publications) {
-      // Add it to the list of subscriptions added, if necessary.
-      subscription = buildPublicationSubscriptionIfNeeded(publication,
-	  parameterMap, status);
+    if (subManager.isTotalSubscriptionEnabled()) {
+      updatedTotalSubscriptionSetting =
+	  getTriBoxValue(parameterMap, TOTAL_SUBSCRIPTION_WIDGET_ID);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "updatedTotalSubscriptionSetting = "
+	  + updatedTotalSubscriptionSetting);
 
-      if (subscription != null) {
-	subscriptions.add(subscription);
-      }
+      totalSubscriptionChanged = (totalSubscriptionSetting == null
+	  && updatedTotalSubscriptionSetting != null)
+	  || (totalSubscriptionSetting != null
+	  && updatedTotalSubscriptionSetting == null)
+	  || (totalSubscriptionSetting != null
+	  && totalSubscriptionSetting.booleanValue()
+	  != updatedTotalSubscriptionSetting.booleanValue());
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "totalSubscriptionChanged = " + totalSubscriptionChanged);
     }
 
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscriptions.size() = "
-	+ subscriptions.size());
+    if (totalSubscriptionChanged && updatedTotalSubscriptionSetting != null
+	&& updatedTotalSubscriptionSetting.booleanValue()) {
+      subManager.handleStartingTotalSubscription(status);
+    } else {
+      Subscription subscription;
+      Collection<Subscription> subscriptions = new ArrayList<Subscription>();
 
-    // Add any added subscriptions to the system.
-    if (subscriptions.size() > 0) {
-      subManager.addSubscriptions(subscriptions, status);
+      if (totalSubscriptionSetting == null
+	  && updatedTotalSubscriptionSetting == null) {
+	// Loop through all the publications presented in the form.
+	for (SerialPublication publication : publications) {
+	  // Add it to the list of subscriptions added, if necessary.
+	  subscription = buildPublicationSubscriptionIfNeeded(publication,
+	      parameterMap, status);
+
+	  if (subscription != null) {
+	    subscriptions.add(subscription);
+	  }
+	}
+      }
+
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
+
+      // Add any added subscriptions to the system.
+      if (totalSubscriptionChanged || subscriptions.size() > 0) {
+	subManager.addSubscriptions(totalSubscriptionChanged,
+	    updatedTotalSubscriptionSetting, subscriptions, status);
+      }
     }
 
     session.removeAttribute(UNDECIDED_TITLES_SESSION_KEY);
 
+    if (subManager.isTotalSubscriptionEnabled()) {
+      session.removeAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
+    }
+
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
     return status;
+  }
+
+  /**
+   * Provides the setting of a submitted tri-state widget.
+   * 
+   * @param parameterMap
+   *          A Map<String,String> with the submitted parameter names and
+   *          values.
+   * @param id
+   *          A String with the widget identifier.
+   * @return a Boolean with the setting of the widget.
+   */
+  Boolean getTriBoxValue(Map<String,String> parameterMap, String id) {
+    if (parameterMap == null || parameterMap.isEmpty() || id == null
+	|| id.trim().length() == 0) {
+      return null;
+    }
+
+    String result =
+	parameterMap.get(id.trim() + TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX);
+
+    if (result == null
+	|| TRI_STATE_WIDGET_HIDDEN_ID_UNSET_VALUE.equals(result)) {
+      return null;
+    } else if ("true".equals(result)) {
+      return Boolean.TRUE;
+    }
+
+    return Boolean.FALSE;
   }
 
   /**
@@ -1053,88 +1267,56 @@ public class SubscriptionManagement extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page,
 				       backLinkDisplayText + " Results");
 
+    PublisherStatusEntry totalSubscriptionEntry = null;
+    List<PublisherStatusEntry> publisherSuscriptionEntries =
+	new ArrayList<PublisherStatusEntry>();
+
+    if (subManager.isTotalSubscriptionEnabled()) {
+      totalSubscriptionEntry = status.getTotalSubscriptionStatusEntry();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "totalSubscriptionEntry = "
+	  + totalSubscriptionEntry);
+
+      publisherSuscriptionEntries =
+	  status.getPublisherSubscriptionStatusEntries();
+    }
+
     List<StatusEntry> statusEntries = status.getStatusEntries();
     page.add("<br>");
 
-    if (statusEntries.size() == 0) {
+    if (totalSubscriptionEntry == null
+	&& publisherSuscriptionEntries.size() == 0
+	&& statusEntries.size() == 0) {
       // Handle a no-op.
       errMsg = "No operation was specified";
       layoutErrorBlock(page);
-    } else if (statusEntries.size() == 1
-	&& StringUtil.isNullString(statusEntries.get(0).getPublicationName())
-	&& !statusEntries.get(0).isSusbcriptionSuccess()) {
-      // Handle an overall error.
-      errMsg = statusEntries.get(0).getSubscriptionErrorMessage();
-      layoutErrorBlock(page);
     } else {
-      // Handle itemized subscription results.
-      layoutErrorBlock(page);
+      if (totalSubscriptionEntry == null
+	  && publisherSuscriptionEntries.size() == 0
+	  && statusEntries.size() == 1
+	  && StringUtil.isNullString(statusEntries.get(0).getPublicationName())
+	  && !statusEntries.get(0).isSubscriptionSuccess()) {
+	// Handle an overall error.
+	errMsg = statusEntries.get(0).getSubscriptionErrorMessage();
+	layoutErrorBlock(page);
+      } else {
+	// Handle itemized subscription results.
+	layoutErrorBlock(page);
 
-      int border = 1;
-      String attributes =
-	  "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
+	int border = 1;
+	String attributes =
+	    "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
 
-      // Create the results table.
-      Table results = new Table(border, attributes);
-      results.addHeading("Title");
-      results.addHeading("Subscription Status");
-
-      if (!AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT.equals(backLinkDisplayText)) {
-	results.addHeading("AU Configuration");
-      }
-
-      // Loop through all the itemized subscription results.
-      for (StatusEntry entry : statusEntries) {
-	// Display a row per itemized subscription result.
-	results.newRow();
-	results.newCell();
-	results.add(encodeText(entry.getPublicationName()));
-	results.newCell();
-
-	if (entry.isSusbcriptionSuccess()) {
-	  if (SHOW_UPDATE_PAGE_LINK_TEXT.equals(backLinkDisplayText)) {
-	    results.add("Updated");
-	  } else if (SHOW_ADD_PAGE_LINK_TEXT.equals(backLinkDisplayText)) {
-	    results.add("Added");
-	  } else {
-	    results.add("Added/Updated");
-	  }
-	} else {
-	  results.add(entry.getSubscriptionErrorMessage());
+	if (totalSubscriptionEntry != null
+	    || publisherSuscriptionEntries.size() > 0) {
+	  displayPublisherSubscriptionResults(border, attributes,
+	      totalSubscriptionEntry, publisherSuscriptionEntries, page);
 	}
 
-	if (!AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT.equals(backLinkDisplayText)) {
-	  results.newCell();
-
-	  if (entry.getAuStatus() != null
-	      && entry.getAuStatus().getStatusList() != null
-	      && entry.getAuStatus().getStatusList().size() > 0) {
-	    Table auResults = new Table(border, attributes);
-	    auResults.addHeading("AU");
-	    auResults.addHeading("Status");
-
-	    for (Entry auEntry : entry.getAuStatus().getStatusList()) {
-	      auResults.newRow();
-	      auResults.newCell();
-	      auResults.add(encodeText(auEntry.getName()));
-	      auResults.newCell();
-	      if (StringUtil.isNullString(auEntry.getExplanation())) {
-		auResults.add(auEntry.getStatus());
-	      } else {
-		auResults.add(auEntry.getExplanation());
-	      }
-	    }
-
-	    results.add(auResults);
-	  }
+	if (statusEntries.size() > 0) {
+	  displayPublicationSubscriptionResults(border, attributes,
+	      statusEntries, backLinkDisplayText, page);
 	}
       }
-
-      Composite comp = new Block(Block.Center);
-      comp.add(results);
-      comp.add("<br>");
-
-      page.add(comp);
     }
 
     // The link to go back to the previous page.
@@ -1158,6 +1340,164 @@ public class SubscriptionManagement extends LockssServlet {
   }
 
   /**
+   * Displays a table with the results of requested publisher subscriptions.
+   * 
+   * @param border
+   *          An int with the width of the table border.
+   * @param attributes
+   *          A String with the table attributes.
+   * @param totalSubscriptionEntry
+   *          A PublisherStatusEntry with the result of the Total Subscription
+   *          option.
+   * @param publisherSuscriptionEntries
+   *          A List<PublisherStatusEntry> with the results of the publisher
+   *          subscriptions.
+   * @param page
+   *          A Page representing the page where the table is displayed.
+   */
+  private void displayPublisherSubscriptionResults(int border,
+      String attributes, PublisherStatusEntry totalSubscriptionEntry,
+      List<PublisherStatusEntry> publisherSuscriptionEntries, Page page) {
+    Table results = new Table(border, attributes);
+    results.addHeading("Publisher");
+    results.addHeading("Subscription");
+    results.addHeading("Status");
+
+    if (totalSubscriptionEntry != null) {
+      results.newRow();
+      results.newCell();
+      results.add("ALL");
+      results.newCell();
+
+      if (totalSubscriptionEntry.getSubscriptionStatus() == null) {
+	results.add("Not Set");
+      } else if (totalSubscriptionEntry.getSubscriptionStatus()
+	  .booleanValue()) {
+	results.add("Always");
+      } else {
+	results.add("Never");
+      }
+
+      results.newCell();
+
+      if (totalSubscriptionEntry.isSubscriptionSuccess()) {
+	results.add("Updated");
+      } else {
+	results.add(totalSubscriptionEntry.getSubscriptionErrorMessage());
+      }
+    }
+
+    // Loop through all the itemized subscription results.
+    for (PublisherStatusEntry entry : publisherSuscriptionEntries) {
+      results.newRow();
+      results.newCell();
+      results.add(encodeText(entry.getPublisherName()));
+      results.newCell();
+
+      if (entry.getSubscriptionStatus() == null) {
+	results.add("Not Set");
+      } else if (entry.getSubscriptionStatus().booleanValue()) {
+	results.add("Always");
+      } else {
+	results.add("Never");
+      }
+
+      results.newCell();
+
+      if (entry.isSubscriptionSuccess()) {
+	results.add("Updated");
+      } else {
+	results.add(entry.getSubscriptionErrorMessage());
+      }
+    }
+
+    Composite comp = new Block(Block.Center);
+    comp.add(results);
+    comp.add("<br>");
+
+    page.add(comp);
+  }
+
+  /**
+   * Displays a table with the results of requested publication subscriptions.
+   * 
+   * @param border
+   *          An int with the width of the table border.
+   * @param attributes
+   *          A String with the table attributes.
+   * @param statusEntries
+   *          A List<StatusEntry> with the results of the publication
+   *          subscriptions.
+   * @param page
+   *          A Page representing the page where the table is displayed.
+   */
+  private void displayPublicationSubscriptionResults(int border,
+      String attributes, List<StatusEntry> statusEntries,
+      String backLinkDisplayText, Page page) {
+    // Create the results table.
+    Table results = new Table(border, attributes);
+    results.addHeading("Title");
+    results.addHeading("Subscription Status");
+
+    if (!AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT.equals(backLinkDisplayText)) {
+      results.addHeading("AU Configuration");
+    }
+
+    // Loop through all the itemized subscription results.
+    for (StatusEntry entry : statusEntries) {
+      // Display a row per itemized subscription result.
+      results.newRow();
+      results.newCell();
+      results.add(encodeText(entry.getPublicationName()));
+      results.newCell();
+
+      if (entry.isSubscriptionSuccess()) {
+	if (SHOW_UPDATE_PAGE_LINK_TEXT.equals(backLinkDisplayText)) {
+	  results.add("Updated");
+	} else if (SHOW_ADD_PAGE_LINK_TEXT.equals(backLinkDisplayText)) {
+	  results.add("Added");
+	} else {
+	  results.add("Added/Updated");
+	}
+      } else {
+	results.add(entry.getSubscriptionErrorMessage());
+      }
+
+      if (!AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT.equals(backLinkDisplayText)) {
+	results.newCell();
+
+	if (entry.getAuStatus() != null
+	    && entry.getAuStatus().getStatusList() != null
+	    && entry.getAuStatus().getStatusList().size() > 0) {
+	  Table auResults = new Table(border, attributes);
+	  auResults.addHeading("AU");
+	  auResults.addHeading("Status");
+
+	  for (Entry auEntry : entry.getAuStatus().getStatusList()) {
+	    auResults.newRow();
+	    auResults.newCell();
+	    auResults.add(encodeText(auEntry.getName()));
+	    auResults.newCell();
+	    if (StringUtil.isNullString(auEntry.getExplanation())) {
+	      auResults.add(auEntry.getStatus());
+	    } else {
+	      auResults.add(auEntry.getExplanation());
+	    }
+	  }
+
+	  results.add(auResults);
+	}
+      }
+    }
+
+    Composite comp = new Block(Block.Center);
+    comp.add(results);
+    comp.add("<br>");
+
+    page.add(comp);
+  }
+
+  /**
    * Displays the page that allows the user to change subscription decisions.
    * 
    * @throws IOException
@@ -1178,60 +1518,107 @@ public class SubscriptionManagement extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page,
 	"Update existing subscription options for serial titles");
 
-    // Get the existing subscriptions with ranges.
-    List<Subscription> subscriptions =
-	subManager.findAllSubscriptionsAndRanges();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
+    // Get the current value of the total subscription setting.
+    Boolean totalSubscriptionSetting = null;
 
-    if (subscriptions.size() > 0) {
+    if (subManager.isTotalSubscriptionEnabled()) {
+      totalSubscriptionSetting = subManager.isTotalSubscription();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "totalSubscriptionSetting = " + totalSubscriptionSetting);
+    }
+
+    if (totalSubscriptionSetting != null) {
       layoutErrorBlock(page);
 
       // Create the form.
       Form form = ServletUtil.newForm(srvURL(myServletDescr()));
 
-      // Determine whether to use a single-tab or multiple-tab interface.
-      int lettersPerTab = DEFAULT_LETTERS_PER_TAB;
-
-      if (subscriptions.size() <= maxSingleTabCount) {
-        lettersPerTab = LETTERS_IN_ALPHABET;
-      }
-
-      if (log.isDebug3())
-        log.debug3(DEBUG_HEADER + "lettersPerTab = " + lettersPerTab);
-
-      // Create the tabs container, an HTML division element, as required by
-      // jQuery tabs.
-      Block tabsDiv = new Block(Block.Div, "id=\"tabs\"");
-
-      // Add it to the form.
-      form.add(tabsDiv);
-
-      // Create the tabs on the page, add them to the tabs container and obtain
-      // a map of the tab tables keyed by the letters they cover.
-      Map<String, Table> divTableMap =
-	  ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
-	      getTabColumnHeaderNames(), "sub-row-title",
-	      getColumnHeaderCssClasses(), tabsDiv);
-
-      // Populate the tabs content with the publications for which subscription
-      // decisions have already been made.
-      populateTabsSubscriptions(subscriptions, divTableMap);
+      form.add(getTotalSubscriptionTable(totalSubscriptionSetting));
 
       // Save the existing subscriptions in the session to compare after the
       // form is submitted.
       HttpSession session = getSession();
-      session.setAttribute(SUBSCRIPTIONS_SESSION_KEY, subscriptions);
+
+      session.setAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY,
+	  totalSubscriptionSetting);
 
       // The submit button.
       ServletUtil.layoutSubmitButton(this, form, ACTION_TAG,
 	  UPDATE_SUBSCRIPTIONS_ACTION, UPDATE_SUBSCRIPTIONS_ACTION);
 
+      // Add the tribox javascript.
+      addFormJavaScriptLocation(form, "js/tribox.js");
+
       // Add the form to the page.
       page.add(form);
     } else {
-      errMsg = "There are no subscriptions to update";
-      layoutErrorBlock(page);
+      // Get the existing subscriptions with ranges.
+      List<Subscription> subscriptions =
+  	  subManager.findAllSubscriptionsAndRanges();
+      if (log.isDebug3())
+  	log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
+
+      if (subscriptions.size() > 0) {
+	layoutErrorBlock(page);
+
+	// Create the form.
+	Form form = ServletUtil.newForm(srvURL(myServletDescr()));
+
+	if (subManager.isTotalSubscriptionEnabled()) {
+	  form.add(getTotalSubscriptionTable(totalSubscriptionSetting));
+	}
+
+	// Determine whether to use a single-tab or multiple-tab interface.
+	int lettersPerTab = DEFAULT_LETTERS_PER_TAB;
+
+	if (subscriptions.size() <= maxSingleTabCount) {
+	  lettersPerTab = LETTERS_IN_ALPHABET;
+	}
+
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "lettersPerTab = " + lettersPerTab);
+
+	// Create the tabs container, an HTML division element, as required by
+	// jQuery tabs.
+	Block tabsDiv = new Block(Block.Div, "id=\"tabs\"");
+
+	// Add it to the form.
+	form.add(tabsDiv);
+
+	// Create the tabs on the page, add them to the tabs container and
+	// obtain a map of the tab tables keyed by the letters they cover.
+	Map<String, Table> divTableMap =
+	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
+		getTabColumnHeaderNames(), "sub-row-title",
+		getColumnHeaderCssClasses(), tabsDiv);
+
+	// Populate the tabs content with the publications for which
+	// subscription decisions have already been made.
+	populateTabsSubscriptions(subscriptions, divTableMap);
+
+	// Save the existing subscriptions in the session to compare after the
+	// form is submitted.
+	HttpSession session = getSession();
+	session.setAttribute(SUBSCRIPTIONS_SESSION_KEY, subscriptions);
+
+	if (subManager.isTotalSubscriptionEnabled()) {
+	  session.setAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY,
+	      totalSubscriptionSetting);
+	}
+
+	// The submit button.
+	ServletUtil.layoutSubmitButton(this, form, ACTION_TAG,
+	    UPDATE_SUBSCRIPTIONS_ACTION, UPDATE_SUBSCRIPTIONS_ACTION);
+
+	// Add the tribox javascript.
+	addFormJavaScriptLocation(form, "js/tribox.js");
+
+	// Add the form to the page.
+	page.add(form);
+      } else {
+	errMsg = "There are no subscriptions to update";
+	layoutErrorBlock(page);
+      }
     }
 
     // The link to go back to the previous page.
@@ -1640,52 +2027,98 @@ public class SubscriptionManagement extends LockssServlet {
       session = getSession();
     }
 
+    // Get the Total Subscription setting presented in the form just submitted.
+    Boolean totalSubscriptionSetting = null;
+
+    if (subManager.isTotalSubscriptionEnabled()) {
+      totalSubscriptionSetting =
+	  (Boolean)session.getAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "totalSubscriptionSetting = "
+	  + totalSubscriptionSetting);
+    }
+
     // Get the subscriptions presented in the form just submitted.
     List<Subscription> subscriptions =
 	(List<Subscription>) session.getAttribute(SUBSCRIPTIONS_SESSION_KEY);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscriptions = "
+	+ subscriptions);
 
     // Handle session expiration.
-    if (subscriptions == null || subscriptions.size() == 0) {
+    if (totalSubscriptionSetting == null
+	&& (subscriptions == null || subscriptions.size() == 0)) {
       status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
       return status;
     }
 
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscriptions.size() = "
-	  + subscriptions.size());
-
     // Get the map of parameters received from the submitted form.
     Map<String,String> parameterMap = getParamsAsMap();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "parameterMap = " + parameterMap);
 
-    boolean subChanged = false;
-    Collection<Subscription> updateSubscriptions =
-	new ArrayList<Subscription>();
+    boolean totalSubscriptionChanged = false;
+    Boolean updatedTotalSubscriptionSetting = null;
 
-    // Loop through all the subscriptions presented in the form.
-    for (Subscription subscription : subscriptions) {
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "subscription = " + subscription);
+    if (subManager.isTotalSubscriptionEnabled()) {
+      updatedTotalSubscriptionSetting =
+	  getTriBoxValue(parameterMap, TOTAL_SUBSCRIPTION_WIDGET_ID);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "updatedTotalSubscriptionSetting = "
+	  + updatedTotalSubscriptionSetting);
 
-      // Get an indication of whether the subscription has been changed.
-      subChanged =
-	  isSubscriptionUpdateNeeded(subscription, parameterMap, status);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+      totalSubscriptionChanged = (totalSubscriptionSetting == null
+	  && updatedTotalSubscriptionSetting != null)
+	  || (totalSubscriptionSetting != null
+	  && updatedTotalSubscriptionSetting == null)
+	  || (totalSubscriptionSetting != null
+	  && totalSubscriptionSetting.booleanValue()
+	  != updatedTotalSubscriptionSetting.booleanValue());
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "totalSubscriptionChanged = " + totalSubscriptionChanged);
+    }
 
-      if (subChanged) {
-	updateSubscriptions.add(subscription);
+    if (totalSubscriptionChanged && updatedTotalSubscriptionSetting != null
+	&& updatedTotalSubscriptionSetting.booleanValue()) {
+      subManager.handleStartingTotalSubscription(status);
+    } else {
+      boolean subChanged = false;
+      Collection<Subscription> updateSubscriptions =
+	  new ArrayList<Subscription>();
+
+      if (totalSubscriptionSetting == null
+	  && updatedTotalSubscriptionSetting == null) {
+	// Loop through all the subscriptions presented in the form.
+	for (Subscription subscription : subscriptions) {
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "subscription = " + subscription);
+
+	  // Get an indication of whether the subscription has been changed.
+	  subChanged =
+	      isSubscriptionUpdateNeeded(subscription, parameterMap, status);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+
+	  if (subChanged) {
+	    updateSubscriptions.add(subscription);
+	  }
+	}
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "updateSubscriptions.size() = " + updateSubscriptions.size());
+      }
+
+      // Record any updated subscriptions in the system.
+      if (totalSubscriptionChanged || updateSubscriptions.size() > 0) {
+	subManager.updateSubscriptions(totalSubscriptionChanged,
+	    updatedTotalSubscriptionSetting, updateSubscriptions, status);
       }
     }
 
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	+ "updateSubscriptions.size() = " + updateSubscriptions.size());
-
-    // Record any updated subscriptions in the system.
-    if (updateSubscriptions.size() > 0) {
-      subManager.updateSubscriptions(updateSubscriptions, status);
-    }
-
     session.removeAttribute(SUBSCRIPTIONS_SESSION_KEY);
+
+    if (subManager.isTotalSubscriptionEnabled()) {
+      session.removeAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
     return status;

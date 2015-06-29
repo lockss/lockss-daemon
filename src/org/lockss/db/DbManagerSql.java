@@ -622,6 +622,34 @@ public class DbManagerSql {
       + ") not null"
       + ")";
 
+  // Query to create the table for publisher subscriptions.
+  private static final String CREATE_PUBLISHER_SUBSCRIPTION_TABLE_QUERY =
+      "create table " + PUBLISHER_SUBSCRIPTION_TABLE + " ("
+      + PUBLISHER_SUBSCRIPTION_SEQ_COLUMN + " --BigintSerialPk--,"
+      + PUBLISHER_SEQ_COLUMN + " bigint NOT NULL"
+      + " CONSTRAINT FK_PUBLISHER_SEQ_SUBSCRIPTION"
+      + " REFERENCES " + PUBLISHER_TABLE + " on delete cascade,"
+      + PROVIDER_SEQ_COLUMN + " bigint NOT NULL"
+      + " CONSTRAINT FK_PROVIDER_SEQ_SUBSCRIPTION"
+      + " REFERENCES " + PROVIDER_TABLE + " on delete cascade,"
+      + SUBSCRIBED_COLUMN + " boolean not null"
+      + ")";
+
+  // Query to create the table for publisher subscriptions for MySQL.
+  private static final String CREATE_PUBLISHER_SUBSCRIPTION_TABLE_MYSQL_QUERY =
+      "create table " + PUBLISHER_SUBSCRIPTION_TABLE + " ("
+      + PUBLISHER_SUBSCRIPTION_SEQ_COLUMN + " --BigintSerialPk--,"
+      + PUBLISHER_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PUBLISHER_SEQ_SUBSCRIPTION (" + PUBLISHER_SEQ_COLUMN
+      + ") REFERENCES " + PUBLISHER_TABLE + "(" + PUBLISHER_SEQ_COLUMN
+      + ") on delete cascade,"
+      + PROVIDER_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PROVIDER_SEQ_SUBSCRIPTION (" + PROVIDER_SEQ_COLUMN
+      + ") REFERENCES " + PROVIDER_TABLE + "(" + PROVIDER_SEQ_COLUMN
+      + ") on delete cascade,"
+      + SUBSCRIBED_COLUMN + " boolean not null"
+      + ")";
+
   // Query to insert the database version.
   private static final String INSERT_VERSION_QUERY = "insert into "
       + VERSION_TABLE
@@ -2204,6 +2232,36 @@ public class DbManagerSql {
     "create index idx4_" + AU_MD_TABLE + " on " + AU_MD_TABLE
     + "(" + PROVIDER_SEQ_COLUMN + ")"
     };
+
+  // The SQL code used to create the necessary version 24 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_24_TABLE_CREATE_QUERIES =
+    new LinkedHashMap<String, String>() {{
+      put(PUBLISHER_SUBSCRIPTION_TABLE,
+	  CREATE_PUBLISHER_SUBSCRIPTION_TABLE_QUERY);
+    }};
+
+  // The SQL code used to create the necessary version 24 database tables for
+  // MySQL.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_24_TABLE_CREATE_MYSQL_QUERIES
+    = new LinkedHashMap<String, String>() {{
+      put(PUBLISHER_SUBSCRIPTION_TABLE,
+	  CREATE_PUBLISHER_SUBSCRIPTION_TABLE_MYSQL_QUERY);
+    }};
+
+  // Query to find a publisher by its name.
+  private static final String FIND_PUBLISHER_QUERY = "select "
+      + PUBLISHER_SEQ_COLUMN
+      + " from " + PUBLISHER_TABLE
+      + " where " + PUBLISHER_NAME_COLUMN + " = ?";
+
+  // Query to add a publisher.
+  private static final String INSERT_PUBLISHER_QUERY = "insert into "
+      + PUBLISHER_TABLE
+      + "(" + PUBLISHER_SEQ_COLUMN
+      + "," + PUBLISHER_NAME_COLUMN
+      + ") values (default,?)";
 
   // The database data source.
   private DataSource dataSource = null;
@@ -7806,5 +7864,169 @@ public class DbManagerSql {
     executeDdlQueries(conn, VERSION_23_INDEX_CREATE_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 23 to version 24.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom23To24(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom23To24(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Check whether the MySQL database is being used.
+    if (isTypeMysql()) {
+      // Yes: Create the necessary tables if they do not exist.
+      createTablesIfMissing(conn, VERSION_24_TABLE_CREATE_MYSQL_QUERIES);
+    } else {
+    // No: Create the necessary tables if they do not exist.
+      createTablesIfMissing(conn, VERSION_24_TABLE_CREATE_QUERIES);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the identifier of a publisher if existing or after creating it
+   * otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long findOrCreatePublisher(Connection conn, String publisherName)
+      throws SQLException {
+    final String DEBUG_HEADER = "findOrCreatePublisher(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long publisherSeq = findPublisher(conn, publisherName);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+
+    // Check whether it is a new publisher.
+    if (publisherSeq == null) {
+      // Yes: Add to the database the new publisher.
+      publisherSeq = addPublisher(conn, publisherName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "new publisherSeq = " + publisherSeq);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    return publisherSeq;
+  }
+
+  /**
+   * Provides the identifier of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long findPublisher(Connection conn, String publisherName)
+      throws SQLException {
+    final String DEBUG_HEADER = "findPublisher(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherName = " + publisherName);
+
+    Long publisherSeq = null;
+    PreparedStatement findPublisher = null;
+    ResultSet resultSet = null;
+
+    try {
+      findPublisher = prepareStatement(conn, FIND_PUBLISHER_QUERY);
+      findPublisher.setString(1, publisherName);
+
+      resultSet = executeQuery(findPublisher);
+      if (resultSet.next()) {
+	publisherSeq = resultSet.getLong(PUBLISHER_SEQ_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot find publisher";
+      log.error(message, sqle);
+      log.error("SQL = '" + FIND_PUBLISHER_QUERY + "'.");
+      log.error("publisherName = '" + publisherName + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findPublisher);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    return publisherSeq;
+  }
+
+  /**
+   * Adds a publisher to the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher just added.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long addPublisher(Connection conn, String publisherName) throws SQLException {
+    final String DEBUG_HEADER = "addPublisher(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherName = " + publisherName);
+
+    Long publisherSeq = null;
+    ResultSet resultSet = null;
+    PreparedStatement insertPublisher = null;
+
+    try {
+      insertPublisher = prepareStatement(conn, INSERT_PUBLISHER_QUERY,
+	  Statement.RETURN_GENERATED_KEYS);
+      // skip auto-increment key field #0
+      insertPublisher.setString(1, publisherName);
+      executeUpdate(insertPublisher);
+      resultSet = insertPublisher.getGeneratedKeys();
+
+      if (!resultSet.next()) {
+	log.error("Unable to create publisher table row.");
+	return null;
+      }
+
+      publisherSeq = resultSet.getLong(1);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Added publisherSeq = " + publisherSeq);
+    } catch (SQLException sqle) {
+      String message = "Cannot add publisher";
+      log.error(message, sqle);
+      log.error("SQL = '" + INSERT_PUBLISHER_QUERY + "'.");
+      log.error("publisherName = '" + publisherName + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(insertPublisher);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    return publisherSeq;
   }
 }

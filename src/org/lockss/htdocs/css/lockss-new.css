@@ -332,3 +332,9 @@ img.messageDivClose {
 .dot {
     height: 8px;
 }
+
+.total-subscription {
+	padding-bottom: 10px;
+	padding-top: 15px;
+	vertical-align: middle;
+}

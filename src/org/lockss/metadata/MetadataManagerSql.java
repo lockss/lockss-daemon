@@ -212,19 +212,6 @@ public class MetadataManagerSql {
       + "," + PROVIDER_SEQ_COLUMN
       + ") values (default,?,?,?,?,?)";
 
-  // Query to find a publisher by its name.
-  private static final String FIND_PUBLISHER_QUERY = "select "
-      + PUBLISHER_SEQ_COLUMN
-      + " from " + PUBLISHER_TABLE
-      + " where " + PUBLISHER_NAME_COLUMN + " = ?";
-
-  // Query to add a publisher.
-  private static final String INSERT_PUBLISHER_QUERY = "insert into "
-      + PUBLISHER_TABLE
-      + "(" + PUBLISHER_SEQ_COLUMN
-      + "," + PUBLISHER_NAME_COLUMN
-      + ") values (default,?)";
-
   // Query to update the extraction time of the metadata of an Archival Unit.
   private static final String UPDATE_AU_MD_EXTRACT_TIME_QUERY = "update "
       + AU_MD_TABLE
@@ -1329,9 +1316,9 @@ public class MetadataManagerSql {
   }
 
   /**
-   * Provides the number of publishers in the metadata database.
+   * Provides the number of providers in the metadata database.
    * 
-   * @return a long with the number of publishers in the metadata database.
+   * @return a long with the number of providers in the metadata database.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
@@ -1354,11 +1341,11 @@ public class MetadataManagerSql {
   }
 
   /**
-   * Provides the number of publishers in the metadata database.
+   * Provides the number of providers in the metadata database.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
-   * @return a long with the number of publishers in the metadata database.
+   * @return a long with the number of providers in the metadata database.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
@@ -2088,100 +2075,6 @@ public class MetadataManagerSql {
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Provides the identifier of a publisher.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisher
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  Long findPublisher(Connection conn, String publisher) throws DbException {
-    final String DEBUG_HEADER = "findPublisher(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisher = " + publisher);
-
-    Long publisherSeq = null;
-    ResultSet resultSet = null;
-
-    PreparedStatement findPublisher =
-	dbManager.prepareStatement(conn, FIND_PUBLISHER_QUERY);
-
-    try {
-      findPublisher.setString(1, publisher);
-
-      resultSet = dbManager.executeQuery(findPublisher);
-      if (resultSet.next()) {
-	publisherSeq = resultSet.getLong(PUBLISHER_SEQ_COLUMN);
-      }
-    } catch (SQLException sqle) {
-      String message = "Cannot find publisher";
-      log.error(message, sqle);
-      log.error("SQL = '" + FIND_PUBLISHER_QUERY + "'.");
-      log.error("publisher = '" + publisher + "'.");
-      throw new DbException(message, sqle);
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findPublisher);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    return publisherSeq;
-  }
-
-  /**
-   * Adds a publisher to the database.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisher
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher just added.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  Long addPublisher(Connection conn, String publisher) throws DbException {
-    final String DEBUG_HEADER = "addPublisher(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisher = " + publisher);
-
-    Long publisherSeq = null;
-    ResultSet resultSet = null;
-    PreparedStatement insertPublisher = dbManager.prepareStatement(conn,
-	INSERT_PUBLISHER_QUERY, Statement.RETURN_GENERATED_KEYS);
-
-    try {
-      // skip auto-increment key field #0
-      insertPublisher.setString(1, publisher);
-      dbManager.executeUpdate(insertPublisher);
-      resultSet = insertPublisher.getGeneratedKeys();
-
-      if (!resultSet.next()) {
-	log.error("Unable to create publisher table row.");
-	return null;
-      }
-
-      publisherSeq = resultSet.getLong(1);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "Added publisherSeq = " + publisherSeq);
-    } catch (SQLException sqle) {
-      String message = "Cannot add publisher";
-      log.error(message, sqle);
-      log.error("SQL = '" + INSERT_PUBLISHER_QUERY + "'.");
-      log.error("publisher = '" + publisher + "'.");
-      throw new DbException(message, sqle);
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(insertPublisher);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    return publisherSeq;
   }
 
   /**

@@ -1254,66 +1254,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the identifier of a publisher if existing or after creating it
-   * otherwise.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisher
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long findOrCreatePublisher(Connection conn, String publisher)
-      throws DbException {
-    final String DEBUG_HEADER = "findOrCreatePublisher(): ";
-    Long publisherSeq = mdManagerSql.findPublisher(conn, publisher);
-    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-
-    // Check whether it is a new publisher.
-    if (publisherSeq == null) {
-      // Yes: Add to the database the new publisher.
-      publisherSeq = mdManagerSql.addPublisher(conn, publisher);
-      log.debug3(DEBUG_HEADER + "new publisherSeq = " + publisherSeq);
-    }
-
-    return publisherSeq;
-  }
-
-  /**
-   * Provides the identifier of a publisher.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisher
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long findPublisher(Connection conn, String publisher)
-      throws DbException {
-    return mdManagerSql.findPublisher(conn, publisher);
-  }
-
-  /**
-   * Adds a publisher to the database.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisher
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher just added.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long addPublisher(Connection conn, String publisher)
-      throws DbException {
-    return mdManagerSql.addPublisher(conn, publisher);
-  }
-
-  /**
    * Provides the identifier of a publication if existing or after creating it
    * otherwise.
    * 

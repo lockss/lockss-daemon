@@ -242,7 +242,7 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
 
       // Add the publisher.
       Long publisherSeq =
-	  metadataManager.findOrCreatePublisher(conn, "Full Book Publisher");
+	  dbManager.findOrCreatePublisher(conn, "Full Book Publisher");
 
       // Add the publication -- test direct method
       publicationSeq =
@@ -318,7 +318,7 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
 
       // Add the publisher.
       Long publisherSeq =
-	  metadataManager.findOrCreatePublisher(conn, "Section Book Publisher");
+	  dbManager.findOrCreatePublisher(conn, "Section Book Publisher");
 
       // Add the publication -- test direct method
       publicationSeq =

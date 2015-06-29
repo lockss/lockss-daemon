@@ -184,6 +184,11 @@ public class SubscriptionManagerSql {
       + SUBSCRIPTION_SEQ_COLUMN
       + " from " + SUBSCRIPTION_RANGE_TABLE;
 
+  // Query to get the publisher subscriptions.
+  private static final String FIND_ALL_PUBLISHER_SUBSCRIPTIONS_QUERY = "select "
+      + PUBLISHER_SUBSCRIPTION_SEQ_COLUMN
+      + " from " + PUBLISHER_SUBSCRIPTION_TABLE;
+
   // Query to find all the subscription data for backup purposes.
   private static final String FIND_SUBSCRIPTION_BACKUP_DATA_QUERY = "select"
       + " distinct pu." + PUBLISHER_NAME_COLUMN
@@ -233,6 +238,35 @@ public class SubscriptionManagerSql {
       + " set " + SUBSCRIBED_COLUMN + " = ?"
       + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?"
       + " and " + SUBSCRIPTION_RANGE_COLUMN + " = ?";
+
+  // Query to find a publisher subscription setting.
+  private static final String FIND_PUBLISHER_SUBSCRIPTION_QUERY = "select "
+      + SUBSCRIBED_COLUMN
+      + " from " + PUBLISHER_SUBSCRIPTION_TABLE
+      + " where " + PUBLISHER_SEQ_COLUMN + " = ?"
+      + " and " + PROVIDER_SEQ_COLUMN + " = ?";
+
+  // Query to delete a publisher subscription setting.
+  private static final String DELETE_PUBLISHER_SUBSCRIPTION_QUERY = "delete "
+      + " from " + PUBLISHER_SUBSCRIPTION_TABLE
+      + " where " + PUBLISHER_SEQ_COLUMN + " = ?"
+      + " and " + PROVIDER_SEQ_COLUMN + " = ?";
+
+  // Query to update a publisher subscription.
+  private static final String UPDATE_PUBLISHER_SUBSCRIPTION_QUERY = "update "
+      + PUBLISHER_SUBSCRIPTION_TABLE
+      + " set " + SUBSCRIBED_COLUMN + " = ?"
+      + " where " + PUBLISHER_SEQ_COLUMN + " = ?"
+      + " and " + PROVIDER_SEQ_COLUMN + " = ?";
+
+  // Query to add a publisher subscription.
+  private static final String INSERT_PUBLISHER_SUBSCRIPTION_QUERY = "insert "
+      + "into " + PUBLISHER_SUBSCRIPTION_TABLE
+      + "(" + PUBLISHER_SUBSCRIPTION_SEQ_COLUMN
+      + "," + PUBLISHER_SEQ_COLUMN
+      + "," + PROVIDER_SEQ_COLUMN
+      + "," + SUBSCRIBED_COLUMN
+      + ") values (default,?,?,?)";
 
   private DbManager dbManager;
   //private SubscriptionManager subscriptionManager;
@@ -755,6 +789,47 @@ public class SubscriptionManagerSql {
   }
 
   /**
+   * Provides an indication of whether there are publisher subscriptions.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a boolean with <code>true</code> if there are publisher
+   *         subscriptions, <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  boolean hasPublisherSubscriptions(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "hasPublisherSubscriptions(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    boolean result = false;
+
+    String query = FIND_ALL_PUBLISHER_SUBSCRIPTIONS_QUERY;
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
+
+    PreparedStatement findAnyPublisherSubscription = null;
+    ResultSet resultSet = null;
+
+    try {
+      findAnyPublisherSubscription = dbManager.prepareStatement(conn, query);
+      findAnyPublisherSubscription.setMaxRows(1);
+      resultSet = dbManager.executeQuery(findAnyPublisherSubscription);
+      result = resultSet.next();
+    } catch (SQLException sqle) {
+      String message = "Cannot find any publisher subscriptions";
+      log.error(message, sqle);
+      log.error("SQL = '" + query + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findAnyPublisherSubscription);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
    * Provides all the subscriptions and their publishers.
    * 
    * @return a List<Subscription> with the subscriptions and their publishers.
@@ -1111,5 +1186,197 @@ public class SubscriptionManagerSql {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
     return count;
+  }
+
+  /**
+   * Provides the setting of a publisher subscription.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @param providerSeq
+   *          A Long with the identifier of the provider.
+   * @return a Boolean with the setting of the publisher subscription.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Boolean findPublisherSubscription(Connection conn, Long publisherSeq,
+      Long providerSeq) throws DbException {
+    final String DEBUG_HEADER = "findPublisherSubscription(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    }
+
+    PreparedStatement findPublisherSubscription =
+	dbManager.prepareStatement(conn, FIND_PUBLISHER_SUBSCRIPTION_QUERY);
+    ResultSet resultSet = null;
+    Boolean subscribed = null;
+
+    try {
+      findPublisherSubscription.setLong(1, publisherSeq);
+      findPublisherSubscription.setLong(2, providerSeq);
+      resultSet = dbManager.executeQuery(findPublisherSubscription);
+      if (resultSet.next()) {
+	subscribed = resultSet.getBoolean(SUBSCRIBED_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Found subscribed = " + subscribed);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find publisher subscription", sqle);
+      log.error("SQL = '" + FIND_PUBLISHER_SUBSCRIPTION_QUERY + "'.");
+      log.error("publisherSeq = " + publisherSeq);
+      log.error("providerSeq = " + providerSeq);
+      throw new DbException("Cannot find publisher subscription", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findPublisherSubscription);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "subscribed = " + subscribed);
+    return subscribed;
+  }
+
+  /**
+   * Deletes the setting of a publisher subscription.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @param providerSeq
+   *          A Long with the identifier of the provider.
+   * @return an int with the number of deleted rows.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  int deletePublisherSubscription(Connection conn, Long publisherSeq,
+      Long providerSeq) throws DbException {
+    final String DEBUG_HEADER = "deletePublisherSubscription(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    }
+
+    int count = 0;
+    PreparedStatement deletePublisherSubscription =
+	dbManager.prepareStatement(conn, DELETE_PUBLISHER_SUBSCRIPTION_QUERY);
+
+    try {
+      deletePublisherSubscription.setLong(1, publisherSeq);
+      deletePublisherSubscription.setLong(2, providerSeq);
+
+      count = dbManager.executeUpdate(deletePublisherSubscription);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Deleted " + count
+	    + " publisher subscriptions.");
+    } catch (SQLException sqle) {
+      log.error("Cannot delete publisher subscription", sqle);
+      log.error("SQL = '" + DELETE_PUBLISHER_SUBSCRIPTION_QUERY + "'.");
+      log.error("publisherSeq = " + publisherSeq);
+      log.error("providerSeq = " + providerSeq);
+      throw new DbException("Cannot delete publisher subscription", sqle);
+    } finally {
+      DbManager.safeCloseStatement(deletePublisherSubscription);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
+  }
+
+  /**
+   * Updates, if it already exists, or creates otherwise a publisher
+   * subscription.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @param providerSeq
+   *          A Long with the identifier of the provider.
+   * @param subscribed
+   *          A boolean with the indication of the publisher subscription.
+   * @return a Long with the identifier of the publisher subscription if it's just added, <code>null</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Long updateOrCreatePublisherSubscription(Connection conn, Long publisherSeq,
+      Long providerSeq, boolean subscribed) throws DbException {
+    final String DEBUG_HEADER = "updateOrCreatePublisherSubscription(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+      log.debug2(DEBUG_HEADER + "subscribed = " + subscribed);
+    }
+
+    int count = 0;
+
+    PreparedStatement updatePublisherSubscription =
+	dbManager.prepareStatement(conn, UPDATE_PUBLISHER_SUBSCRIPTION_QUERY);
+
+    try {
+      updatePublisherSubscription.setBoolean(1, subscribed);
+      updatePublisherSubscription.setLong(2, publisherSeq);
+      updatePublisherSubscription.setLong(3, providerSeq);
+
+      count = dbManager.executeUpdate(updatePublisherSubscription);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update publisher subscription", sqle);
+      log.error("SQL = '" + UPDATE_PUBLISHER_SUBSCRIPTION_QUERY + "'.");
+      log.error("publisherSeq = " + publisherSeq);
+      log.error("providerSeq = " + providerSeq);
+      throw new DbException("Cannot update publisher subscription", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updatePublisherSubscription);
+    }
+
+    if (count == 1) {
+      return null;
+    }
+
+    PreparedStatement insertSubscription = dbManager.prepareStatement(conn,
+	INSERT_PUBLISHER_SUBSCRIPTION_QUERY, Statement.RETURN_GENERATED_KEYS);
+
+    ResultSet resultSet = null;
+    Long publisherSubscriptionSeq = null;
+
+    try {
+      // Skip auto-increment key field #0
+      insertSubscription.setLong(1, publisherSeq);
+      insertSubscription.setLong(2, providerSeq);
+      insertSubscription.setBoolean(3, subscribed);
+      dbManager.executeUpdate(insertSubscription);
+      resultSet = insertSubscription.getGeneratedKeys();
+
+      if (!resultSet.next()) {
+	String message = "Unable to create PUBLISHER_SUBSCRIPTION table row: "
+	    + "publisherSeq = " + publisherSeq + "providerSeq = " + providerSeq
+	    + ", subscribed = " + subscribed + " - No keys were generated.";
+	log.error(message);
+	throw new DbException(message);
+      }
+
+      publisherSubscriptionSeq = resultSet.getLong(1);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Added publisherSubscriptionSeq = "
+	    + publisherSubscriptionSeq);
+    } catch (SQLException sqle) {
+      log.error("Cannot insert publisher subscription", sqle);
+      log.error("SQL = '" + INSERT_PUBLISHER_SUBSCRIPTION_QUERY + "'.");
+      log.error("publisherSeq = " + publisherSeq);
+      log.error("providerSeq = " + providerSeq);
+      log.error("subscribed = " + subscribed);
+      throw new DbException("Cannot insert publisher subscription", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(insertSubscription);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisherSubscriptionSeq = "
+	+ publisherSubscriptionSeq);
+    return publisherSubscriptionSeq;
   }
 }
