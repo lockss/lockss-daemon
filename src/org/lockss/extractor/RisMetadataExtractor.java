@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,7 +51,7 @@ import org.lockss.util.*;
  */
 public class RisMetadataExtractor implements FileMetadataExtractor {
 	
-	static Logger log = Logger.getLogger("RisMetadataExtractor");
+	static Logger log = Logger.getLogger(RisMetadataExtractor.class);
 	private MultiMap risTagToMetadataField;
 	protected static final String REFTYPE_JOURNAL = "Journal";
 	protected static final String REFTYPE_BOOK = "Book";
@@ -65,7 +65,7 @@ public class RisMetadataExtractor implements FileMetadataExtractor {
 		risTagToMetadataField = new MultiValueMap();
 		risTagToMetadataField.put("T1", MetadataField.FIELD_ARTICLE_TITLE);
 		risTagToMetadataField.put("AU", MetadataField.FIELD_AUTHOR);
-		risTagToMetadataField.put("JF", MetadataField.FIELD_JOURNAL_TITLE);
+		risTagToMetadataField.put("JF", MetadataField.FIELD_PUBLICATION_TITLE);
 		risTagToMetadataField.put("DO", MetadataField.FIELD_DOI);
 		risTagToMetadataField.put("PB", MetadataField.FIELD_PUBLISHER);
 		risTagToMetadataField.put("VL", MetadataField.FIELD_VOLUME);
@@ -155,13 +155,14 @@ public class RisMetadataExtractor implements FileMetadataExtractor {
 		String refType = null;
 	    try {
 	    	if(!containsRisTag("TY")){
+ 	    	            String value = null;
 			    while(refType == null && (line = bReader.readLine()) != null) {
 			    	if(line.trim().toUpperCase().startsWith("TY") && line.contains(delimiter) && !line.endsWith(delimiter)) {
-			    		String value = line.substring(line.indexOf(delimiter) + 1).trim().toUpperCase();
+			    		value = line.substring(line.indexOf(delimiter) + 1).trim().toUpperCase();
 			    		if(value.contentEquals("JOUR")) {
 			    			refType = REFTYPE_JOURNAL;
 			    		}
-			    		else if(value.contentEquals("BOOK")) {
+			    		else if(value.contentEquals("BOOK") || value.contentEquals("CHAP")) {
 			    			refType = REFTYPE_BOOK;
 			    		}
 			    		else {
@@ -172,6 +173,7 @@ public class RisMetadataExtractor implements FileMetadataExtractor {
 			    if(refType == null){
 			    	return md;
 			    }
+			    md.putRaw("TY", value);
 	    	}
 	        while ((line = bReader.readLine()) != null) {
 	        	line = line.trim();
