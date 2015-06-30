@@ -42,7 +42,6 @@ import org.antlr.v4.runtime.tree.*;
 import org.lockss.tdb.AntlrUtil.NamedAntlrInputStream;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
 import org.lockss.tdb.TdbParser.*;
-import org.lockss.util.Constants;
 
 /**
  * <p>
@@ -69,7 +68,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbBuilder:0.2.1]";
+  public static final String VERSION = "[TdbBuilder:0.2.2]";
   
   /**
    * <p>
@@ -256,7 +255,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    */
   @Override
   public void enterPublisher(@NotNull PublisherContext pctx) {
-    Map<String, String> map = new HashMap<String, String>();
+    Map<String, String> map = new LinkedHashMap<String, String>();
     for (SimpleAssignmentContext sactx : pctx.listOfSimpleAssignments().simpleAssignment()) {
       map.put(sactx.IDENTIFIER().getText(), sactx.STRING().getText());
     }
@@ -276,7 +275,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    */
   @Override
   public void enterTitle(@NotNull TitleContext tctx) {
-    Map<String, String> map = new HashMap<String, String>();
+    Map<String, String> map = new LinkedHashMap<String, String>();
     for (SimpleAssignmentContext sactx : tctx.listOfSimpleAssignments().simpleAssignment()) {
       map.put(sactx.IDENTIFIER().getText(), sactx.STRING().getText());
     }

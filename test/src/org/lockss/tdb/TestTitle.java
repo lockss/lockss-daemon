@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +60,9 @@ public class TestTitle extends LockssTestCase {
   public void testType() throws Exception {
     assertEquals(Title.TYPE_JOURNAL, Title.TYPE_DEFAULT);
     assertEquals("book", Title.TYPE_BOOK);
+    assertEquals("bookSeries", Title.TYPE_BOOK_SERIES);
     assertEquals("journal", Title.TYPE_JOURNAL);
+    assertEquals("proceedings", Title.TYPE_PROCEEDINGS);
   }
   
   public void testEmpty() throws Exception {

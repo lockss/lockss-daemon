@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,12 +48,12 @@ public class TestTdb extends LockssTestCase {
   public void testTdb() throws Exception {
     Tdb tdb = new Tdb();
     
-    Map<String, String> publisher1Map = new HashMap<String, String>();
+    Map<String, String> publisher1Map = new LinkedHashMap<String, String>();
     publisher1Map.put(Publisher.NAME, "Publisher 1");
     Publisher publisher1 = new Publisher();
     tdb.addPublisher(publisher1);
     
-    Map<String, String> title11Map = new HashMap<String, String>();
+    Map<String, String> title11Map = new LinkedHashMap<String, String>();
     title11Map.put(Title.NAME, "Title 11");
     Title title11 = new Title(publisher1);
     tdb.addTitle(title11);
@@ -68,7 +68,7 @@ public class TestTdb extends LockssTestCase {
     au113.put(Au.NAME, "AU 113");
     tdb.addAu(au113);
     
-    Map<String, String> title12Map = new HashMap<String, String>();
+    Map<String, String> title12Map = new LinkedHashMap<String, String>();
     title12Map.put(Title.NAME, "Title 12");
     Title title12 = new Title(publisher1);
     tdb.addTitle(title12);

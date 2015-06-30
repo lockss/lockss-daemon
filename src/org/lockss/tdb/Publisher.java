@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,7 +52,7 @@ public class Publisher {
    * @since 1.67
    */
   protected Publisher() {
-    this(new HashMap<String, String>());
+    this(new LinkedHashMap<String, String>());
   }
   
   /**

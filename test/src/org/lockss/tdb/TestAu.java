@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -284,11 +284,11 @@ public class TestAu extends LockssTestCase {
   
   public void testTraitFunctors() throws Exception {
     // Make a publisher
-    Map<String, String> publisherMap = new HashMap<String, String>();
+    Map<String, String> publisherMap = new LinkedHashMap<String, String>();
     Publisher publisher = new Publisher(publisherMap);
 
     // Make a title with that publisher
-    Map<String, String> titleMap = new HashMap<String, String>();
+    Map<String, String> titleMap = new LinkedHashMap<String, String>();
     Title title = new Title(publisher, titleMap);
 
     // Make an AU with that title

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,7 +54,7 @@ public class Title {
    * @since 1.67
    */
   protected Title(Publisher publisher) {
-    this(publisher, new HashMap<String, String>());
+    this(publisher, new LinkedHashMap<String, String>());
   }
   
   /**
@@ -358,12 +358,27 @@ public class Title {
 
   /**
    * <p>
-   * The journal title type ({@value}). 
+   * The book title type ({@value}).
    * </p>
    * 
    * @since 1.67
+   * @deprecated As of 1.68, this constant is deprecated in favor of
+   *             {@link #TYPE_BOOK_SERIES}, because the title type was meant to
+   *             refer to the type of a publication (title), not the type of a
+   *             publication's individual component (AU).
+   * @see #TYPE_BOOK_SERIES
    */
+  @Deprecated
   public static final String TYPE_BOOK = "book";
+
+  /**
+   * <p>
+   * The book series title type ({@value}). 
+   * </p>
+   * 
+   * @since 1.68
+   */
+  public static final String TYPE_BOOK_SERIES = "bookSeries";
 
   /**
    * <p>
@@ -373,6 +388,15 @@ public class Title {
    * @since 1.67
    */
   public static final String TYPE_JOURNAL = "journal";
+
+  /**
+   * <p>
+   * The proceedings title type ({@value}). 
+   * </p>
+   * 
+   * @since 1.68
+   */
+  public static final String TYPE_PROCEEDINGS = "proceedings";
 
   /**
    * <p>
@@ -393,7 +417,9 @@ public class Title {
    * @since 1.67
    * @see #TYPE_DEFAULT
    * @see #TYPE_BOOK
+   * @see #TYPE_BOOK_SERIES
    * @see #TYPE_JOURNAL
+   * @see #TYPE_PROCEEDINGS
    */
   public String getType() {
     if (!_type) {

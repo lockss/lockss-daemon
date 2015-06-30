@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,7 +54,7 @@ public class TestPublisher extends LockssTestCase {
   }
   
   public void testPublisher() throws Exception {
-    Map<String, String> map = new HashMap<String, String>();
+    Map<String, String> map = new LinkedHashMap<String, String>();
     Publisher publisher = new Publisher(map);
     map.put(Publisher.NAME, NAME_VALUE);
     assertEquals(NAME_VALUE, publisher.getName());
