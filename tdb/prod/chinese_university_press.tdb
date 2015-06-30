@@ -18,8 +18,8 @@
     param[journal_dir] = asian_journal_of_english_language_teaching
     attr[journal_id] = aje
 
-    au < exists ; 2013 ; Asian Journal of English Language Teaching Volume 23 ; 23 >
-    au < exists ; 2014 ; Asian Journal of English Language Teaching Volume 24 ; 24 >
+    au < manifest ; 2013 ; Asian Journal of English Language Teaching Volume 23 ; 23 >
+    au < manifest ; 2014 ; Asian Journal of English Language Teaching Volume 24 ; 24 >
     au < expected ; 2015 ; Asian Journal of English Language Teaching Volume 25 ; 25 >
 
   }
@@ -50,7 +50,7 @@
     param[journal_dir] = journal_of_chinese_linguistics
     attr[journal_id] = jcl
 
-    au < exists ; 2015 ; Journal of Chinese Linguistics Volume 43 ; 43 >
+    au < manifest ; 2015 ; Journal of Chinese Linguistics Volume 43 ; 43 >
 
   }
 
