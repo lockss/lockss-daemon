@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 import getpass
 import optparse
@@ -60,12 +60,13 @@ class _EvaluateClosedGroupOptions(object):
     return parser
    
 def _do_evaluate(options):
-  print 'AUID: %s' % (options.get_auid(),)
-  quit = False
+  auid = options.get_auid()
   hosts = sorted(options.get_hosts())
+  quit = False
+  print '%s BEGIN' % (auid,)
   # Make actionable objects
   host_dssopts = dict()
-  query = 'SELECT * WHERE auId = "%s"' % (options.get_auid(),)
+  query = 'SELECT creationTime, lastCompletedCrawl, lastCompletedPoll, peerAgreements, substanceState WHERE auId = "%s"' % (auid,)
   for host in hosts:
     dssopts = DaemonStatusServiceOptions()
     dssopts.set_host(host)
@@ -89,35 +90,33 @@ def _do_evaluate(options):
     r = query_aus(host_dssopts[host])
     if r is None or len(r) == 0:
       quit = True
-      print 'AU not found on %s' % (host,)
+      print '%s not found on %s' % (auid, host)
       continue
     host_audata[host] = r[0]
   if quit: sys.exit(1)
   # Check basic AU data
-  lrlcc = None
-  lrlcp = None
+  lccs = list()
+  lcps = list()
   for host in hosts:
     audata = host_audata[host]
     lcc = audata.LastCompletedCrawl
     if lcc is None or lcc == 0:
       quit = True
-      print '%s: AU has never crawled successfully (created %s)' % (host, datetime_from_ms(audata.CreationTime))
+      print '%s has never crawled successfully on %s (created %s)' % (auid, host, datetime_from_ms(audata.CreationTime))
       continue
-    if lrlcc is None or lrlcc > lcc: lrlcc = lcc
+    lccs.append(lcc)
     ss = audata.SubstanceState
     if ss is None or ss != 'Yes':
       quit = True
-      print '%s: AU does not have substance' % (host,)
+      print '%s does not have substance on %s' % (auid, host)
       continue
     lcp = audata.LastCompletedPoll
     if lcp is None or lcp == 0:
       quit = True
-      print '%s: AU has never polled successfully (created %s)' % (host, datetime_from_ms(audata.CreationTime))
+      print '%s has never polled successfully on %s (created %s)' % (auid, host, datetime_from_ms(audata.CreationTime))
       continue
-    if lrlcp is None or lrlcp > lcp: lrlcp = lcp
+    lcps.append(lcp)
   if quit: sys.exit(1)
-  print 'Least recent last completed crawl: %s' % (datetime_from_ms(lrlcc),)
-  print 'Least recent last completed poll: %s' % (datetime_from_ms(lrlcp),)
   # Compute agreement matrix
   agmat = dict()
   for host1 in hosts:
@@ -146,10 +145,9 @@ def _do_evaluate(options):
       print '%s agrees 100%% with all others since %s' % (host1, datetime_from_ms(min1))
       if mrmin is None or mrmin < min1: mrmin, mrhost = min1, host1
   if mrmin is not None:
-    print 'Winner: %s agrees 100%% with all others since %s' % (mrhost, datetime_from_ms(mrmin))
-    print 'PASS%d: %s' % (cand, options.get_auid())
+    print '%s PASS %d (%s %s)' % (auid, cand, mrhost, datetime_from_ms(mrmin))
   else:
-    print 'FAIL: %s' % (options.get_auid(),)
+    print '%s FAIL' % (auid,)
 
 def _file_lines(filestr):
   ret = [line.strip() for line in open(filestr).readlines() if not (line.isspace() or line.startswith('#'))]
