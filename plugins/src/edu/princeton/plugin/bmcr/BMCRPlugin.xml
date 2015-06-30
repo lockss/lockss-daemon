@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Bryn Mawr Classical Review</string>
+    <string>Bryn Mawr Classical Review Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -61,7 +61,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"BMCR Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Bryn Mawr Classical Review Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -69,10 +69,7 @@
   </entry>
   <entry>
     <string>au_permission_url</string>
-      <list>
-        <string>"%smanifest%d.html", base_url, year</string>
-        <string>"%smanifest1990.html", base_url, </string>
-      </list>
+    <string>"%smanifest1990.html", base_url</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -99,19 +96,22 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%s(manifest)?%d/?$", base_url, year</string>
-      <string>1,"^%s.*\.gif", base_url</string>
-      <string>1,"^%s%d/%d-[0-9]+-[0-9]+.*\.html", base_url, year, year</string>
+      <string>1,"^%s%d($|/)", base_url, year</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <string>"^%s%d/%d-[0-9]+-[0-9]+.*\.html", base_url, year, year</string>
+    <string>"^%s%d/%d-[^./?&amp;]+\.html$", base_url, year, year</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

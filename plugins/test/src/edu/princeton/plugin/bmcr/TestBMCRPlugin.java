@@ -98,7 +98,7 @@ public class TestBMCRPlugin extends LockssTestCase {
     String starturl =
         "http://www.example.com/archive.html";
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("BMCR Plugin, Base URL http://www.example.com/, Year 2003",
+    assertEquals("Bryn Mawr Classical Review Plugin, Base URL http://www.example.com/, Year 2003",
         au.getName());
     assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
@@ -116,7 +116,7 @@ public class TestBMCRPlugin extends LockssTestCase {
   
   // Test the crawl rules for eLife
   public void testShouldCacheProperPages() throws Exception {
-    String ROOT_URL = "http://highwire.org/";
+    String ROOT_URL = "http://www.example.com/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(YEAR_KEY, "2015");
@@ -132,7 +132,7 @@ public class TestBMCRPlugin extends LockssTestCase {
     // permission page/start url manifest1990.html
     shouldCacheTest(ROOT_URL + "archive.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest1990.html", true, au);
-    shouldCacheTest(ROOT_URL + "manifest2015.html", true, au);
+    shouldCacheTest(ROOT_URL + "manifest2015.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest2014.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2015", false, au);
     // toc page for a volume, issue
@@ -144,9 +144,9 @@ public class TestBMCRPlugin extends LockssTestCase {
     // article files
     shouldCacheTest(ROOT_URL + "2015/2015-01-01.html", true, au);
     
-    shouldCacheTest(ROOT_URL + "2015/2015-01-01.01", false, au);
-    shouldCacheTest(ROOT_URL + "2015/2015-01-01.abstract", false, au);
-    shouldCacheTest(ROOT_URL + "2015/2015-01-01", false, au);
+    shouldCacheTest(ROOT_URL + "2015/2015-01-01.01", true, au);
+    shouldCacheTest(ROOT_URL + "2015/2015-blahblah.abstract", true, au);
+    shouldCacheTest(ROOT_URL + "2015/1999-01-01", true, au);
     
     shouldCacheTest("", false, au);
     
