@@ -5434,7 +5434,7 @@
     au < manifest ; exists ; 2009 ; Environmental Entomology Volume 38 ; 38 ; >
     au < manifest ; exists ; 2010 ; Environmental Entomology Volume 39 ; 39 ; >
     au < manifest ; exists ; 2011 ; Environmental Entomology Volume 40 ; 40 ; >
-    au < testing ; exists ; 2012 ; Environmental Entomology Volume 41 ; 41 ; >
+    au < ready ; exists ; 2012 ; Environmental Entomology Volume 41 ; 41 ; >
     au < ready ; exists ; 2013 ; Environmental Entomology Volume 42 ; 42 ; >
     au < ready ; exists ; 2014 ; Environmental Entomology Volume 43 ; 43 ; >
     au < manifest ; exists ; 2015 ; Environmental Entomology Volume 44 ; 44 ; >
@@ -6651,9 +6651,9 @@
     au < manifest ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 61 ; 61 ; >
     au < manifest ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 62 ; 62 ; >
     au < manifest ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 66 ; 66 ; >
+    au < testing ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 64 ; 64 ; >
+    au < testing ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 65 ; 65 ; >
+    au < testing ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 66 ; 66 ; >
 
   }
 
@@ -6748,8 +6748,8 @@
     au < manifest ; exists ; 2011 ; FEMS Microbiology Ecology Volume 78 ; 78 ; >
     au < manifest ; exists ; 2012 ; FEMS Microbiology Ecology Volume 79 ; 79 ; >
     au < manifest ; exists ; 2012 ; FEMS Microbiology Ecology Volume 80 ; 80 ; >
-    au < manifest ; exists ; 2012 ; FEMS Microbiology Ecology Volume 81 ; 81 ; >
-    au < manifest ; exists ; 2012 ; FEMS Microbiology Ecology Volume 82 ; 82 ; >
+    au < testing ; exists ; 2012 ; FEMS Microbiology Ecology Volume 81 ; 81 ; >
+    au < testing ; exists ; 2012 ; FEMS Microbiology Ecology Volume 82 ; 82 ; >
     au < ready ; exists ; 2013 ; FEMS Microbiology Ecology Volume 83 ; 83 ; >
     au < ready ; exists ; 2013 ; FEMS Microbiology Ecology Volume 84 ; 84 ; >
     au < testing ; exists ; 2013 ; FEMS Microbiology Ecology Volume 85 ; 85 ; >
@@ -6951,12 +6951,12 @@
     au < manifest ; exists ; 2012 ; FEMS Microbiology Letters Volume 337 ; 337 ; >
     au < ready ; exists ; 2013 ; FEMS Microbiology Letters Volume 338 ; 338 ; >
     au < ready ; exists ; 2013 ; FEMS Microbiology Letters Volume 339 ; 339 ; >
-    au < testing ; exists ; 2013 ; FEMS Microbiology Letters Volume 340 ; 340 ; >
-    au < testing ; exists ; 2013 ; FEMS Microbiology Letters Volume 341 ; 341 ; >
-    au < manifest ; exists ; 2013 ; FEMS Microbiology Letters Volume 342 ; 342 ; >
-    au < manifest ; exists ; 2013 ; FEMS Microbiology Letters Volume 343 ; 343 ; >
-    au < manifest ; exists ; 2013 ; FEMS Microbiology Letters Volume 344 ; 344 ; >
-    au < manifest ; exists ; 2013 ; FEMS Microbiology Letters Volume 345 ; 345 ; >
+    au < ready ; exists ; 2013 ; FEMS Microbiology Letters Volume 340 ; 340 ; >
+    au < ready ; exists ; 2013 ; FEMS Microbiology Letters Volume 341 ; 341 ; >
+    au < testing ; exists ; 2013 ; FEMS Microbiology Letters Volume 342 ; 342 ; >
+    au < testing ; exists ; 2013 ; FEMS Microbiology Letters Volume 343 ; 343 ; >
+    au < testing ; exists ; 2013 ; FEMS Microbiology Letters Volume 344 ; 344 ; >
+    au < testing ; exists ; 2013 ; FEMS Microbiology Letters Volume 345 ; 345 ; >
     au < manifest ; exists ; 2013 ; FEMS Microbiology Letters Volume 346 ; 346 ; >
     au < manifest ; exists ; 2013 ; FEMS Microbiology Letters Volume 347 ; 347 ; >
     au < manifest ; exists ; 2013 ; FEMS Microbiology Letters Volume 348 ; 348 ; >
@@ -6967,7 +6967,7 @@
     au < ready ; exists ; 2014 ; FEMS Microbiology Letters Volume 353 ; 353 ; >
     au < testing ; exists ; 2014 ; FEMS Microbiology Letters Volume 354 ; 354 ; >
     au < testing ; exists ; 2014 ; FEMS Microbiology Letters Volume 355 ; 355 ; >
-    au < manifest ; exists ; 2014 ; FEMS Microbiology Letters Volume 356 ; 356 ; >
+    au < testing ; exists ; 2014 ; FEMS Microbiology Letters Volume 356 ; 356 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 357 ; 357 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 358 ; 358 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 359 ; 359 ; >
@@ -7053,7 +7053,7 @@
     au < manifest ; exists ; 2009 ; FEMS Yeast Research Volume 9 ; 9 ; >
     au < manifest ; exists ; 2009-2010 ; FEMS Yeast Research Volume 10 ; 10 ; >
     au < manifest ; exists ; 2011 ; FEMS Yeast Research Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2012 ; FEMS Yeast Research Volume 12 ; 12 ; >
+    au < testing ; exists ; 2012 ; FEMS Yeast Research Volume 12 ; 12 ; >
     au < ready ; exists ; 2013 ; FEMS Yeast Research Volume 13 ; 13 ; >
     au < ready ; exists ; 2014 ; FEMS Yeast Research Volume 14 ; 14 ; >
     au < manifest ; exists ; 2015 ; FEMS Yeast Research Volume 15 ; 15 ; >
@@ -9974,7 +9974,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Neuropsychopharmacology Volume 12 ; 12 ; >
     au < manifest ; exists ; 2010 ; International Journal of Neuropsychopharmacology Volume 13 ; 13 ; >
     au < manifest ; exists ; 2011 ; International Journal of Neuropsychopharmacology Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Neuropsychopharmacology Volume 15 ; 15 ; >
+    au < testing ; exists ; 2012 ; International Journal of Neuropsychopharmacology Volume 15 ; 15 ; >
     au < ready ; exists ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 ; >
     au < ready ; exists ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
     au < manifest ; exists ; 2015 ; International Journal of Neuropsychopharmacology Volume 18 ; 18 ; >
@@ -11549,7 +11549,7 @@
     au < manifest ; exists ; 2011 ; Journal of Crohn's and Colitis Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; Journal of Crohn's and Colitis Volume 6 ; 6 ; >
     au < ready ; exists ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 ; >
-    au < testing ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
+    au < ready ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
     au < manifest ; exists ; 2015 ; Journal of Crohn's and Colitis Volume 9 ; 9 ; >
 
   }
@@ -15453,11 +15453,12 @@
 
     param[base_url] = http://mspecies.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
+    comment[0] = Probe url problem in manifest page
 
     au < exists ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
     au < exists ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
-    au < testing ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
-    au < testing ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
+    au < notReady ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
+    au < notReady ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < exists ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
     au < expected ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
 
@@ -16104,6 +16105,7 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
     comment[0] = content available from 1890 volume 1 to 1999 volume 82
+    comment[notReady] = Probe url problem in manifest page
 
     au < manifest ; exists ; 2000 ; The Monist Volume 83 ; 83 ; >
     au < manifest ; exists ; 2001 ; The Monist Volume 84 ; 84 ; >
@@ -16118,7 +16120,7 @@
     au < manifest ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
     au < exists ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
     au < exists ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
-    au < testing ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
+    au < notReady ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
     au < exists ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
     au < manifest ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
 
@@ -20907,7 +20909,7 @@
     au < finished ; crawling ; 2011 ; Rheumatology Volume 50 ; 50 ; >
     au < crawling ; exists ; 2012 ; Rheumatology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2013 ; Rheumatology Volume 52 ; 52 ; >
-    au < testing ; exists ; 2014 ; Rheumatology Volume 53 ; 53 ; >
+    au < ready ; exists ; 2014 ; Rheumatology Volume 53 ; 53 ; >
     au < doNotProcess ; exists ; 2015 ; Rheumatology Volume 54 ; 54 ; >
 
     }
