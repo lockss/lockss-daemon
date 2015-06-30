@@ -258,11 +258,6 @@
       param[base_url] = http://www.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       
-    au < doNotProcess ; 1997 ; Chemical Communications 1997 ; 0 ; 1997 >
-    au < doNotProcess ; 1998 ; Chemical Communications 1998 ; 0 ; 1998 >
-    au < doNotProcess ; 1999 ; Chemical Communications 1999 ; 0 ; 1999 >
-    au < doNotProcess ; 2000 ; Chemical Communications 2000 ; 0 ; 2000 >
-    au < doNotProcess ; 2001 ; Chemical Communications 2001 ; 0 ; 2001 >
     au < down ; 2002 ; Chemical Communications 2002 ; 0 ; 2002 >
     au < doNotProcess ; 2003 ; Chemical Communications 2003 ; 0 ; 2003 >
     au < doNotProcess ; 2004 ; Chemical Communications 2004 ; 0 ; 2004 >
@@ -287,27 +282,6 @@
       au < released ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 >
       au < manifest ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 >
       au < expected ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 >
-    }
-  }
-
-  {
-
-    title <
-      name = Chemical Communications (London) ;
-      issn = 1359-7345 ;
-      eissn = 1364-548X
-    >
-
-    param[journal_code] = c1
-    {
-      pluginSuffix = RoyalSocietyOfChemistryPlugin
-      param[base_url] = http://www.rsc.org/
-      param[resolver_url] = http://xlink.rsc.org/
-      
-    au < doNotProcess ; 1965 ; Chemical Communications 1965 ; 0 ; 1965 >
-    au < doNotProcess ; 1966 ; Chemical Communications 1966 ; 0 ; 1966 >
-    au < doNotProcess ; 1967 ; Chemical Communications 1967 ; 0 ; 1967 >
-    au < doNotProcess ; 1968 ; Chemical Communications 1968 ; 0 ; 1968 >
     }
   }
 

@@ -265,11 +265,6 @@
       param[base_url] = http://www.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       
-    au < doNotProcess ; exists ; 1997 ; Chemical Communications 1997 ; 0 ; 1997 >
-    au < doNotProcess ; exists ; 1998 ; Chemical Communications 1998 ; 0 ; 1998 >
-    au < doNotProcess ; exists ; 1999 ; Chemical Communications 1999 ; 0 ; 1999 >
-    au < doNotProcess ; exists ; 2000 ; Chemical Communications 2000 ; 0 ; 2000 >
-    au < doNotProcess ; exists ; 2001 ; Chemical Communications 2001 ; 0 ; 2001 >
     au < doNotProcess ; exists ; 2002 ; Chemical Communications 2002 ; 0 ; 2002 >
     au < doNotProcess ; exists ; 2003 ; Chemical Communications 2003 ; 0 ; 2003 >
     au < doNotProcess ; exists ; 2004 ; Chemical Communications 2004 ; 0 ; 2004 >
@@ -278,7 +273,6 @@
     au < doNotProcess ; exists ; 2007 ; Chemical Communications 2007 ; 0 ; 2007 >
     au < zapped ; finished ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
     au < down ; crawling ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
-    au < zapped ; zapped ; 2010 ; Chemical Communications Volume 46 [superseded] ; 0 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 >
     }
     
@@ -296,27 +290,6 @@
       au < crawling ; exists ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 >
       au < expected ; exists ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 >
 
-    }
-  }
-
-  {
-
-    title <
-      name = Chemical Communications (London) ;
-      issn = 1359-7345 ;
-      eissn = 1364-548X
-    >
-
-    param[journal_code] = c1
-    {
-      pluginSuffix = ClockssRoyalSocietyOfChemistryPlugin
-      param[base_url] = http://www.rsc.org/
-      param[resolver_url] = http://xlink.rsc.org/
-      
-    au < doNotProcess ; doNotProcess ; 1965 ; Chemical Communications 1965 ; 0 ; 1965 >
-    au < doNotProcess ; doNotProcess ; 1966 ; Chemical Communications 1966 ; 0 ; 1966 >
-    au < doNotProcess ; doNotProcess ; 1967 ; Chemical Communications 1967 ; 0 ; 1967 >
-    au < doNotProcess ; doNotProcess ; 1968 ; Chemical Communications 1968 ; 0 ; 1968 >
     }
   }
 
@@ -497,7 +470,6 @@
     au < doNotProcess ; exists ; 2007 ; Dalton Transactions 2007 ; 0 ; 2007 >
     au < zapped ; finished ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
     au < down ; crawling ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
-    au < zapped ; zapped ; 2010 ; Dalton Transactions Volume 39 [superseded] ; 0 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 >
     }
     
