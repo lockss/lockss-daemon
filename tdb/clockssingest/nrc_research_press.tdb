@@ -31,7 +31,7 @@
     au < manifest ; exists ; 2011 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 36 >
     au < crawling ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 >
     au < crawling ; exists ; 2013 ; Applied Physiology, Nutrition, and Metabolism Volume 38 ; 38 >
-    au < testing ; exists ; 2014 ; Applied Physiology, Nutrition, and Metabolism Volume 39 ; 39 >
+    au < ready ; exists ; 2014 ; Applied Physiology, Nutrition, and Metabolism Volume 39 ; 39 >
     au < manifest ; exists ; 2015 ; Applied Physiology, Nutrition, and Metabolism Volume 40 ; 40 >
     
   }  
@@ -133,7 +133,7 @@
       au < manifest ; exists ; 2011 ; Biochemistry and Cell Biology Volume 89 ; 89 >
       au < crawling ; exists ; 2012 ; Biochemistry and Cell Biology Volume 90 ; 90 >
       au < crawling ; exists ; 2013 ; Biochemistry and Cell Biology Volume 91 ; 91 >
-      au < testing ; exists ; 2014 ; Biochemistry and Cell Biology Volume 92 ; 92 >
+      au < ready ; exists ; 2014 ; Biochemistry and Cell Biology Volume 92 ; 92 >
       au < manifest ; exists ; 2015 ; Biochemistry and Cell Biology Volume 93 ; 93 >
 
     }
@@ -224,7 +224,7 @@
       au < manifest ; exists ; 2011 ; Botany Volume 89 ; 89 >
       au < crawling ; exists ; 2012 ; Botany Volume 90 ; 90 >
       au < crawling ; exists ; 2013 ; Botany Volume 91 ; 91 >
-      au < testing ; exists ; 2014 ; Botany Volume 92 ; 92 >
+      au < ready ; exists ; 2014 ; Botany Volume 92 ; 92 >
       au < manifest ; exists ; 2015 ; Botany Volume 93 ; 93 >
 
     }
@@ -291,7 +291,7 @@
     au < manifest ; exists ; 2011 ; Canadian Geotechnical Journal Volume 48 ; 48 >
     au < crawling ; exists ; 2012 ; Canadian Geotechnical Journal Volume 49 ; 49 >
     au < crawling ; exists ; 2013 ; Canadian Geotechnical Journal Volume 50 ; 50 >
-    au < testing ; exists ; 2014 ; Canadian Geotechnical Journal Volume 51 ; 51 >
+    au < ready ; exists ; 2014 ; Canadian Geotechnical Journal Volume 51 ; 51 >
     au < manifest ; exists ; 2015 ; Canadian Geotechnical Journal Volume 52 ; 52 >
 
   }
@@ -396,7 +396,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Chemistry Volume 89 ; 89 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Chemistry Volume 90 ; 90 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Chemistry Volume 91 ; 91 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Chemistry Volume 92 ; 92 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Chemistry Volume 92 ; 92 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Chemistry Volume 93 ; 93 >
     
     }
@@ -451,7 +451,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Civil Engineering Volume 38 ; 38 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Civil Engineering Volume 39 ; 39 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Civil Engineering Volume 40 ; 40 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Civil Engineering Volume 41 ; 41 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Civil Engineering Volume 41 ; 41 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Civil Engineering Volume 42 ; 42 >
     
     }
@@ -516,7 +516,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Earth Sciences Volume 48 ; 48 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Earth Sciences Volume 49 ; 49 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Earth Sciences Volume 50 ; 50 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Earth Sciences Volume 51 ; 51 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Earth Sciences Volume 51 ; 51 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Earth Sciences Volume 52 ; 52 >
 
     }
@@ -657,7 +657,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 68 ; 68 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 69 ; 69 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 70 ; 70 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 71 ; 71 >
+    au < notReady ; exists ; 2014 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 71 ; 71 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 72 ; 72 >
     
     }
@@ -717,7 +717,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Forest Research Volume 41 ; 41 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Forest Research Volume 42 ; 42 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Forest Research Volume 43 ; 43 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Forest Research Volume 44 ; 44 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Forest Research Volume 44 ; 44 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Forest Research Volume 45 ; 45 >
 
     }
@@ -791,7 +791,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Microbiology Volume 57 ; 57 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Microbiology Volume 58 ; 58 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Microbiology Volume 59 ; 59 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Microbiology Volume 60 ; 60 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Microbiology Volume 60 ; 60 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Microbiology Volume 61 ; 61 >
 
     }
@@ -869,7 +869,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Physics Volume 89 ; 89 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Physics Volume 90 ; 90 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Physics Volume 91 ; 91 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Physics Volume 92 ; 92 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Physics Volume 92 ; 92 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Physics Volume 93 ; 93 >
 
     }
@@ -936,7 +936,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Physiology and Pharmacology Volume 89 ; 89 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Physiology and Pharmacology Volume 90 ; 90 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Physiology and Pharmacology Volume 91 ; 91 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Physiology and Pharmacology Volume 92 ; 92 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Physiology and Pharmacology Volume 92 ; 92 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Physiology and Pharmacology Volume 93 ; 93 >
 
     }
@@ -1048,7 +1048,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Zoology Volume 89 ; 89 >
     au < crawling ; exists ; 2012 ; Canadian Journal of Zoology Volume 90 ; 90 >
     au < crawling ; exists ; 2013 ; Canadian Journal of Zoology Volume 91 ; 91 >
-    au < testing ; exists ; 2014 ; Canadian Journal of Zoology Volume 92 ; 92 >
+    au < ready ; exists ; 2014 ; Canadian Journal of Zoology Volume 92 ; 92 >
     au < manifest ; exists ; 2015 ; Canadian Journal of Zoology Volume 93 ; 93 >
     
     }
@@ -1084,7 +1084,7 @@
     au < manifest ; exists ; 2011 ; Environmental Reviews Volume 19 ; 19 >
     au < crawling ; exists ; 2012 ; Environmental Reviews Volume 20 ; 20 >
     au < crawling ; exists ; 2013 ; Environmental Reviews Volume 21 ; 21 >
-    au < testing ; exists ; 2014 ; Environmental Reviews Volume 22 ; 22 >
+    au < ready ; exists ; 2014 ; Environmental Reviews Volume 22 ; 22 >
     au < manifest ; exists ; 2015 ; Environmental Reviews Volume 23 ; 23 >
 
     }
@@ -1165,7 +1165,7 @@
       au < manifest ; exists ; 2011 ; Genome Volume 54 ; 54 >
       au < crawling ; exists ; 2012 ; Genome Volume 55 ; 55 >
       au < crawling ; exists ; 2013 ; Genome Volume 56 ; 56 >
-      au < testing ; exists ; 2014 ; Genome Volume 57 ; 57 >
+      au < ready ; exists ; 2014 ; Genome Volume 57 ; 57 >
       au < manifest ; exists ; 2015 ; Genome Volume 58 ; 58 >
 
     }
@@ -1202,7 +1202,7 @@
     comment[0] = quarterly journal expected to launch April 1 2013
 
     au < expected ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 1 >
-    au < testing ; exists ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2 ; 2 >
+    au < ready ; exists ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Journal of Unmanned Vehicle Systems Volume 3 ; 3 >
 
     }
