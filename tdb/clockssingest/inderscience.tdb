@@ -6118,7 +6118,9 @@
       au < manifest ; exists ; 2014 ; International Journal of Operational Research Volume 19 ; 19 >
       au < manifest ; exists ; 2014 ; International Journal of Operational Research Volume 20 ; 20 >
       au < manifest ; exists ; 2014 ; International Journal of Operational Research Volume 21 ; 21 >
-      au < manifest ; exists ; 2015 ; International Journal of Operational Research Volume 22 ; 22 >
+      au < exists ; exists ; 2015 ; International Journal of Operational Research Volume 22 ; 22 >
+      au < exists ; exists ; 2015 ; International Journal of Operational Research Volume 23 ; 23 >
+      au < expected ; exists ; 2015 ; International Journal of Operational Research Volume 24 ; 24 >
 
     }
 
@@ -6135,9 +6137,8 @@
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Organisational Design and Engineering Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Organisational Design and Engineering Volume 2 ; 2 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 >
-      au < expected ; exists ; 2015 ; International Journal of Organisational Design and Engineering Volume 5 ; 5 >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 >
+      au < expected ; exists ; 2015 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 >
 
     }
 
@@ -6169,8 +6170,7 @@
       param[journal_id] = 2040-4557
       comment[0] = title is not yet published on 9/26/2013
 
-      au < expected ; exists ; 2014 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; International Journal of Physiotherapy and Life Physics Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
 
     }
 
@@ -6222,11 +6222,8 @@
 
       param[journal_id] = ijpam
 
-      comment[to_delete] = added by accident.
-
-      au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Portfolio Analysis and Management Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 >
-      au < expected ; exists ; 2015 ; International Journal of Portfolio Analysis and Management Volume 3 ; 3 >
+      au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Portfolio Analysis and Management Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 >
 
     }
 
@@ -6362,8 +6359,9 @@
 
       au < doNotProcess ; exists ; 2005-2006 ; International Journal of Process Management and Benchmarking Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Process Management and Benchmarking Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2009 ; International Journal of Process Management and Benchmarking Volume 3 ; 3 >
-      au < manifest ; exists ; 2010 ; International Journal of Process Management and Benchmarking Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2009-2013 ; International Journal of Process Management and Benchmarking Volume 3 ; 3 >
+      au < exists ; exists ; 2014 ; International Journal of Process Management and Benchmarking Volume 4 ; 4 >
+      au < exists ; exists ; 2015 ; International Journal of Process Management and Benchmarking Volume 5 ; 5 >
 
     }
 
@@ -6379,10 +6377,8 @@
       param[journal_id] = ijpse
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Process Systems Engineering Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Process Systems Engineering Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of Process Systems Engineering Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Process Systems Engineering Volume 4 ; 4 >
-      au < expected ; exists ; 2015 ; International Journal of Process Systems Engineering Volume 5 ; 5 >
+      au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Process Systems Engineering Volume 3 ; 3 >
 
     }
 
@@ -6438,9 +6434,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Product Development Volume 17 ; 17 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Product Development Volume 18 ; 18 >
       au < manifest ; exists ; 2014 ; International Journal of Product Development Volume 19 ; 19 >
-      au < manifest ; exists ; 2014 ; International Journal of Product Development Volume 20 ; 20 >
-      au < expected ; exists ; 2014 ; International Journal of Product Development Volume 21 ; 21 >
-      au < expected ; exists ; 2015 ; International Journal of Product Development Volume 22 ; 22 >
+      au < manifest ; exists ; 2015 ; International Journal of Product Development Volume 20 ; 20 >
 
     }
 
@@ -6509,6 +6503,7 @@
       au < manifest ; exists ; 2014 ; International Journal of Productivity and Quality Management Volume 13 ; 13 >
       au < manifest ; exists ; 2014 ; International Journal of Productivity and Quality Management Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; International Journal of Productivity and Quality Management Volume 15 ; 15 >
+      au < expected ; exists ; 2015 ; International Journal of Productivity and Quality Management Volume 16 ; 16 >
 
     }
 
@@ -6592,9 +6587,7 @@
       param[journal_id] = ijpspm
 
       au < doNotProcess ; doNotProcess ; 2007-2010 ; International Journal of Public Sector Performance Management Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Public Sector Performance Management Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Public Sector Performance Management Volume 3 ; 3 >
-      au < expected ; exists ; 2015 ; International Journal of Public Sector Performance Management Volume 4 ; 4 >
+      au < doNotProcess ; doNotProcess ; 2012-2015 ; International Journal of Public Sector Performance Management Volume 2 ; 2 >
 
     }
 
@@ -6610,10 +6603,8 @@
       param[journal_id] = ijqi
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Quality and Innovation Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Quality and Innovation Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of Quality and Innovation Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Quality and Innovation Volume 4 ; 4 >
-      au < expected ; exists ; 2015 ; International Journal of Quality and Innovation Volume 5 ; 5 >
+      au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Quality and Innovation Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Quality and Innovation Volume 3 ; 3 >
 
     }
 
@@ -6825,9 +6816,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Risk Assessment and Management Volume 14 ; 14 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Risk Assessment and Management Volume 15 ; 15 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Risk Assessment and Management Volume 16 ; 16 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Risk Assessment and Management Volume 17 ; 17 >
-      au < manifest ; exists ; 2014 ; International Journal of Risk Assessment and Management Volume 18 ; 18 >
-      au < expected ; exists ; 2015 ; International Journal of Risk Assessment and Management Volume 19 ; 19 >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Risk Assessment and Management Volume 17 ; 17 >
+      au < manifest ; exists ; 2015 ; International Journal of Risk Assessment and Management Volume 18 ; 18 >
 
     }
 
@@ -6901,6 +6891,7 @@
       au < manifest ; exists ; 2014 ; International Journal of Sensor Networks Volume 15 ; 15 >
       au < manifest ; exists ; 2014 ; International Journal of Sensor Networks Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; International Journal of Sensor Networks Volume 17 ; 17 >
+      au < exists ; exists ; 2015 ; International Journal of Sensor Networks Volume 18 ; 18 >
 
     }
 
@@ -6952,6 +6943,8 @@
       au < manifest ; exists ; 2014 ; International Journal of Services and Operations Management Volume 18 ; 18 >
       au < manifest ; exists ; 2014 ; International Journal of Services and Operations Management Volume 19 ; 19 >
       au < manifest ; exists ; 2015 ; International Journal of Services and Operations Management Volume 20 ; 20 >
+      au < exists ; exists ; 2015 ; International Journal of Services and Operations Management Volume 21 ; 21 >
+      au < expected ; exists ; 2015 ; International Journal of Services and Operations Management Volume 22 ; 22 >
 
     }
 
