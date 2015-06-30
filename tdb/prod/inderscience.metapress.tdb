@@ -76,8 +76,7 @@
       
       au < down ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
       au < down ; 2010-2011 ; American Journal of Finance and Accounting Volume 2 ; 2 >
-      au < doNotProcess ; 2012-2013 ; American Journal of Finance and Accounting Volume 3 ; 3 >
-      au < doNotProcess ; 2014-2015 ; American Journal of Finance and Accounting Volume 4 ; 4 >
+      au < doNotProcess ; 2013 ; American Journal of Finance and Accounting Volume 3 ; 3 >
 
     }
 
@@ -94,9 +93,7 @@
       
       au < down ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
       au < down ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
-      au < down ; 2010-2012 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
-      au < expected ; 2013 ; Atoms for Peace: an International Journal Volume 4 ; 4 >
-      au < expected ; 2014 ; Atoms for Peace: an International Journal Volume 5 ; 5 >
+      au < down ; 2010-2013 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
 
     }
 
@@ -113,7 +110,6 @@
 
       au < down ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
       au < down ; 2011-2013 ; The Botulinum Journal Volume 2 ; 2 >
-      au < expected ; 2014 ; The Botulinum Journal Volume 3 ; 3 >
 
     }
 
@@ -138,7 +134,7 @@
       au < down ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
       au < down ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
       au < doNotProcess ; 2013 ; Electronic Government, an International Journal Volume 10 ; 10 >
-      au < doNotProcess ; 2014 ; Electronic Government, an International Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2014-2015 ; Electronic Government, an International Journal Volume 11 ; 11 >
 
     }
 
@@ -249,8 +245,7 @@
       au < down ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 >
       au < down ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 >
       au < down ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 >
-      au < doNotProcess ; 2013 ; International Journal of Abrasive Technology Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Abrasive Technology Volume 7 ; 7 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Abrasive Technology Volume 6 ; 6 >
 
     }
 
@@ -268,8 +263,7 @@
       au < down ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
       au < down ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
       au < down ; 2011-2012 ; International Journal of Accounting and Finance Volume 3 ; 3 >
-      au < down ; 2013 ; International Journal of Accounting and Finance Volume 4 ; 4 >
-      au < doNotProcess ; 2014 ; International Journal of Accounting and Finance Volume 5 ; 5 >
+      au < superseded ; 2013-2014 ; International Journal of Accounting and Finance Volume 4 [superseded] ; 4 >
 
     }
 
@@ -399,8 +393,7 @@
       au < down ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
       au < down ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
       au < down ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
-      au < down ; 2013 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Advanced Media and Communication Volume 6 ; 6 >
+      au < superseded ; 2013-2014 ; International Journal of Advanced Media and Communication Volume 5 [superseded] ; 5 >
 
     }
 
@@ -458,8 +451,6 @@
       au < down ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 >
       au < down ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 >
       au < down ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 >
-      au < expected ; 2013 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 >
 
     }
 
@@ -475,8 +466,6 @@
       param[journal_issn] = 1743-5145
       
       au < down ; 2012 ; International Journal of Agile and Extreme Software Development Volume 1 ; 1 >
-      au < expected ; 2013 ; International Journal of Agile and Extreme Software Development Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Agile and Extreme Software Development Volume 3 ; 3 >
 
     }
 
@@ -539,8 +528,6 @@
       
       au < down ; 2006-2007 ; International Journal of Alternative Propulsion Volume 1 ; 1 >
       au < down ; 2008-2012 ; International Journal of Alternative Propulsion Volume 2 ; 2 >
-      au < expected ; 2013 ; International Journal of Alternative Propulsion Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Alternative Propulsion Volume 4 ; 4 >
 
     }
 
@@ -557,8 +544,7 @@
       
       au < down ; 2008-2009 ; International Journal of Applied Cryptography Volume 1 ; 1 >
       au < down ; 2010-2012 ; International Journal of Applied Cryptography Volume 2 ; 2 >
-      au < doNotProcess ; 2013 ; International Journal of Applied Cryptography Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Applied Cryptography Volume 4 ; 4 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Applied Cryptography Volume 3 ; 3 >
 
     }
 
@@ -614,8 +600,7 @@
 
       param[journal_issn] = 1752-2870
       
-      au < doNotProcess ; 2013 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
-      au < expected ; 2014 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
 
     }
 
@@ -630,8 +615,7 @@
 
       param[journal_issn] = 2049-8888
       
-      au < down ; 2013 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
-      au < expected ; 2014 ; International Journal of Applied Pattern Recognition Volume 2 ; 2 >
+      au < superseded ; 2013-2014 ; International Journal of Applied Pattern Recognition Volume 1 [superseded] ; 1 >
 
     }
 
@@ -650,8 +634,7 @@
       au < down ; 2008-2009 ; International Journal of Applied Systemic Studies Volume 2 ; 2 >
       au < down ; 2010 ; International Journal of Applied Systemic Studies Volume 3 ; 3 >
       au < down ; 2011-2012 ; International Journal of Applied Systemic Studies Volume 4 ; 4 >
-      au < doNotProcess ; 2013 ; International Journal of Applied Systemic Studies Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Applied Systemic Studies Volume 6 ; 6 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Applied Systemic Studies Volume 5 ; 5 >
 
     }
 
@@ -668,7 +651,6 @@
       
       au < down ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 >
       au < down ; 2011-2012 ; International Journal of Arab Culture, Management and Sustainable Development Volume 2 ; 2 >
-      au < expected ; 2013-2014 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 >
 
     }
 
@@ -761,7 +743,7 @@
       param[journal_issn] = 2049-6753
       comment[0] = title is not yet published on 9/19/2013
       
-      au < doNotProcess ; 2014 ; International Journal of Automation and Logistics Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; International Journal of Automation and Logistics Volume 1 ; 1 >
 
     }
 
@@ -842,23 +824,6 @@
       
       au < down ; 2011-2012 ; International Journal of Aviation Management Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; International Journal of Aviation Management Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Aviation Management Volume 3 ; 3 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Aviation Management and Logistics ;
-        issn = 1744-2796 ;
-        eissn = 1744-280X ;
-        issnl = 1744-2796
-      >
-
-      param[journal_issn] = 1744-280X
-      comment[0] = title is not yet published on 4/11/2013
-
-      au < expected ; 2014 ; International Journal of Aviation Management and Logistics Volume 1 ; 1 >
 
     }
 
@@ -877,8 +842,7 @@
       au < down ; 2010 ; International Journal of Banking, Accounting and Finance Volume 2 ; 2 >
       au < down ; 2011 ; International Journal of Banking, Accounting and Finance Volume 3 ; 3 >
       au < down ; 2012 ; International Journal of Banking, Accounting and Finance Volume 4 ; 4 >
-      au < doNotProcess ; 2013 ; International Journal of Banking, Accounting and Finance Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Banking, Accounting and Finance Volume 6 ; 6 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Banking, Accounting and Finance Volume 5 ; 5 >
 
     }
 
@@ -896,8 +860,7 @@
       au < down ; 2008-2010 ; International Journal of Behavioural Accounting and Finance Volume 1 ; 1 >
       au < down ; 2011 ; International Journal of Behavioural Accounting and Finance Volume 2 ; 2 >
       au < down ; 2012 ; International Journal of Behavioural Accounting and Finance Volume 3 ; 3 >
-      au < doNotProcess ; 2013 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 >
-      au < expected ; 2014 ; International Journal of Behavioural Accounting and Finance Volume 5 ; 5 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 >
 
     }
 
@@ -916,7 +879,6 @@
       au < down ; 2010-2011 ; International Journal of Behavioural and Healthcare Research Volume 2 ; 2 >
       au < down ; 2012 ; International Journal of Behavioural and Healthcare Research Volume 3 ; 3 >
       au < doNotProcess ; 2013 ; International Journal of Behavioural and Healthcare Research Volume 4 ; 4 >
-      au < expected ; 2014 ; International Journal of Behavioural and Healthcare Research Volume 5 ; 5 >
 
     }
 
@@ -1025,8 +987,7 @@
       
       au < down ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 >
       au < down ; 2011-2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 >
-      au < doNotProcess ; 2013 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 4 ; 4 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 >
 
     }
 
@@ -1072,8 +1033,7 @@
       au < down ; 2007 ; International Journal of Biotechnology Volume 9 ; 9 >
       au < down ; 2008 ; International Journal of Biotechnology Volume 10 ; 10 >
       au < down ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 >
-      au < down ; 2011-2012 ; International Journal of Biotechnology Volume 12 ; 12 >
-      au < doNotProcess ; 2013-2014 ; International Journal of Biotechnology Volume 13 ; 13 >
+      au < down ; 2011-2013 ; International Journal of Biotechnology Volume 12 ; 12 >
 
     }
 
@@ -1174,8 +1134,7 @@
       
       au < down ; 2010-2011 ; International Journal of Business Competition and Growth Volume 1 ; 1 >
       au < down ; 2012 ; International Journal of Business Competition and Growth Volume 2 ; 2 >
-      au < doNotProcess ; 2013 ; International Journal of Business Competition and Growth Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Business Competition and Growth Volume 4 ; 4 >
+      au < doNotProcess ; 2013-2014 ; International Journal of Business Competition and Growth Volume 3 ; 3 >
 
     }
 
