@@ -6,14 +6,15 @@
     info[tester] = 0
   >
 
-    plugin = needs.plugin
-    implicit < status ; status2 ; year ; param[year] ; param[book_id] ; eisbn ; isbn ; name ; author >
-    param[base_url] = http://ebooks.spiedigitallibrary.org/
+  plugin = needs.plugin
+  implicit < status ; status2 ; year ; param[year] ; param[book_id] ; eisbn ; isbn ; name ; author >
+  param[base_url] = http://ebooks.spiedigitallibrary.org/
  
-    {
+  {
+    
     title < 
-      name = eBooks ;
-      type = book
+      name = SPIE Books ;
+      type = bookSeries
     >
     
     au < exists ; exists ; 1989 ; 1989 ; 209 ; 9780819481030 ; 9780819401304 ; The New Physical Optics Notebook: Tutorials in Fourier Optics ; George O Reynolds , John B DeVelis, George B Parrent Jr, Brian J Thompson >
@@ -39,7 +40,7 @@
     au < exists ; exists ; 1999 ; 1999 ; 185 ; 9780819478597 ; 9780819435033 ; Fractal and Wavelet Image Compression Techniques ; Stephen Welstead >
     au < exists ; exists ; 1999 ; 1999 ; 186 ; 9780819480224 ; 9780819433190 ; Infrared Design Examples ; William L Wolfe >
     au < exists ; exists ; 1999 ; 1999 ; 187 ; 9780819478481 ; 9780819432322 ; Integral Transforms for Engineers ; Larry C Andrews, Bhimsen K Shivamoggi >
-    au < exists ; exists ; 1999 ; 1999 ; 188 ; 9780819478559 ; 9780819430526; Lithography Process Control ; Harry J Levinson >
+    au < exists ; exists ; 1999 ; 1999 ; 188 ; 9780819478559 ; 9780819430526 ; Lithography Process Control ; Harry J Levinson >
     au < exists ; exists ; 1999 ; 1999 ; 189 ; 9780819481016 ; 9780819459787 ; Materials for Infrared Windows and Domes: Properties and Performance ; Daniel C Harris >
     au < exists ; exists ; 1999 ; 1999 ; 190 ; 9780819478474 ; 9780819432261 ; Optical Systems and Processes ; Joseph Shamir >
     au < exists ; exists ; 2000 ; 2000 ; 177 ; 9780819478580 ; 9780819434890 ; Analysis of Sampled Imaging Systems ; Richard H Vollmerhausen, Ronald G Driggers >
@@ -114,7 +115,7 @@
     au < exists ; exists ; 2007 ; 2007 ; 114 ; 9780819478375 ; 9780819465351 ; High-Operating-Temperature Infrared Photodetectors ; Jozef Piotrowski, Antoni Rogalski >
     au < exists ; exists ; 2007 ; 2007 ; 115 ; 9780819478757 ; 9780819467805 ; Matrix Methods for Optical Layout ; Gerhard Kloos >
     au < exists ; exists ; 2007 ; 2007 ; 116 ; 9780819478368 ; 9780819465344 ; Optical Correlation Techniques and Applications ; Oleg V Angelsky >
-    au < exists ; exists ; 2007 ; 2007 ; 117 ; 780819478382 ; 9780819467225 ; Photon Transfer ; James R Janesick >
+    au < exists ; exists ; 2007 ; 2007 ; 117 ; 9780819478382 ; 9780819467225 ; Photon Transfer ; James R Janesick >
     au < exists ; exists ; 2007 ; 2007 ; 118 ; 9780819479020 ; 9780819467232 ; Practical Applications of Infrared Thermal Sensing and Imaging Equipment ; Herbert Kaplan >
     au < exists ; exists ; 2007 ; 2007 ; 119 ; 9780819481153 ; 9780819467836 ; Radiation Thermometry: Fundamentals and Applications in the Petrochemical Industry ; Peter Saunders >
     au < exists ; exists ; 2007 ; 2007 ; 120 ; 9780819481078 ; 9780819462350 ; Remote Sensing from Air and Space ; R C Olsen >
@@ -218,9 +219,9 @@
     au < exists ; exists ; 2014 ; 2014 ; 869 ; 9780819491411 ; 9780819491404 ; Interferometry for Precision Measurment ; Peter Langenbeck >
     au < exists ; exists ; 2014 ; 2014 ; 968 ; 9781628412932 ; 9781628412925 ; Optical Glass ; Peter Hartmann >
     au < exists ; exists ; 2014 ; 2014 ; 872 ; 9780819498229 ; 9780819498212 ; Solid State Lasers: Tunable Sources and Passive Q-Switching Elements ; Yehoshua Y. Kalisky >
-    au < exists ; exists ; 2014 ; 2014 ; 868 ; 780819498373 ; 9780819498366 ; Strength Properties of Glass and Ceramics ; John W. Pepi >
+    au < exists ; exists ; 2014 ; 2014 ; 868 ; 9780819498373 ; 9780819498366 ; Strength Properties of Glass and Ceramics ; John W. Pepi >
     au < exists ; exists ; 2014 ; 2014 ; 874 ; 9781628410709 ; 9781628410686 ; Translational Research in Biophotonics: Four National Cancer Institute Case Studies ; Robert J. Nordstrom >
 
-    }
+  }
     
 }
