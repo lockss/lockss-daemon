@@ -20,7 +20,7 @@
       au < released ; 2011 ; 1 ; Biota Amazônia Volume 1 ; 2011 ; >
       au < released ; 2012 ; 2 ; Biota Amazônia Volume 2 ; 2012 ; >
       au < released ; 2013 ; 3 ; Biota Amazônia Volume 3 ; 2013 ; >
-      au < releasing ; 2014 ; 4 ; Biota Amazônia Volume 4 ; 2014 ; >
+      au < released ; 2014 ; 4 ; Biota Amazônia Volume 4 ; 2014 ; >
       au < manifest ; 2015 ; 5 ; Biota Amazônia Volume 5 ; 2015 ; >
 
   }
@@ -38,7 +38,7 @@
 
       au < notReady ; 2011 ; 1 ; Ciência Equatorial Volume 1 ; 2011 ; no substance >
       au < notReady ; 2012 ; 2 ; Ciência Equatorial Volume 2 ; 2012 ; no substance >
-      au < releasing ; 2013 ; 3 ; Ciência Equatorial Volume 3 ; 2013 ; >
+      au < released ; 2013 ; 3 ; Ciência Equatorial Volume 3 ; 2013 ; >
 
   }
 
@@ -55,7 +55,7 @@
 
       au < released ; 2011 ; 1 ; Estação Científica Volume 1 ; 2011 ; >
       au < released ; 2012 ; 2 ; Estação Científica Volume 2 ; 2012 ; >
-      au < releasing ; 2013 ; 3 ; Estação Científica Volume 3 ; 2013 ; >
+      au < released ; 2013 ; 3 ; Estação Científica Volume 3 ; 2013 ; >
       au < notReady ; 2014 ; 4 ; Estação Científica Volume 4 ; 2014 ; no substance > 
 
   }
@@ -71,9 +71,9 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = letras
 
-      au < releasing ; 2011 ; 2011 ; Letras Escreve Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 2012 ; Letras Escreve Volume 2012 ; 2012 ; >
-      au < releasing ; 2013 ; 2013 ; Letras Escreve Volume 2013 ; 2013 ; >
+      au < released ; 2011 ; 2011 ; Letras Escreve Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 2012 ; Letras Escreve Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 2013 ; Letras Escreve Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 2014 ; Letras Escreve Volume 2014 ; 2014 ; >
 
   }
@@ -89,10 +89,10 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = planeta
 
-      au < releasing ; 2009 ; 1 ; Planeta Amazônia Volume 1 ; 2009 ; >
-      au < releasing ; 2010 ; 2 ; Planeta Amazônia Volume 2 ; 2010 ; >
-      au < releasing ; 2011 ; 3 ; Planeta Amazônia Volume 3 ; 2011 ; >
-      au < releasing ; 2012 ; 4 ; Planeta Amazônia Volume 4 ; 2012 ; >
+      au < released ; 2009 ; 1 ; Planeta Amazônia Volume 1 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Planeta Amazônia Volume 2 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Planeta Amazônia Volume 3 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Planeta Amazônia Volume 4 ; 2012 ; >
       au < manifest ; 2013 ; 5 ; Planeta Amazônia Volume 5 ; 2013 ; >
 
   }
@@ -108,13 +108,13 @@
       param[base_url] = http://periodicos.unifap.br/
       param[journal_id] = pracs
 
-      au < releasing ; 2008 ; 1 ; PRACS Volume 1 ; 2008 ; >
-      au < releasing ; 2009 ; 2 ; PRACS Volume 2 ; 2009 ; >
-      au < releasing ; 2010 ; 3 ; PRACS Volume 3 ; 2010 ; >
-      au < releasing ; 2011 ; 4 ; PRACS Volume 4 ; 2011 ; >
-      au < releasing ; 2012 ; 5 ; PRACS Volume 5 ; 2012 ; >
-      au < releasing ; 2013 ; 6 ; PRACS Volume 6 ; 2013 ; >
-      au < releasing ; 2014 ; 7 ; PRACS Volume 7 ; 2014 ; >
+      au < released ; 2008 ; 1 ; PRACS Volume 1 ; 2008 ; >
+      au < released ; 2009 ; 2 ; PRACS Volume 2 ; 2009 ; >
+      au < released ; 2010 ; 3 ; PRACS Volume 3 ; 2010 ; >
+      au < released ; 2011 ; 4 ; PRACS Volume 4 ; 2011 ; >
+      au < released ; 2012 ; 5 ; PRACS Volume 5 ; 2012 ; >
+      au < released ; 2013 ; 6 ; PRACS Volume 6 ; 2013 ; >
+      au < released ; 2014 ; 7 ; PRACS Volume 7 ; 2014 ; >
 
   }
 
