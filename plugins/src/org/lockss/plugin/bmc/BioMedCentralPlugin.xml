@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>16</string>
+        <string>17</string>
       </entry>
     </map>
   </entry>
@@ -56,12 +56,6 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bmc.BioMedCentralTOCArticleIteratorFactory</string>
   </entry>
-  <!-- not ready for prime time...
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.bmc.BioMedCentralPluginHtmlLinkExtractorFactory</string>
-  </entry>
-  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.bmc.BioMedCentralHtmlFilterFactory</string>
@@ -90,13 +84,14 @@
      <!-- Genome Biology [1465-6906] is unique and -->
      <!--   uses <base>/2009/<vol> but still <base>/content/pdf for pdf version -->
      <!--  hence the \d{4} option in some rules -->
+     <!--  no longer picking up .../mathml/... -->
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?\d+)?$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%sregistration", base_url</string>
-      <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|prepub|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
+      <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|prepub|comments|email|postcomment|mathml/.*)$", base_url, volume_name</string> <!-- excluding a login-type page -->
       <string>2,"^%s(content|\d{4})/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>
       <string>2,"^%s%s/%s/[^/]+/(about|comments|email|postcomment)", base_url, journal_issn, volume_name</string>
       <string>2,"^%s(content|\d{4})/%s/.*email\?from=standard$", base_url, volume_name</string>      
