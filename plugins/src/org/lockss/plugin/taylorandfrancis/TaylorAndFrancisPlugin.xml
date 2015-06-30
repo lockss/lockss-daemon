@@ -105,26 +105,25 @@
     <string>au_rate_limiter_info</string>
     <org.lockss.plugin.RateLimiterInfo>
       <!-- This very next rate is there only for the plugin to be well-formed, it does not actually have any effect -->
-      <rate>1/6s</rate>
+      <rate>1/5s</rate>
       <cond>
-        <entry>
-          <org.lockss.daemon.CrawlWindows-Daily>
-            <from>12:00</from>
-            <to>24:00</to>
-            <timeZoneId>America/Los_Angeles</timeZoneId>
-          </org.lockss.daemon.CrawlWindows-Daily>
-          <org.lockss.plugin.RateLimiterInfo>
-            <rate>1/2s</rate>
-          </org.lockss.plugin.RateLimiterInfo>
-        </entry>
+        <!-- Weekdays during requested times, 1/5s -->
         <entry>
           <org.lockss.daemon.CrawlWindows-Daily>
             <from>24:00</from>
             <to>12:00</to>
             <timeZoneId>America/Los_Angeles</timeZoneId>
+            <daysOfWeek>2;3;4;5;6</daysOfWeek>
           </org.lockss.daemon.CrawlWindows-Daily>
           <org.lockss.plugin.RateLimiterInfo>
-            <rate>1/6s</rate>
+            <rate>1/5s</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+        <!-- the rest of the time, 1/2s -->
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Always />
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/2s</rate>
           </org.lockss.plugin.RateLimiterInfo>
         </entry>
       </cond>
