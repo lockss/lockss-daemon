@@ -374,11 +374,41 @@ public class AuMetadataRecorder {
       }
     }
 
-    // strip punctuation and ensure values are proper ISBN or ISSN lengths
-    mdinfo.isbn = MetadataUtil.toUnpunctuatedIsbn(mdinfo.isbn);
-    mdinfo.eisbn = MetadataUtil.toUnpunctuatedIsbn(mdinfo.eisbn);
-    mdinfo.issn = MetadataUtil.toUnpunctuatedIssn(mdinfo.issn);
-    mdinfo.eissn = MetadataUtil.toUnpunctuatedIssn(mdinfo.eissn);
+    if (mdinfo.isbn != null) {
+      // Strip punctuation and ensure values are proper ISBN lengths.
+      mdinfo.isbn = MetadataUtil.toUnpunctuatedIsbn(mdinfo.isbn);
+
+      if (mdinfo.isbn != null) {
+	mdinfo.isbn = mdinfo.isbn.toUpperCase();
+      }
+    }
+
+    if (mdinfo.eisbn != null) {
+      // Strip punctuation and ensure values are proper ISBN lengths.
+      mdinfo.eisbn = MetadataUtil.toUnpunctuatedIsbn(mdinfo.eisbn);
+
+      if (mdinfo.eisbn != null) {
+	mdinfo.eisbn = mdinfo.eisbn.toUpperCase();
+      }
+    }
+
+    if (mdinfo.issn != null) {
+      // Strip punctuation and ensure values are proper ISSN lengths.
+      mdinfo.issn = MetadataUtil.toUnpunctuatedIssn(mdinfo.issn);
+
+      if (mdinfo.issn != null) {
+	mdinfo.issn = mdinfo.issn.toUpperCase();
+      }
+    }
+
+    if (mdinfo.eissn != null) {
+      // Strip punctuation and ensure values are proper ISSN lengths.
+      mdinfo.eissn = MetadataUtil.toUnpunctuatedIssn(mdinfo.eissn);
+
+      if (mdinfo.eissn != null) {
+	mdinfo.eissn = mdinfo.eissn.toUpperCase();
+      }
+    }
 
     if (mdinfo.doi != null) {
       String doi = mdinfo.doi.trim();
@@ -391,9 +421,10 @@ public class AuMetadataRecorder {
 	log.warning("doi too long '" + mdinfo.doi + "' for title: '"
 	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	    + "'");
-	mdinfo.doi = DbManager.truncateVarchar(doi, MAX_DOI_COLUMN);
+	mdinfo.doi =
+	    DbManager.truncateVarchar(doi.toLowerCase(), MAX_DOI_COLUMN);
       } else {
-	mdinfo.doi = doi;
+	mdinfo.doi = doi.toLowerCase();
       }
     }
 
