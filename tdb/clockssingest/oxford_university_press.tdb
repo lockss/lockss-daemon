@@ -926,7 +926,8 @@
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
     au < crawling ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
     au < frozen ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
-    au < doNotProcess ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
+    au < exists ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
+    au < exists ; exists ; 2015 ; American Journal of Epidemiology Volume 182 ; 182 ; >
 
     }
 
@@ -1445,7 +1446,8 @@
     au < crawling ; exists ; 2013 ; Annals of Botany Volume 112 ; 112 ; >
     au < ready ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
     au < ready ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
-    au < doNotProcess ; exists ; 2015 ; Annals of Botany Volume 115 ; 115 ; >
+    au < exists ; exists ; 2015 ; Annals of Botany Volume 115 ; 115 ; >
+    au < exists ; exists ; 2015 ; Annals of Botany Volume 116 ; 116 ; >
 
     }
 
@@ -2890,7 +2892,8 @@
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
     au < ready ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
     au < ready ; exists ; 2014 ; British Journal of Anaesthesia Volume 113 ; 113 ; >
-    au < doNotProcess ; exists ; 2015 ; British Journal of Anaesthesia Volume 114 ; 114 ; >
+    au < exists ; exists ; 2015 ; British Journal of Anaesthesia Volume 114 ; 114 ; >
+    au < exists ; exists ; 2015 ; British Journal of Anaesthesia Volume 115 ; 115 ; >
 
     }
 
@@ -3286,6 +3289,7 @@
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
     au < frozen ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
     au < manifest ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
+    au < expected ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
 
     }
 
@@ -4386,7 +4390,8 @@
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
     au < ready ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
     au < ready ; exists ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; >
-    au < doNotProcess ; exists ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; >
+    au < exists ; exists ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; >
+    au < expected ; exists ; 2016 ; Clinical Infectious Diseases Volume 61 ; 61 ; >
 
     }
 
