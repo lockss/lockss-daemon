@@ -17,7 +17,7 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = artresearchjournal
 
-      au < ready ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 ; >
+      au < releasing ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 ; >
 
   }
 
@@ -32,12 +32,12 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = Ambiente
 
-      au < ready ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 ; >
-      au < ready ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 ; >
-      au < ready ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 ; >
-      au < ready ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 ; >
-      au < ready ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 ; >
-      au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 6 ; 2014 ; >
+      au < releasing ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 ; >
+      au < releasing ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 ; >
+      au < releasing ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 ; >
+      au < releasing ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 ; >
+      au < releasing ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 ; >
+      au < releasing ; 2014 ; 6 ; Revista Ambiente Contábil Volume 6 ; 2014 ; >
       au < manifest ; 2015 ; 7 ; Revista Ambiente Contábil Volume 7 ; 2015 ; >
 
   }
@@ -57,8 +57,8 @@
       au < released ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Revista Ambiente Contábil Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Revista Ambiente Contábil Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 5 ; Revista Ambiente Contábil Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 6 ; Revista Ambiente Contábil Volume 2014 ; 2014 ; >
+      au < releasing ; 2013 ; 5 ; Revista Ambiente Contábil Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 6 ; Revista Ambiente Contábil Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 7 ; Revista Ambiente Contábil Volume 2015 ; 2015 ; >
 
   }
@@ -81,7 +81,7 @@
       au < released ; 2011 ; 5 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 ; >
+      au < releasing ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 ; >
 
   }
 
@@ -106,7 +106,7 @@
       au < released ; 2010 ; 8 ; Revista meuip Cronos Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 9 ; Revista meuip Cronos Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 10 ; Revista meuip Cronos Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 ; >
 
   }
 
@@ -121,8 +121,8 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = aletheia
 
-      au < ready ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 ; >
+      au < releasing ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 3 ; Revista Alétheia Volume 2015 ; 2015 ; >
 
   }
@@ -160,8 +160,8 @@
       au < released ; 2010 ; 1 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 2 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 4 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 5 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2014 ; 2014 ; >
+      au < releasing ; 2013 ; 4 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 5 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2014 ; 2014 ; >
 
   }
 
@@ -215,7 +215,7 @@
 
       au < manifest ; 2000 ; 1 ; Mneme-Revista de Humanidades Volume 2000 ; 2000 ; >
       au < manifest ; 2001 ; 2 ; Mneme-Revista de Humanidades Volume 2001 ; 2001 ; >
-      au < ready ; 2002 ; 3 ; Mneme-Revista de Humanidades Volume 2002 ; 2002 ; >
+      au < releasing ; 2002 ; 3 ; Mneme-Revista de Humanidades Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 4 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 5 ; Mneme-Revista de Humanidades Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 6 ; Mneme-Revista de Humanidades Volume 2005 ; 2005 ; >
@@ -225,7 +225,7 @@
       au < released ; 2010 ; 10 ; Mneme-Revista de Humanidades Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 11 ; Mneme-Revista de Humanidades Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 12 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 13 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 13 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 14 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 ; >
 
   }
@@ -245,7 +245,7 @@
       au < released ; 2009 ; 2 ; Revista Odisseia Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 3 ; Revista Odisseia Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 4 ; Revista Odisseia Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 5 ; Revista Odisseia Volume 2012 ; 2012 ; >
+      au < releasing ; 2012 ; 5 ; Revista Odisseia Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 6 ; Revista Odisseia Volume 2013 ; 2013 ; >
 
   }
@@ -262,24 +262,24 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = principios
 
-      au < ready ; 1994 ; 1 ; Princípios: Revista de Filosofia (UFRN) Volume 1994 ; 1994 ; >
-      au < ready ; 1995 ; 2 ; Princípios: Revista de Filosofia (UFRN) Volume 1995 ; 1995 ; >
-      au < ready ; 1996 ; 3 ; Princípios: Revista de Filosofia (UFRN) Volume 1996 ; 1996 ; >
-      au < ready ; 1997 ; 4 ; Princípios: Revista de Filosofia (UFRN) Volume 1997 ; 1997 ; >
-      au < ready ; 1998 ; 5 ; Princípios: Revista de Filosofia (UFRN) Volume 1998 ; 1998 ; >
-      au < ready ; 1999 ; 6 ; Princípios: Revista de Filosofia (UFRN) Volume 1999 ; 1999 ; >
-      au < ready ; 2000 ; 7 ; Princípios: Revista de Filosofia (UFRN) Volume 2000 ; 2000 ; >
-      au < ready ; 2001 ; 8 ; Princípios: Revista de Filosofia (UFRN) Volume 2001 ; 2001 ; >
-      au < ready ; 2002 ; 9 ; Princípios: Revista de Filosofia (UFRN) Volume 2002 ; 2002 ; >
-      au < ready ; 2003 ; 10 ; Princípios: Revista de Filosofia (UFRN) Volume 2003 ; 2003 ; >
-      au < ready ; 2004 ; 11 ; Princípios: Revista de Filosofia (UFRN) Volume 2004 ; 2004 ; >
-      au < ready ; 2005 ; 12 ; Princípios: Revista de Filosofia (UFRN) Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 13 ; Princípios: Revista de Filosofia (UFRN) Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 14 ; Princípios: Revista de Filosofia (UFRN) Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 15 ; Princípios: Revista de Filosofia (UFRN) Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 16 ; Princípios: Revista de Filosofia (UFRN) Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 17 ; Princípios: Revista de Filosofia (UFRN) Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 18 ; Princípios: Revista de Filosofia (UFRN) Volume 2011 ; 2011 ; >
+      au < releasing ; 1994 ; 1 ; Princípios: Revista de Filosofia (UFRN) Volume 1994 ; 1994 ; >
+      au < releasing ; 1995 ; 2 ; Princípios: Revista de Filosofia (UFRN) Volume 1995 ; 1995 ; >
+      au < releasing ; 1996 ; 3 ; Princípios: Revista de Filosofia (UFRN) Volume 1996 ; 1996 ; >
+      au < releasing ; 1997 ; 4 ; Princípios: Revista de Filosofia (UFRN) Volume 1997 ; 1997 ; >
+      au < releasing ; 1998 ; 5 ; Princípios: Revista de Filosofia (UFRN) Volume 1998 ; 1998 ; >
+      au < releasing ; 1999 ; 6 ; Princípios: Revista de Filosofia (UFRN) Volume 1999 ; 1999 ; >
+      au < releasing ; 2000 ; 7 ; Princípios: Revista de Filosofia (UFRN) Volume 2000 ; 2000 ; >
+      au < releasing ; 2001 ; 8 ; Princípios: Revista de Filosofia (UFRN) Volume 2001 ; 2001 ; >
+      au < releasing ; 2002 ; 9 ; Princípios: Revista de Filosofia (UFRN) Volume 2002 ; 2002 ; >
+      au < releasing ; 2003 ; 10 ; Princípios: Revista de Filosofia (UFRN) Volume 2003 ; 2003 ; >
+      au < releasing ; 2004 ; 11 ; Princípios: Revista de Filosofia (UFRN) Volume 2004 ; 2004 ; >
+      au < releasing ; 2005 ; 12 ; Princípios: Revista de Filosofia (UFRN) Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 13 ; Princípios: Revista de Filosofia (UFRN) Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 14 ; Princípios: Revista de Filosofia (UFRN) Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 15 ; Princípios: Revista de Filosofia (UFRN) Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 16 ; Princípios: Revista de Filosofia (UFRN) Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 17 ; Princípios: Revista de Filosofia (UFRN) Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 18 ; Princípios: Revista de Filosofia (UFRN) Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 19 ; Princípios: Revista de Filosofia (UFRN) Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 20 ; Princípios: Revista de Filosofia (UFRN) Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 21 ; Princípios: Revista de Filosofia (UFRN) Volume 2014 ; 2014 ; >
@@ -297,8 +297,8 @@
       param[base_url] = http://www.periodicos.ufrn.br/
       param[journal_id] = turismocontemporaneo
 
-      au < ready ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 ; >
+      au < releasing ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 ; >
 
   }
 
@@ -334,8 +334,8 @@
 
       au < released ; 2011 ; 1 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 ; >
+      au < releasing ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 5 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2015 ; 2015 ; >
 
   }
@@ -352,7 +352,7 @@
       param[journal_id] = revistadefisioterapia
 
       au < released ; 2012 ; 1 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 2 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 2 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 3 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2014 ; 2014 ; >
 
   }
@@ -426,11 +426,11 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = direitoenergia
 
-      au < ready ; 2009 ; 1 ; Revista Direito E-nergia Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 2 ; Revista Direito E-nergia Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 3 ; Revista Direito E-nergia Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 4 ; Revista Direito E-nergia Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 5 ; Revista Direito E-nergia Volume 2013 ; 2013 ; >
+      au < releasing ; 2009 ; 1 ; Revista Direito E-nergia Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 2 ; Revista Direito E-nergia Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 3 ; Revista Direito E-nergia Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 4 ; Revista Direito E-nergia Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 5 ; Revista Direito E-nergia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 6 ; Revista Direito E-nergia Volume 2014 ; 2014 ; >
 
   }
@@ -453,7 +453,7 @@
       au < released ; 2011 ; 5 ; Revista Inter-Legere Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Revista Inter-Legere Volume 2012 ; 2012 ; >
       au < notReady ; 2013 ; 7 ; Revista Inter-Legere Volume 2013 ; 2013 ; no substance >
-      au < ready ; 2014 ; 8 ; Revista Inter-Legere Volume 2014 ; 2014 ; >
+      au < releasing ; 2014 ; 8 ; Revista Inter-Legere Volume 2014 ; 2014 ; >
 
   }
 
@@ -468,9 +468,9 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = porto
 
-      au < ready ; 2011 ; 1 ; Revista Porto Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 2 ; Revista Porto Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 3 ; Revista Porto Volume 2013 ; 2013 ; >
+      au < releasing ; 2011 ; 1 ; Revista Porto Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 2 ; Revista Porto Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 3 ; Revista Porto Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 4 ; Revista Porto Volume 2014 ; 2014 ; >
 
   }
@@ -486,13 +486,13 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = saberes
 
-      au < ready ; 2008 ; 1 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 2 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 3 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 4 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 ; >
+      au < releasing ; 2008 ; 1 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 2 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 3 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 4 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 8 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2015 ; 2015 ; >
 
   }

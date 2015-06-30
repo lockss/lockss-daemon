@@ -51,28 +51,28 @@
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = caligrama
 
-      au < ready ; 1981 ; 1 ; Caligrama: Revista de Estudos Românicos Volume 1981 ; 1981 >
-      au < ready ; 1983 ; 2 ; Caligrama: Revista de Estudos Românicos Volume 1983 ; 1983 >
-      au < ready ; 1985 ; 3 ; Caligrama: Revista de Estudos Românicos Volume 1985 ; 1985 >
-      au < ready ; 1988 ; 4 ; Caligrama: Revista de Estudos Românicos Volume 1988 ; 1988 >
-      au < ready ; 1997 ; 5 ; Caligrama: Revista de Estudos Românicos Volume 1997 ; 1997 >
-      au < ready ; 1998 ; 6 ; Caligrama: Revista de Estudos Românicos Volume 1998 ; 1998 >
-      au < ready ; 1999 ; 7 ; Caligrama: Revista de Estudos Românicos Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 8 ; Caligrama: Revista de Estudos Românicos Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 9 ; Caligrama: Revista de Estudos Românicos Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 10 ; Caligrama: Revista de Estudos Românicos Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 11 ; Caligrama: Revista de Estudos Românicos Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 12 ; Caligrama: Revista de Estudos Românicos Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 13 ; Caligrama: Revista de Estudos Românicos Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 14 ; Caligrama: Revista de Estudos Românicos Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 15 ; Caligrama: Revista de Estudos Românicos Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 16 ; Caligrama: Revista de Estudos Românicos Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 17 ; Caligrama: Revista de Estudos Românicos Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 18 ; Caligrama: Revista de Estudos Românicos Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 19 ; Caligrama: Revista de Estudos Românicos Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 20 ; Caligrama: Revista de Estudos Românicos Volume 2012 ; 2012 >
-      au < ready ; 2013 ; 21 ; Caligrama: Revista de Estudos Românicos Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 22 ; Caligrama: Revista de Estudos Românicos Volume 2014 ; 2014 >
+      au < releasing ; 1981 ; 1 ; Caligrama: Revista de Estudos Românicos Volume 1981 ; 1981 >
+      au < releasing ; 1983 ; 2 ; Caligrama: Revista de Estudos Românicos Volume 1983 ; 1983 >
+      au < releasing ; 1985 ; 3 ; Caligrama: Revista de Estudos Românicos Volume 1985 ; 1985 >
+      au < releasing ; 1988 ; 4 ; Caligrama: Revista de Estudos Românicos Volume 1988 ; 1988 >
+      au < releasing ; 1997 ; 5 ; Caligrama: Revista de Estudos Românicos Volume 1997 ; 1997 >
+      au < releasing ; 1998 ; 6 ; Caligrama: Revista de Estudos Românicos Volume 1998 ; 1998 >
+      au < releasing ; 1999 ; 7 ; Caligrama: Revista de Estudos Românicos Volume 1999 ; 1999 >
+      au < releasing ; 2000 ; 8 ; Caligrama: Revista de Estudos Românicos Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 9 ; Caligrama: Revista de Estudos Românicos Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 10 ; Caligrama: Revista de Estudos Românicos Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 11 ; Caligrama: Revista de Estudos Românicos Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 12 ; Caligrama: Revista de Estudos Românicos Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 13 ; Caligrama: Revista de Estudos Românicos Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 14 ; Caligrama: Revista de Estudos Românicos Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 15 ; Caligrama: Revista de Estudos Românicos Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 16 ; Caligrama: Revista de Estudos Românicos Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 17 ; Caligrama: Revista de Estudos Românicos Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 18 ; Caligrama: Revista de Estudos Românicos Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 19 ; Caligrama: Revista de Estudos Românicos Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 20 ; Caligrama: Revista de Estudos Românicos Volume 2012 ; 2012 >
+      au < releasing ; 2013 ; 21 ; Caligrama: Revista de Estudos Românicos Volume 2013 ; 2013 >
+      au < releasing ; 2014 ; 22 ; Caligrama: Revista de Estudos Românicos Volume 2014 ; 2014 >
 
   }
 
@@ -199,7 +199,7 @@
       au < released ; 2011 ; 4 ; Texto Livre: Linguagem e Tecnologia Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; Texto Livre: Linguagem e Tecnologia Volume 2012 ; 2012 >
       au < released ; 2013 ; 6 ; Texto Livre: Linguagem e Tecnologia Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 7 ; Texto Livre: Linguagem e Tecnologia Volume 2014 ; 2014 >
+      au < releasing ; 2014 ; 7 ; Texto Livre: Linguagem e Tecnologia Volume 2014 ; 2014 >
 
   }
 

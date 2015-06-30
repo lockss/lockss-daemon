@@ -240,7 +240,7 @@
 
     param[journal_id] = reget
 
-    au < ready ; 2010 ; 1 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 1 ; 2010 ; >
+    au < releasing ; 2010 ; 1 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 1 ; 2010 ; >
     au < released ; 2011 ; 2-4 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 2-4 ; 2011 ; >
     au < released ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 ; >
     au < released ; 2013 ; 9-17 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 9-17 ; 2013 ; >
@@ -726,10 +726,10 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = seculoxxi
 
-      au < ready ; 2011 ; 1 ; Século XXI: Revista de Ciências Sociais Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 2 ; Século XXI: Revista de Ciências Sociais Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 3 ; Século XXI: Revista de Ciências Sociais Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 4 ; Século XXI: Revista de Ciências Sociais Volume 2014 ; 2014 ; >
+      au < releasing ; 2011 ; 1 ; Século XXI: Revista de Ciências Sociais Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 2 ; Século XXI: Revista de Ciências Sociais Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 3 ; Século XXI: Revista de Ciências Sociais Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 4 ; Século XXI: Revista de Ciências Sociais Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 5 ; Século XXI: Revista de Ciências Sociais Volume 2015 ; 2015 ; >
 
   }
