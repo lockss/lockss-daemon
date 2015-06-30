@@ -551,8 +551,8 @@
 
     au < manifest ; exists ; 2011 ; Equine Health Volume 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Equine Health Volume 2012 ; 2012 >
-    au < boost ; exists ; 2013 ; Equine Health Volume 2013 ; 2013 >
-    au < boost ; exists ; 2014 ; Equine Health Volume 2014 ; 2014 >
+    au < crawling ; exists ; 2013 ; Equine Health Volume 2013 ; 2013 >
+    au < crawling ; exists ; 2014 ; Equine Health Volume 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Equine Health Volume 2015 ; 2015 >
 
   }
@@ -653,8 +653,8 @@
     comment[base_url] = http://www.fundraisingschools.co.uk/
     param[journal_id] = fund
 
-    au < boost ; exists ; 2013 ; Fundraising for Schools Volume 2013 ; 2013 >
-    au < boost ; exists ; 2014 ; Fundraising for Schools Volume 2014 ; 2014 >
+    au < crawling ; exists ; 2013 ; Fundraising for Schools Volume 2013 ; 2013 >
+    au < crawling ; exists ; 2014 ; Fundraising for Schools Volume 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Fundraising for Schools Volume 2015 ; 2015 >
   }
 
