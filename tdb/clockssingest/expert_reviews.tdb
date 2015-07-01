@@ -9,6 +9,8 @@
   plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin
   param[base_url] = http://www.expert-reviews.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  comment[no_substance] = all these AUs have no substance on ingest4.
 
   {
   
@@ -20,7 +22,7 @@
     
     param[journal_id] = eri
 
-    au < down ; exists ; 2013 ; Expert Review of Anti-infective Therapy Volume 11 ; 11 >
+    au < superseded ; exists ; 2013 ; Expert Review of Anti-infective Therapy Volume 11 [superseded] ; 11 >
     
   }
 
@@ -34,7 +36,7 @@
     
     param[journal_id] = era
 
-    au < down ; exists ; 2013 ; Expert Review of Anticancer Therapy Volume 13 ; 13 >
+    au < superseded ; exists ; 2013 ; Expert Review of Anticancer Therapy Volume 13 [superseded] ; 13 >
    
   }
 
@@ -48,7 +50,7 @@
     
     param[journal_id] = erc
 
-    au < down ; exists ; 2013 ; Expert Review of Cardiovascular Therapy Volume 11 ; 11 >
+    au < superseded ; exists ; 2013 ; Expert Review of Cardiovascular Therapy Volume 11 [superseded] ; 11 >
   
   }
 
@@ -62,7 +64,7 @@
     
     param[journal_id] = eci
 
-    au < down ; exists ; 2013 ; Expert Review of Clinical Immunology Volume 9 ; 9 >
+    au < superseded ; exists ; 2013 ; Expert Review of Clinical Immunology Volume 9 [superseded] ; 9 >
     
   }
 
@@ -76,7 +78,7 @@
     
     param[journal_id] = ecp
 
-    au < down ; exists ; 2013 ; Expert Review of Clinical Pharmacology Volume 6 ; 6 >
+    au < superseded ; exists ; 2013 ; Expert Review of Clinical Pharmacology Volume 6 [superseded] ; 6 >
     
   }
 
@@ -90,7 +92,7 @@
     
     param[journal_id] = edm
 
-    au < down ; exists ; 2013 ; Expert Review of Dermatology Volume 8 ; 8 >
+    au < superseded ; exists ; 2013 ; Expert Review of Dermatology Volume 8 [superseded] ; 8 >
     
   }
 
@@ -104,7 +106,7 @@
     
     param[journal_id] = eem
 
-    au < down ; exists ; 2013 ; Expert Review of Endocrinology & Metabolism Volume 8 ; 8 >
+    au < superseded ; exists ; 2013 ; Expert Review of Endocrinology & Metabolism Volume 8 [superseded] ; 8 >
     
   }
 
@@ -118,7 +120,7 @@
     
     param[journal_id] = egh
 
-    au < down ; exists ; 2013 ; Expert Review of Gastroenterology & Hepatology Volume 7 ; 7 >
+    au < superseded ; exists ; 2013 ; Expert Review of Gastroenterology & Hepatology Volume 7 [superseded] ; 7 >
     
   }
 
@@ -132,7 +134,7 @@
     
     param[journal_id] = ehm
 
-    au < down ; exists ; 2013 ; Expert Review of Hematology Volume 6 ; 6 >
+    au < superseded ; exists ; 2013 ; Expert Review of Hematology Volume 6 [superseded] ; 6 >
     
   }
 
@@ -146,7 +148,7 @@
     
     param[journal_id] = erd
 
-    au < down ; exists ; 2013 ; Expert Review of Medical Devices Volume 10 ; 10 >
+    au < superseded ; exists ; 2013 ; Expert Review of Medical Devices Volume 10 [superseded] ; 10 >
     
   }
 
@@ -160,7 +162,7 @@
     
     param[journal_id] = erm
 
-    au < down ; exists ; 2013 ; Expert Review of Molecular Diagnostics Volume 13 ; 13 >
+    au < superseded ; exists ; 2013 ; Expert Review of Molecular Diagnostics Volume 13 [superseded] ; 13 >
    
   }
 
@@ -174,7 +176,7 @@
     
     param[journal_id] = ern
 
-    au < down ; exists ; 2013 ; Expert Review of Neurotherapeutics Volume 13 ; 13 >
+    au < superseded ; exists ; 2013 ; Expert Review of Neurotherapeutics Volume 13 [superseded] ; 13 >
    
   }
 
@@ -188,7 +190,7 @@
     
     param[journal_id] = eog
 
-    au < down ; exists ; 2013 ; Expert Review of Obstetrics & Gynecology Volume 8 ; 8 >
+    au < superseded ; exists ; 2013 ; Expert Review of Obstetrics & Gynecology Volume 8 [superseded] ; 8 >
     
   }
 
@@ -202,7 +204,7 @@
     
     param[journal_id] = eop
 
-    au < down ; exists ; 2013 ; Expert Review of Ophthalmology Volume 8 ; 8 >
+    au < superseded ; exists ; 2013 ; Expert Review of Ophthalmology Volume 8 [superseded] ; 8 >
     
   }
 
@@ -216,7 +218,7 @@
     
     param[journal_id] = erp
 
-    au < down ; exists ; 2013 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 13 ; 13 >
+    au < superseded ; exists ; 2013 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 13 [superseded] ; 13 >
   
   }
 
@@ -230,7 +232,7 @@
     
     param[journal_id] = epr
 
-    au < down ; exists ; 2013 ; Expert Review of Proteomics Volume 10 ; 10 >
+    au < superseded ; exists ; 2013 ; Expert Review of Proteomics Volume 10 [superseded] ; 10 >
      
   }
 
@@ -244,7 +246,7 @@
     
     param[journal_id] = ers
 
-    au < down ; exists ; 2013 ; Expert Review of Respiratory Medicine Volume 7 ; 7 >
+    au < superseded ; exists ; 2013 ; Expert Review of Respiratory Medicine Volume 7 [superseded] ; 7 >
     
   }
 
@@ -258,7 +260,7 @@
     
     param[journal_id] = erv
 
-    au < down ; exists ; 2013 ; Expert Review of Vaccines Volume 12 ; 12 >
+    au < superseded ; exists ; 2013 ; Expert Review of Vaccines Volume 12 [superseded] ; 12 >
    
   }
 
