@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
+'''An experimental module to evaluate the health of an AU among a closed group
+of LOCKSS daemons.'''
+
 # $Id$
 
 __copyright__ = '''\
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
+'''
 
+__license__ = '''\
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -28,66 +33,63 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.2'
+__version__ = '0.2.0'
 
 import getpass
 import optparse
 import sys
 
-from daemonstatusservice import DaemonStatusServiceOptions, datetime_from_ms, \
-  get_platform_configuration, is_daemon_ready, query_aus
+from daemonstatusservice import auth, datetime_from_ms, \
+    get_platform_configuration, is_daemon_ready, query_aus
 
 class _EvaluateClosedGroupOptions(object):
   def __init__(self, parser, opts, args):
     super(_EvaluateClosedGroupOptions, self).__init__()
-    if len(args) != 1: parser.error('Exactly one AUID is required')
-    self.__auid = args[0]
-    self.__hosts = opts.host
-    for f in opts.hosts: self.__hosts.extend(_file_lines(f))
-    if len(self.__hosts) < 2: parser.error('At least two hosts are required')
-    self.__u = opts.username or raw_input('UI username: ')
-    self.__p = opts.password or getpass.getpass('UI password: ')
-  def get_auid(self): return self.__auid
-  def get_hosts(self): return self.__hosts
-  def set_auth(self, dssopts): dssopts.set_auth(self.__u, self.__p)
+    # auid
+    if len(args) != 1: parser.error('exactly one AUID is required')
+    self.auid = args[0]
+    # hosts
+    self.hosts = opts.host
+    for f in opts.hosts: self.hosts.extend(_file_lines(f))
+    if len(self.hosts) < 2: parser.error('at least two hosts are required')
+    # auth
+    u = opts.username or raw_input('UI username: ')
+    p = opts.password or getpass.getpass('UI password: ')
+    self.auth = auth(u, p)
   @staticmethod
   def make_parser():
-    parser = optparse.OptionParser(version=__version__, usage='%prog [OPTIONS] AUID')
-    parser.add_option('--host', action='append', default=list(), help='adds host:port pair to the list of hosts')
-    parser.add_option('--hosts', action='append', default=list(), metavar='HFILE', help='adds host:port pairs from HFILE to the list of hosts')
-    parser.add_option('--password', metavar='PASS', help='UI password')
-    parser.add_option('--username', metavar='USER', help='UI username')
+    usage = '%prog [OPTIONS] AUID'
+    parser = optparse.OptionParser(version=__version__, description=__doc__, usage=usage)
+    group = optparse.OptionGroup(parser, 'Hosts')
+    group.add_option('--host', action='append', default=list(), help='adds host:port pair to the list of hosts')
+    group.add_option('--hosts', action='append', default=list(), metavar='HFILE', help='adds host:port pairs from HFILE to the list of hosts')
+    group.add_option('--password', metavar='PASS', help='UI password (default: interactive prompt)')
+    group.add_option('--username', metavar='USER', help='UI username (default: interactive prompt)')
+    parser.add_option_group(group)
     return parser
    
 def _do_evaluate(options):
-  auid = options.get_auid()
-  hosts = sorted(options.get_hosts())
+  auid = options.auid
+  hosts = sorted(options.hosts)
+  auth = options.auth
   quit = False
   print '%s BEGIN' % (auid,)
-  # Make actionable objects
-  host_dssopts = dict()
-  query = 'SELECT creationTime, lastCompletedCrawl, lastCompletedPoll, peerAgreements, substanceState WHERE auId = "%s"' % (auid,)
-  for host in hosts:
-    dssopts = DaemonStatusServiceOptions()
-    dssopts.set_host(host)
-    options.set_auth(dssopts)
-    dssopts.set_query(query)
-    host_dssopts[host] = dssopts
   # Check that all hosts are up and ready
   for host in hosts:
-    if not is_daemon_ready(host_dssopts[host]):
-      sys.exit('Error: %s is not up and ready' % (host,))
+    if not is_daemon_ready(host, options.auth): sys.exit('Error: %s is not up and ready' % (host,))
   # Get peer identities
   host_peerid = dict()
   peerid_host = dict()
   for host in hosts:
-    peerid = get_platform_configuration(host_dssopts[host]).V3Identity
+    peerid = get_platform_configuration(host, auth).V3Identity
     host_peerid[host] = peerid
     peerid_host[peerid] = host
   # Get AU data
+  select = ['creationTime', 'lastCompletedCrawl', 'lastCompletedPoll', 'peerAgreements', 'substanceState']
+  where = 'auId = "%s"' % (auid,)
   host_audata = dict()
   for host in hosts:
-    r = query_aus(host_dssopts[host])
+    r = query_aus(host, auth, select, where)
     if r is None or len(r) == 0:
       quit = True
       print '%s not found on %s' % (auid, host)
@@ -154,9 +156,13 @@ def _file_lines(filestr):
   if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (filestr,))
   return ret
 
-if __name__ == '__main__':
+def _main():
+  '''Main method.'''
   parser = _EvaluateClosedGroupOptions.make_parser()
   (opts, args) = parser.parse_args()
   options = _EvaluateClosedGroupOptions(parser, opts, args)
   _do_evaluate(options)
+
+# Main entry point
+if __name__ == '__main__': _main()
 
