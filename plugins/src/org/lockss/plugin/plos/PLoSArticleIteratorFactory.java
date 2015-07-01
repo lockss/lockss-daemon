@@ -47,19 +47,12 @@ public class PLoSArticleIteratorFactory
   
   // private static final Logger log = Logger.getLogger(ProjectMuseArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE = "\"%sjournals/%s/\", base_url, journal_dir";
-  protected static final String PATTERN_TEMPLATE = "\"^%sjournals/%s/v%03d/[^_/]+[.]html\", base_url, journal_dir, volume";
+  protected static final String ROOT_TEMPLATE = "\"%sjournals/%s/\", base_url, journal_id";
+  protected static final String PATTERN_TEMPLATE = "\"^%sjournals/%s/v%03d/[^_/]+[.]html\", base_url, journal_id, year";
   
   // various aspects of an article
-  // http://muse.jhu.edu/journals/advertising_and_society_review/v008/8.1gao.html
-  // http://muse.jhu.edu/journals/advertising_and_society_review/v008/8.1intro.pdf
-  // https://muse.jhu.edu/journals/ecotone/summary/v004/4.1-2.branch.html               
   
   // these kinds of urls are not used as part of the AI
-  // http://muse.jhu.edu/journals/advertising_and_society_review/toc/asr8.1.html
-  // http://muse.jhu.edu/journals/advertising_and_society_review/v008/8.1gao_table1.html
-  // http://muse.jhu.edu/journals/advertising_and_society_review/v008/images/8.1gao_01.jpg
-  // http://muse.jhu.edu/journals/advertising_and_society_review/v008/videos/8.1gao_nike.mov
   
   protected static final Pattern HTML_PATTERN = Pattern.compile(
       "/(v[0-9]+)/([^_/]+)[.]html$", Pattern.CASE_INSENSITIVE);
