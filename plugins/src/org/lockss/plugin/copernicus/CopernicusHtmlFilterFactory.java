@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +33,11 @@
 package org.lockss.plugin.copernicus;
 
 import java.io.*;
-import java.util.List;
 import java.util.Vector;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
-import org.htmlparser.tags.*;
 import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
@@ -70,27 +67,24 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
+    
+    // going to keep/drop filtering model
+    NodeFilter[] includeNodes = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttribute("div","id", "page_content_container"),
+
+    };
+    // going to keep/drop filtering model
+    NodeFilter[] excludeNodes = new NodeFilter[] {
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("noscript"),
+        HtmlNodeFilters.comment(),
+        // tabs just above article which are "article", "metrics", "related articles"
+        HtmlNodeFilters.tagWithAttribute("td","id","tabnavfull"),
+        //author affiliations may change over time
+        HtmlNodeFilters.tagWithAttribute("span","class","pb_affiliations"),        
+    };
           
-    // First filter with HtmlParser
-    NodeFilter[] filters = new NodeFilter[] {
-        /*
-         * Hash filter
-         */
-        new TagNameFilter("script"),
-        new TagNameFilter("noscript"),
-        // top banner
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "page_header"),
-        // left column on both TOC and article page - home/navigation, alert, contact, images
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "page_colum_left"),
-        // Right column contains search, news, and recent papers
-        // we must crawl links in this column, but can hash it out for comparison
-        HtmlNodeFilters.tagWithAttribute("div", "id", "page_colum_right"),
-        // the following are in page_column_left; in from before, but leave in to be safe
-        HtmlNodeFilters.tagWithAttribute("div", "id", "journal_metrics"),
-        HtmlNodeFilters.tagWithAttribute("iframe", "id", "co_auth_check_authiframecontainer"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "page_navigation_left"),    
-        
-    };    
+    
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
@@ -118,17 +112,17 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
     };
     InputStream htmlFilter = new HtmlFilterInputStream(in,
         encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+      new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+            HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)), xform));
 
     Reader reader = FilterUtil.getReader(htmlFilter, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader,
         ListUtil.list(   
-            // some comments contain a timestamp
-            new TagPair("<!--", "-->"),
             // <REMOVE> tags were created in place of specific span tags that needed removal
             new TagPair("<REMOVE", ">")
             ));   
-    // so some replace on strings
+    // do some replace on strings
     String[][] findAndReplace = new String[][] {
         // use of &nbsp; or " " inconsistent over time
         {"&nbsp;", " "}, 

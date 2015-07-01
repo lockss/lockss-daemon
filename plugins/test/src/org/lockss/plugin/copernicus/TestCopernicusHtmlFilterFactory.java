@@ -48,27 +48,46 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
 
-  /* example of journal metrics block in left column */
-  private static final String journalMetricsHtml = 
-      "<div><div style=\"margin-top: 25px;\" id=\"journal_metrics\"><map name=\"m_graphic_cp_journal_metrics\" id=\"m_graphic_cp_journal_metrics\">" +
-          "<area alt=\"Scopus Scimago Journal Rank (SJR) 2011, as of April 2012\" title=\"Scopus Scimago Journal Rank (SJR) 2011, as of April 2012\" target=\"Keine\" coords=\"14,173,166,215\" shape=\"rect\" />" +
-          "<div class=\"journal_metrics_definitions\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"130\"> </div>" +
-          "</map></div></div>";
+  private static final String includeBit=
+      "<div class=\"top\">" +
+      "<div id=\"page_content_container\">KEEPME</div>" +
+      "</div>";
+  private static final String includeBitFiltered=
+      "<div id=\"page_content_container\">KEEPME</div>";
 
-  private static final String journalMetricsHtmlFiltered = 
-      "<div></div>";
-
-  private static final String rightColumnHtml =
-      "<div><div id=\"page_colum_right\" class=\"page_colum\">\n" +
-          "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_right_container\">" +
-          "<div id=\"copernicus_publications\" class=\"cmsbox \">" +
-          "<a href=\"http://publications.copernicus.org\" target=\"_blank\">" +
-          "<img src=\"http://www.climate-of-the-past.net/Copernicus_Publications_Logo.jpg\" cofileid=\"154\" alt=\"\" /></a><" +
-          "/div></div></div>\n</div>";
-  private static final String rightColumnHtmlFiltered =
-      "<div> </div>";
+  private static final String basicLayout = 
+      "<html>"+ 
+          "<head>HEAD</head>" + 
+          "<body>" +
+          "<!-- $$BODY_HEAD$$ -->" +
+          "<div id=\"w-wrapper\">" +
+          "<div id=\"w-head\">WHEAD</div>" +
+          "<div id=\"w-body\">WBODY" +
+          "<div class=\"foo\" id=\"page_colum_left_container\">LEFTCOLUMN</div>" +
+          "<div id=\"c-wrapper\"> +" +
+          "<div class=\"foo\" id=\"page_content_container\">GOODSTUFF</div>" +
+          "</div>" +
+          "<div class=\"foo\" id=\"page_colum_right_container\">RIGHTCOLUMN</div>" +
+          "</div>" +
+          "<noscript>NOSCRIPT</noscript" +
+          "</body>" +
+          "</html>";
+  
+  private static final String basicLayoutFiltered =
+          "<div class=\"foo\" id=\"page_content_container\">GOODSTUFF</div>";
+  
+  private static final String minimumBeginning =
+      "<html>"+ 
+          "<head>HEAD</head>" + 
+          "<body>" +
+          "<!-- $$BODY_HEAD$$ -->" +
+          "<div class=\"foo\" id=\"page_content_container\">";
+  private static final String minimumEnding =
+      "</div></body></html>";
+  private static final String minimumEndingFiltered = "</div>";
   
   private static final String scriptsAndComments =
+      minimumBeginning +
       "</tr></table><script type=\"text/javascript\">" +
           "                  /* <![CDATA[ */" +
           "                        var cookieEnabled=(navigator.cookieEnabled)? true : false;" +
@@ -82,42 +101,12 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
           "         </script>" +
           " <script type=\"text/javascript\" language=\"Javascript\">/* <![CDATA[ */ var x=-1,y=-1,d=document;if(self.innerHeight){x=self.innerWidth;y=self.innerHeight;}else if (d.body){x=d.body.clientWidth;y=document.body.clientHeight;} /* ]]> */</script>" +
           "    <noscript><img alt=\"\" src=\"http://contentmanager.copernicus.org/webservices/webbug.php?pt=library&t=g&p=-1&s=417\" width=\"0\" height=\"0\" style=\"visibility: hidden\" /></noscript>" +
-          "  <!-- ptpl created 14.11. 05:58:33 by n/a --></body></html>";
+          "  <!-- ptpl created 14.11. 05:58:33 by n/a -->" +
+          minimumEnding;
 
   private static final String scriptsAndCommentsFiltered =
-      "</tr></table> </body></html>";
-  
-  private static final String iFrameHtml =
-      "<div id=\"page_colum_foo\" class=\"page_colum\">" +
-          "<iframe " +
-          "frameborder=\"0\" id=\"co_auth_check_authiframecontainer\" " +
-          "style=\"width: 179px; height: 57px; margin: 0; margin-bottom: 5px; margin-left: 10px; margin-top: -15px; padding: 0; border: none; overflow: hidden; background-color: transparent; display: none;\"" +
-          " src=\"\"></iframe>" +
-          "<div class=\"page_colum_container CMSCONTAINER\">";
-  private static final String iFrameFiltered =
-      "<div id=\"page_colum_foo\" class=\"page_colum\">" +
-          "<div class=\"page_colum_container CMSCONTAINER\">";
-  
-  private static final String leftColumnHtml =
-      "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_left_container\">" +
-          "<div id=\"page_navigation_left\" class=\"cmsbox \">" +
-          "<ul class=\"co_function_get_navigation get_navigation farbe_auf_hauptnavigation\">" +
-          "<li class=\"hintergrundfarbe_journal_hervorgehoben co_function_get_navigation_is_no_parent co_function_get_navigation_is_open\" id=\"co_getnavigation_page_home\">" +
-          "<a href=\"http://www.advances-in-geosciences.net/home.html\" pageid=\"1211\" class=\"hintergrundfarbe_journal active_menuitem\">Home</a>" +
-          "</li>" +
-          "<li class=\"active_menuitem hintergrundfarbe_journal_hervorgehoben\">" +
-          "<a href=\"/volumes.html\" class=\"hintergrundfarbe_journal\">Online Library </a></li>" +
-          "<ul class=\"subbox_background\">" +
-          "<li><a href=\"/recent_papers.html\">Recent Papers</a></li>" +
-          "<li><a href=\"/volumes.html\" class=\"active_menuitem\">Volumes</a></li>" +
-          "<li><a href=\"/library_search.html\">Library Search</a></li>" +
-          "<li><a href=\"/title_and_author_search.html\">Title and Author Search</a></li>" +
-          "</ul>" +
-          "<li class=\"hintergrundfarbe_journal_hervorgehoben co_function_get_navigation_is_no_parent co_function_get_navigation_is_closed\" id=\"co_getnavigation_page_alerts_and_rss_feeds\">" +
-          "<a href=\"http://www.advances-in-geosciences.net/rss_feeds.html\" pageid=\"1212\" class=\"hintergrundfarbe_journal \">RSS Feeds</a></li>" +
-          "</ul></div>";
-  private static final String leftColumnFiltered =
-      "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_left_container\">";
+      "<div class=\"foo\" id=\"page_content_container\">" +
+      "</tr></table> " + minimumEndingFiltered;
   
   private static final String whiteSpacesV1 = 
       "<a href=\"/1/1/2003/adgeo-1-1-2003.pdf\" >" +
@@ -191,71 +180,27 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
           "<span class=\"pb_toc_link\"><br /><br />&nbsp;<span style=\"white-space:nowrap;\"><a href=\"/14/1111/1996/angeo-14-1111-1996.pdf\" >Full Article</a>" +
           "(PDF, 639 KB)</span>&nbsp; &nbsp;<br /><br /></div></div></div>"; 
   
-  private static final String headerContentHtml =
-      "<body><!-- $$BODY_HEAD$$ -->" +
-      "<div id=\"page_header\" class=\"farbe_auf_journaluntergrund\">" +
-      "<a id=\"page_header_cover\" title=\"\" href=\"http://www.scientific-drilling.net/index.html\">" +
-      "<!-- --></a><a id=\"sd_moodboard\" href=\"http://www.scientific-drilling.net/index.html\"><!-- --></a> " +                      
-      "<div id=\"page_header_main\" class=\"hintergrundfarbe_journal\">" +
-       "<div id=\"page_header_main_headlines\"></div></div>" +
-       "<div id=\"page_header_footer\" class=\"hintergrundfarbe_journal\">" + 
-       "</div><!-- TOPRIGHT -->" +
-       "<div id=\"page_header_main_right_b0x\" class=\"farbe_auf_journalhintergrund\"></div>" +
-       "<!-- TOPRIGHT/ -->" +
-       "</div><!-- HEADER/ --></body>";
-  private static final String headerContentFiltered =
-      "<body></body>";
-  
-  private static final String allLeftColumnHtml =
-      "<table id=\"page_columntable\"><tr>" +
-          "<td class=\"hintergrundfarbe_spalten page_columntable_colum\" style=\"border-left: none;\">" +
-          "<!-- LEFT COLUM -->" +
-          "<div id=\"page_colum_left\" class=\"page_colum\">" +
-          "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_left_container\">" +
-          "<div id=\"page_navigation_left\" class=\"cmsbox \">" +
-          "<ul class=\"co_function_get_navigation get_navigation farbe_auf_hauptnavigation\">" +
-          "<li class=\"hintergrundfarbe_journal_hervorgehoben co_function_get_navigation_is_no_parent co_function_get_navigation_is_open\" id=\"co_getnavigation_page_home\">" +
-          "<a   href=\"http://foo.html\" pageid=\"4817\" class=\"hintergrundfarbe_journal active_menuitem\">Home</a></li>" +
-          " </ul> </div></div></div><!-- LEFT COLUM/ -->" +    
-          "</td></tr></table>";
 
-private static final String allLeftColumnFiltered =
-"<table id=\"page_columntable\"><tr>" +
-    "<td class=\"hintergrundfarbe_spalten page_columntable_colum\" style=\"border-left: none;\">" +
-    "</td></tr></table>";
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
     
-    /* journalMetrics test */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(journalMetricsHtml),
+    /* Check basic include/exclude functionality */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(includeBit),
         ENC);
-
-    assertEquals(journalMetricsHtmlFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(includeBitFiltered,StringUtil.fromInputStream(inA));
     
-    /* remove right column test */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(rightColumnHtml),
+    /* Check basic include/exclude functionality */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(basicLayout),
         ENC);
+    assertEquals(basicLayoutFiltered,StringUtil.fromInputStream(inA));
 
-    assertEquals(rightColumnHtmlFiltered,StringUtil.fromInputStream(inA));
-    
     /* remove <script> <noscript> and comments <!-- --> */
     inA = fact.createFilteredInputStream(mau, new StringInputStream(scriptsAndComments),
         ENC);
 
     assertEquals(scriptsAndCommentsFiltered,StringUtil.fromInputStream(inA));
 
-    /* remove iFrame */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(iFrameHtml),
-        ENC);
-
-    assertEquals(iFrameFiltered,StringUtil.fromInputStream(inA));    
-    /* remove left column search area */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(leftColumnHtml),
-        ENC);
-
-    assertEquals(leftColumnFiltered,StringUtil.fromInputStream(inA));
-    
     inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV1),
         ENC);
     inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV2),
@@ -271,15 +216,6 @@ private static final String allLeftColumnFiltered =
     assertEquals(StringUtil.fromInputStream(inA),
         StringUtil.fromInputStream(inB));
     
-    /* remove left column search area */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(allLeftColumnHtml),
-        ENC);
-    assertEquals(allLeftColumnFiltered,StringUtil.fromInputStream(inA));    
-
-    /* remove left column search area */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(headerContentHtml),
-        ENC);
-    assertEquals(headerContentFiltered,StringUtil.fromInputStream(inA));    
 
     
   }
