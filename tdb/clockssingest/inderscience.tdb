@@ -1271,7 +1271,6 @@
       param[journal_id] = ijbfmi
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 >
-      au < expected ; exists ; 2010-2011 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 >
 
     }
 
@@ -1328,6 +1327,8 @@
       au < manifest ; exists ; 2014 ; International Journal of Business Information Systems Volume 16 ; 16 >
       au < manifest ; exists ; 2014 ; International Journal of Business Information Systems Volume 17 ; 17 >
       au < manifest ; exists ; 2015 ; International Journal of Business Information Systems Volume 18 ; 18 >
+      au < exists ; exists ; 2015 ; International Journal of Business Information Systems Volume 19 ; 19 >
+      au < expected ; exists ; 2015 ; International Journal of Business Information Systems Volume 20 ; 20 >
 
     }
 
@@ -1387,7 +1388,7 @@
         issnl = 1758-9401
       >
 
-      param[journal_id] = ijbtscm
+      param[journal_id] = ijbpscm
 
       au < doNotProcess ; exists ; 2009 ; International Journal of Business Performance and Supply Chain Modelling Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
@@ -1395,7 +1396,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Business Performance and Supply Chain Modelling Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Performance and Supply Chain Modelling Volume 5 ; 5 >
       au < manifest ; exists ; 2014 ; International Journal of Business Performance and Supply Chain Modelling Volume 6 ; 6 >
-      au < expected ; exists ; 2015 ; International Journal of Business Performance and Supply Chain Modelling Volume 7 ; 7 >
+      au < exists ; exists ; 2015 ; International Journal of Business Performance and Supply Chain Modelling Volume 7 ; 7 >
 
     }
 
