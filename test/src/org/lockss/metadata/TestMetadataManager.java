@@ -209,6 +209,7 @@ public class TestMetadataManager extends LockssTestCase {
   public void testAll() throws Exception {
     runCreateMetadataTest();
     runTestPendingAu();
+    runTestPrioritizedPendingAu();
     runTestPendingAusBatch();
     runModifyMetadataTest();
     runDeleteAuMetadataTest();
@@ -444,6 +445,63 @@ public class TestMetadataManager extends LockssTestCase {
     PreparedStatement stmt = dbManager.prepareStatement(conn, query);
     int count = dbManager.executeUpdate(stmt);
     assertEquals(expectedCount, count);
+  }
+
+  private void runTestPrioritizedPendingAu() throws Exception {
+    // We are only testing here the addition of AUs to the table of pending AUs,
+    // so disable re-indexing.
+    metadataManager.setIndexingEnabled(false);
+
+    Connection conn = dbManager.getConnection();
+
+    PreparedStatement insertPendingAuBatchStatement =
+	metadataManager.getInsertPendingAuBatchStatement(conn);
+
+    // Add an AU for incremental metadata indexing.
+    metadataManager.enableAndAddAuToReindex(sau0, conn,
+	insertPendingAuBatchStatement, false, false);
+
+    // Check that the row is there.
+    String countPendingAuQuery = "select count(*) from " + PENDING_AU_TABLE
+	+ " where " + PRIORITY_COLUMN + " > 0";
+    checkRowCount(conn, countPendingAuQuery, 1);
+
+    // Check that there are no high priority rows.
+    String countPrioritizedPendingAuQuery = "select count(*) from "
+	+ PENDING_AU_TABLE + " where " + PRIORITY_COLUMN + " = 0";
+    checkRowCount(conn, countPrioritizedPendingAuQuery, 0);
+
+    PreparedStatement insertPrioritizedPendingAuBatchStatement =
+	metadataManager.getPrioritizedInsertPendingAuBatchStatement(conn);
+
+    // Add another AU for full metadata prioritized indexing.
+    metadataManager.enableAndAddAuToReindex(sau1, conn,
+	insertPrioritizedPendingAuBatchStatement, false, true);
+
+    // Check that the same non-prioritized row is there.
+    checkRowCount(conn, countPendingAuQuery, 1);
+
+    // Check that the prioritized row is there.
+    checkRowCount(conn, countPrioritizedPendingAuQuery, 1);
+
+    // Add another AU for incremental metadata prioritized indexing.
+    metadataManager.enableAndAddAuToReindex(sau2, conn,
+	insertPrioritizedPendingAuBatchStatement, false, false);
+
+    // Check that the same non-prioritized row is there.
+    checkRowCount(conn, countPendingAuQuery, 1);
+
+    // Check that both prioritized rows are there.
+    checkRowCount(conn, countPrioritizedPendingAuQuery, 2);
+
+    // Clear the table of pending AUs.
+    checkExecuteCount(conn, "delete from " + PENDING_AU_TABLE, 3);
+
+    conn.commit();
+    DbManager.safeRollbackAndClose(conn);
+
+    // Re-enable re-indexing.
+    metadataManager.setIndexingEnabled(true);
   }
 
   private void runTestPendingAusBatch() throws Exception {

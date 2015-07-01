@@ -420,6 +420,16 @@ public class MetadataManagerSql {
       + " from " + PENDING_AU_TABLE
       + " where " + PRIORITY_COLUMN + " >= 0) as temp_pau_table),?)";
 
+  // Query to add an enabled pending AU at the top of the current priority list.
+  private static final String INSERT_HIGHEST_PRIORITY_PENDING_AU_QUERY =
+      "insert into "
+      + PENDING_AU_TABLE
+      + "(" + PLUGIN_ID_COLUMN
+      + "," + AU_KEY_COLUMN
+      + "," + PRIORITY_COLUMN
+      + "," + FULLY_REINDEX_COLUMN
+      + ") values (?,?,0,?)";
+
   // Query to find a pending AU by its key and plugin identifier.
   private static final String FIND_PENDING_AU_QUERY = "select "
       + PLUGIN_ID_COLUMN
@@ -3220,12 +3230,36 @@ public class MetadataManagerSql {
    */
   PreparedStatement getInsertPendingAuBatchStatement(Connection conn)
       throws DbException {
+    final String DEBUG_HEADER = "getInsertPendingAuBatchStatement(): ";
     if (dbManager.isTypeMysql()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = "
+	  + INSERT_ENABLED_PENDING_AU_MYSQL_QUERY);
       return dbManager.prepareStatement(conn,
 	  INSERT_ENABLED_PENDING_AU_MYSQL_QUERY);
     }
 
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "SQL = " + INSERT_ENABLED_PENDING_AU_QUERY);
     return dbManager.prepareStatement(conn, INSERT_ENABLED_PENDING_AU_QUERY);
+  }
+
+  /**
+   * Provides the prepared statement used to insert pending AUs with the
+   * highest priority.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a PreparedStatement with the prepared statement used to insert
+   *         pending AUs with the highest priority.
+   */
+  PreparedStatement getPrioritizedInsertPendingAuBatchStatement(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER =
+	"getPrioritizedInsertPendingAuBatchStatement(): ";
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = "
+	+ INSERT_HIGHEST_PRIORITY_PENDING_AU_QUERY);
+    return dbManager.prepareStatement(conn,
+	INSERT_HIGHEST_PRIORITY_PENDING_AU_QUERY);
   }
 
   /**

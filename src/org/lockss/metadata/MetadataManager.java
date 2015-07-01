@@ -2987,6 +2987,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Provides the prepared statement used to insert pending AUs with the
+   * highest priority.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a PreparedStatement with the prepared statement used to insert
+   *         pending AUs with the highest priority.
+   */
+  public PreparedStatement getPrioritizedInsertPendingAuBatchStatement(
+      Connection conn) throws DbException {
+    return mdManagerSql.getPrioritizedInsertPendingAuBatchStatement(conn);
+  }
+
+  /**
    * Provides the publication identifier of an existing book in a book series,
    * null otherwise.
    * 
