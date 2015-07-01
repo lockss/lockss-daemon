@@ -1328,6 +1328,8 @@
       au < manifest ; 2014 ; International Journal of Business Information Systems Volume 16 ; 16 >
       au < manifest ; 2014 ; International Journal of Business Information Systems Volume 17 ; 17 >
       au < manifest ; 2015 ; International Journal of Business Information Systems Volume 18 ; 18 >
+      au < exists ; 2015 ; International Journal of Business Information Systems Volume 19 ; 19 >
+      au < expected ; 2015 ; International Journal of Business Information Systems Volume 20 ; 20 >
 
     }
 
@@ -1387,7 +1389,7 @@
         issnl = 1758-9401
       >
 
-      param[journal_id] = ijbtscm
+      param[journal_id] = ijbpscm
 
       au < doNotProcess ; 2009 ; International Journal of Business Performance and Supply Chain Modelling Volume 1 ; 1 >
       au < doNotProcess ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
@@ -1395,7 +1397,7 @@
       au < doNotProcess ; 2012 ; International Journal of Business Performance and Supply Chain Modelling Volume 4 ; 4 >
       au < manifest ; 2013 ; International Journal of Business Performance and Supply Chain Modelling Volume 5 ; 5 >
       au < manifest ; 2014 ; International Journal of Business Performance and Supply Chain Modelling Volume 6 ; 6 >
-      au < expected ; 2015 ; International Journal of Business Performance and Supply Chain Modelling Volume 7 ; 7 >
+      au < exists ; 2015 ; International Journal of Business Performance and Supply Chain Modelling Volume 7 ; 7 >
 
     }
 
