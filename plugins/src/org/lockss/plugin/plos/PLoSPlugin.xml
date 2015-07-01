@@ -1,0 +1,188 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.plos.PLoSPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Public Library of Science Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Public Library of Science Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.*)?$", base_url</string>
+      <string>1, "https://www.plos.org/lockss-manifest/plosbiology/vol_%d", year</string>
+      <string>4,"^%s", base_url</string>
+      <string>1, "%slockss.txt", base_url</string>
+      <string>1,"^https?://%s/article/browse/issue/info.+issue\.%s\.", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/article/info", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/article/fetchObject.action\?uri=info.+/image\.%s\.", url_host(base_url), journal_id</string>
+      
+      <!-- .+/journal\.%s\.[0-9]+$
+      http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0000019
+      http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.0000017
+      http://www.plosbiology.org/article/fetchObject.action?uri=info%3Adoi%2F10.1371%2Fimage.pbio.v01.i01.g001&representation=PNG_M
+      http://www.plosbiology.org/article/browse/issue/info%3Adoi%2F10.1371%2Fissue.pbio.v01.i01
+      http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio
+       -->
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"https://www.plos.org/lockss-manifest/plosbiology/vol_%d", year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <list>
+      <string>"https://www.plos.org/lockss-manifest/plosbiology/vol_%d", year</string>
+      <!-- string>"%slockss.txt", base_url</string -->
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_per_host_permission_path</string>
+    <string>/lockss.txt</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- string>"%sjournals/%s/v%03d/[^_/]+\.(html|pdf)$", base_url, journal_id, year</string -->
+    </list>
+  </entry>
+  <!-- entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.plos.PLoSHtmlLinkExtractorFactory</string>
+  </entry -->
+  <!-- entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.plos.PLoSHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.plos.PLoSHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.plos.PLoSPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.plos.PLoSUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.plos.PLoSUrlNormalizer</string>
+  </entry -->
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.plos.PLoSArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.plos.PLoSArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.plos.PLoSHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sjournals/%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sjournals/%s/v%03d/", base_url, journal_id, year</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <list>
+          <string>"%sjournals/%s/toc/%s%d.%s.html", base_url, journal_id, journal_id, year, issue</string>
+        </list>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+</map>
