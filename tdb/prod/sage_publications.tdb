@@ -4825,7 +4825,7 @@
         au < manifest ; 2014 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 124 ; 124 >
         au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 125 ; 125 >
         au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 126 ; 126 >
-        au < expected ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 127 ; 127 >
+        au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 127 ; 127 >
         au < expected ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 >
 
       }
@@ -13261,7 +13261,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Food and Nutrition Bulletin Volume 36 ; 36 >
+      au < manifest ; 2015 ; Food and Nutrition Bulletin Volume 36 ; 36 >
 
   }
 
@@ -16648,7 +16648,7 @@
         au < released ; 2012 ; Indian Historical Review Volume 39 ; 39 >
         au < manifest ; 2013 ; Indian Historical Review Volume 40 ; 40 >
         au < manifest ; 2014 ; Indian Historical Review Volume 41 ; 41 >
-        au < expected ; 2015 ; Indian Historical Review Volume 42 ; 42 >
+        au < manifest ; 2015 ; Indian Historical Review Volume 42 ; 42 >
 
       }
 
@@ -18041,7 +18041,7 @@
       au < exists ; 2012 ; International Journal of Mechanical Engineering Education Volume 40 ; 40 >
       au < exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 >
       au < exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 >
-      au < expected ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 >
+      au < manifest ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 >
   }
 
     {
@@ -37660,7 +37660,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Race & Class Volume 54 ; 54 >
         au < manifest ; 2013 ; Race & Class Volume 55 ; 55 >
         au < manifest ; 2014 ; Race & Class Volume 56 ; 56 >
-        au < expected ; 2015 ; Race & Class Volume 57 ; 57 >
+        au < manifest ; 2015 ; Race & Class Volume 57 ; 57 >
 
       }
 
@@ -40635,7 +40635,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 >
         au < manifest ; 2013 ; South Asian Journal of Business and Management Cases Volume 2 ; 2 >
         au < manifest ; 2014 ; South Asian Journal of Business and Management Cases Volume 3 ; 3 >
-        au < expected ; 2015 ; South Asian Journal of Business and Management Cases Volume 4 ; 4 >
+        au < manifest ; 2015 ; South Asian Journal of Business and Management Cases Volume 4 ; 4 >
 
       }
 
@@ -44087,7 +44087,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Vascular and Endovascular Surgery Volume 46 ; 46 >
         au < manifest ; 2013 ; Vascular and Endovascular Surgery Volume 47 ; 47 >
         au < manifest ; 2014 ; Vascular and Endovascular Surgery Volume 48 ; 48 >
-        au < expected ; 2015 ; Vascular and Endovascular Surgery Volume 49 ; 49 >
+        au < manifest ; 2015 ; Vascular and Endovascular Surgery Volume 49 ; 49 >
 
       }
 
