@@ -56,6 +56,8 @@
 
       param[base_url] = http://jbsge.vu.edu.au/ 
       param[journal_id] = jbsge
+      
+      comment[notReady] = V9 notReady. url with no http causing unending redirects "www.ft.com/cms/s/..." on page http://jbsge.vu.edu.au/article/view/612/
 
       au < manifest ; exists ; 2006 ; 2006 ; Journal of Business Systems, Governance & Ethics Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; 2007 ; Journal of Business Systems, Governance & Ethics Volume 2 ; 2 >
