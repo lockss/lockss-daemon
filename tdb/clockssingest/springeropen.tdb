@@ -224,7 +224,7 @@
         au < manifest ; exists ; 2010 ; Boundary Value Problems Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; Boundary Value Problems Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; Boundary Value Problems Volume 2012 ; 2012 >
-        au < ready ; exists ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 >
+        au < crawling ; exists ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; Boundary Value Problems Volume 2015 ; 2015 >
   
@@ -291,7 +291,7 @@
   
         au < manifest ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
-        au < manifest ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
+        au < crawling ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Clinical and Translational Medicine Volume 4 ; 4 >
   
     }
@@ -326,7 +326,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 >
-        au < manifest ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 >
+        au < crawling ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 ; 3 >
   
     }
@@ -395,7 +395,7 @@
   
         au < manifest ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 >
         au < crawling ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 >
-        au < manifest ; exists ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 >
+        au < crawling ; exists ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 >
         au < manifest ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 ; 7 >
   
     }
@@ -496,7 +496,7 @@
         au < manifest ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 >
-        au < manifest ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 >
         au < expected ; exists ; 2015 ; EJNMMI Research Volume 5 ; 5 >
   
     }
@@ -532,7 +532,7 @@
         au < manifest ; exists ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
-        au < manifest ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 >
   
     }
@@ -569,7 +569,7 @@
   
         au < manifest ; exists ; 2012 ; Environmental Systems Research Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 >
-        au < manifest ; exists ; 2014 ; Environmental Systems Research Volume 3 ; 3 >
+        au < crawling ; exists ; 2014 ; Environmental Systems Research Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Environmental Systems Research Volume 4 ; 4 >
   
     }
@@ -604,7 +604,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 >
-        au < manifest ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 >
+        au < crawling ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 ; 3 >
   
     }
