@@ -8,7 +8,8 @@ BEGIN {
 
 {
   # add a loop to add line only if either status is (wanted or testing) or ending year is gt or eq to contract year
-  current_year = 2014
+  # increased to 2015 July 1 2015.
+  current_year = 2015
   # end_year is the AU year, or the second half of a range, ie 2014 in 2013-2014
   end_year = 0
   incontract = 0
