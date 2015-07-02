@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = North Carolina Institute of Medicine ;
+    info[contract] = 2015 ;
+    info[tester] = 0
+  >
+  {
+
+    title <
+      name = North Carolina Medical Journal ;
+      issn = 0029-2559 ;
+      issnl = 0029-2559
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://www.ncmedicaljournal.com/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    comment[0] = 2002-2013 content on http://classic.ncmedicaljournal.com/
+
+    au < exists ; exists ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < exists ; exists ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
+
+  }
+
+}
