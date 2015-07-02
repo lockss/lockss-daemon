@@ -75,12 +75,12 @@
     param[journal_issn] = 1882-0786
     comment[param] = eissn preferred
 
-    au < crawling ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
+    au < frozen ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
     au < crawling ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
-    au < crawling ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
+    au < frozen ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
     au < crawling ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
-    au < crawling ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
-    au < crawling ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
+    au < frozen ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
+    au < frozen ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
     au < manifest ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
 
@@ -278,9 +278,9 @@
     au < exists ; exists ; 2006 ; Chinese Physics B Volume 15 ; 15 >
     au < exists ; exists ; 2007 ; Chinese Physics B Volume 16 ; 16 >
     au < crawling ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
-    au < crawling ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
+    au < frozen ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
     au < crawling ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
-    au < crawling ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
+    au < frozen ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
     au < crawling ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
     au < testing ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
@@ -915,9 +915,9 @@
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 44 ; 44 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 45 ; 45 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 46 ; 46 >
-    au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
-    au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
-    au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
+    au < frozen ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
+    au < frozen ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
+    au < frozen ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
     au < manifest ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 51 ; 51 > 
     au < manifest ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 52 ; 52 > 
@@ -1008,10 +1008,10 @@
     au < manifest ; exists ; 2006 ; Japanese Journal of Applied Physics Volume 45 ; 45 >
     au < manifest ; exists ; 2007 ; Japanese Journal of Applied Physics Volume 46 ; 46 >
     au < crawling ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
-    au < crawling ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
+    au < frozen ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
     au < crawling ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
     au < crawling ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
-    au < crawling ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
+    au < frozen ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
     au < crawling ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
     au < testing ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
     au < manifest ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
@@ -2657,7 +2657,7 @@
     au < crawling ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
     au < crawling ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
     au < crawling ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
-    au < crawling ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
+    au < frozen ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
     au < testing ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
     au < manifest ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
@@ -2733,7 +2733,7 @@
     param[journal_issn] = 2050-6120
     comment[param] = eissn preferred
 
-    au < crawling ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
+    au < frozen ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
     au < frozen ; exists ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Methods and Applications in Fluorescence Volume 3 ; 3 >
 
@@ -4117,7 +4117,7 @@
     param[journal_issn] = 2051-672X
     comment[param] = eissn preferred
 
-    au < crawling ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
+    au < frozen ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
     au < frozen ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
     au < manifest ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
 

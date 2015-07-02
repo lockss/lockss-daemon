@@ -34,10 +34,10 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[journal_id] = main
 
-      au < crawling ; exists ; 2010 ; BIO-Complexity Volume 2010 ; 2010 ; 2010 >
-      au < crawling ; exists ; 2011 ; BIO-Complexity Volume 2011 ; 2011 ; 2011 >
+      au < frozen ; exists ; 2010 ; BIO-Complexity Volume 2010 ; 2010 ; 2010 >
+      au < frozen ; exists ; 2011 ; BIO-Complexity Volume 2011 ; 2011 ; 2011 >
       au < crawling ; exists ; 2012 ; BIO-Complexity Volume 2012 ; 2012 ; 2012 >
-      au < crawling ; exists ; 2013 ; BIO-Complexity Volume 2013 ; 2013 ; 2013 >
+      au < frozen ; exists ; 2013 ; BIO-Complexity Volume 2013 ; 2013 ; 2013 >
       au < ready ; exists ; 2014 ; BIO-Complexity Volume 2014 ; 2014 ; 2014 >
       au < expected ; exists ; 2015 ; BIO-Complexity Volume 2015 ; 2015 ; 2015 >
 

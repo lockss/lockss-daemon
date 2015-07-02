@@ -47,7 +47,7 @@
     au < manifest ; exists ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 >
     au < manifest ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 >
-    au < crawling ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
+    au < frozen ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
     au < crawling ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
     au < crawling ; exists ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 >
     au < manifest ; exists ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 >
@@ -63,7 +63,7 @@
     
     param[journal_id] = bmt
 
-    au < crawling ; exists ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
+    au < frozen ; exists ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
     au < manifest ; exists ; 2015 ; Breast Cancer Management Volume 4 ; 4 >
@@ -99,7 +99,7 @@
     au < manifest ; exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
-    au < crawling ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
+    au < frozen ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
     au < crawling ; exists ; 2014 ; Clinical Lipidology Volume 9 ; 9 >
     au < manifest ; exists ; 2015 ; Clinical Lipidology Volume 10 ; 10 >
@@ -137,7 +137,7 @@
     comment[continues] = Therapy, 1475-0708
     param[journal_id] = cpr
 
-    au < crawling ; exists ; 2012 ; Clinical Practice Volume 9 ; 9 >
+    au < frozen ; exists ; 2012 ; Clinical Practice Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 >
     au < crawling ; exists ; 2014 ; Clinical Practice Volume 11 ; 11 >
     au < expected ; exists ; 2015 ; Clinical Practice Volume 12 ; 12 >
@@ -169,7 +169,7 @@
     
     param[journal_id] = crc
 
-    au < crawling ; exists ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
+    au < frozen ; exists ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
     au < ready ; exists ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
     au < manifest ; exists ; 2015 ; Colorectal Cancer Volume 4 ; 4 >
@@ -275,7 +275,7 @@
     au < manifest ; exists ; 2009 ; Future Neurology Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Future Neurology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Future Neurology Volume 6 ; 6 >
-    au < crawling ; exists ; 2012 ; Future Neurology Volume 7 ; 7 >
+    au < frozen ; exists ; 2012 ; Future Neurology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Future Neurology Volume 8 ; 8 >
     au < crawling ; exists ; 2014 ; Future Neurology Volume 9 ; 9 >
     au < manifest ; exists ; 2015 ; Future Neurology Volume 10 ; 10 >
@@ -444,7 +444,7 @@
     
     param[journal_id] = ijh
 
-    au < crawling ; exists ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 >
+    au < frozen ; exists ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 >
     au < manifest ; exists ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 >
@@ -464,7 +464,7 @@
     au < manifest ; exists ; 2009 ; Interventional Cardiology Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Interventional Cardiology Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Interventional Cardiology Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
+    au < frozen ; exists ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
     au < crawling ; exists ; 2014 ; Interventional Cardiology Volume 6 ; 6 >
     au < manifest ; exists ; 2015 ; Interventional Cardiology Volume 7 ; 7 >
@@ -496,7 +496,7 @@
     
     param[journal_id] = lmt
 
-    au < crawling ; exists ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
+    au < frozen ; exists ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
     au < manifest ; exists ; 2015 ; Lung Cancer Management Volume 4 ; 4 >
@@ -519,7 +519,7 @@
     au < manifest ; exists ; 2009 ; Nanomedicine Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Nanomedicine Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Nanomedicine Volume 6 ; 6 >
-    au < crawling ; exists ; 2012 ; Nanomedicine Volume 7 ; 7 >
+    au < frozen ; exists ; 2012 ; Nanomedicine Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Nanomedicine Volume 8 ; 8 >
     au < crawling ; exists ; 2014 ; Nanomedicine Volume 9 ; 9 >
     au < manifest ; exists ; 2015 ; Nanomedicine Volume 10 ; 10 >
@@ -537,7 +537,7 @@
     param[journal_id] = nmt
 
     au < manifest ; exists ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 >
+    au < frozen ; exists ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 >
     au < crawling ; exists ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 >
     au < manifest ; exists ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 >
@@ -554,7 +554,7 @@
     param[journal_id] = npy
 
     au < manifest ; exists ; 2011 ; Neuropsychiatry Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
+    au < frozen ; exists ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
     au < crawling ; exists ; 2014 ; Neuropsychiatry Volume 4 ; 4 >
     au < expected ; exists ; 2015 ; Neuropsychiatry Volume 5 ; 5 >

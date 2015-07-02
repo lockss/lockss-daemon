@@ -104,7 +104,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < crawling ; exists ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 >
+      au < frozen ; exists ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 >
       au < crawling ; exists ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 >
       au < crawling ; exists ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 >
       au < crawling ; exists ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 >
@@ -142,9 +142,9 @@
       
 
       au < crawling ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 >
-      au < crawling ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 107 ; 107 ; 2011 >
-      au < crawling ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 108 ; 108 ; 2012 >
-      au < crawling ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 109 ; 109 ; 2013 >
+      au < frozen ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 107 ; 107 ; 2011 >
+      au < frozen ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 108 ; 108 ; 2012 >
+      au < frozen ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 109 ; 109 ; 2013 >
       au < expected ; exists ; 2014 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 110 ; 110 ; 2014 >
 
     }
@@ -177,10 +177,10 @@
       param[base_url2] = http://www.rsc.org/
       
 
-      au < crawling ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
-      au < crawling ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 107 ; 107 ; 2011 >
-      au < crawling ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 108 ; 108 ; 2012 >
-      au < crawling ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 109 ; 109 ; 2013 >
+      au < frozen ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
+      au < frozen ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 107 ; 107 ; 2011 >
+      au < frozen ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 108 ; 108 ; 2012 >
+      au < frozen ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 109 ; 109 ; 2013 >
       au < expected ; exists ; 2014 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 110 ; 110 ; 2014 >
 
     }
@@ -212,9 +212,9 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < crawling ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 >
+      au < frozen ; exists ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 >
       au < crawling ; exists ; 2011 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 107 ; 107 ; 2011 >
-      au < crawling ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 >
+      au < frozen ; exists ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 >
       au < crawling ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 109 ; 109 ; 2013 >
       au < expected ; exists ; 2014 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 110 ; 110 ; 2014 >
 
@@ -369,7 +369,7 @@
       au < crawling ; exists ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 >
       au < crawling ; exists ; 2011 ; Chemistry Education Research and Practice Volume 12 ; 12 ; 2011 >
       au < crawling ; exists ; 2012 ; Chemistry Education Research and Practice Volume 13 ; 13 ; 2012 >
-      au < crawling ; exists ; 2013 ; Chemistry Education Research and Practice Volume 14 ; 14 ; 2013 >
+      au < frozen ; exists ; 2013 ; Chemistry Education Research and Practice Volume 14 ; 14 ; 2013 >
       au < frozen ; exists ; 2014 ; Chemistry Education Research and Practice Volume 15 ; 15 ; 2014 >
       au < expected ; exists ; 2015 ; Chemistry Education Research and Practice Volume 16 ; 16 ; 2015 >
 
@@ -434,7 +434,7 @@
       
       au < crawling ; exists ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 >
       au < crawling ; exists ; 2011 ; CrystEngComm Volume 13 ; 13 ; 2011 >
-      au < crawling ; exists ; 2012 ; CrystEngComm Volume 14 ; 14 ; 2012 >
+      au < frozen ; exists ; 2012 ; CrystEngComm Volume 14 ; 14 ; 2012 >
       au < crawling ; exists ; 2013 ; CrystEngComm Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; CrystEngComm Volume 16 ; 16 ; 2014 >
       au < expected ; exists ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 >
@@ -517,7 +517,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < crawling ; exists ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
+      au < frozen ; exists ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
       au < crawling ; exists ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
       au < crawling ; exists ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
       au < crawling ; exists ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
@@ -560,24 +560,24 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < crawling ; exists ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
-      au < crawling ; exists ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 >
-      au < crawling ; exists ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 >
-      au < crawling ; exists ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 >
+      au < frozen ; exists ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
+      au < frozen ; exists ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 >
+      au < frozen ; exists ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 >
+      au < frozen ; exists ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 >
       
-      au < crawling ; exists ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 >
-      au < crawling ; exists ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 >
+      au < frozen ; exists ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 >
+      au < frozen ; exists ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 >
       au < crawling ; exists ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 >
-      au < crawling ; exists ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 >
-      au < crawling ; exists ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 >
-      au < crawling ; exists ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 >
+      au < frozen ; exists ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 >
+      au < frozen ; exists ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 >
+      au < frozen ; exists ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 >
       
       au < crawling ; exists ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 >
-      au < crawling ; exists ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 >
-      au < crawling ; exists ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 >
+      au < frozen ; exists ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 >
+      au < frozen ; exists ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 >
       au < crawling ; exists ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 >
-      au < crawling ; exists ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 >
-      au < crawling ; exists ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 >
+      au < frozen ; exists ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 >
+      au < frozen ; exists ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 >
       
       au < crawling ; exists ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 >
       au < crawling ; exists ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 >
@@ -650,7 +650,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < crawling ; exists ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 >
-      au < crawling ; exists ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 >
+      au < frozen ; exists ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 >
       au < crawling ; exists ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 >
       au < crawling ; exists ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 >
@@ -685,7 +685,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < crawling ; exists ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
+      au < frozen ; exists ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
       au < crawling ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 >
       au < crawling ; exists ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 >
       au < crawling ; exists ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 >
@@ -734,7 +734,7 @@
       
       au < crawling ; exists ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 >
       au < crawling ; exists ; 2011 ; Journal of Analytical Atomic Spectrometry Volume 26 ; 26 ; 2011 >
-      au < crawling ; exists ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
+      au < frozen ; exists ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
       au < crawling ; exists ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
       au < crawling ; exists ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
       au < expected ; exists ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >

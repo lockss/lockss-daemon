@@ -58,7 +58,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] >
 
     au < crawling ; exists ; 2012 ; communication +1 Volume 1 ; 1 >
-    au < crawling ; exists ; 2013 ; communication +1 Volume 2 ; 2 >
+    au < frozen ; exists ; 2013 ; communication +1 Volume 2 ; 2 >
     au < frozen ; exists ; 2014 ; communication +1 Volume 3 ; 3 >
     au < expected ; exists ; 2015 ; communication +1 Volume 4 ; 4 >
 

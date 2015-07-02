@@ -1756,7 +1756,7 @@
         param[journal_issn] = 1758-2555
 
         au < crawling ; exists ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
-        au < crawling ; exists ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
+        au < frozen ; exists ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
         au < crawling ; exists ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
         au < crawling ; exists ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
       }
@@ -2351,7 +2351,7 @@
       param[base_url] = http://www.apfmj.com/
       param[journal_issn] = 1447-056X
 
-      au < crawling ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
+      au < frozen ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
       au < finished ; crawling ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
@@ -2843,7 +2843,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2010 ; Carbon Balance and Management Volume 5 ; 5 >
       au < finished ; crawling ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
-      au < crawling ; exists ; 2013 ; Carbon Balance and Management Volume 8 ; 8 >
+      au < frozen ; exists ; 2013 ; Carbon Balance and Management Volume 8 ; 8 >
       au < frozen ; exists ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
 
@@ -2932,7 +2932,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; crawling ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
-      au < crawling ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
+      au < frozen ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; Cell & Bioscience Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Cell & Bioscience Volume 5 ; 5 >
 
@@ -3057,7 +3057,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
       au < finished ; crawling ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
-      au < crawling ; exists ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 >
+      au < frozen ; exists ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 >
       au < frozen ; exists ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 ; 9 >
 
@@ -3081,7 +3081,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2010 ; Chinese Medicine Volume 5 ; 5 >
       au < finished ; crawling ; 2011 ; Chinese Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Chinese Medicine Volume 7 ; 7 >
-      au < crawling ; exists ; 2013 ; Chinese Medicine Volume 8 ; 8 >
+      au < frozen ; exists ; 2013 ; Chinese Medicine Volume 8 ; 8 >
       au < frozen ; exists ; 2014 ; Chinese Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Chinese Medicine Volume 10 ; 10 >
 
@@ -3108,7 +3108,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       
       au < crawling ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
       au < crawling ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
-      au < crawling ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      au < frozen ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < frozen ; exists ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
       au < manifest ; exists ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
 
@@ -3157,7 +3157,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2046-2530
 
       au < crawling ; exists ; 2012 ; Cilia Volume 1 ; 1 >
-      au < crawling ; exists ; 2013 ; Cilia Volume 2 ; 2 >
+      au < frozen ; exists ; 2013 ; Cilia Volume 2 ; 2 >
       au < frozen ; exists ; 2014 ; Cilia Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Cilia Volume 4 ; 4 >
 
@@ -3184,7 +3184,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
       au < finished ; crawling ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
-      au < crawling ; exists ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
+      au < frozen ; exists ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < notReady ; exists ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
       
@@ -3203,7 +3203,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; crawling ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
-      au < crawling ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
+      au < frozen ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
       au < frozen ; exists ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
 
@@ -3258,7 +3258,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
-      au < crawling ; exists ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
+      au < frozen ; exists ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
       au < manifest ; exists ; 2015 ; Clinical Proteomics Volume 12 ; 12 >
 
@@ -3276,7 +3276,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2045-3329
 
       au < crawling ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
-      au < crawling ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+      au < frozen ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
       au < frozen ; exists ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
@@ -3320,7 +3320,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < manifest ; exists ; 2007 ; Conflict and Health Volume 1 ; 1 >
       au < crawling ; exists ; 2008 ; Conflict and Health Volume 2 ; 2 >
-      au < crawling ; exists ; 2009 ; Conflict and Health Volume 3 ; 3 >
+      au < frozen ; exists ; 2009 ; Conflict and Health Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Conflict and Health Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 >
@@ -3451,7 +3451,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1560-8115
 
       au < crawling ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
-      au < crawling ; exists ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
+      au < frozen ; exists ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
       au < crawling ; exists ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 >
       au < manifest ; exists ; 2015 ; DARU Journal of Pharmaceutical Sciences Volume 23 ; 23 >
     
