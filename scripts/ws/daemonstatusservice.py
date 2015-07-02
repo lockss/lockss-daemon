@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
@@ -306,7 +306,7 @@ def query_aus(host, auth, select, where=None):
   if where is not None: query = '%s WHERE %s' % (query, where)
   req = DaemonStatusServiceImplService_client.queryAus()
   req.AuQuery = query
-  return _ws_port(host, port).queryAus(req).Return
+  return _ws_port(host, auth).queryAus(req).Return
 
 #
 # Internal
