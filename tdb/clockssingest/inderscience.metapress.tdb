@@ -267,7 +267,7 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
       au < down ; frozen ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
       au < down ; frozen ; 2011-2012 ; International Journal of Accounting and Finance Volume 3 ; 3 >
-      au < superseded ; frozen ; 2013-2014 ; International Journal of Accounting and Finance Volume 4 [superseded] ; 4 >
+      au < superseded ; frozen ; 2013 ; International Journal of Accounting and Finance Volume 4 [superseded] ; 4 >
 
     }
 
@@ -397,7 +397,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
       au < down ; frozen ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
-      au < superseded ; frozen ; 2013-2014 ; International Journal of Advanced Media and Communication Volume 5 [superseded] ; 5 >
+      au < superseded ; frozen ; 2013 ; International Journal of Advanced Media and Communication Volume 5 [superseded] ; 5 >
 
     }
 
@@ -548,7 +548,7 @@
       
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Applied Cryptography Volume 1 ; 1 >
       au < down ; crawling ; 2010-2012 ; International Journal of Applied Cryptography Volume 2 ; 2 >
-      au < superseded ; exists ; 2013-2014 ; International Journal of Applied Cryptography Volume 3 [superseded] ; 3 >
+      au < superseded ; exists ; 2013 ; International Journal of Applied Cryptography Volume 3 [superseded] ; 3 >
 
     }
 
@@ -619,7 +619,7 @@
 
       param[journal_issn] = 2049-8888
       
-      au < superseded ; exists ; 2013-2014 ; International Journal of Applied Pattern Recognition Volume 1 [superseded] ; 1 >
+      au < superseded ; exists ; 2013 ; International Journal of Applied Pattern Recognition Volume 1 [superseded] ; 1 >
 
     }
 
@@ -638,7 +638,7 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Applied Systemic Studies Volume 2 ; 2 >
       au < down ; frozen ; 2010 ; International Journal of Applied Systemic Studies Volume 3 ; 3 >
       au < down ; frozen ; 2011-2012 ; International Journal of Applied Systemic Studies Volume 4 ; 4 >
-      au < superseded ; exists ; 2013-2014 ; International Journal of Applied Systemic Studies Volume 5 [superseded] ; 5 >
+      au < superseded ; exists ; 2013 ; International Journal of Applied Systemic Studies Volume 5 [superseded] ; 5 >
 
     }
 
@@ -846,7 +846,7 @@
       au < down ; frozen ; 2010 ; International Journal of Banking, Accounting and Finance Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ; International Journal of Banking, Accounting and Finance Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Banking, Accounting and Finance Volume 4 ; 4 >
-      au < superseded ; exists ; 2013-2014 ; International Journal of Banking, Accounting and Finance Volume 5 [superseded] ; 5 >
+      au < superseded ; exists ; 2013 ; International Journal of Banking, Accounting and Finance Volume 5 [superseded] ; 5 >
 
     }
 
@@ -864,7 +864,7 @@
       au < down ; frozen ; 2008-2010 ; International Journal of Behavioural Accounting and Finance Volume 1 ; 1 >
       au < down ; crawling ; 2011 ; International Journal of Behavioural Accounting and Finance Volume 2 ; 2 >
       au < zapped ; finished ; 2012 ; International Journal of Behavioural Accounting and Finance Volume 3 ; 3 >
-      au < superseded ; exists ; 2013-2014 ; International Journal of Behavioural Accounting and Finance Volume 4 [superseded] ; 4 >
+      au < superseded ; exists ; 2013 ; International Journal of Behavioural Accounting and Finance Volume 4 [superseded] ; 4 >
 
     }
 
@@ -990,7 +990,7 @@
       
       au < down ; frozen ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 >
       au < zapped ; finished ; 2011-2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 >
-      au < superseded ; exists ; 2013-2014 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 [superseded] ; 3 >
+      au < superseded ; exists ; 2013 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 [superseded] ; 3 >
 
     }
 
@@ -1139,7 +1139,7 @@
       
       au < zapped ; finished ; 2010-2011 ; International Journal of Business Competition and Growth Volume 1 ; 1 >
       au < zapped ; finished ; 2012 ; International Journal of Business Competition and Growth Volume 2 ; 2 >
-      au < superseded ; exists ; 2013-2014 ; International Journal of Business Competition and Growth Volume 3 [superseded] ; 3 >
+      au < superseded ; exists ; 2013 ; International Journal of Business Competition and Growth Volume 3 [superseded] ; 3 >
 
     }
 
@@ -1401,7 +1401,6 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 >
       au < zapped ; finished ; 2010-2013 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Chinese Culture and Management Volume 4 ; 4 >
 
     }
 
@@ -1434,8 +1433,6 @@
       param[journal_issn] = 2042-647X
       
       au < zapped ; finished ; 2012 ; International Journal of Cognitive Biometrics Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Cognitive Biometrics Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Cognitive Biometrics Volume 3 ; 3 >
 
     }
 
@@ -1451,7 +1448,6 @@
       param[journal_issn] = 1742-7215
 
       au < down ; frozen ; 2013 ; International Journal of Cognitive Performance Support Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Cognitive Performance Support Volume 2 ; 2 >
       
     }
 
@@ -1518,22 +1514,6 @@
     {
 
       title <
-        name = International Journal of Complexity in Applied Science and Engineering ;
-        issn = 1740-0546 ;
-        eissn = 1740-0554 ;
-        issnl = 1740-0546
-      >
-
-      param[journal_issn] = 1740-0554
-      comment[0] = title is not yet published on 10/01/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Complexity in Leadership and Management ;
         issn = 1759-0256 ;
         eissn = 1759-0264 ;
@@ -1543,9 +1523,7 @@
       param[journal_issn] = 1759-0264
       
       au < zapped ; finished ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 >
-      au < down ; frozen ; 2012 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of Complexity in Leadership and Management Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Complexity in Leadership and Management Volume 4 ; 4 >
+      au < superseded ; frozen ; 2012 ; International Journal of Complexity in Leadership and Management Volume 2 [superseded] ; 2 >
 
     }
 
@@ -1567,22 +1545,6 @@
       au < zapped ; finished ; 2012 ; International Journal of Computational Biology and Drug Design Volume 5 ; 5 >
       au < down ; exists ; 2013 ; International Journal of Computational Biology and Drug Design Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Computational Biology and Drug Design Volume 7 ; 7 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Computational Complexity and Intelligent Algorithms ;
-        issn = 2048-4720 ;
-        eissn = 2048-4739 ;
-        issnl = 2048-4720
-      >
-
-      param[journal_issn] = 2048-4739
-      comment[0] = title is not yet published on 9/19/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
 
     }
 
