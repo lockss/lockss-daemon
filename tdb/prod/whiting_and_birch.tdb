@@ -9,7 +9,7 @@
     param[base_url] = http://journals.whitingbirch.net/
     implicit < status ; year ; param[year] ; name ; volume >
     
-    comment[moving] = moving from metapress to OJS on February 25, 2015. Marked doNotProcess till manifest pages come online.
+    comment[moving] = moving from metapress to OJS on February 25, 2015. Marked exists till manifest pages come online.
 
   {
 
@@ -22,17 +22,17 @@
      param[journal_id] = GPWK
      
      
-     au < doNotProcess ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
-     au < doNotProcess ; 2005 ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
-     au < doNotProcess ; 2006 ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 >
-     au < doNotProcess ; 2007 ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 >
-     au < doNotProcess ; 2008 ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 >
-     au < doNotProcess ; 2009 ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 >
-     au < doNotProcess ; 2010 ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 >
-     au < doNotProcess ; 2011 ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
-     au < doNotProcess ; 2012 ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
-     au < doNotProcess ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
-     au < expected ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
+     au < exists ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
+     au < exists ; 2005 ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
+     au < exists ; 2006 ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 >
+     au < exists ; 2007 ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 >
+     au < exists ; 2008 ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 >
+     au < exists ; 2009 ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 >
+     au < exists ; 2010 ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 >
+     au < exists ; 2011 ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
+     au < exists ; 2012 ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
+     au < exists ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
+     au < manifest ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
      au < expected ; 2015 ; 2015 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 25 ; 25 >
   
   }
@@ -47,18 +47,18 @@
     comment[continues] = 1460-6690
     param[journal_id] = JPTS
       
-    au < doNotProcess ; 2003 ; 2003 ; The Journal of Practice Teaching and Learning Volume 2003 ; 2003 >
-    au < doNotProcess ; 2005 ; 2005 ; The Journal of Practice Teaching and Learning Volume 2005 ; 2005 >
-    au < doNotProcess ; 2006 ; 2006 ; The Journal of Practice Teaching and Learning Volume 2006 ; 2006 >
-    au < doNotProcess ; 2008 ; 2008 ; The Journal of Practice Teaching and Learning Volume 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; 2009 ; The Journal of Practice Teaching and Learning Volume 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; 2010 ; The Journal of Practice Teaching and Learning Volume 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; 2011 ; The Journal of Practice Teaching and Learning Volume 2011 ; 2011 >
-    au < doNotProcess ; 2013 ; 2013 ; The Journal of Practice Teaching and Learning Volume 2013 ; 2013 >
-    au < expected ; 2014 ; 2014 ; The Journal of Practice Teaching and Learning Volume 2014 ; 2014 >
+    au < exists ; 2003 ; 2003 ; The Journal of Practice Teaching and Learning Volume 2003 ; 2003 >
+    au < exists ; 2005 ; 2005 ; The Journal of Practice Teaching and Learning Volume 2005 ; 2005 >
+    au < exists ; 2006 ; 2006 ; The Journal of Practice Teaching and Learning Volume 2006 ; 2006 >
+    au < exists ; 2008 ; 2008 ; The Journal of Practice Teaching and Learning Volume 2008 ; 2008 >
+    au < exists ; 2009 ; 2009 ; The Journal of Practice Teaching and Learning Volume 2009 ; 2009 >
+    au < exists ; 2010 ; 2010 ; The Journal of Practice Teaching and Learning Volume 2010 ; 2010 >
+    au < exists ; 2011 ; 2011 ; The Journal of Practice Teaching and Learning Volume 2011 ; 2011 >
+    au < exists ; 2013 ; 2013 ; The Journal of Practice Teaching and Learning Volume 2013 ; 2013 >
+    au < manifest ; 2014 ; 2014 ; The Journal of Practice Teaching and Learning Volume 2014 ; 2014 >
     au < expected ; 2015 ; 2015 ; The Journal of Practice Teaching and Learning Volume 2015 ; 2015 >
-    
-  }    
+
+  }
   
   {
   
@@ -71,15 +71,15 @@
 
     param[journal_id] = SWSSR
 
-    au < doNotProcess ; 2004 ; 2004 ; Social Work and Social Sciences Review Volume 2004 ; 2004 >
-    au < doNotProcess ; 2005 ; 2005 ; Social Work and Social Sciences Review Volume 2005 ; 2005 >
-    au < doNotProcess ; 2007 ; 2007 ; Social Work and Social Sciences Review Volume 2007 ; 2007 >
-    au < doNotProcess ; 2008 ; 2008 ; Social Work and Social Sciences Review Volume 2008 ; 2008 >
-    au < doNotProcess ; 2010 ; 2010 ; Social Work and Social Sciences Review Volume 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; 2011 ; Social Work and Social Sciences Review Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 2012 ; Social Work and Social Sciences Review Volume 2012 ; 2012 >
-    au < doNotProcess ; 2013 ; 2013 ; Social Work and Social Sciences Review Volume 2013 ; 2013 >
-    au < expected ; 2014 ; 2014 ; Social Work and Social Sciences Review Volume 2014 ; 2014 >
+    au < exists ; 2004 ; 2004 ; Social Work and Social Sciences Review Volume 2004 ; 2004 >
+    au < exists ; 2005 ; 2005 ; Social Work and Social Sciences Review Volume 2005 ; 2005 >
+    au < exists ; 2007 ; 2007 ; Social Work and Social Sciences Review Volume 2007 ; 2007 >
+    au < exists ; 2008 ; 2008 ; Social Work and Social Sciences Review Volume 2008 ; 2008 >
+    au < exists ; 2010 ; 2010 ; Social Work and Social Sciences Review Volume 2010 ; 2010 >
+    au < exists ; 2011 ; 2011 ; Social Work and Social Sciences Review Volume 2011 ; 2011 >
+    au < exists ; 2012 ; 2012 ; Social Work and Social Sciences Review Volume 2012 ; 2012 >
+    au < exists ; 2013 ; 2013 ; Social Work and Social Sciences Review Volume 2013 ; 2013 >
+    au < manifest ; 2014 ; 2014 ; Social Work and Social Sciences Review Volume 2014 ; 2014 >
     au < expected ; 2015 ; 2015 ; Social Work and Social Sciences Review Volume 2015 ; 2015 >
     
   }
@@ -94,8 +94,8 @@
     
     param[journal_id] = JSPW
 
-    au < doNotProcess ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
-    au < expected ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+    au < exists ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
+    au < manifest ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
     
   }
 
