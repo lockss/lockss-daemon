@@ -450,7 +450,7 @@
       au < finished ; crawling ; 2011 ; BMC Dermatology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Dermatology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Dermatology Volume 13 ; 13 >
-      au < ready ; exists ; 2014 ; BMC Dermatology Volume 14 ; 14 >
+      au < crawling ; exists ; 2014 ; BMC Dermatology Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Dermatology Volume 15 ; 15 >
 
     }
@@ -478,7 +478,7 @@
       au < finished ; crawling ; 2011 ; BMC Developmental Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Developmental Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Developmental Biology Volume 13 ; 13 >
-      au < ready ; exists ; 2014 ; BMC Developmental Biology Volume 14 ; 14 >
+      au < crawling ; exists ; 2014 ; BMC Developmental Biology Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Developmental Biology Volume 15 ; 15 >
      
     }
@@ -506,7 +506,7 @@
       au < crawling ; crawling ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Ear, Nose and Throat Disorders Volume 13 ; 13 >
-      au < ready ; exists ; 2014 ; BMC Ear, Nose and Throat Disorders Volume 14 ; 14 >
+      au < crawling ; exists ; 2014 ; BMC Ear, Nose and Throat Disorders Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Ear, Nose and Throat Disorders Volume 15 ; 15 >
 
     }
@@ -5458,7 +5458,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1916-0216
 
       au < crawling ; exists ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
-      au < manifest ; exists ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
+      au < crawling ; exists ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
       au < manifest ; exists ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 ; 44 >
 
     }
@@ -5494,7 +5494,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2052-3211
 
       au < crawling ; exists ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 6 ; 6 >
-      au < manifest ; exists ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 >
+      au < crawling ; exists ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 >
       au < manifest ; exists ; 2015 ; Journal of Pharmaceutical Policy and Practice Volume 8 ; 8 >
 
     }
@@ -5537,7 +5537,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
-      au < manifest ; exists ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
+      au < crawling ; exists ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
       au < manifest ; exists ; 2015 ; Journal of the International Society of Sports Nutrition Volume 12 ; 12 >
 
     }
@@ -5579,7 +5579,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 >
+      au < crawling ; exists ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Journal of Translational Medicine Volume 13 ; 13 >
 
     }
@@ -5617,7 +5617,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1678-9199
 
       au < crawling ; exists ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
-      au < manifest ; exists ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
+      au < crawling ; exists ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
       au < manifest ; exists ; 2015 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 21 ; 21 >
 
     }
@@ -5660,7 +5660,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
+      au < crawling ; exists ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Longevity & Healthspan Volume 4 ; 4 >
 
     }
@@ -5705,7 +5705,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Medical Gas Research Volume 3 ; 3 >
-      au < manifest ; exists ; 2014 ; Medical Gas Research Volume 4 ; 4 >
+      au < crawling ; exists ; 2014 ; Medical Gas Research Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Medical Gas Research Volume 5 ; 5 >
 
     }
@@ -5750,7 +5750,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
-      au < manifest ; exists ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
+      au < crawling ; exists ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Microbial Informatics and Experimentation Volume 5 ; 5 >
 
     }
@@ -5800,7 +5800,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Mobile DNA Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Mobile DNA Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Mobile DNA Volume 4 ; 4 >
-      au < manifest ; exists ; 2014 ; Mobile DNA Volume 5 ; 5 >
+      au < crawling ; exists ; 2014 ; Mobile DNA Volume 5 ; 5 >
       au < manifest ; exists ; 2015 ; Mobile DNA Volume 6 ; 6 >
 
     }
@@ -5835,7 +5835,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2052-8426
 
       au < crawling ; exists ; 2013 ; Molecular and Cellular Therapies Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; Molecular and Cellular Therapies Volume 2 ; 2 >
+      au < crawling ; exists ; 2014 ; Molecular and Cellular Therapies Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Molecular and Cellular Therapies Volume 3 ; 3 >
 
     }
@@ -5883,7 +5883,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Molecular Cancer Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Molecular Cancer Volume 12 ; 12 >
-      au < manifest ; exists ; 2014 ; Molecular Cancer Volume 13 ; 13 >
+      au < crawling ; exists ; 2014 ; Molecular Cancer Volume 13 ; 13 >
       au < manifest ; exists ; 2015 ; Molecular Cancer Volume 14 ; 14 >
 
     }
@@ -5927,7 +5927,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Molecular Neurodegeneration Volume 8 ; 8 >
-      au < manifest ; exists ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 >
+      au < crawling ; exists ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Molecular Neurodegeneration Volume 10 ; 10 >
       
     }
@@ -5967,7 +5967,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2051-3933
 
       au < crawling ; exists ; 2013 ; Movement Ecology Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; Movement Ecology Volume 2 ; 2 >
+      au < crawling ; exists ; 2014 ; Movement Ecology Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Movement Ecology Volume 3 ; 3 >
 
     }
@@ -6009,7 +6009,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; crawling ; 2011 ; Neural Development Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Neural Development Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Neural Development Volume 8 ; 8 >
-      au < manifest ; exists ; 2014 ; Neural Development Volume 9 ; 9 >
+      au < crawling ; exists ; 2014 ; Neural Development Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Neural Development Volume 10 ; 10 >
 
     }
@@ -6081,7 +6081,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; crawling ; 2011 ; Nutrition Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Nutrition Journal Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Nutrition Journal Volume 12 ; 12 >
-      au < manifest ; exists ; 2014 ; Nutrition Journal Volume 13 ; 13 >
+      au < crawling ; exists ; 2014 ; Nutrition Journal Volume 13 ; 13 >
       au < manifest ; exists ; 2015 ; Nutrition Journal Volume 14 ; 14 >
       
     }
