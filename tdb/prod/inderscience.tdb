@@ -1467,8 +1467,7 @@
       au < doNotProcess ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 >
       au < doNotProcess ; 2010-2013 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
-      au < manifest ; 2014 ; International Journal of Chinese Culture and Management Volume 4 ; 4 >
-      au < expected ; 2015 ; International Journal of Chinese Culture and Management Volume 5 ; 5 >
+      au < expected ; 2015 ; International Journal of Chinese Culture and Management Volume 4 ; 4 >
 
     }
 
@@ -1502,9 +1501,6 @@
       param[journal_id] = ijcb
 
       au < doNotProcess ; 2012 ; International Journal of Cognitive Biometrics Volume 1 ; 1 >
-      au < expected ; 2013 ; International Journal of Cognitive Biometrics Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Cognitive Biometrics Volume 3 ; 3 >
-      au < expected ; 2015 ; International Journal of Cognitive Biometrics Volume 4 ; 4 >
 
     }
 
@@ -1520,8 +1516,6 @@
       param[journal_id] = ijcps
 
       au < doNotProcess ; 2013 ; International Journal of Cognitive Performance Support Volume 1 ; 1 >
-      au < expected ; 2014 ; International Journal of Cognitive Performance Support Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Cognitive Performance Support Volume 3 ; 3 >
 
     }
 
@@ -1536,7 +1530,8 @@
 
       param[journal_id] = ijce
 
-      au < doNotProcess ; 2009 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
+      au < exists ; 2009-2014 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
+      au < expected ; 2015 ; International Journal of Collaborative Engineering Volume 2 ; 2 >
 
     }
 
@@ -1584,6 +1579,7 @@
       au < manifest ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 12 ; 12 >
       au < manifest ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 13 ; 13 >
       au < manifest ; 2015 ; International Journal of Communication Networks and Distributed Systems Volume 14 ; 14 >
+      au < expected ; 2015 ; International Journal of Communication Networks and Distributed Systems Volume 15 ; 15 >
 
     }
 
@@ -1599,8 +1595,7 @@
       param[journal_id] = ijcast
       comment[0] = title is not yet published on 4/11/2013
 
-      au < expected ; 2014 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Complexity in Applied Science and Engineering Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -1616,10 +1611,8 @@
       param[journal_id] = ijclm
 
       au < doNotProcess ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 >
-      au < doNotProcess ; 2012 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 >
-      au < expected ; 2013 ; International Journal of Complexity in Leadership and Management Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Complexity in Leadership and Management Volume 4 ; 4 >
-      au < expected ; 2015 ; International Journal of Complexity in Leadership and Management Volume 5 ; 5 >
+      au < exists ; 2012-2014 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Complexity in Leadership and Management Volume 3 ; 3 >
 
     }
 
@@ -1657,8 +1650,7 @@
       param[journal_id] = ijccia
       comment[0] = title is not yet published on 9/19/2013
 
-      au < expected ; 2014 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
 
     }
 
@@ -1675,8 +1667,9 @@
 
       au < doNotProcess ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
       au < doNotProcess ; 2011-2012 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
-      au < manifest ; 2013-2014 ; International Journal of Computational Economics and Econometrics Volume 3 ; 3 >
-      au < manifest ; 2014-2015 ; International Journal of Computational Economics and Econometrics Volume 4 ; 4 >
+      au < manifest ; 2013 ; International Journal of Computational Economics and Econometrics Volume 3 ; 3 >
+      au < manifest ; 2014 ; International Journal of Computational Economics and Econometrics Volume 4 ; 4 >
+      au < exists ; 2015 ; International Journal of Computational Economics and Econometrics Volume 4 ; 4 >
 
     }
 
