@@ -60,54 +60,6 @@ public class TestMultiScienceHtmlFilterFactory extends LockssTestCase {
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
   
-  // breadcrumbs
-  // http://multi-science.atypon.com/doi/ref/10.1260/0263-6174.32.10.775
-  private static final String withBreadcrumbs =
-      "<div class=\"block\">" +
-      "<ul class=\"breadcrumbs\">" +
-      "<li class=\"\"><a href=\"/\">Home</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/loi/jid\">ABC Journals</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/loi/jid\">issues</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"><a href=\"/toc/jid/26/1\">Volume 9, Issue 9</a>" +
-      "<span class=\"divider\">></span></li>" +
-      "<li class=\"\"> DOI: 11.1111/jid.2013.2 </li>" +
-      "</ul>" +
-      "</div>";  
-  
-    // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
-    // Current Issue, and the right sidebar top block of abs and ref
-    // http://multi-science.atypon.com/doi/abs/10.1260/0263-6174.32.10.821
-  private static final String withBodyEmphasis =
-      "<div class=\"block\">" +
-      "<div class=\"widget-body body body-emphasis \">" +
-      "<div class=\"pb-columns row-fluid\">" +
-      "<div data-pb-dropzone=\"center\">" +
-      "<div id=\"8b3\" class=\"widget general-heading none widget-none " +
-      "widget-compact-vertical\">" +
-      "<div id=\"bc8\" class=\"widget literatumCoverDisplayWidget " +
-      "alignCenter widget-none\">" +
-      "<div id=\"797\" class=\"widget literatumSerialDetails alignCenter " +
-      "widget-none widget-compact-all\">" +
-      "<div id=\"a60\" class=\"widget layout-two-columns none widget-none " +
-      "widget-compact-all\">" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<div class=\"pb-columns row-fluid \">" +
-      "<div class=\"pb-autoheight\" data-pb-dropzone=\"left\">" +
-      "<div id=\"e38\" class=\"widget general-html none widget-none " +
-      "widget-compact-all\">" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<ul>" +
-      "<li><a href=\"/toc/jid/0/0\">Ahead of print</a></li>" +
-      "<li><a href=\"/toc/jid/current\">Current issue</a></li>" +
-      "<li><a href=\"/loi/jid\">List of issues</a></li>" +
-      "</ul>" +
-      "</div></div>" +
-      "</div></div></div></div></div></div></div></div></div></div>" +
-      "</div>";     
-  
   private static final String withAriaRelevant =
       "<div class=\"block\">" +
       "<div class=\"tabs tabs-widget\" aria-relevant=\"additions\" " +
@@ -218,62 +170,35 @@ public class TestMultiScienceHtmlFilterFactory extends LockssTestCase {
       "widget-none\" >" +
       "</div>";
             
-   private static final String withArticleToolsExceptDownloadCitation2 =
-       "<div class=\"block\">" +  
-       "<section class=\"widget literatumArticleToolsWidget none " +
-       "margin-bottom-15px widget-regular  widget-border-toggle\" " +
-       "id=\"3a3\">" +
-       "<div class=\"articleTools\">" +
-       "<ul class=\"linkList blockLinks separators centered\">" +
-       "<li class=\"addToFavs\"><a href=\"/linktoaddfav\">" +
-       "Add to Fav</a></li>" +
-       "<li class=\"email\"><a href=\"/linktoemail\">Email friends</a></li>" +
-       "<li class=\"downloadCitations\">" +
-       "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
-       "Send to Citation Mgr</a>" +
-       "</li></ul></div>" +
-       "</section>" +
-       "</div>";
-  
-  private static final String articleToolsFilteredStr2 = 
-      "<section class=\"widget literatumArticleToolsWidget none " +
-      "margin-bottom-15px widget-regular widget-border-toggle\" >" +
-      "<div class=\"articleTools\">" +
-      "<ul class=\"linkList blockLinks separators centered\">" +
-      "<li class=\"downloadCitations\">" +
-      "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
-      "Send to Citation Mgr</a></li></ul></div></section>";
-
-// ?? use this block when manifest pages are up  
-//    private static final String manifestList =
-//        "<ul>" +
-//            "<li>" +
-//            "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
-//            "2012 (Vol. 123 Issue 4 Page 456-789)</a>" +
-//            "</li>" +
-//            "</ul>";
-//    private static final String manifestListFilteredStr =
-//        "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
-//            "2012 (Vol. 123 Issue 4 Page 456-789)</a>";
-//    
-//    private static final String nonManifestList1 =
-//        "<ul class=\"breadcrumbs\">" +
-//            "<li>" +
-//            "<a href=\"/toc/abcj/123/4\">Volume 123, Issue 4</a>" +
-//            "</li>" +
-//            "</ul>";
-//  private static final String nonManifestList1FilteredStr = "";
-//    
-//  private static final String nonManifestList2 =
-//      "<ul>" +
-//          "<li id=\"forthcomingIssue\">" +
-//          "<a href=\"/toc/abcj/123/5\">EarlyCite</a>" +
-//          "</li>" +
-//          "<li id=\"currIssue\">" +
-//          "<a href=\"/toc/abcj/199/1\">Current Issue</a>" +
-//          "</li>" +
-//          "</ul>";
-//  private static final String nonManifestList2FilteredStr = "";
+    private static final String manifestList =
+        "<ul>" +
+            "<li>" +
+            "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789)</a>" +
+            "</li>" +
+            "</ul>";
+    private static final String manifestListFilteredStr =
+        "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789)</a>";
+    
+    private static final String nonManifestList1 =
+        "<ul class=\"breadcrumbs\">" +
+            "<li>" +
+            "<a href=\"/toc/abcj/123/4\">Volume 123, Issue 4</a>" +
+            "</li>" +
+            "</ul>";
+  private static final String nonManifestList1FilteredStr = "";
+    
+  private static final String nonManifestList2 =
+      "<ul>" +
+          "<li id=\"forthcomingIssue\">" +
+          "<a href=\"/toc/abcj/123/5\">EarlyCite</a>" +
+          "</li>" +
+          "<li id=\"currIssue\">" +
+          "<a href=\"/toc/abcj/199/1\">Current Issue</a>" +
+          "</li>" +
+          "</ul>";
+  private static final String nonManifestList2FilteredStr = "";
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -322,8 +247,6 @@ public class TestMultiScienceHtmlFilterFactory extends LockssTestCase {
     extends TestMultiScienceHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new MultiScienceHtmlCrawlFilterFactory();
-      doFilterTest(mau, variantFact, withBreadcrumbs, filteredStr); 
-      doFilterTest(mau, variantFact, withBodyEmphasis, filteredStr); 
       doFilterTest(mau, variantFact, withAriaRelevant, filteredStr); 
       doFilterTest(mau, variantFact, withRelatedContent, filteredStr);      
       doFilterTest(mau, variantFact, withArticleToolsExceptDownloadCitation1, 
@@ -340,14 +263,12 @@ public class TestMultiScienceHtmlFilterFactory extends LockssTestCase {
                    publicationToolContainerFilteredStr);         
       doFilterTest(mau, variantFact, withArticleMetaDrop,
                    articleMetaDropFilteredStr);         
-      doFilterTest(mau, variantFact, withArticleToolsExceptDownloadCitation2, 
-                   articleToolsFilteredStr2);
-//      doFilterTest(eau, variantFact, manifestList, 
-//                   manifestListFilteredStr);
-//      doFilterTest(eau, variantFact, nonManifestList1, 
-//                   nonManifestList1FilteredStr);
-//      doFilterTest(eau, variantFact, nonManifestList2, 
-//                   nonManifestList2FilteredStr);
+      doFilterTest(mau, variantFact, manifestList, 
+                   manifestListFilteredStr);
+      doFilterTest(mau, variantFact, nonManifestList1, 
+                   nonManifestList1FilteredStr);
+      doFilterTest(mau, variantFact, nonManifestList2, 
+                   nonManifestList2FilteredStr);
     }
   }
   
