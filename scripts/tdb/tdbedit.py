@@ -128,7 +128,7 @@ under 'a.tdb.2', or if that backup file already exists, under 'a.tdb.3', etc.
 This backup behavior may change in the future.
 '''
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 import cStringIO
 import optparse
@@ -325,9 +325,9 @@ def _change_aus(options, auids, aus):
       errors = errors + 1
       sys.stderr.write('%s:%s: the status2 of %s \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, auid, au.status2, options.from2))
       continue # next change
-    # Perform requested changes
-    if options.from1: au.status, au.changed = options.to1, True
-    if options.from2: au.status2, au.changed = options.to2, True
+    # Perform requested changes if necessary
+    if options.from1 and au.status != options.to1: au.status, au.changed = options.to1, True
+    if options.from2 and au.status2 != options.to2: au.status2, au.changed = options.to2, True
   if errors > 0: sys.exit('Errors: %d (see above); exiting' % (errors,))
 
 def _alter_files(options, aus):
