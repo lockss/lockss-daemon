@@ -83,14 +83,11 @@ public class MultiScienceHtmlHashFilterFactory
         // http://multi-science.atypon.com/doi/abs/10.1260/1756-8250.6.1.43
         // http://multi-science.atypon.com/doi/ref/10.1260/1756-8250.6.1.61
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumPublicationContentWidget"),
-        // abs, ref - right side bar - Article/Chapter tools 
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-                                              "literatumArticleToolsWidget"),                                
+                                          "literatumPublicationContentWidget"),                               
         // showCitFormats
         // http://multi-science.atypon.com/action/
         //                      showCitFormats?doi=10.1260%2F1756-8250.6.1.43
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
                                                                   
     };
@@ -105,13 +102,7 @@ public class MultiScienceHtmlHashFilterFactory
         // Endocrine Society)                                      
         // http://multi-science.atypon.com/doi/abs/10.1260/1756-8250.6.1.43
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),                                               
-       // abs - all right column except Citation Mgr (download citations)
-       // http://multi-science.atypon.com/doi/abs/10.1260/1756-8250.6.1.43                                      
-       HtmlNodeFilters.allExceptSubtree(
-           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-             HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),                                           
+                                              "articleMetaDrop"),                                                                                     
                                                     
     };
     return super.createFilteredInputStream(au, in, encoding, 
