@@ -45,8 +45,8 @@ a) International Journal of Flow Control -
 b) Building Acoustics - 
    BASE_URL= http://multi-science.atypon.com/
    JID= ba
-   VOL= 20
-   toc: http://multi-science.atypon.com/toc/ba/20/1
+   VOL= 21
+   toc: http://multi-science.atypon.com/toc/ba/21/1
 c) International Journal of Aeroacoustics - 
    BASE_URL= http://multi-science.atypon.com/
    JID= ija
@@ -254,13 +254,26 @@ For an example, look at
 
 Note that if you need to use the scraping filter, you also need to be sure that the size information (eg "PDF Plus (237 KB)") on the TOC and possibly article page must be hashed as well. BaseAtypon probably handles this, but check.
  
-* * downloaded pdfs from 3 different journals in different days and they
-are idendical from "diff -au"
+* downloaded pdfs from 2 different journals in different days and they
+are different
+
+Control of a three-dimensional blunt body wake using low and high frequency pulsed jets
 http://multi-science.atypon.com/doi/pdf/10.1260/1756-8250.6.1.61
-http://multi-science.atypon.com/doi/pdf/10.1260/1351-010X.20.1.1
-http://multi-science.atypon.com/doi/pdf/10.1260/1351-010X.20.1.1
-so no pdf filter needed.
-  
+diff:
+1%2E61-15may2015.pdf
+7618a7619,7629
+> 298 0 obj
+> << /Author (Paul Bailey) /CreationDate (D:20140920025130+05'30') /Creator (QuarkXPress\(R\) 9.5; Atypon Systems PDFplus) /ModDate (D:20150407075423-08'00') /Producer (Acrobat Distiller 10.1.1 \(Macintosh\)) /Title (??Control of a three-dimensional blunt body wake using low and high frequency pulsed jets) >>
+> endobj
+> 329 0 obj
+> << /Type /XRef /Size 330 /Index [298 1] /Prev 116 /W [1 4 2] /Root 300 0 R /Info 298 0 R /ID [(\346\035\210\231\t1\266K\205\335\2719\331\242`\r) (\030\027\033\030\017#\(\(\026\034\031\032\030\007\220\325)] /Filter /FlateDecode /Length 15 >>
+> stream
+> x?cd?i???rendstream
+> endobj
+> startxref
+> 1870186
+> %%EOF
+
 -------------------------DONE-----------------------------
 
 And with that, your plugin is probably 95% of the way done.  
