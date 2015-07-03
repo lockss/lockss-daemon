@@ -46,15 +46,8 @@ public class MultiScienceHtmlCrawlFilterFactory
   static NodeFilter[] filters = new NodeFilter[] {
     // handled by parent:
     // toc previous/next issue and article - <td class="journalNavRightTd">
-    
     // toc, abs, ref - breadcrumbs
-    // http://multi-science.atypon.com/doi/ref/10.1260/0263-6174.32.10.775
-    HtmlNodeFilters.tagWithAttribute("ul", "class", "breadcrumbs"), 
-    // toc, abs, ref - panel under breadcrumbs with link to Ahead of print and
-    // Current Issue, or right sidebar top block of abs and ref
-    // http://multi-science.atypon.com/toc/ast/32/10
-    // http://multi-science.atypon.com/doi/abs/10.1260/0263-6174.32.10.821
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "body-emphasis"),
+
     // toc, abs, ref - right column most read/most cited
     // http://multi-science.atypon.com/doi/abs/10.1260/0263-6174.32.10.775
     HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
