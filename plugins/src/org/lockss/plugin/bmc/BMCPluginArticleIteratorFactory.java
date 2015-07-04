@@ -77,7 +77,7 @@ public class BMCPluginArticleIteratorFactory
     protected static class BMCPluginArticleIterator extends SubTreeArticleIterator {
     //http://www.biomedcentral.com/content/pdf/1472-6831-12-60.pdf
     //http://www.biomedcentral.com/content/pdf/1471-2253-14-S1-A12.pdf
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([\\d]+-[\\d]+)-([\\d]+)-([\\dS]+)(-([\\dA-Z]+))?\\.pdf$", Pattern.CASE_INSENSITIVE);
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([\\d]+-[\\dXx]+)-([\\d]+)-([\\dS]+)(-([\\dA-Z]+))?\\.pdf$", Pattern.CASE_INSENSITIVE);
 
     public BMCPluginArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
