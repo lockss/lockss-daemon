@@ -937,7 +937,7 @@
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 66 ; 66 >
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 67 ; 67 >
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 68 ; 68 >
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 69 ; 69 >
+    au < testing ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 69 ; 69 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 70 ; 70 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 71 ; 71 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 72 ; 72 >
@@ -946,6 +946,18 @@
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 75 ; 75 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 76 ; 76 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 77 ; 77 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 78 ; 78 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 79 ; 79 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 80 ; 80 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 81 ; 81 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 82 ; 82 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 83 ; 83 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 84 ; 84 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 85 ; 85 >
+    au < exists ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 86 ; 86 >
+    au < expected ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 87 ; 87 >
+    au < expected ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 88 ; 88 >
+    au < expected ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 89 ; 89 >
 
   }
 
@@ -3261,7 +3273,7 @@
     au < finished ; crawling ; 2011 ; Physics Education Volume 46 ; 46 > 
     au < ingNotReady ; exists ; 2012 ; Physics Education Volume 47 ; 47 > 
     au < crawling ; exists ; 2013 ; Physics Education Volume 48 ; 48 > 
-    au < testing ; exists ; 2014 ; Physics Education Volume 49 ; 49 > 
+    au < ready ; exists ; 2014 ; Physics Education Volume 49 ; 49 > 
     au < manifest ; exists ; 2015 ; Physics Education Volume 50 ; 50 > 
 
   }
