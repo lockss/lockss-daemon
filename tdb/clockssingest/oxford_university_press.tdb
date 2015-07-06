@@ -5797,7 +5797,7 @@
     param[base_url] = http://eurheartj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; crawling ; 2008 ; European Heart Journal Volume 29 [superseded] ; 29 ; >
+    au < superseded ; down ; 2008 ; European Heart Journal Volume 29 [superseded] ; 29 ; >
     au < zapped ; finished ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
 
     }
