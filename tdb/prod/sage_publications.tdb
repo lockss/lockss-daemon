@@ -14088,6 +14088,8 @@
         param[base_url] = http://gph.sagepub.com/
 
         au < manifest ; 2014 ; Global Pediatric Health Volume 1 ; 1 >
+        au < exists ; 2015 ; Global Pediatric Health Volume 2 ; 2 >
+
     }
 
     {
@@ -14103,6 +14105,8 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2014 ; Global Qualitative Nursing Research Volume 1 ; 1 >
+        au < exists ; 2015 ; Global Qualitative Nursing Research Volume 2 ; 2 >
+
     }
 
     {
@@ -20937,6 +20941,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
         au < manifest ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 >
         au < manifest ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 >
+        au < expected ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 >
 
       }
 
@@ -27964,6 +27969,8 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 >
+      au < expected ; 2015 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 2 ; 2 >
+
     }
 
     {
@@ -47506,6 +47513,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Clinical Ethics Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Clinical Ethics Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; expected ; 2015 ; Clinical Ethics Volume 10 ; 10 >
 
       }
 
@@ -48193,6 +48201,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Health Services Management Research Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Health Services Management Research Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Health Services Management Research Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; expected ; 2015 ; Health Services Management Research Volume 28 ; 28 >
 
       }
 
@@ -48355,6 +48364,7 @@ comment[mpj] = now published by Brill
 
         au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal of Green Nanotechnology Volume 3 ; 3 >
 
       }
 
