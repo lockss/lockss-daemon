@@ -4736,7 +4736,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2051-1426
 
       au < crawling ; exists ; 2013 ; Journal for ImmunoTherapy of Cancer Volume 1 ; 1 >
-      au < testing ; exists ; 2014 ; Journal for ImmunoTherapy of Cancer Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; Journal for ImmunoTherapy of Cancer Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Journal for ImmunoTherapy of Cancer Volume 3 ; 3 >
 
     }
@@ -4753,7 +4753,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2012 ; Journal of Animal Science and Biotechnology Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Journal of Animal Science and Biotechnology Volume 4 ; 4 >
-      au < testing ; exists ; 2014 ; Journal of Animal Science and Biotechnology Volume 5 ; 5 >
+      au < ready ; exists ; 2014 ; Journal of Animal Science and Biotechnology Volume 5 ; 5 >
       au < manifest ; exists ; 2015 ; Journal of Animal Science and Biotechnology Volume 6 ; 6 >
 
     }
@@ -4769,7 +4769,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.janimscitechnol.com/
       param[journal_issn] = 2055-0391
 
-      au < testing ; exists ; 2014 ; Journal of Animal Science and Technology Volume 56 ; 56 >
+      au < ready ; exists ; 2014 ; Journal of Animal Science and Technology Volume 56 ; 56 >
       au < manifest ; exists ; 2015 ; Journal of Animal Science and Technology Volume 57 ; 57 >
 
     }
