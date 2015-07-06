@@ -179,6 +179,7 @@
 
     # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
     # See https://dl.sciencesocieties.org/publications/nse
+    comment[no_toc] = this journal is not formatted like the others and does not have toc pages which we are using as the manifest and permission page.
     
     param[journal_id] = nse
 

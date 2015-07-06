@@ -48,11 +48,12 @@
       
       param[base_url] = http://blake.lib.rochester.edu/blakeojs/
       param[journal_id] = blake
+      comment[notReady] = subscription content. Publisher adds unique IP address of crawler to most pages.
 
-      au < testing ; 2011 ; Blake An Illustrated Quarterly Volume 45 ; 45 ; 2011 >
-      au < testing ; 2012 ; Blake An Illustrated Quarterly Volume 45-46 ; 45-46 ; 2012 >
-      au < testing ; 2013 ; Blake An Illustrated Quarterly Volume 46-47 ; 46-47 ; 2013 >
-      au < testing ; 2014 ; Blake An Illustrated Quarterly Volume 47-48 ; 47-48 ; 2014 >
+      au < notReady ; 2011 ; Blake An Illustrated Quarterly Volume 45 ; 45 ; 2011 >
+      au < notReady ; 2012 ; Blake An Illustrated Quarterly Volume 45-46 ; 45-46 ; 2012 >
+      au < notReady ; 2013 ; Blake An Illustrated Quarterly Volume 46-47 ; 46-47 ; 2013 >
+      au < notReady ; 2014 ; Blake An Illustrated Quarterly Volume 47-48 ; 47-48 ; 2014 >
       au < manifest ; 2015 ; Blake An Illustrated Quarterly Volume 48-49 ; 48-49 ; 2015 >
 
   }
