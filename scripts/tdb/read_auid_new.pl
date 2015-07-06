@@ -21,6 +21,7 @@ my $igi_tag = "/gateway/issue/";
 my $total_manifests = 0;
 my $total_missing = 0;
 my $total_missing_plugin = 0;
+my $datestring = localtime();
 
 # Set up "cookie jar" to hold session cookies for Web access.
 # Don't save these cookies from run to run.
@@ -1349,6 +1350,7 @@ while (my $line = <>) {
     #printf("%s\n",decode_entities($tmp));
   }
 }
+printf("*Today: %s\n", $datestring);
 printf("*Total manifests found: %d\n", $total_manifests);
 printf("*Total missing manifests: %d\n", $total_missing);
 printf("*Total AUs with unknown plugin: %d\n", $total_missing_plugin);
