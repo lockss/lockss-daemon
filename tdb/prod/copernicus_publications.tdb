@@ -222,6 +222,7 @@
       param[home_url] = http://www.astra-proceedings.net/
 
       au < manifest ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
+      au < expected ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 >
 
    }
     
@@ -949,6 +950,7 @@
       au < manifest ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 >
       au < manifest ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 >
       au < manifest ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 >
+      au < exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 >
     
    }
 
@@ -1041,6 +1043,15 @@
       au < manifest ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 >
       au < manifest ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 >
       au < manifest ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 >
+      au < exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 >
+
      }
    }
 
