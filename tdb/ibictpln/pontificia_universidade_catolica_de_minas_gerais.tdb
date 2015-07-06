@@ -115,6 +115,7 @@
       au < released ; 2012 ; 13 ; Cadernos de História Volume 2012 [issn 2237-8871] ; 2012 ; >
       au < released ; 2013 ; 14 ; Cadernos de História Volume 2013 [issn 2237-8871] ; 2013 ; >
       au < released ; 2014 ; 15 ; Cadernos de História Volume 2014 [issn 2237-8871] ; 2014 ; >
+      au < manifest ; 2015 ; 16 ; Cadernos de História Volume 2014 [issn 2237-8871] ; 2015 ; >
 
   }
 
@@ -129,6 +130,7 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = conjuntura
 
+      au < manifest ; 2006 ; 3 ; Conjuntura Internacional Volume 2006 ; 2006 ; >
       au < manifest ; 2007 ; 4 ; Conjuntura Internacional Volume 2007 ; 2007 ; >
       au < manifest ; 2008 ; 5 ; Conjuntura Internacional Volume 2008 ; 2008 ; >
       au < manifest ; 2009 ; 6 ; Conjuntura Internacional Volume 2009 ; 2009 ; >
