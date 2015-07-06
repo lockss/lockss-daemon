@@ -116,23 +116,21 @@ AUs with status 'manifest;exists' or 'manifest;expected' or 'ready;exists' or
 'ready;expected'.
 
 It is an error to request for an AU to be changed from one or more statuses to
-some other status if it turns out the AU is not in any of the one or more given
+some target status if it turns out the AU is not in any of the one or more given
 statuses. In other words, if you request that an AU with status2 'manifest' or
-'crawling' be changed to some other status2 and one of the AUs you specify is
+'crawling' be changed to some target status2 and one of the AUs you specify is
 found to be in status2 'exists', an error will be reported.
 
 If all change requests are valid, the corresponding TDB files will be altered.
 A copy of the original TDB file is made first. For a file named 'a.tdb', the
-backup copy is made under 'a.tdb.1', or if that backup file already exists,
-under 'a.tdb.2', or if that backup file already exists, under 'a.tdb.3', etc.
-This backup behavior may change in the future.
+backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
+overwritten.
 '''
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 import cStringIO
 import optparse
-import os
 import re
 import subprocess
 import sys
@@ -349,9 +347,7 @@ def _alter_files(options, aus):
     lines = f.readlines()
     f.close()
     # Copy into backup file
-    i = 1
-    while os.access('%s.%d' % (touch_file, i), os.F_OK): i = i + 1
-    fbak = open('%s.%d' % (touch_file, i), 'w')
+    fbak = open('%s.bak' % (touch_file,), 'w')
     fbak.writelines(lines)
     fbak.close()
     # Process AUs from that file
