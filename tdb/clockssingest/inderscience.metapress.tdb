@@ -267,7 +267,7 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
       au < down ; frozen ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
       au < down ; frozen ; 2011-2012 ; International Journal of Accounting and Finance Volume 3 ; 3 >
-      au < superseded ; frozen ; 2013 ; International Journal of Accounting and Finance Volume 4 [superseded] ; 4 >
+      au < superseded ; down ; 2013 ; International Journal of Accounting and Finance Volume 4 [superseded] ; 4 >
 
     }
 
@@ -397,7 +397,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
       au < down ; frozen ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
-      au < superseded ; frozen ; 2013 ; International Journal of Advanced Media and Communication Volume 5 [superseded] ; 5 >
+      au < superseded ; down ; 2013 ; International Journal of Advanced Media and Communication Volume 5 [superseded] ; 5 >
 
     }
 
@@ -1523,7 +1523,7 @@
       param[journal_issn] = 1759-0264
       
       au < zapped ; finished ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 >
-      au < superseded ; frozen ; 2012 ; International Journal of Complexity in Leadership and Management Volume 2 [superseded] ; 2 >
+      au < superseded ; down ; 2012 ; International Journal of Complexity in Leadership and Management Volume 2 [superseded] ; 2 >
 
     }
 
