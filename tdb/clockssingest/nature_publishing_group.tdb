@@ -2578,8 +2578,8 @@
      
      comment[error] = manifest for 2010 have links for 2012. 2011 have links for 2010. 2014 have links for 2013. 2015 have links for 2013. PD-1244.
 
-    au < notReady ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
-    au < ingNotReady ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
+    au < crawling ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
+    au < crawling ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
     au < crawling ; exists ; 2012 ; Nature Communications Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
     au < notReady ; exists ; 2014 ; Nature Communications Volume 5 ; 2014 ; 5 >
