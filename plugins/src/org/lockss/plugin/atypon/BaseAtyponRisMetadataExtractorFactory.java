@@ -131,6 +131,23 @@ implements FileMetadataExtractorFactory {
           am.put(MetadataField.FIELD_ARTICLE_TITLE, am.getRaw("TI"));
         }
       }
+      
+      /*
+       * set the appropriate article type once the daemon passes along the TY
+       */
+      String ris_type;
+      if ((ris_type = am.getRaw("TY"))!= null) {
+        if ("CHAP".equals(ris_type)) {
+          am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
+        } else if ("BOOK".equals(ris_type)) {
+          am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+          /* the default uses existence of start or end page to determin chapter and Atypon uses
+           * sp to indicate #of pages in the case of a whole book - so set this explicitly
+           */
+        }
+        /* else it will default to ARTICLE_TYPE_JOURNALARTICLE */
+      }
+      
            
       // Only emit if this item is likely to be from this AU
       // protect against counting overcrawled articles
