@@ -440,7 +440,7 @@
     au < crawling ; exists ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 >
     au < crawling ; exists ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 >
     au < manifest ; exists ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 >
-    au < expected ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 >
+    au < manifest ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 >
 
   }
 
@@ -1214,7 +1214,7 @@
     au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 >
     au < crawling ; exists ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 >
     au < crawling ; exists ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 >
-    au < expected ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 >
+    au < manifest ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 >
   }
 
   {
@@ -1757,7 +1757,7 @@
     au < crawling ; exists ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 >
     au < crawling ; exists ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 >
     au < manifest ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 >
-    au < expected ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 >
+    au < manifest ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 >
 
   }
 
@@ -2415,7 +2415,7 @@
     au < manifest ; exists ; 2015 ; Nature Volume 520 ; 2015 ; 520 >
     au < manifest ; exists ; 2015 ; Nature Volume 521 ; 2015 ; 521 >
     au < manifest ; exists ; 2015 ; Nature Volume 522 ; 2015 ; 522 >
-    au < expected ; exists ; 2015 ; Nature Volume 523 ; 2015 ; 523 >
+    au < manifest ; exists ; 2015 ; Nature Volume 523 ; 2015 ; 523 >
     au < expected ; exists ; 2015 ; Nature Volume 524 ; 2015 ; 524 >
     au < expected ; exists ; 2015 ; Nature Volume 525 ; 2015 ; 525 >
     au < expected ; exists ; 2015 ; Nature Volume 526 ; 2015 ; 526 >
@@ -3944,7 +3944,7 @@
     au < manifest ; exists ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 >
     au < manifest ; exists ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 >
     au < exists ; exists ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 >
-    au < wanted ; exists ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 >
+    au < testing ; exists ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 >
     au < manifest ; exists ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 >
 
   }

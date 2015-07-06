@@ -46,7 +46,7 @@
     param[journal_id] = fc
 
     au < exists ; exists ; 2011 ; Foodchain Volume 1 ; 1 >
-    au < exists ; exists ; 2012 ; Foodchain Volume 2 ; 2 >
+    au < manifest ; exists ; 2012 ; Foodchain Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2013 ; Foodchain Volume 3 ; 3 >
     au < exists ; exists ; 2014 ; Foodchain Volume 4 ; 4 >
     au < exists ; exists ; 2015 ; Foodchain Volume 5 ; 5 >
@@ -109,23 +109,23 @@
     au < exists ; exists ; 1996-1997 ; Waterlines Volume 15 ; 15 >
     au < exists ; exists ; 1997-1998 ; Waterlines Volume 16 ; 16 >
     au < exists ; exists ; 1998-1999 ; Waterlines Volume 17 ; 17 >
-    au < exists ; exists ; 1999-2000 ; Waterlines Volume 18 ; 18 >
-    au < exists ; exists ; 2000-2001 ; Waterlines Volume 19 ; 19 >
-    au < exists ; exists ; 2001-2002 ; Waterlines Volume 20 ; 20 >
-    au < exists ; exists ; 2002-2003 ; Waterlines Volume 21 ; 21 >
-    au < exists ; exists ; 2003-2004 ; Waterlines Volume 22 ; 22 >
-    au < exists ; exists ; 2004-2005 ; Waterlines Volume 23 ; 23 >
-    au < exists ; exists ; 2005-2006 ; Waterlines Volume 24 ; 24 >
-    au < exists ; exists ; 2006-2007 ; Waterlines Volume 25 ; 25 >
-    au < exists ; exists ; 2007 ; Waterlines Volume 26 ; 26 >
-    au < exists ; exists ; 2008 ; Waterlines Volume 27 ; 27 >
-    au < exists ; exists ; 2009 ; Waterlines Volume 28 ; 28 >
-    au < exists ; exists ; 2010 ; Waterlines Volume 29 ; 29 >
-    au < exists ; exists ; 2011 ; Waterlines Volume 30 ; 30 >
-    au < exists ; exists ; 2012 ; Waterlines Volume 31 ; 31 >
+    au < manifest ; exists ; 1999-2000 ; Waterlines Volume 18 ; 18 >
+    au < manifest ; exists ; 2000-2001 ; Waterlines Volume 19 ; 19 >
+    au < manifest ; exists ; 2001-2002 ; Waterlines Volume 20 ; 20 >
+    au < manifest ; exists ; 2002-2003 ; Waterlines Volume 21 ; 21 >
+    au < manifest ; exists ; 2003-2004 ; Waterlines Volume 22 ; 22 >
+    au < manifest ; exists ; 2004-2005 ; Waterlines Volume 23 ; 23 >
+    au < manifest ; exists ; 2005-2006 ; Waterlines Volume 24 ; 24 >
+    au < manifest ; exists ; 2006-2007 ; Waterlines Volume 25 ; 25 >
+    au < manifest ; exists ; 2007 ; Waterlines Volume 26 ; 26 >
+    au < manifest ; exists ; 2008 ; Waterlines Volume 27 ; 27 >
+    au < manifest ; exists ; 2009 ; Waterlines Volume 28 ; 28 >
+    au < manifest ; exists ; 2010 ; Waterlines Volume 29 ; 29 >
+    au < manifest ; exists ; 2011 ; Waterlines Volume 30 ; 30 >
+    au < manifest ; exists ; 2012 ; Waterlines Volume 31 ; 31 >
     au < doNotProcess ; doNotProcess ; 2013 ; Waterlines Volume 32 ; 32 >
-    au < exists ; exists ; 2014 ; Waterlines Volume 33 ; 33 >
-    au < expected ; exists ; 2015 ; Waterlines Volume 34 ; 34 >
+    au < manifest ; exists ; 2014 ; Waterlines Volume 33 ; 33 >
+    au < manifest ; exists ; 2015 ; Waterlines Volume 34 ; 34 >
 
   }
 
