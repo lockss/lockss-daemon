@@ -1739,8 +1739,7 @@
       param[journal_id] = ijcmh
       comment[0] = title is not yet published on 9/19/2013
 
-      au < expected ; 2014 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Computational Medicine and Healthcare Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
 
     }
 
@@ -1756,8 +1755,7 @@
       param[journal_id] = ijcmme
       comment[0] = title is not yet published on 9/19/2013
 
-      au < expected ; 2014 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Computational Microbiology and Medical Ecology Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
 
     }
 
@@ -1797,8 +1795,7 @@
       param[journal_id] = ijcsyse
 
       au < doNotProcess ; 2012-2013 ; International Journal of Computational Systems Engineering Volume 1 ; 1 >
-      au < manifest ; 2014 ; International Journal of Computational Systems Engineering Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Computational Systems Engineering Volume 3 ; 3 >
+      au < manifest ; 2015 ; International Journal of Computational Systems Engineering Volume 2 ; 2 >
 
     }
 
@@ -1892,7 +1889,7 @@
       au < manifest ; 2013 ; International Journal of Computer Applications in Technology Volume 48 ; 48 >
       au < manifest ; 2014 ; International Journal of Computer Applications in Technology Volume 49 ; 49 >
       au < manifest ; 2014 ; International Journal of Computer Applications in Technology Volume 50 ; 50 >
-      au < manifest ; 2014 ; International Journal of Computer Applications in Technology Volume 51 ; 51 >
+      au < manifest ; 2015 ; International Journal of Computer Applications in Technology Volume 51 ; 51 >
       au < expected ; 2015 ; International Journal of Computer Applications in Technology Volume 52 ; 52 >
 
     }
@@ -1927,8 +1924,9 @@
       au < doNotProcess ; 2007 ; International Journal of Computing Science and Mathematics Volume 1 ; 1 >
       au < doNotProcess ; 2008-2009 ; International Journal of Computing Science and Mathematics Volume 2 ; 2 >
       au < doNotProcess ; 2010-2012 ; International Journal of Computing Science and Mathematics Volume 3 ; 3 >
-      au < manifest ; 2013-2014 ; International Journal of Computing Science and Mathematics Volume 4 ; 4 >
-      au < manifest ; 2014-2015 ; International Journal of Computing Science and Mathematics Volume 5 ; 5 >
+      au < manifest ; 2013 ; International Journal of Computing Science and Mathematics Volume 4 ; 4 >
+      au < manifest ; 2014 ; International Journal of Computing Science and Mathematics Volume 5 ; 5 >
+      au < exists ; 2015 ; International Journal of Computing Science and Mathematics Volume 6 ; 6 >
 
     }
 
@@ -1981,9 +1979,8 @@
 
       param[journal_id] = ijconvc
 
-      au < manifest ; 2013 ; International Journal of Convergence Computing Volume 1 ; 1 >
-      au < expected ; 2014 ; International Journal of Convergence Computing Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Convergence Computing Volume 3 ; 3 >
+      au < manifest ; 2013-2014 ; International Journal of Convergence Computing Volume 1 ; 1 >
+      au < expected ; 2015 ; International Journal of Convergence Computing Volume 2 ; 2 >
 
     }
 
@@ -2102,25 +2099,7 @@
       param[journal_id] = ijcm
       comment[0] = title is not yet published on 9/30/2013
 
-      au < expected ; 2014 ; International Journal of Cultural Management Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Cultural Management Volume 2 ; 2 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Network Science ;
-        issn = 2048-2175 ;
-        eissn = 2048-2183 ;
-        issnl = 2048-2175
-      >
-
-      param[journal_id] = ijns
-      comment[0] = title is not yet published, 9/19/2013
-
-      au < expected ; 2014 ; International Journal of Network Science Volume 4 ; 4 >
-      au < expected ; 2015 ; International Journal of Network Science Volume 5 ; 5 >
+      au < expected ; 2015 ; International Journal of Cultural Management Volume 1 ; 1 >
 
     }
 
@@ -2167,6 +2146,7 @@
       au < manifest ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 9 ; 9 >
       au < manifest ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
       au < manifest ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
+      au < exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
 
     }
 
@@ -2206,9 +2186,8 @@
       au < doNotProcess ; 2010 ; International Journal of Decision Sciences, Risk and Management Volume 2 ; 2 >
       au < doNotProcess ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; International Journal of Decision Sciences, Risk and Management Volume 4 ; 4 >
-      au < manifest ; 2013 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 >
-      au < expected ; 2015 ; International Journal of Decision Sciences, Risk and Management Volume 7 ; 7 >
+      au < manifest ; 2013-2014 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 >
+      au < expected ; 2015 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 >
 
     }
 
@@ -2227,10 +2206,8 @@
       au < doNotProcess ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
       au < doNotProcess ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
       au < doNotProcess ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
-      au < doNotProcess ; 2012 ; International Journal of Design Engineering Volume 5 ; 5 >
-      au < expected ; 2013 ; International Journal of Design Engineering Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Design Engineering Volume 7 ; 7 >
-      au < expected ; 2015 ; International Journal of Design Engineering Volume 8 ; 8 >
+      au < exists ; 2012-2014 ; International Journal of Design Engineering Volume 5 ; 5 >
+      au < expected ; 2015 ; International Journal of Design Engineering Volume 6 ; 6 >
 
     }
 
@@ -2261,8 +2238,7 @@
       param[journal_id] = ijdet
       comment[0] = title is not yet published on 9/19/2013
 
-      au < expected ; 2014 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Digital Enterprise Technology Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
 
     }
 
@@ -2277,7 +2253,7 @@
 
       param[journal_id] = IJDH
 
-      au < expected ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
+      au < exists ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -2313,8 +2289,7 @@
       au < doNotProcess ; 2009 ;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
       au < doNotProcess ; 2011 ;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; International Journal of Dynamical Systems and Differential Equations Volume 4 ; 4 >
-      au < manifest ; 2014 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
-      au < expected ; 2015 ; International Journal of Dynamical Systems and Differential Equations Volume 6 ; 6 >
+      au < manifest ; 2014-2015 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
 
     }
 
@@ -2380,6 +2355,7 @@
       au < manifest ; 2014 ; International Journal of Economics and Business Research Volume 7 ; 7 >
       au < manifest ; 2014 ; International Journal of Economics and Business Research Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Economics and Business Research Volume 9 ; 9 >
+      au < exists ; 2015 ; International Journal of Economics and Business Research Volume 10 ; 10 >
 
     }
 
@@ -2543,8 +2519,7 @@
       au < doNotProcess ; 2011 ; International Journal of Electronic Governance Volume 4 ; 4 >
       au < doNotProcess ; 2012 ; International Journal of Electronic Governance Volume 5 ; 5 >
       au < manifest ; 2013 ; International Journal of Electronic Governance Volume 6 ; 6 >
-      au < manifest ; 2014 ; International Journal of Electronic Governance Volume 7 ; 7 >
-      au < expected ; 2015 ; International Journal of Electronic Governance Volume 8 ; 8 >
+      au < manifest ; 2014-2015 ; International Journal of Electronic Governance Volume 7 ; 7 >
 
     }
 
@@ -2565,10 +2540,8 @@
       au < doNotProcess ; 2008 ; International Journal of Electronic Healthcare Volume 4 ; 4 >
       au < doNotProcess ; 2009-2010 ; International Journal of Electronic Healthcare Volume 5 ; 5 >
       au < doNotProcess ; 2011 ; International Journal of Electronic Healthcare Volume 6 ; 6 >
-      au < doNotProcess ; 2012 ; International Journal of Electronic Healthcare Volume 7 ; 7 >
-      au < expected ; 2013 ; International Journal of Electronic Healthcare Volume 8 ; 8 >
-      au < expected ; 2014 ; International Journal of Electronic Healthcare Volume 9 ; 9 >
-      au < expected ; 2015 ; International Journal of Electronic Healthcare Volume 10 ; 10 >
+      au < doNotProcess ; 2012-2014 ; International Journal of Electronic Healthcare Volume 7 ; 7 >
+      au < expected ; 2015 ; International Journal of Electronic Healthcare Volume 8 ; 8 >
 
     }
 
@@ -2626,8 +2599,7 @@
       param[journal_id] = ijetrade
       comment[0] = title is not yet published on 9/20/2013
 
-      au < expected ; 2014 ; International Journal of Electronic Trade Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Electronic Trade Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Electronic Trade Volume 1 ; 1 >
 
     }
 
@@ -2641,11 +2613,8 @@
       >
 
       param[journal_id] = ijet
-      comment[0] = no issue in 2012
 
       au < doNotProcess ; 2011 ; International Journal of Electronic Transport Volume 1 ; 1 >
-      au < expected ; 2014 ; International Journal of Electronic Transport Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Electronic Transport Volume 3 ; 3 >
 
     }
 
@@ -2659,7 +2628,6 @@
       >
 
       param[journal_id] = ijes
-      comment[0] = no issue in 2011, 2012
 
       au < doNotProcess ; 2005 ; International Journal of Embedded Systems Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; International Journal of Embedded Systems Volume 2 ; 2 >
@@ -2794,8 +2762,7 @@
       param[journal_id] = ijesii
       comment[0] = title is not yet published on 9/20/2013
 
-      au < expected ; 2014 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Enterprise Systems Integration and Interoperability Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
 
     }
 
@@ -2811,8 +2778,7 @@
       param[journal_id] = ijenttm
       comment[0] = title is not yet published on 9/20/2013
 
-      au < expected ; 2014 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Entertainment Technology and Management Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
 
     }
 
@@ -2866,9 +2832,7 @@
       au < doNotProcess ; 2012 ; International Journal of Entrepreneurship and Innovation Management Volume 16 ; 16 >
       au < manifest ; 2013 ; International Journal of Entrepreneurship and Innovation Management Volume 17 ; 17 >
       au < manifest ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 18 ; 18 >
-      au < manifest ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 19 ; 19 >
-      au < expected ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 20 ; 20 >
-      au < expected ; 2015 ; International Journal of Entrepreneurship and Innovation Management Volume 21 ; 21 >
+      au < manifest ; 2015 ; International Journal of Entrepreneurship and Innovation Management Volume 19 ; 19 >
 
     }
 
@@ -2907,6 +2871,8 @@
       au < manifest ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 22 ; 22 >
       au < manifest ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 23 ; 23 >
       au < manifest ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 24 ; 24 >
+      au < exists ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 25 ; 25 >
+      au < expected ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 26 ; 26 >
 
     }
 
@@ -2998,7 +2964,10 @@
       au < manifest ; 2013 ; International Journal of Environment and Pollution Volume 53 ; 53 >
       au < manifest ; 2014 ; International Journal of Environment and Pollution Volume 54 ; 54 >
       au < manifest ; 2014 ; International Journal of Environment and Pollution Volume 55 ; 55 >
-      au < manifest ; 2015 ; International Journal of Environment and Pollution Volume 56 ; 56 >
+      au < manifest ; 2014 ; International Journal of Environment and Pollution Volume 56 ; 56 >
+      au < expected ; 2015 ; International Journal of Environment and Pollution Volume 57 ; 57 >
+      au < expected ; 2015 ; International Journal of Environment and Pollution Volume 58 ; 58 >
+      au < expected ; 2015 ; International Journal of Environment and Pollution Volume 59 ; 59 >
 
     }
 
@@ -3056,6 +3025,7 @@
       au < manifest ; 2014 ; International Journal of Environment and Waste Management Volume 13 ; 13 >
       au < manifest ; 2014 ; International Journal of Environment and Waste Management Volume 14 ; 14 >
       au < manifest ; 2015 ; International Journal of Environment and Waste Management Volume 15 ; 15 >
+      au < expected ; 2015 ; International Journal of Environment and Waste Management Volume 16 ; 16 >
 
     }
 
@@ -3109,7 +3079,8 @@
 
       param[journal_id] = ijepdm
 
-      au < doNotProcess ; 2010 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 >
+      au < exists ; 2010-2014 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 >
+      au < expected ; 2015 ; International Journal of Environmental Policy and Decision Making Volume 2 ; 2 >
 
     }
 
@@ -3172,6 +3143,7 @@
       au < manifest ; 2014 ; International Journal of Exergy Volume 14 ; 14 >
       au < manifest ; 2014 ; International Journal of Exergy Volume 15 ; 15 >
       au < manifest ; 2015 ; International Journal of Exergy Volume 16 ; 16 >
+      au < exists ; 2015 ; International Journal of Exergy Volume 17 ; 17 >
 
     }
 
@@ -3188,6 +3160,7 @@
 
       au < doNotProcess ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
       au < doNotProcess ; 2012-2014 ; International Journal of Experimental and Computational Biomechanics Volume 2 ; 2 >
+      au < exists ; 2015 ; International Journal of Experimental and Computational Biomechanics Volume 3 ; 3 >
 
     }
 
@@ -3221,9 +3194,8 @@
 
       param[journal_id] = ijferm
 
-      au < manifest ; 2013 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 >
-      au < manifest ; 2014 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Financial Engineering and Risk Management Volume 3 ; 3 >
+      au < manifest ; 2013-2014 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 >
+      au < manifest ; 2015 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 >
 
     }
 
@@ -3277,14 +3249,12 @@
       >
 
       param[journal_id] = ijfsnph
-      comment[0] = no issue on 2012, 2013
 
       au < doNotProcess ; 2008 ; International Journal of Food Safety, Nutrition and Public Health Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; International Journal of Food Safety, Nutrition and Public Health Volume 2 ; 2 >
       au < doNotProcess ; 2010 ; International Journal of Food Safety, Nutrition and Public Health Volume 3 ; 3 >
       au < doNotProcess ; 2011 ; International Journal of Food Safety, Nutrition and Public Health Volume 4 ; 4 >
-      au < manifest ; 2014 ; International Journal of Food Safety, Nutrition and Public Health Volume 5 ; 5 >
-      au < expected ; 2015 ; International Journal of Food Safety, Nutrition and Public Health Volume 6 ; 6 >
+      au < manifest ; 2014-2015 ; International Journal of Food Safety, Nutrition and Public Health Volume 5 ; 5 >
 
     }
 
@@ -3300,8 +3270,7 @@
       param[journal_id] = ijfe
 
       au < doNotProcess ; 2012-2013 ; International Journal of Forensic Engineering Volume 1 ; 1 >
-      au < manifest ; 2014 ; International Journal of Forensic Engineering Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Forensic Engineering Volume 3 ; 3 >
+      au < manifest ; 2014-2015 ; International Journal of Forensic Engineering Volume 2 ; 2 >
 
     }
 
@@ -3316,6 +3285,7 @@
 
     comment[0] = no journal page on Apr 23, 2012. journal_id may be issn or eissn
     comment[1] = title is not yet published on 4/30/2014
+      param[journal_id] = ijfem
 
     }
 
@@ -3330,6 +3300,7 @@
 
     comment[0] = no journal page on Apr 23, 2012. journal_id may be issn or eissn
     comment[1] = title is not yet published on 4/30/2014
+      param[journal_id] = ijfse
 
     }
 
@@ -3353,8 +3324,7 @@
       au < doNotProcess ; 2011 ; International Journal of Foresight and Innovation Policy Volume 7 ; 7 >
       au < doNotProcess ; 2012 ; International Journal of Foresight and Innovation Policy Volume 8 ; 8 >
       au < manifest ; 2013 ; International Journal of Foresight and Innovation Policy Volume 9 ; 9 >
-      au < manifest ; 2014 ; International Journal of Foresight and Innovation Policy Volume 10 ; 10 >
-      au < expected ; 2015 ; International Journal of Foresight and Innovation Policy Volume 11 ; 11 >
+      au < manifest ; 2015 ; International Journal of Foresight and Innovation Policy Volume 10 ; 10 >
 
     }
 
@@ -3368,15 +3338,12 @@
       >
 
       param[journal_id] = ijfipm
-      comment[0] = no issue in 2011
 
       au < doNotProcess ; 2008 ; International Journal of Functional Informatics and Personalised Medicine Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; International Journal of Functional Informatics and Personalised Medicine Volume 2 ; 2 >
       au < doNotProcess ; 2010 ; International Journal of Functional Informatics and Personalised Medicine Volume 3 ; 3 >
-      au < manifest ; 2012 ; International Journal of Functional Informatics and Personalised Medicine Volume 4 ; 4 >
-      au < expected ; 2013 ; International Journal of Functional Informatics and Personalised Medicine Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Functional Informatics and Personalised Medicine Volume 6 ; 6 >
-      au < expected ; 2015 ; International Journal of Functional Informatics and Personalised Medicine Volume 7 ; 7 >
+      au < manifest ; 2012-2014 ; International Journal of Functional Informatics and Personalised Medicine Volume 4 ; 4 >
+      au < expected ; 2015 ; International Journal of Functional Informatics and Personalised Medicine Volume 5 ; 5 >
 
     }
 
@@ -3455,9 +3422,8 @@
       au < doNotProcess ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
       au < doNotProcess ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
       au < doNotProcess ; 2012 ; International Journal of Global Environmental Issues Volume 12 ; 12 >
-      au < manifest ; 2013 ; International Journal of Global Environmental Issues Volume 13 ; 13 >
-      au < manifest ; 2014 ; International Journal of Global Environmental Issues Volume 14 ; 14 >
-      au < expected ; 2015 ; International Journal of Global Environmental Issues Volume 15 ; 15 >
+      au < manifest ; 2013-2014 ; International Journal of Global Environmental Issues Volume 13 ; 13 >
+      au < manifest ; 2015 ; International Journal of Global Environmental Issues Volume 14 ; 14 >
 
     }
 
@@ -3576,9 +3542,8 @@
 
       param[journal_id] = ijhd
 
-      au < doNotProcess ; 2012-2013 ; International Journal of Happiness and Development Volume 1 ; 1 >
-      au < manifest ; 2014 ; International Journal of Happiness and Development Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Happiness and Development Volume 3 ; 3 >
+      au < exists ; 2012-2014 ; International Journal of Happiness and Development Volume 1 ; 1 >
+      au < manifest ; 2015 ; International Journal of Happiness and Development Volume 2 ; 2 >
 
     }
 
@@ -3606,9 +3571,8 @@
       au < doNotProcess ; 2010 ; International Journal of Healthcare Technology and Management Volume 11 ; 11 >
       au < doNotProcess ; 2011 ; International Journal of Healthcare Technology and Management Volume 12 ; 12 >
       au < doNotProcess ; 2012 ; International Journal of Healthcare Technology and Management Volume 13 ; 13 >
-      au < manifest ; 2013 ; International Journal of Healthcare Technology and Management Volume 14 ; 14 >
-      au < expected ; 2014 ; International Journal of Healthcare Technology and Management Volume 15 ; 15 >
-      au < expected ; 2015 ; International Journal of Healthcare Technology and Management Volume 16 ; 16 >
+      au < manifest ; 2013-2014 ; International Journal of Healthcare Technology and Management Volume 14 ; 14 >
+      au < expected ; 2015 ; International Journal of Healthcare Technology and Management Volume 15 ; 15 >
 
     }
 
@@ -5830,6 +5794,22 @@
       au < manifest ; 2013 ; International Journal of Nanotechnology Volume 10 ; 10 >
       au < manifest ; 2014 ; International Journal of Nanotechnology Volume 11 ; 11 >
       au < manifest ; 2015 ; International Journal of Nanotechnology Volume 12 ; 12 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Network Science ;
+        issn = 2048-2175 ;
+        eissn = 2048-2183 ;
+        issnl = 2048-2175
+      >
+
+      param[journal_id] = ijns
+      comment[0] = title is not yet published, 9/19/2013
+
+      au < expected ; 2015 ; International Journal of Network Science Volume 4 ; 4 >
 
     }
 
