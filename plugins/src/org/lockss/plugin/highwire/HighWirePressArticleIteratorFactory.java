@@ -71,7 +71,7 @@ public class HighWirePressArticleIteratorFactory
       "/cgi/content/full/([^/]+;)?([^/]+/[^/]+/[^/]+)$",
       Pattern.CASE_INSENSITIVE);
   
-  protected static Pattern PDF_PATTERN = Pattern.compile(
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
       "/cgi/reprint/([^/]+;)?([^/]+/[^/]+/[^/]+)[.]pdf$",
       Pattern.CASE_INSENSITIVE);
   
@@ -153,8 +153,8 @@ public class HighWirePressArticleIteratorFactory
     // add metadata role from abstract, html, or pdf landing page
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
-        ArticleFiles.ROLE_FULL_TEXT_HTML));
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE));
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job

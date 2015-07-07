@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>101</string>
+    <string>102</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>10</string>
+        <string>11</string>
       </entry>
     </map>
   </entry>
@@ -172,7 +172,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scgi/content/full/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>"^%scgi/content/full/([^/]+;)?%s/(?!.+/(FIG|TAB))", base_url, volume_name</string>
       <string>"^%scgi/reprint/([^/]+;)?%s/", base_url, volume_name</string>
     </list>
   </entry>
