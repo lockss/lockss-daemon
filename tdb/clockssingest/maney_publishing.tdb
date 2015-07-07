@@ -110,7 +110,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Ambix Volume 58 ; 58 >
     au < doNotProcess ; doNotProcess ; 2012 ; Ambix Volume 59 ; 59 >
     au < crawling ; exists ; 2013 ; Ambix Volume 60 ; 60 >
-    au < frozen ; exists ; 2014 ; Ambix Volume 61 ; 61 >
+    au < deepCrawl ; exists ; 2014 ; Ambix Volume 61 ; 61 >
     au < manifest ; exists ; 2015 ; Ambix Volume 62 ; 62 >
 
   }
@@ -1108,7 +1108,7 @@
     au < crawling ; exists ; 2011 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 6 ; 6 >
     au < crawling ; exists ; 2012 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 8 ; 8 >
-    au < frozen ; exists ; 2014 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 9 ; 9 >
+    au < deepCrawl ; exists ; 2014 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 9 ; 9 >
     au < manifest ; exists ; 2015 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 10 ; 10 >
 
   }
@@ -3252,7 +3252,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Names: A Journal of Onomastics Volume 59 ; 59 >
     au < doNotProcess ; doNotProcess ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 >
     au < crawling ; exists ; 2013 ; Names: A Journal of Onomastics Volume 61 ; 61 >
-    au < frozen ; exists ; 2014 ; Names: A Journal of Onomastics Volume 62 ; 62 >
+    au < deepCrawl ; exists ; 2014 ; Names: A Journal of Onomastics Volume 62 ; 62 >
     au < manifest ; exists ; 2015 ; Names: A Journal of Onomastics Volume 63 ; 63 >
 
   }
@@ -3454,7 +3454,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Oxford German Studies Volume 40 ; 40 >
     au < doNotProcess ; doNotProcess ; 2012 ; Oxford German Studies Volume 41 ; 41 >
     au < crawling ; exists ; 2013 ; Oxford German Studies Volume 42 ; 42 >
-    au < frozen ; exists ; 2014 ; Oxford German Studies Volume 43 ; 43 >
+    au < deepCrawl ; exists ; 2014 ; Oxford German Studies Volume 43 ; 43 >
     au < manifest ; exists ; 2015 ; Oxford German Studies Volume 44 ; 44 >
 
   }
@@ -3785,7 +3785,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Public Archaeology Volume 10 ; 10 >
     au < doNotProcess ; doNotProcess ; 2012 ; Public Archaeology Volume 11 ; 11 >
     au < crawling ; exists ; 2013 ; Public Archaeology Volume 12 ; 12 >
-    au < frozen ; exists ; 2014 ; Public Archaeology Volume 13 ; 13 >
+    au < deepCrawl ; exists ; 2014 ; Public Archaeology Volume 13 ; 13 >
     au < expected ; exists ; 2015 ; Public Archaeology Volume 14 ; 14 >
 
   }
@@ -3809,7 +3809,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Publications of the English Goethe Society Volume 80 ; 80 >
     au < doNotProcess ; doNotProcess ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 >
     au < crawling ; exists ; 2013 ; Publications of the English Goethe Society Volume 82 ; 82 >
-    au < frozen ; exists ; 2014 ; Publications of the English Goethe Society Volume 83 ; 83 >
+    au < deepCrawl ; exists ; 2014 ; Publications of the English Goethe Society Volume 83 ; 83 >
     au < manifest ; exists ; 2015 ; Publications of the English Goethe Society Volume 84 ; 84 >
 
   }
