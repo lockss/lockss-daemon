@@ -34,6 +34,7 @@ $ua->no_proxy('localhost', '127.0.0.1');
 
 while (my $line = <>) {
   chomp $line;
+  my $auid_long = $line;
   my @input_rec = split(/\|/, $line);
   my $num_elements = int(@input_rec);
   my $auid = $input_rec[$num_elements-1];
@@ -1335,7 +1336,7 @@ while (my $line = <>) {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;
   } elsif ($result eq "Manifest") {
-    printf("*MANIFEST*, %s, %s, %s\n",$vol_title,$auid,$man_url);
+    printf("*MANIFEST*, %s, %s, %s\n",$vol_title,$auid_long,$man_url);
     $total_manifests = $total_manifests + 1;
     #printf("%s\n",$vol_title);
     #printf("%s\n",decode_entities($vol_title));
