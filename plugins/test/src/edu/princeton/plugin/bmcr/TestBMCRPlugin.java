@@ -42,8 +42,6 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
-import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.HttpResultMap;
 
 public class TestBMCRPlugin extends LockssTestCase {
   
@@ -96,7 +94,7 @@ public class TestBMCRPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     String starturl =
-        "http://www.example.com/archive.html";
+        "http://www.example.com/2003/index.html";
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Bryn Mawr Classical Review Plugin, Base URL http://www.example.com/, Year 2003",
         au.getName());
@@ -130,7 +128,9 @@ public class TestBMCRPlugin extends LockssTestCase {
     
     // Test for pages that should get crawled or not
     // permission page/start url manifest1990.html
-    shouldCacheTest(ROOT_URL + "archive.html", true, au);
+    shouldCacheTest(ROOT_URL + "2015/index.html", true, au);
+    shouldCacheTest(ROOT_URL + "2003/index.html", false, au);
+    shouldCacheTest(ROOT_URL + "archive.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest1990.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest2015.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest2014.html", false, au);
