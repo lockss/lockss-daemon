@@ -65,7 +65,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sarchive.html", base_url</string>
+    <string>"%s%d/index.html", base_url, year</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
