@@ -1620,38 +1620,6 @@
     {
 
       title <
-        name = International Journal of Computational Medicine and Healthcare ;
-        issn = 1755-4500 ;
-        eissn = 1755-4519 ;
-        issnl = 1755-4500
-      >
-
-      param[journal_issn] = 1755-4519
-      comment[0] = title is not yet published on 9/19/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Computational Microbiology and Medical Ecology ;
-        issn = 2047-9050 ;
-        eissn = 2047-9069 ;
-        issnl = 2047-9050
-      >
-
-      param[journal_issn] = 2047-9069
-      comment[0] = title is not yet published on 9/19/2013
-      
-      au < expected ; exists ; 2014 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Computational Science and Engineering ;
         issn = 1742-7185 ;
         eissn = 1742-7193 ;
@@ -1874,8 +1842,7 @@
 
       param[journal_issn] = 2048-9137
       
-      au < down ; exists ; 2013 ; International Journal of Convergence Computing Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Convergence Computing Volume 2 ; 2 >
+      au < superseded ; exists ; 2013 ; International Journal of Convergence Computing Volume 1 [superseded] ; 1 >
 
     }
 
@@ -1910,7 +1877,6 @@
       param[journal_issn] = 2043-8354
       
       au < down ; exists ; 2013 ; International Journal of Creative Computing Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Creative Computing Volume 2 ; 2 >
 
     }
 
@@ -2056,8 +2022,7 @@
       au < down ; exists ; 2010 ; International Journal of Decision Sciences, Risk and Management Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Decision Sciences, Risk and Management Volume 4 ; 4 >
-      au < down ; exists ; 2013 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 >
+      au < superseded ; exists ; 2013 ; International Journal of Decision Sciences, Risk and Management Volume 5 [superseded] ; 5 >
 
     }
 
@@ -2076,9 +2041,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
       au < down ; exists ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
       au < down ; frozen ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
-      au < down ; frozen ; 2012 ; International Journal of Design Engineering Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Design Engineering Volume 6 ; 6 >
-      au < expected ; exists ; 2014 ; International Journal of Design Engineering Volume 7 ; 7 >
+      au < superseded ; frozen ; 2012 ; International Journal of Design Engineering Volume 5 [superseded] ; 5 >
 
     }
 
@@ -2129,7 +2092,6 @@
       au < zapped ; finished ; 2011 ;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Dynamical Systems and Differential Equations Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2013 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Dynamical Systems and Differential Equations Volume 6 ; 6 >
 
     }
 
@@ -2371,9 +2333,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Electronic Healthcare Volume 4 ; 4 >
       au < down ; exists ; 2009-2010 ; International Journal of Electronic Healthcare Volume 5 ; 5 >
       au < zapped ; finished ; 2011 ; International Journal of Electronic Healthcare Volume 6 ; 6 >
-      au < down ; frozen ; 2012 ; International Journal of Electronic Healthcare Volume 7 ; 7 >
-      au < expected ; exists ; 2013 ; International Journal of Electronic Healthcare Volume 8 ; 8 >
-      au < expected ; exists ; 2014 ; International Journal of Electronic Healthcare Volume 9 ; 9 >
+      au < superseded ; frozen ; 2012 ; International Journal of Electronic Healthcare Volume 7 [superseded] ; 7 >
 
     }
 
@@ -2427,10 +2387,8 @@
       >
 
       param[journal_issn] = 1742-6960
-      comment[0] = no issue in 2012
       
       au < zapped ; finished ; 2011 ; International Journal of Electronic Transport Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Electronic Transport Volume 2 ; 2 >
 
     }
 
@@ -2444,7 +2402,6 @@
       >
 
       param[journal_issn] = 1741-1076
-      comment[0] = no issue in 2011, 2012
       
       au < doNotProcess ; exists ; 2005 ; International Journal of Embedded Systems Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2006 ; International Journal of Embedded Systems Volume 2 ; 2 >
@@ -2518,7 +2475,6 @@
       au < zapped ; finished ; 2011 ; International Journal of Engineering Management and Economics Volume 2 ; 2 >
       au < down ; frozen ; 2012 ; International Journal of Engineering Management and Economics Volume 3 ; 3 >
       au < down ; exists ; 2013 ; International Journal of Engineering Management and Economics Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2014 ; International Journal of Engineering Management and Economics Volume 5 ; 5 >
 
     }
 
@@ -2612,7 +2568,6 @@
       au < down ; exists ; 2013 ; International Journal of Entrepreneurship and Innovation Management Volume 17 ; 17 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 18 ; 18 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 19 ; 19 >
-      au < expected ; exists ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 20 ; 20 >
 
     }
 
@@ -2848,7 +2803,7 @@
 
       param[journal_issn] = 1752-6914
       
-      au < down ; exists ; 2010 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 >
+      au < superseded ; exists ; 2010 ; International Journal of Environmental Policy and Decision Making Volume 1 [superseded] ; 1 >
 
     }
 
@@ -2957,8 +2912,7 @@
 
       param[journal_issn] = 2049-0917
 
-      au < down ; exists ; 2013 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 >
+      au < superseded ; exists ; 2013 ; International Journal of Financial Engineering and Risk Management Volume 1 [superseded] ; 1 >
 
     }
 
@@ -3011,7 +2965,6 @@
       >
 
       param[journal_issn] = 1479-392X
-      comment[0] = no issue on 2012, 2013
       
       au < doNotProcess ; exists ; 2008 ; International Journal of Food Safety, Nutrition and Public Health Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Food Safety, Nutrition and Public Health Volume 2 ; 2 >
@@ -3057,7 +3010,6 @@
       au < zapped ; finished ; 2011 ; International Journal of Foresight and Innovation Policy Volume 7 ; 7 >
       au < zapped ; finished ; 2012 ; International Journal of Foresight and Innovation Policy Volume 8 ; 8 >
       au < down ; exists ; 2013 ; International Journal of Foresight and Innovation Policy Volume 9 ; 9 >
-      au < expected ; exists ; 2014 ; International Journal of Foresight and Innovation Policy Volume 10 ; 10 >
 
     }
 
@@ -3071,14 +3023,11 @@
       >
 
       param[journal_issn] = 1756-2112
-      comment[0] = no issue in 2011
       
       au < doNotProcess ; exists ; 2008 ; International Journal of Functional Informatics and Personalised Medicine Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Functional Informatics and Personalised Medicine Volume 2 ; 2 >
       au < down ; exists ; 2010 ; International Journal of Functional Informatics and Personalised Medicine Volume 3 ; 3 >
-      au < down ; exists ; 2012 ; International Journal of Functional Informatics and Personalised Medicine Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Functional Informatics and Personalised Medicine Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Functional Informatics and Personalised Medicine Volume 6 ; 6 >
+      au < superseded ; exists ; 2012 ; International Journal of Functional Informatics and Personalised Medicine Volume 4 [superseded] ; 4 >
 
     }
 
@@ -3156,7 +3105,7 @@
       au < down ; exists ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
       au < down ; frozen ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
       au < zapped ; finished ; 2012 ; International Journal of Global Environmental Issues Volume 12 ; 12 >
-      au < down ; exists ; 2013 ; International Journal of Global Environmental Issues Volume 13 ; 13 >
+      au < superseded ; exists ; 2013 ; International Journal of Global Environmental Issues Volume 13 [superseded] ; 13 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Global Environmental Issues Volume 14 ; 14 >
 
     }
@@ -3215,7 +3164,6 @@
       au < down ; exists ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 >
       au < zapped ; finished ; 2011-2012 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 >
       au < down ; exists ; 2013 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 >
 
     }
 
@@ -3271,7 +3219,7 @@
 
       param[journal_issn] = 2049-2804
       
-      au < down ; frozen ; 2012-2013 ; International Journal of Happiness and Development Volume 1 ; 1 >
+      au < superseded ; frozen ; 2012-2013 ; International Journal of Happiness and Development Volume 1 [superseded] ; 1 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Happiness and Development Volume 2 ; 2 >
 
     }
@@ -3300,8 +3248,7 @@
       au < down ; exists ; 2010 ; International Journal of Healthcare Technology and Management Volume 11 ; 11 >
       au < zapped ; finished ; 2011 ; International Journal of Healthcare Technology and Management Volume 12 ; 12 >
       au < down ; frozen ; 2012 ; International Journal of Healthcare Technology and Management Volume 13 ; 13 >
-      au < down ; exists ; 2013 ; International Journal of Healthcare Technology and Management Volume 14 ; 14 >
-      au < expected ; exists ; 2014 ; International Journal of Healthcare Technology and Management Volume 15 ; 15 >
+      au < superseded ; exists ; 2013 ; International Journal of Healthcare Technology and Management Volume 14 [superseded] ; 14 >
 
     }
 
