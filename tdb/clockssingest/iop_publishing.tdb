@@ -303,7 +303,7 @@
     au < finished ; crawling ; 2011 ; Chinese Physics C Volume 35 ; 35 > 
     au < finished ; crawling ; 2012 ; Chinese Physics C Volume 36 ; 36 > 
     au < crawling ; exists ; 2013 ; Chinese Physics C Volume 37 ; 37 > 
-    au < ready ; exists ; 2014 ; Chinese Physics C Volume 38 ; 38 > 
+    au < crawling ; exists ; 2014 ; Chinese Physics C Volume 38 ; 38 > 
     au < manifest ; exists ; 2015 ; Chinese Physics C Volume 39 ; 39 > 
 
   }
@@ -2643,7 +2643,7 @@
     param[journal_issn] = 1555-6611
     comment[param] = eissn preferred
 
-    au < ready ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
+    au < crawling ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
     au < crawling ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
     au < manifest ; exists ; 2015 ; Laser Physics Volume 25 ; 25 >
 
@@ -3273,7 +3273,7 @@
     au < finished ; crawling ; 2011 ; Physics Education Volume 46 ; 46 > 
     au < ingNotReady ; exists ; 2012 ; Physics Education Volume 47 ; 47 > 
     au < crawling ; exists ; 2013 ; Physics Education Volume 48 ; 48 > 
-    au < ready ; exists ; 2014 ; Physics Education Volume 49 ; 49 > 
+    au < crawling ; exists ; 2014 ; Physics Education Volume 49 ; 49 > 
     au < manifest ; exists ; 2015 ; Physics Education Volume 50 ; 50 > 
 
   }
