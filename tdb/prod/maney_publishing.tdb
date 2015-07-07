@@ -34,6 +34,7 @@
     au < doNotProcess ; 2012 ; Advances in Applied Ceramics Volume 111 ; 111 >
     au < manifest ; 2013 ; Advances in Applied Ceramics Volume 112 ; 112 >
     au < manifest ; 2014 ; Advances in Applied Ceramics Volume 113 ; 113 >
+    au < expected ; 2015 ; Advances in Applied Ceramics Volume 114 ; 114 >
 
   }
 
@@ -109,6 +110,7 @@
     au < doNotProcess ; 2012 ; Ambix Volume 59 ; 59 >
     au < manifest ; 2013 ; Ambix Volume 60 ; 60 >
     au < manifest ; 2014 ; Ambix Volume 61 ; 61 >
+    au < expected ; 2015 ; Ambix Volume 62 ; 62 >
 
   }
 
@@ -186,7 +188,9 @@
     au < doNotProcess ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 >
     au < doNotProcess ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 >
     au < doNotProcess ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 >
-    au < manifest ; 2013-2014 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 >
+    au < manifest ; 2013 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 >
+    au < exists ; 2014 ; Applied Earth Science: IMM Transactions section B Volume 123 ; 123 >
+    au < exists ; 2015 ; Applied Earth Science: IMM Transactions section B Volume 124 ; 124 >
 
   }
 
@@ -212,6 +216,7 @@
     au < doNotProcess ; 2012 ; Arms & Armour Volume 9 ; 9 >
     au < manifest ; 2013 ; Arms & Armour Volume 10 ; 10 >
     au < manifest ; 2014 ; Arms & Armour Volume 11 ; 11 >
+    au < exists ; 2015 ; Arms & Armour Volume 12 ; 12 >
 
   }
 
@@ -401,6 +406,7 @@
     au < doNotProcess ; 2012 ; Brontë Studies Volume 37 ; 37 >
     au < manifest ; 2013 ; Brontë Studies Volume 38 ; 38 >
     au < manifest ; 2014 ; Brontë Studies Volume 39 ; 39 >
+    au < exists ; 2015 ; Brontë Studies Volume 40 ; 40 >
 
   }
 
@@ -419,6 +425,8 @@
     au < manifest ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 >
+    au < exists ; 2014 ; Bubble Science, Engineering and Technology Volume 5 ; 5 >
+    au < exists ; 2015 ; Bubble Science, Engineering and Technology Volume 6 ; 6 >
 
   }
 
@@ -443,6 +451,7 @@
     au < doNotProcess ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 >
     au < manifest ; 2013 ; Bulletin of the Council for British Research in the Levant Volume 8 ; 8 >
     au < manifest ; 2014 ; Bulletin of the Council for British Research in the Levant Volume 9 ; 9 >
+    au < expected ; 2015 ; Bulletin of the Council for British Research in the Levant Volume 10 ; 10 >
 
   }
 
@@ -495,6 +504,7 @@
     au < doNotProcess ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
     au < manifest ; 2013 ; Byzantine and Modern Greek Studies Volume 37 ; 37 >
     au < manifest ; 2014 ; Byzantine and Modern Greek Studies Volume 38 ; 38 >
+    au < exists ; 2015 ; Byzantine and Modern Greek Studies Volume 39 ; 39 >
 
   }
 
@@ -562,6 +572,7 @@
     au < doNotProcess ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 >
     au < manifest ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 >
     au < manifest ; 2014 ; Canadian Metallurgical Quarterly Volume 53 ; 53 >
+    au < exists ; 2015 ; Canadian Metallurgical Quarterly Volume 54 ; 54 >
 
   }
 
@@ -627,6 +638,7 @@
     au < doNotProcess ; 2012 ; The Cartographic Journal Volume 49 ; 49 >
     au < manifest ; 2013 ; The Cartographic Journal Volume 50 ; 50 >
     au < manifest ; 2014 ; The Cartographic Journal Volume 51 ; 51 >
+    au < exists ; 2015 ; The Cartographic Journal Volume 52 ; 52 >
 
   }
 
@@ -653,6 +665,7 @@
     au < doNotProcess ; 2012 ; Central Europe Volume 10 ; 10 >
     au < manifest ; 2013 ; Central Europe Volume 11 ; 11 >
     au < manifest ; 2014 ; Central Europe Volume 12 ; 12 >
+    au < expected ; 2015 ; Central Europe Volume 13 ; 13 >
 
   }
 
@@ -675,6 +688,7 @@
     au < doNotProcess ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >
     au < manifest ; 2013 ; The Chinese Historical Review Volume 20 ; 20 >
     au < manifest ; 2014 ; The Chinese Historical Review Volume 21 ; 21 >
+    au < exists ; 2015 ; The Chinese Historical Review Volume 22 ; 22 >
     
   }
 
@@ -706,6 +720,7 @@
     au < doNotProcess ; 2012 ; Cochlear Implants International Volume 13 ; 13 >
     au < manifest ; 2013 ; Cochlear Implants International Volume 14 ; 14 >
     au < manifest ; 2014 ; Cochlear Implants International Volume 15 ; 15 >
+    au < exists ; 2015 ; Cochlear Implants International Volume 16 ; 16 >
 
   }
 
@@ -732,6 +747,7 @@
     au < doNotProcess ; 2012 ; Comparative American Studies Volume 10 ; 10 >
     au < manifest ; 2013 ; Comparative American Studies Volume 11 ; 11 >
     au < manifest ; 2014 ; Comparative American Studies Volume 12 ; 12 >
+    au < exists ; 2015 ; Comparative American Studies Volume 13 ; 13 >
     
   }
 
@@ -817,6 +833,7 @@
     au < doNotProcess ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 >
     au < exists ; 2013 ; Corrosion Engineering, Science and Technology Volume 48 ; 48 >
     au < exists ; 2014 ; Corrosion Engineering, Science and Technology Volume 49 ; 49 >
+    au < expected ; 2015 ; Corrosion Engineering, Science and Technology Volume 50 ; 50 >
 
   }
 
@@ -879,6 +896,7 @@
     au < doNotProcess ; 2012 ; Costume Volume 46 ; 46 >
     au < manifest ; 2013 ; Costume Volume 47 ; 47 >
     au < manifest ; 2014 ; Costume Volume 48 ; 48 >
+    au < exists ; 2015 ; Costume Volume 49 ; 49 >
 
   }
 
@@ -909,6 +927,7 @@
     au < doNotProcess ; 2012 ; Deafness & Education International Volume 14 ; 14 >
     au < manifest ; 2013 ; Deafness & Education International Volume 15 ; 15 >
     au < manifest ; 2014 ; Deafness & Education International Volume 16 ; 16 >
+    au < exists ; 2015 ; Deafness & Education International Volume 17 ; 17 >
 
   }
 
@@ -940,6 +959,7 @@
     au < doNotProcess ; 2012 ; Dix-Neuf Volume 16 ; 16 >
     au < manifest ; 2013 ; Dix-Neuf Volume 17 ; 17 >
     au < manifest ; 2014 ; Dix-Neuf Volume 18 ; 18 >
+    au < exists ; 2015 ; Dix-Neuf Volume 19 ; 19 >
 
   }
 
@@ -994,6 +1014,7 @@
     au < doNotProcess ; 2012 ; Dress Volume 38 ; 38 >
     au < manifest ; 2013 ; Dress Volume 39 ; 39 >
     au < manifest ; 2014 ; Dress Volume 40 ; 40 >
+    au < exists ; 2015 ; Dress Volume 41 ; 41 >
 
   }
 
@@ -1012,8 +1033,9 @@
     au < doNotProcess ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 >
     au < doNotProcess ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 >
     au < doNotProcess ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 >
-	    au < manifest ; 2013 ; Dutch Crossing: Journal of Low Countries Studies Volume 37 ; 37 >
-	    au < manifest ; 2014 ; Dutch Crossing: Journal of Low Countries Studies Volume 38 ; 38 >
+    au < manifest ; 2013 ; Dutch Crossing: Journal of Low Countries Studies Volume 37 ; 37 >
+    au < manifest ; 2014 ; Dutch Crossing: Journal of Low Countries Studies Volume 38 ; 38 >
+    au < exists ; 2015 ; Dutch Crossing: Journal of Low Countries Studies Volume 39 ; 39 >
 
   }
 
@@ -1049,6 +1071,7 @@
     au < doNotProcess ; 2012 ; Early Medieval China Volume 2012 ; 2012 >
     au < manifest ; 2013 ; Early Medieval China Volume 2013 ; 2013 >
     au < manifest ; 2014 ; Early Medieval China Volume 2014 ; 2014 >
+    au < expected ; 2015 ; Early Medieval China Volume 2015 ; 2015 >
 
   }
 
@@ -1072,6 +1095,7 @@
     au < manifest ; 2012 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 7 ; 7 >
     au < manifest ; 2013 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 8 ; 8 >
     au < manifest ; 2014 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 9 ; 9 >
+    au < exists ; 2015 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 10 ; 10 >
 
   }
 
@@ -1091,7 +1115,9 @@
     au < doNotProcess ; 2010 ; English Heritage Historical Review Volume 5 ; 5 >
     au < manifest ; 2011 ; English Heritage Historical Review Volume 6 ; 6 >
     au < manifest ; 2012 ; English Heritage Historical Review Volume 7 ; 7 >
-   
+    au < exists ; 2013 ; English Heritage Historical Review Volume 8 ; 8 >
+    au < expected ; 2014 ; English Heritage Historical Review Volume 9 ; 9 >
+
   }
 
   {
@@ -1124,6 +1150,7 @@
     au < doNotProcess ; 2012 ; Environmental Archaeology Volume 17 ; 17 >
     au < manifest ; 2013 ; Environmental Archaeology Volume 18 ; 18 >
     au < manifest ; 2014 ; Environmental Archaeology Volume 19 ; 19 >
+    au < exists ; 2015 ; Environmental Archaeology Volume 20 ; 20 >
 
   }
 
@@ -1156,6 +1183,7 @@
     au < doNotProcess ; 2012 ; European Journal of Archaeology Volume 15 ; 15 >
     au < manifest ; 2013 ; European Journal of Archaeology Volume 16 ; 16 >
     au < manifest ; 2014 ; European Journal of Archaeology Volume 17 ; 17 >
+    au < exists ; 2015 ; European Journal of Archaeology Volume 18 ; 18 >
     
   }
 
@@ -1215,6 +1243,7 @@
     au < doNotProcess ; 2012 ; Exemplaria Volume 24 ; 24 >
     au < manifest ; 2013 ; Exemplaria Volume 25 ; 25 >
     au < manifest ; 2014 ; Exemplaria Volume 26 ; 26 >
+    au < exists ; 2015 ; Exemplaria Volume 27 ; 27 >
 
   }
 
@@ -1238,6 +1267,7 @@
     au < doNotProcess ; 2012 ; Family & Community History Volume 15 ; 15 >
     au < manifest ; 2013 ; Family & Community History Volume 16 ; 16 >
     au < manifest ; 2014 ; Family & Community History Volume 17 ; 17 >
+    au < exists ; 2015 ; Family & Community History Volume 18 ; 18 >
 
   }
 
@@ -1305,6 +1335,7 @@
     au < doNotProcess ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
     au < manifest ; 2013 ; Folk Life: Journal of Ethnological Studies Volume 51 ; 51 >
     au < manifest ; 2014 ; Folk Life: Journal of Ethnological Studies Volume 52 ; 52 >
+    au < exists ; 2015 ; Folk Life: Journal of Ethnological Studies Volume 53 ; 53 >
 
   }
 
@@ -1370,6 +1401,7 @@
     au < doNotProcess ; 2012 ; Hematology Volume 17 ; 17 >
     au < manifest ; 2013 ; Hematology Volume 18 ; 18 >
     au < manifest ; 2014 ; Hematology Volume 19 ; 19 >
+    au < exists ; 2015 ; Hematology Volume 20 ; 20 >
 
   }
 
@@ -1399,6 +1431,7 @@
     au < doNotProcess ; 2012 ; Hispanic Research Journal Volume 13 ; 13 >
     au < manifest ; 2013 ; Hispanic Research Journal Volume 14 ; 14 >
     au < manifest ; 2014 ; Hispanic Research Journal Volume 15 ; 15 >
+    au < exists ; 2015 ; Hispanic Research Journal Volume 16 ; 16 >
 
   }
 
@@ -1418,6 +1451,7 @@
     au < doNotProcess ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 >
     au < manifest ; 2013 ; The Historic Environment: Policy & Practice Volume 4 ; 4 >
     au < manifest ; 2014 ; The Historic Environment: Policy & Practice Volume 5 ; 5 >
+    au < exists ; 2015 ; The Historic Environment: Policy & Practice Volume 6 ; 6 >
 
   }
 
@@ -1444,6 +1478,7 @@
     au < doNotProcess ; 2012 ; The Imaging Science Journal Volume 60 ; 60 >
     au < manifest ; 2013 ; The Imaging Science Journal Volume 61 ; 61 >
     au < manifest ; 2014 ; The Imaging Science Journal Volume 62 ; 62 >
+    au < exists ; 2015 ; The Imaging Science Journal Volume 63 ; 63 >
 
   }
 
@@ -1494,6 +1529,7 @@
     au < doNotProcess ; 2012 ; Industrial Archaeology Review Volume 34 ; 34 >
     au < manifest ; 2013 ; Industrial Archaeology Review Volume 35 ; 35 >
     au < manifest ; 2014 ; Industrial Archaeology Review Volume 36 ; 36 >
+    au < expected ; 2015 ; Industrial Archaeology Review Volume 37 ; 37 >
 
   }
 
@@ -1547,6 +1583,7 @@
     au < doNotProcess ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 >
     au < manifest ; 2013 ; Interdisciplinary Science Reviews Volume 38 ; 38 >
     au < manifest ; 2014 ; Interdisciplinary Science Reviews Volume 39 ; 39 >
+    au < exists ; 2015 ; Interdisciplinary Science Reviews Volume 40 ; 40 >
 
   }
 
@@ -1569,6 +1606,7 @@
     au < doNotProcess ; 2012 ; International Heat Treatment and Surface Engineering Volume 6 ; 6 >
     au < manifest ; 2013 ; International Heat Treatment and Surface Engineering Volume 7 ; 7 >
     au < manifest ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 >
+    au < expected ; 2015 ; International Heat Treatment and Surface Engineering Volume 9 ; 9 >
 
   }
 
@@ -1590,6 +1628,7 @@
     au < doNotProcess ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 >
     au < manifest ; 2013 ; International Journal for the History of Engineering & Technology Volume 83 ; 83 >
     au < manifest ; 2014 ; International Journal for the History of Engineering & Technology Volume 84 ; 84 >
+    au < exists ; 2015 ; International Journal for the History of Engineering & Technology Volume 85 ; 85 >
 
   }
 
@@ -1616,6 +1655,7 @@
     au < doNotProcess ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 >
     au < manifest ; 2013 ; International Journal of Cast Metals Research Volume 26 ; 26 >
     au < manifest ; 2014 ; International Journal of Cast Metals Research Volume 27 ; 27 >
+    au < exists ; 2015 ; International Journal of Cast Metals Research Volume 28 ; 28 >
 
   }
 
@@ -1633,6 +1673,7 @@
     au < doNotProcess ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 >
     au < manifest ; 2013 ; International Journal of Developmental Disabilities Volume 59 ; 59 >
     au < manifest ; 2014 ; International Journal of Developmental Disabilities Volume 60 ; 60 >
+    au < exists ; 2015 ; International Journal of Developmental Disabilities Volume 61 ; 61 >
 
   }  
 
@@ -1650,6 +1691,7 @@
     au < doNotProcess ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 >
     au < manifest ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 >
     au < manifest ; 2014 ; International Journal of Healthcare Management Volume 7 ; 7 >
+    au < exists ; 2015 ; International Journal of Healthcare Management Volume 8 ; 8 >
 
   }  
 
@@ -1683,6 +1725,7 @@
     au < doNotProcess ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 >
     au < manifest ; 2013 ; International Journal of Occupational and Environmental Health Volume 19 ; 19 >
     au < manifest ; 2014 ; International Journal of Occupational and Environmental Health Volume 20 ; 20 >
+    au < exists ; 2015 ; International Journal of Occupational and Environmental Health Volume 21 ; 21 >
 
   }  
 
@@ -1728,6 +1771,7 @@
     au < doNotProcess ; 2012 ; International Materials Reviews Volume 57 ; 57 >
     au < manifest ; 2013 ; International Materials Reviews Volume 58 ; 58 >
     au < manifest ; 2014 ; International Materials Reviews Volume 59 ; 59 >
+    au < exists ; 2015 ; International Materials Reviews Volume 60 ; 60 >
 
   }
 
@@ -1796,6 +1840,7 @@
     au < doNotProcess ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 >
     au < manifest ; 2013 ; International Musculoskeletal Medicine Volume 35 ; 35 >
     au < manifest ; 2014 ; International Musculoskeletal Medicine Volume 36 ; 36 >
+    au < exists ; 2015 ; International Musculoskeletal Medicine Volume 37 ; 37 >
 
   }
 
@@ -1815,6 +1860,7 @@
     au < doNotProcess ; 2012 ; International Wood Products Journal Volume 3 ; 3 >
     au < manifest ; 2013 ; International Wood Products Journal Volume 4 ; 4 >
     au < manifest ; 2014 ; International Wood Products Journal Volume 5 ; 5 >
+    au < exists ; 2015 ; International Wood Products Journal Volume 6 ; 6 >
 
   }
 
@@ -1844,6 +1890,7 @@
     au < doNotProcess ; 2012 ; Ironmaking & Steelmaking Volume 39 ; 39 >
     au < exists ; 2013 ; Ironmaking & Steelmaking Volume 40 ; 40 >
     au < exists ; 2014 ; Ironmaking & Steelmaking Volume 41 ; 41 >
+    au < exists ; 2015 ; Ironmaking & Steelmaking Volume 42 ; 42 >
 
   }
 
@@ -1892,6 +1939,7 @@
     au < doNotProcess ; 2012 ; Italian Culture Volume 30 ; 30 >
     au < manifest ; 2013 ; Italian Culture Volume 31 ; 31 >
     au < manifest ; 2014 ; Italian Culture Volume 32 ; 32 >
+    au < exists ; 2015 ; Italian Culture Volume 33 ; 33 >
 
   }
 
@@ -1974,6 +2022,7 @@
     au < doNotProcess ; 2012 ; Italian Studies Volume 67 ; 67 >
     au < manifest ; 2013 ; Italian Studies Volume 68 ; 68 >
     au < manifest ; 2014 ; Italian Studies Volume 69 ; 69 >
+    au < exists ; 2015 ; Italian Studies Volume 70 ; 70 >
 
   }
 
@@ -2021,6 +2070,7 @@
     au < doNotProcess ; 2012 ; The Italianist Volume 32 ; 32 >
     au < manifest ; 2013 ; The Italianist Volume 33 ; 33 >
     au < manifest ; 2014 ; The Italianist Volume 34 ; 34 >
+    au < exists ; 2015 ; The Italianist Volume 35 ; 35 >
 
   }
 
@@ -2064,6 +2114,7 @@
     au < doNotProcess ; 2012 ; Journal of Bryology Volume 34 ; 34 >
     au < manifest ; 2013 ; Journal of Bryology Volume 35 ; 35 >
     au < manifest ; 2014 ; Journal of Bryology Volume 36 ; 36 >
+    au < exists ; 2015 ; Journal of Bryology Volume 37 ; 37 >
 
   }
 
@@ -2137,6 +2188,7 @@
     au < manifest ; 2012 ; Journal of Chemotherapy Volume 24 ; 24 >
     au < manifest ; 2013 ; Journal of Chemotherapy Volume 25 ; 25 >
     au < manifest ; 2014 ; Journal of Chemotherapy Volume 26 ; 26 >
+    au < exists ; 2015 ; Journal of Chemotherapy Volume 27 ; 27 >
 
   }
 
@@ -2157,6 +2209,7 @@
     au < doNotProcess ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 >
     au < manifest ; 2013 ; Journal of Communication in Healthcare Volume 6 ; 6 >
     au < manifest ; 2014 ; Journal of Communication in Healthcare Volume 7 ; 7 >
+    au < exists ; 2015 ; Journal of Communication in Healthcare Volume 8 ; 8 >
 
   }
 
@@ -2179,6 +2232,7 @@
     au < doNotProcess ; 2012 ; Journal of Conflict Archaeology Volume 7 ; 7 >
     au < manifest ; 2013 ; Journal of Conflict Archaeology Volume 8 ; 8 >
     au < manifest ; 2014 ; Journal of Conflict Archaeology Volume 9 ; 9 >
+    au < expected ; 2015 ; Journal of Conflict Archaeology Volume 10 ; 10 >
 
   }
 
@@ -2231,6 +2285,7 @@
     au < doNotProcess ; 2012 ; Journal of Field Archaeology Volume 37 ; 37 >
     au < manifest ; 2013 ; Journal of Field Archaeology Volume 38 ; 38 >
     au < manifest ; 2014 ; Journal of Field Archaeology Volume 39 ; 39 >
+    au < exists ; 2015 ; Journal of Field Archaeology Volume 40 ; 40 >
 
   }
 
@@ -2281,6 +2336,7 @@
     au < manifest ; 2012 ; Journal of Histotechnology Volume 35 ; 35 >
     au < manifest ; 2013 ; Journal of Histotechnology Volume 36 ; 36 >
     au < manifest ; 2014 ; Journal of Histotechnology Volume 37 ; 37 >
+    au < exists ; 2015 ; Journal of Histotechnology Volume 38 ; 38 >
 
   }
 
@@ -2334,6 +2390,7 @@
     au < doNotProcess ; 2012 ; Journal of Manual & Manipulative Therapy Volume 20 ; 20 >
     au < manifest ; 2013 ; Journal of Manual & Manipulative Therapy Volume 21 ; 21 >
     au < manifest ; 2014 ; Journal of Manual & Manipulative Therapy Volume 22 ; 22 >
+    au < exists ; 2015 ; Journal of Manual & Manipulative Therapy Volume 23 ; 23 >
 
   }
 
@@ -2353,6 +2410,7 @@
     au < doNotProcess ; 2012 ; Journal of Orthodontics Volume 39 ; 39 >
     au < exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 >
     au < exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 >
+    au < exists ; 2015 ; Journal of Orthodontics Volume 42 ; 42 >
 
   }
 
@@ -2369,6 +2427,7 @@
     au < doNotProcess ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 >
     au < manifest ; 2013 ; Journal of Spinal Cord Medicine Volume 36 ; 36 >
     au < manifest ; 2014 ; Journal of Spinal Cord Medicine Volume 37 ; 37 >
+    au < exists ; 2015 ; Journal of Spinal Cord Medicine Volume 38 ; 38 >
 
   }
 
@@ -2418,6 +2477,7 @@
     au < doNotProcess ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 >
     au < manifest ; 2013 ; Journal of the British Archaeological Association Volume 166 ; 166 >
     au < manifest ; 2014 ; Journal of the British Archaeological Association Volume 167 ; 167 >
+    au < expected ; 2015 ; Journal of the British Archaeological Association Volume 168 ; 168 >
 
   }
 
@@ -2431,7 +2491,8 @@
     >
 
     param[journal_id] = eni 
-    
+    comment[0] = Published by Elsevier since January 2014
+
     au < manifest ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 >
     au < manifest ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 >
     au < manifest ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 >
@@ -2441,7 +2502,6 @@
     au < manifest ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 >
     au < doNotProcess ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 >
     au < manifest ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 >
-    au < expected ; 2014 ; Journal of the Energy Institute Volume 87 ; 87 >
 
   }
 
@@ -2502,6 +2562,7 @@
     au < doNotProcess ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 >
     au < manifest ; 2013 ; The Keats-Shelley Review Volume 27 ; 27 >
     au < manifest ; 2014 ; The Keats-Shelley Review Volume 28 ; 28 >
+    au < exists ; 2015 ; The Keats-Shelley Review Volume 29 ; 29 >
 
   }
 
@@ -2545,6 +2606,7 @@
     au < doNotProcess ; 2012 ; Language & History Volume 55 ; 55 >
     au < manifest ; 2013 ; Language & History Volume 56 ; 56 >
     au < manifest ; 2014 ; Language & History Volume 57 ; 57 >
+    au < exists ; 2015 ; Language & History Volume 58 ; 58 >
 
   }
 
@@ -2605,6 +2667,7 @@
     au < doNotProcess ; 2012 ; Levant Volume 44 ; 44 >
     au < manifest ; 2013 ; Levant Volume 45 ; 45 >
     au < manifest ; 2014 ; Levant Volume 46 ; 46 >
+    au < expected ; 2015 ; Levant Volume 47 ; 47 >
 
   }
 
@@ -2642,6 +2705,8 @@
     au < doNotProcess ; 2011 ; Library & Information History Volume 27 ; 27 >
     au < doNotProcess ; 2012 ; Library & Information History Volume 28 ; 28 >
     au < manifest ; 2013 ; Library & Information History Volume 29 ; 29 >
+    au < exists ; 2014 ; Library & Information History Volume 30 ; 30 >
+    au < exists ; 2015 ; Library & Information History Volume 31 ; 31 >
 
   }
 
@@ -2695,6 +2760,7 @@
     au < doNotProcess ; 2012 ; The London Journal Volume 37 ; 37 >
     au < manifest ; 2013 ; The London Journal Volume 38 ; 38 >
     au < manifest ; 2014 ; The London Journal Volume 39 ; 39 >
+    au < exists ; 2015 ; The London Journal Volume 40 ; 40 >
 
   }
 
@@ -2718,6 +2784,7 @@
     au < doNotProcess ; 2012 ; Materials Research Innovations Volume 16 ; 16 >
     au < manifest ; 2013 ; Materials Research Innovations Volume 17 ; 17 >
     au < manifest ; 2014 ; Materials Research Innovations Volume 18 ; 18 >
+    au < exists ; 2015 ; Materials Research Innovations Volume 19 ; 19 >
 
   }
 
@@ -2763,6 +2830,7 @@
     au < doNotProcess ; 2012 ; Materials Science and Technology Volume 28 ; 28 >
     au < manifest ; 2013 ; Materials Science and Technology Volume 29 ; 29 >
     au < manifest ; 2014 ; Materials Science and Technology Volume 30 ; 30 >
+    au < exists ; 2015 ; Materials Science and Technology Volume 31 ; 31 >
 
   }
 
@@ -2786,6 +2854,7 @@
     au < doNotProcess ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 >
     au < manifest ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 >
     au < manifest ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 >
+    au < exists ; 2015 ; Materials Technology: Advanced Performance Materials Volume 30 ; 30 >
 
   }
 
@@ -2803,6 +2872,7 @@
     au < manifest ; 2012 ; Medical Writing Volume 21 ; 21 >
     au < manifest ; 2013 ; Medical Writing Volume 22 ; 22 >
     au < manifest ; 2014 ; Medical Writing Volume 23 ; 23 >
+    au < exists ; 2015 ; Medical Writing Volume 24 ; 24 >
 
   }
 
@@ -2832,6 +2902,7 @@
     au < doNotProcess ; 2012 ; Medieval Archaeology Volume 56 ; 56 >
     au < manifest ; 2013 ; Medieval Archaeology Volume 57 ; 57 >
     au < manifest ; 2014 ; Medieval Archaeology Volume 58 ; 58 >
+    au < expected ; 2015 ; Medieval Archaeology Volume 59 ; 59 >
 
   }
 
@@ -2855,6 +2926,7 @@
     au < doNotProcess ; 2012 ; Medieval Sermon Studies Volume 56 ; 56 >
     au < manifest ; 2013 ; Medieval Sermon Studies Volume 57 ; 57 >
     au < manifest ; 2014 ; Medieval Sermon Studies Volume 58 ; 58 >
+    au < expected ; 2015 ; Medieval Sermon Studies Volume 59 ; 59 >
 
   }
 
@@ -2969,6 +3041,7 @@
     au < doNotProcess ; 2012 ; Midland History Volume 37 ; 37 >
     au < manifest ; 2013 ; Midland History Volume 38 ; 38 >
     au < manifest ; 2014 ; Midland History Volume 39 ; 39 >
+    au < exists ; 2015 ; Midland History Volume 40 ; 40 >
 
   }
 
@@ -2999,6 +3072,7 @@
     au < doNotProcess ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 >
     au < manifest ; 2013 ; Mineral Processing and Extractive Metallurgy Volume 122 ; 122 >
     au < manifest ; 2014 ; Mineral Processing and Extractive Metallurgy Volume 123 ; 123 >
+    au < exists ; 2015 ; Mineral Processing and Extractive Metallurgy Volume 124 ; 124 >
 
   }
 
@@ -3053,6 +3127,7 @@
     au < doNotProcess ; 2012 ; Ming Studies Volume 2012 ; 2012 >
     au < manifest ; 2013 ; Ming Studies Volume 2013 ; 2013 >
     au < manifest ; 2014 ; Ming Studies Volume 2014 ; 2014 >
+    au < expected ; 2015 ; Ming Studies Volume 2015 ; 2015 >
 
   }
 
@@ -3083,6 +3158,7 @@
     au < doNotProcess ; 2012 ; Mining Technology Volume 121 ; 121 >
     au < manifest ; 2013 ; Mining Technology Volume 122 ; 122 >
     au < manifest ; 2014 ; Mining Technology Volume 123 ; 123 >
+    au < exists ; 2015 ; Mining Technology Volume 124 ; 124 >
 
   }
 
@@ -3159,6 +3235,7 @@
     au < doNotProcess ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 >
     au < manifest ; 2013 ; Names: A Journal of Onomastics Volume 61 ; 61 >
     au < manifest ; 2014 ; Names: A Journal of Onomastics Volume 62 ; 62 >
+    au < exists ; 2015 ; Names: A Journal of Onomastics Volume 63 ; 63 >
 
   }
 
@@ -3188,6 +3265,7 @@
     au < doNotProcess ; 2012 ; Neurological Research Volume 34 ; 34 >
     au < manifest ; 2013 ; Neurological Research Volume 35 ; 35 >
     au < manifest ; 2014 ; Neurological Research Volume 36 ; 36 >
+    au < exists ; 2015 ; Neurological Research Volume 37 ; 37 >
 
   }
 
@@ -3204,6 +3282,7 @@
     au < doNotProcess ; 2012 ; New Journal of Botany Volume 2 ; 2 >
     au < manifest ; 2013 ; New Journal of Botany Volume 3 ; 3 >
     au < manifest ; 2014 ; New Journal of Botany Volume 4 ; 4 >
+    au < exists ; 2015 ; New Journal of Botany Volume 5 ; 5 >
 
   }
 
@@ -3269,6 +3348,7 @@
     au < doNotProcess ; 2012 ; Northern History Volume 49 ; 49 >
     au < manifest ; 2013 ; Northern History Volume 50 ; 50 >
     au < manifest ; 2014 ; Northern History Volume 51 ; 51 >
+    au < exists ; 2015 ; Northern History Volume 52 ; 52 >
 
   }
 
@@ -3296,6 +3376,7 @@
     au < doNotProcess ; 2012 ; Nutritional Neuroscience Volume 15 ; 15 >
     au < manifest ; 2013 ; Nutritional Neuroscience Volume 16 ; 16 >
     au < manifest ; 2014 ; Nutritional Neuroscience Volume 17 ; 17 >
+    au < exists ; 2015 ; Nutritional Neuroscience Volume 18 ; 18 >
 
   }
 
@@ -3353,6 +3434,7 @@
     au < doNotProcess ; 2012 ; Oxford German Studies Volume 41 ; 41 >
     au < manifest ; 2013 ; Oxford German Studies Volume 42 ; 42 >
     au < manifest ; 2014 ; Oxford German Studies Volume 43 ; 43 >
+    au < exists ; 2015 ; Oxford German Studies Volume 44 ; 44 >
 
   }
 
@@ -3379,6 +3461,7 @@
     au < doNotProcess ; 2012 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 23 ; 23 >
     au < manifest ; 2013 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 24 ; 24 >
     au < manifest ; 2014 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 25 ; 25 >
+    au < expected ; 2015 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 26 ; 26 >
 
   }
 
@@ -3395,6 +3478,7 @@
     au < manifest ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
     au < manifest ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 >
     au < manifest ; 2014 ; Paediatrics and International Child Health Volume 34 ; 34 >
+    au < exists ; 2015 ; Paediatrics and International Child Health Volume 35 ; 35 >
     
   }
 
@@ -3444,6 +3528,7 @@
     au < doNotProcess ; 2012 ; Palestine Exploration Quarterly Volume 144 ; 144 >
     au < manifest ; 2013 ; Palestine Exploration Quarterly Volume 145 ; 145 >
     au < manifest ; 2014 ; Palestine Exploration Quarterly Volume 146 ; 146 >
+    au < exists ; 2015 ; Palestine Exploration Quarterly Volume 147 ; 147 >
 
   }
 
@@ -3478,7 +3563,8 @@
     au < manifest ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
     au < manifest ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
     au < manifest ; 2014 ; Pathogens and Global Health Volume 108 ; 108 >
-    
+    au < exists ; 2015 ; Pathogens and Global Health Volume 109 ; 109 >
+
   }
 
   {
@@ -3531,6 +3617,7 @@
     au < doNotProcess ; 2012 ; Physical Therapy Reviews Volume 17 ; 17 >
     au < manifest ; 2013 ; Physical Therapy Reviews Volume 18 ; 18 >
     au < manifest ; 2014 ; Physical Therapy Reviews Volume 19 ; 19 >
+    au < exists ; 2015 ; Physical Therapy Reviews Volume 20 ; 20 >
 
   }
 
@@ -3561,6 +3648,7 @@
     au < doNotProcess ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 >
     au < manifest ; 2013 ; Plastics, Rubber and Composites Volume 42 ; 42 >
     au < manifest ; 2014 ; Plastics, Rubber and Composites Volume 43 ; 43 >
+    au < exists ; 2015 ; Plastics, Rubber and Composites Volume 44 ; 44 >
 
   }
 
@@ -3585,6 +3673,7 @@
     au < doNotProcess ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 >
     au < manifest ; 2013 ; Post-Medieval Archaeology Volume 47 ; 47 >
     au < manifest ; 2014 ; Post-Medieval Archaeology Volume 48 ; 48 >
+    au < exists ; 2015 ; Post-Medieval Archaeology Volume 49 ; 49 >
 
   }
 
@@ -3616,6 +3705,7 @@
     au < doNotProcess ; 2012 ; Powder Metallurgy Volume 55 ; 55 >
     au < manifest ; 2013 ; Powder Metallurgy Volume 56 ; 56 >
     au < manifest ; 2014 ; Powder Metallurgy Volume 57 ; 57 >
+    au < exists ; 2015 ; Powder Metallurgy Volume 58 ; 58 >
 
   }
 
@@ -3642,6 +3732,7 @@
     au < doNotProcess ; 2012 ; Progress in Palliative Care Volume 20 ; 20 >
     au < manifest ; 2013 ; Progress in Palliative Care Volume 21 ; 21 >
     au < manifest ; 2014 ; Progress in Palliative Care Volume 22 ; 22 >
+    au < exists ; 2015 ; Progress in Palliative Care Volume 23 ; 23 >
 
   }
 
@@ -3669,6 +3760,7 @@
     au < doNotProcess ; 2012 ; Public Archaeology Volume 11 ; 11 >
     au < manifest ; 2013 ; Public Archaeology Volume 12 ; 12 >
     au < manifest ; 2014 ; Public Archaeology Volume 13 ; 13 >
+    au < expected ; 2015 ; Public Archaeology Volume 14 ; 14 >
 
   }
 
@@ -3692,6 +3784,7 @@
     au < doNotProcess ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 >
     au < manifest ; 2013 ; Publications of the English Goethe Society Volume 82 ; 82 >
     au < manifest ; 2014 ; Publications of the English Goethe Society Volume 83 ; 83 >
+    au < exists ; 2015 ; Publications of the English Goethe Society Volume 84 ; 84 >
 
   }
 
@@ -3722,6 +3815,7 @@
     au < doNotProcess ; 2012 ; Redox Report Volume 17 ; 17 >
     au < manifest ; 2013 ; Redox Report Volume 18 ; 18 >
     au < manifest ; 2014 ; Redox Report Volume 19 ; 19 >
+    au < exists ; 2015 ; Redox Report Volume 20 ; 20 >
 
   }
 
@@ -3784,6 +3878,7 @@
     au < doNotProcess ; 2012 ; Romance Studies Volume 30 ; 30 >
     au < manifest ; 2013 ; Romance Studies Volume 31 ; 31 >
     au < manifest ; 2014 ; Romance Studies Volume 32 ; 32 >
+    au < exists ; 2015 ; Romance Studies Volume 33 ; 33 >
 
   }
 
@@ -3818,6 +3913,7 @@
     au < doNotProcess ; 2012 ; Science and Technology of Welding & Joining Volume 17 ; 17 >
     au < manifest ; 2013 ; Science and Technology of Welding & Joining Volume 18 ; 18 >
     au < manifest ; 2014 ; Science and Technology of Welding & Joining Volume 19 ; 19 >
+    au < exists ; 2015 ; Science and Technology of Welding & Joining Volume 20 ; 20 >
 
   }
 
@@ -3869,6 +3965,7 @@
     au < doNotProcess ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 >
     au < manifest ; 2013 ; Seventeenth-Century French Studies Volume 35 ; 35 >
     au < manifest ; 2014 ; Seventeenth-Century French Studies Volume 36 ; 36 >
+    au < expected ; 2015 ; Seventeenth-Century French Studies Volume 37 ; 37 >
 
   }
 
@@ -3903,6 +4000,7 @@
     au < doNotProcess ; 2012 ; Slavonica Volume 18 ; 18 >
     au < manifest ; 2013 ; Slavonica Volume 19 ; 19 >
     au < manifest ; 2014 ; Slavonica Volume 20 ; 20 >
+    au < expected ; 2015 ; Slavonica Volume 21 ; 21 >
 
   }
 
@@ -3975,7 +4073,8 @@
    au < doNotProcess ; 2012 ; Studies in Conservation Volume 57 ; 57 >
    au < manifest ; 2013 ; Studies in Conservation Volume 58 ; 58 >
    au < released ; 2014 ; Studies in Conservation Volume 59 ; 59 >
-    
+   au < exists ; 2015 ; Studies in Conservation Volume 60 ; 60 >
+
   }
 
   {
@@ -4020,6 +4119,7 @@
     au < doNotProcess ; 2012 ; Surface Engineering Volume 28 ; 28 >
     au < manifest ; 2013 ; Surface Engineering Volume 29 ; 29 >
     au < released ; 2014 ; Surface Engineering Volume 30 ; 30 >
+    au < exists ; 2015 ; Surface Engineering Volume 31 ; 31 >
 
   }
 
@@ -4080,6 +4180,7 @@
     au < doNotProcess ; 2012 ; Survey Review Volume 44 ; 44 >
     au < manifest ; 2013 ; Survey Review Volume 45 ; 45 >
     au < released ; 2014 ; Survey Review Volume 46 ; 46 >
+    au < exists ; 2015 ; Survey Review Volume 47 ; 47 >
 
   }
 
@@ -4121,6 +4222,7 @@
     au < doNotProcess ; 2012 ; T'ang Studies Volume 2012 ; 2012 >
     au < released ; 2013 ; T'ang Studies Volume 2013 ; 2013 >
     au < expected ; 2014 ; T'ang Studies Volume 2014 ; 2014 >
+    au < expected ; 2015 ; T'ang Studies Volume 2015 ; 2015 >
 
   }
 
@@ -4185,7 +4287,8 @@
     au < doNotProcess ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 >
     au < manifest ; 2013 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 40 ; 40 >
     au < manifest ; 2014 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 41 ; 41 >
-    
+    au < exists ; 2015 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 42 ; 42 >
+
   }
 
   {
@@ -4245,6 +4348,7 @@
     au < doNotProcess ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 >
     au < manifest ; 2013 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 45 ; 45 >
     au < manifest ; 2014 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 46 ; 46 >
+    au < exists ; 2015 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 47 ; 47 >
 
   }
 
@@ -4304,6 +4408,7 @@
     au < doNotProcess ; 2012 ; Textile History Volume 43 ; 43 >
     au < manifest ; 2013 ; Textile History Volume 44 ; 44 >
     au < manifest ; 2014 ; Textile History Volume 45 ; 45 >
+    au < exists ; 2015 ; Textile History Volume 46 ; 46 >
 
   }
 
@@ -4328,6 +4433,7 @@
     au < doNotProcess ; 2012 ; Transactions of the Institute of Metal Finishing Volume 90 ; 90 >
     au < manifest ; 2013 ; Transactions of the Institute of Metal Finishing Volume 91 ; 91 >
     au < manifest ; 2014 ; Transactions of the Institute of Metal Finishing Volume 92 ; 92 >
+    au < exists ; 2015 ; Transactions of the Institute of Metal Finishing Volume 93 ; 93 >
 
   }
 
@@ -4443,6 +4549,7 @@
     au < doNotProcess ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 >
     au < manifest ; 2013 ; Tribology - Materials, Surfaces & Interfaces Volume 7 ; 7 >
     au < manifest ; 2014 ; Tribology - Materials, Surfaces & Interfaces Volume 8 ; 8 >
+    au < exists ; 2015 ; Tribology - Materials, Surfaces & Interfaces Volume 9 ; 9 >
 
   }
 
@@ -4479,6 +4586,7 @@
     au < doNotProcess ; 2012 ; Twentieth-Century China Volume 37 ; 37 >
     au < manifest ; 2013 ; Twentieth-Century China Volume 38 ; 38 >
     au < manifest ; 2014 ; Twentieth-Century China Volume 39 ; 39 >
+    au < exists ; 2015 ; Twentieth-Century China Volume 40 ; 40 >
 
   }
 
@@ -4556,6 +4664,7 @@
     au < doNotProcess ; 2012 ; Vernacular Architecture Volume 43 ; 43 >
     au < manifest ; 2013 ; Vernacular Architecture Volume 44 ; 44 >
     au < manifest ; 2014 ; Vernacular Architecture Volume 45 ; 45 >
+    au < expected ; 2015 ; Vernacular Architecture Volume 46 ; 46 >
 
   }
 
@@ -4603,6 +4712,7 @@
     au < doNotProcess ; 2012 ; War & Society Volume 31 ; 31 >
     au < manifest ; 2013 ; War & Society Volume 32 ; 32 >
     au < manifest ; 2014 ; War & Society Volume 33 ; 33 >
+    au < exists ; 2015 ; War & Society Volume 34 ; 34 >
 
   }
 
@@ -4621,6 +4731,7 @@
     au < doNotProcess ; 2012 ; Yorkshire Archaeological Journal Volume 84 ; 84 >
     au < manifest ; 2013 ; Yorkshire Archaeological Journal Volume 85 ; 85 >
     au < manifest ; 2014 ; Yorkshire Archaeological Journal Volume 86 ; 86 >
+    au < expected ; 2015 ; Yorkshire Archaeological Journal Volume 87 ; 87 >
 
   }
 
