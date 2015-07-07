@@ -74,7 +74,7 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
   protected static NodeFilter[] baseFilters = new NodeFilter[] {
     // No need to hash these tags in OJS sites, not content and things change
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
+    // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"), sidebar filter below removes this tag
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "commentsOnArticle"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citation-block"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "sidebar", true),
@@ -82,12 +82,12 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "separator"),
     HtmlNodeFilters.tagWithTextRegex("span", "Metrics powered by.+PLOS ALM", true),
     new TagNameFilter("br"),
-    // Some OJS sites have a tag cloud
-    HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
+    // Some OJS sites have a tag cloud, sidebar filter above removes this tag
+    // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
     // Some OJS sites have a subscription status area
-    HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarSubscription"),
-    // Some OJS sites have a language switcher, which can change over time
-    HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarLanguageToggle"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Subscription"),
+    // Some OJS sites have a language switcher, which can change over time, sidebar filter above removes this tag
+    // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarLanguageToggle"),
     // Top-level menu items sometimes change over time
     HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
     // Popular location for sidebar customizations
@@ -102,8 +102,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("meta", "name", "generator"),
     // Header image with variable dimensions
     HtmlNodeFilters.tagWithAttribute("div", "id", "headerTitle"),
-    // For Ubiquity Press
-    HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
+    // For Ubiquity Press, sidebar filter above removes this tag
+    // HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
     // For JLIS.it: landing pages contain user view count
     HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews"),
     // For ibictpln: PHP Query Profiler

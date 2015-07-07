@@ -58,7 +58,7 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   private static final String sidebarKeywordCloudHtml =
 		 "<div class=\"block\" id=\"sidebarUser\"><div id=\"sidebarKeywordCloud\"></div></div>";
   private static final String sidebarKeywordCloudHtmlFiltered =
-      "<div class=\"block\" id=\"sidebarUser\"></div>";
+      "";
   
   private static final String sidebarSubscriptionHtml =
       "<div id=\"sidebarSubscription\"><a class=\"blockTitle\" href=\"http://pkp.sfu.ca/ojs/\" id=\"developedBy\">Open Journal Systems</a></div>";
@@ -111,7 +111,7 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   		".net/index.php/more/path/here</a>&gt;. Date accessed" +
   		": 13 Jul. 2012.</div></div><div class=\"separator\"></div>";
   private static final String dateAccessedHtmlFiltered = 
-    "<div class=\"separator\"></div></div><div class=\"separator\"></div>";
+    "</div>";
   
   private static final String generatorHtml =
       "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"generator\"></head>";
@@ -148,13 +148,13 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
       "</div>\n" + 
       "</div>\n";
   private static final String pqpHtmlFiltered =
-      "\n";
+      " ";
   
   private static final String accessHtml =
       "<br>\n" + 
       "<b>Total de acessos: 455</b>\n";
   private static final String accessHtmlFiltered =
-      "<br>\n\n";
+      " ";
   
   /*
    */
@@ -171,8 +171,8 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
       "</div><!-- footer -->\n" + 
       "</body>";
   private static final String footerHtmlFiltered =
-      "<body>\n" +
-      "<!-- footer -->\n" +
+      "<body> " +
+      "<!-- footer --> " +
       "</body>";
   
   public void testSidebarKeywordCloudFiltering() throws Exception {
@@ -180,9 +180,7 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
         new StringInputStream(sidebarKeywordCloudHtml),
         Constants.DEFAULT_ENCODING);
 
-    //assertEquals(sidebarKeywordCloudHtmlFiltered, StringUtil.fromInputStream(actIn));
-    //VERIFY
-    assertEquals("", StringUtil.fromInputStream(actIn));
+    assertEquals(sidebarKeywordCloudHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
   public void testSidebarSubscriptionFiltering() throws Exception {
@@ -208,10 +206,7 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
         new StringInputStream(dateAccessedHtml),
         Constants.DEFAULT_ENCODING);
 
-    //assertEquals(dateAccessedHtmlFiltered, StringUtil.fromInputStream(actIn));
-    //VERIFY
-    assertEquals("</div>", StringUtil.fromInputStream(actIn));
-    
+    assertEquals(dateAccessedHtmlFiltered, StringUtil.fromInputStream(actIn));
 
   }
 
@@ -265,25 +260,19 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
         new StringInputStream(pqpHtml),
         Constants.DEFAULT_ENCODING);
     
-    //assertEquals(pqpHtmlFiltered, StringUtil.fromInputStream(actIn));
-    //VERIFY
-    assertEquals(" ", StringUtil.fromInputStream(actIn));
+    assertEquals(pqpHtmlFiltered, StringUtil.fromInputStream(actIn));
     
     actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(accessHtml),
         Constants.DEFAULT_ENCODING);
     
-    //assertEquals(accessHtmlFiltered, StringUtil.fromInputStream(actIn));
-    //VERIFY
-    assertEquals(" ", StringUtil.fromInputStream(actIn));
+    assertEquals(accessHtmlFiltered, StringUtil.fromInputStream(actIn));
     
     actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(footerHtml),
         Constants.DEFAULT_ENCODING);
     
-    //assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
-    //VERIFY
-    assertEquals("<body> <!-- footer --> </body>", StringUtil.fromInputStream(actIn));
+    assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
 
   }
 
