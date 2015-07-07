@@ -15,23 +15,22 @@
       >
 
       comment[publisher] = Universidade Estadual de Campinas, Instituto d Geociências
-      param[base_url] = http://www.ige.unicamp.br/ojs/
+      param[base_url] = http://ocs.ige.unicamp.br/ojs/
       param[journal_id] = rbi
-      comment[v2002_2012] = fetch error. 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js
 
-      au < notReady ; 2002 ; 1 ; Revista Brasileira de Inovação Volume 2002 ; 2002 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2003 ; 2 ; Revista Brasileira de Inovação Volume 2003 ; 2003 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2004 ; 3 ; Revista Brasileira de Inovação Volume 2004 ; 2004 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2005 ; 4 ; Revista Brasileira de Inovação Volume 2005 ; 2005 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2006 ; 5 ; Revista Brasileira de Inovação Volume 2006 ; 2006 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2007 ; 6 ; Revista Brasileira de Inovação Volume 2007 ; 2007 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2008 ; 7 ; Revista Brasileira de Inovação Volume 2008 ; 2008 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2009 ; 8 ; Revista Brasileira de Inovação Volume 2009 ; 2009 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2010 ; 9 ; Revista Brasileira de Inovação Volume 2010 ; 2010 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2011 ; 10 ; Revista Brasileira de Inovação Volume 2011 ; 2011 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2012 ; 11 ; Revista Brasileira de Inovação Volume 2012 ; 2012 ; 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js >
-      au < notReady ; 2013 ; 12 ; Revista Brasileira de Inovação Volume 2013 ; 2013 ; Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager >
-      au < notReady ; 2014 ; 13 ; Revista Brasileira de Inovação Volume 2014 ; 2014 ; no permission from publisher>
+      au < exists ; 2002 ; 1 ; Revista Brasileira de Inovação Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 2 ; Revista Brasileira de Inovação Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 3 ; Revista Brasileira de Inovação Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 4 ; Revista Brasileira de Inovação Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 5 ; Revista Brasileira de Inovação Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 6 ; Revista Brasileira de Inovação Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 7 ; Revista Brasileira de Inovação Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 8 ; Revista Brasileira de Inovação Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 9 ; Revista Brasileira de Inovação Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 10 ; Revista Brasileira de Inovação Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 11 ; Revista Brasileira de Inovação Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 12 ; Revista Brasileira de Inovação Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 13 ; Revista Brasileira de Inovação Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 14 ; Revista Brasileira de Inovação Volume 2015 ; 2015 ; >
 
   }
