@@ -41,7 +41,7 @@
     au < manifest ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 >
     au < manifest ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 >
     au < manifest ; exists ; 2013 ; Agronomy Journal Volume 105 ; 105 >
-    au < manifest ; exists ; 2014 ; Agronomy Journal Volume 106 ; 106 >
+    au < testing ; exists ; 2014 ; Agronomy Journal Volume 106 ; 106 >
     au < manifest ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 >
     au < expected ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 >
 
@@ -61,7 +61,7 @@
     param[journal_id] = cns
 
     au < manifest ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
-    au < manifest ; exists ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
+    au < testing ; exists ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
     au < manifest ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
 
 
@@ -84,7 +84,7 @@
     au < manifest ; exists ; 2011 ; Crop Science Volume 51 ; 51 >
     au < manifest ; exists ; 2012 ; Crop Science Volume 52 ; 52 >
     au < manifest ; exists ; 2013 ; Crop Science Volume 53 ; 53 >
-    au < manifest ; exists ; 2014 ; Crop Science Volume 54 ; 54 >
+    au < testing ; exists ; 2014 ; Crop Science Volume 54 ; 54 >
     au < manifest ; exists ; 2015 ; Crop Science Volume 55 ; 55 >
 
   }
@@ -103,7 +103,7 @@
     param[journal_id] = csa
 
     au < manifest ; exists ; 2013 ; CSA News Volume 58 ; 58 >
-    au < manifest ; exists ; 2014 ; CSA News Volume 59 ; 59 >
+    au < testing ; exists ; 2014 ; CSA News Volume 59 ; 59 >
     au < manifest ; exists ; 2015 ; CSA News Volume 60 ; 60 >
 
   }
@@ -126,7 +126,7 @@
     au < manifest ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
     au < manifest ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
     au < manifest ; exists ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
-    au < manifest ; exists ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
+    au < testing ; exists ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
     au < manifest ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
 
 
@@ -148,7 +148,7 @@
     au < manifest ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
     au < manifest ; exists ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
-    au < manifest ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
+    au < testing ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
     au < manifest ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
 
   }
