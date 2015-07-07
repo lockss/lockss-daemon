@@ -534,9 +534,12 @@
 
     comment[base_url] = http://www.equinehealthmagazine.com/
     param[journal_id] = eqhe
-    comment[notReady] = all issues lumped into one volume.
 
-    au < notReady ; 2014 ; Equine Health Volume 1 ; 1 >
+    au < exists ; 2011 ; Equine Health Volume 2011 ; 2011 >
+    au < exists ; 2012 ; Equine Health Volume 2012 ; 2012 >
+    au < exists ; 2013 ; Equine Health Volume 2013 ; 2013 >
+    au < exists ; 2014 ; Equine Health Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Equine Health Volume 2015 ; 2015 >
 
   }
 
@@ -635,9 +638,10 @@
 
     comment[base_url] = http://www.fundraisingschools.co.uk/
     param[journal_id] = fund
-    comment[notReady] = issues lumped into one volume.
-
-    au < notReady ; 2014 ; Fundraising for Schools Volume 1 ; 1 >
+    
+    au < exists ; 2013 ; Fundraising for Schools Volume 2013 ; 2013 >
+    au < exists ; 2014 ; Fundraising for Schools Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Fundraising for Schools Volume 2015 ; 2015 >
   }
 
   {
@@ -685,9 +689,13 @@
 
     comment[base_url] = http://www.practicalpreschool.com/
     param[journal_id] = prps
-    comment[notReady] = issues lumped into one volume.
 
-    au < notReady ; 2014 ; Practical Pre-School Volume 2014 ; 2014 >
+    au < exists ; 2010 ; Practical Pre-School Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Practical Pre-School Volume 2011 ; 2011 >
+    au < exists ; 2012 ; Practical Pre-School Volume 2012 ; 2012 >
+    au < exists ; 2013 ; Practical Pre-School Volume 2013 ; 2013 >
+    au < exists ; 2014 ; Practical Pre-School Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Practical Pre-School Volume 2015 ; 2015 >
 
   }
 
@@ -700,11 +708,13 @@
 
     comment[base_url] = http://www.primaryteacherupdate.co.uk/
     param[journal_id] = prtu
-    comment[notReady] = issues lumped into one volume.
     
-
-    au < exists ; 2010 ; SecEd Volume 9 ; 2010 >
-    au < notReady ; 2011-2015 ; Primary Teacher Update Volume 2015 ; 2015 >
+    au < exists ; 2010 ; Primary Teacher Update Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Primary Teacher Update Volume 2011 ; 2011 >
+    au < exists ; 2012 ; Primary Teacher Update Volume 2012 ; 2012 >
+    au < exists ; 2013 ; Primary Teacher Update Volume 2013 ; 2013 >
+    au < exists ; 2014 ; Primary Teacher Update Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Primary Teacher Update Volume 2015 ; 2015 >
 
   }
 
@@ -716,9 +726,12 @@
 
     comment[base_url] = http://www.sec-ed.co.uk/
     param[journal_id] = sece
-    comment[notReady] = issues lumped into one volume.
 
-    au < notReady ; 2014 ; SecEd Volume 2014 ; 2014 >
+    au < exists ; 2011 ; SecEd Volume 2011 ; 2011 >
+    au < exists ; 2012 ; SecEd Volume 2012 ; 2012 >
+    au < exists ; 2013 ; SecEd Volume 2013 ; 2013 >
+    au < exists ; 2014 ; SecEd Volume 2014 ; 2014 >
+    au < exists ; 2015 ; SecEd Volume 2015 ; 2015 >
 
 
   }
