@@ -119,7 +119,7 @@
 
     param[journal_issn] = 1748-3190
     comment[param] = eissn preferred
-    comment[notReady] = old content collected, need retest later
+    comment[notReady] = login required
 
     au < manifest ; exists ; 2006 ; Bioinspiration & Biomimetics Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Bioinspiration & Biomimetics Volume 2 ; 2 > 
@@ -925,9 +925,9 @@
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 54 ; 54 >
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 55 ; 55 >
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 56 ; 56 >
-    au < wanted ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 57 ; 57 >
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 58 ; 58 >
-    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 59 ; 59 >
+    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 57 ; 57 >
+    au < testing ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 58 ; 58 >
+    au < testing ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 59 ; 59 >
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 60 ; 60 >
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 61 ; 61 >
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 62 ; 62 >
@@ -937,7 +937,7 @@
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 66 ; 66 >
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 67 ; 67 >
     au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 68 ; 68 >
-    au < testing ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 69 ; 69 >
+    au < ready ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 69 ; 69 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 70 ; 70 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 71 ; 71 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 72 ; 72 >
@@ -3982,11 +3982,11 @@
     param[journal_issn] = 1005-0841 
     comment[param] = print issn preferred
 
-    au < testing ; exists ; 2008 ; Science Foundation in China Volume 16 ; 16 >
+    au < ready ; exists ; 2008 ; Science Foundation in China Volume 16 ; 16 >
     au < testing ; exists ; 2009 ; Science Foundation in China Volume 17 ; 17 >
-    au < testing ; exists ; 2010 ; Science Foundation in China Volume 18 ; 18 >
-    au < testing ; exists ; 2011 ; Science Foundation in China Volume 19 ; 19 >
-    au < testing ; exists ; 2012 ; Science Foundation in China Volume 20 ; 20 >
+    au < ready ; exists ; 2010 ; Science Foundation in China Volume 18 ; 18 >
+    au < ready ; exists ; 2011 ; Science Foundation in China Volume 19 ; 19 >
+    au < ready ; exists ; 2012 ; Science Foundation in China Volume 20 ; 20 >
 
   }
 
