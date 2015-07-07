@@ -2043,14 +2043,15 @@
   
         title <
           name = Progress in Orthodontics ;
-          issn = 1723-7785
+          issn = 1723-7785 ;
+          eissn = 2196-1042
         >
   
         param[base_url] = http://www.progressinorthodontics.com/
-        param[journal_issn] = 1723-7785
+        param[journal_issn] = 2196-1042
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
+        au < exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
         au < exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
         au < exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
   
@@ -2406,23 +2407,6 @@
 
       au < exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
       au < expected ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
-
-    }
-
-    {
-
-      title <
-        name = Progress in Orthodontics ;
-        eissn = 2196-1042
-      >
-
-      param[base_url] = http://www.progressinorthodontics.com/
-      param[journal_issn] = 2196-1042
-      comment[platform] = BioMedCentralPlugin
-
-      au < manifest ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
-      au < manifest ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
-      au < manifest ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
 
     }
 
