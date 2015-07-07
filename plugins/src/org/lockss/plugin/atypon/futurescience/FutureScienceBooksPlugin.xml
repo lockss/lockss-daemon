@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Future Science Group Books Plugin, Base URL %s, ISBN %s", base_url, book_isbn</string>
+    <string>"Future Science Group Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

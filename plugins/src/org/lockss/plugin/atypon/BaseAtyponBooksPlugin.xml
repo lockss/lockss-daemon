@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -45,11 +45,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Base Atypon Books Plugin, Base URL %s, ISBN %s", base_url, book_isbn</string>
+    <string>"Base Atypon Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss/eisbn/%s", base_url, book_isbn</string>
+    <string>"%slockss/eisbn/%s", base_url, book_eisbn</string>
   </entry>
   <entry>
   <!-- manifest to book landing page with chapters -->
@@ -71,9 +71,9 @@
      -->
     <list>
       <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
-      <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_isbn</string>   
+      <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_eisbn</string>   
       <string>2,"^%sdoi/book/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
-      <string>1,"^%sdoi/book/[0-9.]+/%s", base_url, book_isbn</string>
+      <string>1,"^%sdoi/book/[0-9.]+/%s", base_url, book_eisbn</string>
       <string>1,"^%sdoi/(abs|full|pdf)/[0-9.]+/", base_url</string>
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
@@ -92,8 +92,8 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>book_isbn</key>
-        <displayName>Book ISBN</displayName>
+        <key>book_eisbn</key>
+        <displayName>Book eISBN</displayName>
         <description>International Standard Book Number</description>
         <type>1</type>
         <size>40</size>
@@ -110,13 +110,15 @@
     <string>au_def_pause_time</string>
     <long>3000</long>
   </entry>
-  <!-- child plugin must define a publisher-specific key if they support both books and journals -->
-<!-- 
+<!-- Each Atypon publisher will be limited to one crawl based on its unique base_host -->
+<!-- That is, even if there is both a books and journals plugin, if they crawl from the 
+     same base_url, they crawl 1 at a time. If this is NOT correct for a specific child
+     they can override this
+-->     
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:PUBNAMEKEYHERE</string>
+    <string>host:base_url</string>
   </entry>
- -->
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
@@ -208,10 +210,8 @@
   <!-- GLN children require a plugin_au_config_user_msg, which is a printf -->
   <!-- Here is a default version, but plugins may need to customize -->
   <!-- CLOCKSS children must turn it off-->
-  <!--  TURN THIS OFF UNTIL 1.67
   <entry>
     <string>plugin_au_config_user_msg</string>
     <string>"Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;%saction/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by this publisher.", base_url</string>
   </entry>
-   TURN THIS OFF UNTIL 1.67 -->
 </map>

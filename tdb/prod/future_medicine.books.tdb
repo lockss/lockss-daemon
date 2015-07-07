@@ -5,7 +5,7 @@
 
   plugin = org.lockss.plugin.atypon.futurescience.FutureScienceBooksPlugin
   param[base_url] = http://www.futuremedicine.com/
-  implicit < status ; year ; isbn ; eisbn ; name ; param[book_isbn] >
+  implicit < status ; year ; isbn ; eisbn ; name ; param[book_eisbn] >
 
   {
 

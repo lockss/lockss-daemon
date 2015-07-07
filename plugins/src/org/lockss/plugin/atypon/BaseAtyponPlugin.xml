@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -167,6 +167,15 @@
     <string>au_def_pause_time</string>
     <long>3000</long>
   </entry>
+<!-- Each Atypon publisher will be limited to one crawl based on its unique base_host -->
+<!-- That is, even if there is both a books and journals plugin, if they crawl from the 
+     same base_url, they crawl 1 at a time. If this is NOT correct for a specific child
+     they can override this
+-->     
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
+  </entry>  
   <entry>
 <!--  this is actually used to look for redirection  -->  
     <string>plugin_substance_predicate_factory</string>
