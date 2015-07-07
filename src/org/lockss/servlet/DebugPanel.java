@@ -93,14 +93,14 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
   static final String ACTION_START_DEEP_CRAWL = "Deep Crawl";
   static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
-  static final String ACTION_CHECK_SUBSTANCE = "Check Substance";
+  public static final String ACTION_CHECK_SUBSTANCE = "Check Substance";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
   static final String ACTION_SLEEP = "Sleep";
   static final String ACTION_DISABLE_METADATA_INDEXING = "Disable Indexing";
 
   /** Set of actions for which audit alerts shouldn't be generated */
-  static final Set noAuditActions = SetUtil.set(ACTION_FIND_URL);
+  public static final Set noAuditActions = SetUtil.set(ACTION_FIND_URL);
 
 
   static final String COL2 = "colspan=2";

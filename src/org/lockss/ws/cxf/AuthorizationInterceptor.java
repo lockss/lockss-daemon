@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -72,31 +72,16 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
     final String DEBUG_HEADER = "handleMessage(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "message = " + message);
 
-    // Get the authorization policy provided by CXF.
-    AuthorizationPolicy policy = message.get(AuthorizationPolicy.class);
+    // Get the user account.
+    UserAccount userAccount = null;
 
-    if (policy == null) {
-      // This should not happen. If the policy is not set, in theory the user
-      // did not specify credentials, but this should have been caught upstream
-      // and it should never have reached this point.
-      // Nevertheless, send back to the client a 401 error indicating that
-      // authentication is required.
-      String errorMessage = "No credentials were received.";
-      log.error(errorMessage);
-
-      throw new Fault(new LockssWebServicesFault(errorMessage,
-	  new LockssWebServicesFaultInfo("401")));
+    try {
+      userAccount = getUserAccount(message);
+    } catch (LockssWebServicesFault lwsf) {
+      throw new Fault(lwsf);
     }
 
-    // Get the name of the authenticated user.
-    String userName = policy.getUserName();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "userName = " + userName);
-
-    // Get the user account.
-    UserAccount userAccount =
-	LockssDaemon.getLockssDaemon().getAccountManager().getUser(userName);
     if (log.isDebug3()) {
-      log.debug3(DEBUG_HEADER + "userAccount = " + userAccount);
       log.debug3(DEBUG_HEADER + "userAccount.getRoles() = "
 	  + userAccount.getRoles());
       log.debug3(DEBUG_HEADER + "userAccount.getRoleSet() = "
@@ -116,7 +101,7 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
     } else {
       // No: Report back the problem.
       log.info(NO_REQUIRED_ROLE);
-      log.info("userName = " + userName);
+      log.info("userName = " + userAccount.getName());
 
       throw new Fault(new LockssWebServicesFault(NO_REQUIRED_ROLE,
 	  new LockssWebServicesFaultInfo("401")));
@@ -138,6 +123,12 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
    */
   protected boolean isAuthorized(UserAccount userAccount,
       String[] permissibleRoles) {
+    final String DEBUG_HEADER = "isAuthorized(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "userAccount = " + userAccount);
+      log.debug2(DEBUG_HEADER + "permissibleRoles = " + permissibleRoles);
+    }
+
     // No anonymous access is authorized.
     if (userAccount == null) {
       return false;
@@ -150,6 +141,9 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
 
     // Loop though all the permissible roles.
     for (String permissibleRole : permissibleRoles) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "permissibleRole = " + permissibleRole);
+
       // The user is authorized if it has this permissible role.
       if (userAccount.isUserInRole(permissibleRole)) {
 	return true;
@@ -159,5 +153,48 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
     // The user is not authorized because it does not have any of the
     // permissible roles.
     return false;
+  }
+
+  /**
+   * Provides the account of the user sending an inbound message.
+   * 
+   * @param message
+   *          A Message with the message in the inbound chain.
+   * @return a UserAccount with the account of the user sending the inbound
+   *         message.
+   * @throws LockssWebServicesFault
+   */
+  public static UserAccount getUserAccount(Message message)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getUserAccount(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "message = " + message);
+
+    // Get the authorization policy provided by CXF.
+    AuthorizationPolicy policy = message.get(AuthorizationPolicy.class);
+
+    if (policy == null) {
+      // This should not happen. If the policy is not set, in theory the user
+      // did not specify credentials, but this should have been caught upstream
+      // and it should never have reached this point.
+      // Nevertheless, send back to the client a 401 error indicating that
+      // authentication is required.
+      String errorMessage = "No credentials were received.";
+      log.error(errorMessage);
+
+      throw new LockssWebServicesFault(errorMessage,
+	  new LockssWebServicesFaultInfo("401"));
+    }
+
+    // Get the name of the authenticated user.
+    String userName = policy.getUserName();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "userName = " + userName);
+
+    // Get the user account.
+    UserAccount userAccount =
+	LockssDaemon.getLockssDaemon().getAccountManager().getUser(userName);
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "userAccount = " + userAccount);
+
+    return userAccount;
   }
 }
