@@ -186,6 +186,9 @@ public interface Constants {
   /** The MIME type string for HTML ({@value}). */
   public static final String MIME_TYPE_HTML = "text/html";
 
+  /** The MIME type string for JSON ({@value}) */
+  public static final String MIME_TYPE_JSON = "application/json";
+
   /** The MIME type string for PDF ({@value}). */
   public static final String MIME_TYPE_PDF = "application/pdf";
   
@@ -209,5 +212,6 @@ public interface Constants {
 
   /** Form Encoding type string for plain "post" ({@value}). */
   public static String FORM_ENCODING_PLAIN = "text/plain";
+
 
 }
