@@ -32,6 +32,7 @@ package org.lockss.util.urlconn;
 
 import java.util.*;
 import java.io.*;
+
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 
@@ -62,6 +63,8 @@ public interface LockssUrlConnection {
   public static int METHOD_GET = 1;
   /** Send GET but don't mess with request headers */
   public static int METHOD_PROXY = 2;
+  /** Send POST */
+  public static int METHOD_POST = 3;
 
   /** Return true if an http or https connection */
   public boolean isHttp();
@@ -218,6 +221,8 @@ public interface LockssUrlConnection {
   /** Return the actual URL, after any redirects (if followRedirects is
    * true) */
   public String getActualUrl();
+
+
 
   /**
    * Release resources associated with this request.  Closing the

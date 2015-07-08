@@ -37,6 +37,8 @@ import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.auth.*;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.methods.RequestEntity;
 import org.apache.commons.httpclient.params.*;
 import org.apache.commons.httpclient.protocol.*;
 import org.apache.commons.httpclient.util.*;
@@ -225,10 +227,12 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
         if(log.isDebug2()) log.debug2("out:" + u_str);
       }
       switch (methodCode) {
-      case LockssUrlConnection.METHOD_GET:
-      	return newLockssGetMethodImpl(u_str);
-      case LockssUrlConnection.METHOD_PROXY:
-	      return new LockssProxyGetMethodImpl(u_str);
+        case LockssUrlConnection.METHOD_GET:
+          return newLockssGetMethodImpl(u_str);
+        case LockssUrlConnection.METHOD_PROXY:
+          return new LockssProxyGetMethodImpl(u_str);
+        case LockssUrlConnection.METHOD_POST:
+          return new LockssPostMethodImpl(u_str);
       }
       throw new RuntimeException("Unknown url method: " + methodCode);
     } catch (IllegalArgumentException e) {
@@ -353,7 +357,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     assertNotExecuted();
     HttpParams params = method.getParams();
     params.setParameter(HttpMethodParams.COOKIE_POLICY,
-			getCookiePolicy(policy));
+                        getCookiePolicy(policy));
   }
 
   public void setKeepAlive(boolean val) {
@@ -382,6 +386,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
                                       DEFAULT_USE_PREEMPTIVE_AUTH)) {
       HttpClientParams params = client.getParams();
       params.setAuthenticationPreemptive(true);
+    }
+  }
+
+  public void setRequestEntity(RequestEntity entity) {
+    assertNotExecuted();
+    if(method instanceof PostMethod) {
+      ((PostMethod) method).setRequestEntity(entity);
     }
   }
 
@@ -571,6 +582,21 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       super(url);
       // Establish our retry handler
 //       setMethodRetryHandler(getRetryHandler());
+    }
+  }
+
+  /**
+   * same as the POST method
+   */
+  interface LockssPostMethod extends HttpMethod {
+    long getResponseContentLength();
+  }
+
+  static class LockssPostMethodImpl
+    extends PostMethod implements LockssPostMethod {
+
+    public LockssPostMethodImpl(String url) {
+      super(url);
     }
   }
 
