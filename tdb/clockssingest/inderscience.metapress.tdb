@@ -3353,7 +3353,7 @@
       au < down ; exists ; 2006-2010 ; International Journal of Human Factors Modelling and Simulation Volume 1 ; 1 >
       au < zapped ; finished ; 2011 ; International Journal of Human Factors Modelling and Simulation Volume 2 ; 2 >
       au < down ; frozen ; 2012 ; International Journal of Human Factors Modelling and Simulation Volume 3 ; 3 >
-      au < down ; exists ; 2013 ; International Journal of Human Factors Modelling and Simulation Volume 4 ; 4 >
+      au < superseded ; exists ; 2013 ; International Journal of Human Factors Modelling and Simulation Volume 4 [superseded] ; 4 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Human Factors Modelling and Simulation Volume 5 ; 5 >
 
     }
@@ -3500,10 +3500,9 @@
       >
 
       param[journal_issn] = 1753-7711
-      comment[0] = no issue in 2012
       
       au < down ; exists ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
-      au < zapped ; finished ; 2011 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
+      au < zapped ; superseded ; 2011 ; International Journal of Information and Coding Theory Volume 2 [superseded] ; 2 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Information and Coding Theory Volume 3 ; 3 >
 
     }
