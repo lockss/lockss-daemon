@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -35,7 +35,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -72,7 +72,7 @@
     <list>
       <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
       <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_eisbn</string>   
-      <string>2,"^%sdoi/book/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
+      <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
       <string>1,"^%sdoi/book/[0-9.]+/%s", base_url, book_eisbn</string>
       <string>1,"^%sdoi/(abs|full|pdf)/[0-9.]+/", base_url</string>
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
