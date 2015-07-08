@@ -3473,7 +3473,7 @@
 
       param[journal_issn] = 1757-3882
       
-      au < down ; 2009 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 >
+      au < superseded ; 2009 ; International Journal of Industrial Electronics and Drives Volume 1 [superseded] ; 1 >
 
     }
 
@@ -3487,10 +3487,9 @@
       >
 
       param[journal_issn] = 1753-7711
-      comment[0] = no issue in 2012
       
       au < down ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
-      au < down ; 2011 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
+      au < superseded ; 2011 ; International Journal of Information and Coding Theory Volume 2 [superseded] ; 2 >
       au < doNotProcess ; 2014 ; International Journal of Information and Coding Theory Volume 3 ; 3 >
 
     }
