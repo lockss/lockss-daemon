@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>50</string>
+    <string>51</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
@@ -20,7 +20,7 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>13</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -155,6 +155,6 @@
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>/dynamic-file\.axd\?id=[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}</string>
+    <string>"^%s(dynamic-file\.axd\?id=[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}|images/)", base_url</string>
   </entry>
 </map>
