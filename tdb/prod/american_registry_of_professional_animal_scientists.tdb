@@ -16,6 +16,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://pas.fass.org/
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady] = Issues 4-6 have login pages.
 
     au < released ; 1997 ; The Professional Animal Scientist Volume 13 ; 13 >
     au < released ; 1998 ; The Professional Animal Scientist Volume 14 ; 14 >
@@ -34,7 +35,7 @@
     au < released ; 2011 ; The Professional Animal Scientist Volume 27 ; 27 >
     au < released ; 2012 ; The Professional Animal Scientist Volume 28 ; 28 >
     au < released ; 2013 ; The Professional Animal Scientist Volume 29 ; 29 >
-    au < testing ; 2014 ; The Professional Animal Scientist Volume 30 ; 30 >
+    au < notReady ; 2014 ; The Professional Animal Scientist Volume 30 ; 30 >
     au < manifest ; 2015 ; The Professional Animal Scientist Volume 31 ; 31 >
 
   }
