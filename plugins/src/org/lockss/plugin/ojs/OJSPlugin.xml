@@ -1,3 +1,10 @@
+<!--
+    THIS PLUGIN IS DEPRECATED
+    
+    In spite of its name, this old plugin doesn't work with arbitrary OJS sites.
+    If you are looking for a generic OJS plugin, look at
+    org.lockss.plugins.ojs2.OJS2Plugin in plugins/src/org/lockss/plugin/ojs2/ .
+-->
 <map>
   <entry>
    <string>plugin_status</string>
