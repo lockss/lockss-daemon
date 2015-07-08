@@ -1185,7 +1185,7 @@
 
     param[journal_issn] = 0960-1317
     comment[param] = print issn preferred
-    comment[notReady] = 403 Forbidden fetch error, RU4518
+    comment[ingNotReady] = 403 Forbidden fetch error, RU4518
 
     au < manifest ; exists ; 1991 ; Journal of Micromechanics and Microengineering Volume 1 ; 1 > 
     au < manifest ; exists ; 1992 ; Journal of Micromechanics and Microengineering Volume 2 ; 2 > 
@@ -1742,7 +1742,7 @@
     param[journal_issn] = 0954-3899
     comment[param] = print issn preferred
     comment[continues] = 0305-4616
-    comment[notReady] = low agreement
+    comment[ingNotReady] = low agreement
 
     au < manifest ; exists ; 1989 ; Journal of Physics G: Nuclear and Particle Physics Volume 15 ; 15 > 
     au < manifest ; exists ; 1990 ; Journal of Physics G: Nuclear and Particle Physics Volume 16 ; 16 > 
@@ -1814,7 +1814,7 @@
 
     param[journal_issn] = 0953-8984
     comment[param] = print issn preferred
-    comment[notReady] = low agreement
+    comment[ingNotReady] = low agreement
 
     au < manifest ; exists ; 1989 ; Journal of Physics: Condensed Matter Volume 1 ; 1 > 
     au < manifest ; exists ; 1990 ; Journal of Physics: Condensed Matter Volume 2 ; 2 > 
@@ -2593,7 +2593,7 @@
     >
     
     param[journal_issn] = 1742-5468
-    comment[notReady] = low agreement
+    comment[ingNotReady] = low agreement
 
     au < manifest ; exists ; 2004 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2004 ; 2004 > 
     au < manifest ; exists ; 2005 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2005 ; 2005 > 
@@ -2703,7 +2703,7 @@
 
     param[journal_issn] = 0957-0233
     comment[param] = print issn preferred
-    comment[notReady] = low agreement
+    comment[ingNotReady] = low agreement
 
     au < manifest ; exists ; 1990 ; Measurement Science and Technology Volume 1 ; 1 > 
     au < manifest ; exists ; 1991 ; Measurement Science and Technology Volume 2 ; 2 > 
@@ -2906,7 +2906,7 @@
     >
     
     param[journal_issn] = 1367-2630
-    comment[notReady] = crawl failure
+    comment[ingNotReady] = crawl failure
 
     au < manifest ; exists ; 1999 ; New Journal of Physics Volume 1 ; 1 > 
     au < manifest ; exists ; 2000 ; New Journal of Physics Volume 2 ; 2 > 
