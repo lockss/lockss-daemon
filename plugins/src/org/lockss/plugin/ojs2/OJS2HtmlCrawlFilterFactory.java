@@ -50,6 +50,12 @@ public class OJS2HtmlCrawlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         
+        // Some sidebars contain links to all other issue TOCs
+        // e.g. http://ojs.statsbiblioteket.dk/index.php/bras/issue/view/1049
+        // Keep sidebar images for now (probably important logos)
+        HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
+                                         HtmlNodeFilters.tag("img")),
+        
         // do not get links from navbar
         HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
         
