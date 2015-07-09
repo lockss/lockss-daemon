@@ -3570,7 +3570,6 @@
       au < down ; 2009-2010 ; International Journal of Information and Operations Management Education Volume 3 ; 3 >
       au < down ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 >
       au < doNotProcess ; 2012-2013 ; International Journal of Information and Operations Management Education Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Information and Operations Management Education Volume 6 ; 6 >
 
     }
 
@@ -3604,7 +3603,6 @@
       au < down ; 2007 ; International Journal of Information Quality Volume 1 ; 1 >
       au < down ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 >
       au < doNotProcess ; 2012-2013 ; International Journal of Information Quality Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Information Quality Volume 4 ; 4 >
 
     }
 
@@ -3685,7 +3683,6 @@
       au < down ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 >
       au < down ; 2012 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 >
       au < doNotProcess ; 2013 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Information Technology, Communications and Convergence Volume 4 ; 4 >
 
     }
 
@@ -3774,7 +3771,6 @@
       
       au < down ; 2009-2012 ; International Journal of Innovation in Education Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; International Journal of Innovation in Education Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Innovation in Education Volume 3 ; 3 >
 
     }
 
@@ -3809,9 +3805,7 @@
 
       param[journal_issn] = 2043-7862
       
-      au < down ; 2011-2012 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
-      au < expected ; 2013 ; International Journal of Instrumentation Technology Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Instrumentation Technology Volume 3 ; 3 >
+      au < superseded ; 2011-2012 ; International Journal of Instrumentation Technology Volume 1 [superseded] ; 1 >
 
     }
 
@@ -3875,8 +3869,6 @@
       au < down ; 2010 ; International Journal of Intelligent Defence Support Systems Volume 3 ; 3 >
       au < down ; 2011 ; International Journal of Intelligent Defence Support Systems Volume 4 ; 4 >
       au < doNotProcess ; 2012 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
-      au < expected ; 2013 ; International Journal of Intelligent Defence Support Systems Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Intelligent Defence Support Systems Volume 7 ; 7 >
 
     }
 
@@ -3890,11 +3882,9 @@
       >
 
       param[journal_issn] = 1758-8723
-      comment[0] = no content in 2012
       
       au < down ; 2010-2011 ; International Journal of Intelligent Engineering Informatics Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; International Journal of Intelligent Engineering Informatics Volume 2 ;2 >
-      au < expected ; 2014 ; International Journal of Intelligent Engineering Informatics Volume 3 ; 3 >
 
     }
 
@@ -3911,7 +3901,6 @@
       
       au < down ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; International Journal of Intelligent Enterprise Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Intelligent Enterprise Volume 3 ; 3 >
 
     }
 
@@ -4001,7 +3990,6 @@
       au < down ; 2009-2010 ; International Journal of Internet and Enterprise Management Volume 6 ; 6 >
       au < down ; 2011 ; International Journal of Internet and Enterprise Management Volume 7 ; 7 >
       au < doNotProcess ; 2012-2013 ; International Journal of Internet and Enterprise Management Volume 8 ; 8 >
-      au < expected ; 2014 ; International Journal of Internet and Enterprise Management Volume 9 ; 9 >
 
     }
 
@@ -4018,7 +4006,7 @@
       
       au < down ; 2007-2008 ; International Journal of Internet Manufacturing and Services Volume 1 ; 1 >
       au < down ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 >
-      au < down ; 2011 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 >
+      au < superseded ; 2011 ; International Journal of Internet Manufacturing and Services Volume 3 [superseded] ; 3 >
 
     }
 
@@ -4083,7 +4071,6 @@
       au < down ; 2011 ; International Journal of Internet Technology and Secured Transactions Volume 3 ; 3 >
       au < down ; 2012 ; International Journal of Internet Technology and Secured Transactions Volume 4 ; 4 >
       au < doNotProcess ; 2013 ; International Journal of Internet Technology and Secured Transactions Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 >
 
     }
 
@@ -4122,7 +4109,6 @@
       au < down ; 2011 ; International Journal of Knowledge and Learning Volume 7 ; 7 >
       au < down ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
       au < doNotProcess ; 2013 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Knowledge and Learning Volume 10 ; 10 >
 
     }
 
@@ -4196,7 +4182,6 @@
       au < down ; 2010 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 2 ; 2 >
       au < down ; 2011-2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 >
       au < doNotProcess ; 2013 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 >
-      au < expected ; 2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 >
 
     }
 
