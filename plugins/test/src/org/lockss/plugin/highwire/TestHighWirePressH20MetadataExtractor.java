@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,19 +28,13 @@
 
 package org.lockss.plugin.highwire;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
 /**
@@ -55,7 +49,7 @@ public class TestHighWirePressH20MetadataExtractor extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private SimulatedArchivalUnit sau; // Simulated AU to generate content
   private ArchivalUnit hwau; // HighWire AU
-  private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";	
+  // private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";	
 
   private static String PLUGIN_NAME = "org.lockss.plugin.highwire.HighWirePressH20Plugin"; // XML file in org.lockss.plugin.highwire package
 
@@ -217,7 +211,7 @@ public class TestHighWirePressH20MetadataExtractor extends LockssTestCase {
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     FileMetadataExtractor me = new HighWirePressH20HtmlMetadataExtractorFactory.HighWirePressH20HtmlMetadataExtractor();
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);

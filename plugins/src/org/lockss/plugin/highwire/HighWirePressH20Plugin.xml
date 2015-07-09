@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>107</string>
+    <string>108</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -136,7 +136,9 @@
       <string>2,"^%shighwire/filestream/powerpoint/", base_url</string>
       <string>1,"^%shighwire/filestream/", base_url</string>
       <string>1, "%sc?lockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", base_url</string>
-    </list>
+     <!-- TOCs made up of searches -->
+      <string>1,"^%ssearch[?]submit=yes(?=.*&amp;tocsectionid=).*&amp;volume=%s[&amp;|$]", base_url, volume_name</string>
+     </list>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -206,6 +208,10 @@
         </list>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20UrlNormalizer</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
