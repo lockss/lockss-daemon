@@ -7054,8 +7054,8 @@
     au < manifest ; exists ; 2004-2005 ; FEMS Yeast Research Volume 5 ; 5 ; >
     au < manifest ; exists ; 2006 ; FEMS Yeast Research Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; FEMS Yeast Research Volume 7 ; 7 ; >
-    au < testing ; exists ; 2008 ; FEMS Yeast Research Volume 8 ; 8 ; >
-    au < testing ; exists ; 2009 ; FEMS Yeast Research Volume 9 ; 9 ; >
+    au < ready ; exists ; 2008 ; FEMS Yeast Research Volume 8 ; 8 ; >
+    au < ready ; exists ; 2009 ; FEMS Yeast Research Volume 9 ; 9 ; >
     au < crawling ; exists ; 2009-2010 ; FEMS Yeast Research Volume 10 ; 10 ; >
     au < crawling ; exists ; 2011 ; FEMS Yeast Research Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; FEMS Yeast Research Volume 12 ; 12 ; >
@@ -10844,7 +10844,7 @@
     au < manifest ; exists ; 2007 ; JAMIA Volume 14 ; 14 ; >
     au < ready ; exists ; 2008 ; JAMIA Volume 15 ; 15 ; >
     au < ready ; exists ; 2009 ; JAMIA Volume 16 ; 16 ; >
-    au < testing ; exists ; 2010 ; JAMIA Volume 17 ; 17 ; >
+    au < ready ; exists ; 2010 ; JAMIA Volume 17 ; 17 ; >
     au < crawling ; exists ; 2011 ; JAMIA Volume 18 ; 18 ; >
     au < testing ; exists ; 2012 ; JAMIA Volume 19 ; 19 ; >
     au < crawling ; exists ; 2013 ; JAMIA Volume 20 ; 20 ; >
@@ -11548,9 +11548,9 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < manifest ; exists ; 2007 ; Journal of Crohn's and Colitis Volume 1 ; 1 ; >
-    au < testing ; exists ; 2008 ; Journal of Crohn's and Colitis Volume 2 ; 2 ; >
-    au < testing ; exists ; 2009 ; Journal of Crohn's and Colitis Volume 3 ; 3 ; >
-    au < testing ; exists ; 2010 ; Journal of Crohn's and Colitis Volume 4 ; 4 ; >
+    au < ready ; exists ; 2008 ; Journal of Crohn's and Colitis Volume 2 ; 2 ; >
+    au < ready ; exists ; 2009 ; Journal of Crohn's and Colitis Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; Journal of Crohn's and Colitis Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; Journal of Crohn's and Colitis Volume 5 ; 5 ; >
     au < testing ; exists ; 2012 ; Journal of Crohn's and Colitis Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 ; >
@@ -11713,7 +11713,7 @@
     au < manifest ; exists ; 2007 ; Journal of Economic Entomology Volume 100 ; 100 ; >
     au < testing ; exists ; 2008 ; Journal of Economic Entomology Volume 101 ; 101 ; >
     au < testing ; exists ; 2009 ; Journal of Economic Entomology Volume 102 ; 102 ; >
-    au < testing ; exists ; 2010 ; Journal of Economic Entomology Volume 103 ; 103 ; >
+    au < ready ; exists ; 2010 ; Journal of Economic Entomology Volume 103 ; 103 ; >
     au < crawling ; exists ; 2011 ; Journal of Economic Entomology Volume 104 ; 104 ; >
     au < crawling ; exists ; 2012 ; Journal of Economic Entomology Volume 105 ; 105 ; >
     au < crawling ; exists ; 2013 ; Journal of Economic Entomology Volume 106 ; 106 ; >
