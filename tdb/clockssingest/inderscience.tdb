@@ -3927,9 +3927,8 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Information and Operations Management Education Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Operations Management Education Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 >
-      au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Information and Operations Management Education Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Information and Operations Management Education Volume 6 ; 6 >
-      au < expected ; exists ; 2015 ; International Journal of Information and Operations Management Education Volume 7 ; 7 >
+      au < exists ; exists ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 >
+      au < expected ; exists ; 2015 ; International Journal of Information and Operations Management Education Volume 6 ; 6 >
 
     }
 
@@ -3963,9 +3962,8 @@
 
       au < doNotProcess ; exists ; 2007 ; International Journal of Information Quality Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 >
-      au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Information Quality Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Information Quality Volume 4 ; 4 >
-      au < expected ; exists ; 2015 ; International Journal of Information Quality Volume 5 ; 5 >
+      au < exists ; exists ; 2012-2014 ; International Journal of Information Quality Volume 3 ; 3 >
+      au < expected ; exists ; 2015 ; International Journal of Information Quality Volume 4 ; 4 >
 
     }
 
@@ -4047,10 +4045,8 @@
       param[journal_id] = ijitcc
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2013 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Information Technology, Communications and Convergence Volume 4 ; 4 >
-      au < expected ; exists ; 2015 ; International Journal of Information Technology, Communications and Convergence Volume 5 ; 5 >
+      au < exists ; exists ; 2012-2013 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 >
+      au < exists ; exists ; 2014-2015 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 >
 
     }
 
@@ -4082,6 +4078,7 @@
       au < manifest ; exists ; 2014 ; International Journal of Innovation and Learning Volume 15 ; 15 >
       au < manifest ; exists ; 2014 ; International Journal of Innovation and Learning Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; International Journal of Innovation and Learning Volume 17 ; 17 >
+      au < exists ; exists ; 2015 ; International Journal of Innovation and Learning Volume 18 ; 18 >
 
     }
 
@@ -4100,9 +4097,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Innovation and Regional Development Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Innovation and Regional Development Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Innovation and Regional Development Volume 4 ; 4 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Innovation and Regional Development Volume 5 ; 5 >
-      au < manifest ; exists ; 2014 ; International Journal of Innovation and Regional Development Volume 6 ; 6 >
-      au < expected ; exists ; 2015 ; International Journal of Innovation and Regional Development Volume 7 ; 7 >
+      au < exists ; exists ; 2013-2014 ; International Journal of Innovation and Regional Development Volume 5 ; 5 >
+      au < manifest ; exists ; 2015 ; International Journal of Innovation and Regional Development Volume 6 ; 6 >
 
     }
 
@@ -4141,9 +4137,8 @@
       param[journal_id] = ijiie
 
       au < doNotProcess ; doNotProcess ; 2009-2012 ; International Journal of Innovation in Education Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Innovation in Education Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Innovation in Education Volume 3 ; 3 >
-      au < expected ; exists ; 2015 ; International Journal of Innovation in Education Volume 4 ; 4 >
+      au < exists ; exists ; 2013-2014 ; International Journal of Innovation in Education Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Innovation in Education Volume 3 ; 3 >
 
     }
 
@@ -4179,10 +4174,8 @@
 
       param[journal_id] = ijit
 
-      au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Instrumentation Technology Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Instrumentation Technology Volume 3 ; 3 >
-      au < expected ; exists ; 2015 ; International Journal of Instrumentation Technology Volume 4 ; 4 >
+      au < exists ; exists ; 2011-2014 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
+      au < expected ; exists ; 2015 ; International Journal of Instrumentation Technology Volume 2 ; 2 >
 
     }
 
@@ -4205,8 +4198,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Integrated Supply Management Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Integrated Supply Management Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Integrated Supply Management Volume 8 ; 8 >
-      au < manifest ; exists ; 2014 ; International Journal of Integrated Supply Management Volume 9 ; 9 >
-      au < expected ; exists ; 2015 ; International Journal of Integrated Supply Management Volume 10 ; 10 >
+      au < manifest ; exists ; 2014-2015 ; International Journal of Integrated Supply Management Volume 9 ; 9 >
 
     }
 
@@ -4247,7 +4239,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Intelligent Defence Support Systems Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Intelligent Defence Support Systems Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Intelligent Defence Support Systems Volume 4 ; 4 >
-      au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
+      au < exists ; exists ; 2012-2014 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; International Journal of Intelligent Defence Support Systems Volume 6 ; 6 >
 
     }
@@ -4262,12 +4254,10 @@
       >
 
       param[journal_id] = ijiei
-      comment[0] = no content in 2012
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Intelligent Engineering Informatics Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Intelligent Engineering Informatics Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; International Journal of Intelligent Engineering Informatics Volume 3 ; 3 >
-      au < expected ; exists ; 2015 ; International Journal of Intelligent Engineering Informatics Volume 4 ; 4 >
+      au < exists ; exists ; 2013-2014 ; International Journal of Intelligent Engineering Informatics Volume 2 ; 2 >
+      au < manifest ; exists ; 2015 ; International Journal of Intelligent Engineering Informatics Volume 3 ; 3 >
 
     }
 
@@ -4283,9 +4273,8 @@
       param[journal_id] = ijie
 
       au < doNotProcess ; doNotProcess ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Intelligent Enterprise Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Intelligent Enterprise Volume 3 ; 3 >
-      au < expected ; exists ; 2015 ; International Journal of Intelligent Enterprise Volume 4 ; 4 >
+      au < exists ; exists ; 2013-2014 ; International Journal of Intelligent Enterprise Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Intelligent Enterprise Volume 3 ; 3 >
 
     }
 
@@ -4377,7 +4366,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Internet and Enterprise Management Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Internet and Enterprise Management Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Internet and Enterprise Management Volume 7 ; 7 >
-      au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Internet and Enterprise Management Volume 8 ; 8 >
+      au < exists ; exists ; 2012-2014 ; International Journal of Internet and Enterprise Management Volume 8 ; 8 >
       au < expected ; exists ; 2015 ; International Journal of Internet and Enterprise Management Volume 9 ; 9 >
 
     }
@@ -4395,8 +4384,8 @@
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Internet Manufacturing and Services Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 >
-      au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 >
-      au < expected ; exists ; 2012 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 >
+      au < exists ; exists ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 >
+      au < expected ; exists ; 2015 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 >
 
     }
 
@@ -4418,7 +4407,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Internet Marketing and Advertising Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Internet Marketing and Advertising Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Internet Marketing and Advertising Volume 7 ; 7 >
-      au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Internet Marketing and Advertising Volume 8 ; 8 >
+      au < exists ; exists ; 2013-2014 ; International Journal of Internet Marketing and Advertising Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; International Journal of Internet Marketing and Advertising Volume 9 ; 9 >
 
     }
@@ -4461,7 +4450,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Internet Technology and Secured Transactions Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Internet Technology and Secured Transactions Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Internet Technology and Secured Transactions Volume 4 ; 4 >
-      au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Internet Technology and Secured Transactions Volume 5 ; 5 >
+      au < exists ; exists ; 2013-2014 ; International Journal of Internet Technology and Secured Transactions Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 >
 
     }
@@ -4478,7 +4467,8 @@
       param[journal_id] = ijir
 
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Inventory Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2011-2012 ; International Journal of Inventory Research Volume 2 ; 2 >
+      au < manifest ; exists ; 2013-2014 ; International Journal of Inventory Research Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Inventory Research Volume 3 ; 3 >
 
     }
 
@@ -4501,7 +4491,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Knowledge and Learning Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Knowledge and Learning Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2014 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
+      au < exists ; exists ; 2014 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
       au < expected ; exists ; 2015 ; International Journal of Knowledge and Learning Volume 10 ; 10 >
 
     }
@@ -4578,7 +4568,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 >
-      au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 >
+      au < exists ; exists ; 2013-2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 >
       au < expected ; exists ; 2015 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 >
 
     }
