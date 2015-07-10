@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,9 +68,7 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "class", "anchorc"),
     };
     InputStream filtered = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
-    .registerTag(new HtmlTags.Header())
-    .registerTag(new HtmlTags.Footer()); // XXX registerTag can be removed after 1.65
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     return filtered;
   }
   

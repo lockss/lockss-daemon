@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,7 +52,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sejournals/(?:html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf|[?]issue=[^&]+)?$\"," +
+      "\"^%s(?:[^/]+/)?ejournals/(?:html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf|[?]issue=[^&]+)?$\"," +
       " base_url";
   
   // various aspects of an article
