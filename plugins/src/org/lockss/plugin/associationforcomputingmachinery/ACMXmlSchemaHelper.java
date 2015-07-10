@@ -267,7 +267,8 @@ implements SourceXmlSchemaHelper {
 
   /* article title, id, doi, pubdate*/
   private static final String ACM_article_title =  "./title";
-  private static final String ACM_article_id = "./article_id";
+  /* public because needs access by extractor */
+  public static final String ACM_article_id = "./article_id";
   private static final String ACM_doi = "./doi_number";
   private static final String ACM_art_pubdate = "./article_publication_date";
 

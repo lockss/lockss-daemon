@@ -69,6 +69,17 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       return ACMHelper;
     }
     
+    
+    /*
+     * starting in late Nov 2014 ACM started to change the location of the identified
+     * fulltext filenames. 
+     * Originally (and occasionally) the listed filename is at the same level as
+     * the XML file in which it is named.
+     * Now, usually, the listed filename is in a subdirectory of the specific 
+     * article_rec article_id name.  
+     * That is, if the article_id is 2366543, then that is the name of the subedirectory.
+     * In the interest of being flexible - we'll look in both places! 
+     */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
@@ -93,9 +104,12 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       }
       
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      String article_id_directory = oneAM.getRaw(ACMXmlSchemaHelper.ACM_article_id);
       List<String> returnList = new ArrayList<String>();
       // default version is just the filename associated with the key, in this directory
       returnList.add(cuBase + filenameValue);
+      // next option is same filename in subdirectory of the article_id
+      returnList.add(cuBase + article_id_directory + "/" + filenameValue);
       return returnList;
     }
     
