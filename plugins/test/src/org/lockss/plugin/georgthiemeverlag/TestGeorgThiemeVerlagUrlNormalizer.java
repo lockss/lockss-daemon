@@ -1,10 +1,10 @@
 /*
- * $Id: TestIOPScienceUrlNormalizer.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id$
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +43,7 @@ public class TestGeorgThiemeVerlagUrlNormalizer extends LockssTestCase {
     norm = new GeorgThiemeVerlagUrlNormalizer();
   }
 
-  public void testIOPScienceNormalizer() throws Exception {
+  public void testGeorgThiemeNormalizer() throws Exception {
     
     assertEquals("https://www.thieme-connect.de/products/css/style-changes.css",
         norm.normalizeUrl("https://www.thieme-connect.de/products/css/style-changes.css?rel=xyz&relno=1", null));
