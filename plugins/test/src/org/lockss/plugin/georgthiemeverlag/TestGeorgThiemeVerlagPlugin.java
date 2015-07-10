@@ -196,26 +196,26 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
         new RangeCachedUrlSetSpec(baseUrl.toString()));
     // Test for pages that should get crawled
     // permission page/start url
-    shouldCacheTest(ROOT_URL + "ejournals/issues/" + JOURNAL_ID + "/2013", true, au);  
+    shouldCacheTest(ROOT_URL + "products/ejournals/issues/" + JOURNAL_ID + "/2013", true, au);  
     // toc page for an issue
-    shouldCacheTest(ROOT_URL + "ejournals/issue/" + "10.1055/s-003-26177", true, au);  
+    shouldCacheTest(ROOT_URL + "products/ejournals/issue/" + "10.1055/s-003-26177", true, au);  
     // article files
-    // https://www.thieme-connect.de/ejournals/issues/10.1055/s-00000001/2013
-    // https://www.thieme-connect.de/ejournals/issue/10.1055/s-003-26177
-    // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
-    // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
-    // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342
-    // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
-    // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342
-    // https://www.thieme-connect.de/ejournals/ris/10.1055/s-0031-1296349/BIB
-    shouldCacheTest(ROOT_URL + "ejournals/abstract/10.1055/s-0029-1214947", true, au);
-    shouldCacheTest(ROOT_URL + "ejournals/html/10.1055/s-0029-1214947", true, au);
+    // https://www.thieme-connect.de/products/ejournals/issues/10.1055/s-00000001/2013
+    // https://www.thieme-connect.de/products/ejournals/issue/10.1055/s-003-26177
+    // https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0029-1214947
+    // https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0029-1214947
+    // https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342
+    // https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0029-1214947.pdf
+    // https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342
+    // https://www.thieme-connect.de/products/ejournals/ris/10.1055/s-0031-1296349/BIB
+    shouldCacheTest(ROOT_URL + "products/ejournals/abstract/10.1055/s-0029-1214947", true, au);
+    shouldCacheTest(ROOT_URL + "products/ejournals/html/10.1055/s-0029-1214947", true, au);
     shouldCacheTest(ROOT_URL +
-        "ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342", true, au);
-    shouldCacheTest(ROOT_URL + "ejournals/pdf/10.1055/s-0029-1214947.pdf", true, au);
+        "products/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342", true, au);
+    shouldCacheTest(ROOT_URL + "products/ejournals/pdf/10.1055/s-0029-1214947.pdf", true, au);
     shouldCacheTest(ROOT_URL +
-        "ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342", true, au);
-    shouldCacheTest(ROOT_URL + "ejournals/ris/10.1055/s-0031-1296349/BIB", true, au);
+        "products/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342", true, au);
+    shouldCacheTest(ROOT_URL + "products/ejournals/ris/10.1055/s-0031-1296349/BIB", true, au);
     // css files
     shouldCacheTest(ROOT_URL + "css/img/themes/bg-pageHeader.jpg", true, au);
     shouldCacheTest(ROOT_URL + "css/style.css", true, au);
@@ -225,7 +225,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
         true, au);
     
     // should not get crawled - missing doi prefix
-    shouldCacheTest(ROOT_URL + "ejournals/html/s-0029-1214947", false, au);  
+    shouldCacheTest(ROOT_URL + "products/ejournals/html/s-0029-1214947", false, au);  
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
   }
