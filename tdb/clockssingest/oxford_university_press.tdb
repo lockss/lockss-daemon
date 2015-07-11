@@ -113,7 +113,7 @@
     au < manifest ; exists ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
     au < manifest ; exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
     au < manifest ; exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
-    au < testing ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
+    au < ready ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
     au < crawling ; exists ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
     au < crawling ; exists ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; >
@@ -408,7 +408,7 @@
     au < manifest ; exists ; 2006 ; Alcohol and Alcoholism Volume 41 ; 41 ; >
     au < manifest ; exists ; 2007 ; Alcohol and Alcoholism Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < testing ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
+    au < ready ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
@@ -1485,7 +1485,7 @@
     au < manifest ; exists ; 2006 ; Annals of the Entomological Society of America Volume 99 ; 99 ; >
     au < manifest ; exists ; 2007 ; Annals of the Entomological Society of America Volume 100 ; 100 ; >
     au < manifest ; exists ; 2008 ; Annals of the Entomological Society of America Volume 101 ; 101 ; >
-    au < testing ; exists ; 2009 ; Annals of the Entomological Society of America Volume 102 ; 102 ; >
+    au < ready ; exists ; 2009 ; Annals of the Entomological Society of America Volume 102 ; 102 ; >
     au < crawling ; exists ; 2010 ; Annals of the Entomological Society of America Volume 103 ; 103 ; >
     au < crawling ; exists ; 2011 ; Annals of the Entomological Society of America Volume 104 ; 104 ; >
     au < crawling ; exists ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 ; >
@@ -1955,7 +1955,7 @@
     au < manifest ; exists ; 2006 ; Arthropod Management Tests Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Arthropod Management Tests Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ; >
-    au < testing ; exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
+    au < ready ; exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
     au < crawling ; exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ; >
     au < crawling ; exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; >
     au < crawling ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
@@ -2510,7 +2510,7 @@
     au < manifest ; exists ; 2006 ; Brain Volume 129 ; 129 ; >
     au < manifest ; exists ; 2007 ; Brain Volume 130 ; 130 ; >
     au < manifest ; exists ; 2008 ; Brain Volume 131 ; 131 ; >
-    au < testing ; exists ; 2009 ; Brain Volume 132 ; 132 ; >
+    au < ready ; exists ; 2009 ; Brain Volume 132 ; 132 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 ; >
@@ -5021,7 +5021,7 @@
     au < manifest ; exists ; 2006 ; Economic Policy Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Economic Policy Volume 22 ; 22 ; >
     au < manifest ; exists ; 2008 ; Economic Policy Volume 23 ; 23 ; >
-    au < testing ; exists ; 2009 ; Economic Policy Volume 24 ; 24 ; >
+    au < ready ; exists ; 2009 ; Economic Policy Volume 24 ; 24 ; >
     au < crawling ; exists ; 2010 ; Economic Policy Volume 25 ; 25 ; >
     au < crawling ; exists ; 2011 ; Economic Policy Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Economic Policy Volume 27 ; 27 ; >
@@ -6739,7 +6739,7 @@
     au < manifest ; exists ; 2008 ; FEMS Microbiology Ecology Volume 64 ; 64 ; >
     au < manifest ; exists ; 2008 ; FEMS Microbiology Ecology Volume 65 ; 65 ; >
     au < manifest ; exists ; 2008 ; FEMS Microbiology Ecology Volume 66 ; 66 ; >
-    au < testing ; exists ; 2009 ; FEMS Microbiology Ecology Volume 67 ; 67 ; >
+    au < ready ; exists ; 2009 ; FEMS Microbiology Ecology Volume 67 ; 67 ; >
     au < testing ; exists ; 2009 ; FEMS Microbiology Ecology Volume 68 ; 68 ; >
     au < testing ; exists ; 2009 ; FEMS Microbiology Ecology Volume 69 ; 69 ; >
     au < testing ; exists ; 2009 ; FEMS Microbiology Ecology Volume 70 ; 70 ; >
@@ -6938,13 +6938,13 @@
     au < manifest ; exists ; 2011 ; FEMS Microbiology Letters Volume 319 ; 319 ; >
     au < manifest ; exists ; 2011 ; FEMS Microbiology Letters Volume 320 ; 320 ; >
     au < manifest ; exists ; 2011 ; FEMS Microbiology Letters Volume 321 ; 321 ; >
-    au < boost ; exists ; 2011 ; FEMS Microbiology Letters Volume 322 ; 322 ; >
-    au < boost ; exists ; 2011 ; FEMS Microbiology Letters Volume 323 ; 323 ; >
-    au < boost ; exists ; 2011 ; FEMS Microbiology Letters Volume 324 ; 324 ; >
-    au < boost ; exists ; 2011 ; FEMS Microbiology Letters Volume 325 ; 325 ; >
+    au < testing ; exists ; 2011 ; FEMS Microbiology Letters Volume 322 ; 322 ; >
+    au < testing ; exists ; 2011 ; FEMS Microbiology Letters Volume 323 ; 323 ; >
+    au < testing ; exists ; 2011 ; FEMS Microbiology Letters Volume 324 ; 324 ; >
+    au < testing ; exists ; 2011 ; FEMS Microbiology Letters Volume 325 ; 325 ; >
     au < ready ; exists ; 2012 ; FEMS Microbiology Letters Volume 326 ; 326 ; >
     au < ready ; exists ; 2012 ; FEMS Microbiology Letters Volume 327 ; 327 ; >
-    au < testing ; exists ; 2012 ; FEMS Microbiology Letters Volume 328 ; 328 ; >
+    au < ready ; exists ; 2012 ; FEMS Microbiology Letters Volume 328 ; 328 ; >
     au < ready ; exists ; 2012 ; FEMS Microbiology Letters Volume 329 ; 329 ; >
     au < crawling ; exists ; 2012 ; FEMS Microbiology Letters Volume 330 ; 330 ; >
     au < crawling ; exists ; 2012 ; FEMS Microbiology Letters Volume 331 ; 331 ; >
@@ -12849,8 +12849,8 @@
     au < manifest ; exists ; 2006 ; Journal of Insect Science Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Journal of Insect Science Volume 7 ; 7 ; >
     au < testing ; exists ; 2008 ; Journal of Insect Science Volume 8 ; 8 ; >
-    au < testing ; exists ; 2009 ; Journal of Insect Science Volume 9 ; 9 ; >
-    au < testing ; exists ; 2010 ; Journal of Insect Science Volume 10 ; 10 ; >
+    au < ready ; exists ; 2009 ; Journal of Insect Science Volume 9 ; 9 ; >
+    au < ready ; exists ; 2010 ; Journal of Insect Science Volume 10 ; 10 ; >
     au < crawling ; exists ; 2011 ; Journal of Insect Science Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; Journal of Insect Science Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Journal of Insect Science Volume 13 ; 13 ; >
