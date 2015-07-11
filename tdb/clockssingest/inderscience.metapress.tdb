@@ -7146,9 +7146,8 @@
 
       param[journal_issn] = 1742-4259
       
-      au < down ; frozen ; 2012 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
+      au < superseded ; frozen ; 2012 ; International Journal of Technology Policy and Law Volume 1 [superseded] ; 1 >
       au < doNotProcess ; exists ; 2013 ; International Journal of Technology Policy and Law Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Technology Policy and Law Volume 3 ; 3 >
 
     }
 
@@ -7175,7 +7174,6 @@
       au < zapped ; finished ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
       au < down ; frozen ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 >
-      au < expected ; exists ; 2014 ; International Journal of Technology Transfer and Commercialisation Volume 13 ; 13 >
 
     }
 
@@ -7217,11 +7215,8 @@
       >
 
       param[journal_issn] = 2046-4541
-      comment[0] = no issue in 2012
       
-      au < zapped ; finished ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of the Built Environment and Asset Management Volume 3 ; 3 >
+      au < zapped ; superseded ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 [superseded] ; 1 >
 
     }
 
@@ -7237,9 +7232,7 @@
       param[journal_issn] = 1756-0004
       
       au < down ; frozen ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
-      au < zapped ; finished ; 2011-2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 4 ; 4 >
+      au < zapped ; superseded ; 2011-2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 [superseded] ; 2 >
 
     }
 
@@ -7256,7 +7249,7 @@
       
       au < zapped ; finished ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 >
       au < down ; frozen ; 2012 ; International Journal of Tourism Anthropology Volume 2 ; 2 >
-      au < down ; exists ; 2013 ; International Journal of Tourism Anthropology Volume 3 ; 3 >
+      au < superseded ; exists ; 2013 ; International Journal of Tourism Anthropology Volume 3 [superseded] ; 3 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Tourism Anthropology Volume 4 ; 4 >
 
     }
@@ -7276,8 +7269,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
       au < down ; frozen ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
       au < zapped ; finished ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 >
-      au < down ; frozen ; 2013 ; International Journal of Tourism Policy Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Tourism Policy Volume 6 ; 6 >
+      au < superseded ; frozen ; 2013 ; International Journal of Tourism Policy Volume 5 [superseded] ; 5 >
 
     }
 
@@ -7315,8 +7307,7 @@
       
       au < zapped ; finished ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 >
       au < down ; frozen ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 >
-      au < down ; exists ; 2013 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 >
+      au < superseded ; exists ; 2013 ; International Journal of Transitions and Innovation Systems Volume 3 [superseded] ; 3 >
 
     }
 
@@ -7370,8 +7361,7 @@
       au < down ; frozen ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 >
       au < zapped ; finished ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 >
       au < down ; frozen ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 >
-      au < down ; exists ; 2013 ; International Journal of Value Chain Management Volume 7 ; 7 >
-      au < expected ; exists ; 2014 ; International Journal of Value Chain Management Volume 8 ; 8 >
+      au < superseded ; exists ; 2013 ; International Journal of Value Chain Management Volume 7 [superseded] ; 7 >
 
     }
 
@@ -7472,12 +7462,10 @@
       >
 
       param[journal_issn] = 1741-8208
-      comment[0] = no issue in 2012
       
       au < doNotProcess ; exists ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 >
       au < zapped ; finished ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 >
       au < down ; exists ; 2013 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Vehicle Information and Communication Systems Volume 4 ; 4 >
 
     }
 
