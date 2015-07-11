@@ -7120,9 +7120,8 @@
 
       param[journal_issn] = 1742-4259
       
-      au < down ; 2012 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
+      au < superseded ; 2012 ; International Journal of Technology Policy and Law Volume 1 [superseded] ; 1 >
       au < doNotProcess ; 2013 ; International Journal of Technology Policy and Law Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Technology Policy and Law Volume 3 ; 3 >
 
     }
 
@@ -7149,7 +7148,6 @@
       au < down ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
       au < down ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 >
       au < doNotProcess ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 >
-      au < expected ; 2014 ; International Journal of Technology Transfer and Commercialisation Volume 13 ; 13 >
 
     }
 
@@ -7191,11 +7189,8 @@
       >
 
       param[journal_issn] = 2046-4541
-      comment[0] = no issue in 2012
       
-      au < down ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
-      au < expected ; 2013 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of the Built Environment and Asset Management Volume 3 ; 3 >
+      au < superseded ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 [superseded] ; 1 >
 
     }
 
@@ -7211,9 +7206,7 @@
       param[journal_issn] = 1756-0004
       
       au < down ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
-      au < down ; 2011-2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
-      au < expected ; 2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 4 ; 4 >
+      au < superseded ; 2011-2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 [superseded] ; 2 >
 
     }
 
@@ -7250,8 +7243,7 @@
       au < down ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
       au < down ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
       au < down ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 >
-      au < down ; 2013 ; International Journal of Tourism Policy Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Tourism Policy Volume 6 ; 6 >
+      au < superseded ; 2013 ; International Journal of Tourism Policy Volume 5 [superseded] ; 5 >
 
     }
 
@@ -7290,7 +7282,6 @@
       au < down ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 >
       au < down ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 >
       au < doNotProcess ; 2013 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 >
 
     }
 
@@ -7345,7 +7336,6 @@
       au < down ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 >
       au < down ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 >
       au < doNotProcess ; 2013 ; International Journal of Value Chain Management Volume 7 ; 7 >
-      au < expected ; 2014 ; International Journal of Value Chain Management Volume 8 ; 8 >
 
     }
 
@@ -7446,12 +7436,10 @@
       >
 
       param[journal_issn] = 1741-8208
-      comment[0] = no issue in 2012
       
       au < down ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 >
       au < down ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 >
       au < doNotProcess ; 2013 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Vehicle Information and Communication Systems Volume 4 ; 4 >
 
     }
 
