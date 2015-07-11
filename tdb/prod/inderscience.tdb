@@ -7635,7 +7635,7 @@
         issnl = 1753-5255
       >
 
-      param[journal_id] = 1753-5263
+      param[journal_id] = ijtel
 
       au < doNotProcess ; 2008-2009 ; International Journal of Technology Enhanced Learning Volume 1 ; 1 >
       au < doNotProcess ; 2010 ; International Journal of Technology Enhanced Learning Volume 2 ; 2 >
@@ -7656,7 +7656,7 @@
         issnl = 1740-2832
       >
 
-      param[journal_id] = 1740-2840
+      param[journal_id] = ijtip
 
       au < doNotProcess ; 2004-2005 ; International Journal of Technology Intelligence and Planning Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; International Journal of Technology Intelligence and Planning Volume 2 ; 2 >
@@ -7681,7 +7681,7 @@
         issnl = 0267-5730
       >
 
-      param[journal_id] = 1741-5276
+      param[journal_id] = ijtm
 
       au < exists ; 1986 ; International Journal of Technology Management Volume 1 ; 1 >
       au < exists ; 1987 ; International Journal of Technology Management Volume 2 ; 2 >
@@ -7749,8 +7749,9 @@
       au < exists ; 2014 ; International Journal of Technology Management Volume 64 ; 64 >
       au < exists ; 2014 ; International Journal of Technology Management Volume 65 ; 65 >
       au < exists ; 2014 ; International Journal of Technology Management Volume 66 ; 66 >
-      au < expected ; 2015 ; International Journal of Technology Management Volume 67 ; 67 >
-      au < expected ; 2015 ; International Journal of Technology Management Volume 68 ; 68 >
+      au < exists ; 2015 ; International Journal of Technology Management Volume 67 ; 67 >
+      au < exists ; 2015 ; International Journal of Technology Management Volume 68 ; 68 >
+      au < expected ; 2015 ; International Journal of Technology Management Volume 69 ; 69>
 
     }
 
@@ -7763,7 +7764,7 @@
         issnl = 1741-878X
       >
 
-      param[journal_id] = 1741-8798
+      param[journal_id] = ijtmkt
 
       au < doNotProcess ; 2005-2006 ; International Journal of Technology Marketing Volume 1 ; 1 >
       au < doNotProcess ; 2007 ; International Journal of Technology Marketing Volume 2 ; 2 >
@@ -7774,7 +7775,7 @@
       au < doNotProcess ; 2012 ; International Journal of Technology Marketing Volume 7 ; 7 >
       au < exists ; 2013 ; International Journal of Technology Marketing Volume 8 ; 8 >
       au < exists ; 2014 ; International Journal of Technology Marketing Volume 9 ; 9 >
-      au < expected ; 2015 ; International Journal of Technology Marketing Volume 10 ; 10 >
+      au < exists ; 2015 ; International Journal of Technology Marketing Volume 10 ; 10 >
 
     }
 
@@ -7787,12 +7788,10 @@
         issnl = 1742-4240
       >
 
-      param[journal_id] = 1742-4259
+      param[journal_id] = ijtpl
 
-      au < doNotProcess ; 2012 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
-      au < exists ; 2013 ; International Journal of Technology Policy and Law Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Technology Policy and Law Volume 3 ; 3 >
-      au < expected ; 2015 ; International Journal of Technology Policy and Law Volume 4 ; 4 >
+      au < exists ; 2012-2014 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
+      au < exists ; 2015 ; International Journal of Technology Policy and Law Volume 2 ; 2 >
 
     }
 
@@ -7805,7 +7804,7 @@
         issnl = 1470-6075
       >
 
-      param[journal_id] = 1741-5284
+      param[journal_id] = ijttc
 
       au < doNotProcess ; 2002 ; International Journal of Technology Transfer and Commercialisation Volume 1 ; 1 >
       au < doNotProcess ; 2003 ; International Journal of Technology Transfer and Commercialisation Volume 2 ; 2 >
@@ -7819,8 +7818,7 @@
       au < doNotProcess ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
       au < doNotProcess ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 >
       au < exists ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 >
-      au < expected ; 2014 ; International Journal of Technology Transfer and Commercialisation Volume 13 ; 13 >
-      au < expected ; 2015 ; International Journal of Technology Transfer and Commercialisation Volume 14 ; 14 >
+      au < expected ; 2015 ; International Journal of Technology Transfer and Commercialisation Volume 13 ; 13 >
 
     }
 
@@ -7833,7 +7831,7 @@
         issnl = 1468-4322
       >
 
-      param[journal_id] = 1741-5292
+      param[journal_id] = ijtpm
 
       au < doNotProcess ; 2001 ; International Journal of Technology, Policy and Management Volume 1 ; 1 >
       au < doNotProcess ; 2002 ; International Journal of Technology, Policy and Management Volume 2 ; 2 >
@@ -7849,7 +7847,7 @@
       au < doNotProcess ; 2012 ; International Journal of Technology, Policy and Management Volume 12 ; 12 >
       au < exists ; 2013 ; International Journal of Technology, Policy and Management Volume 13 ; 13 >
       au < exists ; 2014 ; International Journal of Technology, Policy and Management Volume 14 ; 14 >
-      au < expected ; 2015 ; International Journal of Technology, Policy and Management Volume 15 ; 15 >
+      au < exists ; 2015 ; International Journal of Technology, Policy and Management Volume 15 ; 15 >
 
     }
 
@@ -7862,13 +7860,10 @@
         issnl = 2046-4533
       >
 
-      param[journal_id] = 2046-4541
-      comment[0] = no issue in 2012
+      param[journal_id] = ijbeam
 
-      au < doNotProcess ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
-      au < expected ; 2013 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of the Built Environment and Asset Management Volume 3 ; 3 >
-      au < expected ; 2015 ; International Journal of the Built Environment and Asset Management Volume 4 ; 4 >
+      au < exists ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
+      au < expected ; 2015 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
 
     }
 
@@ -7881,13 +7876,11 @@
         issnl = 1755-9995
       >
 
-      param[journal_id] = 1756-0004
+      param[journal_id] = ijtamm
 
       au < doNotProcess ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
-      au < doNotProcess ; 2011-2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
-      au < expected ; 2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 4 ; 4 >
-      au < expected ; 2015 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 5 ; 5 >
+      au < exists ; 2011-2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
+      au < exists ; 2014-2015 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
 
     }
 
@@ -7900,13 +7893,12 @@
         issnl = 1759-0442
       >
 
-      param[journal_id] = 1759-0450
+      param[journal_id] = ijta
 
       au < doNotProcess ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 >
       au < doNotProcess ; 2012 ; International Journal of Tourism Anthropology Volume 2 ; 2 >
-      au < exists ; 2013 ; International Journal of Tourism Anthropology Volume 3 ; 3 >
-      au < exists ; 2014 ; International Journal of Tourism Anthropology Volume 4 ; 4 >
-      au < expected ; 2015 ; International Journal of Tourism Anthropology Volume 5 ; 5 >
+      au < exists ; 2013-2014 ; International Journal of Tourism Anthropology Volume 3 ; 3 >
+      au < exists ; 2015 ; International Journal of Tourism Anthropology Volume 4 ; 4 >
 
     }
 
@@ -7919,15 +7911,14 @@
         issnl = 1750-4090
       >
 
-      param[journal_id] = 1750-4104
+      param[journal_id] = ijtp
 
       au < doNotProcess ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
       au < doNotProcess ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
       au < doNotProcess ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 >
-      au < doNotProcess ; 2013 ; International Journal of Tourism Policy Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Tourism Policy Volume 6 ; 6 >
-      au < expected ; 2015 ; International Journal of Tourism Policy Volume 7 ; 7 >
+      au < exists ; 2013-2014 ; International Journal of Tourism Policy Volume 5 ; 5 >
+      au < expected ; 2015 ; International Journal of Tourism Policy Volume 6 ; 6 >
 
     }
 
@@ -7940,7 +7931,7 @@
         issnl = 1742-7541
       >
 
-      param[journal_id] = 1742-755X
+      param[journal_id] = ijtgm
 
       au < doNotProcess ; 2007-2008 ; International Journal of Trade and Global Markets Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; International Journal of Trade and Global Markets Volume 2 ; 2 >
@@ -7949,7 +7940,7 @@
       au < doNotProcess ; 2012 ; International Journal of Trade and Global Markets Volume 5 ; 5 >
       au < exists ; 2013 ; International Journal of Trade and Global Markets Volume 6 ; 6 >
       au < exists ; 2014 ; International Journal of Trade and Global Markets Volume 7 ; 7 >
-      au < expected ; 2015 ; International Journal of Trade and Global Markets Volume 8 ; 8 >
+      au < exists ; 2015 ; International Journal of Trade and Global Markets Volume 8 ; 8 >
 
     }
 
@@ -7962,13 +7953,12 @@
         issnl = 1745-0071
       >
 
-      param[journal_id] = 1745-008X
+      param[journal_id] = ijtis
 
       au < doNotProcess ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 >
       au < doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 >
-      au < exists ; 2013 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 >
-      au < expected ; 2015 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 >
+      au < exists ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
+      au < expected ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 >
 
     }
 
@@ -7981,7 +7971,7 @@
         issnl = 2048-8378
       >
 
-      param[journal_id] = 2048-8386
+      param[journal_id] = ijtmcc
 
       au < doNotProcess ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
       au < exists ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 >
@@ -7998,11 +7988,11 @@
         issnl = 1758-728X
       >
 
-      param[journal_id] = 1758-7298
+      param[journal_id] = ijuwbcs
 
       au < doNotProcess ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
       au < doNotProcess ; 2011-2012 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 >
-      au < exists ; 2014 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
+      au < exists ; 2014-2015 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
       au < expected ; 2015 ; International Journal of Ultra Wideband Communications and Systems Volume 4 ; 4 >
 
     }
@@ -8016,7 +8006,7 @@
         issnl = 1741-5357
       >
 
-      param[journal_id] = 1741-5365
+      param[journal_id] = ijvcm
 
       au < doNotProcess ; 2006-2007 ; International Journal of Value Chain Management Volume 1 ; 1 >
       au < doNotProcess ; 2008 ; International Journal of Value Chain Management Volume 2 ; 2 >
@@ -8024,9 +8014,8 @@
       au < doNotProcess ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 >
       au < doNotProcess ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 >
       au < doNotProcess ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 >
-      au < exists ; 2013 ; International Journal of Value Chain Management Volume 7 ; 7 >
-      au < expected ; 2014 ; International Journal of Value Chain Management Volume 8 ; 8 >
-      au < expected ; 2015 ; International Journal of Value Chain Management Volume 9 ; 9 >
+      au < exists ; 2013-2014 ; International Journal of Value Chain Management Volume 7 ; 7 >
+      au < expected ; 2015 ; International Journal of Value Chain Management Volume 8 ; 8 >
 
     }
 
@@ -8039,7 +8028,7 @@
         issnl = 1471-0226
       >
 
-      param[journal_id] = 1741-5306
+      param[journal_id] = ijvas
 
       au < doNotProcess ; 2002-2003 ; International Journal of Vehicle Autonomous Systems Volume 1 ; 1 >
       au < doNotProcess ; 2004 ; International Journal of Vehicle Autonomous Systems Volume 2 ; 2 >
@@ -8066,7 +8055,7 @@
         issnl = 0143-3369
       >
 
-      param[journal_id] = 1741-5314
+      param[journal_id] = ijvd
 
       au < doNotProcess ; 1998 ; International Journal of Vehicle Design Volume 20 ; 20 >
       au < doNotProcess ; 1999 ; International Journal of Vehicle Design Volume 21 ; 21 >
@@ -8115,7 +8104,9 @@
       au < exists ; 2014 ; International Journal of Vehicle Design Volume 64 ; 64 >
       au < exists ; 2014 ; International Journal of Vehicle Design Volume 65 ; 65 >
       au < exists ; 2014 ; International Journal of Vehicle Design Volume 66 ; 66 >
-      au < expected ; 2015 ; International Journal of Vehicle Design Volume 67 ; 67 >
+      au < exists ; 2015 ; International Journal of Vehicle Design Volume 67 ; 67 >
+      au < expected ; 2015 ; International Journal of Vehicle Design Volume 68 ; 68 >
+      au < expected ; 2015 ; International Journal of Vehicle Design Volume 69 ; 69 >
 
     }
 
@@ -8128,14 +8119,12 @@
         issnl = 1471-0242
       >
 
-      param[journal_id] = 1741-8208
-      comment[0] = no issue in 2012
+      param[journal_id] = ijvics
 
       au < doNotProcess ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 >
       au < doNotProcess ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 >
       au < exists ; 2013 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Vehicle Information and Communication Systems Volume 4 ; 4 >
-      au < expected ; 2015 ; International Journal of Vehicle Information and Communication Systems Volume 5 ; 5 >
+      au < expected ; 2015 ; International Journal of Vehicle Information and Communication Systems Volume 4 ; 4 >
 
     }
 
@@ -8148,7 +8137,7 @@
         issnl = 1479-1471
       >
 
-      param[journal_id] = 1479-1471
+      param[journal_id] = ijvnv
 
       au < doNotProcess ; 2004-2005 ; International Journal of Vehicle Noise and Vibration Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; International Journal of Vehicle Noise and Vibration Volume 2 ; 2 >
@@ -8160,7 +8149,7 @@
       au < doNotProcess ; 2012 ; International Journal of Vehicle Noise and Vibration Volume 8 ; 8 >
       au < exists ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 >
       au < exists ; 2014 ; International Journal of Vehicle Noise and Vibration Volume 10 ; 10 >
-      au < expected ; 2015 ; International Journal of Vehicle Noise and Vibration Volume 11 ; 11 >
+      au < exists ; 2015 ; International Journal of Vehicle Noise and Vibration Volume 11 ; 11 >
 
     }
 
@@ -8173,10 +8162,9 @@
         issnl = 1745-3194
       >
 
-      param[journal_id] = 1745-3208
-      comment[0] = title is not yet published on 9/28/2013
+      param[journal_id] = ijvp
 
-      au < exists ; 2014 ; International Journal of Vehicle Performance Volume 1 ; 1 >
+      au < exists ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 >
       au < expected ; 2015 ; International Journal of Vehicle Performance Volume 2 ; 2 >
 
     }
@@ -8190,7 +8178,7 @@
         issnl = 1479-3105
       >
 
-      param[journal_id] = 1479-3113
+      param[journal_id] = ijvs
 
       au < doNotProcess ; 2005-2006 ; International Journal of Vehicle Safety Volume 1 ; 1 >
       au < doNotProcess ; 2007 ; International Journal of Vehicle Safety Volume 2 ; 2 >
@@ -8199,7 +8187,7 @@
       au < doNotProcess ; 2010-2011 ; International Journal of Vehicle Safety Volume 5 ; 5 >
       au < doNotProcess ; 2012-2013 ; International Journal of Vehicle Safety Volume 6 ; 6 >
       au < exists ; 2014 ; International Journal of Vehicle Safety Volume 7 ; 7 >
-      au < expected ; 2015 ; International Journal of Vehicle Safety Volume 8 ; 8 >
+      au < exists ; 2015 ; International Journal of Vehicle Safety Volume 8 ; 8 >
 
     }
 
@@ -8212,7 +8200,7 @@
         issnl = 1745-6436
       >
 
-      param[journal_id] = 1745-6444
+      param[journal_id] = ijvsmt
 
       au < doNotProcess ; 2005-2006 ; International Journal of Vehicle Systems Modelling and Testing Volume 1 ; 1 >
       au < doNotProcess ; 2007 ; International Journal of Vehicle Systems Modelling and Testing Volume 2 ; 2 >
@@ -8223,7 +8211,7 @@
       au < doNotProcess ; 2012 ; International Journal of Vehicle Systems Modelling and Testing Volume 7 ; 7 >
       au < exists ; 2013 ; International Journal of Vehicle Systems Modelling and Testing Volume 8 ; 8 >
       au < exists ; 2014 ; International Journal of Vehicle Systems Modelling and Testing Volume 9 ; 9 >
-      au < expected ; 2015 ; International Journal of Vehicle Systems Modelling and Testing Volume 10 ; 10 >
+      au < exists ; 2015 ; International Journal of Vehicle Systems Modelling and Testing Volume 10 ; 10 >
 
     }
 
@@ -8236,7 +8224,7 @@
         issnl = 1741-1874
       >
 
-      param[journal_id] = 1741-1882
+      param[journal_id] = ijvtm
 
       au < doNotProcess ; 2008-2010 ; International Journal of Virtual Technology and Multimedia Volume 1 ; 1 >
 
@@ -8251,7 +8239,7 @@
         issnl = 1465-6620
       >
 
-      param[journal_id] = 1741-5322
+      param[journal_id] = ijw
 
       au < doNotProcess ; 2000-2001 ; International Journal of Water Volume 1 ; 1 >
       au < doNotProcess ; 2002-2004 ; International Journal of Water Volume 2 ; 2 >
@@ -8261,7 +8249,7 @@
       au < doNotProcess ; 2011-2012 ; International Journal of Water Volume 6 ; 6 >
       au < doNotProcess ; 2013 ; International Journal of Water Volume 7 ; 7 >
       au < exists ; 2014 ; International Journal of Water Volume 8 ; 8 >
-      au < expected ; 2015 ; International Journal of Water Volume 9 ; 9 >
+      au < exists ; 2015 ; International Journal of Water Volume 9 ; 9 >
 
     }
 
@@ -8274,7 +8262,7 @@
         issnl = 1741-1106
       >
 
-      param[journal_id] = 1741-1114
+      param[journal_id] = ijwgs
 
       au < doNotProcess ; 2005 ; International Journal of Web and Grid Services Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; International Journal of Web and Grid Services Volume 2 ; 2 >
