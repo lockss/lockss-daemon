@@ -5297,7 +5297,7 @@
       param[base_url] = http://chs.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; >
 
   }
 
@@ -15666,7 +15666,7 @@
 
 
      au < exists ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; >
-     au < expected ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
+     au < manifest ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
 
     }
 
@@ -24232,7 +24232,7 @@
       au < exists ; exists ; 2012 ; Journal of Pastoral Care & Counseling Volume 66 ; 66 ; >
       au < exists ; exists ; 2013 ; Journal of Pastoral Care & Counseling Volume 67 ; 67 ; >
       au < exists ; exists ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 ; >
-      au < expected ; exists ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 ; >
 
     }
 
@@ -30296,7 +30296,7 @@
         au < exists ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; >
         au < exists ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; >
         au < exists ; exists ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 ; >
-        au < expected ; exists ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 ; >
+        au < manifest ; exists ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 ; >
 
   }
 
@@ -31875,7 +31875,7 @@
       au < finished ; frozen ; 2012 ; Policy, Politics, & Nursing Practice Volume 13 ; 13 ; >
       au < frozen ; exists ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 ; >
       au < crawling ; exists ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 ; >
-      au < expected ; exists ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 ; >
 
     }
 
@@ -34964,7 +34964,7 @@
       au < finished ; crawling ; 2012 ; Research Studies in Music Education Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013 ; Research Studies in Music Education Volume 35 ; 35 ; >
       au < crawling ; exists ; 2014 ; Research Studies in Music Education Volume 36 ; 36 ; >
-      au < expected ; exists ; 2015 ; Research Studies in Music Education Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2015 ; Research Studies in Music Education Volume 37 ; 37 ; >
 
     }
 
@@ -43571,7 +43571,7 @@
 
     au < crawling ; exists ; 2013 ; World Future Review Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; World Future Review Volume 6 ; 6 ; >
-    au < expected ; exists ; 2015 ; World Future Review Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2015 ; World Future Review Volume 7 ; 7 ; >
 
     }
 
