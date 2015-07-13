@@ -51,10 +51,10 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
   private static final String inst1 = "<dl class=google-ad </dl>"
-    + "<ul>Fill in SOMETHING SOMETHING</ul>";
+      + "<ul>Fill in SOMETHING SOMETHING</ul>";
   private static final String inst2 = "<dl class=google-ad wide</dl>"
       + "<ul>Fill in SOMETHING SOMETHING</ul>";
-  
+
   private static final String inst1result = "<ul>Fill in SOMETHING SOMETHING</ul>";
   private static final char cNewL = '\n';
   private static final char cFormf = '\f';
@@ -70,30 +70,60 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   private static final String inst7 = " <link rel=\"stylesheet\" type=\"text/css\" href=\"/bmcbioinformatics/css/themes/1002.css?1330085853225\" media=\"screen, print\"/>       Hello World";
   // new extreme hashing - should remove headers, footers and both right/left navigation and ad areas
   private static final String inst8 ="<div id=\"branding\" role=\"banner\"> <dl class=\"google-ad wide \">"+
-            " </dl></div>       Hello World";
+      " </dl></div>       Hello World";
   private static final String inst9 ="<div id=\"something\" class=\"left-article-box\"> <dl class=\"google-ad wide \">"+
       whiteSp + " </dl>  </div>       Hello World";
   private static final String inst10 = whiteSp + "<div id=\"article-navigation-bar\" role=\"banner\"> <dl class=\"google-ad wide \">"+
-  " </dl>         </div>       Hello World";
+      " </dl>         </div>       Hello World";
   // added a space before 'Hello World' to match consolidated white space
   private static final String commonResult = " Hello World";
-  
+
   private static final String inst11 = 
-    "<html><p style=\"line-height:160%\" class=\"inlinenumber\">" +
-    "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
-    "<m:mrow>" +
-    "</m:mrow>" +
-    "</p></html>";
+      "<html><p style=\"line-height:160%\" class=\"inlinenumber\">" +
+          "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
+          "<m:mrow>" +
+          "</m:mrow>" +
+          "</p></html>";
   private static final String inst12 = 
-    "<html><div style=\"display:table;width:100%;*display:inline\">" +
-    "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
-    "<m:mrow>" +
-    "</m:mrow>" +
-    "</div></html>";
+      "<html><div style=\"display:table;width:100%;*display:inline\">" +
+          "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
+          "<m:mrow>" +
+          "</m:mrow>" +
+          "</div></html>";
   private static final String inst13 = 
-    "<html><span class=\"mathjax\">" +
-    "</span></html>";
+      "<html><span class=\"mathjax\">" +
+          "</span></html>";
   private static final String inst1123Filtered = "<html></html>";
+
+  private static final String floatingMsg=
+      "<html><style>" +
+          ".banner-footer {  text-align: initial !important;" +
+          "  font-size: initial; width: 100%; height: 5.2%;;" +
+          "-webkit-transition: height 500ms ease-in 1s;" +
+          "    -moz-transition: height 500ms ease-in 1s;" +
+          "    -o-transition: height 500ms ease-in 1s;" +
+          "    transition: height 500ms ease-in 1s; cursor: hand; 0.8" +
+          "}" +
+          "</style>" +
+          "<noscript>" +
+          "&lt;style&gt;" +
+          ".banner-footer--instart {display: block !important}" +
+          "&lt;/style&gt;" +
+          "</noscript>" +
+          "<div class=\"banner-footer\">" +
+          "<i class=\"banner-footer--handle\">&nbsp;</i>" +
+          "<div class=\"banner-footer--panel\"><div>" +
+          "<span class=\"banner-footer--text\">Try out the new beta version of our site</span> " +
+          "<a type=\"button\" class=\"banner-footer--button\" target=\"oscar-site\" " +
+          "href=\"http://beta.bmcpalliatcare.com/article/10.1186/s12904-015-0029-8\" " +
+          "onclick=\"_gaq.push(['_trackEvent', 'REFERRAL FROM BMC-JOURNAL PLATFORM', " +                                                                                  
+          "'BMC BETA BANNER', '/1472-684X/14/31', 1, true]);\">Take me there</a>" +
+          "<i class=\"banner-footer--close\">&nbsp;</i></div></div></div>" +
+          "</html>";
+
+  private static final String floatingMsgFiltered=
+      "<html></html>";
+
 
 
   public void testFiltering() throws Exception {
@@ -114,7 +144,7 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
     inB.close();
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst3), ENC);
     inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
     //assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
@@ -162,7 +192,7 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   public void testInlineNumber() throws Exception {
     InputStream inA;
     InputStream inB;
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst11), ENC);
     inB = fact.createFilteredInputStream(mau, new StringInputStream(inst1123Filtered), ENC);
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
@@ -181,7 +211,10 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     inA.close();
     inB.close();
   }
-
   
-
+  public void testfloatingMsg() throws Exception {
+    InputStream inA;
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(floatingMsg), ENC);
+    assertEquals(floatingMsgFiltered,StringUtil.fromInputStream(inA));
+  }
 }

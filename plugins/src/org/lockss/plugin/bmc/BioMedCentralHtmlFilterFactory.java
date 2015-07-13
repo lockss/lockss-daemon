@@ -120,6 +120,9 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "class", "inline-math"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "inlinenumber"),
         
+        // floating bottom banner announcing access to beta version of new site
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "^banner-footer"),
+        
         new NodeFilter() {
           @Override public boolean accept(Node node) {
             if (!(node instanceof Div)) return false;

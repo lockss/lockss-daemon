@@ -154,6 +154,36 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "</span></html>";
   private static final String InlineNumberHashFiltered =
     "<html></html>";
+  
+  private static final String floatingMsg=
+      "<html><style>" +
+          ".banner-footer {  text-align: initial !important;" +
+          "  font-size: initial; width: 100%; height: 5.2%;;" +
+          "-webkit-transition: height 500ms ease-in 1s;" +
+          "    -moz-transition: height 500ms ease-in 1s;" +
+          "    -o-transition: height 500ms ease-in 1s;" +
+          "    transition: height 500ms ease-in 1s; cursor: hand; 0.8" +
+          "}" +
+          "</style>" +
+          "<noscript>" +
+          "&lt;style&gt;" +
+          ".banner-footer--instart {display: block !important}" +
+          "&lt;/style&gt;" +
+          "</noscript>" +
+          "<div class=\"banner-footer\">" +
+          "<i class=\"banner-footer--handle\">&nbsp;</i>" +
+          "<div class=\"banner-footer--panel\"><div>" +
+          "<span class=\"banner-footer--text\">Try out the new beta version of our site</span> " +
+          "<a type=\"button\" class=\"banner-footer--button\" target=\"oscar-site\" " +
+          "href=\"http://beta.bmcpalliatcare.com/article/10.1186/s12904-015-0029-8\" " +
+          "onclick=\"_gaq.push(['_trackEvent', 'REFERRAL FROM BMC-JOURNAL PLATFORM', " +                                                                                  
+          "'BMC BETA BANNER', '/1472-684X/14/31', 1, true]);\">Take me there</a>" +
+          "<i class=\"banner-footer--close\">&nbsp;</i></div></div></div>" +
+          "</html>";
+      
+      private static final String floatingMsgFiltered=
+          "<html></html>";
+
 
   private void checkHashFilter2(String testStr1, String testStr2) throws Exception {
     InputStream inA;
@@ -237,6 +267,11 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     checkHashFilter1(DisplayInlineHash, InlineNumberHashFiltered);
     checkHashFilter1(MathJaxHash, InlineNumberHashFiltered);
 
+
+  }
+  public void testFilterFloatingMsg() throws Exception {
+    
+    checkHashFilter1(floatingMsg, floatingMsgFiltered);
 
   }
 }

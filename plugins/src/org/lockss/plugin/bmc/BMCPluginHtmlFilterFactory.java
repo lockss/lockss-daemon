@@ -111,6 +111,9 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "inline-math"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "inlinenumber"),
+        
+        // floating bottom banner announcing access to beta version of new site
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "^banner-footer"),
 
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
