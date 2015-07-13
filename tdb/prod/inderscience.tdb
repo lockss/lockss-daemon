@@ -3996,7 +3996,6 @@
 
       au < manifest ; 2014 ; International Journal of Information Systems and Management Volume 1 ; 1 >
       au < expected ; 2015 ; International Journal of Information Systems and Management Volume 2 ; 2 >
-      au  < expected ; 2015 ; International Journal of Information Systems and Management Volume 2 ; 2 >
 
     }
 
@@ -8274,7 +8273,7 @@
       au < doNotProcess ; 2012 ; International Journal of Web and Grid Services Volume 8 ; 8 >
       au < exists ; 2013 ; International Journal of Web and Grid Services Volume 9 ; 9 >
       au < exists ; 2014 ; International Journal of Web and Grid Services Volume 10 ; 10 >
-      au < expected ; 2015 ; International Journal of Web and Grid Services Volume 11 ; 11 >
+      au < exists ; 2015 ; International Journal of Web and Grid Services Volume 11 ; 11 >
 
     }
 
@@ -8287,7 +8286,7 @@
         issnl = 1477-8394
       >
 
-      param[journal_id] = 1741-8216
+      param[journal_id] = ijwbc
 
       au < doNotProcess ; 2004-2005 ; International Journal of Web Based Communities Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; International Journal of Web Based Communities Volume 2 ; 2 >
@@ -8299,7 +8298,7 @@
       au < doNotProcess ; 2012 ; International Journal of Web Based Communities Volume 8 ; 8 >
       au < exists ; 2013 ; International Journal of Web Based Communities Volume 9 ; 9 >
       au < exists ; 2014 ; International Journal of Web Based Communities Volume 10 ; 10 >
-      au < expected ; 2015 ; International Journal of Web Based Communities Volume 11 ; 11 >
+      au < exists ; 2015 ; International Journal of Web Based Communities Volume 11 ; 11 >
 
     }
 
@@ -8312,7 +8311,7 @@
         issnl = 1476-1289
       >
 
-      param[journal_id] = 1741-9212
+      param[journal_id] = ijwet
 
       au < doNotProcess ; 2003-2004 ; International Journal of Web Engineering and Technology Volume 1 ; 1 >
       au < doNotProcess ; 2005-2006 ; International Journal of Web Engineering and Technology Volume 2 ; 2 >
@@ -8323,7 +8322,7 @@
       au < doNotProcess ; 2012 ; International Journal of Web Engineering and Technology Volume 7 ; 7 >
       au < exists ; 2013 ; International Journal of Web Engineering and Technology Volume 8 ; 8 >
       au < exists ; 2014 ; International Journal of Web Engineering and Technology Volume 9 ; 9 >
-      au < expected ; 2015 ; International Journal of Web Engineering and Technology Volume 10 ; 10 >
+      au < exists ; 2015 ; International Journal of Web Engineering and Technology Volume 10 ; 10 >
 
     }
 
@@ -8336,12 +8335,11 @@
         issnl = 1757-8795
       >
 
-      param[journal_id] = 1757-8809
+      param[journal_id] = ijws
 
       au < doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
-      au < exists ; 2013 ; International Journal of Web Science Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Web Science Volume 3 ; 3 >
-      au < expected ; 2015 ; International Journal of Web Science Volume 4 ; 4 >
+      au < exists ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 >
+      au < expected ; 2015 ; International Journal of Web Science Volume 3 ; 3 >
 
     }
 
@@ -8354,7 +8352,7 @@
         issnl = 1741-1084
       >
 
-      param[journal_id] = 1741-1092
+      param[journal_id] = ijwmc
 
       au < doNotProcess ; 2005-2006 ; International Journal of Wireless and Mobile Computing Volume 1 ; 1 >
       au < doNotProcess ; 2007 ; International Journal of Wireless and Mobile Computing Volume 2 ; 2 >
@@ -8363,7 +8361,7 @@
       au < doNotProcess ; 2011-2012 ; International Journal of Wireless and Mobile Computing Volume 5 ; 5 >
       au < exists ; 2013 ; International Journal of Wireless and Mobile Computing Volume 6 ; 6 >
       au < exists ; 2014 ; International Journal of Wireless and Mobile Computing Volume 7 ; 7 >
-      au < expected ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 >
+      au < exists ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 >
 
     }
 
@@ -8376,11 +8374,9 @@
         issnl = 2043-9032
       >
 
-      param[journal_id] = 2043-9040
+      param[journal_id] = ijwi
 
       au < doNotProcess ; 2012 ; International Journal of Work Innovation Volume 1 ; 1 >
-      au < expected ; 2013 ; International Journal of Work Innovation Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Work Innovation Volume 3 ; 3 >
       au < expected ; 2015 ; International Journal of Work Innovation Volume 4 ; 4 >
 
     }
@@ -8394,7 +8390,7 @@
         issnl = 1740-8938
       >
 
-      param[journal_id] = 1740-8946
+      param[journal_id] = ijwoe
 
       au < doNotProcess ; 2005-2006 ; International Journal of Work Organisation and Emotion Volume 1 ; 1 >
       au < doNotProcess ; 2007-2008 ; International Journal of Work Organisation and Emotion Volume 2 ; 2 >
@@ -8415,14 +8411,14 @@
         issnl = 1521-0227
       >
 
-      param[journal_id] = 2042-6992
+      param[journal_id] = ier
 
       au < doNotProcess ; 2010 ; Interdisciplinary Environmental Review Volume 11 ; 11 >
       au < doNotProcess ; 2011 ; Interdisciplinary Environmental Review Volume 12 ; 12 >
       au < doNotProcess ; 2012 ; Interdisciplinary Environmental Review Volume 13 ; 13 >
       au < exists ; 2013 ; Interdisciplinary Environmental Review Volume 14 ; 14 >
       au < exists ; 2014 ; Interdisciplinary Environmental Review Volume 15 ; 15 >
-      au < expected ; 2015 ; Interdisciplinary Environmental Review Volume 16 ; 16 >
+      au < exists ; 2015 ; Interdisciplinary Environmental Review Volume 16 ; 16 >
 
     }
 
@@ -8435,7 +8431,7 @@
         issnl = 1746-966X
       >
 
-      param[journal_id] = 1746-9678
+      param[journal_id] = jgba
 
       au < doNotProcess ; 2007-2008 ; Journal for Global Business Advancement Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; Journal for Global Business Advancement Volume 2 ; 2 >
@@ -8444,7 +8440,7 @@
       au < doNotProcess ; 2012 ; Journal for Global Business Advancement Volume 5 ; 5 >
       au < exists ; 2013 ; Journal for Global Business Advancement Volume 6 ; 6 >
       au < exists ; 2014 ; Journal for Global Business Advancement Volume 7 ; 7 >
-      au < expected ; 2015 ; Journal for Global Business Advancement Volume 8 ; 8 >
+      au < exists ; 2015 ; Journal for Global Business Advancement Volume 8 ; 8 >
 
     }
 
@@ -8457,7 +8453,7 @@
         issnl = 1549-9324
       >
 
-      param[journal_id] = 1747-6763
+      param[journal_id] = jibed
 
       au < doNotProcess ; 2003 ; Journal for International Business and Entrepreneurship Development Volume 1 ; 1 >
       au < doNotProcess ; 2004 ; Journal for International Business and Entrepreneurship Development Volume 2 ; 2 >
@@ -8465,9 +8461,8 @@
       au < doNotProcess ; 2009 ; Journal for International Business and Entrepreneurship Development Volume 4 ; 4 >
       au < doNotProcess ; 2010-2011 ; Journal for International Business and Entrepreneurship Development Volume 5 ; 5 >
       au < doNotProcess ; 2012 ; Journal for International Business and Entrepreneurship Development Volume 6 ; 6 >
-      au < exists ; 2013 ; Journal for International Business and Entrepreneurship Development Volume 7 ; 7 >
-      au < exists ; 2014 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
-      au < expected ; 2015 ; Journal for International Business and Entrepreneurship Development Volume 9 ; 9 >
+      au < exists ; 2013-2014 ; Journal for International Business and Entrepreneurship Development Volume 7 ; 7 >
+      au < exists ; 2015 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
 
     }
 
@@ -8480,7 +8475,7 @@
         issnl = 1748-3050
       >
 
-      param[journal_id] = 1569-1551
+      param[journal_id] = jdr
 
       au < exists ; 2001 ; Journal of Design Research Volume 1 ; 1 >
       au < exists ; 2002 ; Journal of Design Research Volume 2 ; 2 >
@@ -8494,7 +8489,7 @@
       au < doNotProcess ; 2012 ; Journal of Design Research Volume 10 ; 10 >
       au < exists ; 2013 ; Journal of Design Research Volume 11 ; 11 >
       au < exists ; 2014 ; Journal of Design Research Volume 12 ; 12 >
-      au < expected ; 2015 ; Journal of Design Research Volume 13 ; 13 >
+      au < exists ; 2015 ; Journal of Design Research Volume 13 ; 13 >
 
     }
 
@@ -8507,27 +8502,25 @@
         issnl = 2052-0336
       >
 
-      param[journal_id] = 2052-0336
+      param[journal_id] = lajmsd
 
       au < exists ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 >
-      au < expected ; 2015 ; Latin American Journal of Management for Sustainable Development Volume 2 ; 2 >
+      au < exists ; 2015 ; Latin American Journal of Management for Sustainable Development Volume 2 ; 2 >
 
     }
 
     {
 
       title <
-        name = Luxury Intelligence, An International Journal ;
+        name = Luxury Research Journal ;
         issn = 2041-3831 ;
         eissn = 2041-384X ;
         issnl = 2041-3831
       >
 
-      param[journal_id] = 2041-384X
-      comment[0] = title is not yet published on 9/28/2013
+      param[journal_id] = lrj
 
-      au < expected ; 2014 ; Luxury Intelligence, An International Journal Volume 1 ; 1 >
-      au < expected ; 2015 ; Luxury Intelligence, An International Journal Volume 2 ; 2 >
+      au < exists ; 2015 ; Luxury Research Journal Volume 1 ; 1 >
 
     }
 
@@ -8540,7 +8533,7 @@
         issnl = 1468-4349
       >
 
-      param[journal_id] = 1741-5233
+      param[journal_id] = pcfd
 
       au < doNotProcess ; 2001 ; Progress in Computational Fluid Dynamics, An International Journal Volume 1 ; 1 >
       au < doNotProcess ; 2002 ; Progress in Computational Fluid Dynamics, An International Journal Volume 2 ; 2 >
@@ -8556,7 +8549,7 @@
       au < doNotProcess ; 2012 ; Progress in Computational Fluid Dynamics, An International Journal Volume 12 ; 12 >
       au < exists ; 2013 ; Progress in Computational Fluid Dynamics, An International Journal Volume 13 ; 13 >
       au < exists ; 2014 ; Progress in Computational Fluid Dynamics, An International Journal Volume 14 ; 14 >
-      au < expected ; 2015 ; Progress in Computational Fluid Dynamics, An International Journal Volume 15 ; 15 >
+      au < exists ; 2015 ; Progress in Computational Fluid Dynamics, An International Journal Volume 15 ; 15 >
 
     }
 
@@ -8569,7 +8562,7 @@
         issnl = 1476-8917
       >
 
-      param[journal_id] = 1478-8764
+      param[journal_id] = pie
 
       au < doNotProcess ; 2004 ; Progress in Industrial Ecology, An International Journal Volume 1 ; 1 >
       au < doNotProcess ; 2005 ; Progress in Industrial Ecology, An International Journal Volume 2 ; 2 >
@@ -8578,9 +8571,8 @@
       au < doNotProcess ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
       au < doNotProcess ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
       au < doNotProcess ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
-      au < exists ; 2013 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
-      au < expected ; 2014 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 >
-      au < expected ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 10 ; 10 >
+      au < exists ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
+      au < expected ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 >
 
     }
 
@@ -8593,7 +8585,7 @@
         issnl = 1746-0573
       >
 
-      param[journal_id] = 1746-0581
+      param[journal_id] = wremsd
 
       au < doNotProcess ; 2005 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 2 ; 2 >
@@ -8605,7 +8597,7 @@
       au < doNotProcess ; 2012 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
       au < exists ; 2013 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
       au < exists ; 2014 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 10 ; 10 >
-      au < expected ; 2015 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 11 ; 11 >
+      au < exists ; 2015 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 11 ; 11 >
 
     }
 
@@ -8618,14 +8610,13 @@
         issnl = 1749-4729
       >
 
-      param[journal_id] = 1749-4737
+      param[journal_id] = writr
 
       au < doNotProcess ; 2006-2007 ; World Review of Intermodal Transportation Research Volume 1 ; 1 >
       au < doNotProcess ; 2008-2009 ; World Review of Intermodal Transportation Research Volume 2 ; 2 >
       au < doNotProcess ; 2010-2011 ; World Review of Intermodal Transportation Research Volume 3 ; 3 >
       au < exists ; 2013 ; World Review of Intermodal Transportation Research Volume 4 ; 4 >
-      au < exists ; 2014 ; World Review of Intermodal Transportation Research Volume 5 ; 5 >
-      au < expected ; 2015 ; World Review of Intermodal Transportation Research Volume 6 ; 6 >
+      au < exists ; 2014-2015 ; World Review of Intermodal Transportation Research Volume 5 ; 5 >
 
     }
 
@@ -8638,7 +8629,7 @@
         issnl = 1741-2242
       >
 
-      param[journal_id] = 1741-2234
+      param[journal_id] = wrstsd
 
       au < doNotProcess ; 2004 ; World Review of Science, Technology and Sustainable Development Volume 1 ; 1 >
       au < doNotProcess ; 2005 ; World Review of Science, Technology and Sustainable Development Volume 2 ; 2 >
@@ -8651,7 +8642,7 @@
       au < doNotProcess ; 2012 ; World Review of Science, Technology and Sustainable Development Volume 9 ; 9 >
       au < exists ; 2013 ; World Review of Science, Technology and Sustainable Development Volume 10 ; 10 >
       au < exists ; 2014 ; World Review of Science, Technology and Sustainable Development Volume 11 ; 11 >
-      au < expected ; 2015 ; World Review of Science, Technology and Sustainable Development Volume 12 ; 12 >
+      au < exists ; 2015 ; World Review of Science, Technology and Sustainable Development Volume 12 ; 12 >
 
     }
 
