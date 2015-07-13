@@ -32,21 +32,19 @@
 package org.lockss.ws.entities;
 
 /**
- * A wrapper for the result of a check substance web service operation over an
- * Archival Unit.
+ * A wrapper for the result of an archival unit crawl request web service
+ * operation.
  */
-public class CheckSubstanceResult {
-  public enum State {Unknown, Yes, No};
-
+public class RequestCrawlResult {
   private String id;
-  private State oldState;
-  private State newState;
+  private boolean success = false;
+  private String delayReason;
   private String errorMessage;
 
   /**
    * Default constructor.
    */
-  public CheckSubstanceResult() {
+  public RequestCrawlResult() {
   }
 
   /**
@@ -54,18 +52,20 @@ public class CheckSubstanceResult {
    * 
    * @param id
    *          A String with the Archival Unit identifier.
-   * @param oldState
-   *          A State with the previous substance check state.
-   * @param newState
-   *          A State with the current substance check state.
+   * @param success
+   *          A boolean with <code>true</code> if the request was made
+   *          successfully, <code>false</code> otherwise.
+   * @param delayReason
+   *          A String with the reason for any delay in performing the
+   *          operation.
    * @param errorMessage
    *          A String with any error message as a result of the operation.
    */
-  public CheckSubstanceResult(String id, State oldState, State newState,
+  public RequestCrawlResult(String id, boolean success, String delayReason,
       String errorMessage) {
     this.id = id;
-    this.oldState = oldState;
-    this.newState = newState;
+    this.success = success;
+    this.delayReason = delayReason;
     this.errorMessage = errorMessage;
   }
 
@@ -82,33 +82,34 @@ public class CheckSubstanceResult {
   }
 
   /**
-   * Provides the previous substance check state.
+   * Provides the indication of whether the request was made successfully.
    * 
-   * @return a State with the previous substance check state.
+   * @return a boolean with <code>true</code> if the request was made
+   *          successfully, <code>false</code> otherwise.
    */
-  public State getOldState() {
-    return oldState;
+  public boolean isSuccess() {
+    return success;
   }
-  public void setOldState(State oldState) {
-    this.oldState = oldState;
+  public void setSuccess(boolean success) {
+    this.success = success;
   }
 
   /**
-   * Provides the current substance check state.
+   * Provides the reason for a in performing the operation, if any.
    * 
-   * @return a State with the current substance check state.
+   * @return a String with the message.
    */
-  public State getNewState() {
-    return newState;
+  public String getDelayReason() {
+    return delayReason;
   }
-  public void setNewState(State newState) {
-    this.newState = newState;
+  public void setDelayReason(String delayReason) {
+    this.delayReason = delayReason;
   }
 
   /**
    * Provides any error message as a result of the operation.
    * 
-   * @return a String with the message.
+   * @return a String with the error message.
    */
   public String getErrorMessage() {
     return errorMessage;
@@ -119,7 +120,8 @@ public class CheckSubstanceResult {
 
   @Override
   public String toString() {
-    return "[CheckSubstanceResult id=" + id + ", oldState=" + oldState
-	+ ", newState=" + newState + ", errorMessage=" + errorMessage + "]";
+    return "[RequestCrawlResult id=" + id + ", success=" + success
+	+ ", delayReason=" + delayReason + ", errorMessage=" + errorMessage
+	+ "]";
   }
 }

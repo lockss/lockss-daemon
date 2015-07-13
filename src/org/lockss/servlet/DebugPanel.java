@@ -63,7 +63,7 @@ public class DebugPanel extends LockssServlet {
    */
   public static final String PARAM_CRAWL_PRIORITY = 
     PREFIX + "crawlPriority";
-  private static final int DEFAULT_CRAWL_PRIORITY = 10;
+  public static final int DEFAULT_CRAWL_PRIORITY = 10;
 
   /**
    * Priority for crawls started from the debug panel
@@ -89,10 +89,10 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_REINDEX_METADATA = "Force Reindex Metadata";
   static final String ACTION_START_V3_POLL = "Start V3 Poll";
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
-  static final String ACTION_START_CRAWL = "Start Crawl";
-  static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
-  static final String ACTION_START_DEEP_CRAWL = "Deep Crawl";
-  static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
+  public static final String ACTION_START_CRAWL = "Start Crawl";
+  public static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
+  public static final String ACTION_START_DEEP_CRAWL = "Deep Crawl";
+  public static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
   public static final String ACTION_CHECK_SUBSTANCE = "Check Substance";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";

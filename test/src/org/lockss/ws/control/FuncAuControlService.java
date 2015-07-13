@@ -42,6 +42,7 @@ import org.lockss.account.AccountManager;
 import org.lockss.account.UserAccount;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
+import org.lockss.crawler.CrawlManagerImpl;
 import org.lockss.daemon.ConfigParamAssignment;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.TitleConfig;
@@ -63,6 +64,7 @@ import org.lockss.util.RegexpUtil;
 import org.lockss.ws.cxf.AuthorizationInterceptor;
 import org.lockss.ws.entities.CheckSubstanceResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.RequestCrawlResult;
 
 /**
  * Functional test class for org.lockss.ws.control.AuControlService.
@@ -122,6 +124,10 @@ public class FuncAuControlService extends LockssTestCase {
       PluginManager.pluginKeyFromName(MyMockPlugin.class.getName());
     pluginMgr.ensurePluginLoaded(key);
     plugin = (MockPlugin)pluginMgr.getPlugin(key);
+
+    CrawlManagerImpl crawlManager =
+	(CrawlManagerImpl)theDaemon.getCrawlManager();
+    crawlManager.startService();
 
     remoteApi = theDaemon.getRemoteApi();
     remoteApi.startService();
@@ -364,6 +370,155 @@ public class FuncAuControlService extends LockssTestCase {
     assertNull(result.getNewState());
     assertEquals(AuControlServiceImpl.NO_SUBSTANCE_ERROR_MESSAGE,
 	result.getErrorMessage());
+  }
+
+  /**
+   * Tests the crawl request of an Archival Unit.
+   */
+  public void testRequestCrawlById() throws Exception {
+    UserAccount userAccount = accountManager.getUser(USER_NAME);
+
+    // User "userAdminRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_USER_ADMIN);
+
+    RequestCrawlResult result = proxy.requestCrawlById("", null, false);
+    assertEquals("", result.getId());
+    assertFalse(result.isSuccess());
+    assertNull(result.getDelayReason());
+    assertEquals(AuControlServiceImpl.MISSING_AU_ID_ERROR_MESSAGE,
+	result.getErrorMessage());
+
+    result = proxy.requestCrawlById(mau.getAuId(), new Integer(10), true);
+    assertEquals(mau.getAuId(), result.getId());
+    assertFalse(result.isSuccess());
+    assertNull(result.getDelayReason());
+    assertEquals(AuControlServiceImpl.NO_SUCH_AU_ERROR_MESSAGE,
+	result.getErrorMessage());
+
+    // User "contentAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
+    try {
+      result = proxy.requestCrawlById(mau.getAuId(), null, false);
+      fail("Test should have failed for role "
+	   + LockssServlet.ROLE_CONTENT_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "auAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_AU_ADMIN);
+    try {
+      result = proxy.requestCrawlById(mau.getAuId(), new Integer(10), true);
+      fail("Test should have failed for role "
+	   + LockssServlet.ROLE_AU_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "accessContentRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ACCESS);
+    try {
+      result = proxy.requestCrawlById(mau.getAuId(), null, false);
+      fail("Test should have failed for role "
+	  + LockssServlet.ROLE_CONTENT_ACCESS);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "debugRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_DEBUG);
+
+    result = proxy.requestCrawlById(auId0, new Integer(10), true);
+    assertEquals(auId0, result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getDelayReason());
+    assertNull(result.getErrorMessage());
+  }
+
+  /**
+   * Tests the crawl request of Archival Units by a list of their identifiers.
+   */
+  public void testRequestCrawlByIdList() throws Exception {
+    UserAccount userAccount = accountManager.getUser(USER_NAME);
+
+    // User "userAdminRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_USER_ADMIN);
+
+    List<String> auIds = new ArrayList<String>();
+    auIds.add(auId0);
+    auIds.add(auId1);
+
+    List<RequestCrawlResult> results =
+	proxy.requestCrawlByIdList(auIds, null, false);
+    RequestCrawlResult result = results.get(0);
+    assertEquals(auId0, result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getDelayReason());
+    assertNull(result.getErrorMessage());
+
+    result = results.get(1);
+    assertEquals(auId1, result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getDelayReason());
+    assertNull(result.getErrorMessage());
+
+    // User "contentAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
+    try {
+      results = proxy.requestCrawlByIdList(auIds, null, false);
+      fail("Test should have failed for role "
+	   + LockssServlet.ROLE_CONTENT_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "auAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_AU_ADMIN);
+    try {
+      results = proxy.requestCrawlByIdList(auIds, null, false);
+      fail("Test should have failed for role "
+	   + LockssServlet.ROLE_AU_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "accessContentRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ACCESS);
+    try {
+      results = proxy.requestCrawlByIdList(auIds, null, false);
+      fail("Test should have failed for role "
+	  + LockssServlet.ROLE_CONTENT_ACCESS);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "debugRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_DEBUG);
+
+    results = proxy.requestCrawlByIdList(auIds, null, false);
+    result = results.get(0);
+    assertEquals(auId0, result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getDelayReason());
+    assertNull(result.getErrorMessage());
+
+    result = results.get(1);
+    assertEquals(auId1, result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getDelayReason());
+    assertNull(result.getErrorMessage());
   }
 
   private TitleConfig makeTitleConfig(String vol) {
