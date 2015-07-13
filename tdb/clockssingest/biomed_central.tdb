@@ -647,7 +647,7 @@
       au < finished ; crawling ; 2011 ; BMC Family Practice Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Family Practice Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Family Practice Volume 14 ; 14 >
-      au < testing ; exists ; 2014 ; BMC Family Practice Volume 15 ; 15 >
+      au < ready ; exists ; 2014 ; BMC Family Practice Volume 15 ; 15 >
       au < manifest ; exists ; 2015 ; BMC Family Practice Volume 16 ; 16 >
 
     }
@@ -675,7 +675,7 @@
       au < finished ; crawling ; 2011 ; BMC Gastroenterology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Gastroenterology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Gastroenterology Volume 13 ; 13 >
-      au < testing ; exists ; 2014 ; BMC Gastroenterology Volume 14 ; 14 >
+      au < ready ; exists ; 2014 ; BMC Gastroenterology Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Gastroenterology Volume 15 ; 15 >
 
     }
@@ -7038,7 +7038,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       comment[platform] = BioMedCentral
 
       au < manifest ; exists ; 2013 ; Annals of Occupational and Environmental Medicine Volume 25 ; 25 >
-      au < testing ; exists ; 2014 ; Annals of Occupational and Environmental Medicine Volume 26 ; 26 >
+      au < ready ; exists ; 2014 ; Annals of Occupational and Environmental Medicine Volume 26 ; 26 >
       au < manifest ; exists ; 2015 ; Annals of Occupational and Environmental Medicine Volume 27 ; 27 >
 
     }
