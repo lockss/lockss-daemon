@@ -7657,8 +7657,7 @@
       param[journal_issn] = 1757-8809
       
       au < zapped ; finished ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
-      au < down ; exists ; 2013 ; International Journal of Web Science Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Web Science Volume 3 ; 3 >
+      au < superseded ; exists ; 2013 ; International Journal of Web Science Volume 2 [superseded] ; 2 >
 
     }
 
@@ -7695,8 +7694,6 @@
       param[journal_issn] = 2043-9040
       
       au < down ; frozen ; 2012 ; International Journal of Work Innovation Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Work Innovation Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Work Innovation Volume 3 ; 3 >
 
     }
 
@@ -7869,7 +7866,7 @@
       au < doNotProcess ; exists ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
       au < down ; frozen ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
-      au < down ; exists ; 2013 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
+      au < superseded ; exists ; 2013 ; Progress in Industrial Ecology, An International Journal Volume 8 [superseded] ; 8 >
       au < doNotProcess ; exists ; 2014 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 >
 
     }
