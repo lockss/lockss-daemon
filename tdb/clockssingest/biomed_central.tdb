@@ -618,7 +618,7 @@
       au < crawling ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 >
-      au < testing ; exists ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 >
+      au < ready ; exists ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 ; 15 >
 
     }
@@ -4656,7 +4656,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
         comment[continues] = 1735-1979
 
         au < manifest ; exists ; 2013 ; Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
-        au < testing ; exists ; 2014 ; Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
+        au < ready ; exists ; 2014 ; Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
         au < manifest ; exists ; 2015 ; Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
     }
 
@@ -4681,7 +4681,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
       au < crawling ; exists ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
       au < crawling ; exists ; 2013 ; Irish Veterinary Journal Volume 66 ; 66 >
-      au < testing ; exists ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
+      au < ready ; exists ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
       au < manifest ; exists ; 2015 ; Irish Veterinary Journal Volume 68 ; 68 >
 
     }
@@ -4699,7 +4699,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
-      au < testing ; exists ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
+      au < ready ; exists ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Israel Journal of Health Policy Research Volume 4 ; 4 >
 
     }
@@ -4827,7 +4827,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.jbiolres.com/
       param[journal_issn] = 2241-5793
 
-      au < testing ; exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
+      au < ready ; exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
       au < manifest ; exists ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
 
     }
@@ -7163,7 +7163,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-6844
       comment[platform] = BioMedCentral
 
-      au < testing ; exists ; 2014 ; Gynecologic Oncology Research and Practice Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Gynecologic Oncology Research and Practice Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Gynecologic Oncology Research and Practice Volume 2 ; 2 >
 
     }
@@ -7179,7 +7179,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2054-7072
       comment[platform] = BioMedCentral
 
-      au < testing ; exists ; 2014 ; Journal of Clinical Movement Disorders Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Journal of Clinical Movement Disorders Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Journal of Clinical Movement Disorders Volume 2 ; 2 >
 
     }
@@ -7211,7 +7211,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1944-3277
       comment[platform] = BioMedCentral
 
-      au < testing ; exists ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 >
+      au < ready ; exists ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Standards in Genomic Sciences Volume 10 ; 10 >
 
     }
