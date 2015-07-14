@@ -101,13 +101,13 @@
     
     param[journal_id] = apw
     param[journal_issn] = 2042-6143
-    comment[doNotProcess] = Starting in 2015, Asia Pacific World will be hosted online by the International Association for Asia Pacific Studies. For further details, see www.apu.ac.jp
+    comment[down] = Starting in 2015, Asia Pacific World will be hosted online by the International Association for Asia Pacific Studies. For further details, see www.apu.ac.jp
            
-    au < doNotProcess ; exists ; 2010 ; Asia Pacific World Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2011 ; Asia Pacific World Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2012 ; Asia Pacific World Volume 3 ; 3 >
-    au < doNotProcess ; exists ; 2013 ; Asia Pacific World Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2014 ; Asia Pacific World Volume 5 ; 5 >
+    au < down ; exists ; 2010 ; Asia Pacific World Volume 1 ; 1 >
+    au < down ; exists ; 2011 ; Asia Pacific World Volume 2 ; 2 >
+    au < down ; exists ; 2012 ; Asia Pacific World Volume 3 ; 3 >
+    au < down ; exists ; 2013 ; Asia Pacific World Volume 4 ; 4 >
+    au < down ; exists ; 2014 ; Asia Pacific World Volume 5 ; 5 >
     
   }
 
