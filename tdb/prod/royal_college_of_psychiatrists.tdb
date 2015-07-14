@@ -45,6 +45,20 @@
   {
   
     title <
+      name = BJPsych Open ;
+      eissn = 2056-4724 ;
+      issnl = 2056-4724
+    >
+
+    param[base_url] = http://bjpo.rcpsych.org/
+
+    au < HighWireDrupalPlugin ; exists ; 2015 ; BJPsych Open Volume 1 ; 1 >
+
+  }
+
+  {
+  
+    title <
       name = The British Journal of Psychiatry ;
       issn = 0007-1250 ;
       eissn = 1472-1465 ;
