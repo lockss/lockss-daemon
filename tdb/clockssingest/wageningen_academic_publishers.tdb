@@ -2,7 +2,7 @@
   publisher <
     name = Wageningen Academic Publishers ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 5
   >
   {
     plugin = org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin
