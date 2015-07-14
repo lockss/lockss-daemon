@@ -17,6 +17,11 @@
     param[base_url] = http://www.pnas.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    # since 1.68, this title has its own crawl pool
+    attr[highwire_crawl_pool] = PNAS
+    
+    # doNotProcess: AUs from 2009 and later are part of the regular GLN (prod)
+
     au < released ; 1915 ; Proceedings of the National Academy of Sciences Volume 1 ; 1 >
     au < released ; 1916 ; Proceedings of the National Academy of Sciences Volume 2 ; 2 >
     au < released ; 1917 ; Proceedings of the National Academy of Sciences Volume 3 ; 3 >
