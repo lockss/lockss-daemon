@@ -1,5 +1,5 @@
 /*
- * $Id: $
+ * $Id$
  */
 
 /*
@@ -43,7 +43,8 @@ public class GeorgThiemeVerlagUrlNormalizer implements UrlNormalizer {
       throws PluginException {
     if (url.contains(".js?") ||
         url.contains(".css?") ||
-        url.contains(".ico?")) {
+        url.contains(".ico?") ||
+        url.contains(".gif?")) {
       url = StringUtils.substringBeforeLast(url, "?");
     }
     return url;

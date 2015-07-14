@@ -51,6 +51,8 @@ public class TestGeorgThiemeVerlagUrlNormalizer extends LockssTestCase {
         norm.normalizeUrl("https://www.thieme-connect.de/products/css/style-changes.js?rel=xyz&relno=1", null));
     assertEquals("https://www.thieme-connect.de/products/css/style-changes.ico",
         norm.normalizeUrl("https://www.thieme-connect.de/products/css/style-changes.ico?rel=xyz&relno=1", null));
+    assertEquals("https://www.thieme-connect.de/products/images/desktop/img/logo-video.gif",
+        norm.normalizeUrl("https://www.thieme-connect.de/products/images/desktop/img/logo-video.gif?_debugResources=y&n=1436640638884", null));
     
     assertEquals("https://www.thieme-connect.de/products/css/style-changes.png?rel=xyz&relno=1",
         norm.normalizeUrl("https://www.thieme-connect.de/products/css/style-changes.png?rel=xyz&relno=1", null));

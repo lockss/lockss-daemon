@@ -192,7 +192,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     catch (ConfigurationException ex) {
     }
     theDaemon.getLockssRepository(au);
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(au, 
+    new BaseCachedUrlSet(au, 
         new RangeCachedUrlSetSpec(baseUrl.toString()));
     // Test for pages that should get crawled
     // permission page/start url
@@ -223,6 +223,8 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL +
         "media/ains/20131112/supmat/ains_11_2013_18_sup_10-1055-s-0033-1361983.pdf",
         true, au);
+    // images of page content are not preserved
+    shouldCacheTest(ROOT_URL + "media/ains/201410/lookinside/thumbnails/10.1055-s-0034-1395169-1.jpg", false, au);  
     
     // should not get crawled - missing doi prefix
     shouldCacheTest(ROOT_URL + "products/ejournals/html/s-0029-1214947", false, au);  

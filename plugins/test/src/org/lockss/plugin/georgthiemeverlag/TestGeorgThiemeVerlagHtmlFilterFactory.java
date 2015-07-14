@@ -103,7 +103,10 @@ public class TestGeorgThiemeVerlagHtmlFilterFactory extends LockssTestCase {
     "</div>\n" + 
     "<div id=\"footerRight\"></div>\n" + 
     "</div>\n" +
-    "</footer>" +
+    "<img border=\"0\" width=\"16\" height=\"12\" dir=\"images\" title=\" Video available\"" +
+    " file=\"/desktop/img/logo-video.gif\"" +
+    " src=\"/products/images/desktop/img/logo-video.gif?_debugResources=y&amp;n=1436827798499\">\n" +
+    "</footer>\n" +
     "<script type=\"text/javascript\"> $(function () { initTabBar({ open: 0}); }); </script>\n" + 
 "</body></html>";
 

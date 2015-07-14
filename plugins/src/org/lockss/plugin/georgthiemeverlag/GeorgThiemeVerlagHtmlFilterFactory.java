@@ -78,6 +78,8 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         // Contains non-functional anchor, not content
         HtmlNodeFilters.tagWithAttribute("ul", "class", "articleTocList"),
         HtmlNodeFilters.tagWithAttribute("a", "name"),
+        // Debug ids change
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "_debugResources="),
     };
     
     

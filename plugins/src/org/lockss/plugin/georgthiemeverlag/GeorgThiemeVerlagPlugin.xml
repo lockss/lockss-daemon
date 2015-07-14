@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -60,6 +60,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>2,"^https?://%s/media/[^?]+/lookinside/[^?]+\.jpg$", url_host(base_url)</string>
       <string>1,"^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
       <string>1,"^%smedia/.*/supmat/", base_url</string>
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
