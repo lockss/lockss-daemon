@@ -12,8 +12,12 @@
     <string>Digital Commons Plugin (Event Communities)</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.3</string> <!-- au_repair_from_peer_if_missing_url_pattern -->
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +28,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -127,5 +131,16 @@
     <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>"^%sassets/", base_url</string> <!-- images, stylesheets, Javascript -->
+      <string>"^%s[^/]+\.css$", base_url</string> <!-- stylesheets -->
+    </list>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsPdfFilterFactory</string>
   </entry>
 </map>

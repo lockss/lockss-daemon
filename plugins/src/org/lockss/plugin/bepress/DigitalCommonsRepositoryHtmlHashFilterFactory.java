@@ -32,69 +32,101 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bepress;
 
-import java.io.InputStream;
+import java.io.*;
 
-import org.htmlparser.NodeFilter;
+import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.DoctypeTag;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class DigitalCommonsRepositoryHtmlHashFilterFactory implements FilterFactory {
 
-  private static final Logger log =
-      Logger.getLogger(DigitalCommonsRepositoryHtmlHashFilterFactory.class);
-  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // filter out javascript
+        /*
+         * Broad area filtering 
+         */
+        // Scripts, styles, comments
         HtmlNodeFilters.tag("script"),
-        // filter out comments
+        HtmlNodeFilters.tag("style"),
         HtmlNodeFilters.comment(),
-        // stylesheets
+        // Document header
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
-        // top banner
+        // Header
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-        // breadcrumb and accompanying backlinks/decorations
+        HtmlNodeFilters.tagWithAttribute("div", "id", "navigation"),
+        // Sidebar
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
+        HtmlNodeFilters.tagWithAttribute("select", "name", "url"), // Obsolete: inside 'sidebar'
+        // Footer
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        /*
+         * Main content area
+         */
+        // Top-right previous/next links
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "pager"),
+        // Breadcrumbs and accompanying backlinks/decorations
+        HtmlNodeFilters.tagWithAttribute("div", "class", "crumbs"), // e.g. http://lawdigitalcommons.bc.edu/ealr/vol2/iss3/4/
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "series-header"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "series-title"),
         HtmlNodeFilters.tagWithAttribute("h2", "id", "series-title"),
-        // skip to main
+        // Sidebar inside main content area
+        HtmlNodeFilters.tagWithAttribute("div", "id", "beta_7-3"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "beta-disciplines"), // Obsolete? inside 'beta_7-3'
+        HtmlNodeFilters.tagWithAttribute("div", "id", "share"), // Obsolete? inside 'beta_7-3'
+        HtmlNodeFilters.tagWithAttribute("span", "class", "Z3988"), // Obsolete? inside 'beta_7-3'
+        // Inline skip links
         HtmlNodeFilters.tagWithAttribute("a", "class", "skiplink"),
-        // near top - navigation
-        HtmlNodeFilters.tagWithAttribute("div", "id", "navigation"),
-        // left sidebar
-        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
-        // top right of the article for the year - <previous> and <next>
-        // http://repository.cmu.edu/statistics/68/
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "pager"),
-        // collections of type ir_book and ir_gallery have covers of the books
+        /*
+         * Other 
+         */
+        // Collections of type ir_book and ir_gallery have covers of the books
         // in other years (other than those in e.g. <li class="lockss_2013">)
         HtmlNodeFilters.tagWithAttribute("div", "class", "gallery-tools"),
-        // books can have a purchase button
+        // Books can have a purchase button
         // e.g. http://docs.lib.purdue.edu/purduepress_ebooks/29/
         HtmlNodeFilters.tagWithAttribute("div", "id", "buy-link"),
-        // footer
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // 'follow' publication or 'follow' author buttons
         HtmlNodeFilters.tagWithAttribute("p", "class", "publication-follow"),
         HtmlNodeFilters.tagWithAttribute("a", "rel", "nofollow"),
-        // right side box 'Included in'
-        HtmlNodeFilters.tagWithAttribute("div", "id", "beta-disciplines"),
-        // social media - share
-        HtmlNodeFilters.tagWithAttribute("div", "id", "share"),
-        // hidden Z39.88 field
-        HtmlNodeFilters.tagWithAttribute("span", "class", "Z3988")
+        // <meta name="viewport"> vs. <meta  name="viewport">
+        HtmlNodeFilters.tagWithAttribute("meta", "name", "viewport"),
+        // <meta name="viewport"> vs. <meta  name="viewport">
+        HtmlNodeFilters.tagWithAttribute("meta", "name", "viewport"),
+        // <meta name="bepress_is_article_cover_page"> vs. not
+        HtmlNodeFilters.tagWithAttribute("meta", "name", "bepress_is_article_cover_page"),
+        // <!DOCTYPE html> vs. <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            return node instanceof DoctypeTag;
+          }
+        },
+        /*
+         * Inherited from old BePressHtmlFilterFactory
+         */
+        // News item in top-right corner of some journals
+        HtmlNodeFilters.tagWithAttribute("div", "id", "news"),
+        // Both contain download numbers and date
+        HtmlNodeFilters.tagWithAttribute("div", "id", "custom-fields"), // ?
+        HtmlNodeFilters.tagWithAttribute("div", "id", "recommended_citation"), // e.g. http://docs.lib.purdue.edu/clcweb/vol15/iss7/21/ 
+        // Misleadingly-named Altmetric widget e.g. http://docs.lib.purdue.edu/clcweb/vol15/iss7/21/
+        HtmlNodeFilters.tagWithAttribute("div", "id", "doi"), // Obsolete; inside 'sidebar'
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                     encoding, 
+                                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
 }
