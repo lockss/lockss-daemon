@@ -2008,7 +2008,7 @@ public class StringUtil {
   }
 
   private static java.util.regex.Pattern BLANK_NLS_AND_TABS_PATTERN =
-    java.util.regex.Pattern.compile("[\n|\t]+");
+    java.util.regex.Pattern.compile("[\n\t]+");
 
   /**
    * Blanks out newlines and tabs in a text string.
