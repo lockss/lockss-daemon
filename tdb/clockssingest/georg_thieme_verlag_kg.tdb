@@ -46,7 +46,7 @@
     au < doNotProcess ; exists ; 2011 ; 2011 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 46 ; 46 >
     au < doNotProcess ; exists ; 2012 ; 2012 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 47 ; 47 >
     au < doNotProcess ; exists ; 2013 ; 2013 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 48 ; 48 >
-    au < doNotProcess ; exists ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 >
+    au < ready ; exists ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 >
     au < doNotProcess ; exists ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 >
 
   }
@@ -127,7 +127,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Ernährungsmedizin Volume 34 ; 34 >
     au < doNotProcess ; exists ; 2010 ; 2010 ; Aktuelle Ernährungsmedizin Volume 35 ; 35 >
     au < doNotProcess ; exists ; 2011 ; 2011 ; Aktuelle Ernährungsmedizin Volume 36 ; 36 >
-    au < doNotProcess ; exists ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 37 ; 37 >
+    au < ready ; exists ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 37 ; 37 >
     au < doNotProcess ; exists ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 38 ; 38 >
     au < doNotProcess ; exists ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 >
 
@@ -144,9 +144,9 @@
     param[journal_id] = 10.1055/s-00022861
     comment[years] = 2012-current
 
-    au < doNotProcess ; exists ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 2012 ; 2012 ; Aktuelle Kardiologie Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 >
+    au < doNotProcess ; exists ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 >
 
   }
 
@@ -192,7 +192,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Neurologie Volume 2008 ; 35 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Neurologie Volume 2009 ; 36 >
     au < doNotProcess ; exists ; 2010 ; 2010 ; Aktuelle Neurologie Volume 2010 ; 37 >
-    au < doNotProcess ; exists ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
+    au < ready ; exists ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
     au < doNotProcess ; exists ; 2012 ; 2012 ; Aktuelle Neurologie Volume 2012 ; 39 >
     au < doNotProcess ; exists ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
     au < doNotProcess ; exists ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
@@ -238,7 +238,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Rheumatologie Volume 34 ; 34 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Rheumatologie Volume 35 ; 35 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Rheumatologie Volume 36 ; 36 >
-    au < doNotProcess ; exists ; 2010 ; 2010 ; Aktuelle Rheumatologie Volume 37 ; 37 >
+    au < ready ; exists ; 2010 ; 2010 ; Aktuelle Rheumatologie Volume 37 ; 37 >
     au < doNotProcess ; exists ; 2011 ; 2011 ; Aktuelle Rheumatologie Volume 38 ; 38 >
     au < doNotProcess ; exists ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 >
     au < doNotProcess ; exists ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 >
