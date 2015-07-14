@@ -39,6 +39,7 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
+    au < manifest ; 2003 ; 2003 ; Revista de História Volume 2003 ; 2003 >
     au < manifest ; 2004 ; 2004 ; Revista de História Volume 2004 ; 2004 >
     au < manifest ; 2005 ; 2005 ; Revista de História Volume 2005 ; 2005 >
     au < manifest ; 2006 ; 2006 ; Revista de História Volume 2006 ; 2006 >
@@ -65,6 +66,8 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = estic
 
+    au < manifest ; 2004 ; 9 ; Estílos da Clínica Volume 9 ; 2004 >
+    au < manifest ; 2005 ; 10 ; Estílos da Clínica Volume 10 ; 2005 >
     au < manifest ; 2006 ; 11 ; Estílos da Clínica Volume 11 ; 2006 >
     au < manifest ; 2007 ; 12 ; Estílos da Clínica Volume 12 ; 2007 >
     au < manifest ; 2008 ; 13 ; Estílos da Clínica Volume 13 ; 2008 >
