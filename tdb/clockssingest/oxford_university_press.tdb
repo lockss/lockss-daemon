@@ -14892,12 +14892,11 @@
 
     title <
       name = Journal of Urban Ecology ;
-      issn = 1754-9957 ;
-      eissn = 1754-9965 ;
-      issnl = 1754-9957
+      eissn = 2058-5543 ;
+      issnl = 2058-5543
     >
 
-    param[base_url] = http://jwelb.oxfordjournals.org/
+    param[base_url] = http://jue.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < exists ; exists ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; >
