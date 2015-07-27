@@ -39,7 +39,10 @@ import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -147,9 +150,14 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
     // Do the initial html filtering
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+    // Remove all inner tag content
+    Reader noTagFilter = new HtmlTagFilter(new StringFilter(FilterUtil.getReader(filteredStream, encoding), "<", " <"), new TagPair("<", ">"));
+    
+    Reader noWhiteSpace = new WhiteSpaceFilter(noTagFilter);
+    
     // Do WhiteSpaceFilter
-    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(
-        filteredStream, encoding)));
+    return new ReaderInputStream(noWhiteSpace);
   }
   
 }
