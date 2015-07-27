@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.IOUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
@@ -297,18 +298,18 @@ public class IngentaPdfFilterFactory implements FilterFactory {
     }
   }
   
-  private class NormalizingExtractingPdfFilterFactory extends ExtractingPdfFilterFactory {
+  private static class NormalizingExtractingPdfFilterFactory extends ExtractingPdfFilterFactory {
     
-    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
-        throws PdfException {
+    @Override
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
       doNormalizeMetadata(pdfDocument);
     }
   }
   
-  private class NormalizingPdfFilterFactory extends SimplePdfFilterFactory {
+  private static class NormalizingPdfFilterFactory extends SimplePdfFilterFactory {
     
-    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
-        throws PdfException {
+    @Override
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
       doNormalizeMetadata(pdfDocument);
     }
   }
@@ -318,6 +319,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
     pdfDocument.unsetMetadata();
+    pdfDocument.unsetAuthor(); // added later e.g. ALPSP
+    pdfDocument.unsetProducer(); // added later e.g. ALPSP
+    pdfDocument.unsetTitle(); // added later e.g. ALPSP
     PdfUtil.normalizeTrailerId(pdfDocument);
   }
   
@@ -335,10 +339,10 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       }
     }
     switch (publisherId) {
-      case ARN: case LSE: case IGSOC:
+      case ALPSP: case ARN: case LSE: case IGSOC:
         return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
         
-      case ALPSP: case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
+      case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
         return normFiltFact.createFilteredInputStream(au, in, encoding);
         
       case MANEY:
@@ -354,4 +358,20 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         return in;
     }
   }
+  
+  public static void main(String[] args) throws Exception {
+    FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
+    FilterFactory normExtractFiltFact = new NormalizingExtractingPdfFilterFactory();
+    String[] files = new String[] {
+        "/tmp/ingenta.i2.v3.pdf",
+        "/tmp/ingenta.i2.v4.pdf",
+    }; 
+    for (String file : files) {
+      IOUtils.copy(normFiltFact.createFilteredInputStream(null, new FileInputStream(file), null),
+                   new FileOutputStream(file + ".out1"));
+      IOUtils.copy(normExtractFiltFact.createFilteredInputStream(null, new FileInputStream(file), null),
+                   new FileOutputStream(file + ".out2"));
+    }
+  }
+  
 }
