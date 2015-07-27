@@ -48,12 +48,12 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     fact = new HighWirePressH20HtmlFilterFactory();
     mau = new MockArchivalUnit();
   }
-  
+
   private static final String inst1 = "<div class=\"leaderboard-ads leaderboard-ads-two\"</div>"
       + "<ul>Fill in SOMETHING SOMETHING</ul>";
-  
+
   private static final String inst2 = "<ul>Fill in SOMETHING SOMETHING</ul>";
-  
+
   private static final String withAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<div class=\"leaderboard-ads-ft\">"
@@ -71,9 +71,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<li><span>Online ISSN: </span>"
       + "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-  
+
   private static final String withoutAds = "\""; // div id=footer is now filtered
-  
+
   private static final String withCol4SquareAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<ul class=\"col4-square\">"
@@ -85,9 +85,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "alt=\"PlantPhysFacebook\" /></a></li>"
       + "</ul>"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>";
-  
+
   private static final String withoutCol4SquareAds = ""; // div id=footer is now filtered
-  
+
   private static final String withCol4TowerAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<ul class=\"col4-tower\">"
@@ -99,16 +99,16 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<div class=\"block-2 sb-div\"></div>" + "</div>";
 
   private static final String withoutCol4TowerAds = ""; // div id=footer is now filtered
-  
+
   private static final String withSageAnchors = "<div id=\"test\">" +
       "<a href=\"/cgi/openurl?query=rft.jtitle%3DPlast+Reconstr\">" +
       "<a href=\"/openurl?query=rft.jtitle%3DPlast+Reconstr\">" +
       "<a href=\"/external-ref?access_num=19469&displayid=767\">Order article</a>" +
       "</div>\"";
-  
+
   private static final String withoutSageAnchors = "<div>" + // div attributes are removed
       "</div>\"";
-  
+
   private static final String withCopyright = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
@@ -119,9 +119,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<li><span>Online ISSN: </span>"
       + "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-  
+
   private static final String withoutCopyright = "\""; // div id=footer is now filtered
-  
+
   private static final String withCurrentIssue = "<div class=\"col-3-top sb-div\"></div>"
       + "<div class=\"content-box\" id=\"sidebar-current-issue\">"
       + "<div class=\"cb-contents\">"
@@ -143,43 +143,45 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<li><a href=\"/cgi/alerts/etoc\">Alert me to new issues of The Journal"
       + "</a></li>" + "</ol>" + "</div>" + "</div>" + "</div>";
   private static final String withoutCurrentIssue = "<div></div>"; // div attributes are removed
-  
+
   private static final String headHtml = "<html><head>Title</head></HTML>";
   private static final String headHtmlFiltered = "<html></HTML>";
-  
+
+  private static final String headHtmlWithComment = "<html><head>Title</head><!-- COMMENT HERE --></HTML>";
+
   private static final String withSporadicDivs =
       "<div><div id=\"fragment-reference-display\"></div>" +
           "<div class=\"cit-extra\">stuff</div></div";
   private static final String withoutSporadicDivs =
       "<div></div>";
-  
+
   private static final String withCmeCredit =
       "<ol><li><a href=\"/content/28/7/911/suppl/DC1\" rel=\"supplemental-data\"" +
           "class=\"dslink-earn-free-cme-credit\">Earn FREE CME Credit</a></li></ol>";
   private static final String withoutCmeCredit = 
       "<ol></ol>";
-  
+
   private static final String withCbSection =
       "<div><div class=\"cb-section collapsible default-closed\" id=\"cb-art-gs\">Content" +
           "<h4></h4><ol><li></li></ol></div></div>";
   private static final String withoutCbSection =
       "<div></div>";
-  
+
   private static final String withHwGenPage =
       "<div class=\"hw-gen-page pagetype-content hw-pub-id-article\" " +
           "id=\"pageid-content\" itemscope=\"itemscope\" " +
           "itemtype=\"http://schema.org/ScholarlyArticle\">content</div>";
   private static final String withoutHwGenPage = // div attributes are removed
       "<div>content</div>";
-  
+
   private static final String withNavCurrentIssue =
       "<li id=\"nav_current_issue\" title=\"Current\">" +
           "<a href=\"/content/current\">" +
           "<span>View Current Issue (Volume 175 Issue 12 June 15, 2012)" +
           "</span></a></li>";
-  
+
   private static final String withoutNavCurrentIssue = ""; 
-  
+
   private static final String withNavArticle =
       "<div id=\"col-x\">" +
           "<div class=\"article-nav\">\nfoo</div>" + 
@@ -191,17 +193,17 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "href=\"/content/1/6/8.short\">Next Article »</a>\n" + 
           "<span class=\"toc-link\">\n" + 
           "</div></div>";
-  
+
   private static final String withoutNavArticle = // div attributes are removed
       "<div></div>";
-  
+
   private static final String withRelatedURLs =
       "<div><span id=\"related-urls\"" +
           "/span></div>";
   private static final String withoutRelatedURLs =
       "<div></div>";
-  
- // occmed.oxfordjournals - impact factor is nested as text with no id tag - use smart combination filtering
+
+  // occmed.oxfordjournals - impact factor is nested as text with no id tag - use smart combination filtering
   private static final String textIndexFactor =
       "<div id=\"second\">" +
           "<h2 id=\"read_this_journal\" title=\"Read This Journal\"><span>Read This Journal</span></h2>" +
@@ -226,12 +228,12 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "</div>";
   private static final String textIndexFactorFiltered = // div attributes are removed
       "<div>" +
-          "<h2 id=\"read_this_journal\" title=\"Read This Journal\"><span>Read This Journal</span></h2>" +
-          "<div>" +
-          "<h2 id=\"KEEP THIS\"><span>KEEP THIS BIT</span></h2>" +
-          "</div>" +
-          "</div>";
-  
+      "<h2 id=\"read_this_journal\" title=\"Read This Journal\"><span>Read This Journal</span></h2>" +
+      "<div>" +
+      "<h2 id=\"KEEP THIS\"><span>KEEP THIS BIT</span></h2>" +
+      "</div>" +
+      "</div>";
+
   private static final String hiddenInputHtml = 
       "<form action=\"http://www.example.org/search\" class=\"searchbox\" method=\"get\">" +
           "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" " +
@@ -252,7 +254,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<p> " +                        
           "</p>" +
           "</form>";
-  
+
   private static final String accessCheckHtml =
       "     <div class=\"cb-section cb-views\">" +
           "<ol>" +
@@ -268,7 +270,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "Full Text (PDF)</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 reprint\"></span></li>" +
           "</ol>" +
           "</div>";
-  
+
   private static final String accessCheckFiltered=
       " <div>" +
           "<ol>" +
@@ -283,254 +285,267 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 
   private static final String institutionLogoHtml =
       " <a class=\"hwac-institutional-logo\">" +
-      "<img alt=\"Stanford University\"" +
-      "src=\"/userimage/891eef32-7e9f-4198-9886-31192686655e-20120118\"" +
-      "class=\"hwac-institutional-logo\" />" +
-      "</a>" +
-      "<div id=\"something-nav\">";
-  
+          "<img alt=\"Stanford University\"" +
+          "src=\"/userimage/891eef32-7e9f-4198-9886-31192686655e-20120118\"" +
+          "class=\"hwac-institutional-logo\" />" +
+          "</a>" +
+          "<div id=\"something-nav\">";
+
   private static final String institutionLogoFiltered = // div attributes are removed
       " <div>";
-  
+
   private static final String sidebarGlobalNavHtml =
       " <div id=\"sidebar-global-nav\">" +
-      "<ul class=\"button-list pub-links\"> " +
-      "<li class=\"first\"><a title=\"About the Journal\" href=\"http://" +
-      "www.minersoc.org/clayminm.html\"><span>About the Journal</span></a></li>" +
-      "</ul>" +
-      "</div>" +
-      "<div id=\"something-nav\">";
-  
+          "<ul class=\"button-list pub-links\"> " +
+          "<li class=\"first\"><a title=\"About the Journal\" href=\"http://" +
+          "www.minersoc.org/clayminm.html\"><span>About the Journal</span></a></li>" +
+          "</ul>" +
+          "</div>" +
+          "<div id=\"something-nav\">";
+
   private static final String sidebarGlobalNavFiltered = // div attributes are removed
       " <div>";
-  
+
   private static final String col3Html =
       " <div id=\"generic\" class=\"hw-gen-page pagetype-content\">" +
-      "<div id=\"col-3\" style=\"height: 1616px;\">" +
-      "<div id=\"sidebar-current-issue\" class=\"content-box\">" +
-      "<div class=\"cb-contents\"></div></div><div id=\"sidebar-global-nav\">" +
-      "</div><div class=\"most-links-box \"></div>" +
-      "<ul class=\"tower-ads\"><li class=\"no-ad tower\"><span>  </span></li></ul>" +
-      "</div><script type=\"text/javascript\"></script></div>";
-  
+          "<div id=\"col-3\" style=\"height: 1616px;\">" +
+          "<div id=\"sidebar-current-issue\" class=\"content-box\">" +
+          "<div class=\"cb-contents\"></div></div><div id=\"sidebar-global-nav\">" +
+          "</div><div class=\"most-links-box \"></div>" +
+          "<ul class=\"tower-ads\"><li class=\"no-ad tower\"><span>  </span></li></ul>" +
+          "</div><script type=\"text/javascript\"></script></div>";
+
   private static final String col3Filtered = // div attributes are removed
       " <div>" +
-        "</div>";
+      "</div>";
 
   private static final String tocBannerAdHtml =
       "   <div id=\"content-block\">" +
-      "<ul class=\"toc-banner-ads\">" +
-      " <li><a href=\"/cgi/adclick/?ad=35482&amp;adclick=true&amp;url=http%3A%2F%2F" +
-      "www.aspetjournals.org%2Fsite%2Fmisc%2Fmobile_announce.xhtml\"><img class=\"adborder1\"" +
-      " title=\"ASPET Journals Now Available for Mobile Devices\"" +
-      "    width=\"195\"" +
-      "    height=\"195\"" +
-      "    src=\"http://pharmrev.aspetjournals.org/adsystem/graphics/932368436242021/" +
-      "pharmrev/Mobile%20Versions%20195x195%20Banner%20Ad.gif?ad=35482&amp;adview=true\"" +
-      "    alt=\"ASPET Journals Now Available for Mobile Devices\" /></a></li>" +
-      "</ul> " +
-      " <div id=\"toc-header\">   " +
-      " <h1>Table of Contents</h1><cite>";
+          "<ul class=\"toc-banner-ads\">" +
+          " <li><a href=\"/cgi/adclick/?ad=35482&amp;adclick=true&amp;url=http%3A%2F%2F" +
+          "www.aspetjournals.org%2Fsite%2Fmisc%2Fmobile_announce.xhtml\"><img class=\"adborder1\"" +
+          " title=\"ASPET Journals Now Available for Mobile Devices\"" +
+          "    width=\"195\"" +
+          "    height=\"195\"" +
+          "    src=\"http://pharmrev.aspetjournals.org/adsystem/graphics/932368436242021/" +
+          "pharmrev/Mobile%20Versions%20195x195%20Banner%20Ad.gif?ad=35482&amp;adview=true\"" +
+          "    alt=\"ASPET Journals Now Available for Mobile Devices\" /></a></li>" +
+          "</ul> " +
+          " <div id=\"toc-header\">   " +
+          " <h1>Table of Contents</h1><cite>";
   private static final String tocBannerAdFiltered = // div attributes are removed
       " <div>" +
       " <div>" +
       " <h1>Table of Contents</h1><cite>";
-  
+
   private static final String viewingDate =
       "<ul class=\"button-list header-buttons\">" +
-      " <li id=\"na_home\" class=\"first\"><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
-      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\">" +
-      "<span>Current Volume</span></a></li>" +
-      "</ul>" +
-      " <div class=\"site-date\">April 22, 2013</div>" +
-      " </div>";
-  
+          " <li id=\"na_home\" class=\"first\"><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
+          " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\">" +
+          "<span>Current Volume</span></a></li>" +
+          "</ul>" +
+          " <div class=\"site-date\">April 22, 2013</div>" +
+          " </div>";
+
   private static final String viewingDateFiltered =
       "<ul class=\"button-list header-buttons\">" +
-      " <li><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
-      " <li><a href=\"/content/current/\" title=\"Current Volume\">" +
-      "<span>Current Volume</span></a></li>" +
-      "</ul>" +
-      " " +
-      " </div>";
-  
+          " <li><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
+          " <li><a href=\"/content/current/\" title=\"Current Volume\">" +
+          "<span>Current Volume</span></a></li>" +
+          "</ul>" +
+          " " +
+          " </div>";
+
   private static final String gswHeader =
       "<div id=\"header\">\n" + 
-      "<div id=\"gsw-top-container\">\n" + 
-      "<div id=\"gsw-head\">\n" + 
-      "<div id=\"gsw-logo-and-buttons\">\n" + 
-      "<a href=\"http://www.geoscienceworld.org\" id=\"gsw-logo\"><span>GeoScienceWorld</span></a>\n" + 
-      "<div id=\"gsw-quick-search\">\n" + 
-      "<h3>Quick search</h3>            \n" + 
-      "</div>\n" + 
-      "</div>\n" + 
-      "<div class=\"inst-branding\"></div>\n" + 
-      "</div>\n" + 
-      "</div>\n" + 
-      "<h1><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" + 
-      "</div>";
-  
+          "<div id=\"gsw-top-container\">\n" + 
+          "<div id=\"gsw-head\">\n" + 
+          "<div id=\"gsw-logo-and-buttons\">\n" + 
+          "<a href=\"http://www.geoscienceworld.org\" id=\"gsw-logo\"><span>GeoScienceWorld</span></a>\n" + 
+          "<div id=\"gsw-quick-search\">\n" + 
+          "<h3>Quick search</h3>            \n" + 
+          "</div>\n" + 
+          "</div>\n" + 
+          "<div class=\"inst-branding\"></div>\n" + 
+          "</div>\n" + 
+          "</div>\n" + 
+          "<h1><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" + 
+          "</div>";
+
   private static final String gswHeaderFiltered = ""; // div id=header is now filtered
-  
+
   private static final String relatedHtml =
       "<div id=\"header\">\n" +
-      "<div class=\"relmgr-relation related\" id=\"rel-related-article\">\n" + 
-      "<h2>Related Articles</h2>\n" + 
-      "<ul class=\"related-list\">\n" + 
-      "<li class=\"cit\">cite\n" + 
-      "</li>\n" + 
-      "</ul>\n" + 
-      "</div>\n" + 
-      "</div>";
-  
+          "<div class=\"relmgr-relation related\" id=\"rel-related-article\">\n" + 
+          "<h2>Related Articles</h2>\n" + 
+          "<ul class=\"related-list\">\n" + 
+          "<li class=\"cit\">cite\n" + 
+          "</li>\n" + 
+          "</ul>\n" + 
+          "</div>\n" + 
+          "</div>";
+
   private static final String relatedHtmlFiltered = ""; // div id=header is now filtered
-  
+
   private static final String citedHtml =
       "<div id=\"header\">\n" +
-      "<div id=\"cited-by\" xmlns=\"http://www.w3.org/1999/xhtml\">\n" + 
-      "<h2>Articles citing this article</h2>\n" + 
-      "<ul class=\"cited-by-list\">\n" + 
-      "<li class=\"cit\">Cite Initiation</li>\n" + 
-      "</ul>\n" + 
-      "</div>" +
-      "</div>";
-  
+          "<div id=\"cited-by\" xmlns=\"http://www.w3.org/1999/xhtml\">\n" + 
+          "<h2>Articles citing this article</h2>\n" + 
+          "<ul class=\"cited-by-list\">\n" + 
+          "<li class=\"cit\">Cite Initiation</li>\n" + 
+          "</ul>\n" + 
+          "</div>" +
+          "</div>";
+
   private static final String citedHtmlFiltered = ""; // div id=header is now filtered
-  
+
   private static final String socialHtml =
       "<div id=\"header\">\n" +
-      "<div class=\"social-bookmarking\">\n" + 
-      "<ul class=\"social-bookmark-links\">\n" + 
-      "</ul>\n" + 
-      "<p class=\"social-bookmarking-help\"><a href=\"/help.dtl\">What's this?</a></p>\n" + 
-      "</div>" +
-      "</div>";
-  
+          "<div class=\"social-bookmarking\">\n" + 
+          "<ul class=\"social-bookmark-links\">\n" + 
+          "</ul>\n" + 
+          "<p class=\"social-bookmarking-help\"><a href=\"/help.dtl\">What's this?</a></p>\n" + 
+          "</div>" +
+          "</div>";
+
   private static final String socialHtmlFiltered = ""; // div id=header is now filtered
-  
+
   private static final String adfootHtml =
       "<body>\n" +
-      "<div class=\"ad_unhidden\" id=\"oas_top\">\n" + 
-      "Stuff\n" + 
-      "</div>\n" + 
-      "\n" + 
-      "<div class=\"ad_hidden\" id=\"oas_bottom\">\n" + 
-      "Stuff\n" + 
-      "</div>\n" + 
-      "\n" + 
-      "<widget-container>\n" + 
-      "<div id=\"disclaimer\">\n" + 
-      "<p>Disclaimer: </p>\n" + 
-      "</div>\n" + 
-      "</widget-container>\n" + 
-      "\n" + 
-      "<div id=\"secondary_footer\">\n" + 
-      "<div id=\"issn\">Online ISSN XXXX-2092 - Print ISSN XXXX-5129</div>\n" + 
-      "</div>\n" + 
-      "\n" + 
-      "<div id=\"primary_footer\">\n" + 
-      "<div id=\"site_logo\">\n" + 
-      "</div>\n" + 
-      "<div id=\"third_nav\">\n" + 
-      "</div>\n" + 
-      "</div>\n" + 
-      "\n" + 
-      "</body>";
-  
+          "<div class=\"ad_unhidden\" id=\"oas_top\">\n" + 
+          "Stuff\n" + 
+          "</div>\n" + 
+          "\n" + 
+          "<div class=\"ad_hidden\" id=\"oas_bottom\">\n" + 
+          "Stuff\n" + 
+          "</div>\n" + 
+          "\n" + 
+          "<widget-container>\n" + 
+          "<div id=\"disclaimer\">\n" + 
+          "<p>Disclaimer: </p>\n" + 
+          "</div>\n" + 
+          "</widget-container>\n" + 
+          "\n" + 
+          "<div id=\"secondary_footer\">\n" + 
+          "<div id=\"issn\">Online ISSN XXXX-2092 - Print ISSN XXXX-5129</div>\n" + 
+          "</div>\n" + 
+          "\n" + 
+          "<div id=\"primary_footer\">\n" + 
+          "<div id=\"site_logo\">\n" + 
+          "</div>\n" + 
+          "<div id=\"third_nav\">\n" + 
+          "</div>\n" + 
+          "</div>\n" + 
+          "\n" + 
+          "</body>";
+
   private static final String adfootHtmlFiltered =
       "<body>\n" +
-      "<widget-container> </widget-container>\n" +
-      "</body>";
-  
+          "<widget-container> </widget-container>\n" +
+          "</body>";
+
   private static final String europaceHtml =
       "<body>\n" +
-      "<div id=\"secondary_nav\"> <strong title=\"Oxford Journals\" id=\"page_logo\">" +
-      "<a href=\"http://www.oxfordjournals.org/\"><span>Oxford Journals</span></a></strong> " +
-      "<ul> <li title=\"My Account\" id=\"nav_my_account\">" +
-      "<a href=\"http://services.oxfordjournals.org/cgi/tslogin?url=http://www.ox...\">" +
-      "<span>My Account</span></a></li> </ul> " +
-      "</div>" +
-      "<div id=\"primary_nav\"> " +
-      "<ul> <li title=\"About This Journal\" id=\"nav_about_this_journal\"> " +
-      "<a href=\"http://www.oxfordjournals.org/europace/about.html\"> " +
-      "<span>About This Journal</span> </a> </li> </ul> " +
-      "</div>" +
-      "<div id=\"cb-art-cat\" class=\"cb-section collapsible\">\n" + 
-      "<h4 class=\"cb-section-header\">\n" + 
-      "<span>Classifications</span>\n" + 
-      "</h4>\n" +
-      "</div>" +
-      "<div id=\"related\"> <h2>Related articles</h2> <ul class=\"related-list\">" +
-      " <div class=\"cit-metadata\"><span class=\"cit-first-element cit-section\">Editorial" +
-      "<span class=\"cit-sep cit-sep-after-article-section\">:</span> </span>" +
-      "</div> </ul> </div>" + 
-      "<div class=\"cb-section collapsible\" id=\"cb-art-stats\">\n" + 
-      "<h4 class=\"cb-section-header\"><span>Article Usage Stats</span></h4>\n" + 
-      "<ol><li class=\"usage-stats-link icon-link\"></li></ol>\n" + 
-      "</div>" + 
-      "<ul id=\"site-breadcrumbs\">\n" + 
-      "<li class=\"first\">\n" + 
-      "<a href=\"http://services.oxfordjournals.org/cgi/tslogin?url=\">Oxford Journals</a>\n</li> " +
-      "</ul> " +
-      "" +
-      "<ul class=\"kwd-group \"> <li class=\"kwd\"><span>Lead extraction</span></li> </ul>" +
-      "" +
-      "<ul class=\"copyright-statement\"> <li id=\"copyright-statement-1\"" +
-      " class=\"fn\">For permissions please email: </li> </ul>" +
-      "<span class=\"ccv cc-version-by-nc/2.0\"></span>\n" + 
-      "</body>";
-  
+          "<div id=\"secondary_nav\"> <strong title=\"Oxford Journals\" id=\"page_logo\">" +
+          "<a href=\"http://www.oxfordjournals.org/\"><span>Oxford Journals</span></a></strong> " +
+          "<ul> <li title=\"My Account\" id=\"nav_my_account\">" +
+          "<a href=\"http://services.oxfordjournals.org/cgi/tslogin?url=http://www.ox...\">" +
+          "<span>My Account</span></a></li> </ul> " +
+          "</div>" +
+          "<div id=\"primary_nav\"> " +
+          "<ul> <li title=\"About This Journal\" id=\"nav_about_this_journal\"> " +
+          "<a href=\"http://www.oxfordjournals.org/europace/about.html\"> " +
+          "<span>About This Journal</span> </a> </li> </ul> " +
+          "</div>" +
+          "<div id=\"cb-art-cat\" class=\"cb-section collapsible\">\n" + 
+          "<h4 class=\"cb-section-header\">\n" + 
+          "<span>Classifications</span>\n" + 
+          "</h4>\n" +
+          "</div>" +
+          "<div id=\"related\"> <h2>Related articles</h2> <ul class=\"related-list\">" +
+          " <div class=\"cit-metadata\"><span class=\"cit-first-element cit-section\">Editorial" +
+          "<span class=\"cit-sep cit-sep-after-article-section\">:</span> </span>" +
+          "</div> </ul> </div>" + 
+          "<div class=\"cb-section collapsible\" id=\"cb-art-stats\">\n" + 
+          "<h4 class=\"cb-section-header\"><span>Article Usage Stats</span></h4>\n" + 
+          "<ol><li class=\"usage-stats-link icon-link\"></li></ol>\n" + 
+          "</div>" + 
+          "<ul id=\"site-breadcrumbs\">\n" + 
+          "<li class=\"first\">\n" + 
+          "<a href=\"http://services.oxfordjournals.org/cgi/tslogin?url=\">Oxford Journals</a>\n</li> " +
+          "</ul> " +
+          "" +
+          "<ul class=\"kwd-group \"> <li class=\"kwd\"><span>Lead extraction</span></li> </ul>" +
+          "" +
+          "<ul class=\"copyright-statement\"> <li id=\"copyright-statement-1\"" +
+          " class=\"fn\">For permissions please email: </li> </ul>" +
+          "<span class=\"ccv cc-version-by-nc/2.0\"></span>\n" + 
+          "</body>";
+
   private static final String europaceHtmlFiltered =
       "<body>\n" +
-      "</body>";
-  
+          "</body>";
+
   private static final String col2Html =
       "<body>\n" +
-      "<div id=\"header\">\n" + 
-      "  <h1 title=\"EP Europace\" id=\"page_title\"><a href=\"/\"><span>EP Europace</span></a></h1>\n" + 
-      "</div>\n" + 
-      "<div id=\"footer\">\n" + 
-      "  <h4>Site Map</h4>\n" + 
-      "</div>\n" + 
-      "<div id=\"col-2\" style=\"height: 6326px;\">\n" + 
-      "  <div class=\"article-nav sidebar-nav\">\n" + 
-      "    <span class=\"toc-link\">\n" + 
-      "      <a title=\"Table of Contents\" href=\"/content/14/1.toc\">Table of Contents</a>\n" + 
-      "    </span>\n" + 
-      "  </div>\n" + 
-      "  <div id=\"article-dyn-nav\" class=\"content-box\">\n" + 
-      "    <div class=\"cb-contents\">\n" + 
-      "      <h3 class=\"cb-contents-header\"><span>Navigate This Article</span></h3>\n" + 
-      "    </div>\n" + 
-      "  </div>\n" + 
-      "</div>" +
-      "</body>";
-  
+          "<div id=\"header\">\n" + 
+          "  <h1 title=\"EP Europace\" id=\"page_title\"><a href=\"/\"><span>EP Europace</span></a></h1>\n" + 
+          "</div>\n" + 
+          "<div id=\"footer\">\n" + 
+          "  <h4>Site Map</h4>\n" + 
+          "</div>\n" + 
+          "<div id=\"col-2\" style=\"height: 6326px;\">\n" + 
+          "  <div class=\"article-nav sidebar-nav\">\n" + 
+          "    <span class=\"toc-link\">\n" + 
+          "      <a title=\"Table of Contents\" href=\"/content/14/1.toc\">Table of Contents</a>\n" + 
+          "    </span>\n" + 
+          "  </div>\n" + 
+          "  <div id=\"article-dyn-nav\" class=\"content-box\">\n" + 
+          "    <div class=\"cb-contents\">\n" + 
+          "      <h3 class=\"cb-contents-header\"><span>Navigate This Article</span></h3>\n" + 
+          "    </div>\n" + 
+          "  </div>\n" + 
+          "</div>" +
+          "</body>";
+
   private static final String col2HtmlFiltered = // div id=header is now filtered
       "<body>\n" +
       "</body>";
-  
+
   private static final String spanTag =
       "<body>\n" +
-      "<span id=\"top\"/>" +
-      "<span class=\"free\"/>" +
-      "</body>";
+          "<span id=\"top\"/>" +
+          "<span class=\"free\"/>" +
+          "</body>";
   private static final String spanTagFiltered =
       "<body> " +
-      "<span id=\"top\"/>" +
-      "</body>";
-  
+          "<span id=\"top\"/>" +
+          "</body>";
+
   private static final String attrTag =
       "<body class=\"class\">\n" +
-      "<h1 id=\"id\">title</h1>" +
-      "<div id=\"top\"/>" +
-      "</body>";
+          "<h1 id=\"id\">title</h1>" +
+          "<div id=\"top\"/>" +
+          "</body>";
   private static final String attrTagFiltered =
       "<body> " +
-      "<h1>title</h1>" +
-      "<div/>" +
-      "</body>";
-  
+          "<h1>title</h1>" +
+          "<div/>" +
+          "</body>";
+
+  private static final String divBlockInForm =
+      "<form method=\"post\" action=\"/content/26/4.toc\">" +
+          "<div class=\"gca-buttons\">" +
+          "<div class=\"hide-gca-buttons\">" +
+          "<input type=\"reset\" name=\"reset\" value=\"Clear\" />" +
+          "<input class=\"marked-citation-submit\" type=\"submit\" " +
+          "name=\"submit\"value=\"Add to Marked Citations\" />" +
+          "</div>" +
+          "</div></form>";
+  private static final String divBlockInFormFiltered =
+      "<form method=\"post\" action=\"/content/26/4.toc\"></form>";
+
+
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -554,7 +569,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(adfootHtml, adfootHtmlFiltered);
     assertFilterToSame(europaceHtml, europaceHtmlFiltered);
     assertFilterToSame(col2Html, col2HtmlFiltered);
-    
+
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
     assertFilterToString(hiddenInputHtml, hiddenInputFiltered);
     assertFilterToString(accessCheckHtml, accessCheckFiltered);
@@ -575,11 +590,11 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     String actual = StringUtil.fromInputStream(inA);
     String expected = StringUtil.fromInputStream(inB);
     assertEquals(expected, actual);
-//    assertEquals(StringUtil.fromInputStream(inB),
-//        StringUtil.fromInputStream(inA));
+    //    assertEquals(StringUtil.fromInputStream(inB),
+    //        StringUtil.fromInputStream(inA));
   }
 
-//Don't put the 2nd string through the filter - use it as a constant
+  //Don't put the 2nd string through the filter - use it as a constant
   private void assertFilterToString(String orgString, String finalString) throws Exception {
 
     InputStream inA = fact.createFilteredInputStream(mau, new StringInputStream(orgString),
@@ -587,14 +602,27 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 
     assertEquals(finalString,StringUtil.fromInputStream(inA));
   }
-  
-  
+
+
   public void testHeadFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(headHtml),
         Constants.DEFAULT_ENCODING);
 
     assertEquals(headHtmlFiltered, StringUtil.fromInputStream(actIn));
+
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(headHtmlWithComment),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(headHtmlFiltered, StringUtil.fromInputStream(actIn));
+
   }
-  
+
+  public void testDivBlockInForm() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(divBlockInForm),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(divBlockInFormFiltered, StringUtil.fromInputStream(actIn));
+  }
+
 }

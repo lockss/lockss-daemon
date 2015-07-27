@@ -69,6 +69,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         new TagNameFilter("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
+        HtmlNodeFilters.comment(),        
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "col-2"),
@@ -211,6 +212,9 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // Beginning and end markers were added, e.g. Royal Society Interface
         HtmlNodeFilters.tagWithAttribute("span", "class", "highwire-journal-article-marker-start"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "highwire-journal-article-marker-end"),
+        //sage - toc may have extra div block within this <div class="gca-buttons">
+        HtmlNodeFilters.tagWithAttribute("div", "class", "gca-buttons"),
+        
         // There is an "Impact factor" but it is only ctext in an H3 tag
         // and the parent <div> is generic. Use a combination of the grandparent <div> plus the ctext
         // It's not ideal, but there is no better solution. Seen in occmed.oxfordjournals.org
