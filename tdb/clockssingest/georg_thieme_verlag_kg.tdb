@@ -470,6 +470,37 @@
 
    {
     title <
+      name = Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery ;
+      issn = 0103-5355 ;
+      eissn = 2359-5922 ;
+      doi = 10.1055/s-00028832
+
+    >
+    param[journal_id] = 10.1055/s-00028832
+
+   au < exists ; exists ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2015 ; 1 >
+
+   }
+
+   {
+    title <
+      name = Arquivos Internacionais de Otorrinolaringologia ;
+      issn = 1809-4872 ;
+      eissn = 1809-4856 ;
+      doi = 10.1055/s-00026220
+
+    >
+    param[journal_id] = 10.1055/s-00026220
+
+   au < exists ; exists ; 2010 ; 2010 ; Arquivos Internacionais de Otorrinolaringologia Volume 2010 ; 1 >
+   au < exists ; exists ; 2011 ; 2011 ; Arquivos Internacionais de Otorrinolaringologia Volume 2011 ; 2 >
+   au < exists ; exists ; 2012 ; 2012 ; Arquivos Internacionais de Otorrinolaringologia Volume 2012 ; 3 >
+   au < expected ; exists ; 2013 ; 2013 ; Arquivos Internacionais de Otorrinolaringologia Volume 2013 ; 4 >
+
+   }
+
+   {
+    title <
       name = Arzneimittelforschung ;
       issn = 0004-4172 ;
       eissn = 1616-7066 ;
@@ -612,9 +643,6 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2009 ; 69 >
     au < doNotProcess ; exists ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2010 ; 70 >
     au < doNotProcess ; exists ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2011 ; 71 >
-    au < doNotProcess ; exists ; 2012 ; 2012 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2012 ; 72 >
-    au < doNotProcess ; exists ; 2013 ; 2013 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2013 ; 73 >
-    au < doNotProcess ; exists ; 2014 ; 2014 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2014 ; 74 >
 
     }
 
@@ -1015,6 +1043,24 @@
    au < doNotProcess ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
    au < doNotProcess ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
    au < doNotProcess ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
+
+  }
+
+  {
+    title <
+      name = Drug Research ;
+      issn = 2194-9379 ;
+      eissn = 2194-9387 ;
+      doi = 10.1055/s-00023610
+
+    >
+    param[journal_id] = 10.1055/s-00023610
+
+   au < exists ; exists ; 2011 ; 2011 ; Drug Research Volume 2011 ; 1 >
+   au < exists ; exists ; 2012 ; 2012 ; Drug Research Volume 2012 ; 2 >
+   au < exists ; exists ; 2013 ; 2013 ; Drug Research Volume 2013 ; 3 >
+   au < exists ; exists ; 2014 ; 2014 ; Drug Research Volume 2014 ; 4 >
+   au < exists ; exists ; 2015 ; 2015 ; Drug Research Volume 2015 ; 5 >
 
   }
 
@@ -1616,6 +1662,19 @@
 
   {
     title <
+      name = Gefäßmedizin Scan ;
+      issn = 2197-5922 ;
+      eissn = 2197-5930 ;
+      doi = 10.1055/s-00027304
+
+    >
+    param[journal_id] = 10.1055/s-00027304
+
+   au < exists ; exists ; 2014 ; 2014 ; Gefäßmedizin Scan Volume 2014 ; 1 >
+   au < exists ; exists ; 2015 ; 2015 ; Gefäßmedizin Scan Volume 2015 ; 2 >
+
+  {
+    title <
       name = Gesundheitsökonomie & Qualitätsmanagement ;
       issn = 1432-2625 ;
       eissn = 1439-4049 ;
@@ -1882,6 +1941,20 @@
 
   {
     title <
+      name = Indian Journal of Neurosurgery ;
+      issn = 2277-954X ;
+      eissn = 2277-9167 ;
+      doi = 10.1055/s-00028728
+
+    >
+    param[journal_id] = 10.1055/s-00028728
+
+   au < exists ; exists ; 2015 ; 2015 ; Indian Journal of Neruosurgery Volume 2015 ; 1 >
+
+  }
+
+  {
+    title <
       name = Informationen aus Orthodontie & Kieferorthopädie ;
       issn = 0020-0336 ;
       eissn = 1439-4200 ;
@@ -2133,6 +2206,45 @@
     au < doNotProcess ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
     au < doNotProcess ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
     au < doNotProcess ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Academic Ophtalmology ;
+      issn = 2164-7879 ;
+      eissn = 2164-7852 ;
+      doi = 10.1055/s-00028318
+
+    >
+    param[journal_id] = 10.1055/s-00028318
+
+   au < exists ; exists ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 2014 ; 1 >
+   au < expected ; exists ; 2015 ; 2015 ; Journal of Academic Ophtalmology Volume 2015 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) ;
+      eissn = 1749-7221 ;
+      doi = 10.1055/s-00027212
+
+    >
+    param[journal_id] = 10.1055/s-00027212
+
+   au < exists ; exists ; 2006 ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2006 ; 1 >
+   au < exists ; exists ; 2007 ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2007 ; 2 >
+   au < exists ; exists ; 2008 ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2008 ; 3 >
+   au < exists ; exists ; 2009 ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2009 ; 4 >
+   au < exists ; exists ; 2010 ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2010 ; 5 >
+   au < exists ; exists ; 2011 ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2011 ; 6 >
+   au < exists ; exists ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2012 ; 7 >
+   au < exists ; exists ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2013 ; 8 >
+   au < exists ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2014 ; 9 >
+   au < exists ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury (JBPPNI) Volume 2015 ; 10 >
 
   }
 
@@ -2535,6 +2647,20 @@
     au < doNotProcess ; exists ; 2012 ; 2012 ; Klinische Pädiatrie Volume 2012 ; 224 >
     au < doNotProcess ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 225 >
     au < doNotProcess ; exists ; 2014 ; 2014 ; Klinische Pädiatrie Volume 2014 ; 226 >
+
+  }
+
+  {
+    title <
+      name = kma - Das Gesundheitswirtschaftsmagazin ;
+      issn = 1439-3514 ;
+      eissn = 2197-621X ;
+      doi = 10.1055/s-00025515
+
+    >
+    param[journal_id] = 10.1055/s-00025515
+
+   au < expected ; exists ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2014 ; 1 >
 
   }
 
@@ -3484,6 +3610,20 @@
    au < doNotProcess ; exists ; 2012 ; 2012 ; Planta Medica Volume 2012 ; 78 >
    au < doNotProcess ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 >
    au < doNotProcess ; exists ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 >
+
+  }
+
+  {
+    title <
+      name = Planta Medica Letters ;
+      eissn = 2199-157X ;
+      doi = 10.1055/s-00027015
+
+    >
+    param[journal_id] = 10.1055/s-00027015
+
+   au < exists ; exists ; 2014 ; Planta Medica Letters Volume 2014 ; 1 >
+   au < exists ; exists ; 2015 ; Planta Medica Letters Volume 2015 ; 2 >
 
   }
 
@@ -4896,6 +5036,36 @@
     au < doNotProcess ; exists ; 2012 ; 2012 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2012 ; 33 >
     au < doNotProcess ; exists ; 2013 ; 2013 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2013 ; 34 >
     au < doNotProcess ; exists ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2014 ; 35 >
+
+  }
+
+  {
+
+    title <
+      name = Ultrasound International Open ;
+      eissn = 2199-7152 ;
+      doi = 10.1055/s-00028422
+
+    >
+    param[journal_id] = 10.1055/s-00028422
+
+   au < exists ; exists ; 2015 ; 2015 ; Ultrasound International Open Volume 2015 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Urologie Scan ;
+      issn = 2198-9109 ;
+      eissn = 2198-9117 ;
+      doi = 10.1055/s-00026982
+
+    >
+    param[journal_id] = 10.1055/s-00026982
+
+   au < exists ; exists ; 2014 ; 2014 ; Urologie Scan Volume 2014 ; 1 >
+   au < exists ; exists ; 2015 ; 2015 ; Urologie Scan Volume 2015 ; 2 >
 
   }
 
