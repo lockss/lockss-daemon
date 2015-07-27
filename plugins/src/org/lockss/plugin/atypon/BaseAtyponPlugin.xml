@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>24</string>
+        <string>25</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -269,12 +269,12 @@
     <string>"cdn\.nejm\.org"</string>
   </entry>  
   <!-- if use a global host AND that url differs from (eg) ip to ip, may need to 
-       use these patterns to either repair/exclude files from polling
+       use these patterns to either repair/exclude files from polling -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string></string>
+    <string>"%stemplates/jsp/", base_url </string>
   </entry>
-  -->
+ <!--  -->
   <!-- these files may differ with differing versions (eg 6.0 vs 6.1), so
         let's not hash them
   -->
