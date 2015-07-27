@@ -14,14 +14,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>49</string>
+    <string>50</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -50,16 +50,18 @@
     <!--  CRAWL COMMENT BLOCK
       - The "url_ver=" rule exists because in Nature Reviews Molecular Cell Biology,
             there were dozens of extremely long URLs that all started with url_ver=Z39.88-2004 (note from 2009, moved in to comment block)
-      - The ?message=remove rule exists because of global messages across all pages (eg for survey) cause each page twice
-     -->
+      - The ?message=remove rule for redundant version; normalized off - can be in middle of argument list
+      - the "/journal/v%s/n\d{1,2}$" exclusion is to exclude previously collected TOCs that were redundant; now normalized but handles earlier content
+      -->
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s%s/clockss/%s_clockss_%d.html$", base_url, journal_id, journal_id, year</string>
-      <string>2,"^%s%s/journal/v%s/.*(/metrics|\?(lang=[a-z]{2}|message(-global)?=remove))$", base_url, journal_id, volume_name</string>
+      <string>2,"^%s%s/journal/v%s/.*(/metrics|\?(lang=[a-z]{2}$|.*message(-global)?=remove))", base_url, journal_id, volume_name</string>
       <string>2,"^%s%s/journal/v%s/[^/]+/[^/]+/[^/]+_ja\.html$", base_url, journal_id, volume_name</string>
       <string>2,"^%s%s/journal/v%s/[^/]+/(products|pubmed)/", base_url, journal_id, volume_name</string>
       <string>2,"^%s.*url_ver=",base_url</string>
+      <string>2,"^%s%s/journal/v%s/n\d{1,2}$", base_url, journal_id, volume_name</string>
       <string>1,"^%s%s/journal/v%s/", base_url, journal_id, volume_name</string>
       <!-- for ndigest: http://www.nature.com/ndigest/index_ja.html??volume=9&issue=4 -->
       <string>1,"^%s%s/index_ja\.html\?[?]?volume=%s", base_url, journal_id, volume_name</string>

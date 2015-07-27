@@ -151,6 +151,23 @@ public class TestNatureArchivalUnit extends LockssTestCase {
     //LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, NAu, cus);
     // other sites
+    
+    
+    // test some crawl rules that now exclude normalized off stuff
+    // at end
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?message=remove", false, NAu, cus);          
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?message-global=remove", false, NAu, cus);
+    // at beginning of arg list
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?message=remove&arg=foo", false, NAu, cus);          
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?message-global=remove&arg=foo", false, NAu, cus);          
+    // in middle of arg list
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?arg=foo&message=remove&arg2=blah", false, NAu, cus);          
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?arg=foo&message-global=remove&arg2=blah", false, NAu, cus);
+    
+    // TOC page collected as unterminated issue page - normalize to vx/ny/index.html
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22", false, NAu, cus);          
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/index.html", true, NAu, cus);          
+    
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,
