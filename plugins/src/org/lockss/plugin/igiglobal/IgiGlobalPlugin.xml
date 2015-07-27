@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>IGI Global Plugin</string>
+    <string>IGI Global Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"IGI Global Plugin, Base URL %s, Journal ISSN %s, Volume %s", base_url, journal_issn, volume</string>
+    <string>"IGI Global Journals Plugin, Base URL %s, Journal ISSN %s, Volume %s", base_url, journal_issn, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>
