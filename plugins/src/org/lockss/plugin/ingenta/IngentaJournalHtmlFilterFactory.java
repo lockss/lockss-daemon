@@ -64,6 +64,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // Filter out noscript for Nomadic People
         // script tag filter did not work on some Nomadic People scripts, tag end found early
         new TagNameFilter("noscript"),
+        // Misc tags
+        HtmlNodeFilters.tagWithAttribute("div", "id", "skiptocontent"),
         // Filter out <div id="header">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         // Filter out <div id="rightnavbar">...</div>
@@ -77,8 +79,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "purchaseexpand"),
         // Filter out <div id="moredetails">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "moredetails"),
-        // Filter out <div id="moreLikeThis">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "id", "moreLikeThis"),
+        // Filter out <div id="moreLikeThis">...</div> & <div id="hiddenmorelikethis...>...</div>
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "morelikethis", true),
         // PD-1113 Hash Filter needed for shopping cart (filter entire nav tag)
         //  http://www.ingentaconnect.com/content/intellect/ac/2001/00000012/00000001
         new TagNameFilter("footer"),
@@ -248,7 +250,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
         ListUtil.list(
             new TagPair("<!--", "-->"),
-            new TagPair("<script", "</script>") // Added for Nomadic People
+            new TagPair("<script", "</script>"), // Added for Nomadic People
+            new TagPair("<", ">") // Added for random tags being changed for no apparent reason
             ));
     
     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));

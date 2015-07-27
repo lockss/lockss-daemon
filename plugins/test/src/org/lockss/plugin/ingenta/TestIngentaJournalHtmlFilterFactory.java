@@ -136,10 +136,10 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
   
   public void testTagFiltering() throws Exception {
     // common filtered html results
-    String filteredHtml =
-        "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"> "
-            + "<html lang=\"en\"> <body> "
-            + "</body> </html> ";
+    String filteredHtml = " ";
+//        "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"> "
+//            + "<html lang=\"en\"> <body> "
+//            + "</body> </html> ";
     
     // html for block tags
     String blockHtml =
@@ -187,7 +187,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
           "</div>";
   
   private static final String AdvertisingBannerHtmlFiltered =
-      "<p>The chickens were decidedly cold.</p>";
+      "The chickens were decidedly cold.";
   
   public void testFilterAdvertising() throws Exception {
     InputStream inA;
@@ -208,7 +208,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
           "accessed below </div>";
   
   private static final String HeadingMacfixHtmlFiltered =
-      "<p>The chickens were decidedly cold.</p>";
+      "The chickens were decidedly cold.";
   
   public void testHeadingMacfix() throws Exception {
     InputStream inA = fact.createFilteredInputStream(mau,
@@ -218,7 +218,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
   }
   
   private static final String FreeTrialHtmlFiltered =
-      "<p>The chickens were decidedly cold.</p> ";
+      "The chickens were decidedly cold. ";
   
   //test free trial with explicit tests
   private static final String FreeTrialHtml =
@@ -245,16 +245,16 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
           "<p xmlns:f=\"http://www.example.org/functions\">" +
           "<a name=\"g002\"></a>" +
           "<div class=\"figure\">" +
-          "<div class=\"image\">" +
+          "<div class=\"image\">\n" +
           "<a class=\"table-popup\" href=\"javascript:popupImage('s4-ft1401-0065-g002.gif.html" +
           "?expires=1355962274&id=72080579&titleid=6312&accname=Stanford+University" +
           "&checksum=FA59636C74DD0E40E92BA6EFECB866E7')\">" +
           "<img alt=\"Figure 1\" border=\"0\" src=\"s4-ft1401-0065-g002_thmb.gif\">" +
-          "<p>Figure 1<br>Click to view</p>" +
-          "</a>" +
+          "<p>Figure 1<br>Click to view</p>\n" +
+          "</a>\n" +
           "</div>" +
-          "<div class=\"caption\">" +
-          "<span class=\"captionLabel\"><span class=\"label\">The Chickens.</span></span>" +
+          "<div class=\"caption\">\n" +
+          "<span class=\"captionLabel\"><span class=\"label\">The Chickens.</span></span>\n" +
           "</div>";
   
 // NOTE - the two following lines below:
@@ -268,17 +268,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
 // before the <p> tag
 // NOTE: new <br> tag filter was added
   private static final String expireChecksumFiltered =
-      "<p>The chickens were decidedly cold.</p>" +
-          "<p xmlns:f=\"http://www.example.org/functions\">" +
-          "<a name=\"g002\"></a>" +
-          "<div class=\"figure\">" +
-          "<div class=\"image\">" +
-          "<p>Figure 1Click to view</p>" +
-          "</a>" +
-          "</div>" +
-          "<div class=\"caption\">" +
-          "<span class=\"captionLabel\"><span class=\"label\">The Chickens.</span></span>" +
-          "</div>";
+      "The chickens were decidedly cold. Figure 1Click to view The Chickens. ";
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -301,12 +291,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
           "</div>";
   
   private static final String onClickExitTargetIDFiltered =
-      "<div class=\"left-col-download\">View now:</div>" +
-          "<div class=\"right-col-download contain\">" +
-          "<span class=\"orangebutton\">" +
-          "<span class=\"orangeleftside icbutton\">" +
-          "</span></span>" +
-          "</div>";
+      "View now:";
   
   public void testonClickFiltering() throws Exception {
     InputStream inA;
@@ -344,7 +329,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
           "</noscript>";
   
   private static final String ScriptHtmlFiltered =
-      "<p>The chickens were decidedly cold.</p>";
+      "The chickens were decidedly cold.";
   
   public void testFilterScript() throws Exception {
     InputStream inA;
@@ -381,7 +366,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
           "</footer>";
   
   private static final String NavHtmlFiltered =
-      "<p>The chickens were decidedly cold.</p>";
+      "The chickens were decidedly cold.";
   
   public void testNavHtml() throws Exception {
     InputStream inA;
@@ -394,18 +379,14 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
   
   //test li with rowShade with explicit test
   private static final String RowShade =
-      "<ul>" +
-      "<li class=\" rowShadeOdd\" more>i1</li>" +
-      "<li class=\"rowShadeEven\" more2>i2</li>" +
-      "<li class=\"diff\" diff2>i2</li>" +
-      "</ul>";
+      "<ul>\n" +
+      "<li class=\" rowShadeOdd\" more>i1</li>\n" +
+      "<li class=\"rowShadeEven\" more2>i2</li>\n" +
+      "<li class=\"diff\" diff2>i2</li>\n" +
+      "</ul>\n";
   
   private static final String RowShadeFiltered =
-      "<ul>" +
-      "<li>i1</li>" +
-      "<li>i2</li>" +
-      "<li class=\"diff\" diff2>i2</li>" +
-      "</ul>";
+      " i1 i2 i2 ";
   
   public void testRowShade() throws Exception {
     InputStream inA;
@@ -426,7 +407,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
       "href=\"#\">19, p102</a>  </li>";
   
   private static final String ExtRefFiltered =
-      "<li> Item 19, p102 </li>";
+      " Item 19, p102 ";
   
   public void testExtRef() throws Exception {
     InputStream inA;

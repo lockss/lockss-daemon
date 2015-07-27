@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>25</string>
+        <string>26</string>
       </entry>
     </map>
   </entry>
@@ -226,10 +226,10 @@
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?$</string>
+    <string>([?]format=bib|/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?)$</string>
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?$</string>
+    <string>([?]format=bib|/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?)$</string>
   </entry>
 </map>
