@@ -207,7 +207,7 @@ public class TestIOPSciencePlugin extends LockssPluginTestCase {
   
   public void testGetName() throws Exception {
     ArchivalUnit au = createAu();
-    assertEquals("IOP Publishing Plugin (IOPscience for CLOCKSS), Base URL " + 
+    assertEquals("IOP Publishing Plugin (CLOCKSS), Base URL " + 
         BASE_URL + ", ISSN " + JOURNAL_ISSN + ", Volume " + VOLUME, au.getName());
   }
   

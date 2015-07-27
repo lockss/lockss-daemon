@@ -43,7 +43,7 @@ import org.lockss.plugin.*;
 public class IOPScienceUrlNormalizer implements UrlNormalizer {
 
   private static final Pattern PATTERN =
-      Pattern.compile("((\\?rel|;jsessionid)=.*)$",
+      Pattern.compile("(\\?rel|;jsessionid)=",
                       Pattern.CASE_INSENSITIVE);
   
   @Override

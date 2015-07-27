@@ -67,7 +67,7 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
       "</body>";
   // only outer div should remain
   private static final String tagsHtmlHashFiltered =
-      "<body><div></div></body>";
+      " ";
   
  
   private static final String WhiteSpace1 = "\n  <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n (543KB)\n </li>";
@@ -83,7 +83,7 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
           "</div>" +
           "<br clear=\"all\"/>";
   private static final String mathJaxHtmlFiltered =
-          "<br clear=\"all\"/>";
+          " ";
  
   private static final String rightColHtml =
       "<div id=\"rightCol\">" +
@@ -134,7 +134,7 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
           "</div>" +
           "<br clear=\"all\"/>";
   private static final String rightColHtmlFiltered =
-          "<br clear=\"all\"/>";
+          " ";
   
   // test removal of header & footer tags by the hash filter
   private static final String hrtagsHtmlHash =
@@ -147,7 +147,7 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
       "<footer> foot \n" +
       "</footer>";
   private static final String hrtagsHtmlHashFiltered =
-      " <body>stuff</body> ";
+      " stuff ";
   
   // test removal of metrics-panel, etc.
   private static final String metricsHtml =
@@ -187,7 +187,7 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
       "      </dd>\n" + 
       "</dl>\n";
   private static final String metricsHtmlFiltered =
-      "<dl class=\"list\"> <dt>Metrics</dt> </dl> ";
+      " Metrics ";
   
   // test removal of sideTabBar, viewingLinks, metrics-panel, 
   private static final String miscHtml =
@@ -240,7 +240,7 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
       "<div id=\"articleOALicense\">Open Access</div>" +
       "</body>\n";
   private static final String miscHtmlFiltered =
-      " <body>stuff</body> ";
+      " stuff ";
   
   public void testFiltering() throws Exception {
     InputStream inA;

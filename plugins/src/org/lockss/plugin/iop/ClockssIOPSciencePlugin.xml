@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>IOP Publishing Plugin (IOPscience for CLOCKSS)</string>
+    <string>IOP Publishing Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -69,7 +69,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"IOP Publishing Plugin (IOPscience for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+    <string>"IOP Publishing Plugin (CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -104,7 +104,7 @@
       <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>1,"^https?://%s/fonts/", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>2,"^%s.*;jsessionid=", base_url</string>
+      <string>2,"^%s.*(\?rel=|;jsessionid)=", base_url</string>
       <string>2,"^%s%s/%s/[^/]+/[^/]+/(article\?|powerpoint/|refs/[^/]+/)", base_url, journal_issn, volume_name</string>
       <string>2,"^%s%s/%s/[^/]+/[^/]+/(cites|related|metrics)$", base_url, journal_issn, volume_name</string>
       <string>1,"^%s%s/%s(/|$)", base_url, journal_issn, volume_name</string>

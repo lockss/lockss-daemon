@@ -38,8 +38,10 @@ import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.nodes.TextNode;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -58,16 +60,14 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         /*
          * Broad area filtering
          */
-        // Scripts
-        new TagNameFilter("script"),
+        // Comments, scripts
+        HtmlNodeFilters.comment(),
+        HtmlNodeFilters.tag("script"),
         // Document header
-        new TagNameFilter("head"),
-        // header/footer tags
-        new TagNameFilter("header"),
-        new TagNameFilter("footer"),
+        HtmlNodeFilters.tag("head"),
         // Header
+        HtmlNodeFilters.tag("header"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cookieBanner"),
-        /* <header> -- see filter above */
         HtmlNodeFilters.tagWithAttribute("div", "id", "jnl-head-band"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "hdr"), // (old)
         HtmlNodeFilters.tagWithAttribute("div", "id", "nav"), // (old)
@@ -79,26 +79,43 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "rightCol"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"), // (now within)
         HtmlNodeFilters.tagWithAttribute("div", "id", "tacticalBanners"), // (now within)
-        // Contains the search box, which changes over time
-        HtmlNodeFilters.tagWithAttribute("div", "id", "login_dialog"),
         // Footer
-        /* <footer> -- see filter above */
+        HtmlNodeFilters.tag("footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"), // (old)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "login_dialog"), // (now within 'footer')
 
         /*
          * Main content area 
          */
+        // MathJax on/off buttons
+        HtmlNodeFilters.tagWithAttribute("div", "class", "mathJaxControls"),
+        // Social media etc.
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "articleTools"),
+        // Text of the link to the PDF: "PDF" vs. "Full Text PDF", size in MB vs. not
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            return node instanceof TextNode
+                && HtmlNodeFilters.tagWithAttribute("a", "class", "icon pdf").accept(node.getParent());
+          }
+        },
+        // Metrics, reprint request
+        HtmlNodeFilters.tagWithAttribute("a", "id", "enhancedArticleMetricsId"),
+        HtmlNodeFilters.tagWithAttribute("a", "id", "enhancedCopyrightLinkId"),
         // Last 10 articles viewed
         HtmlNodeFilters.tagWithAttribute("div", "class", "tabs javascripted"),
 
         /*
+         * Main body
+         */
+        // Powerpoints have not always been on the page (we don't collect them)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^powerpoint/"),
+        
+        /*
          * Other
          */
-        // may not be an issue, but concerned that mathjax exposure will change
-        HtmlNodeFilters.tagWithAttribute("div", "class", "mathJaxControls"),
         // Contains a jsessionid
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
-        
         // <div class="sideTabBar"> & <div id="sideTabBox">
         // <div class="sideTabBlock citBlock">
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "sideTab(Bar|Box)"),
@@ -156,8 +173,12 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
     InputStream filtered = new HtmlFilterInputStream(in,
                                                      encoding,
                                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    
+    Reader noTagFilter = new HtmlTagFilter(new StringFilter(filteredReader, "<", " <"), new TagPair("<", ">"));
+
+    return new ReaderInputStream(new WhiteSpaceFilter(noTagFilter));
   }
 
 }
