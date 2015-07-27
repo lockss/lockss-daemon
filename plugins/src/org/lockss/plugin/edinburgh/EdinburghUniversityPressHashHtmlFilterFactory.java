@@ -59,6 +59,17 @@ public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtm
         HtmlNodeFilters.tagWithAttributeRegex("li", "class", "^institutionBanner"),
         // left column
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
+        // from abstract
+        // removes a couple of differences within this "authors" link:
+        //   <div class="authors"><span class="author">...
+        HtmlNodeFilters.tagWithAttribute("div", "class", "authors"),
+        // removes <h2>Sep 2011</h2> vs <h2>Current Issue: Sep 2011</h2>
+        HtmlNodeFilters.tagWithAttribute("div", "class", "panel_top"),
+        // removes <a href="/action/addCitationAlert?doi=10.3366%2Fjobs.2011.0020">Track Citations</a>
+        //     and <a href="#" class="citationsLink">Track Citations</a>
+        HtmlNodeFilters.tagWithText("a", "Track Citations")
+
+
     };
     // super.createFilteredInputStream adds Edinburgh's filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 

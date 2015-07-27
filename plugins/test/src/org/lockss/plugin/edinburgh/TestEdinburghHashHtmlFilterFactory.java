@@ -108,8 +108,22 @@ public class TestEdinburghHashHtmlFilterFactory extends LockssTestCase {
           "</div>" +
           "</div>";
 
+  
+  private static final String hasAuthorsLink = "<h2>Voice and Pronouns in Foghorn Leghorn's <i>The UnSayable</i></h2>"+
+      "<div class=\"authors\"><span class=\"author\"><em><a class=\"entryAuthor\" href=\"/action/doSearch?Contrib=Llewellyn+Brown\">"+
+      "<span class=\"hlFld-ContribAuthor \">Llewellyn<span class=\"NLM_x\"> </span>Brown</span></a></em></span></div><p><em>Citation Information. </em>"+
+      "<journal-title xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Journal of Animation Studies</journal-title>";
+  private static final String withoutAuthorsLink = "<h2>Voice and Pronouns in Foghorn Leghorn's <i>The UnSayable</i></h2>"+
+      "<p><em>Citation Information. </em>"+
+      "<journal-title xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Journal of Animation Studies</journal-title>";
 
-
+  private static final String hasCurrentIssue = "<div class=\"panel_top\">"+
+     "<h2>Current Issue: Sep 2011</h2><p class=\"volumeInfo\">Issue: Volume 20, Number 2</p>"+
+     "</div>";
+  private static final String withoutCurrentIssue = "";
+  
+  private static final String hasTrackCitations = "<a href=\"/action/addCitationAlert?doi=10.3366%2Fjobs.2011.0020\">Track Citations</a>";
+  private static final String withoutTrackCitations = "";
 
   public void testCitationsFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(withCitations),
@@ -146,5 +160,18 @@ public class TestEdinburghHashHtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     assertEquals(emptyString, StringUtil.fromInputStream(actIn));
   } 
+  
+  public void testPollFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(hasAuthorsLink),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withoutAuthorsLink, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau, new StringInputStream(hasCurrentIssue),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withoutCurrentIssue, StringUtil.fromInputStream(actIn));
+    actIn = fact.createFilteredInputStream(mau, new StringInputStream(withCitations),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withoutCitations, StringUtil.fromInputStream(actIn));
+  }
 
 }
