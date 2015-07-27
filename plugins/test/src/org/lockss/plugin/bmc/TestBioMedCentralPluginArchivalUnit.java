@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -234,14 +234,13 @@ public class TestBioMedCentralPluginArchivalUnit extends LockssTestCase {
     }
     assertEquals(false,found);
 
-    //NOT substance - wrong issn
-    testUrl = ROOT_URL + "content/pdf/1745-6150-3-11-1.pdf";
+    testUrl = ROOT_URL + "content/pdf/pretty-much-anything-now.pdf";
     found = false;
     for (Pattern nextPat : patList) {
           found = matcher.matches(testUrl, nextPat);
           if (found) break;
     }
-    assertEquals(false,found);
+    assertEquals(true,found);
   }
   
 }

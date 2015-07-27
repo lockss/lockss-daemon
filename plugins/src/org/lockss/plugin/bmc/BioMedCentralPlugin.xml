@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>5000</long> <!-- Increasing progressively -->
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>39</string>
+    <string>40</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
       <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -119,26 +119,13 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <!-- examples:
-    http://www.infectagentscancer.com/content/pdf/1750-9378-5-9.pdf
-      where the xxxx-yyyy = ISSN, and X-Y = Issue#-Article#
-    http://breast-cancer-research.com/content/pdf/bcr3224.pdf
-      the (journal abbrev) letters don't have a strict pattern (2-5 chars), 
-      nor do the trailing numbers
-    http://genomebiology.com/content/pdf/gb-2012-13-12-r126.pdf
-    http://genomebiology.com/content/pdf/gb-2001-2-7-research0026.pdf
-      we have the two-char name, '-' the year (but we don't have a year param)
-      '-' volume# '-' issue# '-' paperIdentifier.pdf
     genome biology also has some substance that is non-pdf:
     http://genomebiology.com/2002/3/2/reports/2010
     http://genomebiology.com/2002/3/2/spotlight-20020206-01
-    If possible, try to keep the different types of substance independent (e.g.
-    each substance pattern cannot catch another pattern)
      -->
       <list>
-         <string>"^%scontent/pdf/%s-%s-[^/]+.pdf$", base_url, journal_issn, volume_name</string>
-         <string>"^%scontent/pdf/[\w]+[\d]+.pdf$", base_url</string>
-         <string>"^%scontent/pdf/[\w]+-\d{4}-%s-[^/]+.pdf$", base_url, volume_name</string>
-         <string>"^%s\d{4}/%s/\d{1,2}/[\w-/]+", base_url, volume_name</string>
+         <string>"^%scontent/pdf/[^/]+\.pdf$", base_url</string>
+         <string>"^%s\d{4}/%s/\d+/", base_url, volume_name</string>
       </list>
   </entry>
   <entry>

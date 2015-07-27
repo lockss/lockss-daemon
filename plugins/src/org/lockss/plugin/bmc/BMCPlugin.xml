@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -26,7 +26,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -114,7 +114,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/pdf/%s-%s-[-\d]+\.pdf$", base_url, journal_issn, volume_name </string>
+      <string>"^%scontent/pdf/[^/]+\.pdf$", base_url</string>
     </list>
   </entry>    
   <entry>
@@ -164,7 +164,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>5000</long> <!-- Increasing progressively -->
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
