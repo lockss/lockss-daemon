@@ -37,9 +37,15 @@ import java.util.Arrays;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.Bullet;
 import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.Span;
+import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -102,12 +108,12 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // DROP access box (changes e.g. when the article becomes free) [article block, abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessmodule"),
             // DROP number of article views [article block, abs/full/ref/suppl overview]
-            HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleUsage"),
             // DROP "Related articles" variants [article block, abs/full/ref/suppl overview]
-            HtmlNodeFilters.tagWithAttribute("a", "class", "relatedLink"), // old?
-            HtmlNodeFilters.tagWithAttribute("li", "class", "relatedArticleLink"), // [article block]
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "relatedLink"), // old?
+            HtmlNodeFilters.tagWithAttributeRegex("li", "class", "relatedArticleLink"), // [article block]
             HtmlNodeFilters.tagWithText("h3", "Related articles"), // [abs/full/ref/suppl overview]
-            HtmlNodeFilters.tagWithAttribute("a", "class", "searchRelatedLink"), // [abs/full/ref/suppl overview]
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "searchRelatedLink"), // [abs/full/ref/suppl overview]
             // DROP title options (e.g. 'Publication History', 'Sample this title') [TOC overview]
             HtmlNodeFilters.tagWithAttribute("div", "class", "options"),
             // DROP title icons (e.g. 'Routledge Open Select') [TOC overview]
@@ -129,12 +135,27 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"), // [article block, full/ref referencesPanel]
             // DROP "Jump to section" popup menus [full]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationNavigation"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "title", "(Next|Previous) issue"),
+            new NodeFilter() {
+              @Override
+              public boolean accept(Node node) {
+                if (node instanceof Span) {
+                  Span span = ((Span) node);
+                  for(Node child:span.getChildrenAsNodeArray()) {
+                    if (child != null && child instanceof LinkTag) {
+                      String title = ((LinkTag) child).getAttribute("title");
+                      if (title != null && !title.isEmpty() && title.contains("Previous issue")) {
+                        return true;
+                      }
+                    }
+                  }
+                }
+                return false;
+              }
+            }
         }))
       )
     );
-    
-    // FIXME 1.67.4
-    filtered.registerTag(new CompositeTag() { @Override public String[] getIds() { return new String[] {"CENTER"}; } });
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
