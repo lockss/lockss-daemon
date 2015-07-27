@@ -241,7 +241,7 @@
         param[journal_issn] = 2196-288X 
         comment[platform] = BioMedCentralPlugin
 
-        au < ready ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 ; 2 >
 
     }
@@ -427,7 +427,7 @@
         param[journal_issn] = 2194-6434 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Earth Perspectives Volume 2 ; 2 >
   
     }
@@ -477,7 +477,7 @@
         param[journal_issn] = 2197-7364
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; EJNMMI Physics Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; EJNMMI Physics Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; EJNMMI Physics Volume 2 ; 2 >
   
     }
@@ -620,7 +620,7 @@
         param[journal_issn] = 2196-0763 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; EPJ Quantum Technology Volume 2 ; 2 >
   
     }
@@ -636,7 +636,7 @@
         param[journal_issn] = 2195-7045 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; EPJ Techniques and Instrumentation Volume 2 ; 2 >
   
     }
@@ -898,7 +898,7 @@
         param[journal_issn] = 2196-419X 
         comment[platform] = BioMedCentralPlugin
 
-        au < ready ; exists ; 2014 ; Functional Linguistics Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Functional Linguistics Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Functional Linguistics Volume 2 ; 2 >
 
     }
@@ -914,7 +914,7 @@
         param[journal_issn] = 2196-4092 
         comment[platform] = BioMedCentralPlugin
 
-        au < ready ; exists ; 2014 ; Geoscience Letters Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Geoscience Letters Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Geoscience Letters Volume 2 ; 2 >
 
     }
