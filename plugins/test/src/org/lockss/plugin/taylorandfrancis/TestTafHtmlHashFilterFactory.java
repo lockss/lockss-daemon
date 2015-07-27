@@ -78,10 +78,4 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(withoutPrevNext, StringUtil.fromInputStream(actIn));
   }
   
-  public void testRealContent() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau, getResourceAsStream("tafcontent_2.html"), Constants.DEFAULT_ENCODING);
-    InputStream actIn2 = fact.createFilteredInputStream(mau, getResourceAsStream("tafcontent_3.html"), Constants.DEFAULT_ENCODING);
-    assertEquals(StringUtil.fromInputStream(actIn), StringUtil.fromInputStream(actIn2));
-  }
-  
 }
