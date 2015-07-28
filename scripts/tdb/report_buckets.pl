@@ -1,19 +1,19 @@
 ﻿#!/usr/bin/perl
 #
-# Read in two reports of AUs and status. Generate a count
+# Read in two reports of AUids and status. Generate a count
 # of category crossings.
 # 
-# To create report
-# cvs -q update -D 20110101
-# cat *.tdb | tdbout -t auid,status | sort -u > file1.txt
-# cvs -q update -D 20111231
-# cat *.tdb | tdbout -t auid,status | sort -u > file2.txt
+# To create report, comparing two points in time.
+# svn update -r 20110101
+# ./scripts/tdb/tdbout -t auid,status tdb/prod/*.tdb | sort -u > file1.txt
+# svn update -r 20111231
+# ./scripts/tdb/tdbout -t auid,status tdb/prod/*.tdb | sort -u > file2.txt
 # ./report_buckets file1.txt file2.txt
 # 
-# or for clockss statuses
-# cat *.tdb | tdbout -t auid,status | sort -u > file1.txt
-# cat *.tdb | tdbout -t auid,status2 | sort -u > file2.txt
-# ./report_buckets file1.txt file2.txt
+# To create a report, comparing status1 and status2 in clockssingest
+# ./scripts/tdb/tdbout -t auid,status tdb/clockssingest/*.tdb | sort -u > file1.txt
+# ./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/*.tdb | sort -u > file2.txt
+# ./report_buckets.pl file1.txt file2.txt
 
 
 my %code = ("notPresent" => 0,
