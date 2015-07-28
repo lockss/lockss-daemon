@@ -23598,7 +23598,7 @@
       au < finished ; crawling ; 2012 ; Journal of Literacy Research Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Journal of Literacy Research Volume 45 ; 45 ; >
       au < crawling ; exists ; 2014 ; Journal of Literacy Research Volume 46 ; 46 ; >
-      au < expected ; exists ; 2015 ; Journal of Literacy Research Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2015 ; Journal of Literacy Research Volume 47 ; 47 ; >
 
   }
 
@@ -30189,7 +30189,7 @@
       param[base_url] = http://nrj.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; >
 
   }
 

@@ -255,7 +255,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Abrasive Technology Volume 6 ; 6 >
-      au < expected ; exists ; 2015 ; International Journal of Abrasive Technology Volume 7 ; 7 >
+      au < manifest ; exists ; 2015 ; International Journal of Abrasive Technology Volume 7 ; 7 >
 
     }
 
@@ -1192,7 +1192,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Business Competition and Growth Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Business Competition and Growth Volume 2 ; 2 >
       au < crawling ; exists ; 2013-2014 ; International Journal of Business Competition and Growth Volume 3 ; 3 >
-      au < expected ; exists ; 2015 ; International Journal of Business Competition and Growth Volume 4 ; 4 >
+      au < manifest ; exists ; 2015 ; International Journal of Business Competition and Growth Volume 4 ; 4 >
 
     }
 
@@ -1484,7 +1484,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Cloud Computing Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Cloud Computing Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; International Journal of Cloud Computing Volume 3 ; 3 >
-      au < exists ; exists ; 2015 ; International Journal of Cloud Computing Volume 4 ; 4 >
+      au < manifest ; exists ; 2015 ; International Journal of Cloud Computing Volume 4 ; 4 >
 
     }
 
@@ -3577,7 +3577,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Healthcare Technology and Management Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Healthcare Technology and Management Volume 13 ; 13 >
       au < crawling ; exists ; 2013-2014 ; International Journal of Healthcare Technology and Management Volume 14 ; 14 >
-      au < expected ; exists ; 2015 ; International Journal of Healthcare Technology and Management Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; International Journal of Healthcare Technology and Management Volume 15 ; 15 >
 
     }
 
@@ -5738,7 +5738,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nanomanufacturing Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nanomanufacturing Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; International Journal of Nanomanufacturing Volume 10 ; 10 >
-      au < expected ; exists ; 2015 ; International Journal of Nanomanufacturing Volume 11 ; 11 >
+      au < manifest ; exists ; 2015 ; International Journal of Nanomanufacturing Volume 11 ; 11 >
 
     }
 
@@ -8349,7 +8349,7 @@
       param[journal_id] = ijws
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
-      au < exists ; exists ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 >
+      au < manifest ; exists ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Web Science Volume 3 ; 3 >
 
     }
@@ -8474,7 +8474,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; Journal for International Business and Entrepreneurship Development Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal for International Business and Entrepreneurship Development Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal for International Business and Entrepreneurship Development Volume 7 ; 7 >
-      au < exists ; exists ; 2015 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
+      au < manifest ; exists ; 2015 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
 
     }
 
@@ -8532,7 +8532,7 @@
 
       param[journal_id] = lrj
 
-      au < exists ; exists ; 2015 ; Luxury Research Journal Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; Luxury Research Journal Volume 1 ; 1 >
 
     }
 
@@ -8583,7 +8583,7 @@
       au < doNotProcess ; exists ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
-      au < exists ; exists ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
+      au < manifest ; exists ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 >
 
     }
