@@ -106,6 +106,11 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // filter out <div class="advertisingbanner[ clear]"> that encloses 
         // GA_googleFillSlot("TopLeaderboard") & GA_googleFillSlot("Horizontal_banner")
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisingbanner"),
+        // branding changes
+        HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
+        // <div id="info" This is due to DOI showing up in some content, but not all
+        // http://www.ingentaconnect.com/content/maney/vea/2011/00000042/00000001/art00009
+        HtmlNodeFilters.tagWithAttribute("div", "id", "info"),
         // filter out <li class="data"> that encloses a reference for the
         // article: reference links won't be the same because not all 
         // the referenced articles are available at a given institution.

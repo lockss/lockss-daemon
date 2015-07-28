@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>55</string>
+    <string>56</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>26</string>
+        <string>27</string>
       </entry>
     </map>
   </entry>
@@ -54,8 +54,8 @@
       <!-- all content from CDN -->
       <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org)/."</string>
       <!-- all fonts, images, resources, css, js, etc. -->
-      <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](eot|svg|ttf|woff.?)([?]v=[^&amp;]*)?$", base_url_host, api_url_host, graphics_url_host</string>
-      <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](?:bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
+      <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](css|js|eot|svg|ttf|woff.?)([?].*)?$", base_url_host, api_url_host, graphics_url_host</string>
+      <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
       <string>4,"^(?:%s|%s|%s)", base_url, api_url, graphics_url</string>
       <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
       <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
@@ -225,11 +225,13 @@
     <string>.*[.]cloudfront[.]net|cdn[.]mathjax[.]org</string>
   </entry>
   <entry>
+    <!-- Adding /references & ?format=bib to repair/exclude patterns due to inconsistent 
+      content of no longer crawled AUs --> 
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>([?]format=bib|/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?)$</string>
+    <string>(/references|[?]format=bib|/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff.?)([?]v=[^&amp;]*)?)$</string>
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>([?]format=bib|/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff)([?]v=[^&amp;]*)?)$</string>
+    <string>(/references|[?]format=bib|/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff.?)([?]v=[^&amp;]*)?)$</string>
   </entry>
 </map>
