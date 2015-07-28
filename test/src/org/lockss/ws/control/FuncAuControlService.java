@@ -33,7 +33,6 @@ package org.lockss.ws.control;
 
 import static org.lockss.db.SqlConstants.*;
 import static org.lockss.ws.control.AuControlServiceImpl.*;
-
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 import java.net.URL;
@@ -45,10 +44,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
-
 import org.lockss.account.AccountManager;
 import org.lockss.account.UserAccount;
 import org.lockss.config.ConfigManager;
@@ -795,17 +792,6 @@ public class FuncAuControlService extends LockssTestCase {
     // User "debugRole" should succeed.
     userAccount.setRoles(LockssServlet.ROLE_DEBUG);
 
-    result = proxy.requestMdIndexingById(sau0.getAuId(), false);
-    assertEquals(sau0.getAuId(), result.getId());
-    assertFalse(result.isSuccess());
-    assertTrue(result.getErrorMessage().startsWith("Unknown substance"));
-    assertTrue(result.getErrorMessage().endsWith(USE_FORCE_MESSAGE));
-
-    result = proxy.requestMdIndexingById(sau0.getAuId(), true);
-    assertEquals(sau0.getAuId(), result.getId());
-    assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
-
     Connection conn = null;
 
     try {
@@ -843,6 +829,17 @@ public class FuncAuControlService extends LockssTestCase {
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
+
+    result = proxy.requestMdIndexingById(sau0.getAuId(), false);
+    assertEquals(sau0.getAuId(), result.getId());
+    assertFalse(result.isSuccess());
+    assertTrue(result.getErrorMessage().startsWith("Unknown substance"));
+    assertTrue(result.getErrorMessage().endsWith(USE_FORCE_MESSAGE));
+
+    result = proxy.requestMdIndexingById(sau0.getAuId(), true);
+    assertEquals(sau0.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
   }
 
   /**
@@ -926,17 +923,6 @@ public class FuncAuControlService extends LockssTestCase {
     // User "debugRole" should succeed.
     userAccount.setRoles(LockssServlet.ROLE_DEBUG);
 
-    results = proxy.requestMdIndexingByIdList(auIds, true);
-    result = results.get(0);
-    assertEquals(sau0.getAuId(), result.getId());
-    assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
-
-    result = results.get(1);
-    assertEquals(sau1.getAuId(), result.getId());
-    assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
-
     Connection conn = null;
 
     try {
@@ -972,6 +958,17 @@ public class FuncAuControlService extends LockssTestCase {
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
+
+    results = proxy.requestMdIndexingByIdList(auIds, true);
+    result = results.get(0);
+    assertEquals(sau0.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
+
+    result = results.get(1);
+    assertEquals(sau1.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
   }
 
   private Configuration simAuConfig(String rootPath) {
