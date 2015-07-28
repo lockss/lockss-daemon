@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# $Id$
+
+DIRECTORY=$(cd `dirname $0` && pwd)
+python $DIRECTORY/daemonstatusservice.py "$@"

@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
@@ -354,7 +354,7 @@ class _DaemonStatusServiceOptions(object):
       if len(errfields) == 1: parser.error('unknown field: %s' % (errfields[0],))
       elif len(errfields) > 1: parser.error('unknown fields: %s' % (', '.join(errfields),))
     # auth
-    u = opts.username or raw_input('UI username: ')
+    u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
     self.auth = auth(u, p)
 
