@@ -1545,7 +1545,7 @@
 
       param[journal_id] = ijce
 
-      au < boost ; exists ; 2009-2014 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
+      au < crawling ; exists ; 2009-2014 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Collaborative Engineering Volume 2 ; 2 >
 
     }
@@ -1642,7 +1642,7 @@
       param[journal_id] = ijclm
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Complexity in Leadership and Management Volume 3 ; 3 >
 
     }
@@ -2256,7 +2256,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Design Engineering Volume 5 ; 5 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Design Engineering Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; International Journal of Design Engineering Volume 6 ; 6 >
 
     }
@@ -2590,7 +2590,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Electronic Healthcare Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Electronic Healthcare Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Healthcare Volume 6 ; 6 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Electronic Healthcare Volume 7 ; 7 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Electronic Healthcare Volume 7 ; 7 >
       au < expected ; exists ; 2015 ; International Journal of Electronic Healthcare Volume 8 ; 8 >
 
     }
@@ -3131,7 +3131,7 @@
 
       param[journal_id] = ijepdm
 
-      au < boost ; exists ; 2010-2014 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 >
+      au < crawling ; exists ; 2010-2014 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Environmental Policy and Decision Making Volume 2 ; 2 >
 
     }
@@ -3395,7 +3395,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Functional Informatics and Personalised Medicine Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Functional Informatics and Personalised Medicine Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Functional Informatics and Personalised Medicine Volume 3 ; 3 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Functional Informatics and Personalised Medicine Volume 4 ; 4 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Functional Informatics and Personalised Medicine Volume 4 ; 4 >
       au < expected ; exists ; 2015 ; International Journal of Functional Informatics and Personalised Medicine Volume 5 ; 5 >
 
     }
@@ -3609,7 +3609,7 @@
 
       param[journal_id] = ijhd
 
-      au < boost ; exists ; 2012-2014 ; International Journal of Happiness and Development Volume 1 ; 1 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Happiness and Development Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; International Journal of Happiness and Development Volume 2 ; 2 >
 
     }
@@ -3903,7 +3903,7 @@
 
       param[journal_id] = ijied
 
-      au < boost ; exists ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 >
+      au < crawling ; exists ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 >
 
     }
@@ -3921,7 +3921,7 @@
       comment[0] = no issue in 2012
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
-      au < boost ; exists ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
+      au < crawling ; exists ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; International Journal of Information and Coding Theory Volume 3 ; 3 >
 
     }
@@ -4004,7 +4004,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Information and Operations Management Education Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Operations Management Education Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; International Journal of Information and Operations Management Education Volume 6 ; 6 >
 
     }
@@ -4039,7 +4039,7 @@
 
       au < doNotProcess ; exists ; 2007 ; International Journal of Information Quality Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Information Quality Volume 3 ; 3 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Information Quality Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; International Journal of Information Quality Volume 4 ; 4 >
 
     }
@@ -4251,7 +4251,7 @@
 
       param[journal_id] = ijit
 
-      au < boost ; exists ; 2011-2014 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
+      au < crawling ; exists ; 2011-2014 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Instrumentation Technology Volume 2 ; 2 >
 
     }
@@ -4316,7 +4316,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Intelligent Defence Support Systems Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Intelligent Defence Support Systems Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Intelligent Defence Support Systems Volume 4 ; 4 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; International Journal of Intelligent Defence Support Systems Volume 6 ; 6 >
 
     }
@@ -4443,7 +4443,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Internet and Enterprise Management Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Internet and Enterprise Management Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Internet and Enterprise Management Volume 7 ; 7 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Internet and Enterprise Management Volume 8 ; 8 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Internet and Enterprise Management Volume 8 ; 8 >
       au < expected ; exists ; 2015 ; International Journal of Internet and Enterprise Management Volume 9 ; 9 >
 
     }
@@ -4461,7 +4461,7 @@
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Internet Manufacturing and Services Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 >
-      au < boost ; exists ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 >
+      au < crawling ; exists ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 >
 
     }
@@ -4681,7 +4681,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Knowledge Management Studies Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Knowledge Management Studies Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Knowledge Management Studies Volume 4 ; 4 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Knowledge Management Studies Volume 5 ; 5 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Knowledge Management Studies Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; International Journal of Knowledge Management Studies Volume 6 ; 6 >
 
     }
@@ -4842,7 +4842,7 @@
 
       param[journal_id] = ijlcpe
 
-      au < boost ; exists ; 2012-2014 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Lifecycle Performance Engineering Volume 2 ; 2 >
 
     }
@@ -6374,7 +6374,7 @@
       param[journal_id] = ijpse
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Process Systems Engineering Volume 1 ; 1 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Process Systems Engineering Volume 3 ; 3 >
 
     }
@@ -6599,7 +6599,7 @@
       param[journal_id] = ijqi
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Quality and Innovation Volume 1 ; 1 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Quality and Innovation Volume 2 ; 2 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Quality and Innovation Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Quality and Innovation Volume 3 ; 3 >
 
     }
@@ -6654,7 +6654,7 @@
       au < doNotProcess ; exists ; 2006-2007 ; International Journal of Radio Frequency Identification Technology and Applications Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 >
       au < expected ; exists ; 2015 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 >
 
     }
@@ -7443,7 +7443,7 @@
       param[journal_id] = ijsdes
 
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
-      au < boost ; exists ; 2012-2014 ; International Journal of Sustainable Design Volume 2 ; 2 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Sustainable Design Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Sustainable Design Volume 3 ; 3 >
 
     }
@@ -7530,7 +7530,7 @@
 
       param[journal_id] = ijsmss
 
-      au < boost ; exists ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 >
 
     }
@@ -7892,7 +7892,7 @@
 
       param[journal_id] = ijtpl
 
-      au < boost ; exists ; 2012-2014 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
+      au < crawling ; exists ; 2012-2014 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; International Journal of Technology Policy and Law Volume 2 ; 2 >
 
     }
@@ -7964,7 +7964,7 @@
 
       param[journal_id] = ijbeam
 
-      au < boost ; exists ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
+      au < crawling ; exists ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
 
     }
