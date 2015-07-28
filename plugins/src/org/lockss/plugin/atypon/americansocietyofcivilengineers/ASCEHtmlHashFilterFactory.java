@@ -62,7 +62,13 @@ public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 	//toc: <div class="citation tocCitation">
 	HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
 	// footer and footer_message filtered in BaseAtypon
-        //  new TagNameFilter("script"),
+	// removing keywords section, author names from html page 
+	//  - some versions have "action/doSearch..."
+	HtmlNodeFilters.tagWithAttribute("div", "class", "abstractKeywords"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "artAuthors"),
+        // removing a doi link that sometimes has a class name
+        HtmlNodeFilters.tagWithAttribute("a", "class", "ShowPdfGa"),
+
     };
     
     // super.createFilteredInputStream adds asceFilters to the baseAtyponFilters

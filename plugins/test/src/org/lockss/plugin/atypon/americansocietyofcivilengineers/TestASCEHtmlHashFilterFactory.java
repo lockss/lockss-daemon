@@ -36,6 +36,10 @@ import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.StringUtil;
+// for tessting
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
 
 public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   private ASCEHtmlHashFilterFactory fact;
@@ -307,6 +311,18 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
     "<!--totalCount15--><!--modified:1374684679000-->Hello World";
   private static final String withoutComments ="Hello World";
   
+  private static final String withAuthors =
+      "<div class=\"artAuthors\"><div class=\"hlFld-ContribAuthor\"><div class=\"editor\"></div></div></div>Hello World";
+  private static final String withoutAuthors ="Hello World";
+  
+  private static final String withShowPdfGa =
+      "<a href=\"/doi/pdf/10.1061/hello.1943-5533.0000927\" class=\"ShowPdfGa\"></a>Hello World";
+  private static final String withoutShowPdfGa ="Hello World";
+  
+  private static final String withKeywords =
+      "<div class=\"abstractKeywords\"><div class=\"hlFld-KeywordText\"><div><b>ASCE Subject Headings: </b></div></div></div>Hello World";
+  private static final String withoutKeywords ="Hello World";
+  
   /*
    *  Compare Html and HtmlHashFiltered
    */
@@ -384,4 +400,21 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(withAccessIcon), Constants.DEFAULT_ENCODING);
     assertEquals(withoutAccessIcon, StringUtil.fromInputStream(actIn));
   }
+  
+  public void testAuthors() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withAuthors), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutAuthors, StringUtil.fromInputStream(actIn));
+  }
+  public void testShowPdfGa() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withShowPdfGa), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutShowPdfGa, StringUtil.fromInputStream(actIn));
+  }
+  public void testKeywords() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withKeywords), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutKeywords, StringUtil.fromInputStream(actIn));
+  }
+  
 }
