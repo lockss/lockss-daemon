@@ -257,7 +257,7 @@
         param[journal_issn] = 2196-5641 
         comment[platform] = BioMedCentralPlugin
 
-        au < testing ; exists ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 >
+        au < notReady ; exists ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Chemical and Biological Technologies in Agriculture Volume 2 ; 2 >
 
     }
@@ -342,7 +342,7 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BioMedCentralPlugin
   
-        au < testing ; exists ; 2014 ; Computational Cognitive Science Volume 1 ; 1 >
+        au < notReady ; exists ; 2014 ; Computational Cognitive Science Volume 1 ; 1 >
         au < expected ; exists ; 2015 ; Computational Cognitive Science Volume 2 ; 2 >
   
     }
@@ -780,7 +780,7 @@
         au < manifest ; exists ; 2011 ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Information Security Volume 2012 ; 2012 >
         au < notReady ; exists ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 >
-        au < testing ; exists ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 >
+        au < notReady ; exists ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; EURASIP Journal on Information Security Volume 2015 ; 2015 >
   
     }
@@ -1128,7 +1128,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 >
-        au < wanted ; exists ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
+        au < testing ; exists ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
   
     }
@@ -1182,7 +1182,7 @@
         param[journal_issn] = 2196-2804 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
+        au < testing ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
   
     }
@@ -1234,7 +1234,7 @@
         param[journal_issn] = 2196-7822 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
+        au < testing ; exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
 
     }
@@ -1392,7 +1392,7 @@
         param[journal_issn] = 2196-1115 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
+        au < testing ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 >
   
     }
@@ -1426,7 +1426,7 @@
         param[journal_issn] = 2194-3990 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 >
+        au < testing ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 >
   
     }
@@ -1460,7 +1460,7 @@
         param[journal_issn] = 2197-1153 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
+        au < testing ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
   
     }
@@ -1523,7 +1523,7 @@
         au < manifest ; exists ; 2011 ; Journal of Inequalities and Applications Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; Journal of Inequalities and Applications Volume 2012 ; 2012 >
         au < manifest ; exists ; 2013 ; Journal of Inequalities and Applications Volume 2013 ; 2013 >
-        au < wanted ; exists ; 2014 ; Journal of Inequalities and Applications Volume 2014 ; 2014 >
+        au < testing ; exists ; 2014 ; Journal of Inequalities and Applications Volume 2014 ; 2014 >
         au < manifest ; exists ; 2015 ; Journal of Inequalities and Applications Volume 2015 ; 2015 >
   
     }
@@ -1541,7 +1541,7 @@
   
         au < manifest ; exists ; 2012 ; Journal of Innovation and Entrepreneurship Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Journal of Innovation and Entrepreneurship Volume 2 ; 2 >
-        au < wanted ; exists ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 >
+        au < testing ; exists ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Journal of Innovation and Entrepreneurship Volume 4 ; 4 >
   
     }
@@ -1558,7 +1558,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Interaction Science Volume 1 ; 1 >
-        au < wanted ; exists ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
+        au < testing ; exists ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Journal of Interaction Science Volume 3 ; 3 >
   
     }
@@ -1577,7 +1577,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 >
-        au < wanted ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 >
+        au < testing ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 >
         au < manifest ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 ; 6 >
   
     }
@@ -1596,7 +1596,7 @@
         au < manifest ; exists ; 2011 ; Journal of Mathematical Neuroscience Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Journal of Mathematical Neuroscience Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Mathematical Neuroscience Volume 3 ; 3 >
-        au < wanted ; exists ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
+        au < testing ; exists ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Journal of Mathematical Neuroscience Volume 5 ; 5 >
   
     }
@@ -1615,7 +1615,7 @@
         au < manifest ; exists ; 2011 ; Journal of Mathematics in Industry Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 >
-        au < wanted ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
+        au < testing ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 ; 5 >
   
     }
@@ -1649,7 +1649,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Ophthalmic Inflammation and Infection Volume 3 ; 3 >
-        au < wanted ; exists ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 >
+        au < testing ; exists ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Journal of Ophthalmic Inflammation and Infection Volume 5 ; 5 >
   
     }
@@ -1668,7 +1668,7 @@
         au < manifest ; exists ; 2011 ; Journal of Remanufacturing Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Journal of Remanufacturing Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Remanufacturing Volume 3 ; 3 >
-        au < wanted ; exists ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 >
+        au < testing ; exists ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Journal of Remanufacturing Volume 5 ; 5 >
   
     }
@@ -1685,7 +1685,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Software Engineering Research and Development Volume 1 ; 1 >
-        au < wanted ; exists ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 >
+        au < testing ; exists ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Journal of Software Engineering Research and Development Volume 3 ; 3 >
   
     }
