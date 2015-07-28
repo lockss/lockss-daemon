@@ -24,8 +24,8 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2008 ; Ancient Asia Volume 1 [to delete] ; 1 ; 2006 >
-       au < superseded ; down ; 2009-2011 ; Ancient Asia Volume 2 [to delete] ; 2 ; 2010 >
+       au < superseded ; exists ; 2008 ; Ancient Asia Volume 1 [to delete] ; 1 ; 2006 >
+       au < superseded ; exists ; 2009-2011 ; Ancient Asia Volume 2 [to delete] ; 2 ; 2010 >
     }
     au < manifest ; exists ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 >
@@ -48,8 +48,8 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2008 ; Archaeology International Volume 12 [to delete] ; 12 ; 2008 >
-       au < superseded ; down ; 2009-2011 ; Archaeology International Volume 13/14 [to delete] ; 13/14 ; 2009 >
+       au < superseded ; exists ; 2008 ; Archaeology International Volume 12 [to delete] ; 12 ; 2008 >
+       au < superseded ; exists ; 2009-2011 ; Archaeology International Volume 13/14 [to delete] ; 13/14 ; 2009 >
     }
     au < manifest ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
     au < manifest ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
@@ -94,8 +94,8 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2010 ; The Bulletin of the History of Archaeology Volume 20 [to delete] ; 20 ; 2010 >
-       au < superseded ; down ; 2011 ; The Bulletin of the History of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
+       au < superseded ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 [to delete] ; 20 ; 2010 >
+       au < superseded ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
     }
 
     au < manifest ; exists ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
@@ -169,8 +169,8 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2011 ; Journal of Conservation and Museum Studies Volume 9 [to delete] ; 9 ; 2011 >
-       au < superseded ; down ; 2012 ; Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
+       au < superseded ; exists ; 2011 ; Journal of Conservation and Museum Studies Volume 9 [to delete] ; 9 ; 2011 >
+       au < superseded ; exists ; 2012 ; Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
     }
     
     au < manifest ; exists ; 1996 ; Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
@@ -310,9 +310,9 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2010 ; Opticon1826 Volume 9 [to delete] ; 8-9 ; 2010 >
-       au < superseded ; down ; 2011 ; Opticon1826 Volume 10 [to delete] ; 10-11 ; 2011 >
-       au < superseded ; down ; 2012 ; Opticon1826 Volume 12 [to delete] ; 12 ; 2012 >
+       au < superseded ; exists ; 2010 ; Opticon1826 Volume 9 [to delete] ; 8-9 ; 2010 >
+       au < superseded ; exists ; 2011 ; Opticon1826 Volume 10 [to delete] ; 10-11 ; 2011 >
+       au < superseded ; exists ; 2012 ; Opticon1826 Volume 12 [to delete] ; 12 ; 2012 >
     }
     
     au < exists ; exists ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
@@ -342,14 +342,14 @@
        param[base_url] = http://www.pia-journal.co.uk/
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-        au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 www [to delete] ; 21 ; 2011 >
+        au < superseded ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 www [to delete] ; 21 ; 2011 >
     }
     {
        param[base_url] = http://pia-journal.co.uk/
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-        au < superseded ; down ; 2009 ; Papers from the Institute of Archaeology Volume 19 [to delete] ; 19 ; 2009 >
-        au < superseded ; down ; 2010 ; Papers from the Institute of Archaeology Volume 20 [to delete] ; 20 ; 2010 >
+        au < superseded ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 [to delete] ; 19 ; 2009 >
+        au < superseded ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 [to delete] ; 20 ; 2010 >
         au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
     }
     {
@@ -414,7 +414,7 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2010 ; Present Pasts Volume 2 [to delete] ; 2 ; 2010 >
+       au < superseded ; exists ; 2010 ; Present Pasts Volume 2 [to delete] ; 2 ; 2010 >
        au < superseded ; down ; 2011 ; Present Pasts Volume 3 [to delete] ; 3 ; 2011 >
     }
     
