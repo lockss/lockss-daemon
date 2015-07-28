@@ -85,9 +85,10 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
   static final String ACTION_FIND_URL = "Find Preserved URL";
 
-  static final String ACTION_REINDEX_METADATA = "Reindex Metadata";
-  static final String ACTION_FORCE_REINDEX_METADATA = "Force Reindex Metadata";
-  static final String ACTION_START_V3_POLL = "Start V3 Poll";
+  public static final String ACTION_REINDEX_METADATA = "Reindex Metadata";
+  public static final String ACTION_FORCE_REINDEX_METADATA =
+      "Force Reindex Metadata";
+  public static final String ACTION_START_V3_POLL = "Start V3 Poll";
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
   public static final String ACTION_START_CRAWL = "Start Crawl";
   public static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
@@ -97,7 +98,8 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
   static final String ACTION_SLEEP = "Sleep";
-  static final String ACTION_DISABLE_METADATA_INDEXING = "Disable Indexing";
+  public static final String ACTION_DISABLE_METADATA_INDEXING =
+      "Disable Indexing";
 
   /** Set of actions for which audit alerts shouldn't be generated */
   public static final Set noAuditActions = SetUtil.set(ACTION_FIND_URL);
@@ -466,13 +468,16 @@ public class DebugPanel extends LockssServlet {
       errMsg = "Metadata processing is not enabled.";
       return false;
     }
-    
-    if (metadataMgr.disableAuIndexing(au)) {
+
+    try {
+      metadataMgr.disableAuIndexing(au);
       statusMsg = "Disabled metadata indexing for " + au.getName();
       return true;
+    } catch (Exception e) {
+      errMsg =
+	  "Cannot reindex metadata for " + au.getName() + ": " + e.getMessage();
+      return false;
     }
-      errMsg = "Cannot reindex metadata for " + au.getName();
-    return false;
   }
 
   private void doV3Poll() {

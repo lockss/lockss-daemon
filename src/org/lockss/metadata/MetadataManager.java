@@ -2503,23 +2503,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @param au
    *          An ArchivalUnit with the AU for which indexing is to be disabled.
-   * @return <code>true</code> if au was added for reindexing,
-   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
    */
-  public boolean disableAuIndexing(ArchivalUnit au) {
+  public void disableAuIndexing(ArchivalUnit au) throws DbException {
     final String DEBUG_HEADER = "disableAuIndexing(): ";
 
     synchronized (activeReindexingTasks) {
       Connection conn = null;
 
       try {
-        log.debug2(DEBUG_HEADER + "Disabing indexing for AU " + au.getName());
+        log.debug2(DEBUG_HEADER + "Disabling indexing for AU " + au.getName());
         conn = dbManager.getConnection();
 
         if (conn == null) {
-          log.error("Cannot connect to database"
-              + " -- cannot disable indexing for AU");
-          return false;
+          log.error("Cannot disable indexing for AU '" + au.getName()
+              + "' - Cannot connect to database");
+          throw new DbException("Cannot connect to database");
         }
 
         String auId = au.getAuId();
@@ -2537,11 +2537,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         // Add it marked as disabled.
         mdManagerSql.addDisabledAuToPendingAus(conn, auId);
         DbManager.commitOrRollback(conn, log);
-
-        return true;
       } catch (DbException dbe) {
-        log.error("Cannot disable AU: " + au.getName(), dbe);
-        return false;
+        String errorMessage = "Cannot disable indexing for AU '"
+            + au.getName() +"'";
+        log.error(errorMessage, dbe);
+        throw dbe;
       } finally {
         DbManager.safeRollbackAndClose(conn);
       }
@@ -3969,5 +3969,44 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
     return auSeq;
+  }
+
+  /**
+   * Enables the indexing of an AU.
+   * 
+   * @param au
+   *          An ArchivalUnit with the AU for which indexing is to be enabled.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public void enableAuIndexing(ArchivalUnit au) throws DbException {
+    final String DEBUG_HEADER = "disableAuIndexing(): ";
+
+    Connection conn = null;
+
+    try {
+      log.debug2(DEBUG_HEADER + "Enabling indexing for AU " + au.getName());
+      conn = dbManager.getConnection();
+
+      if (conn == null) {
+	log.error("Cannot enable indexing for AU '" + au.getName()
+	    + "' - Cannot connect to database");
+	throw new DbException("Cannot connect to database");
+      }
+
+      String auId = au.getAuId();
+      log.debug2(DEBUG_HEADER + "auId " + auId);
+
+      // Remove it from the list if it was marked as disabled.
+      removeDisabledFromPendingAus(conn, auId);
+      DbManager.commitOrRollback(conn, log);
+    } catch (DbException dbe) {
+      String errorMessage = "Cannot enable indexing for AU '" + au.getName()
+	  + "'";
+      log.error(errorMessage, dbe);
+      throw dbe;
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
   }
 }

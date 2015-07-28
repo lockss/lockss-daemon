@@ -32,9 +32,14 @@
 package org.lockss.ws.control;
 
 import static org.lockss.servlet.DebugPanel.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.jws.WebService;
+
 import org.apache.cxf.phase.PhaseInterceptorChain;
 import org.lockss.account.UserAccount;
 import org.lockss.app.LockssDaemon;
@@ -42,8 +47,13 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlManagerImpl;
 import org.lockss.crawler.CrawlReq;
+import org.lockss.db.DbManager;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
+import org.lockss.poller.Poll;
+import org.lockss.poller.PollManager;
+import org.lockss.poller.PollSpec;
 import org.lockss.servlet.DebugPanel;
 import org.lockss.state.AuState;
 import org.lockss.state.SubstanceChecker;
@@ -55,17 +65,28 @@ import org.lockss.ws.entities.CheckSubstanceResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.RequestCrawlResult;
 import org.lockss.ws.entities.RequestDeepCrawlResult;
+import org.lockss.ws.entities.RequestAuControlResult;
 
 /**
  * The AU Control web service implementation.
  */
 @WebService
 public class AuControlServiceImpl implements AuControlService {
-  static String MISSING_AU_ID_ERROR_MESSAGE = "Missing auId";
-  static String NO_SUBSTANCE_ERROR_MESSAGE =
+  static final String MISSING_AU_ID_ERROR_MESSAGE = "Missing auId";
+  static final String NO_SUBSTANCE_ERROR_MESSAGE =
       "No substance patterns defined for plugin";
-  static String NO_SUCH_AU_ERROR_MESSAGE = "No such Archival Unit";
-  static String UNEXPECTED_ERROR_MESSAGE = "Error in SubstanceChecker; see log";
+  static final String NO_SUCH_AU_ERROR_MESSAGE = "No such Archival Unit";
+  static final String UNEXPECTED_SUBSTANCE_CHECKER_ERROR_MESSAGE =
+      "Error in SubstanceChecker; see log";
+  static final String USE_FORCE_MESSAGE =
+      "Use the 'force' parameter to override.";
+  static final String DISABLED_METADATA_PROCESSING_ERROR_MESSAGE =
+      "Metadata processing is not enabled";
+  static final String DISABLE_METADATA_INDEXING_ERROR_MESSAGE =
+      "Cannot disable AU metadata indexing";
+  static final String ACTION_ENABLE_METADATA_INDEXING = "Enable Indexing";
+  static final String ENABLE_METADATA_INDEXING_ERROR_MESSAGE =
+      "Cannot enable AU metadata indexing";
 
   private static Logger log = Logger.getLogger(AuControlServiceImpl.class);
 
@@ -136,7 +157,7 @@ public class AuControlServiceImpl implements AuControlService {
       switch (newState) {
       case Unknown:
 	log.error("Shouldn't happen: SubstanceChecker returned Unknown");
-	errorMessage = UNEXPECTED_ERROR_MESSAGE;
+	errorMessage = UNEXPECTED_SUBSTANCE_CHECKER_ERROR_MESSAGE;
 	break;
       case Yes:
 	if (auState != null) {
@@ -154,7 +175,7 @@ public class AuControlServiceImpl implements AuControlService {
     } else {
       if (errorMessage == null) {
 	log.error("Shouldn't happen: SubstanceChecker returned null");
-	errorMessage = UNEXPECTED_ERROR_MESSAGE;
+	errorMessage = UNEXPECTED_SUBSTANCE_CHECKER_ERROR_MESSAGE;
       }
     }
 
@@ -183,7 +204,7 @@ public class AuControlServiceImpl implements AuControlService {
     List<CheckSubstanceResult> results =
 	new ArrayList<CheckSubstanceResult>(auIds.size());
 
-    // Loop  through all the Archival Unit identifiers.
+    // Loop through all the Archival Unit identifiers.
     for (String auId : auIds) {
       results.add(checkSubstanceById(auId));
     }
@@ -252,7 +273,7 @@ public class AuControlServiceImpl implements AuControlService {
     List<RequestCrawlResult> results =
 	new ArrayList<RequestCrawlResult>(auIds.size());
 
-    // Loop  through all the Archival Unit identifiers.
+    // Loop through all the Archival Unit identifiers.
     for (String auId : auIds) {
       // Perform the request.
       results.add(requestCrawlById(auId, priority, force));
@@ -328,10 +349,440 @@ public class AuControlServiceImpl implements AuControlService {
     List<RequestDeepCrawlResult> results =
 	new ArrayList<RequestDeepCrawlResult>(auIds.size());
 
-    // Loop  through all the Archival Unit identifiers.
+    // Loop through all the Archival Unit identifiers.
     for (String auId : auIds) {
       // Perform the request.
       results.add(requestDeepCrawlById(auId, refetchDepth, priority, force));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Requests the polling of an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a RequestPollResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public RequestAuControlResult requestPollById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "requestPollById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    // Add to the audit log a reference to this operation, if necessary.
+    audit(ACTION_START_V3_POLL, auId);
+
+    RequestAuControlResult result = null;
+
+    // Handle a missing auId.
+    if (StringUtil.isNullString(auId)) {
+      result =
+	  new RequestAuControlResult(auId, false, MISSING_AU_ID_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+
+    // Get the Archival Unit to be polled.
+    ArchivalUnit au = daemon.getPluginManager().getAuFromId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+    // Handle a missing Archival Unit.
+    if (au == null) {
+      result =
+	  new RequestAuControlResult(auId, false, NO_SUCH_AU_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Perform the poll request.
+    try {
+      daemon.getPollManager().enqueueHighPriorityPoll(au,
+	  new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL));
+    } catch (PollManager.NotEligibleException e) {
+      String errorMessage = "AU is not eligible for poll: ";
+      log.error(errorMessage + au, e);
+      result =
+	  new RequestAuControlResult(auId, false, errorMessage + e.toString());
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    } catch (Exception e) {
+      String errorMessage = "Can't start AU poll: ";
+      log.error(errorMessage + au, e);
+      result =
+	  new RequestAuControlResult(auId, false, errorMessage + e.toString());
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    result = new RequestAuControlResult(auId, true, null);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Requests the polling of the archival units defined by a list with their
+   * identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<RequestPollResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RequestAuControlResult> requestPollByIdList(List<String> auIds)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "requestPollByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<RequestAuControlResult> results =
+	new ArrayList<RequestAuControlResult>(auIds.size());
+
+    // Loop through all the Archival Unit identifiers.
+    for (String auId : auIds) {
+      // Perform the request.
+      results.add(requestPollById(auId));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Requests the metadata indexing of an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @param force
+   *          A boolean with <code>true</code> if the request is to be made even
+   *          in the presence of some anomalies, <code>false</code> otherwise.
+   * @return a RequestAuControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public RequestAuControlResult requestMdIndexingById(String auId,
+      boolean force) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "requestMdIndexingById(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "force = " + force);
+    }
+
+    // Add to the audit log a reference to this operation, if necessary.
+    if (force) {
+      audit(ACTION_FORCE_REINDEX_METADATA, auId);
+    } else {
+      audit(ACTION_REINDEX_METADATA, auId);
+    }
+
+    RequestAuControlResult result = null;
+
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    MetadataManager metadataMgr = daemon.getMetadataManager();
+
+    if (metadataMgr == null || !metadataMgr.isIndexingEnabled()) {
+      result = new RequestAuControlResult(auId, false,
+	  DISABLED_METADATA_PROCESSING_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Handle a missing auId.
+    if (StringUtil.isNullString(auId)) {
+      result =
+	  new RequestAuControlResult(auId, false, MISSING_AU_ID_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Get the Archival Unit to be indexed.
+    ArchivalUnit au = daemon.getPluginManager().getAuFromId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+    // Handle a missing Archival Unit.
+    if (au == null) {
+      result =
+	  new RequestAuControlResult(auId, false, NO_SUCH_AU_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    String errorMessage = null;
+
+    if (!force) {
+      try {
+	if (!AuUtil.hasCrawled(au)) {
+	  errorMessage = "AU has never been crawled. " + USE_FORCE_MESSAGE;
+	  result = new RequestAuControlResult(auId, false, errorMessage);
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+	  return result;
+	}
+
+	AuState auState = AuUtil.getAuState(au);
+
+	switch (auState.getSubstanceState()) {
+	case No:
+	  errorMessage = "AU has no substance. " + USE_FORCE_MESSAGE;
+	  result = new RequestAuControlResult(auId, false, errorMessage);
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+	  return result;
+	case Unknown:
+	  errorMessage = "Unknown substance for AU. " + USE_FORCE_MESSAGE;
+	  result = new RequestAuControlResult(auId, false, errorMessage);
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+	  return result;
+	case Yes:
+	  // Fall through.
+	}
+      } catch (Exception e) {
+	errorMessage = e.getMessage() + " - " + USE_FORCE_MESSAGE;
+	result = new RequestAuControlResult(auId, false, errorMessage);
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+	return result;
+      }
+    }
+
+    // Fully reindex metadata with the highest priority.
+    Connection conn = null;
+    PreparedStatement insertPendingAuBatchStatement = null;
+
+    try {
+      DbManager dbMgr = daemon.getDbManager();
+      conn = dbMgr.getConnection();
+      insertPendingAuBatchStatement =
+	  metadataMgr.getPrioritizedInsertPendingAuBatchStatement(conn);
+
+      if (metadataMgr.enableAndAddAuToReindex(au, conn,
+	  insertPendingAuBatchStatement, false, true)) {
+	result = new RequestAuControlResult(auId, true, null);
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+	return result;
+      }
+    } catch (Exception e) {
+      log.error("Cannot reindex metadata for " + au.getName(), e);
+      errorMessage =
+	  "Cannot reindex metadata for " + au.getName() + ": " + e.getMessage();
+    } finally {
+      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    result = new RequestAuControlResult(auId, false, errorMessage);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Requests the metadata indexing of the archival units defined by a list with
+   * their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @param force
+   *          A boolean with <code>true</code> if the request is to be made even
+   *          in the presence of some anomalies, <code>false</code> otherwise.
+   * @return a List<RequestAuControlResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RequestAuControlResult> requestMdIndexingByIdList(
+      List<String> auIds, boolean force) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "requestMdIndexingByIdList(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+      log.debug2(DEBUG_HEADER + "force = " + force);
+    }
+
+    List<RequestAuControlResult> results =
+	new ArrayList<RequestAuControlResult>(auIds.size());
+
+    // Loop through all the Archival Unit identifiers.
+    for (String auId : auIds) {
+      // Perform the request.
+      results.add(requestMdIndexingById(auId, force));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Disables the metadata indexing of an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a RequestAuControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public RequestAuControlResult disableMdIndexingById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "disableMdIndexingById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    // Add to the audit log a reference to this operation, if necessary.
+    audit(ACTION_DISABLE_METADATA_INDEXING, auId);
+
+    RequestAuControlResult result = null;
+
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    MetadataManager metadataMgr = daemon.getMetadataManager();
+
+    if (metadataMgr == null || !metadataMgr.isIndexingEnabled()) {
+      result = new RequestAuControlResult(auId, false,
+	  DISABLED_METADATA_PROCESSING_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Handle a missing auId.
+    if (StringUtil.isNullString(auId)) {
+      result =
+	  new RequestAuControlResult(auId, false, MISSING_AU_ID_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Get the Archival Unit to have its metadata indexing disabled.
+    ArchivalUnit au = daemon.getPluginManager().getAuFromId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+    // Handle a missing Archival Unit.
+    if (au == null) {
+      result =
+	  new RequestAuControlResult(auId, false, NO_SUCH_AU_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    try {
+      metadataMgr.disableAuIndexing(au);
+      result = new RequestAuControlResult(auId, true, null);
+    } catch (Exception e) {
+      result = new RequestAuControlResult(auId, false,
+	  DISABLE_METADATA_INDEXING_ERROR_MESSAGE + ": " + e.getMessage());
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Disables the metadata indexing of the archival units defined by a list with
+   * their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<RequestAuControlResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RequestAuControlResult> disableMdIndexingByIdList(
+      List<String> auIds) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "disableMdIndexingByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<RequestAuControlResult> results =
+	new ArrayList<RequestAuControlResult>(auIds.size());
+
+    // Loop through all the Archival Unit identifiers.
+    for (String auId : auIds) {
+      // Perform the request.
+      results.add(disableMdIndexingById(auId));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Enables the metadata indexing of an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a RequestAuControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public RequestAuControlResult enableMdIndexingById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "enableMdIndexingById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    // Add to the audit log a reference to this operation, if necessary.
+    audit(ACTION_ENABLE_METADATA_INDEXING, auId);
+
+    RequestAuControlResult result = null;
+
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    MetadataManager metadataMgr = daemon.getMetadataManager();
+
+    if (metadataMgr == null || !metadataMgr.isIndexingEnabled()) {
+      result = new RequestAuControlResult(auId, false,
+	  DISABLED_METADATA_PROCESSING_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Handle a missing auId.
+    if (StringUtil.isNullString(auId)) {
+      result =
+	  new RequestAuControlResult(auId, false, MISSING_AU_ID_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Get the Archival Unit to have its metadata indexing enabled.
+    ArchivalUnit au = daemon.getPluginManager().getAuFromId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+    // Handle a missing Archival Unit.
+    if (au == null) {
+      result =
+	  new RequestAuControlResult(auId, false, NO_SUCH_AU_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    try {
+      metadataMgr.enableAuIndexing(au);
+      result = new RequestAuControlResult(auId, true, null);
+    } catch (Exception e) {
+      result = new RequestAuControlResult(auId, false,
+	  ENABLE_METADATA_INDEXING_ERROR_MESSAGE + ": " + e.getMessage());
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Enables the metadata indexing of the archival units defined by a list with
+   * their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<RequestAuControlResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RequestAuControlResult> enableMdIndexingByIdList(
+      List<String> auIds) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "enableMdIndexingByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<RequestAuControlResult> results =
+	new ArrayList<RequestAuControlResult>(auIds.size());
+
+    // Loop through all the Archival Unit identifiers.
+    for (String auId : auIds) {
+      // Perform the request.
+      results.add(enableMdIndexingById(auId));
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
@@ -400,7 +851,7 @@ public class AuControlServiceImpl implements AuControlService {
    * @param force
    *          A boolean with <code>true</code> if the request is to be made even
    *          in the presence of some anomalies, <code>false</code> otherwise.
-   * @return a RequestCrawlResult with the result of the operation.
+   * @return a RequestDeepCrawlResult with the result of the operation.
    * @throws LockssWebServicesFault
    */
   private RequestDeepCrawlResult doRequestCrawl(String auId, Integer depth,
@@ -439,7 +890,7 @@ public class AuControlServiceImpl implements AuControlService {
       return result;
     }
 
-    // Get the Archival Unit to be checked.
+    // Get the Archival Unit to be crawled.
     ArchivalUnit au =
 	LockssDaemon.getLockssDaemon().getPluginManager().getAuFromId(auId);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
@@ -471,7 +922,7 @@ public class AuControlServiceImpl implements AuControlService {
       cmi.checkEligibleToQueueNewContentCrawl(au);
     } catch (CrawlManagerImpl.NotEligibleException.RateLimiter neerl) {
       String errorMessage = "AU has crawled recently (" + neerl.getMessage()
-	+ ").  Use the 'force' parameter to override.";
+	+ "). " + USE_FORCE_MESSAGE;
       result = new RequestDeepCrawlResult(auId,
 	  depth == null ? -1 : depth.intValue(), false, null, errorMessage);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
