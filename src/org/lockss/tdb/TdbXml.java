@@ -54,7 +54,39 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.1]";
+  public static final String VERSION = "[TdbXml:0.2.2]";
+  
+  /**
+   * <p>
+   * Key for the force-proxy option ({@value}).
+   * </p>
+   * 
+   * @since 1.69
+   */
+  protected static final String KEY_FORCE_PROXY = "force-proxy";
+
+  /**
+   * <p>
+   * Single letter for the force-proxy option ({@value}).
+   * </p>
+   * 
+   * @since 1.69
+   */
+  protected static final char LETTER_FORCE_PROXY = 'p';
+
+  /**
+   * <p>
+   * The force-proxy option.
+   * </p>
+   * 
+   * @since 1.69
+   */
+  protected static final Option OPTION_FORCE_PROXY =
+      OptionBuilder.withLongOpt(KEY_FORCE_PROXY)
+                   .hasArg()
+                   .withArgName("PROXY")
+                   .withDescription("forcibly include a proxy setting")
+                   .create(LETTER_FORCE_PROXY);
   
   /**
    * <p>
@@ -277,6 +309,7 @@ public class TdbXml {
     OutputDirectoryOption.addOptions(options);
     tdbQueryBuilder.addOptions(options);
     // Own options
+    options.addOption(OPTION_FORCE_PROXY);
     options.addOption(OPTION_NO_PUB_DOWN);
     options.addOption(OPTION_NO_TIMESTAMP);
   }
@@ -307,6 +340,7 @@ public class TdbXml {
       AppUtil.error("Cannot request both single and directory output");
     }
     // Own options
+    options.put(KEY_FORCE_PROXY, cmd.hasOption(KEY_FORCE_PROXY) ? cmd.getOptionValue(KEY_FORCE_PROXY) : null);
     options.put(KEY_NO_PUB_DOWN, Boolean.valueOf(cmd.hasOption(KEY_NO_PUB_DOWN)));
     options.put(KEY_NO_TIMESTAMP, Boolean.valueOf(cmd.hasOption(KEY_NO_TIMESTAMP)));
     return options;
@@ -445,7 +479,10 @@ public class TdbXml {
       }
 
       // au_proxy and pub_down
-      String proxy = au.getProxy();
+      String proxy = (String)options.get(KEY_FORCE_PROXY);
+      if (proxy == null) {
+        proxy = au.getProxy();
+      }
       if (proxy != null) {
         appendOneParam(sb, 98, "crawl_proxy", proxy);
       }
