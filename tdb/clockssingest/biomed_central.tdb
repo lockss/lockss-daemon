@@ -422,7 +422,7 @@
       au < finished ; crawling ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Complementary and Alternative Medicine Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Complementary and Alternative Medicine Volume 13 ; 13 >
-      au < notReady ; exists ; 2014 ; BMC Complementary and Alternative Medicine Volume 14 ; 14 >
+      au < testing ; exists ; 2014 ; BMC Complementary and Alternative Medicine Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; BMC Complementary and Alternative Medicine Volume 15 ; 15 >
 
     }
@@ -2727,7 +2727,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
       au < doNotProcess ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < notReady ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < testing ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
       }
       {
@@ -3185,7 +3185,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < frozen ; exists ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
-      au < notReady ; exists ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
+      au < testing ; exists ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
       
     }
@@ -3411,7 +3411,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2011 ; Critical Care Volume 15 ; 15 >
       au < doNotProcess ; exists ; 2012 ; Critical Care Volume 16 ; 16 >
       au < manifest ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
-      au < notReady ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
+      au < testing ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
       au < manifest ; exists ; 2015 ; Critical Care Volume 19 ; 19 >
       }
       {
