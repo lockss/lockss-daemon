@@ -929,6 +929,22 @@
     {
 
       title <
+        name = International Journal of Big Data Intelligence ;
+        issn = 2053-1389 ;
+        eissn = 2053-1397 ;
+        issnl = 2053-1389 
+      >
+
+      param[journal_id] = ijbdi
+
+      au < exists ; 2014 ; International Journal of Big Data Intelligence Volume 4 ; 4 >
+      au < exists ; 2015 ; International Journal of Big Data Intelligence Volume 5 ; 5 >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Bioinformatics Research and Applications ;
         issn = 1744-5485 ;
         eissn = 1744-5493 ;
@@ -1557,6 +1573,22 @@
     {
 
       title <
+        name = International Journal of Collaborative Intelligence ;
+        issn = 2051-7122 ;
+        eissn = 2051-7130 ;
+        issnl = 2051-7122
+      >
+
+      param[journal_id] = ijci
+
+      au < exists ; 2014 ; International Journal of Collaborative Intelligence Volume 1 ; 1 >
+      au < expected ; 2015 ; International Journal of Collaborative Intelligence Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Communication Networks and Distributed Systems ;
         issn = 1754-3916 ;
         eissn = 1754-3924 ;
@@ -2174,6 +2206,21 @@
     {
 
       title <
+        name = International Journal of Data Science ;
+        issn = 2053-0811 ;
+        eissn = 2053-082X ;
+        issnl = 2053-0811
+      >
+
+      param[journal_id] = ijds
+
+      au < exists ; 2015 ; International Journal of Data Science Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Decision Sciences, Risk and Management ;
         issn = 1753-7169 ;
         eissn = 1753-7177 ;
@@ -2251,7 +2298,7 @@
         issnl = 2046-3375
       >
 
-      param[journal_id] = IJDH
+      param[journal_id] = ijdh
 
       au < exists ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
 
@@ -3350,6 +3397,21 @@
     {
 
       title <
+        name = International Journal of Fuzzy Computation and Modelling ;
+        issn = 2052-353X ;
+        eissn = 2052-3548 ;
+        issnl = 2052-353X
+      >
+
+      param[journal_id] = ijfcm
+
+      au < exists ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Global Energy Issues ;
         issn = 0954-7118 ;
         eissn = 1741-5128 ;
@@ -3730,6 +3792,21 @@
       au < manifest ; 2013 ; International Journal of Hydrology Science and Technology Volume 3 ; 3 >
       au < manifest ; 2014 ; International Journal of Hydrology Science and Technology Volume 4 ; 4 >
       au < manifest ; 2015 ; International Journal of Hydrology Science and Technology Volume 5 ; 5 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Image Mining ;
+        issn = 2055-6039 ;
+        eissn = 2055-6047 ;
+        issnl = 2055-6039
+      >
+
+      param[journal_id] = ijim
+
+      au < exists ; 2015 ; International Journal of Image Mining Volume 1 ; 1 >
 
     }
 
@@ -7142,6 +7219,21 @@
       au < manifest ; 2013 ; International Journal of Society Systems Science Volume 5 ; 5 >
       au < manifest ; 2014 ; International Journal of Society Systems Science Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Society Systems Science Volume 7 ; 7 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Software Engineering, Technology and Applications ;
+        issn = 2053-2466 ;
+        eissn = 2053-2474 ;
+        issnl = 2053-2466
+      >
+
+      param[journal_id] = ijseta
+
+      au < exists ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 >
 
     }
 
