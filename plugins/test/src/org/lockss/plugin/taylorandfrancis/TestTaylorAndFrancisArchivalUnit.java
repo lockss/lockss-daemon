@@ -262,7 +262,7 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
 
   public void testCrawlRateWindow() throws Exception {
  
-    String slowrate = "1/5s";
+    String slowrate = "1/3500";
     String fastrate = "1/2s";
   
     DefinableArchivalUnit au =

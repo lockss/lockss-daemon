@@ -136,6 +136,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // DROP "Jump to section" popup menus [full]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationNavigation"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "title", "(Next|Previous) issue"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "breadcrumb"),
+            //descriptive text that often changes
+            HtmlNodeFilters.tagWithAttribute("td", "class", "note"),
             new NodeFilter() {
               @Override
               public boolean accept(Node node) {

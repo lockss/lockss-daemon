@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,7 +58,7 @@ public class TestTafCrawlWindow extends LockssTestCase {
   
   protected SimpleDateFormat gmtSdf;
   
-  public String slowRate = "1/5s";
+  public String slowRate = "1/3500";
   public String fastRate = "1/2s";
   
   public void setUp() throws Exception {

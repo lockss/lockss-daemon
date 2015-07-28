@@ -17,7 +17,7 @@
   </entry>   
   <entry>
     <string>plugin_version</string>
-    <string>69</string>
+    <string>70</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
   <entry>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>36</string>
+    <string>38</string>
   </entry>   
   <entry>
     <string>plugin_feature_version_map</string>
@@ -37,7 +37,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>36</string>
+        <string>37</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -105,7 +105,7 @@
     <string>au_rate_limiter_info</string>
     <org.lockss.plugin.RateLimiterInfo>
       <!-- This very next rate is there only for the plugin to be well-formed, it does not actually have any effect -->
-      <rate>1/5s</rate>
+      <rate>1/3500</rate>
       <cond>
         <!-- Weekdays during requested times, 1/5s -->
         <entry>
@@ -116,7 +116,7 @@
             <daysOfWeek>2;3;4;5;6</daysOfWeek>
           </org.lockss.daemon.CrawlWindows-Daily>
           <org.lockss.plugin.RateLimiterInfo>
-            <rate>1/5s</rate>
+            <rate>1/3500</rate>
           </org.lockss.plugin.RateLimiterInfo>
         </entry>
         <!-- the rest of the time, 1/2s -->
@@ -140,10 +140,10 @@
   <!-- Candidate to be hoisted into BaseAtyponPlugin -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>://[^/]+/((css|img|js)Jawr/|templates/jsp/|[^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=|sda/)</string>
+    <string>://[^/]+/((css|img|js)Jawr/|templates/jsp/|[^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=|sda/|.+[.]fp[.]png_v[0-9]+$)</string>
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>[.](css|js)$</string>
+    <string>"^%s(sda/|templates/jsp/|.*\.(css|js)$)", base_url</string>
   </entry>
 </map>
