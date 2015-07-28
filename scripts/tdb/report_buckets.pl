@@ -1,4 +1,4 @@
-﻿#!/usr/bin/perl
+#!/usr/bin/perl
 #
 # Read in two reports of AUids and status. Generate a count
 # of category crossings.
