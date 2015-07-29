@@ -40036,8 +40036,6 @@ comment[mpj] = now published by Brill
         eissn = 2329-4973
       >
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://scu.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -40045,7 +40043,20 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; Social Currents Volume 1 ; 1 >
         au < manifest ; 2015 ; Social Currents Volume 2 ; 2 >
 
-      }
+    }
+
+    {
+
+    title <
+      name = Social Media + Society ;
+      eissn = 2056-3051
+    >
+
+      param[base_url] = http://sms.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Social Media + Society Volume 1 ; 1 >
 
     }
 
