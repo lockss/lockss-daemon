@@ -36673,16 +36673,25 @@
       eissn = 2329-4973
     >
 
-    param[base_url] = http://scu.sagepub.com/
-
-    {
-
+      param[base_url] = http://scu.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2014 ; Social Currents Volume 1 ; 1 ; >
       au < manifest ; exists ; 2015 ; Social Currents Volume 2 ; 2 ; >
 
-    }
+  }
+
+  {
+
+    title <
+      name = Social Media + Society ;
+      eissn = 2056-3051
+    >
+
+      param[base_url] = http://sms.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Social Media + Society Volume 1 ; 1 ; >
 
   }
 
