@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.2.3'
+__version__ = '0.2.4'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
@@ -137,14 +137,6 @@ def get_au_status(host, auth, auid):
   return _ws_port(host, auth).getAuStatus(req).Return
 
 def get_auids(host, auth):
-  '''Convenience call to get_auids_names() that returns a list of only AUIDs.
-  Parameters:
-  - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
-  '''
-  return [r.Id for r in get_auids_names(host, auth)]
-
-def get_auids_names(host, auth):
   '''Performs a getAuids operation on the given host, which really produces a
   sequence of all AUIDs with the AU names, and returns a list of records with
   these fields:
@@ -428,10 +420,10 @@ def _do_get_au_status(options):
   print 'Year: %s' % (r.Year,)
 
 def _do_get_auids(options):
-  for auid in get_auids(options.host, options.auth): print auid
+  for r in get_auids(options.host, options.auth): print r.Id
 
 def _do_get_auids_names(options):
-  for r in get_auids_names(options.host, options.auth): _output_record(options, [r.Id, r.Name])
+  for r in get_auids(options.host, options.auth): _output_record(options, [r.Id, r.Name])
 
 def _do_get_peer_agreements(options):
   pa = get_peer_agreements(options.host, options.auth, options.auid)
