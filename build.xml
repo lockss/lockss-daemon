@@ -321,7 +321,7 @@ Args:
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
   
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.8.9" />
+  <property name="pdfbox.version" value="1.8.10" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
   <!-- Next 8 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
@@ -330,7 +330,7 @@ Args:
   <property name="bouncycastle.version" value="jdk15on-152" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="54_1_1" />
+  <property name="icu4j.version" value="55_1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
