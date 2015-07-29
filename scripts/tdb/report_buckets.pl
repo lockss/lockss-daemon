@@ -33,11 +33,10 @@ my %code = ("notPresent" => 0,
     "down" => 14,
     "superseded" => 15,
     "zapped" => 16,
-    "superseded" => 17,
-    "doNotProcess" => 18,
-    "doesNotExist" => 19,
-    "other" => 20,
-    "deleted" => 21);
+    "doNotProcess" => 17,
+    "doesNotExist" => 18,
+    "other" => 19,
+    "deleted" => 20);
 
 my %auid_status = ();
 
