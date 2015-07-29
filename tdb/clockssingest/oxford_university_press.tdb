@@ -2767,10 +2767,10 @@
     param[base_url] = http://bja.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; exists ; 2008 ; British Journal of Anaesthesia Volume 100 [superseded] ; 100 ; >
-    au < superseded ; exists ; 2008 ; British Journal of Anaesthesia Volume 101 [superseded] ; 101 ; >
-    au < superseded ; exists ; 2009 ; British Journal of Anaesthesia Volume 102 [superseded] ; 102 ; reingest2.clockss.org:8085 >
-    au < superseded ; exists ; 2009 ; British Journal of Anaesthesia Volume 103 [superseded] ; 103 ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 2008 ; British Journal of Anaesthesia Volume 100 [superseded] ; 100 ; >
+    au < superseded ; down ; 2008 ; British Journal of Anaesthesia Volume 101 [superseded] ; 101 ; >
+    au < superseded ; down ; 2009 ; British Journal of Anaesthesia Volume 102 [superseded] ; 102 ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 2009 ; British Journal of Anaesthesia Volume 103 [superseded] ; 103 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -19710,7 +19710,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
     au < finished ; frozen ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 ; >
     au < finished ; crawling ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 ; >
-    au < down ; manifest ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
+    au < down ; crawling ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
     au < down ; manifest ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
 
     }
@@ -19963,7 +19963,7 @@
     au < ready ; exists ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
     au < finished ; crawling ; 2010 ; The Quarterly Journal of Mathematics Volume 61 ; 61 ; >
     au < finished ; crawling ; 2011 ; The Quarterly Journal of Mathematics Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
+    au < frozen ; crawling ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Quarterly Journal of Mathematics Volume 64 ; 64 ; >
     au < frozen ; exists ; 2014 ; The Quarterly Journal of Mathematics Volume 65 ; 65 ; >
     au < manifest ; exists ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 ; >
@@ -20060,7 +20060,7 @@
     au < ready ; exists ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
     au < finished ; crawling ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
     au < finished ; frozen ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
-    au < frozen ; exists ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
+    au < frozen ; crawling ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 66 ; 66 ; >
     au < crawling ; exists ; 2014 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 67 ; 67 ; >
     au < manifest ; exists ; 2015 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 68 ; 68 ; >
@@ -20246,7 +20246,7 @@
     au < finished ; crawling ; 2011 ; Radiation Protection Dosimetry Volume 145 ; 145 ; >
     au < finished ; frozen ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 ; >
     au < finished ; frozen ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 ; >
-    au < frozen ; exists ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
+    au < frozen ; crawling ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 ; >
     au < finished ; crawling ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 ; >
@@ -20325,7 +20325,7 @@
     au < finished ; crawling ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; >
     au < finished ; crawling ; 2010 ; Refugee Survey Quarterly Volume 29 ; 29 ; >
     au < finished ; crawling ; 2011 ; Refugee Survey Quarterly Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
+    au < crawling ; crawling ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Refugee Survey Quarterly Volume 32 ; 32 ; >
     au < crawling ; exists ; 2014 ; Refugee Survey Quarterly Volume 33 ; 33 ; >
     au < manifest ; exists ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 ; >
@@ -20490,7 +20490,7 @@
     param[base_url] = http://rcfs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < crawling ; exists ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
+    au < crawling ; crawling ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
     au < frozen ; exists ; 2013 ; Review of Corporate Finance Studies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2014 ; Review of Corporate Finance Studies Volume 3 ; 3 ; >
     au < expected ; exists ; 2015 ; Review of Corporate Finance Studies Volume 4 ; 4 ; >
@@ -20697,7 +20697,7 @@
     au < finished ; crawling ; 2009 ; The Review of English Studies Volume 60 ; 60 ; >
     au < finished ; frozen ; 2010 ; The Review of English Studies Volume 61 ; 61 ; >
     au < finished ; frozen ; 2011 ; The Review of English Studies Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2012 ; The Review of English Studies Volume 63 ; 63 ; >
+    au < frozen ; crawling ; 2012 ; The Review of English Studies Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Review of English Studies Volume 64 ; 64 ; >
     au < crawling ; exists ; 2014 ; The Review of English Studies Volume 65 ; 65 ; >
     au < manifest ; exists ; 2015 ; The Review of English Studies Volume 66 ; 66 ; >
@@ -21338,7 +21338,7 @@
     au < zapped ; finished ; 2009 ; Social History of Medicine Volume 22 ; 22 ; >
     au < finished ; frozen ; 2010 ; Social History of Medicine Volume 23 ; 23 ; >
     au < finished ; frozen ; 2011 ; Social History of Medicine Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
+    au < crawling ; crawling ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Social History of Medicine Volume 26 ; 26 ; >
     au < crawling ; exists ; 2014 ; Social History of Medicine Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2015 ; Social History of Medicine Volume 28 ; 28 ; >
@@ -21590,7 +21590,7 @@
     au < finished ; crawling ; 2009 ; Social Work Volume 54 ; 54 ; >
     au < zapped ; finished ; 2010 ; Social Work Volume 55 ; 55 ; >
     au < finished ; crawling ; 2011 ; Social Work Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2012 ; Social Work Volume 57 ; 57 ; >
+    au < crawling ; crawling ; 2012 ; Social Work Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; Social Work Volume 58 ; 58 ; >
     au < frozen ; exists ; 2014 ; Social Work Volume 59 ; 59 ; >
     au < manifest ; exists ; 2015 ; Social Work Volume 60 ; 60 ; >
@@ -21627,7 +21627,7 @@
     au < zapped ; finished ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < zapped ; finished ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < finished ; crawling ; 2011 ; Social Work Research Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2012 ; Social Work Research Volume 36 ; 36 ; >
+    au < crawling ; crawling ; 2012 ; Social Work Research Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Social Work Research Volume 37 ; 37 ; >
     au < crawling ; exists ; 2014 ; Social Work Research Volume 38 ; 38 ; >
     au < manifest ; exists ; 2015 ; Social Work Research Volume 39 ; 39 ; >
@@ -22524,7 +22524,7 @@
     au < frozen ; exists ; 2009 ; Uniform Law Review - Revue de droit uniforme Volume 14 ; 14 ; >
     au < crawling ; exists ; 2010 ; Uniform Law Review - Revue de droit uniforme Volume 15 ; 15 ; >
     au < crawling ; exists ; 2011 ; Uniform Law Review - Revue de droit uniforme Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ; >
+    au < frozen ; crawling ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 ; >
     au < crawling ; exists ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ; >
