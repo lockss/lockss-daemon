@@ -440,15 +440,15 @@
     comment[3] = AUs not added to ingest machines, but added to production machines in error.
     comment[notReady] = no substance
     
-    au < crawling ; down ; 1994 ; History and Computing Volume 6 (1994) ; 6 >
-    au < crawling ; down ; 1995 ; History and Computing Volume 7 (1995) ; 7 >
-    au < crawling ; down ; 1996 ; History and Computing Volume 8 (1996) ; 8 >
-    au < crawling ; down ; 1997 ; History and Computing Volume 9 (1997) ; 9 >
-    au < notReady ; down ; 1998 ; History and Computing Volume 10 (1998) ; 10 >
-    au < crawling ; down ; 1999 ; History and Computing Volume 11 (1999) ; 11 >
-    au < crawling ; down ; 2000 ; History and Computing Volume 12 (2000) ; 12 >
-    au < crawling ; down ; 2001 ; History and Computing Volume 13 (2001) ; 13 >
-    au < crawling ; down ; 2002 ; History and Computing Volume 14 (2002) ; 14 >
+    au < crawling ; crawling ; 1994 ; History and Computing Volume 6 (1994) ; 6 >
+    au < crawling ; crawling ; 1995 ; History and Computing Volume 7 (1995) ; 7 >
+    au < crawling ; crawling ; 1996 ; History and Computing Volume 8 (1996) ; 8 >
+    au < crawling ; crawling ; 1997 ; History and Computing Volume 9 (1997) ; 9 >
+    au < testing ; down ; 1998 ; History and Computing Volume 10 (1998) ; 10 >
+    au < crawling ; crawling ; 1999 ; History and Computing Volume 11 (1999) ; 11 >
+    au < crawling ; crawling ; 2000 ; History and Computing Volume 12 (2000) ; 12 >
+    au < crawling ; crawling ; 2001 ; History and Computing Volume 13 (2001) ; 13 >
+    au < crawling ; crawling ; 2002 ; History and Computing Volume 14 (2002) ; 14 >
     
     }
 
