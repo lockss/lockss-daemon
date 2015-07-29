@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-'''A module to interact with the LOCKSS daemon status service via its Web
-Services API.'''
+'''A library and a command line tool to interact with the LOCKSS daemon status
+service via its Web Services API.'''
 
 # $Id$
 
@@ -33,12 +33,12 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.2.2'
+__version__ = '0.2.3'
 
 import DaemonStatusServiceImplService_client
 from ZSI.auth import AUTH
 
-import datetime
+from datetime import date, datetime
 import getpass
 import optparse
 import sys
@@ -55,16 +55,25 @@ def auth(u, p):
   '''
   return (AUTH.httpbasic, u, p)
 
-def datetime_from_ms(ms):
+def datetimems(ms):
   '''Returns a datetime instance from a date and time expressed in milliseconds
   since epoch (or None if the input is None).
   Parameters:
   - ms (numeric): a number of milliseconds since epoch
   '''
   if ms is None: return None
-  return datetime.datetime.fromtimestamp(ms / 1000)
+  return datetime.fromtimestamp(ms / 1000)
 
-def duration_from_ms(ms):
+def datems(ms):
+  '''Returns a date instance from a date and time expressed in milliseconds
+  since epoch (or None if the input is None).
+  Parameters:
+  - ms (numeric): a number of milliseconds since epoch
+  '''
+  if ms is None: return None
+  return date.fromtimestamp(ms / 1000)
+
+def durationms(ms):
   '''Returns an approximate text representation of the number of milliseconds
   given. The result is of one of the following forms:
   - 123ms (milliseconds)
@@ -367,18 +376,18 @@ class _DaemonStatusServiceOptions(object):
     group.add_option('--username', metavar='USER', help='UI username (default: interactive prompt)')
     parser.add_option_group(group)
     group = optparse.OptionGroup(parser, 'Daemon operations')
-    group.add_option('--get-auids', action='store_true', default=False, help='Outputs all AUIDs')
-    group.add_option('--get-auids-names', action='store_true', default=False, help='Outputs all AUIDs and names')
-    group.add_option('--get-platform-configuration', action='store_true', default=False, help='Outputs the platform configuration')
-    group.add_option('--is-daemon-ready', action='store_true', default=False, help='Outputs True or False, always exits with 0')
-    group.add_option('--is-daemon-ready-quiet', action='store_true', default=False, help='Outputs nothing, exits with 0 for True and 1 for False')
+    group.add_option('--get-auids', action='store_true', default=False, help='output all AUIDs')
+    group.add_option('--get-auids-names', action='store_true', default=False, help='output all AUIDs and names')
+    group.add_option('--get-platform-configuration', action='store_true', default=False, help='output the platform configuration')
+    group.add_option('--is-daemon-ready', action='store_true', default=False, help='output True or False, always exit with 0')
+    group.add_option('--is-daemon-ready-quiet', action='store_true', default=False, help='output nothing, exit with 0 for True and 1 for False')
     parser.add_option_group(group)
     group = optparse.OptionGroup(parser, 'AU operations')
-    group.add_option('--get-au-status', metavar='AUID', help='Outputs all status information for the AUID')
-    group.add_option('--get-peer-agreements', metavar='AUID', help='Outputs the peer agreements for the AUID')
+    group.add_option('--get-au-status', metavar='AUID', help='output all status information for the AUID')
+    group.add_option('--get-peer-agreements', metavar='AUID', help='output the peer agreements for the AUID')
     parser.add_option_group(group)
     group = optparse.OptionGroup(parser, 'Query operations')
-    group.add_option('--query-aus', metavar='CSFIELDS', help='Comma-separated fields for the SELECT clause of an AU query; chosen among %s ' % (sorted(_QUERY_AUS),))
+    group.add_option('--query-aus', metavar='FIELDS', help='comma-separated fields for the SELECT clause of an AU query; chosen among %s' % (', '.join(sorted(_QUERY_AUS))))
     group.add_option('--where', help='optional WHERE clause for query operations')
     parser.add_option_group(group)
     return parser
@@ -396,16 +405,16 @@ def _do_get_au_status(options):
   print 'Crawl pool: %s' % (r.CrawlPool,)
   print 'Crawl proxy: %s' % (r.CrawlProxy,)
   print 'Crawl window: %s' % (r.CrawlWindow,)
-  print 'Creation time: %s' % (datetime_from_ms(r.CreationTime),)
+  print 'Creation time: %s' % (datetimems(r.CreationTime),)
   print 'Currently crawling: %s' % (r.CurrentlyCrawling,)
   print 'Currently polling: %s' % (r.CurrentlyPolling,)
   print 'Disk usage: %s' % (r.DiskUsage,)
   print 'Journal title: %s' % (r.JournalTitle,)
-  print 'Last completed crawl: %s' % (datetime_from_ms(r.LastCompletedCrawl),)
-  print 'Last completed poll: %s' % (datetime_from_ms(r.LastCompletedPoll),)
-  print 'Last crawl: %s' % (datetime_from_ms(r.LastCrawl),)
+  print 'Last completed crawl: %s' % (datetimems(r.LastCompletedCrawl),)
+  print 'Last completed poll: %s' % (datetimems(r.LastCompletedPoll),)
+  print 'Last crawl: %s' % (datetimems(r.LastCrawl),)
   print 'Last crawl result: %s' % (r.LastCrawlResult,)
-  print 'Last poll: %s' % (datetime_from_ms(r.LastPoll),)
+  print 'Last poll: %s' % (datetimems(r.LastPoll),)
   print 'Last poll result: %s' % (r.LastPollResult,)
   print 'Plugin name: %s' % (r.PluginName,)
   print 'Publisher: %s' % (r.Publisher,)
@@ -431,14 +440,14 @@ def _do_get_peer_agreements(options):
     return
   for pae in pa:
     for ae in pae.Agreements.Entry:
-      _output_record(options, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetime_from_ms(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetime_from_ms(ae.Value.HighestPercentAgreementTimestamp)])
+      _output_record(options, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetimems(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetimems(ae.Value.HighestPercentAgreementTimestamp)])
 
 def _do_get_platform_configuration(options):
   r = get_platform_configuration(options.host, options.auth)
   print 'Admin e-mail: %s' % (r.AdminEmail,)
   print 'Build host: %s' % (r.BuildHost,)
-  print 'Build timestamp: %s' % (datetime_from_ms(r.BuildTimestamp),)
-  print 'Current time: %s' % (datetime_from_ms(r.CurrentTime),)
+  print 'Build timestamp: %s' % (datetimems(r.BuildTimestamp),)
+  print 'Current time: %s' % (datetimems(r.CurrentTime),)
   print 'Current working directory: %s' % (r.CurrentWorkingDirectory,)
   print 'Daemon version:'
   print '\tBuild version: %s' % (r.DaemonVersion.BuildVersion,)
@@ -461,7 +470,7 @@ def _do_get_platform_configuration(options):
   print '\tVersion: %s' % (r.Platform.Version,)
   print 'Project: %s' % (r.Project,)
   print 'Properties: %s' % (', '.join(r.Properties),)
-  print 'Uptime: %s' % (duration_from_ms(r.Uptime),)
+  print 'Uptime: %s' % (durationms(r.Uptime),)
   print 'V3 identity: %s' % (r.V3Identity,)
 
 def _do_is_daemon_ready(options):
@@ -481,16 +490,16 @@ _QUERY_AUS = {
   'crawlPool': lambda r: r.CrawlPool,
   'crawlProxy': lambda r: r.CrawlProxy,
   'crawlWindow': lambda r: r.CrawlWindow,
-  'creationTime': lambda r: datetime_from_ms(r.CreationTime),
+  'creationTime': lambda r: datetimems(r.CreationTime),
   'currentlyCrawling': lambda r: r.CurrentlyCrawling,
   'currentlyPolling': lambda r: r.CurrentlyPolling,
   'diskUsage': lambda r: r.DiskUsage,
   'isBulkContent': lambda r: r.IsBulkContent,
-  'lastCompletedCrawl': lambda r: datetime_from_ms(r.LastCompletedCrawl),
-  'lastCompletedPoll': lambda r: datetime_from_ms(r.LastCompletedPoll),
-  'lastCrawl': lambda r: datetime_from_ms(r.LastCrawl),
+  'lastCompletedCrawl': lambda r: datetimems(r.LastCompletedCrawl),
+  'lastCompletedPoll': lambda r: datetimems(r.LastCompletedPoll),
+  'lastCrawl': lambda r: datetimems(r.LastCrawl),
   'lastCrawlResult': lambda r: r.LastCrawlResult,
-  'lastPoll': lambda r: datetime_from_ms(r.LastPoll),
+  'lastPoll': lambda r: datetimems(r.LastPoll),
   'lastPollResult': lambda r: r.LastPollResult,
   'name': lambda r: r.Name,
   'newContentCrawlUrls': lambda r: r.NewContentCrawlUrls,
