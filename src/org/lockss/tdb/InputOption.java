@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -104,11 +104,12 @@ public class InputOption {
    * @since 1.67
    */
   protected static final Option OPTION_INPUT =
-      OptionBuilder.withLongOpt(KEY_INPUT)
-                   .hasArg()
-                   .withArgName(ARG_INPUT)
-                   .withDescription(String.format("read input from %s instead of list of input files", ARG_INPUT))
-                   .create(LETTER_INPUT);
+      Option.builder(Character.toString(LETTER_INPUT))
+            .longOpt(KEY_INPUT)
+            .hasArg()
+            .argName(ARG_INPUT)
+            .desc(String.format("read input from %s instead of list of input files", ARG_INPUT))
+            .build();
   
   /**
    * <p>

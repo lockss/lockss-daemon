@@ -48,7 +48,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.2.1]";
+  public static final String VERSION = "[TdbOut:0.2.2]";
   
   /**
    * <p>
@@ -124,11 +124,12 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_STYLE =
-      OptionBuilder.withLongOpt(KEY_STYLE)
-                   .hasArg()
-                   .withArgName(ARG_STYLE)
-                   .withDescription(String.format("use output style %s %s", ARG_STYLE, CHOICES_STYLE))
-                   .create(LETTER_STYLE);
+      Option.builder(Character.toString(LETTER_STYLE))
+            .longOpt(KEY_STYLE)
+            .hasArg()
+            .argName(ARG_STYLE)
+            .desc(String.format("use output style %s %s", ARG_STYLE, CHOICES_STYLE))
+            .build();
 
   /**
    * <p>
@@ -165,11 +166,12 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_FIELDS =
-      OptionBuilder.withLongOpt(KEY_FIELDS)
-                   .hasArg()
-                   .withArgName(ARG_FIELDS)
-                   .withDescription("comma-separated list of fields to output")
-                   .create(LETTER_FIELDS);
+      Option.builder(Character.toString(LETTER_FIELDS))
+            .longOpt(KEY_FIELDS)
+            .hasArg()
+            .argName(ARG_FIELDS)
+            .desc("comma-separated list of fields to output")
+            .build();
   
   /**
    * <p>
@@ -197,9 +199,10 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_AUID =
-      OptionBuilder.withLongOpt(KEY_AUID)
-                   .withDescription(String.format("short for --%s=%s --%s=auid", KEY_STYLE, STYLE_LIST, KEY_FIELDS))
-                   .create(LETTER_AUID);
+      Option.builder(Character.toString(LETTER_AUID))
+            .longOpt(KEY_AUID)
+            .desc(String.format("short for --%s=%s --%s=auid", KEY_STYLE, STYLE_LIST, KEY_FIELDS))
+            .build();
   
   /**
    * <p>
@@ -227,9 +230,10 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_AUIDPLUS =
-      OptionBuilder.withLongOpt(KEY_AUIDPLUS)
-                   .withDescription(String.format("short for --%s=%s --%s=auidplus", KEY_STYLE, STYLE_LIST, KEY_FIELDS))
-                   .create(LETTER_AUIDPLUS);
+      Option.builder(Character.toString(LETTER_AUIDPLUS))
+            .longOpt(KEY_AUIDPLUS)
+            .desc(String.format("short for --%s=%s --%s=auidplus", KEY_STYLE, STYLE_LIST, KEY_FIELDS))
+            .build();
   
   /**
    * <p>
@@ -257,9 +261,10 @@ public class TdbOut {
    * @since 1.68
    */
   protected static final Option OPTION_COUNT =
-      OptionBuilder.withLongOpt(KEY_COUNT)
-                   .withDescription("prints a count of matching AUs")
-                   .create(LETTER_COUNT);
+      Option.builder(Character.toString(LETTER_COUNT))
+            .longOpt(KEY_COUNT)
+            .desc("print a count of matching AUs")
+            .build();
   
   /**
    * <p>
@@ -296,11 +301,12 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_CSV =
-      OptionBuilder.withLongOpt(KEY_CSV)
-                   .hasArg()
-                   .withArgName(ARG_CSV)
-                   .withDescription(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_CSV, KEY_FIELDS, ARG_CSV))
-                   .create(LETTER_CSV);
+      Option.builder(Character.toString(LETTER_CSV))
+            .longOpt(KEY_CSV)
+            .hasArg()
+            .argName(ARG_CSV)
+            .desc(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_CSV, KEY_FIELDS, ARG_CSV))
+            .build();
   
   /**
    * <p>
@@ -328,9 +334,10 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_JOURNALS =
-      OptionBuilder.withLongOpt(KEY_JOURNALS)
-                   .withDescription("iterate over titles (not AUs) and output a CSV list of publishers, titles, ISSNs and eISSNs")
-                   .create(LETTER_JOURNALS);
+      Option.builder(Character.toString(LETTER_JOURNALS))
+            .longOpt(KEY_JOURNALS)
+            .desc("iterate over titles (not AUs) and output a CSV list of publishers, titles, ISSNs and eISSNs")
+            .build();
   
   /**
    * <p>
@@ -367,11 +374,12 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_LIST =
-      OptionBuilder.withLongOpt(KEY_LIST)
-                   .hasArg()
-                   .withArgName(ARG_LIST)
-                   .withDescription(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_LIST, KEY_FIELDS, ARG_LIST))
-                   .create(LETTER_LIST);
+      Option.builder(Character.toString(LETTER_LIST))
+            .longOpt(KEY_LIST)
+            .hasArg()
+            .argName(ARG_LIST)
+            .desc(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_LIST, KEY_FIELDS, ARG_LIST))
+            .build();
   
   /**
    * <p>
@@ -408,11 +416,12 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_TSV =
-      OptionBuilder.withLongOpt(KEY_TSV)
-                   .hasArg()
-                   .withArgName(ARG_TSV)
-                   .withDescription(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_TSV, KEY_FIELDS, ARG_TSV))
-                   .create(LETTER_TSV);
+      Option.builder(Character.toString(LETTER_TSV))
+            .longOpt(KEY_TSV)
+            .hasArg()
+            .argName(ARG_TSV)
+            .desc(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_TSV, KEY_FIELDS, ARG_TSV))
+            .build();
   
   /**
    * <p>
@@ -431,9 +440,10 @@ public class TdbOut {
    * @since 1.67
    */
   protected static final Option OPTION_TYPE_JOURNAL =
-      OptionBuilder.withLongOpt(KEY_TYPE_JOURNAL)
-                   .withDescription(String.format("with --%s, output only titles of type '%s'", KEY_JOURNALS, Title.TYPE_JOURNAL))
-                   .create();
+      Option.builder()
+            .longOpt(KEY_TYPE_JOURNAL)
+            .desc(String.format("with --%s, output only titles of type '%s'", KEY_JOURNALS, Title.TYPE_JOURNAL))
+            .build();
   
   /**
    * <p>
@@ -821,10 +831,9 @@ public class TdbOut {
    * @since 1.67
    */
   public void run(String[] mainArgs) throws Exception {
-    AppUtil.fixMainArgsForCommonsCli(mainArgs);
     Options options = new Options();
     addOptions(options);
-    CommandLine clicmd = new PosixParser().parse(options, mainArgs);
+    CommandLine clicmd = new DefaultParser().parse(options, mainArgs);
     CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
     // Short-circuit options
     HelpOption.processCommandLine(cmd, options, getClass());

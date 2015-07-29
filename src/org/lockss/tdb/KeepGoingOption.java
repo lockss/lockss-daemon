@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -92,9 +92,10 @@ public class KeepGoingOption {
    * @since 1.67
    */
   protected static final Option OPTION_KEEP_GOING =
-      OptionBuilder.withLongOpt(KEY_KEEP_GOING)
-                   .withDescription(String.format("do not stop at the first error; keep going until all files are processed"))
-                   .create(LETTER_KEEP_GOING);
+      Option.builder(Character.toString(LETTER_KEEP_GOING))
+            .longOpt(KEY_KEEP_GOING)
+            .desc(String.format("do not stop at the first error; keep going until all files are processed"))
+            .build();
   
 
   /**

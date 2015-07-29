@@ -77,7 +77,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.2.1]";
+  public static final String VERSION = "[TdbQueryBuilder:0.2.2]";
   
   /**
    * <p>
@@ -144,9 +144,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_ALL =
-      OptionBuilder.withLongOpt(KEY_ALL)
-                   .withDescription(String.format("include all testable (pre-production and production) statuses in secondary query %s", ALL_STATUSES))
-                   .create(LETTER_ALL);
+      Option.builder(Character.toString(LETTER_ALL))
+            .longOpt(KEY_ALL)
+            .desc(String.format("include all testable (pre-production and production) statuses in secondary query %s", ALL_STATUSES))
+            .build();
   
   /**
    * <p>
@@ -165,9 +166,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_ALLIANCE =
-      OptionBuilder.withLongOpt(KEY_ALLIANCE)
-                   .withDescription(String.format("include only AUs whose plugin is not in the non-Alliance set"))
-                   .create();
+      Option.builder()
+            .longOpt(KEY_ALLIANCE)
+            .desc(String.format("include only AUs whose plugin is not in the non-Alliance set"))
+            .build();
   
   /**
    * <p>
@@ -210,9 +212,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_CLOCKSS_PRESERVED =
-      OptionBuilder.withLongOpt(KEY_CLOCKSS_PRESERVED)
-                   .withDescription(String.format("include all CLOCKSS production statuses fit for 'Preserved' Keepers label in secondary query %s", CLOCKSS_PRESERVED_STATUSES))
-                   .create(LETTER_CLOCKSS_PRESERVED);
+      Option.builder(Character.toString(LETTER_CLOCKSS_PRESERVED))
+            .longOpt(KEY_CLOCKSS_PRESERVED)
+            .desc(String.format("include all CLOCKSS production statuses fit for 'Preserved' Keepers label in secondary query %s", CLOCKSS_PRESERVED_STATUSES))
+            .build();
   
   /**
    * <p>
@@ -265,9 +268,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_CLOCKSS_PRODUCTION =
-      OptionBuilder.withLongOpt(KEY_CLOCKSS_PRODUCTION)
-                   .withDescription(String.format("include all CLOCKSS production statuses in secondary query %s", CLOCKSS_PRODUCTION_STATUSES))
-                   .create(LETTER_CLOCKSS_PRODUCTION);
+      Option.builder(Character.toString(LETTER_CLOCKSS_PRODUCTION))
+            .longOpt(KEY_CLOCKSS_PRODUCTION)
+            .desc(String.format("include all CLOCKSS production statuses in secondary query %s", CLOCKSS_PRODUCTION_STATUSES))
+            .build();
   
   /**
    * <p>
@@ -295,9 +299,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_CRAWLING =
-      OptionBuilder.withLongOpt(KEY_CRAWLING)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_CRAWLING))
-                   .create(LETTER_CRAWLING);
+      Option.builder(Character.toString(LETTER_CRAWLING))
+            .longOpt(KEY_CRAWLING)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_CRAWLING))
+            .build();
 
   /**
    * <p>
@@ -325,9 +330,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_DEEP_CRAWL =
-      OptionBuilder.withLongOpt(KEY_DEEP_CRAWL)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_DEEP_CRAWL))
-                   .create(LETTER_DEEP_CRAWL);
+      Option.builder(Character.toString(LETTER_DEEP_CRAWL))
+            .longOpt(KEY_DEEP_CRAWL)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_DEEP_CRAWL))
+            .build();
 
   /**
    * <p>
@@ -355,9 +361,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_DOWN =
-      OptionBuilder.withLongOpt(KEY_DOWN)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_DOWN))
-                   .create(LETTER_DOWN);
+      Option.builder(Character.toString(LETTER_DOWN))
+            .longOpt(KEY_DOWN)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_DOWN))
+            .build();
 
   /**
    * <p>
@@ -385,9 +392,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_EXISTS =
-      OptionBuilder.withLongOpt(KEY_EXISTS)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_EXISTS))
-                   .create(LETTER_EXISTS);
+      Option.builder(Character.toString(LETTER_EXISTS))
+            .longOpt(KEY_EXISTS)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_EXISTS))
+            .build();
 
   /**
    * <p>
@@ -415,9 +423,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_EXPECTED =
-      OptionBuilder.withLongOpt(KEY_EXPECTED)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_EXPECTED))
-                   .create(LETTER_EXPECTED);
+      Option.builder(Character.toString(LETTER_EXPECTED))
+            .longOpt(KEY_EXPECTED)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_EXPECTED))
+            .build();
 
   /**
    * <p>
@@ -445,9 +454,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_FINISHED =
-      OptionBuilder.withLongOpt(KEY_FINISHED)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_FINISHED))
-                   .create(LETTER_FINISHED);
+      Option.builder(Character.toString(LETTER_FINISHED))
+            .longOpt(KEY_FINISHED)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_FINISHED))
+            .build();
 
   /**
    * <p>
@@ -475,9 +485,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_FROZEN =
-      OptionBuilder.withLongOpt(KEY_FROZEN)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_FROZEN))
-                   .create(LETTER_FROZEN);
+      Option.builder(Character.toString(LETTER_FROZEN))
+            .longOpt(KEY_FROZEN)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_FROZEN))
+            .build();
 
   /**
    * <p>
@@ -505,9 +516,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_ING_NOT_READY =
-      OptionBuilder.withLongOpt(KEY_ING_NOT_READY)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_ING_NOT_READY))
-                   .create(LETTER_ING_NOT_READY);
+      Option.builder(Character.toString(LETTER_ING_NOT_READY))
+            .longOpt(KEY_ING_NOT_READY)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_ING_NOT_READY))
+            .build();
 
   /**
    * <p>
@@ -535,9 +547,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_MANIFEST =
-      OptionBuilder.withLongOpt(KEY_MANIFEST)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_MANIFEST))
-                   .create(LETTER_MANIFEST);
+      Option.builder(Character.toString(LETTER_MANIFEST))
+            .longOpt(KEY_MANIFEST)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_MANIFEST))
+            .build();
 
   /**
    * <p>
@@ -629,9 +642,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_NON_ALLIANCE =
-      OptionBuilder.withLongOpt(KEY_NON_ALLIANCE)
-                   .withDescription(String.format("include only AUs whose plugin is in the non-Alliance set"))
-                   .create();
+      Option.builder()
+            .longOpt(KEY_NON_ALLIANCE)
+            .desc(String.format("include only AUs whose plugin is in the non-Alliance set"))
+            .build();
   
   /**
    * <p>
@@ -659,9 +673,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_NOT_READY =
-      OptionBuilder.withLongOpt(KEY_NOT_READY)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_NOT_READY))
-                   .create(LETTER_NOT_READY);
+      Option.builder(Character.toString(LETTER_NOT_READY))
+            .longOpt(KEY_NOT_READY)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_NOT_READY))
+            .build();
 
   /**
    * <p>
@@ -706,9 +721,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_PRODUCTION =
-      OptionBuilder.withLongOpt(KEY_PRODUCTION)
-                   .withDescription(String.format("include all production statuses in secondary query %s", PRODUCTION_STATUSES))
-                   .create(LETTER_PRODUCTION);
+      Option.builder(Character.toString(LETTER_PRODUCTION))
+            .longOpt(KEY_PRODUCTION)
+            .desc(String.format("include all production statuses in secondary query %s", PRODUCTION_STATUSES))
+            .build();
 
   /**
    * <p>
@@ -736,11 +752,12 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_QUERY =
-      OptionBuilder.withLongOpt(KEY_QUERY)
-                   .hasArg()
-                   .withArgName(KEY_QUERY.toUpperCase())
-                   .withDescription(String.format("use principal query %s", KEY_QUERY.toUpperCase()))
-                   .create(LETTER_QUERY);
+      Option.builder(Character.toString(LETTER_QUERY))
+            .longOpt(KEY_QUERY)
+            .hasArg()
+            .argName(KEY_QUERY.toUpperCase())
+            .desc(String.format("use principal query %s", KEY_QUERY.toUpperCase()))
+            .build();
 
   /**
    * <p>
@@ -768,9 +785,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_READY =
-      OptionBuilder.withLongOpt(KEY_READY)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_READY))
-                   .create(LETTER_READY);
+      Option.builder(Character.toString(LETTER_READY))
+            .longOpt(KEY_READY)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_READY))
+            .build();
 
   /**
    * <p>
@@ -798,9 +816,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_READY_SOURCE =
-      OptionBuilder.withLongOpt(KEY_READY_SOURCE)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_READY_SOURCE))
-                   .create(LETTER_READY_SOURCE);
+      Option.builder(Character.toString(LETTER_READY_SOURCE))
+            .longOpt(KEY_READY_SOURCE)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_READY_SOURCE))
+            .build();
 
   /**
    * <p>
@@ -828,9 +847,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_RELEASED =
-      OptionBuilder.withLongOpt(KEY_RELEASED)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_RELEASED))
-                   .create(LETTER_RELEASED);
+      Option.builder(Character.toString(LETTER_RELEASED))
+            .longOpt(KEY_RELEASED)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_RELEASED))
+            .build();
 
   /**
    * <p>
@@ -858,9 +878,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_RELEASING =
-      OptionBuilder.withLongOpt(KEY_RELEASING)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_RELEASING))
-                   .create(LETTER_RELEASING);
+      Option.builder(Character.toString(LETTER_RELEASING))
+            .longOpt(KEY_RELEASING)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_RELEASING))
+            .build();
 
   /**
    * <p>
@@ -888,9 +909,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_STATUS2 =
-      OptionBuilder.withLongOpt(KEY_STATUS2)
-                   .withDescription(String.format("use status2 instead of status in secondary query"))
-                   .create(LETTER_STATUS2);
+      Option.builder(Character.toString(LETTER_STATUS2))
+            .longOpt(KEY_STATUS2)
+            .desc(String.format("use status2 instead of status in secondary query"))
+            .build();
 
   /**
    * <p>
@@ -918,9 +940,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_SUPERSEDED =
-      OptionBuilder.withLongOpt(KEY_SUPERSEDED)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_SUPERSEDED))
-                   .create(LETTER_SUPERSEDED);
+      Option.builder(Character.toString(LETTER_SUPERSEDED))
+            .longOpt(KEY_SUPERSEDED)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_SUPERSEDED))
+            .build();
 
   /**
    * <p>
@@ -948,9 +971,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_TESTING =
-      OptionBuilder.withLongOpt(KEY_TESTING)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_TESTING))
-                   .create(LETTER_TESTING);
+      Option.builder(Character.toString(LETTER_TESTING))
+            .longOpt(KEY_TESTING)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_TESTING))
+            .build();
 
   /**
    * <p>
@@ -1009,9 +1033,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_UNRELEASED =
-      OptionBuilder.withLongOpt(KEY_UNRELEASED)
-                   .withDescription(String.format("include all unreleased (pre-production) statuses in secondary query %s", UNRELEASED_STATUSES))
-                   .create(LETTER_UNRELEASED);
+      Option.builder(Character.toString(LETTER_UNRELEASED))
+            .longOpt(KEY_UNRELEASED)
+            .desc(String.format("include all unreleased (pre-production) statuses in secondary query %s", UNRELEASED_STATUSES))
+            .build();
 
   /**
    * <p>
@@ -1039,9 +1064,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_WANTED =
-      OptionBuilder.withLongOpt(KEY_WANTED)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_WANTED))
-                   .create(LETTER_WANTED);
+      Option.builder(Character.toString(LETTER_WANTED))
+            .longOpt(KEY_WANTED)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_WANTED))
+            .build();
 
   /**
    * <p>
@@ -1069,9 +1095,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   protected static final Option OPTION_ZAPPED =
-      OptionBuilder.withLongOpt(KEY_ZAPPED)
-                   .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_ZAPPED))
-                   .create(LETTER_ZAPPED);
+      Option.builder(Character.toString(LETTER_ZAPPED))
+            .longOpt(KEY_ZAPPED)
+            .desc(String.format("include status '%s' in secondary query", Au.STATUS_ZAPPED))
+            .build();
 
   /**
    * <p>

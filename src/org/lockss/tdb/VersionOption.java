@@ -66,9 +66,10 @@ public class VersionOption {
    * @since 1.68
    */
   protected static final Option OPTION_VERSION =
-      OptionBuilder.withLongOpt(KEY_VERSION)
-                   .withDescription("output version information and quit")
-                   .create();
+      Option.builder()
+            .longOpt(KEY_VERSION)
+            .desc("output version information and quit")
+            .build();
   
   /**
    * <p>

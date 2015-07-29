@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -89,9 +89,10 @@ public class VerboseOption {
    * @since 1.67
    */
   protected static final Option OPTION_VERBOSE =
-      OptionBuilder.withLongOpt(KEY_VERBOSE)
-                   .withDescription("output verbose error messages")
-                   .create(LETTER_VERBOSE);
+      Option.builder(Character.toString(LETTER_VERBOSE))
+            .longOpt(KEY_VERBOSE)
+            .desc("output verbose error messages")
+            .build();
 
   /**
    * <p>

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -102,11 +102,12 @@ public class OutputOption {
    * @since 1.67
    */
   protected static final Option OPTION_OUTPUT =
-      OptionBuilder.withLongOpt(KEY_OUTPUT)
-                   .hasArg()
-                   .withArgName(ARG_OUTPUT)
-                   .withDescription(String.format("write output to %s instead of stdout", ARG_OUTPUT))
-                   .create(LETTER_OUTPUT);
+      Option.builder(Character.toString(LETTER_OUTPUT))
+            .longOpt(KEY_OUTPUT)
+            .hasArg()
+            .argName(ARG_OUTPUT)
+            .desc(String.format("write output to %s instead of stdout", ARG_OUTPUT))
+            .build();
 
   /**
    * <p>

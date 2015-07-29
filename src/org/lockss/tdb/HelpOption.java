@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -90,9 +90,10 @@ public class HelpOption {
    * @since 1.67
    */
   protected static final Option OPTION_HELP =
-      OptionBuilder.withLongOpt(KEY_HELP)
-                   .withDescription("display this help message and exit")
-                   .create(LETTER_HELP);
+      Option.builder(Character.toString(LETTER_HELP))
+            .longOpt(KEY_HELP)
+            .desc("display this help message and exit")
+            .build();
   
   /**
    * <p>

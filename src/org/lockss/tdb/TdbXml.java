@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.2]";
+  public static final String VERSION = "[TdbXml:0.2.3]";
   
   /**
    * <p>
@@ -76,17 +76,27 @@ public class TdbXml {
 
   /**
    * <p>
+   * The argument name for the force-proxy option.
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final String ARG_FORCE_PROXY = "PROXY";
+  
+  /**
+   * <p>
    * The force-proxy option.
    * </p>
    * 
    * @since 1.69
    */
   protected static final Option OPTION_FORCE_PROXY =
-      OptionBuilder.withLongOpt(KEY_FORCE_PROXY)
-                   .hasArg()
-                   .withArgName("PROXY")
-                   .withDescription("forcibly include a proxy setting")
-                   .create(LETTER_FORCE_PROXY);
+      Option.builder(Character.toString(LETTER_FORCE_PROXY))
+            .longOpt(KEY_FORCE_PROXY)
+            .hasArg()
+            .argName(ARG_FORCE_PROXY)
+            .desc("forcibly include a proxy setting")
+            .build();
   
   /**
    * <p>
@@ -114,9 +124,10 @@ public class TdbXml {
    * @since 1.67
    */
   protected static final Option OPTION_NO_PUB_DOWN =
-      OptionBuilder.withLongOpt(KEY_NO_PUB_DOWN)
-                   .withDescription("do not include pub_down markers")
-                   .create(LETTER_NO_PUB_DOWN);
+      Option.builder(Character.toString(LETTER_NO_PUB_DOWN))
+            .longOpt(KEY_NO_PUB_DOWN)
+            .desc("do not include pub_down markers")
+            .build();
   
   /**
    * <p>
@@ -144,9 +155,10 @@ public class TdbXml {
    * @since 1.67
    */
   protected static final Option OPTION_NO_TIMESTAMP =
-      OptionBuilder.withLongOpt(KEY_NO_TIMESTAMP)
-                   .withDescription("do not include a timestamp")
-                   .create(LETTER_NO_TIMESTAMP);
+      Option.builder(Character.toString(LETTER_NO_TIMESTAMP))
+            .longOpt(KEY_NO_TIMESTAMP)
+            .desc("do not include a timestamp")
+            .build();
   
   /**
     * <p>
@@ -812,10 +824,9 @@ public class TdbXml {
    * @since 1.67
    */
   public void run(String[] mainArgs) throws Exception {
-    AppUtil.fixMainArgsForCommonsCli(mainArgs);
     Options options = new Options();
     addOptions(options);
-    CommandLine clicmd = new PosixParser().parse(options, mainArgs);
+    CommandLine clicmd = new DefaultParser().parse(options, mainArgs);
     CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
     // Short-circuit options
     HelpOption.processCommandLine(cmd, options, getClass());

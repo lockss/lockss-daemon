@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -82,11 +82,12 @@ public class OutputDirectoryOption {
    * @since 1.67
    */
   protected static final Option OPTION_OUTPUT_DIRECTORY =
-      OptionBuilder.withLongOpt(KEY_OUTPUT_DIRECTORY)
-                   .hasArg()
-                   .withArgName(ARG_OUTPUT_DIRECTORY)
-                   .withDescription(String.format("write output for each input file to a file in %s", ARG_OUTPUT_DIRECTORY))
-                   .create();
+      Option.builder()
+            .longOpt(KEY_OUTPUT_DIRECTORY)
+            .hasArg()
+            .argName(ARG_OUTPUT_DIRECTORY)
+            .desc(String.format("write output for each input file to a file in %s", ARG_OUTPUT_DIRECTORY))
+            .build();
 
   /**
    * <p>

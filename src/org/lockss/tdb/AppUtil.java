@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -180,22 +180,4 @@ public class AppUtil {
     return Collections.unmodifiableList(Arrays.asList(args));
   }
   
-  /**
-   * <p>
-   * Commons CLI seems to get confused by query strings that end in '"'.
-   * Use this utility method to work around it.
-   * </p>
-   * 
-   * @param mainArgs Arguments from main.
-   * @since 1.67
-   */
-  public static void fixMainArgsForCommonsCli(String[] mainArgs) {
-    for (int i = 0 ; i < mainArgs.length ; ++i) {
-      String str = mainArgs[i];
-      if (str.endsWith("\"")) {
-        mainArgs[i] = str + " ";
-      }
-    }
-  }
-
 }
