@@ -68,7 +68,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbBuilder:0.2.2]";
+  public static final String VERSION = "[TdbBuilder:0.2.3]";
   
   /**
    * <p>
@@ -301,6 +301,9 @@ public class TdbBuilder extends TdbParserBaseListener {
   public void enterAu(@NotNull AuContext actx) throws SyntaxError {
     Au au = new Au(currentTitle, stack.peek());
     List<String> currentImplicit = au.getImplicit();
+    if (currentImplicit == null) {
+      AntlrUtil.syntaxError(actx.getStart(), "no implicit statement in scope");
+    }
     int sizeImplicit = currentImplicit.size();
     List<TerminalNode> listOfStrings = actx.listOfStrings().STRING();
     int sizeListOfStrings = listOfStrings.size();

@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.3]";
+  public static final String VERSION = "[TdbXml:0.2.4]";
   
   /**
    * <p>

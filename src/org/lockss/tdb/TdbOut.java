@@ -48,7 +48,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.2.2]";
+  public static final String VERSION = "[TdbOut:0.2.3]";
   
   /**
    * <p>
