@@ -67,15 +67,73 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutPrevNext =
       " Volume 47 , ";
   
+  private static final String manifest =
+"<!DOCTYPE html>\n"+
+" <html>\n"+
+" <head>\n"+
+"     <title>2012 CLOCKSS Manifest Page</title>\n"+
+"     <meta charset=\"UTF-8\" />\n"+
+" </head>\n"+
+" <body>\n"+
+" <h1>2012 CLOCKSS Manifest Page</h1>\n"+
+" <ul>\n"+
+"     \n"+
+"     <li><a href=\"http://www.online.com/toc/20/17/4\">01 Oct 2012 (Vol. 17 Issue 4 Page 291-368)</a></li>\n"+
+"     \n"+
+"     <li><a href=\"http://www.online.com/toc/20/17/2-3\">01 Jul 2012 (Vol. 17 Issue 2-3 Page 85-290)</a></li>\n"+
+"     \n"+
+"     <li><a href=\"http://www.online.com/toc/20/17/1\">01 Jan 2012 (Vol. 17 Issue 1 Page 1-84)</a></li>\n"+
+"     \n"+
+" </ul>\n"+
+" <p>\n"+
+"     <img src=\"http://www.lockss.org/images/LOCKSS-small.gif\" height=\"108\" width=\"108\" alt=\"LOCKSS logo\"/>\n"+
+"     CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit.\n"+
+" </p>\n"+
+" </body>\n"+
+" </html>\n";
+ 
+  private static final String manifestFiltered =
+      " 01 Oct 2012 (Vol. 17 Issue 4 Page 291-368) 01 Jul 2012 (Vol. 17 Issue 2-3 Page 85-290) 01 Jan 2012 (Vol. 17 Issue 1 Page 1-84) ";
+
+  private static final String withTocLink =
+"     <div class=\"options\">\n"+
+"   <ul>\n"+
+"       <li class=\"publisherImprint\">\n"+
+"           Route\n"+
+"       </li>\n"+
+"       <li>\n"+
+"           <a href=\"/toc/rmle20/15/4\">\n"+
+"              Sample copy\n"+
+"           </a>\n"+
+"       </li>\n"+
+"       </div> ";
+  
+
+ 
+  private static final String withoutTocLink =
+      "";
+  
+  
   
   /*
    *  Compare Html and HtmlHashFiltered
    */
-  
   public void testWithPrevNext() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withPrevNext), Constants.DEFAULT_ENCODING);
     assertEquals(withoutPrevNext, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testManifest() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(manifest), Constants.DEFAULT_ENCODING);
+    assertEquals(manifestFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testWithTocLink() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withTocLink), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutTocLink, StringUtil.fromInputStream(actIn));
   }
   
 }

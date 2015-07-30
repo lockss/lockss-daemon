@@ -41,8 +41,11 @@ import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.BodyTag;
 import org.htmlparser.tags.Bullet;
+import org.htmlparser.tags.BulletList;
 import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Div;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Span;
 import org.htmlparser.util.NodeList;
@@ -75,8 +78,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
          * KEEP: throw out everything but main content areas
          */
         HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-            // KEEP manifest page elements (no distinctive characteristics) [manifest]
-            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^(https?://[^/]+)?/toc/[^/]+/[^/]+/[^/]+/?$"),
             // KEEP top part of main content area [TOC, abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "overview"),
             // KEEP each article block [TOC]
@@ -93,6 +94,24 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citationContainer"),
             // KEEP popup window content area [showPopup]
             HtmlNodeFilters.tagWithAttribute("body", "class", "popupBody"),
+            
+            new NodeFilter() {
+              @Override
+              public boolean accept(Node node) {
+                if (node instanceof LinkTag) {
+                  String link = ((LinkTag) node).getAttribute("href");
+                  if(link != null && !link.isEmpty() && link.matches("^(https?://[^/]+)?/toc/[^/]+/[^/]+/[^/]+/?$")) {
+                    Node parent = node.getParent().getParent();
+                    if(parent instanceof BulletList) {
+                      if(parent.getParent() instanceof BodyTag) {
+                        return true;
+                      }
+                    }
+                  }
+                }
+                return false;
+              }
+            },
         })),
         /*
          * DROP: filter remaining content areas
@@ -151,6 +170,26 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                         return true;
                       }
                     }
+                  }
+                }
+                return false;
+              }
+            },
+            
+            new NodeFilter() {
+              @Override
+              public boolean accept(Node node) {
+                if (node instanceof Div) {
+                  Div div = ((Div) node);
+                  String divClass = div.getAttribute("class");
+                  if(divClass != null && !divClass.isEmpty() && divClass.contains("right")) {
+                    Node parent = div.getParent();
+                    if (parent != null && parent instanceof Div) {
+                      String parentClass = ((Div) parent).getAttribute("class");
+                        if (parentClass != null && !parentClass.isEmpty() && parentClass.contains("bodyFooterContent")) {
+                          return true;
+                        }
+                      }
                   }
                 }
                 return false;
