@@ -40348,12 +40348,26 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Society and Culture in South Asia ;
+        issn = 2393-8617 ;
+        eissn = 2394-9872
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://scs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2015 ; Society and Culture in South Asia Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = Society and Mental Health ;
         issn = 2156-8693 ;
         eissn = 2156-8731
       >
-
-      {
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://smh.sagepub.com/
@@ -40364,8 +40378,6 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Society and Mental Health Volume 3 ; 3 >
         au < manifest ; 2014 ; Society and Mental Health Volume 4 ; 4 >
         au < manifest ; 2015 ; Society and Mental Health Volume 5 ; 5 >
-
-      }
 
     }
 
