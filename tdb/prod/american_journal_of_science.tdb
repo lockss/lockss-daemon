@@ -16,6 +16,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.ajsonline.org/
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady] = no permission from publisher
 
     au < exists ; 1860 ; American Journal of Science Series 2 Volume 29 (1860) ; s2-29 >
     au < exists ; 1860 ; American Journal of Science Series 2 Volume 30 (1860) ; s2-30 >
@@ -98,7 +99,7 @@
     au < released ; 1899 ; American Journal of Science Series 4 Volume 7 (1899) ; s4-7 >
     au < released ; 1899 ; American Journal of Science Series 4 Volume 8 (1899) ; s4-8 >
     au < released ; 1900 ; American Journal of Science Series 4 Volume 9 (1900) ; s4-9 >
-    au < released ; 1900 ; American Journal of Science Series 4 Volume 10 (1900) ; s4-10 >
+    au < released ; 1900 ; American Journal of Science Serhttp://www.ajsonline.org/lockss-manifest/vol_314_manifest.dtlies 4 Volume 10 (1900) ; s4-10 >
     au < released ; 1901 ; American Journal of Science Series 4 Volume 11 (1901) ; s4-11 >
     au < released ; 1901 ; American Journal of Science Series 4 Volume 12 (1901) ; s4-12 >
     au < released ; 1902 ; American Journal of Science Series 4 Volume 13 (1902) ; s4-13 >
@@ -252,7 +253,7 @@
     au < released ; 2011 ; American Journal of Science Volume 311 ; 311 >
     au < released ; 2012 ; American Journal of Science Volume 312 ; 312 >
     au < manifest ; 2013 ; American Journal of Science Volume 313 ; 313 >
-    au < testing ; 2014 ; American Journal of Science Volume 314 ; 314 >
+    au < notReady ; 2014 ; American Journal of Science Volume 314 ; 314 >
     au < manifest ; 2015 ; American Journal of Science Volume 315 ; 315 >
 
   }
