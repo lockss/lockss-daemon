@@ -2809,8 +2809,7 @@
     title <
       name = The Anthropocene Review ;
       issn = 2053-0196 ;
-      eissn = 2053-020X ;
-      issnl = 2053-0196
+      eissn = 2053-020X 
     >
 
 
@@ -2828,8 +2827,7 @@
       title <
         name = Anthropological Theory ;
         issn = 1463-4996 ;
-        eissn = 1741-2641 ;
-        issnl = 1463-4996
+        eissn = 1741-2641 
       >
 
       {
@@ -2877,8 +2875,7 @@
       title <
         name = The Antitrust Bulletin ;
         issn = 0003-603X ;
-        eissn = 1930-7969 ;
-        issnl = 0003-603X
+        eissn = 1930-7969 
       >
 
         pluginSuffix = HighWirePressH20Plugin
@@ -2897,10 +2894,31 @@
     {
 
       title <
+        name = Antiviral Chemistry & Chemotherapy ;
+        issn = 0956-3202 ;
+        eissn = 2040-2066 
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://avc.sagepub.com/
+        #content available from 1990 volume 1 to 2008 volume 19
+
+        au < exists ; 2008-2009 ; Antiviral Chemistry & Chemotherapy Volume 19 ; 19 >
+        au < exists ; 2009-2010 ; Antiviral Chemistry & Chemotherapy Volume 20 ; 20 >
+        au < exists ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 >
+        au < exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 >
+        au < exists ; 2012-2014 ; Antiviral Chemistry & Chemotherapy Volume 23 ; 23 >
+        au < exists ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 >
+
+    }
+
+    {
+
+      title <
         name = Applied Psychological Measurement ;
         issn = 0146-6216 ;
-        eissn = 1552-3497 ;
-        issnl = 0146-6216
+        eissn = 1552-3497 
       >
 
       {
@@ -25491,6 +25509,23 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     {
 
+    title <
+      name = Journal of Inborn Errors of Metabolism and Screening ;
+      issn = 2326-4098 ;
+      eissn = 2326-4594
+    >
+
+      param[base_url] = http://iem.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 >
+      au < exists ; 2014 ; Journal of Inborn Errors of Metabolism and Screening Volume 2 ; 2 >
+      au < exists ; 2015 ; Journal of Inborn Errors of Metabolism and Screening Volume 3 ; 3 >
+
+    }
+
+    {
+
       title <
         name = Journal of Industrial Relations ;
         issn = 0022-1856 ;
@@ -36454,8 +36489,6 @@ comment[mpj] = now published by Brill
         eissn = 1754-338X
       >
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://pip.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -36469,9 +36502,28 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 228 ; 228 >
         au < manifest ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 229 ; 229 >
 
-      }
-
     }
+
+  {
+
+    title <
+      name = Proceedings of Singapore Healthcare ;
+      issn = 2010-1058 ;
+      eissn = 2059-2329
+    >
+
+      param[base_url] = http://psh.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2010 ; Proceedings of Singapore Healthcare Volume 19 ; 19 >
+      au < exists ; 2011 ; Proceedings of Singapore Healthcare Volume 20 ; 20 >
+      au < exists ; 2012 ; Proceedings of Singapore Healthcare Volume 21 ; 21 >
+      au < exists ; 2013 ; Proceedings of Singapore Healthcare Volume 22 ; 22 >
+      au < exists ; 2014 ; Proceedings of Singapore Healthcare Volume 23 ; 23 >
+      au < exists ; 2015 ; Proceedings of Singapore Healthcare Volume 24 ; 24 >
+
+  }
 
     {
 
@@ -44249,8 +44301,6 @@ comment[mpj] = now published by Brill
 
        comment[continues] = 0031-2975 Pathologia veterinaria
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://vet.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -44301,7 +44351,21 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; Veterinary Pathology Volume 51 ; 51 >
         au < manifest ; 2015 ; Veterinary Pathology Volume 52 ; 52 >
 
-      }
+    }
+
+    {
+
+    title <
+      name = Vikalpa ;
+      issn = 0256-0909 ;
+      eissn = 2395-3799
+    >
+
+      param[base_url] = http://vik.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Vikalpa Volume 40 ; 40 >
 
     }
 
