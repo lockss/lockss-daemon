@@ -16124,9 +16124,11 @@
 
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
-    comment[0] = content available from 1890 volume 1 to 1999 volume 82
+    comment[0] = content available from 1890 volume 1 to 1997 volume 80
     comment[notReady] = Probe url problem in manifest page
 
+    au < exists ; exists ; 1998 ; The Monist Volume 81 ; 81 ; >
+    au < manifest ; exists ; 1999 ; The Monist Volume 82 ; 82 ; >
     au < manifest ; exists ; 2000 ; The Monist Volume 83 ; 83 ; >
     au < manifest ; exists ; 2001 ; The Monist Volume 84 ; 84 ; >
     au < manifest ; exists ; 2002 ; The Monist Volume 85 ; 85 ; >
