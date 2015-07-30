@@ -108,14 +108,17 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
       }
     }
     
-    ProvidedByWorkerTransform worker = new ProvidedByWorkerTransform();
+    PdfStateMachineWorker worker = new PdfStateMachineWorker();
     boolean anyXform = false;
     for (PdfPage pdfPage : pdfDocument.getPages()) {
       PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
       worker.process(pdfTokenStream);
       if (worker.getResult()) {
         anyXform = true;
-        worker.transform(au, pdfTokenStream);
+        List<PdfToken> tokens = pdfTokenStream.getTokens();
+        // clear tokens including text markers
+        tokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
+        pdfTokenStream.setTokens(tokens);
       }
     }
     if (log.isDebug2()) {
@@ -123,13 +126,13 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
     }
   }
   
-  protected static class ProvidedByWorkerTransform extends PdfTokenStreamStateMachine
-  implements PdfTransform<PdfTokenStream> {
+  protected static class PdfStateMachineWorker extends PdfTokenStreamStateMachine {
     
     // Case seems to be constant, so no need to do case-independent match
+    // Note: as of 2015-06-30, not finding the DOWNLOADED string in PDFs
     public static final String DOWNLOADED = "Heruntergeladen von: ";
     
-    public ProvidedByWorkerTransform() {
+    public PdfStateMachineWorker() {
       super(Direction.BACKWARD, log);
     }
     
@@ -160,19 +163,6 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
       }
     }
     
-    @Override
-    public void transform(ArchivalUnit au, PdfTokenStream pdfTokenStream)
-        throws PdfException {
-      if (getResult()) {
-        List<PdfToken> tokens = pdfTokenStream.getTokens();
-        // clear tokens including text markers
-        tokens.subList(getBegin(), getEnd() + 1).clear();
-        pdfTokenStream.setTokens(tokens);
-      }
-      else {
-        log.warning("Called for transform when no result");
-      }
-    }
   }
 }
 
