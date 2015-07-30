@@ -98,8 +98,14 @@ public class ManeyAtyponHtmlHashFilterFactory
         // right column Most read/Most cited/Editor's Choice
         HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"), 
         //  toc - bottom right column, "Subject resources"
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",  
-                                              "literatumSerialSubjects"),   
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumSerialSubjects"),
+        // these tools and bookmarks are inconsistent
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "general-bookmark-share"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "ArticleTools"),
+        // http://www.maneyonline.com/doi/ref/10.1179/0309072814Z.00000000030
+        // one version contained a contentLinkHolder within retracted-publication
+        HtmlNodeFilters.tagWithAttribute("div", "class" ,"retracted-publication"),
+        HtmlNodeFilters.tagWithAttribute("div", "class" ,"contentLinkHolder"),
         // toc - right column - Published on behalf of,  Journal services,
         // For authors, Related content search,  Usage Downloaded count
         // also abs, full - right column of an article - all article tools 

@@ -290,17 +290,6 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
           "doi=1.11111%2Fjid.2013.111\">Export citation</a></li>" +
           "</ul></section>" +
           "</div>";
-
-    // id tag also got filtered
-    private static final String widgetTitlebarFiltered = 
-      "<div class=\"block\">" +  
-          "<section class=\"widget literatumArticleToolsWidget none " +
-          "widget-titlebar widget-compact-vertical\">" +
-          "<ul class=\"linkList blockLinks separators centered\">" +
-          "<li class=\"downloadCitations\"><a href=\"/action/showCitFormats?" +
-          "doi=1.11111%2Fjid.2013.111\">Export citation</a></li>" +
-          "</ul></section>" +
-          "</div>";
     
     private static final String withArticleMetaDrop =
       "<div class=\"block\">" + 
@@ -436,9 +425,9 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
         doFilterTest(mau, variantFact, withPublicationToolContainer, 
                      filteredStr);  
         doFilterTest(mau, variantFact, withLiteratumSerialSubjects, 
-                     filteredStr);         
+                     filteredStr);
         doFilterTest(mau, variantFact, withWidgetTitlebarExceptDownloadCitation, 
-                     widgetTitlebarFiltered);        
+                     filteredStr);
      }
   }
   

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
@@ -21,8 +21,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>34</string>
-  </entry>    
+    <string>39</string>
+  </entry>
  <!--  now out of sync with Atypon; must maintain own map -->  
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>21</string>
+        <string>22</string>
       </entry>
       <entry>
         <string>Substance</string>
