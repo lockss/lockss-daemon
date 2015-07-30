@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -79,7 +79,7 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
       //<meta name="citation_journal_title" content="Aktuelle Dermatologie" />
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       //<meta name="citation_publisher" content="..."/> 
-      // FIELD_PUBLISHER value will be replaced below (PD-440)
+      // FIELD_PUBLISHER value will be replaced (PD-440)
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       //<meta name="citation_language" content="de" />
       tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
@@ -90,7 +90,7 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
       ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
       // PD-440 hardcode publisher value
-      am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
+      // am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
       emitter.emitMetadata(cu, am);
     }
     

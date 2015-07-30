@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +34,9 @@ package org.lockss.plugin.georgthiemeverlag;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.pdfbox.exceptions.CryptographyException;
-import org.apache.pdfbox.exceptions.InvalidPasswordException;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentInformation;
@@ -53,6 +53,7 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
 
   private static final String PDFDATE = "pdfDate";
   private static final String PDFUSER = "pdfUser";
+  
   private static final PdfDocumentFactory factory = new PdfBoxDocumentFactory() {
     @Override
     public PdfDocument parse(InputStream pdfInputStream) 
@@ -62,12 +63,7 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
         PDFParser pdfParser = new PDFParser(pdfInputStream);
         pdfParser.parse(); // Probably closes the input stream
         PDDocument pdDocument = pdfParser.getPDDocument();
-        
-        // Trivial decryption if encrypted without a password
-        if (pdDocument.isEncrypted()) {
-          pdDocument.decrypt("");
-        }
-        
+        processAfterParse(pdDocument);
         return new GTVPdfBoxDocument(pdDocument);
       }
       catch (CryptographyException ce) {
@@ -75,17 +71,6 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
       }
       catch (IOException ioe) {
         throw new PdfException(ioe);
-      }
-      catch (Exception exc) {
-        // FIXME 1.67
-        // InvalidPasswordException thrown by PDFBox <= 1.8.5 but not >= 1.8.6
-        // This hack will avoid 1.66 plugins being incompatible with 1.67 
-        if (exc instanceof InvalidPasswordException) {
-          throw new PdfCryptographyException(exc);
-        }
-        else {
-          throw new PdfException(exc);
-        }
       }
       finally {
         // PDFBox normally closes the input stream, but just in case
@@ -101,9 +86,8 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
   public GeorgThiemeVerlagPdfFilterFactory(PdfDocumentFactory pdfDocumentFactory) {
     super(factory);
   }
-
-  private static final Logger logger = 
-      Logger.getLogger(GeorgThiemeVerlagPdfFilterFactory.class);
+  
+  private static final Logger log = Logger.getLogger(GeorgThiemeVerlagPdfFilterFactory.class);
   
   @Override
   public void transform(ArchivalUnit au,
@@ -125,97 +109,71 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
     }
     
     ProvidedByWorkerTransform worker = new ProvidedByWorkerTransform();
-    
+    boolean anyXform = false;
     for (PdfPage pdfPage : pdfDocument.getPages()) {
       PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
       worker.process(pdfTokenStream);
-      if (worker.result) {
+      if (worker.getResult()) {
+        anyXform = true;
         worker.transform(au, pdfTokenStream);
       }
     }
-    
+    if (log.isDebug2()) {
+      log.debug2("Transform: " + anyXform);
+    }
   }
-
-  public static class ProvidedByWorkerTransform extends PdfTokenStreamWorker
+  
+  protected static class ProvidedByWorkerTransform extends PdfTokenStreamStateMachine
   implements PdfTransform<PdfTokenStream> {
     
     // Case seems to be constant, so no need to do case-independent match
     public static final String DOWNLOADED = "Heruntergeladen von: ";
     
-    private boolean result;
-    
-    private int state;
-    
-    private int startIndex;
-    private int endIndex;
-    
     public ProvidedByWorkerTransform() {
-      super(Direction.BACKWARD);
+      super(Direction.BACKWARD, log);
     }
     
     @Override
-    public void transform(ArchivalUnit au,
-        PdfTokenStream pdfTokenStream)
-            throws PdfException {
-      if (result) {
-        pdfTokenStream.setTokens(getTokens());
+    public void state0() throws PdfException {
+      if (isEndTextObject()) {
+        setEnd(getIndex());
+        setState(1);
       }
     }
     
     @Override
-    public void operatorCallback()
+    public void state1() throws PdfException {
+      if (isShowTextStartsWith(DOWNLOADED)) {
+        setState(2);
+      }
+      else if (isBeginTextObject()) {
+        stop();
+      }
+    }
+    
+    @Override
+    public void state2() throws PdfException {
+      if (isBeginTextObject()) {
+        setBegin(getIndex());
+        setResult(true);
+        stop(); 
+      }
+    }
+    
+    @Override
+    public void transform(ArchivalUnit au, PdfTokenStream pdfTokenStream)
         throws PdfException {
-      if (logger.isDebug3()) {
-        logger.debug3("ProvidedByWorkerTransform: initial: " + state);
-        logger.debug3("ProvidedByWorkerTransform: index: " + getIndex());
-        logger.debug3("ProvidedByWorkerTransform: operator: " + getOpcode());
+      if (getResult()) {
+        List<PdfToken> tokens = pdfTokenStream.getTokens();
+        // clear tokens including text markers
+        tokens.subList(getBegin(), getEnd() + 1).clear();
+        pdfTokenStream.setTokens(tokens);
       }
-      
-      switch (state) {
-        case 0: {
-          if (isEndTextObject()) {
-            endIndex = getIndex();
-            ++state;
-          }
-        } break;
-        
-        case 1: {
-          if (isShowTextStartsWith(DOWNLOADED)) {
-            ++state;
-          }
-          else if (isBeginTextObject()) {
-            stop();
-          }
-        } break;
-        
-        case 2: {
-          if (isBeginTextObject()) {
-            startIndex = getIndex();
-            result = true;
-            stop();
-          }
-        } break;
-        
-        default: {
-          throw new PdfException("Invalid state in ProvidedByWorkerTransform: " + state);
-        }
-        
-      }
-      
-      if (result) {
-        getTokens().subList(startIndex, endIndex).clear();
+      else {
+        log.warning("Called for transform when no result");
       }
     }
-    
-    @Override
-    public void setUp() throws PdfException {
-      super.setUp();
-      state = 0;
-      result = false;
-    }
-    
   }
-  
 }
 
 class GTVPdfBoxDocument extends PdfBoxDocument {

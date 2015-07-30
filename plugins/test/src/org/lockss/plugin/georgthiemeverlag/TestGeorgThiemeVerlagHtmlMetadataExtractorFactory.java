@@ -188,7 +188,7 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
     assertEquals(goodVol, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(journalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     // the following value now hard-coded
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    // assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     
     // the following does not exist in test data
     assertNull(md.get(MetadataField.FIELD_END_PAGE));

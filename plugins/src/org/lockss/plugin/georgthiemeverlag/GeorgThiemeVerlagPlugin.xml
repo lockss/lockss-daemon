@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.0</string>
+    <string>1.67.0</string> <!-- Daemon version at time of creation -->
   </entry>
   <entry>
     <string>au_name</string>
@@ -60,8 +60,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- Do not collect these images, they were not served consistently and images of content -->
       <string>2,"^https?://%s/media/[^?]+/lookinside/[^?]+\.jpg$", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
+      <!-- all fonts, images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/[^?]+[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", url_host(base_url)</string>
       <string>1,"^%smedia/.*/supmat/", base_url</string>
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
       <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
@@ -105,6 +107,12 @@
     <list>
       <string>"^%s(?:[^/]+/)?ejournals/html/10[.][0-9a-z]{4,6}/[a-z0-9-]+$", base_url</string>
       <string>"^%s(?:[^/]+/)?ejournals/pdf/10[.][0-9a-z]{4,6}/[a-z0-9-]+[.]pdf$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

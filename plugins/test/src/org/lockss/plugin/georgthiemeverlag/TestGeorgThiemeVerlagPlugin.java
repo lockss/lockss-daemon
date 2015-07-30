@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,9 @@ import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
+import org.lockss.util.urlconn.CacheException;
+import org.lockss.util.urlconn.HttpResultMap;
+import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -171,6 +174,29 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   public void testGetArticleIteratorFactory() {
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
         instanceof org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagArticleIteratorFactory);
+  }
+  
+  public void testHandles500Result() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(JOURNAL_ID_KEY, "10.1055/s-00000001");
+    props.setProperty(VOLUME_NAME_KEY, "2013");
+    
+    String starturl = // products/ejournals/issues/%s/%s", base_url, journal_id, volume_name
+        "http://www.example.com/products/ejournals/issues/10.1055/s-00000001/2013";
+    DefinableArchivalUnit au = makeAuFromProps(props);
+    MockLockssUrlConnection conn = new MockLockssUrlConnection();
+    conn.setURL("http://www.example.com/products/ejournals/abstract/10.1055/s-0032-1309579");
+    CacheException exc =
+        ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+            500, "foo");
+    assertClass(CacheException.NoRetryDeadLinkException.class, exc);
+    
+    conn.setURL(starturl);
+    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+        500, "foo");
+    assertClass(RetrySameUrlException.class, exc);
+    
   }
   
   // Test the crawl rules for GeorgThiemeVerlagPlugin

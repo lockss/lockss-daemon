@@ -3,7 +3,7 @@
  */
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,16 +59,16 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Aggressive filtering of non-content tags
         // Contains scripts and tags that change values, do not contain content
-        // XXX may want to 'normalize' the head tag contents (extract meta tags in a fixed order
-        new TagNameFilter("head"),
-        new TagNameFilter("script"),
-        // Remove header/footer items, requires_daemon_version 1.64.0
-        new TagNameFilter("header"),
-        new TagNameFilter("footer"),
+        // head & scipt tags contents might change, aggressive filtering
+        HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tag("script"),
+        // Remove header/footer items
+        HtmlNodeFilters.tag("header"),
+        HtmlNodeFilters.tag("footer"),
         // remove ALL comments
         HtmlNodeFilters.comment(),
-        // Contains ads that change
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar[^\"]*"),
+        // Contains ads that change, not content
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar"),
         // Contains navigation items that are not content
         HtmlNodeFilters.tagWithAttribute("div", "id", "navPanel"),
         // Contains functional links, not content
@@ -113,13 +113,9 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
       }
     };
     
-    // registerTag header/footer requires_daemon_version 1.64.0
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(
-            new OrFilter(filters)),xform))
-    .registerTag(new HtmlTags.Header())
-    .registerTag(new HtmlTags.Footer());
-    
+            new OrFilter(filters)),xform));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }

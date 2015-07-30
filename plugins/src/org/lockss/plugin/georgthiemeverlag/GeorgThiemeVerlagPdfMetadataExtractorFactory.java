@@ -88,7 +88,7 @@ public class GeorgThiemeVerlagPdfMetadataExtractorFactory implements FileMetadat
         am.cook(tagMap);
       }
       // PD-440
-      am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
+      // am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
       return am;
     }
   }

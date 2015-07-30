@@ -45,7 +45,7 @@ import org.lockss.util.Logger;
 public class GeorgThiemeVerlagArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
-
+  
   protected static Logger log = Logger.getLogger(GeorgThiemeVerlagArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE =
@@ -56,7 +56,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       " base_url";
   
   // various aspects of an article
-  // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
+  // https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0029-1214947
   // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
   // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
   
