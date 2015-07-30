@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
     <entry>
     <string>plugin_name</string>
@@ -82,6 +82,7 @@
       <!-- 
         - toc: https://dl.sciencesocieties.org/publications/aj/tocs/106
         - issue: https://dl.sciencesocieties.org/publications/aj/tocs/106/1
+        - index by author: https://dl.sciencesocieties.org/publications/aj/ibas/106/1
         - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
                https://dl.sciencesocieties.org/publications/jeq/abstracts/27/5/JEQ0270051094
         - preview pdf (abs 2): https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/26/preview
@@ -103,7 +104,7 @@
         - MARC: https://dl.sciencesocieties.org/publications/citation-manager/down/marc/aj/106/5/1677
         - RefWorks: https://dl.sciencesocieties.org/publications/citation-manager/down/refworks/aj/106/5/1677
       -->
-      <string>1,"^%spublications/%s/tocs/%s(/[0-9]+)?", base_url, journal_id, volume_name</string>
+      <string>1,"^%spublications/%s/(tocs|ibas)/%s(/[0-9]+)?", base_url, journal_id, volume_name</string>
       <string>1,"^%spublications/%s/(abstracts|articles|pdfs)/%s/[0-9]+/[^/]+(/preview)?", base_url, journal_id, volume_name</string>      
       <string>1,"^%spublications/%s/supplements/%s/", base_url, journal_id, volume_name</string>
       <string>1,"^%spublications/%s/articles/%s/[0-9]+/[^/]+\?show-t-f=(tables|figures)&amp;wrapper=no", base_url, journal_id, volume_name</string>

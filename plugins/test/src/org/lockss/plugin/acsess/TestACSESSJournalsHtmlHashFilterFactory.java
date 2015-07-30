@@ -50,7 +50,7 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
   }
 
   private static final String filteredStr = 
-      "<div class=\"acsMarkLogicWrapper\">" +
+      "<div class=\"inside_one\">" +
       "</div>";
   
   private void doFilterTest(ArchivalUnit au, 
@@ -59,15 +59,12 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
-    // for debug
-    // String actualStr = StringUtil.fromInputStream(actIn);
-    // assertEquals(expectedStr, actualStr);
     assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
   }
   
   private static final String withScript =
       "<div class=\"block\">" +
-          "<div class=\"acsMarkLogicWrapper\">" +
+          "<div class=\"inside_one\">" +
           "<script type=\"text/javascript\">" +
           "var _gaq = _gaq || [];" +
           "blah blah;" +
@@ -77,14 +74,14 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
  
   private static final String withComments =
       "<div class=\"block\">" +
-          "<div class=\"acsMarkLogicWrapper\">" +
+          "<div class=\"inside_one\">" +
           "<!-- comment comment comment -->" +
           "</div>" +
           "</div>";
   
   private static final String withNoPrint =
       "<div class=\"block\">" +
-          "<div class=\"acsMarkLogicWrapper\">" +
+          "<div class=\"inside_one\">" +
           "<div class=\"noPrint\" style=\"display: clear: both;\">" +
           "<div>" +
           "<a rel=\"nofollow\" href=\"http://www.facebook.com/links\">" +
@@ -96,46 +93,16 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
           "</div></div></div>" +
           "</div>";
   
-    private static final String withCitationFooter =
-        "<body class=\"not-front page-publications no-sidebars\">" +
-            "<div id=\"content\">" +
-            "<h1>Citation Manager Download</h1>" +
-            "</div>" +
-            "<div id=\"footer\">" +
-            "<div style=\"margin: 10px;\">" +
-            "<a href=\"/copyright/\">Copyright Information, and Terms of Use</a>" +
-            "</div>" +
-            "</div>" +
-            "</body>";
-    private static final String citationFooterFilteredStr =
-        "<body class=\"not-front page-publications no-sidebars\">" +
-            "<div id=\"content\">" +
-            "<h1>Citation Manager Download</h1>" +
-            "</div>" +
-            "</body>";
-    
-    private static final String withBelowHeader =
-        "<body class=\"not-front page-publications no-sidebars\">" +
-            "<div id=\"below_header\">" +
-            "<div id=\"block-acsMarkLogic-2\" class=\"clear-block block block-acsMarkLogic \">" +
-            "<div class=\"content\">" +
-            "<span class=\"note\">Subscription brought to you by Stanford University</span>" +
-            "</div></div></div>" +
-            "</body>";
-    private static final String belowHeaderFilteredStr =
-        "<body class=\"not-front page-publications no-sidebars\">" +
-            "</body>";
-    
     private static final String withOpenAccess =
         "<div class=\"block\">" +
-            "<div class=\"acsMarkLogicWrapper\">" +
+            "<div class=\"inside_one\">" +
             "<div class=\"openAccess\">OPEN ACCESS</div>" +
             "</div>" +
             "</div>";
     
     private static final String withArticleFootnotes =
         "<div class=\"block\">" +
-            "<div class=\"acsMarkLogicWrapper\">" +
+            "<div class=\"inside_one\">" +
             "<div id=\"articleFootnotes\">" +
             "<h2>Footnotes</h2>" +
             "<ul style=\"margin-top: 0; padding-top: 0;\">" +
@@ -150,8 +117,6 @@ public class TestACSESSJournalsHtmlHashFilterFactory extends LockssTestCase {
     doFilterTest(aau, fact, withScript, filteredStr);
     doFilterTest(aau, fact, withComments, filteredStr);
     doFilterTest(aau, fact, withNoPrint, filteredStr);
-    doFilterTest(aau, fact, withCitationFooter, citationFooterFilteredStr);
-    doFilterTest(aau, fact, withBelowHeader, belowHeaderFilteredStr);
     doFilterTest(aau, fact, withOpenAccess, filteredStr);
     doFilterTest(aau, fact, withArticleFootnotes, filteredStr);
   }

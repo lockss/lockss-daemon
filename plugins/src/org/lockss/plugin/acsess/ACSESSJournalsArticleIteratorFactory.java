@@ -45,7 +45,7 @@ import org.lockss.plugin.*;
  Article files:
 - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
        https://dl.sciencesocieties.org/publications/jeq/abstracts/27/5/JEQ0270051094
-- preview pdf (abs 2): https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
+- preview html landing: https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
 - html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
                   https://dl.sciencesocieties.org/publications/aj/articles/106/3/1070a
 - pdf: https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
@@ -63,7 +63,8 @@ public class ACSESSJournalsArticleIteratorFactory
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   
   public static final String ROLE_HTML_ABSTRACT = "HtmlAbstract";
-  public static final String ROLE_PREVIEW_PDF_ABSTRACT = "PreviewPdfAbstract";
+  //public static final String ROLE_PREVIEW_PDF_ABSTRACT = "PreviewPdfAbstract";
+  public static final String ROLE_PREVIEW_HTML_LANDING = "PreviewHtmlLanding";
   public static final String ROLE_TABLES_ONLY = "TablesOnly";
   public static final String ROLE_FIGURES_ONLY = "FiguresOnly";
   public static final String ROLE_PDF_SUPPLEMENT = "PdfSupplement";
@@ -91,7 +92,7 @@ public class ACSESSJournalsArticleIteratorFactory
   private static final String ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4";    
   private Pattern PREVIEW_PDF_ABSTRACT_PATTERN = Pattern.compile(      
       "/publications/([^/]+)/abstracts/(\\d+)/(\\d+)/([^/]+)/preview$", Pattern.CASE_INSENSITIVE);
-  private static final String PREVIEW_PDF_ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4/preview";
+  private static final String PREVIEW_HTML_LANDING_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4/preview";
   private Pattern PDF_PATTERN = Pattern.compile(      
       "/publications/([^/]+)/pdfs/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
   private static final String PDF_REPLACEMENT = "/publications/$1/pdfs/$2/$3/$4";
@@ -130,8 +131,8 @@ public class ACSESSJournalsArticleIteratorFactory
                       ABSTRACT_REPLACEMENT,
                       ROLE_HTML_ABSTRACT);
     builder.addAspect(PREVIEW_PDF_ABSTRACT_PATTERN,
-                      PREVIEW_PDF_ABSTRACT_REPLACEMENT,
-                      ROLE_PREVIEW_PDF_ABSTRACT);  
+                      PREVIEW_HTML_LANDING_REPLACEMENT,
+                      ROLE_PREVIEW_HTML_LANDING);  
     
     builder.addAspect(TABLES_REPLACEMENT, 
                       ROLE_TABLES_ONLY);  
@@ -162,11 +163,11 @@ public class ACSESSJournalsArticleIteratorFactory
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
                                  ArticleFiles.ROLE_FULL_TEXT_PDF,
                                  ROLE_HTML_ABSTRACT,
-                                 ROLE_PREVIEW_PDF_ABSTRACT);
+                                 ROLE_PREVIEW_HTML_LANDING);
     
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ABSTRACT,
                                   ROLE_HTML_ABSTRACT,
-                                  ROLE_PREVIEW_PDF_ABSTRACT);
+                                  ROLE_PREVIEW_HTML_LANDING);
    
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
                                   ArticleFiles.ROLE_CITATION_RIS,

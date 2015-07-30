@@ -58,7 +58,7 @@ import org.lockss.plugin.simulated.SimulatedContentGenerator;
  Article files:
 - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
        https://dl.sciencesocieties.org/publications/jeq/abstracts/27/5/JEQ0270051094
-- preview pdf (abs 2): https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
+- preview html landing: https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
 - html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
                   https://dl.sciencesocieties.org/publications/aj/articles/106/3/1070a
 - pdf: https://dl.sciencesocieties.org/publications/aj/pdfs/106/1/57
@@ -91,7 +91,7 @@ public class TestACSESSJournalsArticleIteratorFactory
   private static final int EXP_HTML_COUNT = 8; // after deleteBlock
   private static final int EXP_PDF_COUNT = 8; // after deleteBlock
   private static final int EXP_ABS_COUNT = 12; 
-  private static final int EXP_PREVIEW_PDF_ABS_COUNT = 12; 
+  private static final int EXP_PREVIEW_HTML_LANDING_COUNT = 12; 
   private static final int EXP_RIS_COUNT = 12;
 
   public void setUp() throws Exception {
@@ -231,13 +231,13 @@ public class TestACSESSJournalsArticleIteratorFactory
     String htmlPat = "branch(\\d+)/(\\d+)file\\.html";
     String htmlRep = "/publications/xxxjid/articles/106/$1/$2";
     String absRep = "/publications/xxxjid/abstracts/106/$1/$2";
-    String previewPdfAbsRep = "/publications/xxxjid/abstracts/106/$1/$2/preview";
+    String previewHtmlLandingRep = "/publications/xxxjid/abstracts/106/$1/$2/preview";
     String pdfRep = "/publications/xxxjid/pdfs/106/$1/$2";
     String risRep = "/publications/citation-manager/down/pc/xxxjid/106/$1/$2";
     String xlsxSupplement1Rep = "/publications/xxxjid/supplements/106/$2-supplement1.xlsx";
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, htmlRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, absRep); 
-    PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, previewPdfAbsRep); 
+    PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, previewHtmlLandingRep); 
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, pdfRep);  
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, risRep); 
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, xlsxSupplement1Rep); 
@@ -271,7 +271,7 @@ public class TestACSESSJournalsArticleIteratorFactory
     int countHtmlOnly = 0;
     int countPdfOnly = 0;
     int countAbsOnly = 0;
-    int countPreviewPdfAbsOnly = 0;
+    int countPreviewHtmlLandingOnly = 0;
     int countRisOnly = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
@@ -294,9 +294,9 @@ public class TestACSESSJournalsArticleIteratorFactory
       if (!StringUtil.isNullString(url) && url.contains("/abstracts/")) {
         ++countAbsOnly;
       }
-      url = af.getRoleUrl("PreviewPdfAbstract");
+      url = af.getRoleUrl(ACSESSJournalsArticleIteratorFactory.ROLE_PREVIEW_HTML_LANDING);
       if (!StringUtil.isNullString(url) && url.contains("/preview")) {
-        ++countPreviewPdfAbsOnly;
+        ++countPreviewHtmlLandingOnly;
       }  
       url = af.getRoleUrl(ArticleFiles.ROLE_CITATION_RIS);
       if (!StringUtil.isNullString(url) && url.contains("/down/pc/")) {
@@ -309,7 +309,7 @@ public class TestACSESSJournalsArticleIteratorFactory
     assertEquals(EXP_HTML_COUNT, countHtmlOnly);
     assertEquals(EXP_PDF_COUNT, countPdfOnly);
     assertEquals(EXP_ABS_COUNT, countAbsOnly);
-    assertEquals(EXP_PREVIEW_PDF_ABS_COUNT, countPreviewPdfAbsOnly);
+    assertEquals(EXP_PREVIEW_HTML_LANDING_COUNT, countPreviewHtmlLandingOnly);
     assertEquals(EXP_RIS_COUNT, countRisOnly);
    }
  

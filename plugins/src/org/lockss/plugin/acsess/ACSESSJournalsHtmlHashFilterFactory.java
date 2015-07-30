@@ -56,44 +56,41 @@ public class ACSESSJournalsHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in, 
                                                String encoding) {
     NodeFilter[] includeNodes = new NodeFilter[] {
-        // toc, issue - content
-        // https://dl.sciencesocieties.org/publications/aj/tocs/106
-        // https://dl.sciencesocieties.org/publications/aj/tocs/106/1
-        HtmlNodeFilters.tagWithAttribute("div", "class", "acsMarkLogicWrapper"),        
-        // abs, full - content block
-        HtmlNodeFilters.tagWithAttribute("div", "id", "content-block"),
+        // manifest, toc, abs, full, preview (pdf), citation manager - content we want
+        // https://dl.sciencesocieties.org/publications/cns/tocs/47
+        // https://dl.sciencesocieties.org/publications/cns/tocs/47/1
+        // https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/18/preview
+        // https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/32
+        // https://dl.sciencesocieties.org/publications/cns/articles/47/1/28
+        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/cns/47/1/28
+        //HtmlNodeFilters.tagWithAttribute("div", "id", "content-block"),
+        //<div class="inside_one">
+        HtmlNodeFilters.tagWithAttribute("div", "class", "inside_one"),
         // tables-only - tables
         HtmlNodeFilters.tagWithAttribute("div", "class", "table-expansion"),
         // figures-only - images
-        HtmlNodeFilters.tagWithAttribute("div", "class", "fig-expansion"),
-        // citation manager - footer      
-        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
-        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "no-sidebars"),                                                          
+        HtmlNodeFilters.tagWithAttribute("div", "class", "fig-expansion")
     };
     
     NodeFilter[] excludeNodes = new NodeFilter[] {
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
-        //filter out comments
+        // filter out comments
         HtmlNodeFilters.comment(),
-        // toc - links to facebook and twitter near footer
+        // manifest, toc - links to facebook and twitter near footer
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "noPrint"),
-        // citation-manager - header
-        // https://dl.sciencesocieties.org/publications/citation-manager/prev/zt/aj/106/5/1677
-        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-        // toc, issue, citatton-manager - 
-        // containing "Subscription brought to you by Stanford University"
-        // or other University
-        HtmlNodeFilters.tagWithAttribute("div", "id", "below_header"),
-        // citation-manager - has generated id
-        HtmlNodeFilters.tagWithAttribute("div", "id", "member_panel"),
-        // citation manager - footer 
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),    
-        // issue - hash out because it might be consistent at different download time
+        // abs, full -
+        // https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/32
+        // https://dl.sciencesocieties.org/publications/cns/articles/47/1/28
+        // <div class="content-box" id="article-cb-main">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article-cb-main"),
         // https://dl.sciencesocieties.org/publications/aj/tocs/106/1
         HtmlNodeFilters.tagWithAttribute("div", "class", "openAccess"),  
         // full - article footnotes
         HtmlNodeFilters.tagWithAttribute("div", "id", "articleFootnotes"), 
+        // full, tables, figures - commnents section
+        HtmlNodeFilters.tagWithAttribute("div", "id", "comments"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "commentBox"),
     };
     
     return getFilteredInputStream(au, in, encoding, 
