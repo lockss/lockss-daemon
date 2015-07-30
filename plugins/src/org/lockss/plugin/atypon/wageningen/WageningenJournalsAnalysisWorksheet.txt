@@ -61,6 +61,25 @@ Article files:
 - download citations: http://www.wageningenacademic.com/action/showCitFormats?doi=10.3920%2FBM2012.0069
 no html full text
 
+** ref and abs are redirected to pdf pages.  Metadata can not be found.
+http://www.wageningenacademic.com/toc/bm/5/3
+
+<div class="tocDeliverFormatsLinks">
+<a class="ref nowrap abs" href="/doi/abs/10.3920/BM2013.0080">Abstract</a> | 
+<a class="ref nowrap references" href="/doi/ref/10.3920/BM2013.0080">References</a> | 
+<a class="ref nowrap pdf" target="_blank" title="Opens new window" href="/doi/pdf/10.3920/BM2013.0080">PDF (341 KB)</a>&nbsp;
+<div id="AbsBM20130080" class="previewViewSection tocPreview">
+<div class="closeButton" onclick="showHideTocPublicationAbs('10.3920/BM2013.0080', 'AbsBM20130080');"></div>
+<p class="previewContent"></p></div></div>
+
+** Only suppl page has link to showCitFormats from Citation Mrg
+http://www.wageningenacademic.com/toc/bm/5/1
+http://www.wageningenacademic.com/doi/suppl/10.3920/BM2013.0047
+http://www.wageningenacademic.com/action/showCitFormats?doi=10.3920%2FBM2013.0047
+
+** Only a small number of articles have suppl page, so most of articles do not have
+metadata
+
 ------------------------------------------------------------------
 As you do your analysis, you should only have to look at the following potential issues. 
 The rest should be handled by the BaseAtypon parent.

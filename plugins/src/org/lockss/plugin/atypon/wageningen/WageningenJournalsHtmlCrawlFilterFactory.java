@@ -46,11 +46,8 @@ public class WageningenJournalsHtmlCrawlFilterFactory
   static NodeFilter[] filters = new NodeFilter[] {
     // handled by parent:
     // previous/next article - <td class="journalNavRightTd">
-    
     // toc, abs, ref - breadcrumbs
-    // http://www.wageningenacademic.com/toc/bm/5/1
-    // http://www.wageningenacademic.com/doi/abs/10.3920/BM2012.0069
-    HtmlNodeFilters.tagWithAttribute("ul", "class", "breadcrumbs"),    
+    
     // toc, abs, ref, suppl - right column most read/most cited
     HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
     // abs, ref - below <div class="response">, or after the main content
