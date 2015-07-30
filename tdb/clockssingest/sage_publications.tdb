@@ -36970,6 +36970,21 @@
 
   }
 
+    {
+
+      title <
+        name = Society and Culture in South Asia ;
+        issn = 2393-8617 ;
+        eissn = 2394-9872
+      >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://scs.sagepub.com/
+
+      au < exists ; exists ; 2015 ; Society and Culture in South Asia Volume 1 ; 1 ; >
+
+    }
+
   {
 
     title <
@@ -36978,10 +36993,7 @@
       eissn = 2156-8731
     >
 
-    param[base_url] = http://smh.sagepub.com/
-
-    {
-
+      param[base_url] = http://smh.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < finished ; crawling ; 2011 ; Society and Mental Health Volume 1 ; 1 ; >
@@ -36989,8 +37001,6 @@
       au < frozen ; exists ; 2013 ; Society and Mental Health Volume 3 ; 3 ; >
       au < crawling ; exists ; 2014 ; Society and Mental Health Volume 4 ; 4 ; >
       au < manifest ; exists ; 2015 ; Society and Mental Health Volume 5 ; 5 ; >
-
-    }
 
   }
 
