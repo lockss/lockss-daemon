@@ -764,7 +764,13 @@ public abstract class BaseServletManager
       if (cls != null
 	  && cls != ServletDescr.UNAVAILABLE_SERVLET_MARKER
 	  && !d.isPathIsUrl()) {
-	String path = "/" + d.getPath();
+	StringBuilder sb = new StringBuilder();
+	sb.append("/");
+	sb.append(d.getPath());
+	if (d.isWildcardPath()) {
+	  sb.append("/*");
+	}
+	String path = sb.toString();
 	if (!d.isEnabled(getDaemon())) {
 	  cls = ServletDescr.UNCONFIGURED_SERVLET_CLASS;
 	}

@@ -96,6 +96,9 @@ public class ServletDescr {
   /** Appears in sys admin menu */
   public static final int NEED_PERSONA_SYS_ADMIN = 0x400000;
 
+  /** Create servlet with wildcard path */
+  public static final int WILDCARD_PATH = 0x800000;
+
 
   public ServletDescr(String servletName,
 		      Class cls,
@@ -279,6 +282,12 @@ public class ServletDescr {
   /** return true if servlet should not have a nav table */
   public boolean hasNoNavTable() {
     return isFlagSet(NO_NAV_TABLE);
+  }
+
+  /** Return true if servlet should be set up with a wildcard path.  I.e.,
+   * it should handle requests of the form .../ServletName/other/stuff.  */
+  public boolean isWildcardPath() {
+    return isFlagSet(WILDCARD_PATH);
   }
 
   boolean isFlagSet(int flag) {
