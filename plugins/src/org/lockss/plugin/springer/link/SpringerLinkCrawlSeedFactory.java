@@ -1,10 +1,10 @@
 /*
- * $Id: OaiPmhHtmlCrawlFilterFactory.java,v 1.1.2.1 2014/05/05 17:32:29 wkwilson Exp $
+ * $Id$
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,30 +30,24 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
-import java.io.InputStream;
+import org.lockss.crawler.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
-import org.lockss.plugin.*;
-
-
-public class SpringerApiHtmlCrawlFilterFactory implements FilterFactory {
+/**
+ * <p>
+ * A crawl seed factory for Springer's custom crawl seed.
+ * </p>
+ * 
+ * @since 1.67.5
+ * @see SpringerLinkCrawlSeed
+ */
+public class SpringerLinkCrawlSeedFactory implements CrawlSeedFactory {
 
   @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-    
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-  }
+    public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
+      return new SpringerLinkCrawlSeed(facade);
+    }
 
 }

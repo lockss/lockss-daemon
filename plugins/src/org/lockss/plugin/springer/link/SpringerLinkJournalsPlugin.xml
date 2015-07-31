@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiPlugin</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Springer API Plugin</string>
+    <string>Springer Link Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -45,8 +45,8 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>api_url</key>
-        <displayName>API URL</displayName>
+        <key>download_url</key>
+        <displayName>Download URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
@@ -74,38 +74,56 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Springer API Plugin, Base URL %s, API URL %s, ISSN %s, Volume %s", base_url, api_url, journal_issn, volume_name</string>
-  </entry>
-  <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiCrawlSeedFactory</string>
+    <string>"Springer Link Journals Plugin, Base URL %s, Link URL %s, ISSN %s, Volume %s", base_url, download_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.txt", base_url</string>
-      <string>"%slockss.txt", api_url</string>
+      <string>"%slockss.txt", download_url</string>
+      <string>"http://link.springer.com/lockss.txt"</string>
     </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%s", api_url</string>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
-      <string>4,"^%s", base_url</string>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(download_url)</string>
+      <string>1,"^%s(article|content)/", base_url</string>
+      <string>1,"^%sstatic/pdf/", download_url</string>
     </list>
   </entry>
   <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
+  </entry>
+  <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiUrlConsumerFactory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.springer.api.SpringerApiHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.springer.link.SpringerLinkHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

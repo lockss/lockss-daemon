@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: SpringerApiPamLinkExtractor.java 40441 2015-03-12 02:54:52Z thib_gc $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
 import java.io.*;
 import java.net.URLEncoder;
@@ -61,7 +61,7 @@ import org.xml.sax.*;
  * 
  * @since 1.67.5
  */
-public class SpringerApiPamLinkExtractor implements LinkExtractor {
+public class SpringerLinkPamLinkExtractor implements LinkExtractor {
 
   /**
    * <p>
@@ -116,9 +116,6 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
     }
     
   }
-  
-  // Will become a definitional param
-  private static final String CDN_URL = "http://download.springer.com/";
 
   /**
    * <p>
@@ -278,7 +275,7 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
    * 
    * @since 1.67.5
    */
-  public SpringerApiPamLinkExtractor() {
+  public SpringerLinkPamLinkExtractor() {
     this.done = false;
     this.start = -1;
     this.pageLength = -1;
@@ -331,26 +328,12 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
       article = articles.item(i);
       try {
         doi = XPathUtil.evaluateString(DOI, article);
-        if (StringUtils.isEmpty(doi)) {
-          continue; // FIXME log?
-        }
+        processDoi(cb, doi);
       }
       catch (XPathExpressionException xpee) {
         throw new UnknownExceptionException(
             String.format("Error while parsing stanza for %s in %s",
                           doi == null ? "first DOI" : "DOI immediately after " + doi,
-                          loggerUrl),
-            xpee);
-      }
-      try {
-        processAbstract(au, cb, doi, XPathUtil.evaluateString(ABSTRACT, article));
-        processHtml(au, cb, doi, XPathUtil.evaluateString(HTML, article));
-        processPdf(au, cb, doi, XPathUtil.evaluateString(PDF, article));
-      }
-      catch (XPathExpressionException xpee) {
-        throw new UnknownExceptionException(
-            String.format("Error while parsing stanza for DOI %s in %s",
-                          doi,
                           loggerUrl),
             xpee);
       }
@@ -374,69 +357,12 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
    *          applicable).
    * @since 1.67.5
    */
-  public void processAbstract(ArchivalUnit au, Callback cb, String doi, String url) {
-    if (!StringUtils.isEmpty(url)) {
-      String absUrl =
-          String.format("%sarticle/%s",
-                        au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
-                        encodeDoi(doi));
-      cb.foundLink(absUrl);
+  public void processDoi(Callback cb, String doi) {
+    if (doi != null && !StringUtils.isEmpty(doi)) {
+      cb.foundLink(doi);
     }
   }
   
-  /**
-   * <p>
-   * If a nominal full text HTML URL is found, emits the desired full text HTML
-   * URLs based on the given DOI.
-   * </p>
-   * 
-   * @param au
-   *          The current AU.
-   * @param cb
-   *          The callback to emit into.
-   * @param doi
-   *          The current article's DOI.
-   * @param url
-   *          A nominal full text HTML URL (or null or an empty string if not
-   *          applicable).
-   * @since 1.67.5
-   */
-  public void processHtml(ArchivalUnit au, Callback cb, String doi, String url) {
-    if (!StringUtils.isEmpty(url)) { 
-      String htmlUrl =
-          String.format("%sarticle/%s/fulltext.html",
-                        au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
-                        encodeDoi(doi));
-      cb.foundLink(htmlUrl);
-    }
-  }
-  
-  /**
-   * <p>
-   * If a nominal full text PDF URL is found, emits the desired full text PDF
-   * URLs based on the given DOI.
-   * </p>
-   * 
-   * @param au
-   *          The current AU.
-   * @param cb
-   *          The callback to emit into.
-   * @param doi
-   *          The current article's DOI.
-   * @param url
-   *          A nominal full text PDF URL (or null or an empty string if not
-   *          applicable).
-   * @since 1.67.5
-   */
-  public void processPdf(ArchivalUnit au, Callback cb, String doi, String url) {
-    if (!StringUtils.isEmpty(url)) { 
-      String pdfUrl =
-          String.format("%scontent/pdf/%s.pdf",
-                        CDN_URL,
-                        encodeDoi(doi));
-      cb.foundLink(pdfUrl);
-    }
-  }
 
   /**
    * <p>
@@ -486,28 +412,6 @@ public class SpringerApiPamLinkExtractor implements LinkExtractor {
    */
   public int getPageLength() {
     return pageLength;
-  }
-  
-  /**
-   * <p>
-   * Encode a DOI for use in URLs, using the encoding of
-   * <code>application/x-www-form-urlencoded</code> and {@link URLEncoder},
-   * except that a space (<code>' '</code>) is encoded as <code>"%20"</code>
-   * rather than <code>'+'</code>.
-   * </p>
-   * 
-   * @param doi
-   *          A DOI.
-   * @return An encoded DOI (URL-encoded with <code>"%20"</code> for a space).
-   * @since 1.67.5
-   */
-  public static String encodeDoi(String doi) {
-    try {
-      return URLEncoder.encode(doi, Constants.ENCODING_UTF_8).replace("+", "%20");
-    }
-    catch (UnsupportedEncodingException uee) {
-      throw new ShouldNotHappenException("Could not URL-encode '" + doi + "' as UTF-8");
-    }
   }
   
   public static final String loggerUrl(String srcUrl) {

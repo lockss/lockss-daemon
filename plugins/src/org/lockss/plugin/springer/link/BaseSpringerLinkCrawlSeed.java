@@ -30,9 +30,10 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
 import java.io.*;
+import java.net.URLEncoder;
 import java.util.*;
 
 import org.apache.commons.io.IOUtils;
@@ -60,7 +61,7 @@ import org.lockss.util.urlconn.CacheException;
  * @since 1.67.5
  * @see https://dev.springer.com/
  */
-public class SpringerApiCrawlSeed extends BaseCrawlSeed {
+public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
 
   /**
    * <p>
@@ -69,17 +70,14 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
    * 
    * @since 1.67.5
    */
-  private static final Logger log = Logger.getLogger(SpringerApiCrawlSeed.class);
-  
-  // Will become a definitional param
-  private static final String CDN_URL = "http://download.springer.com/";
+  private static final Logger log = Logger.getLogger(BaseSpringerLinkCrawlSeed.class);
 
-  private static final String API_KEY;
+  protected static final String API_KEY;
   static {
     InputStream is = null;
     BufferedReader br = null;
     try {
-      is = SpringerApiCrawlSeed.class.getResourceAsStream("api-key.txt");
+      is = BaseSpringerLinkCrawlSeed.class.getResourceAsStream("/api-key.txt");
       if (is == null) {
         throw new ExceptionInInitializerError("Plugin external not found");
       }
@@ -118,9 +116,9 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
    * 
    * @since 1.67.5
    */
-  private static final CrawlRateLimiter API_CRAWL_RATE_LIMITER =
+  protected static final CrawlRateLimiter API_CRAWL_RATE_LIMITER =
       new FileTypeCrawlRateLimiter(
-          new RateLimiterInfo(SpringerApiCrawlSeed.class.getSimpleName(),
+          new RateLimiterInfo(BaseSpringerLinkCrawlSeed.class.getSimpleName(),
                               API_CRAWL_RATE_LIMIT));
   
   /**
@@ -140,33 +138,8 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
    * 
    * @since 1.67.5
    */
-  protected String apiUrl;
+  protected static final String API_URL = "http://api.springer.com/";
   
-  /**
-   * <p>
-   * The journal ISSN (<code>journal_issn</code>) of this crawl seed's AU.
-   * </p>
-   * 
-   * @since 1.67.5
-   */
-  protected String issn;
-  
-  /**
-   * <p>
-   * The volume name (<code>volume_name</code>) of this crawl seed's AU.
-   * </p>
-   * 
-   * @since 1.67.5
-   */
-  protected String volume;
-
-  /**
-   * <p>
-   * This crawl seed's crawler façade.
-   * </p>
-   * 
-   * @since 1.67.5
-   */
   protected CrawlerFacade facade;
 
   /**
@@ -177,6 +150,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
    * @since 1.67.5
    */
   protected List<String> urlList;
+  protected String baseUrl;
 
   /**
    * <p>
@@ -187,7 +161,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
    *          A crawler façade for this crawl seed.
    * @since 1.67.5
    */
-  public SpringerApiCrawlSeed(CrawlerFacade facade) {
+  public BaseSpringerLinkCrawlSeed(CrawlerFacade facade) {
     super(facade);
     if (au == null) {
       throw new IllegalArgumentException("Valid archival unit required for crawl seed");
@@ -196,12 +170,9 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
   }
 
   @Override
-  protected void initialize() 
-      throws ConfigurationException ,PluginException ,IOException {
-    super.initialize();
-    this.apiUrl = au.getConfiguration().get("api_url");
-    this.issn = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ISSN.getKey());
-    this.volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
+  protected void initialize()
+      throws ConfigurationException, PluginException, IOException {
+    this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     this.urlList = null;
   }
   
@@ -226,7 +197,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     boolean siteWarning = false; // Flag to log the potential siteWarning only once
     urlList = new ArrayList<String>();
     int index = 1; // API numbers records starting with 1
-    SpringerApiPamLinkExtractor ple = new SpringerApiPamLinkExtractor();
+    SpringerLinkPamLinkExtractor ple = new SpringerLinkPamLinkExtractor();
     
     // Query API until done
     while (!ple.isDone()) {
@@ -304,32 +275,23 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
    * @return The query URL for the given starting index.
    * @since 1.67.5
    */
-  protected String makeApiUrl(int startingIndex) {
-    String url = String.format("%smeta/v1/pam?q=issn:%s%%20volume:%s&api_key=%s&p=%d&s=%d",
-                               apiUrl,
-                               issn,
-                               volume,
-                               API_KEY,
-                               EXPECTED_RECORDS_PER_RESPONSE,
-                               startingIndex);
-    return url;
-  }
+  protected abstract String makeApiUrl(int startingIndex);
 
   /**
    * <p>
    * Makes a URL fetcher for the given API request, that will parse the result
-   * using the given {@link SpringerApiPamLinkExtractor} instance.
+   * using the given {@link SpringerLinkPamLinkExtractor} instance.
    * </p>
    * 
    * @param ple
-   *          A {@link SpringerApiPamLinkExtractor} instance to parse the API
+   *          A {@link SpringerLinkPamLinkExtractor} instance to parse the API
    *          response with.
    * @param url
    *          A query URL.
    * @return A URL fetcher for the given query URL.
    * @since 1.67.5
    */
-  protected UrlFetcher makeApiUrlFetcher(final SpringerApiPamLinkExtractor ple,
+  protected UrlFetcher makeApiUrlFetcher(final SpringerLinkPamLinkExtractor ple,
                                          final String url,
                                          final String loggerUrl) {
     // Make a URL fetcher
@@ -377,7 +339,7 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
                 log.debug3("URLs from step: " + partial.toString());
               }
               // Output accumulated URLs to start URL list
-              urlList.addAll(partial);
+              urlList = convertDoisToUrls(partial);
             }
           }
         };
@@ -386,8 +348,33 @@ public class SpringerApiCrawlSeed extends BaseCrawlSeed {
     return uf;
   }
   
+  /**
+   * <p>
+   * Encode a DOI for use in URLs, using the encoding of
+   * <code>application/x-www-form-urlencoded</code> and {@link URLEncoder},
+   * except that a space (<code>' '</code>) is encoded as <code>"%20"</code>
+   * rather than <code>'+'</code>.
+   * </p>
+   * 
+   * @param doi
+   *          A DOI.
+   * @return An encoded DOI (URL-encoded with <code>"%20"</code> for a space).
+   * @since 1.67.5
+   */
+  public static String encodeDoi(String doi) {
+    try {
+      return URLEncoder.encode(doi, Constants.ENCODING_UTF_8).replace("+", "%20");
+    }
+    catch (UnsupportedEncodingException uee) {
+      throw new ShouldNotHappenException("Could not URL-encode '" + doi + "' as UTF-8");
+    }
+  }
+  
   public static final String loggerUrl(String srcUrl) {
     return srcUrl.replaceAll("&api_key=[^&]*", "");
   }
+  
+
+  protected abstract List<String> convertDoisToUrls(List<String> dois);
   
 }

@@ -1,0 +1,101 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Springer Link Books Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+    <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkJournalsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>download_url</key>
+        <displayName>Download URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>book_eisbn</key>
+        <displayName>Book eISBN</displayName>
+        <description>Online International Standard Book Number</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Springer Link Books Plugin, Base URL %s, Download Url %s, eISBN %s", base_url, download_url, book_eisbn</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(download_url)</string>
+      <string>2,"^%scontent/pdf/(bbm|bfm)", base_url</string>
+      <string>1,"^%s(content|chapter|book)/", base_url</string>
+      <string>1,"^%sstatic/pdf/", download_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkBooksCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.springer.link.SpringerLinkBooksHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>

@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: TestSpringerApiUrlConsumer.java 40407 2015-03-11 01:28:09Z thib_gc $
  */
 
 /*
@@ -30,16 +30,17 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
 import java.util.regex.Pattern;
 
+import org.lockss.plugin.springer.link.SpringerLinkUrlConsumer;
 import org.lockss.test.LockssTestCase;
 
-public class TestSpringerApiUrlConsumer extends LockssTestCase {
+public class TestSpringerLinkUrlConsumer extends LockssTestCase {
 
   public void testOrigPdfPattern() throws Exception {
-    Pattern origPdfPat = SpringerApiUrlConsumer.makeOrigPdfPattern("http://www.example.com/");
+    Pattern origPdfPat = SpringerLinkUrlConsumer.makeOrigPdfPattern("http://www.example.com/");
     assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007%2Fs00125-013-3090-y.pdf");
     assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/s00125-013-3090-y.pdf");
     assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/a/b/c.pdf");
@@ -53,7 +54,7 @@ public class TestSpringerApiUrlConsumer extends LockssTestCase {
   }
   
   public void testDestPdfPattern() throws Exception {
-    Pattern destPdfPat = SpringerApiUrlConsumer.makeDestPdfPattern("http://download.example.com/");
+    Pattern destPdfPat = SpringerLinkUrlConsumer.makeDestPdfPattern("http://download.example.com/");
     assertMatchesRE(destPdfPat, "http://download.example.com/static/pdf/371/art%253A10.1007%252Fs00125-013-3090-y.pdf?auth123=0000028291_00004acfc1773d7b4cf8393f4201ce39&ext=.pdf");
     assertMatchesRE(destPdfPat, "http://download.example.com/static/pdf/371/art%253A10.1007%252Fs00125-013-3090-y.pdf?auth456=0000028291_00004acfc1773d7b4cf8393f4201ce39&ext=.pdf");
     assertMatchesRE(destPdfPat, "http://download.example.com/static/pdf/371/art%253A10.1007%252Fs00125-013-3090-y.pdf?auth=0000028291_00004acfc1773d7b4cf8393f4201ce39&ext=.pdf");

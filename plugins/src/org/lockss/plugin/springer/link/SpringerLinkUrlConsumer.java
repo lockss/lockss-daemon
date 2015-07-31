@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
 import java.io.IOException;
 import java.util.regex.Pattern;
@@ -49,7 +49,7 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
  * 
  * @since 1.67.5
  */
-public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
+public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
 
   // Will become a definitional param
   public static final String CDN_URL = "http://download.springer.com/";
@@ -58,7 +58,7 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
   
   protected Pattern destPdfPat;
   
-  public SpringerApiUrlConsumer(CrawlerFacade facade,
+  public SpringerLinkUrlConsumer(CrawlerFacade facade,
                                 FetchedUrlData fud) {
     super(facade, fud);
     origPdfPat = makeOrigPdfPattern(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
@@ -115,7 +115,7 @@ public class SpringerApiUrlConsumer extends SimpleUrlConsumer {
    * @since 1.67.5
    */
   protected static Pattern makeDestPdfPattern(String cdnUrl) {
-    return Pattern.compile(String.format("^%sstatic/pdf/.*\\.pdf\\?auth[^=]*=[^&]*(&ext=\\.pdf)?$",
+    return Pattern.compile(String.format("^%sstatic/pdf/.*\\.pdf\\?[^=]*=[^&]*",
                                          cdnUrl),
                            Pattern.CASE_INSENSITIVE);
   }

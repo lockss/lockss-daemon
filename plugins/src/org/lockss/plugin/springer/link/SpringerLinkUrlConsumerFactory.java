@@ -30,24 +30,18 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
-import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-
+import org.lockss.plugin.*;
 /**
- * <p>
- * A crawl seed factory for Springer's custom crawl seed.
- * </p>
- * 
- * @since 1.67.5
- * @see SpringerApiCrawlSeed
+ * @since 1.67.5 
  */
-public class SpringerApiCrawlSeedFactory implements CrawlSeedFactory {
+public class SpringerLinkUrlConsumerFactory implements UrlConsumerFactory {
 
   @Override
-    public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
-      return new SpringerApiCrawlSeed(facade);
-    }
+  public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    return new SpringerLinkUrlConsumer(facade, fud);
+  }
 
 }

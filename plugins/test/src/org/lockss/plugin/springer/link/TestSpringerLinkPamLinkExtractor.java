@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: TestSpringerApiPamLinkExtractor.java 40407 2015-03-11 01:28:09Z thib_gc $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
 import java.io.IOException;
 import java.util.*;
@@ -38,27 +38,10 @@ import java.util.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.extractor.LinkExtractor.Callback;
+import org.lockss.plugin.springer.link.SpringerLinkPamLinkExtractor;
 import org.lockss.test.*;
 
-public class TestSpringerApiPamLinkExtractor extends LockssTestCase {
-  
-  public void testEncodeDoi() throws Exception {
-    assertEquals("abcdefghijklmnopqrstuvwxyz",
-                 SpringerApiPamLinkExtractor.encodeDoi("abcdefghijklmnopqrstuvwxyz"));
-    assertEquals("ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                 SpringerApiPamLinkExtractor.encodeDoi("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
-    assertEquals("0123456789",
-                 SpringerApiPamLinkExtractor.encodeDoi("0123456789"));
-    assertEquals(".-*_",
-                 SpringerApiPamLinkExtractor.encodeDoi(".-*_"));
-    assertEquals("%28%29%2C%2F%3A%3B%3C%3E%40%5B%5D%7B%7D",
-                 SpringerApiPamLinkExtractor.encodeDoi("(),/:;<>@[]{}"));
-    // Not like application/x-www-form-urlencoded / URLEncoder
-    assertNotEquals("+",
-                    SpringerApiPamLinkExtractor.encodeDoi(" "));
-    assertEquals("%20",
-                 SpringerApiPamLinkExtractor.encodeDoi(" "));
-  }
+public class TestSpringerLinkPamLinkExtractor extends LockssTestCase {
   
   public void testGoodInput() throws Exception {
     String input =
@@ -112,7 +95,7 @@ public class TestSpringerApiPamLinkExtractor extends LockssTestCase {
         "   </records>\n" +
         "</response>\n";
     
-    SpringerApiPamLinkExtractor ple = new SpringerApiPamLinkExtractor();
+    SpringerLinkPamLinkExtractor ple = new SpringerLinkPamLinkExtractor();
     assertFalse(ple.isDone());
     List<String> out = doExtractUrls(ple, input);
     assertTrue(ple.isDone());
@@ -120,9 +103,7 @@ public class TestSpringerApiPamLinkExtractor extends LockssTestCase {
     assertEquals(1, ple.getTotal());
     assertEquals(1, ple.getStart());
     assertTrue(out.size() != 0);
-    assertIsomorphic(Arrays.asList("http://www.example.com/article/10.0000%2Fs00125-014-3382-x",
-                                   "http://www.example.com/article/10.0000%2Fs00125-014-3382-x/fulltext.html",
-                                   "http://download.springer.com/content/pdf/10.0000%2Fs00125-014-3382-x.pdf"),
+    assertIsomorphic(Arrays.asList("10.0000/s00125-014-3382-x"),
                      out);
   }
   
@@ -139,7 +120,7 @@ public class TestSpringerApiPamLinkExtractor extends LockssTestCase {
         "  </result>\n" +
         "</response>";
     
-    SpringerApiPamLinkExtractor ple = new SpringerApiPamLinkExtractor();
+    SpringerLinkPamLinkExtractor ple = new SpringerLinkPamLinkExtractor();
     assertFalse(ple.isDone());
     try {
       List<String> out = doExtractUrls(ple, input);

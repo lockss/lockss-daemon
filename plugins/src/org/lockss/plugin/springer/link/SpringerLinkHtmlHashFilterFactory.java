@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer.api;
+package org.lockss.plugin.springer.link;
 
 import java.io.InputStream;
 
@@ -39,13 +39,19 @@ import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-public class SpringerApiHtmlHashFilterFactory implements FilterFactory {
+public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
 
     public InputStream createFilteredInputStream(ArchivalUnit au,
                                                  InputStream in,
                                                  String encoding) {
         NodeFilter[] filters = new NodeFilter[] {
-                                                 
+          HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+          HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+          HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
+          HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
+          HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
+          HtmlNodeFilters.tagWithAttribute("div", "id", "abstract-references"),
+          HtmlNodeFilters.tagWithAttribute("div", "id", "abstract-about"),
         };
         return new HtmlFilterInputStream(in,
                                          encoding,

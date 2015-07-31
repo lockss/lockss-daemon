@@ -1,0 +1,56 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.springer.link.ClockssSpringerLinkBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Springer Link Books Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+    <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Springer Link Books Plugin (CLOCKSS), Base URL %s, Download Url %s, eISBN %s", base_url, download_url, book_eisbn</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+     <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+     </entry>
+    </map>
+  </entry>
+</map>
