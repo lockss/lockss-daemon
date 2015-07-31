@@ -932,6 +932,8 @@
       param[base_url] = http://www.jstor.org/
       param[base_url2] = https://www.jstor.org/
       implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[0] = Volume 14. links only to older content. No links to current content. Publisher won't fix. PD-1119
 
       param[journal_id] = jmorahist
 
@@ -948,7 +950,7 @@
       au < manifest ; 2011 ; Journal of Moravian History Volume 11 ; 11 >
       au < manifest ; 2012 ; Journal of Moravian History Volume 12 ; 12 >
       au < manifest ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
-      au < manifest ; 2014 ; Journal of Moravian History Volume 14 ; 14 >
+      au < notReady ; 2014 ; Journal of Moravian History Volume 14 ; 14 >
       au < manifest ; 2015 ; Journal of Moravian History Volume 15 ; 15 >
       
     }
