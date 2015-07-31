@@ -329,7 +329,8 @@
       eissn = 2161-6310 ;
       issnl = 1933-6632
     >
-      comment[notReady] = volume 14 has urls for issues from a different journal. http://www.jstor.org/clockss/jmorahist/14/index.html
+      comment[0] = volume 14 has urls for issues from an older, different journal. http://www.jstor.org/clockss/jmorahist/14/index.html
+      comment[1] = Publisher reports that they cannot fix this issue.
       param[journal_id] = jmorahist
 
       au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 8 ; 8 >
