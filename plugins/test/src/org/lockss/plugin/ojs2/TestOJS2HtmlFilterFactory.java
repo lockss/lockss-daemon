@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -172,7 +176,6 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
       "</body>";
   private static final String footerHtmlFiltered =
       "<body> " +
-      "<!-- footer --> " +
       "</body>";
   
   public void testSidebarKeywordCloudFiltering() throws Exception {

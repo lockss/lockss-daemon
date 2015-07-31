@@ -72,6 +72,11 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
   }
   
   protected static NodeFilter[] baseFilters = new NodeFilter[] {
+    // Boilerplate
+    HtmlNodeFilters.comment(),
+    HtmlNodeFilters.tag("style"),
+    HtmlNodeFilters.tag("script"),
+    HtmlNodeFilters.tag("noscript"),
     // No need to hash these tags in OJS sites, not content and things change
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
     // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"), sidebar filter below removes this tag
@@ -122,7 +127,7 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "class", "badge"),
         HtmlNodeFilters.tagWithTextRegex("span", "^[0-9]*$")),
     // EU-style cookies disclosure banner
-    HtmlNodeFilters.tagWithAttribute("div", "id", "footer"), // http://ojs.statsbiblioteket.dk/
+    HtmlNodeFilters.tagWithAttribute("div", "id", "cookiesAlert"), // http://ojs.statsbiblioteket.dk/
   };
   
   @Override
