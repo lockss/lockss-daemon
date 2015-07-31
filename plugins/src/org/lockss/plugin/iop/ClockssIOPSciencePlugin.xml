@@ -1,7 +1,8 @@
 <map>
+  <!-- PD-1309 PD-1361 -->
   <entry>
     <string>plugin_status</string>
-    <string>down - PD-1309 PD-1361</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -189,5 +190,9 @@
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>/((css|js)/[^?]+[.](css|js|png)$|refs$|download(HR)?Figure/figure/)</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>
