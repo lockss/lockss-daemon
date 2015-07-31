@@ -41,6 +41,7 @@ public class OJS2UrlNormalizer implements UrlNormalizer {
   public String normalizeUrl(String url,
                              ArchivalUnit au)
       throws PluginException {
+    // EU-style cookies disclosure banner e.g. http://ojs.statsbiblioteket.dk/
     return StringUtils.substringBeforeLast(url, "?acceptCookies=1");
   }
 
