@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>51</string>
+    <string>52</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -87,7 +87,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -134,6 +134,7 @@
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", base_url, journal_id, year</string>
+      <string>2,"\?acceptCookies="</string>
       <string>2,"/([^.?/]+)/\1/\1/"</string>
       <string>2,"^%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", base_url, journal_id</string>
       <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", base_url, journal_id</string>
