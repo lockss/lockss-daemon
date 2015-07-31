@@ -97,7 +97,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     String starturl =
-        "http://www.example.com/lockss-manifest/elife_2013.html";
+        "http://www.example.com/lockss-manifest/2013.html";
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("eLife Sciences Plugin, Base URL http://www.example.com/, Volume 2013",
         au.getName());
@@ -175,7 +175,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     
     // Test for pages that should get crawled or not
     // permission page/start url
-    shouldCacheTest(ROOT_URL + "lockss-manifest/elife_2013.html", true, au);
+    shouldCacheTest(ROOT_URL + "lockss-manifest/2013.html", true, au);
     shouldCacheTest(ROOT_URL + "clockss-manifest/elife_2013.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // toc page for an issue, there is no issue
