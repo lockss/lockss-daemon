@@ -62,30 +62,31 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
   
   protected static NodeFilter[] baseHWDrupalFilters = new NodeFilter[] {
     // No relevant content in header/footer (in crawl filter)
-    new TagNameFilter("header"),
-    new TagNameFilter("footer"),
+    HtmlNodeFilters.tag("header"),
+    HtmlNodeFilters.tag("footer"),
     // no need to include aside (in crawl filter)
-    new TagNameFilter("aside"),
+    HtmlNodeFilters.tag("aside"),
     // Do not include right-sidebar in hash; common with APS & OUP
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
     // prev/next pager can change (in crawl filter)
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
     
     // Publisher adding/updating meta tags
-    new TagNameFilter("head"),
+    HtmlNodeFilters.tag("head"),
     // remove ALL comments
     HtmlNodeFilters.comment(),
     // copyright statement may change
     HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
     // messages can appear arbitrarily
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "messages"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alert"),
     // citation reference extras
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
     
     // most scripts are in head, however, if any are in the body they are filtered
-    new TagNameFilter("script"),
-    new TagNameFilter("noscript"),
+    HtmlNodeFilters.tag("script"),
+    HtmlNodeFilters.tag("noscript"),
     // <div class="ui-dialog ui-widget had id changes in inner div
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ui-widget"),
   };

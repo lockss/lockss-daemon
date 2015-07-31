@@ -56,7 +56,6 @@ public class HighWireDrupalArticleIteratorFactory
   
   // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1
-  // http://ajpcell.physiology.org/content/302/1/C1.article-info
   // http://ajpcell.physiology.org/content/302/1/C1.figures-only
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf+html
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf
@@ -67,6 +66,7 @@ public class HighWireDrupalArticleIteratorFactory
   // these kinds of urls are not used as part of the AI
   // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html (normalized)
   // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf (normalized)
+  // http://ajpcell.physiology.org/content/302/1/C1.article-info
   // http://bjo.bmj.com/content/96/1/1.short
   // http://bjo.bmj.com/content/96/1/1.citation (usually no links)
   

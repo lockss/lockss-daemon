@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>15</string>
+        <string>16</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -112,9 +112,8 @@
     <string>au_crawlrules</string>
     <list>
       <!-- Do not crawl these variations -->
-      <string>2,"content/.+([.](print|explore)|/(article-info|rapid-responses|related|rr/|submit))"</string>
+      <string>2,"content/.+([.](print|explore|article-info)|/(article-info|rapid-responses|related|rr/|submit))"</string>
       <string>2,"(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))"</string>
-      <string>2,"^https?://static[.]www[.]bmj[.]com/content/"</string>
       <string>2,"^https?://(?!elife)%s/content/(?!%s/)[0-9]+/[^/.?]+([.]toc)?$", url_host(base_url), volume_name</string>
       <!-- otherwise, all content from CDN -->
       <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com||.+[.]gstatic[.]com)/."</string>
@@ -152,6 +151,7 @@
     <list>
       <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
     </list>
   </entry>

@@ -47,12 +47,12 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException("Unexpected call to HighWireDrupalHttpResponseHandler.init()");
   }
   
-  public static class NoFailRetryableNetworkException_2_30S
-  extends CacheException.RetryableNetworkException_2_30S {
+  public static class NoFailRetryableNetworkException_2_10S
+  extends CacheException.RetryableNetworkException_2_10S {
     
     private static final long serialVersionUID = 1L;
     
-    public NoFailRetryableNetworkException_2_30S(String message) {
+    public NoFailRetryableNetworkException_2_10S(String message) {
       super(message);
     }
     
@@ -80,16 +80,24 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
       case 502:
         logger.debug2("502: " + url);
         if (url.endsWith(".index-by-author")) {
-          return new NoFailRetryableNetworkException_2_30S("502 Bad Gateway Error (non-fatal)");
+          return new NoFailRetryableNetworkException_2_10S("502 Bad Gateway Error (non-fatal)");
         }
-        return new CacheException.RetryableNetworkException_3_60S("502 Bad Gateway Error");
+        return new CacheException.RetryableNetworkException_2_10S("502 Bad Gateway Error");
+        
+      case 503:
+        // http://d1gqps90bl2jsp.cloudfront.net/content/brain/137/12/3284/F7.medium.gif 503 Service Unavailable
+        logger.debug2("503: " + url);
+        if (url.contains(".cloudfront.net/")) {
+          return new NoFailRetryableNetworkException_2_10S("503 Service Unavailable Error (non-fatal)");
+        }
+        return new CacheException.RetryableNetworkException_2_10S("503 Service Unavailable Error");
         
       case 504:
         logger.debug2("504: " + url);
         if (url.contains("/content/")) {
-          return new CacheException.RetryableNetworkException_2_60S("504 Gateway Time-out Error");
+          return new CacheException.RetryableNetworkException_2_10S("504 Gateway Time-out Error");
         }
-        return new NoFailRetryableNetworkException_2_30S("504 Gateway Time-out Error (non-fatal)");
+        return new NoFailRetryableNetworkException_2_10S("504 Gateway Time-out Error (non-fatal)");
         
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
