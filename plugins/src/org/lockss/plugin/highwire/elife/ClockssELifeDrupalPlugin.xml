@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - moving fall 2015</string>
+    <string>ready</string>
   </entry>
   <!-- compare to ELifeDrupalPlugin, the added entries should be in synch -->
   <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -23,7 +23,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,7 +31,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sclockss-manifest/elife_%s.html", base_url, volume_name</string>
+    <string>"%sclockss-manifest/%s.html", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>

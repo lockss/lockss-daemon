@@ -54,7 +54,9 @@ public class ELifeDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFa
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
     // The next filter is not needed, we care about the correction for the hash
     // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
-    
+    // Author response & comments are dynamic and change
+    HtmlNodeFilters.tagWithAttribute("div", "id", "author-response"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "comments"),
     // No relevant content in these headers
     HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "page_header"),
