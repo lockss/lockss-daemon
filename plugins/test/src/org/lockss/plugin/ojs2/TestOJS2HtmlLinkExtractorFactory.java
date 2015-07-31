@@ -33,9 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs2;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
@@ -97,7 +95,15 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
   static final String expectedAbsLinkPath = "http://www.xyz.com/path/leaf";
   static final String expectedRelLinkPath = "http://www.xyz.com/foo/leaf";
 
-
+  static final String iframePdfViewerUrl =
+      "<iframe width=\"100%\" height=\"100%\" webkitallowfullscreen=\"\" " + 
+      "allowfullscreen=\"\" style=\"min-height: 500px;\" " +
+      "src=\"http://www.xyz.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=http%3A%2F%2Fwww.xyz.com%2Findex.php%2Fedui%2Farticle%2FviewFile%2F19759%2F18125\"></iframe>";
+  static final String expectedIframePdfViewerUrl1 =
+      "http://www.xyz.com/index.php/edui/article/viewFile/19759/18125";
+  static final String expectedIframePdfViewerUrl2 =
+      "http://www.xyz.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=http%3A%2F%2Fwww.xyz.com%2Findex.php%2Fedui%2Farticle%2FviewFile%2F19759%2F18125";
+  
   
   /**
    * Make a basic OJS test AU to which URLs can be added.
@@ -230,6 +236,22 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
       }
     });
     assertEquals(expectedMetaLinks, foundLink);
+  }
+  
+  public void testIframePdfViewerUrl() throws Exception {
+    MockArchivalUnit mockAu = makeAu();
+    InputStream in = new ByteArrayInputStream(iframePdfViewerUrl.getBytes());
+    LinkExtractor ext  = fact.createLinkExtractor("text/html");
+    final List<String> foundLink = new ArrayList<String>();
+    ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar", new Callback() {
+      @Override
+      public void foundLink(String url) {
+        foundLink.add(url);
+      }
+    });
+    assertEquals(Arrays.asList(expectedIframePdfViewerUrl1,
+                               expectedIframePdfViewerUrl2),
+                 foundLink);
   }
   
 }

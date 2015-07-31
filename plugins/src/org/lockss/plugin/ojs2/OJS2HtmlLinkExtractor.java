@@ -33,10 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs2;
 
 import java.io.IOException;
+import java.net.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.oro.text.regex.*;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
@@ -50,31 +50,34 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   protected static final String FT_NAME = "citation_fulltext_html_url";
   protected static final String CONTENT = "content";
 
-  protected static final org.apache.oro.text.regex.Pattern OPEN_RT_WINDOW_PATTERN = 
-      RegexpUtil.uncheckedCompile("javascript:openRTWindow\\('([^']*)'\\);",
-                                  Perl5Compiler.READ_ONLY_MASK);
-  protected static final java.util.regex.Pattern JLA_ARTICLE_PATTERN = Pattern.compile(
+  protected static final Pattern OPEN_RT_WINDOW_PATTERN =
+      Pattern.compile("javascript:openRTWindow\\('([^']*)'\\);", Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern IFRAME_PDF_VIEWER_PATTERN =
+      Pattern.compile("/plugins/generic/pdfJsViewer/pdf\\.js/web/viewer\\.html\\?file=([^&]+)", Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern JLA_ARTICLE_PATTERN = Pattern.compile(
       "(http://www[.]logicandanalysis[.]org/index.php/jla/article/view/[\\d]+)/[\\d]+$");
   
   @Override
-  protected String extractLinkFromTag(
-      StringBuffer link, ArchivalUnit au, Callback cb) throws IOException {
+  protected String extractLinkFromTag(StringBuffer link,
+                                      ArchivalUnit au,
+                                      Callback cb)
+      throws IOException {
     switch (link.charAt(0)) {
       case 'a':
       case 'A':
-        if (beginsWithTag(link,"a")) {
+        if (beginsWithTag(link, ATAG)) {
           // <a href="...">
           String href = getAttributeValue(HREF, link);
           if (href != null) {
             // javascript:openRTWindow(url);
-            PatternMatcher matcher = RegexpUtil.getMatcher();
-            if (   OPEN_RT_WINDOW_PATTERN != null 
-                && matcher.contains(href, OPEN_RT_WINDOW_PATTERN)) {
-              String openRTWindowLink = 
-                  interpretRTOpenWindowMatch(matcher.getMatch());
-              return openRTWindowLink;
+            Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(href);
+            if (mat.find()) {
+              if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+              cb.foundLink(resolveUri(baseUrl, mat.group(1)));
             }
-            Matcher mat = JLA_ARTICLE_PATTERN.matcher(href);
+            mat = JLA_ARTICLE_PATTERN.matcher(href);
             if (mat.find()) {
               String url = mat.group(1);
               cb.foundLink(url);
@@ -85,17 +88,31 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
         
       case 'f':
       case 'F':
-        if (beginsWithTag(link,"form")) {
+        if (beginsWithTag(link, FORMTAG)) {
           // <form action="...">
           String action = getAttributeValue("action", link);
           if (action != null) {
             // javascript:openRTWindow(url);
-            PatternMatcher matcher = RegexpUtil.getMatcher();
-            if (   OPEN_RT_WINDOW_PATTERN != null 
-                && matcher.contains(action, OPEN_RT_WINDOW_PATTERN)) {
-              String openRTWindowLink = 
-                  interpretRTOpenWindowMatch(matcher.getMatch());
-              return openRTWindowLink;
+            Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(action);
+            if (mat.find()) {
+              if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+              cb.foundLink(resolveUri(baseUrl, mat.group(1)));
+            }
+          }
+        }
+        break;
+
+      case 'i':
+      case 'I':
+        if (beginsWithTag(link, IFRAMETAG)) {
+          // <iframe src="...">
+          String src = getAttributeValue(SRC, link);
+          if (src != null) {
+            // <baseurl?>/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=<encodedurl>
+            Matcher mat = IFRAME_PDF_VIEWER_PATTERN.matcher(src);
+            if (mat.find()) {
+              if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+              cb.foundLink(resolveUri(baseUrl, URLDecoder.decode(mat.group(1), "UTF-8")));
             }
           }
         }
@@ -103,22 +120,19 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
         
       case 'm':
       case 'M':
-        if (beginsWithTag(link,"meta")) {
+        if (beginsWithTag(link, METATAG)) {
           if (REFRESH.equalsIgnoreCase(getAttributeValue(HTTP_EQUIV, link))) {
             String value = getAttributeValue(HTTP_EQUIV_CONTENT, link);
             if (value != null) {
               // <meta http-equiv="refresh" content="...">
               int i = value.indexOf(";url=");
               if (i >= 0) {
-                String url = value.substring(i+5);
-  
+                String refreshUrl = value.substring(i+5);
                 // javascript:openRTWindow(url);
-                PatternMatcher matcher = RegexpUtil.getMatcher();
-                if (   OPEN_RT_WINDOW_PATTERN != null 
-                    && matcher.contains(url, OPEN_RT_WINDOW_PATTERN)) {
-                  String openRTWindowLink = 
-                      interpretRTOpenWindowMatch(matcher.getMatch());
-                  return openRTWindowLink;
+                Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(refreshUrl);
+                if (mat.find()) {
+                  if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+                  cb.foundLink(resolveUri(baseUrl, mat.group(1)));
                 }
               }
             }
@@ -139,19 +153,5 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
     return super.extractLinkFromTag(link, au, cb);
   }
   
-  private static String interpretRTOpenWindowMatch(MatchResult openRTWindowMatch) {
-    if ((openRTWindowMatch.groups() - 1) != 1) {
-      log.warning("Internal inconsistency: openRTWindow match '"
-          + openRTWindowMatch.toString()
-          + "' has "
-          + (openRTWindowMatch.groups() - 1)
-          + " proper subgroups; expected 1");
-      if ((openRTWindowMatch.groups() - 1) < 1) {
-        return null;
-      }
-    }
-    return openRTWindowMatch.group(1);
-  }
-
 }
 
