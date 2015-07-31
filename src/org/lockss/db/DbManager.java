@@ -1623,7 +1623,8 @@ public class DbManager extends BaseLockssDaemonManager
 	throw new DbException("Existing database is version "
 	    + existingDbVersion
 	    + ", which is higher than the target database version "
-	    + targetDbVersion + " for this daemon.");
+	    + targetDbVersion
+	    + " for this daemon. Possibly caused by daemon downgrade.");
       }
 
       // Check whether any previously started threaded database updates need to
