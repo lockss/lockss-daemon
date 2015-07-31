@@ -32,13 +32,44 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair;
 
+import java.net.URLEncoder;
 import java.util.*;
 
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.test.*;
 import org.lockss.util.Constants;
+import org.lockss.util.ListUtil;
 
 public class TestScHtmlLinkExtractor extends LockssTestCase {
+
+  public void testSimpleAnchorTag() throws Exception {
+      String url1 = "http://www.example.com/link1.html";
+      String url2 = "http://www.example.com/link2.html";
+      String url3 = "link3.html";
+
+      String input = "<html><head><title>Test</title></head><body>"
+                      + "<a href=" + url1 + ">link1</a>"
+                      + "Filler, with <b>bold</b> tags and<i>others</i>" + "<a href="
+                      + url2 + ">link2</a>" + "<a href=" + url3 + ">link3</a>";
+
+      String srcUrl = "http://www.example.com/";
+      LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+      final List<String> emitted = new ArrayList<>();
+      le.extractUrls(null,
+                   new StringInputStream(input),
+                   Constants.ENCODING_UTF_8,
+                   srcUrl,
+                   new LinkExtractor.Callback() {
+                     @Override
+                     public void foundLink(String url) {
+                       emitted.add(url);
+                     }
+                   });
+
+    assertIsomorphic(ListUtil.list(url1, url2, srcUrl + url3), emitted);
+
+  }
+
 
   public void testImg() throws Exception {
     String input =
@@ -48,7 +79,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
         "<img data-original=\"quxdo.jpg\" />\n";
     String srcUrl = "http://www.example.com/";
     LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
-    final List<String> emitted = new ArrayList<String>();
+    final List<String> emitted = new ArrayList<>();
     le.extractUrls(null,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
@@ -64,7 +95,8 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
     assertContains(emitted, srcUrl + "bardo.jpg");
     assertContains(emitted, srcUrl + "quxdo.jpg");
   }
-  
+
+  /*
   public void testDownloadFile() throws Exception {
     String input =
         "<a onclick=\"javascript:downloadFile('/data/Journals/JOURN/12345/journ_11_222_edboard.pdf')\">Foo</a>\n";
@@ -84,7 +116,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
     assertEquals(1, emitted.size());
     assertContains(emitted, srcUrl + "data/Journals/JOURN/12345/journ_11_222_edboard.pdf");
   }
-  
+  */
   // This applies only when the citation URL doesn't have the article ID in it
   public void testCitation() throws Exception {
     String input =
@@ -93,7 +125,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
     String baseUrl = "http://www.example.com/";
     String srcUrl = baseUrl + "article.aspx?articleid=1234567";
     LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
-    final List<String> emitted = new ArrayList<String>();
+    final List<String> emitted = new ArrayList<>();
     le.extractUrls(null,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
@@ -105,9 +137,43 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
                        }
                    });
     System.out.println(emitted);
-    assertEquals(4, emitted.size()); // 2 x without "articleid" + 2 x with "articleid"
+    assertEquals(2, emitted.size()); // 2 x with "articleid"
     assertContains(emitted, baseUrl + "downloadCitation.aspx?format=ris&articleid=1234567");
     assertContains(emitted, baseUrl + "downloadCitation.aspx?articleid=1234567");
   }
-  
+
+  public void testPdfLink() throws Exception {
+    String input =
+      "<a id=\"hlPDFlink1\" onclick=\"openPDFWindow('202091958')\">PDF</a>\\n" +
+      "<a id=\"hlPDFlink2\" onclick=\"return openPDFWindow('2136060'," +
+      "'Article','returnurl')\" href=\"UserControls/#\")\">PDF</a>\\n";
+    String baseUrl = "http://www.example.com";
+    LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    String jamaArgs = "json=" +
+                      URLEncoder.encode("{\'iArticleID\' : 202091958}","UTF-8")
+                      + "&post=json";
+    String spieArgs =  "json=" +
+                       URLEncoder.encode("{\'resourceId\' : 2136060, \'resourceType\' : " +
+                                         "\'Article\' }",
+                                         "UTF-8") + "&post=json";
+
+    final List<String> emitted = new ArrayList<>();
+    le.extractUrls(null,
+                   new StringInputStream(input),
+                   Constants.ENCODING_UTF_8,
+                   baseUrl,
+                   new LinkExtractor.Callback() {
+                     @Override
+                     public void foundLink(String url) {
+                       emitted.add(url);}
+                   });
+    assertEquals(3, emitted.size());
+    assertContains(emitted, baseUrl + "/UserControls/#");
+    assertContains(emitted, baseUrl +
+                            ScHtmlLinkExtractorFactory.PDF_QUERY_STRING + jamaArgs);
+    assertContains(emitted, baseUrl +
+                            ScHtmlLinkExtractorFactory.PDF_QUERY_STRING_SPIE + spieArgs);
+
+  }
+
 }

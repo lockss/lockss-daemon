@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -84,11 +84,19 @@
       <string>1,"^%sIssue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", base_url, resource_id, resource_id</string>
       <string>1,"^%sdata/(Journals|Multimedia)/", base_url</string>
       <string>1,"^%scombres\.axd/", base_url</string>
+      <string>1,"^%sissue\.aspx/SetArticlePDFLinkBasedOnAccess", base_url</string>
+      <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
+      <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
+      <string>2,"__EVENTVALIDATION="</string>
     </list>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.silverchair.ScHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>application/json_link_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.ScJsonLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
@@ -127,11 +135,11 @@
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
-  </entry> 
+  </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
-  </entry> 
+  </entry>
   <entry>
     <string>text/plain_metadata_extractor_factory_map</string>
     <map>
@@ -149,7 +157,7 @@
         <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>  
+  </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
@@ -162,5 +170,9 @@
   <entry>
     <string>au_permitted_host_pattern</string>
     <string>"ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com"</string>
+  </entry>
+  <entry>
+      <string>plugin_url_fetcher_factory</string>
+      <string>org.lockss.plugin.silverchair.ScUrlFetcherFactory</string>
   </entry>
 </map>
