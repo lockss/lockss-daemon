@@ -121,6 +121,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     new AndFilter(
         HtmlNodeFilters.tagWithAttribute("span", "class", "badge"),
         HtmlNodeFilters.tagWithTextRegex("span", "^[0-9]*$")),
+    // EU-style cookies disclosure banner
+    HtmlNodeFilters.tagWithAttribute("div", "id", "footer"), // http://ojs.statsbiblioteket.dk/
   };
   
   @Override
