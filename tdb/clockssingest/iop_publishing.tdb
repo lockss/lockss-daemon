@@ -119,7 +119,6 @@
 
     param[journal_issn] = 1748-3190
     comment[param] = eissn preferred
-    comment[notReady] = login required
 
     au < manifest ; exists ; 2006 ; Bioinspiration & Biomimetics Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Bioinspiration & Biomimetics Volume 2 ; 2 > 
@@ -129,7 +128,7 @@
     au < finished ; crawling ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 > 
-    au < notReady ; exists ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 > 
+    au < crawling ; exists ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 > 
     au < manifest ; exists ; 2015 ; Bioinspiration & Biomimetics Volume 10 ; 10 > 
 
   }
@@ -283,7 +282,7 @@
     au < frozen ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
     au < crawling ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
-    au < testing ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
+    au < crawling ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
     au < manifest ; exists ; 2015 ; Chinese Physics B Volume 24 ; 24 >
   }
 
@@ -366,7 +365,6 @@
 
     param[journal_issn] = 0264-9381
     comment[param] = print issn preferred
-    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 1984 ; Classical and Quantum Gravity Volume 1 ; 1 > 
     au < manifest ; exists ; 1985 ; Classical and Quantum Gravity Volume 2 ; 2 > 
@@ -398,7 +396,7 @@
     au < finished ; crawling ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 
     au < finished ; crawling ; 2012 ; Classical and Quantum Gravity Volume 29 ; 29 > 
     au < crawling ; exists ; 2013 ; Classical and Quantum Gravity Volume 30 ; 30 > 
-    au < notReady ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 > 
+    au < crawling ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 > 
     au < manifest ; exists ; 2015 ; Classical and Quantum Gravity Volume 32 ; 32 > 
 
   }
@@ -519,7 +517,6 @@
 
     param[journal_issn] = 1748-9326
     comment[ingNotReady] = crawl failed, Fetch error - access denied, RU4441
-    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 2006 ; Environmental Research Letters Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
@@ -529,7 +526,7 @@
     au < finished ; crawling ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 > 
-    au < notReady ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
+    au < crawling ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
     au < manifest ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
 
   }
@@ -725,7 +722,6 @@
 
     param[journal_issn] = 1873-7005
     comment[param] = eissn preferred
-    comment[notReady] = old content collected, need retest later
 
     au < manifest ; exists ; 1986 ; Fluid Dynamics Research Volume 1 ; 1 > 
     au < manifest ; exists ; 1987 ; Fluid Dynamics Research Volume 2 ; 2 > 
@@ -772,7 +768,7 @@
     au < finished ; crawling ; 2011 ; Fluid Dynamics Research Volume 43 ; 43 > 
     au < finished ; crawling ; 2012 ; Fluid Dynamics Research Volume 44 ; 44 > 
     au < crawling ; exists ; 2013 ; Fluid Dynamics Research Volume 45 ; 45 > 
-    au < notReady ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 > 
+    au < crawling ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 > 
     au < manifest ; exists ; 2015 ; Fluid Dynamics Research Volume 47 ; 47 > 
 
   }
@@ -1025,7 +1021,7 @@
     au < crawling ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
     au < frozen ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
     au < crawling ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
-    au < testing ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
+    au < crawling ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
     au < manifest ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
     
   }
@@ -1063,7 +1059,6 @@
     >
     
     param[journal_issn] = 1475-7516
-    comment[notReady] = malformed PDFs
 
     au < manifest ; exists ; 2003 ; Journal of Cosmology and Astroparticle Physics Volume 2003 ; 2003 > 
     au < manifest ; exists ; 2004 ; Journal of Cosmology and Astroparticle Physics Volume 2004 ; 2004 > 
@@ -1076,7 +1071,7 @@
     au < finished ; crawling ; 2011 ; Journal of Cosmology and Astroparticle Physics Volume 2011 ; 2011 > 
     au < finished ; crawling ; 2012 ; Journal of Cosmology and Astroparticle Physics Volume 2012 ; 2012 > 
     au < crawling ; exists ; 2013 ; Journal of Cosmology and Astroparticle Physics Volume 2013 ; 2013 > 
-    au < notReady ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 > 
+    au < crawling ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 > 
     au < manifest ; exists ; 2015 ; Journal of Cosmology and Astroparticle Physics Volume 2015 ; 2015 > 
 
   }
@@ -1210,7 +1205,7 @@
     au < finished ; crawling ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 > 
     au < ingNotReady ; exists ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 > 
     au < crawling ; exists ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 > 
-    au < testing ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 > 
+    au < crawling ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 > 
     au < manifest ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 ; 25 > 
 
   }
@@ -1659,7 +1654,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics D: Applied Physics Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics D: Applied Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics D: Applied Physics Volume 46 ; 46 > 
-    au < testing ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
+    au < crawling ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
     au < manifest ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 > 
 
   }
@@ -1841,7 +1836,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 > 
     au < finished ; crawling ; 2012 ; Journal of Physics: Condensed Matter Volume 24 ; 24 > 
     au < crawling ; exists ; 2013 ; Journal of Physics: Condensed Matter Volume 25 ; 25 > 
-    au < testing ; exists ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 > 
+    au < crawling ; exists ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 > 
     au < manifest ; exists ; 2015 ; Journal of Physics: Condensed Matter Volume 27 ; 27 > 
 
   }
@@ -2342,7 +2337,7 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 481 ; 481 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 482 ; 482 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 483 ; 483 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 483 ; 483 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 484 ; 484 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 486 ; 486 >
@@ -2351,7 +2346,7 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 489 ; 489 >
     au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 491 ; 491 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 492 ; 492 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 492 ; 492 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 493 ; 493 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 494 ; 494 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 495 ; 495 >
@@ -2368,14 +2363,14 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 506 ; 506 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 507 ; 507 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 508 ; 508 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 509 ; 509 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 509 ; 509 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 510 ; 510 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 511 ; 511 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 512 ; 512 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 512 ; 512 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 513 ; 513 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 514 ; 514 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 515 ; 515 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 516 ; 516 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 515 ; 515 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 516 ; 516 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 517 ; 517 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 518 ; 518 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 519 ; 519 >
@@ -2388,7 +2383,7 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 526 ; 526 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 527 ; 527 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 528 ; 528 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 529 ; 529 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 529 ; 529 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 530 ; 530 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 531 ; 531 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 532 ; 532 >
@@ -2409,7 +2404,7 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 547 ; 547 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 548 ; 548 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 549 ; 549 >
-    au < testing ; exists ; 2014 ; Journal of Physics: Conference Series Volume 550 ; 550 >
+    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 550 ; 550 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 551 ; 551 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 552 ; 552 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 553 ; 553 >
@@ -2500,7 +2495,7 @@
     au < finished ; crawling ; 2011 ; Journal of Radiological Protection Volume 31 ; 31 > 
     au < finished ; crawling ; 2012 ; Journal of Radiological Protection Volume 32 ; 32 > 
     au < crawling ; exists ; 2013 ; Journal of Radiological Protection Volume 33 ; 33 > 
-    au < testing ; exists ; 2014 ; Journal of Radiological Protection Volume 34 ; 34 > 
+    au < crawling ; exists ; 2014 ; Journal of Radiological Protection Volume 34 ; 34 > 
     au < manifest ; exists ; 2015 ; Journal of Radiological Protection Volume 35 ; 35 > 
 
   }
@@ -2605,7 +2600,7 @@
     au < finished ; crawling ; 2011 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2011 ; 2011 > 
     au < ingNotReady ; exists ; 2012 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2012 ; 2012 > 
     au < crawling ; exists ; 2013 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2013 ; 2013 > 
-    au < testing ; exists ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 > 
+    au < crawling ; exists ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 > 
     au < manifest ; exists ; 2015 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2015 ; 2015 > 
 
   }
@@ -2671,7 +2666,7 @@
     au < crawling ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
     au < frozen ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
-    au < testing ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
+    au < crawling ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
     au < manifest ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
 
   }
@@ -2813,7 +2808,7 @@
     au < finished ; crawling ; 2011 ; Metrologia Volume 48 ; 48 > 
     au < finished ; crawling ; 2012 ; Metrologia Volume 49 ; 49 > 
     au < crawling ; exists ; 2013 ; Metrologia Volume 50 ; 50 > 
-    au < testing ; exists ; 2014 ; Metrologia Volume 51 ; 51 > 
+    au < crawling ; exists ; 2014 ; Metrologia Volume 51 ; 51 > 
     au < manifest ; exists ; 2015 ; Metrologia Volume 52 ; 52 > 
 
   }
@@ -2923,7 +2918,7 @@
     au < finished ; crawling ; 2011 ; New Journal of Physics Volume 13 ; 13 > 
     au < ingNotReady ; exists ; 2012 ; New Journal of Physics Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; New Journal of Physics Volume 15 ; 15 > 
-    au < testing ; exists ; 2014 ; New Journal of Physics Volume 16 ; 16 > 
+    au < crawling ; exists ; 2014 ; New Journal of Physics Volume 16 ; 16 > 
     au < manifest ; exists ; 2015 ; New Journal of Physics Volume 17 ; 17 > 
 
   }
@@ -2966,7 +2961,7 @@
     au < finished ; crawling ; 2011 ; Nonlinearity Volume 24 ; 24 > 
     au < finished ; crawling ; 2012 ; Nonlinearity Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Nonlinearity Volume 26 ; 26 > 
-    au < testing ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 > 
+    au < crawling ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 > 
     au < manifest ; exists ; 2015 ; Nonlinearity Volume 28 ; 28 > 
 
   }
@@ -3072,7 +3067,7 @@
     au < finished ; crawling ; 2011 ; Nuclear Fusion Volume 51 ; 51 > 
     au < finished ; crawling ; 2012 ; Nuclear Fusion Volume 52 ; 52 > 
     au < crawling ; exists ; 2013 ; Nuclear Fusion Volume 53 ; 53 > 
-    au < testing ; exists ; 2014 ; Nuclear Fusion Volume 54 ; 54 > 
+    au < crawling ; exists ; 2014 ; Nuclear Fusion Volume 54 ; 54 > 
     au < manifest ; exists ; 2015 ; Nuclear Fusion Volume 55 ; 55 > 
 
   }
@@ -3223,7 +3218,7 @@
 
     param[journal_issn] = 0031-9120
     comment[param] = print issn preferred
-    comment[notReady] = low agreement
+    comment[ingNotReady] = low agreement
 
     au < manifest ; exists ; 1966 ; Physics Education Volume 1 ; 1 > 
     au < manifest ; exists ; 1967 ; Physics Education Volume 2 ; 2 > 
@@ -3289,7 +3284,7 @@
 
     param[journal_issn] = 0031-9155
     comment[param] = print issn preferred
-    comment[notReady] = low agreement
+    comment[ingNotReady] = low agreement
 
     au < manifest ; exists ; 1956 ; Physics in Medicine and Biology Volume 1 ; 1 > 
     au < manifest ; exists ; 1957 ; Physics in Medicine and Biology Volume 2 ; 2 > 
@@ -3349,7 +3344,7 @@
     au < finished ; crawling ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 > 
     au < ingNotReady ; exists ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 > 
     au < crawling ; exists ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 > 
-    au < testing ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 ; 59 > 
+    au < crawling ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 ; 59 > 
     au < manifest ; exists ; 2015 ; Physics in Medicine and Biology Volume 60 ; 60 > 
 
   }
@@ -3467,7 +3462,7 @@
     param[journal_issn] = 0741-3335
     comment[param] = print issn preferred 
     comment[continues] = 0032-1028
-    comment[notReady] = low agreement
+    comment[ingNotReady] = low agreement
  
     au < manifest ; exists ; 1984 ; Plasma Physics and Controlled Fusion Volume 26 ; 26 > 
     au < manifest ; exists ; 1985 ; Plasma Physics and Controlled Fusion Volume 27 ; 27 > 
@@ -3568,7 +3563,7 @@
     au < finished ; crawling ; 2011 ; Plasma Sources Science and Technology Volume 20 ; 20 > 
     au < finished ; crawling ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Plasma Sources Science and Technology Volume 22 ; 22 > 
-    au < testing ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 > 
+    au < crawling ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 > 
     au < manifest ; exists ; 2015 ; Plasma Sources Science and Technology Volume 24 ; 24 > 
 
   }
