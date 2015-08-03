@@ -2596,7 +2596,7 @@
         au < exists ; exists ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 ; >
         au < exists ; exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 ; >
         au < exists ; exists ; 2012-2014 ; Antiviral Chemistry & Chemotherapy Volume 23 ; 23 ; >
-        au < exists ; exists ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 ; >
+        au < manifest ; exists ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 ; >
 
     }
 
@@ -15242,7 +15242,7 @@
       au < exists ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 ; >
       au < exists ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 ; >
       au < frozen ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; >
-      au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; >
+      au < manifest ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; >
       au < expected ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; >
 
   }
@@ -22695,8 +22695,8 @@
       param[base_url] = http://iem.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 ; >
-      au < exists ; exists ; 2014 ; Journal of Inborn Errors of Metabolism and Screening Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Journal of Inborn Errors of Metabolism and Screening Volume 2 ; 2 ; >
       au < exists ; exists ; 2015 ; Journal of Inborn Errors of Metabolism and Screening Volume 3 ; 3 ; >
 
   }
@@ -37032,7 +37032,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://scs.sagepub.com/
 
-      au < exists ; exists ; 2015 ; Society and Culture in South Asia Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Society and Culture in South Asia Volume 1 ; 1 ; >
 
     }
 
@@ -37487,7 +37487,7 @@
       au < zapped ; finished ; 2010 ; South Asian Survey Volume 17 ; 17 ; >
       au < finished ; frozen ; 2011 ; South Asian Survey Volume 18 ; 18 ; >
       au < manifest ; exists ; 2012 ; South Asian Survey Volume 19 ; 19 ; >
-      au < exists ; exists ; 2013 ; South Asian Survey Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2013 ; South Asian Survey Volume 20 ; 20 ; >
 
     }
 
@@ -40926,7 +40926,7 @@
       param[base_url] = http://vik.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Vikalpa Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2015 ; Vikalpa Volume 40 ; 40 ; >
 
   }
 

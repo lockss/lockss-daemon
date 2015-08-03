@@ -16127,7 +16127,7 @@
     comment[0] = content available from 1890 volume 1 to 1997 volume 80
     comment[notReady] = Probe url problem in manifest page
 
-    au < exists ; exists ; 1998 ; The Monist Volume 81 ; 81 ; >
+    au < manifest ; exists ; 1998 ; The Monist Volume 81 ; 81 ; >
     au < manifest ; exists ; 1999 ; The Monist Volume 82 ; 82 ; >
     au < manifest ; exists ; 2000 ; The Monist Volume 83 ; 83 ; >
     au < manifest ; exists ; 2001 ; The Monist Volume 84 ; 84 ; >
@@ -16335,7 +16335,7 @@
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 449 ; 449 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 450 ; 450 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 451 ; 451 ; >
-    au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 452 ; 452 ; >
+    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 452 ; 452 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 453 ; 453 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 ; >
@@ -16448,7 +16448,7 @@
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 449 ; 449 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 450 ; 450 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 451 ; 451 ; >
-    au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 452 ; 452 ; >
+    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 452 ; 452 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 453 ; 453 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 ; >

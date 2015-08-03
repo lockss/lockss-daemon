@@ -1580,7 +1580,7 @@
 
       param[journal_id] = ijci
 
-      au < exists ; exists ; 2014 ; International Journal of Collaborative Intelligence Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of Collaborative Intelligence Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Collaborative Intelligence Volume 2 ; 2 >
 
     }
@@ -2217,7 +2217,7 @@
 
       param[journal_id] = ijds
 
-      au < exists ; exists ; 2015 ; International Journal of Data Science Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; International Journal of Data Science Volume 1 ; 1 >
 
     }
 
@@ -3411,7 +3411,7 @@
 
       param[journal_id] = ijfcm
 
-      au < exists ; exists ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
+      au < manifest ; exists ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
 
     }
 
@@ -3811,7 +3811,7 @@
 
       param[journal_id] = ijim
 
-      au < exists ; exists ; 2015 ; International Journal of Image Mining Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; International Journal of Image Mining Volume 1 ; 1 >
 
     }
 
@@ -4374,7 +4374,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Intelligent Information and Database Systems Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Intelligent Information and Database Systems Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; International Journal of Intelligent Information and Database Systems Volume 8 ; 8 >
-      au < expected ; exists ; 2015 ; International Journal of Intelligent Information and Database Systems Volume 9 ; 9 >
+      au < manifest ; exists ; 2015 ; International Journal of Intelligent Information and Database Systems Volume 9 ; 9 >
 
     }
 
@@ -7245,7 +7245,7 @@
 
       param[journal_id] = ijseta
 
-      au < exists ; exists ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 >
 
     }
 
