@@ -1114,7 +1114,7 @@
         issnl = 1755-2419
       >
 
-      param[journal_id] = 1755-2427
+      param[journal_id] = ijmbs
 
       au < crawling ; exists ; 2014 ; International Journal of Migration and Border Studies Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Migration and Border Studies Volume 2 ; 2 >
@@ -3095,7 +3095,6 @@
       au < doNotProcess ; exists ; 2006 ; International Journal of Environment, Workplace and Employment Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2007 ; International Journal of Environment, Workplace and Employment Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2008 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 >
-      au < expected ; exists ; 2009 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 >
 
     }
 
@@ -3390,7 +3389,6 @@
       >
 
       param[journal_id] = ijfipm
-      comment[0] = no issue in 2011
 
       au < doNotProcess ; exists ; 2008 ; International Journal of Functional Informatics and Personalised Medicine Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Functional Informatics and Personalised Medicine Volume 2 ; 2 >
@@ -3918,7 +3916,6 @@
       >
 
       param[journal_id] = ijicot
-      comment[0] = no issue in 2012
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
       au < crawling ; exists ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
