@@ -39,16 +39,16 @@
       param[journal_abbr] = annals-of-iowa
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 2005 ; Annals at Iowa Volume 64 ; 64 >
-      au < exists ; 2006 ; Annals at Iowa Volume 65 ; 65 >
-      au < exists ; 2007 ; Annals at Iowa Volume 66 ; 66 >
-      au < exists ; 2008 ; Annals at Iowa Volume 67 ; 67 >
-      au < exists ; 2009 ; Annals at Iowa Volume 68 ; 68 >
-      au < exists ; 2010 ; Annals at Iowa Volume 69 ; 69 >
-      au < exists ; 2011 ; Annals at Iowa Volume 70 ; 70 >
-      au < exists ; 2012 ; Annals at Iowa Volume 71 ; 71 >
-      au < exists ; 2013 ; Annals at Iowa Volume 72 ; 72 >
-      au < exists ; 2014 ; Annals at Iowa Volume 73 ; 73 >
+      au < manifest ; 2005 ; Annals at Iowa Volume 64 ; 64 >
+      au < manifest ; 2006 ; Annals at Iowa Volume 65 ; 65 >
+      au < manifest ; 2007 ; Annals at Iowa Volume 66 ; 66 >
+      au < manifest ; 2008 ; Annals at Iowa Volume 67 ; 67 >
+      au < manifest ; 2009 ; Annals at Iowa Volume 68 ; 68 >
+      au < manifest ; 2010 ; Annals at Iowa Volume 69 ; 69 >
+      au < manifest ; 2011 ; Annals at Iowa Volume 70 ; 70 >
+      au < manifest ; 2012 ; Annals at Iowa Volume 71 ; 71 >
+      au < manifest ; 2013 ; Annals at Iowa Volume 72 ; 72 >
+      au < manifest ; 2014 ; Annals at Iowa Volume 73 ; 73 >
       au < expected ; 2015 ; Annals at Iowa Volume 74 ; 74 >
 
     }
@@ -65,22 +65,22 @@
       param[journal_abbr] = bai
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 1989 ; Books at Iowa Volume 50 ; 50 >
-      au < exists ; 1989 ; Books at Iowa Volume 51 ; 51 >
-      au < exists ; 1990 ; Books at Iowa Volume 52 ; 52 >
-      au < exists ; 1990 ; Books at Iowa Volume 53 ; 53 >
-      au < exists ; 1991 ; Books at Iowa Volume 54 ; 54 >
-      au < exists ; 1991 ; Books at Iowa Volume 55 ; 55 >
-      au < exists ; 1992 ; Books at Iowa Volume 56 ; 56 >
-      au < exists ; 1992 ; Books at Iowa Volume 57 ; 57 >
-      au < exists ; 1993 ; Books at Iowa Volume 58 ; 58 >
-      au < exists ; 1993 ; Books at Iowa Volume 59 ; 59 >
-      au < exists ; 1994 ; Books at Iowa Volume 60 ; 60 >
-      au < exists ; 1994 ; Books at Iowa Volume 61 ; 61 >
-      au < exists ; 1995 ; Books at Iowa Volume 62 ; 62 >
-      au < exists ; 1995 ; Books at Iowa Volume 63 ; 63 >
-      au < exists ; 1996 ; Books at Iowa Volume 64 ; 64 >
-      au < exists ; 1996 ; Books at Iowa Volume 65 ; 65 >
+      au < manifest ; 1989 ; Books at Iowa Volume 50 ; 50 >
+      au < manifest ; 1989 ; Books at Iowa Volume 51 ; 51 >
+      au < manifest ; 1990 ; Books at Iowa Volume 52 ; 52 >
+      au < manifest ; 1990 ; Books at Iowa Volume 53 ; 53 >
+      au < manifest ; 1991 ; Books at Iowa Volume 54 ; 54 >
+      au < manifest ; 1991 ; Books at Iowa Volume 55 ; 55 >
+      au < manifest ; 1992 ; Books at Iowa Volume 56 ; 56 >
+      au < manifest ; 1992 ; Books at Iowa Volume 57 ; 57 >
+      au < manifest ; 1993 ; Books at Iowa Volume 58 ; 58 >
+      au < manifest ; 1993 ; Books at Iowa Volume 59 ; 59 >
+      au < manifest ; 1994 ; Books at Iowa Volume 60 ; 60 >
+      au < manifest ; 1994 ; Books at Iowa Volume 61 ; 61 >
+      au < manifest ; 1995 ; Books at Iowa Volume 62 ; 62 >
+      au < manifest ; 1995 ; Books at Iowa Volume 63 ; 63 >
+      au < manifest ; 1996 ; Books at Iowa Volume 64 ; 64 >
+      au < manifest ; 1996 ; Books at Iowa Volume 65 ; 65 >
 
     }
     
@@ -116,9 +116,9 @@
       param[journal_abbr] = dadasur
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 1988 ; Dada/Surrealism Volume 17 ; 17 >
-      au < exists ; 1990 ; Dada/Surrealism Volume 18 ; 18 >
-      au < exists ; 2013 ; Dada/Surrealism Volume 19 ; 19 >
+      au < manifest ; 1988 ; Dada/Surrealism Volume 17 ; 17 >
+      au < manifest ; 1990 ; Dada/Surrealism Volume 18 ; 18 >
+      au < manifest ; 2013 ; Dada/Surrealism Volume 19 ; 19 >
       au < exists ; 2014 ; Dada/Surrealism Volume 20 ; 20 >
       au < exists ; 2014 ; Dada/Surrealism Volume 21 ; 21 >
       au < exists ; 2015 ; Dada/Surrealism Volume 22 ; 22 >
@@ -166,7 +166,7 @@
       param[journal_abbr] = igsar
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 1941 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
+      au < manifest ; 1941 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
 
     }
     
@@ -181,11 +181,11 @@
       param[journal_abbr] = iowa-historical-review
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 >
-      au < exists ; 2011 ; Iowa Historical Review Volume 2 ; 2 >
-      au < exists ; 2013 ; Iowa Historical Review Volume 3 ; 3 >
-      au < exists ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 >
-      au < exists ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
+      au < manifest ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 >
+      au < manifest ; 2011 ; Iowa Historical Review Volume 2 ; 2 >
+      au < manifest ; 2013 ; Iowa Historical Review Volume 3 ; 3 >
+      au < manifest ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 >
+      au < manifest ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
 
     }
     
@@ -287,12 +287,12 @@
       param[journal_abbr] = mzwp
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 >
-      au < exists ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 >
-      au < exists ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 >
-      au < exists ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 >
-      au < exists ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 >
-      au < exists ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 >
+      au < manifest ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 >
+      au < manifest ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 >
+      au < manifest ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 >
       au < expected ; 2015 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2015 ; 2015 >
 
     }

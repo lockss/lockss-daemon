@@ -2909,7 +2909,7 @@
         au < exists ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 >
         au < exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 >
         au < exists ; 2012-2014 ; Antiviral Chemistry & Chemotherapy Volume 23 ; 23 >
-        au < exists ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 >
+        au < manifest ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 >
 
     }
 
@@ -12512,7 +12512,7 @@
       au < exists ; 2012 ; Evolutionary Psychology Volume 10 ; 10 >
       au < exists ; 2013 ; Evolutionary Psychology Volume 11 ; 11 >
       au < exists ; 2014 ; Evolutionary Psychology Volume 12 ; 12 >
-      au < exists ; 2015 ; Evolutionary Psychology Volume 13 ; 13 >
+      au < manifest ; 2015 ; Evolutionary Psychology Volume 13 ; 13 >
 
   }
 
@@ -17391,7 +17391,7 @@
       au < exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 >
       au < exists ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 >
       au < manifest ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 >
-      au < expected ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 >
+      au < manifest ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 >
       au < expected ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 >
 
   }
@@ -25519,8 +25519,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       pluginSuffix = ClockssHighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 >
-      au < exists ; 2014 ; Journal of Inborn Errors of Metabolism and Screening Volume 2 ; 2 >
+      au < manifest ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 >
+      au < manifest ; 2014 ; Journal of Inborn Errors of Metabolism and Screening Volume 2 ; 2 >
       au < exists ; 2015 ; Journal of Inborn Errors of Metabolism and Screening Volume 3 ; 3 >
 
     }
@@ -40109,7 +40109,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Social Media + Society Volume 1 ; 1 >
+      au < manifest ; 2015 ; Social Media + Society Volume 1 ; 1 >
 
     }
 
@@ -40410,7 +40410,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://scs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2015 ; Society and Culture in South Asia Volume 1 ; 1 >
+        au < manifest ; 2015 ; Society and Culture in South Asia Volume 1 ; 1 >
 
     }
 
@@ -40884,7 +40884,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; South Asian Survey Volume 17 ; 17 >
         au < released ; 2011 ; South Asian Survey Volume 18 ; 18 >
         au < manifest ; 2012 ; South Asian Survey Volume 19 ; 19 >
-        au < exists ; 2013 ; South Asian Survey Volume 20 ; 20 >
+        au < manifest ; 2013 ; South Asian Survey Volume 20 ; 20 >
 
       }
 
@@ -43056,7 +43056,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2015 ; Thesis Eleven Volume 126 ; 126 >
         au < manifest ; 2015 ; Thesis Eleven Volume 127 ; 127 >
         au < manifest ; 2015 ; Thesis Eleven Volume 128 ; 128 >
-        au < expected ; 2015 ; Thesis Eleven Volume 129 ; 129 >
+        au < manifest ; 2015 ; Thesis Eleven Volume 129 ; 129 >
         au < expected ; 2015 ; Thesis Eleven Volume 130 ; 130 >
         au < expected ; 2015 ; Thesis Eleven Volume 131 ; 131 >
 
@@ -44366,7 +44366,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Vikalpa Volume 40 ; 40 >
+      au < manifest ; 2015 ; Vikalpa Volume 40 ; 40 >
 
     }
 

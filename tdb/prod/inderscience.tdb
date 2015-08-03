@@ -1345,7 +1345,7 @@
       au < manifest ; 2014 ; International Journal of Business Information Systems Volume 17 ; 17 >
       au < manifest ; 2015 ; International Journal of Business Information Systems Volume 18 ; 18 >
       au < manifest ; 2015 ; International Journal of Business Information Systems Volume 19 ; 19 >
-      au < expected ; 2015 ; International Journal of Business Information Systems Volume 20 ; 20 >
+      au < manifest ; 2015 ; International Journal of Business Information Systems Volume 20 ; 20 >
 
     }
 
@@ -1581,7 +1581,7 @@
 
       param[journal_id] = ijci
 
-      au < exists ; 2014 ; International Journal of Collaborative Intelligence Volume 1 ; 1 >
+      au < manifest ; 2014 ; International Journal of Collaborative Intelligence Volume 1 ; 1 >
       au < expected ; 2015 ; International Journal of Collaborative Intelligence Volume 2 ; 2 >
 
     }
@@ -2214,7 +2214,7 @@
 
       param[journal_id] = ijds
 
-      au < exists ; 2015 ; International Journal of Data Science Volume 1 ; 1 >
+      au < manifest ; 2015 ; International Journal of Data Science Volume 1 ; 1 >
 
     }
 
@@ -2300,7 +2300,7 @@
 
       param[journal_id] = ijdh
 
-      au < exists ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
+      au < manifest ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -2507,7 +2507,7 @@
       au < doNotProcess ; 2012 ; International Journal of Electronic Customer Relationship Management Volume 6 ; 6 >
       au < manifest ; 2013 ; International Journal of Electronic Customer Relationship Management Volume 7 ; 7 >
       au < manifest ; 2014 ; International Journal of Electronic Customer Relationship Management Volume 8 ; 8 >
-      au < expected ; 2015 ; International Journal of Electronic Customer Relationship Management Volume 9 ; 9 >
+      au < manifest ; 2015 ; International Journal of Electronic Customer Relationship Management Volume 9 ; 9 >
 
     }
 
@@ -3405,7 +3405,7 @@
 
       param[journal_id] = ijfcm
 
-      au < exists ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
+      au < manifest ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
 
     }
 
@@ -3806,7 +3806,7 @@
 
       param[journal_id] = ijim
 
-      au < exists ; 2015 ; International Journal of Image Mining Volume 1 ; 1 >
+      au < manifest ; 2015 ; International Journal of Image Mining Volume 1 ; 1 >
 
     }
 
@@ -3883,7 +3883,7 @@
       au < manifest ; 2014 ; International Journal of Industrial and Systems Engineering Volume 18 ; 18 >
       au < manifest ; 2015 ; International Journal of Industrial and Systems Engineering Volume 19 ; 19 >
       au < manifest ; 2015 ; International Journal of Industrial and Systems Engineering Volume 20 ; 20 >
-      au < expected ; 2015 ; International Journal of Industrial and Systems Engineering Volume 21 ; 21 >
+      au < manifest ; 2015 ; International Journal of Industrial and Systems Engineering Volume 21 ; 21 >
 
     }
 
@@ -4368,7 +4368,7 @@
       au < doNotProcess ; 2012 ; International Journal of Intelligent Information and Database Systems Volume 6 ; 6 >
       au < manifest ; 2013 ; International Journal of Intelligent Information and Database Systems Volume 7 ; 7 >
       au < manifest ; 2014 ; International Journal of Intelligent Information and Database Systems Volume 8 ; 8 >
-      au < expected ; 2015 ; International Journal of Intelligent Information and Database Systems Volume 9 ; 9 >
+      au < manifest ; 2015 ; International Journal of Intelligent Information and Database Systems Volume 9 ; 9 >
 
     }
 
@@ -4894,7 +4894,7 @@
       au < manifest ; 2014 ; International Journal of Logistics Systems and Management Volume 19 ; 19 >
       au < manifest ; 2015 ; International Journal of Logistics Systems and Management Volume 20 ; 20 >
       au < manifest ; 2015 ; International Journal of Logistics Systems and Management Volume 21 ; 21 >
-      au < expected ; 2015 ; International Journal of Logistics Systems and Management Volume 22 ; 22 >
+      au < manifest ; 2015 ; International Journal of Logistics Systems and Management Volume 22 ; 22 >
 
     }
 
@@ -6110,7 +6110,7 @@
       au < manifest ; 2014 ; International Journal of Operational Research Volume 21 ; 21 >
       au < manifest ; 2015 ; International Journal of Operational Research Volume 22 ; 22 >
       au < manifest ; 2015 ; International Journal of Operational Research Volume 23 ; 23 >
-      au < expected ; 2015 ; International Journal of Operational Research Volume 24 ; 24 >
+      au < manifest ; 2015 ; International Journal of Operational Research Volume 24 ; 24 >
 
     }
 
@@ -6685,7 +6685,7 @@
       au < doNotProcess ; 2012 ; International Journal of Reasoning-based Intelligent Systems Volume 4 ; 4 >
       au < manifest ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 >
       au < manifest ; 2014 ; International Journal of Reasoning-based Intelligent Systems Volume 6 ; 6 >
-      au < expected ; 2015 ; International Journal of Reasoning-based Intelligent Systems Volume 7 ; 7 >
+      au < manifest ; 2015 ; International Journal of Reasoning-based Intelligent Systems Volume 7 ; 7 >
 
     }
 
@@ -6921,7 +6921,7 @@
       au < manifest ; 2014 ; International Journal of Services and Operations Management Volume 19 ; 19 >
       au < manifest ; 2015 ; International Journal of Services and Operations Management Volume 20 ; 20 >
       au < manifest ; 2015 ; International Journal of Services and Operations Management Volume 21 ; 21 >
-      au < expected ; 2015 ; International Journal of Services and Operations Management Volume 22 ; 22 >
+      au < manifest ; 2015 ; International Journal of Services and Operations Management Volume 22 ; 22 >
 
     }
 
@@ -7233,7 +7233,7 @@
 
       param[journal_id] = ijseta
 
-      au < exists ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 >
+      au < manifest ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 >
 
     }
 
@@ -8133,7 +8133,7 @@
       au < doNotProcess ; 2012 ; International Journal of Vehicle Autonomous Systems Volume 10 ; 10 >
       au < manifest ; 2013 ; International Journal of Vehicle Autonomous Systems Volume 11 ; 11 >
       au < manifest ; 2014 ; International Journal of Vehicle Autonomous Systems Volume 12 ; 12 >
-      au < expected ; 2015 ; International Journal of Vehicle Autonomous Systems Volume 13 ; 13 >
+      au < manifest ; 2015 ; International Journal of Vehicle Autonomous Systems Volume 13 ; 13 >
 
     }
 
