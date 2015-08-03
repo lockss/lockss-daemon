@@ -1092,6 +1092,31 @@ while (my $line = <>) {
     }
     sleep(4);
                 
+  } elsif ($plugin eq "ClockssRSC2014Plugin") {
+    $url = sprintf("%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", 
+      $param{base_url}, $param{journal_code}, $param{volume_name}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+                
   } elsif ($plugin eq "ClockssCopernicusPublicationsPlugin") {
     $url = sprintf("%s%s/index.html", 
       $param{base_url}, $param{volume_name});
