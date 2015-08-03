@@ -32,14 +32,6 @@
       </entry>
     </map>
   </entry>
-    <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkJournalsPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
-  </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -77,6 +69,18 @@
     <string>"Springer Link Books Plugin, Base URL %s, Download Url %s, eISBN %s", base_url, download_url, book_eisbn</string>
   </entry>
   <entry>
+    <string>au_start_url</string>
+    <string>"%s%s", base_url, book_eisbn</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <list>
+      <string>"%slockss.txt", base_url</string>
+      <string>"%slockss.txt", download_url</string>
+      <string>"http://api.springer.com/lockss.txt"</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(download_url)</string>
@@ -85,9 +89,29 @@
       <string>1,"^%sstatic/pdf/", download_url</string>
     </list>
   </entry>
+    <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
+  </entry>
   <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkBooksCrawlSeedFactory</string>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
@@ -97,5 +121,13 @@
         <string>org.lockss.plugin.springer.link.SpringerLinkBooksHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>

@@ -39,24 +39,21 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-public class SpringerLinkArticleIterator
+public class SpringerLinkArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
-
-  public static final String ROLE_CITATION_REFWORKS = "CitationRefworks";
-  public static final String ROLE_CITATION_MEDLARS = "CitationMedlars";
   
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-  private static final String PATTERN_TEMPLATE = "\"^%s(book|article)/([^/]+/[^/]+)$\", base_url";
+  private static final String PATTERN_TEMPLATE = "\"^%s(book|article)/([^/]+)/([^/]+)$\", base_url";
   
-  private static final Pattern LANDING_PATTERN = Pattern.compile("/(article|book)/([^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
-  private static final String LANDING_REPLACEMENT = "/$1/$2";
+  private static final Pattern LANDING_PATTERN = Pattern.compile("/(article|book)/([^/]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+  private static final String LANDING_REPLACEMENT = "/$1/$2/$3";
 
   
-  private static final Pattern HTML_PATTERN = Pattern.compile("/(article|book)/([^/]+/[^/]+)/fulltext.html$", Pattern.CASE_INSENSITIVE);
-  private static final String HTML_REPLACEMENT = "/$1/$2/fulltext.html";
+  private static final Pattern HTML_PATTERN = Pattern.compile("/(article|book)/([^/]+)/([^/]+)/fulltext.html$", Pattern.CASE_INSENSITIVE);
+  private static final String HTML_REPLACEMENT = "/$1/$2/$3/fulltext.html";
 
-  private static final Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([^/]+/[^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-  private static final String PDF_REPLACEMENT = "/$1/$2/fulltext.html";
+  private static final Pattern PDF_PATTERN = Pattern.compile("/(content/pdf/)([^%/]+)%2f([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  private static final String PDF_REPLACEMENT = "/content/pdf/$2%2f$3.pdf";
 
   
   @Override

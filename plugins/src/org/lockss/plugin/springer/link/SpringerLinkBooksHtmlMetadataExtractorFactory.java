@@ -63,7 +63,7 @@ public class SpringerLinkBooksHtmlMetadataExtractorFactory
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                String contentType)
       throws PluginException {
-    return new SpringerLinkBookMetadataExtractor();
+    return new SpringerLinkBooksHtmlMetadataExtractor();
   }
   
   private static MultiMap tagMap = new MultiValueMap();
