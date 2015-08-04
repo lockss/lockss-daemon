@@ -179,7 +179,6 @@
 
     # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
     # See https://dl.sciencesocieties.org/publications/nse
-    comment[no_toc] = this journal is not formatted like the others and does not have toc pages which we are using as the manifest and permission page.
     
     param[journal_id] = nse
 
@@ -187,7 +186,7 @@
     au < manifest ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 >
     au < manifest ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
     au < manifest ; exists ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
-    au < manifest ; exists ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
+    au < wanted ; exists ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
     au < manifest ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 >
 
   }
