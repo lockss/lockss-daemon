@@ -265,6 +265,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   private static LockssDaemon theDaemon;
   private boolean isClockss;
+  private boolean isSafenet;
   protected String testingMode;
 
   protected LockssDaemon(List<String> propUrls) {
@@ -328,6 +329,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public boolean isDetectClockssSubscription() {
     return isClockss() && getClockssParams().isDetectSubscription();
+  }
+
+  /**
+   * True if running as a Safenet daemon
+   */
+  public boolean isSafenet() {
+    return isSafenet;
   }
 
   /** Stop the daemon.  Currently only used in testing. */
@@ -954,6 +962,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     testingMode = config.get(PARAM_TESTING_MODE);
     String proj = ConfigManager.getPlatformProject();
     isClockss = "clockss".equalsIgnoreCase(proj);
+    isSafenet = "safenet".equalsIgnoreCase(proj);
 
     super.setConfig(config, prevConfig, changedKeys);
   }
