@@ -303,28 +303,28 @@ public class ServeContent extends LockssServlet {
   private static boolean paramAccessAlertsEnabled =
     DEFAULT_ACCESS_ALERTS_ENABLED;
   private static boolean processForms = DEFAULT_PROCESS_FORMS;
-  private static String candidates404Msg = DEFAULT_404_CANDIDATES_MSG;
+  protected static String candidates404Msg = DEFAULT_404_CANDIDATES_MSG;
   private static int loginCheckerBufSize =
     BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT;
 
 
-  private ArchivalUnit au;
+  protected ArchivalUnit au;
   private ArchivalUnit explicitAu;
-  private String url;
+  protected String url;
   private String cuUrl;	// CU's url (might differ from incoming url due to
 			// normalizaton)
   private String baseUrl; // The base URL to use for resolving relative
 			  // links when rewriting.  If redirected, this is
 			  // the URL from which the content was served.
-  private String versionStr; // non-null iff handling a (possibly-invalid)
+  protected String versionStr; // non-null iff handling a (possibly-invalid)
 			     // Memento request
-  private CachedUrl cu;
-  private boolean enabledPluginsOnly;
+  protected CachedUrl cu;
+  protected boolean enabledPluginsOnly;
   private String accessLogInfo;
   private AccessLogType requestType = AccessLogType.None;
 
-  private PluginManager pluginMgr;
-  private ProxyManager proxyMgr;
+  protected PluginManager pluginMgr;
+  protected ProxyManager proxyMgr;
   private OpenUrlResolver openUrlResolver;
 
   // don't hold onto objects after request finished
@@ -751,14 +751,11 @@ public class ServeContent extends LockssServlet {
 
         }
       } else if (!isMementoRequest()) {
-        // Find a CU with content if possible.  If none, find an AU where
-        // it would fit so can rewrite content from publisher if necessary.
-        cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
-        if (cu != null) {
-	  cuUrl = cu.getUrl();
-          au = cu.getArchivalUnit();
-          if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
-        }
+          boolean findCachedUrl = setCachedUrlAndAu();
+          // Returns false if there is an error that has already been handled
+          if (!findCachedUrl) {
+              return;
+          }
       } else {
 	/*
 	 * This is a Memento request, and the AU param was provided, but we
@@ -790,6 +787,18 @@ public class ServeContent extends LockssServlet {
     }
   }
 
+  protected boolean setCachedUrlAndAu() throws IOException {
+    // Find a CU with content if possible.  If none, find an AU where
+    // it would fit so can rewrite content from publisher if necessary.
+    cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
+    if (cu != null) {
+	  cuUrl = cu.getUrl();
+      au = cu.getArchivalUnit();
+      if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
+    }
+    return true;
+  }
+
   /**
    * Given a CachedUrl and a string representation of a version number, returns
    * that version of the CachedUrl. Has no side effects within this instance.
@@ -801,7 +810,7 @@ public class ServeContent extends LockssServlet {
    * @throws VersionNotFoundException if cachedUrl lacks the requested version
    * @throws RuntimeException
    */
-  private static CachedUrl getHistoricalCu(CachedUrl cachedUrl, String verStr)
+  protected static CachedUrl getHistoricalCu(CachedUrl cachedUrl, String verStr)
       throws NumberFormatException, VersionNotFoundException, RuntimeException {
     CachedUrl result;
     int version = Integer.parseInt(verStr);
@@ -818,7 +827,7 @@ public class ServeContent extends LockssServlet {
     return result;
   }
 
-  private static class VersionNotFoundException extends Exception {}
+  protected static class VersionNotFoundException extends Exception {}
 
   /**
    * Redirect to the current URL. Uses response redirection
@@ -1096,7 +1105,7 @@ public class ServeContent extends LockssServlet {
   /**
    * @return true iff the user is requesting a particular version of the content
    */
-  private boolean isMementoRequest() {
+  protected boolean isMementoRequest() {
     return !StringUtil.isNullString(versionStr);
   }
 
@@ -1417,7 +1426,7 @@ public class ServeContent extends LockssServlet {
     } else {
       fwdUrl = url;
     }
-    LockssUrlConnection conn = UrlUtil.openConnection(fwdUrl, pool);
+    LockssUrlConnection conn = openConnection(fwdUrl, pool);
 
     // check connection header
     String connectionHdr = req.getHeader(HttpFields.__Connection);
@@ -1557,6 +1566,10 @@ public class ServeContent extends LockssServlet {
       log.error("Error getting LinkRewriterFactory: " + e);
     }
     return null;
+  }
+
+  protected LockssUrlConnection openConnection(String url, LockssUrlConnectionPool pool) throws IOException {
+    return UrlUtil.openConnection(url, pool);
   }
 
   protected void handleRewriteInputStream(InputStream original,
@@ -2151,12 +2164,18 @@ public class ServeContent extends LockssServlet {
 
   protected void handleMissingUrlRequest(String missingUrl, PubState pstate)
       throws IOException {
+    handleUrlRequestError(missingUrl, pstate, "The requested URL is not preserved on this LOCKSS box. ", HttpResponse.__404_Not_Found, "not present");
+  }
+
+  protected void handleUrlRequestError(String missingUrl, PubState pstate, String errorMessage, int responseCode, String logMessage)
+      throws IOException {
     String missing =
         missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
 
     Block block = new Block(Block.Center);
     // display publisher page
-    block.add("<p>The requested URL is not preserved on this LOCKSS box. ");
+    block.add("<p>");
+    block.add(errorMessage);
     block.add("Select link");
     block.add(addFootnote(
         "Selecting publisher link takes you away from this LOCKSS box."));
@@ -2165,9 +2184,9 @@ public class ServeContent extends LockssServlet {
 
     switch (getMissingFileAction(pstate)) {
       case Error_404:
-        resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+        resp.sendError(responseCode,
             missing + " is not preserved on this LOCKSS box");
-        logAccess("not present, 404");
+        logAccess(logMessage + ", " + responseCode);
         break;
       case Redirect:
       case AlwaysRedirect:
@@ -2183,24 +2202,24 @@ public class ServeContent extends LockssServlet {
         }
         if (candidateAus != null && !candidateAus.isEmpty()) {
           displayIndexPage(candidateAus,
-              HttpResponse.__404_Not_Found,
+              responseCode,
               block,
               candidates404Msg);
-          logAccess("not present, 404 with index");
+          logAccess(logMessage + ", " + responseCode + " with index");
         } else {
           displayIndexPage(Collections.<ArchivalUnit>emptyList(),
-              HttpResponse.__404_Not_Found,
+              responseCode,
               block,
               null);
-          logAccess("not present, 404");
+          logAccess(logMessage + ", " + responseCode);
         }
         break;
       case AuIndex:
         displayIndexPage(pluginMgr.getAllAus(),
-            HttpResponse.__404_Not_Found,
+            responseCode,
             block,
             null);
-        logAccess("not present, 404 with index");
+        logAccess(logMessage + ", " + responseCode + " with index");
         break;
     }
   }

@@ -41,11 +41,11 @@ public class CachingEntitlementRegistryClient extends BaseLockssManager implemen
     return (Boolean) result;
   }
 
-  public String getPublisher(String issn, String start, String end) throws IOException {
-    Object result = this.cache.get("getPublisher", issn, start, end);
+  public String getPublisher(String issn, String institution, String start, String end) throws IOException {
+    Object result = this.cache.get("getPublisher", issn, institution, start, end);
     if(result == null) {
-        result = this.client.getPublisher(issn, start, end);
-        this.cache.put("getPublisher", issn, start, end, result);
+        result = this.client.getPublisher(issn, institution, start, end);
+        this.cache.put("getPublisher", issn, institution, start, end, result);
     }
     return (String) result;
   }
