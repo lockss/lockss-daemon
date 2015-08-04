@@ -524,7 +524,6 @@
     au < ready ; exists ; 2010 ; 2010 ; Arzneimittelforschung Volume 2010 ; 60 >
     au < ready ; exists ; 2011 ; 2011 ; Arzneimittelforschung Volume 2011 ; 61 >
     au < ready ; exists ; 2012 ; 2012 ; Arzneimittelforschung Volume 2012 ; 62 >
-    au < testing ; exists ; 2013 ; 2013 ; Arzneimittelforschung Volume 2013 ; 63 >
 
    }
 
@@ -537,11 +536,12 @@
 
     >
     param[journal_id] = 10.1055/s-00023610
-    comment[years] = 2014-current
+    comment[years] = 2013-current
     comment[0] = published as Arzneimittelforschung before 2014.
 
     au < testing ; exists ; 2013 ; 2013 ; Drug Research Volume 2013 ; 63 >
     au < ready ; exists ; 2014 ; 2014 ; Drug Research Volume 2014 ; 64 >
+    au < expected ; exists ; 2015 ; 2015 ; Drug Research Volume 2015 ; 65 >
 
    }
 
@@ -1043,24 +1043,6 @@
    au < doNotProcess ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
    au < doNotProcess ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
    au < doNotProcess ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
-
-  }
-
-  {
-    title <
-      name = Drug Research ;
-      issn = 2194-9379 ;
-      eissn = 2194-9387 ;
-      doi = 10.1055/s-00023610
-
-    >
-    param[journal_id] = 10.1055/s-00023610
-
-   au < manifest ; exists ; 2011 ; 2011 ; Drug Research Volume 2011 ; 1 >
-   au < manifest ; exists ; 2012 ; 2012 ; Drug Research Volume 2012 ; 2 >
-   au < manifest ; exists ; 2013 ; 2013 ; Drug Research Volume 2013 ; 3 >
-   au < manifest ; exists ; 2014 ; 2014 ; Drug Research Volume 2014 ; 4 >
-   au < manifest ; exists ; 2015 ; 2015 ; Drug Research Volume 2015 ; 5 >
 
   }
 
