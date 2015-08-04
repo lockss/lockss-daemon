@@ -181,6 +181,8 @@
       implicit < status ; status2 ; year ; param[year] ; name ; volume >
       param[journal_id] = JSPW
       
+      comment[notReady] = RT6999 Volume 2013 article redirects to a login page: http://journals.whitingbirch.net/index.php/JSPW/article/view/414/446
+      
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 2012 ; 2012 >
       au < notReady ; exists ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 2013 ; 2013 >
       au < expected ; exists ; 2014 ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 2014 ; 2014 >
