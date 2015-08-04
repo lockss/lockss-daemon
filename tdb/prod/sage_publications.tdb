@@ -10995,6 +10995,102 @@
 
     }
 
+  {
+
+    title <
+      name = Environment and Planning A ;
+      issn = 0308-518X ;
+      eissn = 1472-3409
+    >
+
+      param[base_url] = http://epn.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      #content available from 1977 volume 9 to 2007 volume 39 
+
+      au < exists ; 2008 ; Environment and Planning A Volume 40 ; 40 >
+      au < exists ; 2009 ; Environment and Planning A Volume 41 ; 41 >
+      au < exists ; 2010 ; Environment and Planning A Volume 42 ; 42 >
+      au < exists ; 2011 ; Environment and Planning A Volume 43 ; 43 >
+      au < exists ; 2012 ; Environment and Planning A Volume 44 ; 44 >
+      au < exists ; 2013 ; Environment and Planning A Volume 45 ; 45 >
+      au < exists ; 2014 ; Environment and Planning A Volume 46 ; 46 >
+      au < exists ; 2015 ; Environment and Planning A Volume 47 ; 47 >
+
+  }
+
+  {
+
+    title <
+      name = Environment and Planning B ;
+      issn = 0265-8135 ;
+      eissn = 1472-3417
+    >
+
+      param[base_url] = http://epb.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      #content available from 1976 volume 3 to 2007 volume 34 
+
+      au < exists ; 2008 ; Environment and Planning B Volume 35 ; 35 >
+      au < exists ; 2009 ; Environment and Planning B Volume 36 ; 36 >
+      au < exists ; 2010 ; Environment and Planning B Volume 37 ; 37 >
+      au < exists ; 2011 ; Environment and Planning B Volume 38 ; 38 >
+      au < exists ; 2012 ; Environment and Planning B Volume 39 ; 39 >
+      au < exists ; 2013 ; Environment and Planning B Volume 40 ; 40 >
+      au < exists ; 2014 ; Environment and Planning B Volume 41 ; 41 >
+      au < exists ; 2015 ; Environment and Planning B Volume 42 ; 42 >
+
+  }
+
+  {
+
+    title <
+      name = Environment and Planning C ;
+      issn = 0263-774X ;
+      eissn = 1472-3225
+    >
+
+      param[base_url] = http://epc.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      #content available from 1983 volume 1 to 2007 volume 25 
+
+      au < exists ; 2008 ; Environment and Planning C Volume 26 ; 26 >
+      au < exists ; 2009 ; Environment and Planning C Volume 27 ; 27 >
+      au < exists ; 2010 ; Environment and Planning C Volume 28 ; 28 >
+      au < exists ; 2011 ; Environment and Planning C Volume 29 ; 29 >
+      au < exists ; 2012 ; Environment and Planning C Volume 30 ; 30 >
+      au < exists ; 2013 ; Environment and Planning C Volume 31 ; 31 >
+      au < exists ; 2014 ; Environment and Planning C Volume 32 ; 32 >
+      au < exists ; 2015 ; Environment and Planning C Volume 33 ; 33 >
+
+  }
+
+  {
+
+    title <
+      name = Environment and Planning D ;
+      issn = 0263-7758 ;
+      eissn = 1472-3233
+    >
+
+      param[base_url] = http://epd.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      #content available from 2002 volume 20 to 2007 volume 25 
+
+      au < exists ; 2008 ; Environment and Planning D Volume 26 ; 26 >
+      au < exists ; 2009 ; Environment and Planning D Volume 27 ; 27 >
+      au < exists ; 2010 ; Environment and Planning D Volume 28 ; 28 >
+      au < exists ; 2011 ; Environment and Planning D Volume 29 ; 29 >
+      au < exists ; 2012 ; Environment and Planning D Volume 30 ; 30 >
+      au < exists ; 2013 ; Environment and Planning D Volume 31 ; 31 >
+      au < exists ; 2014 ; Environment and Planning D Volume 32 ; 32 >
+      au < exists ; 2015 ; Environment and Planning D Volume 33 ; 33 >
+
+  }
+
     {
 
       title <
