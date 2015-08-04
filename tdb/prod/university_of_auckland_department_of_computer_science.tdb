@@ -20,15 +20,15 @@
       param[base_url] = http://www.analytic-combinatorics.org/
       param[journal_id] = ojac
       implicit < status ; year ; name ; volume ; param[year] >
+      
+      comment[0] = gone from this url. See http://www.math.rochester.edu/ojac/
     
-      au < released ; 2006 ; Online Journal of Analytic Combinatorics Volume 1 ; 1 ; 2006 >
-      au < released ; 2007 ; Online Journal of Analytic Combinatorics Volume 2 ; 2 ; 2007 >
-      au < released ; 2008 ; Online Journal of Analytic Combinatorics Volume 3 ; 3 ; 2008 >
-      au < released ; 2011 ; Online Journal of Analytic Combinatorics Volume 6 ; 6 ; 2011 >
-      au < released ; 2012 ; Online Journal of Analytic Combinatorics Volume 7 ; 7 ; 2012 >
-      au < released ; 2013 ; Online Journal of Analytic Combinatorics Volume 8 ; 8 ; 2013 >
-      au < testing ; 2014 ; Online Journal of Analytic Combinatorics Volume 9 ; 9 ; 2014 >
-      au < expected ; 2015 ; Online Journal of Analytic Combinatorics Volume 10 ; 10 ; 2015 >
+      au < down ; 2006 ; Online Journal of Analytic Combinatorics Volume 1 ; 1 ; 2006 >
+      au < down ; 2007 ; Online Journal of Analytic Combinatorics Volume 2 ; 2 ; 2007 >
+      au < down ; 2008 ; Online Journal of Analytic Combinatorics Volume 3 ; 3 ; 2008 >
+      au < down ; 2011 ; Online Journal of Analytic Combinatorics Volume 6 ; 6 ; 2011 >
+      au < down ; 2012 ; Online Journal of Analytic Combinatorics Volume 7 ; 7 ; 2012 >
+      au < down ; 2013 ; Online Journal of Analytic Combinatorics Volume 8 ; 8 ; 2013 >
 
     }
 
