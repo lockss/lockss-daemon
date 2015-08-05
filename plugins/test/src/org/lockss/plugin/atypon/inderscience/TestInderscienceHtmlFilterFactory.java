@@ -221,6 +221,18 @@ public class TestInderscienceHtmlFilterFactory extends LockssTestCase {
           "</li>" +
           "</ul>";
   private static final String nonManifestList2FilteredStr = "";
+  
+  private static final String hrefAnchorStr =
+      "<div class=\"widget literatumPublicationContentWidget none " +
+          "widget-none\" >"+
+" <a href=\"#d2074e94\" class=\"tooltipTrigger infoIcon\">\n"+
+" <span class=\"ui-helper-hidden-accessible\">\n"+
+" Related information</span>\n"+
+" </a></div>";
+  
+  private static final String hrefAnchorFilteredStr =
+"<div class=\"widget literatumPublicationContentWidget none " +
+      "widget-none\" > </div>";
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -293,6 +305,8 @@ public class TestInderscienceHtmlFilterFactory extends LockssTestCase {
                    nonManifestList1FilteredStr);
       doFilterTest(iau, variantFact, nonManifestList2, 
                    nonManifestList2FilteredStr);
+      doFilterTest(iau, variantFact, hrefAnchorStr, 
+                   hrefAnchorFilteredStr);
     }
   }
   
