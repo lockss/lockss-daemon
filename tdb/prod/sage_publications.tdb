@@ -16308,8 +16308,6 @@
         issn = 0160-5976
       >
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://has.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -16328,9 +16326,22 @@
         au < manifest ; 2014 ; Humanity & Society Volume 38 ; 38 >
         au < manifest ; 2015 ; Humanity & Society Volume 39 ; 39 >
 
-      }
-
     }
+
+  {
+
+    title <
+      name = i-Perception ;
+      eissn = 2041-6695
+    >
+
+      param[base_url] = http://ipe.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2015 ; i-Perception Volume 6 ; 6 >
+
+  }
 
     {
 
@@ -21841,6 +21852,34 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of Clinical Oncology ;
+      issn = 0732-183X ;
+      eissn = 1527-7755
+    >
+
+      param[base_url] = http://jco.ascopubs.org/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2004 ; Journal of Clinical Oncology Volume 22 ; 22 >
+      au < exists ; 2005 ; Journal of Clinical Oncology Volume 23 ; 23 >
+      au < exists ; 2006 ; Journal of Clinical Oncology Volume 24 ; 24 >
+      au < exists ; 2007 ; Journal of Clinical Oncology Volume 25 ; 25 >
+      au < exists ; 2008 ; Journal of Clinical Oncology Volume 26 ; 26 >
+      au < exists ; 2009 ; Journal of Clinical Oncology Volume 27 ; 27 >
+      au < exists ; 2010 ; Journal of Clinical Oncology Volume 28 ; 28 >
+      au < exists ; 2011 ; Journal of Clinical Oncology Volume 29 ; 29 >
+      au < exists ; 2012 ; Journal of Clinical Oncology Volume 30 ; 30 >
+      au < exists ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 >
+      au < exists ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 >
+      au < exists ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 >
+
+
+  }
+
     {
 
       title <
@@ -24859,6 +24898,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Journal of Global Oncology ;
+      eissn = 2378-9506
+    >
+
+      param[base_url] = http://jgo.ascopubs.org/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
+
+  }
 
     {
 
@@ -34659,6 +34713,33 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2015 ; Pedagogy in Health Promotion Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Perception ;
+      issn = 0301-0066 ;
+      eissn = 1468-4233
+    >
+
+      param[base_url] = http://pec.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2004 ; Perception Volume 33 ; 33 >
+      au < exists ; 2005 ; Perception Volume 34 ; 34 >
+      au < exists ; 2006 ; Perception Volume 35 ; 35 >
+      au < exists ; 2007 ; Perception Volume 36 ; 36 >
+      au < exists ; 2008 ; Perception Volume 37 ; 37 >
+      au < exists ; 2009 ; Perception Volume 38 ; 38 >
+      au < exists ; 2010 ; Perception Volume 39 ; 39 >
+      au < exists ; 2011 ; Perception Volume 40 ; 40 >
+      au < exists ; 2012 ; Perception Volume 41 ; 41 >
+      au < exists ; 2013 ; Perception Volume 42 ; 42 >
+      au < exists ; 2014 ; Perception Volume 43 ; 43 >
+      au < exists ; 2015 ; Perception Volume 44 ; 44 >
 
   }
 
