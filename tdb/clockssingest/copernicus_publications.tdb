@@ -129,7 +129,7 @@
       param[base_url] = http://www.adv-stat-clim-meteorol-oceanogr.net/
       param[home_url] = http://www.advances-statistical-climatology-meteorology-oceanography.net/
 
-      au < manifest ; exists ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 >
+      au < wanted ; exists ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 >
 
    }
     
@@ -206,7 +206,7 @@
       {
       param[base_url] = http://www.arch-anim-breed.net/
 
-      au < manifest ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
+      au < wanted ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
       }
 
    }
@@ -297,8 +297,8 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Discussions Volume 9 ; 9 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Discussions Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Discussions Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Discussions Volume 12 ; 12 >
-      au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Discussions Volume 13 ; 13 >
+      au < boost ; exists ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Discussions Volume 12 ; 12 >
+      au < boost ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Discussions Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Discussions Volume 14 ; 14 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Discussions Volume 15 ; 15 >
     
@@ -339,8 +339,8 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Atmospheric Measurement Techniques Discussions Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Atmospheric Measurement Techniques Discussions Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Discussions Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; 2012 ; Atmospheric Measurement Techniques Discussions Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Discussions Volume 6 ; 6 >
+      au < boost ; exists ; 2012 ; 2012 ; Atmospheric Measurement Techniques Discussions Volume 5 ; 5 >
+      au < boost ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Discussions Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2014 ; 2014 ; Atmospheric Measurement Techniques Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Discussions Volume 8 ; 8 >
     
@@ -389,8 +389,8 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Biogeosciences Discussions Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Biogeosciences Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Biogeosciences Discussions Volume 8 ; 8 >
-      au < crawling ; exists ; 2012 ; 2012 ; Biogeosciences Discussions Volume 9 ; 9 >
-      au < crawling ; exists ; 2013 ; 2013 ; Biogeosciences Discussions Volume 10 ; 10 >
+      au < boost ; exists ; 2012 ; 2012 ; Biogeosciences Discussions Volume 9 ; 9 >
+      au < boost ; exists ; 2013 ; 2013 ; Biogeosciences Discussions Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2014 ; 2014 ; Biogeosciences Discussions Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Biogeosciences Discussions Volume 12 ; 12 >
     
@@ -437,9 +437,9 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Climate of the Past Discussions Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Climate of the Past Discussions Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Climate of the Past Discussions Volume 7 ; 7 >
-      au < crawling ; exists ; 2012 ; 2012 ; Climate of the Past Discussions Volume 8 ; 8 >
-      au < crawling ; exists ; 2013 ; 2013 ; Climate of the Past Discussions Volume 9 ; 9 >
-      au < crawling ; exists ; 2014 ; 2014 ; Climate of the Past Discussions Volume 10 ; 10 >
+      au < boost ; exists ; 2012 ; 2012 ; Climate of the Past Discussions Volume 8 ; 8 >
+      au < boost ; exists ; 2013 ; 2013 ; Climate of the Past Discussions Volume 9 ; 9 >
+      au < boost ; exists ; 2014 ; 2014 ; Climate of the Past Discussions Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Climate of the Past Discussions Volume 11 ; 11 >
     
    }
@@ -479,9 +479,9 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Discussions Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Discussions Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Discussions Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; 2012 ; Drinking Water Engineering and Science Discussions Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Discussions Volume 6 ; 6 >
-      au < crawling ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Discussions Volume 7 ; 7 >
+      au < boost ; exists ; 2012 ; 2012 ; Drinking Water Engineering and Science Discussions Volume 5 ; 5 >
+      au < boost ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Discussions Volume 6 ; 6 >
+      au < boost ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Drinking Water Engineering and Science Discussions Volume 8 ; 8 >
     
    }
@@ -512,8 +512,8 @@
       param[home_url] = http://www.earth-surf-dynam-discuss.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 >
-      au < crawling ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 >
+      au < boost ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 >
+      au < boost ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Earth Surface Dynamics Discussions Volume 3 ; 3 >
     
    }
@@ -549,9 +549,9 @@
 
       au < doNotProcess ; exists ; 2010 ; 2010 ; Earth System Dynamics Discussions Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Earth System Dynamics Discussions Volume 2 ; 2 >
-      au < crawling ; exists ; 2012 ; 2012 ; Earth System Dynamics Discussions Volume 3 ; 3 >
-      au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Discussions Volume 4 ; 4 >
-      au < crawling ; exists ; 2014 ; 2014 ; Earth System Dynamics Discussions Volume 5 ; 5 >
+      au < boost ; exists ; 2012 ; 2012 ; Earth System Dynamics Discussions Volume 3 ; 3 >
+      au < boost ; exists ; 2013 ; 2013 ; Earth System Dynamics Discussions Volume 4 ; 4 >
+      au < boost ; exists ; 2014 ; 2014 ; Earth System Dynamics Discussions Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Earth System Dynamics Discussions Volume 6 ; 6 >
     
    }
@@ -590,9 +590,9 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Earth System Science Data Discussions Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Earth System Science Data Discussions Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Earth System Science Data Discussions Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; 2012 ; Earth System Science Data Discussions Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Discussions Volume 6 ; 6 >
-      au < crawling ; exists ; 2014 ; 2014 ; Earth System Science Data Discussions Volume 7 ; 7 >
+      au < boost ; exists ; 2012 ; 2012 ; Earth System Science Data Discussions Volume 5 ; 5 >
+      au < boost ; exists ; 2013 ; 2013 ; Earth System Science Data Discussions Volume 6 ; 6 >
+      au < boost ; exists ; 2014 ; 2014 ; Earth System Science Data Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Earth System Science Data Discussions Volume 8 ; 8 >
     
    }
@@ -795,9 +795,9 @@
       comment[doNotProcess] = Do Not Process Discussions paper 
 
       au < doNotProcess ; exists ; 2011 ; 2011 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 1 ; 1 >
-      au < crawling ; exists ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 2 ; 2 >
-      au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 3 ; 3 >
-      au < crawling ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 4 ; 4 >
+      au < boost ; exists ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 2 ; 2 >
+      au < boost ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 3 ; 3 >
+      au < boost ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 5 ; 5 >
     
    }
@@ -837,8 +837,8 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Geoscientific Model Development Discussions Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Geoscientific Model Development Discussions Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Geoscientific Model Development Discussions Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; 2012 ; Geoscientific Model Development Discussions Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Discussions Volume 6 ; 6 >
+      au < boost ; exists ; 2012 ; 2012 ; Geoscientific Model Development Discussions Volume 5 ; 5 >
+      au < boost ; exists ; 2013 ; 2013 ; Geoscientific Model Development Discussions Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2014 ; 2014 ; Geoscientific Model Development Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Geoscientific Model Development Discussions Volume 8 ; 8 >
     
@@ -929,9 +929,9 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Discussions Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Discussions Volume 8 ; 8 >
-      au < crawling ; exists ; 2012 ; 2012 ; Hydrology and Earth System Sciences Discussions Volume 9 ; 9 >
-      au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Discussions Volume 10 ; 10 >
-      au < crawling ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Discussions Volume 11 ; 11 >
+      au < boost ; exists ; 2012 ; 2012 ; Hydrology and Earth System Sciences Discussions Volume 9 ; 9 >
+      au < boost ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Discussions Volume 10 ; 10 >
+      au < boost ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Discussions Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Discussions Volume 12 ; 12 >
     
    }
@@ -1144,7 +1144,7 @@
       param[home_url] = http://www.natural-hazards-and-earth-system-sciences.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < crawling ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Discussions Volume 1 ; 1 >
+      au < boost ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Discussions Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Discussions Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Discussions Volume 3 ; 3 >
  
@@ -1195,7 +1195,7 @@
       param[home_url] = http://www.nonlinear-processes-in-geophysics.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < crawling ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Discussions Volume 1 ; 1 >
+      au < boost ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Discussions Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Discussions Volume 2 ; 2 >
 
    }
@@ -1242,9 +1242,9 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Ocean Science Discussions Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Ocean Science Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Ocean Science Discussions Volume 8 ; 8 >
-      au < crawling ; exists ; 2012 ; 2012 ; Ocean Science Discussions Volume 9 ; 9 >
-      au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Discussions Volume 10 ; 10 >
-      au < crawling ; exists ; 2014 ; 2014 ; Ocean Science Discussions Volume 11 ; 11 >
+      au < boost ; exists ; 2012 ; 2012 ; Ocean Science Discussions Volume 9 ; 9 >
+      au < boost ; exists ; 2013 ; 2013 ; Ocean Science Discussions Volume 10 ; 10 >
+      au < boost ; exists ; 2014 ; 2014 ; Ocean Science Discussions Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Ocean Science Discussions Volume 12 ; 12 >
     
    }
@@ -1364,7 +1364,7 @@
       param[base_url] = http://www.soil-journal.net/
       param[home_url] = http://www.soil-journal.net/
 
-      au < manifest ; exists ; 2015 ; 2015 ; SOIL Volume 1 ; 1 >
+      au < wanted ; exists ; 2015 ; 2015 ; SOIL Volume 1 ; 1 >
 
    }
     
@@ -1378,7 +1378,7 @@
       param[home_url] = http://www.soil-discuss.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < crawling ; exists ; 2014 ; 2014 ; SOIL Discussions Volume 1 ; 1 >
+      au < boost ; exists ; 2014 ; 2014 ; SOIL Discussions Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; SOIL Discussions Volume 2 ; 2 >
 
    }
@@ -1415,9 +1415,9 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Solid Earth Discussions Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Solid Earth Discussions Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Solid Earth Discussions Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; 2012 ; Solid Earth Discussions Volume 4 ; 4 >
-      au < crawling ; exists ; 2013 ; 2013 ; Solid Earth Discussions Volume 5 ; 5 >
-      au < crawling ; exists ; 2014 ; 2014 ; Solid Earth Discussions Volume 6 ; 6 >
+      au < boost ; exists ; 2012 ; 2012 ; Solid Earth Discussions Volume 4 ; 4 >
+      au < boost ; exists ; 2013 ; 2013 ; Solid Earth Discussions Volume 5 ; 5 >
+      au < boost ; exists ; 2014 ; 2014 ; Solid Earth Discussions Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; Solid Earth Discussions Volume 7 ; 7 >
     
    }
@@ -1489,8 +1489,8 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; The Cryosphere Discussions Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2010 ; 2010 ; The Cryosphere Discussions Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2011 ; 2011 ; The Cryosphere Discussions Volume 5 ; 5 >
-      au < crawling ; exists ; 2012 ; 2012 ; The Cryosphere Discussions Volume 6 ; 6 >
-      au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Discussions Volume 7 ; 7 >
+      au < boost ; exists ; 2012 ; 2012 ; The Cryosphere Discussions Volume 6 ; 6 >
+      au < boost ; exists ; 2013 ; 2013 ; The Cryosphere Discussions Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2014 ; 2014 ; The Cryosphere Discussions Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2015 ; 2015 ; The Cryosphere Discussions Volume 9 ; 9 >
     
