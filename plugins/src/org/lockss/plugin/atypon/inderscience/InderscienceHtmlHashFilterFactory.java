@@ -91,7 +91,6 @@ public class InderscienceHtmlHashFilterFactory
         //                     showCitFormats?doi=10.1504%2FAJAAF.2014.065176
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
-                                                                  
     };
     
     
@@ -109,7 +108,8 @@ public class InderscienceHtmlHashFilterFactory
                                               "articleMetaDrop"),   
         // full - section choose pulldown appeared in multiple sections 
         // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176                                     
-        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),                                     
+        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
                                                     
     };
     return super.createFilteredInputStream(au, in, encoding, 
