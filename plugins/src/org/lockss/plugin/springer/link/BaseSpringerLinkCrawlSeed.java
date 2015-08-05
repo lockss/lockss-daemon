@@ -77,7 +77,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
     InputStream is = null;
     BufferedReader br = null;
     try {
-      is = BaseSpringerLinkCrawlSeed.class.getResourceAsStream("/api-key.txt");
+      is = BaseSpringerLinkCrawlSeed.class.getResourceAsStream("api-key.txt");
       if (is == null) {
         throw new ExceptionInInitializerError("Plugin external not found");
       }
@@ -319,7 +319,8 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
             try {
               ple.extractUrls(au,
                               fud.input,
-                              AuUtil.getCharsetOrDefault(fud.headers), // FIXME
+                              CharsetUtil.guessCharsetFromStream(fud.input,
+                                                                 AuUtil.getCharsetOrDefault(fud.headers)),
                               loggerUrl, // rather than fud.origUrl
                               new Callback() {
                                 @Override
@@ -339,7 +340,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
                 log.debug3("URLs from step: " + partial.toString());
               }
               // Output accumulated URLs to start URL list
-              urlList = convertDoisToUrls(partial);
+              urlList.addAll(convertDoisToUrls(partial));
             }
           }
         };

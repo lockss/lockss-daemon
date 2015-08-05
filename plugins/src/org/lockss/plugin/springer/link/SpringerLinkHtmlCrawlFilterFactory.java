@@ -49,14 +49,44 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+      HtmlNodeFilters.tag("script"),
+      HtmlNodeFilters.tag("noscript"),
+      HtmlNodeFilters.tag("input"),
+      
+      //google iframes with weird ids
+      HtmlNodeFilters.tag("iframe"),
+
+      //footer
       HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+      
+      //more links to pdf and article
+      HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
+      
+      //weird meta tag
+      HtmlNodeFilters.tagWithAttribute("meta", "name", "nolard"),
+      
+      //adds on the side
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
+      
+      //header and search box
+      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+      HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
+      
+      //non essentials like metrics and related links
+      HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "abstract-references"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "abstract-about"),
-    
+      HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
+      
+      //random divs floating around
+      HtmlNodeFilters.tagWithAttribute("div", "id", "MathJax_Message"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "web-trekk-abstract"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "look-inside-interrupt"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "colorbox"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "cboxOverlay"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
+      
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

@@ -41,13 +41,13 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
  * </p>
  * 
  * @since 1.67.5
- * @see SpringerLinkCrawlSeed
+ * @see SpringerLinkJournalsCrawlSeed
  */
-public class SpringerLinkCrawlSeedFactory implements CrawlSeedFactory {
+public class SpringerLinkJournalsCrawlSeedFactory implements CrawlSeedFactory {
 
   @Override
     public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
-      return new SpringerLinkCrawlSeed(facade);
+      return new SpringerLinkJournalsCrawlSeed(facade);
     }
 
 }

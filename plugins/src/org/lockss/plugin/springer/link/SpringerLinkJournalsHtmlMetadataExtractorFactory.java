@@ -46,9 +46,9 @@ import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
-public class SpringerLinkHtmlMetadataExtractorFactory
+public class SpringerLinkJournalsHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(SpringerLinkHtmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(SpringerLinkJournalsHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,

@@ -60,7 +60,7 @@ import org.lockss.util.urlconn.CacheException;
  * @since 1.67.5
  * @see https://dev.springer.com/
  */
-public class SpringerLinkCrawlSeed extends BaseSpringerLinkCrawlSeed {
+public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
 
   /**
    * <p>
@@ -69,7 +69,7 @@ public class SpringerLinkCrawlSeed extends BaseSpringerLinkCrawlSeed {
    * 
    * @since 1.67.5
    */
-  private static final Logger log = Logger.getLogger(SpringerLinkCrawlSeed.class);
+  private static final Logger log = Logger.getLogger(SpringerLinkJournalsCrawlSeed.class);
   
   /**
    * <p>
@@ -98,12 +98,8 @@ public class SpringerLinkCrawlSeed extends BaseSpringerLinkCrawlSeed {
    *          A crawler façade for this crawl seed.
    * @since 1.67.5
    */
-  public SpringerLinkCrawlSeed(CrawlerFacade facade) {
+  public SpringerLinkJournalsCrawlSeed(CrawlerFacade facade) {
     super(facade);
-    if (au == null) {
-      throw new IllegalArgumentException("Valid archival unit required for crawl seed");
-    }
-    this.facade = facade;
   }
 
   @Override

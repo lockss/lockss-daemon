@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Springer Link Books Plugin</string>
+    <string>SpringerLink Books Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -31,6 +31,10 @@
         <string>1</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.68.4</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -66,7 +70,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Springer Link Books Plugin, Base URL %s, Download Url %s, eISBN %s", base_url, download_url, book_eisbn</string>
+    <string>"SpringerLink Books Plugin, Base URL %s, Download Url %s, eISBN %s", base_url, download_url, book_eisbn</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -83,13 +87,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(download_url)</string>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(download_url)</string>
       <string>2,"^%scontent/pdf/(bbm|bfm)", base_url</string>
-      <string>1,"^%s(content|chapter|book)/", base_url</string>
+      <string>1,"^%s(content|chapter|book|article)/", base_url</string>
       <string>1,"^%sstatic/pdf/", download_url</string>
     </list>
   </entry>
-    <entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
   </entry>

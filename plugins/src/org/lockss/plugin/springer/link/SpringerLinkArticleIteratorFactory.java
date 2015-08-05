@@ -76,6 +76,9 @@ public class SpringerLinkArticleIteratorFactory
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
                                   ArticleFiles.ROLE_ABSTRACT,
                                   ArticleFiles.ROLE_FULL_TEXT_HTML);
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+                                 ArticleFiles.ROLE_FULL_TEXT_HTML,
+                                 ArticleFiles.ROLE_ABSTRACT);
     return builder.getSubTreeArticleIterator();
   }
 

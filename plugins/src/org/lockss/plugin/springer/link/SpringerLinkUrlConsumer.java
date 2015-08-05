@@ -52,7 +52,7 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
 public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
 
   // Will become a definitional param
-  public static final String CDN_URL = "http://download.springer.com/";
+  public static final String DOWNLOAD_URL_KEY = "download_url";
 
   protected Pattern origPdfPat;
   
@@ -62,17 +62,13 @@ public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
                                 FetchedUrlData fud) {
     super(facade, fud);
     origPdfPat = makeOrigPdfPattern(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-    destPdfPat = makeDestPdfPattern(CDN_URL);
+    destPdfPat = makeDestPdfPattern(au.getConfiguration().get(DOWNLOAD_URL_KEY));
   }
 
   @Override
   public void consume() throws IOException {
     if (shouldStoreAtOrigUrl()) {
-      // FIXME 1.68: call storeAtOrigUrl() instead of these 4 lines 
-      fud.redirectUrls = null;
-      fud.fetchUrl = null;
-      fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
-      fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.origUrl);
+      storeAtOrigUrl();
     }
     super.consume();
   }

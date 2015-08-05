@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Springer Link Journals Plugin</string>
+    <string>SpringerLink Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -82,30 +82,23 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Springer Link Journals Plugin, Base URL %s, Link URL %s, ISSN %s, Volume %s", base_url, download_url, journal_issn, volume_name</string>
+    <string>"SpringerLink Journals Plugin, Base URL %s, Download URL %s, ISSN %s, Volume %s", base_url, download_url, journal_issn, volume_name</string>
   </entry>
-    <entry>
+  <!-- overrides parents start url, but not used by crawl seed -->
+  <entry>
     <string>au_start_url</string>
     <string>"%s", base_url</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(download_url)</string>
-      <string>1,"^%s(article|content)/", base_url</string>
-      <string>1,"^%sstatic/pdf/", download_url</string>
-    </list>
-  </entry>
-  <entry>
     <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkCrawlSeedFactory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkJournalsCrawlSeedFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.springer.link.SpringerLinkHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.springer.link.SpringerLinkJournalsHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
