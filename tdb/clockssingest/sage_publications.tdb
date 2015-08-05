@@ -36376,7 +36376,7 @@
       param[base_url] = http://sexualities.sagepub.com/
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < zapped ; finished ; 2008 ; Sexualities Volume 11 ; 11 ; >
+      au < zapped ; finished ; 2008 ; Sexualities Volume 11 [superseded] ; 11 ; >
       au < zapped ; finished ; 2009 ; Sexualities Volume 12 [superseded] ; 12 ; reingest1.clockss.org:8082 >
 
     }
@@ -36387,6 +36387,7 @@
       param[base_url] = http://sex.sagepub.com/
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
+      au < zapped ; superseded ; 2008 ; Sexualities Volume 11 [superseded 2] ; 11 ; >
       au < superseded ; down ; 2009 ; Sexualities Volume 12 [superseded 2] ; 12 ; reingest1.clockss.org:8082 >
 
     }
@@ -36409,7 +36410,7 @@
       au < manifest ; exists ; 2005 ; Sexualities Volume 8 ; 8 ; >
       au < manifest ; exists ; 2006 ; Sexualities Volume 9 ; 9 ; >
       au < manifest ; exists ; 2007 ; Sexualities Volume 10 ; 10 ; >
-      au < crawling ; crawling ; 2008 ; Sexualities Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Sexualities Volume 11 ; 11 ; >
       au < frozen ; exists ; 2009 ; Sexualities Volume 12 ; 12 ; >
       au < finished ; frozen ; 2010 ; Sexualities Volume 13 ; 13 ; >
       au < finished ; frozen ; 2011 ; Sexualities Volume 14 ; 14 ; >
