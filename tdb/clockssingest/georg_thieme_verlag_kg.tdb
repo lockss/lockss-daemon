@@ -262,6 +262,7 @@
    >
    param[journal_id] = 10.1055/s-00000006
    comment[years] = 2001-current
+   comment[notReady] = may not exist anymore?
 
     au < doNotProcess ; exists ; 2001 ; 2001 ; Aktuelle Trauatologie Volume 31 ; 31 >
     au < doNotProcess ; exists ; 2002 ; 2002 ; Aktuelle Trauatologie Volume 32 ; 32 >
