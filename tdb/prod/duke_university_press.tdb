@@ -1587,8 +1587,9 @@
       au < exists ; 2010 ; Kyoto Journal of Mathematics Volume 50 ; 50 >
       au < exists ; 2011 ; Kyoto Journal of Mathematics Volume 51 ; 51 >
       au < exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
-      au < expected ; 2013 ; Kyoto Journal of Mathematics Volume 53 ; 53 >
-      au < expected ; 2014 ; Kyoto Journal of Mathematics Volume 54 ; 54 >
+      au < exists ; 2013 ; Kyoto Journal of Mathematics Volume 53 ; 53 >
+      au < exists ; 2014 ; Kyoto Journal of Mathematics Volume 54 ; 54 >
+      au < exists ; 2015 ; Kyoto Journal of Mathematics Volume 55 ; 55 >
 
    }
 
@@ -1935,71 +1936,22 @@
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = volume # do not match, need to re-work
 
-      au < doNotProcess ; 1950 ; Nagoya Mathematical Journal Volume 1 ; 1 >
-      au < doNotProcess ; 1951 ; Nagoya Mathematical Journal Volume 2 ; 2 >
-      au < doNotProcess ; 1952 ; Nagoya Mathematical Journal Volume 3 ; 3 >
-      au < doNotProcess ; 1953 ; Nagoya Mathematical Journal Volume 4 ; 4 >
-      au < doNotProcess ; 1954 ; Nagoya Mathematical Journal Volume 5 ; 5 >
-      au < doNotProcess ; 1955 ; Nagoya Mathematical Journal Volume 6 ; 6 >
-      au < doNotProcess ; 1956 ; Nagoya Mathematical Journal Volume 7 ; 7 >
-      au < doNotProcess ; 1957 ; Nagoya Mathematical Journal Volume 8 ; 8 >
-      au < doNotProcess ; 1958 ; Nagoya Mathematical Journal Volume 9 ; 9 >
-      au < doNotProcess ; 1959 ; Nagoya Mathematical Journal Volume 10 ; 10 >
-      au < doNotProcess ; 1960 ; Nagoya Mathematical Journal Volume 11 ; 11 >
-      au < doNotProcess ; 1961 ; Nagoya Mathematical Journal Volume 12 ; 12 >
-      au < doNotProcess ; 1962 ; Nagoya Mathematical Journal Volume 13 ; 13 >
-      au < doNotProcess ; 1963 ; Nagoya Mathematical Journal Volume 14 ; 14 >
-      au < doNotProcess ; 1964 ; Nagoya Mathematical Journal Volume 15 ; 15 >
-      au < doNotProcess ; 1965 ; Nagoya Mathematical Journal Volume 16 ; 16 >
-      au < doNotProcess ; 1966 ; Nagoya Mathematical Journal Volume 17 ; 17 >
-      au < doNotProcess ; 1967 ; Nagoya Mathematical Journal Volume 18 ; 18 >
-      au < doNotProcess ; 1968 ; Nagoya Mathematical Journal Volume 19 ; 19 >
-      au < doNotProcess ; 1969 ; Nagoya Mathematical Journal Volume 20 ; 20 >
-      au < doNotProcess ; 1970 ; Nagoya Mathematical Journal Volume 21 ; 21 >
-      au < doNotProcess ; 1971 ; Nagoya Mathematical Journal Volume 22 ; 22 >
-      au < doNotProcess ; 1972 ; Nagoya Mathematical Journal Volume 23 ; 23 >
-      au < doNotProcess ; 1973 ; Nagoya Mathematical Journal Volume 24 ; 24 >
-      au < doNotProcess ; 1974 ; Nagoya Mathematical Journal Volume 25 ; 25 >
-      au < doNotProcess ; 1975 ; Nagoya Mathematical Journal Volume 26 ; 26 >
-      au < doNotProcess ; 1976 ; Nagoya Mathematical Journal Volume 27 ; 27 >
-      au < doNotProcess ; 1977 ; Nagoya Mathematical Journal Volume 28 ; 28 >
-      au < doNotProcess ; 1978 ; Nagoya Mathematical Journal Volume 29 ; 29 >
-      au < doNotProcess ; 1979 ; Nagoya Mathematical Journal Volume 30 ; 30 >
-      au < doNotProcess ; 1980 ; Nagoya Mathematical Journal Volume 31 ; 31 >
-      au < doNotProcess ; 1981 ; Nagoya Mathematical Journal Volume 32 ; 32 >
-      au < doNotProcess ; 1982 ; Nagoya Mathematical Journal Volume 33 ; 33 >
-      au < doNotProcess ; 1983 ; Nagoya Mathematical Journal Volume 34 ; 34 >
-      au < doNotProcess ; 1984 ; Nagoya Mathematical Journal Volume 35 ; 35 >
-      au < doNotProcess ; 1985 ; Nagoya Mathematical Journal Volume 36 ; 36 >
-      au < doNotProcess ; 1986 ; Nagoya Mathematical Journal Volume 37 ; 37 >
-      au < doNotProcess ; 1987 ; Nagoya Mathematical Journal Volume 38 ; 38 >
-      au < doNotProcess ; 1988 ; Nagoya Mathematical Journal Volume 39 ; 39 >
-      au < doNotProcess ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >
-      au < doNotProcess ; 1990 ; Nagoya Mathematical Journal Volume 41 ; 41 >
-      au < doNotProcess ; 1991 ; Nagoya Mathematical Journal Volume 42 ; 42 >
-      au < doNotProcess ; 1992 ; Nagoya Mathematical Journal Volume 43 ; 43 >
-      au < doNotProcess ; 1993 ; Nagoya Mathematical Journal Volume 44 ; 44 >
-      au < doNotProcess ; 1994 ; Nagoya Mathematical Journal Volume 45 ; 45 >
-      au < doNotProcess ; 1995 ; Nagoya Mathematical Journal Volume 46 ; 46 >
-      au < doNotProcess ; 1996 ; Nagoya Mathematical Journal Volume 47 ; 47 >
-      au < doNotProcess ; 1997 ; Nagoya Mathematical Journal Volume 48 ; 48 >
-      au < doNotProcess ; 1998 ; Nagoya Mathematical Journal Volume 49 ; 49 >
-      au < doNotProcess ; 1999 ; Nagoya Mathematical Journal Volume 50 ; 50 >
-      au < exists ; 2000 ; Nagoya Mathematical Journal Volume 51 ; 51 >
-      au < exists ; 2001 ; Nagoya Mathematical Journal Volume 52 ; 52 >
-      au < exists ; 2002 ; Nagoya Mathematical Journal Volume 53 ; 53 >
-      au < exists ; 2003 ; Nagoya Mathematical Journal Volume 54 ; 54 >
-      au < exists ; 2004 ; Nagoya Mathematical Journal Volume 55 ; 55 >
-      au < exists ; 2005 ; Nagoya Mathematical Journal Volume 56 ; 56 >
-      au < exists ; 2006 ; Nagoya Mathematical Journal Volume 57 ; 57 >
-      au < exists ; 2007 ; Nagoya Mathematical Journal Volume 58 ; 58 >
-      au < exists ; 2008 ; Nagoya Mathematical Journal Volume 59 ; 59 >
-      au < exists ; 2009 ; Nagoya Mathematical Journal Volume 60 ; 60 >
-      au < exists ; 2010 ; Nagoya Mathematical Journal Volume 61 ; 61 >
-      au < exists ; 2011 ; Nagoya Mathematical Journal Volume 62 ; 62 >
-      au < exists ; 2012 ; Nagoya Mathematical Journal Volume 63 ; 63 >
-      au < expected ; 2013 ; Nagoya Mathematical Journal Volume 64 ; 64 >
-      au < expected ; 2014 ; Nagoya Mathematical Journal Volume 65 ; 65 >
+      au < exists ; 2012 ; Nagoya Mathematical Journal Volume 205 ; 205 >
+      au < exists ; 2012 ; Nagoya Mathematical Journal Volume 206 ; 206 >
+      au < exists ; 2012 ; Nagoya Mathematical Journal Volume 207 ; 207 >
+      au < exists ; 2012 ; Nagoya Mathematical Journal Volume 208 ; 208 >
+      au < exists ; 2013 ; Nagoya Mathematical Journal Volume 209 ; 209 >
+      au < exists ; 2013 ; Nagoya Mathematical Journal Volume 210 ; 210 >
+      au < exists ; 2013 ; Nagoya Mathematical Journal Volume 211 ; 211 >
+      au < exists ; 2013 ; Nagoya Mathematical Journal Volume 212 ; 212 >
+      au < exists ; 2014 ; Nagoya Mathematical Journal Volume 213 ; 213 >
+      au < exists ; 2014 ; Nagoya Mathematical Journal Volume 214 ; 214 >
+      au < exists ; 2014 ; Nagoya Mathematical Journal Volume 215 ; 215 >
+      au < exists ; 2014 ; Nagoya Mathematical Journal Volume 216 ; 216 >
+      au < exists ; 2015 ; Nagoya Mathematical Journal Volume 217 ; 217 >
+      au < exists ; 2015 ; Nagoya Mathematical Journal Volume 218 ; 218 >
+      au < expected ; 2015 ; Nagoya Mathematical Journal Volume 219 ; 219 >
+      au < expected ; 2015 ; Nagoya Mathematical Journal Volume 220 ; 220 >
 
     }
 
@@ -2197,6 +2149,7 @@
       au < exists ; 2012 ; Notre Dame Journal of Formal Logic Volume 53 ; 53 >
       au < exists ; 2013 ; Notre Dame Journal of Formal Logic Volume 54 ; 54 >
       au < exists ; 2014 ; Notre Dame Journal of Formal Logic Volume 55 ; 55 >
+      au < expected ; 2015 ; Notre Dame Journal of Formal Logic Volume 56 ; 56 >
 
     }
 
