@@ -178,8 +178,6 @@
     au < down ; frozen ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
     au < down ; exists ; 2013 ; Contemporary French Civilization Volume 38 ; 38 >
     au < doNotProcess ; exists ; 2013 ; Contemporary French Civilization Volume 39 ; 39 >
-    au < expected ; exists ; 2014 ; Contemporary French Civilization Volume 40 ; 40 >
-    au < expected ; exists ; 2014 ; Contemporary French Civilization Volume 41 ; 41 >
 
   }
 
@@ -317,17 +315,18 @@
   {
   
     title <
-      name = Modern Languages Open 
+      name = Modern Languages Open ;
+      eissn = 2052-5397
     >
 
     {
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
-    param[base_url] = http://mloa.cch.kcl.ac.uk/
+    param[base_url] = http://www.modernlanguagesopen.org/
     param[journal_id] = mlo
-    comment[issn] = missing info
     
-    au < expected ; exists ; 2014 ; Modern Languages Open Volume 1 ; 1 ; 2014 >
+    au < exists ; exists ; 2014 ; Modern Languages Open Volume 1 ; 1 ; 2014 >
+    au < exists ; exists ; 2015 ; Modern Languages Open Volume 2 ; 2 ; 2015 >
     
     }
   }

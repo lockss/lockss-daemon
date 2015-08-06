@@ -1005,6 +1005,7 @@
       >
 
       param[journal_id] = pm
+      comment[0] = stopped publishing w volume 17
 
       au < doNotProcess ; exists ; 1999 ; Pensions: An International Journal Volume 5 (1999) ; 1999 ; 5 >
       au < doNotProcess ; exists ; 2000 ; Pensions: An International Journal Volume 5 (2000) ; 2000 ; 5 >
@@ -1027,8 +1028,6 @@
       au < doNotProcess ; exists ; 2010 ; Pensions: An International Journal Volume 15 ; 2010 ; 15 >
       au < exists ; exists ; 2011 ; Pensions: An International Journal Volume 16 ; 2011 ; 16 >
       au < frozen ; exists ; 2012 ; Pensions: An International Journal Volume 17 ; 2012 ; 17 >
-      au < expected ; exists ; 2013 ; Pensions: An International Journal Volume 18 ; 2013 ; 18 >
-      au < expected ; exists ; 2014 ; Pensions: An International Journal Volume 19 ; 2014 ; 19 >
 
     }
 

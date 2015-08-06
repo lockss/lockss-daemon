@@ -1175,7 +1175,8 @@
       au < exists ; exists ; 2011 ; Kyoto Journal of Mathematics Volume 51 ; 51 >
       au < exists ; exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
       au < exists ; exists ; 2013 ; Kyoto Journal of Mathematics Volume 53 ; 53 >
-      au < expected ; exists ; 2014 ; Kyoto Journal of Mathematics Volume 54 ; 54 >
+      au < exists ; exists ; 2014 ; Kyoto Journal of Mathematics Volume 54 ; 54 >
+      au < exists ; exists ; 2015 ; Kyoto Journal of Mathematics Volume 55 ; 55 >
 
 
     }
@@ -1415,71 +1416,22 @@
       param[base_url] = http://projecteuclid.org/nmj/
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-      au < exists ; exists ; 1950 ; Nagoya Mathematical Journal Volume 1 ; 1 >
-      au < exists ; exists ; 1951 ; Nagoya Mathematical Journal Volume 2 ; 2 >
-      au < exists ; exists ; 1952 ; Nagoya Mathematical Journal Volume 3 ; 3 >
-      au < exists ; exists ; 1953 ; Nagoya Mathematical Journal Volume 4 ; 4 >
-      au < exists ; exists ; 1954 ; Nagoya Mathematical Journal Volume 5 ; 5 >
-      au < exists ; exists ; 1955 ; Nagoya Mathematical Journal Volume 6 ; 6 >
-      au < exists ; exists ; 1956 ; Nagoya Mathematical Journal Volume 7 ; 7 >
-      au < exists ; exists ; 1957 ; Nagoya Mathematical Journal Volume 8 ; 8 >
-      au < exists ; exists ; 1958 ; Nagoya Mathematical Journal Volume 9 ; 9 >
-      au < exists ; exists ; 1959 ; Nagoya Mathematical Journal Volume 10 ; 10 >
-      au < exists ; exists ; 1960 ; Nagoya Mathematical Journal Volume 11 ; 11 >
-      au < exists ; exists ; 1961 ; Nagoya Mathematical Journal Volume 12 ; 12 >
-      au < exists ; exists ; 1962 ; Nagoya Mathematical Journal Volume 13 ; 13 >
-      au < exists ; exists ; 1963 ; Nagoya Mathematical Journal Volume 14 ; 14 >
-      au < exists ; exists ; 1964 ; Nagoya Mathematical Journal Volume 15 ; 15 >
-      au < exists ; exists ; 1965 ; Nagoya Mathematical Journal Volume 16 ; 16 >
-      au < exists ; exists ; 1966 ; Nagoya Mathematical Journal Volume 17 ; 17 >
-      au < exists ; exists ; 1967 ; Nagoya Mathematical Journal Volume 18 ; 18 >
-      au < exists ; exists ; 1968 ; Nagoya Mathematical Journal Volume 19 ; 19 >
-      au < exists ; exists ; 1969 ; Nagoya Mathematical Journal Volume 20 ; 20 >
-      au < exists ; exists ; 1970 ; Nagoya Mathematical Journal Volume 21 ; 21 >
-      au < exists ; exists ; 1971 ; Nagoya Mathematical Journal Volume 22 ; 22 >
-      au < exists ; exists ; 1972 ; Nagoya Mathematical Journal Volume 23 ; 23 >
-      au < exists ; exists ; 1973 ; Nagoya Mathematical Journal Volume 24 ; 24 >
-      au < exists ; exists ; 1974 ; Nagoya Mathematical Journal Volume 25 ; 25 >
-      au < exists ; exists ; 1975 ; Nagoya Mathematical Journal Volume 26 ; 26 >
-      au < exists ; exists ; 1976 ; Nagoya Mathematical Journal Volume 27 ; 27 >
-      au < exists ; exists ; 1977 ; Nagoya Mathematical Journal Volume 28 ; 28 >
-      au < exists ; exists ; 1978 ; Nagoya Mathematical Journal Volume 29 ; 29 >
-      au < exists ; exists ; 1979 ; Nagoya Mathematical Journal Volume 30 ; 30 >
-      au < exists ; exists ; 1980 ; Nagoya Mathematical Journal Volume 31 ; 31 >
-      au < exists ; exists ; 1981 ; Nagoya Mathematical Journal Volume 32 ; 32 >
-      au < exists ; exists ; 1982 ; Nagoya Mathematical Journal Volume 33 ; 33 >
-      au < exists ; exists ; 1983 ; Nagoya Mathematical Journal Volume 34 ; 34 >
-      au < exists ; exists ; 1984 ; Nagoya Mathematical Journal Volume 35 ; 35 >
-      au < exists ; exists ; 1985 ; Nagoya Mathematical Journal Volume 36 ; 36 >
-      au < exists ; exists ; 1986 ; Nagoya Mathematical Journal Volume 37 ; 37 >
-      au < exists ; exists ; 1987 ; Nagoya Mathematical Journal Volume 38 ; 38 >
-      au < exists ; exists ; 1988 ; Nagoya Mathematical Journal Volume 39 ; 39 >
-      au < exists ; exists ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >
-      au < exists ; exists ; 1990 ; Nagoya Mathematical Journal Volume 41 ; 41 >
-      au < exists ; exists ; 1991 ; Nagoya Mathematical Journal Volume 42 ; 42 >
-      au < exists ; exists ; 1992 ; Nagoya Mathematical Journal Volume 43 ; 43 >
-      au < exists ; exists ; 1993 ; Nagoya Mathematical Journal Volume 44 ; 44 >
-      au < exists ; exists ; 1994 ; Nagoya Mathematical Journal Volume 45 ; 45 >
-      au < exists ; exists ; 1995 ; Nagoya Mathematical Journal Volume 46 ; 46 >
-      au < exists ; exists ; 1996 ; Nagoya Mathematical Journal Volume 47 ; 47 >
-      au < exists ; exists ; 1997 ; Nagoya Mathematical Journal Volume 48 ; 48 >
-      au < exists ; exists ; 1998 ; Nagoya Mathematical Journal Volume 49 ; 49 >
-      au < exists ; exists ; 1999 ; Nagoya Mathematical Journal Volume 50 ; 50 >
-      au < exists ; exists ; 2000 ; Nagoya Mathematical Journal Volume 51 ; 51 >
-      au < exists ; exists ; 2001 ; Nagoya Mathematical Journal Volume 52 ; 52 >
-      au < exists ; exists ; 2002 ; Nagoya Mathematical Journal Volume 53 ; 53 >
-      au < exists ; exists ; 2003 ; Nagoya Mathematical Journal Volume 54 ; 54 >
-      au < exists ; exists ; 2004 ; Nagoya Mathematical Journal Volume 55 ; 55 >
-      au < exists ; exists ; 2005 ; Nagoya Mathematical Journal Volume 56 ; 56 >
-      au < exists ; exists ; 2006 ; Nagoya Mathematical Journal Volume 57 ; 57 >
-      au < exists ; exists ; 2007 ; Nagoya Mathematical Journal Volume 58 ; 58 >
-      au < exists ; exists ; 2008 ; Nagoya Mathematical Journal Volume 59 ; 59 >
-      au < exists ; exists ; 2009 ; Nagoya Mathematical Journal Volume 60 ; 60 >
-      au < exists ; exists ; 2010 ; Nagoya Mathematical Journal Volume 61 ; 61 >
-      au < exists ; exists ; 2011 ; Nagoya Mathematical Journal Volume 62 ; 62 >
-      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 63 ; 63 >
-      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 64 ; 64 >
-      au < expected ; exists ; 2014 ; Nagoya Mathematical Journal Volume 65 ; 65 >
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 205 ; 205 >
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 206 ; 206 >
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 207 ; 207 >
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 208 ; 208 >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 209 ; 209 >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 210 ; 210 >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 211 ; 211 >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 212 ; 212 >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 213 ; 213 >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 214 ; 214 >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 215 ; 215 >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 216 ; 216 >
+      au < exists ; exists ; 2015 ; Nagoya Mathematical Journal Volume 217 ; 217 >
+      au < exists ; exists ; 2015 ; Nagoya Mathematical Journal Volume 218 ; 218 >
+      au < expected ; exists ; 2015 ; Nagoya Mathematical Journal Volume 219 ; 219 >
+      au < expected ; exists ; 2015 ; Nagoya Mathematical Journal Volume 220 ; 220 >
 
     }
 
@@ -1611,7 +1563,8 @@
       au < exists ; exists ; 2011 ; Notre Dame Journal of Formal Logic Volume 52 ; 52 >
       au < exists ; exists ; 2012 ; Notre Dame Journal of Formal Logic Volume 53 ; 53 >
       au < exists ; exists ; 2013 ; Notre Dame Journal of Formal Logic Volume 54 ; 54 >
-      au < expected ; exists ; 2014 ; Notre Dame Journal of Formal Logic Volume 55 ; 55 >
+      au < exists ; exists ; 2014 ; Notre Dame Journal of Formal Logic Volume 55 ; 55 >
+      au < expected ; exists ; 2015 ; Notre Dame Journal of Formal Logic Volume 56 ; 56 >
 
     }
 
@@ -1969,8 +1922,6 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2011 ; Social Science History Volume 35 ; 35 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Social Science History Volume 36 ; 36 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Social Science History Volume 37 ; 37 >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Social Science History Volume 38 ; 38 >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Social Science History Volume 39 ; 39 >
 
      }
 

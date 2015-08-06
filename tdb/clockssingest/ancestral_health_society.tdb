@@ -22,7 +22,6 @@
     implicit < status ; status2 ; year ; name ; param[volume] >
 
     au < manifest ; exists ; 2013 ; Journal of Evolution and Health Volume 1 ; 1 >
-    au < expected ; exists ; 2014 ; Journal of Evolution and Health Volume 2 ; 2 >
 
   }
 

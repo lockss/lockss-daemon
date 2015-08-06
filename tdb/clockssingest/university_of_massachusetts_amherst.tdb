@@ -149,7 +149,7 @@
     param[journal_abbr] = hs
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < expected ; exists ; 2014 ; Heritage & Society Volume 1 ; 1 >
+    au < expected ; exists ; 2015 ; Heritage & Society Volume 1 ; 1 >
 
   }
   
@@ -164,7 +164,7 @@
     param[journal_abbr] = hosteur
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < expected ; exists ; 2014 ; HOSTEUR Volume 1 ; 1 >
+    au < expected ; exists ; 2015 ; HOSTEUR Volume 1 ; 1 >
 
   }
   
@@ -179,7 +179,7 @@
     param[journal_abbr] = ichrie_case_study_competition
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < expected ; exists ; 2014 ; ICHRIE Johnson & Wales Case Study Competition Volume 1 ; 1 >
+    au < expected ; exists ; 2015 ; ICHRIE Johnson & Wales Case Study Competition Volume 1 ; 1 >
 
   }
   

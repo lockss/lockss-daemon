@@ -199,6 +199,7 @@
     >
 
     param[journal_id] = bonekey/bonekeyreports
+    plugin = needs.plugin
 
     au < doNotProcess ; doNotProcess ; 2004 ; BoneKEy Reports Volume 1 ; 2004 ; 1 >
     au < doNotProcess ; doNotProcess ; 2005 ; BoneKEy Reports Volume 2 ; 2005 ; 2 >
@@ -210,8 +211,8 @@
     au < exists ; exists ; 2011 ; BoneKEy Reports Volume 8 ; 2011 ; 8 >
     au < exists ; exists ; 2012 ; BoneKEy Reports Volume 9 ; 2012 ; 9 >
     au < exists ; exists ; 2013 ; BoneKEy Reports Volume 10 ; 2013 ; 10 >
-    au < expected ; exists ; 2014 ; BoneKEy Reports Volume 11 ; 2014 ; 11 >
-    au < expected ; exists ; 2015 ; BoneKEy Reports Volume 12 ; 2015 ; 12 >
+    au < exists ; exists ; 2014 ; BoneKEy Reports Volume 11 ; 2014 ; 11 >
+    au < exists ; exists ; 2015 ; BoneKEy Reports Volume 12 ; 2015 ; 12 >
 
   }
 
@@ -1100,6 +1101,7 @@
     >
 
     param[journal_id] = bonekey
+    plugin = needs.plugin
 
     au < exists ; exists ; 2008 ; IBMS BoneKEy 10 ; 2008 ; 10 >
     au < exists ; exists ; 2009 ; IBMS BoneKEy 11 ; 2009 ; 11 >
@@ -1107,7 +1109,8 @@
     au < exists ; exists ; 2011 ; IBMS BoneKEy Volume 13 ; 2011 ; 13 >
     au < exists ; exists ; 2012 ; IBMS BoneKEy Volume 14 ; 2012 ; 14 >
     au < exists ; exists ; 2013 ; IBMS BoneKEy Volume 15 ; 2013 ; 15 >
-    au < expected ; exists ; 2014 ; IBMS BoneKEy Volume 16 ; 2014 ; 16 >
+    au < exists ; exists ; 2014 ; IBMS BoneKEy Volume 16 ; 2014 ; 16 >
+    au < exists ; exists ; 2015 ; IBMS BoneKEy Volume 17 ; 2015 ; 17 >
 
   }
 
