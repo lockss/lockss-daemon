@@ -273,7 +273,7 @@
         param[journal_issn] = 2195-2701 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; City, Territory and Architecture Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; City, Territory and Architecture Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; City, Territory and Architecture Volume 2 ; 2 >
   
     }
@@ -410,7 +410,7 @@
         param[journal_issn] = 2193-8636 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; Decision Analytics Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Decision Analytics Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Decision Analytics Volume 2 ; 2 >
   
     }
@@ -881,7 +881,7 @@
         param[journal_issn] = 2197-5620 
         comment[platform] = BioMedCentralPlugin
 
-        au < ready ; exists ; 2014 ; Forest Ecosystems Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Forest Ecosystems Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Forest Ecosystems Volume 2 ; 2 >
 
     }
@@ -1038,7 +1038,7 @@
         param[journal_issn] = 2197-1714 
         comment[platform] = BioMedCentralPlugin
 
-        au < ready ; exists ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Injury Epidemiology Volume 2 ; 2 >
 
     }
