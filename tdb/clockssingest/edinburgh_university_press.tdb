@@ -340,7 +340,7 @@
     au < finished ; frozen ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
     au < finished ; frozen ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
     au < finished ; crawling ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
-    au < finished ; crawling ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
+    au < finished ; finished ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
     au < finished ; frozen ; 2012 ; Edinburgh Law Review Volume 16 ; 16 >
     au < crawling ; exists ; 2013 ; Edinburgh Law Review Volume 17 ; 17 >
     au < crawling ; exists ; 2014 ; Edinburgh Law Review Volume 18 ; 18 >
@@ -360,11 +360,11 @@
     param[journal_id] = epi
     comment[down] = content no longer available on eup website
 
-    au < down ; crawling ; 2004-2005 ; Episteme Volume 1 ; 1 >
-    au < down ; crawling ; 2005-2006 ; Episteme Volume 2 ; 2 >
+    au < down ; finished ; 2004-2005 ; Episteme Volume 1 ; 1 >
+    au < down ; finished ; 2005-2006 ; Episteme Volume 2 ; 2 >
     au < down ; crawling ; 2006 ; Episteme Volume 3 ; 3 >
-    au < down ; crawling ; 2007 ; Episteme Volume 4 ; 4 >
-    au < down ; crawling ; 2008 ; Episteme Volume 5 ; 5 >
+    au < down ; finished ; 2007 ; Episteme Volume 4 ; 4 >
+    au < down ; finished ; 2008 ; Episteme Volume 5 ; 5 >
     au < down ; frozen ; 2009 ; Episteme Volume 6 ; 6 >
     au < down ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
     au < down ; crawling ; 2011 ; Episteme Volume 8 ; 8 >
@@ -566,7 +566,7 @@
 
     param[journal_id] = jbctv
 
-    au < finished ; crawling ; 2004 ; Journal of British Cinema and Television Volume 1 ; 1 >
+    au < finished ; finished ; 2004 ; Journal of British Cinema and Television Volume 1 ; 1 >
     au < finished ; crawling ; 2005 ; Journal of British Cinema and Television Volume 2 ; 2 >
     au < finished ; crawling ; 2006 ; Journal of British Cinema and Television Volume 3 ; 3 >
     au < finished ; crawling ; 2007 ; Journal of British Cinema and Television Volume 4 ; 4 >
@@ -767,7 +767,7 @@
 
     au < finished ; frozen ; 2005 ; Modernist Cultures Volume 1 ; 1 >
     au < finished ; frozen ; 2006 ; Modernist Cultures Volume 2 ; 2 >
-    au < finished ; crawling ; 2007-2008 ; Modernist Cultures Volume 3 ; 3 >
+    au < finished ; finished ; 2007-2008 ; Modernist Cultures Volume 3 ; 3 >
     au < finished ; frozen ; 2009 ; Modernist Cultures Volume 4 ; 4 >
     au < finished ; frozen ; 2010 ; Modernist Cultures Volume 5 ; 5 >
     au < finished ; crawling ; 2011 ; Modernist Cultures Volume 6 ; 6 >
@@ -984,7 +984,7 @@
     param[journal_id] = rom
 
     au < finished ; crawling ; 2001 ; Romanticism Volume 7 ; 7 >
-    au < finished ; crawling ; 2002 ; Romanticism Volume 8 ; 8 >
+    au < finished ; finished ; 2002 ; Romanticism Volume 8 ; 8 >
     au < finished ; crawling ; 2003 ; Romanticism Volume 9 ; 9 >
     au < finished ; crawling ; 2004 ; Romanticism Volume 10 ; 10 >
     au < finished ; crawling ; 2005 ; Romanticism Volume 11 ; 11 >

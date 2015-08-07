@@ -3124,7 +3124,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Assessment Volume 16 ; 16 ; >
       au < zapped ; finished ; 2010 ; Assessment Volume 17 ; 17 ; >
       au < finished ; crawling ; 2011 ; Assessment Volume 18 ; 18 ; >
-      au < finished ; crawling ; 2012 ; Assessment Volume 19 ; 19 ; >
+      au < finished ; finished ; 2012 ; Assessment Volume 19 ; 19 ; >
       au < frozen ; exists ; 2013 ; Assessment Volume 20 ; 20 ; >
       au < frozen ; exists ; 2014 ; Assessment Volume 21 ; 21 ; >
       au < manifest ; exists ; 2015 ; Assessment Volume 22 ; 22 ; >
@@ -3452,9 +3452,9 @@
     param[journal_id] = aub
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < finished ; crawling ; 2004 ; Auto/Biography Volume 12 ; 12 >
-    au < finished ; crawling ; 2005 ; Auto/Biography Volume 13 ; 13 >
-    au < finished ; crawling ; 2006-2007 ; Auto/Biography Volume 14 ; 14 >
+    au < finished ; finished ; 2004 ; Auto/Biography Volume 12 ; 12 >
+    au < finished ; finished ; 2005 ; Auto/Biography Volume 13 ; 13 >
+    au < finished ; finished ; 2006-2007 ; Auto/Biography Volume 14 ; 14 >
 
   }
 
@@ -14070,7 +14070,7 @@
 
         au < zapped ; finished ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 ; >
         au < zapped ; finished ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 ; >
-        au < finished ; crawling ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
+        au < finished ; finished ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
 
       }
 
@@ -19442,11 +19442,11 @@
 
       au < down ; frozen ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 ; >
       au < zapped ; finished ; 1962 ; The Journal of Clinical Pharmacology Volume 2 ; 2 ; >
-      au < down ; crawling ; 1963 ; The Journal of Clinical Pharmacology Volume 3 ; 3 ; >
+      au < down ; finished ; 1963 ; The Journal of Clinical Pharmacology Volume 3 ; 3 ; >
       au < down ; frozen ; 1964 ; The Journal of Clinical Pharmacology Volume 4 ; 4 ; >
       au < zapped ; finished ; 1965 ; The Journal of Clinical Pharmacology Volume 5 ; 5 ; >
       au < down ; crawling ; 1966 ; The Journal of Clinical Pharmacology Volume 6 ; 6 ; >
-      au < down ; crawling ; 1967 ; The Journal of Clinical Pharmacology Volume 7 ; 7 ; >
+      au < down ; finished ; 1967 ; The Journal of Clinical Pharmacology Volume 7 ; 7 ; >
       au < zapped ; finished ; 1968 ; The Journal of Clinical Pharmacology Volume 8 ; 8 ; >
       au < down ; frozen ; 1969 ; The Journal of Clinical Pharmacology Volume 9 ; 9 ; >
       au < zapped ; finished ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 ; >
@@ -20195,7 +20195,7 @@
       au < manifest ; exists ; 2007 ; Journal of Creative Communications Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
       au < zapped ; finished ; 2009 ; Journal of Creative Communications Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ; >
+      au < finished ; finished ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ; >
       au < frozen ; exists ; 2011 ; Journal of Creative Communications Volume 6 ; 6 ; >
       au < crawling ; exists ; 2012 ; Journal of Creative Communications Volume 7 ; 7 ; >
       au < frozen ; exists ; 2013 ; Journal of Creative Communications Volume 8 ; 8 ; >
@@ -30930,7 +30930,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Organization & Environment Volume 22 ; 22 ; >
       au < zapped ; finished ; 2010 ; Organization & Environment Volume 23 ; 23 ; >
       au < finished ; crawling ; 2011 ; Organization & Environment Volume 24 ; 24 ; >
-      au < finished ; crawling ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
+      au < finished ; finished ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
       au < frozen ; exists ; 2013 ; Organization & Environment Volume 26 ; 26 ; >
       au < crawling ; exists ; 2014 ; Organization & Environment Volume 27 ; 27 ; >
       au < manifest ; exists ; 2015 ; Organization & Environment Volume 28 ; 28 ; >
@@ -32558,7 +32558,7 @@
       au < manifest ; exists ; 2007 ; The Prison Journal Volume 87 ; 87 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 ; >
       au < manifest ; exists ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
-      au < finished ; crawling ; 2010 ; The Prison Journal Volume 90 ; 90 ; >
+      au < finished ; finished ; 2010 ; The Prison Journal Volume 90 ; 90 ; >
       au < finished ; frozen ; 2011 ; The Prison Journal Volume 91 ; 91 ; >
       au < finished ; crawling ; 2012 ; The Prison Journal Volume 92 ; 92 ; >
       au < frozen ; exists ; 2013 ; The Prison Journal Volume 93 ; 93 ; >
@@ -36233,7 +36233,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Security Dialogue Volume 40 ; 40 ; >
       au < zapped ; finished ; 2010 ; Security Dialogue Volume 41 ; 41 ; >
       au < finished ; crawling ; 2011 ; Security Dialogue Volume 42 ; 42 ; >
-      au < finished ; crawling ; 2012 ; Security Dialogue Volume 43 ; 43 ; >
+      au < finished ; finished ; 2012 ; Security Dialogue Volume 43 ; 43 ; >
       au < crawling ; exists ; 2013 ; Security Dialogue Volume 44 ; 44 ; >
       au < frozen ; exists ; 2014 ; Security Dialogue Volume 45 ; 45 ; >
       au < manifest ; exists ; 2015 ; Security Dialogue Volume 46 ; 46 ; >
