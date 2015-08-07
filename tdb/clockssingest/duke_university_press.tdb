@@ -1622,7 +1622,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Pedagogy Volume 9 ; 9  >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Pedagogy Volume 10 ; 10 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Pedagogy Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pedagogy Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Pedagogy Volume 12 ; 12 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pedagogy Volume 13 ; 13 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Pedagogy Volume 14 ; 14 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2015 ; Pedagogy Volume 15 ; 15 >
@@ -1685,7 +1685,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Poetics Today Volume 30 ; 30 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Poetics Today Volume 31 ; 31 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Poetics Today Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Poetics Today Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Poetics Today Volume 33 ; 33 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Poetics Today Volume 34 ; 34 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Poetics Today Volume 35 ; 35 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2015 ; Poetics Today Volume 36 ; 36 >
@@ -2060,7 +2060,7 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Tikkun Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Tikkun Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Tikkun Volume 27 ; 27 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Tikkun Volume 28 ; 28 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Tikkun Volume 29 ; 29 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2015 ; Tikkun Volume 30 ; 30 >
