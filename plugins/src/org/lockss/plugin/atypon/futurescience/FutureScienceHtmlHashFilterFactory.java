@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +55,9 @@ import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.HtmlCompoundTransform;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
@@ -63,7 +65,6 @@ import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.filter.html.HtmlTransform;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
@@ -91,6 +92,8 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
         //Stuff on both toc and article pages
         // Variable identifiers - institution doing the crawl  - including genSfxLinks() which is the institution button
         new TagNameFilter("script"),
+        //reordering of the meta & link tags in the head
+        new TagNameFilter("head"),
         // contains the institution banner on both TOC and article pages
         HtmlNodeFilters.tagWithAttribute("div", "class", "institutionBanner"),
         // welcome and login
@@ -147,6 +150,8 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
               }
               return false;
             } else {
+               //TODO: (noted 8/6/2015) - expert_reviews is no longer on future-science, but now T&f...
+              // remove this logic? verify that no AUs were collected from this platform first             
               // Expert Reviews puts copyright info in unmarked section but it is immediately preceeded by <!--contact info-->
               Node prevSib = node.getPreviousSibling();
               // there may be text nodes before the comment (for newlines)
@@ -197,10 +202,19 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
         encoding,new HtmlCompoundTransform(xf1, xform));
     
     Reader read1 = FilterUtil.getReader(is1, encoding);
+    
+    // remove all tags now that we're done filtering... in BaseAtypon this
+    // would be done by turning on the appropriate flag, but we don't inherit.
+    // note that this also removes the comments, so we no longer have to do that separately.
+    
+    // add a space before the tag "<", then remove from "<" to ">"
+    Reader read2 = new HtmlTagFilter(new StringFilter(read1,"<", " <"), new TagPair("<",">"));
     // remove comments now that we're done filtering 
-    Reader read2 = HtmlTagFilter.makeNestedFilter(read1,
-          ListUtil.list(new HtmlTagFilter.TagPair("<!--", "-->",true)));
+    //Reader read2 = HtmlTagFilter.makeNestedFilter(read1,
+    //      ListUtil.list(new HtmlTagFilter.TagPair("<!--", "-->",true)));
     return new ReaderInputStream(new WhiteSpaceFilter(read2));
   }
+  
+
 }
 

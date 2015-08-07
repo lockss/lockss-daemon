@@ -52,7 +52,10 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -232,11 +235,27 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       combinedFiltered = new HtmlFilterInputStream(in, encoding,
           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform_spanID));
     }
-    if (doWS) {
-      Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
-      return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
-    } else { 
+    if (!doTagRemovalFiltering() && !doWS) {
+      // already done, return without converting back to a reader
       return combinedFiltered;
+    }
+    
+    /* 
+     * optional additional processing - 
+     *    removal of all tags and/or removal of WS
+     */
+    Reader tagFilter = FilterUtil.getReader(combinedFiltered, encoding);
+    // if removing both tags and WS, add a space before each tag
+    if (doTagRemovalFiltering() && doWS) {
+      tagFilter = new StringFilter(FilterUtil.getReader(combinedFiltered, encoding), "<", " <");
+    } 
+    if (doTagRemovalFiltering()) {
+      tagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
+    }
+    if (doWS) {
+      return new ReaderInputStream(new WhiteSpaceFilter(tagFilter)); 
+    } else { 
+      return new ReaderInputStream(tagFilter); 
     }
   }
   
@@ -324,5 +343,22 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   public boolean doWSFiltering() {
     return false;
   }
+  
+  /*
+   * BaseAtypon children can turn on/off extra levels of filtering
+   * by overriding the getting/setter methods.
+   * The BaseAtypon filter will query this method and if it is true,
+   * will remove all html tags after using the tags to identify other nodes
+   * to remove.  That is, this
+   *   <div id=...>does not remove text </div>
+   * becomes
+   *   does not remove text
+   * If whitespace filtering is turned on, we guarantee a space between.
+   * default is false;
+   */
+  public boolean doTagRemovalFiltering() {
+    return false;
+  }
+
 
 }
