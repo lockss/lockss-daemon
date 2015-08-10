@@ -187,8 +187,6 @@
       >
 
       param[journal_issn] = 1471-2326
-
-      {
       attr[journal_code] = bmcblooddisord
 
       au < released ; 2001 ; BMC Blood Disorders Volume 1 ; 1 >
@@ -204,17 +202,23 @@
       au < released ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
       au < manifest ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
 
-      }
+    }
 
-      {
-      attr[journal_code] = bmchematol
-      comment[journal_title] = journal name and journal code change in 2013, same issn used
+    {
+      title <
+        name = BMC Hematology ;
+        eissn = 2052-1839 ;
+        issnl = 2052-1839
+      >
+
+      param[journal_issn] = 2052-1839
+      comment[journal_code] = bmchematol
+      comment[continues] = 1471-2326
 
       au < manifest ; 2013 ; BMC Hematology Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Hematology Volume 14 ; 14 >
       au < manifest ; 2015 ; BMC Hematology Volume 15 ; 15 >
 
-      }
     }
 
     {
@@ -1587,7 +1591,7 @@
     {
       title <
         name = BMC Proceedings ;
-        eissn = 1753-6561
+        issn = 1753-6561
       >
 
       param[journal_issn] = 1753-6561
@@ -4650,10 +4654,21 @@
 
       au < manifest ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
       au < manifest ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
-      au < manifest ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
-      au < manifest ; 2014 ; Iranian Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
-      au < manifest ; 2015 ; Iranian Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
 
+    }
+    {
+      title <
+        name = Journal of Environmental Health Science & Engineering ;
+        eissn = 2052-336X
+      >
+
+        param[journal_issn] = 2052-336X
+        param[base_url] = http://www.ijehse.com/
+        comment[continues] = 1735-1979
+
+        au < manifest ; 2013 ; Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
+        au < manifest ; 2014 ; Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
+        au < manifest ; 2015 ; Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
     }
 
     {
