@@ -193,12 +193,12 @@
       issnl = 2043-8567 
      >
 
-    {
-    
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = brw
       implicit < status ; year ; name ; param[volume_name] >
+
+    {
+      param[journal_id] = brw
     
       au < superseded ; 2008-2009 ; Britain and the World Volume 1 [superseded] ; 1 >
       au < superseded ; 2009-2010 ; Britain and the World Volume 2 [superseded] ; 2 >
@@ -210,15 +210,14 @@
       au < manifest ; 2015 ; Britain and the World Volume 8 ; 8 >
 
     }
+
     {
-        plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
-        param[base_url] = http://www.euppublishing.com/
         param[journal_id] = brs
         comment[0] = old title used
 
-        au < manifest ; exists ; 2008-2009 ; British Scholar Volume 1 ; 1 >
-        au < manifest ; exists ; 2009-2010 ; British Scholar Volume 2 ; 2 >
-        au < manifest ; exists ; 2010 ; British Scholar Volume 3 ; 3 >
+        au < exists ; 2008-2009 ; British Scholar Volume 1 ; 1 >
+        au < exists ; 2009-2010 ; British Scholar Volume 2 ; 2 >
+        au < exists ; 2010 ; British Scholar Volume 3 ; 3 >
 
     }
     
@@ -779,12 +778,12 @@
       issnl = 1755-0882 
      >
 
-    {
-
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = jipt
       implicit < status ; year ; name ; param[volume_name] >
+
+    {
+      param[journal_id] = jipt
       comment[moved] = journal moved to Sage. http://ipt.sagepub.com. Content no longer online.
 
       au < superseded ; 2005 ; Journal of International Political Theory Volume 1 [superseded] ; 1 >
@@ -798,15 +797,17 @@
       au < released ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
 
     }
+
     {
       param[journal_id] = per
       comment[title] = old title used
 
-      au < manifest ; exists ; 2005 ; Politics and Ethics Review Volume 1 ; 1 >
-      au < manifest ; exists ; 2006 ; Politics and Ethics Review Volume 2 ; 2 >
-      au < manifest ; exists ; 2007 ; Politics and Ethics Review Volume 3 ; 3 >
+      au < exists ; 2005 ; Politics and Ethics Review Volume 1 ; 1 >
+      au < exists ; 2006 ; Politics and Ethics Review Volume 2 ; 2 >
+      au < exists ; 2007 ; Politics and Ethics Review Volume 3 ; 3 >
     
     }
+
   }    
 
   {
