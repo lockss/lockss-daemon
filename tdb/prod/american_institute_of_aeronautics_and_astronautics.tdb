@@ -92,6 +92,7 @@
       issnl = 1542-9423
     >
     param[journal_id] = jacic
+    comment[continued_by] = 2327-3097
 
     au < manifest ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 >
     au < released ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
@@ -102,9 +103,22 @@
     au < released ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
     au < released ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 >
     au < released ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 >
-    au < expected ; 2013 ; Journal of Aerospace Computing, Information, and Communication Volume 10 ; 10 >
-    au < expected ; 2014 ; Journal of Aerospace Computing, Information, and Communication Volume 11 ; 11 >
-    au < expected ; 2015 ; Journal of Aerospace Computing, Information, and Communication Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Aerospace Information Systems ;
+      eissn = 2327-3097 ;
+      eissnl = 2327-3097
+    >
+    param[journal_id] = jais
+    comment[continued_from] = 1542-9423
+
+    au < exists ; 2013 ; Journal of Aerospace Computing, Information, and Communication Volume 10 ; 10 >
+    au < exists ; 2014 ; Journal of Aerospace Computing, Information, and Communication Volume 11 ; 11 >
+    au < exists ; 2015 ; Journal of Aerospace Computing, Information, and Communication Volume 12 ; 12 >
 
   }
 
