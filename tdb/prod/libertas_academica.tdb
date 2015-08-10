@@ -1307,12 +1307,12 @@
 
     param[journal_id] = 173
 
-    au < down ; 2010 ; Journal of Genomes and Exomes Volume 1 [to delete] ; 1 ; 2010 >
-    au < down ; 2011 ; Journal of Genomes and Exomes Volume 2 [to delete] ; 2 ; 2011 >
+    au < superseded ; 2010 ; Journal of Genomes and Exomes Volume 1 [superseded] ; 1 ; 2010 >
+    au < superseded ; 2011 ; Journal of Genomes and Exomes Volume 2 [superseded] ; 2 ; 2011 >
 
     au < released ; 2012 ; Journal of Genomes and Exomes Volume 1 ; 1 ; 2012 >
-    au < manifest ; 2013 ; Journal of Genomes and Exomes Volume 2 ; 2 ; 2013 >
-    au < manifest ; 2014 ; Journal of Genomes and Exomes Volume 3 ; 3 ; 2014 >
+    au < wanted ; 2013 ; Journal of Genomes and Exomes Volume 2 ; 2 ; 2013 >
+    au < wanted ; 2014 ; Journal of Genomes and Exomes Volume 3 ; 3 ; 2014 >
     au < expected ; 2015 ; Journal of Genomes and Exomes Volume 4 ; 4 ; 2015 >
 
   }
