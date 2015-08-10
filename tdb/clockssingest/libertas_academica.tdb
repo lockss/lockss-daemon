@@ -24,7 +24,7 @@
     au < finished ; frozen ; 2011 ; Advances in Tumor Virology Volume 2 ; 2 ; 2011 >
     au < frozen ; exists ; 2013 ; Advances in Tumor Virology Volume 3 ; 3 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Tumor Virology Volume 4 ; 4 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 >
+    au < testing ; exists ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 >
 
   }
   
@@ -45,7 +45,7 @@
     au < finished ; frozen ; 2012 ; Air, Soil & Water Research Volume 5 ; 5 ; 2012 >
     au < frozen ; exists ; 2013 ; Air, Soil & Water Research Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Air, Soil & Water Research Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -67,7 +67,7 @@
     au < finished ; frozen ; 2012 ; Analytical Chemistry Insights Volume 7 ; 7 ; 2012 >
     au < frozen ; exists ; 2013 ; Analytical Chemistry Insights Volume 8 ; 8 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Analytical Chemistry Insights Volume 9 ; 9 ; 2014 >
-    au < manifest ; exists ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; 2015 >
+    au < testing ; exists ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; 2015 >
   }
   
   {
@@ -107,7 +107,7 @@
     au < crawling ; crawling ; 2012 ; Biochemistry Insights Volume 5 ; 5 ; 2012 >
     au < frozen ; exists ; 2013 ; Biochemistry Insights Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; 2015 >
   }
   
   {
@@ -128,7 +128,7 @@
     au < finished ; frozen ; 2012 ; Bioinformatics and Biology Insights Volume 6 ; 6 ; 2012 >
     au < frozen ; exists ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 7 ; 2013 >
     au < frozen ; exists ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; 2014 >
-    au < manifest ; exists ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 >
+    au < testing ; exists ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 >
   }
   
   {
@@ -150,7 +150,7 @@
     au < finished ; crawling ; 2012 ; Biomarker Insights Volume 7 ; 7 ; 2012 >
     au < crawling ; exists ; 2013 ; Biomarker Insights Volume 8 ; 8 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Biomarker Insights Volume 9 ; 9 ; 2014 >
-    au < manifest ; exists ; 2015 ; Biomarker Insights Volume 10 ; 10 ; 2015 >
+    au < testing ; exists ; 2015 ; Biomarker Insights Volume 10 ; 10 ; 2015 >
   }
   
   {
@@ -169,7 +169,7 @@
     au < finished ; frozen ; 2012 ; Biomarkers in Cancer Volume 4 ; 4 ; 2012 >
     au < frozen ; exists ; 2013 ; Biomarkers in Cancer Volume 5 ; 5 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; 2014 >
-    au < manifest ; exists ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; 2015 >
+    au < testing ; exists ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; 2015 >
   }
   
   {
@@ -208,7 +208,7 @@
     au < finished ; frozen ; 2011 ; Biomedical Informatics Insights Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Biomedical Informatics Insights Volume 5 (Suppl. 1) ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Biomedical Informatics Insights Volume 6 (Suppl. 1) ; 6 ; 2013 >
-    au < manifest ; exists ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; 2015 >
+    au < testing ; exists ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; 2015 >
     
   }
   
@@ -228,7 +228,7 @@
     au < manifest ; exists ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 3 ; 2010 >
     au < frozen ; exists ; 2013 ; Bone and Tissue Regeneration Insights Volume 4 ; 4 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Bone and Tissue Regeneration Insights Volume 5 ; 5 ; 2014 >
-    au < manifest ; exists ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; 2015 >
+    au < testing ; exists ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; 2015 >
 
   }
   
@@ -249,7 +249,7 @@
     au < finished ; frozen ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 6 ; 2012 >
     au < frozen ; exists ; 2013 ; Breast Cancer: Basic and Clinical Research Volume 7 ; 7 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; 2014 >
-    au < manifest ; exists ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 >
+    au < testing ; exists ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 >
 
   }
   
@@ -270,7 +270,7 @@
     au < finished ; frozen ; 2012 ; Cancer Growth and Metastasis Volume 5 ; 5 ; 2012 >
     au < frozen ; exists ; 2013 ; Cancer Growth and Metastasis Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Cancer Growth and Metastasis Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Cancer Growth and Metastasis Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Cancer Growth and Metastasis Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -294,7 +294,7 @@
     au < finished ; frozen ; 2012 ; Cancer Informatics Volume 11 ; 11 ; 2012 >
     au < crawling ; exists ; 2013 ; Cancer Informatics Volume 12 ; 12 ; 2013 >
     au < crawling ; exists ; 2014 ; Cancer Informatics Volume 13 ; 13 ; 2014 >
-    au < manifest ; exists ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 >
+    au < testing ; exists ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 >
     
 
   }
@@ -316,7 +316,7 @@
     au < finished ; crawling ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 4 ; 2012 >
     au < frozen ; exists ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 5 ; 2013 >
     au < crawling ; exists ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 >
-    au < manifest ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 >
+    au < testing ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 >
 
   }
   
@@ -373,7 +373,7 @@
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 5 ; 2012 >
     au < frozen ; exists ; 2013 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -394,7 +394,7 @@
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Blood Disorders Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Blood Disorders Volume 6 ; 6 ; 2013 >
     au < crawling ; exists ; 2014 ; Clinical Medicine Insights: Blood Disorders Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -416,7 +416,7 @@
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Cardiology Volume 6 ; 6 ; 2012 >
     au < frozen ; exists ; 2013 ; Clinical Medicine Insights: Cardiology Volume 7 ; 7 ; 2013 >
     au < crawling ; exists ; 2014 ; Clinical Medicine Insights: Cardiology Volume 8 ; 8 ; 2014 >
-    au < manifest ; exists ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; 2015 >
+    au < testing ; exists ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; 2015 >
 
   }
   
@@ -437,7 +437,7 @@
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Case Reports Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Case Reports Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Clinical Medicine Insights: Case Reports Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Clinical Medicine Insights: Case Reports Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Clinical Medicine Insights: Case Reports Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -459,7 +459,7 @@
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 6 ; 6 ; 2012 >
     au < frozen ; exists ; 2013 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 7 ; 7 ; 2013 >
     au < frozen ; exists ; 2014 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 8 ; 8 ; 2014 >
-    au < manifest ; exists ; 2015 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 9 ; 9 ; 2015 >
+    au < testing ; exists ; 2015 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 9 ; 9 ; 2015 >
 
   }
   
@@ -501,7 +501,7 @@
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -522,7 +522,7 @@
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 7 ; 7 ; 2014 >
-    au < manifest ; exists ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; 2015 >
+    au < testing ; exists ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; 2015 >
 
   }
   
