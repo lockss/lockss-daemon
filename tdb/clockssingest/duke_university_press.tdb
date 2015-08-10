@@ -467,8 +467,7 @@
     {
 
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/dmj/
-      comment[base_url] = http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&page=past&handle=euclid.dmj
+      param[base_url] = http://projecteuclid.org/euclid.dmj/
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1935 ; Duke Mathematical Journal Volume 1 ; 1 >
@@ -654,10 +653,10 @@
       param[base_url] = http://easts.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 [HighWire] ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 [HighWire] ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 [HighWire] ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 [HighWire] ; 4 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 >
