@@ -1623,8 +1623,7 @@
         issnl = 1740-0546
       >
 
-      param[journal_id] = 1740-0554
-      comment[0] = title is not yet published on 10/01/2013
+      param[journal_id] = ijcast
 
       au < expected ; exists ; 2015 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
@@ -1678,8 +1677,7 @@
         issnl = 2048-4720
       >
 
-      param[journal_id] = 2048-4739
-      comment[0] = title is not yet published on 9/19/2013
+      param[journal_id] = ijccia
 
       au < expected ; exists ; 2015 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
 
@@ -1767,8 +1765,7 @@
         issnl = 1755-4500
       >
 
-      param[journal_id] = 1755-4519
-      comment[0] = title is not yet published on 9/19/2013
+      param[journal_id] = ijcmh
 
       au < expected ; exists ; 2015 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
 
@@ -1783,8 +1780,7 @@
         issnl = 2047-9050
       >
 
-      param[journal_id] = 2047-9069
-      comment[0] = title is not yet published on 9/19/2013
+      param[journal_id] = ijcmme
 
       au < expected ; exists ; 2015 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
 
@@ -2050,7 +2046,9 @@
 
       param[journal_id] = ijcrc
 
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Creative Computing Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Creative Computing Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; International Journal of Creative Computing Volume 2 ; 2 >
+      au < expected ; exists ; 2015 ; International Journal of Creative Computing Volume 3 ; 3 >
 
     }
 
@@ -2283,8 +2281,7 @@
         issnl = 1756-2554
       >
 
-      param[journal_id] = 1756-2562
-      comment[0] = title is not yet published on 9/19/2013
+      param[journal_id] = ijdet
 
       au < expected ; exists ; 2015 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
 
@@ -2644,8 +2641,7 @@
         issnl = 1742-7525
       >
 
-      param[journal_id] = 1742-7533
-      comment[0] = title is not yet published on 9/20/2013
+      param[journal_id] = ijetrade
 
       au < expected ; exists ; 2015 ; International Journal of Electronic Trade Volume 1 ; 1 >
 
@@ -2807,8 +2803,7 @@
         issnl = 1745-3143
       >
 
-      param[journal_id] = 1745-3151
-      comment[0] = title is not yet published on 9/20/2013
+      param[journal_id] = ijesii
 
       au < expected ; exists ; 2015 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
 
@@ -2823,8 +2818,7 @@
         issnl = 1475-8954
       >
 
-      param[journal_id] = 1741-8046
-      comment[0] = title is not yet published on 9/20/2013
+      param[journal_id] = ijenttm
 
       au < expected ; exists ; 2015 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
 
@@ -4654,8 +4648,7 @@
         issnl = 1756-0322
       >
 
-      param[journal_id] = 1756-0330
-      comment[0] = title is not yet published on 4/11/2013
+      param[journal_id] = ijkmth
 
       au < expected ; exists ; 2015 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
 
@@ -4778,8 +4771,7 @@
         issnl = 1750-8142
       >
 
-      param[journal_id] = 1750-8150
-      comment[0] = title is not yet published on 9/20/2013
+      param[journal_id] = ijlid
 
       au < expected ; exists ; 2015 ; International Journal of Legal Information Design Volume 1 ; 1 >
 
@@ -4821,6 +4813,8 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Liability and Scientific Enquiry Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Liability and Scientific Enquiry Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Liability and Scientific Enquiry Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; International Journal of Liability and Scientific Enquiry Volume 7 ; 7 >
+      au < expected ; exists ; 2015 ; International Journal of Liability and Scientific Enquiry Volume 8 ; 8 >
 
     }
 
@@ -5701,8 +5695,7 @@
         issnl = 1743-8241
       >
 
-      param[journal_id] = 1743-825X
-      comment[0] = title is not yet published up on 4/11/2013
+      param[journal_id] = ijme
 
       au < expected ; exists ; 2015 ; International Journal of Molecular Engineering Volume 1 ; 1 >
 
@@ -6031,8 +6024,7 @@
         issnl = 2043-0329
       >
 
-      param[journal_id] = 2043-0337
-      comment[0] = title is not yet published on 4/11/2013
+      param[journal_id] = ijnss
 
       au < expected ; exists ; 2015 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
 
@@ -6157,8 +6149,7 @@
         issnl = 2040-4549
       >
 
-      param[journal_id] = 2040-4557
-      comment[0] = title is not yet published on 9/26/2013
+      param[journal_id] = ijplp
 
       au < expected ; exists ; 2015 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
 
@@ -6459,8 +6450,7 @@
         issnl = 1742-6758
       >
 
-      param[journal_id] = 1742-6766
-      comment[0] = title is not yet published on 9/26/2013
+      param[journal_id] = ijpsq
 
       au < expected ; exists ; 2015 ; International Journal of Product Sound Quality Volume 1 ; 1 >
 
@@ -6726,8 +6716,7 @@
         issnl = 1758-7964
       >
 
-      param[journal_id] = 1758-7972
-      comment[0] = title is not yet published on 9/26/2013
+      param[journal_id] = ijrem
 
       au < expected ; exists ; 2015 ; International Journal of Remanufacturing Volume 1 ; 1 >
 
