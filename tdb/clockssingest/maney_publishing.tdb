@@ -1717,6 +1717,40 @@
   {
 
     title <
+      name = International Journal of Occupational and Environmental Health ;
+      issn = 1077-3525 ;
+      eissn = 2049-3967
+    >
+
+    param[journal_id] = oeh
+    
+    au < manifest ; exists ; 1995 ; International Journal of Occupational and Environmental Health Volume 1 ; 1 > 
+    au < manifest ; exists ; 1996 ; International Journal of Occupational and Environmental Health Volume 2 ; 2 > 
+    au < manifest ; exists ; 1997 ; International Journal of Occupational and Environmental Health Volume 3 ; 3 > 
+    au < manifest ; exists ; 1998 ; International Journal of Occupational and Environmental Health Volume 4 ; 4 > 
+    au < manifest ; exists ; 1999 ; International Journal of Occupational and Environmental Health Volume 5 ; 5 > 
+    au < manifest ; exists ; 2000 ; International Journal of Occupational and Environmental Health Volume 6 ; 6 > 
+    au < manifest ; exists ; 2001 ; International Journal of Occupational and Environmental Health Volume 7 ; 7 > 
+    au < manifest ; exists ; 2002 ; International Journal of Occupational and Environmental Health Volume 8 ; 8 > 
+    au < manifest ; exists ; 2003 ; International Journal of Occupational and Environmental Health Volume 9 ; 9 > 
+    au < manifest ; exists ; 2004 ; International Journal of Occupational and Environmental Health Volume 10 ; 10 >
+    au < manifest ; exists ; 2005 ; International Journal of Occupational and Environmental Health Volume 11 ; 11 >
+    au < manifest ; exists ; 2006 ; International Journal of Occupational and Environmental Health Volume 12 ; 12 >
+    au < manifest ; exists ; 2007 ; International Journal of Occupational and Environmental Health Volume 13 ; 13 >
+    au < manifest ; exists ; 2008 ; International Journal of Occupational and Environmental Health Volume 14 ; 14 >
+    au < manifest ; exists ; 2009 ; International Journal of Occupational and Environmental Health Volume 15 ; 15 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 >
+    au < crawling ; exists ; 2013 ; International Journal of Occupational and Environmental Health Volume 19 ; 19 >
+    au < crawling ; exists ; 2014 ; International Journal of Occupational and Environmental Health Volume 20 ; 20 >
+    au < manifest ; exists ; 2015 ; International Journal of Occupational and Environmental Health Volume 21 ; 21 >
+
+  }
+
+  {
+
+    title <
       name = International Materials Reviews ;
       issn = 0950-6608 ;
       eissn = 1743-2804 ;
@@ -2393,34 +2427,20 @@
   {
 
     title <
-      name = International Journal of Occupational and Environmental Health ;
-      issn = 1077-3525 ;
-      eissn = 2049-3967
+      name = Journal of Orthodontics ;
+      issn = 1465-3125 ;
+      eissn = 1465-3133
     >
 
-    param[journal_id] = oeh
-    
-    au < manifest ; exists ; 1995 ; International Journal of Occupational and Environmental Health Volume 1 ; 1 > 
-    au < manifest ; exists ; 1996 ; International Journal of Occupational and Environmental Health Volume 2 ; 2 > 
-    au < manifest ; exists ; 1997 ; International Journal of Occupational and Environmental Health Volume 3 ; 3 > 
-    au < manifest ; exists ; 1998 ; International Journal of Occupational and Environmental Health Volume 4 ; 4 > 
-    au < manifest ; exists ; 1999 ; International Journal of Occupational and Environmental Health Volume 5 ; 5 > 
-    au < manifest ; exists ; 2000 ; International Journal of Occupational and Environmental Health Volume 6 ; 6 > 
-    au < manifest ; exists ; 2001 ; International Journal of Occupational and Environmental Health Volume 7 ; 7 > 
-    au < manifest ; exists ; 2002 ; International Journal of Occupational and Environmental Health Volume 8 ; 8 > 
-    au < manifest ; exists ; 2003 ; International Journal of Occupational and Environmental Health Volume 9 ; 9 > 
-    au < manifest ; exists ; 2004 ; International Journal of Occupational and Environmental Health Volume 10 ; 10 >
-    au < manifest ; exists ; 2005 ; International Journal of Occupational and Environmental Health Volume 11 ; 11 >
-    au < manifest ; exists ; 2006 ; International Journal of Occupational and Environmental Health Volume 12 ; 12 >
-    au < manifest ; exists ; 2007 ; International Journal of Occupational and Environmental Health Volume 13 ; 13 >
-    au < manifest ; exists ; 2008 ; International Journal of Occupational and Environmental Health Volume 14 ; 14 >
-    au < manifest ; exists ; 2009 ; International Journal of Occupational and Environmental Health Volume 15 ; 15 >
-    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 >
-    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 >
-    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 >
-    au < crawling ; exists ; 2013 ; International Journal of Occupational and Environmental Health Volume 19 ; 19 >
-    au < crawling ; exists ; 2014 ; International Journal of Occupational and Environmental Health Volume 20 ; 20 >
-    au < manifest ; exists ; 2015 ; International Journal of Occupational and Environmental Health Volume 21 ; 21 >
+    param[journal_id] = jorthod 
+
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Orthodontics Volume 36 ; 36 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Orthodontics Volume 37 ; 37 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Orthodontics Volume 38 ; 38 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Orthodontics Volume 39 ; 39 >
+    au < exists ; exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 >
+    au < exists ; exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 >
+    au < exists ; exists ; 2015 ; Journal of Orthodontics Volume 42 ; 42 >
 
   }
 
