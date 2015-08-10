@@ -1841,7 +1841,7 @@
     au < manifest ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
     au < exists ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
     au < manifest ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
-    au < notReady ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
+    au < ready ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
     au < notReady ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
     au < crawling ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
     au < manifest ; exists ; 2015 ; Arbitration International Volume 31 ; 31 ; >
@@ -13423,7 +13423,6 @@
 
     param[base_url] = http://jmammal.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[notReady] = probe url problem in manifest page
 
     au < exists ; exists ; 2000 ; Journal of Mammalogy Volume 81 ; 81 ; >
     au < exists ; exists ; 2001 ; Journal of Mammalogy Volume 82 ; 82 ; >
@@ -13439,7 +13438,7 @@
     au < manifest ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
     au < manifest ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
     au < manifest ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
-    au < notReady ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
+    au < ready ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
     au < manifest ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
 
   }
@@ -15473,12 +15472,11 @@
 
     param[base_url] = http://mspecies.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[0] = Probe url problem in manifest page
 
     au < exists ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
     au < exists ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
-    au < notReady ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
-    au < notReady ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
+    au < ready ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
+    au < ready ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < exists ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
     au < manifest ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
 
@@ -16125,7 +16123,6 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
     comment[0] = content available from 1890 volume 1 to 1997 volume 80
-    comment[notReady] = Probe url problem in manifest page
 
     au < manifest ; exists ; 1998 ; The Monist Volume 81 ; 81 ; >
     au < manifest ; exists ; 1999 ; The Monist Volume 82 ; 82 ; >
@@ -16142,7 +16139,7 @@
     au < manifest ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
     au < exists ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
     au < exists ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
-    au < notReady ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
+    au < ready ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
     au < exists ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
     au < manifest ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
 
