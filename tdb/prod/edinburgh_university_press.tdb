@@ -200,14 +200,25 @@
       param[journal_id] = brw
       implicit < status ; year ; name ; param[volume_name] >
     
-      au < released ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
-      au < released ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
-      au < released ; 2010 ; Britain and the World Volume 3 ; 3 >
+      au < superseded ; 2008-2009 ; Britain and the World Volume 1 [superseded] ; 1 >
+      au < superseded ; 2009-2010 ; Britain and the World Volume 2 [superseded] ; 2 >
+      au < superseded ; 2010 ; Britain and the World Volume 3 [superseded] ; 3 >
       au < released ; 2011 ; Britain and the World Volume 4 ; 4 >
       au < released ; 2012 ; Britain and the World Volume 5 ; 5 >
       au < released ; 2013 ; Britain and the World Volume 6 ; 6 >
       au < manifest ; 2014 ; Britain and the World Volume 7 ; 7 >
       au < manifest ; 2015 ; Britain and the World Volume 8 ; 8 >
+
+    }
+    {
+        plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+        param[base_url] = http://www.euppublishing.com/
+        param[journal_id] = brs
+        comment[0] = old title used
+
+        au < manifest ; exists ; 2008-2009 ; British Scholar Volume 1 ; 1 >
+        au < manifest ; exists ; 2009-2010 ; British Scholar Volume 2 ; 2 >
+        au < manifest ; exists ; 2010 ; British Scholar Volume 3 ; 3 >
 
     }
     
@@ -774,20 +785,28 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = jipt
       implicit < status ; year ; name ; param[volume_name] >
+      comment[moved] = journal moved to Sage. http://ipt.sagepub.com. Content no longer online.
 
-      au < released ; 2005 ; Journal of International Political Theory Volume 1 ; 1 >
-      au < released ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
-      au < released ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
+      au < superseded ; 2005 ; Journal of International Political Theory Volume 1 [superseded] ; 1 >
+      au < superseded ; 2006 ; Journal of International Political Theory Volume 2 [superseded] ; 2 >
+      au < superseded ; 2007 ; Journal of International Political Theory Volume 3 [superseded] ; 3 >
       au < released ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
       au < released ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
       au < released ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
       au < released ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
       au < released ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
       au < released ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
-      au < expected ; 2014 ; Journal of International Political Theory Volume 10 ; 10 >
 
     }
+    {
+      param[journal_id] = per
+      comment[title] = old title used
+
+      au < manifest ; exists ; 2005 ; Politics and Ethics Review Volume 1 ; 1 >
+      au < manifest ; exists ; 2006 ; Politics and Ethics Review Volume 2 ; 2 >
+      au < manifest ; exists ; 2007 ; Politics and Ethics Review Volume 3 ; 3 >
     
+    }
   }    
 
   {
