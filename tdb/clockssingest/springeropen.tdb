@@ -1355,9 +1355,9 @@
         param[journal_issn] = 2093-3371 
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
-        au < exists ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
-        au < exists ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
+        au < manifest ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
+        au < manifest ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
+        au < manifest ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
   
     }
   
@@ -2051,9 +2051,9 @@
         param[journal_issn] = 1723-7785
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
-        au < exists ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
-        au < exists ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
+        au < manifest ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
+        au < manifest ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
+        au < manifest ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
   
     }
   
