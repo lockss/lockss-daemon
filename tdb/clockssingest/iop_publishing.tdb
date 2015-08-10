@@ -481,7 +481,7 @@
     au < finished ; crawling ; 2011 ; Computational Science & Discovery Volume 4 ; 4 > 
     au < finished ; crawling ; 2012 ; Computational Science & Discovery Volume 5 ; 5 > 
     au < crawling ; exists ; 2013 ; Computational Science & Discovery Volume 6 ; 6 > 
-    au < crawling ; exists ; 2014 ; Computational Science & Discovery Volume 7 ; 7 > 
+    au < frozen ; exists ; 2014 ; Computational Science & Discovery Volume 7 ; 7 > 
     au < manifest ; exists ; 2015 ; Computational Science & Discovery Volume 8 ; 8 > 
 
   }
@@ -649,9 +649,9 @@
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 102 ; 102 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
-    au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
-    au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
-    au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
+    au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
+    au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
+    au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
     au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
     au < manifest ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 ; 109 >
     au < manifest ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 ; 110 >
@@ -848,7 +848,7 @@
     au < finished ; crawling ; 2011 ; IOP Conference Series: Earth and Environmental Science Volume 14 ; 14 > 
     au < crawling ; exists ; 2012 ; IOP Conference Series: Earth and Environmental Science Volume 15 ; 15 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Earth and Environmental Science Volume 16 ; 16 > 
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 > 
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 > 
     au < manifest ; exists ; 2015 ; IOP Conference Series: Earth and Environmental Science Volume 18 ; 18 > 
 
   }
@@ -918,20 +918,20 @@
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 51 ; 51 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 52 ; 52 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 53 ; 53 > 
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 54 ; 54 >
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 54 ; 54 >
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 55 ; 55 >
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 56 ; 56 >
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 56 ; 56 >
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 57 ; 57 >
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 58 ; 58 >
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 58 ; 58 >
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 59 ; 59 >
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 60 ; 60 >
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 61 ; 61 >
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 61 ; 61 >
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 62 ; 62 >
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 63 ; 63 >
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 64 ; 64 >
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 65 ; 65 >
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 64 ; 64 >
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 65 ; 65 >
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 66 ; 66 >
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 67 ; 67 >
+    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 67 ; 67 >
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 68 ; 68 >
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 69 ; 69 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 70 ; 70 >
@@ -1557,7 +1557,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 46 ; 46 > 
-    au < crawling ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
+    au < frozen ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
     au < manifest ; exists ; 2015 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 48 ; 48 > 
 
   }
@@ -2344,7 +2344,7 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 487 ; 487 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 488 ; 488 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 489 ; 489 >
-    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 >
+    au < frozen ; exists ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 491 ; 491 >
     au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 492 ; 492 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 493 ; 493 >
@@ -2390,7 +2390,7 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 533 ; 533 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 534 ; 534 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 535 ; 535 >
-    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 536 ; 536 >
+    au < frozen ; exists ; 2014 ; Journal of Physics: Conference Series Volume 536 ; 536 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 537 ; 537 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 538 ; 538 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 539 ; 539 >
@@ -2422,7 +2422,7 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 565 ; 565 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 566 ; 566 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 567 ; 567 >
-    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 568 ; 568 >
+    au < frozen ; exists ; 2014 ; Journal of Physics: Conference Series Volume 568 ; 568 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 569 ; 569 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 570 ; 570 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 571 ; 571 >
@@ -2639,7 +2639,7 @@
     comment[param] = eissn preferred
 
     au < crawling ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
-    au < crawling ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
+    au < frozen ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
     au < manifest ; exists ; 2015 ; Laser Physics Volume 25 ; 25 >
 
   }
@@ -2887,7 +2887,7 @@
     au < finished ; crawling ; 2011 ; Nanotechnology Volume 22 ; 22 > 
     au < crawling ; exists ; 2012 ; Nanotechnology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Nanotechnology Volume 24 ; 24 > 
-    au < crawling ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
+    au < frozen ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
     au < manifest ; exists ; 2015 ; Nanotechnology Volume 26 ; 26 > 
     
   }
@@ -4065,7 +4065,7 @@
     au < finished ; crawling ; 2011 ; Smart Materials and Structures Volume 20 ; 20 > 
     au < ingNotReady ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Smart Materials and Structures Volume 22 ; 22 > 
-    au < crawling ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
+    au < frozen ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
     au < manifest ; exists ; 2015 ; Smart Materials and Structures Volume 24 ; 24 > 
 
   }
