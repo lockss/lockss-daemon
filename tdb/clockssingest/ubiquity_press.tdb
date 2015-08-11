@@ -215,6 +215,18 @@
   {
   
     title < 
+      name = Journal of Cosmology 
+    >
+    
+    param[base_url] = http://journalofcosmology.com/
+    param[journal_id] = joc
+    comment[0] = needs review on web structure, http://journalofcosmology.com/JOC22/indexVol22CONTENTS.htm
+
+  }
+
+  {
+  
+    title < 
       name = Journal of European Psychology Students ;
       eissn = 2222-6931
     >
