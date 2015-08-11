@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>40</string>
+    <string>41</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>18</string>
+        <string>19</string>
       </entry>
     </map>
   </entry>
@@ -85,13 +85,14 @@
      <!--   uses <base>/2009/<vol> but still <base>/content/pdf for pdf version -->
      <!--  hence the \d{4} option in some rules -->
      <!--  no longer picking up .../mathml/... -->
+     <!--  disallowing "citation$" in crawl rule - 503 error as the site changes -->
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?\d+)?$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%sregistration", base_url</string>
-      <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|prepub|comments|email|postcomment|mathml/.*)$", base_url, volume_name</string> <!-- excluding a login-type page -->
+      <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|prepub|comments|email|citation|postcomment|mathml/.*)$", base_url, volume_name</string> <!-- excluding a login-type page -->
       <string>2,"^%s(content|\d{4})/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>
       <string>2,"^%s%s/%s/[^/]+/(about|comments|email|postcomment)", base_url, journal_issn, volume_name</string>
       <string>2,"^%s(content|\d{4})/%s/.*email\?from=standard$", base_url, volume_name</string>      
@@ -100,7 +101,7 @@
       <!-- http://www.biomedcentral.com/content/epub/1471-2253-13-50.epub -->
       <string>1,"^%scontent/(pdf|epub)/", base_url</string>
       <string>1,"^%slockss/", base_url</string>
-      <string>1,"^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|ref|figure/.*|suppl/.*|table/.*|/))?$", base_url, volume_name</string>
+      <string>1,"^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|comments|ref|figure/.*|suppl/.*|table/.*|/))?$", base_url, volume_name</string>
       <string>1,"^%scontent/(download/(figures|supplementary|xml)|files/pdf|pdf|xml|supplementary|html)/", base_url</string>
       <string>1,"^%ssupplements/(%s|notes)/", base_url, volume_name</string>
       <string>1,"^%srender/render.asp\?", base_url</string>
