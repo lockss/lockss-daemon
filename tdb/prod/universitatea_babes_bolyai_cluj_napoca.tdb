@@ -22,13 +22,14 @@
     param[journal_abbr] = geologia
     implicit < status ; year ; name ; param[volume] >
 
+    comment[0] = This journal is leaving Digital Commons. Do not process any further content.
+
     au < released ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
     au < released ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >
     au < released ; 2009 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 54 ; 54 >
     au < released ; 2010 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 55 ; 55 >
     au < released ; 2011 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 56 ; 56 >
     au < released ; 2012 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 57 ; 57 >
-    au < manifest ; 2013 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 58 ; 58 >
 
   }
 
