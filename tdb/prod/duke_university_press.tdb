@@ -640,7 +640,8 @@
     {
 
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/euclid.dmj/
+      param[base_url] = http://projecteuclid.org/dmj/
+      param[journal_id] = dmj
       implicit < status ; year ; name ; param[volume_name] >
 
       au < doNotProcess ; 1935 ; Duke Mathematical Journal Volume 1 ; 1 >
@@ -1406,7 +1407,7 @@
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
 
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/euclid.kjm/
+      param[base_url] = http://projecteuclid.org/kjm/
       param[journal_id] = kjm_2
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -1577,7 +1578,7 @@
 
       comment[continues] = 0023-608X
       plugin = needs.plugin
-      param[base_url] =  http://projecteuclid.org/euclid.kjm/
+      param[base_url] =  http://projecteuclid.org/kjm/
       param[journal_id] = kjm_3
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = formerly The Journal of Mathematics of Kyoto University, 1961-2009
@@ -1932,7 +1933,8 @@
 
      >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/euclid.nmj/
+      param[base_url] = http://projecteuclid.org/nmj/
+      param[journal_id] = nmj
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = volume # do not match, need to re-work
 
@@ -2091,7 +2093,8 @@
 
 >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/euclid.ndjfl/
+      param[base_url] = http://projecteuclid.org/ndjfl/
+      param[journal_id] = ndjfl
       implicit < status ; year ; name ; param[volume_name] >
 
       au < doNotProcess ; 1960 ; Notre Dame Journal of Formal Logic Volume 1 ; 1 >
@@ -2961,7 +2964,7 @@
 
     {
       pluginPrefix = org.lockss.plugin.highwire.
-      param[base_url] = http://tsq.dukejournals.org/
+      param[base_url] = http://tcl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 >
