@@ -45,7 +45,7 @@
       au < exists ; 2012 ; Abstracts in Anthropology Volume 65 ; 65 >
       au < exists ; 2013 ; Abstracts in Anthropology Volume 66 ; 66 >
       au < exists ; 2013 ; Abstracts in Anthropology Volume 67 ; 67 >
-      au < exists ; 2014 ; Abstracts in Anthropology Volume 68 ; 68 >
+      au < manifest ; 2014 ; Abstracts in Anthropology Volume 68 ; 68 >
       au < manifest ; 2014 ; Abstracts in Anthropology Volume 69 ; 69 >
       au < manifest ; 2015 ; Abstracts in Anthropology Volume 70 ; 70 >
       au < expected ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 >
@@ -2908,7 +2908,7 @@
         au < exists ; 2009-2010 ; Antiviral Chemistry & Chemotherapy Volume 20 ; 20 >
         au < exists ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 >
         au < exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 >
-        au < exists ; 2012-2014 ; Antiviral Chemistry & Chemotherapy Volume 23 ; 23 >
+        au < manifest ; 2012-2014 ; Antiviral Chemistry & Chemotherapy Volume 23 ; 23 >
         au < manifest ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 >
 
     }
@@ -3440,7 +3440,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < manifest ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
       au < expected ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
 
   }
@@ -6058,7 +6058,7 @@
         au < exists ; 2011 ; Citizenship, Social and Economics Education Volume 10 ; 10 >
         au < exists ; 2012 ; Citizenship, Social and Economics Education Volume 11 ; 11 >
         au < exists ; 2013 ; Citizenship, Social and Economics Education Volume 12 ; 12 >
-        au < exists ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 >
+        au < manifest ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 >
         au < manifest ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 >
 
     }
@@ -7502,7 +7502,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 >
-        au < expected ; 2015 ; Contemporary Review of the Middle East Volume 2 ; 2 >
+        au < manifest ; 2015 ; Contemporary Review of the Middle East Volume 2 ; 2 >
 
     }
 
@@ -9736,7 +9736,7 @@
       au < exists ; 2011 ; Dose-Response Volume 9 ; 9 >
       au < exists ; 2012 ; Dose-Response Volume 10 ; 10 >
       au < exists ; 2013 ; Dose-Response Volume 11 ; 11 >
-      au < exists ; 2014 ; Dose-Response Volume 12 ; 12 >
+      au < manifest ; 2014 ; Dose-Response Volume 12 ; 12 >
       au < manifest ; 2015 ; Dose-Response Volume 13 ; 13 >
 
   }
@@ -10875,7 +10875,7 @@
       au < exists ; 2011 ; Empirical Studies of the Arts Volume 29 ; 29 >
       au < exists ; 2012 ; Empirical Studies of the Arts Volume 30 ; 30 >
       au < exists ; 2013 ; Empirical Studies of the Arts Volume 31 ; 31 >
-      au < exists ; 2014 ; Empirical Studies of the Arts Volume 32 ; 32 >
+      au < manifest ; 2014 ; Empirical Studies of the Arts Volume 32 ; 32 >
       au < manifest ; 2015 ; Empirical Studies of the Arts Volume 33 ; 33 >
 
   }
@@ -11015,7 +11015,7 @@
       au < exists ; 2012 ; Environment and Planning A Volume 44 ; 44 >
       au < exists ; 2013 ; Environment and Planning A Volume 45 ; 45 >
       au < exists ; 2014 ; Environment and Planning A Volume 46 ; 46 >
-      au < exists ; 2015 ; Environment and Planning A Volume 47 ; 47 >
+      au < manifest ; 2015 ; Environment and Planning A Volume 47 ; 47 >
 
   }
 
@@ -11039,7 +11039,7 @@
       au < exists ; 2012 ; Environment and Planning B: Planning and Design Volume 39 ; 39 >
       au < exists ; 2013 ; Environment and Planning B: Planning and Design Volume 40 ; 40 >
       au < exists ; 2014 ; Environment and Planning B: Planning and Design Volume 41 ; 41 >
-      au < exists ; 2015 ; Environment and Planning B: Planning and Design Volume 42 ; 42 >
+      au < manifest ; 2015 ; Environment and Planning B: Planning and Design Volume 42 ; 42 >
 
   }
 
@@ -11063,7 +11063,7 @@
       au < exists ; 2012 ; Environment and Planning C: Government and Policy Volume 30 ; 30 >
       au < exists ; 2013 ; Environment and Planning C: Government and Policy Volume 31 ; 31 >
       au < exists ; 2014 ; Environment and Planning C: Government and Policy Volume 32 ; 32 >
-      au < exists ; 2015 ; Environment and Planning C: Government and Policy Volume 33 ; 33 >
+      au < manifest ; 2015 ; Environment and Planning C: Government and Policy Volume 33 ; 33 >
 
   }
 
@@ -11087,7 +11087,7 @@
       au < exists ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 >
       au < exists ; 2013 ; Environment and Planning D: Society and Space Volume 31 ; 31 >
       au < exists ; 2014 ; Environment and Planning D: Society and Space Volume 32 ; 32 >
-      au < exists ; 2015 ; Environment and Planning D: Society and Space Volume 33 ; 33 >
+      au < manifest ; 2015 ; Environment and Planning D: Society and Space Volume 33 ; 33 >
 
   }
 
@@ -11183,7 +11183,7 @@
         au < released ; 2012 ; Environment and Urbanization Asia Volume 3 ; 3 >
         au < manifest ; 2013 ; Environment and Urbanization Asia Volume 4 ; 4 >
         au < manifest ; 2014 ; Environment and Urbanization Asia Volume 5 ; 5 >
-        au < expected ; 2015 ; Environment and Urbanization Asia Volume 6 ; 6 >
+        au < manifest ; 2015 ; Environment and Urbanization Asia Volume 6 ; 6 >
 
       }
 
@@ -11915,7 +11915,7 @@
       au < exists ; 2011 ; European Journal of Inflammation Volume 9 ; 9 >
       au < exists ; 2012 ; European Journal of Inflammation Volume 10 ; 10 >
       au < exists ; 2013 ; European Journal of Inflammation Volume 11 ; 11 >
-      au < exists ; 2014 ; European Journal of Inflammation Volume 12 ; 12 >
+      au < manifest ; 2014 ; European Journal of Inflammation Volume 12 ; 12 >
       au < exists ; 2015 ; European Journal of Inflammation Volume 13 ; 13 >
   }
 
@@ -12607,7 +12607,7 @@
       au < exists ; 2011 ; Evolutionary Psychology Volume 9 ; 9 >
       au < exists ; 2012 ; Evolutionary Psychology Volume 10 ; 10 >
       au < exists ; 2013 ; Evolutionary Psychology Volume 11 ; 11 >
-      au < exists ; 2014 ; Evolutionary Psychology Volume 12 ; 12 >
+      au < manifest ; 2014 ; Evolutionary Psychology Volume 12 ; 12 >
       au < manifest ; 2015 ; Evolutionary Psychology Volume 13 ; 13 >
 
   }
@@ -14660,7 +14660,7 @@
       au < exists ; 2011 ; Journal of Education and Christian Belief Volume 15 ; 15 >
       au < exists ; 2012 ; Journal of Education and Christian Belief Volume 16 ; 16 >
       au < exists ; 2013 ; Journal of Education and Christian Belief Volume 17 ; 17 >
-      au < exists ; 2014 ; Journal of Education and Christian Belief Volume 18 ; 18 >
+      au < manifest ; 2014 ; Journal of Education and Christian Belief Volume 18 ; 18 >
       
   }
 
@@ -14789,7 +14789,7 @@
       au < exists ; 2012 ; The International Journal of Psychiatry in Medicine Volume 44 ; 44 >
       au < exists ; 2013 ; The International Journal of Psychiatry in Medicine Volume 45 ; 45 >
       au < exists ; 2013 ; The International Journal of Psychiatry in Medicine Volume 46 ; 46 >
-      au < exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 47 ; 47 >
+      au < manifest ; 2014 ; The International Journal of Psychiatry in Medicine Volume 47 ; 47 >
       au < manifest ; 2014 ; The International Journal of Psychiatry in Medicine Volume 48 ; 48 >
       au < manifest ; 2015 ; The International Journal of Psychiatry in Medicine Volume 49 ; 49 >
 
@@ -14910,7 +14910,7 @@
         au < released ; 2012-2013 ; Intervention in School and Clinic Volume 48 ; 48 >
         au < manifest ; 2013-2014 ; Intervention in School and Clinic Volume 49 ; 49 >
         au < manifest ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 >
-        au < expected ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 >
+        au < manifest ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 >
 
     }
 
@@ -15392,7 +15392,7 @@
       au < exists ; 2011 ; Healthcare Management Forum Volume 24 ; 24 >
       au < exists ; 2012 ; Healthcare Management Forum Volume 25 ; 25 >
       au < exists ; 2013 ; Healthcare Management Forum Volume 26 ; 26 >
-      au < exists ; 2014 ; Healthcare Management Forum Volume 27 ; 27 >
+      au < manifest ; 2014 ; Healthcare Management Forum Volume 27 ; 27 >
       au < manifest ; 2015 ; Healthcare Management Forum Volume 28 ; 28 >
   }
 
@@ -15414,7 +15414,7 @@
       au < exists ; 2010-2011 ; HERD: Health Environments Research & Design Journal Volume 4 ; 4 >
       au < exists ; 2011-2012 ; HERD: Health Environments Research & Design Journal Volume 5 ; 5 >
       au < exists ; 2012-2013 ; HERD: Health Environments Research & Design Journal Volume 6 ; 6 >
-      au < exists ; 2013-2014 ; HERD: Health Environments Research & Design Journal Volume 7 ; 7 >
+      au < manifest ; 2013-2014 ; HERD: Health Environments Research & Design Journal Volume 7 ; 7 >
       au < manifest ; 2014-2015 ; HERD: Health Environments Research & Design Journal Volume 8 ; 8 >
 
   }
@@ -16517,7 +16517,7 @@
       au < exists ; 2010-2011 ; Imagination, Cognition and Personality Volume 30 ; 30 >
       au < manifest ; 2011-2012 ; Imagination, Cognition and Personality Volume 31 ; 31 >
       au < exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 >
-      au < exists ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 >
+      au < manifest ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 >
       au < manifest ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 >
 
   }
@@ -17496,7 +17496,7 @@
       au < exists ; 2012 ; The International Journal of Aging and Human Development Volume 75 ; 75 >
       au < exists ; 2013 ; The International Journal of Aging and Human Development Volume 76 ; 76 >
       au < exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 >
-      au < exists ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 >
+      au < manifest ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 >
       au < manifest ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 >
       au < manifest ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 >
       au < expected ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 >
@@ -17929,7 +17929,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
 
-     au < exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 >
+     au < manifest ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 >
      au < manifest ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 >
 
     }
@@ -18828,7 +18828,7 @@
       au < exists ; 2011 ; International Quarterly of Community Health Education Volume 31 ; 31 >
       au < manifest ; 2012 ; International Quarterly of Community Health Education Volume 32 ; 32 >
       au < exists ; 2013 ; International Quarterly of Community Health Education Volume 33 ; 33 >
-      au < exists ; 2014 ; International Quarterly of Community Health Education Volume 34 ; 34 >
+      au < manifest ; 2014 ; International Quarterly of Community Health Education Volume 34 ; 34 >
       au < manifest ; 2014-2015 ; International Quarterly of Community Health Education Volume 35 ; 35 >
 
   }
@@ -22981,7 +22981,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2011 ; Journal of Cutaneous Medicine and Surgery Volume 15 ; 15 >
       au < doesNotExist ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 >
       au < exists ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 >
-      au < exists ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 >
+      au < manifest ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 >
       au < manifest ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 >
       
   }
@@ -23476,7 +23476,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Early Intervention Volume 34 ; 34 >
         au < manifest ; 2013 ; Journal of Early Intervention Volume 35 ; 35 >
         au < manifest ; 2014 ; Journal of Early Intervention Volume 36 ; 36 >
-        au < expected ; 2015 ; Journal of Early Intervention Volume 37 ; 37 >
+        au < manifest ; 2015 ; Journal of Early Intervention Volume 37 ; 37 >
 
       }
 
@@ -23637,7 +23637,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; Journal of Educational Computing Research Volume 47 ; 47 >
       au < exists ; 2013 ; Journal of Educational Computing Research Volume 48 ; 48 >
       au < exists ; 2013 ; Journal of Educational Computing Research Volume 49 ; 49 >
-      au < exists ; 2014 ; Journal of Educational Computing Research Volume 50 ; 50 >
+      au < manifest ; 2014 ; Journal of Educational Computing Research Volume 50 ; 50 >
       au < manifest ; 2014 ; Journal of Educational Computing Research Volume 51 ; 51 >
       au < manifest ; 2015 ; Journal of Educational Computing Research Volume 52 ; 52 >
       au < expected ; 2015 ; Journal of Educational Computing Research Volume 53 ; 53 >
@@ -23670,7 +23670,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2010-2011 ; Journal of Educational Technology Systems Volume 39 ; 39 >
       au < exists ; 2011-2012 ; Journal of Educational Technology Systems Volume 40 ; 40 >
       au < exists ; 2012-2013 ; Journal of Educational Technology Systems Volume 41 ; 41 >
-      au < exists ; 2013-2014 ; Journal of Educational Technology Systems Volume 42 ; 42 >
+      au < manifest ; 2013-2014 ; Journal of Educational Technology Systems Volume 42 ; 42 >
       au < manifest ; 2014-2015 ; Journal of Educational Technology Systems Volume 43 ; 43 >
       
   }
@@ -27459,7 +27459,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; Journal of Pastoral Care & Counseling Volume 65 ; 65 >
       au < exists ; 2012 ; Journal of Pastoral Care & Counseling Volume 66 ; 66 >
       au < exists ; 2013 ; Journal of Pastoral Care & Counseling Volume 67 ; 67 >
-      au < exists ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 >
+      au < manifest ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 >
       au < manifest ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 >
 
     }
@@ -29955,7 +29955,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; Journal of Technical Writing and Communication Volume 41 ; 41 >
       au < exists ; 2012 ; Journal of Technical Writing and Communication Volume 42 ; 42 >
       au < exists ; 2013 ; Journal of Technical Writing and Communication Volume 43 ; 43 >
-      au < exists ; 2014 ; Journal of Technical Writing and Communication Volume 44 ; 44 >
+      au < manifest ; 2014 ; Journal of Technical Writing and Communication Volume 44 ; 44 >
       au < manifest ; 2015 ; Journal of Technical Writing and Communication Volume 45 ; 45 >
 
   }
@@ -33477,7 +33477,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; National Institute Economic Review Volume 230 ; 230 >
         au < manifest ; 2015 ; National Institute Economic Review Volume 231 ; 231 >
         au < manifest ; 2015 ; National Institute Economic Review Volume 232 ; 232 >
-        au < expected ; 2015 ; National Institute Economic Review Volume 233 ; 233 >
+        au < manifest ; 2015 ; National Institute Economic Review Volume 233 ; 233 >
         au < expected ; 2015 ; National Institute Economic Review Volume 234 ; 234 >
 
       }
@@ -33608,7 +33608,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; The Neuroradiology Journal Volume 24 ; 24 >
       au < manifest ; 2012 ; The Neuroradiology Journal Volume 25 ; 25 >
       au < exists ; 2013 ; The Neuroradiology Journal Volume 26 ; 26 >
-      au < exists ; 2014 ; The Neuroradiology Journal Volume 27 ; 27 >
+      au < manifest ; 2014 ; The Neuroradiology Journal Volume 27 ; 27 >
       au < manifest ; 2015 ; The Neuroradiology Journal Volume 28 ; 28 >
 
   }
@@ -33767,7 +33767,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2010 ; New Solutions Volume 20 ; 20 >
       au < exists ; 2011 ; New Solutions Volume 21 ; 21 >
       au < exists ; 2012 ; New Solutions Volume 22 ; 22 >
-      au < exists ; 2013 ; New Solutions Volume 23 ; 23 >
+      au < manifest ; 2013 ; New Solutions Volume 23 ; 23 >
       au < manifest ; 2014 ; New Solutions Volume 24 ; 24 >
       au < manifest ; 2015 ; New Solutions Volume 25 ; 25 >
 
@@ -33930,7 +33930,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; North American Archaeologist Volume 32 ; 32 >
       au < exists ; 2012 ; North American Archaeologist Volume 33 ; 33 >
       au < exists ; 2013 ; North American Archaeologist Volume 34 ; 34 >
-      au < exists ; 2014 ; North American Archaeologist Volume 35 ; 35 >
+      au < manifest ; 2014 ; North American Archaeologist Volume 35 ; 35 >
       au < manifest ; 2015 ; North American Archaeologist Volume 36 ; 36 >
 
   }
@@ -34186,8 +34186,8 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; OMEGA - Journal of Death and Dying Volume 65 ; 65 >
       au < exists ; 2012-2013 ; OMEGA - Journal of Death and Dying Volume 66 ; 66 >
       au < exists ; 2013 ; OMEGA - Journal of Death and Dying Volume 67 ; 67 >
-      au < exists ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 >
-      au < exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 >
+      au < manifest ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 >
+      au < manifest ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 >
       au < manifest ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 >
       au < manifest ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 >
 
@@ -36698,7 +36698,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; Proceedings of Singapore Healthcare Volume 20 ; 20 >
       au < exists ; 2012 ; Proceedings of Singapore Healthcare Volume 21 ; 21 >
       au < exists ; 2013 ; Proceedings of Singapore Healthcare Volume 22 ; 22 >
-      au < exists ; 2014 ; Proceedings of Singapore Healthcare Volume 23 ; 23 >
+      au < manifest ; 2014 ; Proceedings of Singapore Healthcare Volume 23 ; 23 >
       au < exists ; 2015 ; Proceedings of Singapore Healthcare Volume 24 ; 24 >
 
   }
@@ -44009,7 +44009,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Trends in Amplification Volume 15 ; 15 >
         au < released ; 2012 ; Trends in Amplification Volume 16 ; 16 >
         au < manifest ; 2013 ; Trends in Amplification Volume 17 ; 17 >
-        au < expected ; 2014 ; Trends in Amplification Volume 18 ; 18 >
+        au < manifest ; 2014 ; Trends in Amplification Volume 18 ; 18 >
         au < expected ; 2015 ; Trends in Amplification Volume 19 ; 19 >
 
       }
@@ -45057,7 +45057,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; Workplace Health & Safety Volume 59 ; 59 >
       au < exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 >
       au < exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 >
-      au < exists ; 2014 ; Workplace Health & Safety Volume 62 ; 62 >
+      au < manifest ; 2014 ; Workplace Health & Safety Volume 62 ; 62 >
       au < manifest ; 2015 ; Workplace Health & Safety Volume 63 ; 63 >
 
   }
