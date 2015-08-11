@@ -205,6 +205,7 @@
 
       {
       param[base_url] = http://www.arch-anim-breed.net/
+      #PD-1426 zero pages capture and redirect
 
       au < wanted ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
       }
