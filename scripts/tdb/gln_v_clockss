@@ -123,7 +123,7 @@ then
       scripts/tdb/tdbout -c auid,name -Q 'status is "doNotProcess"' tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_dnp.txt
       # Merge all AUs to eliminate from list and sort
       cat $tpath/done_gln_exyrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
-      # Find AUs in clockss marked released, filter for odd cases, filter plugin name, and sort.
+      # Find AUs in clockss marked finished, filter for odd cases, filter plugin name, and sort.
       scripts/tdb/tdbout -F -c auid,name tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/Clockss//' | sed -e 's/BerkeleyElectronicPressPlugin/BePressPlugin/' | sort > $tpath/done_cks.txt
       if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
       then
