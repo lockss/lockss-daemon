@@ -68,8 +68,8 @@
       au < frozen ; exists ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
       au < frozen ; exists ; 2014 ; AAP Grand Rounds Volume 31 ; 31 >
       au < crawling ; exists ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
-      au < testing ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
-      au < testing ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 >
+      au < ready ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
+      au < ready ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 >
 
     }
   
@@ -135,7 +135,7 @@
       au < finished ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; AAP News Volume 34 ; 34 >
       au < frozen ; exists ; 2014 ; AAP News Volume 35 ; 35 >
-      au < testing ; exists ; 2015 ; AAP News Volume 36 ; 36 >
+      au < ready ; exists ; 2015 ; AAP News Volume 36 ; 36 >
 
     }
   
@@ -155,7 +155,7 @@
       au < frozen ; exists ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
       au < frozen ; exists ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < frozen ; exists ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
-      au < testing ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
+      au < ready ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
 
   }
   
@@ -199,7 +199,7 @@
       au < finished ; frozen ; 2012 ; NeoReviews Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; NeoReviews Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; NeoReviews Volume 15 ; 15 >
-      au < testing ; exists ; 2015 ; NeoReviews Volume 16 ; 16 >
+      au < ready ; exists ; 2015 ; NeoReviews Volume 16 ; 16 >
 
     }
   
@@ -368,7 +368,7 @@
       au < frozen ; exists ; 2014 ; Pediatrics Volume 133 ; 133 >
       au < crawling ; exists ; 2014 ; Pediatrics Volume 134 ; 134 >
       au < testing ; exists ; 2015 ; Pediatrics Volume 135 ; 135 >
-      au < testing ; exists ; 2015 ; Pediatrics Volume 136 ; 136 >
+      au < ready ; exists ; 2015 ; Pediatrics Volume 136 ; 136 >
 
     }
   
@@ -434,7 +434,7 @@
       au < finished ; frozen ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
       au < crawling ; exists ; 2014 ; Pediatrics in Review Volume 35 ; 35 >
-      au < testing ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 >
+      au < ready ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 >
 
     }
   
