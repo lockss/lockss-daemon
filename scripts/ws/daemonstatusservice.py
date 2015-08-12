@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 
 from datetime import date, datetime
 import getpass
@@ -312,10 +312,6 @@ def query_aus(host, auth, select, where=None):
   req.AuQuery = query
   return _ws_port(host, auth).queryAus(req).Return
 
-#
-# Internal
-#
-
 def _ws_port(host, auth, tracefile=None):
   url = 'http://%s/ws/DaemonStatusService' % (host,)
   locator = DaemonStatusServiceImplService_client.DaemonStatusServiceImplServiceLocator()
@@ -421,9 +417,11 @@ class _DaemonStatusServiceOptions(object):
     elif len(errfields) > 1: parser.error('unknown fields: %s' % (', '.join(errfields),))
     else: return fields
 
+# Last modified 2015-08-05
 def _output_record(options, lst):
   print '\t'.join([str(x or '') for x in lst])
 
+# Last modified 2015-08-05
 def _output_table(options, data, rowheaders, lstcolkeys):
   colkeys = [x for x in itertools.product(*lstcolkeys)]
   for j in xrange(len(lstcolkeys)):
@@ -634,17 +632,16 @@ def _do_query_aus(options):
         data[(auid, host, head)] = lamb(r)
   if options.group_by_field:
     data = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [[_AU_STATUS[k][0] for k in options.select], sorted(options.hosts)])
+    _output_table(options, data, ['AUID'], [[_QUERY_AUS[k][0] for k in options.select], sorted(options.hosts)])
   else:
     data = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [sorted(options.hosts), [_AU_STATUS[k][0] for k in options.select]])
+    _output_table(options, data, ['AUID'], [sorted(options.hosts), [_QUERY_AUS[k][0] for k in options.select]])
 
-# Last modified 2015-07-29
-def _file_lines(filestr):
-  with open(filestr) as f:
-    ret = filter(lambda y: len(y) > 0 and not y.isspace(), [x.partition('#')[0].strip() for x in f])
-    if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (filestr,))
-    return ret
+# Last modified 2015-08-10
+def _file_lines(fstr):
+  with open(fstr) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
+  return ret
 
 def _main():
   '''Main method.'''

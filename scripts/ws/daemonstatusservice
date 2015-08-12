@@ -2,5 +2,4 @@
 
 # $Id$
 
-DIRECTORY=$(cd `dirname $0` && pwd)
-python $DIRECTORY/daemonstatusservice.py "$@"
+python $(cd `dirname $0` && pwd)/$(basename $0).py "$@"
