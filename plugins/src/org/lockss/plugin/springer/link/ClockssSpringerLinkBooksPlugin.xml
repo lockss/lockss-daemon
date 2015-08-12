@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -38,11 +38,19 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"SpringerLink Books Plugin (CLOCKSS), Base URL %s, Download Url %s, eISBN %s", base_url, download_url, book_eisbn</string>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
   </entry>
   <entry>
     <string>clockss_override</string>

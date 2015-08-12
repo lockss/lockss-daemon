@@ -48,23 +48,10 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-      HtmlNodeFilters.tag("script"),
-      HtmlNodeFilters.tag("noscript"),
-      HtmlNodeFilters.tag("input"),
-      
-      //google iframes with weird ids
-      HtmlNodeFilters.tag("iframe"),
-
+    NodeFilter[] filters = new NodeFilter[] {      
       //footer
       HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-      
-      //more links to pdf and article
-      HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
-      
-      //weird meta tag
-      HtmlNodeFilters.tagWithAttribute("meta", "name", "nolard"),
-      
+
       //adds on the side
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
@@ -77,15 +64,6 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
-      
-      //random divs floating around
-      HtmlNodeFilters.tagWithAttribute("div", "id", "MathJax_Message"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "web-trekk-abstract"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "look-inside-interrupt"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "colorbox"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "cboxOverlay"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
       
     };
     return new HtmlFilterInputStream(in,
