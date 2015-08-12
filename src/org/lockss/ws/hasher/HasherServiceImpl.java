@@ -140,7 +140,7 @@ public class HasherServiceImpl implements HasherService {
     File recordFile = result.getRecordFile();
     if (recordFile != null && recordFile.exists() && recordFile.length() > 0) {
       wsResult.setRecordFileName(recordFile.getName());
-      wsResult.setBlockFileDataHandler(new DataHandler(new FileDataSource(
+      wsResult.setRecordFileDataHandler(new DataHandler(new FileDataSource(
 	    recordFile)));
     }
 
