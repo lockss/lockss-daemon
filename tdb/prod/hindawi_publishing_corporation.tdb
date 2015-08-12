@@ -1457,13 +1457,16 @@
     {
     param[journal_id] = ane
 
-    au < down ; 2010 ; Anemia Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < down ; 2011 ; Anemia Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < superseded ; 2010 ; Anemia Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < superseded ; 2011 ; Anemia Volume 2011 [superseded] ; 2011 ; 2011 >
+
     }
 
     {
     param[journal_id] = anemia
 
+    au < exists ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Anemia Volume 2014 ; 2014 ; 2014 >
@@ -1560,31 +1563,31 @@
     {
     param[journal_id] = arch
 
-    au < down ; 2002 ; Archaea Volume 2002 [superseded] ; 2002 ; 2002 >
-    au < down ; 2003 ; Archaea Volume 2003 [superseded] ; 2003 ; 2003 >
-    au < down ; 2004 ; Archaea Volume 2004 [superseded] ; 2004 ; 2004 >
-    au < down ; 2005 ; Archaea Volume 2005 [superseded] ; 2005 ; 2005 >
-    au < down ; 2006 ; Archaea Volume 2006 [superseded] ; 2006 ; 2006 >
-    au < down ; 2007 ; Archaea Volume 2007 [superseded] ; 2007 ; 2007 >
-    au < down ; 2008 ; Archaea Volume 2008 [superseded] ; 2008 ; 2008 >
-    au < down ; 2009 ; Archaea Volume 2009 [superseded] ; 2009 ; 2009 >
-    au < down ; 2010 ; Archaea Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < down ; 2011 ; Archaea Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < superseded ; 2002 ; Archaea Volume 2002 [superseded] ; 2002 ; 2002 >
+    au < superseded ; 2003 ; Archaea Volume 2003 [superseded] ; 2003 ; 2003 >
+    au < superseded ; 2004 ; Archaea Volume 2004 [superseded] ; 2004 ; 2004 >
+    au < superseded ; 2005 ; Archaea Volume 2005 [superseded] ; 2005 ; 2005 >
+    au < superseded ; 2006 ; Archaea Volume 2006 [superseded] ; 2006 ; 2006 >
+    au < superseded ; 2007 ; Archaea Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < superseded ; 2008 ; Archaea Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < superseded ; 2009 ; Archaea Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < superseded ; 2010 ; Archaea Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < superseded ; 2011 ; Archaea Volume 2011 [superseded] ; 2011 ; 2011 >
     }
     
     {
     param[journal_id] = archaea
 
-    au < doNotProcess ; 2002 ; Archaea Volume 2002 ; 2002 ; 2002 >
-    au < doNotProcess ; 2003 ; Archaea Volume 2003 ; 2003 ; 2003 >
-    au < doNotProcess ; 2004 ; Archaea Volume 2004 ; 2004 ; 2004 >
-    au < doNotProcess ; 2005 ; Archaea Volume 2005 ; 2005 ; 2005 >
-    au < doNotProcess ; 2006 ; Archaea Volume 2006 ; 2006 ; 2006 >
-    au < doNotProcess ; 2007 ; Archaea Volume 2007 ; 2007 ; 2007 >
-    au < doNotProcess ; 2008 ; Archaea Volume 2008 ; 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; Archaea Volume 2009 ; 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2002 ; Archaea Volume 2002 ; 2002 ; 2002 >
+    au < exists ; 2003 ; Archaea Volume 2003 ; 2003 ; 2003 >
+    au < exists ; 2004 ; Archaea Volume 2004 ; 2004 ; 2004 >
+    au < exists ; 2005 ; Archaea Volume 2005 ; 2005 ; 2005 >
+    au < exists ; 2006 ; Archaea Volume 2006 ; 2006 ; 2006 >
+    au < exists ; 2007 ; Archaea Volume 2007 ; 2007 ; 2007 >
+    au < exists ; 2008 ; Archaea Volume 2008 ; 2008 ; 2008 >
+    au < exists ; 2009 ; Archaea Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 >
@@ -1726,7 +1729,7 @@
     comment[supersedes] = see journal id 'rlbc'
     param[journal_id] = bcri
     
-    au < down ; 2011 ; Biochemistry Research International Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < superseded ; 2011 ; Biochemistry Research International Volume 2011 [superseded] ; 2011 ; 2011 >
     }
     
     {
@@ -1735,7 +1738,7 @@
     au < manifest ; 2008 ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 >
     au < manifest ; 2009 ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 >
@@ -1890,8 +1893,8 @@
     au < released ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; 2014 ; Cardiovascular Phychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Cardiovascular Phychiatry and Neurology Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 >
     
   }
       
@@ -1955,9 +1958,8 @@
     >
 
     param[journal_id] = cricc
-    comment[2] = redirects to /crim subdirectory
 
-    au < notReady ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 >
@@ -1974,9 +1976,8 @@
     >
 
     param[journal_id] = crid
-    comment[2] = redirects to /crim subdirectory
 
-    au < notReady ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
@@ -2030,9 +2031,8 @@
     >
 
     param[journal_id] = crie
-    comment[2] = redirects to /crim subdir
 
-    au < notReady ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 >
@@ -2049,9 +2049,8 @@
     >
 
     param[journal_id] = crigm
-    comment[2] = redirects to /crim subdir
 
-    au < notReady ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2068,9 +2067,8 @@
     >
 
     param[journal_id] = crig
-    comment[2] = redirects to /crim subdir
 
-    au < notReady ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
@@ -2087,9 +2085,8 @@
     >
 
     param[journal_id] = crihem
-    comment[2] = redirects to /crim subdir
 
-    au < notReady ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
@@ -2106,9 +2103,8 @@
     >
 
     param[journal_id] = crihep
-    comment[2] = redirects to /crim subdir
 
-    au < notReady ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 >
@@ -2143,9 +2139,8 @@
     >
 
     param[journal_id] = criid
-    comment[2] = redirects to /crim subdir
 
-    au < notReady ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
@@ -4666,8 +4661,8 @@
     au < released ; 2011 ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; International Jorunal of Molecular Imaging Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; 2014 ; International Journal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; 2015 ; International Journal of Molecular Imaging Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -5908,19 +5903,17 @@
     param[journal_id] = jbb
     comment[notReady] = Looks like this journal is gone
 
-    au < released ; 2001 ; Journal of Biomedicine and Biotechnology Volume 1 (2001) ; 2001 ; 1 >
-    au < released ; 2002 ; Journal of Biomedicine and Biotechnology Volume 2 (2002) ; 2002 ; 2 >
-    au < released ; 2003 ; Journal of Biomedicine and Biotechnology Volume 2003 ; 2003 ; 2003 >
-    au < released ; 2004 ; Journal of Biomedicine and Biotechnology Volume 2004 ; 2004 ; 2004 >
-    au < released ; 2005 ; Journal of Biomedicine and Biotechnology Volume 2005 ; 2005 ; 2005 >
-    au < released ; 2006 ; Journal of Biomedicine and Biotechnology Volume 2006 ; 2006 ; 2006 >
-    au < released ; 2007 ; Journal of Biomedicine and Biotechnology Volume 2007 ; 2007 ; 2007 >
-    au < released ; 2008 ; Journal of Biomedicine and Biotechnology Volume 2008 ; 2008 ; 2008 >
-    au < released ; 2009 ; Journal of Biomedicine and Biotechnology Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Biomedicine and Biotechnology Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Journal of Biomedicine and Biotechnology Volume 2011 ; 2011 ; 2011 >
-    au < notReady ; 2012 ; Journal of Biomedicine and Biotechnology Volume 2012 ; 2012 ; 2012 >
-    au < notReady ; 2013 ; Journal of Biomedicine and Biotechnology Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2001 ; Journal of Biomedicine and Biotechnology Volume 1 (2001) [superseded] ; 2001 ; 1 >
+    au < down ; 2002 ; Journal of Biomedicine and Biotechnology Volume 2 (2002) [superseded] ; 2002 ; 2 >
+    au < down ; 2003 ; Journal of Biomedicine and Biotechnology Volume 2003 [superseded] ; 2003 ; 2003 >
+    au < down ; 2004 ; Journal of Biomedicine and Biotechnology Volume 2004 [superseded] ; 2004 ; 2004 >
+    au < down ; 2005 ; Journal of Biomedicine and Biotechnology Volume 2005 [superseded] ; 2005 ; 2005 >
+    au < down ; 2006 ; Journal of Biomedicine and Biotechnology Volume 2006 [superseded] ; 2006 ; 2006 >
+    au < down ; 2007 ; Journal of Biomedicine and Biotechnology Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < down ; 2008 ; Journal of Biomedicine and Biotechnology Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < down ; 2009 ; Journal of Biomedicine and Biotechnology Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; Journal of Biomedicine and Biotechnology Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Journal of Biomedicine and Biotechnology Volume 2011 [superseded] ; 2011 ; 2011 >
 
   }
 
@@ -8067,9 +8060,9 @@
     {
     param[journal_id] = jtran
 
-    au < released ; 2009 ; Journal of Transplantation Volume 2009 [superseded] ; 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Transplantation Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < released ; 2011 ; Journal of Transplantation Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < down ; 2009 ; Journal of Transplantation Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; Journal of Transplantation Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Journal of Transplantation Volume 2011 [superseded] ; 2011 ; 2011 >
     }
 
     {
@@ -8132,8 +8125,6 @@
 
     param[journal_id] = jve
 
-    au < exists ; 2013 ; Journal of Venereology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; 2014 ; Journal of Venereology Volume 2014 ; 2014 ; 2014 >
     au < expected ; 2015 ; Journal of Venereology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -9157,7 +9148,6 @@
     au < superseded ; 2008 ; Research Letters in Biochemistry Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Biochemistry Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Biochemistry Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Biochemistry Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9178,7 +9168,6 @@
     au < superseded ; 2008 ; Research Letters in Communications Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Communications Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Communications Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Communications Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9196,7 +9185,6 @@
 
     au < superseded ; 2009 ; Research Letters in Electronics Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Electronics Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Electronics Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9215,7 +9203,6 @@
     au < superseded ; 2008 ; Research Letters in Inorganic Chemistry Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Inorganic Chemistry Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Inorganic Chemistry Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9235,7 +9222,6 @@
     au < superseded ; 2008 ; Research Letters in Materials Science Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Materials Science Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Materials Science Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Materials Science Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9254,7 +9240,6 @@
     au < superseded ; 2008 ; Research Letters in Nanotechnology Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Nanotechnology Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Nanotechnology Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Nanotechnology Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9290,7 +9275,6 @@
     au < superseded ; 2008 ; Research Letters in Organic Chemistry Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Organic Chemistry Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Organic Chemistry Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Organic Chemistry Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9310,7 +9294,6 @@
     au < superseded ; 2008 ; Research Letters in Physical Chemistry Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Physical Chemistry Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Physical Chemistry Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Physical Chemistry Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9329,7 +9312,6 @@
     au < superseded ; 2008 ; Research Letters in Physics Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Physics Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Physics Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Physics Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9349,7 +9331,6 @@
     au < superseded ; 2008 ; Research Letters in Signal Processing Volume 2008 [superseded] ; 2008 ; 2008 >
     au < superseded ; 2009 ; Research Letters in Signal Processing Volume 2009 [superseded] ; 2009 ; 2009 >
     au < superseded ; 2010 ; Research Letters in Signal Processing Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < notReady ; 2011 ; Research Letters in Signal Processing Volume 2011 ; 2011 ; 2011 >
 
   }
 
@@ -9494,12 +9475,8 @@
     >
 
     param[journal_id] = seq
-    comment[notReady] = Archived
 
-    au < released ; 2010 ; Sequencing Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Sequencing Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Sequencing Volume 2012 ; 2012 ; 2012 >
-    au < notReady ; 2013 ; Sequencing Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2010 ; Sequencing Volume 2010 ; 2010 ; 2010 >
 
   }
 
@@ -9842,21 +9819,21 @@
     comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998/028524.pdf
     comment[2006] = No articles online before 2006
 
-    au < down ; 1992 ; VLSI Design Volume 1 (1992) ; 1992 ; 1 >
-    au < down ; 1993 ; VLSI Design Volume 2 (1993) ; 1993 ; 2 >
-    au < down ; 1994 ; VLSI Design Volume 3 (1994) ; 1994 ; 3 >
-    au < down ; 1995 ; VLSI Design Volume 4 (1995) ; 1995 ; 4 >
-    au < down ; 1996 ; VLSI Design Volume 5 (1996) ; 1996 ; 5 >
-    au < down ; 1997 ; VLSI Design Volume 6 (1997) ; 1997 ; 6 >
-    au < manifest ; 1998 ; VLSI Design Volume 7-8 (1998) ; 1998 ; 7-8 >
-    au < down ; 1999 ; VLSI Design Volume 8 (1999) ; 1999 ; 8 >
-    au < down ; 2000 ; VLSI Design Volume 9 (2000) ; 2000 ; 9 >
-    au < down ; 2001 ; VLSI Design Volume 10 (2001) ; 2001 ; 10 >
-    au < down ; 2002 ; VLSI Design Volume 11 (2002) ; 2002 ; 11 >
-    au < down ; 2003 ; VLSI Design Volume 12 (2003) ; 2003 ; 12 >
-    au < down ; 2004 ; VLSI Design Volume 13 (2004) ; 2004 ; 13 >
-    au < down ; 2005 ; VLSI Design Volume 14 (2005) ; 2005 ; 14 >
-    au < down ; 2006 ; VLSI Design Volume 15 (2006) ; 2006 ; 15 >
+    au < down ; 1992 ; VLSI Design Volume 1 (1992) ; 1992 ; 0 >
+    au < released ; 1993 ; VLSI Design Volume 1 (1993) ; 1993 ; 1 >
+    au < released ; 1994 ; VLSI Design Volume 1-2 (1994) ; 1994 ; 1-2 >
+    au < released ; 1995 ; VLSI Design Volume 2-3 (1995) ; 1995 ; 2-3 >
+    au < released ; 1996 ; VLSI Design Volume 4-5 (1996) ; 1996 ; 4-5 >
+    au < released ; 1997 ; VLSI Design Volume 5 (1997) ; 1997 ; 5 >
+    au < released ; 1998 ; VLSI Design Volume 7-8 (1998) ; 1998 ; 7-8 >
+    au < released ; 1999 ; VLSI Design Volume 9-10 (1999) ; 1999 ; 9-10 >
+    au < released ; 2000 ; VLSI Design Volume 10-11 (2000) ; 2000 ; 10-11 >
+    au < released ; 2001 ; VLSI Design Volume 12-13 (2001) ; 2001 ; 12-13 >
+    au < released ; 2002 ; VLSI Design Volume 14-15 (2002) ; 2002 ; 14-15 >
+    au < down ; 2003 ; VLSI Design Volume 12 (2003) [superseded] ; 2003 ; 0 >
+    au < down ; 2004 ; VLSI Design Volume 13 (2004) [superseded] ; 2004 ; 0 >
+    au < down ; 2005 ; VLSI Design Volume 14 (2005) [superseded] ; 2005 ; 0 >
+    au < down ; 2006 ; VLSI Design Volume 15 (2006) [superseded] ; 2006 ; 0 >
     au < released ; 2007 ; VLSI Design Volume 2007 ; 2007 ; 2007 >
     au < released ; 2008 ; VLSI Design Volume 2008 ; 2008 ; 2008 >
     au < released ; 2009 ; VLSI Design Volume 2009 ; 2009 ; 2009 >

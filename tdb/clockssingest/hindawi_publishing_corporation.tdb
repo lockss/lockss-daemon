@@ -2071,7 +2071,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 >
     au < frozen ; exists ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Case Reports in Neurological Mecicine Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; exists ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4137,7 +4137,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
+    au < deepCrawl ; exists ; 2014 ; International Journal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Molecular Imaging Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -5952,7 +5952,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
-    au < expected ; exists ; 2015 ; Journal of Hormonoes Volume 2015 ; 2015 ; 2015 >
+    au < expected ; exists ; 2015 ; Journal of Hormones Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8441,6 +8441,10 @@
     au < manifest ; exists ; 2000 ; VLSI Design Volume 10-11 (2000) ; 2000 ; 10-11 >
     au < manifest ; exists ; 2001 ; VLSI Design Volume 12-13 (2001) ; 2001 ; 12-13 >
     au < manifest ; exists ; 2002 ; VLSI Design Volume 14-15 (2002) ; 2002 ; 14-15 >
+    au < doNotProcess ; doNotProcess ; 2003 ; VLSI Design Volume 12 (2003) ; 2003 ; 0 >
+    au < doNotProcess ; doNotProcess ; 2004 ; VLSI Design Volume 13 (2004) ; 2004 ; 0 >
+    au < doNotProcess ; doNotProcess ; 2005 ; VLSI Design Volume 14 (2005) ; 2005 ; 0 >
+    au < doNotProcess ; doNotProcess ; 2006 ; VLSI Design Volume 15 (2006) ; 2006 ; 0 >
     au < manifest ; exists ; 2007 ; VLSI Design Volume 2007 ; 2007 ; 2007 >
     au < manifest ; exists ; 2008 ; VLSI Design Volume 2008 ; 2008 ; 2008 >
     au < manifest ; exists ; 2009 ; VLSI Design Volume 2009 ; 2009 ; 2009 >
