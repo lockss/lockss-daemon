@@ -46,8 +46,10 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   private static final Logger log = Logger.getLogger(OUPHtmlHashFilterFactory.class);
   
   protected static NodeFilter[] filters = new NodeFilter[] {
-    // don't remove any div tags with login, as they should not happen and we don't want to hide
-    // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-login"),
+//    HtmlNodeFilters.allExceptSubtree(
+//        HtmlNodeFilters.tagWithAttribute("section", "id", "section-content"),
+//        HtmlNodeFilters.tagWithAttribute("div", "class", "highwire-markup")),
+    // the remaining fields will not need to be filtered
     // right sidebar 
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
     // content-header from QJM
