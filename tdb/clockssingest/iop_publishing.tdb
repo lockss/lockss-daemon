@@ -82,7 +82,7 @@
     au < frozen ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
     au < frozen ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
-    au < testing ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
+    au < ready ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
 
   }
 
@@ -283,7 +283,7 @@
     au < crawling ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
     au < crawling ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
-    au < testing ; exists ; 2015 ; Chinese Physics B Volume 24 ; 24 >
+    au < ready ; exists ; 2015 ; Chinese Physics B Volume 24 ; 24 >
   }
 
   {
@@ -303,7 +303,7 @@
     au < finished ; crawling ; 2012 ; Chinese Physics C Volume 36 ; 36 > 
     au < crawling ; exists ; 2013 ; Chinese Physics C Volume 37 ; 37 > 
     au < crawling ; exists ; 2014 ; Chinese Physics C Volume 38 ; 38 > 
-    au < testing ; exists ; 2015 ; Chinese Physics C Volume 39 ; 39 > 
+    au < ready ; exists ; 2015 ; Chinese Physics C Volume 39 ; 39 > 
 
   }
 
@@ -350,7 +350,7 @@
     au < finished ; crawling ; 2012 ; Chinese Physics Letters Volume 29 ; 29 > 
     au < crawling ; exists ; 2013 ; Chinese Physics Letters Volume 30 ; 30 > 
     au < crawling ; exists ; 2014 ; Chinese Physics Letters Volume 31 ; 31 > 
-    au < testing ; exists ; 2015 ; Chinese Physics Letters Volume 32 ; 32 > 
+    au < ready ; exists ; 2015 ; Chinese Physics Letters Volume 32 ; 32 > 
 
   }
 
@@ -458,7 +458,7 @@
     au < crawling ; exists ; 2013 ; Communications in Theoretical Physics Volume 60 ; 60 >
     au < crawling ; exists ; 2014 ; Communications in Theoretical Physics Volume 61 ; 61 >
     au < crawling ; exists ; 2014 ; Communications in Theoretical Physics Volume 62 ; 62 >
-    au < testing ; exists ; 2015 ; Communications in Theoretical Physics Volume 63 ; 63 > 
+    au < ready ; exists ; 2015 ; Communications in Theoretical Physics Volume 63 ; 63 > 
     au < testing ; exists ; 2015 ; Communications in Theoretical Physics Volume 64 ; 64 > 
 
   }
@@ -482,7 +482,7 @@
     au < finished ; crawling ; 2012 ; Computational Science & Discovery Volume 5 ; 5 > 
     au < crawling ; exists ; 2013 ; Computational Science & Discovery Volume 6 ; 6 > 
     au < frozen ; exists ; 2014 ; Computational Science & Discovery Volume 7 ; 7 > 
-    au < manifest ; exists ; 2015 ; Computational Science & Discovery Volume 8 ; 8 > 
+    au < testing ; exists ; 2015 ; Computational Science & Discovery Volume 8 ; 8 > 
 
   }
 
@@ -527,7 +527,7 @@
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 > 
     au < crawling ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
-    au < manifest ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
+    au < testing ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
 
   }
 
@@ -653,8 +653,8 @@
     au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
     au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
     au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
-    au < manifest ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 ; 109 >
-    au < manifest ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 ; 110 >
+    au < testing ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 ; 109 >
+    au < testing ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 ; 110 >
     au < manifest ; exists ; 2015 ; EPL (Europhysics Letters) Volume 111 ; 111 >
     au < expected ; exists ; 2015 ; EPL (Europhysics Letters) Volume 112 ; 112 >
 
@@ -707,7 +707,7 @@
     au < finished ; crawling ; 2012 ; European Journal of Physics Volume 33 ; 33 > 
     au < crawling ; exists ; 2013 ; European Journal of Physics Volume 34 ; 34 > 
     au < crawling ; exists ; 2014 ; European Journal of Physics Volume 35 ; 35 > 
-    au < manifest ; exists ; 2015 ; European Journal of Physics Volume 36 ; 36 > 
+    au < testing ; exists ; 2015 ; European Journal of Physics Volume 36 ; 36 > 
 
   }
 
@@ -769,7 +769,7 @@
     au < finished ; crawling ; 2012 ; Fluid Dynamics Research Volume 44 ; 44 > 
     au < crawling ; exists ; 2013 ; Fluid Dynamics Research Volume 45 ; 45 > 
     au < crawling ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 > 
-    au < manifest ; exists ; 2015 ; Fluid Dynamics Research Volume 47 ; 47 > 
+    au < testing ; exists ; 2015 ; Fluid Dynamics Research Volume 47 ; 47 > 
 
   }
   
@@ -815,7 +815,7 @@
     au < finished ; crawling ; 2012 ; Inverse Problems Volume 28 ; 28 > 
     au < crawling ; exists ; 2013 ; Inverse Problems Volume 29 ; 29 > 
     au < deepCrawl ; exists ; 2014 ; Inverse Problems Volume 30 ; 30 > 
-    au < manifest ; exists ; 2015 ; Inverse Problems Volume 31 ; 31 > 
+    au < testing ; exists ; 2015 ; Inverse Problems Volume 31 ; 31 > 
 
   }
 
@@ -849,7 +849,7 @@
     au < crawling ; exists ; 2012 ; IOP Conference Series: Earth and Environmental Science Volume 15 ; 15 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Earth and Environmental Science Volume 16 ; 16 > 
     au < frozen ; exists ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 > 
-    au < manifest ; exists ; 2015 ; IOP Conference Series: Earth and Environmental Science Volume 18 ; 18 > 
+    au < testing ; exists ; 2015 ; IOP Conference Series: Earth and Environmental Science Volume 18 ; 18 > 
 
   }
 
@@ -934,8 +934,8 @@
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 67 ; 67 >
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 68 ; 68 >
     au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 69 ; 69 >
-    au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 70 ; 70 >
-    au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 71 ; 71 >
+    au < testing ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 70 ; 70 >
+    au < testing ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 71 ; 71 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 72 ; 72 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 73 ; 73 >
     au < manifest ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 74 ; 74 >
@@ -1022,7 +1022,7 @@
     au < frozen ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
     au < crawling ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
     au < crawling ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
-    au < manifest ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
+    au < testing ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
     
   }
 
@@ -1046,7 +1046,7 @@
     au < finished ; crawling ; 2012 ; Journal of Breath Research Volume 6 ; 6 > 
     au < crawling ; exists ; 2013 ; Journal of Breath Research Volume 7 ; 7 > 
     au < deepCrawl ; exists ; 2014 ; Journal of Breath Research Volume 8 ; 8 > 
-    au < manifest ; exists ; 2015 ; Journal of Breath Research Volume 9 ; 9 > 
+    au < testing ; exists ; 2015 ; Journal of Breath Research Volume 9 ; 9 > 
 
   }
 
