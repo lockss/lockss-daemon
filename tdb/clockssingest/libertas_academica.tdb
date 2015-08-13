@@ -1286,7 +1286,7 @@
     au < finished ; frozen ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 6 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Experimental Neuroscience Volume 7 ; 7 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Journal of Experimental Neuroscience Volume 8 ; 8 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Experimental Neuroscience Volume 9 ; 9 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of Experimental Neuroscience Volume 9 ; 9 ; 2015 >
 
   }
   
@@ -1319,7 +1319,7 @@
     param[journal_id] = 174
     
     au < deepCrawl ; exists ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 >
   
 
   }
@@ -1341,7 +1341,7 @@
     au < finished ; frozen ; 2012 ; Lipid Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Lipid Insights Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Lipid Insights Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Lipid Insights Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Lipid Insights Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -1360,7 +1360,7 @@
     au < manifest ; exists ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2 ; 2010 >
     au < crawling ; exists ; 2013 ; Lymphona and Chronic Lymphocytic Leukemias Volume 3 ; 3 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Lymphona and Chronic Lymphocytic Leukemias Volume 4 ; 4 ; 2014 >
-    au < testing ; exists ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 >
+    au < ready ; exists ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 >
     
   }
   
@@ -1380,7 +1380,7 @@
     au < finished ; frozen ; 2012 ; Magnetic Resonance Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Magnetic Resonance Insights Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Magnetic Resonance Insights Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Magnetic Resonance Insights Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Magnetic Resonance Insights Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -1421,7 +1421,7 @@
     au < finished ; frozen ; 2012 ; Microbiology Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Microbiology Insights Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Microbiology Insights Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Microbiology Insights Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Microbiology Insights Volume 8 ; 8 ; 2015 >
     
   }
   
@@ -1442,7 +1442,7 @@
     au < finished ; frozen ; 2012 ; Nutrition and Metabolic Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Nutrition and Metabolic Insights Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Nutrition and Metabolic Insights Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Nutrition and Metabolic Insights Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Nutrition and Metabolic Insights Volume 8 ; 8 ; 2015 >
     
   }
   
@@ -1483,7 +1483,7 @@
     au < finished ; frozen ; 2012 ; Ophthalmology and Eye Diseases Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Ophthalmology and Eye Diseases Volume 5 ; 5 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Ophthalmology and Eye Diseases Volume 6 ; 6 ; 2014 >
-    au < testing ; exists ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; 2015 >
 
   }
   
@@ -1502,7 +1502,7 @@
     au < manifest ; exists ; 2009 ; Organic Chemistry Insights Volume 2 ; 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Organic Chemistry Insights Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2012 ; Organic Chemistry Insights Volume 4 ; 4 ; 2012 >
-    au < testing ; exists ; 2015 ; Organic Chemistry Insights Volume 5 ; 5 ; 2015 >
+    au < ready ; exists ; 2015 ; Organic Chemistry Insights Volume 5 ; 5 ; 2015 >
     
   }
   
@@ -1523,7 +1523,7 @@
     au < finished ; frozen ; 2012 ; Palliative Care: Research and Treatment Volume 6 ; 6 ; 2012 >
     au < crawling ; exists ; 2013 ; Palliative Care: Research and Treatment Volume 7 ; 7 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Palliative Care: Research and Treatment Volume 8 ; 8 ; 2014 >
-    au < testing ; exists ; 2015 ; Palliative Care: Research and Treatment Volume 9 ; 9 ; 2015 >
+    au < ready ; exists ; 2015 ; Palliative Care: Research and Treatment Volume 9 ; 9 ; 2015 >
 
   }
   
@@ -1544,7 +1544,7 @@
     au < finished ; frozen ; 2011 ; Particle Physics Insights Volume 4 ; 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Particle Physics Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Particle Physics Insights Volume 6 ; 6 ; 2013 >
-    au < testing ; exists ; 2015 ; Particle Physics Insights Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Particle Physics Insights Volume 7 ; 7 ; 2015 >
 
   }
   
@@ -1565,7 +1565,7 @@
     au < manifest ; exists ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 4 ; 2010 >
     au < finished ; frozen ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 5 ; 2011 >
     au < deepCrawl ; exists ; 2014 ; Perspectives in Medicinal Chemistry Volume 6 ; 6 ; 2014 >
-    au < testing ; exists ; 2015 ; Perspectives in Medicinal Chemistry Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Perspectives in Medicinal Chemistry Volume 7 ; 7 ; 2015 >
     
   }
   
@@ -1584,7 +1584,7 @@
     au < manifest ; exists ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 >
     au < finished ; frozen ; 2012 ; Primary Prevention Insights Volume 3 ; 3 ; 2012 >
     au < deepCrawl ; exists ; 2014 ; Primary Prevention Insights Volume 4 ; 4 ; 2014 >
-    au < testing ; exists ; 2015 ; Primary Prevention Insights Volume 5 ; 5 ; 2015 >
+    au < ready ; exists ; 2015 ; Primary Prevention Insights Volume 5 ; 5 ; 2015 >
     
   }
   
@@ -1623,7 +1623,7 @@
     au < manifest ; exists ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2 ; 2010 >
     au < deepCrawl ; exists ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; 2014 >
-    au < testing ; exists ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; 2015 >
+    au < ready ; exists ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; 2015 >
     
   }
   
@@ -1703,7 +1703,7 @@
     au < finished ; crawling ; 2012 ; Substance Abuse: Research and Treatment Volume 6 ; 6 ; 2012 >
     au < crawling ; exists ; 2013 ; Substance Abuse: Research and Treatment Volume 7 ; 7 ; 2013 >
     au < crawling ; exists ; 2014 ; Substance Abuse: Research and Treatment Volume 8 ; 8 ; 2014 >
-    au < testing ; exists ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; 2015 >
+    au < ready ; exists ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; 2015 >
     
   }
   
@@ -1724,7 +1724,7 @@
     au < finished ; frozen ; 2012 ; Tobacco Use Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Tobacco Use Insights Volume 6 ; 6 ; 2013 >
     au < crawling ; exists ; 2014 ; Tobacco Use Insights Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; 2015 >
     
   }
   
@@ -1745,7 +1745,7 @@
     au < manifest ; exists ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 >
     au < finished ; frozen ; 2012 ; Translational Oncogenomics Volume 5 ; 5 ; 2012 >
     au < deepCrawl ; exists ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 >
-    au < testing ; exists ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 >
     
   }
   
