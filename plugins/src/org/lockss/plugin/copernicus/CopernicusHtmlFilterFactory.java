@@ -81,7 +81,16 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         // tabs just above article which are "article", "metrics", "related articles"
         HtmlNodeFilters.tagWithAttribute("td","id","tabnavfull"),
         //author affiliations may change over time
-        HtmlNodeFilters.tagWithAttribute("span","class","pb_affiliations"),        
+        HtmlNodeFilters.tagWithAttribute("span","class","pb_affiliations"),
+        // the generic "host_url/index.html" is picked up because it's a permission page
+        // exclude the majority of the contents (news/articles) which will change over time
+        // news section
+        HtmlNodeFilters.tagWithAttribute("div","id","news"),
+        // recent articles listing
+        HtmlNodeFilters.tagWithAttribute("div","id","recent_paper"),
+        // logos at the bottom
+        HtmlNodeFilters.tagWithAttribute("div","id","essentential-logos-carousel"),        
+          
     };
           
     

@@ -39,12 +39,14 @@ import org.lockss.test.*;
 public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
-  private CopernicusHtmlFilterFactory fact;
+  private CopernicusHtmlFilterFactory hfact;
+  private CopernicusHtmlCrawlFilterFactory cfact;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new CopernicusHtmlFilterFactory();
+    hfact = new CopernicusHtmlFilterFactory();
+    cfact = new CopernicusHtmlCrawlFilterFactory();
     mau = new MockArchivalUnit();
   }
 
@@ -180,45 +182,144 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
           "<span class=\"pb_toc_link\"><br /><br />&nbsp;<span style=\"white-space:nowrap;\"><a href=\"/14/1111/1996/angeo-14-1111-1996.pdf\" >Full Article</a>" +
           "(PDF, 639 KB)</span>&nbsp; &nbsp;<br /><br /></div></div></div>"; 
   
+private static final String genericIndexContent =
+  "<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+  "<!-- $$CONTENT$$ -->" +
+  "<div id=\"landing_page\" class=\"cmsbox j-intro-section j-section\">" +
+  "  generic information about this journal" +
+  "</div>" +
+  "<div id=\"cmsbox_61812\" class=\"cmsbox \"><h2>News</h2>" +
+  "<div id=\"news\">" +
+  "<div class=\"j-news-item\">" +
+  "NEW GOES HERE" +
+  "</div>" +
+  "</div>" +
+  "</div>" +
+  "<div id=\"recent_paper\" class=\"cmsbox j-article j-article-section\">" +
+  "<h2 class=\"title\">Recent articles</h2>" +
+  "        <div class=\"a-paper\">" +
+  "            <div class=\"journal-type\">" +
+  "                AAB" +
+  "            </div>" +
+  "            <div class=\"paper-teaser\">" +
+  "                <a href=\"foo\">articletitle</a>" +
+  "            </div>" +
+  "            <div class=\"publishing-date\">" +
+  "                13 Aug 2015" +
+  "            </div>" +
+  "        </div>" +
+  "</div>" +
+  "<div id=\"something else\">" +
+  "blah goes here" +
+  "</div>" +
+  "<div id=\"essentential-logos-carousel\" class=\"cmsbox \">" +
+  "<ul class=\"essentential-logos\">" +
+  "       <li class=\"essentential-logo\">   " +
+  "         logo" +
+  "    </li>" +
+  "       <li class=\"essentential-logo\">   " +
+  "         logo" +
+  "    </li>" +
+  "       <li class=\"essentential-logo\">   " +
+  "         logo" +
+  "    </li>" +
+  "</ul></div>";
 
-  public void testFiltering() throws Exception {
+private static final String genericIndexContentFiltered =
+"<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+"<div id=\"landing_page\" class=\"cmsbox j-intro-section j-section\">" +
+" generic information about this journal" +
+"</div>" +
+"<div id=\"cmsbox_61812\" class=\"cmsbox \"><h2>News</h2>" +
+"</div>" +
+"<div id=\"something else\">" +
+"blah goes here" +
+"</div>";
+
+
+/*  filtered bits for CRAWL filter */
+private static final String genericIndexCrawlContent =
+"<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+"<!-- $$CONTENT$$ -->" +
+"<div id=\"landing_page\" class=\"cmsbox j-intro-section j-section\">" +
+"  generic information about this journal" +
+"</div>" +
+"<div id=\"cmsbox_61812\" class=\"cmsbox \"><h2>News</h2>" +
+"<div id=\"news\">" +
+"<div class=\"j-news-item\">" +
+"NEW GOES HERE" +
+"</div>" +
+"</div>" +
+"</div>" +
+"<div id=\"something else\">" +
+"blah goes here" +
+"</div>" +
+"<div id=\"essentential-logos-carousel\" class=\"cmsbox \">" +
+"<ul class=\"essentential-logos\">" +
+"       <li class=\"essentential-logo\">   " +
+"         logo" +
+"    </li>" +
+"       <li class=\"essentential-logo\">   " +
+"         logo" +
+"    </li>" +
+"       <li class=\"essentential-logo\">   " +
+"         logo" +
+"    </li>" +
+"</ul></div>";
+  
+  
+  public void testHashFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
     
     /* Check basic include/exclude functionality */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(includeBit),
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(includeBit),
         ENC);
     assertEquals(includeBitFiltered,StringUtil.fromInputStream(inA));
     
     /* Check basic include/exclude functionality */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(basicLayout),
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(basicLayout),
         ENC);
     assertEquals(basicLayoutFiltered,StringUtil.fromInputStream(inA));
 
     /* remove <script> <noscript> and comments <!-- --> */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(scriptsAndComments),
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(scriptsAndComments),
         ENC);
 
     assertEquals(scriptsAndCommentsFiltered,StringUtil.fromInputStream(inA));
 
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV1),
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV1),
         ENC);
-    inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV2),
+    inB = hfact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV2),
         ENC);
     assertEquals(StringUtil.fromInputStream(inA),
         StringUtil.fromInputStream(inB));
     
     //serving up slightly different files 
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(noSpanStyleHtml),
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(noSpanStyleHtml),
         ENC);
-    inB = fact.createFilteredInputStream(mau, new StringInputStream(spanStyleHtml),
+    inB = hfact.createFilteredInputStream(mau, new StringInputStream(spanStyleHtml),
         ENC);
     assertEquals(StringUtil.fromInputStream(inA),
         StringUtil.fromInputStream(inB));
     
+    /* remove contents from the home_url index page <!-- --> */
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(genericIndexContent),
+        ENC);
 
-    
+    assertEquals(genericIndexContentFiltered,StringUtil.fromInputStream(inA));
   }
+  
+  public void testCrawlFiltering() throws Exception {
+    InputStream inA;
+    InputStream inB;
+    
+    /* Check basic include/exclude functionality */
+    inA = cfact.createFilteredInputStream(mau, new StringInputStream(genericIndexContent),
+        ENC);
+    assertEquals(genericIndexCrawlContent,StringUtil.fromInputStream(inA));
+  }
+    
 }
 
 

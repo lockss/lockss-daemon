@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -68,7 +68,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, home_url_host</string>
+      <string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(home_url)</string>
 <!--  article level metrics live at <filename>-metrics.html -->      
       <string>2,"^%s%s/.*-metrics.html$",base_url,volume_name</string>
 <!--  related articles live at <filename>-relations.html -->      
@@ -146,6 +146,10 @@
      <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusHtmlFilterFactory</string>
   </entry>
+  <entry>
+     <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.copernicus.CopernicusHtmlCrawlFilterFactory</string>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusArticleIteratorFactory</string>
