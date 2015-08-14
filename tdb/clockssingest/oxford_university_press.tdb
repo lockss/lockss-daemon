@@ -597,7 +597,7 @@
     au < finished ; crawling ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
     au < frozen ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
     au < crawling ; exists ; 2014 ; The American Historical Review Volume 119 ; 119 ; >
-    au < testing ; exists ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
+    au < ready ; exists ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
 
     }
 
@@ -926,7 +926,7 @@
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
     au < crawling ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
     au < frozen ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
-    au < testing ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
+    au < ready ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
     au < ready ; exists ; 2015 ; American Journal of Epidemiology Volume 182 ; 182 ; >
 
     }
@@ -1047,7 +1047,7 @@
     au < frozen ; exists ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 ; >
     au < frozen ; exists ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
     au < crawling ; exists ; 2014 ; The American Journal of Jurisprudence Volume 59 ; 59 ; >
-    au < testing ; exists ; 2015 ; The American Journal of Jurisprudence Volume 60 ; 60 ; >
+    au < ready ; exists ; 2015 ; The American Journal of Jurisprudence Volume 60 ; 60 ; >
 
   }
 
@@ -1091,7 +1091,7 @@
     au < finished ; frozen ; 2012 ; American Law and Economics Review Volume 14 ; 14 ; >
     au < frozen ; exists ; 2013 ; American Law and Economics Review Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; American Law and Economics Review Volume 16 ; 16 ; >
-    au < testing ; exists ; 2015 ; American Law and Economics Review Volume 17 ; 17 ; >
+    au < ready ; exists ; 2015 ; American Law and Economics Review Volume 17 ; 17 ; >
 
     }
 
@@ -1146,7 +1146,7 @@
     au < finished ; frozen ; 2012 ; American Literary History Volume 24 ; 24 ; >
     au < frozen ; exists ; 2013 ; American Literary History Volume 25 ; 25 ; >
     au < frozen ; exists ; 2014 ; American Literary History Volume 26 ; 26 ; >
-    au < testing ; exists ; 2015 ; American Literary History Volume 27 ; 27 ; >
+    au < ready ; exists ; 2015 ; American Literary History Volume 27 ; 27 ; >
 
     }
 
@@ -1250,7 +1250,7 @@
     au < finished ; frozen ; 2012 ; Analysis Volume 72 ; 72 ; >
     au < frozen ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
     au < crawling ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
-    au < testing ; exists ; 2015 ; Analysis Volume 75 ; 75 ; >
+    au < ready ; exists ; 2015 ; Analysis Volume 75 ; 75 ; >
 
     }
 
@@ -1447,7 +1447,7 @@
     au < crawling ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
     au < crawling ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
     au < testing ; exists ; 2015 ; Annals of Botany Volume 115 ; 115 ; >
-    au < testing ; exists ; 2015 ; Annals of Botany Volume 116 ; 116 ; >
+    au < ready ; exists ; 2015 ; Annals of Botany Volume 116 ; 116 ; >
 
     }
 
@@ -3471,7 +3471,7 @@
     au < finished ; frozen ; 2012 ; Bulletin of the London Mathematical Society Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Bulletin of the London Mathematical Society Volume 45 ; 45 ; >
     au < crawling ; exists ; 2014 ; Bulletin of the London Mathematical Society Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2015 ; Bulletin of the London Mathematical Society Volume 47 ; 47 ; >
+    au < testing ; exists ; 2015 ; Bulletin of the London Mathematical Society Volume 47 ; 47 ; >
 
     }
 
@@ -3539,7 +3539,7 @@
     au < finished ; frozen ; 2012 ; Cambridge Journal of Economics Volume 36 ; 36 ; >
     au < frozen ; exists ; 2013 ; Cambridge Journal of Economics Volume 37 ; 37 ; >
     au < crawling ; exists ; 2014 ; Cambridge Journal of Economics Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2015 ; Cambridge Journal of Economics Volume 39 ; 39 ; >
+    au < testing ; exists ; 2015 ; Cambridge Journal of Economics Volume 39 ; 39 ; >
 
     }
 
@@ -3576,7 +3576,7 @@
     au < finished ; frozen ; 2012 ; Cambridge Journal of Regions, Economy and Society Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Cambridge Journal of Regions, Economy and Society Volume 6 ; 6 ; >
     au < frozen ; exists ; 2014 ; Cambridge Journal of Regions, Economy and Society Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2015 ; Cambridge Journal of Regions, Economy and Society Volume 8 ; 8 ; >
+    au < testing ; exists ; 2015 ; Cambridge Journal of Regions, Economy and Society Volume 8 ; 8 ; >
 
     }
 
@@ -3649,7 +3649,7 @@
     au < finished ; crawling ; 2012 ; The Cambridge Quarterly Volume 41 ; 41 ; >
     au < frozen ; exists ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
+    au < testing ; exists ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
 
     }
 
@@ -3688,7 +3688,7 @@
     au < finished ; crawling ; 2012 ; Capital Markets Law Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ; >
+    au < testing ; exists ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ; >
 
     }
 
@@ -3753,7 +3753,7 @@
     au < finished ; crawling ; 2012 ; Carcinogenesis Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; Carcinogenesis Volume 34 ; 34 ; >
     au < crawling ; exists ; 2014 ; Carcinogenesis Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2015 ; Carcinogenesis Volume 36 ; 36 ; >
+    au < testing ; exists ; 2015 ; Carcinogenesis Volume 36 ; 36 ; >
 
     }
 
@@ -3921,8 +3921,8 @@
     au < crawling ; exists ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
     au < crawling ; exists ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
     au < crawling ; exists ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
-    au < manifest ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
-    au < manifest ; exists ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; >
+    au < testing ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
+    au < testing ; exists ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; >
     au < manifest ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
     au < expected ; exists ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; >
 
@@ -3978,7 +3978,7 @@
     au < finished ; crawling ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2015 ; Cerebral Cortex Volume 25 ; 25 ; >
+    au < testing ; exists ; 2015 ; Cerebral Cortex Volume 25 ; 25 ; >
 
     }
 
@@ -4020,7 +4020,7 @@
     au < finished ; frozen ; 2012 ; CESifo Economic Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; CESifo Economic Studies Volume 59 ; 59 ; >
     au < crawling ; exists ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2015 ; CESifo Economic Studies Volume 61 ; 61 ; >
+    au < testing ; exists ; 2015 ; CESifo Economic Studies Volume 61 ; 61 ; >
 
     }
 
@@ -4089,7 +4089,7 @@
     au < finished ; crawling ; 2012 ; Chemical Senses Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Chemical Senses Volume 38 ; 38 ; >
     au < crawling ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2015 ; Chemical Senses Volume 40 ; 40 ; >
+    au < testing ; exists ; 2015 ; Chemical Senses Volume 40 ; 40 ; >
 
     }
 
@@ -4142,7 +4142,7 @@
     au < finished ; frozen ; 2012 ; Children & Schools Volume 34 ; 34 ; >
     au < frozen ; exists ; 2013 ; Children & Schools Volume 35 ; 35 ; >
     au < frozen ; exists ; 2014 ; Children & Schools Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2015 ; Children & Schools Volume 37 ; 37 ; >
+    au < testing ; exists ; 2015 ; Children & Schools Volume 37 ; 37 ; >
 
   }
 
@@ -4162,7 +4162,7 @@
 
     au < frozen ; exists ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 ; >
     au < frozen ; exists ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 ; >
+    au < testing ; exists ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 ; >
 
     }
 
@@ -4205,7 +4205,7 @@
     au < finished ; frozen ; 2012 ; Chinese Journal of International Law Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Chinese Journal of International Law Volume 12 ; 12 ; >
     au < frozen ; exists ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2015 ; Chinese Journal of International Law Volume 14 ; 14 ; >
+    au < testing ; exists ; 2015 ; Chinese Journal of International Law Volume 14 ; 14 ; >
 
     }
 
@@ -4241,7 +4241,7 @@
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Chinese Journal of International Politics Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
+    au < testing ; exists ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
 
     }
 
@@ -4291,7 +4291,7 @@
     au < finished ; crawling ; 2012 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 18 ; 18 ; >
     au < frozen ; exists ; 2013 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 19 ; 19 ; >
     au < crawling ; exists ; 2014 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2015 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 ; >
+    au < testing ; exists ; 2015 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 ; >
 
     }
 
@@ -4315,7 +4315,7 @@
     au < finished ; crawling ; 2012 ; Classical Receptions Journal Volume 4 ; 4 ; >
     au < frozen ; exists ; 2013 ; Classical Receptions Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; Classical Receptions Journal Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2015 ; Classical Receptions Journal Volume 7 ; 7 ; >
+    au < testing ; exists ; 2015 ; Classical Receptions Journal Volume 7 ; 7 ; >
 
   }
 
@@ -4392,8 +4392,8 @@
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
     au < crawling ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
     au < crawling ; exists ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2015 ; Clinical Infectious Diseases Volume 61 ; 61 ; >
+    au < testing ; exists ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; >
+    au < testing ; exists ; 2015 ; Clinical Infectious Diseases Volume 61 ; 61 ; >
 
     }
 
@@ -4419,7 +4419,7 @@
     au < finished ; frozen ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Clinical Kidney Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; Clinical Kidney Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2015 ; Clinical Kidney Journal Volume 8 ; 8 ; >
+    au < testing ; exists ; 2015 ; Clinical Kidney Journal Volume 8 ; 8 ; >
 
   }
 
