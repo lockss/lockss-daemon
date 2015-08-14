@@ -517,6 +517,7 @@
 
     param[journal_issn] = 1748-9326
     comment[ingNotReady] = crawl failed, Fetch error - access denied, RU4441
+    #notReady for 403 Forbidden - login required
 
     au < manifest ; exists ; 2006 ; Environmental Research Letters Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
@@ -527,7 +528,7 @@
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 > 
     au < crawling ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
-    au < testing ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
+    au < notReady ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
 
   }
 
@@ -1072,7 +1073,7 @@
     au < finished ; crawling ; 2012 ; Journal of Cosmology and Astroparticle Physics Volume 2012 ; 2012 > 
     au < crawling ; exists ; 2013 ; Journal of Cosmology and Astroparticle Physics Volume 2013 ; 2013 > 
     au < crawling ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 > 
-    au < manifest ; exists ; 2015 ; Journal of Cosmology and Astroparticle Physics Volume 2015 ; 2015 > 
+    au < testing ; exists ; 2015 ; Journal of Cosmology and Astroparticle Physics Volume 2015 ; 2015 > 
 
   }
 
@@ -1099,7 +1100,7 @@
     au < finished ; crawling ; 2012 ; Journal of Geophysics and Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Geophysics and Engineering Volume 10 ; 10 > 
     au < crawling ; exists ; 2014 ; Journal of Geophysics and Engineering Volume 11 ; 11 > 
-    au < manifest ; exists ; 2015 ; Journal of Geophysics and Engineering Volume 12 ; 12 > 
+    au < testing ; exists ; 2015 ; Journal of Geophysics and Engineering Volume 12 ; 12 > 
 
   }
 
@@ -1165,7 +1166,7 @@
     au < finished ; crawling ; 2012 ; Journal of Instrumentation Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Journal of Instrumentation Volume 8 ; 8 > 
     au < deepCrawl ; exists ; 2014 ; Journal of Instrumentation Volume 9 ; 9 > 
-    au < manifest ; exists ; 2015 ; Journal of Instrumentation Volume 10 ; 10 > 
+    au < testing ; exists ; 2015 ; Journal of Instrumentation Volume 10 ; 10 > 
 
   }
 
@@ -1206,7 +1207,7 @@
     au < ingNotReady ; exists ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 > 
     au < crawling ; exists ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 > 
     au < crawling ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 > 
-    au < manifest ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 ; 25 > 
+    au < testing ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 ; 25 > 
 
   }
 
@@ -1233,7 +1234,7 @@
     au < finished ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 > 
     au < deepCrawl ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
-    au < manifest ; exists ; 2015 ; Journal of Neural Engineering Volume 12 ; 12 > 
+    au < testing ; exists ; 2015 ; Journal of Neural Engineering Volume 12 ; 12 > 
 
   }
   
@@ -1277,7 +1278,7 @@
     au < finished ; crawling ; 2012 ; Journal of Optics Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Journal of Optics Volume 15 ; 15 > 
     au < crawling ; exists ; 2014 ; Journal of Optics Volume 16 ; 16 > 
-    au < manifest ; exists ; 2015 ; Journal of Optics Volume 17 ; 17 > 
+    au < testing ; exists ; 2015 ; Journal of Optics Volume 17 ; 17 > 
 
   }
 
@@ -1463,7 +1464,7 @@
     au < finished ; crawling ; 2012 ; Journal of Physics A: Mathematical and Theoretical Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 > 
     au < crawling ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 > 
-    au < manifest ; exists ; 2015 ; Journal of Physics A: Mathematical and Theoretical Volume 48 ; 48 > 
+    au < testing ; exists ; 2015 ; Journal of Physics A: Mathematical and Theoretical Volume 48 ; 48 > 
 
   }
   
@@ -1558,7 +1559,7 @@
     au < finished ; crawling ; 2012 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 46 ; 46 > 
     au < frozen ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
-    au < manifest ; exists ; 2015 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 48 ; 48 > 
+    au < testing ; exists ; 2015 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 48 ; 48 > 
 
   }
 
@@ -1655,7 +1656,7 @@
     au < finished ; crawling ; 2012 ; Journal of Physics D: Applied Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics D: Applied Physics Volume 46 ; 46 > 
     au < crawling ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
-    au < manifest ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 > 
+    au < testing ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 > 
 
   }
 
@@ -1766,7 +1767,7 @@
     au < ingNotReady ; exists ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 > 
     au < crawling ; exists ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 > 
     au < crawling ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 > 
-    au < manifest ; exists ; 2015 ; Journal of Physics G: Nuclear and Particle Physics Volume 42 ; 42 > 
+    au < testing ; exists ; 2015 ; Journal of Physics G: Nuclear and Particle Physics Volume 42 ; 42 > 
 
   }
 
@@ -1837,7 +1838,7 @@
     au < finished ; crawling ; 2012 ; Journal of Physics: Condensed Matter Volume 24 ; 24 > 
     au < crawling ; exists ; 2013 ; Journal of Physics: Condensed Matter Volume 25 ; 25 > 
     au < crawling ; exists ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 > 
-    au < manifest ; exists ; 2015 ; Journal of Physics: Condensed Matter Volume 27 ; 27 > 
+    au < testing ; exists ; 2015 ; Journal of Physics: Condensed Matter Volume 27 ; 27 > 
 
   }
 
@@ -2427,8 +2428,8 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 570 ; 570 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 571 ; 571 >
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 572 ; 572 >
-    au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 573 ; 573 >
-    au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 574 ; 574 >
+    au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 573 ; 573 >
+    au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 574 ; 574 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 575 ; 575 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 576 ; 576 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 577 ; 577 >
@@ -2496,7 +2497,7 @@
     au < finished ; crawling ; 2012 ; Journal of Radiological Protection Volume 32 ; 32 > 
     au < crawling ; exists ; 2013 ; Journal of Radiological Protection Volume 33 ; 33 > 
     au < crawling ; exists ; 2014 ; Journal of Radiological Protection Volume 34 ; 34 > 
-    au < manifest ; exists ; 2015 ; Journal of Radiological Protection Volume 35 ; 35 > 
+    au < testing ; exists ; 2015 ; Journal of Radiological Protection Volume 35 ; 35 > 
 
   }
 
@@ -2575,7 +2576,7 @@
     au < finished ; crawling ; 2012 ; Journal of Semiconductors Volume 33 ; 33 >
     au < crawling ; exists ; 2013 ; Journal of Semiconductors Volume 34 ; 34 >
     au < deepCrawl ; exists ; 2014 ; Journal of Semiconductors Volume 35 ; 35 >
-    au < manifest ; exists ; 2015 ; Journal of Semiconductors Volume 36 ; 36 >
+    au < testing ; exists ; 2015 ; Journal of Semiconductors Volume 36 ; 36 >
     
   }
 
