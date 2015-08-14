@@ -32,9 +32,10 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 from datetime import date, datetime
+import sys
 
 try: from ZSI.auth import AUTH
 except ImportError: sys.exit('Error: the ZSI Python module must be installed')
