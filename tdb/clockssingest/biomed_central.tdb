@@ -5307,7 +5307,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 >
-      au < testing ; exists ; 2015 ; Journal of Nanobiotechnology Volume 13 ; 13 >
+      au < ready ; exists ; 2015 ; Journal of Nanobiotechnology Volume 13 ; 13 >
 
     }
 
@@ -7138,7 +7138,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2326-0254
       comment[platform] = BioMedCentral
 
-      au < testing ; exists ; 2014 ; Eye and Vision Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Eye and Vision Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Eye and Vision Volume 2 ; 2 >
 
     }
