@@ -33,9 +33,16 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.2.5'
+__version__ = '0.3.0'
+
+import getpass
+import optparse
+import os.path
+import sys
+from time import sleep
 
 import HasherServiceImplService_client
+from wsutil import zsiauth
 
 def hash_au(host, auth, auid):
   '''Returns the full hash of the given AU
@@ -106,4 +113,99 @@ def _ws_port(host, auth, tracefile=None):
   locator = HasherServiceImplService_client.HasherServiceImplServiceLocator()
   if tracefile is None: return locator.getHasherServiceImplPort(url=url, auth=auth)
   else: return locator.getHasherServiceImplPort(url=url, auth=auth, tracefile=tracefile)
+
+#
+# Command line tool
+#
+
+class _HasherServiceOptions(object):
+
+  @staticmethod
+  def make_parser():
+    usage = '%prog [--host=HOST|--hosts=HFILE]... --auid=AUID [--url=URL] [--output-directory=OUTDIR] --output-prefix=PREFIX [OPTIONS]'
+    parser = optparse.OptionParser(version=__version__, description=__doc__, usage=usage)
+    # Hosts
+    group = optparse.OptionGroup(parser, 'Hosts')
+    group.add_option('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
+    group.add_option('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_option('--password', metavar='PASS', help='UI password (default: interactive prompt)')
+    group.add_option('--username', metavar='USER', help='UI username (default: interactive prompt)')
+    parser.add_option_group(group)
+    # AUID and URL
+    group = optparse.OptionGroup(parser, 'AUID and URL')
+    group.add_option('--auid', help='target AUID')
+    group.add_option('--url', help='target URL')
+    parser.add_option_group(group)
+    # Output
+    group = optparse.OptionGroup(parser, 'Output')
+    group.add_option('--output-directory', default='.', metavar='OUTDIR', help='output directory (default: current directory)')
+    group.add_option('--output-prefix', metavar='PREFIX', help='prefix for output file names')
+    parser.add_option_group(group)
+    # Other options
+    group = optparse.OptionGroup(parser, 'Other options')
+    group.add_option('--wait', type=int, default=30, help='seconds to wait between asynchronous checks')
+    parser.add_option_group(group)
+    return parser
+
+  def __init__(self, parser, opts, args):
+    super(_HasherServiceOptions, self).__init__()
+    if len(args) != 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
+    # hosts
+    self.hosts = opts.host[:]
+    for f in opts.hosts: self.hosts.extend(_file_lines(f))
+    if len(self.hosts) == 0: parser.error('at least one target host is required')
+    # auid/url
+    self.auid = opts.auid
+    self.url = opts.url
+    # output_directory/output_prefix
+    if not os.path.isdir(opts.output_directory):
+      parser.error('no such directory: %s' % (opts.output_directory,))
+    self.output_directory = opts.output_directory
+    if opts.output_prefix is None: parser.error('--output-prefix is required')
+    if '/' in opts.output_prefix: parser.error('output prefix cannot contain a slash')
+    self.output_prefix = opts.output_prefix
+    # wait
+    self.wait = opts.wait
+    # auth
+    u = opts.username or getpass.getpass('UI username: ')
+    p = opts.password or getpass.getpass('UI password: ')
+    self.auth = zsiauth(u, p)
+
+def _do_hashes(options):
+  wholeau = options.url is None
+  reqids = dict()
+  for host in options.hosts:
+    if wholeau: reqids[host] = hash_asynchronously_au(host, options.auth, options.auid)
+    else: reqids[host] = hash_asynchronously_au_url(host, options.auth, options.auid, options.url)
+  while len(reqids) > 0:
+    sleep(options.wait)
+    finished = list()
+    for host, reqid in reqids.iteritems():
+      res = get_asynchronous_hash_result(host, options.auth, reqid)
+      if res._status == 'Done':
+        if wholeau:
+          with open(os.path.join(options.output_directory, '%s.%s.hash' % (options.output_prefix, host)), 'w') as f:
+            f.write(res._blockFileDataHandler)
+        else:
+          with open(os.path.join(options.output_directory, '%s.%s.filtered' % (options.output_prefix, host)), 'w') as f:
+            f.write(res._recordFileDataHandler)
+        remove_asynchronous_hash_request(host, options.auth, reqid)
+        finished.append(host)
+    for host in finished: del reqids[host]
+
+# Last modified 2015-08-10
+def _file_lines(fstr):
+  with open(fstr) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
+  return ret
+
+def _main():
+  '''Main method.'''
+  parser = _HasherServiceOptions.make_parser()
+  (opts, args) = parser.parse_args()
+  options = _HasherServiceOptions(parser, opts, args)
+  _do_hashes(options)
+
+# Main entry point
+if __name__ == '__main__': _main()
 
