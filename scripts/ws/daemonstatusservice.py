@@ -173,15 +173,11 @@ def is_daemon_ready(host, auth):
   req = DaemonStatusServiceImplService_client.isDaemonReady()
   return _ws_port(host, auth).isDaemonReady(req).Return
 
-# Special value for query-type operations
-STAR = '*'
-
 def query_aus(host, auth, select, where=None):
   '''Performs a queryAus operation on the given host, using the given field
-  name(s) to build a SELECT clause (or the special value
-  daemonstatusservice.STAR to mean all fields), optionally using the given
-  string to build a WHERE clause, and returns a list of records with these
-  fields (populated or not depending on the SELECT clause):
+  names to build a SELECT clause, optionally using the given string to build a
+  WHERE clause, and returns a list of records with these fields (populated or
+  not depending on the SELECT clause):
   - AccessType (string)
   - AuConfiguration, a record with these fields:
       - DefParams, a list of records with these fields:
