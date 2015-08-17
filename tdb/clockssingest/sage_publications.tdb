@@ -19391,33 +19391,6 @@
   {
 
     title <
-      name = Journal of Clinical Oncology ;
-      issn = 0732-183X ;
-      eissn = 1527-7755
-    >
-
-      param[base_url] = http://jco.ascopubs.org/
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < exists ; exists ; 2004 ; Journal of Clinical Oncology Volume 22 ; 22 ; >
-      au < exists ; exists ; 2005 ; Journal of Clinical Oncology Volume 23 ; 23 ; >
-      au < exists ; exists ; 2006 ; Journal of Clinical Oncology Volume 24 ; 24 ; >
-      au < exists ; exists ; 2007 ; Journal of Clinical Oncology Volume 25 ; 25 ; >
-      au < exists ; exists ; 2008 ; Journal of Clinical Oncology Volume 26 ; 26 ; >
-      au < exists ; exists ; 2009 ; Journal of Clinical Oncology Volume 27 ; 27 ; >
-      au < exists ; exists ; 2010 ; Journal of Clinical Oncology Volume 28 ; 28 ; >
-      au < exists ; exists ; 2011 ; Journal of Clinical Oncology Volume 29 ; 29 ; >
-      au < exists ; exists ; 2012 ; Journal of Clinical Oncology Volume 30 ; 30 ; >
-      au < exists ; exists ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 ; >
-      au < exists ; exists ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 ; >
-      au < exists ; exists ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 ; >
-
-
-  }
-
-  {
-
-    title <
       name = The Journal of Clinical Pharmacology ;
       issn = 0091-2700 ;
       eissn = 1552-4604
@@ -20392,7 +20365,7 @@
         au < finished ; frozen ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 ; >
         au < frozen ; exists ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 ; >
         au < frozen ; exists ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 ; >
-        au < expected ; exists ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 ; >
+        au < wanted ; exists ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 ; >
 
       }
 
@@ -22157,21 +22130,6 @@
       au < manifest ; exists ; 2015 ; Journal of Geriatric Psychiatry and Neurology Volume 28 ; 28 ; >
 
     }
-
-  }
-
-  {
-
-    title <
-      name = Journal of Global Oncology ;
-      eissn = 2378-9506
-    >
-
-      param[base_url] = http://jgo.ascopubs.org/
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < expected ; exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; >
-
 
   }
 
