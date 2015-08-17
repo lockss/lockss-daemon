@@ -21852,34 +21852,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
-
-    title <
-      name = Journal of Clinical Oncology ;
-      issn = 0732-183X ;
-      eissn = 1527-7755
-    >
-
-      param[base_url] = http://jco.ascopubs.org/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < exists ; 2004 ; Journal of Clinical Oncology Volume 22 ; 22 >
-      au < exists ; 2005 ; Journal of Clinical Oncology Volume 23 ; 23 >
-      au < exists ; 2006 ; Journal of Clinical Oncology Volume 24 ; 24 >
-      au < exists ; 2007 ; Journal of Clinical Oncology Volume 25 ; 25 >
-      au < exists ; 2008 ; Journal of Clinical Oncology Volume 26 ; 26 >
-      au < exists ; 2009 ; Journal of Clinical Oncology Volume 27 ; 27 >
-      au < exists ; 2010 ; Journal of Clinical Oncology Volume 28 ; 28 >
-      au < exists ; 2011 ; Journal of Clinical Oncology Volume 29 ; 29 >
-      au < exists ; 2012 ; Journal of Clinical Oncology Volume 30 ; 30 >
-      au < exists ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 >
-      au < exists ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 >
-      au < exists ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 >
-
-
-  }
-
     {
 
       title <
@@ -24898,21 +24870,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-
-  {
-
-    title <
-      name = Journal of Global Oncology ;
-      eissn = 2378-9506
-    >
-
-      param[base_url] = http://jgo.ascopubs.org/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < expected ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
-
-  }
 
     {
 
