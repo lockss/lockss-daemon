@@ -2043,23 +2043,6 @@
     {
   
         title <
-          name = Progress in Orthodontics ;
-          issn = 1723-7785
-        >
-  
-        param[base_url] = http://www.progressinorthodontics.com/
-        param[journal_issn] = 1723-7785
-        comment[platform] = BioMedCentralPlugin
-  
-        au < manifest ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
-        au < manifest ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
-        au < manifest ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
-  
-    }
-  
-    {
-  
-        title <
           name = Psychology of Well-Being: Theory, Research and Practice ;
           eissn = 2211-1522
         >
