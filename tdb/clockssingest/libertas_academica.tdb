@@ -331,7 +331,7 @@
     param[journal_id] = 96
     comment[0] = no years 2009-2014 as of 4/01/15
     
-    au < wanted ; exists ; 2008 ; Cell Biology Insights Volume 1 ; 1 ; 2008 >
+    au < ready ; exists ; 2008 ; Cell Biology Insights Volume 1 ; 1 ; 2008 >
 
   }
   
@@ -366,9 +366,9 @@
 
     param[journal_id] = 46
 
-    au < wanted ; exists ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 1 ; 2008 >
-    au < wanted ; exists ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2 ; 2009 >
-    au < wanted ; exists ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 3 ; 2010 >
+    au < ready ; exists ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 1 ; 2008 >
+    au < ready ; exists ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2 ; 2009 >
+    au < ready ; exists ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 5 ; 2012 >
     au < frozen ; exists ; 2013 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 6 ; 6 ; 2013 >
@@ -1098,7 +1098,7 @@
     param[journal_id] = 150
     comment[0] = no years 2010, 2013, 2014 as of 04/02/15
     
-    au < wanted ; exists ; 2009 ; Immunotherapy Insights Volume 1 ; 1 ; 2009 >
+    au < ready ; exists ; 2009 ; Immunotherapy Insights Volume 1 ; 1 ; 2009 >
     au < finished ; frozen ; 2011 ; Immunotherapy Insights Volume 2 ; 2 ; 2011 >
     au < frozen ; exists ; 2012 ; Immunotherapy Insights Volume 3 ; 3 ; 2012 >
 
@@ -1537,9 +1537,9 @@
     param[journal_id] = 105
     comment[0] = no years 2014 as of 04/02/15
 
-    au < wanted ; exists ; 2008 ; Particle Physics Insights Volume 1 ; 1 ; 2008 >
-    au < wanted ; exists ; 2009 ; Particle Physics Insights Volume 2 ; 2 ; 2009 >
-    au < wanted ; exists ; 2010 ; Particle Physics Insights Volume 3 ; 3 ; 2010 >
+    au < ready ; exists ; 2008 ; Particle Physics Insights Volume 1 ; 1 ; 2008 >
+    au < ready ; exists ; 2009 ; Particle Physics Insights Volume 2 ; 2 ; 2009 >
+    au < ready ; exists ; 2010 ; Particle Physics Insights Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Particle Physics Insights Volume 4 ; 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Particle Physics Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Particle Physics Insights Volume 6 ; 6 ; 2013 >
