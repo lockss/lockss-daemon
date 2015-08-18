@@ -3978,11 +3978,11 @@
     param[journal_issn] = 1005-0841 
     comment[param] = print issn preferred
 
-    au < finished ; crawling ; 2008 ; Science Foundation in China Volume 16 ; 16 >
-    au < finished ; crawling ; 2009 ; Science Foundation in China Volume 17 ; 17 >
-    au < finished ; crawling ; 2010 ; Science Foundation in China Volume 18 ; 18 >
-    au < finished ; crawling ; 2011 ; Science Foundation in China Volume 19 ; 19 >
-    au < finished ; crawling ; 2012 ; Science Foundation in China Volume 20 ; 20 >
+    au < finished ; finished ; 2008 ; Science Foundation in China Volume 16 ; 16 >
+    au < finished ; finished ; 2009 ; Science Foundation in China Volume 17 ; 17 >
+    au < finished ; finished ; 2010 ; Science Foundation in China Volume 18 ; 18 >
+    au < finished ; finished ; 2011 ; Science Foundation in China Volume 19 ; 19 >
+    au < finished ; finished ; 2012 ; Science Foundation in China Volume 20 ; 20 >
 
   }
 
