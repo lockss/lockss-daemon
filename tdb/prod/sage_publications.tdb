@@ -29654,8 +29654,6 @@ comment[mpj] = now published by Brill
         eissn = 1752-8976
       >
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jra.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -29677,9 +29675,24 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 15 ; 15 >
         au < manifest ; 2015 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 16 ; 16 >
 
-      }
-
     }
+
+  {
+
+    title <
+      name = Journal of Reproductive Biotechnology and Fertility ;
+      eissn = 2058-9158
+    >
+
+      param[base_url] = http://rbf.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2010 ; Journal of Reproductive Biotechnology and Fertility Volume 1 ; 1 >
+      au < exists ; 2011 ; Journal of Reproductive Biotechnology and Fertility Volume 2 ; 2 >
+      au < exists ; 2012 ; Journal of Reproductive Biotechnology and Fertility Volume 3 ; 3 >
+
+  }
 
     {
 
@@ -40761,7 +40774,7 @@ comment[mpj] = now published by Brill
 
     }
 
-  {
+    {
 
       title <
         name = Sociology of Race and Ethnicity ;
@@ -40776,7 +40789,23 @@ comment[mpj] = now published by Brill
 
       au < manifest ; 2015 ; Sociology of Race and Ethnicity Volume 1 ; 1 >
 
-  }
+    }
+
+    {
+
+      title <
+        name = Socius: Sociological Research for a Dynamic World ;
+        eissn = 2378-0231
+      >
+
+      param[base_url] = http://srd.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Socius: Sociological Research for a Dynamic World Volume 1 ; 1 >
+
+    }
+
     {
 
       title <
