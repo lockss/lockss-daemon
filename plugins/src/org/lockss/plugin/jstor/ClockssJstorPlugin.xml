@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>    
   <entry>
     <string>au_name</string>
@@ -42,5 +42,14 @@
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
     <org.lockss.util.Default />
-  </entry>  
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
 </map>
