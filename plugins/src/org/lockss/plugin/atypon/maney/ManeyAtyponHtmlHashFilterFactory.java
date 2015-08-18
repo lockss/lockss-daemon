@@ -106,6 +106,8 @@ public class ManeyAtyponHtmlHashFilterFactory
         // one version contained a contentLinkHolder within retracted-publication
         HtmlNodeFilters.tagWithAttribute("div", "class" ,"retracted-publication"),
         HtmlNodeFilters.tagWithAttribute("div", "class" ,"contentLinkHolder"),
+        // extra widgets
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget +general-html +none +"),
         // toc - right column - Published on behalf of,  Journal services,
         // For authors, Related content search,  Usage Downloaded count
         // also abs, full - right column of an article - all article tools 
