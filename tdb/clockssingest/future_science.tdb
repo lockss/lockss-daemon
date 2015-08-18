@@ -108,6 +108,19 @@
   {
   
     title < 
+      name = Future Science OA ;
+      eissn = 2056-5623
+    >
+    
+    param[journal_id] = fso
+
+    au < expected ; exists ; 2015 ; Future Science OA Volume 1 ; 1 >
+    
+  }
+
+  {
+  
+    title < 
       name = Pharmaceutical Bioprocessing ;
       issn = 2048-9145
     >
