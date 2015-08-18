@@ -555,7 +555,7 @@
     au < finished ; frozen ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
     au < superseded ; exists ; 2013 ; Cell Research Volume 22 [to delete] ; 2013 ; 22 >
     au < crawling ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 >
-    au < crawling ; exists ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 >
+    au < finished ; crawling ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 >
     au < manifest ; exists ; 2015 ; Cell Research Volume 25 ; 2015 ; 25 >
 
   }
@@ -1281,7 +1281,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 >
     au < finished ; crawling ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
     au < crawling ; exists ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 >
-    au < crawling ; exists ; 2014 ; International Journal of Obesity Volume 38 ; 2014 ; 38 >
+    au < finished ; crawling ; 2014 ; International Journal of Obesity Volume 38 ; 2014 ; 38 >
     au < manifest ; exists ; 2015 ; International Journal of Obesity Volume 39 ; 2015 ; 39 >
 
   }
@@ -1390,7 +1390,7 @@
     au < finished ; crawling ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
     au < finished ; crawling ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
     au < frozen ; exists ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 >
-    au < crawling ; exists ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 >
+    au < finished ; crawling ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 >
     au < manifest ; exists ; 2015 ; The Journal of Antibiotics Volume 68 ; 2015 ; 68 >
 
   }
@@ -3689,7 +3689,7 @@
     au < finished ; frozen ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
     au < finished ; frozen ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
     au < crawling ; exists ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
-    au < crawling ; exists ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 >
+    au < finished ; crawling ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 >
     au < manifest ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 >
 
   }
@@ -3814,7 +3814,7 @@
     au < doNotProcess ; exists ; 2011 ; SciBX: Science-Business eXchange Volume 4 ; 2011 ; 4 >
     au < frozen ; exists ; 2012 ; SciBX: Science-Business eXchange Volume 5 ; 2012 ; 5 >
     au < doNotProcess ; exists ; 2013 ; SciBX: Science-Business eXchange Volume 6 ; 2013 ; 6 >
-    au < crawling ; exists ; 2014 ; SciBX: Science-Business eXchange Volume 7 ; 2014 ; 7 >
+    au < finished ; crawling ; 2014 ; SciBX: Science-Business eXchange Volume 7 ; 2014 ; 7 >
     au < expected ; exists ; 2015 ; SciBX: Science-Business eXchange Volume 8 ; 2015 ; 8 >
 
   }
