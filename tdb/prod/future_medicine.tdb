@@ -341,6 +341,21 @@
   {
   
     title < 
+      name = Hepatic Oncology ;
+      issn = 2045-0923 ;
+      eissn = 2045-0931
+    >
+    
+    param[journal_id] = hep
+
+    au < exists ; 2014 ; Hepatic Oncology Volume 1 ; 1 >
+    au < exists ; 2015 ; Hepatic Oncology Volume 2 ; 2 >
+    
+  }
+
+  {
+  
+    title < 
       name = HIV Therapy ;
       issn = 1758-4310
     >
@@ -431,6 +446,21 @@
   {
   
     title < 
+      name = International Journal of Endocrine Oncology ;
+      issn = 2045-0869 ;
+      eissn = 2045-0877
+    >
+    
+    param[journal_id] = ije
+
+    au < exists ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 >
+    au < exists ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 >
+
+  }
+
+  {
+  
+    title < 
       name = International Journal of Hematologic Oncology ;
       eissn = 2045-1393
     >
@@ -493,6 +523,21 @@
     au < manifest ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
     au < manifest ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
     au < manifest ; 2015 ; Lung Cancer Management Volume 4 ; 4 >
+
+  }
+
+  {
+  
+    title < 
+      name = Melanoma Management ;
+      issn = 2045-0885 ;
+      eissn = 2045-0893
+    >
+    
+    param[journal_id] = mmt
+
+    au < exists ; 2014 ; Melanoma Management Volume 1 ; 1 >
+    au < exists ; 2015 ; Melanoma Management Volume 2 ; 2 >
 
   }
 
