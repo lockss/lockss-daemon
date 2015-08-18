@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -155,15 +155,6 @@
     </map>
   </entry>
   <entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-      </entry>
-    </map>
-  </entry>
-  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.iop.IOPScienceUrlNormalizer</string>
   </entry>
@@ -194,5 +185,26 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>triggered_override</string>
+    <map>
+      <entry>
+        <string>plugin_rewrite_html_meta_urls</string>
+        <list>
+          <string>citation_abstract_html_url</string>
+          <string>citation_pdf_url</string>
+        </list>
+      </entry>
+    </map>
   </entry>
 </map>
