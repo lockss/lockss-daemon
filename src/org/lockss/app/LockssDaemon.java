@@ -971,7 +971,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // compatibility and testing.
     boolean useNewSyntax = false;
 
-    for (int i = 0; i < args.length - 1; i++) {
+    for (int i = 0; i < args.length; i++) {
       if (args[i].equals(StartupOptions.OPTION_GROUP)) {
         groupNames = args[++i];
         useNewSyntax = true;
@@ -984,6 +984,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
         int idx = (int)(Math.random() * v.size());
         propUrls.add(v.get(idx));
         useNewSyntax = true;
+      }
+      else if (args[i].equals("-s")) {
+	SslUtil.logCryptoProviders(true);
       }
     }
 
