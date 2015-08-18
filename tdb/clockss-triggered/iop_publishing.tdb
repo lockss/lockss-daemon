@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = IOP Publishing
+  >
+
+  plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin
+  param[base_url] = http://iopscience.iop.org/
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Science Foundation in China ;
+      issn = 1005-0841 ;
+      issnl = 1005-0841 
+    >
+
+    param[journal_issn] = 1005-0841 
+    comment[param] = print issn preferred
+
+    au < released ; 2008 ; Science Foundation in China Volume 16 ; 16 >
+    au < released ; 2009 ; Science Foundation in China Volume 17 ; 17 >
+    au < released ; 2010 ; Science Foundation in China Volume 18 ; 18 >
+    au < released ; 2011 ; Science Foundation in China Volume 19 ; 19 >
+    au < released ; 2012 ; Science Foundation in China Volume 20 ; 20 >
+
+  }
+
+}
