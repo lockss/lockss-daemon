@@ -25187,6 +25187,22 @@
   {
 
     title <
+      name = Journal of Reproductive Biotechnology and Fertility ;
+      eissn = 2058-9158
+    >
+
+      param[base_url] = http://rbf.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2010 ; Journal of Reproductive Biotechnology and Fertility Volume 1 ; 1 ; >
+      au < exists ; exists ; 2011 ; Journal of Reproductive Biotechnology and Fertility Volume 2 ; 2 ; >
+      au < exists ; exists ; 2012 ; Journal of Reproductive Biotechnology and Fertility Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Research in Crime and Delinquency ;
       issn = 0022-4278 ;
       eissn = 1552-731X
@@ -37330,10 +37346,7 @@
       eissn = 1939-8573
     >
 
-    param[base_url] = http://soe.sagepub.com/
-
-    {
-
+      param[base_url] = http://soe.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2004 ; Sociology of Education Volume 77 ; 77 ; >
@@ -37349,8 +37362,6 @@
       au < crawling ; exists ; 2014 ; Sociology of Education Volume 87 ; 87 ; >
       au < manifest ; exists ; 2015 ; Sociology of Education Volume 88 ; 88 ; >
 
-    }
-
   }
 
   {
@@ -37358,14 +37369,27 @@
       title <
         name = Sociology of Race and Ethnicity ;
         issn = 2332-6492 ;
-        eissn = 2332-6506 ;
-        issnl = 2332-6492
+        eissn = 2332-6506 
       >
 
       param[base_url] = http://sre.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2015 ; Sociology of Race and Ethnicity Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+      title <
+        name = Socius: Sociological Research for a Dynamic World ;
+        eissn = 2378-0231
+      >
+
+      param[base_url] = http://srd.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Socius: Sociological Research for a Dynamic World Volume 1 ; 1 ; >
 
   }
 
