@@ -91,6 +91,7 @@
       <string>2,"^%scontent/pdf/(bbm|bfm)", base_url</string>
       <string>1,"^%s(content|chapter|book|article)/", base_url</string>
       <string>1,"^%sstatic/pdf/", download_url</string>
+      <string>1,"http://static-content.springer.com/image/.+[.](jpg|png)"</string>
     </list>
   </entry>
   <entry>
@@ -125,6 +126,12 @@
         <string>org.lockss.plugin.springer.link.SpringerLinkBooksHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>static-content.springer.com</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

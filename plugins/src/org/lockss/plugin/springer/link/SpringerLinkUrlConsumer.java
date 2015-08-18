@@ -50,8 +50,7 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
  * @since 1.67.5
  */
 public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
-
-  // Will become a definitional param
+  
   public static final String DOWNLOAD_URL_KEY = "download_url";
 
   protected Pattern origPdfPat;
