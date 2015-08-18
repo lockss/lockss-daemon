@@ -972,11 +972,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     boolean useNewSyntax = false;
 
     for (int i = 0; i < args.length; i++) {
-      if (args[i].equals(StartupOptions.OPTION_GROUP)) {
+      if (args[i].equals(StartupOptions.OPTION_GROUP)
+	  && i < args.length - 1) {
         groupNames = args[++i];
         useNewSyntax = true;
       }
-      else if (args[i].equals(StartupOptions.OPTION_PROPURL)) {
+      else if (args[i].equals(StartupOptions.OPTION_PROPURL)
+	       && i < args.length - 1) {
         // TODO: If not available, keep selecting prop files to load
         // until one is loaded, or the list is exhausted.
         // For now, just select one at random.
