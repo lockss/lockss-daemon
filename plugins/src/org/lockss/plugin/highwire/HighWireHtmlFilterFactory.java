@@ -59,15 +59,15 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
 
     NodeFilter[] filters = new NodeFilter[] {
         // filter head for Red Book
-        new TagNameFilter("head"),
+        HtmlNodeFilters.tag("head"),
         // Contains variable ad-generating code
-        new TagNameFilter("script"),
+        HtmlNodeFilters.tag("script"),
         // Contains variable ad-generating code
-        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tag("noscript"),
         // Typically contains ads (e.g. American Academy of Pediatrics)
-        new TagNameFilter("object"),
+        HtmlNodeFilters.tag("object"),
         // Typically contains ads 
-        new TagNameFilter("iframe"),
+        HtmlNodeFilters.tag("iframe"),
         // Contains ads (e.g. American Medical Association)
         HtmlNodeFilters.tagWithAttribute("div", "id", "advertisement"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring"),
