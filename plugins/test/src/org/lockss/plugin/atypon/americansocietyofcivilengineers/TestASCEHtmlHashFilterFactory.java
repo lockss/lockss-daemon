@@ -1,6 +1,6 @@
 /*  $Id$
  
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 
  all rights reserved.
 
@@ -49,7 +49,8 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
     super.setUp();
     fact = new ASCEHtmlHashFilterFactory();
   }
-  
+  private static final String commonFilteredOutput =
+      " Hello World";
   private static final String withHeader =
       "<div class=\"block\">"
           + "<div id=\"header\">"
@@ -98,10 +99,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "</div>"
           + "</div>"
           + "</div>"
-          + "</div>";
+          + "</div>Hello World";
   
   private static final String withoutHeader =
-      "<div class=\"block\"></div>";
+      " Hello World";
       
   private static final String withIssueNav =
       "<div class=\"block\">"
@@ -128,10 +129,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "<a href=\"/toc/ijgnai/12/2\"> Next Issue</a>"
           + "</div>"
           + "</div>"
-          + "</div>";
+          + "</div>Hello World";
 
   private static final String withoutIssueNav =
-      "<div class=\"block\"></div>";
+      " Hello World";
   
   private static final String withTocTools =
       "<div class=\"block\">"
@@ -164,10 +165,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "</span>"
           + "</div>"
           + "</div>"
-          + "</div>";
+          + "</div>Hello World";
   
   private static final String withoutTocTools =
-      "<div class=\"block\"></div>";
+        " Hello World";
 
   
   private static final String withToggle =
@@ -177,10 +178,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "('10.1061/(BOGUSPUBLISHER)GM.1943-5622.0000074', "
           + "'AbsBOGUSPUBLISHERGM194356220000074', "
           + "'showAbsBOGUSPUBLISHERGM194356220000074');\">+</a></p></td>"
-          + "</div>";
+          + "</div>Hello World";
   
   private static final String withoutToggle =
-      "<div class=\"block\"></div>";
+      " Hello World";
 
   private static final String withDropzoneLeftSidebar =
       "<div class=\"block\">"
@@ -198,10 +199,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "</div>"
           + "</div>"
           + "</div>"
-          + "</div>";
+          + "</div>Hello World";
 
   private static final String withoutDropzoneLeftSidebar =
-      "<div class=\"block\"></div>";
+      " Hello World";
   
   private static final String withCitedBySection =
       "<div class=\"block\">"
@@ -214,10 +215,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "<a class=\"entryAuthor\" href=\"blahAuthor\">"
           + "</div>"
           + "</div>"
-          + "</div>";
+          + "</div>Hello World";
   
   private static final String withoutCitedBySection =
-      "<div class=\"block\"></div>";
+      " Hello World";
 
   private static final String withFooter =
       "<div class=\"block\">"
@@ -273,10 +274,10 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
           + "</span>"
           + "</div>"        
           + "</div>"
-          + "</div>";
+          + "</div>Hello World";
 
   private static final String withoutFooter =
-      "<div class=\"block\"></div>";
+        " Hello World";   
 
   private static final String withHeaderMainMenu = 
       "<div id=\"header\">" +
@@ -291,21 +292,20 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutHeaderMainMenu = "Hello World";
   
   private static final String withStylesheets = 
-    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/templates/jsp/_style2/_pagebuilder/reset-fonts-grids.css\">Hello World";
-  private static final String withoutStylesheets ="Hello World";
+    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/templates/jsp/_style2/_pagebuilder/reset-fonts-grids.css\"> Hello World";
+  private static final String withoutStylesheets = "Hello World";
 
   private static final String withAccessIcon =
     "   <div class=\"block\">  <img src=\"/templates/jsp/images/access_full.gif\""
-    +"\" class=\"accessIcon\">  Hello World  </div>  ";
-  private static final String withoutAccessIcon =
-    " <div class=\"block\"> Hello World </div> ";
+    +"\" class=\"accessIcon\">  Hello World</div>  ";
+  private static final String withoutAccessIcon =  " Hello World ";
   
   private static final String withJScript =
       "<script type=\"text/javascript\">"
       +"var curvyCornersVerbose = false;"
-      +"</script>Hello World";
+      +"</script> Hello World";
   private static final String withoutJScript =
-      "Hello World";
+      " Hello World";
   
   private static final String withComments =
     "<!--totalCount15--><!--modified:1374684679000-->Hello World";
@@ -330,51 +330,52 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   public void testStackContentsHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withHeader), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutHeader, StringUtil.fromInputStream(actIn));
+
+    assertEquals(commonFilteredOutput, StringUtil.fromInputStream(actIn));
   }
 
   public void testIssueNavHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withIssueNav), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutIssueNav, StringUtil.fromInputStream(actIn));
+    assertEquals(commonFilteredOutput, StringUtil.fromInputStream(actIn));
   }
   
   public void testTocToolsHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withTocTools), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutTocTools, StringUtil.fromInputStream(actIn));
+    assertEquals(commonFilteredOutput, StringUtil.fromInputStream(actIn));
   }
 
   public void testToggleHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withToggle), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutToggle, StringUtil.fromInputStream(actIn));
+    assertEquals(commonFilteredOutput, StringUtil.fromInputStream(actIn));
   }
 
   public void testDropzoneLeftSidebarHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withDropzoneLeftSidebar),
                               Constants.DEFAULT_ENCODING);
-    assertEquals(withoutDropzoneLeftSidebar,
+    assertEquals(commonFilteredOutput,
                  StringUtil.fromInputStream(actIn));
   }
   
   public void testCitedBySectionHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withCitedBySection), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutCitedBySection, StringUtil.fromInputStream(actIn));
+    assertEquals(commonFilteredOutput, StringUtil.fromInputStream(actIn));
   }
         
   public void testFooterHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withFooter), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutFooter, StringUtil.fromInputStream(actIn));
+    assertEquals(commonFilteredOutput, StringUtil.fromInputStream(actIn));
   }
   
   public void testWithStyleSheets() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withStylesheets), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutStylesheets, StringUtil.fromInputStream(actIn));
+    assertEquals(commonFilteredOutput, StringUtil.fromInputStream(actIn));
   }
   
   public void testMenu() throws Exception {
@@ -392,7 +393,7 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   public void testScript() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withJScript), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutJScript, StringUtil.fromInputStream(actIn));
+   assertEquals(withoutJScript, StringUtil.fromInputStream(actIn));
   }
   
   public void testAccessIcon() throws Exception {
@@ -409,12 +410,12 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   public void testShowPdfGa() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withShowPdfGa), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutShowPdfGa, StringUtil.fromInputStream(actIn));
+   assertEquals(withoutShowPdfGa, StringUtil.fromInputStream(actIn));
   }
   public void testKeywords() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withKeywords), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutKeywords, StringUtil.fromInputStream(actIn));
+   assertEquals(withoutKeywords, StringUtil.fromInputStream(actIn));
   }
   
 }
