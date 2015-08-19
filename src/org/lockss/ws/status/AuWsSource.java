@@ -733,36 +733,38 @@ public class AuWsSource extends AuWsResult {
       // Initialize the results.
       List<String> results = new ArrayList<String>();
 
-      int logException = 3;
+      if (AuUtil.hasSubstancePatterns(au)) {
+	int logException = 3;
 
-      CuIterator iterator = getAuCachedUrlSet().getCuIterator();
-      CachedUrl cu = null;
-      SubstanceChecker subChecker = new SubstanceChecker(au);
+	CuIterator iterator = getAuCachedUrlSet().getCuIterator();
+	CachedUrl cu = null;
+	SubstanceChecker subChecker = new SubstanceChecker(au);
 
-      // Loop through all the cached URLs.
-      while (iterator.hasNext()) {
-	try {
-	  cu = iterator.next();
+	// Loop through all the cached URLs.
+	while (iterator.hasNext()) {
+	  try {
+	    cu = iterator.next();
 
-	  // Check whether the cached URL has content.
-	  if (cu.hasContent()) {
-	    // Yes: Get the URL.
-	    String url = cu.getUrl();
+	    // Check whether the cached URL has content.
+	    if (cu.hasContent()) {
+	      // Yes: Get the URL.
+	      String url = cu.getUrl();
 
-	    // Check whether the URL has substance.
-	    if (subChecker.isSubstanceUrl(url)) {
-	      // Yes: Add it to the results.
-	      results.add(url);
+	      // Check whether the URL has substance.
+	      if (subChecker.isSubstanceUrl(url)) {
+		// Yes: Add it to the results.
+		results.add(url);
+	      }
 	    }
+	  } catch (Exception e) {
+	    // It shouldn't happen, but, if it does, it will likely happen many
+	    // times, so avoid cluttering the log.
+	    if (logException-- > 0) {
+	      log.warning("getSubstanceUrls() threw for cu " + cu, e);
+	    }
+	  } finally {
+	    AuUtil.safeRelease(cu);
 	  }
-	} catch (Exception e) {
-	  // It shouldn't happen, but, if it does, it will likely happen many
-	  // times, so avoid cluttering the log.
-	  if (logException-- > 0) {
-	    log.warning("getSubstanceUrls() threw for cu " + cu, e);
-	  }
-	} finally {
-	  AuUtil.safeRelease(cu);
 	}
       }
 
