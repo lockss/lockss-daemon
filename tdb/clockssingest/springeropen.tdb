@@ -1697,7 +1697,7 @@
         param[journal_issn] = 2196-1107
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
+        au < ready ; exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Solid State Lighting Volume 2 ; 2 >
   
     }
@@ -1713,7 +1713,7 @@
         param[journal_issn] = 2195-5832 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
+        au < ready ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Statistical Distributions and Applications Volume 2 ; 2 >
   
     }
@@ -1731,7 +1731,7 @@
   
         au < manifest ; exists ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 >
         au < manifest ; exists ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 >
-        au < wanted ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
+        au < ready ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
         au < expected ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 >
   
     }
@@ -1747,7 +1747,7 @@
         param[journal_issn] = 2196-064X 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
+        au < ready ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 >
   
     }
