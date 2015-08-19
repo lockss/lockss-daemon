@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 
 import getpass
 import optparse
@@ -143,7 +143,9 @@ class _HasherServiceOptions(object):
     parser.add_option_group(group)
     # Other options
     group = optparse.OptionGroup(parser, 'Other options')
-    group.add_option('--wait', type=int, default=30, help='seconds to wait between asynchronous checks')
+    group.add_option('--long-html-line', action='store_true', help='add a newline before each "<" character')
+    group.add_option('--long-text-line', action='store_true', help='replace each space with a newline')
+    group.add_option('--wait', type='int', default=30, help='seconds to wait between asynchronous checks')
     parser.add_option_group(group)
     return parser
 
@@ -164,7 +166,13 @@ class _HasherServiceOptions(object):
     if opts.output_prefix is None: parser.error('--output-prefix is required')
     if '/' in opts.output_prefix: parser.error('output prefix cannot contain a slash')
     self.output_prefix = opts.output_prefix
-    # wait
+    # long_html_line/long_text_line/wait
+    if any([opts.long_html_line, opts.long_text_line]) and self.url is None:
+      parser.error('--long-html-line, --long-text-line only apply to --url')
+    if opts.long_html_line and opts.long_text_line:
+      parser.error('--long-html-line, --long-text-line are incompatible')
+    self.long_html_line = opts.long_html_line
+    self.long_text_line = opts.long_text_line
     self.wait = opts.wait
     # auth
     u = opts.username or getpass.getpass('UI username: ')
@@ -184,11 +192,15 @@ def _do_hashes(options):
       res = get_asynchronous_hash_result(host, options.auth, reqid)
       if res._status == 'Done':
         if wholeau:
-          with open(os.path.join(options.output_directory, '%s.%s.hash' % (options.output_prefix, host)), 'w') as f:
-            f.write(res._blockFileDataHandler)
+          source = res._blockFileDataHandler
+          fstr = '%s.%s.hash' % (options.output_prefix, host)
         else:
-          with open(os.path.join(options.output_directory, '%s.%s.filtered' % (options.output_prefix, host)), 'w') as f:
-            f.write(res._recordFileDataHandler)
+          source = res._recordFileDataHandler
+          fstr = '%s.%s.filtered' % (options.output_prefix, host)
+        lines = [line for line in source]
+        if options.long_html_line: lines = map(lambda s: s.replace('<', '\n<'), lines)
+        if options.long_text_line: lines = map(lambda s: s.replace(' ', '\n'), lines)
+        with open(os.path.join(options.output_directory, fstr), 'w') as f: f.writelines(lines)
         remove_asynchronous_hash_request(host, options.auth, reqid)
         finished.append(host)
     for host in finished: del reqids[host]
