@@ -2892,8 +2892,8 @@
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
     au < crawling ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
     au < crawling ; exists ; 2014 ; British Journal of Anaesthesia Volume 113 ; 113 ; >
-    au < testing ; exists ; 2015 ; British Journal of Anaesthesia Volume 114 ; 114 ; >
-    au < testing ; exists ; 2015 ; British Journal of Anaesthesia Volume 115 ; 115 ; >
+    au < ready ; exists ; 2015 ; British Journal of Anaesthesia Volume 114 ; 114 ; >
+    au < ready ; exists ; 2015 ; British Journal of Anaesthesia Volume 115 ; 115 ; >
 
     }
 
@@ -2977,7 +2977,7 @@
     au < finished ; frozen ; 2012 ; The British Journal of Criminology: An International Review of Crime and Society Volume 52 ; 52 ; >
     au < crawling ; exists ; 2013 ; The British Journal of Criminology: An International Review of Crime and Society Volume 53 ; 53 ; >
     au < frozen ; exists ; 2014 ; The British Journal of Criminology: An International Review of Crime and Society Volume 54 ; 54 ; >
-    au < testing ; exists ; 2015 ; The British Journal of Criminology: An International Review of Crime and Society Volume 55 ; 55 ; >
+    au < ready ; exists ; 2015 ; The British Journal of Criminology: An International Review of Crime and Society Volume 55 ; 55 ; >
 
     }
 
@@ -3146,7 +3146,7 @@
     au < finished ; crawling ; 2012 ; The British Journal of Social Work Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; The British Journal of Social Work Volume 43 ; 43 ; >
     au < crawling ; exists ; 2014 ; The British Journal of Social Work Volume 44 ; 44 ; >
-    au < testing ; exists ; 2015 ; The British Journal of Social Work Volume 45 ; 45 ; >
+    au < ready ; exists ; 2015 ; The British Journal of Social Work Volume 45 ; 45 ; >
 
     }
 
@@ -3288,7 +3288,7 @@
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
     au < frozen ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
-    au < testing ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
+    au < ready ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
     au < testing ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
     au < expected ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
     au < expected ; exists ; 2015 ; British Medical Bulletin Volume 116 ; 116 ; >
@@ -4496,7 +4496,7 @@
     au < finished ; frozen ; 2012 ; Community Development Journal Volume 47 ; 47 ; >
     au < crawling ; exists ; 2013 ; Community Development Journal Volume 48 ; 48 ; >
     au < crawling ; exists ; 2014 ; Community Development Journal Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2015 ; Community Development Journal Volume 50 ; 50 ; >
+    au < testing ; exists ; 2015 ; Community Development Journal Volume 50 ; 50 ; >
 
     }
 
@@ -4583,7 +4583,7 @@
     au < finished ; frozen ; 2012 ; The Computer Journal Volume 55 ; 55 ; >
     au < frozen ; exists ; 2013 ; The Computer Journal Volume 56 ; 56 ; >
     au < crawling ; exists ; 2014 ; The Computer Journal Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2015 ; The Computer Journal Volume 58 ; 58 ; >
+    au < testing ; exists ; 2015 ; The Computer Journal Volume 58 ; 58 ; >
 
     }
 
@@ -4621,7 +4621,7 @@
     au < finished ; crawling ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 ; >
     au < frozen ; exists ; 2013 ; Contemporary Women's Writing Volume 7 ; 7 ; >
     au < frozen ; exists ; 2014 ; Contemporary Women's Writing Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 ; >
+    au < testing ; exists ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 ; >
 
     }
 
@@ -4665,7 +4665,7 @@
     au < finished ; frozen ; 2012 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 13 ; 13 ; >
     au < crawling ; exists ; 2014 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2015 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 15 ; 15 ; >
+    au < testing ; exists ; 2015 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 15 ; 15 ; >
 
     }
 
@@ -4728,7 +4728,7 @@
     au < finished ; crawling ; 2012 ; Contributions to Political Economy Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Contributions to Political Economy Volume 32 ; 32 ; >
     au < crawling ; exists ; 2014 ; Contributions to Political Economy Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2015 ; Contributions to Political Economy Volume 34 ; 34 ; >
+    au < testing ; exists ; 2015 ; Contributions to Political Economy Volume 34 ; 34 ; >
 
     }
 
@@ -4806,7 +4806,7 @@
     param[base_url] = http://dsh.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < manifest ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
+    au < testing ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
 
   }
 
@@ -4861,7 +4861,7 @@
     au < ingNotReady ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
     au < frozen ; exists ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
     au < crawling ; exists ; 2014 ; Diplomatic History Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2015 ; Diplomatic History Volume 39 ; 39 ; >
+    au < testing ; exists ; 2015 ; Diplomatic History Volume 39 ; 39 ; >
 
   }
 
@@ -4910,7 +4910,7 @@
     au < finished ; frozen ; 2012 ; DNA Research Volume 19 ; 19 ; >
     au < crawling ; exists ; 2013 ; DNA Research Volume 20 ; 20 ; >
     au < crawling ; exists ; 2014 ; DNA Research Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2015 ; DNA Research Volume 22 ; 22 ; >
+    au < testing ; exists ; 2015 ; DNA Research Volume 22 ; 22 ; >
 
     }
 
@@ -4982,7 +4982,7 @@
     au < finished ; crawling ; 2012 ; Early Music Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Early Music Volume 41 ; 41 ; >
     au < crawling ; exists ; 2014 ; Early Music Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2015 ; Early Music Volume 43 ; 43 ; >
+    au < testing ; exists ; 2015 ; Early Music Volume 43 ; 43 ; >
 
     }
 
@@ -5029,7 +5029,7 @@
     au < crawling ; exists ; 2012 ; Economic Policy Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Economic Policy Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; Economic Policy Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2015 ; Economic Policy Volume 30 ; 30 ; >
+    au < testing ; exists ; 2015 ; Economic Policy Volume 30 ; 30 ; >
 
   }
 
@@ -5108,7 +5108,7 @@
     au < finished ; frozen ; 2012 ; English: Journal of the English Association Volume 61 ; 61 ; >
     au < frozen ; exists ; 2013 ; English: Journal of the English Association Volume 62 ; 62 ; >
     au < crawling ; exists ; 2014 ; English: Journal of the English Association Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ; >
+    au < testing ; exists ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ; >
 
   }
 
@@ -5257,7 +5257,7 @@
     au < crawling ; exists ; 2012 ; English Historical Review Volume 127 ; 127 ; >
     au < crawling ; exists ; 2013 ; English Historical Review Volume 128 ; 128 ; >
     au < crawling ; exists ; 2014 ; English Historical Review Volume 129 ; 129 ; >
-    au < manifest ; exists ; 2015 ; English Historical Review Volume 130 ; 130 ; >
+    au < testing ; exists ; 2015 ; English Historical Review Volume 130 ; 130 ; >
 
     }
 
@@ -5355,7 +5355,7 @@
     au < finished ; crawling ; 2012 ; ELT Journal Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; ELT Journal Volume 67 ; 67 ; >
     au < crawling ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2015 ; ELT Journal Volume 69 ; 69 ; >
+    au < testing ; exists ; 2015 ; ELT Journal Volume 69 ; 69 ; >
 
     }
 
