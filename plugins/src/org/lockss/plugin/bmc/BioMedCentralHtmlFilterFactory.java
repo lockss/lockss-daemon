@@ -73,63 +73,63 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         // upper area above the article - Extreme Hash filtering!
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // left-hand area next to the article - Extreme Hash filtering!
-        HtmlNodeFilters.tagWithAttribute("div", "class", "left-article-box"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "left-article-box"),
+        // right-hand area next to the article - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
         // alert signup - Extreme Hash filtering!
         HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
         // Contains one-time names inside the page
         HtmlNodeFilters.tagWithAttribute("a", "name"),
         // Links to one-time names inside the page
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
-        // Contains the institution name; once a 'class', now an 'id'
-        // following six not in springeropen 
-        HtmlNodeFilters.tagWithAttribute("td", "class", "topnav"),
-        HtmlNodeFilters.tagWithAttribute("td", "id", "topnav"),
-        // Contains advertising
-        HtmlNodeFilters.tagWithAttribute("td", "class", "topad"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "newad"),
-        // Contains copyright year; also now references Springer 
-        HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
-        // Institution-dependent image
-        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?"),
-        // Institution-dependent link resolvers  v2 - added
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?"),
-        // Institution-dependent link resolvers   v1
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
-        
         // Institution-dependent greeting
         HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
+        
         // Malformed HTML
         HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab"),
+        // remove footer
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Contains advertising
+        HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "google-ad"),
+        // Social networking links (have counters)
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "social-networking-links"),
         // A usage counter/glif that gets updated over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "impact-factor"),
         // Contains adverstising <a class="banner-ad"
         HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
         // Contains adverstising <a class="skyscraper-ad" 
         HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
-        // google ad - may change?
-        HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "google-ad"),
-        // Social networking links (have counters)
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "social-networking-links"),
         // An open access link/glyph that may get added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/access"),
         // A highly accessed link/glyph that may get added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/mostviewed"),
-        // Springer branding below the footer
-        HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
-        // remove footer
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        
         // remove the mobile sidebar
         HtmlNodeFilters.tagWithAttribute("div", "id", "mobile-sidebar"),
-        // remove the right side column
-        HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
-
-        // removing empty <div> tag that moves around..
-        //HtmlNodeFilters.tagWithAttribute("div", "id", "biome-badge"),
-        // The text of this link changed from "About this article" to "Article metrics"
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
+        // Contains the institution name; once a 'class', now an 'id'
+        // following six not in springeropen 
+        HtmlNodeFilters.tagWithAttribute("td", "class", "topnav"),
+        HtmlNodeFilters.tagWithAttribute("td", "id", "topnav"),
+        // Contains advertising
+        HtmlNodeFilters.tagWithAttribute("td", "class", "topad"),
+        // Contains advertising
+        HtmlNodeFilters.tagWithAttribute("div", "id", "newad"),
+        // Contains copyright year; also now references Springer 
+        HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
+        // Institution-dependent link resolvers
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
+        // Institution-dependent image
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?"),
+        // Institution-dependent link resolvers  v2 - added
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?"),
+        // Springer branding below the footer
+        HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
+        
         // Journal of Cheminformatics -  an "accesses" and/or "citations" block
         // but the id is associated with the <h2>, not with the sibling <div>
         
+        // The text of this link changed from "About this article" to "Article metrics"
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
         // removes mathml inline wierdnesses
         HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "style", "display:inline$"),
