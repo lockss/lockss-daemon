@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,6 +80,7 @@ public class TestDaemonStatusService extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private DaemonStatusServiceImpl service;
   private String tempDirPath;
+  private SimulatedArchivalUnit sau0, sau1;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -94,15 +95,13 @@ public class TestDaemonStatusService extends LockssTestCase {
     PluginManager pluginManager = theDaemon.getPluginManager();
     pluginManager.startService();
 
-    SimulatedArchivalUnit sau0 =
-	PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
-	    simAuConfig(tempDirPath + "0"));
+    sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
+	simAuConfig(tempDirPath + "0"));
 
     PluginTestUtil.crawlSimAu(sau0);
 
-    SimulatedArchivalUnit sau1 =
-	PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
-	    simAuConfig(tempDirPath + "/1"));
+    sau1 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
+	simAuConfig(tempDirPath + "/1"));
 
     PluginTestUtil.crawlSimAu(sau1);
 
@@ -592,6 +591,23 @@ public class TestDaemonStatusService extends LockssTestCase {
    */
   public void testGetBuildTimestamp() throws Exception {
     assertNotNull(service.getBuildTimestamp());
+  }
+
+  /**
+   * Tests the operation that gets Archival Unit URL subtrees.
+   * 
+   * @throws Exception
+   */
+  public void testGetAuUrls() throws Exception {
+    List<String> urls = service.getAuUrls(sau0.getAuId(), null);
+    assertEquals(21, urls.size());
+    urls = service.getAuUrls(sau0.getAuId(), "http://www.example.com/branch1");
+    assertEquals(14, urls.size());
+    urls = service.getAuUrls(sau1.getAuId(), null);
+    assertEquals(21, urls.size());
+    urls = service.getAuUrls(sau1.getAuId(),
+	"http://www.example.com/branch1/branch1/");
+    assertEquals(7, urls.size());
   }
 
   private Configuration simAuConfig(String rootPath) {

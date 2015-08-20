@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -265,4 +265,19 @@ public interface DaemonStatusService {
   List<TdbAuWsResult> queryTdbAus(
       @WebParam(name = "tdbAuQuery") String tdbAuQuery)
 	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the URLs in an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @param url
+   *          A String with the URL above which no results will be provided, or
+   *          <code>NULL</code> if all the URLS are to be provided.
+   * @return a List<String> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<String> getAuUrls(@WebParam(name = "auId") String auId,
+      @WebParam(name = "url") String url) throws LockssWebServicesFault;
 }

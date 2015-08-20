@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,12 @@ import org.josql.QueryResults;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.BuildInfo;
 import org.lockss.util.DaemonVersion;
@@ -1257,5 +1262,73 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
 	  new LockssWebServicesFaultInfo("BUILD_TIMESTAMP = "
 	      + BuildInfo.getBuildProperty(BUILD_TIMESTAMP)));
     }
+  }
+
+  /**
+   * Provides the URLs in an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @param url
+   *          A String with the URL above which no results will be provided, or
+   *          <code>NULL</code> if all the URLS are to be provided.
+   * @return a List<String> with the results.
+   * @throws LockssWebServicesFault
+   */
+  public List<String> getAuUrls(String auId, String url)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getAuUrls(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "url = " + url);
+    }
+
+    // Input validation.
+    if (StringUtil.isNullString(auId)) {
+      throw new LockssWebServicesFault(
+	  new IllegalArgumentException("Invalid Archival Unit identifier"),
+	  new LockssWebServicesFaultInfo("Archival Unit identifier = " + auId));
+    }
+
+    LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
+    PluginManager pluginMgr = theDaemon.getPluginManager();
+    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+
+    if (au == null) {
+      throw new LockssWebServicesFault(
+	  "No Archival Unit with provided identifier",
+	  new LockssWebServicesFaultInfo("Archival Unit identifier = " + auId));
+    }
+
+    CachedUrlSet cuSet = null;
+
+    if (StringUtil.isNullString(url)) {
+      cuSet = au.getAuCachedUrlSet();
+    } else {
+      cuSet = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url));
+    }
+
+    CuIterator iterator = cuSet.getCuIterator();
+    CachedUrl cu = null;
+    List<String> results = new ArrayList<String>();
+
+    // Loop through all the cached URLs.
+    while (iterator.hasNext()) {
+      try {
+	// Get the next URL.
+	cu = iterator.next();
+
+	// Add it to the results.
+	results.add(cu.getUrl());
+      } finally {
+	AuUtil.safeRelease(cu);
+      }
+    }
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "results = " + results);
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "results.size() = " + results.size());
+    return results;
   }
 }
