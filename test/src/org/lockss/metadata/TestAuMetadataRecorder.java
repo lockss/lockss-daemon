@@ -154,6 +154,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runRecordNoJournalTitleNoISSNJournal();
     runNormalizeMetadataTest();
     runRecordMultipleJournalsAndPublishers();
+    runValidateMdItemTypeHierarchyTest();
   }
 
   ReindexingTask newReindexingTask(ArchivalUnit au,
@@ -1362,6 +1363,64 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
+  }
+
+  private void runValidateMdItemTypeHierarchyTest() throws Exception {
+    ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+	.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+    AuMetadataRecorder amr =
+	new AuMetadataRecorder(task, metadataManager, sau0);
+
+    assertTrue(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_JOURNAL,
+	    MetadataField.ARTICLE_TYPE_JOURNALARTICLE));
+
+    assertTrue(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_BOOK,
+	    MetadataField.ARTICLE_TYPE_BOOKCHAPTER));
+
+    assertTrue(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_BOOKSERIES,
+	    MetadataField.ARTICLE_TYPE_BOOKCHAPTER));
+
+    assertTrue(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_BOOK,
+	    MetadataField.ARTICLE_TYPE_BOOKVOLUME));
+
+    assertTrue(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_BOOKSERIES,
+	    MetadataField.ARTICLE_TYPE_BOOKVOLUME));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.ARTICLE_TYPE_JOURNALARTICLE));
+
+    assertFalse(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_BOOK,
+	    MetadataField.ARTICLE_TYPE_JOURNALARTICLE));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.ARTICLE_TYPE_BOOKCHAPTER));
+
+    assertFalse(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_JOURNAL,
+	    MetadataField.ARTICLE_TYPE_BOOKCHAPTER));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.ARTICLE_TYPE_BOOKVOLUME));
+
+    assertFalse(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_JOURNAL,
+	    MetadataField.ARTICLE_TYPE_BOOKVOLUME));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.PUBLICATION_TYPE_JOURNAL));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.PUBLICATION_TYPE_BOOK));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.PUBLICATION_TYPE_BOOKSERIES));
   }
 
   private static class MySimulatedPlugin extends SimulatedPlugin {

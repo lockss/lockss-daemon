@@ -857,6 +857,13 @@ public class AuMetadataRecorder {
       publicationType = mdinfo.publicationType;
       log.debug3(DEBUG_HEADER + "publicationType = " + publicationType);
 
+      // Validate the types of the metadata item and its parent.
+      if (!validateMdItemTypeHierarchy(publicationType, mdinfo.articleType)) {
+	throw new MetadataException("Mismatch between articleType '"
+	    + mdinfo.articleType + "' and publicationType '" + publicationType
+	    + "'", mdinfo);
+      }
+
       // Get the journal title received in the metadata.
       publicationTitle = mdinfo.publicationTitle;
       log.debug3(DEBUG_HEADER + "publicationTitle = " + publicationTitle);
@@ -868,9 +875,9 @@ public class AuMetadataRecorder {
 	publicationTitle = synthesizePublicationTitle(mdinfo, defaultId);
       }
       
-      // Check whether no name was received in the metadata.
+      // Check whether it is a book series.
       if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)) {
-        // Get the series title received in the metadata
+        // Yes: Get the series title received in the metadata
         seriesTitle = mdinfo.seriesTitle;
         log.debug3(DEBUG_HEADER + "seriesTitle = " + seriesTitle);
 
@@ -881,7 +888,12 @@ public class AuMetadataRecorder {
 
         // Get the proprietary series identifier received in the metadata.
         proprietarySeriesId = mdinfo.proprietarySeriesIdentifier;
-        log.debug3(DEBUG_HEADER + "proprietarySeriesId = " + proprietarySeriesId);
+        log.debug3(DEBUG_HEADER
+            + "proprietarySeriesId = " + proprietarySeriesId);
+      } else {
+	// No.
+	seriesTitle = null;
+	proprietarySeriesId = null;
       }
       
       // Get any ISBN values received in the metadata.
@@ -924,8 +936,16 @@ public class AuMetadataRecorder {
       // Get the type of the parent.
       parentMdItemType = getMdItemTypeName(conn, parentSeq);
       log.debug3(DEBUG_HEADER + "parentMdItemType = " + parentMdItemType);
-      
-      // replace any unknown series titles with this series title
+
+      // Skip it if the publication could not be found or created.
+      if (publicationSeq == null || parentSeq == null ||
+  	parentMdItemType == null) {
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER
+  	  + "Done: publicationSeq or parentSeq or parentMdItemType is null.");
+        return;
+      }
+
+      // Replace any unknown series titles with this series title
       if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)
           && !StringUtil.isNullString(seriesTitle)) {
         Long seriesPublicationSeq = mdManager.findBookSeries(conn, publisherSeq,
@@ -942,14 +962,6 @@ public class AuMetadataRecorder {
           }
         }
       }
-    }
-
-    // Skip it if the publication could not be found or created.
-    if (publicationSeq == null || parentSeq == null ||
-	parentMdItemType == null) {
-      log.debug3(DEBUG_HEADER
-	  + "Done: publicationSeq or parentSeq or parentMdItemType is null.");
-      return;
     }
 
     // Check whether the plugin has not been located in the database.
@@ -988,7 +1000,7 @@ public class AuMetadataRecorder {
     if (auMdSeq == null) {
       // Yes: Find the Archival Unit metadata in the database.
       auMdSeq = findAuMd(conn, auSeq);
-      log.debug3(DEBUG_HEADER + "new auMdSeq = " + auMdSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "old auMdSeq = " + auMdSeq);
     }
 
     // Check whether it is a new Archival Unit metadata.
@@ -1124,6 +1136,31 @@ public class AuMetadataRecorder {
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides an indication of whether there is a match between the types of a
+   * parent metadata item and a child metadata item.
+   * 
+   * @param parentType
+   *          A String with the type of the parent metadata item.
+   * @param childType
+   *          A String with the type of the child metadata item.
+   * @return <code>true</code> if there is a match between the types,
+   *         <code>false</code> otherwise.
+   */
+  boolean validateMdItemTypeHierarchy(String parentType, String childType) {
+    if (MetadataField.ARTICLE_TYPE_JOURNALARTICLE.equals(childType)) {
+      return MetadataField.PUBLICATION_TYPE_JOURNAL.equals(parentType);
+    } else if (MetadataField.ARTICLE_TYPE_BOOKCHAPTER.equals(childType)) {
+      return MetadataField.PUBLICATION_TYPE_BOOK.equals(parentType)
+	  || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(parentType);
+    } else if (MetadataField.ARTICLE_TYPE_BOOKVOLUME.equals(childType)) {
+      return MetadataField.PUBLICATION_TYPE_BOOK.equals(parentType)
+	  || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(parentType);
+    }
+    
+    return false;
   }
 
   /**
@@ -1357,8 +1394,7 @@ public class AuMetadataRecorder {
     String mdItemType = mdinfo.articleType;
     if (StringUtil.isNullString(mdItemType)) {
       // Skip it if the parent type is not a book or journal.
-      log.error(DEBUG_HEADER + "Unknown parentMdItemType = "
-  	  + parentMdItemType);
+      log.error(DEBUG_HEADER + "Unknown mdItemType = " + mdItemType);
       return;
     }
     
@@ -1634,6 +1670,7 @@ public class AuMetadataRecorder {
    */
   private boolean isSamePublication(ArticleMetadataInfo mdinfo) {
     return isSameProperty(publicationTitle, mdinfo.publicationTitle) &&
+	isSameProperty(publicationType, mdinfo.publicationType) &&
 	isSameProperty(pIsbn, mdinfo.isbn) &&
 	isSameProperty(eIsbn, mdinfo.eisbn) &&
 	isSameProperty(pIssn, mdinfo.issn) &&
