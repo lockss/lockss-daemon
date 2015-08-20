@@ -3072,7 +3072,7 @@
     au < finished ; frozen ; 2012 ; The British Journal for the Philosophy of Science Volume 63 ; 63 ; >
     au < frozen ; exists ; 2013 ; The British Journal for the Philosophy of Science Volume 64 ; 64 ; >
     au < crawling ; exists ; 2014 ; The British Journal for the Philosophy of Science Volume 65 ; 65 ; >
-    au < testing ; exists ; 2015 ; The British Journal for the Philosophy of Science Volume 66 ; 66 ; >
+    au < ready ; exists ; 2015 ; The British Journal for the Philosophy of Science Volume 66 ; 66 ; >
 
     }
 
@@ -3289,7 +3289,7 @@
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
     au < frozen ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
     au < ready ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
-    au < testing ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
+    au < ready ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
     au < expected ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
     au < expected ; exists ; 2015 ; British Medical Bulletin Volume 116 ; 116 ; >
 
@@ -3471,7 +3471,7 @@
     au < finished ; frozen ; 2012 ; Bulletin of the London Mathematical Society Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Bulletin of the London Mathematical Society Volume 45 ; 45 ; >
     au < crawling ; exists ; 2014 ; Bulletin of the London Mathematical Society Volume 46 ; 46 ; >
-    au < testing ; exists ; 2015 ; Bulletin of the London Mathematical Society Volume 47 ; 47 ; >
+    au < ready ; exists ; 2015 ; Bulletin of the London Mathematical Society Volume 47 ; 47 ; >
 
     }
 
@@ -3649,7 +3649,7 @@
     au < finished ; crawling ; 2012 ; The Cambridge Quarterly Volume 41 ; 41 ; >
     au < frozen ; exists ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 ; >
-    au < testing ; exists ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
+    au < ready ; exists ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
 
     }
 
@@ -3688,7 +3688,7 @@
     au < finished ; crawling ; 2012 ; Capital Markets Law Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ; >
-    au < testing ; exists ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ; >
+    au < ready ; exists ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ; >
 
     }
 
@@ -5444,7 +5444,7 @@
     au < crawling ; exists ; 2012 ; Environmental Entomology Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Environmental Entomology Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; Environmental Entomology Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2015 ; Environmental Entomology Volume 44 ; 44 ; >
+    au < testing ; exists ; 2015 ; Environmental Entomology Volume 44 ; 44 ; >
 
   }
 
@@ -5479,7 +5479,7 @@
     au < finished ; frozen ; 2012 ; Environmental History Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Environmental History Volume 18 ; 18 ; >
     au < crawling ; exists ; 2014 ; Environmental History Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2015 ; Environmental History Volume 20 ; 20 ; >
+    au < testing ; exists ; 2015 ; Environmental History Volume 20 ; 20 ; >
 
   }
 
@@ -5576,7 +5576,7 @@
     au < finished ; frozen ; 2012 ; Epidemiologic Reviews Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Epidemiologic Reviews Volume 35 ; 35 ; >
     au < crawling ; exists ; 2014 ; Epidemiologic Reviews Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2015 ; Epidemiologic Reviews Volume 37 ; 37 ; >
+    au < testing ; exists ; 2015 ; Epidemiologic Reviews Volume 37 ; 37 ; >
 
     }
 
@@ -5707,7 +5707,7 @@
     au < finished ; frozen ; 2012 ; Essays in Criticism Volume 62 ; 62 ; >
     au < frozen ; exists ; 2013 ; Essays in Criticism Volume 63 ; 63 ; >
     au < crawling ; exists ; 2014 ; Essays in Criticism Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2015 ; Essays in Criticism Volume 65 ; 65 ; >
+    au < testing ; exists ; 2015 ; Essays in Criticism Volume 65 ; 65 ; >
 
     }
 
@@ -5779,7 +5779,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Europace Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Europace Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; Europace Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2015 ; Europace Volume 17 ; 17 ; >
+    au < testing ; exists ; 2015 ; Europace Volume 17 ; 17 ; >
 
     }
 
@@ -5859,7 +5859,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal Volume 34 ; 34 ; >
     au < crawling ; exists ; 2014 ; European Heart Journal Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2015 ; European Heart Journal Volume 36 ; 36 ; >
+    au < testing ; exists ; 2015 ; European Heart Journal Volume 36 ; 36 ; >
 
     }
 
@@ -5921,7 +5921,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
     au < doesNotExist ; doesNotExist ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 ; >
+    au < testing ; exists ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 ; >
 
     }
 
@@ -5985,8 +5985,8 @@
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; >
     au < crawling ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
     au < crawling ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 48 ; 48 ; >
+    au < testing ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
+    au < testing ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 48 ; 48 ; >
 
   }
 
@@ -6035,7 +6035,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
     au < crawling ; exists ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 ; >
+    au < testing ; exists ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 ; >
 
     }
   }
@@ -6182,7 +6182,7 @@
     au < finished ; frozen ; 2012 ; European Journal of International Law Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; European Journal of International Law Volume 24 ; 24 ; >
     au < crawling ; exists ; 2014 ; European Journal of International Law Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2015 ; European Journal of International Law Volume 26 ; 26 ; >
+    au < testing ; exists ; 2015 ; European Journal of International Law Volume 26 ; 26 ; >
 
     }
 
@@ -6262,7 +6262,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ; >
     au < crawling ; exists ; 2014 ; European Journal of Orthodontics Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 ; >
+    au < testing ; exists ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 ; >
 
     }
 
@@ -6330,7 +6330,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Public Health Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; European Journal of Public Health Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2015 ; European Journal of Public Health Volume 25 ; 25 ; >
+    au < testing ; exists ; 2015 ; European Journal of Public Health Volume 25 ; 25 ; >
 
     }
 
@@ -6401,7 +6401,7 @@
     au < finished ; crawling ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ; >
     au < crawling ; exists ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ; >
+    au < testing ; exists ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ; >
 
     }
 
@@ -6437,7 +6437,7 @@
     au < finished ; frozen ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
     au < frozen ; exists ; 2013 ; European Review of Economic History Volume 17 ; 17 ; >
     au < crawling ; exists ; 2014 ; European Review of Economic History Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2015 ; European Review of Economic History Volume 19 ; 19 ; >
+    au < testing ; exists ; 2015 ; European Review of Economic History Volume 19 ; 19 ; >
 
   }
 
@@ -13439,7 +13439,7 @@
     au < manifest ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
     au < manifest ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
     au < manifest ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
-    au < testing ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
+    au < notReady ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; > #Probe url
     au < ready ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
     au < testing ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
 
