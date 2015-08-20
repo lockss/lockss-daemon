@@ -2,16 +2,16 @@
    -->
 <map>
   <entry>
-   <string>plugin_status</string>
-   <string>ready</string>
+    <string>plugin_status</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bmc.BMCPlugin</string>
   </entry>
   <entry>
-   <string>plugin_notes</string>
-   <string>no longer using non-definitional parameter journal_code</string>
+    <string>plugin_notes</string>
+    <string>no longer using non-definitional parameter journal_code</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -38,7 +38,6 @@
     <string>au_name</string>
     <string>"BioMed Central Plugin (BMC Series, PhysMath Central), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
-
   <entry>
     <string>plugin_name</string>
     <string>BioMed Central Plugin (BMC Series, PhysMath Central)</string>
