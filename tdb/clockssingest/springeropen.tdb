@@ -1697,7 +1697,7 @@
         param[journal_issn] = 2196-1107
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Solid State Lighting Volume 2 ; 2 >
   
     }
@@ -1713,7 +1713,7 @@
         param[journal_issn] = 2195-5832 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Statistical Distributions and Applications Volume 2 ; 2 >
   
     }
@@ -1731,7 +1731,7 @@
   
         au < manifest ; exists ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 >
         au < manifest ; exists ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 >
-        au < ready ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
+        au < crawling ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
         au < expected ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 >
   
     }
@@ -1747,7 +1747,7 @@
         param[journal_issn] = 2196-064X 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 >
   
     }
@@ -1764,7 +1764,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 >
-        au < ready ; exists ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 >
+        au < crawling ; exists ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 ; 3 >
   
     }
@@ -1783,7 +1783,7 @@
         au < manifest ; exists ; 2011 ; Language Testing in Asia Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Language Testing in Asia Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Language Testing in Asia Volume 3 ; 3 >
-        au < ready ; exists ; 2014 ; Language Testing in Asia Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Language Testing in Asia Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Language Testing in Asia Volume 5 ; 5 >
   
     }
@@ -1818,7 +1818,7 @@
   
         au < manifest ; exists ; 2012 ; Maritime Studies Volume 11 ; 11 >
         au < manifest ; exists ; 2013 ; Maritime Studies Volume 12 ; 12 >
-        au < ready ; exists ; 2014 ; Maritime Studies Volume 13 ; 13 >
+        au < crawling ; exists ; 2014 ; Maritime Studies Volume 13 ; 13 >
         au < manifest ; exists ; 2015 ; Maritime Studies Volume 14 ; 14 >
   
     }
@@ -1851,7 +1851,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
-        au < ready ; exists ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
+        au < crawling ; exists ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Micro and Nano Systems Letters Volume 3 ; 3 >
   
     }
@@ -1870,7 +1870,7 @@
         au < manifest ; exists ; 2011 ; Multilingual Education Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Multilingual Education Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Multilingual Education Volume 3 ; 3 >
-        au < ready ; exists ; 2014 ; Multilingual Education Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Multilingual Education Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Multilingual Education Volume 5 ; 5 >
   
     }
@@ -1929,7 +1929,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 >
-        au < ready ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 >
+        au < crawling ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 >
         au < manifest ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 ; 45 >
   
     }
@@ -1947,7 +1947,7 @@
   
         au < manifest ; exists ; 2012 ; Optical Nanoscopy Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Optical Nanoscopy Volume 2 ; 2 >
-        au < ready ; exists ; 2014 ; Optical Nanoscopy Volume 3 ; 3 >
+        au < crawling ; exists ; 2014 ; Optical Nanoscopy Volume 3 ; 3 >
         au < expected ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 >
   
     }
@@ -1966,7 +1966,7 @@
         au < manifest ; exists ; 2011 ; Organic and Medicinal Chemistry Letters Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 >
-        au < ready ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 >
         au < expected ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 >
   
     }
@@ -1985,7 +1985,7 @@
         au < manifest ; exists ; 2011 ; Pastoralism Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Pastoralism Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Pastoralism Volume 3 ; 3 >
-        au < ready ; exists ; 2014 ; Pastoralism Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Pastoralism Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
   
     }
@@ -2003,7 +2003,7 @@
   
         au < manifest ; exists ; 2012 ; Planetary Science Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Planetary Science Volume 2 ; 2 >
-        au < ready ; exists ; 2014 ; Planetary Science Volume 3 ; 3 >
+        au < crawling ; exists ; 2014 ; Planetary Science Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
   
     }
@@ -2035,7 +2035,7 @@
         param[journal_issn] = 2197-4284
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
   
     }
@@ -2070,7 +2070,7 @@
         param[journal_issn] = 2197-9847
         comment[platform] = BioMedCentralPlugin
 
-        au < ready ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
 
     }
