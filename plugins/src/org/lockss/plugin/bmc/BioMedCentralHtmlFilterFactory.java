@@ -50,6 +50,12 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // malformed html causing low agreement <div id="oas-
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
+        // head tag - Extreme Hash filtering!
+        HtmlNodeFilters.tag("head"),
+        // citation format changes or div id="topmatter" - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("section", "class", "cit"),
         // Contains variable code
         HtmlNodeFilters.tag("script"),
         // Contains variable alternatives to the code
@@ -62,6 +68,14 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tag("object"),
         // CSS and RSS links varied over time
         HtmlNodeFilters.tag("link"),
+        //filter out comments
+        HtmlNodeFilters.comment(),
+        // upper area above the article - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
+        // left-hand area next to the article - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("div", "class", "left-article-box"),
+        // alert signup - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
         // Contains one-time names inside the page
         HtmlNodeFilters.tagWithAttribute("a", "name"),
         // Links to one-time names inside the page
@@ -72,12 +86,15 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("td", "id", "topnav"),
         // Contains advertising
         HtmlNodeFilters.tagWithAttribute("td", "class", "topad"),
-        // Contains advertising
         HtmlNodeFilters.tagWithAttribute("div", "id", "newad"),
         // Contains copyright year; also now references Springer 
         HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
-        // Institution-dependent link resolvers
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
+        // Institution-dependent image
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?"),
+        // Institution-dependent link resolvers  v2 - added
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?"),
+        // Institution-dependent link resolvers   v1
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
         
         // Institution-dependent greeting
         HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
@@ -85,18 +102,18 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab"),
         // A usage counter/glif that gets updated over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "impact-factor"),
-	// Contains adverstising <a class="banner-ad"
-	HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
-	// Contains adverstising <a class="skyscraper-ad" 
-	HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
-	// google ad - may change?
-        HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "google-ad.*"),
+        // Contains adverstising <a class="banner-ad"
+        HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
+        // Contains adverstising <a class="skyscraper-ad" 
+        HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
+        // google ad - may change?
+        HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "google-ad"),
         // Social networking links (have counters)
         HtmlNodeFilters.tagWithAttribute("ul", "id", "social-networking-links"),
         // An open access link/glyph that may get added
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/access"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/access"),
         // A highly accessed link/glyph that may get added
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/mostviewed"),
         // Springer branding below the footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
         // remove footer
@@ -115,7 +132,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         
         // removes mathml inline wierdnesses
         HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "style", ".*display:inline$"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "style", "display:inline$"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "inline-math"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "inlinenumber"),
@@ -140,9 +157,10 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         }
     };
     
-    InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    
+    InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    // added whitespace filter
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
 

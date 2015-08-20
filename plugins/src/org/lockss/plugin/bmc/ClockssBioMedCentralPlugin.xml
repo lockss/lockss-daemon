@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -22,8 +22,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>41</string>
-  </entry> 
+    <string>42</string>
+  </entry>
   <entry>
     <string>au_name</string>
     <string>"BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>

@@ -121,6 +121,20 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   private static final String SkyscraperAdHtmlHashFiltered =
     "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
   
+  private static final String HeadHtmlHash = 
+    "<html><head>" +
+    "<script>" +
+    "window.onmessage = function(e) {" +
+    "if(e.data == \"biome-failed\") {" +
+    "console.log(e);" +
+    "document.getElementById(\"biome-badge\").style.display = \"none\";" +
+    "}" +
+    "};" +
+    "</script>" +
+    "</head></html>";
+  private static final String HeadHtmlHashFiltered =
+    "<html></html>";
+  
   private static final String BiomeBadgeHash = 
     "<div id=\"mobile-sidebar\">" +
     "<div id=\"biome-badge\" style=\"width: 100%\">" +
@@ -233,6 +247,9 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
 
     /* SkyscraperAd */     
     checkHashFilter1(SkyscraperAdHtmlHash, SkyscraperAdHtmlHashFiltered);
+
+    /* head */     
+    checkHashFilter1(HeadHtmlHash, HeadHtmlHashFiltered);
 
   }
   private static final String SocialNetworkingHash = "<ul id=\"social-networking-links\">"+
