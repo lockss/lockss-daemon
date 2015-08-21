@@ -40,7 +40,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.urlconn.CacheException;

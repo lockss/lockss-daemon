@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -119,7 +119,11 @@ public class TestBMJDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://www.bmj.org/content/347/bmj.f3757");
+    assertMatchesRE(pat, "http://www.bmj.org/content/347/7373/1164.1");
     // but not to ...
+    assertNotMatchesRE(pat, "http://www.bmj.org/content/bmj/347");
+    assertNotMatchesRE(pat, "http://www.bmj.org/content/bmj/347.1");
+    assertNotMatchesRE(pat, "http://www.bmj.org/content/bmj/347/");
     assertNotMatchesRE(pat, "http://www.bmj.org/content/bmj/347/bmj.f3757");
     assertNotMatchesRE(pat, "http://www.bmj.org/content/347/bmj.f3757.abstract");
     assertNotMatchesRE(pat, "http://www.bmj.org/content/347/bmj.f3757.full");

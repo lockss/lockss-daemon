@@ -90,10 +90,11 @@ public class BMJDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFact
   }
   
   protected static NodeFilter[] filters = new NodeFilter[] {
-    new TagNameFilter("head"),
-    // only article tag contents are hashed
-    HtmlNodeFilters.allExceptSubtree(new TagNameFilter("body"),
-        new TagNameFilter("article")),
+    HtmlNodeFilters.tag("head"),
+    // only highwire-markup contents are hashed
+    HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tag("body"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "highwire-markup")),
+    //    HtmlNodeFilters.tag("article")),
     // remove cit-extra, etc. that change based on institution access or over time
     HtmlNodeFilters.tagWithAttribute("div", "class", "cit-extra"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "subscribe"),

@@ -51,21 +51,31 @@ public class BMJDrupalArticleIteratorFactory
   
   // Cannot use volume_name as the BMJ mixes articles (ie. /346/bmj.f4217 in vol 347, issue 7915)
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/[^/]{1,4}/bmj[.](?:[^./?&]+)$\", base_url";
+    "\"^%scontent/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.]full)[^/?]+)$\", base_url, volume_name";
   
   // various aspects of an article
   // http://www.bmj.com/content/345/bmj.e7558
   // http://www.bmj.com/content/345/bmj.e7558.full.pdf
   // http://www.bmj.com/content/345/bmj.f7558.full.pdf+html
   
+  // http://www.bmj.com/content/325/7373/1156
+  // http://www.bmj.com/content/325/7373/1156.full.pdf+html
+  // http://www.bmj.com/content/325/7373/1156.full-text.print (not preserved)
+  
   
   protected static final Pattern LANDING_PATTERN = Pattern.compile(
-      "/(bmj[.][^./?&]+)$", Pattern.CASE_INSENSITIVE);
+      "/content/([^/]{1,4})/(bmj[.][^./?&]+|[0-9]{4,}/[0-9.]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String LANDING_REPLACEMENT = "/$1";
-  protected static final String PDF_REPLACEMENT = "/$1.full.pdf";
-  protected static final String PDF_LANDING_REPLACEMENT = "/$1.full.pdf+html";
+  protected static final String LANDING_REPLACEMENT = "/content/$1/$2";
+  protected static final String PDF_REPLACEMENT = "/content/$1/$2.full.pdf";
+  protected static final String PDF_LANDING_REPLACEMENT = "/content/$1/$2.full.pdf+html";
+  
+  protected static final Pattern VIP_ARTICLE_PATTERN = Pattern.compile(
+      "/content/([^/]+/[^/]+)/(?!.*[.]full)([^/?]+)$", Pattern.CASE_INSENSITIVE);
+  
+  // how to change from one form (aspect) of article to another
+  protected static final String VIP_ARTICLE_REPLACEMENT = "/content/$1/$2";
   
   
   @Override
@@ -86,6 +96,11 @@ public class BMJDrupalArticleIteratorFactory
         LANDING_PATTERN, LANDING_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
+    
+    builder.addAspect(
+        VIP_ARTICLE_PATTERN, VIP_ARTICLE_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
         PDF_LANDING_REPLACEMENT,

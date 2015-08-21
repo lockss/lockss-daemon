@@ -73,6 +73,9 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       "    <div class=\"row\">\n" + 
       "        <article>\n" + 
       "          <div class=\"panel-pane pane-highwire-markup\">\n" +
+      "            <div class=\"highwire-markup\">\n" +
+      " Some content" +
+      "            </div>\n" + 
       "          </div>\n" + 
       "        </article>\n" + 
       "      <div class=\"right-nav col-xs-12 col-sm-4 col-md-4 col-lg-4\">\n" + 
@@ -112,10 +115,13 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       "<section class=\"block block-system clearfix\" id=\"block-system-main\">" + 
       "<div id=\"issue-toc-page\" class=\"panel-display\">" + 
       "<div class=\"row\">" + 
-      "<article>\n" + 
-      "          <div class=\"panel-pane pane-highwire-markup\">\n" +
-      "          </div>\n" + 
-      "        </article>" +
+      "<article>" + 
+      "<div class=\"panel-pane pane-highwire-markup\">" +
+      "<div class=\"highwire-markup\">\n" +
+      " Some content" +
+      "            </div>" + 
+      "</div>" + 
+      "</article>" +
       "</div></div></section></div></div></div></div>" +
       "</body>\n" +
       "</html>\n";
