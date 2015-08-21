@@ -85,6 +85,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("title"),
         // Various <br> tags added or removed over time
         new TagNameFilter("br"),
+        //comments
+        HtmlNodeFilters.comment(),
 
         HtmlNodeFilters.tagWithAttributeRegex("span", "id", "CenterContent.*Header"),
         //hidden inputs with changing keys

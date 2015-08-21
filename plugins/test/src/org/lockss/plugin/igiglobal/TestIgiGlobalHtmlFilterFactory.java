@@ -142,7 +142,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
       " ";
 	
   public static final String citedCitedByFavoriteButtons =
-    "<p> Hello World </p><span style=\"display:inline-block;\">" +
+    "<!--[if lte IE 7]><body class=\"MainBody ie7\"><![endif]--><!--[if gt IE 7]><body class=\"MainBody ie8\"><![endif]--><!--[if !IE]> --><body class=\"MainBody\"><!-- <![endif]--><p> Hello World </p><span style=\"display:inline-block;\">" +
     "<span style=\"display:inline-block;margin-right:5px;float:left;\">"+
     "<span id=\"citeContent\" onclick=\"toggleOptions('citation', 'CiteContent');\" class=\"useremail\">"+
     "<span id=\"ctl00_ctl00_cphMain_cphCenterContent_ucCiteContent_spanCiteContent\" class=\"btn-gray-rnd\">"+
@@ -204,11 +204,12 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 
     assertEquals(footerWithSponsorFiltered, StringUtil.fromInputStream(actIn));
   }
+  
   public void testCiteButtons() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(null,
                                                        new StringInputStream(citedCitedByFavoriteButtons),
                                                        Constants.DEFAULT_ENCODING);
 
     assertEquals(citedCitedByFavoriteButtonsFiltered, StringUtil.fromInputStream(actIn));
-  } 
+  }
 }
