@@ -18103,6 +18103,23 @@
   {
 
     title <
+      name = Open Forum Infectious Diseases ;
+      eissn = 2328-8957 ;
+      issnl = 2328-8957 
+    >
+
+    param[base_url] = http://ofid.oxfordjournals.org/
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
       name = The Opera Quarterly ;
       issn = 0736-0053 ;
       eissn = 1476-2870 ;
