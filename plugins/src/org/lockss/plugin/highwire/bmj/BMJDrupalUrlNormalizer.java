@@ -50,9 +50,7 @@ public class BMJDrupalUrlNormalizer extends HighWireDrupalUrlNormalizer {
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     
     if (url.contains(PREFIX)) {
-      log.debug(url);
       url = url.replace(PREFIX, REPLACE);
-      log.debug(url);
     }
     
     return super.normalizeUrl(url, au);
