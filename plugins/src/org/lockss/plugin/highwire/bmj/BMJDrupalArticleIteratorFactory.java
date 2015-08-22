@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire.bmj;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -49,33 +50,33 @@ public class BMJDrupalArticleIteratorFactory
   protected static final String ROOT_TEMPLATE =
     "\"%scontent/\", base_url";
   
-  // Cannot use volume_name as the BMJ mixes articles (ie. /346/bmj.f4217 in vol 347, issue 7915)
+  // pattern has vol/page as well as older style vip (vol/issue/page)
+  // Cannot use volume_name in vol/page pattern as the BMJ mixes articles
+  //        (ie. /346/bmj.f4217 in vol 347, issue 7915)
   protected static final String PATTERN_TEMPLATE =
     "\"^%scontent/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.]full)[^/?]+)$\", base_url, volume_name";
   
   // various aspects of an article
   // http://www.bmj.com/content/345/bmj.e7558
+  // http://www.bmj.com/content/325/7373/1156
+  //
   // http://www.bmj.com/content/345/bmj.e7558.full.pdf
   // http://www.bmj.com/content/345/bmj.f7558.full.pdf+html
-  
-  // http://www.bmj.com/content/325/7373/1156
+  //
   // http://www.bmj.com/content/325/7373/1156.full.pdf+html
   // http://www.bmj.com/content/325/7373/1156.full-text.print (not preserved)
   
   
-  protected static final Pattern LANDING_PATTERN = Pattern.compile(
-      "/content/([^/]{1,4})/(bmj[.][^./?&]+|[0-9]{4,}/[0-9.]+)$", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern VOL_PAGEID_PATTERN = Pattern.compile(
+      "/content/([^/]{1,4})/(bmj[.][^./?&]+)$", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern VIP_PATTERN = Pattern.compile(
+      "/content/([^/]+/(?!bmj[.])[^/]+)/(?!.*[.](full|abstract))([^/?]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String LANDING_REPLACEMENT = "/content/$1/$2";
+  protected static final String LANDING_PAGE_REPLACEMENT = "/content/$1/$2";
   protected static final String PDF_REPLACEMENT = "/content/$1/$2.full.pdf";
   protected static final String PDF_LANDING_REPLACEMENT = "/content/$1/$2.full.pdf+html";
-  
-  protected static final Pattern VIP_ARTICLE_PATTERN = Pattern.compile(
-      "/content/([^/]+/[^/]+)/(?!.*[.]full)([^/?]+)$", Pattern.CASE_INSENSITIVE);
-  
-  // how to change from one form (aspect) of article to another
-  protected static final String VIP_ARTICLE_REPLACEMENT = "/content/$1/$2";
+  protected static final String ABSTRACT_REPLACEMENT = "/content/$1/$2.abstract";
   
   
   @Override
@@ -89,18 +90,14 @@ public class BMJDrupalArticleIteratorFactory
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
-    // set up landing page to be an aspect that will trigger an ArticleFiles
-    // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
+    // set up vol/pageid & vip to be aspects that will trigger an ArticleFiles
+    // NOTE - for the moment this also means they are considered a FULL_TEXT_CU
     // until this is deprecated
     builder.addAspect(
-        LANDING_PATTERN, LANDING_REPLACEMENT,
+        Arrays.asList(VOL_PAGEID_PATTERN, VIP_PATTERN),
+        LANDING_PAGE_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
-    
-    builder.addAspect(
-        VIP_ARTICLE_PATTERN, VIP_ARTICLE_REPLACEMENT,
-        ArticleFiles.ROLE_ARTICLE_METADATA,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
         PDF_LANDING_REPLACEMENT,
@@ -109,6 +106,11 @@ public class BMJDrupalArticleIteratorFactory
     builder.addAspect(
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    builder.addAspect(
+        ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA,
+        ArticleFiles.ROLE_ABSTRACT);
     
     return builder.getSubTreeArticleIterator();
   }
