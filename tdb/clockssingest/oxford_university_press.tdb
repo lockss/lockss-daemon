@@ -17767,13 +17767,27 @@
   {
 
     title <
+      name = Open Forum Infectious Diseases ;
+      eissn = 2328-8957 ;
+      issnl = 2328-8957 
+    >
+
+    param[base_url] = http://ofid.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
+    au < exists ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
       name = The Opera Quarterly ;
       issn = 0736-0053 ;
       eissn = 1476-2870 ;
       issnl = 0736-0053
     >
-
-    {
 
     param[base_url] = http://oq.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
@@ -17809,8 +17823,6 @@
     au < crawling ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
     au < frozen ; exists ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
     au < manifest ; exists ; 2015 ; The Opera Quarterly Volume 31 ; 31 ; >
-
-    }
 
   }
 
