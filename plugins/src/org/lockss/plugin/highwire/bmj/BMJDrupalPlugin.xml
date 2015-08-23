@@ -53,7 +53,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%scontent/[^/]+/bmj[.][^/]+([.]full([.]pdf([+]html)?)?)$", base_url</string>
-      <string>"^%scontent/%s/[^/]+/[^/?]+([.]full([.]pdf([+]html)?)?)?$", base_url, volume_name</string>
+      <string>"^%scontent/%s/[^/]+/(?!.*[.]abstract)[^/?]+([.]full([.]pdf([+]html)?)?)?$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
