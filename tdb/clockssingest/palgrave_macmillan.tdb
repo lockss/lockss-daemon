@@ -110,9 +110,9 @@
       param[journal_id] = biosoc
 
       au < exists ; exists ; 2012 ; BioSocieties Volume 7 ; 2012 ; 7 >
-      au < exists ; exists ; 2013 ; BioSocieties Volume 8 ; 2013 ; 8 >
-      au < exists ; exists ; 2014 ; BioSocieties Volume 9 ; 2014 ; 9 >
-      au < expected ; exists ; 2015 ; BioSocieties Volume 10 ; 2015 ; 10 >
+      au < testing ; exists ; 2013 ; BioSocieties Volume 8 ; 2013 ; 8 >
+      au < testing ; exists ; 2014 ; BioSocieties Volume 9 ; 2014 ; 9 >
+      au < testing ; exists ; 2015 ; BioSocieties Volume 10 ; 2015 ; 10 >
 
     }
 
@@ -152,9 +152,9 @@
       param[journal_id] = be
 
       au < exists ; exists ; 2012 ; British Economics Volume 47 ; 2012 ; 47 >
-      au < manifest ; exists ; 2013 ; British Economics Volume 48 ; 2013 ; 48 >
-      au < exists ; exists ; 2014 ; British Economics Volume 49 ; 2014 ; 49 >
-      au < manifest ; exists ; 2015 ; British Economics Volume 50 ; 2015 ; 50 >
+      au < testing ; exists ; 2013 ; British Economics Volume 48 ; 2013 ; 48 >
+      au < testing ; exists ; 2014 ; British Economics Volume 49 ; 2014 ; 49 >
+      au < testing ; exists ; 2015 ; British Economics Volume 50 ; 2015 ; 50 >
 
     }
 
@@ -170,9 +170,9 @@
       param[journal_id] = ces
 
       au < exists ; exists ; 2012 ; Comparative Economic Studies Volume 54 ; 2012 ; 54 >
-      au < manifest ; exists ; 2013 ; Comparative Economic Studies Volume 55 ; 2013 ; 55 >
-      au < exists ; exists ; 2014 ; Comparative Economic Studies Volume 56 ; 2014 ; 56 >
-      au < manifest ; exists ; 2015 ; Comparative Economic Studies Volume 57 ; 2015 ; 57 >
+      au < testing ; exists ; 2013 ; Comparative Economic Studies Volume 55 ; 2013 ; 55 >
+      au < testing ; exists ; 2014 ; Comparative Economic Studies Volume 56 ; 2014 ; 56 >
+      au < testing ; exists ; 2015 ; Comparative Economic Studies Volume 57 ; 2015 ; 57 >
 
     }
 
@@ -314,8 +314,8 @@
       param[journal_id] = development
 
       au < exists ; exists ; 2012 ; Development Volume 55 ; 2012 ; 55 >
-      au < exists ; exists ; 2013 ; Development Volume 56 ; 2013 ; 56 >
-      au < exists ; exists ; 2014 ; Development Volume 57 ; 2014 ; 57 >
+      au < testing ; exists ; 2013 ; Development Volume 56 ; 2013 ; 56 >
+      au < testing ; exists ; 2014 ; Development Volume 57 ; 2014 ; 57 >
       au < expected ; exists ; 2015 ; Development Volume 58 ; 2015 ; 58 >
 
     }
@@ -334,8 +334,8 @@
       au < exists ; exists ; 2012 ; Eastern Economic Journal Volume 38 ; 2012 ; 38 >
       au < exists ; exists ; 2013 ; Eastern Economic Journal Volume 39 ; 2013 ; 39 >
       au < exists ; exists ; 2013 ; Eastern Economic Journal Volume 40 (2013) ; 2013 ; 40 >
-      au < exists ; exists ; 2014 ; Eastern Economic Journal Volume 40 (2014) ; 2014 ; 40 >
-      au < expected ; exists ; 2015 ; Eastern Economic Journal Volume 41 ; 2015 ; 41 >
+      au < testing ; exists ; 2014 ; Eastern Economic Journal Volume 40 (2014) ; 2014 ; 40 >
+      au < testing ; exists ; 2015 ; Eastern Economic Journal Volume 41 ; 2015 ; 41 >
 
     }
     
@@ -625,8 +625,9 @@
 
       param[journal_id] = jma
 
-      au < exists ; exists ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 20 ; 2013 ; 20 >
-      au < exists ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 21 ; 2014 ; 21 >
+      au < testing ; exists ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 1 ; 2013 ; 1 >
+      au < testing ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 2 ; 2014 ; 2 >
+      au < testing ; exists ; 2015 ; Journal of Database Marketing & Customer Strategy Management Volume 3 ; 2015 ; 3 >
 
     }
 
