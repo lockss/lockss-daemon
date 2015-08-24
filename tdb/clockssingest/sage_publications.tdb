@@ -8218,7 +8218,8 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[0] = content available from 1968 volume 1 to 1972 volume 5
 
-      au < ready ; exists ; 2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; >
+      au < ready ; exists ; 2014-2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2015-2016 ; A Current Bibliography on African Affairs Volume 48 ; 48 ; >
 
   }
 
@@ -14494,6 +14495,7 @@
       au < exists ; exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 ; >
       au < manifest ; exists ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 ; >
       au < crawling ; exists ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2015-2016 ; Imagination, Cognition and Personality Volume 35 ; 35 ; >
 
   }
 
@@ -16330,6 +16332,7 @@
       au < manifest ; exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 47 ; 47 ; >
       au < frozen ; exists ; 2014 ; The International Journal of Psychiatry in Medicine Volume 48 ; 48 ; >
       au < manifest ; exists ; 2015 ; The International Journal of Psychiatry in Medicine Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2015 ; The International Journal of Psychiatry in Medicine Volume 50 ; 50 ; >
 
   }
 
@@ -21143,7 +21146,8 @@
       au < exists ; exists ; 2012-2013 ; Journal of Educational Technology Systems Volume 41 ; 41 ; >
       au < manifest ; exists ; 2013-2014 ; Journal of Educational Technology Systems Volume 42 ; 42 ; >
       au < crawling ; exists ; 2014-2015 ; Journal of Educational Technology Systems Volume 43 ; 43 ; >
-      
+      au < manifest ; exists ; 2015-2016 ; Journal of Educational Technology Systems Volume 44 ; 44 ; >
+
   }
 
   {
@@ -31765,6 +31769,7 @@
         au < manifest ; exists ; 2012-2013 ; Phi Delta Kappan Volume 94 ; 94 ; >
         au < crawling ; exists ; 2013-2014 ; Phi Delta Kappan Volume 95 ; 95 ; >
         au < crawling ; exists ; 2014-2015 ; Phi Delta Kappan Volume 96 ; 96 ; >
+        au < manifest ; exists ; 2015-2016 ; Phi Delta Kappan Volume 97 ; 97 ; >
 
     }
 
@@ -38362,6 +38367,7 @@
       au < manifest ; exists ; 2012-2013 ; TEACHING Exceptional Children Volume 45 ; 45 ; >
       au < crawling ; exists ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 ; >
       au < crawling ; exists ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2015-2016 ; TEACHING Exceptional Children Volume 48 ; 48 ; >
 
   }
 
