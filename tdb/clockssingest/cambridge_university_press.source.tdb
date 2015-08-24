@@ -12,7 +12,7 @@
       name = Cambridge University Press Source Content
     >
       
-    plugin = plugin.needed
+    plugin = needs.plugin
     param[base_url] = 
     comment[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
