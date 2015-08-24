@@ -2,7 +2,7 @@
   publisher <
     name = SpringerOpen ;
     info[contract] = 2013 ;
-    info[tester] = 4
+    info[tester] = 5
   >
   
   comment[contract] = Contract for Springer is 2008. Collect from 2013 for new publisher?
@@ -24,7 +24,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 >
+        au < testing ; exists ; 2015 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 >
   
     }
   
@@ -45,7 +45,7 @@
         au < manifest ; exists ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 >
         au < crawling ; exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 >
         au < testing ; exists ; 2014 ; Advances in Difference Equations Volume 2014 ; 2014 >
-        au < manifest ; exists ; 2015 ; Advances in Difference Equations Volume 2015 ; 2015 >
+        au < testing ; exists ; 2015 ; Advances in Difference Equations Volume 2015 ; 2015 >
   
     }
   
@@ -62,7 +62,7 @@
   
         au < crawling ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 >
         au < crawling ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 >
-        au < manifest ; exists ; 2015 ; Agricultural and Food Economics Volume 3 ; 3 >
+        au < testing ; exists ; 2015 ; Agricultural and Food Economics Volume 3 ; 3 >
   
     }
   
@@ -81,7 +81,7 @@
         au < manifest ; exists ; 2012 ; AMB Express Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; AMB Express Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; AMB Express Volume 4 ; 4 >
-        au < manifest ; exists ; 2015 ; AMB Express Volume 5 ; 5 >
+        au < testing ; exists ; 2015 ; AMB Express Volume 5 ; 5 >
   
     }
   
@@ -100,7 +100,7 @@
         au < manifest ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
         au < frozen ; exists ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
-        au < manifest ; exists ; 2015 ; Annals of Intensive Care Volume 5 ; 5 >
+        au < testing ; exists ; 2015 ; Annals of Intensive Care Volume 5 ; 5 >
   
     }
 
@@ -117,7 +117,7 @@
 
         au < crawling ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
         au < frozen ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
-        au < manifest ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 >
+        au < testing ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 >
 
     }
 
@@ -133,7 +133,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2014 ; Applied Informatics Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 >
+        au < testing ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 >
 
     }
 
@@ -166,7 +166,7 @@
   
         au < crawling ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
-        au < manifest ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 ; 5 >
+        au < testing ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 ; 5 >
   
     }
   
@@ -182,7 +182,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < notReady ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 > #crawl completed with no substance
-        au < manifest ; exists ; 2015 ; Bioresources and Bioprocessing Volume 2 ; 2 >
+        au < testing ; exists ; 2015 ; Bioresources and Bioprocessing Volume 2 ; 2 >
   
     }
   
@@ -199,7 +199,7 @@
   
         au < crawling ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 >
         au < crawling ; exists ; 2014 ; Botanical Studies Volume 55 ; 55 >
-        au < manifest ; exists ; 2015 ; Botanical Studies Volume 56 ; 56 >
+        au < testing ; exists ; 2015 ; Botanical Studies Volume 56 ; 56 >
   
     }
   
@@ -1912,7 +1912,7 @@
         au < manifest ; exists ; 2011 ; Nanoscale Research Letters Volume 6 ; 6 >
         au < manifest ; exists ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 >
         au < manifest ; exists ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 >
-        au < wanted ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
+        au < ready ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
         au < manifest ; exists ; 2015 ; Nanoscale Research Letters Volume 10 ; 10 >
   
     }
@@ -2107,7 +2107,7 @@
   
         au < manifest ; exists ; 2012 ; Rice Volume 5 ; 5 >
         au < manifest ; exists ; 2013 ; Rice Volume 6 ; 6 >
-        au < wanted ; exists ; 2014 ; Rice Volume 7 ; 7 >
+        au < ready ; exists ; 2014 ; Rice Volume 7 ; 7 >
         au < manifest ; exists ; 2015 ; Rice Volume 8 ; 8 >
   
     }
@@ -2123,7 +2123,7 @@
         param[journal_issn] = 2197-4225
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
+        au < ready ; exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; ROBOMECH Journal Volume 2 ; 2 >
   
     }
@@ -2139,7 +2139,7 @@
         param[journal_issn] = 2197-3768 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 >
+        au < ready ; exists ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Robotics and Biomimetics Volume 2 ; 2 >
   
     }
@@ -2172,7 +2172,7 @@
   
         au < manifest ; exists ; 2012 ; Security Informatics Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Security Informatics Volume 2 ; 2 >
-        au < wanted ; exists ; 2014 ; Security Informatics Volume 3 ; 3 >
+        au < ready ; exists ; 2014 ; Security Informatics Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Security Informatics Volume 4 ; 4 >
   
     }
@@ -2190,7 +2190,7 @@
   
         au < manifest ; exists ; 2012 ; SpringerPlus Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; SpringerPlus Volume 2 ; 2 >
-        au < wanted ; exists ; 2014 ; SpringerPlus Volume 3 ; 3 >
+        au < ready ; exists ; 2014 ; SpringerPlus Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; SpringerPlus Volume 4 ; 4 >
   
     }
@@ -2207,7 +2207,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Translational Respiratory Medicine Volume 1 ; 1 >
-        au < wanted ; exists ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 >
+        au < ready ; exists ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Translational Respiratory Medicine Volume 3 ; 3 >
   
     }
@@ -2224,7 +2224,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Visualization in Engineering Volume 1 ; 1 >
-        au < wanted ; exists ; 2014 ; Visualization in Engineering Volume 2 ; 2 >
+        au < ready ; exists ; 2014 ; Visualization in Engineering Volume 2 ; 2 >
         au < manifest ; exists ; 2015 ; Visualization in Engineering Volume 3 ; 3 >
   
     }
@@ -2241,7 +2241,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < manifest ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 >
-        au < wanted ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
+        au < ready ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
         au < manifest ; exists ; 2015 ; Zoological Studies Volume 54 ; 54 >
 
     }
@@ -2258,7 +2258,7 @@
       comment[platform] = BioMedCentralPlugin
 
       au < manifest ; exists ; 2013 ; China Finance and Economic Review Volume 1 ; 1 >
-      au < wanted ; exists ; 2014 ; China Finance and Economic Review Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; China Finance and Economic Review Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; China Finance and Economic Review Volume 3 ; 3 >
 
     }
@@ -2274,7 +2274,7 @@
       param[journal_issn] = 2197-4314
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; Computational Social Networks Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Computational Social Networks Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Computational Social Networks Volume 2 ; 2 >
 
     }
@@ -2290,7 +2290,7 @@
       param[journal_issn] = 2197-8670
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Geoenvironmental Disasters Volume 2 ; 2 >
 
     }
@@ -2306,7 +2306,7 @@
       param[journal_issn] = 2196-050X
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 >
 
     }
@@ -2322,7 +2322,7 @@
       param[journal_issn] = 2195-9897
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; Journal of Chinese Management Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Journal of Chinese Management Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Journal of Chinese Management Volume 2 ; 2 >
 
     }
@@ -2338,7 +2338,7 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; Journal of Chinese Sociology Volume 1 ; 1 >
+      au < doesNotExist ; exists ; 2014 ; Journal of Chinese Sociology Volume 1 ; 1 > 
       au < manifest ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
 
     }
@@ -2354,8 +2354,8 @@
       param[journal_issn] = 2251-7316
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 >
-      au < wanted ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 >
+      au < ready ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Journal of Global Entrepreneurship Research Volume 5 ; 5 >
 
     }
@@ -2372,7 +2372,7 @@
       comment[platform] = BioMedCentralPlugin
 
       au < manifest ; exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 >
-      au < wanted ; exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 >
 
     }
@@ -2388,7 +2388,7 @@
       param[journal_issn] = 2194-7791
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Molecular and Cellular Pediatrics Volume 2 ; 2 >
 
     }
@@ -2421,7 +2421,7 @@
       comment[platform] = BioMedCentralPlugin
 
       au < manifest ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
-      au < wanted ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
+      au < ready ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
       au < manifest ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
 
     }
@@ -2437,7 +2437,7 @@
       param[journal_issn] = 2196-7091
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2014 ; Smart Learning Environments Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Smart Learning Environments Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Smart Learning Environments Volume 2 ; 2 >
 
     }
