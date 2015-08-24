@@ -3,7 +3,7 @@
   publisher <
     name = American Institute of Aeronautics and Astronautics ;
     info[contract] = 2014 ;
-    info[tester] = 4
+    info[tester] = 5
   >
 
   plugin = org.lockss.plugin.atypon.aiaa.ClockssAIAAPlugin

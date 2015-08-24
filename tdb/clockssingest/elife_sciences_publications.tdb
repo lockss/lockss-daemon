@@ -2,7 +2,7 @@
   publisher <
     name = eLife Sciences Publications ;
     info[contract] = 2014 ;
-    info[tester] = 4
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.highwire.elife.ClockssELifeDrupalPlugin

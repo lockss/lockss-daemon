@@ -3,7 +3,7 @@
   publisher <
     name = Association of Learned and Professional Society Publishers (ALPSP) ;
     info[contract] = 2012 ;
-    info[tester] = 4
+    info[tester] = 5
   >
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
   param[base_url] = http://www.ingentaconnect.com/

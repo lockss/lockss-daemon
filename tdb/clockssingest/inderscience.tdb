@@ -2,7 +2,7 @@
   publisher <
     name = Inderscience ;
     info[contract] = 2011 ;
-    info[tester] = 4
+    info[tester] = 5
   >
 
     plugin = org.lockss.plugin.atypon.inderscience.ClockssIndersciencePlugin

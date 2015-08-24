@@ -3,7 +3,7 @@
   publisher <
     name = Ubiquity Press ;
     info[contract] = 2011 ;
-    info[tester] = 4
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin

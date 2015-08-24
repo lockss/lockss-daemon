@@ -3,7 +3,7 @@
   publisher <
     name = Nature Publishing Group ;
     info[contract] = 2008 ;
-    info[tester] = 4
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
