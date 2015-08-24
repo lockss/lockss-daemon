@@ -42,6 +42,7 @@ import java.net.*;
 import java.net.HttpURLConnection;
 import java.util.*;
 import org.apache.commons.collections.SetUtils;
+import org.apache.commons.collections.map.LRUMap;
 import org.apache.commons.httpclient.util.*;
 import org.apache.commons.logging.Log;
 import org.lockss.app.LockssDaemon;
@@ -99,6 +100,18 @@ public class ProxyHandler extends AbstractHttpHandler {
       Configuration.PREFIX + "proxy.handleFormPost";
   static final boolean DEFAULT_PROCESS_FORMS = false;
 
+  /** https requests are tunneled through CONNECT on same host so appear to
+   * come from loopback addr.  To report correct request address, CONNECT
+   * method records source addr in a map keyed by port number of the
+   * loopback connection.  We don't know when we're done with an entry
+   * because CONNECT connections from clients are reused, so used a fixed
+   * size LRU map.  This is the maximum size. */
+  static final String PARAM_LOOPBACK_CONNECT_MAP_MAX = 
+    Configuration.PREFIX + "proxy.loopbackConnectMapMax";
+  static final int DEFAULT_LOOPBACK_CONNECT_MAP_MAX = 100;
+
+  private final Map<Integer,String> loopbackConnectMap;
+
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
   private ProxyManager proxyMgr = null;
@@ -135,6 +148,10 @@ public class ProxyHandler extends AbstractHttpHandler {
     handleFormPost = config.getBoolean(PARAM_PROCESS_FORMS,
 				       DEFAULT_PROCESS_FORMS);
     hostname = PlatformUtil.getLocalHostname();
+
+    loopbackConnectMap =
+      new LRUMap(config.getInt(PARAM_LOOPBACK_CONNECT_MAP_MAX,
+			       DEFAULT_LOOPBACK_CONNECT_MAP_MAX));
   }
 
   ProxyHandler(LockssDaemon daemon, LockssUrlConnectionPool pool) {
@@ -592,8 +609,10 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       // Proxy headers
       connection.addRequestProperty(HttpFields.__Via, makeVia(request));
-      connection.addRequestProperty(HttpFields.__XForwardedFor,
-          request.getRemoteAddr());
+      String reqAddr = getOrigReqAddr(request);
+      if (!StringUtil.isNullString(reqAddr)) {
+	connection.addRequestProperty(HttpFields.__XForwardedFor, reqAddr);
+      }
       // a little bit of cache control
       String cache_control = request.getField(HttpFields.__CacheControl);
       if (cache_control!=null &&
@@ -680,7 +699,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 
   void logAccess(HttpRequest request, String msg, long reqElapsedTime) {
     proxyMgr.logAccess(request.getMethod(), request.getURI().toString(), msg,
-		       request.getRemoteAddr(), reqElapsedTime);
+		       getOrigReqAddr(request),
+		       reqElapsedTime);
   }
 
   /**
@@ -866,8 +886,10 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       // Proxy-specifix headers
       conn.addRequestProperty(HttpFields.__Via, makeVia(request));
-      conn.addRequestProperty(HttpFields.__XForwardedFor,
-          request.getRemoteAddr());
+      String reqAddr = getOrigReqAddr(request);
+      if (!StringUtil.isNullString(reqAddr)) {
+	conn.addRequestProperty(HttpFields.__XForwardedFor, reqAddr);
+      }
       String cookiePolicy = proxyMgr.getCookiePolicy();
       if (cookiePolicy != null &&
           !cookiePolicy.equalsIgnoreCase(ProxyManager.COOKIE_POLICY_DEFAULT)) {
@@ -952,7 +974,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (candidateAus != null && !candidateAus.isEmpty()) {
         forwardResponseWithIndex(request, response, candidateAus, conn);
       } else {
-        forwardResponse(request, response, conn);
+        forwardResponse(request, response, conn, reqStartTime);
       }
     } catch (Exception e) {
       log.error("doLockss error", e);
@@ -962,6 +984,11 @@ public class ProxyHandler extends AbstractHttpHandler {
     } finally {
       safeReleaseConn(conn);
     }
+  }
+
+  boolean isLoopbackAddr(String addr) {
+    if (addr == null) return false;
+    return addr.equals("127.0.0.1") || addr.equals("::1");
   }
 
   boolean isAllowedLocalAddress(String addr) {
@@ -977,9 +1004,12 @@ public class ProxyHandler extends AbstractHttpHandler {
   }
 
   void forwardResponse(HttpRequest request, HttpResponse response,
-                       LockssUrlConnection conn)
+                       LockssUrlConnection conn, long reqStartTime)
       throws IOException {
     // return response from server
+    logAccess(request, conn.getResponseCode() + " from publisher",
+	      TimeBase.msSince(reqStartTime));
+
     response.setStatus(conn.getResponseCode());
     response.setReason(conn.getResponseMessage());
 
@@ -1059,6 +1089,9 @@ public class ProxyHandler extends AbstractHttpHandler {
 		  HttpMessage.__SSL_SCHEME);
       } else {
 	Socket socket = new Socket(connectHost, connectPort);
+	if (isLoopbackAddr(connectHost)) {
+	  recordConnectSource(request, socket);
+	}
 
 	// XXX - need to setup semi-busy loop for IE.
 	int timeoutMs=30000;
@@ -1128,6 +1161,36 @@ public class ProxyHandler extends AbstractHttpHandler {
 // 			 e.getMessage());
 //     }
   }
+
+  /** Associate the remote address of a CONNECT request with the port we
+   * use to open a loopback connection to our SSL listener */
+  void recordConnectSource(HttpRequest request, Socket socket) {
+    String reqAddr = request.getRemoteAddr();
+    if (reqAddr != null) {
+      loopbackConnectMap.put(socket.getLocalPort(), reqAddr);
+      log.debug3("recorded loopback req addr: " + socket.getLocalPort() +
+		": " + reqAddr);
+    }
+  }
+
+  /** If this is a loopback connection opened by us in response to a
+   * CONNECT, return the original requestor IP addr, else the actual
+   * request addr. */
+  String getOrigReqAddr(HttpRequest request) {
+    String reqAddr = request.getRemoteAddr();
+    if (!isLoopbackAddr(reqAddr)) {
+      return reqAddr;
+    }
+    int reqPort = request.getHttpConnection().getRemotePort();
+    if (reqPort > 0) {
+      String res = loopbackConnectMap.get(reqPort);
+      log.debug3("lookup loopback req addr: " + reqPort + " = " + res);
+      return res;
+    }
+    log.debug3("lookup loopback req addr: " + request + " = null");
+    return null;
+  }
+
 
   /* ------------------------------------------------------------ */
   /** Customize proxy Socket connection for CONNECT.
