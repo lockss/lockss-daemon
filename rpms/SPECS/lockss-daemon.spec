@@ -1,7 +1,19 @@
 %define name lockss-daemon
 %define version @RELEASENAME@
 %define release @RPMRELEASE@
-%define buildroot %{_builddir}/%{name}-root
+%define protoroot %{_builddir}/%{name}-root
+
+# suppress brp-java-repack-jars
+%define __jar_repack %{nil}
+
+# Newer rpmbuild clears buildroot before running install macro, so can't
+# set buildroot to already set up dir created by build.xml.
+#
+# Some versions of rpmbuild pay attention to buildroot macro, others to
+# BuildRoot directive.
+#
+%define buildroot %{_builddir}/%{name}-root-installed
+BuildRoot: %{_builddir}/%{name}-root-installed
 
 Summary: LOCKSS daemon and configuration files
 Name: %{name}
@@ -10,7 +22,6 @@ Release: %{release}
 License: BSD
 Group: Archiving
 BuildArch: noarch
-BuildRoot: %{buildroot}
 URL: http://www.lockss.org/
 Distribution: any
 Provides: lockss-daemon
@@ -28,7 +39,17 @@ exit 0
 %build
 exit 0
 
+# Newer rpmbuild clears buildroot before running install macro.
+#
+# Older rpmbuild doesn't clear buildroot, complains about any unpackaged
+# files remaining below topdir.
 %install
+if [ ! -d $RPM_BUILD_ROOT ]; then
+    mkdir $RPM_BUILD_ROOT
+fi
+for x in  %{protoroot}/*; do
+    mv "$x" $RPM_BUILD_ROOT/`basename "$x"`
+done
 exit 0
 
 %clean
