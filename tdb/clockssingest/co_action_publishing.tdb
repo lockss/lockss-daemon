@@ -150,7 +150,7 @@
     param[journal_id] = ehtj
     comment[0] = vol. 4 includes Supplements 1
 
-    au < finished ; crawling ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
+    au < finished ; frozen ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
     au < finished ; crawling ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
     au < finished ; frozen ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
@@ -489,7 +489,7 @@
 
     au < finished ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
     au < finished ; frozen ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
-    au < finished ; crawling ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
+    au < finished ; frozen ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
     au < notReady ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; 2013 >
 
   }
@@ -778,7 +778,7 @@
     param[journal_id] = snp
 
     au < finished ; frozen ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < finished ; crawling ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
+    au < finished ; frozen ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; 2013 >
     au < frozen ; exists ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 ; 2014 >
     au < manifest ; exists ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 ; 2015 >

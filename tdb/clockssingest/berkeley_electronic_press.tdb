@@ -193,7 +193,7 @@
     au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
-    au < down ; crawling ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
+    au < down ; frozen ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
     au < zapped ; finished ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < zapped ; finished ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
     au < zapped ; finished ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 >
@@ -281,7 +281,7 @@
     au < zapped ; finished ; 2004 ; Business and Politics Volume 6 ; 6 >
     au < zapped ; finished ; 2005 ; Business and Politics Volume 7 ; 7 >
     au < down ; frozen ; 2006 ; Business and Politics Volume 8 ; 8 >
-    au < down ; crawling ; 2007 ; Business and Politics Volume 9 ; 9 >
+    au < down ; frozen ; 2007 ; Business and Politics Volume 9 ; 9 >
     au < zapped ; finished ; 2008 ; Business and Politics Volume 10 ; 10 >
     au < zapped ; finished ; 2009 ; Business and Politics Volume 11 ; 11 >
     au < zapped ; finished ; 2010 ; Business and Politics Volume 12 ; 12 >
@@ -665,7 +665,7 @@
     au < zapped ; finished ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
     au < zapped ; finished ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
     au < zapped ; finished ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
-    au < down ; crawling ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 >
+    au < down ; frozen ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 >
     au < down ; crawling ; 2011 ; International Journal of Chemical Reactor Engineering Volume 9 ; 9 >
 
   }
@@ -684,7 +684,7 @@
     au < down ; crawling ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
     au < down ; frozen ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
     au < zapped ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
-    au < down ; crawling ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
+    au < down ; frozen ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
     au < down ; crawling ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
     au < zapped ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
     au < zapped ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
@@ -708,7 +708,7 @@
     param[journal_abbr] = ijfe
 
     au < down ; frozen ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
-    au < down ; crawling ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 >
+    au < down ; frozen ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 >
     au < down ; finished ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 >
     au < zapped ; finished ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
     au < zapped ; finished ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
@@ -836,7 +836,7 @@
     au < zapped ; finished ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
     au < zapped ; finished ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
     au < zapped ; finished ; 2010 ; Journal of Business Valuation and Economic Loss Analysis Volume 5 ; 5 >
-    au < down ; crawling ; 2011 ; Journal of Business Valuation and Economic Loss Analysis Volume 6 ; 6 >
+    au < down ; frozen ; 2011 ; Journal of Business Valuation and Economic Loss Analysis Volume 6 ; 6 >
 
   }
 
@@ -996,7 +996,7 @@
 
     au < zapped ; finished ; 2005 ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 >
     au < zapped ; finished ; 2006 ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 >
-    au < down ; crawling ; 2007 ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 >
+    au < down ; frozen ; 2007 ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 >
     au < zapped ; finished ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
     au < zapped ; finished ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
     au < zapped ; finished ; 2010 ; Journal of Quantitative Analysis in Sports Volume 6 ; 6 >
@@ -1137,8 +1137,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = mwjhr
 
-    au < down ; crawling ; 2004 ; Muslim World Journal of Human Rights Volume 1 ; 1 >
-    au < down ; crawling ; 2005 ; Muslim World Journal of Human Rights Volume 2 ; 2 >
+    au < down ; frozen ; 2004 ; Muslim World Journal of Human Rights Volume 1 ; 1 >
+    au < down ; frozen ; 2005 ; Muslim World Journal of Human Rights Volume 2 ; 2 >
     au < down ; crawling ; 2006 ; Muslim World Journal of Human Rights Volume 3 ; 3 >
     au < zapped ; finished ; 2007 ; Muslim World Journal of Human Rights Volume 4 ; 4 >
     au < zapped ; finished ; 2008 ; Muslim World Journal of Human Rights Volume 5 ; 5 >
@@ -1182,7 +1182,7 @@
     au < zapped ; finished ; 2008 ; New Global Studies Volume 2 ; 2 >
     au < zapped ; finished ; 2009 ; New Global Studies Volume 3 ; 3 >
     au < down ; crawling ; 2010 ; New Global Studies Volume 4 ; 4 >
-    au < down ; crawling ; 2011 ; New Global Studies Volume 5 ; 5 >
+    au < down ; frozen ; 2011 ; New Global Studies Volume 5 ; 5 >
 
   }
 
@@ -1216,13 +1216,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = peps
 
-    au < down ; crawling ; 1993 ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
+    au < down ; frozen ; 1993 ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
     au < zapped ; finished ; 1994 ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 >
     au < down ; crawling ; 1995 ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 >
     au < zapped ; finished ; 1996 ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 >
     au < down ; frozen ; 1999 ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 >
     au < zapped ; finished ; 2000 ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 >
-    au < down ; crawling ; 2001 ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 >
+    au < down ; frozen ; 2001 ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 >
     au < down ; frozen ; 2002 ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 >
     au < zapped ; finished ; 2003 ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 >
     au < down ; frozen ; 2004 ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 >
@@ -1317,7 +1317,7 @@
     param[journal_abbr] = romsjournal
 
     au < zapped ; finished ; 2003 ; Review of Marketing Science Volume 1 ; 1 >
-    au < down ; crawling ; 2004 ; Review of Marketing Science Volume 2 ; 2 >
+    au < down ; frozen ; 2004 ; Review of Marketing Science Volume 2 ; 2 >
     au < down ; crawling ; 2005 ; Review of Marketing Science Volume 3 ; 3 >
     au < down ; frozen ; 2006 ; Review of Marketing Science Volume 4 ; 4 >
     au < zapped ; finished ; 2007 ; Review of Marketing Science Volume 5 ; 5 >
@@ -1342,8 +1342,8 @@
     param[journal_abbr] = rmeef
 
     au < down ; crawling ; 2003 ; Review of Middle East Economics and Finance Volume 1 [BePress] ; 1 >
-    au < down ; crawling ; 2004 ; Review of Middle East Economics and Finance Volume 2 [BePress] ; 2 >
-    au < down ; crawling ; 2005 ; Review of Middle East Economics and Finance Volume 3 [BePress] ; 3 >
+    au < down ; frozen ; 2004 ; Review of Middle East Economics and Finance Volume 2 [BePress] ; 2 >
+    au < down ; frozen ; 2005 ; Review of Middle East Economics and Finance Volume 3 [BePress] ; 3 >
     au < zapped ; finished ; 2008 ; Review of Middle East Economics and Finance Volume 4 [BePress] ; 4 >
     au < zapped ; finished ; 2009 ; Review of Middle East Economics and Finance Volume 5 [BePress] ; 5 >
     au < zapped ; finished ; 2010 ; Review of Middle East Economics and Finance Volume 6 [BePress] ; 6 >
@@ -1431,7 +1431,7 @@
 
     au < down ; frozen ; 2002 ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
     au < zapped ; finished ; 2003 ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 >
-    au < down ; crawling ; 2004 ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 >
+    au < down ; frozen ; 2004 ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 >
     au < down ; frozen ; 2005 ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 >
     au < down ; crawling ; 2006 ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 >
     au < zapped ; finished ; 2007 ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 >
@@ -1486,7 +1486,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
-    au < down ; crawling ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
+    au < down ; frozen ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
     au < zapped ; finished ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
     au < zapped ; finished ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
     au < down ; frozen ; 2010 ; Studies in Ethics, Law, and Technology Volume 4 ; 4 >
@@ -1651,7 +1651,7 @@
     au < zapped ; finished ; 2008 ; World Political Science Review Volume 4 ; 4 >
     au < zapped ; finished ; 2009 ; World Political Science Review Volume 5 ; 5 >
     au < zapped ; finished ; 2010 ; World Political Science Review Volume 6 ; 6 >
-    au < down ; crawling ; 2011 ; World Political Science Review Volume 7 ; 7 >
+    au < down ; frozen ; 2011 ; World Political Science Review Volume 7 ; 7 >
 
   }
   
