@@ -64,7 +64,7 @@ import org.lockss.util.*;
  *   there are three variations
  *      <base_url>/content/<vol>/# <--# is issue, but doesn't matter
  *      <base_url>/content/<vol>/Month/<year> <--April, May, etc
- *      <base_url>/supplments/<vol>/S#  <-- supplementary issues
+ *      <base_url>/supplements/<vol>/S#  <-- supplementary issues
  *      
  *  examples:
  *  http://www.genomebiology.com/content/14/8 (volume 14, issue 8)

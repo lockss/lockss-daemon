@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,12 +38,11 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Extractor;
 import org.lockss.plugin.*;
 
 public class BioMedCentralPluginHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BioMedCentralPluginMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(BioMedCentralPluginHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
@@ -58,7 +57,7 @@ public class BioMedCentralPluginHtmlMetadataExtractorFactory implements
     static {
        //general pattern for capturing start and end page number. 
       String pagenumpattern = "[pP\\. ]*([^-]+)(?:-(.+))?";
-      String authorpattern = ".*\\p{L}";
+      // String authorpattern = ".*\\p{L}"; // codepoint that is a letter
       // tagMap.put("dc.creator", MetadataField.DC_FIELD_CONTRIBUTOR);
       // <meta name="citation_authors"
       // content="G Poelmans, J K Buitelaar, D L Pauls, B Franke" />
@@ -71,7 +70,7 @@ public class BioMedCentralPluginHtmlMetadataExtractorFactory implements
       //brain from bipolar disorder patients"/>
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       // <meta name="citation_journal_title" content="Molecular Psychiatry" />
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       // <meta name="citation_volume" content="19" />
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       // <meta name="citation_issue" content="2" />
