@@ -63,6 +63,7 @@
       au < expected ; 2012 ; 14 ; Caderno de Educação Física e Esporte Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 15 ; Caderno de Educação Física e Esporte Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 16 ; Caderno de Educação Física e Esporte Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 17 ; Caderno de Educação Física e Esporte Volume 2015 ; 2015 ; >
 
   }
 
@@ -164,6 +165,7 @@
       au < released ; 2012 ; 10 ; Espaço Plural Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Espaço Plural Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 12 ; Espaço Plural Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Espaço Plural Volume 2015 ; 2015 ; >
 
   }
 
@@ -213,6 +215,7 @@
       au < notReady ; 2012 ; 10 ; Ideação Volume 2012 ; 2012 ; no colon on url on bio 6054>
       au < released ; 2013 ; 11 ; Ideação Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 12 ; Ideação Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Ideação Volume 2015 ; 2015 ; >
 
   }
 
@@ -244,6 +247,7 @@
       au < notReady ; 2012 ; 10 ; Informe GEPEC Volume 2012 ; 2012 ; url with no http on bio 5581 >
       au < released ; 2013 ; 11 ; Informe GEPEC Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 12 ; Informe GEPEC Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Informe GEPEC Volume 2015 ; 2015 ; >
 
   }
 
@@ -294,6 +298,7 @@
       au < released ; 2012 ; 8 ; Literatura, História e Memória Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 9 ; Literatura, História e Memória Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 10 ; Literatura, História e Memória Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 11 ; Literatura, História e Memória Volume 2015 ; 2015 ; >
 
   }
 
@@ -321,6 +326,7 @@
       au < released ; 2012 ; 8 ; Perspectiva Geográfica Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 9 ; Perspectiva Geográfica Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 10 ; Perspectiva Geográfica Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 11 ; Perspectiva Geográfica Volume 2015 ; 2015 ; >
 
   }
 
@@ -381,6 +387,7 @@
       au < released ; 2012 ; 16 ; Revista Faz Ciência Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 17 ; Revista Faz Ciência Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 18 ; Revista Faz Ciência Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 19 ; Revista Faz Ciência Volume 2015 ; 2015 ; >
 
   }
 
@@ -430,9 +437,6 @@
       au < released ; 2009 ; 6 ; Temas & Matizes Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 7 ; Temas & Matizes Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 8 ; Temas & Matizes Volume 2011 ; 2011 ; >
-      au < expected ; 2012 ; 9 ; Temas & Matizes Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 10 ; Temas & Matizes Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 11 ; Temas & Matizes Volume 2014 ; 2014 ; >
 
   }
 
@@ -459,6 +463,7 @@
       au < released ; 2012 ; 9 ; Tempo da Ciência Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 10 ; Tempo da Ciência Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 11 ; Tempo da Ciência Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 12 ; Tempo da Ciência Volume 2015 ; 2015 ; >
 
   }
 
@@ -488,6 +493,7 @@
       au < released ; 2012 ; 14 ; Tempos Históricos Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 15 ; Tempos Históricos Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 16 ; Tempos Históricos Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 17 ; Tempos Históricos Volume 2015 ; 2015 ; >
 
   }
 
@@ -536,6 +542,7 @@
       au < released ; 2012 ; 6 ; Travessias Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Travessias Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 8 ; Travessias Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Travessias Volume 2015 ; 2015 ; >
 
   }
 
