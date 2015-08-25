@@ -95,6 +95,7 @@
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?\d+)?$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
+      <!-- Remove concat URLs like http://www.ijponline.net/content/40/1/www.hgmd.cf.ac.uk/ac/index.php,"Unknown result code: 429: unknown"  -->
       <string>2,"^%s.+/[a-z]+[^./]*[.][^/]{2,}[.][^/]{2,}/.*[.]php", base_url</string>
       <string>2,"^%sregistration", base_url</string>
       <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|prepub|comments|email|citation|postcomment|mathml/.*)$", base_url, volume_name</string> <!-- excluding a login-type page -->
