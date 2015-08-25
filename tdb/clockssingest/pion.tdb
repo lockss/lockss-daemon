@@ -330,8 +330,8 @@
   {
   
     title <
-    	name = i-Perception ;
-    	issn = 2041-6695 
+    name = i-Perception ;
+    eissn = 2041-6695 
     >
     
     plugin = org.lockss.plugin.pion.ClockssPionIPerceptionPlugin
