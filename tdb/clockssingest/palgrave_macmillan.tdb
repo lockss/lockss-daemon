@@ -31,7 +31,7 @@
       au < finished ; frozen ; 2012 ; Acta Politica Volume 47 ; 2012 ; 47 >
       au < crawling ; exists ; 2013 ; Acta Politica Volume 48 ; 2013 ; 48 >
       au < frozen ; exists ; 2014 ; Acta Politica Volume 49 ; 2014 ; 49 >
-      au < testing ; exists ; 2015 ; Acta Politica Volume 50 ; 2015 ; 50 >
+      au < ready ; exists ; 2015 ; Acta Politica Volume 50 ; 2015 ; 50 >
    
     }
 
@@ -136,7 +136,7 @@
       au < finished ; crawling ; 2012 ; British Politics Volume 7 ; 2012 ; 7 >
       au < frozen ; exists ; 2013 ; British Politics Volume 8 ; 2013 ; 8 >
       au < frozen ; exists ; 2014 ; British Politics Volume 9 ; 2014 ; 9 >
-      au < testing ; exists ; 2015 ; British Politics Volume 10 ; 2015 ; 10 >
+      au < ready ; exists ; 2015 ; British Politics Volume 10 ; 2015 ; 10 >
 
     }
 
@@ -199,7 +199,7 @@
       au < finished ; frozen ; 2012 ; Comparative European Politics Volume 10 ; 2012 ; 10 >
       au < crawling ; exists ; 2013 ; Comparative European Politics Volume 11 ; 2013 ; 11 >
       au < frozen ; exists ; 2014 ; Comparative European Politics Volume 12 ; 2014 ; 12 >
-      au < testing ; exists ; 2015 ; Comparative European Politics Volume 13 ; 2015 ; 13 >
+      au < ready ; exists ; 2015 ; Comparative European Politics Volume 13 ; 2015 ; 13 >
 
     }
 
@@ -267,7 +267,7 @@
       au < finished ; frozen ; 2012 ; Corporate Reputation Review Volume 15 ; 2012 ; 15 >
       au < frozen ; exists ; 2013 ; Corporate Reputation Review Volume 16 ; 2013 ; 16 >
       au < frozen ; exists ; 2014 ; Corporate Reputation Review Volume 17 ; 2014 ; 17 >
-      au < testing ; exists ; 2015 ; Corporate Reputation Review Volume 18 ; 2015 ; 18 >
+      au < ready ; exists ; 2015 ; Corporate Reputation Review Volume 18 ; 2015 ; 18 >
 
     }
 
@@ -298,7 +298,7 @@
       au < finished ; frozen ; 2012 ; Crime Prevention & Community Safety Volume 14 ; 2012 ; 14 >
       au < crawling ; exists ; 2013 ; Crime Prevention & Community Safety Volume 15 ; 2013 ; 15 >
       au < crawling ; exists ; 2014 ; Crime Prevention & Community Safety Volume 16 ; 2014 ; 16 >
-      au < testing ; exists ; 2015 ; Crime Prevention & Community Safety Volume 17 ; 2015 ; 17 >
+      au < ready ; exists ; 2015 ; Crime Prevention & Community Safety Volume 17 ; 2015 ; 17 >
 
     }
 
@@ -332,8 +332,8 @@
       param[journal_id] = eej
 
       au < exists ; exists ; 2012 ; Eastern Economic Journal Volume 38 ; 2012 ; 38 >
-      au < exists ; exists ; 2013 ; Eastern Economic Journal Volume 39 ; 2013 ; 39 >
-      au < exists ; exists ; 2013 ; Eastern Economic Journal Volume 40 (2013) ; 2013 ; 40 >
+      au < testing ; exists ; 2013 ; Eastern Economic Journal Volume 39 ; 2013 ; 39 >
+      au < testing ; exists ; 2013 ; Eastern Economic Journal Volume 40 (2013) ; 2013 ; 40 >
       au < ready ; exists ; 2014 ; Eastern Economic Journal Volume 40 (2014) ; 2014 ; 40 >
       au < ready ; exists ; 2015 ; Eastern Economic Journal Volume 41 ; 2015 ; 41 >
 
@@ -362,7 +362,7 @@
       au < frozen ; exists ; 2012 ; French Politics Volume 10 ; 2012 ; 10 >
       au < frozen ; exists ; 2013 ; French Politics Volume 11 ; 2013 ; 11 >
       au < finished ; crawling ; 2014 ; French Politics Volume 12 ; 2014 ; 12 >
-      au < testing ; exists ; 2015 ; French Politics Volume 13 ; 2015 ; 13 >
+      au < ready ; exists ; 2015 ; French Politics Volume 13 ; 2015 ; 13 >
 
     }
 
@@ -380,7 +380,7 @@
       au < exists ; exists ; 2012 ; Interest Groups & Advocacy Volume 1 ; 2012 ; 1 >
       au < frozen ; exists ; 2013 ; Interest Groups & Advocacy Volume 2 ; 2013 ; 2 >
       au < crawling ; exists ; 2014 ; Interest Groups & Advocacy Volume 3 ; 2014 ; 3 >
-      au < testing ; exists ; 2015 ; Interest Groups & Advocacy Volume 4 ; 2015 ; 4 >
+      au < ready ; exists ; 2015 ; Interest Groups & Advocacy Volume 4 ; 2015 ; 4 >
 
     }
 
@@ -407,7 +407,7 @@
       au < crawling ; exists ; 2012 ; International Journal of Disclosure & Governance Volume 9 ; 2012 ; 9 >
       au < crawling ; exists ; 2013 ; International Journal of Disclosure & Governance Volume 10 ; 2013 ; 10 >
       au < frozen ; exists ; 2014 ; International Journal of Disclosure & Governance Volume 11 ; 2014 ; 11 >
-      au < testing ; exists ; 2015 ; International Journal of Disclosure & Governance Volume 12 ; 2015 ; 12 >
+      au < ready ; exists ; 2015 ; International Journal of Disclosure & Governance Volume 12 ; 2015 ; 12 >
 
     }
 
@@ -463,7 +463,7 @@
       au < frozen ; exists ; 2012 ; International Politics Volume 49 ; 2012 ; 49 >
       au < frozen ; exists ; 2013 ; International Politics Volume 50 ; 2013 ; 50 >
       au < crawling ; exists ; 2014 ; International Politics Volume 51 ; 2014 ; 51 >
-      au < testing ; exists ; 2015 ; International Politics Volume 52 ; 2015 ; 52 >
+      au < ready ; exists ; 2015 ; International Politics Volume 52 ; 2015 ; 52 >
 
     }
 
@@ -493,7 +493,7 @@
       au < crawling ; exists ; 2012 ; Journal of Asset Management Volume 13 ; 2012 ; 13 >
       au < crawling ; exists ; 2013 ; Journal of Asset Management Volume 14 ; 2013 ; 14 >
       au < frozen ; exists ; 2014 ; Journal of Asset Management Volume 15 ; 2014 ; 15 >
-      au < testing ; exists ; 2015 ; Journal of Asset Management Volume 16 ; 2015 ; 16 >
+      au < ready ; exists ; 2015 ; Journal of Asset Management Volume 16 ; 2015 ; 16 >
 
     }
 
@@ -572,7 +572,7 @@
       au < crawling ; exists ; 2012 ; Journal of Brand Management Volume 20 (2012) ; 2012 ; 20 >
       au < frozen ; exists ; 2013 ; Journal of Brand Management Volume 20 (2013) ; 2013 ; 20 >
       au < notReady ; exists ; 2014 ; Journal of Brand Management Volume 21 (2014) ; 2014 ; 21 > # manifest page malformed. has V22 url.
-      au < testing ; exists ; 2015 ; Journal of Brand Management Volume 22 (2014) ; 2015 ; 22 >
+      au < ready ; exists ; 2015 ; Journal of Brand Management Volume 22 (2014) ; 2015 ; 22 >
 
     }
 
@@ -763,7 +763,7 @@
       au < frozen ; exists ; 2012 ; Journal of Financial Services Marketing Volume 17 ; 2012 ; 17 >
       au < crawling ; exists ; 2013 ; Journal of Financial Services Marketing Volume 18 ; 2013 ; 18 >
       au < frozen ; exists ; 2014 ; Journal of Financial Services Marketing Volume 19 ; 2014 ; 19 >
-      au < testing ; exists ; 2015 ; Journal of Financial Services Marketing Volume 20 ; 2015 ; 20 >
+      au < ready ; exists ; 2015 ; Journal of Financial Services Marketing Volume 20 ; 2015 ; 20 >
 
     }
 
@@ -789,7 +789,7 @@
       au < frozen ; exists ; 2012 ; Journal of International Relations and Development Volume 15 ; 2012 ; 15 >
       au < crawling ; exists ; 2013 ; Journal of International Relations and Development Volume 16 ; 2013 ; 16 >
       au < frozen ; exists ; 2014 ; Journal of International Relations and Development Volume 17 ; 2014 ; 17 >
-      au < testing ; exists ; 2015 ; Journal of International Relations and Development Volume 18 ; 2015 ; 18 >
+      au < ready ; exists ; 2015 ; Journal of International Relations and Development Volume 18 ; 2015 ; 18 >
 
     }
 
