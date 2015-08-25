@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -395,7 +395,7 @@ public class TestKbartConverter extends LockssTestCase {
   public final void testConvertTitleToKbartTitlesListTdbAus() {
     // If there are no TdbAus, an empty list should be returned
     List<TdbAu> noTdbAus = Collections.emptyList();
-    assertEmpty(KbartConverter.convertTitleToKbartTitles(noTdbAus));
+    assertEmpty(KbartConverter.convertTitleToKbartTitles(noTdbAus, false));
     // NOTE Testing with dummy TdbAus is handled by testCreateKbartTitlesTdbTitle() 
     // createKbartTitlesTdbTitle() merely extracts TdbAus from a dummy title 
   }

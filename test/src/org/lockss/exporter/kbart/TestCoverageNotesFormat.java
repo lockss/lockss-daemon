@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -123,7 +123,7 @@ public class TestCoverageNotesFormat extends LockssTestCase {
         new KbartTitle()
             .setField(Field.PUBLICATION_TITLE, "My Journal Title")
             .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(2003+gap+1))
-            .setField(Field.DATE_LAST_ISSUE_ONLINE, "2030"),
+            .setField(Field.DATE_LAST_ISSUE_ONLINE, "2014"),
         trng3,
         trng4
     );

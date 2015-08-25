@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.kbart;
 
 import java.util.*;
-
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.lockss.exporter.biblio.BibliographicUtil;
-import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -82,9 +80,16 @@ import org.lockss.util.UrlUtil;
  * @author Neil Mayo
  */
 public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
+  private boolean isLast = false;
 
-  private static final Logger log = Logger.getLogger(KbartTitle.class);   
-  
+  public boolean isLast() {
+    return isLast;
+  }
+
+  public void setLast(boolean isLast) {
+    this.isLast = isLast;
+  }
+
   /**
    * Implementation of the <code>Object.clone()</code> method. Creates a new 
    * KbartTitle and fills the fields map with values copied from this instance.
@@ -101,6 +106,7 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    */
   public KbartTitle(KbartTitle other) {
     fields.putAll(other.fields);
+    setLast(other.isLast);
   }
 
   public KbartTitle() {
@@ -154,16 +160,18 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * @return the string value of the field, or an empty string
    */
   public String getField(Field field) {
-    if (blankIfCoverageToPresent.contains(field)) {
+    if (isLast && blankIfCoverageToPresent.contains(field)) {
       try {
         String lastYear = getFieldValue(Field.DATE_LAST_ISSUE_ONLINE);
-        // Return blank if the year is empty or current
-        if (StringUtil.isNullString(lastYear) ||
+        // Return blank if the year is not empty and current.
+        if (!StringUtil.isNullString(lastYear) &&
             Integer.parseInt(lastYear) >= BibliographicUtil.getThisYear()) {
+          // TODO: Replace "" with getFieldValue(field) + "(present)";
           return "";
         }
       } catch (NumberFormatException e) {/* Ignore and return actual value */}
     }
+
     return getFieldValue(field);
   }
 
@@ -254,7 +262,7 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * @param s the string to normalise
    * @return the string without tabs, and in UTF-8
    */
-  private static String normalize(String s) {
+  protected static String normalize(String s) {
     return normalise(s);
   }
   
@@ -333,11 +341,14 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * Construct a string description from identifying fields of the KbartTitle.
    */
   public String toString() {
-   return String.format("KbartTitle {%s [%s] (%s-%s)}", 
+   return String.format("KbartTitle {%s [%s] (%s-%s) (%s-%s) %s}", 
        fields.get(Field.PUBLICATION_TITLE), 
        fields.get(Field.PRINT_IDENTIFIER), 
        fields.get(Field.DATE_FIRST_ISSUE_ONLINE), 
-       fields.get(Field.DATE_LAST_ISSUE_ONLINE)
+       fields.get(Field.DATE_LAST_ISSUE_ONLINE),
+       fields.get(Field.NUM_FIRST_VOL_ONLINE),
+       fields.get(Field.NUM_LAST_VOL_ONLINE),
+       isLast
    ); 
   }
   

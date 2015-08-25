@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,6 @@ import org.lockss.exporter.kbart.KbartTitle;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import com.csvreader.CsvReader;
 import org.lockss.util.StringUtil;
-
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
@@ -103,6 +102,7 @@ public class RunKbartReport {
   // Settings from the command line
   private final boolean hideEmptyColumns;
   private final boolean showTdbStatus;
+  private final boolean doNotUseRanges;
   private KbartExportFilter.ColumnOrdering columnOrdering;
   private final PubType publicationType;
 
@@ -142,6 +142,40 @@ public class RunKbartReport {
     this.publicationType = publicationType;
     this.hideEmptyColumns = hideEmptyColumns;
     this.showTdbStatus = showTdbStatus;
+    this.doNotUseRanges = false;
+    this.inputStream = inputStream;
+    this.columnOrdering = columnOrdering;
+
+    long s = System.currentTimeMillis();
+    // Now we are doing an export - create the exporter
+    KbartExporter kexp = createExporter();
+    // Make sure the exporter was properly instantiated
+    if (kexp==null) die("Could not create exporter");
+    // Do the export
+    kexp.export(outputStream);
+    System.err.format("Export took approximately %ss\n",
+        (System.currentTimeMillis() - s) / 1000);
+  }
+
+  /**
+   * Construct an instance of this class with the supplied properties.
+   * @param publicationType
+   * @param hideEmptyColumns
+   * @param showTdbStatus
+   * @param columnOrdering
+   * @param inputStream
+   * @param outputStream
+   */
+  protected RunKbartReport(PubType publicationType,
+                           boolean hideEmptyColumns,
+                           boolean showTdbStatus,
+                           boolean doNotUseRanges,
+                           PredefinedColumnOrdering columnOrdering,
+                           InputStream inputStream, OutputStream outputStream) {
+    this.publicationType = publicationType;
+    this.hideEmptyColumns = hideEmptyColumns;
+    this.showTdbStatus = showTdbStatus;
+    this.doNotUseRanges = doNotUseRanges;
     this.inputStream = inputStream;
     this.columnOrdering = columnOrdering;
 
@@ -173,8 +207,8 @@ public class RunKbartReport {
     // KbartTitles which represent the coverage ranges available for the titles.
     try {
       titles = KbartConverter.convertTitleAus(
-          new KbartCsvTitleIterator(inputStream, publicationType)
-      );
+          new KbartCsvTitleIterator(inputStream, publicationType),
+          doNotUseRanges);
     } catch (Exception e) {
       die("Could not read CSV file. "+e.getMessage(), e);
     }
@@ -458,8 +492,9 @@ public class RunKbartReport {
             if (StringUtil.isNullString(pubIdentifier)) {
               pubIdentifier = getIssn();
             }
-            return String.format("BibliographicItem %s %s", 
-                                 pubIdentifier, getPublicationTitle());
+            return String.format("BibliographicItem %s %s %s-%s", 
+                                 pubIdentifier, getPublicationTitle(),
+                                 getStartVolume(), getEndVolume());
           }
         }
         .setPrintIsbn(getValue(Field.PRINT_IDENTIFIER, values))
@@ -497,6 +532,7 @@ public class RunKbartReport {
   private static final String SOPT_DATA = "d";
   private static final String SOPT_FILE = "i";
   private static final String SOPT_SHOW_STATUS = "s";
+  private static final String SOPT_LIST_INSTEAD_OF_RANGES = "l";
   private static final String FOR_JOURNALS = "J";
   private static final String FOR_BOOKS = "B";
 
@@ -564,7 +600,8 @@ public class RunKbartReport {
     options.addOptionGroup(og);
   }
 
-  // Create all the options, add them to the spec and mark those that are required.
+  // Create all the options, add them to the spec and mark those that are
+  // required.
   static {
     // options for generating MD file
     OptionGroup reportTypeGroup = new OptionGroup()
@@ -578,15 +615,22 @@ public class RunKbartReport {
         .create(FOR_JOURNALS));
     addOptionGroup(reportTypeGroup, true);
     // The input file option is required
-    addOption(new Option(SOPT_FILE, "input-file", true, "Path to the input file"), true);
+    addOption(new Option(SOPT_FILE, "input-file", true,
+	"Path to the input file"), true);
     // Help option
     addOption(new Option(SOPT_HELP, "help", false, "Show help"));
     // Option to hide empty cols
-    addOption(new Option(SOPT_HIDE_EMPTY_COLS, "hide-empty-cols", false, "Hide output columns that are empty."));
+    addOption(new Option(SOPT_HIDE_EMPTY_COLS, "hide-empty-cols", false,
+	"Hide output columns that are empty."));
     // Output data format - defines the fields and their ordering
-    addOption(new Option(SOPT_DATA, "data-format", true, "Format of the output data records."));
+    addOption(new Option(SOPT_DATA, "data-format", true,
+	"Format of the output data records."));
+    // List individual volumes instead of ranges.
+    addOption(new Option(SOPT_LIST_INSTEAD_OF_RANGES, "list-not-ranges", false,
+	"List individual volumes instead of ranges"));
     // Option to show TDB status // TODO Not yet available
-    //addOption(new Option(SOPT_SHOW_STATUS, "show-tdb-status", false, "Show status field from TDB."));
+    //addOption(new Option(SOPT_SHOW_STATUS, "show-tdb-status", false,
+    //"Show status field from TDB."));
   }
 
   private static void selectDefaultGroupOption(OptionGroup og, Option opt) {
@@ -702,6 +746,7 @@ public class RunKbartReport {
           pubType,
           cl.hasOption(SOPT_HIDE_EMPTY_COLS),
           cl.hasOption(SOPT_SHOW_STATUS),
+          cl.hasOption(SOPT_LIST_INSTEAD_OF_RANGES),
           ordering,
           in,
           System.out
