@@ -14068,10 +14068,12 @@
         param[base_url] = http://hgp.sagepub.com/
         pluginSuffix = ClockssHighWirePressH20Plugin
         rights = openaccess
+        
+        Comment[0] = triggered to CLOCKSS: http://www.clockss.org/clockss/Human_Genomics_and_Proteomics
 
         au < zapped ; finished ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 ; >
         au < zapped ; finished ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 ; >
-        au < finished ; finished ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
+        au < down ; finished ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
 
       }
 
