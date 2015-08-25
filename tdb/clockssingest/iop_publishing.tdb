@@ -2431,7 +2431,7 @@
     au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 573 ; 573 >
     au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 574 ; 574 >
     au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 575 ; 575 >
-    au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 576 ; 576 >
+    au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 576 ; 576 >
     au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 577 ; 577 >
     au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 578 ; 578 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 579 ; 579 >
@@ -2656,6 +2656,7 @@
     
     param[journal_issn] = 1612-202X
     comment[param] = eissn preferred
+    #notReady - PD-1361, login required
 
     au < manifest ; exists ; 2004 ; Laser Physics Letters Volume 1 ; 1 >
     au < manifest ; exists ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
@@ -2668,7 +2669,7 @@
     au < frozen ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
     au < crawling ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
-    au < testing ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
+    au < notReady ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
 
   }
 
@@ -2963,7 +2964,7 @@
     au < finished ; crawling ; 2012 ; Nonlinearity Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Nonlinearity Volume 26 ; 26 > 
     au < crawling ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 > 
-    au < manifest ; exists ; 2015 ; Nonlinearity Volume 28 ; 28 > 
+    au < testing ; exists ; 2015 ; Nonlinearity Volume 28 ; 28 > 
 
   }
 
@@ -3069,7 +3070,7 @@
     au < finished ; crawling ; 2012 ; Nuclear Fusion Volume 52 ; 52 > 
     au < crawling ; exists ; 2013 ; Nuclear Fusion Volume 53 ; 53 > 
     au < crawling ; exists ; 2014 ; Nuclear Fusion Volume 54 ; 54 > 
-    au < manifest ; exists ; 2015 ; Nuclear Fusion Volume 55 ; 55 > 
+    au < testing ; exists ; 2015 ; Nuclear Fusion Volume 55 ; 55 > 
 
   }
 
@@ -3204,7 +3205,7 @@
     au < finished ; crawling ; 2012 ; Physical Biology Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Physical Biology Volume 10 ; 10 > 
     au < deepCrawl ; exists ; 2014 ; Physical Biology Volume 11 ; 11 > 
-    au < manifest ; exists ; 2015 ; Physical Biology Volume 12 ; 12 > 
+    au < testing ; exists ; 2015 ; Physical Biology Volume 12 ; 12 > 
 
   }
 
@@ -3270,7 +3271,7 @@
     au < ingNotReady ; exists ; 2012 ; Physics Education Volume 47 ; 47 > 
     au < crawling ; exists ; 2013 ; Physics Education Volume 48 ; 48 > 
     au < finished ; crawling ; 2014 ; Physics Education Volume 49 ; 49 > 
-    au < manifest ; exists ; 2015 ; Physics Education Volume 50 ; 50 > 
+    au < testing ; exists ; 2015 ; Physics Education Volume 50 ; 50 > 
 
   }
 
@@ -3346,7 +3347,7 @@
     au < ingNotReady ; exists ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 > 
     au < crawling ; exists ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 > 
     au < crawling ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 ; 59 > 
-    au < manifest ; exists ; 2015 ; Physics in Medicine and Biology Volume 60 ; 60 > 
+    au < testing ; exists ; 2015 ; Physics in Medicine and Biology Volume 60 ; 60 > 
 
   }
 
@@ -3415,7 +3416,7 @@
     au < finished ; crawling ; 2012 ; Physiological Measurement Volume 33 ; 33 >
     au < crawling ; exists ; 2013 ; Physiological Measurement Volume 34 ; 34 >
     au < deepCrawl ; exists ; 2014 ; Physiological Measurement Volume 35 ; 35 >
-    au < manifest ; exists ; 2015 ; Physiological Measurement Volume 36 ; 36 >
+    au < testing ; exists ; 2015 ; Physiological Measurement Volume 36 ; 36 >
 
   }
 
@@ -3496,7 +3497,7 @@
     au < ingNotReady ; exists ; 2012 ; Plasma Physics and Controlled Fusion Volume 54 ; 54 >
     au < crawling ; exists ; 2013 ; Plasma Physics and Controlled Fusion Volume 55 ; 55 >
     au < crawling ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 >
-    au < manifest ; exists ; 2015 ; Plasma Physics and Controlled Fusion Volume 57 ; 57 >
+    au < testing ; exists ; 2015 ; Plasma Physics and Controlled Fusion Volume 57 ; 57 >
 
   }
 
@@ -3526,7 +3527,7 @@
     au < finished ; crawling ; 2012 ; Plasma Science and Technology Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Plasma Science and Technology Volume 15 ; 15 > 
     au < deepCrawl ; exists ; 2014 ; Plasma Science and Technology Volume 16 ; 16 > 
-    au < manifest ; exists ; 2015 ; Plasma Science and Technology Volume 17 ; 17 > 
+    au < testing ; exists ; 2015 ; Plasma Science and Technology Volume 17 ; 17 > 
 
   }
 
@@ -3565,7 +3566,7 @@
     au < finished ; crawling ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Plasma Sources Science and Technology Volume 22 ; 22 > 
     au < crawling ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 > 
-    au < manifest ; exists ; 2015 ; Plasma Sources Science and Technology Volume 24 ; 24 > 
+    au < testing ; exists ; 2015 ; Plasma Sources Science and Technology Volume 24 ; 24 > 
 
   }
 
@@ -3894,7 +3895,7 @@
     au < finished ; crawling ; 2012 ; Reports on Progress in Physics Volume 75 ; 75  > 
     au < crawling ; exists ; 2013 ; Reports on Progress in Physics Volume 76 ; 76  > 
     au < deepCrawl ; exists ; 2014 ; Reports on Progress in Physics Volume 77 ; 77  > 
-    au < manifest ; exists ; 2015 ; Reports on Progress in Physics Volume 78 ; 78  > 
+    au < testing ; exists ; 2015 ; Reports on Progress in Physics Volume 78 ; 78  > 
 
   }
 
@@ -3915,7 +3916,7 @@
     au < finished ; crawling ; 2012 ; Research in Astronomy and Astrophysics Volume 12 ; 12 > 
     au < crawling ; exists ; 2013 ; Research in Astronomy and Astrophysics Volume 13 ; 13 > 
     au < deepCrawl ; exists ; 2014 ; Research in Astronomy and Astrophysics Volume 14 ; 14 > 
-    au < manifest ; exists ; 2015 ; Research in Astronomy and Astrophysics Volume 15 ; 15 > 
+    au < testing ; exists ; 2015 ; Research in Astronomy and Astrophysics Volume 15 ; 15 > 
 
   }
 
@@ -3963,7 +3964,7 @@
     au < finished ; crawling ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 > 
     au < crawling ; exists ; 2013 ; Science and Technology of Advanced Materials Volume 14 ; 14 > 
     au < deepCrawl ; exists ; 2014 ; Science and Technology of Advanced Materials Volume 15 ; 15 > 
-    au < manifest ; exists ; 2015 ; Science and Technology of Advanced Materials Volume 16 ; 16 > 
+    au < testing ; exists ; 2015 ; Science and Technology of Advanced Materials Volume 16 ; 16 > 
 
   }
 
@@ -4027,7 +4028,7 @@
     au < ingNotReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 > 
     au < crawling ; exists ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 > 
     au < crawling ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 > 
-    au < manifest ; exists ; 2015 ; Semiconductor Science and Technology Volume 30 ; 30 > 
+    au < testing ; exists ; 2015 ; Semiconductor Science and Technology Volume 30 ; 30 > 
 
   }
 
@@ -4067,7 +4068,7 @@
     au < ingNotReady ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Smart Materials and Structures Volume 22 ; 22 > 
     au < frozen ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
-    au < manifest ; exists ; 2015 ; Smart Materials and Structures Volume 24 ; 24 > 
+    au < testing ; exists ; 2015 ; Smart Materials and Structures Volume 24 ; 24 > 
 
   }
 
@@ -4110,7 +4111,7 @@
     au < finished ; crawling ; 2012 ; Superconductor Science and Technology Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Superconductor Science and Technology Volume 26 ; 26 > 
     au < crawling ; exists ; 2014 ; Superconductor Science and Technology Volume 27 ; 27 > 
-    au < manifest ; exists ; 2015 ; Superconductor Science and Technology Volume 28 ; 28 > 
+    au < testing ; exists ; 2015 ; Superconductor Science and Technology Volume 28 ; 28 > 
 
   }
 
@@ -4127,7 +4128,7 @@
 
     au < frozen ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
     au < deepCrawl ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
-    au < manifest ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
+    au < testing ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
 
   }
 
