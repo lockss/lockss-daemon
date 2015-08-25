@@ -60,6 +60,8 @@
       au < released ; 2012 ; 1 ; Belas Infiéis Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Belas Infiéis Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 3 ; Belas Infiéis Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 4 ; Belas Infiéis Volume 2015 ; 2015 ; >
+
       }
 
   }
@@ -85,6 +87,8 @@
       au < released ; 2011 ; 1 ; Ciência & Tecnologia Social Volume 2011 ; 2011 ; >
       au < released ; 2013 ; 1 ; Ciência & Tecnologia Social Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 2 ; Ciência & Tecnologia Social Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 3 ; Ciência & Tecnologia Social Volume 2015 ; 2015 ; >
+
       }
 
   }
@@ -129,7 +133,9 @@
       au < released ; 2011 ; 10 ; Em tempo de histórias Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 11 ; Em tempo de histórias Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Em tempo de histórias Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 13 ; Em tempo de histórias Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 13 ; Em tempo de histórias Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 14 ; Em tempo de histórias Volume 2015 ; 2015 ; >
+
       }
 
   }
@@ -208,6 +214,7 @@
       au < released ; 2013 ; 15 ; Estudos de Literatura Brasileira Contemporânea Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 16 ; Estudos de Literatura Brasileira Contemporânea Volume 2014 ; 2014 ; >
       au < released ; 2015 ; 17 ; Estudos de Literatura Brasileira Contemporânea Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -229,7 +236,9 @@
       param[base_url] = http://periodicos.unb.br/
       
       au < released ; 2013 ; 1 ; Revista de Filosofia Moderna e Contemporânea Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 2 ; Revista de Filosofia Moderna e Contemporânea Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 2 ; Revista de Filosofia Moderna e Contemporânea Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 3 ; Revista de Filosofia Moderna e Contemporânea Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -282,6 +291,7 @@
       au < released ; 2013 ; 14 ; Cadernos de Linguagem e Sociedade Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 15 ; Cadernos de Linguagem e Sociedade Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 16 ; Cadernos de Linguagem e Sociedade Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -312,6 +322,8 @@
       au < released ; 2012 ; 4 ; Revista Brasileira de Linguística Antropológica Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 5 ; Revista Brasileira de Linguística Antropológica Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 6 ; Revista Brasileira de Linguística Antropológica Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 7 ; Revista Brasileira de Linguística Antropológica Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -410,8 +422,10 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < released ;2013 ; 1 ; História, histórias Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 2 ; História, histórias Volume 2014 ; 2014 ; >
+      au < released ; 2013 ; 1 ; História, histórias Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 2 ; História, histórias Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 3 ; História, histórias Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -435,7 +449,7 @@
       
       au < released ; 2012 ; 1 ; Revista Museologia & Interdisciplinaridade Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Revista Museologia & Interdisciplinaridade Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 3 ; Revista Museologia & Interdisciplinaridade Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 3 ; Revista Museologia & Interdisciplinaridade Volume 2014 ; 2014 ; >
       }
   }
 
@@ -512,13 +526,13 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < released ;2003 ; 1 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2003 ; 2003 ; >
+      au < released ; 2003 ; 1 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2003 ; 2003 ; >
       au < notReady ; 2006 ; 2 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2006 ; 2006 ; no substance >
-      au < released ;2007 ; 3 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2007 ; 2007 ; >
+      au < released ; 2007 ; 3 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2007 ; 2007 ; >
       au < notReady ; 2010 ; 4 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2010 ; 2010 ; no substance >
-      au < released ;2012 ; 5 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2012 ; 2012 ; >
-      au < released ;2013 ; 6 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 7 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2014 ; 2014 ; >
+      au < released ; 2012 ; 5 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 7 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2014 ; 2014 ; >
       }
   }
 
@@ -542,7 +556,7 @@
       
       au < released ; 2012 ; 1 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 3 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 3 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2014 ; 2014 ; >
       }
   }
 
@@ -606,8 +620,8 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < released ;2013 ; 1 ; Revista Cenário Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 2 ; Revista Cenário Volume 2014 ; 2014 ; >
+      au < released ; 2013 ; 1 ; Revista Cenário Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 2 ; Revista Cenário Volume 2014 ; 2014 ; >
       }
   }
 
@@ -707,7 +721,7 @@
       au < released ; 2011 ; 5 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 8 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 8 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2014 ; 2014 ; >
       }
   }
 
@@ -768,7 +782,7 @@
       au < notReady ; 2011 ; 9 ; Revista Sul-Americana de Filosofia e Educação Volume 2011 ; 2011 ; can't find manifest page >
       au < released ; 2012 ; 10 ; Revista Sul-Americana de Filosofia e Educação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Revista Sul-Americana de Filosofia e Educação Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 12 ; Revista Sul-Americana de Filosofia e Educação Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 12 ; Revista Sul-Americana de Filosofia e Educação Volume 2014 ; 2014 ; >
       }
   }
 
@@ -818,7 +832,7 @@
       param[base_url] = http://periodicos.unb.br/
       
       au < released ; 2013 ; 1 ; Revista Perspectivas do Desenvolvimento Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 2 ; Revista Perspectivas do Desenvolvimento Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 2 ; Revista Perspectivas do Desenvolvimento Volume 2014 ; 2014 ; >
       }
   }
 
@@ -851,7 +865,7 @@
       {
       param[base_url] = http://periodicos.unb.br/
 
-      au < released ;2014 ; 1 ; Revista XIX: artes e técnicas em transformação Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 1 ; Revista XIX: artes e técnicas em transformação Volume 2014 ; 2014 ; >
       }
 
   }
@@ -1012,7 +1026,7 @@
       au < released ; 2011 ; 11 ; ParticipAção Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 12 ; ParticipAção Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 13 ; ParticipAção Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 14 ; ParticipAção Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 14 ; ParticipAção Volume 2014 ; 2014 ; >
       }
   }
 
@@ -1028,14 +1042,16 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < released ;2007 ; 1 ; Revista Cerrados Volume 2007 ; 2007 ; >
-      au < released ;2008 ; 2 ; Revista Cerrados Volume 2008 ; 2008 ; >
-      au < released ;2009 ; 3 ; Revista Cerrados Volume 2009 ; 2009 ; >
-      au < released ;2010 ; 4 ; Revista Cerrados Volume 2010 ; 2010 ; >
-      au < released ;2011 ; 5 ; Revista Cerrados Volume 2011 ; 2011 ; >
-      au < released ;2012 ; 6 ; Revista Cerrados Volume 2012 ; 2012 ; >
-      au < released ;2013 ; 7 ; Revista Cerrados Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 8 ; Revista Cerrados Volume 2014 ; 2014 ; >
+      au < released ; 2007 ; 1 ; Revista Cerrados Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; Revista Cerrados Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; Revista Cerrados Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; Revista Cerrados Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; Revista Cerrados Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Revista Cerrados Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 7 ; Revista Cerrados Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 8 ; Revista Cerrados Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Revista Cerrados Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -1143,6 +1159,7 @@
       au < released ; 2010 ; 9 ; Revista Sociedade e Estado Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 10 ; Revista Sociedade e Estado Volume 2011 ; 2011 ; >
       au < expected ; 2014 ; 11 ; Revista Sociedade e Estado Volume 2014 ; 2014 ; >
+
       }
   }
 
