@@ -1,0 +1,77 @@
+{
+  publisher <
+    name = Future Science ;
+    info[contract] = 2012 ;
+    info[tester] = 8
+  >
+
+  plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureScienceBooksPlugin
+  param[base_url] = http://www.futuremedicine.com/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
+
+  {
+
+    title <
+      name = Future Science Books ;
+      type = bookSeries
+    >
+
+    au < exists ; exists ; 2013 ; 978-1-909453-38-8 ; 978-1-909453-37-1 ; 9781909453371 ; Forensic Drug Analysis >
+    au < exists ; exists ; 2013 ; 978-1-909453-68-5 ; 978-1-909453-67-8 ; 9781909453678 ; Tissue Analysis for Drug Development >
+    au < exists ; exists ; 2013 ; 978-1-909453-74-6 ; 978-1-909453-73-9 ; 9781909453739 ; Bioanalysis of Biotherapeutics >
+    au < exists ; exists ; 2013 ; 978-1-909453-11-1 ; 978-1-909453-10-4 ; 9781909453104 ; An Introduction to Green Chemistry Methods >
+    au < exists ; exists ; 2013 ; 978-1-909453-35-7 ; 978-1-909453-34-0 ; 9781909453340 ; Recent Progress and New Developments in Post-Combustion Carbon-Capture Technology with Reactive Solvents >
+    au < exists ; exists ; 2013 ; 978-1-909453-41-8 ; 978-1-909453-40-1 ; 9781909453401 ; Molecular Imaging Techniques: New Frontiers >
+    au < exists ; exists ; 2013 ; 978-1-909453-02-9 ; 978-1-909453-01-2 ; 9781909453012 ; In Silico Drug Discovery and Design >
+    au < exists ; exists ; 2013 ; 978-1-909453-47-0 ; 978-1-909453-46-3 ; 9781909453463 ; Understanding and Exploiting Protein–Protein Interactions as Drug Targets >
+    au < exists ; exists ; 2013 ; 978-1-909453-75-3 ; 978-1-909453-76-0 ; 9781909453760 ; Bioanalysis for Service Users >
+    au < exists ; exists ; 2013 ; 978-1-909453-32-6 ; 978-1-909453-31-9 ; 9781909453319 ; Important Considerations for Clinical Trial Methodologies >
+    au < exists ; exists ; 2013 ; 978-1-909453-80-7 ; 978-1-909453-79-1 ; 9781909453791 ; Immunogenicity Assay Development, Validation and Implementation >
+    au < exists ; exists ; 2013 ; 978-1-909453-50-0 ; 978-1-909453-49-4 ; 9781909453494 ; Therapeutic Delivery Methods: A Concise Overview of Emerging Areas >
+    au < exists ; exists ; 2013 ; 978-1-909453-44-9 ; 978-1-909453-43-2 ; 9781909453432 ; Nucleic Acid-Based Drugs >
+    au < exists ; exists ; 2013 ; 978-1-909453-65-4 ; 978-1-909453-64-7 ; 9781909453647 ; Biosensors and Their Application in Healthcare >
+    au < exists ; exists ; 2013 ; 978-1-909453-14-2 ; 978-1-909453-13-5 ; 9781909453135 ; Particulate Matter: Environmental Monitoring & Mitigation >
+    au < exists ; exists ; 2013 ; 978-1-909453-59-3 ; 978-1-909453-58-6 ; 9781909453586 ; Microsampling in Pharmaceutical Bioanalysis  >
+    au < exists ; exists ; 2013 ; 978-1-909453-08-1 ; 978-1-909453-07-4 ; 9781909453074 ; Applications of Nanomaterials for Water Quality  >
+    au < exists ; exists ; 2014 ; 978-1-909453-56-2 ; 978-1-909453-55-5 ; 9781909453555 ; Applications of High-Resolution Mass Spectrometry in Drug Discovery and Development  >
+    au < exists ; exists ; 2014 ; 978-1-909453-26-5 ; 978-1-909453-25-8 ; 9781909453258 ; Progress in Nanomaterials for Food Packaging  >
+    au < exists ; exists ; 2014 ; 978-1-909453-62-3 ; 978-1-909453-61-6 ; 9781909453616 ; Global Metabolic Profiling: Clinical Applications >
+    au < exists ; exists ; 2014 ; 978-1-909453-23-4 ; 978-1-909453-22-7 ; 9781909453227 ; Mycotoxins & their Implications in Food Safety   >
+    au < exists ; exists ; 2014 ; 978-1-909453-83-8 ; 978-1-909453-82-1 ; 9781909453821 ; Hot Topics in Metabolomics: Food and Nutrition >
+    au < exists ; exists ; 2014 ; 978-1-909453-29-6 ; 978-1-909453-28-9 ; 9781909453289 ; Advances in Collating and Using Trial Data >
+    au < exists ; exists ; 2014 ; 978-1-909453-71-5 ; 978-1-909453-70-8 ; 9781909453708 ; Hot Topics in Biomaterials >
+    au < exists ; exists ; 2014 ; 978-1-909453-17-3 ; 978-1-909453-16-6 ; 9781909453166 ; Contaminated Soils: A Guide to Sampling and Analysis >
+    au < exists ; exists ; 2014 ; 978-1-909453-05-0 ; 978-1-909453-04-3 ; 9781909453043 ; Quality Assurance & Quality Control of Environmental Field Samples >
+    au < exists ; exists ; 2014 ; 978-1-909453-53-1 ; 978-1-909453-52-4 ; 9781909453524 ; Drug Delivery in Oncology >
+    au < exists ; exists ; 2014 ; 978-1-909453-89-0 ; 978-1-909453-88-3 ; 9781909453883 ; Eliminating Bottlenecks for Efficient Bioanalysis: Practices and Applications in Drug Discovery and Development >
+    au < exists ; exists ; 2014 ; 978-1-910419-31-1 ; 978-1-910419-29-8 ; 9781910419298 ; Microwaves in Drug Discovery and Development: Recent Advances >
+    au < exists ; exists ; 2014 ; 978-1-909453-92-0 ; 978-1-909453-91-3 ; 9781909453913 ; Targeting Carbonic Anhydrases >
+    au < exists ; exists ; 2015 ; 978-1-910419-46-5 ; 978-1-910419-44-1 ; 9781910419441 ; Advanced LC-MS Applications in Metabolomics >
+    au < exists ; exists ; 2015 ; 978-1-910420-30-0 ; 978-1-910420-28-7 ; 9781910420287 ; Identification and Data Processing Methods in Metabolomics >
+    au < exists ; exists ; 2015 ; 978-1-910419-70-0 ; 978-1-910419-68-7 ; 9781910419687 ; Biological Relevance and Therapeutic Applications of DNA and RNA Quadruplexes >
+    au < exists ; exists ; 2015 ; 978-1-910419-00-7 ; 978-1-909453-96-8 ; 9781909453968 ; Fluorinated Pharmaceuticals: Advances in Medicinal Chemistry >
+    au < expected ; exists ;  ;  ;  ; OOO ; Optimizing Antibody-Drug Conjugates for Targeted Delivery of Therapeutics >
+    au < exists ; exists ; 2015 ; 978-1-910420-42-3 ; 978-1-910420-40-9 ; 9781910420409 ; Nanoparticles for Biotherapeutic Delivery (Volume 1) >
+    au < exists ; exists ; 2015 ; 978-1-910420-45-4 ; 978-1-910420-43-0 ; 9781910420430 ; Nanoparticles for Biotherapeutic Delivery (Volume 2) >
+    au < expected ; exists ;  ;  ;  ; INT ; Introduction to Patentability in Drug Development >
+    au < exists ; exists ; 2015 ; 978-1-909453-98-2 ; 978-1-909453-93-7 ; 9781909453937 ; Advances in Non-Invasive Drug Delivery to the Brain >
+    au < expected ; exists ;  ;  ;  ; ADV ; Advances in the Discovery and Development of Peptide Therapeutics >
+    au < expected ; exists ;  ;  ;  ; ADS ; Advances and Challenges in the Delivery of Nucleic Acid Therapeutics (Volume 1) >
+    au < expected ; exists ;  ;  ;  ; ADC ; Advances and Challenges in the Delivery of Nucleic Acid Therapeutics (Volume 2) >
+    au < expected ; exists ;  ;  ;  ; LI1 ; Liposomal Delivery Systems: Advances and Challenges (Volume 1) >
+    au < expected ; exists ;  ;  ;  ; LI2 ; Liposomal Delivery Systems: Advances and Challenges (Volume 2) >
+    au < expected ; exists ;  ;  ;  ; ADM ; Advances in Tuberculosis Medicinal Chemistry >
+    au < expected ; exists ;  ;  ;  ; ADO ; Advances and Challenges in Oral Delivery of Macromolecules >
+    au < expected ; exists ;  ;  ;  ; CLI ; Clinical advances in diabetes >
+    au < expected ; exists ;  ;  ;  ; MON ; Monoclonal Antibodies: Development, Delivery and Applications >
+    au < expected ; exists ;  ;  ;  ; ADE ; Advances in Enzymatic Conversion of Biomass to Biofuels >
+    au < expected ; exists ;  ;  ;  ; ADL ; Advances in Liquid Chromatography: New Developments in Stationary Phases >
+    au < expected ; exists ;  ;  ;  ; NEW ; New Sampling Strategies in Toxicology and Therapeutic Drug Monitoring >
+    au < expected ; exists ;  ;  ;  ; ADA ; Advances and Challenges in Antidoping Analysis >
+    au < expected ; exists ;  ;  ;  ; CUR ; Current Issues in Ligand-Binding Assay Bioanalysis >
+    au < expected ; exists ;  ;  ;  ; ADL ; Advanced LC-MS Applications in Bioanalysis >
+    au < expected ; exists ;  ;  ;  ; NOV ; Novel methods in bioanalysis and characterization of drug–antibody conjugates >
+
+  }
+
+}
