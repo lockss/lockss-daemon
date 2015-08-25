@@ -491,8 +491,7 @@ public class ReindexingTask extends StepTask {
       TdbAu tdbau = au.getTdbAu();
       boolean isTitleInTdb = !au.isBulkContent();
       String tdbauName = (tdbau == null) ? null : tdbau.getName();
-      String tdbauStartYear =
-          (tdbau == null) ? au.getName() : tdbau.getStartYear();
+      String tdbauStartYear = (tdbau == null) ? auName : tdbau.getStartYear();
       String tdbauYear = (tdbau == null) ? null : tdbau.getYear();
       String tdbauIsbn = null;
       String tdbauIssn = null;
@@ -675,21 +674,13 @@ public class ReindexingTask extends StepTask {
     private void handleStartEvent(long threadCpuTime, long threadUserTime,
         long currentClockTime) {
       final String DEBUG_HEADER = "handleStartEvent(): ";
-      log.debug3(DEBUG_HEADER + "Starting to reindex AU: " + auName);
+      log.info("Starting reindexing task for AU '" + auName + "': isNewAu = "
+	  + isNewAu + ", needFullReindex = " + needFullReindex + "...");
 
       // Remember the times at startup.
       startCpuTime = threadCpuTime;
       startUserTime = threadUserTime;
       startClockTime = currentClockTime;
-
-      if (log.isDebug2()) {
-        log.debug2(DEBUG_HEADER + "Reindexing task start for AU: "
-            + au.getName() + " startCpuTime: " + startCpuTime / 1.0e9
-            + ", startUserTime: " + startUserTime / 1.0e9
-            + ", startClockTime: " + startClockTime / 1.0e3);
-	log.debug2(DEBUG_HEADER + "isNewAu = " + isNewAu);
-	log.debug2(DEBUG_HEADER + "needFullReindex = " + needFullReindex);
-      }
 
       MetadataTarget target = MetadataTarget.OpenURL();
         
@@ -707,11 +698,11 @@ public class ReindexingTask extends StepTask {
       // iterators are queued for processing.
       articleIterator = au.getArticleIterator(target);
 
-      if (log.isDebug2()) {
+      if (log.isDebug3()) {
         long articleIteratorInitTime = TimeBase.nowMs() - startClockTime;
-        log.debug2(DEBUG_HEADER + "Starting reindexing task for au: "
-            + au.getName() + " has articles? " + articleIterator.hasNext()
-            + " initializing iterator took " + articleIteratorInitTime + "ms");
+        log.debug3(DEBUG_HEADER + "Reindexing task for AU '" + auName
+            + "': has articles? " + articleIterator.hasNext()
+            + ", initializing iterator took " + articleIteratorInitTime + "ms");
       }
 
       try {
@@ -719,8 +710,8 @@ public class ReindexingTask extends StepTask {
 	  new ArticleMetadataBuffer(new File(PlatformUtil.getSystemTempDir()));
         mdManager.notifyStartReindexingAu(au);
       } catch (IOException ioe) {
-        log.error("Failed to set up pending AU '" + au.getName()
-                  + "' for re-indexing", ioe);
+        log.error("Failed to set up pending AU '" + auName
+            + "' for re-indexing", ioe);
         setFinished();
         if (status == ReindexingStatus.Running) {
           status = ReindexingStatus.Rescheduled;
@@ -743,8 +734,8 @@ public class ReindexingTask extends StepTask {
     private void handleFinishEvent(SchedulableTask task, long threadCpuTime,
         long threadUserTime, long currentClockTime) {
       final String DEBUG_HEADER = "handleFinishEvent(): ";
-      log.debug3(DEBUG_HEADER + "Finishing reindexing (" + status + ") for AU: "
-          + auName);
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "AU '" + auName + "': status = " + status);
 
       if (status == ReindexingStatus.Running) {
         status = ReindexingStatus.Success;
@@ -762,14 +753,14 @@ public class ReindexingTask extends StepTask {
             // Get a connection to the database.
             conn = dbManager.getConnection();
 
-            // Check whether the plugin version used to obtain the metadata
-            // stored in the database is older than the current plugin version.
+            // Check whether the reindexing task is not incremental.
             if (needFullReindex) { 
-              // Yes: Remove old AU metadata before adding new.
+              // Yes: Remove the old Archival Unit metadata before adding the
+              // new metadata.
               removedArticleCount =
         	  mdManagerSql.removeAuMetadataItems(conn, auId);
-              log.debug3(DEBUG_HEADER + "removedArticleCount = "
-                  + removedArticleCount);
+              log.info("Reindexing task for AU '" + auName + "' removed "
+        	  + removedArticleCount + " database articles.");
             }
 
             Iterator<ArticleMetadataInfo> mditr =
@@ -795,10 +786,19 @@ public class ReindexingTask extends StepTask {
 
             // Update the successful re-indexing count.
             mdManager.addToSuccessfulReindexingTasks(ReindexingTask.this);
-
+            
             // Update the total article count.
             mdManager.addToMetadataArticleCount(updatedArticleCount
-                - removedArticleCount);
+        	- removedArticleCount);
+
+            // Check whether the reindexing task is not incremental.
+            if (needFullReindex) { 
+              log.info("Reindexing task for AU '" + auName + "' added "
+        	  + updatedArticleCount + " database articles.");
+            } else {
+              log.info("Reindexing task for AU '" + auName + "' updated "
+        	  + updatedArticleCount + " database articles.");
+            }
 
             break;
           } catch (MetadataException me) {
@@ -826,8 +826,9 @@ public class ReindexingTask extends StepTask {
         case Rescheduled:
           // Reindexing not successful, so try again later if status indicates
           // the operation should be rescheduled.
-          log.debug2(DEBUG_HEADER + "Reindexing task (" + status
-              + ") did not finish for au " + au.getName());
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER
+              + "Reindexing task for AU '" + auName
+              + "' was unsuccessful: status = " + status);
 
           mdManager.addToFailedReindexingTasks(ReindexingTask.this);
 
@@ -839,15 +840,16 @@ public class ReindexingTask extends StepTask {
             mdManager.updatePendingAusCount(conn);
 
             if (status == ReindexingStatus.Failed) {
-              log.debug2(DEBUG_HEADER + "Marking as broken reindexing task au "
-                  + au.getName());
+              if (log.isDebug3()) log.debug3(DEBUG_HEADER
+        	  + "Marking as failed the reindexing task for AU '" + auName
+        	  + "'");
 
             // Add the failed AU to the pending list with the right priority to
             // avoid processing it again before the underlying problem is fixed.
               mdManagerSql.addFailedIndexingAuToPendingAus(conn, au.getAuId());
             } else if (status == ReindexingStatus.Rescheduled) {
-              log.debug2(DEBUG_HEADER + "Rescheduling reindexing task au "
-                  + au.getName());
+              if (log.isDebug3()) log.debug3(DEBUG_HEADER
+        	  + "Rescheduling the reindexing task AU '" + auName + "'");
 
               // Add the re-schedulable AU to the end of the pending list.
               mdManager.addToPendingAusIfNotThere(conn,
@@ -857,8 +859,8 @@ public class ReindexingTask extends StepTask {
             // Complete the database transaction.
             DbManager.commitOrRollback(conn, log);
           } catch (DbException dbe) {
-            log.warning("Error updating pending queue at FINISH" + " for "
-                + status, dbe);
+            log.warning("Error updating pending queue at FINISH for AU '"
+        	+ auName + "', status = " + status, dbe);
           } finally {
             DbManager.safeRollbackAndClose(conn);
           }
@@ -873,18 +875,15 @@ public class ReindexingTask extends StepTask {
       }
 
       // Display timings.
-      if (log.isDebug2()) {
-        long elapsedCpuTime = threadCpuTime - startCpuTime;
-        long elapsedUserTime = threadUserTime - startUserTime;
-        long elapsedClockTime = currentClockTime - startClockTime;
+      long elapsedCpuTime = threadCpuTime - startCpuTime;
+      long elapsedUserTime = threadUserTime - startUserTime;
+      long elapsedClockTime = currentClockTime - startClockTime;
 
-        log.debug2(DEBUG_HEADER + "Reindexing task finished (" + status
-            + ") for au: " + au.getName() + " CPU time: "
-            + elapsedCpuTime / 1.0e9 + " (" + endCpuTime / 1.0e9
-            + "), UserTime: " + elapsedUserTime / 1.0e9 + " ("
-            + endUserTime / 1.0e9 + ") Clock time: " + elapsedClockTime / 1.0e3
-            + " (" + endClockTime / 1.0e3 + ")");
-      }
+      log.info("Finished reindexing task for AU '" + auName + "': status = "
+	  + status + ", CPU time: " + elapsedCpuTime / 1.0e9 + " ("
+	  + endCpuTime / 1.0e9 + "), User time: " + elapsedUserTime / 1.0e9
+	  + " (" + endUserTime / 1.0e9 + "), Clock time: "
+	  + elapsedClockTime / 1.0e3 + " (" + endClockTime / 1.0e3 + ")");
 
       // Release collected metadata info once finished.
       articleMetadataInfoBuffer.close();
