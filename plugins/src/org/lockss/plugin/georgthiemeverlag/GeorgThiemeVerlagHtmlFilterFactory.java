@@ -71,6 +71,7 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar"),
         // Contains navigation items that are not content
         HtmlNodeFilters.tagWithAttribute("div", "id", "navPanel"),
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "overviewNavigation"),
         // Contains functional links, not content
         HtmlNodeFilters.tagWithAttribute("div", "class", "pageFunctions"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleFunctions"),
