@@ -1168,7 +1168,7 @@ The target you have selected requires compiling under JDK 1.7.
        <fileset dir="${plugins.src}" >
           <include name="**/*.xml"/>   <!-- Definable plugins -->
        </fileset>
-       <fileset dir="${plugins.externals}" erroronmissingdir="false">   <!-- Plugin externals -->
+       <fileset dir="${plugins.externals}" erroronmissingdir="false"> <!-- Plugin externals -->
           <include name="**/*.txt"/>
        </fileset>
     </copy>
@@ -1534,6 +1534,7 @@ Must specify output dir with -Doutdir=dir
 	<include name="titledb.xml" if="titledb"/>
 	<include name="${plugin-path}/*.class" />
 	<include name="${plugin-path}/*.xml" />
+	<include name="${plugin-path}/*.txt" /> <!-- Plugin externals -->
       </fileset>
       <manifest>
 	<section name="${plugin-path}/${plugin-file}">
