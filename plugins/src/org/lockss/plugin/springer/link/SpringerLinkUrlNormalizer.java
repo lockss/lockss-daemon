@@ -44,7 +44,7 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
 
   public static final String SLASH_ENCODED = "%2F";
   public static final String SLASH = "/";
-  public static final Pattern CHAPTER_LANDING_DOI_PATTERN = Pattern.compile("(.+/chapter/.+)(_[0-9]+)$");
+  public static final Pattern CHAPTER_DOI_PATTERN = Pattern.compile("(.+/chapter/.+)(_[0-9]+)(/fulltext.html)?");
   public static final Pattern CHAPTER_PDF_DOI_PATTERN = Pattern.compile("(.+/content/pdf/.+)(_[0-9]+)(\\.pdf)$");
   public static final String DOWNLOAD_URL_KEY = "download_url";
   
@@ -58,9 +58,9 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
       }
       if(url.contains("_")) {
         Matcher pdfMatcher = CHAPTER_PDF_DOI_PATTERN.matcher(url);
-        Matcher landingMatcher = CHAPTER_LANDING_DOI_PATTERN.matcher(url);    
-        if(landingMatcher.matches()) {
-          url = landingMatcher.group(1) + landingMatcher.group(3);
+        Matcher chapterMatcher = CHAPTER_DOI_PATTERN.matcher(url);    
+        if(chapterMatcher.matches()) {
+          url = chapterMatcher.group(1);
           url = StringUtil.replaceString(url, "chapter", "book");
         } else if(pdfMatcher.matches()) {
           url = pdfMatcher.group(1) + pdfMatcher.group(3);

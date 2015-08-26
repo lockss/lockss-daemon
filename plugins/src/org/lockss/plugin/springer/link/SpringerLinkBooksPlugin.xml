@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -89,10 +89,15 @@
     <list>
       <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(download_url)</string>
       <string>2,"^%scontent/pdf/(bbm|bfm)", base_url</string>
+      <string>1,"^%sdownload/epub/", base_url</string>
       <string>1,"^%s(content|chapter|book|article)/", base_url</string>
-      <string>1,"^%sstatic/pdf/", download_url</string>
+      <string>1,"^%sstatic/", download_url</string>
       <string>1,"http://static-content.springer.com/image/.+[.](jpg|png)"</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkLoginPageChecker</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>

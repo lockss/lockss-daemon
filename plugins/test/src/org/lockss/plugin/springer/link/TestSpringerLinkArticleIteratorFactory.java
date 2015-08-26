@@ -108,7 +108,7 @@ public class TestSpringerLinkArticleIteratorFactory extends ArticleIteratorTestC
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL),
+    assertEquals(ListUtil.list(BASE_URL + "article/", BASE_URL + "book/"),
         getRootUrls(artIter));
   }
 
