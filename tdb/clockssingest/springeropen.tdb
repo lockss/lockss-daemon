@@ -2338,7 +2338,7 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < doesNotExist ; exists ; 2014 ; Journal of Chinese Sociology Volume 1 ; 1 > 
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Chinese Sociology Volume 1 ; 1 > 
       au < manifest ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
 
     }
