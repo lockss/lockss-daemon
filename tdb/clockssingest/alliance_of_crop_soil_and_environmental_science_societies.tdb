@@ -40,9 +40,9 @@
     au < manifest ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 >
     au < manifest ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 >
     au < manifest ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 >
-    au < ready ; exists ; 2013 ; Agronomy Journal Volume 105 ; 105 >
-    au < ready ; exists ; 2014 ; Agronomy Journal Volume 106 ; 106 >
-    au < ready ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 >
+    au < crawling ; exists ; 2013 ; Agronomy Journal Volume 105 ; 105 >
+    au < crawling ; exists ; 2014 ; Agronomy Journal Volume 106 ; 106 >
+    au < crawling ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 >
     au < manifest ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 >
 
   }
@@ -60,9 +60,9 @@
     
     param[journal_id] = cns
 
-    au < ready ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
-    au < ready ; exists ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
-    au < ready ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
+    au < crawling ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
+    au < crawling ; exists ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
+    au < crawling ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
 
 
   }
@@ -83,9 +83,9 @@
     au < manifest ; exists ; 2010 ; Crop Science Volume 50 ; 50 >
     au < manifest ; exists ; 2011 ; Crop Science Volume 51 ; 51 >
     au < manifest ; exists ; 2012 ; Crop Science Volume 52 ; 52 >
-    au < ready ; exists ; 2013 ; Crop Science Volume 53 ; 53 >
-    au < ready ; exists ; 2014 ; Crop Science Volume 54 ; 54 >
-    au < ready ; exists ; 2015 ; Crop Science Volume 55 ; 55 >
+    au < crawling ; exists ; 2013 ; Crop Science Volume 53 ; 53 >
+    au < crawling ; exists ; 2014 ; Crop Science Volume 54 ; 54 >
+    au < crawling ; exists ; 2015 ; Crop Science Volume 55 ; 55 >
 
   }
 
@@ -102,9 +102,9 @@
     
     param[journal_id] = csa
 
-    au < ready ; exists ; 2013 ; CSA News Volume 58 ; 58 >
-    au < ready ; exists ; 2014 ; CSA News Volume 59 ; 59 >
-    au < ready ; exists ; 2015 ; CSA News Volume 60 ; 60 >
+    au < crawling ; exists ; 2013 ; CSA News Volume 58 ; 58 >
+    au < crawling ; exists ; 2014 ; CSA News Volume 59 ; 59 >
+    au < crawling ; exists ; 2015 ; CSA News Volume 60 ; 60 >
 
   }
 
@@ -126,8 +126,8 @@
     au < manifest ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
     au < manifest ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
     au < testing ; exists ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
-    au < ready ; exists ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
-    au < ready ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
+    au < crawling ; exists ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
+    au < crawling ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
 
 
   }
@@ -147,8 +147,8 @@
     au < manifest ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
-    au < ready ; exists ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
-    au < ready ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
+    au < crawling ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
     au < manifest ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
 
   }
@@ -185,9 +185,9 @@
     au < manifest ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 >
     au < manifest ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 >
     au < manifest ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
-    au < ready ; exists ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
-    au < ready ; exists ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
-    au < ready ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 >
+    au < crawling ; exists ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
+    au < crawling ; exists ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
+    au < crawling ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 >
 
   }
 
@@ -206,8 +206,8 @@
     au < manifest ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 >
     au < manifest ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 >
     au < manifest ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 >
-    au < ready ; exists ; 2013 ; The Plant Genome Volume 6 ; 6 >
-    au < ready ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 >
+    au < crawling ; exists ; 2013 ; The Plant Genome Volume 6 ; 6 >
+    au < crawling ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 >
     au < testing ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 >
 
   }
@@ -225,9 +225,9 @@
     param[journal_id] = sh
 
     au < manifest ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 >
-    au < ready ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 >
-    au < ready ; exists ; 2014 ; Soil Horizons Volume 55 ; 55 >
-    au < ready ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 >
+    au < crawling ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 >
+    au < crawling ; exists ; 2014 ; Soil Horizons Volume 55 ; 55 >
+    au < crawling ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 >
 
   }
 
@@ -249,8 +249,8 @@
     au < manifest ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
     au < manifest ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
     au < testing ; exists ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
-    au < ready ; exists ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
-    au < ready ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
+    au < crawling ; exists ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
+    au < crawling ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
 
   }
 
@@ -270,9 +270,9 @@
     au < manifest ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 >
     au < manifest ; exists ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
     au < manifest ; exists ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
-    au < ready ; exists ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
-    au < ready ; exists ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
-    au < ready ; exists ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
+    au < crawling ; exists ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
+    au < crawling ; exists ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
+    au < crawling ; exists ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
 
   }
 
