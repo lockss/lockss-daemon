@@ -47,7 +47,7 @@
     au < ready ; exists ; 2012 ; 2012 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 47 ; 47 >
     au < ready ; exists ; 2013 ; 2013 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 48 ; 48 >
     au < ready ; exists ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 >
-    au < manifest ; exists ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 >
+    au < testing ; exists ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 >
 
   }
 
@@ -101,8 +101,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 >
     au < notReady ; exists ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 >
     au < notReady ; exists ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 >
-    au < manifest ; exists ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 >
-    au < manifest ; exists ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 >
+    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 >
+    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 >
 
   }
 
@@ -130,8 +130,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Ernährungsmedizin Volume 36 ; 36 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 37 ; 37 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 38 ; 38 >
-    au < manifest ; exists ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 >
-    au < manifest ; exists ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 >
+    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 >
+    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 >
 
   }
 
@@ -148,8 +148,8 @@
 
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Kardiologie Volume 1 ; 1 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 >
-    au < manifest ; exists ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 >
-    au < manifest ; exists ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 >
+    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 >
+    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 >
 
   }
 
@@ -198,8 +198,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Neurologie Volume 2012 ; 39 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
-    au < manifest ; exists ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
-    au < manifest ; exists ; 2015 ; 2015 ; Aktuelle Neurologie Volume 2015 ; 42 >
+    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
+    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Neurologie Volume 2015 ; 42 >
 
   }
 
@@ -246,8 +246,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Rheumatologie Volume 38 ; 38 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 >
-    au < manifest ; exists ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 >
-    au < manifest ; exists ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 >
+    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 >
+    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 >
 
   }
 
@@ -326,8 +326,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Urologie Volume 2011 ; 42 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Urologie Volume 2012 ; 43 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Urologie Volume 2013 ; 44 >
-    au < manifest ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
-    au < manifest ; exists ; 2015 ; 2015 ; Aktuelle Urologie Volume 2015 ; 46 >
+    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
+    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Urologie Volume 2015 ; 46 >
 
    }
 
@@ -386,8 +386,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Allgemeine Homöopathische Zeitung Volume 2011 ; 256 >
     au < ready ; exists ; 2012 ; 2012 ; Allgemeine Homöopathische Zeitung Volume 2012 ; 257 >
     au < ready ; exists ; 2013 ; 2013 ; Allgemeine Homöopathische Zeitung Volume 2013 ; 258 >
-    au < manifest ; exists ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 2014 ; 259 >
-    au < manifest ; exists ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 2015 ; 260 >
+    au < testing ; exists ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 2014 ; 259 >
+    au < testing ; exists ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 2015 ; 260 >
 
     }
 
@@ -409,8 +409,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Allgemein- und Viszeralchirurgie up2date Volume 2011 ; 5 >
     au < ready ; exists ; 2012 ; 2012 ; Allgemein- und Viszeralchirurgie up2date Volume 2012 ; 6 >
     au < ready ; exists ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 >
-    au < manifest ; exists ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
-    au < manifest ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 >
+    au < testing ; exists ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
+    au < testing ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 >
 
    }
 
@@ -456,8 +456,8 @@
     au < ready ; exists ; 2011 ; 2011 ; American Journal of Perinatology Volume 2011 ; 28 >
     au < ready ; exists ; 2012 ; 2012 ; American Journal of Perinatology Volume 2012 ; 29 >
     au < ready ; exists ; 2013 ; 2013 ; American Journal of Perinatology Volume 2013 ; 30 >
-    au < manifest ; exists ; 2014 ; 2014 ; American Journal of Perinatology Volume 2014 ; 31 >
-    au < manifest ; exists ; 2015 ; 2015 ; American Journal of Perinatology Volume 2015 ; 32 >
+    au < testing ; exists ; 2014 ; 2014 ; American Journal of Perinatology Volume 2014 ; 31 >
+    au < testing ; exists ; 2015 ; 2015 ; American Journal of Perinatology Volume 2015 ; 32 >
 
    }
 
@@ -476,7 +476,7 @@
     au < ready ; exists ; 2012 ; 2012 ; American Journal of Perinatology Reports Volume 2012 ; 2 >
     au < ready ; exists ; 2013 ; 2013 ; American Journal of Perinatology Reports Volume 2013 ; 3 >
     au < ready ; exists ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 2015 ; 5 >
+    au < testing ; exists ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 2015 ; 5 >
 
    }
 
@@ -490,7 +490,7 @@
     >
     param[journal_id] = 10.1055/s-00028832
 
-   au < manifest ; exists ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2015 ; 1 >
+   au < testing ; exists ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2015 ; 1 >
 
    }
 
@@ -554,7 +554,7 @@
 
     au < ready ; exists ; 2013 ; 2013 ; Drug Research Volume 2013 ; 63 >
     au < ready ; exists ; 2014 ; 2014 ; Drug Research Volume 2014 ; 64 >
-    au < manifest ; exists ; 2015 ; 2015 ; Drug Research Volume 2015 ; 65 >
+    au < testing ; exists ; 2015 ; 2015 ; Drug Research Volume 2015 ; 65 >
 
    }
 
@@ -573,7 +573,7 @@
     au < ready ; exists ; 2012 ; 2012 ; Augenheilkunde up2date Volume 2012 ; 2 >
     au < ready ; exists ; 2013 ; 2013 ; Augenheilkunde up2date Volume 2013 ; 3 >
     au < ready ; exists ; 2014 ; 2014 ; Augenheilkunde up2date Volume 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; 2015 ; Augenheilkunde up2date Volume 2015 ; 5 >
+    au < testing ; exists ; 2015 ; 2015 ; Augenheilkunde up2date Volume 2015 ; 5 >
 
   }
 
@@ -600,7 +600,7 @@
         au < ready ; exists ; 2012 ; 2012 ; B&G Bewegungstherapie und Gesundheitssport Volume 2012 ; 28 >
         au < ready ; exists ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 >
         au < ready ; exists ; 2014 ; 2014 ; B&G Bewegungstherapie und Gesundheitssport Volume 2014 ; 30 >
-        au < manifest ; exists ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 >
+        au < testing ; exists ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 >
 
   }
 
@@ -630,7 +630,7 @@
         au < ready ; exists ; 2012 ; 2012 ; Balint Journal Volume 2012 ; 13 >
         au < ready ; exists ; 2013 ; 2013 ; Balint Journal Volume 2013 ; 14 >
         au < ready ; exists ; 2014 ; 2014 ; Balint Journal Volume 2014 ; 15 >
-        au < manifest ; exists ; 2015 ; 2015 ; Balint Journal Volume 2015 ; 16 >
+        au < testing ; exists ; 2015 ; 2015 ; Balint Journal Volume 2015 ; 16 >
 
   }
 
