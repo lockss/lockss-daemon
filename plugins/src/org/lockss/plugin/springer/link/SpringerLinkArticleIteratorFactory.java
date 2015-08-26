@@ -39,14 +39,10 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-import com.google.common.collect.Lists;
-
 public class SpringerLinkArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   
-  private static final String ROOT_TEMPLATE_BOOKS = "\"%sarticle/\", base_url";
-  private static final String ROOT_TEMPLATE_JOURNALS = "\"%sbook/\", base_url";
-  
+  private static final String ROOT_TEMPLATE = "\"%s\", base_url";
   private static final String PATTERN_TEMPLATE = "\"^%s(book|article)/([^/]+)/([^/]+)$\", base_url";
   
   //http://link.springer.com/book/10.1007/978-4-431-54340-4
@@ -54,16 +50,16 @@ public class SpringerLinkArticleIteratorFactory
   private static final String LANDING_REPLACEMENT = "/$1/$2/$3";
 
   //http://link.springer.com/article/10.1007/978-4-431-54340-4_1/fulltext.html
-  private static final Pattern HTML_PATTERN = Pattern.compile("/(article|book)/([^/]+)/([^/]+)/fulltext.html$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern HTML_PATTERN = Pattern.compile("/(article|book)/([^/]+)/([^/]+)/fulltext\\.html$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/$1/$2/$3/fulltext.html";
   
   //http://link.springer.com/download/epub/10.1007/978-4-431-54340-4.epub
-  private static final Pattern EPUB_PATTERN = Pattern.compile("/download/epub/([^/]+)/([^/]+).epub$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPUB_PATTERN = Pattern.compile("/(download/epub/)([^/]+)/([^/]+)\\.epub$", Pattern.CASE_INSENSITIVE);
   private static final String EPUB_REPLACEMENT = "/download/epub/$2/$3.epub";
 
   //http://link.springer.com/content/pdf/10.1007%2F978-4-431-54340-4.pdf
   private static final Pattern PDF_PATTERN = Pattern.compile("/(content/pdf/)([^%/]+)%2F([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-  private static final String PDF_REPLACEMENT = "/content/pdf/$2%2F$3.pdf";
+  private static final String PDF_REPLACEMENT = "/content/pdf/$2%2f$3.pdf";
 
   
   @Override
@@ -72,25 +68,32 @@ public class SpringerLinkArticleIteratorFactory
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     builder.setSpec(target,
-                    Arrays.asList(ROOT_TEMPLATE_BOOKS, ROOT_TEMPLATE_JOURNALS),
+                    ROOT_TEMPLATE,
                     PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    builder.addAspect(PDF_PATTERN,
-                      PDF_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_PDF);
-    builder.addAspect(HTML_PATTERN,
-                      HTML_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_HTML);
-    builder.addAspect(EPUB_PATTERN,
-                      EPUB_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_EPUB);
     builder.addAspect(LANDING_PATTERN,
                       LANDING_REPLACEMENT,
                       ArticleFiles.ROLE_ABSTRACT);
+    builder.addAspect(HTML_PATTERN,
+                      HTML_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_HTML);
+    builder.addAspect(PDF_PATTERN,
+                      PDF_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_PDF);
+    builder.addAspect(EPUB_PATTERN,
+                      EPUB_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_EPUB);
+
     
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
                                   ArticleFiles.ROLE_ABSTRACT,
                                   ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+                                 ArticleFiles.ROLE_FULL_TEXT_HTML,
+                                 ArticleFiles.ROLE_FULL_TEXT_EPUB,
+                                 ArticleFiles.ROLE_ABSTRACT);
+    
     return builder.getSubTreeArticleIterator();
   }
 

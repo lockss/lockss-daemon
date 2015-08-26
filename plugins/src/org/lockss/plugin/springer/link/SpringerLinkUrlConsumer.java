@@ -33,12 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.springer.link;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
+import org.lockss.util.urlconn.CacheException;
 
 /**
  * <p>
@@ -52,9 +54,10 @@ import org.lockss.plugin.base.SimpleUrlConsumer;
 public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
   
   public static final String DOWNLOAD_URL_KEY = "download_url";
+  public static final String ACCESS_STRING = "acesspage";
 
-  protected Pattern origPdfPat;
   
+  protected Pattern origPdfPat;
   protected Pattern destPdfPat;
   
   public SpringerLinkUrlConsumer(CrawlerFacade facade,
@@ -68,6 +71,10 @@ public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
   public void consume() throws IOException {
     if (shouldStoreAtOrigUrl()) {
       storeAtOrigUrl();
+    }
+    if((fud.origUrl != null && fud.origUrl.contains(ACCESS_STRING)) ||
+       (fud.fetchUrl != null && fud.fetchUrl.contains(ACCESS_STRING))) {
+      throw new CacheException.PermissionException("Found a login page");
     }
     super.consume();
   }
@@ -98,20 +105,20 @@ public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
    * @since 1.67.5
    */
   protected static Pattern makeOrigPdfPattern(String baseUrl) {
-    return Pattern.compile(String.format("^%scontent/pdf/.*\\.pdf$",
+    return Pattern.compile(String.format("^%s(content|download)/(pdf|epub)/.*\\.(pdf|epub)$",
                                          baseUrl),
                            Pattern.CASE_INSENSITIVE);
   }
 
   /**
    * 
-   * @param cdnUrl
+   * @param downloadUrl
    * @return
    * @since 1.67.5
    */
-  protected static Pattern makeDestPdfPattern(String cdnUrl) {
-    return Pattern.compile(String.format("^%sstatic/pdf/.*\\.pdf\\?[^=]*=[^&]*",
-                                         cdnUrl),
+  protected static Pattern makeDestPdfPattern(String downloadUrl) {
+    return Pattern.compile(String.format("^%sstatic/(pdf|epub)/.*\\.(pdf|epub)\\?[^=]*=[^&]*",
+                                         downloadUrl),
                            Pattern.CASE_INSENSITIVE);
   }
   

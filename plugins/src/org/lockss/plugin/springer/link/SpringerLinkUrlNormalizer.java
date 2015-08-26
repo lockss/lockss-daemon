@@ -53,7 +53,7 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     String downloadUrl = au.getConfiguration().get(DOWNLOAD_URL_KEY);
     if(url.startsWith(baseUrl) || url.startsWith(downloadUrl)) {
-      if(!url.contains("pdf")) {
+      if(!url.contains("pdf") && !url.contains("epub")) {
         url = StringUtil.replaceString(url, SLASH_ENCODED, SLASH);
       }
       if(url.contains("_")) {
