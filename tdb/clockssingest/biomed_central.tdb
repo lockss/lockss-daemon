@@ -2712,7 +2712,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.breast-cancer-research.com/
       comment[0] = base url changed to add www.
-      comment[notReady] = crawl completed with no substance
+      comment[notReady] = crawl completed with no substance. Links to articles have no www.
 
       au < manifest ; exists ; 1999 ; Breast Cancer Research Volume 1 ; 1 >
       au < manifest ; exists ; 2000 ; Breast Cancer Research Volume 2 ; 2 >
@@ -2729,8 +2729,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
       au < doNotProcess ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < testing ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
-      au < manifest ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
+      au < notReady ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < notReady ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
       }
       {
       param[base_url] = http://breast-cancer-research.com/
@@ -3176,7 +3176,6 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.clinicalmolecularallergy.com/
       param[journal_issn] = 1476-7961
-      comment[notReady] = crawl completed with no substance
 
       au < manifest ; exists ; 2003 ; Clinical and Molecular Allergy Volume 1 ; 1 >
       au < manifest ; exists ; 2004 ; Clinical and Molecular Allergy Volume 2 ; 2 >
@@ -3189,7 +3188,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < frozen ; exists ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
-      au < testing ; exists ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
+      au < doesNotExist ; doesNotExist ; 0 ; Clinical and Molecular Allergy Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
       
     }
@@ -3396,7 +3395,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.ccforum.com/
       comment[0] = base url changed to add www.
-      comment[notReady] = crawl completed with no substance
+      comment[notReady] = V17-19. Issue TOC articles all have no www. So no substance. See http://www.ccforum.com/content/18/3
 
       au < manifest ; exists ; 1997 ; Critical Care Volume 1 (eISSN 1364-8535) ; 1 >
       au < manifest ; exists ; 1998 ; Critical Care Volume 2 (eISSN 1364-8535) ; 2 >
@@ -3414,9 +3413,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2010 ; Critical Care Volume 14 (eISSN 1364-8535) ; 14 >
       au < doNotProcess ; exists ; 2011 ; Critical Care Volume 15 (eISSN 1364-8535) ; 15 >
       au < doNotProcess ; exists ; 2012 ; Critical Care Volume 16 (eISSN 1364-8535) ; 16 >
-      au < manifest ; exists ; 2013 ; Critical Care Volume 17 (eISSN 1364-8535) ; 17 >
-      au < testing ; exists ; 2014 ; Critical Care Volume 18 (eISSN 1364-8535) ; 18 >
-      au < manifest ; exists ; 2015 ; Critical Care Volume 19 (eISSN 1364-8535) ; 19 >
+      au < notReady ; exists ; 2013 ; Critical Care Volume 17 (eISSN 1364-8535) ; 17 >
+      au < notReady ; exists ; 2014 ; Critical Care Volume 18 (eISSN 1364-8535) ; 18 >
+      au < notReady ; exists ; 2015 ; Critical Care Volume 19 (eISSN 1364-8535) ; 19 >
       }
       {
       param[base_url] = http://ccforum.com/
@@ -6449,6 +6448,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.respiratory-research.com/
       comment[0] = base url changed to add www.
+      comment[notReady] = V15-16. Issue TOC articles all have no www. So no substance. See http://www.respiratory-research.com/content/16/June/2015
+      
 
       au < manifest ; exists ; 2000 ; Respiratory Research Volume 1 ; 1 >
       au < manifest ; exists ; 2001 ; Respiratory Research Volume 2 ; 2 >
@@ -6464,8 +6465,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2011 ; Respiratory Research Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2012 ; Respiratory Research Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2013 ; Respiratory Research Volume 14 ; 14 >
-      au < testing ; exists ; 2014 ; Respiratory Research Volume 15 ; 15 >
-      au < testing ; exists ; 2015 ; Respiratory Research Volume 16 ; 16 >
+      au < notReady ; exists ; 2014 ; Respiratory Research Volume 15 ; 15 >
+      au < notReady ; exists ; 2015 ; Respiratory Research Volume 16 ; 16 >
       }
       {
       param[base_url] = http://respiratory-research.com/
@@ -6660,13 +6661,14 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.stemcellres.com/
       comment[0] = base url changed to add www.
+      comment[notReady] = Issue TOC links to articles don't have www. See http://www.stemcellres.com/content/5/4
 
       au < manifest ; exists ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
       au < manifest ; exists ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
-      au < testing ; exists ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; Stem Cell Research & Therapy Volume 6 ; 6 >
+      au < notReady ; exists ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
+      au < notReady ; exists ; 2015 ; Stem Cell Research & Therapy Volume 6 ; 6 >
       }
       {
       param[base_url] = http://stemcellres.com/
@@ -7094,19 +7096,19 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1944-446X
       comment[platform] = BioMedCentral
 
-      au < manifest ; exists ; 2002 ; Chinese Journal of Cancer Volume 21 ; 21 >
-      au < manifest ; exists ; 2003 ; Chinese Journal of Cancer Volume 22 ; 22 >
-      au < manifest ; exists ; 2004 ; Chinese Journal of Cancer Volume 23 ; 23 >
-      au < manifest ; exists ; 2005 ; Chinese Journal of Cancer Volume 24 ; 24 >
-      au < manifest ; exists ; 2006 ; Chinese Journal of Cancer Volume 25 ; 25 >
-      au < manifest ; exists ; 2007 ; Chinese Journal of Cancer Volume 26 ; 26 >
-      au < manifest ; exists ; 2008 ; Chinese Journal of Cancer Volume 27 ; 27 >
-      au < manifest ; exists ; 2009 ; Chinese Journal of Cancer Volume 28 ; 28 >
-      au < manifest ; exists ; 2010 ; Chinese Journal of Cancer Volume 29 ; 29 >
-      au < manifest ; exists ; 2011 ; Chinese Journal of Cancer Volume 30 ; 30 >
-      au < manifest ; exists ; 2012 ; Chinese Journal of Cancer Volume 31 ; 31 >
-      au < manifest ; exists ; 2013 ; Chinese Journal of Cancer Volume 32 ; 32 >
-      au < testing ; exists ; 2014 ; Chinese Journal of Cancer Volume 33 ; 33 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 21 ; 21 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 22 ; 22 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 23 ; 23 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 24 ; 24 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 25 ; 25 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 26 ; 26 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 27 ; 27 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 28 ; 28 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 29 ; 29 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 30 ; 30 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 31 ; 31 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 32 ; 32 >
+      au < doesNotExist ; doesNotExist ; 0 ; Chinese Journal of Cancer Volume 33 ; 33 >
       au < manifest ; exists ; 2015 ; Chinese Journal of Cancer Volume 34 ; 34 >
 
     }
