@@ -4244,13 +4244,14 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.herpesviridae.org/
       param[journal_issn] = 2042-4280
+      
+      comment[0] = stopped publishing.
 
       au < crawling ; exists ; 2010 ; Herpesviridae Volume 1 ; 1 >
       au < crawling ; exists ; 2011 ; Herpesviridae Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Herpesviridae Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Herpesviridae Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Herpesviridae Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; Herpesviridae Volume 6 ; 6 >
 
     }
 
