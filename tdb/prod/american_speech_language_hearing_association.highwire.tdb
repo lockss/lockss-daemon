@@ -1,0 +1,952 @@
+{
+  publisher <
+    name = American Speech-Language-Hearing Association
+  >
+  
+  comment[moving] = Publisher moved from HighWire to Silverchair.
+
+  {
+    title <
+      name = American Journal of Audiology ;
+      issn = 1059-0889 ;
+      eissn = 1558-9137 ;
+      issnl = 1059-0889
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://aja.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1992 ; American Journal of Audiology Volume 1 ; 1 >
+      au < doNotProcess ; 1993 ; American Journal of Audiology Volume 2 ; 2 >
+      au < doNotProcess ; 1994 ; American Journal of Audiology Volume 3 ; 3 >
+      au < doNotProcess ; 1995 ; American Journal of Audiology Volume 4 ; 4 >
+      au < doNotProcess ; 1996 ; American Journal of Audiology Volume 5 ; 5 >
+      au < doNotProcess ; 1997 ; American Journal of Audiology Volume 6 ; 6 >
+      au < doNotProcess ; 1998 ; American Journal of Audiology Volume 7 ; 7 >
+      au < doNotProcess ; 1999 ; American Journal of Audiology Volume 8 ; 8 >
+      au < doNotProcess ; 2000 ; American Journal of Audiology Volume 9 ; 9 >
+      au < doNotProcess ; 2001 ; American Journal of Audiology Volume 10 ; 10 >
+      au < doNotProcess ; 2002 ; American Journal of Audiology Volume 11 ; 11 >
+      au < doNotProcess ; 2003 ; American Journal of Audiology Volume 12 ; 12 >
+      au < doNotProcess ; 2004 ; American Journal of Audiology Volume 13 ; 13 >
+      au < down ; 2005 ; American Journal of Audiology Volume 14 ; 14 >
+      au < down ; 2006 ; American Journal of Audiology Volume 15 ; 15 >
+      au < down ; 2007 ; American Journal of Audiology Volume 16 ; 16 >
+      au < down ; 2008 ; American Journal of Audiology Volume 17 ; 17 >
+      au < down ; 2009 ; American Journal of Audiology Volume 18 ; 18 >
+      au < down ; 2010 ; American Journal of Audiology Volume 19 ; 19 >
+      au < down ; 2011 ; American Journal of Audiology Volume 20 ; 20 >
+      au < down ; 2012 ; American Journal of Audiology Volume 21 ; 21 >
+      au < doNotProcess ; 2013 ; American Journal of Audiology Volume 22 ; 22 >
+      au < expected ; 2014 ; American Journal of Audiology Volume 23 ; 23 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = American Journal of Speech-Language Pathology ;
+      issn = 1058-0360 ;
+      eissn = 1558-9110 ;
+      issnl = 1058-0360
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://ajslp.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1 >
+      au < doNotProcess ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 2 >
+      au < doNotProcess ; 1994 ; American Journal of Speech-Language Pathology Volume 3 ; 3 >
+      au < doNotProcess ; 1995 ; American Journal of Speech-Language Pathology Volume 4 ; 4 >
+      au < doNotProcess ; 1996 ; American Journal of Speech-Language Pathology Volume 5 ; 5 >
+      au < doNotProcess ; 1997 ; American Journal of Speech-Language Pathology Volume 6 ; 6 >
+      au < doNotProcess ; 1998 ; American Journal of Speech-Language Pathology Volume 7 ; 7 >
+      au < doNotProcess ; 1999 ; American Journal of Speech-Language Pathology Volume 8 ; 8 >
+      au < doNotProcess ; 2000 ; American Journal of Speech-Language Pathology Volume 9 ; 9 >
+      au < doNotProcess ; 2001 ; American Journal of Speech-Language Pathology Volume 10 ; 10 >
+      au < doNotProcess ; 2002 ; American Journal of Speech-Language Pathology Volume 11 ; 11 >
+      au < doNotProcess ; 2003 ; American Journal of Speech-Language Pathology Volume 12 ; 12 >
+      au < doNotProcess ; 2004 ; American Journal of Speech-Language Pathology Volume 13 ; 13 >
+      au < down ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 14 >
+      au < down ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 15 >
+      au < down ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 16 >
+      au < down ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 17 >
+      au < down ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 18 >
+      au < down ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 >
+      au < down ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 >
+      au < down ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 21 >
+      au < expected ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 >
+      au < expected ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 23 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Global Issues in Communication Sciences and Related Disorders ;
+      eissn = 2161-1572 ;
+      issnl = 2161-1572
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div17perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < down ; 2011 ; Global Issues in Communication Sciences and Related Disorders Volume 1 ; 1 >
+      au < down ; 2012 ; Global Issues in Communication Sciences and Related Disorders Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Global Issues in Communication Sciences and Related Disorders Volume 3 ; 3 >
+      au < expected ; 2014 ; Global Issues in Communication Sciences and Related Disorders Volume 4 ; 4 >
+      
+    }
+      
+  }
+  
+  {
+    title <
+      name = Journal of Speech and Hearing Disorders ;
+      issn = 0022-4677 ;
+      issnl = 0022-4677
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://jshd.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[continued_by] = 1092-4388
+
+      au < doNotProcess ; 1936 ; Journal of Speech and Hearing Disorders Volume 1 ; 1 >
+      au < doNotProcess ; 1937 ; Journal of Speech and Hearing Disorders Volume 2 ; 2 >
+      au < doNotProcess ; 1938 ; Journal of Speech and Hearing Disorders Volume 3 ; 3 >
+      au < doNotProcess ; 1939 ; Journal of Speech and Hearing Disorders Volume 4 ; 4 >
+      au < doNotProcess ; 1940 ; Journal of Speech and Hearing Disorders Volume 5 ; 5 >
+      au < doNotProcess ; 1941 ; Journal of Speech and Hearing Disorders Volume 6 ; 6 >
+      au < doNotProcess ; 1942 ; Journal of Speech and Hearing Disorders Volume 7 ; 7 >
+      au < doNotProcess ; 1943 ; Journal of Speech and Hearing Disorders Volume 8 ; 8 >
+      au < doNotProcess ; 1944 ; Journal of Speech and Hearing Disorders Volume 9 ; 9 >
+      au < doNotProcess ; 1945 ; Journal of Speech and Hearing Disorders Volume 10 ; 10 >
+      au < doNotProcess ; 1946 ; Journal of Speech and Hearing Disorders Volume 11 ; 11 >
+      au < doNotProcess ; 1947 ; Journal of Speech and Hearing Disorders Volume 12 ; 12 >
+      au < doNotProcess ; 1948 ; Journal of Speech and Hearing Disorders Volume 13 ; 13 >
+      au < doNotProcess ; 1949 ; Journal of Speech and Hearing Disorders Volume 14 ; 14 >
+      au < doNotProcess ; 1950 ; Journal of Speech and Hearing Disorders Volume 15 ; 15 >
+      au < doNotProcess ; 1951 ; Journal of Speech and Hearing Disorders Volume 16 ; 16 >
+      au < doNotProcess ; 1952 ; Journal of Speech and Hearing Disorders Volume 17 ; 17 >
+      au < doNotProcess ; 1953 ; Journal of Speech and Hearing Disorders Volume 18 ; 18 >
+      au < doNotProcess ; 1954 ; Journal of Speech and Hearing Disorders Volume 19 ; 19 >
+      au < doNotProcess ; 1955 ; Journal of Speech and Hearing Disorders Volume 20 ; 20 >
+      au < doNotProcess ; 1956 ; Journal of Speech and Hearing Disorders Volume 21 ; 21 >
+      au < doNotProcess ; 1957 ; Journal of Speech and Hearing Disorders Volume 22 ; 22 >
+      au < doNotProcess ; 1958 ; Journal of Speech and Hearing Disorders Volume 23 ; 23 >
+      au < doNotProcess ; 1959 ; Journal of Speech and Hearing Disorders Volume 24 ; 24 >
+      au < doNotProcess ; 1960 ; Journal of Speech and Hearing Disorders Volume 25 ; 25 >
+      au < doNotProcess ; 1961 ; Journal of Speech and Hearing Disorders Volume 26 ; 26 >
+      au < doNotProcess ; 1962 ; Journal of Speech and Hearing Disorders Volume 27 ; 27 >
+      au < doNotProcess ; 1963 ; Journal of Speech and Hearing Disorders Volume 28 ; 28 >
+      au < doNotProcess ; 1964 ; Journal of Speech and Hearing Disorders Volume 29 ; 29 >
+      au < doNotProcess ; 1965 ; Journal of Speech and Hearing Disorders Volume 30 ; 30 >
+      au < doNotProcess ; 1966 ; Journal of Speech and Hearing Disorders Volume 31 ; 31 >
+      au < doNotProcess ; 1967 ; Journal of Speech and Hearing Disorders Volume 32 ; 32 >
+      au < doNotProcess ; 1968 ; Journal of Speech and Hearing Disorders Volume 33 ; 33 >
+      au < doNotProcess ; 1969 ; Journal of Speech and Hearing Disorders Volume 34 ; 34 >
+      au < doNotProcess ; 1970 ; Journal of Speech and Hearing Disorders Volume 35 ; 35 >
+      au < doNotProcess ; 1971 ; Journal of Speech and Hearing Disorders Volume 36 ; 36 >
+      au < doNotProcess ; 1972 ; Journal of Speech and Hearing Disorders Volume 37 ; 37 >
+      au < doNotProcess ; 1973 ; Journal of Speech and Hearing Disorders Volume 38 ; 38 >
+      au < doNotProcess ; 1974 ; Journal of Speech and Hearing Disorders Volume 39 ; 39 >
+      au < doNotProcess ; 1975 ; Journal of Speech and Hearing Disorders Volume 40 ; 40 >
+      au < doNotProcess ; 1976 ; Journal of Speech and Hearing Disorders Volume 41 ; 41 >
+      au < doNotProcess ; 1977 ; Journal of Speech and Hearing Disorders Volume 42 ; 42 >
+      au < doNotProcess ; 1978 ; Journal of Speech and Hearing Disorders Volume 43 ; 43 >
+      au < doNotProcess ; 1979 ; Journal of Speech and Hearing Disorders Volume 44 ; 44 >
+      au < doNotProcess ; 1980 ; Journal of Speech and Hearing Disorders Volume 45 ; 45 >
+      au < doNotProcess ; 1981 ; Journal of Speech and Hearing Disorders Volume 46 ; 46 >
+      au < doNotProcess ; 1982 ; Journal of Speech and Hearing Disorders Volume 47 ; 47 >
+      au < doNotProcess ; 1983 ; Journal of Speech and Hearing Disorders Volume 48 ; 48 >
+      au < doNotProcess ; 1984 ; Journal of Speech and Hearing Disorders Volume 49 ; 49 >
+      au < doNotProcess ; 1985 ; Journal of Speech and Hearing Disorders Volume 50 ; 50 >
+      au < doNotProcess ; 1986 ; Journal of Speech and Hearing Disorders Volume 51 ; 51 >
+      au < doNotProcess ; 1987 ; Journal of Speech and Hearing Disorders Volume 52 ; 52 >
+      au < doNotProcess ; 1988 ; Journal of Speech and Hearing Disorders Volume 53 ; 53 >
+      au < doNotProcess ; 1989 ; Journal of Speech and Hearing Disorders Volume 54 ; 54 >
+      au < doNotProcess ; 1990 ; Journal of Speech and Hearing Disorders Volume 55 ; 55 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Speech, Language, and Hearing Research ;
+      issn = 1092-4388 ;
+      eissn = 1558-9102 ;
+      issnl = 1092-4388
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://jslhr.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[continues] = 0022-4677
+
+      au < doNotProcess ; 1958 ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1 >
+      au < doNotProcess ; 1959 ; Journal of Speech, Language, and Hearing Research Volume 2 ; 2 >
+      au < doNotProcess ; 1960 ; Journal of Speech, Language, and Hearing Research Volume 3 ; 3 >
+      au < doNotProcess ; 1961 ; Journal of Speech, Language, and Hearing Research Volume 4 ; 4 >
+      au < doNotProcess ; 1962 ; Journal of Speech, Language, and Hearing Research Volume 5 ; 5 >
+      au < doNotProcess ; 1963 ; Journal of Speech, Language, and Hearing Research Volume 6 ; 6 >
+      au < doNotProcess ; 1964 ; Journal of Speech, Language, and Hearing Research Volume 7 ; 7 >
+      au < doNotProcess ; 1965 ; Journal of Speech, Language, and Hearing Research Volume 8 ; 8 >
+      au < doNotProcess ; 1966 ; Journal of Speech, Language, and Hearing Research Volume 9 ; 9 >
+      au < doNotProcess ; 1967 ; Journal of Speech, Language, and Hearing Research Volume 10 ; 10 >
+      au < doNotProcess ; 1968 ; Journal of Speech, Language, and Hearing Research Volume 11 ; 11 >
+      au < doNotProcess ; 1969 ; Journal of Speech, Language, and Hearing Research Volume 12 ; 12 >
+      au < doNotProcess ; 1970 ; Journal of Speech, Language, and Hearing Research Volume 13 ; 13 >
+      au < doNotProcess ; 1971 ; Journal of Speech, Language, and Hearing Research Volume 14 ; 14 >
+      au < doNotProcess ; 1972 ; Journal of Speech, Language, and Hearing Research Volume 15 ; 15 >
+      au < doNotProcess ; 1973 ; Journal of Speech, Language, and Hearing Research Volume 16 ; 16 >
+      au < doNotProcess ; 1974 ; Journal of Speech, Language, and Hearing Research Volume 17 ; 17 >
+      au < doNotProcess ; 1975 ; Journal of Speech, Language, and Hearing Research Volume 18 ; 18 >
+      au < doNotProcess ; 1976 ; Journal of Speech, Language, and Hearing Research Volume 19 ; 19 >
+      au < doNotProcess ; 1977 ; Journal of Speech, Language, and Hearing Research Volume 20 ; 20 >
+      au < doNotProcess ; 1978 ; Journal of Speech, Language, and Hearing Research Volume 21 ; 21 >
+      au < doNotProcess ; 1979 ; Journal of Speech, Language, and Hearing Research Volume 22 ; 22 >
+      au < doNotProcess ; 1980 ; Journal of Speech, Language, and Hearing Research Volume 23 ; 23 >
+      au < doNotProcess ; 1981 ; Journal of Speech, Language, and Hearing Research Volume 24 ; 24 >
+      au < doNotProcess ; 1982 ; Journal of Speech, Language, and Hearing Research Volume 25 ; 25 >
+      au < doNotProcess ; 1983 ; Journal of Speech, Language, and Hearing Research Volume 26 ; 26 >
+      au < doNotProcess ; 1984 ; Journal of Speech, Language, and Hearing Research Volume 27 ; 27 >
+      au < doNotProcess ; 1985 ; Journal of Speech, Language, and Hearing Research Volume 28 ; 28 >
+      au < doNotProcess ; 1986 ; Journal of Speech, Language, and Hearing Research Volume 29 ; 29 >
+      au < doNotProcess ; 1987 ; Journal of Speech, Language, and Hearing Research Volume 30 ; 30 >
+      au < doNotProcess ; 1988 ; Journal of Speech, Language, and Hearing Research Volume 31 ; 31 >
+      au < doNotProcess ; 1989 ; Journal of Speech, Language, and Hearing Research Volume 32 ; 32 >
+      au < doNotProcess ; 1990 ; Journal of Speech, Language, and Hearing Research Volume 33 ; 33 >
+      au < doNotProcess ; 1991 ; Journal of Speech, Language, and Hearing Research Volume 34 ; 34 >
+      au < doNotProcess ; 1992 ; Journal of Speech, Language, and Hearing Research Volume 35 ; 35 >
+      au < doNotProcess ; 1993 ; Journal of Speech, Language, and Hearing Research Volume 36 ; 36 >
+      au < doNotProcess ; 1994 ; Journal of Speech, Language, and Hearing Research Volume 37 ; 37 >
+      au < doNotProcess ; 1995 ; Journal of Speech, Language, and Hearing Research Volume 38 ; 38 >
+      au < doNotProcess ; 1996 ; Journal of Speech, Language, and Hearing Research Volume 39 ; 39 >
+      au < doNotProcess ; 1997 ; Journal of Speech, Language, and Hearing Research Volume 40 ; 40 >
+      au < doNotProcess ; 1998 ; Journal of Speech, Language, and Hearing Research Volume 41 ; 41 >
+      au < doNotProcess ; 1999 ; Journal of Speech, Language, and Hearing Research Volume 42 ; 42 >
+      au < doNotProcess ; 2000 ; Journal of Speech, Language, and Hearing Research Volume 43 ; 43 >
+      au < doNotProcess ; 2001 ; Journal of Speech, Language, and Hearing Research Volume 44 ; 44 >
+      au < doNotProcess ; 2002 ; Journal of Speech, Language, and Hearing Research Volume 45 ; 45 >
+      au < doNotProcess ; 2003 ; Journal of Speech, Language, and Hearing Research Volume 46 ; 46 >
+      au < doNotProcess ; 2004 ; Journal of Speech, Language, and Hearing Research Volume 47 ; 47 >
+      au < down ; 2005 ; Journal of Speech, Language, and Hearing Research Volume 48 ; 48 >
+      au < down ; 2006 ; Journal of Speech, Language, and Hearing Research Volume 49 ; 49 >
+      au < down ; 2007 ; Journal of Speech, Language, and Hearing Research Volume 50 ; 50 >
+      au < down ; 2008 ; Journal of Speech, Language, and Hearing Research Volume 51 ; 51 >
+      au < down ; 2009 ; Journal of Speech, Language, and Hearing Research Volume 52 ; 52 >
+      au < down ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 53 >
+      au < down ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 54 >
+      au < down ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 55 >
+      au < expected ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 56 >
+      au < expected ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 57 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Language, Speech, and Hearing Services in Schools ;
+      issn = 0161-1461 ;
+      eissn = 1558-9129 ;
+      issnl = 0161-1461
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://lshss.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 >
+      au < doNotProcess ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 3 >
+      au < doNotProcess ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 4 >
+      au < doNotProcess ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 5 >
+      au < doNotProcess ; 1975 ; Language, Speech, and Hearing Services in Schools Volume 6 ; 6 >
+      au < doNotProcess ; 1976 ; Language, Speech, and Hearing Services in Schools Volume 7 ; 7 >
+      au < doNotProcess ; 1977 ; Language, Speech, and Hearing Services in Schools Volume 8 ; 8 >
+      au < doNotProcess ; 1978 ; Language, Speech, and Hearing Services in Schools Volume 9 ; 9 >
+      au < doNotProcess ; 1979 ; Language, Speech, and Hearing Services in Schools Volume 10 ; 10 >
+      au < doNotProcess ; 1980 ; Language, Speech, and Hearing Services in Schools Volume 11 ; 11 >
+      au < doNotProcess ; 1981 ; Language, Speech, and Hearing Services in Schools Volume 12 ; 12 >
+      au < doNotProcess ; 1982 ; Language, Speech, and Hearing Services in Schools Volume 13 ; 13 >
+      au < doNotProcess ; 1983 ; Language, Speech, and Hearing Services in Schools Volume 14 ; 14 >
+      au < doNotProcess ; 1984 ; Language, Speech, and Hearing Services in Schools Volume 15 ; 15 >
+      au < doNotProcess ; 1985 ; Language, Speech, and Hearing Services in Schools Volume 16 ; 16 >
+      au < doNotProcess ; 1986 ; Language, Speech, and Hearing Services in Schools Volume 17 ; 17 >
+      au < doNotProcess ; 1987 ; Language, Speech, and Hearing Services in Schools Volume 18 ; 18 >
+      au < doNotProcess ; 1988 ; Language, Speech, and Hearing Services in Schools Volume 19 ; 19 >
+      au < doNotProcess ; 1989 ; Language, Speech, and Hearing Services in Schools Volume 20 ; 20 >
+      au < doNotProcess ; 1990 ; Language, Speech, and Hearing Services in Schools Volume 21 ; 21 >
+      au < doNotProcess ; 1991 ; Language, Speech, and Hearing Services in Schools Volume 22 ; 22 >
+      au < doNotProcess ; 1992 ; Language, Speech, and Hearing Services in Schools Volume 23 ; 23 >
+      au < doNotProcess ; 1993 ; Language, Speech, and Hearing Services in Schools Volume 24 ; 24 >
+      au < doNotProcess ; 1994 ; Language, Speech, and Hearing Services in Schools Volume 25 ; 25 >
+      au < doNotProcess ; 1995 ; Language, Speech, and Hearing Services in Schools Volume 26 ; 26 >
+      au < doNotProcess ; 1996 ; Language, Speech, and Hearing Services in Schools Volume 27 ; 27 >
+      au < doNotProcess ; 1997 ; Language, Speech, and Hearing Services in Schools Volume 28 ; 28 >
+      au < doNotProcess ; 1998 ; Language, Speech, and Hearing Services in Schools Volume 29 ; 29 >
+      au < doNotProcess ; 1999 ; Language, Speech, and Hearing Services in Schools Volume 30 ; 30 >
+      au < doNotProcess ; 2000 ; Language, Speech, and Hearing Services in Schools Volume 31 ; 31 >
+      au < doNotProcess ; 2001 ; Language, Speech, and Hearing Services in Schools Volume 32 ; 32 >
+      au < doNotProcess ; 2002 ; Language, Speech, and Hearing Services in Schools Volume 33 ; 33 >
+      au < doNotProcess ; 2003 ; Language, Speech, and Hearing Services in Schools Volume 34 ; 34 >
+      au < doNotProcess ; 2004 ; Language, Speech, and Hearing Services in Schools Volume 35 ; 35 >
+      au < down ; 2005 ; Language, Speech, and Hearing Services in Schools Volume 36 ; 36 >
+      au < down ; 2006 ; Language, Speech, and Hearing Services in Schools Volume 37 ; 37 >
+      au < down ; 2007 ; Language, Speech, and Hearing Services in Schools Volume 38 ; 38 >
+      au < down ; 2008 ; Language, Speech, and Hearing Services in Schools Volume 39 ; 39 >
+      au < down ; 2009 ; Language, Speech, and Hearing Services in Schools Volume 40 ; 40 >
+      au < down ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 41 >
+      au < down ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 42 >
+      au < down ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 43 >
+      au < expected ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 44 >
+      au < expected ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 45 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Telepractice ;
+      eissn = 2162-2353 ;
+      issnl = 2162-2353
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div18perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < down ; 2011 ; Perspectives on Telepractice Volume 1 ; 1 >
+      au < down ; 2012 ; Perspectives on Telepractice Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Perspectives on Telepractice Volume 3 ; 3 >
+      au < expected ; 2014 ; Perspectives on Telepractice Volume 4 ; 4 >
+
+    }
+    
+  }
+  
+  {
+    title <
+      name = Perspectives on Administration and Supervision ;
+      issn = 1940-7238 ;
+      eissn = 1940-7246 ;
+      issnl = 1940-7238
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div11perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Administration and Supervision Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Perspectives on Administration and Supervision Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Perspectives on Administration and Supervision Volume 9 ; 9 >
+      au < doNotProcess ; 2000 ; Perspectives on Administration and Supervision Volume 10 ; 10 >
+      au < doNotProcess ; 2001 ; Perspectives on Administration and Supervision Volume 11 ; 11 >
+      au < doNotProcess ; 2002 ; Perspectives on Administration and Supervision Volume 12 ; 12 >
+      au < doNotProcess ; 2003 ; Perspectives on Administration and Supervision Volume 13 ; 13 >
+      au < doNotProcess ; 2004 ; Perspectives on Administration and Supervision Volume 14 ; 14 >
+      au < down ; 2005 ; Perspectives on Administration and Supervision Volume 15 ; 15 >
+      au < down ; 2006 ; Perspectives on Administration and Supervision Volume 16 ; 16 >
+      au < down ; 2007 ; Perspectives on Administration and Supervision Volume 17 ; 17 >
+      au < down ; 2008 ; Perspectives on Administration and Supervision Volume 18 ; 18 >
+      au < down ; 2009 ; Perspectives on Administration and Supervision Volume 19 ; 19 >
+      au < down ; 2010 ; Perspectives on Administration and Supervision Volume 20 ; 20 >
+      au < down ; 2011 ; Perspectives on Administration and Supervision Volume 21 ; 21 >
+      au < down ; 2012 ; Perspectives on Administration and Supervision Volume 22 ; 22 >
+      au < expected ; 2013 ; Perspectives on Administration and Supervision Volume 23 ; 23 >
+      au < expected ; 2014 ; Perspectives on Administration and Supervision Volume 24 ; 24 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Audiology ;
+      issn = 1940-8587 ;
+      issnl = 1940-8587
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://accperspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < down ; 2005 ; Perspectives on Audiology Volume 1 ; 1 >
+      au < down ; 2006 ; Perspectives on Audiology Volume 2 ; 2 >
+      au < down ; 2007 ; Perspectives on Audiology Volume 3 ; 3 >
+      au < down ; 2008 ; Perspectives on Audiology Volume 4 ; 4 >
+      au < down ; 2009 ; Perspectives on Audiology Volume 5 ; 5 >
+      au < down ; 2010 ; Perspectives on Audiology Volume 6 ; 6 >
+      au < down ; 2011 ; Perspectives on Audiology Volume 7 ; 7 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Augmentative and Alternative Communication ;
+      issn = 1940-7475 ;
+      eissn = 1940-7483 ;
+      issnl = 1940-7475
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div12perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Augmentative and Alternative Communication Volume 6 ; 6 >
+      au < doNotProcess ; 1998 ; Perspectives on Augmentative and Alternative Communication Volume 7 ; 7 >
+      au < doNotProcess ; 1999 ; Perspectives on Augmentative and Alternative Communication Volume 8 ; 8 >
+      au < doNotProcess ; 2000 ; Perspectives on Augmentative and Alternative Communication Volume 9 ; 9 >
+      au < doNotProcess ; 2001 ; Perspectives on Augmentative and Alternative Communication Volume 10 ; 10 >
+      au < doNotProcess ; 2002 ; Perspectives on Augmentative and Alternative Communication Volume 11 ; 11 >
+      au < doNotProcess ; 2003 ; Perspectives on Augmentative and Alternative Communication Volume 12 ; 12 >
+      au < doNotProcess ; 2004 ; Perspectives on Augmentative and Alternative Communication Volume 13 ; 13 >
+      au < down ; 2005 ; Perspectives on Augmentative and Alternative Communication Volume 14 ; 14 >
+      au < down ; 2006 ; Perspectives on Augmentative and Alternative Communication Volume 15 ; 15 >
+      au < down ; 2007 ; Perspectives on Augmentative and Alternative Communication Volume 16 ; 16 >
+      au < down ; 2008 ; Perspectives on Augmentative and Alternative Communication Volume 17 ; 17 >
+      au < down ; 2009 ; Perspectives on Augmentative and Alternative Communication Volume 18 ; 18 >
+      au < down ; 2010 ; Perspectives on Augmentative and Alternative Communication Volume 19 ; 19 >
+      au < down ; 2011 ; Perspectives on Augmentative and Alternative Communication Volume 20 ; 20 >
+      au < down ; 2012 ; Perspectives on Augmentative and Alternative Communication Volume 21 ; 21 >
+      au < expected ; 2013 ; Perspectives on Augmentative and Alternative Communication Volume 22 ; 22 >
+      au < expected ; 2014 ; Perspectives on Augmentative and Alternative Communication Volume 23 ; 23 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Aural Rehabilitation and Its Instrumentation ;
+      issn = 1940-7688 ;
+      eissn = 1940-7696 ;
+      issnl = 1940-7688
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div7perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1998 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 6 ; 6 >
+      au < doNotProcess ; 1999 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 7 ; 7 >
+      au < doNotProcess ; 2000 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 8 ; 8 >
+      au < doNotProcess ; 2001 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 9 ; 9 >
+      au < doNotProcess ; 2002 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 10 ; 10 >
+      au < doNotProcess ; 2003 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 11 ; 11 >
+      au < doNotProcess ; 2004 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 12 ; 12 >
+      au < down ; 2006 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 13 ; 13 >
+      au < down ; 2007 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 14 ; 14 >
+      au < down ; 2008 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 15 ; 15 >
+      au < down ; 2009 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 16 ; 16 >
+      au < down ; 2010 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 17 ; 17 >
+      au < down ; 2011 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 18 ; 18 >
+      au < down ; 2012 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 19 ; 19 >
+      au < expected ; 2013 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 20 ; 20 >
+      au < expected ; 2014 ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 21 ; 21 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations ;
+      issn = 1940-753X ;
+      eissn = 1940-7548 ;
+      issnl = 1940-753X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div14perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 3 ; 3 >
+      au < doNotProcess ; 1998 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 4 ; 4 >
+      au < doNotProcess ; 1999 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 5 ; 5 >
+      au < doNotProcess ; 2000 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 6 ; 6 >
+      au < doNotProcess ; 2001 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 7 ; 7 >
+      au < doNotProcess ; 2002 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 8 ; 8 >
+      au < doNotProcess ; 2003 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 9 ; 9 >
+      au < doNotProcess ; 2004 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 11 ; 11 >
+      au < down ; 2005 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 12 ; 12 >
+      au < down ; 2006 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 13 ; 13 >
+      au < down ; 2007 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 14 ; 14 >
+      au < down ; 2008 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 15 ; 15 >
+      au < down ; 2009 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 16 ; 16 >
+      au < down ; 2010 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 17 ; 17 >
+      au < down ; 2011 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 18 ; 18 >
+      au < down ; 2012 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 19 ; 19 >
+      au < expected ; 2013 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 20 ; 20 >
+      au < expected ; 2014 ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 21 ; 21 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Fluency and Fluency Disorders ;
+      issn = 1940-7599 ;
+      eissn = 1940-7602 ;
+      issnl = 1940-7599
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div4perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Fluency and Fluency Disorders Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Perspectives on Fluency and Fluency Disorders Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Perspectives on Fluency and Fluency Disorders Volume 9 ; 9 >
+      au < doNotProcess ; 2000 ; Perspectives on Fluency and Fluency Disorders Volume 10 ; 10 >
+      au < doNotProcess ; 2001 ; Perspectives on Fluency and Fluency Disorders Volume 11 ; 11 >
+      au < doNotProcess ; 2002 ; Perspectives on Fluency and Fluency Disorders Volume 12 ; 12 >
+      au < doNotProcess ; 2003 ; Perspectives on Fluency and Fluency Disorders Volume 13 ; 13 >
+      au < doNotProcess ; 2004 ; Perspectives on Fluency and Fluency Disorders Volume 14 ; 14 >
+      au < down ; 2005 ; Perspectives on Fluency and Fluency Disorders Volume 15 ; 15 >
+      au < down ; 2006 ; Perspectives on Fluency and Fluency Disorders Volume 16 ; 16 >
+      au < down ; 2007 ; Perspectives on Fluency and Fluency Disorders Volume 17 ; 17 >
+      au < down ; 2008 ; Perspectives on Fluency and Fluency Disorders Volume 18 ; 18 >
+      au < down ; 2009 ; Perspectives on Fluency and Fluency Disorders Volume 19 ; 19 >
+      au < down ; 2010 ; Perspectives on Fluency and Fluency Disorders Volume 20 ; 20 >
+      au < down ; 2011 ; Perspectives on Fluency and Fluency Disorders Volume 21 ; 21 >
+      au < down ; 2012 ; Perspectives on Fluency and Fluency Disorders Volume 22 ; 22 >
+      au < expected ; 2013 ; Perspectives on Fluency and Fluency Disorders Volume 23 ; 23 >
+      au < expected ; 2014 ; Perspectives on Fluency and Fluency Disorders Volume 24 ; 24 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Gerontology ;
+      issn = 1940-7785 ;
+      eissn = 1940-7793 ;
+      issnl = 1940-7785
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div15perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Gerontology Volume 2 ; 2 >
+      au < doNotProcess ; 1998 ; Perspectives on Gerontology Volume 3 ; 3 >
+      au < doNotProcess ; 1999 ; Perspectives on Gerontology Volume 4 ; 4 >
+      au < doNotProcess ; 2000 ; Perspectives on Gerontology Volume 5 ; 5 >
+      au < doNotProcess ; 2001 ; Perspectives on Gerontology Volume 6 ; 6 >
+      au < doNotProcess ; 2002 ; Perspectives on Gerontology Volume 7 ; 7 >
+      au < doNotProcess ; 2003 ; Perspectives on Gerontology Volume 8 ; 8 >
+      au < doNotProcess ; 2004 ; Perspectives on Gerontology Volume 9 ; 9 >
+      au < down ; 2005 ; Perspectives on Gerontology Volume 10 ; 10 >
+      au < down ; 2006 ; Perspectives on Gerontology Volume 11 ; 11 >
+      au < down ; 2007 ; Perspectives on Gerontology Volume 12 ; 12 >
+      au < down ; 2008 ; Perspectives on Gerontology Volume 13 ; 13 >
+      au < down ; 2009 ; Perspectives on Gerontology Volume 14 ; 14 >
+      au < down ; 2010 ; Perspectives on Gerontology Volume 15 ; 15 >
+      au < down ; 2011 ; Perspectives on Gerontology Volume 16 ; 16 >
+      au < down ; 2012 ; Perspectives on Gerontology Volume 17 ; 17 >
+      au < expected ; 2013 ; Perspectives on Gerontology Volume 18 ; 18 >
+      au < expected ; 2014 ; Perspectives on Gerontology Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Hearing and Hearing Disorders in Childhood ;
+      issn = 1940-770X ;
+      eissn = 1940-7718 ;
+      issnl = 1940-770X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div9perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 9 ; 9 >
+      au < doNotProcess ; 2000 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 10 ; 10 >
+      au < doNotProcess ; 2001 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 11 ; 11 >
+      au < doNotProcess ; 2002 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 12 ; 12 >
+      au < doNotProcess ; 2003 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 13 ; 13 >
+      au < doNotProcess ; 2004 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 14 ; 14 >
+      au < down ; 2005 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 15 ; 15 >
+      au < down ; 2006 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 16 ; 16 >
+      au < down ; 2007 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 17 ; 17 >
+      au < down ; 2008 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 18 ; 18 >
+      au < down ; 2009 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 19 ; 19 >
+      au < down ; 2010 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 20 ; 20 >
+      au < down ; 2011 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 21 ; 21 >
+      au < down ; 2012 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 22 ; 22 >
+      au < expected ; 2013 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 23 ; 23 >
+      au < expected ; 2014 ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 24 ; 24 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Hearing and Hearing Disorders: Research and Diagnostics ;
+      issn = 1940-767X ;
+      eissn = 1940-7661 ;
+      issnl = 1940-767X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div6perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 1 ; 1 >
+      au < doNotProcess ; 1998 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 2 ; 2 >
+      au < doNotProcess ; 1999 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 3 ; 3 >
+      au < doNotProcess ; 2000 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 4 ; 4 >
+      au < doNotProcess ; 2001 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 5 ; 5 >
+      au < doNotProcess ; 2002 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 6 ; 6 >
+      au < doNotProcess ; 2003 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 7 ; 7 >
+      au < doNotProcess ; 2004 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 8 ; 8 >
+      au < down ; 2005 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 9 ; 9 >
+      au < down ; 2006 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 10 ; 10 >
+      au < down ; 2007 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 11 ; 11 >
+      au < down ; 2008 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 12 ; 12 >
+      au < down ; 2009 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 13 ; 13 >
+      au < down ; 2010 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 14 ; 14 >
+      au < down ; 2011 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 15 ; 15 >
+      au < down ; 2012 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 16 ; 16 >
+      au < expected ; 2013 ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 17 ; 17 >
+      au < expected ; 2014 ; Perspectives on Heraing and Hearing Disorders: Research and Diagnostics Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Hearing Conservation and Occupational Audiology ;
+      issn = 1940-7726 ;
+      eissn = 1940-7734 ;
+      issnl = 1940-7726
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div8perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 4 ; 4 >
+      au < doNotProcess ; 1998 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 5 ; 5 >
+      au < doNotProcess ; 1999 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 6 ; 6 >
+      au < doNotProcess ; 2000 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 7 ; 7 >
+      au < doNotProcess ; 2002 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 8 ; 8 >
+      au < doNotProcess ; 2003 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 9 ; 9 >
+      au < doNotProcess ; 2004 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 10 ; 10 >
+      au < down ; 2007 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 11 ; 11 >
+      au < down ; 2011 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 12 ; 12 >
+      au < expected ; 2012 ; Perspectives on Hearing Conservation and Occupational Audiology Volume 13 ; 13 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Issues in Higher Education ;
+      issn = 1940-7521 ;
+      eissn = 1940-7513 ;
+      issnl = 1940-7521
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div10perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Issues in Higher Education Volume 1 ; 1 >
+      au < doNotProcess ; 1998 ; Perspectives on Issues in Higher Education Volume 2 ; 2 >
+      au < doNotProcess ; 1999 ; Perspectives on Issues in Higher Education Volume 3 ; 3 >
+      au < doNotProcess ; 2001 ; Perspectives on Issues in Higher Education Volume 4 ; 4 >
+      au < doNotProcess ; 2002 ; Perspectives on Issues in Higher Education Volume 5 ; 5 >
+      au < doNotProcess ; 2003 ; Perspectives on Issues in Higher Education Volume 6 ; 6 >
+      au < doNotProcess ; 2004 ; Perspectives on Issues in Higher Education Volume 7 ; 7 >
+      au < down ; 2005 ; Perspectives on Issues in Higher Education Volume 8 ; 8 >
+      au < down ; 2007 ; Perspectives on Issues in Higher Education Volume 10 ; 10 >
+      au < down ; 2008 ; Perspectives on Issues in Higher Education Volume 11 ; 11 >
+      au < down ; 2009 ; Perspectives on Issues in Higher Education Volume 12 ; 12 >
+      au < down ; 2010 ; Perspectives on Issues in Higher Education Volume 13 ; 13 >
+      au < down ; 2011 ; Perspectives on Issues in Higher Education Volume 14 ; 14 >
+      au < down ; 2012 ; Perspectives on Issues in Higher Education Volume 15 ; 15 >
+      au < expected ; 2013 ; Perspectives on Issues in Higher Education Volume 16 ; 16 >
+      au < expected ; 2014 ; Perspectives on Issues in Higher Education Volume 17 ; 17 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Language Learning and Education ;
+      issn = 1940-7742 ;
+      eissn = 1940-7750 ;
+      issnl = 1940-7742
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div1perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Language Learning and Education Volume 4 ; 4 >
+      au < doNotProcess ; 1998 ; Perspectives on Language Learning and Education Volume 5 ; 5 >
+      au < doNotProcess ; 1999 ; Perspectives on Language Learning and Education Volume 6 ; 6 >
+      au < doNotProcess ; 2000 ; Perspectives on Language Learning and Education Volume 7 ; 7 >
+      au < doNotProcess ; 2001 ; Perspectives on Language Learning and Education Volume 8 ; 8 >
+      au < doNotProcess ; 2002 ; Perspectives on Language Learning and Education Volume 9 ; 9 >
+      au < doNotProcess ; 2003 ; Perspectives on Language Learning and Education Volume 10 ; 10 >
+      au < doNotProcess ; 2004 ; Perspectives on Language Learning and Education Volume 11 ; 11 >
+      au < down ; 2005 ; Perspectives on Language Learning and Education Volume 12 ; 12 >
+      au < down ; 2006 ; Perspectives on Language Learning and Education Volume 13 ; 13 >
+      au < down ; 2007 ; Perspectives on Language Learning and Education Volume 14 ; 14 >
+      au < down ; 2008 ; Perspectives on Language Learning and Education Volume 15 ; 15 >
+      au < down ; 2009 ; Perspectives on Language Learning and Education Volume 16 ; 16 >
+      au < down ; 2010 ; Perspectives on Language Learning and Education Volume 17 ; 17 >
+      au < down ; 2011 ; Perspectives on Language Learning and Education Volume 18 ; 18 >
+      au < down ; 2012 ; Perspectives on Language Learning and Education Volume 19 ; 19 >
+      au < expected ; 2013 ; Perspectives on Language Learning and Education Volume 20 ; 20 >
+      au < expected ; 2014 ; Perspectives on Language Learning and Education Volume 21 ; 21 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders ;
+      issn = 1940-7769 ;
+      eissn = 1940-7777 ;
+      issnl = 1940-7769
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div2perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 9 ; 9 >
+      au < doNotProcess ; 2000 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 10 ; 10 >
+      au < doNotProcess ; 2001 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 11 ; 11 >
+      au < doNotProcess ; 2002 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 12 ; 12 >
+      au < doNotProcess ; 2003 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 13 ; 13 >
+      au < doNotProcess ; 2004 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 14 ; 14 >
+      au < down ; 2005 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 15 ; 15 >
+      au < down ; 2006 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 16 ; 16 >
+      au < down ; 2007 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 17 ; 17 >
+      au < down ; 2008 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 18 ; 18 >
+      au < down ; 2009 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 19 ; 19 >
+      au < down ; 2010 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 20 ; 20 >
+      au < down ; 2011 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 21 ; 21 >
+      au < down ; 2012 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 22 ; 22 >
+      au < expected ; 2013 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 23 ; 23 >
+      au < expected ; 2014 ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 24 ; 24 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on School-Based Issues ;
+      issn = 1940-7807 ;
+      eissn = 1940-7815 ;
+      issnl = 1940-7807
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div16perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 2000 ; Perspectives on School-Based Issues Volume 1 ; 1 >
+      au < doNotProcess ; 2001 ; Perspectives on School-Based Issues Volume 2 ; 2 >
+      au < doNotProcess ; 2002 ; Perspectives on School-Based Issues Volume 3 ; 3 >
+      au < doNotProcess ; 2003 ; Perspectives on School-Based Issues Volume 4 ; 4 >
+      au < doNotProcess ; 2004 ; Perspectives on School-Based Issues Volume 5 ; 5 >
+      au < down ; 2005 ; Perspectives on School-Based Issues Volume 6 ; 6 >
+      au < down ; 2006 ; Perspectives on School-Based Issues Volume 7 ; 7 >
+      au < down ; 2007 ; Perspectives on School-Based Issues Volume 8 ; 8 >
+      au < down ; 2008 ; Perspectives on School-Based Issues Volume 9 ; 9 >
+      au < down ; 2009 ; Perspectives on School-Based Issues Volume 10 ; 10 >
+      au < down ; 2010 ; Perspectives on School-Based Issues Volume 11 ; 11 >
+      au < down ; 2011 ; Perspectives on School-Based Issues Volume 12 ; 12 >
+      au < down ; 2012 ; Perspectives on School-Based Issues Volume 13 ; 13 >
+      au < expected ; 2013 ; Perspectives on School-Based Issues Volume 14 ; 14 >
+      au < expected ; 2014 ; Perspectives on School-Based Issues Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Speech Science and Orofacial Disorders ;
+      issn = 1940-7572 ;
+      eissn = 1940-7580 ;
+      issnl = 1940-7572
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div5perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1999 ; Perspectives on Speech Science and Orofacial Disorders Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Perspectives on Speech Science and Orofacial Disorders Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Perspectives on Speech Science and Orofacial Disorders Volume 9 ; 9 >
+      au < doNotProcess ; 2000 ; Perspectives on Speech Science and Orofacial Disorders Volume 10 ; 10 >
+      au < doNotProcess ; 2001 ; Perspectives on Speech Science and Orofacial Disorders Volume 11 ; 11 >
+      au < doNotProcess ; 2002 ; Perspectives on Speech Science and Orofacial Disorders Volume 12 ; 12 >
+      au < doNotProcess ; 2003 ; Perspectives on Speech Science and Orofacial Disorders Volume 13 ; 13 >
+      au < doNotProcess ; 2004 ; Perspectives on Speech Science and Orofacial Disorders Volume 14 ; 14 >
+      au < down ; 2005 ; Perspectives on Speech Science and Orofacial Disorders Volume 15 ; 15 >
+      au < down ; 2006 ; Perspectives on Speech Science and Orofacial Disorders Volume 16 ; 16 >
+      au < down ; 2007 ; Perspectives on Speech Science and Orofacial Disorders Volume 17 ; 17 >
+      au < down ; 2008 ; Perspectives on Speech Science and Orofacial Disorders Volume 18 ; 18 >
+      au < down ; 2009 ; Perspectives on Speech Science and Orofacial Disorders Volume 19 ; 19 >
+      au < down ; 2010 ; Perspectives on Speech Science and Orofacial Disorders Volume 20 ; 20 >
+      au < down ; 2011 ; Perspectives on Speech Science and Orofacial Disorders Volume 21 ; 21 >
+      au < down ; 2012 ; Perspectives on Speech Science and Orofacial Disorders Volume 22 ; 22 >
+      au < expected ; 2013 ; Perspectives on Speech Science and Orofacial Disorders Volume 23 ; 23 >
+      au < expected ; 2014 ; Perspectives on Speech Science and Orofacial Disorders Volume 24 ; 24 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Swallowing and Swallowing Disorders (Dysphagia) ;
+      issn = 1940-7556 ;
+      eissn = 1940-7564 ;
+      issnl = 1940-7556
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div13perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 6 ; 6 >
+      au < doNotProcess ; 1998 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 7 ; 7 >
+      au < doNotProcess ; 1999 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 8 ; 8 >
+      au < doNotProcess ; 2000 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 9 ; 9 >
+      au < doNotProcess ; 2001 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 10 ; 10 >
+      au < doNotProcess ; 2002 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 11 ; 11 >
+      au < doNotProcess ; 2003 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 12 ; 12 >
+      au < doNotProcess ; 2004 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 13 ; 13 >
+      au < down ; 2005 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 14 ; 14 >
+      au < down ; 2006 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 15 ; 15 >
+      au < down ; 2007 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 16 ; 16 >
+      au < down ; 2008 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 17 ; 17 >
+      au < down ; 2009 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 18 ; 18 >
+      au < down ; 2010 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 19 ; 19 >
+      au < down ; 2011 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 20 ; 20 >
+      au < down ; 2012 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 21 ; 21 >
+      au < expected ; 2013 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 22 ; 22 >
+      au < expected ; 2014 ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 23 ; 23 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Voice and Voice Disorders ;
+      issn = 1940-7505 ;
+      eissn = 1940-7491 ;
+      issnl = 1940-7505
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://div3perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 1997 ; Perspectives on Voice and Voice Disorders Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Perspectives on Voice and Voice Disorders Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Perspectives on Voice and Voice Disorders Volume 9 ; 9 >
+      au < doNotProcess ; 2000 ; Perspectives on Voice and Voice Disorders Volume 10 ; 10 >
+      au < doNotProcess ; 2002 ; Perspectives on Voice and Voice Disorders Volume 12 ; 12 >
+      au < doNotProcess ; 2003 ; Perspectives on Voice and Voice Disorders Volume 13 ; 13 >
+      au < doNotProcess ; 2004 ; Perspectives on Voice and Voice Disorders Volume 14 ; 14 >
+      au < down ; 2005 ; Perspectives on Voice and Voice Disorders Volume 15 ; 15 >
+      au < down ; 2006 ; Perspectives on Voice and Voice Disorders Volume 16 ; 16 >
+      au < down ; 2007 ; Perspectives on Voice and Voice Disorders Volume 17 ; 17 >
+      au < down ; 2008 ; Perspectives on Voice and Voice Disorders Volume 18 ; 18 >
+      au < down ; 2009 ; Perspectives on Voice and Voice Disorders Volume 19 ; 19 >
+      au < down ; 2010 ; Perspectives on Voice and Voice Disorders Volume 20 ; 20 >
+      au < down ; 2011 ; Perspectives on Voice and Voice Disorders Volume 21 ; 21 >
+      au < down ; 2012 ; Perspectives on Voice and Voice Disorders Volume 22 ; 22 >
+      au < expected ; 2013 ; Perspectives on Voice and Voice Disorders Volume 23 ; 23 >
+      au < expected ; 2014 ; Perspectives on Voice and Voice Disorders Volume 24 ; 24 >
+
+    }
+
+  }
+
+}
+
