@@ -60,7 +60,7 @@
     
     param[journal_id] = cns
 
-    au < testing ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
+    au < ready ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
     au < ready ; exists ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
     au < ready ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
 
@@ -102,7 +102,7 @@
     
     param[journal_id] = csa
 
-    au < testing ; exists ; 2013 ; CSA News Volume 58 ; 58 >
+    au < ready ; exists ; 2013 ; CSA News Volume 58 ; 58 >
     au < ready ; exists ; 2014 ; CSA News Volume 59 ; 59 >
     au < ready ; exists ; 2015 ; CSA News Volume 60 ; 60 >
 
@@ -226,7 +226,7 @@
 
     au < manifest ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 >
     au < ready ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 >
-    au < testing ; exists ; 2014 ; Soil Horizons Volume 55 ; 55 >
+    au < ready ; exists ; 2014 ; Soil Horizons Volume 55 ; 55 >
     au < ready ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 >
 
   }
