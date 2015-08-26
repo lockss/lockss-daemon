@@ -62,7 +62,7 @@
       au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 >
       au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 >
-      au < testing ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 >
+      au < ready ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 >
       au < expected ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 42 ; 42 >
       au < expected ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 43 ; 43 >
     
@@ -115,7 +115,7 @@
       au < doesNotExist ; doesNotExist ; 2012 ; 0 ; Advances in Science and Research Volume 9 ; 0 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 >
     
    }
     
@@ -168,7 +168,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
       au < crawling ; exists ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 >
       au < crawling ; exists ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
-      au < testing ; exists ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 >
+      au < ready ; exists ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 >
     
    }
     
@@ -223,7 +223,7 @@
       param[home_url] = http://www.astra-proceedings.net/
 
       au < crawling ; exists ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
-      au < testing ; exists ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 >
+      au < ready ; exists ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 >
 
    }
     
@@ -462,7 +462,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 >
     
    }
     
@@ -499,7 +499,7 @@
 
       au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
-      au < testing ; exists ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 >
+      au < ready ; exists ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 >
     
    }
     
@@ -534,7 +534,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 >
     
    }
     
@@ -573,7 +573,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 >
       au < frozen ; exists ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 >
     
    }
     
@@ -679,7 +679,7 @@
       }
       
       au < crawling ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
-      au < testing ; exists ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 >
+      au < ready ; exists ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 >
       
    }
     
@@ -764,7 +764,7 @@
       au < crawling ; exists ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 >
       au < ingNotReady ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
       au < notReady ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
-      au < testing ; exists ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 >
+      au < ready ; exists ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 >
     
    }
     
@@ -820,7 +820,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
     
    }
     
@@ -857,7 +857,7 @@
 
       au < crawling ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 >
+      au < testing ; exists ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 >
     
    }
     
@@ -876,7 +876,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 >
     
    }
     
@@ -908,7 +908,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
       au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
       au < crawling ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
-      au < manifest ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 >
+      au < testing ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 >
     
    }
     
@@ -966,7 +966,7 @@
       au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 >
+      au < testing ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 >
     
    }
 
@@ -1059,10 +1059,10 @@
       au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 >
+      au < testing ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 >
+      au < testing ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 >
+      au < testing ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 >
+      au < testing ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 >
       au < manifest ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 >
       au < manifest ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 >
       au < manifest ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 >
@@ -1084,7 +1084,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
-      au < manifest ; exists ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 >
+      au < testing ; exists ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 >
     
    }
    
@@ -1103,7 +1103,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 >
     
    }
     
@@ -1131,7 +1131,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 >
+      au < testing ; exists ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 >
     
    }
    
@@ -1182,7 +1182,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 >
       au < crawling ; exists ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 >
       au < crawling ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 >
-      au < manifest ; exists ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 >
+      au < testing ; exists ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 >
     
    }
 
@@ -1221,7 +1221,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 >
-      au < manifest ; exists ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 >
+      au < testing ; exists ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 >
     
    }
     
@@ -1277,7 +1277,7 @@
       param[home_url] = http://www.primate-biology.net/
 
       au < deepCrawl ; exists ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 >
-      au < manifest ; exists ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 >
+      au < testing ; exists ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 >
     
    }
 
@@ -1294,10 +1294,10 @@
       param[home_url] = http://www.proceedings-international-association-of-hydrological-sciences.net/
 
       au < deepCrawl ; exists ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 >
-      au < manifest ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 >
-      au < manifest ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 366 ; 366 >
-      au < manifest ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 367 ; 367 >
-      au < manifest ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 >
+      au < testing ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 >
+      au < testing ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 366 ; 366 >
+      au < testing ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 367 ; 367 >
+      au < testing ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 >
     
    }
 
@@ -1330,7 +1330,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
       au < frozen ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 >
       au < crawling ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 >
-      au < manifest ; exists ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 >
+      au < testing ; exists ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 >
     
    }
     
@@ -1399,7 +1399,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 >
     
    }
     
@@ -1471,7 +1471,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 >
-      au < manifest ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
+      au < testing ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
     
    }
     
@@ -1521,7 +1521,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 >
+      au < testing ; exists ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 >
     
    }
     
