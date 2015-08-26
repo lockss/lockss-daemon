@@ -2046,9 +2046,7 @@
 
       param[journal_id] = ijcrc
 
-      au < manifest ; exists ; 2013 ; International Journal of Creative Computing Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Creative Computing Volume 2 ; 2 >
-      au < expected ; exists ; 2015 ; International Journal of Creative Computing Volume 3 ; 3 >
+      au < testing ; exists ; 2013 ; International Journal of Creative Computing Volume 1 ; 1 >
 
     }
 
@@ -3401,7 +3399,7 @@
 
       param[journal_id] = ijfcm
 
-      au < manifest ; exists ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
+      au < testing ; exists ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
 
     }
 
@@ -4813,7 +4811,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Liability and Scientific Enquiry Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Liability and Scientific Enquiry Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Liability and Scientific Enquiry Volume 6 ; 6 >
-      au < manifest ; exists ; 2014 ; International Journal of Liability and Scientific Enquiry Volume 7 ; 7 >
+      au < manifest ; exists ; 2014-2015 ; International Journal of Liability and Scientific Enquiry Volume 7 ; 7 >
       au < expected ; exists ; 2015 ; International Journal of Liability and Scientific Enquiry Volume 8 ; 8 >
 
     }
@@ -6878,7 +6876,7 @@
 
       param[journal_id] = ijscom
 
-      au < manifest ; exists ; 2013-2015 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
+      au < testing ; exists ; 2013-2014 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 >
 
     }
@@ -8423,7 +8421,7 @@
       param[journal_id] = ijws
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
-      au < manifest ; exists ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 >
+      au < testing ; exists ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Web Science Volume 3 ; 3 >
 
     }
@@ -8657,7 +8655,7 @@
       au < doNotProcess ; exists ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
-      au < manifest ; exists ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
+      au < testing ; exists ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 >
 
     }
