@@ -2430,10 +2430,10 @@
     au < deepCrawl ; exists ; 2014 ; Journal of Physics: Conference Series Volume 572 ; 572 >
     au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 573 ; 573 >
     au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 574 ; 574 >
-    au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 575 ; 575 >
+    au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 575 ; 575 >
     au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 576 ; 576 >
-    au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 577 ; 577 >
-    au < testing ; exists ; 2015 ; Journal of Physics: Conference Series Volume 578 ; 578 >
+    au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 577 ; 577 >
+    au < ready ; exists ; 2015 ; Journal of Physics: Conference Series Volume 578 ; 578 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 579 ; 579 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 580 ; 580 >
     au < manifest ; exists ; 2015 ; Journal of Physics: Conference Series Volume 581 ; 581 >
@@ -2826,6 +2826,7 @@
 
     param[journal_issn] = 0965-0393
     comment[param] = print issn preferred
+    #notReady - login required
 
     au < manifest ; exists ; 1992-1993 ; Modelling and Simulation in Materials Science and Engineering Volume 1 ; 1 > 
     au < manifest ; exists ; 1994 ; Modelling and Simulation in Materials Science and Engineering Volume 2 ; 2 > 
@@ -2849,7 +2850,7 @@
     au < finished ; crawling ; 2012 ; Modelling and Simulation in Materials Science and Engineering Volume 20 ; 20 > 
     au < crawling ; exists ; 2013 ; Modelling and Simulation in Materials Science and Engineering Volume 21 ; 21 > 
     au < crawling ; exists ; 2014 ; Modelling and Simulation in Materials Science and Engineering Volume 22 ; 22 > 
-    au < testing ; exists ; 2015 ; Modelling and Simulation in Materials Science and Engineering Volume 23 ; 23 > 
+    au < notReady ; exists ; 2015 ; Modelling and Simulation in Materials Science and Engineering Volume 23 ; 23 > 
 
   }
 
