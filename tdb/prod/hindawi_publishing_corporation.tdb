@@ -1465,8 +1465,8 @@
     {
     param[journal_id] = anemia
 
-    au < exists ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 >
-    au < exists ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Anemia Volume 2014 ; 2014 ; 2014 >
@@ -1578,16 +1578,16 @@
     {
     param[journal_id] = archaea
 
-    au < exists ; 2002 ; Archaea Volume 2002 ; 2002 ; 2002 >
-    au < exists ; 2003 ; Archaea Volume 2003 ; 2003 ; 2003 >
-    au < exists ; 2004 ; Archaea Volume 2004 ; 2004 ; 2004 >
-    au < exists ; 2005 ; Archaea Volume 2005 ; 2005 ; 2005 >
-    au < exists ; 2006 ; Archaea Volume 2006 ; 2006 ; 2006 >
-    au < exists ; 2007 ; Archaea Volume 2007 ; 2007 ; 2007 >
-    au < exists ; 2008 ; Archaea Volume 2008 ; 2008 ; 2008 >
-    au < exists ; 2009 ; Archaea Volume 2009 ; 2009 ; 2009 >
-    au < exists ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 >
-    au < exists ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2002 ; Archaea Volume 2002 ; 2002 ; 2002 >
+    au < manifest ; 2003 ; Archaea Volume 2003 ; 2003 ; 2003 >
+    au < manifest ; 2004 ; Archaea Volume 2004 ; 2004 ; 2004 >
+    au < manifest ; 2005 ; Archaea Volume 2005 ; 2005 ; 2005 >
+    au < manifest ; 2006 ; Archaea Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; 2007 ; Archaea Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; 2008 ; Archaea Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; 2009 ; Archaea Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 >
@@ -1738,7 +1738,7 @@
     au < manifest ; 2008 ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 >
     au < manifest ; 2009 ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 >
-    au < exists ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 >
@@ -1959,7 +1959,7 @@
 
     param[journal_id] = cricc
 
-    au < exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 >
@@ -1977,7 +1977,7 @@
 
     param[journal_id] = crid
 
-    au < exists ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
@@ -2032,7 +2032,7 @@
 
     param[journal_id] = crie
 
-    au < exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 >
@@ -2050,7 +2050,7 @@
 
     param[journal_id] = crigm
 
-    au < exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2068,7 +2068,7 @@
 
     param[journal_id] = crig
 
-    au < exists ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
@@ -2086,7 +2086,7 @@
 
     param[journal_id] = crihem
 
-    au < exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
@@ -2104,7 +2104,7 @@
 
     param[journal_id] = crihep
 
-    au < exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 >
@@ -2140,7 +2140,7 @@
 
     param[journal_id] = criid
 
-    au < exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
@@ -7366,7 +7366,7 @@
     
     au < manifest ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7462,7 +7462,7 @@
     au < manifest ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8434,8 +8434,8 @@
 
     param[journal_id] = misy
 
-    au < exists ; 2014 ; Mobile Information Systems Volume 2014 ; 2014 ; 2014 >
-    au < exists ; 2015 ; Mobile Information Systems Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; 2014 ; Mobile Information Systems Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; 2015 ; Mobile Information Systems Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -9445,8 +9445,8 @@
 
     param[journal_id] = sp
 
-    au < exists ; 2014 ; Scientific Programming Volume 2014 ; 2014 ; 2014 >
-    au < exists ; 2015 ; Scientific Programming Volume 2015 ; 2015 ; 2015 >
+    au < manifest ; 2014 ; Scientific Programming Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; 2015 ; Scientific Programming Volume 2015 ; 2015 ; 2015 >
 
   }
 

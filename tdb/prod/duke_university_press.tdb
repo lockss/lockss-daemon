@@ -2967,7 +2967,7 @@
       param[base_url] = http://tcl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 >
 
     }
 

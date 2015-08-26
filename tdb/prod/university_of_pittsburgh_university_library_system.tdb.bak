@@ -1,0 +1,724 @@
+{
+  publisher <
+    name = University of Pittsburgh University Library System
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; param[year] ; name ; volume >
+
+  {
+    title <
+      name = BIBLIOS: Librarianship and Information Science Journal ;
+      eissn = 1562-4730
+    >
+
+    param[base_url] = http://biblios.pitt.edu/ojs/
+    param[journal_id] = biblios
+
+    au < released ; 2011 ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 >
+    au < released ; 2012 ; 2012 ; BIBLIOS: Librarianship and Information Science Journal Volume 2012 ; 2012 >
+    au < released ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 >
+    au < ready ; 2014 ; 2014 ; BIBLIOS: Librarianship and Information Science Journal Volume 2014 ; 2014 >
+    au < manifest ; 2015 ; 2015 ; BIBLIOS: Librarianship and Information Science Journal Volume 2015 ; 2015 >
+
+  }
+
+  {
+    title <
+      name = Bolivian Studies Journal ;
+      issn = 1074-2247 ;
+      eissn = 2156-5163
+    >
+
+    param[base_url] = http://bsj.pitt.edu/ojs/
+    param[journal_id] = bsj
+
+    au < released ; 2008-2010 ; 2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 >
+    au < released ; 2011 ; 2011 ; Blivian Studies Journal Volume 18 ; 18 >
+    au < released ; 2012-2013 ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 >
+    au < ready ; 2014 ; 2014 ; Bolivian Studies Journal Volume 20 ; 20 >
+    au < expected ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 >
+
+  }
+
+  {
+    title <
+      name = The Carl Beck Papers In Russian And East European Studies ;
+      eissn = 2163-839X
+    >
+
+    param[base_url] = http://carlbeckpapers.pitt.edu/ojs/
+    param[journal_id] = cbp
+
+    au < released ; 1981 ; 1981 ; The Carl Beck Papers In Russian And East European Studies Volume 1981 ; 1981 >
+    au < released ; 1982 ; 1982 ; The Carl Beck Papers In Russian And East European Studies Volume 1982 ; 1982 >
+    au < released ; 1983 ; 1983 ; The Carl Beck Papers In Russian And East European Studies Volume 1983 ; 1983 >
+    au < released ; 1984 ; 1984 ; The Carl Beck Papers In Russian And East European Studies Volume 1984 ; 1984 >
+    au < released ; 1985 ; 1985 ; The Carl Beck Papers In Russian And East European Studies Volume 1985 ; 1985 >
+    au < released ; 1986 ; 1986 ; The Carl Beck Papers In Russian And East European Studies Volume 1986 ; 1986 >
+    au < released ; 1987 ; 1987 ; The Carl Beck Papers In Russian And East European Studies Volume 1987 ; 1987 >
+    au < released ; 1988 ; 1988 ; The Carl Beck Papers In Russian And East European Studies Volume 1988 ; 1988 >
+    au < released ; 1989 ; 1989 ; The Carl Beck Papers In Russian And East European Studies Volume 1989 ; 1989 >
+    au < released ; 1990 ; 1990 ; The Carl Beck Papers In Russian And East European Studies Volume 1990 ; 1990 >
+    au < released ; 1991 ; 1991 ; The Carl Beck Papers In Russian And East European Studies Volume 1991 ; 1991 >
+    au < released ; 1992 ; 1992 ; The Carl Beck Papers In Russian And East European Studies Volume 1992 ; 1992 >
+    au < released ; 1993 ; 1993 ; The Carl Beck Papers In Russian And East European Studies Volume 1993 ; 1993 >
+    au < released ; 1994 ; 1994 ; The Carl Beck Papers In Russian And East European Studies Volume 1994 ; 1994 >
+    au < released ; 1995 ; 1995 ; The Carl Beck Papers In Russian And East European Studies Volume 1995 ; 1995 >
+    au < released ; 1996 ; 1996 ; The Carl Beck Papers In Russian And East European Studies Volume 1996 ; 1996 >
+    au < released ; 1997 ; 1997 ; The Carl Beck Papers In Russian And East European Studies Volume 1997 ; 1997 >
+    au < released ; 1998 ; 1998 ; The Carl Beck Papers In Russian And East European Studies Volume 1998 ; 1998 >
+    au < released ; 1999 ; 1999 ; The Carl Beck Papers In Russian And East European Studies Volume 1999 ; 1999 >
+    au < released ; 2000 ; 2000 ; The Carl Beck Papers In Russian And East European Studies Volume 2000 ; 2000 >
+    au < released ; 2001 ; 2001 ; The Carl Beck Papers In Russian And East European Studies Volume 2001 ; 2001 >
+    au < released ; 2002 ; 2002 ; The Carl Beck Papers In Russian And East European Studies Volume 2002 ; 2002 >
+    au < released ; 2003 ; 2003 ; The Carl Beck Papers In Russian And East European Studies Volume 2003 ; 2003 >
+    au < released ; 2004 ; 2004 ; The Carl Beck Papers In Russian And East European Studies Volume 2004 ; 2004 >
+    au < released ; 2005 ; 2005 ; The Carl Beck Papers In Russian And East European Studies Volume 2005 ; 2005 >
+    au < released ; 2006 ; 2006 ; The Carl Beck Papers In Russian And East European Studies Volume 2006 ; 2006 >
+    au < released ; 2007 ; 2007 ; The Carl Beck Papers In Russian And East European Studies Volume 2007 ; 2007 >
+    au < released ; 2008 ; 2008 ; The Carl Beck Papers In Russian And East European Studies Volume 2008 ; 2008 >
+    au < released ; 2009 ; 2009 ; The Carl Beck Papers In Russian And East European Studies Volume 2009 ; 2009 >
+    au < released ; 2010 ; 2010 ; The Carl Beck Papers In Russian And East European Studies Volume 2010 ; 2010 >
+    au < released ; 2011 ; 2011 ; The Carl Beck Papers In Russian And East European Studies Volume 2011 ; 2011 >
+    au < released ; 2012 ; 2012 ; The Carl Beck Papers In Russian And East European Studies Volume 2012 ; 2012 >
+    au < released ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 >
+    au < ready ; 2014 ; 2014 ; The Carl Beck Papers In Russian And East European Studies Volume 2014 ; 2014 >
+    au < manifest ; 2015 ; 2015 ; The Carl Beck Papers In Russian And East European Studies Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Catedral Tomada: Revista de crítica literaria latinoamericana ;
+        eissn = 2169-0847
+      >
+
+      param[base_url] = http://catedraltomada.pitt.edu/ojs/
+      param[journal_id] = catedraltomada
+
+      au < released ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
+      au < ready ; 2014 ; 2014 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 2 ; 2 >
+      au < expected ; 2015 ; 2015 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 3 ; 3 >
+
+  }
+
+  {
+
+      title <
+        name = Central Asian Journal of Global Health ;
+        eissn = 2166-7403
+      >
+
+      param[base_url] = http://cajgh.pitt.edu/ojs/
+      param[journal_id] = cajgh
+      comment[0] = subscription journal.
+
+      au < notReady ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 >
+      au < notReady ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 >
+      au < notReady ; 2014 ; 2014 ; Central Asian Journal of Global Health Volume 3 ; 3 >
+      au < notReady ; 2015 ; 2015 ; Central Asian Journal of Global Health Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = CINEJ Cinema e-Journal ;
+      issn = 2159-2411 ;
+      eissn = 2158-8724
+    >
+
+    param[base_url] = http://cinej.pitt.edu/ojs/
+    param[journal_id] = cinej
+
+    au < released ; 2011 ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 1-2 ; 1-2 >
+    au < released ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 2-3 ; 2-3 >
+    au < ready ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 3-4 ; 3-4 >
+    au < expected ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 4-5 ; 4-5 >
+
+  }
+
+  {
+    title <
+      name = Contemporaneity: Historical Presence in Visual Culture ;
+      eissn = 2153-5914
+    >
+
+    param[base_url] = http://contemporaneity.pitt.edu/ojs/
+    param[journal_id] = contemporaneity
+
+    au < released ; 2011 ; 2011 ; Contemporaneity: Historical Presence in Visual Culture Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; Contemporaneity: Historical Presence in Visual Culture Volume 2 ; 2 >
+    au < ready ; 2014 ; 2014 ; Contemporaneity: Historical Presence in Visual Culture Volume 3 ; 3 >
+    au < manifest ; 2015 ; 2015 ; Contemporaneity: Historical Presence in Visual Culture Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Dentistry 3000 ;
+      eissn = 2167-8677
+    >
+
+    param[base_url] = http://dentistry3000.pitt.edu/ojs/
+    param[journal_id] = dentistry3000
+
+    au < released ; 2013 ; 2013 ; Dentistry 3000 Volume 1 (2013) ; 1 >
+    au < ready ; 2014 ; 2014 ; Dentistry 3000 Volume 1 (2014) ; 1 >
+    au < manifest ; 2015 ; 2015 ; Dentistry 3000 Volume 2 (2014) ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = Dialogic Pedagogy: An International Online Journal ;
+        eissn = 2325-3290
+      >
+
+      param[base_url] = http://dpj.pitt.edu/ojs/
+      param[journal_id] = dpj1
+
+      au < released ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 >
+      au < ready ; 2014 ; 2014 ; Dialogic Pedagogy: An International Online Journal Volume 2 ; 2 >
+      au < manifest ; 2015 ; 2015 ; Dialogic Pedagogy: An International Online Journal Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
+      name = EMAJ: Emerging Markets e-Journal of Management ;
+      issn = 2159-242X ;
+      eissn = 2158-8708
+    >
+
+    param[base_url] = http://emaj.pitt.edu/ojs/
+    param[journal_id] = emaj
+
+    au < released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 2 ; 2 >
+    au < released ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 >
+    au < ready ; 2014 ; 2014 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2014) ; 3 >
+    au < manifest ; 2015 ; 2015 ; EMAJ: Emerging Markets e-Journal of Management Volume 4 (2015) ; 4 >
+
+  }
+
+  {
+    title <
+      name = Ethnology ;
+      issn = 0014-1828
+    >
+
+    param[base_url] = http://ethnology.pitt.edu/ojs/
+    param[journal_id] = Ethnology
+
+    au < released ; 2008 ; 2008 ; Ethnology Volume 47 ; 47 >
+    au < released ; 2009 ; 2009 ; Ethnology Volume 48 ; 48 >
+    au < released ; 2010 ; 2010 ; Ethnology Volume 49 ; 49 >
+    au < released ; 2011 ; 2011 ; Ethnology Volume 50 ; 50 >
+
+  }
+
+  {
+    title <
+      name = Excellence in Higher Education ;
+      issn = 2153-9669 ;
+      eissn = 2153-9677
+    >
+
+    param[base_url] = http://ehe.pitt.edu/ojs/
+    param[journal_id] = ehe
+
+    au < released ; 2010 ; 2010 ; Excellence in Higher Education Volume 1 ; 1 >
+    au < released ; 2011 ; 2011 ; Excellence in Higher Education Volume 2 ; 2 >
+    au < released ; 2012 ; 2012 ; Excellence in Higher Education Volume 3 ; 3 >
+    au < released ; 2013 ; 2013 ; Excellence in Higher Education Volume 4 ; 4 >
+    au < ready ; 2014 ; 2014 ; Excellence in Higher Education Volume 5 ; 5 >
+    au < expected ; 2015 ; 2015 ; Excellence in Higher Education Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = Forbes and Fifth ;
+      eissn = 2332-7863
+    >
+
+    param[base_url] = http://forbes5.pitt.edu/ojs/
+    param[journal_id] = forbes5
+
+    au < released ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 >
+    au < released ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 >
+    au < ready ; 2014 ; 2014 ; Forbes and Fifth Volume 5-6 ; 5-6 >
+    au < expected ; 2015 ; 2015 ; Forbes and Fifth Volume 7-8 ; 7-8 >
+
+  }
+
+  {
+    title <
+      name = Health, Culture, and Society ;
+      eissn = 2161-6590
+    >
+
+    param[base_url] = http://hcs.pitt.edu/ojs/
+    param[journal_id] = hcs
+
+    au < released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; Health, Culture, and Society Volume 2-3 ; 2-3 >
+    au < released ; 2013 ; 2013 ; Health, Culture, and Society Volume 4 ; 4 >
+    au < ready ; 2014 ; 2014 ; Health, Culture, and Society Volume 5 ; 5 >
+    au < manifest ; 2015 ; 2015 ; Health, Culture, and Society Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = IIOAB Letters ;
+      eissn = 2161-3702
+    >
+
+    param[base_url] = http://iioablett.pitt.edu/ojs/
+    param[journal_id] = iioablett
+
+    au < released ; 2011 ; 2011 ; IIOAB Letters Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; IIOAB Letters Volume 2 ; 2 >
+    au < released ; 2013 ; 2013 ; IIOAB Letters Volume 3 ; 3 >
+    au < expected ; 2014 ; 2014 ; IIOAB Letters Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Telerehabilitation ;
+      eissn = 1945-2020
+    >
+
+    param[base_url] = http://telerehab.pitt.edu/ojs/
+    param[journal_id] = telerehab
+
+    au < released ; 2009 ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 1 >
+    au < released ; 2010 ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 >
+    au < released ; 2011 ; 2011 ; International Journal of Telerehabilitation Volume 3 ; 3 >
+    au < released ; 2012 ; 2012 ; International Journal of Telerehabilitation Volume 4 ; 4 >
+    au < released ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 >
+    au < ready ; 2014 ; 2014 ; International Journal of Telerehabilitation Volume 6 ; 6 >
+    au < manifest ; 2015 ; 2015 ; International Journal of Telerehabilitation Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Journal of French and Francophone Philosophy ;
+      issn = 1936-6280 ;
+      eissn = 2155-1162
+    >
+
+    param[base_url] = http://jffp.pitt.edu/ojs/
+    param[journal_id] = jffp
+
+    au < released ; 1989 ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1 >
+    au < released ; 1990 ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 2 >
+    au < released ; 1991 ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 3 >
+    au < released ; 1992 ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 4 >
+    au < released ; 1993 ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 5 >
+    au < released ; 1994 ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 6 >
+    au < released ; 1995 ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 7 >
+    au < released ; 1996 ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 8 >
+    au < released ; 1997 ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 9 >
+    au < released ; 1998 ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 10 >
+    au < released ; 1999 ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 11 >
+    au < released ; 2000 ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 12 >
+    au < released ; 2003 ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 13 >
+    au < released ; 2004 ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 14 >
+    au < released ; 2005 ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 15 >
+    au < released ; 2006 ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 16 >
+    au < released ; 2007 ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 17 >
+    au < released ; 2010 ; 2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 >
+    au < released ; 2011 ; 2011 ; Journal of French and Francophone Philosophy Volume 19 ; 19 >
+    au < released ; 2012 ; 2012 ; Journal of French and Francophone Philosophy Volume 20 ; 20 >
+    au < released ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 >
+    au < ready ; 2014 ; 2014 ; Journal of French and Francophone Philosophy Volume 22 ; 22 >
+    au < manifest ; 2015 ; 2015 ; Journal of French and Francophone Philosophy Volume 23 ; 23 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Law and Commerce ;
+        issn = 0733-2491 ;
+        eissn = 2164-7984
+      >
+
+      param[base_url] = http://jlc.law.pitt.edu/ojs/
+      param[journal_id] = jlc
+
+      au < released ; 2008 ; 2008 ; Journal of Law and Commerce Volume 26-27 ; 26-27 >
+      au < released ; 2009 ; 2009 ; Journal of Law and Commerce Volume 27-28 ; 27-28 >
+      au < released ; 2010 ; 2010 ; Journal of Law and Commerce Volume 28-29 ; 28-29 >
+      au < released ; 2011 ; 2011 ; Journal of Law and Commerce Volume 29 ; 29 >
+      au < released ; 2012 ; 2012 ; Journal of Law and Commerce Volume 30 ; 30 >
+      au < released ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31 ; 31 >
+      au < ready ; 2014 ; 2014 ; Journal of Law and Commerce Volume 32 ; 32 >
+      au < manifest ; 2015 ; 2015 ; Journal of Law and Commerce Volume 33 ; 33 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of World-Historical Information ;
+        eissn = 2169-0812
+      >
+
+      param[base_url] = http://jwhi.pitt.edu/ojs/
+      param[journal_id] = jwhi
+
+      au < released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 >
+      au < expected ; 2014 ; 2014 ; Journal of World-Historical Information Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Linguistic Evidence in Security, Law and Intelligence ;
+      eissn = 2327-5596
+    >
+
+    param[journal_id] = lesli
+    {
+    param[base_url] = http://lesli-journal.org/ojs/
+
+    au < down ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 >
+    }
+    {
+    param[base_url] = http://www.lesli-journal.org/ojs/
+
+    au < doNotProcess ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 >
+    au < ready ; 2014 ; 2014 ; Linguistic Evidence in Security, Law and Intelligence Volume 2 ; 2 >
+    au < expected ; 2015 ; 2015 ; Linguistic Evidence in Security, Law and Intelligence Volume 3 ; 3 >
+    }
+  }
+
+  {
+
+      title <
+        name = Motivational Interviewing: Training, Research, Implementation, Practice ;
+        eissn = 2160-584X
+      >
+
+      param[base_url] = http://www.mitrip.org/ojs/
+      param[journal_id] = mitrip
+
+      au < released ; 2012 ; 2012 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2012) ; 1 >
+      au < released ; 2013 ; 2013 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2013) ; 1 >
+      au < ready ; 2014 ; 2014 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2014) ; 1 >
+      au < expected ; 2015 ; 2015 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2015) ; 1 >
+
+  }
+
+  {
+    title <
+      name = Pennsylvania Libraries: Research and Practice ;
+      eissn = 2324-7878
+    >
+
+    param[base_url] = http://palrap.pitt.edu/ojs/
+    param[journal_id] = palrap
+
+    au < released ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 >
+    au < ready ; 2014 ; 2014 ; Pennsylvania Libraries: Research and Practice Volume 2 ; 2 >
+    au < manifest ; 2015 ; 2015 ; Pennsylvania Libraries: Research and Practice Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
+      name = Pitt Political Review ;
+      eissn = 2160-5807
+    >
+
+    param[base_url] = http://ppr.pitt.edu/ojs/
+    param[journal_id] = ppr
+
+    au < released ; 2011 ; 2011 ; Pitt Political Review Volume 8 ; 8 >
+    au < released ; 2012 ; 2012 ; Pitt Political Review Volume 9 ; 9 >
+    au < expected ; 2013 ; 2013 ; Pitt Political Review Volume 10 ; 10 >
+    au < expected ; 2014 ; 2014 ; Pitt Political Review Volume 11 ; 11 >
+
+  }
+
+  {
+
+      title <
+        name = Pittsburgh Journal of Environmental and Public Health Law ;
+        eissn = 2164-7976
+      >
+
+      param[base_url] = http://pjephl.law.pitt.edu/ojs/
+      param[journal_id] = pjephl
+
+      au < released ; 2007 ; 2007 ; Pittsburgh Journal of Environmental and Public Health Law Volume 1 ; 1 >
+      au < released ; 2008 ; 2008 ; Pittsburgh Journal of Environmental and Public Health Law Volume 2 ; 2 >
+      au < released ; 2009 ; 2009 ; Pittsburgh Journal of Environmental and Public Health Law Volume 3 ; 3 >
+      au < released ; 2010 ; 2010 ; Pittsburgh Journal of Environmental and Public Health Law Volume 4 ; 4 >
+      au < released ; 2011 ; 2011 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5 ; 5 >
+      au < released ; 2012 ; 2012 ; Pittsburgh Journal of Environmental and Public Health Law Volume 6 ; 6 >
+      au < released ; 2013 ; 2013 ; Pittsburgh Journal of Environmental and Public Health Law Volume 7 ; 7 >
+      au < ready ; 2014 ; 2014 ; Pittsburgh Journal of Environmental and Public Health Law Volume 8 ; 8 >
+      au < expected ; 2015 ; 2015 ; Pittsburgh Journal of Environmental and Public Health Law Volume 9 ; 9 >
+
+  }
+
+  {
+
+      title <
+        name = Pittsburgh Journal of Technology Law and Policy ;
+        issn = 1087-6995 ;
+        eissn = 2164-800X
+      >
+
+      param[base_url] = http://tlp.law-dev.library.pitt.edu/ojs/
+      param[journal_id] = tlp
+
+      au < manifest ; 2001 ; 2001 ; Pittsburgh Journal of Technology Law and Policy Volume 1 ; 1 >
+      au < manifest ; 2002 ; 2002 ; Pittsburgh Journal of Technology Law and Policy Volume 2 ; 2 >
+      au < manifest ; 2003 ; 2003 ; Pittsburgh Journal of Technology Law and Policy Volume 3 ; 3 >
+      au < manifest ; 2004 ; 2004 ; Pittsburgh Journal of Technology Law and Policy Volume 4 ; 4 >
+      au < released ; 2005 ; 2005 ; Pittsburgh Journal of Technology Law and Policy Volume 5 ; 5 >
+      au < released ; 2006 ; 2006 ; Pittsburgh Journal of Technology Law and Policy Volume 6 ; 6 >
+      au < released ; 2007 ; 2007 ; Pittsburgh Journal of Technology Law and Policy Volume 7 ; 7 >
+      au < released ; 2008 ; 2008 ; Pittsburgh Journal of Technology Law and Policy Volume 8 ; 8 >
+      au < released ; 2009 ; 2009 ; Pittsburgh Journal of Technology Law and Policy Volume 9 ; 9 >
+      au < released ; 2010 ; 2010 ; Pittsburgh Journal of Technology Law and Policy Volume 10 ; 10 >
+      au < released ; 2011 ; 2011 ; Pittsburgh Journal of Technology Law and Policy Volume 11 ; 11 >
+      au < released ; 2012 ; 2012 ; Pittsburgh Journal of Technology Law and Policy Volume 12-13 ; 12-13 >
+      au < released ; 2013 ; 2013 ; Pittsburgh Journal of Technology Law and Policy Volume 13 ; 13 >
+      au < ready ; 2014 ; 2014 ; Pittsburgh Journal of Technology Law and Policy Volume 14 ; 14 >
+      au < expected ; 2015 ; 2015 ; Pittsburgh Journal of Technology Law and Policy Volume 15 ; 15 >
+
+  }
+
+  {
+
+      title <
+        name = Pittsburgh Papers on the European Union ;
+        eissn = 2164-6732
+      >
+
+      param[base_url] = http://pgheupapers.pitt.edu/ojs/
+      param[journal_id] = pgheupapers
+
+      au < released ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 >
+      au < released ; 2013 ; 2013 ; Pittsburgh Papers on the European Union Volume 2 ; 2 >
+      au < ready ; 2014 ; 2014 ; Pittsburgh Papers on the European Union Volume 3 ; 3 >
+      au < expected ; 2015 ; 2015 ; Pittsburgh Papers on the European Union Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Pittsburgh Tax Review ;
+      issn = 1932-1821 ;
+      eissn = 1932-1996
+    >
+
+    param[base_url] = http://taxreview.law.pitt.edu/ojs/
+    param[journal_id] = taxreview
+
+    au < released ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 >
+    au < released ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 >
+    au < ready ; 2014 ; 2014 ; Pittsburgh Tax Review Volume 3 ; 3 >
+    au < manifest ; 2015 ; 2015 ; Pittsburgh Tax Review Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Radical Teacher ;
+      issn = 0191-4847 ;
+      eissn = 1941-0832
+    >
+
+    param[base_url] = http://radicalteacher.library.pitt.edu/ojs/
+    param[journal_id] = radicalteacher
+
+    au < released ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 >
+    au < ready ; 2014 ; 2014 ; Radical Teacher Volume 2 ; 2 >
+    au < manifest ; 2015 ; 2015 ; Radical Teacher Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
+      name = Revista Iberoamericana ;
+      issn = 0034-9631 ;
+      eissn = 2154-4794
+    >
+
+    param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
+    param[journal_id] = Iberoamericana
+
+    au < released ; 1939 ; 1939 ; Revista Iberoamericana Volume I ; I >
+    au < released ; 1940 ; 1940 ; Revista Iberoamericana Volume II ; II >
+    au < released ; 1941 ; 1941 ; Revista Iberoamericana Volume III-IV ; III-IV >
+    au < released ; 1942 ; 1942 ; Revista Iberoamericana Volume IV-V ; IV-V >
+    au < released ; 1943 ; 1943 ; Revista Iberoamericana Volume VI-VII ; VI-VII >
+    au < released ; 1944 ; 1944 ; Revista Iberoamericana Volume VII-VIII ; VII-VIII >
+    au < released ; 1945 ; 1945 ; Revista Iberoamericana Volume IX-X ; IX-X >
+    au < released ; 1946 ; 1946 ; Revista Iberoamericana Volume X-XI ; X-XI >
+    au < released ; 1947 ; 1947 ; Revista Iberoamericana Volume XII-XIII ; XII-XIII >
+    au < released ; 1948 ; 1948 ; Revista Iberoamericana Volume XIII-XIV ; XIII-XIV >
+    au < released ; 1949 ; 1949 ; Revista Iberoamericana Volume XV ; XV >
+    au < released ; 1950 ; 1950 ; Revista Iberoamericana Volume XV-XVI ; XV-XVI >
+    au < released ; 1951 ; 1951 ; Revista Iberoamericana Volume XVI-XVII ; XVI-XVII >
+    au < released ; 1952 ; 1952 ; Revista Iberoamericana Volume XVII-XVIII ; XVII-XVIII >
+    au < released ; 1953 ; 1953 ; Revista Iberoamericana Volume XVIII-XIX ; XVIII-XIX >
+    au < released ; 1954 ; 1954 ; Revista Iberoamericana Volume XIX ; XIX >
+    au < released ; 1955 ; 1955 ; Revista Iberoamericana Volume XX ; XX >
+    au < released ; 1956 ; 1956 ; Revista Iberoamericana Volume XXI ; XXI >
+    au < released ; 1957 ; 1957 ; Revista Iberoamericana Volume XXII ; XXII >
+    au < released ; 1958 ; 1958 ; Revista Iberoamericana Volume XXIII ; XXIII >
+    au < released ; 1959 ; 1959 ; Revista Iberoamericana Volume XXIV ; XXIV >
+    au < released ; 1960 ; 1960 ; Revista Iberoamericana Volume XXV ; XXV >
+    au < released ; 1961 ; 1961 ; Revista Iberoamericana Volume XXVI-XXVII ; XXVI-XXVII >
+    au < released ; 1962 ; 1962 ; Revista Iberoamericana Volume XXVIII ; XXVIII >
+    au < released ; 1963 ; 1963 ; Revista Iberoamericana Volume XXIX ; XXIX >
+    au < released ; 1964 ; 1964 ; Revista Iberoamericana Volume XXX ; XXX >
+    au < released ; 1965 ; 1965 ; Revista Iberoamericana Volume XXXI ; XXXI >
+    au < released ; 1966 ; 1966 ; Revista Iberoamericana Volume XXXII ; XXXII >
+    au < released ; 1967 ; 1967 ; Revista Iberoamericana Volume XXXIII ; XXXIII >
+    au < released ; 1968 ; 1968 ; Revista Iberoamericana Volume XXXIV ; XXXIV >
+    au < released ; 1969 ; 1969 ; Revista Iberoamericana Volume XXXV ; XXXV >
+    au < released ; 1970 ; 1970 ; Revista Iberoamericana Volume XXXVI ; XXXVI >
+    au < released ; 1971 ; 1971 ; Revista Iberoamericana Volume XXXVII ; XXXVII >
+    au < released ; 1972 ; 1972 ; Revista Iberoamericana Volume XXXVIII ; XXXVIII >
+    au < released ; 1973 ; 1973 ; Revista Iberoamericana Volume XXXIX ; XXXIX >
+    au < released ; 1974 ; 1974 ; Revista Iberoamericana Volume XL ; XL >
+    au < released ; 1975 ; 1975 ; Revista Iberoamericana Volume XLI ; XLI >
+    au < released ; 1976 ; 1976 ; Revista Iberoamericana Volume XLII ; XLII >
+    au < released ; 1977 ; 1977 ; Revista Iberoamericana Volume XLIII ; XLIII >
+    au < released ; 1978 ; 1978 ; Revista Iberoamericana Volume XLIV ; XLIV >
+    au < released ; 1979 ; 1979 ; Revista Iberoamericana Volume XLV ; XLV >
+    au < released ; 1980 ; 1980 ; Revista Iberoamericana Volume XLVI ; XLVI >
+    au < released ; 1981 ; 1981 ; Revista Iberoamericana Volume XLVII ; XLVII >
+    au < released ; 1982 ; 1982 ; Revista Iberoamericana Volume XLVIII ; XLVIII >
+    au < released ; 1983 ; 1983 ; Revista Iberoamericana Volume XLIX ; XLIX >
+    au < released ; 1984 ; 1984 ; Revista Iberoamericana Volume L ; L >
+    au < released ; 1985 ; 1985 ; Revista Iberoamericana Volume LI ; LI >
+    au < released ; 1986 ; 1986 ; Revista Iberoamericana Volume LII ; LII >
+    au < released ; 1987 ; 1987 ; Revista Iberoamericana Volume LIII ; LIII >
+    au < released ; 1988 ; 1988 ; Revista Iberoamericana Volume LIV ; LIV >
+    au < released ; 1989 ; 1989 ; Revista Iberoamericana Volume LV ; LV >
+    au < released ; 1990 ; 1990 ; Revista Iberoamericana Volume LVI ; LVI >
+    au < released ; 1991 ; 1991 ; Revista Iberoamericana Volume LVII ; LVII >
+    au < released ; 1992 ; 1992 ; Revista Iberoamericana Volume LVIII ; LVIII >
+    au < released ; 1993 ; 1993 ; Revista Iberoamericana Volume LIX ; LIX >
+    au < released ; 1994 ; 1994 ; Revista Iberoamericana Volume LX ; LX >
+    au < released ; 1995 ; 1995 ; Revista Iberoamericana Volume LXI ; LXI >
+    au < released ; 1996 ; 1996 ; Revista Iberoamericana Volume LXII ; LXII >
+    au < released ; 1997 ; 1997 ; Revista Iberoamericana Volume LXIII ; LXIII >
+    au < released ; 1998 ; 1998 ; Revista Iberoamericana Volume LXIV ; LXIV >
+    au < released ; 1999 ; 1999 ; Revista Iberoamericana Volume LXV ; LXV >
+    au < released ; 2000 ; 2000 ; Revista Iberoamericana Volume LXVI ; LXVI >
+    au < released ; 2001 ; 2001 ; Revista Iberoamericana Volume LXVII ; LXVII >
+    au < released ; 2002 ; 2002 ; Revista Iberoamericana Volume LXVIII ; LXVIII >
+    au < released ; 2003 ; 2003 ; Revista Iberoamericana Volume LXIX ; LXIX >
+    au < released ; 2004 ; 2004 ; Revista Iberoamericana Volume LXX ; LXX >
+    au < released ; 2005 ; 2005 ; Revista Iberoamericana Volume LXXI ; LXXI >
+    au < released ; 2006 ; 2006 ; Revista Iberoamericana Volume LXXII ; LXXII >
+    au < released ; 2007 ; 2007 ; Revista Iberoamericana Volume LXXIII ; LXXIII >
+    au < released ; 2008 ; 2008 ; Revista Iberoamericana Volume LXXIV ; LXXIV >
+    au < released ; 2009 ; 2009 ; Revista Iberoamericana Volume LXXV ; LXXV >
+    au < released ; 2010 ; 2010 ; Revista Iberoamericana Volume LXXVI ; LXXVI >
+    au < released ; 2011 ; 2011 ; Revista Iberoamericana Volume LXXVII ; LXXVII >
+    au < released ; 2012 ; 2012 ; Revista Iberoamericana Volume LXXVIII ; LXXVIII >
+    au < released ; 2013 ; 2013 ; Revista Iberoamericana Volume LXXIX ; LXXIX >
+    au < ready ; 2014 ; 2014 ; Revista Iberoamericana Volume LXXX ; LXXX >
+    au < manifest ; 2015 ; 2015 ; Revista Iberoamericana Volume LXXXI ; LXXXI >
+
+
+  }
+
+  {
+    title <
+      name = Ricoeur Studies ;
+      eissn = 2156-7808
+    >
+
+    param[base_url] = http://ricoeur.pitt.edu/ojs/
+    param[journal_id] = ricoeur
+
+    au < released ; 2010 ; 2010 ; Ricoeur Studies Volume 1 ; 1 >
+    au < released ; 2011 ; 2011 ; Ricoeur Studies Volume 2 ; 2 >
+    au < released ; 2012 ; 2012 ; Ricoeur Studies Volume 3 ; 3 >
+    au < released ; 2013 ; 2013 ; Ricoeur Studies Volume 4 ; 4 >
+    au < ready ; 2014 ; 2014 ; Ricoeur Studies Volume 5 ; 5 >
+    au < manifest ; 2015 ; 2015 ; Ricoeur Studies Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = SHASHI: The Journal of Japanese Business and Company History ;
+        eissn = 2169-0820
+      >
+
+      param[base_url] = http://shashi.pitt.edu/ojs/
+      param[journal_id] = shashi
+
+      au < released ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 >
+      au < released ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 >
+      au < ready ; 2014 ; 2014 ; SHASHI: The Journal of Japanese Business and Company History Volume 3 ; 3 >
+      au < expected ; 2015 ; 2015 ; SHASHI: The Journal of Japanese Business and Company History Volume 4 ; 4 >
+
+  }
+
+  {
+
+      title <
+        name = Timely Interventions ;
+        eissn = 2160-5777
+      >
+
+      param[base_url] = http://timelyinterventions.pitt.edu/ojs/
+      param[journal_id] = timely
+
+      au < released ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 >
+      au < expected ; 2014 ; 2014 ; Timely Interventions Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = University of Pittsburgh Law Review ;
+        issn = 0041-9915 ;
+        eissn = 1942-8405
+      >
+
+      param[base_url] = http://lawreview.law-dev.library.pitt.edu/ojs/
+      param[journal_id] = lawreview
+
+      au < manifest ; 2003 ; 2003 ; University of Pittsburgh Law Review Volume 65 ; 65 >
+      au < manifest ; 2004 ; 2004 ; University of Pittsburgh Law Review Volume 65-66 ; 65-66 >
+      au < released ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 >
+      au < released ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 >
+      au < released ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 >
+      au < released ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 >
+      au < released ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 >
+      au < released ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 >
+      au < released ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 >
+      au < released ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 >
+      au < released ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 75 ; 75 >
+      au < ready ; 2014 ; 2014 ; University of Pittsburgh Law Review Volume 76 ; 76 >
+      au < manifest ; 2015 ; 2015 ; University of Pittsburgh Law Review Volume 77 ; 77 >
+
+  }
+
+}

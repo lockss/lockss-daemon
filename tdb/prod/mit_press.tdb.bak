@@ -1,0 +1,435 @@
+{
+  publisher <
+    name = MIT Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Computer Music Journal ;
+      issn = 0148-9267 ;
+      eissn = 1531-5169 ;
+      issnl = 0148-9267
+    >
+
+    param[journal_dir] = computer_music_journal
+    attr[journal_id] = cmj
+
+    au < released ; 2001 ; Computer Music Journal Volume 25 ; 25 >
+    au < released ; 2002 ; Computer Music Journal Volume 26 ; 26 >
+    au < released ; 2003 ; Computer Music Journal Volume 27 ; 27 >
+    au < released ; 2004 ; Computer Music Journal Volume 28 ; 28 >
+    au < released ; 2005 ; Computer Music Journal Volume 29 ; 29 >
+    au < released ; 2006 ; Computer Music Journal Volume 30 ; 30 >
+    au < released ; 2007 ; Computer Music Journal Volume 31 ; 31 >
+    au < released ; 2008 ; Computer Music Journal Volume 32 ; 32 >
+    au < released ; 2009 ; Computer Music Journal Volume 33 ; 33 >
+    au < released ; 2010 ; Computer Music Journal Volume 34 ; 34 >
+    au < released ; 2011 ; Computer Music Journal Volume 35 ; 35 >
+    au < released ; 2012 ; Computer Music Journal Volume 36 ; 36 >
+    au < released ; 2013 ; Computer Music Journal Volume 37 ; 37 >
+    au < manifest ; 2014 ; Computer Music Journal Volume 38 ; 38 >
+    au < manifest ; 2015 ; Computer Music Journal Volume 39 ; 39 >
+
+  }
+
+  {
+    title <
+      name = Global Environmental Politics ;
+      issn = 1526-3800 ;
+      eissn = 1536-0091 ;
+      issnl = 1526-3800
+    >
+
+    param[journal_dir] = global_environmental_politics
+    attr[journal_id] = gep
+
+    au < released ; 2003 ; Global Environmental Politics Volume 3 ; 3 >
+    au < released ; 2004 ; Global Environmental Politics Volume 4 ; 4 >
+    au < released ; 2005 ; Global Environmental Politics Volume 5 ; 5 >
+    au < released ; 2006 ; Global Environmental Politics Volume 6 ; 6 >
+    au < released ; 2007 ; Global Environmental Politics Volume 7 ; 7 >
+    au < released ; 2008 ; Global Environmental Politics Volume 8 ; 8 >
+    au < released ; 2009 ; Global Environmental Politics Volume 9 ; 9 >
+    au < released ; 2010 ; Global Environmental Politics Volume 10 ; 10 >
+    au < released ; 2011 ; Global Environmental Politics Volume 11 ; 11 >
+    au < released ; 2012 ; Global Environmental Politics Volume 12 ; 12 >
+    au < released ; 2013 ; Global Environmental Politics Volume 13 ; 13 >
+    au < manifest ; 2014 ; Global Environmental Politics Volume 14 ; 14 >
+    au < manifest ; 2015 ; Global Environmental Politics Volume 15 ; 15 >
+
+  }
+  
+  {
+    title <
+      name = Innovations: Technology, Governance, Globalization ;
+      issn = 1558-2477 ;
+      eissn = 1558-2485 ;
+      issnl = 1558-2477
+    >
+    
+    param[journal_dir] = innovations
+    attr[journal_id] = inv
+
+    au < released ; 2012 ; Innovations: Technology, Governance, Globalization Volume 7 ; 7 >
+    au < released ; 2013 ; Innovations: Technology, Governance, Globalization Volume 8 ; 8 >
+    au < expected ; 2014 ; Innovations: Technology, Governance, Globalization Volume 9 ; 9 >
+
+  }  
+
+  {
+    title <
+      name = International Organization ;
+      issn = 0020-8183 ;
+      eissn = 1531-5088 ;
+      issnl = 0020-8183
+    >
+
+    param[journal_dir] = international_organization
+	attr[journal_id] = ino
+	
+    au < released ; 2002 ; International Organization Volume 56 ; 56 >
+
+  }
+
+  {
+    title <
+      name = International Security ;
+      issn = 0162-2889 ;
+      eissn = 1531-4804 ;
+      issnl = 0162-2889
+    >
+
+    param[journal_dir] = international_security
+    attr[journal_id] = ins
+
+    au < released ; 2001 ; International Security Volume 25 ; 25 >
+    au < released ; 2002 ; International Security Volume 26 ; 26 >
+    au < released ; 2003 ; International Security Volume 27 ; 27 >
+    au < released ; 2004 ; International Security Volume 28 ; 28 >
+    au < released ; 2005 ; International Security Volume 29 ; 29 >
+    au < released ; 2006 ; International Security Volume 30 ; 30 >
+    au < released ; 2007 ; International Security Volume 31 ; 31 >
+    au < released ; 2008 ; International Security Volume 32 ; 32 >
+    au < released ; 2009 ; International Security Volume 33 ; 33 >
+    au < released ; 2010 ; International Security Volume 34 ; 34 >
+    au < released ; 2011 ; International Security Volume 35 ; 35 >
+    au < released ; 2011-2012 ; International Security Volume 36 ; 36 >
+    au < released ; 2012-2013 ; International Security Volume 37 ; 37 >
+    au < manifest ; 2013-2014 ; International Security Volume 38 ; 38 >
+    au < manifest ; 2014-2015 ; International Security Volume 39 ; 39 >
+    au < expected ; 2015-2016 ; International Security Volume 40 ; 40 >
+
+  }
+
+  {
+    title <
+      name = Journal of Cold War Studies ;
+      issn = 1520-3972 ;
+      eissn = 1531-3298 ;
+      issnl = 1520-3972
+    >
+
+    param[journal_dir] = journal_of_cold_war_studies
+    attr[journal_id] = cws
+
+    au < released ; 1999 ; Journal of Cold War Studies Volume 1 ; 1 >
+    au < released ; 2000 ; Journal of Cold War Studies Volume 2 ; 2 >
+    au < released ; 2001 ; Journal of Cold War Studies Volume 3 ; 3 >
+    au < released ; 2002 ; Journal of Cold War Studies Volume 4 ; 4 >
+    au < released ; 2003 ; Journal of Cold War Studies Volume 5 ; 5 >
+    au < released ; 2004 ; Journal of Cold War Studies Volume 6 ; 6 >
+    au < released ; 2005 ; Journal of Cold War Studies Volume 7 ; 7 >
+    au < released ; 2006 ; Journal of Cold War Studies Volume 8 ; 8 >
+    au < released ; 2007 ; Journal of Cold War Studies Volume 9 ; 9 >
+    au < released ; 2008 ; Journal of Cold War Studies Volume 10 ; 10 >
+    au < released ; 2009 ; Journal of Cold War Studies Volume 11 ; 11 >
+    au < released ; 2010 ; Journal of Cold War Studies Volume 12 ; 12 >
+    au < released ; 2011 ; Journal of Cold War Studies Volume 13 ; 13 >
+    au < released ; 2012 ; Journal of Cold War Studies Volume 14 ; 14 >
+    au < released ; 2013 ; Journal of Cold War Studies Volume 15 ; 15 >
+    au < manifest ; 2014 ; Journal of Cold War Studies Volume 16 ; 16 >
+    au < manifest ; 2015 ; Journal of Cold War Studies Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Journal of Interdisciplinary History ;
+      issn = 0022-1953 ;
+      eissn = 1530-9169 ;
+      issnl = 0022-1953
+    >
+
+    param[journal_dir] = journal_of_interdisciplinary_history
+    attr[journal_id] = jih
+
+    au < released ; 1999-2000 ; Journal of Interdisciplinary History Volume 30 ; 30 >
+    au < released ; 2000-2001 ; Journal of Interdisciplinary History Volume 31 ; 31 >
+    au < released ; 2001-2002 ; Journal of Interdisciplinary History Volume 32 ; 32 >
+    au < released ; 2002-2003 ; Journal of Interdisciplinary History Volume 33 ; 33 >
+    au < released ; 2003-2004 ; Journal of Interdisciplinary History Volume 34 ; 34 >
+    au < released ; 2004-2005 ; Journal of Interdisciplinary History Volume 35 ; 35 >
+    au < released ; 2005-2006 ; Journal of Interdisciplinary History Volume 36 ; 36 >
+    au < released ; 2006-2007 ; Journal of Interdisciplinary History Volume 37 ; 37 >
+    au < released ; 2007-2008 ; Journal of Interdisciplinary History Volume 38 ; 38 >
+    au < released ; 2008-2009 ; Journal of Interdisciplinary History Volume 39 ; 39 >
+    au < released ; 2009-2010 ; Journal of Interdisciplinary History Volume 40 ; 40 >
+    au < released ; 2010-2011 ; Journal of Interdisciplinary History Volume 41 ; 41 >
+    au < released ; 2011-2012 ; Journal of Interdisciplinary History Volume 42 ; 42 >
+    au < released ; 2012-2013 ; Journal of Interdisciplinary History Volume 43 ; 43 >
+    au < released ; 2013-2014 ; Journal of Interdisciplinary History Volume 44 ; 44 >
+    au < manifest ; 2014-2015 ; Journal of Interdisciplinary History Volume 45 ; 45 >
+    au < manifest ; 2015-2016 ; Journal of Interdisciplinary History Volume 46 ; 46 >
+
+  }
+
+  {
+    title <
+      name = Leonardo ;
+      issn = 0024-094X ;
+      eissn = 1530-9282 ;
+      issnl = 0024-094X
+    >
+
+    param[journal_dir] = leonardo
+    attr[journal_id] = len
+
+    au < released ; 2001 ; Leonardo Volume 34 ; 34 >
+    au < released ; 2002 ; Leonardo Volume 35 ; 35 >
+    au < released ; 2003 ; Leonardo Volume 36 ; 36 >
+    au < released ; 2004 ; Leonardo Volume 37 ; 37 >
+    au < released ; 2005 ; Leonardo Volume 38 ; 38 >
+    au < released ; 2006 ; Leonardo Volume 39 ; 39 >
+    au < released ; 2007 ; Leonardo Volume 40 ; 40 >
+    au < released ; 2008 ; Leonardo Volume 41 ; 41 >
+    au < released ; 2009 ; Leonardo Volume 42 ; 42 >
+    au < released ; 2010 ; Leonardo Volume 43 ; 43 >
+    au < released ; 2011 ; Leonardo Volume 44 ; 44 >
+    au < released ; 2012 ; Leonardo Volume 45 ; 45 >
+    au < released ; 2013 ; Leonardo Volume 46 ; 46 >
+    au < manifest ; 2014 ; Leonardo Volume 47 ; 47 >
+    au < manifest ; 2015 ; Leonardo Volume 48 ; 48 >
+
+  }
+
+  {
+    title <
+      name = Leonardo Music Journal ;
+      issn = 0961-1215 ;
+      eissn = 1531-4812 ;
+      issnl = 0961-1215
+    >
+
+    param[journal_dir] = leonardo_music_journal
+    attr[journal_id] = lmj
+
+    au < released ; 2000 ; Leonardo Music Journal Volume 10 ; 10 >
+    au < released ; 2001 ; Leonardo Music Journal Volume 11 ; 11 >
+    au < released ; 2002 ; Leonardo Music Journal Volume 12 ; 12 >
+    au < released ; 2003 ; Leonardo Music Journal Volume 13 ; 13 >
+    au < released ; 2004 ; Leonardo Music Journal Volume 14 ; 14 >
+    au < released ; 2005 ; Leonardo Music Journal Volume 15 ; 15 >
+    au < released ; 2006 ; Leonardo Music Journal Volume 16 ; 16 >
+    au < released ; 2007 ; Leonardo Music Journal Volume 17 ; 17 >
+    au < released ; 2008 ; Leonardo Music Journal Volume 18 ; 18 >
+    au < released ; 2009 ; Leonardo Music Journal Volume 19 ; 19 >
+    au < released ; 2010 ; Leonardo Music Journal Volume 20 ; 20 >
+    au < released ; 2011 ; Leonardo Music Journal Volume 21 ; 21 >
+    au < released ; 2012 ; Leonardo Music Journal Volume 22 ; 22 >
+    au < released ; 2013 ; Leonardo Music Journal Volume 23 ; 23 >
+    au < manifest ; 2014 ; Leonardo Music Journal Volume 24 ; 24 >
+    au < expected ; 2015 ; Leonardo Music Journal Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = Linguistic Inquiry ;
+      issn = 0024-3892 ;
+      eissn = 1530-9150 ;
+      issnl = 0024-3892
+    >
+
+    param[journal_dir] = linguistic_inquiry
+    attr[journal_id] = lin
+
+    au < released ; 2000 ; Linguistic Inquiry Volume 31 ; 31 >
+    au < released ; 2001 ; Linguistic Inquiry Volume 32 ; 32 >
+    au < released ; 2002 ; Linguistic Inquiry Volume 33 ; 33 >
+    au < released ; 2003 ; Linguistic Inquiry Volume 34 ; 34 >
+    au < released ; 2004 ; Linguistic Inquiry Volume 35 ; 35 >
+    au < released ; 2005 ; Linguistic Inquiry Volume 36 ; 36 >
+    au < released ; 2006 ; Linguistic Inquiry Volume 37 ; 37 >
+    au < released ; 2007 ; Linguistic Inquiry Volume 38 ; 38 >
+    au < released ; 2008 ; Linguistic Inquiry Volume 39 ; 39 >
+    au < released ; 2009 ; Linguistic Inquiry Volume 40 ; 40 >
+    au < released ; 2010 ; Linguistic Inquiry Volume 41 ; 41 >
+    au < released ; 2011 ; Linguistic Inquiry Volume 42 ; 42 >
+    au < released ; 2012 ; Linguistic Inquiry Volume 43 ; 43 >
+    au < released ; 2013 ; Linguistic Inquiry Volume 44 ; 44 >
+    au < manifest ; 2014 ; Linguistic Inquiry Volume 45 ; 45 >
+    au < manifest ; 2015 ; Linguistic Inquiry Volume 46 ; 46 >
+
+  }
+
+  {
+    title <
+      name = PAJ: A Journal of Performance and Art ;
+      issn = 1520-281X ;
+      eissn = 1537-9477 ;
+      issnl = 1520-281X
+    >
+
+    param[journal_dir] = performing_arts_journal
+    attr[journal_id] = paj
+
+    au < released ; 1996 ; PAJ: A Journal of Performance and Art Volume 18 ; 18 >
+    au < released ; 1997 ; PAJ: A Journal of Performance and Art Volume 19 ; 19 >
+    au < released ; 1998 ; PAJ: A Journal of Performance and Art Volume 20 ; 20 >
+    au < released ; 1999 ; PAJ: A Journal of Performance and Art Volume 21 ; 21 >
+    au < released ; 2000 ; PAJ: A Journal of Performance and Art Volume 22 ; 22 >
+    au < released ; 2001 ; PAJ: A Journal of Performance and Art Volume 23 ; 23 >
+    au < released ; 2002 ; PAJ: A Journal of Performance and Art Volume 24 ; 24 >
+    au < released ; 2003 ; PAJ: A Journal of Performance and Art Volume 25 ; 25 >
+    au < released ; 2004 ; PAJ: A Journal of Performance and Art Volume 26 ; 26 >
+    au < released ; 2005 ; PAJ: A Journal of Performance and Art Volume 27 ; 27 >
+    au < released ; 2006 ; PAJ: A Journal of Performance and Art Volume 28 ; 28 >
+    au < released ; 2007 ; PAJ: A Journal of Performance and Art Volume 29 ; 29 >
+    au < released ; 2008 ; PAJ: A Journal of Performance and Art Volume 30 ; 30 >
+    au < released ; 2009 ; PAJ: A Journal of Performance and Art Volume 31 ; 31 >
+    au < released ; 2010 ; PAJ: A Journal of Performance and Art Volume 32 ; 32 >
+    au < released ; 2011 ; PAJ: A Journal of Performance and Art Volume 33 ; 33 >
+    au < released ; 2012 ; PAJ: A Journal of Performance and Art Volume 34 ; 34 >
+    au < released ; 2013 ; PAJ: A Journal of Performance and Art Volume 35 ; 35 >
+    au < manifest ; 2014 ; PAJ: A Journal of Performance and Art Volume 36 ; 36 >
+    au < manifest ; 2015 ; PAJ: A Journal of Performance and Art Volume 37 ; 37 >
+
+  }
+
+  {
+    title <
+      name = Perspectives on Science ;
+      issn = 1063-6145 ;
+      eissn = 1530-9274 ;
+      issnl = 1063-6145
+    >
+
+    param[journal_dir] = perspectives_on_science
+    attr[journal_id] = posc
+
+    au < released ; 1998 ; Perspectives on Science Volume 6 ; 6 >
+    au < released ; 1999 ; Perspectives on Science Volume 7 ; 7 >
+    au < released ; 2000 ; Perspectives on Science Volume 8 ; 8 >
+    au < released ; 2001 ; Perspectives on Science Volume 9 ; 9 >
+    au < released ; 2002 ; Perspectives on Science Volume 10 ; 10 >
+    au < released ; 2003 ; Perspectives on Science Volume 11 ; 11 >
+    au < released ; 2004 ; Perspectives on Science Volume 12 ; 12 >
+    au < released ; 2005 ; Perspectives on Science Volume 13 ; 13 >
+    au < released ; 2006 ; Perspectives on Science Volume 14 ; 14 >
+    au < released ; 2007 ; Perspectives on Science Volume 15 ; 15 >
+    au < released ; 2008 ; Perspectives on Science Volume 16 ; 16 >
+    au < released ; 2009 ; Perspectives on Science Volume 17 ; 17 >
+    au < released ; 2010 ; Perspectives on Science Volume 18 ; 18 >
+    au < released ; 2011 ; Perspectives on Science Volume 19 ; 19 >
+    au < released ; 2012 ; Perspectives on Science Volume 20 ; 20 >
+    au < released ; 2013 ; Perspectives on Science Volume 21 ; 21 >
+    au < manifest ; 2014 ; Perspectives on Science Volume 22 ; 22 >
+    au < manifest ; 2015 ; Perspectives on Science Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = TDR: The Drama Review ;
+      issn = 1054-2043 ;
+      eissn = 1531-4715 ;
+      issnl = 1054-2043
+    >
+
+    param[journal_dir] = the_drama_review
+    attr[journal_id] = tdr
+
+    au < released ; 1999 ; TDR: The Drama Review Volume 43 ; 43 >
+    au < released ; 2000 ; TDR: The Drama Review Volume 44 ; 44 >
+    au < released ; 2001 ; TDR: The Drama Review Volume 45 ; 45 >
+    au < released ; 2002 ; TDR: The Drama Review Volume 46 ; 46 >
+    au < released ; 2003 ; TDR: The Drama Review Volume 47 ; 47 >
+    au < released ; 2004 ; TDR: The Drama Review Volume 48 ; 48 >
+    au < released ; 2005 ; TDR: The Drama Review Volume 49 ; 49 >
+    au < released ; 2006 ; TDR: The Drama Review Volume 50 ; 50 >
+    au < released ; 2007 ; TDR: The Drama Review Volume 51 ; 51 >
+    au < released ; 2008 ; TDR: The Drama Review Volume 52 ; 52 >
+    au < released ; 2009 ; TDR: The Drama Review Volume 53 ; 53 >
+    au < released ; 2010 ; TDR: The Drama Review Volume 54 ; 54 >
+    au < released ; 2011 ; TDR: The Drama Review Volume 55 ; 55 >
+    au < released ; 2012 ; TDR: The Drama Review Volume 56 ; 56 >
+    au < released ; 2013 ; TDR: The Drama Review Volume 57 ; 57 >
+    au < manifest ; 2014 ; TDR: The Drama Review Volume 58 ; 58 >
+    au < manifest ; 2015 ; TDR: The Drama Review Volume 59 ; 59 >
+
+  }
+
+  {
+    title <
+      name = The American Journal of Bioethics ;
+      issn = 1526-5161 ;
+      eissn = 1536-0075 ;
+      issnl = 1526-5161
+    >
+
+    param[journal_dir] = american_journal_of_bioethics
+    attr[journal_id] = ajb
+
+    au < released ; 2001 ; The American Journal of Bioethics Volume 1 ; 1 >
+    au < released ; 2002 ; The American Journal of Bioethics Volume 2 ; 2 >
+    au < released ; 2003 ; The American Journal of Bioethics Volume 3 ; 3 >
+    au < released ; 2004 ; The American Journal of Bioethics Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = The Harvard International Journal of Press/Politics ;
+      issn = 1081-180X ;
+      eissn = 1531-328X ;
+      issnl = 1081-180X
+    >
+
+    comment[publication] = this is a bit of a mystery, SAGE publishes it to this day under hij.sagepub.com and clearly overlap with these Muse volumes, but the SAGE publication has a new title and new ISSNs
+
+    param[journal_dir] = harvard_international_journal_of_press_politics
+    attr[journal_id] = prp
+
+    au < released ; 1999 ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
+    au < released ; 2000 ; The Harvard International Journal of Press/Politics Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = The Washington Quarterly ;
+      issn = 0163-660X ;
+      eissn = 1530-9177 ;
+      issnl = 0163-660X
+    >
+
+    param[journal_dir] = washington_quarterly
+    attr[journal_id] = wq
+
+    au < released ; 2000 ; The Washington Quarterly Volume 23 [Project MUSE] ; 23 >
+    au < released ; 2001 ; The Washington Quarterly Volume 24 [Project MUSE] ; 24 >
+    au < released ; 2002 ; The Washington Quarterly Volume 25 [Project MUSE] ; 25 >
+    au < released ; 2003 ; The Washington Quarterly Volume 26 [Project MUSE] ; 26 >
+    au < released ; 2004 ; The Washington Quarterly Volume 27 [Project MUSE] ; 27 >
+    au < released ; 2005 ; The Washington Quarterly Volume 28 [Project MUSE] ; 28 >
+    au < released ; 2006 ; The Washington Quarterly Volume 29 [Project MUSE] ; 29 >
+    au < released ; 2007 ; The Washington Quarterly Volume 30 [Project MUSE] ; 30 >
+    au < released ; 2008 ; The Washington Quarterly Volume 31 [Project MUSE] ; 31 >
+
+  }
+
+}

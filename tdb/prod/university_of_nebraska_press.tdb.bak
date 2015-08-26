@@ -1,0 +1,645 @@
+{
+
+  publisher <
+    name = University of Nebraska Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+  
+    title <
+      name = The American Indian Quarterly ;
+      issn = 0095-182X ;
+      eissn = 1534-1828 ;
+      issnl = 0095-182X
+    >
+
+    param[journal_dir] = american_indian_quarterly
+    attr[journal_id] = aiq
+
+    au < released ; 2000 ; The American Indian Quarterly Volume 24 ; 24 >
+    au < released ; 2001 ; The American Indian Quarterly Volume 25 ; 25 >
+    au < released ; 2002 ; The American Indian Quarterly Volume 26 ; 26 >
+    au < released ; 2003 ; The American Indian Quarterly Volume 27 ; 27 >
+    au < released ; 2004 ; The American Indian Quarterly Volume 28 ; 28 >
+    au < released ; 2005 ; The American Indian Quarterly Volume 29 ; 29 >
+    au < released ; 2006 ; The American Indian Quarterly Volume 30 ; 30 >
+    au < released ; 2007 ; The American Indian Quarterly Volume 31 ; 31 >
+    au < released ; 2008 ; The American Indian Quarterly Volume 32 ; 32 >
+    au < released ; 2009 ; The American Indian Quarterly Volume 33 ; 33 >
+    au < released ; 2010 ; The American Indian Quarterly Volume 34 ; 34 >
+    au < released ; 2011 ; The American Indian Quarterly Volume 35 ; 35 >
+    au < released ; 2012 ; The American Indian Quarterly Volume 36 ; 36 >
+    au < released ; 2013 ; The American Indian Quarterly Volume 37 ; 37 >
+    au < manifest ; 2014 ; The American Indian Quarterly Volume 38 ; 38 >
+    au < manifest ; 2015 ; The American Indian Quarterly Volume 39 ; 39 >
+
+  }
+
+  {
+  
+    title <
+      name = An Sionnach: A Journal of Literature, Culture, and the Arts ;
+      issn = 1554-8953 ;
+      eissn = 1944-6535 ;
+      issnl = 1554-8953
+    >
+
+    param[journal_dir] = an_sionnach
+    attr[journal_id] = ans
+
+    au < released ; 2009 ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5 ; 5 >
+
+  }
+
+  {
+  
+    title <
+      name = Anthropological Linguistics ;
+      issn = 1944-6527 ;
+      eissn = 0003-5483 ;
+      issnl = 0003-5483
+    >
+
+    param[journal_dir] = anthropological_linguistics
+    attr[journal_id] = anl
+
+    au < released ; 2009 ; Anthropological Linguistics Volume 51 ; 51 >
+    au < released ; 2010 ; Anthropological Linguistics Volume 52 ; 52 >
+    au < released ; 2011 ; Anthropological Linguistics Volume 53 ; 53 >
+    au < released ; 2012 ; Anthropological Linguistics Volume 54 ; 54 >
+    au < released ; 2013 ; Anthropological Linguistics Volume 55 ; 55 >
+    au < manifest ; 2014 ; Anthropological Linguistics Volume 56 ; 56 >
+    au < expected ; 2015 ; Anthropological Linguistics Volume 57 ; 57 >
+
+  }
+
+  {
+  
+    title <
+      name = Collaborative Anthropologies ;
+      issn = 2152-4009 ;
+      eissn = 1943-2550 ;
+      issnl = 1943-2550
+    >
+
+    param[journal_dir] = collaborative_anthropologies
+    attr[journal_id] = cla
+
+    au < released ; 2008 ; Collaborative Anthropologies Volume 1 ; 1 >
+    au < released ; 2009 ; Collaborative Anthropologies Volume 2 ; 2 >
+    au < released ; 2010 ; Collaborative Anthropologies Volume 3 ; 3 >
+    au < released ; 2011 ; Collaborative Anthropologies Volume 4 ; 4 >
+    au < released ; 2012 ; Collaborative Anthropologies Volume 5 ; 5 >
+    au < released ; 2013 ; Collaborative Anthropologies Volume 6 ; 6 >
+    au < manifest ; 2014 ; Collaborative Anthropologies Volume 7 ; 7 >
+    au < expected ; 2015 ; Collaborative Anthropologies Volume 8 ; 8 >
+
+  }
+
+  {
+  
+    title <
+      name = French Forum ;
+      issn = 0098-9355 ;
+      eissn = 1534-1836 ;
+      issnl = 0098-9355
+    >
+
+    param[journal_dir] = french_forum
+    attr[journal_id] = frf
+
+    au < released ; 2001 ; French Forum Volume 26 ; 26 >
+    au < released ; 2002 ; French Forum Volume 27 ; 27 >
+    au < released ; 2003 ; French Forum Volume 28 ; 28 >
+    au < released ; 2004 ; French Forum Volume 29 ; 29 >
+    au < released ; 2005 ; French Forum Volume 30 ; 30 >
+    au < released ; 2006 ; French Forum Volume 31 ; 31 >
+    au < released ; 2007 ; French Forum Volume 32 ; 32 >
+    au < released ; 2008 ; French Forum Volume 33 ; 33 >
+    au < released ; 2009 ; French Forum Volume 34 ; 34 >
+    au < released ; 2010 ; French Forum Volume 35 ; 35 >
+    au < released ; 2011 ; French Forum Volume 36 ; 36 >
+    au < released ; 2012 ; French Forum Volume 37 ; 37 >
+    au < released ; 2013 ; French Forum Volume 38 ; 38 >
+    au < manifest ; 2014 ; French Forum Volume 39 ; 39 >
+    au < manifest ; 2015 ; French Forum Volume 40 ; 40 >
+
+  }
+
+  {
+  
+    title <
+      name = Frontiers: A Journal of Women Studies ;
+      issn = 0160-9009 ;
+      eissn = 1536-0334 ;
+      issnl = 0160-9009
+    >
+
+    param[journal_dir] = frontiers
+    attr[journal_id] = fro
+
+    au < released ; 2001 ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
+    au < released ; 2002 ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
+    au < released ; 2003 ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
+    au < released ; 2004 ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
+    au < released ; 2005 ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
+    au < released ; 2006 ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
+    au < released ; 2007 ; Frontiers: A Journal of Women Studies Volume 28 ; 28 >
+    au < released ; 2008 ; Frontiers: A Journal of Women Studies Volume 29 ; 29 >
+    au < released ; 2009 ; Frontiers: A Journal of Women Studies Volume 30 ; 30 >
+    au < released ; 2010 ; Frontiers: A Journal of Women Studies Volume 31 ; 31 >
+    au < released ; 2011 ; Frontiers: A Journal of Women Studies Volume 32 ; 32 >
+    au < released ; 2012 ; Frontiers: A Journal of Women Studies Volume 33 ; 33 >
+    au < released ; 2013 ; Frontiers: A Journal of Women Studies Volume 34 ; 34 >
+    au < manifest ; 2014 ; Frontiers: A Journal of Women Studies Volume 35 ; 35 >
+    au < manifest ; 2015 ; Frontiers: A Journal of Women Studies Volume 36 ; 36 >
+
+  }
+
+  {
+  
+    title <
+      name = Great Plains Research ;
+      issn = 1052-5165 ;
+      eissn = 2334-2463 ;
+      issnl = 2334-2463
+    >
+
+    param[journal_dir] = great_plains_research
+    attr[journal_id] = gpr
+
+    au < manifest ; 2014 ; Great Plains Research Volume 24 ; 24 >
+    au < manifest ; 2015 ; Great Plains Research Volume 25 ; 25 >
+
+  }
+
+  {
+  
+    title <
+      name = Histories of Anthropology Annual ;
+      issn = 1940-5138 ;
+      eissn = 1557-637X ;
+      issnl = 1557-637X
+    >
+
+    param[journal_dir] = histories_of_anthropology_annual
+    attr[journal_id] = haa
+
+    au < released ; 2005 ; Histories of Anthropology Annual Volume 1 ; 1 >
+    au < released ; 2006 ; Histories of Anthropology Annual Volume 2 ; 2 >
+    au < released ; 2007 ; Histories of Anthropology Annual Volume 3 ; 3 >
+    au < released ; 2008 ; Histories of Anthropology Annual Volume 4 ; 4 >
+    au < released ; 2009 ; Histories of Anthropology Annual Volume 5 ; 5 >
+    au < released ; 2010 ; Histories of Anthropology Annual Volume 6 ; 6 >
+    au < released ; 2011 ; Histories of Anthropology Annual Volume 7 ; 7 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Austrian Studies ;
+      issn = 2165-669X ;
+      issnl = 2165-669X 
+    >
+
+    param[journal_dir] = journal_of_austrian_studies
+    attr[journal_id] = oas
+
+    au < released ; 2012 ; Journal of Austrian Studies Volume 45 ; 45 >
+    au < released ; 2013 ; Journal of Austrian Studies Volume 46 ; 46 >
+    au < manifest ; 2014 ; Journal of Austrian Studies Volume 47 ; 47 >
+    au < manifest ; 2015 ; Journal of Austrian Studies Volume 48 ; 48 >
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Literature and Trauma Studies ;
+      issn = 2162-3627 ;
+      eissn = 2045-4740 ;
+      issnl = 2162-3627 
+    >
+
+    param[journal_dir] = journal_of_literature_and_trauma_studies
+    attr[journal_id] = jlts
+
+    au < released ; 2012 ; Journal of Literature and Trauma Studies Volume 1 ; 1 >
+    au < released ; 2013 ; Journal of Literature and Trauma Studies Volume 2 ; 2 >
+    au < manifest ; 2014 ; Journal of Literature and Trauma Studies Volume 3 ; 3 >
+    au < expected ; 2015 ; Journal of Literature and Trauma Studies Volume 4 ; 4 >
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Sports Media ;
+      issn = 1558-4313 ;
+      eissn = 1940-5073 ;
+      issnl = 1558-4313
+    >
+
+    param[journal_dir] = journal_of_sports_media
+    attr[journal_id] = jsm
+
+    au < released ; 2006 ; Journal of Sports Media Volume 1 ; 1 >
+    au < released ; 2007 ; Journal of Sports Media Volume 2 ; 2 >
+    au < released ; 2008 ; Journal of Sports Media Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Sports Media Volume 4 ; 4 >
+    au < released ; 2010 ; Journal of Sports Media Volume 5 ; 5 >
+    au < released ; 2011 ; Journal of Sports Media Volume 6 ; 6 >
+    au < released ; 2012 ; Journal of Sports Media Volume 7 ; 7 >
+    au < released ; 2013 ; Journal of Sports Media Volume 8 ; 8 >
+    au < manifest ; 2014 ; Journal of Sports Media Volume 9 ; 9 >
+    au < manifest ; 2015 ; Journal of Sports Media Volume 10 ; 10 >
+
+  }
+
+  {
+  
+    title <
+      name = Legacy: A Journal of American Women Writers ;
+      issn = 1534-0643 ;
+      eissn = 0748-4321 ;
+      issnl = 0748-4321
+    >
+
+    param[journal_dir] = legacy
+    attr[journal_id] = leg
+
+    au < released ; 2000 ; Legacy: A Journal of American Women Writers Volume 17 ; 17 >
+    au < released ; 2001 ; Legacy: A Journal of American Women Writers Volume 18 ; 18 >
+    au < released ; 2002 ; Legacy: A Journal of American Women Writers Volume 19 ; 19 >
+    au < released ; 2003 ; Legacy: A Journal of American Women Writers Volume 20 ; 20 >
+    au < released ; 2004 ; Legacy: A Journal of American Women Writers Volume 21 ; 21 >
+    au < released ; 2005 ; Legacy: A Journal of American Women Writers Volume 22 ; 22 >
+    au < released ; 2006 ; Legacy: A Journal of American Women Writers Volume 23 ; 23 >
+    au < released ; 2007 ; Legacy: A Journal of American Women Writers Volume 24 ; 24 >
+    au < released ; 2008 ; Legacy: A Journal of American Women Writers Volume 25 ; 25 >
+    au < released ; 2009 ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
+    au < released ; 2010 ; Legacy: A Journal of American Women Writers Volume 27 ; 27 >
+    au < released ; 2011 ; Legacy: A Journal of American Women Writers Volume 28 ; 28 >
+    au < released ; 2012 ; Legacy: A Journal of American Women Writers Volume 29 ; 29 >
+    au < released ; 2013 ; Legacy: A Journal of American Women Writers Volume 30 ; 30 >
+    au < manifest ; 2014 ; Legacy: A Journal of American Women Writers Volume 31 ; 31 >
+    au < manifest ; 2015 ; Legacy: A Journal of American Women Writers Volume 32 ; 32 >
+
+  }
+
+  {
+  
+    title <
+      name = Native South ;
+      issn = 2152-4025 ;
+      eissn = 1943-2569 ;
+      issnl = 1943-2569
+    >
+
+    param[journal_dir] = native_south
+    attr[journal_id] = nso
+
+    au < released ; 2008 ; Native South Volume 1 ; 1 >
+    au < released ; 2009 ; Native South Volume 2 ; 2 >
+    au < released ; 2010 ; Native South Volume 3 ; 3 >
+    au < released ; 2011 ; Native South Volume 4 ; 4 >
+    au < released ; 2012 ; Native South Volume 5 ; 5 >
+    au < released ; 2013 ; Native South Volume 6 ; 6 >
+    au < manifest ; 2014 ; Native South Volume 7 ; 7 >
+    au < manifest ; 2015 ; Native South Volume 8 ; 8 >
+    
+  }
+
+  {
+  
+    title <
+      name = NINE: A Journal of Baseball History and Culture ;
+      issn = 1188-9330 ;
+      eissn = 1534-1844 ;
+      issnl = 1188-9330
+    >
+
+    param[journal_dir] = nine
+    attr[journal_id] = nin
+
+    au < released ; 2001 ; NINE: A Journal of Baseball History and Culture Volume 9 ; 9 >
+    au < released ; 2001-2002 ; NINE: A Journal of Baseball History and Culture Volume 10 ; 10 >
+    au < released ; 2002-2003 ; NINE: A Journal of Baseball History and Culture Volume 11 ; 11 >
+    au < released ; 2003-2004 ; NINE: A Journal of Baseball History and Culture Volume 12 ; 12 >
+    au < released ; 2004-2005 ; NINE: A Journal of Baseball History and Culture Volume 13 ; 13 >
+    au < released ; 2005-2006 ; NINE: A Journal of Baseball History and Culture Volume 14 ; 14 >
+    au < released ; 2006-2007 ; NINE: A Journal of Baseball History and Culture Volume 15 ; 15 >
+    au < released ; 2007-2008 ; NINE: A Journal of Baseball History and Culture Volume 16 ; 16 >
+    au < released ; 2008-2009 ; NINE: A Journal of Baseball History and Culture Volume 17 ; 17 >
+    au < released ; 2009-2010 ; NINE: A Journal of Baseball History and Culture Volume 18 ; 18 >
+    au < released ; 2010-2011 ; NINE: A Journal of Baseball History and Culture Volume 19 ; 19 >
+    au < released ; 2011-2012 ; NINE: A Journal of Baseball History and Culture Volume 20 ; 20 >
+    au < released ; 2012-2013 ; NINE: A Journal of Baseball History and Culture Volume 21 ; 21 >
+    au < released ; 2013-2014 ; NINE: A Journal of Baseball History and Culture Volume 22 ; 22 >
+    au < manifest ; 2014-2015 ; NINE: A Journal of Baseball History and Culture Volume 23 ; 23 >
+
+  }
+
+  {
+  
+    title <
+      name = Nineteenth-Century French Studies ;
+      issn = 0146-7891 ;
+      eissn = 1536-0172 ;
+      issnl = 0146-7891
+    >
+
+    param[journal_dir] = nineteenth_century_french_studies
+    attr[journal_id] = ncf
+    comment[29] = issue nos. 3-4
+
+    au < released ; 2001 ; Nineteenth-Century French Studies Volume 29 ; 29 >
+    au < released ; 2001-2002 ; Nineteenth-Century French Studies Volume 30 ; 30 >
+    au < released ; 2002-2003 ; Nineteenth-Century French Studies Volume 31 ; 31 >
+    au < released ; 2003-2004 ; Nineteenth-Century French Studies Volume 32 ; 32 >
+    au < released ; 2004-2005 ; Nineteenth-Century French Studies Volume 33 ; 33 >
+    au < released ; 2005-2006 ; Nineteenth-Century French Studies Volume 34 ; 34 >
+    au < released ; 2006-2007 ; Nineteenth-Century French Studies Volume 35 ; 35 >
+    au < released ; 2007-2008 ; Nineteenth-Century French Studies Volume 36 ; 36 >
+    au < released ; 2008-2009 ; Nineteenth-Century French Studies Volume 37 ; 37 >
+    au < released ; 2009-2010 ; Nineteenth-Century French Studies Volume 38 ; 38 >
+    au < released ; 2010-2011 ; Nineteenth-Century French Studies Volume 39 ; 39 >
+    au < released ; 2011-2012 ; Nineteenth-Century French Studies Volume 40 ; 40 >
+    au < released ; 2012-2013 ; Nineteenth-Century French Studies Volume 41 ; 41 >
+    au < released ; 2013-2014 ; Nineteenth-Century French Studies Volume 42 ; 42 >
+    au < manifest ; 2014-2015 ; Nineteenth-Century French Studies Volume 43 ; 43 >
+
+  }
+
+  {
+  
+    title <
+      name = Nouvelles Études Francophones ;
+      issn = 1552-3152 ;
+      eissn = 2156-9428 ;
+      issnl = 1552-3152
+    >
+
+    param[journal_dir] = nouvelles_tudes_francophones
+    attr[journal_id] = nef
+
+    au < released ; 2010 ; Nouvelles Études Francophones Volume 25 ; 25 >
+    au < released ; 2011 ; Nouvelles Études Francophones Volume 26 ; 26 >
+    au < released ; 2012 ; Nouvelles Études Francophones Volume 27 ; 27 >
+    au < released ; 2013 ; Nouvelles Études Francophones Volume 28 ; 28 >
+    au < manifest ; 2014 ; Nouvelles Études Francophones Volume 29 ; 29 >
+    au < expected ; 2015 ; Nouvelles Études Francophones Volume 30 ; 30 >
+
+  }
+
+  {
+  
+    title <
+      name = Prairie Schooner ;
+      issn = 0032-6682 ;
+      eissn = 1542-426X ;
+      issnl = 0032-6682
+    >
+
+    param[journal_dir] = prairie_schooner
+    attr[journal_id] = psg
+
+    au < released ; 2003 ; Prairie Schooner Volume 77 ; 77 >
+    au < released ; 2004 ; Prairie Schooner Volume 78 ; 78 >
+    au < released ; 2005 ; Prairie Schooner Volume 79 ; 79 >
+    au < released ; 2006 ; Prairie Schooner Volume 80 ; 80 >
+    au < released ; 2007 ; Prairie Schooner Volume 81 ; 81 >
+    au < released ; 2008 ; Prairie Schooner Volume 82 ; 82 >
+    au < released ; 2009 ; Prairie Schooner Volume 83 ; 83 >
+    au < released ; 2010 ; Prairie Schooner Volume 84 ; 84 >
+    au < released ; 2011 ; Prairie Schooner Volume 85 ; 85 >
+    au < released ; 2012 ; Prairie Schooner Volume 86 ; 86 >
+    au < released ; 2013 ; Prairie Schooner Volume 87 ; 87 >
+    au < manifest ; 2014 ; Prairie Schooner Volume 88 ; 88 >
+    au < expected ; 2015 ; Prairie Schooner Volume 89 ; 89 >
+
+  }
+
+  {
+  
+    title <
+      name = Qui Parle: Critical Humanities and Social Sciences ;
+      issn = 1938-8020 ;
+      eissn = 1041-8385 ;
+      issnl = 1041-8385
+    >
+
+    param[journal_dir] = qui_parle
+    attr[journal_id] = qui
+
+    au < released ; 2009-2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 ; 18 >
+    au < released ; 2010-2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 ; 19 >
+    au < released ; 2011-2012 ; Qui Parle: Critical Humanities and Social Sciences Volume 20 ; 20 >
+    au < released ; 2012-2013 ; Qui Parle: Critical Humanities and Social Sciences Volume 21 ; 21 >
+    au < released ; 2013-2014 ; Qui Parle: Critical Humanities and Social Sciences Volume 22 ; 22 >
+    au < manifest ; 2014-2015 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 ; 23 >
+
+  }
+
+  {
+  
+    title <
+      name = StoryWorlds: A Journal of Narrative Studies ;
+      issn = 1946-2204 ;
+      eissn = 2156-7204 ;
+      issnl = 1946-2204
+    >
+
+    param[journal_dir] = storyworlds
+    attr[journal_id] = stw
+
+    au < released ; 2009 ; StoryWorlds: A Journal of Narrative Studies Volume 1 ; 1 >
+    au < released ; 2010 ; StoryWorlds: A Journal of Narrative Studies Volume 2 ; 2 >
+    au < released ; 2011 ; StoryWorlds: A Journal of Narrative Studies Volume 3 ; 3 >
+    au < released ; 2012 ; StoryWorlds: A Journal of Narrative Studies Volume 4 ; 4 >
+    au < released ; 2013 ; StoryWorlds: A Journal of Narrative Studies Volume 5 ; 5 >
+    au < manifest ; 2014 ; StoryWorlds: A Journal of Narrative Studies Volume 6 ; 6 >
+    au < manifest ; 2015 ; StoryWorlds: A Journal of Narrative Studies Volume 7 ; 7 >
+
+  }
+
+  {
+  
+    title <
+      name = Studies in American Indian Literatures ;
+      issn = 0730-3238 ;
+      eissn = 1548-9590 ;
+      issnl = 0730-3238
+    >
+
+    param[journal_dir] = studies_in_american_indian_literatures
+    attr[journal_id] = ail
+
+    au < released ; 2004 ; Studies in American Indian Literatures Volume 16 ; 16 >
+    au < released ; 2005 ; Studies in American Indian Literatures Volume 17 ; 17 >
+    au < released ; 2006 ; Studies in American Indian Literatures Volume 18 ; 18 >
+    au < released ; 2007 ; Studies in American Indian Literatures Volume 19 ; 19 >
+    au < released ; 2008 ; Studies in American Indian Literatures Volume 20 ; 20 >
+    au < released ; 2009 ; Studies in American Indian Literatures Volume 21 ; 21 >
+    au < released ; 2010 ; Studies in American Indian Literatures Volume 22 ; 22 >
+    au < released ; 2011 ; Studies in American Indian Literatures Volume 23 ; 23 >
+    au < released ; 2012 ; Studies in American Indian Literatures Volume 24 ; 24 >
+    au < released ; 2013 ; Studies in American Indian Literatures Volume 25 ; 25 >
+    au < manifest ; 2014 ; Studies in American Indian Literatures Volume 26 ; 26 >
+    au < manifest ; 2015 ; Studies in American Indian Literatures Volume 27 ; 27 >
+
+  }
+
+  {
+  
+    title <
+      name = Studies in American Naturalism ;
+      issn = 1944-6519 ;
+      eissn = 1931-2555 ;
+      issnl = 1931-2555
+    >
+
+    param[journal_dir] = studies_in_american_naturalism
+    attr[journal_id] = san
+
+    au < released ; 2009 ; Studies in American Naturalism Volume 4 ; 4 >
+    au < released ; 2010 ; Studies in American Naturalism Volume 5 ; 5 >
+    au < released ; 2011 ; Studies in American Naturalism Volume 6 ; 6 >
+    au < released ; 2012 ; Studies in American Naturalism Volume 7 ; 7 >
+    au < released ; 2013 ; Studies in American Naturalism Volume 8 ; 8 >
+    au < manifest ; 2014 ; Studies in American Naturalism Volume 9 ; 9 >
+    au < expected ; 2015 ; Studies in American Naturalism Volume 10 ; 10 >
+
+  }
+
+  {
+  
+    title <
+      name = symploke ;
+      issn = 1069-0697 ;
+      eissn = 1534-0627 ;
+      issnl = 1069-0697
+    >
+
+    param[journal_dir] = symploke
+    attr[journal_id] = sym
+    comment[notReady] = manifest page exists, but url is broken
+
+    au < released ; 1997 ; symploke Volume 5 ; 5 >
+    au < released ; 1998 ; symploke Volume 6 ; 6 >
+    au < released ; 1999 ; symploke Volume 7 ; 7 >
+    au < released ; 2000 ; symploke Volume 8 ; 8 >
+    au < released ; 2001 ; symploke Volume 9 ; 9 >
+    au < released ; 2002 ; symploke Volume 10 ; 10 >
+    au < released ; 2003 ; symploke Volume 11 ; 11 >
+    au < released ; 2004 ; symploke Volume 12 ; 12 >
+    au < released ; 2005 ; symploke Volume 13 ; 13 >
+    au < released ; 2006 ; symploke Volume 14 ; 14 >
+    au < released ; 2007 ; symploke Volume 15 ; 15 >
+    au < released ; 2008 ; symploke Volume 16 ; 16 >
+    au < released ; 2009 ; symploke Volume 17 ; 17 >
+    au < released ; 2010 ; symploke Volume 18 ; 18 >
+    au < released ; 2011 ; symploke Volume 19 ; 19 >
+    au < released ; 2012 ; symploke Volume 20 ; 20 >
+    au < released ; 2013 ; symploke Volume 21 ; 21 >
+    au < manifest ; 2014 ; symploke Volume 22 ; 22 >
+    au < expected ; 2015 ; symploke Volume 23 ; 23 >
+
+  }
+
+  {
+  
+    title <
+      name = Theoretical & Applied Ethics ;
+      eissn = 2156-7174 ;
+      issnl = 2156-7174
+    >
+
+    param[journal_dir] = theoretical_and_applied_ethics
+    attr[journal_id] = tha
+
+    au < released ; 2013 ; Theoretical & Applied Ethics Volume 2 ; 2 >
+    au < manifest ; 2014 ; Theoretical & Applied Ethics Volume 3 ; 3 >
+    au < expected ; 2015 ; Theoretical & Applied Ethics Volume 4 ; 4 >
+
+  }
+
+  {
+  
+    title <
+      name = Women and Music: A Journal of Gender and Culture ;
+      issn = 1553-0612 ;
+      eissn = 1090-7505 ;
+      issnl = 1090-7505
+    >
+
+    param[journal_dir] = women_and_music
+    attr[journal_id] = WAM
+
+    au < released ; 2004 ; Women and Music: A Journal of Gender and Culture Volume 8 ; 8 >
+    au < released ; 2005 ; Women and Music: A Journal of Gender and Culture Volume 9 ; 9 >
+    au < released ; 2006 ; Women and Music: A Journal of Gender and Culture Volume 10 ; 10 >
+    au < released ; 2007 ; Women and Music: A Journal of Gender and Culture Volume 11 ; 11 >
+    au < released ; 2008 ; Women and Music: A Journal of Gender and Culture Volume 12 ; 12 >
+    au < released ; 2009 ; Women and Music: A Journal of Gender and Culture Volume 13 ; 13 >
+    au < released ; 2010 ; Women and Music: A Journal of Gender and Culture Volume 14 ; 14 >
+    au < released ; 2011 ; Women and Music: A Journal of Gender and Culture Volume 15 ; 15 >
+    au < released ; 2012 ; Women and Music: A Journal of Gender and Culture Volume 16 ; 16 >
+    au < released ; 2013 ; Women and Music: A Journal of Gender and Culture Volume 17 ; 17 >
+    au < manifest ; 2014 ; Women and Music: A Journal of Gender and Culture Volume 18 ; 18 >
+    au < expected ; 2015 ; Women and Music: A Journal of Gender and Culture Volume 19 ; 19 >
+
+  }
+
+  {
+  
+    title <
+      name = Women in German Yearbook: Feminist Studies in German Literature & Culture ;
+      issn = 1058-7446 ;
+      eissn = 1940-512X ;
+      issnl = 1058-7446
+    >
+
+    param[journal_dir] = women_in_german_yearbook
+    attr[journal_id] = wgy
+
+    au < released ; 1985 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 1 ; 1 >
+    au < released ; 1986 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 2 ; 2 >
+    au < released ; 1987 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 3 ; 3 >
+    au < released ; 1988 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 4 ; 4 >
+    au < released ; 1989 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 5 ; 5 >
+    au < released ; 1990 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 6 ; 6 >
+    au < released ; 1991 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 7 ; 7 >
+    au < released ; 1992 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 8 ; 8 >
+    au < released ; 1993 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 9 ; 9 >
+    au < released ; 1994 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 10 ; 10 >
+    au < released ; 1995 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 11 ; 11 >
+    au < released ; 1996 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 12 ; 12 >
+    au < released ; 1997 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 13 ; 13 >
+    au < released ; 1998 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 14 ; 14 >
+    au < released ; 1999 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 15 ; 15 >
+    au < released ; 2000 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 16 ; 16 >
+    au < released ; 2001 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 17 ; 17 >
+    au < released ; 2002 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 18 ; 18 >
+    au < released ; 2003 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 19 ; 19 >
+    au < released ; 2004 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 20 ; 20 >
+    au < released ; 2005 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 21 ; 21 >
+    au < released ; 2006 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 22 ; 22 >  
+    au < released ; 2007 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 23 ; 23 >
+    au < released ; 2008 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 24 ; 24 >
+    au < released ; 2009 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 25 ; 25 >
+    au < released ; 2010 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 26 ; 26 >
+    au < released ; 2011 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 27 ; 27 >
+    au < released ; 2012 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 28 ; 28 >
+    au < released ; 2013 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 29 ; 29 >
+    au < manifest ; 2014 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 30 ; 30 >
+    au < expected ; 2015 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 31 ; 31 >
+
+  }
+
+}

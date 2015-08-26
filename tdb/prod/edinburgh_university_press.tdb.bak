@@ -1,0 +1,1727 @@
+{
+
+  publisher <
+    name = Edinburgh University Press;
+    info[tester] = 4
+  >
+
+  {
+
+    title <
+      name = Africa: The Journal of the International African Institute ;
+      issn = 0001-9720 ;
+      eissn = 1750-0184 ;
+      issnl = 0001-9720
+    >
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = africa_the_journal_of_the_international_african_institute
+      attr[journal_id] = afr
+      implicit < status ; year ; name ; param[volume] >
+      comment[doNotProcess] = move to Cambridge University Press
+      comment[year2005] = Bibliography only
+    
+      au < released ; 2005 ; Africa: The Journal of the International African Institute Bibliography 2005 ; 2005 >
+      au < released ; 2006 ; Africa: The Journal of the International African Institute Bibliography 2006 ; 2006 >
+      au < released ; 2007 ; Africa: The Journal of the International African Institute Bibliography 2007 ; 2007 >
+      au < released ; 2008 ; Africa: The Journal of the International African Institute Bibliography 2008 ; 2008 >
+      au < released ; 2009 ; Africa: The Journal of the International African Institute Bibliography 2009 ; 2009 >
+
+      au < doNotProcess ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
+      au < doNotProcess ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
+      au < doNotProcess ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 >
+      au < doNotProcess ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 >
+      au < doNotProcess ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 >
+      au < doNotProcess ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 >
+      au < released ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
+      au < released ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
+      au < released ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
+      au < released ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
+      au < released ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
+      au < released ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
+      au < released ; 2012 ; Africa: The Journal of the International African Institute Volume 82 ; 82 >
+      au < released ; 2013 ; Africa: The Journal of the International African Institute Volume 83 ; 83 >
+      au < manifest ; 2014 ; Africa: The Journal of the International African Institute Volume 84 ; 84 >
+      au < manifest ; 2015 ; Africa: The Journal of the International African Institute Volume 85 ; 85 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = African Journal of International and Comparative Law ;
+      issn = 0954-8890 ;
+      eissn = 1755-1609 ;
+      issnl = 0954-8890 
+     >
+     
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = ajicl
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
+      au < released ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
+      au < released ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
+      au < released ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
+      au < released ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
+      au < released ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
+      au < released ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
+      au < released ; 2012 ; African Journal of International and Comparative Law Volume 20 ; 20 >
+      au < released ; 2013 ; African Journal of International and Comparative Law Volume 21 ; 21 >
+      au < manifest ; 2014 ; African Journal of International and Comparative Law Volume 22 ; 22 >
+      au < manifest ; 2015 ; African Journal of International and Comparative Law Volume 23 ; 23 >
+    
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = Architectural Heritage ;
+      issn = 1350-7524 ;
+      eissn = 1755-1641 ;
+      issnl = 1350-7524 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = arch
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2003 ; Architectural Heritage Volume 14 ; 14 >
+      au < released ; 2004 ; Architectural Heritage Volume 15 ; 15 >
+      au < released ; 2005 ; Architectural Heritage Volume 16 ; 16 >
+      au < released ; 2006 ; Architectural Heritage Volume 17 ; 17 >
+      au < released ; 2007 ; Architectural Heritage Volume 18 ; 18 >
+      au < superseded ; 2008 ; Architectural Heritage Volume XIX [superseded] ; XIX >
+      au < manifest ; 2008 ; Architectural Heritage Volume 19 ; 19 >
+      au < superseded ; 2009 ; Architectural Heritage Volume XX [superseded] ; XX >
+      au < manifest ; 2009 ; Architectural Heritage Volume 20 ; 20 >
+      au < released ; 2010 ; Architectural Heritage Volume 21 ; 21 >
+      au < released ; 2011 ; Architectural Heritage Volume 22 ; 22 >
+      au < released ; 2012 ; Architectural Heritage Volume 23 ; 23 >
+      au < released ; 2013 ; Architectural Heritage Volume 24 ; 24 >
+      au < manifest ; 2014 ; Architectural Heritage Volume 25 ; 25 >
+      au < expected ; 2015 ; Architectural Heritage Volume 26 ; 26 >
+
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Archives of Natural History ;
+      issn = 0260-9541 ;
+      eissn = 1755-6260 ;
+      issnl = 0260-9541 
+     >
+    
+    {
+    
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = anh
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = 500 internal server error
+
+      au < released ; 2003 ; Archives of Natural History Volume 30 ; 30 >
+      au < released ; 2004 ; Archives of Natural History Volume 31 ; 31 >
+      au < released ; 2005 ; Archives of Natural History Volume 32 ; 32 >
+      au < released ; 2006 ; Archives of Natural History Volume 33 ; 33 >
+      au < released ; 2007 ; Archives of Natural History Volume 34 ; 34 >
+      au < released ; 2008 ; Archives of Natural History Volume 35 ; 35 >
+      au < released ; 2009 ; Archives of Natural History Volume 36 ; 36 >
+      au < released ; 2010 ; Archives of Natural History Volume 37 ; 37 >
+      au < released ; 2011 ; Archives of Natural History Volume 38 ; 38 >
+      au < released ; 2012 ; Archives of Natural History Volume 39 ; 39 >
+      au < notReady ; 2013 ; Archives of Natural History Volume 40 ; 40 >
+      au < manifest ; 2014 ; Archives of Natural History Volume 41 ; 41 >
+      au < manifest ; 2015 ; Archives of Natural History Volume 42 ; 42 >
+
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = Ben Jonson Journal ;
+      issn = 1079-3453 ;
+      eissn = 1755-165X ;
+      issnl = 1079-3453 
+     >
+
+    {
+    
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = bjj
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
+      au < released ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
+      au < released ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
+      au < released ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
+      au < released ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
+      au < released ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
+      au < released ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
+      au < manifest ; 2014 ; Ben Jonson Journal Volume 21 ; 21 >
+      au < manifest ; 2015 ; Ben Jonson Journal Volume 22 ; 22 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Britain and the World ;
+      issn = 2043-8567 ;
+      eissn = 2043-8575 ;
+      issnl = 2043-8567 
+     >
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+    {
+      param[journal_id] = brw
+    
+      au < superseded ; 2008-2009 ; Britain and the World Volume 1 [superseded] ; 1 >
+      au < superseded ; 2009-2010 ; Britain and the World Volume 2 [superseded] ; 2 >
+      au < superseded ; 2010 ; Britain and the World Volume 3 [superseded] ; 3 >
+      au < released ; 2011 ; Britain and the World Volume 4 ; 4 >
+      au < released ; 2012 ; Britain and the World Volume 5 ; 5 >
+      au < released ; 2013 ; Britain and the World Volume 6 ; 6 >
+      au < manifest ; 2014 ; Britain and the World Volume 7 ; 7 >
+      au < manifest ; 2015 ; Britain and the World Volume 8 ; 8 >
+
+    }
+
+    {
+        param[journal_id] = brs
+        comment[0] = old title used
+
+        au < exists ; 2008-2009 ; British Scholar Volume 1 ; 1 >
+        au < exists ; 2009-2010 ; British Scholar Volume 2 ; 2 >
+        au < exists ; 2010 ; British Scholar Volume 3 ; 3 >
+
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = Comparative Critical Studies ;
+      issn = 1744-1854 ;
+      eissn = 1750-0109 ;
+      issnl = 1744-1854
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = ccs
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = 500 internal server error
+
+      au < released ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
+      au < released ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
+      au < released ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
+      au < released ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
+      au < released ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
+      au < released ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
+      au < released ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
+      au < released ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
+      au < released ; 2012 ; Comparative Critical Studies Volume 9 ; 9 >
+      au < notReady ; 2013 ; Comparative Critical Studies Volume 10 ; 10 >
+      au < manifest ; 2014 ; Comparative Critical Studies Volume 11 ; 11 >
+      au < manifest ; 2015 ; Comparative Critical Studies Volume 12 ; 12 >
+    
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = comparative_critical_studies
+      attr[journal_id] = ccs
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Comparative Critical Studies Volume 3 [Project MUSE] ; 3 >
+      au < released ; 2007 ; Comparative Critical Studies Volume 4 [Project MUSE] ; 4 >
+      au < released ; 2008 ; Comparative Critical Studies Volume 5 [Project MUSE] ; 5 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Corpora ;
+      issn = 1749-5032 ;
+      eissn = 1755-1676 ;
+      issnl = 1749-5032 
+     >
+
+    {
+    
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = cor
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2006 ; Corpora Volume 1 ; 1 >
+      au < released ; 2007 ; Corpora Volume 2 ; 2 >
+      au < released ; 2008 ; Corpora Volume 3 ; 3 >
+      au < released ; 2009 ; Corpora Volume 4 ; 4 >
+      au < released ; 2010 ; Corpora Volume 5 ; 5 >
+      au < released ; 2011 ; Corpora Volume 6 ; 6 >
+      au < released ; 2012 ; Corpora Volume 7 ; 7 >
+      au < released ; 2013 ; Corpora Volume 8 ; 8 >
+      au < manifest ; 2014 ; Corpora Volume 9 ; 9 >
+      au < manifest ; 2015 ; Corpora Volume 10 ; 10 >
+    
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = Dance Research ;
+      issn = 0264-2875 ;
+      eissn = 1750-0095 ;
+      issnl = 0264-2875
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = drs
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2000 ; Dance Research Volume 18 ; 18 >
+      au < released ; 2001 ; Dance Research Volume 19 ; 19 >
+      au < released ; 2002 ; Dance Research Volume 20 ; 20 >
+      au < released ; 2003 ; Dance Research Volume 21 ; 21 >
+      au < released ; 2004 ; Dance Research Volume 22 ; 22 >
+      au < released ; 2005 ; Dance Research Volume 23 ; 23 >
+      au < released ; 2006 ; Dance Research Volume 24 ; 24 >
+      au < released ; 2007 ; Dance Research Volume 25 ; 25 >
+      au < released ; 2008 ; Dance Research Volume 26 ; 26 >
+      au < released ; 2009 ; Dance Research Volume 27 ; 27 >
+      au < released ; 2010 ; Dance Research Volume 28 ; 28 >
+      au < released ; 2011 ; Dance Research Volume 29 ; 29 >
+      au < released ; 2012 ; Dance Research Volume 30 ; 30 >
+      au < released ; 2013 ; Dance Research Volume 31 ; 31 >
+      au < manifest ; 2014 ; Dance Research Volume 32 ; 32 >
+      au < manifest ; 2015 ; Dance Research Volume 33 ; 33 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = dance_research
+      attr[journal_id] = dar
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Dance Research Volume 24 [Project MUSE] ; 24 >
+      au < released ; 2007 ; Dance Research Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2008 ; Dance Research Volume 26 [Project MUSE] ; 26 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Deleuze Studies ;
+      issn = 1750-2241 ;
+      eissn = 1755-1684 ;
+      issnl = 1750-2241 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = dls
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2007 ; Deleuze Studies Volume 1 ; 1 >
+      au < released ; 2008 ; Deleuze Studies Volume 2 ; 2 >
+      au < released ; 2009 ; Deleuze Studies Volume 3 ; 3 >
+      au < released ; 2010 ; Deleuze Studies Volume 4 ; 4 >
+      au < released ; 2011 ; Deleuze Studies Volume 5 ; 5 >
+      au < released ; 2012 ; Deleuze Studies Volume 6 ; 6 >
+      au < released ; 2013 ; Deleuze Studies Volume 7 ; 7 >
+      au < manifest ; 2014 ; Deleuze Studies Volume 8 ; 8 >
+      au < manifest ; 2015 ; Deleuze Studies Volume 9 ; 9 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Derrida Today ;
+      issn = 1754-8500 ;
+      eissn = 1754-8519 ;
+      issnl = 1754-8500 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = drt
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2008 ; Derrida Today Volume 1 ; 1 >
+      au < released ; 2009 ; Derrida Today Volume 2 ; 2 >
+      au < released ; 2010 ; Derrida Today Volume 3 ; 3 >
+      au < released ; 2011 ; Derrida Today Volume 4 ; 4 >
+      au < released ; 2012 ; Derrida Today Volume 5 ; 5 >
+      au < released ; 2013 ; Derrida Today Volume 6 ; 6 >
+      au < manifest ; 2014 ; Derrida Today Volume 7 ; 7 >
+      au < manifest ; 2015 ; Derrida Today Volume 8 ; 8 >
+
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Edinburgh Law Review ;
+      issn = 1364-9809 ;
+      eissn = 1755-1692 ;
+      issnl = 1364-9809 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = elr
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
+      au < released ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
+      au < released ; 2006 ; Edinburgh Law Review Volume 10 ; 10 >
+      au < released ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
+      au < released ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
+      au < released ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
+      au < released ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
+      au < released ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
+      au < released ; 2012 ; Edinburgh Law Review Volume 16 ; 16 >
+      au < released ; 2013 ; Edinburgh Law Review Volume 17 ; 17 >
+      au < manifest ; 2014 ; Edinburgh Law Review Volume 18 ; 18 >
+      au < manifest ; 2015 ; Edinburgh Law Review Volume 19 ; 19 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Episteme: A Journal of Social Epistemology ;
+      issn = 1742-3600 ;
+      eissn = 1750-0117 ;
+      issnl = 1742-3600
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = epi
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[moved] = moved to Cambridge U Press as of 2012.
+
+      au < down ; 2004-2005 ; Episteme Volume 1 ; 1 >
+      au < down ; 2005-2006 ; Episteme Volume 2 ; 2 >
+      au < down ; 2006 ; Episteme Volume 3 ; 3 >
+      au < down ; 2007 ; Episteme Volume 4 ; 4 >
+      au < down ; 2008 ; Episteme Volume 5 ; 5 >
+      au < down ; 2009 ; Episteme Volume 6 ; 6 >
+      au < down ; 2010 ; Episteme Volume 7 ; 7 >
+      au < down ; 2011 ; Episteme Volume 8 ; 8 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = episteme
+      attr[journal_id] = epi
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 [Project MUSE] ; 3 >
+      au < released ; 2007 ; Episteme: A Journal of Social Epistemology Volume 4 [Project MUSE] ; 4 >
+      au < released ; 2008 ; Episteme: A Journal of Social Epistemology Volume 5 [Project MUSE] ; 5 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Holy Land Studies: A Multidisciplinary Journal ;
+      issn = 1474-9475 ;
+      eissn = 1750-0125 ;
+      issnl = 1474-9475
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = hls
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2004 ; Holy Land Studies Volume 3 ; 3 >
+      au < released ; 2005 ; Holy Land Studies Volume 4 ; 4 >
+      au < released ; 2006 ; Holy Land Studies Volume 5 ; 5 >
+      au < released ; 2007 ; Holy Land Studies Volume 6 ; 6 >
+      au < released ; 2008 ; Holy Land Studies Volume 7 ; 7 >
+      au < released ; 2009 ; Holy Land Studies Volume 8 ; 8 >
+      au < released ; 2010 ; Holy Land Studies Volume 9 ; 9 >
+      au < released ; 2011 ; Holy Land Studies Volume 10 ; 10 >
+      au < released ; 2012 ; Holy Land Studies Volume 11 ; 11 >
+      au < released ; 2013 ; Holy Land Studies Volume 12 ; 12 >
+      au < manifest ; 2014 ; Holy Land Studies Volume 13 ; 13 >
+      au < manifest ; 2015 ; Holy Land Studies Volume 14 ; 14 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = holy_land_studies
+      attr[journal_id] = hls
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 [Project MUSE] ; 5 >
+      au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 [Project MUSE] ; 6 >
+      au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 [Project MUSE] ; 7 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = The Innes Review ;
+      issn = 0020-157X ;
+      eissn = 1745-5219 ;
+      issnl = 0020-157X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = inr
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2004 ; The Innes Review Volume 55 ; 55 >
+      au < released ; 2005 ; The Innes Review Volume 56 ; 56 >
+      au < released ; 2006 ; The Innes Review Volume 57 ; 57 >
+      au < released ; 2007 ; The Innes Review Volume 58 ; 58 >
+      au < released ; 2008 ; The Innes Review Volume 59 ; 59 >
+      au < released ; 2009 ; The Innes Review Volume 60 ; 60 >
+      au < released ; 2010 ; The Innes Review Volume 61 ; 61 >
+      au < released ; 2011 ; The Innes Review Volume 62 ; 62 >
+      au < released ; 2012 ; The Innes Review Volume 63 ; 63 >
+      au < released ; 2013 ; The Innes Review Volume 64 ; 64 >
+      au < manifest ; 2014 ; The Innes Review Volume 65 ; 65 >
+      au < manifest ; 2015 ; The Innes Review Volume 66 ; 66 >
+    
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = the_innes_review
+      attr[journal_id] = inn
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2007 ; The Innes Review Volume 58 [Project MUSE] ; 58 >
+      au < released ; 2008 ; The Innes Review Volume 59 [Project MUSE] ; 59 >
+    
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = History and Computing ;
+      issn = 0957-0144 ;
+      issnl = 0957-0144 
+     >
+
+    {
+    
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = hac
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[changed_name] = called History and Computing from 1994 to 2002
+      comment[continued_by] = 1753-8548 International Journal of Humanities and Arts Computing
+      
+      au < released ; 1994 ; History and Computing Volume 6 (1994) ; 6 >
+      au < released ; 1995 ; History and Computing Volume 7 (1995) ; 7 >
+      au < released ; 1996 ; History and Computing Volume 8 (1996) ; 8 >
+      au < released ; 1997 ; History and Computing Volume 9 (1997) ; 9 >
+      au < released ; 1998 ; History and Computing Volume 10 (1998) ; 10 >
+      au < released ; 1999 ; History and Computing Volume 11 (1999) ; 11 >
+      au < released ; 2000 ; History and Computing Volume 12 (2000) ; 12 >
+      au < released ; 2001 ; History and Computing Volume 13 (2001) ; 13 >
+      au < released ; 2002 ; History and Computing Volume 14 (2002) ; 14 >
+    
+    }
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Humanities and Arts Computing ;
+      issn = 1753-8548 ;
+      eissn = 1755-1706 ;
+      issnl = 1753-8548 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = ijhac
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[changed_name] = formerly History and Computing until 2002
+      comment[0] = old journal id volumes consolidated with new journal id volumes
+      
+      au < released ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
+      au < released ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
+      au < released ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
+      au < released ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
+      au < released ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 >
+      au < released ; 2012 ; International Journal of Humanities and Arts Computing Volume 6 (2012) ; 6 >
+      au < released ; 2013 ; International Journal of Humanities and Arts Computing Volume 7 (2013) ; 7 >
+      au < manifest ; 2014 ; International Journal of Humanities and Arts Computing Volume 8 (2014) ; 8 >
+      au < manifest ; 2015 ; International Journal of Humanities and Arts Computing Volume 9 (2015) ; 9 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = International Research in Children's Literature ;
+      issn = 1755-6198 ;
+      eissn = 1755-6201 ;
+      issnl = 1755-6198 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = ircl
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2008 ; International Research in Children's Literature Volume 1 ; 1 >
+      au < released ; 2009 ; International Research in Children's Literature Volume 2 ; 2 >
+      au < released ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
+      au < released ; 2011 ; International Research in Children's Literature Volume 4 ; 4 >
+      au < released ; 2012 ; International Research in Children's Literature Volume 5 ; 5 >
+      au < released ; 2013 ; International Research in Children's Literature Volume 6 ; 6 >
+      au < manifest ; 2014 ; International Research in Children's Literature Volume 7 ; 7 >
+      au < manifest ; 2015 ; International Research in Children's Literature Volume 8 ; 8 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Irish University Review ;
+      issn = 0021-1427 ;
+      eissn = 2047-2153 ;
+      issnl = 0021-1427 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = iur
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < released ; 2012 ; Irish University Review Volume 42 ; 42 >
+      au < released ; 2013 ; Irish University Review Volume 43 ; 43 >
+      au < manifest ; 2014 ; Irish University Review Volume 44 ; 44 >
+      au < manifest ; 2015 ; Irish University Review Volume 45 ; 45 >
+  
+    }
+  
+  }
+
+  {
+
+    title <
+      name = Journal of Beckett Studies ;
+      issn = 0309-5207 ;
+      eissn = 1759-7811 ;
+      issnl = 0309-5207 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = jobs
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 >
+      au < released ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
+      au < released ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
+      au < released ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
+      au < released ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 >
+      au < released ; 2013 ; Journal of Beckett Studies Volume 22 ; 22 >
+      au < manifest ; 2014 ; Journal of Beckett Studies Volume 23 ; 23 >
+      au < manifest ; 2015 ; Journal of Beckett Studies Volume 24 ; 24 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Journal of British Cinema and Television ;
+      issn = 1743-4521 ;
+      eissn = 1755-1714 ;
+      issnl = 1743-4521 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = jbctv
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2004 ; Journal of British Cinema and Television Volume 1 ; 1 >
+      au < released ; 2005 ; Journal of British Cinema and Television Volume 2 ; 2 >
+      au < released ; 2006 ; Journal of British Cinema and Television Volume 3 ; 3 >
+      au < released ; 2007 ; Journal of British Cinema and Television Volume 4 ; 4 >
+      au < released ; 2008 ; Journal of British Cinema and Television Volume 5 ; 5 >
+      au < released ; 2009 ; Journal of British Cinema and Television Volume 6 ; 6 >
+      au < released ; 2010 ; Journal of British Cinema and Television Volume 7 ; 7 >
+      au < released ; 2011 ; Journal of British Cinema and Television Volume 8 ; 8 >
+      au < released ; 2012 ; Journal of British Cinema and Television Volume 9 ; 9 >
+      au < released ; 2013 ; Journal of British Cinema and Television Volume 10 ; 10 >
+      au < manifest ; 2014 ; Journal of British Cinema and Television Volume 11 ; 11 >
+      au < manifest ; 2015 ; Journal of British Cinema and Television Volume 12 ; 12 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Journal of International Political Theory ;
+      issn = 1755-0882 ;
+      eissn = 1755-1722 ;
+      issnl = 1755-0882 
+     >
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+    {
+      param[journal_id] = jipt
+      comment[moved] = journal moved to Sage. http://ipt.sagepub.com. Content no longer online.
+
+      au < superseded ; 2005 ; Journal of International Political Theory Volume 1 [superseded] ; 1 >
+      au < superseded ; 2006 ; Journal of International Political Theory Volume 2 [superseded] ; 2 >
+      au < superseded ; 2007 ; Journal of International Political Theory Volume 3 [superseded] ; 3 >
+      au < released ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
+      au < released ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
+      au < released ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
+      au < released ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
+      au < released ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
+      au < released ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
+
+    }
+
+    {
+      param[journal_id] = per
+      comment[title] = old title used
+
+      au < exists ; 2005 ; Politics and Ethics Review Volume 1 ; 1 >
+      au < exists ; 2006 ; Politics and Ethics Review Volume 2 ; 2 >
+      au < exists ; 2007 ; Politics and Ethics Review Volume 3 ; 3 >
+    
+    }
+
+  }    
+
+  {
+
+    title <
+      name = Journal of Qur'anic Studies ;
+      issn = 1465-3591 ;
+      eissn = 1755-1730 ;
+      issnl = 1465-3591 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = jqs
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2005 ; Journal of Qur'anic Studies Volume 7 ; 7 >
+      au < released ; 2006 ; Journal of Qur'anic Studies Volume 8 ; 8 >
+      au < released ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 >
+      au < released ; 2008 ; Journal of Qur'anic Studies Volume 10 ; 10 >
+      au < released ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 >
+      au < released ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 >
+      au < released ; 2011 ; Journal of Qur'anic Studies Volume 13 ; 13 >
+      au < released ; 2012 ; Journal of Qur'anic Studies Volume 14 ; 14 >
+      au < released ; 2013 ; Journal of Qur'anic Studies Volume 15 ; 15 >
+      au < manifest ; 2014 ; Journal of Qur'anic Studies Volume 16 ; 16 >
+      au < manifest ; 2015 ; Journal of Qur'anic Studies Volume 17 ; 17 >
+    
+    }
+    
+  }
+  {
+
+    title <
+      name = Scottish Economic and Social History ;
+      issn = 0269-5030
+     >
+    
+    {
+    
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = sesh
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[continued_by] = 1748-538X
+
+      au < manifest ; 1981 ; Scottish Economic and Social History Volume 1 ; 1 >
+      au < manifest ; 1982 ; Scottish Economic and Social History Volume 2 ; 2 >
+      au < manifest ; 1983 ; Scottish Economic and Social History Volume 3 ; 3 >
+      au < manifest ; 1984 ; Scottish Economic and Social History Volume 4 ; 4 >
+      au < manifest ; 1985 ; Scottish Economic and Social History Volume 5 ; 5 >
+      au < manifest ; 1986 ; Scottish Economic and Social History Volume 6 ; 6 >
+      au < manifest ; 1987 ; Scottish Economic and Social History Volume 7 ; 7 >
+      au < manifest ; 1988 ; Scottish Economic and Social History Volume 8 ; 8 >
+      au < manifest ; 1989 ; Scottish Economic and Social History Volume 9 ; 9 >
+      au < manifest ; 1990 ; Scottish Economic and Social History Volume 10 ; 10 >
+      au < manifest ; 1991 ; Scottish Economic and Social History Volume 11 ; 11 >
+      au < manifest ; 1992 ; Scottish Economic and Social History Volume 12 ; 12 >
+      au < manifest ; 1993 ; Scottish Economic and Social History Volume 13 ; 13 >
+      au < manifest ; 1994 ; Scottish Economic and Social History Volume 14 ; 14 >
+      au < manifest ; 1995 ; Scottish Economic and Social History Volume 15 ; 15 >
+      au < manifest ; 1996 ; Scottish Economic and Social History Volume 16 ; 16 >
+      au < manifest ; 1997 ; Scottish Economic and Social History Volume 17 ; 17 >
+      au < manifest ; 1998 ; Scottish Economic and Social History Volume 18 ; 18 >
+      au < manifest ; 1999 ; Scottish Economic and Social History Volume 19 ; 19 >
+      au < manifest ; 2000 ; Scottish Economic and Social History Volume 20 ; 20 >
+    
+    }
+  }
+  {
+
+    title <
+      name = Journal of Scottish Historical Studies ;
+      issn = 1748-538X ;
+      eissn = 1755-1749 ;
+      issnl = 1748-538X 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = jshs
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[continues] = 0269-5030
+      
+      au < released ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
+      au < released ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
+      au < released ; 2003 ; Journal of Scottish Historical Studies Volume 23 ; 23 >
+      au < released ; 2004 ; Journal of Scottish Historical Studies Volume 24 ; 24 >
+      au < released ; 2005 ; Journal of Scottish Historical Studies Volume 25 ; 25 >
+      au < released ; 2006 ; Journal of Scottish Historical Studies Volume 26 ; 26 >
+      au < released ; 2007 ; Journal of Scottish Historical Studies Volume 27 ; 27 >
+      au < released ; 2008 ; Journal of Scottish Historical Studies Volume 28 ; 28 >
+      au < released ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
+      au < released ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
+      au < released ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
+      au < released ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
+      au < released ; 2013 ; Journal of Scottish Historical Studies Volume 33 ; 33 >
+      au < manifest ; 2014 ; Journal of Scottish Historical Studies Volume 34 ; 34 >
+      au < manifest ; 2015 ; Journal of Scottish Historical Studies Volume 35 ; 35 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Journal of Scottish Philosophy ;
+      issn = 1479-6651 ;
+      eissn = 1755-2001 ;
+      issnl = 1479-6651 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = jsp
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2003 ; Journal of Scottish Philosophy Volume 1 ; 1 >
+      au < released ; 2004 ; Journal of Scottish Philosophy Volume 2 ; 2 >
+      au < released ; 2005 ; Journal of Scottish Philosophy Volume 3 ; 3 >
+      au < released ; 2006 ; Journal of Scottish Philosophy Volume 4 ; 4 >
+      au < released ; 2007 ; Journal of Scottish Philosophy Volume 5 ; 5 >
+      au < released ; 2008 ; Journal of Scottish Philosophy Volume 6 ; 6 >
+      au < released ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
+      au < released ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
+      au < released ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
+      au < released ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 >
+      au < released ; 2013 ; Journal of Scottish Philosophy Volume 11 ; 11 >
+      au < manifest ; 2014 ; Journal of Scottish Philosophy Volume 12 ; 12 >
+      au < manifest ; 2015 ; Journal of Scottish Philosophy Volume 13 ; 13 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Journal of Victorian Culture ;
+      issn = 1355-5502 ;
+      eissn = 1750-0133 ;
+      issnl = 1355-5502
+    >
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = journal_of_victorian_culture
+      attr[journal_id] = jvc
+      comment[change_publisher] = from 2010, published by Taylor and Francis.  
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Journal of Victorian Culture Volume 11 [Project MUSE] ; 11 >
+      au < released ; 2007 ; Journal of Victorian Culture Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2008 ; Journal of Victorian Culture Volume 13 [Project MUSE] ; 13 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Katherine Mansfield Studies ;
+      issn = 2041-4501 ;
+      eissn = 2041-451X ;
+      issnl = 2041-4501 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = kms
+      comment[0] = From 2013, this journal is available as an annual book publication
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
+      au < released ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
+      au < released ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
+      au < released ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
+    
+    }
+    
+  }
+
+  {
+
+    title <
+      name = Modernist Cultures ;
+      issn = 2041-1022 ;
+      eissn = 1753-8629 ;
+      issnl = 2041-1022 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = mod
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2005 ; Modernist Cultures Volume 1 ; 1 >
+      au < released ; 2006 ; Modernist Cultures Volume 2 ; 2 >
+      au < released ; 2007-2008 ; Modernist Cultures Volume 3 ; 3 >
+      au < released ; 2009 ; Modernist Cultures Volume 4 ; 4 >
+      au < released ; 2010 ; Modernist Cultures Volume 5 ; 5 >
+      au < released ; 2011 ; Modernist Cultures Volume 6 ; 6 >
+      au < released ; 2012 ; Modernist Cultures Volume 7 ; 7 >
+      au < released ; 2013 ; Modernist Cultures Volume 8 ; 8 >
+      au < manifest ; 2014 ; Modernist Cultures Volume 9 ; 9 >
+      au < manifest ; 2015 ; Modernist Cultures Volume 10 ; 10 >
+    
+    }
+
+  }
+
+  {
+
+    title <
+      name = The New Soundtrack ;
+      issn = 2042-8855 ;
+      eissn = 2042-8863 ;
+      issnl = 2042-8855 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = sound
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2011 ; The New Soundtrack Volume 1 ; 1 >
+      au < released ; 2012 ; The New Soundtrack Volume 2 ; 2 >
+      au < released ; 2013 ; The New Soundtrack Volume 3 ; 3 >
+      au < manifest ; 2014 ; The New Soundtrack Volume 4 ; 4 >
+      au < manifest ; 2015 ; The New Soundtrack Volume 5 ; 5 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Northern Scotland ;
+      issn = 0306-5278 ;
+      eissn = 2042-2717 ;
+      issnl = 0306-5278 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = nor
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2010 ; Northern Scotland Volume 1 ; 1 >
+      au < released ; 2011 ; Northern Scotland Volume 2 ; 2 >
+      au < released ; 2012 ; Northern Scotland Volume 3 ; 3 >
+      au < released ; 2013 ; Northern Scotland Volume 4 ; 4 >
+      au < manifest ; 2014 ; Northern Scotland Volume 5 ; 5 >
+      au < manifest ; 2015 ; Northern Scotland Volume 6 ; 6 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Nottingham French Studies ;
+      issn = 0029-4586 ;
+      eissn = 2047-7236 ;
+      issnl = 0029-4586 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = nfs
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < manifest ; 1962 ; Nottingham French Studies Volume 1 ; 1 >
+      au < manifest ; 1963 ; Nottingham French Studies Volume 2 ; 2 >
+      au < manifest ; 1964 ; Nottingham French Studies Volume 3 ; 3 >
+      au < manifest ; 1965 ; Nottingham French Studies Volume 4 ; 4 >
+      au < manifest ; 1966 ; Nottingham French Studies Volume 5 ; 5 >
+      au < manifest ; 1967 ; Nottingham French Studies Volume 6 ; 6 >
+      au < manifest ; 1968 ; Nottingham French Studies Volume 7 ; 7 >
+      au < manifest ; 1969 ; Nottingham French Studies Volume 8 ; 8 >
+      au < manifest ; 1970 ; Nottingham French Studies Volume 9 ; 9 >
+      au < manifest ; 1971 ; Nottingham French Studies Volume 10 ; 10 >
+      au < manifest ; 1972 ; Nottingham French Studies Volume 11 ; 11 >
+      au < manifest ; 1973 ; Nottingham French Studies Volume 12 ; 12 >
+      au < manifest ; 1974 ; Nottingham French Studies Volume 13 ; 13 >
+      au < manifest ; 1975 ; Nottingham French Studies Volume 14 ; 14 >
+      au < manifest ; 1976 ; Nottingham French Studies Volume 15 ; 15 >
+      au < manifest ; 1977 ; Nottingham French Studies Volume 16 ; 16 >
+      au < manifest ; 1978 ; Nottingham French Studies Volume 17 ; 17 >
+      au < manifest ; 1979 ; Nottingham French Studies Volume 18 ; 18 >
+      au < manifest ; 1980 ; Nottingham French Studies Volume 19 ; 19 >
+      au < manifest ; 1981 ; Nottingham French Studies Volume 20 ; 20 >
+      au < manifest ; 1982 ; Nottingham French Studies Volume 21 ; 21 >
+      au < manifest ; 1983 ; Nottingham French Studies Volume 22 ; 22 >
+      au < manifest ; 1984 ; Nottingham French Studies Volume 23 ; 23 >
+      au < manifest ; 1985 ; Nottingham French Studies Volume 24 ; 24 >
+      au < manifest ; 1986 ; Nottingham French Studies Volume 25 ; 25 >
+      au < manifest ; 1987 ; Nottingham French Studies Volume 26 ; 26 >
+      au < manifest ; 1988 ; Nottingham French Studies Volume 27 ; 27 >
+      au < manifest ; 1989 ; Nottingham French Studies Volume 28 ; 28 >
+      au < manifest ; 1990 ; Nottingham French Studies Volume 29 ; 29 >
+      au < manifest ; 1991 ; Nottingham French Studies Volume 30 ; 30 >
+      au < manifest ; 1992 ; Nottingham French Studies Volume 31 ; 31 >
+      au < manifest ; 1993 ; Nottingham French Studies Volume 32 ; 32 >
+      au < manifest ; 1994 ; Nottingham French Studies Volume 33 ; 33 >
+      au < manifest ; 1995 ; Nottingham French Studies Volume 34 ; 34 >
+      au < manifest ; 1996 ; Nottingham French Studies Volume 35 ; 35 >
+      au < manifest ; 1997 ; Nottingham French Studies Volume 36 ; 36 >
+      au < manifest ; 1998 ; Nottingham French Studies Volume 37 ; 37 >
+      au < manifest ; 1999 ; Nottingham French Studies Volume 38 ; 38 >
+      au < manifest ; 2000 ; Nottingham French Studies Volume 39 ; 39 >
+      au < manifest ; 2001 ; Nottingham French Studies Volume 40 ; 40 >
+      au < manifest ; 2002 ; Nottingham French Studies Volume 41 ; 41 >
+      au < manifest ; 2003 ; Nottingham French Studies Volume 42 ; 42 >
+      au < manifest ; 2004 ; Nottingham French Studies Volume 43 ; 43 >
+      au < manifest ; 2005 ; Nottingham French Studies Volume 44 ; 44 >
+      au < manifest ; 2006 ; Nottingham French Studies Volume 45 ; 45 >
+      au < manifest ; 2007 ; Nottingham French Studies Volume 46 ; 46 >
+      au < manifest ; 2008 ; Nottingham French Studies Volume 47 ; 47 >
+      au < manifest ; 2009 ; Nottingham French Studies Volume 48 ; 48 >
+      au < manifest ; 2010 ; Nottingham French Studies Volume 49 ; 49 >
+      au < released ; 2011 ; Nottingham French Studies Volume 50 ; 50 >
+      au < released ; 2012 ; Nottingham French Studies Volume 51 ; 51 >
+      au < released ; 2013 ; Nottingham French Studies Volume 52 ; 52 >
+      au < manifest ; 2014 ; Nottingham French Studies Volume 53 ; 53 >
+      au < manifest ; 2015 ; Nottingham French Studies Volume 54 ; 54 >
+  
+    }
+  
+  }
+
+  {
+
+    title <
+      name = Oxford Literary Review ;
+      issn = 0305-1498 ;
+      eissn = 1757-1634 ;
+      issnl = 0305-1498 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = olr
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2007 ; Oxford Literary Review Volume 29 ; 29 >
+      au < released ; 2008 ; Oxford Literary Review Volume 30 ; 30 >
+      au < released ; 2009 ; Oxford Literary Review Volume 31 ; 31 >
+      au < released ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
+      au < released ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
+      au < released ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
+      au < released ; 2013 ; Oxford Literary Review Volume 35 ; 35 >
+      au < manifest ; 2014 ; Oxford Literary Review Volume 36 ; 36 >
+      au < manifest ; 2015 ; Oxford Literary Review Volume 37 ; 37 >
+    
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = Paragraph ;
+      issn = 0264-8334 ;
+      eissn = 1750-0176 ;
+      issnl = 0264-8334
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = para
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2001 ; Paragraph Volume 24 ; 24 >
+      au < released ; 2002 ; Paragraph Volume 25 ; 25 >
+      au < released ; 2003 ; Paragraph Volume 26 ; 26 >
+      au < released ; 2004 ; Paragraph Volume 27 ; 27 >
+      au < released ; 2005 ; Paragraph Volume 28 ; 28 >
+      au < released ; 2006 ; Paragraph Volume 29 ; 29 >
+      au < released ; 2007 ; Paragraph Volume 30 ; 30 >
+      au < released ; 2008 ; Paragraph Volume 31 ; 31 >
+      au < released ; 2009 ; Paragraph Volume 32 ; 32 >
+      au < released ; 2010 ; Paragraph Volume 33 ; 33 >
+      au < released ; 2011 ; Paragraph Volume 34 ; 34 >
+      au < released ; 2012 ; Paragraph Volume 35 ; 35 >
+      au < released ; 2013 ; Paragraph Volume 36 ; 36 >
+      au < manifest ; 2014 ; Paragraph Volume 37 ; 37 >
+      au < manifest ; 2015 ; Paragraph Volume 38 ; 38 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = paragraph
+      attr[journal_id] = prg
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Paragraph Volume 29 [Project MUSE] ; 29 >
+      au < released ; 2007 ; Paragraph Volume 30 [Project MUSE] ; 30 >
+      au < released ; 2008 ; Paragraph Volume 31 [Project MUSE] ; 31 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Parliamentary History ;
+      issn = 0264-2824 ;
+      eissn = 1750-0206 ;
+      issnl = 0264-2824
+    >
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = parliamentary_history
+      attr[journal_id] = pah
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Parliamentary History Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2007 ; Parliamentary History Volume 26 [Project MUSE] ; 26 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Psychoanalysis and History ;
+      issn = 1460-8235 ;
+      eissn = 1755-201X ;
+      issnl = 1460-8235 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = pah
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 1999 ; Psychoanalysis and History Volume 1 ; 1 >
+      au < released ; 2000 ; Psychoanalysis and History Volume 2 ; 2 >
+      au < released ; 2001 ; Psychoanalysis and History Volume 3 ; 3 >
+      au < released ; 2002 ; Psychoanalysis and History Volume 4 ; 4 >
+      au < released ; 2003 ; Psychoanalysis and History Volume 5 ; 5 >
+      au < released ; 2004 ; Psychoanalysis and History Volume 6 ; 6 >
+      au < released ; 2005 ; Psychoanalysis and History Volume 7 ; 7 >
+      au < released ; 2006 ; Psychoanalysis and History Volume 8 ; 8 >
+      au < released ; 2007 ; Psychoanalysis and History Volume 9 ; 9 >
+      au < released ; 2008 ; Psychoanalysis and History Volume 10 ; 10 >
+      au < released ; 2009 ; Psychoanalysis and History Volume 11 ; 11 >
+      au < released ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
+      au < released ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
+      au < released ; 2012 ; Psychoanalysis and History Volume 14 ; 14 >
+      au < released ; 2013 ; Psychoanalysis and History Volume 15 ; 15 >
+      au < manifest ; 2014 ; Psychoanalysis and History Volume 16 ; 16 >
+      au < manifest ; 2015 ; Psychoanalysis and History Volume 17 ; 17 >
+    
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = Romanticism ;
+      issn = 1354-991X ;
+      eissn = 1750-0192 ;
+      issnl = 1354-991X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = rom
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2001 ; Romanticism Volume 7 ; 7 >
+      au < released ; 2002 ; Romanticism Volume 8 ; 8 >
+      au < released ; 2003 ; Romanticism Volume 9 ; 9 >
+      au < released ; 2004 ; Romanticism Volume 10 ; 10 >
+      au < released ; 2005 ; Romanticism Volume 11 ; 11 >
+      au < released ; 2006 ; Romanticism Volume 12 ; 12 >
+      au < released ; 2007 ; Romanticism Volume 13 ; 13 >
+      au < released ; 2008 ; Romanticism Volume 14 ; 14 >
+      au < released ; 2009 ; Romanticism Volume 15 ; 15 >
+      au < released ; 2010 ; Romanticism Volume 16 ; 16 >
+      au < released ; 2011 ; Romanticism Volume 17 ; 17 >
+      au < released ; 2012 ; Romanticism Volume 18 ; 18 >
+      au < released ; 2013 ; Romanticism Volume 19 ; 19 >
+      au < manifest ; 2014 ; Romanticism Volume 20 ; 20 >
+      au < manifest ; 2015 ; Romanticism Volume 21 ; 21 >
+    
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = romanticism
+      attr[journal_id] = rom
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Romanticism Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2007 ; Romanticism Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2008 ; Romanticism Volume 14 [Project MUSE] ; 14 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Scottish Affairs ;
+      issn = 0966-0356 ;
+      eissn = 2053-888X ;
+      issnl = 0966-0356
+    >
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = scot
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < manifest ; 1992 ; Scottish Affairs (First Series) Volume 1 ; 1+(First+Series) >
+      au < manifest ; 1993 ; Scottish Affairs (First Series) Volume 2 ; 2+(First+Series) >
+      au < manifest ; 1993 ; Scottish Affairs (First Series) Volume 3 ; 3+(First+Series) >
+      au < manifest ; 1993 ; Scottish Affairs (First Series) Volume 4 ; 4+(First+Series) >
+      au < exists ; 1993 ; Scottish Affairs (First Series) Volume 5 ; 5+(First+Series) >
+      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 6 ; 6+(First+Series) >
+      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 7 ; 7+(First+Series) >
+      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 8 ; 8+(First+Series) >
+      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 9 ; 9+(First+Series) >
+      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 10 ; 10+(First+Series) >
+      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 11 ; 11+(First+Series) >
+      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 12 ; 12+(First+Series) >
+      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 13 ; 13+(First+Series) >
+      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 14 ; 14+(First+Series) >
+      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 15 ; 15+(First+Series) >
+      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 16 ; 16+(First+Series) >
+      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 17 ; 17+(First+Series) >
+      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 18 ; 18+(First+Series) >
+      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 19 ; 19+(First+Series) >
+      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 20 ; 20+(First+Series) >
+      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 21 ; 21+(First+Series) >
+      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 22 ; 22+(First+Series) >
+      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 23 ; 23+(First+Series) >
+      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 24 ; 24+(First+Series) >
+      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 25 ; 25+(First+Series) >
+      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 26 ; 26+(First+Series) >
+      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 27 ; 27+(First+Series) >
+      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 28 ; 28+(First+Series) >
+      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 29 ; 29+(First+Series) >
+      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 30 ; 30+(First+Series) >
+      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 31 ; 31+(First+Series) >
+      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 32 ; 32+(First+Series) >
+      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 33 ; 33+(First+Series) >
+      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 34 ; 34+(First+Series) >
+      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 35 ; 35+(First+Series) >
+      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 36 ; 36+(First+Series) >
+      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 37 ; 37+(First+Series) >
+      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 38 ; 38+(First+Series) >
+      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 39 ; 39+(First+Series) >
+      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 40 ; 40+(First+Series) >
+      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 41 ; 41+(First+Series) >
+      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 42 ; 42+(First+Series) >
+      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 43 ; 43+(First+Series) >
+      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 44 ; 44+(First+Series) >
+      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 45 ; 45+(First+Series) >
+      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 46 ; 46+(First+Series) >
+      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 47 ; 47+(First+Series) >
+      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 48 ; 48+(First+Series) >
+      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 49 ; 49+(First+Series) >
+      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 50 ; 50+(First+Series) >
+      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 51 ; 51+(First+Series) >
+      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 52 ; 52+(First+Series) >
+      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 53 ; 53+(First+Series) >
+      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 54 ; 54+(First+Series) >
+      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 55 ; 55+(First+Series) >
+      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 56 ; 56+(First+Series) >
+      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 57 ; 57+(First+Series) >
+      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 58 ; 58+(First+Series) >
+      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 59 ; 59+(First+Series) >
+      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 60 ; 60+(First+Series) >
+      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 61 ; 61+(First+Series) >
+      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 62 ; 62+(First+Series) >
+      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 63 ; 63+(First+Series) >
+      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 64 ; 64+(First+Series) >
+      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 65 ; 65+(First+Series) >
+      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 66 ; 66+(First+Series) >
+      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 67 ; 67+(First+Series) >
+      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 68 ; 68+(First+Series) >
+      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 69 ; 69+(First+Series) >
+      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 70 ; 70+(First+Series) >
+      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 71 ; 71+(First+Series) >
+      au < exists ; 2010 ; Scottish Affairs (First Series) Volume 72 ; 72+(First+Series) >
+      au < exists ; 2010 ; Scottish Affairs (First Series) Volume 73 ; 73+(First+Series) >
+      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 74 ; 74+(First+Series) >
+      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 75 ; 75+(First+Series) >
+      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 76 ; 76+(First+Series) >
+      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 77 ; 77+(First+Series) >
+      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 78 ; 78+(First+Series) >
+      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 79 ; 79+(First+Series) >
+      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 80 ; 80+(First+Series) >
+      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 81 ; 81+(First+Series) >
+      au < manifest ; 2014 ; Scottish Affairs Volume 23 ; 23 >
+      au < manifest ; 2015 ; Scottish Affairs Volume 24 ; 24 >
+    
+  }
+
+  {
+
+    title <
+      name = Scottish Archaeological Journal ;
+      issn = 1471-5767 ;
+      eissn = 1755-2028 ;
+      issnl = 1471-5767 
+     >
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+    {
+      param[journal_id] = gas
+      comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+      
+      au < released ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 >
+      au < released ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 >
+      au < released ; 1974 ; Glasgow Archaeological Journal Volume 3 ; 3 >
+      au < released ; 1976 ; Glasgow Archaeological Journal Volume 4 ; 4 >
+      au < released ; 1978 ; Glasgow Archaeological Journal Volume 5 ; 5 >
+      au < released ; 1979 ; Glasgow Archaeological Journal Volume 6 ; 6 >
+      au < released ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 >
+      au < released ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 >
+      au < released ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 >
+      au < released ; 1983 ; Glasgow Archaeological Journal Volume 10 ; 10 >
+      au < released ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 >
+      au < released ; 1985 ; Glasgow Archaeological Journal Volume 12 ; 12 >
+      au < released ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 >
+      au < released ; 1987 ; Glasgow Archaeological Journal Volume 14 ; 14 >
+      au < released ; 1988 ; Glasgow Archaeological Journal Volume 15 ; 15 >
+      au < released ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 >
+      au < released ; 1991 ; Glasgow Archaeological Journal Volume 17 ; 17 >
+      au < released ; 1993 ; Glasgow Archaeological Journal Volume 18 ; 18 >
+      au < released ; 1994 ; Glasgow Archaeological Journal Volume 19 ; 19 >
+      au < released ; 1996 ; Glasgow Archaeological Journal Volume 20 ; 20 >
+      au < released ; 1998 ; Glasgow Archaeological Journal Volume 21 ; 21 >
+    
+    }
+    
+    {
+
+      param[journal_id] = saj
+      comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+
+      au < superseded ; 1969 ; Scottish Archaeological Journal Volume 1 [superseded] ; 1 >
+      au < superseded ; 1971 ; Scottish Archaeological Journal Volume 2 [superseded] ; 2 >
+      au < superseded ; 1974 ; Scottish Archaeological Journal Volume 3 [superseded] ; 3 >
+      au < superseded ; 1976 ; Scottish Archaeological Journal Volume 4 [superseded] ; 4 >
+      au < superseded ; 1978 ; Scottish Archaeological Journal Volume 5 [superseded] ; 5 >
+      au < superseded ; 1979 ; Scottish Archaeological Journal Volume 6 [superseded] ; 6 >
+      au < superseded ; 1980 ; Scottish Archaeological Journal Volume 7 [superseded] ; 7 >
+      au < superseded ; 1981 ; Scottish Archaeological Journal Volume 8 [superseded] ; 8 >
+      au < superseded ; 1982 ; Scottish Archaeological Journal Volume 9 [superseded] ; 9 >
+      au < superseded ; 1983 ; Scottish Archaeological Journal Volume 10 [superseded] ; 10 >
+      au < superseded ; 1984 ; Scottish Archaeological Journal Volume 11 [superseded] ; 11 >
+      au < superseded ; 1985 ; Scottish Archaeological Journal Volume 12 [superseded] ; 12 >
+      au < superseded ; 1986 ; Scottish Archaeological Journal Volume 13 [superseded] ; 13 >
+      au < superseded ; 1987 ; Scottish Archaeological Journal Volume 14 [superseded] ; 14 >
+      au < superseded ; 1988 ; Scottish Archaeological Journal Volume 15 [superseded] ; 15 >
+      au < superseded ; 1989 ; Scottish Archaeological Journal Volume 16 [superseded] ; 16 >
+      au < superseded ; 1991 ; Scottish Archaeological Journal Volume 17 [superseded] ; 17 >
+      au < superseded ; 1993 ; Scottish Archaeological Journal Volume 18 [superseded] ; 18 >
+      au < superseded ; 1994 ; Scottish Archaeological Journal Volume 19 [superseded] ; 19 >
+      au < superseded ; 1996 ; Scottish Archaeological Journal Volume 20 [superseded] ; 20 >
+      au < superseded ; 1998 ; Scottish Archaeological Journal Volume 21 [superseded] ; 21 >
+      au < released ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
+      au < released ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
+      au < released ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
+      au < released ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
+      au < released ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
+      au < released ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
+      au < released ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
+      au < released ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
+      au < released ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
+      au < released ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
+      au < released ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
+    
+    }
+    
+  }
+
+  {
+  
+    title <
+      name = Scottish Historical Review ;
+      issn = 0036-9241 ;
+      eissn = 1750-0222 ;
+      issnl = 0036-9241
+    >
+
+    {
+
+    comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010.0001
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = shr
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
+      au < released ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
+      au < released ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
+      au < released ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
+      au < released ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
+      au < released ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
+      au < released ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
+      au < released ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
+      au < released ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
+      au < released ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
+      au < released ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
+      au < released ; 2011 ; Scottish Historical Review Volume 90 ; 90 >
+      au < released ; 2012 ; Scottish Historical Review Volume 91 ; 91 >
+      au < released ; 2013 ; Scottish Historical Review Volume 92 ; 92 >
+      au < manifest ; 2014 ; Scottish Historical Review Volume 93 ; 93 >
+      au < manifest ; 2015 ; Scottish Historical Review Volume 94 ; 94 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = scottish_historical_review
+      attr[journal_id] = shr
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Scottish Historical Review Volume 85 [Project MUSE] ; 85 >
+      au < released ; 2007 ; Scottish Historical Review Volume 86 [Project MUSE] ; 86 >
+      au < released ; 2008 ; Scottish Historical Review Volume 87 [Project MUSE] ; 87 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Studies in World Christianity ;
+      issn = 1354-9901 ;
+      eissn = 1750-0230 ;
+      issnl = 1354-9901
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = swc
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
+      au < released ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
+      au < released ; 2003 ; Studies in World Christianity Volume 9 ; 9 >
+      au < released ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
+      au < released ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
+      au < released ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
+      au < released ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
+      au < released ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
+      au < released ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
+      au < released ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
+      au < released ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
+      au < released ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
+      au < released ; 2013 ; Studies in World Christianity Volume 19 ; 19 >
+      au < manifest ; 2014 ; Studies in World Christianity Volume 20 ; 20 >
+      au < manifest ; 2015 ; Studies in World Christianity Volume 21 ; 21 >
+    
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = studies_in_world_christianity
+      attr[journal_id] = swc
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Studies in World Christianity Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2007 ; Studies in World Christianity Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2008 ; Studies in World Christianity Volume 14 [Project MUSE] ; 14 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Translation and Literature ;
+      issn = 0968-1361 ;
+      eissn = 1750-0214 ;
+      issnl = 0968-1361
+    >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = tal
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2002 ; Translation and Literature Volume 11 ; 11 >
+      au < released ; 2003 ; Translation and Literature Volume 12 ; 12 >
+      au < released ; 2004 ; Translation and Literature Volume 13 ; 13 >
+      au < released ; 2005 ; Translation and Literature Volume 14 ; 14 >
+      au < released ; 2006 ; Translation and Literature Volume 15 ; 15 >
+      au < released ; 2007 ; Translation and Literature Volume 16 ; 16 >
+      au < released ; 2008 ; Translation and Literature Volume 17 ; 17 >
+      au < released ; 2009 ; Translation and Literature Volume 18 ; 18 >
+      au < released ; 2010 ; Translation and Literature Volume 19 ; 19 >
+      au < released ; 2011 ; Translation and Literature Volume 20 ; 20 >
+      au < released ; 2012 ; Translation and Literature Volume 21 ; 21 >
+      au < released ; 2013 ; Translation and Literature Volume 22 ; 22 >
+      au < manifest ; 2014 ; Translation and Literature Volume 23 ; 23 >
+      au < manifest ; 2015 ; Translation and Literature Volume 24 ; 24 >
+    
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      comment[platform] = This journal no longer contributes new issues to Muse
+      param[journal_dir] = translation_and_literature
+      attr[journal_id] = tal
+      implicit < status ; year ; name ; param[volume] >
+
+      au < released ; 2006 ; Translation and Literature Volume 15 [Project MUSE] ; 15 >
+      au < released ; 2007 ; Translation and Literature Volume 16 [Project MUSE] ; 16 >
+      au < released ; 2008 ; Translation and Literature Volume 17 [Project MUSE] ; 17 >
+    
+    }
+
+  }
+
+  {
+
+    title <
+      name = Word Structure ;
+      issn = 1750-1245 ;
+      eissn = 1755-2036 ;
+      issnl = 1750-1245 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = word
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < released ; 2008 ; Word Structure Volume 1 ; 1 >
+      au < released ; 2009 ; Word Structure Volume 2 ; 2 >
+      au < released ; 2010 ; Word Structure Volume 3 ; 3 >
+      au < released ; 2011 ; Word Structure Volume 4 ; 4 >
+      au < released ; 2012 ; Word Structure Volume 5 ; 5 >
+      au < released ; 2013 ; Word Structure Volume 6 ; 6 >
+      au < manifest ; 2014 ; Word Structure Volume 7 ; 7 >
+      au < manifest ; 2015 ; Word Structure Volume 8 ; 8 >
+    
+    }
+    
+  }
+  
+}

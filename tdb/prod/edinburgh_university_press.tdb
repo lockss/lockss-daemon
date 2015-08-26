@@ -215,9 +215,9 @@
         param[journal_id] = brs
         comment[0] = old title used
 
-        au < exists ; 2008-2009 ; British Scholar Volume 1 ; 1 >
-        au < exists ; 2009-2010 ; British Scholar Volume 2 ; 2 >
-        au < exists ; 2010 ; British Scholar Volume 3 ; 3 >
+        au < manifest ; 2008-2009 ; British Scholar Volume 1 ; 1 >
+        au < manifest ; 2009-2010 ; British Scholar Volume 2 ; 2 >
+        au < manifest ; 2010 ; British Scholar Volume 3 ; 3 >
 
     }
     
@@ -802,9 +802,9 @@
       param[journal_id] = per
       comment[title] = old title used
 
-      au < exists ; 2005 ; Politics and Ethics Review Volume 1 ; 1 >
-      au < exists ; 2006 ; Politics and Ethics Review Volume 2 ; 2 >
-      au < exists ; 2007 ; Politics and Ethics Review Volume 3 ; 3 >
+      au < manifest ; 2005 ; Politics and Ethics Review Volume 1 ; 1 >
+      au < manifest ; 2006 ; Politics and Ethics Review Volume 2 ; 2 >
+      au < manifest ; 2007 ; Politics and Ethics Review Volume 3 ; 3 >
     
     }
 

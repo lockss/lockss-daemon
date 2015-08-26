@@ -1,0 +1,53 @@
+{
+
+  publisher <
+    name = Lawrence & Wishart
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = new formations: a journal of culture/theory/politics ;
+      issn = 0950-2378 
+    >
+
+      param[journal_dir] = new_formations
+      attr[journal_id] = nfm
+      comment[vol80_81] = url uses v080
+      
+      au < released ; 2013 ; new formations: a journal of culture/theory/politics Volume 78 ; 78 >
+      au < released ; 2013 ; new formations: a journal of culture/theory/politics Volume 79 ; 79 >
+      au < released ; 2013 ; new formations: a journal of culture/theory/politics Volume 80-81 ; 80 >
+      au < manifest ; 2014 ; new formations: a journal of culture/theory/politics Volume 82 ; 82 >
+      au < manifest ; 2014 ; new formations: a journal of culture/theory/politics Volume 83 ; 83 >
+      au < expected ; 2015 ; new formations: a journal of culture/theory/politics Volume 84 ; 84 >
+      au < expected ; 2015 ; new formations: a journal of culture/theory/politics Volume 85 ; 85 >
+
+  }
+
+  {
+  
+    title <
+      name = Soundings: A journal of politics and culture ;
+      issn = 1362-6620
+    >
+
+    param[journal_dir] = soundings_a_journal_of_politics_and_culture
+    attr[journal_id] = sdg
+
+    au < released ; 2013 ; Soundings: A journal of politics and culture Volume 53 ; 53 >
+    au < released ; 2013 ; Soundings: A journal of politics and culture Volume 54 ; 54 >
+    au < released ; 2013 ; Soundings: A journal of politics and culture Volume 55 ; 55 >
+    au < manifest ; 2014 ; Soundings: A journal of politics and culture Volume 56 ; 56 >
+    au < manifest ; 2014 ; Soundings: A journal of politics and culture Volume 57 ; 57 >
+    au < manifest ; 2014-2015 ; Soundings: A journal of politics and culture Volume 58 ; 58 >
+    au < expected ; 2015 ; Soundings: A journal of politics and culture Volume 59 ; 59 >
+    au < expected ; 2015 ; Soundings: A journal of politics and culture Volume 60 ; 60 >
+
+  }
+
+}

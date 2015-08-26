@@ -6635,24 +6635,24 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1993 ; FEMS Immunology & Medical Microbiology Volume 6 ; 6 >
-    au < exists ; 1993 ; FEMS Immunology & Medical Microbiology Volume 7 ; 7 >
-    au < exists ; 1994 ; FEMS Immunology & Medical Microbiology Volume 8 ; 8 >
-    au < exists ; 1994 ; FEMS Immunology & Medical Microbiology Volume 9 ; 9 >
-    au < exists ; 1994-1995 ; FEMS Immunology & Medical Microbiology Volume 10 ; 10 >
-    au < exists ; 1995 ; FEMS Immunology & Medical Microbiology Volume 11 ; 11 >
-    au < exists ; 1995 ; FEMS Immunology & Medical Microbiology Volume 12 ; 12 >
-    au < exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 13 ; 13 >
-    au < exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 14 ; 14 >
-    au < exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 15 ; 15 >
-    au < exists ; 1996 ; FEMS Immunology & Medical Microbiology Volume 16 ; 16 >
-    au < exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 17 ; 17 >
-    au < exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 18 ; 18 >
-    au < exists ; 1997 ; FEMS Immunology & Medical Microbiology Volume 19 ; 19 >
-    au < exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 20 ; 20 >
-    au < exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 21 ; 21 >
-    au < exists ; 1998 ; FEMS Immunology & Medical Microbiology Volume 22 ; 22 >
-    au < exists ; 1999 ; FEMS Immunology & Medical Microbiology Volume 23 ; 23 >
+    au < manifest ; 1993 ; FEMS Immunology & Medical Microbiology Volume 6 ; 6 >
+    au < manifest ; 1993 ; FEMS Immunology & Medical Microbiology Volume 7 ; 7 >
+    au < manifest ; 1994 ; FEMS Immunology & Medical Microbiology Volume 8 ; 8 >
+    au < manifest ; 1994 ; FEMS Immunology & Medical Microbiology Volume 9 ; 9 >
+    au < manifest ; 1994-1995 ; FEMS Immunology & Medical Microbiology Volume 10 ; 10 >
+    au < manifest ; 1995 ; FEMS Immunology & Medical Microbiology Volume 11 ; 11 >
+    au < manifest ; 1995 ; FEMS Immunology & Medical Microbiology Volume 12 ; 12 >
+    au < manifest ; 1996 ; FEMS Immunology & Medical Microbiology Volume 13 ; 13 >
+    au < manifest ; 1996 ; FEMS Immunology & Medical Microbiology Volume 14 ; 14 >
+    au < manifest ; 1996 ; FEMS Immunology & Medical Microbiology Volume 15 ; 15 >
+    au < manifest ; 1996 ; FEMS Immunology & Medical Microbiology Volume 16 ; 16 >
+    au < manifest ; 1997 ; FEMS Immunology & Medical Microbiology Volume 17 ; 17 >
+    au < manifest ; 1997 ; FEMS Immunology & Medical Microbiology Volume 18 ; 18 >
+    au < manifest ; 1997 ; FEMS Immunology & Medical Microbiology Volume 19 ; 19 >
+    au < manifest ; 1998 ; FEMS Immunology & Medical Microbiology Volume 20 ; 20 >
+    au < manifest ; 1998 ; FEMS Immunology & Medical Microbiology Volume 21 ; 21 >
+    au < manifest ; 1998 ; FEMS Immunology & Medical Microbiology Volume 22 ; 22 >
+    au < manifest ; 1999 ; FEMS Immunology & Medical Microbiology Volume 23 ; 23 >
     au < manifest ; 1999 ; FEMS Immunology & Medical Microbiology Volume 24 ; 24 >
     au < manifest ; 1999 ; FEMS Immunology & Medical Microbiology Volume 25 ; 25 >
     au < manifest ; 1999 ; FEMS Immunology & Medical Microbiology Volume 26 ; 26 >
@@ -6829,16 +6829,16 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = 1977 volume 1 to 1999 volume 181
 
-    au < exists ; 1998 ; FEMS Microbiology Letters Volume 169 ; 169 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 170 ; 170 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 171 ; 171 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 172 ; 172 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 173 ; 173 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 174 ; 174 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 175 ; 175 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 176 ; 176 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 177 ; 177 >
-    au < exists ; 1999 ; FEMS Microbiology Letters Volume 178 ; 178 >
+    au < manifest ; 1998 ; FEMS Microbiology Letters Volume 169 ; 169 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 170 ; 170 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 171 ; 171 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 172 ; 172 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 173 ; 173 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 174 ; 174 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 175 ; 175 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 176 ; 176 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 177 ; 177 >
+    au < manifest ; 1999 ; FEMS Microbiology Letters Volume 178 ; 178 >
     au < manifest ; 1999 ; FEMS Microbiology Letters Volume 179 ; 179 >
     au < manifest ; 1999 ; FEMS Microbiology Letters Volume 180 ; 180 >
     au < manifest ; 1999 ; FEMS Microbiology Letters Volume 181 ; 181 >
@@ -19003,7 +19003,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Past & Present Volume 225 ; 225 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Past & Present Volume 226 ; 226 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Past & Present Volume 227 ; 227 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Past & Present Volume 228 ; 228 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Past & Present Volume 228 ; 228 >
     au < HighWirePressH20Plugin ; exists ; 2015 ; Past & Present Volume 229 ; 229 >
 
     }
@@ -23880,9 +23880,9 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Evolution, Medicine, and Public Health Volume 2013 ; 2013 >
-    au < exists ; 2014 ; Evolution, Medicine, and Public Health Volume 2014 ; 2014 >
-    au < exists ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 >
+    au < manifest ; 2013 ; Evolution, Medicine, and Public Health Volume 2013 ; 2013 >
+    au < manifest ; 2014 ; Evolution, Medicine, and Public Health Volume 2014 ; 2014 >
+    au < manifest ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 >
 
   }
 

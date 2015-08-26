@@ -1744,18 +1744,18 @@
       {
         param[journal_issn] = 1758-2555
 
-        au < exists ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
-        au < exists ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
-        au < exists ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
-        au < exists ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
+        au < manifest ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
+        au < manifest ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
+        au < manifest ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
+        au < manifest ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
       }
 
       {
         param[journal_issn] = 2052-1847
 
-        au < exists ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
-        au < exists ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
-        au < exists ; 2015 ; BMC Sports Science, Medicine and Rehabilitation Volume 7 ; 7 >
+        au < manifest ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
+        au < manifest ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
+        au < manifest ; 2015 ; BMC Sports Science, Medicine and Rehabilitation Volume 7 ; 7 >
       }
     }
 
@@ -7105,19 +7105,19 @@
       param[journal_issn] = 1944-446X
       comment[platform] = BioMedCentral
 
-      au < exists ; 2002 ; Chinese Journal of Cancer Volume 21 ; 21 >
-      au < exists ; 2003 ; Chinese Journal of Cancer Volume 22 ; 22 >
-      au < exists ; 2004 ; Chinese Journal of Cancer Volume 23 ; 23 >
-      au < exists ; 2005 ; Chinese Journal of Cancer Volume 24 ; 24 >
-      au < exists ; 2006 ; Chinese Journal of Cancer Volume 25 ; 25 >
-      au < exists ; 2007 ; Chinese Journal of Cancer Volume 26 ; 26 >
-      au < exists ; 2008 ; Chinese Journal of Cancer Volume 27 ; 27 >
-      au < exists ; 2009 ; Chinese Journal of Cancer Volume 28 ; 28 >
-      au < exists ; 2010 ; Chinese Journal of Cancer Volume 29 ; 29 >
-      au < exists ; 2011 ; Chinese Journal of Cancer Volume 30 ; 30 >
-      au < exists ; 2012 ; Chinese Journal of Cancer Volume 31 ; 31 >
-      au < exists ; 2013 ; Chinese Journal of Cancer Volume 32 ; 32 >
-      au < exists ; 2014 ; Chinese Journal of Cancer Volume 33 ; 33 >
+      au < manifest ; 2002 ; Chinese Journal of Cancer Volume 21 ; 21 >
+      au < manifest ; 2003 ; Chinese Journal of Cancer Volume 22 ; 22 >
+      au < manifest ; 2004 ; Chinese Journal of Cancer Volume 23 ; 23 >
+      au < manifest ; 2005 ; Chinese Journal of Cancer Volume 24 ; 24 >
+      au < manifest ; 2006 ; Chinese Journal of Cancer Volume 25 ; 25 >
+      au < manifest ; 2007 ; Chinese Journal of Cancer Volume 26 ; 26 >
+      au < manifest ; 2008 ; Chinese Journal of Cancer Volume 27 ; 27 >
+      au < manifest ; 2009 ; Chinese Journal of Cancer Volume 28 ; 28 >
+      au < manifest ; 2010 ; Chinese Journal of Cancer Volume 29 ; 29 >
+      au < manifest ; 2011 ; Chinese Journal of Cancer Volume 30 ; 30 >
+      au < manifest ; 2012 ; Chinese Journal of Cancer Volume 31 ; 31 >
+      au < manifest ; 2013 ; Chinese Journal of Cancer Volume 32 ; 32 >
+      au < manifest ; 2014 ; Chinese Journal of Cancer Volume 33 ; 33 >
       au < manifest ; 2015 ; Chinese Journal of Cancer Volume 34 ; 34 >
 
     }

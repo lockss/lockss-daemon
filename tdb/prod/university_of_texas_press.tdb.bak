@@ -1,0 +1,274 @@
+{
+  publisher <
+    name = University of Texas Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Asian Music ;
+      issn = 0044-9202 ;
+      eissn = 1553-5630 ;
+      issnl = 0044-9202
+    >
+
+    param[journal_dir] = asian_music
+    attr[journal_id] = amu
+
+    au < released ; 2005 ; Asian Music Volume 36 ; 36 >
+    au < released ; 2006 ; Asian Music Volume 37 ; 37 >
+    au < released ; 2007 ; Asian Music Volume 38 ; 38 >
+    au < released ; 2008 ; Asian Music Volume 39 ; 39 >
+    au < released ; 2009 ; Asian Music Volume 40 ; 40 >
+    au < released ; 2010 ; Asian Music Volume 41 ; 41 >
+    au < released ; 2011 ; Asian Music Volume 42 ; 42 >
+    au < released ; 2012 ; Asian Music Volume 43 ; 43 >
+    au < released ; 2013 ; Asian Music Volume 44 ; 44 >
+    au < manifest ; 2014 ; Asian Music Volume 45 ; 45 >
+    au < manifest ; 2015 ; Asian Music Volume 46 ; 46 >
+
+  }
+
+  {
+    title <
+      name = Cinema Journal ;
+      issn = 0009-7101 ;
+      eissn = 1527-2087 ;
+      issnl = 0009-7101
+    >
+
+    param[journal_dir] = cinema_journal
+    attr[journal_id] = cj
+
+    au < released ; 1999-2000 ; Cinema Journal Volume 39 ; 39 >
+    au < released ; 2000-2001 ; Cinema Journal Volume 40 ; 40 >
+    au < released ; 2001-2002 ; Cinema Journal Volume 41 ; 41 >
+    au < released ; 2002-2003 ; Cinema Journal Volume 42 ; 42 >
+    au < released ; 2003-2004 ; Cinema Journal Volume 43 ; 43 >
+    au < released ; 2004-2005 ; Cinema Journal Volume 44 ; 44 >
+    au < released ; 2005-2006 ; Cinema Journal Volume 45 ; 45 >
+    au < released ; 2006-2007 ; Cinema Journal Volume 46 ; 46 >
+    au < released ; 2007-2008 ; Cinema Journal Volume 47 ; 47 >
+    au < released ; 2008-2009 ; Cinema Journal Volume 48 ; 48 >
+    au < released ; 2009-2010 ; Cinema Journal Volume 49 ; 49 >
+    au < released ; 2010-2011 ; Cinema Journal Volume 50 ; 50 >
+    au < released ; 2011-2012 ; Cinema Journal Volume 51 ; 51 >
+    au < released ; 2012-2013 ; Cinema Journal Volume 52 ; 52 >
+    au < manifest ; 2013-2014 ; Cinema Journal Volume 53 ; 53 >
+    au < manifest ; 2014-2015 ; Cinema Journal Volume 54 ; 54 >
+
+  }
+
+  {
+    title <
+      name = Journal of the History of Sexuality ;
+      issn = 1043-4070 ;
+      eissn = 1535-3605 ;
+      issnl = 1043-4070
+    >
+
+    param[journal_dir] = journal_of_the_history_of_sexuality
+    attr[journal_id] = sex
+
+    au < released ; 2001 ; Journal of the History of Sexuality Volume 10 ; 10 >
+    au < released ; 2002 ; Journal of the History of Sexuality Volume 11 ; 11 >
+    au < released ; 2003 ; Journal of the History of Sexuality Volume 12 ; 12 >
+    au < released ; 2004 ; Journal of the History of Sexuality Volume 13 ; 13 >
+    au < released ; 2005 ; Journal of the History of Sexuality Volume 14 ; 14 >
+    au < released ; 2006 ; Journal of the History of Sexuality Volume 15 ; 15 >
+    au < released ; 2007 ; Journal of the History of Sexuality Volume 16 ; 16 >
+    au < released ; 2008 ; Journal of the History of Sexuality Volume 17 ; 17 >
+    au < released ; 2009 ; Journal of the History of Sexuality Volume 18 ; 18 >
+    au < released ; 2010 ; Journal of the History of Sexuality Volume 19 ; 19 >
+    au < released ; 2011 ; Journal of the History of Sexuality Volume 20 ; 20 >
+    au < released ; 2012 ; Journal of the History of Sexuality Volume 21 ; 21 >
+    au < released ; 2013 ; Journal of the History of Sexuality Volume 22 ; 22 >
+    au < manifest ; 2014 ; Journal of the History of Sexuality Volume 23 ; 23 >
+    au < manifest ; 2015 ; Journal of the History of Sexuality Volume 24 ; 24 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Individual Psychology ;
+      issn = 1522-2527 ;
+      eissn = 2332-0583 ;
+      issnl = 1522-2527
+    >
+
+    param[journal_dir] = the_journal_of_individual_psychology
+    attr[journal_id] = jip
+
+    au < manifest ; 2014 ; Journal of Individual Psychology Volume 70 ; 70 >
+    au < manifest ; 2015 ; Journal of Individual Psychology Volume 71 ; 71 >
+
+  }
+
+  {
+    title <
+      name = Latin American Music Review ;
+      issn = 0163-0350 ;
+      eissn = 1536-0199 ;
+      issnl = 0163-0350
+    >
+
+    param[journal_dir] = latin_american_music_review
+    attr[journal_id] = lat 
+
+    au < released ; 2001 ; Latin American Music Review Volume 22 ; 22 >
+    au < released ; 2002 ; Latin American Music Review Volume 23 ; 23 >
+    au < released ; 2003 ; Latin American Music Review Volume 24 ; 24 >
+    au < released ; 2004 ; Latin American Music Review Volume 25 ; 25 >
+    au < released ; 2005 ; Latin American Music Review Volume 26 ; 26 >
+    au < released ; 2006 ; Latin American Music Review Volume 27 ; 27 >
+    au < released ; 2007 ; Latin American Music Review Volume 28 ; 28 >
+    au < released ; 2008 ; Latin American Music Review Volume 29 ; 29 >
+    au < released ; 2009 ; Latin American Music Review Volume 30 ; 30 >
+    au < released ; 2010 ; Latin American Music Review Volume 31 ; 31 >
+    au < released ; 2011 ; Latin American Music Review Volume 32 ; 32 >
+    au < released ; 2012 ; Latin American Music Review Volume 33 ; 33 >
+    au < released ; 2013 ; Latin American Music Review Volume 34 ; 34 >
+    au < manifest ; 2014 ; Latin American Music Review Volume 35 ; 35 >
+    au < manifest ; 2015 ; Latin American Music Review Volume 36 ; 36 >
+
+  }
+
+  {
+    title <
+      name = Libraries & the Cultural Record ;
+      issn = 0894-8631 ;
+      eissn = 1534-7591 ;
+      issnl = 0894-8631
+    >
+
+    comment[continued_by] = Continued by Information & Culture, after volume 41, no. 2, Spring 2006 (E-ISSN: 1534-7591, Print ISSN: 0894-8631)
+
+    param[journal_dir] = libraries_and_culture
+    attr[journal_id] = lac
+
+    au < released ; 2001 ; Libraries & the Cultural Record Volume 36 ; 36 >
+    au < released ; 2002 ; Libraries & the Cultural Record Volume 37 ; 37 >
+    au < released ; 2003 ; Libraries & the Cultural Record Volume 38 ; 38 >
+    au < released ; 2004 ; Libraries & the Cultural Record Volume 39 ; 39 >
+    au < released ; 2005 ; Libraries & the Cultural Record Volume 40 ; 40 >
+    au < released ; 2006 ; Libraries & the Cultural Record Volume 41 ; 41 >
+
+  }
+
+  {
+    title <
+      name = Information & Culture: A Journal of History ;
+      issn = 2164-8034 
+    >
+
+    comment[continues] = Formerly Libraries & Culture, through volume 41, no. 2, Spring 2006 (E-ISSN: 1534-7591, Print ISSN: 0894-8631)
+
+    param[journal_dir] = libraries_and_culture
+    attr[journal_id] = lac
+
+    au < released ; 2007 ; Information & Culture: A Journal of History Volume 42 ; 42 >
+    au < released ; 2008 ; Information & Culture: A Journal of History Volume 43 ; 43 >
+    au < released ; 2009 ; Information & Culture: A Journal of History Volume 44 ; 44 >
+    au < released ; 2010 ; Information & Culture: A Journal of History Volume 45 ; 45 >
+    au < released ; 2011 ; Information & Culture: A Journal of History Volume 46 ; 46 >
+    au < released ; 2012 ; Information & Culture: A Journal of History Volume 47 ; 47 >
+    au < released ; 2013 ; Information & Culture: A Journal of History Volume 48 ; 48 >
+    au < manifest ; 2014 ; Information & Culture: A Journal of History Volume 49 ; 49 >
+    au < manifest ; 2015 ; Information & Culture: A Journal of History Volume 50 ; 50 >
+
+  }
+
+  {
+    title <
+      name = Studies in Latin American Popular Culture ;
+      issn = 0730-9139 ;
+      eissn = 2157-2941 ;
+      issnl = 0730-9139
+    >
+
+    param[journal_dir] = studies_in_latin_american_popular_culture
+    attr[journal_id] = sla
+
+    au < released ; 2010 ; Studies in Latin American Popular Culture Volume 28 ; 28 >
+    au < released ; 2011 ; Studies in Latin American Popular Culture Volume 29 ; 29 >
+    au < released ; 2012 ; Studies in Latin American Popular Culture Volume 30 ; 30 >
+    au < released ; 2013 ; Studies in Latin American Popular Culture Volume 31 ; 31 >
+    au < manifest ; 2014 ; Studies in Latin American Popular Culture Volume 32 ; 32 >
+    au < manifest ; 2015 ; Studies in Latin American Popular Culture Volume 33 ; 33 >
+
+  }
+
+  {
+    title <
+      name = Texas Studies in Literature and Language ;
+      issn = 0040-4691 ;
+      eissn = 1534-7303 ;
+      issnl = 0040-4691
+    >
+
+    param[journal_dir] = texas_studies_in_literature_and_language
+    attr[journal_id] = tsl
+
+    au < released ; 2001 ; Texas Studies in Literature and Language Volume 43 ; 43 >
+    au < released ; 2002 ; Texas Studies in Literature and Language Volume 44 ; 44 >
+    au < released ; 2003 ; Texas Studies in Literature and Language Volume 45 ; 45 >
+    au < released ; 2004 ; Texas Studies in Literature and Language Volume 46 ; 46 >
+    au < released ; 2005 ; Texas Studies in Literature and Language Volume 47 ; 47 >
+    au < released ; 2006 ; Texas Studies in Literature and Language Volume 48 ; 48 >
+    au < released ; 2007 ; Texas Studies in Literature and Language Volume 49 ; 49 >
+    au < released ; 2008 ; Texas Studies in Literature and Language Volume 50 ; 50 >
+    au < released ; 2009 ; Texas Studies in Literature and Language Volume 51 ; 51 >
+    au < released ; 2010 ; Texas Studies in Literature and Language Volume 52 ; 52 >
+    au < released ; 2011 ; Texas Studies in Literature and Language Volume 53 ; 53 >
+    au < released ; 2012 ; Texas Studies in Literature and Language Volume 54 ; 54 >
+    au < released ; 2013 ; Texas Studies in Literature and Language Volume 55 ; 55 >
+    au < manifest ; 2014 ; Texas Studies in Literature and Language Volume 56 ; 56 >
+    au < manifest ; 2015 ; Texas Studies in Literature and Language Volume 57 ; 57 >
+
+  }
+
+  {
+    title <
+      name = The Velvet Light Trap ;
+      issn = 0149-1830 ;
+      eissn = 1542-4251 ;
+      issnl = 0149-1830
+    >
+
+    param[journal_dir] = the_velvet_light_trap
+    attr[journal_id] = vlt
+
+    au < released ; 2003 ; The Velvet Light Trap Volume 51 ; 51 >
+    au < released ; 2003 ; The Velvet Light Trap Volume 52 ; 52 >
+    au < released ; 2004 ; The Velvet Light Trap Volume 53 ; 53 >
+    au < released ; 2004 ; The Velvet Light Trap Volume 54 ; 54 >
+    au < released ; 2005 ; The Velvet Light Trap Volume 55 ; 55 >
+    au < released ; 2005 ; The Velvet Light Trap Volume 56 ; 56 >
+    au < released ; 2006 ; The Velvet Light Trap Volume 57 ; 57 >
+    au < released ; 2006 ; The Velvet Light Trap Volume 58 ; 58 >
+    au < released ; 2007 ; The Velvet Light Trap Volume 59 ; 59 >
+    au < released ; 2007 ; The Velvet Light Trap Volume 60 ; 60 >
+    au < released ; 2008 ; The Velvet Light Trap Volume 61 ; 61 >
+    au < released ; 2008 ; The Velvet Light Trap Volume 62 ; 62 >
+    au < released ; 2009 ; The Velvet Light Trap Volume 63 ; 63 >
+    au < released ; 2009 ; The Velvet Light Trap Number 64 ; 64 >
+    au < released ; 2010 ; The Velvet Light Trap Number 65 ; 65 >
+    au < released ; 2010 ; The Velvet Light Trap Number 66 ; 66 >
+    au < released ; 2011 ; The Velvet Light Trap Number 67 ; 67 >
+    au < released ; 2011 ; The Velvet Light Trap Number 68 ; 68 >
+    au < released ; 2012 ; The Velvet Light Trap Number 69 ; 69 >
+    au < released ; 2012 ; The Velvet Light Trap Number 70 ; 70 >
+    au < released ; 2013 ; The Velvet Light Trap Number 71 ; 71 >
+    au < released ; 2013 ; The Velvet Light Trap Number 72 ; 72 >
+    au < manifest ; 2014 ; The Velvet Light Trap Number 73 ; 73 >
+    au < manifest ; 2014 ; The Velvet Light Trap Number 74 ; 74 >
+    au < manifest ; 2015 ; The Velvet Light Trap Number 75 ; 75 >
+    au < expected ; 2015 ; The Velvet Light Trap Number 76 ; 76 >
+
+  }
+
+}
