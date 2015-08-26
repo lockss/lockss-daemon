@@ -3144,7 +3144,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
       au < crawling ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
       au < crawling ; exists ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
-      au < exists ; exists ; 2011 ; Chiropractic & Osteopathy Volume 19 ; 19 >
+      au < manifest ; exists ; 2011 ; Chiropractic & Osteopathy Volume 19 ; 19 >
 
       }
     }
@@ -6130,7 +6130,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2008 ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; Osteopathic Medicine and Primary Care Volume 3 ; 3 >
       au < finished ; crawling ; 2010 ; Osteopathic Medicine and Primary Care Volume 4 ; 4 >
-      au < exists ; exists ; 2011 ; Osteopathic Medicine and Primary Care Volume 5 ; 5 >
+      au < manifest ; exists ; 2011 ; Osteopathic Medicine and Primary Care Volume 5 ; 5 >
 
     }
 

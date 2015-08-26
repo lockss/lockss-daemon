@@ -18,7 +18,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = 2002-2013 content on http://classic.ncmedicaljournal.com/
 
-    au < exists ; exists ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < manifest ; exists ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
     au < manifest ; exists ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
 
   }
