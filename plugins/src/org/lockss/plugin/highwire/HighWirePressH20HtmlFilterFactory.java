@@ -66,10 +66,10 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
     	// Publisher adding meta tags often
-        new TagNameFilter("head"),
-        new TagNameFilter("script"),
-        new TagNameFilter("noscript"),
-        HtmlNodeFilters.comment(),        
+        HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("noscript"),
+        HtmlNodeFilters.comment(),
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "col-2"),
@@ -104,6 +104,9 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // e.g. PNAS (optional 'sid' query arg in URLs)
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-svcs"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-cit"),
+        // PNAS (aggressive filtering)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "drop_menu"),
         // e.g. BMJ (optional 'sid' query arg in URLs)
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-rel"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-soc"),
