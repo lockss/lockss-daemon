@@ -2605,7 +2605,7 @@
     au < zapped ; finished ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < zapped ; finished ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
     au < crawling ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
-    au < wanted ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
+    au < crawling ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
     au < frozen ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
     au < crawling ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 >
@@ -3544,7 +3544,7 @@
     >
     param[journal_id] = oncsis
     
-    au < manifest ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
+    au < crawling ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
     au < frozen ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
     au < crawling ; exists ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 >
     au < manifest ; exists ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 >
@@ -3944,9 +3944,9 @@
     
     param[journal_id] = tp
 
-    au < manifest ; exists ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 >
-    au < manifest ; exists ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 >
+    au < crawling ; exists ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 >
+    au < crawling ; exists ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 >
+    au < crawling ; exists ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 >
     au < crawling ; exists ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 >
     au < manifest ; exists ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 >
 
