@@ -4089,7 +4089,7 @@
     au < finished ; crawling ; 2012 ; Chemical Senses Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Chemical Senses Volume 38 ; 38 ; >
     au < crawling ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
-    au < testing ; exists ; 2015 ; Chemical Senses Volume 40 ; 40 ; >
+    au < ready ; exists ; 2015 ; Chemical Senses Volume 40 ; 40 ; >
 
     }
 
@@ -4241,7 +4241,7 @@
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Chinese Journal of International Politics Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
-    au < testing ; exists ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
 
     }
 
@@ -4806,7 +4806,7 @@
     param[base_url] = http://dsh.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
 
   }
 
@@ -4910,7 +4910,7 @@
     au < finished ; frozen ; 2012 ; DNA Research Volume 19 ; 19 ; >
     au < crawling ; exists ; 2013 ; DNA Research Volume 20 ; 20 ; >
     au < crawling ; exists ; 2014 ; DNA Research Volume 21 ; 21 ; >
-    au < testing ; exists ; 2015 ; DNA Research Volume 22 ; 22 ; >
+    au < ready ; exists ; 2015 ; DNA Research Volume 22 ; 22 ; >
 
     }
 
@@ -4982,7 +4982,7 @@
     au < finished ; crawling ; 2012 ; Early Music Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Early Music Volume 41 ; 41 ; >
     au < crawling ; exists ; 2014 ; Early Music Volume 42 ; 42 ; >
-    au < testing ; exists ; 2015 ; Early Music Volume 43 ; 43 ; >
+    au < ready ; exists ; 2015 ; Early Music Volume 43 ; 43 ; >
 
     }
 
@@ -5029,7 +5029,7 @@
     au < crawling ; exists ; 2012 ; Economic Policy Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Economic Policy Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; Economic Policy Volume 29 ; 29 ; >
-    au < testing ; exists ; 2015 ; Economic Policy Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; Economic Policy Volume 30 ; 30 ; >
 
   }
 
@@ -5108,7 +5108,7 @@
     au < finished ; frozen ; 2012 ; English: Journal of the English Association Volume 61 ; 61 ; >
     au < frozen ; exists ; 2013 ; English: Journal of the English Association Volume 62 ; 62 ; >
     au < crawling ; exists ; 2014 ; English: Journal of the English Association Volume 63 ; 63 ; >
-    au < testing ; exists ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ; >
+    au < ready ; exists ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ; >
 
   }
 
@@ -5355,7 +5355,7 @@
     au < finished ; crawling ; 2012 ; ELT Journal Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; ELT Journal Volume 67 ; 67 ; >
     au < crawling ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
-    au < testing ; exists ; 2015 ; ELT Journal Volume 69 ; 69 ; >
+    au < ready ; exists ; 2015 ; ELT Journal Volume 69 ; 69 ; >
 
     }
 
@@ -5444,7 +5444,7 @@
     au < crawling ; exists ; 2012 ; Environmental Entomology Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Environmental Entomology Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; Environmental Entomology Volume 43 ; 43 ; >
-    au < testing ; exists ; 2015 ; Environmental Entomology Volume 44 ; 44 ; >
+    au < ready ; exists ; 2015 ; Environmental Entomology Volume 44 ; 44 ; >
 
   }
 
@@ -5707,7 +5707,7 @@
     au < finished ; frozen ; 2012 ; Essays in Criticism Volume 62 ; 62 ; >
     au < frozen ; exists ; 2013 ; Essays in Criticism Volume 63 ; 63 ; >
     au < crawling ; exists ; 2014 ; Essays in Criticism Volume 64 ; 64 ; >
-    au < testing ; exists ; 2015 ; Essays in Criticism Volume 65 ; 65 ; >
+    au < ready ; exists ; 2015 ; Essays in Criticism Volume 65 ; 65 ; >
 
     }
 
@@ -5779,7 +5779,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Europace Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Europace Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; Europace Volume 16 ; 16 ; >
-    au < testing ; exists ; 2015 ; Europace Volume 17 ; 17 ; >
+    au < ready ; exists ; 2015 ; Europace Volume 17 ; 17 ; >
 
     }
 
@@ -5921,7 +5921,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
     au < doesNotExist ; doesNotExist ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 ; >
-    au < testing ; exists ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 ; >
+    au < ready ; exists ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 ; >
 
     }
 
