@@ -179,7 +179,7 @@
  
     param[journal_id] = durk
     param[journal_issn] = 1362-024X
-    comment[0] = Apparently stopped publishing as of Oct 2014.
+    comment[0] = Apparently stopped publishing as of 2013.
       
     au < manifest ; exists ; 2003 ; Durkheimian Studies Volume 9 ; 9 >
     au < manifest ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 >
@@ -191,9 +191,7 @@
     au < manifest ; exists ; 2010 ; Durkheimian Studies Volume 16 ; 16 >
     au < crawling ; exists ; 2011 ; Durkheimian Studies Volume 17 ; 17 >
     au < crawling ; exists ; 2012 ; Durkheimian Studies Volume 18 ; 18 >
-    au < manifest ; exists ; 2013 ; Durkheimian Studies Volume 19 ; 19 >
-    au < exists ; exists ; 2014 ; Durkheimian Studies Volume 20 ; 20 >
-    au < expected ; exists ; 2015 ; Durkheimian Studies Volume 21 ; 21 >
+    au < crawling ; exists ; 2013 ; Durkheimian Studies Volume 19 ; 19 >
     
   }
 
