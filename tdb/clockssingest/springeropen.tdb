@@ -242,7 +242,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 >
-        au < testing ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 ; 2 >
 
     }
 
@@ -288,11 +288,12 @@
         param[base_url] = http://www.clintransmed.com/
         param[journal_issn] = 2001-1326 
         comment[platform] = BioMedCentralPlugin
+        #notReady - PD-1535
   
         au < manifest ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; Clinical and Translational Medicine Volume 4 ; 4 >
+        au < notReady ; exists ; 2015 ; Clinical and Translational Medicine Volume 4 ; 4 >
   
     }
   
@@ -1457,8 +1458,9 @@
         param[base_url] = http://www.jeo-esska.com/
         param[journal_issn] = 2197-1153 
         comment[platform] = BioMedCentralPlugin
+        #notReady - PD-1535
   
-        au < testing ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
+        au < notReady ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
         au < manifest ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
   
     }
@@ -1539,7 +1541,7 @@
   
         au < manifest ; exists ; 2012 ; Journal of Innovation and Entrepreneurship Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Journal of Innovation and Entrepreneurship Volume 2 ; 2 >
-        au < testing ; exists ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 >
+        au < ready ; exists ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 >
         au < manifest ; exists ; 2015 ; Journal of Innovation and Entrepreneurship Volume 4 ; 4 >
   
     }
@@ -1594,7 +1596,7 @@
         au < manifest ; exists ; 2011 ; Journal of Mathematical Neuroscience Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Journal of Mathematical Neuroscience Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Mathematical Neuroscience Volume 3 ; 3 >
-        au < testing ; exists ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
+        au < ready ; exists ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
         au < manifest ; exists ; 2015 ; Journal of Mathematical Neuroscience Volume 5 ; 5 >
   
     }
