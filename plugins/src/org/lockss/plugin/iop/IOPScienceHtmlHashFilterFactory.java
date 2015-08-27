@@ -124,6 +124,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("p", "class", "viewingLinks"),
         // <dl class="videoList"> PACS & Subjects appear, disappear, reappear
         HtmlNodeFilters.tagWithAttribute("dl", "class", "videoList"),
+        // <a title="CrossRef" can appear later
+        HtmlNodeFilters.tagWithAttribute("a", "title", "CrossRef"),
         // <div class=" metrics-panel">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "metrics-panel"),
         // <dd> <p> Total article downloads: <strong>1193</strong> </p>...</dd>

@@ -46,7 +46,7 @@ public class IOPScienceHttpResponseHandler implements CacheResultHandler {
   // these URLs are invalid and should not cause fatal errors
   // Host string is one alpha + 0 or more chars dot 2 or more chars dot 2 or more chars (excluding slash)
   protected static Pattern PAT_MAL_URL =
-      Pattern.compile("^https?://[^/]+/.+/[a-z]+[^./]*[.][^/]{2,}[.][^/]{2,}");
+      Pattern.compile("^https?://[^/]+/.+/[a-z]+[^./]*[.][^/.]{2,}[.][^/.]{2,}/?.*");
   
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
@@ -61,8 +61,9 @@ public class IOPScienceHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 403:
         logger.debug2("403");
-        if (mat.matches()) {
+        if (mat.matches() || url.contains("%20")) {
           // http://iopscience.iop.org/0143-0807/35/4/045020/www.imcce.fr/langues/...
+          // http://iopscience.iop.org/0026-1394/51/5/361/media/Data%20summary.xlsx
           return new CacheException.MalformedURLException("403 Forbidden (non-fatal)");
         }
         else {
@@ -72,10 +73,10 @@ public class IOPScienceHttpResponseHandler implements CacheResultHandler {
         logger.debug2("503");
         if (mat.matches()) {
           // http://iopscience.iop.org/0264-9381/31/21/215007/www.bu.edu.eg
-          return new CacheException.MalformedURLException("503 Service Unavailable Error (non-fatal)");
+          return new CacheException.MalformedURLException("503 Service Unavailable (non-fatal)");
         }
         else {
-          return new CacheException.RetrySameUrlException("503 Service Unavailable Error");
+          return new CacheException.RetrySameUrlException("503 Service Unavailable");
         }
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
