@@ -47,7 +47,7 @@
     au < ready ; exists ; 2012 ; 2012 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 47 ; 47 >
     au < ready ; exists ; 2013 ; 2013 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 48 ; 48 >
     au < ready ; exists ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 >
-    au < testing ; exists ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 >
+    au < ready ; exists ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 >
 
   }
 
@@ -101,8 +101,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 >
     au < notReady ; exists ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 >
     au < notReady ; exists ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 >
-    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 >
-    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 >
+    au < ready ; exists ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 >
+    au < ready ; exists ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 >
 
   }
 
@@ -130,8 +130,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Ernährungsmedizin Volume 36 ; 36 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 37 ; 37 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 38 ; 38 >
-    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 >
-    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 >
+    au < ready ; exists ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 >
+    au < ready ; exists ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 >
 
   }
 
@@ -148,8 +148,8 @@
 
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Kardiologie Volume 1 ; 1 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 >
-    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 >
-    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 >
+    au < ready ; exists ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 >
+    au < ready ; exists ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 >
 
   }
 
@@ -198,8 +198,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Neurologie Volume 2012 ; 39 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
-    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
-    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Neurologie Volume 2015 ; 42 >
+    au < ready ; exists ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
+    au < ready ; exists ; 2015 ; 2015 ; Aktuelle Neurologie Volume 2015 ; 42 >
 
   }
 
@@ -246,8 +246,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Rheumatologie Volume 38 ; 38 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 >
-    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 >
-    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 >
+    au < ready ; exists ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 >
+    au < ready ; exists ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 >
 
   }
 
@@ -326,7 +326,7 @@
     au < ready ; exists ; 2011 ; 2011 ; Aktuelle Urologie Volume 2011 ; 42 >
     au < ready ; exists ; 2012 ; 2012 ; Aktuelle Urologie Volume 2012 ; 43 >
     au < ready ; exists ; 2013 ; 2013 ; Aktuelle Urologie Volume 2013 ; 44 >
-    au < testing ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
+    au < ready ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
     au < testing ; exists ; 2015 ; 2015 ; Aktuelle Urologie Volume 2015 ; 46 >
 
    }
@@ -386,8 +386,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Allgemeine Homöopathische Zeitung Volume 2011 ; 256 >
     au < ready ; exists ; 2012 ; 2012 ; Allgemeine Homöopathische Zeitung Volume 2012 ; 257 >
     au < ready ; exists ; 2013 ; 2013 ; Allgemeine Homöopathische Zeitung Volume 2013 ; 258 >
-    au < testing ; exists ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 2014 ; 259 >
-    au < testing ; exists ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 2015 ; 260 >
+    au < ready ; exists ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 2014 ; 259 >
+    au < ready ; exists ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 2015 ; 260 >
 
     }
 
@@ -409,7 +409,7 @@
     au < ready ; exists ; 2011 ; 2011 ; Allgemein- und Viszeralchirurgie up2date Volume 2011 ; 5 >
     au < ready ; exists ; 2012 ; 2012 ; Allgemein- und Viszeralchirurgie up2date Volume 2012 ; 6 >
     au < ready ; exists ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 >
-    au < testing ; exists ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
+    au < ready ; exists ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
     au < testing ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 >
 
    }
@@ -456,7 +456,7 @@
     au < ready ; exists ; 2011 ; 2011 ; American Journal of Perinatology Volume 2011 ; 28 >
     au < ready ; exists ; 2012 ; 2012 ; American Journal of Perinatology Volume 2012 ; 29 >
     au < ready ; exists ; 2013 ; 2013 ; American Journal of Perinatology Volume 2013 ; 30 >
-    au < testing ; exists ; 2014 ; 2014 ; American Journal of Perinatology Volume 2014 ; 31 >
+    au < ready ; exists ; 2014 ; 2014 ; American Journal of Perinatology Volume 2014 ; 31 >
     au < testing ; exists ; 2015 ; 2015 ; American Journal of Perinatology Volume 2015 ; 32 >
 
    }
@@ -490,7 +490,7 @@
     >
     param[journal_id] = 10.1055/s-00028832
 
-   au < testing ; exists ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2015 ; 1 >
+   au < ready ; exists ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2015 ; 1 >
 
    }
 
@@ -572,7 +572,7 @@
     au < ready ; exists ; 2012 ; 2012 ; Augenheilkunde up2date Volume 2012 ; 2 >
     au < ready ; exists ; 2013 ; 2013 ; Augenheilkunde up2date Volume 2013 ; 3 >
     au < ready ; exists ; 2014 ; 2014 ; Augenheilkunde up2date Volume 2014 ; 4 >
-    au < testing ; exists ; 2015 ; 2015 ; Augenheilkunde up2date Volume 2015 ; 5 >
+    au < ready ; exists ; 2015 ; 2015 ; Augenheilkunde up2date Volume 2015 ; 5 >
 
   }
 
@@ -687,7 +687,7 @@
     au < ready ; exists ; 2012 ; 2012 ; Clinics in Colon and Rectal Surgery Volume 2012 ; 25 >
     au < ready ; exists ; 2013 ; 2013 ; Clinics in Colon and Rectal Surgery Volume 2013 ;026 >
     au < ready ; exists ; 2014 ; 2014 ; Clinics in Colon and Rectal Surgery Volume 2014 ;027 >
-    au < manifest ; exists ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 2015 ;028 >
+    au < testing ; exists ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 2015 ;028 >
 
   }
 
@@ -710,7 +710,7 @@
     au < ready ; exists ; 2012 ; 2012 ; Craniomaxillofacial Trauma & Reconstruction Volume 2012 ; 5 >
     au < ready ; exists ; 2013 ; 2013 ; Craniomaxillofacial Trauma & Reconstruction Volume 2013 ; 6 >
     au < ready ; exists ; 2014 ; 2014 ; Craniomaxillofacial Trauma & Reconstruction Volume 2014 ; 7 >
-    au < manifest ; exists ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 2015 ; 8 >
+    au < testing ; exists ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 2015 ; 8 >
 
   }
 
@@ -751,7 +751,7 @@
    au < ready ; exists ; 2012 ; 2012 ; Deutsche Heilpraktiker-Zeitschrift Volume 2012 ; 7 >
    au < ready ; exists ; 2013 ; 2013 ; Deutsche Heilpraktiker-Zeitschrift Volume 2013 ; 8 >
    au < ready ; exists ; 2014 ; 2014 ; Deutsche Heilpraktiker-Zeitschrift Volume 2014 ; 9 >
-   au < manifest ; exists ; 2015 ; 2015 ; Deutsche Heilpraktiker-Zeitschrift Volume 2015 ; 10 >
+   au < testing ; exists ; 2015 ; 2015 ; Deutsche Heilpraktiker-Zeitschrift Volume 2015 ; 10 >
 
   }
 
@@ -798,7 +798,7 @@
    au < ready ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Onkologie Volume 2012 ; 44 >
    au < ready ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Onkologie Volume 2013 ; 45 >
    au < ready ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Onkologie Volume 2014 ; 46 >
-   au < manifest ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Onkologie Volume 2015 ; 47 >
+   au < testing ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Onkologie Volume 2015 ; 47 >
 
   }
 
@@ -836,7 +836,7 @@
    au < ready ; exists ; 2012 ; 2012 ; Diabetes aktuell Volume 2012 ; 10 >
    au < ready ; exists ; 2013 ; 2013 ; Diabetes aktuell Volume 2013 ; 11 >
    au < ready ; exists ; 2014 ; 2014 ; Diabetes aktuell Volume 2014 ; 12 >
-   au < manifest ; exists ; 2015 ; 2015 ; Diabetes aktuell Volume 2015 ; 13 >
+   au < testing ; exists ; 2015 ; 2015 ; Diabetes aktuell Volume 2015 ; 13 >
 
   }
 
@@ -860,7 +860,7 @@
    au < ready ; exists ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 2012 ; 7 >
    au < ready ; exists ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 >
    au < ready ; exists ; 2014 ; 2014 ; Diabetologie und Stoffwechsel Volume 2014 ; 9 >
-   au < manifest ; exists ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 2015 ; 10 >
+   au < testing ; exists ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 2015 ; 10 >
 
   }
 
@@ -883,7 +883,7 @@
    au < ready ; exists ; 2012 ; 2012 ; Dialyse aktuell Volume 2012 ; 7 >
    au < ready ; exists ; 2013 ; 2013 ; Dialyse aktuell Volume 2013 ; 8 >
    au < ready ; exists ; 2014 ; 2014 ; Dialyse aktuell Volume 2014 ; 9 >
-   au < manifest ; exists ; 2015 ; 2015 ; Dialyse aktuell Volume 2015 ; 10 >
+   au < testing ; exists ; 2015 ; 2015 ; Dialyse aktuell Volume 2015 ; 10 >
 
   }
 
@@ -1035,10 +1035,10 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; DMW - Deutsche Medizinische Wochenschrift Volume 2009 ; 135 >
    au < manifest ; exists ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 2010 ; 136 >
    au < manifest ; exists ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 2011 ; 137 >
-   au < manifest ; exists ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 >
-   au < manifest ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 >
-   au < manifest ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 >
-   au < manifest ; exists ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 >
+   au < testing ; exists ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 >
+   au < testing ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 >
+   au < testing ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 >
+   au < testing ; exists ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 >
 
   }
 
@@ -1063,10 +1063,10 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 2009 ; 7 >
    au < manifest ; exists ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 2010 ; 8 >
    au < manifest ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 2011 ; 9 >
-   au < manifest ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
-   au < manifest ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
-   au < manifest ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
-   au < manifest ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 2015 ; 13 >
+   au < testing ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
+   au < testing ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
+   au < testing ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
+   au < testing ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 2015 ; 13 >
 
   }
 
@@ -1087,10 +1087,10 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endo-Praxis Volume 2009 ; 25 >
    au < manifest ; exists ; 2010 ; 2010 ; Endo-Praxis Volume 2010 ; 26 >
    au < manifest ; exists ; 2011 ; 2011 ; Endo-Praxis Volume 2011 ; 27 >
-   au < manifest ; exists ; 2012 ; 2012 ; Endo-Praxis Volume 2012 ; 28 >
-   au < manifest ; exists ; 2013 ; 2013 ; Endo-Praxis Volume 2013 ; 29 >
-   au < manifest ; exists ; 2014 ; 2014 ; Endo-Praxis Volume 2014 ; 30 >
-   au < manifest ; exists ; 2015 ; 2015 ; Endo-Praxis Volume 2015 ; 31 >
+   au < testing ; exists ; 2012 ; 2012 ; Endo-Praxis Volume 2012 ; 28 >
+   au < testing ; exists ; 2013 ; 2013 ; Endo-Praxis Volume 2013 ; 29 >
+   au < testing ; exists ; 2014 ; 2014 ; Endo-Praxis Volume 2014 ; 30 >
+   au < testing ; exists ; 2015 ; 2015 ; Endo-Praxis Volume 2015 ; 31 >
 
   }
 
@@ -1150,10 +1150,10 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endoscopy Volume 2009 ; 41 >
    au < manifest ; exists ; 2010 ; 2010 ; Endoscopy Volume 2010 ; 42 >
    au < manifest ; exists ; 2011 ; 2011 ; Endoscopy Volume 2011 ; 43 >
-   au < manifest ; exists ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 >
-   au < manifest ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 >
-   au < manifest ; exists ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 46 >
-   au < manifest ; exists ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 >
+   au < testing ; exists ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 >
+   au < testing ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 >
+   au < testing ; exists ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 46 >
+   au < testing ; exists ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 >
 
   }
 
@@ -1167,8 +1167,8 @@
     param[journal_id] = 10.1055/s-00025476
     comment[years] = 2013-current
 
-    au < manifest ; exists ; 2013 ; 2013 ; Endoscopy international open Volume 1 ; 1 >
-    au < manifest ; exists ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 >
+    au < testing ; exists ; 2013 ; 2013 ; Endoscopy international open Volume 1 ; 1 >
+    au < testing ; exists ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 >
 
   }
 
@@ -1193,10 +1193,10 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endoscopy heute Volume 2009 ; 22 >
    au < manifest ; exists ; 2010 ; 2010 ; Endoscopy heute Volume 2010 ; 23 >
    au < manifest ; exists ; 2011 ; 2011 ; Endoscopy heute Volume 2011 ; 24 >
-   au < manifest ; exists ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 25 >
-   au < manifest ; exists ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 26 >
-   au < manifest ; exists ; 2014 ; 2014 ; Endoscopy heute Volume 2014 ; 27 >
-   au < manifest ; exists ; 2015 ; 2015 ; Endoscopy heute Volume 2015 ; 28 >
+   au < testing ; exists ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 25 >
+   au < testing ; exists ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 26 >
+   au < testing ; exists ; 2014 ; 2014 ; Endoscopy heute Volume 2014 ; 27 >
+   au < testing ; exists ; 2015 ; 2015 ; Endoscopy heute Volume 2015 ; 28 >
 
   }
 
@@ -1223,10 +1223,10 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 2009 ; 58 >
    au < manifest ; exists ; 2010 ; 2010 ; Erfahrungsheilkunde Volume 2010 ; 59 >
    au < manifest ; exists ; 2011 ; 2011 ; Erfahrungsheilkunde Volume 2011 ; 60 >
-   au < manifest ; exists ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 2012 ; 61 >
-   au < manifest ; exists ; 2013 ; 2013 ; Erfahrungsheilkunde Volume 2013 ; 62 >
-   au < manifest ; exists ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 2014 ; 63 >
-   au < manifest ; exists ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 2015 ; 64 >
+   au < testing ; exists ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 2012 ; 61 >
+   au < testing ; exists ; 2013 ; 2013 ; Erfahrungsheilkunde Volume 2013 ; 62 >
+   au < testing ; exists ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 2014 ; 63 >
+   au < testing ; exists ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 2015 ; 64 >
 
   }
 
