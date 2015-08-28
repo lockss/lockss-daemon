@@ -294,22 +294,22 @@
 
       param[journal_id] = edgallpoerev
 
-      au < manifest ; 2000 ; The Edgar Allen Poe Review Volume 1 ; 1 >
-      au < manifest ; 2001 ; The Edgar Allen Poe Review Volume 2 ; 2 >
-      au < manifest ; 2002 ; The Edgar Allen Poe Review Volume 3 ; 3 >
-      au < manifest ; 2003 ; The Edgar Allen Poe Review Volume 4 ; 4 >
-      au < manifest ; 2004 ; The Edgar Allen Poe Review Volume 5 ; 5 >
-      au < manifest ; 2005 ; The Edgar Allen Poe Review Volume 6 ; 6 >
-      au < manifest ; 2006 ; The Edgar Allen Poe Review Volume 7 ; 7 >
-      au < manifest ; 2007 ; The Edgar Allen Poe Review Volume 8 ; 8 >
-      au < manifest ; 2008 ; The Edgar Allen Poe Review Volume 9 ; 9 >
-      au < manifest ; 2009 ; The Edgar Allen Poe Review Volume 10 ; 10 >
-      au < manifest ; 2010 ; The Edgar Allen Poe Review Volume 11 ; 11 >
-      au < manifest ; 2011 ; The Edgar Allen Poe Review Volume 12 ; 12 >
-      au < manifest ; 2012 ; The Edgar Allen Poe Review Volume 13 ; 13 >
-      au < manifest ; 2013 ; The Edgar Allen Poe Review Volume 14 ; 14 >
-      au < manifest ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
-      au < manifest ; 2015 ; The Edgar Allen Poe Review Volume 16 ; 16 >
+      au < manifest ; 2000 ; The Edgar Allan Poe Review Volume 1 ; 1 >
+      au < manifest ; 2001 ; The Edgar Allan Poe Review Volume 2 ; 2 >
+      au < manifest ; 2002 ; The Edgar Allan Poe Review Volume 3 ; 3 >
+      au < manifest ; 2003 ; The Edgar Allan Poe Review Volume 4 ; 4 >
+      au < manifest ; 2004 ; The Edgar Allan Poe Review Volume 5 ; 5 >
+      au < manifest ; 2005 ; The Edgar Allan Poe Review Volume 6 ; 6 >
+      au < manifest ; 2006 ; The Edgar Allan Poe Review Volume 7 ; 7 >
+      au < manifest ; 2007 ; The Edgar Allan Poe Review Volume 8 ; 8 >
+      au < manifest ; 2008 ; The Edgar Allan Poe Review Volume 9 ; 9 >
+      au < manifest ; 2009 ; The Edgar Allan Poe Review Volume 10 ; 10 >
+      au < manifest ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 11 >
+      au < manifest ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 12 >
+      au < manifest ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 13 >
+      au < manifest ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
+      au < manifest ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 15 >
+      au < manifest ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 16 >
       
     }
 
@@ -574,8 +574,9 @@
       param[journal_id] = jafrireli
 
       au < manifest ; 2013 ; Journal of Africana Religions Volume 1 ; 1 >
-      au < manifest ; 2014 ; Journal of Africana Religions Volume 2 ; 2 >
-      au < manifest ; 2015 ; Journal of Africana Religions Volume 3 ; 3 >
+      au < manifest ; 2013 ; Journal of Africana Religions Volume 2 ; 2 >
+      au < manifest ; 2014 ; Journal of Africana Religions Volume 3 ; 3 >
+      au < manifest ; 2015 ; Journal of Africana Religions Volume 4 ; 4 >
      
     }
 
@@ -1718,41 +1719,41 @@
       param[journal_id] = shaw
       comment[continues] = 0037-3354
 
-      au < manifest ; 1981 ; SHAW Volume 1 ; 1 >
-      au < manifest ; 1982 ; SHAW Volume 2 ; 2 >
-      au < manifest ; 1983 ; SHAW Volume 3 ; 3 >
-      au < manifest ; 1984 ; SHAW Volume 4 ; 4 >
-      au < manifest ; 1985 ; SHAW Volume 5 ; 5 >
-      au < manifest ; 1986 ; SHAW Volume 6 ; 6 >
-      au < manifest ; 1987 ; SHAW Volume 7 ; 7 >
-      au < manifest ; 1988 ; SHAW Volume 8 ; 8 >
-      au < manifest ; 1989 ; SHAW Volume 9 ; 9 >
-      au < manifest ; 1990 ; SHAW Volume 10 ; 10 >
-      au < manifest ; 1991 ; SHAW Volume 11 ; 11 >
-      au < manifest ; 1992 ; SHAW Volume 12 ; 12 >
-      au < manifest ; 1993 ; SHAW Volume 13 ; 13 >
-      au < manifest ; 1994 ; SHAW Volume 14 ; 14 >
-      au < manifest ; 1995 ; SHAW Volume 15 ; 15 >
-      au < manifest ; 1996 ; SHAW Volume 16 ; 16 >
-      au < manifest ; 1997 ; SHAW Volume 17 ; 17 >
-      au < manifest ; 1998 ; SHAW Volume 18 ; 18 >
-      au < manifest ; 1999 ; SHAW Volume 19 ; 19 >
-      au < manifest ; 2000 ; SHAW Volume 20 ; 20 >
-      au < manifest ; 2001 ; SHAW Volume 21 ; 21 >
-      au < manifest ; 2002 ; SHAW Volume 22 ; 22 >
-      au < manifest ; 2003 ; SHAW Volume 23 ; 23 >
-      au < manifest ; 2004 ; SHAW Volume 24 ; 24 >
-      au < manifest ; 2005 ; SHAW Volume 25 ; 25 >
-      au < manifest ; 2006 ; SHAW Volume 26 ; 26 >
-      au < manifest ; 2007 ; SHAW Volume 27 ; 27 >
-      au < manifest ; 2008 ; SHAW Volume 28 ; 28 >
-      au < manifest ; 2009 ; SHAW Volume 29 ; 29 >
-      au < manifest ; 2010 ; SHAW Volume 30 ; 30 >
-      au < manifest ; 2011 ; SHAW Volume 31 ; 31 >
-      au < manifest ; 2012 ; SHAW Volume 32 ; 32 >
-      au < manifest ; 2013 ; SHAW Volume 33 ; 33 >
-      au < manifest ; 2014 ; SHAW Volume 34 ; 34 >
-      au < manifest ; 2015 ; SHAW Volume 35 ; 35 >
+      au < manifest ; 1981 ; SHAW The Annual of Bernard Shaw Studies Volume 1 ; 1 >
+      au < manifest ; 1982 ; SHAW The Annual of Bernard Shaw Studies Volume 2 ; 2 >
+      au < manifest ; 1983 ; SHAW The Annual of Bernard Shaw Studies Volume 3 ; 3 >
+      au < manifest ; 1984 ; SHAW The Annual of Bernard Shaw Studies Volume 4 ; 4 >
+      au < manifest ; 1985 ; SHAW The Annual of Bernard Shaw Studies Volume 5 ; 5 >
+      au < manifest ; 1986 ; SHAW The Annual of Bernard Shaw Studies Volume 6 ; 6 >
+      au < manifest ; 1987 ; SHAW The Annual of Bernard Shaw Studies Volume 7 ; 7 >
+      au < manifest ; 1988 ; SHAW The Annual of Bernard Shaw Studies Volume 8 ; 8 >
+      au < manifest ; 1989 ; SHAW The Annual of Bernard Shaw Studies Volume 9 ; 9 >
+      au < manifest ; 1990 ; SHAW The Annual of Bernard Shaw Studies Volume 10 ; 10 >
+      au < manifest ; 1991 ; SHAW The Annual of Bernard Shaw Studies Volume 11 ; 11 >
+      au < manifest ; 1992 ; SHAW The Annual of Bernard Shaw Studies Volume 12 ; 12 >
+      au < manifest ; 1993 ; SHAW The Annual of Bernard Shaw Studies Volume 13 ; 13 >
+      au < manifest ; 1994 ; SHAW The Annual of Bernard Shaw Studies Volume 14 ; 14 >
+      au < manifest ; 1995 ; SHAW The Annual of Bernard Shaw Studies Volume 15 ; 15 >
+      au < manifest ; 1996 ; SHAW The Annual of Bernard Shaw Studies Volume 16 ; 16 >
+      au < manifest ; 1997 ; SHAW The Annual of Bernard Shaw Studies Volume 17 ; 17 >
+      au < manifest ; 1998 ; SHAW The Annual of Bernard Shaw Studies Volume 18 ; 18 >
+      au < manifest ; 1999 ; SHAW The Annual of Bernard Shaw Studies Volume 19 ; 19 >
+      au < manifest ; 2000 ; SHAW The Annual of Bernard Shaw Studies Volume 20 ; 20 >
+      au < manifest ; 2001 ; SHAW The Annual of Bernard Shaw Studies Volume 21 ; 21 >
+      au < manifest ; 2002 ; SHAW The Annual of Bernard Shaw Studies Volume 22 ; 22 >
+      au < manifest ; 2003 ; SHAW The Annual of Bernard Shaw Studies Volume 23 ; 23 >
+      au < manifest ; 2004 ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
+      au < manifest ; 2005 ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
+      au < manifest ; 2006 ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
+      au < manifest ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
+      au < manifest ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
+      au < manifest ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
+      au < manifest ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
+      au < manifest ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 >
+      au < manifest ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 32 >
+      au < manifest ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 33 >
+      au < manifest ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 34 >
+      au < manifest ; 2015 ; SHAW The Annual of Bernard Shaw Studies Volume 35 ; 35 >
       
     }
 
@@ -1763,22 +1764,22 @@
       param[journal_dir] = annual_of_bernard_shaw_studies
       attr[journal_id] = shaw
 
-      au < released ; 2000 ; SHAW The Annual of Bernard Shaw Studies Volume 20 ; 20 >
-      au < released ; 2001 ; SHAW The Annual of Bernard Shaw Studies Volume 21 ; 21 >
-      au < released ; 2002 ; SHAW The Annual of Bernard Shaw Studies Volume 22 ; 22 >
-      au < released ; 2003 ; SHAW The Annual of Bernard Shaw Studies Volume 23 ; 23 >
-      au < released ; 2004 ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
-      au < released ; 2005 ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
-      au < released ; 2006 ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
-      au < released ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
-      au < released ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
-      au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
-      au < released ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
-      au < released ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 >
-      au < released ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 32 >
-      au < released ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 33 >
-      au < manifest ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 34 >
-      au < manifest ; 2015 ; SHAW The Annual of Bernard Shaw Studies Volume 35 ; 35 >
+      au < released ; 2000 ; SHAW The Annual of Bernard Shaw Studies Volume 20 [Project MUSE] ; 20 >
+      au < released ; 2001 ; SHAW The Annual of Bernard Shaw Studies Volume 21 [Project MUSE] ; 21 >
+      au < released ; 2002 ; SHAW The Annual of Bernard Shaw Studies Volume 22 [Project MUSE] ; 22 >
+      au < released ; 2003 ; SHAW The Annual of Bernard Shaw Studies Volume 23 [Project MUSE] ; 23 >
+      au < released ; 2004 ; SHAW The Annual of Bernard Shaw Studies Volume 24 [Project MUSE] ; 24 >
+      au < released ; 2005 ; SHAW The Annual of Bernard Shaw Studies Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2006 ; SHAW The Annual of Bernard Shaw Studies Volume 26 [Project MUSE] ; 26 >
+      au < released ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 [Project MUSE] ; 27 >
+      au < released ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 [Project MUSE] ; 28 >
+      au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 [Project MUSE] ; 29 >
+      au < released ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 [Project MUSE] ; 30 >
+      au < released ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 [Project MUSE] ; 31 >
+      au < released ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 [Project MUSE] ; 32 >
+      au < released ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 [Project MUSE] ; 33 >
+      au < manifest ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 [Project MUSE] ; 34 >
+      au < manifest ; 2015 ; SHAW The Annual of Bernard Shaw Studies Volume 35 [Project MUSE] ; 35 >
       
     }
 
@@ -1944,7 +1945,7 @@
   {
   
     title <
-      name = Studies in American Jewish Literature (1981-) ;
+      name = Studies in American Jewish Literature ;
       issn = 0271-9274 ;
       eissn = 1948-5077 ;
       issnl = 0271-9274 
@@ -1958,12 +1959,12 @@
 
       param[journal_id] = studamerjewilite
 
-      au < manifest ; 2010 ; Studies in American Jewish Literature (1981-) Volume 29 ; 29 >
-      au < manifest ; 2011 ; Studies in American Jewish Literature (1981-) Volume 30 ; 30 >
-      au < manifest ; 2012 ; Studies in American Jewish Literature (1981-) Volume 31 ; 31 >
-      au < manifest ; 2013 ; Studies in American Jewish Literature (1981-) Volume 32 ; 32 >
-      au < manifest ; 2014 ; Studies in American Jewish Literature (1981-) Volume 33 ; 33 >
-      au < manifest ; 2015 ; Studies in American Jewish Literature (1981-) Volume 34 ; 34 >
+      au < manifest ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+      au < manifest ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
+      au < manifest ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
+      au < manifest ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 >
+      au < manifest ; 2014 ; Studies in American Jewish Literature Volume 33 ; 33 >
+      au < manifest ; 2015 ; Studies in American Jewish Literature Volume 34 ; 34 >
       
     }
 

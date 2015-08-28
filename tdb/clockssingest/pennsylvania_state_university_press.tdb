@@ -81,29 +81,29 @@
     
       param[journal_id] = critphilrace
 
-      au < crawling ; exists ; 2013 ; Comparative Literature Studies Volume 1 ; 1 >
-      au < crawling ; exists ; 2014 ; Comparative Literature Studies Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; Comparative Literature Studies Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; Critical Philosophy of Race Volume 1 ; 1 >
+      au < crawling ; exists ; 2014 ; Critical Philosophy of Race Volume 2 ; 2 >
+      au < manifest ; exists ; 2015 ; Critical Philosophy of Race Volume 3 ; 3 >
       
   }
 
   {
 
     title <
-      name = The Edgar Allen Poe Review ;
+      name = The Edgar Allan Poe Review ;
       issn = 2150-0428 ;
       eissn = 2166-2932 ;
       issnl = 2150-0428
     >
       param[journal_id] = edgallpoerev
 
-      au < manifest ; exists ; 2010 ; The Edgar Allen Poe Review Volume 11 ; 11 >
-      au < manifest ; exists ; 2011 ; The Edgar Allen Poe Review Volume 12 ; 12 >
-      au < frozen ; exists ; 2012 ; The Edgar Allen Poe Review Volume 13 ; 13 >
-      au < crawling ; exists ; 2013 ; The Edgar Allen Poe Review Volume 14 ; 14 >
-      au < crawling ; exists ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
-      au < manifest ; exists ; 2015 ; The Edgar Allen Poe Review Volume 16 ; 16 >
-      
+      au < manifest ; exists ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 11 >
+      au < manifest ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 12 >
+      au < frozen ; exists ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 13 >
+      au < crawling ; exists ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
+      au < crawling ; exists ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 15 >
+      au < manifest ; exists ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 16 >
+
   }
 
   {
@@ -549,7 +549,7 @@
   {
 
     title <
-      name = SHAW ;
+      name = SHAW The Annual of Bernard Shaw Studies ;
       issn = 0741-5842 ;
       eissn = 1529-1480 ;
       issnl = 0741-5842
@@ -558,12 +558,12 @@
       param[journal_id] = shaw
       comment[0] = Volume 30 has an error
 
-      au < doNotProcess ; exists ; 2010 ; SHAW Volume 30 ; 30 >
-      au < manifest ; exists ; 2011 ; SHAW Volume 31 ; 31 >
-      au < crawling ; exists ; 2012 ; SHAW Volume 32 ; 32 >
-      au < crawling ; exists ; 2013 ; SHAW Volume 33 ; 33 >
-      au < deepCrawl ; exists ; 2014 ; SHAW Volume 34 ; 34 >
-      au < manifest ; exists ; 2015 ; SHAW Volume 35 ; 35 >
+      au < doNotProcess ; exists ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
+      au < manifest ; exists ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 >
+      au < crawling ; exists ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 32 >
+      au < crawling ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 33 >
+      au < deepCrawl ; exists ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 34 >
+      au < manifest ; exists ; 2015 ; SHAW The Annual of Bernard Shaw Studies Volume 35 ; 35 >
       
   }
 
