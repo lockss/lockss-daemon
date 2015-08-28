@@ -51,11 +51,13 @@
 				if (e.isTrigger || !e.hasOwnProperty('which')) {
 					e.preventDefault();
 				}
-				
+
+				// Modified to change the cycle for LOCKSS from the original
+				// null -> false -> true to null -> true -> false.
 				switch (that.options.state) {
-					case true:  that.options.state = null; break;
-					case false: that.options.state = true; break;
-					default:    that.options.state = false; break;
+					case true:  that.options.state = false; break;
+					case false: that.options.state = null; break;
+					default:    that.options.state = true; break;
 				}
 
 				that._refresh(that.options.change);								
