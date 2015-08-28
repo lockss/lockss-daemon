@@ -60,13 +60,15 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         /*
          * Broad area filtering
          */
-        // Comments, scripts
+        // Comments, scripts, style
         HtmlNodeFilters.comment(),
         HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("style"),
         // Document header
         HtmlNodeFilters.tag("head"),
         // Header
         HtmlNodeFilters.tag("header"),
+
         HtmlNodeFilters.tagWithAttribute("div", "id", "cookieBanner"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "jnl-head-band"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "hdr"), // (old)
@@ -82,6 +84,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         // Footer
         HtmlNodeFilters.tag("footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"), // (old)
+        // <div class="beta-footer"> added recently
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "login_dialog"), // (now within 'footer')
 
         /*
