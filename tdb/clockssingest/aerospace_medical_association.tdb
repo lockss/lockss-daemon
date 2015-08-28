@@ -55,7 +55,7 @@
     param[journal_id] = amhp 
     param[journal_issn] = 2375-6314
 
-    au < ready ; exists ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 >
+    au < crawling ; exists ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 >
     au < expected ; exists ; 2016 ; 87 ; Aerospace Medicine and Human Performance Volume 87 ; 87 >
 
   }
