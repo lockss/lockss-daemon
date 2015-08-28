@@ -2516,7 +2516,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
         au < manifest ; exists ; 2012 ; Biology Direct Volume 7 ; 7 >
         au < testing ; exists ; 2013 ; Biology Direct Volume 8 ; 8 >
         au < crawling ; exists ; 2014 ; Biology Direct Volume 9 ; 9 >
-        au < ready ; exists ; 2015 ; Biology Direct Volume 10 ; 10 >
+        au < crawling ; exists ; 2015 ; Biology Direct Volume 10 ; 10 >
       }
 
     }
@@ -3263,7 +3263,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < frozen ; exists ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
-      au < ready ; exists ; 2015 ; Clinical Proteomics Volume 12 ; 12 >
+      au < crawling ; exists ; 2015 ; Clinical Proteomics Volume 12 ; 12 >
 
     }
 
@@ -3456,7 +3456,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
       au < frozen ; exists ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
       au < crawling ; exists ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 >
-      au < ready ; exists ; 2015 ; DARU Journal of Pharmaceutical Sciences Volume 23 ; 23 >
+      au < crawling ; exists ; 2015 ; DARU Journal of Pharmaceutical Sciences Volume 23 ; 23 >
     
     }
 
@@ -3647,7 +3647,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Epigenetics & Chromatin Volume 7 ; 7 >
-      au < ready ; exists ; 2015 ; Epigenetics & Chromatin Volume 8 ; 8 >
+      au < crawling ; exists ; 2015 ; Epigenetics & Chromatin Volume 8 ; 8 >
 
     }
 
@@ -3956,7 +3956,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2012 ; Genome Biology Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2013 ; Genome Biology Volume 14 ; 14 >
       au < testing ; exists ; 2014 ; Genome Biology Volume 15 ; 15 >
-      au < ready ; exists ; 2015 ; Genome Biology Volume 16 ; 16 >
+      au < crawling ; exists ; 2015 ; Genome Biology Volume 16 ; 16 >
       }
       {
       param[base_url] = http://genomebiology.com/
@@ -4111,7 +4111,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
-      au < ready ; exists ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
+      au < crawling ; exists ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
 
     }
 
@@ -5095,7 +5095,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Ethnobiology and Ethnomedicine Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Journal of Ethnobiology and Ethnomedicine Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; Journal of Ethnobiology and Ethnomedicine Volume 10 ; 10 >
-      au < ready ; exists ; 2015 ; Journal of Ethnobiology and Ethnomedicine Volume 11 ; 11 >
+      au < crawling ; exists ; 2015 ; Journal of Ethnobiology and Ethnomedicine Volume 11 ; 11 >
 
     }
 
@@ -5116,7 +5116,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Experimental & Clinical Cancer Research Volume 31 ; 31 >
       au < crawling ; exists ; 2013 ; Journal of Experimental & Clinical Cancer Research Volume 32 ; 32 >
       au < crawling ; exists ; 2014 ; Journal of Experimental & Clinical Cancer Research Volume 33 ; 33 >
-      au < ready ; exists ; 2015 ; Journal of Experimental & Clinical Cancer Research Volume 34 ; 34 >
+      au < crawling ; exists ; 2015 ; Journal of Experimental & Clinical Cancer Research Volume 34 ; 34 >
 
     }
 
