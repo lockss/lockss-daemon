@@ -42,6 +42,7 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.util.*;
 
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -95,11 +96,11 @@ implements SourceXmlSchemaHelper {
         Node infoNode = childNodes.item(m);
         String nodeName = infoNode.getNodeName();
         if ("GivenName".equals(nodeName)) {
-          givenName = infoNode.getTextContent();
+          givenName = StringUtils.strip(infoNode.getTextContent());
         } else if ("Initials".equals(nodeName)) {
-          inits = infoNode.getTextContent();
+          inits = StringUtils.strip(infoNode.getTextContent());
         } else if ("FamilyName".equals(nodeName)) {
-          surName = infoNode.getTextContent();
+          surName = StringUtils.strip(infoNode.getTextContent());
         }
       }
       if (givenName == null && surName == null) {
@@ -194,6 +195,79 @@ implements SourceXmlSchemaHelper {
       return dateStr;
     }
   };
+  
+  /*
+   * <CoverDate Year="1997" Month="1" Day="1"/>
+   */
+      static private final NodeValue BAYWOOD_COVERDATE_VALUE = new NodeValue() {
+        @Override
+        public String getValue(Node node) {
+          if (node == null) {
+            return null;
+          }
+          log.debug3("in DATE_EVALUATOR");
+          Element e = (Element)node;
+          String year = e.getAttribute("Year");
+          String month = e.getAttribute("Month");
+          String day = e.getAttribute("Day");
+          StringBuilder dateSB = new StringBuilder();
+          if (year != null) {
+            dateSB.append(year);
+            if (day != null && month != null) {
+              dateSB.append("-" + month + "-" + day);
+            }
+          }
+          return dateSB.toString();
+        }
+      };
+
+  
+  /* <ArticleTitleGroup Language="En">
+  *    <Title>Work Opportunities For Minority-Group Contractors</Title>
+  *    <Subtitle>In the Construction and Maintenance Programs Of the New York City Parks, Recreation, and Cultural Affairs Administration</Subtitle>
+  * </ArticleTitleGroup>
+  */
+ static private final XPathValue BAYWOOD_TITLEGROUP_VALUE = new NodeValue() {
+   @Override
+   public String getValue(Node node) {
+     if (node == null) {
+       return null;
+     }
+     log.debug3("in TITLE_EVALUATOR");
+     if ("ArticleTitle".equals(node.getNodeName())) {
+       return node.getTextContent();
+     } else {
+       // we know we're an ArticleTitleGroup
+       NodeList subNodes = node.getChildNodes();
+       String tname = null, stname = null;
+       for (int k = 0; k < subNodes.getLength(); k++) {
+         Node aNode = subNodes.item(k);
+         if ("Title".equals(aNode.getNodeName())){
+           tname = StringUtils.strip(aNode.getTextContent());
+           // they sometimes deliver newlines in their XML titles
+           log.debug3("stripped tname is: " + tname);
+           tname = tname.replace("\n", " ");
+
+         } else if ("Subtitle".equals(aNode.getNodeName())) {
+           stname = StringUtils.strip(aNode.getTextContent());
+           // they deliver newlines in their XML titles                                                                                                                                            
+           stname = stname.replace("\n", " ");
+           log.debug3("stripped stname is: " + tname);
+         } 
+       }
+       // they sometimes clump the entire name on one node
+       StringBuilder titleSB = new StringBuilder();
+       if(tname != null) {
+         titleSB.append(tname);
+       }
+       if (stname!= null) {
+         titleSB.append(": ");
+         titleSB.append(stname);
+       }
+       return titleSB.toString();
+     }
+   }
+ };
 
 
   /* 
@@ -214,11 +288,14 @@ implements SourceXmlSchemaHelper {
   
   // volume/issue level
   private static String BAY_volume = BAY_volume_info_node + "/VolumeNumber";
+  private static String BAY_issuedate =BAY_issue_info_node + "/IssuePublicationDate/CoverDate";
   private static String BAY_issue = BAY_issue_info_node + "/IssueNumberBegin"; // use evaluator in case > 1 number
   
   // article level
   private static String BAY_doi =  BAY_article_node + "/ArticleInfo/ArticleDOI";
   private static String BAY_atitle = BAY_article_node + "/ArticleInfo/ArticleTitle";
+  private static String BAY_atitlegroup = BAY_article_node + "/ArticleInfo/ArticleTitleGroup"; //sometimes as a compound
+  private static String BAY_articletitle = "(" + BAY_atitle + " | " + BAY_atitlegroup + ")";
   private static String BAY_fpage = BAY_article_node + "/ArticleInfo/ArticleFirstPage";
   private static String BAY_lpage = BAY_article_node + "/ArticleInfo/ArticleLastPage"; 
   private static String BAY_author = BAY_article_node + "/ArticleHeader/AuthorGroup/Author"; 
@@ -236,21 +313,19 @@ implements SourceXmlSchemaHelper {
     BAY_articleMap.put(BAY_pissn, XmlDomMetadataExtractor.TEXT_VALUE);
     BAY_articleMap.put(BAY_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
     BAY_articleMap.put(BAY_doi, XmlDomMetadataExtractor.TEXT_VALUE);
-    BAY_articleMap.put(BAY_atitle, XmlDomMetadataExtractor.TEXT_VALUE);
+    BAY_articleMap.put(BAY_articletitle, BAYWOOD_TITLEGROUP_VALUE);
     BAY_articleMap.put(BAY_volume, XmlDomMetadataExtractor.TEXT_VALUE);
     BAY_articleMap.put(BAY_issue, BAYWOOD_ISSUE_VALUE); // evaluator needed
     BAY_articleMap.put(BAY_fpage, XmlDomMetadataExtractor.TEXT_VALUE);
     BAY_articleMap.put(BAY_lpage, XmlDomMetadataExtractor.TEXT_VALUE);
+    BAY_articleMap.put(BAY_issuedate, BAYWOOD_COVERDATE_VALUE);
     BAY_articleMap.put(BAY_adate, BAYWOOD_DATE_VALUE);
     BAY_articleMap.put(BAY_author, BAYWOOD_AUTHOR_VALUE);
 
   }
-
-  /* 2. Each item (article) has its own XML file */
-  static private final String BAY_articleNode = BAY_article_node; 
-
-  /* 3. in BAY there is no global information because one file/article */
-  static private final Map<String,XPathValue> BAY_globalMap = null;
+  
+  // articleNode and globalNode are both null because there is only one article
+  // per XML file, so all the XPath's start at the top.
 
   /*
    * The emitter will need a map to know how to cook ONIX raw values
@@ -260,7 +335,7 @@ implements SourceXmlSchemaHelper {
     // do NOT cook publisher_name; get from TDB file for consistency
     // also get PROVIDER from the TDB file
     cookMap.put(BAY_jtitle, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(BAY_atitle, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(BAY_articletitle, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(BAY_doi, MetadataField.FIELD_DOI);
     cookMap.put(BAY_pissn, MetadataField.FIELD_ISSN);
     cookMap.put(BAY_eissn, MetadataField.FIELD_EISSN);
@@ -281,7 +356,7 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public Map<String, XPathValue> getGlobalMetaMap() {
-    return BAY_globalMap;
+    return null;
   }
 
   /**

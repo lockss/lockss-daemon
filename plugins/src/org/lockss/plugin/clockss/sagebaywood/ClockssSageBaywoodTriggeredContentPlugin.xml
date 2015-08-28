@@ -1,0 +1,93 @@
+<map>
+<!--  This plugin is used to HARVEST the content received via file-transfer and thence made in to a 
+      crawlable website.  We will trigger from the harvested version of the content as per the trigger guidelines
+-->
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodTriggeredContentPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Sage-Baywood Triggered Content Plugin (CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Sage-Baywood Triggered Content Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
+      <string>1,"%s%s/BAWOOD_%s_%s_[0-9]", base_url, journal_id, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/V%s_clockss.html", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+<!--  we only harvest from our own servers -->
+    <string>au_def_pause_time</string>
+    <long>100</long>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+     <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>    
