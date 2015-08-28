@@ -1481,7 +1481,7 @@
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 >
-      au < wanted ; exists ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
+      au < ready ; exists ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
 
     }
 
@@ -1952,7 +1952,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Computing Science and Mathematics Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Computing Science and Mathematics Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Computing Science and Mathematics Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; International Journal of Computing Science and Mathematics Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; International Journal of Computing Science and Mathematics Volume 6 ; 6 >
 
     }
 
@@ -1992,7 +1992,7 @@
         au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 22 ; 22 >
         au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 23 ; 23 >
         au < crawling ; exists ; 2014 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 24 ; 24 >
-        au < testing ; exists ; 2015 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 25 ; 25 >
+        au < ready ; exists ; 2015 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 25 ; 25 >
 
       }
 
@@ -2030,7 +2030,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Corporate Governance Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Corporate Governance Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Corporate Governance Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; International Journal of Corporate Governance Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; International Journal of Corporate Governance Volume 6 ; 6 >
 
     }
 
@@ -2111,7 +2111,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Critical Infrastructures Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Critical Infrascructures Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; International Journal of Critical Infrascructures Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; International Journal of Critical Infrascructures Volume 11 ; 11 >
+      au < ready ; exists ; 2015 ; International Journal of Critical Infrascructures Volume 11 ; 11 >
 
     }
 
@@ -2148,7 +2148,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Data Analysis Techniques and Strategies Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Data Analysis Techniques and Strategies Volume 5 ; 5 >
       au < frozen ; exists ; 2014 ; International Journal of Data Analysis Techniques and Strategies Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Data Analysis Techniques and Strategies Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Data Analysis Techniques and Strategies Volume 7 ; 7 >
 
     }
 
@@ -2173,8 +2173,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 9 ; 9 >
       au < frozen ; exists ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
+      au < ready ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
 
     }
 
@@ -2210,7 +2210,7 @@
 
       param[journal_id] = ijds
 
-      au < testing ; exists ; 2015 ; International Journal of Data Science Volume 1 ; 1 >
+      au < ready ; exists ; 2015 ; International Journal of Data Science Volume 1 ; 1 >
 
     }
 
@@ -2295,7 +2295,7 @@
 
       param[journal_id] = ijdh
 
-      au < testing ; exists ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
+      au < ready ; exists ; 2015 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -2353,7 +2353,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Economic Policy in Emerging Economies Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Economic Policy in Emerging Economies Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; International Journal of Economic Policy in Emerging Economies Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; International Journal of Economic Policy in Emerging Economies Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; International Journal of Economic Policy in Emerging Economies Volume 8 ; 8 >
 
     }
 
@@ -2373,7 +2373,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Economics and Accounting Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Economics and Accounting Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Economics and Accounting Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; International Journal of Economics and Accounting Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; International Journal of Economics and Accounting Volume 6 ; 6 >
 
     }
 
@@ -2397,7 +2397,7 @@
       au < crawling ; exists ; 2014 ; International Journal of Economics and Business Research Volume 7 ; 7 >
       au < frozen ; exists ; 2014 ; International Journal of Economics and Business Research Volume 8 ; 8 >
       au < crawling ; exists ; 2015 ; International Journal of Economics and Business Research Volume 9 ; 9 >
-      au < testing ; exists ; 2015 ; International Journal of Economics and Business Research Volume 10 ; 10 >
+      au < ready ; exists ; 2015 ; International Journal of Economics and Business Research Volume 10 ; 10 >
 
     }
 
@@ -2417,7 +2417,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Education Economics and Development Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Education Economics and Development Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Education Economics and Development Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; International Journal of Education Economics and Development Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; International Journal of Education Economics and Development Volume 6 ; 6 >
 
     }
 
@@ -2438,7 +2438,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Electric and Hybrid Vehicles Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Electric and Hybrid Vehicles Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; International Journal of Electric and Hybrid Vehicles Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Electric and Hybrid Vehicles Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Electric and Hybrid Vehicles Volume 7 ; 7 >
 
     }
 
@@ -2479,7 +2479,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Business Volume 9 ; 9 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Electronic Business Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; International Journal of Electronic Business Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; International Journal of Electronic Business Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; International Journal of Electronic Business Volume 12 ; 12 >
 
     }
 
@@ -2625,7 +2625,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Electronic Security and Digital Forensics Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Electronic Security and Digital Forensics Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; International Journal of Electronic Security and Digital Forensics Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Electronic Security and Digital Forensics Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Electronic Security and Digital Forensics Volume 7 ; 7 >
 
     }
 
@@ -2676,7 +2676,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Embedded Systems Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Embedded Systems Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; International Journal of Embedded Systems Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Embedded Systems Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Embedded Systems Volume 7 ; 7 >
 
     }
 
@@ -2701,7 +2701,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Emergency Management Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Emergency Management Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; International Journal of Emergency Management Volume 11 ; 11 >
+      au < ready ; exists ; 2015 ; International Journal of Emergency Management Volume 11 ; 11 >
 
     }
 
@@ -2726,7 +2726,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Energy Technology and Policy Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Energy Technology and Policy Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; International Journal of Energy Technology and Policy Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; International Journal of Energy Technology and Policy Volume 11 ; 11 >
+      au < ready ; exists ; 2015 ; International Journal of Energy Technology and Policy Volume 11 ; 11 >
 
     }
 
@@ -2766,7 +2766,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Engineering Systems Modelling and Simulation Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Engineering Systems Modelling and Simulation Volume 5 ; 5 >
       au < finished ; crawling ; 2014 ; International Journal of Engineering Systems Modelling and Simulation Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Engineering Systems Modelling and Simulation Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Engineering Systems Modelling and Simulation Volume 7 ; 7 >
 
     }
 
@@ -2838,7 +2838,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Entrepreneurial Venturing Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Entrepreneurial Venturing Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; International Journal of Entrepreneurial Venturing Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Entrepreneurial Venturing Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Entrepreneurial Venturing Volume 7 ; 7 >
 
     }
 
@@ -2871,7 +2871,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Entrepreneurship and Innovation Management Volume 16 ; 16 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Entrepreneurship and Innovation Management Volume 17 ; 17 >
       au < crawling ; exists ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 18 ; 18 >
-      au < testing ; exists ; 2015 ; International Journal of Entrepreneurship and Innovation Management Volume 19 ; 19 >
+      au < ready ; exists ; 2015 ; International Journal of Entrepreneurship and Innovation Management Volume 19 ; 19 >
 
     }
 
@@ -2910,7 +2910,7 @@
       au < crawling ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 21 ; 21 >
       au < crawling ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 22 ; 22 >
       au < frozen ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 23 ; 23 >
-      au < testing ; exists ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 24 ; 24 >
+      au < ready ; exists ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 24 ; 24 >
       au < crawling ; exists ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 25 ; 25 >
       au < expected ; exists ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 26 ; 26 >
 
@@ -3035,7 +3035,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Environment and Sustainable Development Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Environment and Sustainable Development Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; International Journal of Environment and Sustainable Development Volume 13 ; 13 >
-      au < testing ; exists ; 2015 ; International Journal of Environment and Sustainable Development Volume 14 ; 14 >
+      au < ready ; exists ; 2015 ; International Journal of Environment and Sustainable Development Volume 14 ; 14 >
 
     }
 
@@ -3064,8 +3064,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Environment and Waste Management Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; International Journal of Environment and Waste Management Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; International Journal of Environment and Waste Management Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; International Journal of Environment and Waste Management Volume 15 ; 15 >
-      au < testing ; exists ; 2015 ; International Journal of Environment and Waste Management Volume 16 ; 16 >
+      au < ready ; exists ; 2015 ; International Journal of Environment and Waste Management Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; International Journal of Environment and Waste Management Volume 16 ; 16 >
 
     }
 
@@ -3104,7 +3104,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Environmental Engineering Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Environmental Engineering Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; International Journal of Environmental Engineering Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Environmental Engineering Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Environmental Engineering Volume 7 ; 7 >
 
     }
 
@@ -3182,8 +3182,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Exergy Volume 13 ; 13 >
       au < finished ; crawling ; 2014 ; International Journal of Exergy Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; International Journal of Exergy Volume 15 ; 15 >
-      au < testing ; exists ; 2015 ; International Journal of Exergy Volume 16 ; 16 >
-      au < testing ; exists ; 2015 ; International Journal of Exergy Volume 17 ; 17 >
+      au < ready ; exists ; 2015 ; International Journal of Exergy Volume 16 ; 16 >
+      au < ready ; exists ; 2015 ; International Journal of Exergy Volume 17 ; 17 >
 
     }
 
@@ -3200,7 +3200,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Experimental and Computational Biomechanics Volume 2 ; 2 >
-      au < testing ; exists ; 2015 ; International Journal of Experimental and Computational Biomechanics Volume 3 ; 3 >
+      au < ready ; exists ; 2015 ; International Journal of Experimental and Computational Biomechanics Volume 3 ; 3 >
 
     }
 
@@ -3235,7 +3235,7 @@
       param[journal_id] = ijferm
 
       au < crawling ; exists ; 2013-2014 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 >
-      au < testing ; exists ; 2015 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 >
+      au < ready ; exists ; 2015 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 >
 
     }
 
@@ -3275,7 +3275,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Financial Services Management Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Financial Services Management Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; International Journal of Financial Services Management Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; International Journal of Financial Services Management Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; International Journal of Financial Services Management Volume 8 ; 8 >
 
     }
 
@@ -3364,7 +3364,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Foresight and Innovation Policy Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Foresight and Innovation Policy Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Foresight and Innovation Policy Volume 9 ; 9 >
-      au < testing ; exists ; 2015 ; International Journal of Foresight and Innovation Policy Volume 10 ; 10 >
+      au < ready ; exists ; 2015 ; International Journal of Foresight and Innovation Policy Volume 10 ; 10 >
 
     }
 
@@ -3450,7 +3450,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Global Energy Issues Volume 35 ; 35 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Global Energy Issues Volume 36 ; 36 >
       au < crawling ; exists ; 2014 ; International Journal of Global Energy Issues Volume 37 ; 37 >
-      au < testing ; exists ; 2015 ; International Journal of Global Energy Issues Volume 38 ; 38 >
+      au < ready ; exists ; 2015 ; International Journal of Global Energy Issues Volume 38 ; 38 >
 
     }
 
@@ -3478,7 +3478,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Global Environmental Issues Volume 12 ; 12 >
       au < crawling ; exists ; 2013-2014 ; International Journal of Global Environmental Issues Volume 13 ; 13 >
-      au < testing ; exists ; 2015 ; International Journal of Global Environmental Issues Volume 14 ; 14 >
+      au < ready ; exists ; 2015 ; International Journal of Global Environmental Issues Volume 14 ; 14 >
 
     }
 
@@ -3520,7 +3520,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Globalisation and Small Business Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Globalisation and Small Business Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; International Journal of Globalisation and Small Business Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; International Journal of Globalisation and Small Business Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; International Journal of Globalisation and Small Business Volume 7 ; 7 >
 
     }
 
@@ -3561,7 +3561,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Green Economics Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Green Economics Volume 7 ; 7 >
       au < finished ; crawling ; 2014 ; International Journal of Green Economics Volume 8 ; 8 >
-      au < testing ; exists ; 2015 ; International Journal of Green Economics Volume 9 ; 9 >
+      au < ready ; exists ; 2015 ; International Journal of Green Economics Volume 9 ; 9 >
 
     }
 
@@ -3581,7 +3581,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Grid and Utility Computing Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Grid and Utility Computing Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Grid and Utility Computing Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; International Journal of Grid and Utility Computing Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; International Journal of Grid and Utility Computing Volume 6 ; 6 >
 
     }
 
@@ -3597,7 +3597,7 @@
       param[journal_id] = ijhd
 
       au < crawling ; exists ; 2012-2014 ; International Journal of Happiness and Development Volume 1 ; 1 >
-      au < testing ; exists ; 2015 ; International Journal of Happiness and Development Volume 2 ; 2 >
+      au < ready ; exists ; 2015 ; International Journal of Happiness and Development Volume 2 ; 2 >
 
     }
 
@@ -3656,7 +3656,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Heavy Vehicle Systems Volume 19 ; 19 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Heavy Vehicle Systems Volume 20 ; 20 >
       au < crawling ; exists ; 2014 ; International Journal of Heavy Vehicle Systems Volume 21 ; 21 >
-      au < testing ; exists ; 2015 ; International Journal of Heavy Vehicle Systems Volume 22 ; 22 >
+      au < ready ; exists ; 2015 ; International Journal of Heavy Vehicle Systems Volume 22 ; 22 >
 
     }
 
@@ -3678,7 +3678,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of High Performance Computing and Networking Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of High Performance Computing and Networking Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2011-2014 ; International Journal of High Performance Computing and Networking Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; International Journal of High Performance Computing and Networking Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; International Journal of High Performance Computing and Networking Volume 8 ; 8 >
 
     }
 
@@ -3735,7 +3735,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Human Factors Modelling and Simulation Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Factors Modelling and Simulation Volume 3 ; 3 >
       au < crawling ; exists ; 2013-2014 ; International Journal of Human Factors Modelling and Simulation Volume 4 ; 4 >
-      au < testing ; exists ; 2015 ; International Journal of Human Factors Modelling and Simulation Volume 5 ; 5 >
+      au < ready ; exists ; 2015 ; International Journal of Human Factors Modelling and Simulation Volume 5 ; 5 >
 
     }
 
@@ -3764,7 +3764,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Resources Development and Management Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Human Resources Development and Management Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; International Journal of Human Resources Development and Management Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; International Journal of Human Resources Development and Management Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; International Journal of Human Resources Development and Management Volume 15 ; 15 >
 
     }
 
@@ -3798,7 +3798,7 @@
 
       param[journal_id] = ijim
 
-      au < testing ; exists ; 2015 ; International Journal of Image Mining Volume 1 ; 1 >
+      au < ready ; exists ; 2015 ; International Journal of Image Mining Volume 1 ; 1 >
 
     }
 
@@ -3839,8 +3839,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Indian Culture and Business Management Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; International Journal of Indian Culture and Business Management Volume 8 ; 8 >
       au < frozen ; exists ; 2014 ; International Journal of Indian Culture and Business Management Volume 9 ; 9 >
-      au < testing ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 11 ; 11 >
+      au < ready ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 10 ; 10 >
+      au < ready ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 11 ; 11 >
 
     }
 
@@ -3873,9 +3873,9 @@
       au < crawling ; exists ; 2014 ; International Journal of Industrial and Systems Engineering Volume 16 ; 16 >
       au < crawling ; exists ; 2014 ; International Journal of Industrial and Systems Engineering Volume 17 ; 17 >
       au < crawling ; exists ; 2014 ; International Journal of Industrial and Systems Engineering Volume 18 ; 18 >
-      au < testing ; exists ; 2015 ; International Journal of Industrial and Systems Engineering Volume 19 ; 19 >
+      au < ready ; exists ; 2015 ; International Journal of Industrial and Systems Engineering Volume 19 ; 19 >
       au < crawling ; exists ; 2015 ; International Journal of Industrial and Systems Engineering Volume 20 ; 20 >
-      au < testing ; exists ; 2015 ; International Journal of Industrial and Systems Engineering Volume 21 ; 21 >
+      au < ready ; exists ; 2015 ; International Journal of Industrial and Systems Engineering Volume 21 ; 21 >
 
     }
 
@@ -3891,7 +3891,7 @@
       param[journal_id] = ijied
 
       au < crawling ; exists ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 >
-      au < testing ; exists ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 >
+      au < ready ; exists ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 >
 
     }
 
@@ -3908,7 +3908,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
       au < crawling ; exists ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
-      au < testing ; exists ; 2015 ; International Journal of Information and Coding Theory Volume 3 ; 3 >
+      au < ready ; exists ; 2015 ; International Journal of Information and Coding Theory Volume 3 ; 3 >
 
     }
 
@@ -4471,7 +4471,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Internet Marketing and Advertising Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Internet Marketing and Advertising Volume 7 ; 7 >
       au < crawling ; exists ; 2013-2014 ; International Journal of Internet Marketing and Advertising Volume 8 ; 8 >
-      au < manifest ; exists ; 2015 ; International Journal of Internet Marketing and Advertising Volume 9 ; 9 >
+      au < testing ; exists ; 2015 ; International Journal of Internet Marketing and Advertising Volume 9 ; 9 >
 
     }
 
@@ -4555,7 +4555,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Knowledge and Learning Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; International Journal of Knowledge and Learning Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; International Journal of Knowledge and Learning Volume 10 ; 10 >
 
     }
 
@@ -4595,7 +4595,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Knowledge-Based Development Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Knowledge-Based Development Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Knowledge-Based Development Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; International Journal of Knowledge-Based Development Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; International Journal of Knowledge-Based Development Volume 6 ; 6 >
 
     }
 
@@ -4731,7 +4731,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Learning and Intellectual Capital Volume 9 ; 9 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Learning and Intellectual Capital Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; International Journal of Learning and Intellectual Capital Volume 11 ; 11 >
-      au < manifest ; exists ; 2015 ; International Journal of Learning and Intellectual Capital Volume 12 ; 12 >
+      au < testing ; exists ; 2015 ; International Journal of Learning and Intellectual Capital Volume 12 ; 12 >
 
     }
 
@@ -4755,7 +4755,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Learning Technology Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Learning Technology Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Learning Technology Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; International Journal of Learning Technology Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; International Journal of Learning Technology Volume 10 ; 10 >
 
     }
 
@@ -4882,9 +4882,9 @@
       au < crawling ; exists ; 2014 ; International Journal of Logistics Systems and Management Volume 17 ; 17 >
       au < crawling ; exists ; 2014 ; International Journal of Logistics Systems and Management Volume 18 ; 18 >
       au < crawling ; exists ; 2014 ; International Journal of Logistics Systems and Management Volume 19 ; 19 >
-      au < manifest ; exists ; 2015 ; International Journal of Logistics Systems and Management Volume 20 ; 20 >
-      au < manifest ; exists ; 2015 ; International Journal of Logistics Systems and Management Volume 21 ; 21 >
-      au < manifest ; exists ; 2015 ; International Journal of Logistics Systems and Management Volume 22 ; 22 >
+      au < testing ; exists ; 2015 ; International Journal of Logistics Systems and Management Volume 20 ; 20 >
+      au < testing ; exists ; 2015 ; International Journal of Logistics Systems and Management Volume 21 ; 21 >
+      au < testing ; exists ; 2015 ; International Journal of Logistics Systems and Management Volume 22 ; 22 >
 
     }
 
@@ -4985,7 +4985,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Management and Decision Making Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Management and Decision Making Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; International Journal of Management and Decision Making Volume 13 ; 13 >
-      au < manifest ; exists ; 2015 ; International Journal of Management and Decision Making Volume 14 ; 14 >
+      au < testing ; exists ; 2015 ; International Journal of Management and Decision Making Volume 14 ; 14 >
 
     }
 
@@ -5013,7 +5013,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Management and Enterprise Development Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Management and Enterprise Development Volume 12 ; 12 >
       au < frozen ; exists ; 2014 ; International Journal of Management and Enterprise Development Volume 13 ; 13 >
-      au < manifest ; exists ; 2015 ; International Journal of Management and Enterprise Development Volume 14 ; 14 >
+      au < testing ; exists ; 2015 ; International Journal of Management and Enterprise Development Volume 14 ; 14 >
 
     }
 
@@ -5093,7 +5093,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Management in Education Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Management in Education Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; International Journal of Management in Education Volume 8 ; 8 >
-      au < manifest ; exists ; 2015 ; International Journal of Management in Education Volume 9 ; 9 >
+      au < testing ; exists ; 2015 ; International Journal of Management in Education Volume 9 ; 9 >
 
     }
 
@@ -5115,7 +5115,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Management Practice Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Management Practice Volume 6 ; 6 >
       au < frozen ; exists ; 2014 ; International Journal of Management Practice Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; International Journal of Management Practice Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; International Journal of Management Practice Volume 8 ; 8 >
 
     }
 
@@ -5160,7 +5160,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Manufacturing Research Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Manufacturing Research Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Manufacturing Research Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; International Journal of Manufacturing Research Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; International Journal of Manufacturing Research Volume 10 ; 10 >
 
     }
 
@@ -5203,7 +5203,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
       au < crawling ; exists ; 2014 ; International Journal of Manufacturing Technology and Management Volume 28 ; 28 >
-      au < manifest ; exists ; 2015 ; International Journal of Manufacturing Technology and Management Volume 29 ; 29 >
+      au < testing ; exists ; 2015 ; International Journal of Manufacturing Technology and Management Volume 29 ; 29 >
 
     }
 
@@ -5222,7 +5222,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Mass Customisation Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Mass Customisation Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Mass Customisation Volume 4 ; 4 >
-      au < manifest ; exists ; 2015 ; International Journal of Mass Customisation Volume 5 ; 5 >
+      au < testing ; exists ; 2015 ; International Journal of Mass Customisation Volume 5 ; 5 >
 
     }
 
@@ -5286,7 +5286,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Materials and Product Technology Volume 47 ; 47 >
       au < crawling ; exists ; 2014 ; International Journal of Materials and Product Technology Volume 48 ; 48 >
       au < crawling ; exists ; 2014 ; International Journal of Materials and Product Technology Volume 49 ; 49 >
-      au < manifest ; exists ; 2015 ; International Journal of Materials and Product Technology Volume 50 ; 50 >
+      au < testing ; exists ; 2015 ; International Journal of Materials and Product Technology Volume 50 ; 50 >
       au < crawling ; exists ; 2015 ; International Journal of Materials and Product Technology Volume 51 ; 51 >
 
     }
@@ -5310,7 +5310,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Materials and Structural Integrity Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Materials and Structural Integrity Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; International Journal of Materials and Structural Integrity Volume 8 ; 8 >
-      au < manifest ; exists ; 2015 ; International Journal of Materials and Structural Integrity Volume 9 ; 9 >
+      au < testing ; exists ; 2015 ; International Journal of Materials and Structural Integrity Volume 9 ; 9 >
 
     }
 
@@ -5330,7 +5330,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 > 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Materials Engineering Innovation Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; International Journal of Materials Engineering Innovation Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; International Journal of Materials Engineering Innovation Volume 6 ; 6 >
 
     }
 
@@ -5350,7 +5350,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 6 ; 6 >
 
     }
 
@@ -5371,7 +5371,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mathematics in Operational Research Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mathematics in Operational Research Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; International Journal of Mathematics in Operational Research Volume 6 ; 6 >
-      au < manifest ; exists ; 2015 ; International Journal of Mathematics in Operational Research Volume 7 ; 7 >
+      au < testing ; exists ; 2015 ; International Journal of Mathematics in Operational Research Volume 7 ; 7 >
 
     }
 
@@ -5407,7 +5407,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mechatronics and Automation Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mechatronics and Automation Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; International Journal of Mechatronics and Automation Volume 4 ; 4 >
-      au < manifest ; exists ; 2015 ; International Journal of Mechatronics and Automation Volume 5 ; 5 >
+      au < testing ; exists ; 2015 ; International Journal of Mechatronics and Automation Volume 5 ; 5 >
 
     }
 
@@ -5474,7 +5474,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Metadata, Semantics and Ontologies Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Metadata, Semantics and Ontologies Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Metadata, Semantics and Ontologies Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; International Journal of Metadata, Semantics and Ontologies Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; International Journal of Metadata, Semantics and Ontologies Volume 10 ; 10 >
 
     }
 
@@ -5516,7 +5516,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Microstructure and Materials Properties Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Microstructure and Materials Properties Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Microstructure and Materials Properties Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; International Journal of Microstructure and Materials Properties Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; International Journal of Microstructure and Materials Properties Volume 10 ; 10 >
 
     }
 
@@ -5552,7 +5552,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Mining and Mineral Engineering Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Mining and Mineral Engineering Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Mining and Mineral Engineering Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; International Journal of Mining and Mineral Engineering Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; International Journal of Mining and Mineral Engineering Volume 6 ; 6 >
 
     }
 
@@ -5579,7 +5579,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mobile Communications Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mobile Communications Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; International Journal of Mobile Communications Volume 12 ; 12 >
-      au < manifest ; exists ; 2015 ; International Journal of Mobile Communications Volume 13 ; 13 >
+      au < testing ; exists ; 2015 ; International Journal of Mobile Communications Volume 13 ; 13 >
 
     }
 
@@ -5622,7 +5622,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Mobile Network Design and Innovation Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mobile Network Design and Innovation Volume 4 ; 4 >
       au < superseded ; exists ; 2013-2014 ; International Journal of Mobile Network Design and Innovation Volume 5 [to delete] ; 5 >
-      au < manifest ; exists ; 2015 ; International Journal of Mobile Network Design and Innovation Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; International Journal of Mobile Network Design and Innovation Volume 6 ; 6 >
 
     }
 
@@ -5641,7 +5641,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Modelling in Operations Management Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Modelling in Operations Management Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 >
-      au < manifest ; exists ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 >
+      au < testing ; exists ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 >
 
     }
 
@@ -5678,7 +5678,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Modelling, Identification and Control Volume 20 ; 20 >
       au < frozen ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 21 ; 21 >
       au < finished ; crawling ; 2014 ; International Journal of Modelling, Identification and Control Volume 22 ; 22 >
-      au < manifest ; exists ; 2015 ; International Journal of Modelling, Identification and Control Volume 23 ; 23 >
+      au < testing ; exists ; 2015 ; International Journal of Modelling, Identification and Control Volume 23 ; 23 >
       au < expected ; exists ; 2015 ; International Journal of Modelling, Identification and Control Volume 24 ; 24 >
 
     }
@@ -5716,7 +5716,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Monetary Economics and Finance Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Monetary Economics and Finance Volume 6 ; 6 >
       au < finished ; crawling ; 2014 ; International Journal of Monetary Economics and Finance Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; International Journal of Monetary Economics and Finance Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; International Journal of Monetary Economics and Finance Volume 8 ; 8 >
 
     }
 
@@ -5798,7 +5798,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nanomanufacturing Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nanomanufacturing Volume 9 ; 9 >
       au < frozen ; exists ; 2014 ; International Journal of Nanomanufacturing Volume 10 ; 10 >
-      au < manifest ; exists ; 2015 ; International Journal of Nanomanufacturing Volume 11 ; 11 >
+      au < testing ; exists ; 2015 ; International Journal of Nanomanufacturing Volume 11 ; 11 >
 
     }
 
@@ -5820,7 +5820,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nanoparticles Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nanoparticles Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; International Journal of Nanoparticles Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; International Journal of Nanoparticles Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; International Journal of Nanoparticles Volume 8 ; 8 >
 
     }
 
@@ -5846,7 +5846,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nanotechnology Volume 9 ; 9 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nanotechnology Volume 10 ; 10 >
       au < frozen ; exists ; 2014 ; International Journal of Nanotechnology Volume 11 ; 11 >
-      au < manifest ; exists ; 2015 ; International Journal of Nanotechnology Volume 12 ; 12 >
+      au < testing ; exists ; 2015 ; International Journal of Nanotechnology Volume 12 ; 12 >
 
     }
 
@@ -5891,7 +5891,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Networking and Virtual Organisations Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Networking and Virtual Organisations Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; International Journal of Networking and Virtual Organisations Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; International Journal of Networking and Virtual Organisations Volume 15 ; 15 >
+      au < testing ; exists ; 2015 ; International Journal of Networking and Virtual Organisations Volume 15 ; 15 >
       au < expected ; exists ; 2015 ; International Journal of Networking and Virtual Organisations Volume 16 ; 16 >
 
     }
@@ -6061,7 +6061,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Oil, Gas and Coal Technology Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 >
-      au < manifest ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 >
+      au < testing ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 >
 
     }
 
@@ -6097,9 +6097,9 @@
       au < frozen ; exists ; 2014 ; International Journal of Operational Research Volume 19 ; 19 >
       au < frozen ; exists ; 2014 ; International Journal of Operational Research Volume 20 ; 20 >
       au < crawling ; exists ; 2014 ; International Journal of Operational Research Volume 21 ; 21 >
-      au < manifest ; exists ; 2015 ; International Journal of Operational Research Volume 22 ; 22 >
-      au < manifest ; exists ; 2015 ; International Journal of Operational Research Volume 23 ; 23 >
-      au < manifest ; exists ; 2015 ; International Journal of Operational Research Volume 24 ; 24 >
+      au < testing ; exists ; 2015 ; International Journal of Operational Research Volume 22 ; 22 >
+      au < testing ; exists ; 2015 ; International Journal of Operational Research Volume 23 ; 23 >
+      au < testing ; exists ; 2015 ; International Journal of Operational Research Volume 24 ; 24 >
 
     }
 
@@ -6185,7 +6185,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Pluralism and Economics Education Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Pluralism and Economics Education Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Pluralism and Economics Education Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; International Journal of Pluralism and Economics Education Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; International Journal of Pluralism and Economics Education Volume 6 ; 6 >
 
     }
 
@@ -6261,7 +6261,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Power Electronics Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Power Electronics Volume 5 ; 5 >
       au < finished ; crawling ; 2014 ; International Journal of Power Electronics Volume 6 ; 6 >
-      au < manifest ; exists ; 2015 ; International Journal of Power Electronics Volume 7 ; 7 >
+      au < testing ; exists ; 2015 ; International Journal of Power Electronics Volume 7 ; 7 >
 
     }
 
@@ -6279,7 +6279,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Powertrain Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Powertrain Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; International Journal of Powertrain Volume 3 ; 3 >
-      au < manifest ; exists ; 2015 ; International Journal of Powertrain Volume 4 ; 4 >
+      au < testing ; exists ; 2015 ; International Journal of Powertrain Volume 4 ; 4 >
 
     }
 
@@ -6298,7 +6298,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Precision Technology Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Precision Technology Volume 3 ; 3 >
       au < frozen ; exists ; 2014 ; International Journal of Precision Technology Volume 4 ; 4 >
-      au < manifest ; exists ; 2015 ; International Journal of Precision Technology Volume 5 ; 5 >
+      au < testing ; exists ; 2015 ; International Journal of Precision Technology Volume 5 ; 5 >
 
     }
 
@@ -6320,7 +6320,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Private Law Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Private Law Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; International Journal of Private Law Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; International Journal of Private Law Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; International Journal of Private Law Volume 8 ; 8 >
 
     }
 
@@ -6339,7 +6339,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Process Management and Benchmarking Volume 2 ; 2 >
       au < manifest ; exists ; 2009-2013 ; International Journal of Process Management and Benchmarking Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; International Journal of Process Management and Benchmarking Volume 4 ; 4 >
-      au < manifest ; exists ; 2015 ; International Journal of Process Management and Benchmarking Volume 5 ; 5 >
+      au < testing ; exists ; 2015 ; International Journal of Process Management and Benchmarking Volume 5 ; 5 >
 
     }
 
@@ -6412,7 +6412,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Product Development Volume 17 ; 17 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Product Development Volume 18 ; 18 >
       au < frozen ; exists ; 2014 ; International Journal of Product Development Volume 19 ; 19 >
-      au < manifest ; exists ; 2015 ; International Journal of Product Development Volume 20 ; 20 >
+      au < testing ; exists ; 2015 ; International Journal of Product Development Volume 20 ; 20 >
 
     }
 
@@ -6434,7 +6434,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Product Lifecycle Management Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Product Lifecycle Management Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; International Journal of Product Lifecycle Management Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; International Journal of Product Lifecycle Management Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; International Journal of Product Lifecycle Management Volume 8 ; 8 >
 
     }
 
@@ -6478,8 +6478,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Productivity and Quality Management Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; International Journal of Productivity and Quality Management Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; International Journal of Productivity and Quality Management Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; International Journal of Productivity and Quality Management Volume 15 ; 15 >
-      au < manifest ; exists ; 2015 ; International Journal of Productivity and Quality Management Volume 16 ; 16 >
+      au < testing ; exists ; 2015 ; International Journal of Productivity and Quality Management Volume 15 ; 15 >
+      au < testing ; exists ; 2015 ; International Journal of Productivity and Quality Management Volume 16 ; 16 >
 
     }
 
@@ -6519,7 +6519,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Public Law and Policy Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Public Law and Policy Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; International Journal of Public Law and Policy Volume 4 ; 4 >
-      au < manifest ; exists ; 2015 ; International Journal of Public Law and Policy Volume 5 ; 5 >
+      au < testing ; exists ; 2015 ; International Journal of Public Law and Policy Volume 5 ; 5 >
 
     }
 
@@ -6545,7 +6545,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Public Policy Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Public Policy Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; International Journal of Public Policy Volume 10 ; 10 >
-      au < manifest ; exists ; 2015 ; International Journal of Public Policy Volume 11 ; 11 >
+      au < testing ; exists ; 2015 ; International Journal of Public Policy Volume 11 ; 11 >
 
       }
 
@@ -6599,7 +6599,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Quality Engineering and Technology Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Quality Engineering and Technology Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; International Journal of Quality Engineering and Technology Volume 4 ; 4 >
-      au < manifest ; exists ; 2015 ; International Journal of Quality Engineering and Technology Volume 5 ; 5 >
+      au < testing ; exists ; 2015 ; International Journal of Quality Engineering and Technology Volume 5 ; 5 >
 
     }
 
@@ -6677,7 +6677,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Reasoning-based Intelligent Systems Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 >
       au < finished ; crawling ; 2014 ; International Journal of Reasoning-based Intelligent Systems Volume 6 ; 6 >
-      au < manifest ; exists ; 2015 ; International Journal of Reasoning-based Intelligent Systems Volume 7 ; 7 >
+      au < testing ; exists ; 2015 ; International Journal of Reasoning-based Intelligent Systems Volume 7 ; 7 >
 
     }
 
@@ -6735,7 +6735,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Renewable Energy Technology Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Renewable Energy Technology Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; International Journal of Renewable Energy Technology Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; International Journal of Renewable Energy Technology Volume 6 ; 6 >
+      au < testing ; exists ; 2015 ; International Journal of Renewable Energy Technology Volume 6 ; 6 >
 
     }
 
@@ -6828,7 +6828,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Security and Networks Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Security and Networks Volume 8 ; 8 >
       au < frozen ; exists ; 2014 ; International Journal of Security and Networks Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; International Journal of Security and Networks Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; International Journal of Security and Networks Volume 10 ; 10 >
 
     }
 
@@ -6859,8 +6859,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Sensor Networks Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; International Journal of Sensor Networks Volume 15 ; 15 >
       au < finished ; crawling ; 2014 ; International Journal of Sensor Networks Volume 16 ; 16 >
-      au < manifest ; exists ; 2015 ; International Journal of Sensor Networks Volume 17 ; 17 >
-      au < manifest ; exists ; 2015 ; International Journal of Sensor Networks Volume 18 ; 18 >
+      au < testing ; exists ; 2015 ; International Journal of Sensor Networks Volume 17 ; 17 >
+      au < testing ; exists ; 2015 ; International Journal of Sensor Networks Volume 18 ; 18 >
 
     }
 
@@ -6910,9 +6910,9 @@
       au < crawling ; exists ; 2014 ; International Journal of Services and Operations Management Volume 17 ; 17 >
       au < frozen ; exists ; 2014 ; International Journal of Services and Operations Management Volume 18 ; 18 >
       au < crawling ; exists ; 2014 ; International Journal of Services and Operations Management Volume 19 ; 19 >
-      au < manifest ; exists ; 2015 ; International Journal of Services and Operations Management Volume 20 ; 20 >
+      au < testing ; exists ; 2015 ; International Journal of Services and Operations Management Volume 20 ; 20 >
       au < crawling ; exists ; 2015 ; International Journal of Services and Operations Management Volume 21 ; 21 >
-      au < manifest ; exists ; 2015 ; International Journal of Services and Operations Management Volume 22 ; 22 >
+      au < testing ; exists ; 2015 ; International Journal of Services and Operations Management Volume 22 ; 22 >
 
     }
 
@@ -6936,7 +6936,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Services and Standards Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Services and Standards Volume 8 ; 8 >
       au < frozen ; exists ; 2014 ; International Journal of Services and Standards Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; International Journal of Services and Standards Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; International Journal of Services and Standards Volume 10 ; 10 >
 
     }
 
