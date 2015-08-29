@@ -56,7 +56,8 @@
       au < released ; 2011 ; 5 ; Aurora: Revista de Arte, Mídia e Política Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Aurora: Revista de Arte, Mídia e Política Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Aurora: Revista de Arte, Mídia e Política Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 8 ; Aurora: Revista de Arte, Mídia e Política Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 8 ; Aurora: Revista de Arte, Mídia e Política Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Aurora: Revista de Arte, Mídia e Política Volume 2015 ; 2015 ; >
 
   }
 
@@ -133,14 +134,15 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = circumhc
 
-      au < manifest ; 2006 ; 1 ; Circumscribere: International Journal for the History of Science Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 2 ; Circumscribere: International Journal for the History of Science Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 3 ; Circumscribere: International Journal for the History of Science Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 4 ; Circumscribere: International Journal for the History of Science Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 5 ; Circumscribere: International Journal for the History of Science Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 6 ; Circumscribere: International Journal for the History of Science Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 7 ; Circumscribere: International Journal for the History of Science Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 8 ; Circumscribere: International Journal for the History of Science Volume 2013 ; 2013 ; >
+      au < testing ; 2006 ; 1 ; Circumscribere: International Journal for the History of Science Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 2 ; Circumscribere: International Journal for the History of Science Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 3 ; Circumscribere: International Journal for the History of Science Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 4 ; Circumscribere: International Journal for the History of Science Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 5 ; Circumscribere: International Journal for the History of Science Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 6 ; Circumscribere: International Journal for the History of Science Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 7 ; Circumscribere: International Journal for the History of Science Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 8 ; Circumscribere: International Journal for the History of Science Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 9 ; Circumscribere: International Journal for the History of Science Volume 2014 ; 2014 ; >
 
   }
 
@@ -216,7 +218,8 @@
       au < released ; 2011 ; 4 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 7 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 7 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2015 ; 2015 ; >
 
   }
 
@@ -232,24 +235,25 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = culturateo
 
-      au < manifest ; 1992 ; 1 ; Revista de Cultura Teológica Volume 1992 ; 1992 ; >
-      au < manifest ; 1993 ; 2 ; Revista de Cultura Teológica Volume 1993 ; 1993 ; >
-      au < manifest ; 1994 ; 3 ; Revista de Cultura Teológica Volume 1994 ; 1994 ; >
-      au < manifest ; 1995 ; 4 ; Revista de Cultura Teológica Volume 1995 ; 1995 ; >
-      au < manifest ; 1996 ; 5 ; Revista de Cultura Teológica Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 6 ; Revista de Cultura Teológica Volume 1997 ; 1997 ; >
-      au < manifest ; 1998 ; 7 ; Revista de Cultura Teológica Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 8 ; Revista de Cultura Teológica Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 9 ; Revista de Cultura Teológica Volume 2000 ; 2000 ; >
-      au < manifest ; 2005 ; 10 ; Revista de Cultura Teológica Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 11 ; Revista de Cultura Teológica Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 12 ; Revista de Cultura Teológica Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 13 ; Revista de Cultura Teológica Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 14 ; Revista de Cultura Teológica Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 15 ; Revista de Cultura Teológica Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 16 ; Revista de Cultura Teológica Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 17 ; Revista de Cultura Teológica Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 18 ; Revista de Cultura Teológica Volume 2013 ; 2013 ; >
+      au < testing ; 1992 ; 1 ; Revista de Cultura Teológica Volume 1992 ; 1992 ; >
+      au < testing ; 1993 ; 2 ; Revista de Cultura Teológica Volume 1993 ; 1993 ; >
+      au < testing ; 1994 ; 3 ; Revista de Cultura Teológica Volume 1994 ; 1994 ; >
+      au < testing ; 1995 ; 4 ; Revista de Cultura Teológica Volume 1995 ; 1995 ; >
+      au < testing ; 1996 ; 5 ; Revista de Cultura Teológica Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 6 ; Revista de Cultura Teológica Volume 1997 ; 1997 ; >
+      au < testing ; 1998 ; 7 ; Revista de Cultura Teológica Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 8 ; Revista de Cultura Teológica Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 9 ; Revista de Cultura Teológica Volume 2000 ; 2000 ; >
+      au < testing ; 2005 ; 10 ; Revista de Cultura Teológica Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 11 ; Revista de Cultura Teológica Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 12 ; Revista de Cultura Teológica Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 13 ; Revista de Cultura Teológica Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 14 ; Revista de Cultura Teológica Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 15 ; Revista de Cultura Teológica Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 16 ; Revista de Cultura Teológica Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 17 ; Revista de Cultura Teológica Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 18 ; Revista de Cultura Teológica Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 19 ; Revista de Cultura Teológica Volume 2014 ; 2014 ; >
 
   }
 
@@ -487,7 +491,7 @@
       au < released ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 13 ; Galáxia Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 14 ; Galáxia Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 14 ; Galáxia Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 15 ; Galáxia Volume 2015 ; 2015 ; >
 
   }
@@ -577,7 +581,8 @@
       au < released ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 14 ; Intercâmbio Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 15 ; Intercâmbio Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 15 ; Intercâmbio Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 16 ; Intercâmbio Volume 2015 ; 2015 ; >
 
   }
 
@@ -675,7 +680,7 @@
       au < released ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 15 ; Cadernos Metrópole Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 16 ; Cadernos Metrópole Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 16 ; Cadernos Metrópole Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 17 ; Cadernos Metrópole Volume 2015 ; 2015 ; >
 
   }
@@ -695,6 +700,7 @@
       au < released ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Revista Nexi Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 4 ; Revista Nexi Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 5 ; Revista Nexi Volume 2015 ; 2015 ; >
 
   }
 
@@ -718,6 +724,7 @@
       au < released ; 2011 ; 7 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 8 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 9 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2014 ; 2014 ; >
 
   }
 
@@ -856,7 +863,7 @@
       au < released ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; REB: Revista Eletrônica de Biologia Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 7 ; REB: Revista Eletrônica de Biologia Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 7 ; REB: Revista Eletrônica de Biologia Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 8 ; REB: Revista Eletrônica de Biologia Volume 2015 ; 2015 ; >
 
   }
@@ -967,7 +974,8 @@
       au < released ; 2011 ; 3 ; Revista l@el em (dis-)curso Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Revista l@el em (dis-)curso Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 5 ; Revista l@el em (dis-)curso Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 6 ; Revista l@el em (dis-)curso Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 6 ; Revista l@el em (dis-)curso Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 7 ; Revista l@el em (dis-)curso Volume 2015 ; 2015 ; >
 
   }
 
@@ -1010,7 +1018,8 @@
       au < released ; 2011 ; 26 ; Projeto História Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 27 ; Projeto História Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 28 ; Projeto História Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 29 ; Projeto História Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 29 ; Projeto História Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 30 ; Projeto História Volume 2015 ; 2015 ; >
 
   }
 
@@ -1091,7 +1100,7 @@
       au < released ; 2011 ; 14 ; Pesquisa & Debate Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 16 ; Pesquisa & Debate Volume 2013 ; 2013 ; >
-      au < released ;2014 ; 17 ; Pesquisa & Debate Volume 2014 ; 2014 ; >
+      au < released ; 2014 ; 17 ; Pesquisa & Debate Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 18 ; Pesquisa & Debate Volume 2015 ; 2015 ; >
 
   }
