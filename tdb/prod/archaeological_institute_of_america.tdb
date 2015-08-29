@@ -22,22 +22,22 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[journal_id] = amerjarch
 
-      au < manifest ; 2000 ; American Journal of Archaeology Volume 104 ; 104 >
-      au < manifest ; 2001 ; American Journal of Archaeology Volume 105 ; 105 >
-      au < manifest ; 2002 ; American Journal of Archaeology Volume 106 ; 106 >
-      au < manifest ; 2003 ; American Journal of Archaeology Volume 107 ; 107 >
-      au < manifest ; 2004 ; American Journal of Archaeology Volume 108 ; 108 >
-      au < manifest ; 2005 ; American Journal of Archaeology Volume 109 ; 109 >
-      au < manifest ; 2006 ; American Journal of Archaeology Volume 110 ; 110 >
-      au < manifest ; 2007 ; American Journal of Archaeology Volume 111 ; 111 >
-      au < manifest ; 2008 ; American Journal of Archaeology Volume 112 ; 112 >
-      au < manifest ; 2009 ; American Journal of Archaeology Volume 113 ; 113 >
-      au < manifest ; 2010 ; American Journal of Archaeology Volume 114 ; 114 >
-      au < manifest ; 2011 ; American Journal of Archaeology Volume 115 ; 115 >
-      au < manifest ; 2012 ; American Journal of Archaeology Volume 116 ; 116 >
-      au < manifest ; 2013 ; American Journal of Archaeology Volume 117 ; 117 >
-      au < manifest ; 2014 ; American Journal of Archaeology Volume 118 ; 118 >
-      au < manifest ; 2015 ; American Journal of Archaeology Volume 119 ; 119 >
+      au < doNotProcess ; 2000 ; American Journal of Archaeology Volume 104 ; 104 >
+      au < doNotProcess ; 2001 ; American Journal of Archaeology Volume 105 ; 105 >
+      au < doNotProcess ; 2002 ; American Journal of Archaeology Volume 106 ; 106 >
+      au < doNotProcess ; 2003 ; American Journal of Archaeology Volume 107 ; 107 >
+      au < doNotProcess ; 2004 ; American Journal of Archaeology Volume 108 ; 108 >
+      au < doNotProcess ; 2005 ; American Journal of Archaeology Volume 109 ; 109 >
+      au < doNotProcess ; 2006 ; American Journal of Archaeology Volume 110 ; 110 >
+      au < doNotProcess ; 2007 ; American Journal of Archaeology Volume 111 ; 111 >
+      au < doNotProcess ; 2008 ; American Journal of Archaeology Volume 112 ; 112 >
+      au < doNotProcess ; 2009 ; American Journal of Archaeology Volume 113 ; 113 >
+      au < doNotProcess ; 2010 ; American Journal of Archaeology Volume 114 ; 114 >
+      au < doNotProcess ; 2011 ; American Journal of Archaeology Volume 115 ; 115 >
+      au < doNotProcess ; 2012 ; American Journal of Archaeology Volume 116 ; 116 >
+      au < doNotProcess ; 2013 ; American Journal of Archaeology Volume 117 ; 117 >
+      au < doNotProcess ; 2014 ; American Journal of Archaeology Volume 118 ; 118 >
+      au < doNotProcess ; 2015 ; American Journal of Archaeology Volume 119 ; 119 >
       
   }
 
