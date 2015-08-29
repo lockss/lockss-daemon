@@ -57,8 +57,8 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = bbr
 
-      au < exists ; 2012 ; 1 ; BBR-Biochemistry and Biotechnology Reports Volume 1 ; 2012 ; >
-      au < expected ; 2013 ; 2 ; BBR-Biochemistry and Biotechnology Reports Volume 2 ; 2013 ; >
+      au < manifest ; 2012 ; 1 ; BBR-Biochemistry and Biotechnology Reports Volume 1 ; 2012 ; >
+      au < manifest ; 2013 ; 2 ; BBR-Biochemistry and Biotechnology Reports Volume 2 ; 2013 ; >
 
   }
 
