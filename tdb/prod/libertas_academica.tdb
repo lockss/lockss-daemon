@@ -1103,12 +1103,11 @@
     >
 
     param[journal_id] = 150
-    comment[0] = no years 2010, 2013, 2014 as of 04/02/15
+    comment[0] = no years 2010, 2013, 2014 as of 04/02/15. No longer published.
 
     au < released ; 2009 ; Immunotherapy Insights Volume 1 ; 1 ; 2009 >
     au < released ; 2011 ; Immunotherapy Insights Volume 2 ; 2 ; 2011 >
     au < manifest ; 2012 ; Immunotherapy Insights Volume 3 ; 3 ; 2012 >
-    au < expected ; 2015 ; Immunotherapy Insights Volume 4 ; 4 ; 2015 >
 
   }
 
@@ -1211,7 +1210,7 @@
     au < released ; 2011 ; International Journal of Tryptophan Research Volume 4 ; 4 ; 2011 >
     au < released ; 2012 ; International Journal of Tryptophan Research Volume 5 ; 5 ; 2012 >
     au < manifest ; 2013 ; International Journal of Tryptophan Research Volume 6 ; 6 ; 2013 >
-    au < manifest ; 2014 ; International Journal of Tryptophan Research Volume 7 ; 7 ; 2014 >
+    au < ready ; 2014 ; International Journal of Tryptophan Research Volume 7 ; 7 ; 2014 >
     au < manifest ; 2015 ; International Journal of Tryptophan Research Volume 8 ; 8 ; 2015 >
 
   }
