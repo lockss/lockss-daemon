@@ -216,6 +216,7 @@
       au < released ; 2012 ; 9 ; Estudos Ibero-Americanos Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 10 ; Estudos Ibero-Americanos Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 11 ; Estudos Ibero-Americanos Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 12 ; Estudos Ibero-Americanos Volume 2015 ; 2015 ; >
 
   }
 
@@ -237,6 +238,7 @@
       au < released ; 2012 ; 5 ; intuitio Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; intuitio Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; intuitio Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; intuitio Volume 2015 ; 2015 ; >
 
   }
 
@@ -252,6 +254,25 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = fale
 
+      au < exists ; 1967 ; 1 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1967 ; 1967 ; >
+      au < exists ; 1968 ; 2 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1968 ; 1968 ; >
+      au < exists ; 1969 ; 4 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1969 ; 1969 ; >
+      au < exists ; 1970 ; 5 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1970 ; 1970 ; >
+      au < exists ; 1971 ; 6 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1971 ; 1971 ; >
+      au < exists ; 1972 ; 7 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1972 ; 1972 ; >
+      au < exists ; 1973 ; 8 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1973 ; 1973 ; >
+      au < exists ; 1973 ; 8 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1973 ; 1973 ; >
+      au < exists ; 1974 ; 9 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1974 ; 1974 ; >
+      au < exists ; 1975 ; 10 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1975 ; 1975 ; >
+      au < exists ; 1976 ; 11 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1976 ; 1976 ; >
+      au < exists ; 1977 ; 12 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1977 ; 1977 ; >
+      au < exists ; 1978 ; 13 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1978 ; 1978 ; >
+      au < exists ; 1979 ; 14 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1979 ; 1979 ; >
+      au < exists ; 1980 ; 15 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1980 ; 1980 ; >
+      au < exists ; 1981 ; 16 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1981 ; 1981 ; >
+      au < exists ; 1982 ; 17 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1982 ; 1982 ; >
+      au < exists ; 1983 ; 18 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1983 ; 1983 ; >
+      au < manifest ; 1983 ; 18 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1983 ; 1983 ; >
       au < ready ; 1984 ; 19 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1984 ; 1984 ; >
       au < ready ; 1985 ; 20 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1985 ; 1985 ; >
       au < ready ; 1986 ; 21 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1986 ; 1986 ; >
@@ -304,6 +325,7 @@
       au < released ; 2012 ; 5 ; Letrônica: Revista Digital do PPGL Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Letrônica: Revista Digital do PPGL Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; Letrônica: Revista Digital do PPGL Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Letrônica: Revista Digital do PPGL Volume 2015 ; 2015 ; >
 
   }
 
@@ -326,6 +348,7 @@
       au < released ; 2012 ; 5 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2015 ; 2015 ; >
 
   }
 
@@ -512,6 +535,7 @@
       au < released ; 2012 ; 8 ; Revista Odonto Ciência Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 9 ; Revista Odonto Ciência Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 10 ; Revista Odonto Ciência Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 11 ; Revista Odonto Ciência Volume 2015 ; 2015 ; >
 
   }
 
@@ -572,6 +596,7 @@
       au < released ; 2012 ; 17 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 18 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 19 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 20 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2015 ; 2015 ; >
 
   }
 
@@ -618,6 +643,7 @@
       au < released ; 2012 ; 8 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 9 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 10 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 11 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2015 ; 2015 ; >
 
   }
 
