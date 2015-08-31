@@ -2011,7 +2011,7 @@
 
       au < finished ; crawling ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
-      au < finished ; manifest ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
+      au < finished ; crawling ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Agriculture & Food Security Volume 4 ; 4 >
 
     }
@@ -2133,7 +2133,7 @@
       param[journal_issn] = 2050-3385
 
       au < crawling ; exists ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
-      au < finished ; manifest ; 2014 ; Animal Biotelemetry Volume 2 ; 2 >
+      au < finished ; crawling ; 2014 ; Animal Biotelemetry Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Animal Biotelemetry Volume 3 ; 3 >
 
     }
@@ -2231,7 +2231,7 @@
 
       au < finished ; crawling ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
-      au < finished ; manifest ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 >
+      au < finished ; crawling ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Antimicrobial Resistance and Infection Control Volume 4 ; 4 >
        
       }
@@ -2260,7 +2260,7 @@
       au < superseded ; exists ; 2011 ; Aquatic Biosystems Volume 7 [superseded] ; 7 >
       au < finished ; crawling ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
-      au < finished ; manifest ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
+      au < finished ; crawling ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Aquatic Biosystems Volume 11 ; 11 >
 
     }
@@ -2281,7 +2281,7 @@
       au < finished ; crawling ; 2011 ; Archives of Public Health Volume 69 ; 69 >
       au < finished ; crawling ; 2012 ; Archives of Public Health Volume 70 ; 70 >
       au < crawling ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 >
-      au < finished ; manifest ; 2014 ; Archives of Public Health Volume 72 ; 72 >
+      au < finished ; crawling ; 2014 ; Archives of Public Health Volume 72 ; 72 >
       au < manifest ; exists ; 2015 ; Archives of Public Health Volume 73 ; 73 >
 
     }
@@ -2396,7 +2396,7 @@
       param[journal_issn] = 2051-4190
 
       au < crawling ; exists ; 2013 ; Basic and Clinical Andrology Volume 23 ; 23 >
-      au < finished ; manifest ; 2014 ; Basic and Clinical Andrology Volume 24 ; 24 >
+      au < finished ; crawling ; 2014 ; Basic and Clinical Andrology Volume 24 ; 24 >
       au < manifest ; exists ; 2015 ; Basic and Clinical Andrology Volume 25 ; 25 >
 
     }
@@ -2420,7 +2420,7 @@
       au < finished ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < finished ; crawling ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 >
-      au < finished ; manifest ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
+      au < finished ; crawling ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
       au < manifest ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 >
 
     }
@@ -2572,7 +2572,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       param[journal_issn] = 2050-7771
 
       au < crawling ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 >
-      au < finished ; manifest ; 2014 ; Biomarker Research Volume 2 ; 2 >
+      au < finished ; crawling ; 2014 ; Biomarker Research Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Biomarker Research Volume 3 ; 3 >
 
     }
@@ -2609,7 +2609,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.biomaterialsres.com/
       param[journal_issn] = 2055-7124
 
-      au < finished ; manifest ; 2014 ; Biomaterials Research Volume 18 ; 18 >
+      au < finished ; crawling ; 2014 ; Biomaterials Research Volume 18 ; 18 >
       au < manifest ; exists ; 2015 ; Biomaterials Research Volume 19 ; 19 >
       
     }
@@ -2658,7 +2658,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
-      au < finished ; manifest ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
+      au < finished ; crawling ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
       
     }
@@ -2765,7 +2765,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2049-3002
 
       au < crawling ; exists ; 2013 ; Cancer & Metabolism Volume 1 ; 1 >
-      au < finished ; manifest ; 2014 ; Cancer & Metabolism Volume 2 ; 2 >
+      au < finished ; crawling ; 2014 ; Cancer & Metabolism Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Cancer & Metabolism Volume 3 ; 3 >
 
     }
@@ -2808,7 +2808,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cancerimagingjournal.com/
       param[journal_issn] = 1470-7330
 
-      au < finished ; manifest ; 2014 ; Cancer Imaging Volume 14 ; 14 >
+      au < finished ; crawling ; 2014 ; Cancer Imaging Volume 14 ; 14 >
       au < crawling ; exists ; 2015 ; Cancer Imaging Volume 15 ; 15 >
       
     }
@@ -2823,7 +2823,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cgejournal.org/
       param[journal_issn] = 2052-6687
 
-      au < finished ; manifest ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
+      au < finished ; crawling ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 >
       
     }
@@ -2846,7 +2846,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
       au < frozen ; exists ; 2013 ; Carbon Balance and Management Volume 8 ; 8 >
-      au < finished ; manifest ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
+      au < finished ; crawling ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
 
     }
@@ -2899,7 +2899,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 >
-      au < finished ; manifest ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
+      au < finished ; crawling ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
       au < manifest ; exists ; 2015 ; Cardiovascular Ultrasound Volume 13 ; 13 >
 
     }
@@ -3017,7 +3017,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cerebellumandataxias.com/
       param[journal_issn] = 2053-8871
 
-      au < finished ; manifest ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
+      au < finished ; crawling ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
       au < manifest ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
       
     }
@@ -3060,7 +3060,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
       au < frozen ; exists ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 >
-      au < finished ; manifest ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
+      au < finished ; crawling ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
       au < manifest ; exists ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 ; 9 >
 
     }
@@ -3084,7 +3084,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Chinese Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Chinese Medicine Volume 7 ; 7 >
       au < frozen ; exists ; 2013 ; Chinese Medicine Volume 8 ; 8 >
-      au < finished ; manifest ; 2014 ; Chinese Medicine Volume 9 ; 9 >
+      au < finished ; crawling ; 2014 ; Chinese Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2015 ; Chinese Medicine Volume 10 ; 10 >
 
     }
@@ -3111,7 +3111,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
       au < crawling ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
       au < frozen ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
-      au < finished ; manifest ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
+      au < finished ; crawling ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
       au < crawling ; exists ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
 
       }
@@ -3162,7 +3162,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2012 ; Cilia Volume 1 ; 1 >
       au < frozen ; exists ; 2013 ; Cilia Volume 2 ; 2 >
-      au < finished ; manifest ; 2014 ; Cilia Volume 3 ; 3 >
+      au < finished ; crawling ; 2014 ; Cilia Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Cilia Volume 4 ; 4 >
 
     }
@@ -3207,7 +3207,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < frozen ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
-      au < finished ; manifest ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 >
+      au < finished ; crawling ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
 
     }
@@ -3281,7 +3281,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
       au < frozen ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
-      au < finished ; manifest ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
+      au < finished ; crawling ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
 
     }

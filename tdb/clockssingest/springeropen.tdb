@@ -99,7 +99,7 @@
         au < manifest ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
-        au < finished ; manifest ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
+        au < finished ; crawling ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
         au < crawling ; exists ; 2015 ; Annals of Intensive Care Volume 5 ; 5 >
   
     }
@@ -116,7 +116,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
-        au < finished ; manifest ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
+        au < finished ; crawling ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
         au < crawling ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 >
 
     }

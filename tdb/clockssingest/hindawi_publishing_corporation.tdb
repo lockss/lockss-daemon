@@ -512,7 +512,7 @@
 
     param[journal_id] = aen
 
-    au < finished ; manifest ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -1311,7 +1311,7 @@
     au < manifest ; exists ; 2011 ; Advances in Virology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Virology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Advances in Virology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -1376,7 +1376,7 @@
 
     param[journal_id] = acp
 
-    au < finished ; manifest ; 2014 ; Analytical Cellular Pathology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Analytical Cellular Pathology Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Analytical Cellular Pathology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -1470,7 +1470,7 @@
 
     param[journal_id] = abb 
 
-    au < finished ; manifest ; 2014 ; Applied Bionics and Biomechanics Volume 2014 ; 2014 ; 2014 > 
+    au < finished ; crawling ; 2014 ; Applied Bionics and Biomechanics Volume 2014 ; 2014 ; 2014 > 
     au < manifest ; exists ; 2015 ; Applied Bionics and Biomechanics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -1852,7 +1852,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Case Reports in Dentistry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2052,7 +2052,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Case Reports in Nephrology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2070,7 +2070,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2142,7 +2142,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2562,7 +2562,7 @@
     param[journal_id] = cpis
 
     au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -2701,7 +2701,7 @@
     au < manifest ; exists ; 2011 ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Diagnostic and Therapeutic Endoscopy Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3366,7 +3366,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Biomedical Imaging Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3491,7 +3491,7 @@
     param[journal_id] = ijcd
 
     au < manifest ; exists ; 2013 ; International Journal of Chronic Diseases Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Chronic Diseases Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3526,7 +3526,7 @@
 
     param[journal_id] = ijcm
 
-    au < finished ; manifest ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Computational Mathematics Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3566,7 +3566,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Corrosion Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -4082,7 +4082,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Microbiology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -4618,7 +4618,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Stochastic Analysis Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Stochastic Analysis Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; International Journal of Stochastic Analysis Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; International Journal of Stochastic Analysis Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Stochastic Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -6509,7 +6509,7 @@
     param[journal_id] = joo
     
     au < manifest ; exists ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7618,7 +7618,7 @@
     au < manifest ; exists ; 2011 ; Obstetrics and Gynecology International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Obstetrics and Gynecology International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Obstetrics and Gynecology International Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Obstetrics and Gynecology International Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Obstetrics and Gynecology International Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Obstetrics and Gynecology International Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7754,7 +7754,7 @@
     au < manifest ; exists ; 2011 ; Physics Research International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Physics Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Physics Research International Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Physics Research International Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Physics Research International Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Physics Research International Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7789,7 +7789,7 @@
     au < manifest ; exists ; 2011 ; Plastic Surgery International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Plastic Surgery International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Plastic Surgery International Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Plastic Surgery International Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Plastic Surgery International Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Plastic Surgery International Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -8359,7 +8359,7 @@
     au < manifest ; exists ; 2011 ; Tuberculosis Research and Treatment Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Tuberculosis Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Tuberculosis Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < finished ; manifest ; 2014 ; Tuberculosis Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < finished ; crawling ; 2014 ; Tuberculosis Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Tuberculosis Research and Treatment Volume 2015 ; 2015 ; 2015 >
     
   }
