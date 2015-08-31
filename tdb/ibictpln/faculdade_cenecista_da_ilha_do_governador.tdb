@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Faculdade Cenecista da Ilha do Governador
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Temiminós Revista Científica ;
+        eissn = 2317-7764
+      >
+
+      comment[publisher] = Faculdade Cenecista da Ilha do Governador
+      param[base_url] = http://www.cnecrj.com.br/ojs/
+      param[journal_id] = TeRCi
+
+      au < expected ; 2015 ; 1 ; Temiminós Revista Científica Volume 2015 ; 2015 >
+
+  }
+
+}

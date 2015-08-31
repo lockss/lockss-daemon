@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Museu de Astronomia e Ciências Afins
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Museologia e Patrimônio ;
+        eissn = 1984-3917
+      >
+
+      comment[publisher] = Museu de Astronomia e Ciências Afins
+      param[base_url] = http://revistamuseologiaepatrimonio.mast.br/
+      param[journal_id] = ppgpmus
+
+      au < exists ; 2008 ; 1 ; Museologia e Patrimônio Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Museologia e Patrimônio Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Museologia e Patrimônio Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Museologia e Patrimônio Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Museologia e Patrimônio Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 6 ; Museologia e Patrimônio Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 7 ; Museologia e Patrimônio Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 8 ; Museologia e Patrimônio Volume 2015 ; 2015 >
+
+  }
+
+}

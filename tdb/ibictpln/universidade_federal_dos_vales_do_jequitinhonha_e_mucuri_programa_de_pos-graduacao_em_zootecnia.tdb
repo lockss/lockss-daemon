@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Universidade Federal dos Vales do Jequitinhonha e Mucuri, Programa de Pós-graduação em Zootecnia
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Zootecnia ;
+        eissn = 2358-3576
+      >
+
+      comment[publisher] = Universidade Federal dos Vales do Jequitinhonha e Mucuri, Programa de Pós-graduação em Zootecnia
+      param[base_url] = http://www.cantacantos.com.br/revista/
+      param[journal_id] = zootecnia
+
+      au < exists ; 2014 ; 1 ; Zootecnia Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 2 ; Zootecnia Volume 2015 ; 2015 >
+
+  }
+
+}

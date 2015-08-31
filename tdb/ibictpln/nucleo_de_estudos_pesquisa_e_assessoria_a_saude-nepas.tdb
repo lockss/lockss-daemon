@@ -1,0 +1,86 @@
+{
+  publisher <
+    name = Núcleo de Estudos, Pesquisa e Assessoria à Saúde-NEPAS
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = ABCS Health Sciences ;
+        issn = 2318-4965 ;
+        eissn = 2357-8114
+      >
+
+      comment[publisher] = Núcleo de Estudos, Pesquisa e Assessoria à Saúde-NEPAS
+      param[base_url] = http://www.portalnepas.org.br/
+      param[journal_id] = abcshs
+
+      au < exists ; 2013 ; 1 ; ABCS Health Sciences Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 2 ; ABCS Health Sciences Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 3 ; ABCS Health Sciences Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Arquivos Brasileiros de Ciências da Saúde ;
+        issn = 1983-2451 ;
+        eissn = 2358-0747
+      >
+
+      comment[publisher] = Núcleo de Estudos, Pesquisa e Assessoria à Saúde-NEPAS
+      param[base_url] = http://www.portalnepas.org.br/
+      param[journal_id] = abcs
+
+      au < exists ; 2008 ; 1 ; Arquivos Brasileiros de Ciências da Saúde Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Arquivos Brasileiros de Ciências da Saúde Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Arquivos Brasileiros de Ciências da Saúde Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Arquivos Brasileiros de Ciências da Saúde Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Arquivos Brasileiros de Ciências da Saúde Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Arquivos Brasileiros de Ciências da Saúde Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Arquivos Brasileiros de Ciências da Saúde Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 8 ; Arquivos Brasileiros de Ciências da Saúde Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Arquivos Médicos do ABC ;
+        issn = 0100-3992 ;
+        eissn = 2358-0739
+      >
+
+      comment[publisher] = Núcleo de Estudos, Pesquisa e Assessoria à Saúde-NEPAS
+      param[base_url] = http://www.portalnepas.org.br/
+      param[journal_id] = amabc
+
+      au < exists ; 1987 ; 1 ; Arquivos Médicos do ABC Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 2 ; Arquivos Médicos do ABC Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 3 ; Arquivos Médicos do ABC Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 4 ; Arquivos Médicos do ABC Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 5 ; Arquivos Médicos do ABC Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 6 ; Arquivos Médicos do ABC Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 7 ; Arquivos Médicos do ABC Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 8 ; Arquivos Médicos do ABC Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 9 ; Arquivos Médicos do ABC Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 10 ; Arquivos Médicos do ABC Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 11 ; Arquivos Médicos do ABC Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 12 ; Arquivos Médicos do ABC Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 13 ; Arquivos Médicos do ABC Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 14 ; Arquivos Médicos do ABC Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 15 ; Arquivos Médicos do ABC Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 16 ; Arquivos Médicos do ABC Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 17 ; Arquivos Médicos do ABC Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 18 ; Arquivos Médicos do ABC Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 19 ; Arquivos Médicos do ABC Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 20 ; Arquivos Médicos do ABC Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 21 ; Arquivos Médicos do ABC Volume 2007 ; 2007 >
+
+  }
+
+}
