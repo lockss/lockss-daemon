@@ -2510,7 +2510,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://anr.sagepub.com/
 
-    au < crawling ; exists ; 2014 ; The Anthropocene Review Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2014 ; The Anthropocene Review Volume 1 ; 1 ; >
     au < crawling ; exists ; 2015 ; The Anthropocene Review Volume 2 ; 2 ; >
 
   }
@@ -3191,7 +3191,7 @@
       au < zapped ; finished ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
       au < finished ; frozen ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2014-2015 ; Assessment for Effective Intervention Volume 40 ; 40 ; >
+      au < finished ; manifest ; 2014-2015 ; Assessment for Effective Intervention Volume 40 ; 40 ; >
 
     }
 
@@ -5391,8 +5391,8 @@
     au < exists ; exists ; 2010-2011 ; Christianity & Literature Volume 60 ; 60 ; >
     au < exists ; exists ; 2011-2012 ; Christianity & Literature Volume 61 ; 61 ; >
     au < manifest ; exists ; 2012-2013 ; Christianity & Literature Volume 62 ; 62 ; >
-    au < crawling ; exists ; 2013-2014 ; Christianity & Literature Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2014-2015 ; Christianity & Literature Volume 64 ; 64 ; >
+    au < finished ; manifest ; 2013-2014 ; Christianity & Literature Volume 63 ; 63 ; >
+    au < finished ; manifest ; 2014-2015 ; Christianity & Literature Volume 64 ; 64 ; >
 
   }
 
@@ -6198,7 +6198,7 @@
       au < finished ; frozen ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 ; >
       au < zapped ; finished ; 2012-2013 ; Communication Disorders Quarterly Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013-2014 ; Communication Disorders Quarterly Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2014-2015 ; Communication Disorders Quarterly Volume 36 ; 36 ; >
+      au < finished ; manifest ; 2014-2015 ; Communication Disorders Quarterly Volume 36 ; 36 ; >
 
     }
 
@@ -8394,8 +8394,8 @@
       au < zapped ; finished ; 2010-2011 ; Currents in Biblical Research Volume 9 ; 9 ; >
       au < finished ; frozen ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012-2013 ; Currents in Biblical Research Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2013-2014 ; Currents in Biblical Research Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2013-2014 ; Currents in Biblical Research Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; >
 
     }
 
@@ -9562,8 +9562,8 @@
     au < exists ; exists ; 2011 ; Educational Horizons Volume 89 ; 89 ; >
     au < exists ; exists ; 2011-2012 ; Educational Horizons Volume 90 ; 90 ; >
     au < manifest ; exists ; 2012-2013 ; Educational Horizons Volume 91 ; 91 ; >
-    au < crawling ; exists ; 2013-2014 ; Educational Horizons Volume 92 ; 92 ; >
-    au < crawling ; exists ; 2014-2015 ; Educational Horizons Volume 93 ; 93 ; >
+    au < finished ; manifest ; 2013-2014 ; Educational Horizons Volume 92 ; 92 ; >
+    au < finished ; manifest ; 2014-2015 ; Educational Horizons Volume 93 ; 93 ; >
 
   }
 
@@ -11357,8 +11357,8 @@
       au < crawling ; exists ; 2010-2011 ; Exceptional Children Volume 77 ; 77 ; >
       au < frozen ; exists ; 2011-2012 ; Exceptional Children Volume 78 ; 78 ; >
       au < manifest ; exists ; 2012-2013 ; Exceptional Children Volume 79 ; 79 ; >
-      au < crawling ; exists ; 2013-2014 ; Exceptional Children Volume 80 ; 80 ; >
-      au < crawling ; exists ; 2014-2015 ; Exceptional Children Volume 81 ; 81 ; >
+      au < finished ; manifest ; 2013-2014 ; Exceptional Children Volume 80 ; 80 ; >
+      au < finished ; manifest ; 2014-2015 ; Exceptional Children Volume 81 ; 81 ; >
 
   }
 
@@ -11773,8 +11773,8 @@
       au < zapped ; finished ; 2010-2011 ; Feminist Theology Volume 19 ; 19 ; >
       au < finished ; crawling ; 2011-2012 ; Feminist Theology Volume 20 ; 20 ; >
       au < finished ; crawling ; 2012-2013 ; Feminist Theology Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2013-2014 ; Feminist Theology Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2014-2015 ; Feminist Theology Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2013-2014 ; Feminist Theology Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2014-2015 ; Feminist Theology Volume 23 ; 23 ; >
 
     }
 
@@ -12350,8 +12350,8 @@
       au < zapped ; finished ; 2010-2011 ; General Music Today Volume 24 ; 24 ; >
       au < finished ; crawling ; 2011-2012 ; General Music Today Volume 25 ; 25 ; >
       au < finished ; frozen ; 2012-2013 ; General Music Today Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2013-2014 ; General Music Today Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2014-2015 ; General Music Today Volume 28 ; 28 ; >
+      au < finished ; manifest ; 2013-2014 ; General Music Today Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2014-2015 ; General Music Today Volume 28 ; 28 ; >
 
     }
 
@@ -14496,7 +14496,7 @@
       au < exists ; exists ; 2011-2012 ; Imagination, Cognition and Personality Volume 31 ; 31 ; >
       au < exists ; exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; >
+      au < finished ; manifest ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; >
       au < manifest ; exists ; 2015-2016 ; Imagination, Cognition and Personality Volume 35 ; 35 ; >
 
   }
@@ -17694,7 +17694,7 @@
       au < finished ; crawling ; 2010-2011 ; Journal for the Study of the New Testament Volume 33 ; 33 ; >
       au < finished ; crawling ; 2011-2012 ; Journal for the Study of the New Testament Volume 34 ; 34 ; >
       au < finished ; crawling ; 2012-2013 ; Journal for the Study of the New Testament Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2013-2014 ; Journal for the Study of the New Testament Volume 36 ; 36 ; >
+      au < finished ; manifest ; 2013-2014 ; Journal for the Study of the New Testament Volume 36 ; 36 ; >
       au < crawling ; exists ; 2014-2015 ; Journal for the Study of the New Testament Volume 37 ; 37 ; >
       au < expected ; exists ; 2015-2016 ; Journal for the Study of the New Testament Volume 38 ; 38 ; >
 
@@ -17763,7 +17763,7 @@
       au < zapped ; finished ; 2011-2012 ; Journal for the Study of the Old Testament Volume 36 ; 36 ; >
       au < finished ; frozen ; 2012-2013 ; Journal for the Study of the Old Testament Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013-2014 ; Journal for the Study of the Old Testament Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2014-2015 ; Journal for the Study of the Old Testament Volume 39 ; 39 ; >
+      au < finished ; manifest ; 2014-2015 ; Journal for the Study of the Old Testament Volume 39 ; 39 ; >
 
     }
 
@@ -17815,7 +17815,7 @@
       au < finished ; crawling ; 2011-2012 ; Journal for the Study of the Pseudepigrapha Volume 21 ; 21 ; >
       au < finished ; frozen ; 2012-2013 ; Journal for the Study of the Pseudepigrapha Volume 22 ; 22 ; >
       au < crawling ; exists ; 2013-2014 ; Journal for the Study of the Pseudepigrapha Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2014-2015 ; Journal for the Study of the Pseudepigrapha Volume 24 ; 24 ; >
+      au < finished ; manifest ; 2014-2015 ; Journal for the Study of the Pseudepigrapha Volume 24 ; 24 ; >
 
     }
 
@@ -18784,7 +18784,7 @@
       au < zapped ; finished ; 2010-2011 ; Journal of Building Physics Volume 34 ; 34 ; >
       au < finished ; crawling ; 2011-2012 ; Journal of Building Physics Volume 35 ; 35 ; >
       au < finished ; frozen ; 2012-2013 ; Journal of Building Physics Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2013-2014 ; Journal of Building Physics Volume 37 ; 37 ; >
+      au < finished ; manifest ; 2013-2014 ; Journal of Building Physics Volume 37 ; 37 ; >
       au < crawling ; exists ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 ; >
       au < manifest ; exists ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 ; >
 
@@ -22955,7 +22955,7 @@
       au < zapped ; finished ; 2010-2011 ; Journal of Industrial Textiles Volume 40 ; 40 ; >
       au < finished ; crawling ; 2011-2012 ; Journal of Industrial Textiles Volume 41 ; 41 ; >
       au < finished ; crawling ; 2012-2013 ; Journal of Industrial Textiles Volume 42 ; 42 ; >
-      au < crawling ; exists ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 ; >
+      au < finished ; manifest ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 ; >
       au < crawling ; exists ; 2014-2015 ; Journal of Industrial Textiles Volume 44 ; 44 ; >
       au < manifest ; exists ; 2015-2016 ; Journal of Industrial Textiles Volume 45 ; 45 ; >
 
@@ -23536,7 +23536,7 @@
       au < finished ; crawling ; 2011 ; Journal of Language and Social Psychology Volume 30 ; 30 ; >
       au < finished ; crawling ; 2012 ; Journal of Language and Social Psychology Volume 31 ; 31 ; >
       au < crawling ; exists ; 2013 ; Journal of Language and Social Psychology Volume 32 ; 32 ; >
-      au < crawling ; exists ; 2014 ; Journal of Language and Social Psychology Volume 33 ; 33 ; >
+      au < finished ; manifest ; 2014 ; Journal of Language and Social Psychology Volume 33 ; 33 ; >
       au < manifest ; exists ; 2015 ; Journal of Language and Social Psychology Volume 34 ; 34 ; >
 
     }
@@ -24201,7 +24201,7 @@
       au < finished ; crawling ; 2011 ; Journal of Mixed Methods Research Volume 5 ; 5 ; >
       au < finished ; frozen ; 2012 ; Journal of Mixed Methods Research Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; Journal of Mixed Methods Research Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; Journal of Mixed Methods Research Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2014 ; Journal of Mixed Methods Research Volume 8 ; 8 ; >
       au < manifest ; exists ; 2015 ; Journal of Mixed Methods Research Volume 9 ; 9 ; >
 
     }
@@ -25624,7 +25624,7 @@
       au < finished ; crawling ; 2011 ; Journal of Service Research Volume 14 ; 14 ; >
       au < finished ; frozen ; 2012 ; Journal of Service Research Volume 15 ; 15 ; >
       au < frozen ; exists ; 2013 ; Journal of Service Research Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2014 ; Journal of Service Research Volume 17 ; 17 ; >
+      au < finished ; manifest ; 2014 ; Journal of Service Research Volume 17 ; 17 ; >
       au < manifest ; exists ; 2015 ; Journal of Service Research Volume 18 ; 18 ; >
 
     }
@@ -26524,7 +26524,7 @@
       param[base_url] = http://jha.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < crawling ; exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
+      au < finished ; manifest ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
       au < manifest ; exists ; 2015 ; Journal for the History of Astronomy Volume 46 ; 46 ; >
 
   }
@@ -27490,7 +27490,7 @@
       au < finished ; crawling ; 2011 ; Journalism: Theory, Practice, and Criticism Volume 12 ; 12 ; >
       au < finished ; frozen ; 2012 ; Journalism: Theory, Practice, and Criticism Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Journalism: Theory, Practice, and Criticism Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2014 ; Journalism: Theory, Practice, and Criticism Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2014 ; Journalism: Theory, Practice, and Criticism Volume 15 ; 15 ; >
       au < manifest ; exists ; 2015 ; Journalism: Theory, Practice, and Criticism Volume 16 ; 16 ; >
 
     }
@@ -28861,7 +28861,7 @@
       au < finished ; crawling ; 2011 ; Medical Care Research and Review Volume 68 ; 68 ; >
       au < finished ; frozen ; 2012 ; Medical Care Research and Review Volume 69 ; 69 ; >
       au < crawling ; exists ; 2013 ; Medical Care Research and Review Volume 70 ; 70 ; >
-      au < crawling ; exists ; 2014 ; Medical Care Research and Review Volume 71 ; 71 ; >
+      au < finished ; manifest ; 2014 ; Medical Care Research and Review Volume 71 ; 71 ; >
       au < manifest ; exists ; 2015 ; Medical Care Research and Review Volume 72 ; 72 ; >
 
     }
@@ -30071,8 +30071,8 @@
       au < frozen ; exists ; 2013 ; National Institute Economic Review Volume 225 ; 225 ; >
       au < frozen ; exists ; 2013 ; National Institute Economic Review Volume 226 ; 226 ; >
       au < finished ; manifest ; 2014 ; National Institute Economic Review Volume 227 ; 227 ; >
-      au < crawling ; exists ; 2014 ; National Institute Economic Review Volume 228 ; 228 ; >
-      au < crawling ; exists ; 2014 ; National Institute Economic Review Volume 229 ; 229 ; >
+      au < finished ; manifest ; 2014 ; National Institute Economic Review Volume 228 ; 228 ; >
+      au < finished ; manifest ; 2014 ; National Institute Economic Review Volume 229 ; 229 ; >
       au < finished ; crawling ; 2014 ; National Institute Economic Review Volume 230 ; 230 ; >
       au < manifest ; exists ; 2015 ; National Institute Economic Review Volume 231 ; 231 ; >
       au < manifest ; exists ; 2015 ; National Institute Economic Review Volume 232 ; 232 ; >
@@ -30100,7 +30100,7 @@
       au < finished ; crawling ; 2011 ; The Neurohospitalist Volume 1 ; 1 ; >
       au < finished ; frozen ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; The Neurohospitalist Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2014 ; The Neurohospitalist Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2014 ; The Neurohospitalist Volume 4 ; 4 ; >
       au < manifest ; exists ; 2015 ; The Neurohospitalist Volume 5 ; 5 ; >
 
     }
@@ -30917,7 +30917,7 @@
       au < finished ; crawling ; 2011 ; Organization & Environment Volume 24 ; 24 ; >
       au < finished ; finished ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
       au < frozen ; exists ; 2013 ; Organization & Environment Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2014 ; Organization & Environment Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2014 ; Organization & Environment Volume 27 ; 27 ; >
       au < manifest ; exists ; 2015 ; Organization & Environment Volume 28 ; 28 ; >
 
     }
@@ -31683,7 +31683,7 @@
       au < finished ; crawling ; 2011 ; Perspectives in Public Health Volume 131 ; 131 ; >
       au < finished ; frozen ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; >
       au < crawling ; exists ; 2013 ; Perspectives in Public Health Volume 133 ; 133 ; >
-      au < crawling ; exists ; 2014 ; Perspectives in Public Health Volume 134 ; 134 ; >
+      au < finished ; manifest ; 2014 ; Perspectives in Public Health Volume 134 ; 134 ; >
       au < manifest ; exists ; 2015 ; Perspectives in Public Health Volume 135 ; 135 ; >
 
     }
@@ -32548,7 +32548,7 @@
       au < finished ; frozen ; 2011 ; The Prison Journal Volume 91 ; 91 ; >
       au < finished ; crawling ; 2012 ; The Prison Journal Volume 92 ; 92 ; >
       au < frozen ; exists ; 2013 ; The Prison Journal Volume 93 ; 93 ; >
-      au < crawling ; exists ; 2014 ; The Prison Journal Volume 94 ; 94 ; >
+      au < finished ; manifest ; 2014 ; The Prison Journal Volume 94 ; 94 ; >
       au < manifest ; exists ; 2015 ; The Prison Journal Volume 95 ; 95 ; >
 
     }
@@ -33996,7 +33996,7 @@
       au < finished ; crawling ; 2011 ; Public Finance Review Volume 39 ; 39 ; >
       au < finished ; crawling ; 2012 ; Public Finance Review Volume 40 ; 40 ; >
       au < frozen ; exists ; 2013 ; Public Finance Review Volume 41 ; 41 ; >
-      au < crawling ; exists ; 2014 ; Public Finance Review Volume 42 ; 42 ; >
+      au < finished ; manifest ; 2014 ; Public Finance Review Volume 42 ; 42 ; >
       au < manifest ; exists ; 2015 ; Public Finance Review Volume 43 ; 43 ; >
 
     }
@@ -34738,7 +34738,7 @@
       au < zapped ; finished ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 ; >
       au < zapped ; finished ; 2012-2013 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 ; >
       au < crawling ; exists ; 2013-2014 ; Rehabilitation Counseling Bulletin Volume 57 ; 57 ; >
-      au < crawling ; exists ; 2014-2015 ; Rehabilitation Counseling Bulletin Volume 58 ; 58 ; >
+      au < finished ; manifest ; 2014-2015 ; Rehabilitation Counseling Bulletin Volume 58 ; 58 ; >
 
     }
 
@@ -36325,7 +36325,7 @@
       au < zapped ; finished ; 2011 ; Sexual Abuse: A Journal of Research and Treatment Volume 23 ; 23 ; >
       au < finished ; frozen ; 2012 ; Sexual Abuse: A Journal of Research and Treatment Volume 24 ; 24 ; >
       au < frozen ; exists ; 2013 ; Sexual Abuse: A Journal of Research and Treatment Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2014 ; Sexual Abuse: A Journal of Research and Treatment Volume 26 ; 26 ; >
+      au < finished ; manifest ; 2014 ; Sexual Abuse: A Journal of Research and Treatment Volume 26 ; 26 ; >
       au < manifest ; exists ; 2015 ; Sexual Abuse: A Journal of Research and Treatment Volume 27 ; 27 ; >
 
     }
@@ -38097,7 +38097,7 @@
         param[base_url] = http://inp.sagepub.com/
 
         au < frozen ; exists ; 2013 ; Studies in Indian Politics Volume 1 ; 1 ; >
-        au < crawling ; exists ; 2014 ; Studies in Indian Politics Volume 2 ; 2 ; >
+        au < finished ; manifest ; 2014 ; Studies in Indian Politics Volume 2 ; 2 ; >
         au < manifest ; exists ; 2015 ; Studies in Indian Politics Volume 3 ; 3 ; >
 
     }
@@ -38367,7 +38367,7 @@
       au < exists ; exists ; 2010-2011 ; TEACHING Exceptional Children Volume 43 ; 43 ; >
       au < exists ; exists ; 2011-2012 ; TEACHING Exceptional Children Volume 44 ; 44 ; >
       au < manifest ; exists ; 2012-2013 ; TEACHING Exceptional Children Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 ; >
+      au < finished ; manifest ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 ; >
       au < crawling ; exists ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 ; >
       au < manifest ; exists ; 2015-2016 ; TEACHING Exceptional Children Volume 48 ; 48 ; >
 
@@ -40088,7 +40088,7 @@
       au < finished ; frozen ; 2011 ; Toxicology and Industrial Health Volume 27 ; 27 ; >
       au < finished ; frozen ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 ; >
       au < crawling ; exists ; 2013 ; Toxicology and Industrial Health Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2014 ; Toxicology and Industrial Health Volume 30 ; 30 ; >
+      au < finished ; manifest ; 2014 ; Toxicology and Industrial Health Volume 30 ; 30 ; >
       au < manifest ; exists ; 2015 ; Toxicology and Industrial Health Volume 31 ; 31 ; >
 
     }
@@ -40334,7 +40334,7 @@
       au < finished ; frozen ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 ; >
       au < finished ; frozen ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; Transformation: An International Journal of Holistic Mission Studies Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2014 ; Transformation: An International Journal of Holistic Mission Studies Volume 31 ; 31 ; >
+      au < finished ; manifest ; 2014 ; Transformation: An International Journal of Holistic Mission Studies Volume 31 ; 31 ; >
       au < manifest ; exists ; 2015 ; Transformation: An International Journal of Holistic Mission Studies Volume 32 ; 32 ; >
 
     }
@@ -41164,7 +41164,7 @@
       au < finished ; crawling ; 2011 ; Visual Communication Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012 ; Visual Communication Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Visual Communication Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2014 ; Visual Communication Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2014 ; Visual Communication Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Visual Communication Volume 14 ; 14 ; >
 
 
@@ -41674,7 +41674,7 @@
       au < zapped ; finished ; 2011 ; Written Communication Volume 28 ; 28 ; >
       au < zapped ; finished ; 2012 ; Written Communication Volume 29 ; 29 ; >
       au < frozen ; exists ; 2013 ; Written Communication Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2014 ; Written Communication Volume 31 ; 31 ; >
+      au < finished ; manifest ; 2014 ; Written Communication Volume 31 ; 31 ; >
       au < manifest ; exists ; 2015 ; Written Communication Volume 32 ; 32 ; >
 
 
@@ -43394,7 +43394,7 @@
     param[base_url] = http://dsp.sagepub.com/
     # 2013 content published in 2014
     
-    au < crawling ; exists ; 2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
 
     }
@@ -43552,7 +43552,7 @@
     au < exists ; exists ; 2011 ; Journal of International Medical Research Volume 39 ; 39 ; >
     au < exists ; exists ; 2012 ; Journal of International Medical Research Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Journal of International Medical Research Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2014 ; Journal of International Medical Research Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2014 ; Journal of International Medical Research Volume 42 ; 42 ; >
     au < manifest ; exists ; 2015 ; Journal of International Medical Research Volume 43 ; 43 ; >
 
     }
@@ -43747,7 +43747,7 @@
 
     au < finished ; frozen ; 2012 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 ; >
     au < frozen ; exists ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2014 ; South Asian Journal of Macroeconomics and Public Finance Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2014 ; South Asian Journal of Macroeconomics and Public Finance Volume 3 ; 3 ; >
     au < manifest ; exists ; 2015 ; South Asian Journal of Macroeconomics and Public Finance Volume 4 ; 4 ; >
 
     }
@@ -45360,7 +45360,7 @@
       au < exists ; exists ; 2011 ; Vascular Volume 19 ; 19 ; >
       au < exists ; exists ; 2012 ; Vascular Volume 20 ; 20 ; >
       au < crawling ; exists ; 2013 ; Vascular Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2014 ; Vascular Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2014 ; Vascular Volume 22 ; 22 ; >
       au < crawling ; exists ; 2015 ; Vascular Volume 23 ; 23 ; >
 
      }
