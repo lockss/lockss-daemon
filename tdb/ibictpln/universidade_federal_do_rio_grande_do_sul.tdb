@@ -372,11 +372,12 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ConjunturaAustral
 
-      au < manifest ; 2010 ; 1 ; Conjuntura Austral Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 2 ; Conjuntura Austral Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 3 ; Conjuntura Austral Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 4 ; Conjuntura Austral Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 5 ; Conjuntura Austral Volume 2014 ; 2014 ; >
+      au < testing ; 2010 ; 1 ; Conjuntura Austral Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 2 ; Conjuntura Austral Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 3 ; Conjuntura Austral Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 4 ; Conjuntura Austral Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 5 ; Conjuntura Austral Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 6 ; Conjuntura Austral Volume 2015 ; 2015 ; >
 
   }
 
@@ -677,12 +678,13 @@
       au < released ; 2005 ; 9 ; History of Education Journal Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 10 ; History of Education Journal Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 11 ; History of Education Journal Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 12 ; History of Education Journal Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 13 ; History of Education Journal Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 14 ; History of Education Journal Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 15 ; History of Education Journal Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 16 ; History of Education Journal Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 17 ; History of Education Journal Volume 2013 ; 2013 ; >
+      au < testing ; 2008 ; 12 ; History of Education Journal Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 13 ; History of Education Journal Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 14 ; History of Education Journal Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 15 ; History of Education Journal Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 16 ; History of Education Journal Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 17 ; History of Education Journal Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 18 ; History of Education Journal Volume 2014 ; 2014 ; >
 
   }
 
@@ -697,11 +699,11 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = iluminuras
 
-      au < manifest ; 2000 ; 1 ; ILUMINURAS Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 2 ; ILUMINURAS Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 3 ; ILUMINURAS Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 4 ; ILUMINURAS Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 5 ; ILUMINURAS Volume 2004 ; 2004 ; >
+      au < testing ; 2000 ; 1 ; ILUMINURAS Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 2 ; ILUMINURAS Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 3 ; ILUMINURAS Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 4 ; ILUMINURAS Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 5 ; ILUMINURAS Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 6 ; ILUMINURAS Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 7 ; ILUMINURAS Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 8 ; ILUMINURAS Volume 2007 ; 2007 ; >
@@ -790,7 +792,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = Movimento
 
-      au < manifest ; 1994 ; 1 ; Movimento (ESEF/UFRGS) Volume 1994 ; 1994 ; >
+      au < testing ; 1994 ; 1 ; Movimento (ESEF/UFRGS) Volume 1994 ; 1994 ; >
       au < released ; 1995 ; 2 ; Movimento (ESEF/UFRGS) Volume 1995 ; 1995 ; >
       au < released ; 1996 ; 3 ; Movimento (ESEF/UFRGS) Volume 1996 ; 1996 ; >
       au < released ; 1997 ; 4 ; Movimento (ESEF/UFRGS) Volume 1997 ; 1997 ; >
