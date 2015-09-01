@@ -127,10 +127,11 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.1.3'
+__version__ = '0.1.4'
 
 import cStringIO
 import optparse
+import os.path
 import re
 import subprocess
 import sys
@@ -237,15 +238,14 @@ _IMPLICIT = re.compile(r'^[^#]*implicit[ \t]*<(.*)>[ \t]*(#.*)?$')
 # - Group 1: semicolon-separated body of the au<...> statement
 _AU = re.compile(r'^[^#]*au[ \t]*<(.*)>[ \t]*(#.*)?$')
 
-def _file_lines(filestr):
-  '''Returns an array of all the lines in the file filestr that do not begin
+def _file_lines(fstr):
+  '''Returns an array of all the lines in the file fstr that do not begin
   with '#' and that are not entirely whitespace, with leading and trailing
   whitespace trimmed. Exits with sys.exit() if the result has zero elements.
   '''
-  f = open(filestr, 'r')
-  ret = [line.strip() for line in f if not (line.isspace() or line.startswith('#'))]
-  f.close()
-  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (filestr,))
+# Last modified 2015-08-31
+  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
   return ret
 
 def _get_auids(options):
