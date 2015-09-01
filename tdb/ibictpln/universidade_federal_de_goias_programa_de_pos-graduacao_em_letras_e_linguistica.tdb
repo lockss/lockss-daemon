@@ -1,10 +1,10 @@
 {
   publisher <
-    name = Universidade Federal do Goiás, Programa de Pós-Graduação em Letras e Linguística
+    name = Universidade Federal de Goiás, Programa de Pós-Graduação em Letras e Linguística
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
