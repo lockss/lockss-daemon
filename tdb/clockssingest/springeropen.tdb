@@ -369,21 +369,6 @@
     {
   
         title <
-          name = Crisis Communications ;
-          issn = 2194-9794 
-        >
-  
-        param[base_url] = http://www.crisiscommunicationsjournal.com/
-        param[journal_issn] = 2194-9794 
-        comment[platform] = BioMedCentralPlugin
-  
-        au < expected ; exists ; 2015 ; Crisis Communications Volume 1 ; 1 >
-  
-    }
-  
-    {
-  
-        title <
           name = Critical Ultrasound Journal ;
           issn = 2036-3176 ;
           eissn = 2036-7902
@@ -443,8 +428,8 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; exists ; 2014 ; Earth, Planets and Space Volume 1 ; 1 >
-        au < expected ; exists ; 2015 ; Earth, Planets and Space Volume 2 ; 2 >
+        au < exists ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
+        au < exists ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
 
     }
 
@@ -1349,7 +1334,7 @@
   
         title <
           name = Journal of Analytical Science and Technology ;
-          issn = 2093-3371 
+          eissn = 2093-3371 
         >
   
         param[base_url] = http://www.jast-journal.com/
@@ -2149,21 +2134,6 @@
     {
   
         title <
-          name = Scalable Computing ;
-          issn = 2194-6876
-        >
-  
-        param[base_url] = http://www.scalablecomputingjournal.com/
-        param[journal_issn] = 2194-6876
-        comment[platform] = BioMedCentralPlugin
-  
-        au < expected ; exists ; 2015 ; Scalable Computing Volume 1 ; 1 >
-  
-    }
-  
-    {
-  
-        title <
           name = Security Informatics ;
           eissn = 2190-8532
         >
@@ -2340,7 +2310,6 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < doesNotExist ; doesNotExist ; 0 ; Journal of Chinese Sociology Volume 1 ; 1 > 
       au < manifest ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
 
     }
@@ -2444,6 +2413,22 @@
 
     }
 
+    {
+
+      title <
+        name = Maxillofacial Plastic and Reconstructive Surgery ;
+        issn = 2288-8101 ;
+        eissn = 2288-8586
+      >
+
+      param[base_url] = http://www.jkamprs.com/
+      param[journal_issn] = 2288-8586
+      comment[platform] = BioMedCentralPlugin
+
+      au < expected ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
+
+    }
+
   }
   
   {
@@ -2481,7 +2466,7 @@
         param[journal_issn] = 0814-6039
         comment[platform] = Springer
 
-        au < expected ; exists ; 2015 ; Acoustics Australia Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Acoustics Australia Volume 43 ; 43 >
 
     }
   
@@ -2519,7 +2504,8 @@
         au < exists ; exists ; 2012 ; Applied Petrochemical Research Volume 1 ; 1 >
         au < exists ; exists ; 2012 ; Applied Petrochemical Research Volume 2 ; 2 >
         au < exists ; exists ; 2013 ; Applied Petrochemical Research Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Applied Petrochemical Research Volume 4 ; 4 >
+        au < exists ; exists ; 2014 ; Applied Petrochemical Research Volume 4 ; 4 >
+        au < exists ; exists ; 2015 ; Applied Petrochemical Research Volume 5 ; 5 >
   
     }
   
@@ -2538,7 +2524,8 @@
         au < exists ; exists ; 2011 ; Applied Water Science Volume 1 ; 1 >
         au < exists ; exists ; 2012 ; Applied Water Science Volume 2 ; 2 >
         au < exists ; exists ; 2013 ; Applied Water Science Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Applied Water Science Volume 4 ; 4 >
+        au < exists ; exists ; 2014 ; Applied Water Science Volume 4 ; 4 >
+        au < exists ; exists ; 2015 ; Applied Water Science Volume 5 ; 5 >
   
     }
   
@@ -2556,7 +2543,8 @@
   
         au < exists ; exists ; 2012 ; Arabian Journal of Mathematics Volume 1 ; 1 >
         au < exists ; exists ; 2013 ; Arabian Journal of Mathematics Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; Arabian Journal of Mathematics Volume 3 ; 3 >
+        au < exists ; exists ; 2014 ; Arabian Journal of Mathematics Volume 3 ; 3 >
+        au < exists ; exists ; 2015 ; Arabian Journal of Mathematics Volume 4 ; 4 >
   
     }
   
@@ -2780,7 +2768,8 @@
         au < exists ; exists ; 2011 ; European Transport Research Review Volume 3 ; 3 >
         au < exists ; exists ; 2012 ; European Transport Research Review Volume 4 ; 4 >
         au < exists ; exists ; 2013 ; European Transport Research Review Volume 5 ; 5 >
-        au < expected ; exists ; 2014 ; European Transport Research Review Volume 6 ; 6 >
+        au < exists ; exists ; 2014 ; European Transport Research Review Volume 6 ; 6 >
+        au < exists ; exists ; 2015 ; European Transport Research Review Volume 7 ; 7 >
   
     }
   
@@ -2894,7 +2883,8 @@
   
         au < exists ; exists ; 2012 ; International Journal of Concrete Structures and Materials Volume 6 ; 6 >
         au < exists ; exists ; 2013 ; International Journal of Concrete Structures and Materials Volume 7 ; 7 >
-        au < expected ; exists ; 2014 ; International Journal of Concrete Structures and Materials Volume 8 ; 8 >
+        au < exists ; exists ; 2014 ; International Journal of Concrete Structures and Materials Volume 8 ; 8 >
+        au < exists ; exists ; 2015 ; International Journal of Concrete Structures and Materials Volume 9 ; 9 >
   
     }
   
@@ -2962,7 +2952,8 @@
   
         au < exists ; exists ; 2012 ; Journal of Advanced Ceramics Volume 1 ; 1 >
         au < exists ; exists ; 2013 ; Journal of Advanced Ceramics Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; Journal of Advanced Ceramics Volume 3 ; 3 >
+        au < exists ; exists ; 2014 ; Journal of Advanced Ceramics Volume 3 ; 3 >
+        au < exists ; exists ; 2015 ; Journal of Advanced Ceramics Volume 4 ; 4 >
   
     }
 
@@ -3078,7 +3069,8 @@
         au < exists ; exists ; 2011 ; Journal of Orthopaedics and Traumatology Volume 12 ; 12 >
         au < exists ; exists ; 2012 ; Journal of Orthopaedics and Traumatology Volume 13 ; 13 >
         au < exists ; exists ; 2013 ; Journal of Orthopaedics and Traumatology Volume 14 ; 14 >
-        au < expected ; exists ; 2014 ; Journal of Orthopaedics and Traumatology Volume 15 ; 15 >
+        au < exists ; exists ; 2014 ; Journal of Orthopaedics and Traumatology Volume 15 ; 15 >
+        au < exists ; exists ; 2015 ; Journal of Orthopaedics and Traumatology Volume 16 ; 16 >
   
     }
   
@@ -3097,7 +3089,8 @@
         au < exists ; exists ; 2011 ; Journal of Petroleum Exploration and Production Technologies Volume 1 ; 1 >
         au < exists ; exists ; 2012 ; Journal of Petroleum Exploration and Production Technologies Volume 2 ; 2 >
         au < exists ; exists ; 2013 ; Journal of Petroleum Exploration and Production Technologies Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Journal of Petroleum Exploration and Production Technologies Volume 4 ; 4 >
+        au < exists ; exists ; 2014 ; Journal of Petroleum Exploration and Production Technologies Volume 4 ; 4 >
+        au < exists ; exists ; 2015 ; Journal of Petroleum Exploration and Production Technologies Volume 5 ; 5 >
   
     }
 
@@ -3120,6 +3113,7 @@
         au < exists ; exists ; 2012 ; Logistics Research Volume 5 ; 5 >
         au < exists ; exists ; 2013 ; Logistics Research Volume 6 ; 6 >
         au < exists ; exists ; 2014 ; Logistics Research Volume 7 ; 7 >
+        au < exists ; exists ; 2015 ; Logistics Research Volume 8 ; 8 >
 
     }
 
@@ -3365,7 +3359,8 @@
         au < exists ; exists ; 2011 ; SCIENCE CHINA Life Sciences Volume 54 ; 54 >
         au < exists ; exists ; 2012 ; SCIENCE CHINA Life Sciences Volume 55 ; 55 >
         au < exists ; exists ; 2013 ; SCIENCE CHINA Life Sciences Volume 56 ; 56 >
-        au < expected ; exists ; 2014 ; SCIENCE CHINA Life Sciences Volume 57 ; 57 >
+        au < exists ; exists ; 2014 ; SCIENCE CHINA Life Sciences Volume 57 ; 57 >
+        au < exists ; exists ; 2015 ; SCIENCE CHINA Life Sciences Volume 58 ; 58 >
   
     }
   
@@ -3409,7 +3404,8 @@
         au < exists ; exists ; 2011 ; Strategies in Trauma and Limb Reconstruction Volume 6 ; 6 >
         au < exists ; exists ; 2012 ; Strategies in Trauma and Limb Reconstruction Volume 7 ; 7 >
         au < exists ; exists ; 2013 ; Strategies in Trauma and Limb Reconstruction Volume 8 ; 8 >
-        au < expected ; exists ; 2014 ; Strategies in Trauma and Limb Reconstruction Volume 9 ; 9 >
+        au < exists ; exists ; 2014 ; Strategies in Trauma and Limb Reconstruction Volume 9 ; 9 >
+        au < exists ; exists ; 2015 ; Strategies in Trauma and Limb Reconstruction Volume 10 ; 10 >
   
     }
   
@@ -3424,7 +3420,7 @@
         param[journal_issn] = 1983-2052
         comment[platform] = Springer
 
-        au < expected ; exists ; 2015 ; Tropical Plant Pathology Volume 1 ; 1 >
+        au < expected ; exists ; 2015 ; Tropical Plant Pathology Volume 40 ; 40 >
 
     }
 
@@ -3569,22 +3565,6 @@
       au < exists ; exists ; 2013 ; Journal of the Brazilian Computer Society Volume 19 ; 19 >
       au < exists ; exists ; 2014 ; Journal of the Brazilian Computer Society Volume 20 ; 20 >
       au < expected ; exists ; 2015 ; Journal of the Brazilian Computer Society Volume 21 ; 21 >
-
-    }
-
-    {
-
-      title <
-        name = Maxillofacial Plastic and Reconstructive Surgery ;
-        issn = 2288-8101 ;
-        eissn = 2288-8586
-      >
-
-      param[base_url] = http://link.springer.com/journal/40902/
-      param[journal_issn] = 2288-8586
-      comment[platform] = Springer
-
-      au < expected ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 1 ; 1 >
 
     }
 

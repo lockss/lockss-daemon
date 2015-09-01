@@ -304,7 +304,8 @@
   
         au < manifest ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 >
         au < manifest ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 >
-        au < expected ; 2014 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 >
+        au < doesNotExist ; 0 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 >
+        au < expected ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 ; 4 >
   
     }
   
@@ -356,21 +357,6 @@
         au < manifest ; 2013 ; Crime Science Volume 2 ; 2 >
         au < manifest ; 2014 ; Crime Science Volume 3 ; 3 >
         au < manifest ; 2015 ; Crime Science Volume 4 ; 4 >
-  
-    }
-  
-    {
-  
-        title <
-          name = Crisis Communications ;
-          issn = 2194-9794 
-        >
-  
-        param[base_url] = http://www.crisiscommunicationsjournal.com/
-        param[journal_issn] = 2194-9794 
-        comment[platform] = BioMedCentralPlugin
-  
-        au < expected ; 2014 ; Crisis Communications Volume 1 ; 1 >
   
     }
   
@@ -436,7 +422,8 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; 2014 ; Earth, Planets and Space Volume 1 ; 1 >
+        au < exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
+        au < exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
 
     }
 
@@ -1209,8 +1196,6 @@
   
         au < manifest ; 2012 ; International Journal Of Recycling of Organic Waste in Agriculture Volume 1 ; 1 >
         au < manifest ; 2013 ; International Journal Of Recycling of Organic Waste in Agriculture Volume 2 ; 2 >
-        au < expected ; 2014 ; International Journal of Recycling of Organic Waste in Agriculture Volume 3 ; 3 >
-        au < expected ; 2015 ; International Journal of Recycling of Organic Waste in Agriculture Volume 4 ; 4 >
 
     }
   
@@ -1624,7 +1609,6 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2012-2013 ; Journal of Nanostructure in Chemistry Volume 3 ; 3 >
-        au < expected ; 2014-2015 ; Journal of Nanostructure in Chemistry Volume 4 ; 4 >
   
     }
   
@@ -1831,8 +1815,6 @@
   
         au < manifest ; 2012 ; Mathematical Sciences Volume 6 ; 6 >
         au < manifest ; 2013 ; Mathematical Sciences Volume 7 ; 7 >
-        au < expected ; 2014 ; Mathematical Sciences Volume 8 ; 8 >
-        au < expected ; 2015 ; Mathematical Sciences Volume 9 ; 9 >
   
     }
   
@@ -2018,8 +2000,6 @@
   
         au < manifest ; 2012 ; Progress in Biomaterials Volume 1 ; 1 >
         au < manifest ; 2013 ; Progress in Biomaterials Volume 2 ; 2 >
-        au < expected ; 2014 ; Progress in Biomaterials Volume 3 ; 3 >
-        au < expected ; 2015 ; Progress in Biomaterials Volume 4 ; 4 >
   
     }
   
@@ -2043,7 +2023,6 @@
   
         title <
           name = Progress in Orthodontics ;
-          issn = 1723-7785 ;
           eissn = 2196-1042
         >
   
@@ -2103,8 +2082,8 @@
         param[journal_issn] = 0717-6317
         comment[platform] = BioMedCentralPlugin
 
-        au < manifest ; 2014 ; Revista Chilena de Historia Natural Volume 1 ; 1 >
-        au < expected ; 2015 ; Revista Chilena de Historia Natural Volume 2 ; 2 >
+        au < exists ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 >
+        au < exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
 
     }
 
@@ -2339,7 +2318,6 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < manifest ; 2014 ; Journal of Chinese Sociology Volume 1 ; 1 >
       au < manifest ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
 
     }
@@ -2423,6 +2401,22 @@
 
       au < manifest ; 2014 ; Smart Learning Environments Volume 1 ; 1 >
       au < manifest ; 2015 ; Smart Learning Environments Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Maxillofacial Plastic and Reconstructive Surgery ;
+        issn = 2288-8101 ;
+        eissn = 2288-8586
+      >
+
+      param[base_url] = http://www.jkamprs.com/
+      param[journal_issn] = 2288-8586
+      comment[platform] = BioMedCentralPlugin
+
+      au < expected ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
 
     }
 
@@ -2539,8 +2533,8 @@
   
         au < exists ; 2012 ; Arabian Journal of Mathematics Volume 1 ; 1 >
         au < exists ; 2013 ; Arabian Journal of Mathematics Volume 2 ; 2 >
-        au < exists ; 2014 ; Arabian Journal of Mathematics volume 3 ; 3 >
-        au < exists ; 2015 ; Arabian Journal of Mathematics volume 4 ; 4 >
+        au < exists ; 2014 ; Arabian Journal of Mathematics Volume 3 ; 3 >
+        au < exists ; 2015 ; Arabian Journal of Mathematics Volume 4 ; 4 >
   
     }
   
@@ -3568,22 +3562,6 @@
       au < exists ; 2013 ; Journal of the Brazilian Computer Society Volume 19 ; 19 >
       au < exists ; 2014 ; Journal of the Brazilian Computer Society Volume 20 ; 20 >
       au < expected ; 2015 ; Journal of the Brazilian Computer Society Volume 21 ; 21 >
-
-    }
-
-    {
-
-      title <
-        name = Maxillofacial Plastic and Reconstructive Surgery ;
-        issn = 2288-8101 ;
-        eissn = 2288-8586
-      >
-
-      param[base_url] = http://link.springer.com/journal/40902/
-      param[journal_issn] = 2288-8586
-      comment[platform] = Springer
-
-      au < expected ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
 
     }
 
