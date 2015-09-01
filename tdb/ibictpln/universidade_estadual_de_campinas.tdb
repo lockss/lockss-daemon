@@ -141,35 +141,6 @@
   {
 
       title <
-        name = Conexões ;
-        eissn = 1983-9030
-      >
-
-      comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://fefnet178.fef.unicamp.br/
-      param[journal_id] = fef
-
-      au < exists ; 1998 ; 1 ; Conexões Volume 1998 ; 1998 ; >
-      au < exists ; 1999 ; 2 ; Conexões Volume 1999 ; 1999 ; >
-      au < exists ; 2000 ; 3 ; Conexões Volume 2000 ; 2000 ; >
-      au < exists ; 2001 ; 4 ; Conexões Volume 2001 ; 2001 ; >
-      au < exists ; 2004 ; 5 ; Conexões Volume 2004 ; 2004 ; >
-      au < exists ; 2005 ; 6 ; Conexões Volume 2005 ; 2005 ; >
-      au < exists ; 2006 ; 7 ; Conexões Volume 2006 ; 2006 ; >
-      au < exists ; 2007 ; 8 ; Conexões Volume 2007 ; 2007 ; >
-      au < exists ; 2008 ; 9 ; Conexões Volume 2008 ; 2008 ; >
-      au < exists ; 2009 ; 10 ; Conexões Volume 2009 ; 2009 ; >
-      au < exists ; 2010 ; 11 ; Conexões Volume 2010 ; 2010 ; >
-      au < exists ; 2011 ; 12 ; Conexões Volume 2011 ; 2011 ; >
-      au < exists ; 2012 ; 13 ; Conexões Volume 2012 ; 2012 ; >
-      au < exists ; 2013 ; 14 ; Conexões Volume 2013 ; 2013 ; >
-      au < exists ; 2014 ; 15 ; Conexões Volume 2014 ; 2014 ; >
-
-  }
-
-  {
-
-      title <
         name = Caderno AEL - Arquivo Edgard Leuenroth ;
         issn = 1413-6597
       >
@@ -237,65 +208,6 @@
       au < exists ; 2012 ; 6 ; RURIS: Revista do Centro de Estudos Rurais Volume 2012 ; 2012 ; >
       au < exists ; 2013 ; 7 ; RURIS: Revista do Centro de Estudos Rurais Volume 2013 ; 2013 ; >
       au < exists ; 2014 ; 8 ; RURIS: Revista do Centro de Estudos Rurais Volume 2014 ; 2014 ; >
-
-  }
-
-  {
-
-      title <
-        name = Labor & Engenho ;
-        issn = 1981-1152 ;
-        eissn = 2176-8846
-      >
-
-      comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://www.sbu.unicamp.br/
-      param[journal_id] = labore
-
-      au < exists ; 2007 ; 1 ; Labor & Engenho Volume 2007 ; 2007 ; >
-      au < exists ; 2008 ; 2 ; Labor & Engenho Volume 2008 ; 2008 ; >
-      au < exists ; 2009 ; 3 ; Labor & Engenho Volume 2009 ; 2009 ; >
-      au < exists ; 2010 ; 4 ; Labor & Engenho Volume 2010 ; 2010 ; >
-      au < exists ; 2011 ; 5 ; Labor & Engenho Volume 2011 ; 2011 ; >
-      au < exists ; 2012 ; 6 ; Labor & Engenho Volume 2012 ; 2012 ; >
-      au < exists ; 2013 ; 7 ; Labor & Engenho Volume 2013 ; 2013 ; >
-      au < exists ; 2014 ; 8 ; Labor & Engenho Volume 2014 ; 2014 ; >
-
-  }
-
-  {
-
-      title <
-        name = Resgate ;
-        issn = 2178-3284
-      >
-
-      comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://www.cmu.unicamp.br/
-      param[journal_id] = resgate
-
-      au < exists ; 1990 ; 1 ; Resgate Volume 1990 ; 1990 ; >
-      au < exists ; 1991 ; 2 ; Resgate Volume 1991 ; 1991 ; >
-      au < exists ; 1992 ; 3 ; Resgate Volume 1992 ; 1992 ; >
-      au < exists ; 1993 ; 4 ; Resgate Volume 1993 ; 1993 ; >
-      au < exists ; 1996 ; 5 ; Resgate Volume 1996 ; 1996 ; >
-      au < exists ; 1997 ; 6 ; Resgate Volume 1997 ; 1997 ; >
-      au < exists ; 1998 ; 7 ; Resgate Volume 1998 ; 1998 ; >
-      au < exists ; 1999 ; 8 ; Resgate Volume 1999 ; 1999 ; >
-      au < exists ; 2001 ; 9 ; Resgate Volume 2001 ; 2001 ; >
-      au < exists ; 2002 ; 10 ; Resgate Volume 2002 ; 2002 ; >
-      au < exists ; 2003 ; 11 ; Resgate Volume 2003 ; 2003 ; >
-      au < exists ; 2004 ; 12 ; Resgate Volume 2004 ; 2004 ; >
-      au < exists ; 2005 ; 13 ; Resgate Volume 2005 ; 2005 ; >
-      au < exists ; 2006 ; 14 ; Resgate Volume 2006 ; 2006 ; >
-      au < exists ; 2007 ; 15 ; Resgate Volume 2007 ; 2007 ; >
-      au < exists ; 2008 ; 16 ; Resgate Volume 2008 ; 2008 ; >
-      au < exists ; 2009 ; 17 ; Resgate Volume 2009 ; 2009 ; >
-      au < exists ; 2010 ; 18 ; Resgate Volume 2010 ; 2010 ; >
-      au < exists ; 2011 ; 19 ; Resgate Volume 2011 ; 2011 ; >
-      au < exists ; 2012 ; 20 ; Resgate Volume 2012 ; 2012 ; >
-      au < exists ; 2013 ; 21 ; Resgate Volume 2013 ; 2013 ; >
-      au < exists ; 2014 ; 22 ; Resgate Volume 2014 ; 2014 ; >
 
   }
 
@@ -477,7 +389,7 @@
       au < exists ; 2012 ; 6 ; Labor & Engenho Volume 2012 ; 2012 ; >
       au < exists ; 2013 ; 7 ; Labor & Engenho Volume 2013 ; 2013 ; >
       au < exists ; 2014 ; 8 ; Labor & Engenho Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 9 ; Labor & Engenho Volume 2015 ; 2015 ; >
+      au < exists ; 2015 ; 9 ; Labor & Engenho Volume 2015 ; 2015 ; >
 
   }
 
