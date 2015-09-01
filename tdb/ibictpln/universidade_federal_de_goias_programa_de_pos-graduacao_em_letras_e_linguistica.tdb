@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = Universidade Federal do Goiás, Programa de Pós-Graduação em Letras e Linguística
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Signótica ;
+        issn = 0103-7250 ;
+        eissn = 2316-3690
+      >
+
+      comment[publisher] = Universidade Federal de Goiás, Programa de Pós-Graduação em Letras e Linguística
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = sig
+
+      au < released ; 1987 ; 1 ; Signótica Volume 1987 ; 1987 ; >
+      au < released ; 1990 ; 4 ; Signótica Volume 1990 ; 1990 ; >
+      au < released ; 1991 ; 5 ; Signótica Volume 1991 ; 1991 ; >
+      au < released ; 1992 ; 6 ; Signótica Volume 1992 ; 1992 ; >
+      au < released ; 1993 ; 7 ; Signótica Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 8 ; Signótica Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 9 ; Signótica Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 10 ; Signótica Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 11 ; Signótica Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 12 ; Signótica Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 13 ; Signótica Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 14 ; Signótica Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 15 ; Signótica Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 16 ; Signótica Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 17 ; Signótica Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 18 ; Signótica Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 19 ; Signótica Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 20 ; Signótica Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 21 ; Signótica Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 22 ; Signótica Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 23 ; Signótica Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 24 ; Signótica Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 25 ; Signótica Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 26 ; Signótica Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 27 ; Signótica Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 28 ; Signótica Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 29 ; Signótica Volume 2015 ; 2015 ; >
+
+  }
+
+}
