@@ -54,7 +54,7 @@
     au < finished ; crawling ; 1990-1991 ; Pace Environmental Law Review Volume 8 ; 8 >    
     au < finished ; crawling ; 1991-1992 ; Pace Environmental Law Review Volume 9 ; 9 >
     au < finished ; crawling ; 1992-1993 ; Pace Environmental Law Review Volume 10 ; 10 >
-    au < finished ; crawling ; 1993-1994 ; Pace Environmental Law Review Volume 11 ; 11 >
+    au < finished ; finished ; 1993-1994 ; Pace Environmental Law Review Volume 11 ; 11 >
     au < finished ; crawling ; 1994-1995 ; Pace Environmental Law Review Volume 12 ; 12 >
     au < finished ; crawling ; 1995-1996 ; Pace Environmental Law Review Volume 13 ; 13 >
     au < finished ; crawling ; 1996-1997 ; Pace Environmental Law Review Volume 14 ; 14 >
@@ -150,7 +150,7 @@
     au < finished ; frozen ; 1983-1984 ; Pace Law Review Volume 4 ; 4 >
     au < finished ; crawling ; 1984-1985 ; Pace Law Review Volume 5 ; 5 >
     au < finished ; frozen ; 1985-1986 ; Pace Law Review Volume 6 ; 6 >
-    au < finished ; crawling ; 1986-1987 ; Pace Law Review Volume 7 ; 7 >
+    au < finished ; finished ; 1986-1987 ; Pace Law Review Volume 7 ; 7 >
     au < finished ; crawling ; 1987-1988 ; Pace Law Review Volume 8 ; 8 >
     au < finished ; crawling ; 1988-1989 ; Pace Law Review Volume 9 ; 9 >
     au < finished ; frozen ; 1989-1990 ; Pace Law Review Volume 10 ; 10 >
@@ -172,7 +172,7 @@
     au < finished ; crawling ; 2005-2006 ; Pace Law Review Volume 26 ; 26 >
     au < finished ; crawling ; 2006-2007 ; Pace Law Review Volume 27 ; 27 >
     au < finished ; frozen ; 2007-2008 ; Pace Law Review Volume 28 ; 28 >
-    au < finished ; crawling ; 2008-2009 ; Pace Law Review Volume 29 ; 29 >
+    au < finished ; finished ; 2008-2009 ; Pace Law Review Volume 29 ; 29 >
     au < finished ; crawling ; 2009-2010 ; Pace Law Review Volume 30 ; 30 >
     au < finished ; crawling ; 2010-2011 ; Pace Law Review Volume 31 ; 31 >
     au < finished ; crawling ; 2011-2012 ; Pace Law Review Volume 32 ; 32 >
@@ -193,7 +193,7 @@
     param[journal_abbr] = pipself
 
     au < finished ; crawling ; 2011 ; Pace I.P., Sports & Entertainment Law Forum Volume 1 ; 1 >
-    au < finished ; crawling ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 2 >
+    au < finished ; finished ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Pace I.P., Sports & Entertainment Law Forum Volume 3 ; 3 >
     au < deepCrawl ; exists ; 2014 ; Pace I.P., Sports & Entertainment Law Forum Volume 4 ; 4 >
     au < crawling ; exists ; 2015 ; Pace I.P., Sports & Entertainment Law Forum Volume 5 ; 5 >

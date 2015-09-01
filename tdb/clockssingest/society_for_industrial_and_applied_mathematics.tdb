@@ -166,8 +166,8 @@
     au < manifest ; exists ; 2007 ; Journal on Computing Volume 37 ; 37 >
     au < manifest ; exists ; 2008 ; Journal on Computing Volume 38 ; 38 >
     au < manifest ; exists ; 2009 ; Journal on Computing Volume 39 ; 39 >
-    au < finished ; crawling ; 2011 ; Journal on Computing Volume 40 ; 40 >
-    au < finished ; crawling ; 2012 ; Journal on Computing Volume 41 ; 41 >
+    au < finished ; finished ; 2011 ; Journal on Computing Volume 40 ; 40 >
+    au < finished ; finished ; 2012 ; Journal on Computing Volume 41 ; 41 >
     au < crawling ; exists ; 2013 ; Journal on Computing Volume 42 ; 42 >
     au < crawling ; exists ; 2014 ; Journal on Computing Volume 43 ; 43 >
     au < manifest ; exists ; 2015 ; Journal on Computing Volume 44 ; 44 >
@@ -236,8 +236,8 @@
     param[journal_id] = sjfmbj
 
     au < manifest ; exists ; 2010 ; Journal on Financial Mathematics Volume 1 ; 1 >
-    au < finished ; crawling ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 >
-    au < finished ; crawling ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 >
+    au < finished ; finished ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 >
+    au < finished ; finished ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 >
     au < crawling ; exists ; 2014 ; Journal on Financial Mathematics Volume 5 ; 5 >
     au < manifest ; exists ; 2015 ; Journal on Financial Mathematics Volume 6 ; 6 >
@@ -256,7 +256,7 @@
     au < manifest ; exists ; 2008 ; Journal on Imaging Sciences Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; Journal on Imaging Sciences Volume 2 ; 2 >
     au < manifest ; exists ; 2010 ; Journal on Imaging Sciences Volume 3 ; 3 >
-    au < finished ; crawling ; 2011 ; Journal on Imaging Sciences Volume 4 ; 4 >
+    au < finished ; finished ; 2011 ; Journal on Imaging Sciences Volume 4 ; 4 >
     au < finished ; crawling ; 2012 ; Journal on Imaging Sciences Volume 5 ; 5 >
     au < crawling ; exists ; 2013 ; Journal on Imaging Sciences Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Journal on Imaging Sciences Volume 7 ; 7 >

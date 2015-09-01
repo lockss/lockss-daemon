@@ -76,7 +76,7 @@
 
     au < manifest ; exists ; 2008 ; Adaptation Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Adaptation Volume 2 ; 2 ; >
-    au < finished ; crawling ; 2010 ; Adaptation Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; Adaptation Volume 3 ; 3 ; >
     au < finished ; crawling ; 2011 ; Adaptation Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Adaptation Volume 5 ; 5 ; >
     au < frozen ; exists ; 2013 ; Adaptation Volume 6 ; 6 ; >
@@ -9009,7 +9009,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
     au < finished ; crawling ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; >
     au < finished ; crawling ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 ; >
-    au < finished ; crawling ; 2011 ; IMA Journal of Applied Mathematics Volume 76 ; 76 ; >
+    au < finished ; finished ; 2011 ; IMA Journal of Applied Mathematics Volume 76 ; 76 ; >
     au < finished ; crawling ; 2012 ; IMA Journal of Applied Mathematics Volume 77 ; 77 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Applied Mathematics Volume 78 ; 78 ; >
     au < crawling ; exists ; 2014 ; IMA Journal of Applied Mathematics Volume 79 ; 79 ; >
@@ -15953,7 +15953,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
     au < finished ; crawling ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 ; >
     au < finished ; frozen ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 ; >
-    au < finished ; crawling ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 ; >
+    au < finished ; finished ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 ; >
     au < frozen ; exists ; 2013 ; MHR: Basic science of reproductive medicine Volume 19 ; 19 ; >
     au < crawling ; exists ; 2014 ; MHR: Basic science of reproductive medicine Volume 20 ; 20 ; >
     au < crawling ; exists ; 2015 ; MHR: Basic science of reproductive medicine Volume 21 ; 21 ; >
@@ -16416,10 +16416,10 @@
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 417 ; 417 ; >
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 418 ; 418 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 419 ; 419 ; >
-    au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 420 ; 420 ; >
-    au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 421 ; 421 ; >
+    au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 420 ; 420 ; >
+    au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 421 ; 421 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 422 ; 422 ; >
-    au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 423 ; 423 ; >
+    au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 423 ; 423 ; >
     au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 424 ; 424 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 425 ; 425 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 426 ; 426 ; >
@@ -17661,7 +17661,7 @@
     au < finished ; frozen ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
     au < finished ; frozen ; 2010 ; OAH Magazine of History Volume 24 ; 24 ; >
     au < finished ; frozen ; 2011 ; OAH Magazine of History Volume 25 ; 25 ; >
-    au < finished ; crawling ; 2012 ; OAH Magazine of History Volume 26 ; 26 ; >
+    au < finished ; finished ; 2012 ; OAH Magazine of History Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; OAH Magazine of History Volume 27 ; 27 ; >
     au < exists ; exists ; 2014 ; OAH Magazine of History Volume 28 ; 28 ; >
     au < exists ; exists ; 2015 ; OAH Magazine of History Volume 29 ; 29 ; >
@@ -18060,7 +18060,7 @@
     au < crawling ; exists ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
     au < finished ; frozen ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
     au < finished ; frozen ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
-    au < finished ; crawling ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
+    au < finished ; finished ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
     au < crawling ; exists ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
     au < crawling ; exists ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
     au < manifest ; exists ; 2015 ; Oxford Economic Papers Volume 67 ; 67 ; >
@@ -18147,7 +18147,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
     au < finished ; crawling ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 ; >
     au < finished ; crawling ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 ; >
-    au < finished ; crawling ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
+    au < finished ; finished ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
     au < frozen ; exists ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 ; >
     au < manifest ; exists ; 2015 ; Oxford Journal of Legal Studies Volume 35 ; 35 ; >
@@ -19169,8 +19169,8 @@
     au < finished ; frozen ; 2010 ; Proceedings of the London Mathematical Society Volume 101 ; 101 ; >
     au < zapped ; finished ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
     au < finished ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 ; >
-    au < finished ; crawling ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 ; >
-    au < finished ; crawling ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
+    au < finished ; finished ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 ; >
+    au < finished ; finished ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
     au < crawling ; exists ; 2013 ; Proceedings of the London Mathematical Society Volume 106 ; 106 ; >
     au < frozen ; exists ; 2013 ; Proceedings of the London Mathematical Society Volume 107 ; 107 ; >
     au < crawling ; exists ; 2014 ; Proceedings of the London Mathematical Society Volume 108 ; 108 ; >
@@ -20104,7 +20104,7 @@
     au < superseded ; down ; 2009 ; Radiation Protection Dosimetry Volume 133 [superseded] ; 133 ; >
     au < superseded ; down ; 2009 ; Radiation Protection Dosimetry Volume 134 [superseded] ; 134 ; >
     au < zapped ; down ; 2009 ; Radiation Protection Dosimetry Volume 135 [superseded] ; 135 ; reingest2.clockss.org:8085 >
-    au < zapped ; down ; 2009 ; Radiation Protection Dosimetry Volume 136 [superseded] ; 136 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 136 [superseded] ; 136 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -20749,7 +20749,7 @@
     au < zapped ; finished ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
     au < finished ; crawling ; 2010 ; Review of Environmental Economics and Policy Volume 4 ; 4 ; >
     au < finished ; crawling ; 2011 ; Review of Environmental Economics and Policy Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2012 ; Review of Environmental Economics and Policy Volume 6 ; 6 ; >
+    au < finished ; finished ; 2012 ; Review of Environmental Economics and Policy Volume 6 ; 6 ; >
     au < frozen ; exists ; 2013 ; Review of Environmental Economics and Policy Volume 7 ; 7 ; >
     au < frozen ; exists ; 2014 ; Review of Environmental Economics and Policy Volume 8 ; 8 ; >
     au < manifest ; exists ; 2015 ; Review of Environmental Economics and Policy Volume 9 ; 9 ; >
@@ -21073,7 +21073,7 @@
     au < finished ; frozen ; 2009 ; Science and Public Policy Volume 36 ; 36 ; >
     au < finished ; crawling ; 2010 ; Science and Public Policy Volume 37 ; 37 ; >
     au < zapped ; finished ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
-    au < finished ; crawling ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
+    au < finished ; finished ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; Science and Public Policy Volume 40 ; 40 ; >
     au < crawling ; exists ; 2014 ; Science and Public Policy Volume 41 ; 41 ; >
     au < manifest ; exists ; 2015 ; Science and Public Policy Volume 42 ; 42 ; >
@@ -22152,7 +22152,7 @@
     au < finished ; crawling ; 2012 ; Toxicological Sciences Volume 126 ; 126 ; >
     au < finished ; crawling ; 2012 ; Toxicological Sciences Volume 127 ; 127 ; >
     au < finished ; frozen ; 2012 ; Toxicological Sciences Volume 128 ; 128 ; >
-    au < finished ; crawling ; 2012 ; Toxicological Sciences Volume 129 ; 129 ; >
+    au < finished ; finished ; 2012 ; Toxicological Sciences Volume 129 ; 129 ; >
     au < finished ; frozen ; 2012 ; Toxicological Sciences Volume 130 ; 130 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 131 ; 131 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 132 ; 132 ; >

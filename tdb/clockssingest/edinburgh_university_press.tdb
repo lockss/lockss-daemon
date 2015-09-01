@@ -101,7 +101,7 @@
     au < finished ; frozen ; 2004 ; Architectural Heritage Volume 15 ; 15 >
     au < finished ; crawling ; 2005 ; Architectural Heritage Volume 16 ; 16 >
     au < finished ; frozen ; 2006 ; Architectural Heritage Volume 17 ; 17 >
-    au < finished ; crawling ; 2007 ; Architectural Heritage Volume 18 ; 18 >
+    au < finished ; finished ; 2007 ; Architectural Heritage Volume 18 ; 18 >
     au < down ; crawling ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < doNotProcess ; exists ; 2008 ; Architectural Heritage Volume 19 ; 19 >
     au < down ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
@@ -126,7 +126,7 @@
 
     param[journal_id] = anh
 
-    au < finished ; crawling ; 2003 ; Archives of Natural History Volume 30 ; 30 >
+    au < finished ; finished ; 2003 ; Archives of Natural History Volume 30 ; 30 >
     au < finished ; frozen ; 2004 ; Archives of Natural History Volume 31 ; 31 >
     au < finished ; frozen ; 2005 ; Archives of Natural History Volume 32 ; 32 >
     au < finished ; crawling ; 2006 ; Archives of Natural History Volume 33 ; 33 >
@@ -212,8 +212,8 @@
     au < finished ; crawling ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
     au < finished ; frozen ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
     au < finished ; crawling ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
-    au < finished ; crawling ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
-    au < finished ; crawling ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
+    au < finished ; finished ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
+    au < finished ; finished ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
     au < finished ; crawling ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
     au < finished ; crawling ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
     au < finished ; crawling ; 2012 ; Comparative Critical Studies Volume 9 ; 9 >
@@ -382,7 +382,7 @@
 
     param[journal_id] = hls
 
-    au < finished ; crawling ; 2004 ; Holy Land Studies Volume 3 ; 3 >
+    au < finished ; finished ; 2004 ; Holy Land Studies Volume 3 ; 3 >
     au < finished ; frozen ; 2005 ; Holy Land Studies Volume 4 ; 4 >
     au < finished ; crawling ; 2006 ; Holy Land Studies Volume 5 ; 5 >
     au < finished ; frozen ; 2007 ; Holy Land Studies Volume 6 ; 6 >
@@ -411,11 +411,11 @@
     au < finished ; crawling ; 2004 ; The Innes Review Volume 55 ; 55 >
     au < finished ; crawling ; 2005 ; The Innes Review Volume 56 ; 56 >
     au < finished ; frozen ; 2006 ; The Innes Review Volume 57 ; 57 >
-    au < finished ; crawling ; 2007 ; The Innes Review Volume 58 ; 58 >
+    au < finished ; finished ; 2007 ; The Innes Review Volume 58 ; 58 >
     au < finished ; crawling ; 2008 ; The Innes Review Volume 59 ; 59 >
     au < finished ; crawling ; 2009 ; The Innes Review Volume 60 ; 60 >
     au < finished ; crawling ; 2010 ; The Innes Review Volume 61 ; 61 >
-    au < finished ; crawling ; 2011 ; The Innes Review Volume 62 ; 62 >
+    au < finished ; finished ; 2011 ; The Innes Review Volume 62 ; 62 >
     au < finished ; crawling ; 2012 ; The Innes Review Volume 63 ; 63 >
     au < crawling ; exists ; 2013 ; The Innes Review Volume 64 ; 64 >
     au < crawling ; exists ; 2014 ; The Innes Review Volume 65 ; 65 >
@@ -567,7 +567,7 @@
     param[journal_id] = jbctv
 
     au < finished ; finished ; 2004 ; Journal of British Cinema and Television Volume 1 ; 1 >
-    au < finished ; crawling ; 2005 ; Journal of British Cinema and Television Volume 2 ; 2 >
+    au < finished ; finished ; 2005 ; Journal of British Cinema and Television Volume 2 ; 2 >
     au < finished ; crawling ; 2006 ; Journal of British Cinema and Television Volume 3 ; 3 >
     au < finished ; crawling ; 2007 ; Journal of British Cinema and Television Volume 4 ; 4 >
     au < finished ; crawling ; 2008 ; Journal of British Cinema and Television Volume 5 ; 5 >
@@ -697,7 +697,7 @@
     au < finished ; crawling ; 2008 ; Journal of Scottish Historical Studies Volume 28 ; 28 >
     au < finished ; frozen ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
     au < finished ; frozen ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
-    au < finished ; crawling ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
+    au < finished ; finished ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
     au < finished ; crawling ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
     au < crawling ; exists ; 2013 ; Journal of Scottish Historical Studies Volume 33 ; 33 >
     au < crawling ; exists ; 2014 ; Journal of Scottish Historical Studies Volume 34 ; 34 >
@@ -1221,7 +1221,7 @@
     au < finished ; frozen ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
     au < finished ; crawling ; 2003 ; Studies in World Christianity Volume 9 ; 9 >
     au < finished ; frozen ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
-    au < finished ; crawling ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
+    au < finished ; finished ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
     au < finished ; frozen ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
     au < finished ; frozen ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
     au < finished ; frozen ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
@@ -1278,7 +1278,7 @@
     au < finished ; crawling ; 2009 ; Word Structure Volume 2 ; 2 >
     au < finished ; crawling ; 2010 ; Word Structure Volume 3 ; 3 >
     au < finished ; crawling ; 2011 ; Word Structure Volume 4 ; 4 >
-    au < finished ; crawling ; 2012 ; Word Structure Volume 5 ; 5 >
+    au < finished ; finished ; 2012 ; Word Structure Volume 5 ; 5 >
     au < crawling ; exists ; 2013 ; Word Structure Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Word Structure Volume 7 ; 7 >
     au < manifest ; exists ; 2015 ; Word Structure Volume 8 ; 8 >
