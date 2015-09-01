@@ -2208,9 +2208,9 @@
     param[journal_id] = 10.1055/s-00024754
     comment[years] = 2013-current
 
-    au < testing ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 >
-    au < testing ; exists ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volue 2 ; 2 >
-    au < testing ; exists ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volue 3 ; 3 >
+    au < ready ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 >
+    au < ready ; exists ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 >
+    au < ready ; exists ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 >
 
   }
 
@@ -2226,10 +2226,10 @@
     param[journal_id] = 10.1055/s-00023617
     comment[years] = 2012-current
 
-    au < testing ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 >
-    au < testing ; exists ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 >
-    au < testing ; exists ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 >
+    au < ready ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 >
+    au < ready ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 >
+    au < ready ; exists ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 >
+    au < ready ; exists ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 >
 
   }
 
@@ -2245,10 +2245,10 @@
     param[journal_id] = 10.1055/s-00023618
     comment[years] = 2012-current
 
-    au < testing ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
-    au < testing ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
-    au < testing ; exists ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 >
+    au < ready ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
+    au < ready ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
+    au < ready ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
+    au < ready ; exists ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 >
 
   }
 
@@ -2263,7 +2263,7 @@
     >
     param[journal_id] = 10.1055/s-00028318
 
-   au < testing ; exists ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 2014 ; 1 >
+   au < ready ; exists ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 2014 ; 1 >
    au < expected ; exists ; 2015 ; 2015 ; Journal of Academic Ophtalmology Volume 2015 ; 2 >
 
   }
@@ -2288,7 +2288,7 @@
    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2011 ; 6 >
    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2012 ; 7 >
    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2013 ; 8 >
-   au < testing ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 >
+   au < ready ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 >
    au < exists ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 >
 
   }
@@ -2314,9 +2314,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Journal of Knee Surgery Volume 2010 ; 23 >
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Knee Surgery Volume 2011 ; 24 >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 >
-    au < testing ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 >
-    au < testing ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 >
-    au < testing ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Volume 2015 ; 28 >
+    au < ready ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 >
+    au < ready ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 >
+    au < ready ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Volume 2015 ; 28 >
 
   }
 
@@ -2433,9 +2433,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 2010 ; 26 >
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Reconstructive Microsurgery Volume 2011 ; 27 >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Reconstructive Microsurgery Volume 2012 ; 28 >
-    au < testing ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 29 >
-    au < testing ; exists ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 2014 ; 30 >
-    au < testing ; exists ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 2015 ; 31 >
+    au < ready ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 29 >
+    au < ready ; exists ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 2014 ; 30 >
+    au < ready ; exists ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 2015 ; 31 >
 
   }
 
@@ -2469,10 +2469,10 @@
     param[journal_id] = 10.1055/s-00023425
     comment[years] = 2012-current
 
-    au < testing ; exists ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 1 >
-    au < testing ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 2 >
-    au < testing ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 3 >
-    au < testing ; exists ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2015 ; 4 >
+    au < ready ; exists ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 1 >
+    au < ready ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 2 >
+    au < ready ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 3 >
+    au < ready ; exists ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2015 ; 4 >
 
 
   }
@@ -2496,9 +2496,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Kardiologie up2date Volume 2010 ; 6 >
     au < manifest ; exists ; 2011 ; 2011 ; Kardiologie up2date Volume 2011 ; 7 >
     au < manifest ; exists ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 >
-    au < testing ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 >
-    au < testing ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 >
-    au < testing ; exists ; 2015 ; 2015 ; Kardiologie up2date Volume 2015 ; 11 >
+    au < ready ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 >
+    au < ready ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 >
+    au < ready ; exists ; 2015 ; 2015 ; Kardiologie up2date Volume 2015 ; 11 >
 
   }
 
@@ -2519,9 +2519,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; kleintier konkret Volume 2010 ; 13 >
     au < manifest ; exists ; 2011 ; 2011 ; kleintier konkret Volume 2011 ; 14 >
     au < manifest ; exists ; 2012 ; 2012 ; kleintier konkret Volume 2012 ; 15 >
-    au < testing ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 >
-    au < testing ; exists ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 17 >
-    au < testing ; exists ; 2015 ; 2015 ; kleintier konkret Volume 2015 ; 18 >
+    au < ready ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 >
+    au < ready ; exists ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 17 >
+    au < ready ; exists ; 2015 ; 2015 ; kleintier konkret Volume 2015 ; 18 >
 
   }
 
@@ -2546,9 +2546,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 39 >
     au < manifest ; exists ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 >
     au < manifest ; exists ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 >
-    au < testing ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 >
-    au < testing ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 >
-    au < testing ; exists ; 2015 ; 2015 ; Klinikarzt Der Volume 2015 ; 44 >
+    au < ready ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 >
+    au < ready ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 >
+    au < ready ; exists ; 2015 ; 2015 ; Klinikarzt Der Volume 2015 ; 44 >
 
   }
 
@@ -2648,9 +2648,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Klinische Neurophysiologie Volume 2010 ; 41 >
     au < manifest ; exists ; 2011 ; 2011 ; Klinische Neurophysiologie Volume 2011 ; 42 >
     au < manifest ; exists ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 2012 ; 43 >
-    au < testing ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 >
-    au < testing ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 >
-    au < testing ; exists ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 >
+    au < ready ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 >
+    au < ready ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 >
+    au < ready ; exists ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 >
 
   }
 
@@ -2840,9 +2840,9 @@
 
     au < manifest ; exists ; 2011 ; 2011 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2011 ; 1 >
     au < manifest ; exists ; 2012 ; 2012 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; 2013 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2013 ; 3 >
-    au < manifest ; exists ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; 2015 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2015 ; 5 >
+    au < boost; exists ; 2013 ; 2013 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2013 ; 3 >
+    au < boost; exists ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2014 ; 4 >
+    au < boost; exists ; 2015 ; 2015 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2015 ; 5 >
 
   }
 
@@ -3038,9 +3038,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Neuropediatrics Volume 2010 ; 41 >
     au < manifest ; exists ; 2011 ; 2011 ; Neuropediatrics Volume 2011 ; 42 >
     au < manifest ; exists ; 2012 ; 2012 ; Neuropediatrics Volume 2012 ; 43 >
-    au < manifest ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 44 >
-    au < manifest ; exists ; 2014 ; 2014 ; Neuropediatrics Volume 2014 ; 45 >
-    au < manifest ; exists ; 2015 ; 2015 ; Neuropediatrics Volume 2015 ; 46 >
+    au < testing ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 44 >
+    au < testing ; exists ; 2014 ; 2014 ; Neuropediatrics Volume 2014 ; 45 >
+    au < testing ; exists ; 2015 ; 2015 ; Neuropediatrics Volume 2015 ; 46 >
 
   }
 
@@ -3058,9 +3058,9 @@
 
     au < manifest ; exists ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 1 >
     au < manifest ; exists ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 >
-    au < manifest ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 >
+    au < testing ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 >
+    au < testing ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 >
+    au < testing ; exists ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 >
 
   }
 
@@ -3079,9 +3079,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; neuroreha Volume 2010 ; 2 >
     au < manifest ; exists ; 2011 ; 2011 ; neuroreha Volume 2011 ; 3 >
     au < manifest ; exists ; 2012 ; 2012 ; neuroreha Volume 2012 ; 4 >
-    au < manifest ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 5 >
-    au < manifest ; exists ; 2014 ; 2014 ; neuroreha Volume 2014 ; 6 >
-    au < manifest ; exists ; 2015 ; 2015 ; neuroreha Volume 2015 ; 7 >
+    au < testing ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 5 >
+    au < testing ; exists ; 2014 ; 2014 ; neuroreha Volume 2014 ; 6 >
+    au < testing ; exists ; 2015 ; 2015 ; neuroreha Volume 2015 ; 7 >
 
   }
 
@@ -3110,9 +3110,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Notarzt Der Volume 2010 ; 26 >
     au < manifest ; exists ; 2011 ; 2011 ; Notarzt Der Volume 2011 ; 27 >
     au < manifest ; exists ; 2012 ; 2012 ; Notarzt Der Volume 2012 ; 28 >
-    au < manifest ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 29 >
-    au < manifest ; exists ; 2014 ; 2014 ; Notarzt Der Volume 2014 ; 30 >
-    au < manifest ; exists ; 2015 ; 2015 ; Notarzt Der Volume 2015 ; 31 >
+    au < testing ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 29 >
+    au < testing ; exists ; 2014 ; 2014 ; Notarzt Der Volume 2014 ; 30 >
+    au < testing ; exists ; 2015 ; 2015 ; Notarzt Der Volume 2015 ; 31 >
 
   }
 
@@ -3185,9 +3185,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Notfallmedizin up2date Volume 2010 ; 5 >
     au < manifest ; exists ; 2011 ; 2011 ; Notfallmedizin up2date Volume 2011 ; 6 >
     au < manifest ; exists ; 2012 ; 2012 ; Notfallmedizin up2date Volume 2012 ; 7 >
-    au < manifest ; exists ; 2013 ; 2013 ; Notfallmedizin up2date Volume 2013 ; 8 >
-    au < manifest ; exists ; 2014 ; 2014 ; Notfallmedizin up2date Volume 2014 ; 9 >
-    au < manifest ; exists ; 2015 ; 2015 ; Notfallmedizin up2date Volume 2015 ; 10 >
+    au < testing ; exists ; 2013 ; 2013 ; Notfallmedizin up2date Volume 2013 ; 8 >
+    au < testing ; exists ; 2014 ; 2014 ; Notfallmedizin up2date Volume 2014 ; 9 >
+    au < testing ; exists ; 2015 ; 2015 ; Notfallmedizin up2date Volume 2015 ; 10 >
 
   }
 
@@ -3213,9 +3213,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Der Nuklearmediziner Volume 2010 ; 33 >
     au < manifest ; exists ; 2011 ; 2011 ; Der Nuklearmediziner Volume 2011 ; 34 >
     au < manifest ; exists ; 2012 ; 2012 ; Der Nuklearmediziner Volume 2012 ; 35 >
-    au < manifest ; exists ; 2013 ; 2013 ; Der Nuklearmediziner Volume 2013 ; 36 >
-    au < manifest ; exists ; 2014 ; 2014 ; Der Nuklearmediziner Volume 2014 ; 37 >
-    au < manifest ; exists ; 2015 ; 2015 ; Der Nuklearmediziner Volume 2015 ; 38 >
+    au < testing ; exists ; 2013 ; 2013 ; Der Nuklearmediziner Volume 2013 ; 36 >
+    au < testing ; exists ; 2014 ; 2014 ; Der Nuklearmediziner Volume 2014 ; 37 >
+    au < testing ; exists ; 2015 ; 2015 ; Der Nuklearmediziner Volume 2015 ; 38 >
 
   }
 
@@ -3243,9 +3243,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 >
     au < manifest ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 >
     au < manifest ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
-    au < manifest ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
-    au < manifest ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
-    au < manifest ; exists ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 >
+    au < testing ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
+    au < testing ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
+    au < testing ; exists ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 >
 
   }
 
@@ -3262,9 +3262,9 @@
     comment[0] = coming online soon as of July 2012
 
     au < manifest ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2012 ; 1 >
-    au < manifest ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2013 ; 2 >
-    au < manifest ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 3 >
-    au < manifest ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2015 ; 4 >
+    au < testing ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2013 ; 2 >
+    au < testing ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 3 >
+    au < testing ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2015 ; 4 >
 
   }
 
@@ -3286,9 +3286,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 2010 ; 05 >
     au < manifest ; exists ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 2011 ; 06 >
     au < manifest ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie up2date Volume 2012 ; 07 >
-    au < manifest ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 >
-    au < manifest ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 >
-    au < manifest ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 2015 ; 08 >
+    au < testing ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 >
+    au < testing ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 >
+    au < testing ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 2015 ; 08 >
 
   }
 
@@ -3379,9 +3379,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Pädiatrie up2date Volume 2010 ; 5 >
     au < manifest ; exists ; 2011 ; 2011 ; Pädiatrie up2date Volume 2011 ; 6 >
     au < manifest ; exists ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 >
-    au < manifest ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
-    au < manifest ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
-    au < manifest ; exists ; 2015 ; 2015 ; Pädiatrie up2date Volume 2015 ; 10 >
+    au < testing ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
+    au < testing ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
+    au < testing ; exists ; 2015 ; 2015 ; Pädiatrie up2date Volume 2015 ; 10 >
 
   }
 
@@ -3406,9 +3406,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; pferde spiegel Volume 2010 ; 13 >
     au < manifest ; exists ; 2011 ; 2011 ; pferde spiegel Volume 2011 ; 14 >
     au < manifest ; exists ; 2012 ; 2012 ; pferde spiegel Volume 2012 ; 15 >
-    au < manifest ; exists ; 2013 ; 2013 ; pferde spiegel Volume 2013 ; 16 >
-    au < manifest ; exists ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 17 >
-    au < manifest ; exists ; 2015 ; 2015 ; pferde spiegel Volume 2015 ; 18 >
+    au < testing ; exists ; 2013 ; 2013 ; pferde spiegel Volume 2013 ; 16 >
+    au < testing ; exists ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 17 >
+    au < testing ; exists ; 2015 ; 2015 ; pferde spiegel Volume 2015 ; 18 >
 
   }
 
@@ -3469,9 +3469,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Pharmacopsychiatry Volume 2010 ; 43 >
     au < manifest ; exists ; 2011 ; 2011 ; Pharmacopsychiatry Volume 2011 ; 44 >
     au < manifest ; exists ; 2012 ; 2012 ; Pharmacopsychiatry Volume 2012 ; 45 >
-    au < manifest ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 >
-    au < manifest ; exists ; 2014 ; 2014 ; Pharmacopsychiatry Volume 2014 ; 47 >
-    au < manifest ; exists ; 2015 ; 2015 ; Pharmacopsychiatry Volume 2015 ; 48 >
+    au < testing ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 >
+    au < testing ; exists ; 2014 ; 2014 ; Pharmacopsychiatry Volume 2014 ; 47 >
+    au < testing ; exists ; 2015 ; 2015 ; Pharmacopsychiatry Volume 2015 ; 48 >
 
   }
 
@@ -3508,9 +3508,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2010 ; 20 >
     au < manifest ; exists ; 2011 ; 2011 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2011 ; 21 >
     au < manifest ; exists ; 2012 ; 2012 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2012 ; 22 >
-    au < manifest ; exists ; 2013 ; 2013 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2013 ; 23 >
-    au < manifest ; exists ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2014 ; 24 >
-    au < manifest ; exists ; 2015 ; 2015 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2015 ; 25 >
+    au < testing ; exists ; 2013 ; 2013 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2013 ; 23 >
+    au < testing ; exists ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2014 ; 24 >
+    au < testing ; exists ; 2015 ; 2015 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2015 ; 25 >
 
   }
 
@@ -3528,9 +3528,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; physiopraxis Volume 2010 ; 8 >
     au < manifest ; exists ; 2011 ; 2011 ; physiopraxis Volume 2011 ; 9 >
     au < manifest ; exists ; 2012 ; 2012 ; physiopraxis Volume 2012 ; 10 >
-    au < manifest ; exists ; 2013 ; 2013 ; physiopraxis Volume 2013 ; 11 >
-    au < manifest ; exists ; 2014 ; 2014 ; physiopraxis Volume 2014 ; 12 >
-    au < manifest ; exists ; 2015 ; 2015 ; physiopraxis Volume 2015 ; 13 >
+    au < testing ; exists ; 2013 ; 2013 ; physiopraxis Volume 2013 ; 11 >
+    au < testing ; exists ; 2014 ; 2014 ; physiopraxis Volume 2014 ; 12 >
+    au < testing ; exists ; 2015 ; 2015 ; physiopraxis Volume 2015 ; 13 >
 
   }
 
@@ -3553,9 +3553,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; physioscience Volume 2010 ; 6 >
     au < manifest ; exists ; 2011 ; 2011 ; physioscience Volume 2011 ; 7 >
     au < manifest ; exists ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 >
-    au < manifest ; exists ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 >
-    au < manifest ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 >
-    au < manifest ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 >
+    au < testing ; exists ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 >
+    au < testing ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 >
+    au < testing ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 >
 
   }
 
@@ -3583,9 +3583,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; PiD - Psychotherapie im Dialog Volume 2010 ; 11 >
     au < manifest ; exists ; 2011 ; 2011 ; PiD - Psychotherapie im Dialog Volume 2011 ; 12 >
     au < manifest ; exists ; 2012 ; 2012 ; PiD - Psychotherapie im Dialog Volume 2012 ; 13 >
-    au < manifest ; exists ; 2013 ; 2013 ; PiD - Psychotherapie im Dialog Volume 2013 ; 14 >
-    au < manifest ; exists ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 2014 ; 15 >
-    au < manifest ; exists ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 2015 ; 16 >
+    au < testing ; exists ; 2013 ; 2013 ; PiD - Psychotherapie im Dialog Volume 2013 ; 14 >
+    au < testing ; exists ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 2014 ; 15 >
+    au < testing ; exists ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 2015 ; 16 >
 
   }
 
@@ -3692,9 +3692,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Planta Medica Volume 2010 ; 76 >
    au < manifest ; exists ; 2011 ; 2011 ; Planta Medica Volume 2011 ; 77 >
    au < manifest ; exists ; 2012 ; 2012 ; Planta Medica Volume 2012 ; 78 >
-   au < manifest ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 >
-   au < manifest ; exists ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 >
-   au < manifest ; exists ; 2015 ; 2015 ; Planta Medica Volume 2015 ; 81 >
+   au < testing ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 >
+   au < testing ; exists ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 >
+   au < testing ; exists ; 2015 ; 2015 ; Planta Medica Volume 2015 ; 81 >
 
   }
 
@@ -3707,8 +3707,8 @@
     >
     param[journal_id] = 10.1055/s-00027015
 
-   au < manifest ; exists ; 2014 ; 2014 ; Planta Medica Letters Volume 2014 ; 1 >
-   au < manifest ; exists ; 2015 ; 2015 ; Planta Medica Letters Volume 2015 ; 2 >
+   au < testing ; exists ; 2014 ; 2014 ; Planta Medica Letters Volume 2014 ; 1 >
+   au < testing ; exists ; 2015 ; 2015 ; Planta Medica Letters Volume 2015 ; 2 >
 
   }
 
@@ -3737,9 +3737,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Pneumologie Volume 2010 ; 64 >
    au < manifest ; exists ; 2011 ; 2011 ; Pneumologie Volume 2011 ; 65 >
    au < manifest ; exists ; 2012 ; 2012 ; Pneumologie Volume 2012 ; 66 >
-   au < manifest ; exists ; 2013 ; 2013 ; Pneumologie Volume 2013 ; 67 >
-   au < manifest ; exists ; 2014 ; 2014 ; Pneumologie Volume 2014 ; 68 >
-   au < manifest ; exists ; 2015 ; 2015 ; Pneumologie Volume 2015 ; 69 >
+   au < testing ; exists ; 2013 ; 2013 ; Pneumologie Volume 2013 ; 67 >
+   au < testing ; exists ; 2014 ; 2014 ; Pneumologie Volume 2014 ; 68 >
+   au < testing ; exists ; 2015 ; 2015 ; Pneumologie Volume 2015 ; 69 >
 
   }
 
@@ -3767,9 +3767,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2010 ; 60 >
    au < manifest ; exists ; 2011 ; 2011 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2011 ; 61 >
    au < manifest ; exists ; 2012 ; 2012 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2012 ; 62 >
-   au < manifest ; exists ; 2013 ; 2013 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2013 ; 63 >
-   au < manifest ; exists ; 2014 ; 2014 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2014 ; 64 >
-   au < manifest ; exists ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2015 ; 65 >
+   au < testing ; exists ; 2013 ; 2013 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2013 ; 63 >
+   au < testing ; exists ; 2014 ; 2014 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2014 ; 64 >
+   au < testing ; exists ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2015 ; 65 >
 
   }
 
@@ -3813,9 +3813,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Psych Pflege Heute Volume 2010 ; 16 >
    au < manifest ; exists ; 2011 ; 2011 ; Psych Pflege Heute Volume 2011 ; 17 >
    au < manifest ; exists ; 2012 ; 2012 ; Psych Pflege Heute Volume 2012 ; 18 >
-   au < manifest ; exists ; 2013 ; 2013 ; Psych Pflege Heute Volume 2013 ; 19 >
-   au < manifest ; exists ; 2014 ; 2014 ; Psych Pflege Heute Volume 2014 ; 20 >
-   au < manifest ; exists ; 2015 ; 2015 ; Psych Pflege Heute Volume 2015 ; 21 >
+   au < testing ; exists ; 2013 ; 2013 ; Psych Pflege Heute Volume 2013 ; 19 >
+   au < testing ; exists ; 2014 ; 2014 ; Psych Pflege Heute Volume 2014 ; 20 >
+   au < testing ; exists ; 2015 ; 2015 ; Psych Pflege Heute Volume 2015 ; 21 >
 
   }
 
@@ -3865,9 +3865,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Psychiatrische Praxis Volume 2010 ; 37 >
    au < manifest ; exists ; 2011 ; 2011 ; Psychiatrische Praxis Volume 2011 ; 38 >
    au < manifest ; exists ; 2012 ; 2012 ; Psychiatrische Praxis Volume 2012 ; 39 >
-   au < manifest ; exists ; 2013 ; 2013 ; Psychiatrische Praxis Volume 2013 ; 40 >
-   au < manifest ; exists ; 2014 ; 2014 ; Psychiatrische Praxis Volume 2014 ; 41 >
-   au < manifest ; exists ; 2015 ; 2015 ; Psychiatrische Praxis Volume 2015 ; 42 >
+   au < testing ; exists ; 2013 ; 2013 ; Psychiatrische Praxis Volume 2013 ; 40 >
+   au < testing ; exists ; 2014 ; 2014 ; Psychiatrische Praxis Volume 2014 ; 41 >
+   au < testing ; exists ; 2015 ; 2015 ; Psychiatrische Praxis Volume 2015 ; 42 >
 
   }
 
@@ -3936,9 +3936,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Radiologie up2date Volume 2010 ; 10 >
    au < manifest ; exists ; 2011 ; 2011 ; Radiologie up2date Volume 2011 ; 11 >
    au < manifest ; exists ; 2012 ; 2012 ; Radiologie up2date Volume 2012 ; 12 >
-   au < manifest ; exists ; 2013 ; 2013 ; Radiologie up2date Volume 2013 ; 13 >
-   au < manifest ; exists ; 2014 ; 2014 ; Radiologie up2date Volume 2014 ; 14 >
-   au < manifest ; exists ; 2015 ; 2015 ; Radiologie up2date Volume 2015 ; 15 >
+   au < testing ; exists ; 2013 ; 2013 ; Radiologie up2date Volume 2013 ; 13 >
+   au < testing ; exists ; 2014 ; 2014 ; Radiologie up2date Volume 2014 ; 14 >
+   au < testing ; exists ; 2015 ; 2015 ; Radiologie up2date Volume 2015 ; 15 >
 
   }
 
@@ -3958,9 +3958,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Radiopraxis Volume 2010 ; 3 >
    au < manifest ; exists ; 2011 ; 2011 ; Radiopraxis Volume 2011 ; 4 >
    au < manifest ; exists ; 2012 ; 2012 ; Radiopraxis Volume 2012 ; 5 >
-   au < manifest ; exists ; 2013 ; 2013 ; Radiopraxis Volume 2013 ; 6 >
-   au < manifest ; exists ; 2014 ; 2014 ; Radiopraxis Volume 2014 ; 7 >
-   au < manifest ; exists ; 2015 ; 2015 ; Radiopraxis Volume 2015 ; 8 >
+   au < testing ; exists ; 2013 ; 2013 ; Radiopraxis Volume 2013 ; 6 >
+   au < testing ; exists ; 2014 ; 2014 ; Radiopraxis Volume 2014 ; 7 >
+   au < testing ; exists ; 2015 ; 2015 ; Radiopraxis Volume 2015 ; 8 >
 
   }
 
@@ -3988,9 +3988,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Rehabilitation Die Volume 2010 ; 49 >
    au < manifest ; exists ; 2011 ; 2011 ; Rehabilitation Die Volume 2011 ; 50 >
    au < manifest ; exists ; 2012 ; 2012 ; Rehabilitation Die Volume 2012 ; 51 >
-   au < manifest ; exists ; 2013 ; 2013 ; Rehabilitation Die Volume 2013 ; 52 >
-   au < manifest ; exists ; 2014 ; 2014 ; Rehabilitation Die Volume 2014 ; 53 >
-   au < manifest ; exists ; 2015 ; 2015 ; Rehabilitation Die Volume 2015 ; 54 >
+   au < testing ; exists ; 2013 ; 2013 ; Rehabilitation Die Volume 2013 ; 52 >
+   au < testing ; exists ; 2014 ; 2014 ; Rehabilitation Die Volume 2014 ; 53 >
+   au < testing ; exists ; 2015 ; 2015 ; Rehabilitation Die Volume 2015 ; 54 >
 
   }
 
@@ -4005,10 +4005,10 @@
     param[journal_id] = 10.1055/s-00000178
     comment[years] = 2012-current
 
-   au < manifest ; exists ; 2012 ; 2012 ; retten! Volume 2012 ; 1 >
-   au < manifest ; exists ; 2013 ; 2013 ; retten! Volume 2013 ; 2 >
-   au < manifest ; exists ; 2014 ; 2014 ; retten! Volume 2014 ; 3 >
-   au < manifest ; exists ; 2015 ; 2015 ; retten! Volume 2015 ; 4 >
+   au < testing ; exists ; 2012 ; 2012 ; retten! Volume 2012 ; 1 >
+   au < testing ; exists ; 2013 ; 2013 ; retten! Volume 2013 ; 2 >
+   au < testing ; exists ; 2014 ; 2014 ; retten! Volume 2014 ; 3 >
+   au < testing ; exists ; 2015 ; 2015 ; retten! Volume 2015 ; 4 >
 
   }
 
@@ -4088,9 +4088,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2010 ; 182 >
     au < manifest ; exists ; 2011 ; 2011 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2011 ; 183 >
     au < manifest ; exists ; 2012 ; 2012 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2012 ; 184 >
-    au < manifest ; exists ; 2013 ; 2013  ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 >
-    au < manifest ; exists ; 2014 ; 2014  ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2014 ; 186 >
-    au < manifest ; exists ; 2015 ; 2015  ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2015 ; 187 >
+    au < testing ; exists ; 2013 ; 2013 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 >
+    au < testing ; exists ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2014 ; 186 >
+    au < testing ; exists ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2015 ; 187 >
 
   }
 
@@ -4136,9 +4136,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Seminars in Hearing Volume 2010 ; 31 >
    au < manifest ; exists ; 2011 ; 2011 ; Seminars in Hearing Volume 2011 ; 32 >
    au < manifest ; exists ; 2012 ; 2012 ; Seminars in Hearing Volume 2012 ; 33 >
-   au < manifest ; exists ; 2013 ; 2013 ; Seminars in Hearing Volume 2013 ; 34 >
-   au < manifest ; exists ; 2014 ; 2014 ; Seminars in Hearing Volume 2014 ; 35 >
-   au < manifest ; exists ; 2015 ; 2015 ; Seminars in Hearing Volume 2015 ; 36 >
+   au < testing ; exists ; 2013 ; 2013 ; Seminars in Hearing Volume 2013 ; 34 >
+   au < testing ; exists ; 2014 ; 2014 ; Seminars in Hearing Volume 2014 ; 35 >
+   au < testing ; exists ; 2015 ; 2015 ; Seminars in Hearing Volume 2015 ; 36 >
 
   }
 
@@ -4183,9 +4183,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 2010 ; 27 >
    au < manifest ; exists ; 2011 ; 2011 ; Seminars in Interventional Radiology Volume 2011 ; 28 >
    au < manifest ; exists ; 2012 ; 2012 ; Seminars in Interventional Radiology Volume 2012 ; 29 >
-   au < manifest ; exists ; 2013 ; 2013 ; Seminars in Interventional Radiology Volume 2013 ; 30 >
-   au < manifest ; exists ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 2014 ; 31 >
-   au < manifest ; exists ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 2015 ; 32 >
+   au < testing ; exists ; 2013 ; 2013 ; Seminars in Interventional Radiology Volume 2013 ; 30 >
+   au < testing ; exists ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 2014 ; 31 >
+   au < testing ; exists ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 2015 ; 32 >
 
   }
 
@@ -4233,9 +4233,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Seminars in Liver Disease Volume 2010 ; 30 >
    au < manifest ; exists ; 2011 ; 2011 ; Seminars in Liver Disease Volume 2011 ; 31 >
    au < manifest ; exists ; 2012 ; 2012 ; Seminars in Liver Disease Volume 2012 ; 32 >
-   au < manifest ; exists ; 2013 ; 2013 ; Seminars in Liver Disease Volume 2013 ; 33 >
-   au < manifest ; exists ; 2014 ; 2014 ; Seminars in Liver Disease Volume 2014 ; 34 >
-   au < manifest ; exists ; 2015 ; 2015 ; Seminars in Liver Disease Volume 2015 ; 35 >
+   au < testing ; exists ; 2013 ; 2013 ; Seminars in Liver Disease Volume 2013 ; 33 >
+   au < testing ; exists ; 2014 ; 2014 ; Seminars in Liver Disease Volume 2014 ; 34 >
+   au < testing ; exists ; 2015 ; 2015 ; Seminars in Liver Disease Volume 2015 ; 35 >
 
   }
 
