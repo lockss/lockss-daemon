@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,7 +17,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = anais_congresso
 
-      au < exists ; 2013 ; 1 ; Anais do Congresso de História e Literatura: Tempo e Narrativa Volume 1 ; 2013 >
+      au < exists ; 2013 ; 1 ; Anais do Congresso de História e Literatura: Tempo e Narrativa Volume 1 ; 2013 ; >
 
   }
 
@@ -32,7 +32,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = anais_itaberai
 
-      au < exists ; 2012 ; 1 ; Anais do Encontro de Acadêmicos de Pedagogia e Educadores Volume 1 ; 2012 >
+      au < exists ; 2012 ; 1 ; Anais do Encontro de Acadêmicos de Pedagogia e Educadores Volume 1 ; 2012 ; >
 
   }
 
@@ -47,7 +47,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = selt
 
-      au < exists ; 2011 ; 1 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 1 ; 2011 >
+      au < exists ; 2011 ; 1 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 1 ; 2011 ; >
 
   }
 
@@ -62,7 +62,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = simposiocieaa
 
-      au < exists ; 2012 ; 2 ; Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola Volume 2 ; 2012 >
+      au < exists ; 2012 ; 2 ; Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola Volume 2 ; 2012 ; >
 
   }
 
@@ -77,7 +77,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = sineep
 
-      au < exists ; 2011 ; 1 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 1 ; 2011 >
+      au < exists ; 2011 ; 1 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 1 ; 2011 ; >
 
   }
 
@@ -92,7 +92,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = srhjussara
 
-      au < exists ; 2012 ; 1 ; Anais do Simpósio Regional de História (SRH)-UEG UnU Jussara Volume 1 ; 2012 >
+      au < exists ; 2012 ; 1 ; Anais do Simpósio Regional de História (SRH)-UEG UnU Jussara Volume 1 ; 2012 ; >
 
   }
 
@@ -107,7 +107,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = ppub
 
-      au < exists ; 2012 ; 1 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 1 ; 2012 >
+      au < exists ; 2012 ; 1 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 1 ; 2012 ; >
 
   }
 
@@ -122,7 +122,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = historiaporangatu
 
-      au < exists ; 2012 ; 1 ; Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO Volume 1 ; 2012 >
+      au < exists ; 2012 ; 1 ; Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO Volume 1 ; 2012 ; >
 
   }
 
@@ -137,7 +137,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = congresso_acac
 
-      au < exists ; 2012 ; 1 ; Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu Volume 1 ; 2012 >
+      au < exists ; 2012 ; 1 ; Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu Volume 1 ; 2012 ; >
 
   }
 
@@ -152,9 +152,9 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = buildingtheway
 
-      au < exists ; 2011 ; 1 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 3 ; 2013 >
+      au < exists ; 2011 ; 1 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 1 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 2 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 3 ; 2013 ; >
 
   }
 
@@ -169,8 +169,8 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = elisee
 
-      au < exists ; 2012 ; 1 ; Élisée-Revista de Geografia da UEG Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Élisée-Revista de Geografia da UEG Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Élisée-Revista de Geografia da UEG Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Élisée-Revista de Geografia da UEG Volume 2 ; 2013 ; >
 
   }
 
@@ -185,7 +185,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revelli
 
-      au < exists ; 2013 ; 5 ; REVELLI – Revista de Educação, Língua e Literatura da UEG-Inhumas Volume 5 ; 2013 >
+      au < exists ; 2013 ; 5 ; REVELLI – Revista de Educação, Língua e Literatura da UEG-Inhumas Volume 5 ; 2013 ; >
 
   }
 
@@ -200,10 +200,10 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = agrotecnologia
 
-      au < exists ; 2010 ; 1 ; Revista Agrotecnologia Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Revista Agrotecnologia Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Revista Agrotecnologia Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Revista Agrotecnologia Volume 4 ; 2013 >
+      au < exists ; 2010 ; 1 ; Revista Agrotecnologia Volume 1 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Revista Agrotecnologia Volume 2 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Revista Agrotecnologia Volume 3 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Revista Agrotecnologia Volume 4 ; 2013 ; >
 
   }
 
@@ -218,10 +218,10 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revista_administracao
 
-      au < released ; 2010 ; 1 ; Revista de Administração da UEG Volume 1 ; 2010 >
-      au < released ; 2011 ; 2 ; Revista de Administração da UEG Volume 2 ; 2011 >
-      au < released ; 2012 ; 3 ; Revista de Administração da UEG Volume 3 ; 2012 >
-      au < released ; 2013 ; 4 ; Revista de Administração da UEG Volume 4 ; 2013 >
+      au < down ; 2010 ; 1 ; Revista de Administração da UEG Volume 1 ; 2010 ; Journal gone from site. >
+      au < down ; 2011 ; 2 ; Revista de Administração da UEG Volume 2 ; 2011 ; Journal gone from site. >
+      au < down ; 2012 ; 3 ; Revista de Administração da UEG Volume 3 ; 2012 ; Journal gone from site. >
+      au < down ; 2013 ; 4 ; Revista de Administração da UEG Volume 4 ; 2013 ; Journal gone from site. >
 
   }
 
@@ -236,8 +236,8 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = biociencia
 
-      au < exists ; 2012 ; 1 ; Revista de Biotecnologia & Ciência Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista de Biotecnologia & Ciência Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista de Biotecnologia & Ciência Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista de Biotecnologia & Ciência Volume 2 ; 2013 ; >
 
   }
 
@@ -253,16 +253,16 @@
       param[journal_id] = economia
       comment[notReady] = no permission from publisher
 
-      au < exists ; 2005 ; 1 ; Revista de Economia da UEG Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Revista de Economia da UEG Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Revista de Economia da UEG Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Revista de Economia da UEG Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Revista de Economia da UEG Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Revista de Economia da UEG Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Revista de Economia da UEG Volume 7 ; 2011 >
-      au < exists ; 2012 ; 8 ; Revista de Economia da UEG Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista de Economia da UEG Volume 9 ; 2013 >
-      au < notReady ; 2014 ; 10 ; Revista de Economia da UEG Volume 10 ; 2014 >
+      au < exists ; 2005 ; 1 ; Revista de Economia da UEG Volume 1 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Revista de Economia da UEG Volume 2 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Revista de Economia da UEG Volume 3 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Revista de Economia da UEG Volume 4 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Revista de Economia da UEG Volume 5 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Revista de Economia da UEG Volume 6 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Revista de Economia da UEG Volume 7 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Revista de Economia da UEG Volume 8 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Revista de Economia da UEG Volume 9 ; 2013 ; >
+      au < notReady ; 2014 ; 10 ; Revista de Economia da UEG Volume 10 ; 2014 ; >
 
   }
 
@@ -277,8 +277,8 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revistahistoria
 
-      au < exists ; 2012 ; 1 ; Revista de História da UEG Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista de História da UEG Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista de História da UEG Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista de História da UEG Volume 2 ; 2013 ; >
 
   }
 
@@ -293,10 +293,10 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revista_geth
 
-      au < exists ; 2010 ; 1 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 4 ; 2013 >
+      au < exists ; 2010 ; 1 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 1 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 2 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 3 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 4 ; 2013 ; >
 
   }
 
@@ -311,9 +311,9 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revistapluraisvirtual
 
-      au < exists ; 2011 ; 1 ; Revista Plurais-Virtual Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista Plurais-Virtual Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Plurais-Virtual Volume 3 ; 2013 >
+      au < exists ; 2011 ; 1 ; Revista Plurais-Virtual Volume 1 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista Plurais-Virtual Volume 2 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Revista Plurais-Virtual Volume 3 ; 2013 ; >
 
   }
 
@@ -328,8 +328,8 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = territorial
 
-      au < exists ; 2012 ; 1 ; Revista Territorial Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Territorial Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista Territorial Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista Territorial Volume 2 ; 2013 ; >
 
   }
 
@@ -344,8 +344,8 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = praxia
 
-      au < exists ; 2012 ; 1 ; Revista Praxia Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Praxia Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista Praxia Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista Praxia Volume 2 ; 2013 ; >
 
   }
 
@@ -360,8 +360,8 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = spp_jic_unucseh
 
-      au < exists ; 2012 ; 1 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 2 ; 2013 ; >
 
   }
 
@@ -376,10 +376,10 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = temporisacao
 
-      au < exists ; 2010 ; 1 ; Temporis[ação] Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Temporis[ação] Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Temporis[ação] Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Temporis[ação] Volume 4 ; 2013 >
+      au < exists ; 2010 ; 1 ; Temporis[ação] Volume 1 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Temporis[ação] Volume 2 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Temporis[ação] Volume 3 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Temporis[ação] Volume 4 ; 2013 ; >
 
   }
 
