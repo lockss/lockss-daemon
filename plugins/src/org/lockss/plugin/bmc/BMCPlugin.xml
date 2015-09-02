@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>44</string>
+    <string>45</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>17</string>
+        <string>18</string>
       </entry>
     </map>
   </entry>
@@ -41,6 +41,10 @@
   <entry>
     <string>plugin_name</string>
     <string>BioMed Central Plugin (BMC Series, PhysMath Central)</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.68.4</string> <!-- Daemon version at time of update -->
   </entry>
   <entry>
 <!--  supplements now start from their own page; crawl rules limit to just the correct volume -->  
@@ -77,6 +81,7 @@
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
+      <string>2,"^%s.+/[a-z]+[^./]*[.][^/]{2,}[.][^/]{2,}/.*[.]php", base_url</string>
       <string>2,"^%s.*/(about|email|citation|prepub|comments|postcomment)$", base_url</string>
       <string>2,"^%s%s/%s/.*\?fmt_view=(classic|mobile)$", base_url, journal_issn, volume_name</string>
       <!-- exclude (because is causing a 503 error):
@@ -169,7 +174,6 @@
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
-
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.bmc.BMCPluginArticleIteratorFactory</string>
@@ -191,10 +195,4 @@
       </entry>
     </map>
   </entry>
-  <!--
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.bmc.BMCPluginUrlNormalizer</string>
-  </entry
-  -->
 </map>

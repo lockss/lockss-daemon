@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,12 +38,11 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Extractor;
 import org.lockss.plugin.*;
 
 public class BMCPluginHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BMCPluginMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(BMCPluginHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
@@ -62,16 +61,17 @@ public class BMCPluginHtmlMetadataExtractorFactory implements
       // content="G Poelmans, J K Buitelaar, D L Pauls, B Franke" />
       //tagMap.put("citation_authors", new MetadataField(
       //    MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
-      tagMap.put("citation_author", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
+      tagMap.put("citation_author", new MetadataField(
+          MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);    
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("prism.issn", MetadataField.FIELD_ISSN);
-      tagMap.put("dc.title", MetadataField.FIELD_JOURNAL_TITLE); 
+      tagMap.put("dc.title", MetadataField.FIELD_PUBLICATION_TITLE); 
       tagMap.put("dc.creator", MetadataField.DC_FIELD_CREATOR); 
       tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE); 
       tagMap.put("dc.source", MetadataField.DC_FIELD_SOURCE); 

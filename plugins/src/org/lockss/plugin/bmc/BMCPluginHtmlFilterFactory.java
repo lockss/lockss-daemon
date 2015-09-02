@@ -49,6 +49,10 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // malformed html causing low agreement <div id="oas-
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
+        // head tag - Extreme Hash filtering!
+        HtmlNodeFilters.tag("head"),
         // Contains variable code
         HtmlNodeFilters.tag("script"),
         // Contains variable alternatives to the code
@@ -67,8 +71,11 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // left-hand area next to the article - Extreme Hash filtering!
         HtmlNodeFilters.tagWithAttribute("div", "class", "left-article-box"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "left-article-box"),
         // right-hand area next to the article - Extreme Hash filtering!
         HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
+        // alert signup - Extreme Hash filtering!
+//        HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
         // Contains one-time names inside the page
         HtmlNodeFilters.tagWithAttribute("a", "name"),
         // Links to one-time names inside the page

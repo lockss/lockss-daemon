@@ -71,7 +71,7 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   // new extreme hashing - should remove headers, footers and both right/left navigation and ad areas
   private static final String inst8 ="<div id=\"branding\" role=\"banner\"> <dl class=\"google-ad wide \">"+
       " </dl></div>       Hello World";
-  private static final String inst9 ="<div id=\"something\" class=\"left-article-box\"> <dl class=\"google-ad wide \">"+
+  private static final String inst9 ="<div id=\"left-article-box\" class=\"left-article-box\"> <dl class=\"google-ad wide \">"+
       whiteSp + " </dl>  </div>       Hello World";
   private static final String inst10 = whiteSp + "<div id=\"article-navigation-bar\" role=\"banner\"> <dl class=\"google-ad wide \">"+
       " </dl>         </div>       Hello World";
