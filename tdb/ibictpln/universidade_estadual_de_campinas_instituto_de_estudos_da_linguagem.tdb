@@ -20,21 +20,24 @@
       
       {
       
-        param[base_url] = http://www.iel.unicamp.br/revista/
+        param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
         param[journal_id] = liames
 
-        au < superseded ; 2001 ; 1 ; Liames-Línguas Indígenas e Americanas Volume 2001 [superseded] ; 2001 ; changed url >
-        au < superseded ; 2002 ; 2 ; Liames-Línguas Indígenas e Americanas Volume 2002 [superseded] ; 2002 ; changed url >
-        au < superseded ; 2003 ; 3 ; Liames-Línguas Indígenas e Americanas Volume 2003 [superseded] ; 2003 ; changed url >
-        au < superseded ; 2004 ; 4 ; Liames-Línguas Indígenas e Americanas Volume 2004 [superseded] ; 2004 ; changed url >
-        au < superseded ; 2005 ; 5 ; Liames-Línguas Indígenas e Americanas Volume 2005 [superseded] ; 2005 ; changed url >
-        au < superseded ; 2006 ; 6 ; Liames-Línguas Indígenas e Americanas Volume 2006 [superseded] ; 2006 ; changed url >
-        au < superseded ; 2007 ; 7 ; Liames-Línguas Indígenas e Americanas Volume 2007 [superseded] ; 2007 ; changed url >
-        au < superseded ; 2008 ; 8 ; Liames-Línguas Indígenas e Americanas Volume 2008 [superseded] ; 2008 ; changed url >
-        au < superseded ; 2009 ; 9 ; Liames-Línguas Indígenas e Americanas Volume 2009 [superseded] ; 2009 ; changed url >
-        au < superseded ; 2010 ; 10 ; Liames-Línguas Indígenas e Americanas Volume 2010 [superseded] ; 2010 ; changed url >
-        au < superseded ; 2011 ; 11 ; Liames-Línguas Indígenas e Americanas Volume 2011 [superseded] ; 2011 ; changed url >
-        au < superseded ; 2012 ; 12 ; Liames-Línguas Indígenas e Americanas Volume 2012 [superseded] ; 2012 ; changed url >
+        au < exists ; 2001 ; 1 ; Liames-Línguas Indígenas e Americanas Volume 2001 ; 2001 ; >
+        au < exists ; 2002 ; 2 ; Liames-Línguas Indígenas e Americanas Volume 2002 ; 2002 ; >
+        au < exists ; 2003 ; 3 ; Liames-Línguas Indígenas e Americanas Volume 2003 ; 2003 ; >
+        au < exists ; 2004 ; 4 ; Liames-Línguas Indígenas e Americanas Volume 2004 ; 2004 ; >
+        au < exists ; 2005 ; 5 ; Liames-Línguas Indígenas e Americanas Volume 2005 ; 2005 ; >
+        au < exists ; 2006 ; 6 ; Liames-Línguas Indígenas e Americanas Volume 2006 ; 2006 ; >
+        au < exists ; 2007 ; 7 ; Liames-Línguas Indígenas e Americanas Volume 2007 ; 2007 ; >
+        au < exists ; 2008 ; 8 ; Liames-Línguas Indígenas e Americanas Volume 2008 ; 2008 ; >
+        au < exists ; 2009 ; 9 ; Liames-Línguas Indígenas e Americanas Volume 2009 ; 2009 ; >
+        au < exists ; 2010 ; 10 ; Liames-Línguas Indígenas e Americanas Volume 2010 ; 2010 ; >
+        au < exists ; 2011 ; 11 ; Liames-Línguas Indígenas e Americanas Volume 2011 ; 2011 ; >
+        au < exists ; 2012 ; 12 ; Liames-Línguas Indígenas e Americanas Volume 2012 ; 2012 ; >
+        au < exists ; 2013 ; 13 ; Liames-Línguas Indígenas e Americanas Volume 2013 ; 2013 ; >
+        au < exists ; 2014 ; 14 ; Liames-Línguas Indígenas e Americanas Volume 2014 ; 2014 ; >
+        au < exists ; 2015 ; 15 ; Liames-Línguas Indígenas e Americanas Volume 2015 ; 2015 ; >
         
       }
 
@@ -43,21 +46,40 @@
         param[base_url] = http://revistas.iel.unicamp.br/
         param[journal_id] = liames
 
-        au < released ; 2001 ; 1 ; Liames-Línguas Indígenas e Americanas Volume 2001 ; 2001 ; >
-        au < released ; 2002 ; 2 ; Liames-Línguas Indígenas e Americanas Volume 2002 ; 2002 ; >
-        au < released ; 2003 ; 3 ; Liames-Línguas Indígenas e Americanas Volume 2003 ; 2003 ; >
-        au < released ; 2004 ; 4 ; Liames-Línguas Indígenas e Americanas Volume 2004 ; 2004 ; >
-        au < released ; 2005 ; 5 ; Liames-Línguas Indígenas e Americanas Volume 2005 ; 2005 ; >
-        au < released ; 2006 ; 6 ; Liames-Línguas Indígenas e Americanas Volume 2006 ; 2006 ; >
-        au < released ; 2007 ; 7 ; Liames-Línguas Indígenas e Americanas Volume 2007 ; 2007 ; >
-        au < released ; 2008 ; 8 ; Liames-Línguas Indígenas e Americanas Volume 2008 ; 2008 ; >
-        au < released ; 2009 ; 9 ; Liames-Línguas Indígenas e Americanas Volume 2009 ; 2009 ; >
-        au < released ; 2010 ; 10 ; Liames-Línguas Indígenas e Americanas Volume 2010 ; 2010 ; >
-        au < released ; 2011 ; 11 ; Liames-Línguas Indígenas e Americanas Volume 2011 ; 2011 ; >
-        au < released ; 2012 ; 12 ; Liames-Línguas Indígenas e Americanas Volume 2012 ; 2012 ; >
-        au < released ; 2013 ; 13 ; Liames-Línguas Indígenas e Americanas Volume 2013 ; 2013 ; >
-        au < released ; 2014 ; 14 ; Liames-Línguas Indígenas e Americanas Volume 2014 ; 2014 ; >
-        au < manifest ; 2015 ; 15 ; Liames-Línguas Indígenas e Americanas Volume 2015 ; 2015 ; >
+        au < superseded ; 2001 ; 1 ; Liames-Línguas Indígenas e Americanas Volume 2001 [superseded2] ; 2001 ; changed url >
+        au < superseded ; 2002 ; 2 ; Liames-Línguas Indígenas e Americanas Volume 2002 [superseded2] ; 2002 ; changed url >
+        au < superseded ; 2003 ; 3 ; Liames-Línguas Indígenas e Americanas Volume 2003 [superseded2] ; 2003 ; changed url >
+        au < superseded ; 2004 ; 4 ; Liames-Línguas Indígenas e Americanas Volume 2004 [superseded2] ; 2004 ; changed url >
+        au < superseded ; 2005 ; 5 ; Liames-Línguas Indígenas e Americanas Volume 2005 [superseded2] ; 2005 ; changed url >
+        au < superseded ; 2006 ; 6 ; Liames-Línguas Indígenas e Americanas Volume 2006 [superseded2] ; 2006 ; changed url >
+        au < superseded ; 2007 ; 7 ; Liames-Línguas Indígenas e Americanas Volume 2007 [superseded2] ; 2007 ; changed url >
+        au < superseded ; 2008 ; 8 ; Liames-Línguas Indígenas e Americanas Volume 2008 [superseded2] ; 2008 ; changed url >
+        au < superseded ; 2009 ; 9 ; Liames-Línguas Indígenas e Americanas Volume 2009 [superseded2] ; 2009 ; changed url >
+        au < superseded ; 2010 ; 10 ; Liames-Línguas Indígenas e Americanas Volume 2010 [superseded2] ; 2010 ; changed url >
+        au < superseded ; 2011 ; 11 ; Liames-Línguas Indígenas e Americanas Volume 2011 [superseded2] ; 2011 ; changed url >
+        au < superseded ; 2012 ; 12 ; Liames-Línguas Indígenas e Americanas Volume 2012 [superseded2] ; 2012 ; changed url >
+        au < superseded ; 2013 ; 13 ; Liames-Línguas Indígenas e Americanas Volume 2013 [superseded2] ; 2013 ; changed url >
+        au < superseded ; 2014 ; 14 ; Liames-Línguas Indígenas e Americanas Volume 2014 [superseded2] ; 2014 ; changed url >
+        
+      }
+
+      {
+      
+        param[base_url] = http://www.iel.unicamp.br/revista/
+        param[journal_id] = liames
+
+        au < superseded ; 2001 ; 1 ; Liames-Línguas Indígenas e Americanas Volume 2001 [superseded1] ; 2001 ; changed url >
+        au < superseded ; 2002 ; 2 ; Liames-Línguas Indígenas e Americanas Volume 2002 [superseded1] ; 2002 ; changed url >
+        au < superseded ; 2003 ; 3 ; Liames-Línguas Indígenas e Americanas Volume 2003 [superseded1] ; 2003 ; changed url >
+        au < superseded ; 2004 ; 4 ; Liames-Línguas Indígenas e Americanas Volume 2004 [superseded1] ; 2004 ; changed url >
+        au < superseded ; 2005 ; 5 ; Liames-Línguas Indígenas e Americanas Volume 2005 [superseded1] ; 2005 ; changed url >
+        au < superseded ; 2006 ; 6 ; Liames-Línguas Indígenas e Americanas Volume 2006 [superseded1] ; 2006 ; changed url >
+        au < superseded ; 2007 ; 7 ; Liames-Línguas Indígenas e Americanas Volume 2007 [superseded1] ; 2007 ; changed url >
+        au < superseded ; 2008 ; 8 ; Liames-Línguas Indígenas e Americanas Volume 2008 [superseded1] ; 2008 ; changed url >
+        au < superseded ; 2009 ; 9 ; Liames-Línguas Indígenas e Americanas Volume 2009 [superseded1] ; 2009 ; changed url >
+        au < superseded ; 2010 ; 10 ; Liames-Línguas Indígenas e Americanas Volume 2010 [superseded1] ; 2010 ; changed url >
+        au < superseded ; 2011 ; 11 ; Liames-Línguas Indígenas e Americanas Volume 2011 [superseded1] ; 2011 ; changed url >
+        au < superseded ; 2012 ; 12 ; Liames-Línguas Indígenas e Americanas Volume 2012 [superseded1] ; 2012 ; changed url >
         
       }
 

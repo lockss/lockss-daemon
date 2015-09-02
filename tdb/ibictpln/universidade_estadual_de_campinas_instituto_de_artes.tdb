@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,9 +17,9 @@
       param[base_url] = http://www.publionline.iar.unicamp.br/
       param[journal_id] = muspop
 
-      au < exists ; 2012-2013 ; 1 ; Música Popular em Revista Volume 1 ; 0001 >
-      au < exists ; 2013 ; 2 ; Música Popular em Revista Volume 2 ; 0002 >
-      au < exists ; 2014 ; 3 ; Música Popular em Revista Volume 3 ; 0003 >
+      au < exists ; 2012-2013 ; 1 ; Música Popular em Revista Volume 1 ; 0001 ; >
+      au < exists ; 2013 ; 2 ; Música Popular em Revista Volume 2 ; 0002 ; >
+      au < exists ; 2014 ; 3 ; Música Popular em Revista Volume 3 ; 0003 ; >
 
   }
 
@@ -31,14 +31,24 @@
       >
 
       comment[publisher] = Universidade Estadual de Campinas, Instituto de Artes
+      {
+      param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
+      param[journal_id] = pit500
+
+      au < exists ; 2011 ; 1 ; Pitágoras 500 Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Pitágoras 500 Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; Pitágoras 500 Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 4 ; Pitágoras 500 Volume 2014 ; 2014 ; >
+      }
+      {
       param[base_url] = http://www.publionline.iar.unicamp.br/
       param[journal_id] = pit500
 
-      au < released ; 2011 ; 1 ; Pitágoras 500 Volume 2011 ; 2011 >
-      au < released ; 2012 ; 2 ; Pitágoras 500 Volume 2012 ; 2012 >
-      au < released ; 2013 ; 3 ; Pitágoras 500 Volume 2013 ; 2013 >
-      au < released ; 2014 ; 4 ; Pitágoras 500 Volume 2014 ; 2014 >
-
+      au < superseded ; 2011 ; 1 ; Pitágoras 500 Volume 2011 [superseded] ; 2011 ; journal moved >
+      au < superseded ; 2012 ; 2 ; Pitágoras 500 Volume 2012 [superseded] ; 2012 ; journal moved >
+      au < superseded ; 2013 ; 3 ; Pitágoras 500 Volume 2013 [superseded] ; 2013 ; journal moved >
+      au < superseded ; 2014 ; 4 ; Pitágoras 500 Volume 2014 [superseded] ; 2014 ; journal moved >
+      }
   }
 
   {
@@ -52,8 +62,8 @@
       param[base_url] = http://www.publionline.iar.unicamp.br/
       param[journal_id] = ppgac
 
-      au < exists ; 2012 ; 1 ; Conceição Conception Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Conceição Conception Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 1 ; Conceição Conception Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Conceição Conception Volume 2013 ; 2013 ; >
 
   }
 
@@ -68,17 +78,17 @@
       param[base_url] = http://www.sonora.iar.unicamp.br/
       param[journal_id] = sonora1
 
-      au < exists ; 2004 ; 1 ; Revista Sonora Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Revista Sonora Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Revista Sonora Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Revista Sonora Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Revista Sonora Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Revista Sonora Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Revista Sonora Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Revista Sonora Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Revista Sonora Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Revista Sonora Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Revista Sonora Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; Revista Sonora Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Revista Sonora Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Revista Sonora Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Revista Sonora Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Revista Sonora Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Revista Sonora Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Revista Sonora Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Revista Sonora Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Revista Sonora Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Revista Sonora Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Revista Sonora Volume 2014 ; 2014 ; >
 
   }
 

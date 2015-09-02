@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -14,23 +14,41 @@
       >
 
       comment[publisher] = Universidade Estadual de Campinas, Sistema de Bibliotecas
+      {
+      param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
+      param[journal_id] = rbci
+
+      au < exists ; 2003 ; 1 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 2 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 3 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 11 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 12 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2014 ; 2014 ; >
+      au < exists ; 2015 ; 13 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2015 ; 2015 ; >
+      }
+      {
       param[base_url] = http://143.106.108.14/seer/ojs/
       param[journal_id] = rbci
 
-      au < released ; 2003 ; 1 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2003 ; 2003 >
-      au < released ; 2004 ; 2 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2004 ; 2004 >
-      au < released ; 2005 ; 3 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2005 ; 2005 >
-      au < released ; 2006 ; 4 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2006 ; 2006 >
-      au < released ; 2007 ; 5 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2007 ; 2007 >
-      au < released ; 2008 ; 6 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2008 ; 2008 >
-      au < released ; 2009 ; 7 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2009 ; 2009 >
-      au < released ; 2010 ; 8 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2010 ; 2010 >
-      au < released ; 2011 ; 9 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2011 ; 2011 >
-      au < released ; 2012 ; 10 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2012 ; 2012 >
-      au < released ; 2013 ; 11 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2013 ; 2013 >
-      au < released ; 2014 ; 12 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 13 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2015 ; 2015 >
-
+      au < superseded ; 2003 ; 1 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2003 [superseded] ; 2003 ; changed url >
+      au < superseded ; 2004 ; 2 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2004 [superseded] ; 2004 ; changed url >
+      au < superseded ; 2005 ; 3 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2005 [superseded] ; 2005 ; changed url >
+      au < superseded ; 2006 ; 4 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2006 [superseded] ; 2006 ; changed url >
+      au < superseded ; 2007 ; 5 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2007 [superseded] ; 2007 ; changed url >
+      au < superseded ; 2008 ; 6 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2008 [superseded] ; 2008 ; changed url >
+      au < superseded ; 2009 ; 7 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2009 [superseded] ; 2009 ; changed url >
+      au < superseded ; 2010 ; 8 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2010 [superseded] ; 2010 ; changed url >
+      au < superseded ; 2011 ; 9 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2011 [superseded] ; 2011 ; changed url >
+      au < superseded ; 2012 ; 10 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2012 [superseded] ; 2012 ; changed url >
+      au < superseded ; 2013 ; 11 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2013 [superseded] ; 2013 ; changed url >
+      au < superseded ; 2014 ; 12 ; Revista Digital de Biblioteconomia e Ciência da Informação Volume 2014 [superseded] ; 2014 ; changed url >
+      }
   }
 
 }
