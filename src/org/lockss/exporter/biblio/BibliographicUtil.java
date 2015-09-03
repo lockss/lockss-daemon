@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.biblio;
 
 import java.util.*;
-
 import org.apache.commons.collections.comparators.ComparatorChain;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -69,9 +68,9 @@ public class BibliographicUtil {
    * Match a block of letters that could be a Roman number. This pattern omits
    * 'N' which might be used on its own to represent 0.
    */
-  private static final Pattern upperRomanNumerals = RegexpUtil.uncheckedCompile(
-      "(MDCLXVI+)"
-  );
+  //private static final Pattern upperRomanNumerals = RegexpUtil.uncheckedCompile(
+  //    "(MDCLXVI+)"
+  //);
 
   /**
    * Match a number at the start of a string.
@@ -172,26 +171,100 @@ public class BibliographicUtil {
    * eISSNs, ISBNs, eISBNs, ISSN-Ls, journal titles and publishers all match,
    * returns <code>true</code>.
    * <p>
-   * Note that matching values can both be null, so even BibliographicItems
-   * with no field values will be considered to be from the same title. This
-   * may not be desirable.
-   * Note also that the method specifically checks the ISSNs and ISBNs,,
-   * not the best "best available info" methods such as getIssn() and getIsbn().
-   *
-   * @param au1 a BibliographicItem
-   * @param au2 another BibliographicItem
-   * @return <code>true</code> if they have the same issn and journal title
+   * Note that matching values can both be null, so even BibliographicItems with
+   * no field values will be considered to be from the same title. This may not
+   * be desirable. Note also that the method specifically checks the ISSNs and
+   * ISBNs,, not the best "best available info" methods such as getIssn() and
+   * getIsbn().
+   * 
+   * @param au1
+   *          A BibliographicItem with the first item.
+   * @param au2
+   *          A BibliographicItem with the second item.
+   * @return <code>true</code> if they have the same identifying information,
+   *         <code>false</code> otherwise.
    */
-  public static boolean areFromSameTitle(BibliographicItem au1, BibliographicItem au2) {
-    return StringUtil.equalStrings(au1.getPrintIssn(), au2.getPrintIssn())
-        && StringUtil.equalStrings(au1.getPrintIsbn(), au2.getPrintIsbn())
-        && StringUtil.equalStrings(au1.getEissn(), au2.getEissn())
-        && StringUtil.equalStrings(au1.getEisbn(), au2.getEisbn())
-        && StringUtil.equalStrings(au1.getIssnL(), au2.getIssnL())
-        && StringUtil.equalStrings(au1.getPublicationTitle(), 
-                                   au2.getPublicationTitle())
-        && StringUtil.equalStrings(au1.getPublisherName(), au2.getPublisherName())
-        ;
+  public static boolean areFromSameTitle(BibliographicItem au1,
+      BibliographicItem au2) {
+    // Match publication titles and publisher names.
+    if (!StringUtil.equalStrings(au1.getPublicationTitle(),
+	au2.getPublicationTitle()) ||
+	!StringUtil.equalStrings(au1.getPublisherName(),
+	    au2.getPublisherName())) {
+      return false;
+    }
+
+    // Match the first item ISSN values to some ISSN value of the second item.
+    if (!StringUtil.isNullString(au1.getPrintIssn()) &&
+	!StringUtil.equalStrings(au1.getPrintIssn(), au2.getPrintIssn()) &&
+	!StringUtil.equalStrings(au1.getPrintIssn(), au2.getEissn()) &&
+	!StringUtil.equalStrings(au1.getPrintIssn(), au2.getIssnL())) {
+      return false;
+    }
+
+    if (!StringUtil.isNullString(au1.getEissn()) &&
+	!StringUtil.equalStrings(au1.getEissn(), au2.getPrintIssn()) &&
+	!StringUtil.equalStrings(au1.getEissn(), au2.getEissn()) &&
+	!StringUtil.equalStrings(au1.getEissn(), au2.getIssnL())) {
+      return false;
+    }
+
+    if (!StringUtil.isNullString(au1.getIssnL()) &&
+	!StringUtil.equalStrings(au1.getIssnL(), au2.getPrintIssn()) &&
+	!StringUtil.equalStrings(au1.getIssnL(), au2.getEissn()) &&
+	!StringUtil.equalStrings(au1.getIssnL(), au2.getIssnL())) {
+      return false;
+    }
+
+    // Match the second item ISSN values to some ISSN value of the first item.
+    if (!StringUtil.isNullString(au2.getPrintIssn()) &&
+	!StringUtil.equalStrings(au2.getPrintIssn(), au1.getPrintIssn()) &&
+	!StringUtil.equalStrings(au2.getPrintIssn(), au1.getEissn()) &&
+	!StringUtil.equalStrings(au2.getPrintIssn(), au1.getIssnL())) {
+      return false;
+    }
+
+    if (!StringUtil.isNullString(au2.getEissn()) &&
+	!StringUtil.equalStrings(au2.getEissn(), au1.getPrintIssn()) &&
+	!StringUtil.equalStrings(au2.getEissn(), au1.getEissn()) &&
+	!StringUtil.equalStrings(au2.getEissn(), au1.getIssnL())) {
+      return false;
+    }
+
+    if (!StringUtil.isNullString(au2.getIssnL()) &&
+	!StringUtil.equalStrings(au2.getIssnL(), au1.getPrintIssn()) &&
+	!StringUtil.equalStrings(au2.getIssnL(), au1.getEissn()) &&
+	!StringUtil.equalStrings(au2.getIssnL(), au1.getIssnL())) {
+      return false;
+    }
+
+    // Match the first item ISBN values to some ISBN value of the second item.
+    if (!StringUtil.isNullString(au1.getPrintIsbn()) &&
+	!StringUtil.equalStrings(au1.getPrintIsbn(), au2.getPrintIsbn()) &&
+	!StringUtil.equalStrings(au1.getPrintIsbn(), au2.getEisbn())) {
+      return false;
+    }
+
+    if (!StringUtil.isNullString(au1.getEisbn()) &&
+	!StringUtil.equalStrings(au1.getEisbn(), au2.getPrintIsbn()) &&
+	!StringUtil.equalStrings(au1.getEisbn(), au2.getEisbn())) {
+      return false;
+    }
+
+    // Match the second item ISBN values to some ISBN value of the first item.
+    if (!StringUtil.isNullString(au2.getPrintIsbn()) &&
+	!StringUtil.equalStrings(au2.getPrintIsbn(), au1.getPrintIsbn()) &&
+	!StringUtil.equalStrings(au2.getPrintIsbn(), au1.getEisbn())) {
+      return false;
+    }
+
+    if (!StringUtil.isNullString(au2.getEisbn()) &&
+	!StringUtil.equalStrings(au2.getEisbn(), au1.getPrintIsbn()) &&
+	!StringUtil.equalStrings(au2.getEisbn(), au1.getEisbn())) {
+      return false;
+    }
+
+    return true;
   }
 
   /**
@@ -407,7 +480,6 @@ public class BibliographicUtil {
    */
   private static boolean areSameCasing(String s1, String s2) {
     if (s1.length()!=s2.length()) return false;
-    char c1, c2;
     char[] s1arr = s1.toCharArray();
     char[] s2arr = s2.toCharArray();
     for (int i=0; i<s1arr.length; i++) {
@@ -422,10 +494,10 @@ public class BibliographicUtil {
    * @param s
    * @return
    */
-  private static boolean containsUpperCaseChars(String s) {
+  /*private static boolean containsUpperCaseChars(String s) {
     for (char c : s.toCharArray()) if (Character.isUpperCase(c)) return true;
     return false;
-  }
+  }*/
 
 
   /**
@@ -1097,7 +1169,6 @@ public class BibliographicUtil {
    */
   public static class VolumeIterator implements Iterator<String> {
 
-    private final String rangeSetStr;
     private final RangeIterator ranges;
     private SequenceIterator sequence;
     /** The longest token-based prefix common to the current start and end strings. */
@@ -1111,7 +1182,6 @@ public class BibliographicUtil {
      * @param rangeSetStr a comma- or semicolon-separated list of ranges, a single range or a single value
      */
     public VolumeIterator(String rangeSetStr) {
-      this.rangeSetStr = rangeSetStr;
       this.ranges = new RangeIterator(rangeSetStr);
     }
 
