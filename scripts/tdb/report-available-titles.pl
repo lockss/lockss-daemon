@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+# $Id$
 # ------------------------------------------------------------------------------
 # Report Available Titles
 # ------------------------------------------------------------------------------
@@ -458,6 +459,7 @@ sub kbartPack {
 sub kbartRange {
     my ($s, $e) = @_;
     return '' if ($s eq '');
+    return $e if ($e eq "$s($now)");
     return "$s $rngLink $now" if ($e eq '');
     return "$s $rngLink $e" if ($s ne $e);
     return $s;

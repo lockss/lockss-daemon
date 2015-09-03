@@ -163,11 +163,19 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     if (isLast && blankIfCoverageToPresent.contains(field)) {
       try {
         String lastYear = getFieldValue(Field.DATE_LAST_ISSUE_ONLINE);
-        // Return blank if the year is not empty and current.
+
+        // Check whether the range end year is not empty and current.
         if (!StringUtil.isNullString(lastYear) &&
             Integer.parseInt(lastYear) >= BibliographicUtil.getThisYear()) {
-          // TODO: Replace "" with getFieldValue(field) + "(present)";
-          return "";
+
+          // Check whether the field is the volume of the range end.
+          if (field == Field.NUM_LAST_VOL_ONLINE) {
+            // Yes: Attach the indication that it is the current volume.
+            return getFieldValue(field) + "(present)";
+          } else {
+            // No: Leave it blank.
+            return "";
+          }
         }
       } catch (NumberFormatException e) {/* Ignore and return actual value */}
     }
