@@ -127,7 +127,9 @@ public class TestKbartTitle extends LockssTestCase {
         s = testTitle.getField(f);
         assertNotNull(s);
         assertNotEquals(s, yr);
-        assertEquals(s, "");
+        if (f != Field.NUM_LAST_VOL_ONLINE) {
+          assertEquals(s, "");
+        }
       }
     }
     testTitle.setLast(isLast);
