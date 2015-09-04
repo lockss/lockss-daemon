@@ -40,7 +40,7 @@
     au < manifest ; exists ; 2012 ; Abstract and Applied Analysis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Abstract and Applied Analysis Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Abstract and Applied Analysis Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Abstract and Applied Analysis Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Abstract and Applied Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -94,7 +94,7 @@
     au < manifest ; exists ; 2012 ; Active and Passive Electronic Components Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Active and Passive Electronic Components Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Active and Passive Electronic Components Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Active and Passive Electronic Components Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Active and Passive Electronic Components Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -115,7 +115,7 @@
     au < manifest ; exists ; 2012 ; Advances in Acoustics and Vibration Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Acoustics and Vibration Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Acoustics and Vibration Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Acoustics and Vibration Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Acoustics and Vibration Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -130,7 +130,7 @@
     param[journal_id] = aae
 
     au < deepCrawl ; exists ; 2014 ; Advances in Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -145,7 +145,7 @@
     param[journal_id] = aag
 
     au < deepCrawl ; exists ; 2014 ; Advances in Agriculture Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Agriculture Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Agriculture Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -160,7 +160,7 @@
     param[journal_id] = aanat
 
     au < deepCrawl ; exists ; 2014 ; Advances in Anatomy Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -175,7 +175,7 @@
     param[journal_id] = aandrol
 
     au < deepCrawl ; exists ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -190,7 +190,7 @@
     param[journal_id] = aan
 
     au < deepCrawl ; exists ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -231,7 +231,7 @@
     au < manifest ; exists ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -252,7 +252,7 @@
     au < manifest ; exists ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Astronomy Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Astronomy Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Astronomy Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Astronomy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -273,7 +273,7 @@
     au < manifest ; exists ; 2012 ; Advances in Bioinformatics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Bioinformatics Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Bioinformatics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Bioinformatics Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Bioinformatics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -318,7 +318,7 @@
     param[journal_id] = abot
 
     au < deepCrawl ; exists ; 2014 ; Advances in Botany Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Botany Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Botany Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -334,7 +334,7 @@
     comment[notReady] = X X pdf issue. Double-checked that PDF is there. Still issue after deep recrawl.
 
     au < crawling ; exists ; 2014 ; Advances in Chemistry Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Chemistry Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -355,7 +355,7 @@
     au < manifest ; exists ; 2012 ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Civil Engineering Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Civil Engineering Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Civil Engineering Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Civil Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -370,7 +370,7 @@
     param[journal_id] = aceng
 
     au < deepCrawl ; exists ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -391,7 +391,7 @@
     au < manifest ; exists ; 2012 ; Advances in Condensed Matter Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Condensed Matter Physics Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Condensed Matter Physics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Condensed Matter Physics Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Condensed Matter Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -406,7 +406,7 @@
     param[journal_id] = acc
 
     au < deepCrawl ; exists ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Critical Care Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Critical Care Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -453,7 +453,7 @@
     param[journal_id] = ae
 
     au < deepCrawl ; exists ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Ecology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Ecology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -468,7 +468,7 @@
     param[journal_id] = aee
 
     au < crawling ; exists ; 2014 ; Advances in Electrical Engineering Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Electrical Engineering Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Electrical Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -483,7 +483,7 @@
     param[journal_id] = aelc
 
     au < deepCrawl ; exists ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Electronics Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Electronics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -498,7 +498,7 @@
     param[journal_id] = aem
 
     au < deepCrawl ; exists ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Emergency Medicine Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Emergency Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -513,7 +513,7 @@
     param[journal_id] = aen
 
     au < finished ; crawling ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -528,7 +528,7 @@
     param[journal_id] = aec
 
     au < deepCrawl ; exists ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -543,7 +543,7 @@
     param[journal_id] = aep
 
     au < deepCrawl ; exists ; 2014 ; Advances in Epidemiology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Epidemiology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Epidemiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -558,7 +558,7 @@
     param[journal_id] = aeb
 
     au < deepCrawl ; exists ; 2014 ; Advances in Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Evolutionary Biology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Evolutionary Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -579,7 +579,7 @@
     au < manifest ; exists ; 2012 ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Fuzzy Systems Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in Fuzzy Systems Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Fuzzy Systems Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Fuzzy Systems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -609,7 +609,7 @@
     param[journal_id] = ager
 
     au < deepCrawl ; exists ; 2014 ; Advances in Geriatrics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -629,7 +629,7 @@
     au < manifest ; exists ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Hematology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Hematology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Hematology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -644,7 +644,7 @@
     param[journal_id] = ahe
 
     au < deepCrawl ; exists ; 2014 ; Advances in Hepatology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -667,7 +667,7 @@
     au < manifest ; exists ; 2012 ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in High Energy Physics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -688,7 +688,7 @@
     au < manifest ; exists ; 2012 ; Advances in Human-Computer Interaction Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Human-Computer Interaction Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Human-Computer Interaction Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Human-Computer Interaction Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Human-Computer Interaction Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -710,7 +710,7 @@
     au < manifest ; exists ; 2012 ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Materials Science and Engineering Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in Materials Science and Engineering Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Materials Science and Engineering Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Materials Science and Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -730,7 +730,7 @@
     au < manifest ; exists ; 2012 ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Advances in Mathematical Physics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Mathematical Physics Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Mathematical Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -764,7 +764,7 @@
     param[journal_id] = amed
 
     au < deepCrawl ; exists ; 2014 ; Advances in Medicine Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Medicine Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -784,7 +784,7 @@
     au < manifest ; exists ; 2012 ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in Meteorology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Meteorology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Meteorology Volume 2015 ; 2015 ; 2015 >
 
 
   }
@@ -822,7 +822,7 @@
     au < manifest ; exists ; 2012 ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Multimedia Volume 2013 ; 2013 ; 2013 >
     au < frozen ; exists ; 2014 ; Advances in Multimedia Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Multimedia Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Multimedia Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -837,7 +837,7 @@
     param[journal_id] = an
 
     au < frozen ; exists ; 2014 ; Advances in Nephrology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Nephrology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Nephrology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -852,7 +852,7 @@
     param[journal_id] = aneu
 
     au < crawling ; exists ; 2014 ; Advances in Neuroscience Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Neuroscience Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Neuroscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -872,7 +872,7 @@
     au < manifest ; exists ; 2012 ; Advances in Numerical Analysis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Numerical Analysis Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Advances in Numerical Analysis Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Numerical Analysis Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Numerical Analysis Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -887,7 +887,7 @@
     param[journal_id] = anurs
 
     au < crawling ; exists ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 >
 
   }
 
