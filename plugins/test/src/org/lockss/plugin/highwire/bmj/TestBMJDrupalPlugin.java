@@ -166,6 +166,8 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270/peer-review", true, au);
+    // only for data supplements
+    shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/related", true, au);
     
     shouldCacheTest(ROOT_URL + "content/suppl/2014/05/16/bmj.f6123.DC1", true, au);
     shouldCacheTest(ROOT_URL + "highwire/markup/185154/expansion", true, au);
@@ -178,7 +180,6 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     
     shouldCacheTest(ROOT_URL + "bmj/section-pdf/724572/0", false, au);
     shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/article-info", false, au);
-    shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/related", false, au);
     shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/rapid-responses", false, au);
     shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/submit-a-rapid-response", false, au);
     shouldCacheTest(ROOT_URL + "highwire/powerpoint/185149", false, au);
@@ -187,7 +188,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/bmj_rapid_responses_form/node:185147/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_art/node:725123/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_info/node:728958/1", false, au);
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_related_art/node:735423/1", false, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_related_art/node:735423/1", true, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_peer_review/node:735423/1", true, au);
     shouldCacheTest(ROOT_URL + "", false, au);
   }

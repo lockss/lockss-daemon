@@ -1,5 +1,5 @@
 /*
- * $Id:  $
+ * $Id$
  */
 
 /*
@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire.bmj;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWireDrupalUrlNormalizer;
@@ -43,14 +46,18 @@ public class BMJDrupalUrlNormalizer extends HighWireDrupalUrlNormalizer {
   
   // http://static.www.bmj.com/content/bmj/347/bmj.f6041/F1.large.jpg becomes
   // http://www.bmj.com/content/bmj/347/bmj.f6041/F1.large.jpg
-  private static final String PREFIX = "static.www.bmj.com/content/";
-  private static final String REPLACE = "www.bmj.com/content/";
+  public static final String BMJ_UN_STATIC = "/static.";
+  public static final Pattern BMJ_UN_PREFIX_PAT = Pattern.compile("static[^/]*[.]www[.]bmj[.]com/content/");
+  public static final String BMJ_UN_REPLACE = "www.bmj.com/content/";
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     
-    if (url.contains(PREFIX)) {
-      url = url.replace(PREFIX, REPLACE);
+    if (url.contains(BMJ_UN_STATIC) && url.contains(BMJ_UN_REPLACE)) {
+      Matcher mat = BMJ_UN_PREFIX_PAT.matcher(url);
+      if (mat.find()) {
+        url = mat.replaceFirst(BMJ_UN_REPLACE);
+      }
     }
     
     return super.normalizeUrl(url, au);

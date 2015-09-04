@@ -1,5 +1,5 @@
 /*
- * $Id: TestBMJDrupalHtmlHashFilterFactory.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id$
  */
 
 /*
@@ -74,7 +74,9 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       "        <article>\n" + 
       "          <div class=\"panel-pane pane-highwire-markup\">\n" +
       "            <div class=\"highwire-markup\">\n" +
+      "<a href=\"http://static.www.bmj.com/content/350/bmj.g7811\" target=\"_blank\">" + 
       " Some content" +
+      "</a>" +
       "            </div>\n" + 
       "          </div>\n" + 
       "        </article>\n" + 
@@ -115,13 +117,15 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       "<section class=\"block block-system clearfix\" id=\"block-system-main\">" + 
       "<div id=\"issue-toc-page\" class=\"panel-display\">" + 
       "<div class=\"row\">" + 
-      "<article>" + 
+//      "<article>" + 
       "<div class=\"panel-pane pane-highwire-markup\">" +
       "<div class=\"highwire-markup\">\n" +
+      "<a href=\"http://www.bmj.com/content/350/bmj.g7811\" target=\"_blank\">" + 
       " Some content" +
+      "</a>" +
       "            </div>" + 
       "</div>" + 
-      "</article>" +
+//      "</article>" +
       "</div></div></section></div></div></div></div>" +
       "</body>\n" +
       "</html>\n";

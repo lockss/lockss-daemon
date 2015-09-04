@@ -50,6 +50,9 @@ public class BMJDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilt
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
+    // leave data supplement links for pages like http://www.bmj.com/content/332/7532/11/related
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cited-by"),
   };
   
   @Override
