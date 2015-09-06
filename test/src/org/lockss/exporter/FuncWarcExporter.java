@@ -132,6 +132,23 @@ public class FuncWarcExporter extends BaseFuncExporter {
       assertTrue("Expected more than one export file",
 		 exportFiles.length > 1);
     }
+
+    List<File> filesWritten = exp.getExportFiles();
+    if (maxSize < 0) {
+      assertEquals(1, filesWritten.size());
+    } else {
+      assertEquals(exportFiles.length, filesWritten.size());
+    }
+    String suff = isCompress ? "warc.gz" : "warc";
+    int ix = 0;
+    for (File f : filesWritten) {
+      assertMatchesRE(String.format("%s%s%s-[0-9]+-%0,5d\\.%s",
+				    exportDir, File.separator,
+				    exp.getPrefix(), ix, suff),
+		      f.toString());
+      ix++;
+    }
+    assertSameElements(exportFiles, filesWritten);
   }
 
   public static void main(String[] argv) {

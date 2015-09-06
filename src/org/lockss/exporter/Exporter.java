@@ -329,6 +329,21 @@ public abstract class Exporter {
     }
   }
 
+  private Set<File> fileSet = new HashSet<File>();
+  private List<File> fileList = new ArrayList<File>();
+
+  protected void recordExportFile(File file) {
+    if (fileSet.add(file)) {
+      fileList.add(file);
+    }
+  }
+
+  /** Return the list of export files written
+   * @return List of File written */
+  public List<File> getExportFiles() {
+    return fileList;
+  }
+
   public interface Factory {
     public Exporter makeExporter(LockssDaemon daemon, ArchivalUnit au);
   }      

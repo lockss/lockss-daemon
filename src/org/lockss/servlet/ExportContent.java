@@ -283,6 +283,9 @@ public class ExportContent extends LockssServlet {
       } else {
 	statusMsg = "File(s) written";
       }
+      if (log.isDebug2()) {
+	log.debug2("Export files: " + exp.getExportFiles());
+      }
     } catch (Exception e) {
       errMsg = e.getMessage();
       return;
