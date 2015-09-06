@@ -43,7 +43,7 @@ if [ -f ${CFG_FILE} ]; then
     # CFG_FILE should only set environment variables - avoid executing it
     TMP_CFG_FILE=`mktemp /tmp/CFG_FILE_XXXXXX`
     for KEY in `sed -n 's/^\([A-Z0-9_]*\)=.*$/\1/p' <${CFG_FILE}` ; do
-        VALUE=`sed -n -e '/\`/d' -e /${KEY}=/s///p <${CFG_FILE}`
+        VALUE=`sed -n -e '/\`/d' -e /^${KEY}=/s///p <${CFG_FILE}`
         echo ${KEY}=${VALUE}
     done >${TMP_CFG_FILE}
     . ${TMP_CFG_FILE}
