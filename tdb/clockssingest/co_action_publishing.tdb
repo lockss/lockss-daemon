@@ -77,7 +77,7 @@
     au < finished ; frozen ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 >
+    au < finished ; manifest ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 ; 2015 >
 
   }
@@ -156,7 +156,7 @@
     au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
     au < finished ; manifest ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 >
+    au < finished ; manifest ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 >
     au < manifest ; exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 ; 2015 >
 
   } 
@@ -179,7 +179,7 @@
     au < finished ; frozen ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 >
+    au < finished ; manifest ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 >
     au < manifest ; exists ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; 2015 >
     
   }
@@ -195,7 +195,7 @@
     param[base_url] = http://www.ecrj.net/
     param[journal_id] = ecrj
 
-    au < deepCrawl ; exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
+    au < finished ; manifest ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
     au < manifest ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
 
   }
@@ -228,7 +228,7 @@
       au < crawling ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
       au < crawling ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
-      au < deepCrawl ; exists ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 >
+      au < finished ; manifest ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 >
       au < manifest ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; 2015 >
     }
   }
@@ -253,7 +253,7 @@
     au < finished ; crawling ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
     au < finished ; frozen ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
     au < crawling ; exists ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; 2014 >
+    au < finished ; manifest ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; 2014 >
     au < manifest ; exists ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; 2015 >
     
   }
@@ -323,7 +323,7 @@
     au < finished ; frozen ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
     au < finished ; frozen ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
     au < crawling ; exists ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
+    au < finished ; manifest ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
   }
 
@@ -368,7 +368,7 @@
     au < finished ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
     au < finished ; manifest ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
+    au < finished ; manifest ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 >
   }
 
@@ -404,7 +404,7 @@
 
     au < finished ; manifest ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
+    au < finished ; manifest ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
 
   }
@@ -421,7 +421,7 @@
     param[journal_id] = jmahp
 
     au < finished ; manifest ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
+    au < finished ; manifest ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; 2015 >
 
   }
@@ -442,7 +442,7 @@
     au < finished ; crawling ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
     au < finished ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
     au < finished ; manifest ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 >
+    au < finished ; manifest ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 >
 
   }
@@ -467,7 +467,7 @@
     au < finished ; frozen ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
     au < finished ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
     au < crawling ; exists ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 >
+    au < finished ; manifest ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 >
     au < manifest ; exists ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; 2015 >
 
   }
@@ -549,7 +549,7 @@
       au < finished ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
       au < finished ; frozen ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
       au < finished ; manifest ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 >
-      au < deepCrawl ; exists ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 >
+      au < finished ; manifest ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 >
       au < manifest ; exists ; 2015 ; Medical Education Online Volume 20 ; 20 ; 2015 >
       
     }
@@ -592,7 +592,7 @@
     au < finished ; frozen ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
     au < finished ; crawling ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
     au < finished ; manifest ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
+    au < finished ; manifest ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
     au < manifest ; exists ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; 2015 >
   }
 
@@ -611,7 +611,7 @@
     au < finished ; frozen ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
     au < finished ; manifest ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
+    au < finished ; manifest ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
   }
 
@@ -629,7 +629,7 @@
     au < finished ; crawling ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
     au < finished ; crawling ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; 2014 >
+    au < finished ; manifest ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; 2014 >
     au < manifest ; exists ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; 2015 >
 
   }
@@ -862,7 +862,7 @@
     au < finished ; frozen ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 >
     au < finished ; frozen ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
     au < crawling ; exists ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; 2013 >
-    au < deepCrawl ; exists ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; 2014 >
+    au < finished ; manifest ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; 2014 >
     au < manifest ; exists ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; 2015 >
 
   }

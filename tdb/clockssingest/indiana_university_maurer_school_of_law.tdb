@@ -79,7 +79,7 @@
     param[journal_abbr] = ijlse
 
     au < finished ; manifest ; 2013 ; Indiana Journal of Law and Social Equality Volume 1 ; 1 >
-    au < deepCrawl ; exists ; 2014 ; Indiana Journal of Law and Social Equality Volume 2 ; 2 >
+    au < finished ; manifest ; 2014 ; Indiana Journal of Law and Social Equality Volume 2 ; 2 >
     au < crawling ; exists ; 2015 ; Indiana Journal of Law and Social Equality Volume 3 ; 3 >
 
   }
@@ -182,7 +182,7 @@
     au < manifest ; exists ; 2010-2011 ; Indiana Law Journal Volume 86 ; 86 >
     au < finished ; crawling ; 2012 ; Indiana Law Journal Volume 87 ; 87 >
     au < crawling ; exists ; 2013 ; Indiana Law Journal Volume 88 ; 88 >
-    au < deepCrawl ; exists ; 2014 ; Indiana Law Journal Volume 89 ; 89 >
+    au < finished ; manifest ; 2014 ; Indiana Law Journal Volume 89 ; 89 >
     au < crawling ; exists ; 2015 ; Indiana Law Journal Volume 90 ; 90 >
 
   }
