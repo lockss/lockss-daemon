@@ -94,8 +94,8 @@
       au < doNotProcess ; exists ; 2010 ; Asian Business & Management Volume 9 ; 2010 ; 9 >
       au < exists ; exists ; 2011 ; Asian Business & Management Volume 10 ; 2011 ; 10 >
       au < finished ; crawling ; 2012 ; Asian Business & Management Volume 11 ; 2012 ; 11 >
-      au < finished ; manifest ; 2013 ; Asian Business & Management Volume 12 ; 2013 ; 12 >
-      au < finished ; manifest ; 2014 ; Asian Business & Management Volume 13 ; 2014 ; 13 >
+      au < finished ; crawling ; 2013 ; Asian Business & Management Volume 12 ; 2013 ; 12 >
+      au < finished ; crawling ; 2014 ; Asian Business & Management Volume 13 ; 2014 ; 13 >
       au < notReady ; exists ; 2015 ; Asian Business & Management Volume 14 ; 2015 ; 14 >
 
     }
@@ -136,7 +136,7 @@
       au < doNotProcess ; exists ; 2010 ; British Politics Volume 5 ; 2010 ; 5 >
       au < exists ; exists ; 2011 ; British Politics Volume 6 ; 2011 ; 6 >
       au < finished ; finished ; 2012 ; British Politics Volume 7 ; 2012 ; 7 >
-      au < finished ; manifest ; 2013 ; British Politics Volume 8 ; 2013 ; 8 >
+      au < finished ; crawling ; 2013 ; British Politics Volume 8 ; 2013 ; 8 >
       au < finished ; crawling ; 2014 ; British Politics Volume 9 ; 2014 ; 9 >
       au < crawling ; exists ; 2015 ; British Politics Volume 10 ; 2015 ; 10 >
 
@@ -174,7 +174,7 @@
 
       au < exists ; exists ; 2012 ; Comparative Economic Studies Volume 54 ; 2012 ; 54 >
       au < crawling ; exists ; 2013 ; Comparative Economic Studies Volume 55 ; 2013 ; 55 >
-      au < finished ; manifest ; 2014 ; Comparative Economic Studies Volume 56 ; 2014 ; 56 >
+      au < finished ; crawling ; 2014 ; Comparative Economic Studies Volume 56 ; 2014 ; 56 >
       au < crawling ; exists ; 2015 ; Comparative Economic Studies Volume 57 ; 2015 ; 57 >
 
     }
@@ -269,7 +269,7 @@
       au < doNotProcess ; exists ; 2010 ; Corporate Reputation Review Volume 13 ; 2010 ; 13 >
       au < exists ; exists ; 2011 ; Corporate Reputation Review Volume 14 ; 2011 ; 14 >
       au < finished ; frozen ; 2012 ; Corporate Reputation Review Volume 15 ; 2012 ; 15 >
-      au < finished ; manifest ; 2013 ; Corporate Reputation Review Volume 16 ; 2013 ; 16 >
+      au < finished ; crawling ; 2013 ; Corporate Reputation Review Volume 16 ; 2013 ; 16 >
       au < finished ; crawling ; 2014 ; Corporate Reputation Review Volume 17 ; 2014 ; 17 >
       au < crawling ; exists ; 2015 ; Corporate Reputation Review Volume 18 ; 2015 ; 18 >
 
@@ -338,7 +338,7 @@
       au < exists ; exists ; 2012 ; Eastern Economic Journal Volume 38 ; 2012 ; 38 >
       au < crawling ; exists ; 2013 ; Eastern Economic Journal Volume 39 ; 2013 ; 39 >
       au < crawling ; exists ; 2013 ; Eastern Economic Journal Volume 40 (2013) ; 2013 ; 40 >
-      au < finished ; manifest ; 2014 ; Eastern Economic Journal Volume 40 (2014) ; 2014 ; 40 >
+      au < finished ; crawling ; 2014 ; Eastern Economic Journal Volume 40 (2014) ; 2014 ; 40 >
       au < crawling ; exists ; 2015 ; Eastern Economic Journal Volume 41 ; 2015 ; 41 >
 
     }
@@ -363,8 +363,8 @@
       au < doNotProcess ; exists ; 2009 ; French Politics Volume 7 ; 2009 ; 7 >
       au < doNotProcess ; exists ; 2010 ; French Politics Volume 8 ; 2010 ; 8 >
       au < exists ; exists ; 2011 ; French Politics Volume 9 ; 2011 ; 9 >
-      au < finished ; manifest ; 2012 ; French Politics Volume 10 ; 2012 ; 10 >
-      au < finished ; manifest ; 2013 ; French Politics Volume 11 ; 2013 ; 11 >
+      au < finished ; crawling ; 2012 ; French Politics Volume 10 ; 2012 ; 10 >
+      au < finished ; crawling ; 2013 ; French Politics Volume 11 ; 2013 ; 11 >
       au < finished ; crawling ; 2014 ; French Politics Volume 12 ; 2014 ; 12 >
       au < crawling ; exists ; 2015 ; French Politics Volume 13 ; 2015 ; 13 >
 
@@ -382,8 +382,8 @@
       param[journal_id] = iga
 
       au < exists ; exists ; 2012 ; Interest Groups & Advocacy Volume 1 ; 2012 ; 1 >
-      au < finished ; manifest ; 2013 ; Interest Groups & Advocacy Volume 2 ; 2013 ; 2 >
-      au < finished ; manifest ; 2014 ; Interest Groups & Advocacy Volume 3 ; 2014 ; 3 >
+      au < finished ; crawling ; 2013 ; Interest Groups & Advocacy Volume 2 ; 2013 ; 2 >
+      au < finished ; crawling ; 2014 ; Interest Groups & Advocacy Volume 3 ; 2014 ; 3 >
       au < crawling ; exists ; 2015 ; Interest Groups & Advocacy Volume 4 ; 2015 ; 4 >
 
     }
@@ -464,9 +464,9 @@
       au < doNotProcess ; exists ; 2009 ; International Politics Volume 46 ; 2009 ; 46 >
       au < doNotProcess ; exists ; 2010 ; International Politics Volume 47 ; 2010 ; 47 >
       au < exists ; exists ; 2011 ; International Politics Volume 48 ; 2011 ; 48 >
-      au < finished ; manifest ; 2012 ; International Politics Volume 49 ; 2012 ; 49 >
-      au < finished ; manifest ; 2013 ; International Politics Volume 50 ; 2013 ; 50 >
-      au < finished ; manifest ; 2014 ; International Politics Volume 51 ; 2014 ; 51 >
+      au < finished ; crawling ; 2012 ; International Politics Volume 49 ; 2012 ; 49 >
+      au < finished ; crawling ; 2013 ; International Politics Volume 50 ; 2013 ; 50 >
+      au < finished ; crawling ; 2014 ; International Politics Volume 51 ; 2014 ; 51 >
       au < crawling ; exists ; 2015 ; International Politics Volume 52 ; 2015 ; 52 >
 
     }
@@ -532,9 +532,9 @@
       au < doNotProcess ; exists ; 2010 ; Journal of Banking Regulation Volume 11 (2010) ; 2010 ; 11 >
       au < doNotProcess ; exists ; 2010 ; Journal of Banking Regulation Volume 12 (2010) ; 2010 ; 12 >
       au < exists ; exists ; 2011 ; Journal of Banking Regulation Volume 12 (2011) ; 2011 ; 12 >
-      au < finished ; manifest ; 2012 ; Journal of Banking Regulation Volume 13 ; 2012 ; 13 >
+      au < finished ; crawling ; 2012 ; Journal of Banking Regulation Volume 13 ; 2012 ; 13 >
       au < crawling ; exists ; 2013 ; Journal of Banking Regulation Volume 14 ; 2013 ; 14 >
-      au < finished ; manifest ; 2014 ; Journal of Banking Regulation Volume 15 ; 2014 ; 15 >
+      au < finished ; crawling ; 2014 ; Journal of Banking Regulation Volume 15 ; 2014 ; 15 >
       au < notReady ; exists ; 2015 ; Journal of Banking Regulation Volume 16 ; 2015 ; 16 >
 
     }
@@ -574,8 +574,8 @@
       au < exists ; exists ; 2011 ; Journal of Brand Management Volume 18 (2011) ; 2011 ; 18 >
       au < exists ; exists ; 2011 ; Journal of Brand Management Volume 19 (2011) ; 2011 ; 12 >
       au < crawling ; exists ; 2012 ; Journal of Brand Management Volume 19 (2012) ; 2012 ; 19 >
-      au < finished ; manifest ; 2012 ; Journal of Brand Management Volume 20 (2012) ; 2012 ; 20 >
-      au < finished ; manifest ; 2013 ; Journal of Brand Management Volume 20 (2013) ; 2013 ; 20 >
+      au < finished ; crawling ; 2012 ; Journal of Brand Management Volume 20 (2012) ; 2012 ; 20 >
+      au < finished ; crawling ; 2013 ; Journal of Brand Management Volume 20 (2013) ; 2013 ; 20 >
       au < notReady ; exists ; 2014 ; Journal of Brand Management Volume 21 (2014) ; 2014 ; 21 > # manifest page malformed. has V22 url.
       au < crawling ; exists ; 2015 ; Journal of Brand Management Volume 22 (2014) ; 2015 ; 22 >
 
@@ -613,7 +613,7 @@
       au < doNotProcess ; exists ; 2009 ; Journal of Database Marketing & Customer Strategy Management Volume 16 ; 2009 ; 16 >
       au < doNotProcess ; exists ; 2010 ; Journal of Database Marketing & Customer Strategy Management Volume 17 ; 2010 ; 17 >
       au < exists ; exists ; 2011 ; Journal of Database Marketing & Customer Strategy Management Volume 18 ; 2011 ; 18 >
-      au < finished ; manifest ; 2012 ; Journal of Database Marketing & Customer Strategy Management Volume 19 ; 2012 ; 19 >
+      au < finished ; crawling ; 2012 ; Journal of Database Marketing & Customer Strategy Management Volume 19 ; 2012 ; 19 >
 
     }
 
@@ -660,7 +660,7 @@
       au < doNotProcess ; exists ; 2010 ; Journal of Derivatives & Hedge Funds Volume 16 (2010) ; 2010 ; 16 >
       au < exists ; exists ; 2011 ; Journal of Derivatives & Hedge Funds Volume 16 (2011) ; 2011 ; 16 >
       au < exists ; exists ; 2011 ; Journal of Derivatives & Hedge Funds Volume 17 ; 2011 ; 17 >
-      au < finished ; manifest ; 2012 ; Journal of Derivatives & Hedge Funds Volume 18 ; 2012 ; 18 >
+      au < finished ; crawling ; 2012 ; Journal of Derivatives & Hedge Funds Volume 18 ; 2012 ; 18 >
       au < crawling ; exists ; 2013 ; Journal of Derivatives & Hedge Funds Volume 19 ; 2013 ; 19 >
       au < finished ; crawling ; 2014 ; Journal of Derivatives & Hedge Funds Volume 20 ; 2014 ; 20 >
       au < expected ; exists ; 2015 ; Journal of Derivatives & Hedge Funds Volume 21 ; 2015 ; 21 >
@@ -724,9 +724,9 @@
       au < doNotProcess ; exists ; 2010 ; Journal of Direct, Data and Digital Marketing Practice Volume 12 (2010) ; 2010 ; 12 >
       au < exists ; exists ; 2011 ; Journal of Direct, Data and Digital Marketing Practice Volume 12 (2011) ; 2011 ; 12 >
       au < exists ; exists ; 2011 ; Journal of Direct, Data and Digital Marketing Practice Volume 13 (2011) ; 2011 ; 13 >
-      au < finished ; manifest ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 13 (2012) ; 2012 ; 13 >
-      au < finished ; manifest ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2012) ; 2012 ; 14 >
-      au < finished ; manifest ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2013) ; 2013 ; 14 >
+      au < finished ; crawling ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 13 (2012) ; 2012 ; 13 >
+      au < finished ; crawling ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2012) ; 2012 ; 14 >
+      au < finished ; crawling ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2013) ; 2013 ; 14 >
       au < crawling ; exists ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2013) ; 2013 ; 15 >
       au < finished ; crawling ; 2014 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2014) ; 2014 ; 15 >
       au < notReady ; exists ; 2015 ; Journal of Direct, Data and Digital Marketing Practice Volume 16 (2015) ; 2015 ; 16 >
@@ -767,7 +767,7 @@
       au < doNotProcess ; exists ; 2010 ; Journal of Financial Services Marketing Volume 15 (2010) ; 2010 ; 15 >
       au < exists ; exists ; 2011 ; Journal of Financial Services Marketing Volume 15 (2011) ; 2011 ; 15 >
       au < exists ; exists ; 2011 ; Journal of Financial Services Marketing Volume 16 ; 2011 ; 16 >
-      au < finished ; manifest ; 2012 ; Journal of Financial Services Marketing Volume 17 ; 2012 ; 17 >
+      au < finished ; crawling ; 2012 ; Journal of Financial Services Marketing Volume 17 ; 2012 ; 17 >
       au < crawling ; exists ; 2013 ; Journal of Financial Services Marketing Volume 18 ; 2013 ; 18 >
       au < finished ; crawling ; 2014 ; Journal of Financial Services Marketing Volume 19 ; 2014 ; 19 >
       au < crawling ; exists ; 2015 ; Journal of Financial Services Marketing Volume 20 ; 2015 ; 20 >
@@ -793,7 +793,7 @@
       au < doNotProcess ; exists ; 2009 ; Journal of International Relations and Development Volume 12 ; 2009 ; 12 >
       au < doNotProcess ; exists ; 2010 ; Journal of International Relations and Development Volume 13 ; 2010 ; 13 >
       au < exists ; exists ; 2011 ; Journal of International Relations and Development Volume 14 ; 2011 ; 14 >
-      au < finished ; manifest ; 2012 ; Journal of International Relations and Development Volume 15 ; 2012 ; 15 >
+      au < finished ; crawling ; 2012 ; Journal of International Relations and Development Volume 15 ; 2012 ; 15 >
       au < crawling ; exists ; 2013 ; Journal of International Relations and Development Volume 16 ; 2013 ; 16 >
       au < finished ; crawling ; 2014 ; Journal of International Relations and Development Volume 17 ; 2014 ; 17 >
       au < crawling ; exists ; 2015 ; Journal of International Relations and Development Volume 18 ; 2015 ; 18 >
@@ -844,7 +844,7 @@
       au < doNotProcess ; exists ; 2009 ; Journal of Public Health Policy Volume 30 ; 2009 ; 30 >
       au < doNotProcess ; exists ; 2010 ; Journal of Public Health Policy Volume 31 ; 2010 ; 31 >
       au < exists ; exists ; 2011 ; Journal of Public Health Policy Volume 32 ; 2011 ; 32 >
-      au < finished ; manifest ; 2012 ; Journal of Public Health Policy Volume 33 ; 2012 ; 33 >
+      au < finished ; crawling ; 2012 ; Journal of Public Health Policy Volume 33 ; 2012 ; 33 >
       au < crawling ; exists ; 2013 ; Journal of Public Health Policy Volume 34 ; 2013 ; 34 >
       au < finished ; crawling ; 2014 ; Journal of Public Health Policy Volume 35 ; 2014 ; 35 >
       au < notReady ; exists ; 2015 ; Journal of Public Health Policy Volume 36 ; 2015 ; 36 >
@@ -905,7 +905,7 @@
       au < doNotProcess ; exists ; 2009 ; Journal of Revenue & Pricing Management Volume 8 ; 2009 ; 8 >
       au < doNotProcess ; exists ; 2010 ; Journal of Revenue & Pricing Management Volume 9 ; 2010 ; 9 >
       au < exists ; exists ; 2011 ; Journal of Revenue & Pricing Management Volume 10 ; 2011 ; 10 >
-      au < finished ; manifest ; 2012 ; Journal of Revenue & Pricing Management Volume 11 ; 2012 ; 11 >
+      au < finished ; crawling ; 2012 ; Journal of Revenue & Pricing Management Volume 11 ; 2012 ; 11 >
       au < crawling ; exists ; 2013 ; Journal of Revenue & Pricing Management Volume 12 ; 2013 ; 12 >
       au < finished ; crawling ; 2014 ; Journal of Revenue & Pricing Management Volume 13 ; 2014 ; 13 >
       au < crawling ; exists ; 2015 ; Journal of Revenue & Pricing Management Volume 14 ; 2015 ; 14 >
@@ -966,8 +966,8 @@
       au < doNotProcess ; exists ; 2009 ; Latino Studies Volume 7 ; 2009 ; 7 >
       au < manifest ; exists ; 2010 ; Latino Studies Volume 8 ; 2010 ; 8 >
       au < exists ; exists ; 2011 ; Latino Studies Volume 9 ; 2011 ; 9 >
-      au < finished ; manifest ; 2012 ; Latino Studies Volume 10 ; 2012 ; 10 >
-      au < finished ; manifest ; 2013 ; Latino Studies Volume 11 ; 2013 ; 11 >
+      au < finished ; crawling ; 2012 ; Latino Studies Volume 10 ; 2012 ; 10 >
+      au < finished ; crawling ; 2013 ; Latino Studies Volume 11 ; 2013 ; 11 >
       au < finished ; crawling ; 2014 ; Latino Studies Volume 12 ; 2014 ; 12 >
       au < crawling ; exists ; 2015 ; Latino Studies Volume 13 ; 2015 ; 13 >
 
@@ -997,7 +997,7 @@
       au < doNotProcess ; exists ; 2009 ; Maritime Economics & Logistics Volume 11 ; 2009 ; 11 >
       au < doNotProcess ; exists ; 2010 ; Maritime Economics & Logistics Volume 12 ; 2010 ; 12 >
       au < exists ; exists ; 2011 ; Maritime Economics & Logistics Volume 13 ; 2011 ; 13 >
-      au < finished ; manifest ; 2012 ; Maritime Economics & Logistics Volume 14 ; 2012 ; 14 >
+      au < finished ; crawling ; 2012 ; Maritime Economics & Logistics Volume 14 ; 2012 ; 14 >
       au < crawling ; exists ; 2013 ; Maritime Economics & Logistics Volume 15 ; 2013 ; 15 >
       au < finished ; crawling ; 2014 ; Maritime Economics & Logistics Volume 16 ; 2014 ; 16 >
       au < crawling ; exists ; 2015 ; Maritime Economics & Logistics Volume 17 ; 2015 ; 17 >
@@ -1036,7 +1036,7 @@
       au < doNotProcess ; exists ; 2009 ; Pensions: An International Journal Volume 14 ; 2009 ; 14 >
       au < doNotProcess ; exists ; 2010 ; Pensions: An International Journal Volume 15 ; 2010 ; 15 >
       au < exists ; exists ; 2011 ; Pensions: An International Journal Volume 16 ; 2011 ; 16 >
-      au < finished ; manifest ; 2012 ; Pensions: An International Journal Volume 17 ; 2012 ; 17 >
+      au < finished ; crawling ; 2012 ; Pensions: An International Journal Volume 17 ; 2012 ; 17 >
 
     }
 
@@ -1079,8 +1079,8 @@
 
       au < manifest ; exists ; 2010 ; postmedieval Volume 1 ; 2010 ; 1 >
       au < exists ; exists ; 2011 ; postmedieval Volume 2 ; 2011 ; 2 >
-      au < finished ; manifest ; 2012 ; postmedieval Volume 3 ; 2012 ; 3 >
-      au < finished ; manifest ; 2013 ; postmedieval Volume 4 ; 2013 ; 4 >
+      au < finished ; crawling ; 2012 ; postmedieval Volume 3 ; 2012 ; 3 >
+      au < finished ; crawling ; 2013 ; postmedieval Volume 4 ; 2013 ; 4 >
       au < finished ; crawling ; 2014 ; postmedieval Volume 5 ; 2014 ; 5 >
       au < crawling ; exists ; 2015 ; postmedieval Volume 6 ; 2015 ; 6 >
 
@@ -1106,8 +1106,8 @@
       au < doNotProcess ; exists ; 2009 ; Psychoanalysis, Culture & Society Volume 14 ; 2009 ; 14 >
       au < doNotProcess ; exists ; 2010 ; Psychoanalysis, Culture & Society Volume 15 ; 2010 ; 15 >
       au < exists ; exists ; 2011 ; Psychoanalysis, Culture & Society Volume 16 ; 2011 ; 16 >
-      au < finished ; manifest ; 2012 ; Psychoanalysis, Culture & Society Volume 17 ; 2012 ; 17 >
-      au < finished ; manifest ; 2013 ; Psychoanalysis, Culture & Society Volume 18 ; 2013 ; 18 >
+      au < finished ; crawling ; 2012 ; Psychoanalysis, Culture & Society Volume 17 ; 2012 ; 17 >
+      au < finished ; crawling ; 2013 ; Psychoanalysis, Culture & Society Volume 18 ; 2013 ; 18 >
       au < finished ; crawling ; 2014 ; Psychoanalysis, Culture & Society Volume 19 ; 2014 ; 19 >
       au < notReady ; exists ; 2015 ; Psychoanalysis, Culture & Society Volume 20 ; 2015 ; 20 >
 
@@ -1137,8 +1137,8 @@
       au < doNotProcess ; exists ; 2009 ; Risk Management Volume 11 ; 2009 ; 11 >
       au < doNotProcess ; exists ; 2010 ; Risk Management Volume 12 ; 2010 ; 12 >
       au < exists ; exists ; 2011 ; Risk Management Volume 13 ; 2011 ; 13 >
-      au < finished ; manifest ; 2012 ; Risk Management Volume 14 ; 2012 ; 14 >
-      au < finished ; manifest ; 2013 ; Risk Management Volume 15 ; 2013 ; 15 >
+      au < finished ; crawling ; 2012 ; Risk Management Volume 14 ; 2012 ; 14 >
+      au < finished ; crawling ; 2013 ; Risk Management Volume 15 ; 2013 ; 15 >
       au < finished ; crawling ; 2014 ; Risk Management Volume 16 ; 2014 ; 16 >
       au < crawling ; exists ; 2015 ; Risk Management Volume 17 ; 2015 ; 17 >
 
@@ -1168,8 +1168,8 @@
       au < doNotProcess ; exists ; 2009 ; Security Journal Volume 22 ; 2009 ; 22 >
       au < doNotProcess ; exists ; 2010 ; Security Journal Volume 23 ; 2010 ; 23 >
       au < exists ; exists ; 2011 ; Security Journal Volume 24 ; 2011 ; 24 >
-      au < finished ; manifest ; 2012 ; Security Journal Volume 25 ; 2012 ; 25 >
-      au < finished ; manifest ; 2013 ; Security Journal Volume 26 ; 2013 ; 26 >
+      au < finished ; crawling ; 2012 ; Security Journal Volume 25 ; 2012 ; 25 >
+      au < finished ; crawling ; 2013 ; Security Journal Volume 26 ; 2013 ; 26 >
       au < finished ; crawling ; 2014 ; Security Journal Volume 27 ; 2014 ; 27 >
       au < crawling ; exists ; 2015 ; Security Journal Volume 28 ; 2015 ; 28 >
  
@@ -1195,7 +1195,7 @@
       au < doNotProcess ; exists ; 2009 ; Social Theory & Health Volume 7 ; 2009 ; 7 >
       au < doNotProcess ; exists ; 2010 ; Social Theory & Health Volume 8 ; 2010 ; 8 >
       au < exists ; exists ; 2011 ; Social Theory & Health Volume 9 ; 2011 ; 9 >
-      au < finished ; manifest ; 2012 ; Social Theory & Health Volume 10 ; 2012 ; 10 >
+      au < finished ; crawling ; 2012 ; Social Theory & Health Volume 10 ; 2012 ; 10 >
       au < crawling ; exists ; 2013 ; Social Theory & Health Volume 11 ; 2013 ; 11 >
       au < finished ; crawling ; 2014 ; Social Theory & Health Volume 12 ; 2014 ; 12 >
       au < notReady ; exists ; 2015 ; Social Theory & Health Volume 13 ; 2015 ; 13 >
@@ -1223,8 +1223,8 @@
       au < doNotProcess ; exists ; 2009 ; Subjectivity Volume 29 ; 2009 ; 29 >
       au < doNotProcess ; exists ; 2010 ; Subjectivity Volume 3 ; 2010 ; 3 >
       au < exists ; exists ; 2011 ; Subjectivity Volume 4 ; 2011 ; 4 >
-      au < finished ; manifest ; 2012 ; Subjectivity Volume 5 ; 2012 ; 5 >
-      au < finished ; manifest ; 2013 ; Subjectivity Volume 6 ; 2013 ; 6 >
+      au < finished ; crawling ; 2012 ; Subjectivity Volume 5 ; 2012 ; 5 >
+      au < finished ; crawling ; 2013 ; Subjectivity Volume 6 ; 2013 ; 6 >
       au < finished ; crawling ; 2014 ; Subjectivity Volume 7 ; 2014 ; 7 >
       au < crawling ; exists ; 2015 ; Subjectivity Volume 8 ; 2015 ; 8 >
 
@@ -1257,8 +1257,8 @@
       au < doNotProcess ; exists ; 2009 ; Urban Design International Volume 14 ; 2009 ; 14 >
       au < doNotProcess ; exists ; 2010 ; Urban Design International Volume 15 ; 2010 ; 15 >
       au < exists ; exists ; 2011 ; Urban Design International Volume 16 ; 2011 ; 16 >
-      au < finished ; manifest ; 2012 ; Urban Design International Volume 17 ; 2012 ; 17 >
-      au < finished ; manifest ; 2013 ; Urban Design International Volume 18 ; 2013 ; 18 >
+      au < finished ; crawling ; 2012 ; Urban Design International Volume 17 ; 2012 ; 17 >
+      au < finished ; crawling ; 2013 ; Urban Design International Volume 18 ; 2013 ; 18 >
       au < finished ; crawling ; 2014 ; Urban Design International Volume 19 ; 2014 ; 19 >
       au < crawling ; exists ; 2015 ; Urban Design International Volume 20 ; 2015 ; 20 >
 

@@ -162,13 +162,13 @@
     au < manifest ; exists ; 1994 ; Development Volume 120 ; 120 >
     au < crawling ; exists ; 1995 ; Development Volume 121 ; 121 >
     au < notReady ; exists ; 1996 ; Development Volume 122 ; 122 >
-    au < finished ; manifest ; 1996 ; Development Volume 123 ; 123 >
+    au < finished ; crawling ; 1996 ; Development Volume 123 ; 123 >
     au < crawling ; exists ; 1997 ; Development Volume 124 ; 124 >
     au < crawling ; exists ; 1998 ; Development Volume 125 ; 125 >
     au < manifest ; exists ; 1999 ; Development Volume 126 ; 126 >
     au < manifest ; exists ; 2000 ; Development Volume 127 ; 127 >
-    au < finished ; manifest ; 2001 ; Development Volume 128 ; 128 >
-    au < finished ; manifest ; 2002 ; Development Volume 129 ; 129 >
+    au < finished ; crawling ; 2001 ; Development Volume 128 ; 128 >
+    au < finished ; crawling ; 2002 ; Development Volume 129 ; 129 >
     au < crawling ; exists ; 2003 ; Development Volume 130 ; 130 >
     au < crawling ; exists ; 2004 ; Development Volume 131 ; 131 >
     au < crawling ; exists ; 2005 ; Development Volume 132 ; 132 >
@@ -176,10 +176,10 @@
     au < crawling ; exists ; 2007 ; Development Volume 134 ; 134 >
     au < crawling ; exists ; 2008 ; Development Volume 135 ; 135 >
     au < crawling ; exists ; 2009 ; Development Volume 136 ; 136 >
-    au < finished ; manifest ; 2010 ; Development Volume 137 ; 137 >
+    au < finished ; crawling ; 2010 ; Development Volume 137 ; 137 >
     au < finished ; frozen ; 2011 ; Development Volume 138 ; 138 >
     au < finished ; crawling ; 2012 ; Development Volume 139 ; 139 >
-    au < finished ; manifest ; 2013 ; Development Volume 140 ; 140 >
+    au < finished ; crawling ; 2013 ; Development Volume 140 ; 140 >
     au < crawling ; exists ; 2014 ; Development Volume 141 ; 141 >
     au < manifest ; exists ; 2015 ; Development Volume 142 ; 142 >
 
@@ -198,7 +198,7 @@
     comment[notReady] = No permission statement on manifest page
 
     au < notReady ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
-    au < finished ; manifest ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
+    au < finished ; crawling ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
     au < crawling ; exists ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
     au < finished ; frozen ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
     au < finished ; frozen ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
@@ -562,7 +562,7 @@
     au < manifest ; exists ; 1994 ; Journal of Experimental Biology Volume 196 ; 196 >
     au < manifest ; exists ; 1994 ; Journal of Experimental Biology Volume 197 ; 197 >
     au < manifest ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
-    au < finished ; manifest ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
+    au < finished ; crawling ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
     au < manifest ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
     au < manifest ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
     au < crawling ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
@@ -571,12 +571,12 @@
     au < manifest ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
     au < manifest ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 >
     au < manifest ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
-    au < finished ; manifest ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 >
+    au < finished ; crawling ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 >
     au < crawling ; exists ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
-    au < finished ; manifest ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 >
+    au < finished ; crawling ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 >
     au < crawling ; exists ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
-    au < finished ; manifest ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
-    au < finished ; manifest ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
+    au < finished ; crawling ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
+    au < finished ; crawling ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
     au < finished ; frozen ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
     au < finished ; frozen ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
     au < crawling ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >

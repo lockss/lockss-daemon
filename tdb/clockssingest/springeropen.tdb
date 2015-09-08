@@ -132,7 +132,7 @@
         param[journal_issn] = 2196-0089 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Applied Informatics Volume 1 ; 1 >
+        au < finished ; crawling ; 2014 ; Applied Informatics Volume 1 ; 1 >
         au < crawling ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 >
 
     }
@@ -516,7 +516,7 @@
   
         au < manifest ; exists ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 >
-        au < finished ; manifest ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
+        au < finished ; crawling ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
         au < crawling ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 >
   
@@ -916,7 +916,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 >
-        au < finished ; manifest ; 2014 ; Geothermal Energy Volume 2 ; 2 >
+        au < finished ; crawling ; 2014 ; Geothermal Energy Volume 2 ; 2 >
         au < ready ; exists ; 2015 ; Geothermal Energy Volume 3 ; 3 >
   
     }
@@ -1041,7 +1041,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 >
-        au < finished ; manifest ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
+        au < finished ; crawling ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 >
         au < testing ; exists ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 >
   
@@ -1150,7 +1150,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
-        au < finished ; manifest ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
+        au < finished ; crawling ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
         au < crawling ; exists ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
         au < expected ; exists ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
   

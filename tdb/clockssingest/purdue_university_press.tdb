@@ -28,14 +28,14 @@
     au < manifest ; exists ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 >
     au < manifest ; exists ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 >
     au < manifest ; exists ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 >
-    au < finished ; manifest ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 >
-    au < finished ; manifest ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 >
+    au < finished ; crawling ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 >
+    au < finished ; crawling ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 >
     au < crawling ; exists ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 >
-    au < finished ; manifest ; 2010 ; CLCWeb: Comparative Literature and Culture Volume 12 ; 12 >
-    au < finished ; manifest ; 2011 ; CLCWeb: Comparative Literature and Culture Volume 13 ; 13 >
+    au < finished ; crawling ; 2010 ; CLCWeb: Comparative Literature and Culture Volume 12 ; 12 >
+    au < finished ; crawling ; 2011 ; CLCWeb: Comparative Literature and Culture Volume 13 ; 13 >
     au < finished ; frozen ; 2012 ; CLCWeb: Comparative Literature and Culture Volume 14 ; 14 >
     au < crawling ; exists ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 >
-    au < finished ; manifest ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 >
+    au < finished ; crawling ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 >
     au < crawling ; exists ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 >
  
   }
@@ -80,7 +80,7 @@
     au < manifest ; exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 >
     au < finished ; crawling ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 >
     au < crawling ; exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 >
-    au < finished ; manifest ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 >
+    au < finished ; crawling ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 >
     au < crawling ; exists ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 >
 
   }
@@ -100,7 +100,7 @@
     au < manifest ; exists ; 2011 ; Journal of Aviation Technology and Engineering Volume 1 ; 1 >
     au < finished ; crawling ; 2012 ; Journal of Aviation Technology and Engineering Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Journal of Aviation Technology and Engineering Volume 3 ; 3 >
-    au < finished ; manifest ; 2014 ; Journal of Aviation Technology and Engineering Volume 4 ; 4 >
+    au < finished ; crawling ; 2014 ; Journal of Aviation Technology and Engineering Volume 4 ; 4 >
     au < expected ; exists ; 2015 ; Journal of Aviation Technology and Engineering Volume 5 ; 5 >
 
   }
@@ -123,7 +123,7 @@
     au < finished ; crawling ; 2005 ; Journal of Human Performance in Extreme Environments Volume 8 ; 8 >
     au < finished ; crawling ; 2006 ; Journal of Human Performance in Extreme Environments Volume 9 ; 9 >
     au < finished ; crawling ; 2012-2013 ; Journal of Human Performance in Extreme Environments Volume 10 ; 10 >
-    au < finished ; manifest ; 2013 ; Journal of Human Performance in Extreme Environments Volume 11 ; 11 >
+    au < finished ; crawling ; 2013 ; Journal of Human Performance in Extreme Environments Volume 11 ; 11 >
     au < finished ; crawling ; 2014 ; Journal of Human Performance in Extreme Environments Volume 12 ; 12 >
     au < expected ; exists ; 2015 ; Journal of Human Performance in Extreme Environments Volume 13 ; 13 >
 
@@ -144,7 +144,7 @@
     au < manifest ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 >
     au < finished ; crawling ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 >
-    au < finished ; manifest ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 >
+    au < finished ; crawling ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 >
     au < crawling ; exists ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 >
     
   }
@@ -166,8 +166,8 @@
     au < manifest ; exists ; 2010-2011 ; Journal of Problem Solving Volume 3 ; 3 >
     au < finished ; crawling ; 2012 ; Journal of Problem Solving Research Volume 4 ; 4 >
     au < finished ; crawling ; 2012 ; Journal of Problem Solving Research Volume 5 ; 5 >
-    au < finished ; manifest ; 2013 ; Journal of Problem Solving Research Volume 6 ; 6 >
-    au < finished ; manifest ; 2014 ; Journal of Problem Solving Research Volume 7 ; 7 >
+    au < finished ; crawling ; 2013 ; Journal of Problem Solving Research Volume 6 ; 6 >
+    au < finished ; crawling ; 2014 ; Journal of Problem Solving Research Volume 7 ; 7 >
     au < crawling ; exists ; 2015 ; Journal of Problem Solving Research Volume 8 ; 8 >
 
   }
@@ -190,9 +190,9 @@
     au < manifest ; exists ; 2009 ; Journal of Southeast Asian American Education and Advancement Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Journal of Southeast Asian American Education and Advancement Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Journal of Southeast Asian American Education and Advancement Volume 6 ; 6 >
-    au < finished ; manifest ; 2012 ; Journal of Southeast Asian American Education and Advancement Volume 7 ; 7 >
-    au < finished ; manifest ; 2013 ; Journal of Southeast Asian American Education and Advancement Volume 8 ; 8 >
-    au < finished ; manifest ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 >
+    au < finished ; crawling ; 2012 ; Journal of Southeast Asian American Education and Advancement Volume 7 ; 7 >
+    au < finished ; crawling ; 2013 ; Journal of Southeast Asian American Education and Advancement Volume 8 ; 8 >
+    au < finished ; crawling ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 >
     au < crawling ; exists ; 2015 ; Journal of Southeast Asian American Education and Advancement Volume 10 ; 10 >
 
   }

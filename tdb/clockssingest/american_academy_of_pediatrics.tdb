@@ -57,15 +57,15 @@
       au < crawling ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
       au < crawling ; exists ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
       au < crawling ; exists ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-      au < finished ; manifest ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+      au < finished ; crawling ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
-      au < finished ; manifest ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
-      au < finished ; manifest ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
+      au < finished ; crawling ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
+      au < finished ; crawling ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
       au < finished ; frozen ; 2012 ; AAP Grand Rounds Volume 27 ; 27 >
       au < finished ; frozen ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
-      au < finished ; manifest ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
-      au < finished ; manifest ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
+      au < finished ; crawling ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
+      au < finished ; crawling ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
       au < finished ; crawling ; 2014 ; AAP Grand Rounds Volume 31 ; 31 >
       au < crawling ; exists ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
       au < ready ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
@@ -131,7 +131,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; AAP News Volume 29 ; 29 >
       au < doNotProcess ; doNotProcess ; 2009 ; AAP News Volume 30 ; 30 >
       au < crawling ; exists ; 2010 ; AAP News Volume 31 ; 31 >
-      au < finished ; manifest ; 2011 ; AAP News Volume 32 ; 32 >
+      au < finished ; crawling ; 2011 ; AAP News Volume 32 ; 32 >
       au < finished ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; AAP News Volume 34 ; 34 >
       au < finished ; crawling ; 2014 ; AAP News Volume 35 ; 35 >
@@ -152,8 +152,8 @@
     param[base_url] = http://hosppeds.aappublications.org/
 
       au < crawling ; exists ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
-      au < finished ; manifest ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
-      au < finished ; manifest ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
+      au < finished ; crawling ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
+      au < finished ; crawling ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
       au < ready ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
 
@@ -192,7 +192,7 @@
       au < manifest ; exists ; 2005 ; NeoReviews Volume 6 ; 6 >
       au < manifest ; exists ; 2006 ; NeoReviews Volume 7 ; 7 >
       au < manifest ; exists ; 2007 ; NeoReviews Volume 8 ; 8 >
-      au < finished ; manifest ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < finished ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
       au < doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 >
       au < crawling ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
@@ -356,7 +356,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Pediatrics Volume 121 ; 121 >
       au < doNotProcess ; doNotProcess ; 2008 ; Pediatrics Volume 122 ; 122 >
       au < doNotProcess ; doNotProcess ; 2009 ; Pediatrics Volume 123 ; 123 >
-      au < finished ; manifest ; 2009 ; Pediatrics Volume 124 ; 124 >
+      au < finished ; crawling ; 2009 ; Pediatrics Volume 124 ; 124 >
       au < doNotProcess ; doNotProcess ; 2010 ; Pediatrics Volume 125 ; 125 >
       au < doNotProcess ; doNotProcess ; 2010 ; Pediatrics Volume 126 ; 126 >
       au < crawling ; crawling ; 2011 ; Pediatrics Volume 127 ; 127 >

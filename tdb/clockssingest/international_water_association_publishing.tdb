@@ -110,7 +110,7 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Water and Health Volume 8 ; 008 >
     au < doNotProcess ; exists ; 2011 ; Journal of Water and Health Volume 9 ; 009 >
     au < doNotProcess ; exists ; 2012 ; Journal of Water and Health Volume 10 ; 010 >
-    au < finished ; manifest ; 2013 ; Journal of Water and Health Volume 11 ; 011 >
+    au < finished ; crawling ; 2013 ; Journal of Water and Health Volume 11 ; 011 >
     au < down ; exists ; 2014 ; Journal of Water and Health Volume 12 ; 012 >
     au < doNotProcess ; exists ; 2015 ; Journal of Water and Health Volume 13 ; 013 >
 
@@ -207,7 +207,7 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Hydroinformatics Volume 12 ; 012 >
     au < doNotProcess ; exists ; 2011 ; Journal of Hydroinformatics Volume 13 ; 013 >
     au < doNotProcess ; exists ; 2012 ; Journal of Hydroinformatics Volume 14 ; 014 >
-    au < finished ; manifest ; 2013 ; Journal of Hydroinformatics Volume 15 ; 015 >
+    au < finished ; crawling ; 2013 ; Journal of Hydroinformatics Volume 15 ; 015 >
     au < down ; exists ; 2014 ; Journal of Hydroinformatics Volume 16 ; 016 >
     au < doNotProcess ; exists ; 2015 ; Journal of Hydroinformatics Volume 17 ; 017 >
 
@@ -230,7 +230,7 @@
     au < doNotProcess ; exists ; 2010 ; Water Practice and Technology Volume 5 ; 005 >
     au < doNotProcess ; exists ; 2011 ; Water Practice and Technology Volume 6 ; 006 >
     au < doNotProcess ; exists ; 2012 ; Water Practice and Technology Volume 7 ; 007 >
-    au < finished ; manifest ; 2013 ; Water Practice and Technology Volume 8 ; 008 >
+    au < finished ; crawling ; 2013 ; Water Practice and Technology Volume 8 ; 008 >
     au < down ; exists ; 2014 ; Water Practice and Technology Volume 9 ; 009 >
     au < doNotProcess ; exists ; 2015 ; Water Practice and Technology Volume 10 ; 010 >
 
@@ -349,8 +349,8 @@
     au < superseded ; exists ; 2013 ; Water Science and Technology Volume 68 [superseded] ; 06801 >
     au < superseded ; exists ; 2014 ; Water Science and Technology Volume 69 [superseded] ; 06901 >
     au < superseded ; exists ; 2014 ; Water Science and Technology Volume 70 [superseded] ; 07001 >
-    au < finished ; manifest ; 2013 ; Water Science and Technology Volume 67 ; 067 >
-    au < finished ; manifest ; 2013 ; Water Science and Technology Volume 68 ; 068 >
+    au < finished ; crawling ; 2013 ; Water Science and Technology Volume 67 ; 067 >
+    au < finished ; crawling ; 2013 ; Water Science and Technology Volume 68 ; 068 >
     au < down ; exists ; 2014 ; Water Science and Technology Volume 69 ; 069 >
     au < down ; exists ; 2014 ; Water Science and Technology Volume 70 ; 070 >
     au < doNotProcess ; exists ; 2015 ; Water Science and Technology Volume 71 ; 071 >
@@ -387,7 +387,7 @@
     au < doNotProcess ; exists ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 012 >
     au < superseded ; exists ; 2013 ; Water Science and Technology: Water Supply Volume 13 [superseded] ; 01301 >
     au < superseded ; exists ; 2014 ; Water Science and Technology: Water Supply Volume 14 [superseded] ; 01401 >
-    au < finished ; manifest ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 013 >
+    au < finished ; crawling ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 013 >
     au < down ; exists ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 014 >
     au < doNotProcess ; exists ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 015 >
 
