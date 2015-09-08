@@ -84,6 +84,9 @@ public class SubscriptionStarter extends LockssRunnable {
   // The indication of whether the Total Subscription feature is turned on.
   private boolean isTotalSubscriptionOn = false;
 
+  // The size of the batch used to configure archival units.
+  private int configureAuBatchSize;
+
   // Limiter for the rate at which archival units are configured.
   private RateLimiter configureAuRateLimiter;
 
@@ -122,6 +125,9 @@ public class SubscriptionStarter extends LockssRunnable {
    * 
    * @param subscriptionManager
    *          A SubscriptionManager with the subscription manager.
+   * @param configureAuBatchSize
+   *          An int with the size of the batch used to configure archival
+   *          units.
    * @param configureAuRateLimiter
    *          A RateLimiter for the rate at which archival units are configured.
    * @param tdbAuIterator
@@ -129,10 +135,12 @@ public class SubscriptionStarter extends LockssRunnable {
    *          depending on applicable subscriptions.
    */
   public SubscriptionStarter(SubscriptionManager subscriptionManager,
-      RateLimiter configureAuRateLimiter, Iterator<TdbAu> tdbAuIterator) {
+      int configureAuBatchSize, RateLimiter configureAuRateLimiter,
+      Iterator<TdbAu> tdbAuIterator) {
     super("SubscriptionStarter");
 
     this.subscriptionManager = subscriptionManager;
+    this.configureAuBatchSize = configureAuBatchSize;
     this.configureAuRateLimiter = configureAuRateLimiter;
 
     tdbAuIterators = new LinkedList<Iterator<TdbAu>>();
@@ -288,7 +296,13 @@ public class SubscriptionStarter extends LockssRunnable {
       int configuredAuCount =
 	  prepareBatch(tdbAuIterator, conn, isFirstRun, config);
 
-      // Configure the batch of archival units.
+      // Check whether no archival units were batched to be configured.
+      if (configuredAuCount == 0) {
+	// Yes: Continue with the next TdbAu iterator.
+	continue;
+      }
+
+      // No: Configure the batch of archival units.
       try {
 	subscriptionManager.configureAuBatch(config);
       } catch (IOException ioe) {
@@ -298,6 +312,12 @@ public class SubscriptionStarter extends LockssRunnable {
 
       // Reset the configuration for the next batch.
       config = ConfigManager.newConfiguration();
+
+      long startDelayTime = 0;
+
+      if (log.isDebug3()) {
+	startDelayTime = new Date().getTime();
+      }
 
       // Wait until the next batch can be started in order to keep the
       // appropriate configuration rate.
@@ -311,6 +331,8 @@ public class SubscriptionStarter extends LockssRunnable {
 
       if (log.isDebug3()) {
 	long currentTime = new Date().getTime();
+	log.debug3(DEBUG_HEADER + "configuredAuCountDelaySeconds = "
+	    + (currentTime - startDelayTime) / 1000.00);
 	log.debug3(DEBUG_HEADER + "configuredAuCountRate = "
 	    + (configuredAuCount * 60000.0D)
 	    / (currentTime - configuredAuCountStartTime));
@@ -415,14 +437,18 @@ public class SubscriptionStarter extends LockssRunnable {
 	    // Yes: Count it.
 	    configuredAuCount++;
 
-	    // Check whether the rate limit has been reached.
-	    if (!configureAuRateLimiter.isEventOk()) {
+	    // Record the addition of this archival unit to the batch.
+	    configureAuRateLimiter.event();
+
+	    // Check whether the batch size limit has been reached.
+	    if (configuredAuCount >= configureAuBatchSize) {
 	      // Yes: The batch is complete and ready to be configured.
+	      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		  + "configuredAuCount (" + configuredAuCount
+		  + ") matches configureAuBatchSize (" + configureAuBatchSize
+		  + ")");
 	      break;
 	    }
-
-	    // No: Record the addition of this archival unit to the batch.
-	    configureAuRateLimiter.event();
 	  }
 	} catch (DbException dbe) {
 	  log.error("Error handling archival unit " + tdbAu, dbe);
@@ -589,6 +615,16 @@ public class SubscriptionStarter extends LockssRunnable {
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "return = " + !exiting);
       return !exiting;
     }
+  }
+
+  /**
+   * Saves the archival unit configuration batch size.
+   * 
+   * @param configureAuBatchSize
+   *          An int with the archival unit configuration batch size.
+   */
+  void setConfigureAuBatchSize(int configureAuBatchSize) {
+    this.configureAuBatchSize = configureAuBatchSize;
   }
 
   /**

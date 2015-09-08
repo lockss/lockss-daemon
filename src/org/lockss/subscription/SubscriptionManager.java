@@ -129,18 +129,33 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   public static final int DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD = 0;
 
   /**
-   * Maximum rate at which we will configure archival unit batches.
+   * Batch size to configure archival units.
+   * <p />
+   * Defaults to 1000.
+   */
+  public static final String PARAM_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE =
+      PREFIX + "auConfigurationBatchSize";
+
+  /**
+   * Default value of the configuration parameter with the batch size used to
+   * configure archival units.
+   */
+  public static final int DEFAULT_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE =
+      1000;
+
+  /**
+   * Maximum rate at which we will configure archival units.
    * <p />
    * Defaults to 1000/1m.
    */
-  public static final String PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE =
-      PREFIX + "batchConfigurationRate";
+  public static final String PARAM_SUBSCRIPTION_AU_CONFIGURATION_RATE =
+      PREFIX + "auConfigurationRate";
 
   /**
-   * Default value of the maximum rate at which we will configure archival unit
-   * batches configuration parameter.
+   * Default value of the configuration parameter with the maximum rate at which
+   * we will configure archival units.
    */
-  public static final String DEFAULT_SUBSCRIPTION_BATCH_CONFIGURATION_RATE =
+  public static final String DEFAULT_SUBSCRIPTION_AU_CONFIGURATION_RATE =
       "1000/1m";
 
   /**
@@ -201,6 +216,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   // The handler for Archival Unit events.
   private AuEventHandler auEventHandler;
+
+  // The size of the batch used to configure archival units.
+  private int configureAuBatchSize = 1000;
 
   // Pacer used to limit the rate at which archival units are configured.
   private RateLimiter configureAuRateLimiter;
@@ -418,10 +436,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     // Force a re-calculation of the relative weights of the repositories.
     repositories = null;
 
-    if (changedKeys.contains(PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE)) {
+    if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE)) {
+      configureAuBatchSize =
+	  newConfig.getInt(PARAM_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE,
+	  DEFAULT_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "configureAuBatchSize = "
+		+ configureAuBatchSize);
+    }
+
+    if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_RATE)) {
       configureAuRateLimiter = RateLimiter.getConfiguredRateLimiter(newConfig,
-	  configureAuRateLimiter, PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE,
-	  DEFAULT_SUBSCRIPTION_BATCH_CONFIGURATION_RATE);
+	  configureAuRateLimiter, PARAM_SUBSCRIPTION_AU_CONFIGURATION_RATE,
+	  DEFAULT_SUBSCRIPTION_AU_CONFIGURATION_RATE);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "configureAuRateLimiter = "
 		+ configureAuRateLimiter);
     }
@@ -446,7 +472,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (!isReady() || starter == null || starterThread == null
 	|| !starterThread.isAlive()) {
       // Yes: Create it and start it.
-      starter = new SubscriptionStarter(this, configureAuRateLimiter,
+      starter = new SubscriptionStarter(this, configureAuBatchSize,
+	  configureAuRateLimiter,
 	  changedKeys.getTdbDifferences().newTdbAuIterator());
 
       starterThread = new Thread(starter);
@@ -455,7 +482,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	log.debug3(DEBUG_HEADER + "Created new SubscriptionStarter.");
     } else {
       // No: Reuse the existing thread.
-      if (changedKeys.contains(PARAM_SUBSCRIPTION_BATCH_CONFIGURATION_RATE)) {
+      if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE))
+      {
+	starter.setConfigureAuBatchSize(configureAuBatchSize);
+      }
+
+      if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_RATE)) {
 	starter.setConfigureAuRateLimiter(configureAuRateLimiter);
       }
 
@@ -471,8 +503,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  log.debug3(DEBUG_HEADER + "Reused existing SubscriptionStarter.");
       } else {
 	// No: Create a new thread and start it.
-	starter = new SubscriptionStarter(this, configureAuRateLimiter,
-	changedKeys.getTdbDifferences().newTdbAuIterator());
+	starter = new SubscriptionStarter(this, configureAuBatchSize,
+	    configureAuRateLimiter,
+	    changedKeys.getTdbDifferences().newTdbAuIterator());
 
 	starterThread = new Thread(starter);
 	starterThread.start();
@@ -808,7 +841,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   BatchAuStatus configureAuBatch(Configuration config)
       throws IOException {
     final String DEBUG_HEADER = "configureAuBatch(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "config = " + config);
+    //if (log.isDebug2()) log.debug2(DEBUG_HEADER + "config = " + config);
     BatchAuStatus status = null;
 
     // Check whether there are archival units to configure.
@@ -856,7 +889,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "tdbAu = " + tdbAu);
       log.debug2(DEBUG_HEADER + "auId = " + auId);
-      log.debug2(DEBUG_HEADER + "config = " + config);
+      //log.debug2(DEBUG_HEADER + "config = " + config);
     }
 
     Plugin plugin = tdbAu.getPlugin(pluginManager);
@@ -878,7 +911,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     // Add the archival unit configuration to the passed configuration.
     config.addAsSubTree(auConfig, prefix);
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "config = " + config);
+    //if (log.isDebug2()) log.debug2(DEBUG_HEADER + "config = " + config);
     return config;
   }
 
@@ -2388,7 +2421,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	// Yes: Add the archival unit to the configuration of those to be
 	// configured.
 	config = addAuConfiguration(tdbAu, auId, config);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
+	//if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
       } else {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu
 	    + "' is already configured.");
@@ -3593,8 +3626,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       if (starter == null || starterThread == null
 	  || !starterThread.isAlive()) {
 	// Yes: Create it and start it.
-	starter = new SubscriptionStarter(this, configureAuRateLimiter,
-	    tdbAuIterator);
+	starter = new SubscriptionStarter(this, configureAuBatchSize,
+	    configureAuRateLimiter, tdbAuIterator);
 
 	starterThread = new Thread(starter);
 	starterThread.start();
@@ -3612,8 +3645,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    log.debug3(DEBUG_HEADER + "Reused existing SubscriptionStarter.");
 	} else {
 	  // No: Create a new thread and start it.
-	  starter = new SubscriptionStarter(this, configureAuRateLimiter,
-	      tdbAuIterator);
+	  starter = new SubscriptionStarter(this, configureAuBatchSize,
+	      configureAuRateLimiter, tdbAuIterator);
 
 	  starterThread = new Thread(starter);
 	  starterThread.start();
