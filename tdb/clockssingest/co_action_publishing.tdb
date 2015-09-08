@@ -54,9 +54,9 @@
       param[journal_id] = aie
       comment[0] = discontinued in 2013
 
-      au < frozen ; exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-      au < frozen ; exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
-      au < frozen ; exists ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
+      au < finished ; manifest ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+      au < finished ; manifest ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+      au < finished ; manifest ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
     
     }
     
@@ -129,9 +129,9 @@
     param[journal_id] = edui
     comment[notReady] = Unknown Host
 
-    au < frozen ; exists ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
-    au < frozen ; exists ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
-    au < frozen ; exists ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
+    au < finished ; manifest ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
+    au < finished ; manifest ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
+    au < finished ; manifest ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
     au < notReady ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
     au < finished ; crawling ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Education Inquiry Volume 6 ; 6 ; 2015 >
@@ -155,7 +155,7 @@
     au < finished ; frozen ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
-    au < frozen ; exists ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
+    au < finished ; manifest ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 >
     au < manifest ; exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 ; 2015 >
 
@@ -367,7 +367,7 @@
     au < finished ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
-    au < frozen ; exists ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
+    au < finished ; manifest ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 >
   }
@@ -402,7 +402,7 @@
     param[base_url] = http://www.jecme.eu/
     param[journal_id] = jecme
 
-    au < frozen ; exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
+    au < finished ; manifest ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
@@ -420,7 +420,7 @@
     param[base_url] = http://www.jmahp.net/
     param[journal_id] = jmahp
 
-    au < frozen ; exists ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
+    au < finished ; manifest ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; 2015 >
 
@@ -441,7 +441,7 @@
     au < finished ; frozen ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
     au < finished ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
-    au < frozen ; exists ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 >
+    au < finished ; manifest ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 >
 
@@ -548,7 +548,7 @@
       au < finished ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
       au < finished ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
       au < finished ; frozen ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
-      au < frozen ; exists ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 >
+      au < finished ; manifest ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 >
       au < deepCrawl ; exists ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 >
       au < manifest ; exists ; 2015 ; Medical Education Online Volume 20 ; 20 ; 2015 >
       
@@ -568,18 +568,18 @@
     param[journal_id] = mehd
     comment[issn] = volumes 1-21
 
-    au < crawling ; exists ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 >
+    au < finished ; manifest ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 >
     au < crawling ; exists ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 >
     au < crawling ; exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 >
-    au < frozen ; exists ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 >
+    au < finished ; manifest ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 >
     au < crawling ; exists ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
-    au < frozen ; exists ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
+    au < finished ; manifest ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
     au < crawling ; exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
-    au < frozen ; exists ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
-    au < crawling ; exists ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
-    au < crawling ; exists ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
-    au < frozen ; exists ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
-    au < frozen ; exists ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
+    au < finished ; manifest ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
+    au < finished ; manifest ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
+    au < finished ; manifest ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
+    au < finished ; manifest ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
+    au < finished ; manifest ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
     au < crawling ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
     au < crawling ; exists ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
     au < finished ; frozen ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
@@ -591,7 +591,7 @@
     au < finished ; frozen ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
     au < finished ; frozen ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
     au < finished ; crawling ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
-    au < frozen ; exists ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
+    au < finished ; manifest ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
     au < manifest ; exists ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; 2015 >
   }
@@ -610,7 +610,7 @@
     au < finished ; frozen ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
     au < finished ; frozen ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
-    au < crawling ; exists ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
+    au < finished ; manifest ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
     au < deepCrawl ; exists ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
   }
@@ -650,18 +650,18 @@
     au < frozen ; exists ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
     au < crawling ; exists ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 >
     au < crawling ; exists ; 1985 ; Polar Research Volume 3 ; 3 ; 1985 >
-    au < frozen ; exists ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
+    au < finished ; manifest ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
     au < crawling ; exists ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
     au < crawling ; exists ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
     au < crawling ; exists ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
-    au < crawling ; exists ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
+    au < finished ; manifest ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
     au < crawling ; exists ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 >
-    au < frozen ; exists ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
-    au < crawling ; exists ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 >
+    au < finished ; manifest ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
+    au < finished ; manifest ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 >
     au < crawling ; exists ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 >
     au < crawling ; exists ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 >
     au < crawling ; exists ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 >
-    au < frozen ; exists ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
+    au < finished ; manifest ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
     au < crawling ; exists ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
     au < crawling ; exists ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 >
     au < crawling ; exists ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
@@ -696,18 +696,18 @@
     param[journal_id] = rlt
 
     au < crawling ; exists ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; 1993>
-    au < frozen ; exists ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994>
-    au < frozen ; exists ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995>
-    au < frozen ; exists ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ; 1996>
-    au < frozen ; exists ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ; 1997>
-    au < frozen ; exists ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998>
+    au < finished ; manifest ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994>
+    au < finished ; manifest ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995>
+    au < finished ; manifest ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ; 1996>
+    au < finished ; manifest ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ; 1997>
+    au < finished ; manifest ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998>
     au < crawling ; exists ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ; 1999>
     au < crawling ; exists ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ; 2000>
     au < crawling ; exists ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ; 2001>
-    au < crawling ; exists ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 >
-    au < frozen ; exists ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
+    au < finished ; manifest ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 >
+    au < finished ; manifest ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
     au < crawling ; exists ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; 2004 >
-    au < frozen ; exists ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
+    au < finished ; manifest ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
     au < finished ; frozen ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
     au < finished ; crawling ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 >
     au < finished ; crawling ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
@@ -910,7 +910,7 @@
     au < finished ; frozen ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 >
     au < finished ; frozen ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
     au < crawling ; exists ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; 2013 >
-    au < frozen ; exists ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; 2014 >
+    au < finished ; manifest ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; 2014 >
     au < manifest ; exists ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; 2015 >
 
   }
@@ -930,7 +930,7 @@
     au < finished ; frozen ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
     au < finished ; frozen ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
-    au < crawling ; exists ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
+    au < finished ; manifest ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Vulnerable Groups & Inclusion Volume 6 ; 6 ; 2015 >
   }
 

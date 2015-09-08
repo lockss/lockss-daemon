@@ -26,7 +26,7 @@
       au < manifest ; exists ; 2010 ; Europe's Journal of Psychology Volume 6 ; 6 ; 2010 >
       au < manifest ; exists ; 2011 ; Europe's Journal of Psychology Volume 7 ; 7 ; 2011 >
       au < manifest ; exists ; 2012 ; Europe's Journal of Psychology Volume 8 ; 8 ; 2012 >
-      au < frozen ; exists ; 2013 ; Europe's Journal of Psychology Volume 9 ; 9 ; 2013 >
+      au < finished ; manifest ; 2013 ; Europe's Journal of Psychology Volume 9 ; 9 ; 2013 >
       au < finished ; crawling ; 2014 ; Europe's Journal of Psychology Volume 10 ; 10 ; 2014 >
       au < manifest ; exists ; 2015 ; Europe's Journal of Psychology Volume 11 ; 11 ; 2015 >
       
@@ -64,7 +64,7 @@
       au < manifest ; exists ; 2010 ; Interpersona: An International Journal on Personal Relationships Volume 4 ; 4 ; 2010 >
       au < manifest ; exists ; 2011 ; Interpersona: An International Journal on Personal Relationships Volume 5 ; 5 ; 2011 >
       au < manifest ; exists ; 2012 ; Interpersona: An International Journal on Personal Relationships Volume 6 ; 6 ; 2012 >
-      au < frozen ; exists ; 2013 ; Interpersona: An International Journal on Personal Relationships Volume 7 ; 7 ; 2013 >
+      au < finished ; manifest ; 2013 ; Interpersona: An International Journal on Personal Relationships Volume 7 ; 7 ; 2013 >
       au < finished ; crawling ; 2014 ; Interpersona: An International Journal on Personal Relationships Volume 8 ; 8 ; 2014 >
       au < manifest ; exists ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 >
 
@@ -111,7 +111,7 @@
       param[journal_id] = pch
   
       au < manifest ; exists ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 >
-      au < frozen ; exists ; 2013 ; Psychology, Community & Health Volume 2 ; 2 ; 2013 >
+      au < finished ; manifest ; 2013 ; Psychology, Community & Health Volume 2 ; 2 ; 2013 >
       au < finished ; crawling ; 2014 ; Psychology, Community & Health Volume 3 ; 3 ; 2014 >
       au < manifest ; exists ; 2015 ; Psychology, Community & Health Volume 4 ; 4 ; 2015 >
 

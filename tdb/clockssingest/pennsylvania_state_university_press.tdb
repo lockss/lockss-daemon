@@ -40,8 +40,8 @@
 
       au < crawling ; exists ; 2009-2010 ; The Chaucer Review Volume 44 ; 44 >
       au < manifest ; exists ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 >
-      au < crawling ; exists ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
-      au < frozen ; exists ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
+      au < finished ; manifest ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
+      au < finished ; manifest ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
       au < finished ; crawling ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 >
       au < finished ; crawling ; 2014-2015 ; The Chaucer Review Volume 49 ; 49 >
       au < manifest ; exists ; 2015-2016 ; The Chaucer Review Volume 50 ; 50 >
@@ -63,7 +63,7 @@
 
       au < manifest ; exists ; 2010 ; Comparative Literature Studies Volume 47 ; 47 >
       au < manifest ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 48 >
-      au < frozen ; exists ; 2012 ; Comparative Literature Studies Volume 49 ; 49 >
+      au < finished ; manifest ; 2012 ; Comparative Literature Studies Volume 49 ; 49 >
       au < notReady ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 50 >
       au < notReady ; exists ; 2014 ; Comparative Literature Studies Volume 51 ; 51 >
       au < manifest ; exists ; 2015 ; Comparative Literature Studies Volume 52 ; 52 >
@@ -99,7 +99,7 @@
 
       au < manifest ; exists ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 11 >
       au < manifest ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 12 >
-      au < frozen ; exists ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 13 >
+      au < finished ; manifest ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 15 >
       au < manifest ; exists ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 16 >
@@ -118,7 +118,7 @@
 
       au < doNotProcess ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 32 >
       au < crawling ; exists ; 2012 ; The Eugene O'Neill Review Volume 33 ; 33 >
-      au < frozen ; exists ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 >
+      au < finished ; manifest ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 >
       au < crawling ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 ; 35 >
       au < manifest ; exists ; 2015 ; The Eugene O'Neill Review Volume 36 ; 36 >
       
@@ -180,8 +180,8 @@
       au < manifest ; exists ; 2009-2010 ; Interdisciplinary Literary Studies Volume 11 ; 11 >
       au < manifest ; exists ; 2010-2011 ; Interdisciplinary Literary Studies Volume 12 ; 12 >
       au < manifest ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 13 ; 13 >
-      au < frozen ; exists ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
-      au < frozen ; exists ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >
+      au < finished ; manifest ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
+      au < finished ; manifest ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >
       au < deepCrawl ; exists ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 16 >
       au < manifest ; exists ; 2015 ; Interdisciplinary Literary Studies Volume 17 ; 17 >
       
@@ -200,7 +200,7 @@
 
       au < crawling ; exists ; 2013 ; Journal of Africana Religions Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Journal of Africana Religions Volume 2 ; 2 >
-      au < crawling ; exists ; 2014 ; Journal of Africana Religions Volume 3 ; 3 >
+      au < finished ; manifest ; 2014 ; Journal of Africana Religions Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; Journal of Africana Religions Volume 4 ; 4 >
       
   }
@@ -254,7 +254,7 @@
 
       param[journal_id] = jeasmedarcherstu
 
-      au < crawling ; exists ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 >
+      au < finished ; manifest ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2 >
       au < manifest ; exists ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 3 >
 
@@ -273,8 +273,8 @@
 
       au < manifest ; exists ; 2010 ; The Journal of General Education Volume 59 ; 59 >
       au < manifest ; exists ; 2011 ; The Journal of General Education Volume 60 ; 60 >
-      au < crawling ; exists ; 2012 ; The Journal of General Education Volume 61 ; 61 >
-      au < crawling ; exists ; 2013 ; The Journal of General Education Volume 62 ; 62 >
+      au < finished ; manifest ; 2012 ; The Journal of General Education Volume 61 ; 61 >
+      au < finished ; manifest ; 2013 ; The Journal of General Education Volume 62 ; 62 >
       au < deepCrawl ; exists ; 2014 ; The Journal of General Education Volume 63 ; 63 >
       au < manifest ; exists ; 2015 ; The Journal of General Education Volume 64 ; 64 >
       
@@ -294,7 +294,7 @@
 
       au < manifest ; exists ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 >
       au < manifest ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 >
-      au < frozen ; exists ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 >
+      au < finished ; manifest ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 >
       au < crawling ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 39 >
       au < finished ; crawling ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 40 >
       au < manifest ; exists ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 41 >
@@ -314,7 +314,7 @@
 
       au < manifest ; exists ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
-      au < frozen ; exists ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
+      au < finished ; manifest ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
       au < finished ; crawling ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 >
       au < crawling ; exists ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 >
       au < expected ; exists ; 2015-2016 ; Journal of Modern Periodical Studies Volume 6 ; 6 >
@@ -338,7 +338,7 @@
       au < manifest ; exists ; 2011 ; Journal of Moravian History Volume 10 ; 10 >
       au < crawling ; exists ; 2011 ; Journal of Moravian History Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 12 >
-      au < frozen ; exists ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
+      au < finished ; manifest ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
       au < notReady ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 14 >
       au < manifest ; exists ; 2015 ; Journal of Moravian History Volume 15 ; 15 >
       
@@ -359,7 +359,7 @@
       au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41 ; 41 >
       au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 42 ; 42 >
       au < crawling ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 43 >
-      au < frozen ; exists ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 >
+      au < finished ; manifest ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 >
       au < deepCrawl ; exists ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 45 >
       au < manifest ; exists ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 46 >
       
@@ -378,8 +378,8 @@
 
       au < manifest ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
       au < manifest ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
-      au < frozen ; exists ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
-      au < frozen ; exists ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 >
+      au < finished ; manifest ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
+      au < finished ; manifest ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 >
       au < crawling ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 28 >
       au < manifest ; exists ; 2015 ; The Journal of Speculative Philosophy Volume 29 ; 29 >
       
@@ -461,7 +461,7 @@
       au < doNotProcess ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 >
       au < doNotProcess ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 >
       au < notReady ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 47 >
-      au < frozen ; exists ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
+      au < finished ; manifest ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
       au < deepCrawl ; exists ; 2014 ; Pacific Coast Philology Volume 49 ; 49 >
       au < manifest ; exists ; 2015 ; Pacific Coast Philology Volume 50 ; 50 >
       
@@ -478,9 +478,9 @@
       param[journal_id] = pennhistory
 
       au < crawling ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
-      au < crawling ; exists ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+      au < finished ; manifest ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
       au < crawling ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
-      au < frozen ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 >
+      au < finished ; manifest ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 >
       au < deepCrawl ; exists ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 81 >
       au < manifest ; exists ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 ; 82 >
       
@@ -499,8 +499,8 @@
 
       au < manifest ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
       au < manifest ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
-      au < frozen ; exists ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
-      au < frozen ; exists ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 >
+      au < finished ; manifest ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
+      au < finished ; manifest ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 >
       au < deepCrawl ; exists ; 2014 ; Philosophy and Rhetoric Volume 47 ; 47 >
       au < manifest ; exists ; 2015 ; Philosophy and Rhetoric Volume 48 ; 48 >
       
@@ -540,8 +540,8 @@
       au < doNotProcess ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 3 >
       au < notReady ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 4 >
-      au < frozen ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 >
-      au < frozen ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 6 >
+      au < finished ; manifest ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 >
+      au < finished ; manifest ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 6 >
       au < manifest ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 7 >
 
   }
@@ -580,7 +580,7 @@
 
       au < manifest ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 93 >
       au < manifest ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 94 >
-      au < frozen ; exists ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 >
+      au < finished ; manifest ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 >
       au < crawling ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 96 >
       au < crawling ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 97 >
       au < manifest ; exists ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 ; 98 >

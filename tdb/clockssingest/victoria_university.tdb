@@ -22,8 +22,8 @@
       comment[name_change] = After Volume 2, issues changed name/issn to Victoria University Law and Justice Journal
       comment[continued_by] = 2202-7912
     
-      au < frozen ; exists ; 2011 ; 2011 ; DICTUM - Victoria Law School Journal Volume 1 ; 1 >
-      au < frozen ; exists ; 2012 ; 2012 ; DICTUM - Victoria Law School Journal Volume 2 ; 2 >
+      au < finished ; manifest ; 2011 ; 2011 ; DICTUM - Victoria Law School Journal Volume 1 ; 1 >
+      au < finished ; manifest ; 2012 ; 2012 ; DICTUM - Victoria Law School Journal Volume 2 ; 2 >
 
   }
 
@@ -41,8 +41,8 @@
       comment[name_change1] = Volumes 1-2 are available under issn 1838-6849
       comment[continues] = 1838-6849
       
-      au < frozen ; exists ; 2013 ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 >
-      au < frozen ; exists ; 2014 ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 >
+      au < finished ; manifest ; 2013 ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 >
+      au < finished ; manifest ; 2014 ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2015 ; 2015 ; Victoria University Law and Justice Journal Volume 5 ; 5 >
 
   }
