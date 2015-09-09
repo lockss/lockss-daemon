@@ -49,8 +49,7 @@ public class TestHtmlTags extends LockssTestCase {
     MockHtmlTransform xform =
         new MockHtmlTransform(ListUtil.list(new NodeList()));
     InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform)
-        .registerTag(new HtmlTags.Header());
+        new HtmlFilterInputStream(new StringInputStream(in), xform);
     assertInputStreamMatchesString("", ins);
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
@@ -65,8 +64,7 @@ public class TestHtmlTags extends LockssTestCase {
     MockHtmlTransform xform =
         new MockHtmlTransform(ListUtil.list(new NodeList()));
     InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform)
-        .registerTag(new HtmlTags.Footer());
+        new HtmlFilterInputStream(new StringInputStream(in), xform);
     assertInputStreamMatchesString("", ins);
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
@@ -81,8 +79,7 @@ public class TestHtmlTags extends LockssTestCase {
     MockHtmlTransform xform =
         new MockHtmlTransform(ListUtil.list(new NodeList()));
     InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform)
-        .registerTag(new HtmlTags.Section());
+        new HtmlFilterInputStream(new StringInputStream(in), xform);
     assertInputStreamMatchesString("", ins);
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
@@ -97,8 +94,7 @@ public class TestHtmlTags extends LockssTestCase {
     MockHtmlTransform xform =
         new MockHtmlTransform(ListUtil.list(new NodeList()));
     InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform)
-        .registerTag(new HtmlTags.Aside());
+        new HtmlFilterInputStream(new StringInputStream(in), xform);
     assertInputStreamMatchesString("", ins);
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
@@ -298,6 +294,21 @@ public class TestHtmlTags extends LockssTestCase {
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
     assertTrue(node instanceof HtmlTags.Center);
+    assertEquals(1, nl.size());
+  }
+
+  // Ensure <article>...</article> gets parsed as an HtmlTags.Article
+  // composite tag, not as the default sequence of TagNodes
+  public void testArticleTag() throws IOException {
+    String in = "<article><i>iii</i></article>";
+    MockHtmlTransform xform =
+      new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+      new HtmlFilterInputStream(new StringInputStream(in), xform);
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Article);
     assertEquals(1, nl.size());
   }
 

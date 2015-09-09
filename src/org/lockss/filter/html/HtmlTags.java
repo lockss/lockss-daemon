@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -463,5 +463,27 @@ public class HtmlTags {
 
   }
 
+  /**
+   * @since 1.69 
+   */
+  /**
+   * An ARTICLE tag.  Registered with PrototypicalNodeFactory to cause article
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @see HtmlFilterInputStream#makeParser()
+   */
+  public static class Article extends CompositeTag {
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"ARTICLE"};
+
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+  }
 
 }

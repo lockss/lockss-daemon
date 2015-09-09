@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -383,6 +383,7 @@ public class HtmlFilterInputStream
     factory.registerTag(new HtmlTags.Summary()); // added in 1.66
     factory.registerTag(new HtmlTags.Time()); // added in 1.66
     factory.registerTag(new HtmlTags.Center()); // added in 1.67.4
+    factory.registerTag(new HtmlTags.Article()); // added in 1.69
     return factory;
   }
 
