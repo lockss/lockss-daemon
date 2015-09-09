@@ -36,7 +36,6 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -75,16 +74,7 @@ public class SageBaywoodTriggeredXmlMetadataExtractorFactory extends SourceXmlMe
 
       log.debug3("in SBTest preEmitCheck");
       
-      ArchivalUnit B_au = cu.getArchivalUnit();
-      String url_string = cu.getUrl();
-      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
-      CachedUrl fileCu = B_au.makeCachedUrl(pdfName);
-      log.debug3("Check for existence of " + pdfName);
-      if(fileCu != null && (fileCu.hasContent())) {
-        // Set a cooked value for an access file. Otherwise it would get set to xml file
-        thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
-      }
-      log.debug3("No file exists associated with this record");
+      // The access url was set in the iterator
       return true; // we're going to emit anyway...abstract only is okay
     }
 
