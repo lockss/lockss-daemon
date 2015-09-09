@@ -2538,13 +2538,13 @@
     param[base_url] = http://btci.stanford.clockss.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < finished ; frozen ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
+    au < finished ; finished ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
     au < finished ; frozen ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
-    au < finished ; frozen ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
+    au < finished ; finished ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
     au < finished ; frozen ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
-    au < finished ; frozen ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
-    au < finished ; frozen ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
-    au < finished ; frozen ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
+    au < finished ; finished ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+    au < finished ; finished ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
+    au < finished ; finished ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
     au < finished ; frozen ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
 
   }
@@ -10484,7 +10484,7 @@
     au < crawling ; crawling ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Jerusalem Review of Legal Studies Volume 5 ; 5 ; >
-    au < finished ; frozen ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
+    au < finished ; finished ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 8 ; 8 ; >
     au < crawling ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 9 ; 9 ; >
@@ -15064,7 +15064,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
     au < finished ; frozen ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 ; >
     au < finished ; crawling ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 ; >
-    au < finished ; frozen ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 ; >
+    au < finished ; finished ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; The Leo Baeck Institute Yearbook Volume 58 ; 58 ; >
     au < crawling ; exists ; 2014 ; The Leo Baeck Institute Yearbook Volume 59 ; 59 ; >
     au < exists ; exists ; 2015 ; The Leo Baeck Institute Yearbook Volume 60 ; 60 ; >
@@ -16867,7 +16867,7 @@
     au < finished ; frozen ; 2009 ; The Musical Quarterly Volume 92 ; 92 ; >
     au < finished ; crawling ; 2010 ; The Musical Quarterly Volume 93 ; 93 ; >
     au < finished ; crawling ; 2011 ; The Musical Quarterly Volume 94 ; 94 ; >
-    au < finished ; crawling ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
+    au < finished ; finished ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Musical Quarterly Volume 96 ; 96 ; >
     au < finished ; crawling ; 2014 ; The Musical Quarterly Volume 97 ; 97 ; >
     au < expected ; exists ; 2015 ; The Musical Quarterly Volume 98 ; 98 ; >
@@ -17658,7 +17658,7 @@
     au < manifest ; exists ; 2006 ; OAH Magazine of History Volume 20 ; 20 ; >
     au < manifest ; exists ; 2007 ; OAH Magazine of History Volume 21 ; 21 ; >
     au < manifest ; exists ; 2008 ; OAH Magazine of History Volume 22 ; 22 ; >
-    au < finished ; frozen ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
+    au < finished ; finished ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
     au < finished ; frozen ; 2010 ; OAH Magazine of History Volume 24 ; 24 ; >
     au < finished ; frozen ; 2011 ; OAH Magazine of History Volume 25 ; 25 ; >
     au < finished ; finished ; 2012 ; OAH Magazine of History Volume 26 ; 26 ; >
@@ -17888,7 +17888,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
     au < finished ; crawling ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
-    au < finished ; frozen ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
+    au < finished ; finished ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
     au < finished ; frozen ; 2012 ; The Oral History Review Volume 39 ; 39 ; >
     au < finished ; crawling ; 2013 ; The Oral History Review Volume 40 ; 40 ; >
     au < crawling ; exists ; 2014 ; The Oral History Review Volume 41 ; 41 ; >
@@ -18684,7 +18684,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
     au < finished ; crawling ; 2010 ; Philosophia Mathematica Volume 18 ; 18 ; >
     au < finished ; crawling ; 2011 ; Philosophia Mathematica Volume 19 ; 19 ; >
-    au < finished ; frozen ; 2012 ; Philosophia Mathematica Volume 20 ; 20 ; >
+    au < finished ; finished ; 2012 ; Philosophia Mathematica Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Philosophia Mathematica Volume 21 ; 21 ; >
     au < crawling ; exists ; 2014 ; Philosophia Mathematica Volume 22 ; 22 ; >
     au < manifest ; exists ; 2015 ; Philosophia Mathematica Volume 23 ; 23 ; >
@@ -21297,7 +21297,7 @@
     au < finished ; frozen ; 2009 ; Social Forces Volume 88 ; 88 ; >
     au < finished ; crawling ; 2010 ; Social Forces Volume 89 ; 89 ; >
     au < finished ; crawling ; 2011 ; Social Forces Volume 90 ; 90 ; >
-    au < finished ; frozen ; 2012 ; Social Forces Volume 91 ; 91 ; >
+    au < finished ; finished ; 2012 ; Social Forces Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; Social Forces Volume 92 ; 92 ; >
     au < crawling ; exists ; 2014 ; Social Forces Volume 93 ; 93 ; >
     au < manifest ; exists ; 2015 ; Social Forces Volume 94 ; 94 ; >
@@ -21601,7 +21601,7 @@
     au < manifest ; exists ; 2006 ; Social Work Volume 51 ; 51 ; >
     au < manifest ; exists ; 2007 ; Social Work Volume 52 ; 52 ; >
     au < manifest ; exists ; 2008 ; Social Work Volume 53 ; 53 ; >
-    au < finished ; crawling ; 2009 ; Social Work Volume 54 ; 54 ; >
+    au < finished ; finished ; 2009 ; Social Work Volume 54 ; 54 ; >
     au < zapped ; finished ; 2010 ; Social Work Volume 55 ; 55 ; >
     au < finished ; crawling ; 2011 ; Social Work Volume 56 ; 56 ; >
     au < crawling ; crawling ; 2012 ; Social Work Volume 57 ; 57 ; >
@@ -23460,7 +23460,7 @@
       au < manifest ; exists ; 2007 ; The Quarterly Journal of Economics Volume 122 ; 122 ; >
       au < manifest ; exists ; 2008 ; The Quarterly Journal of Economics Volume 123 ; 123 ; >
       au < finished ; frozen ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 ; >
-      au < finished ; frozen ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
+      au < finished ; finished ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
       au < finished ; frozen ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
       au < finished ; frozen ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < crawling ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >

@@ -585,8 +585,8 @@
 
         au < zapped ; finished ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
         au < zapped ; finished ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
-        au < finished ; frozen ; 2001 ; Adult Learning Volume 12 ; 12 ; >
-        au < finished ; frozen ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
+        au < finished ; finished ; 2001 ; Adult Learning Volume 12 ; 12 ; >
+        au < finished ; finished ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
         au < zapped ; finished ; 2003 ; Adult Learning Volume 14 ; 14 ; >
         au < finished ; frozen ; 2004 ; Adult Learning Volume 15 ; 15 ; >
         au < zapped ; finished ; 2005 ; Adult Learning Volume 16 ; 16 ; >
@@ -833,7 +833,7 @@
 
       comment[error] = manifest page had no links for V2. Recrawling should fix. http://ags.sagepub.com/clockss-manifest/vol_2_manifest.dtl
 
-      au < finished ; frozen ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 ; >
+      au < finished ; finished ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 ; >
       au < finished ; crawling ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 ; >
       au < crawling ; exists ; 2014 ; Agrarian South: Journal of Political Economy Volume 3 ; 3 ; >
       au < crawling ; exists ; 2015 ; Agrarian South: Journal of Political Economy Volume 4 ; 4 ; >
@@ -2771,7 +2771,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
       au < zapped ; finished ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; >
       au < finished ; frozen ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; >
-      au < finished ; frozen ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Arts and Humanities in Higher Education Volume 12 ; 12 ; >
       au < finished ; crawling ; 2014 ; Arts and Humanities in Higher Education Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Arts and Humanities in Higher Education Volume 14 ; 14 ; >
@@ -4988,7 +4988,7 @@
       au < manifest ; exists ; 2005 ; Cephalalgia Volume 25 ; 25 ; >
       au < manifest ; exists ; 2006 ; Cephalalgia Volume 26 ; 26 ; >
       au < manifest ; exists ; 2007 ; Cephalalgia Volume 27 ; 27 ; >
-      au < finished ; frozen ; 2008 ; Cephalalgia Volume 28 ; 28 ; >
+      au < finished ; finished ; 2008 ; Cephalalgia Volume 28 ; 28 ; >
       au < zapped ; finished ; 2009 ; Cephalalgia Volume 29 ; 29 ; >
       au < finished ; frozen ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
       au < finished ; frozen ; 2011 ; Cephalalgia Volume 31 ; 31 ; >
@@ -7182,7 +7182,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Cornell Hospitality Quarterly Volume 50 ; 50 ; >
       au < finished ; crawling ; 2010 ; Cornell Hospitality Quarterly Volume 51 ; 51 ; >
       au < finished ; frozen ; 2011 ; Cornell Hospitality Quarterly Volume 52 ; 52 ; >
-      au < finished ; frozen ; 2012 ; Cornell Hospitality Quarterly Volume 53 ; 53 ; >
+      au < finished ; finished ; 2012 ; Cornell Hospitality Quarterly Volume 53 ; 53 ; >
       au < crawling ; exists ; 2013 ; Cornell Hospitality Quarterly Volume 54 ; 54 ; >
       au < finished ; crawling ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; >
       au < crawling ; exists ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; >
@@ -17111,7 +17111,7 @@
         au < manifest ; exists ; 2007 ; International Review of Victimology Volume 14 ; 14 ; >
         au < zapped ; finished ; 2008-2009 ; International Review of Victimology Volume 15 ; 15 ; >
         au < zapped ; finished ; 2009 ; International Review of Victimology Volume 16 ; 16 ; >
-        au < finished ; frozen ; 2010 ; International Review of Victimology Volume 17 ; 17 ; >
+        au < finished ; finished ; 2010 ; International Review of Victimology Volume 17 ; 17 ; >
         au < finished ; frozen ; 2012 ; International Review of Victimology Volume 18 ; 18 ; >
         au < crawling ; exists ; 2013 ; International Review of Victimology Volume 19 ; 19 ; >
         au < finished ; crawling ; 2014 ; International Review of Victimology Volume 20 ; 20 ; >
@@ -17319,7 +17319,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; International Sociology Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Sociology Volume 24 ; 24 ; >
       au < zapped ; finished ; 2010 ; International Sociology Volume 25 ; 25 ; >
-      au < finished ; crawling ; 2011 ; International Sociology Volume 26 ; 26 ; >
+      au < finished ; finished ; 2011 ; International Sociology Volume 26 ; 26 ; >
       au < finished ; frozen ; 2012 ; International Sociology Volume 27 ; 27 ; >
       au < finished ; crawling ; 2013 ; International Sociology Volume 28 ; 28 ; >
       au < finished ; crawling ; 2014 ; International Sociology Volume 29 ; 29 ; >
@@ -17859,7 +17859,7 @@
       au < zapped ; finished ; 2008 ; Journal of Accounting, Auditing & Finance Volume 23 ; 23 ; >
       au < zapped ; finished ; 2009 ; Journal of Accounting, Auditing & Finance Volume 24 ; 24 ; >
       au < zapped ; finished ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 ; >
-      au < finished ; frozen ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 ; >
+      au < finished ; finished ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 ; >
       au < finished ; frozen ; 2012 ; Journal of Accounting, Auditing & Finance Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Journal of Accounting, Auditing & Finance Volume 28 ; 28 ; >
       au < finished ; crawling ; 2014 ; Journal of Accounting, Auditing & Finance Volume 29 ; 29 ; >
@@ -19431,7 +19431,7 @@
       au < down ; crawling ; 1966 ; The Journal of Clinical Pharmacology Volume 6 ; 6 ; >
       au < down ; finished ; 1967 ; The Journal of Clinical Pharmacology Volume 7 ; 7 ; >
       au < zapped ; finished ; 1968 ; The Journal of Clinical Pharmacology Volume 8 ; 8 ; >
-      au < down ; frozen ; 1969 ; The Journal of Clinical Pharmacology Volume 9 ; 9 ; >
+      au < down ; finished ; 1969 ; The Journal of Clinical Pharmacology Volume 9 ; 9 ; >
       au < zapped ; finished ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 ; >
       au < zapped ; finished ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 ; >
       au < zapped ; finished ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 ; >
@@ -19439,7 +19439,7 @@
       au < zapped ; finished ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 ; >
       au < zapped ; finished ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 ; >
       au < down ; frozen ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 ; >
-      au < down ; frozen ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 ; >
+      au < down ; finished ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 ; >
       au < down ; frozen ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 ; >
       au < down ; crawling ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 ; >
       au < zapped ; finished ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 ; >
@@ -21262,7 +21262,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Emerging Market Finance Volume 8 ; 8 ; >
       au < finished ; frozen ; 2010 ; Journal of Emerging Market Finance Volume 9 ; 9 ; >
       au < finished ; crawling ; 2011 ; Journal of Emerging Market Finance Volume 10 ; 10 ; >
-      au < finished ; frozen ; 2012 ; Journal of Emerging Market Finance Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; Journal of Emerging Market Finance Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Emerging Market Finance Volume 12 ; 12 ; >
       au < finished ; crawling ; 2014 ; Journal of Emerging Market Finance Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Journal of Emerging Market Finance Volume 14 ; 14 ; >
@@ -21915,7 +21915,7 @@
       au < manifest ; exists ; 2005 ; Journal of Feline Medicine and Surgery Volume 7 ; 7 ; >
       au < manifest ; exists ; 2006 ; Journal of Feline Medicine and Surgery Volume 8 ; 8 ; >
       au < manifest ; exists ; 2007 ; Journal of Feline Medicine and Surgery Volume 9 ; 9 ; >
-      au < finished ; frozen ; 2008 ; Journal of Feline Medicine and Surgery Volume 10 ; 10 ; >
+      au < finished ; finished ; 2008 ; Journal of Feline Medicine and Surgery Volume 10 ; 10 ; >
       au < finished ; frozen ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
       au < finished ; frozen ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
       au < finished ; frozen ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 ; >
@@ -22372,7 +22372,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Hispanic Higher Education Volume 8 ; 8 ; >
       au < finished ; crawling ; 2010 ; Journal of Hispanic Higher Education Volume 9 ; 9 ; >
       au < finished ; frozen ; 2011 ; Journal of Hispanic Higher Education Volume 10 ; 10 ; >
-      au < finished ; frozen ; 2012 ; Journal of Hispanic Higher Education Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; Journal of Hispanic Higher Education Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Hispanic Higher Education Volume 12 ; 12 ; >
       au < finished ; crawling ; 2014 ; Journal of Hispanic Higher Education Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Journal of Hispanic Higher Education Volume 14 ; 14 ; >
@@ -22690,7 +22690,7 @@
       au < manifest ; exists ; 2006 ; Journal of Human Values Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Journal of Human Values Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Human Values Volume 14 ; 14 ; >
-      au < finished ; frozen ; 2009 ; Journal of Human Values Volume 15 ; 15 ; >
+      au < finished ; finished ; 2009 ; Journal of Human Values Volume 15 ; 15 ; >
       au < finished ; crawling ; 2010 ; Journal of Human Values Volume 16 ; 16 ; >
       au < finished ; frozen ; 2011 ; Journal of Human Values Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Journal of Human Values Volume 18 ; 18 ; >
@@ -31836,7 +31836,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 ; >
       au < finished ; frozen ; 2010 ; Philosophy & Social Criticism Volume 36 ; 36 ; >
       au < finished ; crawling ; 2011 ; Philosophy & Social Criticism Volume 37 ; 37 ; >
-      au < finished ; frozen ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 ; >
+      au < finished ; finished ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; Philosophy & Social Criticism Volume 39 ; 39 ; >
       au < crawling ; exists ; 2014 ; Philosophy & Social Criticism Volume 40 ; 40 ; >
       au < manifest ; exists ; 2015 ; Philosophy & Social Criticism Volume 41 ; 41 ; >
@@ -33289,7 +33289,7 @@
       au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 220 ; 220 ; >
       au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 221 ; 221 ; >
       au < zapped ; finished ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 222 ; 222 ; >
-      au < finished ; frozen ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 223 ; 223 ; >
+      au < finished ; finished ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 223 ; 223 ; >
       au < zapped ; finished ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 224 ; 224 ; >
       au < zapped ; finished ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 225 ; 225 ; >
       au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 226 ; 226 ; >
@@ -33320,7 +33320,7 @@
       au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 220 ; 220 ; >
       au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 221 ; 221 ; >
       au < zapped ; finished ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 ; >
-      au < finished ; frozen ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 ; >
+      au < finished ; finished ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 ; >
       au < zapped ; finished ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 ; >
       au < finished ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 ; >
       au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 226 ; 226 ; >
@@ -34580,7 +34580,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < finished ; crawling ; 2011 ; Race and Justice Volume 1 ; 1 ; >
-      au < finished ; frozen ; 2012 ; Race and Justice Volume 2 ; 2 ; >
+      au < finished ; finished ; 2012 ; Race and Justice Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Race and Justice Volume 3 ; 3 ; >
       au < finished ; crawling ; 2014 ; Race and Justice Volume 4 ; 4 ; >
       au < manifest ; exists ; 2015 ; Race and Justice Volume 5 ; 5 ; >
@@ -40332,7 +40332,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 ; >
       au < finished ; finished ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 ; >
       au < finished ; frozen ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 ; >
-      au < finished ; frozen ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 ; >
+      au < finished ; finished ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; Transformation: An International Journal of Holistic Mission Studies Volume 30 ; 30 ; >
       au < finished ; crawling ; 2014 ; Transformation: An International Journal of Holistic Mission Studies Volume 31 ; 31 ; >
       au < manifest ; exists ; 2015 ; Transformation: An International Journal of Holistic Mission Studies Volume 32 ; 32 ; >
