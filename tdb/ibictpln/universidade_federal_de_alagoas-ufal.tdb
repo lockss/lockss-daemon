@@ -137,4 +137,20 @@
 
   }
 
+  {
+
+      title <
+        name =  Ciência da Informação em Revista ;
+        eissn = 2358-0763
+      >
+
+      comment[publisher] = Universidade Federal de Alagoas-UFAL
+      param[base_url] = http://www.seer.ufal.br/
+      param[journal_id] = cir
+
+      au < exists ; 2014 ; 1 ;  Ciência da Informação em Revista Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 2 ;  Ciência da Informação em Revista Volume 2015 ; 2015 ; >
+
+  }
+
 }

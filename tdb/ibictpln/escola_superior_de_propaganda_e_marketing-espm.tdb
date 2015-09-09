@@ -1,0 +1,59 @@
+{
+  publisher <
+    name = Escola Superior de Propaganda e Marketing-ESPM
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Internext - Revista Eletrônica de Negócios Internacionais ;
+        eissn = 1980-4865
+      >
+
+      comment[publisher] = Escola Superior de Propaganda e Marketing-ESPM
+      param[base_url] = http://internext.espm.br/
+      param[journal_id] = internext
+
+      au < exists ; 2006 ; 1 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 8 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 9 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 10 ; Internext - Revista Eletrônica de Negócios Internacionais Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Comunicação, Mídia e Consumo ;
+        eissn = 1983-7070
+      >
+
+      comment[publisher] = Escola Superior de Propaganda e Marketing-ESPM
+      param[base_url] = http://revistacmc.espm.br/
+      param[journal_id] = revistacmc
+
+      au < exists ; 2004 ; 1 ; Revista Comunicação, Mídia e Consumo Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Revista Comunicação, Mídia e Consumo Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Revista Comunicação, Mídia e Consumo Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Revista Comunicação, Mídia e Consumo Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Revista Comunicação, Mídia e Consumo Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Revista Comunicação, Mídia e Consumo Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Revista Comunicação, Mídia e Consumo Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Revista Comunicação, Mídia e Consumo Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Revista Comunicação, Mídia e Consumo Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 10 ; Revista Comunicação, Mídia e Consumo Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 11 ; Revista Comunicação, Mídia e Consumo Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 12 ; Revista Comunicação, Mídia e Consumo Volume 2015 ; 2015 >
+
+  }
+
+}

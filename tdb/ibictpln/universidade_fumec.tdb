@@ -1,0 +1,39 @@
+{
+  publisher <
+    name = Universidade FUMEC
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista Mediação ;
+        issn = 1676-2827 ;
+        eissn = 2179-9571
+      >
+
+      comment[publisher] = Universidade FUMEC
+      param[base_url] = http://www.fumec.br/revistas/
+      param[journal_id] = mediacao
+
+      au < exists ; 2001 ; 1 ; Revista Mediação Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Revista Mediação Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Revista Mediação Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Revista Mediação Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Revista Mediação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Revista Mediação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Revista Mediação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Revista Mediação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Revista Mediação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Revista Mediação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Revista Mediação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Revista Mediação Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 13 ; Revista Mediação Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 14 ; Revista Mediação Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 15 ; Revista Mediação Volume 2015 ; 2015 >
+
+  }
+
+}

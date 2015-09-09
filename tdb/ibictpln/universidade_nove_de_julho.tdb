@@ -148,4 +148,60 @@
 
   }
 
+  {
+
+      title <
+        name = Iberoamerican Journal of Strategic Management (IJSM) ;
+        eissn = 2176-0756
+      >
+
+      comment[publisher] = Universidade Nove de Julho
+      param[base_url] = http://www.revistaiberoamericana.org/ojs/
+      param[journal_id] = ibero
+
+      au < exists ; 2002 ; 1 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 12 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 13 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 14 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Marketing – REMark ;
+        eissn = 2177-5184
+      >
+
+      comment[publisher] = Universidade Nove de Julho
+      param[base_url] = http://www.revistabrasileiramarketing.org/ojs-2.2.4/
+      param[journal_id] = remark
+
+      au < exists ; 2002 ; 1 ; Revista Brasileira de Marketing – REMark Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista Brasileira de Marketing – REMark Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista Brasileira de Marketing – REMark Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista Brasileira de Marketing – REMark Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Brasileira de Marketing – REMark Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Brasileira de Marketing – REMark Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista Brasileira de Marketing – REMark Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Brasileira de Marketing – REMark Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Brasileira de Marketing – REMark Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Brasileira de Marketing – REMark Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista Brasileira de Marketing – REMark Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 12 ; Revista Brasileira de Marketing – REMark Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 13 ; Revista Brasileira de Marketing – REMark Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 14 ; Revista Brasileira de Marketing – REMark Volume 2015 ; 2015 >
+
+  }
+
 }

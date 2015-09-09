@@ -1,0 +1,103 @@
+{
+  publisher <
+    name = Universidade do Oeste Paulista-UNOESTE
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Colloquium Agrariae ;
+        eissn = 1809-8215
+      >
+
+      comment[publisher] = Universidade do Oeste Paulista-UNOESTE
+      param[base_url] = http://revistas.unoeste.br/revistas/ojs/
+      param[journal_id] = ca
+
+      au < exists ; 2005 ; 1 ; Colloquium Agrariae Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Colloquium Agrariae Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Colloquium Agrariae Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Colloquium Agrariae Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Colloquium Agrariae Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Colloquium Agrariae Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Colloquium Agrariae Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Colloquium Agrariae Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 9 ; Colloquium Agrariae Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 10 ; Colloquium Agrariae Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 11 ; Colloquium Agrariae Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Colloquium Exactarum ;
+        eissn = 2178-8332
+      >
+
+      comment[publisher] = Universidade do Oeste Paulista-UNOESTE
+      param[base_url] = http://revistas.unoeste.br/revistas/ojs/
+      param[journal_id] = ce
+
+      au < exists ; 2009 ; 1 ; Colloquium Exactarum Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Colloquium Exactarum Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Colloquium Exactarum Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Colloquium Exactarum Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 5 ; Colloquium Exactarum Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 6 ; Colloquium Exactarum Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 7 ; Colloquium Exactarum Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Colloquium Humanarum ;
+        eissn = 1809-8207
+      >
+
+      comment[publisher] = Universidade do Oeste Paulista-UNOESTE
+      param[base_url] = http://revistas.unoeste.br/revistas/ojs/
+      param[journal_id] = ch
+
+      au < exists ; 2003 ; 1 ; Colloquium Humanarum Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Colloquium Humanarum Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Colloquium Humanarum Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Colloquium Humanarum Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Colloquium Humanarum Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Colloquium Humanarum Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Colloquium Humanarum Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Colloquium Humanarum Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Colloquium Humanarum Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Colloquium Humanarum Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 11 ; Colloquium Humanarum Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 12 ; Colloquium Humanarum Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 13 ; Colloquium Humanarum Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Colloquium Vitae ;
+        eissn = 1984-6436
+      >
+
+      comment[publisher] = Universidade do Oeste Paulista-UNOESTE
+      param[base_url] = http://revistas.unoeste.br/revistas/ojs/
+      param[journal_id] = cv
+
+      au < exists ; 2009 ; 1 ; Colloquium Vitae Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Colloquium Vitae Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Colloquium Vitae Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Colloquium Vitae Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 5 ; Colloquium Vitae Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 6 ; Colloquium Vitae Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 7 ; Colloquium Vitae Volume 2015 ; 2015 >
+
+  }
+
+}

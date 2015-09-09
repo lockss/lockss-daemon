@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Universidade Alto Vale do Rio do Peixe-UNIARP
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista Interdisciplinar de Estudos em Saúde ;
+        eissn = 2238-832X
+      >
+
+      comment[publisher] = Universidade Alto Vale do Rio do Peixe-UNIARP
+      param[base_url] = http://www.periodicosuniarp.com.br/
+      param[journal_id] = ries
+
+      au < exists ; 2012 ; 1 ; Revista Interdisciplinar de Estudos em Saúde Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 2 ; Revista Interdisciplinar de Estudos em Saúde Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 3 ; Revista Interdisciplinar de Estudos em Saúde Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 4 ; Revista Interdisciplinar de Estudos em Saúde Volume 2015 ; 2015 >
+
+  }
+
+}

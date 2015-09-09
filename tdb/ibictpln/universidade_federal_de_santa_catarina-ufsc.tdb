@@ -1347,4 +1347,46 @@
 
   }
 
+  {
+
+      title <
+        name = Iberoamerican Journal of Industrial Engineering (IJIE) ;
+        eissn = 2175-8018
+      >
+
+      comment[publisher] = Universidade Federal de Santa Catarina-UFSC
+      param[base_url] = http://incubadora.periodicos.ufsc.br/
+      param[journal_id] = IJIE
+
+      au < exists ; 2009 ; 1 ; Iberoamerican Journal of Industrial Engineering (IJIE) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Iberoamerican Journal of Industrial Engineering (IJIE) Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Iberoamerican Journal of Industrial Engineering (IJIE) Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Iberoamerican Journal of Industrial Engineering (IJIE) Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 5 ; Iberoamerican Journal of Industrial Engineering (IJIE) Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 6 ; Iberoamerican Journal of Industrial Engineering (IJIE) Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 7 ; Iberoamerican Journal of Industrial Engineering (IJIE) Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Democracia Digital e Governo Eletrônico ;
+        eissn = 2175-9391
+      >
+
+      comment[publisher] = Universidade Federal de Santa Catarina-UFSC
+      param[base_url] = http://buscalegis.ufsc.br/revistas/
+      param[journal_id] = observatoriodoegov
+
+      au < exists ; 2009 ; 1 ; Revista Democracia Digital e Governo Eletrônico Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Democracia Digital e Governo Eletrônico Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Democracia Digital e Governo Eletrônico Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Democracia Digital e Governo Eletrônico Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 5 ; Revista Democracia Digital e Governo Eletrônico Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 6 ; Revista Democracia Digital e Governo Eletrônico Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 7 ; Revista Democracia Digital e Governo Eletrônico Volume 2015 ; 2015 >
+
+  }
+
 }

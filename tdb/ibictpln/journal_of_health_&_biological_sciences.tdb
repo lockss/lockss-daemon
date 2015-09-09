@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Journal of Health & Biological Sciences
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Journal of Health and Biological Sciences ;
+        issn = 2317-3084 ;
+        eissn = 2317-3076
+      >
+
+      comment[publisher] = Journal of Health & Biological Sciences
+      param[base_url] = http://201.20.109.36:2627/
+      param[journal_id] = medicina
+
+      au < exists ; 2013 ; 1 ; Journal of Health and Biological Sciences Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 2 ; Journal of Health and Biological Sciences Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 3 ; Journal of Health and Biological Sciences Volume 2015 ; 2015 >
+
+  }
+
+}

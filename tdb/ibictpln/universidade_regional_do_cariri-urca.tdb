@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Universidade Regional do Cariri-URCA
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista eletrônica Direito & Dalogicidade ;
+        eissn = 2178-826X
+      >
+
+      comment[publisher] = Universidade Regional do Cariri-URCA
+      param[base_url] = http://periodicos.urca.br/ojs/
+      param[journal_id] = DirDialog
+
+      au < exists ; 2010 ; 1 ; Revista eletrônica Direito & Dalogicidade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista eletrônica Direito & Dalogicidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista eletrônica Direito & Dalogicidade Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 4 ; Revista eletrônica Direito & Dalogicidade Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 5 ; Revista eletrônica Direito & Dalogicidade Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 6 ; Revista eletrônica Direito & Dalogicidade Volume 2015 ; 2015 >
+
+  }
+
+}

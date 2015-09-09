@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Universidade de Pernambuco
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = JMPHC. Journal of Management and Primary Health Care ;
+        eissn = 2179-6750
+      >
+
+      comment[publisher] = Universidade de Pernambuco
+      param[base_url] = http://www.jmphc.com/ojs/
+      param[journal_id] = 01
+
+      au < exists ; 2010 ; 1 ; JMPHC. Journal of Management and Primary Health Care Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; JMPHC. Journal of Management and Primary Health Care Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; JMPHC. Journal of Management and Primary Health Care Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 4 ; JMPHC. Journal of Management and Primary Health Care Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 5 ; JMPHC. Journal of Management and Primary Health Care Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 6 ; JMPHC. Journal of Management and Primary Health Care Volume 2015 ; 2015 >
+
+  }
+
+}

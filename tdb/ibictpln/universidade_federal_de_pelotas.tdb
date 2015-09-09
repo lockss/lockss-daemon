@@ -43,4 +43,22 @@
 
   }
 
+  {
+
+      title <
+        name = Revista Eletrônica de Administração e Turismo (ReAT) ;
+        eissn = 2316-5812
+      >
+
+      comment[publisher] = Universidade Federal de Pelotas
+      param[base_url] = http://periodicos.ufpel.edu.br/ojs2/
+      param[journal_id] = AT
+
+      au < exists ; 2012 ; 1 ; Revista Eletrônica de Administração e Turismo (ReAT) Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 2 ; Revista Eletrônica de Administração e Turismo (ReAT) Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 3 ; Revista Eletrônica de Administração e Turismo (ReAT) Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 4 ; Revista Eletrônica de Administração e Turismo (ReAT) Volume 2015 ; 2015 >
+
+  }
+
 }

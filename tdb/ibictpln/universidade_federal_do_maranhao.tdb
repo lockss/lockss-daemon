@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Universidade Federal do Maranhão
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Cadernos de Pesquisa ;
+        eissn = 2178-2229
+      >
+
+      comment[publisher] = Universidade Federal do Maranhão
+      param[base_url] = http://www.periodicoseletronicos.ufma.br/
+      param[journal_id] = cadernosdepesquisa
+
+      au < exists ; 2009 ; 1 ; Cadernos de Pesquisa Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Cadernos de Pesquisa Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Cadernos de Pesquisa Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Cadernos de Pesquisa Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 5 ; Cadernos de Pesquisa Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 6 ; Cadernos de Pesquisa Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 7 ; Cadernos de Pesquisa Volume 2015 ; 2015 >
+
+  }
+
+}

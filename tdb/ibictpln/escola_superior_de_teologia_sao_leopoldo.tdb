@@ -1,0 +1,86 @@
+{
+  publisher <
+    name = Escola Superior de Teologia, São Leopoldo
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Identidade ;
+        issn = 1676-9570 ;
+        eissn = 2178-437X
+      >
+
+      comment[publisher] = Escola Superior de Teologia, São Leopoldo
+      param[base_url] = http://periodicos.est.edu.br/
+      param[journal_id] = identidade
+
+      au < exists ; 2000 ; 1 ; Identidade Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Identidade Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Identidade Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Identidade Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 5 ; Identidade Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Identidade Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Identidade Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Identidade Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Identidade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Identidade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Identidade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Identidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Identidade Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 14 ; Identidade Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 15 ; Identidade Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 16 ; Identidade Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Protestantismo em Revista ;
+        eissn = 1678-6408
+      >
+
+      comment[publisher] = Escola Superior de Teologia, São Leopoldo
+      param[base_url] = http://periodicos.est.edu.br/
+      param[journal_id] = nepp
+
+      au < exists ; 2002 ; 1 ; Protestantismo em Revista Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Protestantismo em Revista Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Protestantismo em Revista Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Protestantismo em Revista Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Protestantismo em Revista Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Protestantismo em Revista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Protestantismo em Revista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Protestantismo em Revista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Protestantismo em Revista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Protestantismo em Revista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Protestantismo em Revista Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 12 ; Protestantismo em Revista Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 13 ; Protestantismo em Revista Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 14 ; Protestantismo em Revista Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = TEAR ONLINE - liturgia em revista ;
+        eissn = 1519-5546
+      >
+
+      comment[publisher] = Escola Superior de Teologia, São Leopoldo
+      param[base_url] = http://periodicos.est.edu.br/
+      param[journal_id] = tear
+
+      au < exists ; 2012 ; 1 ; TEAR ONLINE - liturgia em revista Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 2 ; TEAR ONLINE - liturgia em revista Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 3 ; TEAR ONLINE - liturgia em revista Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 4 ; TEAR ONLINE - liturgia em revista Volume 2015 ; 2015 >
+
+  }
+
+}

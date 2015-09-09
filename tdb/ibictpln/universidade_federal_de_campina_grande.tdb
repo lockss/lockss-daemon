@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Universidade Federal de Campina Grande
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = REUNIR: Revista de Administração, Contabilidade e Sustentabilidade ;
+        eissn = 2237-3667
+      >
+
+      comment[publisher] = Universidade Federal de Campina Grande
+      param[base_url] = http://150.165.111.246/revistaadmin/
+      param[journal_id] = uacc
+
+      au < exists ; 2011 ; 1 ; REUNIR: Revista de Administração, Contabilidade e Sustentabilidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; REUNIR: Revista de Administração, Contabilidade e Sustentabilidade Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 3 ; REUNIR: Revista de Administração, Contabilidade e Sustentabilidade Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 4 ; REUNIR: Revista de Administração, Contabilidade e Sustentabilidade Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 5 ; REUNIR: Revista de Administração, Contabilidade e Sustentabilidade Volume 2015 ; 2015 >
+
+  }
+
+}

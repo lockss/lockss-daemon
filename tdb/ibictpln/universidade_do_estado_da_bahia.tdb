@@ -1,0 +1,86 @@
+{
+  publisher <
+    name = Universidade do Estado da Bahia
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista da FAEEBA- Educação e Contemporaneidade ;
+        eissn = 2358-0194
+      >
+
+      comment[publisher] = Universidade do Estado da Bahia
+      param[base_url] = http://www.revistas.uneb.br/
+      param[journal_id] = faeeba
+
+      au < exists ; 1992 ; 1 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 2 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 3 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 4 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 5 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 6 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 7 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 8 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 9 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 10 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 11 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 12 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 13 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 14 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 15 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 16 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 17 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 18 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 19 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 20 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 21 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 22 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 23 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 24 ; Revista da FAEEBA- Educação e Contemporaneidade Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Educação de Jovens e Adultos ;
+        eissn = 2317-6571
+      >
+
+      comment[publisher] = Universidade do Estado da Bahia
+      param[base_url] = http://www.revistas.uneb.br/
+      param[journal_id] = educajovenseadultos
+
+      au < exists ; 2013 ; 1 ; Revista Brasileira de Educação de Jovens e Adultos Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 2 ; Revista Brasileira de Educação de Jovens e Adultos Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 3 ; Revista Brasileira de Educação de Jovens e Adultos Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = TABULEIRO DE LETRAS ;
+        eissn = 2176-5782
+      >
+
+      comment[publisher] = Universidade do Estado da Bahia
+      param[base_url] = http://www.revistas.uneb.br/
+      param[journal_id] = tabuleirodeletras
+
+      au < exists ; 2008 ; 1 ; TABULEIRO DE LETRAS Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; TABULEIRO DE LETRAS Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; TABULEIRO DE LETRAS Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; TABULEIRO DE LETRAS Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; TABULEIRO DE LETRAS Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 6 ; TABULEIRO DE LETRAS Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 7 ; TABULEIRO DE LETRAS Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 8 ; TABULEIRO DE LETRAS Volume 2015 ; 2015 >
+
+  }
+
+}

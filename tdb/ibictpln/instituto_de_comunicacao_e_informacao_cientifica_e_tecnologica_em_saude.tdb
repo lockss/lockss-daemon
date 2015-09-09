@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Instituto de Comunicação e Informação Científica e Tecnológica em Saúde
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista Eletrônica de Comunicação, Informação & Inovação em Saúde ;
+        eissn = 1981-6278 
+      >
+
+      comment[publisher] = Instituto de Comunicação e Informação Científica e Tecnológica em Saúde
+      param[base_url] = http://www.reciis.icict.fiocruz.br/
+      param[journal_id] = reciis
+
+      au < exists ; 2007 ; 1 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 7 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 8 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 9 ; Revista Eletrônica de Comunicação, Informação & Inovação em Saúde Volume 2015 ; 2015 >
+
+  }
+
+}

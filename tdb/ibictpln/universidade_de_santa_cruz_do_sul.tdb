@@ -1,0 +1,57 @@
+{
+  publisher <
+    name = Universidade de Santa Cruz do Sul
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Barbarói ;
+        issn = 0104-6578 ;
+        eissn = 1982-2022
+      >
+
+      comment[publisher] = Universidade de Santa Cruz do Sul
+      param[base_url] = http://online.unisc.br/seer/
+      param[journal_id] = barbaroi
+
+      au < exists ; 2006 ; 1 ; Barbarói Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Barbarói Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Barbarói Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Barbarói Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Barbarói Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Barbarói Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Barbarói Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 8 ; Barbarói Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 9 ; Barbarói Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 10 ; Barbarói Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos do CEPE ;
+        eissn = 1982-6729
+      >
+
+      comment[publisher] = Universidade de Santa Cruz do Sul
+      param[base_url] = http://online.unisc.br/seer/
+      param[journal_id] = cepe
+
+      au < exists ; 2007 ; 1 ; Estudos do CEPE Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Estudos do CEPE Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Estudos do CEPE Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Estudos do CEPE Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Estudos do CEPE Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Estudos do CEPE Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 7 ; Estudos do CEPE Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 8 ; Estudos do CEPE Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 9 ; Estudos do CEPE Volume 2015 ; 2015 >
+
+  }
+
+}

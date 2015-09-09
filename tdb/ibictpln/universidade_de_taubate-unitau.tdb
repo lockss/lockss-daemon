@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = Universidade de Taubaté-UNITAU
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Caminhos em Linguistica Aplicada ;
+        eissn = 2176-8625
+      >
+
+      comment[publisher] = Universidade de Taubaté-UNITAU
+      param[base_url] = http://periodicos.unitau.br/ojs-2.2/
+      param[journal_id] = caminhoslinguistica
+
+      au < exists ; 2009 ; 1 ; Caminhos em Linguistica Aplicada Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Caminhos em Linguistica Aplicada Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Caminhos em Linguistica Aplicada Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Caminhos em Linguistica Aplicada Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 5 ; Caminhos em Linguistica Aplicada Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 6 ; Caminhos em Linguistica Aplicada Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 7 ; Caminhos em Linguistica Aplicada Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+      title <
+        name = Clínica e Pesquisa em Odontologia ;
+        eissn = 2176-9540
+      >
+
+      comment[publisher] = Universidade de Taubaté-UNITAU
+      param[base_url] = http://periodicos.unitau.br/ojs-2.2/
+      param[journal_id] = clipeodonto
+
+      au < exists ; 2009 ; 1 ; Clínica e Pesquisa em Odontologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Clínica e Pesquisa em Odontologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Clínica e Pesquisa em Odontologia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Clínica e Pesquisa em Odontologia Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 5 ; Clínica e Pesquisa em Odontologia Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 6 ; Clínica e Pesquisa em Odontologia Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 7 ; Clínica e Pesquisa em Odontologia Volume 2015 ; 2015 >
+
+  }
+
+}

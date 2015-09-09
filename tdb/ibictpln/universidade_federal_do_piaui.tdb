@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Universidade Federal do Piauí
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Pensando - Revista de Filosofia ;
+        eissn = 2178-843X
+      >
+
+      comment[publisher] = Universidade Federal do Piauí
+      param[base_url] = http://www.ojs.ufpi.br/
+      param[journal_id] = pensando
+
+      au < exists ; 2010 ; 1 ; Pensando - Revista de Filosofia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Pensando - Revista de Filosofia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Pensando - Revista de Filosofia Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 4 ; Pensando - Revista de Filosofia Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 5 ; Pensando - Revista de Filosofia Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 6 ; Pensando - Revista de Filosofia Volume 2015 ; 2015 >
+
+  }
+
+}

@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Universidade Federal de São Carlos
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Contemporânea - Revista de Sociologia da UFSCAR ;
+        issn = 2236-532X ;
+        eissn = 2316-1329
+      >
+
+      comment[publisher] = Universidade Federal de São Carlos
+      param[base_url] = http://www.contemporanea.ufscar.br/
+      param[journal_id] = contemporanea
+
+      au < exists ; 2011 ; 1 ; Contemporânea - Revista de Sociologia da UFSCAR Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Contemporânea - Revista de Sociologia da UFSCAR Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 3 ; Contemporânea - Revista de Sociologia da UFSCAR Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 4 ; Contemporânea - Revista de Sociologia da UFSCAR Volume 2014 ; 2014 >
+      au < expected ; 2015 ; 5 ; Contemporânea - Revista de Sociologia da UFSCAR Volume 2015 ; 2015 >
+
+  }
+
+}
