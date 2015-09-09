@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -111,12 +111,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^https?://(?:www.bmj.com)/content/.+/related"</string>
       <!-- Do not crawl these variations -->
       <string>2,"content/.+([.](print|explore|article-info)|/(article-info|rapid-responses|related|rr/|submit))"</string>
       <string>2,"(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))"</string>
       <string>2,"^https?://(?!elife)%s/content/(?!%s/)[0-9]+/[^/.?]+([.]toc)?$", url_host(base_url), volume_name</string>
       <!-- otherwise, all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[.]www[.]bmj[.]com||.+[.]gstatic[.]com)/."</string>
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[^/]*[.]bmj[.]com||.+[.]gstatic[.]com)/."</string>
       <!-- no gifs from other volumes (use au_exclude_urls_from_poll_results_pattern if needed)
       <string>2,"^%scontent/(?!([^0-9][^/]+/)?(%s|suppl)/)[^?]*[.]gif", base_url, volume_name</string> -->
       <!-- all fonts, images, resources, css, js, etc. -->
@@ -128,6 +129,7 @@
       <string>1,"^%s(?:content(?:/[^0-9][^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
       <!-- panels_ajax_tab, except no info tab for BMJ -->
       <string>2,"^https?://www[.]bmj[.]com/panels_ajax_tab/[^/]+_tab_(info)/node:"</string>
+      <string>1,"^https?://www[.]bmj[.]com/panels_ajax_tab/jnl_bmj_tab_related_art/node:"</string>
       <string>1,"^%spanels_ajax_tab/[^/]+_(figdata|tab_(data|info|pdf|peer_review))/node:", base_url</string>
       <!-- various format citation files -->
       <string>1,"^%shighwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$", base_url</string>
