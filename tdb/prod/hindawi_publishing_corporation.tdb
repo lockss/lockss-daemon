@@ -9817,7 +9817,7 @@
     param[journal_id] = vlsi
 
     comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998/028524.pdf
-    comment[2006] = No articles online before 2006
+    comment[2006] = No articles online 2002-2006
 
     au < down ; 1992 ; VLSI Design Volume 1 (1992) ; 1992 ; 0 >
     au < released ; 1993 ; VLSI Design Volume 1 (1993) ; 1993 ; 1 >
@@ -9825,7 +9825,7 @@
     au < released ; 1995 ; VLSI Design Volume 2-3 (1995) ; 1995 ; 2-3 >
     au < released ; 1996 ; VLSI Design Volume 4-5 (1996) ; 1996 ; 4-5 >
     au < released ; 1997 ; VLSI Design Volume 5 (1997) ; 1997 ; 5 >
-    au < released ; 1998 ; VLSI Design Volume 7-8 (1998) ; 1998 ; 7-8 >
+    au < wanted ; 1998 ; VLSI Design Volume 7-8 (1998) ; 1998 ; 7-8 >
     au < released ; 1999 ; VLSI Design Volume 9-10 (1999) ; 1999 ; 9-10 >
     au < released ; 2000 ; VLSI Design Volume 10-11 (2000) ; 2000 ; 10-11 >
     au < released ; 2001 ; VLSI Design Volume 12-13 (2001) ; 2001 ; 12-13 >
