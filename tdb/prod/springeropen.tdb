@@ -95,7 +95,7 @@
         au < manifest ; 2011 ; Annals of Intensive Care Volume 1 ; 1 >
         au < manifest ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
         au < manifest ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
-        au < manifest ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
+        au < ready ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
         au < manifest ; 2015 ; Annals of Intensive Care Volume 5 ; 5 >
   
     }
@@ -112,7 +112,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < manifest ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
-        au < manifest ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
+        au < ready ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
         au < manifest ; 2015 ; Applied Adhesion Science Volume 3 ; 3 >
 
     }
@@ -128,7 +128,7 @@
         param[journal_issn] = 2196-0089 
         comment[platform] = BioMedCentralPlugin
 
-        au < manifest ; 2014 ; Applied Informatics Volume 1 ; 1 >
+        au < ready ; 2014 ; Applied Informatics Volume 1 ; 1 >
         au < manifest ; 2015 ; Applied Informatics Volume 2 ; 2 >
 
     }
@@ -510,7 +510,7 @@
   
         au < manifest ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 >
         au < manifest ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 >
-        au < manifest ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
+        au < ready ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
         au < manifest ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
         au < manifest ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 >
   
@@ -909,7 +909,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2013 ; Geothermal Energy Volume 1 ; 1 >
-        au < manifest ; 2014 ; Geothermal Energy Volume 2 ; 2 >
+        au < ready ; 2014 ; Geothermal Energy Volume 2 ; 2 >
         au < manifest ; 2015 ; Geothermal Energy Volume 3 ; 3 >
   
     }
@@ -1034,7 +1034,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 >
-        au < manifest ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
+        au < ready ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
         au < manifest ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 >
         au < manifest ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 >
   
@@ -1143,7 +1143,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
-        au < manifest ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
+        au < ready ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
         au < manifest ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
         au < expected ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
   

@@ -18,7 +18,7 @@
     param[base_url] = https://peerj.com/
     implicit < status ; year ; name ; param[volume_name] >
     
-    au < manifest ; 2013 ; PeerJ 2013 ; 2013 >
+    au < ready ; 2013 ; PeerJ 2013 ; 2013 >
     au < exists ; 2014 ; PeerJ 2014 ; 2014 >
     au < expected ; 2015 ; PeerJ 2015 ; 2015 >
     

@@ -43,7 +43,7 @@
     au < manifest ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 >
     au < manifest ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 >
     au < manifest ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 >
-    au < manifest ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
+    au < ready ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
     au < manifest ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
     au < manifest ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 >
     au < manifest ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 >
@@ -59,7 +59,7 @@
     
     param[journal_id] = bmt
 
-    au < manifest ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
+    au < ready ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
     au < manifest ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
     au < manifest ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
     au < manifest ; 2015 ; Breast Cancer Management Volume 4 ; 4 >
@@ -131,7 +131,7 @@
     comment[continues] = Therapy, 1475-0708
     param[journal_id] = cpr
 
-    au < manifest ; 2012 ; Clinical Practice Volume 9 ; 9 >
+    au < ready ; 2012 ; Clinical Practice Volume 9 ; 9 >
     au < manifest ; 2013 ; Clinical Practice Volume 10 ; 10 >
     au < manifest ; 2014 ; Clinical Practice Volume 11 ; 11 >
     au < expected ; 2015 ; Clinical Practice Volume 12 ; 12 >
@@ -163,7 +163,7 @@
     
     param[journal_id] = crc
 
-    au < manifest ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
+    au < ready ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
     au < manifest ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
     au < ready ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
     au < manifest ; 2015 ; Colorectal Cancer Volume 4 ; 4 >
@@ -269,7 +269,7 @@
     au < manifest ; 2009 ; Future Neurology Volume 4 ; 4 >
     au < manifest ; 2010 ; Future Neurology Volume 5 ; 5 >
     au < manifest ; 2011 ; Future Neurology Volume 6 ; 6 >
-    au < manifest ; 2012 ; Future Neurology Volume 7 ; 7 >
+    au < ready ; 2012 ; Future Neurology Volume 7 ; 7 >
     au < manifest ; 2013 ; Future Neurology Volume 8 ; 8 >
     au < manifest ; 2014 ; Future Neurology Volume 9 ; 9 >
     au < manifest ; 2015 ; Future Neurology Volume 10 ; 10 >
@@ -487,7 +487,7 @@
     au < manifest ; 2009 ; Interventional Cardiology Volume 1 ; 1 >
     au < manifest ; 2010 ; Interventional Cardiology Volume 2 ; 2 >
     au < manifest ; 2011 ; Interventional Cardiology Volume 3 ; 3 >
-    au < manifest ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
+    au < ready ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
     au < manifest ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
     au < manifest ; 2014 ; Interventional Cardiology Volume 6 ; 6 >
     au < manifest ; 2015 ; Interventional Cardiology Volume 7 ; 7 >
@@ -519,7 +519,7 @@
     
     param[journal_id] = lmt
 
-    au < manifest ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
+    au < ready ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
     au < manifest ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
     au < manifest ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
     au < manifest ; 2015 ; Lung Cancer Management Volume 4 ; 4 >
@@ -557,7 +557,7 @@
     au < manifest ; 2009 ; Nanomedicine Volume 4 ; 4 >
     au < manifest ; 2010 ; Nanomedicine Volume 5 ; 5 >
     au < manifest ; 2011 ; Nanomedicine Volume 6 ; 6 >
-    au < manifest ; 2012 ; Nanomedicine Volume 7 ; 7 >
+    au < ready ; 2012 ; Nanomedicine Volume 7 ; 7 >
     au < manifest ; 2013 ; Nanomedicine Volume 8 ; 8 >
     au < ready ; 2014 ; Nanomedicine Volume 9 ; 9 >
     au < manifest ; 2015 ; Nanomedicine Volume 10 ; 10 >
@@ -680,7 +680,7 @@
     au < manifest ; 2009 ; Pharmacogenomics Volume 10 ; 10 >
     au < manifest ; 2010 ; Pharmacogenomics Volume 11 ; 11 >
     au < manifest ; 2011 ; Pharmacogenomics Volume 12 ; 12 >
-    au < manifest ; 2012 ; Pharmacogenomics Volume 13 ; 13 >
+    au < ready ; 2012 ; Pharmacogenomics Volume 13 ; 13 >
     au < manifest ; 2013 ; Pharmacogenomics Volume 14 ; 14 >
     au < manifest ; 2014 ; Pharmacogenomics Volume 15 ; 15 >
     au < manifest ; 2015 ; Pharmacogenomics Volume 16 ; 16 >

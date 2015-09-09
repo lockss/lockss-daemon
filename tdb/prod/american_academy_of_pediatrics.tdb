@@ -46,8 +46,8 @@
       au < released ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
       au < released ; 2012 ; AAP Grand Rounds Volume 27 ; 27 >
       au < released ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
-      au < manifest ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
-      au < manifest ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
+      au < ready ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
+      au < ready ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
       au < ready ; 2014 ; AAP Grand Rounds Volume 31 ; 31 >
       au < manifest ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
       au < manifest ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
@@ -126,8 +126,8 @@
       implicit < status ; year ; name ; param[volume_name] >
       
       au < manifest ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
-      au < manifest ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
-      au < manifest ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
+      au < ready ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
+      au < ready ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < ready ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
       au < manifest ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
 
