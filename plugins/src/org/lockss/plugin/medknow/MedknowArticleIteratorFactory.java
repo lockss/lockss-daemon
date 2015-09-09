@@ -49,13 +49,10 @@ import org.lockss.util.Logger;
  *      type=0  - Abstract
  *      no type - Full-Text HTML
  *      type=2  - Full-text PDF
- *      type=3  - Full-Text Mobile
- *      type=4  - EPUB 
  *      
  * also contains citation URLs:
  * "http://www.afrjpaedsurg.org/citation.asp?issn=0189-6725;year=2012;volume=9;
  * issue=1;spage=13;epage=16;aulast=Kothari;
- * aid=AfrJPaediatrSurg_2012_9_1_13_93295"
  *      
  * full-text HTML URL:
  * "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;
@@ -64,149 +61,89 @@ import org.lockss.util.Logger;
 public class MedknowArticleIteratorFactory
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(MedknowArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(MedknowArticleIteratorFactory.class);
   
-  /** ROOT_TEMPLATE AND PATTERN_TEMPLATE required by SubTreeArticleIterator.
-    SubTreeArticleIterator returns only the URLs under ROOT_TEMPLATE, that
-    match PATTERN_TEMPLATE.  In this case, only URLs ending with 'type=0'
-    are returned. 'type=0' is the abstract which also contains medatata. */
-  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"^%sarticle\\.asp\\?issn=%s;year=%d;volume=%s;.*;type=0$\", base_url, journal_issn, year, volume_name";
-  
-  /**
-   * Create MedknowArticleIterator with the new object of 
-   * SubTreeArticleIterator ROOT_TEMPLATE and PATTERN_TEMPLATE already set.
+  /* 
+   * Because it's hard to uniquely identify something that DOESN'T
+   * end with "type=X", have the iterator find the "type=0" (abstract)
+   * and generate the others from this
    */
+  private static final String ROOT_TEMPLATE = "\"%s\", base_url";
+  private static final String PATTERN_TEMPLATE = "\"^%sarticle\\.asp\\?issn=%s;year=%d;volume=%s;.*;type=[0-2]$\", base_url, journal_issn, year, volume_name";
+  
+  // various aspects of an article
+  // DOI's can have "/"s in the suffix
+  private static final Pattern PDF_PATTERN = Pattern.compile("/(article\\.asp)(\\?.*);type=2$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/(article\\.asp)(\\?.*);type=0$", Pattern.CASE_INSENSITIVE);
+
+  // how to change from one form (aspect) of article to another
+  private static final String HTML_REPLACEMENT = "/$1$2"; //take off the ";type=0" argument
+  private static final String ABSTRACT_REPLACEMENT = "/$1$2;type=0";
+  private static final String PDF_REPLACEMENT = "/$1$2;type=2";
+
+  // citation landing page:
+  private static final String CITATION_LANDING_REPLACEMENT = "/citation.asp$2";
+  private static final String CITATION_RIS_REPLACEMENT = "/citeman.asp$2;t=2";
+  
+
   @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-                                                          throws PluginException {
-      
-    return new MedknowArticleIterator(au,
-                                      new SubTreeArticleIterator.Spec()
-                                          .setTarget(target)
-                                          .setRootTemplate(ROOT_TEMPLATE)
-                                          .setPatternTemplate(PATTERN_TEMPLATE,
-                                              Pattern.CASE_INSENSITIVE)
-                                      );
-  } /** end createArticleIterator */     
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+
+
+    builder.setSpec(target,
+        ROOT_TEMPLATE,
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+
+    // The order in which these aspects are added is important. They determine which will trigger
+    // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
+    // lower aspects aren't looked for, once you get a match.
+
+    // set up pdf to be an aspect that will trigger an ArticleFiles
+      builder.addAspect(PDF_PATTERN,
+          PDF_REPLACEMENT,
+          ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+      // set up abstract to be an aspect that triggers an ArticleFiles
+      // normally abstract wouldn't be sufficient, but it we can figure out the 
+      // full-text html and the pdf from this, but it's hard to define
+      // full-text html by itself (lack of "type" argument)
+      builder.addAspect(ABSTRACT_PATTERN,
+          ABSTRACT_REPLACEMENT,
+          ArticleFiles.ROLE_ABSTRACT,
+          ArticleFiles.ROLE_ARTICLE_METADATA);
+
+
+    // set up full text html to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
+
+
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
+    builder.addAspect(CITATION_RIS_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_RIS);
+
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
+    builder.addAspect(CITATION_LANDING_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION);
+
+    // The order in which we want to define full_text_cu.  
+    // First one that exists will get the job
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);  
+
+
+    // set the ROLE_ARTICLE_METADATA to the first one that exists 
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+        ArticleFiles.ROLE_CITATION_RIS,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+
+    return builder.getSubTreeArticleIterator();
+  }
   
-  
-  /**
-   * Create article files.  Use abstract url as the base, and get other file
-   * types from it, full-text html, pdf, epub, mobile.
-   */
-  protected static class MedknowArticleIterator extends SubTreeArticleIterator {
- 
-    /** this pattern is derived from PATTERN_TEMPLATE,
-      to create regex 'capturing groups', used for guessing other file types. */
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("/(article\\.asp)(\\?.*);type=0$", Pattern.CASE_INSENSITIVE);
-
-    protected MedknowArticleIterator(ArchivalUnit au,
-                                     SubTreeArticleIterator.Spec spec) {
-        super(au, spec);
-    }
-    
-    /**
-     * Start to match abstract url, the guess other file types from it.
-     * Abstrqct url: "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;
-     *  volume=9;issue=1;spage=1;epage=2;aulast=Rutz;tyep=0"
-     */
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-
-      String url = cu.getUrl();
-      log.debug("createArticleFiles: " + url);
-
-      Matcher abstractMat = ABSTRACT_PATTERN.matcher(url);
-      if (abstractMat.find()) {
-        return processAbstract(cu, abstractMat);
-      }
-      
-      /** Incompatible between ArticleIteratorFactor and ArtileIterator objects
-        Should not happen. */
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-
-      return null;
-
-    } /** end createArticleFiles */
-    
-    protected ArticleFiles processAbstract(CachedUrl abstractCu, Matcher absMat) {
-
-      ArticleFiles af = new ArticleFiles();
-      
-      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, abstractCu);
-      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractCu);
-      guessAdditionalFiles(af, absMat);
-
-      return af;
-      
-    } /** end processAbstract */
-
-    protected ArticleFiles guessAdditionalFiles(ArticleFiles af, Matcher absMat) {
-      
-      CachedUrl htmlCu = au.makeCachedUrl(absMat.replaceFirst("/$1$2"));
-      //af.setFullTextCu(htmlCu);
-      setArticleRole(af, htmlCu, ArticleFiles.ROLE_FULL_TEXT_HTML);
-      
-      CachedUrl pdfCu = au.makeCachedUrl(absMat.replaceFirst("/$1$2;type=2"));
-      setArticleRole(af, pdfCu, ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-      CachedUrl mobileCu = au.makeCachedUrl(absMat.replaceFirst("/$1$2;type=3"));
-      setArticleRole(af, mobileCu, ArticleFiles.ROLE_FULL_TEXT_MOBILE);
-
-      CachedUrl epubCu = au.makeCachedUrl(absMat.replaceFirst("/$1$2;type=4"));
-      setArticleRole(af, epubCu, ArticleFiles.ROLE_FULL_TEXT_EPUB);                              
-    
-      CachedUrl citationCu = au.makeCachedUrl(absMat.replaceFirst("/citation.asp$2"));
-      setArticleRole(af, citationCu, ArticleFiles.ROLE_CITATION);
-
-      chooseFullTextCu(af);
-      
-      return af;
-      
-    } /** end guessAdditionalFiles */
-    
-    protected ArticleFiles chooseFullTextCu(ArticleFiles af) {
-      
-      final String[] ORDER = new String[] {
-          ArticleFiles.ROLE_FULL_TEXT_HTML,
-          ArticleFiles.ROLE_FULL_TEXT_PDF,
-          ArticleFiles.ROLE_FULL_TEXT_MOBILE,
-          ArticleFiles.ROLE_FULL_TEXT_EPUB
-      };
-      
-      for (String role : ORDER) {
-        CachedUrl cu = af.getRoleCu(role);
-        if (cu != null) {
-          af.setFullTextCu(cu);
-          return af;
-        }
-      }
-      
-      log.debug2("No full-text CU");
-      return af; // af probably has other data in it, don't want to return null
-      
-    } /** end chooseFullTextCu */
-   
-    
-    /**
-     * Set article role for each file type. Also set ROLE_ARTICLE_METADATA
-     * for Abstract HTML file. Param role2 is ArticleFiles.ROLE_ARTICLE_METADATA.
-     */
-    private void setArticleRole(ArticleFiles af, CachedUrl cu, String role) {
-
-      if ((cu != null) && (cu.hasContent())) {
-        if (role != null) {
-          af.setRoleCu(role, cu);
-        }
-      }
-      AuUtil.safeRelease(cu);
-
-    } /** end setArticleRole */
-      
-  } /** end class MedknowArticleIterator */
-   
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)

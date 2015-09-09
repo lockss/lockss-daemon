@@ -28,13 +28,31 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.medknow;
 
+import java.util.regex.Pattern;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
+
+/* 
+ *   The same functional link can have variants based on the URL of the referring page
+ *   We want to normalize these to be the same to avoid duplicate functional pages with minor URL differences.
+ *   Specifically, 
+ *      The citation landing page url is of the form:
+ *      <base_url>/citation.asp?issn=X;year=Y;volume=Q;issue=P;spage=N;epage=M;aulast=foo
+ *          but may also have one or both of the following additional arguments
+ *          aid=<article_identifier>
+ *          type=1
+ *       depending on the url of the referring article page (type informs aspect; aid is sometimes there)
+ *    In this specific case, we want to remove the type argument but we cannot always remove it because it is
+ *    a necessary part of an article aspect url.
+ *
+ */
+
 public class MedknowUrlNormalizer implements UrlNormalizer {
   
-  protected static Logger log = Logger.getLogger(MedknowUrlNormalizer.class);
+  private static final Logger log = Logger.getLogger(MedknowUrlNormalizer.class);
 
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
@@ -45,8 +63,30 @@ public class MedknowUrlNormalizer implements UrlNormalizer {
     if (url.contains(";aid=")) {
       log.debug("ur contains ';aid=': " + url);
       url = url.replaceFirst(";aid=.+$", "");
+    } else if (url.contains(";month=")) {
+      /*
+       * Issue TOC from the manifest page contain the month descriptor:
+       * http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=1;month=January-March
+       * but from the "next-TOC-prev" navigators on the article pages, they do not
+       * http://www.jpgmonline.com/showbackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=1
+       * so normalize this unnecessary bit of info, off
+       * 
+       */
+      url = url.replaceFirst(";month=.+$", "");
     }
-    
+    // The citation landing page may have the "type" argument depending on which 
+    // article aspect generated the link - normalize to the  no-type-argument url 
+    // note that the "aid" argument has already been removed so "type" will be the final argument
+    if (url.contains("/citation.asp")) {
+      if (log.isDebug3()) {
+        // just for debugging do unnecessary additional check
+        if (url.contains(";type=")) {
+          log.debug3("must remove the ';type' argumen from citation landing page url");
+        }
+      }
+      url = url.replaceFirst(";type=.+$", "");
+    }
+    log.debug3("normalized url: " + url);
     return(url);
 
   }

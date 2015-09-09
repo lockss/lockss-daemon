@@ -1,10 +1,7 @@
 <map>
-<!--
-  Medknow prosposes LOCKSS using Google sitemap to crawl their website.
--->
   <entry>
     <string>plugin_status</string>
-    <string>down - Ly/Michele comm w publisher RU3757</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -19,20 +16,8 @@
     <string>1</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.60.0</string>
-  </entry>
-  <entry>
     <string>au_name</string>
     <string>"Medknow Publications, Base URL %s, Issn %s, Year %d, Volume %s", base_url, journal_issn, year, volume_name</string>
-  </entry>
-    <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -51,6 +36,66 @@
       </entry>
     </map>
   </entry>
+  <entry>
+  <!-- NO:
+     base_url/(Browse.asp|showstats.asp)?arguments_go_here
+     base_url/article.asp?article-arguments-go-here;type=(3|4|5)  epub or mobile version
+     base_url/articlecited.asp?article-arguments-go-here;aid=jpgm_2013_59_3_179_118034 cited by listing
+     YES:
+     base_url/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=4;month=October-December  
+     base_url/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh landing for refs
+     base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=186;epage=189;aulast=Kumar;type=0
+        allow "type=0" (abstract) "type=2" (pdf) and no type argument (full-text html; equiv to "type=1")
+        pdf redirects to
+     base_url/downloadpdf.asp?....args....
+     base_url/citeman.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;t=2 citation
+     at=2 is ref_mgr (ris)
+     base_url/viewimage.asp?img=jpgm_2013_59_3_179_118034_f4.jpg image/table
+     base_url/articles/2013/59/3/images/jpgm_2013_59_3_179_118034_f4.jpg article image/table allowed by first rule for images
+     -->
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
+      <string>2,"^%sarticle.asp\?issn=%s;year=%d;volume=%s;issue=.*;type=[3-9]$",base_url, journal_issn, year, volume_name</string>
+      <string>1,"^%s(article|citation|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s;issue=",base_url, journal_issn, year, volume_name</string>
+      <string>1,"^%sciteman.asp\?issn=%s;year=%d;volume=%s;issue=.*;t=2$",base_url, journal_issn, year, volume_name</string>
+      <string>1,"^%s(showBackIssue|citation)\.asp\?issn=%s;year=%d;volume=%s", base_url, journal_issn, year, volume_name</string>
+      <string>1,"^%sviewimage.asp\?img=", base_url</string>
+    </list>
+  </entry>  
+  <entry>
+    <string>au_start_url</string>
+    <!-- http://www.jpgmonline.com/backissues.asp -->
+    <string>"%sbackissues.asp", base_url</string> <!--  limit to current volume through crawl rules above -->
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss.txt", base_url</string>
+  </entry>  
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sshowBackIssue.asp?issn=%s;year=%d;volume=%s;issue=%s", base_url, journal_issn, year, volume_name, issue</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+      <!-- EITHER
+      base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh full text html (no type)
+      or
+      base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=2  pdf
+      -->
+        <string>"^%sarticle.asp\?issn=%s;year=%d;volume=%s.*;aulast=[^;]+(;type=2)?$", base_url, journal_issn, year, volume_name</string>
+      </list>
+  </entry>  
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -91,47 +136,13 @@
      </list>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <string>"%ssitemap.xml", base_url</string>
-  </entry>
-    <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%ssitemap_%d_%s", base_url, year, volume_name</string>
-      <string>1,"^%s(showBackIssue|article|citation|citeman|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s;", base_url, journal_issn, year, volume_name</string>
-      <string>1,"^%stemp/.+\.epub", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>"%s", base_url</string>
-      </entry>
-      <entry>
-        <string>au_issue</string>
-        <string>"%sshowBackIssue.asp?issn=%s;year=%d;volume=%s;issue=%s", base_url, journal_issn, year, volume_name, issue</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-      <list>
-<!--         <string>"^%sarticle.asp\?issn=%s;year=%d;volume=%s;issue=[0-9]+;spage=", base_url, journal_issn, year, volume_name</string> -->
-        <string>"^%sarticle.asp\?issn=%s;year=%d;volume=%s", base_url, journal_issn, year, volume_name</string>
-      </list>
-  </entry>
-  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.medknow.MedknowHtmlHashFilterFactory</string>
   </entry>
   <entry>
-    <string>text/xml_link_extractor_factory</string>
-    <string>org.lockss.plugin.medknow.MedknowSitemapLinkExtractorFactory</string>
-  </entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.medknow.MedknowUrlNormalizer</string>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.medknow.MedknowArticleIteratorFactory</string>
@@ -140,9 +151,25 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.medknow.MedknowArticleIteratorFactory</string>
   </entry>
+  <!--  RIS files can be "text/plain" -->
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.medknow.MedknowUrlNormalizer</string>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.medknow.MedknowRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <!--  but also could be the correct RIS type -->
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.medknow.MedknowRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
@@ -157,4 +184,12 @@
     <string>au_redirect_to_login_url_pattern</string>
     <string>"%ssubscriberlogin\.asp", base_url</string>
   </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>  
 </map>    

@@ -1,8 +1,7 @@
 <map>
-  <!-- ClockssPlugin.xml inherited from MedknowPlugin.xml. -->  
   <entry>
     <string>plugin_status</string>
-    <string>down - PD-1029 RT-898</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -29,7 +28,12 @@
     <string>"Medknow Publications Plugin (CLOCKSS), Base URL %s, Issn %s, Year %d, Volume %s", base_url, journal_issn, year, volume_name</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>100</long>
-  </entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>  
 </map>

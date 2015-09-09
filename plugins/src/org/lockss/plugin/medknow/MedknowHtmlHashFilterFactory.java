@@ -28,32 +28,120 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.medknow;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.Arrays;
 
+import org.apache.commons.io.IOUtils;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TagNode;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Div;
+import org.htmlparser.tags.ImageTag;
+import org.htmlparser.tags.LinkTag;
+import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
+/*
+ * Medknow html is very non-descriptive so pursuing a very minimalist approach
+ * INCLUDE - only the very basic informative bits
+ *    TOC - just the section headers, the article titles and author/doi information
+ *           not including the links to formats of the article 
+ *           not including the TOC information block
+ *    ABS - just the
+ *    FULL TEXT
+ *    CITATION LANDING
+ * EXCLUDE - from that informative set, exclude everything not-content
+ */
 public class MedknowHtmlHashFilterFactory implements FilterFactory {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in, String encoding) {
-        
-    NodeFilter[] filters = new NodeFilter[] {
-        
-        HtmlNodeFilters.tagWithText("td", "Users Online:"),
-        HtmlNodeFilters.tagWithAttribute("span", "id", "tx"),
-        HtmlNodeFilters.tagWithAttribute("table", "class", "leftnavcell"),
-        new TagNameFilter("script"),
-    };
-    
-    return new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+  private static final Logger log = Logger.getLogger(MedknowHtmlHashFilterFactory.class);
+
+  @Override
+  public InputStream createFilteredInputStream(final ArchivalUnit au,
+      InputStream in,
+      String encoding)
+          throws PluginException {
+
+    HtmlFilterInputStream filtered = new HtmlFilterInputStream(
+        in,
+        encoding,
+        new HtmlCompoundTransform(
+            /*
+             * KEEP: throw out everything but main content areas
+             */
+            HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+                // KEEP toc section titles [TOC]
+                HtmlNodeFilters.tagWithAttribute("td", "class", "tochead"),
+                // KEEP each toc article titles [TOC]
+                HtmlNodeFilters.tagWithAttribute("td", "class", "articleTitle"),
+                // KEEP each toc article author/doi info [TOC]
+                HtmlNodeFilters.tagWithAttribute("td", "class", "sAuthor"),
+                // abstract page is harder - we have to take in <td class="articlepage" to get the content but must exclude LOTS
+                // KEEP page content portion of article page [abs, full, citation landing]
+                HtmlNodeFilters.tagWithAttribute("td", "class", "articlepage"),
+            })),
+            /*
+             * DROP: filter remaining content areas
+             */
+            HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
+                // DROP scripts, styles, comments
+                HtmlNodeFilters.tag("script"),
+                HtmlNodeFilters.tag("noscript"),
+                HtmlNodeFilters.tag("style"),
+                HtmlNodeFilters.comment(),
+                // DROP glyph for "Popular" articles [TOC]
+                HtmlNodeFilters.tagWithAttributeRegex("img", "alt", "Highly accessed"),
+                HtmlNodeFilters.tagWithAttributeRegex("a", "href", "showstats\\.asp"),
+                // DROP Author affiliation - it could change over time [abs,full]
+                HtmlNodeFilters.tagWithAttribute("font", "class", "AuthorAff"),
+                // DROP ticker across top of page [abs,full]
+                HtmlNodeFilters.tagWithAttribute("div", "id", "ticker"),
+                // DROP social media toolbox [abs,full]
+                HtmlNodeFilters.tagWithAttributeRegex("div", "class", "addthis_toolbox"),
+                // DROP ad at top of article [abs,full]
+                HtmlNodeFilters.tagWithAttribute("div", "id", "g8"),
+                // DROP ad at bottom of article [abs,full]
+                HtmlNodeFilters.tagWithAttribute("div", "id", "g9"),
+                // DROP citation section at bottom of article [abs,full]
+                HtmlNodeFilters.tagWithAttribute("table", "class", "sitethis"),
+                // DROP a big chunk in order to get rid of cited-by counts that exist
+                // in images.  This also takes out the "correspondence address" through
+                // the doi but it gets the job done - and the doi is also on the TOC
+                HtmlNodeFilters.tagWithAttribute("font", "class", "CorrsAdd"),
+
+            }))
+            )
+        );
+
+    return filtered;
+
+  }
+
+  /*
+  public static void main(String[] args) throws Exception {
+    for (String file : Arrays.asList("/tmp/jpmg/toc1",
+                "/tmp/jpmg/toc2",
+                "/tmp/jpmg/abs1",
+                "/tmp/jpmg/abs2",
+                "/tmp/jpmg/full1",
+                "/tmp/jpmg/full2",
+                "/tmp/jpmg/cit2",
+                "/tmp/jpmg/cit1")) {
+      IOUtils.copy(new MedknowHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+                   new FileOutputStream(file + ".out"));
     }
-    
-} /** end class MedknowHtmlHashFilterFactory */
+  }
+  */
+
+}
+

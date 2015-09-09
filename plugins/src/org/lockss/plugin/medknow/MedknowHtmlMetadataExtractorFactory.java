@@ -43,11 +43,14 @@ import org.lockss.plugin.*;
 
 /**
  * MedknowHtmlMetadataExtractorFactory extracts metadata from each article.
+ * The first choice is the RIS file, but if that doesn't exist, it uses this one
  */
 public class MedknowHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
   
-  static Logger log = Logger.getLogger(MedknowHtmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(MedknowHtmlMetadataExtractorFactory.class);
+  private static final String MEDKNOW_PUBNAME = "Medknow Publications";
+
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
@@ -64,7 +67,7 @@ public class MedknowHtmlMetadataExtractorFactory implements
     
     static {
       
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
@@ -79,9 +82,7 @@ public class MedknowHtmlMetadataExtractorFactory implements
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
-      tagMap.put("keywords",
-          new MetadataField(MetadataField.FIELD_KEYWORDS,
-              MetadataField.splitAt(",")));
+      tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
       tagMap.put("DC.Format", MetadataField.DC_FIELD_FORMAT);
       tagMap.put("DC.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
       tagMap.put("DC.Subject", MetadataField.DC_FIELD_SUBJECT);
@@ -109,6 +110,9 @@ public class MedknowHtmlMetadataExtractorFactory implements
           break;
         }
       }
+      
+      /* access_url and publisher all checked by BaseArticleMetadata against tdb */
+      am.putIfBetter(MetadataField.FIELD_PUBLISHER,MEDKNOW_PUBNAME);
       
       return am;
       
