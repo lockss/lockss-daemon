@@ -131,12 +131,12 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = conjuntura
 
-      au < ready ; 2004 ; 1 ; Conjuntura Internacional Volume 2004 ; 2004 ; >
-      au < ready ; 2005 ; 2 ; Conjuntura Internacional Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 3 ; Conjuntura Internacional Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 4 ; Conjuntura Internacional Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 5 ; Conjuntura Internacional Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 6 ; Conjuntura Internacional Volume 2009 ; 2009 ; >
+      au < releasing ; 2004 ; 1 ; Conjuntura Internacional Volume 2004 ; 2004 ; >
+      au < releasing ; 2005 ; 2 ; Conjuntura Internacional Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 3 ; Conjuntura Internacional Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 4 ; Conjuntura Internacional Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 5 ; Conjuntura Internacional Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 6 ; Conjuntura Internacional Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 7 ; Conjuntura Internacional Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 8 ; Conjuntura Internacional Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 9 ; Conjuntura Internacional Volume 2012 ; 2012 ; >
@@ -234,7 +234,7 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = economiaegestao
 
-      au < ready ; 2001 ; 1 ; Revista Economia & Gestão Volume 2001 ; 2001 ; >
+      au < releasing ; 2001 ; 1 ; Revista Economia & Gestão Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 2 ; Revista Economia & Gestão Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 3 ; Revista Economia & Gestão Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 4 ; Revista Economia & Gestão Volume 2004 ; 2004 ; >

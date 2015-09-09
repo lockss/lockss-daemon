@@ -39,12 +39,12 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
-    au < ready ; 2002 ; 2002 ; Revista de História Volume 2002 ; 2002 >
-    au < ready ; 2003 ; 2003 ; Revista de História Volume 2003 ; 2003 >
-    au < ready ; 2004 ; 2004 ; Revista de História Volume 2004 ; 2004 >
-    au < ready ; 2005 ; 2005 ; Revista de História Volume 2005 ; 2005 >
-    au < ready ; 2006 ; 2006 ; Revista de História Volume 2006 ; 2006 >
-    au < ready ; 2007 ; 2007 ; Revista de História Volume 2007 ; 2007 >
+    au < releasing ; 2002 ; 2002 ; Revista de História Volume 2002 ; 2002 >
+    au < releasing ; 2003 ; 2003 ; Revista de História Volume 2003 ; 2003 >
+    au < releasing ; 2004 ; 2004 ; Revista de História Volume 2004 ; 2004 >
+    au < releasing ; 2005 ; 2005 ; Revista de História Volume 2005 ; 2005 >
+    au < releasing ; 2006 ; 2006 ; Revista de História Volume 2006 ; 2006 >
+    au < releasing ; 2007 ; 2007 ; Revista de História Volume 2007 ; 2007 >
     au < released ; 2008 ; 2008 ; Revista de História Volume 2008 ; 2008 >
     au < released ; 2009 ; 2009 ; Revista de História Volume 2009 ; 2009 >
     au < released ; 2010 ; 2010 ; Revista de História Volume 2010 ; 2010 >
@@ -67,12 +67,12 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = estic
 
-    au < ready ; 2003 ; 8 ; Estílos da Clínica Volume 8 ; 2003 >
-    au < ready ; 2004 ; 9 ; Estílos da Clínica Volume 9 ; 2004 >
-    au < ready ; 2005 ; 10 ; Estílos da Clínica Volume 10 ; 2005 >
-    au < ready ; 2006 ; 11 ; Estílos da Clínica Volume 11 ; 2006 >
-    au < ready ; 2007 ; 12 ; Estílos da Clínica Volume 12 ; 2007 >
-    au < ready ; 2008 ; 13 ; Estílos da Clínica Volume 13 ; 2008 >
+    au < releasing ; 2003 ; 8 ; Estílos da Clínica Volume 8 ; 2003 >
+    au < releasing ; 2004 ; 9 ; Estílos da Clínica Volume 9 ; 2004 >
+    au < releasing ; 2005 ; 10 ; Estílos da Clínica Volume 10 ; 2005 >
+    au < releasing ; 2006 ; 11 ; Estílos da Clínica Volume 11 ; 2006 >
+    au < releasing ; 2007 ; 12 ; Estílos da Clínica Volume 12 ; 2007 >
+    au < releasing ; 2008 ; 13 ; Estílos da Clínica Volume 13 ; 2008 >
     au < released ; 2009 ; 14 ; Estílos da Clínica Volume 14 ; 2009 >
     au < released ; 2010 ; 15 ; Estílos da Clínica Volume 15 ; 2010 >
     au < released ; 2011 ; 16 ; Estílos da Clínica Volume 16 ; 2011 >
