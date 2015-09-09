@@ -68,7 +68,7 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tag("aside"),
     // Do not include right-sidebar in hash; common with APS & OUP
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-    // prev/next pager can change (in crawl filter)
+    // prev/next pager can change
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
     
     // Publisher adding/updating meta tags
