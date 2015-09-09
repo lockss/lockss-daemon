@@ -55,28 +55,6 @@ public class BMJDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFact
   
   private static final Logger log = Logger.getLogger(BMJDrupalHtmlHashFilterFactory.class);
   
-  // XXX remove bodyTag when 1.69 is released
-  /**
-   * body tag.  Registered with PrototypicalNodeFactory to cause body
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @see HtmlFilterInputStream#makeParser()
-   */
-  public static class bodyTag extends CompositeTag {
-    
-    private static final long serialVersionUID = 1L;
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"body"};
-    
-    @Override
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
   // XXX remove artTag when 1.69 is released
   /**
    * article tag.  Registered with PrototypicalNodeFactory to cause article
@@ -164,7 +142,7 @@ public class BMJDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFact
     
     InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
     // XXX remove registerTag when 1.69 is released
-    ((HtmlFilterInputStream) filtered).registerTag(new bodyTag()).registerTag(new artTag());
+    ((HtmlFilterInputStream) filtered).registerTag(new artTag());
     
     return new HtmlFilterInputStream(filtered, encoding, xformHref);
   }
