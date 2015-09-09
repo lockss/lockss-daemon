@@ -78,7 +78,8 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       " Some content" +
       "</a>" +
       "            </div>\n" + 
-      "          </div>\n" + 
+      "          </div>\n" +
+      "          <div>removed\n</div>\n" + 
       "        </article>\n" + 
       "      <div class=\"right-nav col-xs-12 col-sm-4 col-md-4 col-lg-4\">\n" + 
       "        <aside>\n" + 
@@ -117,7 +118,7 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       "<section class=\"block block-system clearfix\" id=\"block-system-main\">" + 
       "<div id=\"issue-toc-page\" class=\"panel-display\">" + 
       "<div class=\"row\">" + 
-//      "<article>" + 
+      "<article>" + 
       "<div class=\"panel-pane pane-highwire-markup\">" +
       "<div class=\"highwire-markup\">\n" +
       "<a href=\"http://www.bmj.com/content/350/bmj.g7811\" target=\"_blank\">" + 
@@ -125,7 +126,7 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       "</a>" +
       "            </div>" + 
       "</div>" + 
-//      "</article>" +
+      "</article>" +
       "</div></div></section></div></div></div></div>" +
       "</body>\n" +
       "</html>\n";

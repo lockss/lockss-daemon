@@ -47,13 +47,14 @@ public class BMJDrupalUrlNormalizer extends HighWireDrupalUrlNormalizer {
   // http://static.www.bmj.com/content/bmj/347/bmj.f6041/F1.large.jpg becomes
   // http://www.bmj.com/content/bmj/347/bmj.f6041/F1.large.jpg
   public static final String BMJ_UN_STATIC = "/static.";
-  public static final Pattern BMJ_UN_PREFIX_PAT = Pattern.compile("static[^/]*[.]www[.]bmj[.]com/content/");
+  public static final String BMJ_UN_PARTIAL = "bmj.com/content/";
   public static final String BMJ_UN_REPLACE = "www.bmj.com/content/";
+  public static final Pattern BMJ_UN_PREFIX_PAT = Pattern.compile("static[^/]*[.]bmj[.]com/content/");
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     
-    if (url.contains(BMJ_UN_STATIC) && url.contains(BMJ_UN_REPLACE)) {
+    if (url.contains(BMJ_UN_STATIC) && url.contains(BMJ_UN_PARTIAL)) {
       Matcher mat = BMJ_UN_PREFIX_PAT.matcher(url);
       if (mat.find()) {
         url = mat.replaceFirst(BMJ_UN_REPLACE);

@@ -92,7 +92,7 @@ public class BMJDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFact
                 if (ha != null) {
                   String url = ha.getValue();
                   if (url.contains(BMJDrupalUrlNormalizer.BMJ_UN_STATIC) && 
-                      url.contains(BMJDrupalUrlNormalizer.BMJ_UN_REPLACE)) {
+                      url.contains(BMJDrupalUrlNormalizer.BMJ_UN_PARTIAL)) {
                     Matcher mat = BMJDrupalUrlNormalizer.BMJ_UN_PREFIX_PAT.matcher(url);
                     if (mat.find()) {
                       url = mat.replaceFirst(BMJDrupalUrlNormalizer.BMJ_UN_REPLACE);

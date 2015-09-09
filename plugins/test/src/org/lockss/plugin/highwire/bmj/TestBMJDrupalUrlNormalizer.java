@@ -83,7 +83,7 @@ public class TestBMJDrupalUrlNormalizer extends LockssTestCase {
     assertEquals("http://www.bmj.com/content/304/2/H253",
         normalizer.normalizeUrl("http://static.beta.www.bmj.com/content/304/2/H253", null));
     
-    assertEquals("http://static.beta.ww.bmj.com/content/304/2/H253",
+    assertEquals("http://www.bmj.com/content/304/2/H253",
         normalizer.normalizeUrl("http://static.beta.ww.bmj.com/content/304/2/H253", null));
     
     assertEquals("http://staticbeta.www.bmj.com/content/304/2/H253",
