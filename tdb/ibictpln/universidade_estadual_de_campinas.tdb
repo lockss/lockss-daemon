@@ -14,24 +14,47 @@
       issn = 1676-2592
     >
 
+    {
+    param[base_url] = https://www.fe.unicamp.br/revistas/ged/
+    param[journal_id] = etd
+
+    au < exists ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 ; >
+    au < exists ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) ; 2000 ; >
+    au < exists ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) ; 2001 ; >
+    au < exists ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) ; 2002 ; >
+    au < exists ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) ; 2003 ; >
+    au < exists ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) ; 2004 ; >
+    au < exists ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) ; 2005 ; >
+    au < exists ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) ; 2006 ; >
+    au < exists ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) ; 2007 ; >
+    au < exists ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) ; 2008 ; >
+    au < exists ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) ; 2009 ; >
+    au < exists ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) ; 2010 ; >
+    au < exists ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) ; 2011 ; >
+    au < exists ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 ; >
+    au < exists ; 2013 ; 15 ; ETD - Educação Temática Digital Volume 15 ; 2013 ; >
+    au < exists ; 2014 ; 16 ; ETD - Educação Temática Digital Volume 16 ; 2014 ; >
+    au < exists ; 2015 ; 17 ; ETD - Educação Temática Digital Volume 17 ; 2015 ; >
+    }
+    {
     param[base_url] = http://www.fae.unicamp.br/revista/
     param[journal_id] = etd
 
-    au < released ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 ; >
-    au < released ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) ; 2000 ; >
-    au < released ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) ; 2001 ; >
-    au < released ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) ; 2002 ; >
-    au < released ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) ; 2003 ; >
-    au < released ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) ; 2004 ; >
-    au < released ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) ; 2005 ; >
-    au < released ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) ; 2006 ; >
-    au < released ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) ; 2007 ; >
-    au < released ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) ; 2008 ; >
-    au < released ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) ; 2009 ; >
-    au < released ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) ; 2010 ; >
-    au < released ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) ; 2011 ; >
-    au < released ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 ; >
-
+    au < superseded ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) [superseded] ; 1999 ; journal moved >
+    au < superseded ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) [superseded] ; 2000 ; journal moved >
+    au < superseded ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) [superseded] ; 2001 ; journal moved >
+    au < superseded ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) [superseded] ; 2002 ; journal moved >
+    au < superseded ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) [superseded] ; 2003 ; journal moved >
+    au < superseded ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) [superseded] ; 2004 ; journal moved >
+    au < superseded ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) [superseded] ; 2005 ; journal moved >
+    au < superseded ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) [superseded] ; 2006 ; journal moved >
+    au < superseded ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) [superseded] ; 2007 ; journal moved >
+    au < superseded ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) [superseded] ; 2008 ; journal moved >
+    au < superseded ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) [superseded] ; 2009 ; journal moved >
+    au < superseded ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) [superseded] ; 2010 ; journal moved >
+    au < superseded ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) [superseded] ; 2011 ; journal moved >
+    au < superseded ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 [superseded] ; journal moved >
+    }
   }
 
   {
