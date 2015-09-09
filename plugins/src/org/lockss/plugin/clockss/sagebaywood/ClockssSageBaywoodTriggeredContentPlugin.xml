@@ -12,15 +12,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Sage-Baywood Triggered Content Plugin (CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"SAGE Publications Baywood Publishing Company Triggered Content Plugin (CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Sage-Baywood Triggered Content Plugin (CLOCKSS)</string>
+    <string>SAGE Publications Baywood Publishing Company Triggered Content Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
