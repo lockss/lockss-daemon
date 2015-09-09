@@ -89,7 +89,7 @@
       au < released ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 >
       au < released ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 >
       au < manifest ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 >
-      au < ready ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 >
+      au < releasing ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 >
       au < expected ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 >
     
    }
@@ -319,7 +319,7 @@
       au < released ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 >
       au < released ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 >
       au < manifest ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 >
-      au < ready ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
+      au < releasing ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
       au < manifest ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
     
    }
@@ -815,7 +815,7 @@
       au < released ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 >
       au < released ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
       au < manifest ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
-      au < ready ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
+      au < releasing ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
       au < manifest ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
     
    }
@@ -852,7 +852,7 @@
       param[home_url] = http://www.geothermal-energy-science.net/
 
       au < manifest ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
-      au < ready ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
+      au < releasing ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
       au < manifest ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 >
     
    }
@@ -1031,27 +1031,27 @@
       au < manifest ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B6 ; XXXIX-B6 >
       au < manifest ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B7 ; XXXIX-B7 >
       au < manifest ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B8 ; XXXIX-B8 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W1 ; XL-1-W1 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W2 ; XL-1-W2 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W3 ; XL-1-W3 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W1 ; XL-2-W1 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W1 ; XL-1-W1 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W2 ; XL-1-W2 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W3 ; XL-1-W3 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W1 ; XL-2-W1 >
       au < manifest ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W2 ; XL-2-W2 >
       au < manifest ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W1 ; XL-4-W1 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W2 ; XL-4-W2 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W3 ; XL-4-W3 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W2 ; XL-4-W2 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W3 ; XL-4-W3 >
       au < manifest ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W4 ; XL-4-W4 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W1 ; XL-5-W1 >
-      au < ready ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W3 ; XL-5-W3 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W1 ; XL-5-W1 >
+      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W3 ; XL-5-W3 >
       au < manifest ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W1 ; XL-7-W1 >
       au < manifest ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W2 ; XL-7-W2 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-3/W1 ; XL-3-W1 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-5/W2 ; XL-5-W2 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-1 ; XL-1 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-2 ; XL-2 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-3 ; XL-3 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-4 ; XL-4 >
-      au < ready ; 2014 ; 2014 ; ISPRS Archives Volume XL-5 ; XL-5 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-3/W1 ; XL-3-W1 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-5/W2 ; XL-5-W2 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-1 ; XL-1 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-2 ; XL-2 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-3 ; XL-3 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-4 ; XL-4 >
+      au < releasing ; 2014 ; 2014 ; ISPRS Archives Volume XL-5 ; XL-5 >
       au < manifest ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 >
       au < manifest ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 >
       au < manifest ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 >
