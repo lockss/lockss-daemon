@@ -39,14 +39,14 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[journal_id] = BWSH
 
-    au < testing ; exists ; 1999-2002 ; International Journal of Self Help and Self Care Volume 1 ; 1 >
-    au < testing ; exists ; 2003-2004 ; International Journal of Self Help and Self Care Volume 2 ; 2 >
-    au < testing ; exists ; 2005 ; International Journal of Self Help and Self Care Volume 3 ; 3 >
-    au < testing ; exists ; 2005-2006 ; International Journal of Self Help and Self Care Volume 4 ; 4 >
-    au < testing ; exists ; 2006-2007 ; International Journal of Self Help and Self Care Volume 5 ; 5 >
-    au < testing ; exists ; 2012 ; International Journal of Self Help and Self Care Volume 6 ; 6 >
-    au < testing ; exists ; 2013 ; International Journal of Self Help and Self Care Volume 7 ; 7 >
-    au < testing ; exists ; 2014 ; International Journal of Self Help and Self Care Volume 8 ; 8 >
+    au < ready ; exists ; 1999-2002 ; International Journal of Self Help and Self Care Volume 1 ; 1 >
+    au < ready ; exists ; 2003-2004 ; International Journal of Self Help and Self Care Volume 2 ; 2 >
+    au < ready ; exists ; 2005 ; International Journal of Self Help and Self Care Volume 3 ; 3 >
+    au < ready ; exists ; 2005-2006 ; International Journal of Self Help and Self Care Volume 4 ; 4 >
+    au < ready ; exists ; 2006-2007 ; International Journal of Self Help and Self Care Volume 5 ; 5 >
+    au < ready ; exists ; 2012 ; International Journal of Self Help and Self Care Volume 6 ; 6 >
+    au < ready ; exists ; 2013 ; International Journal of Self Help and Self Care Volume 7 ; 7 >
+    au < ready ; exists ; 2014 ; International Journal of Self Help and Self Care Volume 8 ; 8 >
   
   }
 
@@ -63,38 +63,38 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[journal_id] = BWCN
 
-    au < testing ; exists ; 1972 ; Journal of Collective Negotiations Volume 1 ; 1 >
-    au < testing ; exists ; 1973 ; Journal of Collective Negotiations Volume 2 ; 2 >
-    au < testing ; exists ; 1974 ; Journal of Collective Negotiations Volume 3 ; 3 >
-    au < testing ; exists ; 1975 ; Journal of Collective Negotiations Volume 4 ; 4 >
-    au < testing ; exists ; 1976 ; Journal of Collective Negotiations Volume 5 ; 5 >
-    au < testing ; exists ; 1977 ; Journal of Collective Negotiations Volume 6 ; 6 >
-    au < testing ; exists ; 1978 ; Journal of Collective Negotiations Volume 7 ; 7 >
-    au < testing ; exists ; 1979 ; Journal of Collective Negotiations Volume 8 ; 8 >
-    au < testing ; exists ; 1980 ; Journal of Collective Negotiations Volume 9 ; 9 >
-    au < testing ; exists ; 1981 ; Journal of Collective Negotiations Volume 10 ; 10 >
-    au < testing ; exists ; 1982 ; Journal of Collective Negotiations Volume 11 ; 11 >
-    au < testing ; exists ; 1983 ; Journal of Collective Negotiations Volume 12 ; 12 >
-    au < testing ; exists ; 1984 ; Journal of Collective Negotiations Volume 13 ; 13 >
-    au < testing ; exists ; 1985 ; Journal of Collective Negotiations Volume 14 ; 14 >
-    au < testing ; exists ; 1986 ; Journal of Collective Negotiations Volume 15 ; 15 >
-    au < testing ; exists ; 1987 ; Journal of Collective Negotiations Volume 16 ; 16 >
-    au < testing ; exists ; 1988 ; Journal of Collective Negotiations Volume 17 ; 17 >
-    au < testing ; exists ; 1989 ; Journal of Collective Negotiations Volume 18 ; 18 >
-    au < testing ; exists ; 1990 ; Journal of Collective Negotiations Volume 19 ; 19 >
-    au < testing ; exists ; 1991 ; Journal of Collective Negotiations Volume 20 ; 20 >
-    au < testing ; exists ; 1992 ; Journal of Collective Negotiations Volume 21 ; 21 >
-    au < testing ; exists ; 1993 ; Journal of Collective Negotiations Volume 22 ; 22 >
-    au < testing ; exists ; 1994 ; Journal of Collective Negotiations Volume 23 ; 23 >
-    au < testing ; exists ; 1995 ; Journal of Collective Negotiations Volume 24 ; 24 >
-    au < testing ; exists ; 1996 ; Journal of Collective Negotiations Volume 25 ; 25 >
-    au < testing ; exists ; 1997 ; Journal of Collective Negotiations Volume 26 ; 26 >
-    au < testing ; exists ; 1998 ; Journal of Collective Negotiations Volume 27 ; 27 >
-    au < testing ; exists ; 1999 ; Journal of Collective Negotiations Volume 28 ; 28 >
-    au < testing ; exists ; 2000 ; Journal of Collective Negotiations Volume 29 ; 29 >
-    au < testing ; exists ; 2003-2005 ; Journal of Collective Negotiations Volume 30 ; 30 >
-    au < testing ; exists ; 2006-2007 ; Journal of Collective Negotiations Volume 31 ; 31 >
-    au < testing ; exists ; 2008 ; Journal of Collective Negotiations Volume 32 ; 32 >
+    au < ready ; exists ; 1972 ; Journal of Collective Negotiations Volume 1 ; 1 >
+    au < ready ; exists ; 1973 ; Journal of Collective Negotiations Volume 2 ; 2 >
+    au < ready ; exists ; 1974 ; Journal of Collective Negotiations Volume 3 ; 3 >
+    au < ready ; exists ; 1975 ; Journal of Collective Negotiations Volume 4 ; 4 >
+    au < ready ; exists ; 1976 ; Journal of Collective Negotiations Volume 5 ; 5 >
+    au < ready ; exists ; 1977 ; Journal of Collective Negotiations Volume 6 ; 6 >
+    au < ready ; exists ; 1978 ; Journal of Collective Negotiations Volume 7 ; 7 >
+    au < ready ; exists ; 1979 ; Journal of Collective Negotiations Volume 8 ; 8 >
+    au < ready ; exists ; 1980 ; Journal of Collective Negotiations Volume 9 ; 9 >
+    au < ready ; exists ; 1981 ; Journal of Collective Negotiations Volume 10 ; 10 >
+    au < ready ; exists ; 1982 ; Journal of Collective Negotiations Volume 11 ; 11 >
+    au < ready ; exists ; 1983 ; Journal of Collective Negotiations Volume 12 ; 12 >
+    au < ready ; exists ; 1984 ; Journal of Collective Negotiations Volume 13 ; 13 >
+    au < ready ; exists ; 1985 ; Journal of Collective Negotiations Volume 14 ; 14 >
+    au < ready ; exists ; 1986 ; Journal of Collective Negotiations Volume 15 ; 15 >
+    au < ready ; exists ; 1987 ; Journal of Collective Negotiations Volume 16 ; 16 >
+    au < ready ; exists ; 1988 ; Journal of Collective Negotiations Volume 17 ; 17 >
+    au < ready ; exists ; 1989 ; Journal of Collective Negotiations Volume 18 ; 18 >
+    au < ready ; exists ; 1990 ; Journal of Collective Negotiations Volume 19 ; 19 >
+    au < ready ; exists ; 1991 ; Journal of Collective Negotiations Volume 20 ; 20 >
+    au < ready ; exists ; 1992 ; Journal of Collective Negotiations Volume 21 ; 21 >
+    au < ready ; exists ; 1993 ; Journal of Collective Negotiations Volume 22 ; 22 >
+    au < ready ; exists ; 1994 ; Journal of Collective Negotiations Volume 23 ; 23 >
+    au < ready ; exists ; 1995 ; Journal of Collective Negotiations Volume 24 ; 24 >
+    au < ready ; exists ; 1996 ; Journal of Collective Negotiations Volume 25 ; 25 >
+    au < ready ; exists ; 1997 ; Journal of Collective Negotiations Volume 26 ; 26 >
+    au < ready ; exists ; 1998 ; Journal of Collective Negotiations Volume 27 ; 27 >
+    au < ready ; exists ; 1999 ; Journal of Collective Negotiations Volume 28 ; 28 >
+    au < ready ; exists ; 2000 ; Journal of Collective Negotiations Volume 29 ; 29 >
+    au < ready ; exists ; 2003-2005 ; Journal of Collective Negotiations Volume 30 ; 30 >
+    au < ready ; exists ; 2006-2007 ; Journal of Collective Negotiations Volume 31 ; 31 >
+    au < ready ; exists ; 2008 ; Journal of Collective Negotiations Volume 32 ; 32 >
 
 
   }
@@ -112,39 +112,39 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[journal_id] = BWES
       
-    au < testing ; exists ; 1971 ; Journal of Environmental Systems Volume 1 ; 1 >
-    au < testing ; exists ; 1972 ; Journal of Environmental Systems Volume 2 ; 2 >
-    au < testing ; exists ; 1973 ; Journal of Environmental Systems Volume 3 ; 3 >
-    au < testing ; exists ; 1974 ; Journal of Environmental Systems Volume 4 ; 4 >
-    au < testing ; exists ; 1975 ; Journal of Environmental Systems Volume 5 ; 5 >
-    au < testing ; exists ; 1976-1977 ; Journal of Environmental Systems Volume 6 ; 6 >
-    au < testing ; exists ; 1977-1978 ; Journal of Environmental Systems Volume 7 ; 7 >
-    au < testing ; exists ; 1978-1979 ; Journal of Environmental Systems Volume 8 ; 8 >
-    au < testing ; exists ; 1979-1980 ; Journal of Environmental Systems Volume 9 ; 9 >
-    au < testing ; exists ; 1980-1981 ; Journal of Environmental Systems Volume 10 ; 10 >
-    au < testing ; exists ; 1981-1982 ; Journal of Environmental Systems Volume 11 ; 11 >
-    au < testing ; exists ; 1982-1983 ; Journal of Environmental Systems Volume 12 ; 12 >
-    au < testing ; exists ; 1983-1984 ; Journal of Environmental Systems Volume 13 ; 13 >
-    au < testing ; exists ; 1985-1986 ; Journal of Environmental Systems Volume 14 ; 14 >
-    au < testing ; exists ; 1986-1987 ; Journal of Environmental Systems Volume 15 ; 15 >
-    au < testing ; exists ; 1987-1988 ; Journal of Environmental Systems Volume 16 ; 16 >
-    au < testing ; exists ; 1988-1989 ; Journal of Environmental Systems Volume 17 ; 17 >
-    au < testing ; exists ; 1989-1990 ; Journal of Environmental Systems Volume 18 ; 18 >
-    au < testing ; exists ; 1990-1991 ; Journal of Environmental Systems Volume 19 ; 19 >
-    au < testing ; exists ; 1991-1992 ; Journal of Environmental Systems Volume 20 ; 20 >
-    au < testing ; exists ; 1992-1993 ; Journal of Environmental Systems Volume 21 ; 21 >
-    au < testing ; exists ; 1993-1994 ; Journal of Environmental Systems Volume 22 ; 22 >
-    au < testing ; exists ; 1994-1995 ; Journal of Environmental Systems Volume 23 ; 23 >
-    au < testing ; exists ; 1995-1996 ; Journal of Environmental Systems Volume 24 ; 24 >
-    au < testing ; exists ; 1996-1997 ; Journal of Environmental Systems Volume 25 ; 25 >
-    au < testing ; exists ; 1997-1998 ; Journal of Environmental Systems Volume 26 ; 26 >
-    au < testing ; exists ; 1999-2000 ; Journal of Environmental Systems Volume 27 ; 27 >
-    au < testing ; exists ; 2000-2001 ; Journal of Environmental Systems Volume 28 ; 28 >
-    au < testing ; exists ; 2002-2003 ; Journal of Environmental Systems Volume 29 ; 29 >
-    au < testing ; exists ; 2003-2004 ; Journal of Environmental Systems Volume 30 ; 30 >
-    au < testing ; exists ; 2004-2005 ; Journal of Environmental Systems Volume 31 ; 31 >
-    au < testing ; exists ; 2005-2006 ; Journal of Environmental Systems Volume 32 ; 32 >
-    au < testing ; exists ; 2011 ; Journal of Environmental Systems Volume 33 ; 33 >
+    au < ready ; exists ; 1971 ; Journal of Environmental Systems Volume 1 ; 1 >
+    au < ready ; exists ; 1972 ; Journal of Environmental Systems Volume 2 ; 2 >
+    au < ready ; exists ; 1973 ; Journal of Environmental Systems Volume 3 ; 3 >
+    au < ready ; exists ; 1974 ; Journal of Environmental Systems Volume 4 ; 4 >
+    au < ready ; exists ; 1975 ; Journal of Environmental Systems Volume 5 ; 5 >
+    au < ready ; exists ; 1976-1977 ; Journal of Environmental Systems Volume 6 ; 6 >
+    au < ready ; exists ; 1977-1978 ; Journal of Environmental Systems Volume 7 ; 7 >
+    au < ready ; exists ; 1978-1979 ; Journal of Environmental Systems Volume 8 ; 8 >
+    au < ready ; exists ; 1979-1980 ; Journal of Environmental Systems Volume 9 ; 9 >
+    au < ready ; exists ; 1980-1981 ; Journal of Environmental Systems Volume 10 ; 10 >
+    au < ready ; exists ; 1981-1982 ; Journal of Environmental Systems Volume 11 ; 11 >
+    au < ready ; exists ; 1982-1983 ; Journal of Environmental Systems Volume 12 ; 12 >
+    au < ready ; exists ; 1983-1984 ; Journal of Environmental Systems Volume 13 ; 13 >
+    au < ready ; exists ; 1985-1986 ; Journal of Environmental Systems Volume 14 ; 14 >
+    au < ready ; exists ; 1986-1987 ; Journal of Environmental Systems Volume 15 ; 15 >
+    au < ready ; exists ; 1987-1988 ; Journal of Environmental Systems Volume 16 ; 16 >
+    au < ready ; exists ; 1988-1989 ; Journal of Environmental Systems Volume 17 ; 17 >
+    au < ready ; exists ; 1989-1990 ; Journal of Environmental Systems Volume 18 ; 18 >
+    au < ready ; exists ; 1990-1991 ; Journal of Environmental Systems Volume 19 ; 19 >
+    au < ready ; exists ; 1991-1992 ; Journal of Environmental Systems Volume 20 ; 20 >
+    au < ready ; exists ; 1992-1993 ; Journal of Environmental Systems Volume 21 ; 21 >
+    au < ready ; exists ; 1993-1994 ; Journal of Environmental Systems Volume 22 ; 22 >
+    au < ready ; exists ; 1994-1995 ; Journal of Environmental Systems Volume 23 ; 23 >
+    au < ready ; exists ; 1995-1996 ; Journal of Environmental Systems Volume 24 ; 24 >
+    au < ready ; exists ; 1996-1997 ; Journal of Environmental Systems Volume 25 ; 25 >
+    au < ready ; exists ; 1997-1998 ; Journal of Environmental Systems Volume 26 ; 26 >
+    au < ready ; exists ; 1999-2000 ; Journal of Environmental Systems Volume 27 ; 27 >
+    au < ready ; exists ; 2000-2001 ; Journal of Environmental Systems Volume 28 ; 28 >
+    au < ready ; exists ; 2002-2003 ; Journal of Environmental Systems Volume 29 ; 29 >
+    au < ready ; exists ; 2003-2004 ; Journal of Environmental Systems Volume 30 ; 30 >
+    au < ready ; exists ; 2004-2005 ; Journal of Environmental Systems Volume 31 ; 31 >
+    au < ready ; exists ; 2005-2006 ; Journal of Environmental Systems Volume 32 ; 32 >
+    au < ready ; exists ; 2011 ; Journal of Environmental Systems Volume 33 ; 33 >
     
   }    
   
@@ -161,7 +161,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[journal_id] = BWWR
     
-    au < testing ; exists ; 2008 ; Journal of Workplace Rights Volume 13 ; 13 >
+    au < ready ; exists ; 2008 ; Journal of Workplace Rights Volume 13 ; 13 >
     
   }
 
@@ -178,18 +178,18 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[journal_id] = BWIE
     
-    au < testing ; exists ; 1992-1993 ; Journal of Individual Workplace Rights Volume 1 ; 1 >
-    au < testing ; exists ; 1993-1994 ; Journal of Individual Workplace Rights Volume 2 ; 2 >
-    au < testing ; exists ; 1994-1995 ; Journal of Individual Workplace Rights Volume 3 ; 3 >
-    au < testing ; exists ; 1995-1996 ; Journal of Individual Workplace Rights Volume 4 ; 4 >
-    au < testing ; exists ; 1996-1997 ; Journal of Individual Workplace Rights Volume 5 ; 5 >
-    au < testing ; exists ; 1997-1998 ; Journal of Individual Workplace Rights Volume 6 ; 6 >
-    au < testing ; exists ; 1998-1999 ; Journal of Individual Workplace Rights Volume 7 ; 7 >
-    au < testing ; exists ; 1999-2000 ; Journal of Individual Workplace Rights Volume 8 ; 8 >
-    au < testing ; exists ; 1999-2000 ; Journal of Individual Workplace Rights Volume 9 ; 9 >
-    au < testing ; exists ; 2001-2003 ; Journal of Individual Workplace Rights Volume 10 ; 10 >
-    au < testing ; exists ; 2003-2005 ; Journal of Individual Workplace Rights Volume 11 ; 11 >
-    au < testing ; exists ; 2005-2007 ; Journal of Individual Workplace Rights Volume 12 ; 12 >
+    au < ready ; exists ; 1992-1993 ; Journal of Individual Workplace Rights Volume 1 ; 1 >
+    au < ready ; exists ; 1993-1994 ; Journal of Individual Workplace Rights Volume 2 ; 2 >
+    au < ready ; exists ; 1994-1995 ; Journal of Individual Workplace Rights Volume 3 ; 3 >
+    au < ready ; exists ; 1995-1996 ; Journal of Individual Workplace Rights Volume 4 ; 4 >
+    au < ready ; exists ; 1996-1997 ; Journal of Individual Workplace Rights Volume 5 ; 5 >
+    au < ready ; exists ; 1997-1998 ; Journal of Individual Workplace Rights Volume 6 ; 6 >
+    au < ready ; exists ; 1998-1999 ; Journal of Individual Workplace Rights Volume 7 ; 7 >
+    au < ready ; exists ; 1999-2000 ; Journal of Individual Workplace Rights Volume 8 ; 8 >
+    au < ready ; exists ; 1999-2000 ; Journal of Individual Workplace Rights Volume 9 ; 9 >
+    au < ready ; exists ; 2001-2003 ; Journal of Individual Workplace Rights Volume 10 ; 10 >
+    au < ready ; exists ; 2003-2005 ; Journal of Individual Workplace Rights Volume 11 ; 11 >
+    au < ready ; exists ; 2005-2007 ; Journal of Individual Workplace Rights Volume 12 ; 12 >
 
     
   }
