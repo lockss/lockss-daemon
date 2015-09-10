@@ -322,6 +322,12 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = logos
 
+      au < exists ; 1990 ; 1 ; Logos: Comunicação e Universidade Volume 1990 ; 1990 ; >
+      au < exists ; 1995 ; 2 ; Logos: Comunicação e Universidade Volume 1995 ; 1995 ; >
+      au < exists ; 1996 ; 3 ; Logos: Comunicação e Universidade Volume 1996 ; 1996 ; >
+      au < exists ; 1997 ; 4 ; Logos: Comunicação e Universidade Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 5 ; Logos: Comunicação e Universidade Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 6 ; Logos: Comunicação e Universidade Volume 1999 ; 1999 ; >
       au < released ; 2000 ; 7 ; Logos: Comunicação e Universidade Volume 2000 ; 2000 ; >
       au < released ; 2001 ; 8 ; Logos: Comunicação e Universidade Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 9 ; Logos: Comunicação e Universidade Volume 2002 ; 2002 ; >
