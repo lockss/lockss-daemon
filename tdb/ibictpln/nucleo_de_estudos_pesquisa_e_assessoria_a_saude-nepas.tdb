@@ -59,27 +59,36 @@
       param[base_url] = http://www.portalnepas.org.br/
       param[journal_id] = amabc
 
-      au < manifest ; 1987 ; 1 ; Arquivos Médicos do ABC Volume 1987 ; 1987 >
-      au < manifest ; 1988 ; 2 ; Arquivos Médicos do ABC Volume 1988 ; 1988 >
-      au < manifest ; 1989 ; 3 ; Arquivos Médicos do ABC Volume 1989 ; 1989 >
-      au < manifest ; 1990 ; 4 ; Arquivos Médicos do ABC Volume 1990 ; 1990 >
-      au < manifest ; 1991 ; 5 ; Arquivos Médicos do ABC Volume 1991 ; 1991 >
-      au < manifest ; 1992 ; 6 ; Arquivos Médicos do ABC Volume 1992 ; 1992 >
-      au < manifest ; 1993 ; 7 ; Arquivos Médicos do ABC Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; 8 ; Arquivos Médicos do ABC Volume 1994 ; 1994 >
-      au < manifest ; 1995 ; 9 ; Arquivos Médicos do ABC Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; 10 ; Arquivos Médicos do ABC Volume 1996 ; 1996 >
-      au < manifest ; 1997 ; 11 ; Arquivos Médicos do ABC Volume 1997 ; 1997 >
-      au < manifest ; 1998 ; 12 ; Arquivos Médicos do ABC Volume 1998 ; 1998 >
-      au < manifest ; 1999 ; 13 ; Arquivos Médicos do ABC Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; 14 ; Arquivos Médicos do ABC Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 15 ; Arquivos Médicos do ABC Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 16 ; Arquivos Médicos do ABC Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 17 ; Arquivos Médicos do ABC Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 18 ; Arquivos Médicos do ABC Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 19 ; Arquivos Médicos do ABC Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 20 ; Arquivos Médicos do ABC Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 21 ; Arquivos Médicos do ABC Volume 2007 ; 2007 >
+      au < exists ; 1978 ; 1 ; Arquivos Médicos do ABC Volume 1978 ; 1978 >
+      au < exists ; 1979 ; 2 ; Arquivos Médicos do ABC Volume 1979 ; 1979 >
+      au < exists ; 1980 ; 3 ; Arquivos Médicos do ABC Volume 1980 ; 1980 >
+      au < exists ; 1981 ; 4 ; Arquivos Médicos do ABC Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 5 ; Arquivos Médicos do ABC Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 6 ; Arquivos Médicos do ABC Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 7 ; Arquivos Médicos do ABC Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 8 ; Arquivos Médicos do ABC Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 9 ; Arquivos Médicos do ABC Volume 1986 ; 1986 >
+      au < manifest ; 1987 ; 10 ; Arquivos Médicos do ABC Volume 1987 ; 1987 >
+      au < manifest ; 1988 ; 11 ; Arquivos Médicos do ABC Volume 1988 ; 1988 >
+      au < manifest ; 1989 ; 12 ; Arquivos Médicos do ABC Volume 1989 ; 1989 >
+      au < manifest ; 1990 ; 13 ; Arquivos Médicos do ABC Volume 1990 ; 1990 >
+      au < manifest ; 1991 ; 14 ; Arquivos Médicos do ABC Volume 1991 ; 1991 >
+      au < manifest ; 1992 ; 15 ; Arquivos Médicos do ABC Volume 1992 ; 1992 >
+      au < manifest ; 1993 ; 16 ; Arquivos Médicos do ABC Volume 1993 ; 1993 >
+      au < manifest ; 1994 ; 17 ; Arquivos Médicos do ABC Volume 1994 ; 1994 >
+      au < manifest ; 1995 ; 18 ; Arquivos Médicos do ABC Volume 1995 ; 1995 >
+      au < manifest ; 1996 ; 19 ; Arquivos Médicos do ABC Volume 1996 ; 1996 >
+      au < manifest ; 1997 ; 20 ; Arquivos Médicos do ABC Volume 1997 ; 1997 >
+      au < manifest ; 1998 ; 21 ; Arquivos Médicos do ABC Volume 1998 ; 1998 >
+      au < manifest ; 1999 ; 22 ; Arquivos Médicos do ABC Volume 1999 ; 1999 >
+      au < manifest ; 2000 ; 23 ; Arquivos Médicos do ABC Volume 2000 ; 2000 >
+      au < manifest ; 2001 ; 24 ; Arquivos Médicos do ABC Volume 2001 ; 2001 >
+      au < manifest ; 2002 ; 25 ; Arquivos Médicos do ABC Volume 2002 ; 2002 >
+      au < manifest ; 2003 ; 26 ; Arquivos Médicos do ABC Volume 2003 ; 2003 >
+      au < manifest ; 2004 ; 27 ; Arquivos Médicos do ABC Volume 2004 ; 2004 >
+      au < manifest ; 2005 ; 28 ; Arquivos Médicos do ABC Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; 29 ; Arquivos Médicos do ABC Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 30 ; Arquivos Médicos do ABC Volume 2007 ; 2007 >
 
   }
 
