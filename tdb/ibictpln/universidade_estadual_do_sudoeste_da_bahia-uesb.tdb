@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,17 +17,17 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = cadernosdeciencias
 
-      au < exists ; 1997 ; 1 ; Cadernos de Ciências Sociais Aplicadas Volume 1 ; 1997 >
-      au < exists ; 1998 ; 2 ; Cadernos de Ciências Sociais Aplicadas Volume 2 ; 1998 >
-      au < exists ; 2005 ; 3 ; Cadernos de Ciências Sociais Aplicadas Volume 3 ; 2005 >
-      au < exists ; 2006 ; 4 ; Cadernos de Ciências Sociais Aplicadas Volume 4 ; 2006 >
-      au < doesNotExist ; 2007 ; 5 ; Cadernos de Ciências Sociais Aplicadas Volume 5 ; 2007 >
-      au < doesNotExist ; 2008 ; 6 ; Cadernos de Ciências Sociais Aplicadas Volume 6 ; 2008 >
-      au < exists ; 2009 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 (2009) ; 2009 >
-      au < exists ; 2010 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 (2010) ; 2010 >
-      au < exists ; 2011 ; 8 ; Cadernos de Ciências Sociais Aplicadas Volume 8 ; 2011 >
-      au < exists ; 2012 ; 9 ; Cadernos de Ciências Sociais Aplicadas Volume 9 ; 2012 >
-      au < expected ; 2013 ; 10 ; Cadernos de Ciências Sociais Aplicadas Volume 10 ; 2013 >
+      au < exists ; 1997 ; 1 ; Cadernos de Ciências Sociais Aplicadas Volume 1 ; 1997 ; >
+      au < exists ; 1998 ; 2 ; Cadernos de Ciências Sociais Aplicadas Volume 2 ; 1998 ; >
+      au < exists ; 2005 ; 3 ; Cadernos de Ciências Sociais Aplicadas Volume 3 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Cadernos de Ciências Sociais Aplicadas Volume 4 ; 2006 ; >
+      au < doesNotExist ; 2007 ; 5 ; Cadernos de Ciências Sociais Aplicadas Volume 5 ; 2007 ; >
+      au < doesNotExist ; 2008 ; 6 ; Cadernos de Ciências Sociais Aplicadas Volume 6 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 (2009) ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 (2010) ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Cadernos de Ciências Sociais Aplicadas Volume 8 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Cadernos de Ciências Sociais Aplicadas Volume 9 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Cadernos de Ciências Sociais Aplicadas Volume 10 ; 2013 ; >
 
   }
 
@@ -40,20 +40,37 @@
       >
 
       comment[publisher] = Universidade Estadual do Sudoeste da Bahia-UESB
+      
+      {
+      param[base_url] = http://estudosdalinguagem.uesb.br/
+      param[journal_id] = estudosdalinguagem
+
+      au < exists ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 ; 2005 ; >
+      au < exists ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 ; >
+      au < exists ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 ; >
+      au < exists ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Estudos da Língua(gem) Volume 13 ; 2015 ; >
+      }
+      {
       param[base_url] = http://www.estudosdalinguagem.org/seer/
       param[journal_id] = estudosdalinguagem
 
-      au < released ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 ; 2005 >
-      au < released ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 ; 2006 >
-      au < released ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2007 >
-      au < released ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2008 >
-      au < released ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2009 >
-      au < released ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 >
-      au < released ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 >
-      au < released ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 >
-      au < released ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 >
-      au < expected ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 ; 2014 >
-
+      au < superseded ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 [superseded] ; 2005 ; journal moved >
+      au < superseded ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 [superseded] ; 2006 ; journal moved >
+      au < superseded ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 [superseded] ; 2007 ; journal moved >
+      au < superseded ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 [superseded] ; 2008 ; journal moved >
+      au < superseded ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 [superseded] ; 2009 ; journal moved >
+      au < superseded ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 [superseded] ; 2010 ; journal moved >
+      au < superseded ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 [superseded] ; 2011 ; journal moved >
+      au < superseded ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 [superseded] ; 2012 ; journal moved >
+      au < superseded ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 [superseded] ; 2013 ; journal moved >
+      }
   }
 
   {
@@ -67,8 +84,8 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = filosofando
 
-      au < exists ; 2012 ; 1 ; Filosofando: Revista de Filosofia da UESB Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Filosofando: Revista de Filosofia da UESB Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Filosofando: Revista de Filosofia da UESB Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Filosofando: Revista de Filosofia da UESB Volume 2 ; 2013 ; >
 
   }
 
@@ -84,14 +101,14 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = floema
 
-      au < exists ; 2005 ; 1,1a,2 ; Floema. Caderno de Teoria e História Literária Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2b,2a,3,4 ; Floema. Caderno de Teoria e História Literária Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3a ; Floema. Caderno de Teoria e História Literária Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4a ; Floema. Caderno de Teoria e História Literária Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5,5a ; Floema. Caderno de Teoria e História Literária Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6-7 ; Floema. Caderno de Teoria e História Literária Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8-9 ; Floema. Caderno de Teoria e História Literária Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 10-11 ; Floema. Caderno de Teoria e História Literária Volume 2012 ; 2012 >
+      au < exists ; 2005 ; 1,1a,2 ; Floema. Caderno de Teoria e História Literária Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2b,2a,3,4 ; Floema. Caderno de Teoria e História Literária Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3a ; Floema. Caderno de Teoria e História Literária Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4a ; Floema. Caderno de Teoria e História Literária Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5,5a ; Floema. Caderno de Teoria e História Literária Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6-7 ; Floema. Caderno de Teoria e História Literária Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8-9 ; Floema. Caderno de Teoria e História Literária Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 10-11 ; Floema. Caderno de Teoria e História Literária Volume 2012 ; 2012 ; >
 
   }
 
@@ -106,11 +123,11 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = folio
 
-      au < exists ; 2009 ; 1 ; Fólio-Revista de Letras Volume 1 ; 2009 >
-      au < exists ; 2010 ; 2 ; Fólio-Revista de Letras Volume 2 ; 2010 >
-      au < exists ; 2011 ; 3 ; Fólio-Revista de Letras Volume 3 ; 2011 >
-      au < exists ; 2012 ; 4 ; Fólio-Revista de Letras Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; Fólio-Revista de Letras Volume 5 ; 2013 >
+      au < exists ; 2009 ; 1 ; Fólio-Revista de Letras Volume 1 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Fólio-Revista de Letras Volume 2 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Fólio-Revista de Letras Volume 3 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Fólio-Revista de Letras Volume 4 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Fólio-Revista de Letras Volume 5 ; 2013 ; >
 
   }
 
@@ -126,19 +143,19 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = politeia
 
-      au < exists ; 2001 ; 1 ; Politeia: História e Sociedade Volume 1 ; 2001 >
-      au < exists ; 2002 ; 2 ; Politeia: História e Sociedade Volume 2 ; 2002 >
-      au < exists ; 2003 ; 3 ; Politeia: História e Sociedade Volume 3 ; 2003 >
-      au < exists ; 2004 ; 4 ; Politeia: História e Sociedade Volume 4 ; 2004 >
-      au < exists ; 2005 ; 5 ; Politeia: História e Sociedade Volume 5 ; 2005 >
-      au < exists ; 2006 ; 6 ; Politeia: História e Sociedade Volume 6 ; 2006 >
-      au < exists ; 2007 ; 7 ; Politeia: História e Sociedade Volume 7 ; 2007 >
-      au < exists ; 2008 ; 8 ; Politeia: História e Sociedade Volume 8 ; 2008 >
-      au < exists ; 2009 ; 9 ; Politeia: História e Sociedade Volume 9 ; 2009 >
-      au < exists ; 2010 ; 10 ; Politeia: História e Sociedade Volume 10 ; 2010 >
-      au < exists ; 2011 ; 11 ; Politeia: História e Sociedade Volume 11 ; 2011 >
-      au < expected ; 2012 ; 12 ; Politeia: História e Sociedade Volume 12 ; 2012 >
-      au < expected ; 2013 ; 13 ; Politeia: História e Sociedade Volume 13 ; 2013 >
+      au < exists ; 2001 ; 1 ; Politeia: História e Sociedade Volume 1 ; 2001 ; >
+      au < exists ; 2002 ; 2 ; Politeia: História e Sociedade Volume 2 ; 2002 ; >
+      au < exists ; 2003 ; 3 ; Politeia: História e Sociedade Volume 3 ; 2003 ; >
+      au < exists ; 2004 ; 4 ; Politeia: História e Sociedade Volume 4 ; 2004 ; >
+      au < exists ; 2005 ; 5 ; Politeia: História e Sociedade Volume 5 ; 2005 ; >
+      au < exists ; 2006 ; 6 ; Politeia: História e Sociedade Volume 6 ; 2006 ; >
+      au < exists ; 2007 ; 7 ; Politeia: História e Sociedade Volume 7 ; 2007 ; >
+      au < exists ; 2008 ; 8 ; Politeia: História e Sociedade Volume 8 ; 2008 ; >
+      au < exists ; 2009 ; 9 ; Politeia: História e Sociedade Volume 9 ; 2009 ; >
+      au < exists ; 2010 ; 10 ; Politeia: História e Sociedade Volume 10 ; 2010 ; >
+      au < exists ; 2011 ; 11 ; Politeia: História e Sociedade Volume 11 ; 2011 ; >
+      au < expected ; 2012 ; 12 ; Politeia: História e Sociedade Volume 12 ; 2012 ; >
+      au < expected ; 2013 ; 13 ; Politeia: História e Sociedade Volume 13 ; 2013 ; >
 
   }
 
@@ -153,15 +170,15 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = praxis
 
-      au < exists ; 2005 ; 1 ; Práxis Educacional Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Práxis Educacional Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Práxis Educacional Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Práxis Educacional Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Práxis Educacional Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Práxis Educacional Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Práxis Educacional Volume 7 ; 2011 >
-      au < exists ; 2012 ; 8 ; Práxis Educacional Volume 8 ; 2012 >
-      au < exists ; 2013 ; 9 ; Práxis Educacional Volume 9 ; 2013 >
+      au < exists ; 2005 ; 1 ; Práxis Educacional Volume 1 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Práxis Educacional Volume 2 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Práxis Educacional Volume 3 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Práxis Educacional Volume 4 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Práxis Educacional Volume 5 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Práxis Educacional Volume 6 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Práxis Educacional Volume 7 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Práxis Educacional Volume 8 ; 2012 ; >
+      au < exists ; 2013 ; 9 ; Práxis Educacional Volume 9 ; 2013 ; >
 
   }
 
@@ -176,9 +193,9 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = rbba
 
-      au < released ; 2012 ; 1 ; Revista Binacional Brasil-Argentina Volume 1 ; 2012 >
-      au < released ; 2013 ; 2 ; Revista Binacional Brasil-Argentina Volume 2 ; 2013 >
-      au < released ; 2014 ; 3 ; Revista Binacional Brasil-Argentina Volume 3 ; 2014 >
+      au < released ; 2012 ; 1 ; Revista Binacional Brasil-Argentina Volume 1 ; 2012 ; >
+      au < released ; 2013 ; 2 ; Revista Binacional Brasil-Argentina Volume 2 ; 2013 ; >
+      au < released ; 2014 ; 3 ; Revista Binacional Brasil-Argentina Volume 3 ; 2014 ; >
 
   }
 
@@ -193,8 +210,8 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = redisco
 
-      au < exists ; 2012 ; 1 ; Revista Eletrônica de Estudos do Discurso e do Corpo-REDISCO Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Eletrônica de Estudos do Discurso e do Corpo-REDISCO Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista Eletrônica de Estudos do Discurso e do Corpo-REDISCO Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista Eletrônica de Estudos do Discurso e do Corpo-REDISCO Volume 2 ; 2013 ; >
 
   }
 
@@ -209,12 +226,12 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = periodicosuesbbrspadis
 
-      au < released ; 2005 ; 1 ; Seminário de Pesquisa em Análise de Discurso Volume 1 ; 2005 >
-      au < released ; 2007 ; 3 ; Seminário de Pesquisa em Análise de Discurso Volume 3 ; 2007 >
-      au < released ; 2009 ; 4 ; Seminário de Pesquisa em Análise de Discurso Volume 4 ; 2009 >
-      au < released ; 2011 ; 5 ; Seminário de Pesquisa em Análise de Discurso Volume 5 ; 2011 >
-      au < expected ; 2012 ; 6 ; Seminário de Pesquisa em Análise de Discurso Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Seminário de Pesquisa em Análise de Discurso Volume 7 ; 2013 >
+      au < released ; 2005 ; 1 ; Seminário de Pesquisa em Análise de Discurso Volume 1 ; 2005 ; >
+      au < released ; 2007 ; 3 ; Seminário de Pesquisa em Análise de Discurso Volume 3 ; 2007 ; >
+      au < released ; 2009 ; 4 ; Seminário de Pesquisa em Análise de Discurso Volume 4 ; 2009 ; >
+      au < released ; 2011 ; 5 ; Seminário de Pesquisa em Análise de Discurso Volume 5 ; 2011 ; >
+      au < expected ; 2012 ; 6 ; Seminário de Pesquisa em Análise de Discurso Volume 6 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Seminário de Pesquisa em Análise de Discurso Volume 7 ; 2013 ; >
 
   }
 
@@ -229,14 +246,14 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = periodicos-uesb-br-spel
 
-      au < exists ; 2006 ; 1 ; Seminários de Pesquisa em Estudos Linguísticos Volume 1 ; 2006 >
-      au < exists ; 2007 ; 2 ; Seminários de Pesquisa em Estudos Linguísticos Volume 2 ; 2007 >
-      au < exists ; 2008 ; 3 ; Seminários de Pesquisa em Estudos Linguísticos Volume 3 ; 2008 >
-      au < exists ; 2009 ; 4 ; Seminários de Pesquisa em Estudos Linguísticos Volume 4 ; 2009 >
-      au < exists ; 2010 ; 5 ; Seminários de Pesquisa em Estudos Linguísticos Volume 5 ; 2010 >
-      au < exists ; 2011 ; 6 ; Seminários de Pesquisa em Estudos Linguísticos Volume 6 ; 2011 >
-      au < exists ; 2012 ; 7 ; Seminários de Pesquisa em Estudos Linguísticos Volume 7 ; 2012 >
-      au < expected ; 2013 ; 8 ; Seminários de Pesquisa em Estudos Linguísticos Volume 8 ; 2013 >
+      au < exists ; 2006 ; 1 ; Seminários de Pesquisa em Estudos Linguísticos Volume 1 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Seminários de Pesquisa em Estudos Linguísticos Volume 2 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Seminários de Pesquisa em Estudos Linguísticos Volume 3 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Seminários de Pesquisa em Estudos Linguísticos Volume 4 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Seminários de Pesquisa em Estudos Linguísticos Volume 5 ; 2010 ; >
+      au < exists ; 2011 ; 6 ; Seminários de Pesquisa em Estudos Linguísticos Volume 6 ; 2011 ; >
+      au < exists ; 2012 ; 7 ; Seminários de Pesquisa em Estudos Linguísticos Volume 7 ; 2012 ; >
+      au < expected ; 2013 ; 8 ; Seminários de Pesquisa em Estudos Linguísticos Volume 8 ; 2013 ; >
 
   }
 
