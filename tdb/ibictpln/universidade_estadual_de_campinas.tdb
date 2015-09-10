@@ -335,14 +335,14 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = cadpagu
 
-      au < manifest ; 1993 ; 1 ; Cadernos Pagu Volume 1993 ; 1993 ; >
-      au < manifest ; 1994 ; 2 ; Cadernos Pagu Volume 1994 ; 1994 ; >
-      au < manifest ; 1995 ; 3 ; Cadernos Pagu Volume 1995 ; 1995 ; >
-      au < manifest ; 1996 ; 4 ; Cadernos Pagu Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 5 ; Cadernos Pagu Volume 1997 ; 1997 ; >
-      au < manifest ; 1998 ; 6 ; Cadernos Pagu Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 7 ; Cadernos Pagu Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 8 ; Cadernos Pagu Volume 2000 ; 2000 ; >
+      au < testing ; 1993 ; 1 ; Cadernos Pagu Volume 1993 ; 1993 ; >
+      au < testing ; 1994 ; 2 ; Cadernos Pagu Volume 1994 ; 1994 ; >
+      au < testing ; 1995 ; 3 ; Cadernos Pagu Volume 1995 ; 1995 ; >
+      au < testing ; 1996 ; 4 ; Cadernos Pagu Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 5 ; Cadernos Pagu Volume 1997 ; 1997 ; >
+      au < testing ; 1998 ; 6 ; Cadernos Pagu Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 7 ; Cadernos Pagu Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 8 ; Cadernos Pagu Volume 2000 ; 2000 ; >
       au < exists ; 2001 ; 9 ; Cadernos Pagu Volume 2001 ; 2001 ; >
       au < exists ; 2002 ; 10 ; Cadernos Pagu Volume 2002 ; 2002 ; >
       au < exists ; 2003 ; 11 ; Cadernos Pagu Volume 2003 ; 2003 ; >
@@ -372,23 +372,23 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = conexoes
 
-      au < manifest ; 1998 ; 1 ; Conexões Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 2 ; Conexões Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 3 ; Conexões Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 4 ; Conexões Volume 2001 ; 2001 ; >
+      au < testing ; 1998 ; 1 ; Conexões Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 2 ; Conexões Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 3 ; Conexões Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 4 ; Conexões Volume 2001 ; 2001 ; >
       au < exists ; 2002 ; 5 ; Conexões Volume 2002 ; 2002 ; >
       au < exists ; 2003 ; 6 ; Conexões Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 7 ; Conexões Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 8 ; Conexões Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 9 ; Conexões Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 10 ; Conexões Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 11 ; Conexões Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 12 ; Conexões Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 13 ; Conexões Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 14 ; Conexões Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 15 ; Conexões Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 16 ; Conexões Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 17 ; Conexões Volume 2014 ; 2014 ; >
+      au < testing ; 2004 ; 7 ; Conexões Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 8 ; Conexões Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 9 ; Conexões Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 10 ; Conexões Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 11 ; Conexões Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 12 ; Conexões Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 13 ; Conexões Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 14 ; Conexões Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 15 ; Conexões Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 16 ; Conexões Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 17 ; Conexões Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 18 ; Conexões Volume 2015 ; 2015 ; >
 
   }
@@ -404,14 +404,14 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = labore
 
-      au < manifest ; 2007 ; 1 ; Labor & Engenho Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 2 ; Labor & Engenho Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 3 ; Labor & Engenho Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 4 ; Labor & Engenho Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 5 ; Labor & Engenho Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 6 ; Labor & Engenho Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 7 ; Labor & Engenho Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 8 ; Labor & Engenho Volume 2014 ; 2014 ; >
+      au < testing ; 2007 ; 1 ; Labor & Engenho Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 2 ; Labor & Engenho Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 3 ; Labor & Engenho Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 4 ; Labor & Engenho Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 5 ; Labor & Engenho Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 6 ; Labor & Engenho Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 7 ; Labor & Engenho Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 8 ; Labor & Engenho Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 9 ; Labor & Engenho Volume 2015 ; 2015 ; >
 
   }
@@ -427,15 +427,15 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = parc
 
-      au < manifest ; 2006 ; 1 ; PARC Pesquisa em Arquitetura e Construção Volume 2006 ; 2006 ; >
+      au < testing ; 2006 ; 1 ; PARC Pesquisa em Arquitetura e Construção Volume 2006 ; 2006 ; >
       au < exists ; 2007 ; 2 ; PARC Pesquisa em Arquitetura e Construção Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 3 ; PARC Pesquisa em Arquitetura e Construção Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 4 ; PARC Pesquisa em Arquitetura e Construção Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 5 ; PARC Pesquisa em Arquitetura e Construção Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 6 ; PARC Pesquisa em Arquitetura e Construção Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 7 ; PARC Pesquisa em Arquitetura e Construção Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 8 ; PARC Pesquisa em Arquitetura e Construção Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 9 ; PARC Pesquisa em Arquitetura e Construção Volume 2014 ; 2014 ; >
+      au < testing ; 2008 ; 3 ; PARC Pesquisa em Arquitetura e Construção Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 4 ; PARC Pesquisa em Arquitetura e Construção Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 5 ; PARC Pesquisa em Arquitetura e Construção Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 6 ; PARC Pesquisa em Arquitetura e Construção Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 7 ; PARC Pesquisa em Arquitetura e Construção Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 8 ; PARC Pesquisa em Arquitetura e Construção Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 9 ; PARC Pesquisa em Arquitetura e Construção Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 10 ; PARC Pesquisa em Arquitetura e Construção Volume 2015 ; 2015 ; >
 
   }
@@ -515,7 +515,7 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = rua
 
-      au < manifest ; 1995 ; 1 ; RUA Volume 1995 ; 1995 ; >
+      au < testing ; 1995 ; 1 ; RUA Volume 1995 ; 1995 ; >
       au < exists ; 1996 ; 2 ; RUA Volume 1996 ; 1996 ; >
       au < exists ; 1997 ; 3 ; RUA Volume 1997 ; 1997 ; >
       au < exists ; 1998 ; 4 ; RUA Volume 1998 ; 1998 ; >
@@ -528,13 +528,13 @@
       au < exists ; 2005 ; 11 ; RUA Volume 2005 ; 2005 ; >
       au < exists ; 2006 ; 12 ; RUA Volume 2006 ; 2006 ; >
       au < exists ; 2007 ; 13 ; RUA Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 14 ; RUA Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 15 ; RUA Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 16 ; RUA Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 17 ; RUA Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 18 ; RUA Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 19 ; RUA Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 20 ; RUA Volume 2014 ; 2014 ; >
+      au < testing ; 2008 ; 14 ; RUA Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 15 ; RUA Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 16 ; RUA Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 17 ; RUA Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 18 ; RUA Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 19 ; RUA Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 20 ; RUA Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 21 ; RUA Volume 2015 ; 2015 ; >
 
   }
@@ -550,16 +550,16 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = san
 
-      au < manifest ; 2005 ; 1 ; Segurança Alimentar e Nutricional Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 2 ; Segurança Alimentar e Nutricional Volume 2006 ; 2006 ; >
+      au < testing ; 2005 ; 1 ; Segurança Alimentar e Nutricional Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 2 ; Segurança Alimentar e Nutricional Volume 2006 ; 2006 ; >
       au < exists ; 2007 ; 3 ; Segurança Alimentar e Nutricional Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 4 ; Segurança Alimentar e Nutricional Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 5 ; Segurança Alimentar e Nutricional Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 6 ; Segurança Alimentar e Nutricional Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 7 ; Segurança Alimentar e Nutricional Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 8 ; Segurança Alimentar e Nutricional Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 9 ; Segurança Alimentar e Nutricional Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 10 ; Segurança Alimentar e Nutricional Volume 2014 ; 2014 ; >
+      au < testing ; 2008 ; 4 ; Segurança Alimentar e Nutricional Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 5 ; Segurança Alimentar e Nutricional Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 6 ; Segurança Alimentar e Nutricional Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 7 ; Segurança Alimentar e Nutricional Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 8 ; Segurança Alimentar e Nutricional Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 9 ; Segurança Alimentar e Nutricional Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 10 ; Segurança Alimentar e Nutricional Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 11 ; Segurança Alimentar e Nutricional Volume 2015 ; 2015 ; >
 
   }
@@ -575,19 +575,19 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = sss
 
-      au < manifest ; 2002 ; 1 ; Serviço Social & Saúde Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 2 ; Serviço Social & Saúde Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 3 ; Serviço Social & Saúde Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 4 ; Serviço Social & Saúde Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 5 ; Serviço Social & Saúde Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 6 ; Serviço Social & Saúde Volume 2007 ; 2007 ; >
+      au < testing ; 2002 ; 1 ; Serviço Social & Saúde Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 2 ; Serviço Social & Saúde Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 3 ; Serviço Social & Saúde Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 4 ; Serviço Social & Saúde Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 5 ; Serviço Social & Saúde Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 6 ; Serviço Social & Saúde Volume 2007 ; 2007 ; >
       au < exists ; 2008 ; 7 ; Serviço Social & Saúde Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 8 ; Serviço Social & Saúde Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 9 ; Serviço Social & Saúde Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 10 ; Serviço Social & Saúde Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 11 ; Serviço Social & Saúde Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 12 ; Serviço Social & Saúde Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 13 ; Serviço Social & Saúde Volume 2014 ; 2014 ; >
+      au < testing ; 2009 ; 8 ; Serviço Social & Saúde Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 9 ; Serviço Social & Saúde Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 10 ; Serviço Social & Saúde Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 11 ; Serviço Social & Saúde Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 12 ; Serviço Social & Saúde Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 13 ; Serviço Social & Saúde Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 14 ; Serviço Social & Saúde Volume 2015 ; 2015 ; >
 
   }
@@ -603,16 +603,16 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = td
 
-      au < manifest ; 2005 ; 1 ; Terrae Didatica Volume 2005 ; 2005 ; >
+      au < testing ; 2005 ; 1 ; Terrae Didatica Volume 2005 ; 2005 ; >
       au < exists ; 2006 ; 2 ; Terrae Didatica Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 3 ; Terrae Didatica Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 4 ; Terrae Didatica Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 5 ; Terrae Didatica Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 6 ; Terrae Didatica Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 7 ; Terrae Didatica Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 8 ; Terrae Didatica Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 9 ; Terrae Didatica Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 10 ; Terrae Didatica Volume 2014 ; 2014 ; >
+      au < testing ; 2007 ; 3 ; Terrae Didatica Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 4 ; Terrae Didatica Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 5 ; Terrae Didatica Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 6 ; Terrae Didatica Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 7 ; Terrae Didatica Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 8 ; Terrae Didatica Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 9 ; Terrae Didatica Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 10 ; Terrae Didatica Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 11 ; Terrae Didatica Volume 2015 ; 2015 ; >
 
   }
