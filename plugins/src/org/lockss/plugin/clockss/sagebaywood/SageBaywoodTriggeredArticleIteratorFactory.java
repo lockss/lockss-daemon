@@ -52,7 +52,6 @@ public class SageBaywoodTriggeredArticleIteratorFactory implements ArticleIterat
   public static final String XML_REPLACEMENT = "/$1.xml";
   public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
   public static final String PDF_REPLACEMENT = "/$1.pdf";
-  public static final Pattern ABS_PATTERN = Pattern.compile("/(.*)\\.html$", Pattern.CASE_INSENSITIVE);
   public static final String ABS_REPLACEMENT = "/$1.html";
   
   // all XML files found under the current JID and VOLUME
@@ -83,9 +82,9 @@ public class SageBaywoodTriggeredArticleIteratorFactory implements ArticleIterat
                       ArticleFiles.ROLE_FULL_TEXT_XML,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    // set up ABSTRACT to be an aspect that will trigger an ArticleFiles - never a full text though
-    builder.addAspect(ABS_PATTERN,
-                      ABS_REPLACEMENT,
+    // set up ABSTRACT to be a secondary aspect - otherwise you'd try to create
+    // an article out of the issue TOC
+    builder.addAspect(ABS_REPLACEMENT,
                       ArticleFiles.ROLE_ABSTRACT);
     
     
