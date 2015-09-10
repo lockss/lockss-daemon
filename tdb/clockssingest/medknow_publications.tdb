@@ -7,10 +7,11 @@
   >
     
   rights = openaccess
+  comment[0] =  html is  open access pdf may be subscription
   plugin = org.lockss.plugin.medknow.ClockssMedknowPlugin
   implicit < status ; status2 ; year ; name ; param[year] ; param[volume_name] >
   
-  comment[RU3757] = Waiting for plugin.
+  
     
   {
     title <
@@ -21,6 +22,7 @@
     >
 
     param[base_url] = http://www.ajobe.org/
+    comment[0] =  base url doesn't exit
     param[journal_issn] = 1817-7417
 
     au < doNotProcess ; exists ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 >
@@ -55,7 +57,7 @@
     au < doNotProcess ; exists ; 2011 ; African Journal of Paediatric Surgery Volume 8 ; 2011 ; 8 >
     au < doNotProcess ; exists ; 2012 ; African Journal of Paediatric Surgery Volume 9 ; 2012 ; 9 >
     au < doNotProcess ; exists ; 2013 ; African Journal of Paediatric Surgery Volume 10 ; 2013 ; 10 >
-    au < expected ; exists ; 2014 ; African Journal of Paediatric Surgery Volume 11 ; 2014 ; 11 >
+    au < testing ; exists ; 2014 ; African Journal of Paediatric Surgery Volume 11 ; 2014 ; 11 >
 
   }
   
@@ -68,7 +70,7 @@
 
     param[base_url] = http://www.ayurvedajournals.org/scienceoflife/asl/index.php/asl/
     comment[asl] = the url structure is the new version
-    comment[0] = base_url & journal are not up yet.
+    comment[0] = base_url & journal are not up yet 9/10/2015
 
   }
 
@@ -87,7 +89,7 @@
     au < doNotProcess ; exists ; 2011 ; Anesthesia: Essays and Researches Volume 5 ; 2011 ; 5 >
     au < doNotProcess ; exists ; 2012 ; Anesthesia: Essays and Researches Volume 6 ; 2012 ; 6 >
     au < doNotProcess ; exists ; 2013 ; Anesthesia: Essays and Researches Volume 7 ; 2013 ; 7 >
-    au < expected ; exists ; 2014 ; Anesthesia: Essays and Researches Volume 8 ; 2014 ; 8 >
+    au < testing ; exists ; 2014 ; Anesthesia: Essays and Researches Volume 8 ; 2014 ; 8 >
 
   }
   
@@ -109,7 +111,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of African Medicine Volume 10 ; 2011 ; 10 >
     au < doNotProcess ; exists ; 2012 ; Annals of African Medicine Volume 11 ; 2012 ; 11 >
     au < doNotProcess ; exists ; 2013 ; Annals of African Medicine Volume 12 ; 2013 ; 12 >
-    au < expected ; exists ; 2014 ; Annals of African Medicine Volume 13 ; 2014 ; 13 >
+    au < testing ; exists ; 2014 ; Annals of African Medicine Volume 13 ; 2014 ; 13 >
 
   }
   
@@ -136,7 +138,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of Cardiac Anaesthesia Volume 14 ; 2011 ; 14 >
     au < doNotProcess ; exists ; 2012 ; Annals of Cardiac Anaesthesia Volume 15 ; 2012 ; 15 >
     au < doNotProcess ; exists ; 2013 ; Annals of Cardiac Anaesthesia Volume 16 ; 2013 ; 16 >
-    au < expected ; exists ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 >
+    au < testing ; exists ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 >
 
   }
 
@@ -167,7 +169,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of Indian Academy of Neurology Volume 14 ; 2011 ; 14 >
     au < doNotProcess ; exists ; 2012 ; Annals of Indian Academy of Neurology Volume 15 ; 2012 ; 15 >
     au < doNotProcess ; exists ; 2013 ; Annals of Indian Academy of Neurology Volume 16 ; 2013 ; 16 >
-    au < expected ; exists ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 >
+    au < testing ; exists ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 >
 
   }
 
@@ -185,7 +187,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of Maxillofacial Surgery Volume 1 ; 2011 ; 1 >
     au < doNotProcess ; exists ; 2012 ; Annals of Maxillofacial Surgery Volume 2 ; 2012 ; 2 >
     au < doNotProcess ; exists ; 2013 ; Annals of Maxillofacial Surgery Volume 3 ; 2013 ; 3 >
-    au < expected ; exists ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 >
+    au < testing ; exists ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -204,7 +206,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of Nigerian Medicine Volume 5 ; 2011 ; 5 >
     au < doNotProcess ; exists ; 2012 ; Annals of Nigerian Medicine Volume 6 ; 2012 ; 6 >
     au < doNotProcess ; exists ; 2013 ; Annals of Nigerian Medicine Volume 7 ; 2013 ; 7 >
-    au < expected ; exists ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 >
+    au < testing ; exists ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 >
 
   }
   
@@ -225,7 +227,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of Pediatric Cardiology Volume 4 ; 2011 ; 4 >
     au < doNotProcess ; exists ; 2012 ; Annals of Pediatric Cardiology Volume 5 ; 2012 ; 5 >
     au < doNotProcess ; exists ; 2013 ; Annals of Pediatric Cardiology Volume 6 ; 2013 ; 6 >
-    au < expected ; exists ; 2014 ; Annals of Pediatric Cardiology Volume 7 ; 2014 ; 7 >
+    au < testing ; exists ; 2014 ; Annals of Pediatric Cardiology Volume 7 ; 2014 ; 7 >
 
   }
 
@@ -239,7 +241,7 @@
 
     param[base_url] = http://www.saudiannals.net/
     param[journal_issn] = 0256-4947 
-    comment[0] = base_url & journal are not up yet on 10/7/2013
+    comment[0] = base_url & journal are not up yet on 9/10/2015
 
 
   }
@@ -263,7 +265,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of Thoracic Medicine Volume 6 ; 2011 ; 6 >
     au < doNotProcess ; exists ; 2012 ; Annals of Thoracic Medicine Volume 7 ; 2012 ; 7 >
     au < doNotProcess ; exists ; 2013 ; Annals of Thoracic Medicine Volume 8 ; 2013 ; 8 >
-    au < expected ; exists ; 2014 ; Annals of Thoracic Medicine Volume 9 ; 2014 ; 9 >
+    au < testing ; exists ; 2014 ; Annals of Thoracic Medicine Volume 9 ; 2014 ; 9 >
 
   }
 
@@ -284,7 +286,7 @@
     au < doNotProcess ; exists ; 2011 ; Annals of Tropical Medicine and Public Health Volume 4 ; 2011 ; 4 >
     au < doNotProcess ; exists ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 >
     au < doNotProcess ; exists ; 2013 ; Annals of Tropical Medicine and Public Health Volume 6 ; 2013 ; 6 >
-    au < expected ; exists ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 >
+    au < testing ; exists ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 >
 
   }
 
@@ -321,7 +323,7 @@
     au < doNotProcess ; exists ; 2011 ; Asian Journal of Neurosurgery Volume 6 ; 2011 ; 6 >
     au < doNotProcess ; exists ; 2012 ; Asian Journal of Neurosurgery Volume 7 ; 2012 ; 7 >
     au < doNotProcess ; exists ; 2013 ; Asian Journal of Neurosurgery Volume 8 ; 2013 ; 8 >
-    au < expected ; exists ; 2014 ; Asian Journal of Neurosurgery Volume 9 ; 2014 ; 9 >
+    au < testing ; exists ; 2014 ; Asian Journal of Neurosurgery Volume 9 ; 2014 ; 9 >
 
   }
   
@@ -342,7 +344,7 @@
     au < doNotProcess ; exists ; 2011 ; Asian Journal of Pharmaceutics Volume 5 ; 2011 ; 5 >
     au < doNotProcess ; exists ; 2012 ; Asian Journal of Pharmaceutics Volume 6 ; 2012 ; 6 >
     au < doNotProcess ; exists ; 2013 ; Asian Journal of Pharmaceutics Volume 7 ; 2013 ; 7 >
-    au < expected ; exists ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 >
+    au < testing ; exists ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 >
 
   }
 
@@ -364,7 +366,7 @@
     au < doNotProcess ; exists ; 2011 ; Asian Journal of Transfusion Science Volume 5 ; 2011 ; 5 >
     au < doNotProcess ; exists ; 2012 ; Asian Journal of Transfusion Science Volume 6 ; 2012 ; 6 >
     au < doNotProcess ; exists ; 2013 ; Asian Journal of Transfusion Science Volume 7 ; 2013 ; 7 >
-    au < expected ; exists ; 2014 ; Asian Journal of Transfusion Science Volume 8 ; 2014 ; 8 >
+    au < testing ; exists ; 2014 ; Asian Journal of Transfusion Science Volume 8 ; 2014 ; 8 >
 
   }
 
@@ -382,7 +384,7 @@
     au < doNotProcess ; exists ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 2011 ; 1 >
     au < doNotProcess ; exists ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2012 ; 2 >
     au < doNotProcess ; exists ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 >
-    au < expected ; exists ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 >
+    au < testing ; exists ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -405,7 +407,7 @@
     au < doNotProcess ; exists ; 2011 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 32 ; 2011 ; 32 >
     au < doNotProcess ; exists ; 2012 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 33 ; 2012 ; 33 >
     au < doNotProcess ; exists ; 2013 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 34 ; 2013 ; 34 >
-    au < expected ; exists ; 2014 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 35 ; 2014 ; 35 >
+    au < testing ; exists ; 2014 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 35 ; 2014 ; 35 >
 
   }
     
@@ -419,6 +421,7 @@
 
     param[base_url] = http://www.cysonline.org/
     param[journal_issn] = 2229-5186 
+	comment[0] = journal moved to www.ddtjounral.org which doesn't seem likely 
 
     au < doNotProcess ; exists ; 2010 ; Chronicles of Young Scientists Volume 1 ; 2010 ; 1 >
     au < doNotProcess ; exists ; 2011 ; Chronicles of Young Scientists Volume 2 ; 2011 ; 2 >
@@ -450,7 +453,7 @@
     au < doNotProcess ; exists ; 2011 ; Conservation and Society Volume 9 ; 2011 ; 9 >
     au < doNotProcess ; exists ; 2012 ; Conservation and Society Volume 10 ; 2012 ; 10 >
     au < doNotProcess ; exists ; 2013 ; Conservation and Society Volume 11 ; 2013 ; 11 >
-    au < expected ; exists ; 2014 ; Conservation and Society Volume 12 ; 2014 ; 12 >
+    au < testing ; exists ; 2014 ; Conservation and Society Volume 12 ; 2014 ; 12 >
 
   }
         
@@ -469,7 +472,7 @@
     au < doNotProcess ; exists ; 2011 ; Contemporary Clinical Dentistry Volume 2 ; 2011 ; 2 >
     au < doNotProcess ; exists ; 2012 ; Contemporary Clinical Dentistry Volume 3 ; 2012 ; 3 >
     au < doNotProcess ; exists ; 2013 ; Contemporary Clinical Dentistry Volume 4 ; 2013 ; 4 >
-    au < expected ; exists ; 2014 ; Contemporary Clinical Dentistry Volume 5 ; 2014 ; 5 >
+    au < testing ; exists ; 2014 ; Contemporary Clinical Dentistry Volume 5 ; 2014 ; 5 >
 
   }
   
@@ -494,7 +497,7 @@
     au < doNotProcess ; exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 2012 >
     au < doNotProcess ; exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 2013 >
-    au < expected ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -547,7 +550,7 @@
     au < doNotProcess ; exists ; 2011 ; Heart Views Volume 12 ; 2011 ; 12 >
     au < doNotProcess ; exists ; 2012 ; Heart Views Volume 13 ; 2012 ; 13 >
     au < doNotProcess ; exists ; 2013 ; Heart Views Volume 14 ; 2013 ; 14 >
-    au < expected ; exists ; 2014 ; Heart Views Volume 15 ; 2014 ; 15 >
+    au < testing ; exists ; 2014 ; Heart Views Volume 15 ; 2014 ; 15 >
 
   }
     
@@ -586,7 +589,7 @@
     au < doNotProcess ; exists ; 2011 ; Indian Dermatology Online Journal Volume 2 ; 2011 ; 2 >
     au < doNotProcess ; exists ; 2012 ; Indian Dermatology Online Journal Volume 3 ; 2012 ; 3 >
     au < doNotProcess ; exists ; 2013 ; Indian Dermatology Online Journal Volume 4 ; 2013 ; 4 >
-    au < expected ; exists ; 2014 ; Indian Dermatology Online Journal Volume 5 ; 2014 ; 5 >
+    au < testing ; exists ; 2014 ; Indian Dermatology Online Journal Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -613,7 +616,7 @@
     au < doNotProcess ; exists ; 2011 ; Indian Journal of Anaesthesia Volume 55 ; 2011 ; 55 >
     au < doNotProcess ; exists ; 2012 ; Indian Journal of Anaesthesia Volume 56 ; 2012 ; 56 >
     au < doNotProcess ; exists ; 2013 ; Indian Journal of Anaesthesia Volume 57 ; 2013 ; 57 >
-    au < expected ; exists ; 2014 ; Indian Journal of Anaesthesia Volume 58 ; 2014 ; 58 >
+    au < testing ; exists ; 2014 ; Indian Journal of Anaesthesia Volume 58 ; 2014 ; 58 >
 
   }
 
@@ -639,7 +642,7 @@
     au < doNotProcess ; exists ; 2011 ; Indian Journal of Cancer Volume 48 ; 2011 ; 48 >
     au < doNotProcess ; exists ; 2012 ; Indian Journal of Cancer Volume 49 ; 2012 ; 49 >
     au < doNotProcess ; exists ; 2013 ; Indian Journal of Cancer Volume 50 ; 2013 ; 50 >
-    au < expected ; exists ; 2014 ; Indian Journal of Cancer Volume 51 ; 2014 ; 51 >
+    au < testing ; exists ; 2014 ; Indian Journal of Cancer Volume 51 ; 2014 ; 51 >
 
   }
 
@@ -683,7 +686,7 @@
     au < doNotProcess ; exists ; 2011 ; Indian Journal of Community Medicine Volume 36 ; 2011 ; 36 >
     au < doNotProcess ; exists ; 2012 ; Indian Journal of Community Medicine Volume 37 ; 2012 ; 37 >
     au < doNotProcess ; exists ; 2013 ; Indian Journal of Community Medicine Volume 38 ; 2013 ; 38 >
-    au < expected ; exists ; 2014 ; Indian Journal of Community Medicine Volume 39 ; 2014 ; 39 >
+    au < testing ; exists ; 2014 ; Indian Journal of Community Medicine Volume 39 ; 2014 ; 39 >
 
   }
 
@@ -709,7 +712,7 @@
     au < doNotProcess ; exists ; 2011 ; Indian Journal of Critical Care Medicine Volume 15 ; 2011 ; 15 >
     au < doNotProcess ; exists ; 2012 ; Indian Journal of Critical Care Medicine Volume 16 ; 2012 ; 16 >
     au < doNotProcess ; exists ; 2013 ; Indian Journal of Critical Care Medicine Volume 17 ; 2013 ; 17 >
-    au < expected ; exists ; 2014 ; Indian Journal of Critical Care Medicine Volume 18 ; 2014 ; 18 >
+    au < testing ; exists ; 2014 ; Indian Journal of Critical Care Medicine Volume 18 ; 2014 ; 18 >
 
   }
 
@@ -1455,7 +1458,7 @@
     au < doNotProcess ; exists ; 2011 ; Indian Journal of Pharmacology Volume 43 ; 2011 ; 43 >
     au < doNotProcess ; exists ; 2012 ; Indian Journal of Pharmacology Volume 44 ; 2012 ; 44 >
     au < doNotProcess ; exists ; 2013 ; Indian Journal of Pharmacology Volume 45 ; 2013 ; 45 >
-    au < expected ; exists ; 2014 ; Indian Journal of Pharmacology Volume 46 ; 2014 ; 46 >
+    au < testing ; exists ; 2014 ; Indian Journal of Pharmacology Volume 46 ; 2014 ; 46 >
 
   }
 
@@ -1789,6 +1792,7 @@
 
     param[base_url] = http://www.ijaronline.com/
     param[journal_issn] = 0974-7788
+    comment[0] = no permission page at this url
 
     au < doNotProcess ; exists ; 2010 ; International Journal of Ayurveda Research Volume 1 ; 2010 ; 1 >
     au < doNotProcess ; exists ; 2011 ; International Journal of Ayurveda Research Volume 2 ; 2011 ; 2 >
@@ -1849,7 +1853,7 @@
     au < doNotProcess ; exists ; 2011 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 1 ; 2011 ; 1 >
     au < doNotProcess ; exists ; 2012 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 2 ; 2012 ; 2 >
     au < doNotProcess ; exists ; 2013 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 3 ; 2013 ; 3 >
-    au < expected ; exists ; 2014 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 4 ; 2014 ; 4 >
+    au < testing ; exists ; 2014 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -1991,7 +1995,7 @@
 
     au < doNotProcess ; exists ; 2012 ; Journal of Academy of Medical Sciences Volume 2 ; 2012 ; 2 >
     au < doNotProcess ; exists ; 2013 ; Journal of Academy of Medical Sciences Volume 3 ; 2013 ; 3 >
-    au < expected ; exists ; 2014 ; Journal of Academy of Medical Sciences Volume 4 ; 2014 ; 4 >
+    au < testing ; exists ; 2014 ; Journal of Academy of Medical Sciences Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -2067,7 +2071,7 @@
     au < doNotProcess ; exists ; 2011 ; Journal of Ayurveda and Integrative Medicine Volume 2 ; 2011 ; 2 >
     au < doNotProcess ; exists ; 2012 ; Journal of Ayurveda and Integrative Medicine Volume 3 ; 2012 ; 3 >
     au < doNotProcess ; exists ; 2013 ; Journal of Ayurveda and Integrative Medicine Volume 4 ; 2013 ; 4 >
-    au < expected ; exists ; 2014 ; Journal of Ayurveda and Integrative Medicine Volume 5 ; 2014 ; 5 >
+    au < testing ; exists ; 2014 ; Journal of Ayurveda and Integrative Medicine Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -2131,6 +2135,7 @@
    >
 
     param[base_url] = http://www.jcdronline.com/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 0975-3583 
 
     au < doNotProcess ; exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 >
@@ -2184,6 +2189,7 @@
 
     param[base_url] = http://msd.ancientscienceoflife.org/
     param[journal_issn] = 2231-072X
+    comment[0] = no permission page at this url
     comment[base_url] = old url http://www.ayurvedarheumatology.org/
     comment[title] = old title Journal of Clinical Rheumatology in Ayurveda
 
@@ -2299,7 +2305,7 @@
     au < doNotProcess ; exists ; 2011 ; Journal of Dental Implants Volume 1 ; 2011 ; 1 >
     au < doNotProcess ; exists ; 2012 ; Journal of Dental Implants Volume 2 ; 2012 ; 2 >
     au < doNotProcess ; exists ; 2013 ; Journal of Dental Implants Volume 3 ; 2013 ; 3 >
-    au < expected ; exists ; 2014 ; Journal of Dental Implants Volume 4 ; 2014 ; 4 >
+    au < testing ; exists ; 2014 ; Journal of Dental Implants Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -2786,6 +2792,7 @@
    >
 
     param[base_url] = http://www.jnatpharm.org/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 2229-5119
 
     au < doNotProcess ; exists ; 2010 ; Journal of Natural Pharmaceuticals Volume 1 ; 2010 ; 1 >
@@ -3025,8 +3032,8 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Postgraduate Medicine Volume 56 ; 2010 ; 56 >
     au < doNotProcess ; exists ; 2011 ; Journal of Postgraduate Medicine Volume 57 ; 2011 ; 57 >
     au < doNotProcess ; exists ; 2012 ; Journal of Postgraduate Medicine Volume 58 ; 2012 ; 58 >
-    au < doNotProcess ; exists ; 2013 ; Journal of Postgraduate Medicine Volume 59 ; 2013 ; 59 >
-    au < expected ; exists ; 2014 ; Journal of Postgraduate Medicine Volume 60 ; 2014 ; 60 >
+    au < testing ; exists ; 2013 ; Journal of Postgraduate Medicine Volume 59 ; 2013 ; 59 >
+    au < testing ; exists ; 2014 ; Journal of Postgraduate Medicine Volume 60 ; 2014 ; 60 >
 
   }
 
@@ -3039,6 +3046,7 @@
    >
 
     param[base_url] = http://www.jpdt.org/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 0976-1756
 
     au < doNotProcess ; exists ; 2010 ; Journal of Prenatal Diagnosis and Therapy Volume 1 ; 2010 ; 1 >
@@ -3125,6 +3133,7 @@
    >
 
     param[base_url] = http://www.jyoungpharm.in/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 0975-1483
 
     au < doNotProcess ; exists ; 2009 ; Journal of Young Pharmacists Volume 1 ; 2009 ; 1 >
@@ -3260,7 +3269,7 @@
     au < doNotProcess ; exists ; 2011 ; Middle East African Journal of Ophthalmology Volume 18 ; 2011 ; 18 >
     au < doNotProcess ; exists ; 2012 ; Middle East African Journal of Ophthalmology Volume 19 ; 2012 ; 19 >
     au < doNotProcess ; exists ; 2013 ; Middle East African Journal of Ophthalmology Volume 20 ; 2013 ; 20 >
-    au < expected ; exists ; 2014 ; Middle East African Journal of Ophthalmology Volume 21 ; 2014 ; 21 >
+    au < testing ; exists ; 2014 ; Middle East African Journal of Ophthalmology Volume 21 ; 2014 ; 21 >
 
   }
 
@@ -3408,7 +3417,7 @@
     au < doNotProcess ; exists ; 2011 ; Noise and Health Volume 13 ; 2011 ; 13 >
     au < doNotProcess ; exists ; 2012 ; Noise and Health Volume 14 ; 2012 ; 14 >
     au < doNotProcess ; exists ; 2013 ; Noise and Health Volume 15 ; 2013 ; 15 >
-    au < expected ; exists ; 2014 ; Noise and Health Volume 16 ; 2014 ; 16 >
+    au < testing ; exists ; 2014 ; Noise and Health Volume 16 ; 2014 ; 16 >
 
   }
 
@@ -3461,6 +3470,7 @@
     >
 
     param[base_url] = http://www.phmethods.org/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 2229-4708
 
     au < doNotProcess ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 >
@@ -3546,6 +3556,7 @@
     >
 
     param[base_url] = http://www.pulmonarycirculation.org/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 2045-8932
 
     au < doNotProcess ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 >
@@ -3564,6 +3575,7 @@
     >
 
     param[base_url] = http://www.pvrireview.org/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 0974-6013
 
     au < doNotProcess ; exists ; 2009 ; PVRI Review Volume 1 ; 2009 ; 1 >
@@ -3588,7 +3600,7 @@
     au < doNotProcess ; exists ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 >
     au < doNotProcess ; exists ; 2011 ; Radiation Protection and Environment Volume 34 ; 2011 ; 34 >
     au < doNotProcess ; exists ; 2012 ; Radiation Protection and Environment Volume 35 ; 2012 ; 35 >
-    au < expected ; exists ; 2014 ; Radiation Protection and Environment Volume 36 ; 2014 ; 36 >
+    au < testing ; exists ; 2014 ; Radiation Protection and Environment Volume 36 ; 2014 ; 36 >
 
   }
         
@@ -3651,7 +3663,7 @@
     au < doNotProcess ; exists ; 2011 ; Saudi Journal of Anaesthesia Volume 5 ; 2011 ; 5 >
     au < doNotProcess ; exists ; 2012 ; Saudi Journal of Anaesthesia Volume 6 ; 2012 ; 6 >
     au < doNotProcess ; exists ; 2013 ; Saudi Journal of Anaesthesia Volume 7 ; 2013 ; 7 >
-    au < expected ; exists ; 2014 ; Saudi Journal of Anaesthesia Volume 8 ; 2014 ; 8 >
+    au < testing ; exists ; 2014 ; Saudi Journal of Anaesthesia Volume 8 ; 2014 ; 8 >
 
   }
     
@@ -3726,6 +3738,7 @@
    >
 
     param[base_url] = http://www.surgicalneurologyint.com/
+    comment[0] = no lockss.txt available at this url
     param[journal_issn] = 2229-5097 
 
     au < doNotProcess ; exists ; 2010 ; Surgical Neurology International Volume 1 ; 2010 ; 1 >
@@ -3793,7 +3806,7 @@
     au < doNotProcess ; exists ; 2011 ; Tropical Parasitology Volume 1 ; 2011 ; 1 >
     au < doNotProcess ; exists ; 2012 ; Tropical Parasitology Volume 2 ; 2012 ; 2 >
     au < doNotProcess ; exists ; 2013 ; Tropical Parasitology Volume 3 ; 2013 ; 3 >
-    au < expected ; exists ; 2014 ; Tropical Parasitology Volume 4 ; 2014 ; 4 >
+    au < testing ; exists ; 2014 ; Tropical Parasitology Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -3851,6 +3864,7 @@
 
     param[base_url] = http://www.butrousfoundation.com/ysjournal/
     param[journal_issn] = 0974-6102
+    comment[0] = no journal at this url
 
     au < doNotProcess ; exists ; 2006 ; Young Scientists Journal Volume 1 ; 2006 ; 1 >
     au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 2 ; 2007 ; 2 >
