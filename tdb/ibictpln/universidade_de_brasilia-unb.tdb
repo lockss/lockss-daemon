@@ -366,6 +366,7 @@
       au < released ; 2013 ; 19 ; Linhas Críticas Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 20 ; Linhas Críticas Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 21 ; Linhas Críticas Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -415,6 +416,7 @@
       au < released ; 2013 ; 14 ; Boletim Meridiano 47 Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 15 ; Boletim Meridiano 47 Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 16 ; Boletim Meridiano 47 Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -458,6 +460,8 @@
       au < released ; 2012 ; 1 ; Revista Museologia & Interdisciplinaridade Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Revista Museologia & Interdisciplinaridade Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 3 ; Revista Museologia & Interdisciplinaridade Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 4 ; Revista Museologia & Interdisciplinaridade Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -491,6 +495,8 @@
       au < released ; 2012 ; 6 ; Música em Contexto Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Música em Contexto Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 8 ; Música em Contexto Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Música em Contexto Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -541,6 +547,8 @@
       au < released ; 2012 ; 5 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Paranoá: cadernos de arquitetura e urbanismo Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -565,6 +573,8 @@
       au < released ; 2012 ; 1 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 3 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 4 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -630,6 +640,8 @@
       
       au < released ; 2013 ; 1 ; Revista Cenário Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Revista Cenário Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 3 ; Revista Cenário Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -696,6 +708,7 @@
       au < released ; 2012 ; 11 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 13 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2014 ; 2014 ; >
+
       }
   }
 
@@ -730,6 +743,8 @@
       au < released ; 2012 ; 6 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 8 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -750,6 +765,7 @@
       au < released ; 2013 ; 3 ; Revista Estética e Semiótica Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 4 ; Revista Estética e Semiótica Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 5 ; Revista Estética e Semiótica Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -791,6 +807,8 @@
       au < released ; 2012 ; 10 ; Revista Sul-Americana de Filosofia e Educação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Revista Sul-Americana de Filosofia e Educação Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 12 ; Revista Sul-Americana de Filosofia e Educação Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Revista Sul-Americana de Filosofia e Educação Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -841,6 +859,8 @@
       
       au < released ; 2013 ; 1 ; Revista Perspectivas do Desenvolvimento Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Revista Perspectivas do Desenvolvimento Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 3 ; Revista Perspectivas do Desenvolvimento Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -874,6 +894,8 @@
       param[base_url] = http://periodicos.unb.br/
 
       au < released ; 2014 ; 1 ; Revista XIX: artes e técnicas em transformação Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 2 ; Revista XIX: artes e técnicas em transformação Volume 2015 ; 2015 ; >
+
       }
 
   }
@@ -908,6 +930,8 @@
       au < released ; 2012 ; 15 ; Revista Ser Social Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 16 ; Revista Ser Social Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 17 ; Revista Ser Social Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 18 ; Revista Ser Social Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -938,6 +962,7 @@
       au < released ; 2013 ; 4 ; Sustentabilidade em Debate Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 5 ; Sustentabilidade em Debate Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 6 ; Sustentabilidade em Debate Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -961,6 +986,7 @@
       au < released ; 2012 ; 1 ; Traduzires Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 2 ; Traduzires Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 3 ; Traduzires Volume 2014 ; 2014 ; >
+
       }
   }
 
@@ -1035,6 +1061,8 @@
       au < released ; 2012 ; 12 ; ParticipAção Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 13 ; ParticipAção Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 14 ; ParticipAção Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 15 ; ParticipAção Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -1094,6 +1122,7 @@
       au < released ; 2013 ; 6 ; Revista Horizontes de Linguística Aplicada Volume 2013 ; 2013 ; >
       au < notReady ; 2014 ; 7 ; Revista Horizontes de Linguística Aplicada Volume 2014 ; 2014 ; no substance >
       au < manifest ; 2015 ; 8 ; Revista Horizontes de Linguística Aplicada Volume 2015 ; 2015 ; >
+
       }
   }
 
@@ -1127,6 +1156,7 @@
       au < released ; 2013 ; 6 ; Revista Ibero-Americana de Ciência da Informação Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; Revista Ibero-Americana de Ciência da Informação Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 8 ; Revista Ibero-Americana de Ciência da Informação Volume 2015 ; 2015 ; >
+
       }
   }
 
