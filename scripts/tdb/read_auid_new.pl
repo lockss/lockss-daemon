@@ -198,14 +198,15 @@ while (my $line = <>) {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
+        $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
-        printf("%s\" lockss\n",substr($man_url, 0, -1));
+        printf("%s\" lockss-probe\n",$base_url_short);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
               $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($man_url, 0, -1). lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short. lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
