@@ -200,12 +200,12 @@ while (my $line = <>) {
         $man_url = uri_unescape($url);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
-        #printf("%s\n",substr($param{base_url}, 0, -3));
+        printf("%s\" lockss\n",substr($man_url, 0, -1));
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
               $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($param{base_url}, 0, -3)\S* lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($man_url, 0, -1). lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
