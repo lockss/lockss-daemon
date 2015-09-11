@@ -158,7 +158,7 @@
     comment[0] = Volume 2012 has no manifest page.
 
     au < down ; exists ; 2012 ; International Review of Law Volume 2012 ; 2012 >
-    au < finished ; crawling ; 2013 ; International Review of Law Volume 2013 ; 2013 >
+    au < finished ; finished ; 2013 ; International Review of Law Volume 2013 ; 2013 >
     au < exists ; exists ; 2013 ; International Review of Law Volume DomesticViolence ; DomesticViolence >
     au < finished ; crawling ; 2014 ; International Review of Law Volume 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; International Review of Law Volume 2015 ; 2015 >
@@ -176,7 +176,7 @@
     param[journal_id] = jemtac
 
     au < finished ; crawling ; 2012 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2012 ; 2012 >
-    au < finished ; crawling ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 >
+    au < finished ; finished ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 >
 
@@ -376,7 +376,7 @@
     au < exists ; exists ; 2011 ; QScience Proceedings Volume 2011 ; 2011 >
     au < finished ; crawling ; 2012 ; QScience Proceedings Volume 2012 ; 2012 >
     au < ingNotReady ; exists ; 2013 ; QScience Proceedings Volume 2013 ; 2013 >
-    au < finished ; crawling ; 2014 ; QScience Proceedings Volume 2014 ; 2014 >
+    au < finished ; finished ; 2014 ; QScience Proceedings Volume 2014 ; 2014 >
     au < notReady ; exists ; 2015 ; QScience Proceedings Volume 2015 ; 2015 >
 
   }

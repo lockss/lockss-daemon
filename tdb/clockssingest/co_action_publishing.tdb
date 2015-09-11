@@ -55,8 +55,8 @@
       comment[0] = discontinued in 2013
 
       au < finished ; crawling ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-      au < finished ; crawling ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
-      au < finished ; crawling ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
+      au < finished ; finished ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+      au < finished ; finished ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
     
     }
     
@@ -77,7 +77,7 @@
     au < finished ; frozen ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; 2013 >
-    au < finished ; crawling ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 >
+    au < finished ; finished ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 ; 2015 >
 
   }
@@ -130,7 +130,7 @@
     comment[notReady] = Unknown Host
 
     au < finished ; crawling ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
-    au < finished ; crawling ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
+    au < finished ; finished ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
     au < notReady ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
     au < finished ; crawling ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
@@ -179,7 +179,7 @@
     au < finished ; frozen ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; 2013 >
-    au < finished ; crawling ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 >
+    au < finished ; finished ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 >
     au < manifest ; exists ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; 2015 >
     
   }
@@ -420,7 +420,7 @@
     param[base_url] = http://www.jmahp.net/
     param[journal_id] = jmahp
 
-    au < finished ; crawling ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
+    au < finished ; finished ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; 2015 >
 
@@ -467,7 +467,7 @@
     au < finished ; frozen ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
     au < finished ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
     au < crawling ; exists ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; 2013 >
-    au < finished ; crawling ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 >
+    au < finished ; finished ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 >
     au < manifest ; exists ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; 2015 >
 
   }
@@ -575,7 +575,7 @@
     au < crawling ; exists ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
     au < finished ; crawling ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
     au < crawling ; exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
-    au < finished ; crawling ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
+    au < finished ; finished ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
     au < finished ; crawling ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
     au < finished ; crawling ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
     au < finished ; crawling ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
@@ -611,7 +611,7 @@
     au < finished ; frozen ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
     au < finished ; crawling ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
-    au < finished ; crawling ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
+    au < finished ; finished ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
   }
 
@@ -654,9 +654,9 @@
     au < crawling ; exists ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
     au < crawling ; exists ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
     au < crawling ; exists ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
-    au < finished ; crawling ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
+    au < finished ; finished ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
     au < crawling ; exists ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 >
-    au < finished ; crawling ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
+    au < finished ; finished ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
     au < finished ; crawling ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 >
     au < crawling ; exists ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 >
     au < crawling ; exists ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 >
@@ -910,7 +910,7 @@
     au < finished ; frozen ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 >
     au < finished ; frozen ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
     au < crawling ; exists ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; 2013 >
-    au < finished ; crawling ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; 2014 >
+    au < finished ; finished ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; 2014 >
     au < manifest ; exists ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; 2015 >
 
   }
