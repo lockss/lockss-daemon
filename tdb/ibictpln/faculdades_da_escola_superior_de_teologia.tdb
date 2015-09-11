@@ -79,7 +79,7 @@
   {
 
       title <
-        name = identidade! ;
+        name = Identidade! ;
         issn = 1676-9570 ;
         eissn = 2178-437X
       >
@@ -88,11 +88,11 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = identidade
 
-      au < exists ; 2010 ; 15 ; identidade! Volume 15 ; 2010 ; >
-      au < exists ; 2011 ; 16 ; identidade! Volume 16 ; 2011 ; >
-      au < exists ; 2012 ; 17 ; identidade! Volume 17 ; 2012 ; >
-      au < expected ; 2013 ; 18 ; identidade! Volume 18 ; 2013 ; >
-      au < expected ; 2014 ; 19 ; identidade! Volume 19 ; 2014 ; >
+      au < exists ; 2010 ; 15 ; Identidade! Volume 15 ; 2010 ; >
+      au < exists ; 2011 ; 16 ; Identidade! Volume 16 ; 2011 ; >
+      au < exists ; 2012 ; 17 ; Identidade! Volume 17 ; 2012 ; >
+      au < expected ; 2013 ; 18 ; Identidade! Volume 18 ; 2013 ; >
+      au < expected ; 2014 ; 19 ; Identidade! Volume 19 ; 2014 ; >
 
   }
 
