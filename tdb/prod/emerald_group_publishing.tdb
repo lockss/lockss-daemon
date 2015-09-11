@@ -7600,20 +7600,20 @@
     param[journal_issn] = 2049-372X
     comment[0] = Online from 2000
 
-    au < exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 >
-    au < exists ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 >
-    au < exists ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 >
-    au < exists ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 >
-    au < exists ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 >
-    au < exists ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 >
-    au < exists ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 >
-    au < exists ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 >
-    au < exists ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 > 
-    au < exists ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 >
-    au < exists ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 >
-    au < exists ; 2011 ; Meditari Accountancy Research Volume 19 ; 19 >
-    au < exists ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 >
-    au < exists ; 2013 ; Meditari Accountancy Research Volume 21 ; 21 >
+    au < doNotProcess ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 >
+    au < doNotProcess ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 >
+    au < doNotProcess ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 >
+    au < doNotProcess ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 >
+    au < doNotProcess ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 >
+    au < doNotProcess ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 >
+    au < doNotProcess ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 >
+    au < doNotProcess ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 >
+    au < doNotProcess ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 > 
+    au < doNotProcess ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 >
+    au < doNotProcess ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 >
+    au < doNotProcess ; 2011 ; Meditari Accountancy Research Volume 19 ; 19 >
+    au < doNotProcess ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 >
+    au < doNotProcess ; 2013 ; Meditari Accountancy Research Volume 21 ; 21 >
     }
 
   }
@@ -9166,7 +9166,7 @@
     au < down ; 2009 ; Structural Survey Volume 27 ; 27 >
     au < down ; 2010 ; Structural Survey Volume 28 ; 28 >
     au < down ; 2011 ; Structural Survey Volume 29 ; 29 >
-    au < exists ; 2012 ; Structural Survey Volume 30 ; 30 >
+    au < doNotProcess ; 2012 ; Structural Survey Volume 30 ; 30 >
 
   }
 
