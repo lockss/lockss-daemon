@@ -81,7 +81,7 @@ while (my $line = <>) {
           $result = "Redirected";
         }
         #$result = "Redirected";
-      } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$param{base_url}\" lockss-probe/))) {
+      } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$param{base_url}. lockss-probe/))) {
           $result = "CGI_probe_link";
           if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
             $vol_title = $1;
@@ -128,7 +128,7 @@ while (my $line = <>) {
                 $result = "Redirected";
               }
               #$result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$param{base_url}\" lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$param{base_url}. lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
@@ -166,7 +166,7 @@ while (my $line = <>) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
               $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($param{base_url}, 0, -3)" lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($param{base_url}, 0, -3)\S* lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
@@ -205,7 +205,7 @@ while (my $line = <>) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
               $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($param{base_url}, 0, -3)" lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($param{base_url}, 0, -3)\S* lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
