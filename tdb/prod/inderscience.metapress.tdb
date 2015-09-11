@@ -3044,8 +3044,8 @@
       au < doNotProcess ; 1999 ; International Journal of Global Energy Issues Volume 12 ; 12 >
       au < doNotProcess ; 2000 ; International Journal of Global Energy Issues Volume 13 ; 13 >
       au < down ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 >
-      au < exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 >
-      au < exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 >
+      au < doNotProcess ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 >
+      au < doNotProcess ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 >
       au < down ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 >
       au < down ; 2002 ; International Journal of Global Energy Issues Volume 18 ; 18 >
       au < down ; 2003 ; International Journal of Global Energy Issues Volume 19 ; 19 >
@@ -7766,10 +7766,10 @@
 
       param[journal_issn] = 1569-1551
       
-      au < exists ; 2001 ; Journal of Design Research Volume 1 ; 1 >
-      au < exists ; 2002 ; Journal of Design Research Volume 2 ; 2 >
-      au < exists ; 2003 ; Journal of Design Research Volume 3 ; 3 >
-      au < exists ; 2004 ; Journal of Design Research Volume 4 ; 4 >
+      au < doNotProcess ; 2001 ; Journal of Design Research Volume 1 ; 1 >
+      au < doNotProcess ; 2002 ; Journal of Design Research Volume 2 ; 2 >
+      au < doNotProcess ; 2003 ; Journal of Design Research Volume 3 ; 3 >
+      au < doNotProcess ; 2004 ; Journal of Design Research Volume 4 ; 4 >
       au < down ; 2006-2007 ; Journal of Design Research Volume 5 ; 5 >
       au < down ; 2007 ; Journal of Design Research Volume 6 ; 6 >
       au < down ; 2008 ; Journal of Design Research Volume 7 ; 7 >
