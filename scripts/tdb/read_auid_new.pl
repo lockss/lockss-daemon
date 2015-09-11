@@ -66,6 +66,7 @@ while (my $line = <>) {
       $param{base_url}, $param{volume_name});
     $man_url = uri_unescape($url);
     $man_url_d = uri_unescape($url_d);
+    $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
@@ -81,7 +82,7 @@ while (my $line = <>) {
           $result = "Redirected";
         }
         #$result = "Redirected";
-      } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$param{base_url}. lockss-probe/))) {
+      } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
           $result = "CGI_probe_link";
           if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
             $vol_title = $1;
@@ -114,6 +115,7 @@ while (my $line = <>) {
             $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
         $man_url_d = uri_unescape($url_d);
+        $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
         if ($resp->is_success) {
@@ -128,7 +130,7 @@ while (my $line = <>) {
                 $result = "Redirected";
               }
               #$result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$param{base_url}. lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
@@ -160,13 +162,14 @@ while (my $line = <>) {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
+        $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
               $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/substr($param{base_url}, 0, -3)\S* lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
@@ -201,12 +204,12 @@ while (my $line = <>) {
         $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
-        printf("%s\" lockss-probe\n",$base_url_short);
+        #printf("%s\" lockss-probe\n",$base_url_short);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
               $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short. lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
