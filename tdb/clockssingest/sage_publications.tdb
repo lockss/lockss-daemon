@@ -11328,7 +11328,7 @@
       au < manifest ; exists ; 2010 ; Evolutionary Psychology Volume 8 ; 8 ; >
       au < manifest ; exists ; 2011 ; Evolutionary Psychology Volume 9 ; 9 ; >
       au < manifest ; exists ; 2012 ; Evolutionary Psychology Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2013 ; Evolutionary Psychology Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2013 ; Evolutionary Psychology Volume 11 ; 11 ; >
       au < crawling ; exists ; 2014 ; Evolutionary Psychology Volume 12 ; 12 ; >
       au < manifest ; exists ; 2015 ; Evolutionary Psychology Volume 13 ; 13 ; >
 
@@ -22797,7 +22797,7 @@
       param[base_url] = http://iem.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 ; >
       au < crawling ; exists ; 2014 ; Journal of Inborn Errors of Metabolism and Screening Volume 2 ; 2 ; >
       au < exists ; exists ; 2015 ; Journal of Inborn Errors of Metabolism and Screening Volume 3 ; 3 ; >
 
@@ -30348,7 +30348,7 @@
       au < exists ; exists ; 2010 ; New Solutions Volume 20 ; 20 ; >
       au < exists ; exists ; 2011 ; New Solutions Volume 21 ; 21 ; >
       au < exists ; exists ; 2012 ; New Solutions Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2013 ; New Solutions Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2013 ; New Solutions Volume 23 ; 23 ; >
       au < crawling ; exists ; 2014 ; New Solutions Volume 24 ; 24 ; >
       au < crawling ; exists ; 2015 ; New Solutions Volume 25 ; 25 ; >
 
@@ -30365,7 +30365,7 @@
       param[base_url] = http://nrj.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; >
+      au < wanted ; exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; >
 
   }
 
@@ -30436,7 +30436,7 @@
       au < finished ; frozen ; 2012 ; Nonprofit and Voluntary Sector Quarterly Volume 41 ; 41 ; >
       au < finished ; crawling ; 2013 ; Nonprofit and Voluntary Sector Quarterly Volume 42 ; 42 ; >
       au < finished ; crawling ; 2014 ; Nonprofit and Voluntary Sector Quarterly Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2015 ; Nonprofit and Voluntary Sector Quarterly Volume 44 ; 44 ; >
+      au < crawling ; exists ; 2015 ; Nonprofit and Voluntary Sector Quarterly Volume 44 ; 44 ; >
 
     }
 
@@ -30504,7 +30504,7 @@
       au < exists ; exists ; 2012 ; North American Archaeologist Volume 33 ; 33 ; >
       au < exists ; exists ; 2013 ; North American Archaeologist Volume 34 ; 34 ; >
       au < crawling ; exists ; 2014 ; North American Archaeologist Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2015 ; North American Archaeologist Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2015 ; North American Archaeologist Volume 36 ; 36 ; >
 
   }
 
@@ -30553,7 +30553,7 @@
       au < finished ; frozen ; 2012 ; Nursing Ethics Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Nursing Ethics Volume 20 ; 20 ; >
       au < finished ; crawling ; 2014 ; Nursing Ethics Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2015 ; Nursing Ethics Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2015 ; Nursing Ethics Volume 22 ; 22 ; >
 
     }
 
@@ -30610,7 +30610,7 @@
       au < finished ; frozen ; 2012 ; Nursing Science Quarterly Volume 25 ; 25 ; >
       au < crawling ; exists ; 2013 ; Nursing Science Quarterly Volume 26 ; 26 ; >
       au < finished ; crawling ; 2014 ; Nursing Science Quarterly Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2015 ; Nursing Science Quarterly Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2015 ; Nursing Science Quarterly Volume 28 ; 28 ; >
 
     }
 
@@ -30711,7 +30711,7 @@
       au < finished ; frozen ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Nutrition in Clinical Practice Volume 28 ; 28 ; >
       au < finished ; crawling ; 2014 ; Nutrition in Clinical Practice Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 ; >
 
     }
 
@@ -30762,7 +30762,7 @@
       au < crawling ; exists ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 ; >
       au < crawling ; exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 ; >
       au < crawling ; exists ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
-      au < manifest ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
+      au < crawling ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
 
   }
 
@@ -30812,7 +30812,7 @@
         au < exists ; exists ; 2012 ; OTJR: Occupation, Participation and Health Volume 32 ; 32 ; >
         au < finished ; crawling ; 2013 ; OTJR: Occupation, Participation and Health Volume 33 ; 33 ; >
         au < finished ; crawling ; 2014 ; OTJR: Occupation, Participation and Health Volume 34 ; 34 ; >
-        au < manifest ; exists ; 2015 ; OTJR: Occupation, Participation and Health Volume 35 ; 35 ; >
+        au < crawling ; exists ; 2015 ; OTJR: Occupation, Participation and Health Volume 35 ; 35 ; >
 
     }
 
@@ -30861,7 +30861,7 @@
       au < finished ; frozen ; 2012 ; Organization Volume 19 ; 19 ; >
       au < finished ; crawling ; 2013 ; Organization Volume 20 ; 20 ; >
       au < finished ; crawling ; 2014 ; Organization Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2015 ; Organization Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2015 ; Organization Volume 22 ; 22 ; >
 
     }
 
@@ -30918,7 +30918,7 @@
       au < finished ; finished ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
       au < finished ; crawling ; 2013 ; Organization & Environment Volume 26 ; 26 ; >
       au < finished ; crawling ; 2014 ; Organization & Environment Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2015 ; Organization & Environment Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2015 ; Organization & Environment Volume 28 ; 28 ; >
 
     }
 
@@ -30983,7 +30983,7 @@
       au < finished ; frozen ; 2012 ; Organization Studies Volume 33 ; 33 ; >
       au < finished ; crawling ; 2013 ; Organization Studies Volume 34 ; 34 ; >
       au < finished ; crawling ; 2014 ; Organization Studies Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2015 ; Organization Studies Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2015 ; Organization Studies Volume 36 ; 36 ; >
 
     }
 
@@ -31007,7 +31007,7 @@
       au < finished ; crawling ; 2012 ; Organizational Psychology Review Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Organizational Psychology Review Volume 3 ; 3 ; >
       au < finished ; crawling ; 2014 ; Organizational Psychology Review Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2015 ; Organizational Psychology Review Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2015 ; Organizational Psychology Review Volume 5 ; 5 ; >
 
     }
 
@@ -31114,8 +31114,8 @@
       au < crawling ; exists ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 149 ; 149 ; >
       au < crawling ; exists ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 150 ; 150 ; >
       au < crawling ; exists ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 151 ; 151 ; >
-      au < manifest ; exists ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 ; >
-      au < manifest ; exists ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 153 ; 153 ; >
+      au < crawling ; exists ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 ; >
+      au < crawling ; exists ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 153 ; 153 ; >
 
     }
 
@@ -31173,7 +31173,7 @@
       au < finished ; frozen ; 2012 ; Palliative Medicine Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; Palliative Medicine Volume 27 ; 27 ; >
       au < crawling ; exists ; 2014 ; Palliative Medicine Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2015 ; Palliative Medicine Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2015 ; Palliative Medicine Volume 29 ; 29 ; >
 
     }
 
@@ -31239,7 +31239,7 @@
       au < finished ; crawling ; 2012 ; Party Politics Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Party Politics Volume 19 ; 19 ; >
       au < finished ; crawling ; 2014 ; Party Politics Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2015 ; Party Politics Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2015 ; Party Politics Volume 21 ; 21 ; >
 
     }
 
@@ -31256,7 +31256,7 @@
       param[base_url] = http://php.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Pedagogy in Health Promotion Volume 1 ; 1 ; >
+      au < wanted ; exists ; 2015 ; Pedagogy in Health Promotion Volume 1 ; 1 ; >
 
   }
 
@@ -31339,7 +31339,7 @@
       au < finished ; crawling ; 2012 ; Perfusion Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Perfusion Volume 28 ; 28 ; >
       au < finished ; crawling ; 2014 ; Perfusion Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2015 ; Perfusion Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2015 ; Perfusion Volume 30 ; 30 ; >
 
     }
 
@@ -31409,7 +31409,7 @@
       au < finished ; frozen ; 2012 ; Personality and Social Psychology Bulletin Volume 38 ; 38 ; >
       au < finished ; crawling ; 2013 ; Personality and Social Psychology Bulletin Volume 39 ; 39 ; >
       au < crawling ; exists ; 2014 ; Personality and Social Psychology Bulletin Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; >
 
     }
 
@@ -31457,7 +31457,7 @@
       au < finished ; frozen ; 2012 ; Personality and Social Psychology Review Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Personality and Social Psychology Review Volume 17 ; 17 ; >
       au < finished ; crawling ; 2014 ; Personality and Social Psychology Review Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2015 ; Personality and Social Psychology Review Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2015 ; Personality and Social Psychology Review Volume 19 ; 19 ; >
 
     }
 
@@ -31486,7 +31486,7 @@
       au < finished ; frozen ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 ; >
       au < crawling ; exists ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 ; >
       au < crawling ; exists ; 2014 ; Perspectives on Psychological Science Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2015 ; Perspectives on Psychological Science Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2015 ; Perspectives on Psychological Science Volume 10 ; 10 ; >
 
     }
 
@@ -31684,7 +31684,7 @@
       au < finished ; frozen ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; >
       au < crawling ; exists ; 2013 ; Perspectives in Public Health Volume 133 ; 133 ; >
       au < finished ; crawling ; 2014 ; Perspectives in Public Health Volume 134 ; 134 ; >
-      au < manifest ; exists ; 2015 ; Perspectives in Public Health Volume 135 ; 135 ; >
+      au < crawling ; exists ; 2015 ; Perspectives in Public Health Volume 135 ; 135 ; >
 
     }
 
@@ -31839,7 +31839,7 @@
       au < finished ; finished ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; Philosophy & Social Criticism Volume 39 ; 39 ; >
       au < crawling ; exists ; 2014 ; Philosophy & Social Criticism Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2015 ; Philosophy & Social Criticism Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2015 ; Philosophy & Social Criticism Volume 41 ; 41 ; >
 
     }
 
@@ -31956,7 +31956,7 @@
       au < finished ; frozen ; 2012 ; Planning Theory Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Planning Theory Volume 12 ; 12 ; >
       au < finished ; crawling ; 2014 ; Planning Theory Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2015 ; Planning Theory Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2015 ; Planning Theory Volume 14 ; 14 ; >
 
     }
 
@@ -31986,7 +31986,7 @@
       au < exists ; exists ; 2012 ; The Police Journal: Theory, Practice and Principles Volume 85 ; 85 ; >
       au < exists ; exists ; 2013 ; The Police Journal: Theory, Practice and Principles Volume 86 ; 86 ; >
       au < finished ; finished ; 2014 ; The Police Journal: Theory, Practice and Principles Volume 87 ; 87 ; >
-      au < manifest ; exists ; 2015 ; The Police Journal: Theory, Practice and Principles Volume 88 ; 88 ; >
+      au < crawling ; exists ; 2015 ; The Police Journal: Theory, Practice and Principles Volume 88 ; 88 ; >
   }
 
   {
@@ -32076,7 +32076,7 @@
       au < finished ; frozen ; 2012 ; Policy, Politics, & Nursing Practice Volume 13 ; 13 ; >
       au < finished ; crawling ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 ; >
       au < finished ; crawling ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 ; >
 
     }
 
@@ -32104,7 +32104,7 @@
       au < exists ; exists ; 2012 ; Policy Futures in Education Volume 10 ; 10 ; >
       au < finished ; crawling ; 2013 ; Policy Futures in Education Volume 11 ; 11 ; >
       au < finished ; crawling ; 2014 ; Policy Futures in Education Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2015 ; Policy Futures in Education Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2015 ; Policy Futures in Education Volume 13 ; 13 ; >
 
   }
 
@@ -32216,7 +32216,7 @@
       au < finished ; frozen ; 2012 ; Political Research Quarterly Volume 65 ; 65 ; >
       au < crawling ; exists ; 2013 ; Political Research Quarterly Volume 66 ; 66 ; >
       au < finished ; crawling ; 2014 ; Political Research Quarterly Volume 67 ; 67 ; >
-      au < manifest ; exists ; 2015 ; Political Research Quarterly Volume 68 ; 68 ; >
+      au < crawling ; exists ; 2015 ; Political Research Quarterly Volume 68 ; 68 ; >
 
     }
 
@@ -33800,7 +33800,7 @@
       au < exists ; exists ; 2011 ; Psychology Learning & Teaching Volume 10 ; 10 ; >
       au < exists ; exists ; 2012 ; Psychology Learning & Teaching Volume 11 ; 11 ; >
       au < exists ; exists ; 2013 ; Psychology Learning & Teaching Volume 12 ; 12 ; >
-      au < ready ; exists ; 2014 ; Psychology Learning & Teaching Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2014 ; Psychology Learning & Teaching Volume 13 ; 13 ; >
       au < manifest ; exists ; 2015 ; Psychology Learning & Teaching Volume 14 ; 14 ; >
 
   }
@@ -34995,7 +34995,7 @@
       au < exists ; exists ; 2011 ; Research in Comparative and International Education Volume 6 ; 6 ; >
       au < exists ; exists ; 2012 ; Research in Comparative and International Education Volume 7 ; 7 ; >
       au < exists ; exists ; 2013 ; Research in Comparative and International Education Volume 8 ; 8 ; >
-      au < ready ; exists ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 ; >
       au < manifest ; exists ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 ; >
 
   }
@@ -40538,7 +40538,7 @@
       au < finished ; frozen ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
       au < finished ; crawling ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Trends in Amplification Volume 17 ; 17 ; >
-      au < ready ; exists ; 2014 ; Trends in Amplification Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2014 ; Trends in Amplification Volume 18 ; 18 ; >
       au < expected ; exists ; 2015 ; Trends in Amplification Volume 19 ; 19 ; >
 
     }
@@ -41559,7 +41559,7 @@
       au < exists ; exists ; 2011 ; Workplace Health & Safety Volume 59 ; 59 ; >
       au < exists ; exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 ; >
       au < exists ; exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 ; >
-      au < ready ; exists ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; >
+      au < crawling ; exists ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; >
       au < crawling ; exists ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; >
 
   }
@@ -44513,7 +44513,7 @@
 
         # skips 2013
         
-        au < ready ; exists ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
+        au < crawling ; exists ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
         au < expected ; exists ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; >
 
     }
