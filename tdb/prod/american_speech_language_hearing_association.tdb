@@ -17,7 +17,7 @@
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       param[base_url] = http://aja.pubs.asha.org/
-      param[resource_id] = 17  #  made up
+      param[resource_id] = 140
       implicit < status ; year ; name ; param[year] >
 
       au < exists ; 1992 ; American Journal of Audiology Volume 1 ; 1992 >
@@ -61,7 +61,7 @@
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       param[base_url] = http://ajslp.asha.org/
-      param[resource_id] = 21  #  made up
+      param[resource_id] = 141
       implicit < status ; year ; name ; param[year] >
 
       au < exists ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1992 >
@@ -105,7 +105,7 @@
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       param[base_url] = http://jslhr.asha.org/
-      param[resource_id] = 23  # made up
+      param[resource_id] = 142
       implicit < status ; year ; name ; param[year] >
       comment[continues] = 0022-4677
 
@@ -184,7 +184,7 @@
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       param[base_url] = http://lshss.asha.org/
-      param[resource_id] = 22  # made up
+      param[resource_id] = 143
       implicit < status ; year ; name ; param[year] >
 
       au < exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1970 >
