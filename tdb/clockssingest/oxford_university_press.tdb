@@ -1842,7 +1842,7 @@
     au < exists ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
     au < manifest ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
     au < crawling ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
-    au < notReady ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
+    au < exists ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
     au < crawling ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
     au < crawling ; exists ; 2015 ; Arbitration International Volume 31 ; 31 ; >
 
@@ -3978,7 +3978,7 @@
     au < finished ; crawling ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
-    au < testing ; exists ; 2015 ; Cerebral Cortex Volume 25 ; 25 ; >
+    au < ready ; exists ; 2015 ; Cerebral Cortex Volume 25 ; 25 ; >
 
     }
 
@@ -5859,7 +5859,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal Volume 34 ; 34 ; >
     au < crawling ; exists ; 2014 ; European Heart Journal Volume 35 ; 35 ; >
-    au < testing ; exists ; 2015 ; European Heart Journal Volume 36 ; 36 ; >
+    au < ready ; exists ; 2015 ; European Heart Journal Volume 36 ; 36 ; >
 
     }
 
@@ -5985,7 +5985,7 @@
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; >
     au < crawling ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
     au < crawling ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
-    au < testing ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
+    au < ready ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
     au < crawling ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 48 ; 48 ; >
 
   }
@@ -7779,9 +7779,9 @@
     au < crawling ; exists ; 2014 ; Geophysical Journal International Volume 197 ; 197 ; >
     au < crawling ; exists ; 2014 ; Geophysical Journal International Volume 198 ; 198 ; >
     au < crawling ; exists ; 2014 ; Geophysical Journal International Volume 199 ; 199 ; >
-    au < testing ; exists ; 2015 ; Geophysical Journal International Volume 200 ; 200 ; >
-    au < testing ; exists ; 2015 ; Geophysical Journal International Volume 201 ; 201 ; >
-    au < testing ; exists ; 2015 ; Geophysical Journal International Volume 202 ; 202 ; >
+    au < ready ; exists ; 2015 ; Geophysical Journal International Volume 200 ; 200 ; >
+    au < ready ; exists ; 2015 ; Geophysical Journal International Volume 201 ; 201 ; >
+    au < ready ; exists ; 2015 ; Geophysical Journal International Volume 202 ; 202 ; >
     au < exists ; exists ; 2015 ; Geophysical Journal International Volume 203 ; 203 ; >
 
   }
@@ -8134,7 +8134,7 @@
     au < finished ; crawling ; 2012 ; Health Education Research Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Health Education Research Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; Health Education Research Volume 29 ; 29 ; >
-    au < testing ; exists ; 2015 ; Health Education Research Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; Health Education Research Volume 30 ; 30 ; >
 
     }
 
@@ -8415,7 +8415,7 @@
     au < finished ; frozen ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 ; >
     au < finished ; crawling ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 ; >
     au < crawling ; exists ; 2014 ; Holocaust and Genocide Studies Volume 28 ; 28 ; >
-    au < testing ; exists ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ; >
+    au < ready ; exists ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ; >
 
     }
 
@@ -8528,7 +8528,7 @@
     au < finished ; frozen ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Human Reproduction Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; Human Reproduction Volume 29 ; 29 ; >
-    au < testing ; exists ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
 
     }
 
@@ -8724,7 +8724,7 @@
     au < finished ; frozen ; 2012 ; ICES Journal of Marine Science Volume 69 ; 69 ; >
     au < crawling ; exists ; 2013 ; ICES Journal of Marine Science Volume 70 ; 70 ; >
     au < crawling ; exists ; 2014 ; ICES Journal of Marine Science Volume 71 ; 71 ; >
-    au < testing ; exists ; 2015 ; ICES Journal of Marine Science Volume 72 ; 72 ; >
+    au < ready ; exists ; 2015 ; ICES Journal of Marine Science Volume 72 ; 72 ; >
 
     }
 
@@ -8771,7 +8771,7 @@
     au < finished ; crawling ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
     au < finished ; crawling ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ; >
-    au < testing ; exists ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ; >
 
   }
 
@@ -9013,7 +9013,7 @@
     au < finished ; crawling ; 2012 ; IMA Journal of Applied Mathematics Volume 77 ; 77 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Applied Mathematics Volume 78 ; 78 ; >
     au < crawling ; exists ; 2014 ; IMA Journal of Applied Mathematics Volume 79 ; 79 ; >
-    au < testing ; exists ; 2015 ; IMA Journal of Applied Mathematics Volume 80 ; 80 ; >
+    au < ready ; exists ; 2015 ; IMA Journal of Applied Mathematics Volume 80 ; 80 ; >
 
     }
 
@@ -9129,7 +9129,7 @@
     au < finished ; crawling ; 2012 ; IMA Journal of Mathematical Control and Information Volume 29 ; 29 ; >
     au < finished ; crawling ; 2013 ; IMA Journal of Mathematical Control and Information Volume 30 ; 30 ; >
     au < crawling ; exists ; 2014 ; IMA Journal of Mathematical Control and Information Volume 31 ; 31 ; >
-    au < testing ; exists ; 2015 ; IMA Journal of Mathematical Control and Information Volume 32 ; 32 ; >
+    au < ready ; exists ; 2015 ; IMA Journal of Mathematical Control and Information Volume 32 ; 32 ; >
 
     }
 
@@ -9193,7 +9193,7 @@
     au < finished ; frozen ; 2012 ; IMA Journal of Numerical Analysis Volume 32 ; 32 ; >
     au < finished ; crawling ; 2013 ; IMA Journal of Numerical Analysis Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; IMA Journal of Numerical Analysis Volume 34 ; 34 ; >
-    au < testing ; exists ; 2015 ; IMA Journal of Numerical Analysis Volume 35 ; 35 ; >
+    au < ready ; exists ; 2015 ; IMA Journal of Numerical Analysis Volume 35 ; 35 ; >
 
     }
 
@@ -9246,7 +9246,7 @@
     au < finished ; frozen ; 2012 ; Industrial and Corporate Change Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Industrial and Corporate Change Volume 22 ; 22 ; >
     au < crawling ; exists ; 2014 ; Industrial and Corporate Change Volume 23 ; 23 ; >
-    au < testing ; exists ; 2015 ; Industrial and Corporate Change Volume 24 ; 24 ; >
+    au < ready ; exists ; 2015 ; Industrial and Corporate Change Volume 24 ; 24 ; >
 
     }
 
@@ -9319,7 +9319,7 @@
     au < finished ; crawling ; 2012 ; Industrial Law Journal Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Industrial Law Journal Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; Industrial Law Journal Volume 43 ; 43 ; >
-    au < testing ; exists ; 2015 ; Industrial Law Journal Volume 44 ; 44 ; >
+    au < ready ; exists ; 2015 ; Industrial Law Journal Volume 44 ; 44 ; >
 
     }
 
@@ -9378,8 +9378,8 @@
     au < crawling ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 17 ; 17 ; >
     au < crawling ; exists ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18 ; 18 ; >
     au < crawling ; exists ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 19 ; 19 ; >
-    au < testing ; exists ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20 ; 20 ; >
-    au < testing ; exists ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 21 ; 21 ; >
+    au < ready ; exists ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20 ; 20 ; >
+    au < ready ; exists ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 21 ; 21 ; >
 
   }
 
@@ -14307,7 +14307,7 @@
     au < finished ; frozen ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Radiation Research Volume 54 ; 54 ; >
     au < crawling ; exists ; 2014 ; Journal of Radiation Research Volume 55 ; 55 ; >
-    au < testing ; exists ; 2015 ; Journal of Radiation Research Volume 56 ; 56 ; >
+    au < ready ; exists ; 2015 ; Journal of Radiation Research Volume 56 ; 56 ; >
 
   }
 
@@ -14423,7 +14423,7 @@
     au < finished ; frozen ; 2012 ; Journal of Semantics Volume 29 ; 29 ; >
     au < finished ; crawling ; 2013 ; Journal of Semantics Volume 30 ; 30 ; >
     au < finished ; crawling ; 2014 ; Journal of Semantics Volume 31 ; 31 ; >
-    au < testing ; exists ; 2015 ; Journal of Semantics Volume 32 ; 32 ; >
+    au < ready ; exists ; 2015 ; Journal of Semantics Volume 32 ; 32 ; >
 
     }
 
@@ -14512,7 +14512,7 @@
     au < finished ; frozen ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 ; >
     au < finished ; finished ; 2013 ; Journal of Semitic Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 ; >
-    au < testing ; exists ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 ; >
+    au < ready ; exists ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 ; >
 
     }
 
@@ -14756,7 +14756,7 @@
     au < crawling ; exists ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 ; >
     au < finished ; finished ; 2013 ; The Journal of Theological Studies Volume 64 ; 64 ; >
     au < crawling ; exists ; 2014 ; The Journal of Theological Studies Volume 65 ; 65 ; >
-    au < testing ; exists ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 ; >
+    au < ready ; exists ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 ; >
 
     }
 
@@ -14793,7 +14793,7 @@
     au < finished ; frozen ; 2012 ; Journal of Topology Volume 5 ; 5 ; >
     au < finished ; crawling ; 2013 ; Journal of Topology Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
-    au < testing ; exists ; 2015 ; Journal of Topology Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; Journal of Topology Volume 8 ; 8 ; >
 
     }
 
@@ -14883,7 +14883,7 @@
     au < finished ; frozen ; 2012 ; Journal of Tropical Pediatrics Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; Journal of Tropical Pediatrics Volume 59 ; 59 ; >
     au < frozen ; exists ; 2014 ; Journal of Tropical Pediatrics Volume 60 ; 60 ; >
-    au < testing ; exists ; 2015 ; Journal of Tropical Pediatrics Volume 61 ; 61 ; >
+    au < ready ; exists ; 2015 ; Journal of Tropical Pediatrics Volume 61 ; 61 ; >
 
     }
 
@@ -15242,7 +15242,7 @@
     au < finished ; finished ; 2012 ; The Library Volume 13 ; 13 ; >
     au < finished ; crawling ; 2013 ; The Library Volume 14 ; 14 ; >
     au < crawling ; exists ; 2014 ; The Library Volume 15 ; 15 ; >
-    au < testing ; exists ; 2015 ; The Library Volume 16 ; 16 ; >
+    au < ready ; exists ; 2015 ; The Library Volume 16 ; 16 ; >
 
     }
 
@@ -15347,7 +15347,7 @@
     au < finished ; finished ; 2012 ; Literary Imagination Volume 14 ; 14 ; >
     au < finished ; crawling ; 2013 ; Literary Imagination Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; Literary Imagination Volume 16 ; 16 ; >
-    au < testing ; exists ; 2015 ; Literary Imagination Volume 17 ; 17 ; >
+    au < ready ; exists ; 2015 ; Literary Imagination Volume 17 ; 17 ; >
 
     }
 
@@ -15405,7 +15405,7 @@
     au < finished ; crawling ; 2012 ; Literature and Theology Volume 26 ; 26 ; >
     au < finished ; finished ; 2013 ; Literature and Theology Volume 27 ; 27 ; >
     au < finished ; crawling ; 2014 ; Literature and Theology Volume 28 ; 28 ; >
-    au < testing ; exists ; 2015 ; Literature and Theology Volume 29 ; 29 ; >
+    au < ready ; exists ; 2015 ; Literature and Theology Volume 29 ; 29 ; >
 
     }
 
@@ -15457,7 +15457,7 @@
     au < finished ; finished ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
     au < finished ; crawling ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 ; >
     au < crawling ; exists ; 2014 ; Logic Journal of the IGPL Volume 22 ; 22 ; >
-    au < testing ; exists ; 2015 ; Logic Journal of the IGPL Volume 23 ; 23 ; >
+    au < ready ; exists ; 2015 ; Logic Journal of the IGPL Volume 23 ; 23 ; >
 
     }
 
@@ -16329,10 +16329,10 @@
     au < crawling ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 443 ; 443 ; >
     au < crawling ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 444 ; 444 ; >
     au < crawling ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 445 ; 445 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446 ; 446 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 447 ; 447 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 448 ; 448 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 449 ; 449 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446 ; 446 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 447 ; 447 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 448 ; 448 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 449 ; 449 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 450 ; 450 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 451 ; 451 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 452 ; 452 ; >
@@ -16442,10 +16442,10 @@
     au < crawling ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 443 ; 443 ; >
     au < crawling ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 444 ; 444 ; >
     au < crawling ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 445 ; 445 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446 ; 446 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 447 ; 447 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 448 ; 448 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 449 ; 449 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446 ; 446 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 447 ; 447 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 448 ; 448 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 449 ; 449 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 450 ; 450 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 451 ; 451 ; >
     au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 452 ; 452 ; >
@@ -16575,7 +16575,7 @@
     au < crawling ; exists ; 2012 ; Music and Letters Volume 93 ; 93 ; >
     au < crawling ; exists ; 2013 ; Music and Letters Volume 94 ; 94 ; >
     au < finished ; crawling ; 2014 ; Music and Letters Volume 95 ; 95 ; >
-    au < testing ; exists ; 2015 ; Music and Letters Volume 96 ; 96 ; >
+    au < ready ; exists ; 2015 ; Music and Letters Volume 96 ; 96 ; >
 
     }
 
@@ -16929,7 +16929,7 @@
     au < crawling ; exists ; 2012 ; Mutagenesis Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Mutagenesis Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; Mutagenesis Volume 29 ; 29 ; >
-    au < testing ; exists ; 2015 ; Mutagenesis Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; Mutagenesis Volume 30 ; 30 ; >
 
     }
 
@@ -17133,7 +17133,7 @@
     au < finished ; crawling ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 ; >
     au < finished ; finished ; 2013 ; Nicotine and Tobacco Research Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; Nicotine and Tobacco Research Volume 16 ; 16 ; >
-    au < testing ; exists ; 2015 ; Nicotine and Tobacco Research Volume 17 ; 17 ; >
+    au < ready ; exists ; 2015 ; Nicotine and Tobacco Research Volume 17 ; 17 ; >
 
     }
 
@@ -17759,7 +17759,7 @@
     au < finished ; crawling ; 2012 ; Occupational Medicine Volume 62 ; 62 ; >
     au < finished ; crawling ; 2013 ; Occupational Medicine Volume 63 ; 63 ; >
     au < crawling ; exists ; 2014 ; Occupational Medicine Volume 64 ; 64 ; >
-    au < testing ; exists ; 2015 ; Occupational Medicine Volume 65 ; 65 ; >
+    au < ready ; exists ; 2015 ; Occupational Medicine Volume 65 ; 65 ; >
 
     }
 
