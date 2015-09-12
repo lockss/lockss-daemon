@@ -586,6 +586,35 @@ while (my $line = <>) {
       }
         sleep(4);
 
+  } elsif (($plugin eq "ClockssFutureScienceBooksPlugin")) {
+      $url = sprintf("%sclockss/eisbn/%s", 
+      $param{base_url}, $param{book_eisbn});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/doi\/book\/\S*\/$param{book_eisbn}/) || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+              if ($man_contents =~ m/<title>(.*) Manifest Page<\/title>/si) {
+                  $vol_title = $1;
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+              } 
+              $result = "Manifest";
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--"
+      }
+        sleep(4);
+
   } elsif ($plugin eq "EdinburghUniversityPressPlugin") {
     $url = sprintf("%slockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
