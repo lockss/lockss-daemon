@@ -34,6 +34,8 @@ package org.lockss.plugin.medknow;
 
 import java.io.*;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.daemon.*;
 import org.lockss.util.*;
@@ -51,14 +53,20 @@ public class MedknowLoginPageChecker implements LoginPageChecker {
    * <p>When the pdf url returns a page allowing for download, the title of 
    * the document is the title of the article with ": Download PDF" at the end.
    */
-  protected static final String DOWNLOAD_TITLE_END = "Download PDF</title>";
+  
+  //Darn. Found an oddball that has Download PDFs</title>, so use regexp to identify...
+  protected static final String DOWNLOAD_TITLE_PATTERN_STRING = ":\\s+Download PDF[^<]*</title>";
+  protected static final Pattern DOWNLOAD_TITLE_PATTERN = Pattern.compile(DOWNLOAD_TITLE_PATTERN_STRING, Pattern.CASE_INSENSITIVE);
   
   public boolean isLoginPage(Properties props,
                              Reader reader)
       throws IOException,
              PluginException {
     if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
-      return StringUtil.containsString(reader, DOWNLOAD_TITLE_END);
+      String theContents = StringUtil.fromReader(reader);
+      Matcher downloadMat = DOWNLOAD_TITLE_PATTERN.matcher(theContents); 
+          
+      return downloadMat.find();
     }
     return false;
   }
