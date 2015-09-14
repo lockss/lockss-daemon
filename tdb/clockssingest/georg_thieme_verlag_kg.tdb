@@ -2841,7 +2841,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2011 ; 1 >
     au < manifest ; exists ; 2012 ; 2012 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2012 ; 2 >
     au < ready ; exists ; 2013 ; 2013 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2013 ; 3 >
-    au < testing ; exists ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2014 ; 4 >
+    au < ready ; exists ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2014 ; 4 >
     au < ready ; exists ; 2015 ; 2015 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2015 ; 5 >
 
   }
@@ -3244,8 +3244,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 >
     au < manifest ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
     au < testing ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
-    au < testing ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
-    au < testing ; exists ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 >
+    au < ready ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
+    au < ready ; exists ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 >
 
   }
 
@@ -3286,8 +3286,8 @@
     au < manifest ; exists ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 2010 ; 05 >
     au < manifest ; exists ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 2011 ; 06 >
     au < manifest ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie up2date Volume 2012 ; 07 >
-    au < testing ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 >
-    au < testing ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 >
+    au < ready ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 >
+    au < ready ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 >
     au < testing ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 2015 ; 08 >
 
   }
@@ -3379,8 +3379,8 @@
     au < manifest ; exists ; 2010 ; 2010 ; Pädiatrie up2date Volume 2010 ; 5 >
     au < manifest ; exists ; 2011 ; 2011 ; Pädiatrie up2date Volume 2011 ; 6 >
     au < manifest ; exists ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 >
-    au < testing ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
-    au < testing ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
+    au < ready ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
+    au < ready ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
     au < notReady ; exists ; 2015 ; 2015 ; Pädiatrie up2date Volume 2015 ; 10 >
     #notReady - PD-1537
 
@@ -3529,8 +3529,8 @@
     au < manifest ; exists ; 2010 ; 2010 ; physiopraxis Volume 2010 ; 8 >
     au < manifest ; exists ; 2011 ; 2011 ; physiopraxis Volume 2011 ; 9 >
     au < manifest ; exists ; 2012 ; 2012 ; physiopraxis Volume 2012 ; 10 >
-    au < testing ; exists ; 2013 ; 2013 ; physiopraxis Volume 2013 ; 11 >
-    au < testing ; exists ; 2014 ; 2014 ; physiopraxis Volume 2014 ; 12 >
+    au < ready ; exists ; 2013 ; 2013 ; physiopraxis Volume 2013 ; 11 >
+    au < ready ; exists ; 2014 ; 2014 ; physiopraxis Volume 2014 ; 12 >
     au < notReady ; exists ; 2015 ; 2015 ; physiopraxis Volume 2015 ; 13 >
     #notReady - PD-1537
 
@@ -3739,8 +3739,8 @@
    au < manifest ; exists ; 2010 ; 2010 ; Pneumologie Volume 2010 ; 64 >
    au < manifest ; exists ; 2011 ; 2011 ; Pneumologie Volume 2011 ; 65 >
    au < manifest ; exists ; 2012 ; 2012 ; Pneumologie Volume 2012 ; 66 >
-   au < testing ; exists ; 2013 ; 2013 ; Pneumologie Volume 2013 ; 67 >
-   au < testing ; exists ; 2014 ; 2014 ; Pneumologie Volume 2014 ; 68 >
+   au < ready ; exists ; 2013 ; 2013 ; Pneumologie Volume 2013 ; 67 >
+   au < ready ; exists ; 2014 ; 2014 ; Pneumologie Volume 2014 ; 68 >
    au < testing ; exists ; 2015 ; 2015 ; Pneumologie Volume 2015 ; 69 >
 
   }
