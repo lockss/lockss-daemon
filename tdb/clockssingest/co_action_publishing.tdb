@@ -54,7 +54,7 @@
       param[journal_id] = aie
       comment[0] = discontinued in 2013
 
-      au < finished ; crawling ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+      au < finished ; finished ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
       au < finished ; finished ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
       au < finished ; finished ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
     
@@ -323,7 +323,7 @@
     au < finished ; frozen ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
     au < finished ; frozen ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
     au < crawling ; exists ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
-    au < finished ; crawling ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
+    au < finished ; finished ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
   }
 
@@ -367,7 +367,7 @@
     au < finished ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
-    au < finished ; crawling ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
+    au < finished ; finished ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 >
   }
@@ -402,7 +402,7 @@
     param[base_url] = http://www.jecme.eu/
     param[journal_id] = jecme
 
-    au < finished ; crawling ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
+    au < finished ; finished ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
@@ -421,7 +421,7 @@
     param[journal_id] = jmahp
 
     au < finished ; finished ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
-    au < finished ; crawling ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
+    au < finished ; finished ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; 2015 >
 
   }
@@ -441,7 +441,7 @@
     au < finished ; frozen ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
     au < finished ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
-    au < finished ; crawling ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 >
+    au < finished ; finished ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 >
 
@@ -549,7 +549,7 @@
       au < finished ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
       au < finished ; frozen ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
       au < finished ; crawling ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 >
-      au < finished ; crawling ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 >
+      au < finished ; finished ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 >
       au < manifest ; exists ; 2015 ; Medical Education Online Volume 20 ; 20 ; 2015 >
       
     }
@@ -576,7 +576,7 @@
     au < finished ; crawling ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
     au < crawling ; exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
     au < finished ; finished ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
-    au < finished ; crawling ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
+    au < finished ; finished ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
     au < finished ; crawling ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
     au < finished ; crawling ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
     au < finished ; crawling ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
@@ -592,7 +592,7 @@
     au < finished ; frozen ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
     au < finished ; crawling ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
     au < finished ; crawling ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
-    au < finished ; crawling ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
+    au < finished ; finished ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
     au < manifest ; exists ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; 2015 >
   }
 
@@ -629,7 +629,7 @@
     au < finished ; crawling ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
     au < finished ; crawling ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; 2013 >
-    au < finished ; crawling ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; 2014 >
+    au < finished ; finished ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; 2014 >
     au < manifest ; exists ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; 2015 >
 
   }
@@ -650,7 +650,7 @@
     au < frozen ; exists ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
     au < crawling ; exists ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 >
     au < crawling ; exists ; 1985 ; Polar Research Volume 3 ; 3 ; 1985 >
-    au < finished ; crawling ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
+    au < finished ; finished ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
     au < crawling ; exists ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
     au < crawling ; exists ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
     au < crawling ; exists ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
@@ -696,16 +696,16 @@
     param[journal_id] = rlt
 
     au < crawling ; exists ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; 1993>
-    au < finished ; crawling ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994>
+    au < finished ; finished ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994>
     au < finished ; crawling ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995>
     au < finished ; crawling ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ; 1996>
     au < finished ; crawling ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ; 1997>
-    au < finished ; crawling ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998>
+    au < finished ; finished ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998>
     au < crawling ; exists ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ; 1999>
     au < crawling ; exists ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ; 2000>
     au < crawling ; exists ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ; 2001>
     au < finished ; crawling ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 >
-    au < finished ; crawling ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
+    au < finished ; finished ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
     au < crawling ; exists ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; 2004 >
     au < finished ; crawling ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
     au < finished ; frozen ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
@@ -930,7 +930,7 @@
     au < finished ; frozen ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
     au < finished ; frozen ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
-    au < finished ; crawling ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
+    au < finished ; finished ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Vulnerable Groups & Inclusion Volume 6 ; 6 ; 2015 >
   }
 

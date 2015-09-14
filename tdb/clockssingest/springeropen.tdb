@@ -516,7 +516,7 @@
   
         au < manifest ; exists ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 >
-        au < finished ; crawling ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
+        au < finished ; finished ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
         au < crawling ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 >
   
@@ -1150,7 +1150,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
-        au < finished ; crawling ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
+        au < finished ; finished ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
         au < crawling ; exists ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
         au < expected ; exists ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
   

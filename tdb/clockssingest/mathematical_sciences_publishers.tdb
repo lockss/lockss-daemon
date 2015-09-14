@@ -36,7 +36,7 @@
      au < manifest ; exists ; 2010 ; Algebraic & Geometric Topology Volume 10 ; 10 ; 2010 >
      au < manifest ; exists ; 2011 ; Algebraic & Geometric Topology Volume 11 ; 11 ; 2011 >
      au < finished ; crawling ; 2012 ; Algebraic & Geometric Topology Volume 12 ; 12 ; 2012 >
-     au < finished ; crawling ; 2013 ; Algebraic & Geometric Topology Volume 13 ; 13 ; 2013 >
+     au < finished ; finished ; 2013 ; Algebraic & Geometric Topology Volume 13 ; 13 ; 2013 >
      au < finished ; crawling ; 2014 ; Algebraic & Geometric Topology Volume 14 ; 14 ; 2014 >
      au < expected ; exists ; 2015 ; Algebraic & Geometric Topology Volume 15 ; 15 ; 2015 >
      
@@ -157,7 +157,7 @@
      au < manifest ; exists ; 2011 ; Involve, a journal of mathematics Volume 4 ; 4 ; 2011 >
      au < finished ; crawling ; 2012 ; Involve, a journal of mathematics Volume 5 ; 5 ; 2012 >
      au < finished ; crawling ; 2013 ; Involve, a journal of mathematics Volume 6 ; 6 ; 2013 >
-     au < finished ; crawling ; 2014 ; Involve, a journal of mathematics Volume 7 ; 7 ; 2014 >
+     au < finished ; finished ; 2014 ; Involve, a journal of mathematics Volume 7 ; 7 ; 2014 >
      au < expected ; exists ; 2015 ; Involve, a journal of mathematics Volume 8 ; 8 ; 2015 >
  
    }
@@ -197,7 +197,7 @@
      au < manifest ; exists ; 2010 ; Journal of Software for Algebra and Geometry Volume 2 ; 2 ; 2010 >
      au < manifest ; exists ; 2011 ; Journal of Software for Algebra and Geometry Volume 3 ; 3 ; 2011 >
      au < manifest ; exists ; 2012 ; Journal of Software for Algebra and Geometry Volume 4 ; 4 ; 2012 >
-     au < finished ; crawling ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 >
+     au < finished ; finished ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 >
      au < finished ; finished ; 2014 ; Journal of Software for Algebra and Geometry Volume 6 ; 6 ; 2014 >
      au < expected ; exists ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 >
 
@@ -214,7 +214,7 @@
       param[journal_id] = memocs
  
      au < finished ; finished ; 2013 ; Mathematics and Mechanics of Computer Systems Volume 1 ; 1 ; 2013 >
-     au < finished ; crawling ; 2014 ; Mathematics and Mechanics of Computer Systems Volume 2 ; 2 ; 2014 >
+     au < finished ; finished ; 2014 ; Mathematics and Mechanics of Computer Systems Volume 2 ; 2 ; 2014 >
      au < expected ; exists ; 2015 ; Mathematics and Mechanics of Computer Systems Volume 3 ; 3 ; 2015 >
 
   }

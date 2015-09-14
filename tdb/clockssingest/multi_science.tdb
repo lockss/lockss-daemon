@@ -174,7 +174,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
-    au < finished ; crawling ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
+    au < finished ; finished ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
     au < crawling ; exists ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 >
 
   }
@@ -276,7 +276,7 @@
     param[journal_id] = ijhde
 
     au < crawling ; exists ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 >
-    au < finished ; crawling ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
+    au < finished ; finished ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
     au < finished ; crawling ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 >
 

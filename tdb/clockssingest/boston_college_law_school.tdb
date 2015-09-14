@@ -111,7 +111,7 @@
     au < finished ; crawling ; 2011 ; Boston College International and Comparative Law Review Volume 34 ; 34 >
     au < finished ; crawling ; 2012 ; Boston College International and Comparative Law Review Volume 35 ; 35 >
     au < finished ; finished ; 2013 ; Boston College International and Comparative Law Review Volume 36 ; 36 >
-    au < finished ; crawling ; 2014 ; Boston College International and Comparative Law Review Volume 37 ; 37 >
+    au < finished ; finished ; 2014 ; Boston College International and Comparative Law Review Volume 37 ; 37 >
     au < crawling ; exists ; 2015 ; Boston College International and Comparative Law Review Volume 38 ; 38 >
 
   }
@@ -179,7 +179,7 @@
     au < finished ; frozen ; 2011 ; Boston College Law Review Volume 52 ; 52 >
     au < finished ; crawling ; 2012 ; Boston College Law Review Volume 53 ; 53 >
     au < crawling ; exists ; 2013 ; Boston College Law Review Volume 54 ; 54 >
-    au < finished ; crawling ; 2014 ; Boston College Law Review Volume 55 ; 55 >
+    au < finished ; finished ; 2014 ; Boston College Law Review Volume 55 ; 55 >
     au < crawling ; exists ; 2015 ; Boston College Law Review Volume 56 ; 56 >
 
   }
@@ -195,8 +195,8 @@
     param[journal_abbr] = jlsj
     
     au < finished ; frozen ; 2012 ; Boston College Journal of Law & Social Justice Volume 32 ; 32 >
-    au < finished ; crawling ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 >
-    au < finished ; crawling ; 2014 ; Boston College Journal of Law & Social Justice Volume 34 ; 34 >
+    au < finished ; finished ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 >
+    au < finished ; finished ; 2014 ; Boston College Journal of Law & Social Justice Volume 34 ; 34 >
     au < crawling ; exists ; 2015 ; Boston College Journal of Law & Social Justice Volume 35 ; 35 >
 
   }

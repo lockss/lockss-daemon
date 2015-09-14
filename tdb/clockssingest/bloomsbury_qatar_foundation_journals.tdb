@@ -192,7 +192,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jlghp
 
-    au < finished ; crawling ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 >
+    au < finished ; finished ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 >
     au < crawling ; exists ; 2015 ; Journal of Local and Global Health Perspectives Volume 2015 ; 2015 >
 
   }
@@ -209,7 +209,7 @@
 
     au < finished ; crawling ; 2012 ; Journal of Local and Global Health Science Volume 2012 ; 2012 >
     au < finished ; crawling ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 >
-    au < finished ; crawling ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 >
+    au < finished ; finished ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Journal of Local and Global Health Science Volume 2015 ; 2015 >
 
   }
@@ -432,7 +432,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = tasmeem
 
-    au < finished ; crawling ; 2014 ; Tasmeem Volume 2014 ; 2014 >
+    au < finished ; finished ; 2014 ; Tasmeem Volume 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Tasmeem Volume 2015 ; 2015 >
 
   }
