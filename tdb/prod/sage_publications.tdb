@@ -894,6 +894,8 @@
         au < down ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
         au < down ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
         au < down ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 >
+        au < doNotProcess ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 >
+        au < doNotProcess ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
 
       }
 
@@ -3680,6 +3682,48 @@
         param[base_url] = http://anj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1968 ; Australian & New Zealand Journal of Criminology Volume 1 ; 1 >
+        au < exists ; 1969 ; Australian & New Zealand Journal of Criminology Volume 2 ; 2 >
+        au < exists ; 1970 ; Australian & New Zealand Journal of Criminology Volume 3 ; 3 >
+        au < exists ; 1971 ; Australian & New Zealand Journal of Criminology Volume 4 ; 4 >
+        au < exists ; 1972 ; Australian & New Zealand Journal of Criminology Volume 5 ; 5 >
+        au < exists ; 1973 ; Australian & New Zealand Journal of Criminology Volume 6 ; 6 >
+        au < exists ; 1974 ; Australian & New Zealand Journal of Criminology Volume 7 ; 7 >
+        au < exists ; 1975 ; Australian & New Zealand Journal of Criminology Volume 8 ; 8 >
+        au < exists ; 1976 ; Australian & New Zealand Journal of Criminology Volume 9 ; 9 >
+        au < exists ; 1977 ; Australian & New Zealand Journal of Criminology Volume 10 ; 10 >
+        au < exists ; 1978 ; Australian & New Zealand Journal of Criminology Volume 11 ; 11 >
+        au < exists ; 1979 ; Australian & New Zealand Journal of Criminology Volume 12 ; 12 >
+        au < exists ; 1980 ; Australian & New Zealand Journal of Criminology Volume 13 ; 13 >
+        au < exists ; 1981 ; Australian & New Zealand Journal of Criminology Volume 14 ; 14 >
+        au < exists ; 1982 ; Australian & New Zealand Journal of Criminology Volume 15 ; 15 >
+        au < exists ; 1983 ; Australian & New Zealand Journal of Criminology Volume 16 ; 16 >
+        au < exists ; 1984 ; Australian & New Zealand Journal of Criminology Volume 17 ; 17 >
+        au < exists ; 1985 ; Australian & New Zealand Journal of Criminology Volume 18 ; 18 >
+        au < exists ; 1986 ; Australian & New Zealand Journal of Criminology Volume 19 ; 19 >
+        au < exists ; 1987 ; Australian & New Zealand Journal of Criminology Volume 20 ; 20 >
+        au < exists ; 1988 ; Australian & New Zealand Journal of Criminology Volume 21 ; 21 >
+        au < exists ; 1989 ; Australian & New Zealand Journal of Criminology Volume 22 ; 22 >
+        au < exists ; 1990 ; Australian & New Zealand Journal of Criminology Volume 23 ; 23 >
+        au < exists ; 1991 ; Australian & New Zealand Journal of Criminology Volume 24 ; 24 >
+        au < exists ; 1992 ; Australian & New Zealand Journal of Criminology Volume 25 ; 25 >
+        au < exists ; 1993 ; Australian & New Zealand Journal of Criminology Volume 26 ; 26 >
+        au < exists ; 1994 ; Australian & New Zealand Journal of Criminology Volume 27 ; 27 >
+        au < exists ; 1995 ; Australian & New Zealand Journal of Criminology Volume 28 ; 28 >
+        au < exists ; 1996 ; Australian & New Zealand Journal of Criminology Volume 29 ; 29 >
+        au < exists ; 1997 ; Australian & New Zealand Journal of Criminology Volume 30 ; 30 >
+        au < exists ; 1998 ; Australian & New Zealand Journal of Criminology Volume 31 ; 31 >
+        au < exists ; 1999 ; Australian & New Zealand Journal of Criminology Volume 32 ; 32 >
+        au < exists ; 2000 ; Australian & New Zealand Journal of Criminology Volume 33 ; 33 >
+        au < exists ; 2001 ; Australian & New Zealand Journal of Criminology Volume 34 ; 34 >
+        au < exists ; 2002 ; Australian & New Zealand Journal of Criminology Volume 35 ; 35 >
+        au < exists ; 2003 ; Australian & New Zealand Journal of Criminology Volume 36 ; 36 >
+        au < exists ; 2004 ; Australian & New Zealand Journal of Criminology Volume 37 ; 37 >
+        au < exists ; 2005 ; Australian & New Zealand Journal of Criminology Volume 38 ; 38 >
+        au < exists ; 2006 ; Australian & New Zealand Journal of Criminology Volume 39 ; 39 >
+        au < exists ; 2007 ; Australian & New Zealand Journal of Criminology Volume 40 ; 40 >
+        au < exists ; 2008 ; Australian & New Zealand Journal of Criminology Volume 41 ; 41 >
+        au < exists ; 2009 ; Australian & New Zealand Journal of Criminology Volume 42 ; 42 >
         au < released ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 >
         au < released ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 >
         au < released ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 >
@@ -3998,7 +4042,7 @@
         au < doesNotExist ; 0 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 1 ; 1 >
         au < doesNotExist ; 0 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 2 ; 2 >
         au < manifest ; 1973 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 3 ; 3 >
-        au < doNotProcess ; 1874 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 4 ; 4 >
+        au < exists ; 1974 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 4 ; 4 >
         au < manifest ; 1975 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 5 ; 5 >
         au < manifest ; 1976 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 6 ; 6 >
         au < manifest ; 1977 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 7 ; 7 >
@@ -4254,8 +4298,6 @@
         au < released ; 2011 ; The British Journal of Diabetes & Vascular Disease Volume 11 ; 11 >
         au < released ; 2012 ; The British Journal of Diabetes & Vascular Disease Volume 12 ; 12 >
         au < manifest ; 2013 ; The British Journal of Diabetes & Vascular Disease Volume 13 ; 13 >
-        au < expected ; 2014 ; The British Journal of Diabetes & Vascular Disease Volume 14 ; 14 >
-        au < expected ; 2015 ; The British Journal of Diabetes & Vascular Disease Volume 15 ; 15 >
 
       }
 
@@ -9556,8 +9598,6 @@
         au < released ; 2011 ; Diogenes Volume 58 ; 58 >
         au < manifest ; 2012 ; Diogenes Volume 59 ; 59 >
         au < manifest ; 2013 ; Diogenes Volume 60 ; 60 >
-        au < expected ; 2014 ; Diogenes Volume 61 ; 61 >
-        au < expected ; 2015 ; Diogenes Volume 62 ; 62 >
 
       }
 
@@ -13801,8 +13841,6 @@
         au < released ; 2011 ; Genes & Cancer Volume 2 ; 2 >
         au < released ; 2012 ; Genes & Cancer Volume 3 ; 3 >
         au < manifest ; 2013 ; Genes & Cancer Volume 4 ; 4 >
-        au < expected ; 2014 ; Genes & Cancer Volume 5 ; 5 >
-        au < expected ; 2015 ; Genes & Cancer Volume 6 ; 6 >
 
       }
 
@@ -14575,8 +14613,6 @@
       au < manifest ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 >
       au < manifest ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 >
       au < manifest ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 >
-      au < expected ; 2014 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 51 ; 51 >
-      au < expected ; 2015 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 52 ; 52 >
 
     }
 
@@ -17033,8 +17069,6 @@
         au < released ; 2011 ; ICU Director Volume 2 ; 2 >
         au < released ; 2012 ; ICU Director Volume 3 ; 3 >
         au < manifest ; 2013 ; ICU Director Volume 4 ; 4 >
-        au < expected ; 2014 ; ICU Director Volume 5 ; 5 >
-        au < expected ; 2015 ; ICU Director Volume 6 ; 6 >
 
       }
 
@@ -20444,8 +20478,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Asthma & Allergy Educators Volume 2 ; 2 >
         au < released ; 2012 ; Journal of Asthma & Allergy Educators Volume 3 ; 3 >
         au < manifest ; 2013 ; Journal of Asthma & Allergy Educators Volume 4 ; 4 >
-        au < expected ; 2014 ; Journal of Asthma & Allergy Educators Volume 5 ; 5 >
-        au < expected ; 2015 ; Journal of Asthma & Allergy Educators Volume 6 ; 6 >
 
       }
 
@@ -24705,8 +24737,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Fire Protection Engineering Volume 21 ; 21 >
         au < released ; 2012 ; Journal of Fire Protection Engineering Volume 22 ; 22 >
         au < manifest ; 2013 ; Journal of Fire Protection Engineering Volume 23 ; 23 >
-        au < expected ; 2014 ; Journal of Fire Protection Engineering Volume 24 ; 24 >
-        au < expected ; 2015 ; Journal of Fire Protection Engineering Volume 25 ; 25 >
 
       }
 
@@ -30839,8 +30869,6 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; Justice Research and Policy Volume 13 ; 13 >
       au < exists ; 2012 ; Justice Research and Policy Volume 14 ; 14 >
       au < manifest ; 2013 ; Justice Research and Policy Volume 15 ; 15 >
-      au < expected ; 2014 ; Justice Research and Policy Volume 16 ; 16 >
-      au < expected ; 2015 ; Justice Research and Policy Volume 17 ; 17 >
 
   }
 
@@ -32862,8 +32890,6 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Music and Medicine Volume 3 ; 3 >
         au < released ; 2012 ; Music and Medicine Volume 4 ; 4 >
         au < manifest ; 2013 ; Music and Medicine Volume 5 ; 5 >
-        au < expected ; 2014 ; Music and Medicine Volume 6 ; 6 >
-        au < expected ; 2015 ; Music and Medicine Volume 7 ; 7 >
 
       }
 
@@ -34068,8 +34094,7 @@ comment[mpj] = now published by Brill
         au < released ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 >
         au < released ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 >
         au < released ; 2012 ; Nutrition and Health Volume 21 ; 21 >
-        au < manifest ; 2013 ; Nutrition and Health Volume 22 ; 22 >
-        au < expected ; 2014 ; Nutrition and Health Volume 23 ; 23 >
+        au < exists ; 2013 ; Nutrition and Health Volume 22 ; 22 >
 
       }
 
@@ -43958,8 +43983,6 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Traumatology Volume 17 ; 17 >
         au < released ; 2012 ; Traumatology Volume 18 ; 18 >
         au < manifest ; 2013 ; Traumatology Volume 19 ; 19 >
-        au < expected ; 2014 ; Traumatology Volume 20 ; 20 >
-        au < expected ; 2015 ; Traumatology Volume 21 ; 21 >
 
       }
 
@@ -46768,26 +46791,50 @@ comment[mpj] = now published by Brill
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://spx.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = no issue from 1989 to 2013
 
-    au < doNotProcess ; 1971 ; Sociological Perspectives Volume 14 ; 14 >
-    au < doNotProcess ; 1972 ; Sociological Perspectives Volume 15 ; 15 >
-    au < doNotProcess ; 1973 ; Sociological Perspectives Volume 16 ; 16 >
-    au < doNotProcess ; 1974 ; Sociological Perspectives Volume 17 ; 17 >
-    au < doNotProcess ; 1975 ; Sociological Perspectives Volume 18 ; 18 >
-    au < doNotProcess ; 1976 ; Sociological Perspectives Volume 19 ; 19 >
-    au < doNotProcess ; 1977 ; Sociological Perspectives Volume 20 ; 20 >
-    au < doNotProcess ; 1978 ; Sociological Perspectives Volume 21 ; 21 >
-    au < doNotProcess ; 1979 ; Sociological Perspectives Volume 22 ; 22 >
-    au < doNotProcess ; 1980 ; Sociological Perspectives Volume 23 ; 23 >
-    au < doesNotExist ; 0 ; Sociological Perspectives Volume 0 ; 0 >
-    au < doNotProcess ; 1982 ; Sociological Perspectives Volume 25 ; 25 >
-    au < doNotProcess ; 1983 ; Sociological Perspectives Volume 26 ; 26 >
-    au < doNotProcess ; 1984 ; Sociological Perspectives Volume 27 ; 27 >
-    au < doNotProcess ; 1985 ; Sociological Perspectives Volume 28 ; 28 >
-    au < doNotProcess ; 1986 ; Sociological Perspectives Volume 29 ; 29 >
-    au < doNotProcess ; 1987 ; Sociological Perspectives Volume 30 ; 30 >
-    au < doNotProcess ; 1988 ; Sociological Perspectives Volume 31 ; 31 >
+    au < exists ; 1971 ; Sociological Perspectives Volume 14 ; 14 >
+    au < exists ; 1972 ; Sociological Perspectives Volume 15 ; 15 >
+    au < exists ; 1973 ; Sociological Perspectives Volume 16 ; 16 >
+    au < exists ; 1974 ; Sociological Perspectives Volume 17 ; 17 >
+    au < exists ; 1975 ; Sociological Perspectives Volume 18 ; 18 >
+    au < exists ; 1976 ; Sociological Perspectives Volume 19 ; 19 >
+    au < exists ; 1977 ; Sociological Perspectives Volume 20 ; 20 >
+    au < exists ; 1978 ; Sociological Perspectives Volume 21 ; 21 >
+    au < exists ; 1979 ; Sociological Perspectives Volume 22 ; 22 >
+    au < exists ; 1980 ; Sociological Perspectives Volume 23 ; 23 >
+    au < exists ; 1981 ; Sociological Perspectives Volume 24 ; 24 >
+    au < exists ; 1982 ; Sociological Perspectives Volume 25 ; 25 >
+    au < exists ; 1983 ; Sociological Perspectives Volume 26 ; 26 >
+    au < exists ; 1984 ; Sociological Perspectives Volume 27 ; 27 >
+    au < exists ; 1985 ; Sociological Perspectives Volume 28 ; 28 >
+    au < exists ; 1986 ; Sociological Perspectives Volume 29 ; 29 >
+    au < exists ; 1987 ; Sociological Perspectives Volume 30 ; 30 >
+    au < exists ; 1988 ; Sociological Perspectives Volume 31 ; 31 >
+    au < exists ; 1989 ; Sociological Perspectives Volume 32 ; 32 >
+    au < exists ; 1990 ; Sociological Perspectives Volume 33 ; 33 >
+    au < exists ; 1991 ; Sociological Perspectives Volume 34 ; 34 >
+    au < exists ; 1992 ; Sociological Perspectives Volume 35 ; 35 >
+    au < exists ; 1993 ; Sociological Perspectives Volume 36 ; 36 >
+    au < exists ; 1994 ; Sociological Perspectives Volume 37 ; 37 >
+    au < exists ; 1995 ; Sociological Perspectives Volume 38 ; 38 >
+    au < exists ; 1996 ; Sociological Perspectives Volume 39 ; 39 >
+    au < exists ; 1997 ; Sociological Perspectives Volume 40 ; 40 >
+    au < exists ; 1998 ; Sociological Perspectives Volume 41 ; 41 >
+    au < exists ; 1999 ; Sociological Perspectives Volume 42 ; 42 >
+    au < exists ; 2000 ; Sociological Perspectives Volume 43 ; 43 >
+    au < exists ; 2001 ; Sociological Perspectives Volume 44 ; 44 >
+    au < exists ; 2002 ; Sociological Perspectives Volume 45 ; 45 >
+    au < exists ; 2003 ; Sociological Perspectives Volume 46 ; 46 >
+    au < exists ; 2004 ; Sociological Perspectives Volume 47 ; 47 >
+    au < exists ; 2005 ; Sociological Perspectives Volume 48 ; 48 >
+    au < exists ; 2006 ; Sociological Perspectives Volume 49 ; 49 >
+    au < exists ; 2007 ; Sociological Perspectives Volume 50 ; 50 >
+    au < exists ; 2008 ; Sociological Perspectives Volume 51 ; 51 >
+    au < exists ; 2009 ; Sociological Perspectives Volume 52 ; 52 >
+    au < exists ; 2010 ; Sociological Perspectives Volume 53 ; 53 >
+    au < exists ; 2011 ; Sociological Perspectives Volume 54 ; 54 >
+    au < exists ; 2012 ; Sociological Perspectives Volume 55 ; 55 >
+    au < exists ; 2013 ; Sociological Perspectives Volume 56 ; 56 >
     au < manifest ; 2014 ; Sociological Perspectives Volume 57 ; 57 >
     au < manifest ; 2015 ; Sociological Perspectives Volume 58 ; 58 >
 
@@ -46890,7 +46937,7 @@ comment[mpj] = now published by Brill
     au < manifest ; 1997 ; Canadian Journal of Occupational Therapy Volume 64 ; 64 >
     au < manifest ; 1998 ; Canadian Journal of Occupational Therapy Volume 65 ; 65 >
     au < manifest ; 1999 ; Canadian Journal of Occupational Therapy Volume 66 ; 66 >
-    au < manifest ; 1900 ; Canadian Journal of Occupational Therapy Volume 67 ; 67 >
+    au < manifest ; 2000 ; Canadian Journal of Occupational Therapy Volume 67 ; 67 >
     au < manifest ; 2001 ; Canadian Journal of Occupational Therapy Volume 68 ; 68 >
     au < manifest ; 2002 ; Canadian Journal of Occupational Therapy Volume 69 ; 69 >
     au < manifest ; 2003 ; Canadian Journal of Occupational Therapy Volume 70 ; 70 >
@@ -46985,9 +47032,8 @@ comment[mpj] = now published by Brill
     param[base_url] = http://dsp.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2013-2014 ; Drug Science, Policy and Law Volume 1 ; 1 >
-    au < expected ; 2014 ; Drug Science, Policy and Law Volume 2 ; 2 >
-    au < expected ; 2015 ; Drug Science, Policy and Law Volume 3 ; 3 >
+    au < manifest ; 2013 ; Drug Science, Policy and Law Volume 1 ; 1 >
+    au < expected ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 >
 
     }
 
@@ -47026,7 +47072,7 @@ comment[mpj] = now published by Brill
     au < doNotProcess ; 1980-1981 ; Foot & Ankle International Volume 1 ; 1 >
     au < doNotProcess ; 1981-1982 ; Foot & Ankle International Volume 2 ; 2 >
     au < doNotProcess ; 1982-1983 ; Foot & Ankle International Volume 3 ; 3 >
-    au < manifest ; 1983-1984 ; Foot & Ankle International Volume 4 ; 4 >
+    au < doNotProcess ; 1983-1984 ; Foot & Ankle International Volume 4 ; 4 >
     au < doNotProcess ; 1984-1985 ; Foot & Ankle International Volume 5 ; 5 >
     au < doNotProcess ; 1985-1986 ; Foot & Ankle International Volume 6 ; 6 >
     au < doNotProcess ; 1986-1987 ; Foot & Ankle International Volume 7 ; 7 >
@@ -47122,8 +47168,8 @@ comment[mpj] = now published by Brill
     au < exists ; 2011 ; Forum Italicum: A Journal of Italian Studies Volume 45 ; 45 >
     au < exists ; 2012 ; Forum Italicum: A Journal of Italian Studies Volume 46 ; 46 >
     au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 >
-    au < expected ; 2014 ; Forum Italicum: A Journal of Italian Studies Volume 48 ; 48 >
-    au < expected ; 2015 ; Forum Italicum: A Journal of Italian Studies Volume 49 ; 49 >
+    au < exists ; 2014 ; Forum Italicum: A Journal of Italian Studies Volume 48 ; 48 >
+    au < exists ; 2015 ; Forum Italicum: A Journal of Italian Studies Volume 49 ; 49 >
 
     }
 

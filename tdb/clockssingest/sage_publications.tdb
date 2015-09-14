@@ -14985,6 +14985,10 @@
       param[base_url] = http://ioa.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists; 2009 ; Insight on Africa Volume 1 ; 1 ; >
+      au < exists ; exists; 2010 ; Insight on Africa Volume 2 ; 2 ; >
+      au < exists ; exists; 2011 ; Insight on Africa Volume 3 ; 3 ; >
+      au < exists ; exists; 2012 ; Insight on Africa Volume 4 ; 4 ; >
       au < finished ; finished ; 2013 ; Insight on Africa Volume 5 ; 5 ; >
       au < finished ; crawling ; 2014 ; Insight on Africa Volume 6 ; 6 ; >
       au < manifest ; exists ; 2015 ; Insight on Africa Volume 7 ; 7 ; >
@@ -23758,6 +23762,48 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < doNotProcess ; doNotProcess ; 1969 ; Journal of Literacy Research Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1970 ; Journal of Literacy Research Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1970 ; Journal of Literacy Research Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1971 ; Journal of Literacy Research Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1972 ; Journal of Literacy Research Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1974 ; Journal of Literacy Research Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 1975 ; Journal of Literacy Research Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 1976 ; Journal of Literacy Research Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; Journal of Literacy Research Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; Journal of Literacy Research Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; Journal of Literacy Research Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; Journal of Literacy Research Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; Journal of Literacy Research Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; Journal of Literacy Research Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; Journal of Literacy Research Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; Journal of Literacy Research Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; Journal of Literacy Research Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; Journal of Literacy Research Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Journal of Literacy Research Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Journal of Literacy Research Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Journal of Literacy Research Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Journal of Literacy Research Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Journal of Literacy Research Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Journal of Literacy Research Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Journal of Literacy Research Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Journal of Literacy Research Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Journal of Literacy Research Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Journal of Literacy Research Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Journal of Literacy Research Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Journal of Literacy Research Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Journal of Literacy Research Volume 31 ; 31 ; >
+      au < exists ; exists ; 2000 ; Journal of Literacy Research Volume 32 ; 32 ; >
+      au < exists ; exists ; 2001 ; Journal of Literacy Research Volume 33 ; 33 ; >
+      au < exists ; exists ; 2002 ; Journal of Literacy Research Volume 34 ; 34 ; >
+      au < exists ; exists ; 2003 ; Journal of Literacy Research Volume 35 ; 35 ; >
+      au < exists ; exists ; 2004 ; Journal of Literacy Research Volume 36 ; 36 ; >
+      au < exists ; exists ; 2005 ; Journal of Literacy Research Volume 37 ; 37 ; >
+      au < exists ; exists ; 2006 ; Journal of Literacy Research Volume 38 ; 38 ; >
+      au < exists ; exists ; 2007 ; Journal of Literacy Research Volume 39 ; 39 ; >
+      au < exists ; exists ; 2008 ; Journal of Literacy Research Volume 40 ; 40 ; >
+      au < exists ; exists ; 2009 ; Journal of Literacy Research Volume 41 ; 41 ; >
+      au < exists ; exists ; 2010 ; Journal of Literacy Research Volume 42 ; 42 ; >
       au < finished ; crawling ; 2011 ; Journal of Literacy Research Volume 43 ; 43 ; >
       au < finished ; crawling ; 2012 ; Journal of Literacy Research Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Journal of Literacy Research Volume 45 ; 45 ; >
@@ -30652,7 +30698,7 @@
       au < finished ; frozen ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
       au < zapped ; finished ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
       au < finished ; crawling ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
-      au < notReady ; exists ; 2013 ; Nutrition and Health Volume 22 ; 22 ; >
+      au < exists ; exists ; 2013 ; Nutrition and Health Volume 22 ; 22 ; >
 
     }
 
@@ -43166,9 +43212,48 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ani.sagepub.com/
 
-    au < crawling ; exists ; 2013 ; Annals of the ICRP Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2014 ; Annals of the ICRP Volume 44 ; 44 ; >
-    au < expected ; exists ; 2015 ; Annals of the ICRP Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Annals of the ICRP Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1978-1979 ; Annals of the ICRP Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Annals of the ICRP Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Annals of the ICRP Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Annals of the ICRP Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Annals of the ICRP Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Annals of the ICRP Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Annals of the ICRP Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Annals of the ICRP Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Annals of the ICRP Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Annals of the ICRP Volume 11-13 ; 11-13 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Annals of the ICRP Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Annals of the ICRP Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Annals of the ICRP Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Annals of the ICRP Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Annals of the ICRP Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Annals of the ICRP Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Annals of the ICRP Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Annals of the ICRP Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Annals of the ICRP Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Annals of the ICRP Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Annals of the ICRP Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Annals of the ICRP Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Annals of the ICRP Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Annals of the ICRP Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Annals of the ICRP Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Annals of the ICRP Volume 29 ; 29 ; >
+    au < exists ; exists ; 2000 ; Annals of the ICRP Volume 30 ; 30 ; >
+    au < exists ; exists ; 2001 ; Annals of the ICRP Volume 31 ; 31 ; >
+    au < exists ; exists ; 2002 ; Annals of the ICRP Volume 32 ; 32 ; >
+    au < exists ; exists ; 2003 ; Annals of the ICRP Volume 33 ; 33 ; >
+    au < exists ; exists ; 2004 ; Annals of the ICRP Volume 34 ; 34 ; >
+    au < exists ; exists ; 2005 ; Annals of the ICRP Volume 35 ; 35 ; >
+    au < exists ; exists ; 2006 ; Annals of the ICRP Volume 36 ; 36 ; >
+    au < exists ; exists ; 2007 ; Annals of the ICRP Volume 37 ; 37 ; >
+    au < exists ; exists ; 2008 ; Annals of the ICRP Volume 38 ; 38 ; >
+    au < exists ; exists ; 2009 ; Annals of the ICRP Volume 39 ; 39 ; >
+    au < exists ; exists ; 2010 ; Annals of the ICRP Volume 40 ; 40 ; >
+    au < exists ; exists ; 2012 ; Annals of the ICRP Volume 41 ; 41 ; >
+    au < exists ; exists ; 2013 ; Annals of the ICRP Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2014 ; Annals of the ICRP Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2015 ; Annals of the ICRP Volume 44 ; 44 ; >
 
     }
 
@@ -43183,13 +43268,18 @@
 
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://spx.sagepub.com/
-    comment[0] = content of other years not online yet, Back issues currently loading
 
     au < exists ; exists ; 1971 ; Sociological Perspectives Volume 14 ; 14 ; >
     au < exists ; exists ; 1972 ; Sociological Perspectives Volume 15 ; 15 ; >
     au < exists ; exists ; 1973 ; Sociological Perspectives Volume 16 ; 16 ; >
     au < exists ; exists ; 1974 ; Sociological Perspectives Volume 17 ; 17 ; >
     au < exists ; exists ; 1975 ; Sociological Perspectives Volume 18 ; 18 ; >
+    au < exists ; exists ; 1976 ; Sociological Perspectives Volume 19 ; 19 ; >
+    au < exists ; exists ; 1977 ; Sociological Perspectives Volume 20 ; 20 ; >
+    au < exists ; exists ; 1978 ; Sociological Perspectives Volume 21 ; 21 ; >
+    au < exists ; exists ; 1979 ; Sociological Perspectives Volume 22 ; 22 ; >
+    au < exists ; exists ; 1980 ; Sociological Perspectives Volume 23 ; 23 ; >
+    au < exists ; exists ; 1981 ; Sociological Perspectives Volume 24 ; 24 ; >
     au < exists ; exists ; 1982 ; Sociological Perspectives Volume 25 ; 25 ; >
     au < exists ; exists ; 1983 ; Sociological Perspectives Volume 26 ; 26 ; >
     au < exists ; exists ; 1984 ; Sociological Perspectives Volume 27 ; 27 ; >
@@ -43197,6 +43287,28 @@
     au < exists ; exists ; 1986 ; Sociological Perspectives Volume 29 ; 29 ; >
     au < exists ; exists ; 1987 ; Sociological Perspectives Volume 30 ; 30 ; >
     au < exists ; exists ; 1988 ; Sociological Perspectives Volume 31 ; 31 ; >
+    au < exists ; exists ; 1989 ; Sociological Perspectives Volume 32 ; 32 ; >
+    au < exists ; exists ; 1990 ; Sociological Perspectives Volume 33 ; 33 ; >
+    au < exists ; exists ; 1991 ; Sociological Perspectives Volume 34 ; 34 ; >
+    au < exists ; exists ; 1992 ; Sociological Perspectives Volume 35 ; 35 ; >
+    au < exists ; exists ; 1993 ; Sociological Perspectives Volume 36 ; 36 ; >
+    au < exists ; exists ; 1994 ; Sociological Perspectives Volume 37 ; 37 ; >
+    au < exists ; exists ; 1995 ; Sociological Perspectives Volume 38 ; 38 ; >
+    au < exists ; exists ; 1996 ; Sociological Perspectives Volume 39 ; 39 ; >
+    au < exists ; exists ; 1997 ; Sociological Perspectives Volume 40 ; 40 ; >
+    au < exists ; exists ; 1998 ; Sociological Perspectives Volume 41 ; 41 ; >
+    au < exists ; exists ; 1999 ; Sociological Perspectives Volume 42 ; 42 ; >
+    au < exists ; exists ; 2000 ; Sociological Perspectives Volume 43 ; 43 ; >
+    au < exists ; exists ; 2001 ; Sociological Perspectives Volume 44 ; 44 ; >
+    au < exists ; exists ; 2002 ; Sociological Perspectives Volume 45 ; 45 ; >
+    au < exists ; exists ; 2003 ; Sociological Perspectives Volume 46 ; 46 ; >
+    au < exists ; exists ; 2004 ; Sociological Perspectives Volume 47 ; 47 ; >
+    au < exists ; exists ; 2005 ; Sociological Perspectives Volume 48 ; 48 ; >
+    au < exists ; exists ; 2006 ; Sociological Perspectives Volume 49 ; 49 ; >
+    au < exists ; exists ; 2007 ; Sociological Perspectives Volume 50 ; 50 ; >
+    au < exists ; exists ; 2008 ; Sociological Perspectives Volume 51 ; 51 ; >
+    au < exists ; exists ; 2009 ; Sociological Perspectives Volume 52 ; 52 ; >
+    au < exists ; exists ; 2010 ; Sociological Perspectives Volume 53 ; 53 ; >
     au < exists ; exists ; 2011 ; Sociological Perspectives Volume 54 ; 54 ; >
     au < exists ; exists ; 2012 ; Sociological Perspectives Volume 55 ; 55 ; >
     au < crawling ; exists ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; >
@@ -43217,9 +43329,9 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://brj.sagepub.com/
 
-    au < crawling ; exists ; 2013 ; Jindal Journal of Business Research Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2014 ; Jindal Journal of Business Research Volume 2 ; 2 ; >
-    au < expected ; exists ; 2015 ; Jindal Journal of Business Research Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2012 ; Jindal Journal of Business Research Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Jindal Journal of Business Research Volume 2 ; 2 ; >
+    au < expected ; exists ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; >
 
     }
 
@@ -43394,7 +43506,7 @@
     param[base_url] = http://dsp.sagepub.com/
     # 2013 content published in 2014
     
-    au < finished ; crawling ; 2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
+    au < finished ; crawling ; 2013 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
 
     }
@@ -43429,6 +43541,26 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://fai.sagepub.com/
 
+    au < doNotProcess ; doNotProcess ; 1980-1981 ; Foot & Ankle International Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1981-1982 ; Foot & Ankle International Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1982-1983 ; Foot & Ankle International Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1983-1984 ; Foot & Ankle International Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1984-1985 ; Foot & Ankle International Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1985-1986 ; Foot & Ankle International Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1986-1987 ; Foot & Ankle International Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1987-1988 ; Foot & Ankle International Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1988-1989 ; Foot & Ankle International Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1989-1990 ; Foot & Ankle International Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1990-1991 ; Foot & Ankle International Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Foot & Ankle International Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Foot & Ankle International Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Foot & Ankle International Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Foot & Ankle International Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Foot & Ankle International Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Foot & Ankle International Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Foot & Ankle International Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Foot & Ankle International Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Foot & Ankle International Volume 20 ; 20 ; >
     au < exists ; exists ; 2000 ; Foot & Ankle International Volume 21 ; 21 ; >
     au < exists ; exists ; 2001 ; Foot & Ankle International Volume 22 ; 22 ; >
     au < exists ; exists ; 2002 ; Foot & Ankle International Volume 23 ; 23 ; >
@@ -43460,6 +43592,52 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://foi.sagepub.com/
 
+    au < doNotProcess ; doNotProcess ; 1967 ; Forum Italicum: A Journal of Italian Studies Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Forum Italicum: A Journal of Italian Studies Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Forum Italicum: A Journal of Italian Studies Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Forum Italicum: A Journal of Italian Studies Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Forum Italicum: A Journal of Italian Studies Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Forum Italicum: A Journal of Italian Studies Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Forum Italicum: A Journal of Italian Studies Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Forum Italicum: A Journal of Italian Studies Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Forum Italicum: A Journal of Italian Studies Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Forum Italicum: A Journal of Italian Studies Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Forum Italicum: A Journal of Italian Studies Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Forum Italicum: A Journal of Italian Studies Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Forum Italicum: A Journal of Italian Studies Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Forum Italicum: A Journal of Italian Studies Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Forum Italicum: A Journal of Italian Studies Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Forum Italicum: A Journal of Italian Studies Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Forum Italicum: A Journal of Italian Studies Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Forum Italicum: A Journal of Italian Studies Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Forum Italicum: A Journal of Italian Studies Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Forum Italicum: A Journal of Italian Studies Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Forum Italicum: A Journal of Italian Studies Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Forum Italicum: A Journal of Italian Studies Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Forum Italicum: A Journal of Italian Studies Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Forum Italicum: A Journal of Italian Studies Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Forum Italicum: A Journal of Italian Studies Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Forum Italicum: A Journal of Italian Studies Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Forum Italicum: A Journal of Italian Studies Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Forum Italicum: A Journal of Italian Studies Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Forum Italicum: A Journal of Italian Studies Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Forum Italicum: A Journal of Italian Studies Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Forum Italicum: A Journal of Italian Studies Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Forum Italicum: A Journal of Italian Studies Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Forum Italicum: A Journal of Italian Studies Volume 33 ; 33 ; >
+    au < exists ; exists ; 2000 ; Forum Italicum: A Journal of Italian Studies Volume 34 ; 34 ; >
+    au < exists ; exists ; 2001 ; Forum Italicum: A Journal of Italian Studies Volume 35 ; 35 ; >
+    au < exists ; exists ; 2002 ; Forum Italicum: A Journal of Italian Studies Volume 36 ; 36 ; >
+    au < exists ; exists ; 2003 ; Forum Italicum: A Journal of Italian Studies Volume 37 ; 37 ; >
+    au < exists ; exists ; 2004 ; Forum Italicum: A Journal of Italian Studies Volume 38 ; 38 ; >
+    au < exists ; exists ; 2005 ; Forum Italicum: A Journal of Italian Studies Volume 39 ; 39 ; >
+    au < exists ; exists ; 2006 ; Forum Italicum: A Journal of Italian Studies Volume 40 ; 40 ; >
+    au < exists ; exists ; 2007 ; Forum Italicum: A Journal of Italian Studies Volume 41 ; 41 ; >
+    au < exists ; exists ; 2008 ; Forum Italicum: A Journal of Italian Studies Volume 42 ; 42 ; >
+    au < exists ; exists ; 2009 ; Forum Italicum: A Journal of Italian Studies Volume 43 ; 43 ; >
+    au < exists ; exists ; 2010 ; Forum Italicum: A Journal of Italian Studies Volume 44 ; 44 ; >
+    au < exists ; exists ; 2011 ; Forum Italicum: A Journal of Italian Studies Volume 45 ; 45 ; >
+    au < exists ; exists ; 2012 ; Forum Italicum: A Journal of Italian Studies Volume 46 ; 46 ; >
     au < finished ; finished ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 ; >
     au < crawling ; exists ; 2014 ; Forum Italicum: A Journal of Italian Studies Volume 48 ; 48 ; >
     au < manifest ; exists ; 2015 ; Forum Italicum: A Journal of Italian Studies Volume 49 ; 49 ; >
@@ -43696,6 +43874,31 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://paa.sagepub.com/
 
+    au < doNotProcess ; doNotProcess ; 1988 ; Pacifica: Australasian Theological Studies Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Pacifica: Australasian Theological Studies Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Pacifica: Australasian Theological Studies Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Pacifica: Australasian Theological Studies Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Pacifica: Australasian Theological Studies Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Pacifica: Australasian Theological Studies Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Pacifica: Australasian Theological Studies Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Pacifica: Australasian Theological Studies Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Pacifica: Australasian Theological Studies Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Pacifica: Australasian Theological Studies Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Pacifica: Australasian Theological Studies Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Pacifica: Australasian Theological Studies Volume 12 ; 12 ; >
+    au < exists ; exists ; 2000 ; Pacifica: Australasian Theological Studies Volume 13 ; 13 ; >
+    au < exists ; exists ; 2001 ; Pacifica: Australasian Theological Studies Volume 14 ; 14 ; >
+    au < exists ; exists ; 2002 ; Pacifica: Australasian Theological Studies Volume 15 ; 15 ; >
+    au < exists ; exists ; 2003 ; Pacifica: Australasian Theological Studies Volume 16 ; 16 ; >
+    au < exists ; exists ; 2004 ; Pacifica: Australasian Theological Studies Volume 17 ; 17 ; >
+    au < exists ; exists ; 2005 ; Pacifica: Australasian Theological Studies Volume 18 ; 18 ; >
+    au < exists ; exists ; 2006 ; Pacifica: Australasian Theological Studies Volume 19 ; 19 ; >
+    au < exists ; exists ; 2007 ; Pacifica: Australasian Theological Studies Volume 20 ; 20 ; >
+    au < exists ; exists ; 2008 ; Pacifica: Australasian Theological Studies Volume 21 ; 21 ; >
+    au < exists ; exists ; 2009 ; Pacifica: Australasian Theological Studies Volume 22 ; 22 ; >
+    au < exists ; exists ; 2010 ; Pacifica: Australasian Theological Studies Volume 23 ; 23 ; >
+    au < exists ; exists ; 2011 ; Pacifica: Australasian Theological Studies Volume 24 ; 24 ; >
+    au < exists ; exists ; 2012 ; Pacifica: Australasian Theological Studies Volume 25 ; 25 ; >
     au < finished ; finished ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; >
     au < crawling ; exists ; 2014 ; Pacifica: Australasian Theological Studies Volume 27 ; 27 ; >
     au < expected ; exists ; 2015 ; Pacifica: Australasian Theological Studies Volume 28 ; 28 ; >
@@ -43823,6 +44026,10 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://wfr.sagepub.com/
 
+    au < exists ; exists ; 2009 ; World Future Review Volume 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; World Future Review Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; World Future Review Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; World Future Review Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; World Future Review Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; World Future Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2015 ; World Future Review Volume 7 ; 7 ; >
