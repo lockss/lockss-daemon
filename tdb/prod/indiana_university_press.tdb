@@ -40,7 +40,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = africa_today
       attr[journal_id] = at
-      implicit < status ; year; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; Africa Today Volume 46 ; 46 >
       au < released ; 2000 ; Africa Today Volume 47 ; 47 >

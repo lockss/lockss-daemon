@@ -5,7 +5,7 @@
   >
 
 	plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     
   {
   

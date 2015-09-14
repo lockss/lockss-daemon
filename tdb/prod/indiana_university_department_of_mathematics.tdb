@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Indiana University Department of Mathematics;
-    info[tester] = 4
+    name = Indiana University Department of Mathematics
   >
 
   implicit < status ; year ; param[year] ; name ; param[volume_name] >

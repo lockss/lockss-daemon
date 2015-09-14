@@ -85,7 +85,7 @@
   
       plugin = needs.plugin
       param[base_url] = http://www.japmaonline.org/
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[platform] = Allen Press
       param[journal_id] = apms
 

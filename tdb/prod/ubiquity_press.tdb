@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Ubiquity Press;
-    info[tester] = 4
+    name = Ubiquity Press
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
@@ -12,7 +11,7 @@
   {
   
     title < 
-      name = Ancient Asia;
+      name = Ancient Asia ;
       eissn = 2042-5937 
     >
     
@@ -27,7 +26,7 @@
   {
   
     title < 
-      name = Archaeology International;
+      name = Archaeology International ;
       eissn = 2048-4194 
     >
     
@@ -50,7 +49,7 @@
   {
   
     title < 
-      name = Architectural Histories;
+      name = Architectural Histories ;
       eissn = 2050-5833 
     >
     
@@ -65,7 +64,7 @@
   {
   
     title < 
-      name = The Bulletin of the History of Archaeology;
+      name = The Bulletin of the History of Archaeology ;
       issn = 1062-4740 ;
       eissn = 2047-6930 
     >
@@ -135,7 +134,7 @@
   {
   
     title < 
-      name = Journal of Conservation and Museum Studies;
+      name = Journal of Conservation and Museum Studies ;
       eissn = 1364-0429 
     >
     
@@ -216,7 +215,7 @@
   {
   
     title < 
-      name = Journal of Open Archaeology Data;
+      name = Journal of Open Archaeology Data ;
       eissn = 2049-1565 
     >
     
@@ -265,7 +264,7 @@
   {
   
     title < 
-      name = Journal of Open Research Software;
+      name = Journal of Open Research Software ;
       eissn = 2049-9647 
     >
     
@@ -297,7 +296,7 @@
   {
   
     title < 
-      name = Opticon1826;
+      name = Opticon1826 ;
       eissn = 2049-8128 
     >
     
@@ -319,7 +318,7 @@
   {
   
     title < 
-      name = Papers from the Institute of Archaeology;
+      name = Papers from the Institute of Archaeology ;
       eissn = 2041-9015 
     >
     
@@ -372,7 +371,7 @@
   {
   
     title < 
-      name = Present Pasts;
+      name = Present Pasts ;
       eissn = 1759-2941
     >
     {

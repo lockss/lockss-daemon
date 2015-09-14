@@ -2,8 +2,7 @@
 
 {
   publisher <
-    name = Inderscience ;
-    info[tester] = 4
+    name = Inderscience
   >
   
     comment[moving] = from MetaPress to Atypon
@@ -840,7 +839,7 @@
 
       param[journal_issn] = 1755-3849
       
-      au < down ; 2008-2009; International Journal of Banking, Accounting and Finance Volume 1 ; 1 >
+      au < down ; 2008-2009 ; International Journal of Banking, Accounting and Finance Volume 1 ; 1 >
       au < down ; 2010 ; International Journal of Banking, Accounting and Finance Volume 2 ; 2 >
       au < down ; 2011 ; International Journal of Banking, Accounting and Finance Volume 3 ; 3 >
       au < down ; 2012 ; International Journal of Banking, Accounting and Finance Volume 4 ; 4 >
@@ -2050,7 +2049,7 @@
 
       title <
         name = International Journal of Diplomacy and Economy ;
-        issn = 2049-0887;
+        issn = 2049-0887 ;
         eissn = 2049-0895 ;
         issnl = 2049-0887
       >

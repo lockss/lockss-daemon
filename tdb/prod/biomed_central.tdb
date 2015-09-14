@@ -1,7 +1,6 @@
 {
   publisher <
-    name = BioMed Central;
-    info[tester] = 4
+    name = BioMed Central
   >
 
   rights = openaccess
@@ -720,7 +719,7 @@
       au < released ; 2009 ; BMC Genomics Volume 10 ; 10 >
       au < released ; 2010 ; BMC Genomics Volume 11 ; 11 >
       au < released ; 2011 ; BMC Genomics Volume 12 ; 12 >
-      au < manifest ; 2012 ; BMC Genomics Volume 13; 13 >
+      au < manifest ; 2012 ; BMC Genomics Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Genomics Volume 14 ; 14 >
       au < manifest ; 2014 ; BMC Genomics Volume 15 ; 15 >
       au < manifest ; 2015 ; BMC Genomics Volume 16 ; 16 >
@@ -2575,7 +2574,7 @@
       au < released ; 2006 ; BioMagnetic Research and Technology Volume 4 ; 4 >
       au < released ; 2007 ; BioMagnetic Research and Technology Volume 5 ; 5 >
       au < released ; 2008 ; BioMagnetic Research and Technology Volume 6 ; 6 >
-      au < superseded ; 2009 ; BioMagnetic Research and Technology Volume 7 [void]; 7 >
+      au < superseded ; 2009 ; BioMagnetic Research and Technology Volume 7 [void] ; 7 >
 
     }
 
@@ -5279,7 +5278,7 @@
 
     {
       title <
-        name = Journal of Molecular Psychiatry;
+        name = Journal of Molecular Psychiatry ;
         issn = 2049-9256 ;
         issnl = 2049-9256
       >

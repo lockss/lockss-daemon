@@ -3,7 +3,7 @@
     name = Georgetown University Press
   >
 
-  implicit < status ; year; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/

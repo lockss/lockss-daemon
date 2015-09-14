@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Company of Biologists;
-    info[tester] = 4
+    name = Company of Biologists
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
@@ -165,7 +164,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Development Volume 124 ; 124 >
     au < HighWireStrVolPlugin ; superseded ; 1998 ; Development Volume 125 [superseded] ; 125 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Development Volume 125 ; 125 >
-    au < HighWireStrVolPlugin ; superseded ; 1999 ; Development Volume 126 [superseded]; 126 >
+    au < HighWireStrVolPlugin ; superseded ; 1999 ; Development Volume 126 [superseded] ; 126 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Development Volume 126 ; 126 >
     au < HighWireStrVolPlugin ; superseded ; 2000 ; Development Volume 127 [superseded] ; 127 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; Development Volume 127 ; 127 >

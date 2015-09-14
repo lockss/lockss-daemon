@@ -1,13 +1,12 @@
 {
 
   publisher <
-    name = American Institute of Aeronautics and Astronautics ;
-    info[tester] = 4
+    name = American Institute of Aeronautics and Astronautics
   >
 
   plugin = org.lockss.plugin.atypon.aiaa.AIAAPlugin
   param[base_url] = http://arc.aiaa.org/
-  implicit < status ; year; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   
   comment[manifest] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/lockss/ja/49
   comment[doNotProcess1] = ARS Journal, 1959-1962, param[journal_id] = arsj

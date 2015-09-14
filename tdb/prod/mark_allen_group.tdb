@@ -1,10 +1,7 @@
 {
 
   publisher <
-    name = Mark Allen Group ;
-    info[contract] = 2013 ;
-    info[tester] = 4 ;
-    comment[platform] = Atypon
+    name = Mark Allen Group
   >
 
   plugin = org.lockss.plugin.atypon.markallen.MarkAllenPlugin
