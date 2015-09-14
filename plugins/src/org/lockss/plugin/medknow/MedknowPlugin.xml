@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -184,6 +184,10 @@
     <string>au_redirect_to_login_url_pattern</string>
     <string>"%ssubscriberlogin\.asp", base_url</string>
   </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.medknow.MedknowLoginPageChecker</string>
+  </entry>  
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
