@@ -181,6 +181,9 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
     if (urlList == null) {
       populateUrlList();
     }
+    if(urlList.isEmpty()) {
+      throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
+    }
     return urlList;
   }
 

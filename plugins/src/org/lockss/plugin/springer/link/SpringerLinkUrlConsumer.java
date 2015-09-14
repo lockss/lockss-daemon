@@ -54,7 +54,7 @@ import org.lockss.util.urlconn.CacheException;
 public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
   
   public static final String DOWNLOAD_URL_KEY = "download_url";
-  public static final String ACCESS_STRING = "acesspage";
+  public static final String ACCESS_STRING = "accesspage";
 
   
   protected Pattern origPdfPat;
