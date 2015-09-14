@@ -145,7 +145,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
-        au < expected ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
+        au < manifest ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
   
     }
 
@@ -305,7 +305,7 @@
         au < manifest ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 >
         au < manifest ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 >
         au < doesNotExist ; 0 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 >
-        au < expected ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 ; 4 >
+        au < manifest ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 ; 4 >
   
     }
   
@@ -422,8 +422,8 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
-        au < exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
+        au < manifest ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
+        au < manifest ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
 
     }
 
@@ -2082,8 +2082,8 @@
         param[journal_issn] = 0717-6317
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 >
-        au < exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
+        au < manifest ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 >
+        au < manifest ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
 
     }
 
@@ -2416,7 +2416,7 @@
       param[journal_issn] = 2288-8586
       comment[platform] = BioMedCentralPlugin
 
-      au < expected ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
+      au < manifest ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
 
     }
 
