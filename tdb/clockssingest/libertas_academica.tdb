@@ -168,7 +168,7 @@
     au < finished ; frozen ; 2011 ; Biomarkers in Cancer Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Biomarkers in Cancer Volume 4 ; 4 ; 2012 >
     au < finished ; crawling ; 2013 ; Biomarkers in Cancer Volume 5 ; 5 ; 2013 >
-    au < finished ; crawling ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; 2014 >
+    au < finished ; finished ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; 2014 >
     au < crawling ; exists ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; 2015 >
   }
   
@@ -248,7 +248,7 @@
     au < finished ; frozen ; 2011 ; Breast Cancer: Basic and Clinical Research Volume 5 ; 5 ; 2011 >
     au < finished ; frozen ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 6 ; 2012 >
     au < finished ; crawling ; 2013 ; Breast Cancer: Basic and Clinical Research Volume 7 ; 7 ; 2013 >
-    au < finished ; crawling ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; 2014 >
+    au < finished ; finished ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; 2014 >
     au < crawling ; exists ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 >
 
   }
@@ -368,7 +368,7 @@
 
     au < finished ; crawling ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 1 ; 2008 >
     au < finished ; crawling ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2 ; 2009 >
-    au < finished ; crawling ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 3 ; 2010 >
+    au < finished ; finished ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 4 ; 2011 >
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 5 ; 2012 >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 6 ; 6 ; 2013 >
@@ -686,8 +686,8 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2 ; 2010 >
     au < finished ; frozen ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Therapeutics Volume 4 ; 4 ; 2012 >
-    au < finished ; crawling ; 2013 ; Clinical Medicine Insights: Therapeutics Volume 5 ; 5 ; 2013 >
-    au < finished ; crawling ; 2014 ; Clinical Medicine Insights: Therapeutics Volume 6 ; 6 ; 2014 >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Therapeutics Volume 5 ; 5 ; 2013 >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Therapeutics Volume 6 ; 6 ; 2014 >
     au < crawling ; exists ; 2015 ; Clinical Medicine Insights: Therapeutics Volume 7 ; 7 ; 2015 >
 
   }
@@ -748,7 +748,7 @@
     au < finished ; frozen ; 2011 ; Clinical Medicine Insights: Women's Health Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Women's Health Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Women's Health Volume 6 ; 6 ; 2013 >
-    au < finished ; crawling ; 2014 ; Clinical Medicine Insights: Women's Health Volume 7 ; 7 ; 2014 >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Women's Health Volume 7 ; 7 ; 2014 >
     au < crawling ; exists ; 2015 ; Clinical Medicine Insights: Women's Health Volume 8 ; 8 ; 2015 >
 
   }
@@ -1317,7 +1317,7 @@
 
     param[journal_id] = 174
     
-    au < finished ; crawling ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; 2014 >
+    au < finished ; finished ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; 2014 >
     au < crawling ; exists ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 >
   
 

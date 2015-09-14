@@ -778,7 +778,7 @@
 
       param[journal_id] = ijal
 
-      au < finished ; crawling ; 2013 ; International Journal of Automation and Logistics Volume 1 ; 1 >
+      au < finished ; finished ; 2013 ; International Journal of Automation and Logistics Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of Automation and Logistics Volume 2 ; 2 >
 
     }
@@ -1248,7 +1248,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Business Environment Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Business Environment Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Business Environment Volume 5 ; 5 >
-      au < finished ; crawling ; 2014 ; International Journal of Business Environment Volume 6 ; 6 >
+      au < finished ; finished ; 2014 ; International Journal of Business Environment Volume 6 ; 6 >
       au < crawling ; exists ; 2015 ; International Journal of Business Environment Volume 7 ; 7 >
 
     }
@@ -1563,7 +1563,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Collaborative Enterprise Volume 3 ; 3 >
-      au < finished ; crawling ; 2014 ; International Journal of Collaborative Enterprise Volume 4 ; 4 >
+      au < finished ; finished ; 2014 ; International Journal of Collaborative Enterprise Volume 4 ; 4 >
       au < expected ; exists ; 2015 ; International Journal of Collaborative Enterprise Volume 5 ; 5 >
 
     }
@@ -4574,7 +4574,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Knowledge and Web Intelligence Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Knowledge and Web Intelligence Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Knowledge and Web Intelligence Volume 4 ; 4 >
-      au < finished ; crawling ; 2014 ; International Journal of Knowledge and Web Intelligence Volume 5 ; 5 >
+      au < finished ; finished ; 2014 ; International Journal of Knowledge and Web Intelligence Volume 5 ; 5 >
       au < expected ; exists ; 2015 ; International Journal of Knowledge and Web Intelligence Volume 6 ; 6 >
 
     }
@@ -5115,7 +5115,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Management Practice Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Management Practice Volume 5 ; 5 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Management Practice Volume 6 ; 6 >
-      au < finished ; crawling ; 2014 ; International Journal of Management Practice Volume 7 ; 7 >
+      au < finished ; finished ; 2014 ; International Journal of Management Practice Volume 7 ; 7 >
       au < crawling ; exists ; 2015 ; International Journal of Management Practice Volume 8 ; 8 >
 
     }
@@ -6519,7 +6519,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Public Law and Policy Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Public Law and Policy Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Public Law and Policy Volume 3 ; 3 >
-      au < finished ; crawling ; 2014 ; International Journal of Public Law and Policy Volume 4 ; 4 >
+      au < finished ; finished ; 2014 ; International Journal of Public Law and Policy Volume 4 ; 4 >
       au < crawling ; exists ; 2015 ; International Journal of Public Law and Policy Volume 5 ; 5 >
 
     }
@@ -8655,7 +8655,7 @@
       au < doNotProcess ; exists ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
-      au < finished ; crawling ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
+      au < finished ; finished ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 >
 
     }

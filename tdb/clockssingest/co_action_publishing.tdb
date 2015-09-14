@@ -129,9 +129,9 @@
     param[journal_id] = edui
     comment[notReady] = Unknown Host
 
-    au < finished ; crawling ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
+    au < finished ; finished ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
     au < finished ; finished ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
-    au < finished ; crawling ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
+    au < finished ; finished ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
     au < notReady ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
     au < finished ; crawling ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Education Inquiry Volume 6 ; 6 ; 2015 >
@@ -155,7 +155,7 @@
     au < finished ; frozen ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
-    au < finished ; crawling ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
+    au < finished ; finished ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
     au < finished ; crawling ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 >
     au < manifest ; exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 ; 2015 >
 
@@ -228,7 +228,7 @@
       au < crawling ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
       au < crawling ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
-      au < finished ; crawling ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 >
+      au < finished ; finished ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 >
       au < manifest ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; 2015 >
     }
   }
@@ -573,13 +573,13 @@
     au < crawling ; exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 >
     au < finished ; crawling ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 >
     au < crawling ; exists ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
-    au < finished ; crawling ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
+    au < finished ; finished ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
     au < crawling ; exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
     au < finished ; finished ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
     au < finished ; finished ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
     au < finished ; crawling ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
-    au < finished ; crawling ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
-    au < finished ; crawling ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
+    au < finished ; finished ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
+    au < finished ; finished ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
     au < crawling ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
     au < crawling ; exists ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
     au < finished ; frozen ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
@@ -610,7 +610,7 @@
     au < finished ; frozen ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
     au < finished ; frozen ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
-    au < finished ; crawling ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
+    au < finished ; finished ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
     au < finished ; finished ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
     au < manifest ; exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
   }
