@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiPmhCrawlSeed.java 40241 2015-03-05 21:05:30Z thib_gc $
+ * $Id$
  */
 
 /*

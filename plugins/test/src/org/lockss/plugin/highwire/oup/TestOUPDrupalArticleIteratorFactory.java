@@ -1,5 +1,5 @@
 /*
- * $Id: TestOUPDrupalArticleIteratorFactory.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id$
  */
 
 /*

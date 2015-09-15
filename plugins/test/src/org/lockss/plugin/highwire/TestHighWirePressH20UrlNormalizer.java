@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalUrlNormalizer.java 41680 2015-04-24 21:39:21Z etenbrink $
+ * $Id$
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestOUPHtmlHashFilterFactory.java 40123 2015-02-27 00:00:25Z etenbrink $
+ * $Id$
  */
 
 /*
