@@ -44,7 +44,6 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
-import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.plugin.exploded.ExplodingUrlConsumerFactory;
 import org.lockss.state.AuState;
 

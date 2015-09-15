@@ -343,7 +343,7 @@ public class DefaultUrlCacher implements UrlCacher {
           // just being paranoid
         }
       }
-      throw ex;
+      throw resultMap.mapException(au, url, ex, null);
     } finally {
       IOUtil.safeClose(os);
     }

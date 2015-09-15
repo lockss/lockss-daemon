@@ -35,9 +35,8 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.*;
 import java.net.*;
-import java.security.MessageDigest;
 import de.schlichtherle.truezip.file.*;
-import de.schlichtherle.truezip.fs.*;
+//import de.schlichtherle.truezip.fs.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -46,7 +45,6 @@ import org.lockss.plugin.*;
 import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
