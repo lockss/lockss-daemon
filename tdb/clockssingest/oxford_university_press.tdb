@@ -11750,6 +11750,8 @@
 
     comment[vol59] = added in error.
 
+    au < superseded ; exists ; 0 ; Journal of Economic Geography Volume 59 [to delete] ; 59 ; reingest2.clockss.org:8085 >
+
     au < manifest ; exists ; 2001 ; Journal of Economic Geography Volume 1 ; 1 ; >
     au < manifest ; exists ; 2002 ; Journal of Economic Geography Volume 2 ; 2 ; >
     au < manifest ; exists ; 2003 ; Journal of Economic Geography Volume 3 ; 3 ; >
@@ -11764,8 +11766,7 @@
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
     au < finished ; finished ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
-
-    au < superseded ; exists ; 0 ; Journal of Economic Geography Volume 59 [to delete] ; 59 ; reingest2.clockss.org:8085 >
+    au < exists ; exists ; 2015 ; Journal of Economic Geography Volume 15 ; 15 ; >
 
     }
 
@@ -12200,14 +12201,16 @@
 
     title <
       name = Journal of Global Security Studies ;
-      issn = ;
-      eissn = ;
-      issnl =
+      issn = 2057-3170 ;
+      eissn = 2057-3189 ;
+      issnl = 2057-3170
     >
 
     param[base_url] = http://jogss.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[0] = expected to be online on 6 Jan 2016
+
+    au < expected ; exists ; 2016 ; Journal of Global Security Studies Volume 1 ; 1 ; >
 
   }
 

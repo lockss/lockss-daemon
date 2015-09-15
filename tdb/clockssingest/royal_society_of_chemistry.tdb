@@ -799,6 +799,16 @@
     au < doNotProcess ; exists ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 >
     au < doNotProcess ; exists ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
     }
+    
+    {
+      pluginSuffix = ClockssRSC2014Plugin
+      param[base_url] = http://pubs.rsc.org/
+      param[resolver_url] = http://xlink.rsc.org/
+      param[graphics_url] = http://sod-a.rsc-cdn.org/
+      param[base_url2] = http://www.rsc.org/
+      
+      au < doNotProcess ; exists ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
+    }
   }
 
   {

@@ -7012,6 +7012,7 @@
     au < expected ; 2014 ; FEMS Microbiology Letters Volume 360 ; 360 >
     au < expected ; 2014 ; FEMS Microbiology Letters Volume 361 ; 361 >
     au < manifest ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 >
+    au < expected ; 2015 ; FEMS Microbiology Letters Volume 363 ; 363 >
 
   }
 
@@ -8419,6 +8420,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; History Workshop Journal Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; History Workshop Journal Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; History Workshop Journal Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; History Workshop Journal Volume 80 ; 80 >
 
     }
 
@@ -10666,6 +10668,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Jerusalem Review of Legal Studies Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Jerusalem Review of Legal Studies Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Jerusalem Review of Legal Studies Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Jerusalem Review of Legal Studies Volume 12 ; 12 >
 
   }
 
@@ -11692,7 +11695,7 @@
 
     param[base_url] = http://jcr.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = content available from 1974 volume 1 to 1999 volume 25
 
     au < exists ; 1999-2000 ; Journal of Consumer Research Volume 26 ; 26 >
@@ -12421,9 +12424,9 @@
 
     title <
       name = Journal of Global Security Studies ;
-      issn = ;
-      eissn = ;
-      issnl =
+      issn = 2057-3170 ;
+      eissn = 2057-3189 ;
+      issnl = 2057-3170
     >
 
     param[base_url] = http://jogss.oxfordjournals.org/
@@ -13703,6 +13706,12 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2000 ; Journal of Mammalogy Volume 81 ; 81 >
+    au < exists ; 2001 ; Journal of Mammalogy Volume 82 ; 82 >
+    au < exists ; 2002 ; Journal of Mammalogy Volume 83 ; 83 >
+    au < exists ; 2003 ; Journal of Mammalogy Volume 84 ; 84 >
+    au < exists ; 2004 ; Journal of Mammalogy Volume 85 ; 85 >
+    au < exists ; 2005 ; Journal of Mammalogy Volume 86 ; 86 >
     au < manifest ; 2006 ; Journal of Mammalogy Volume 87 ; 87 >
     au < manifest ; 2007 ; Journal of Mammalogy Volume 88 ; 88 >
     au < manifest ; 2008 ; Journal of Mammalogy Volume 89 ; 89 >
@@ -16420,6 +16429,8 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Plant Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Molecular Plant Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Molecular Plant Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Molecular Plant Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Molecular Plant Volume 7 ; 7 >
 
     }
 
@@ -16439,6 +16450,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1890 volume 1 to 1997 volume 80
 
+    au < manifest ; 1997 ; The Monist Volume 80 ; 80 >
     au < manifest ; 1998 ; The Monist Volume 81 ; 81 >
     au < manifest ; 1999 ; The Monist Volume 82 ; 82 >
     au < manifest ; 2000 ; The Monist Volume 83 ; 83 >
@@ -17908,6 +17920,17 @@
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < manifest ; 1961 ; Nutrition Reviews Volume 19 ; 19 >
+    au < manifest ; 1962 ; Nutrition Reviews Volume 20 ; 20 >
+    au < manifest ; 1963 ; Nutrition Reviews Volume 21 ; 21 >
+    au < manifest ; 1964 ; Nutrition Reviews Volume 22 ; 22 >
+    au < manifest ; 1965 ; Nutrition Reviews Volume 23 ; 23 >
+    au < manifest ; 1966 ; Nutrition Reviews Volume 24 ; 24 >
+    au < manifest ; 1967 ; Nutrition Reviews Volume 25 ; 25 >
+    au < manifest ; 1968 ; Nutrition Reviews Volume 26 ; 26 >
+    au < manifest ; 1969 ; Nutrition Reviews Volume 27 ; 27 >
+    au < manifest ; 1970 ; Nutrition Reviews Volume 28 ; 28 >
+    au < manifest ; 1971 ; Nutrition Reviews Volume 29 ; 29 >
     au < manifest ; 1972 ; Nutrition Reviews Volume 30 ; 30 >
     au < manifest ; 1973 ; Nutrition Reviews Volume 31 ; 31 >
     au < manifest ; 1974 ; Nutrition Reviews Volume 32 ; 32 >
