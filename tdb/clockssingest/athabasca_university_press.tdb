@@ -45,7 +45,7 @@
       au < finished ; finished ; 2012 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 13 ; 13 ; 2012 >
       au < crawling ; exists ; 2013 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 14 ; 14 ; 2013 >
       au < finished ; crawling ; 2014  ; International Review of Research in Open and Distance Learning (IRRODL) Volume 15 ; 15 ; 2014 >
-      au < ready ; exists ; 2015 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 16 ; 16 ; 2015 >
+      au < crawling ; exists ; 2015 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 16 ; 16 ; 2015 >
 
     }
     
@@ -63,7 +63,7 @@
       param[base_url] = http://www.ijede.ca/
       param[journal_id] = jde
 
-      au < ready ; exists ; 2015 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 29 ; 29 ; 2015 >
+      au < crawling ; exists ; 2015 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 29 ; 29 ; 2015 >
 
     }
     
@@ -83,7 +83,7 @@
       au < finished ; crawling ; 2012 ; Journal of Research Practice Volume 8 ; 8 ; 2012 >
       au < finished ; crawling ; 2013 ; Journal of Research Practice Volume 9 ; 9 ; 2013 >
       au < finished ; crawling ; 2014  ; Journal of Research Practice Volume 10 ; 10 ; 2014 >
-      au < ready ; exists ; 2015 ; Journal of Research Practice Volume 11 ; 11 ; 2015 >
+      au < crawling ; exists ; 2015 ; Journal of Research Practice Volume 11 ; 11 ; 2015 >
 
     }
     
