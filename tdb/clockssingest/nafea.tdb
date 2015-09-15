@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = National Association for the Education and Advancement of Cambodian, Laotian, and Vietnamese Americans (NAFEA) ;
+    info[contract] = 2015 ;
+    info[tester] = 5
+  >
+
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] >
+  param[base_url] = http://docs.lib.purdue.edu/
+
+  {
+
+    title <
+      name = Journal of Southeast Asian American Education and Advancement (JSAAEA) ;
+      eissn = 2153-8999
+
+    >
+
+    param[journal_abbr] = jsaaea
+
+    au < exists ; exists ; 2006 ; Journal of Southeast Asian American Education and Advancement Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; Journal of Southeast Asian American Education and Advancement Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; Journal of Southeast Asian American Education and Advancement Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; Journal of Southeast Asian American Education and Advancement Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; Journal of Southeast Asian American Education and Advancement Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Journal of Southeast Asian American Education and Advancement Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; Journal of Southeast Asian American Education and Advancement Volume 7 ; 7 >
+    au < exists ; exists ; 2013 ; Journal of Southeast Asian American Education and Advancement Volume 8 ; 8 >
+    au < exists ; exists ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 >
+    au < exists ; exists ; 2015 ; Journal of Southeast Asian American Education and Advancement Volume 10 ; 10 >
+
+  }
+
+}

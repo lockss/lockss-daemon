@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Aurora Health Care ;
+    info[contract] = 2015 ;
+    info[tester] = 5
+  >
+
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] >
+  param[base_url] = http://digitalrepository.aurorahealthcare.org/
+
+  {
+
+    title <
+      name = Journal of Patient-Centered Research and Reviews (JPCRR) ;
+      eissn = 2330-0698
+
+    >
+
+    param[journal_abbr] = jpcrr
+
+    au < exists ; exists ; 2014 ; Journal of Patient-Centered Research and Reviews Volume 1 ; 1 >
+    au < exists ; exists ; 2015 ; Journal of Patient-Centered Research and Reviews Volume 2 ; 2 >
+
+  }
+
+}
