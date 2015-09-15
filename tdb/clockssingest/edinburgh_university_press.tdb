@@ -437,14 +437,13 @@
     comment[continued_by] = 1753-8548
     comment[0] = names changes to International Journal of Humanities and Arts Computing in 2007
     comment[1] = History and Computing from 1994 to 2002
-    comment[3] = AUs not added to ingest machines, but added to production machines in error.
-    comment[notReady] = no substance
+    comment[3] = AU not added to ingest machines, but added to production machines in error.
     
     au < crawling ; crawling ; 1994 ; History and Computing Volume 6 (1994) ; 6 >
     au < crawling ; crawling ; 1995 ; History and Computing Volume 7 (1995) ; 7 >
     au < crawling ; crawling ; 1996 ; History and Computing Volume 8 (1996) ; 8 >
     au < crawling ; crawling ; 1997 ; History and Computing Volume 9 (1997) ; 9 >
-    au < testing ; down ; 1998 ; History and Computing Volume 10 (1998) ; 10 >
+    au < notReady ; down ; 1998 ; History and Computing Volume 10 (1998) ; 10 > # no substance
     au < crawling ; crawling ; 1999 ; History and Computing Volume 11 (1999) ; 11 >
     au < crawling ; crawling ; 2000 ; History and Computing Volume 12 (2000) ; 12 >
     au < crawling ; crawling ; 2001 ; History and Computing Volume 13 (2001) ; 13 >
