@@ -149,7 +149,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
-        au < expected ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
+        au < manifest ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
   
     }
 
@@ -428,8 +428,8 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
-        au < exists ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
+        au < manifest ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
+        au < manifest ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
 
     }
 
@@ -2075,7 +2075,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 >
-        au < exists ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
+        au < manifest ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
 
     }
 
@@ -2425,7 +2425,7 @@
       param[journal_issn] = 2288-8586
       comment[platform] = BioMedCentralPlugin
 
-      au < expected ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
+      au < manifest ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
 
     }
 
