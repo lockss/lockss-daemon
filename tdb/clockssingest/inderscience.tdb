@@ -644,7 +644,7 @@
 
       param[journal_id] = ijapr
 
-      au < finished ; crawling ; 2013-2014 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
+      au < finished ; finished ; 2013-2014 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
       au < crawling ; exists ; 2015 ; International Journal of Applied Pattern Recognition Volume 2 ; 2 >
 
     }
@@ -1804,7 +1804,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Computational Science and Engineering Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Computational Science and Engineering Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Computational Science and Engineering Volume 8 ; 8 >
-      au < finished ; crawling ; 2014 ; International Journal of Computational Science and Engineering Volume 9 ; 9 >
+      au < finished ; finished ; 2014 ; International Journal of Computational Science and Engineering Volume 9 ; 9 >
       au < crawling ; exists ; 2015 ; International Journal of Computational Science and Engineering Volume 10 ; 10 >
 
     }
@@ -3907,7 +3907,7 @@
       param[journal_id] = ijicot
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
-      au < finished ; crawling ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
+      au < finished ; finished ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
       au < crawling ; exists ; 2015 ; International Journal of Information and Coding Theory Volume 3 ; 3 >
 
     }
@@ -4139,7 +4139,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Innovation and Learning Volume 13 ; 13 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Innovation and Learning Volume 14 ; 14 >
       au < finished ; finished ; 2014 ; International Journal of Innovation and Learning Volume 15 ; 15 >
-      au < finished ; crawling ; 2014 ; International Journal of Innovation and Learning Volume 16 ; 16 >
+      au < finished ; finished ; 2014 ; International Journal of Innovation and Learning Volume 16 ; 16 >
       au < crawling ; exists ; 2015 ; International Journal of Innovation and Learning Volume 17 ; 17 >
       au < crawling ; exists ; 2015 ; International Journal of Innovation and Learning Volume 18 ; 18 >
 
@@ -6500,7 +6500,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Project Organisation and Management Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Project Organisation and Management Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Project Organisation and Management Volume 5 ; 5 >
-      au < finished ; crawling ; 2014 ; International Journal of Project Organisation and Management Volume 6 ; 6 >
+      au < finished ; finished ; 2014 ; International Journal of Project Organisation and Management Volume 6 ; 6 >
       au < crawling ; exists ; 2015 ; International Journal of Project Organisation and Management Volume 7 ; 7 >
 
     }

@@ -248,7 +248,7 @@
     au < finished ; frozen ; 2010 ; African Affairs Volume 109 ; 109 ; >
     au < finished ; crawling ; 2011 ; African Affairs Volume 110 ; 110 ; >
     au < finished ; frozen ; 2012 ; African Affairs Volume 111 ; 111 ; >
-    au < finished ; crawling ; 2013 ; African Affairs Volume 112 ; 112 ; >
+    au < finished ; finished ; 2013 ; African Affairs Volume 112 ; 112 ; >
     au < crawling ; exists ; 2014 ; African Affairs Volume 113 ; 113 ; >
     au < crawling ; exists ; 2015 ; African Affairs Volume 114 ; 114 ; >
 
@@ -2318,7 +2318,7 @@
     au < finished ; frozen ; 2010 ; Biostatistics Volume 11 ; 11 ; >
     au < finished ; frozen ; 2011 ; Biostatistics Volume 12 ; 12 ; >
     au < finished ; frozen ; 2012 ; Biostatistics Volume 13 ; 13 ; >
-    au < finished ; crawling ; 2013 ; Biostatistics Volume 14 ; 14 ; >
+    au < finished ; finished ; 2013 ; Biostatistics Volume 14 ; 14 ; >
     au < crawling ; exists ; 2014 ; Biostatistics Volume 15 ; 15 ; >
     au < crawling ; exists ; 2015 ; Biostatistics Volume 16 ; 16 ; >
 
@@ -2660,7 +2660,7 @@
     au < finished ; crawling ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
     au < finished ; frozen ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
     au < finished ; crawling ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ; >
-    au < finished ; crawling ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
+    au < finished ; finished ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ; >
 
     }
@@ -3281,7 +3281,7 @@
     au < finished ; frozen ; 2012 ; British Medical Bulletin Volume 103 ; 103 ; >
     au < finished ; crawling ; 2012 ; British Medical Bulletin Volume 104 ; 104 ; >
     au < finished ; finished ; 2013 ; British Medical Bulletin Volume 105 ; 105 ; >
-    au < finished ; crawling ; 2013 ; British Medical Bulletin Volume 106 ; 106 ; >
+    au < finished ; finished ; 2013 ; British Medical Bulletin Volume 106 ; 106 ; >
     au < finished ; crawling ; 2013 ; British Medical Bulletin Volume 107 ; 107 ; >
     au < finished ; finished ; 2013 ; British Medical Bulletin Volume 108 ; 108 ; >
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 109 ; 109 ; >
@@ -3342,7 +3342,7 @@
     au < manifest ; exists ; 2005 ; British Yearbook of International Law Volume 76 ; 76 ; >
     au < manifest ; exists ; 2006 ; British Yearbook of International Law Volume 77 ; 77 ; >
     au < manifest ; exists ; 2007 ; British Yearbook of International Law Volume 78 ; 78 ; >
-    au < finished ; crawling ; 2008 ; British Yearbook of International Law Volume 79 ; 79 ; >
+    au < finished ; finished ; 2008 ; British Yearbook of International Law Volume 79 ; 79 ; >
     au < finished ; frozen ; 2009 ; British Yearbook of International Law Volume 80 ; 80 ; >
     au < finished ; crawling ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
     au < finished ; finished ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
@@ -11386,7 +11386,7 @@
     au < finished ; crawling ; 2010 ; Journal of Church and State Volume 52 ; 52 ; >
     au < finished ; frozen ; 2011 ; Journal of Church and State Volume 53 ; 53 ; >
     au < finished ; frozen ; 2012 ; Journal of Church and State Volume 54 ; 54 ; >
-    au < finished ; crawling ; 2013 ; Journal of Church and State Volume 55 ; 55 ; >
+    au < finished ; finished ; 2013 ; Journal of Church and State Volume 55 ; 55 ; >
     au < crawling ; exists ; 2014 ; Journal of Church and State Volume 56 ; 56 ; >
     au < testing ; exists ; 2015 ; Journal of Church and State Volume 57 ; 57 ; >
 
@@ -11408,7 +11408,7 @@
     param[base_url] = http://comnet.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < finished ; crawling ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
+    au < finished ; finished ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
     au < finished ; crawling ; 2014 ; Journal of Complex Networks Volume 2 ; 2 ; >
     au < manifest ; exists ; 2015 ; Journal of Complex Networks Volume 3 ; 3 ; >
 
@@ -13403,7 +13403,7 @@
     au < finished ; crawling ; 2011 ; Journal of the London Mathematical Society Volume 84 ; 84 ; >
     au < finished ; frozen ; 2012 ; Journal of the London Mathematical Society Volume 85 ; 85 ; >
     au < finished ; crawling ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 ; >
-    au < finished ; crawling ; 2013 ; Journal of the London Mathematical Society Volume 87 ; 87 ; >
+    au < finished ; finished ; 2013 ; Journal of the London Mathematical Society Volume 87 ; 87 ; >
     au < crawling ; exists ; 2013 ; Journal of the London Mathematical Society Volume 88 ; 88 ; >
     au < crawling ; exists ; 2014 ; Journal of the London Mathematical Society Volume 89 ; 89 ; >
     au < crawling ; exists ; 2014 ; Journal of the London Mathematical Society Volume 90 ; 90 ; >
@@ -13548,7 +13548,7 @@
     au < finished ; crawling ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 ; >
     au < finished ; crawling ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 ; >
     au < finished ; frozen ; 2012 ; The Journal of Medicine and Philosophy Volume 37 ; 37 ; >
-    au < finished ; crawling ; 2013 ; The Journal of Medicine and Philosophy Volume 38 ; 38 ; >
+    au < finished ; finished ; 2013 ; The Journal of Medicine and Philosophy Volume 38 ; 38 ; >
     au < crawling ; exists ; 2014 ; The Journal of Medicine and Philosophy Volume 39 ; 39 ; >
     au < crawling ; exists ; 2015 ; The Journal of Medicine and Philosophy Volume 40 ; 40 ; >
 
@@ -14421,7 +14421,7 @@
     au < finished ; crawling ; 2010 ; Journal of Semantics Volume 27 ; 27 ; >
     au < finished ; crawling ; 2011 ; Journal of Semantics Volume 28 ; 28 ; >
     au < finished ; frozen ; 2012 ; Journal of Semantics Volume 29 ; 29 ; >
-    au < finished ; crawling ; 2013 ; Journal of Semantics Volume 30 ; 30 ; >
+    au < finished ; finished ; 2013 ; Journal of Semantics Volume 30 ; 30 ; >
     au < finished ; finished ; 2014 ; Journal of Semantics Volume 31 ; 31 ; >
     au < ready ; exists ; 2015 ; Journal of Semantics Volume 32 ; 32 ; >
 
@@ -15345,7 +15345,7 @@
     au < finished ; crawling ; 2010 ; Literary Imagination Volume 12 ; 12 ; >
     au < finished ; crawling ; 2011 ; Literary Imagination Volume 13 ; 13 ; >
     au < finished ; finished ; 2012 ; Literary Imagination Volume 14 ; 14 ; >
-    au < finished ; crawling ; 2013 ; Literary Imagination Volume 15 ; 15 ; >
+    au < finished ; finished ; 2013 ; Literary Imagination Volume 15 ; 15 ; >
     au < crawling ; exists ; 2014 ; Literary Imagination Volume 16 ; 16 ; >
     au < ready ; exists ; 2015 ; Literary Imagination Volume 17 ; 17 ; >
 
@@ -15537,7 +15537,7 @@
     au < finished ; crawling ; 2010 ; Mathematical Medicine and Biology Volume 27 ; 27 ; >
     au < finished ; crawling ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 ; >
     au < finished ; crawling ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 ; >
-    au < finished ; crawling ; 2013 ; Mathematical Medicine and Biology Volume 30 ; 30 ; >
+    au < finished ; finished ; 2013 ; Mathematical Medicine and Biology Volume 30 ; 30 ; >
     au < crawling ; exists ; 2014 ; Mathematical Medicine and Biology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2015 ; Mathematical Medicine and Biology Volume 32 ; 32 ; >
 
@@ -16279,7 +16279,7 @@
     au < crawling ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 393 ; 393 ; >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 394 ; 394 ; >
     au < crawling ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 395 ; 395 ; >
-    au < finished ; crawling ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 396 ; 396 ; >
+    au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 396 ; 396 ; >
     au < crawling ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 397 ; 397 ; >
     au < finished ; crawling ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 398 ; 398 ; >
     au < finished ; crawling ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 ; >
@@ -16397,7 +16397,7 @@
     au < finished ; crawling ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 398 ; 398 ; >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 399 ; 399 ; >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 400 ; 400 ; >
-    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401 ; 401 ; >
+    au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401 ; 401 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 402 ; 402 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 404 ; 404 ; >
@@ -16427,7 +16427,7 @@
     au < finished ; finished ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 428 ; 428 ; >
     au < finished ; finished ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 429 ; 429 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 430 ; 430 ; >
-    au < finished ; crawling ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 431 ; 431 ; >
+    au < finished ; finished ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 431 ; 431 ; >
     au < finished ; finished ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 432 ; 432 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 433 ; 433 ; >
     au < finished ; finished ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 434 ; 434 ; >
@@ -16692,7 +16692,7 @@
     au < manifest ; exists ; 2007 ; Music Therapy Perspectives Volume 25 ; 25 ; >
     au < manifest ; exists ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 ; >
     au < crawling ; exists ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; >
-    au < finished ; crawling ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
+    au < finished ; finished ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
     au < finished ; finished ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
     au < crawling ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
     au < finished ; finished ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 ; >
@@ -17757,7 +17757,7 @@
     au < finished ; crawling ; 2010 ; Occupational Medicine Volume 60 ; 60 ; >
     au < finished ; crawling ; 2011 ; Occupational Medicine Volume 61 ; 61 ; >
     au < finished ; crawling ; 2012 ; Occupational Medicine Volume 62 ; 62 ; >
-    au < finished ; crawling ; 2013 ; Occupational Medicine Volume 63 ; 63 ; >
+    au < finished ; finished ; 2013 ; Occupational Medicine Volume 63 ; 63 ; >
     au < crawling ; exists ; 2014 ; Occupational Medicine Volume 64 ; 64 ; >
     au < ready ; exists ; 2015 ; Occupational Medicine Volume 65 ; 65 ; >
 
@@ -23313,7 +23313,7 @@
     au < finished ; finished ; 2011 ; Progress of Theoretical Physics Supplement Volume 191 ; 191 ; >
     au < finished ; finished ; 2012 ; Progress of Theoretical Physics Supplement Volume 192 ; 192 ; >
     au < finished ; finished ; 2012 ; Progress of Theoretical Physics Supplement Volume 193 ; 193 ; >
-    au < finished ; crawling ; 2012 ; Progress of Theoretical Physics Supplement Volume 194 ; 194 ; >
+    au < finished ; finished ; 2012 ; Progress of Theoretical Physics Supplement Volume 194 ; 194 ; >
     au < finished ; crawling ; 2012 ; Progress of Theoretical Physics Supplement Volume 195 ; 195 ; >
     au < crawling ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 196 ; 196 ; >
     au < crawling ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 197 ; 197 ; >
