@@ -3056,8 +3056,8 @@
       au < doNotProcess ; exists ; 1999 ; International Journal of Global Energy Issues Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2000 ; International Journal of Global Energy Issues Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 >
-      au < exists ; exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 >
-      au < exists ; exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 >
+      au < doNotProcess ; exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 >
+      au < doNotProcess ; exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 >
       au < doNotProcess ; exists ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 >
       au < doNotProcess ; exists ; 2002 ; International Journal of Global Energy Issues Volume 18 ; 18 >
       au < doNotProcess ; exists ; 2003 ; International Journal of Global Energy Issues Volume 19 ; 19 >
@@ -7790,10 +7790,10 @@
 
       param[journal_issn] = 1569-1551
       
-      au < exists ; exists ; 2001 ; Journal of Design Research Volume 1 ; 1 >
-      au < exists ; exists ; 2002 ; Journal of Design Research Volume 2 ; 2 >
-      au < exists ; exists ; 2003 ; Journal of Design Research Volume 3 ; 3 >
-      au < exists ; exists ; 2004 ; Journal of Design Research Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2001 ; Journal of Design Research Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2002 ; Journal of Design Research Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2003 ; Journal of Design Research Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2004 ; Journal of Design Research Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2006-2007 ; Journal of Design Research Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2007 ; Journal of Design Research Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2008 ; Journal of Design Research Volume 7 ; 7 >
