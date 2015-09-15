@@ -337,7 +337,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     } catch (IOException e) {
       Throwable t = e.getCause();
       assertClass(IOException.class, t);
-      assertEquals("Malformed chunk", t.getMessage());
+      assertEquals("java.io.IOException: Malformed chunk", t.getMessage());
     }
   }
 
@@ -355,7 +355,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     } catch (IOException e) {
       Throwable t = e.getCause();
       assertClass(IOException.class, t);
-      assertEquals("CRLF expected at end of chunk: -1/-1", t.getMessage());
+      assertEquals("java.io.IOException: CRLF expected at end of chunk: -1/-1", t.getMessage());
     }
   }
 
