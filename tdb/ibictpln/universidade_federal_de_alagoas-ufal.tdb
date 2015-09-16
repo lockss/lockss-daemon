@@ -148,8 +148,8 @@
       param[base_url] = http://www.seer.ufal.br/
       param[journal_id] = cir
 
-      au < exists ; 2014 ; 1 ;  Ciência da Informação em Revista Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 2 ;  Ciência da Informação em Revista Volume 2015 ; 2015 ; >
+      au < manifest ; 2014 ; 1 ;  Ciência da Informação em Revista Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 2 ;  Ciência da Informação em Revista Volume 2015 ; 2015 ; >
 
   }
 

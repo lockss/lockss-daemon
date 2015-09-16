@@ -18,8 +18,8 @@
       param[journal_id] = espacojuridico
       param[base_url] = http://editora.unoesc.edu.br/
 
-      au < exists ; 2005 ; 6 ; ESPAÇO JURÍDICO Volume 2005 ; 2005 ; >
-      au < exists ; 2006 ; 7 ; ESPAÇO JURÍDICO Volume 2006 ; 2006 ; >
+      au < manifest ; 2005 ; 6 ; ESPAÇO JURÍDICO Volume 2005 ; 2005 ; >
+      au < manifest ; 2006 ; 7 ; ESPAÇO JURÍDICO Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 8 ; ESPAÇO JURÍDICO Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 9 ; ESPAÇO JURÍDICO Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 10 ; ESPAÇO JURÍDICO Volume 2009 ; 2009 ; >
@@ -67,8 +67,8 @@
       param[journal_id] = race
       param[base_url] = http://editora.unoesc.edu.br/
 
-      au < exists ; 2005 ; 4 ; RACE Volume 2005 ; 2005 ; >
-      au < exists ; 2006 ; 5 ; RACE Volume 2006 ; 2006 ; >
+      au < manifest ; 2005 ; 4 ; RACE Volume 2005 ; 2005 ; >
+      au < manifest ; 2006 ; 5 ; RACE Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 6 ; RACE Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 7 ; RACE Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 8 ; RACE Volume 2009 ; 2009 ; >
@@ -92,8 +92,8 @@
       param[journal_id] = roteiro
       param[base_url] = http://editora.unoesc.edu.br/
 
-      au < exists ; 2005 ; 30 ; ROTEIRO Volume 2005 ; 2005 ; >
-      au < exists ; 2006 ; 31 ; ROTEIRO Volume 2006 ; 2006 ; >
+      au < manifest ; 2005 ; 30 ; ROTEIRO Volume 2005 ; 2005 ; >
+      au < manifest ; 2006 ; 31 ; ROTEIRO Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 32 ; ROTEIRO Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 33 ; ROTEIRO Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 34 ; ROTEIRO Volume 2009 ; 2009 ; >

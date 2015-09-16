@@ -144,7 +144,7 @@
 
       au < released ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 ; >
       au < released ; 2014 ; 2 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 2 ; 2014 ; >
-      au < expected ; 2015 ; 3 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 3 ; 2015 ; >
+      au < manifest ; 2015 ; 3 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 3 ; 2015 ; >
 
   }
 
@@ -556,7 +556,7 @@
       au < released ; 2012 ; 11 ; Revista de Ciências Médicas e Biológicas Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Revista de Ciências Médicas e Biológicas Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 13 ; Revista de Ciências Médicas e Biológicas Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 14 ; Revista de Ciências Médicas e Biológicas Volume 2015 ; 2015 ; >
+      au < manifest ; 2015 ; 14 ; Revista de Ciências Médicas e Biológicas Volume 2015 ; 2015 ; >
 
   }
 
@@ -662,7 +662,7 @@
       param[journal_id] = revistaperiodicus
 
       au < released ; 2014 ; 1 ; Revista Periódicus Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 2 ; Revista Periódicus Volume 2015 ; 2015 ; >
+      au < manifest ; 2015 ; 2 ; Revista Periódicus Volume 2015 ; 2015 ; >
 
   }
 

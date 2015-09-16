@@ -45,16 +45,16 @@
       param[base_url] = http://estudosdalinguagem.uesb.br/
       param[journal_id] = estudosdalinguagem
 
-      au < exists ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 ; 2005 ; >
-      au < exists ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 ; 2006 ; >
-      au < exists ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2007 ; >
-      au < exists ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2008 ; >
-      au < exists ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2009 ; >
-      au < exists ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 ; >
-      au < exists ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 ; >
-      au < exists ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 ; >
-      au < exists ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 ; >
-      au < exists ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 ; 2014 ; >
+      au < manifest ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 ; 2005 ; >
+      au < manifest ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 ; 2006 ; >
+      au < manifest ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2007 ; >
+      au < manifest ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2008 ; >
+      au < manifest ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2009 ; >
+      au < manifest ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 ; >
+      au < manifest ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 ; >
+      au < manifest ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 ; >
+      au < manifest ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 ; >
+      au < manifest ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 ; 2014 ; >
       au < expected ; 2015 ; 13 ; Estudos da Língua(gem) Volume 13 ; 2015 ; >
       }
       {
