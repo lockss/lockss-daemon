@@ -152,7 +152,7 @@
     param[base_url] = http://hosppeds.aappublications.org/
 
       au < finished ; crawling ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
-      au < finished ; crawling ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
+      au < finished ; finished ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
       au < finished ; finished ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
       au < ready ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
@@ -192,7 +192,7 @@
       au < manifest ; exists ; 2005 ; NeoReviews Volume 6 ; 6 >
       au < manifest ; exists ; 2006 ; NeoReviews Volume 7 ; 7 >
       au < manifest ; exists ; 2007 ; NeoReviews Volume 8 ; 8 >
-      au < finished ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < finished ; finished ; 2008 ; NeoReviews Volume 9 ; 9 >
       au < doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 >
       au < crawling ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
