@@ -44,7 +44,7 @@
       au < released ; 2011 ; 27 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 28 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 29 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 30 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 30 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2014 ; 2014 ; >
 
   }
 
@@ -86,7 +86,7 @@
       au < released ; 2010 ; 6 ; JURIS-Revista da Faculdade de Direito Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 7 ; JURIS-Revista da Faculdade de Direito Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 8 ; JURIS-Revista da Faculdade de Direito Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 9 ; JURIS-Revista da Faculdade de Direito Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 9 ; JURIS-Revista da Faculdade de Direito Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 10 ; JURIS-Revista da Faculdade de Direito Volume 2014 ; 2014 ; >
 
   }
@@ -141,7 +141,8 @@
       au < released ; 2011 ; 16 ; Revista Ambiente & Educação Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 17 ; Revista Ambiente & Educação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 18 ; Revista Ambiente & Educação Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 19 ; Revista Ambiente & Educação Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 19 ; Revista Ambiente & Educação Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 20 ; Revista Ambiente & Educação Volume 2015 ; 2015 ; >
 
   }
 
@@ -157,7 +158,7 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = atlantica
 
-      au < manifest ; 1976 ; 1 ; Revista Atlântica Volume 1976 ; 1976 ; >
+      au < testing ; 1976 ; 1 ; Revista Atlântica Volume 1976 ; 1976 ; >
       au < notReady ; 1977 ; 2 ; Revista Atlântica Volume 1977 ; 1977 ; no articles >
       au < notReady ; 1978 ; 3 ; Revista Atlântica Volume 1978 ; 1978 ; no articles >
       au < notReady ; 1982 ; 5 ; Revista Atlântica Volume 1982 ; 1982 ; no articles >
@@ -234,7 +235,8 @@
       au < released ; 2011 ; 7 ; Revista Didática Sistêmica Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 8 ; Revista Didática Sistêmica Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 9 ; Revista Didática Sistêmica Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 10 ; Revista Didática Sistêmica Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 10 ; Revista Didática Sistêmica Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 11 ; Revista Didática Sistêmica Volume 2015 ; 2015 ; >
 
   }
 
@@ -287,7 +289,8 @@
       au < released ; 2007 ; 23 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2007 ; 2007 ; >
       au < released ; 2012 ; 28 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 29 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 30 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 30 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 31 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2015 ; 2015 ; >
 
   }
 
