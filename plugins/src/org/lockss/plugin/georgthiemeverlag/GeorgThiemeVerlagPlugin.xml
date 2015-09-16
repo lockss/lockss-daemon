@@ -113,6 +113,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>500=org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHttpResponseHandler</string>
+      <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3_30S</string>
     </list>
   </entry>
   <entry>
