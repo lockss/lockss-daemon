@@ -79,7 +79,7 @@
       param[base_url] = http://jspp.psychopen.eu/
       param[journal_id] = jspp
   
-      au < crawling ; exists ; 2013 ; Journal of Social and Political Psychology Volume 1 ; 1 ; 2013 >
+      au < finished ; manifest ; 2013 ; Journal of Social and Political Psychology Volume 1 ; 1 ; 2013 >
       au < finished ; crawling ; 2014 ; Journal of Social and Political Psychology Volume 2 ; 2 ; 2014 >
       au < manifest ; exists ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 >
 

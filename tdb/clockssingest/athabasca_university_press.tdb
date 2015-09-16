@@ -21,7 +21,7 @@
       param[base_url] = http://www.canfolkmusic.ca/
       param[journal_id] = cfmb
 
-      au < crawling ; exists ; 2012 ; Canadian Folk Music / Musique folklorique canadienne Volume 46 ; 46 ; 2012 >
+      au < finished ; manifest ; 2012 ; Canadian Folk Music / Musique folklorique canadienne Volume 46 ; 46 ; 2012 >
       au < finished ; finished ; 2013 ; Canadian Folk Music / Musique folklorique canadienne Volume 47 ; 47 ; 2013 >
       au < finished ; crawling ; 2014  ; Canadian Folk Music / Musique folklorique canadienne Volume 48 ; 48 ; 2014 >
       au < expected ; exists ; 2015 ; Canadian Folk Music / Musique folklorique canadienne Volume 49 ; 49 ; 2015 >
@@ -125,7 +125,7 @@
       param[journal_id] = ohf
       comment[0] = V35 2015. Redirected to login page.
 
-      au < crawling ; exists ; 2012 ; Oral History Forum d'histoire orale Volume 32 ; 32 ; 2012 >
+      au < finished ; manifest ; 2012 ; Oral History Forum d'histoire orale Volume 32 ; 32 ; 2012 >
       au < finished ; crawling ; 2013 ; Oral History Forum d'histoire orale Volume 33 ; 33 ; 2013 >
       au < finished ; crawling ; 2014  ; Oral History Forum d'histoire orale Volume 34 ; 34 ; 2014 >
       au < notReady ; exists ; 2015 ; Oral History Forum d'histoire orale Volume 35 ; 35 ; 2015 >

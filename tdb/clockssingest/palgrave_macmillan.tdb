@@ -113,7 +113,7 @@
 
       au < exists ; exists ; 2012 ; BioSocieties Volume 7 ; 2012 ; 7 >
       au < crawling ; exists ; 2013 ; BioSocieties Volume 8 ; 2013 ; 8 >
-      au < crawling ; exists ; 2014 ; BioSocieties Volume 9 ; 2014 ; 9 >
+      au < finished ; manifest ; 2014 ; BioSocieties Volume 9 ; 2014 ; 9 >
       au < crawling ; exists ; 2015 ; BioSocieties Volume 10 ; 2015 ; 10 >
 
     }
@@ -318,8 +318,8 @@
       param[journal_id] = development
 
       au < exists ; exists ; 2012 ; Development Volume 55 ; 2012 ; 55 >
-      au < crawling ; exists ; 2013 ; Development Volume 56 ; 2013 ; 56 >
-      au < crawling ; exists ; 2014 ; Development Volume 57 ; 2014 ; 57 >
+      au < finished ; manifest ; 2013 ; Development Volume 56 ; 2013 ; 56 >
+      au < finished ; manifest ; 2014 ; Development Volume 57 ; 2014 ; 57 >
       au < expected ; exists ; 2015 ; Development Volume 58 ; 2015 ; 58 >
 
     }
@@ -336,7 +336,7 @@
       param[journal_id] = eej
 
       au < exists ; exists ; 2012 ; Eastern Economic Journal Volume 38 ; 2012 ; 38 >
-      au < crawling ; exists ; 2013 ; Eastern Economic Journal Volume 39 ; 2013 ; 39 >
+      au < finished ; manifest ; 2013 ; Eastern Economic Journal Volume 39 ; 2013 ; 39 >
       au < crawling ; exists ; 2013 ; Eastern Economic Journal Volume 40 (2013) ; 2013 ; 40 >
       au < finished ; crawling ; 2014 ; Eastern Economic Journal Volume 40 (2014) ; 2014 ; 40 >
       au < crawling ; exists ; 2015 ; Eastern Economic Journal Volume 41 ; 2015 ; 41 >
@@ -495,7 +495,7 @@
       au < doNotProcess ; exists ; 2010 ; Journal of Asset Management Volume 11 ; 2010 ; 11 >
       au < exists ; exists ; 2011 ; Journal of Asset Management Volume 12 ; 2011 ; 12 >
       au < crawling ; exists ; 2012 ; Journal of Asset Management Volume 13 ; 2012 ; 13 >
-      au < crawling ; exists ; 2013 ; Journal of Asset Management Volume 14 ; 2013 ; 14 >
+      au < finished ; manifest ; 2013 ; Journal of Asset Management Volume 14 ; 2013 ; 14 >
       au < finished ; crawling ; 2014 ; Journal of Asset Management Volume 15 ; 2014 ; 15 >
       au < crawling ; exists ; 2015 ; Journal of Asset Management Volume 16 ; 2015 ; 16 >
 
@@ -727,7 +727,7 @@
       au < finished ; crawling ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 13 (2012) ; 2012 ; 13 >
       au < finished ; crawling ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2012) ; 2012 ; 14 >
       au < finished ; crawling ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2013) ; 2013 ; 14 >
-      au < crawling ; exists ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2013) ; 2013 ; 15 >
+      au < finished ; manifest ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2013) ; 2013 ; 15 >
       au < finished ; crawling ; 2014 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2014) ; 2014 ; 15 >
       au < notReady ; exists ; 2015 ; Journal of Direct, Data and Digital Marketing Practice Volume 16 (2015) ; 2015 ; 16 >
 

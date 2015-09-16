@@ -160,11 +160,11 @@
     au < manifest ; exists ; 1993 ; Development Volume 118 ; 118 >
     au < manifest ; exists ; 1993 ; Development Volume 119 ; 119 >
     au < manifest ; exists ; 1994 ; Development Volume 120 ; 120 >
-    au < crawling ; exists ; 1995 ; Development Volume 121 ; 121 >
+    au < finished ; manifest ; 1995 ; Development Volume 121 ; 121 >
     au < notReady ; exists ; 1996 ; Development Volume 122 ; 122 >
     au < finished ; crawling ; 1996 ; Development Volume 123 ; 123 >
     au < crawling ; exists ; 1997 ; Development Volume 124 ; 124 >
-    au < crawling ; exists ; 1998 ; Development Volume 125 ; 125 >
+    au < finished ; manifest ; 1998 ; Development Volume 125 ; 125 >
     au < manifest ; exists ; 1999 ; Development Volume 126 ; 126 >
     au < manifest ; exists ; 2000 ; Development Volume 127 ; 127 >
     au < finished ; crawling ; 2001 ; Development Volume 128 ; 128 >
@@ -175,7 +175,7 @@
     au < testing ; exists ; 2006 ; Development Volume 133 ; 133 >
     au < crawling ; exists ; 2007 ; Development Volume 134 ; 134 >
     au < crawling ; exists ; 2008 ; Development Volume 135 ; 135 >
-    au < crawling ; exists ; 2009 ; Development Volume 136 ; 136 >
+    au < finished ; manifest ; 2009 ; Development Volume 136 ; 136 >
     au < finished ; crawling ; 2010 ; Development Volume 137 ; 137 >
     au < finished ; frozen ; 2011 ; Development Volume 138 ; 138 >
     au < finished ; crawling ; 2012 ; Development Volume 139 ; 139 >
@@ -199,7 +199,7 @@
 
     au < notReady ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
     au < finished ; crawling ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
-    au < crawling ; exists ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
+    au < finished ; manifest ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
     au < finished ; frozen ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
     au < finished ; frozen ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
     au < crawling ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
@@ -344,7 +344,7 @@
     au < crawling ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
     au < crawling ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
     au < crawling ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
-    au < crawling ; exists ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
+    au < finished ; manifest ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
     au < finished ; frozen ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
     au < finished ; crawling ; 2012 ; Journal of Cell Science Volume 125 ; 125 >
     au < crawling ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >

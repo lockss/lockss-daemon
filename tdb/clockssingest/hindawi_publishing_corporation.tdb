@@ -1235,7 +1235,7 @@
 
     param[journal_id] = atox
 
-    au < frozen ; exists ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -1960,7 +1960,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Case Reports in Hematology Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3259,7 +3259,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Antennas and Propagation Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Antennas and Propagation Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3869,7 +3869,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Geophysics Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7087,7 +7087,7 @@
     au < manifest ; exists ; 2011 ; Journal of Thyroid Research Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Thyroid Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Thyroid Research Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Journal of Thyroid Research Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Journal of Thyroid Research Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Journal of Thyroid Research Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7240,7 +7240,7 @@
     param[journal_id] = jwm
 
     au < manifest ; exists ; 2013 ; Journal of Waste Management Volume 2013 ; 2013 ; 2013 >
-    au < frozen ; exists ; 2014 ; Journal of Waste Management Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Journal of Waste Management Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Waste Management Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -8452,7 +8452,7 @@
     au < manifest ; exists ; 2011 ; VLSI Design Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; VLSI Design Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 >
-    au < frozen ; exists ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 >
     au < manifest ; exists ; 2015 ; VLSI Design Volume 2015 ; 2015 ; 2015 >
 
   }

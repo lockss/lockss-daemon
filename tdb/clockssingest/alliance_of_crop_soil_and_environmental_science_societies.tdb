@@ -103,7 +103,7 @@
     param[journal_id] = csa
 
     au < crawling ; exists ; 2013 ; CSA News Volume 58 ; 58 >
-    au < crawling ; exists ; 2014 ; CSA News Volume 59 ; 59 >
+    au < finished ; manifest ; 2014 ; CSA News Volume 59 ; 59 >
     au < crawling ; exists ; 2015 ; CSA News Volume 60 ; 60 >
 
   }
@@ -147,7 +147,7 @@
     au < manifest ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
-    au < crawling ; exists ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
+    au < finished ; manifest ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
     au < crawling ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
     au < ready ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
 
@@ -206,7 +206,7 @@
     au < manifest ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 >
     au < manifest ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 >
     au < manifest ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 >
-    au < crawling ; exists ; 2013 ; The Plant Genome Volume 6 ; 6 >
+    au < finished ; manifest ; 2013 ; The Plant Genome Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 >
     au < testing ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 >
 

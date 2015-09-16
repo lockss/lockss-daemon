@@ -75,12 +75,12 @@
     param[journal_issn] = 1882-0786
     comment[param] = eissn preferred
 
-    au < frozen ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
+    au < finished ; manifest ; 2008 ; Applied Physics Express Volume 1 ; 1 >
     au < crawling ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
-    au < frozen ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
-    au < crawling ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
-    au < frozen ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
-    au < frozen ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
+    au < finished ; manifest ; 2010 ; Applied Physics Express Volume 3 ; 3 >
+    au < finished ; manifest ; 2011 ; Applied Physics Express Volume 4 ; 4 >
+    au < finished ; manifest ; 2012 ; Applied Physics Express Volume 5 ; 5 >
+    au < finished ; manifest ; 2013 ; Applied Physics Express Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
     au < ready ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 >
 
@@ -277,9 +277,9 @@
     au < exists ; exists ; 2006 ; Chinese Physics B Volume 15 ; 15 >
     au < exists ; exists ; 2007 ; Chinese Physics B Volume 16 ; 16 >
     au < crawling ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
-    au < frozen ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
+    au < finished ; manifest ; 2009 ; Chinese Physics B Volume 18 ; 18 >
     au < crawling ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
-    au < frozen ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
+    au < finished ; manifest ; 2011 ; Chinese Physics B Volume 20 ; 20 >
     au < crawling ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
     au < crawling ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
@@ -349,7 +349,7 @@
     au < finished ; crawling ; 2011 ; Chinese Physics Letters Volume 28 ; 28 > 
     au < finished ; crawling ; 2012 ; Chinese Physics Letters Volume 29 ; 29 > 
     au < crawling ; exists ; 2013 ; Chinese Physics Letters Volume 30 ; 30 > 
-    au < crawling ; exists ; 2014 ; Chinese Physics Letters Volume 31 ; 31 > 
+    au < finished ; manifest ; 2014 ; Chinese Physics Letters Volume 31 ; 31 > 
     au < ready ; exists ; 2015 ; Chinese Physics Letters Volume 32 ; 32 > 
 
   }
@@ -456,7 +456,7 @@
     au < crawling ; exists ; 2012 ; Communications in Theoretical Physics Volume 58 ; 58 >
     au < crawling ; exists ; 2013 ; Communications in Theoretical Physics Volume 59 ; 59 >
     au < crawling ; exists ; 2013 ; Communications in Theoretical Physics Volume 60 ; 60 >
-    au < crawling ; exists ; 2014 ; Communications in Theoretical Physics Volume 61 ; 61 >
+    au < finished ; manifest ; 2014 ; Communications in Theoretical Physics Volume 61 ; 61 >
     au < crawling ; exists ; 2014 ; Communications in Theoretical Physics Volume 62 ; 62 >
     au < ready ; exists ; 2015 ; Communications in Theoretical Physics Volume 63 ; 63 > 
     au < ready ; exists ; 2015 ; Communications in Theoretical Physics Volume 64 ; 64 > 
@@ -650,9 +650,9 @@
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 102 ; 102 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
-    au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
-    au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
-    au < frozen ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
+    au < finished ; manifest ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
+    au < finished ; manifest ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
+    au < finished ; manifest ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
     au < crawling ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
     au < ready ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 ; 109 >
     au < ready ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 ; 110 >
@@ -912,13 +912,13 @@
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 44 ; 44 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 45 ; 45 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 46 ; 46 >
-    au < frozen ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
-    au < frozen ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
-    au < frozen ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
+    au < finished ; manifest ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
+    au < finished ; manifest ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
+    au < finished ; manifest ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
-    au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 51 ; 51 > 
-    au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 52 ; 52 > 
-    au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 53 ; 53 > 
+    au < finished ; manifest ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 51 ; 51 > 
+    au < finished ; manifest ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 52 ; 52 > 
+    au < finished ; manifest ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 53 ; 53 > 
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 54 ; 54 >
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 55 ; 55 >
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 56 ; 56 >
@@ -926,11 +926,11 @@
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 58 ; 58 >
     au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 59 ; 59 >
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 60 ; 60 >
-    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 61 ; 61 >
+    au < finished ; manifest ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 61 ; 61 >
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 62 ; 62 >
-    au < crawling ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 63 ; 63 >
-    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 64 ; 64 >
-    au < frozen ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 65 ; 65 >
+    au < finished ; manifest ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 63 ; 63 >
+    au < finished ; manifest ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 64 ; 64 >
+    au < finished ; manifest ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 65 ; 65 >
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 66 ; 66 >
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 67 ; 67 >
     au < finished ; crawling ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 68 ; 68 >
@@ -1017,10 +1017,10 @@
     au < manifest ; exists ; 2006 ; Japanese Journal of Applied Physics Volume 45 ; 45 >
     au < manifest ; exists ; 2007 ; Japanese Journal of Applied Physics Volume 46 ; 46 >
     au < crawling ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
-    au < frozen ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
+    au < finished ; manifest ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
     au < crawling ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
     au < crawling ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
-    au < frozen ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
+    au < finished ; manifest ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
     au < crawling ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
     au < crawling ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
     au < testing ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
@@ -2231,7 +2231,7 @@
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 373 ; 373 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 374 ; 374 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 375 ; 375 >
-    au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 376 ; 376 >
+    au < finished ; manifest ; 2012 ; Journal of Physics: Conference Series Volume 376 ; 376 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 377 ; 377 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 378 ; 378 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 379 ; 379 >
@@ -2279,7 +2279,7 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 421 ; 421 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 422 ; 422 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 423 ; 423 >
-    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 424 ; 424 >
+    au < finished ; manifest ; 2013 ; Journal of Physics: Conference Series Volume 424 ; 424 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 425 ; 425 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 426 ; 426 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 427 ; 427 >
@@ -2323,7 +2323,7 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 465 ; 465 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 466 ; 466 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 467 ; 467 >
-    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 468 ; 468 >
+    au < finished ; manifest ; 2013 ; Journal of Physics: Conference Series Volume 468 ; 468 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 469 ; 469 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 470 ; 470 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 471 ; 471 >
@@ -2391,7 +2391,7 @@
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 533 ; 533 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 534 ; 534 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 535 ; 535 >
-    au < frozen ; exists ; 2014 ; Journal of Physics: Conference Series Volume 536 ; 536 >
+    au < finished ; manifest ; 2014 ; Journal of Physics: Conference Series Volume 536 ; 536 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 537 ; 537 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 538 ; 538 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 539 ; 539 >
@@ -2412,7 +2412,7 @@
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 554 ; 554 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 555 ; 555 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 556 ; 556 >
-    au < crawling ; exists ; 2014 ; Journal of Physics: Conference Series Volume 557 ; 557 >
+    au < finished ; manifest ; 2014 ; Journal of Physics: Conference Series Volume 557 ; 557 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 558 ; 558 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 559 ; 559 >
     au < finished ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 560 ; 560 >
@@ -2496,7 +2496,7 @@
     au < finished ; crawling ; 2011 ; Journal of Radiological Protection Volume 31 ; 31 > 
     au < finished ; crawling ; 2012 ; Journal of Radiological Protection Volume 32 ; 32 > 
     au < crawling ; exists ; 2013 ; Journal of Radiological Protection Volume 33 ; 33 > 
-    au < crawling ; exists ; 2014 ; Journal of Radiological Protection Volume 34 ; 34 > 
+    au < finished ; manifest ; 2014 ; Journal of Radiological Protection Volume 34 ; 34 > 
     au < testing ; exists ; 2015 ; Journal of Radiological Protection Volume 35 ; 35 > 
 
   }
@@ -2640,7 +2640,7 @@
     comment[param] = eissn preferred
 
     au < crawling ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
-    au < frozen ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
+    au < finished ; manifest ; 2014 ; Laser Physics Volume 24 ; 24 >
     au < testing ; exists ; 2015 ; Laser Physics Volume 25 ; 25 >
 
   }
@@ -2662,11 +2662,11 @@
     au < manifest ; exists ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
     au < manifest ; exists ; 2006 ; Laser Physics Letters Volume 3 ; 3 >
     au < manifest ; exists ; 2007 ; Laser Physics Letters Volume 4 ; 4 >
-    au < crawling ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
+    au < finished ; manifest ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
     au < crawling ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
     au < crawling ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
     au < crawling ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
-    au < frozen ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
+    au < finished ; manifest ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
     au < crawling ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
     au < notReady ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
@@ -2742,7 +2742,7 @@
     param[journal_issn] = 2050-6120
     comment[param] = eissn preferred
 
-    au < frozen ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
+    au < finished ; manifest ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
     au < finished ; crawling ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
     au < ready ; exists ; 2015 ; Methods and Applications in Fluorescence Volume 3 ; 3 >
 
@@ -2890,7 +2890,7 @@
     au < finished ; crawling ; 2011 ; Nanotechnology Volume 22 ; 22 > 
     au < crawling ; exists ; 2012 ; Nanotechnology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Nanotechnology Volume 24 ; 24 > 
-    au < frozen ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
+    au < finished ; manifest ; 2014 ; Nanotechnology Volume 25 ; 25 > 
     au < testing ; exists ; 2015 ; Nanotechnology Volume 26 ; 26 > 
     
   }
@@ -4111,7 +4111,7 @@
     au < finished ; crawling ; 2011 ; Superconductor Science and Technology Volume 24 ; 24 > 
     au < finished ; crawling ; 2012 ; Superconductor Science and Technology Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Superconductor Science and Technology Volume 26 ; 26 > 
-    au < crawling ; exists ; 2014 ; Superconductor Science and Technology Volume 27 ; 27 > 
+    au < finished ; manifest ; 2014 ; Superconductor Science and Technology Volume 27 ; 27 > 
     au < testing ; exists ; 2015 ; Superconductor Science and Technology Volume 28 ; 28 > 
 
   }
@@ -4127,7 +4127,7 @@
     param[journal_issn] = 2051-672X
     comment[param] = eissn preferred
 
-    au < frozen ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
+    au < finished ; manifest ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
     au < deepCrawl ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
     au < testing ; exists ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 >
 
