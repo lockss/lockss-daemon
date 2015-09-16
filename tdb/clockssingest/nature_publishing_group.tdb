@@ -935,7 +935,7 @@
     au < finished ; crawling ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
     au < finished ; frozen ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
     au < finished ; crawling ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
-    au < finished ; manifest ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 >
+    au < finished ; crawling ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 >
     au < expected ; exists ; 2015 ; Genetics in Medicine Volume 17 ; 2015 ; 17 >
 
   }
@@ -1215,7 +1215,7 @@
     au < finished ; crawling ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 >
     au < finished ; crawling ; 2011 ; Immunology & Cell Biology Volume 89 ; 2011 ; 89 >
     au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 >
-    au < finished ; manifest ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 >
+    au < finished ; crawling ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 >
     au < crawling ; exists ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 >
     au < manifest ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 >
   }
@@ -1299,7 +1299,7 @@
 
     au < finished ; crawling ; 2011 ; International Journal of Obesity Supplements Volume 1 ; 2011 ; 1 >
     au < finished ; crawling ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 >
-    au < finished ; manifest ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 >
+    au < finished ; crawling ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 >
     au < finished ; crawling ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 >
     au < manifest ; exists ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 >
 
@@ -1319,7 +1319,7 @@
     au < finished ; crawling ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 >
     au < finished ; crawling ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 >
     au < finished ; crawling ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 >
-    au < finished ; manifest ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 >
+    au < finished ; crawling ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 >
     au < crawling ; exists ; 2014 ; International Journal of Oral Science Volume 6 ; 2014 ; 6 >
     au < manifest ; exists ; 2015 ; International Journal of Oral Science Volume 7 ; 2015 ; 7 >
 
@@ -1884,7 +1884,7 @@
 
     param[journal_id] = lsa
 
-    au < finished ; manifest ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 >
+    au < finished ; crawling ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 >
     au < manifest ; exists ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 >
     au < finished ; crawling ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 >
     au < manifest ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 >
@@ -2001,7 +2001,7 @@
     au < finished ; frozen ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 >
     au < finished ; crawling ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 >
     au < finished ; frozen ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
-    au < finished ; manifest ; 2013 ; Molecular Therapy Volume 21 ; 2013 ; 21 >
+    au < finished ; crawling ; 2013 ; Molecular Therapy Volume 21 ; 2013 ; 21 >
     au < finished ; crawling ; 2014 ; Molecular Therapy Volume 22 ; 2014 ; 22 >
     au < manifest ; exists ; 2015 ; Molecular Therapy Volume 23 ; 2015 ; 23 >
 
@@ -2562,7 +2562,7 @@
 
      param[journal_id] = nclimate
 
-    au < finished ; manifest ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
+    au < finished ; crawling ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
     au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
     au < crawling ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 >
@@ -2607,7 +2607,7 @@
     au < crawling ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
     au < crawling ; crawling ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
     au < finished ; crawling ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
-    au < finished ; manifest ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
+    au < finished ; crawling ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 >
     au < manifest ; exists ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 >
 
@@ -3490,9 +3490,9 @@
     au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 14 ; 0 ; 14 >
     au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 15 ; 0 ; 15 >
     au < down ; frozen ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
-    au < down ; manifest ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
+    au < down ; crawling ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < down ; frozen ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
-    au < down ; manifest ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
+    au < down ; crawling ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
     au < superseded ; exists ; 2012 ; Obesity Volume 20 [to delete] ; 2012 ; 20 >
 
   }
@@ -3530,7 +3530,7 @@
     au < crawling ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < finished ; crawling ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
     au < crawling ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
-    au < finished ; manifest ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
+    au < finished ; crawling ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
     au < finished ; crawling ; 2014 ; Oncogene Volume 33 ; 2014 ; 33 >
     au < manifest ; exists ; 2015 ; Oncogene Volume 34 ; 2015 ; 34 >
 
@@ -3544,7 +3544,7 @@
     >
     param[journal_id] = oncsis
     
-    au < finished ; manifest ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
+    au < finished ; crawling ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
     au < finished ; crawling ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
     au < crawling ; exists ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 >
     au < manifest ; exists ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 >
@@ -3629,7 +3629,7 @@
     au < crawling ; exists ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 >
     au < crawling ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 >
     au < crawling ; exists ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 >
-    au < finished ; manifest ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
+    au < finished ; crawling ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
     au < crawling ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 >
     au < finished ; frozen ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
     au < crawling ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
@@ -3665,7 +3665,7 @@
     au < finished ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
     au < finished ; frozen ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
     au < finished ; frozen ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
-    au < finished ; manifest ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 >
+    au < finished ; crawling ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 >
     au < finished ; crawling ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 >
     au < manifest ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 >
 
@@ -3688,7 +3688,7 @@
     au < finished ; frozen ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
     au < finished ; frozen ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
     au < finished ; frozen ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
-    au < finished ; manifest ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
+    au < finished ; crawling ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
     au < finished ; crawling ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 >
     au < manifest ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 >
 

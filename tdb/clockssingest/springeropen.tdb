@@ -291,7 +291,7 @@
         #notReady - PD-1535
   
         au < manifest ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 >
-        au < finished ; manifest ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
+        au < finished ; crawling ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
         au < notReady ; exists ; 2015 ; Clinical and Translational Medicine Volume 4 ; 4 >
   
@@ -360,7 +360,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Crime Science Volume 1 ; 1 >
-        au < finished ; manifest ; 2013 ; Crime Science Volume 2 ; 2 >
+        au < finished ; crawling ; 2013 ; Crime Science Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Crime Science Volume 3 ; 3 >
         au < crawling ; exists ; 2015 ; Crime Science Volume 4 ; 4 >
   
@@ -715,7 +715,7 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Embedded Systems Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Embedded Systems Volume 2012 ; 2012 >
-        au < finished ; manifest ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
+        au < finished ; crawling ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
         au < crawling ; exists ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 >
         au < crawling ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 ; 2015 >
   

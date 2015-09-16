@@ -98,7 +98,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Dermatologie Volume 35 ; 35 >
     au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 >
-    au < finished ; manifest ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 >
+    au < finished ; crawling ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 >
     au < notReady ; exists ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 >
     au < notReady ; exists ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 >
@@ -197,7 +197,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Neurologie Volume 2010 ; 37 >
     au < crawling ; exists ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Neurologie Volume 2012 ; 39 >
-    au < finished ; manifest ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
+    au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Neurologie Volume 2015 ; 42 >
 
@@ -322,8 +322,8 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Urologie Volume 2007 ; 38 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Urologie Volume 2008 ; 39 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Urologie Volume 2009 ; 40 >
-    au < finished ; manifest ; 2010 ; 2010 ; Aktuelle Urologie Volume 2010 ; 41 >
-    au < finished ; manifest ; 2011 ; 2011 ; Aktuelle Urologie Volume 2011 ; 42 >
+    au < finished ; crawling ; 2010 ; 2010 ; Aktuelle Urologie Volume 2010 ; 41 >
+    au < finished ; crawling ; 2011 ; 2011 ; Aktuelle Urologie Volume 2011 ; 42 >
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Urologie Volume 2012 ; 43 >
     au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Urologie Volume 2013 ; 44 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
@@ -405,11 +405,11 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Allgemein- und Viszeralchirurgie up2date Volume 2007 ; 1 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Allgemein- und Viszeralchirurgie up2date Volume 2008 ; 2 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Allgemein- und Viszeralchirurgie up2date Volume 2009 ; 3 >
-    au < finished ; manifest ; 2010 ; 2010 ; Allgemein- und Viszeralchirurgie up2date Volume 2010 ; 4 >
+    au < finished ; crawling ; 2010 ; 2010 ; Allgemein- und Viszeralchirurgie up2date Volume 2010 ; 4 >
     au < crawling ; exists ; 2011 ; 2011 ; Allgemein- und Viszeralchirurgie up2date Volume 2011 ; 5 >
     au < crawling ; exists ; 2012 ; 2012 ; Allgemein- und Viszeralchirurgie up2date Volume 2012 ; 6 >
     au < crawling ; exists ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 >
-    au < finished ; manifest ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
+    au < finished ; crawling ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
     au < testing ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 >
 
    }
@@ -473,7 +473,7 @@
     comment[years] = 2011-current
 
     au < crawling ; exists ; 2011 ; 2011 ; American Journal of Perinatology Reports Volume 2011 ; 1 >
-    au < finished ; manifest ; 2012 ; 2012 ; American Journal of Perinatology Reports Volume 2012 ; 2 >
+    au < finished ; crawling ; 2012 ; 2012 ; American Journal of Perinatology Reports Volume 2012 ; 2 >
     au < crawling ; exists ; 2013 ; 2013 ; American Journal of Perinatology Reports Volume 2013 ; 3 >
     au < crawling ; exists ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 2014 ; 4 >
     au < crawling ; exists ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 2015 ; 5 >
@@ -594,7 +594,7 @@
         au < doNotProcess ; exists ; 2007 ; 2007 ; B&G Bewegungstherapie und Gesundheitssport Volume 2007 ; 23 >
         au < doNotProcess ; exists ; 2008 ; 2008 ; B&G Bewegungstherapie und Gesundheitssport Volume 2008 ; 24 >
         au < doNotProcess ; exists ; 2009 ; 2009 ; B&G Bewegungstherapie und Gesundheitssport Volume 2009 ; 25 >
-        au < finished ; manifest ; 2010 ; 2010 ; B&G Bewegungstherapie und Gesundheitssport Volume 2010 ; 26 >
+        au < finished ; crawling ; 2010 ; 2010 ; B&G Bewegungstherapie und Gesundheitssport Volume 2010 ; 26 >
         au < crawling ; exists ; 2011 ; 2011 ; B&G Bewegungstherapie und Gesundheitssport Volume 2011 ; 27 >
         au < crawling ; exists ; 2012 ; 2012 ; B&G Bewegungstherapie und Gesundheitssport Volume 2012 ; 28 >
         au < crawling ; exists ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 >
@@ -858,7 +858,7 @@
    au < crawling ; exists ; 2010 ; 2010 ; Diabetologie und Stoffwechsel Volume 2010 ; 5 >
    au < crawling ; exists ; 2011 ; 2011 ; Diabetologie und Stoffwechsel Volume 2011 ; 6 >
    au < crawling ; exists ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 2012 ; 7 >
-   au < finished ; manifest ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 >
+   au < finished ; crawling ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 >
    au < crawling ; exists ; 2014 ; 2014 ; Diabetologie und Stoffwechsel Volume 2014 ; 9 >
    au < crawling ; exists ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 2015 ; 10 >
 
@@ -1354,7 +1354,7 @@
     param[journal_id] = 10.1055/s-00024358
     comment[years] = 2013-current
 
-    au < finished ; manifest ; 2013 ; 2013 ; European Journal of Pediatric Surgery Reports Volume 1 ; 1 >
+    au < finished ; crawling ; 2013 ; 2013 ; European Journal of Pediatric Surgery Reports Volume 1 ; 1 >
     au < crawling ; exists ; 2014 ; 2014 ; European Journal of Pediatric Surgery Reports Volume 2 ; 2 >
     au < crawling ; exists ; 2015 ; 2015 ; European Journal of Pediatric Surgery Reports Volume 3 ; 3 >
 
@@ -1577,7 +1577,7 @@
    au < manifest ; exists ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 >
    au < manifest ; exists ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 2011 ; 79 >
    au < manifest ; exists ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 >
-   au < finished ; manifest ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 >
+   au < finished ; crawling ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 >
    au < crawling ; exists ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 2014 ; 82 >
    au < crawling ; exists ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 2015 ; 83 >
 

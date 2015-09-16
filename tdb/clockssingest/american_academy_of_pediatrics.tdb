@@ -55,8 +55,8 @@
       au < manifest ; exists ; 2007 ; AAP Grand Rounds Volume 17 ; 17 >
       au < manifest ; exists ; 2007 ; AAP Grand Rounds Volume 18 ; 18 >
       au < crawling ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
-      au < finished ; manifest ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
-      au < finished ; manifest ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
+      au < finished ; crawling ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
+      au < finished ; crawling ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
       au < finished ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
@@ -130,7 +130,7 @@
       au < manifest ; exists ; 2007 ; AAP News Volume 28 ; 28 >
       au < doNotProcess ; doNotProcess ; 2008 ; AAP News Volume 29 ; 29 >
       au < doNotProcess ; doNotProcess ; 2009 ; AAP News Volume 30 ; 30 >
-      au < finished ; manifest ; 2010 ; AAP News Volume 31 ; 31 >
+      au < finished ; crawling ; 2010 ; AAP News Volume 31 ; 31 >
       au < finished ; crawling ; 2011 ; AAP News Volume 32 ; 32 >
       au < finished ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; AAP News Volume 34 ; 34 >
@@ -151,7 +151,7 @@
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://hosppeds.aappublications.org/
 
-      au < finished ; manifest ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
+      au < finished ; crawling ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
       au < finished ; crawling ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
       au < finished ; finished ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
@@ -363,8 +363,8 @@
       au < crawling ; crawling ; 2011 ; Pediatrics Volume 128 ; 128 >
       au < finished ; frozen ; 2012 ; Pediatrics Volume 129 ; 129 >
       au < finished ; crawling ; 2012 ; Pediatrics Volume 130 ; 130 >
-      au < finished ; manifest ; 2013 ; Pediatrics Volume 131 ; 131 >
-      au < finished ; manifest ; 2013 ; Pediatrics Volume 132 ; 132 >
+      au < finished ; crawling ; 2013 ; Pediatrics Volume 131 ; 131 >
+      au < finished ; crawling ; 2013 ; Pediatrics Volume 132 ; 132 >
       au < finished ; crawling ; 2014 ; Pediatrics Volume 133 ; 133 >
       au < crawling ; exists ; 2014 ; Pediatrics Volume 134 ; 134 >
       au < testing ; exists ; 2015 ; Pediatrics Volume 135 ; 135 >
@@ -430,7 +430,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
       au < doNotProcess ; doNotProcess ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
       au < doNotProcess ; doNotProcess ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
-      au < finished ; manifest ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
+      au < finished ; crawling ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
       au < finished ; frozen ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
       au < crawling ; exists ; 2014 ; Pediatrics in Review Volume 35 ; 35 >
@@ -459,10 +459,10 @@
     {
       param[base_url] = http://redbookarchive.aappublications.org/
 
-      au < ClockssHighWirePlugin ; down ; manifest ; 2000 ; Red Book Online Volume 2000 ; 2000 >
-      au < ClockssHighWirePlugin ; down ; manifest ; 2003 ; Red Book Online Volume 2003 ; 2003 >
-      au < ClockssHighWirePlugin ; down ; manifest ; 2006 ; Red Book Online Volume 2006 ; 2006 >
-      au < ClockssHighWirePlugin ; down ; manifest ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+      au < ClockssHighWirePlugin ; down ; crawling ; 2000 ; Red Book Online Volume 2000 ; 2000 >
+      au < ClockssHighWirePlugin ; down ; crawling ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+      au < ClockssHighWirePlugin ; down ; crawling ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+      au < ClockssHighWirePlugin ; down ; crawling ; 2009 ; Red Book Online Volume 2009 ; 2009 >
     }
 
     {

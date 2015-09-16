@@ -316,7 +316,7 @@
       au < manifest ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
       au < finished ; crawling ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
       au < finished ; crawling ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 >
-      au < finished ; manifest ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 >
+      au < finished ; crawling ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 >
       au < expected ; exists ; 2015-2016 ; Journal of Modern Periodical Studies Volume 6 ; 6 >
       
   }
@@ -518,7 +518,7 @@
       param[journal_id] = preternature
 
       au < crawling ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 1 >
-      au < finished ; manifest ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 >
+      au < finished ; crawling ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 3 >
       au < manifest ; exists ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 ; 4 >
 

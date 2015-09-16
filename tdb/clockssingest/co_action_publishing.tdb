@@ -322,7 +322,7 @@
     au < finished ; frozen ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; 2010 >
     au < finished ; frozen ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
     au < finished ; frozen ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
-    au < finished ; manifest ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
+    au < finished ; crawling ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
     au < finished ; finished ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
   }
@@ -341,13 +341,13 @@
     comment[issn] = volumes 1-4, 2006-2009
 
     au < crawling ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 >
-    au < finished ; manifest ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 >
+    au < finished ; crawling ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 >
     au < finished ; frozen ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
     au < finished ; frozen ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < finished ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
     au < finished ; crawling ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
     au < finished ; frozen ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
-    au < finished ; manifest ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; 2013 >
+    au < finished ; crawling ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; 2013 >
     au < crawling ; exists ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 ; 2015 >
   }
@@ -403,7 +403,7 @@
     param[journal_id] = jecme
 
     au < finished ; finished ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
-    au < finished ; manifest ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
+    au < finished ; crawling ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
 
@@ -569,19 +569,19 @@
     comment[issn] = volumes 1-21
 
     au < finished ; crawling ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 >
-    au < finished ; manifest ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 >
+    au < finished ; crawling ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 >
     au < crawling ; exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 >
     au < finished ; crawling ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 >
-    au < finished ; manifest ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
+    au < finished ; crawling ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
     au < finished ; finished ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
-    au < finished ; manifest ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
+    au < finished ; crawling ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
     au < finished ; finished ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
     au < finished ; finished ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
     au < finished ; crawling ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
     au < finished ; finished ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
     au < finished ; finished ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
     au < crawling ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
-    au < finished ; manifest ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
+    au < finished ; crawling ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
     au < finished ; frozen ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
     au < finished ; frozen ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
     au < finished ; frozen ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
@@ -646,12 +646,12 @@
     param[base_url] = http://www.polarresearch.net/
     param[journal_id] = polar
 
-    au < finished ; manifest ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
+    au < finished ; crawling ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
     au < frozen ; exists ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
     au < crawling ; exists ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 >
     au < crawling ; exists ; 1985 ; Polar Research Volume 3 ; 3 ; 1985 >
     au < finished ; finished ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
-    au < finished ; manifest ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
+    au < finished ; crawling ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
     au < crawling ; exists ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
     au < crawling ; exists ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
     au < finished ; finished ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
@@ -667,7 +667,7 @@
     au < crawling ; exists ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
     au < crawling ; exists ; 2001 ; Polar Research Volume 20 ; 20 ; 2001 >
     au < crawling ; exists ; 2002 ; Polar Research Volume 21 ; 21 ; 2002 >
-    au < finished ; manifest ; 2003 ; Polar Research Volume 22 ; 22 ; 2003 >
+    au < finished ; crawling ; 2003 ; Polar Research Volume 22 ; 22 ; 2003 >
     au < crawling ; exists ; 2004 ; Polar Research Volume 23 ; 23 ; 2004 >
     au < finished ; crawling ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
     au < finished ; frozen ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
