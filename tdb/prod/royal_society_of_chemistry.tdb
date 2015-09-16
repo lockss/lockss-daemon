@@ -142,7 +142,7 @@
       au < manifest ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 >
       au < released ; 2011 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 107 ; 107 ; 2011 >
       au < released ; 2012 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 108 ; 108 ; 2012 >
-      au < testing ; 2013 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 109 ; 109 ; 2013 >
+      au < ready ; 2013 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 109 ; 109 ; 2013 >
 
     }
   }
@@ -550,24 +550,24 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
-      au < manifest ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 >
-      au < manifest ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 >
-      au < manifest ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 >
+      au < ready ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
+      au < ready ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 >
+      au < ready ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 >
+      au < ready ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 >
       
-      au < manifest ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 >
-      au < manifest ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 >
-      au < manifest ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 >
+      au < ready ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 >
+      au < ready ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 >
+      au < ready ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 >
       au < manifest ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 >
-      au < manifest ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 >
-      au < manifest ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 >
+      au < ready ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 >
+      au < ready ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 >
       
       au < manifest ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 >
-      au < manifest ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 >
-      au < manifest ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 >
+      au < ready ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 >
+      au < ready ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 >
       au < manifest ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 >
-      au < manifest ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 >
-      au < manifest ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 >
+      au < ready ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 >
+      au < ready ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 >
       
       au < released ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 >
       au < released ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 >
@@ -657,7 +657,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 >
-      au < manifest ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 >
+      au < ready ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 >
       au < manifest ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 >
       au < manifest ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 >
@@ -691,7 +691,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
+      au < ready ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
       au < manifest ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 >
       au < manifest ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 >
@@ -1354,8 +1354,8 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 >
-      au < manifest ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 >
+      au < ready ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 >
+      au < ready ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 >
       au < manifest ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 >
       au < manifest ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 >
