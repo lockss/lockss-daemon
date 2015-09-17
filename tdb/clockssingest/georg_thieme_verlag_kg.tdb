@@ -2101,8 +2101,8 @@
 
    au < crawling ; exists ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 >
    au < testing ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 >
-   au < ready ; exists ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 >
-   au < ready ; exists ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 >
+   au < crawling ; exists ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 >
+   au < crawling ; exists ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 >
 
   }
 
@@ -2139,9 +2139,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; International Journal of Angiology Volume 2010 ; 19 >
     au < manifest ; exists ; 2011 ; 2011 ; International Journal of Angiology Volume 2011 ; 20 >
     au < manifest ; exists ; 2012 ; 2012 ; International Journal of Angiology Volume 2012 ; 21 >
-    au < ready ; exists ; 2013 ; 2013 ; International Journal of Angiology Volume 2013 ; 22 >
-    au < ready ; exists ; 2014 ; 2014 ; International Journal of Angiology Volume 2014 ; 23 >
-    au < ready ; exists ; 2015 ; 2015 ; International Journal of Angiology Volume 2015 ; 24 >
+    au < crawling ; exists ; 2013 ; 2013 ; International Journal of Angiology Volume 2013 ; 22 >
+    au < crawling ; exists ; 2014 ; 2014 ; International Journal of Angiology Volume 2014 ; 23 >
+    au < crawling ; exists ; 2015 ; 2015 ; International Journal of Angiology Volume 2015 ; 24 >
 
   }
 
@@ -2190,9 +2190,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 2010 ; 31 >
     au < manifest ; exists ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 32 >
     au < manifest ; exists ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 >
-    au < ready ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 >
-    au < ready ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 >
-    au < ready ; exists ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 >
+    au < crawling ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 >
+    au < crawling ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 >
+    au < crawling ; exists ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 >
 
   }
 
@@ -2208,9 +2208,9 @@
     param[journal_id] = 10.1055/s-00024754
     comment[years] = 2013-current
 
-    au < ready ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 >
-    au < ready ; exists ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 >
-    au < ready ; exists ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 >
+    au < crawling ; exists ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 >
+    au < crawling ; exists ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 >
 
   }
 
@@ -2226,10 +2226,10 @@
     param[journal_id] = 10.1055/s-00023617
     comment[years] = 2012-current
 
-    au < ready ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 >
-    au < ready ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 >
-    au < ready ; exists ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 >
-    au < ready ; exists ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 >
 
   }
 
@@ -2245,10 +2245,10 @@
     param[journal_id] = 10.1055/s-00023618
     comment[years] = 2012-current
 
-    au < ready ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
-    au < ready ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
-    au < ready ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
-    au < ready ; exists ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 >
 
   }
 
@@ -2263,7 +2263,7 @@
     >
     param[journal_id] = 10.1055/s-00028318
 
-   au < ready ; exists ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 2014 ; 1 >
+   au < crawling ; exists ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 2014 ; 1 >
    au < expected ; exists ; 2015 ; 2015 ; Journal of Academic Ophtalmology Volume 2015 ; 2 >
 
   }
@@ -2288,7 +2288,7 @@
    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2011 ; 6 >
    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2012 ; 7 >
    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2013 ; 8 >
-   au < ready ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 >
+   au < crawling ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 >
    au < exists ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 >
 
   }
@@ -2314,9 +2314,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Journal of Knee Surgery Volume 2010 ; 23 >
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Knee Surgery Volume 2011 ; 24 >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 >
-    au < ready ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Volume 2015 ; 28 >
+    au < crawling ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Volume 2015 ; 28 >
 
   }
 
@@ -2433,9 +2433,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 2010 ; 26 >
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Reconstructive Microsurgery Volume 2011 ; 27 >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Reconstructive Microsurgery Volume 2012 ; 28 >
-    au < ready ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 29 >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 2014 ; 30 >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 2015 ; 31 >
+    au < crawling ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 29 >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 2014 ; 30 >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 2015 ; 31 >
 
   }
 
@@ -2469,10 +2469,10 @@
     param[journal_id] = 10.1055/s-00023425
     comment[years] = 2012-current
 
-    au < ready ; exists ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 1 >
-    au < ready ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 2 >
-    au < ready ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 3 >
-    au < ready ; exists ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2015 ; 4 >
+    au < crawling ; exists ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 1 >
+    au < crawling ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 2 >
+    au < crawling ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 3 >
+    au < crawling ; exists ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2015 ; 4 >
 
 
   }
@@ -2496,9 +2496,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Kardiologie up2date Volume 2010 ; 6 >
     au < manifest ; exists ; 2011 ; 2011 ; Kardiologie up2date Volume 2011 ; 7 >
     au < manifest ; exists ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 >
-    au < ready ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 >
-    au < ready ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 >
-    au < ready ; exists ; 2015 ; 2015 ; Kardiologie up2date Volume 2015 ; 11 >
+    au < crawling ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 >
+    au < crawling ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 >
+    au < crawling ; exists ; 2015 ; 2015 ; Kardiologie up2date Volume 2015 ; 11 >
 
   }
 
@@ -2519,9 +2519,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; kleintier konkret Volume 2010 ; 13 >
     au < manifest ; exists ; 2011 ; 2011 ; kleintier konkret Volume 2011 ; 14 >
     au < manifest ; exists ; 2012 ; 2012 ; kleintier konkret Volume 2012 ; 15 >
-    au < ready ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 >
-    au < ready ; exists ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 17 >
-    au < ready ; exists ; 2015 ; 2015 ; kleintier konkret Volume 2015 ; 18 >
+    au < crawling ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 >
+    au < crawling ; exists ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 17 >
+    au < crawling ; exists ; 2015 ; 2015 ; kleintier konkret Volume 2015 ; 18 >
 
   }
 
@@ -2546,9 +2546,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 39 >
     au < manifest ; exists ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 >
     au < manifest ; exists ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 >
-    au < ready ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 >
-    au < ready ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 >
-    au < ready ; exists ; 2015 ; 2015 ; Klinikarzt Der Volume 2015 ; 44 >
+    au < crawling ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 >
+    au < crawling ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 >
+    au < crawling ; exists ; 2015 ; 2015 ; Klinikarzt Der Volume 2015 ; 44 >
 
   }
 
@@ -2596,9 +2596,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Klinische Monatsblätter für Augenheilkunde Volume 2010 ; 227 >
     au < manifest ; exists ; 2011 ; 2011 ; Klinische Monatsblätter für Augenheilkunde Volume 2011 ; 228 >
     au < manifest ; exists ; 2012 ; 2012 ; Klinische Monatsblätter für Augenheilkunde Volume 2012 ; 229 >
-    au < ready ; exists ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 2013 ; 230 >
-    au < ready ; exists ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 2014 ; 231 >
-    au < ready ; exists ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 2015 ; 232 >
+    au < crawling ; exists ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 2013 ; 230 >
+    au < crawling ; exists ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 2014 ; 231 >
+    au < crawling ; exists ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 2015 ; 232 >
 
   }
 
@@ -2648,9 +2648,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Klinische Neurophysiologie Volume 2010 ; 41 >
     au < manifest ; exists ; 2011 ; 2011 ; Klinische Neurophysiologie Volume 2011 ; 42 >
     au < manifest ; exists ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 2012 ; 43 >
-    au < ready ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 >
-    au < ready ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 >
-    au < ready ; exists ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 >
+    au < crawling ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 >
+    au < crawling ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 >
+    au < crawling ; exists ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 >
 
   }
 
@@ -2698,9 +2698,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Klinische Pädiatrie Volume 2010 ; 222 >
     au < manifest ; exists ; 2011 ; 2011 ; Klinische Pädiatrie Volume 2011 ; 223 >
     au < manifest ; exists ; 2012 ; 2012 ; Klinische Pädiatrie Volume 2012 ; 224 >
-    au < ready ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 225 >
-    au < ready ; exists ; 2014 ; 2014 ; Klinische Pädiatrie Volume 2014 ; 226 >
-    au < ready ; exists ; 2015 ; 2015 ; Klinische Pädiatrie Volume 2015 ; 227 >
+    au < crawling ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 225 >
+    au < crawling ; exists ; 2014 ; 2014 ; Klinische Pädiatrie Volume 2014 ; 226 >
+    au < crawling ; exists ; 2015 ; 2015 ; Klinische Pädiatrie Volume 2015 ; 227 >
 
   }
 
@@ -2741,7 +2741,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Krankenhaushygiene up2date Volume 2010 ; 5 >
     au < manifest ; exists ; 2011 ; 2011 ; Krankenhaushygiene up2date Volume 2011 ; 6 >
     au < manifest ; exists ; 2012 ; 2012 ; Krankenhaushygiene up2date Volume 2012 ; 7 >
-    au < ready ; exists ; 2013 ; 2013 ; Krankenhaushygiene up2date Volume 2013 ; 8 >
+    au < crawling ; exists ; 2013 ; 2013 ; Krankenhaushygiene up2date Volume 2013 ; 8 >
     au < ready ; exists ; 2014 ; 2014 ; Krankenhaushygiene up2date Volume 2014 ; 9 >
     au < ready ; exists ; 2015 ; 2015 ; Krankenhaushygiene up2date Volume 2015 ; 10 >
 
