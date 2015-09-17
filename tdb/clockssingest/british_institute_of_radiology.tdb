@@ -144,6 +144,24 @@
   {
 
     title <
+      name = BJR|case reports ;
+      eissn = 2055-7159 ;
+      issnl = 2055-7159
+    >
+    
+      plugin = org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin
+      comment[platform] = Atypon
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.birpublications.org/
+      param[journal_id] = bjrcr
+
+      au < exists ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Dentomaxillofacial Radiology ;
       issn = 0250-832X ;
       eissn = 1476-542X ;
