@@ -7,17 +7,18 @@ BEGIN {
 }
 
 {
-  # add a loop to add line only if either [status is _not_ manifest] OR [journal_year (or journal end year) is gt or eq to 2005 && journal year (or journal end year) is lt or eq to the current year we are testing]
+  # add a loop to add line only if either [status is _not_ manifest] OR [journal year (or journal end year) is lt or eq to the current year we are testing]
   current_year = 2014
   end_year = 0
   incontract = 0
-  test_year = ""
-  test_year = 2005
+  #test_year = ""
+  #test_year = 2005
   if (length($5) > 3) {
     end_year = substr($5,length($5)-3,4)
   }
   #printf "%s\n", $0
-  if (($4 != "manifest") || ((end_year >= test_year) && (end_year <= current_year))) {
+  #if (($4 != "manifest") || ((end_year >= test_year) && (end_year <= current_year))) {
+  if (($4 != "manifest") || (end_year <= current_year)) {
     incontract = 1
   }
 
@@ -30,11 +31,7 @@ BEGIN {
   #    n[pn] = $2
       r[pn] = $3
       if (r[pn] == "") {
-        if ((substr(p[pn],1,2) <= "Mz")) {
-          r[pn] = "5"
-        } else if (substr(p[pn],1,2) >= "NA") {
           r[pn] = "8"
-        }
       }
       pn++
     }
