@@ -94,7 +94,7 @@
       au < released ; 2011 ; 23 ; Fractal: Revista de Psicologia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 24 ; Fractal: Revista de Psicologia Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 25 ; Fractal: Revista de Psicologia Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 26 ; Fractal: Revista de Psicologia Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 26 ; Fractal: Revista de Psicologia Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 17 ; Fractal: Revista de Psicologia Volume 2015 ; 2015 ; >
 
   }
@@ -111,18 +111,18 @@
       param[base_url] = http://www.confluencias.uff.br/
       param[journal_id] = confluencias
 
-      au < manifest ; 2003 ; 1 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 2 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 3 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 4 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 5 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 6 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 7 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2009 ; 2009 ; >
+      au < testing ; 2003 ; 1 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 2 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 3 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 4 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 5 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 6 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 7 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2009 ; 2009 ; >
       au < exists ; 2010 ; 8 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2010 ; 2010 ; >
       au < exists ; 2011 ; 9 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 10 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 11 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 12 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2014 ; 2014 ; >
+      au < testing ; 2012 ; 10 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 11 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 12 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 13 ; Confluências - Revista Interdisciplinar de Sociologia e Direito Volume 2015 ; 2015 ; >
 
   }
@@ -161,27 +161,27 @@
       param[base_url] = http://www.uff.br/rbcv/ojs/
       param[journal_id] = rbcv
 
-      au < manifest ; 1994 ; 1 ; Revista Brasileira de Ciência Veterinária Volume 1994 ; 1994 ; >
-      au < manifest ; 1995 ; 2 ; Revista Brasileira de Ciência Veterinária Volume 1995 ; 1995 ; >
-      au < manifest ; 1996 ; 3 ; Revista Brasileira de Ciência Veterinária Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 4 ; Revista Brasileira de Ciência Veterinária Volume 1997 ; 1997 ; >
-      au < manifest ; 1998 ; 5 ; Revista Brasileira de Ciência Veterinária Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 6 ; Revista Brasileira de Ciência Veterinária Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 7 ; Revista Brasileira de Ciência Veterinária Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 8 ; Revista Brasileira de Ciência Veterinária Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 9 ; Revista Brasileira de Ciência Veterinária Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 10 ; Revista Brasileira de Ciência Veterinária Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 11 ; Revista Brasileira de Ciência Veterinária Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 12 ; Revista Brasileira de Ciência Veterinária Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 13 ; Revista Brasileira de Ciência Veterinária Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 14 ; Revista Brasileira de Ciência Veterinária Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 15 ; Revista Brasileira de Ciência Veterinária Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 16 ; Revista Brasileira de Ciência Veterinária Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 17 ; Revista Brasileira de Ciência Veterinária Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 18 ; Revista Brasileira de Ciência Veterinária Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 19 ; Revista Brasileira de Ciência Veterinária Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 20 ; Revista Brasileira de Ciência Veterinária Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 21 ; Revista Brasileira de Ciência Veterinária Volume 2014 ; 2014 ; >
+      au < testing ; 1994 ; 1 ; Revista Brasileira de Ciência Veterinária Volume 1994 ; 1994 ; >
+      au < testing ; 1995 ; 2 ; Revista Brasileira de Ciência Veterinária Volume 1995 ; 1995 ; >
+      au < testing ; 1996 ; 3 ; Revista Brasileira de Ciência Veterinária Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 4 ; Revista Brasileira de Ciência Veterinária Volume 1997 ; 1997 ; >
+      au < testing ; 1998 ; 5 ; Revista Brasileira de Ciência Veterinária Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 6 ; Revista Brasileira de Ciência Veterinária Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 7 ; Revista Brasileira de Ciência Veterinária Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 8 ; Revista Brasileira de Ciência Veterinária Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 9 ; Revista Brasileira de Ciência Veterinária Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 10 ; Revista Brasileira de Ciência Veterinária Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 11 ; Revista Brasileira de Ciência Veterinária Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 12 ; Revista Brasileira de Ciência Veterinária Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 13 ; Revista Brasileira de Ciência Veterinária Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 14 ; Revista Brasileira de Ciência Veterinária Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 15 ; Revista Brasileira de Ciência Veterinária Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 16 ; Revista Brasileira de Ciência Veterinária Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 17 ; Revista Brasileira de Ciência Veterinária Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 18 ; Revista Brasileira de Ciência Veterinária Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 19 ; Revista Brasileira de Ciência Veterinária Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 20 ; Revista Brasileira de Ciência Veterinária Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 21 ; Revista Brasileira de Ciência Veterinária Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 22 ; Revista Brasileira de Ciência Veterinária Volume 2015 ; 2015 ; >
 
   }
@@ -197,21 +197,21 @@
       param[base_url] = http://www.revistagenero.uff.br/
       param[journal_id] = revistagenero
 
-      au < manifest ; 2000 ; 1 ; Revista Gênero Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 2 ; Revista Gênero Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 3 ; Revista Gênero Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 4 ; Revista Gênero Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 5 ; Revista Gênero Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 6 ; Revista Gênero Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 7 ; Revista Gênero Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 8 ; Revista Gênero Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 9 ; Revista Gênero Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 10 ; Revista Gênero Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 11 ; Revista Gênero Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 12 ; Revista Gênero Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 13 ; Revista Gênero Volume 2012 ; 2012 ; >
+      au < testing ; 2000 ; 1 ; Revista Gênero Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 2 ; Revista Gênero Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 3 ; Revista Gênero Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 4 ; Revista Gênero Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 5 ; Revista Gênero Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 6 ; Revista Gênero Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 7 ; Revista Gênero Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 8 ; Revista Gênero Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 9 ; Revista Gênero Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 10 ; Revista Gênero Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 11 ; Revista Gênero Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 12 ; Revista Gênero Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 13 ; Revista Gênero Volume 2012 ; 2012 ; >
       au < exists ; 2013 ; 14 ; Revista Gênero Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 15 ; Revista Gênero Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 15 ; Revista Gênero Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 16 ; Revista Gênero Volume 2015 ; 2015 ; >
 
   }
