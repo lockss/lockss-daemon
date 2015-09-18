@@ -91,9 +91,9 @@ then
     echo "No title differences"
     if [[ $file == "hindawi_publishing_corporation.tdb" ]]
     then
-      #all statuses except superseded, down, and zapped -EXMWTNRCLZIF
-      scripts/tdb/tdbout -EXMWTNRCLZIF -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
-      scripts/tdb/tdbout -EXMWTNRCLZIF -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
+      #all statuses except superseded, down, and zapped -EXMWTNYRCLZIF and not -DSB
+      scripts/tdb/tdbout -EXMWTNYRCLZIF -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
+      scripts/tdb/tdbout -EXMWTNYRCLZIF -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
     else
       scripts/tdb/tdbout -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
       scripts/tdb/tdbout -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
