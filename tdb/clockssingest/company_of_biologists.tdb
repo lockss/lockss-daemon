@@ -198,7 +198,7 @@
     comment[notReady] = No permission statement on manifest page
 
     au < notReady ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
-    au < finished ; crawling ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
+    au < finished ; finished ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
     au < finished ; crawling ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
     au < finished ; frozen ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
     au < finished ; frozen ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >

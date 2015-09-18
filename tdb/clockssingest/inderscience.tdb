@@ -1340,7 +1340,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 13 ; 13 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; International Journal of Business Information Systems Volume 15 ; 15 >
-      au < finished ; crawling ; 2014 ; International Journal of Business Information Systems Volume 16 ; 16 >
+      au < finished ; finished ; 2014 ; International Journal of Business Information Systems Volume 16 ; 16 >
       au < crawling ; exists ; 2014 ; International Journal of Business Information Systems Volume 17 ; 17 >
       au < crawling ; exists ; 2015 ; International Journal of Business Information Systems Volume 18 ; 18 >
       au < crawling ; exists ; 2015 ; International Journal of Business Information Systems Volume 19 ; 19 >
@@ -1640,7 +1640,7 @@
       param[journal_id] = ijclm
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 >
-      au < finished ; crawling ; 2012-2014 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 >
+      au < finished ; finished ; 2012-2014 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Complexity in Leadership and Management Volume 3 ; 3 >
 
     }

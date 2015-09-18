@@ -186,7 +186,7 @@
     au < manifest ; exists ; 2010 ; Biomedical Engineering and Computational Biology Volume 2 ; 2 ; 2010 >
     au < finished ; frozen ; 2011 ; Biomedical Engineering and Computational Biology Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Biomedical Engineering and Computational Biology Volume 4 ; 4 ; 2012 >
-    au < finished ; crawling ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 5 ; 2013 >
+    au < finished ; finished ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 5 ; 2013 >
     au < finished ; finished ; 2014 ; Biomedical Engineering and Computational Biology Volume 6 ; 6 ; 2014 >
     au < expected ; exists ; 2015 ; Biomedical Engineering and Computational Biology Volume 7 ; 7 ; 2015 >
 
@@ -314,7 +314,7 @@
     au < manifest ; exists ; 2009 ; Cell & Tissue Transplantation & Therapy Volume 2 ; 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 3 ; 2010 >
     au < finished ; crawling ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 4 ; 2012 >
-    au < finished ; crawling ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 5 ; 2013 >
+    au < finished ; finished ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 5 ; 2013 >
     au < crawling ; exists ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 >
     au < crawling ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 >
 
@@ -435,7 +435,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Case Reports Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Clinical Medicine Insights: Case Reports Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Clinical Medicine Insights: Case Reports Volume 5 ; 5 ; 2012 >
-    au < finished ; crawling ; 2013 ; Clinical Medicine Insights: Case Reports Volume 6 ; 6 ; 2013 >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Case Reports Volume 6 ; 6 ; 2013 >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Case Reports Volume 7 ; 7 ; 2014 >
     au < crawling ; exists ; 2015 ; Clinical Medicine Insights: Case Reports Volume 8 ; 8 ; 2015 >
 
@@ -1680,7 +1680,7 @@
     
     au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; 2010 >
-    au < finished ; crawling ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 >
+    au < finished ; finished ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 >
     au < expected ; exists ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 >
     
   }

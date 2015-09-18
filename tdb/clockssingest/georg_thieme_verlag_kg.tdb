@@ -98,7 +98,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Dermatologie Volume 35 ; 35 >
     au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 >
-    au < finished ; crawling ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 >
+    au < finished ; finished ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 >
     au < notReady ; exists ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 >
     au < notReady ; exists ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 >
@@ -1577,7 +1577,7 @@
    au < manifest ; exists ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 >
    au < manifest ; exists ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 2011 ; 79 >
    au < manifest ; exists ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 >
-   au < finished ; crawling ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 >
+   au < finished ; finished ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 >
    au < crawling ; exists ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 2014 ; 82 >
    au < crawling ; exists ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 2015 ; 83 >
 
