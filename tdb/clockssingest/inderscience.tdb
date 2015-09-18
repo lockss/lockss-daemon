@@ -2172,7 +2172,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 9 ; 9 >
-      au < finished ; manifest ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
+      au < finished ; crawling ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
       au < crawling ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
       au < crawling ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
 
@@ -3398,7 +3398,7 @@
 
       param[journal_id] = ijfcm
 
-      au < finished ; manifest ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
+      au < finished ; crawling ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
 
     }
 
