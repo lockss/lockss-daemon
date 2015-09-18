@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -139,6 +139,10 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.medknow.MedknowHtmlHashFilterFactory</string>
   </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.medknow.MedknowPdfFilterFactory</string>
+  </entry>  
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.medknow.MedknowUrlNormalizer</string>
