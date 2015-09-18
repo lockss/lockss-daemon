@@ -32,7 +32,7 @@
       au < finished ; frozen ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
       au < crawling ; exists ; 2013 ; Clinical Diabetes Volume 31 ; 31 >
       au < crawling ; exists ; 2014 ; Clinical Diabetes Volume 32 ; 32 >
-      au < testing ; exists ; 2015 ; Clinical Diabetes Volume 33 ; 33 >
+      au < ready ; exists ; 2015 ; Clinical Diabetes Volume 33 ; 33 >
     
     }
     
@@ -112,7 +112,7 @@
         au < finished ; frozen ; 2012 ; Diabetes Volume 61 ; 61 >
         au < crawling ; exists ; 2013 ; Diabetes Volume 62 ; 62 >
         au < crawling ; exists ; 2014 ; Diabetes Volume 63 ; 63 >
-        au < testing ; exists ; 2015 ; Diabetes Volume 64 ; 64 >
+        au < ready ; exists ; 2015 ; Diabetes Volume 64 ; 64 >
 
       }
 
@@ -172,7 +172,7 @@
         au < finished ; frozen ; 2012 ; Diabetes Care Volume 35 ; 35 >
         au < crawling ; exists ; 2013 ; Diabetes Care Volume 36 ; 36 >
         au < crawling ; exists ; 2014 ; Diabetes Care Volume 37 ; 37 >
-        au < testing ; exists ; 2015 ; Diabetes Care Volume 38 ; 38 >
+        au < ready ; exists ; 2015 ; Diabetes Care Volume 38 ; 38 >
 
       }
 
@@ -202,7 +202,7 @@
       au < finished ; frozen ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
       au < crawling ; exists ; 2013 ; Diabetes Spectrum Volume 26 ; 26 >
       au < finished ; crawling ; 2014 ; Diabetes Spectrum Volume 27 ; 27 >
-      au < testing ; exists ; 2015 ; Diabetes Spectrum Volume 28 ; 28 >
+      au < ready ; exists ; 2015 ; Diabetes Spectrum Volume 28 ; 28 >
 
     }
 
