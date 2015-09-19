@@ -508,10 +508,10 @@
       param[base_url2] = http://www.rsc.org/
       comment[notReady] = All manifest pages link to same content
       
-      au < notReady ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
-      au < notReady ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
-      au < notReady ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
-      au < notReady ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
+      au < exists ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
+      au < exists ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
+      au < exists ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
+      au < exists ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
       au < manifest ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 >
       au < expected ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 >
     }
