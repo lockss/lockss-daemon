@@ -1168,7 +1168,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
-        au < testing ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
   
     }
   
@@ -1254,7 +1254,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 ; 4 >
   
     }
   
@@ -1342,7 +1342,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < testing ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
-        au < testing ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
+        au < ready ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
         au < testing ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
   
     }
