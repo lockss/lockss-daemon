@@ -17,16 +17,16 @@
       param[base_url] = http://revistas.unoeste.br/revistas/ojs/
       param[journal_id] = ca
 
-      au < testing ; 2005 ; 1 ; Colloquium Agrariae Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 2 ; Colloquium Agrariae Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 3 ; Colloquium Agrariae Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 4 ; Colloquium Agrariae Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 5 ; Colloquium Agrariae Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 6 ; Colloquium Agrariae Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 7 ; Colloquium Agrariae Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 8 ; Colloquium Agrariae Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 9 ; Colloquium Agrariae Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 10 ; Colloquium Agrariae Volume 2014 ; 2014 >
+      au < ready ; 2005 ; 1 ; Colloquium Agrariae Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 2 ; Colloquium Agrariae Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 3 ; Colloquium Agrariae Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 4 ; Colloquium Agrariae Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 5 ; Colloquium Agrariae Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 6 ; Colloquium Agrariae Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 7 ; Colloquium Agrariae Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 8 ; Colloquium Agrariae Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 9 ; Colloquium Agrariae Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 10 ; Colloquium Agrariae Volume 2014 ; 2014 >
       au < expected ; 2015 ; 11 ; Colloquium Agrariae Volume 2015 ; 2015 >
 
   }
@@ -63,18 +63,18 @@
       param[base_url] = http://revistas.unoeste.br/revistas/ojs/
       param[journal_id] = ch
 
-      au < testing ; 2003 ; 1 ; Colloquium Humanarum Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 2 ; Colloquium Humanarum Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 3 ; Colloquium Humanarum Volume 2005 ; 2005 >
+      au < ready ; 2003 ; 1 ; Colloquium Humanarum Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 2 ; Colloquium Humanarum Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 3 ; Colloquium Humanarum Volume 2005 ; 2005 >
       au < exists ; 2006 ; 4 ; Colloquium Humanarum Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 5 ; Colloquium Humanarum Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 6 ; Colloquium Humanarum Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 7 ; Colloquium Humanarum Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 8 ; Colloquium Humanarum Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 9 ; Colloquium Humanarum Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 10 ; Colloquium Humanarum Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 11 ; Colloquium Humanarum Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 12 ; Colloquium Humanarum Volume 2014 ; 2014 >
+      au < ready ; 2007 ; 5 ; Colloquium Humanarum Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 6 ; Colloquium Humanarum Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 7 ; Colloquium Humanarum Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 8 ; Colloquium Humanarum Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 9 ; Colloquium Humanarum Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 10 ; Colloquium Humanarum Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 11 ; Colloquium Humanarum Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 12 ; Colloquium Humanarum Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 13 ; Colloquium Humanarum Volume 2015 ; 2015 >
 
   }
@@ -90,12 +90,12 @@
       param[base_url] = http://revistas.unoeste.br/revistas/ojs/
       param[journal_id] = cv
 
-      au < testing ; 2009 ; 1 ; Colloquium Vitae Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 2 ; Colloquium Vitae Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 3 ; Colloquium Vitae Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 4 ; Colloquium Vitae Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 5 ; Colloquium Vitae Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 6 ; Colloquium Vitae Volume 2014 ; 2014 >
+      au < ready ; 2009 ; 1 ; Colloquium Vitae Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 2 ; Colloquium Vitae Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 3 ; Colloquium Vitae Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 4 ; Colloquium Vitae Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 5 ; Colloquium Vitae Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 6 ; Colloquium Vitae Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 7 ; Colloquium Vitae Volume 2015 ; 2015 >
 
   }
