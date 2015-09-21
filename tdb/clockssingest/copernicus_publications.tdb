@@ -322,7 +322,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 >
       au < finished ; crawling ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
-      au < ready ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
+      au < crawling ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
     
    }
     
@@ -368,7 +368,7 @@
       au < finished ; finished ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 >
-      au < ready ; exists ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 >
+      au < crawling ; exists ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 >
     
    }
     
@@ -417,7 +417,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
-      au < ready ; exists ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 >
+      au < crawling ; exists ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 >
     
    }
     
@@ -781,7 +781,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
-      au < ready ; exists ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 >
+      au < crawling ; exists ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 >
     
    }
    
@@ -820,7 +820,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
       au < finished ; crawling ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
-      au < ready ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
+      au < crawling ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
     
    }
     
@@ -908,7 +908,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
       au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
       au < crawling ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
-      au < ready ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 >
+      au < crawling ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 >
     
    }
     
@@ -1063,10 +1063,10 @@
       au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 >
       au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 >
       au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 >
-      au < ready ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 >
-      au < ready ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 >
-      au < ready ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 >
-      au < ready ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 >
 
      }
    }
@@ -1221,7 +1221,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 >
-      au < ready ; exists ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 >
+      au < crawling ; exists ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 >
     
    }
     
@@ -1471,7 +1471,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
       au < finished ; crawling ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 >
-      au < ready ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
+      au < crawling ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
     
    }
     
