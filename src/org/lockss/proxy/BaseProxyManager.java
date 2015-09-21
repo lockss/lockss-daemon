@@ -65,6 +65,11 @@ public abstract class BaseProxyManager extends JettyManager {
     Configuration.PREFIX + "proxy.errorTemplate";
   static final String DEFAULT_ERROR_TEMPLATE = "errorpagetemplate.html";
 
+  /** Read timeout for tunnel (CONNECT) socket */
+  public static final String PARAM_TUNNEL_TIMEOUT =
+    Configuration.PREFIX + "proxy.tunnelTimeout";
+  static final long DEFAULT_TUNNEL_TIMEOUT = 30 * Constants.MINUTE;
+
   protected AlertManager alertMgr;
   protected int port;
   protected int sslPort = -1;
@@ -82,6 +87,7 @@ public abstract class BaseProxyManager extends JettyManager {
   protected String connectHost;
   protected int connectPort;
   protected String errorTemplate;
+  protected long tunnelTimeout = DEFAULT_TUNNEL_TIMEOUT;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -117,6 +123,13 @@ public abstract class BaseProxyManager extends JettyManager {
     if (changedKeys.contains(PARAM_ERROR_TEMPLATE)) {
       setErrorTemplate(config.get(PARAM_ERROR_TEMPLATE,
 				  DEFAULT_ERROR_TEMPLATE));
+    }
+    if (changedKeys.contains(PARAM_TUNNEL_TIMEOUT)) {
+      tunnelTimeout = config.getTimeInterval(PARAM_TUNNEL_TIMEOUT,
+					     DEFAULT_TUNNEL_TIMEOUT);
+      if (handler != null) {
+	handler.setTunnelTimeoutMs(tunnelTimeout);
+      }
     }
   }
 

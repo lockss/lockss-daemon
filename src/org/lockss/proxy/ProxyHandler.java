@@ -290,10 +290,10 @@ public class ProxyHandler extends AbstractHttpHandler {
    * IE on win2000 has connections issues with normal timeout handling.
    * This timeout should be set to a low value that will expire to allow IE to
    * see the end of the tunnel connection.
-   * /
-   public void setTunnelTimeoutMs(int ms) {
-   _tunnelTimeoutMs = ms;
-   }
+   */
+  public void setTunnelTimeoutMs(long ms) {
+    _tunnelTimeoutMs = (int)ms;
+  }
 
    /* ------------------------------------------------------------ */
   public void handle(String pathInContext,
