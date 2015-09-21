@@ -138,6 +138,9 @@ public class AuditProxyManager extends BaseProxyManager {
     if (sslPort > 0) {
       handler.setSslListenPort(sslPort);
     }
+    if (tunnelTimeout >= 0) {
+      handler.setTunnelTimeoutMs(tunnelTimeout);
+    }
     return handler;
   }
 }
