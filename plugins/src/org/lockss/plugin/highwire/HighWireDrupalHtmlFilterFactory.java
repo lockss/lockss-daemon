@@ -77,6 +77,8 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.comment(),
     // copyright statement may change
     HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
+    // license may change
+    HtmlNodeFilters.tagWithAttribute("div", "class", "license"),
     // messages can appear arbitrarily
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "messages"),
