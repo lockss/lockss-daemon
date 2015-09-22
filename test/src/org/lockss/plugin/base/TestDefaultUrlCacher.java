@@ -206,13 +206,70 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertTrue(cacher.wasStored);
   }
 
-  public void testCacheSizeDisagreesAlert() throws IOException {
+  enum DisagreeTest {Default, Ignore, Warning, Error};
+
+  public void testCacheSizeDisagreesAlert(DisagreeTest mode)
+      throws IOException {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    switch (mode) {
+    case Ignore:
+      resultMap.storeMapEntry(ContentValidationException.WrongLength.class,
+			      CacheSuccess.class);
+      break;
+    case Warning:
+      resultMap.storeMapEntry(ContentValidationException.WrongLength.class,
+			      CacheException.WarningOnly.class);
+      break;
+    case Error:
+      resultMap.storeMapEntry(ContentValidationException.WrongLength.class,
+			      CacheException.UnretryableException.class);
+      break;
+    case Default:
+      break;
+    }
+
     CIProperties props = new CIProperties();
     props.setProperty("Content-Length", "8");
     ud = new UrlData(new StringInputStream("123456789"), props, TEST_URL);
     cacher = new MyMockBaseUrlCacher(mau, ud);
-    cacher.storeContent();
-    assertTrue(cacher.wasStored);
+    try {
+      cacher.storeContent();
+      switch (mode) {
+      case Ignore:
+      case Warning:
+      case Default:
+	break;
+      case Error:
+	fail("storeContent() should have thrown WrongLength");
+      }
+    } catch (CacheException e) {
+      switch (mode) {
+      case Ignore:
+	fail("storeContent() shouldn't have thrown", e);
+      case Warning:
+	assertClass(CacheException.WarningOnly.class, e);
+	break;
+      case Error:
+	assertClass(CacheException.UnretryableException.class, e);
+	break;
+      case Default:
+	assertClass(CacheException.RetryableNetworkException_3_10S.class, e);
+	break;
+      }
+      assertMatchesRE("File size \\(9\\) differs from Content-Length header \\(8\\): http://www.example.com/testDir/leaf1",
+		      e.getMessage());
+    }
+    switch (mode) {
+    case Ignore:
+    case Warning:
+      assertTrue(cacher.wasStored);
+      break;
+    case Default:
+    case Error:
+      assertFalse(cacher.wasStored);
+      break;
+    }
+
     assertEquals(1, alertMgr.getAlerts().size());
     Alert alert = alertMgr.getAlerts().get(0);
     assertEquals("FileVerification", alert.getAttribute(Alert.ATTR_NAME));
@@ -222,6 +279,22 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 		 alert.getAttribute(Alert.ATTR_SEVERITY));
     assertEquals("File size (9) differs from Content-Length header (8): " + TEST_URL,
 		 alert.getAttribute(Alert.ATTR_TEXT));
+  }
+
+  public void testCacheSizeDisagreesDefault() throws IOException {
+    testCacheSizeDisagreesAlert(DisagreeTest.Default);
+  }
+
+  public void testCacheSizeDisagreesIgnore() throws IOException {
+    testCacheSizeDisagreesAlert(DisagreeTest.Ignore);
+  }
+
+  public void testCacheSizeDisagreesWarning() throws IOException {
+    testCacheSizeDisagreesAlert(DisagreeTest.Warning);
+  }
+
+  public void testCacheSizeDisagreesError() throws IOException {
+    testCacheSizeDisagreesAlert(DisagreeTest.Error);
   }
 
   public void testNewVersionAlert() throws IOException {

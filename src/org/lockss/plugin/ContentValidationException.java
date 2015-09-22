@@ -73,4 +73,25 @@ public class ContentValidationException extends Exception {
     }
   }
 
+  /** The actuall length of the received file differs from the
+   * Content-Length header. */
+  public static class WrongLength extends ContentValidationException {
+
+    public WrongLength() {
+      super();
+    }
+
+    public WrongLength(String msg) {
+      super(msg);
+    }
+
+    public WrongLength(Throwable cause) {
+      super(cause);
+    }
+
+    public WrongLength(String msg, Throwable cause) {
+      super(msg, cause);
+    }
+  }
+
 }

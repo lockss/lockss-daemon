@@ -301,7 +301,14 @@ public class DefaultUrlCacher implements UrlCacher {
         }
       }
       os.close();
-      infoException = validate(bytes);
+      CacheException vExp = validate(bytes);
+      if (vExp != null) {
+	if (vExp instanceof CacheException.WarningOnly) {
+	  infoException = vExp;
+	} else {
+	  throw vExp;
+	}
+      }
       headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
       if (checksumProducer != null) {
         byte bdigest[] = checksumProducer.digest();
@@ -368,6 +375,7 @@ public class DefaultUrlCacher implements UrlCacher {
   // XXX need to make it possible for validator to access CU before seal(),
   // so it can prevent file from being committed.
   protected CacheException validate(long size) throws CacheException {
+    LinkedList<Exception> validationFailures = new LinkedList<Exception>();
     long contLen = getContentLength();
     if (contLen >= 0 && contLen != size) {
       Alert alert = Alert.auAlert(Alert.FILE_VERIFICATION, au);
@@ -377,17 +385,29 @@ public class DefaultUrlCacher implements UrlCacher {
 	+ getFetchUrl();
       alert.setAttribute(Alert.ATTR_TEXT, msg);
       raiseAlert(alert);
+      validationFailures.add(new ContentValidationException.WrongLength(msg));
     }
 //     try {
       if (size == 0) {
         Exception ex =
             new ContentValidationException.EmptyFile("Empty file stored");
-        return resultMap.mapException(au, fetchUrl, ex, null);
+	validationFailures.addFirst(ex);
       }
-      return null;
+      return firstMappedException(validationFailures);
 //     } catch (Exception e) {
 //       throw resultMap.mapException(au, conn, e, null);
 //     }
+  }
+
+
+  private CacheException firstMappedException(List<Exception> exps) {
+    for (Exception ex : exps) {
+      CacheException mapped = resultMap.mapException(au, fetchUrl, ex, null);
+      if (mapped != null) {
+	return mapped;
+      }
+    }
+    return null;
   }
 
 

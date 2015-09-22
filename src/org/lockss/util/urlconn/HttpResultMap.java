@@ -37,6 +37,7 @@ import java.net.*;
 import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ContentValidationException;
 
 /**
  * Maps an HTTP result to success (null) or an exception, usually one under
@@ -330,8 +331,10 @@ public class HttpResultMap implements CacheResultMap {
     storeMapEntry(java.nio.channels.ClosedChannelException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
 
-    storeMapEntry(org.lockss.plugin.ContentValidationException.EmptyFile.class,
+    storeMapEntry(ContentValidationException.EmptyFile.class,
 		  CacheException.WarningOnly.class);
+    storeMapEntry(ContentValidationException.WrongLength.class,
+		  CacheException.RetryableNetworkException_3_10S.class);
   }
 
   public void storeArrayEntries(int[] codeArray, Class exceptionClass) {
