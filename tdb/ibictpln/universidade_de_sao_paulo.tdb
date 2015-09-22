@@ -39,6 +39,19 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
+    au < exists ; 1988 ; 1988 ; Revista de História Volume 1988 ; 1988 >
+    au < exists ; 1989 ; 1989 ; Revista de História Volume 1989 ; 1989 >
+    au < exists ; 1990 ; 1990 ; Revista de História Volume 1990 ; 1990 >
+    au < exists ; 1991 ; 1991 ; Revista de História Volume 1991 ; 1991 >
+    au < exists ; 1992 ; 1992 ; Revista de História Volume 1992 ; 1992 >
+    au < exists ; 1993 ; 1993 ; Revista de História Volume 1993 ; 1993 >
+    au < exists ; 1994 ; 1994 ; Revista de História Volume 1994 ; 1994 >
+    au < exists ; 1995 ; 1995 ; Revista de História Volume 1995 ; 1995 >
+    au < exists ; 1996 ; 1996 ; Revista de História Volume 1996 ; 1996 >
+    au < exists ; 1997 ; 1997 ; Revista de História Volume 1997 ; 1997 >
+    au < exists ; 1998 ; 1998 ; Revista de História Volume 1998 ; 1998 >
+    au < exists ; 1999 ; 1999 ; Revista de História Volume 1999 ; 1999 >
+    au < exists ; 2000 ; 2000 ; Revista de História Volume 2000 ; 2000 >
     au < manifest ; 2001 ; 2001 ; Revista de História Volume 2001 ; 2001 >
     au < released ; 2002 ; 2002 ; Revista de História Volume 2002 ; 2002 >
     au < released ; 2003 ; 2003 ; Revista de História Volume 2003 ; 2003 >
@@ -68,6 +81,12 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = estic
 
+    au < exists ; 1996 ; 1 ; Estílos da Clínica Volume 1 ; 1996 >
+    au < exists ; 1997 ; 2 ; Estílos da Clínica Volume 2 ; 1997 >
+    au < exists ; 1998 ; 3 ; Estílos da Clínica Volume 3 ; 1998 >
+    au < exists ; 1999 ; 4 ; Estílos da Clínica Volume 4 ; 1999 >
+    au < exists ; 2000 ; 5 ; Estílos da Clínica Volume 5 ; 2000 >
+    au < manifest ; 2001 ; 6 ; Estílos da Clínica Volume 6 ; 2001 >
     au < manifest ; 2002 ; 7 ; Estílos da Clínica Volume 7 ; 2002 >
     au < released ; 2003 ; 8 ; Estílos da Clínica Volume 8 ; 2003 >
     au < released ; 2004 ; 9 ; Estílos da Clínica Volume 9 ; 2004 >
