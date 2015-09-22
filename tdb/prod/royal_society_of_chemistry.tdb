@@ -174,7 +174,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
+      au < ready ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
       au < released ; 2011 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 107 ; 107 ; 2011 >
       au < released ; 2012 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 108 ; 108 ; 2012 >
       au < released ; 2013 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 109 ; 109 ; 2013 >
@@ -362,7 +362,7 @@
       au < released ; 2011 ; Chemistry Education Research and Practice Volume 12 ; 12 ; 2011 >
       au < released ; 2012 ; Chemistry Education Research and Practice Volume 13 ; 13 ; 2012 >
       au < released ; 2013 ; Chemistry Education Research and Practice Volume 14 ; 14 ; 2013 >
-      au < manifest ; 2014 ; Chemistry Education Research and Practice Volume 15 ; 15 ; 2014 >
+      au < ready ; 2014 ; Chemistry Education Research and Practice Volume 15 ; 15 ; 2014 >
       au < expected ; 2015 ; Chemistry Education Research and Practice Volume 16 ; 16 ; 2015 >
 
     }
@@ -738,9 +738,9 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 >
-      au < manifest ; 2011 ; Journal of Analytical Atomic Spectrometry Volume 26 ; 26 ; 2011 >
-      au < manifest ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
+      au < ready ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 >
+      au < ready ; 2011 ; Journal of Analytical Atomic Spectrometry Volume 26 ; 26 ; 2011 >
+      au < ready ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
       au < released ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
       au < manifest ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
       au < expected ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
@@ -1012,7 +1012,7 @@
       au < manifest ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 >
       au < manifest ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
-      au < manifest ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 >
+      au < ready ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 >
       au < expected ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 >
     }
   }
@@ -1047,7 +1047,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
       
-      au < manifest ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
+      au < ready ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
       au < manifest ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 >
       au < manifest ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 >
       au < released ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 >
@@ -1182,7 +1182,7 @@
       au < manifest ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 >
       au < manifest ; 2012 ; New Journal of Chemistry Volume 36 ; 36 ; 2012 >
       au < released ; 2013 ; New Journal of Chemistry Volume 37 ; 37 ; 2013 >
-      au < manifest ; 2014 ; New Journal of Chemistry Volume 38 ; 38 ; 2014 >
+      au < ready ; 2014 ; New Journal of Chemistry Volume 38 ; 38 ; 2014 >
       au < expected ; 2015 ; New Journal of Chemistry Volume 39 ; 39 ; 2015 >
     }
   }

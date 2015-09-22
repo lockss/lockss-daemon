@@ -31,7 +31,7 @@
     au < doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
     au < doNotProcess ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
     au < manifest ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 >
-    au < manifest ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 >
+    au < ready ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 >
     au < manifest ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 >
 
   }
@@ -59,7 +59,7 @@
     au < doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
     au < doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
     au < manifest ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
-    au < manifest ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
+    au < ready ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
     au < manifest ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 >
 
   }
@@ -88,7 +88,7 @@
     au < doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 >
     au < doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 >
     au < manifest ; 2013 ; Building Acoustics Volume 20 ; 20 >
-    au < manifest ; 2014 ; Building Acoustics Volume 21 ; 21 >
+    au < ready ; 2014 ; Building Acoustics Volume 21 ; 21 >
     au < manifest ; 2015 ; Building Acoustics Volume 22 ; 22 >
 
   }
@@ -117,7 +117,7 @@
     au < doNotProcess ; 2011 ; Energy & Environment Volume 22 ; 22 >
     au < doNotProcess ; 2012 ; Energy & Environment Volume 23 ; 23 >
     au < manifest ; 2013 ; Energy & Environment Volume 24 ; 24 >
-    au < manifest ; 2014 ; Energy & Environment Volume 25 ; 25 >
+    au < ready ; 2014 ; Energy & Environment Volume 25 ; 25 >
     au < manifest ; 2015 ; Energy & Environment Volume 26 ; 26 >
 
   }
@@ -171,7 +171,7 @@
     au < doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 >
     au < doNotProcess ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 >
     au < manifest ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
-    au < manifest ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
+    au < ready ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
     au < manifest ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 >
 
   }
@@ -215,7 +215,7 @@
     au < doNotProcess ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 >
     au < doNotProcess ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 >
     au < manifest ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
-    au < manifest ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
+    au < ready ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
     au < manifest ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 >
 
   }
@@ -249,7 +249,7 @@
     au < doNotProcess ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
     au < manifest ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
     au < manifest ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
-    au < manifest ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
+    au < ready ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
     au < expected ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
 
   }
@@ -264,8 +264,8 @@
     param[journal_id] = ijhde
 
     au < manifest ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 >
-    au < manifest ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
-    au < manifest ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 >
+    au < ready ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
+    au < ready ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 >
     au < manifest ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 >
 
   }
@@ -300,7 +300,7 @@
     au < doNotProcess ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
     au < manifest ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
-    au < manifest ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
+    au < ready ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
     au < manifest ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 >
 
   }
@@ -319,7 +319,7 @@
     au < doNotProcess ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 >
     au < manifest ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
-    au < manifest ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
+    au < ready ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
     au < manifest ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 >
 
   }
@@ -337,7 +337,7 @@
     au < doNotProcess ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
     au < manifest ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
-    au < manifest ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
+    au < ready ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
     au < expected ; 2015 ; International Journal of Micro-Nano Scale Transport Volume 6 ; 6 >
 
   }
@@ -355,7 +355,7 @@
     au < doNotProcess ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
-    au < manifest ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 >
+    au < ready ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 >
     au < manifest ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 >
 
   }
@@ -384,7 +384,7 @@
     au < doNotProcess ; 2011 ; International Journal of Space Structures Volume 26 ; 26 >
     au < doNotProcess ; 2012 ; International Journal of Space Structures Volume 27 ; 27 >
     au < manifest ; 2013 ; International Journal of Space Structures Volume 28 ; 28 >
-    au < manifest ; 2014 ; International Journal of Space Structures Volume 29 ; 29 >
+    au < ready ; 2014 ; International Journal of Space Structures Volume 29 ; 29 >
     au < manifest ; 2015 ; International Journal of Space Structures Volume 30 ; 30 >
 
   }
@@ -406,7 +406,7 @@
     au < doNotProcess ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 >
     au < doNotProcess ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 >
     au < manifest ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 >
-    au < manifest ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 >
+    au < ready ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 >
     au < manifest ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 >
 
   }
@@ -440,8 +440,8 @@
     param[journal_id] = ijtst
 
     au < manifest ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 >
-    au < manifest ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 >
-    au < manifest ; 2014 ; International Journal of Transportation Science and Technology Volume 3 ; 3 >
+    au < ready ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 >
+    au < ready ; 2014 ; International Journal of Transportation Science and Technology Volume 3 ; 3 >
     au < manifest ; 2015 ; International Journal of Transportation Science and Technology Volume 4 ; 4 >
 
   }
@@ -462,7 +462,7 @@
     au < doNotProcess ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 >
     au < manifest ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 >
-    au < manifest ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 >
+    au < ready ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 >
     au < manifest ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 >
 
   }
@@ -590,7 +590,7 @@
     au < doNotProcess ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 >
     au < manifest ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 >
-    au < manifest ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 >
+    au < ready ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 >
     au < manifest ; 2015 ; The International Journal of Multiphysics Volume 9 ; 9 >
 
   }
@@ -608,7 +608,7 @@
     au < doNotProcess ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 >
     au < manifest ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 >
-    au < manifest ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 >
+    au < ready ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 >
     au < manifest ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 ; 6 >
 
   }
