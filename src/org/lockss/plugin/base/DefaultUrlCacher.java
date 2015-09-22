@@ -350,7 +350,9 @@ public class DefaultUrlCacher implements UrlCacher {
           // just being paranoid
         }
       }
-      throw resultMap.mapException(au, url, ex, null);
+      // XXX some code below here maps the exception
+      throw ex instanceof CacheException
+	? ex : resultMap.mapException(au, url, ex, null);
     } finally {
       IOUtil.safeClose(os);
     }
