@@ -114,6 +114,13 @@ public class ArcExporter extends Exporter {
 	aw.write(xlateFilename(url), cu.getContentType(),
 		 getHostIp(), fetchTime, cu.getContentSize(), contentIn);
       }
+      File openFile = aw.getFile();
+      if (openFile.toString().endsWith(ArchiveFileConstants.OCCUPIED_SUFFIX)) {
+	openFile =
+	  new File(StringUtil.removeTrailing(openFile.toString(),
+					     ArchiveFileConstants.OCCUPIED_SUFFIX));
+      }
+      recordExportFile(openFile);
     } finally {
       AuUtil.safeRelease(cu);
     }

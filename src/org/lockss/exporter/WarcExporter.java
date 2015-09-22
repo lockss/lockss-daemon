@@ -154,6 +154,13 @@ public class WarcExporter extends Exporter {
 			       mimeType,
 			       headers, contentIn, contentSize);
       }
+      File openFile = ww.getFile();
+      if (openFile.toString().endsWith(WARCConstants.OCCUPIED_SUFFIX)) {
+	openFile =
+	  new File(StringUtil.removeTrailing(openFile.toString(),
+					     WARCConstants.OCCUPIED_SUFFIX));
+      }
+      recordExportFile(openFile);
     } finally {
       IOUtil.safeClose(contentIn);
     }

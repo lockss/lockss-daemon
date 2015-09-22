@@ -153,6 +153,7 @@ public class ZipExporter extends Exporter {
       zip.setLevel(ZipOutputStream.STORED);
     }
     setZipComment(zip);
+    recordExportFile(file);
   }
 
   void setZipComment(ZipOutputStream zip) {

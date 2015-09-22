@@ -96,5 +96,16 @@ in this Software without prior written authorization from Stanford University.
   	  <bean class="org.lockss.ws.cxf.LockssFaultOutInterceptor" />
   	</jaxws:outFaultInterceptors>
   </jaxws:endpoint>
+ 
+  <jaxws:endpoint id="exportService"
+    implementor="org.lockss.ws.export.ExportServiceImpl"
+    address="/ExportService">
+  	<jaxws:inInterceptors>
+  	  <bean class="org.lockss.ws.export.ExportServiceAuthorizer" />
+  	</jaxws:inInterceptors>
+  	<jaxws:outFaultInterceptors>
+  	  <bean class="org.lockss.ws.cxf.LockssFaultOutInterceptor" />
+  	</jaxws:outFaultInterceptors>
+  </jaxws:endpoint>
 
 </beans>
