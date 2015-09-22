@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,18 +22,18 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -53,7 +53,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%scontent/[^/]+/bmj[.][^/]+([.]full([.]pdf([+]html)?)?)$", base_url</string>
-      <string>"^%scontent/%s/[^/]+/(?!.*[.]abstract)[^/?]+([.]full([.]pdf([+]html)?)?)?$", base_url, volume_name</string>
+      <string>"^%scontent/%s/(?!bmj.)[^/]+/(?!.*[.]abstract)[^/?]+([.]full([.]pdf([+]html)?)?)?$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
