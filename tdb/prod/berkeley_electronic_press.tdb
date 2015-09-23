@@ -1158,10 +1158,10 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = njawhe
 
-    au < down ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 ; 1 >
-    au < down ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
+    au < superseded ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 [superseded] ; 1 >
+    au < superseded ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 [superseded] ; 2 >
     au < down ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 ; 3 >
-    au < down ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 ; 4 >
+    au < superseded ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 [superseded] ; 4 >
 
   }
 
