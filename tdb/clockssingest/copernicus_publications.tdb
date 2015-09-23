@@ -205,9 +205,8 @@
 
       {
       param[base_url] = http://www.arch-anim-breed.net/
-      #PD-1426 zero pages capture and redirect
 
-      au < wanted ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
+      au < ready ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
       }
 
    }
@@ -273,7 +272,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 >
     
    }
     
