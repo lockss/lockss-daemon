@@ -622,6 +622,34 @@ public class DbManagerSql {
       + ") not null"
       + ")";
 
+  // Query to create the table for publisher subscriptions.
+  private static final String CREATE_PUBLISHER_SUBSCRIPTION_TABLE_QUERY =
+      "create table " + PUBLISHER_SUBSCRIPTION_TABLE + " ("
+      + PUBLISHER_SUBSCRIPTION_SEQ_COLUMN + " --BigintSerialPk--,"
+      + PUBLISHER_SEQ_COLUMN + " bigint NOT NULL"
+      + " CONSTRAINT FK_PUBLISHER_SEQ_SUBSCRIPTION"
+      + " REFERENCES " + PUBLISHER_TABLE + " on delete cascade,"
+      + PROVIDER_SEQ_COLUMN + " bigint NOT NULL"
+      + " CONSTRAINT FK_PROVIDER_SEQ_SUBSCRIPTION"
+      + " REFERENCES " + PROVIDER_TABLE + " on delete cascade,"
+      + SUBSCRIBED_COLUMN + " boolean not null"
+      + ")";
+
+  // Query to create the table for publisher subscriptions for MySQL.
+  private static final String CREATE_PUBLISHER_SUBSCRIPTION_TABLE_MYSQL_QUERY =
+      "create table " + PUBLISHER_SUBSCRIPTION_TABLE + " ("
+      + PUBLISHER_SUBSCRIPTION_SEQ_COLUMN + " --BigintSerialPk--,"
+      + PUBLISHER_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PUBLISHER_SEQ_SUBSCRIPTION (" + PUBLISHER_SEQ_COLUMN
+      + ") REFERENCES " + PUBLISHER_TABLE + "(" + PUBLISHER_SEQ_COLUMN
+      + ") on delete cascade,"
+      + PROVIDER_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PROVIDER_SEQ_SUBSCRIPTION (" + PROVIDER_SEQ_COLUMN
+      + ") REFERENCES " + PROVIDER_TABLE + "(" + PROVIDER_SEQ_COLUMN
+      + ") on delete cascade,"
+      + SUBSCRIBED_COLUMN + " boolean not null"
+      + ")";
+
   // Query to insert the database version.
   private static final String INSERT_VERSION_QUERY = "insert into "
       + VERSION_TABLE
@@ -2204,6 +2232,97 @@ public class DbManagerSql {
     "create index idx4_" + AU_MD_TABLE + " on " + AU_MD_TABLE
     + "(" + PROVIDER_SEQ_COLUMN + ")"
     };
+
+  // The SQL code used to create the necessary version 24 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_24_TABLE_CREATE_QUERIES =
+    new LinkedHashMap<String, String>() {{
+      put(PUBLISHER_SUBSCRIPTION_TABLE,
+	  CREATE_PUBLISHER_SUBSCRIPTION_TABLE_QUERY);
+    }};
+
+  // The SQL code used to create the necessary version 24 database tables for
+  // MySQL.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_24_TABLE_CREATE_MYSQL_QUERIES
+    = new LinkedHashMap<String, String>() {{
+      put(PUBLISHER_SUBSCRIPTION_TABLE,
+	  CREATE_PUBLISHER_SUBSCRIPTION_TABLE_MYSQL_QUERY);
+    }};
+
+  // Query to find ISBNs that contain lower case characters.
+  private static final String FIND_LOWER_CASE_ISBNS_QUERY = "select "
+      + MD_ITEM_SEQ_COLUMN
+      + "," + ISBN_COLUMN
+      + "," + ISBN_TYPE_COLUMN
+      + " from " + ISBN_TABLE
+      + " where " + ISBN_COLUMN + " != upper(" + ISBN_COLUMN + ")";
+
+  // Query to find a metadata item typed ISBN.
+  private static final String FIND_MD_ITEM_TYPED_ISBN_QUERY = "select "
+      + ISBN_COLUMN
+      + " from " + ISBN_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + ISBN_COLUMN + " = ?"
+      + " and " + ISBN_TYPE_COLUMN + " = ?";
+  
+  // Query to update an ISBN for a metadata item and type.
+  private static final String UPDATE_ISBN_FOR_MD_ITEM_AND_TYPE_QUERY = "update "
+      + ISBN_TABLE
+      + " set " + ISBN_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + ISBN_COLUMN + " = ?"
+      + " and " + ISBN_TYPE_COLUMN + " = ?";
+
+  // Query to find ISSNs that contain lower case characters.
+  private static final String FIND_LOWER_CASE_ISSNS_QUERY = "select "
+      + MD_ITEM_SEQ_COLUMN
+      + "," + ISSN_COLUMN
+      + "," + ISSN_TYPE_COLUMN
+      + " from " + ISSN_TABLE
+      + " where " + ISSN_COLUMN + " != upper(" + ISSN_COLUMN + ")";
+
+  // Query to find a metadata item typed ISSN.
+  private static final String FIND_MD_ITEM_TYPED_ISSN_QUERY = "select "
+      + ISSN_COLUMN
+      + " from " + ISSN_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + ISSN_COLUMN + " = ?"
+      + " and " + ISSN_TYPE_COLUMN + " = ?";
+  
+  // Query to update an ISBN for a metadata item and type.
+  private static final String UPDATE_ISSN_FOR_MD_ITEM_AND_TYPE_QUERY = "update "
+      + ISSN_TABLE
+      + " set " + ISSN_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + ISSN_COLUMN + " = ?"
+      + " and " + ISSN_TYPE_COLUMN + " = ?";
+
+  // Query to find DOIs that contain upper case characters.
+  private static final String FIND_UPPER_CASE_DOIS_QUERY = "select "
+      + MD_ITEM_SEQ_COLUMN
+      + "," + DOI_COLUMN
+      + " from " + DOI_TABLE
+      + " where " + DOI_COLUMN + " != lower(" + DOI_COLUMN + ")";
+
+  // Query to find a metadata item DOI.
+  private static final String FIND_MD_ITEM_DOI_QUERY = "select "
+      + DOI_COLUMN
+      + " from " + DOI_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + DOI_COLUMN + " = ?";
+
+  // SQL statement that removes a row for a given DOI.
+  private static final String REMOVE_DOI = "delete from " + DOI_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + DOI_COLUMN + " = ?";
+
+  // Query to update a DOI for a metadata item.
+  private static final String UPDATE_DOI_FOR_MD_ITEM_QUERY = "update "
+      + DOI_TABLE
+      + " set " + DOI_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + DOI_COLUMN + " = ?";
 
   // The database data source.
   private DataSource dataSource = null;
@@ -7806,5 +7925,900 @@ public class DbManagerSql {
     executeDdlQueries(conn, VERSION_23_INDEX_CREATE_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 23 to version 24.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom23To24(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom23To24(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Check whether the MySQL database is being used.
+    if (isTypeMysql()) {
+      // Yes: Create the necessary tables if they do not exist.
+      createTablesIfMissing(conn, VERSION_24_TABLE_CREATE_MYSQL_QUERIES);
+    } else {
+    // No: Create the necessary tables if they do not exist.
+      createTablesIfMissing(conn, VERSION_24_TABLE_CREATE_QUERIES);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 24 to version 25.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom24To25(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom24To25(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    convertIsbnsToUpperCase(conn);
+    convertIssnsToUpperCase(conn);
+    convertDoisToLowerCase(conn);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Converts ISBNs to upper case, if necessary.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  private void convertIsbnsToUpperCase(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "convertIsbnsToUpperCase(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    boolean done = false;
+
+    try {
+      // Keep going while there are ISBNs that need processing.
+      while (!done) {
+	// Get ISBNs in the database that need processing.
+	statement = prepareStatement(conn, FIND_LOWER_CASE_ISBNS_QUERY);
+	statement.setMaxRows(500);
+	resultSet = executeQuery(statement);
+
+	// If no more ISBNs are found, the process is known to be finished.
+	done = true;
+
+	// Loop through all the ISBNs found.
+	while (resultSet.next()) {
+	  // An ISBN is found, so the process is not known to be finished.
+	  done = false;
+
+	  // Get the item identifier.
+	  Long mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	  // Get the ISBN.
+	  String isbn = resultSet.getString(ISBN_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbn = " + isbn);
+
+	  // Get the ISBN type.
+	  String isbnType = resultSet.getString(ISBN_TYPE_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "isbnType = " + isbnType);
+
+	  // Check whether the upper case version of the ISBN already exists.
+	  if (findMdItemTypedIsbn(conn, mdItemSeq, isbn.toUpperCase(),
+	      isbnType) != null) {
+	    // Yes: Delete the lower case version.
+	    int count = removeIsbn(conn, mdItemSeq, isbn, isbnType);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	    if (count != 1) {
+	      log.error("Removing ISBN = " + isbn + " (because "
+		  + isbn.toUpperCase()
+		  + " already exists) resulted in a count of " + count
+		  + " not the expected 1.");
+	    }
+	  } else {
+	    // No: Update it to upper case.
+	    int count =
+		updateIsbn(conn, mdItemSeq, isbn, isbnType, isbn.toUpperCase());
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	    if (count != 1) {
+	      log.error("Updating ISBN = " + isbn + " to " + isbn.toUpperCase()
+		  + " resulted in a count of " + count
+		  + " not the expected 1.");
+	    }
+	  }
+	}
+
+	JdbcBridge.commitOrRollback(conn, log);
+	JdbcBridge.safeCloseResultSet(resultSet);
+	JdbcBridge.safeCloseStatement(statement);
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot convert ISBNs to upper case", sqle);
+      log.error("SQL = '" + FIND_LOWER_CASE_ISBNS_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot convert ISBNs to upper case", re);
+      log.error("SQL = '" + FIND_LOWER_CASE_ISBNS_QUERY + "'.");
+      throw re;
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Finds a row in the ISBN table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param isbn
+   *          A String with the ISBN.
+   * @param isbnType
+   *          A String with the ISBN type.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private String findMdItemTypedIsbn(Connection conn, Long mdItemSeq,
+      String isbn, String isbnType) throws SQLException {
+    final String DEBUG_HEADER = "findMdItemTypedIsbn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "isbn = '" + isbn + "'");
+      log.debug2(DEBUG_HEADER + "isbnType = '" + isbnType + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    String result = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findIsbn =
+	prepareStatement(conn, FIND_MD_ITEM_TYPED_ISBN_QUERY);
+
+    try {
+      findIsbn.setLong(1, mdItemSeq);
+      findIsbn.setString(2, isbn);
+      findIsbn.setString(3, isbnType);
+
+      resultSet = executeQuery(findIsbn);
+      if (resultSet.next()) {
+	result = resultSet.getString(ISBN_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find ISBN", sqle);
+      log.error("SQL = '" + FIND_MD_ITEM_TYPED_ISBN_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("isbn = '" + isbn + "'");
+      log.error("isbnType = '" + isbnType + "'");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot find ISBN", re);
+      log.error("SQL = '" + FIND_MD_ITEM_TYPED_ISBN_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("isbn = '" + isbn + "'");
+      log.error("isbnType = '" + isbnType + "'");
+      throw re;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findIsbn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Removes a row from the ISBN table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param isbn
+   *          A String with the ISBN.
+   * @param isbnType
+   *          A String with the ISBN type.
+   * @return an int with the count of rows deleted.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private int removeIsbn(Connection conn, Long mdItemSeq, String isbn,
+      String isbnType) throws SQLException {
+    final String DEBUG_HEADER = "removeIsbn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "isbn = '" + isbn + "'");
+      log.debug2(DEBUG_HEADER + "isbnType = '" + isbnType + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int count;
+
+    PreparedStatement deleteStatement = prepareStatement(conn, REMOVE_ISBN);
+
+    try {
+      deleteStatement.setLong(1, mdItemSeq);
+      deleteStatement.setString(2, isbn);
+      deleteStatement.setString(3, isbnType);
+
+      count = executeUpdate(deleteStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot delete ISBN", sqle);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("isbn = '" + isbn + "'");
+      log.error("isbnType = '" + isbnType + "'");
+      log.error("SQL = '" + REMOVE_ISBN + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot delete ISBN", re);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("isbn = '" + isbn + "'");
+      log.error("isbnType = '" + isbnType + "'");
+      log.error("SQL = '" + REMOVE_ISBN + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(deleteStatement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
+  }
+
+  /**
+   * Updates an ISBN.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param originalIsbn
+   *          A String with the original ISBN.
+   * @param isbnType
+   *          A String with the ISBN type.
+   * @param newIsbn
+   *          A String with the new ISBN.
+   * @return an int with the count of rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private int updateIsbn(Connection conn, Long mdItemSeq, String originalIsbn,
+      String isbnType, String newIsbn) throws SQLException {
+    final String DEBUG_HEADER = "updateIsbn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "originalIsbn = '" + originalIsbn + "'");
+      log.debug2(DEBUG_HEADER + "isbnType = '" + isbnType + "'");
+      log.debug2(DEBUG_HEADER + "newIsbn = '" + newIsbn + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int count;
+
+    PreparedStatement updateStatement =
+	prepareStatement(conn, UPDATE_ISBN_FOR_MD_ITEM_AND_TYPE_QUERY);
+
+    try {
+      updateStatement.setString(1, newIsbn);
+      updateStatement.setLong(2, mdItemSeq);
+      updateStatement.setString(3, originalIsbn);
+      updateStatement.setString(4, isbnType);
+
+      count = executeUpdate(updateStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update ISBN", sqle);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("originalIsbn = '" + originalIsbn + "'");
+      log.error("isbnType = '" + isbnType + "'");
+      log.error("newIsbn = '" + newIsbn + "'");
+      log.error("SQL = '" + UPDATE_ISBN_FOR_MD_ITEM_AND_TYPE_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot update ISBN", re);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("originalIsbn = '" + originalIsbn + "'");
+      log.error("isbnType = '" + isbnType + "'");
+      log.error("newIsbn = '" + newIsbn + "'");
+      log.error("SQL = '" + UPDATE_ISBN_FOR_MD_ITEM_AND_TYPE_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(updateStatement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
+  }
+
+  /**
+   * Converts ISSNs to upper case, if necessary.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  private void convertIssnsToUpperCase(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "convertIssnsToUpperCase(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    boolean done = false;
+
+    try {
+      // Keep going while there are ISSNs that need processing.
+      while (!done) {
+	// Get ISSNs in the database that need processing.
+	statement = prepareStatement(conn, FIND_LOWER_CASE_ISSNS_QUERY);
+	statement.setMaxRows(500);
+	resultSet = executeQuery(statement);
+
+	// If no more ISSNs are found, the process is known to be finished.
+	done = true;
+
+	// Loop through all the ISSNs found.
+	while (resultSet.next()) {
+	  // An ISSN is found, so the process is not known to be finished.
+	  done = false;
+
+	  // Get the item identifier.
+	  Long mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	  // Get the ISSN.
+	  String issn = resultSet.getString(ISSN_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issn = " + issn);
+
+	  // Get the ISSN type.
+	  String issnType = resultSet.getString(ISSN_TYPE_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "issnType = " + issnType);
+
+	  // Check whether the upper case version of the ISSN already exists.
+	  if (findMdItemTypedIssn(conn, mdItemSeq, issn.toUpperCase(),
+	      issnType) != null) {
+	    // Yes: Delete the lower case version.
+	    int count = removeIssn(conn, mdItemSeq, issn, issnType);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	    if (count != 1) {
+	      log.error("Removing ISSN = " + issn + " (because "
+		  + issn.toUpperCase()
+		  + " already exists) resulted in a count of " + count
+		  + " not the expected 1.");
+	    }
+	  } else {
+	    // No: Update it to upper case.
+	    int count =
+		updateIssn(conn, mdItemSeq, issn, issnType, issn.toUpperCase());
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	    if (count != 1) {
+	      log.error("Updating ISSN = " + issn + " to " + issn.toUpperCase()
+		  + " resulted in a count of " + count
+		  + " not the expected 1.");
+	    }
+	  }
+	}
+
+	JdbcBridge.commitOrRollback(conn, log);
+	JdbcBridge.safeCloseResultSet(resultSet);
+	JdbcBridge.safeCloseStatement(statement);
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot convert ISSNs to upper case", sqle);
+      log.error("SQL = '" + FIND_LOWER_CASE_ISSNS_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot convert ISSNs to upper case", re);
+      log.error("SQL = '" + FIND_LOWER_CASE_ISSNS_QUERY + "'.");
+      throw re;
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Finds a row in the ISSN table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param issn
+   *          A String with the ISSN.
+   * @param issnType
+   *          A String with the ISSN type.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private String findMdItemTypedIssn(Connection conn, Long mdItemSeq,
+      String issn, String issnType) throws SQLException {
+    final String DEBUG_HEADER = "findMdItemTypedIssn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "issn = '" + issn + "'");
+      log.debug2(DEBUG_HEADER + "issnType = '" + issnType + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    String result = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findIssn =
+	prepareStatement(conn, FIND_MD_ITEM_TYPED_ISSN_QUERY);
+
+    try {
+      findIssn.setLong(1, mdItemSeq);
+      findIssn.setString(2, issn);
+      findIssn.setString(3, issnType);
+
+      resultSet = executeQuery(findIssn);
+      if (resultSet.next()) {
+	result = resultSet.getString(ISSN_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find ISSN", sqle);
+      log.error("SQL = '" + FIND_MD_ITEM_TYPED_ISSN_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("issn = '" + issn + "'");
+      log.error("issnType = '" + issnType + "'");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot find ISSN", re);
+      log.error("SQL = '" + FIND_MD_ITEM_TYPED_ISSN_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("issn = '" + issn + "'");
+      log.error("issnType = '" + issnType + "'");
+      throw re;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findIssn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Removes a row from the ISSN table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param issn
+   *          A String with the ISSN.
+   * @param issnType
+   *          A String with the ISSN type.
+   * @return an int with the count of rows deleted.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private int removeIssn(Connection conn, Long mdItemSeq, String issn,
+      String issnType) throws SQLException {
+    final String DEBUG_HEADER = "removeIssn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "issn = '" + issn + "'");
+      log.debug2(DEBUG_HEADER + "issnType = '" + issnType + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int count;
+
+    PreparedStatement deleteStatement = prepareStatement(conn, REMOVE_ISSN);
+
+    try {
+      deleteStatement.setLong(1, mdItemSeq);
+      deleteStatement.setString(2, issn);
+      deleteStatement.setString(3, issnType);
+
+      count = executeUpdate(deleteStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot delete ISSN", sqle);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("issn = '" + issn + "'");
+      log.error("issnType = '" + issnType + "'");
+      log.error("SQL = '" + REMOVE_ISSN + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot delete ISSN", re);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("issn = '" + issn + "'");
+      log.error("issnType = '" + issnType + "'");
+      log.error("SQL = '" + REMOVE_ISSN + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(deleteStatement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
+  }
+
+  /**
+   * Updates an ISSN.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param originalIssn
+   *          A String with the original ISSN.
+   * @param issnType
+   *          A String with the ISSN type.
+   * @param newIssn
+   *          A String with the new ISSN.
+   * @return an int with the count of rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private int updateIssn(Connection conn, Long mdItemSeq, String originalIssn,
+      String issnType, String newIssn) throws SQLException {
+    final String DEBUG_HEADER = "updateIssn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "originalIssn = '" + originalIssn + "'");
+      log.debug2(DEBUG_HEADER + "issnType = '" + issnType + "'");
+      log.debug2(DEBUG_HEADER + "newIssn = '" + newIssn + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int count;
+
+    PreparedStatement updateStatement =
+	prepareStatement(conn, UPDATE_ISSN_FOR_MD_ITEM_AND_TYPE_QUERY);
+
+    try {
+      updateStatement.setString(1, newIssn);
+      updateStatement.setLong(2, mdItemSeq);
+      updateStatement.setString(3, originalIssn);
+      updateStatement.setString(4, issnType);
+
+      count = executeUpdate(updateStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update ISSN", sqle);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("originalIssn = '" + originalIssn + "'");
+      log.error("issnType = '" + issnType + "'");
+      log.error("newIssn = '" + newIssn + "'");
+      log.error("SQL = '" + UPDATE_ISSN_FOR_MD_ITEM_AND_TYPE_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot update ISSN", re);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("originalIssn = '" + originalIssn + "'");
+      log.error("issnType = '" + issnType + "'");
+      log.error("newIssn = '" + newIssn + "'");
+      log.error("SQL = '" + UPDATE_ISSN_FOR_MD_ITEM_AND_TYPE_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(updateStatement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
+  }
+
+  /**
+   * Converts DOIs to lower case, if necessary.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  private void convertDoisToLowerCase(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "convertDoisToLowerCase(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    boolean done = false;
+
+    try {
+      // Keep going while there are DOIs that need processing.
+      while (!done) {
+	// Get DOIs in the database that need processing.
+	statement = prepareStatement(conn, FIND_UPPER_CASE_DOIS_QUERY);
+	statement.setMaxRows(500);
+	resultSet = executeQuery(statement);
+
+	// If no more DOIs are found, the process is known to be finished.
+	done = true;
+
+	// Loop through all the DOIs found.
+	while (resultSet.next()) {
+	  // A DOI is found, so the process is not known to be finished.
+	  done = false;
+
+	  // Get the item identifier.
+	  Long mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	  // Get the DOI.
+	  String doi = resultSet.getString(DOI_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "doi = " + doi);
+
+	  // Check whether the lower case version of the DOI already exists.
+	  if (findMdItemDoi(conn, mdItemSeq, doi.toLowerCase()) != null) {
+	    // Yes: Delete the upper case version.
+	    int count = removeDoi(conn, mdItemSeq, doi);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	    if (count != 1) {
+	      log.error("Removing DOI = " + doi + " (because "
+		  + doi.toLowerCase()
+		  + " already exists) resulted in a count of " + count
+		  + " not the expected 1.");
+	    }
+	  } else {
+	    // No: Update it to lower case.
+	    int count = updateDoi(conn, mdItemSeq, doi, doi.toLowerCase());
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	    if (count != 1) {
+	      log.error("Updating DOI = " + doi + " to " + doi.toLowerCase()
+		  + " resulted in a count of " + count
+		  + " not the expected 1.");
+	    }
+	  }
+	}
+
+	JdbcBridge.commitOrRollback(conn, log);
+	JdbcBridge.safeCloseResultSet(resultSet);
+	JdbcBridge.safeCloseStatement(statement);
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot convert DOIs to lower case", sqle);
+      log.error("SQL = '" + FIND_UPPER_CASE_DOIS_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot convert DOIs to upper case", re);
+      log.error("SQL = '" + FIND_UPPER_CASE_DOIS_QUERY + "'.");
+      throw re;
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Finds a row in the DOI table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param doi
+   *          A String with the DOI.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private String findMdItemDoi(Connection conn, Long mdItemSeq, String doi)
+      throws SQLException {
+    final String DEBUG_HEADER = "findMdItemDoi(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "doi = '" + doi + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    String result = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findDoi = prepareStatement(conn, FIND_MD_ITEM_DOI_QUERY);
+
+    try {
+      findDoi.setLong(1, mdItemSeq);
+      findDoi.setString(2, doi);
+
+      resultSet = executeQuery(findDoi);
+      if (resultSet.next()) {
+	result = resultSet.getString(DOI_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find DOI", sqle);
+      log.error("SQL = '" + FIND_MD_ITEM_DOI_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("doi = '" + doi + "'");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot find DOI", re);
+      log.error("SQL = '" + FIND_MD_ITEM_DOI_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("doi = '" + doi + "'");
+      throw re;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findDoi);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Removes a row from the DOI table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param doi
+   *          A String with the DOI.
+   * @return an int with the count of rows deleted.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private int removeDoi(Connection conn, Long mdItemSeq, String doi)
+      throws SQLException {
+    final String DEBUG_HEADER = "removeDoi(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "doi = '" + doi + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int count;
+
+    PreparedStatement deleteStatement = prepareStatement(conn, REMOVE_DOI);
+
+    try {
+      deleteStatement.setLong(1, mdItemSeq);
+      deleteStatement.setString(2, doi);
+
+      count = executeUpdate(deleteStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot delete DOI", sqle);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("doi = '" + doi + "'");
+      log.error("SQL = '" + REMOVE_DOI + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot delete DOI", re);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("doi = '" + doi + "'");
+      log.error("SQL = '" + REMOVE_DOI + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(deleteStatement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
+  }
+
+  /**
+   * Updates an DOI.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param originalDoi
+   *          A String with the original DOI.
+   * @param newDoi
+   *          A String with the new DOI.
+   * @return an int with the count of rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private int updateDoi(Connection conn, Long mdItemSeq, String originalDoi,
+      String newDoi) throws SQLException {
+    final String DEBUG_HEADER = "updateDoi(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "originalDoi = '" + originalDoi + "'");
+      log.debug2(DEBUG_HEADER + "newDoi = '" + newDoi + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int count;
+
+    PreparedStatement updateStatement =
+	prepareStatement(conn, UPDATE_DOI_FOR_MD_ITEM_QUERY);
+
+    try {
+      updateStatement.setString(1, newDoi);
+      updateStatement.setLong(2, mdItemSeq);
+      updateStatement.setString(3, originalDoi);
+
+      count = executeUpdate(updateStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update DOI", sqle);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("originalDoi = '" + originalDoi + "'");
+      log.error("newDoi = '" + newDoi + "'");
+      log.error("SQL = '" + UPDATE_DOI_FOR_MD_ITEM_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot update DOI", re);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("originalDoi = '" + originalDoi + "'");
+      log.error("newDoi = '" + newDoi + "'");
+      log.error("SQL = '" + UPDATE_DOI_FOR_MD_ITEM_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(updateStatement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
   }
 }

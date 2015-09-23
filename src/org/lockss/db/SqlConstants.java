@@ -162,6 +162,10 @@ public class SqlConstants {
   /** Name of the publication proprietary identifier table. */
   public static final String PROPRIETARY_ID_TABLE = "proprietary_id";
 
+  /** Name of the publisher subscription table. */
+  public static final String PUBLISHER_SUBSCRIPTION_TABLE =
+      "publisher_subscription";
+
   //
   // Database table column names.
   //
@@ -413,6 +417,10 @@ public class SqlConstants {
   public static final String PROVIDER_SEQ_COLUMN = "provider_seq";
   public static final String PROVIDER_LID_COLUMN = "provider_lid";
   public static final String PROVIDER_NAME_COLUMN = "provider_name";
+
+  /** Publisher subscription identifier column. */
+  public static final String PUBLISHER_SUBSCRIPTION_SEQ_COLUMN =
+      "publisher_subscription_seq";
 
   //
   // Maximum lengths of variable text length database columns.
