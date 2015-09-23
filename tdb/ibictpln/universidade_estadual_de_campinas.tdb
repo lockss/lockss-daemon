@@ -448,31 +448,31 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = resgate
 
-      au < testing ; 1990 ; 1 ; Resgate Volume 1990 ; 1990 ; >
-      au < testing ; 1991 ; 2 ; Resgate Volume 1991 ; 1991 ; >
-      au < testing ; 1992 ; 3 ; Resgate Volume 1992 ; 1992 ; >
-      au < testing ; 1993 ; 4 ; Resgate Volume 1993 ; 1993 ; >
+      au < ready ; 1990 ; 1 ; Resgate Volume 1990 ; 1990 ; >
+      au < ready ; 1991 ; 2 ; Resgate Volume 1991 ; 1991 ; >
+      au < ready ; 1992 ; 3 ; Resgate Volume 1992 ; 1992 ; >
+      au < ready ; 1993 ; 4 ; Resgate Volume 1993 ; 1993 ; >
       au < exists ; 1994 ; 5 ; Resgate Volume 1994 ; 1994 ; >
       au < exists ; 1995 ; 6 ; Resgate Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 7 ; Resgate Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 8 ; Resgate Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 9 ; Resgate Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 10 ; Resgate Volume 1999 ; 1999 ; >
+      au < ready ; 1996 ; 7 ; Resgate Volume 1996 ; 1996 ; >
+      au < ready ; 1997 ; 8 ; Resgate Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 9 ; Resgate Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 10 ; Resgate Volume 1999 ; 1999 ; >
       au < exists ; 2000 ; 11 ; Resgate Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 12 ; Resgate Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 13 ; Resgate Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 14 ; Resgate Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 15 ; Resgate Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 16 ; Resgate Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 17 ; Resgate Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 18 ; Resgate Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 19 ; Resgate Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 20 ; Resgate Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 21 ; Resgate Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 22 ; Resgate Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 23 ; Resgate Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 24 ; Resgate Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 25 ; Resgate Volume 2014 ; 2014 ; >
+      au < ready ; 2001 ; 12 ; Resgate Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 13 ; Resgate Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 14 ; Resgate Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 15 ; Resgate Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 16 ; Resgate Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 17 ; Resgate Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 18 ; Resgate Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 19 ; Resgate Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 20 ; Resgate Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 21 ; Resgate Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 22 ; Resgate Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 23 ; Resgate Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 24 ; Resgate Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 25 ; Resgate Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 26 ; Resgate Volume 2015 ; 2015 ; >
 
   }
