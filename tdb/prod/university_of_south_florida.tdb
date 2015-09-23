@@ -102,6 +102,34 @@
   {
   
     title <
+      name = Journal of Public Transportation ;
+      issn = 1077-291X ;
+      eissn = 2375-0901 ;
+      issnl = 1077-291X
+    >
+
+    param[journal_abbr] = jpt
+
+    au < exists ; 2002 ; Journal of Public Transportation Volume 5 ; 5 >
+    au < exists ; 2003 ; Journal of Public Transportation Volume 6 ; 6 >
+    au < exists ; 2004 ; Journal of Public Transportation Volume 7 ; 7 >
+    au < exists ; 2005 ; Journal of Public Transportation Volume 8 ; 8 >
+    au < exists ; 2006 ; Journal of Public Transportation Volume 9 ; 9 >
+    au < exists ; 2007 ; Journal of Public Transportation Volume 10 ; 10 >
+    au < exists ; 2008 ; Journal of Public Transportation Volume 11 ; 11 >
+    au < exists ; 2009 ; Journal of Public Transportation Volume 12 ; 12 >
+    au < exists ; 2010 ; Journal of Public Transportation Volume 13 ; 13 >
+    au < exists ; 2011 ; Journal of Public Transportation Volume 14 ; 14 >
+    au < exists ; 2012 ; Journal of Public Transportation Volume 15 ; 15 >
+    au < exists ; 2013 ; Journal of Public Transportation Volume 16 ; 16 >
+    au < exists ; 2014 ; Journal of Public Transportation Volume 17 ; 17 >
+    au < exists ; 2015 ; Journal of Public Transportation Volume 18 ; 18 >
+
+  }
+
+  {
+  
+    title <
       name = Numeracy ;
       eissn = 1936-4660 ;
       issnl = 1936-4660
