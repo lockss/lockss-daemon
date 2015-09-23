@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,7 +46,7 @@ import org.lockss.util.MetadataUtil;
 public class SerialPublication {
   private static final Logger log = Logger.getLogger(SerialPublication.class);
 
-  private Integer publicationNumber;
+  private Long publicationNumber;
   private String publicationName;
   private String providerLid;
   private String providerName;
@@ -57,11 +57,11 @@ public class SerialPublication {
   private TdbTitle tdbTitle;
   private String uniqueName;
 
-  public Integer getPublicationNumber() {
+  public Long getPublicationNumber() {
     return publicationNumber;
   }
 
-  public void setPublicationNumber(Integer publicationNumber) {
+  public void setPublicationNumber(Long publicationNumber) {
     this.publicationNumber = publicationNumber;
   }
 

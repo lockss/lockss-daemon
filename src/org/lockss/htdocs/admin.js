@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -242,30 +242,47 @@ function toggleElements(id1, id2) {
   }
 }
 
-// Toggles the ability of a slave element through the selection of a master
-// check box element, so that the slave element is disabled when the master
-// check box is enabled and vice versa.
-function selectDisable1(master, slaveId) {
-	var masterChecked = master.checked;
-	var slave = document.getElementById(slaveId);
+// Toggles the ability of two subscription slave elements through the selection
+// of a master publication subscription tribox element.
+function publicationSubscriptionChanged(pubSubId, subscribedRangesId,
+		unsubscribedRangesId) {
+	// The publication subscription tribox.
+	var pubSub = document.getElementById(pubSubId);
 
-	if (slave !== undefined) {
-		slave.disabled = masterChecked;
+	// The subscribed ranges input box.
+	var subscribedRanges = document.getElementById(subscribedRangesId);
+
+	// The unsubscribed ranges input box.
+	var unsubscribedRanges = document.getElementById(unsubscribedRangesId);
+
+	// Check whether the publication subscription is changing to "Not Set".
+	if (pubSub.value == "false") {
+		// Yes: Enable both ranges.
+		if (subscribedRanges !== undefined) {
+			subscribedRanges.disabled = false;
+		}
+		if (unsubscribedRanges !== undefined) {
+			unsubscribedRanges.disabled = false;
+		}
+		return;
 	}
-}
 
-// Toggles the ability of two slave elements through the selection of a master
-// check box element, so that the slave elements are disabled when the master
-// check box is enabled and vice versa.
-function selectDisable2(master, slaveId1, slaveId2) {
-	selectDisable1(master, slaveId1);
-	selectDisable1(master, slaveId2);
-}
+	// No: Disable the subscribed ranges.
+	if (subscribedRanges !== undefined) {
+		subscribedRanges.disabled = true;
+	}
 
-// Toggles the ability of three slave elements through the selection of a master
-// check box element, so that the slave elements are disabled when the master
-// check box is enabled and vice versa.
-function selectDisable3(master, slaveId1, slaveId2, slaveId3) {
-	selectDisable2(master, slaveId1, slaveId2);
-	selectDisable1(master, slaveId3);
+	// Check whether the publication subscription is changing to "Unsubscribe
+	// All".
+	if (pubSub.value == "true") {
+		// Yes: Disable the unsubscribed ranges.
+		if (unsubscribedRanges !== undefined) {
+			unsubscribedRanges.disabled = true;
+		}
+	} else {
+		// No: Enable the unsubscribed ranges.
+		if (unsubscribedRanges !== undefined) {
+			unsubscribedRanges.disabled = false;
+		}
+	}
 }
