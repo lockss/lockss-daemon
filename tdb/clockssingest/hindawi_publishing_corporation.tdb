@@ -1140,7 +1140,7 @@
 
     param[journal_id] = apsy
 
-    au < testing ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3476,7 +3476,7 @@
     param[journal_id] = ijcp
 
     au < manifest ; exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 >
+    au < ready ; exists ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5173,7 +5173,7 @@
 
     param[journal_id] = jcv
     
-    au < testing ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
+    au < ready ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Journal of Calculus of Variations Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Calculus of Variations Volume 2015 ; 2015 ; 2015 >
 
@@ -7019,7 +7019,7 @@
 
     param[journal_id] = jsb
 
-    au < testing ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8281,7 +8281,7 @@
 
     param[journal_id] = sb
 
-    au < testing ; exists ; 2013 ; Structural Biology Volume 2013 ; 2013 ; 2013 >
+    au < ready ; exists ; 2013 ; Structural Biology Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Structural Biology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Structural Biology Volume 2015 ; 2015 ; 2015 >
 
