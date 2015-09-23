@@ -44,9 +44,8 @@
     >
 
     param[base_url] = http://futurehospital.rcpjournal.org/
-    comment[notReady] = login required
 
-    au < notReady ; 2014 ; Future Hospital Journal Volume 1 ; 1 >
+    au < ready ; 2014 ; Future Hospital Journal Volume 1 ; 1 >
     au < manifest ; 2015 ; Future Hospital Journal Volume 2 ; 2 >
     
   }
