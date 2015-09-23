@@ -320,10 +320,18 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
             // Apply link extractor to URL and output results into a list
             final List<String> partial = new ArrayList<String>();
             try {
+              String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
+              String cset = CharsetUtil.guessCharsetFromStream(fud.input,au_cset);
+              //FIXME 1.69 
+              // Once guessCharsetFromStream correctly uses the hint instead of returning null
+              // this local bit won't be needed.
+              if (cset == null) {
+                cset = au_cset;
+              }
+              //
               ple.extractUrls(au,
                               fud.input,
-                              CharsetUtil.guessCharsetFromStream(fud.input,
-                                                                 AuUtil.getCharsetOrDefault(fud.headers)),
+                              cset,
                               loggerUrl, // rather than fud.origUrl
                               new Callback() {
                                 @Override
