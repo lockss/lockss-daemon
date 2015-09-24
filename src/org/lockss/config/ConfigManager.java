@@ -146,6 +146,12 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_AUX_PROP_URLS =
     Configuration.PREFIX + "auxPropUrls";
 
+  /** false disables SSL SNI name checking, compatible with Java 6 and
+   * misconfigured servers. */
+  public static final String PARAM_JSSE_ENABLESNIEXTENSION =
+    PREFIX + "jsse.enableSNIExtension";
+  static final boolean DEFAULT_JSSE_ENABLESNIEXTENSION = false;
+
   /** Parameters whose values are more prop URLs */
   static final Set URL_PARAMS =
     SetUtil.set(PARAM_USER_TITLE_DB_URLS,
@@ -1305,7 +1311,9 @@ public class ConfigManager implements LockssManager {
       String javaTmpDir = new File(tmpdir, "dtmp").toString();
       System.setProperty("java.io.tmpdir", javaTmpDir);
     }
-
+    System.setProperty("jsse.enableSNIExtension",
+		       Boolean.toString(config.getBoolean(PARAM_JSSE_ENABLESNIEXTENSION,
+							  DEFAULT_JSSE_ENABLESNIEXTENSION)));
     String fromParam = LockssDaemon.PARAM_BIND_ADDRS;
     setIfNotSet(config, fromParam, AdminServletManager.PARAM_BIND_ADDRS);
     setIfNotSet(config, fromParam, ContentServletManager.PARAM_BIND_ADDRS);
