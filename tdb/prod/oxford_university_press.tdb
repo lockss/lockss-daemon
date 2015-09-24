@@ -7103,6 +7103,33 @@
   {
 
     title <
+      name = Foreign Policy Analysis ;
+      issn = 1743-8586 ;
+      eissn = 1743-8594 ;
+      issnl = 1743-8586 
+    >
+
+    param[base_url] = http://fpa.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2005 ; Foreign Policy Analysis Volume 1 ; 1 >
+    au < exists ; 2006 ; Foreign Policy Analysis Volume 2 ; 2 >
+    au < exists ; 2007 ; Foreign Policy Analysis Volume 3 ; 3 >
+    au < exists ; 2008 ; Foreign Policy Analysis Volume 4 ; 4 >
+    au < exists ; 2009 ; Foreign Policy Analysis Volume 5 ; 5 >
+    au < exists ; 2010 ; Foreign Policy Analysis Volume 6 ; 6 >
+    au < exists ; 2011 ; Foreign Policy Analysis Volume 7 ; 7 >
+    au < exists ; 2012 ; Foreign Policy Analysis Volume 8 ; 8 >
+    au < exists ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 >
+    au < exists ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 >
+    au < exists ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
       name = Forest & Conservation History ;
       eissn = 1046-7009
     >
@@ -10468,6 +10495,31 @@
   {
 
     title <
+      name = International Political Sociology ;
+      issn = 1749-5679 ;
+      eissn = 1749-5687 ;
+      issnl = 1749-5679 
+    >
+
+    param[base_url] = http://ips.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2007 ; International Political Sociology Volume 1 ; 1 >
+    au < exists ; 2008 ; International Political Sociology Volume 2 ; 2 >
+    au < exists ; 2009 ; International Political Sociology Volume 3 ; 3 >
+    au < exists ; 2010 ; International Political Sociology Volume 4 ; 4 >
+    au < exists ; 2011 ; International Political Sociology Volume 5 ; 5 >
+    au < exists ; 2012 ; International Political Sociology Volume 6 ; 6 >
+    au < exists ; 2013 ; International Political Sociology Volume 7 ; 7 >
+    au < exists ; 2014 ; International Political Sociology Volume 8 ; 8 >
+    au < exists ; 2015 ; International Political Sociology Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
       name = International Relations of the Asia-Pacific ;
       issn = 1470-482X ;
       eissn = 1470-4838 ;
@@ -10509,6 +10561,104 @@
     au < HighWirePressH20Plugin ; manifest ; 2015 ; International Relations of the Asia-Pacific Volume 15 ; 15 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = International Studies Perspectives ;
+      issn = 1528-3577 ;
+      eissn = 1528-3585 ;
+      issnl = 1528-3577 
+    >
+
+    param[base_url] = http://isp.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2000 ; International Studies Perspectives Volume 1 ; 1 >
+    au < exists ; 2001 ; International Studies Perspectives Volume 2 ; 2 >
+    au < exists ; 2002 ; International Studies Perspectives Volume 3 ; 3 >
+    au < exists ; 2003 ; International Studies Perspectives Volume 4 ; 4 >
+    au < exists ; 2004 ; International Studies Perspectives Volume 5 ; 5 >
+    au < exists ; 2005 ; International Studies Perspectives Volume 6 ; 6 >
+    au < exists ; 2006 ; International Studies Perspectives Volume 7 ; 7 >
+    au < exists ; 2007 ; International Studies Perspectives Volume 8 ; 8 >
+    au < exists ; 2008 ; International Studies Perspectives Volume 9 ; 9 >
+    au < exists ; 2009 ; International Studies Perspectives Volume 10 ; 10 >
+    au < exists ; 2010 ; International Studies Perspectives Volume 11 ; 11 >
+    au < exists ; 2011 ; International Studies Perspectives Volume 12 ; 12 >
+    au < exists ; 2012 ; International Studies Perspectives Volume 13 ; 13 >
+    au < exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 >
+    au < exists ; 2014 ; International Studies Perspectives Volume 15 ; 15 >
+    au < exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = International Studies Quarterly ;
+      issn = 0020-8833 ;
+      eissn = 1468-2478 ;
+      issnl = 0020-8833 
+    >
+
+    param[base_url] = http://isq.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    #content available from 1967 volume 11 to 1999 volume 43
+
+    au < exists ; 2000 ; International Studies Quarterly Volume 44 ; 44 >
+    au < exists ; 2001 ; International Studies Quarterly Volume 45 ; 45 >
+    au < exists ; 2002 ; International Studies Quarterly Volume 46 ; 46 >
+    au < exists ; 2003 ; International Studies Quarterly Volume 47 ; 47 >
+    au < exists ; 2004 ; International Studies Quarterly Volume 48 ; 48 >
+    au < exists ; 2005 ; International Studies Quarterly Volume 49 ; 49 >
+    au < exists ; 2006 ; International Studies Quarterly Volume 50 ; 50 >
+    au < exists ; 2007 ; International Studies Quarterly Volume 51 ; 51 >
+    au < exists ; 2008 ; International Studies Quarterly Volume 52 ; 52 >
+    au < exists ; 2009 ; International Studies Quarterly Volume 53 ; 53 >
+    au < exists ; 2010 ; International Studies Quarterly Volume 54 ; 54 >
+    au < exists ; 2011 ; International Studies Quarterly Volume 55 ; 55 >
+    au < exists ; 2012 ; International Studies Quarterly Volume 56 ; 56 >
+    au < exists ; 2013 ; International Studies Quarterly Volume 57 ; 57 >
+    au < exists ; 2014 ; International Studies Quarterly Volume 58 ; 58 >
+    au < exists ; 2015 ; International Studies Quarterly Volume 59 ; 59 >
+
+  }
+
+  {
+
+    title <
+      name = International Studies Review ;
+      issn = 1521-9488 ;
+      eissn = 1468-2486 ;
+      issnl = 1521-9488 
+    >
+
+    param[base_url] = http://isr.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1999 ; International Studies Review Volume 1 ; 1 >
+    au < exists ; 2000 ; International Studies Review Volume 2 ; 2 >
+    au < exists ; 2001 ; International Studies Review Volume 3 ; 3 >
+    au < exists ; 2002 ; International Studies Review Volume 4 ; 4 >
+    au < exists ; 2003 ; International Studies Review Volume 5 ; 5 >
+    au < exists ; 2004 ; International Studies Review Volume 6 ; 6 >
+    au < exists ; 2005 ; International Studies Review Volume 7 ; 7 >
+    au < exists ; 2006 ; International Studies Review Volume 8 ; 8 >
+    au < exists ; 2007 ; International Studies Review Volume 9 ; 9 >
+    au < exists ; 2008 ; International Studies Review Volume 10 ; 10 >
+    au < exists ; 2009 ; International Studies Review Volume 11 ; 11 >
+    au < exists ; 2010 ; International Studies Review Volume 12 ; 12 >
+    au < exists ; 2011 ; International Studies Review Volume 13 ; 13 >
+    au < exists ; 2012 ; International Studies Review Volume 14 ; 14 >
+    au < exists ; 2013 ; International Studies Review Volume 15 ; 15 >
+    au < exists ; 2014 ; International Studies Review Volume 16 ; 16 >
+    au < exists ; 2015 ; International Studies Review Volume 17 ; 17 >
 
   }
 
@@ -16069,6 +16219,26 @@
     au < HighWirePressH20Plugin ; ready ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; ready ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 ; 40 >
+
+  }
+
+  {
+
+    title <
+      name = Mershon International Studies Review ;
+      issn = 1079-1760 ;
+      issnl = 1079-1760 
+    >
+
+    param[base_url] = http://misr.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1994 ; Mershon International Studies Review Volume 38 ; 38 >
+    au < exists ; 1995 ; Mershon International Studies Review Volume 39 ; 39 >
+    au < exists ; 1996 ; Mershon International Studies Review Volume 40 ; 40 >
+    au < exists ; 1997 ; Mershon International Studies Review Volume 41 ; 41 >
+    au < exists ; 1998 ; Mershon International Studies Review Volume 42 ; 42 >
 
   }
 
