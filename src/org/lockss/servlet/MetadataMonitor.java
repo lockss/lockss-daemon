@@ -125,6 +125,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the names of Archival Units with an unknown provider";
   private static final String LIST_UNKNOWN_PROVIDER_AUS_HEADER =
       "Archival Units With Unknown Provider";
+  private static final String LIST_MISMATCHED_PARENT_TO_CHILDREN_LINK =
+      "Children Mismatched To Parents";
+  private static final String LIST_MISMATCHED_PARENT_TO_CHILDREN_ACTION =
+      "listMismatchedParentToChildren";
+  private static final String LIST_MISMATCHED_PARENT_TO_CHILDREN_HELP =
+      "Lists the children whose parents are of the wrong type";
+  private static final String LIST_MISMATCHED_PARENT_TO_CHILDREN_HEADER =
+      "Children Mismatched To Parents";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -184,6 +192,8 @@ public class MetadataMonitor extends LockssServlet {
 	listMismatchedPublicationTypeIsbsns();
       } else if (LIST_UNKNOWN_PROVIDER_AUS_ACTION.equals(action)) {
 	listUnknownProviderAus();
+      } else if (LIST_MISMATCHED_PARENT_TO_CHILDREN_ACTION.equals(action)) {
+	listMismatchedParentToChildren();
       } else {
 	displayMainPage();
       }
@@ -267,6 +277,12 @@ public class MetadataMonitor extends LockssServlet {
 	ACTION + LIST_UNKNOWN_PROVIDER_AUS_ACTION,
 	LIST_UNKNOWN_PROVIDER_AUS_HELP));
 
+    // List the children whose parents are of the wrong type.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_MISMATCHED_PARENT_TO_CHILDREN_LINK,
+	ACTION + LIST_MISMATCHED_PARENT_TO_CHILDREN_ACTION,
+	LIST_MISMATCHED_PARENT_TO_CHILDREN_HELP));
+
     return list.iterator();
   }
 
@@ -333,6 +349,24 @@ public class MetadataMonitor extends LockssServlet {
    */
   private void makeTablePage(String heading, Table results1, Table results2)
       throws IOException {
+    makeTablePage(heading, results1, results2, null);
+  }
+
+  /**
+   * Creates a page with three tables of results.
+   * 
+   * @param heading
+   *          A String with the page heading.
+   * @param results1
+   *          A Table with the first results to be displayed.
+   * @param results2
+   *          A Table with the second results to be displayed.
+   * @param results3
+   *          A Table with the last results to be displayed.
+   * @throws IOException
+   */
+  private void makeTablePage(String heading, Table results1, Table results2,
+      Table results3) throws IOException {
     final String DEBUG_HEADER = "makeTablePage(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "heading = " + heading);
 
@@ -357,6 +391,15 @@ public class MetadataMonitor extends LockssServlet {
       mainTable.newCell();
 
       mainTable.add(results2);
+
+      if (results3 != null) {
+	mainTable.newRow();
+	mainTable.newCell();
+	mainTable.newRow();
+	mainTable.newCell();
+
+	mainTable.add(results3);
+      }
     }
 
     Composite comp = new Block(Block.Center);
@@ -958,6 +1001,161 @@ public class MetadataMonitor extends LockssServlet {
     }
 
     makeTablePage(LIST_UNKNOWN_PROVIDER_AUS_HEADER, results);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the children whose parents are of the wrong type.
+   * 
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listMismatchedParentToChildren()
+      throws DbException, IOException {
+    final String DEBUG_HEADER = "listMismatchedParentToChildren(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String attributes = "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the journal articles table.
+    Table results1 = new Table(0, attributes);
+    results1.newRow();
+    results1.newCell("align=\"center\" class=\"colhead\"");
+    results1.add("Journal Article Title");
+    results1.newCell("align=\"center\" class=\"colhead\"");
+    results1.add("Parent Title");
+    results1.newCell("align=\"center\" class=\"colhead\"");
+    results1.add("Parent Type");
+    results1.newCell("align=\"center\" class=\"colhead\"");
+    results1.add("AU Key");
+
+    // Get the journal articles not linked to journals.
+    Collection<Map<String, String>> mismatchedArticles =
+	mdManager.getMismatchedParentJournalArticles();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "mismatchedArticles.size() = " + mismatchedArticles.size());
+
+    // Check whether there are results to display.
+    if (mismatchedArticles.size() > 0) {
+      // Yes: Loop through the articles.
+      for (Map<String, String> articleData : mismatchedArticles) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "articleData = " + articleData);
+
+	results1.newRow();
+	results1.newCell("align=\"center\"");
+	results1.add(articleData.get("col1"));
+	results1.newCell("align=\"center\"");
+	results1.add(articleData.get("col2"));
+	results1.newCell("align=\"center\"");
+	results1.add(articleData.get("col3"));
+	results1.newCell("align=\"center\"");
+	results1.add(articleData.get("col4"));
+      }
+    } else {
+      // No.
+      results1.newRow();
+      results1.newCell();
+      results1.add("");
+      results1.newRow();
+      results1.newCell("colspan=\"4\" align=\"center\"");
+      results1.add("No journal articles have a mismatched parent");
+    }
+
+    // Create the book chapters table.
+    Table results2 = new Table(0, attributes);
+    results2.newRow();
+    results2.newCell("align=\"center\" class=\"colhead\"");
+    results2.add("Book Chapter Title");
+    results2.newCell("align=\"center\" class=\"colhead\"");
+    results2.add("Parent Title");
+    results2.newCell("align=\"center\" class=\"colhead\"");
+    results2.add("Parent Type");
+    results2.newCell("align=\"center\" class=\"colhead\"");
+    results2.add("AU Key");
+
+    // Get the book chapters not linked to books or book series.
+    Collection<Map<String, String>> mismatchedChapters =
+	mdManager.getMismatchedParentBookChapters();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mismatchedChapters.size() = "
+	+ mismatchedChapters.size());
+
+    // Check whether there are results to display.
+    if (mismatchedChapters.size() > 0) {
+      // Yes: Loop through the chapters.
+      for (Map<String, String> chapterData : mismatchedChapters) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "chapterData = " + chapterData);
+
+	results2.newRow();
+	results2.newCell("align=\"center\"");
+	results2.add(chapterData.get("col1"));
+	results2.newCell("align=\"center\"");
+	results2.add(chapterData.get("col2"));
+	results2.newCell("align=\"center\"");
+	results2.add(chapterData.get("col3"));
+	results2.newCell("align=\"center\"");
+	results2.add(chapterData.get("col4"));
+      }
+    } else {
+      // No.
+      results2.newRow();
+      results2.newCell();
+      results2.add("");
+      results2.newRow();
+      results2.newCell("colspan=\"4\" align=\"center\"");
+      results2.add("No book chapters have a mismatched parent");
+    }
+
+    // Create the book volumes table.
+    Table results3 = new Table(0, attributes);
+    results3.newRow();
+    results3.newCell("align=\"center\" class=\"colhead\"");
+    results3.add("Book Volume Title");
+    results3.newCell("align=\"center\" class=\"colhead\"");
+    results3.add("Parent Title");
+    results3.newCell("align=\"center\" class=\"colhead\"");
+    results3.add("Parent Type");
+    results3.newCell("align=\"center\" class=\"colhead\"");
+    results3.add("AU Key");
+
+    // Get the book volumes not linked to books or book series.
+    Collection<Map<String, String>> mismatchedVolumes =
+	mdManager.getMismatchedParentBookVolumes();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER	+ "mismatchedVolumes.size() = "
+	+ mismatchedVolumes.size());
+
+    // Check whether there are results to display.
+    if (mismatchedVolumes.size() > 0) {
+      // Yes: Loop through the volumes.
+      for (Map<String, String> volumeData : mismatchedVolumes) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "volumeData = " + volumeData);
+
+	results3.newRow();
+	results3.newCell("align=\"center\"");
+	results3.add(volumeData.get("col1"));
+	results3.newCell("align=\"center\"");
+	results3.add(volumeData.get("col2"));
+	results3.newCell("align=\"center\"");
+	results3.add(volumeData.get("col3"));
+	results3.newCell("align=\"center\"");
+	results3.add(volumeData.get("col4"));
+      }
+    } else {
+      // No.
+      results3.newRow();
+      results3.newCell();
+      results3.add("");
+      results3.newRow();
+      results3.newCell("colspan=\"4\" align=\"center\"");
+      results3.add("No book volumes have a mismatched parent");
+    }
+
+    makeTablePage(LIST_MISMATCHED_PARENT_TO_CHILDREN_HEADER, results1, results2,
+	results3);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

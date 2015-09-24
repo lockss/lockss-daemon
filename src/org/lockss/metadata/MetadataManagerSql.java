@@ -1064,6 +1064,134 @@ public class MetadataManagerSql {
       + " and pr." + PROVIDER_NAME_COLUMN
       + " = '" + UNKNOWN_PROVIDER_NAME + "'";
 
+  // Query to retrieve all the journal articles in the database whose parent
+  // is not a journal.
+  private static final String GET_MISMATCHED_PARENT_JOURNAL_ARTICLES_QUERY =
+	"(select min1." + NAME_COLUMN + " as \"col1\""
+	+ ", min2." + NAME_COLUMN + " as \"col2\""
+	+ ", mit." + TYPE_NAME_COLUMN + " as \"col3\""
+	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ " from " + MD_ITEM_TYPE_TABLE + " mit"
+	+ ", " + AU_TABLE
+	+ ", " + AU_MD_TABLE + " am"
+	+ ", " + MD_ITEM_TABLE + " mi1"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+	+ " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+	+ " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ ", " + MD_ITEM_TABLE + " mi2"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min2"
+	+ " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
+	+ " and min2." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ " where mi1." + PARENT_SEQ_COLUMN + " = mi2." + MD_ITEM_SEQ_COLUMN
+	+ " and mit." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5"
+	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 4"
+	+ " union "
+	+ "select min1." + NAME_COLUMN + " as \"col1\""
+	+ ", '' as \"col2\""
+	+ ", '' as \"col3\""
+	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ " from " + AU_TABLE
+	+ ", " + AU_MD_TABLE + " am"
+	+ ", " + MD_ITEM_TABLE + " mi1"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+	+ " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+	+ " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ " where mi1." + PARENT_SEQ_COLUMN + " is null"
+	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5)"
+	+ " order by \"col4\", \"col2\", \"col1\"";
+
+  // Query to retrieve all the book chapters in the database whose parent is not
+  // a book nor a book series.
+  private static final String GET_MISMATCHED_PARENT_BOOK_CHAPTERS_QUERY =
+	"(select min1." + NAME_COLUMN + " as \"col1\""
+	+ ", min2." + NAME_COLUMN + " as \"col2\""
+	+ ", mit." + TYPE_NAME_COLUMN + " as \"col3\""
+	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ " from " + MD_ITEM_TYPE_TABLE + " mit"
+	+ ", " + AU_TABLE
+	+ ", " + AU_MD_TABLE + " am"
+	+ ", " + MD_ITEM_TABLE + " mi1"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+	+ " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+	+ " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ ", " + MD_ITEM_TABLE + " mi2"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min2"
+	+ " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
+	+ " and min2." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ " where mi1." + PARENT_SEQ_COLUMN + " = mi2." + MD_ITEM_SEQ_COLUMN
+	+ " and mit." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3"
+	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 2"
+	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 1"
+	+ " union "
+	+ "select min1." + NAME_COLUMN + " as \"col1\""
+	+ ", '' as \"col2\""
+	+ ", '' as \"col3\""
+	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ " from " + AU_TABLE
+	+ ", " + AU_MD_TABLE + " am"
+	+ ", " + MD_ITEM_TABLE + " mi1"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+	+ " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+	+ " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ " where mi1." + PARENT_SEQ_COLUMN + " is null"
+	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3)"
+	+ " order by \"col4\", \"col2\", \"col1\"";
+
+  // Query to retrieve all the book volumes in the database whose parent is not
+  // a book nor a book series.
+  private static final String GET_MISMATCHED_PARENT_BOOK_VOLUMES_QUERY =
+	"select min1." + NAME_COLUMN + " as \"col1\""
+	+ ", min2." + NAME_COLUMN + " as \"col2\""
+	+ ", mit." + TYPE_NAME_COLUMN + " as \"col3\""
+	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ " from " + MD_ITEM_TYPE_TABLE + " mit"
+	+ ", " + AU_TABLE
+	+ ", " + AU_MD_TABLE + " am"
+	+ ", " + MD_ITEM_TABLE + " mi1"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+	+ " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+	+ " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ ", " + MD_ITEM_TABLE + " mi2"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min2"
+	+ " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
+	+ " and min2." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ " where mi1." + PARENT_SEQ_COLUMN + " = mi2." + MD_ITEM_SEQ_COLUMN
+	+ " and mit." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6"
+	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 2"
+	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 1"
+	+ " union "
+	+ "select min1." + NAME_COLUMN + " as \"col1\""
+	+ ", '' as \"col2\""
+	+ ", '' as \"col3\""
+	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ " from " + AU_TABLE
+	+ ", " + AU_MD_TABLE + " am"
+	+ ", " + MD_ITEM_TABLE + " mi1"
+	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+	+ " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+	+ " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+	+ " where mi1." + PARENT_SEQ_COLUMN + " is null"
+	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6)"
+	+ " order by \"col4\", \"col2\", \"col1\"";
+
   private DbManager dbManager;
   private MetadataManager metadataManager;
 
@@ -5441,5 +5569,149 @@ public class MetadataManagerSql {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER
 	+ "unknownProviderAuIds.size() = " + unknownProviderAuIds.size());
     return unknownProviderAuIds;
+  }
+
+  /**
+   * Provides the journal articles in the database whose parent is not a
+   * journal.
+   * 
+   * @return a Collection<Map<String, String>> with the mismatched journal
+   *         articles sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<Map<String, String>> getMismatchedParentJournalArticles()
+      throws DbException {
+    return getMismatchedParentChildren(
+	GET_MISMATCHED_PARENT_JOURNAL_ARTICLES_QUERY);
+  }
+
+  /**
+   * Provides the book chapters in the database whose parent is not a book or a
+   * book series.
+   * 
+   * @return a Collection<Map<String, String>> with the mismatched book chapters
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<Map<String, String>> getMismatchedParentBookChapters()
+      throws DbException {
+    return getMismatchedParentChildren(
+	GET_MISMATCHED_PARENT_BOOK_CHAPTERS_QUERY);
+  }
+
+  /**
+   * Provides the book volumes in the database whose parent is not a book or a
+   * book series.
+   * 
+   * @return a Collection<Map<String, String>> with the mismatched book volumes
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<Map<String, String>> getMismatchedParentBookVolumes()
+      throws DbException {
+    return getMismatchedParentChildren(
+	GET_MISMATCHED_PARENT_BOOK_VOLUMES_QUERY);
+  }
+
+  /**
+   * Provides the children in the database with a mismatched parent.
+   * 
+   * @param A
+   *          String with the database query to be used.
+   * @return a Collection<Map<String, String>> with the mismatched children
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Collection<Map<String, String>> getMismatchedParentChildren(
+      String query) throws DbException {
+    final String DEBUG_HEADER = "getMismatchedParentChildren(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "query = " + query);
+    Collection<Map<String, String>> mismatchedChildren = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the children in the database with a mismatched parent.
+      mismatchedChildren = getMismatchedParentChildren(conn, query);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "mismatchedChildren.size() = " + mismatchedChildren.size());
+    return mismatchedChildren;
+  }
+
+  /**
+   * Provides the children in the database with a mismatched parent.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param A
+   *          String with the database query to be used.
+   * @return a Collection<Map<String, String>> with the mismatched children
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Collection<Map<String, String>> getMismatchedParentChildren(
+      Connection conn, String query) throws DbException {
+    final String DEBUG_HEADER = "getMismatchedParentChildren(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "query = " + query);
+    Collection<Map<String, String>> mismatchedChildren =
+	new ArrayList<Map<String, String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = dbManager.prepareStatement(conn, query);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the mismatched children. 
+      while (resultSet.next()) {
+	Map<String, String> mismatchedChild = new HashMap<String, String>();
+
+	String col1 = resultSet.getString("col1");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col1 = " + col1);
+
+	mismatchedChild.put("col1", col1);
+
+	String col2 = resultSet.getString("col2");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col2 = " + col2);
+
+	mismatchedChild.put("col2", col2);
+
+	String col3 = resultSet.getString("col3");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col3 = " + col3);
+
+	mismatchedChild.put("col3", col3);
+
+	String col4 = resultSet.getString("col4");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col4 = " + col4);
+
+	mismatchedChild.put("col4", col4);
+
+	mismatchedChildren.add(mismatchedChild);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the children with mismatched parents";
+      log.error(message, sqle);
+      log.error("SQL = '" + query + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "mismatchedChildren.size() = " + mismatchedChildren.size());
+    return mismatchedChildren;
   }
 }
