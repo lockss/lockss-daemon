@@ -15,26 +15,26 @@
     >
 
     {
-    param[base_url] = https://www.fe.unicamp.br/revistas/ged/
+    param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
     param[journal_id] = etd
 
-    au < testing ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 ; >
-    au < testing ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) ; 2000 ; >
-    au < testing ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) ; 2001 ; >
-    au < testing ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) ; 2002 ; >
-    au < testing ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) ; 2003 ; >
-    au < testing ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) ; 2004 ; >
-    au < testing ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) ; 2005 ; >
-    au < testing ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) ; 2006 ; >
-    au < testing ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) ; 2007 ; >
-    au < testing ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) ; 2008 ; >
-    au < testing ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) ; 2009 ; >
-    au < testing ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) ; 2010 ; >
-    au < testing ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) ; 2011 ; >
-    au < testing ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 ; >
-    au < testing ; 2013 ; 15 ; ETD - Educação Temática Digital Volume 15 ; 2013 ; >
-    au < testing ; 2014 ; 16 ; ETD - Educação Temática Digital Volume 16 ; 2014 ; >
-    au < manifest ; 2015 ; 17 ; ETD - Educação Temática Digital Volume 17 ; 2015 ; >
+    au < exists ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 ; >
+    au < exists ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) ; 2000 ; >
+    au < exists ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) ; 2001 ; >
+    au < exists ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) ; 2002 ; >
+    au < exists ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) ; 2003 ; >
+    au < exists ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) ; 2004 ; >
+    au < exists ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) ; 2005 ; >
+    au < exists ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) ; 2006 ; >
+    au < exists ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) ; 2007 ; >
+    au < exists ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) ; 2008 ; >
+    au < exists ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) ; 2009 ; >
+    au < exists ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) ; 2010 ; >
+    au < exists ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) ; 2011 ; >
+    au < exists ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 ; >
+    au < exists ; 2013 ; 15 ; ETD - Educação Temática Digital Volume 15 ; 2013 ; >
+    au < exists ; 2014 ; 16 ; ETD - Educação Temática Digital Volume 16 ; 2014 ; >
+    au < exists ; 2015 ; 17 ; ETD - Educação Temática Digital Volume 17 ; 2015 ; >
     }
     {
     param[base_url] = http://www.fae.unicamp.br/revista/
