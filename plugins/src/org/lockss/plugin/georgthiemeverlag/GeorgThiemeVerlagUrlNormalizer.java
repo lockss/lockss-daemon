@@ -40,11 +40,12 @@ public class GeorgThiemeVerlagUrlNormalizer implements UrlNormalizer {
 
   public String normalizeUrl(String url,
                              ArchivalUnit au)
-      throws PluginException {
+      throws PluginException { // ?issue=10.1055/s-004-27659
     if (url.contains(".js?") ||
         url.contains(".css?") ||
         url.contains(".ico?") ||
-        url.contains(".gif?")) {
+        url.contains(".gif?") ||
+        url.contains("?issue=")) {
       url = StringUtils.substringBeforeLast(url, "?");
     }
     return url;

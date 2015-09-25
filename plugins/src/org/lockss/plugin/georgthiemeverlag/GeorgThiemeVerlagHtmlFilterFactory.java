@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.georgthiemeverlag;
 
 import java.io.*;
+import java.util.Vector;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
@@ -92,12 +93,19 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
           nodeList.visitAllNodesWith(new NodeVisitor() {
             @Override
             public void visitTag(Tag tag) {
+              String tagName = tag.getTagName().toLowerCase();
               try {
-                if ("a".equalsIgnoreCase(tag.getTagName())) {
-                  String href = tag.getAttribute("href");
-                  if ((href != null) && (href.charAt(0) == '#')) {
-                    tag.setAttribute("href", "#");
+                if ("a".equals(tagName) ||
+                    "div".equals(tagName) ||
+                    "section".equals(tagName)) {
+                  Attribute a = tag.getAttributeEx(tagName);
+                  Vector<Attribute> v = new Vector<Attribute>();
+                  v.add(a);
+                  if (tag.isEmptyXmlTag()) {
+                    Attribute end = tag.getAttributeEx("/");
+                    v.add(end);
                   }
+                  tag.setAttributesEx(v);
                 }
                 super.visitTag(tag);
               }
