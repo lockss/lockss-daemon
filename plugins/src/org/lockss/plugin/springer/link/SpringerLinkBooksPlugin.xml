@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -94,6 +94,18 @@
       <string>1,"^%sstatic/", download_url</string>
       <string>1,"http://static-content.springer.com/image/.+[.](jpg|png)"</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_poll_results_pattern</string> 
+    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>

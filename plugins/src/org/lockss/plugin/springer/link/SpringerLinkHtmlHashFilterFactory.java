@@ -48,6 +48,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tag("script"),
           HtmlNodeFilters.tag("noscript"),
           HtmlNodeFilters.tag("input"),
+          HtmlNodeFilters.tag("head"),
 
           //google iframes with weird ids
           HtmlNodeFilters.tag("iframe"),
