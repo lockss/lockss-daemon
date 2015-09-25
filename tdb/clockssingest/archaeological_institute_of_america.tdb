@@ -23,22 +23,22 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[journal_id] = amerjarch
 
-      au < manifest ; exists ; 2000 ; American Journal of Archaeology Volume 104 ; 104 >
-      au < manifest ; exists ; 2001 ; American Journal of Archaeology Volume 105 ; 105 >
-      au < manifest ; exists ; 2002 ; American Journal of Archaeology Volume 106 ; 106 >
-      au < manifest ; exists ; 2003 ; American Journal of Archaeology Volume 107 ; 107 >
-      au < manifest ; exists ; 2004 ; American Journal of Archaeology Volume 108 ; 108 >
-      au < manifest ; exists ; 2005 ; American Journal of Archaeology Volume 109 ; 109 >
-      au < manifest ; exists ; 2006 ; American Journal of Archaeology Volume 110 ; 110 >
-      au < manifest ; exists ; 2007 ; American Journal of Archaeology Volume 111 ; 111 >
-      au < manifest ; exists ; 2008 ; American Journal of Archaeology Volume 112 ; 112 >
-      au < manifest ; exists ; 2009 ; American Journal of Archaeology Volume 113 ; 113 >
-      au < manifest ; exists ; 2010 ; American Journal of Archaeology Volume 114 ; 114 >
-      au < manifest ; exists ; 2011 ; American Journal of Archaeology Volume 115 ; 115 >
-      au < crawling ; exists ; 2012 ; American Journal of Archaeology Volume 116 ; 116 >
-      au < crawling ; exists ; 2013 ; American Journal of Archaeology Volume 117 ; 117 >
-      au < finished ; crawling ; 2014 ; American Journal of Archaeology Volume 118 ; 118 >
-      au < ready ; exists ; 2015 ; American Journal of Archaeology Volume 119 ; 119 >
+      au < doNotProcess ; exists ; 2000 ; American Journal of Archaeology Volume 104 ; 104 >
+      au < doNotProcess ; exists ; 2001 ; American Journal of Archaeology Volume 105 ; 105 >
+      au < doNotProcess ; exists ; 2002 ; American Journal of Archaeology Volume 106 ; 106 >
+      au < doNotProcess ; exists ; 2003 ; American Journal of Archaeology Volume 107 ; 107 >
+      au < doNotProcess ; exists ; 2004 ; American Journal of Archaeology Volume 108 ; 108 >
+      au < doNotProcess ; exists ; 2005 ; American Journal of Archaeology Volume 109 ; 109 >
+      au < doNotProcess ; exists ; 2006 ; American Journal of Archaeology Volume 110 ; 110 >
+      au < doNotProcess ; exists ; 2007 ; American Journal of Archaeology Volume 111 ; 111 >
+      au < doNotProcess ; exists ; 2008 ; American Journal of Archaeology Volume 112 ; 112 >
+      au < doNotProcess ; exists ; 2009 ; American Journal of Archaeology Volume 113 ; 113 >
+      au < doNotProcess ; exists ; 2010 ; American Journal of Archaeology Volume 114 ; 114 >
+      au < doNotProcess ; exists ; 2011 ; American Journal of Archaeology Volume 115 ; 115 >
+      au < down ; exists ; 2012 ; American Journal of Archaeology Volume 116 ; 116 >
+      au < down ; exists ; 2013 ; American Journal of Archaeology Volume 117 ; 117 >
+      au < down ; crawling ; 2014 ; American Journal of Archaeology Volume 118 ; 118 >
+      au < doNotProcess ; exists ; 2015 ; American Journal of Archaeology Volume 119 ; 119 >
       
   }
 
