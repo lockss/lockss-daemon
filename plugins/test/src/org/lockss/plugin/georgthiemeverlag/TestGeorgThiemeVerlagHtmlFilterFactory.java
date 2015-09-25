@@ -119,13 +119,13 @@ public class TestGeorgThiemeVerlagHtmlFilterFactory extends LockssTestCase {
   private static final String withAnchorHref = 
 "<ul class=\"articleTocList\">" +
 "<li>\n" + 
-"<a href=\"#N65623\">Zusammenfassung</a>\n" + 
+"<A href=\"#N65623\">Zusammenfassung</A>\n" + 
 "</li>\n" + 
 "</ul>\n" +
 "<a href=\"#N65623\">Zusammenfassung</a>\n";
 
   private static final String withoutAnchorHref = 
-"\n<a href=\"#\">Zusammenfassung</a>\n";
+"\n<a>Zusammenfassung</a>\n";
   
   public void testFiltering() throws Exception {
     assertFilterTo(withoutStuff, withStuff);
