@@ -45,11 +45,13 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.TdbAu;
+import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
 import org.lockss.util.RateLimiter;
@@ -99,6 +101,11 @@ public class SubscriptionStarter extends LockssRunnable {
   // The plugin manager.
   private PluginManager pluginManager = null;
 
+  // The current TdbPublisher when processing multiple TdbAus.
+  private TdbPublisher currentTdbPublisher;
+
+  private Boolean currentCoveredByPublisherSubscription;
+
   // The current TdbTitle when processing multiple TdbAus.
   private TdbTitle currentTdbTitle;
 
@@ -120,6 +127,10 @@ public class SubscriptionStarter extends LockssRunnable {
   // should be added to it.
   private boolean exiting = false;
 
+  // An indication of whether all the TdbAus referenced by the iterators need to
+  // be configured, regardless of any other considerations.
+  private final boolean mustConfigure;
+
   /**
    * Constructor.
    * 
@@ -136,7 +147,7 @@ public class SubscriptionStarter extends LockssRunnable {
    */
   public SubscriptionStarter(SubscriptionManager subscriptionManager,
       int configureAuBatchSize, RateLimiter configureAuRateLimiter,
-      Iterator<TdbAu> tdbAuIterator) {
+      Iterator<TdbAu> tdbAuIterator, boolean mustConfigure) {
     super("SubscriptionStarter");
 
     this.subscriptionManager = subscriptionManager;
@@ -145,6 +156,8 @@ public class SubscriptionStarter extends LockssRunnable {
 
     tdbAuIterators = new LinkedList<Iterator<TdbAu>>();
     tdbAuIterators.add(tdbAuIterator);
+
+    this.mustConfigure = mustConfigure;
   }
 
   /**
@@ -214,7 +227,7 @@ public class SubscriptionStarter extends LockssRunnable {
 
     boolean isFirstRun = false;
 
-    if (!isTotalSubscriptionOn) {
+    if (!isTotalSubscriptionOn && !mustConfigure) {
       message = CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE;
 
       try {
@@ -243,8 +256,9 @@ public class SubscriptionStarter extends LockssRunnable {
 
     // Keep running until there are no more TdbAus to be processed.
     while (true) {
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "tdbAuIterator = " + tdbAuIterator);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + (tdbAuIterator == null ? "tdbAuIterator == null"
+	      : "tdbAuIterator.hasNext() = " + tdbAuIterator.hasNext()));
 
       // Check whether a new TdbAu iterator needs to be processed.
       if (tdbAuIterator == null || !tdbAuIterator.hasNext()) {
@@ -275,7 +289,7 @@ public class SubscriptionStarter extends LockssRunnable {
 	  return;
 	}
 
-	if (!isTotalSubscriptionOn) {
+	if (!isTotalSubscriptionOn && !mustConfigure) {
 	  // Make sure the flag that indicates this is the first run of the
 	  // subscription manager is reset after the first iterator.
 	  if (afterFirstIterator) {
@@ -373,7 +387,7 @@ public class SubscriptionStarter extends LockssRunnable {
       }
 
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isTotalSubscription = "
-	  + isTotalSubscriptionOn);
+	  + isTotalSubscription);
 
       if (isTotalSubscription != null) {
 	if (!isTotalSubscription.booleanValue()) {
@@ -412,6 +426,7 @@ public class SubscriptionStarter extends LockssRunnable {
 
     int configuredAuCount = 0;
     TdbAu tdbAu = null;
+    currentTdbPublisher = null;
     currentTdbTitle = null;
     currentSubscribedRanges = null;
     currentUnsubscribedRanges = null;
@@ -424,9 +439,9 @@ public class SubscriptionStarter extends LockssRunnable {
 	  tdbAu = tdbAuIterator.next();
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
 
-	  // Process the archival unit.
+	  // Determine whether the archival unit needs to be configured.
 	  boolean toBeConfigured =
-	      processNewTdbAu(tdbAu, conn, isFirstRun, config);
+	      isTdbAuToBeConfigured(tdbAu, conn, isFirstRun, config);
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "toBeConfigured = " + toBeConfigured);
 
@@ -436,9 +451,14 @@ public class SubscriptionStarter extends LockssRunnable {
 	  if (toBeConfigured) {
 	    // Yes: Count it.
 	    configuredAuCount++;
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "configuredAuCount = "
+		+ configuredAuCount);
 
 	    // Record the addition of this archival unit to the batch.
 	    configureAuRateLimiter.event();
+
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "configureAuBatchSize = " + configureAuBatchSize);
 
 	    // Check whether the batch size limit has been reached.
 	    if (configuredAuCount >= configureAuBatchSize) {
@@ -468,8 +488,7 @@ public class SubscriptionStarter extends LockssRunnable {
   }
 
   /**
-   * Performs the necessary processing for an archival unit that may need to be
-   * configured.
+   * Provides an indication of whether an archival unit needs to be configured.
    * 
    * @param tdbAu
    *          A TdbAu for the archival unit to be processed.
@@ -485,7 +504,7 @@ public class SubscriptionStarter extends LockssRunnable {
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private boolean processNewTdbAu(TdbAu tdbAu, Connection conn,
+  private boolean isTdbAuToBeConfigured(TdbAu tdbAu, Connection conn,
       boolean isFirstRun, Configuration config) throws DbException {
     final String DEBUG_HEADER = "processNewTdbAu(): ";
     if (log.isDebug2()) {
@@ -493,7 +512,12 @@ public class SubscriptionStarter extends LockssRunnable {
       log.debug2(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
     }
 
-    boolean toBeConfigured = false;
+    // Skip those archival units that are down.
+    if (tdbAu.isDown()) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Not configured: TdbAu '"
+	  + tdbAu + "' is marked down.");
+      return false;
+    }
 
     // Get the archival unit identifier.
     String auId;
@@ -502,84 +526,149 @@ public class SubscriptionStarter extends LockssRunnable {
       auId = tdbAu.getAuId(pluginManager);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
     } catch (IllegalStateException ise) {
-      log.debug2("Ignored " + tdbAu
-	  + " because of problems getting its identifier: " + ise.getMessage());
-      return toBeConfigured;
+      if (log.isDebug2()) log.debug2("Not configured: Ignored '" + tdbAu
+	  + "' because of problems getting its identifier: "
+	  + ise.getMessage());
+      return false;
     } catch (RuntimeException re) {
-      log.error("Ignored " + tdbAu
-	  + " because of problems getting its identifier: " + re.getMessage());
-      return toBeConfigured;
+      if (log.isDebug2()) log.debug2("Not configured: Ignored '" + tdbAu
+	  + "' because of problems getting its identifier: " + re.getMessage());
+      return false;
     }
+
+    // Get the archival unit.
+    ArchivalUnit au = pluginManager.getAuFromId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
 
     // Check whether the archival unit is already configured.
-    if (pluginManager.getAuFromId(auId) != null) {
+    if (au != null && pluginManager.isActiveAu(au)) {
       // Yes: Nothing more to do.
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu
-	  + "' is already configured.");
-      return toBeConfigured;
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Not configured: TdbAu '"
+	  + tdbAu + "' is already configured.");
+      return false;
     }
 
-    if (!isTotalSubscriptionOn) {
-      // Check whether this is the first run of the subscription manager.
-      if (isFirstRun) {
-	// Yes: Add the archival unit to the table of unconfigured archival
-	// units.
-	mdManager.persistUnconfiguredAu(conn, auId);
-	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-	return toBeConfigured;
-      }
+    // Check whether the archival unit must be configured.
+    if (isTotalSubscriptionOn || mustConfigure) {
+      // Yes: Add the archival unit configuration to those to be configured.
+      config = subscriptionManager.addAuConfiguration(tdbAu, auId, config);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	  + "Configured: isTotalSubscriptionOn = " + isTotalSubscriptionOn
+	  + ", mustConfigure = " + mustConfigure);
+      return true;
+    }
 
-      // Nothing to do if the archival unit is in the table of unconfigured
-      // archival units already.
-      if (mdManager.isAuInUnconfiguredAuTable(conn, auId)) {
-	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-	return toBeConfigured;
-      }
+    // No: Check whether this is the first run of the subscription manager.
+    if (isFirstRun) {
+      // Yes: Add the archival unit to the table of unconfigured archival units.
+      mdManager.persistUnconfiguredAu(conn, auId);
 
-      if (log.isDebug3()) {
-	log.debug3(DEBUG_HEADER + "currentTdbTitle = " + currentTdbTitle);
-	log.debug3(DEBUG_HEADER + "tdbAu.getTdbTitle() = "
-	    + tdbAu.getTdbTitle());
-      }
+      // The archival unit is not going to be configured.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	  + "Not configured: isFirstRun " + isFirstRun);
+      return false;
+    }
 
-      // Check whether this archival unit belongs to a different title than the
-      // previous archival unit processed.
-      if (!tdbAu.getTdbTitle().equals(currentTdbTitle)) {
-	// Yes: Update the title data for this archival unit.
-	currentTdbTitle = tdbAu.getTdbTitle();
+    // No.
+    if (log.isDebug3()) {
+      log.debug3(DEBUG_HEADER + "currentTdbPublisher = " + currentTdbPublisher);
+      log.debug3(DEBUG_HEADER + "tdbAu.getTdbPublisher() = "
+	  + tdbAu.getTdbPublisher());
+    }
 
-	// Get the subscription ranges for the archival unit title.
-	currentSubscribedRanges = new ArrayList<BibliographicPeriod>();
-	currentUnsubscribedRanges = new ArrayList<BibliographicPeriod>();
+    // Check whether this archival unit belongs to a different publisher than
+    // the previous archival unit processed.
+    if (!tdbAu.getTdbPublisher().equals(currentTdbPublisher)) {
+      // Yes: Update the publisher for this archival unit.
+      currentTdbPublisher = tdbAu.getTdbPublisher();
 
-	subscriptionManager.populateTitleSubscriptionRanges(conn,
-	    currentTdbTitle, currentSubscribedRanges,
-	    currentUnsubscribedRanges);
+      // Get the publisher subscription setting for this publisher.
+      currentCoveredByPublisherSubscription = subscriptionManager
+	  .findPublisherSubscription(conn, currentTdbPublisher.getName());
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "currentCoveredByPublisherSubscription = "
+	  + currentCoveredByPublisherSubscription);
+    } else {
+      // No: Reuse the publisher from the previous archival unit.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "Reusing publisher = " + currentTdbPublisher);
+    }
 
-	// Get the archival units covered by the subscription.
-	currentCoveredTdbAus = subscriptionManager.getCoveredTdbAus(
-	    currentTdbTitle, currentSubscribedRanges,
-	    currentUnsubscribedRanges);
+    // Check whether there is a publisher subscription.
+    if (currentCoveredByPublisherSubscription != null) {
+      // Yes: Check whether all publisher archival units are subscribed.
+      if (currentCoveredByPublisherSubscription.booleanValue()) {
+	// Yes: Add the archival unit configuration to those to be configured.
+	config = subscriptionManager.addAuConfiguration(tdbAu, auId, config);
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Configured: TdbAu '"
+	    + tdbAu + "' is covered by publisher subscription = "
+	    + currentCoveredByPublisherSubscription);
+	return true;
       } else {
-	// No: Reuse the title data from the previous archival unit.
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	    + "Reusing data from title = " + currentTdbTitle);
+	// No: Nothing else to do.
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Not configured: TdbAu '"
+	    + tdbAu + "' is covered by publisher subscription = "
+	    + currentCoveredByPublisherSubscription);
+	return false;
       }
+    }
+
+    // No.
+    if (log.isDebug3()) {
+      log.debug3(DEBUG_HEADER + "currentTdbTitle = " + currentTdbTitle);
+      log.debug3(DEBUG_HEADER + "tdbAu.getTdbTitle() = " + tdbAu.getTdbTitle());
+    }
+
+    // Check whether the archival unit is in the table of unconfigured archival
+    // units already.
+    if (mdManager.isAuInUnconfiguredAuTable(conn, auId)) {
+      // Yes: The archival unit is not going to be configured.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Not configured: TdbAu '"
+	  + tdbAu
+	  + "' is in the table of unconfigured archival units already.");
+      return false;
+    }
+
+    // No: Check whether this archival unit belongs to a different title than
+    // the previous archival unit processed.
+    if (!tdbAu.getTdbTitle().equals(currentTdbTitle)) {
+      // Yes: Update the title data for this archival unit.
+      currentTdbTitle = tdbAu.getTdbTitle();
+
+      // Get the subscription ranges for the archival unit title.
+      currentSubscribedRanges = new ArrayList<BibliographicPeriod>();
+      currentUnsubscribedRanges = new ArrayList<BibliographicPeriod>();
+
+      subscriptionManager.populateTitleSubscriptionRanges(conn, currentTdbTitle,
+	  currentSubscribedRanges, currentUnsubscribedRanges);
+
+      // Get the archival units covered by the subscription.
+      currentCoveredTdbAus = subscriptionManager.getCoveredTdbAus(
+	  currentTdbTitle, currentSubscribedRanges, currentUnsubscribedRanges);
+    } else {
+      // No: Reuse the title data from the previous archival unit.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "Reusing data from title = " + currentTdbTitle);
     }
 
     // Check whether the archival unit needs to be configured.
-    if (isTotalSubscriptionOn || currentCoveredTdbAus.contains(tdbAu)) {
+    if (currentCoveredTdbAus.contains(tdbAu)) {
       // Yes: Add the archival unit configuration to those to be configured.
       config = subscriptionManager.addAuConfiguration(tdbAu, auId, config);
-      toBeConfigured = true;
-    } else {
-      // No: Add it to the table of unconfigured archival units.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Configured: TdbAu '"
+	  + tdbAu + "' is covered by subscription.");
+      return true;
+    }
+
+    // No: Add it to the table of unconfigured archival units if not already
+    // there.
+    if (!mdManager.isAuInUnconfiguredAuTable(conn, auId)) {
       mdManager.persistUnconfiguredAu(conn, auId);
     }
 
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "toBeConfigured = " + toBeConfigured);
-    return toBeConfigured;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Not configured: TdbAu '"
+	  + tdbAu + "' is not covered by subscription.");
+    return false;
   }
 
   /**

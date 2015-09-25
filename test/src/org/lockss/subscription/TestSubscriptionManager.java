@@ -640,61 +640,58 @@ public class TestSubscriptionManager extends LockssTestCase {
     Subscription subscription = new Subscription();
     subscription.setPublication(publication);
 
-    BatchAuStatus status;
-    Connection conn = dbManager.getConnection();
-
-    assertNull(configureAu(conn, tdbAu, subscription, "-", null));
+    assertNull(configureAu(tdbAu, subscription, "-", null));
 
     // Delete the AU so that it can be added again.
     pluginManager.deleteAu(pluginManager.getAuFromId(tdbAu
 	  .getAuId(pluginManager)));
 
-    status = configureAu(conn, tdbAu, subscription, "-", null);
+    BatchAuStatus status = configureAu(tdbAu, subscription, "-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1900-", null);
+    status = configureAu(tdbAu, subscription, "1900-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954-", null);
+    status = configureAu(tdbAu, subscription, "1954-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    assertNull(configureAu(conn, tdbAu, subscription, "1955-", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "-1953", null));
+    assertNull(configureAu(tdbAu, subscription, "1955-", null));
+    assertNull(configureAu(tdbAu, subscription, "-1953", null));
 
-    status = configureAu(conn, tdbAu, subscription, "-1954", null);
+    status = configureAu(tdbAu, subscription, "-1954", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "-1999", null);
+    status = configureAu(tdbAu, subscription, "-1999", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1900-1999", null);
+    status = configureAu(tdbAu, subscription, "1900-1999", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954-1999", null);
+    status = configureAu(tdbAu, subscription, "1954-1999", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    assertNull(configureAu(conn, tdbAu, subscription, "1955-1999", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "1900-1953", null));
+    assertNull(configureAu(tdbAu, subscription, "1955-1999", null));
+    assertNull(configureAu(tdbAu, subscription, "1900-1953", null));
 
-    status = configureAu(conn, tdbAu, subscription, "1900-1954", null);
+    status = configureAu(tdbAu, subscription, "1900-1954", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    assertNull(configureAu(conn, tdbAu, subscription, "1900-1999",
+    assertNull(configureAu(tdbAu, subscription, "1900-1999",
 	"1950-1960"));
 
-    assertNull(configureAu(conn, tdbAu, subscription, "1954(4)-", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "1954(4)-1999", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "1954(4)-1954(4)", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "1900-1954(4)", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "-1954(4)", null));
+    assertNull(configureAu(tdbAu, subscription, "1954(4)-", null));
+    assertNull(configureAu(tdbAu, subscription, "1954(4)-1999", null));
+    assertNull(configureAu(tdbAu, subscription, "1954(4)-1954(4)", null));
+    assertNull(configureAu(tdbAu, subscription, "1900-1954(4)", null));
+    assertNull(configureAu(tdbAu, subscription, "-1954(4)", null));
 
     // Specify the relevant properties of another archival unit.
     properties = new Properties();
@@ -723,79 +720,77 @@ public class TestSubscriptionManager extends LockssTestCase {
     subscription = new Subscription();
     subscription.setPublication(publication);
 
-    status = configureAu(conn, tdbAu, subscription, "-", null);
+    status = configureAu(tdbAu, subscription, "-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1900-", null);
+    status = configureAu(tdbAu, subscription, "1900-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954-", null);
+    status = configureAu(tdbAu, subscription, "1954-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    assertNull(configureAu(conn, tdbAu, subscription, "1955-", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "-1953", null));
+    assertNull(configureAu(tdbAu, subscription, "1955-", null));
+    assertNull(configureAu(tdbAu, subscription, "-1953", null));
 
-    status = configureAu(conn, tdbAu, subscription, "-1954", null);
+    status = configureAu(tdbAu, subscription, "-1954", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "-1999", null);
+    status = configureAu(tdbAu, subscription, "-1999", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1900-1999", null);
+    status = configureAu(tdbAu, subscription, "1900-1999", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954-1999", null);
+    status = configureAu(tdbAu, subscription, "1954-1999", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    assertNull(configureAu(conn, tdbAu, subscription, "1955-1999", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "1900-1953", null));
+    assertNull(configureAu(tdbAu, subscription, "1955-1999", null));
+    assertNull(configureAu(tdbAu, subscription, "1900-1953", null));
 
-    status = configureAu(conn, tdbAu, subscription, "1900-1954", null);
+    status = configureAu(tdbAu, subscription, "1900-1954", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+    assertNull(configureAu(tdbAu, subscription, "1900-1999", "1950-1960"));
+
+    status = configureAu(tdbAu, subscription, "1954(4)-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    assertNull(configureAu(conn, tdbAu, subscription, "1900-1999",
-	"1950-1960"));
-
-    status = configureAu(conn, tdbAu, subscription, "1954(4)-", null);
+    status = configureAu(tdbAu, subscription, "1954(4)-1999", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954(4)-1999", null);
+    status = configureAu(tdbAu, subscription, "1954(4)-1954(5)", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954(4)-1954(5)", null);
+    status = configureAu(tdbAu, subscription, "1954(4)-1954(4)", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954(4)-1954(4)", null);
+    status = configureAu(tdbAu, subscription, "1954(3)-1954(4)", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1954(3)-1954(4)", null);
+    status = configureAu(tdbAu, subscription, "1900-1954(4)", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "1900-1954(4)", null);
+    status = configureAu(tdbAu, subscription, "-1954(4)", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    status = configureAu(conn, tdbAu, subscription, "-1954(4)", null);
-    assertNotNull(status);
-    assertEquals(1, status.getOkCnt());
-
-    assertNull(configureAu(conn, tdbAu, subscription, "1954(3)-", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "1954(3)-1999", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "1900-1954(5)", null));
-    assertNull(configureAu(conn, tdbAu, subscription, "-1954(5)", null));
+    assertNull(configureAu(tdbAu, subscription, "1954(3)-", null));
+    assertNull(configureAu(tdbAu, subscription, "1954(3)-1999", null));
+    assertNull(configureAu(tdbAu, subscription, "1900-1954(5)", null));
+    assertNull(configureAu(tdbAu, subscription, "-1954(5)", null));
   }
 
   /**
@@ -830,14 +825,11 @@ public class TestSubscriptionManager extends LockssTestCase {
     Subscription subscription = new Subscription();
     subscription.setPublication(publication);
 
-    Connection conn = dbManager.getConnection();
-
-    assertNull(configureAu(conn, tdbAu, subscription, "-", null));
+    assertNull(configureAu(tdbAu, subscription, "-", null));
   }
 
-  private BatchAuStatus configureAu(Connection conn, TdbAu tdbAu,
-      Subscription subscription, String subscribedRanges,
-      String unsubscribedRanges) throws IOException, DbException,
+  private BatchAuStatus configureAu(TdbAu tdbAu, Subscription subscription,
+      String subscribedRanges, String unsubscribedRanges) throws IOException,
       SubscriptionException {
     subscription.setSubscribedRanges(Collections
 	.singletonList(new BibliographicPeriod(subscribedRanges)));
@@ -845,7 +837,7 @@ public class TestSubscriptionManager extends LockssTestCase {
 	.singletonList(new BibliographicPeriod(unsubscribedRanges)));
 
     // The AU is added.
-    BatchAuStatus status = subManager.configureAus(conn, subscription);
+    BatchAuStatus status = subManager.configureAus(subscription);
 
     if (status != null && status.getOkCnt() == 1) {
       // Delete the AU so that it can be added again.

@@ -82,8 +82,9 @@ public class FuncExportService extends LockssTestCase {
 
     int port = TcpTestUtil.findUnboundTcpPort();
     ConfigurationUtil.addFromArgs(AdminServletManager.PARAM_PORT, "" + port,
-	ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME,
-	ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1);
+				  ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME,
+				  ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1,
+				  ConfigManager.PARAM_TMPDIR, tempDirPath);
 
     MockLockssDaemon theDaemon = getMockLockssDaemon();
 
@@ -127,7 +128,22 @@ public class FuncExportService extends LockssTestCase {
     proxy = service.getPort(ExportService.class);
   }
 
-  public void testCreateCompressedFile() {
+  // Setting up and crawling the sim AU takes most of the time - do it once
+  // and run all the tests
+  public void testAll() {
+    subTestCreateCompressedFile();
+    subTestCreateNotCompressedFile();
+    subTestCreateWARCNotCompressedFile();
+    subTestCreateWARCCompressedFile();
+    subTestCreateARCNotCompressedFile();
+    subTestCreateARCCompressedFile();
+    subTestCreateZipFile();
+    subTestCreateFileWithNoMaxSize();
+    subTestCreateFileWithMaxSize1MB();
+    subTestCreateFileWithMaxSize2MB();
+  }
+
+  public void subTestCreateCompressedFile() {
     ExportServiceParams exportParam = initializeExportParams();
     try {
       exportParam.setCompress(true);
@@ -138,7 +154,7 @@ public class FuncExportService extends LockssTestCase {
     }
   }
 
-  public void testCreateNotCompressedFile() {
+  public void subTestCreateNotCompressedFile() {
     ExportServiceParams exportParam = initializeExportParams();
     try {
       exportParam.setCompress(false);
@@ -149,7 +165,7 @@ public class FuncExportService extends LockssTestCase {
     }
   }
 
-  public void testCreateWARCNotCompressedFile() {
+  public void subTestCreateWARCNotCompressedFile() {
     ExportServiceParams exportParam = initializeExportParams();
     try {
       exportParam.setCompress(false);
@@ -162,7 +178,7 @@ public class FuncExportService extends LockssTestCase {
     }
   }
 
-  public void testCreateWARCCompressedFile() {
+  public void subTestCreateWARCCompressedFile() {
     ExportServiceParams exportParam = initializeExportParams();
     try {
       exportParam.setCompress(true);
@@ -175,7 +191,7 @@ public class FuncExportService extends LockssTestCase {
     }
   }
 
-  public void testCreateARCNotCompressedFile() {
+  public void subTestCreateARCNotCompressedFile() {
     ExportServiceParams exportParam = initializeExportParams();
     try {
       exportParam.setCompress(false);
@@ -187,7 +203,7 @@ public class FuncExportService extends LockssTestCase {
     }
   }
 
-  public void testCreateARCCompressedFile() {
+  public void subTestCreateARCCompressedFile() {
     ExportServiceParams exportParam = initializeExportParams();
     try {
       exportParam.setCompress(true);
@@ -200,7 +216,7 @@ public class FuncExportService extends LockssTestCase {
     }
   }
 
-  public void testCreateZipFile() {
+  public void subTestCreateZipFile() {
     ExportServiceParams exportParam = initializeExportParams();
     try {
       exportParam.setCompress(true);
@@ -212,35 +228,38 @@ public class FuncExportService extends LockssTestCase {
     }
   }
 
-  public void testCreateFileWithNoMaxSize() {
+  public void subTestCreateFileWithNoMaxSize() {
     ExportServiceParams exportParam = initializeExportParams();
+    exportParam.setCompress(false);
     try {
       ExportServiceWsResult result = proxy.createExportFiles(exportParam);
-      assertEquals(result.getDataHandlerWrappers().length, 1);
-      assertTrue(result.getDataHandlerWrappers()[0].getSize()
-	  > 2 * 1024 * 1024);
+      assertEquals(1, result.getDataHandlerWrappers().length);
+      long size = result.getDataHandlerWrappers()[0].getSize();
+      assertTrue("Size: " + size + " < 2MB", size > 2 * 1024 * 1024);
     } catch (LockssWebServicesFault e) {
       fail(e.getMessage());
     }
   }
 
-  public void testCreateFileWithMaxSize1MB() {
+  public void subTestCreateFileWithMaxSize1MB() {
     ExportServiceParams exportParam = initializeExportParams();
+    exportParam.setCompress(false);
     try {
       exportParam.setMaxSize(1); // Max size is 1MB
       ExportServiceWsResult result = proxy.createExportFiles(exportParam);
-      assertEquals(result.getDataHandlerWrappers().length, 3);
+      assertEquals(3, result.getDataHandlerWrappers().length);
     } catch (LockssWebServicesFault e) {
       fail(e.getMessage());
     }
   }
 
-  public void testCreateFileWithMaxSize2MB() {
+  public void subTestCreateFileWithMaxSize2MB() {
     ExportServiceParams exportParam = initializeExportParams();
+    exportParam.setCompress(false);
     try {
       exportParam.setMaxSize(2); // Max size is 2MB
       ExportServiceWsResult result = proxy.createExportFiles(exportParam);
-      assertEquals(result.getDataHandlerWrappers().length, 2);
+      assertEquals(2, result.getDataHandlerWrappers().length);
     } catch (LockssWebServicesFault e) {
       fail(e.getMessage());
     }
@@ -256,10 +275,13 @@ public class FuncExportService extends LockssTestCase {
   private Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
-    conf.put("depth", "4");
+    conf.put("depth", "2");
     conf.put("branch", "3");
-    conf.put("numFiles", "50");
-    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_HTML);
+    conf.put("numFiles", "5");
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_HTML
+				| SimulatedContentGenerator.FILE_TYPE_BIN));
+    conf.put("binFileSize", "35000");
+
     conf.put(SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT, "true");
     return conf;
   }

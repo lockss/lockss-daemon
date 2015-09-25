@@ -2337,6 +2337,12 @@ public class DbManagerSql {
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
       + " and " + DOI_COLUMN + " = ?";
 
+  // SQL statements that create the necessary version 26 indices.
+  private static final String[] VERSION_26_INDEX_CREATE_QUERIES = new String[] {
+    "create unique index idx1_" + PUBLISHER_SUBSCRIPTION_TABLE + " on "
+	+ PUBLISHER_SUBSCRIPTION_TABLE + "(" + PUBLISHER_SEQ_COLUMN + ")"
+    };
+
   // The database data source.
   private DataSource dataSource = null;
 
@@ -8969,5 +8975,43 @@ public class DbManagerSql {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
     return count;
+  }
+
+  /**
+   * Updates the database from version 25 to version 26.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom25To26(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom25To26(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    if (isTypeDerby()) {
+      // Drop the foreign key constraint of the now obsolete provider reference
+      // column. Otherwise, Derby does not allow the dropping of a foreign key
+      // column.
+      executeDdlQuery(conn, dropConstraintQuery(PUBLISHER_SUBSCRIPTION_TABLE,
+	  "FK_PROVIDER_SEQ_SUBSCRIPTION"));
+    } else if (isTypeMysql()) {
+      executeDdlQuery(conn,
+	  dropMysqlForeignKeyQuery(PUBLISHER_SUBSCRIPTION_TABLE,
+	  "publisher_subscription_ibfk_2"));
+    }
+
+    // Drop the now obsolete provider identifier column.
+    executeDdlQuery(conn,
+	dropColumnQuery(PUBLISHER_SUBSCRIPTION_TABLE, PROVIDER_SEQ_COLUMN));
+
+    // Create the necessary indices.
+    executeDdlQueries(conn, VERSION_26_INDEX_CREATE_QUERIES);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

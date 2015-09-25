@@ -37,6 +37,7 @@ import javax.jws.WebService;
 import org.lockss.ws.entities.KeyIdNamePairListPair;
 import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
 
 /**
  * The MetadataMonitor web service interface.
@@ -167,4 +168,40 @@ public interface MetadataMonitorService {
    */
   @WebMethod
   List<String> getUnknownProviderAuIds() throws LockssWebServicesFault;
+
+  /**
+   * Provides the journal articles in the database whose parent is not a
+   * journal.
+   * 
+   * @return a List<MismatchedChildWsResult> with the mismatched journal
+   *  articles sorted by Archival Unit, parent name and child name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<MismatchedMetadataChildWsResult> getMismatchedParentJournalArticles()
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the book chapters in the database whose parent is not a book or a
+   * book series.
+   * 
+   * @return a List<MismatchedChildWsResult> with the mismatched book chapters
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<MismatchedMetadataChildWsResult> getMismatchedParentBookChapters()
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the book volumes in the database whose parent is not a book or a
+   * book series.
+   * 
+   * @return a List<MismatchedChildWsResult> with the mismatched book volumes
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<MismatchedMetadataChildWsResult> getMismatchedParentBookVolumes()
+      throws LockssWebServicesFault;
 }

@@ -4009,4 +4009,46 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       DbManager.safeRollbackAndClose(conn);
     }
   }
+
+  /**
+   * Provides the journal articles in the database whose parent is not a
+   * journal.
+   * 
+   * @return a Collection<Map<String, String>> with the mismatched journal
+   *         articles sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<Map<String, String>> getMismatchedParentJournalArticles()
+      throws DbException {
+    return getMetadataManagerSql().getMismatchedParentJournalArticles();
+  }
+
+  /**
+   * Provides the book chapters in the database whose parent is not a book or a
+   * book series.
+   * 
+   * @return a Collection<Map<String, String>> with the mismatched book chapters
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<Map<String, String>> getMismatchedParentBookChapters()
+      throws DbException {
+    return getMetadataManagerSql().getMismatchedParentBookChapters();
+  }
+
+  /**
+   * Provides the book volumes in the database whose parent is not a book or a
+   * book series.
+   * 
+   * @return a Collection<Map<String, String>> with the mismatched book volumes
+   *         sorted by Archival Unit, parent name and child name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<Map<String, String>> getMismatchedParentBookVolumes()
+      throws DbException {
+    return getMetadataManagerSql().getMismatchedParentBookVolumes();
+  }
 }

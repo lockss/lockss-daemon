@@ -35,6 +35,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -51,6 +52,8 @@ import org.lockss.db.DbException;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
 import org.lockss.subscription.BibliographicPeriod;
+import org.lockss.subscription.Publisher;
+import org.lockss.subscription.PublisherSubscription;
 import org.lockss.subscription.SerialPublication;
 import org.lockss.subscription.Subscription;
 import org.lockss.subscription.SubscriptionManager;
@@ -112,12 +115,14 @@ public class SubscriptionManagement extends LockssServlet {
   private static final String SUBSCRIBED_RANGES_PARAM_NAME = "subscribedRanges";
   private static final String UNSUBSCRIBED_RANGES_PARAM_NAME =
       "unsubscribedRanges";
-  private static final String SUBSCRIBE_ALL_PARAM_NAME = "subscribeAll";
-  private static final String UNSUBSCRIBE_ALL_PARAM_NAME = "unsubscribeAll";
 
   private static final String SUBSCRIPTIONS_SESSION_KEY = "subscriptions";
+  private static final String SUBSCRIBED_PUBLISHERS_SESSION_KEY =
+      "subscribedPublishers";
   private static final String TOTAL_SUBSCRIPTION_SESSION_KEY =
       "totalSubscription";
+  private static final String UNDECIDED_PUBLISHERS_SESSION_KEY =
+      "undecidedPublishers";
   private static final String UNDECIDED_TITLES_SESSION_KEY = "undecidedTitles";
   private static final String BACK_LINK_TEXT_PREFIX = "Back to ";
 
@@ -131,6 +136,10 @@ public class SubscriptionManagement extends LockssServlet {
       "Could not find title AUs";
   private static final String TOTAL_SUBSCRIPTION_WIDGET_ID =
       "totalSubscription";
+  private static final String PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX =
+      "publisherSubscription";
+  private static final String PUBLICATION_SUBSCRIPTION_WIDGET_ID_PREFIX =
+      "publicationSubscription";
   private static final int LETTERS_IN_ALPHABET = 26;
   private static final int DEFAULT_LETTERS_PER_TAB = 3;
 
@@ -299,9 +308,14 @@ public class SubscriptionManagement extends LockssServlet {
       // Add the form to the page.
       page.add(form);
     } else {
-      // Get the publications for which no subscription decision has been made.
+      // Initialize the publishers for the publications for which no
+      // subscription decision has been made.
+      Map<String, Publisher> publishers = new HashMap<String, Publisher>();
+
+      // Get the publications for which no subscription decision has been made
+      // and populate their publishers.
       List<SerialPublication> publications =
-	  subManager.getUndecidedPublications();
+	  subManager.getUndecidedPublications(publishers);
 
       if (publications.size() > 0) {
 	layoutErrorBlock(page);
@@ -339,12 +353,16 @@ public class SubscriptionManagement extends LockssServlet {
 
 	// Populate the tabs content with the publications for which no
 	// subscription decision has been made.
-	populateTabsPublications(publications, divTableMap);
+	populateTabsPublications(publications, publishers, divTableMap);
 
 	// Save the undecided publications in the session to compare after the
 	// form is submitted.
 	HttpSession session = getSession();
 	session.setAttribute(UNDECIDED_TITLES_SESSION_KEY, publications);
+
+	// Save the publishers in the session to compare after the form is
+	// submitted.
+	session.setAttribute(UNDECIDED_PUBLISHERS_SESSION_KEY, publishers);
 
 	if (subManager.isTotalSubscriptionEnabled()) {
 	  session.setAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY,
@@ -403,8 +421,11 @@ public class SubscriptionManagement extends LockssServlet {
     tsTable.addCell(checkBox,
 	"class=\"" + tsClassName + "\" align=\"center\" width=\"1%\"");
 
-    tsTable.addCell(getTriStateDisplayTextSpan(TOTAL_SUBSCRIPTION_WIDGET_ID,
-	totalSubscriptionSetting),
+    Block textBlock = new Block(Block.Bold);
+    textBlock.add(getTriStateDisplayTextSpan(TOTAL_SUBSCRIPTION_WIDGET_ID,
+	totalSubscriptionSetting));
+
+    tsTable.addCell(textBlock,
 	"class=\"" + tsClassName + "\" align=\"left\" width=\"49%\"");
 
     tsTable.addCell(getTriStateHiddenInput(TOTAL_SUBSCRIPTION_WIDGET_ID,
@@ -466,10 +487,11 @@ public class SubscriptionManagement extends LockssServlet {
     // Lazy loading.
     if (tabColumnHeaderNames == null) {
       tabColumnHeaderNames = (List<String>)ListUtil
-      .list("Subscribe All",
-	    "Subscribed Ranges&nbsp;" + addFootnote(rangesFootnote),
-	    "Unsubscribed Ranges&nbsp;" + addFootnote(rangesFootnote),
-	    "Unsubscribe All");
+      .list("Publisher/Publication<br />Overall Subscription",
+	    "Subscribed<br />Publication Ranges&nbsp;"
+		+ addFootnote(rangesFootnote),
+	    "Unsubscribed<br />Publication Ranges&nbsp;"
+		+ addFootnote(rangesFootnote));
     }
 
     return tabColumnHeaderNames;
@@ -487,8 +509,7 @@ public class SubscriptionManagement extends LockssServlet {
       tabColumnHeaderCssClasses = (List<String>)ListUtil
       .list("sub-column-header-subscribe-all",
 	    "sub-column-header-subscribed-ranges",
-	    "sub-column-header-unsubscribed-ranges",
-	    "sub-column-header-unsubscribe-all");
+	    "sub-column-header-unsubscribed-ranges");
     }
 
     return tabColumnHeaderCssClasses;
@@ -500,12 +521,15 @@ public class SubscriptionManagement extends LockssServlet {
    * @param publications
    *          A List<SerialPublication> with the publications to be used to
    *          populate the tabs.
+   * @param publishers
+   *          A Map<String, Publisher> with the publishers involved mapped by
+    *          their name.
    * @param divTableMap
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.
    */
   private void populateTabsPublications(List<SerialPublication> publications,
-      Map<String, Table> divTableMap) {
+      Map<String, Publisher> publishers, Map<String, Table> divTableMap) {
     final String DEBUG_HEADER = "populateTabsPublications(): ";
     if (log.isDebug2()) {
       if (publications != null) {
@@ -513,6 +537,12 @@ public class SubscriptionManagement extends LockssServlet {
 	    + publications.size());
       } else {
 	log.debug2(DEBUG_HEADER + "publications is null");
+      }
+      if (publishers != null) {
+	log.debug2(DEBUG_HEADER + "publishers.size() = "
+	    + publishers.size());
+      } else {
+	log.debug2(DEBUG_HEADER + "publishers is null");
       }
     }
 
@@ -544,13 +574,20 @@ public class SubscriptionManagement extends LockssServlet {
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
+      // Get the publisher number.
+      Long publisherNumber =
+	  publishers.get(publisherName).getPublisherNumber();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publisherNumber = " + publisherNumber);
+
       // Get the set of publications for this publisher.
       pubSet = pubEntry.getValue();
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "pubSet.size() = " + pubSet.size());
 
       // Populate a tab with the publications for this publisher.
-      populateTabPublisherPublications(publisherName, pubSet, divTableMap);
+      populateTabPublisherPublications(publisherName, publisherNumber,
+	  null, pubSet, divTableMap);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -649,6 +686,10 @@ public class SubscriptionManagement extends LockssServlet {
    * 
    * @param publisherName
    *          A String with the name of the publisher.
+   * @param publisherNumber
+   *          A Long with the number assigned to the publisher.
+   * @param publisherSubscriptionSetting
+   *          A Boolean with the setting of the publisher subscription.
    * @param pubSet
    *          A TreeSet<SerialPublication> with the publisher publications.
    * @param divTableMap
@@ -656,6 +697,7 @@ public class SubscriptionManagement extends LockssServlet {
    *          letter of the tab letter group.
    */
   private void populateTabPublisherPublications(String publisherName,
+      Long publisherNumber, Boolean publisherSubscriptionSetting,
       TreeSet<SerialPublication> pubSet, Map<String, Table> divTableMap) {
     final String DEBUG_HEADER = "populateTabPublisherPublications(): ";
     if (log.isDebug2())
@@ -702,7 +744,8 @@ public class SubscriptionManagement extends LockssServlet {
       log.debug3(DEBUG_HEADER + "publisherRowTitle = " + publisherRowTitle);
 
     // Create in the table the title row for the publisher.
-    createPublisherRow(publisherRowTitle, cleanNameString, divTable);
+    createPublisherRow(publisherRowTitle, cleanNameString, publisherNumber,
+	publisherSubscriptionSetting, divTable);
 
     // Check whether there are any publications to show.
     if (pubSet != null) {
@@ -727,39 +770,100 @@ public class SubscriptionManagement extends LockssServlet {
    *          A String with the name of the publisher.
    * @param publisherId
    *          A String with the identifier of the publisher.
+   * @param publisherNumber
+   *          A Long with the number assigned to the publisher.
+   * @param publisherSubscriptionSetting
+   *          A Boolean with the setting of the publisher subscription.
    * @param divTable
    *          A Table with the table where to create the row.
    */
   private void createPublisherRow(String publisherName, String publisherId,
+      Long publisherNumber, Boolean publisherSubscriptionSetting,
       Table divTable) {
     final String DEBUG_HEADER = "createPublisherRow(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publisherName = " + publisherName);
       log.debug2(DEBUG_HEADER + "publisherId = " + publisherId);
+      log.debug2(DEBUG_HEADER + "publisherNumber = " + publisherNumber);
+      log.debug2(DEBUG_HEADER + "publisherSubscriptionSetting = "
+	  + publisherSubscriptionSetting);
     }
 
     divTable.newRow();
 
-    Link headingLink = new Link("javascript:showRows('" + publisherId
-	+ "_class', '" + publisherId + "_id', '" + publisherId
-	+ "_Publisherimage')");
-    headingLink.attribute("id=\"" + publisherId + "_id\"");
+    Block rowHeading = new Block(Block.Span);
 
-    Image headingLinkImage = new Image("images/expand.png");
-    headingLinkImage.attribute("id =\"" + publisherId + "_Publisherimage\"");
-    headingLinkImage.attribute("class=\"title-icon\"");
-    headingLinkImage.attribute("alt", "Expand Publisher");
-    headingLinkImage.attribute("title", "Expand Publisher");
+    // Check whether the publisher subscription has not been set.
+    if (publisherSubscriptionSetting == null) {
+      // Yes: Add the publisher name as a link. 
+      Link headingLink = new Link("javascript:showRows('" + publisherId
+  	+ "_class', '" + publisherId + "_id', '" + publisherId
+  	+ "_Publisherimage')");
+      headingLink.attribute("id=\"" + publisherId + "_id\"");
 
-    headingLink.add(headingLinkImage);
-    headingLink.add(publisherName);
+      Image headingLinkImage = new Image("images/expand.png");
+      headingLinkImage.attribute("id =\"" + publisherId + "_Publisherimage\"");
+      headingLinkImage.attribute("class=\"title-icon\"");
+      headingLinkImage.attribute("alt", "Expand Publisher");
+      headingLinkImage.attribute("title", "Expand Publisher");
 
-    Block boldHeadingLink = new Block(Block.Bold);
-    boldHeadingLink.add(headingLink);
-    divTable.addHeading(boldHeadingLink,
-	"class=\"pub-title\" colspan=\"5\" width=\"100%\"");
+      headingLink.add(headingLinkImage);
+      headingLink.add(publisherName);
+
+      Block boldHeadingLink = new Block(Block.Bold);
+      boldHeadingLink.add(headingLink);
+
+      rowHeading.add(boldHeadingLink);
+    } else {
+      // No: Add the publisher name as plain text.
+      Block boldHeading = new Block(Block.Bold);
+      boldHeading.add("&nbsp;&nbsp;&nbsp;&nbsp;" + publisherName);
+
+      rowHeading.add(boldHeading);
+    }
+
+    divTable.addCell(rowHeading, "class=\"pub-title\"");
+
+    divTable.addCell(getPublisherSubscriptionBlock(publisherNumber,
+	publisherSubscriptionSetting), "align=\"center\"");
+
+    // No range boxes for the publisher row.
+    divTable.addCell("&nbsp;");
+    divTable.addCell("&nbsp;");
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the HTML block with the publisher subscription widget.
+   * 
+   * @param publisherNumber
+   *          A Long with the number assigned to the publisher.
+   * @param publisherSubscriptionSetting
+   *          A Boolean with the state of the publisher subscription widget.
+   * @return a Block representing the publisher subscription widget.
+   */
+  private Block getPublisherSubscriptionBlock(Long publisherNumber,
+      Boolean publisherSubscriptionSetting) {
+    String publisherSubscriptionWidgetId =
+	PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX + publisherNumber;
+
+    Block triBoxBlock = new Block(Block.Bold);
+
+    Input checkBox = new Input(Input.Checkbox, publisherSubscriptionWidgetId);
+    checkBox.attribute("class", "tribox");
+    checkBox.attribute("id", publisherSubscriptionWidgetId);
+
+    triBoxBlock.add(checkBox);
+    triBoxBlock.add("&nbsp;");
+
+    triBoxBlock.add(getTriStateDisplayTextSpan(publisherSubscriptionWidgetId,
+	publisherSubscriptionSetting));
+
+    triBoxBlock.add(getTriStateHiddenInput(publisherSubscriptionWidgetId,
+	publisherSubscriptionSetting));
+
+    return triBoxBlock;
   }
 
   /**
@@ -792,25 +896,15 @@ public class SubscriptionManagement extends LockssServlet {
     divTable.addCell(publication.getUniqueName(),
 	"class=\"sub-publication-name\"");
 
-    Integer publicationNumber = publication.getPublicationNumber();
-    String subscribeAllId = SUBSCRIBE_ALL_PARAM_NAME + publicationNumber;
+    Long publicationNumber = publication.getPublicationNumber();
     String subscribedRangesId =
 	SUBSCRIBED_RANGES_PARAM_NAME + publicationNumber;
     String unsubscribedRangesId =
 	UNSUBSCRIBED_RANGES_PARAM_NAME + publicationNumber;
-    String unsubscribeAllId = UNSUBSCRIBE_ALL_PARAM_NAME + publicationNumber;
 
-    // The subscribe all checkbox.
-    Input subscribeAllCheckBox =
-	new Input(Input.Checkbox, subscribeAllId, "true");
-    subscribeAllCheckBox.attribute("id", subscribeAllId);
-
-    // Disable the subscribe range input box and the unsubscribe all check box,
-    // but allow the unsubscribe range input box for exceptions.
-    subscribeAllCheckBox.attribute("onchange", "selectDisable2(this, '"
-	+ unsubscribeAllId + "', '" + subscribedRangesId + "')");
-
-    divTable.addCell(subscribeAllCheckBox);
+    // The publication subscription widget.
+    divTable.addCell(getPublicationSubscriptionBlock(publicationNumber, null,
+	subscribedRangesId, unsubscribedRangesId));
 
     // The subscribed ranges.
     Input subscribedInputBox = new Input(Input.Text, subscribedRangesId, "");
@@ -827,19 +921,46 @@ public class SubscriptionManagement extends LockssServlet {
 
     divTable.addCell(unsubscribedInputBox);
 
-    // The unsubscribe all checkbox.
-    Input unsubscribeAllCheckBox =
-	new Input(Input.Checkbox, unsubscribeAllId, "true");
-    unsubscribeAllCheckBox.attribute("id", unsubscribeAllId);
-
-    // Disable all the other input elements for this row.
-    unsubscribeAllCheckBox.attribute("onchange", "selectDisable3(this, '"
-	+ subscribeAllId + "', '" + subscribedRangesId + "', '"
-	+ unsubscribedRangesId + "')");
-
-    divTable.addCell(unsubscribeAllCheckBox);
-
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the HTML block with the publication subscription widget.
+   * 
+   * @param publicationNumber
+   *          A Long with the number assigned to the publication.
+   * @param publicationSubscriptionSetting
+   *          A Boolean with the state of the publication subscription widget.
+   * @param subscribedRangesId
+   *          A String with the identifier of the subscribed ranges input box.
+   * @param unsubscribedRangesId
+   *          A String with the identifier of the unsubscribed ranges input box.
+   * @return a Block representing the publication subscription widget.
+   */
+  private Block getPublicationSubscriptionBlock(Long publicationNumber,
+      Boolean publicationSubscriptionSetting, String subscribedRangesId,
+      String unsubscribedRangesId) {
+    String publicationSubscriptionWidgetId =
+	PUBLICATION_SUBSCRIPTION_WIDGET_ID_PREFIX + publicationNumber;
+
+    Block triBoxBlock = new Block(Block.Span);
+
+    Input checkBox = new Input(Input.Checkbox, publicationSubscriptionWidgetId);
+    checkBox.attribute("class", "tribox");
+    checkBox.attribute("id", publicationSubscriptionWidgetId);
+    checkBox.attribute("onchange", "publicationSubscriptionChanged('"
+	+ publicationSubscriptionWidgetId + TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX
+	+ "', '" + subscribedRangesId + "', '" + unsubscribedRangesId + "')");
+    triBoxBlock.add(checkBox);
+    triBoxBlock.add("&nbsp;");
+
+    triBoxBlock.add(getTriStateDisplayTextSpan(publicationSubscriptionWidgetId,
+	publicationSubscriptionSetting));
+
+    triBoxBlock.add(getTriStateHiddenInput(publicationSubscriptionWidgetId,
+	publicationSubscriptionSetting));
+
+    return triBoxBlock;
   }
 
   /**
@@ -868,12 +989,17 @@ public class SubscriptionManagement extends LockssServlet {
     if (subManager.isTotalSubscriptionEnabled()) {
       totalSubscriptionSetting =
 	  (Boolean)session.getAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "totalSubscriptionSetting = "
-	  + totalSubscriptionSetting);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "totalSubscriptionSetting = " + totalSubscriptionSetting);
     }
 
+    // Get the publishers presented in the form just submitted.
+    Map<String, Publisher> publishers = (Map<String, Publisher>)session
+	.getAttribute(UNDECIDED_PUBLISHERS_SESSION_KEY);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publishers = " + publishers);
+
     // Get the undecided publications presented in the form just submitted.
-    List<SerialPublication> publications = (List<SerialPublication>) session
+    List<SerialPublication> publications = (List<SerialPublication>)session
 	.getAttribute(UNDECIDED_TITLES_SESSION_KEY);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publications = " + publications);
@@ -916,6 +1042,11 @@ public class SubscriptionManagement extends LockssServlet {
 	&& updatedTotalSubscriptionSetting.booleanValue()) {
       subManager.handleStartingTotalSubscription(status);
     } else {
+      Map<String, PublisherSubscription> publisherSubscriptions =
+	  buildPublisherSubscriptionMap(publishers, parameterMap);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publisherSubscriptions = "
+	  + publisherSubscriptions);
+
       Subscription subscription;
       Collection<Subscription> subscriptions = new ArrayList<Subscription>();
 
@@ -923,12 +1054,16 @@ public class SubscriptionManagement extends LockssServlet {
 	  && updatedTotalSubscriptionSetting == null) {
 	// Loop through all the publications presented in the form.
 	for (SerialPublication publication : publications) {
-	  // Add it to the list of subscriptions added, if necessary.
-	  subscription = buildPublicationSubscriptionIfNeeded(publication,
-	      parameterMap, status);
+	  // Skip publications for publisher subscriptions.
+	  if (!publisherSubscriptions
+	      .containsKey(publication.getPublisherName())) {
+	    // Add it to the list of subscriptions added, if necessary.
+	    subscription = buildPublicationSubscriptionIfNeeded(publication,
+		parameterMap, status);
 
-	  if (subscription != null) {
-	    subscriptions.add(subscription);
+	    if (subscription != null) {
+	      subscriptions.add(subscription);
+	    }
 	  }
 	}
       }
@@ -937,13 +1072,16 @@ public class SubscriptionManagement extends LockssServlet {
 	log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
 
       // Add any added subscriptions to the system.
-      if (totalSubscriptionChanged || subscriptions.size() > 0) {
+      if (totalSubscriptionChanged || publisherSubscriptions.size() > 0
+	  || subscriptions.size() > 0) {
 	subManager.addSubscriptions(totalSubscriptionChanged,
-	    updatedTotalSubscriptionSetting, subscriptions, status);
+	    updatedTotalSubscriptionSetting, publisherSubscriptions.values(),
+	    subscriptions, status);
       }
     }
 
     session.removeAttribute(UNDECIDED_TITLES_SESSION_KEY);
+    session.removeAttribute(UNDECIDED_PUBLISHERS_SESSION_KEY);
 
     if (subManager.isTotalSubscriptionEnabled()) {
       session.removeAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
@@ -980,6 +1118,54 @@ public class SubscriptionManagement extends LockssServlet {
     }
 
     return Boolean.FALSE;
+  }
+
+  /**
+   * Provides a map of submitted publisher subscriptions keyed by the publisher
+   * name.
+   * 
+   * @param publishers
+   *          A Map<String, Publisher> with a map of the originally undecided
+   *          publishers keyed by the publisher name.
+   * @param parameterMap
+   *          A Map<String,String> with the map of parameters received from the
+   *          submitted form.
+   * @return a Map<String, PublisherSubscription> with the submitted publisher
+   *         subscriptions keyed by the publisher name.
+   */
+  private Map<String, PublisherSubscription> buildPublisherSubscriptionMap(
+      Map<String, Publisher> publishers, Map<String,String> parameterMap) {
+    final String DEBUG_HEADER = "buildPublisherSubscriptionMap(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publishers.size() = " + publishers.size());
+
+    Map<String, PublisherSubscription> publisherSubscriptions =
+	new HashMap<String, PublisherSubscription>();
+
+    // Loop through all the originally undecided publishers.
+    for (String publisherName : publishers.keySet()) {
+      Publisher publisher = publishers.get(publisherName);
+
+      Boolean publisherSubscriptionSetting = getTriBoxValue(parameterMap,
+	  PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX
+	  + publisher.getPublisherNumber());
+
+      // Check whether a publisher subscription has been specified.
+      if (publisherSubscriptionSetting != null) {
+	// Yes: Remember it.
+	PublisherSubscription publisherSubscription =
+	    new PublisherSubscription();
+
+	publisherSubscription.setPublisher(publisher);
+	publisherSubscription.setSubscribed(publisherSubscriptionSetting);
+
+	publisherSubscriptions.put(publisherName, publisherSubscription);
+      }
+    }
+
+    if (log.isDebug2()) log.debug3(DEBUG_HEADER + "publisherSubscriptions = "
+	+ publisherSubscriptions);
+    return publisherSubscriptions;
   }
 
   /**
@@ -1025,17 +1211,18 @@ public class SubscriptionManagement extends LockssServlet {
     List<BibliographicPeriod> unsubscribedRanges;
     Subscription subscription = null;
 
-    Integer publicationNumber = publication.getPublicationNumber();
-    String subscribeAllParamName = SUBSCRIBE_ALL_PARAM_NAME + publicationNumber;
-    String unsubscribeAllParamName =
-	UNSUBSCRIBE_ALL_PARAM_NAME + publicationNumber;
+    Long publicationNumber = publication.getPublicationNumber();
 
-    // Check whether the "Subscribe All" box has been checked.
-    if (parameterMap.containsKey(subscribeAllParamName)) {
-      // Yes: Handle a full subscription request.
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + subscribeAllParamName
-	  + " => " + parameterMap.get(subscribeAllParamName));
+    Boolean overallSubscriptionSetting = getTriBoxValue(parameterMap,
+	      PUBLICATION_SUBSCRIPTION_WIDGET_ID_PREFIX + publicationNumber);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "overallSubscriptionSetting = " + overallSubscriptionSetting);
 
+    // Check whether the "Subscribe All" option has been selected.
+    if (overallSubscriptionSetting != null
+	&& overallSubscriptionSetting.booleanValue()) {
+      // Yes: Handle a full subscription request. Determine whether the
+      // subscribed ranges have changed.
       subscription = new Subscription();
       subscription.setPublication(publication);
       subscription.setSubscribedRanges(Collections
@@ -1086,11 +1273,9 @@ public class SubscriptionManagement extends LockssServlet {
 	}
       }
 
-      // No: Check whether the "Unsubscribe All" box has been checked.
-    } else if (parameterMap.containsKey(unsubscribeAllParamName)) {
-      // Yes: Handle a full unsubscription request.
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + unsubscribeAllParamName
-	  + " = " + parameterMap.get(unsubscribeAllParamName));
+      // No: Check whether the "Unsubscribe All" option has been selected.
+    } else if (overallSubscriptionSetting != null
+	&& overallSubscriptionSetting.booleanValue()) {
       subscription = new Subscription();
       subscription.setPublication(publication);
       subscription.setUnsubscribedRanges(Collections
@@ -1552,13 +1737,17 @@ public class SubscriptionManagement extends LockssServlet {
       // Add the form to the page.
       page.add(form);
     } else {
+      // Initialize the publisher subscriptions to be displayed.
+      Map<String, PublisherSubscription> subscribedPublishers =
+  	subManager.findAllSubscribedPublishers();
+
       // Get the existing subscriptions with ranges.
       List<Subscription> subscriptions =
-  	  subManager.findAllSubscriptionsAndRanges();
+  	  subManager.findAllSubscriptionsAndRanges(subscribedPublishers);
       if (log.isDebug3())
   	log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
 
-      if (subscriptions.size() > 0) {
+      if (subscriptions.size() > 0 || subscribedPublishers.size() > 0) {
 	layoutErrorBlock(page);
 
 	// Create the form.
@@ -1594,12 +1783,18 @@ public class SubscriptionManagement extends LockssServlet {
 
 	// Populate the tabs content with the publications for which
 	// subscription decisions have already been made.
-	populateTabsSubscriptions(subscriptions, divTableMap);
+	populateTabsSubscriptions(subscriptions, subscribedPublishers,
+	    divTableMap);
 
 	// Save the existing subscriptions in the session to compare after the
 	// form is submitted.
 	HttpSession session = getSession();
 	session.setAttribute(SUBSCRIPTIONS_SESSION_KEY, subscriptions);
+
+	// Save the subscribed publishers in the session to compare after the
+	// form is submitted.
+	session.setAttribute(SUBSCRIBED_PUBLISHERS_SESSION_KEY,
+	    subscribedPublishers);
 
 	if (subManager.isTotalSubscriptionEnabled()) {
 	  session.setAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY,
@@ -1639,19 +1834,40 @@ public class SubscriptionManagement extends LockssServlet {
    * @param subscriptions
    *          A List<Subscription> with the subscriptions to be used to populate
    *          the tabs.
+   * @param subscribedPublishers
+   *          A Map<String, PublisherSubscription> with the publisher
+   *          subscriptions mapped by the publisher name.
    * @param divTableMap
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.
    */
   private void populateTabsSubscriptions(List<Subscription> subscriptions,
+      Map<String, PublisherSubscription> subscribedPublishers,
       Map<String, Table> divTableMap) {
     final String DEBUG_HEADER = "populateTabsSubscriptions(): ";
-    if (log.isDebug2())
+    if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptions = " + subscriptions);
+      log.debug2(DEBUG_HEADER + "subscribedPublishers = "
+	  + subscribedPublishers);
+    }
 
-    Map.Entry<String, TreeSet<Subscription>> subEntry;
-    String publisherName;
-    TreeSet<Subscription> subSet;
+    // Number each subscribed publisher.
+    List<PublisherSubscription> publisherSubscriptions =
+	new ArrayList<PublisherSubscription>();
+
+    long publisherNumber = 1;
+
+    for (String publisherName : subscribedPublishers.keySet()) {
+      PublisherSubscription publisherSubscription =
+	  subscribedPublishers.get(publisherName);
+      publisherSubscription.getPublisher()
+      .setPublisherNumber(publisherNumber++);
+
+      publisherSubscriptions.add(publisherSubscription);
+    }
+
+    // Sort the publisher subscriptions by publisher name.
+    Collections.sort(publisherSubscriptions);
 
     // Get a map of the subscriptions keyed by their publisher.
     MultiValueMap subscriptionMap =
@@ -1665,26 +1881,28 @@ public class SubscriptionManagement extends LockssServlet {
       }
     }
 
-    // Loop through all the subscriptions mapped by their publisher.
-    Iterator<Map.Entry<String, TreeSet<Subscription>>> subIterator =
-	(Iterator<Map.Entry<String, TreeSet<Subscription>>>)subscriptionMap
-	.entrySet().iterator();
+    // Loop through all the publishers, subscribed or not.
+    for (PublisherSubscription publisherSubscription : publisherSubscriptions) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publisherSubscription = "
+	  + publisherSubscription);
 
-    while (subIterator.hasNext()) {
-      subEntry = subIterator.next();
+      // Check whether it is a subscribed publisher.
+      if (publisherSubscription.getSubscribed() != null) {
+	// Yes: Populate a tab with no title subscriptions for this publisher.
+	populateTabPublisherSubscriptions(publisherSubscription, null,
+	    divTableMap);
+      } else {
+	// No: Get the publisher name.
+	String publisherName =
+	    publisherSubscription.getPublisher().getPublisherName();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
-      // Get the publisher name.
-      publisherName = subEntry.getKey();
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
-
-      // Get the set of subscriptions for this publisher.
-      subSet = subEntry.getValue();
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "subSet.size() = " + subSet.size());
-
-      // Populate a tab with the subscriptions for this publisher.
-      populateTabPublisherSubscriptions(publisherName, subSet, divTableMap);
+	// Populate a tab with the subscriptions for this publisher.
+	populateTabPublisherSubscriptions(publisherSubscription,
+	    (TreeSet<Subscription>)subscriptionMap.get(publisherName),
+	    divTableMap);
+      }
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -1788,19 +2006,34 @@ public class SubscriptionManagement extends LockssServlet {
   /**
    * Populates a tab with the subscriptions for a publisher.
    * 
-   * @param publisherName
-   *          A String with the name of the publisher.
+   * @param publisherSubscription
+   *          A PublisherSubscription with the publisher subscription.
    * @param subSet
    *          A TreeSet<Subscription> with the publisher subscriptions.
    * @param divTableMap
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.
    */
-  private void populateTabPublisherSubscriptions(String publisherName,
+  private void populateTabPublisherSubscriptions(
+      PublisherSubscription publisherSubscription, 
       TreeSet<Subscription> subSet, Map<String, Table> divTableMap) {
     final String DEBUG_HEADER = "populateTabPublisherSubscriptions(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherName = " + publisherName);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSubscription = "
+	  + publisherSubscription);
+
+      if (subSet == null) {
+	log.debug2(DEBUG_HEADER + "subSet = null");
+      } else {
+	log.debug2(DEBUG_HEADER + "subSet.size() = " + subSet.size());
+      }
+    }
+
+    // The publisher name.
+    String publisherName =
+	publisherSubscription.getPublisher().getPublisherName();
+    if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
     // The publisher name first letter.
     String firstLetterPub = publisherName.substring(0, 1).toUpperCase();
@@ -1843,7 +2076,9 @@ public class SubscriptionManagement extends LockssServlet {
       log.debug3(DEBUG_HEADER + "publisherRowTitle = " + publisherRowTitle);
 
     // Create in the table the title row for the publisher.
-    createPublisherRow(publisherRowTitle, cleanNameString, divTable);
+    createPublisherRow(publisherRowTitle, cleanNameString,
+	publisherSubscription.getPublisher().getPublisherNumber(),
+	publisherSubscription.getSubscribed(), divTable);
 
     // Check whether there are any subscriptions to show.
     if (subSet != null) {
@@ -1896,16 +2131,10 @@ public class SubscriptionManagement extends LockssServlet {
 	"class=\"sub-publication-name\"");
 
     Long subscriptionSeq = subscription.getSubscriptionSeq();
-    String subscribeAllId = SUBSCRIBE_ALL_PARAM_NAME + subscriptionSeq;
     String subscribedRangesId =
 	SUBSCRIBED_RANGES_PARAM_NAME + subscriptionSeq;
     String unsubscribedRangesId =
 	UNSUBSCRIBED_RANGES_PARAM_NAME + subscriptionSeq;
-    String unsubscribeAllId = UNSUBSCRIBE_ALL_PARAM_NAME + subscriptionSeq;
-
-    // Initialize the input elements.
-    boolean subscribeAllChecked = false;
-    boolean subscribeAllDisabled = false;
 
     // The subscribed ranges.
     Collection<BibliographicPeriod> subscribedRanges =
@@ -1921,45 +2150,25 @@ public class SubscriptionManagement extends LockssServlet {
     String unsubscribedRangesText =
 	BibliographicPeriod.rangesAsString(unsubscribedRanges);
 
-    boolean unsubscribeAllChecked = false;
-    boolean unsubscribeAllDisabled = false;
+    Boolean publicationSubscriptionSetting = null;
 
     if (subscribedRanges != null && subscribedRanges.size() == 1
 	&& subscribedRanges.iterator().next().isAllTime()) {
-      subscribeAllChecked = true;
+      publicationSubscriptionSetting = Boolean.TRUE;
       subscribedRangesDisabled = true;
       subscribedRangesText = "";
-      unsubscribeAllDisabled = true;
     } else if (unsubscribedRanges != null && unsubscribedRanges.size() == 1
 	&& unsubscribedRanges.iterator().next().isAllTime()) {
-      subscribeAllDisabled = true;
+      publicationSubscriptionSetting = Boolean.FALSE;
       subscribedRangesDisabled = true;
       subscribedRangesText = "";
       unsubscribedRangesDisabled = true;
       unsubscribedRangesText = "";
-      unsubscribeAllChecked = true;
     }
 
-    // The subscribe all checkbox.
-    Input subscribeAllCheckBox =
-	new Input(Input.Checkbox, subscribeAllId, "true");
-    subscribeAllCheckBox.attribute("id", subscribeAllId);
-
-    if (subscribeAllChecked) {
-      subscribeAllCheckBox.attribute("checked", true);
-    }
-
-    if (subscribeAllDisabled) {
-      subscribeAllCheckBox.attribute("disabled", true);
-    }
-
-    // When this is checked, disable the subscribe range input box and the
-    // unsubscribe all check box, but allow the unsubscribe range input box for
-    // exceptions.
-    subscribeAllCheckBox.attribute("onchange", "selectDisable2(this, '"
-	+ unsubscribeAllId + "', '" + subscribedRangesId + "')");
-
-    divTable.addCell(subscribeAllCheckBox);
+    divTable.addCell(getPublicationSubscriptionBlock(subscriptionSeq,
+	publicationSubscriptionSetting, subscribedRangesId,
+	unsubscribedRangesId));
 
     // The subscribed ranges.
     Input subscribedInputBox = new Input(Input.Text, subscribedRangesId,
@@ -1983,26 +2192,6 @@ public class SubscriptionManagement extends LockssServlet {
     }
 
     divTable.addCell(unsubscribedInputBox);
-
-    // The unsubscribe all checkbox.
-    Input unsubscribeAllCheckBox =
-	new Input(Input.Checkbox, unsubscribeAllId, "true");
-    unsubscribeAllCheckBox.attribute("id", unsubscribeAllId);
-
-    if (unsubscribeAllChecked) {
-      unsubscribeAllCheckBox.attribute("checked", true);
-    }
-
-    if (unsubscribeAllDisabled) {
-      unsubscribeAllCheckBox.attribute("disabled", true);
-    }
-
-    // When this is checked, disable all the other input elements for this row.
-    unsubscribeAllCheckBox.attribute("onchange", "selectDisable3(this, '"
-	+ subscribeAllId + "', '" + subscribedRangesId + "', '"
-	+ unsubscribedRangesId + "')");
-
-    divTable.addCell(unsubscribeAllCheckBox);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -2033,9 +2222,16 @@ public class SubscriptionManagement extends LockssServlet {
     if (subManager.isTotalSubscriptionEnabled()) {
       totalSubscriptionSetting =
 	  (Boolean)session.getAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "totalSubscriptionSetting = "
-	  + totalSubscriptionSetting);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "totalSubscriptionSetting = " + totalSubscriptionSetting);
     }
+
+    // Get the publisher subscriptions presented in the form just submitted.
+    Map<String, PublisherSubscription> subscribedPublishers =
+	(Map<String, PublisherSubscription>)session
+	.getAttribute(SUBSCRIBED_PUBLISHERS_SESSION_KEY);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscribedPublishers = "
+	+ subscribedPublishers);
 
     // Get the subscriptions presented in the form just submitted.
     List<Subscription> subscriptions =
@@ -2082,24 +2278,85 @@ public class SubscriptionManagement extends LockssServlet {
       subManager.handleStartingTotalSubscription(status);
     } else {
       boolean subChanged = false;
+      Map<String, PublisherSubscription> updatePublisherSubscriptions =
+	  new HashMap<String, PublisherSubscription>();
       Collection<Subscription> updateSubscriptions =
 	  new ArrayList<Subscription>();
 
       if (totalSubscriptionSetting == null
 	  && updatedTotalSubscriptionSetting == null) {
+	// Loop through all the publisher subscriptions presented in the form.
+	for (String publisherName : subscribedPublishers.keySet()) {
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	  PublisherSubscription publisherSubscription =
+	      subscribedPublishers.get(publisherName);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "publisherSubscription = " + publisherSubscription);
+
+	  Boolean oldPublisherSubscriptionSetting =
+	      publisherSubscription.getSubscribed();
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "oldPublisherSubscriptionSetting = "
+	      + oldPublisherSubscriptionSetting);
+
+	  Boolean newPublisherSubscriptionSetting = getTriBoxValue(parameterMap,
+	      PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX
+	      + publisherSubscription.getPublisher().getPublisherNumber());
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "newPublisherSubscriptionSetting = "
+	      + newPublisherSubscriptionSetting);
+
+	  publisherSubscription.setSubscribed(newPublisherSubscriptionSetting);
+
+	  // Get an indication of whether the publisher subscription has been
+	  // changed.
+	  if (oldPublisherSubscriptionSetting == null) {
+	    subChanged = !(newPublisherSubscriptionSetting == null);
+	  } else {
+	    subChanged = !oldPublisherSubscriptionSetting
+		.equals(newPublisherSubscriptionSetting);
+	  }
+
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+
+	  if (subChanged) {
+	    updatePublisherSubscriptions.put(publisherName,
+		publisherSubscription);
+	  }
+	}
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "updatePublisherSubscriptions.size() = "
+	    + updatePublisherSubscriptions.size());
+
 	// Loop through all the subscriptions presented in the form.
 	for (Subscription subscription : subscriptions) {
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "subscription = " + subscription);
 
-	  // Get an indication of whether the subscription has been changed.
-	  subChanged =
-	      isSubscriptionUpdateNeeded(subscription, parameterMap, status);
+	  String publisherName =
+	      subscription.getPublication().getPublisherName();
 	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
-	  if (subChanged) {
-	    updateSubscriptions.add(subscription);
+	  if (subscribedPublishers.get(publisherName).getSubscribed() == null) {
+	    // Get an indication of whether the subscription has been changed.
+	    subChanged =
+		isSubscriptionUpdateNeeded(subscription, parameterMap, status);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+
+	    if (subChanged) {
+	      updateSubscriptions.add(subscription);
+	    }
+	  } else {
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "Ignored title subscription because "
+		  + "publisher subscription is "
+		  + subscribedPublishers.get(publisherName).getSubscribed());
 	  }
 	}
 
@@ -2108,13 +2365,16 @@ public class SubscriptionManagement extends LockssServlet {
       }
 
       // Record any updated subscriptions in the system.
-      if (totalSubscriptionChanged || updateSubscriptions.size() > 0) {
+      if (totalSubscriptionChanged || updatePublisherSubscriptions.size() > 0
+	  || updateSubscriptions.size() > 0) {
 	subManager.updateSubscriptions(totalSubscriptionChanged,
-	    updatedTotalSubscriptionSetting, updateSubscriptions, status);
+	    updatedTotalSubscriptionSetting,
+	    updatePublisherSubscriptions.values(), updateSubscriptions, status);
       }
     }
 
     session.removeAttribute(SUBSCRIPTIONS_SESSION_KEY);
+    session.removeAttribute(SUBSCRIBED_PUBLISHERS_SESSION_KEY);
 
     if (subManager.isTotalSubscriptionEnabled()) {
       session.removeAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY);
@@ -2177,17 +2437,16 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
 
-    String subscribeAllParamName = SUBSCRIBE_ALL_PARAM_NAME + subscriptionSeq;
-    String unsubscribeAllParamName =
-	UNSUBSCRIBE_ALL_PARAM_NAME + subscriptionSeq;
+    Boolean overallSubscriptionSetting = getTriBoxValue(parameterMap,
+	      PUBLICATION_SUBSCRIPTION_WIDGET_ID_PREFIX + subscriptionSeq);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "overallSubscriptionSetting = " + overallSubscriptionSetting);
 
-    // Check whether the "Subscribe All" box has been checked.
-    if (parameterMap.containsKey(subscribeAllParamName)) {
-      // Yes: Handle a full subscription request.
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + subscribeAllParamName
-	  + " = " + parameterMap.get(subscribeAllParamName));
-
-      // Determine whether the subscribed ranges have changed.
+    // Check whether the "Subscribe All" option has been selected.
+    if (overallSubscriptionSetting != null
+	&& overallSubscriptionSetting.booleanValue()) {
+      // Yes: Handle a full subscription request. Determine whether the
+      // subscribed ranges have changed.
       subsChanged = subscribedRanges == null || subscribedRanges.size() != 1
 		|| !subscribedRanges.iterator().next().isAllTime();
 
@@ -2257,13 +2516,10 @@ public class SubscriptionManagement extends LockssServlet {
 	subscription.setUnsubscribedRanges(unsubscribedRanges);
       }
 
-      // No: Check whether the "Unsubscribe All" box has been checked.
-    } else if (parameterMap.containsKey(unsubscribeAllParamName)) {
-      // Yes: Handle a full unsubscription request.
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + unsubscribeAllParamName
-	  + " = " + parameterMap.get(unsubscribeAllParamName));
-      
-      // Determine whether the subscribed ranges have changed.
+      // No: Check whether the "Unsubscribe All" option has been selected.
+    } else if (overallSubscriptionSetting != null
+	&& !overallSubscriptionSetting.booleanValue()) {
+      // Yes: Determine whether the subscribed ranges have changed.
       subsChanged = subscribedRanges != null && subscribedRanges.size() > 0;
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "subsChanged = " + subsChanged);
