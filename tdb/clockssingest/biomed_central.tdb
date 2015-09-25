@@ -252,7 +252,7 @@
       au < crawling ; exists ; 2012 ; BMC Cancer Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Cancer Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Cancer Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Cancer Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Cancer Volume 15 ; 15 >
 
     }
 
@@ -365,7 +365,7 @@
       au < crawling ; exists ; 2012 ; BMC Clinical Pathology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Clinical Pathology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Clinical Pathology Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Clinical Pathology Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Clinical Pathology Volume 15 ; 15 >
 
     }
 
@@ -423,7 +423,7 @@
       au < crawling ; exists ; 2012 ; BMC Complementary and Alternative Medicine Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Complementary and Alternative Medicine Volume 13 ; 13 >
       au < notReady ; exists ; 2014 ; BMC Complementary and Alternative Medicine Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Complementary and Alternative Medicine Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Complementary and Alternative Medicine Volume 15 ; 15 >
 
     }
 
@@ -451,7 +451,7 @@
       au < crawling ; exists ; 2012 ; BMC Dermatology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Dermatology Volume 13 ; 13 >
       au < finished ; finished ; 2014 ; BMC Dermatology Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Dermatology Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Dermatology Volume 15 ; 15 >
 
     }
 
@@ -479,7 +479,7 @@
       au < crawling ; exists ; 2012 ; BMC Developmental Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Developmental Biology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Developmental Biology Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Developmental Biology Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Developmental Biology Volume 15 ; 15 >
      
     }
 
@@ -507,7 +507,7 @@
       au < crawling ; exists ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Ear, Nose and Throat Disorders Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Ear, Nose and Throat Disorders Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Ear, Nose and Throat Disorders Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Ear, Nose and Throat Disorders Volume 15 ; 15 >
 
     }
 
@@ -535,7 +535,7 @@
       au < crawling ; exists ; 2012 ; BMC Ecology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Ecology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Ecology Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Ecology Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Ecology Volume 15 ; 15 >
 
     }
 
@@ -563,7 +563,7 @@
       au < crawling ; exists ; 2012 ; BMC Emergency Medicine Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Emergency Medicine Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Emergency Medicine Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Emergency Medicine Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Emergency Medicine Volume 15 ; 15 >
 
     }
 
@@ -591,7 +591,7 @@
       au < crawling ; exists ; 2012 ; BMC Endocrine Disorders Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Endocrine Disorders Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Endocrine Disorders Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Endocrine Disorders Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Endocrine Disorders Volume 15 ; 15 >
 
     }
 
@@ -619,7 +619,7 @@
       au < crawling ; exists ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 >
-      au < testing ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 ; 15 >
+      au < ready ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 ; 15 >
 
     }
 
@@ -648,7 +648,7 @@
       au < crawling ; exists ; 2012 ; BMC Family Practice Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Family Practice Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; BMC Family Practice Volume 15 ; 15 >
-      au < testing ; exists ; 2015 ; BMC Family Practice Volume 16 ; 16 >
+      au < ready ; exists ; 2015 ; BMC Family Practice Volume 16 ; 16 >
 
     }
 
@@ -676,7 +676,7 @@
       au < crawling ; exists ; 2012 ; BMC Gastroenterology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Gastroenterology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Gastroenterology Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; BMC Gastroenterology Volume 15 ; 15 >
+      au < boost ; exists ; 2015 ; BMC Gastroenterology Volume 15 ; 15 >
 
     }
 
@@ -705,7 +705,7 @@
       au < crawling ; exists ; 2012 ; BMC Genetics Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Genetics Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; BMC Genetics Volume 15 ; 15 >
-      au < manifest ; exists ; 2015 ; BMC Genetics Volume 16 ; 16 >
+      au < boost ; exists ; 2015 ; BMC Genetics Volume 16 ; 16 >
 
     }
 
@@ -734,7 +734,7 @@
       au < crawling ; exists ; 2012 ; BMC Genomics Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Genomics Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; BMC Genomics Volume 15 ; 15 >
-      au < manifest ; exists ; 2015 ; BMC Genomics Volume 16 ; 16 >
+      au < boost ; exists ; 2015 ; BMC Genomics Volume 16 ; 16 >
 
     }
 
@@ -762,7 +762,7 @@
       au < crawling ; exists ; 2012 ; BMC Geriatrics Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Geriatrics Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Geriatrics Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; BMC Geriatrics Volume 15 ; 15 >
+      au < boost ; exists ; 2015 ; BMC Geriatrics Volume 15 ; 15 >
 
     }
 
@@ -790,7 +790,7 @@
       au < crawling ; exists ; 2012 ; BMC Health Services Research Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Health Services Research Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Health Services Research Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; BMC Health Services Research Volume 15 ; 15 >
+      au < boost ; exists ; 2015 ; BMC Health Services Research Volume 15 ; 15 >
 
     }
 
@@ -819,7 +819,7 @@
       au < crawling ; exists ; 2012 ; BMC Immunology Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Immunology Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; BMC Immunology Volume 15 ; 15 >
-      au < manifest ; exists ; 2015 ; BMC Immunology Volume 16 ; 16 >
+      au < boost ; exists ; 2015 ; BMC Immunology Volume 16 ; 16 >
 
     }
 
@@ -847,7 +847,7 @@
       au < crawling ; exists ; 2012 ; BMC Infectious Diseases Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Infectious Diseases Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Infectious Diseases Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; BMC Infectious Diseases Volume 15 ; 15 >
+      au < boost ; exists ; 2015 ; BMC Infectious Diseases Volume 15 ; 15 >
 
     }
     
@@ -875,7 +875,7 @@
       au < crawling ; exists ; 2012 ; BMC International Health and Human Rights Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC International Health and Human Rights Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC International Health and Human Rights Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; BMC International Health and Human Rights Volume 15 ; 15 >
+      au < boost ; exists ; 2015 ; BMC International Health and Human Rights Volume 15 ; 15 >
 
     }
 
@@ -903,7 +903,7 @@
       au < crawling ; exists ; 2012 ; BMC Medical Education Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Medical Education Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Medical Education Volume 14 ; 14 >
-      au < manifest ; exists ; 2015 ; BMC Medical Education Volume 15 ; 15 >
+      au < boost ; exists ; 2015 ; BMC Medical Education Volume 15 ; 15 >
 
     }
 
@@ -932,7 +932,7 @@
       au < crawling ; exists ; 2012 ; BMC Medical Ethics Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Medical Ethics Volume 14 ; 14 >
       au < finished ; crawling ; 2014 ; BMC Medical Ethics Volume 15 ; 15 >
-      au < manifest ; exists ; 2015 ; BMC Medical Ethics Volume 16 ; 16 >
+      au < boost ; exists ; 2015 ; BMC Medical Ethics Volume 16 ; 16 >
 
     }
 
@@ -961,7 +961,7 @@
       au < crawling ; exists ; 2012 ; BMC Medical Genetics Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Medical Genetics Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; BMC Medical Genetics Volume 15 ; 15 >
-      au < manifest ; exists ; 2015 ; BMC Medical Genetics Volume 16 ; 16 >
+      au < boost ; exists ; 2015 ; BMC Medical Genetics Volume 16 ; 16 >
 
     }
 
@@ -982,7 +982,7 @@
       au < crawling ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; BMC Medical Genomics Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; BMC Medical Genomics Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; BMC Medical Genomics Volume 8 ; 8 >
+      au < boost ; exists ; 2015 ; BMC Medical Genomics Volume 8 ; 8 >
 
     }
 
