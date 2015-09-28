@@ -47,7 +47,7 @@
       param[journal_id] = ajcs
       #notReady - 401 invalid username and password
       
-      au < wanted ; exists ; 2013 ; American Journal of Cultural Sociology Volume 1 ; 2013 ; 1 >
+      au < testing ; exists ; 2013 ; American Journal of Cultural Sociology Volume 1 ; 2013 ; 1 >
       au < ready ; exists ; 2014 ; American Journal of Cultural Sociology Volume 2 ; 2014 ; 2 >
       au < ready ; exists ; 2015 ; American Journal of Cultural Sociology Volume 3 ; 2015 ; 3 >
    
@@ -96,7 +96,7 @@
       au < finished ; crawling ; 2012 ; Asian Business & Management Volume 11 ; 2012 ; 11 >
       au < finished ; crawling ; 2013 ; Asian Business & Management Volume 12 ; 2013 ; 12 >
       au < finished ; crawling ; 2014 ; Asian Business & Management Volume 13 ; 2014 ; 13 >
-      au < wanted ; exists ; 2015 ; Asian Business & Management Volume 14 ; 2015 ; 14 >
+      au < testing ; exists ; 2015 ; Asian Business & Management Volume 14 ; 2015 ; 14 >
 
     }
 
@@ -155,7 +155,7 @@
       #notReady - 401 invalid username and password
 
       au < exists ; exists ; 2012 ; British Economics Volume 47 ; 2012 ; 47 >
-      au < wanted ; exists ; 2013 ; British Economics Volume 48 ; 2013 ; 48 >
+      au < testing ; exists ; 2013 ; British Economics Volume 48 ; 2013 ; 48 >
       au < crawling ; exists ; 2014 ; British Economics Volume 49 ; 2014 ; 49 >
       au < crawling ; exists ; 2015 ; British Economics Volume 50 ; 2015 ; 50 >
 
@@ -231,7 +231,7 @@
       au < finished ; frozen ; 2012 ; Contemporary Political Theory Volume 11 ; 2012 ; 11 >
       au < crawling ; exists ; 2013 ; Contemporary Political Theory Volume 12 ; 2013 ; 12 >
       au < finished ; crawling ; 2014 ; Contemporary Political Theory Volume 13 ; 2014 ; 13 >
-      au < wanted ; exists ; 2015 ; Contemporary Political Theory Volume 14 ; 2015 ; 14 >
+      au < testing ; exists ; 2015 ; Contemporary Political Theory Volume 14 ; 2015 ; 14 >
 
     }
 
@@ -535,7 +535,7 @@
       au < finished ; crawling ; 2012 ; Journal of Banking Regulation Volume 13 ; 2012 ; 13 >
       au < crawling ; exists ; 2013 ; Journal of Banking Regulation Volume 14 ; 2013 ; 14 >
       au < finished ; crawling ; 2014 ; Journal of Banking Regulation Volume 15 ; 2014 ; 15 >
-      au < wanted ; exists ; 2015 ; Journal of Banking Regulation Volume 16 ; 2015 ; 16 >
+      au < testing ; exists ; 2015 ; Journal of Banking Regulation Volume 16 ; 2015 ; 16 >
 
     }
 
@@ -576,7 +576,7 @@
       au < crawling ; exists ; 2012 ; Journal of Brand Management Volume 19 (2012) ; 2012 ; 19 >
       au < finished ; crawling ; 2012 ; Journal of Brand Management Volume 20 (2012) ; 2012 ; 20 >
       au < finished ; crawling ; 2013 ; Journal of Brand Management Volume 20 (2013) ; 2013 ; 20 >
-      au < wanted ; exists ; 2014 ; Journal of Brand Management Volume 21 (2014) ; 2014 ; 21 > # manifest page malformed. has V22 url.
+      au < testing ; exists ; 2014 ; Journal of Brand Management Volume 21 (2014) ; 2014 ; 21 > # manifest page malformed. has V22 url.
       au < crawling ; exists ; 2015 ; Journal of Brand Management Volume 22 (2014) ; 2015 ; 22 >
 
     }
@@ -632,8 +632,8 @@
       #notReady - 401 invalid username and password
 
       au < crawling ; exists ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 1 ; 2013 ; 1 >
-      au < wanted ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 2 ; 2014 ; 2 >
-      au < wanted ; exists ; 2015 ; Journal of Database Marketing & Customer Strategy Management Volume 3 ; 2015 ; 3 >
+      au < testing ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 2 ; 2014 ; 2 >
+      au < testing ; exists ; 2015 ; Journal of Database Marketing & Customer Strategy Management Volume 3 ; 2015 ; 3 >
 
     }
 
@@ -729,7 +729,7 @@
       au < finished ; crawling ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2013) ; 2013 ; 14 >
       au < finished ; crawling ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2013) ; 2013 ; 15 >
       au < finished ; crawling ; 2014 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2014) ; 2014 ; 15 >
-      au < wanted ; exists ; 2015 ; Journal of Direct, Data and Digital Marketing Practice Volume 16 (2015) ; 2015 ; 16 >
+      au < testing ; exists ; 2015 ; Journal of Direct, Data and Digital Marketing Practice Volume 16 (2015) ; 2015 ; 16 >
 
     }
 
@@ -847,7 +847,7 @@
       au < finished ; crawling ; 2012 ; Journal of Public Health Policy Volume 33 ; 2012 ; 33 >
       au < crawling ; exists ; 2013 ; Journal of Public Health Policy Volume 34 ; 2013 ; 34 >
       au < finished ; crawling ; 2014 ; Journal of Public Health Policy Volume 35 ; 2014 ; 35 >
-      au < wanted ; exists ; 2015 ; Journal of Public Health Policy Volume 36 ; 2015 ; 36 >
+      au < testing ; exists ; 2015 ; Journal of Public Health Policy Volume 36 ; 2015 ; 36 >
 
     }
 
@@ -1109,7 +1109,7 @@
       au < finished ; crawling ; 2012 ; Psychoanalysis, Culture & Society Volume 17 ; 2012 ; 17 >
       au < finished ; crawling ; 2013 ; Psychoanalysis, Culture & Society Volume 18 ; 2013 ; 18 >
       au < finished ; crawling ; 2014 ; Psychoanalysis, Culture & Society Volume 19 ; 2014 ; 19 >
-      au < wanted ; exists ; 2015 ; Psychoanalysis, Culture & Society Volume 20 ; 2015 ; 20 >
+      au < testing ; exists ; 2015 ; Psychoanalysis, Culture & Society Volume 20 ; 2015 ; 20 >
 
     }
 
@@ -1198,7 +1198,7 @@
       au < finished ; crawling ; 2012 ; Social Theory & Health Volume 10 ; 2012 ; 10 >
       au < crawling ; exists ; 2013 ; Social Theory & Health Volume 11 ; 2013 ; 11 >
       au < finished ; crawling ; 2014 ; Social Theory & Health Volume 12 ; 2014 ; 12 >
-      au < wanted ; exists ; 2015 ; Social Theory & Health Volume 13 ; 2015 ; 13 >
+      au < testing ; exists ; 2015 ; Social Theory & Health Volume 13 ; 2015 ; 13 >
 
     }
 
