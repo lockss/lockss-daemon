@@ -908,7 +908,7 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/$param{book_isbn}.pdf/) || ($man_contents =~ m/$param{book_isbn}.0001/))) {
-        if ($man_contents =~ m/<h1 class="product-title"\s*>\s*(.*)\s*<\/h1>/si) {
+        if ($man_contents =~ m/<h1 class="product-title"\s*>\s*([^<>]*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
           $vol_title =~ s/\s*<br \/>\s*/: /;
