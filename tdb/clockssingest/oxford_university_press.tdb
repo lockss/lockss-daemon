@@ -432,31 +432,31 @@
     param[base_url] = http://ae.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 1990 ; American Entomologist Volume 36 ; 36 ; >
-    au < exists ; exists ; 1991 ; American Entomologist Volume 37 ; 37 ; >
-    au < exists ; exists ; 1992 ; American Entomologist Volume 38 ; 38 ; >
-    au < exists ; exists ; 1993 ; American Entomologist Volume 39 ; 39 ; >
-    au < exists ; exists ; 1994 ; American Entomologist Volume 40 ; 40 ; >
-    au < exists ; exists ; 1995 ; American Entomologist Volume 41 ; 41 ; >
-    au < exists ; exists ; 1996 ; American Entomologist Volume 42 ; 42 ; >
-    au < exists ; exists ; 1997 ; American Entomologist Volume 43 ; 43 ; >
-    au < exists ; exists ; 1998 ; American Entomologist Volume 44 ; 44 ; >
-    au < exists ; exists ; 1999 ; American Entomologist Volume 45 ; 45 ; >
-    au < exists ; exists ; 2000 ; American Entomologist Volume 46 ; 46 ; >
-    au < exists ; exists ; 2001 ; American Entomologist Volume 47 ; 47 ; >
-    au < exists ; exists ; 2002 ; American Entomologist Volume 48 ; 48 ; >
-    au < exists ; exists ; 2003 ; American Entomologist Volume 49 ; 49 ; >
-    au < exists ; exists ; 2004 ; American Entomologist Volume 50 ; 50 ; >
-    au < exists ; exists ; 2005 ; American Entomologist Volume 51 ; 51 ; >
-    au < exists ; exists ; 2006 ; American Entomologist Volume 52 ; 52 ; >
-    au < exists ; exists ; 2007 ; American Entomologist Volume 53 ; 53 ; >
-    au < exists ; exists ; 2008 ; American Entomologist Volume 54 ; 54 ; >
-    au < exists ; exists ; 2009 ; American Entomologist Volume 55 ; 55 ; >
-    au < exists ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
-    au < exists ; exists ; 2011 ; American Entomologist Volume 57 ; 57 ; >
-    au < exists ; exists ; 2012 ; American Entomologist Volume 58 ; 58 ; >
-    au < exists ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
-    au < exists ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
+    au < manifest ; exists ; 1990 ; American Entomologist Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1991 ; American Entomologist Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1992 ; American Entomologist Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1993 ; American Entomologist Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1994 ; American Entomologist Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1995 ; American Entomologist Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1996 ; American Entomologist Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1997 ; American Entomologist Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1998 ; American Entomologist Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1999 ; American Entomologist Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2000 ; American Entomologist Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2001 ; American Entomologist Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2002 ; American Entomologist Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2003 ; American Entomologist Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2004 ; American Entomologist Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2005 ; American Entomologist Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2006 ; American Entomologist Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2007 ; American Entomologist Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2008 ; American Entomologist Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2009 ; American Entomologist Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2011 ; American Entomologist Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2012 ; American Entomologist Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
     au < crawling ; exists ; 2015 ; American Entomologist Volume 61 ; 61 ; >
 
   }
@@ -1839,10 +1839,10 @@
     au < manifest ; exists ; 2007 ; Arbitration International Volume 23 ; 23 ; >
     au < manifest ; exists ; 2008 ; Arbitration International Volume 24 ; 24 ; >
     au < manifest ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
-    au < exists ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
     au < manifest ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
     au < crawling ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
-    au < exists ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
     au < crawling ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
     au < crawling ; exists ; 2015 ; Arbitration International Volume 31 ; 31 ; >
 
@@ -3924,7 +3924,7 @@
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; >
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
-    au < expected ; exists ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; >
+    au < manifest ; exists ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; >
 
     }
 
@@ -8383,7 +8383,7 @@
     au < crawling ; exists ; 2014 ; History Workshop Journal Volume 77 ; 77 ; >
     au < crawling ; exists ; 2014 ; History Workshop Journal Volume 78 ; 78 ; >
     au < crawling ; exists ; 2015 ; History Workshop Journal Volume 79 ; 79 ; >
-    au < expected ; exists ; 2015 ; History Workshop Journal Volume 80 ; 80 ; >
+    au < manifest ; exists ; 2015 ; History Workshop Journal Volume 80 ; 80 ; >
 
     }
 
@@ -11614,47 +11614,47 @@
     param[base_url] = http://jcr.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 1974-1975 ; Journal of Consumer Research Volume 1 ; 1 ; >
-    au < exists ; exists ; 1975-1976 ; Journal of Consumer Research Volume 2 ; 2 ; >
-    au < exists ; exists ; 1976-1977 ; Journal of Consumer Research Volume 3 ; 3 ; >
-    au < exists ; exists ; 1977-1978 ; Journal of Consumer Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 1978-1979 ; Journal of Consumer Research Volume 5 ; 5 ; >
-    au < exists ; exists ; 1979-1980 ; Journal of Consumer Research Volume 6 ; 6 ; >
-    au < exists ; exists ; 1980-1981 ; Journal of Consumer Research Volume 7 ; 7 ; >
-    au < exists ; exists ; 1981-1982 ; Journal of Consumer Research Volume 8 ; 8 ; >
-    au < exists ; exists ; 1982-1983 ; Journal of Consumer Research Volume 9 ; 9 ; >
-    au < exists ; exists ; 1983-1984 ; Journal of Consumer Research Volume 10 ; 10 ; >
-    au < exists ; exists ; 1984-1985 ; Journal of Consumer Research Volume 11 ; 11 ; >
-    au < exists ; exists ; 1985-1986 ; Journal of Consumer Research Volume 12 ; 12 ; >
-    au < exists ; exists ; 1986-1987 ; Journal of Consumer Research Volume 13 ; 13 ; >
-    au < exists ; exists ; 1987-1988 ; Journal of Consumer Research Volume 14 ; 14 ; >
-    au < exists ; exists ; 1988-1989 ; Journal of Consumer Research Volume 15 ; 15 ; >
-    au < exists ; exists ; 1989-1990 ; Journal of Consumer Research Volume 16 ; 16 ; >
-    au < exists ; exists ; 1990-1991 ; Journal of Consumer Research Volume 17 ; 17 ; >
-    au < exists ; exists ; 1991-1992 ; Journal of Consumer Research Volume 18 ; 18 ; >
-    au < exists ; exists ; 1992-1993 ; Journal of Consumer Research Volume 19 ; 19 ; >
-    au < exists ; exists ; 1993-1994 ; Journal of Consumer Research Volume 20 ; 20 ; >
-    au < exists ; exists ; 1994-1995 ; Journal of Consumer Research Volume 21 ; 21 ; >
-    au < exists ; exists ; 1995-1996 ; Journal of Consumer Research Volume 22 ; 22 ; >
-    au < exists ; exists ; 1996-1997 ; Journal of Consumer Research Volume 23 ; 23 ; >
-    au < exists ; exists ; 1997-1998 ; Journal of Consumer Research Volume 24 ; 24 ; >
-    au < exists ; exists ; 1998-1999 ; Journal of Consumer Research Volume 25 ; 25 ; >
-    au < exists ; exists ; 1999-2000 ; Journal of Consumer Research Volume 26 ; 26 ; >
-    au < exists ; exists ; 2000-2001 ; Journal of Consumer Research Volume 27 ; 27 ; >
-    au < exists ; exists ; 2001-2002 ; Journal of Consumer Research Volume 28 ; 28 ; >
-    au < exists ; exists ; 2002-2003 ; Journal of Consumer Research Volume 29 ; 29 ; >
-    au < exists ; exists ; 2003-2004 ; Journal of Consumer Research Volume 30 ; 30 ; >
-    au < exists ; exists ; 2004-2005 ; Journal of Consumer Research Volume 31 ; 31 ; >
-    au < exists ; exists ; 2005-2006 ; Journal of Consumer Research Volume 32 ; 32 ; >
-    au < exists ; exists ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 ; >
-    au < exists ; exists ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 ; >
-    au < exists ; exists ; 2008-2009 ; Journal of Consumer Research Volume 35 ; 35 ; >
-    au < exists ; exists ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 ; >
-    au < exists ; exists ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 ; >
-    au < exists ; exists ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 ; >
-    au < exists ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ; >
-    au < exists ; exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; >
-    au < exists ; exists ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1974-1975 ; Journal of Consumer Research Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1975-1976 ; Journal of Consumer Research Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1976-1977 ; Journal of Consumer Research Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1977-1978 ; Journal of Consumer Research Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1978-1979 ; Journal of Consumer Research Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1979-1980 ; Journal of Consumer Research Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1980-1981 ; Journal of Consumer Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1981-1982 ; Journal of Consumer Research Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1982-1983 ; Journal of Consumer Research Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1983-1984 ; Journal of Consumer Research Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1984-1985 ; Journal of Consumer Research Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1985-1986 ; Journal of Consumer Research Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1986-1987 ; Journal of Consumer Research Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1987-1988 ; Journal of Consumer Research Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1988-1989 ; Journal of Consumer Research Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1989-1990 ; Journal of Consumer Research Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1990-1991 ; Journal of Consumer Research Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1991-1992 ; Journal of Consumer Research Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1992-1993 ; Journal of Consumer Research Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1993-1994 ; Journal of Consumer Research Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1994-1995 ; Journal of Consumer Research Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1995-1996 ; Journal of Consumer Research Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1996-1997 ; Journal of Consumer Research Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1997-1998 ; Journal of Consumer Research Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1998-1999 ; Journal of Consumer Research Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1999-2000 ; Journal of Consumer Research Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2000-2001 ; Journal of Consumer Research Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2001-2002 ; Journal of Consumer Research Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2002-2003 ; Journal of Consumer Research Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2003-2004 ; Journal of Consumer Research Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2004-2005 ; Journal of Consumer Research Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2005-2006 ; Journal of Consumer Research Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2008-2009 ; Journal of Consumer Research Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; >
     au < manifest ; exists ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 ; >
     
   }
@@ -11936,7 +11936,7 @@
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
     au < finished ; finished ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
-    au < exists ; exists ; 2015 ; Journal of Economic Geography Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2015 ; Journal of Economic Geography Volume 15 ; 15 ; >
 
     }
 
@@ -13599,12 +13599,12 @@
     param[base_url] = http://jmammal.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 2000 ; Journal of Mammalogy Volume 81 ; 81 ; >
-    au < exists ; exists ; 2001 ; Journal of Mammalogy Volume 82 ; 82 ; >
-    au < exists ; exists ; 2002 ; Journal of Mammalogy Volume 83 ; 83 ; >
-    au < exists ; exists ; 2003 ; Journal of Mammalogy Volume 84 ; 84 ; >
-    au < exists ; exists ; 2004 ; Journal of Mammalogy Volume 85 ; 85 ; >
-    au < exists ; exists ; 2005 ; Journal of Mammalogy Volume 86 ; 86 ; >
+    au < manifest ; exists ; 2000 ; Journal of Mammalogy Volume 81 ; 81 ; >
+    au < manifest ; exists ; 2001 ; Journal of Mammalogy Volume 82 ; 82 ; >
+    au < manifest ; exists ; 2002 ; Journal of Mammalogy Volume 83 ; 83 ; >
+    au < manifest ; exists ; 2003 ; Journal of Mammalogy Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2004 ; Journal of Mammalogy Volume 85 ; 85 ; >
+    au < manifest ; exists ; 2005 ; Journal of Mammalogy Volume 86 ; 86 ; >
     au < manifest ; exists ; 2006 ; Journal of Mammalogy Volume 87 ; 87 ; >
     au < manifest ; exists ; 2007 ; Journal of Mammalogy Volume 88 ; 88 ; >
     au < manifest ; exists ; 2008 ; Journal of Mammalogy Volume 89 ; 89 ; >
@@ -13612,7 +13612,7 @@
     au < manifest ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
     au < manifest ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
     au < manifest ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
-    au < exists ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; > #Probe url
+    au < manifest ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; > #Probe url
     au < crawling ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
     au < crawling ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
 
@@ -13631,45 +13631,45 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     comment[0] = content available from 1976 volume 13 to 1989 volume 27
 
-    au < exists ; exists ; 1976 ; Journal of Medical Entomology Volume 13 ; 13 ; >
-    au < exists ; exists ; 1977 ; Journal of Medical Entomology Volume 14 ; 14 ; >
-    au < exists ; exists ; 1978 ; Journal of Medical Entomology Volume 15 ; 15 ; >
-    au < exists ; exists ; 1979 ; Journal of Medical Entomology Volume 16 ; 16 ; >
-    au < exists ; exists ; 1980 ; Journal of Medical Entomology Volume 17 ; 17 ; >
-    au < exists ; exists ; 1981 ; Journal of Medical Entomology Volume 18 ; 18 ; >
-    au < exists ; exists ; 1982 ; Journal of Medical Entomology Volume 19 ; 19 ; >
-    au < exists ; exists ; 1983 ; Journal of Medical Entomology Volume 20 ; 20 ; >
-    au < exists ; exists ; 1984 ; Journal of Medical Entomology Volume 21 ; 21 ; >
-    au < exists ; exists ; 1985 ; Journal of Medical Entomology Volume 22 ; 22 ; >
-    au < exists ; exists ; 1986 ; Journal of Medical Entomology Volume 23 ; 23 ; >
-    au < exists ; exists ; 1987 ; Journal of Medical Entomology Volume 24 ; 24 ; >
-    au < exists ; exists ; 1988 ; Journal of Medical Entomology Volume 25 ; 25 ; >
-    au < exists ; exists ; 1989 ; Journal of Medical Entomology Volume 26 ; 26 ; >
-    au < exists ; exists ; 1990 ; Journal of Medical Entomology Volume 27 ; 27 ; >
-    au < exists ; exists ; 1991 ; Journal of Medical Entomology Volume 28 ; 28 ; >
-    au < exists ; exists ; 1992 ; Journal of Medical Entomology Volume 29 ; 29 ; >
-    au < exists ; exists ; 1993 ; Journal of Medical Entomology Volume 30 ; 30 ; >
-    au < exists ; exists ; 1994 ; Journal of Medical Entomology Volume 31 ; 31 ; >
-    au < exists ; exists ; 1995 ; Journal of Medical Entomology Volume 32 ; 32 ; >
-    au < exists ; exists ; 1996 ; Journal of Medical Entomology Volume 33 ; 33 ; >
-    au < exists ; exists ; 1997 ; Journal of Medical Entomology Volume 34 ; 34 ; >
-    au < exists ; exists ; 1998 ; Journal of Medical Entomology Volume 35 ; 35 ; >
-    au < exists ; exists ; 1999 ; Journal of Medical Entomology Volume 36 ; 36 ; >
-    au < exists ; exists ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 ; >
-    au < exists ; exists ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 ; >
-    au < exists ; exists ; 2002 ; Journal of Medical Entomology Volume 39 ; 39 ; >
-    au < exists ; exists ; 2003 ; Journal of Medical Entomology Volume 40 ; 40 ; >
-    au < exists ; exists ; 2004 ; Journal of Medical Entomology Volume 41 ; 41 ; >
-    au < exists ; exists ; 2005 ; Journal of Medical Entomology Volume 42 ; 42 ; >
-    au < exists ; exists ; 2006 ; Journal of Medical Entomology Volume 43 ; 43 ; >
-    au < exists ; exists ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 ; >
-    au < exists ; exists ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 ; >
-    au < exists ; exists ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 ; >
-    au < exists ; exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
-    au < exists ; exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
-    au < exists ; exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 ; >
-    au < exists ; exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 ; >
-    au < exists ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1976 ; Journal of Medical Entomology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1977 ; Journal of Medical Entomology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1978 ; Journal of Medical Entomology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1979 ; Journal of Medical Entomology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1980 ; Journal of Medical Entomology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1981 ; Journal of Medical Entomology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1982 ; Journal of Medical Entomology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1983 ; Journal of Medical Entomology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1984 ; Journal of Medical Entomology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1985 ; Journal of Medical Entomology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1986 ; Journal of Medical Entomology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1987 ; Journal of Medical Entomology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1988 ; Journal of Medical Entomology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1989 ; Journal of Medical Entomology Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1990 ; Journal of Medical Entomology Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1991 ; Journal of Medical Entomology Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1992 ; Journal of Medical Entomology Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1993 ; Journal of Medical Entomology Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1994 ; Journal of Medical Entomology Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1995 ; Journal of Medical Entomology Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1996 ; Journal of Medical Entomology Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1997 ; Journal of Medical Entomology Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1998 ; Journal of Medical Entomology Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1999 ; Journal of Medical Entomology Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2002 ; Journal of Medical Entomology Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2003 ; Journal of Medical Entomology Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2004 ; Journal of Medical Entomology Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2005 ; Journal of Medical Entomology Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2006 ; Journal of Medical Entomology Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 ; >
 
   }
@@ -15662,11 +15662,11 @@
     param[base_url] = http://mspecies.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
-    au < exists ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < crawling ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < crawling ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
-    au < exists ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
     au < crawling ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
 
   }
@@ -16340,16 +16340,16 @@
     au < manifest ; exists ; 2002 ; The Monist Volume 85 ; 85 ; >
     au < manifest ; exists ; 2003 ; The Monist Volume 86 ; 86 ; >
     au < manifest ; exists ; 2004 ; The Monist Volume 87 ; 87 ; >
-    au < exists ; exists ; 2005 ; The Monist Volume 88 ; 88 ; >
+    au < manifest ; exists ; 2005 ; The Monist Volume 88 ; 88 ; >
     au < manifest ; exists ; 2006 ; The Monist Volume 89 ; 89 ; >
     au < manifest ; exists ; 2007 ; The Monist Volume 90 ; 90 ; >
-    au < exists ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
-    au < exists ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
+    au < manifest ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
     au < manifest ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
-    au < exists ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
-    au < exists ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
-    au < exists ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
+    au < manifest ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
     au < crawling ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
 
   }
@@ -20484,7 +20484,7 @@
     au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
     au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 164 ; 164 ; >
     au < ready ; exists ; 2015 ; Radiation Protection Dosimetry Volume 165 ; 165 ; >
-    au < expected ; exists ; 2015 ; Radiation Protection Dosimetry Volume 166 ; 166 ; >
+    au < manifest ; exists ; 2015 ; Radiation Protection Dosimetry Volume 166 ; 166 ; >
     au < expected ; exists ; 2015 ; Radiation Protection Dosimetry Volume 167 ; 167 ; >
 
     }
@@ -21688,8 +21688,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Social Problems Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Social Problems Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Problems Volume 59 ; 59 ; >
-    au < exists ; exists ; 2013 ; Social Problems Volume 60 ; 60 ; >
-    au < exists ; exists ; 2014 ; Social Problems Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2013 ; Social Problems Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2014 ; Social Problems Volume 61 ; 61 ; >
     au < ready ; exists ; 2015 ; Social Problems Volume 62 ; 62 ; >
 
   }

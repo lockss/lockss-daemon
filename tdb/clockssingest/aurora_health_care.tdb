@@ -22,8 +22,8 @@
 
     param[journal_abbr] = jpcrr
 
-    au < exists ; exists ; 2014 ; Journal of Patient-Centered Research and Reviews Volume 1 ; 1 >
-    au < exists ; exists ; 2015 ; Journal of Patient-Centered Research and Reviews Volume 2 ; 2 >
+    au < manifest ; exists ; 2014 ; Journal of Patient-Centered Research and Reviews Volume 1 ; 1 >
+    au < manifest ; exists ; 2015 ; Journal of Patient-Centered Research and Reviews Volume 2 ; 2 >
 
   }
 

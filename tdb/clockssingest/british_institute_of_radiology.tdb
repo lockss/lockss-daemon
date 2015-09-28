@@ -155,7 +155,7 @@
       param[base_url] = http://www.birpublications.org/
       param[journal_id] = bjrcr
 
-      au < exists ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 >
 
   }
 

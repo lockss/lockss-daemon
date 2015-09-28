@@ -344,7 +344,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < notReady ; exists ; 2014 ; Computational Cognitive Science Volume 1 ; 1 >
-        au < expected ; exists ; 2015 ; Computational Cognitive Science Volume 2 ; 2 >
+        au < manifest ; exists ; 2015 ; Computational Cognitive Science Volume 2 ; 2 >
   
     }
   
@@ -973,7 +973,7 @@
         au < manifest ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 >
         au < crawling ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 >
         au < crawling ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 >
-        au < expected ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 >
+        au < manifest ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 >
   
     }
   
@@ -1078,7 +1078,7 @@
         au < manifest ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 >
         au < crawling ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 >
         au < crawling ; exists ; 2014 ; International Aquatic Research Volume 6 ; 6 >
-        au < expected ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 >
+        au < manifest ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 >
   
     }
   
@@ -1097,7 +1097,7 @@
         au < manifest ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 >
         au < crawling ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
         au < crawling ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
-        au < expected ; exists ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 >
+        au < manifest ; exists ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 >
   
     }
   
@@ -1152,7 +1152,7 @@
         au < manifest ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
         au < finished ; finished ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
         au < crawling ; exists ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
-        au < expected ; exists ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
+        au < manifest ; exists ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
   
     }
   
@@ -1186,7 +1186,7 @@
         au < manifest ; exists ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 >
         au < crawling ; exists ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 >
         au < crawling ; exists ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 >
-        au < expected ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 >
+        au < manifest ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 >
   
     }
   
@@ -1236,7 +1236,7 @@
         au < manifest ; exists ; 2012 ; International Nano Letters Volume 2 ; 2 >
         au < crawling ; exists ; 2013 ; International Nano Letters Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; International Nano Letters Volume 4 ; 4 >
-        au < expected ; exists ; 2015 ; International Nano Letters Volume 5 ; 5 >
+        au < manifest ; exists ; 2015 ; International Nano Letters Volume 5 ; 5 >
   
     }
   
@@ -1482,7 +1482,7 @@
         au < manifest ; exists ; 2012 ; Journal of Industrial Engineering International Volume 8 ; 8 >
         au < crawling ; exists ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 >
         au < crawling ; exists ; 2014 ; Journal of Industrial Engineering International Volume 10 ; 10 >
-        au < expected ; exists ; 2015 ; Journal of Industrial Engineering International Volume 11 ; 11 >
+        au < manifest ; exists ; 2015 ; Journal of Industrial Engineering International Volume 11 ; 11 >
   
     }
   
@@ -1719,7 +1719,7 @@
         au < manifest ; exists ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 >
         au < manifest ; exists ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 >
         au < crawling ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
-        au < expected ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 >
+        au < manifest ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 >
   
     }
   
@@ -1935,7 +1935,7 @@
         au < manifest ; exists ; 2012 ; Optical Nanoscopy Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Optical Nanoscopy Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Optical Nanoscopy Volume 3 ; 3 >
-        au < expected ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 >
+        au < manifest ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 >
   
     }
   
@@ -1954,7 +1954,7 @@
         au < manifest ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 >
-        au < expected ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 >
+        au < manifest ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 >
   
     }
   
@@ -2279,7 +2279,7 @@
       comment[platform] = BioMedCentralPlugin
 
       au < crawling ; exists ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 >
-      au < expected ; exists ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 >
+      au < manifest ; exists ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 >
 
     }
 
@@ -2375,8 +2375,8 @@
       param[journal_issn] = 2198-4115
       comment[platform] = BioMedCentralPlugin
 
-      au < exists ; exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
-      au < expected ; exists ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
+      au < manifest ; exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
+      au < manifest ; exists ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
 
     }
 
