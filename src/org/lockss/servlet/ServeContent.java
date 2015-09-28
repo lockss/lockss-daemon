@@ -105,7 +105,7 @@ public class ServeContent extends LockssServlet {
   public static final String PARAM_MISSING_FILE_ACTION =
       PREFIX + "missingFileAction";
   public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
-      MissingFileAction.HostAuIndex;;
+      MissingFileAction.HostAuIndex;
 
   /** The log level at which to log all content server accesses.
    * To normally log all content accesses (proxy or ServeContent), set to
@@ -1111,7 +1111,7 @@ public class ServeContent extends LockssServlet {
       // create reader for input stream
       String ctype = headers.getProperty("Content-Type");
 
-      String charset = CharsetUtil.guessCharsetFromStream(input);
+      String charset = CharsetUtil.guessCharsetFromStream(input,ctype);
       try {
         Reader reader = new InputStreamReader(input, charset);
 
@@ -1217,9 +1217,9 @@ public class ServeContent extends LockssServlet {
       resp.setHeader(HttpFields.__ContentEncoding, contentEncoding);
     }
 
-    //String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
+    String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
     BufferedInputStream bufRespStrm = new BufferedInputStream(respStrm);
-    String charset = CharsetUtil.guessCharsetFromStream(bufRespStrm);
+    charset = CharsetUtil.guessCharsetFromStream(bufRespStrm,charset);
     handleRewriteInputStream(bufRespStrm, mimeType, charset,
         responseContentLength);
   }
