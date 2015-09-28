@@ -7,7 +7,7 @@
   comment[platform] = Moved from HW (to Silverchair) thence to Atypon.
   plugin = needs.plugin
   comment[platform] = Atypon
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; year ; name ; param[volume_name] >
 
   {
   
@@ -25,26 +25,26 @@
       param[journal_id] = ajp
       comment[0] = content starts from 1844 to current
 
-      au < doNotProcess ; 1997 ; The American Journal of Psychiatry Volume 154 ; 1997 >
-      au < doNotProcess ; 1998 ; The American Journal of Psychiatry Volume 155 ; 1998 >
-      au < doNotProcess ; 1999 ; The American Journal of Psychiatry Volume 156 ; 1999 >
-      au < doNotProcess ; 2000 ; The American Journal of Psychiatry Volume 157 ; 2000 >
-      au < doNotProcess ; 2001 ; The American Journal of Psychiatry Volume 158 ; 2001 >
-      au < doNotProcess ; 2002 ; The American Journal of Psychiatry Volume 159 ; 2002 >
-      au < doNotProcess ; 2003 ; The American Journal of Psychiatry Volume 160 ; 2003 >
-      au < doNotProcess ; 2004 ; The American Journal of Psychiatry Volume 161 ; 2004 >
-      au < doNotProcess ; 2005 ; The American Journal of Psychiatry Volume 162 ; 2005 >
-      au < doNotProcess ; 2006 ; The American Journal of Psychiatry Volume 163 ; 2006 >
-      au < doNotProcess ; 2007 ; The American Journal of Psychiatry Volume 164 ; 2007 >
-      au < doNotProcess ; 2008 ; The American Journal of Psychiatry Volume 165 ; 2008 >
-      au < doNotProcess ; 2009 ; The American Journal of Psychiatry Volume 166 ; 2009 >
-      au < doNotProcess ; 2010 ; The American Journal of Psychiatry Volume 167 ; 2010 >
-      au < doNotProcess ; 2011 ; The American Journal of Psychiatry Volume 168 ; 2011 >
-      au < exists ; 2011 ; The American Journal of Psychiatry Volume 168 ; 2011 >
-      au < exists ; 2012 ; The American Journal of Psychiatry Volume 169 ; 2012 >
-      au < exists ; 2013 ; The American Journal of Psychiatry Volume 170 ; 2013 >
-      au < exists ; 2014 ; The American Journal of Psychiatry Volume 171 ; 2014 >
-      au < exists ; 2015 ; The American Journal of Psychiatry Volume 172 ; 2015 >
+      au < doNotProcess ; 1997 ; The American Journal of Psychiatry Volume 154 ; 154 >
+      au < doNotProcess ; 1998 ; The American Journal of Psychiatry Volume 155 ; 155 >
+      au < doNotProcess ; 1999 ; The American Journal of Psychiatry Volume 156 ; 156 >
+      au < doNotProcess ; 2000 ; The American Journal of Psychiatry Volume 157 ; 157 >
+      au < doNotProcess ; 2001 ; The American Journal of Psychiatry Volume 158 ; 158 >
+      au < doNotProcess ; 2002 ; The American Journal of Psychiatry Volume 159 ; 159 >
+      au < doNotProcess ; 2003 ; The American Journal of Psychiatry Volume 160 ; 160 >
+      au < doNotProcess ; 2004 ; The American Journal of Psychiatry Volume 161 ; 161 >
+      au < doNotProcess ; 2005 ; The American Journal of Psychiatry Volume 162 ; 162 >
+      au < doNotProcess ; 2006 ; The American Journal of Psychiatry Volume 163 ; 163 >
+      au < doNotProcess ; 2007 ; The American Journal of Psychiatry Volume 164 ; 164 >
+      au < doNotProcess ; 2008 ; The American Journal of Psychiatry Volume 165 ; 165 >
+      au < doNotProcess ; 2009 ; The American Journal of Psychiatry Volume 166 ; 166 >
+      au < doNotProcess ; 2010 ; The American Journal of Psychiatry Volume 167 ; 167 >
+      au < doNotProcess ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 >
+      au < exists ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 >
+      au < exists ; 2012 ; The American Journal of Psychiatry Volume 169 ; 169 >
+      au < exists ; 2013 ; The American Journal of Psychiatry Volume 170 ; 170 >
+      au < exists ; 2014 ; The American Journal of Psychiatry Volume 171 ; 171 >
+      au < exists ; 2015 ; The American Journal of Psychiatry Volume 172 ; 172 >
     
       }
 
@@ -62,19 +62,19 @@
       param[base_url] = http://focus.psychiatryonline.org/
       param[journal_id] = foc
 
-      au < doNotProcess ; 2003 ; Focus Volume 1 ; 2003 >
-      au < doNotProcess ; 2004 ; Focus Volume 2 ; 2004 >
-      au < doNotProcess ; 2005 ; Focus Volume 3 ; 2005 >
-      au < doNotProcess ; 2006 ; Focus Volume 4 ; 2006 >
-      au < doNotProcess ; 2007 ; Focus Volume 5 ; 2007 >
-      au < doNotProcess ; 2008 ; Focus Volume 6 ; 2008 >
-      au < doNotProcess ; 2009 ; Focus Volume 7 ; 2009 >
-      au < doNotProcess ; 2010 ; Focus Volume 8 ; 2010 >
-      au < doNotProcess ; 2011 ; Focus Volume 9 ; 2011 >
-      au < exists ; 2012 ; FOCUS Volume 10 ; 2012 >
-      au < exists ; 2013 ; FOCUS Volume 11 ; 2013 >
-      au < exists ; 2014 ; FOCUS Volume 12 ; 2014 >
-      au < exists ; 2015 ; FOCUS Volume 13 ; 2015 >
+      au < doNotProcess ; 2003 ; Focus Volume 1 ; 1 >
+      au < doNotProcess ; 2004 ; Focus Volume 2 ; 2 >
+      au < doNotProcess ; 2005 ; Focus Volume 3 ; 3 >
+      au < doNotProcess ; 2006 ; Focus Volume 4 ; 4 >
+      au < doNotProcess ; 2007 ; Focus Volume 5 ; 5 >
+      au < doNotProcess ; 2008 ; Focus Volume 6 ; 6 >
+      au < doNotProcess ; 2009 ; Focus Volume 7 ; 7 >
+      au < doNotProcess ; 2010 ; Focus Volume 8 ; 8 >
+      au < doNotProcess ; 2011 ; Focus Volume 9 ; 9 >
+      au < exists ; 2012 ; FOCUS Volume 10 ; 10 >
+      au < exists ; 2013 ; FOCUS Volume 11 ; 11 >
+      au < exists ; 2014 ; FOCUS Volume 12 ; 12 >
+      au < exists ; 2015 ; FOCUS Volume 13 ; 13 >
       
       }
 
@@ -93,24 +93,24 @@
       param[journal_id] = jnp
       comment[0] = content starts from 1989 to current
 
-      au < doNotProcess ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 1998 >
-      au < doNotProcess ; 1999 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 1999 >
-      au < doNotProcess ; 2000 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 2000 >
-      au < doNotProcess ; 2001 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 2001 >
-      au < doNotProcess ; 2002 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 2002 >
-      au < doNotProcess ; 2003 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 2003 >
-      au < doNotProcess ; 2004 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 2004 >
-      au < doNotProcess ; 2005 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 2005 >
-      au < doNotProcess ; 2006 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 2006 >
-      au < doNotProcess ; 2007 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 2007 >
-      au < doNotProcess ; 2008 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 2008 >
-      au < doNotProcess ; 2009 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 2009 >
-      au < doNotProcess ; 2010 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 2010 >
-      au < doNotProcess ; 2011 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 2011 >
-      au < exists ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 2012 >
-      au < exists ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 2013 >
-      au < exists ; 2014 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 26 ; 2014 >
-      au < exists ; 2015 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 27 ; 2015 >
+      au < doNotProcess ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 10 >
+      au < doNotProcess ; 1999 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 11 >
+      au < doNotProcess ; 2000 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 12 >
+      au < doNotProcess ; 2001 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 13 >
+      au < doNotProcess ; 2002 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 14 >
+      au < doNotProcess ; 2003 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 15 >
+      au < doNotProcess ; 2004 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 16 >
+      au < doNotProcess ; 2005 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 17 >
+      au < doNotProcess ; 2006 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 18 >
+      au < doNotProcess ; 2007 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 19 >
+      au < doNotProcess ; 2008 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 20 >
+      au < doNotProcess ; 2009 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 21 >
+      au < doNotProcess ; 2010 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 22 >
+      au < doNotProcess ; 2011 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 23 >
+      au < exists ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 24 >
+      au < exists ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 25 >
+      au < exists ; 2014 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 26 ; 26 >
+      au < exists ; 2015 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 27 ; 27 >
       
       }
 
@@ -129,24 +129,24 @@
       param[journal_id] = ps
       comment[0] = content starts from year 1950 to current
 
-      au < doNotProcess ; 1998 ; Psychiatric Services Volume 49 ; 1998 >
-      au < doNotProcess ; 1999 ; Psychiatric Services Volume 50 ; 1999 >
-      au < doNotProcess ; 2000 ; Psychiatric Services Volume 51 ; 2000 >
-      au < doNotProcess ; 2001 ; Psychiatric Services Volume 52 ; 2001 >
-      au < doNotProcess ; 2002 ; Psychiatric Services Volume 53 ; 2002 >
-      au < doNotProcess ; 2003 ; Psychiatric Services Volume 54 ; 2003 >
-      au < doNotProcess ; 2004 ; Psychiatric Services Volume 55 ; 2004 >
-      au < doNotProcess ; 2005 ; Psychiatric Services Volume 56 ; 2005 >
-      au < doNotProcess ; 2006 ; Psychiatric Services Volume 57 ; 2006 >
-      au < doNotProcess ; 2007 ; Psychiatric Services Volume 58 ; 2007 >
-      au < doNotProcess ; 2008 ; Psychiatric Services Volume 59 ; 2008 >
-      au < doNotProcess ; 2009 ; Psychiatric Services Volume 60 ; 2009 >
-      au < doNotProcess ; 2010 ; Psychiatric Services Volume 61 ; 2010 >
-      au < doNotProcess ; 2011 ; Psychiatric Services Volume 62 ; 2011 >
-      au < exists ; 2012 ; Psychiatric Services Volume 63 ; 2012 >
-      au < exists ; 2013 ; Psychiatric Services Volume 64 ; 2013 >
-      au < exists ; 2014 ; Psychiatric Services Volume 65 ; 2014 >
-      au < exists ; 2015 ; Psychiatric Services Volume 66 ; 2015 >
+      au < doNotProcess ; 1998 ; Psychiatric Services Volume 49 ; 49 >
+      au < doNotProcess ; 1999 ; Psychiatric Services Volume 50 ; 50 >
+      au < doNotProcess ; 2000 ; Psychiatric Services Volume 51 ; 51 >
+      au < doNotProcess ; 2001 ; Psychiatric Services Volume 52 ; 52 >
+      au < doNotProcess ; 2002 ; Psychiatric Services Volume 53 ; 53 >
+      au < doNotProcess ; 2003 ; Psychiatric Services Volume 54 ; 54 >
+      au < doNotProcess ; 2004 ; Psychiatric Services Volume 55 ; 55 >
+      au < doNotProcess ; 2005 ; Psychiatric Services Volume 56 ; 56 >
+      au < doNotProcess ; 2006 ; Psychiatric Services Volume 57 ; 57 >
+      au < doNotProcess ; 2007 ; Psychiatric Services Volume 58 ; 58 >
+      au < doNotProcess ; 2008 ; Psychiatric Services Volume 59 ; 59 >
+      au < doNotProcess ; 2009 ; Psychiatric Services Volume 60 ; 60 >
+      au < doNotProcess ; 2010 ; Psychiatric Services Volume 61 ; 61 >
+      au < doNotProcess ; 2011 ; Psychiatric Services Volume 62 ; 62 >
+      au < exists ; 2012 ; Psychiatric Services Volume 63 ; 63 >
+      au < exists ; 2013 ; Psychiatric Services Volume 64 ; 64 >
+      au < exists ; 2014 ; Psychiatric Services Volume 65 ; 65 >
+      au < exists ; 2015 ; Psychiatric Services Volume 66 ; 66 >
       }
     
     }
