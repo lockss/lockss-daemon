@@ -4,8 +4,8 @@
     name = European Respiratory Society
   >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
   {
 
@@ -18,14 +18,14 @@
 
     param[base_url] = http://breathe.ersjournals.com/
 
-    au < manifest ; 2007-2008 ; Breathe Volume 4 ; 4 >
-    au < manifest ; 2008-2009 ; Breathe Volume 5 ; 5 >
-    au < manifest ; 2009-2010 ; Breathe Volume 6 ; 6 >
-    au < ready ; 2010-2011 ; Breathe Volume 7 ; 7 >
-    au < ready ; 2011-2012 ; Breathe Volume 8 ; 8 >
-    au < ready ; 2012-2013 ; Breathe Volume 9 ; 9 >
-    au < exists ; 2014 ; Breathe Volume 10 ; 10 >
-    au < expected ; 2015 ; Breathe Volume 11 ; 11 >
+    au < HWDrupalPlugin ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 >
+    au < HWDrupalPlugin ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 >
+    au < HWDrupalPlugin ; exists ; 2009-2010 ; Breathe Volume 6 ; 6 >
+    au < HWDrupalPlugin ; exists ; 2010-2011 ; Breathe Volume 7 ; 7 >
+    au < HWDrupalPlugin ; exists ; 2011-2012 ; Breathe Volume 8 ; 8 >
+    au < HWDrupalPlugin ; exists ; 2012-2013 ; Breathe Volume 9 ; 9 >
+    au < HWDrupalPlugin ; exists ; 2014 ; Breathe Volume 10 ; 10 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Breathe Volume 11 ; 11 >
     
   }
 
@@ -39,7 +39,7 @@
 
     param[base_url] = http://openres.ersjournals.com/
 
-    au < exists ; 2015 ; ERJ Open Research Volume 1 ; 1 >
+    au < HWDrupalPlugin ; exists ; 2015 ; ERJ Open Research Volume 1 ; 1 >
 
   }
 
@@ -58,53 +58,53 @@
     
       attr[au_coverage_depth] = abstracts
     
-      au < released ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
-      au < released ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
-      au < released ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 >
-      au < released ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 >
-      au < released ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 >
-      au < released ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 >
     }
-    au < released ; 1994 ; European Respiratory Journal Volume 7 ; 7 >
-    au < released ; 1995 ; European Respiratory Journal Volume 8 ; 8 >
-    au < released ; 1996 ; European Respiratory Journal Volume 9 ; 9 >
-    au < released ; 1997 ; European Respiratory Journal Volume 10 ; 10 >
-    au < released ; 1998 ; European Respiratory Journal Volume 11 ; 11 >
-    au < released ; 1998 ; European Respiratory Journal Volume 12 ; 12 >
-    au < released ; 1999 ; European Respiratory Journal Volume 13 ; 13 >
-    au < released ; 1999 ; European Respiratory Journal Volume 14 ; 14 >
-    au < released ; 2000 ; European Respiratory Journal Volume 15 ; 15 >
-    au < released ; 2000 ; European Respiratory Journal Volume 16 ; 16 >
-    au < released ; 2001 ; European Respiratory Journal Volume 17 ; 17 >
-    au < released ; 2001 ; European Respiratory Journal Volume 18 ; 18 >
-    au < released ; 2002 ; European Respiratory Journal Volume 19 ; 19 >
-    au < released ; 2002 ; European Respiratory Journal Volume 20 ; 20 >
-    au < released ; 2003 ; European Respiratory Journal Volume 21 ; 21 >
-    au < released ; 2003 ; European Respiratory Journal Volume 22 ; 22 >
-    au < released ; 2004 ; European Respiratory Journal Volume 23 ; 23 >
-    au < released ; 2004 ; European Respiratory Journal Volume 24 ; 24 >
-    au < released ; 2005 ; European Respiratory Journal Volume 25 ; 25 >
-    au < released ; 2005 ; European Respiratory Journal Volume 26 ; 26 >
-    au < released ; 2006 ; European Respiratory Journal Volume 27 ; 27 >
-    au < released ; 2006 ; European Respiratory Journal Volume 28 ; 28 >
-    au < released ; 2007 ; European Respiratory Journal Volume 29 ; 29 >
-    au < released ; 2007 ; European Respiratory Journal Volume 30 ; 30 >
-    au < released ; 2008 ; European Respiratory Journal Volume 31 ; 31 >
-    au < released ; 2008 ; European Respiratory Journal Volume 32 ; 32 >
-    au < released ; 2009 ; European Respiratory Journal Volume 33 ; 33 >
-    au < released ; 2009 ; European Respiratory Journal Volume 34 ; 34 >
-    au < released ; 2010 ; European Respiratory Journal Volume 35 ; 35 >
-    au < released ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
-    au < released ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
-    au < released ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
-    au < released ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
-    au < released ; 2012 ; European Respiratory Journal Volume 40 ; 40 >
-    au < manifest ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
-    au < manifest ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
-    au < ready ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
-    au < manifest ; 2014 ; European respiratory Journal Volume 44 ; 44 >
-    au < manifest ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
-    au < manifest ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; down ; 1994 ; European Respiratory Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 1995 ; European Respiratory Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 1996 ; European Respiratory Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 1997 ; European Respiratory Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; European Respiratory Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; European Respiratory Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; European Respiratory Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; European Respiratory Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; European Respiratory Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; European Respiratory Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; European Respiratory Journal Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; European Respiratory Journal Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; European Respiratory Journal Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; European Respiratory Journal Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; European Respiratory Journal Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; European Respiratory Journal Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; European Respiratory Journal Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; European Respiratory Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Respiratory Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Respiratory Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Respiratory Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Respiratory Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Respiratory Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Respiratory Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Respiratory Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Respiratory Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Respiratory Journal Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Respiratory Journal Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Respiratory Journal Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Journal Volume 40 ; 40 >
+    au < HWDrupalPlugin ; exists ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
+    au < HWDrupalPlugin ; exists ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
+    au < HWDrupalPlugin ; exists ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
+    au < HWDrupalPlugin ; exists ; 2014 ; European respiratory Journal Volume 44 ; 44 >
+    au < HWDrupalPlugin ; exists ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
+    au < HWDrupalPlugin ; exists ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
     
   }
 
@@ -119,17 +119,17 @@
 
     param[base_url] = http://err.ersjournals.com/
       
-    au < released ; 2005 ; European Respiratory Review Volume 14 ; 14 >
-    au < released ; 2006 ; European Respiratory Review Volume 15 ; 15 >
-    au < released ; 2007 ; European Respiratory Review Volume 16 ; 16 >
-    au < released ; 2008 ; European Respiratory Review Volume 17 ; 17 >
-    au < released ; 2009 ; European Respiratory Review Volume 18 ; 18 >
-    au < released ; 2010 ; European Respiratory Review Volume 19 ; 19 >
-    au < released ; 2011 ; European Respiratory Review Volume 20 ; 20 >
-    au < released ; 2012 ; European Respiratory Review Volume 21 ; 21 >
-    au < manifest ; 2013 ; European Respiratory Review Volume 22 ; 22 >
-    au < manifest ; 2014 ; European Respiratory Review Volume 23 ; 23 >
-    au < manifest ; 2015 ; European Respiratory Review Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Respiratory Review Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Respiratory Review Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Respiratory Review Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Respiratory Review Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Respiratory Review Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Respiratory Review Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Respiratory Review Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Review Volume 21 ; 21 >
+    au < HWDrupalPlugin ; exists ; 2013 ; European Respiratory Review Volume 22 ; 22 >
+    au < HWDrupalPlugin ; exists ; 2014 ; European Respiratory Review Volume 23 ; 23 >
+    au < HWDrupalPlugin ; exists ; 2015 ; European Respiratory Review Volume 24 ; 24 >
  
 
   }

@@ -18,16 +18,16 @@
 
     param[base_url] = http://apt.rcpsych.org/
 
-    au < HighWireDrupalPlugin ; exists ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 >
-    au < HighWireDrupalPlugin ; exists ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 >
-    au < HighWireDrupalPlugin ; exists ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 >
-    au < HighWireDrupalPlugin ; exists ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 >
-    au < HighWireDrupalPlugin ; exists ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 >
-    au < HighWireDrupalPlugin ; exists ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 >
-    au < HighWireDrupalPlugin ; exists ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 >
-    au < HighWireDrupalPlugin ; exists ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 >
-    au < HighWireDrupalPlugin ; exists ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 >
-    au < HighWireDrupalPlugin ; exists ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 >
+    au < HWDrupalPlugin ; exists ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 >
+    au < HWDrupalPlugin ; exists ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 >
+    au < HWDrupalPlugin ; exists ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 >
+    au < HWDrupalPlugin ; exists ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 >
+    au < HWDrupalPlugin ; exists ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 >
+    au < HWDrupalPlugin ; exists ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 >
+    au < HWDrupalPlugin ; exists ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 >
+    au < HWDrupalPlugin ; exists ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 >
+    au < HWDrupalPlugin ; exists ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 >
+    au < HWDrupalPlugin ; exists ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 >
     au < HighWirePressPlugin ; down ; 2005 ; Advances in Psychiatric Treatment Volume 11 ; 11 >
     au < HighWirePressPlugin ; down ; 2006 ; Advances in Psychiatric Treatment Volume 12 ; 12 >
     au < HighWirePressPlugin ; down ; 2007 ; Advances in Psychiatric Treatment Volume 13 ; 13 >
@@ -37,8 +37,8 @@
     au < HighWirePressPlugin ; down ; 2011 ; Advances in Psychiatric Treatment Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Advances in Psychiatric Treatment Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Advances in Psychiatric Treatment Volume 19 ; 19 >
-    au < HighWireDrupalPlugin ; exists ; 2014 ; Advances in Psychiatric Treatment Volume 20 ; 20 >
-    au < HighWireDrupalPlugin ; exists ; 2015 ; Advances in Psychiatric Treatment Volume 21 ; 21 >
+    au < HWDrupalPlugin ; exists ; 2014 ; Advances in Psychiatric Treatment Volume 20 ; 20 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Advances in Psychiatric Treatment Volume 21 ; 21 >
 
   }
 
@@ -52,7 +52,7 @@
 
     param[base_url] = http://bjpo.rcpsych.org/
 
-    au < HighWireDrupalPlugin ; exists ; 2015 ; BJPsych Open Volume 1 ; 1 >
+    au < HWDrupalPlugin ; exists ; 2015 ; BJPsych Open Volume 1 ; 1 >
 
   }
 
@@ -67,190 +67,190 @@
 
     param[base_url] = http://bjp.rcpsych.org/
 
-    au < HighWireDrupalPlugin ; exists ; 1855-1856 ; The British Journal of Psychiatry Volume 2 ; 2 >
-    au < HighWireDrupalPlugin ; exists ; 1857 ; The British Journal of Psychiatry Volume 3 ; 3 >
-    au < HighWireDrupalPlugin ; exists ; 1858 ; The British Journal of Psychiatry Volume 4 ; 4 >
-    au < HighWireDrupalPlugin ; exists ; 1858-1859 ; The British Journal of Psychiatry Volume 5 ; 5 >
-    au < HighWireDrupalPlugin ; exists ; 1859-1860 ; The British Journal of Psychiatry Volume 6 ; 6 >
-    au < HighWireDrupalPlugin ; exists ; 1860-1862 ; The British Journal of Psychiatry Volume 7 ; 7 >
-    au < HighWireDrupalPlugin ; exists ; 1862-1863 ; The British Journal of Psychiatry Volume 8 ; 8 >
-    au < HighWireDrupalPlugin ; exists ; 1863-1864 ; The British Journal of Psychiatry Volume 9 ; 9 >
-    au < HighWireDrupalPlugin ; exists ; 1864-1865 ; The British Journal of Psychiatry Volume 10 ; 10 >
-    au < HighWireDrupalPlugin ; exists ; 1865-1866 ; The British Journal of Psychiatry Volume 11 ; 11 >
-    au < HighWireDrupalPlugin ; exists ; 1866-1867 ; The British Journal of Psychiatry Volume 12 ; 12 >
-    au < HighWireDrupalPlugin ; exists ; 1867 ; The British Journal of Psychiatry Volume 13 ; 13 >
-    au < HighWireDrupalPlugin ; exists ; 1868-1869 ; The British Journal of Psychiatry Volume 14 ; 14 >
-    au < HighWireDrupalPlugin ; doesNotExist ; 1870 ; The British Journal of Psychiatry Volume 15 ; 15 >
-    au < HighWireDrupalPlugin ; exists ; 1870-1871 ; The British Journal of Psychiatry Volume 16 ; 16 >
-    au < HighWireDrupalPlugin ; exists ; 1871-1872 ; The British Journal of Psychiatry Volume 17 ; 17 >
-    au < HighWireDrupalPlugin ; exists ; 1872-1873 ; The British Journal of Psychiatry Volume 18 ; 18 >
-    au < HighWireDrupalPlugin ; exists ; 1873-1874 ; The British Journal of Psychiatry Volume 19 ; 19 >
-    au < HighWireDrupalPlugin ; exists ; 1874 ; The British Journal of Psychiatry Volume 20 ; 20 >
-    au < HighWireDrupalPlugin ; exists ; 1875-1876 ; The British Journal of Psychiatry Volume 21 ; 21 >
-    au < HighWireDrupalPlugin ; exists ; 1876-1877 ; The British Journal of Psychiatry Volume 22 ; 22 >
-    au < HighWireDrupalPlugin ; exists ; 1877-1878 ; The British Journal of Psychiatry Volume 23 ; 23 >
-    au < HighWireDrupalPlugin ; exists ; 1878-1879 ; The British Journal of Psychiatry Volume 24 ; 24 >
-    au < HighWireDrupalPlugin ; exists ; 1879-1880 ; The British Journal of Psychiatry Volume 25 ; 25 >
-    au < HighWireDrupalPlugin ; exists ; 1880-1881 ; The British Journal of Psychiatry Volume 26 ; 26 >
-    au < HighWireDrupalPlugin ; exists ; 1881 ; The British Journal of Psychiatry Volume 27 ; 27 >
-    au < HighWireDrupalPlugin ; exists ; 1882-1883 ; The British Journal of Psychiatry Volume 28 ; 28 >
-    au < HighWireDrupalPlugin ; exists ; 1883-1884 ; The British Journal of Psychiatry Volume 29 ; 29 >
-    au < HighWireDrupalPlugin ; exists ; 1884 ; The British Journal of Psychiatry Volume 30 ; 30 >
-    au < HighWireDrupalPlugin ; exists ; 1885-1886 ; The British Journal of Psychiatry Volume 31 ; 31 >
-    au < HighWireDrupalPlugin ; exists ; 1886-1887 ; The British Journal of Psychiatry Volume 32 ; 32 >
-    au < HighWireDrupalPlugin ; exists ; 1887-1888 ; The British Journal of Psychiatry Volume 33 ; 33 >
-    au < HighWireDrupalPlugin ; exists ; 1888-1889 ; The British Journal of Psychiatry Volume 34 ; 34 >
-    au < HighWireDrupalPlugin ; exists ; 1889 ; The British Journal of Psychiatry Volume 35 ; 35 >
-    au < HighWireDrupalPlugin ; exists ; 1890 ; The British Journal of Psychiatry Volume 36 ; 36 >
-    au < HighWireDrupalPlugin ; exists ; 1891 ; The British Journal of Psychiatry Volume 37 ; 37 >
-    au < HighWireDrupalPlugin ; exists ; 1892 ; The British Journal of Psychiatry Volume 38 ; 38 >
-    au < HighWireDrupalPlugin ; exists ; 1893 ; The British Journal of Psychiatry Volume 39 ; 39 >
-    au < HighWireDrupalPlugin ; exists ; 1894 ; The British Journal of Psychiatry Volume 40 ; 40 >
-    au < HighWireDrupalPlugin ; exists ; 1895 ; The British Journal of Psychiatry Volume 41 ; 41 >
-    au < HighWireDrupalPlugin ; exists ; 1896 ; The British Journal of Psychiatry Volume 42 ; 42 >
-    au < HighWireDrupalPlugin ; exists ; 1897 ; The British Journal of Psychiatry Volume 43 ; 43 >
-    au < HighWireDrupalPlugin ; exists ; 1898 ; The British Journal of Psychiatry Volume 44 ; 44 >
-    au < HighWireDrupalPlugin ; exists ; 1899 ; The British Journal of Psychiatry Volume 45 ; 45 >
-    au < HighWireDrupalPlugin ; exists ; 1900 ; The British Journal of Psychiatry Volume 46 ; 46 >
-    au < HighWireDrupalPlugin ; exists ; 1901 ; The British Journal of Psychiatry Volume 47 ; 47 >
-    au < HighWireDrupalPlugin ; exists ; 1902 ; The British Journal of Psychiatry Volume 48 ; 48 >
-    au < HighWireDrupalPlugin ; exists ; 1903 ; The British Journal of Psychiatry Volume 49 ; 49 >
-    au < HighWireDrupalPlugin ; exists ; 1904 ; The British Journal of Psychiatry Volume 50 ; 50 >
-    au < HighWireDrupalPlugin ; exists ; 1905 ; The British Journal of Psychiatry Volume 51 ; 51 >
-    au < HighWireDrupalPlugin ; exists ; 1906 ; The British Journal of Psychiatry Volume 52 ; 52 >
-    au < HighWireDrupalPlugin ; exists ; 1907 ; The British Journal of Psychiatry Volume 53 ; 53 >
-    au < HighWireDrupalPlugin ; exists ; 1908 ; The British Journal of Psychiatry Volume 54 ; 54 >
-    au < HighWireDrupalPlugin ; exists ; 1909 ; The British Journal of Psychiatry Volume 55 ; 55 >
-    au < HighWireDrupalPlugin ; exists ; 1910 ; The British Journal of Psychiatry Volume 56 ; 56 >
-    au < HighWireDrupalPlugin ; exists ; 1911 ; The British Journal of Psychiatry Volume 57 ; 57 >
-    au < HighWireDrupalPlugin ; exists ; 1912 ; The British Journal of Psychiatry Volume 58 ; 58 >
-    au < HighWireDrupalPlugin ; exists ; 1913 ; The British Journal of Psychiatry Volume 59 ; 59 >
-    au < HighWireDrupalPlugin ; exists ; 1914 ; The British Journal of Psychiatry Volume 60 ; 60 >
-    au < HighWireDrupalPlugin ; exists ; 1915 ; The British Journal of Psychiatry Volume 61 ; 61 >
-    au < HighWireDrupalPlugin ; exists ; 1916 ; The British Journal of Psychiatry Volume 62 ; 62 >
-    au < HighWireDrupalPlugin ; exists ; 1917 ; The British Journal of Psychiatry Volume 63 ; 63 >
-    au < HighWireDrupalPlugin ; exists ; 1918 ; The British Journal of Psychiatry Volume 64 ; 64 >
-    au < HighWireDrupalPlugin ; exists ; 1919 ; The British Journal of Psychiatry Volume 65 ; 65 >
-    au < HighWireDrupalPlugin ; exists ; 1920 ; The British Journal of Psychiatry Volume 66 ; 66 >
-    au < HighWireDrupalPlugin ; exists ; 1921 ; The British Journal of Psychiatry Volume 67 ; 67 >
-    au < HighWireDrupalPlugin ; exists ; 1922 ; The British Journal of Psychiatry Volume 68 ; 68 >
-    au < HighWireDrupalPlugin ; exists ; 1923 ; The British Journal of Psychiatry Volume 69 ; 69 >
-    au < HighWireDrupalPlugin ; exists ; 1924 ; The British Journal of Psychiatry Volume 70 ; 70 >
-    au < HighWireDrupalPlugin ; exists ; 1925 ; The British Journal of Psychiatry Volume 71 ; 71 >
-    au < HighWireDrupalPlugin ; exists ; 1926 ; The British Journal of Psychiatry Volume 72 ; 72 >
-    au < HighWireDrupalPlugin ; exists ; 1927 ; The British Journal of Psychiatry Volume 73 ; 73 >
-    au < HighWireDrupalPlugin ; exists ; 1928 ; The British Journal of Psychiatry Volume 74 ; 74 >
-    au < HighWireDrupalPlugin ; exists ; 1929 ; The British Journal of Psychiatry Volume 75 ; 75 >
-    au < HighWireDrupalPlugin ; exists ; 1930 ; The British Journal of Psychiatry Volume 76 ; 76 >
-    au < HighWireDrupalPlugin ; exists ; 1931 ; The British Journal of Psychiatry Volume 77 ; 77 >
-    au < HighWireDrupalPlugin ; exists ; 1932 ; The British Journal of Psychiatry Volume 78 ; 78 >
-    au < HighWireDrupalPlugin ; exists ; 1933 ; The British Journal of Psychiatry Volume 79 ; 79 >
-    au < HighWireDrupalPlugin ; exists ; 1934 ; The British Journal of Psychiatry Volume 80 ; 80 >
-    au < HighWireDrupalPlugin ; exists ; 1935 ; The British Journal of Psychiatry Volume 81 ; 81 >
-    au < HighWireDrupalPlugin ; exists ; 1936 ; The British Journal of Psychiatry Volume 82 ; 82 >
-    au < HighWireDrupalPlugin ; exists ; 1937 ; The British Journal of Psychiatry Volume 83 ; 83 >
-    au < HighWireDrupalPlugin ; exists ; 1938 ; The British Journal of Psychiatry Volume 84 ; 84 >
-    au < HighWireDrupalPlugin ; exists ; 1939 ; The British Journal of Psychiatry Volume 85 ; 85 >
-    au < HighWireDrupalPlugin ; exists ; 1940 ; The British Journal of Psychiatry Volume 86 ; 86 >
-    au < HighWireDrupalPlugin ; exists ; 1941 ; The British Journal of Psychiatry Volume 87 ; 87 >
-    au < HighWireDrupalPlugin ; exists ; 1942 ; The British Journal of Psychiatry Volume 88 ; 88 >
-    au < HighWireDrupalPlugin ; exists ; 1943 ; The British Journal of Psychiatry Volume 89 ; 89 >
-    au < HighWireDrupalPlugin ; exists ; 1944 ; The British Journal of Psychiatry Volume 90 ; 90 >
-    au < HighWireDrupalPlugin ; exists ; 1945 ; The British Journal of Psychiatry Volume 91 ; 91 >
-    au < HighWireDrupalPlugin ; exists ; 1946 ; The British Journal of Psychiatry Volume 92 ; 92 >
-    au < HighWireDrupalPlugin ; exists ; 1947 ; The British Journal of Psychiatry Volume 93 ; 93 >
-    au < HighWireDrupalPlugin ; exists ; 1948 ; The British Journal of Psychiatry Volume 94 ; 94 >
-    au < HighWireDrupalPlugin ; exists ; 1949 ; The British Journal of Psychiatry Volume 95 ; 95 >
-    au < HighWireDrupalPlugin ; exists ; 1950 ; The British Journal of Psychiatry Volume 96 ; 96 >
-    au < HighWireDrupalPlugin ; exists ; 1951 ; The British Journal of Psychiatry Volume 97 ; 97 >
-    au < HighWireDrupalPlugin ; exists ; 1952 ; The British Journal of Psychiatry Volume 98 ; 98 >
-    au < HighWireDrupalPlugin ; exists ; 1953 ; The British Journal of Psychiatry Volume 99 ; 99 >
-    au < HighWireDrupalPlugin ; exists ; 1954 ; The British Journal of Psychiatry Volume 100 ; 100 >
-    au < HighWireDrupalPlugin ; exists ; 1955 ; The British Journal of Psychiatry Volume 101 ; 101 >
-    au < HighWireDrupalPlugin ; exists ; 1956 ; The British Journal of Psychiatry Volume 102 ; 102 >
-    au < HighWireDrupalPlugin ; exists ; 1957 ; The British Journal of Psychiatry Volume 103 ; 103 >
-    au < HighWireDrupalPlugin ; exists ; 1958 ; The British Journal of Psychiatry Volume 104 ; 104 >
-    au < HighWireDrupalPlugin ; exists ; 1959 ; The British Journal of Psychiatry Volume 105 ; 105 >
-    au < HighWireDrupalPlugin ; exists ; 1960 ; The British Journal of Psychiatry Volume 106 ; 106 >
-    au < HighWireDrupalPlugin ; exists ; 1961 ; The British Journal of Psychiatry Volume 107 ; 107 >
-    au < HighWireDrupalPlugin ; exists ; 1962 ; The British Journal of Psychiatry Volume 108 ; 108 >
-    au < HighWireDrupalPlugin ; exists ; 1963 ; The British Journal of Psychiatry Volume 109 ; 109 >
-    au < HighWireDrupalPlugin ; exists ; 1964 ; The British Journal of Psychiatry Volume 110 ; 110 >
-    au < HighWireDrupalPlugin ; exists ; 1965 ; The British Journal of Psychiatry Volume 111 ; 111 >
-    au < HighWireDrupalPlugin ; exists ; 1966 ; The British Journal of Psychiatry Volume 112 ; 112 >
-    au < HighWireDrupalPlugin ; exists ; 1967 ; The British Journal of Psychiatry Volume 113 ; 113 >
-    au < HighWireDrupalPlugin ; exists ; 1968 ; The British Journal of Psychiatry Volume 114 ; 114 >
-    au < HighWireDrupalPlugin ; exists ; 1969 ; The British Journal of Psychiatry Volume 115 ; 115 >
-    au < HighWireDrupalPlugin ; exists ; 1970 ; The British Journal of Psychiatry Volume 116 ; 116 >
-    au < HighWireDrupalPlugin ; exists ; 1970 ; The British Journal of Psychiatry Volume 117 ; 117 >
-    au < HighWireDrupalPlugin ; exists ; 1971 ; The British Journal of Psychiatry Volume 118 ; 118 >
-    au < HighWireDrupalPlugin ; exists ; 1971 ; The British Journal of Psychiatry Volume 119 ; 119 >
-    au < HighWireDrupalPlugin ; exists ; 1972 ; The British Journal of Psychiatry Volume 120 ; 120 >
-    au < HighWireDrupalPlugin ; exists ; 1972 ; The British Journal of Psychiatry Volume 121 ; 121 >
-    au < HighWireDrupalPlugin ; exists ; 1973 ; The British Journal of Psychiatry Volume 122 ; 122 >
-    au < HighWireDrupalPlugin ; exists ; 1973 ; The British Journal of Psychiatry Volume 123 ; 123 >
-    au < HighWireDrupalPlugin ; exists ; 1974 ; The British Journal of Psychiatry Volume 124 ; 124 >
-    au < HighWireDrupalPlugin ; exists ; 1974 ; The British Journal of Psychiatry Volume 125 ; 125 >
-    au < HighWireDrupalPlugin ; exists ; 1975 ; The British Journal of Psychiatry Volume 126 ; 126 >
-    au < HighWireDrupalPlugin ; exists ; 1975 ; The British Journal of Psychiatry Volume 127 ; 127 >
-    au < HighWireDrupalPlugin ; exists ; 1976 ; The British Journal of Psychiatry Volume 128 ; 128 >
-    au < HighWireDrupalPlugin ; exists ; 1976 ; The British Journal of Psychiatry Volume 129 ; 129 >
-    au < HighWireDrupalPlugin ; exists ; 1977 ; The British Journal of Psychiatry Volume 130 ; 130 >
-    au < HighWireDrupalPlugin ; exists ; 1977 ; The British Journal of Psychiatry Volume 131 ; 131 >
-    au < HighWireDrupalPlugin ; exists ; 1978 ; The British Journal of Psychiatry Volume 132 ; 132 >
-    au < HighWireDrupalPlugin ; exists ; 1978 ; The British Journal of Psychiatry Volume 133 ; 133 >
-    au < HighWireDrupalPlugin ; exists ; 1979 ; The British Journal of Psychiatry Volume 134 ; 134 >
-    au < HighWireDrupalPlugin ; exists ; 1979 ; The British Journal of Psychiatry Volume 135 ; 135 >
-    au < HighWireDrupalPlugin ; exists ; 1980 ; The British Journal of Psychiatry Volume 136 ; 136 >
-    au < HighWireDrupalPlugin ; exists ; 1980 ; The British Journal of Psychiatry Volume 137 ; 137 >
-    au < HighWireDrupalPlugin ; exists ; 1981 ; The British Journal of Psychiatry Volume 138 ; 138 >
-    au < HighWireDrupalPlugin ; exists ; 1981 ; The British Journal of Psychiatry Volume 139 ; 139 >
-    au < HighWireDrupalPlugin ; exists ; 1982 ; The British Journal of Psychiatry Volume 140 ; 140 >
-    au < HighWireDrupalPlugin ; exists ; 1982 ; The British Journal of Psychiatry Volume 141 ; 141 >
-    au < HighWireDrupalPlugin ; exists ; 1983 ; The British Journal of Psychiatry Volume 142 ; 142 >
-    au < HighWireDrupalPlugin ; exists ; 1983 ; The British Journal of Psychiatry Volume 143 ; 143 >
-    au < HighWireDrupalPlugin ; exists ; 1984 ; The British Journal of Psychiatry Volume 144 ; 144 >
-    au < HighWireDrupalPlugin ; exists ; 1984 ; The British Journal of Psychiatry Volume 145 ; 145 >
-    au < HighWireDrupalPlugin ; exists ; 1985 ; The British Journal of Psychiatry Volume 146 ; 146 >
-    au < HighWireDrupalPlugin ; exists ; 1985 ; The British Journal of Psychiatry Volume 147 ; 147 >
-    au < HighWireDrupalPlugin ; exists ; 1986 ; The British Journal of Psychiatry Volume 148 ; 148 >
-    au < HighWireDrupalPlugin ; exists ; 1986 ; The British Journal of Psychiatry Volume 149 ; 149 >
-    au < HighWireDrupalPlugin ; exists ; 1987 ; The British Journal of Psychiatry Volume 150 ; 150 >
-    au < HighWireDrupalPlugin ; exists ; 1987 ; The British Journal of Psychiatry Volume 151 ; 151 >
-    au < HighWireDrupalPlugin ; exists ; 1988 ; The British Journal of Psychiatry Volume 152 ; 152 >
-    au < HighWireDrupalPlugin ; exists ; 1988 ; The British Journal of Psychiatry Volume 153 ; 153 >
-    au < HighWireDrupalPlugin ; exists ; 1989 ; The British Journal of Psychiatry Volume 154 ; 154 >
-    au < HighWireDrupalPlugin ; exists ; 1989 ; The British Journal of Psychiatry Volume 155 ; 155 >
-    au < HighWireDrupalPlugin ; exists ; 1990 ; The British Journal of Psychiatry Volume 156 ; 156 >
-    au < HighWireDrupalPlugin ; exists ; 1990 ; The British Journal of Psychiatry Volume 157 ; 157 >
-    au < HighWireDrupalPlugin ; exists ; 1991 ; The British Journal of Psychiatry Volume 158 ; 158 >
-    au < HighWireDrupalPlugin ; exists ; 1991 ; The British Journal of Psychiatry Volume 159 ; 159 >
-    au < HighWireDrupalPlugin ; exists ; 1992 ; The British Journal of Psychiatry Volume 160 ; 160 >
-    au < HighWireDrupalPlugin ; exists ; 1992 ; The British Journal of Psychiatry Volume 161 ; 161 >
-    au < HighWireDrupalPlugin ; exists ; 1993 ; The British Journal of Psychiatry Volume 162 ; 162 >
-    au < HighWireDrupalPlugin ; exists ; 1993 ; The British Journal of Psychiatry Volume 163 ; 163 >
-    au < HighWireDrupalPlugin ; exists ; 1994 ; The British Journal of Psychiatry Volume 164 ; 164 >
-    au < HighWireDrupalPlugin ; exists ; 1994 ; The British Journal of Psychiatry Volume 165 ; 165 >
-    au < HighWireDrupalPlugin ; exists ; 1995 ; The British Journal of Psychiatry Volume 166 ; 166 >
-    au < HighWireDrupalPlugin ; exists ; 1995 ; The British Journal of Psychiatry Volume 167 ; 167 >
-    au < HighWireDrupalPlugin ; exists ; 1996 ; The British Journal of Psychiatry Volume 168 ; 168 >
-    au < HighWireDrupalPlugin ; exists ; 1996 ; The British Journal of Psychiatry Volume 169 ; 169 >
-    au < HighWireDrupalPlugin ; exists ; 1997 ; The British Journal of Psychiatry Volume 170 ; 170 >
-    au < HighWireDrupalPlugin ; exists ; 1997 ; The British Journal of Psychiatry Volume 171 ; 171 >
-    au < HighWireDrupalPlugin ; exists ; 1998 ; The British Journal of Psychiatry Volume 172 ; 172 >
-    au < HighWireDrupalPlugin ; exists ; 1998 ; The British Journal of Psychiatry Volume 173 ; 173 >
-    au < HighWireDrupalPlugin ; exists ; 1999 ; The British Journal of Psychiatry Volume 174 ; 174 >
-    au < HighWireDrupalPlugin ; exists ; 1999 ; The British Journal of Psychiatry Volume 175 ; 175 >
-    au < HighWireDrupalPlugin ; exists ; 2000 ; The British Journal of Psychiatry Volume 176 ; 176 >
-    au < HighWireDrupalPlugin ; exists ; 2000 ; The British Journal of Psychiatry Volume 177 ; 177 >
-    au < HighWireDrupalPlugin ; exists ; 2001 ; The British Journal of Psychiatry Volume 178 ; 178 >
-    au < HighWireDrupalPlugin ; exists ; 2001 ; The British Journal of Psychiatry Volume 179 ; 179 >
-    au < HighWireDrupalPlugin ; exists ; 2002 ; The British Journal of Psychiatry Volume 180 ; 180 >
-    au < HighWireDrupalPlugin ; exists ; 2002 ; The British Journal of Psychiatry Volume 181 ; 181 >
-    au < HighWireDrupalPlugin ; exists ; 2003 ; The British Journal of Psychiatry Volume 182 ; 182 >
-    au < HighWireDrupalPlugin ; exists ; 2003 ; The British Journal of Psychiatry Volume 183 ; 183 >
-    au < HighWireDrupalPlugin ; exists ; 2004 ; The British Journal of Psychiatry Volume 184 ; 184 >
-    au < HighWireDrupalPlugin ; exists ; 2004 ; The British Journal of Psychiatry Volume 185 ; 185 >
+    au < HWDrupalPlugin ; exists ; 1855-1856 ; The British Journal of Psychiatry Volume 2 ; 2 >
+    au < HWDrupalPlugin ; exists ; 1857 ; The British Journal of Psychiatry Volume 3 ; 3 >
+    au < HWDrupalPlugin ; exists ; 1858 ; The British Journal of Psychiatry Volume 4 ; 4 >
+    au < HWDrupalPlugin ; exists ; 1858-1859 ; The British Journal of Psychiatry Volume 5 ; 5 >
+    au < HWDrupalPlugin ; exists ; 1859-1860 ; The British Journal of Psychiatry Volume 6 ; 6 >
+    au < HWDrupalPlugin ; exists ; 1860-1862 ; The British Journal of Psychiatry Volume 7 ; 7 >
+    au < HWDrupalPlugin ; exists ; 1862-1863 ; The British Journal of Psychiatry Volume 8 ; 8 >
+    au < HWDrupalPlugin ; exists ; 1863-1864 ; The British Journal of Psychiatry Volume 9 ; 9 >
+    au < HWDrupalPlugin ; exists ; 1864-1865 ; The British Journal of Psychiatry Volume 10 ; 10 >
+    au < HWDrupalPlugin ; exists ; 1865-1866 ; The British Journal of Psychiatry Volume 11 ; 11 >
+    au < HWDrupalPlugin ; exists ; 1866-1867 ; The British Journal of Psychiatry Volume 12 ; 12 >
+    au < HWDrupalPlugin ; exists ; 1867 ; The British Journal of Psychiatry Volume 13 ; 13 >
+    au < HWDrupalPlugin ; exists ; 1868-1869 ; The British Journal of Psychiatry Volume 14 ; 14 >
+    au < HWDrupalPlugin ; doesNotExist ; 1870 ; The British Journal of Psychiatry Volume 15 ; 15 >
+    au < HWDrupalPlugin ; exists ; 1870-1871 ; The British Journal of Psychiatry Volume 16 ; 16 >
+    au < HWDrupalPlugin ; exists ; 1871-1872 ; The British Journal of Psychiatry Volume 17 ; 17 >
+    au < HWDrupalPlugin ; exists ; 1872-1873 ; The British Journal of Psychiatry Volume 18 ; 18 >
+    au < HWDrupalPlugin ; exists ; 1873-1874 ; The British Journal of Psychiatry Volume 19 ; 19 >
+    au < HWDrupalPlugin ; exists ; 1874 ; The British Journal of Psychiatry Volume 20 ; 20 >
+    au < HWDrupalPlugin ; exists ; 1875-1876 ; The British Journal of Psychiatry Volume 21 ; 21 >
+    au < HWDrupalPlugin ; exists ; 1876-1877 ; The British Journal of Psychiatry Volume 22 ; 22 >
+    au < HWDrupalPlugin ; exists ; 1877-1878 ; The British Journal of Psychiatry Volume 23 ; 23 >
+    au < HWDrupalPlugin ; exists ; 1878-1879 ; The British Journal of Psychiatry Volume 24 ; 24 >
+    au < HWDrupalPlugin ; exists ; 1879-1880 ; The British Journal of Psychiatry Volume 25 ; 25 >
+    au < HWDrupalPlugin ; exists ; 1880-1881 ; The British Journal of Psychiatry Volume 26 ; 26 >
+    au < HWDrupalPlugin ; exists ; 1881 ; The British Journal of Psychiatry Volume 27 ; 27 >
+    au < HWDrupalPlugin ; exists ; 1882-1883 ; The British Journal of Psychiatry Volume 28 ; 28 >
+    au < HWDrupalPlugin ; exists ; 1883-1884 ; The British Journal of Psychiatry Volume 29 ; 29 >
+    au < HWDrupalPlugin ; exists ; 1884 ; The British Journal of Psychiatry Volume 30 ; 30 >
+    au < HWDrupalPlugin ; exists ; 1885-1886 ; The British Journal of Psychiatry Volume 31 ; 31 >
+    au < HWDrupalPlugin ; exists ; 1886-1887 ; The British Journal of Psychiatry Volume 32 ; 32 >
+    au < HWDrupalPlugin ; exists ; 1887-1888 ; The British Journal of Psychiatry Volume 33 ; 33 >
+    au < HWDrupalPlugin ; exists ; 1888-1889 ; The British Journal of Psychiatry Volume 34 ; 34 >
+    au < HWDrupalPlugin ; exists ; 1889 ; The British Journal of Psychiatry Volume 35 ; 35 >
+    au < HWDrupalPlugin ; exists ; 1890 ; The British Journal of Psychiatry Volume 36 ; 36 >
+    au < HWDrupalPlugin ; exists ; 1891 ; The British Journal of Psychiatry Volume 37 ; 37 >
+    au < HWDrupalPlugin ; exists ; 1892 ; The British Journal of Psychiatry Volume 38 ; 38 >
+    au < HWDrupalPlugin ; exists ; 1893 ; The British Journal of Psychiatry Volume 39 ; 39 >
+    au < HWDrupalPlugin ; exists ; 1894 ; The British Journal of Psychiatry Volume 40 ; 40 >
+    au < HWDrupalPlugin ; exists ; 1895 ; The British Journal of Psychiatry Volume 41 ; 41 >
+    au < HWDrupalPlugin ; exists ; 1896 ; The British Journal of Psychiatry Volume 42 ; 42 >
+    au < HWDrupalPlugin ; exists ; 1897 ; The British Journal of Psychiatry Volume 43 ; 43 >
+    au < HWDrupalPlugin ; exists ; 1898 ; The British Journal of Psychiatry Volume 44 ; 44 >
+    au < HWDrupalPlugin ; exists ; 1899 ; The British Journal of Psychiatry Volume 45 ; 45 >
+    au < HWDrupalPlugin ; exists ; 1900 ; The British Journal of Psychiatry Volume 46 ; 46 >
+    au < HWDrupalPlugin ; exists ; 1901 ; The British Journal of Psychiatry Volume 47 ; 47 >
+    au < HWDrupalPlugin ; exists ; 1902 ; The British Journal of Psychiatry Volume 48 ; 48 >
+    au < HWDrupalPlugin ; exists ; 1903 ; The British Journal of Psychiatry Volume 49 ; 49 >
+    au < HWDrupalPlugin ; exists ; 1904 ; The British Journal of Psychiatry Volume 50 ; 50 >
+    au < HWDrupalPlugin ; exists ; 1905 ; The British Journal of Psychiatry Volume 51 ; 51 >
+    au < HWDrupalPlugin ; exists ; 1906 ; The British Journal of Psychiatry Volume 52 ; 52 >
+    au < HWDrupalPlugin ; exists ; 1907 ; The British Journal of Psychiatry Volume 53 ; 53 >
+    au < HWDrupalPlugin ; exists ; 1908 ; The British Journal of Psychiatry Volume 54 ; 54 >
+    au < HWDrupalPlugin ; exists ; 1909 ; The British Journal of Psychiatry Volume 55 ; 55 >
+    au < HWDrupalPlugin ; exists ; 1910 ; The British Journal of Psychiatry Volume 56 ; 56 >
+    au < HWDrupalPlugin ; exists ; 1911 ; The British Journal of Psychiatry Volume 57 ; 57 >
+    au < HWDrupalPlugin ; exists ; 1912 ; The British Journal of Psychiatry Volume 58 ; 58 >
+    au < HWDrupalPlugin ; exists ; 1913 ; The British Journal of Psychiatry Volume 59 ; 59 >
+    au < HWDrupalPlugin ; exists ; 1914 ; The British Journal of Psychiatry Volume 60 ; 60 >
+    au < HWDrupalPlugin ; exists ; 1915 ; The British Journal of Psychiatry Volume 61 ; 61 >
+    au < HWDrupalPlugin ; exists ; 1916 ; The British Journal of Psychiatry Volume 62 ; 62 >
+    au < HWDrupalPlugin ; exists ; 1917 ; The British Journal of Psychiatry Volume 63 ; 63 >
+    au < HWDrupalPlugin ; exists ; 1918 ; The British Journal of Psychiatry Volume 64 ; 64 >
+    au < HWDrupalPlugin ; exists ; 1919 ; The British Journal of Psychiatry Volume 65 ; 65 >
+    au < HWDrupalPlugin ; exists ; 1920 ; The British Journal of Psychiatry Volume 66 ; 66 >
+    au < HWDrupalPlugin ; exists ; 1921 ; The British Journal of Psychiatry Volume 67 ; 67 >
+    au < HWDrupalPlugin ; exists ; 1922 ; The British Journal of Psychiatry Volume 68 ; 68 >
+    au < HWDrupalPlugin ; exists ; 1923 ; The British Journal of Psychiatry Volume 69 ; 69 >
+    au < HWDrupalPlugin ; exists ; 1924 ; The British Journal of Psychiatry Volume 70 ; 70 >
+    au < HWDrupalPlugin ; exists ; 1925 ; The British Journal of Psychiatry Volume 71 ; 71 >
+    au < HWDrupalPlugin ; exists ; 1926 ; The British Journal of Psychiatry Volume 72 ; 72 >
+    au < HWDrupalPlugin ; exists ; 1927 ; The British Journal of Psychiatry Volume 73 ; 73 >
+    au < HWDrupalPlugin ; exists ; 1928 ; The British Journal of Psychiatry Volume 74 ; 74 >
+    au < HWDrupalPlugin ; exists ; 1929 ; The British Journal of Psychiatry Volume 75 ; 75 >
+    au < HWDrupalPlugin ; exists ; 1930 ; The British Journal of Psychiatry Volume 76 ; 76 >
+    au < HWDrupalPlugin ; exists ; 1931 ; The British Journal of Psychiatry Volume 77 ; 77 >
+    au < HWDrupalPlugin ; exists ; 1932 ; The British Journal of Psychiatry Volume 78 ; 78 >
+    au < HWDrupalPlugin ; exists ; 1933 ; The British Journal of Psychiatry Volume 79 ; 79 >
+    au < HWDrupalPlugin ; exists ; 1934 ; The British Journal of Psychiatry Volume 80 ; 80 >
+    au < HWDrupalPlugin ; exists ; 1935 ; The British Journal of Psychiatry Volume 81 ; 81 >
+    au < HWDrupalPlugin ; exists ; 1936 ; The British Journal of Psychiatry Volume 82 ; 82 >
+    au < HWDrupalPlugin ; exists ; 1937 ; The British Journal of Psychiatry Volume 83 ; 83 >
+    au < HWDrupalPlugin ; exists ; 1938 ; The British Journal of Psychiatry Volume 84 ; 84 >
+    au < HWDrupalPlugin ; exists ; 1939 ; The British Journal of Psychiatry Volume 85 ; 85 >
+    au < HWDrupalPlugin ; exists ; 1940 ; The British Journal of Psychiatry Volume 86 ; 86 >
+    au < HWDrupalPlugin ; exists ; 1941 ; The British Journal of Psychiatry Volume 87 ; 87 >
+    au < HWDrupalPlugin ; exists ; 1942 ; The British Journal of Psychiatry Volume 88 ; 88 >
+    au < HWDrupalPlugin ; exists ; 1943 ; The British Journal of Psychiatry Volume 89 ; 89 >
+    au < HWDrupalPlugin ; exists ; 1944 ; The British Journal of Psychiatry Volume 90 ; 90 >
+    au < HWDrupalPlugin ; exists ; 1945 ; The British Journal of Psychiatry Volume 91 ; 91 >
+    au < HWDrupalPlugin ; exists ; 1946 ; The British Journal of Psychiatry Volume 92 ; 92 >
+    au < HWDrupalPlugin ; exists ; 1947 ; The British Journal of Psychiatry Volume 93 ; 93 >
+    au < HWDrupalPlugin ; exists ; 1948 ; The British Journal of Psychiatry Volume 94 ; 94 >
+    au < HWDrupalPlugin ; exists ; 1949 ; The British Journal of Psychiatry Volume 95 ; 95 >
+    au < HWDrupalPlugin ; exists ; 1950 ; The British Journal of Psychiatry Volume 96 ; 96 >
+    au < HWDrupalPlugin ; exists ; 1951 ; The British Journal of Psychiatry Volume 97 ; 97 >
+    au < HWDrupalPlugin ; exists ; 1952 ; The British Journal of Psychiatry Volume 98 ; 98 >
+    au < HWDrupalPlugin ; exists ; 1953 ; The British Journal of Psychiatry Volume 99 ; 99 >
+    au < HWDrupalPlugin ; exists ; 1954 ; The British Journal of Psychiatry Volume 100 ; 100 >
+    au < HWDrupalPlugin ; exists ; 1955 ; The British Journal of Psychiatry Volume 101 ; 101 >
+    au < HWDrupalPlugin ; exists ; 1956 ; The British Journal of Psychiatry Volume 102 ; 102 >
+    au < HWDrupalPlugin ; exists ; 1957 ; The British Journal of Psychiatry Volume 103 ; 103 >
+    au < HWDrupalPlugin ; exists ; 1958 ; The British Journal of Psychiatry Volume 104 ; 104 >
+    au < HWDrupalPlugin ; exists ; 1959 ; The British Journal of Psychiatry Volume 105 ; 105 >
+    au < HWDrupalPlugin ; exists ; 1960 ; The British Journal of Psychiatry Volume 106 ; 106 >
+    au < HWDrupalPlugin ; exists ; 1961 ; The British Journal of Psychiatry Volume 107 ; 107 >
+    au < HWDrupalPlugin ; exists ; 1962 ; The British Journal of Psychiatry Volume 108 ; 108 >
+    au < HWDrupalPlugin ; exists ; 1963 ; The British Journal of Psychiatry Volume 109 ; 109 >
+    au < HWDrupalPlugin ; exists ; 1964 ; The British Journal of Psychiatry Volume 110 ; 110 >
+    au < HWDrupalPlugin ; exists ; 1965 ; The British Journal of Psychiatry Volume 111 ; 111 >
+    au < HWDrupalPlugin ; exists ; 1966 ; The British Journal of Psychiatry Volume 112 ; 112 >
+    au < HWDrupalPlugin ; exists ; 1967 ; The British Journal of Psychiatry Volume 113 ; 113 >
+    au < HWDrupalPlugin ; exists ; 1968 ; The British Journal of Psychiatry Volume 114 ; 114 >
+    au < HWDrupalPlugin ; exists ; 1969 ; The British Journal of Psychiatry Volume 115 ; 115 >
+    au < HWDrupalPlugin ; exists ; 1970 ; The British Journal of Psychiatry Volume 116 ; 116 >
+    au < HWDrupalPlugin ; exists ; 1970 ; The British Journal of Psychiatry Volume 117 ; 117 >
+    au < HWDrupalPlugin ; exists ; 1971 ; The British Journal of Psychiatry Volume 118 ; 118 >
+    au < HWDrupalPlugin ; exists ; 1971 ; The British Journal of Psychiatry Volume 119 ; 119 >
+    au < HWDrupalPlugin ; exists ; 1972 ; The British Journal of Psychiatry Volume 120 ; 120 >
+    au < HWDrupalPlugin ; exists ; 1972 ; The British Journal of Psychiatry Volume 121 ; 121 >
+    au < HWDrupalPlugin ; exists ; 1973 ; The British Journal of Psychiatry Volume 122 ; 122 >
+    au < HWDrupalPlugin ; exists ; 1973 ; The British Journal of Psychiatry Volume 123 ; 123 >
+    au < HWDrupalPlugin ; exists ; 1974 ; The British Journal of Psychiatry Volume 124 ; 124 >
+    au < HWDrupalPlugin ; exists ; 1974 ; The British Journal of Psychiatry Volume 125 ; 125 >
+    au < HWDrupalPlugin ; exists ; 1975 ; The British Journal of Psychiatry Volume 126 ; 126 >
+    au < HWDrupalPlugin ; exists ; 1975 ; The British Journal of Psychiatry Volume 127 ; 127 >
+    au < HWDrupalPlugin ; exists ; 1976 ; The British Journal of Psychiatry Volume 128 ; 128 >
+    au < HWDrupalPlugin ; exists ; 1976 ; The British Journal of Psychiatry Volume 129 ; 129 >
+    au < HWDrupalPlugin ; exists ; 1977 ; The British Journal of Psychiatry Volume 130 ; 130 >
+    au < HWDrupalPlugin ; exists ; 1977 ; The British Journal of Psychiatry Volume 131 ; 131 >
+    au < HWDrupalPlugin ; exists ; 1978 ; The British Journal of Psychiatry Volume 132 ; 132 >
+    au < HWDrupalPlugin ; exists ; 1978 ; The British Journal of Psychiatry Volume 133 ; 133 >
+    au < HWDrupalPlugin ; exists ; 1979 ; The British Journal of Psychiatry Volume 134 ; 134 >
+    au < HWDrupalPlugin ; exists ; 1979 ; The British Journal of Psychiatry Volume 135 ; 135 >
+    au < HWDrupalPlugin ; exists ; 1980 ; The British Journal of Psychiatry Volume 136 ; 136 >
+    au < HWDrupalPlugin ; exists ; 1980 ; The British Journal of Psychiatry Volume 137 ; 137 >
+    au < HWDrupalPlugin ; exists ; 1981 ; The British Journal of Psychiatry Volume 138 ; 138 >
+    au < HWDrupalPlugin ; exists ; 1981 ; The British Journal of Psychiatry Volume 139 ; 139 >
+    au < HWDrupalPlugin ; exists ; 1982 ; The British Journal of Psychiatry Volume 140 ; 140 >
+    au < HWDrupalPlugin ; exists ; 1982 ; The British Journal of Psychiatry Volume 141 ; 141 >
+    au < HWDrupalPlugin ; exists ; 1983 ; The British Journal of Psychiatry Volume 142 ; 142 >
+    au < HWDrupalPlugin ; exists ; 1983 ; The British Journal of Psychiatry Volume 143 ; 143 >
+    au < HWDrupalPlugin ; exists ; 1984 ; The British Journal of Psychiatry Volume 144 ; 144 >
+    au < HWDrupalPlugin ; exists ; 1984 ; The British Journal of Psychiatry Volume 145 ; 145 >
+    au < HWDrupalPlugin ; exists ; 1985 ; The British Journal of Psychiatry Volume 146 ; 146 >
+    au < HWDrupalPlugin ; exists ; 1985 ; The British Journal of Psychiatry Volume 147 ; 147 >
+    au < HWDrupalPlugin ; exists ; 1986 ; The British Journal of Psychiatry Volume 148 ; 148 >
+    au < HWDrupalPlugin ; exists ; 1986 ; The British Journal of Psychiatry Volume 149 ; 149 >
+    au < HWDrupalPlugin ; exists ; 1987 ; The British Journal of Psychiatry Volume 150 ; 150 >
+    au < HWDrupalPlugin ; exists ; 1987 ; The British Journal of Psychiatry Volume 151 ; 151 >
+    au < HWDrupalPlugin ; exists ; 1988 ; The British Journal of Psychiatry Volume 152 ; 152 >
+    au < HWDrupalPlugin ; exists ; 1988 ; The British Journal of Psychiatry Volume 153 ; 153 >
+    au < HWDrupalPlugin ; exists ; 1989 ; The British Journal of Psychiatry Volume 154 ; 154 >
+    au < HWDrupalPlugin ; exists ; 1989 ; The British Journal of Psychiatry Volume 155 ; 155 >
+    au < HWDrupalPlugin ; exists ; 1990 ; The British Journal of Psychiatry Volume 156 ; 156 >
+    au < HWDrupalPlugin ; exists ; 1990 ; The British Journal of Psychiatry Volume 157 ; 157 >
+    au < HWDrupalPlugin ; exists ; 1991 ; The British Journal of Psychiatry Volume 158 ; 158 >
+    au < HWDrupalPlugin ; exists ; 1991 ; The British Journal of Psychiatry Volume 159 ; 159 >
+    au < HWDrupalPlugin ; exists ; 1992 ; The British Journal of Psychiatry Volume 160 ; 160 >
+    au < HWDrupalPlugin ; exists ; 1992 ; The British Journal of Psychiatry Volume 161 ; 161 >
+    au < HWDrupalPlugin ; exists ; 1993 ; The British Journal of Psychiatry Volume 162 ; 162 >
+    au < HWDrupalPlugin ; exists ; 1993 ; The British Journal of Psychiatry Volume 163 ; 163 >
+    au < HWDrupalPlugin ; exists ; 1994 ; The British Journal of Psychiatry Volume 164 ; 164 >
+    au < HWDrupalPlugin ; exists ; 1994 ; The British Journal of Psychiatry Volume 165 ; 165 >
+    au < HWDrupalPlugin ; exists ; 1995 ; The British Journal of Psychiatry Volume 166 ; 166 >
+    au < HWDrupalPlugin ; exists ; 1995 ; The British Journal of Psychiatry Volume 167 ; 167 >
+    au < HWDrupalPlugin ; exists ; 1996 ; The British Journal of Psychiatry Volume 168 ; 168 >
+    au < HWDrupalPlugin ; exists ; 1996 ; The British Journal of Psychiatry Volume 169 ; 169 >
+    au < HWDrupalPlugin ; exists ; 1997 ; The British Journal of Psychiatry Volume 170 ; 170 >
+    au < HWDrupalPlugin ; exists ; 1997 ; The British Journal of Psychiatry Volume 171 ; 171 >
+    au < HWDrupalPlugin ; exists ; 1998 ; The British Journal of Psychiatry Volume 172 ; 172 >
+    au < HWDrupalPlugin ; exists ; 1998 ; The British Journal of Psychiatry Volume 173 ; 173 >
+    au < HWDrupalPlugin ; exists ; 1999 ; The British Journal of Psychiatry Volume 174 ; 174 >
+    au < HWDrupalPlugin ; exists ; 1999 ; The British Journal of Psychiatry Volume 175 ; 175 >
+    au < HWDrupalPlugin ; exists ; 2000 ; The British Journal of Psychiatry Volume 176 ; 176 >
+    au < HWDrupalPlugin ; exists ; 2000 ; The British Journal of Psychiatry Volume 177 ; 177 >
+    au < HWDrupalPlugin ; exists ; 2001 ; The British Journal of Psychiatry Volume 178 ; 178 >
+    au < HWDrupalPlugin ; exists ; 2001 ; The British Journal of Psychiatry Volume 179 ; 179 >
+    au < HWDrupalPlugin ; exists ; 2002 ; The British Journal of Psychiatry Volume 180 ; 180 >
+    au < HWDrupalPlugin ; exists ; 2002 ; The British Journal of Psychiatry Volume 181 ; 181 >
+    au < HWDrupalPlugin ; exists ; 2003 ; The British Journal of Psychiatry Volume 182 ; 182 >
+    au < HWDrupalPlugin ; exists ; 2003 ; The British Journal of Psychiatry Volume 183 ; 183 >
+    au < HWDrupalPlugin ; exists ; 2004 ; The British Journal of Psychiatry Volume 184 ; 184 >
+    au < HWDrupalPlugin ; exists ; 2004 ; The British Journal of Psychiatry Volume 185 ; 185 >
     au < HighWireStrVolPlugin ; down ; 2005 ; The British Journal of Psychiatry Volume 186 ; 186 >
     au < HighWireStrVolPlugin ; down ; 2005 ; The British Journal of Psychiatry Volume 187 ; 187 >
     au < HighWireStrVolPlugin ; down ; 2006 ; The British Journal of Psychiatry Volume 188 ; 188 >
@@ -269,10 +269,10 @@
     au < HighWirePressH20Plugin ; down ; 2012 ; The British Journal of Psychiatry Volume 201 ; 201 >
     au < HighWirePressH20Plugin ; down ; 2013 ; The British Journal of Psychiatry Volume 202 ; 202 >
     au < HighWirePressH20Plugin ; down ; 2013 ; The British Journal of Psychiatry Volume 203 ; 203 >
-    au < HighWireDrupalPlugin ; exists ; 2014 ; The British Journal of Psychiatry Volume 204 ; 204 >
-    au < HighWireDrupalPlugin ; exists ; 2014 ; The British Journal of Psychiatry Volume 205 ; 205 >
-    au < HighWireDrupalPlugin ; exists ; 2015 ; The British Journal of Psychiatry Volume 206 ; 206 >
-    au < HighWireDrupalPlugin ; expected ; 2015 ; The British Journal of Psychiatry Volume 207 ; 207 >
+    au < HWDrupalPlugin ; exists ; 2014 ; The British Journal of Psychiatry Volume 204 ; 204 >
+    au < HWDrupalPlugin ; exists ; 2014 ; The British Journal of Psychiatry Volume 205 ; 205 >
+    au < HWDrupalPlugin ; exists ; 2015 ; The British Journal of Psychiatry Volume 206 ; 206 >
+    au < HWDrupalPlugin ; expected ; 2015 ; The British Journal of Psychiatry Volume 207 ; 207 >
 
   }
 
@@ -287,34 +287,34 @@
 
     param[base_url] = http://pb.rcpsych.org/
 
-    au < HighWireDrupalPlugin ; exists ; 1977 ; Psychiatric Bulletin Volume 1 ; 1 >
-    au < HighWireDrupalPlugin ; exists ; 1978 ; Psychiatric Bulletin Volume 2 ; 2 >
-    au < HighWireDrupalPlugin ; exists ; 1979 ; Psychiatric Bulletin Volume 3 ; 3 >
-    au < HighWireDrupalPlugin ; exists ; 1980 ; Psychiatric Bulletin Volume 4 ; 4 >
-    au < HighWireDrupalPlugin ; exists ; 1981 ; Psychiatric Bulletin Volume 5 ; 5 >
-    au < HighWireDrupalPlugin ; exists ; 1982 ; Psychiatric Bulletin Volume 6 ; 6 >
-    au < HighWireDrupalPlugin ; exists ; 1983 ; Psychiatric Bulletin Volume 7 ; 7 >
-    au < HighWireDrupalPlugin ; exists ; 1984 ; Psychiatric Bulletin Volume 8 ; 8 >
-    au < HighWireDrupalPlugin ; exists ; 1985 ; Psychiatric Bulletin Volume 9 ; 9 >
-    au < HighWireDrupalPlugin ; exists ; 1986 ; Psychiatric Bulletin Volume 10 ; 10 >
-    au < HighWireDrupalPlugin ; exists ; 1987 ; Psychiatric Bulletin Volume 11 ; 11 >
-    au < HighWireDrupalPlugin ; exists ; 1988 ; Psychiatric Bulletin Volume 12 ; 12 >
-    au < HighWireDrupalPlugin ; exists ; 1989 ; Psychiatric Bulletin Volume 13 ; 13 >
-    au < HighWireDrupalPlugin ; exists ; 1990 ; Psychiatric Bulletin Volume 14 ; 14 >
-    au < HighWireDrupalPlugin ; exists ; 1991 ; Psychiatric Bulletin Volume 15 ; 15 >
-    au < HighWireDrupalPlugin ; exists ; 1992 ; Psychiatric Bulletin Volume 16 ; 16 >
-    au < HighWireDrupalPlugin ; exists ; 1993 ; Psychiatric Bulletin Volume 17 ; 17 >
-    au < HighWireDrupalPlugin ; exists ; 1994 ; Psychiatric Bulletin Volume 18 ; 18 >
-    au < HighWireDrupalPlugin ; exists ; 1995 ; Psychiatric Bulletin Volume 19 ; 19 >
-    au < HighWireDrupalPlugin ; exists ; 1996 ; Psychiatric Bulletin Volume 20 ; 20 >
-    au < HighWireDrupalPlugin ; exists ; 1997 ; Psychiatric Bulletin Volume 21 ; 21 >
-    au < HighWireDrupalPlugin ; exists ; 1998 ; Psychiatric Bulletin Volume 22 ; 22 >
-    au < HighWireDrupalPlugin ; exists ; 1999 ; Psychiatric Bulletin Volume 23 ; 23 >
-    au < HighWireDrupalPlugin ; exists ; 2000 ; Psychiatric Bulletin Volume 24 ; 24 >
-    au < HighWireDrupalPlugin ; exists ; 2001 ; Psychiatric Bulletin Volume 25 ; 25 >
-    au < HighWireDrupalPlugin ; exists ; 2002 ; Psychiatric Bulletin Volume 26 ; 26 >
-    au < HighWireDrupalPlugin ; exists ; 2003 ; Psychiatric Bulletin Volume 27 ; 27 >
-    au < HighWireDrupalPlugin ; exists ; 2004 ; Psychiatric Bulletin Volume 28 ; 28 >
+    au < HWDrupalPlugin ; exists ; 1977 ; Psychiatric Bulletin Volume 1 ; 1 >
+    au < HWDrupalPlugin ; exists ; 1978 ; Psychiatric Bulletin Volume 2 ; 2 >
+    au < HWDrupalPlugin ; exists ; 1979 ; Psychiatric Bulletin Volume 3 ; 3 >
+    au < HWDrupalPlugin ; exists ; 1980 ; Psychiatric Bulletin Volume 4 ; 4 >
+    au < HWDrupalPlugin ; exists ; 1981 ; Psychiatric Bulletin Volume 5 ; 5 >
+    au < HWDrupalPlugin ; exists ; 1982 ; Psychiatric Bulletin Volume 6 ; 6 >
+    au < HWDrupalPlugin ; exists ; 1983 ; Psychiatric Bulletin Volume 7 ; 7 >
+    au < HWDrupalPlugin ; exists ; 1984 ; Psychiatric Bulletin Volume 8 ; 8 >
+    au < HWDrupalPlugin ; exists ; 1985 ; Psychiatric Bulletin Volume 9 ; 9 >
+    au < HWDrupalPlugin ; exists ; 1986 ; Psychiatric Bulletin Volume 10 ; 10 >
+    au < HWDrupalPlugin ; exists ; 1987 ; Psychiatric Bulletin Volume 11 ; 11 >
+    au < HWDrupalPlugin ; exists ; 1988 ; Psychiatric Bulletin Volume 12 ; 12 >
+    au < HWDrupalPlugin ; exists ; 1989 ; Psychiatric Bulletin Volume 13 ; 13 >
+    au < HWDrupalPlugin ; exists ; 1990 ; Psychiatric Bulletin Volume 14 ; 14 >
+    au < HWDrupalPlugin ; exists ; 1991 ; Psychiatric Bulletin Volume 15 ; 15 >
+    au < HWDrupalPlugin ; exists ; 1992 ; Psychiatric Bulletin Volume 16 ; 16 >
+    au < HWDrupalPlugin ; exists ; 1993 ; Psychiatric Bulletin Volume 17 ; 17 >
+    au < HWDrupalPlugin ; exists ; 1994 ; Psychiatric Bulletin Volume 18 ; 18 >
+    au < HWDrupalPlugin ; exists ; 1995 ; Psychiatric Bulletin Volume 19 ; 19 >
+    au < HWDrupalPlugin ; exists ; 1996 ; Psychiatric Bulletin Volume 20 ; 20 >
+    au < HWDrupalPlugin ; exists ; 1997 ; Psychiatric Bulletin Volume 21 ; 21 >
+    au < HWDrupalPlugin ; exists ; 1998 ; Psychiatric Bulletin Volume 22 ; 22 >
+    au < HWDrupalPlugin ; exists ; 1999 ; Psychiatric Bulletin Volume 23 ; 23 >
+    au < HWDrupalPlugin ; exists ; 2000 ; Psychiatric Bulletin Volume 24 ; 24 >
+    au < HWDrupalPlugin ; exists ; 2001 ; Psychiatric Bulletin Volume 25 ; 25 >
+    au < HWDrupalPlugin ; exists ; 2002 ; Psychiatric Bulletin Volume 26 ; 26 >
+    au < HWDrupalPlugin ; exists ; 2003 ; Psychiatric Bulletin Volume 27 ; 27 >
+    au < HWDrupalPlugin ; exists ; 2004 ; Psychiatric Bulletin Volume 28 ; 28 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Psychiatric Bulletin Volume 29 ; 29 >
     au < HighWirePressPlugin ; down ; 2006 ; Psychiatric Bulletin Volume 30 ; 30 >
     au < HighWirePressPlugin ; down ; 2007 ; Psychiatric Bulletin Volume 31 ; 31 >
@@ -324,8 +324,8 @@
     au < HighWirePressPlugin ; down ; 2011 ; The Psychiatrist Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Psychiatric Bulletin Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Psychiatric Bulletin Volume 37 ; 37 >
-    au < HighWireDrupalPlugin ; exists ; 2014 ; Psychiatric Bulletin Volume 38 ; 38 >
-    au < HighWireDrupalPlugin ; exists ; 2015 ; Psychiatric Bulletin Volume 39 ; 39 >
+    au < HWDrupalPlugin ; exists ; 2014 ; Psychiatric Bulletin Volume 38 ; 38 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Psychiatric Bulletin Volume 39 ; 39 >
   
   }
 
