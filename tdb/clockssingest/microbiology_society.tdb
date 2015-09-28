@@ -1,10 +1,11 @@
 {
   publisher <
-    name = Society for General Microbiology ;
+    name = Microbiology Society ;
     info[contract] = 2012 ;
     info[tester] = 5
   >
-  
+    
+    comment[0] = Formerly: Society for General Microbiology
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -533,7 +534,7 @@
       au < exists ; exists ; 2011 ; Microbiology Volume 157 ; 157 >
       au < down ; frozen ; 2012 ; Microbiology Volume 158 ; 158 >
       au < down ; exists ; 2013 ; Microbiology Volume 159 ; 159 >
-      au < frozen ; exists ; 2014 ; Microbiology Volume 160 ; 160 >
+      au < down ; exists ; 2014 ; Microbiology Volume 160 ; 160 >
       au < exists ; exists ; 2015 ; Microbiology Volume 161 ; 161 >
 
   }
