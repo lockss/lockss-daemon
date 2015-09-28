@@ -20,16 +20,16 @@
 
     param[journal_id] = ast
 
-    au < manifest ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
-    au < manifest ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
-    au < manifest ; exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
-    au < manifest ; exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
-    au < manifest ; exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
-    au < manifest ; exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
-    au < manifest ; exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
-    au < manifest ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
-    au < manifest ; exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
-    au < manifest ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
+    au < crawling ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
+    au < crawling ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
+    au < crawling ; exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
+    au < crawling ; exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
+    au < crawling ; exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
+    au < crawling ; exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
+    au < crawling ; exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
+    au < crawling ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
+    au < crawling ; exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
+    au < crawling ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
     au < doNotProcess ; doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
     au < doNotProcess ; doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
     au < doNotProcess ; doNotProcess ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
@@ -48,16 +48,16 @@
 
     param[journal_id] = ase
 
-    au < manifest ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
-    au < manifest ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
-    au < manifest ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
-    au < manifest ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 >
-    au < manifest ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >
-    au < manifest ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 >
-    au < manifest ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 >
-    au < manifest ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 >
-    au < manifest ; exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 >
-    au < manifest ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 >
+    au < crawling ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
+    au < crawling ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
+    au < crawling ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
+    au < crawling ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 >
+    au < crawling ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >
+    au < crawling ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 >
+    au < crawling ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 >
+    au < crawling ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 >
+    au < crawling ; exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 >
+    au < crawling ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 >
     au < doNotProcess ; doNotProcess ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >
     au < doNotProcess ; doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
     au < doNotProcess ; doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
@@ -76,17 +76,17 @@
 
     param[journal_id] = ba
 
-    au < manifest ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 >
-    au < manifest ; exists ; 2000 ; Building Acoustics Volume 7 ; 7 >
-    au < manifest ; exists ; 2001 ; Building Acoustics Volume 8 ; 8 >
-    au < manifest ; exists ; 2002 ; Building Acoustics Volume 9 ; 9 >
-    au < manifest ; exists ; 2003 ; Building Acoustics Volume 10 ; 10 >
-    au < manifest ; exists ; 2004 ; Building Acoustics Volume 11 ; 11 >
-    au < manifest ; exists ; 2005 ; Building Acoustics Volume 12 ; 12 >
-    au < manifest ; exists ; 2006 ; Building Acoustics Volume 13 ; 13 >
-    au < manifest ; exists ; 2007 ; Building Acoustics Volume 14 ; 14 >
-    au < manifest ; exists ; 2008 ; Building Acoustics Volume 15 ; 15 >
-    au < manifest ; exists ; 2009 ; Building Acoustics Volume 16 ; 16 >
+    au < crawling ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 >
+    au < crawling ; exists ; 2000 ; Building Acoustics Volume 7 ; 7 >
+    au < crawling ; exists ; 2001 ; Building Acoustics Volume 8 ; 8 >
+    au < crawling ; exists ; 2002 ; Building Acoustics Volume 9 ; 9 >
+    au < crawling ; exists ; 2003 ; Building Acoustics Volume 10 ; 10 >
+    au < crawling ; exists ; 2004 ; Building Acoustics Volume 11 ; 11 >
+    au < crawling ; exists ; 2005 ; Building Acoustics Volume 12 ; 12 >
+    au < crawling ; exists ; 2006 ; Building Acoustics Volume 13 ; 13 >
+    au < crawling ; exists ; 2007 ; Building Acoustics Volume 14 ; 14 >
+    au < crawling ; exists ; 2008 ; Building Acoustics Volume 15 ; 15 >
+    au < crawling ; exists ; 2009 ; Building Acoustics Volume 16 ; 16 >
     au < doNotProcess ; doNotProcess ; 2010 ; Building Acoustics Volume 17 ; 17 >
     au < doNotProcess ; doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 >
     au < doNotProcess ; doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 >
@@ -105,17 +105,17 @@
 
     param[journal_id] = ee
 
-    au < manifest ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 >
-    au < manifest ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 >
-    au < manifest ; exists ; 2001 ; Energy & Environment Volume 12 ; 12 >
-    au < manifest ; exists ; 2002 ; Energy & Environment Volume 13 ; 13 >
-    au < manifest ; exists ; 2003 ; Energy & Environment Volume 14 ; 14 >
-    au < manifest ; exists ; 2004 ; Energy & Environment Volume 15 ; 15 >
-    au < manifest ; exists ; 2005 ; Energy & Environment Volume 16 ; 16 >
-    au < manifest ; exists ; 2006 ; Energy & Environment Volume 17 ; 17 >
-    au < manifest ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 >
-    au < manifest ; exists ; 2008 ; Energy & Environment Volume 19 ; 19 >
-    au < manifest ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 >
+    au < crawling ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 >
+    au < crawling ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 >
+    au < crawling ; exists ; 2001 ; Energy & Environment Volume 12 ; 12 >
+    au < crawling ; exists ; 2002 ; Energy & Environment Volume 13 ; 13 >
+    au < crawling ; exists ; 2003 ; Energy & Environment Volume 14 ; 14 >
+    au < crawling ; exists ; 2004 ; Energy & Environment Volume 15 ; 15 >
+    au < crawling ; exists ; 2005 ; Energy & Environment Volume 16 ; 16 >
+    au < crawling ; exists ; 2006 ; Energy & Environment Volume 17 ; 17 >
+    au < crawling ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 >
+    au < crawling ; exists ; 2008 ; Energy & Environment Volume 19 ; 19 >
+    au < crawling ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 >
     au < doNotProcess ; doNotProcess ; 2010 ; Energy & Environment Volume 21 ; 21 >
     au < doNotProcess ; doNotProcess ; 2011 ; Energy & Environment Volume 22 ; 22 >
     au < doNotProcess ; doNotProcess ; 2012 ; Energy & Environment Volume 23 ; 23 >
@@ -134,16 +134,16 @@
 
     param[journal_id] = eee
 
-    au < manifest ; exists ; 2000 ; Energy, Exploration & Exploitation Volume 18 ; 18 >
-    au < manifest ; exists ; 2001 ; Energy, Exploration & Exploitation Volume 19 ; 19 >
-    au < manifest ; exists ; 2002 ; Energy, Exploration & Exploitation Volume 20 ; 20 >
-    au < manifest ; exists ; 2003 ; Energy, Exploration & Exploitation Volume 21 ; 21 >
-    au < manifest ; exists ; 2004 ; Energy, Exploration & Exploitation Volume 22 ; 22 >
-    au < manifest ; exists ; 2005 ; Energy, Exploration & Exploitation Volume 23 ; 23 >
-    au < manifest ; exists ; 2006 ; Energy, Exploration & Exploitation Volume 24 ; 24 >
-    au < manifest ; exists ; 2007 ; Energy, Exploration & Exploitation Volume 25 ; 25 >
-    au < manifest ; exists ; 2008 ; Energy, Exploration & Exploitation Volume 26 ; 26 >
-    au < manifest ; exists ; 2009 ; Energy, Exploration & Exploitation Volume 27 ; 27 >
+    au < crawling ; exists ; 2000 ; Energy, Exploration & Exploitation Volume 18 ; 18 >
+    au < crawling ; exists ; 2001 ; Energy, Exploration & Exploitation Volume 19 ; 19 >
+    au < crawling ; exists ; 2002 ; Energy, Exploration & Exploitation Volume 20 ; 20 >
+    au < crawling ; exists ; 2003 ; Energy, Exploration & Exploitation Volume 21 ; 21 >
+    au < crawling ; exists ; 2004 ; Energy, Exploration & Exploitation Volume 22 ; 22 >
+    au < crawling ; exists ; 2005 ; Energy, Exploration & Exploitation Volume 23 ; 23 >
+    au < crawling ; exists ; 2006 ; Energy, Exploration & Exploitation Volume 24 ; 24 >
+    au < crawling ; exists ; 2007 ; Energy, Exploration & Exploitation Volume 25 ; 25 >
+    au < crawling ; exists ; 2008 ; Energy, Exploration & Exploitation Volume 26 ; 26 >
+    au < crawling ; exists ; 2009 ; Energy, Exploration & Exploitation Volume 27 ; 27 >
     au < doNotProcess ; doNotProcess ; 2010 ; Energy, Exploration & Exploitation Volume 28 ; 28 >
     au < doNotProcess ; doNotProcess ; 2011 ; Energy, Exploration & Exploitation Volume 29 ; 29 >
     au < doNotProcess ; doNotProcess ; 2012 ; Energy, Exploration & Exploitation Volume 30 ; 30 >
