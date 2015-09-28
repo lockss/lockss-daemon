@@ -17,14 +17,14 @@
       param[base_url] = http://app.fiepr.org.br/revistacientifica/
       param[journal_id] = conhecimentointerativo
 
-      au < ready ; 2007 ; 1 ; Conhecimento Interativo Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 2 ; Conhecimento Interativo Volume 2008 ; 2008 >
+      au < releasing ; 2007 ; 1 ; Conhecimento Interativo Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 2 ; Conhecimento Interativo Volume 2008 ; 2008 >
       au < exists ; 2009 ; 3 ; Conhecimento Interativo Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 4 ; Conhecimento Interativo Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 5 ; Conhecimento Interativo Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 6 ; Conhecimento Interativo Volume 2012 ; 2012 >
-      au < ready ; 2013 ; 7 ; Conhecimento Interativo Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 8 ; Conhecimento Interativo Volume 2014 ; 2014 >
+      au < releasing ; 2010 ; 4 ; Conhecimento Interativo Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 5 ; Conhecimento Interativo Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 6 ; Conhecimento Interativo Volume 2012 ; 2012 >
+      au < releasing ; 2013 ; 7 ; Conhecimento Interativo Volume 2013 ; 2013 >
+      au < releasing ; 2014 ; 8 ; Conhecimento Interativo Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 9 ; Conhecimento Interativo Volume 2015 ; 2015 >
 
   }
