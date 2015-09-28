@@ -1,0 +1,328 @@
+{
+
+  publisher <
+    name = American Psychiatric Publishing Inc.
+  >
+  
+  comment[platform] = Moved from HW (to Silverchair) thence to Atypon.
+
+  {
+  
+   {
+      title <
+        name = Academic Psychiatry ;
+        issn = 1042-9670 ;
+        eissn = 1545-7230 ;
+        issnl = 1042-9670
+      >
+
+      {
+      param[base_url] = http://ap.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+      comment[0] = move to Springer
+
+      au < HighWirePressPlugin ; down ; 1998 ; 22 ; Academic Psychiatry Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 1999 ; 23 ; Academic Psychiatry Volume 23 ; 23 >
+      au < HighWirePressPlugin ; down ; 2000 ; 24 ; Academic Psychiatry Volume 24 ; 24 >
+      au < HighWirePressPlugin ; down ; 2001 ; 25 ; Academic Psychiatry Volume 25 ; 25 >
+      au < HighWirePressPlugin ; down ; 2002 ; 26 ; Academic Psychiatry Volume 26 ; 26 >
+      au < HighWirePressPlugin ; down ; 2003 ; 27 ; Academic Psychiatry Volume 27 ; 27 >
+      au < HighWirePressPlugin ; down ; 2004 ; 28 ; Academic Psychiatry Volume 28 ; 28 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; 29 ; Academic Psychiatry Volume 29 ; 29 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; 30 ; Academic Psychiatry Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; 31 ; Academic Psychiatry Volume 31 ; 31 >
+      au < HighWirePressPlugin ; down ; 2008 ; 32 ; Academic Psychiatry Volume 32 ; 32 >
+      au < HighWirePressPlugin ; down ; 2009 ; 33 ; Academic Psychiatry Volume 33 ; 33 >
+      au < HighWirePressPlugin ; down ; 2010 ; 34 ; Academic Psychiatry Volume 34 ; 34 >
+      au < HighWirePressPlugin ; down ; 2011 ; 35 ; Academic Psychiatry Volume 35 ; 35 >
+      }
+
+    }
+
+    {
+      title <
+        name = The American Journal of Psychiatry ;
+        issn = 0002-953X ;
+        eissn = 1535-7228 ;
+        issnl = 0002-953X
+      >
+
+      {
+        
+      param[base_url] = http://ajp.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; down ; 1997 ; 154 ; The American Journal of Psychiatry Volume 154 ; 154 >
+      au < HighWirePressPlugin ; down ; 1998 ; 155 ; The American Journal of Psychiatry Volume 155 ; 155 >
+      au < HighWirePressPlugin ; down ; 1999 ; 156 ; The American Journal of Psychiatry Volume 156 ; 156 >
+      au < HighWirePressPlugin ; down ; 2000 ; 157 ; The American Journal of Psychiatry Volume 157 ; 157 >
+      au < HighWirePressPlugin ; down ; 2001 ; 158 ; The American Journal of Psychiatry Volume 158 ; 158 >
+      au < HighWirePressPlugin ; down ; 2002 ; 159 ; The American Journal of Psychiatry Volume 159 ; 159 >
+      au < HighWirePressPlugin ; down ; 2003 ; 160 ; The American Journal of Psychiatry Volume 160 ; 160 >
+      au < HighWirePressPlugin ; down ; 2004 ; 161 ; The American Journal of Psychiatry Volume 161 ; 161 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; 162 ; The American Journal of Psychiatry Volume 162 ; 162 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; 163 ; The American Journal of Psychiatry Volume 163 ; 163 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; 164 ; The American Journal of Psychiatry Volume 164 ; 164 >
+      au < HighWirePressPlugin ; down ; 2008 ; 165 ; The American Journal of Psychiatry Volume 165 ; 165 >
+      au < HighWirePressPlugin ; down ; 2009 ; 166 ; The American Journal of Psychiatry Volume 166 ; 166 >
+      au < HighWirePressPlugin ; down ; 2010 ; 167 ; The American Journal of Psychiatry Volume 167 ; 167 >
+      au < HighWirePressPlugin ; down ; 2011 ; 168 ; The American Journal of Psychiatry Volume 168 ; 168 >
+      
+      }
+      
+    }
+    
+    {
+      title <
+        name = Focus ;
+        issn = 1541-4094 ;
+        eissn = 1541-4108 ;
+        issnl = 1541-4094
+      >
+
+      {
+      param[base_url] = http://focus.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; down ; 2003 ; 1 ; Focus Volume 1 ; 1 >
+      au < HighWirePressPlugin ; down ; 2004 ; 2 ; Focus Volume 2 ; 2 >
+      au < HighWirePressPlugin ; down ; 2005 ; 3 ; Focus Volume 3 ; 3 >
+      au < HighWirePressPlugin ; down ; 2006 ; 4 ; Focus Volume 4 ; 4 >
+      au < HighWirePressPlugin ; down ; 2007 ; 5 ; Focus Volume 5 ; 5 >
+      au < HighWirePressPlugin ; down ; 2008 ; 6 ; Focus Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 2009 ; 7 ; Focus Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 2010 ; 8 ; Focus Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2011 ; 9 ; Focus Volume 9 ; 9 >
+      }
+      
+    }
+
+    {
+      title <
+        name = Journal of Neuropsychiatry and Clinical Neurosciences ;
+        issn = 0895-0172 ;
+        eissn = 1545-7222 ;
+        issnl = 0895-0172
+      >
+
+      {
+      param[base_url] = http://neuro.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; down ; 1998 ; 10 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 1999 ; 11 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2000 ; 12 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2001 ; 13 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2002 ; 14 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2003 ; 15 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2004 ; 16 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2005 ; 17 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; 18 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 2007 ; 19 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 2008 ; 20 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 20 >
+      au < HighWirePressPlugin ; down ; 2009 ; 21 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 21 >
+      au < HighWirePressPlugin ; down ; 2010 ; 22 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 2011 ; 23 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 23 >
+      }
+      
+    }
+
+    {
+      title <
+        name = Journal of Psychotherapy Practice and Research ;
+        issn = 1055-050X
+      >
+
+      param[base_url] = http://jppr.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; down ; 1992 ; 1 ; Journal of Psychotherapy Practice and Research Volume 1 ; 1 >
+      au < HighWirePressPlugin ; down ; 1993 ; 2 ; Journal of Psychotherapy Practice and Research Volume 2 ; 2 >
+      au < HighWirePressPlugin ; down ; 1994 ; 3 ; Journal of Psychotherapy Practice and Research Volume 3 ; 3 >
+      au < HighWirePressPlugin ; down ; 1995 ; 4 ; Journal of Psychotherapy Practice and Research Volume 4 ; 4 >
+      au < HighWirePressPlugin ; down ; 1996 ; 5 ; Journal of Psychotherapy Practice and Research Volume 5 ; 5 >
+      au < HighWirePressPlugin ; down ; 1997 ; 6 ; Journal of Psychotherapy Practice and Research Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 1998 ; 7 ; Journal of Psychotherapy Practice and Research Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 1999 ; 8 ; Journal of Psychotherapy Practice and Research Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2000 ; 9 ; Journal of Psychotherapy Practice and Research Volume 9 ; 9 >
+      au < HighWireStrVolPlugin ; down ; 2001 ; 10 ; Journal of Psychotherapy Practice and Research Volume 10 ; 10 >
+
+    }
+
+    {
+      title <
+        name = Psychiatric News ;
+        issn = 0033-2704 ;
+        eissn = 1559-1255 ;
+        issnl = 0033-2704
+      >
+
+      {
+      param[base_url] = http://pn.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; down ; 2001 ; 36 ; Psychiatric News Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; 37 ; Psychiatric News Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; 38 ; Psychiatric News Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; 39 ; Psychiatric News Volume 39 ; 39 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; 40 ; Psychiatric News Volume 40 ; 40 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; 41 ; Psychiatric News Volume 41 ; 41 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; 42 ; Psychiatric News Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; 43 ; Psychiatric News Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; 44 ; Psychiatric News Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; 45 ; Psychiatric News Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; 46 ; Psychiatric News Volume 46 ; 46 >
+      }
+      
+    }
+
+    {
+      title <
+        name = Psychiatric Services ;
+        issn = 1075-2730 ;
+        eissn = 1557-9700 ;
+        issnl = 1075-2730
+      >
+
+      {
+      param[base_url] = http://psychservices.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; down ; 1998 ; 49 ; Psychiatric Services Volume 49 ; 49 >
+      au < HighWirePressPlugin ; down ; 1999 ; 50 ; Psychiatric Services Volume 50 ; 50 >
+      au < HighWirePressPlugin ; down ; 2000 ; 51 ; Psychiatric Services Volume 51 ; 51 >
+      au < HighWirePressPlugin ; down ; 2001 ; 52 ; Psychiatric Services Volume 52 ; 52 >
+      au < HighWirePressPlugin ; down ; 2002 ; 53 ; Psychiatric Services Volume 53 ; 53 >
+      au < HighWirePressPlugin ; down ; 2003 ; 54 ; Psychiatric Services Volume 54 ; 54 >
+      au < HighWirePressPlugin ; down ; 2004 ; 55 ; Psychiatric Services Volume 55 ; 55 >
+      au < HighWirePressPlugin ; down ; 2005 ; 56 ; Psychiatric Services Volume 56 ; 56 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; 57 ; Psychiatric Services Volume 57 ; 57 >
+      au < HighWirePressPlugin ; down ; 2007 ; 58 ; Psychiatric Services Volume 58 ; 58 >
+      au < HighWirePressPlugin ; down ; 2008 ; 59 ; Psychiatric Services Volume 59 ; 59 >
+      au < HighWirePressPlugin ; down ; 2009 ; 60 ; Psychiatric Services Volume 60 ; 60 >
+      au < HighWirePressPlugin ; down ; 2010 ; 61 ; Psychiatric Services Volume 61 ; 61 >
+      au < HighWirePressPlugin ; down ; 2011 ; 62 ; Psychiatric Services Volume 62 ; 62 >
+      
+      }
+      
+    }
+
+    {
+      title <
+        name = Psychosomatics ;
+        issn = 0033-3182 ;
+        eissn = 1545-7206 ;
+        issnl = 0033-3182
+      >
+
+      param[base_url] = http://psy.psychiatryonline.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; down ; 1960 ; 1 ; Psychosomatics Volume 1 ; 1 >
+      au < HighWirePressPlugin ; down ; 1961 ; 2 ; Psychosomatics Volume 2 ; 2 >
+      au < HighWirePressPlugin ; down ; 1962 ; 3 ; Psychosomatics Volume 3 ; 3 >
+      au < HighWirePressPlugin ; down ; 1963 ; 4 ; Psychosomatics Volume 4 ; 4 >
+      au < HighWirePressPlugin ; down ; 1964 ; 5 ; Psychosomatics Volume 5 ; 5 >
+      au < HighWirePressPlugin ; down ; 1965 ; 6 ; Psychosomatics Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 1966 ; 7 ; Psychosomatics Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 1967 ; 8 ; Psychosomatics Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 1968 ; 9 ; Psychosomatics Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 1969 ; 10 ; Psychosomatics Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 1970 ; 11 ; Psychosomatics Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 1971 ; 12 ; Psychosomatics Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 1972 ; 13 ; Psychosomatics Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 1973 ; 14 ; Psychosomatics Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 1974 ; 15 ; Psychosomatics Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 1975 ; 16 ; Psychosomatics Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 1976 ; 17 ; Psychosomatics Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 1977 ; 18 ; Psychosomatics Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 1978 ; 19 ; Psychosomatics Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 1979 ; 20 ; Psychosomatics Volume 20 ; 20 >
+      au < HighWirePressPlugin ; down ; 1980 ; 21 ; Psychosomatics Volume 21 ; 21 >
+      au < HighWirePressPlugin ; down ; 1981 ; 22 ; Psychosomatics Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 1982 ; 23 ; Psychosomatics Volume 23 ; 23 >
+      au < HighWirePressPlugin ; down ; 1983 ; 24 ; Psychosomatics Volume 24 ; 24 >
+      au < HighWirePressPlugin ; down ; 1984 ; 25 ; Psychosomatics Volume 25 ; 25 >
+      au < HighWirePressPlugin ; down ; 1985 ; 26 ; Psychosomatics Volume 26 ; 26 >
+      au < HighWirePressPlugin ; down ; 1986 ; 27 ; Psychosomatics Volume 27 ; 27 >
+      au < HighWirePressPlugin ; down ; 1987 ; 28 ; Psychosomatics Volume 28 ; 28 >
+      au < HighWirePressPlugin ; down ; 1988 ; 29 ; Psychosomatics Volume 29 ; 29 >
+      au < HighWirePressPlugin ; down ; 1989 ; 30 ; Psychosomatics Volume 30 ; 30 >
+      au < HighWirePressPlugin ; down ; 1990 ; 31 ; Psychosomatics Volume 31 ; 31 >
+      au < HighWirePressPlugin ; down ; 1991 ; 32 ; Psychosomatics Volume 32 ; 32 >
+      au < HighWirePressPlugin ; down ; 1992 ; 33 ; Psychosomatics Volume 33 ; 33 >
+      au < HighWirePressPlugin ; down ; 1993 ; 34 ; Psychosomatics Volume 34 ; 34 >
+      au < HighWirePressPlugin ; down ; 1994 ; 35 ; Psychosomatics Volume 35 ; 35 >
+      au < HighWirePressPlugin ; down ; 1995 ; 36 ; Psychosomatics Volume 36 ; 36 >
+      au < HighWirePressPlugin ; down ; 1996 ; 37 ; Psychosomatics Volume 37 ; 37 >
+      au < HighWirePressPlugin ; down ; 1997 ; 38 ; Psychosomatics Volume 38 ; 38 >
+      au < HighWirePressPlugin ; down ; 1998 ; 39 ; Psychosomatics Volume 39 ; 39 >
+      au < HighWirePressPlugin ; down ; 1999 ; 40 ; Psychosomatics Volume 40 ; 40 >
+      au < HighWirePressPlugin ; down ; 2000 ; 41 ; Psychosomatics Volume 41 ; 41 >
+      au < HighWirePressPlugin ; down ; 2001 ; 42 ; Psychosomatics Volume 42 ; 42 >
+      au < HighWirePressPlugin ; down ; 2002 ; 43 ; Psychosomatics Volume 43 ; 43 >
+      au < HighWirePressPlugin ; down ; 2003 ; 44 ; Psychosomatics Volume 44 ; 44 >
+      au < HighWirePressPlugin ; down ; 2004 ; 45 ; Psychosomatics Volume 45 ; 45 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; 46 ; Psychosomatics Volume 46 ; 46 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; 47 ; Psychosomatics Volume 47 ; 47 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; 48 ; Psychosomatics Volume 48 ; 48 >
+      au < HighWirePressPlugin ; down ; 2008 ; 49 ; Psychosomatics Volume 49 ; 49 >
+      au < HighWirePressPlugin ; down ; 2009 ; 50 ; Psychosomatics Volume 50 ; 50 >
+      au < HighWirePressPlugin ; down ; 2010 ; 51 ; Psychosomatics Volume 51 ; 51 >
+
+    }
+
+  }
+
+  {
+    plugin = org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin
+    param[base_url] = http://www.psychiatryonline.com/
+    implicit < status ; year ; isbn ; eisbn ; name >
+
+    {
+      title <
+        name = The American Psychiatric Publishing Textbook of Psychiatry ;
+        type = bookSeries 
+      >
+
+      param[resource_id] = 5
+
+      au < down ; 2009 ; 978-1-58562-257-3 ; 1-58562-340-2 ;The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition) >
+
+    }
+
+    {
+      title <
+        name = Essentials of Clinical Psychopharmacology ;
+        type = bookSeries 
+      >
+
+      param[resource_id] = 7
+
+      au < down ; 2007 ; 1-58562-243-5 ; 1-58562-316-4 ; Essentials of Clinical Psychopharmacology (2nd Edition) >
+
+    }
+
+    {
+      title <
+        name = Manual of Clinical Psychopharmacology ;
+        type = bookSeries 
+      >
+
+      param[resource_id] = 29
+
+      au < down ; 2000 ; 978-1-58562-317-4 ; 978-1-58562-282-5 ; Manual of Clinical Psychopharmacology (6th Edition) >
+
+    }
+
+  }
+
+}
