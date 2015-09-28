@@ -722,7 +722,7 @@ public class FollowLinkCrawler extends BaseCrawler {
     res = HeaderUtil.getCharsetFromContentType(cu.getContentType());
     if (res == null) {
       res = Constants.DEFAULT_ENCODING;
-    }
+      }
     return res;
   }
 

@@ -383,6 +383,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     // See TestHtmlParserLinkExtractor::testPOSTForm.
     //
     // This logic is similar to logic in ServeContent.
+    //TODO -- CTG: we need to determine the mime type and dispatch based on it
     if (HttpRequest.__POST.equals(request.getMethod()) && handleFormPost) {
       log.debug3("POST request found!");
       // We don't have any way to know order from request headers instead to
@@ -1111,7 +1112,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
 								 timeoutMs));
 	logAccess(request, "200 redirected to " +
-		  connectHost + ":" + connectPort); 
+		  connectHost + ":" + connectPort);
 
 	response.setStatus(HttpResponse.__200_OK);
 	response.setContentLength(0);
@@ -1394,7 +1395,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     String errMsg = code + " " + respMsg;
     URI uri = request.getURI();
     String urlString = uri.toString();
-		  
+
     response.setContentType(HttpFields.__TextHtml);
     ByteArrayISO8859Writer writer = new ByteArrayISO8859Writer(2048);
 

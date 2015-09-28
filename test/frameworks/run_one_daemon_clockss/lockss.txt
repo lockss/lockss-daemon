@@ -61,7 +61,7 @@ org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3131
 
 org.lockss.crawler.startCrawlsInterval=5m
-
+org.lockss.crawler.globallyPermittedHosts=ajax\.googleapis\.com|fonts\.gstatic\.com|cdn\.mathjax\.org|ajax\.microsoft\.com
 org.lockss.crawlStatus.keepUrls=all
 
 org.lockss.platform.project=CLOCKSS

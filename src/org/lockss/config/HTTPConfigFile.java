@@ -218,8 +218,6 @@ public class HTTPConfigFile extends BaseConfigFile {
 	return msg;
       }
       InputStream in = conn.getUncompressedResponseInputStream();
-      // XXX should use the charset parameter in the Content-Type: header
-      // if any
       String ctype = conn.getResponseContentType();
       String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
       Reader rdr = new InputStreamReader(in, charset);

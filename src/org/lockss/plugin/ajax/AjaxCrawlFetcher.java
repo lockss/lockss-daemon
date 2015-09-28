@@ -129,7 +129,6 @@ public class AjaxCrawlFetcher  extends BaseUrlFetcher {
         theLogger.debug("Running command:" + pbuilder.command() +"...");
       String line;
       while ((line = br.readLine()) != null) {
-        // todo: modify this to add a heartbeat...
         if(theLogger.isDebug())
           theLogger.debug(line);
       }
@@ -201,8 +200,6 @@ public class AjaxCrawlFetcher  extends BaseUrlFetcher {
     Response response = rr.getResponse();
     CIProperties headers = makeCIProperties(response.getHeaders());
     String ctype = headers.getProperty("Content-Type");
-    // todo change the url generate CrawlUrlData for later usage
-
     if (!StringUtil.isNullString(ctype)) {
       headers.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, ctype);
     }

@@ -62,15 +62,12 @@ public class WarcExploder extends Exploder {
   private static Logger logger = Logger.getLogger("WarcExploder");
   protected InputStream arcStream;
   protected CIProperties arcProps;
-  
+
   /**
    * Constructor
-   * @param uc UrlCacher for the archive
-   * @param maxRetries
-   * @param crawlSpec the CrawlSpec for the crawl that foudn the archive
-   * @param crawler the crawler that found the archive
-   * @param explode true to explode the archives
-   * @param store true to store the archive as well
+   * @param toExplode  url data of for the archive to explode
+   * @param crawlFacade  facade for crawler performing crawl
+   * @param helper helper for exploding archive
    */
   public WarcExploder(FetchedUrlData toExplode, CrawlerFacade crawlFacade,
       ExploderHelper helper) {

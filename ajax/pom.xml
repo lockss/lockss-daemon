@@ -2,15 +2,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
-        <groupId>com.crawljax.plugins</groupId>
-        <artifactId>crawljax-plugins-parent</artifactId>
-        <version>3.6</version>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
     </parent>
-
     <groupId>org.lockss.crawljax</groupId>
-    <artifactId>lockss-crawljax</artifactId>
+    <artifactId>crawljax-lockss-bridge</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>Lockss Crawljax wrapper</name>
@@ -18,10 +16,18 @@
     <url>http://crawljax.com</url>
 
     <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <crawljax.version>3.6</crawljax.version>
         <jackson.version>2.4.4</jackson.version>
+        <slf4j.version>1.7.7</slf4j.version>
+        <logback.version>1.1.2</logback.version>
+        <selenium.version>[2.44.0,)</selenium.version>
+        <jetty.version>9.3.0.M1</jetty.version>
+        <metrics.version>3.0.2</metrics.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -79,6 +85,11 @@
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.crawljax</groupId>
+            <artifactId>crawljax-core</artifactId>
+            <version>${crawljax.version}</version>
+        </dependency>
     </dependencies>
     <repositories>
         <repository>
@@ -90,4 +101,109 @@
             </snapshots>
         </repository>
     </repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.17</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.4.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>org.lockss.crawljax.LockssCrawljaxRunner</mainClass>
+                                </transformer>
+                            </transformers>
+                            <relocations>
+                                <relocation>
+                                    <pattern>org.htmlparser</pattern>
+                                    <shadedPattern>org.shaded.htmlparser</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.slf4j</pattern>
+                                    <shadedPattern>org.shaded.slf4j</shadedPattern>
+                                </relocation>
+                            </relocations>
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>junit:*</exclude>
+                                    <exclude>jmock:*</exclude>
+                                    <exclude>com.fasterxml.jackson.core:*</exclude>
+                                    <exclude>org.apache.commons:commons-lang3:*</exclude>
+                                    <exclude>commons-cli:*</exclude>
+                                    <exclude>commons-collections:*</exclude>
+                                    <exclude>commons-logging:*</exclude>
+                                    <exclude>commons-io:*</exclude>
+                                    <exclude>commons-configuration:*</exclude>
+                                    <exclude>commons-lang:*</exclude>
+                                    <exclude>commons-validator:*</exclude>
+                                    <exclude>commons-beanutils:*</exclude>
+                                    <exclude>commons-digester:*</exclude>
+                                    <exclude>net.sourceforge.nekohtml:*</exclude>
+                                    <exclude>org.apache.maven:lib:tests</exclude>
+                                    <exclude>log4j:*</exclude>
+                                    <exclude>org.slf4j:*</exclude>
+                                    <exclude>xalan:*</exclude>
+                                    <exclude>xml-apis:*</exclude>
+                                    <exclude>bcprov-jdk15:*</exclude>
+                                    <exclude>com.google.code.guice:guice:jar:2.0</exclude>
+                                </excludes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

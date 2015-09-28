@@ -156,8 +156,8 @@ public class EncodingRisMetadataExtractor implements FileMetadataExtractor {
 			throw new IllegalArgumentException();
 		}
 		ArticleMetadata md = new ArticleMetadata();
-		// This call will correctly guess the enconding
-                Pair<Reader, String> retInfoPair = CharsetUtil.getCharsetReader(cu.getUnfilteredInputStream());
+		// This call will correctly guess the encoding
+		Pair<Reader, String> retInfoPair = CharsetUtil.getCharsetReader(cu.getUnfilteredInputStream());
 		BufferedReader bReader = new BufferedReader(retInfoPair.getLeft());
 		//BufferedReader bReader = new BufferedReader(cu.openForReading());
 		String line;

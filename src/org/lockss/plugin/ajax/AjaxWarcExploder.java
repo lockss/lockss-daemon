@@ -37,6 +37,7 @@ import org.archive.io.ArchiveRecordHeader;
 import org.archive.util.ArchiveUtils;
 import org.lockss.config.Configuration;
 import org.lockss.config.CurrentConfig;
+import org.lockss.crawler.CrawlUrlData;
 import org.lockss.crawler.WarcExploder;
 import org.lockss.daemon.ArchiveEntry;
 import org.lockss.daemon.ConfigParamDescr;
@@ -80,7 +81,7 @@ public class AjaxWarcExploder extends WarcExploder {
     int entriesBetweenSleep = 0;
     ArchiveReader arcReader = null;
 
-    logger.info((storeArchive ? "Storing" : "Fetching") + " WARC file: " +
+    logger.debug((storeArchive ? "Storing" : "Fetching") + " WARC file: " +
                 origUrl + " will explode");
     try {
       // Wrap it in an ArchiveReader
@@ -145,7 +146,9 @@ public class AjaxWarcExploder extends WarcExploder {
               storeEntry(ae);
               handleAddText(ae);
               goodEntries++;
-//              crawlFacade.addToParseQueue();
+              // this needs to use the correct depth ? how
+              CrawlUrlData cud = new CrawlUrlData(elementUrl, 0);
+              crawlFacade.addToParseQueue(cud);
               crawlFacade.getCrawlerStatus()
                          .addContentBytesFetched(bytesStored);
             }
@@ -184,6 +187,7 @@ public class AjaxWarcExploder extends WarcExploder {
     protected LockssWatchdog wdog;
 
     public AjaxExploderHelper(CrawlerFacade crawlFacade) {
+
       this.crawlFacade = crawlFacade;
     }
 

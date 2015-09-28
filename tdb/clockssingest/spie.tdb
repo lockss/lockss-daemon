@@ -8,16 +8,16 @@
 
     plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
     implicit < status ; status2 ; year ; name ; param[year] >
- 
+
     {
-    title < 
+    title <
       name = Journal of Applied Remote Sensing ;
       eissn = 1931-3195
     >
 
     param[base_url] = http://remotesensing.spiedigitallibrary.org/
     param[resource_id] = 96
-    
+
     au < manifest ; exists ; 2007 ; Journal of Applied Remote Sensing Volume 1 ; 2007 >
     au < manifest ; exists ; 2008 ; Journal of Applied Remote Sensing Volume 2 ; 2008 >
     au < manifest ; exists ; 2009 ; Journal of Applied Remote Sensing Volume 3 ; 2009 >
@@ -25,13 +25,13 @@
     au < manifest ; exists ; 2011 ; Journal of Applied Remote Sensing Volume 5 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Applied Remote Sensing Volume 6 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Applied Remote Sensing Volume 8 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Applied Remote Sensing Volume 8 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Applied Remote Sensing Volume 9 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = Journal of Astronomical Telescopes, Instruments, and Systems ;
       issn = 2329-4124 ;
       eissn = 2329-4221
@@ -39,13 +39,13 @@
 
     param[base_url] = http://astronomicaltelescopes.spiedigitallibrary.org/
     param[resource_id] = 166
-    
+
     au < manifest ; exists ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = Journal of Biomedical Optics ;
       issn = 1083-3668 ;
       eissn = 1560-2281
@@ -53,7 +53,7 @@
 
     param[base_url] = http://biomedicaloptics.spiedigitallibrary.org/
     param[resource_id] = 93
-    
+
     au < manifest ; exists ; 1996 ; Journal of Biomedical Optics Volume 1 ; 1996 >
     au < manifest ; exists ; 1997 ; Journal of Biomedical Optics Volume 2 ; 1997 >
     au < manifest ; exists ; 1998 ; Journal of Biomedical Optics Volume 3 ; 1998 >
@@ -72,13 +72,13 @@
     au < manifest ; exists ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 >
-    au < manifest ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
+    au < testing ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = Journal of Electronic Imaging ;
       issn = 1017-9909 ;
       eissn = 1560-229X
@@ -86,7 +86,7 @@
 
     param[base_url] = http://electronicimaging.spiedigitallibrary.org/
     param[resource_id] = 94
-    
+
     au < manifest ; exists ; 1992 ; Journal of Electronic Imaging Volume 1 ; 1992 >
     au < manifest ; exists ; 1993 ; Journal of Electronic Imaging Volume 2 ; 1993 >
     au < manifest ; exists ; 1994 ; Journal of Electronic Imaging Volume 3 ; 1994 >
@@ -113,9 +113,9 @@
     au < manifest ; exists ; 2015 ; Journal of Electronic Imaging Volume 24 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = Journal of Medical Imaging ;
       issn = 2329-4302 ;
       eissn = 2329-4310
@@ -123,14 +123,14 @@
 
     param[base_url] = http://medicalimaging.spiedigitallibrary.org/
     param[resource_id] = 165
-    
+
     au < manifest ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
     au < manifest ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = Journal of Micro/Nanolithography, MEMS, and MOEMS ;
       issn = 1932-5150 ;
       eissn = 1932-5134
@@ -155,16 +155,16 @@
     au < manifest ; exists ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = Journal of Nanophotonics ;
       eissn = 1934-2608
     >
 
     param[base_url] = http://nanophotonics.spiedigitallibrary.org/
     param[resource_id] = 97
-    
+
     au < manifest ; exists ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 >
     au < manifest ; exists ; 2008 ; Journal of Nanophotonics Volume 2 ; 2008 >
     au < manifest ; exists ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 >
@@ -173,19 +173,19 @@
     au < manifest ; exists ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 >
-    au < manifest ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 >
+    au < testing ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 >
 
-    } 
-    
+    }
+
     {
-    title < 
+    title <
       name = Journal of Photonics for Energy ;
       eissn = 1947-7988
     >
 
     param[base_url] = http://photonicsforenergy.spiedigitallibrary.org/
     param[resource_id] = 98
-    
+
     au < manifest ; exists ; 2011 ; Journal of Photonics for Energy Volume 1 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 >
@@ -193,9 +193,9 @@
     au < manifest ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = Neurophotonics ;
       issn = 2329-423X ;
       eissn = 2329-4248
@@ -203,14 +203,14 @@
 
     param[base_url] = http://neurophotonics.spiedigitallibrary.org/
     param[resource_id] = 169
-    
+
     au < manifest ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 >
     au < manifest ; exists ; 2015 ; Neurophotonics Volume 2 ; 2015 >
 
     }
 
     {
-    title < 
+    title <
       name = Optical Engineering ;
       issn = 0091-3286 ;
       eissn = 1560-2303
@@ -275,21 +275,21 @@
     au < manifest ; exists ; 2015 ; Optical Engineering Volume 54 ; 2015 >
 
     }
-    
+
     {
-    title < 
+    title <
       name = SPIE Letters ;
-      eissn = 1948-7541 
+      eissn = 1948-7541
     >
 
-    param[base_url] = 
+    param[base_url] =
 
     }
 
     {
-    title < 
+    title <
       name = SPIE Proceeding ;
-      eissn = 0277-786X 
+      eissn = 0277-786X
     >
 
     param[base_url] = http://proceedings.spiedigitallibrary.org/
@@ -353,9 +353,9 @@
     }
 
     {
-    title < 
+    title <
       name = SPIE Reviews ;
-      eissn = 1946-3251 
+      eissn = 1946-3251
     >
 
     param[base_url] = http://reviews.spiedigitallibrary.org/

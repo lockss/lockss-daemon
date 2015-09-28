@@ -37,6 +37,7 @@ import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.util.*;
 
+import com.thoughtworks.xstream.alias.CannotResolveClassException;
 import org.lockss.app.LockssApp;
 import org.lockss.hasher.HashResult;
 import org.lockss.util.SerializationException;

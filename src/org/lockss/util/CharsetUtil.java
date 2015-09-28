@@ -108,6 +108,7 @@ public class CharsetUtil {
     in.reset();
     return charset;
   }
+
   /**
    * Given a byte stream, figure out an encoding and return a character stream
    * and the encoding used to convert bytes to characters. This will look for a
@@ -168,6 +169,7 @@ public class CharsetUtil {
       return new ImmutablePair<InputStream,String>(is, charset);
 
     }
+
   /**
    * Given a byte stream, figure out an encoding and return a character stream
    * and the encoding used to convert bytes to characters. This will look for a
@@ -292,7 +294,7 @@ public class CharsetUtil {
       return match.getName();
     }
     else {
-      return null;
+      return expected;
     }
   }
 

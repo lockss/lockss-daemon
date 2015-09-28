@@ -110,7 +110,6 @@ public class HeaderUtil {
       return charset;
     }
   }
-
   /** Return the charset specified in the Content-Type header, or the
    * default charset.  Never returns null. */
   public static String getCharsetOrDefaultFromContentType(String contentType) {

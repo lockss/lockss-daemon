@@ -144,7 +144,7 @@ Args:
 
   <!--  Directories -->
   <property name="java.lib"       value="${env.JAVA_HOME}/lib" />
-
+  <property name="maven.home"     value="${env.MAVEN_HOME}" />
   <property name="src"            value="${basedir}/src" />
   <property name="classes"        value="${basedir}/classes" />
   <property name="lib"            value="${basedir}/lib"/>
@@ -206,6 +206,9 @@ Args:
   <property name="depend.cache"   value="${basedir}/.depend"/>
   <property name="temp.build"     value="${basedir}/tempbuild"/>
 
+  <property name="ajax"           value="${basedir}/ajax"/>
+  <property name="ajax.target"    value="${ajax}/target"/>
+
   <!-- Prototype RPM tree -->
   <property name="protorpm.top" value="${basedir}/rpms" />
   <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
@@ -264,9 +267,9 @@ Args:
     <property name="commons.validator.jar"
               value="${lib}/commons-validator-1.4.0.jar"/>
   <!-- gettext jars, for i18n -->
-  <property name="gettext.tasks.jar" 
+  <property name="gettext.tasks.jar"
             value="${lib}/gettext-ant-tasks-0.9.7.jar"/>
-  <property name="gettext.commons.jar" 
+  <property name="gettext.commons.jar"
             value="${lib}/gettext-commons-0.9.6.jar"/>
   <!-- TrueZIP -->
   <property name="truezip.version" value="7.5.5" />
@@ -309,7 +312,7 @@ Args:
   <property name="getopt.jar"  value="${test.lib}/gnu-getopt-1.0.13.jar"/>
   <property name="javacsv.jar"  value="${test.lib}/javacsv.jar"/>
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
-  
+
   <!-- Needed by XOAI -->
   <property name="xoai-common.jar" value="${lib}/xoai-common-4.1.0.jar"/>
   <property name="xoai-service-provider.jar" value="${lib}/xoai-service-provider-4.1.0-p1.jar"/>
@@ -319,7 +322,7 @@ Args:
   <property name="stax2-api.jar" value="${lib}/stax2-api-3.0.4.jar"/>
   <property name="test-support.jar" value="${lib}/test-support-1.0.4.jar"/>
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
-  
+
   <!-- PDFBox -->
   <property name="pdfbox.version" value="1.8.10" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
@@ -334,14 +337,14 @@ Args:
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
-	
+
   <!-- PDFBox 0.7.3 -->
   <property name="pdfbox-old.jar" value="${lib}/PDFBox-0.7.3.jar" />
   <!-- Next 3 needed by PDFBox 0.7.3: -->
   <property name="fontbox-old.jar" value="${lib}/FontBox-0.1.0-dev.jar" />
 <!--  <property name="bouncycastle.provider-old.jar" value="${lib}/bcprov-jdk14-132.jar" /> -->
 <!--  <property name="bouncycastle.mail-old.jar" value="${lib}/bcmail-jdk14-132.jar" /> -->
-  
+
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
   <property name="heritrix.jar" value="${lib}/heritrix-commons-3.1.0-p1.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.7.jar" />
@@ -357,8 +360,8 @@ Args:
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-2.3.2.jar" />
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-2.3.0.jar" />
   <property name="crawljax-lockss-bridge.jar" value="${lib}/crawljax-lockss-bridge.jar" />
-  
-  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.4.jar" />	
+
+  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.4.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-4.4-complete.jar" />
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
@@ -776,7 +779,7 @@ Args:
 			</apply>
 		</sequential>
 	</macrodef>
-	
+
   <!--  dojunit runs junit with standard params -->
   <macrodef name="dojunit">
    <attribute name="cpid" />
@@ -828,6 +831,32 @@ Test results in ${test.results}
    </sequential>
   </macrodef>
 
+  <!-- macro to invoke maven, this requires maven.home exist -->
+  <macrodef name="maven">
+    <attribute name="options" default="" />
+    <attribute name="goal" />
+    <attribute name="basedir" />
+    <attribute name="resultproperty" default="maven.result" />
+    <element name="args" implicit="true" optional="true" />
+    <sequential>
+      <java classname="org.codehaus.classworlds.Launcher" fork="true"
+            dir="@{basedir}" resultproperty="@{resultproperty}">
+        <jvmarg value="-Xmx512m"/>
+        <jvmarg value="-Dmaven.multiModuleProjectDirectory=${maven.home}"/>
+        <classpath>
+          <fileset dir="${maven.home}/boot">
+            <include name="*.jar" />
+          </fileset>
+          <fileset dir="${maven.home}/lib">
+            <include name="*.jar" />
+          </fileset>
+        </classpath>
+        <sysproperty key="classworlds.conf" value="${maven.home}/bin/m2.conf" />
+        <sysproperty key="maven.home" value="${maven.home}" />
+        <arg line="--batch-mode @{options} @{goal}" />
+      </java>
+    </sequential>
+  </macrodef>
   <!-- ==================================================================== -->
   <!--  Setup tasks -->
   <!-- ==================================================================== -->
@@ -959,6 +988,11 @@ The target you have selected requires compiling under JDK 1.7.
           message="JAVA_HOME environment var must be set for this target"/>
   </target>
 
+  <target name="require.maven.home" >
+    <fail unless="env.MAVEN_HOME"
+          message="MAVEN_HOME environment var must be set for this target"/>
+  </target>
+
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
@@ -1070,8 +1104,10 @@ The target you have selected requires compiling under JDK 1.7.
       </then>
     </if>
   </target>
-
-
+  <target name="clean-ajax"
+    description="Delete ajax files" >
+    <delete dir="${ajax.target}" quiet="true"/>
+  </target>
   <!-- ==================================================================== -->
   <target name="depend-lockss" depends="prepare"
    description="Process Java dependencies in LOCKSS classes" >
@@ -1238,6 +1274,16 @@ The target you have selected requires compiling under JDK 1.7.
      </javacelem>
     </dojavac>
   </target>
+  <!-- ==================================================================== -->
+  <target name="install-ajax"
+          depends="require.java.home,require.maven.home"
+          description="Compile and copy the LOCKSS ajax bridge jar">
+    <maven basedir="${ajax}"
+           goal="package"
+           resultproperty="maven.build.result"/>
+    <copy file="${ajax.target}/crawljax-lockss-bridge-1.0.jar"
+          tofile="${lib}/crawljax-lockss-bridge.jar"/>
+  </target>
 
   <!-- ==================================================================== -->
   <target name="generate-parsers" depends="prepare"
@@ -1284,7 +1330,7 @@ The target you have selected requires compiling under JDK 1.7.
     <!-- Load the build-info file, so can use timestamp prop
          in javadoc targets -->
     <property file="${build.info.file}" />
-    
+
     <condition property="is.release.zero"  value="true">
      <equals arg1="${build.releasename}" arg2="0.0.0" />
     </condition>
@@ -1777,7 +1823,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <copy todir="${solaris.lockss.etc}" >
       <fileset dir="${solaris.root}/etc/lockss"/>
     </copy>
-    
+
     <!-- copy jars on run.classpath to jardir -->
     <pathtofileset dir="" pathrefid="prod.run.classpath"
       name="solaris.jars.set" ignorenonrelative="true" />
@@ -2812,7 +2858,7 @@ Test results in ${test.results}
 		 <arg value="${svn.dir}" />
 	       </exec>
              </then>
-             <else>        
+             <else>
 	       <!-- First check out just 1st-level files & dirs -->
 	       <exec executable="svn" dir="${temp.build.dir}"
 		     failonerror="true">
@@ -3015,7 +3061,7 @@ Test results in ${test.results}
     <!-- Don't check again even if isn't available -->
     <property name="gettext.checked" value="true" />
   </target>
-  
+
   <target name="load.ant-contrib" unless="ant-contrib.loaded" >
    <!--  Non-standard tasks -->
    <taskdef resource="${ant-contrib.resource}">
@@ -3200,7 +3246,7 @@ Test results in ${test.results}
 
   <target name="cobertura-report"
    depends="prepare.run.test,jar-tests,prepare.cobertura"
-   description="Generate a coverage report from the data collected by cobertura-test." > 
+   description="Generate a coverage report from the data collected by cobertura-test." >
    <cobertura-report
        format="html"
        datafile="${cobertura.ser}"
@@ -3252,7 +3298,7 @@ Test results in ${test.results}
     <javadoc
         doclet="org.jboss.apiviz.APIviz"
         docletpath="${apiviz.jar}"
-        
+
         failonerror="true"
              packagenames="org.lockss.*"
              sourcepath="${src}"
@@ -3281,7 +3327,7 @@ Test results in ${test.results}
   <property name="i18n.bundle.dir" value="org/lockss/i18n"/>
   <!-- Basename for i18n bundles in the package -->
   <property name="i18n.bundle.basename" value="Messages"/>
-  <!-- Package and base class name in which to place i18n messages. 
+  <!-- Package and base class name in which to place i18n messages.
        This must match the basename declared in i18n.properties. -->
   <property name="i18n.bundle" value="${i18n.bundle.pkg}.${i18n.bundle.basename}"/>
   <!-- Directory with translated message files -->
@@ -3304,9 +3350,9 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
-  <!-- Extract message keys from the source code of a single module. 
+  <!-- Extract message keys from the source code of a single module.
        Takes a single srcdir argument. -->
-  <target name="i18n-extract-messages" 
+  <target name="i18n-extract-messages"
           depends="check.gettext,check.contrib" if="gettext.available"
           description="Extract message keys from the source code of a single module">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
@@ -3335,7 +3381,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <!-- Merge newly extracted messages into existing po files -->
-  <target name="i18n-merge-messages" 
+  <target name="i18n-merge-messages"
           depends="check.gettext,check.contrib" if="gettext.available"
           description="Merge newly extracted messages into existing po files">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
@@ -3363,13 +3409,13 @@ Test results in ${test.results}
   </target>
 
 
-  <!-- NOTE: It looks like we can't merge multiple pot files into the same 
-       set of .pos, so the manually-managed messages and pos should perhaps 
+  <!-- NOTE: It looks like we can't merge multiple pot files into the same
+       set of .pos, so the manually-managed messages and pos should perhaps
        be in their own distinct dir and bundles?
        Alternatively we could write a task to use gettext's msgcat -->
   <!-- ==================================================================== -->
   <!-- Merge manual messages into existing po files -->
-  <target name="i18n-merge-messages-manual" 
+  <target name="i18n-merge-messages-manual"
           depends="check.gettext,check.contrib" if="gettext.available"
           description="Merge manual messages into po files">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
@@ -3393,14 +3439,14 @@ Test results in ${test.results}
       </then>
     </if>
   </target>
-  
 
-  <!-- ==================================================================== -->  
-  <!-- Generate Java message resource bundles in the named classes dir. 
+
+  <!-- ==================================================================== -->
+  <!-- Generate Java message resource bundles in the named classes dir.
        This is an essential part of the compile process and is called by
-       the compile targets of each module. The target is hidden by having 
+       the compile targets of each module. The target is hidden by having
        no description, as it is not intended for manual use. -->
-  <target name="i18n-generate-bundles" 
+  <target name="i18n-generate-bundles"
           depends="check.gettext,check.contrib" if="gettext.available">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
     <fail unless="clsdir">Must specify clsdir with -Dclsdir=dir</fail>
@@ -3450,9 +3496,9 @@ Test results in ${test.results}
 
 
 
-  <!-- ==================================================================== -->  
+  <!-- ==================================================================== -->
   <!-- Perform full i18n process - extraction, merge, bundle. -->
-  <target name="i18n-build-all" 
+  <target name="i18n-build-all"
           depends="check.gettext" if="gettext.available"
           description="Perform the whole i18n message bundle generation process (extract, merge, generate/compile bundles).">
     <antcall target="i18n-extract-messages-all"/>
@@ -3462,7 +3508,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <!-- Extract message keys from the source code for all modules. -->
-  <target name="i18n-extract-messages-all" 
+  <target name="i18n-extract-messages-all"
           depends="check.gettext" if="gettext.available"
           description="Extract message keys from the source code">
     <echo message="Extracting i18n messages for all modules"/>
@@ -3473,7 +3519,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <!-- Merge messages into existing po files for all modules. -->
-  <target name="i18n-merge-messages-all" 
+  <target name="i18n-merge-messages-all"
           depends="check.gettext" if="gettext.available"
           description="Merge messages into existing po files">
     <antcall target="i18n-merge-messages">
@@ -3482,9 +3528,9 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
-  <!-- Generate resource bundles for all modules. Hidden; requires classes 
+  <!-- Generate resource bundles for all modules. Hidden; requires classes
        dir and should only be called as part of a compile/jar process. -->
-  <target name="i18n-generate-bundles-all" 
+  <target name="i18n-generate-bundles-all"
           depends="check.gettext" if="gettext.available">
     <antcall target="i18n-generate-bundles">
       <param name="srcdir" value="${src}"/>

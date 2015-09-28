@@ -46,6 +46,7 @@ import org.apache.commons.httpclient.util.DateParseException;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.alert.Alert;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
@@ -73,7 +74,7 @@ import org.mortbay.http.*;
  */
 @SuppressWarnings("serial")
 public class ServeContent extends LockssServlet {
-  
+
   private static final Logger log = Logger.getLogger(ServeContent.class);
 
   /** Prefix for this server's config tree */
@@ -421,6 +422,7 @@ public class ServeContent extends LockssServlet {
       url = StringEscapeUtils.unescapeHtml4(url);
       requestType = AccessLogType.Url;
       //this is a partial replicate of proxy_handler post logic here
+      // TODO check mime type and use that to determine what should be sent ctg
       if (HttpRequest.__POST.equals(req.getMethod()) && processForms) {
         log.debug2("POST request found!");
         FormUrlHelper helper = new FormUrlHelper(url.toString());
@@ -504,11 +506,11 @@ public class ServeContent extends LockssServlet {
         handleMultiOpenUrlInfo(resolved);
         return;
       }
-      
+
       // if there is only one result, present it
       url = resolved.getResolvedUrl();
       if (   (url != null)
-          || (resolved.getResolvedTo() != ResolvedTo.NONE)) { 
+          || (resolved.getResolvedTo() != ResolvedTo.NONE)) {
         // record type of access for logging
         accessLogInfo = resolved.getResolvedTo().toString();
         handleOpenUrlInfo(resolved);
@@ -718,15 +720,14 @@ public class ServeContent extends LockssServlet {
    * for level returned by OpenURL resolver and offers a link to
    * the URL at the publisher site.
    *
-   * @param info the OpenUrlInfo from the OpenUrl resolver
-   * @param pstate the pub state
+   * @param multiInfo the OpenUrlInfo from the OpenUrl resolver
    * @throws IOException if an IO error occurs
    */
   protected void handleMultiOpenUrlInfo(OpenUrlInfo multiInfo)
       throws IOException {
     Block detailBlock = new Block(Block.Center);
     Table headerTable = new Table(0,"");
-    headerTable.addHeading("Found Matching Content from Multiple Sources", 
+    headerTable.addHeading("Found Matching Content from Multiple Sources",
                            "colspan=3");
     detailBlock.add(headerTable);
 
@@ -734,7 +735,7 @@ public class ServeContent extends LockssServlet {
     detailTable.addHeading("Publisher", "style=\"text-align:left\"");
     detailTable.addHeading("Title", "style=\"text-align:left\"");
     detailTable.addHeading("OpenURL", "style=\"text-align:left\"");
-    
+
     // display publisher, title, and link for each info result
     for (OpenUrlInfo info : multiInfo) {
       BibliographicItem bibItem = info.getBibliographicItem();
@@ -742,8 +743,8 @@ public class ServeContent extends LockssServlet {
       if (openUrlQuery != null) {
         detailTable.newRow();
         detailTable.newCell();
-        String publisherName = (bibItem == null) 
-                               ? null : bibItem.getPublisherName(); 
+        String publisherName = (bibItem == null)
+                               ? null : bibItem.getPublisherName();
         if (publisherName != null) detailTable.add(publisherName);
         detailTable.newCell();
         String title = (bibItem == null)
@@ -751,19 +752,19 @@ public class ServeContent extends LockssServlet {
         if (title != null) detailTable.add(title);
         detailTable.newCell();
         detailTable.add(srvLink(myServletDescr(), openUrlQuery, openUrlQuery));
-      }      
+      }
     }
-    
+
     detailBlock.add(detailTable);
-    
+
     Page page = newPage();
     page.add(detailBlock);
     endPage(page);
   }
 
   /**
-   * Handle request for the page specified OpenUrlInfo 
-   * that is returned from OpenUrlResolver. 
+   * Handle request for the page specified OpenUrlInfo
+   * that is returned from OpenUrlResolver.
    *
    * @param info the OpenUrlInfo from the OpenUrl resolver
    * @throws IOException if an IO error happens
@@ -771,7 +772,7 @@ public class ServeContent extends LockssServlet {
   protected void handleOpenUrlInfo(OpenUrlInfo info) throws IOException {
     log.debug2("resolvedTo: " + info.getResolvedTo() + " url: " + url);
     try {
-      // If we resolved to a URL, get the CachedUrl 
+      // If we resolved to a URL, get the CachedUrl
       if (url != null) {
         if (au != null) {
           // AU specified explicitly
@@ -809,7 +810,7 @@ public class ServeContent extends LockssServlet {
       handleMissingOpenUrlRequest(info, PubState.Unknown);
 
     } catch (IOException e) {
-      log.warning("Handling URL: " 
+      log.warning("Handling URL: "
                   + ((url == null) ? "url" : url) + " throws ", e);
       throw e;
     } finally {
@@ -1037,7 +1038,7 @@ public class ServeContent extends LockssServlet {
    * @param conn the connection
    * @return the input stream
    * @throws IOException if error getting input stream
-   * @throws CacheException.PermissionException if the connection is to a 
+   * @throws CacheException.PermissionException if the connection is to a
    * login page or there was an error checking for a login page
    */
   private InputStream getInputStream(LockssUrlConnection conn)
@@ -1046,7 +1047,7 @@ public class ServeContent extends LockssServlet {
     InputStream input = conn.getResponseInputStream();
 
     // only check for HTML login pages to avoid doing unnecessary
-    // work for other document types; publishers typically return 
+    // work for other document types; publishers typically return
     // a 200 response code and an HTML page with a login form
     String ctype = conn.getResponseContentType();
     String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
@@ -1078,7 +1079,7 @@ public class ServeContent extends LockssServlet {
    * @param headers a set of header properties
    * @return an input stream positioned at the same position as the original
    *  one if the original stream is not a login page
-   * @throws CacheException.PermissionException if the connection is to a 
+   * @throws CacheException.PermissionException if the connection is to a
    *  login page or the LoginPageChecker for the plugin reported an error
    * @throws IOException if IO error while checking the stream
    */
@@ -1091,10 +1092,10 @@ public class ServeContent extends LockssServlet {
 
       // buffer html page stream to allow login page checker to read it
       int limit = CurrentConfig.getIntParam(
-          BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
-          BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
+                                             BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
+                                             BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
       DeferredTempFileOutputStream dos =
-          new DeferredTempFileOutputStream(limit);
+        new DeferredTempFileOutputStream(limit);
       try {
         StreamUtil.copy(input, dos);
       } finally {
@@ -1102,32 +1103,31 @@ public class ServeContent extends LockssServlet {
         IOUtil.safeClose(dos);
       }
       try {
-	input = dos.getInputStream();
+        input = dos.getInputStream();
       } catch (IOException e) {
-	dos.deleteTempFile();
-	throw e;
+        dos.deleteTempFile();
+        throw e;
       }
-
       // create reader for input stream
       String ctype = headers.getProperty("Content-Type");
-      String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
 
+      String charset = CharsetUtil.guessCharsetFromStream(input);
       try {
         Reader reader = new InputStreamReader(input, charset);
 
         if (checker.isLoginPage(headers, reader)) {
           IOUtil.safeClose(input);
           input = null;
-	  dos.deleteTempFile();
+          dos.deleteTempFile();
           throw new CacheException.PermissionException("Found a login page");
         }
       } catch (PluginException e) {
         CacheException.PermissionException ex =
-            new CacheException.PermissionException("Error checking login page");
+          new CacheException.PermissionException("Error checking login page");
         ex.initCause(e);
         IOUtil.safeClose(input);
         input = null;
-	dos.deleteTempFile();
+        dos.deleteTempFile();
         throw ex;
       } finally {
         if (input == null) {
@@ -1135,8 +1135,8 @@ public class ServeContent extends LockssServlet {
           // stream open on it
           dos.deleteTempFile();
         } else {
-	  IOUtil.safeClose(input);
-	  return dos.getDeleteOnCloseInputStream();
+          IOUtil.safeClose(input);
+          return dos.getDeleteOnCloseInputStream();
         }
       }
     }
@@ -1217,8 +1217,10 @@ public class ServeContent extends LockssServlet {
       resp.setHeader(HttpFields.__ContentEncoding, contentEncoding);
     }
 
-    String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
-    handleRewriteInputStream(respStrm, mimeType, charset,
+    //String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
+    BufferedInputStream bufRespStrm = new BufferedInputStream(respStrm);
+    String charset = CharsetUtil.guessCharsetFromStream(bufRespStrm);
+    handleRewriteInputStream(bufRespStrm, mimeType, charset,
         responseContentLength);
   }
 
@@ -1811,7 +1813,7 @@ public class ServeContent extends LockssServlet {
   }
 
   /**
-   * Add link to publisher url and additional info 
+   * Add link to publisher url and additional info
    * to the table if the AU for the URL is not down.
    *
    * @param table the Table
@@ -1843,7 +1845,7 @@ public class ServeContent extends LockssServlet {
    */
   protected Collection<ArchivalUnit> getCandidateAus(
       BibliographicItem bibliographicItem) {
-    Collection<ArchivalUnit> candidateAus = 
+    Collection<ArchivalUnit> candidateAus =
       new TreeSet<ArchivalUnit>(new AuOrderComparator());
 
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();

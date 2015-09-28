@@ -57,6 +57,7 @@ import org.lockss.scheduler.Schedule.*;
 import org.lockss.state.*;
 import org.lockss.alert.*;
 import org.lockss.util.*;
+import org.lockss.util.TimerQueue;
 import org.lockss.servlet.DisplayConverter;
 
 /**
@@ -3130,7 +3131,7 @@ public class V3Poller extends BasePoll {
    * Check to see whether enough pollers have agreed to participate
    * with us.  If not, invite more, and schedule another check.
    */
-  private class InvitationCallback implements TimerQueue.Callback {
+  private class InvitationCallback implements org.lockss.util.TimerQueue.Callback {
     public void timerExpired(Object cookie) {
       // Check to see if the poll has ended.  If so, immediately return.
       if (!activePoll) return;
@@ -3161,7 +3162,7 @@ public class V3Poller extends BasePoll {
    * callback schedules a hash.
    *
    */
-  private class VoteTallyCallback implements TimerQueue.Callback {
+  private class VoteTallyCallback implements org.lockss.util.TimerQueue.Callback {
     
     private boolean tallyStarted = false;
 
@@ -3312,7 +3313,7 @@ public class V3Poller extends BasePoll {
    * Callback called by the poll timer to signal that the poll should end.
    *
    */
-  private class PollCompleteCallback implements TimerQueue.Callback {
+  private class PollCompleteCallback implements org.lockss.util.TimerQueue.Callback {
     /**
      * Called when the poll timer expires.
      *
@@ -3343,7 +3344,7 @@ public class V3Poller extends BasePoll {
   
   /** Callback used if extra poll time is requested at the initial poll 
    * deadline. */
-  private class ExtraTimeCallback implements TimerQueue.Callback {
+  private class ExtraTimeCallback implements org.lockss.util.TimerQueue.Callback {
     public void timerExpired(Object cookie) {
       log.debug("Extra time for the poll has expired.  Ending the poll " +
                 "whether we expect repairs or not.");
