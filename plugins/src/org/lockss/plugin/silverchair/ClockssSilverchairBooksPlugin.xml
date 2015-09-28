@@ -28,10 +28,6 @@
         <string>"Silverchair Books Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
-        <string>au_permission_checker_factory</string>
-        <string>org.lockss.plugin.silverchair.ScBooksPermissionCheckerFactory</string>
-    </entry>
-    <entry>
         <string>clockss_override</string>
         <map>
             <entry>
