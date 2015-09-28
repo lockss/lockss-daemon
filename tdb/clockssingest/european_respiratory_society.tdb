@@ -6,8 +6,8 @@
     info[tester] = 8
   >
 
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
   {
 
@@ -20,14 +20,14 @@
 
     param[base_url] = http://breathe.ersjournals.com/
 
-    au < manifest ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 >
-    au < manifest ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 >
-    au < manifest ; exists ; 2009-2010 ; Breathe Volume 6 ; 6 >
-    au < finished ; crawling ; 2010-2011 ; Breathe Volume 7 ; 7 >
-    au < finished ; crawling ; 2011-2012 ; Breathe Volume 8 ; 8 >
-    au < finished ; finished ; 2012-2013 ; Breathe Volume 9 ; 9 >
-    au < crawling ; exists ; 2014 ; Breathe Volume 10 ; 10 >
-    au < testing ; exists ; 2015 ; Breathe Volume 11 ; 11 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2009-2010 ; Breathe Volume 6 ; 6 >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010-2011 ; Breathe Volume 7 ; 7 >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011-2012 ; Breathe Volume 8 ; 8 >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012-2013 ; Breathe Volume 9 ; 9 >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; Breathe Volume 10 ; 10 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Breathe Volume 11 ; 11 >
 
   }
 
@@ -41,7 +41,7 @@
 
     param[base_url] = http://openres.ersjournals.com/
 
-    au < exists ; exists ; 2015 ; ERJ Open Research Volume 1 ; 1 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; ERJ Open Research Volume 1 ; 1 >
 
   }
 
@@ -61,54 +61,54 @@
 
       attr[au_coverage_depth] = abstracts
 
-      au < manifest ; exists ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
-      au < manifest ; exists ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
-      au < manifest ; exists ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 >
-      au < manifest ; exists ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 >
-      au < manifest ; exists ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 >
-      au < manifest ; exists ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 >
     }
     {
-      au < manifest ; exists ; 1994 ; European Respiratory Journal Volume 7 ; 7 >
-      au < manifest ; exists ; 1995 ; European Respiratory Journal Volume 8 ; 8 >
-      au < manifest ; exists ; 1996 ; European Respiratory Journal Volume 9 ; 9 >
-      au < manifest ; exists ; 1997 ; European Respiratory Journal Volume 10 ; 10 >
-      au < manifest ; exists ; 1998 ; European Respiratory Journal Volume 11 ; 11 >
-      au < manifest ; exists ; 1998 ; European Respiratory Journal Volume 12 ; 12 >
-      au < manifest ; exists ; 1999 ; European Respiratory Journal Volume 13 ; 13 >
-      au < manifest ; exists ; 1999 ; European Respiratory Journal Volume 14 ; 14 >
-      au < manifest ; exists ; 2000 ; European Respiratory Journal Volume 15 ; 15 >
-      au < manifest ; exists ; 2000 ; European Respiratory Journal Volume 16 ; 16 >
-      au < manifest ; exists ; 2001 ; European Respiratory Journal Volume 17 ; 17 >
-      au < manifest ; exists ; 2001 ; European Respiratory Journal Volume 18 ; 18 >
-      au < manifest ; exists ; 2002 ; European Respiratory Journal Volume 19 ; 19 >
-      au < manifest ; exists ; 2002 ; European Respiratory Journal Volume 20 ; 20 >
-      au < manifest ; exists ; 2003 ; European Respiratory Journal Volume 21 ; 21 >
-      au < manifest ; exists ; 2003 ; European Respiratory Journal Volume 22 ; 22 >
-      au < manifest ; exists ; 2004 ; European Respiratory Journal Volume 23 ; 23 >
-      au < manifest ; exists ; 2004 ; European Respiratory Journal Volume 24 ; 24 >
-      au < manifest ; exists ; 2005 ; European Respiratory Journal Volume 25 ; 25 >
-      au < manifest ; exists ; 2005 ; European Respiratory Journal Volume 26 ; 26 >
-      au < manifest ; exists ; 2006 ; European Respiratory Journal Volume 27 ; 27 >
-      au < manifest ; exists ; 2006 ; European Respiratory Journal Volume 28 ; 28 >
-      au < manifest ; exists ; 2007 ; European Respiratory Journal Volume 29 ; 29 >
-      au < manifest ; exists ; 2007 ; European Respiratory Journal Volume 30 ; 30 >
-      au < manifest ; exists ; 2008 ; European Respiratory Journal Volume 31 ; 31 >
-      au < manifest ; exists ; 2008 ; European Respiratory Journal Volume 32 ; 32 >
-      au < manifest ; exists ; 2009 ; European Respiratory Journal Volume 33 ; 33 >
-      au < manifest ; exists ; 2009 ; European Respiratory Journal Volume 34 ; 34 >
-      au < manifest ; exists ; 2010 ; European Respiratory Journal Volume 35 ; 35 >
-      au < manifest ; exists ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
-      au < finished ; crawling ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
-      au < finished ; crawling ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
-      au < finished ; frozen ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
-      au < finished ; crawling ; 2012 ; European Respiratory Journal Volume 40 ; 40 >
-      au < crawling ; exists ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
-      au < crawling ; exists ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
-      au < finished ; crawling ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
-      au < crawling ; exists ; 2014 ; European Respiratory Journal Volume 44 ; 44 >
-      au < testing ; exists ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
-      au < testing ; exists ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; European Respiratory Journal Volume 7 ; 7 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1995 ; European Respiratory Journal Volume 8 ; 8 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1996 ; European Respiratory Journal Volume 9 ; 9 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1997 ; European Respiratory Journal Volume 10 ; 10 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1998 ; European Respiratory Journal Volume 11 ; 11 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1998 ; European Respiratory Journal Volume 12 ; 12 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1999 ; European Respiratory Journal Volume 13 ; 13 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 1999 ; European Respiratory Journal Volume 14 ; 14 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; European Respiratory Journal Volume 15 ; 15 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; European Respiratory Journal Volume 16 ; 16 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2001 ; European Respiratory Journal Volume 17 ; 17 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2001 ; European Respiratory Journal Volume 18 ; 18 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2002 ; European Respiratory Journal Volume 19 ; 19 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2002 ; European Respiratory Journal Volume 20 ; 20 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2003 ; European Respiratory Journal Volume 21 ; 21 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2003 ; European Respiratory Journal Volume 22 ; 22 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2004 ; European Respiratory Journal Volume 23 ; 23 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2004 ; European Respiratory Journal Volume 24 ; 24 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2005 ; European Respiratory Journal Volume 25 ; 25 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2005 ; European Respiratory Journal Volume 26 ; 26 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2006 ; European Respiratory Journal Volume 27 ; 27 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2006 ; European Respiratory Journal Volume 28 ; 28 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2007 ; European Respiratory Journal Volume 29 ; 29 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2007 ; European Respiratory Journal Volume 30 ; 30 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2008 ; European Respiratory Journal Volume 31 ; 31 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2008 ; European Respiratory Journal Volume 32 ; 32 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2009 ; European Respiratory Journal Volume 33 ; 33 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2009 ; European Respiratory Journal Volume 34 ; 34 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2010 ; European Respiratory Journal Volume 35 ; 35 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
+      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; European Respiratory Journal Volume 40 ; 40 >
+      au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
+      au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
+      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
+      au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; European Respiratory Journal Volume 44 ; 44 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
 
     }
 
@@ -125,17 +125,17 @@
 
     param[base_url] = http://err.ersjournals.com/
 
-    au < manifest ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 >
-    au < manifest ; exists ; 2006 ; European Respiratory Review Volume 15 ; 15 >
-    au < manifest ; exists ; 2007 ; European Respiratory Review Volume 16 ; 16 >
-    au < manifest ; exists ; 2008 ; European Respiratory Review Volume 17 ; 17 >
-    au < manifest ; exists ; 2009 ; European Respiratory Review Volume 18 ; 18 >
-    au < manifest ; exists ; 2010 ; European Respiratory Review Volume 19 ; 19 >
-    au < crawling ; crawling ; 2011 ; European Respiratory Review Volume 20 ; 20 >
-    au < finished ; frozen ; 2012 ; European Respiratory Review Volume 21 ; 21 >
-    au < crawling ; exists ; 2013 ; European Respiratory Review Volume 22 ; 22 >
-    au < crawling ; exists ; 2014 ; European Respiratory Review Volume 23 ; 23 >
-    au < testing ; exists ; 2015 ; European Respiratory Review Volume 24 ; 24 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2006 ; European Respiratory Review Volume 15 ; 15 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2007 ; European Respiratory Review Volume 16 ; 16 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2008 ; European Respiratory Review Volume 17 ; 17 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2009 ; European Respiratory Review Volume 18 ; 18 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2010 ; European Respiratory Review Volume 19 ; 19 >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; European Respiratory Review Volume 20 ; 20 >
+    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; European Respiratory Review Volume 21 ; 21 >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; European Respiratory Review Volume 22 ; 22 >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; European Respiratory Review Volume 23 ; 23 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; European Respiratory Review Volume 24 ; 24 >
 
   }
 
