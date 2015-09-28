@@ -2946,8 +2946,8 @@
       param[base_url] = http://tsq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; exists ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; expected ; 2015 ; Transgender Studies Quarterly Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; Transgender Studies Quarterly Volume 2 ; 2 >
 
     }
 

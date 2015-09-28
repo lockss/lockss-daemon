@@ -3877,7 +3877,7 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 105 ; 105 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 106 ; 106 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 107 ; 107 >
-    au < oup.OUPDrupalPlugin ; expected ; 2015 ; Cardiovascular Research Volume 108 ; 108 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 108 ; 108 >
 
     }
 
@@ -8447,7 +8447,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; History Workshop Journal Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; History Workshop Journal Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; History Workshop Journal Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; History Workshop Journal Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; History Workshop Journal Volume 80 ; 80 >
 
     }
 
@@ -11848,48 +11848,48 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[backcontent] = content available from 1974 volume 1 to 1999 volume 25
 
-    au < exists ; 1974-1975 ; Journal of Consumer Research Volume 1 ; 1 >
-    au < exists ; 1975-1976 ; Journal of Consumer Research Volume 2 ; 2 >
-    au < exists ; 1976-1977 ; Journal of Consumer Research Volume 3 ; 3 >
-    au < exists ; 1977-1978 ; Journal of Consumer Research Volume 4 ; 4 >
-    au < exists ; 1978-1979 ; Journal of Consumer Research Volume 5 ; 5 >
-    au < exists ; 1979-1980 ; Journal of Consumer Research Volume 6 ; 6 >
-    au < exists ; 1980-1981 ; Journal of Consumer Research Volume 7 ; 7 >
-    au < exists ; 1981-1982 ; Journal of Consumer Research Volume 8 ; 8 >
-    au < exists ; 1982-1983 ; Journal of Consumer Research Volume 9 ; 9 >
-    au < exists ; 1983-1984 ; Journal of Consumer Research Volume 10 ; 10 >
-    au < exists ; 1984-1985 ; Journal of Consumer Research Volume 11 ; 11 >
-    au < exists ; 1985-1986 ; Journal of Consumer Research Volume 12 ; 12 >
-    au < exists ; 1986-1987 ; Journal of Consumer Research Volume 13 ; 13 >
-    au < exists ; 1987-1988 ; Journal of Consumer Research Volume 14 ; 14 >
-    au < exists ; 1988-1989 ; Journal of Consumer Research Volume 15 ; 15 >
-    au < exists ; 1989-1990 ; Journal of Consumer Research Volume 16 ; 16 >
-    au < exists ; 1990-1991 ; Journal of Consumer Research Volume 17 ; 17 >
-    au < exists ; 1991-1992 ; Journal of Consumer Research Volume 18 ; 18 >
-    au < exists ; 1992-1993 ; Journal of Consumer Research Volume 19 ; 19 >
-    au < exists ; 1993-1994 ; Journal of Consumer Research Volume 20 ; 20 >
-    au < exists ; 1994-1995 ; Journal of Consumer Research Volume 21 ; 21 >
-    au < exists ; 1995-1996 ; Journal of Consumer Research Volume 22 ; 22 >
-    au < exists ; 1996-1997 ; Journal of Consumer Research Volume 23 ; 23 >
-    au < exists ; 1997-1998 ; Journal of Consumer Research Volume 24 ; 24 >
-    au < exists ; 1998-1999 ; Journal of Consumer Research Volume 25 ; 25 >
-    au < exists ; 1999-2000 ; Journal of Consumer Research Volume 26 ; 26 >
-    au < exists ; 2000-2001 ; Journal of Consumer Research Volume 27 ; 27 >
-    au < exists ; 2001-2002 ; Journal of Consumer Research Volume 28 ; 28 >
-    au < exists ; 2002-2003 ; Journal of Consumer Research Volume 29 ; 29 >
-    au < exists ; 2003-2004 ; Journal of Consumer Research Volume 30 ; 30 >
-    au < exists ; 2004-2005 ; Journal of Consumer Research Volume 31 ; 31 >
-    au < exists ; 2005-2006 ; Journal of Consumer Research Volume 32 ; 32 >
-    au < exists ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 >
-    au < exists ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 >
-    au < exists ; 2008-2009 ; Journal of Consumer Research Volume 35 ; 35 >
-    au < exists ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 >
-    au < exists ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 >
-    au < exists ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 >
-    au < exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 >
-    au < exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 >
-    au < exists ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 >
-    au < expected ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 >
+    au < manifest ; 1974-1975 ; Journal of Consumer Research Volume 1 ; 1 >
+    au < manifest ; 1975-1976 ; Journal of Consumer Research Volume 2 ; 2 >
+    au < manifest ; 1976-1977 ; Journal of Consumer Research Volume 3 ; 3 >
+    au < manifest ; 1977-1978 ; Journal of Consumer Research Volume 4 ; 4 >
+    au < manifest ; 1978-1979 ; Journal of Consumer Research Volume 5 ; 5 >
+    au < manifest ; 1979-1980 ; Journal of Consumer Research Volume 6 ; 6 >
+    au < manifest ; 1980-1981 ; Journal of Consumer Research Volume 7 ; 7 >
+    au < manifest ; 1981-1982 ; Journal of Consumer Research Volume 8 ; 8 >
+    au < manifest ; 1982-1983 ; Journal of Consumer Research Volume 9 ; 9 >
+    au < manifest ; 1983-1984 ; Journal of Consumer Research Volume 10 ; 10 >
+    au < manifest ; 1984-1985 ; Journal of Consumer Research Volume 11 ; 11 >
+    au < manifest ; 1985-1986 ; Journal of Consumer Research Volume 12 ; 12 >
+    au < manifest ; 1986-1987 ; Journal of Consumer Research Volume 13 ; 13 >
+    au < manifest ; 1987-1988 ; Journal of Consumer Research Volume 14 ; 14 >
+    au < manifest ; 1988-1989 ; Journal of Consumer Research Volume 15 ; 15 >
+    au < manifest ; 1989-1990 ; Journal of Consumer Research Volume 16 ; 16 >
+    au < manifest ; 1990-1991 ; Journal of Consumer Research Volume 17 ; 17 >
+    au < manifest ; 1991-1992 ; Journal of Consumer Research Volume 18 ; 18 >
+    au < manifest ; 1992-1993 ; Journal of Consumer Research Volume 19 ; 19 >
+    au < manifest ; 1993-1994 ; Journal of Consumer Research Volume 20 ; 20 >
+    au < manifest ; 1994-1995 ; Journal of Consumer Research Volume 21 ; 21 >
+    au < manifest ; 1995-1996 ; Journal of Consumer Research Volume 22 ; 22 >
+    au < manifest ; 1996-1997 ; Journal of Consumer Research Volume 23 ; 23 >
+    au < manifest ; 1997-1998 ; Journal of Consumer Research Volume 24 ; 24 >
+    au < manifest ; 1998-1999 ; Journal of Consumer Research Volume 25 ; 25 >
+    au < manifest ; 1999-2000 ; Journal of Consumer Research Volume 26 ; 26 >
+    au < manifest ; 2000-2001 ; Journal of Consumer Research Volume 27 ; 27 >
+    au < manifest ; 2001-2002 ; Journal of Consumer Research Volume 28 ; 28 >
+    au < manifest ; 2002-2003 ; Journal of Consumer Research Volume 29 ; 29 >
+    au < manifest ; 2003-2004 ; Journal of Consumer Research Volume 30 ; 30 >
+    au < manifest ; 2004-2005 ; Journal of Consumer Research Volume 31 ; 31 >
+    au < manifest ; 2005-2006 ; Journal of Consumer Research Volume 32 ; 32 >
+    au < manifest ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 >
+    au < manifest ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 >
+    au < manifest ; 2008-2009 ; Journal of Consumer Research Volume 35 ; 35 >
+    au < manifest ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 >
+    au < manifest ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 >
+    au < manifest ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 >
+    au < manifest ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 >
+    au < manifest ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 >
+    au < manifest ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 >
+    au < manifest ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 >
     
   }
 
@@ -13881,12 +13881,12 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2000 ; Journal of Mammalogy Volume 81 ; 81 >
-    au < exists ; 2001 ; Journal of Mammalogy Volume 82 ; 82 >
-    au < exists ; 2002 ; Journal of Mammalogy Volume 83 ; 83 >
-    au < exists ; 2003 ; Journal of Mammalogy Volume 84 ; 84 >
-    au < exists ; 2004 ; Journal of Mammalogy Volume 85 ; 85 >
-    au < exists ; 2005 ; Journal of Mammalogy Volume 86 ; 86 >
+    au < manifest ; 2000 ; Journal of Mammalogy Volume 81 ; 81 >
+    au < manifest ; 2001 ; Journal of Mammalogy Volume 82 ; 82 >
+    au < manifest ; 2002 ; Journal of Mammalogy Volume 83 ; 83 >
+    au < manifest ; 2003 ; Journal of Mammalogy Volume 84 ; 84 >
+    au < manifest ; 2004 ; Journal of Mammalogy Volume 85 ; 85 >
+    au < manifest ; 2005 ; Journal of Mammalogy Volume 86 ; 86 >
     au < manifest ; 2006 ; Journal of Mammalogy Volume 87 ; 87 >
     au < manifest ; 2007 ; Journal of Mammalogy Volume 88 ; 88 >
     au < manifest ; 2008 ; Journal of Mammalogy Volume 89 ; 89 >
@@ -13914,20 +13914,20 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[0] = content available from 1976 volume 13 to 1989 volume 27
 
-    au < exists ; 1976 ; Journal of Medical Entomology Volume 13 ; 13 >
-    au < exists ; 1977 ; Journal of Medical Entomology Volume 14 ; 14 >
-    au < exists ; 1978 ; Journal of Medical Entomology Volume 15 ; 15 >
-    au < exists ; 1979 ; Journal of Medical Entomology Volume 16 ; 16 >
-    au < exists ; 1980 ; Journal of Medical Entomology Volume 17 ; 17 >
-    au < exists ; 1981 ; Journal of Medical Entomology Volume 18 ; 18 >
-    au < exists ; 1982 ; Journal of Medical Entomology Volume 19 ; 19 >
-    au < exists ; 1983 ; Journal of Medical Entomology Volume 20 ; 20 >
-    au < exists ; 1984 ; Journal of Medical Entomology Volume 21 ; 21 >
-    au < exists ; 1985 ; Journal of Medical Entomology Volume 22 ; 22 >
-    au < exists ; 1986 ; Journal of Medical Entomology Volume 23 ; 23 >
-    au < exists ; 1987 ; Journal of Medical Entomology Volume 24 ; 24 >
-    au < exists ; 1988 ; Journal of Medical Entomology Volume 25 ; 25 >
-    au < exists ; 1989 ; Journal of Medical Entomology Volume 26 ; 26 >
+    au < manifest ; 1976 ; Journal of Medical Entomology Volume 13 ; 13 >
+    au < manifest ; 1977 ; Journal of Medical Entomology Volume 14 ; 14 >
+    au < manifest ; 1978 ; Journal of Medical Entomology Volume 15 ; 15 >
+    au < manifest ; 1979 ; Journal of Medical Entomology Volume 16 ; 16 >
+    au < manifest ; 1980 ; Journal of Medical Entomology Volume 17 ; 17 >
+    au < manifest ; 1981 ; Journal of Medical Entomology Volume 18 ; 18 >
+    au < manifest ; 1982 ; Journal of Medical Entomology Volume 19 ; 19 >
+    au < manifest ; 1983 ; Journal of Medical Entomology Volume 20 ; 20 >
+    au < manifest ; 1984 ; Journal of Medical Entomology Volume 21 ; 21 >
+    au < manifest ; 1985 ; Journal of Medical Entomology Volume 22 ; 22 >
+    au < manifest ; 1986 ; Journal of Medical Entomology Volume 23 ; 23 >
+    au < manifest ; 1987 ; Journal of Medical Entomology Volume 24 ; 24 >
+    au < manifest ; 1988 ; Journal of Medical Entomology Volume 25 ; 25 >
+    au < manifest ; 1989 ; Journal of Medical Entomology Volume 26 ; 26 >
     au < manifest ; 1990 ; Journal of Medical Entomology Volume 27 ; 27 >
     au < manifest ; 1991 ; Journal of Medical Entomology Volume 28 ; 28 >
     au < manifest ; 1992 ; Journal of Medical Entomology Volume 29 ; 29 >
@@ -16667,16 +16667,16 @@
     au < manifest ; 2002 ; The Monist Volume 85 ; 85 >
     au < manifest ; 2003 ; The Monist Volume 86 ; 86 >
     au < manifest ; 2004 ; The Monist Volume 87 ; 87 >
-    au < exists ; 2005 ; The Monist Volume 88 ; 88 >
+    au < manifest ; 2005 ; The Monist Volume 88 ; 88 >
     au < manifest ; 2006 ; The Monist Volume 89 ; 89 >
     au < manifest ; 2007 ; The Monist Volume 90 ; 90 >
-    au < exists ; 2008 ; The Monist Volume 91 ; 91 >
-    au < exists ; 2009 ; The Monist Volume 92 ; 92 >
+    au < manifest ; 2008 ; The Monist Volume 91 ; 91 >
+    au < manifest ; 2009 ; The Monist Volume 92 ; 92 >
     au < manifest ; 2010 ; The Monist Volume 93 ; 93 >
-    au < exists ; 2011 ; The Monist Volume 94 ; 94 >
-    au < exists ; 2012 ; The Monist Volume 95 ; 95 >
+    au < manifest ; 2011 ; The Monist Volume 94 ; 94 >
+    au < manifest ; 2012 ; The Monist Volume 95 ; 95 >
     au < manifest ; 2013 ; The Monist Volume 96 ; 96 >
-    au < exists ; 2014 ; The Monist Volume 97 ; 97 >
+    au < manifest ; 2014 ; The Monist Volume 97 ; 97 >
     au < manifest ; 2015 ; The Monist Volume 98 ; 98 >
 
   }
@@ -16986,7 +16986,7 @@
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 450 ; 450 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 451 ; 451 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 452 ; 452 >
-    au < expected ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 453 ; 453 >
+    au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 453 ; 453 >
     au < expected ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 >
     au < expected ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 >
 
@@ -20885,7 +20885,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Radiation Protection Dosimetry Volume 164 ; 164 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Radiation Protection Dosimetry Volume 165 ; 165 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Radiation Protection Dosimetry Volume 166 ; 166 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Radiation Protection Dosimetry Volume 166 ; 166 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Radiation Protection Dosimetry Volume 167 ; 167 >
 
     }
@@ -23423,7 +23423,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Year's Work in Critical and Cultural Theory Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Year's Work in Critical and Cultural Theory Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; The Year's Work in Critical and Cultural Theory Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; The Year's Work in Critical and Cultural Theory Volume 23 ; 23 >
 
     }
 

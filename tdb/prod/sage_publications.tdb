@@ -2719,7 +2719,7 @@
         au < manifest ; 2013 ; The Annals of the American Academy of Political and Social Science Volume 650 ; 650 >
         au < released ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 651 ; 651 >
         au < released ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 652 ; 652 >
-        au < exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 653 ; 653 >
+        au < manifest ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 653 ; 653 >
         au < released ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 654 ; 654 >
         au < released ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 655 ; 655 >
         au < released ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 656 ; 656 >
@@ -4187,7 +4187,7 @@
         au < released ; 2012 ; BioScope: South Asian Screen Studies Volume 3 ; 3 >
         au < released ; 2013 ; BioScope: South Asian Screen Studies Volume 4 ; 4 >
         au < released ; 2014 ; BioScope: South Asian Screen Studies Volume 5 ; 5 >
-        au < expected ; 2015 ; BioScope: South Asian Screen Studies Volume 6 ; 6 >
+        au < manifest ; 2015 ; BioScope: South Asian Screen Studies Volume 6 ; 6 >
 
       }
 
@@ -11050,13 +11050,13 @@
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1977 volume 9 to 2007 volume 39 
 
-      au < exists ; 2008 ; Environment and Planning A Volume 40 ; 40 >
-      au < exists ; 2009 ; Environment and Planning A Volume 41 ; 41 >
-      au < exists ; 2010 ; Environment and Planning A Volume 42 ; 42 >
-      au < exists ; 2011 ; Environment and Planning A Volume 43 ; 43 >
-      au < exists ; 2012 ; Environment and Planning A Volume 44 ; 44 >
-      au < exists ; 2013 ; Environment and Planning A Volume 45 ; 45 >
-      au < exists ; 2014 ; Environment and Planning A Volume 46 ; 46 >
+      au < manifest ; 2008 ; Environment and Planning A Volume 40 ; 40 >
+      au < manifest ; 2009 ; Environment and Planning A Volume 41 ; 41 >
+      au < manifest ; 2010 ; Environment and Planning A Volume 42 ; 42 >
+      au < manifest ; 2011 ; Environment and Planning A Volume 43 ; 43 >
+      au < manifest ; 2012 ; Environment and Planning A Volume 44 ; 44 >
+      au < manifest ; 2013 ; Environment and Planning A Volume 45 ; 45 >
+      au < manifest ; 2014 ; Environment and Planning A Volume 46 ; 46 >
       au < manifest ; 2015 ; Environment and Planning A Volume 47 ; 47 >
 
   }
@@ -11074,13 +11074,13 @@
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1976 volume 3 to 2007 volume 34 
 
-      au < exists ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 >
-      au < exists ; 2009 ; Environment and Planning B: Planning and Design Volume 36 ; 36 >
-      au < exists ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
-      au < exists ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 >
-      au < exists ; 2012 ; Environment and Planning B: Planning and Design Volume 39 ; 39 >
-      au < exists ; 2013 ; Environment and Planning B: Planning and Design Volume 40 ; 40 >
-      au < exists ; 2014 ; Environment and Planning B: Planning and Design Volume 41 ; 41 >
+      au < manifest ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 >
+      au < manifest ; 2009 ; Environment and Planning B: Planning and Design Volume 36 ; 36 >
+      au < manifest ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
+      au < manifest ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 >
+      au < manifest ; 2012 ; Environment and Planning B: Planning and Design Volume 39 ; 39 >
+      au < manifest ; 2013 ; Environment and Planning B: Planning and Design Volume 40 ; 40 >
+      au < manifest ; 2014 ; Environment and Planning B: Planning and Design Volume 41 ; 41 >
       au < manifest ; 2015 ; Environment and Planning B: Planning and Design Volume 42 ; 42 >
 
   }
@@ -11098,13 +11098,13 @@
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1983 volume 1 to 2007 volume 25 
 
-      au < exists ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 >
-      au < exists ; 2009 ; Environment and Planning C: Government and Policy Volume 27 ; 27 >
-      au < exists ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
-      au < exists ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 >
-      au < exists ; 2012 ; Environment and Planning C: Government and Policy Volume 30 ; 30 >
-      au < exists ; 2013 ; Environment and Planning C: Government and Policy Volume 31 ; 31 >
-      au < exists ; 2014 ; Environment and Planning C: Government and Policy Volume 32 ; 32 >
+      au < manifest ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 >
+      au < manifest ; 2009 ; Environment and Planning C: Government and Policy Volume 27 ; 27 >
+      au < manifest ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
+      au < manifest ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 >
+      au < manifest ; 2012 ; Environment and Planning C: Government and Policy Volume 30 ; 30 >
+      au < manifest ; 2013 ; Environment and Planning C: Government and Policy Volume 31 ; 31 >
+      au < manifest ; 2014 ; Environment and Planning C: Government and Policy Volume 32 ; 32 >
       au < manifest ; 2015 ; Environment and Planning C: Government and Policy Volume 33 ; 33 >
 
   }
@@ -11122,13 +11122,13 @@
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 2002 volume 20 to 2007 volume 25 
 
-      au < exists ; 2008 ; Environment and Planning D: Society and Space Volume 26 ; 26 >
-      au < exists ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 >
-      au < exists ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 >
-      au < exists ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 >
-      au < exists ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 >
-      au < exists ; 2013 ; Environment and Planning D: Society and Space Volume 31 ; 31 >
-      au < exists ; 2014 ; Environment and Planning D: Society and Space Volume 32 ; 32 >
+      au < manifest ; 2008 ; Environment and Planning D: Society and Space Volume 26 ; 26 >
+      au < manifest ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 >
+      au < manifest ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 >
+      au < manifest ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 >
+      au < manifest ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 >
+      au < manifest ; 2013 ; Environment and Planning D: Society and Space Volume 31 ; 31 >
+      au < manifest ; 2014 ; Environment and Planning D: Society and Space Volume 32 ; 32 >
       au < manifest ; 2015 ; Environment and Planning D: Society and Space Volume 33 ; 33 >
 
   }
@@ -23232,7 +23232,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; Journal of Drug Education Volume 42 ; 42 >
       au < manifest ; 2013 ; Journal of Drug Education Volume 43 ; 43 >
       au < released ; 2014 ; Journal of Drug Education Volume 44 ; 44 >
-      au < expected ; 2015 ; Journal of Drug Education Volume 45 ; 45 >
+      au < manifest ; 2015 ; Journal of Drug Education Volume 45 ; 45 >
 
   }
 
@@ -34743,17 +34743,17 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2004 ; Perception Volume 33 ; 33 >
-      au < exists ; 2005 ; Perception Volume 34 ; 34 >
-      au < exists ; 2006 ; Perception Volume 35 ; 35 >
-      au < exists ; 2007 ; Perception Volume 36 ; 36 >
-      au < exists ; 2008 ; Perception Volume 37 ; 37 >
-      au < exists ; 2009 ; Perception Volume 38 ; 38 >
-      au < exists ; 2010 ; Perception Volume 39 ; 39 >
-      au < exists ; 2011 ; Perception Volume 40 ; 40 >
-      au < exists ; 2012 ; Perception Volume 41 ; 41 >
-      au < exists ; 2013 ; Perception Volume 42 ; 42 >
-      au < exists ; 2014 ; Perception Volume 43 ; 43 >
+      au < manifest ; 2004 ; Perception Volume 33 ; 33 >
+      au < manifest ; 2005 ; Perception Volume 34 ; 34 >
+      au < manifest ; 2006 ; Perception Volume 35 ; 35 >
+      au < manifest ; 2007 ; Perception Volume 36 ; 36 >
+      au < manifest ; 2008 ; Perception Volume 37 ; 37 >
+      au < manifest ; 2009 ; Perception Volume 38 ; 38 >
+      au < manifest ; 2010 ; Perception Volume 39 ; 39 >
+      au < manifest ; 2011 ; Perception Volume 40 ; 40 >
+      au < manifest ; 2012 ; Perception Volume 41 ; 41 >
+      au < manifest ; 2013 ; Perception Volume 42 ; 42 >
+      au < manifest ; 2014 ; Perception Volume 43 ; 43 >
       au < manifest ; 2015 ; Perception Volume 44 ; 44 >
 
   }

@@ -52,7 +52,7 @@
       au < manifest ; 2012 ; The Analyst Volume 137 ; 137 ; 2012 >
       au < released ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 >
       au < manifest ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 >
-      au < expected ; 2015 ; The Analyst Volume 140 ; 140 ; 2015 >
+      au < manifest ; 2015 ; The Analyst Volume 140 ; 140 ; 2015 >
     }
   }
 
@@ -241,7 +241,7 @@
       
       au < released ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 >
       au < manifest ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 >
-      au < expected ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 >
+      au < manifest ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 >
     }
   }
 
@@ -281,7 +281,7 @@
       au < manifest ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 >
       au < released ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 >
       au < manifest ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 >
-      au < expected ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 >
+      au < manifest ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 >
     }
   }
 
@@ -328,7 +328,7 @@
       au < manifest ; 2012 ; Chemical Society Reviews Volume 41 ; 41 ; 2012 >
       au < testing ; 2013 ; Chemical Society Reviews Volume 42 ; 42 ; 2013 >
       au < manifest ; 2014 ; Chemical Society Reviews Volume 43 ; 43 ; 2014 >
-      au < expected ; 2015 ; Chemical Society Reviews Volume 44 ; 44 ; 2015 >
+      au < manifest ; 2015 ; Chemical Society Reviews Volume 44 ; 44 ; 2015 >
     }
   }
 
@@ -363,7 +363,7 @@
       au < released ; 2012 ; Chemistry Education Research and Practice Volume 13 ; 13 ; 2012 >
       au < released ; 2013 ; Chemistry Education Research and Practice Volume 14 ; 14 ; 2013 >
       au < ready ; 2014 ; Chemistry Education Research and Practice Volume 15 ; 15 ; 2014 >
-      au < expected ; 2015 ; Chemistry Education Research and Practice Volume 16 ; 16 ; 2015 >
+      au < manifest ; 2015 ; Chemistry Education Research and Practice Volume 16 ; 16 ; 2015 >
 
     }
   }
@@ -429,7 +429,7 @@
       au < manifest ; 2012 ; CrystEngComm Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; CrystEngComm Volume 15 ; 15 ; 2013 >
       au < manifest ; 2014 ; CrystEngComm Volume 16 ; 16 ; 2014 >
-      au < expected ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 >
+      au < manifest ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 >
     }
   }
 
@@ -476,7 +476,7 @@
       au < manifest ; 2012 ; Dalton Transactions Volume 41 ; 41 ; 2012 >
       au < released ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 >
       au < manifest ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 >
-      au < expected ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 >
+      au < manifest ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 >
     }
   }
 
@@ -508,12 +508,12 @@
       param[base_url2] = http://www.rsc.org/
       comment[notReady] = All manifest pages link to same content
       
-      au < exists ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
-      au < exists ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
-      au < exists ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
-      au < exists ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
+      au < manifest ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
+      au < manifest ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
+      au < manifest ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
+      au < manifest ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
       au < manifest ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 >
-      au < expected ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 >
+      au < manifest ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 >
     }
   }
 
@@ -578,23 +578,23 @@
       au < released ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 >
       au < released ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 >
 
-      au < exists ; 2014 ; Faraday Discussions Volume 168 ; 168 ; 2014 >
-      au < exists ; 2014 ; Faraday Discussions Volume 169 ; 169 ; 2014 >
-      au < exists ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 >
-      au < exists ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 >
-      au < exists ; 2014 ; Faraday Discussions Volume 172 ; 172 ; 2014 >
-      au < exists ; 2014 ; Faraday Discussions Volume 173 ; 173 ; 2014 >
-      au < exists ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 >
-      au < exists ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 168 ; 168 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 169 ; 169 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 172 ; 172 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 173 ; 173 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 >
+      au < manifest ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 >
 
-      au < exists ; 2015 ; Faraday Discussions Volume 176 ; 176 ; 2015 >
-      au < exists ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 >
-      au < exists ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 >
-      au < exists ; 2015 ; Faraday Discussions Volume 179 ; 179 ; 2015 >
-      au < exists ; 2015 ; Faraday Discussions Volume 180 ; 180 ; 2015 >
-      au < exists ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 >
-      au < exists ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 >
-      au < exists ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 176 ; 176 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 179 ; 179 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 180 ; 180 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 >
+      au < manifest ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 >
     }
   }
 
@@ -661,7 +661,7 @@
       au < manifest ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 >
       au < manifest ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 >
-      au < expected ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 >
+      au < manifest ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 >
     }
   }
 
@@ -696,7 +696,7 @@
       au < manifest ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 >
       au < manifest ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 >
-      au < expected ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 >
+      au < manifest ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 >
     }
   }
 
@@ -743,7 +743,7 @@
       au < ready ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
       au < released ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
       au < manifest ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
-      au < expected ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
+      au < manifest ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
     }
   }
 
@@ -892,7 +892,7 @@
       au < manifest ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
       au < manifest ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
-      au < expected ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
+      au < manifest ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
     }
   }
 
@@ -978,7 +978,7 @@
       au < manifest ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
       au < released ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
       au < manifest ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
-      au < expected ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
+      au < manifest ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
     }
   }
 
@@ -1013,7 +1013,7 @@
       au < manifest ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
       au < ready ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 >
-      au < expected ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 >
+      au < manifest ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 >
     }
   }
 
@@ -1052,7 +1052,7 @@
       au < manifest ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 >
       au < released ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 >
       au < manifest ; 2014 ; Molecular BioSystems Volume 10 ; 10 ; 2014 >
-      au < expected ; 2015 ; Molecular BioSystems Volume 11 ; 11 ; 2015 >
+      au < manifest ; 2015 ; Molecular BioSystems Volume 11 ; 11 ; 2015 >
     }
   }
 
@@ -1087,7 +1087,7 @@
       au < manifest ; 2012 ; Nanoscale Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Nanoscale Volume 5 ; 5 ; 2013 >
       au < manifest ; 2014 ; Nanoscale Volume 6 ; 6 ; 2014 >
-      au < expected ; 2015 ; Nanoscale Volume 7 ; 7 ; 2015 >
+      au < manifest ; 2015 ; Nanoscale Volume 7 ; 7 ; 2015 >
 
     }
   }
@@ -1135,7 +1135,7 @@
       au < manifest ; 2012 ; Natural Product Reports Volume 29 ; 29 ; 2012 >
       au < released ; 2013 ; Natural Product Reports Volume 30 ; 30 ; 2013 >
       au < manifest ; 2014 ; Natural Product Reports Volume 31 ; 31 ; 2014 >
-      au < expected ; 2015 ; Natural Product Reports Volume 32 ; 32 ; 2015 >
+      au < manifest ; 2015 ; Natural Product Reports Volume 32 ; 32 ; 2015 >
 
     }
   }
@@ -1183,7 +1183,7 @@
       au < manifest ; 2012 ; New Journal of Chemistry Volume 36 ; 36 ; 2012 >
       au < released ; 2013 ; New Journal of Chemistry Volume 37 ; 37 ; 2013 >
       au < ready ; 2014 ; New Journal of Chemistry Volume 38 ; 38 ; 2014 >
-      au < expected ; 2015 ; New Journal of Chemistry Volume 39 ; 39 ; 2015 >
+      au < manifest ; 2015 ; New Journal of Chemistry Volume 39 ; 39 ; 2015 >
     }
   }
 
@@ -1225,7 +1225,7 @@
       au < manifest ; 2012 ; Organic & Biomolecular Chemistry Volume 10 ; 10 ; 2012 >
       au < released ; 2013 ; Organic & Biomolecular Chemistry Volume 11 ; 11 ; 2013 >
       au < manifest ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 >
-      au < expected ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 >
+      au < manifest ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 >
 
     }
   }
@@ -1291,7 +1291,7 @@
       au < manifest ; 2012 ; Photochemical & Photobiological Sciences Volume 11 ; 11 ; 2012 >
       au < released ; 2013 ; Photochemical & Photobiological Sciences Volume 12 ; 12 ; 2013 >
       au < manifest ; 2014 ; Photochemical & Photobiological Sciences Volume 13 ; 13 ; 2014 >
-      au < expected ; 2015 ; Photochemical & Photobiological Sciences Volume 14 ; 14 ; 2015 >
+      au < manifest ; 2015 ; Photochemical & Photobiological Sciences Volume 14 ; 14 ; 2015 >
 
     }
   }
@@ -1359,7 +1359,7 @@
       au < manifest ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 >
       au < manifest ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 >
-      au < expected ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 >
+      au < manifest ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 >
     }
   }
 
@@ -1423,7 +1423,7 @@
       au < manifest ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
       au < released ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
       au < manifest ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 >
-      au < expected ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 >
+      au < manifest ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 >
 
     }
   }
