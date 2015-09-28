@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -18,18 +18,18 @@
       param[base_url] = http://189.43.21.151/revista/
       param[journal_id] = fsa
 
-      au < testing ; 2004 ; 1 ; Revista FSA Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 2 ; Revista FSA Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 3 ; Revista FSA Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 4 ; Revista FSA Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 5 ; Revista FSA Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 6 ; Revista FSA Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 7 ; Revista FSA Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 8 ; Revista FSA Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 9 ; Revista FSA Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 10 ; Revista FSA Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 11 ; Revista FSA Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 12 ; Revista FSA Volume 2015 ; 2015 >
+      au < ready ; 2004 ; 1 ; Revista FSA Volume 2004 ; 2004 ; >
+      au < notReady ; 2005 ; 2 ; Revista FSA Volume 2005 ; 2005 ; no articles >
+      au < ready ; 2006 ; 3 ; Revista FSA Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 4 ; Revista FSA Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 5 ; Revista FSA Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 6 ; Revista FSA Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 7 ; Revista FSA Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 8 ; Revista FSA Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 9 ; Revista FSA Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 10 ; Revista FSA Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 11 ; Revista FSA Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 12 ; Revista FSA Volume 2015 ; 2015 ; >
 
   }
 
