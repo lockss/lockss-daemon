@@ -29,46 +29,42 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.ws.entities;
+package org.lockss.ws.metadata.client;
+
+import java.util.List;
+import org.lockss.ws.entities.KeyValueListPair;
+import org.lockss.ws.metadata.MetadataMonitorService;
 
 /**
- * Container for the information related to mismatched metadata children.
+ * A client for the MetadataMonitorService.getAuNamesWithMultiplePublishers()
+ * web service operation.
  */
-public class MismatchedMetadataChildWsResult {
-  private String childName;
-  private String parentName;
-  private String parentType;
-  private String auName;
+public class GetAuNamesWithMultiplePublishersClient extends
+    MetadataMonitorServiceBaseClient {
+  /**
+   * The main method.
+   * 
+   * @param args
+   *          A String[] with the command line arguments.
+   * @throws Exception
+   */
+  public static void main(String args[]) throws Exception {
+    // Call the service and get the results of the query.
+    MetadataMonitorService proxy =
+	new GetAuNamesWithMultiplePublishersClient().getProxy();
+    List<KeyValueListPair> ausLinkedToPublishers =
+	proxy.getAuNamesWithMultiplePublishers();
 
-  public String getChildName() {
-    return childName;
-  }
-  public void setChildName(String childName) {
-    this.childName = childName;
-  }
-  public String getParentName() {
-    return parentName;
-  }
-  public void setParentName(String parentName) {
-    this.parentName = parentName;
-  }
-  public String getParentType() {
-    return parentType;
-  }
-  public void setParentType(String parentType) {
-    this.parentType = parentType;
-  }
-  public String getAuName() {
-    return auName;
-  }
-  public void setAuName(String auName) {
-    this.auName = auName;
-  }
+    if (ausLinkedToPublishers != null) {
+      System.out.println("ausLinkedToPublishers.size() = "
+	  + ausLinkedToPublishers.size());
 
-  @Override
-  public String toString() {
-    return "[MismatchedMetadataChildWsResult childName=" + childName
-	+ ", parentName=" + parentName + ", parentType=" + parentType
-	+ ", auName=" + auName + "]";
+      for (KeyValueListPair au : ausLinkedToPublishers) {
+	System.out.println("au = " + au.getKey()
+	    + ", publishers" + " = " + au.getValues());
+      }
+    } else {
+      System.out.println("ausLinkedToPublishers = " + ausLinkedToPublishers);
+    }
   }
 }

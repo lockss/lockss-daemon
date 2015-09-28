@@ -4051,4 +4051,58 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       throws DbException {
     return getMetadataManagerSql().getMismatchedParentBookVolumes();
   }
+
+  /**
+   * Provides the publishers linked to the Archival Unit name for the Archival
+   * Units in the database with multiple publishers.
+   * 
+   * @return a Map<String, Collection<String>> with the publishers keyed by
+   *         the Archival Unit name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getAuNamesWithMultiplePublishers()
+      throws DbException {
+    final String DEBUG_HEADER = "getAuNamesWithMultiplePublishers(): ";
+
+    // The Archival Units that have multiple publishers, sorted by name.
+    Map<String, Collection<String>> auNamesWithPublishers =
+	new TreeMap<String, Collection<String>>();
+
+    // Get the publishers linked to the Archival Units.
+    Map<String, Collection<String>> ausPublishers =
+	getAuIdsWithMultiplePublishers();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ausPublishers.size() = "
+	+ ausPublishers.size());
+
+    // Loop through the Archival Units.
+    for (String auId : ausPublishers.keySet()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+      ArchivalUnit au = pluginMgr.getAuFromId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+      if (au != null) {
+	auNamesWithPublishers.put(au.getName(), ausPublishers.get(auId));
+      } else {
+	auNamesWithPublishers.put(auId, ausPublishers.get(auId));
+      }
+    }
+
+    return auNamesWithPublishers;
+  }
+
+  /**
+   * Provides the publishers linked to the Archival Unit identifier for the
+   * Archival Units in the database with multiple publishers.
+   * 
+   * @return a Map<String, Collection<String>> with the publishers keyed by
+   *         the Archival Unit identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Map<String, Collection<String>> getAuIdsWithMultiplePublishers()
+      throws DbException {
+    return getMetadataManagerSql().getAuIdsWithMultiplePublishers();
+  }
 }

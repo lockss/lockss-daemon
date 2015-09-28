@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: MetadataMonitorServiceImpl.java 44257 2015-09-24 22:08:54Z fergaloy-sf $
  */
 
 /*
@@ -35,12 +35,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-
 import javax.jws.WebService;
 import org.lockss.app.LockssDaemon;
 import org.lockss.metadata.Isbn;
 import org.lockss.metadata.Issn;
 import org.lockss.metadata.MetadataManager;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
 import org.lockss.ws.entities.KeyIdNamePairListPair;
 import org.lockss.ws.entities.KeyValueListPair;
@@ -536,7 +537,19 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
 	result.setChildName(mismatchedChild.get("col1"));
 	result.setParentName(mismatchedChild.get("col2"));
 	result.setParentType(mismatchedChild.get("col3"));
-	result.setAuKey(mismatchedChild.get("col4"));
+
+	String auId = PluginManager.generateAuId(mismatchedChild.get("col5"),
+	    mismatchedChild.get("col4"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = getPluginManager().getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  result.setAuName(au.getName());
+	} else {
+	  result.setAuName(auId);
+	}
 
 	mismatchedChildren.add(result);
       }
@@ -572,7 +585,19 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
 	result.setChildName(mismatchedChild.get("col1"));
 	result.setParentName(mismatchedChild.get("col2"));
 	result.setParentType(mismatchedChild.get("col3"));
-	result.setAuKey(mismatchedChild.get("col4"));
+
+	String auId = PluginManager.generateAuId(mismatchedChild.get("col5"),
+	    mismatchedChild.get("col4"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = getPluginManager().getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  result.setAuName(au.getName());
+	} else {
+	  result.setAuName(auId);
+	}
 
 	mismatchedChildren.add(result);
       }
@@ -608,12 +633,72 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
 	result.setChildName(mismatchedChild.get("col1"));
 	result.setParentName(mismatchedChild.get("col2"));
 	result.setParentType(mismatchedChild.get("col3"));
-	result.setAuKey(mismatchedChild.get("col4"));
+
+	String auId = PluginManager.generateAuId(mismatchedChild.get("col5"),
+	    mismatchedChild.get("col4"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = getPluginManager().getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  result.setAuName(au.getName());
+	} else {
+	  result.setAuName(auId);
+	}
 
 	mismatchedChildren.add(result);
       }
 
       return mismatchedChildren;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the publishers for the Archival Units in the database with
+   * multiple publishers.
+   * 
+   * @return a List<KeyValueListPair> with the publishers keyed by the Archival
+   *         Unit name.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<KeyValueListPair> getAuNamesWithMultiplePublishers()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getAuNamesWithMultiplePublishers(): ";
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+      List<KeyValueListPair> results = new ArrayList<KeyValueListPair>();
+
+      // Get the publishers linked to the Archival Units.
+      Map<String, Collection<String>> ausPublishers =
+	  getMetadataManager().getAuNamesWithMultiplePublishers();
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ausPublishers.size() = "
+	  + ausPublishers.size());
+
+      // Check whether there are results to display.
+      if (ausPublishers.size() > 0) {
+        // Yes: Loop through the Archival Unit names.
+        for (String auName : ausPublishers.keySet()) {
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auName = " + auName);
+
+          ArrayList<String> publishers = new ArrayList<String>();
+
+          for (String publisher : ausPublishers.get(auName)) {
+            if (log.isDebug3())
+              log.debug3(DEBUG_HEADER + "publisher = " + publisher);
+            publishers.add(publisher);
+          }
+
+          results.add(new KeyValueListPair(auName, publishers));
+        }
+      }
+
+      return results;
     } catch (Exception e) {
       throw new LockssWebServicesFault(e);
     }
@@ -627,5 +712,14 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
   private MetadataManager getMetadataManager() {
     return (MetadataManager) LockssDaemon
 	.getManager(LockssDaemon.METADATA_MANAGER);
+  }
+
+  /**
+   * Provides the plugin manager.
+   * 
+   * @return a PluginManager with the plugin manager.
+   */
+  private PluginManager getPluginManager() {
+    return (PluginManager) LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
   }
 }

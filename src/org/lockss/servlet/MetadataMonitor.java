@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: MetadataMonitor.java 44257 2015-09-24 22:08:54Z fergaloy-sf $
  */
 
 /*
@@ -133,6 +133,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the children whose parents are of the wrong type";
   private static final String LIST_MISMATCHED_PARENT_TO_CHILDREN_HEADER =
       "Children Mismatched To Parents";
+  private static final String LIST_MULTIPLE_PUBLISHER_AUS_LINK =
+      "Archival Units With Multiple Publishers";
+  private static final String LIST_MULTIPLE_PUBLISHER_AUS_ACTION =
+      "listMultiplePublisherAus";
+  private static final String LIST_MULTIPLE_PUBLISHER_AUS_HELP =
+      "Lists the names of Archival Units with more than one publisher";
+  private static final String LIST_MULTIPLE_PUBLISHER_AUS_HEADER =
+      "Archival Units With Multiple Publishers";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -194,6 +202,8 @@ public class MetadataMonitor extends LockssServlet {
 	listUnknownProviderAus();
       } else if (LIST_MISMATCHED_PARENT_TO_CHILDREN_ACTION.equals(action)) {
 	listMismatchedParentToChildren();
+      } else if (LIST_MULTIPLE_PUBLISHER_AUS_ACTION.equals(action)) {
+	listMultiplePublisherAus();
       } else {
 	displayMainPage();
       }
@@ -282,6 +292,12 @@ public class MetadataMonitor extends LockssServlet {
 	LIST_MISMATCHED_PARENT_TO_CHILDREN_LINK,
 	ACTION + LIST_MISMATCHED_PARENT_TO_CHILDREN_ACTION,
 	LIST_MISMATCHED_PARENT_TO_CHILDREN_HELP));
+
+    // List the Archival Units with multiple publishers.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_MULTIPLE_PUBLISHER_AUS_LINK,
+	ACTION + LIST_MULTIPLE_PUBLISHER_AUS_ACTION,
+	LIST_MULTIPLE_PUBLISHER_AUS_HELP));
 
     return list.iterator();
   }
@@ -1029,7 +1045,7 @@ public class MetadataMonitor extends LockssServlet {
     results1.newCell("align=\"center\" class=\"colhead\"");
     results1.add("Parent Type");
     results1.newCell("align=\"center\" class=\"colhead\"");
-    results1.add("AU Key");
+    results1.add("Archival Unit Name");
 
     // Get the journal articles not linked to journals.
     Collection<Map<String, String>> mismatchedArticles =
@@ -1052,7 +1068,19 @@ public class MetadataMonitor extends LockssServlet {
 	results1.newCell("align=\"center\"");
 	results1.add(articleData.get("col3"));
 	results1.newCell("align=\"center\"");
-	results1.add(articleData.get("col4"));
+
+	String auId = PluginManager.generateAuId(articleData.get("col5"),
+	    articleData.get("col4"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results1.add(au.getName());
+	} else {
+	  results1.add(auId);
+	}
       }
     } else {
       // No.
@@ -1074,7 +1102,7 @@ public class MetadataMonitor extends LockssServlet {
     results2.newCell("align=\"center\" class=\"colhead\"");
     results2.add("Parent Type");
     results2.newCell("align=\"center\" class=\"colhead\"");
-    results2.add("AU Key");
+    results2.add("Archival Unit Name");
 
     // Get the book chapters not linked to books or book series.
     Collection<Map<String, String>> mismatchedChapters =
@@ -1097,7 +1125,19 @@ public class MetadataMonitor extends LockssServlet {
 	results2.newCell("align=\"center\"");
 	results2.add(chapterData.get("col3"));
 	results2.newCell("align=\"center\"");
-	results2.add(chapterData.get("col4"));
+
+	String auId = PluginManager.generateAuId(chapterData.get("col5"),
+	    chapterData.get("col4"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results2.add(au.getName());
+	} else {
+	  results2.add(auId);
+	}
       }
     } else {
       // No.
@@ -1119,7 +1159,7 @@ public class MetadataMonitor extends LockssServlet {
     results3.newCell("align=\"center\" class=\"colhead\"");
     results3.add("Parent Type");
     results3.newCell("align=\"center\" class=\"colhead\"");
-    results3.add("AU Key");
+    results3.add("Archival Unit Name");
 
     // Get the book volumes not linked to books or book series.
     Collection<Map<String, String>> mismatchedVolumes =
@@ -1142,7 +1182,19 @@ public class MetadataMonitor extends LockssServlet {
 	results3.newCell("align=\"center\"");
 	results3.add(volumeData.get("col3"));
 	results3.newCell("align=\"center\"");
-	results3.add(volumeData.get("col4"));
+
+	String auId = PluginManager.generateAuId(volumeData.get("col5"),
+	    volumeData.get("col4"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results3.add(au.getName());
+	} else {
+	  results3.add(auId);
+	}
       }
     } else {
       // No.
@@ -1156,6 +1208,67 @@ public class MetadataMonitor extends LockssServlet {
 
     makeTablePage(LIST_MISMATCHED_PARENT_TO_CHILDREN_HEADER, results1, results2,
 	results3);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the publisher for the Archival Units in the database with multiple
+   * publishers.
+   * 
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listMultiplePublisherAus() throws DbException, IOException {
+    final String DEBUG_HEADER = "listMultiplePublisherAus(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the results table.
+    Table results = new Table(0, attributes);
+    results.newRow();
+    results.newCell("align=\"right\" class=\"colhead\"");
+    results.add("Archival Unit Name");
+    results.newCell("align=\"left\" class=\"colhead\"");
+    results.add("Publishers");
+
+    // The Archival Units that have multiple publishers, sorted by name.
+    Map<String, Collection<String>> ausToList =
+	mdManager.getAuNamesWithMultiplePublishers();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "ausToList.size() = " + ausToList.size());
+
+    // Check whether there are results to display.
+    if (ausToList.size() > 0) {
+      // Yes: Loop through the Archival Units to be listed.
+      for (String auName : ausToList.keySet()) {
+	results.newRow();
+	results.newCell("align=\"right\"");
+	results.add(auName);
+	results.newCell("align=\"left\"");
+      
+	Table publishers = new Table(1, attributes);
+
+	for (String publisher : ausToList.get(auName)) {
+	  publishers.newRow();
+	  publishers.newCell("align=\"left\"");
+	  publishers.add(publisher);
+	}
+
+	results.add(publishers);
+      }
+    } else {
+      // No.
+      results.newRow();
+      results.newCell();
+      results.add("");
+      results.newRow();
+      results.newCell("colspan=\"2\" align=\"center\"");
+      results.add("No Archival Units are linked to more than one publisher");
+    }
+
+    makeTablePage(LIST_MULTIPLE_PUBLISHER_AUS_HEADER, results);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

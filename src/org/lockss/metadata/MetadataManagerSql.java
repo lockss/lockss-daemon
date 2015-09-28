@@ -1067,12 +1067,14 @@ public class MetadataManagerSql {
   // Query to retrieve all the journal articles in the database whose parent
   // is not a journal.
   private static final String GET_MISMATCHED_PARENT_JOURNAL_ARTICLES_QUERY =
-	"(select min1." + NAME_COLUMN + " as \"col1\""
+	"select min1." + NAME_COLUMN + " as \"col1\""
 	+ ", min2." + NAME_COLUMN + " as \"col2\""
 	+ ", mit." + TYPE_NAME_COLUMN + " as \"col3\""
 	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ ", pl." + PLUGIN_ID_COLUMN + " as \"col5\""
 	+ " from " + MD_ITEM_TYPE_TABLE + " mit"
 	+ ", " + AU_TABLE
+	+ ", " + PLUGIN_TABLE + " pl"
 	+ ", " + AU_MD_TABLE + " am"
 	+ ", " + MD_ITEM_TABLE + " mi1"
 	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
@@ -1087,6 +1089,7 @@ public class MetadataManagerSql {
 	+ " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
 	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
 	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
 	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5"
 	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 4"
 	+ " union "
@@ -1094,7 +1097,9 @@ public class MetadataManagerSql {
 	+ ", '' as \"col2\""
 	+ ", '' as \"col3\""
 	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ ", pl." + PLUGIN_ID_COLUMN + " as \"col5\""
 	+ " from " + AU_TABLE
+	+ ", " + PLUGIN_TABLE + " pl"
 	+ ", " + AU_MD_TABLE + " am"
 	+ ", " + MD_ITEM_TABLE + " mi1"
 	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
@@ -1103,18 +1108,21 @@ public class MetadataManagerSql {
 	+ " where mi1." + PARENT_SEQ_COLUMN + " is null"
 	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
 	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
-	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5)"
-	+ " order by \"col4\", \"col2\", \"col1\"";
+	+ " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5"
+	+ " order by \"col5\", \"col4\", \"col2\", \"col1\"";
 
   // Query to retrieve all the book chapters in the database whose parent is not
   // a book nor a book series.
   private static final String GET_MISMATCHED_PARENT_BOOK_CHAPTERS_QUERY =
-	"(select min1." + NAME_COLUMN + " as \"col1\""
+	"select min1." + NAME_COLUMN + " as \"col1\""
 	+ ", min2." + NAME_COLUMN + " as \"col2\""
 	+ ", mit." + TYPE_NAME_COLUMN + " as \"col3\""
 	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ ", pl." + PLUGIN_ID_COLUMN + " as \"col5\""
 	+ " from " + MD_ITEM_TYPE_TABLE + " mit"
 	+ ", " + AU_TABLE
+	+ ", " + PLUGIN_TABLE + " pl"
 	+ ", " + AU_MD_TABLE + " am"
 	+ ", " + MD_ITEM_TABLE + " mi1"
 	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
@@ -1129,6 +1137,7 @@ public class MetadataManagerSql {
 	+ " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
 	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
 	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
 	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3"
 	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 2"
 	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 1"
@@ -1137,7 +1146,9 @@ public class MetadataManagerSql {
 	+ ", '' as \"col2\""
 	+ ", '' as \"col3\""
 	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ ", pl." + PLUGIN_ID_COLUMN + " as \"col5\""
 	+ " from " + AU_TABLE
+	+ ", " + PLUGIN_TABLE + " pl"
 	+ ", " + AU_MD_TABLE + " am"
 	+ ", " + MD_ITEM_TABLE + " mi1"
 	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
@@ -1146,8 +1157,9 @@ public class MetadataManagerSql {
 	+ " where mi1." + PARENT_SEQ_COLUMN + " is null"
 	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
 	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
-	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3)"
-	+ " order by \"col4\", \"col2\", \"col1\"";
+	+ " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3"
+	+ " order by \"col5\", \"col4\", \"col2\", \"col1\"";
 
   // Query to retrieve all the book volumes in the database whose parent is not
   // a book nor a book series.
@@ -1156,8 +1168,10 @@ public class MetadataManagerSql {
 	+ ", min2." + NAME_COLUMN + " as \"col2\""
 	+ ", mit." + TYPE_NAME_COLUMN + " as \"col3\""
 	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ ", pl." + PLUGIN_ID_COLUMN + " as \"col5\""
 	+ " from " + MD_ITEM_TYPE_TABLE + " mit"
 	+ ", " + AU_TABLE
+	+ ", " + PLUGIN_TABLE + " pl"
 	+ ", " + AU_MD_TABLE + " am"
 	+ ", " + MD_ITEM_TABLE + " mi1"
 	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
@@ -1172,6 +1186,7 @@ public class MetadataManagerSql {
 	+ " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
 	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
 	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+	+ " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
 	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6"
 	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 2"
 	+ " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN + " != 1"
@@ -1180,7 +1195,9 @@ public class MetadataManagerSql {
 	+ ", '' as \"col2\""
 	+ ", '' as \"col3\""
 	+ ", au." + AU_KEY_COLUMN + " as \"col4\""
+	+ ", pl." + PLUGIN_ID_COLUMN + " as \"col5\""
 	+ " from " + AU_TABLE
+	+ ", " + PLUGIN_TABLE + " pl"
 	+ ", " + AU_MD_TABLE + " am"
 	+ ", " + MD_ITEM_TABLE + " mi1"
 	+ " left outer join " + MD_ITEM_NAME_TABLE + " min1"
@@ -1189,8 +1206,47 @@ public class MetadataManagerSql {
 	+ " where mi1." + PARENT_SEQ_COLUMN + " is null"
 	+ " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
 	+ " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
-	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6)"
-	+ " order by \"col4\", \"col2\", \"col1\"";
+	+ " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+	+ " and mi1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6"
+	+ " order by \"col5\", \"col4\", \"col2\", \"col1\"";
+
+  // Query to retrieve all the different publishers of all the Archival Units
+  // with multiple publishers.
+  private static final String GET_AUS_MULTIPLE_PUBLISHERS_QUERY = "select "
+      + "distinct pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", pr." + PUBLISHER_NAME_COLUMN
+      + " from " + PLUGIN_TABLE + " pl"
+      + ", " + AU_TABLE
+      + ", " + PUBLISHER_TABLE + " pr"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + " where pl." + PLUGIN_SEQ_COLUMN + " = au." + PLUGIN_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + PARENT_SEQ_COLUMN + " = pn." + MD_ITEM_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " in ("
+      + " select subq." + AU_SEQ_COLUMN
+      + " from ("
+      + "select distinct au." + AU_SEQ_COLUMN
+      + ", pr." + PUBLISHER_SEQ_COLUMN
+      + " from " + AU_TABLE
+      + ", " + PUBLISHER_TABLE + " pr"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + MD_ITEM_TABLE + " m"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + " where au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + AU_MD_SEQ_COLUMN + " = m." + AU_MD_SEQ_COLUMN
+      + " and m." + PARENT_SEQ_COLUMN + " = pn." + MD_ITEM_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + AU_SEQ_COLUMN
+      + " having count(subq." + AU_SEQ_COLUMN + ") > 1)"
+      + " order by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", pr." + PUBLISHER_NAME_COLUMN;
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -5698,6 +5754,11 @@ public class MetadataManagerSql {
 
 	mismatchedChild.put("col4", col4);
 
+	String col5 = resultSet.getString("col5");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col5 = " + col5);
+
+	mismatchedChild.put("col5", col5);
+
 	mismatchedChildren.add(mismatchedChild);
       }
     } catch (SQLException sqle) {
@@ -5713,5 +5774,104 @@ public class MetadataManagerSql {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER
 	+ "mismatchedChildren.size() = " + mismatchedChildren.size());
     return mismatchedChildren;
+  }
+
+  /**
+   * Provides the publishers linked to the Archival Unit identifier for the
+   * Archival Units in the database with multiple publishers.
+   * 
+   * @return a Map<String, Collection<String>> with the publishers keyed by the
+   *         Archival Unit identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getAuIdsWithMultiplePublishers()
+      throws DbException {
+    final String DEBUG_HEADER = "getAuIdsWithMultiplePublishers(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> ausPublishers = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the Archival Unit publishers.
+      ausPublishers = getAuIdsWithMultiplePublishers(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ausPublishers.size() = "
+	+ ausPublishers.size());
+    return ausPublishers;
+  }
+
+  /**
+   * Provides the publishers linked to the Archival Unit identifier for the
+   * Archival Units in the database with multiple publishers.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Map<String, Collection<String>> with the publishers keyed by the
+   *         Archival Unit identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getAuIdsWithMultiplePublishers(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getAuIdsWithMultiplePublishers(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> ausPublishers =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousAuId = null;
+
+      // Get the Archival Unit publishers.
+      stmt =
+	  dbManager.prepareStatement(conn, GET_AUS_MULTIPLE_PUBLISHERS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the Archival Unit publishers. 
+      while (resultSet.next()) {
+	String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	String auKey = resultSet.getString(AU_KEY_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	String auId = PluginManager.generateAuId(pluginId, auKey);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	String publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	if (auId.equals(previousAuId)) {
+	  ausPublishers.get(auId).add(publisherName);
+	} else {
+	  Collection<String> auPublishers = new ArrayList<String>();
+	  auPublishers.add(publisherName);
+	  ausPublishers.put(auId, auPublishers);
+	  previousAuId = auId;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the Archival Units publishers";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_AUS_MULTIPLE_PUBLISHERS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ausPublishers.size() = "
+	+ ausPublishers.size());
+    return ausPublishers;
   }
 }

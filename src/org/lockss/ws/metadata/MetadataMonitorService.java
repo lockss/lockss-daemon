@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: MetadataMonitorService.java 44257 2015-09-24 22:08:54Z fergaloy-sf $
  */
 
 /*
@@ -203,5 +203,17 @@ public interface MetadataMonitorService {
    */
   @WebMethod
   List<MismatchedMetadataChildWsResult> getMismatchedParentBookVolumes()
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the publishers for the Archival Units in the database with
+   * multiple publishers.
+   * 
+   * @return a List<KeyValueListPair> with the publishers keyed by the Archival
+   *         Unit name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<KeyValueListPair> getAuNamesWithMultiplePublishers()
       throws LockssWebServicesFault;
 }
