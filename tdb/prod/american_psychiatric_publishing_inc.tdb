@@ -22,7 +22,7 @@
       {
         
       param[base_url] = http://ajp.psychiatryonline.org/
-      param[resource_id] = 13
+      param[journal_id] = ajp
       comment[0] = content starts from 1844 to current
 
       au < doNotProcess ; 1997 ; The American Journal of Psychiatry Volume 154 ; 1997 >
@@ -60,7 +60,7 @@
 
       {
       param[base_url] = http://focus.psychiatryonline.org/
-      param[resource_id] = 21
+      param[journal_id] = foc
 
       au < doNotProcess ; 2003 ; Focus Volume 1 ; 2003 >
       au < doNotProcess ; 2004 ; Focus Volume 2 ; 2004 >
@@ -90,7 +90,7 @@
 
       {
       param[base_url] = http://neuro.psychiatryonline.org/
-      param[resource_id] = 62
+      param[journal_id] = jnp
       comment[0] = content starts from 1989 to current
 
       au < doNotProcess ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 1998 >
@@ -126,7 +126,7 @@
 
       {
       param[base_url] = http://ps.psychiatryonline.org/
-      param[resource_id] = 18
+      param[journal_id] = ps
       comment[0] = content starts from year 1950 to current
 
       au < doNotProcess ; 1998 ; Psychiatric Services Volume 49 ; 1998 >
