@@ -1290,7 +1290,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 ; 4 >
   
     }
   
@@ -1326,7 +1326,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; IZA Journal of Migration Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; IZA Journal of Migration Volume 4 ; 4 >
   
     }
   
@@ -1377,7 +1377,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
-        au < testing ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 >
   
     }
   
