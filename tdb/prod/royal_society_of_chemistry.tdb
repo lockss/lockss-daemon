@@ -508,8 +508,8 @@
       param[base_url2] = http://www.rsc.org/
       comment[notReady] = All manifest pages link to same content
       
-      au < manifest ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
-      au < manifest ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
+      au < ready ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
+      au < ready ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
       au < manifest ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
       au < manifest ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
       au < manifest ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 >
@@ -578,13 +578,13 @@
       au < released ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 >
       au < released ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 >
 
-      au < manifest ; 2014 ; Faraday Discussions Volume 168 ; 168 ; 2014 >
+      au < ready ; 2014 ; Faraday Discussions Volume 168 ; 168 ; 2014 >
       au < manifest ; 2014 ; Faraday Discussions Volume 169 ; 169 ; 2014 >
-      au < manifest ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 >
-      au < manifest ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 >
-      au < manifest ; 2014 ; Faraday Discussions Volume 172 ; 172 ; 2014 >
+      au < ready ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 >
+      au < ready ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 >
+      au < ready ; 2014 ; Faraday Discussions Volume 172 ; 172 ; 2014 >
       au < manifest ; 2014 ; Faraday Discussions Volume 173 ; 173 ; 2014 >
-      au < manifest ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 >
+      au < ready ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 >
       au < manifest ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 >
 
       au < manifest ; 2015 ; Faraday Discussions Volume 176 ; 176 ; 2015 >
