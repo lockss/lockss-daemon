@@ -1339,7 +1339,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 13 ; 13 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 14 ; 14 >
-      au < crawling ; exists ; 2014 ; International Journal of Business Information Systems Volume 15 ; 15 >
+      au < finished ; manifest ; 2014 ; International Journal of Business Information Systems Volume 15 ; 15 >
       au < finished ; finished ; 2014 ; International Journal of Business Information Systems Volume 16 ; 16 >
       au < crawling ; exists ; 2014 ; International Journal of Business Information Systems Volume 17 ; 17 >
       au < crawling ; exists ; 2015 ; International Journal of Business Information Systems Volume 18 ; 18 >
@@ -3715,7 +3715,7 @@
 
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Factors and Ergonomics Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Human Factors and Ergonomics Volume 2 ; 2 >
-      au < crawling ; exists ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
+      au < finished ; manifest ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; International Journal of Human Factors and Ergonomics Volume 4 ; 4 >
 
     }
@@ -3763,7 +3763,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Human Resources Development and Management Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Resources Development and Management Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Human Resources Development and Management Volume 13 ; 13 >
-      au < crawling ; exists ; 2014 ; International Journal of Human Resources Development and Management Volume 14 ; 14 >
+      au < finished ; manifest ; 2014 ; International Journal of Human Resources Development and Management Volume 14 ; 14 >
       au < crawling ; exists ; 2015 ; International Journal of Human Resources Development and Management Volume 15 ; 15 >
 
     }
@@ -6185,7 +6185,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Pluralism and Economics Education Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Pluralism and Economics Education Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Pluralism and Economics Education Volume 4 ; 4 >
-      au < crawling ; exists ; 2014 ; International Journal of Pluralism and Economics Education Volume 5 ; 5 >
+      au < finished ; manifest ; 2014 ; International Journal of Pluralism and Economics Education Volume 5 ; 5 >
       au < crawling ; exists ; 2015 ; International Journal of Pluralism and Economics Education Volume 6 ; 6 >
 
     }
@@ -7944,7 +7944,7 @@
 
       param[journal_id] = ijbeam
 
-      au < crawling ; exists ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
+      au < finished ; manifest ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
 
     }
