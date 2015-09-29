@@ -1,0 +1,67 @@
+{
+
+  publisher <
+    name = Notre Dame Law School ;
+    info[contract] = 2015 ;
+    info[tester] = 5
+  >
+  
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+  
+  {
+  
+    title <
+      name = Journal of Legislation ;
+      issn = 0146-9584 ;
+      issnl = 0146-9584
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://scholarship.law.nd.edu/
+    param[journal_abbr] = jleg
+    implicit < status ; status2 ; year ; name ; param[volume] >
+
+    au < exists ; exists ; 1974 ; Journal of Legislation Volume 1 ; 1 >
+    au < exists ; exists ; 1975 ; Journal of Legislation Volume 2 ; 2 >
+    au < exists ; exists ; 1976 ; Journal of Legislation Volume 3 ; 3 >
+    au < exists ; exists ; 1977 ; Journal of Legislation Volume 4 ; 4 >
+    au < exists ; exists ; 1978 ; Journal of Legislation Volume 5 ; 5 >
+    au < exists ; exists ; 1979 ; Journal of Legislation Volume 6 ; 6 >
+    au < exists ; exists ; 1980 ; Journal of Legislation Volume 7 ; 7 >
+    au < exists ; exists ; 1981 ; Journal of Legislation Volume 8 ; 8 >
+    au < exists ; exists ; 1982 ; Journal of Legislation Volume 9 ; 9 >
+    au < exists ; exists ; 1983 ; Journal of Legislation Volume 10 ; 10 >
+    au < exists ; exists ; 1984 ; Journal of Legislation Volume 11 ; 11 >
+    au < exists ; exists ; 1985 ; Journal of Legislation Volume 12 ; 12 >
+    au < exists ; exists ; 1986 ; Journal of Legislation Volume 13 ; 13 >
+    au < exists ; exists ; 1987 ; Journal of Legislation Volume 14 ; 14 >
+    au < exists ; exists ; 1989 ; Journal of Legislation Volume 15 ; 15 >
+    au < exists ; exists ; 1990 ; Journal of Legislation Volume 16 ; 16 >
+    au < exists ; exists ; 1991 ; Journal of Legislation Volume 17 ; 17 >
+    au < exists ; exists ; 1992 ; Journal of Legislation Volume 18 ; 18 >
+    au < exists ; exists ; 1993 ; Journal of Legislation Volume 19 ; 19 >
+    au < exists ; exists ; 1994 ; Journal of Legislation Volume 20 ; 20 >
+    au < exists ; exists ; 1995 ; Journal of Legislation Volume 21 ; 21 >
+    au < exists ; exists ; 1996 ; Journal of Legislation Volume 22 ; 22 >
+    au < exists ; exists ; 1997 ; Journal of Legislation Volume 23 ; 23 >
+    au < exists ; exists ; 1998 ; Journal of Legislation Volume 24 ; 24 >
+    au < exists ; exists ; 1999 ; Journal of Legislation Volume 25 ; 25 >
+    au < exists ; exists ; 2000 ; Journal of Legislation Volume 26 ; 26 >
+    au < exists ; exists ; 2001 ; Journal of Legislation Volume 27 ; 27 >
+    au < exists ; exists ; 2002 ; Journal of Legislation Volume 28 ; 28 >
+    au < exists ; exists ; 2003 ; Journal of Legislation Volume 29 ; 29 >
+    au < exists ; exists ; 2004 ; Journal of Legislation Volume 30 ; 30 >
+    au < exists ; exists ; 2005 ; Journal of Legislation Volume 31 ; 31 >
+    au < exists ; exists ; 2006 ; Journal of Legislation Volume 32 ; 32 >
+    au < exists ; exists ; 2007 ; Journal of Legislation Volume 33 ; 33 >
+    au < exists ; exists ; 2008 ; Journal of Legislation Volume 34 ; 34 >
+    au < exists ; exists ; 2009 ; Journal of Legislation Volume 35 ; 35 >
+    au < exists ; exists ; 2010 ; Journal of Legislation Volume 36 ; 36 >
+    au < exists ; exists ; 2011 ; Journal of Legislation Volume 37 ; 37 >
+    au < exists ; exists ; 2012 ; Journal of Legislation Volume 38 ; 38 >
+    au < exists ; exists ; 2013 ; Journal of Legislation Volume 39 ; 39 >
+    au < exists ; exists ; 2014 ; Journal of Legislation Volume 40 ; 40 >
+
+  }
+
+}
