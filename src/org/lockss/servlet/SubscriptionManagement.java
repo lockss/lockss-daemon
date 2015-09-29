@@ -1006,6 +1006,7 @@ public class SubscriptionManagement extends LockssServlet {
 
     // Handle session expiration.
     if (totalSubscriptionSetting == null
+	&& (publishers == null || publishers.size() == 0)
 	&& (publications == null || publications.size() == 0)) {
       status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
@@ -1051,7 +1052,8 @@ public class SubscriptionManagement extends LockssServlet {
       Collection<Subscription> subscriptions = new ArrayList<Subscription>();
 
       if (totalSubscriptionSetting == null
-	  && updatedTotalSubscriptionSetting == null) {
+	  && updatedTotalSubscriptionSetting == null
+	  && publications != null) {
 	// Loop through all the publications presented in the form.
 	for (SerialPublication publication : publications) {
 	  // Skip publications for publisher subscriptions.
@@ -1136,6 +1138,11 @@ public class SubscriptionManagement extends LockssServlet {
   private Map<String, PublisherSubscription> buildPublisherSubscriptionMap(
       Map<String, Publisher> publishers, Map<String,String> parameterMap) {
     final String DEBUG_HEADER = "buildPublisherSubscriptionMap(): ";
+    if (publishers == null) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publishers = null");
+      return new HashMap<String, PublisherSubscription>();
+    }
+
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "publishers.size() = " + publishers.size());
 
@@ -2241,6 +2248,7 @@ public class SubscriptionManagement extends LockssServlet {
 
     // Handle session expiration.
     if (totalSubscriptionSetting == null
+	&& (subscribedPublishers == null || subscribedPublishers.size() == 0)
 	&& (subscriptions == null || subscriptions.size() == 0)) {
       status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
@@ -2285,46 +2293,53 @@ public class SubscriptionManagement extends LockssServlet {
 
       if (totalSubscriptionSetting == null
 	  && updatedTotalSubscriptionSetting == null) {
-	// Loop through all the publisher subscriptions presented in the form.
-	for (String publisherName : subscribedPublishers.keySet()) {
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+	// Check whether there were any subscribed publishers originally in the
+	// form.
+	if (subscribedPublishers != null) {
+	  // Yes: Loop through all the publisher subscriptions presented in the
+	  // form.
+	  for (String publisherName : subscribedPublishers.keySet()) {
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
-	  PublisherSubscription publisherSubscription =
-	      subscribedPublishers.get(publisherName);
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	      + "publisherSubscription = " + publisherSubscription);
+	    PublisherSubscription publisherSubscription =
+		subscribedPublishers.get(publisherName);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "publisherSubscription = " + publisherSubscription);
 
-	  Boolean oldPublisherSubscriptionSetting =
-	      publisherSubscription.getSubscribed();
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	      + "oldPublisherSubscriptionSetting = "
-	      + oldPublisherSubscriptionSetting);
+	    Boolean oldPublisherSubscriptionSetting =
+		publisherSubscription.getSubscribed();
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "oldPublisherSubscriptionSetting = "
+		+ oldPublisherSubscriptionSetting);
 
-	  Boolean newPublisherSubscriptionSetting = getTriBoxValue(parameterMap,
-	      PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX
-	      + publisherSubscription.getPublisher().getPublisherNumber());
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	      + "newPublisherSubscriptionSetting = "
-	      + newPublisherSubscriptionSetting);
+	    Boolean newPublisherSubscriptionSetting = getTriBoxValue(
+		parameterMap,
+		PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX
+		+ publisherSubscription.getPublisher().getPublisherNumber());
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "newPublisherSubscriptionSetting = "
+		+ newPublisherSubscriptionSetting);
 
-	  publisherSubscription.setSubscribed(newPublisherSubscriptionSetting);
+	    publisherSubscription
+	    .setSubscribed(newPublisherSubscriptionSetting);
 
-	  // Get an indication of whether the publisher subscription has been
-	  // changed.
-	  if (oldPublisherSubscriptionSetting == null) {
-	    subChanged = !(newPublisherSubscriptionSetting == null);
-	  } else {
-	    subChanged = !oldPublisherSubscriptionSetting
-		.equals(newPublisherSubscriptionSetting);
-	  }
+	    // Get an indication of whether the publisher subscription has been
+	    // changed.
+	    if (oldPublisherSubscriptionSetting == null) {
+	      subChanged = !(newPublisherSubscriptionSetting == null);
+	    } else {
+	      subChanged = !oldPublisherSubscriptionSetting
+		  .equals(newPublisherSubscriptionSetting);
+	    }
 
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
 
-	  if (subChanged) {
-	    updatePublisherSubscriptions.put(publisherName,
-		publisherSubscription);
+	    if (subChanged) {
+	      updatePublisherSubscriptions.put(publisherName,
+		  publisherSubscription);
+	    }
 	  }
 	}
 
@@ -2332,31 +2347,35 @@ public class SubscriptionManagement extends LockssServlet {
 	    + "updatePublisherSubscriptions.size() = "
 	    + updatePublisherSubscriptions.size());
 
-	// Loop through all the subscriptions presented in the form.
-	for (Subscription subscription : subscriptions) {
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "subscription = " + subscription);
-
-	  String publisherName =
-	      subscription.getPublication().getPublisherName();
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
-
-	  if (subscribedPublishers.get(publisherName).getSubscribed() == null) {
-	    // Get an indication of whether the subscription has been changed.
-	    subChanged =
-		isSubscriptionUpdateNeeded(subscription, parameterMap, status);
+	// Check whether there were any subscriptions originally in the form.
+	if (subscriptions != null) {
+	  // Yes: Loop through all the subscriptions presented in the form.
+	  for (Subscription subscription : subscriptions) {
 	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+	      log.debug3(DEBUG_HEADER + "subscription = " + subscription);
 
-	    if (subChanged) {
-	      updateSubscriptions.add(subscription);
+	    String publisherName =
+		subscription.getPublication().getPublisherName();
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	    if (subscribedPublishers.get(publisherName).getSubscribed() ==
+		null) {
+	      // Get an indication of whether the subscription has been changed.
+	      subChanged = isSubscriptionUpdateNeeded(subscription,
+		  parameterMap, status);
+	      if (log.isDebug3())
+		log.debug3(DEBUG_HEADER + "subChanged = " + subChanged);
+
+	      if (subChanged) {
+		updateSubscriptions.add(subscription);
+	      }
+	    } else {
+	      if (log.isDebug3())
+		log.debug3(DEBUG_HEADER + "Ignored title subscription because "
+		    + "publisher subscription is "
+		    + subscribedPublishers.get(publisherName).getSubscribed());
 	    }
-	  } else {
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "Ignored title subscription because "
-		  + "publisher subscription is "
-		  + subscribedPublishers.get(publisherName).getSubscribed());
 	  }
 	}
 
