@@ -43,7 +43,7 @@
       param[journal_id] = aie
 
       au < superseded ; down ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 [superseded] ; 1 ; 2010 >
-      au < superseded ; down ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 [superseded] ; 2 ; 2011 >
+      au < superseded ; finished ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 [superseded] ; 2 ; 2011 >
       au < superseded ; down ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 [superseded] ; 3 ; 2012 >
     
     }
@@ -107,8 +107,8 @@
       comment[0] = includes supplements
 
       au < finished ; crawling ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; 2010 >
-      au < finished ; frozen ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < finished ; frozen ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < finished ; finished ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < finished ; finished ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
       au < crawling ; exists ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; 2013 >
       au < finished ; crawling ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 ; 2014 >
       au < manifest ; exists ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 ; 2015 >
@@ -151,8 +151,8 @@
     comment[0] = vol. 4 includes Supplements 1
 
     au < finished ; finished ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
-    au < finished ; crawling ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
-    au < finished ; frozen ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
+    au < finished ; finished ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
+    au < finished ; finished ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
     au < finished ; finished ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
@@ -321,7 +321,7 @@
     au < finished ; frozen ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
     au < finished ; frozen ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; 2010 >
     au < finished ; frozen ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
-    au < finished ; frozen ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
+    au < finished ; finished ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
     au < finished ; finished ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
     au < finished ; finished ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
     au < manifest ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
@@ -464,7 +464,7 @@
     au < finished ; crawling ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
     au < finished ; frozen ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < finished ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 >
-    au < finished ; frozen ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
+    au < finished ; finished ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
     au < finished ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
     au < crawling ; exists ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; 2013 >
     au < finished ; finished ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 >
@@ -540,14 +540,14 @@
       au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
       au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
       au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
-      au < finished ; frozen ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
-      au < finished ; frozen ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
-      au < finished ; frozen ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
-      au < finished ; frozen ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
-      au < finished ; frozen ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
+      au < finished ; finished ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
+      au < finished ; finished ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
+      au < finished ; finished ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
+      au < finished ; finished ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
+      au < finished ; finished ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
       au < finished ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
       au < finished ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
-      au < finished ; frozen ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
+      au < finished ; finished ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
       au < finished ; crawling ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 >
       au < finished ; finished ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 >
       au < ready ; exists ; 2015 ; Medical Education Online Volume 20 ; 20 ; 2015 >
@@ -582,15 +582,15 @@
     au < finished ; finished ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
     au < crawling ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
     au < finished ; crawling ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
-    au < finished ; frozen ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
+    au < finished ; finished ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
     au < finished ; frozen ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
-    au < finished ; frozen ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
+    au < finished ; finished ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
     au < finished ; frozen ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
     au < finished ; crawling ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
     au < finished ; frozen ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
     au < finished ; frozen ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
-    au < finished ; frozen ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
-    au < finished ; crawling ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
+    au < finished ; finished ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
+    au < finished ; finished ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
     au < finished ; finished ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
     au < finished ; finished ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
     au < manifest ; exists ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; 2015 >
@@ -626,7 +626,7 @@
     param[base_url] = http://www.pathobiologyofaging.net/
     param[journal_id] = pba
 
-    au < finished ; crawling ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < finished ; finished ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
     au < finished ; crawling ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; 2013 >
     au < finished ; finished ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; 2014 >
@@ -661,7 +661,7 @@
     au < crawling ; exists ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 >
     au < crawling ; exists ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 >
     au < crawling ; exists ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 >
-    au < finished ; crawling ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
+    au < finished ; finished ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
     au < crawling ; exists ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
     au < crawling ; exists ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 >
     au < crawling ; exists ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
@@ -704,7 +704,7 @@
     au < crawling ; exists ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ; 1999>
     au < crawling ; exists ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ; 2000>
     au < crawling ; exists ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ; 2001>
-    au < finished ; crawling ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 >
+    au < finished ; finished ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 >
     au < finished ; finished ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
     au < crawling ; exists ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; 2004 >
     au < finished ; finished ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
@@ -777,7 +777,7 @@
     param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
     param[journal_id] = snp
 
-    au < finished ; frozen ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < finished ; finished ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
     au < finished ; finished ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; 2013 >
     au < finished ; crawling ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 ; 2014 >
@@ -926,9 +926,9 @@
     param[base_url] = http://www.vulnerablegroupsandinclusion.net/
     param[journal_id] = vgi
 
-    au < finished ; frozen ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
+    au < finished ; finished ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
     au < finished ; frozen ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
-    au < finished ; frozen ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
+    au < finished ; finished ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
     au < finished ; finished ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
     au < ready ; exists ; 2015 ; Vulnerable Groups & Inclusion Volume 6 ; 6 ; 2015 >

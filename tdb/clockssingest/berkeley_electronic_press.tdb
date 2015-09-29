@@ -84,9 +84,9 @@
     comment[merged] = with 1534-5955, 1534-5971 and 1534-598X into 1555-0478 in 2007
 
     au < zapped ; finished ; 2001 ; Advances in Theoretical Economics Volume 1 ; 1 >
-    au < down ; frozen ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 >
+    au < down ; finished ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 >
     au < zapped ; finished ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 >
-    au < down ; crawling ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 >
+    au < down ; finished ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 >
     au < zapped ; finished ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 >
     au < zapped ; finished ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 >    
 
@@ -122,7 +122,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = asjcl
 
-    au < down ; crawling ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
+    au < down ; finished ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
     au < zapped ; finished ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
     au < zapped ; finished ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
     au < zapped ; finished ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
@@ -277,7 +277,7 @@
     au < zapped ; finished ; 2000 ; Business and Politics Volume 2 ; 2 >
     au < down ; crawling ; 2001 ; Business and Politics Volume 3 ; 3 >
     au < down ; frozen ; 2002 ; Business and Politics Volume 4 ; 4 >
-    au < down ; frozen ; 2003 ; Business and Politics Volume 5 ; 5 >
+    au < down ; finished ; 2003 ; Business and Politics Volume 5 ; 5 >
     au < zapped ; finished ; 2004 ; Business and Politics Volume 6 ; 6 >
     au < zapped ; finished ; 2005 ; Business and Politics Volume 7 ; 7 >
     au < down ; frozen ; 2006 ; Business and Politics Volume 8 ; 8 >
@@ -407,7 +407,7 @@
     au < down ; crawling ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
     au < zapped ; finished ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 >    
     au < zapped ; finished ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 >
-    au < down ; crawling ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
+    au < down ; finished ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
     au < zapped ; finished ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 > 
 
   }
@@ -463,8 +463,8 @@
     au < zapped ; finished ; 2002-2003 ; The Forum Volume 1 ; 1 >
     au < down ; crawling ; 2004 ; The Forum Volume 2 ; 2 >
     au < down ; crawling ; 2005-2006 ; The Forum Volume 3 ; 3 >
-    au < down ; crawling ; 2006 ; The Forum Volume 4 ; 4 >
-    au < down ; frozen ; 2007-2008 ; The Forum Volume 5 ; 5 >
+    au < down ; finished ; 2006 ; The Forum Volume 4 ; 4 >
+    au < down ; finished ; 2007-2008 ; The Forum Volume 5 ; 5 >
     au < zapped ; finished ; 2008 ; The Forum Volume 6 ; 6 >
     au < zapped ; finished ; 2009 ; The Forum Volume 7 ; 7 >
     au < zapped ; finished ; 2010 ; The Forum Volume 8 ; 8 >
@@ -567,15 +567,15 @@
 
     au < down ; crawling ; 2000 ; Global Economy Journal Volume 1 ; 1 >
     au < zapped ; finished ; 2001 ; Global Economy Journal Volume 2 ; 2 >
-    au < down ; frozen ; 2002 ; Global Economy Journal Volume 3 ; 3 >
+    au < down ; finished ; 2002 ; Global Economy Journal Volume 3 ; 3 >
     au < down ; crawling ; 2004 ; Global Economy Journal Volume 4 ; 4 >
     au < zapped ; finished ; 2005 ; Global Economy Journal Volume 5 ; 5 >
     au < down ; frozen ; 2006 ; Global Economy Journal Volume 6 ; 6 >
-    au < down ; frozen ; 2007 ; Global Economy Journal Volume 7 ; 7 >
+    au < down ; finished ; 2007 ; Global Economy Journal Volume 7 ; 7 >
     au < zapped ; finished ; 2008 ; Global Economy Journal Volume 8 ; 8 >
     au < zapped ; finished ; 2009 ; Global Economy Journal Volume 9 ; 9 >
     au < zapped ; finished ; 2010 ; Global Economy Journal Volume 10 ; 10 >
-    au < down ; crawling ; 2011 ; Global Economy Journal Volume 11 ; 11 >
+    au < down ; finished ; 2011 ; Global Economy Journal Volume 11 ; 11 >
 
   }
 
@@ -594,7 +594,7 @@
     au < zapped ; finished ; 2002 ; Global Jurist Volume 2 ; 2 >
     au < zapped ; finished ; 2003 ; Global Jurist Volume 3 ; 3 >
     au < zapped ; finished ; 2004 ; Global Jurist Volume 4 ; 4 >
-    au < down ; crawling ; 2005 ; Global Jurist Volume 5 ; 5 >
+    au < down ; finished ; 2005 ; Global Jurist Volume 5 ; 5 >
     au < zapped ; finished ; 2006 ; Global Jurist Volume 6 ; 6 >
     au < zapped ; finished ; 2007 ; Global Jurist Volume 7 ; 7 >
     au < zapped ; finished ; 2008 ; Global Jurist Volume 8 ; 8 >
@@ -658,9 +658,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijcre
 
-    au < down ; frozen ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
+    au < down ; finished ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
     au < down ; crawling ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 >
-    au < down ; crawling ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
+    au < down ; finished ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
     au < zapped ; finished ; 2006 ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 >
     au < zapped ; finished ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
     au < zapped ; finished ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
@@ -685,7 +685,7 @@
     au < down ; frozen ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
     au < zapped ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
     au < down ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
-    au < down ; crawling ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
+    au < down ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
     au < zapped ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
     au < zapped ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
     au < zapped ; finished ; 2007 ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
@@ -707,13 +707,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijfe
 
-    au < down ; frozen ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
+    au < down ; finished ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
     au < down ; finished ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 >
     au < down ; finished ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 >
     au < zapped ; finished ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
     au < zapped ; finished ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
     au < zapped ; finished ; 2010 ; International Journal of Food Engineering Volume 6 ; 6 >
-    au < down ; crawling ; 2011 ; International Journal of Food Engineering Volume 7 ; 7 >
+    au < down ; finished ; 2011 ; International Journal of Food Engineering Volume 7 ; 7 >
 
   }
 
@@ -730,7 +730,7 @@
 
     au < down ; crawling ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
     au < zapped ; finished ; 2005 ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
-    au < down ; crawling ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
+    au < down ; finished ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
     au < zapped ; finished ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
     au < zapped ; finished ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
     au < zapped ; finished ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
@@ -758,7 +758,7 @@
     au < zapped ; finished ; 2001 ; Journal des Economistes et des Etudes Humaines Volume 11 ; 11 >
     au < zapped ; finished ; 2002 ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 >
     au < zapped ; finished ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 >    
-    au < down ; frozen ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 >
+    au < down ; finished ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 >
     au < zapped ; finished ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 >    
     au < down ; crawling ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 >
     au < zapped ; finished ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 >
@@ -778,13 +778,13 @@
 
     au < zapped ; finished ; 2003 ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
     au < zapped ; finished ; 2004 ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 >
-    au < down ; crawling ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
-    au < down ; crawling ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
+    au < down ; finished ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
+    au < down ; finished ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
     au < down ; crawling ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
     au < zapped ; finished ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
     au < zapped ; finished ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
     au < zapped ; finished ; 2010 ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 >
-    au < down ; crawling ; 2011 ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 >
+    au < down ; finished ; 2011 ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 >
 
   }
 
@@ -880,7 +880,7 @@
 
     au < down ; crawling ; 2004 ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 >
     au < down ; finished ; 2005 ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 >
-    au < down ; crawling ; 2006 ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 >
+    au < down ; finished ; 2006 ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 >
     au < zapped ; finished ; 2007 ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 >
     au < zapped ; finished ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
     au < zapped ; finished ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
@@ -936,7 +936,7 @@
     au < zapped ; finished ; 2004 ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 >
     au < zapped ; finished ; 2005 ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 >
     au < down ; crawling ; 2006 ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 >
-    au < down ; frozen ; 2007 ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 >
+    au < down ; finished ; 2007 ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 >
     au < zapped ; finished ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
     au < zapped ; finished ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
     au < zapped ; finished ; 2010 ; Journal of Homeland Security and Emergency Management Volume 7 ; 7 >
@@ -960,7 +960,7 @@
     au < zapped ; finished ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
     au < zapped ; finished ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
     au < zapped ; finished ; 2010 ; Journal of Imagery Research in Sport and Physical Activity Volume 5 ; 5 >
-    au < down ; frozen ; 2011 ; Journal of Imagery Research in Sport and Physical Activity Volume 6 ; 6 >
+    au < down ; finished ; 2011 ; Journal of Imagery Research in Sport and Physical Activity Volume 6 ; 6 >
 
   }
 
@@ -1022,12 +1022,12 @@
     au < down ; finished ; 1999 ; Journal of Student Affairs Research and Practice Volume 36 ; 36 >
     au < down ; finished ; 2000 ; Journal of Student Affairs Research and Practice Volume 37 ; 37 >
     au < down ; finished ; 2001 ; Journal of Student Affairs Research and Practice Volume 38 ; 38 >
-    au < down ; frozen ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 >
+    au < down ; finished ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 >
     au < down ; finished ; 2003 ; Journal of Student Affairs Research and Practice Volume 40 ; 40 >
     au < down ; finished ; 2004 ; Journal of Student Affairs Research and Practice Volume 41 ; 41 >
     au < down ; finished ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 >
     au < down ; finished ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 >
-    au < down ; frozen ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 >
+    au < down ; finished ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 >
     au < down ; finished ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 ; 45 >
     au < down ; finished ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 ; 46 >
     au < zapped ; finished ; 2010 ; Journal of Student Affairs Research and Practice Volume 47 ; 47 >
@@ -1081,7 +1081,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = lehr
 
-    au < down ; frozen ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 >
+    au < down ; finished ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 >
     au < zapped ; finished ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
     au < zapped ; finished ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
     au < zapped ; finished ; 2010 ; Law & Ethics of Human Rights Volume 4 ; 4 >
@@ -1160,10 +1160,10 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = njawhe
 
-    au < superseded ; down ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 [superseded] ; 1 >
-    au < superseded ; down ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 [superseded] ; 2 >
+    au < superseded ; finished ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 [superseded] ; 1 >
+    au < superseded ; finished ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 [superseded] ; 2 >
     au < zapped ; finished ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 [superseded] ; 3 >
-    au < superseded ; down ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 [superseded] ; 4 >
+    au < superseded ; finished ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 [superseded] ; 4 >
 
   }
 
@@ -1218,17 +1218,17 @@
 
     au < down ; finished ; 1993 ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
     au < zapped ; finished ; 1994 ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 >
-    au < down ; crawling ; 1995 ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 >
+    au < down ; finished ; 1995 ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 >
     au < zapped ; finished ; 1996 ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 >
-    au < down ; frozen ; 1999 ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 >
+    au < down ; finished ; 1999 ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 >
     au < zapped ; finished ; 2000 ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 >
     au < down ; finished ; 2001 ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 >
-    au < down ; frozen ; 2002 ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 >
+    au < down ; finished ; 2002 ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 >
     au < zapped ; finished ; 2003 ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 >
     au < down ; frozen ; 2004 ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 >
     au < zapped ; finished ; 2005 ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 >
     au < down ; finished ; 2006 ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 >
-    au < down ; frozen ; 2007 ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
+    au < down ; finished ; 2007 ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
     au < zapped ; finished ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
     au < zapped ; finished ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
     au < down ; frozen ; 2010 ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 >
@@ -1295,13 +1295,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rle
 
-    au < down ; crawling ; 2005 ; Review of Law & Economics Volume 1 ; 1 >
+    au < down ; finished ; 2005 ; Review of Law & Economics Volume 1 ; 1 >
     au < zapped ; finished ; 2006 ; Review of Law & Economics Volume 2 ; 2 >
     au < zapped ; finished ; 2007 ; Review of Law & Economics Volume 3 ; 3 >
     au < zapped ; finished ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
     au < zapped ; finished ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
     au < zapped ; finished ; 2010 ; Review of Law & Economics Volume 6 ; 6 >
-    au < down ; frozen ; 2011 ; Review of Law & Economics Volume 7 ; 7 >
+    au < down ; finished ; 2011 ; Review of Law & Economics Volume 7 ; 7 >
 
   }
 
@@ -1318,8 +1318,8 @@
 
     au < zapped ; finished ; 2003 ; Review of Marketing Science Volume 1 ; 1 >
     au < down ; frozen ; 2004 ; Review of Marketing Science Volume 2 ; 2 >
-    au < down ; crawling ; 2005 ; Review of Marketing Science Volume 3 ; 3 >
-    au < down ; frozen ; 2006 ; Review of Marketing Science Volume 4 ; 4 >
+    au < down ; finished ; 2005 ; Review of Marketing Science Volume 3 ; 3 >
+    au < down ; finished ; 2006 ; Review of Marketing Science Volume 4 ; 4 >
     au < zapped ; finished ; 2007 ; Review of Marketing Science Volume 5 ; 5 >
     au < zapped ; finished ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
     au < zapped ; finished ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
@@ -1341,7 +1341,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rmeef
 
-    au < down ; crawling ; 2003 ; Review of Middle East Economics and Finance Volume 1 [BePress] ; 1 >
+    au < down ; finished ; 2003 ; Review of Middle East Economics and Finance Volume 1 [BePress] ; 1 >
     au < down ; finished ; 2004 ; Review of Middle East Economics and Finance Volume 2 [BePress] ; 2 >
     au < down ; finished ; 2005 ; Review of Middle East Economics and Finance Volume 3 [BePress] ; 3 >
     au < zapped ; finished ; 2008 ; Review of Middle East Economics and Finance Volume 4 [BePress] ; 4 >
@@ -1429,7 +1429,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = sagmb
 
-    au < down ; frozen ; 2002 ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
+    au < down ; finished ; 2002 ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
     au < zapped ; finished ; 2003 ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 >
     au < down ; finished ; 2004 ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 >
     au < down ; finished ; 2005 ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 >
@@ -1489,7 +1489,7 @@
     au < down ; finished ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
     au < zapped ; finished ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
     au < zapped ; finished ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
-    au < down ; frozen ; 2010 ; Studies in Ethics, Law, and Technology Volume 4 ; 4 >
+    au < down ; finished ; 2010 ; Studies in Ethics, Law, and Technology Volume 4 ; 4 >
     au < zapped ; finished ; 2011 ; Studies in Ethics, Law, and Technology Volume 5 ; 5 >
 
   }
@@ -1508,12 +1508,12 @@
     au < down ; crawling ; 1996 ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 >
     au < zapped ; finished ; 1997 ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 >
     au < zapped ; finished ; 1998 ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 >
-    au < down ; frozen ; 2000 ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 >
+    au < down ; finished ; 2000 ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 >
     au < zapped ; finished ; 2001 ; Studies in Nonlinear Dynamics & Econometrics Volume 5 ; 5 >
     au < down ; finished ; 2002-2003 ; Studies in Nonlinear Dynamics & Econometrics Volume 6 ; 6 >
     au < down ; crawling ; 2003 ; Studies in Nonlinear Dynamics & Econometrics Volume 7 ; 7 >
-    au < down ; frozen ; 2004 ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 >
-    au < down ; frozen ; 2005 ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 >
+    au < down ; finished ; 2004 ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 >
+    au < down ; finished ; 2005 ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 >
     au < zapped ; finished ; 2006 ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 >
     au < zapped ; finished ; 2007 ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 >
     au < zapped ; finished ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
@@ -1538,16 +1538,16 @@
 
     au < down ; finished ; 2000 ; Theoretical Inquiries in Law Volume 1 ; 1 >
     au < zapped ; finished ; 2001 ; Theoretical Inquiries in Law Volume 2 ; 2 >
-    au < down ; frozen ; 2002 ; Theoretical Inquiries in Law Volume 3 ; 3 >
+    au < down ; finished ; 2002 ; Theoretical Inquiries in Law Volume 3 ; 3 >
     au < zapped ; finished ; 2003 ; Theoretical Inquiries in Law Volume 4 ; 4 >
     au < zapped ; finished ; 2004 ; Theoretical Inquiries in Law Volume 5 ; 5 >
     au < zapped ; finished ; 2005 ; Theoretical Inquiries in Law Volume 6 ; 6 >
-    au < down ; frozen ; 2006 ; Theoretical Inquiries in Law Volume 7 ; 7 >
+    au < down ; finished ; 2006 ; Theoretical Inquiries in Law Volume 7 ; 7 >
     au < zapped ; finished ; 2007 ; Theoretical Inquiries in Law Volume 8 ; 8 >
     au < zapped ; finished ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 >
     au < zapped ; finished ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
     au < zapped ; finished ; 2010 ; Theoretical Inquiries in Law Volume 11 ; 11 >
-    au < down ; crawling ; 2011 ; Theoretical Inquiries in Law Volume 12 ; 12 >
+    au < down ; finished ; 2011 ; Theoretical Inquiries in Law Volume 12 ; 12 >
 
   }
 
@@ -1646,8 +1646,8 @@
     param[journal_abbr] = wpsr
 
     au < down ; crawling ; 2005 ; World Political Science Review Volume 1 ; 1 >
-    au < down ; crawling ; 2006 ; World Political Science Review Volume 2 ; 2 >
-    au < down ; crawling ; 2007 ; World Political Science Review Volume 3 ; 3 >
+    au < down ; finished ; 2006 ; World Political Science Review Volume 2 ; 2 >
+    au < down ; finished ; 2007 ; World Political Science Review Volume 3 ; 3 >
     au < zapped ; finished ; 2008 ; World Political Science Review Volume 4 ; 4 >
     au < zapped ; finished ; 2009 ; World Political Science Review Volume 5 ; 5 >
     au < zapped ; finished ; 2010 ; World Political Science Review Volume 6 ; 6 >

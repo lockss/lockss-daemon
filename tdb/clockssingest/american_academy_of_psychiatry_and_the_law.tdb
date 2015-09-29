@@ -18,30 +18,30 @@
     param[base_url] = http://www.jaapl.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < finished ; frozen ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
-    au < finished ; frozen ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 >
+    au < finished ; finished ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
+    au < finished ; finished ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 >
     au < zapped ; finished ; 1975 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 >
     au < zapped ; finished ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 4 ; 4 >
-    au < finished ; frozen ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 >
-    au < finished ; frozen ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 >
-    au < finished ; crawling ; 1979 ; Journal of the American Academy of Psychiatry and the Law Online Volume 7 ; 7 >
-    au < finished ; crawling ; 1980 ; Journal of the American Academy of Psychiatry and the Law Online Volume 8 ; 8 >
-    au < finished ; frozen ; 1981 ; Journal of the American Academy of Psychiatry and the Law Online Volume 9 ; 9 >
-    au < finished ; frozen ; 1982 ; Journal of the American Academy of Psychiatry and the Law Online Volume 10 ; 10 >
-    au < finished ; frozen ; 1983 ; Journal of the American Academy of Psychiatry and the Law Online Volume 11 ; 11 >
+    au < finished ; finished ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 >
+    au < finished ; finished ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 >
+    au < finished ; finished ; 1979 ; Journal of the American Academy of Psychiatry and the Law Online Volume 7 ; 7 >
+    au < finished ; finished ; 1980 ; Journal of the American Academy of Psychiatry and the Law Online Volume 8 ; 8 >
+    au < finished ; finished ; 1981 ; Journal of the American Academy of Psychiatry and the Law Online Volume 9 ; 9 >
+    au < finished ; finished ; 1982 ; Journal of the American Academy of Psychiatry and the Law Online Volume 10 ; 10 >
+    au < finished ; finished ; 1983 ; Journal of the American Academy of Psychiatry and the Law Online Volume 11 ; 11 >
     au < finished ; finished ; 1984 ; Journal of the American Academy of Psychiatry and the Law Online Volume 12 ; 12 >
     au < zapped ; finished ; 1985 ; Journal of the American Academy of Psychiatry and the Law Online Volume 13 ; 13 >
-    au < finished ; frozen ; 1986 ; Journal of the American Academy of Psychiatry and the Law Online Volume 14 ; 14 >
+    au < finished ; finished ; 1986 ; Journal of the American Academy of Psychiatry and the Law Online Volume 14 ; 14 >
     au < finished ; frozen ; 1987 ; Journal of the American Academy of Psychiatry and the Law Online Volume 15 ; 15 >
-    au < finished ; frozen ; 1988 ; Journal of the American Academy of Psychiatry and the Law Online Volume 16 ; 16 >
-    au < finished ; frozen ; 1989 ; Journal of the American Academy of Psychiatry and the Law Online Volume 17 ; 17 >
-    au < finished ; frozen ; 1990 ; Journal of the American Academy of Psychiatry and the Law Online Volume 18 ; 18 >
-    au < finished ; crawling ; 1991 ; Journal of the American Academy of Psychiatry and the Law Online Volume 19 ; 19 >
-    au < finished ; frozen ; 1992 ; Journal of the American Academy of Psychiatry and the Law Online Volume 20 ; 20 >
+    au < finished ; finished ; 1988 ; Journal of the American Academy of Psychiatry and the Law Online Volume 16 ; 16 >
+    au < finished ; finished ; 1989 ; Journal of the American Academy of Psychiatry and the Law Online Volume 17 ; 17 >
+    au < finished ; finished ; 1990 ; Journal of the American Academy of Psychiatry and the Law Online Volume 18 ; 18 >
+    au < finished ; finished ; 1991 ; Journal of the American Academy of Psychiatry and the Law Online Volume 19 ; 19 >
+    au < finished ; finished ; 1992 ; Journal of the American Academy of Psychiatry and the Law Online Volume 20 ; 20 >
     au < finished ; frozen ; 1993 ; Journal of the American Academy of Psychiatry and the Law Online Volume 21 ; 21 >
-    au < finished ; frozen ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
+    au < finished ; finished ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
     au < finished ; frozen ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 >
-    au < finished ; frozen ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
+    au < finished ; finished ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
     
     au < finished ; crawling ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [limited pdfs] ; 25 >
     au < finished ; crawling ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [limited pdfs] ; 26 >
@@ -49,7 +49,7 @@
     au < finished ; crawling ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [limited pdfs] ; 28 >
     au < finished ; crawling ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [limited pdfs] ; 29 >
 
-    au < finished ; crawling ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
+    au < finished ; finished ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
     au < zapped ; finished ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
     au < zapped ; finished ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >
     au < finished ; frozen ; 2005 ; Journal of the American Academy of Psychiatry and the Law Online Volume 33 ; 33 >
@@ -57,7 +57,7 @@
     au < zapped ; finished ; 2007 ; Journal of the American Academy of Psychiatry and the Law Online Volume 35 ; 35 >
     au < finished ; crawling ; 2008 ; Journal of the American Academy of Psychiatry and the Law Online Volume 36 ; 36 >
     au < finished ; frozen ; 2009 ; Journal of the American Academy of Psychiatry and the Law Online Volume 37 ; 37 >
-    au < finished ; frozen ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 >
+    au < finished ; finished ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 >
     au < finished ; frozen ; 2011 ; Journal of the American Academy of Psychiatry and the Law Online Volume 39 ; 39 >
     au < zapped ; finished ; 2012 ; Journal of the American Academy of Psychiatry and the Law Online Volume 40 ; 40 >
     au < finished ; finished ; 2013 ; Journal of the American Academy of Psychiatry and the Law Online Volume 41 ; 41 >

@@ -60,7 +60,7 @@
       au < finished ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
-      au < finished ; crawling ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
+      au < finished ; finished ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
       au < finished ; crawling ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
       au < finished ; frozen ; 2012 ; AAP Grand Rounds Volume 27 ; 27 >
       au < finished ; frozen ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
@@ -131,7 +131,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; AAP News Volume 29 ; 29 >
       au < doNotProcess ; doNotProcess ; 2009 ; AAP News Volume 30 ; 30 >
       au < finished ; crawling ; 2010 ; AAP News Volume 31 ; 31 >
-      au < finished ; crawling ; 2011 ; AAP News Volume 32 ; 32 >
+      au < finished ; finished ; 2011 ; AAP News Volume 32 ; 32 >
       au < finished ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; AAP News Volume 34 ; 34 >
       au < finished ; crawling ; 2014 ; AAP News Volume 35 ; 35 >
@@ -430,8 +430,8 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
       au < doNotProcess ; doNotProcess ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
       au < doNotProcess ; doNotProcess ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
-      au < finished ; crawling ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
-      au < finished ; frozen ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
+      au < finished ; finished ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
+      au < finished ; finished ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
       au < crawling ; exists ; 2014 ; Pediatrics in Review Volume 35 ; 35 >
       au < ready ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 >
@@ -469,7 +469,7 @@
       param[base_url] = http://aapredbook.aappublications.org/
       comment[moved] = moved to http://redbook.solutions.aap.org/
       
-      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Red Book Online Volume 2012 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Red Book Online Volume 2012 ; 1 >
     }
 
   }

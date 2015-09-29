@@ -27,16 +27,16 @@
       param[journal_code] = epa
       param[short_journal_code] = A
       
-      au < finished ; frozen ; 1969 ; Environment and Planning A Volume 1 ; 1 >
+      au < finished ; finished ; 1969 ; Environment and Planning A Volume 1 ; 1 >
       au < finished ; finished ; 1970 ; Environment and Planning A Volume 2 ; 2 >
-      au < finished ; frozen ; 1971 ; Environment and Planning A Volume 3 ; 3 >
+      au < finished ; finished ; 1971 ; Environment and Planning A Volume 3 ; 3 >
       au < finished ; finished ; 1972 ; Environment and Planning A Volume 4 ; 4 >
-      au < finished ; frozen ; 1973 ; Environment and Planning A Volume 5 ; 5 >
-      au < finished ; frozen ; 1974 ; Environment and Planning A Volume 6 ; 6 >
-      au < finished ; frozen ; 1975 ; Environment and Planning A Volume 7 ; 7 >
+      au < finished ; finished ; 1973 ; Environment and Planning A Volume 5 ; 5 >
+      au < finished ; finished ; 1974 ; Environment and Planning A Volume 6 ; 6 >
+      au < finished ; finished ; 1975 ; Environment and Planning A Volume 7 ; 7 >
       au < finished ; finished ; 1976 ; Environment and Planning A Volume 8 ; 8 >
-      au < finished ; frozen ; 1977 ; Environment and Planning A Volume 9 ; 9 >
-      au < finished ; frozen ; 1978 ; Environment and Planning A Volume 10 ; 10 >
+      au < finished ; finished ; 1977 ; Environment and Planning A Volume 9 ; 9 >
+      au < finished ; finished ; 1978 ; Environment and Planning A Volume 10 ; 10 >
       au < zapped ; finished ; 1979 ; Environment and Planning A Volume 11 ; 11 >
       au < zapped ; finished ; 1980 ; Environment and Planning A Volume 12 ; 12 >
       au < finished ; finished ; 1981 ; Environment and Planning A Volume 13 ; 13 >
@@ -59,10 +59,10 @@
       au < zapped ; finished ; 1998 ; Environment and Planning A Volume 30 ; 30 >
       au < zapped ; finished ; 1999 ; Environment and Planning A Volume 31 ; 31 >
       au < finished ; crawling ; 2000 ; Environment and Planning A Volume 32 ; 32 >
-      au < finished ; frozen ; 2001 ; Environment and Planning A Volume 33 ; 33 >
+      au < finished ; finished ; 2001 ; Environment and Planning A Volume 33 ; 33 >
       au < finished ; crawling ; 2002 ; Environment and Planning A Volume 34 ; 34 >
-      au < finished ; frozen ; 2003 ; Environment and Planning A Volume 35 ; 35 >
-      au < finished ; frozen ; 2004 ; Environment and Planning A Volume 36 ; 36 >
+      au < finished ; finished ; 2003 ; Environment and Planning A Volume 35 ; 35 >
+      au < finished ; finished ; 2004 ; Environment and Planning A Volume 36 ; 36 >
       au < finished ; crawling ; 2005 ; Environment and Planning A Volume 37 ; 37 >
       au < finished ; finished ; 2006 ; Environment and Planning A Volume 38 ; 38 >
       au < finished ; frozen ; 2007 ; Environment and Planning A Volume 39 ; 39 >
@@ -90,40 +90,40 @@
       param[short_journal_code] = B
       
       au < zapped ; finished ; 1974 ; Environment and Planning B: Planning and Design Volume 1 ; 1 >
-      au < finished ; frozen ; 1975 ; Environment and Planning B: Planning and Design Volume 2 ; 2 >
-      au < finished ; frozen ; 1976 ; Environment and Planning B: Planning and Design Volume 3 ; 3 >
+      au < finished ; finished ; 1975 ; Environment and Planning B: Planning and Design Volume 2 ; 2 >
+      au < finished ; finished ; 1976 ; Environment and Planning B: Planning and Design Volume 3 ; 3 >
       au < finished ; finished ; 1977 ; Environment and Planning B: Planning and Design Volume 4 ; 4 >
       au < finished ; finished ; 1978 ; Environment and Planning B: Planning and Design Volume 5 ; 5 >
       au < finished ; finished ; 1979 ; Environment and Planning B: Planning and Design Volume 6 ; 6 >
-      au < finished ; frozen ; 1980 ; Environment and Planning B: Planning and Design Volume 7 ; 7 >
+      au < finished ; finished ; 1980 ; Environment and Planning B: Planning and Design Volume 7 ; 7 >
       au < finished ; finished ; 1981 ; Environment and Planning B: Planning and Design Volume 8 ; 8 >
-      au < finished ; frozen ; 1982 ; Environment and Planning B: Planning and Design Volume 9 ; 9 >
+      au < finished ; finished ; 1982 ; Environment and Planning B: Planning and Design Volume 9 ; 9 >
       au < finished ; finished ; 1983 ; Environment and Planning B: Planning and Design Volume 10 ; 10 >
-      au < finished ; frozen ; 1984 ; Environment and Planning B: Planning and Design Volume 11 ; 11 >
-      au < finished ; frozen ; 1985 ; Environment and Planning B: Planning and Design Volume 12 ; 12 >
-      au < finished ; frozen ; 1986 ; Environment and Planning B: Planning and Design Volume 13 ; 13 >
-      au < finished ; frozen ; 1987 ; Environment and Planning B: Planning and Design Volume 14 ; 14 >
-      au < finished ; frozen ; 1988 ; Environment and Planning B: Planning and Design Volume 15 ; 15 >
+      au < finished ; finished ; 1984 ; Environment and Planning B: Planning and Design Volume 11 ; 11 >
+      au < finished ; finished ; 1985 ; Environment and Planning B: Planning and Design Volume 12 ; 12 >
+      au < finished ; finished ; 1986 ; Environment and Planning B: Planning and Design Volume 13 ; 13 >
+      au < finished ; finished ; 1987 ; Environment and Planning B: Planning and Design Volume 14 ; 14 >
+      au < finished ; finished ; 1988 ; Environment and Planning B: Planning and Design Volume 15 ; 15 >
       au < finished ; finished ; 1989 ; Environment and Planning B: Planning and Design Volume 16 ; 16 >
-      au < finished ; frozen ; 1990 ; Environment and Planning B: Planning and Design Volume 17 ; 17 >
-      au < finished ; frozen ; 1991 ; Environment and Planning B: Planning and Design Volume 18 ; 18 >
-      au < finished ; frozen ; 1992 ; Environment and Planning B: Planning and Design Volume 19 ; 19 >
+      au < finished ; finished ; 1990 ; Environment and Planning B: Planning and Design Volume 17 ; 17 >
+      au < finished ; finished ; 1991 ; Environment and Planning B: Planning and Design Volume 18 ; 18 >
+      au < finished ; finished ; 1992 ; Environment and Planning B: Planning and Design Volume 19 ; 19 >
       au < finished ; finished ; 1993 ; Environment and Planning B: Planning and Design Volume 20 ; 20 >
-      au < finished ; frozen ; 1994 ; Environment and Planning B: Planning and Design Volume 21 ; 21 >
-      au < finished ; frozen ; 1995 ; Environment and Planning B: Planning and Design Volume 22 ; 22 >
-      au < finished ; frozen ; 1996 ; Environment and Planning B: Planning and Design Volume 23 ; 23 >
-      au < finished ; frozen ; 1997 ; Environment and Planning B: Planning and Design Volume 24 ; 24 >
+      au < finished ; finished ; 1994 ; Environment and Planning B: Planning and Design Volume 21 ; 21 >
+      au < finished ; finished ; 1995 ; Environment and Planning B: Planning and Design Volume 22 ; 22 >
+      au < finished ; finished ; 1996 ; Environment and Planning B: Planning and Design Volume 23 ; 23 >
+      au < finished ; finished ; 1997 ; Environment and Planning B: Planning and Design Volume 24 ; 24 >
       au < finished ; frozen ; 1998 ; Environment and Planning B: Planning and Design Volume 25 ; 25 >
-      au < finished ; frozen ; 1999 ; Environment and Planning B: Planning and Design Volume 26 ; 26 >
-      au < finished ; frozen ; 2000 ; Environment and Planning B: Planning and Design Volume 27 ; 27 >
-      au < finished ; frozen ; 2001 ; Environment and Planning B: Planning and Design Volume 28 ; 28 >
+      au < finished ; finished ; 1999 ; Environment and Planning B: Planning and Design Volume 26 ; 26 >
+      au < finished ; finished ; 2000 ; Environment and Planning B: Planning and Design Volume 27 ; 27 >
+      au < finished ; finished ; 2001 ; Environment and Planning B: Planning and Design Volume 28 ; 28 >
       au < finished ; frozen ; 2002 ; Environment and Planning B: Planning and Design Volume 29 ; 29 >
       au < finished ; frozen ; 2003 ; Environment and Planning B: Planning and Design Volume 30 ; 30 >
-      au < finished ; frozen ; 2004 ; Environment and Planning B: Planning and Design Volume 31 ; 31 >
-      au < finished ; frozen ; 2005 ; Environment and Planning B: Planning and Design Volume 32 ; 32 >
+      au < finished ; finished ; 2004 ; Environment and Planning B: Planning and Design Volume 31 ; 31 >
+      au < finished ; finished ; 2005 ; Environment and Planning B: Planning and Design Volume 32 ; 32 >
       au < finished ; finished ; 2006 ; Environment and Planning B: Planning and Design Volume 33 ; 33 >
-      au < finished ; crawling ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 >
-      au < finished ; frozen ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 >
+      au < finished ; finished ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 >
+      au < finished ; finished ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 >
       au < finished ; finished ; 2009 ; Environment and Planning B: Planning and Design Volume 36 ; 36 >
       au < zapped ; finished ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
       au < finished ; frozen ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 >
@@ -146,32 +146,32 @@
       param[journal_code] = epc
       param[short_journal_code] = C
       
-      au < finished ; frozen ; 1983 ; Environment and Planning C: Government and Policy Volume 1 ; 1 >
-      au < finished ; frozen ; 1984 ; Environment and Planning C: Government and Policy Volume 2 ; 2 >
-      au < finished ; frozen ; 1985 ; Environment and Planning C: Government and Policy Volume 3 ; 3 >
-      au < finished ; frozen ; 1986 ; Environment and Planning C: Government and Policy Volume 4 ; 4 >
+      au < finished ; finished ; 1983 ; Environment and Planning C: Government and Policy Volume 1 ; 1 >
+      au < finished ; finished ; 1984 ; Environment and Planning C: Government and Policy Volume 2 ; 2 >
+      au < finished ; finished ; 1985 ; Environment and Planning C: Government and Policy Volume 3 ; 3 >
+      au < finished ; finished ; 1986 ; Environment and Planning C: Government and Policy Volume 4 ; 4 >
       au < finished ; finished ; 1987 ; Environment and Planning C: Government and Policy Volume 5 ; 5 >
-      au < finished ; frozen ; 1988 ; Environment and Planning C: Government and Policy Volume 6 ; 6 >
-      au < finished ; frozen ; 1989 ; Environment and Planning C: Government and Policy Volume 7 ; 7 >
+      au < finished ; finished ; 1988 ; Environment and Planning C: Government and Policy Volume 6 ; 6 >
+      au < finished ; finished ; 1989 ; Environment and Planning C: Government and Policy Volume 7 ; 7 >
       au < finished ; finished ; 1990 ; Environment and Planning C: Government and Policy Volume 8 ; 8 >
-      au < finished ; frozen ; 1991 ; Environment and Planning C: Government and Policy Volume 9 ; 9 >
-      au < finished ; frozen ; 1992 ; Environment and Planning C: Government and Policy Volume 10 ; 10 >
-      au < finished ; frozen ; 1993 ; Environment and Planning C: Government and Policy Volume 11 ; 11 >
-      au < finished ; frozen ; 1994 ; Environment and Planning C: Government and Policy Volume 12 ; 12 >
-      au < finished ; frozen ; 1995 ; Environment and Planning C: Government and Policy Volume 13 ; 13 >
-      au < finished ; frozen ; 1996 ; Environment and Planning C: Government and Policy Volume 14 ; 14 >
-      au < finished ; frozen ; 1997 ; Environment and Planning C: Government and Policy Volume 15 ; 15 >
-      au < finished ; frozen ; 1998 ; Environment and Planning C: Government and Policy Volume 16 ; 16 >
-      au < finished ; frozen ; 1999 ; Environment and Planning C: Government and Policy Volume 17 ; 17 >
+      au < finished ; finished ; 1991 ; Environment and Planning C: Government and Policy Volume 9 ; 9 >
+      au < finished ; finished ; 1992 ; Environment and Planning C: Government and Policy Volume 10 ; 10 >
+      au < finished ; finished ; 1993 ; Environment and Planning C: Government and Policy Volume 11 ; 11 >
+      au < finished ; finished ; 1994 ; Environment and Planning C: Government and Policy Volume 12 ; 12 >
+      au < finished ; finished ; 1995 ; Environment and Planning C: Government and Policy Volume 13 ; 13 >
+      au < finished ; finished ; 1996 ; Environment and Planning C: Government and Policy Volume 14 ; 14 >
+      au < finished ; finished ; 1997 ; Environment and Planning C: Government and Policy Volume 15 ; 15 >
+      au < finished ; finished ; 1998 ; Environment and Planning C: Government and Policy Volume 16 ; 16 >
+      au < finished ; finished ; 1999 ; Environment and Planning C: Government and Policy Volume 17 ; 17 >
       au < finished ; frozen ; 2000 ; Environment and Planning C: Government and Policy Volume 18 ; 18 >
-      au < finished ; frozen ; 2001 ; Environment and Planning C: Government and Policy Volume 19 ; 19 >
-      au < finished ; crawling ; 2002 ; Environment and Planning C: Government and Policy Volume 20 ; 20 >
-      au < finished ; frozen ; 2003 ; Environment and Planning C: Government and Policy Volume 21 ; 21 >
-      au < finished ; frozen ; 2004 ; Environment and Planning C: Government and Policy Volume 22 ; 22 >
+      au < finished ; finished ; 2001 ; Environment and Planning C: Government and Policy Volume 19 ; 19 >
+      au < finished ; finished ; 2002 ; Environment and Planning C: Government and Policy Volume 20 ; 20 >
+      au < finished ; finished ; 2003 ; Environment and Planning C: Government and Policy Volume 21 ; 21 >
+      au < finished ; finished ; 2004 ; Environment and Planning C: Government and Policy Volume 22 ; 22 >
       au < finished ; frozen ; 2005 ; Environment and Planning C: Government and Policy Volume 23 ; 23 >
       au < finished ; crawling ; 2006 ; Environment and Planning C: Government and Policy Volume 24 ; 24 >
-      au < finished ; frozen ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 >
-      au < finished ; crawling ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 >
+      au < finished ; finished ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 >
+      au < finished ; finished ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 >
       au < finished ; crawling ; 2009 ; Environment and Planning C: Government and Policy Volume 27 ; 27 >
       au < zapped ; finished ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
       au < finished ; frozen ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 >
@@ -343,7 +343,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     au < finished ; frozen ; 2010 ; i-Perception Volume 1 ; 1 >
-    au < finished ; frozen ; 2011 ; i-Perception Volume 2 ; 2 >
+    au < finished ; finished ; 2011 ; i-Perception Volume 2 ; 2 >
     au < finished ; crawling ; 2012 ; i-Perception Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; i-Perception Volume 4 ; 4 >
     au < exists ; exists ; 2014 ; i-Perception Volume 5 ; 5 >

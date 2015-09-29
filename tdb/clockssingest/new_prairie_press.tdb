@@ -112,7 +112,7 @@
       comment[0] = Journal moved in 2013. to https://jhaponline.org/. No longer published by New Prairie Press. Do not process.
 
       au < down ; finished ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
-      au < down ; frozen ; 2012 ; Journal for the History of Analytical Philosophy Volume 1 (2012) ; 1 ; 2012 >
+      au < down ; finished ; 2012 ; Journal for the History of Analytical Philosophy Volume 1 (2012) ; 1 ; 2012 >
 
   }
 
@@ -131,7 +131,7 @@
       param[base_url] = http://jftonline.org/journals/
       param[journal_id] = jft
 
-      au < down ; frozen ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
+      au < down ; finished ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
 
     }
     {
@@ -168,7 +168,7 @@
       
       comment[moved] = Moved to American Psychological Association
 
-      au < down ; frozen ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
+      au < down ; finished ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
 
     }
   }
@@ -188,7 +188,7 @@
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = CULS
 
-      au < down ; frozen ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+      au < down ; finished ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
 
     }
     {
@@ -222,7 +222,7 @@
       param[base_url] = http://ojrrp.org/journals/
       param[journal_id] = ojrrp
 
-      au < down ; frozen ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+      au < down ; finished ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
 
     }
     {
