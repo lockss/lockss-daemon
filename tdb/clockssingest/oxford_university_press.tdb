@@ -3290,7 +3290,7 @@
     au < finished ; crawling ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
     au < crawling ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
     au < crawling ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
-    au < manifest ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
+    au < testing ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
     au < expected ; exists ; 2015 ; British Medical Bulletin Volume 116 ; 116 ; >
 
     }
@@ -3924,7 +3924,7 @@
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; >
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
-    au < manifest ; exists ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; >
+    au < testing ; exists ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; >
 
     }
 
@@ -7808,7 +7808,7 @@
     au < crawling ; exists ; 2015 ; Geophysical Journal International Volume 200 ; 200 ; >
     au < crawling ; exists ; 2015 ; Geophysical Journal International Volume 201 ; 201 ; >
     au < crawling ; exists ; 2015 ; Geophysical Journal International Volume 202 ; 202 ; >
-    au < manifest ; exists ; 2015 ; Geophysical Journal International Volume 203 ; 203 ; >
+    au < testing ; exists ; 2015 ; Geophysical Journal International Volume 203 ; 203 ; >
 
   }
 
@@ -21006,7 +21006,7 @@
     au < finished ; finished ; 2012 ; Review of Finance Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; Review of Finance Volume 17 ; 17 ; >
     au < frozen ; exists ; 2014 ; Review of Finance Volume 18 ; 18 ; >
-    au < testing ; exists ; 2015 ; Review of Finance Volume 19 ; 19 ; >
+    au < ready ; exists ; 2015 ; Review of Finance Volume 19 ; 19 ; >
 
     }
 
@@ -21395,7 +21395,7 @@
     au < crawling ; exists ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
     au < frozen ; exists ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; >
-    au < testing ; exists ; 2015 ; Social Cognitive and Affective Neuroscience Volume 10 ; 10 ; >
+    au < ready ; exists ; 2015 ; Social Cognitive and Affective Neuroscience Volume 10 ; 10 ; >
 
     }
 
@@ -22374,8 +22374,8 @@
     au < crawling ; exists ; 2014 ; Toxicological Sciences Volume 142 ; 142 ; >
     au < ready ; exists ; 2015 ; Toxicological Sciences Volume 143 ; 143 ; >
     au < ready ; exists ; 2015 ; Toxicological Sciences Volume 144 ; 144 ; >
-    au < manifest ; exists ; 2015 ; Toxicological Sciences Volume 145 ; 145 ; >
-    au < manifest ; exists ; 2015 ; Toxicological Sciences Volume 146 ; 146 ; >
+    au < testing ; exists ; 2015 ; Toxicological Sciences Volume 145 ; 145 ; >
+    au < testing ; exists ; 2015 ; Toxicological Sciences Volume 146 ; 146 ; >
     au < manifest ; exists ; 2015 ; Toxicological Sciences Volume 147 ; 147 ; >
     au < expected ; exists ; 2015 ; Toxicological Sciences Volume 148 ; 148 ; >
 
@@ -22630,7 +22630,7 @@
     au < finished ; finished ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Trusts & Trustees Volume 19 ; 19 ; >
     au < finished ; crawling ; 2014 ; Trusts & Trustees Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2015 ; Trusts & Trustees Volume 21 ; 21 ; >
+    au < testing ; exists ; 2015 ; Trusts & Trustees Volume 21 ; 21 ; >
 
     }
 
@@ -22685,7 +22685,7 @@
     au < finished ; finished ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Twentieth Century British History Volume 24 ; 24 ; >
     au < finished ; crawling ; 2014 ; Twentieth Century British History Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2015 ; Twentieth Century British History Volume 26 ; 26 ; >
+    au < testing ; exists ; 2015 ; Twentieth Century British History Volume 26 ; 26 ; >
 
     }
 
@@ -22747,7 +22747,7 @@
     au < finished ; finished ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 ; >
     au < crawling ; exists ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ; >
+    au < testing ; exists ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ; >
 
     }
 
@@ -22764,7 +22764,7 @@
     param[base_url] = http://ve.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < manifest ; exists ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
+    au < testing ; exists ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
 
   }
 
@@ -22780,7 +22780,7 @@
     param[base_url] = http://workar.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < manifest ; exists ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 ; >
+    au < testing ; exists ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 ; >
 
   }
 
@@ -22837,7 +22837,7 @@
     au < ingNotReady ; exists ; 2012 ; The World Bank Economic Review Volume 26 ; 26 ; >
     au < finished ; finished ; 2013 ; The World Bank Economic Review Volume 27 ; 27 ; >
     au < crawling ; exists ; 2014 ; The World Bank Economic Review Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2015 ; The World Bank Economic Review Volume 29 ; 29 ; >
+    au < testing ; exists ; 2015 ; The World Bank Economic Review Volume 29 ; 29 ; >
 
     }
 
@@ -22896,7 +22896,7 @@
     au < finished ; crawling ; 2012 ; The World Bank Research Observer Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; The World Bank Research Observer Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; The World Bank Research Observer Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2015 ; The World Bank Research Observer Volume 30 ; 30 ; >
+    au < testing ; exists ; 2015 ; The World Bank Research Observer Volume 30 ; 30 ; >
 
     }
 
@@ -23158,7 +23158,7 @@
     au < finished ; crawling ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 ; >
     au < finished ; finished ; 2013 ; The Year's Work in English Studies Volume 92 ; 92 ; >
     au < crawling ; exists ; 2014 ; The Year's Work in English Studies Volume 93 ; 93 ; >
-    au < manifest ; exists ; 2015 ; The Year's Work in English Studies Volume 94 ; 94 ; >
+    au < testing ; exists ; 2015 ; The Year's Work in English Studies Volume 94 ; 94 ; >
 
     }
 
@@ -23180,7 +23180,7 @@
 
       au < crawling ; exists ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 ; >
       au < finished ; crawling ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; >
+      au < testing ; exists ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; >
 
     }
 
@@ -23269,7 +23269,7 @@
 
       au < finished ; finished ; 2013 ; Journal of Survey Statistics and Methodology Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Journal of Survey Statistics and Methodology Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 ; >
+      au < testing ; exists ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 ; >
 
     }
 
@@ -23671,7 +23671,7 @@
       au < finished ; frozen ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < crawling ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
       au < crawling ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
-      au < manifest ; exists ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 ; >
+      au < testing ; exists ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 ; >
 
     }
 
@@ -23710,7 +23710,7 @@
 
       au < finished ; finished ; 2013 ; Evolution, Medicine, and Public Health Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Evolution, Medicine, and Public Health Volume 2014 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 ; >
+      au < testing ; exists ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 ; >
   }
 
   {
@@ -23751,7 +23751,7 @@
     au < finished ; crawling ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
     au < finished ; finished ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2015 ; Interacting with Computers Volume 27 ; 27 ; >
+    au < testing ; exists ; 2015 ; Interacting with Computers Volume 27 ; 27 ; >
 
   }
   {
@@ -23862,7 +23862,7 @@
     au < finished ; finished ; 2012 ; BioScience Volume 62 ; 62 ; >
     au < crawling ; exists ; 2013 ; BioScience Volume 63 ; 63 ; >
     au < finished ; crawling ; 2014 ; BioScience Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2015 ; BioScience Volume 65 ; 65 ; >
+    au < testing ; exists ; 2015 ; BioScience Volume 65 ; 65 ; >
 
   }
 
@@ -23980,7 +23980,7 @@
     au < crawling ; exists ; 2012 ; Poultry Science Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; Poultry Science Volume 92 ; 92 ; >
     au < crawling ; exists ; 2014 ; Poultry Science Volume 93 ; 93 ; >
-    au < manifest ; exists ; 2015 ; Poultry Science Volume 94 ; 94 ; >
+    au < testing ; exists ; 2015 ; Poultry Science Volume 94 ; 94 ; >
 
   }
 
