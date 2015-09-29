@@ -327,7 +327,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Urologie Volume 2012 ; 43 >
     au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Urologie Volume 2013 ; 44 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
-    au < testing ; exists ; 2015 ; 2015 ; Aktuelle Urologie Volume 2015 ; 46 >
+    au < ready ; exists ; 2015 ; 2015 ; Aktuelle Urologie Volume 2015 ; 46 >
 
    }
 
@@ -410,7 +410,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Allgemein- und Viszeralchirurgie up2date Volume 2012 ; 6 >
     au < crawling ; exists ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 >
     au < finished ; crawling ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
-    au < testing ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 >
+    au < ready ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 >
 
    }
 
@@ -1036,8 +1036,8 @@
    au < manifest ; exists ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 2010 ; 136 >
    au < manifest ; exists ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 2011 ; 137 >
    au < crawling ; exists ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 >
-   au < testing ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 >
-   au < testing ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 >
+   au < ready ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 >
+   au < ready ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 >
    au < crawling ; exists ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 >
 
   }
@@ -1065,7 +1065,7 @@
    au < manifest ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 2011 ; 9 >
    au < crawling ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
    au < crawling ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
-   au < testing ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
+   au < ready ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
    au < crawling ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 2015 ; 13 >
 
   }
@@ -1153,7 +1153,7 @@
    au < crawling ; exists ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 >
    au < crawling ; exists ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 46 >
-   au < testing ; exists ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 >
+   au < ready ; exists ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 >
 
   }
 
@@ -2012,7 +2012,7 @@
    au < manifest ; exists ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2013 ; 45 >
    au < crawling ; exists ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2014 ; 46 >
-   au < testing ; exists ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2015 ; 47 >
+   au < ready ; exists ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2015 ; 47 >
 
   }
 
@@ -2058,7 +2058,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; intensiv Volume 2011 ; 19 >
     au < manifest ; exists ; 2012 ; 2012 ; intensiv Volume 2012 ; 20 >
     au < crawling ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 21 >
-    au < testing ; exists ; 2014 ; 2014 ; intensiv Volume 2014 ; 22 >
+    au < ready ; exists ; 2014 ; 2014 ; intensiv Volume 2014 ; 22 >
     au < crawling ; exists ; 2015 ; 2015 ; intensiv Volume 2015 ; 23 >
 
   }
@@ -2100,7 +2100,7 @@
     comment[years] = 2012-current
 
    au < crawling ; exists ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 >
-   au < testing ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 >
+   au < ready ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 >
    au < crawling ; exists ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 >
    au < crawling ; exists ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 >
 
@@ -2821,9 +2821,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Laryngo-Rhino-Otologie Volume 2010 ; 89 >
     au < manifest ; exists ; 2011 ; 2011 ; Laryngo-Rhino-Otologie Volume 2011 ; 90 >
     au < manifest ; exists ; 2012 ; 2012 ; Laryngo-Rhino-Otologie Volume 2012 ; 91 >
-    au < testing ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 92 >
+    au < ready ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 92 >
     au < crawling ; exists ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 2014 ; 93 >
-    au < testing ; exists ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 2015 ; 94 >
+    au < ready ; exists ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 2015 ; 94 >
 
   }
 
@@ -3243,7 +3243,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 >
     au < manifest ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 >
     au < manifest ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
-    au < testing ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
+    au < ready ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
     au < crawling ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
     au < crawling ; exists ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 >
 
@@ -3288,7 +3288,7 @@
     au < manifest ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie up2date Volume 2012 ; 07 >
     au < crawling ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 >
     au < crawling ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 >
-    au < testing ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 2015 ; 08 >
+    au < ready ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 2015 ; 08 >
 
   }
 
@@ -3381,8 +3381,7 @@
     au < manifest ; exists ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 >
     au < crawling ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
     au < crawling ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
-    au < notReady ; exists ; 2015 ; 2015 ; Pädiatrie up2date Volume 2015 ; 10 >
-    #notReady - PD-1537
+    au < ready ; exists ; 2015 ; 2015 ; Pädiatrie up2date Volume 2015 ; 10 >
 
   }
 
@@ -3694,9 +3693,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; Planta Medica Volume 2010 ; 76 >
    au < manifest ; exists ; 2011 ; 2011 ; Planta Medica Volume 2011 ; 77 >
    au < manifest ; exists ; 2012 ; 2012 ; Planta Medica Volume 2012 ; 78 >
-   au < testing ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 >
-   au < testing ; exists ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 >
-   au < testing ; exists ; 2015 ; 2015 ; Planta Medica Volume 2015 ; 81 >
+   au < ready ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 >
+   au < ready ; exists ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 >
+   au < ready ; exists ; 2015 ; 2015 ; Planta Medica Volume 2015 ; 81 >
 
   }
 
@@ -3741,7 +3740,7 @@
    au < manifest ; exists ; 2012 ; 2012 ; Pneumologie Volume 2012 ; 66 >
    au < crawling ; exists ; 2013 ; 2013 ; Pneumologie Volume 2013 ; 67 >
    au < crawling ; exists ; 2014 ; 2014 ; Pneumologie Volume 2014 ; 68 >
-   au < testing ; exists ; 2015 ; 2015 ; Pneumologie Volume 2015 ; 69 >
+   au < ready ; exists ; 2015 ; 2015 ; Pneumologie Volume 2015 ; 69 >
 
   }
 
@@ -4090,7 +4089,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2010 ; 182 >
     au < manifest ; exists ; 2011 ; 2011 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2011 ; 183 >
     au < manifest ; exists ; 2012 ; 2012 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2012 ; 184 >
-    au < testing ; exists ; 2013 ; 2013 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 >
+    au < ready ; exists ; 2013 ; 2013 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 >
     au < testing ; exists ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2014 ; 186 >
     au < crawling ; exists ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2015 ; 187 >
 
@@ -4875,9 +4874,9 @@
    au < manifest ; exists ; 2010 ; 2010 ; SYNLETT Volume 2010 ; 21 >
    au < manifest ; exists ; 2011 ; 2011 ; SYNLETT Volume 2011 ; 22 >
    au < manifest ; exists ; 2012 ; 2012 ; SYNLETT Volume 2012 ; 23 >
-   au < testing ; exists ; 2013 ; 2013 ; SYNLETT Volume 2013 ; 24 >
-   au < testing ; exists ; 2014 ; 2014 ; SYNLETT Volume 2014 ; 25 >
-   au < testing ; exists ; 2015 ; 2015 ; SYNLETT Volume 2015 ; 26 >
+   au < ready ; exists ; 2013 ; 2013 ; SYNLETT Volume 2013 ; 24 >
+   au < ready ; exists ; 2014 ; 2014 ; SYNLETT Volume 2014 ; 25 >
+   au < ready ; exists ; 2015 ; 2015 ; SYNLETT Volume 2015 ; 26 >
 
   }
 
@@ -4917,7 +4916,7 @@
    au < manifest ; exists ; 2010 ; 2010 ; SYNTHESIS Volume 2010 ; 42 >
    au < manifest ; exists ; 2011 ; 2011 ; SYNTHESIS Volume 2011 ; 43 >
    au < manifest ; exists ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 >
-   au < testing ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 >
+   au < ready ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 >
    au < testing ; exists ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 >
    au < testing ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 >
 

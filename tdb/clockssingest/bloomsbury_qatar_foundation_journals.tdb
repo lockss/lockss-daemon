@@ -310,9 +310,8 @@
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = qfarc
       comment[continues] = 2220-251X
-      comment[notReady] = PD-1290, XX on pdf compare
 
-      au < notReady ; exists ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; Qatar Foundation Annual Research Conference Proceedings Volume 2 ; 2 >
 
   }
