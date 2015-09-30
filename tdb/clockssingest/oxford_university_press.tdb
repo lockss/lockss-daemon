@@ -3290,7 +3290,7 @@
     au < finished ; crawling ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
     au < crawling ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
     au < crawling ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
-    au < testing ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
+    au < ready ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
     au < expected ; exists ; 2015 ; British Medical Bulletin Volume 116 ; 116 ; >
 
     }
@@ -3924,7 +3924,7 @@
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; >
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; >
     au < crawling ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
-    au < testing ; exists ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; >
+    au < ready ; exists ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; >
 
     }
 
@@ -10133,7 +10133,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 ; >
-    au < testing ; exists ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 ; >
+    au < ready ; exists ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 ; >
 
     }
   }
@@ -13254,7 +13254,7 @@
     au < finished ; frozen ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 ; >
     au < finished ; crawling ; 2013 ; Journal of Islamic Studies Volume 24 ; 24 ; >
     au < finished ; crawling ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
-    au < testing ; exists ; 2015 ; Journal of Islamic Studies Volume 26 ; 26 ; >
+    au < ready ; exists ; 2015 ; Journal of Islamic Studies Volume 26 ; 26 ; >
 
     }
 
@@ -22374,8 +22374,8 @@
     au < crawling ; exists ; 2014 ; Toxicological Sciences Volume 142 ; 142 ; >
     au < ready ; exists ; 2015 ; Toxicological Sciences Volume 143 ; 143 ; >
     au < ready ; exists ; 2015 ; Toxicological Sciences Volume 144 ; 144 ; >
-    au < testing ; exists ; 2015 ; Toxicological Sciences Volume 145 ; 145 ; >
-    au < testing ; exists ; 2015 ; Toxicological Sciences Volume 146 ; 146 ; >
+    au < ready ; exists ; 2015 ; Toxicological Sciences Volume 145 ; 145 ; >
+    au < ready ; exists ; 2015 ; Toxicological Sciences Volume 146 ; 146 ; >
     au < manifest ; exists ; 2015 ; Toxicological Sciences Volume 147 ; 147 ; >
     au < expected ; exists ; 2015 ; Toxicological Sciences Volume 148 ; 148 ; >
 
@@ -22630,7 +22630,7 @@
     au < finished ; finished ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Trusts & Trustees Volume 19 ; 19 ; >
     au < finished ; crawling ; 2014 ; Trusts & Trustees Volume 20 ; 20 ; >
-    au < testing ; exists ; 2015 ; Trusts & Trustees Volume 21 ; 21 ; >
+    au < ready ; exists ; 2015 ; Trusts & Trustees Volume 21 ; 21 ; >
 
     }
 
@@ -22685,7 +22685,7 @@
     au < finished ; finished ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Twentieth Century British History Volume 24 ; 24 ; >
     au < finished ; crawling ; 2014 ; Twentieth Century British History Volume 25 ; 25 ; >
-    au < testing ; exists ; 2015 ; Twentieth Century British History Volume 26 ; 26 ; >
+    au < ready ; exists ; 2015 ; Twentieth Century British History Volume 26 ; 26 ; >
 
     }
 
@@ -22747,7 +22747,8 @@
     au < finished ; finished ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 ; >
     au < crawling ; exists ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ; >
-    au < testing ; exists ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ; >
+    au < notReady ; exists ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ; >
+    #Probe url
 
     }
 
@@ -22764,7 +22765,7 @@
     param[base_url] = http://ve.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
 
   }
 
@@ -22780,7 +22781,7 @@
     param[base_url] = http://workar.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 ; >
 
   }
 
@@ -22896,7 +22897,7 @@
     au < finished ; crawling ; 2012 ; The World Bank Research Observer Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; The World Bank Research Observer Volume 28 ; 28 ; >
     au < crawling ; exists ; 2014 ; The World Bank Research Observer Volume 29 ; 29 ; >
-    au < testing ; exists ; 2015 ; The World Bank Research Observer Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; The World Bank Research Observer Volume 30 ; 30 ; >
 
     }
 
@@ -23180,7 +23181,7 @@
 
       au < crawling ; exists ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 ; >
       au < finished ; crawling ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 ; >
-      au < testing ; exists ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; >
+      au < ready ; exists ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; >
 
     }
 
@@ -23751,7 +23752,7 @@
     au < finished ; crawling ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
     au < finished ; finished ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
-    au < testing ; exists ; 2015 ; Interacting with Computers Volume 27 ; 27 ; >
+    au < ready ; exists ; 2015 ; Interacting with Computers Volume 27 ; 27 ; >
 
   }
   {
