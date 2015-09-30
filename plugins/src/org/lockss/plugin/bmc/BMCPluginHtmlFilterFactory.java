@@ -34,8 +34,11 @@ package org.lockss.plugin.bmc;
 
 import java.io.*;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TextNode;
+import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
@@ -44,91 +47,108 @@ import org.lockss.util.ReaderInputStream;
 
 public class BMCPluginHtmlFilterFactory implements FilterFactory {
 
+  protected static final NodeFilter[] filters = new NodeFilter[] {
+      // malformed html causing low agreement <div id="oas-
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
+      // head tag - Extreme Hash filtering!
+      HtmlNodeFilters.tag("head"),
+      // Contains variable code
+      HtmlNodeFilters.tag("script"),
+      // Contains variable alternatives to the code
+      HtmlNodeFilters.tag("noscript"),
+      // remove all style tags!
+      HtmlNodeFilters.tag("style"),
+      // Contains ads
+      HtmlNodeFilters.tag("iframe"),
+      // Contains ads
+      HtmlNodeFilters.tag("object"),
+      // CSS and RSS links varied over time
+      HtmlNodeFilters.tag("link"),
+      //filter out comments
+      HtmlNodeFilters.comment(),
+      // upper area above the article - Extreme Hash filtering!
+      HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
+      // left-hand area next to the article - Extreme Hash filtering!
+      HtmlNodeFilters.tagWithAttribute("div", "class", "left-article-box"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "left-article-box"),
+      // right-hand area next to the article - Extreme Hash filtering!
+      HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
+      // alert signup - Extreme Hash filtering!
+//      HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
+      // Contains one-time names inside the page
+      HtmlNodeFilters.tagWithAttribute("a", "name"),
+      // Links to one-time names inside the page
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
+      // Institution-dependent greeting
+      HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
+      
+      // Contains the menu  <ul class="primary-nav">
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "primary-nav"),
+      // remove footer
+      //Contains the terms and conditions,copyright year & links to springer
+      HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+      // Contains university name: <ul id="login"
+      HtmlNodeFilters.tagWithAttribute("ul", "id", "login"),
+      // Contains advertising
+      HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "google-ad"),
+      // Social networking links (have counters)
+      HtmlNodeFilters.tagWithAttribute("ul", "id", "social-networking-links"),
+      // A usage counter/glif that gets updated over time
+      HtmlNodeFilters.tagWithAttribute("div", "id", "impact-factor"),
+      // Contains adverstising <a class="banner-ad"
+      HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
+      // Contains adverstising <a class="skyscraper-ad" 
+      HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
+      // An open access link/glyph that may get added
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/access"),
+      // A highly accessed link/glyph that may get added
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/mostviewed"),
+      // Institution-dependent image
+      HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?"),
+      // Institution-dependent link resolvers  v2 - added
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?"),
+      // Institution-dependent link resolvers   v1
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
+      // Springer branding below the footer
+      HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
+      
+      // The text of this link changed from "About this article" to "Article metrics"
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
+      // removes mathml inline wierdnesses
+      HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "style", "display:inline$"),
+      HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
+      HtmlNodeFilters.tagWithAttribute("span", "class", "inline-math"),
+      HtmlNodeFilters.tagWithAttribute("span", "class", "inlinenumber"),
+      
+      // floating bottom banner announcing access to beta version of new site
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "^banner-footer"),
+      
+  };
+  
+  // HTML transform to convert all remaining nodes to plaintext nodes
+  // cannot keep up with all the continual changes to tags
+  
+  protected static HtmlTransform xformAllTags = new HtmlTransform() {
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      NodeList nl = new NodeList();
+      for (int sx = 0; sx < nodeList.size(); sx++) {
+        Node snode = nodeList.elementAt(sx);
+        TextNode tn = new TextNode(snode.toPlainTextString());
+        nl.add(tn);
+      }
+      return nl;
+    }
+  };
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // malformed html causing low agreement <div id="oas-
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
-        // head tag - Extreme Hash filtering!
-        HtmlNodeFilters.tag("head"),
-        // Contains variable code
-        HtmlNodeFilters.tag("script"),
-        // Contains variable alternatives to the code
-        HtmlNodeFilters.tag("noscript"),
-        // remove all style tags!
-        HtmlNodeFilters.tag("style"),
-        // Contains ads
-        HtmlNodeFilters.tag("iframe"),
-        // Contains ads
-        HtmlNodeFilters.tag("object"),
-        // CSS and RSS links varied over time
-        HtmlNodeFilters.tag("link"),
-        //filter out comments
-        HtmlNodeFilters.comment(),
-        // upper area above the article - Extreme Hash filtering!
-        HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
-        // left-hand area next to the article - Extreme Hash filtering!
-        HtmlNodeFilters.tagWithAttribute("div", "class", "left-article-box"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "left-article-box"),
-        // right-hand area next to the article - Extreme Hash filtering!
-        HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
-        // alert signup - Extreme Hash filtering!
-//        HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
-        // Contains one-time names inside the page
-        HtmlNodeFilters.tagWithAttribute("a", "name"),
-        // Links to one-time names inside the page
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
-        // Institution-dependent greeting
-        HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
-        
-        // Contains the menu  <ul class="primary-nav">
-        HtmlNodeFilters.tagWithAttribute("ul", "class", "primary-nav"),
-        // remove footer
-        //Contains the terms and conditions,copyright year & links to springer
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        // Contains university name: <ul id="login"
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "login"),
-        // Contains advertising
-        HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "google-ad"),
-        // Social networking links (have counters)
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "social-networking-links"),
-        // A usage counter/glif that gets updated over time
-        HtmlNodeFilters.tagWithAttribute("div", "id", "impact-factor"),
-        // Contains adverstising <a class="banner-ad"
-        HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
-        // Contains adverstising <a class="skyscraper-ad" 
-        HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
-        // An open access link/glyph that may get added
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/access"),
-        // A highly accessed link/glyph that may get added
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/mostviewed"),
-        // Institution-dependent image
-        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?"),
-        // Institution-dependent link resolvers  v2 - added
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?"),
-        // Institution-dependent link resolvers   v1
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
-        // Springer branding below the footer
-        HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
-        
-        // The text of this link changed from "About this article" to "Article metrics"
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
-        // removes mathml inline wierdnesses
-        HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "style", "display:inline$"),
-        HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
-        HtmlNodeFilters.tagWithAttribute("span", "class", "inline-math"),
-        HtmlNodeFilters.tagWithAttribute("span", "class", "inlinenumber"),
-        
-        // floating bottom banner announcing access to beta version of new site
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "^banner-footer"),
-        
-    };
-    
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+        new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xformAllTags));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     // added whitespace filter
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
