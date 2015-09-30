@@ -131,12 +131,16 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
                                startingIndex);
     return url;
   }
-
+/*
+ * (non-Javadoc)
+ * encode the doi so that ":" and similar in the doi portion of the URL are
+ * consitent with the href links within the article pages
+ */
   @Override
   protected List<String> convertDoisToUrls(List<String> dois) {
     List<String> urls = new ArrayList<String>();
     for(String doi:dois) {
-      String url = String.format("%sarticle/%s", baseUrl, doi);
+      String url = String.format("%sarticle/%s", baseUrl, encodeDoi(doi));
       urls.add(url);
     }
     return urls;
