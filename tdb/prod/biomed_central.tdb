@@ -2950,7 +2950,7 @@
       au < released ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
       au < released ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
       au < manifest ; 2013 ; Cell Communication and Signaling Volume 11 ; 11 >
-      au < ready ; 2014 ; Cell Communication and Signaling Volume 12 ; 12 >
+      au < releasing ; 2014 ; Cell Communication and Signaling Volume 12 ; 12 >
       au < manifest ; 2015 ; Cell Communication and Signaling Volume 13 ; 13 >
 
     }
@@ -3242,7 +3242,7 @@
       au < released ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
       au < released ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
       au < manifest ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
-      au < ready ; 2014 ; Clinical Epigenetics Volume 6 ; 6 >
+      au < releasing ; 2014 ; Clinical Epigenetics Volume 6 ; 6 >
       au < manifest ; 2015 ; Clinical Epigenetics Volume 7 ; 7 >
 
     }
@@ -3395,7 +3395,7 @@
       au < released ; 2010 ; Cough Volume 6 ; 6 >
       au < released ; 2011 ; Cough Volume 7 ; 7 >
       au < released ; 2012 ; Cough Volume 8 ; 8 >
-      au < ready ; 2013 ; Cough Volume 9 ; 9 >
+      au < releasing ; 2013 ; Cough Volume 9 ; 9 >
       au < manifest ; 2014 ; Cough Volume 10 ; 10 >
       au < manifest ; 2015 ; Cough Volume 11 ; 11 >
 
@@ -3493,7 +3493,7 @@
       au < released ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
       au < released ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
       au < released ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
-      au < ready ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
+      au < releasing ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
       au < manifest ; 2014 ; Diabetology & Metabolic Syndrome Volume 6 ; 6 >
       au < manifest ; 2015 ; Diabetology & Metabolic Syndrome Volume 7 ; 7 >
 
@@ -5014,9 +5014,9 @@
         au < manifest ; 2006 ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
         au < manifest ; 2007 ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
         au < manifest ; 2008 ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
-        au < ready ; 2009 ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
+        au < releasing ; 2009 ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
         au < manifest ; 2010 ; Journal of Cardiovascular Magnetic Resonance Volume 12 ; 12 >
-        au < ready ; 2011 ; Journal of Cardiovascular Magnetic Resonance Volume 13 ; 13 >
+        au < releasing ; 2011 ; Journal of Cardiovascular Magnetic Resonance Volume 13 ; 13 >
         au < manifest ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
         au < manifest ; 2013 ; Journal of Cardiovascular Magnetic Resonance Volume 15 ; 15 >
         au < manifest ; 2014 ; Journal of Cardiovascular Magnetic Resonance Volume 16 ; 16 >
@@ -5097,7 +5097,7 @@
       param[journal_issn] = 2050-2974
 
       au < manifest ; 2013 ; Journal of Eating Disorders Volume 1 ; 1 >
-      au < ready ; 2014 ; Journal of Eating Disorders Volume 2 ; 2 >
+      au < releasing ; 2014 ; Journal of Eating Disorders Volume 2 ; 2 >
       au < manifest ; 2015 ; Journal of Eating Disorders Volume 3 ; 3 >
 
     }
@@ -5510,7 +5510,7 @@
 
       au < manifest ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
       au < manifest ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
-      au < ready ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
+      au < releasing ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
       au < manifest ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
       au < manifest ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
       au < manifest ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
@@ -6839,7 +6839,7 @@
       au < doNotProcess ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 > #malformed
       au < manifest ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
       au < manifest ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
-      au < ready ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
+      au < releasing ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
       au < manifest ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 >
       au < manifest ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 >
       au < manifest ; 2015 ; Tobacco Induced Diseases Volume 13 ; 13 >
@@ -6856,7 +6856,7 @@
       param[base_url] = http://www.translationalneurodegeneration.com/
       param[journal_issn] = 2047-9158
 
-      au < ready ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 >
+      au < releasing ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 >
       au < manifest ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 >
       au < manifest ; 2014 ; Translational Neurodegeneration Volume 3 ; 3 >
       au < manifest ; 2015 ; Translational Neurodegeneration Volume 4 ; 4 >
