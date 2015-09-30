@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>20</string>
+        <string>21</string>
       </entry>
     </map>
   </entry>
@@ -65,12 +65,13 @@
     <string>org.lockss.plugin.bmc.BioMedCentralHtmlFilterFactory</string>
   </entry>
   <entry>
-    <!-- this is to catch the 500 errors produced when trying to crawl their unresolved
-         "mathml" links - temporary until the publisher fixes these unfetchable files
-     -->
     <string>plugin_cache_result_list</string>
     <list>
+      <!-- this is to catch the 500 errors produced when trying to crawl their unresolved
+         "mathml" links - temporary until the publisher fixes these unfetchable files
+     -->
       <string>500=org.lockss.plugin.bmc.BioMedCentralPluginHttpResponseHandler</string>
+      <string>503=org.lockss.plugin.bmc.BioMedCentralPluginHttpResponseHandler</string>
     </list>
   </entry>
   

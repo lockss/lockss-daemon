@@ -84,6 +84,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
         // Institution-dependent greeting
         HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "message"),
         
         // Malformed HTML
         HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab"),
@@ -139,6 +140,10 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         
         // floating bottom banner announcing access to beta version of new site
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "^banner-footer"),
+        
+        // Journal of Cloud Computing: Advances, Systems and Applications &
+        // Boundary Value Problems some articles had clickable badge
+        HtmlNodeFilters.tagWithAttribute("a", "onclick"),
         
         new NodeFilter() {
           @Override public boolean accept(Node node) {

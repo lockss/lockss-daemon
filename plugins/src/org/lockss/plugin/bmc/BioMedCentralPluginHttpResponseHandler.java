@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,8 +56,12 @@ public class BioMedCentralPluginHttpResponseHandler implements CacheResultHandle
         if (au.shouldBeCached(url) && url.matches(".*/mathml/M\\d+$")) {
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         }
-        else {
-          return new CacheException.RetrySameUrlException("500 Internal Server Error");        }
+        return new CacheException.RetrySameUrlException("500 Internal Server Error");
+      case 503:
+        log.debug2("503 error: "+url);
+        // retry "503 backend read error" and 503 Service Unavailable
+        // as most will resolve eventually
+        return new CacheException.RetryableNetworkException_3_30S();
       default:
         log.debug2("default");
         throw new UnsupportedOperationException();
