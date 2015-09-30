@@ -34,9 +34,9 @@ package org.lockss.servlet;
 
 import java.util.*;
 import java.io.*;
+
 import org.mortbay.html.*;
 import org.apache.oro.text.regex.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -137,5 +137,46 @@ public class TestServletUtil extends LockssTestCase {
 		 ServletUtil.getContentOriginalFilename(cu, false));
     assertEquals("\"file.html\"",
 		 ServletUtil.getContentOriginalFilename(cu, true));
+  }
+
+  public void testIsTabPopulated() {
+    Map<String, Boolean> tabLetterPopulationMap =
+	new HashMap<String, Boolean>();
+
+    assertFalse(ServletUtil.isTabPopulated(1, 'A', tabLetterPopulationMap));
+    assertFalse(ServletUtil.isTabPopulated(2, 'A', tabLetterPopulationMap));
+    assertFalse(ServletUtil.isTabPopulated(26, 'A', tabLetterPopulationMap));
+
+    tabLetterPopulationMap.put("A", Boolean.TRUE);
+    tabLetterPopulationMap.put("C", Boolean.TRUE);
+    tabLetterPopulationMap.put("D", Boolean.TRUE);
+    tabLetterPopulationMap.put("G", Boolean.TRUE);
+    tabLetterPopulationMap.put("H", Boolean.TRUE);
+    tabLetterPopulationMap.put("I", Boolean.TRUE);
+    tabLetterPopulationMap.put("M", Boolean.TRUE);
+    tabLetterPopulationMap.put("N", Boolean.TRUE);
+    tabLetterPopulationMap.put("O", Boolean.TRUE);
+    tabLetterPopulationMap.put("P", Boolean.TRUE);
+    tabLetterPopulationMap.put("U", Boolean.TRUE);
+    tabLetterPopulationMap.put("V", Boolean.TRUE);
+    tabLetterPopulationMap.put("W", Boolean.TRUE);
+    tabLetterPopulationMap.put("X", Boolean.TRUE);
+    tabLetterPopulationMap.put("Y", Boolean.TRUE);
+
+    assertTrue(ServletUtil.isTabPopulated(1, 'A', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(2, 'A', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(26, 'A', tabLetterPopulationMap));
+    assertFalse(ServletUtil.isTabPopulated(1, 'B', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(2, 'B', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(2, 'C', tabLetterPopulationMap));
+    assertFalse(ServletUtil.isTabPopulated(2, 'E', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(3, 'E', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(3, 'G', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(3, 'I', tabLetterPopulationMap));
+    assertFalse(ServletUtil.isTabPopulated(3, 'J', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(4, 'L', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(4, 'M', tabLetterPopulationMap));
+    assertTrue(ServletUtil.isTabPopulated(4, 'N', tabLetterPopulationMap));
+    assertFalse(ServletUtil.isTabPopulated(4, 'Q', tabLetterPopulationMap));
   }
 }

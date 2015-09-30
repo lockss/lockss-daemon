@@ -39,6 +39,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import javax.servlet.ServletConfig;
@@ -88,9 +89,12 @@ public class SubscriptionManagement extends LockssServlet {
   /**
    * The maximum number of entries that force a single-tab interface.
    */
-  public static final String PARAM_MAX_SINGLE_TAB_COUNT = PREFIX
-      + "maxSingleTabCount";
-  public static final int DEFAULT_MAX_SINGLE_TAB_COUNT = 20;
+  public static final String PARAM_MAX_SINGLE_TAB_PUBLICATION_COUNT = PREFIX
+      + "maxSingleTabPublicationCount";
+  public static final int DEFAULT_MAX_SINGLE_TAB_PUBLICATION_COUNT = 20;
+  public static final String PARAM_MAX_SINGLE_TAB_PUBLISHER_COUNT = PREFIX
+      + "maxSingleTabPublisherCount";
+  public static final int DEFAULT_MAX_SINGLE_TAB_PUBLISHER_COUNT = 20;
 
   public static final String AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT =
       "Synchronize Subscriptions";
@@ -167,7 +171,8 @@ public class SubscriptionManagement extends LockssServlet {
 
   private PluginManager pluginManager;
   private SubscriptionManager subManager;
-  private int maxSingleTabCount;
+  private int maxSingleTabPublicationCount;
+  private int maxSingleTabPublisherCount;
 
   /**
    * Initializes the configuration when loaded.
@@ -193,10 +198,19 @@ public class SubscriptionManagement extends LockssServlet {
 
     // Get the number of publications beyond which a multi-tabbed interface is
     // to be used.
-    maxSingleTabCount =
-	config.getInt(PARAM_MAX_SINGLE_TAB_COUNT, DEFAULT_MAX_SINGLE_TAB_COUNT);
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "maxSingleTabCount = " + maxSingleTabCount);
+    maxSingleTabPublicationCount =
+	config.getInt(PARAM_MAX_SINGLE_TAB_PUBLICATION_COUNT,
+	    DEFAULT_MAX_SINGLE_TAB_PUBLICATION_COUNT);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "maxSingleTabPublicationCount = " + maxSingleTabPublicationCount);
+
+    // Get the number of publishers beyond which a multi-tabbed interface is
+    // to be used.
+    maxSingleTabPublisherCount =
+	config.getInt(PARAM_MAX_SINGLE_TAB_PUBLISHER_COUNT,
+	    DEFAULT_MAX_SINGLE_TAB_PUBLISHER_COUNT);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "maxSingleTabPublisherCount = " + maxSingleTabPublisherCount);
   }
 
   /**
@@ -316,6 +330,12 @@ public class SubscriptionManagement extends LockssServlet {
       // and populate their publishers.
       List<SerialPublication> publications =
 	  subManager.getUndecidedPublications(publishers);
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER
+	    + "publications.size() = " + publications.size());
+	log.debug3(DEBUG_HEADER
+	    + "publishers.keySet().size() = " + publishers.keySet().size());
+      }
 
       if (publications.size() > 0) {
 	layoutErrorBlock(page);
@@ -330,7 +350,15 @@ public class SubscriptionManagement extends LockssServlet {
 	// Determine whether to use a single-tab or multiple-tab interface.
 	int lettersPerTab = DEFAULT_LETTERS_PER_TAB;
 
-	if (publications.size() <= maxSingleTabCount) {
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "maxSingleTabPublicationCount = "
+	      + maxSingleTabPublicationCount);
+	  log.debug3(DEBUG_HEADER + "maxSingleTabPublisherCount = "
+	      + maxSingleTabPublisherCount);
+	}
+
+	if (publications.size() <= maxSingleTabPublicationCount
+	    || publishers.keySet().size() <= maxSingleTabPublisherCount) {
 	  lettersPerTab = LETTERS_IN_ALPHABET;
 	}
 
@@ -344,12 +372,16 @@ public class SubscriptionManagement extends LockssServlet {
 	// Add it to the form.
 	form.add(tabsDiv);
 
+	// Get the map of the tab letters that are populated.
+	Map<String, Boolean> tabLetterPopulationMap =
+	    getTabLetterPopulationMap(publishers.keySet());
+
 	// Create the tabs on the page, add them to the tabs container and
 	// obtain a map of the tab tables keyed by the letters they cover.
 	Map<String, Table> divTableMap =
 	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
 		getTabColumnHeaderNames(), "sub-row-title",
-		getColumnHeaderCssClasses(), tabsDiv);
+		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv);
 
 	// Populate the tabs content with the publications for which no
 	// subscription decision has been made.
@@ -513,6 +545,49 @@ public class SubscriptionManagement extends LockssServlet {
     }
 
     return tabColumnHeaderCssClasses;
+  }
+
+  /**
+   * Provides an indication of whether there is content for each of the letters
+   * used in the display tabs.
+   * 
+   * @param publisherNames
+   *          A Set<String> with the names of the publishers.
+   * @return a Map<String, Boolean> with the indication of whether a letter used
+   *         in a display tab has content.
+   */
+  private Map<String, Boolean> getTabLetterPopulationMap(
+      Set<String> publisherNames) {
+    final String DEBUG_HEADER = "getTabLetterPopulationMap(): ";
+    if (log.isDebug2()) {
+      if (publisherNames != null) {
+	log.debug2(DEBUG_HEADER
+	    + "publisherNames.size() = " + publisherNames.size());
+      } else {
+	log.debug2(DEBUG_HEADER + "publisherNames is null");
+      }
+    }
+
+    // Initialize the result.
+    Map<String, Boolean> tabLetterPopulationMap =
+	new HashMap<String, Boolean>();
+
+    // Loop through all the publisher names.
+    for (String publisherName : publisherNames) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+      // The publisher name first letter.
+      String firstLetterPub = publisherName.substring(0, 1).toUpperCase();
+      if (log.isDebug3())
+        log.debug3(DEBUG_HEADER + "firstLetterPub = " + firstLetterPub);
+
+      tabLetterPopulationMap.put(firstLetterPub, Boolean.TRUE);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "tabLetterPopulationMap.size() = " + tabLetterPopulationMap.size());
+    return tabLetterPopulationMap;
   }
 
   /**
@@ -1751,8 +1826,12 @@ public class SubscriptionManagement extends LockssServlet {
       // Get the existing subscriptions with ranges.
       List<Subscription> subscriptions =
   	  subManager.findAllSubscriptionsAndRanges(subscribedPublishers);
-      if (log.isDebug3())
-  	log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER
+	    + "subscriptions.size() = " + subscriptions.size());
+	log.debug3(DEBUG_HEADER + "subscribedPublishers.keySet().size() = "
+	    + subscribedPublishers.keySet().size());
+      }
 
       if (subscriptions.size() > 0 || subscribedPublishers.size() > 0) {
 	layoutErrorBlock(page);
@@ -1767,7 +1846,16 @@ public class SubscriptionManagement extends LockssServlet {
 	// Determine whether to use a single-tab or multiple-tab interface.
 	int lettersPerTab = DEFAULT_LETTERS_PER_TAB;
 
-	if (subscriptions.size() <= maxSingleTabCount) {
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "maxSingleTabPublicationCount = "
+	      + maxSingleTabPublicationCount);
+	  log.debug3(DEBUG_HEADER + "maxSingleTabPublisherCount = "
+	      + maxSingleTabPublisherCount);
+	}
+
+	if (subscriptions.size() <= maxSingleTabPublicationCount
+	    || subscribedPublishers.keySet().size()
+	    <= maxSingleTabPublisherCount) {
 	  lettersPerTab = LETTERS_IN_ALPHABET;
 	}
 
@@ -1781,12 +1869,16 @@ public class SubscriptionManagement extends LockssServlet {
 	// Add it to the form.
 	form.add(tabsDiv);
 
+	// Get the map of the tab letters that are populated.
+	Map<String, Boolean> tabLetterPopulationMap =
+	    getTabLetterPopulationMap(subscribedPublishers.keySet());
+
 	// Create the tabs on the page, add them to the tabs container and
 	// obtain a map of the tab tables keyed by the letters they cover.
 	Map<String, Table> divTableMap =
 	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
 		getTabColumnHeaderNames(), "sub-row-title",
-		getColumnHeaderCssClasses(), tabsDiv);
+		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv);
 
 	// Populate the tabs content with the publications for which
 	// subscription decisions have already been made.
@@ -2016,7 +2108,8 @@ public class SubscriptionManagement extends LockssServlet {
    * @param publisherSubscription
    *          A PublisherSubscription with the publisher subscription.
    * @param subSet
-   *          A TreeSet<Subscription> with the publisher subscriptions.
+   *          A TreeSet<Subscription> with the publisher publication
+   *          subscriptions.
    * @param divTableMap
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.

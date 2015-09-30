@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2108,6 +2108,9 @@ public class ServletUtil {
    *          A String with the CSS class to use for the row title.
    * @param columnHeaderCssClasses
    *          A List<String> with the CSS classes to use for the column headers.
+   * @param tabLetterPopulationMap
+   *          A Map<String, Boolean> with the indication of whether a letter
+   *          used in a display tab has content.
    * @param tabsDiv
    *          A Block with the tabs container.
    * @return a Map<String, Table> with the tabs tables mapped by the initial
@@ -2116,8 +2119,8 @@ public class ServletUtil {
   public static Map<String, Table> createTabsWithTable(int alphabetLetterCount,
       int lettersPerTabCount, List<String> columnHeaderNames,
       String rowTitleCssClass, List<String> columnHeaderCssClasses,
-      Block tabsDiv) {
-    final String DEBUG_HEADER = "createTabs(): ";
+      Map<String, Boolean> tabLetterPopulationMap, Block tabsDiv) {
+    final String DEBUG_HEADER = "createTabsWithTable(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Get the map of tab letters.
@@ -2125,7 +2128,8 @@ public class ServletUtil {
 	createTabLettersMap(alphabetLetterCount, lettersPerTabCount);
 
     // Create the spans required by jQuery to build the desired tabs.
-    org.mortbay.html.List tabList = createTabList(tabLetters);
+    org.mortbay.html.List tabList =
+	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap);
 
     // Add them to the tabs container.
     tabsDiv.add(tabList);
@@ -2149,9 +2153,14 @@ public class ServletUtil {
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "startLetter = " + startLetter);
 
-      // Create the table for the tab.
-      divTable = createTabTable(startLetter.toString(), columnHeaderNames,
-	  rowTitleCssClass, columnHeaderCssClasses);
+      if (isTabPopulated(lettersPerTabCount, startLetter,
+	  tabLetterPopulationMap)) {
+	// Create the table for the tab.
+	divTable = createTabTable(startLetter.toString(), columnHeaderNames,
+	    rowTitleCssClass, columnHeaderCssClasses);
+      } else {
+	divTable = new Table(0, "class=\"status-table\"");
+      }
 
       // Create the tab for this letter group.
       tabDiv = new Block("div", "id=\"" + startLetter.toString() + "\"");
@@ -2239,13 +2248,19 @@ public class ServletUtil {
   /**
    * Creates the spans required by jQuery to build the desired tabs.
    * 
+   * @param lettersPerTabCount
+   *          An int with the count of the letters per tab to be used.
    * @param tabLetters
    *          A Map<Character, Character> with the tabs start and end letters.
+   * @param tabLetterPopulationMap
+   *          A Map<String, Boolean> with the indication of whether a letter
+   *          used in a display tab has content.
    * @return an org.mortbay.html.List with the spans required by jQuery to build
    *         the desired tabs.
    */
-  private static org.mortbay.html.List createTabList(
-      Map<Character, Character> tabLetters) {
+  private static org.mortbay.html.List createTabList(int lettersPerTabCount,
+      Map<Character, Character> tabLetters,
+      Map<String, Boolean> tabLetterPopulationMap) {
     final String DEBUG_HEADER = "createTabList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -2275,7 +2290,12 @@ public class ServletUtil {
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "endLetter = " + endLetter);
 
       // Initialize the tab.
-      tabSpan = new Block(Block.Span);
+      if (isTabPopulated(lettersPerTabCount, startLetter,
+	  tabLetterPopulationMap)) {
+	tabSpan = new Block(Block.Bold);
+      } else {
+	tabSpan = new Block(Block.Span);
+      }
 
       // Add the label.
       if (!startLetter.equals(endLetter)) {
@@ -2295,6 +2315,45 @@ public class ServletUtil {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return tabList;
+  }
+
+  /**
+   * Provides an indication of whether a tab is populated with content.
+   * 
+   * @param lettersPerTabCount
+   *          An int with the count of the letters per tab to be used.
+   * @param startLetter
+   *          A Character with the first tab letter.
+   * @param tabLetterPopulationMap
+   *          A Map<String, Boolean> with the indication of whether a letter
+   *          used in a display tab has content.
+   * @return a boolean with <code>true</code> if the tab is populated with
+   *         content, or <code>false</code> otherwise.
+   */
+  static boolean isTabPopulated(int lettersPerTabCount, Character startLetter,
+      Map<String, Boolean> tabLetterPopulationMap) {
+    final String DEBUG_HEADER = "isTabPopulated(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    boolean tabIsPopulated = false;
+
+    // Loop through all the other letters in the tab.
+    for (int j = 0; j < lettersPerTabCount; j++) {
+      Character tabLetter = (char) (startLetter + j);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "j = " + j + ", tabLetter = " + tabLetter);
+
+      // Check whether the letter is populated.
+      if (tabLetterPopulationMap.get(tabLetter.toString()) != null) {
+	// Yes: The tab is populated.
+	tabIsPopulated = true;
+	break;
+      }
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "tabIsPopulated = " + tabIsPopulated);
+    return tabIsPopulated;
   }
 
   /**
