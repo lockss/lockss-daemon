@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Open Library of the Humanities
+  >
+  
+    rights = openaccess
+
+    plugin = needs.plugin
+    #same platform as Ubiquity Press
+    implicit < status ; year ; name ; volume ; param[year] >
+    #volume directory used in url is 1 less than the volume number
+    
+    {
+  
+    title < 
+      name = The Comics Grid: Journal of Comics Scholarship ;
+      eissn = 2048-0792
+    >
+    
+    param[base_url] = http://www.comicsgrid.com/
+    param[journal_id] = cg
+    
+    au < doNotProcess ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
+    au < exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
+    au < exists ; 2015 ; The Comics Grid: Journal of Comics Scholarship Volume 5 ; 5 ; 2015 >
+    
+    }
+  
+}
