@@ -79,21 +79,21 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   private static final String commonResult = " Hello World";
 
   private static final String inst11 = 
-      "<html><p style=\"line-height:160%\" class=\"inlinenumber\">" +
+      "<html>A<p style=\"line-height:160%\" class=\"inlinenumber\">" +
           "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
           "<m:mrow>" +
           "</m:mrow>" +
           "</p></html>";
   private static final String inst12 = 
-      "<html><div style=\"display:table;width:100%;*display:inline\">" +
+      "<html>A<div style=\"display:table;width:100%;*display:inline\">" +
           "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
           "<m:mrow>" +
           "</m:mrow>" +
           "</div></html>";
   private static final String inst13 = 
-      "<html><span class=\"mathjax\">" +
+      "<html>A<span class=\"mathjax\">" +
           "</span></html>";
-  private static final String inst1123Filtered = "<html></html>";
+  private static final String inst1123Filtered = "A";
 
   private static final String floatingMsg=
       "<html><style>" +
@@ -110,6 +110,7 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
           ".banner-footer--instart {display: block !important}" +
           "&lt;/style&gt;" +
           "</noscript>" +
+          "text here" +
           "<div class=\"banner-footer\">" +
           "<i class=\"banner-footer--handle\">&nbsp;</i>" +
           "<div class=\"banner-footer--panel\"><div>" +
@@ -122,7 +123,7 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
           "</html>";
 
   private static final String floatingMsgFiltered=
-      "<html></html>";
+      "text here";
 
 
 
