@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.pion;
 
 import java.io.*;
+import java.util.List;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
@@ -45,21 +45,39 @@ import org.lockss.util.*;
 
 public class PionHashHtmlFilterFactory implements FilterFactory {
 
+  static HtmlTagFilter.TagPair[] tagpairs = {
+      new HtmlTagFilter.TagPair("<?tf=", ">"),
+      new HtmlTagFilter.TagPair("<!--", "this archival unit -->", true),
+    };
+  static List<HtmlTagFilter.TagPair> tagList = ListUtil.fromArray(tagpairs);
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     // Remove malformed XML processing instruction that confuses HtmlParser
-    in = new BufferedInputStream(new ReaderInputStream(new StringFilter(FilterUtil.getReader(in, encoding), "<?tf=\"t001\">")));
+    // and permission statements on some issues
+    in = new BufferedInputStream(new ReaderInputStream(
+        HtmlTagFilter.makeNestedFilter(FilterUtil.getReader(in, encoding), tagList)));
     
     // First filter with HtmlParser constructs
     NodeFilter[] filters = new NodeFilter[] {
+        // contains changing metadata tags and scripts
+        HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tag("script"),
+        // not needed
+        HtmlNodeFilters.tagWithAttribute("div", "id", "top-buttons"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "_atssh"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "topspace"),
+        // found at http://www.envplan.com/abstract.cgi?id=d7912 
+        // <div id="at20mc" style="z-index: 1000000;">
+        HtmlNodeFilters.tagWithAttribute("div", "id", "at20mc"),
         // Contains an ever-growing list of volumes/years
         HtmlNodeFilters.tagWithAttribute("div", "class", "dropdown"),
         // Contains the year in progress
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Somewhat CLOCKSS-specific: remove Stanford's SFX linking
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://library.stanford.edu/sfx"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://library\\.stanford\\.edu/sfx"),
     };
     OrFilter orFilter = new OrFilter(filters);
     InputStream filteredInputStream = new HtmlFilterInputStream(in,
