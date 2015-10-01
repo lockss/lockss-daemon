@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -47,7 +47,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss-manifest/%s.html", base_url, volume_name</string>
+    <list>
+      <string>"%slockss-manifest/%s.html", base_url, volume_name</string>
+      <string>"%slockss-manifest/elife_%s.html", base_url, volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

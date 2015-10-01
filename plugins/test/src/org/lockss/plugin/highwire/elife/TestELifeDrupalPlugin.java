@@ -96,12 +96,15 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "2013");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
-    String starturl =
-        "http://www.example.com/lockss-manifest/2013.html";
+    String[] starturl = new String[]{
+        "http://www.example.com/lockss-manifest/2013.html",
+        "http://www.example.com/lockss-manifest/elife_2013.html",
+    };
+    
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("eLife Sciences Plugin, Base URL http://www.example.com/, Volume 2013",
         au.getName());
-    assertEquals(ListUtil.list(starturl), au.getStartUrls());
+    assertEquals(ListUtil.fromArray(starturl), au.getStartUrls());
   }
   
   public void testGetPluginId() {
