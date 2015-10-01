@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -93,6 +93,13 @@
       <string>1,"^%s(content|chapter|book|article)/", base_url</string>
       <string>1,"^%sstatic/", download_url</string>
       <string>1,"http://static-content.springer.com/image/.+[.](jpg|png)"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!--  http://link.springer.com/content/pdf/10.1007%2F978-3-319-18518-7.pdf -->
+      <string>"^%scontent/pdf/[.0-9]+(/|%%2F)%s\.pdf$", base_url,book_eisbn</string>
     </list>
   </entry>
   <entry>

@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -88,6 +88,14 @@
   <entry>
     <string>au_start_url</string>
     <string>"%s", base_url</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+    <!-- full  pdf:  http://link.springer.com/content/pdf/10.1007%2fs00159-014-0071-1.pdf-->
+    <!-- full html:  http://link.springer.com/article/10.1007/s00159-014-0071-1/fulltext.html -->
+      <string>"^%s(article|content/pdf)/[.0-9]+(/|%%2F)[^\?&amp;]+(\.pdf|/fulltext\.html)$", base_url</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>

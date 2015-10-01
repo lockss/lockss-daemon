@@ -35,18 +35,10 @@ package org.lockss.plugin.springer.link;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.extractor.LinkExtractor.Callback;
-import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.plugin.UrlFetcher.FetchResult;
-import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.CacheException;
 
 /**
  * <p>
