@@ -70,7 +70,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "</div>";
   
   private static final String impactFactorHtmlHashFiltered =
-    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+    " ";
 
   private static final String accessHtmlHash =
     "<div class=\"article-type\">Software <a href=\"/about/access\">\n" +
@@ -80,7 +80,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "</div>";
 
   private static final String accessHtmlHashFiltered =
-    "<div class=\"article-type\">Software </div>";
+    "Software ";
 
   private static final String accessesBlockHtml =
     "<div class=\"wrap\">\n" +
@@ -89,9 +89,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "</div>";
 
   private static final String accessesBlockHtmlFiltered = 
-    "<div class=\"wrap\"> " +
-    "<h2 class=\"active\" id=\"accesses\">Accesses</h2> " +
-    "</div>";
+    " Accesses ";
   
   private static final String citationsBlockHtml =
     "<div class=\"wrap\">\n" +
@@ -100,9 +98,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "</div>";
   
   private static final String citationsBlockHtmlFiltered =
-    "<div class=\"wrap\"> " +
-    "<h2 class=\"active\" id=\"citations\">Cited by</h2> " +
-    "</div>";
+    " Cited by ";
 
   private static final String bannerAdHtmlHash =
     "<a class=\"banner-ad\"" +
@@ -110,7 +106,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
   
   private static final String bannerAdHtmlHashFiltered =
-    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+    " ";
 
   private static final String SkyscraperAdHtmlHash =
     "<a class=\"skyscraper-ad\"" +
@@ -119,10 +115,10 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
   
   private static final String SkyscraperAdHtmlHashFiltered =
-    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+    " ";
   
   private static final String HeadHtmlHash = 
-    "<html><head>" +
+    "<html>X<head>" +
     "<script>" +
     "window.onmessage = function(e) {" +
     "if(e.data == \"biome-failed\") {" +
@@ -131,9 +127,9 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "}" +
     "};" +
     "</script>" +
-    "</head></html>";
+    "</head>X</html>";
   private static final String HeadHtmlHashFiltered =
-    "<html></html>";
+    "XX";
   
   private static final String BiomeBadgeHash = 
     "<div id=\"mobile-sidebar\">" +
@@ -152,25 +148,25 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   private static final String BiomeBadgeHashFiltered = "Hello World";
   
   private static final String InlineNumberHash = 
-    "<html><p style=\"line-height:160%\" class=\"inlinenumber\">" +
+    "<html>X<p style=\"line-height:160%\" class=\"inlinenumber\">" +
     "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
     "<m:mrow>" +
     "</m:mrow>" +
     "</p></html>";
   private static final String DisplayInlineHash = 
-    "<html><div style=\"display:table;width:100%;*display:inline\">" +
+    "<html>X<div style=\"display:table;width:100%;*display:inline\">" +
     "<m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\" >" +
     "<m:mrow>" +
     "</m:mrow>" +
     "</div></html>";
   private static final String MathJaxHash = 
-    "<html><span class=\"mathjax\">" +
+    "<html>X<span class=\"mathjax\">" +
     "</span></html>";
   private static final String InlineNumberHashFiltered =
-    "<html></html>";
+    "X";
   
   private static final String floatingMsg=
-      "<html><style>" +
+      "<html>X<style>" +
           ".banner-footer {  text-align: initial !important;" +
           "  font-size: initial; width: 100%; height: 5.2%;;" +
           "-webkit-transition: height 500ms ease-in 1s;" +
@@ -192,11 +188,11 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
           "href=\"http://beta.bmcpalliatcare.com/article/10.1186/s12904-015-0029-8\" " +
           "onclick=\"_gaq.push(['_trackEvent', 'REFERRAL FROM BMC-JOURNAL PLATFORM', " +                                                                                  
           "'BMC BETA BANNER', '/1472-684X/14/31', 1, true]);\">Take me there</a>" +
-          "<i class=\"banner-footer--close\">&nbsp;</i></div></div></div>" +
+          "<i class=\"banner-footer--close\">&nbsp;</i></div></div>X</div>" +
           "</html>";
       
       private static final String floatingMsgFiltered=
-          "<html></html>";
+          "X";
 
 
   private void checkHashFilter2(String testStr1, String testStr2) throws Exception {
