@@ -1114,7 +1114,7 @@
   
         au < manifest ; exists ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 >
         au < crawling ; exists ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
-        au < testing ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
+        au < ready ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
   
     }
   
@@ -1134,7 +1134,7 @@
         au < manifest ; exists ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 >
         au < crawling ; exists ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 >
         au < crawling ; exists ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 >
-        au < testing ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 >
+        au < ready ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 >
   
     }
   
@@ -1218,7 +1218,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
-        au < testing ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
 
     }
 
@@ -1272,7 +1272,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 ; 4 >
   
     }
   
@@ -1308,7 +1308,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 ; 4 >
   
     }
   
@@ -1341,9 +1341,9 @@
         param[journal_issn] = 2093-3371 
         comment[platform] = BioMedCentralPlugin
   
-        au < testing ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
+        au < ready ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
         au < ready ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
-        au < testing ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
+        au < ready ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
   
     }
   
@@ -1361,7 +1361,7 @@
         au < manifest ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 ; 4 >
   
     }
   
@@ -1395,7 +1395,7 @@
         au < manifest ; exists ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 ; 4 >
   
     }
   
@@ -1411,7 +1411,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 >
-        au < testing ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 >
   
     }
   
@@ -1429,7 +1429,7 @@
         au < manifest ; exists ; 2012 ; Journal of Economic Structures Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Journal of Economic Structures Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Journal of Economic Structures Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; Journal of Economic Structures Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; Journal of Economic Structures Volume 4 ; 4 >
   
     }
   
