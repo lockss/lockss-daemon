@@ -214,8 +214,8 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = mneme
 
-      au < testing ; 2000 ; 1 ; Mneme-Revista de Humanidades Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 2 ; Mneme-Revista de Humanidades Volume 2001 ; 2001 ; >
+      au < ready ; 2000 ; 1 ; Mneme-Revista de Humanidades Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 2 ; Mneme-Revista de Humanidades Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 3 ; Mneme-Revista de Humanidades Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 4 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 5 ; Mneme-Revista de Humanidades Volume 2004 ; 2004 ; >
@@ -227,7 +227,7 @@
       au < released ; 2011 ; 11 ; Mneme-Revista de Humanidades Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 12 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 13 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 14 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 ; >
+      au < ready ; 2014 ; 14 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 15 ; Mneme-Revista de Humanidades Volume 2015 ; 2015 ; >
 
   }
@@ -282,9 +282,9 @@
       au < released ; 2009 ; 16 ; Princípios: Revista de Filosofia (UFRN) Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 17 ; Princípios: Revista de Filosofia (UFRN) Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 18 ; Princípios: Revista de Filosofia (UFRN) Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 19 ; Princípios: Revista de Filosofia (UFRN) Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 20 ; Princípios: Revista de Filosofia (UFRN) Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 21 ; Princípios: Revista de Filosofia (UFRN) Volume 2014 ; 2014 ; >
+      au < ready ; 2012 ; 19 ; Princípios: Revista de Filosofia (UFRN) Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 20 ; Princípios: Revista de Filosofia (UFRN) Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 21 ; Princípios: Revista de Filosofia (UFRN) Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 22 ; Princípios: Revista de Filosofia (UFRN) Volume 2015 ; 2015 ; >
 
   }

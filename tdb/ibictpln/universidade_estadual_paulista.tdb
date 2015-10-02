@@ -35,12 +35,12 @@
       param[base_url] = http://seer.franca.unesp.br/
       param[journal_id] = caminhos
 
-      au < manifest ; 2009 ; 1 ; CAMINE: Caminhos da Educação Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 2 ; CAMINE: Caminhos da Educação Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 3 ; CAMINE: Caminhos da Educação Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 4 ; CAMINE: Caminhos da Educação Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 5 ; CAMINE: Caminhos da Educação Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 6 ; CAMINE: Caminhos da Educação Volume 2014 ; 2014 ; >
+      au < testing ; 2009 ; 1 ; CAMINE: Caminhos da Educação Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 2 ; CAMINE: Caminhos da Educação Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 3 ; CAMINE: Caminhos da Educação Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 4 ; CAMINE: Caminhos da Educação Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 5 ; CAMINE: Caminhos da Educação Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 6 ; CAMINE: Caminhos da Educação Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 7 ; CAMINE: Caminhos da Educação Volume 2015 ; 2015 ; >
       }
       {
@@ -1224,15 +1224,15 @@
       param[base_url] = http://revista.fct.unesp.br/
       param[journal_id] = geografiaematos
 
-      au < manifest ; 2006 ; 1 ; GEO ATOS - Revista Geografia em Atos Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 2 ; GEO ATOS - Revista Geografia em Atos Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 3 ; GEO ATOS - Revista Geografia em Atos Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 4 ; GEO ATOS - Revista Geografia em Atos Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 5 ; GEO ATOS - Revista Geografia em Atos Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 6 ; GEO ATOS - Revista Geografia em Atos Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 7 ; GEO ATOS - Revista Geografia em Atos Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 8 ; GEO ATOS - Revista Geografia em Atos Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 9 ; GEO ATOS - Revista Geografia em Atos Volume 2014 ; 2014 ; >
+      au < testing ; 2006 ; 1 ; GEO ATOS - Revista Geografia em Atos Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 2 ; GEO ATOS - Revista Geografia em Atos Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 3 ; GEO ATOS - Revista Geografia em Atos Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 4 ; GEO ATOS - Revista Geografia em Atos Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 5 ; GEO ATOS - Revista Geografia em Atos Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 6 ; GEO ATOS - Revista Geografia em Atos Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 7 ; GEO ATOS - Revista Geografia em Atos Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 8 ; GEO ATOS - Revista Geografia em Atos Volume 2013 ; 2013 ; >
+      au < testing ; 2014 ; 9 ; GEO ATOS - Revista Geografia em Atos Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 10 ; GEO ATOS - Revista Geografia em Atos Volume 2015 ; 2015 ; >
 
   }

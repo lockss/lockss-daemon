@@ -36,10 +36,10 @@
       param[base_url] = http://ojs.c3sl.ufpr.br/ojs2/
       param[journal_id] = contradictio
 
-      au < testing ; 2008 ; 1 ; Contradictio Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 2 ; Contradictio Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 3 ; Contradictio Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 4 ; Contradictio Volume 2011 ; 2011 >
+      au < ready ; 2008 ; 1 ; Contradictio Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2 ; Contradictio Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; Contradictio Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; Contradictio Volume 2011 ; 2011 >
 
   }
 
@@ -54,15 +54,15 @@
       param[base_url] = http://ojs.c3sl.ufpr.br/ojs2/
       param[journal_id] = geografar
 
-      au < testing ; 2006 ; 1 ; Geografar Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 2 ; Geografar Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 3 ; Geografar Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 4 ; Geografar Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 5 ; Geografar Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 6 ; Geografar Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 7 ; Geografar Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 8 ; Geografar Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 9 ; Geografar Volume 2014 ; 2014 >
+      au < ready ; 2006 ; 1 ; Geografar Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 2 ; Geografar Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 3 ; Geografar Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 4 ; Geografar Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 5 ; Geografar Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 6 ; Geografar Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 7 ; Geografar Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 8 ; Geografar Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 9 ; Geografar Volume 2014 ; 2014 >
       au < expected ; 2015 ; 10 ; Geografar Volume 2015 ; 2015 >
 
   }
@@ -78,13 +78,13 @@
       param[base_url] = http://ojs.c3sl.ufpr.br/ojs2/
       param[journal_id] = musica
 
-      au < testing ; 2008 ; 1 ; Música em Perspectiva Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 2 ; Música em Perspectiva Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 3 ; Música em Perspectiva Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 4 ; Música em Perspectiva Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 5 ; Música em Perspectiva Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 6 ; Música em Perspectiva Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 7 ; Música em Perspectiva Volume 2014 ; 2014 >
+      au < ready ; 2008 ; 1 ; Música em Perspectiva Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2 ; Música em Perspectiva Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; Música em Perspectiva Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; Música em Perspectiva Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 5 ; Música em Perspectiva Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 6 ; Música em Perspectiva Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 7 ; Música em Perspectiva Volume 2014 ; 2014 >
       au < expected ; 2015 ; 8 ; Música em Perspectiva Volume 2015 ; 2015 >
 
   }
