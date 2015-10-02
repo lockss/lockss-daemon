@@ -48,6 +48,7 @@ import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
+import org.lockss.ws.entities.UnnamedItemWsResult;
 
 /**
  * The MetadataMonitor web service implementation.
@@ -699,6 +700,56 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
       }
 
       return results;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the metadata items in the database that do not have a name.
+   * 
+   * @return a List<UnnamedItemWsResult> with the unnamed metadata items sorted
+   *         sorted by publisher, Archival Unit, parent type, parent name and
+   *         item type.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<UnnamedItemWsResult> getUnnamedItems()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getUnnamedItems(): ";
+    List<UnnamedItemWsResult> unnamedItems =
+	new ArrayList<UnnamedItemWsResult>();
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
+      for (Map<String, String> unnamedItem :
+	getMetadataManager().getUnnamedItems()) {
+	UnnamedItemWsResult result = new UnnamedItemWsResult();
+	result.setItemCount(Integer.valueOf(unnamedItem.get("col1")));
+	result.setItemType(unnamedItem.get("col2"));
+	result.setParentName(unnamedItem.get("col3"));
+	result.setParentType(unnamedItem.get("col4"));
+
+	String auId = PluginManager.generateAuId(unnamedItem.get("col6"),
+	    unnamedItem.get("col5"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = getPluginManager().getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  result.setAuName(au.getName());
+	} else {
+	  result.setAuName(auId);
+	}
+
+	result.setPublisherName(unnamedItem.get("col7"));
+
+	unnamedItems.add(result);
+      }
+
+      return unnamedItems;
     } catch (Exception e) {
       throw new LockssWebServicesFault(e);
     }

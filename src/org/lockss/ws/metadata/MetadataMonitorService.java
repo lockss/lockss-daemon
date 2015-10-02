@@ -38,6 +38,7 @@ import org.lockss.ws.entities.KeyIdNamePairListPair;
 import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
+import org.lockss.ws.entities.UnnamedItemWsResult;
 
 /**
  * The MetadataMonitor web service interface.
@@ -216,4 +217,15 @@ public interface MetadataMonitorService {
   @WebMethod
   List<KeyValueListPair> getAuNamesWithMultiplePublishers()
       throws LockssWebServicesFault;
+
+  /**
+   * Provides the metadata items in the database that do not have a name.
+   * 
+   * @return a List<UnnamedItemWsResult> with the unnamed metadata items sorted
+   *         sorted by publisher, Archival Unit, parent type, parent name and
+   *         item type.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<UnnamedItemWsResult> getUnnamedItems() throws LockssWebServicesFault;
 }
