@@ -47,7 +47,7 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException("Unexpected call to HighWireDrupalHttpResponseHandler.init()");
   }
   
-  public static class NoFailRetryableNetworkException_2_10S
+  public static final class NoFailRetryableNetworkException_2_10S
   extends CacheException.RetryableNetworkException_2_10S {
     
     private static final long serialVersionUID = 1L;
