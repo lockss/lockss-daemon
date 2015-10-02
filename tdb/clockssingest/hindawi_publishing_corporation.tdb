@@ -1140,7 +1140,7 @@
 
     param[journal_id] = apsy
 
-    au < ready ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
+    au < crawling ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -3476,7 +3476,7 @@
     param[journal_id] = ijcp
 
     au < manifest ; exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
-    au < ready ; exists ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5173,7 +5173,7 @@
 
     param[journal_id] = jcv
     
-    au < ready ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
+    au < crawling ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Journal of Calculus of Variations Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Calculus of Variations Volume 2015 ; 2015 ; 2015 >
 
@@ -7019,7 +7019,7 @@
 
     param[journal_id] = jsb
 
-    au < ready ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8035,7 +8035,7 @@
     au < manifest ; exists ; 2012 ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Radiology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < frozen ; exists ; 2014 ; Radiology Research and Practice Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Radiology Research and Practice Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Radiology Research and Practice Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8054,7 +8054,7 @@
     au < manifest ; exists ; 2012 ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Rehabilitation Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < finished ; crawling ; 2014 ; Rehabilitation Research and Practice Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Rehabilitation Research and Practice Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Rehabilitation Research and Practice Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -8086,7 +8086,7 @@
     au < manifest ; exists ; 2012 ; Sarcoma Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Sarcoma Volume 2013 ; 2013 ; 2013 >
     au < finished ; crawling ; 2014 ; Sarcoma Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Sarcoma Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Sarcoma Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8126,7 +8126,7 @@
     au < manifest ; exists ; 2012 ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Science and Technology of Nuclear Installations Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Science and Technology of Nuclear Installations Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Science and Technology of Nuclear Installations Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Science and Technology of Nuclear Installations Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8141,7 +8141,7 @@
     param[journal_id] = sp
 
     au < finished ; crawling ; 2014 ; Scientific Programming Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Scientific Programming Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Scientific Programming Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8157,7 +8157,7 @@
     au < manifest ; exists ; 2012 ; Scientifica Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Scientifica Volume 2013 ; 2013 ; 2013 >
     au < finished ; crawling ; 2014 ; Scientifica Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Scientifica Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Scientifica Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -8193,7 +8193,7 @@
     au < manifest ; exists ; 2012 ; Shock and Vibration Volume 19 (2012) ; 2012 ; 19 >
     au < manifest ; exists ; 2013 ; Shock and Vibration Volume 20 (2013) ; 2013 ; 20 >
     au < crawling ; exists ; 2014 ; Shock and Vibration Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Shock and Vibration Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Shock and Vibration Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -8211,7 +8211,7 @@
     au < manifest ; exists ; 2012 ; Sleep Disorders Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Sleep Disorders Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Sleep Disorders Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Sleep Disorders Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Sleep Disorders Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8229,7 +8229,7 @@
     au < manifest ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 >
     au < crawling ; exists ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8248,7 +8248,7 @@
     au < manifest ; exists ; 2012 ; Stem Cells International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Stem Cells International Volume 2013 ; 2013 ; 2013 >
     au < finished ; crawling ; 2014 ; Stem Cells International Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Stem Cells International Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Stem Cells International Volume 2015 ; 2015 ; 2015 >
     
   }
 
@@ -8267,7 +8267,7 @@
     au < manifest ; exists ; 2012 ; Stroke Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Stroke Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < finished ; crawling ; 2014 ; Stroke Research and Treatment Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Stroke Research and Treatment Volume 2015 ; 2015 ; 2015 >
+    au < crawling ; exists ; 2015 ; Stroke Research and Treatment Volume 2015 ; 2015 ; 2015 >
     
   }
   
@@ -8281,7 +8281,7 @@
 
     param[journal_id] = sb
 
-    au < ready ; exists ; 2013 ; Structural Biology Volume 2013 ; 2013 ; 2013 >
+    au < crawling ; exists ; 2013 ; Structural Biology Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Structural Biology Volume 2014 ; 2014 ; 2014 >
     au < expected ; exists ; 2015 ; Structural Biology Volume 2015 ; 2015 ; 2015 >
 
