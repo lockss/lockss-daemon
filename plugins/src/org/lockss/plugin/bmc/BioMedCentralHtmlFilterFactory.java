@@ -141,7 +141,9 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       
       // Journal of Cloud Computing: Advances, Systems and Applications &
       // Boundary Value Problems some articles had clickable badge
-      HtmlNodeFilters.tagWithAttribute("a", "onclick"),
+      // XXX remove temporarily as this filter is too aggressive, removes interesting info
+      // XXX   like links to new aspects of articles
+      // HtmlNodeFilters.tagWithAttribute("a", "onclick"),
       
       new NodeFilter() {
         @Override public boolean accept(Node node) {

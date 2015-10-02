@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>45</string>
+    <string>46</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>22</string>
+        <string>23</string>
       </entry>
     </map>
   </entry>
@@ -187,5 +187,14 @@
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:BioMed Central</string>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>(\.(css|js)|/images/.+\.(png|gif))$</string>
+  </entry>
+  <entry>
+    <!-- replace with au_exclude_urls_from_poll_results_pattern with 1.69 -->
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>(\.(css|js)|/images/.+\.(png|gif))$</string>
   </entry>
 </map>
