@@ -226,9 +226,9 @@
     au < finished ; crawling ; 2014 ; The Journal of Cell Biology Volume 205 ; 205 >
     au < frozen ; exists ; 2014 ; The Journal of Cell Biology Volume 206 ; 206 >
     au < crawling ; exists ; 2014 ; The Journal of Cell Biology Volume 207 ; 207 >
-    au < testing ; exists ; 2015 ; The Journal of Cell Biology Volume 208 ; 208 >
-    au < testing ; exists ; 2015 ; The Journal of Cell Biology Volume 209 ; 209 >
-    au < testing ; exists ; 2015 ; The Journal of Cell Biology Volume 210 ; 210 >
+    au < ready ; exists ; 2015 ; The Journal of Cell Biology Volume 208 ; 208 >
+    au < ready ; exists ; 2015 ; The Journal of Cell Biology Volume 209 ; 209 >
+    au < ready ; exists ; 2015 ; The Journal of Cell Biology Volume 210 ; 210 >
     au < exists ; exists ; 2015 ; The Journal of Cell Biology Volume 211 ; 211 >
 
   }
@@ -455,7 +455,7 @@
     au < finished ; frozen ; 2012 ; The Journal of Experimental Medicine Volume 209 ; 209 >
     au < crawling ; exists ; 2013 ; The Journal of Experimental Medicine Volume 210 ; 210 >
     au < finished ; crawling ; 2014 ; The Journal of Experimental Medicine Volume 211 ; 211 >
-    au < testing ; exists ; 2015 ; The Journal of Experimental Medicine Volume 212 ; 212 >
+    au < ready ; exists ; 2015 ; The Journal of Experimental Medicine Volume 212 ; 212 >
 
   }
 
@@ -613,8 +613,8 @@
     au < crawling ; exists ; 2013 ; The Journal of General Physiology Volume 142 ; 142 >
     au < crawling ; exists ; 2014 ; The Journal of General Physiology Volume 143 ; 143 >
     au < finished ; crawling ; 2014 ; The Journal of General Physiology Volume 144 ; 144 >
-    au < testing ; exists ; 2015 ; The Journal of General Physiology Volume 145 ; 145 >
-    au < testing ; exists ; 2015 ; The Journal of General Physiology Volume 146 ; 146 >
+    au < ready ; exists ; 2015 ; The Journal of General Physiology Volume 145 ; 145 >
+    au < ready ; exists ; 2015 ; The Journal of General Physiology Volume 146 ; 146 >
 
   }
 
