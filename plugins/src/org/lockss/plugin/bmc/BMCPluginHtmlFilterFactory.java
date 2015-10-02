@@ -74,7 +74,12 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       // right-hand area next to the article - Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
       // alert signup - Extreme Hash filtering!
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "primary-content hide-on-print"),
+      // found on issue pages http://www.biomedcentral.com/bmcanesthesiol/content/8/December/2008
+      HtmlNodeFilters.tagWithAttribute("div", "class", "wrap-nav"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "issuecover"),
+      
       // Contains one-time names inside the page
       HtmlNodeFilters.tagWithAttribute("a", "name"),
       // Links to one-time names inside the page
