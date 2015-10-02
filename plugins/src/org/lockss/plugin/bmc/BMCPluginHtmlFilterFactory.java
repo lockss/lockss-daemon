@@ -79,6 +79,13 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       // found on issue pages http://www.biomedcentral.com/bmcanesthesiol/content/8/December/2008
       HtmlNodeFilters.tagWithAttribute("div", "class", "wrap-nav"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "issuecover"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "header"),
+      // Extra links appeared on issue toc for citations
+      HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tagWithAttribute("p", "class", "nav"),
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class",
+              "(abstract|fulltext|pdf.*)-link")),
+      HtmlNodeFilters.tagWithAttribute("a", "id", "comments"),
       
       // Contains one-time names inside the page
       HtmlNodeFilters.tagWithAttribute("a", "name"),

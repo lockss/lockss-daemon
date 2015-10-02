@@ -124,7 +124,33 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
 
   private static final String floatingMsgFiltered=
       "text here";
+  
+  private static final String citation =
+      "<html>\n" +
+      "<p class=\"header\">\n" + 
+      " <span class=\"article-type\">Software review</span> &nbsp;\n" + 
+      " <a href=\"/about/access\">" +
+      "   <img class=\"openaccess-img\" src=\"/images/icons/open-access.gif\"" +
+      " title=\"Open Access\" alt=\"Open Access\">" +
+      " </a>\n" + 
+      "</p>\n" +
+      "<p class=\"nav\">\n" + 
+      "<span class=\"left\">\n" + 
+      "<a class=\"abstract-link\" href=\"http://www.scfbm.org/content/7/1/4/abstract\">Abstract</a>\n" + 
+      "|\n" + 
+      "<a class=\"fulltext-link\" href=\"http://www.scfbm.org/content/7/1/4\">Full text</a>\n" + 
+      "|\n" + 
+      "<a class=\"pdf-link\" onclick=\"_gaq.push(['_trackEvent', 'PDF download', 'Article listing final', '/content/7/May/2012', 1, true]);\" href=\"http://www.scfbm.org/content/pdf/1751-0473-7-4.pdf\">PDF</a>\n" + 
+      "|\n" + 
+      "<a class=\"pubmed-link\" href=\"http://www.scfbm.org/pubmed/22640820\">PubMed</a>\n" + 
+      "|\n" + 
+      "<a id=\"bmcCitations-link\" href=\"http://www.scfbm.org/content/7/1/4/about#citations-biomedcentral\">Cited on BioMed Central</a>\n" + 
+      "</span>\n" + 
+      "</p>\n" +
+      "</html>";
 
+  private static final String citationFiltered =
+      " AbstractFull textPDF ";
 
 
   public void testFiltering() throws Exception {
@@ -217,5 +243,11 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     InputStream inA;
     inA = fact.createFilteredInputStream(mau, new StringInputStream(floatingMsg), ENC);
     assertEquals(floatingMsgFiltered,StringUtil.fromInputStream(inA));
+  }
+  
+  public void testcitation() throws Exception {
+    InputStream inA;
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(citation), ENC);
+    assertEquals(citationFiltered,StringUtil.fromInputStream(inA));
   }
 }

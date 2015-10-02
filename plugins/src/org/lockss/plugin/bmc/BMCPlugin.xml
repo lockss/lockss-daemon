@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>47</string>
+    <string>48</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>20</string>
+        <string>21</string>
       </entry>
     </map>
   </entry>
@@ -200,7 +200,7 @@
     <string>(\.(css|js)|-toc.gif|/images/.+\.(png|gif))$</string>
   </entry>
   <entry>
-    <!-- replace with au_exclude_urls_from_poll_resultss_pattern with 1.69 -->
+    <!-- replace with au_exclude_urls_from_poll_results_pattern with 1.69 -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>(\.(css|js)|-toc.gif|/images/.+\.(png|gif))$</string>
   </entry>
