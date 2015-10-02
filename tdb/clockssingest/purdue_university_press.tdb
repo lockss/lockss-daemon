@@ -20,29 +20,29 @@
     param[journal_abbr] = atg
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 1989 ; Against the Grain Volume 1 ; 1 >
-    au < exists ; exists ; 1990 ; Against the Grain Volume 2 ; 2 >
-    au < exists ; exists ; 1991 ; Against the Grain Volume 3 ; 3 >
-    au < exists ; exists ; 1992 ; Against the Grain Volume 4 ; 4 >
-    au < exists ; exists ; 1993 ; Against the Grain Volume 5 ; 5 >
-    au < exists ; exists ; 1994 ; Against the Grain Volume 6 ; 6 >
-    au < exists ; exists ; 1995 ; Against the Grain Volume 7 ; 7 >
-    au < exists ; exists ; 1996 ; Against the Grain Volume 8 ; 8 >
-    au < exists ; exists ; 1997 ; Against the Grain Volume 9 ; 9 >
-    au < exists ; exists ; 1998 ; Against the Grain Volume 10 ; 10 >
-    au < exists ; exists ; 1999 ; Against the Grain Volume 11 ; 11 >
-    au < exists ; exists ; 2000 ; Against the Grain Volume 12 ; 12 >
-    au < exists ; exists ; 2001 ; Against the Grain Volume 13 ; 13 >
-    au < exists ; exists ; 2002 ; Against the Grain Volume 14 ; 14 >
-    au < exists ; exists ; 2003 ; Against the Grain Volume 15 ; 15 >
-    au < exists ; exists ; 2004 ; Against the Grain Volume 16 ; 16 >
-    au < exists ; exists ; 2005 ; Against the Grain Volume 17 ; 17 >
-    au < exists ; exists ; 2006 ; Against the Grain Volume 18 ; 18 >
-    au < exists ; exists ; 2007 ; Against the Grain Volume 19 ; 19 >
-    au < exists ; exists ; 2008 ; Against the Grain Volume 20 ; 20 >
-    au < exists ; exists ; 2009 ; Against the Grain Volume 21 ; 21 >
-    au < exists ; exists ; 2010 ; Against the Grain Volume 22 ; 22 >
-    au < exists ; exists ; 2011 ; Against the Grain Volume 23 ; 23 >
+    au < manifest ; exists ; 1989 ; Against the Grain Volume 1 ; 1 >
+    au < manifest ; exists ; 1990 ; Against the Grain Volume 2 ; 2 >
+    au < manifest ; exists ; 1991 ; Against the Grain Volume 3 ; 3 >
+    au < manifest ; exists ; 1992 ; Against the Grain Volume 4 ; 4 >
+    au < manifest ; exists ; 1993 ; Against the Grain Volume 5 ; 5 >
+    au < manifest ; exists ; 1994 ; Against the Grain Volume 6 ; 6 >
+    au < manifest ; exists ; 1995 ; Against the Grain Volume 7 ; 7 >
+    au < manifest ; exists ; 1996 ; Against the Grain Volume 8 ; 8 >
+    au < manifest ; exists ; 1997 ; Against the Grain Volume 9 ; 9 >
+    au < manifest ; exists ; 1998 ; Against the Grain Volume 10 ; 10 >
+    au < manifest ; exists ; 1999 ; Against the Grain Volume 11 ; 11 >
+    au < manifest ; exists ; 2000 ; Against the Grain Volume 12 ; 12 >
+    au < manifest ; exists ; 2001 ; Against the Grain Volume 13 ; 13 >
+    au < manifest ; exists ; 2002 ; Against the Grain Volume 14 ; 14 >
+    au < manifest ; exists ; 2003 ; Against the Grain Volume 15 ; 15 >
+    au < manifest ; exists ; 2004 ; Against the Grain Volume 16 ; 16 >
+    au < manifest ; exists ; 2005 ; Against the Grain Volume 17 ; 17 >
+    au < manifest ; exists ; 2006 ; Against the Grain Volume 18 ; 18 >
+    au < manifest ; exists ; 2007 ; Against the Grain Volume 19 ; 19 >
+    au < manifest ; exists ; 2008 ; Against the Grain Volume 20 ; 20 >
+    au < manifest ; exists ; 2009 ; Against the Grain Volume 21 ; 21 >
+    au < manifest ; exists ; 2010 ; Against the Grain Volume 22 ; 22 >
+    au < manifest ; exists ; 2011 ; Against the Grain Volume 23 ; 23 >
 
   }
   
