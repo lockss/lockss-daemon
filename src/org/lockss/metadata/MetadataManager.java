@@ -4105,4 +4105,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       throws DbException {
     return getMetadataManagerSql().getAuIdsWithMultiplePublishers();
   }
+
+  /**
+   * Provides the metadata items in the database that have no name.
+   * 
+   * @return a Collection<Map<String, String>> with the unnamed metadata items
+   *         articles sorted by publisher, parent type, parent title and item
+   *         type.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<Map<String, String>> getUnnamedItems() throws DbException {
+    return getMetadataManagerSql().getUnnamedItems();
+  }
 }

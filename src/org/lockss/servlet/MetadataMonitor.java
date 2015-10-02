@@ -141,6 +141,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the names of Archival Units with more than one publisher";
   private static final String LIST_MULTIPLE_PUBLISHER_AUS_HEADER =
       "Archival Units With Multiple Publishers";
+  private static final String LIST_ITEMS_WITHOUT_NAME_LINK =
+      "Metadata Items Without Name";
+  private static final String LIST_ITEMS_WITHOUT_NAME_ACTION =
+      "listMetadataItemsWithoutName";
+  private static final String LIST_ITEMS_WITHOUT_NAME_HELP =
+      "Lists the metadata items that have no name";
+  private static final String LIST_ITEMS_WITHOUT_NAME_HEADER =
+      "Metadata Items Without Name";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -204,6 +212,8 @@ public class MetadataMonitor extends LockssServlet {
 	listMismatchedParentToChildren();
       } else if (LIST_MULTIPLE_PUBLISHER_AUS_ACTION.equals(action)) {
 	listMultiplePublisherAus();
+      } else if (LIST_ITEMS_WITHOUT_NAME_ACTION.equals(action)) {
+	listMetadataItemsWithoutName();
       } else {
 	displayMainPage();
       }
@@ -298,6 +308,12 @@ public class MetadataMonitor extends LockssServlet {
 	LIST_MULTIPLE_PUBLISHER_AUS_LINK,
 	ACTION + LIST_MULTIPLE_PUBLISHER_AUS_ACTION,
 	LIST_MULTIPLE_PUBLISHER_AUS_HELP));
+
+    // List the metadata items that have no name.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_ITEMS_WITHOUT_NAME_LINK,
+	ACTION + LIST_ITEMS_WITHOUT_NAME_ACTION,
+	LIST_ITEMS_WITHOUT_NAME_HELP));
 
     return list.iterator();
   }
@@ -1031,7 +1047,6 @@ public class MetadataMonitor extends LockssServlet {
       throws DbException, IOException {
     final String DEBUG_HEADER = "listMismatchedParentToChildren(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     String attributes = "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
 
@@ -1269,6 +1284,89 @@ public class MetadataMonitor extends LockssServlet {
     }
 
     makeTablePage(LIST_MULTIPLE_PUBLISHER_AUS_HEADER, results);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the metadata items that have no name.
+   * 
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listMetadataItemsWithoutName() throws DbException, IOException {
+    final String DEBUG_HEADER = "listMetadataItemsWithoutName(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the results table.
+    Table results = new Table(0, attributes);
+    results.newRow();
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Item Count");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Item Type");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Publisher");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Parent Title");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Parent Type");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Archival Unit Name");
+
+    // The metadata items that have no name, sorted by publisher, parent type,
+    // parent title and item type.
+    Collection<Map<String, String>> unnamedItems = mdManager.getUnnamedItems();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "unnamedItems.size() = " + unnamedItems.size());
+
+    // Check whether there are results to display.
+    if (unnamedItems.size() > 0) {
+      // Yes: Loop through the items.
+      for (Map<String, String> itemData : unnamedItems) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "itemData = " + itemData);
+
+	results.newRow();
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col1"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col2"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col7"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col3"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col4"));
+	results.newCell("align=\"center\"");
+
+	String auId = PluginManager.generateAuId(itemData.get("col6"),
+	    itemData.get("col5"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results.add(au.getName());
+	} else {
+	  results.add(auId);
+	}
+
+      }
+    } else {
+      // No.
+      results.newRow();
+      results.newCell();
+      results.add("");
+      results.newRow();
+      results.newCell("colspan=\"6\" align=\"center\"");
+      results.add("No metadata items without name");
+    }
+
+    makeTablePage(LIST_ITEMS_WITHOUT_NAME_HEADER, results);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

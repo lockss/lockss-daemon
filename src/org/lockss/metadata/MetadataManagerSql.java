@@ -1248,6 +1248,87 @@ public class MetadataManagerSql {
       + ", au." + AU_KEY_COLUMN
       + ", pr." + PUBLISHER_NAME_COLUMN;
 
+  // Query to retrieve all the metadata items that have no name.
+  private static final String GET_UNNAMED_ITEMS_QUERY =	"select "
+      + "count(mi1." + MD_ITEM_SEQ_COLUMN + ") as \"col1\""
+      + ", mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " as \"ts1\""
+      + ", mit1." + TYPE_NAME_COLUMN + " as \"col2\""
+      + ", min2." + NAME_COLUMN + " as \"col3\""
+      + ", mit2." + MD_ITEM_TYPE_SEQ_COLUMN + " as \"ts2\""
+      + ", mit2." + TYPE_NAME_COLUMN + " as \"col4\""
+      + ", au." + AU_KEY_COLUMN + " as \"col5\""
+      + ", pl." + PLUGIN_ID_COLUMN + " as \"col6\""
+      + ", pr." + PUBLISHER_NAME_COLUMN + " as \"col7\""
+      + " from " + MD_ITEM_TYPE_TABLE + " mit1"
+      + ", " + MD_ITEM_TYPE_TABLE + " mit2"
+      + ", " + AU_TABLE
+      + ", " + PLUGIN_TABLE + " pl"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + PUBLISHER_TABLE + " pr"
+      + ", " + MD_ITEM_TABLE + " mi1"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+      + " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+      + " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + ", " + MD_ITEM_TABLE + " mi2"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " min2"
+      + " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
+      + " and min2." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " where mi1." + PARENT_SEQ_COLUMN + " = mi2." + MD_ITEM_SEQ_COLUMN
+      + " and mit1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " = mi1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mit2." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+      + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+      + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+      + " and mi2." + MD_ITEM_SEQ_COLUMN + " = pn." + MD_ITEM_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and min1." + NAME_COLUMN + " is null"
+      + " group by mit1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + ", mit1." + TYPE_NAME_COLUMN
+      + ", min2." + NAME_COLUMN
+      + ", mit2." + MD_ITEM_TYPE_SEQ_COLUMN
+      + ", mit2." + TYPE_NAME_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", pl." + PLUGIN_ID_COLUMN
+      + ", pr." + PUBLISHER_NAME_COLUMN
+      + " union "
+      + "select count(mi1." + MD_ITEM_SEQ_COLUMN + ") as \"col1\""
+      + ", mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " as \"ts1\""
+      + ", mit1." + TYPE_NAME_COLUMN + " as \"col2\""
+      + ", '' as \"col3\""
+      + ", 0 as \"ts2\""
+      + ", '' as \"col4\""
+      + ", au." + AU_KEY_COLUMN + " as \"col5\""
+      + ", pl." + PLUGIN_ID_COLUMN + " as \"col6\""
+      + ", pr." + PUBLISHER_NAME_COLUMN + " as \"col7\""
+      + " from " + MD_ITEM_TYPE_TABLE + " mit1"
+      + ", " + AU_TABLE
+      + ", " + PLUGIN_TABLE + " pl"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + PUBLISHER_TABLE + " pr"
+      + ", " + MD_ITEM_TABLE + " mi1"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+      + " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+      + " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " where mi1." + PARENT_SEQ_COLUMN + " is null"
+      + " and mit1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " = mi1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+      + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+      + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+      + " and mi1." + MD_ITEM_SEQ_COLUMN + " = pn." + MD_ITEM_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and min1." + NAME_COLUMN + " is null"
+      + " group by mit1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + ", mit1." + TYPE_NAME_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", pl." + PLUGIN_ID_COLUMN
+      + ", pr." + PUBLISHER_NAME_COLUMN
+      + " order by \"col7\", \"col6\", \"col5\", \"ts2\", \"col3\", \"ts1\"";
+
   private DbManager dbManager;
   private MetadataManager metadataManager;
 
@@ -5873,5 +5954,116 @@ public class MetadataManagerSql {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ausPublishers.size() = "
 	+ ausPublishers.size());
     return ausPublishers;
+  }
+
+  /**
+   * Provides the metadata items in the database that have no name.
+   * 
+   * @return a Collection<Map<String, String>> with the unnamed metadata items
+   *         articles sorted by publisher, parent type, parent title and item
+   *         type.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<Map<String, String>> getUnnamedItems() throws DbException {
+    final String DEBUG_HEADER = "getUnnamedItems(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<Map<String, String>> unnamedItems = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the metadata items in the database that have no name.
+      unnamedItems = getUnnamedItems(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "unnamedItems.size() = " + unnamedItems.size());
+    return unnamedItems;
+  }
+
+  /**
+   * Provides the metadata items in the database that have no name.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<Map<String, String>> with the unnamed metadata items
+   *         articles sorted by publisher, parent type, parent title and item
+   *         type.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Collection<Map<String, String>> getUnnamedItems(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "getUnnamedItems(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<Map<String, String>> unnamedItems =
+	new ArrayList<Map<String, String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = dbManager.prepareStatement(conn, GET_UNNAMED_ITEMS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the unnamed items. 
+      while (resultSet.next()) {
+	Map<String, String> unnamedItem = new HashMap<String, String>();
+
+	String col1 = "" + resultSet.getInt("col1");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col1 = " + col1);
+
+	unnamedItem.put("col1", col1);
+
+	String col2 = resultSet.getString("col2");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col2 = " + col2);
+
+	unnamedItem.put("col2", col2);
+
+	String col3 = resultSet.getString("col3");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col3 = " + col3);
+
+	unnamedItem.put("col3", col3);
+
+	String col4 = resultSet.getString("col4");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col4 = " + col4);
+
+	unnamedItem.put("col4", col4);
+
+	String col5 = resultSet.getString("col5");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col5 = " + col5);
+
+	unnamedItem.put("col5", col5);
+
+	String col6 = resultSet.getString("col6");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col6 = " + col6);
+
+	unnamedItem.put("col6", col6);
+
+	String col7 = resultSet.getString("col7");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col7 = " + col7);
+
+	unnamedItem.put("col7", col7);
+
+	unnamedItems.add(unnamedItem);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the unnamed items";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_UNNAMED_ITEMS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "unnamedItems.size() = " + unnamedItems.size());
+    return unnamedItems;
   }
 }
