@@ -249,10 +249,10 @@
       
       comment[errors] = Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
 
-      au < down ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 ; 27-28 ; 27 >
-      au < down ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 ; 29 ; 29 >
-      au < down ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 ; 30 ; 30 >
-      au < down ; exists ; 1999 ; High Temperatures - High Pressures Volume 31 ; 31 ; 31 >
+      au < superseded ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 [superseded] ; 27-28 ; 27 >
+      au < superseded ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 [superseded] ; 29 ; 29 >
+      au < superseded ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 [superseded] ; 30 ; 30 >
+      au < superseded ; exists ; 1999 ; High Temperatures - High Pressures Volume 31 [superseded] ; 31 ; 31 >
       au < down ; exists ; 2000 ; High Temperatures - High Pressures Volume 32 ; 32 ; 32 >
       au < down ; exists ; 2001 ; High Temperatures - High Pressures Volume 33 ; 33 ; 33 >
       au < down ; exists ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; 34 >
