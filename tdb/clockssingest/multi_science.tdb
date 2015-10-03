@@ -162,14 +162,14 @@
 
     param[journal_id] = ija
 
-    au < manifest ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 >
-    au < manifest ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 >
-    au < manifest ; exists ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 >
-    au < manifest ; exists ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 >
-    au < manifest ; exists ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 >
-    au < manifest ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 >
-    au < manifest ; exists ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 >
-    au < manifest ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 >
+    au < crawling ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 >
+    au < crawling ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 >
+    au < crawling ; exists ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 >
+    au < crawling ; exists ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 >
+    au < crawling ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 >
+    au < crawling ; exists ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 >
+    au < crawling ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 >
@@ -189,7 +189,7 @@
 
     param[journal_id] = ijai
 
-    au < manifest ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
@@ -209,13 +209,13 @@
 
     param[journal_id] = ijac
 
-    au < manifest ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 >
-    au < manifest ; exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 >
-    au < manifest ; exists ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 >
-    au < manifest ; exists ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 >
-    au < manifest ; exists ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 >
-    au < manifest ; exists ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 >
+    au < crawling ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 >
+    au < crawling ; exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 >
+    au < crawling ; exists ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 >
+    au < crawling ; exists ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 >
+    au < crawling ; exists ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 >
+    au < crawling ; exists ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 >
@@ -235,7 +235,7 @@
 
     param[journal_id] = ijemf
 
-    au < manifest ; exists ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
 
@@ -251,13 +251,13 @@
 
     param[journal_id] = ijfc
 
-    au < manifest ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
     au < finished ; crawling ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
-    au < manifest ; exists ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
+    au < crawling ; exists ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
 
   }
 
@@ -303,7 +303,7 @@
 
     param[journal_id] = ijis
 
-    au < manifest ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
@@ -323,7 +323,7 @@
 
     param[journal_id] = ijmav
 
-    au < manifest ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 >
@@ -380,17 +380,17 @@
 
     param[journal_id] = ijss
 
-    au < manifest ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 >
-    au < manifest ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 >
-    au < manifest ; exists ; 2001 ; International Journal of Space Structures Volume 16 ; 16 >
-    au < manifest ; exists ; 2002 ; International Journal of Space Structures Volume 17 ; 17 >
-    au < manifest ; exists ; 2003 ; International Journal of Space Structures Volume 18 ; 18 >
-    au < manifest ; exists ; 2004 ; International Journal of Space Structures Volume 19 ; 19 >
-    au < manifest ; exists ; 2005 ; International Journal of Space Structures Volume 20 ; 20 >
-    au < manifest ; exists ; 2006 ; International Journal of Space Structures Volume 21 ; 21 >
-    au < manifest ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 >
-    au < manifest ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 >
-    au < manifest ; exists ; 2009 ; International Journal of Space Structures Volume 24 ; 24 >
+    au < crawling ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 >
+    au < crawling ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 >
+    au < crawling ; exists ; 2001 ; International Journal of Space Structures Volume 16 ; 16 >
+    au < crawling ; exists ; 2002 ; International Journal of Space Structures Volume 17 ; 17 >
+    au < crawling ; exists ; 2003 ; International Journal of Space Structures Volume 18 ; 18 >
+    au < crawling ; exists ; 2004 ; International Journal of Space Structures Volume 19 ; 19 >
+    au < crawling ; exists ; 2005 ; International Journal of Space Structures Volume 20 ; 20 >
+    au < crawling ; exists ; 2006 ; International Journal of Space Structures Volume 21 ; 21 >
+    au < crawling ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 >
+    au < crawling ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 >
+    au < crawling ; exists ; 2009 ; International Journal of Space Structures Volume 24 ; 24 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Space Structures Volume 25 ; 25 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Space Structures Volume 26 ; 26 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Space Structures Volume 27 ; 27 >
@@ -410,10 +410,10 @@
 
     param[journal_id] = ijssc
 
-    au < manifest ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
-    au < manifest ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 >
-    au < manifest ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 >
+    au < crawling ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
+    au < crawling ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 >
+    au < crawling ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 >
@@ -433,7 +433,7 @@
 
     param[journal_id] = ijscd
 
-    au < manifest ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 >
@@ -470,9 +470,9 @@
 
     param[journal_id] = jact
 
-    au < manifest ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
-    au < manifest ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
-    au < manifest ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 >
+    au < crawling ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
+    au < crawling ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
+    au < crawling ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 >
