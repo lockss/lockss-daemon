@@ -149,7 +149,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
   
     }
 
@@ -343,8 +343,8 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BioMedCentralPlugin
   
-        au < notReady ; exists ; 2014 ; Computational Cognitive Science Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Computational Cognitive Science Volume 2 ; 2 >
+        au < wanted ; exists ; 2014 ; Computational Cognitive Science Volume 1 ; 1 >
+        au < wanted ; exists ; 2015 ; Computational Cognitive Science Volume 2 ; 2 >
   
     }
   
@@ -428,8 +428,8 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < manifest ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
-        au < manifest ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
+        au < wanted ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
+        au < wanted ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
 
     }
 
@@ -764,9 +764,9 @@
         au < manifest ; exists ; 2010 ; EURASIP Journal on Information Security Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; EURASIP Journal on Information Security Volume 2012 ; 2012 >
-        au < notReady ; exists ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 >
-        au < notReady ; exists ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 >
-        au < manifest ; exists ; 2015 ; EURASIP Journal on Information Security Volume 2015 ; 2015 >
+        au < wanted ; exists ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 >
+        au < wanted ; exists ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 >
+        au < wanted ; exists ; 2015 ; EURASIP Journal on Information Security Volume 2015 ; 2015 >
   
     }
   
@@ -973,7 +973,7 @@
         au < manifest ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 >
         au < crawling ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 >
         au < crawling ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 >
-        au < manifest ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 >
+        au < crawling ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 >
   
     }
   
@@ -1078,7 +1078,7 @@
         au < manifest ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 >
         au < crawling ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 >
         au < crawling ; exists ; 2014 ; International Aquatic Research Volume 6 ; 6 >
-        au < manifest ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 >
+        au < crawling ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 >
   
     }
   
@@ -1114,7 +1114,7 @@
   
         au < manifest ; exists ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 >
         au < crawling ; exists ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
-        au < ready ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
+        au < crawling ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
   
     }
   
@@ -1134,7 +1134,7 @@
         au < manifest ; exists ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 >
         au < crawling ; exists ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 >
         au < crawling ; exists ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 >
-        au < ready ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 >
+        au < crawling ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 >
   
     }
   
@@ -1168,7 +1168,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
-        au < ready ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
   
     }
   
@@ -1186,7 +1186,7 @@
         au < manifest ; exists ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 >
         au < crawling ; exists ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 >
         au < crawling ; exists ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 >
-        au < manifest ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 >
+        au < crawling ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 >
   
     }
   
@@ -1218,7 +1218,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
-        au < ready ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
 
     }
 
@@ -1254,7 +1254,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 ; 4 >
   
     }
   
@@ -1272,7 +1272,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 ; 4 >
   
     }
   
@@ -1290,7 +1290,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 ; 4 >
   
     }
   
@@ -1308,7 +1308,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 ; 4 >
   
     }
   
@@ -1326,7 +1326,7 @@
         au < manifest ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; IZA Journal of Migration Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; IZA Journal of Migration Volume 4 ; 4 >
   
     }
   
@@ -1341,9 +1341,9 @@
         param[journal_issn] = 2093-3371 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
-        au < ready ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
-        au < ready ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
+        au < crawling ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
+        au < crawling ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
+        au < crawling ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
   
     }
   
@@ -1361,7 +1361,7 @@
         au < manifest ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 ; 4 >
   
     }
   
@@ -1377,7 +1377,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
-        au < ready ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 >
   
     }
   
@@ -1395,7 +1395,7 @@
         au < manifest ; exists ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 ; 4 >
   
     }
   
@@ -1411,7 +1411,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 >
-        au < ready ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 >
   
     }
   
@@ -1429,7 +1429,7 @@
         au < manifest ; exists ; 2012 ; Journal of Economic Structures Volume 1 ; 1 >
         au < crawling ; exists ; 2013 ; Journal of Economic Structures Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Journal of Economic Structures Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; Journal of Economic Structures Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; Journal of Economic Structures Volume 4 ; 4 >
   
     }
   
@@ -1445,8 +1445,8 @@
         comment[platform] = BioMedCentralPlugin
         #notReady - PD-1535
   
-        au < notReady ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
+        au < wanted ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
+        au < wanted ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
   
     }
 
@@ -1563,7 +1563,7 @@
   
         au < manifest ; exists ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 >
         au < crawling ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 >
-        au < manifest ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 ; 6 >
+        au < crawling ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 ; 6 >
   
     }
   
@@ -1601,7 +1601,7 @@
         au < manifest ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
-        au < manifest ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 ; 5 >
+        au < crawling ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 ; 5 >
   
     }
   
@@ -1735,7 +1735,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 >
   
     }
   
@@ -1752,7 +1752,7 @@
   
         au < manifest ; exists ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 >
         au < crawling ; exists ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 >
-        au < manifest ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 ; 3 >
+        au < crawling ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 ; 3 >
   
     }
   
@@ -1917,7 +1917,7 @@
   
         au < manifest ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 >
         au < crawling ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 >
-        au < manifest ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 ; 45 >
+        au < crawling ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 ; 45 >
   
     }
   
@@ -1954,7 +1954,7 @@
         au < manifest ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 >
-        au < manifest ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 >
+        au < crawling ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 >
   
     }
   
@@ -2075,7 +2075,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 >
-        au < manifest ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
+        au < crawling ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
 
     }
 
@@ -2214,7 +2214,7 @@
 
         au < manifest ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 >
         au < crawling ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
-        au < manifest ; exists ; 2015 ; Zoological Studies Volume 54 ; 54 >
+        au < crawling ; exists ; 2015 ; Zoological Studies Volume 54 ; 54 >
 
     }
 
@@ -2310,7 +2310,7 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < manifest ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
+      au < wanted ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
 
     }
 
@@ -2344,7 +2344,7 @@
 
       au < manifest ; exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 >
+      au < crawling ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 >
 
     }
 
@@ -2375,8 +2375,8 @@
       param[journal_issn] = 2198-4115
       comment[platform] = BioMedCentralPlugin
 
-      au < manifest ; exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
-      au < manifest ; exists ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
+      au < wanted ; exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
+      au < wanted ; exists ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
 
     }
 
@@ -2425,7 +2425,7 @@
       param[journal_issn] = 2288-8586
       comment[platform] = BioMedCentralPlugin
 
-      au < manifest ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
+      au < wanted ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
 
     }
 
