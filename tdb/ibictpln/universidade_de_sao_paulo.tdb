@@ -39,20 +39,20 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
-    au < manifest ; 1988 ; 1988 ; Revista de História Volume 1988 ; 1988 >
-    au < manifest ; 1989 ; 1989 ; Revista de História Volume 1989 ; 1989 >
-    au < manifest ; 1990 ; 1990 ; Revista de História Volume 1990 ; 1990 >
-    au < manifest ; 1991 ; 1991 ; Revista de História Volume 1991 ; 1991 >
-    au < manifest ; 1992 ; 1992 ; Revista de História Volume 1992 ; 1992 >
-    au < manifest ; 1993 ; 1993 ; Revista de História Volume 1993 ; 1993 >
-    au < manifest ; 1994 ; 1994 ; Revista de História Volume 1994 ; 1994 >
-    au < manifest ; 1995 ; 1995 ; Revista de História Volume 1995 ; 1995 >
-    au < manifest ; 1996 ; 1996 ; Revista de História Volume 1996 ; 1996 >
-    au < manifest ; 1997 ; 1997 ; Revista de História Volume 1997 ; 1997 >
-    au < manifest ; 1998 ; 1998 ; Revista de História Volume 1998 ; 1998 >
-    au < manifest ; 1999 ; 1999 ; Revista de História Volume 1999 ; 1999 >
-    au < manifest ; 2000 ; 2000 ; Revista de História Volume 2000 ; 2000 >
-    au < manifest ; 2001 ; 2001 ; Revista de História Volume 2001 ; 2001 >
+    au < testing ; 1988 ; 1988 ; Revista de História Volume 1988 ; 1988 >
+    au < testing ; 1989 ; 1989 ; Revista de História Volume 1989 ; 1989 >
+    au < testing ; 1990 ; 1990 ; Revista de História Volume 1990 ; 1990 >
+    au < testing ; 1991 ; 1991 ; Revista de História Volume 1991 ; 1991 >
+    au < testing ; 1992 ; 1992 ; Revista de História Volume 1992 ; 1992 >
+    au < testing ; 1993 ; 1993 ; Revista de História Volume 1993 ; 1993 >
+    au < testing ; 1994 ; 1994 ; Revista de História Volume 1994 ; 1994 >
+    au < testing ; 1995 ; 1995 ; Revista de História Volume 1995 ; 1995 >
+    au < testing ; 1996 ; 1996 ; Revista de História Volume 1996 ; 1996 >
+    au < testing ; 1997 ; 1997 ; Revista de História Volume 1997 ; 1997 >
+    au < testing ; 1998 ; 1998 ; Revista de História Volume 1998 ; 1998 >
+    au < testing ; 1999 ; 1999 ; Revista de História Volume 1999 ; 1999 >
+    au < testing ; 2000 ; 2000 ; Revista de História Volume 2000 ; 2000 >
+    au < testing ; 2001 ; 2001 ; Revista de História Volume 2001 ; 2001 >
     au < released ; 2002 ; 2002 ; Revista de História Volume 2002 ; 2002 >
     au < released ; 2003 ; 2003 ; Revista de História Volume 2003 ; 2003 >
     au < released ; 2004 ; 2004 ; Revista de História Volume 2004 ; 2004 >
@@ -81,13 +81,13 @@
     param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = estic
 
-    au < manifest ; 1996 ; 1 ; Estílos da Clínica Volume 1 ; 1996 >
-    au < manifest ; 1997 ; 2 ; Estílos da Clínica Volume 2 ; 1997 >
-    au < manifest ; 1998 ; 3 ; Estílos da Clínica Volume 3 ; 1998 >
-    au < manifest ; 1999 ; 4 ; Estílos da Clínica Volume 4 ; 1999 >
-    au < manifest ; 2000 ; 5 ; Estílos da Clínica Volume 5 ; 2000 >
-    au < manifest ; 2001 ; 6 ; Estílos da Clínica Volume 6 ; 2001 >
-    au < manifest ; 2002 ; 7 ; Estílos da Clínica Volume 7 ; 2002 >
+    au < testing ; 1996 ; 1 ; Estílos da Clínica Volume 1 ; 1996 >
+    au < testing ; 1997 ; 2 ; Estílos da Clínica Volume 2 ; 1997 >
+    au < testing ; 1998 ; 3 ; Estílos da Clínica Volume 3 ; 1998 >
+    au < testing ; 1999 ; 4 ; Estílos da Clínica Volume 4 ; 1999 >
+    au < testing ; 2000 ; 5 ; Estílos da Clínica Volume 5 ; 2000 >
+    au < testing ; 2001 ; 6 ; Estílos da Clínica Volume 6 ; 2001 >
+    au < testing ; 2002 ; 7 ; Estílos da Clínica Volume 7 ; 2002 >
     au < released ; 2003 ; 8 ; Estílos da Clínica Volume 8 ; 2003 >
     au < released ; 2004 ; 9 ; Estílos da Clínica Volume 9 ; 2004 >
     au < released ; 2005 ; 10 ; Estílos da Clínica Volume 10 ; 2005 >
@@ -146,11 +146,11 @@
       param[base_url] = http://www.revistas.usp.br/
       param[journal_id] = incid
 
-      au < manifest ; 2010 ; 1 ; InCID: Revista de Ciência da Informação e Documentação Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 2 ; InCID: Revista de Ciência da Informação e Documentação Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 3 ; InCID: Revista de Ciência da Informação e Documentação Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 4 ; InCID: Revista de Ciência da Informação e Documentação Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 5 ; InCID: Revista de Ciência da Informação e Documentação Volume 2014 ; 2014 >
+      au < testing ; 2010 ; 1 ; InCID: Revista de Ciência da Informação e Documentação Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 2 ; InCID: Revista de Ciência da Informação e Documentação Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 3 ; InCID: Revista de Ciência da Informação e Documentação Volume 2012 ; 2012 >
+      au < testing ; 2013 ; 4 ; InCID: Revista de Ciência da Informação e Documentação Volume 2013 ; 2013 >
+      au < testing ; 2014 ; 5 ; InCID: Revista de Ciência da Informação e Documentação Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 6 ; InCID: Revista de Ciência da Informação e Documentação Volume 2015 ; 2015 >
 
   }
@@ -166,12 +166,12 @@
       param[base_url] = http://www.usp.br/alterjor/ojs/
       param[journal_id] = alterjor
 
-      au < manifest ; 2009 ; 1 ; Revista Alterjor Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Revista Alterjor Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 3 ; Revista Alterjor Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 4 ; Revista Alterjor Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 5 ; Revista Alterjor Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 6 ; Revista Alterjor Volume 2014 ; 2014 >
+      au < testing ; 2009 ; 1 ; Revista Alterjor Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 2 ; Revista Alterjor Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 3 ; Revista Alterjor Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 4 ; Revista Alterjor Volume 2012 ; 2012 >
+      au < testing ; 2013 ; 5 ; Revista Alterjor Volume 2013 ; 2013 >
+      au < testing ; 2014 ; 6 ; Revista Alterjor Volume 2014 ; 2014 >
       au < expected ; 2015 ; 7 ; Revista Alterjor Volume 2015 ; 2015 >
 
   }

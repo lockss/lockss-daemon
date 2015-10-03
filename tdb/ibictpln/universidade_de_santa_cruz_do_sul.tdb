@@ -18,15 +18,15 @@
       param[base_url] = http://online.unisc.br/seer/
       param[journal_id] = barbaroi
 
-      au < testing ; 2006 ; 1 ; Barbarói Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 2 ; Barbarói Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 3 ; Barbarói Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 4 ; Barbarói Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 5 ; Barbarói Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 6 ; Barbarói Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 7 ; Barbarói Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 8 ; Barbarói Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 9 ; Barbarói Volume 2014 ; 2014 >
+      au < ready ; 2006 ; 1 ; Barbarói Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 2 ; Barbarói Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 3 ; Barbarói Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 4 ; Barbarói Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 5 ; Barbarói Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 6 ; Barbarói Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 7 ; Barbarói Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 8 ; Barbarói Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 9 ; Barbarói Volume 2014 ; 2014 >
       au < expected ; 2015 ; 10 ; Barbarói Volume 2015 ; 2015 >
 
   }

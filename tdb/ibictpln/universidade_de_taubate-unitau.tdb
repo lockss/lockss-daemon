@@ -38,12 +38,12 @@
       param[base_url] = http://periodicos.unitau.br/ojs-2.2/
       param[journal_id] = clipeodonto
 
-      au < testing ; 2009 ; 1 ; Clínica e Pesquisa em Odontologia Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 2 ; Clínica e Pesquisa em Odontologia Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 3 ; Clínica e Pesquisa em Odontologia Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 4 ; Clínica e Pesquisa em Odontologia Volume 2012 ; 2012 >
-      au < testing ; 2013 ; 5 ; Clínica e Pesquisa em Odontologia Volume 2013 ; 2013 >
-      au < testing ; 2014 ; 6 ; Clínica e Pesquisa em Odontologia Volume 2014 ; 2014 >
+      au < ready ; 2009 ; 1 ; Clínica e Pesquisa em Odontologia Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 2 ; Clínica e Pesquisa em Odontologia Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 3 ; Clínica e Pesquisa em Odontologia Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 4 ; Clínica e Pesquisa em Odontologia Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 5 ; Clínica e Pesquisa em Odontologia Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 6 ; Clínica e Pesquisa em Odontologia Volume 2014 ; 2014 >
       au < expected ; 2015 ; 7 ; Clínica e Pesquisa em Odontologia Volume 2015 ; 2015 >
 
   }
