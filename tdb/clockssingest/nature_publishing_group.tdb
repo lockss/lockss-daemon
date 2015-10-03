@@ -31,7 +31,7 @@
     au < finished ; frozen ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
     au < crawling ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 >
     au < crawling ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 >
-    au < manifest ; exists ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 >
+    au < crawling ; exists ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 >
 
   }
 
@@ -139,7 +139,7 @@
     au < finished ; frozen ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
     au < crawling ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
     au < finished ; crawling ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; Blood Cancer Journal Volume 5 ; 2015 ; 5 >
+    au < crawling ; exists ; 2015 ; Blood Cancer Journal Volume 5 ; 2015 ; 5 >
 
   }
 
@@ -315,7 +315,7 @@
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
     au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
     au < notReady ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 > #crawl completed with no substance
-    au < expected ; exists ; 2015 ; British Dental Journal Volume 216 ; 2015 ; 216 > #crawl completed with no substance
+    au < expected ; exists ; 2015 ; British Dental Journal Volume 216 ; 2015 ; 216 > 
 
   }
   {
@@ -440,8 +440,8 @@
     au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 >
     au < crawling ; exists ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 >
     au < crawling ; exists ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 >
-    au < ready ; exists ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 >
-    au < manifest ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 >
+    au < crawling ; exists ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 >
+    au < crawling ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 >
 
   }
 
@@ -473,7 +473,7 @@
     au < superseded ; exists ; 2013 ; Cancer Gene Therapy Volume 19 [to delete] ; 2013 ; 19 >
     au < finished ; crawling ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 >
     au < finished ; crawling ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 >
-    au < manifest ; exists ; 2015 ; Cancer Gene Therapy Volume 22 ; 2015 ; 22 >
+    au < crawling ; exists ; 2015 ; Cancer Gene Therapy Volume 22 ; 2015 ; 22 >
 
   }
 
@@ -524,7 +524,7 @@
     au < finished ; frozen ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
     au < finished ; crawling ; 2014 ; Cell Death & Disease Volume 5 ; 2014 ; 5 >
-    au < manifest ; exists ; 2015 ; Cell Death & Disease Volume 6 ; 2015 ; 6 >
+    au < crawling ; exists ; 2015 ; Cell Death & Disease Volume 6 ; 2015 ; 6 >
 
     }
 
@@ -578,7 +578,7 @@
     au < finished ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
     au < crawling ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
     au < finished ; crawling ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 >
-    au < manifest ; exists ; 2015 ; Cellular & Molecular Immunology Volume 12 ; 2015 ; 12 >
+    au < crawling ; exists ; 2015 ; Cellular & Molecular Immunology Volume 12 ; 2015 ; 12 >
 
   }
 
@@ -700,7 +700,7 @@
     au < finished ; crawling ; 2012 ; Emerging Microbes & Infections Volume 1 ; 2012 ; 1 >
     au < crawling ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 >
     au < finished ; crawling ; 2014 ; Emerging Microbes & Infections Volume 3 ; 2014 ; 3 >
-    au < manifest ; exists ; 2015 ; Emerging Microbes & Infections Volume 4 ; 2015 ; 4 >
+    au < crawling ; exists ; 2015 ; Emerging Microbes & Infections Volume 4 ; 2015 ; 4 >
 
   }
 
@@ -733,7 +733,7 @@
     au < finished ; crawling ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
     au < finished ; crawling ; 2013 ; European Journal of Clinical Nutrition Volume 67 ; 2013 ; 67 >
     au < finished ; crawling ; 2014 ; European Journal of Clinical Nutrition Volume 68 ; 2014 ; 68 >
-    au < ready ; exists ; 2015 ; European Journal of Clinical Nutrition Volume 69 ; 2015 ; 69 >
+    au < crawling ; exists ; 2015 ; European Journal of Clinical Nutrition Volume 69 ; 2015 ; 69 >
 
   }
 
@@ -807,7 +807,7 @@
     au < crawling ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 >
     au < crawling ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 >
     au < finished ; crawling ; 2014 ; Experimental & Molecular Medicine Volume 46 ; 2014 ; 46 >
-    au < ready ; exists ; 2015 ; Experimental & Molecular Medicine Volume 47 ; 2015 ; 47 >
+    au < crawling ; exists ; 2015 ; Experimental & Molecular Medicine Volume 47 ; 2015 ; 47 >
 
 
   }
@@ -851,7 +851,7 @@
     au < finished ; crawling ; 2012 ; Eye Volume 26 ; 2012 ; 26 >
     au < crawling ; exists ; 2013 ; Eye Volume 27 ; 2013 ; 27 >
     au < crawling ; exists ; 2014 ; Eye Volume 28 ; 2014 ; 28 >
-    au < manifest ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 >
+    au < crawling ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 >
 
 
   }
@@ -915,7 +915,7 @@
     au < finished ; crawling ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 >
     au < finished ; crawling ; 2013 ; Genes and Immunity Volume 14 ; 2013 ; 14 >
     au < finished ; crawling ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 >
-    au < ready ; exists ; 2015 ; Genes and Immunity Volume 16 ; 2015 ; 16 >
+    au < crawling ; exists ; 2015 ; Genes and Immunity Volume 16 ; 2015 ; 16 >
 
   }
 
@@ -1089,7 +1089,7 @@
     au < finished ; crawling ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
     au < crawling ; exists ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 >
     au < crawling ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 >
-    au < ready ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 >
+    au < crawling ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 >
  
   }
 
@@ -1217,7 +1217,7 @@
     au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 >
     au < finished ; crawling ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 >
     au < crawling ; exists ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 >
-    au < manifest ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 >
+    au < crawling ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 >
   }
 
   {
@@ -1301,7 +1301,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 >
     au < finished ; crawling ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 >
     au < finished ; crawling ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 >
+    au < crawling ; exists ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 >
 
   }
 
@@ -1391,7 +1391,7 @@
     au < finished ; crawling ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
     au < finished ; crawling ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 >
     au < finished ; crawling ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 >
-    au < manifest ; exists ; 2015 ; The Journal of Antibiotics Volume 68 ; 2015 ; 68 >
+    au < crawling ; exists ; 2015 ; The Journal of Antibiotics Volume 68 ; 2015 ; 68 >
 
   }
 
@@ -1517,7 +1517,7 @@
     au < finished ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
     au < crawling ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 >
     au < crawling ; exists ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 >
-    au < ready ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 >
+    au < crawling ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 >
 
   }
 
@@ -1550,7 +1550,7 @@
     au < finished ; crawling ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
     au < finished ; crawling ; 2013 ; Journal of Human Hypertension Volume 27 ; 2013 ; 27 >
     au < finished ; crawling ; 2014 ; Journal of Human Hypertension Volume 28 ; 2014 ; 28 >
-    au < manifest ; exists ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 >
+    au < crawling ; exists ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 >
 
   }
 
@@ -1730,7 +1730,7 @@
     au < finished ; crawling ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
     au < crawling ; exists ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 >
     au < finished ; crawling ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 >
-    au < ready ; exists ; 2015 ; Journal of Perinatology Volume 35 ; 2015 ; 35 >
+    au < crawling ; exists ; 2015 ; Journal of Perinatology Volume 35 ; 2015 ; 35 >
  
   }
 
@@ -1760,7 +1760,7 @@
     au < crawling ; exists ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 >
     au < crawling ; exists ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 >
     au < manifest ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 >
-    au < ready ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 >
+    au < crawling ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 >
 
   }
 
@@ -1822,7 +1822,7 @@
     au < finished ; crawling ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
     au < crawling ; exists ; 2013 ; Laboratory Investigation Volume 93 ; 2013 ; 93 >
     au < crawling ; exists ; 2014 ; Laboratory Investigation Volume 94 ; 2014 ; 94 >
-    au < manifest ; exists ; 2015 ; Laboratory Investigation Volume 95 ; 2015 ; 95 >
+    au < crawling ; exists ; 2015 ; Laboratory Investigation Volume 95 ; 2015 ; 95 >
 
   }
 
@@ -1918,7 +1918,7 @@
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
     au < crawling ; exists ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 >
     au < crawling ; exists ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 >
-    au < manifest ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 >
+    au < crawling ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 >
 
   }
 
@@ -2003,7 +2003,7 @@
     au < finished ; frozen ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
     au < finished ; crawling ; 2013 ; Molecular Therapy Volume 21 ; 2013 ; 21 >
     au < finished ; crawling ; 2014 ; Molecular Therapy Volume 22 ; 2014 ; 22 >
-    au < ready ; exists ; 2015 ; Molecular Therapy Volume 23 ; 2015 ; 23 >
+    au < crawling ; exists ; 2015 ; Molecular Therapy Volume 23 ; 2015 ; 23 >
 
   }
 
@@ -2041,7 +2041,7 @@
     au < finished ; crawling ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
     au < crawling ; exists ; 2013 ; Mucosal Immunology Volume 6 ; 2013 ; 6 >
     au < finished ; crawling ; 2014 ; Mucosal Immunology Volume 7 ; 2014 ; 7 >
-    au < manifest ; exists ; 2015 ; Mucosal Immunology Volume 8 ; 2015 ; 8 >
+    au < crawling ; exists ; 2015 ; Mucosal Immunology Volume 8 ; 2015 ; 8 >
 
   }
 
@@ -2412,15 +2412,15 @@
     au < crawling ; exists ; 2014 ; Nature Volume 514 ; 2014 ; 514 >
     au < crawling ; exists ; 2014 ; Nature Volume 515 ; 2014 ; 515 >
     au < crawling ; exists ; 2014 ; Nature Volume 516 ; 2014 ; 516 >
-    au < manifest ; exists ; 2015 ; Nature Volume 517 ; 2015 ; 517 >
-    au < manifest ; exists ; 2015 ; Nature Volume 518 ; 2015 ; 518 >
-    au < ready ; exists ; 2015 ; Nature Volume 519 ; 2015 ; 519 >
-    au < manifest ; exists ; 2015 ; Nature Volume 520 ; 2015 ; 520 >
-    au < manifest ; exists ; 2015 ; Nature Volume 521 ; 2015 ; 521 >
+    au < crawling ; exists ; 2015 ; Nature Volume 517 ; 2015 ; 517 >
+    au < crawling ; exists ; 2015 ; Nature Volume 518 ; 2015 ; 518 >
+    au < crawling ; exists ; 2015 ; Nature Volume 519 ; 2015 ; 519 >
+    au < crawling ; exists ; 2015 ; Nature Volume 520 ; 2015 ; 520 >
+    au < crawling ; exists ; 2015 ; Nature Volume 521 ; 2015 ; 521 >
     au < manifest ; exists ; 2015 ; Nature Volume 522 ; 2015 ; 522 >
     au < manifest ; exists ; 2015 ; Nature Volume 523 ; 2015 ; 523 >
     au < manifest ; exists ; 2015 ; Nature Volume 524 ; 2015 ; 524 >
-    au < ready ; exists ; 2015 ; Nature Volume 525 ; 2015 ; 525 >
+    au < crawling ; exists ; 2015 ; Nature Volume 525 ; 2015 ; 525 >
     au < expected ; exists ; 2015 ; Nature Volume 526 ; 2015 ; 526 >
     au < expected ; exists ; 2015 ; Nature Volume 527 ; 2015 ; 527 >
     au < expected ; exists ; 2015 ; Nature Volume 528 ; 2015 ; 528 >
@@ -2548,7 +2548,7 @@
     au < crawling ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
     au < crawling ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
     au < crawling ; exists ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 >
-    au < ready ; exists ; 2015 ; Nature Chemistry Volume 7 ; 2015 ; 7 >
+    au < crawling ; exists ; 2015 ; Nature Chemistry Volume 7 ; 2015 ; 7 >
 
   }
 
@@ -2566,7 +2566,7 @@
     au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
     au < crawling ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 >
+    au < crawling ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 >
 
   }
 
@@ -2835,7 +2835,7 @@
     au < crawling ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
     au < crawling ; exists ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 >
     au < crawling ; exists ; 2014 ; Nature Nanotechnology Volume 9 ; 2014 ; 9 >
-    au < manifest ; exists ; 2015 ; Nature Nanotechnology Volume 10 ; 2015 ; 10 >
+    au < crawling ; exists ; 2015 ; Nature Nanotechnology Volume 10 ; 2015 ; 10 >
 
   }
 
@@ -2969,7 +2969,7 @@
     au < finished ; crawling ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 >
     au < crawling ; exists ; 2013 ; Nature Reviews Cancer Volume 13 ; 2013 ; 13 >
     au < crawling ; exists ; 2014 ; Nature Reviews Cancer Volume 14 ; 2014 ; 14 >
-    au < manifest ; exists ; 2015 ; Nature Reviews Cancer Volume 15 ; 2015 ; 15 >
+    au < crawling ; exists ; 2015 ; Nature Reviews Cancer Volume 15 ; 2015 ; 15 >
 
   }
 
@@ -3187,7 +3187,7 @@
     au < crawling ; exists ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 >
     au < crawling ; exists ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 >
     au < finished ; crawling ; 2014 ; Nature Reviews Microbiology Volume 12 ; 2014 ; 12 >
-    au < manifest ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 >
+    au < crawling ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 >
 
   }
 
@@ -3217,7 +3217,7 @@
     au < crawling ; exists ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 >
     au < crawling ; exists ; 2013 ; Nature Reviews Molecular Cell Biology Volume 14 ; 2013 ; 14 >
     au < finished ; crawling ; 2014 ; Nature Reviews Molecular Cell Biology Volume 15 ; 2014 ; 15 >
-    au < ready ; exists ; 2015 ; Nature Reviews Molecular Cell Biology Volume 16 ; 2015 ; 16 >
+    au < crawling ; exists ; 2015 ; Nature Reviews Molecular Cell Biology Volume 16 ; 2015 ; 16 >
 
   }
 
@@ -3242,7 +3242,7 @@
     au < finished ; crawling ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 >
     au < finished ; crawling ; 2013 ; Nature Reviews Nephrology Volume 9 ; 2013 ; 9 >
     au < crawling ; exists ; 2014 ; Nature Reviews Nephrology Volume 10 ; 2014 ; 10 >
-    au < ready ; exists ; 2015 ; Nature Reviews Nephrology Volume 11 ; 2015 ; 11 >
+    au < crawling ; exists ; 2015 ; Nature Reviews Nephrology Volume 11 ; 2015 ; 11 >
 
   }
 
@@ -3267,7 +3267,7 @@
     au < crawling ; exists ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 >
     au < crawling ; exists ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 >
     au < crawling ; exists ; 2014 ; Nature Reviews Neurology Volume 10 ; 2014 ; 10 >
-    au < ready ; exists ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 >
+    au < crawling ; exists ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 >
 
   }
 
@@ -3384,7 +3384,7 @@
     au < crawling ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 >
     au < crawling ; exists ; 2013 ; Nature Structural and Molecular Biology Volume 20 ; 2013 ; 20 >
     au < crawling ; exists ; 2014 ; Nature Structural and Molecular Biology Volume 21 ; 2014 ; 21 >
-    au < ready ; exists ; 2015 ; Nature Structural and Molecular Biology Volume 22 ; 2015 ; 22 >
+    au < crawling ; exists ; 2015 ; Nature Structural and Molecular Biology Volume 22 ; 2015 ; 22 >
 
   }
 
@@ -3465,7 +3465,7 @@
     au < finished ; crawling ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
     au < crawling ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 >
     au < finished ; crawling ; 2014 ; Nutrition & Diabetes Volume 4 ; 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; Nutrition & Diabetes Volume 5 ; 2015 ; 5 >
+    au < crawling ; exists ; 2015 ; Nutrition & Diabetes Volume 5 ; 2015 ; 5 >
   
   }
     
@@ -3532,7 +3532,7 @@
     au < crawling ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
     au < finished ; crawling ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
     au < finished ; crawling ; 2014 ; Oncogene Volume 33 ; 2014 ; 33 >
-    au < manifest ; exists ; 2015 ; Oncogene Volume 34 ; 2015 ; 34 >
+    au < crawling ; exists ; 2015 ; Oncogene Volume 34 ; 2015 ; 34 >
 
   }
 
@@ -3547,7 +3547,7 @@
     au < finished ; crawling ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
     au < finished ; crawling ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
     au < crawling ; exists ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 >
-    au < ready ; exists ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 >
+    au < crawling ; exists ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 >
 
   }
 
@@ -3667,7 +3667,7 @@
     au < finished ; frozen ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
     au < finished ; crawling ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 >
     au < finished ; crawling ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 >
-    au < ready ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 >
+    au < crawling ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 >
 
   }
 
@@ -3690,7 +3690,7 @@
     au < finished ; frozen ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
     au < finished ; crawling ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
     au < finished ; crawling ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 >
-    au < ready ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 >
+    au < crawling ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 >
 
   }
 
@@ -3723,7 +3723,7 @@
     au < finished ; frozen ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
     au < crawling ; exists ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 >
     au < finished ; crawling ; 2014 ; Prostate Cancer and Prostatic Diseases Volume 17 ; 2014 ; 17 >
-    au < ready ; exists ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 >
+    au < crawling ; exists ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 >
 
   }
 
@@ -3897,7 +3897,7 @@
     au < finished ; frozen ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
     au < crawling ; exists ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 >
     au < crawling ; exists ; 2014 ; Spinal Cord Volume 52 ; 2014 ; 52 >
-    au < manifest ; exists ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 >
+    au < crawling ; exists ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 >
 
   }
 
