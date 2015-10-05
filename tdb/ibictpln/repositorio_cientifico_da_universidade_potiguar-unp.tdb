@@ -14,7 +14,7 @@
       >
 
       comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
-      param[base_url] = http://repositorio.unp.br/
+      param[base_url] = https://repositorio.unp.br/
       param[journal_id] = catussaba
 
       au < exists ; 2011 ; 1 ; Revista CATUSSABA Volume 2011 ; 2011 ; >
@@ -31,13 +31,28 @@
       >
 
       comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
-      param[base_url] = http://repositorio.unp.br/
       param[journal_id] = connexio
+      comment[0] = journal moved from http to https
 
-      au < released ; 2011 ; 1 ; Revista CONNEXIO Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 2 ; Revista CONNEXIO Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 3 ; Revista CONNEXIO Volume 2013 ; 2013 ; >
-      au < notReady ; 2014 ; 4 ; Revista CONNEXIO Volume 2014 ; 2014 ; failed to fetch start url>
+    {
+      param[base_url] = https://repositorio.unp.br/
+
+      au < exists ; 2011 ; 1 ; Revista CONNEXIO Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista CONNEXIO Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; Revista CONNEXIO Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 4 ; Revista CONNEXIO Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 5 ; Revista CONNEXIO Volume 2015 ; 2015 ; >
+
+    }
+
+    {
+      param[base_url] = http://repositorio.unp.br/
+
+      au < superseded ; 2011 ; 1 ; Revista CONNEXIO Volume 2011 [superseded] ; 2011 ; moved from http to https >
+      au < superseded ; 2012 ; 2 ; Revista CONNEXIO Volume 2012 [superseded] ; 2012 ; moved from http to https >
+      au < superseded ; 2013 ; 3 ; Revista CONNEXIO Volume 2013 [superseded] ; 2013 ; moved from http to https >
+
+    }
 
   }
 
@@ -49,7 +64,7 @@
       >
 
       comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
-      param[base_url] = http://repositorio.unp.br/
+      param[base_url] = https://repositorio.unp.br/
       param[journal_id] = juris
 
       au < exists ; 2011 ; 1 ; Revista Juris Rationis Volume 2011 ; 2011 ; >
@@ -66,13 +81,25 @@
       >
 
       comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
-      param[base_url] = http://repositorio.unp.br/
       param[journal_id] = quipus
 
-      au < released ; 2011 ; 1 ; Revista QUIPUS Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 2 ; Revista QUIPUS Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 3 ; Revista QUIPUS Volume 2013 ; 2013 ; >
-      au < notReady ; 2014 ; 4 ; Revista QUIPUS Volume 2014 ; 2014 ; failed to fetch start url>
+    {
+      param[base_url] = https://repositorio.unp.br/
+
+      au < exists ; 2011 ; 1 ; Revista QUIPUS Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista QUIPUS Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; Revista QUIPUS Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 4 ; Revista QUIPUS Volume 2014 ; 2014 ; >
+    }
+
+    {
+      param[base_url] = http://repositorio.unp.br/
+
+      au < superseded ; 2011 ; 1 ; Revista QUIPUS Volume 2011 [superseded] ; 2011 ; moved from http to https >
+      au < superseded ; 2012 ; 2 ; Revista QUIPUS Volume 2012 [superseded] ; 2012 ; moved from http to https >
+      au < superseded ; 2013 ; 3 ; Revista QUIPUS Volume 2013 [superseded] ; 2013 ; moved from http to https >
+
+    }
 
   }
 
@@ -84,16 +111,28 @@
       >
 
       comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
-      param[base_url] = http://repositorio.unp.br/
       param[journal_id] = raunp
+    {
+      param[base_url] = https://repositorio.unp.br/
 
-      au < notReady ; 2008 ; 1 ; Revista Eletrônica do Mestrado em Administração Volume 2008 ; 2008 ; no articles >
-      au < notReady ; 2009 ; 2 ; Revista Eletrônica do Mestrado em Administração Volume 2009 ; 2009 ; no articles >
-      au < released ; 2010 ; 3 ; Revista Eletrônica do Mestrado em Administração Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 4 ; Revista Eletrônica do Mestrado em Administração Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 5 ; Revista Eletrônica do Mestrado em Administração Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 6 ; Revista Eletrônica do Mestrado em Administração Volume 2013 ; 2013 ; >
-      au < notReady ; 2014 ; 7 ; Revista Eletrônica do Mestrado em Administração Volume 2014 ; 2014 ; Failed to fetch start url>
+      au < exists ; 2008 ; 1 ; Revista Eletrônica do Mestrado em Administração Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Revista Eletrônica do Mestrado em Administração Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Revista Eletrônica do Mestrado em Administração Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Revista Eletrônica do Mestrado em Administração Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Revista Eletrônica do Mestrado em Administração Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 6 ; Revista Eletrônica do Mestrado em Administração Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 7 ; Revista Eletrônica do Mestrado em Administração Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Revista Eletrônica do Mestrado em Administração Volume 2015 ; 2015 ; >
+    }
+
+    {
+      param[base_url] = http://repositorio.unp.br/
+
+      au < superseded ; 2010 ; 3 ; Revista Eletrônica do Mestrado em Administração Volume 2010 [superseded] ; 2010 ; moved from http to https >
+      au < superseded ; 2011 ; 4 ; Revista Eletrônica do Mestrado em Administração Volume 2011 [superseded] ; 2011 ; moved from http to https >
+      au < superseded ; 2012 ; 5 ; Revista Eletrônica do Mestrado em Administração Volume 2012 [superseded] ; 2012 ; moved from http to https >
+      au < superseded ; 2013 ; 6 ; Revista Eletrônica do Mestrado em Administração Volume 2013 [superseded] ; 2013 ; moved from http to https >
+    }
 
   }
 
@@ -105,7 +144,7 @@
       >
 
       comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
-      param[base_url] = http://repositorio.unp.br/
+      param[base_url] = https://repositorio.unp.br/
       param[journal_id] = runpetro
 
       au < exists ; 2012 ; 1 ; Revista RUnPetro Volume 2012 ; 2012 ; >

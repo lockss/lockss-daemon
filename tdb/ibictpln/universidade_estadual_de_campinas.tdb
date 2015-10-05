@@ -18,22 +18,22 @@
     param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
     param[journal_id] = etd
 
-    au < testing ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 ; >
-    au < testing ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) ; 2000 ; >
-    au < testing ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) ; 2001 ; >
-    au < testing ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) ; 2002 ; >
-    au < testing ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) ; 2003 ; >
-    au < testing ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) ; 2004 ; >
-    au < testing ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) ; 2005 ; >
-    au < testing ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) ; 2006 ; >
-    au < testing ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) ; 2007 ; >
-    au < testing ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) ; 2008 ; >
-    au < testing ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) ; 2009 ; >
-    au < testing ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) ; 2010 ; >
-    au < testing ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) ; 2011 ; >
-    au < testing ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 ; >
-    au < testing ; 2013 ; 15 ; ETD - Educação Temática Digital Volume 15 ; 2013 ; >
-    au < testing ; 2014 ; 16 ; ETD - Educação Temática Digital Volume 16 ; 2014 ; >
+    au < ready ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 ; >
+    au < ready ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) ; 2000 ; >
+    au < ready ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) ; 2001 ; >
+    au < ready ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) ; 2002 ; >
+    au < ready ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) ; 2003 ; >
+    au < ready ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) ; 2004 ; >
+    au < ready ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) ; 2005 ; >
+    au < ready ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) ; 2006 ; >
+    au < ready ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) ; 2007 ; >
+    au < ready ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) ; 2008 ; >
+    au < ready ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) ; 2009 ; >
+    au < ready ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) ; 2010 ; >
+    au < ready ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) ; 2011 ; >
+    au < ready ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 ; >
+    au < ready ; 2013 ; 15 ; ETD - Educação Temática Digital Volume 15 ; 2013 ; >
+    au < ready ; 2014 ; 16 ; ETD - Educação Temática Digital Volume 16 ; 2014 ; >
     au < manifest ; 2015 ; 17 ; ETD - Educação Temática Digital Volume 17 ; 2015 ; >
     }
     {
@@ -64,15 +64,27 @@
       issn = 1676-2584
     >
 
-    param[base_url] = http://www.fae.unicamp.br/revista/
     param[journal_id] = histedbr
+    {
+    param[base_url] = https://www.fe.unicamp.br/revistas/ged/
 
-    au < released ; 2009 ; 9 ; Revista HISTEDBR On-Line Volume 9 ; 2009 ; >
-    au < released ; 2010 ; 10 ; Revista HISTEDBR On-Line Volume 10 ; 2010 ; >
-    au < released ; 2011 ; 11 ; Revista HISTEDBR On-Line Volume 11 ; 2011 ; >
-    au < released ; 2012 ; 12 ; Revista HISTEDBR On-Line Volume 12 ; 2012 ; >
-    au < released ; 2013 ; 13 ; Revista HISTEDBR On-Line Volume 13 ; 2013 ; >
-    au < notReady ; 2014 ; 14 ; Revista HISTEDBR On-Line Volume 14 ; 2014 ; no permission from publisher >
+    au < exists ; 2009 ; 9 ; Revista HISTEDBR On-Line Volume 9 ; 2009 ; >
+    au < exists ; 2010 ; 10 ; Revista HISTEDBR On-Line Volume 10 ; 2010 ; >
+    au < exists ; 2011 ; 11 ; Revista HISTEDBR On-Line Volume 11 ; 2011 ; >
+    au < exists ; 2012 ; 12 ; Revista HISTEDBR On-Line Volume 12 ; 2012 ; >
+    au < exists ; 2013 ; 13 ; Revista HISTEDBR On-Line Volume 13 ; 2013 ; >
+    au < exists ; 2014 ; 14 ; Revista HISTEDBR On-Line Volume 14 ; 2014 ; >
+    }
+
+    {
+    param[base_url] = http://www.fae.unicamp.br/revista/
+
+    au < superseded ; 2009 ; 9 ; Revista HISTEDBR On-Line Volume 9 [superseded] ; 2009 ; moved to new url >
+    au < superseded ; 2010 ; 10 ; Revista HISTEDBR On-Line Volume 10 [superseded] ; 2010 ; moved to new url >
+    au < superseded ; 2011 ; 11 ; Revista HISTEDBR On-Line Volume 11 [superseded] ; 2011 ; moved to new url >
+    au < superseded ; 2012 ; 12 ; Revista HISTEDBR On-Line Volume 12 [superseded] ; 2012 ; moved to new url >
+    au < superseded ; 2013 ; 13 ; Revista HISTEDBR On-Line Volume 13 [superseded] ; 2013 ; moved to new url >
+    }
 
   }
 
@@ -488,15 +500,15 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = rap
 
-      au < testing ; 2006 ; 1 ; Revista Arqueologia Pública Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 2 ; Revista Arqueologia Pública Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 3 ; Revista Arqueologia Pública Volume 2008 ; 2008 ; >
+      au < ready ; 2006 ; 1 ; Revista Arqueologia Pública Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 2 ; Revista Arqueologia Pública Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 3 ; Revista Arqueologia Pública Volume 2008 ; 2008 ; >
       au < exists ; 2009 ; 4 ; Revista Arqueologia Pública Volume 2009 ; 2009 ; >
       au < exists ; 2010 ; 5 ; Revista Arqueologia Pública Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 6 ; Revista Arqueologia Pública Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 7 ; Revista Arqueologia Pública Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 8 ; Revista Arqueologia Pública Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 9 ; Revista Arqueologia Pública Volume 2014 ; 2014 ; >
+      au < ready ; 2011 ; 6 ; Revista Arqueologia Pública Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 7 ; Revista Arqueologia Pública Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 8 ; Revista Arqueologia Pública Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 9 ; Revista Arqueologia Pública Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 10 ; Revista Arqueologia Pública Volume 2015 ; 2015 ; >
 
   }

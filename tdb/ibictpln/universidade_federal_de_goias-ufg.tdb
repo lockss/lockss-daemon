@@ -133,7 +133,7 @@
       au < released ; 2011 ; 14 ; Sociedade e Cultura Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 15 ; Sociedade e Cultura Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 16 ; Sociedade e Cultura Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 17 ; Sociedade e Cultura Volume 2014 ; 2014 ; >
+      au < testing ; 2014 ; 17 ; Sociedade e Cultura Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 18 ; Sociedade e Cultura Volume 2015 ; 2015 ; >
 
   }
@@ -218,10 +218,10 @@
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = interacao
 
-      au < manifest ; 1991 ; 15 ; Revista Inter Ação Volume 1991 ; 1991 ; >
-      au < manifest ; 1992 ; 16 ; Revista Inter Ação Volume 1992 ; 1992 ; >
-      au < manifest ; 1993 ; 17 ; Revista Inter Ação Volume 1993 ; 1993 ; >
-      au < manifest ; 1994 ; 18 ; Revista Inter Ação Volume 1994 ; 1994 ; >
+      au < testing ; 1991 ; 15 ; Revista Inter Ação Volume 1991 ; 1991 ; >
+      au < testing ; 1992 ; 16 ; Revista Inter Ação Volume 1992 ; 1992 ; >
+      au < testing ; 1993 ; 17 ; Revista Inter Ação Volume 1993 ; 1993 ; >
+      au < testing ; 1994 ; 18 ; Revista Inter Ação Volume 1994 ; 1994 ; >
       au < released ; 1995 ; 19 ; Revista Inter Ação Volume 1995 ; 1995 ; >
       au < released ; 1996 ; 20 ; Revista Inter Ação Volume 1996 ; 1996 ; >
       au < released ; 1997 ; 21 ; Revista Inter Ação Volume 1997 ; 1997 ; >
