@@ -456,7 +456,7 @@
     au < manifest ; exists ; 2011 ; American Entomologist Volume 57 ; 57 ; >
     au < manifest ; exists ; 2012 ; American Entomologist Volume 58 ; 58 ; >
     au < manifest ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
+    au < testing ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
     au < crawling ; exists ; 2015 ; American Entomologist Volume 61 ; 61 ; >
 
   }
@@ -5257,7 +5257,7 @@
     au < crawling ; exists ; 2012 ; English Historical Review Volume 127 ; 127 ; >
     au < crawling ; exists ; 2013 ; English Historical Review Volume 128 ; 128 ; >
     au < crawling ; exists ; 2014 ; English Historical Review Volume 129 ; 129 ; >
-    au < testing ; exists ; 2015 ; English Historical Review Volume 130 ; 130 ; >
+    au < ready ; exists ; 2015 ; English Historical Review Volume 130 ; 130 ; >
 
     }
 
@@ -7590,7 +7590,7 @@
     au < finished ; crawling ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
-    au < testing ; exists ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
+    au < ready ; exists ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
 
   }
 
@@ -11653,8 +11653,8 @@
     au < manifest ; exists ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 ; >
     au < manifest ; exists ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 ; >
     au < manifest ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; >
+    au < testing ; exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; >
+    au < testing ; exists ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; >
     au < manifest ; exists ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 ; >
     
   }
@@ -13669,7 +13669,7 @@
     au < manifest ; exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
     au < manifest ; exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 ; >
     au < manifest ; exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
+    au < testing ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 ; >
 
   }
@@ -15666,7 +15666,7 @@
     au < manifest ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < crawling ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < crawling ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
+    au < testing ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
     au < crawling ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
 
   }
@@ -16349,7 +16349,7 @@
     au < manifest ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
     au < manifest ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
-    au < manifest ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
+    au < testing ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
     au < crawling ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
 
   }
@@ -16542,7 +16542,7 @@
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 450 ; 450 ; >
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 451 ; 451 ; >
     au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 452 ; 452 ; >
-    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 453 ; 453 ; >
+    au < ready ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 453 ; 453 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 ; >
     au < expected ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 ; >
 
@@ -21689,7 +21689,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Social Problems Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Problems Volume 59 ; 59 ; >
     au < manifest ; exists ; 2013 ; Social Problems Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2014 ; Social Problems Volume 61 ; 61 ; >
+    au < testing ; exists ; 2014 ; Social Problems Volume 61 ; 61 ; >
     au < ready ; exists ; 2015 ; Social Problems Volume 62 ; 62 ; >
 
   }
@@ -23270,7 +23270,7 @@
 
       au < finished ; finished ; 2013 ; Journal of Survey Statistics and Methodology Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Journal of Survey Statistics and Methodology Volume 2 ; 2 ; >
-      au < testing ; exists ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 ; >
+      au < ready ; exists ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 ; >
 
     }
 
