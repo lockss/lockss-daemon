@@ -155,7 +155,7 @@
       param[base_url] = http://www.birpublications.org/
       param[journal_id] = bjrcr
 
-      au < manifest ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 >
+      au < testing ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 >
 
   }
 
@@ -232,7 +232,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
       au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 >
       au < crawling ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 >
-      au < testing ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 >
+      au < ready ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 >
 
     }
 
