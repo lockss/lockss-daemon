@@ -530,16 +530,16 @@
 
     param[journal_id] = jlfnvac
 
-    au < manifest ; exists ; 2000 ; Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
-    au < manifest ; exists ; 2001 ; Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
-    au < manifest ; exists ; 2002 ; Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 >
-    au < manifest ; exists ; 2003 ; Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 >
-    au < manifest ; exists ; 2004 ; Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 >
-    au < manifest ; exists ; 2005 ; Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 >
-    au < manifest ; exists ; 2006 ; Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 >
-    au < manifest ; exists ; 2007 ; Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 >
-    au < manifest ; exists ; 2008 ; Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 >
-    au < manifest ; exists ; 2009 ; Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 >
+    au < crawling ; exists ; 2000 ; Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
+    au < crawling ; exists ; 2001 ; Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
+    au < crawling ; exists ; 2002 ; Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 >
+    au < crawling ; exists ; 2003 ; Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 >
+    au < crawling ; exists ; 2004 ; Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 >
+    au < crawling ; exists ; 2005 ; Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 >
+    au < crawling ; exists ; 2006 ; Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 >
+    au < crawling ; exists ; 2007 ; Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 >
+    au < crawling ; exists ; 2008 ; Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 >
+    au < crawling ; exists ; 2009 ; Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 >
     au < doNotProcess ; doNotProcess ; 2010 ; Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 >
     au < doNotProcess ; doNotProcess ; 2011 ; Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 >
     au < doNotProcess ; doNotProcess ; 2012 ; Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 >
@@ -577,15 +577,15 @@
 
     param[journal_id] = nn
 
-    au < manifest ; exists ; 2002 ; Noise Notes Volume 1 ; 1 >
-    au < manifest ; exists ; 2003 ; Noise Notes Volume 2 ; 2 >
-    au < manifest ; exists ; 2004 ; Noise Notes Volume 3 ; 3 >
-    au < manifest ; exists ; 2005 ; Noise Notes Volume 4 ; 4 >
-    au < manifest ; exists ; 2006 ; Noise Notes Volume 5 ; 5 >
-    au < manifest ; exists ; 2007 ; Noise Notes Volume 6 ; 6 >
-    au < manifest ; exists ; 2008 ; Noise Notes Volume 7 ; 7 >
-    au < manifest ; exists ; 2009 ; Noise Notes Volume 8 ; 8 >
-    au < manifest ; exists ; 2010 ; Noise Notes Volume 9 ; 9 >
+    au < crawling ; exists ; 2002 ; Noise Notes Volume 1 ; 1 >
+    au < crawling ; exists ; 2003 ; Noise Notes Volume 2 ; 2 >
+    au < crawling ; exists ; 2004 ; Noise Notes Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; Noise Notes Volume 4 ; 4 >
+    au < crawling ; exists ; 2006 ; Noise Notes Volume 5 ; 5 >
+    au < crawling ; exists ; 2007 ; Noise Notes Volume 6 ; 6 >
+    au < crawling ; exists ; 2008 ; Noise Notes Volume 7 ; 7 >
+    au < crawling ; exists ; 2009 ; Noise Notes Volume 8 ; 8 >
+    au < crawling ; exists ; 2010 ; Noise Notes Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2011 ; Noise Notes Volume 10 ; 10 >
     au < doNotProcess ; doNotProcess ; 2012 ; Noise Notes Volume 11 ; 11 >
     au < doNotProcess ; doNotProcess ; 2013 ; Noise Notes Volume 12 ; 12 >
@@ -603,9 +603,9 @@
 
     param[journal_id] = ijm
 
-    au < manifest ; exists ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
-    au < manifest ; exists ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
-    au < manifest ; exists ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
+    au < crawling ; exists ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
+    au < crawling ; exists ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
+    au < crawling ; exists ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 >
@@ -644,7 +644,7 @@
 
     param[journal_id] = jcmf
 
-    au < manifest ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
     au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
@@ -664,16 +664,16 @@
 
     param[journal_id] = we
 
-    au < manifest ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 >
-    au < manifest ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 >
-    au < manifest ; exists ; 2002 ; Wind Engineering Volume 26 ; 26 >
-    au < manifest ; exists ; 2003 ; Wind Engineering Volume 27 ; 27 >
-    au < manifest ; exists ; 2004 ; Wind Engineering Volume 28 ; 28 >
-    au < manifest ; exists ; 2005 ; Wind Engineering Volume 29 ; 29 >
-    au < manifest ; exists ; 2006 ; Wind Engineering Volume 30 ; 30 >
-    au < manifest ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 >
-    au < manifest ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 >
-    au < manifest ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 >
+    au < crawling ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 >
+    au < crawling ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 >
+    au < crawling ; exists ; 2002 ; Wind Engineering Volume 26 ; 26 >
+    au < crawling ; exists ; 2003 ; Wind Engineering Volume 27 ; 27 >
+    au < crawling ; exists ; 2004 ; Wind Engineering Volume 28 ; 28 >
+    au < crawling ; exists ; 2005 ; Wind Engineering Volume 29 ; 29 >
+    au < crawling ; exists ; 2006 ; Wind Engineering Volume 30 ; 30 >
+    au < crawling ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 >
+    au < crawling ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 >
+    au < crawling ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 >
     au < doNotProcess ; doNotProcess ; 2010 ; Wind Engineering Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 >
     au < doNotProcess ; doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 >
