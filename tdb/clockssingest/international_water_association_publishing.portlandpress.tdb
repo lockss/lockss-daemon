@@ -6,7 +6,7 @@
     info[tester] = 8
   >
   
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.portlandpress.ClockssPortlandPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] >
   
     param[base_url] = http://www.iwaponline.com/
@@ -65,8 +65,8 @@
     au < doNotProcess ; exists ; 2010 ; Hydrology Research Volume 41 ; 041 >
     au < doNotProcess ; exists ; 2011 ; Hydrology Research Volume 42 ; 042 >
     au < doNotProcess ; exists ; 2012 ; Hydrology Research Volume 43 ; 043 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Hydrology Research Volume 44 ; 044 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Hydrology Research Volume 45 ; 045 >
+    au < down ; exists ; 2013 ; Hydrology Research Volume 44 ; 044 >
+    au < down ; exists ; 2014 ; Hydrology Research Volume 45 ; 045 >
     au < doNotProcess ; exists ; 2015 ; Hydrology Research Volume 46 ; 046 >
 
   }
@@ -84,8 +84,8 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Water and Climate Change Volume 1 ; 001 >
     au < doNotProcess ; exists ; 2011 ; Journal of Water and Climate Change Volume 2 ; 002 >
     au < doNotProcess ; exists ; 2012 ; Journal of Water and Climate Change Volume 3 ; 003 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water and Climate Change Volume 4 ; 004 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water and Climate Change Volume 5 ; 005 >
+    au < down ; exists ; 2013 ; Journal of Water and Climate Change Volume 4 ; 004 >
+    au < down ; exists ; 2014 ; Journal of Water and Climate Change Volume 5 ; 005 >
     au < doNotProcess ; exists ; 2015 ; Journal of Water and Climate Change Volume 6 ; 006 >
 
   }
@@ -110,8 +110,8 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Water and Health Volume 8 ; 008 >
     au < doNotProcess ; exists ; 2011 ; Journal of Water and Health Volume 9 ; 009 >
     au < doNotProcess ; exists ; 2012 ; Journal of Water and Health Volume 10 ; 010 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water and Health Volume 11 ; 011 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water and Health Volume 12 ; 012 >
+    au < finished ; crawling ; 2013 ; Journal of Water and Health Volume 11 ; 011 >
+    au < down ; exists ; 2014 ; Journal of Water and Health Volume 12 ; 012 >
     au < doNotProcess ; exists ; 2015 ; Journal of Water and Health Volume 13 ; 013 >
 
   }
@@ -128,8 +128,8 @@
 
     au < doNotProcess ; exists ; 2011 ; Journal of Water Reuse and Desalination Volume 1 ; 001 >
     au < doNotProcess ; exists ; 2012 ; Journal of Water Reuse and Desalination Volume 2 ; 002 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water Reuse and Desalination Volume 3 ; 003 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water Reuse and Desalination Volume 4 ; 004 >
+    au < down ; exists ; 2013 ; Journal of Water Reuse and Desalination Volume 3 ; 003 >
+    au < down ; exists ; 2014 ; Journal of Water Reuse and Desalination Volume 4 ; 004 >
     au < doNotProcess ; exists ; 2015 ; Journal of Water Reuse and Desalination Volume 5 ; 005 >
 
   }
@@ -146,8 +146,8 @@
 
     au < doNotProcess ; exists ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 001 >
     au < doNotProcess ; exists ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 002 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 003 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water, Sanitation and Hygiene for Development Volume 4 ; 004 >
+    au < down ; exists ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 003 >
+    au < down ; exists ; 2014 ; Journal of Water, Sanitation and Hygiene for Development Volume 4 ; 004 >
     au < doNotProcess ; exists ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 005 >
 
   }
@@ -177,8 +177,8 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Water Supply: Research and Technology - Aqua Volume 59 ; 059 >
     au < doNotProcess ; exists ; 2011 ; Journal of Water Supply: Research and Technology - Aqua Volume 60 ; 060 >
     au < doNotProcess ; exists ; 2012 ; Journal of Water Supply: Research and Technology - Aqua Volume 61 ; 061 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water Supply: Research and Technology - Aqua Volume 62 ; 062 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water Supply: Research and Technology - Aqua Volume 63 ; 063 >
+    au < down ; exists ; 2013 ; Journal of Water Supply: Research and Technology - Aqua Volume 62 ; 062 >
+    au < down ; exists ; 2014 ; Journal of Water Supply: Research and Technology - Aqua Volume 63 ; 063 >
     au < doNotProcess ; exists ; 2015 ; Journal of Water Supply: Research and Technology - Aqua Volume 64 ; 064 >
 
   }
@@ -207,8 +207,8 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Hydroinformatics Volume 12 ; 012 >
     au < doNotProcess ; exists ; 2011 ; Journal of Hydroinformatics Volume 13 ; 013 >
     au < doNotProcess ; exists ; 2012 ; Journal of Hydroinformatics Volume 14 ; 014 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Hydroinformatics Volume 15 ; 015 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hydroinformatics Volume 16 ; 016 >
+    au < finished ; crawling ; 2013 ; Journal of Hydroinformatics Volume 15 ; 015 >
+    au < down ; exists ; 2014 ; Journal of Hydroinformatics Volume 16 ; 016 >
     au < doNotProcess ; exists ; 2015 ; Journal of Hydroinformatics Volume 17 ; 017 >
 
   }
@@ -230,8 +230,8 @@
     au < doNotProcess ; exists ; 2010 ; Water Practice and Technology Volume 5 ; 005 >
     au < doNotProcess ; exists ; 2011 ; Water Practice and Technology Volume 6 ; 006 >
     au < doNotProcess ; exists ; 2012 ; Water Practice and Technology Volume 7 ; 007 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Water Practice and Technology Volume 8 ; 008 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Water Practice and Technology Volume 9 ; 009 >
+    au < down ; crawling ; 2013 ; Water Practice and Technology Volume 8 ; 008 >
+    au < down ; exists ; 2014 ; Water Practice and Technology Volume 9 ; 009 >
     au < doNotProcess ; exists ; 2015 ; Water Practice and Technology Volume 10 ; 010 >
 
   }
@@ -256,10 +256,10 @@
     au < doNotProcess ; exists ; 2010 ; Water Policy Volume 12 ; 012 >
     au < doNotProcess ; exists ; 2011 ; Water Policy Volume 13 ; 013 >
     au < doNotProcess ; exists ; 2012 ; Water Policy Volume 14 ; 014 >
-    au < doNotProcess ; exists ; 2013 ; Water Policy Volume 15 ; 01501 >
-    au < doNotProcess ; exists ; 2014 ; Water Policy Volume 16 ; 01601 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Water Policy Volume 15 ; 015 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Water Policy Volume 16 ; 016 >
+    au < superseded ; exists ; 2013 ; Water Policy Volume 15 [superseded] ; 01501 >
+    au < superseded ; exists ; 2014 ; Water Policy Volume 16 [superseded] ; 01601 >
+    au < down ; exists ; 2013 ; Water Policy Volume 15 ; 015 >
+    au < down ; exists ; 2014 ; Water Policy Volume 16 ; 016 >
     au < doNotProcess ; exists ; 2015 ; Water Policy Volume 17 ; 017 >
 
   }
@@ -276,8 +276,8 @@
 
     au < doNotProcess ; exists ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 046 >
     au < doNotProcess ; exists ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 047 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 048 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 049 >
+    au < down ; exists ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 048 >
+    au < down ; exists ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 049 >
     au < doNotProcess ; exists ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 050 >
 
   }
@@ -345,14 +345,14 @@
     au < doNotProcess ; exists ; 2011 ; Water Science and Technology Volume 64 ; 064 >
     au < doNotProcess ; exists ; 2012 ; Water Science and Technology Volume 65 ; 065 >
     au < doNotProcess ; exists ; 2012 ; Water Science and Technology Volume 66 ; 066 >
-    au < doNotProcess ; exists ; 2013 ; Water Science and Technology Volume 67 ; 06701 >
-    au < doNotProcess ; exists ; 2013 ; Water Science and Technology Volume 68 ; 06801 >
-    au < doNotProcess ; exists ; 2014 ; Water Science and Technology Volume 69 ; 06901 >
-    au < doNotProcess ; exists ; 2014 ; Water Science and Technology Volume 70 ; 07001 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Water Science and Technology Volume 67 ; 067 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Water Science and Technology Volume 68 ; 068 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Water Science and Technology Volume 69 ; 069 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Water Science and Technology Volume 70 ; 070 >
+    au < superseded ; exists ; 2013 ; Water Science and Technology Volume 67 [superseded] ; 06701 >
+    au < superseded ; exists ; 2013 ; Water Science and Technology Volume 68 [superseded] ; 06801 >
+    au < superseded ; exists ; 2014 ; Water Science and Technology Volume 69 [superseded] ; 06901 >
+    au < superseded ; exists ; 2014 ; Water Science and Technology Volume 70 [superseded] ; 07001 >
+    au < down ; crawling ; 2013 ; Water Science and Technology Volume 67 ; 067 >
+    au < down ; crawling ; 2013 ; Water Science and Technology Volume 68 ; 068 >
+    au < down ; exists ; 2014 ; Water Science and Technology Volume 69 ; 069 >
+    au < down ; exists ; 2014 ; Water Science and Technology Volume 70 ; 070 >
     au < doNotProcess ; exists ; 2015 ; Water Science and Technology Volume 71 ; 071 >
     au < doNotProcess ; exists ; 2015 ; Water Science and Technology Volume 72 ; 072 >
 
@@ -385,10 +385,10 @@
     au < doNotProcess ; exists ; 2010 ; Water Science and Technology: Water Supply Volume 10 ; 010 >
     au < doNotProcess ; exists ; 2011 ; Water Science and Technology: Water Supply Volume 11 ; 011 >
     au < doNotProcess ; exists ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 012 >
-    au < doNotProcess ; exists ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 01301 >
-    au < doNotProcess ; exists ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 01401 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 013 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 014 >
+    au < superseded ; exists ; 2013 ; Water Science and Technology: Water Supply Volume 13 [superseded] ; 01301 >
+    au < superseded ; exists ; 2014 ; Water Science and Technology: Water Supply Volume 14 [superseded] ; 01401 >
+    au < down ; crawling ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 013 >
+    au < down ; exists ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 014 >
     au < doNotProcess ; exists ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 015 >
 
   }

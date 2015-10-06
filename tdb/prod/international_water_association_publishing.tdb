@@ -4,7 +4,7 @@
     name = International Water Association Publishing
   >
   
-    plugin = org.lockss.plugin.portlandpress.PortlandPressPlugin
+    plugin = needs.plugin
     implicit < status ; year ; name ; param[volume_name] >
   
     param[base_url] = http://www.iwaponline.com/
