@@ -22,7 +22,7 @@
     
     plugin = org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/asce-released/
-    comment[proxy] = DIRECT
+    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; finished ; 2010 ; American Society of Civil Engineers Source Content 2010 ; 2010 >

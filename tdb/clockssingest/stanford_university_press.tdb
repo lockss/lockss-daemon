@@ -15,7 +15,7 @@
     
     plugin = org.lockss.plugin.clockss.stanforduniversitypress.ClockssSUPressOnix2BooksZipSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sup-released/
-    comment[proxy] = DIRECT
+    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; finished ; 2013 ; Stanford University Press Source Content 2013 ; 2013 >

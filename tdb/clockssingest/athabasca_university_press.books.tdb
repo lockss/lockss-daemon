@@ -14,7 +14,7 @@
 
     plugin = org.lockss.plugin.clockss.onixbooks.ClockssAthabascaUniversityOnix3SourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/athabascau-released/
-    comment[proxy] = DIRECT
+    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; finished ; 2015 ; Athabasca University Press Books Source Content 2015 ; 2015 >

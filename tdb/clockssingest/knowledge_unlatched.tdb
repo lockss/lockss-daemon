@@ -15,7 +15,7 @@
     provider = Knowledge Unlatched
     plugin = org.lockss.plugin.clockss.knowledge.ClockssKnowledgeUnlatchedBooksSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/knowledge-unlatched-released/
-    comment[proxy] = DIRECT
+    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; crawling ; 2014 ; Knowledge Unlatched Source Content 2014 ; 2014 >

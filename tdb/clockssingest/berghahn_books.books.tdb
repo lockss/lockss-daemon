@@ -15,7 +15,7 @@
     
     plugin = org.lockss.plugin.clockss.onixbooks.ClockssOnix3BooksSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/berghahn-released/
-    comment[proxy] = DIRECT
+    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; finished ; 2013 ; Berghahn Books Source Content 2013 ; 2013 >

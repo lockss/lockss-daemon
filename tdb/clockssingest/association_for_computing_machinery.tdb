@@ -15,7 +15,7 @@
     
     plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
-    comment[proxy] = DIRECT
+    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; frozen ; 2010 ; Association for Computing Machinery Source Content 2010 ; 2010 >
