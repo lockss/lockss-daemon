@@ -1353,7 +1353,7 @@
       param[journal_issn] = 2052-9538
       comment[journal_code] = bmcobes
 
-      au < crawling ; exists ; 2014 ; BMC Obesity Volume 1 ; 1 >
+      au < finished ; manifest ; 2014 ; BMC Obesity Volume 1 ; 1 >
       au < testing ; exists ; 2015 ; BMC Obesity Volume 2 ; 2 >
 
     }
@@ -4085,7 +4085,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
-      au < crawling ; exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
+      au < finished ; manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
       au < manifest ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }

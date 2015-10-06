@@ -3190,7 +3190,7 @@
       au < zapped ; finished ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
       au < zapped ; finished ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
       au < finished ; frozen ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; >
+      au < finished ; manifest ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; >
       au < finished ; crawling ; 2014-2015 ; Assessment for Effective Intervention Volume 40 ; 40 ; >
 
     }
@@ -6197,7 +6197,7 @@
       au < zapped ; finished ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 ; >
       au < finished ; finished ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 ; >
       au < zapped ; finished ; 2012-2013 ; Communication Disorders Quarterly Volume 34 ; 34 ; >
-      au < crawling ; exists ; 2013-2014 ; Communication Disorders Quarterly Volume 35 ; 35 ; >
+      au < finished ; manifest ; 2013-2014 ; Communication Disorders Quarterly Volume 35 ; 35 ; >
       au < finished ; crawling ; 2014-2015 ; Communication Disorders Quarterly Volume 36 ; 36 ; >
       au < manifest ; exists ; 2015-2016 ; Communication Disorders Quarterly Volume 37 ; 37 ; >
 
@@ -31540,7 +31540,7 @@
       au < finished ; crawling ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 ; >
       au < finished ; frozen ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 ; >
       au < crawling ; exists ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2014 ; Perspectives on Psychological Science Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2014 ; Perspectives on Psychological Science Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Perspectives on Psychological Science Volume 10 ; 10 ; >
 
     }
@@ -32820,7 +32820,7 @@
       au < finished ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; >
       au < finished ; finished ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; >
       au < finished ; crawling ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 227 ; 227 ; >
-      au < crawling ; exists ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; >
+      au < finished ; manifest ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; >
       au < crawling ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 229 ; 229 ; >
 
     }
@@ -34868,7 +34868,7 @@
       au < finished ; crawling ; 2011 ; RELC Journal Volume 42 ; 42 ; >
       au < finished ; finished ; 2012 ; RELC Journal Volume 43 ; 43 ; >
       au < crawling ; exists ; 2013 ; RELC Journal Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2014 ; RELC Journal Volume 45 ; 45 ; >
+      au < finished ; manifest ; 2014 ; RELC Journal Volume 45 ; 45 ; >
       au < crawling ; exists ; 2015 ; RELC Journal Volume 46 ; 46 ; >
 
     }
@@ -43206,7 +43206,7 @@
     param[base_url] = http://aip.sagepub.com/
 
     au < crawling ; exists ; 2013 ; AADE in Practice Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2014 ; AADE in Practice Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2014 ; AADE in Practice Volume 2 ; 2 ; >
     au < manifest ; exists ; 2015 ; AADE in Practice Volume 3 ; 3 ; >
 
     }

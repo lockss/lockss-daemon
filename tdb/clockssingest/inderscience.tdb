@@ -1729,7 +1729,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2012 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Computational Intelligence Studies Volume 2 ; 2 >
-      au < crawling ; exists ; 2014 ; International Journal of Computational Intelligence Studies Volume 3 ; 3 >
+      au < finished ; manifest ; 2014 ; International Journal of Computational Intelligence Studies Volume 3 ; 3 >
       au < crawling ; exists ; 2015 ; International Journal of Computational Intelligence Studies Volume 4 ; 4 >
 
     }
@@ -3655,7 +3655,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Heavy Vehicle Systems Volume 18 ; 18 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Heavy Vehicle Systems Volume 19 ; 19 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Heavy Vehicle Systems Volume 20 ; 20 >
-      au < crawling ; exists ; 2014 ; International Journal of Heavy Vehicle Systems Volume 21 ; 21 >
+      au < finished ; manifest ; 2014 ; International Journal of Heavy Vehicle Systems Volume 21 ; 21 >
       au < crawling ; exists ; 2015 ; International Journal of Heavy Vehicle Systems Volume 22 ; 22 >
 
     }
@@ -3890,7 +3890,7 @@
 
       param[journal_id] = ijied
 
-      au < crawling ; exists ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 >
+      au < finished ; manifest ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 >
       au < crawling ; exists ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 >
 
     }
@@ -7055,7 +7055,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Shipping and Transport Logistics Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Shipping and Transport Logistics Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Shipping and Transport Logistics Volume 5 ; 5 >
-      au < crawling ; exists ; 2014 ; International Journal of Shipping and Transport Logistics Volume 6 ; 6 >
+      au < finished ; manifest ; 2014 ; International Journal of Shipping and Transport Logistics Volume 6 ; 6 >
       au < crawling ; exists ; 2015 ; International Journal of Shipping and Transport Logistics Volume 7 ; 7 >
 
     }
@@ -7260,7 +7260,7 @@
       param[journal_id] = ijspacese
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Space Science and Engineering Volume 1 ; 1 >
-      au < crawling ; exists ; 2014 ; International Journal of Space Science and Engineering Volume 2 ; 2 >
+      au < finished ; manifest ; 2014 ; International Journal of Space Science and Engineering Volume 2 ; 2 >
       au < crawling ; exists ; 2015 ; International Journal of Space Science and Engineering Volume 3 ; 3 >
 
     }
@@ -7829,7 +7829,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Management Volume 62 ; 62 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Management Volume 63 ; 63 >
       au < finished ; finished ; 2014 ; International Journal of Technology Management Volume 64 ; 64 >
-      au < crawling ; exists ; 2014 ; International Journal of Technology Management Volume 65 ; 65 >
+      au < finished ; manifest ; 2014 ; International Journal of Technology Management Volume 65 ; 65 >
       au < frozen ; exists ; 2014 ; International Journal of Technology Management Volume 66 ; 66 >
       au < crawling ; exists ; 2015 ; International Journal of Technology Management Volume 67 ; 67 >
       au < crawling ; exists ; 2015 ; International Journal of Technology Management Volume 68 ; 68 >
@@ -8039,7 +8039,7 @@
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 >
-      au < crawling ; exists ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
+      au < finished ; manifest ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 >
 
     }

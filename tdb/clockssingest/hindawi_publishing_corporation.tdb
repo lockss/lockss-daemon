@@ -2964,7 +2964,7 @@
     au < manifest ; exists ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Genetics Research International Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -7494,7 +7494,7 @@
     au < manifest ; exists ; 2011 ; Multiple Sclerosis International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Multiple Sclerosis International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Multiple Sclerosis International Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Multiple Sclerosis International Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Multiple Sclerosis International Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Multiple Sclerosis International Volume 2015 ; 2015 ; 2015 >
     
   }
@@ -7772,7 +7772,7 @@
     param[journal_id] = physiology
 
     au < manifest ; exists ; 2013 ; Physiology Journal Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Physiology Journal Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Physiology Journal Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Physiology Journal Volume 2015 ; 2015 ; 2015 >
 
   }
@@ -8228,7 +8228,7 @@
     au < manifest ; exists ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 >
-    au < crawling ; exists ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 >
+    au < finished ; manifest ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 >
     au < crawling ; exists ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 >
 
   }
