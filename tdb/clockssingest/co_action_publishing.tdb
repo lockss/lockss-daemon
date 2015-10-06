@@ -111,7 +111,7 @@
       au < finished ; finished ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
       au < crawling ; exists ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; 2013 >
       au < finished ; crawling ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 ; 2014 >
-      au < testing ; exists ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 ; 2015 >
+      au < ready ; exists ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 ; 2015 >
 
 
     }
@@ -134,7 +134,7 @@
     au < finished ; finished ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
     au < notReady ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
     au < finished ; crawling ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
-    au < testing ; exists ; 2015 ; Education Inquiry Volume 6 ; 6 ; 2015 >
+    au < ready ; exists ; 2015 ; Education Inquiry Volume 6 ; 6 ; 2015 >
 
   }
 
@@ -180,7 +180,7 @@
     au < finished ; crawling ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; 2013 >
     au < finished ; finished ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; 2015 >
     
   }
     
@@ -196,7 +196,7 @@
     param[journal_id] = ecrj
 
     au < finished ; crawling ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
-    au < testing ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
+    au < ready ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
 
   }
 
@@ -223,6 +223,7 @@
       param[base_url] = http://www.ejpt.net/
       param[journal_id] = ejpt
       comment[0] = includes supplements
+      comment[error] = V6. 403 Forbidden to fetch author photo, stops crawl. http://www.ejpt.net/coaction/public/site/images/rensvandeschoot/photo_rens1.JPG   From page http://www.ejpt.net/index.php/ejpt/article/view/25216
 
       au < crawling ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
       au < crawling ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
@@ -254,7 +255,7 @@
     au < finished ; frozen ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
     au < crawling ; exists ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; 2013 >
     au < finished ; crawling ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; 2014 >
-    au < testing ; exists ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; 2015 >
+    au < ready ; exists ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; 2015 >
     
   }
 
@@ -278,7 +279,7 @@
     au < finished ; crawling ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 ; 2013 >
     au < finished ; crawling ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; 2015 >
   }
 
   {
@@ -324,7 +325,7 @@
     au < finished ; finished ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
     au < finished ; finished ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
     au < finished ; finished ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
-    au < testing ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
+    au < ready ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
   }
 
   {
@@ -349,7 +350,7 @@
     au < finished ; frozen ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
     au < finished ; crawling ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; 2013 >
     au < crawling ; exists ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; 2014 >
-    au < testing ; exists ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 ; 2015 >
+    au < ready ; exists ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 ; 2015 >
   }
 
   {
@@ -387,7 +388,7 @@
     au < finished ; crawling ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; 2015 >
 
   }
 
@@ -405,7 +406,7 @@
     au < finished ; finished ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
     au < finished ; crawling ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
     au < finished ; finished ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
 
   }
 
@@ -443,7 +444,7 @@
     au < finished ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
     au < finished ; finished ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 >
 
   }
 
@@ -468,7 +469,7 @@
     au < finished ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
     au < crawling ; exists ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; 2013 >
     au < finished ; finished ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 >
-    au < testing ; exists ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; 2015 >
+    au < ready ; exists ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; 2015 >
 
   }
 
@@ -593,7 +594,7 @@
     au < finished ; finished ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
     au < finished ; finished ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
     au < finished ; finished ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
-    au < testing ; exists ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; 2015 >
+    au < ready ; exists ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; 2015 >
   }
 
   {
@@ -612,7 +613,7 @@
     au < finished ; crawling ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
     au < finished ; finished ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
     au < finished ; finished ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
-    au < testing ; exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
+    au < ready ; exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
   }
 
   {
@@ -679,7 +680,7 @@
     au < finished ; crawling ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
     au < crawling ; exists ; 2013 ; Polar Research [including Supplements] Volume 32 ; 32 ; 2013 >
     au < finished ; crawling ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 ; 2014 >
-    au < testing ; exists ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; 2015 >
+    au < ready ; exists ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; 2015 >
 
   }
 
@@ -717,7 +718,7 @@
     au < finished ; crawling ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
     au < crawling ; exists ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; 2013 >
     au < finished ; crawling ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; 2014 >
-    au < testing ; exists ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; 2015 >
+    au < ready ; exists ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; 2015 >
 
   }
 
@@ -863,7 +864,7 @@
     au < finished ; frozen ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
     au < crawling ; exists ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; 2013 >
     au < finished ; crawling ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; 2014 >
-    au < testing ; exists ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; 2015 >
+    au < ready ; exists ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; 2015 >
 
   }
   
@@ -911,7 +912,7 @@
     au < finished ; frozen ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
     au < crawling ; exists ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; 2013 >
     au < finished ; finished ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; 2014 >
-    au < testing ; exists ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; 2015 >
+    au < ready ; exists ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; 2015 >
 
   }
 
