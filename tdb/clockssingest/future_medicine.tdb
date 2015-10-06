@@ -48,7 +48,7 @@
     au < finished ; crawling ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
     au < crawling ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
     au < crawling ; exists ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 >
-    au < ready ; exists ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 >
+    au < crawling ; exists ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 >
    
   }
 
@@ -64,7 +64,7 @@
     au < finished ; crawling ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
-    au < ready ; exists ; 2015 ; Breast Cancer Management Volume 4 ; 4 >
+    au < crawling ; exists ; 2015 ; Breast Cancer Management Volume 4 ; 4 >
   
   }
 
@@ -100,7 +100,7 @@
     au < frozen ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
     au < finished ; crawling ; 2014 ; Clinical Lipidology Volume 9 ; 9 >
-    au < ready ; exists ; 2015 ; Clinical Lipidology Volume 10 ; 10 >
+    au < crawling ; exists ; 2015 ; Clinical Lipidology Volume 10 ; 10 >
     
   }
 
@@ -154,7 +154,7 @@
     au < crawling ; exists ; 2012 ; CNS Oncology Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 >
     au < finished ; crawling ; 2014 ; CNS Oncology Volume 3 ; 3 >
-    au < ready ; exists ; 2015 ; CNS Oncology Volume 4 ; 4 >
+    au < crawling ; exists ; 2015 ; CNS Oncology Volume 4 ; 4 >
     
   }
 
@@ -170,7 +170,7 @@
     au < finished ; crawling ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
     au < finished ; crawling ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
-    au < ready ; exists ; 2015 ; Colorectal Cancer Volume 4 ; 4 >
+    au < crawling ; exists ; 2015 ; Colorectal Cancer Volume 4 ; 4 >
     
   }
 
@@ -188,7 +188,7 @@
     au < crawling ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 >
     au < finished ; crawling ; 2014 ; Diabetes Management Volume 4 ; 4 >
-    au < ready ; exists ; 2015 ; Diabetes Management Volume 5 ; 5 >
+    au < crawling ; exists ; 2015 ; Diabetes Management Volume 5 ; 5 >
   
   }
 
@@ -207,7 +207,7 @@
     au < crawling ; exists ; 2012 ; Epigenomics Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Epigenomics Volume 5 ; 5 >
     au < crawling ; exists ; 2014 ; Epigenomics Volume 6 ; 6 >
-    au < ready ; exists ; 2015 ; Epigenomics Volume 7 ; 7 >
+    au < crawling ; exists ; 2015 ; Epigenomics Volume 7 ; 7 >
      
   }
 
@@ -231,7 +231,7 @@
     au < crawling ; exists ; 2012 ; Future Cardiology Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Future Cardiology Volume 9 ; 9 >
     au < crawling ; exists ; 2014 ; Future Cardiology Volume 10 ; 10 >
-    au < ready ; exists ; 2015 ; Future Cardiology Volume 11 ; 11 >
+    au < crawling ; exists ; 2015 ; Future Cardiology Volume 11 ; 11 >
     
   }
 
@@ -253,7 +253,7 @@
     au < crawling ; exists ; 2012 ; Future Microbiology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Future Microbiology Volume 8 ; 8 >
     au < notReady ; exists ; 2014 ; Future Microbiology Volume 9 ; 9 >
-    au < ready ; exists ; 2015 ; Future Microbiology Volume 10 ; 10 >
+    au < crawling ; exists ; 2015 ; Future Microbiology Volume 10 ; 10 >
     
   }
 
