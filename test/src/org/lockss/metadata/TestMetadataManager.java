@@ -220,6 +220,7 @@ public class TestMetadataManager extends LockssTestCase {
     runTestGetIndexTypeDisplayString();
     runRemoveChildMetadataItemTest();
     runMetadataMonitorTest();
+    runPublicationIntervalTest();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -1483,6 +1484,51 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(0, metadataManager.getUnknownProviderAuIds().size());
   }
 
+  private void runPublicationIntervalTest() throws Exception {
+    Connection conn = dbManager.getConnection();
+    
+    // Get the existing AU key and plugin pairs.
+    String query = "select p." + PLUGIN_ID_COLUMN
+	+ ", " + AU_TABLE + "." + AU_KEY_COLUMN
+	+ " from " + AU_TABLE
+	+ ", " + PLUGIN_TABLE + " p"
+        + " where " + AU_TABLE + "." + PLUGIN_SEQ_COLUMN
+        + " = p." + PLUGIN_SEQ_COLUMN
+        + " order by p." + PLUGIN_ID_COLUMN
+	+ ", " + AU_TABLE + "." + AU_KEY_COLUMN;
+
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
+
+    while (resultSet.next()) {
+      String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+      String auKey = resultSet.getString(AU_KEY_COLUMN);
+
+      KeyPair interval =
+	  metadataManagerSql.findPublicationDateInterval(conn, pluginId, auKey);
+      String earliest = (String)interval.car;
+      String latest = (String)interval.cdr;
+
+      if (pluginId.endsWith("0")) {
+	assertEquals("2010-Q1", earliest);
+	assertEquals("2010-Q2", latest);
+      } else if (pluginId.endsWith("1")) {
+	assertEquals("2010-S2", earliest);
+	assertEquals("2010-S3", latest);
+      } else if (pluginId.endsWith("2")) {
+	assertEquals("1993", earliest);
+	assertEquals("1993", latest);
+      } else if (pluginId.endsWith("3")) {
+	assertEquals("1999", earliest);
+	assertEquals("1999", latest);
+      } else {
+	fail("Unexpected pluginId '" + pluginId + "'");
+      }
+    }
+
+    DbManager.safeRollbackAndClose(conn);
+  }
+
   public static class MySubTreeArticleIteratorFactory
       implements ArticleIteratorFactory {
     String pat;
@@ -1564,7 +1610,7 @@ public class TestMetadataManager extends LockssTestCase {
           md.put(MetadataField.FIELD_PUBLISHER,"Publisher 0");
           md.put(MetadataField.FIELD_ISSN,"0740-2783");
           md.put(MetadataField.FIELD_VOLUME,"XI");
-          if (articleNumber < 10) {
+          if (articleNumber % 2 == 0) {
             md.put(MetadataField.FIELD_ISSUE,"1st Quarter");
             md.put(MetadataField.FIELD_DATE,"2010-Q1");
             md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);

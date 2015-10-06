@@ -53,6 +53,7 @@ import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
+import org.lockss.util.KeyPair;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
@@ -1249,7 +1250,7 @@ public class MetadataManagerSql {
       + ", pr." + PUBLISHER_NAME_COLUMN;
 
   // Query to retrieve all the metadata items that have no name.
-  private static final String GET_UNNAMED_ITEMS_QUERY =	"select "
+  private static final String GET_UNNAMED_ITEMS_QUERY = "select "
       + "count(mi1." + MD_ITEM_SEQ_COLUMN + ") as \"col1\""
       + ", mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " as \"ts1\""
       + ", mit1." + TYPE_NAME_COLUMN + " as \"col2\""
@@ -1328,6 +1329,21 @@ public class MetadataManagerSql {
       + ", pl." + PLUGIN_ID_COLUMN
       + ", pr." + PUBLISHER_NAME_COLUMN
       + " order by \"col7\", \"col6\", \"col5\", \"ts2\", \"col3\", \"ts1\"";
+
+  // Query to find the publication date interval of an Archival Unit.
+  private static final String FIND_PUBLICATION_DATE_INTERVAL_QUERY = "select "
+      + "min(mi." + DATE_COLUMN + ") as earliest"
+      + ", max(mi." + DATE_COLUMN + ") as latest"
+      + " from " + MD_ITEM_TABLE + " mi"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + AU_TABLE
+      + ", " + PLUGIN_TABLE + " p"
+      + " where mi." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+      + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+      + " and " + AU_TABLE + "." + AU_KEY_COLUMN + " = ?"
+      + " and " + AU_TABLE + "." + PLUGIN_SEQ_COLUMN
+      + " = p." + PLUGIN_SEQ_COLUMN
+      + " and p." + PLUGIN_ID_COLUMN + " = ?";
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -6065,5 +6081,71 @@ public class MetadataManagerSql {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER
 	+ "unnamedItems.size() = " + unnamedItems.size());
     return unnamedItems;
+  }
+
+  /**
+   * Provides the earliest and latest publication dates of all the metadata
+   * items included in an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pluginId
+   *          A String with the plugin identifier.
+   * @param auKey
+   *          A String with the Archival Unit key.
+   * @return a KeyPair with the earliest and latest publication dates.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  KeyPair findPublicationDateInterval(Connection conn, String pluginId,
+      String auKey) throws DbException {
+    final String DEBUG_HEADER = "findPublicationDateInterval(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pluginId = " + pluginId);
+      log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+    }
+
+    KeyPair publicationInterval = null;
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = dbManager.prepareStatement(conn,
+	  FIND_PUBLICATION_DATE_INTERVAL_QUERY);
+      stmt.setString(1, auKey);
+      stmt.setString(2, pluginId);
+
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Get the single result. 
+      if (resultSet.next()) {
+	String earliest = resultSet.getString("earliest");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "earliest = " + earliest);
+
+	String latest = resultSet.getString("latest");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "latest = " + latest);
+
+	// Handle the case where the earliest value is wider than the latest.
+	if (latest.startsWith(earliest)) {
+	  latest = earliest;
+	}
+
+	publicationInterval = new KeyPair(earliest, latest);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot find publication date interval";
+      log.error(message, sqle);
+      log.error("SQL = '" + FIND_PUBLICATION_DATE_INTERVAL_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publicationInterval = '"
+	+ publicationInterval.car + "' - '" + publicationInterval.cdr + "'");
+
+    return publicationInterval;
   }
 }

@@ -64,6 +64,7 @@ import org.lockss.plugin.Plugin.Feature;
 import org.lockss.plugin.PluginManager;
 import org.lockss.scheduler.Schedule;
 import org.lockss.util.Constants;
+import org.lockss.util.KeyPair;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.PatternIntMap;
@@ -4117,5 +4118,84 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public Collection<Map<String, String>> getUnnamedItems() throws DbException {
     return getMetadataManagerSql().getUnnamedItems();
+  }
+
+  /**
+   * Provides the earliest and latest publication dates of all the metadata
+   * items included in an Archival Unit.
+   * 
+   * @param auId
+   *          A String with the AU identifier.
+   * @return a KeyPair with the earliest and latest publication dates.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public KeyPair findPublicationDateInterval(String auId) throws DbException {
+    final String DEBUG_HEADER = "findPublicationDateInterval(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    KeyPair publicationInterval = null;
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      if (conn == null) {
+	String message = "Cannot determine publication date interval for AU '"
+	    + auId + "' - Cannot connect to database";
+	log.error(message);
+	throw new DbException(message);
+      }
+
+      publicationInterval = findPublicationDateInterval(conn, auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publicationInterval = '"
+	  + publicationInterval.car + "' - '" + publicationInterval.cdr + "'");
+
+      DbManager.commitOrRollback(conn, log);
+    } catch (DbException dbe) {
+      String message = "Cannot determine publication date interval for AU '"
+	  + auId + "'";
+      log.error(message, dbe);
+      throw dbe;
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publicationInterval = '"
+	+ publicationInterval.car + "' - '" + publicationInterval.cdr + "'");
+
+    return publicationInterval;
+  }
+
+  /**
+   * Provides the earliest and latest publication dates of all the metadata
+   * items included in an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the AU identifier.
+   * @return a KeyPair with the earliest and latest publication dates.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public KeyPair findPublicationDateInterval(Connection conn, String auId)
+      throws DbException {
+    final String DEBUG_HEADER = "findPublicationDateInterval(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    String pluginId = PluginManager.pluginIdFromAuId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+    String auKey = PluginManager.auKeyFromAuId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+    KeyPair publicationInterval = getMetadataManagerSql()
+	.findPublicationDateInterval(conn, pluginId, auKey);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publicationInterval = '"
+	+ publicationInterval.car + "' - '" + publicationInterval.cdr + "'");
+
+    return publicationInterval;
   }
 }
