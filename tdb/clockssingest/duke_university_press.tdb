@@ -1413,9 +1413,10 @@
 
      >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/nmj/
+      param[base_url] = http://projecteuclid.org/euclid.nmj/
       param[journal_id] = nmj
       implicit < status ; status2 ; year ; name ; param[volume_name] >
+      #moving to Cambridge University Press in 2016
 
       au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 205 ; 205 >
       au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 206 ; 206 >
