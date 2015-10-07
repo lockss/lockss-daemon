@@ -132,7 +132,7 @@
       au < manifest ; exists ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 >
       au < manifest ; exists ; 2012 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 77 ; 77 >
       au < manifest ; exists ; 2013 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 78 ; 78 >
-      au < ready ; exists ; 2014 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 79 ; 79 >
+      au < crawling ; exists ; 2014 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 79 ; 79 >
       au < expected ; exists ; 2015 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 80 ; 80 >
 
     }
@@ -295,7 +295,7 @@
       au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 >
-      au < ready ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 >
+      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 >
 
     }
     
@@ -319,7 +319,7 @@
       au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 >
-      au < ready ; exists ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 >
+      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 >
 
     }
     
@@ -360,7 +360,7 @@
       au < exists ; exists ; 2012 ; RNA Volume 18 ; 18 >
       au < exists ; exists ; 2013 ; RNA Volume 19 ; 19 >
       au < crawling ; exists ; 2014 ; RNA Volume 20 ; 20 >
-      au < ready ; exists ; 2015 ; RNA Volume 21 ; 21 >
+      au < crawling ; exists ; 2015 ; RNA Volume 21 ; 21 >
 
     }
 

@@ -181,7 +181,7 @@
       au < crawling ; exists ; 2012 ; BMC Biotechnology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Biotechnology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Biotechnology Volume 14 ; 14 >
-      au < ready ; exists ; 2015 ; BMC Biotechnology Volume 15 ; 15 >
+      au < crawling ; exists ; 2015 ; BMC Biotechnology Volume 15 ; 15 >
 
     }
 
@@ -535,7 +535,7 @@
       au < crawling ; exists ; 2012 ; BMC Ecology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Ecology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Ecology Volume 14 ; 14 >
-      au < ready ; exists ; 2015 ; BMC Ecology Volume 15 ; 15 >
+      au < crawling ; exists ; 2015 ; BMC Ecology Volume 15 ; 15 >
 
     }
 
@@ -619,7 +619,7 @@
       au < crawling ; exists ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 >
-      au < ready ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 ; 15 >
+      au < crawling ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 ; 15 >
 
     }
 
@@ -982,7 +982,7 @@
       au < crawling ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; BMC Medical Genomics Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; BMC Medical Genomics Volume 7 ; 7 >
-      au < ready ; exists ; 2015 ; BMC Medical Genomics Volume 8 ; 8 >
+      au < crawling ; exists ; 2015 ; BMC Medical Genomics Volume 8 ; 8 >
 
     }
 
@@ -1038,7 +1038,7 @@
       au < crawling ; exists ; 2012 ; BMC Medical Informatics and Decision Making Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Medical Informatics and Decision Making Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; BMC Medical Informatics and Decision Making Volume 14 ; 14 >
-      au < ready ; exists ; 2015 ; BMC Medical Informatics and Decision Making Volume 15 ; 15 >
+      au < crawling ; exists ; 2015 ; BMC Medical Informatics and Decision Making Volume 15 ; 15 >
 
     }
 
@@ -1171,7 +1171,7 @@
       au < crawling ; exists ; 2012 ; BMC Molecular Biology Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Molecular Biology Volume 14 ; 14 >
       au < crawling ; exists ; 2014 ; BMC Molecular Biology Volume 15 ; 15 >
-      au < ready ; exists ; 2015 ; BMC Molecular Biology Volume 16 ; 16 >
+      au < crawling ; exists ; 2015 ; BMC Molecular Biology Volume 16 ; 16 >
 
     }
 
@@ -1354,7 +1354,7 @@
       comment[journal_code] = bmcobes
 
       au < finished ; manifest ; 2014 ; BMC Obesity Volume 1 ; 1 >
-      au < ready ; exists ; 2015 ; BMC Obesity Volume 2 ; 2 >
+      au < crawling ; exists ; 2015 ; BMC Obesity Volume 2 ; 2 >
 
     }
 
