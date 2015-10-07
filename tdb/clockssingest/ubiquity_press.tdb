@@ -27,8 +27,8 @@
        au < superseded ; exists ; 2008 ; Ancient Asia Volume 1 [to delete] ; 1 ; 2006 >
        au < superseded ; exists ; 2009-2011 ; Ancient Asia Volume 2 [to delete] ; 2 ; 2010 >
     }
-    au < manifest ; exists ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
-    au < manifest ; exists ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 >
+    au < exists ; exists ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
+    au < exists ; exists ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 >
     au < down ; exists ; 2012 ; Ancient Asia Volume 3 ; 3 ; 2012 >
     au < down ; exists ; 2013 ; Ancient Asia Volume 4 ; 4 ; 2013 >
     au < down ; exists ; 2014 ; Ancient Asia Volume 5 ; 5 ; 2014 >
@@ -51,9 +51,9 @@
        au < superseded ; exists ; 2008 ; Archaeology International Volume 12 [to delete] ; 12 ; 2008 >
        au < superseded ; exists ; 2009-2011 ; Archaeology International Volume 13/14 [to delete] ; 13/14 ; 2009 >
     }
-    au < manifest ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
-    au < manifest ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
-    au < manifest ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
+    au < exists ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
+    au < exists ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
+    au < exists ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
     au < down ; crawling ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
     au < down ; exists ; 2011-2012 ; Archaeology International Volume 15 [to delete] ; 15 ; 2011 >
     au < down ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2012 >
@@ -74,8 +74,8 @@
     
     comment[manifest] = manifest page at http://journal.eahn.org/gateway/lockss?year=2013  instead of http://journal.eahn.org/index.php/ah/gateway/lockss?year=2013 
 
-    au < notReady ; exists ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
-    au < notReady ; exists ; 2014 ; Architectural Histories Volume 2 ; 2 ; 2014 >
+    au < exists ; exists ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
+    au < exists ; exists ; 2014 ; Architectural Histories Volume 2 ; 2 ; 2014 >
     
   }
   
@@ -97,26 +97,26 @@
        au < superseded ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
     }
 
-    au < manifest ; exists ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
-    au < manifest ; exists ; 1992 ; The Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 >
-    au < manifest ; exists ; 1993 ; The Bulletin of the History of Archaeology Volume 3 ; 3 ; 1993 >
-    au < manifest ; exists ; 1994 ; The Bulletin of the History of Archaeology Volume 4 ; 4 ; 1994 >
-    au < manifest ; exists ; 1995 ; The Bulletin of the History of Archaeology Volume 5 ; 5 ; 1995 >
-    au < manifest ; exists ; 1996 ; The Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 >
-    au < manifest ; exists ; 1997 ; The Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 >
-    au < manifest ; exists ; 1998 ; The Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 >
-    au < manifest ; exists ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 >
-    au < manifest ; exists ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 >
-    au < manifest ; exists ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 >
-    au < manifest ; exists ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 >
-    au < manifest ; exists ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 >
-    au < manifest ; exists ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 >
-    au < manifest ; exists ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 >
-    au < manifest ; exists ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 >
-    au < manifest ; exists ; 2007 ; The Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 >
-    au < manifest ; exists ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 >
-    au < manifest ; exists ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
-    au < manifest ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
+    au < exists ; exists ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
+    au < exists ; exists ; 1992 ; The Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 >
+    au < exists ; exists ; 1993 ; The Bulletin of the History of Archaeology Volume 3 ; 3 ; 1993 >
+    au < exists ; exists ; 1994 ; The Bulletin of the History of Archaeology Volume 4 ; 4 ; 1994 >
+    au < exists ; exists ; 1995 ; The Bulletin of the History of Archaeology Volume 5 ; 5 ; 1995 >
+    au < exists ; exists ; 1996 ; The Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 >
+    au < exists ; exists ; 1997 ; The Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 >
+    au < exists ; exists ; 1998 ; The Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 >
+    au < exists ; exists ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 >
+    au < exists ; exists ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 >
+    au < exists ; exists ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 >
+    au < exists ; exists ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 >
+    au < exists ; exists ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 >
+    au < exists ; exists ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 >
+    au < exists ; exists ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 >
+    au < exists ; exists ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 >
+    au < exists ; exists ; 2007 ; The Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 >
+    au < exists ; exists ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 >
+    au < exists ; exists ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
+    au < exists ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
     au < down ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
     au < down ; exists ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
     au < down ; exists ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
@@ -172,14 +172,14 @@
        au < superseded ; exists ; 2012 ; Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
     }
     
-    au < manifest ; exists ; 1996 ; Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
-    au < manifest ; exists ; 1997 ; Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
-    au < manifest ; exists ; 1998 ; Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
-    au < manifest ; exists ; 1999 ; Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
-    au < manifest ; exists ; 2001 ; Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
-    au < manifest ; exists ; 2002 ; Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
-    au < finished ; crawling ; 2011 ; Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
-    au < finished ; crawling ; 2012 ; Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
+    au < exists ; exists ; 1996 ; Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
+    au < exists ; exists ; 1997 ; Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
+    au < exists ; exists ; 2001 ; Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
+    au < down ; crawling ; 2011 ; Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
+    au < down ; crawling ; 2012 ; Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
     au < down ; exists ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
     au < down ; exists ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
     au < expected ; exists ; 2015 ; Journal of Conservation and Museum Studies Volume 13 ; 13 ; 2015 >
@@ -235,8 +235,8 @@
     param[journal_id] = jeps
     comment[0] = no issue in 2011
 
-    au < manifest ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
-    au < manifest ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
+    au < exists ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
     au < down ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
     au < down ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
     au < down ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
@@ -368,27 +368,27 @@
        comment[zapped] = Bad base_url
         au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 [superseded] ; 21 ; 2011 >
     }
-    au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
-    au < manifest ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
-    au < manifest ; exists ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
-    au < manifest ; exists ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
-    au < manifest ; exists ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
-    au < manifest ; exists ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
-    au < manifest ; exists ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
-    au < manifest ; exists ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
-    au < manifest ; exists ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
-    au < manifest ; exists ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
-    au < manifest ; exists ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
-    au < manifest ; exists ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
-    au < manifest ; exists ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
-    au < manifest ; exists ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
-    au < manifest ; exists ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
-    au < manifest ; exists ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
-    au < manifest ; exists ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
-    au < manifest ; exists ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
-    au < manifest ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
-    au < manifest ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
-    au < finished ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+    au < exists ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
+    au < exists ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
+    au < exists ; exists ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
+    au < exists ; exists ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
+    au < exists ; exists ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
+    au < exists ; exists ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
+    au < exists ; exists ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
+    au < exists ; exists ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
+    au < exists ; exists ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
+    au < exists ; exists ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
+    au < exists ; exists ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
+    au < exists ; exists ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
+    au < exists ; exists ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
+    au < exists ; exists ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
+    au < exists ; exists ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
+    au < exists ; exists ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
+    au < exists ; exists ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
+    au < exists ; exists ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
+    au < exists ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
+    au < exists ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
+    au < down ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     au < down ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
     au < down ; exists ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
     au < down ; exists ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
@@ -429,10 +429,10 @@
        au < superseded ; down ; 2011 ; Present Pasts Volume 3 [to delete] ; 3 ; 2011 >
     }
     
-    au < manifest ; exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
-    au < manifest ; exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
-    au < finished ; crawling ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
-    au < finished ; crawling ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
+    au < exists ; exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
+    au < down ; crawling ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
+    au < down ; crawling ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
     au < down ; exists ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
     au < down ; exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
     au < expected ; exists ; 2015 ; Present Pasts Volume 7 ; 7 ; 2015 >
@@ -449,13 +449,13 @@
     param[base_url] = http://www.psychologicabelgica.com/
     param[journal_id] = pb
 
-    au < manifest ; exists ; 2004 ; Psychologica Belgica Volume 44 ; 44 ; 2004 >
-    au < manifest ; exists ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
-    au < manifest ; exists ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
-    au < manifest ; exists ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
-    au < manifest ; exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
-    au < manifest ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
-    au < manifest ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
+    au < exists ; exists ; 2004 ; Psychologica Belgica Volume 44 ; 44 ; 2004 >
+    au < exists ; exists ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
+    au < exists ; exists ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
+    au < exists ; exists ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
+    au < exists ; exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
+    au < exists ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
+    au < exists ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
     au < down ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
     au < down ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
     au < down ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
@@ -508,7 +508,7 @@
     param[base_url] = http://www.utrechtjournal.org/
     param[journal_id] = ujil
 
-    au < manifest ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 >
+    au < exists ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 >
     au < down ; exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 >
     au < down ; exists ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 >
     au < down ; exists ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 >
