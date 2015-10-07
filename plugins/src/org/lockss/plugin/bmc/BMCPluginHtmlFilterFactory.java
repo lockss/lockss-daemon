@@ -43,6 +43,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ListUtil;
 import org.lockss.util.ReaderInputStream;
 
 public class BMCPluginHtmlFilterFactory implements FilterFactory {
@@ -154,16 +155,30 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
     }
   };
   
+  // remove div in head as it confuses html node filter
+  private static final HtmlTagFilter.TagPair[] pairs = {
+      new HtmlTagFilter.TagPair("<div id=\"oas-", "</div>", true)
+  };
+  
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
+    
+    HtmlTagFilter tagfilter = HtmlTagFilter.makeNestedFilter(
+        FilterUtil.getReader(in, encoding), ListUtil.fromArray(pairs));
+    InputStream inb = new BufferedInputStream(new ReaderInputStream(tagfilter, encoding));
+    InputStream filtered =  new HtmlFilterInputStream(inb, encoding, 
         new HtmlCompoundTransform(
             HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xformAllTags));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     // added whitespace filter
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
+  
+  //new ReaderInputStream(reader),
+  // Reader reader = //HtmlTagFilter.makeNestedFilter(
+  //    FilterUtil.getReader(in, encoding); //, ListUtil.fromArray(pairs));
 
 }
