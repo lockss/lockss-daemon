@@ -337,7 +337,7 @@ while (my $line = <>) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
             } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
-                if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+                if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
                     if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
