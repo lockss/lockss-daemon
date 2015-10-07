@@ -464,7 +464,7 @@ while (my $line = <>) {
            ($plugin eq "EndocrineSocietyPlugin") || 
            ($plugin eq "FutureSciencePlugin") || 
            ($plugin eq "IndersciencePlugin") || 
-           ($plugin eq "JstorPlugin") || 
+#           ($plugin eq "JstorPlugin") || 
            ($plugin eq "LiverpoolJournalsPlugin") || 
            ($plugin eq "ManeyAtyponPlugin") || 
            ($plugin eq "MarkAllenPlugin") || 
@@ -513,7 +513,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssFutureSciencePlugin") || 
            ($plugin eq "ClockssEndocrineSocietyPlugin") || 
            ($plugin eq "ClockssIndersciencePlugin") || 
-           ($plugin eq "ClockssJstorPlugin") || 
+#           ($plugin eq "ClockssJstorPlugin") || 
            ($plugin eq "ClockssLiverpoolJournalsPlugin") || 
            ($plugin eq "ClockssManeyAtyponPlugin") || 
            ($plugin eq "ClockssMarkAllenPlugin") || 
@@ -710,32 +710,32 @@ while (my $line = <>) {
     }
     sleep(4);
         
-  } elsif ($plugin eq "ClockssPionPlugin") {
-    $url = sprintf("%scontents.cgi?journal=%s&amp;volume=%s", 
-      $param{base_url}, $param{short_journal_code}, $param{volume_name});
-    $man_url = uri_unescape($url);
-    #printf("\nUrl: %s\n", $man_url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/href=.abstract\.cgi\?id=/)) {
-        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
-          }
-        } 
-        $result = "Manifest";
-      } else {
-        $result = "--"
-      }
-    } else {
-      $result = "--"
-    }
-    sleep(4);
-        
+#  } elsif ($plugin eq "ClockssPionPlugin") {
+#    $url = sprintf("%scontents.cgi?journal=%s&amp;volume=%s", 
+#      $param{base_url}, $param{short_journal_code}, $param{volume_name});
+#    $man_url = uri_unescape($url);
+#    #printf("\nUrl: %s\n", $man_url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/href=.abstract\.cgi\?id=/)) {
+#        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+#          $vol_title = $1;
+#          $vol_title =~ s/\s*\n\s*/ /g;
+#          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#            $vol_title = "\"" . $vol_title . "\"";
+#          }
+#        } 
+#        $result = "Manifest";
+#      } else {
+#        $result = "--"
+#      }
+#    } else {
+#      $result = "--"
+#    }
+#    sleep(4);
+#        
   } elsif ($plugin eq "MaffeyPlugin") {
     $url = sprintf("%slockss.php?t=lockss&pa=issue&j_id=%s&year=%d", 
       $param{base_url}, $param{journal_id}, $param{year});
@@ -1171,14 +1171,14 @@ while (my $line = <>) {
 #    sleep(4);
 #                
   } elsif ($plugin eq "RSC2014Plugin") {
-    $url = sprintf("%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", 
+    $url = sprintf("%sen/journals/lockss?journalcode=%s&volume=%s&year=%d", 
       $param{base_url}, $param{journal_code}, $param{volume_name}, $param{year});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}&issue/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}/)) {
         if ($man_contents =~ m/<title>\s*RSC Journals \|(.*)\s*<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1196,14 +1196,14 @@ while (my $line = <>) {
     sleep(4);
                 
   } elsif ($plugin eq "ClockssRSC2014Plugin") {
-    $url = sprintf("%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", 
+    $url = sprintf("%sen/journals/lockss?journalcode=%s&volume=%s&year=%d", 
       $param{base_url}, $param{journal_code}, $param{volume_name}, $param{year});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}&issue/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}/)) {
         if ($man_contents =~ m/<title>\s*RSC Journals \|(.*)\s*<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
