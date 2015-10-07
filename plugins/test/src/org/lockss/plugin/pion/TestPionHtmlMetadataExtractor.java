@@ -153,7 +153,8 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
+    assertEquals("http://i-perception.perceptionweb.com/journal/I/article/i0386",
+        md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
@@ -187,8 +188,8 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals("10.1068/bad987", md.get(MetadataField.FIELD_DOI));
+    assertNull(md.get(MetadataField.FIELD_ACCESS_URL));
     assertNull(md.get(MetadataField.FIELD_VOLUME));
     assertNull(md.get(MetadataField.FIELD_ISSUE));
     assertNull(md.get(MetadataField.FIELD_START_PAGE));

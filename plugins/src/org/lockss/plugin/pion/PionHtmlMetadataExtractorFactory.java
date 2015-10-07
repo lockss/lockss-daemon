@@ -54,7 +54,6 @@ public class PionHtmlMetadataExtractorFactory
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
-	  log.debug("createFME was called");
     return new PionHtmlMetadataExtractor();
   }
 
@@ -98,35 +97,34 @@ public class PionHtmlMetadataExtractorFactory
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
       throws IOException {
-      log.debug("The MetadataExtractor attempted to extract metadata from cu: "+cu);
+      log.debug3("The MetadataExtractor attempted to extract metadata from cu: "+cu);
       ArticleMetadata am = 
           new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
+      String curl = cu.getUrl();
       if (am != null) {
         String url = am.get(MetadataField.FIELD_ACCESS_URL);
         if (url != null && !url.isEmpty()) {
           CachedUrl val = cu.getArchivalUnit().makeCachedUrl(url);
           if (!val.hasContent()) {
-            am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+            am.replace(MetadataField.FIELD_ACCESS_URL, curl);
           }
-        } else {
-          am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
         }
         am.cook(tagMap);
         if (!am.hasValidValue(MetadataField.FIELD_DOI)) {
           // fill in DOI from accessURL
           // http://www.envplan.com/abstract.cgi?id=a42117
           // -> doi=10.1068/a42117
-          String accessUrl = am.get(MetadataField.FIELD_ACCESS_URL);
-          if (accessUrl != null) {
-            int i = accessUrl.lastIndexOf("id=");
+          if (curl != null) {
+            int i = curl.lastIndexOf("id=");
             if (i > 0) {
-              String doi = "10.1068/" +accessUrl.substring(i+3);
+              String doi = "10.1068/" + curl.substring(i+3);
               am.put(MetadataField.FIELD_DOI, doi);
             } 
             else {
-              i = accessUrl.lastIndexOf('/');
+              log.debug3("Using alternate match for DOI :" + curl);
+              i = curl.lastIndexOf('/');
               if (i > 0) {
-                String doi = "10.1068/" + accessUrl.substring(i+1).replace(".pdf", "");
+                String doi = "10.1068/" + curl.substring(i+1).replace(".pdf", "");
                 am.put(MetadataField.FIELD_DOI, doi);
               }
             }
@@ -169,7 +167,7 @@ public class PionHtmlMetadataExtractorFactory
      
       if (issnBegin <= 0) 
       {
-    	  log.debug(line + " : no " + issnFlag);
+    	  log.debug3(line + " : no " + issnFlag);
 		return;
       }
       
@@ -177,7 +175,7 @@ public class PionHtmlMetadataExtractorFactory
       String issn = line.substring(issnBegin, issnBegin + 9);
       if (issn.length() < 9)
       {
-    	log.debug(line + " : too short");
+    	log.debug3(line + " : too short");
 		return;
       }		
       

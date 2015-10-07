@@ -102,19 +102,16 @@ public class PionRisMetadataExtractorFactory
           // http://www.envplan.com/abstract.cgi?id=a42117
           // -> doi=10.1068/a42117
           String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
-          if (accessUrl != null) {
-            int i = accessUrl.indexOf("id=");
-            if (i > 0) {
-              String doi = "10.1068/" +accessUrl.substring(i+3);
-              md.put(MetadataField.FIELD_DOI, doi);
-            }
-            else {
-              i = accessUrl.lastIndexOf('/');
-              if (i > 0) {
-                String doi = "10.1068/" + accessUrl.substring(i+1).replace(".pdf", "");
-                md.put(MetadataField.FIELD_DOI, doi);
-              }
-            }
+          if ((accessUrl == null) || !accessUrl.startsWith("http")) {
+            accessUrl = cu.getUrl();
+          }
+          int i = accessUrl.indexOf("id=");
+          if (i > 0) {
+            String doi = "10.1068/" +accessUrl.substring(i+3);
+            md.put(MetadataField.FIELD_DOI, doi);
+          }
+          else {
+            log.debug("accessUrl did not have id= " + accessUrl);
           }
         }
         completeMetadata(cu, md);
