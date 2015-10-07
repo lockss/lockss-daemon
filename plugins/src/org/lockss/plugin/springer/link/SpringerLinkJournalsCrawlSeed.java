@@ -132,7 +132,10 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
   protected List<String> convertDoisToUrls(List<String> dois) {
     List<String> urls = new ArrayList<String>();
     for(String doi:dois) {
-      String url = String.format("%sarticle/%s", baseUrl, encodeDoi(doi));
+      // Encode the doi, then revert the FIRST %2F (slash) back to a "/":
+      // 10.1023/A%3A1026541510549, not
+      // 10.1023%2FA%3A1026541510549
+      String url = String.format("%sarticle/%s", baseUrl, encodeDoi(doi).replaceFirst("%2F","/"));
       urls.add(url);
     }
     return urls;
