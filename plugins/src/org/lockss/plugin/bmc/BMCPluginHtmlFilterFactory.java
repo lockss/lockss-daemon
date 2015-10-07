@@ -177,8 +177,4 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
-  //new ReaderInputStream(reader),
-  // Reader reader = //HtmlTagFilter.makeNestedFilter(
-  //    FilterUtil.getReader(in, encoding); //, ListUtil.fromArray(pairs));
-
 }
