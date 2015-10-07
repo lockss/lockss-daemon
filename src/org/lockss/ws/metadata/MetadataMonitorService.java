@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataMonitorService.java 44257 2015-09-24 22:08:54Z fergaloy-sf $
+ * $Id: MetadataMonitorService.java 44384 2015-10-02 21:50:01Z fergaloy-sf $
  */
 
 /*
@@ -228,4 +228,16 @@ public interface MetadataMonitorService {
    */
   @WebMethod
   List<UnnamedItemWsResult> getUnnamedItems() throws LockssWebServicesFault;
+
+  /**
+   * Provides the proprietary identifiers for the publications in the database
+   * with multiple proprietary identifiers.
+   * 
+   * @return a List<KeyValueListPair> with the proprietary identifiers keyed by
+   *         the publication name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<KeyValueListPair> getPublicationsWithMultiplePids()
+      throws LockssWebServicesFault;
 }

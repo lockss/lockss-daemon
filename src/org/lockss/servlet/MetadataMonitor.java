@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataMonitor.java 44257 2015-09-24 22:08:54Z fergaloy-sf $
+ * $Id: MetadataMonitor.java 44382 2015-10-02 20:05:46Z fergaloy-sf $
  */
 
 /*
@@ -149,6 +149,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the metadata items that have no name";
   private static final String LIST_ITEMS_WITHOUT_NAME_HEADER =
       "Metadata Items Without Name";
+  private static final String LIST_MULTIPLE_PID_PUBLICATIONS_LINK =
+      "Publications With Multiple Proprietary Identifiers";
+  private static final String LIST_MULTIPLE_PID_PUBLICATIONS_ACTION =
+      "listMultiplePidPublications";
+  private static final String LIST_MULTIPLE_PID_PUBLICATIONS_HELP =
+      "Lists the names of publications with multiple proprietary identifiers";
+  private static final String LIST_MULTIPLE_PID_PUBLICATIONS_HEADER =
+      "Publications With Multiple Proprietary Identifiers";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -214,6 +222,8 @@ public class MetadataMonitor extends LockssServlet {
 	listMultiplePublisherAus();
       } else if (LIST_ITEMS_WITHOUT_NAME_ACTION.equals(action)) {
 	listMetadataItemsWithoutName();
+      } else if (LIST_MULTIPLE_PID_PUBLICATIONS_ACTION.equals(action)) {
+	listMultiplePidPublications();
       } else {
 	displayMainPage();
       }
@@ -314,6 +324,12 @@ public class MetadataMonitor extends LockssServlet {
 	LIST_ITEMS_WITHOUT_NAME_LINK,
 	ACTION + LIST_ITEMS_WITHOUT_NAME_ACTION,
 	LIST_ITEMS_WITHOUT_NAME_HELP));
+
+    // List the publications with multiple proprietary identifiers.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_MULTIPLE_PID_PUBLICATIONS_LINK,
+	ACTION + LIST_MULTIPLE_PID_PUBLICATIONS_ACTION,
+	LIST_MULTIPLE_PID_PUBLICATIONS_HELP));
 
     return list.iterator();
   }
@@ -1367,6 +1383,71 @@ public class MetadataMonitor extends LockssServlet {
     }
 
     makeTablePage(LIST_ITEMS_WITHOUT_NAME_HEADER, results);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the proprietary identifiers for the publications in the database
+   * with multiple proprietary identifiers.
+   * 
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listMultiplePidPublications() throws DbException, IOException {
+    final String DEBUG_HEADER = "listMultiplePidPublications(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the results table.
+    Table results = new Table(0, attributes);
+    results.newRow();
+    results.newCell("align=\"right\" class=\"colhead\"");
+    results.add("Publication Name");
+    results.newCell("align=\"left\" class=\"colhead\"");
+    results.add("Proprietary IDs");
+
+    // Get the proprietary identifiers linked to the publications.
+    Map<String, Collection<String>> publicationsPids =
+	mdManager.getPublicationsWithMultiplePids();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "publicationsPids.size() = " + publicationsPids.size());
+
+    // Check whether there are results to display.
+    if (publicationsPids.size() > 0) {
+      // Yes: Loop through the publications.
+      for (String publicationName : publicationsPids.keySet()) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	results.newRow();
+	results.newCell("align=\"right\"");
+	results.add(publicationName);
+	results.newCell("align=\"left\"");
+
+	Table pids = new Table(1, attributes);
+
+	for (String pid : publicationsPids.get(publicationName)) {
+	  pids.newRow();
+	  pids.newCell("align=\"left\"");
+	  pids.add(pid);
+	}
+
+	results.add(pids);
+      }
+    } else {
+      // No.
+      results.newRow();
+      results.newCell();
+      results.add("");
+      results.newRow();
+      results.newCell("colspan=\"2\" align=\"center\"");
+      results.add("No publications are linked to more than one proprietary "
+	  + "identifier");
+    }
+
+    makeTablePage(LIST_MULTIPLE_PID_PUBLICATIONS_HEADER, results);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

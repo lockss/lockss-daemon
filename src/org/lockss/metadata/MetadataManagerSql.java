@@ -1345,6 +1345,31 @@ public class MetadataManagerSql {
       + " = p." + PLUGIN_SEQ_COLUMN
       + " and p." + PLUGIN_ID_COLUMN + " = ?";
 
+  // Query to retrieve all the different proprietary identifiers of all the
+  // publications with multiple proprietary identifiers.
+  private static final String GET_PUBLICATIONS_MULTIPLE_PIDS_QUERY =
+      "select n." + NAME_COLUMN
+      + ", pi." + PROPRIETARY_ID_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE + " n"
+      + ", " + PROPRIETARY_ID_TABLE + " pi"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + " where n." + MD_ITEM_SEQ_COLUMN + " = pn." + MD_ITEM_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
+      + " and n." + NAME_TYPE_COLUMN + " = 'primary'"
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " in ("
+      + " select subq." + MD_ITEM_SEQ_COLUMN
+      + " from ("
+      + "select pn." + MD_ITEM_SEQ_COLUMN
+      + ", pi." + PROPRIETARY_ID_COLUMN
+      + " from " + PUBLICATION_TABLE + " pn"
+      + ", " + PROPRIETARY_ID_TABLE + " pi"
+      + " where pn." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
+      + ") as subq"
+      + " group by subq." + MD_ITEM_SEQ_COLUMN
+      + " having count(subq." + MD_ITEM_SEQ_COLUMN + ") > 1)"
+      + " order by n." + NAME_COLUMN
+      + ", pi." + PROPRIETARY_ID_COLUMN;
+
   private DbManager dbManager;
   private MetadataManager metadataManager;
 
@@ -6147,5 +6172,97 @@ public class MetadataManagerSql {
 	+ publicationInterval.car + "' - '" + publicationInterval.cdr + "'");
 
     return publicationInterval;
+  }
+
+  /**
+   * Provides the proprietary identifiers for the publications in the database
+   * with multiple proprietary identifiers.
+   * 
+   * @return a Map<String, Collection<String>> with the proprietary identifiers
+   *         keyed by the publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getPublicationsWithMultiplePids()
+      throws DbException {
+    final String DEBUG_HEADER = "getPublicationsWithMultiplePids(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> publicationsPids = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the publication proprietary identifiers.
+      publicationsPids = getPublicationsWithMultiplePids(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publicationsPids.size() = " + publicationsPids.size());
+    return publicationsPids;
+  }
+
+  /**
+   * Provides the proprietary identifiers for the publications in the database
+   * with multiple proprietary identifiers.
+   * 
+   * @return a Map<String, Collection<String>> with the proprietary identifiers
+   *         keyed by the publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Collection<String>> getPublicationsWithMultiplePids(
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPublicationsWithMultiplePids(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Map<String, Collection<String>> publicationsPids =
+	new TreeMap<String, Collection<String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String previousPublicationName = null;
+
+      // Get the publication proprietary identifiers.
+      stmt = dbManager.prepareStatement(conn,
+	  GET_PUBLICATIONS_MULTIPLE_PIDS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the publication proprietary identifiers. 
+      while (resultSet.next()) {
+	String publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	String proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	if (publicationName.equals(previousPublicationName)) {
+	  publicationsPids.get(publicationName).add(proprietaryId);
+	} else {
+	  Collection<String> publicationPids = new ArrayList<String>();
+	  publicationPids.add(proprietaryId);
+	  publicationsPids.put(publicationName, publicationPids);
+	  previousPublicationName = publicationName;
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the publications proprietary identifiers";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_PUBLICATIONS_MULTIPLE_PIDS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "publicationsPids.size() = " + publicationsPids.size());
+    return publicationsPids;
   }
 }

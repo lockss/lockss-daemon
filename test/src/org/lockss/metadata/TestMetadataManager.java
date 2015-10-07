@@ -1482,6 +1482,7 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(0, metadataManager.getBooksWithIssns().size());
     assertEquals(0, metadataManager.getPeriodicalsWithIsbns().size());
     assertEquals(0, metadataManager.getUnknownProviderAuIds().size());
+    assertEquals(0, metadataManager.getPublicationsWithMultiplePids().size());
   }
 
   private void runPublicationIntervalTest() throws Exception {

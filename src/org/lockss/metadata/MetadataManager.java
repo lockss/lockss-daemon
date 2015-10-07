@@ -4198,4 +4198,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     return publicationInterval;
   }
+
+  /**
+   * Provides the proprietary identifiers for the publications in the database
+   * with multiple proprietary identifiers.
+   * 
+   * @return a Map<String, Collection<String>> with the proprietary identifiers
+   *         keyed by the publication name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Collection<String>> getPublicationsWithMultiplePids()
+      throws DbException {
+    return getMetadataManagerSql().getPublicationsWithMultiplePids();
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataMonitorServiceImpl.java 44257 2015-09-24 22:08:54Z fergaloy-sf $
+ * $Id: MetadataMonitorServiceImpl.java 44384 2015-10-02 21:50:01Z fergaloy-sf $
  */
 
 /*
@@ -750,6 +750,56 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
       }
 
       return unnamedItems;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the proprietary identifiers for the publications in the database
+   * with multiple proprietary identifiers.
+   * 
+   * @return a List<KeyValueListPair> with the proprietary identifiers keyed by
+   *         the publication name.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<KeyValueListPair> getPublicationsWithMultiplePids()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getPublicationsWithMultiplePids(): ";
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+      List<KeyValueListPair> results = new ArrayList<KeyValueListPair>();
+
+      // Get the proprietary identifiers linked to the publications.
+      Map<String, Collection<String>> publicationsPids =
+	  getMetadataManager().getPublicationsWithMultiplePids();
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+  	+ "publicationsPids.size() = " + publicationsPids.size());
+
+      // Check whether there are results to display.
+      if (publicationsPids.size() > 0) {
+        // Yes: Loop through the publications.
+        for (String publicationName : publicationsPids.keySet()) {
+          if (log.isDebug3())
+            log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+          ArrayList<String> pids = new ArrayList<String>();
+
+          for (String pid : publicationsPids.get(publicationName)) {
+            if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pid = " + pid);
+            pids.add(pid);
+          }
+
+          results.add(new KeyValueListPair(publicationName, pids));
+        }
+      }
+
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "results.size() = " + results.size());
+      return results;
     } catch (Exception e) {
       throw new LockssWebServicesFault(e);
     }
