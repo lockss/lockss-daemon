@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,10 +37,8 @@ import java.io.*;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.*;
 
 public class PionCrawlHtmlFilterFactory implements FilterFactory {
 

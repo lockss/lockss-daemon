@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,6 @@ import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
-import org.lockss.extractor.FileMetadataExtractor.Emitter;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -114,7 +113,7 @@ public class PionRisMetadataExtractorFactory
         completeMetadata(cu, md);
         emitter.emitMetadata(cu, md);
       }
-    }       
+    }
   };
   
   public static void completeMetadata(CachedUrl cu, ArticleMetadata am) {

@@ -28,19 +28,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pion;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
 /**
@@ -121,30 +115,30 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
 		"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" +
 		"<html>\n" +
 		"<head>\n" +
-		"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"+
-	    "<meta name=\"citation_journal_title\" content=\"i-Perception\">"+
-	    "<meta name=\"citation_authors\" content=\"Simons, Daniel J; \">"+
-	    "<meta name=\"citation_title\" content=\"Monkeying around with the gorillas in our midst: familiarity with an inattentional-blindness task does not improve the detection of unexpected events\">"+
-	    "<meta name=\"citation_date\" content=\"2010\">"+
-	    "<meta name=\"citation_volume\" content=\"1\">"+
-	    "<meta name=\"citation_issue\" content=\"1\">"+
-	    "<meta name=\"citation_firstpage\" content=\"3\">"+
-	    "<meta name=\"citation_lastpage\" content=\"6\">"+
-	    "<meta name=\"citation_doi\" content=\"10.1068/i0386\">"+
+		"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n"+
+	    "<meta name=\"citation_journal_title\" content=\"i-Perception\">\n"+
+	    "<meta name=\"citation_authors\" content=\"Simons, Daniel J; \">\n"+
+	    "<meta name=\"citation_title\" content=\"Monkeying around with the gorillas in our midst: familiarity with an inattentional-blindness task does not improve the detection of unexpected events\">\n"+
+	    "<meta name=\"citation_date\" content=\"2010\">\n"+
+	    "<meta name=\"citation_volume\" content=\"1\">\n"+
+	    "<meta name=\"citation_issue\" content=\"1\">\n"+
+	    "<meta name=\"citation_firstpage\" content=\"3\">\n"+
+	    "<meta name=\"citation_lastpage\" content=\"6\">\n"+
+	    "<meta name=\"citation_doi\" content=\"10.1068/i0386\">\n"+
 	    "<meta name=\"citation_pdf_url\""+
-	    "content=\"http://i-perception.perceptionweb.com/fulltext/i01/i0386.pdf\">"+
+	    "content=\"http://i-perception.perceptionweb.com/fulltext/i01/i0386.pdf\">\n"+
 	    "<meta name=\"citation_abstract_html_url\""+
-	    "content=\"http://i-perception.perceptionweb.com/journal/I/article/i0386\">"+
+	    "content=\"http://i-perception.perceptionweb.com/journal/I/article/i0386\">\n"+
 	    "<!--<meta name=\"citation_fulltext_html_url\""+
-	    "content=\"\">  -->"+
+	    "content=\"\">  -->\n"+
 	    
-	    "<meta name=\"dc.Contributor\" content=\"Simons, Daniel J\">"+
-	    "<meta name=\"dc.Title\" content=\"Monkeying around with the gorillas in our midst: familiarity with an inattentional-blindness task does not improve the detection of unexpected events\">"+
-	    "<meta name=\"dc.Date\" content=\"2010\">"+
+	    "<meta name=\"dc.Contributor\" content=\"Simons, Daniel J\">\n"+
+	    "<meta name=\"dc.Title\" content=\"Monkeying around with the gorillas in our midst: familiarity with an inattentional-blindness task does not improve the detection of unexpected events\">\n"+
+	    "<meta name=\"dc.Date\" content=\"2010\">\n"+
 	    "<meta name=\"citation_publisher\" content=\"Pion Ltd\">";
 
   public void testExtractFromGoodContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
+    String url = "http://www.example.com/vol1/issue2/art3/i123";
     MockCachedUrl cu = new MockCachedUrl(url, hau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
@@ -155,10 +149,11 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
+    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
@@ -166,7 +161,7 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
   }
   
@@ -178,7 +173,7 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     goodISSN + " </div>\n";
 
   public void testExtractFromBadContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
+    String url = "http://www.example.com/vol1/issue2/art3/bad987";
     MockCachedUrl cu = new MockCachedUrl(url, hau);
     cu.setContent(badContent);
     cu.setContentSize(badContent.length());
@@ -188,11 +183,12 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertNull(md.get(MetadataField.FIELD_DOI));
+    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
+    assertEquals("10.1068/bad987", md.get(MetadataField.FIELD_DOI));
     assertNull(md.get(MetadataField.FIELD_VOLUME));
     assertNull(md.get(MetadataField.FIELD_ISSUE));
     assertNull(md.get(MetadataField.FIELD_START_PAGE));

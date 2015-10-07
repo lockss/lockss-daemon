@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pion;
 
-import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
@@ -81,13 +80,13 @@ public class PionIPerceptionArticleIteratorFactory
     public PionIPerceptionArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
-  	log.debug("PionIPerceptionArticleIterator constructor invoked");
+      log.debug("PionIPerceptionArticleIterator constructor invoked");
       journalCode = au.getConfiguration().get("journal_code");
       journalCodeLower = journalCode.toLowerCase();
       volumeName = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
       base_url2 = au.getConfiguration().get(ConfigParamDescr.BASE_URL2.getKey());
       base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-  	log.debug("PionIPerceptionArticleIterator created with volumeName: "+volumeName+base_url+base_url2+journalCode);
+      log.debug("PionIPerceptionArticleIterator created with volumeName: "+volumeName+base_url+base_url2+journalCode);
       this.pattern = Pattern.compile(String.format("%sjournal/%s/volume/%s/article/(%s[^/]+)", base_url, journalCode, volumeName, journalCode), Pattern.CASE_INSENSITIVE);
     }
     
@@ -97,8 +96,8 @@ public class PionIPerceptionArticleIteratorFactory
       String url = cu.getUrl();
       Matcher mat = pattern.matcher(url);
       if (mat.find()) {
-    	  log.debug("Pattern matched for previous cu, attempting to store as pdf");
-    	  return processAbstract(cu, mat);
+        log.debug("Pattern matched for previous cu, attempting to store as pdf");
+        return processAbstract(cu, mat);
       }
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
