@@ -118,10 +118,17 @@ public class PionHtmlMetadataExtractorFactory
           // -> doi=10.1068/a42117
           String accessUrl = am.get(MetadataField.FIELD_ACCESS_URL);
           if (accessUrl != null) {
-            int i = accessUrl.lastIndexOf('/');
+            int i = accessUrl.lastIndexOf("id=");
             if (i > 0) {
-              String doi = "10.1068/" +accessUrl.substring(i+1);
+              String doi = "10.1068/" +accessUrl.substring(i+3);
               am.put(MetadataField.FIELD_DOI, doi);
+            } 
+            else {
+              i = accessUrl.lastIndexOf('/');
+              if (i > 0) {
+                String doi = "10.1068/" + accessUrl.substring(i+1).replace(".pdf", "");
+                am.put(MetadataField.FIELD_DOI, doi);
+              }
             }
           }
         }

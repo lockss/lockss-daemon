@@ -108,6 +108,13 @@ public class PionRisMetadataExtractorFactory
               String doi = "10.1068/" +accessUrl.substring(i+3);
               md.put(MetadataField.FIELD_DOI, doi);
             }
+            else {
+              i = accessUrl.lastIndexOf('/');
+              if (i > 0) {
+                String doi = "10.1068/" + accessUrl.substring(i+1).replace(".pdf", "");
+                md.put(MetadataField.FIELD_DOI, doi);
+              }
+            }
           }
         }
         completeMetadata(cu, md);
