@@ -597,9 +597,9 @@
 
       au < ready ; exists ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 >
       au < crawling ; exists ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 >
-      au < testing ; exists ; 2015 ; Faraday Discussions Volume 179 ; 179 ; 2015 >
+      au < ready ; exists ; 2015 ; Faraday Discussions Volume 179 ; 179 ; 2015 >
       au < crawling ; exists ; 2015 ; Faraday Discussions Volume 180 ; 180 ; 2015 >
-      au < testing ; exists ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 >
+      au < ready ; exists ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 >
       au < testing ; exists ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 >
       au < testing ; exists ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 >
     }
@@ -668,7 +668,7 @@
       au < crawling ; exists ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 >
       au < finished ; crawling ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 >
-      au < testing ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 >
+      au < ready ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 >
 
     }
   }
@@ -751,7 +751,7 @@
       au < finished ; crawling ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
       au < finished ; crawling ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
       au < frozen ; exists ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
-      au < testing ; exists ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
+      au < ready ; exists ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
 
     }
   }
@@ -900,7 +900,7 @@
       au < crawling ; exists ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
       au < crawling ; exists ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
-      au < testing ; exists ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
+      au < ready ; exists ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
 
     }
   }
@@ -988,7 +988,7 @@
       au < crawling ; exists ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
       au < crawling ; exists ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
       au < frozen ; exists ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
-      au < testing ; exists ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
+      au < ready ; exists ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
 
     }
   }
@@ -1024,7 +1024,7 @@
       au < crawling ; exists ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
       au < crawling ; exists ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
       au < finished ; crawling ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 >
-      au < testing ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 >
+      au < ready ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 >
 
     }
   }
@@ -1369,7 +1369,7 @@
       au < crawling ; exists ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 >
       au < crawling ; exists ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 >
       au < crawling ; exists ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 >
-      au < testing ; exists ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 >
+      au < ready ; exists ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 >
 
     }
   }
@@ -1428,12 +1428,12 @@
       param[base_url2] = http://www.rsc.org/
       comment[notReady] = crawl completed with no substance
       
-      au < testing ; exists ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 >
+      au < ready ; exists ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 >
       au < crawling ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
       au < crawling ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
       au < crawling ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
       au < crawling ; exists ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 >
-      au < testing ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 >
+      au < ready ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 >
 
     }
   }

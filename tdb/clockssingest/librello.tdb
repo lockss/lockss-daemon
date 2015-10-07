@@ -21,9 +21,9 @@
       param[journal_id] = challengesinsustainability
       comment[issn] = missing
     
-      au < finished ; crawling ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 >
+      au < down ; crawling ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 >
       au < down ; exists ; 2014 ; Challenges in Sustainability Volume 2 ; 2 ; 2014 >
-      au < testing ; exists ; 2015 ; Challenges in Sustainability Volume 3 ; 3 ; 2015 >
+      au < exists ; exists ; 2015 ; Challenges in Sustainability Volume 3 ; 3 ; 2015 >
     
   }
 
@@ -37,7 +37,7 @@
 
       au < down ; exists ; 2013 ; Journal of Human Security Volume 9 ; 9 ; 2013 >
       au < down ; exists ; 2014 ; Journal of Human Security Volume 10 ; 10 ; 2014 >
-      au < testing ; exists ; 2015 ; Journal of Human Security Volume 11 ; 11 ; 2015 >
+      au < exists ; exists ; 2015 ; Journal of Human Security Volume 11 ; 11 ; 2015 >
 
   }
 
@@ -50,7 +50,7 @@
       param[journal_id] = organicfarming
 
       au < down ; exists ; 2014 ; Journal of Human Security Volume 1 ; 1 ; 2014 >
-      au < testing ; exists ; 2015 ; Journal of Human Security Volume 2 ; 2 ; 2015 >
+      au < exists ; exists ; 2015 ; Journal of Human Security Volume 2 ; 2 ; 2015 >
 
   }
 
