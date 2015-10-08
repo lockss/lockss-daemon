@@ -160,7 +160,7 @@
       au < released ; 2011 ; 1 ; ContraPonto Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; ContraPonto Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 3 ; ContraPonto Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 4 ; ContraPonto Volume 2014 ; 2014 ; >
+      au < ready ; 2014 ; 4 ; ContraPonto Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 5 ; ContraPonto Volume 2015 ; 2015 ; >
 
   }
@@ -520,9 +520,9 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = revistaich
 
-      au < testing ; 2012 ; 1 ; Revista do Instituto de Ciências Humanas Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 2 ; Revista do Instituto de Ciências Humanas Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 3 ; Revista do Instituto de Ciências Humanas Volume 2014 ; 2014 ; >
+      au < ready ; 2012 ; 1 ; Revista do Instituto de Ciências Humanas Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 2 ; Revista do Instituto de Ciências Humanas Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 3 ; Revista do Instituto de Ciências Humanas Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 4 ; Revista do Instituto de Ciências Humanas Volume 2015 ; 2015 ; >
 
   }
