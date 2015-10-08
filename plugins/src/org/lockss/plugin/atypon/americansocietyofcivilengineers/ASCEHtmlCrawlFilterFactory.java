@@ -53,6 +53,9 @@ public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
     // <div id="relatedContent"
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    // on a book landing page the titleInfo leads back to the series of books and overcrawling
+    // http://ascelibrary.org/doi/book/10.1061/9780784478820
+    HtmlNodeFilters.tagWithAttribute("div", "class", "box-inner titleInfo"),
   };
 
   @Override

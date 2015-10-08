@@ -68,7 +68,7 @@ extends BaseAtyponHtmlLinkExtractorFactory {
     private static Logger log = Logger.getLogger(AIAALinkTagLinkExtractor.class);
 
     protected Pattern SUBMIT_ARTICLES_PATTERN = Pattern.compile("javascript:submitArticles\\(([^,]+),([^,]+),*", Pattern.CASE_INSENSITIVE);
-    protected Pattern DOI_URL_PATTERN = Pattern.compile("^(https?://.*/)doi/(abs|full)/([.0-9]+)/([^/]+)$");
+    protected Pattern DOI_URL_PATTERN = Pattern.compile("^(https?://.*/)doi/(abs|full|book)/([.0-9]+)/([^/]+)$");
     private static final String CIT_FORMATS_ACTION = "action/showCitFormats";
 
     // nothing needed in the constructor - just call the parent
@@ -78,7 +78,7 @@ extends BaseAtyponHtmlLinkExtractorFactory {
 
     /*
      * Extending the way links are extracted by the Jsoup link extractor in a specific case:
-     *   - we are on an article page (full or abstract)
+     *   - we are on an article page (full or abstract) or a book landing page
      *   - we hit an anchor tag of the format:
      *         <a href="javascript:submitArticles(document.frmAs, 'action/showCitFormats', .....> </a>
      * In this case we create a link to the citations download page by pulling the DOI from the srcUrl

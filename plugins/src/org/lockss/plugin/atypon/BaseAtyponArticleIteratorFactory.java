@@ -76,6 +76,8 @@ ArticleMetadataExtractorFactory {
   private static final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2";
   private static final String PDF_REPLACEMENT = "/doi/pdf/$1/$2";
   private static final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
+  // in support of books, this is equivalent of full book abstract (landing page)
+  private static final String BOOK_REPLACEMENT = "/doi/book/$1/$2";
 
   // Things not an "article" but in support of an article
   private static final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
@@ -164,6 +166,10 @@ ArticleMetadataExtractorFactory {
           ArticleFiles.ROLE_ABSTRACT,
           ArticleFiles.ROLE_ARTICLE_METADATA);
     }
+
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
+    builder.addAspect(BOOK_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT);
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(REFERENCES_REPLACEMENT,

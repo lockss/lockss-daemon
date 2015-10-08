@@ -62,7 +62,7 @@
     support files
     images and data:<base>/na101v1/home/midtierbeta/publisher/fum/books/content/books/2011/9781780840000/ebo.11.115/production/images/large/figure1.jpeg
     exclude traps
-    book landing page: <base>/doi/book/<doi> - where doi seems to be <prefix>/<eisbn>
+    book landing page: <base>/doi/book/<doi> - where doi may (futuresciencegroup) or may not (aiaa) be the prefix + eisbn
     entire book pdf: <base>/doi/pdf/<doi>
     chapter pages: <base>/doi/(abs|full|pdf)/<doi>
     image access: <base>/action/showPopup?citid=citart1&id=ch1-f1.1&doi=10.2217%2Febo.11.115
@@ -73,7 +73,7 @@
       <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", base_url_host</string>
       <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_eisbn</string>   
       <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
-      <string>1,"^%sdoi/book/[0-9.]+/%s", base_url, book_eisbn</string>
+      <string>1,"^%sdoi/book/[0-9.]+/", base_url</string>
       <string>1,"^%sdoi/(abs|full|pdf)/[0-9.]+/", base_url</string>
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 

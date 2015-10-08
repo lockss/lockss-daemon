@@ -40,7 +40,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-public class LiverpoolJournalsHtmlCrawlFilterFactory 
+public class LiverpoolHtmlCrawlFilterFactory 
   extends BaseAtyponHtmlCrawlFilterFactory {
   
   static NodeFilter[] filters = new NodeFilter[] {
@@ -52,6 +52,10 @@ public class LiverpoolJournalsHtmlCrawlFilterFactory
     HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
     // abs - below abstract keywords
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    
+    //prev-next has upgraded
+    //class="widget literatumBookIssueNavigation none  widget-none  widget-compact-vertical"
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
                                           
     // abs - all right column except Citation Mgr (download citations)
     // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.2                                       

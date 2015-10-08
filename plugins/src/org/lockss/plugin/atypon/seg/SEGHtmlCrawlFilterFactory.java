@@ -79,6 +79,11 @@ public class SEGHtmlCrawlFilterFactory
     // http://library.seg.org/doi/full/10.1190
     //          /www.rockphysics.ethz.ch/downloads
     HtmlNodeFilters.tagWithAttribute("a", "class", "ext-link"),
+    //the top header section has a hidden set of menus that contain links to other
+    //books and because book dois are non-deterministic, we must filter out
+    //the header
+    // library.seg.org/doi/book/10.1190/1.9781560802952 - click on "geophysics" in header for example
+    HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
     
   };
 

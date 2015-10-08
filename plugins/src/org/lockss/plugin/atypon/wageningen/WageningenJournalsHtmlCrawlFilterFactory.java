@@ -52,6 +52,10 @@ public class WageningenJournalsHtmlCrawlFilterFactory
     HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
     // abs, ref - below <div class="response">, or after the main content
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    
+    // book landing page or toc now uses this for prev-next
+    //http://www.wageningenacademic.com/doi/book/10.3920/978-90-8686-700-4
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
     // abs, ref, suppl - all right column except Citation Mgr
     // http://www.wageningenacademic.com/doi/abs/10.3920/BM2012.0069
     HtmlNodeFilters.allExceptSubtree(

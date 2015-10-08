@@ -1,35 +1,35 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.liverpool.ClockssLiverpoolJournalsPlugin</string>
+    <string>org.lockss.plugin.atypon.liverpool.ClockssLiverpoolBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Liverpool University Press Journals Plugin (CLOCKSS)</string>
+    <string>Liverpool University Press Books Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.liverpool.LiverpoolJournalsPlugin</string>
+    <string>org.lockss.plugin.atypon.liverpool.LiverpoolBooksPlugin</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Liverpool University Press Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Liverpool University Press Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
     <entry>
     <string>au_start_url</string>
-    <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+    <string>"%sclockss/eisbn/%s", base_url, book_eisbn</string>
   </entry>
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
@@ -45,4 +45,4 @@
       </entry>
     </map>
   </entry>
-</map>
+ </map>

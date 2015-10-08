@@ -234,7 +234,7 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
   // Variant to test with Crawl Filter
   public static class TestCrawl extends TestLiverpoolJournalsHtmlFilterFactory {
     public void testFiltering() throws Exception {
-      variantFact = new LiverpoolJournalsHtmlCrawlFilterFactory();
+      variantFact = new LiverpoolHtmlCrawlFilterFactory();
       doFilterTest(lau, variantFact, withAriaRelevant, filteredStr); 
       doFilterTest(lau, variantFact, withRelatedContent, filteredStr);      
       doFilterTest(lau, variantFact, withArticleToolsExceptDownloadCitation1, 
@@ -245,7 +245,7 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
   // Variant to test with Hash Filter
   public static class TestHash extends TestLiverpoolJournalsHtmlFilterFactory {   
     public void testFiltering() throws Exception {
-      variantFact = new LiverpoolJournalsHtmlHashFilterFactory();
+      variantFact = new LiverpoolHtmlHashFilterFactory();
       doFilterTest(lau, variantFact, withPublicationToolContainer, 
                    publicationToolContainerFilteredStr);         
       doFilterTest(lau, variantFact, withArticleMetaDrop,
