@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>10</string>
+        <string>11</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -177,6 +177,6 @@
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>messages[.]js$</string>
+    <string>(/js/.+|messages)[.]js$</string>
   </entry>
 </map>
