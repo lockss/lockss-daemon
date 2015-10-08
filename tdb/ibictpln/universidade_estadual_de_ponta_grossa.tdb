@@ -324,11 +324,11 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = rlagg
 
-      au < releasing ; 2010 ; 1 ; Revista Latino-Americana de Geografia e Gênero Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 2 ; Revista Latino-Americana de Geografia e Gênero Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 3 ; Revista Latino-Americana de Geografia e Gênero Volume 2012 ; 2012 ; >
-      au < releasing ; 2013 ; 4 ; Revista Latino-Americana de Geografia e Gênero Volume 2013 ; 2013 ; >
-      au < releasing ; 2014 ; 5 ; Revista Latino-Americana de Geografia e Gênero Volume 2014 ; 2014 ; >
+      au < released ; 2010 ; 1 ; Revista Latino-Americana de Geografia e Gênero Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Revista Latino-Americana de Geografia e Gênero Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Revista Latino-Americana de Geografia e Gênero Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Revista Latino-Americana de Geografia e Gênero Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 5 ; Revista Latino-Americana de Geografia e Gênero Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 6 ; Revista Latino-Americana de Geografia e Gênero Volume 2015 ; 2015 ; >
 
   }
