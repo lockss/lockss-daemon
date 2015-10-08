@@ -39,6 +39,7 @@ package org.lockss.subscription;
 public class Publisher {
   private Long publisherNumber;
   private String publisherName;
+  private int auCount;
 
   public Long getPublisherNumber() {
     return publisherNumber;
@@ -52,10 +53,16 @@ public class Publisher {
   public void setPublisherName(String publisherName) {
     this.publisherName = publisherName;
   }
+  public int getAuCount() {
+    return auCount;
+  }
+  public void setAuCount(int auCount) {
+    this.auCount = auCount;
+  }
 
   @Override
   public String toString() {
-    return "Publisher [publisherNumber=" + publisherNumber + ", publisherName="
-	+ publisherName + "]";
+    return "[Publisher publisherNumber=" + publisherNumber
+	+ ", publisherName=" + publisherName + ", auCount=" + auCount + "]";
   }
 }

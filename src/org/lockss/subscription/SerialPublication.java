@@ -56,6 +56,7 @@ public class SerialPublication {
   private Set<String> proprietaryIds;
   private TdbTitle tdbTitle;
   private String uniqueName;
+  private int auCount = -1;
 
   public Long getPublicationNumber() {
     return publicationNumber;
@@ -240,10 +241,26 @@ public class SerialPublication {
     this.uniqueName = uniqueName;
   }
 
+  public int getAuCount() {
+    if (auCount < 0 && tdbTitle == null) {
+      getTdbTitle();
+
+      if (tdbTitle != null) {
+	auCount = tdbTitle.getTdbAuCount();
+      }
+    }
+
+    return auCount;
+  }
+
+  public void setAuCount(int auCount) {
+    this.auCount = auCount;
+  }
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder(
-	"SerialPublication [publicationNumber=").append(publicationNumber)
+	"[SerialPublication publicationNumber=").append(publicationNumber)
 	.append(", publicationName='").append(publicationName)
 	.append("', providerLid='").append(providerLid)
 	.append("', providerName='").append(providerName)
@@ -251,7 +268,8 @@ public class SerialPublication {
 	.append("', pIssn='").append(pIssn)
 	.append("', eIssn='").append(eIssn)
 	.append("', proprietaryIds='").append(proprietaryIds)
-	.append("', uniqueName='").append(uniqueName);
+	.append("', uniqueName='").append(uniqueName)
+	.append("', auCount=").append(auCount);
 
     if (tdbTitle != null) {
       sb.append("', ").append(tdbTitle.toString()).append("]");

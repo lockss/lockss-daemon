@@ -1566,16 +1566,21 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    publication.setProprietaryIds(new LinkedHashSet<String>(Arrays
 		.asList(title.getProprietaryIds())));
 	    publication.setTdbTitle(title);
+	    publication.setAuCount(title.getTdbAuCount());
 
 	    if (log.isDebug3())
 	      log.debug3(DEBUG_HEADER + "publication = " + publication);
 
 	    unsubscribedPublications.add(normalizePublication(publication));
 
-	    // Add this publication publisher to the list of publishers for
-	    // which no decision has been made.
+	    // Check whether this publisher is not already among the publishers
+	    // of undecided publications.
 	    if (!undecidedPublicationsPublishers.containsKey(publisherName)) {
+	      // Yes: Add this publication publisher to the list of publishers
+	      // for which no decision has been made.
 	      Publisher undecidedPublicationPublisher = new Publisher();
+	      undecidedPublicationPublisher
+	      .setAuCount(publisher.getTdbAuCount());
 	      undecidedPublicationPublisher.setPublisherName(publisherName);
 	      undecidedPublicationPublisher
 	      .setPublisherNumber(publisherNumber++);
