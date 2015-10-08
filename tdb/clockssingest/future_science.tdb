@@ -81,7 +81,7 @@
     au < crawling ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Clinical Investigation Volume 3 ; 3 >
     au < crawling ; exists ; 2014 ; Clinical Investigation Volume 4 ; 4 >
-    au < testing ; exists ; 2015 ; Clinical Investigation Volume 5 ; 5 >
+    au < ready ; exists ; 2015 ; Clinical Investigation Volume 5 ; 5 >
     
   }
 
@@ -114,7 +114,7 @@
     
     param[journal_id] = fso
 
-    au < testing ; exists ; 2015 ; Future Science OA Volume 1 ; 1 >
+    au < ready ; exists ; 2015 ; Future Science OA Volume 1 ; 1 >
     
   }
 
@@ -129,7 +129,7 @@
 
     au < crawling ; exists ; 2013 ; Pharmaceutical Bioprocessing Volume 1 ; 1 >
     au < crawling ; exists ; 2014 ; Pharmaceutical Bioprocessing Volume 2 ; 2 >
-    au < testing ; exists ; 2015 ; Pharmaceutical Bioprocessing Volume 3 ; 3 >
+    au < ready ; exists ; 2015 ; Pharmaceutical Bioprocessing Volume 3 ; 3 >
     
   }
 
@@ -145,7 +145,7 @@
     au < crawling ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 >
-    au < testing ; exists ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 >
+    au < ready ; exists ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 >
     
   }
 
