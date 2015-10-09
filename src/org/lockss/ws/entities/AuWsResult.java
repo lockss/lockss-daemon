@@ -74,6 +74,7 @@ public class AuWsResult {
   private List<UrlWsResult> urls;
   private List<String> substanceUrls;
   private List<String> articleUrls;
+  private String journalTitle;
 
   /**
    * Provides the Archival Unit identifier.
@@ -515,6 +516,18 @@ public class AuWsResult {
     this.articleUrls = articleUrls;
   }
 
+  /**
+   * Provides the Archival Unit journal title.
+   * 
+   * @return a String with the journal title.
+   */
+  public String getJournalTitle() {
+    return journalTitle;
+  }
+  public void setJournalTitle(String journalTitle) {
+    this.journalTitle = journalTitle;
+  }
+
   @Override
   public String toString() {
     return "[AuWsResult auId=" + auId + ", name=" + name + ", volume=" + volume
@@ -537,6 +550,7 @@ public class AuWsResult {
 	+ ", newContentCrawlUrls=" + newContentCrawlUrls + ", urlStems="
 	+ urlStems + ", isBulkContent=" + isBulkContent + ", peerAgreements="
 	+ peerAgreements + ", urls=" + urls + ", substanceUrls=" + substanceUrls
-	+ ", articleUrls=" + articleUrls + "]";
+	+ ", articleUrls=" + articleUrls + ", journalTitle=" + journalTitle
+	+ "]";
   }
 }

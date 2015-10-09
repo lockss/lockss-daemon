@@ -112,6 +112,7 @@ public class AuHelper {
   static String URLS = "urls";
   static String SUBSTANCE_URLS = "substanceUrls";
   static String ARTICLE_URLS = "articleUrls";
+  static String JOURNAL_TITLE = "journalTitle";
 
   /**
    * All the property names used in Archival Unit queries.
@@ -155,6 +156,7 @@ public class AuHelper {
       add(URLS);
       add(SUBSTANCE_URLS);
       add(ARTICLE_URLS);
+      add(JOURNAL_TITLE);
     }
   };
 
@@ -774,6 +776,16 @@ public class AuHelper {
       }
 
       builder.append("articleUrls=").append(result.getArticleUrls());
+    }
+
+    if (result.getJournalTitle() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("journalTitle=").append(result.getJournalTitle());
     }
 
     return builder.append("]").toString();

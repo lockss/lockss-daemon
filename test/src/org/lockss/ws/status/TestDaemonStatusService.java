@@ -29,7 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
 package org.lockss.ws.status;
 
 import java.io.IOException;
@@ -351,6 +350,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     assertEquals(1, au.getAuConfiguration().getDefParams().size());
     assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
     assertFalse(au.getIsBulkContent());
+    assertNull(au.getJournalTitle());
     au = aus.get(1);
     assertTrue(au.getAuId().startsWith(auIdStart));
     assertTrue(au.getName().startsWith("Simulated Content: /"));
@@ -361,6 +361,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     assertEquals(1, au.getAuConfiguration().getDefParams().size());
     assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
     assertFalse(au.getIsBulkContent());
+    assertNull(au.getJournalTitle());
 
     query = "select auId";
     aus = service.queryAus(query);

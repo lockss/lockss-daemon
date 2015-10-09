@@ -42,6 +42,7 @@ import org.lockss.crawler.CrawlManagerStatus;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.CrawlWindow;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -117,6 +118,7 @@ public class AuWsSource extends AuWsResult {
   private boolean urlsPopulated = false;
   private boolean substanceUrlsPopulated = false;
   private boolean articleUrlsPopulated = false;
+  private boolean journalTitlePopulated;
 
   private LockssDaemon theDaemon = null;
   private Plugin plugin = null;
@@ -836,6 +838,25 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getArticleUrls();
+  }
+
+  /**
+   * Provides the Archival Unit journal title.
+   * 
+   * @return a String with the journal title.
+   */
+  public String getJournalTitle() {
+    if (!journalTitlePopulated) {
+      TitleConfig tc = au.getTitleConfig();
+
+      if (tc != null) {
+	setJournalTitle(tc.getJournalTitle());
+      }
+
+      journalTitlePopulated = true;
+    }
+
+    return super.getJournalTitle();
   }
 
   /**
