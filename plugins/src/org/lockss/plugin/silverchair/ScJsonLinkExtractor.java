@@ -36,14 +36,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 public class ScJsonLinkExtractor implements LinkExtractor {
+  private static final Logger logger = Logger.getLogger(ScJsonLinkExtractor.class);
   /**
    * Parse content on InputStream,  call cb.foundUrl() for each URL found
    *
@@ -59,21 +63,30 @@ public class ScJsonLinkExtractor implements LinkExtractor {
                           final String encoding,
                           final String srcUrl, final Callback cb)
     throws IOException, PluginException {
+
+    String jsonString = StringUtil.fromInputStream(in);
+    logger.debug3("\njsonLinkExtraction from:"+ jsonString);
+
     String foundUrl = null;
     ObjectMapper mapper = new ObjectMapper();
-    JsonNode rootNode = mapper.readValue(in, JsonNode.class);
-    JsonNode dataNode= rootNode.get("d");
-    if(dataNode.isTextual()) { // this is JAMA
-    // {d :url}
-      foundUrl = dataNode.asText();
+    JsonNode rootNode = mapper.readValue(jsonString, JsonNode.class);
+    JsonNode dataNode = rootNode.path("d"); // never returns null
+    JsonNode pdfNode;
+    if(jsonString.contains("pdfUrl")) { // we're dealing with spie and need to fix it
+      pdfNode = mapper.readValue(dataNode.textValue().replaceAll("\\\\\"", "\""),
+                                        JsonNode.class);
+      pdfNode = pdfNode.path("pdfUrl");
     }
-    else if (dataNode.get("pdfUrl").isTextual()) { // this spie
-    // {d: {hasAccess: true, pdfUrl:url, itemIsFree:true} }
-      foundUrl = dataNode.get("pdfUrl").asText();
+    else {
+      pdfNode = dataNode;
     }
-    if(!StringUtil.isNullString(foundUrl)) {
-      URL baseUrl = new URL(srcUrl);
-      cb.foundLink(UrlUtil.resolveUri(baseUrl, foundUrl));
+    logger.debug3("pdfNode:" + pdfNode.textValue());
+    if(!pdfNode.isMissingNode()) {
+      foundUrl = pdfNode.textValue();
+      URL baseUrl = new URL(UrlUtil.getUrlPrefix(srcUrl));
+      String f_link = UrlUtil.resolveUri(baseUrl, foundUrl);
+      logger.debug2("found pdf link:" + f_link);
+      cb.foundLink(f_link);
     }
   }
 }

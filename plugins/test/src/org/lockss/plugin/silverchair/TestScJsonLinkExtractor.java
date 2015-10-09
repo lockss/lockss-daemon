@@ -40,9 +40,9 @@ import org.lockss.util.Constants;
 
 public class TestScJsonLinkExtractor extends LockssTestCase {
   public static final String MIME_TYPE_JSON = "application/json";
-
+  public static final String BASE_URL = "http://www.example.com";
   public void testJamaJsonLink() throws Exception {
-    String baseUrl = "http://www.example.com";
+    String srcUrl = "http://www.example.com/volume.aspx/SetPDFLinkBasedOnAccess";
     String input =
       "{\"d\":\"/pdfaccess.ashx?ResourceID=10507872&PDFSource=24\"}";
     LinkExtractor le = new ScJsonLinkExtractorFactory().createLinkExtractor
@@ -52,7 +52,7 @@ public class TestScJsonLinkExtractor extends LockssTestCase {
     le.extractUrls(null,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
-                   baseUrl,
+                   srcUrl,
                    new LinkExtractor.Callback() {
                      @Override
                      public void foundLink(String url) {
@@ -60,17 +60,19 @@ public class TestScJsonLinkExtractor extends LockssTestCase {
                      }
                    });
     assertEquals(1, emitted.size());
-    assertContains(emitted, baseUrl +
+    assertContains(emitted, BASE_URL +
                             "/pdfaccess.ashx?ResourceID=10507872&PDFSource=24");
 
   }
 
   public void testSpieJsonLink() throws Exception {
-    String baseUrl = "http://www.example.com";
+    String srcUrl = "http://www.example.com/volume.aspx/SetPDFLinkBasedOnAccess";
     String input =
       "{\"d\":{ \"hasAccess\": true," +
       " \"pdfUrl\": \"pdfaccess.ashx?ResourceID=9642913&PDFSource=24\"," +
       " \"itemIsFree\": \"False\"}}";
+    input = "{\"d\":\"{ \\\"hasAccess\\\": true, \\\"pdfUrl\\\": \\\"pdfaccess" +
+            ".ashx?ResourceID=8607807&PDFSource=24\\\", \\\"itemIsFree\\\": \\\"False\\\"}\"}";
     LinkExtractor le = new ScJsonLinkExtractorFactory().createLinkExtractor
                                                           (MIME_TYPE_JSON);
 
@@ -78,7 +80,7 @@ public class TestScJsonLinkExtractor extends LockssTestCase {
     le.extractUrls(null,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
-                   baseUrl,
+                   srcUrl,
                    new LinkExtractor.Callback() {
                      @Override
                      public void foundLink(String url) {
@@ -86,7 +88,7 @@ public class TestScJsonLinkExtractor extends LockssTestCase {
                      }
                    });
     assertEquals(1, emitted.size());
-    assertContains(emitted, baseUrl +
-                            "/pdfaccess.ashx?ResourceID=9642913&PDFSource=24");
+    assertContains(emitted, BASE_URL+
+                            "/pdfaccess.ashx?ResourceID=8607807&PDFSource=24");
   }
 }
