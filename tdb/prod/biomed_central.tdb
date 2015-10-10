@@ -1343,7 +1343,7 @@
       param[journal_issn] = 2052-9538
       attr[journal_code] = bmcobes
 
-      au < manifest ; 2014 ; BMC Obesity Volume 1 ; 1 >
+      au < ready ; 2014 ; BMC Obesity Volume 1 ; 1 >
       au < manifest ; 2015 ; BMC Obesity Volume 2 ; 2 >
 
     }
@@ -4103,7 +4103,7 @@
       au < manifest ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < released ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < manifest ; 2013 ; Gut Pathogens Volume 5 ; 5 >
-      au < manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
+      au < ready ; 2014 ; Gut Pathogens Volume 6 ; 6 >
       au < manifest ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }
