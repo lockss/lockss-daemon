@@ -49,7 +49,7 @@
     au < manifest ; exists ; 2012 ; 978-1-78084-130-4 ; 978-1-78084-060-4 ; 9781780840604 ; Emulsion-based Vaccine Adjuvants >
     au < manifest ; exists ; 2012 ; 978-1-78084-122-9 ; 978-1-78084-044-4 ; 9781780840444 ; Advances in the Treatment of B-Cell Chronic Lymphocytic Leukemia >
     au < crawling ; exists ; 2012 ; 978-1-78084-140-3 ; 978-1-78084-080-2 ; 9781780840802 ; Advances in Ovarian Cancer Management >
-    au < testing ; exists ; 2012 ; 978-1-78084-124-3 ; 978-1-78084-048-2 ; 9781780840482 ; Emerging Oral Medications for Multiple Sclerosis >
+    au < ready ; exists ; 2012 ; 978-1-78084-124-3 ; 978-1-78084-048-2 ; 9781780840482 ; Emerging Oral Medications for Multiple Sclerosis >
     au < crawling ; exists ; 2012 ; 978-1-78084-141-0 ; 978-1-78084-082-6 ; 9781780840826 ; Pneumococcal Conjugate Vaccines >
     au < crawling ; exists ; 2012 ; 978-1-78084-115-1 ; 978-1-78084-030-7 ; 9781780840307 ; Advances in Bone Metastasis Management >
     au < crawling ; exists ; 2012 ; 978-1-78084-143-4 ; 978-1-78084-086-4 ; 9781780840864 ; Advances in Acute Coronary Syndrome Management >
@@ -126,51 +126,51 @@
     au < manifest ; exists ; 2013 ; 978-1-78084-347-6 ; 978-1-78084-345-2 ; 9781780843452 ; Clinical Insights: HIV Prevention >
     au < manifest ; exists ; 2013 ; 978-1-78084-350-6 ; 978-1-78084-348-3 ; 9781780843483 ; Clinical Insights: Chronic Pain >
     au < manifest ; exists ; 2013 ; 978-1-78084-422-0 ; 978-1-78084-420-6 ; 9781780844206 ; Mucins and Cancer >
-    au < manifest ; exists ; 2014 ; 978-1-78084-326-1 ; 978-1-78084-324-7 ; 9781780843247 ; Complex General Surgical Oncology: a Case-Based Approach (Volume 2) >
-    au < manifest ; exists ; 2014 ; 978-1-78084-362-9 ; 978-1-78084-360-5 ; 9781780843605 ; Clinical Insights: Influenza Surveillance >
-    au < manifest ; exists ; 2014 ; 978-1-78084-383-4 ; 978-1-78084-381-0 ; 9781780843810 ; Clinical Insights: Tuberculosis Prevention >
-    au < manifest ; exists ; 2014 ; 978-1-78084-419-0 ; 978-1-78084-417-6 ; 9781780844176 ; Virus-like Particles in Vaccine Development >
-    au < manifest ; exists ; 2014 ; 978-1-78084-434-3 ; 978-1-78084-432-9 ; 9781780844329 ; Novel Insights into Pathophysiology, Diagnostics and Treatment of Myelodysplastic Syndromes >
-    au < manifest ; exists ; 2014 ; 978-1-78084-455-8 ; 978-1-78084-453-4 ; 9781780844534 ; Current Approaches to Deep Vein Thrombosis >
-    au < manifest ; exists ; 2014 ; 978-1-78084-278-3 ; 978-1-78084-276-9 ; 9781780842769 ; Personalized Management of Breast Cancer >
-    au < manifest ; exists ; 2014 ; 978-1-78084-281-3 ; 978-1-78084-279-0 ; 9781780842790 ; Best Practices in Neurological Care >
-    au < manifest ; exists ; 2014 ; 978-1-78084-314-8 ; 978-1-78084-312-4 ; 9781780843124 ; Novel Approaches in Immunoassays >
-    au < manifest ; exists ; 2014 ; 978-1-78084-338-4 ; 978-1-78084-336-0 ; 9781780843360 ; Clinical Insights: Probiotics, Prebiotics and Gut Health >
-    au < manifest ; exists ; 2014 ; 978-1-78084-365-0 ; 978-1-78084-363-6 ; 9781780843636 ; Clinical Insights: Obesity and Childhood >
-    au < manifest ; exists ; 2014 ; 978-1-78084-380-3 ; 978-1-78084-378-0 ; 9781780843780 ; Clinical Insights: Mental Health in Adolescents: Bipolar Disorder >
-    au < manifest ; exists ; 2014 ; 978-1-78084-386-5 ; 978-1-78084-384-1 ; 9781780843841 ; Clinical Insights: Dengue: Transmission, Diagnosis & Surveillance >
-    au < manifest ; exists ; 2014 ; 978-1-78084-389-6 ; 978-1-78084-387-2 ; 9781780843872 ; Clinical Insights: Neoadjuvant Therapy in Breast Cancer >
-    au < manifest ; exists ; 2014 ; 978-1-78084-437-4 ; 978-1-78084-435-0 ; 9781780844350 ; Novel Insights into the Pathophysiology and Treatment of Fibromyalgia >
-    au < manifest ; exists ; 2014 ; 978-1-78084-446-6 ; 978-1-78084-444-2 ; 9781780844442 ; Contemporary Approaches to Hemophilia >
-    au < manifest ; exists ; 2014 ; 978-1-78084-464-0 ; 978-1-78084-462-6 ; 9781780844626 ; CYP2D6: Genetics, Pharmacology and Clinical Relevance >
-    au < manifest ; exists ; 2014 ; 978-1-78084-467-1 ; 978-1-78084-465-7 ; 9781780844657 ; Current Approaches to Allergic Rhinitis >
-    au < manifest ; exists ; 2014 ; 978-1-78084-500-5 ; 978-1-78084-498-5 ; 9781780844985 ; Current Advances in Total Knee Arthroplasty >
-    au < manifest ; exists ; 2014 ; 978-1-78084-452-7 ; 978-1-78084-450-3 ; 9781780844503 ; Advances in Cervical Cancer Management >
-    au < manifest ; exists ; 2014 ; 978-1-78084-473-2 ; 978-1-78084-471-8 ; 9781780844718 ; Successful Techniques for Total Hip Replacement >
-    au < manifest ; exists ; 2014 ; 978-1-78084-482-4 ; 978-1-78084-480-0 ; 9781780844800 ; Advances in the Management of Primary and Secondary Insomnia >
-    au < manifest ; exists ; 2014 ; 978-1-78084-521-0 ; 978-1-78084-519-7 ; 9781780845197 ; Advances in Postoperative Pain Management >
-    au < manifest ; exists ; 2014 ; 978-1-78084-212-7 ; 978-1-78084-210-3 ; 9781780842103 ; Novel Insights into the Pathophysiology and Treatment of Obstructive Sleep Apnea >
-    au < manifest ; exists ; 2014 ; 978-1-78084-269-1 ; 978-1-78084-267-7 ; 9781780842677 ; Advances in the Management of Peritoneal Carcinomatosis >
-    au < testing ; exists ; 2014 ; 978-1-78084-530-2 ; 978-1-78084-528-9 ; 9781780845289 ; Deep Brain Stimulation: Technology and Applications (Volume 1) >
-    au < testing ; exists ; 2014 ; 978-1-78084-533-3 ; 978-1-78084-531-9 ; 9781780845319 ; Deep Brain Stimulation: Technology and Applications (Volume 2) >
-    au < testing ; exists ; 2014 ; 978-1-78084-395-7 ; 978-1-78084-393-3 ; 9781780843933 ; Clinical Insights: Nasopharyngeal Carcinoma: Management Strategies >
-    au < testing ; exists ; 2014 ; 978-1-78084-431-2 ; 978-1-78084-429-9 ; 9781780844299 ; Advances in Anaphylaxis Management >
-    au < testing ; exists ; 2014 ; 978-1-78084-440-4 ; 978-1-78084-438-1 ; 9781780844381 ; Current Approaches to Endometrial Cancer >
-    au < testing ; exists ; 2014 ; 978-1-78084-443-5 ; 978-1-78084-441-1 ; 9781780844411 ; Malaria Vaccine Development: Over 40 Years of Trials and Tribulations >
-    au < testing ; exists ; 2014 ; 978-1-78084-449-7 ; 978-1-78084-447-3 ; 9781780844473 ; Current Issues with Influenza Management >
-    au < testing ; exists ; 2014 ; 978-1-78084-476-3 ; 978-1-78084-474-9 ; 9781780844749 ; Current Issues in Age-Related Macular Degeneration >
-    au < testing ; exists ; 2014 ; 978-1-78084-542-5 ; 978-1-78084-540-1 ; 9781780845401 ; Current Approaches in Image-Guided Therapy >
-    au < testing ; exists ; 2014 ; 978-1-78084-377-3 ; 978-1-78084-375-9 ; 9781780843759 ; Clinical Insights: Antiangiogenesis in Cancer Therapy >
-    au < testing ; exists ; 2014 ; 978-1-78084-293-6 ; 978-1-78084-291-2 ; 9781780842912 ; Dystonia: a Clinician’s Guide to Diagnosis, Pathophysiology and Treatment >
-    au < testing ; exists ; 2014 ; 978-1-78084-371-1 ; 978-1-78084-369-8 ; 9781780843698 ; Clinical Insights: Staphylococcus aureus Antibiotic Resistance >
-    au < testing ; exists ; 2014 ; 978-1-78084-392-6 ; 978-1-78084-390-2 ; 9781780843902 ; Clinical Insights: Stereotactic Body Radiation Therapy: Spinal Metastasis  >
-    au < testing ; exists ; 2014 ; 978-1-78084-428-2 ; 978-1-78084-426-8 ; 9781780844268 ; Ocular Melanoma: Advances in Diagnostic and Therapeutic Strategies >
-    au < testing ; exists ; 2014 ; 978-1-78084-497-8 ; 978-1-78084-495-4 ; 9781780844954 ; Novel Insights into Urinary Tract Infections and their Management >
-    au < testing ; exists ; 2015 ; 978-1-78084-485-5 ; 978-1-78084-483-1 ; 9781780844831 ; Current Approach to Hyperammonemia >
-    au < testing ; exists ; 2015 ; 978-1-78084-551-7 ; 978-1-78084-549-4 ; 9781780845494 ; Novel Insights into Myelofibrosis Pathophysiology and Treatment >
-    au < testing ; exists ; 2015 ; 978-1-78084-515-9 ; 978-1-78084-513-5 ; 9781780845135 ; Contemporary Approaches to Idiopathic Pulmonary Fibrosis >
-    au < testing ; exists ; 2015 ; 978-1-78084-581-4 ; 978-1-78084-579-1 ; 9781780845791 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 1) >
-    au < testing ; exists ; 2015 ; 978-1-78084-584-5 ; 978-1-78084-582-1 ; 9781780845821 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 2) >
+    au < testing ; exists ; 2014 ; 978-1-78084-326-1 ; 978-1-78084-324-7 ; 9781780843247 ; Complex General Surgical Oncology: a Case-Based Approach (Volume 2) >
+    au < testing ; exists ; 2014 ; 978-1-78084-362-9 ; 978-1-78084-360-5 ; 9781780843605 ; Clinical Insights: Influenza Surveillance >
+    au < testing ; exists ; 2014 ; 978-1-78084-383-4 ; 978-1-78084-381-0 ; 9781780843810 ; Clinical Insights: Tuberculosis Prevention >
+    au < testing ; exists ; 2014 ; 978-1-78084-419-0 ; 978-1-78084-417-6 ; 9781780844176 ; Virus-like Particles in Vaccine Development >
+    au < testing ; exists ; 2014 ; 978-1-78084-434-3 ; 978-1-78084-432-9 ; 9781780844329 ; Novel Insights into Pathophysiology, Diagnostics and Treatment of Myelodysplastic Syndromes >
+    au < testing ; exists ; 2014 ; 978-1-78084-455-8 ; 978-1-78084-453-4 ; 9781780844534 ; Current Approaches to Deep Vein Thrombosis >
+    au < testing ; exists ; 2014 ; 978-1-78084-278-3 ; 978-1-78084-276-9 ; 9781780842769 ; Personalized Management of Breast Cancer >
+    au < testing ; exists ; 2014 ; 978-1-78084-281-3 ; 978-1-78084-279-0 ; 9781780842790 ; Best Practices in Neurological Care >
+    au < testing ; exists ; 2014 ; 978-1-78084-314-8 ; 978-1-78084-312-4 ; 9781780843124 ; Novel Approaches in Immunoassays >
+    au < testing ; exists ; 2014 ; 978-1-78084-338-4 ; 978-1-78084-336-0 ; 9781780843360 ; Clinical Insights: Probiotics, Prebiotics and Gut Health >
+    au < testing ; exists ; 2014 ; 978-1-78084-365-0 ; 978-1-78084-363-6 ; 9781780843636 ; Clinical Insights: Obesity and Childhood >
+    au < testing ; exists ; 2014 ; 978-1-78084-380-3 ; 978-1-78084-378-0 ; 9781780843780 ; Clinical Insights: Mental Health in Adolescents: Bipolar Disorder >
+    au < testing ; exists ; 2014 ; 978-1-78084-386-5 ; 978-1-78084-384-1 ; 9781780843841 ; Clinical Insights: Dengue: Transmission, Diagnosis & Surveillance >
+    au < testing ; exists ; 2014 ; 978-1-78084-389-6 ; 978-1-78084-387-2 ; 9781780843872 ; Clinical Insights: Neoadjuvant Therapy in Breast Cancer >
+    au < testing ; exists ; 2014 ; 978-1-78084-437-4 ; 978-1-78084-435-0 ; 9781780844350 ; Novel Insights into the Pathophysiology and Treatment of Fibromyalgia >
+    au < testing ; exists ; 2014 ; 978-1-78084-446-6 ; 978-1-78084-444-2 ; 9781780844442 ; Contemporary Approaches to Hemophilia >
+    au < testing ; exists ; 2014 ; 978-1-78084-464-0 ; 978-1-78084-462-6 ; 9781780844626 ; CYP2D6: Genetics, Pharmacology and Clinical Relevance >
+    au < testing ; exists ; 2014 ; 978-1-78084-467-1 ; 978-1-78084-465-7 ; 9781780844657 ; Current Approaches to Allergic Rhinitis >
+    au < testing ; exists ; 2014 ; 978-1-78084-500-5 ; 978-1-78084-498-5 ; 9781780844985 ; Current Advances in Total Knee Arthroplasty >
+    au < testing ; exists ; 2014 ; 978-1-78084-452-7 ; 978-1-78084-450-3 ; 9781780844503 ; Advances in Cervical Cancer Management >
+    au < testing ; exists ; 2014 ; 978-1-78084-473-2 ; 978-1-78084-471-8 ; 9781780844718 ; Successful Techniques for Total Hip Replacement >
+    au < testing ; exists ; 2014 ; 978-1-78084-482-4 ; 978-1-78084-480-0 ; 9781780844800 ; Advances in the Management of Primary and Secondary Insomnia >
+    au < testing ; exists ; 2014 ; 978-1-78084-521-0 ; 978-1-78084-519-7 ; 9781780845197 ; Advances in Postoperative Pain Management >
+    au < testing ; exists ; 2014 ; 978-1-78084-212-7 ; 978-1-78084-210-3 ; 9781780842103 ; Novel Insights into the Pathophysiology and Treatment of Obstructive Sleep Apnea >
+    au < testing ; exists ; 2014 ; 978-1-78084-269-1 ; 978-1-78084-267-7 ; 9781780842677 ; Advances in the Management of Peritoneal Carcinomatosis >
+    au < ready ; exists ; 2014 ; 978-1-78084-530-2 ; 978-1-78084-528-9 ; 9781780845289 ; Deep Brain Stimulation: Technology and Applications (Volume 1) >
+    au < ready ; exists ; 2014 ; 978-1-78084-533-3 ; 978-1-78084-531-9 ; 9781780845319 ; Deep Brain Stimulation: Technology and Applications (Volume 2) >
+    au < notReady ; exists ; 2014 ; 978-1-78084-395-7 ; 978-1-78084-393-3 ; 9781780843933 ; Clinical Insights: Nasopharyngeal Carcinoma: Management Strategies > #500 Error. Atypon fixing?
+    au < ready ; exists ; 2014 ; 978-1-78084-431-2 ; 978-1-78084-429-9 ; 9781780844299 ; Advances in Anaphylaxis Management >
+    au < ready ; exists ; 2014 ; 978-1-78084-440-4 ; 978-1-78084-438-1 ; 9781780844381 ; Current Approaches to Endometrial Cancer >
+    au < ready ; exists ; 2014 ; 978-1-78084-443-5 ; 978-1-78084-441-1 ; 9781780844411 ; Malaria Vaccine Development: Over 40 Years of Trials and Tribulations >
+    au < ready ; exists ; 2014 ; 978-1-78084-449-7 ; 978-1-78084-447-3 ; 9781780844473 ; Current Issues with Influenza Management >
+    au < ready ; exists ; 2014 ; 978-1-78084-476-3 ; 978-1-78084-474-9 ; 9781780844749 ; Current Issues in Age-Related Macular Degeneration >
+    au < ready ; exists ; 2014 ; 978-1-78084-542-5 ; 978-1-78084-540-1 ; 9781780845401 ; Current Approaches in Image-Guided Therapy >
+    au < ready ; exists ; 2014 ; 978-1-78084-377-3 ; 978-1-78084-375-9 ; 9781780843759 ; Clinical Insights: Antiangiogenesis in Cancer Therapy >
+    au < ready ; exists ; 2014 ; 978-1-78084-293-6 ; 978-1-78084-291-2 ; 9781780842912 ; Dystonia: a Clinician’s Guide to Diagnosis, Pathophysiology and Treatment >
+    au < ready ; exists ; 2014 ; 978-1-78084-371-1 ; 978-1-78084-369-8 ; 9781780843698 ; Clinical Insights: Staphylococcus aureus Antibiotic Resistance >
+    au < ready ; exists ; 2014 ; 978-1-78084-392-6 ; 978-1-78084-390-2 ; 9781780843902 ; Clinical Insights: Stereotactic Body Radiation Therapy: Spinal Metastasis  >
+    au < ready ; exists ; 2014 ; 978-1-78084-428-2 ; 978-1-78084-426-8 ; 9781780844268 ; Ocular Melanoma: Advances in Diagnostic and Therapeutic Strategies >
+    au < ready ; exists ; 2014 ; 978-1-78084-497-8 ; 978-1-78084-495-4 ; 9781780844954 ; Novel Insights into Urinary Tract Infections and their Management >
+    au < ready ; exists ; 2015 ; 978-1-78084-485-5 ; 978-1-78084-483-1 ; 9781780844831 ; Current Approach to Hyperammonemia >
+    au < ready ; exists ; 2015 ; 978-1-78084-551-7 ; 978-1-78084-549-4 ; 9781780845494 ; Novel Insights into Myelofibrosis Pathophysiology and Treatment >
+    au < ready ; exists ; 2015 ; 978-1-78084-515-9 ; 978-1-78084-513-5 ; 9781780845135 ; Contemporary Approaches to Idiopathic Pulmonary Fibrosis >
+    au < ready ; exists ; 2015 ; 978-1-78084-581-4 ; 978-1-78084-579-1 ; 9781780845791 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 1) >
+    au < ready ; exists ; 2015 ; 978-1-78084-584-5 ; 978-1-78084-582-1 ; 9781780845821 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 2) >
     au < expected ; exists ; 2015 ;  ;  ; XXX ; Advances in Bladder Cancer Management >
     au < expected ; exists ; 2015 ;  ;  ; YYY ; Critical Care in Traumatic Brain Injury >
     

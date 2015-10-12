@@ -2442,7 +2442,7 @@
       au < finished ; crawling ; 2012 ; BioData Mining Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; BioData Mining Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; BioData Mining Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; BioData Mining Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; BioData Mining Volume 8 ; 8 >
 
     }
 
@@ -2462,7 +2462,7 @@
       au < finished ; frozen ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
       au < crawling ; exists ; 2014 ; Biological Procedures Online Volume 16 ; 16 >
-      au < testing ; exists ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
+      au < ready ; exists ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
 
     }
 
@@ -2477,7 +2477,7 @@
       param[journal_issn] = 0717-6287
 
       au < frozen ; exists ; 2014 ; Biological Research Volume 47 ; 47 >
-      au < testing ; exists ; 2015 ; Biological Research Volume 48 ; 48 >
+      au < ready ; exists ; 2015 ; Biological Research Volume 48 ; 48 >
 
     }
 
@@ -2536,7 +2536,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < finished ; crawling ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
-      au < testing ; exists ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 ; 5 >
+      au < ready ; exists ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 ; 5 >
 
     }
 
@@ -2556,7 +2556,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < crawling ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
 
     }
 
@@ -2610,7 +2610,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2055-7124
 
       au < finished ; crawling ; 2014 ; Biomaterials Research Volume 18 ; 18 >
-      au < testing ; exists ; 2015 ; Biomaterials Research Volume 19 ; 19 >
+      au < ready ; exists ; 2015 ; Biomaterials Research Volume 19 ; 19 >
       
     }
 
@@ -2637,7 +2637,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; BioMedical engineering OnLine Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; BioMedical engineering OnLine Volume 13 ; 13 >
-      au < testing ; exists ; 2015 ; BioMedical engineering OnLine Volume 14 ; 14 >
+      au < ready ; exists ; 2015 ; BioMedical engineering OnLine Volume 14 ; 14 >
 
     }
 
@@ -2680,7 +2680,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
       
     }
 

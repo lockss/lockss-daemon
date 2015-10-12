@@ -35,7 +35,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
     au < doNotProcess ; doNotProcess ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
     au < crawling ; exists ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
-    au < testing ; exists ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
+    au < ready ; exists ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
 
   }
 
@@ -58,11 +58,11 @@
     au < manifest ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 >
     au < manifest ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 >
     au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 >
-    au < manifest ; exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
-    au < manifest ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
-    au < manifest ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
-    au < manifest ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
-    au < manifest ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
+    au < testing ; exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
+    au < testing ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
+    au < testing ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < testing ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < testing ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
 
   }
 
@@ -89,7 +89,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
     au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
     au < crawling ; exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
-    au < testing ; exists ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
+    au < ready ; exists ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
 
   }
 
@@ -134,7 +134,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
     au < doNotProcess ; doNotProcess ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
     au < crawling ; exists ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 >
-    au < testing ; exists ; 2015 ; Bulletin of Hispanic Studies Volume 92 ; 92 >
+    au < ready ; exists ; 2015 ; Bulletin of Hispanic Studies Volume 92 ; 92 >
 
   }
 
@@ -160,7 +160,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 >
     au < doNotProcess ; doNotProcess ; 2013 ; The Byron Journal Volume 41 ; 41 >
     au < crawling ; exists ; 2014 ; The Byron Journal Volume 42 ; 42 >
-    au < testing ; exists ; 2015 ; The Byron Journal Volume 43 ; 43 >
+    au < ready ; exists ; 2015 ; The Byron Journal Volume 43 ; 43 >
 
   }
 
@@ -238,13 +238,13 @@
     au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
     au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
     au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
-    au < manifest ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
-    au < manifest ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
-    au < manifest ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
-    au < manifest ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
+    au < testing ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < testing ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
+    au < testing ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < testing ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
     au < crawling ; exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < crawling ; exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
-    au < testing ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
+    au < ready ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
 
   }
 
@@ -284,7 +284,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
       au < doNotProcess ; doNotProcess ; 2013 ; Extrapolation Volume 54 ; 54 >
       au < crawling ; exists ; 2014 ; Extrapolation Volume 55 ; 55 >
-      au < testing ; exists ; 2015 ; Extrapolation Volume 56 ; 56 >
+      au < ready ; exists ; 2015 ; Extrapolation Volume 56 ; 56 >
 
   }
 
@@ -299,7 +299,7 @@
 
     param[journal_id] = franc
 
-    au < manifest ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
+    au < testing ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Francosphères Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Francosphères Volume 3 ; 3 >
     au < ready ; exists ; 2015 ; Francosphères Volume 4 ; 4 >
@@ -375,7 +375,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; International Development Planning Review Volume 34 ; 34 >
     au < doNotProcess ; doNotProcess ; 2013 ; International Development Planning Review Volume 35 ; 35 >
     au < crawling ; exists ; 2014 ; International Development Planning Review Volume 36 ; 36 >
-    au < testing ; exists ; 2015 ; International Development Planning Review Volume 37 ; 37 >
+    au < ready ; exists ; 2015 ; International Development Planning Review Volume 37 ; 37 >
 
   }
 
@@ -389,7 +389,7 @@
 
     param[journal_id] = hgr
 
-    au < testing ; exists ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
+    au < ready ; exists ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
 
   }
 
@@ -412,7 +412,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
     au < crawling ; exists ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
-    au < testing ; exists ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 >
+    au < ready ; exists ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 >
 
   }
 
@@ -452,12 +452,12 @@
 
     param[journal_id] = mb
 
-    au < manifest ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
-    au < manifest ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
-    au < manifest ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
+    au < testing ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
+    au < testing ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
+    au < testing ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
     au < crawling ; exists ; 2013 ; Modern Believing Volume 54 ; 54 >
     au < crawling ; exists ; 2014 ; Modern Believing Volume 55 ; 55 >
-    au < testing ; exists ; 2015 ; Modern Believing Volume 56 ; 56 >
+    au < ready ; exists ; 2015 ; Modern Believing Volume 56 ; 56 >
 
   }
 
@@ -496,7 +496,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
     au < doNotProcess ; doNotProcess ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
     au < crawling ; exists ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
-    au < testing ; exists ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 >
+    au < ready ; exists ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 >
 
   }
 
@@ -510,7 +510,7 @@
 
     param[journal_id] = newsletter
 
-    au < manifest ; exists ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
+    au < testing ; exists ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
     au < finished ; crawling ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
     au < crawling ; exists ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 >
     au < expected ; exists ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
@@ -558,22 +558,22 @@
 
     param[journal_id] = qs
 
-    au < manifest ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
-    au < manifest ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
-    au < manifest ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
-    au < manifest ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
-    au < manifest ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
-    au < manifest ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
-    au < manifest ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
-    au < manifest ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
-    au < manifest ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
-    au < manifest ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
-    au < manifest ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
+    au < testing ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
+    au < testing ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
+    au < testing ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
+    au < testing ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
+    au < testing ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
+    au < testing ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
+    au < testing ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
+    au < testing ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
+    au < testing ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
+    au < testing ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
+    au < testing ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
     au < crawling ; exists ; 2013 ; Quebec Studies Volume 55 ; 55 >
     au < crawling ; exists ; 2013 ; Quebec Studies Volume 56 ; 56 >
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 >
     au < finished ; crawling ; 2014 ; Quebec Studies Volume 58 ; 58 >
-    au < testing ; exists ; 2015 ; Quebec Studies Volume 59 ; 59 >
+    au < ready ; exists ; 2015 ; Quebec Studies Volume 59 ; 59 >
     au < expected ; exists ; 2015 ; Quebec Studies Volume 60 ; 60 >
 
   }
@@ -596,7 +596,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
-    au < testing ; exists ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
+    au < ready ; exists ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
 
   }
 
@@ -744,7 +744,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Town Planning Review Volume 83 ; 83 >
     au < doNotProcess ; doNotProcess ; 2013 ; Town Planning Review Volume 84 ; 84 >
     au < crawling ; exists ; 2014 ; Town Planning Review Volume 85 ; 85 >
-    au < testing ; exists ; 2015 ; Town Planning Review Volume 86 ; 86 >
+    au < ready ; exists ; 2015 ; Town Planning Review Volume 86 ; 86 >
 
   }
 
