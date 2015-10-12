@@ -1943,6 +1943,7 @@
 
       param[base_url] = http://www.actaneurocomms.org/
       param[journal_issn] = 2051-5960
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Acta Neuropathologica Communications Volume 2 ; 2 >
@@ -2350,6 +2351,7 @@
 
       param[base_url] = http://www.apfmj.com/
       param[journal_issn] = 1447-056X
+      comment[moved] = to new platform
 
       au < frozen ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
@@ -2410,6 +2412,7 @@
 
       param[base_url] = http://www.behavioralandbrainfunctions.com/
       param[journal_issn] = 1744-9081
+      comment[moved] = to new platform
 
       au < manifest ; exists ; 2005 ; Behavioral and Brain Functions Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Behavioral and Brain Functions Volume 2 ; 2 >
@@ -2421,7 +2424,7 @@
       au < finished ; crawling ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 >
       au < finished ; crawling ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 >
+      au < exists ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 >
 
     }
 
@@ -2570,10 +2573,11 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
 
       param[base_url] = http://www.biomarkerres.org/
       param[journal_issn] = 2050-7771
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 >
       au < finished ; crawling ; 2014 ; Biomarker Research Volume 2 ; 2 >
-      au < testing ; exists ; 2015 ; Biomarker Research Volume 3 ; 3 >
+      au < exists ; exists ; 2015 ; Biomarker Research Volume 3 ; 3 >
 
     }
 
@@ -2822,9 +2826,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.cgejournal.org/
       param[journal_issn] = 2052-6687
+      comment[moved] = to new platform
 
       au < finished ; crawling ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
-      au < manifest ; exists ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 >
+      au < exists ; exists ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 >
       
     }
 
@@ -2975,6 +2980,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.celldiv.com/
       param[journal_issn] = 1747-1028
+      comment[moved] = to new platform
 
       au < manifest ; exists ; 2006 ; Cell Division Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Cell Division Volume 2 ; 2 >
@@ -2985,7 +2991,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Cell Division Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Cell Division Volume 8 ; 8 >
       au < frozen ; exists ; 2014 ; Cell Division Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Cell Division Volume 10 ; 10 >
+      au < exists ; exists ; 2015 ; Cell Division Volume 10 ; 10 >
 
     }
 
@@ -3342,12 +3348,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.resource-allocation.com/
       param[journal_issn] = 1478-7547
+      comment[moved] = to new platform
 
-      au < manifest ; exists ; 2003 ; Cost Effectiveness and Resource Allocation Volume 1 ; 1 >
-      au < manifest ; exists ; 2004 ; Cost Effectiveness and Resource Allocation Volume 2 ; 2 >
-      au < manifest ; exists ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 >
-      au < manifest ; exists ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
-      au < manifest ; exists ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
+      au < exists ; exists ; 2003 ; Cost Effectiveness and Resource Allocation Volume 1 ; 1 >
+      au < exists ; exists ; 2004 ; Cost Effectiveness and Resource Allocation Volume 2 ; 2 >
+      au < exists ; exists ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 >
+      au < exists ; exists ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
+      au < exists ; exists ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
       au < crawling ; exists ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
       au < crawling ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
@@ -3355,7 +3362,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Cost Effectiveness and Resource Allocation Volume 12 ; 12 >
-      au < manifest ; exists ; 2015 ; Cost Effectiveness and Resource Allocation Volume 13 ; 13 >
+      au < exists ; exists ; 2015 ; Cost Effectiveness and Resource Allocation Volume 13 ; 13 >
 
     }
 
@@ -3563,11 +3570,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.environmentalevidencejournal.org/
       param[journal_issn] = 2047-2382
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Environmental Evidence Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; Environmental Evidence Volume 3 ; 3 >
-      au < manifest ; exists ; 2015 ; Environmental Evidence Volume 4 ; 4 >
+      au < exists ; exists ; 2015 ; Environmental Evidence Volume 4 ; 4 >
 
     }
 
@@ -3737,11 +3745,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       
       param[base_url] = http://www.ehoonline.org/
       param[journal_issn] = 2162-3619
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; Experimental Hematology & Oncology Volume 3 ; 3 >
-      au < manifest ; exists ; 2015 ; Experimental Hematology & Oncology Volume 4 ; 4 >
+      au < exists ; exists ; 2015 ; Experimental Hematology & Oncology Volume 4 ; 4 >
 
     }
 
@@ -4148,12 +4157,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.hqlo.com/
       param[journal_issn] = 1477-7525
+      comment[moved] = to new platform
 
-      au < manifest ; exists ; 2003 ; Health and Quality of Life Outcomes Volume 1 ; 1 >
-      au < manifest ; exists ; 2004 ; Health and Quality of Life Outcomes Volume 2 ; 2 >
-      au < manifest ; exists ; 2005 ; Health and Quality of Life Outcomes Volume 3 ; 3 >
-      au < manifest ; exists ; 2006 ; Health and Quality of Life Outcomes Volume 4 ; 4 >
-      au < manifest ; exists ; 2007 ; Health and Quality of Life Outcomes Volume 5 ; 5 >
+      au < exists ; exists ; 2003 ; Health and Quality of Life Outcomes Volume 1 ; 1 >
+      au < exists ; exists ; 2004 ; Health and Quality of Life Outcomes Volume 2 ; 2 >
+      au < exists ; exists ; 2005 ; Health and Quality of Life Outcomes Volume 3 ; 3 >
+      au < exists ; exists ; 2006 ; Health and Quality of Life Outcomes Volume 4 ; 4 >
+      au < exists ; exists ; 2007 ; Health and Quality of Life Outcomes Volume 5 ; 5 >
       au < crawling ; exists ; 2008 ; Health and Quality of Life Outcomes Volume 6 ; 6 >
       au < crawling ; exists ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Health and Quality of Life Outcomes Volume 8 ; 8 >
@@ -4161,7 +4171,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Health and Quality of Life Outcomes Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 >
-      au < manifest ; exists ; 2015 ; Health and Quality of Life Outcomes Volume 13 ; 13 >
+      au < exists ; exists ; 2015 ; Health and Quality of Life Outcomes Volume 13 ; 13 >
 
     }
 
@@ -4757,11 +4767,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.jasbsci.com/
       param[journal_issn] = 2049-1891
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2012 ; Journal of Animal Science and Biotechnology Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Journal of Animal Science and Biotechnology Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Journal of Animal Science and Biotechnology Volume 5 ; 5 >
-      au < manifest ; exists ; 2015 ; Journal of Animal Science and Biotechnology Volume 6 ; 6 >
+      au < exists ; exists ; 2015 ; Journal of Animal Science and Biotechnology Volume 6 ; 6 >
 
     }
 
@@ -5109,6 +5120,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.jeccr.com/
       param[journal_issn] = 1756-9966
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2008 ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
       au < crawling ; exists ; 2009 ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
@@ -5259,10 +5271,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.jmolecularpsychiatry.com/
       param[journal_issn] = 2049-9256
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Journal of Molecular Psychiatry Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; Journal of Molecular Psychiatry Volume 3 ; 3 >
+      au < exists ; exists ; 2015 ; Journal of Molecular Psychiatry Volume 3 ; 3 >
 
     }
 
@@ -5442,9 +5455,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.josr-online.com/
       param[journal_issn] = 1749-799X
+      comment[moved] = to new platform
 
-      au < manifest ; exists ; 2006 ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2007 ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
       au < crawling ; exists ; 2008 ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
@@ -5481,6 +5495,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.ovarianresearch.com/
       param[journal_issn] = 1757-2215
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
@@ -5489,7 +5504,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Journal of Ovarian Research Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; Journal of Ovarian Research Volume 8 ; 8 >
+      au < exists ; exists ; 2015 ; Journal of Ovarian Research Volume 8 ; 8 >
 
     }
 
@@ -5879,13 +5894,14 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.molecular-cancer.com/
       param[journal_issn] = 1476-4598
+      comment[moved] = to new platform
 
-      au < manifest ; exists ; 2002 ; Molecular Cancer Volume 1 ; 1 >
-      au < manifest ; exists ; 2003 ; Molecular Cancer Volume 2 ; 2 >
-      au < manifest ; exists ; 2004 ; Molecular Cancer Volume 3 ; 3 >
-      au < manifest ; exists ; 2005 ; Molecular Cancer Volume 4 ; 4 >
-      au < manifest ; exists ; 2006 ; Molecular Cancer Volume 5 ; 5 >
-      au < manifest ; exists ; 2007 ; Molecular Cancer Volume 6 ; 6 >
+      au < exists ; exists ; 2002 ; Molecular Cancer Volume 1 ; 1 >
+      au < exists ; exists ; 2003 ; Molecular Cancer Volume 2 ; 2 >
+      au < exists ; exists ; 2004 ; Molecular Cancer Volume 3 ; 3 >
+      au < exists ; exists ; 2005 ; Molecular Cancer Volume 4 ; 4 >
+      au < exists ; exists ; 2006 ; Molecular Cancer Volume 5 ; 5 >
+      au < exists ; exists ; 2007 ; Molecular Cancer Volume 6 ; 6 >
       au < crawling ; exists ; 2008 ; Molecular Cancer Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Molecular Cancer Volume 8 ; 8 >
       au < finished ; crawling ; 2010 ; Molecular Cancer Volume 9 ; 9 >
@@ -5893,7 +5909,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Molecular Cancer Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Molecular Cancer Volume 13 ; 13 >
-      au < manifest ; exists ; 2015 ; Molecular Cancer Volume 14 ; 14 >
+      au < exists ; exists ; 2015 ; Molecular Cancer Volume 14 ; 14 >
 
     }
 
@@ -6167,11 +6183,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.particleandfibretoxicology.com/
       param[journal_issn] = 1743-8977
+      comment[moved] = to new platform
 
-      au < manifest ; exists ; 2004 ; Particle and Fibre Toxicology Volume 1 ; 1 >
-      au < manifest ; exists ; 2005 ; Particle and Fibre Toxicology Volume 2 ; 2 >
-      au < manifest ; exists ; 2006 ; Particle and Fibre Toxicology Volume 3 ; 3 >
-      au < manifest ; exists ; 2007 ; Particle and Fibre Toxicology Volume 4 ; 4 >
+      au < exists ; exists ; 2004 ; Particle and Fibre Toxicology Volume 1 ; 1 >
+      au < exists ; exists ; 2005 ; Particle and Fibre Toxicology Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Particle and Fibre Toxicology Volume 3 ; 3 >
+      au < exists ; exists ; 2007 ; Particle and Fibre Toxicology Volume 4 ; 4 >
       au < crawling ; exists ; 2008 ; Particle and Fibre Toxicology Volume 5 ; 5 >
       au < crawling ; exists ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 >
       au < finished ; crawling ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 >
@@ -6179,7 +6196,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Particle and Fibre Toxicology Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Particle and Fibre Toxicology Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Particle and Fibre Toxicology Volume 11 ; 11 >
-      au < manifest ; exists ; 2015 ; Particle and Fibre Toxicology Volume 12 ; 12 >
+      au < exists ; exists ; 2015 ; Particle and Fibre Toxicology Volume 12 ; 12 >
 
     }
 
@@ -6380,11 +6397,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.regenmedres.com/
       param[journal_issn] = 2050-490X
-      comment[0] = no publication yet, 09/12/2013
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Regenerative Medicine Research Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; Regenerative Medicine Research Volume 3 ; 3 >
+      au < exists ; exists ; 2015 ; Regenerative Medicine Research Volume 3 ; 3 >
 
     }
 
@@ -6691,9 +6708,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.substanceabusepolicy.com/
       param[journal_issn] = 1747-597X
+      comment[moved] = to new platform
 
-      au < manifest ; exists ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
-      au < manifest ; exists ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
       au < crawling ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
@@ -6701,7 +6719,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Substance Abuse Treatment, Prevention, and Policy Volume 10 ; 10 >
+      au < exists ; exists ; 2015 ; Substance Abuse Treatment, Prevention, and Policy Volume 10 ; 10 >
 
     }
 
@@ -7049,10 +7067,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.aoemj.com/
       param[journal_issn] = 2052-4374
       comment[platform] = BioMedCentral
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2013 ; Annals of Occupational and Environmental Medicine Volume 25 ; 25 >
       au < crawling ; exists ; 2014 ; Annals of Occupational and Environmental Medicine Volume 26 ; 26 >
-      au < manifest ; exists ; 2015 ; Annals of Occupational and Environmental Medicine Volume 27 ; 27 >
+      au < exists ; exists ; 2015 ; Annals of Occupational and Environmental Medicine Volume 27 ; 27 >
 
     }
 
@@ -7127,9 +7146,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.climatechangeresponses.com/
       param[journal_issn] = 2053-7565
       comment[platform] = BioMedCentral
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2014 ; Climate Change Responses Volume 1 ; 1 >
-      au < manifest ; exists ; 2015 ; Climate Change Responses Volume 2 ; 2 >
+      au < exists ; exists ; 2015 ; Climate Change Responses Volume 2 ; 2 >
 
     }
 
@@ -7159,9 +7179,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.fungalbiolbiotech.com/
       param[journal_issn] = 2054-3085
       comment[platform] = BioMedCentral
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2014 ; Fungal Biology and Biotechnology Volume 1 ; 1 >
-      au < manifest ; exists ; 2015 ; Fungal Biology and Biotechnology Volume 2 ; 2 >
+      au < exists ; exists ; 2015 ; Fungal Biology and Biotechnology Volume 2 ; 2 >
 
     }
 
@@ -7175,9 +7196,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.gynoncrp.com/
       param[journal_issn] = 2053-6844
       comment[platform] = BioMedCentral
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2014 ; Gynecologic Oncology Research and Practice Volume 1 ; 1 >
-      au < manifest ; exists ; 2015 ; Gynecologic Oncology Research and Practice Volume 2 ; 2 >
+      au < exists ; exists ; 2015 ; Gynecologic Oncology Research and Practice Volume 2 ; 2 >
 
     }
 
@@ -7191,9 +7213,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.clinicalmovementdisorders.com/
       param[journal_issn] = 2054-7072
       comment[platform] = BioMedCentral
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2014 ; Journal of Clinical Movement Disorders Volume 1 ; 1 >
-      au < manifest ; exists ; 2015 ; Journal of Clinical Movement Disorders Volume 2 ; 2 >
+      au < exists ; exists ; 2015 ; Journal of Clinical Movement Disorders Volume 2 ; 2 >
 
     }
 
@@ -7207,9 +7230,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.jcompassionatehc.com/
       param[journal_issn] = 2053-2393
       comment[platform] = BioMedCentral
+      comment[moved] = to new platform
 
       au < crawling ; exists ; 2014 ; Journal of Compassionate Health Care Volume 1 ; 1 >
-      au < manifest ; exists ; 2015 ; Journal of Compassionate Health Care Volume 2 ; 2 >
+      au < exists ; exists ; 2015 ; Journal of Compassionate Health Care Volume 2 ; 2 >
 
     }
 
