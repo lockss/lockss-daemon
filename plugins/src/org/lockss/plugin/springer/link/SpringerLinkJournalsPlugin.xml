@@ -82,7 +82,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"SpringerLink Journals Plugin, Base URL %s, Download URL %s, ISSN %s, Volume %s", base_url, download_url, journal_eissn, volume_name</string>
+    <string>"SpringerLink Journals Plugin, Base URL %s, Download URL %s, eISSN %s, Volume %s", base_url, download_url, journal_eissn, volume_name</string>
   </entry>
   <!-- overrides parents start url, but not used by crawl seed -->
   <entry>
