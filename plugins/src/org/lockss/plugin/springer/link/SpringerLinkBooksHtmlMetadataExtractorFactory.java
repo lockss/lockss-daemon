@@ -74,7 +74,6 @@ public class SpringerLinkBooksHtmlMetadataExtractorFactory
     tagMap.put("abstract-about-book-chapter-doi", MetadataField.FIELD_DOI);
     tagMap.put("abstract-about-book-print-isbn", MetadataField.FIELD_ISBN);
     tagMap.put("abstract-about-book-online-isbn", MetadataField.FIELD_EISBN);
-    tagMap.put("abstract-about-publisher", MetadataField.FIELD_PUBLISHER);
   }
     
   public class SpringerLinkBooksHtmlMetadataExtractor
@@ -113,10 +112,6 @@ public class SpringerLinkBooksHtmlMetadataExtractorFactory
         putValue(ret, "author", editor.text());
       }
       ret.cook(tagMap);
-      // Since we know it and since Metadata requires it, set it manually if necessary
-      if (ret.get(MetadataField.FIELD_PUBLISHER) == null) {
-        ret.put(MetadataField.FIELD_PUBLISHER, "Springer-Verlag");
-      }
       return ret;
     }
     

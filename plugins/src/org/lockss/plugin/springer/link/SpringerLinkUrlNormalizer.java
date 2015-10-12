@@ -53,9 +53,12 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     String downloadUrl = au.getConfiguration().get(DOWNLOAD_URL_KEY);
     if(url.startsWith(baseUrl) || url.startsWith(downloadUrl)) {
+      //Some slashes were encoded and some not. We set them all to non encoded
       if(!url.contains("pdf") && !url.contains("epub")) {
         url = StringUtil.replaceString(url, SLASH_ENCODED, SLASH);
       }
+      //Find chapter URLs and point them at full text. 
+      //Not collecting individual chapters saves time and we already have the content in the full book
       if(url.contains("_")) {
         Matcher pdfMatcher = CHAPTER_PDF_DOI_PATTERN.matcher(url);
         Matcher chapterMatcher = CHAPTER_DOI_PATTERN.matcher(url);    

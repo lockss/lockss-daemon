@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
     </map>
   </entry>
@@ -84,6 +84,8 @@
       <string>"http://api.springer.com/lockss.txt"</string>
     </list>
   </entry>
+  <!-- While chapters are included in the crawl rules to expedite crawls and avoid double collection They are not collected. 
+  We just point chapter links to the full book link. -->
   <entry>
     <string>au_crawlrules</string>
     <list>

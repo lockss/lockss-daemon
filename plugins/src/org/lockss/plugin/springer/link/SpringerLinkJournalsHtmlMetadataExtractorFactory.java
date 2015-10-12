@@ -73,7 +73,6 @@ public class SpringerLinkJournalsHtmlMetadataExtractorFactory
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       
     }
 
@@ -82,10 +81,6 @@ public class SpringerLinkJournalsHtmlMetadataExtractorFactory
     throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      // Since we know it and since Metadata requires it, set it manually if necessary
-      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
-        am.put(MetadataField.FIELD_PUBLISHER, "Springer-Verlag");
-      }
       return am;
     }
   }
