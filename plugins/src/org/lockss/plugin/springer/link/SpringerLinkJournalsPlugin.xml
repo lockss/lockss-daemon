@@ -63,7 +63,7 @@
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_eissn</key>
-        <displayName>Journal EISSN</displayName>
+        <displayName>Journal eISSN</displayName>
         <description>Electronic International Standard Serial Number.</description>
         <type>1</type>
         <size>20</size>

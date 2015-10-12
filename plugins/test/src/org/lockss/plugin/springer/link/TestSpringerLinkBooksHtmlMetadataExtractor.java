@@ -285,8 +285,8 @@ public class TestSpringerLinkBooksHtmlMetadataExtractor extends LockssTestCase {
     assertEquals(goodBookTitle,
         md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodPublisher,
-                 md.get(MetadataField.FIELD_PUBLISHER));
+    //TDB should provide publisher
+    assertNull(md.get(MetadataField.FIELD_PUBLISHER));
   }
   
   String badContent = "<HTML><HEAD><TITLE>" + goodBookTitle + "</TITLE></HEAD><BODY>\n" +

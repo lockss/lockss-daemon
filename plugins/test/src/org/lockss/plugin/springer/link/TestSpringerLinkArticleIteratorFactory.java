@@ -52,16 +52,16 @@ public class TestSpringerLinkArticleIteratorFactory extends ArticleIteratorTestC
   private final String PLUGIN_NAME = "org.lockss.plugin.springer.link.SpringerLinkJournalsPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String DOWNLOAD_URL_KEY = "download_url";
-  static final String JOURNAL_ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
+  static final String JOURNAL_EISSN_KEY = "journal_eissn";
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private final String DOWNLOAD_URL = "http://www.example.download.com/";
   private final String BASE_URL = "http://www.link.example.com/";
-  private final String JOURNAL_ISSN = "1234-1234";
+  private final String JOURNAL_EISSN = "1234-1234";
   private final String VOLUME_NAME = "3";
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, BASE_URL,
       DOWNLOAD_URL_KEY, DOWNLOAD_URL,
-      JOURNAL_ISSN_KEY, JOURNAL_ISSN,
+      JOURNAL_EISSN_KEY, JOURNAL_EISSN,
       VOLUME_NAME_KEY, VOLUME_NAME);
   private static final int DEFAULT_FILESIZE = 3000;
 
