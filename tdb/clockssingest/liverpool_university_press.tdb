@@ -35,7 +35,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
     au < doNotProcess ; doNotProcess ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
     au < crawling ; exists ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
-    au < ready ; exists ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
+    au < crawling ; exists ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
 
   }
 
@@ -89,7 +89,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
     au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
     au < crawling ; exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
-    au < ready ; exists ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
+    au < crawling ; exists ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
 
   }
 
@@ -160,7 +160,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 >
     au < doNotProcess ; doNotProcess ; 2013 ; The Byron Journal Volume 41 ; 41 >
     au < crawling ; exists ; 2014 ; The Byron Journal Volume 42 ; 42 >
-    au < ready ; exists ; 2015 ; The Byron Journal Volume 43 ; 43 >
+    au < crawling ; exists ; 2015 ; The Byron Journal Volume 43 ; 43 >
 
   }
 
@@ -244,7 +244,7 @@
     au < testing ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
     au < crawling ; exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < crawling ; exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
-    au < ready ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
+    au < crawling ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
 
   }
 
@@ -284,7 +284,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
       au < doNotProcess ; doNotProcess ; 2013 ; Extrapolation Volume 54 ; 54 >
       au < crawling ; exists ; 2014 ; Extrapolation Volume 55 ; 55 >
-      au < ready ; exists ; 2015 ; Extrapolation Volume 56 ; 56 >
+      au < crawling ; exists ; 2015 ; Extrapolation Volume 56 ; 56 >
 
   }
 
@@ -302,7 +302,7 @@
     au < testing ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Francosphères Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Francosphères Volume 3 ; 3 >
-    au < ready ; exists ; 2015 ; Francosphères Volume 4 ; 4 >
+    au < crawling ; exists ; 2015 ; Francosphères Volume 4 ; 4 >
 
   }
 
@@ -389,7 +389,7 @@
 
     param[journal_id] = hgr
 
-    au < ready ; exists ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
+    au < crawling ; exists ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
 
   }
 
@@ -543,7 +543,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Romani Studies Volume 22 ; 22 >
     au < doNotProcess ; doNotProcess ; 2013 ; Romani Studies Volume 23 ; 23 >
     au < crawling ; exists ; 2014 ; Romani Studies Volume 24 ; 24 >
-    au < ready ; exists ; 2015 ; Romani Studies Volume 25 ; 25 >
+    au < crawling ; exists ; 2015 ; Romani Studies Volume 25 ; 25 >
 
   }
 
@@ -596,7 +596,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
     au < doNotProcess ; doNotProcess ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
     au < crawling ; exists ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
-    au < ready ; exists ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
+    au < crawling ; exists ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
 
   }
 
@@ -744,7 +744,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Town Planning Review Volume 83 ; 83 >
     au < doNotProcess ; doNotProcess ; 2013 ; Town Planning Review Volume 84 ; 84 >
     au < crawling ; exists ; 2014 ; Town Planning Review Volume 85 ; 85 >
-    au < ready ; exists ; 2015 ; Town Planning Review Volume 86 ; 86 >
+    au < crawling ; exists ; 2015 ; Town Planning Review Volume 86 ; 86 >
 
   }
 

@@ -186,7 +186,7 @@
     au < finished ; crawling ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
     au < crawling ; exists ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 >
     au < finished ; crawling ; 2014 ; Bone Marrow Transplantation Volume 49 ; 2014 ; 49 >
-    au < ready ; exists ; 2015 ; Bone Marrow Transplantation Volume 50 ; 2015 ; 50 >
+    au < crawling ; exists ; 2015 ; Bone Marrow Transplantation Volume 50 ; 2015 ; 50 >
 
   }
 
@@ -506,7 +506,7 @@
     au < finished ; frozen ; 2012 ; Cell Death and Differentiation Volume 19 ; 2012 ; 19 >
     au < crawling ; exists ; 2013 ; Cell Death and Differentiation Volume 20 ; 2013 ; 20 >
     au < finished ; crawling ; 2014 ; Cell Death and Differentiation Volume 21 ; 2014 ; 21 >
-    au < ready ; exists ; 2015 ; Cell Death and Differentiation Volume 22 ; 2015 ; 22 >
+    au < crawling ; exists ; 2015 ; Cell Death and Differentiation Volume 22 ; 2015 ; 22 >
 
   }
 
@@ -641,7 +641,7 @@
     au < finished ; crawling ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 >
     au < finished ; crawling ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 >
     au < finished ; crawling ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 >
-    au < ready ; exists ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 >
+    au < crawling ; exists ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 >
 
   }
 
@@ -1282,7 +1282,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
     au < crawling ; exists ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 >
     au < finished ; crawling ; 2014 ; International Journal of Obesity Volume 38 ; 2014 ; 38 >
-    au < ready ; exists ; 2015 ; International Journal of Obesity Volume 39 ; 2015 ; 39 >
+    au < crawling ; exists ; 2015 ; International Journal of Obesity Volume 39 ; 2015 ; 39 >
 
   }
 
@@ -1321,7 +1321,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 >
     au < finished ; crawling ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 >
     au < crawling ; exists ; 2014 ; International Journal of Oral Science Volume 6 ; 2014 ; 6 >
-    au < ready ; exists ; 2015 ; International Journal of Oral Science Volume 7 ; 2015 ; 7 >
+    au < crawling ; exists ; 2015 ; International Journal of Oral Science Volume 7 ; 2015 ; 7 >
 
   }
 
@@ -1855,7 +1855,7 @@
     au < finished ; frozen ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
     au < crawling ; exists ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 >
     au < crawling ; exists ; 2014 ; Leukemia Volume 28 ; 2014 ; 28 >
-    au < ready ; exists ; 2015 ; Leukemia Volume 29 ; 2015 ; 29 >
+    au < crawling ; exists ; 2015 ; Leukemia Volume 29 ; 2015 ; 29 >
   }
 
   {
@@ -2502,7 +2502,7 @@
     au < ingNotReady ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
     au < crawling ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 >
     au < crawling ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 >
-    au < ready ; exists ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 >
+    au < crawling ; exists ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 >
 
   }
 
@@ -2750,7 +2750,7 @@
     au < crawling ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 >
     au < crawling ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 >
     au < crawling ; exists ; 2014 ; Nature Materials Volume 13 ; 2014 ; 13 >
-    au < ready ; exists ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 >
+    au < crawling ; exists ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 >
 
   }
 
@@ -3160,7 +3160,7 @@
     au < crawling ; exists ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 >
     au < crawling ; exists ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 >
     au < crawling ; exists ; 2014 ; Nature Reviews Immunology Volume 14 ; 2014 ; 14 >
-    au < ready ; exists ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 >
+    au < crawling ; exists ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 >
 
   }
 
