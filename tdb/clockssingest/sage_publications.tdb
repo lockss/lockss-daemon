@@ -9967,13 +9967,13 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1977 volume 9 to 2007 volume 39 
 
-      au < exists ; exists ; 2000 ; Environment and Planning A Volume 32 ; 32 ; >
-      au < exists ; exists ; 2001 ; Environment and Planning A Volume 33 ; 33 ; >
-      au < exists ; exists ; 2002 ; Environment and Planning A Volume 34 ; 34 ; >
-      au < exists ; exists ; 2003 ; Environment and Planning A Volume 35 ; 35 ; >
-      au < exists ; exists ; 2004 ; Environment and Planning A Volume 36 ; 36 ; >
-      au < exists ; exists ; 2005 ; Environment and Planning A Volume 37 ; 37 ; >
-      au < exists ; exists ; 2006 ; Environment and Planning A Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2000 ; Environment and Planning A Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2001 ; Environment and Planning A Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2002 ; Environment and Planning A Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2003 ; Environment and Planning A Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2004 ; Environment and Planning A Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2005 ; Environment and Planning A Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2006 ; Environment and Planning A Volume 38 ; 38 ; >
       au < manifest ; exists ; 2007 ; Environment and Planning A Volume 39 ; 39 ; >
       au < manifest ; exists ; 2008 ; Environment and Planning A Volume 40 ; 40 ; >
       au < manifest ; exists ; 2009 ; Environment and Planning A Volume 41 ; 41 ; >
@@ -9999,7 +9999,7 @@
       #content available from 1976 volume 3 to 2007 volume 34 
 
       au < exists ; exists ; 2005 ; Environment and Planning B: Planning and Design Volume 32 ; 32 ; >
-      au < exists ; exists ; 2006 ; Environment and Planning B: Planning and Design Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2006 ; Environment and Planning B: Planning and Design Volume 33 ; 33 ; >
       au < manifest ; exists ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 ; >
       au < manifest ; exists ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 ; >
       au < manifest ; exists ; 2009 ; Environment and Planning B: Planning and Design Volume 36 ; 36 ; >
@@ -10024,8 +10024,8 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1983 volume 1 to 2007 volume 25 
 
-      au < exists ; exists ; 2005 ; Environment and Planning C: Government and Policy Volume 23 ; 23 ; >
-      au < exists ; exists ; 2006 ; Environment and Planning C: Government and Policy Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2005 ; Environment and Planning C: Government and Policy Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2006 ; Environment and Planning C: Government and Policy Volume 24 ; 24 ; >
       au < manifest ; exists ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 ; >
       au < manifest ; exists ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 ; >
       au < manifest ; exists ; 2009 ; Environment and Planning C: Government and Policy Volume 27 ; 27 ; >
@@ -32190,7 +32190,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2014 ; Policy Insights from the Behavioral and Brain Sciences Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; Policy Insights from the Behavioral and Brain Sciences Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2015 ; Policy Insights from the Behavioral and Brain Sciences Volume 2 ; 2 ; >
 
   }
 
