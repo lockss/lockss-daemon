@@ -13912,32 +13912,8 @@
     param[base_url] = http://jme.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1976 volume 13 to 1989 volume 27
+    comment[0] = content available from 1976 volume 13 to 1999 volume 36
 
-    au < manifest ; 1976 ; Journal of Medical Entomology Volume 13 ; 13 >
-    au < manifest ; 1977 ; Journal of Medical Entomology Volume 14 ; 14 >
-    au < manifest ; 1978 ; Journal of Medical Entomology Volume 15 ; 15 >
-    au < manifest ; 1979 ; Journal of Medical Entomology Volume 16 ; 16 >
-    au < manifest ; 1980 ; Journal of Medical Entomology Volume 17 ; 17 >
-    au < manifest ; 1981 ; Journal of Medical Entomology Volume 18 ; 18 >
-    au < manifest ; 1982 ; Journal of Medical Entomology Volume 19 ; 19 >
-    au < manifest ; 1983 ; Journal of Medical Entomology Volume 20 ; 20 >
-    au < manifest ; 1984 ; Journal of Medical Entomology Volume 21 ; 21 >
-    au < manifest ; 1985 ; Journal of Medical Entomology Volume 22 ; 22 >
-    au < manifest ; 1986 ; Journal of Medical Entomology Volume 23 ; 23 >
-    au < manifest ; 1987 ; Journal of Medical Entomology Volume 24 ; 24 >
-    au < manifest ; 1988 ; Journal of Medical Entomology Volume 25 ; 25 >
-    au < manifest ; 1989 ; Journal of Medical Entomology Volume 26 ; 26 >
-    au < manifest ; 1990 ; Journal of Medical Entomology Volume 27 ; 27 >
-    au < manifest ; 1991 ; Journal of Medical Entomology Volume 28 ; 28 >
-    au < manifest ; 1992 ; Journal of Medical Entomology Volume 29 ; 29 >
-    au < manifest ; 1993 ; Journal of Medical Entomology Volume 30 ; 30 >
-    au < manifest ; 1994 ; Journal of Medical Entomology Volume 31 ; 31 >
-    au < manifest ; 1995 ; Journal of Medical Entomology Volume 32 ; 32 >
-    au < manifest ; 1996 ; Journal of Medical Entomology Volume 33 ; 33 >
-    au < manifest ; 1997 ; Journal of Medical Entomology Volume 34 ; 34 >
-    au < manifest ; 1998 ; Journal of Medical Entomology Volume 35 ; 35 >
-    au < manifest ; 1999 ; Journal of Medical Entomology Volume 36 ; 36 >
     au < manifest ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 >
     au < manifest ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 >
     au < manifest ; 2002 ; Journal of Medical Entomology Volume 39 ; 39 >
