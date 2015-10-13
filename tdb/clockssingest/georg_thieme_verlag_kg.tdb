@@ -4956,12 +4956,12 @@
     param[journal_id] = 10.1055/s-00000164
     comment[years] = 2010-current
 
-   au < manifest ; exists ; 2010 ; 2010 ; team-konkret Volume 2010 ; 6 >
-   au < manifest ; exists ; 2011 ; 2011 ; team-konkret Volume 2011 ; 7 >
-   au < manifest ; exists ; 2012 ; 2012 ; team-konkret Volume 2012 ; 8 >
-   au < manifest ; exists ; 2013 ; 2013 ; team-konkret Volume 2013 ; 9 >
-   au < manifest ; exists ; 2014 ; 2014 ; team-konkret Volume 2014 ; 10 >
-   au < manifest ; exists ; 2015 ; 2015 ; team-konkret Volume 2015 ; 11 >
+   au < testing ; exists ; 2010 ; 2010 ; team-konkret Volume 2010 ; 6 >
+   au < testing ; exists ; 2011 ; 2011 ; team-konkret Volume 2011 ; 7 >
+   au < testing ; exists ; 2012 ; 2012 ; team-konkret Volume 2012 ; 8 >
+   au < testing ; exists ; 2013 ; 2013 ; team-konkret Volume 2013 ; 9 >
+   au < testing ; exists ; 2014 ; 2014 ; team-konkret Volume 2014 ; 10 >
+   au < testing ; exists ; 2015 ; 2015 ; team-konkret Volume 2015 ; 11 >
 
   }
 
@@ -5008,12 +5008,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Thoracic and Cardiovascular Surgeon Volume 2007 ; 55 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; The Thoracic and Cardiovascular Surgeon Volume 2008 ; 56 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; The Thoracic and Cardiovascular Surgeon Volume 2009 ; 57 >
-    au < manifest ; exists ; 2010 ; 2010 ; The Thoracic and Cardiovascular Surgeon Volume 2010 ; 58 >
-    au < manifest ; exists ; 2011 ; 2011 ; The Thoracic and Cardiovascular Surgeon Volume 2011 ; 59 >
-    au < manifest ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Volume 2012 ; 60 >
-    au < manifest ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Volume 2013 ; 61 >
-    au < manifest ; exists ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 2014 ; 62 >
-    au < manifest ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 >
+    au < testing ; exists ; 2010 ; 2010 ; The Thoracic and Cardiovascular Surgeon Volume 2010 ; 58 >
+    au < testing ; exists ; 2011 ; 2011 ; The Thoracic and Cardiovascular Surgeon Volume 2011 ; 59 >
+    au < testing ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Volume 2012 ; 60 >
+    au < testing ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Volume 2013 ; 61 >
+    au < testing ; exists ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 2014 ; 62 >
+    au < testing ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 >
 
   }
 
@@ -5030,9 +5030,10 @@
     param[journal_id] = 10.1055/s-00024355
     comment[years] = 2012-present
 
-    au < manifest ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
-    au < manifest ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
-    au < manifest ; exists ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 >
+    au < testing ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
+    au < testing ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
+    au < testing ; exists ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 >
+    au < exists ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 >
 
   }
 
@@ -5066,11 +5067,11 @@
     param[journal_id] = 10.1055/s-00000172
     comment[years] = 2011-current
 
-    au < manifest ; exists ; 2011 ; 2011 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2011 ; 1 >
-    au < manifest ; exists ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 >
-    au < manifest ; exists ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 >
-    au < manifest ; exists ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 >
+    au < testing ; exists ; 2011 ; 2011 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2011 ; 1 >
+    au < testing ; exists ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 >
+    au < testing ; exists ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 >
+    au < testing ; exists ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 >
+    au < testing ; exists ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 >
 
   }
 
@@ -5096,12 +5097,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; TumorDiagnostik & Therapie Volume 2007 ; 30 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; TumorDiagnostik & Therapie Volume 2008 ; 31 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; TumorDiagnostik & Therapie Volume 2009 ; 32 >
-    au < manifest ; exists ; 2010 ; 2010 ; TumorDiagnostik & Therapie Volume 2010 ; 33 >
-    au < manifest ; exists ; 2011 ; 2011 ; TumorDiagnostik & Therapie Volume 2011 ; 34 >
-    au < manifest ; exists ; 2012 ; 2012 ; TumorDiagnostik & Therapie Volume 2012 ; 35 >
-    au < manifest ; exists ; 2013 ; 2013 ; TumorDiagnostik & Therapie Volume 2013 ; 34 >
-    au < manifest ; exists ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 2014 ; 35 >
-    au < manifest ; exists ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 >
+    au < testing ; exists ; 2010 ; 2010 ; TumorDiagnostik & Therapie Volume 2010 ; 33 >
+    au < testing ; exists ; 2011 ; 2011 ; TumorDiagnostik & Therapie Volume 2011 ; 34 >
+    au < testing ; exists ; 2012 ; 2012 ; TumorDiagnostik & Therapie Volume 2012 ; 35 >
+    au < testing ; exists ; 2013 ; 2013 ; TumorDiagnostik & Therapie Volume 2013 ; 34 >
+    au < testing ; exists ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 2014 ; 35 >
+    au < testing ; exists ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 >
 
   }
 
