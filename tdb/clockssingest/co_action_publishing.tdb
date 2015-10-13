@@ -196,7 +196,7 @@
     param[journal_id] = ecrj
 
     au < finished ; crawling ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
-    au < ready ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
+    au < crawling ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 >
 
   }
 
@@ -297,7 +297,7 @@
     au < finished ; crawling ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 ; 2013 >
     au < finished ; crawling ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 ; 2014 >
-    au < ready ; exists ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 ; 2015 >
+    au < crawling ; exists ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 ; 2015 >
   }
   
   {
@@ -325,7 +325,7 @@
     au < finished ; finished ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
     au < finished ; finished ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; 2013 >
     au < finished ; finished ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 >
-    au < ready ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
+    au < crawling ; exists ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 >
   }
 
   {
@@ -370,7 +370,7 @@
     au < finished ; frozen ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
     au < finished ; finished ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
     au < finished ; crawling ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
-    au < ready ; exists ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 >
+    au < crawling ; exists ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 >
   }
 
   {
@@ -406,7 +406,7 @@
     au < finished ; finished ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
     au < finished ; crawling ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
     au < finished ; finished ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
-    au < ready ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
+    au < crawling ; exists ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 >
 
   }
 
@@ -718,7 +718,7 @@
     au < finished ; crawling ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
     au < crawling ; exists ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; 2013 >
     au < finished ; crawling ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; 2014 >
-    au < ready ; exists ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; 2015 >
+    au < crawling ; exists ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; 2015 >
 
   }
 
