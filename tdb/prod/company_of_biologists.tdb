@@ -4,7 +4,7 @@
     name = Company of Biologists
   >
 
-  plugin = needs.plugin
+  #plugin = needs.plugin
   #PD-1554
 
   pluginPrefix = org.lockss.plugin.highwire.
