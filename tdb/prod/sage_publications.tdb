@@ -2728,7 +2728,7 @@
         au < manifest ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 659 ; 659 >
         au < manifest ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 660 ; 660 >
         au < manifest ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 661 ; 661 >
-        au < expected ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 662 ; 662 >
+        au < manifest ; 2015 ; The ANNALS of the American Academy of Political and Social Science Volume 662 ; 662 >
 
       }
 
@@ -4886,7 +4886,7 @@
         au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 125 ; 125 >
         au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 126 ; 126 >
         au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 127 ; 127 >
-        au < expected ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 >
+        au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 >
 
       }
 
@@ -11051,13 +11051,13 @@
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1977 volume 9 to 2007 volume 39 
 
-      au < exists ; 2000 ; Environment and Planning A Volume 32 ; 32 >
-      au < exists ; 2001 ; Environment and Planning A Volume 33 ; 33 >
-      au < exists ; 2002 ; Environment and Planning A Volume 34 ; 34 >
-      au < exists ; 2003 ; Environment and Planning A Volume 35 ; 35 >
-      au < exists ; 2004 ; Environment and Planning A Volume 36 ; 36 >
-      au < exists ; 2005 ; Environment and Planning A Volume 37 ; 37 >
-      au < exists ; 2006 ; Environment and Planning A Volume 38 ; 38 >
+      au < manifest ; 2000 ; Environment and Planning A Volume 32 ; 32 >
+      au < manifest ; 2001 ; Environment and Planning A Volume 33 ; 33 >
+      au < manifest ; 2002 ; Environment and Planning A Volume 34 ; 34 >
+      au < manifest ; 2003 ; Environment and Planning A Volume 35 ; 35 >
+      au < manifest ; 2004 ; Environment and Planning A Volume 36 ; 36 >
+      au < manifest ; 2005 ; Environment and Planning A Volume 37 ; 37 >
+      au < manifest ; 2006 ; Environment and Planning A Volume 38 ; 38 >
       au < manifest ; 2007 ; Environment and Planning A Volume 39 ; 39 >
       au < manifest ; 2008 ; Environment and Planning A Volume 40 ; 40 >
       au < manifest ; 2009 ; Environment and Planning A Volume 41 ; 41 >
@@ -11084,7 +11084,7 @@
       #content available from 1976 volume 3 to 2007 volume 34 
 
       au < exists ; 2005 ; Environment and Planning B: Planning and Design Volume 32 ; 32 >
-      au < exists ; 2006 ; Environment and Planning B: Planning and Design Volume 33 ; 33 >
+      au < manifest ; 2006 ; Environment and Planning B: Planning and Design Volume 33 ; 33 >
       au < manifest ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 >
       au < manifest ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 >
       au < manifest ; 2009 ; Environment and Planning B: Planning and Design Volume 36 ; 36 >
@@ -11110,8 +11110,8 @@
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1983 volume 1 to 2007 volume 25 
 
-      au < exists ; 2005 ; Environment and Planning C: Government and Policy Volume 23 ; 23 >
-      au < exists ; 2006 ; Environment and Planning C: Government and Policy Volume 24 ; 24 >
+      au < manifest ; 2005 ; Environment and Planning C: Government and Policy Volume 23 ; 23 >
+      au < manifest ; 2006 ; Environment and Planning C: Government and Policy Volume 24 ; 24 >
       au < manifest ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 >
       au < manifest ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 >
       au < manifest ; 2009 ; Environment and Planning C: Government and Policy Volume 27 ; 27 >
@@ -34118,7 +34118,7 @@ comment[mpj] = now published by Brill
         au < released ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 >
         au < released ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 >
         au < released ; 2012 ; Nutrition and Health Volume 21 ; 21 >
-        au < exists ; 2013 ; Nutrition and Health Volume 22 ; 22 >
+        au < manifest ; 2013 ; Nutrition and Health Volume 22 ; 22 >
 
       }
 
@@ -35421,7 +35421,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2014 ; Policy Insights from the Behavioral and Brain Sciences Volume 1 ; 1 >
-      au < expected ; 2015 ; Policy Insights from the Behavioral and Brain Sciences Volume 2 ; 2 >
+      au < manifest ; 2015 ; Policy Insights from the Behavioral and Brain Sciences Volume 2 ; 2 >
 
   }
 
@@ -43284,7 +43284,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2015 ; Thesis Eleven Volume 127 ; 127 >
         au < manifest ; 2015 ; Thesis Eleven Volume 128 ; 128 >
         au < manifest ; 2015 ; Thesis Eleven Volume 129 ; 129 >
-        au < expected ; 2015 ; Thesis Eleven Volume 130 ; 130 >
+        au < manifest ; 2015 ; Thesis Eleven Volume 130 ; 130 >
         au < expected ; 2015 ; Thesis Eleven Volume 131 ; 131 >
 
       }

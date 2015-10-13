@@ -139,7 +139,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-03 [abstracts only] ; MA2014-03 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-04 [abstracts only] ; MA2014-04 >
       au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Meeting Abstracts Volume MA2015-01 [abstracts only] ; MA2015-01 >
-      au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Meeting Abstracts Volume MA2015-02 [abstracts only] ; MA2015-02 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Meeting Abstracts Volume MA2015-02 [abstracts only] ; MA2015-02 >
       au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Meeting Abstracts Volume MA2015-03 [abstracts only] ; MA2015-03 >
       }
     
@@ -227,7 +227,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Transactions Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Transactions Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Transactions Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Transactions Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Transactions Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Transactions Volume 70 ; 70 >
     
   }
