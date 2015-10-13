@@ -58,11 +58,11 @@
     au < manifest ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 >
     au < manifest ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 >
     au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 >
-    au < testing ; exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
-    au < testing ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
-    au < testing ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
-    au < testing ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
-    au < testing ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
+    au < ready ; exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
+    au < ready ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
+    au < ready ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < ready ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < ready ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
 
   }
 
@@ -238,10 +238,10 @@
     au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
     au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
     au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
-    au < testing ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
-    au < testing ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
-    au < testing ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
-    au < testing ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
+    au < ready ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < ready ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
+    au < ready ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < ready ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
     au < crawling ; exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < crawling ; exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
     au < crawling ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
@@ -299,7 +299,7 @@
 
     param[journal_id] = franc
 
-    au < testing ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
+    au < ready ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Francosphères Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Francosphères Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; Francosphères Volume 4 ; 4 >
@@ -452,9 +452,9 @@
 
     param[journal_id] = mb
 
-    au < testing ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
-    au < testing ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
-    au < testing ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
+    au < ready ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
+    au < ready ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
+    au < ready ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
     au < crawling ; exists ; 2013 ; Modern Believing Volume 54 ; 54 >
     au < crawling ; exists ; 2014 ; Modern Believing Volume 55 ; 55 >
     au < crawling ; exists ; 2015 ; Modern Believing Volume 56 ; 56 >
@@ -510,7 +510,7 @@
 
     param[journal_id] = newsletter
 
-    au < testing ; exists ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
+    au < ready ; exists ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
     au < finished ; crawling ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
     au < crawling ; exists ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 >
     au < expected ; exists ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
@@ -558,17 +558,17 @@
 
     param[journal_id] = qs
 
-    au < testing ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
-    au < testing ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
-    au < testing ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
-    au < testing ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
-    au < testing ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
-    au < testing ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
-    au < testing ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
-    au < testing ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
-    au < testing ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
-    au < testing ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
-    au < testing ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
+    au < ready ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
+    au < ready ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
+    au < ready ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
+    au < ready ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
+    au < ready ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
+    au < ready ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
+    au < ready ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
+    au < ready ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
+    au < ready ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
+    au < ready ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
+    au < ready ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
     au < crawling ; exists ; 2013 ; Quebec Studies Volume 55 ; 55 >
     au < crawling ; exists ; 2013 ; Quebec Studies Volume 56 ; 56 >
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 >
