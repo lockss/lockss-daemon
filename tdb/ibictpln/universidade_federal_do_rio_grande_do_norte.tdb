@@ -83,6 +83,7 @@
       au < released ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2015 ; 2015 ; >
 
   }
 
@@ -138,12 +139,16 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = educacaoemquestao
 
-      au < exists ; 2008 ; 1 ; Revista Educação em Questão Volume 2008 ; 2008 ; >
-      au < exists ; 2009 ; 2 ; Revista Educação em Questão Volume 2009 ; 2009 ; >
-      au < exists ; 2010 ; 3 ; Revista Educação em Questão Volume 2010 ; 2010 ; >
-      au < exists ; 2011 ; 4 ; Revista Educação em Questão Volume 2011 ; 2011 ; >
-      au < exists ; 2012 ; 5 ; Revista Educação em Questão Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 6 ; Revista Educação em Questão Volume 2013 ; 2013 ; >
+      au < exists ; 2006 ; 26-27 ; Revista Educação em Questão Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 28-30 ; Revista Educação em Questão Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 31-33 ; Revista Educação em Questão Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 34-36 ; Revista Educação em Questão Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 37-39 ; Revista Educação em Questão Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 40-41 ; Revista Educação em Questão Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 42-44 ; Revista Educação em Questão Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 45-47 ; Revista Educação em Questão Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 48-50 ; Revista Educação em Questão Volume 2014 ; 2014 ; >
+      au < exists ; 2015 ; 51-53 ; Revista Educação em Questão Volume 2015 ; 2015 ; >
 
   }
 
@@ -163,6 +168,7 @@
       au < released ; 2012 ; 3 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 5 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 6 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2015 ; 2015 ; >
 
   }
 

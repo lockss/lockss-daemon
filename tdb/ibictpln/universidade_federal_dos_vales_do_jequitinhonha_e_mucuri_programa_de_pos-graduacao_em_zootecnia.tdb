@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,8 +17,8 @@
       param[base_url] = http://www.cantacantos.com.br/revista/
       param[journal_id] = zootecnia
 
-      au < testing ; 2014 ; 1 ; Zootecnia Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 2 ; Zootecnia Volume 2015 ; 2015 >
+      au < exists ; 2014 ; 1 ; Zootecnia Volume 2014 ; 2014 ; domain suspended >
+      au < expected ; 2015 ; 2 ; Zootecnia Volume 2015 ; 2015 ; domain suspended >
 
   }
 
