@@ -7,7 +7,10 @@
   >
   
   comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
-  
+  implicit < status ; status2 ; year ; name ; param[volume] >
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+  comment[0] = journal changed base_url.
+
   {
   
     title <
@@ -16,15 +19,28 @@
       issnl = 2327-9214
     >
     
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://repository.academyhealth.org/
-    param[journal_abbr] = egems
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    {
+    
+      param[base_url] = http://repository.edm-forum.org/
+      param[journal_abbr] = egems
 
-    au < crawling ; exists ; 2013 ; eGEMs Volume 1 ; 1 >
-    au < finished ; finished ; 2014 ; eGEMs Volume 2 ; 2 >
-    au < crawling ; exists ; 2015 ; eGEMs Volume 3 ; 3 >
+      au < exists ; exists ; 2013 ; eGEMs Volume 1 ; 1 >
+      au < exists ; exists ; 2014 ; eGEMs Volume 2 ; 2 >
+      au < exists ; exists ; 2015 ; eGEMs Volume 3 ; 3 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://repository.academyhealth.org/
+      param[journal_abbr] = egems
 
+      au < down ; exists ; 2013 ; eGEMs Volume 1 ; 1 >
+      au < down ; finished ; 2014 ; eGEMs Volume 2 ; 2 >
+      au < down ; exists ; 2015 ; eGEMs Volume 3 ; 3 >
+    
+    }
+    
   }
 
 }
