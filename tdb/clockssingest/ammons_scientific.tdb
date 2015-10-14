@@ -170,8 +170,8 @@
     au < crawling ; exists ; 2014 ; Psychological Reports Volume 114 ; 114 >
     au < crawling ; exists ; 2014 ; Psychological Reports Volume 115 ; 115 >
     au < notReady ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 >
-    #500 Internal Server Error
-    au < testing ; exists ; 2015 ; Psychological Reports Volume 117 ; 117 >
+    #PD-1411 500 Internal Server Error
+    au < ready ; exists ; 2015 ; Psychological Reports Volume 117 ; 117 >
     
   }
 
@@ -304,7 +304,7 @@
     au < crawling ; exists ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 >
     au < crawling ; exists ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 >
     au < notReady ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 >
-    #500 Internal Server Error
+    #PD-1411 500 Internal Server Error
     au < crawling ; exists ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 >
 
   }
