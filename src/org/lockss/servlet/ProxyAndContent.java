@@ -105,7 +105,7 @@ public class ProxyAndContent extends LockssServlet {
     "Manage this box's content servers and proxies.";
 
   private static final String CONTENT_SERVER_EXPLANATION_FOOT =
-    "Port changes take effect only when enabling a server.  To change a port, fir disable, then enable with new port.  To replace the server on an active port, first disable the active server, then enable the new server.";
+    "Port changes take effect only when enabling a server.  To change a port, first disable, then enable with new port.  To replace the server on an active port, first disable the active server, then enable the new server.";
 
   private static final String PROXY_CLIENT_EXPLANATION =
     "Configure the LOCKSS crawler to access the net through a proxy server.";
