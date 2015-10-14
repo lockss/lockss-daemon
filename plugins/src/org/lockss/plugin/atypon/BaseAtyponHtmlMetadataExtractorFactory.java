@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,7 +44,7 @@ import org.lockss.plugin.*;
 
 public class BaseAtyponHtmlMetadataExtractorFactory 
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(BaseAtyponHtmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(BaseAtyponHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor 
     createFileMetadataExtractor(MetadataTarget target, String contentType)
@@ -56,6 +56,7 @@ public class BaseAtyponHtmlMetadataExtractorFactory
     implements FileMetadataExtractor {
 
     // Map Google Scholar HTML meta tag names to cooked metadata fields
+    //NOTE - so far no books support HTML meta tags so we can assume journal
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);

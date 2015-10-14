@@ -3,7 +3,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,8 +55,10 @@ import org.lockss.util.TypedEntryMap;
  *
  */
 public class BaseAtyponMetadataUtil {
-  static Logger log = Logger.getLogger(BaseAtyponMetadataUtil.class);
-
+  private static final Logger log = Logger.getLogger(BaseAtyponMetadataUtil.class);
+  
+  private static final String BOOK_EISBN_PARAM = "book_eisbn";
+  private static final Pattern PROTOCOL_PATTERN = Pattern.compile("^(e)isbn:(\\s)*", Pattern.CASE_INSENSITIVE);
   /**
    * html "dc.*" information may not contain publication title and volume
    * ris information usually does.
@@ -134,6 +136,57 @@ public class BaseAtyponMetadataUtil {
     return isInAu;
   }
 
+  /**
+   * Books have some trickier issues - chapter vs. whole book vs book in series
+   * If the year is available check against the TDB information - quick fail
+   * If the eisbn is availalble, check against the TDB information 
+   * If the isbn is availalble, check against the TDB information 
+   * It's not clear if we should also check title info. I think not. ISBN should rule
+   * 
+   * @param au
+   * @param am
+   * @return true if the metadata matches the TDB information
+   */
+  public static boolean metadataMatchesBookTdb(ArchivalUnit au, 
+      ArticleMetadata am) { 
+
+    boolean isInAu = false;
+
+    // Use the book information from the ArticleMetadata
+    // remove leading protocol and "-" and extraneous spaces
+    String foundEISBN = normalize_isbn(am.get(MetadataField.FIELD_EISBN));
+    String foundISBN = normalize_isbn(am.get(MetadataField.FIELD_ISBN));
+
+    // If we got nothing, just return, we can't validate
+    if (StringUtils.isEmpty(foundEISBN) &&
+        StringUtils.isEmpty(foundISBN)) {
+      //TODO: add in additional title check if ISBN metadata isn't available?
+      return true; //return true, we have no way of knowing
+    }
+    
+    // Get the AU's volume name from the AU properties. This must be set
+    TypedEntryMap tfProps = au.getProperties();
+    String AU_EISBN = tfProps.getString(BOOK_EISBN_PARAM);
+    TdbAu tdbau = au.getTdbAu();
+    String AU_ISBN = (tdbau == null) ? null : normalize_isbn(tdbau.getPrintIsbn());
+    
+    // this is a param...it can't be null, but be safe
+    if (AU_EISBN == null) {
+      return true; //return true, we have no way of knowing
+    }
+
+    // if either of the isbn variants matches, we're good
+    if ( ((!(StringUtils.isEmpty(foundEISBN))) && AU_EISBN.equals(foundEISBN)) ||
+        ((!(StringUtils.isEmpty(foundISBN))) && AU_EISBN.equals(foundISBN)) ) {
+      isInAu = true;
+    } else if (!StringUtils.isEmpty(AU_ISBN)) {
+      // they might have only listed a print isbn, not an eisbn so above would fail...
+        isInAu =( ((!(StringUtils.isEmpty(foundISBN))) && AU_ISBN.equals(foundISBN)) ||
+            ((!(StringUtils.isEmpty(foundEISBN))) && AU_ISBN.equals(foundEISBN)));
+    }      
+    log.debug3("After eisbn/isbn check, isInAu :" + isInAu);
+    return isInAu;
+  }
 
   /* Because we compare a title from metadata with the title in the AU 
    * (as set in the tdb file) to make sure the item belongs in this AU,
@@ -207,6 +260,16 @@ public class BaseAtyponMetadataUtil {
     //outTitle = inTitle.replaceAll("(\\s|\"|\\?|-|:)", "");
     outTitle = inTitle.replaceAll("\\W", "");
     return outTitle;
+  }
+  
+  public static String normalize_isbn(String isbn) {
+    if (isbn == null) {return null;}
+    isbn = isbn.trim().replaceAll("-", "");
+    Matcher protocol_match = PROTOCOL_PATTERN.matcher(isbn);
+    if (protocol_match.find()) {
+      return isbn.substring(0, protocol_match.end());
+    }
+    return isbn;
   }
 
 
