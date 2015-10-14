@@ -70,8 +70,8 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
    * 
    * @since 1.67.5
    */
-  protected String issn;
-  
+  protected String eissn;
+  public static final String JOURNAL_EISSN_KEY = "journal_eissn";
   /**
    * <p>
    * The volume name (<code>volume_name</code>) of this crawl seed's AU.
@@ -98,7 +98,7 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
   protected void initialize() 
       throws ConfigurationException ,PluginException ,IOException {
     super.initialize();
-    this.issn = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ISSN.getKey());
+    this.eissn = au.getConfiguration().get(JOURNAL_EISSN_KEY);
     this.volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
     this.urlList = null;
   }
@@ -116,7 +116,7 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
   protected String makeApiUrl(int startingIndex) {
     String url = String.format("%smeta/v1/pam?q=issn:%s%%20volume:%s&api_key=%s&p=%d&s=%d",
                                API_URL,
-                               issn,
+                               eissn,
                                volume,
                                API_KEY,
                                EXPECTED_RECORDS_PER_RESPONSE,
