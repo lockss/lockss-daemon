@@ -339,7 +339,8 @@
   {
 
       title <
-        name = ILHA-Revista de Antropologia
+        name = ILHA-Revista de Antropologia ;
+        eissn = 2175-8034
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -897,7 +898,9 @@
   {
 
       title <
-        name = Revista GEOSUL
+        name = Revista GEOSUL ;
+        issn = 0103-3964 ;
+        eissn = 2177-5230
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
