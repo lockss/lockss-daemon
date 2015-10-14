@@ -337,8 +337,7 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; 2014 ; Computational Cognitive Science Volume 1 ; 1 >
-        au < manifest ; 2015 ; Computational Cognitive Science Volume 2 ; 2 >
+        au < manifest ; 2015 ; Computational Cognitive Science Volume 1 ; 1 >
   
     }
   
@@ -2392,8 +2391,9 @@
       param[journal_issn] = 2198-4115
       comment[platform] = BioMedCentralPlugin
 
-      au < manifest ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
-      au < manifest ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
+      au < notReady ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
+      #issue is not completed, 10/14/2015
+      au < expected ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
 
     }
 
