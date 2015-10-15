@@ -343,7 +343,7 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BioMedCentralPlugin
   
-        au < wanted ; exists ; 2015 ; Computational Cognitive Science Volume 1 ; 1 >
+        au < ready ; exists ; 2015 ; Computational Cognitive Science Volume 1 ; 1 >
   
     }
   
@@ -1514,10 +1514,9 @@
         param[base_url] = http://www.jeo-esska.com/
         param[journal_issn] = 2197-1153 
         comment[platform] = BioMedCentralPlugin
-        #notReady - PD-1535
   
-        au < wanted ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
-        au < wanted ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
+        au < ready ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
+        au < ready ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
   
     }
 
@@ -1945,8 +1944,9 @@
         param[journal_issn] = 2196-5404
         comment[platform] = BioMedCentralPlugin
 
-        au < testing ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
+        au < notReady ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
+        #PD-1535 xml page processing error
+        au < testing ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
 
     }
 
@@ -1971,7 +1971,7 @@
         au < manifest ; exists ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 >
         au < manifest ; exists ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 >
         au < crawling ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
-        au < manifest ; exists ; 2015 ; Nanoscale Research Letters Volume 10 ; 10 >
+        au < testing ; exists ; 2015 ; Nanoscale Research Letters Volume 10 ; 10 >
   
     }
   
@@ -2006,7 +2006,7 @@
         au < manifest ; exists ; 2012 ; Optical Nanoscopy Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Optical Nanoscopy Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Optical Nanoscopy Volume 3 ; 3 >
-        au < manifest ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 >
+        au < testing ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 >
   
     }
   
@@ -2044,7 +2044,7 @@
         au < manifest ; exists ; 2012 ; Pastoralism Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Pastoralism Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Pastoralism Volume 4 ; 4 >
-        au < manifest ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
+        au < testing ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
   
     }
   
@@ -2062,7 +2062,7 @@
         au < manifest ; exists ; 2012 ; Planetary Science Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Planetary Science Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Planetary Science Volume 3 ; 3 >
-        au < manifest ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
+        au < testing ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
   
     }
   
@@ -2094,7 +2094,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
+        au < testing ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
   
     }
   
@@ -2113,7 +2113,7 @@
         au < manifest ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
-        au < manifest ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 >
+        au < testing ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 >
   
     }
 
@@ -2129,7 +2129,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
-        au < manifest ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
+        au < testing ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
 
     }
 
@@ -2381,7 +2381,7 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
+      au < ready ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
 
     }
 
@@ -2497,7 +2497,7 @@
       param[journal_issn] = 2288-8586
       comment[platform] = BioMedCentralPlugin
 
-      au < wanted ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
+      au < ready ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
 
     }
 
