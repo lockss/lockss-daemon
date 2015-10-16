@@ -288,7 +288,7 @@
     param[journal_id] = ab
 
     au < deepCrawl ; exists ; 2014 ; Advances in Biology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Advances in Biology Volume 2015 ; 2015 ; 2015 >
+    au < ready ; exists ; 2015 ; Advances in Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6753,7 +6753,7 @@
     param[journal_id] = jra
 
     au < crawling ; exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 >
 
   }
 
