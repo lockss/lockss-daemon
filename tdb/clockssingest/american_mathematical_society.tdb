@@ -527,7 +527,7 @@
     param[journal_id] = btran
 
     au < finished ; crawling ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
-    au < ready ; exists ; 2015 ; Transactions of the American Mathematical Society B Volume 2 ; 2015 >
+    au < crawling ; exists ; 2015 ; Transactions of the American Mathematical Society B Volume 2 ; 2015 >
 
   }
    
