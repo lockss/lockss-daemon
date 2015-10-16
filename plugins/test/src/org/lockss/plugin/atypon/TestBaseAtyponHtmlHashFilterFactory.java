@@ -350,6 +350,23 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
 
   }
   
+  private static final String htmlTagWithId = 
+      "<!DOCTYPE html>" +
+       "<html lang=\"en\" class=\"pb-page\"  data-request-id=\"6e56e369-793f-4108-8bb2-813336b037c1\">" +
+       "<head>boo</head><body>FOO</body></html>";
+  
+  private static final String htmlTagWithIdFiltered = 
+      "<!DOCTYPE html>" +
+          "<html lang=\"en\" class=\"pb-page\"  >" +
+          "<body>FOO</body></html>";
+     
+  
+  public void testHtmlAttribute() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(htmlTagWithId), Constants.DEFAULT_ENCODING);
+    assertEquals(htmlTagWithIdFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
   /* This section tests variants that the child plugins can turn on or not */
   private static final String wsVariant = 
       "<html>" +
@@ -430,7 +447,6 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
       " inside the span" +
       " Hello World";
       
-  
   
   public void test_Variations() throws Exception {
     TestRigHashFilterFactory rigFact = new TestRigHashFilterFactory();

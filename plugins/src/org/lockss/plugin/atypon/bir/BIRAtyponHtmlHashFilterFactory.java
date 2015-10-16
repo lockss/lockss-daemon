@@ -89,6 +89,10 @@ public class BIRAtyponHtmlHashFilterFactory
         // full - section choose pulldown appeared in multiple sections
         // http://www.birpublications.org/doi/full/10.1259/dmfr.20120050
         HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo"),
+        // toc, abs, full, text and ref right column - most read 
+        // http://www.birpublications.org/toc/bjr/88/1052
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "literatumMostReadWidget"),
         // abs - right column all literatumArticleToolsWidget 
         // except Download Citation
         // http://www.birpublications.org/doi/abs/10.1259/bjr.20140472                                      

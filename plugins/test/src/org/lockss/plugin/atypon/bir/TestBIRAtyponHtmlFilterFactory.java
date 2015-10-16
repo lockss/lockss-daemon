@@ -254,6 +254,21 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
             "</div>" +
             "</div>";
     
+    
+    private static final String mostReadHtml = 
+        "<body>" +
+            "<div class=\"widget literatumMostReadWidget none  widget-none  widget-border-toggle\" id=\"86d4f007-456e-4949-a310-442574085a02\"  >" +
+            "<div class=\"wrapped \" >" +
+            "<div class=\"widget-body body body-none  body-border-toggle\"><section class=\"popular\">" +
+            "<div class=\"mostRead  \">" +
+            "<h1 class=\"topContentTitle\">" +                                                                                                            
+            "Most read articles" +                                                                                                                  
+            "</h1><ul><li>art2></li><li>art2</li></ul>" +
+            "</div></section></div></div></div>BOO</body>";                
+
+    private static final String mostReadHtmlFiltered = 
+        "<body>BOO</body>";   
+    
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(PLUGIN_ID,  arrsAuConfig());
@@ -300,6 +315,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
       doFilterTest(bau, variantFact, withMenuXml, filteredStr); 
       doFilterTest(bau, variantFact, withRelatedLayer, filteredStr);      
       doFilterTest(bau, variantFact, withRelatedContent, filteredStr);      
+      doFilterTest(bau, variantFact, mostReadHtml, mostReadHtmlFiltered);      
     }    
   }
 
@@ -326,6 +342,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
                      articleToolsWidgetFiltered);
         doFilterTest(bau, variantFact, withCitedby, withoutCitedby); 
         doFilterTest(bau, variantFact, withSectionJumpTo, filteredStr);         
+        doFilterTest(bau, variantFact, mostReadHtml , mostReadHtmlFiltered);         
      }
   }
   

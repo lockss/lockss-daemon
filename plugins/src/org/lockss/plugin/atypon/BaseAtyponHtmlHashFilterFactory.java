@@ -46,6 +46,7 @@ import org.htmlparser.Text;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.Bullet;
 import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Html;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Span;
 import org.htmlparser.util.NodeList;
@@ -125,7 +126,10 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
         nodeList.visitAllNodesWith(new NodeVisitor() {
           @Override
           public void visitTag(Tag tag) {
-            if (tag instanceof Span && tag.getAttribute("id") != null) {
+            //changeable html attribute data-request-id first seen in BiR, see all html
+	    if (tag instanceof Html && tag.getAttribute("data-request-id") != null) {
+              tag.removeAttribute("data-request-id");
+	    } else if (tag instanceof Span && tag.getAttribute("id") != null) {
               tag.removeAttribute("id");
               // some size notes are just text children of the link tag
               // eg <a ..> PDF Plus (123 kb)</a>
