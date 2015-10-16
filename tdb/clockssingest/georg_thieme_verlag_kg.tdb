@@ -4957,11 +4957,11 @@
     comment[years] = 2010-current
 
    au < testing ; exists ; 2010 ; 2010 ; team-konkret Volume 2010 ; 6 >
-   au < testing ; exists ; 2011 ; 2011 ; team-konkret Volume 2011 ; 7 >
+   au < ready ; exists ; 2011 ; 2011 ; team-konkret Volume 2011 ; 7 >
    au < testing ; exists ; 2012 ; 2012 ; team-konkret Volume 2012 ; 8 >
-   au < testing ; exists ; 2013 ; 2013 ; team-konkret Volume 2013 ; 9 >
-   au < testing ; exists ; 2014 ; 2014 ; team-konkret Volume 2014 ; 10 >
-   au < testing ; exists ; 2015 ; 2015 ; team-konkret Volume 2015 ; 11 >
+   au < ready ; exists ; 2013 ; 2013 ; team-konkret Volume 2013 ; 9 >
+   au < ready ; exists ; 2014 ; 2014 ; team-konkret Volume 2014 ; 10 >
+   au < ready ; exists ; 2015 ; 2015 ; team-konkret Volume 2015 ; 11 >
 
   }
 
@@ -5008,12 +5008,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Thoracic and Cardiovascular Surgeon Volume 2007 ; 55 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; The Thoracic and Cardiovascular Surgeon Volume 2008 ; 56 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; The Thoracic and Cardiovascular Surgeon Volume 2009 ; 57 >
-    au < testing ; exists ; 2010 ; 2010 ; The Thoracic and Cardiovascular Surgeon Volume 2010 ; 58 >
+    au < ready ; exists ; 2010 ; 2010 ; The Thoracic and Cardiovascular Surgeon Volume 2010 ; 58 >
     au < testing ; exists ; 2011 ; 2011 ; The Thoracic and Cardiovascular Surgeon Volume 2011 ; 59 >
-    au < testing ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Volume 2012 ; 60 >
+    au < ready ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Volume 2012 ; 60 >
     au < testing ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Volume 2013 ; 61 >
     au < testing ; exists ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 2014 ; 62 >
-    au < testing ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 >
+    au < ready ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 >
 
   }
 
@@ -5030,8 +5030,8 @@
     param[journal_id] = 10.1055/s-00024355
     comment[years] = 2012-present
 
-    au < testing ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
+    au < ready ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
+    au < ready ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
     au < testing ; exists ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 >
     au < exists ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 >
 
@@ -5068,10 +5068,10 @@
     comment[years] = 2011-current
 
     au < testing ; exists ; 2011 ; 2011 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2011 ; 1 >
-    au < testing ; exists ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 >
+    au < ready ; exists ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 >
     au < testing ; exists ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 >
     au < testing ; exists ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 >
-    au < testing ; exists ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 >
+    au < ready ; exists ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 >
 
   }
 
@@ -5098,11 +5098,11 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; TumorDiagnostik & Therapie Volume 2008 ; 31 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; TumorDiagnostik & Therapie Volume 2009 ; 32 >
     au < testing ; exists ; 2010 ; 2010 ; TumorDiagnostik & Therapie Volume 2010 ; 33 >
-    au < testing ; exists ; 2011 ; 2011 ; TumorDiagnostik & Therapie Volume 2011 ; 34 >
-    au < testing ; exists ; 2012 ; 2012 ; TumorDiagnostik & Therapie Volume 2012 ; 35 >
+    au < ready ; exists ; 2011 ; 2011 ; TumorDiagnostik & Therapie Volume 2011 ; 34 >
+    au < ready ; exists ; 2012 ; 2012 ; TumorDiagnostik & Therapie Volume 2012 ; 35 >
     au < testing ; exists ; 2013 ; 2013 ; TumorDiagnostik & Therapie Volume 2013 ; 34 >
-    au < testing ; exists ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 2014 ; 35 >
-    au < testing ; exists ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 >
+    au < ready ; exists ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 2014 ; 35 >
+    au < ready ; exists ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 >
 
   }
 
@@ -5148,12 +5148,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2007 ; 28 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2008 ; 29 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2009 ; 30 >
-    au < manifest ; exists ; 2010 ; 2010 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2010 ; 31 >
-    au < manifest ; exists ; 2011 ; 2011 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2011 ; 32 >
-    au < manifest ; exists ; 2012 ; 2012 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2012 ; 33 >
-    au < manifest ; exists ; 2013 ; 2013 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2013 ; 34 >
-    au < manifest ; exists ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2014 ; 35 >
-    au < manifest ; exists ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2015 ; 36 >
+    au < testing ; exists ; 2010 ; 2010 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2010 ; 31 >
+    au < testing ; exists ; 2011 ; 2011 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2011 ; 32 >
+    au < testing ; exists ; 2012 ; 2012 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2012 ; 33 >
+    au < testing ; exists ; 2013 ; 2013 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2013 ; 34 >
+    au < testing ; exists ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2014 ; 35 >
+    au < testing ; exists ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2015 ; 36 >
 
   }
 
@@ -5167,7 +5167,7 @@
     >
     param[journal_id] = 10.1055/s-00028422
 
-   au < manifest ; exists ; 2015 ; 2015 ; Ultrasound International Open Volume 2015 ; 1 >
+   au < testing ; exists ; 2015 ; 2015 ; Ultrasound International Open Volume 2015 ; 1 >
 
   }
 
@@ -5182,8 +5182,8 @@
     >
     param[journal_id] = 10.1055/s-00026982
 
-   au < manifest ; exists ; 2014 ; 2014 ; Urologie Scan Volume 2014 ; 1 >
-   au < manifest ; exists ; 2015 ; 2015 ; Urologie Scan Volume 2015 ; 2 >
+   au < testing ; exists ; 2014 ; 2014 ; Urologie Scan Volume 2014 ; 1 >
+   au < testing ; exists ; 2015 ; 2015 ; Urologie Scan Volume 2015 ; 2 >
 
   }
 
@@ -5206,12 +5206,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; veterinär spiegel Volume 2007 ; 17 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; veterinär spiegel Volume 2008 ; 18 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; veterinär spiegel Volume 2009 ; 19 >
-    au < manifest ; exists ; 2010 ; 2010 ; veterinär spiegel Volume 2010 ; 20 >
-    au < manifest ; exists ; 2011 ; 2011 ; veterinär spiegel Volume 2011 ; 21 >
-    au < manifest ; exists ; 2012 ; 2012 ; veterinär spiegel Volume 2012 ; 22 >
-    au < manifest ; exists ; 2013 ; 2013 ; veterinär spiegel Volume 2013 ; 23 >
-    au < manifest ; exists ; 2014 ; 2014 ; veterinär spiegel Volume 2014 ; 24 >
-    au < manifest ; exists ; 2015 ; 2015 ; veterinär spiegel Volume 2015 ; 25 >
+    au < testing ; exists ; 2010 ; 2010 ; veterinär spiegel Volume 2010 ; 20 >
+    au < testing ; exists ; 2011 ; 2011 ; veterinär spiegel Volume 2011 ; 21 >
+    au < testing ; exists ; 2012 ; 2012 ; veterinär spiegel Volume 2012 ; 22 >
+    au < testing ; exists ; 2013 ; 2013 ; veterinär spiegel Volume 2013 ; 23 >
+    au < testing ; exists ; 2014 ; 2014 ; veterinär spiegel Volume 2014 ; 24 >
+    au < testing ; exists ; 2015 ; 2015 ; veterinär spiegel Volume 2015 ; 25 >
 
   }
 
@@ -5230,11 +5230,11 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Via medici Volume 2007 ; 12 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Via medici Volume 2008 ; 13 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Via medici Volume 2009 ; 14 >
-    au < manifest ; exists ; 2010 ; 2010 ; Via medici Volume 2010 ; 15 >
-    au < manifest ; exists ; 2011 ; 2011 ; Via medici Volume 2011 ; 16 >
-    au < manifest ; exists ; 2012 ; 2012 ; Via medici Volume 2012 ; 17 >
-    au < manifest ; exists ; 2013 ; 2013 ; Via medici Volume 2013 ; 18 >
-    au < manifest ; exists ; 2014 ; 2014 ; Via medici Volume 2014 ; 19 >
+    au < testing ; exists ; 2010 ; 2010 ; Via medici Volume 2010 ; 15 >
+    au < testing ; exists ; 2011 ; 2011 ; Via medici Volume 2011 ; 16 >
+    au < testing ; exists ; 2012 ; 2012 ; Via medici Volume 2012 ; 17 >
+    au < testing ; exists ; 2013 ; 2013 ; Via medici Volume 2013 ; 18 >
+    au < testing ; exists ; 2014 ; 2014 ; Via medici Volume 2014 ; 19 >
     au < expected ; exists ; 2015 ; 2015 ; Via medici Volume 2015 ; 20 >
 
   }
@@ -5281,9 +5281,9 @@
     param[journal_id] = 10.1055/s-00000184
     comment[years] = 2012-current
 
-    au < manifest ; exists ; 2012 ; 2012 ; XX Die Zeitschrift für Frauen in der Medizin Volume 1 ; 1 >
-    au < manifest ; exists ; 2013 ; 2013 ; XX Die Zeitschrift für Frauen in der Medizin Volume 2 ; 2 >
-    au < manifest ; exists ; 2014 ; 2014 ; XX Die Zeitschrift für Frauen in der Medizin Volume 3 ; 3 >
+    au < testing ; exists ; 2012 ; 2012 ; XX Die Zeitschrift für Frauen in der Medizin Volume 1 ; 1 >
+    au < testing ; exists ; 2013 ; 2013 ; XX Die Zeitschrift für Frauen in der Medizin Volume 2 ; 2 >
+    au < testing ; exists ; 2014 ; 2014 ; XX Die Zeitschrift für Frauen in der Medizin Volume 3 ; 3 >
 
   }
 
@@ -5302,12 +5302,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zahnmedizin up2date Volume 2007 ; 1 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zahnmedizin up2date Volume 2008 ; 2 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zahnmedizin up2date Volume 2009 ; 3 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zahnmedizin up2date Volume 2010 ; 4 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zahnmedizin up2date Volume 2011 ; 5 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 >
+    au < testing ; exists ; 2010 ; 2010 ; Zahnmedizin up2date Volume 2010 ; 4 >
+    au < testing ; exists ; 2011 ; 2011 ; Zahnmedizin up2date Volume 2011 ; 5 >
+    au < testing ; exists ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 >
+    au < testing ; exists ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 >
+    au < testing ; exists ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 >
+    au < testing ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 >
 
   }
 
@@ -5326,12 +5326,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2007 ; 21 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2008 ; 22 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2009 ; 23 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2010 ; 24 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2011 ; 25 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2012 ; 26 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2013 ; 27 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2014 ; 28 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2015 ; 29 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2010 ; 24 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2011 ; 25 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2012 ; 26 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2013 ; 27 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2014 ; 28 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2015 ; 29 >
 
   }
 
@@ -5357,12 +5357,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Gastroenterologie Volume 2007 ; 45 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Gastroenterologie Volume 2008 ; 46 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Gastroenterologie Volume 2009 ; 47 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Gastroenterologie Volume 2010 ; 48 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Gastroenterologie Volume 2011 ; 49 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Gastroenterologie Volume 2012 ; 50 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Gastroenterologie Volume 2013 ; 51 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Gastroenterologie Volume 2014 ; 52 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 2015 ; 53 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Gastroenterologie Volume 2010 ; 48 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Gastroenterologie Volume 2011 ; 49 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Gastroenterologie Volume 2012 ; 50 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Gastroenterologie Volume 2013 ; 51 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Gastroenterologie Volume 2014 ; 52 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 2015 ; 53 >
 
   }
 
