@@ -593,7 +593,7 @@
       au < crawling ; exists ; 2014 ; Faraday Discussions Volume 173 ; 173 ; 2014 >
       au < finished ; finished ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 >
       au < crawling ; exists ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 >
-      au < ready ; exists ; 2014 ; Faraday Discussions Volume 176 ; 176 ; 2014 >
+      au < crawling ; exists ; 2014 ; Faraday Discussions Volume 176 ; 176 ; 2014 >
 
       au < crawling ; exists ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 >
       au < crawling ; exists ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 >
@@ -1428,7 +1428,7 @@
       param[base_url2] = http://www.rsc.org/
       comment[notReady] = crawl completed with no substance
       
-      au < ready ; exists ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 >
+      au < crawling ; exists ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 >
       au < crawling ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
       au < crawling ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
       au < crawling ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >

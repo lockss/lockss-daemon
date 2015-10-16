@@ -46,8 +46,8 @@
 
       param[journal_id] = ajcs
       
-      au < ready ; exists ; 2013 ; American Journal of Cultural Sociology Volume 1 ; 2013 ; 1 >
-      au < ready ; exists ; 2014 ; American Journal of Cultural Sociology Volume 2 ; 2014 ; 2 >
+      au < crawling ; exists ; 2013 ; American Journal of Cultural Sociology Volume 1 ; 2013 ; 1 >
+      au < crawling ; exists ; 2014 ; American Journal of Cultural Sociology Volume 2 ; 2014 ; 2 >
       au < crawling ; exists ; 2015 ; American Journal of Cultural Sociology Volume 3 ; 2015 ; 3 >
    
     }
@@ -152,7 +152,7 @@
       param[journal_id] = be
 
       au < exists ; exists ; 2012 ; British Economics Volume 47 ; 2012 ; 47 >
-      au < ready ; exists ; 2013 ; British Economics Volume 48 ; 2013 ; 48 >
+      au < crawling ; exists ; 2013 ; British Economics Volume 48 ; 2013 ; 48 >
       au < finished ; manifest ; 2014 ; British Economics Volume 49 ; 2014 ; 49 >
       au < crawling ; exists ; 2015 ; British Economics Volume 50 ; 2015 ; 50 >
 
@@ -626,7 +626,7 @@
       param[journal_id] = jma
 
       au < crawling ; exists ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 1 ; 2013 ; 1 >
-      au < ready ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 2 ; 2014 ; 2 >
+      au < crawling ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 2 ; 2014 ; 2 >
       au < crawling ; exists ; 2015 ; Journal of Database Marketing & Customer Strategy Management Volume 3 ; 2015 ; 3 >
 
     }
