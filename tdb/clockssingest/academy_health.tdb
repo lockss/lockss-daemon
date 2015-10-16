@@ -25,7 +25,7 @@
       param[journal_abbr] = egems
 
       au < exists ; exists ; 2013 ; eGEMs Volume 1 ; 1 >
-      au < exists ; exists ; 2014 ; eGEMs Volume 2 ; 2 >
+      au < doNotProcess ; doNotProcess ; 2014 ; eGEMs Volume 2 ; 2 >
       au < exists ; exists ; 2015 ; eGEMs Volume 3 ; 3 >
     
     }
@@ -35,9 +35,9 @@
       param[base_url] = http://repository.academyhealth.org/
       param[journal_abbr] = egems
 
-      au < down ; exists ; 2013 ; eGEMs Volume 1 ; 1 >
+      au < superseded ; exists ; 2013 ; eGEMs Volume 1 [superseded] ; 1 >
       au < down ; finished ; 2014 ; eGEMs Volume 2 ; 2 >
-      au < down ; exists ; 2015 ; eGEMs Volume 3 ; 3 >
+      au < superseded ; exists ; 2015 ; eGEMs Volume 3 [superseded] ; 3 >
     
     }
     

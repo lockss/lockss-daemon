@@ -3,7 +3,9 @@
   publisher <
     name = Academy Health
   >
-  
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    implicit < status ; year ; name ; param[volume] >
+
   {
   
     title <
@@ -12,15 +14,26 @@
       issnl = 2327-9214
     >
     
-    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    {
+    
+    param[base_url] = http://repository.edm-forum.org/
+    param[journal_abbr] = egems
+
+    au < exists ; 2013 ; eGEMs Volume 1 ; 1 >
+    au < exists ; 2014 ; eGEMs Volume 2 ; 2 >
+    au < exists ; 2015 ; eGEMs Volume 3 ; 3 >
+    
+    }
+    {
+    
     param[base_url] = http://repository.academyhealth.org/
     param[journal_abbr] = egems
-    implicit < status ; year ; name ; param[volume] >
 
-    au < manifest ; 2013 ; eGEMs Volume 1 ; 1 >
-    au < released ; 2014 ; eGEMs Volume 2 ; 2 >
-    au < manifest ; 2015 ; eGEMs Volume 3 ; 3 >
-
+    au < doNotProcess ; 2013 ; eGEMs Volume 1 ; 1 >
+    au < superseded ; 2014 ; eGEMs Volume 2 [superseded] ; 2 >
+    au < doNotProcess ; 2015 ; eGEMs Volume 3 ; 3 >
+    
+    }
   }
 
 }
