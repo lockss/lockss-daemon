@@ -89,8 +89,8 @@ public class SpringerLinkArticleIteratorFactory
                                   ArticleFiles.ROLE_ABSTRACT,
                                   ArticleFiles.ROLE_FULL_TEXT_HTML);
     
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
-                                 ArticleFiles.ROLE_FULL_TEXT_HTML,
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
+    							 ArticleFiles.ROLE_FULL_TEXT_PDF,
                                  ArticleFiles.ROLE_FULL_TEXT_EPUB,
                                  ArticleFiles.ROLE_ABSTRACT);
     

@@ -360,6 +360,10 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
     return uf;
   }
   
+  public boolean isFailOnStartUrlError() {
+	  return false;
+  }
+  
   /**
    * <p>
    * Encode a DOI for use in URLs, using the encoding of
