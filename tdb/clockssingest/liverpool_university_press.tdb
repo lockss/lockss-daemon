@@ -62,7 +62,7 @@
     au < ready ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
     au < ready ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
     au < ready ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
-    au < ready ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
+    au < crawling ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
 
   }
 
@@ -238,10 +238,10 @@
     au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
     au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
     au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
-    au < ready ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
-    au < ready ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
-    au < ready ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
-    au < ready ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
+    au < crawling ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < crawling ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
+    au < crawling ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < crawling ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
     au < crawling ; exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < crawling ; exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
     au < crawling ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
@@ -453,8 +453,8 @@
     param[journal_id] = mb
 
     au < ready ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
-    au < ready ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
-    au < ready ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
+    au < crawling ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
+    au < crawling ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
     au < crawling ; exists ; 2013 ; Modern Believing Volume 54 ; 54 >
     au < crawling ; exists ; 2014 ; Modern Believing Volume 55 ; 55 >
     au < crawling ; exists ; 2015 ; Modern Believing Volume 56 ; 56 >
@@ -558,17 +558,17 @@
 
     param[journal_id] = qs
 
-    au < ready ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
-    au < ready ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
+    au < crawling ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
+    au < crawling ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
     au < ready ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
-    au < ready ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
+    au < crawling ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
     au < crawling ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
     au < ready ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
     au < ready ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
     au < ready ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
     au < ready ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
     au < ready ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
-    au < ready ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
+    au < crawling ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
     au < crawling ; exists ; 2013 ; Quebec Studies Volume 55 ; 55 >
     au < crawling ; exists ; 2013 ; Quebec Studies Volume 56 ; 56 >
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 >
@@ -622,7 +622,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Sculpture Journal Volume 21 ; 21 >
     au < doNotProcess ; doNotProcess ; 2013 ; Sculpture Journal Volume 22 ; 22 >
     au < crawling ; exists ; 2014 ; Sculpture Journal Volume 23 ; 23 >
-    au < ready ; exists ; 2015 ; Sculpture Journal Volume 24 ; 24 >
+    au < crawling ; exists ; 2015 ; Sculpture Journal Volume 24 ; 24 >
 
   }
 

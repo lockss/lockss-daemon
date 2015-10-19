@@ -1976,7 +1976,7 @@
       au < finished ; crawling ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       au < crawling ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
       au < crawling ; exists ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
-      au < ready ; exists ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
+      au < crawling ; exists ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
       
     }
 
@@ -2164,7 +2164,7 @@
       au < finished ; crawling ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
-      au < ready ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
+      au < crawling ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
 
     }
 
@@ -2559,7 +2559,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < crawling ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
-      au < ready ; exists ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
+      au < crawling ; exists ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
 
     }
 
@@ -2641,7 +2641,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; BioMedical engineering OnLine Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; BioMedical engineering OnLine Volume 13 ; 13 >
-      au < ready ; exists ; 2015 ; BioMedical engineering OnLine Volume 14 ; 14 >
+      au < crawling ; exists ; 2015 ; BioMedical engineering OnLine Volume 14 ; 14 >
 
     }
 
@@ -2798,7 +2798,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Cancer Cell International Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; Cancer Cell International Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; Cancer Cell International Volume 14 ; 14 >
-      au < ready ; exists ; 2015 ; Cancer Cell International Volume 15 ; 15 >
+      au < crawling ; exists ; 2015 ; Cancer Cell International Volume 15 ; 15 >
 
     }
 
@@ -2852,7 +2852,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
       au < finished ; crawling ; 2013 ; Carbon Balance and Management Volume 8 ; 8 >
       au < finished ; crawling ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
-      au < ready ; exists ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
+      au < crawling ; exists ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
 
     }
 
@@ -3024,7 +3024,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-8871
 
       au < finished ; crawling ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
-      au < ready ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
+      au < crawling ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
       
     }
 
@@ -3195,7 +3195,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < finished ; crawling ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < doesNotExist ; doesNotExist ; 0 ; Clinical and Molecular Allergy Volume 12 ; 12 >
-      au < ready ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
+      au < crawling ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
       
     }
 
@@ -3484,7 +3484,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
       au < finished ; crawling ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; Diabetology & Metabolic Syndrome Volume 6 ; 6 >
-      au < ready ; exists ; 2015 ; Diabetology & Metabolic Syndrome Volume 7 ; 7 >
+      au < crawling ; exists ; 2015 ; Diabetology & Metabolic Syndrome Volume 7 ; 7 >
 
     }
 
