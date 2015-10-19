@@ -427,7 +427,7 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < wanted ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
+        au < ready ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
         au < wanted ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
 
     }
@@ -1946,7 +1946,7 @@
 
         au < notReady ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
         #PD-1535 xml page processing error
-        au < testing ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
 
     }
 
@@ -2044,7 +2044,7 @@
         au < manifest ; exists ; 2012 ; Pastoralism Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Pastoralism Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Pastoralism Volume 4 ; 4 >
-        au < testing ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
+        au < ready ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
   
     }
   
@@ -2062,7 +2062,7 @@
         au < manifest ; exists ; 2012 ; Planetary Science Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Planetary Science Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Planetary Science Volume 3 ; 3 >
-        au < testing ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
+        au < ready ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
   
     }
   
@@ -2094,7 +2094,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
-        au < testing ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
   
     }
   
@@ -2113,7 +2113,7 @@
         au < manifest ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
-        au < testing ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 >
+        au < ready ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 >
   
     }
 
@@ -2129,7 +2129,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
-        au < testing ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
+        au < ready ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
 
     }
 
