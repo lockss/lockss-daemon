@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = Wageningen Academic Publishers ;
+    info[contract] = 2013 ;
+    info[tester] = 5
+  >
+
+  plugin = org.lockss.plugin.atypon.wageningen.ClockssWageningenBooksPlugin
+  param[base_url] = http://www.wageningenacademic.com/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
+
+  {
+
+    title <
+      name = Wageningen Academic Publishers ;
+      type = bookSeries
+    >
+
+    au < manifest ; exists ; 2006 ; 978-90-8686-010-4 ; 978-90-8686-579-6 ; 9789086865796 ; 52nd International Congress of Meat Science and Technology >
+  	au < manifest ; exists ; 2005 ; 978-90-76998-58-9 ; 978-90-8686-545-1 ; 9789086865451 ; Animal Bioethics - Principles and Teaching Methods > 
+	au < testing ; exists ; 2010 ; 978-90-8686-146-0 ; 978-90-8686-700-4 ; 9789086867004 ; Single women, land and livelihood vulnerability in a communal area in Zimbabwe >   
+	au < testing ; exists ; 2005 ; 978-90-76998-55-8 ; 978-90-8686-539-0 ; 9789086865390 ; Crop Systems Dynamics >   
+	au < manifest ; exists ; 2012 ; 978-90-8686-184-2 ; 978-90-8686-741-7 ; 9789086867417 ; Animal farming and environmental interactions in the Mediterranean region >   
+
+  }
+  
+  {
+
+    title <
+      name = Mansholt Publication Series ;
+      issn = 1871-9309 ;
+      type = bookSeries
+    >
+
+	au < testing ; exists ; 2013 ; 978-90-8686-221-4 ; 978-90-8686-775-2 ; 9789086867752 ; The arena of everyday life, Volume 12 >   
+	au < manifest ; exists ; 2011 ; 978-90-8686-167-5 ; 978-90-8686-724-0 ; 9789086867240 ; Knowledge in action, Volume 11 >   
+	au < testing ; exists ; 2012 ; 978-90-8686-134-7 ; 978-90-8686-168-2 ; 9789086861682 ; Unlocking markets to smallolders, Volume 10 >   
+	au < manifest ; exists ; 2010 ; 978-90-8686-139-2 ; 978-90-8686-168-2 ; 9789086866717 ; Food, diversity, vulnerability and social change, Volume 9 >   
+	au < manifest ; exists ; 2010 ; 978-90-8686-133-0 ; 978-90-8686-693-9 ; 9789086866939 ; Five centuries of farming, Volume 8 >   
+	au < expected ; exists ;  ; 978-90-8686-097-5 ; ; ; Space and economics, Volume 7 >   
+	au < manifest ; exists ; 2009 ; 978-90-8686-087-6 ; 978-90-8686-681-6 ;  9789086866816 ; Research in action, Volume 6 >   
+	au < manifest ; exists ; 2007 ; 978-90-8686-039-5 ; 978-90-8686-625-0 ;  9789086866250 ; Changing families and their lifestyle, Volume 5 >   
+	au < manifest ; exists ; 2007 ; 978-90-8686-047-0 ; 978-90-8686-618-2 ;  9789086866182 ; Development economics between markets and institutions, Volume 4 >   
+	au < manifest ; exists ; 2007 ; 978-90-8686-039-5 ; 978-90-8686-625-0 ;  9789086866250 ; Imaging the future, Volume 3 >   
+	au < expected ; exists ;  ; 978-90-8686-001-2 ; ; ; Decision science, Volume 2 >   
+	au < manifest ; exists ; 2006 ; 978-90-76998-96-1 ; 978-90-8686-588-8 ;  9789086865888 ; Heterodox views on economics and the economy of the global society, Volume 1 >   
+	
+
+  }
+
+}

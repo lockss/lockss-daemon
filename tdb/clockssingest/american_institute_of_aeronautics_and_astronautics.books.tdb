@@ -1,0 +1,61 @@
+{
+  publisher <
+    name = American Institute of Aeronautics and Astronautics ;
+    info[contract] = 2014 ;
+    info[tester] = 5
+  >
+
+  plugin = org.lockss.plugin.atypon.aiaa.ClockssAIAABooksPlugin
+  param[base_url] = http://arc.aiaa.org/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
+
+  {
+
+    title <
+      name = AIAA Education Series ;
+      type = bookSeries
+    >
+
+    au < manifest ; exists ; 1997 ; 978-1-56347-224-4 ; 978-1-60086-130-7 ; 9781600861307 ; Advanced Dynamics >
+    au < testing ; exists ; 2000 ; 978-1-56347-398-2 ; ; 9781563473982 ; Aircraft Performance: Theory and Practice >
+
+  }
+
+  {
+
+    title <
+      name = Library of Flight ;
+      type = bookSeries
+    >
+
+    au < manifest ; exists ; 2014 ; 978-1-62410-262-2 ; 978-1-62410-322-3 ; 9781624103223 ; The Overview Effect: Space Exploration and Human Evolution, Third Edition > 
+    au < testing ; exists ; 2014 ; 978-1-62410-252-3 ; ; 9781624102523 ; "Advanced Six Degrees of Freedom Aerospace Simulation and Analysis in C++, Second Edition" >
+
+  }
+
+  {
+
+    title <
+      name = Progress in Astronautics and Aeronautics ;
+      type = bookSeries
+    >
+
+    au < manifest ; exists ; 1993 ; 978-1-56347-018-9 ; 978-1-60086-622-7 ; 9781600866227 ; Advances in Turbulence Studies >
+    au < testing ; exists ; 2009 ; 978-1-56347-983-0 ; 978-1-56347-989-2 ; 9781563479892 ; Fundamentals and Applications of Modern Flow Control >
+
+  }
+
+  {
+
+    title <
+      name = The Aerospace Press ;
+      type = bookSeries
+    >
+
+    au < manifest ; exists ; 2002 ; 978-1-884989-11-7 ;  ; 9781884989117 ; "Spacecraft Thermal Control Handbook, Volume I: Fundamental Technologies" >
+    au < testing ; exists ; 2009 ; 978-1-884989-22-3 ;  ; 9781884989223 ; Small Satellites: Past, Present, and Future >
+
+
+  }
+
+}
