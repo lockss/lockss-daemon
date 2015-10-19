@@ -58,7 +58,7 @@ public class DkDemoSourceArticleIteratorFactory implements ArticleIteratorFactor
   // the entire tree under base/sd/jid/yr
   // can handle any number of sub-directories under the year so long as end in .pdf
   protected static final String PATTERN_TEMPLATE = "\"^%s%s/%s/%d/.*[.]pdf$\"," +
-      "base_url, sub_domain, journal_id, year";
+      "base_url, dir_name, journal_id, year";
   //  
   // The source content structure looks like this:
   // <root_location>/<sub-domain>/<jid>/<year>/<subdirectories>/<STUFF>
