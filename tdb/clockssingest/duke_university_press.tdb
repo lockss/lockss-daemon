@@ -947,7 +947,7 @@
       param[base_url] = http://jclc.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-     au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
+     au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
 
   }
@@ -2083,7 +2083,7 @@
       param[base_url] = http://tsq.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2015 ; Transgender Studies Quarterly Volume 2 ; 2 >
 
      }

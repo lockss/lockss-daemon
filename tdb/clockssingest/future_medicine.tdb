@@ -352,7 +352,7 @@
     
     param[journal_id] = hep
 
-    au < ready ; exists ; 2014 ; Hepatic Oncology Volume 1 ; 1 >
+    au < crawling ; exists ; 2014 ; Hepatic Oncology Volume 1 ; 1 >
     au < crawling ; exists ; 2015 ; Hepatic Oncology Volume 2 ; 2 >
     
   }
@@ -458,7 +458,7 @@
     
     param[journal_id] = ije
 
-    au < ready ; exists ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 >
+    au < crawling ; exists ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 >
     au < crawling ; exists ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 >
 
   }
@@ -541,7 +541,7 @@
     
     param[journal_id] = mmt
 
-    au < ready ; exists ; 2014 ; Melanoma Management Volume 1 ; 1 >
+    au < crawling ; exists ; 2014 ; Melanoma Management Volume 1 ; 1 >
     au < crawling ; exists ; 2015 ; Melanoma Management Volume 2 ; 2 >
 
   }
