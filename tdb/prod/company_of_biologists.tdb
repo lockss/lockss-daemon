@@ -7,6 +7,7 @@
   #plugin = needs.plugin
   #PD-1554
 
+  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   pluginPrefix = org.lockss.plugin.highwire.
 
   {
@@ -17,14 +18,12 @@
       issnl = 2046-6390
     >
 
-    pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://bio.biologists.org/
-    implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; 2012 ; Biology Open Volume 1 ; 1 >
-    au < exists ; 2013 ; Biology Open Volume 2 ; 2 >
-    au < down ; 2014 ; Biology Open Volume 3 ; 3 >
-    au < exists ; 2015 ; Biology Open Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Biology Open Volume 1 ; 1 >
+    au < HWDrupalPlugin ; exists ; 2013 ; Biology Open Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Biology Open Volume 3 ; 3 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Biology Open Volume 4 ; 4 >
     
   }
 
@@ -38,106 +37,105 @@
     >
 
     param[base_url] = http://dev.biologists.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1953 ; Development Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1954 ; Development Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1955 ; Development Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1956 ; Development Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1957 ; Development Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1958 ; Development Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1959 ; Development Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1960 ; Development Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1961 ; Development Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1962 ; Development Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1963 ; Development Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1964 ; Development Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; Development Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; Development Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; Development Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; Development Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; Development Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; Development Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; Development Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; Development Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; Development Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; Development Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; Development Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; Development Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; Development Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; Development Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; Development Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; Development Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; Development Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; Development Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; Development Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; Development Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; Development Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; Development Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; Development Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; Development Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Development Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Development Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Development Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Development Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Development Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Development Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Development Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Development Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Development Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Development Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Development Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Development Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Development Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Development Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Development Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Development Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Development Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Development Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Development Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Development Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Development Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Development Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Development Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Development Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Development Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Development Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Development Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Development Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Development Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Development Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Development Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Development Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Development Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Development Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Development Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Development Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Development Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Development Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Development Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Development Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Development Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Development Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Development Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Development Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Development Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Development Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Development Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Development Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Development Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Development Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Development Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Development Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Development Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Development Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 95 ; 95 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 97 ; 97 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Development Volume 98 ; 98 >
+    au < HWDrupalPlugin ; doNotProcess ; 1953 ; Development Volume 1 ; 1 >
+    au < HWDrupalPlugin ; doNotProcess ; 1954 ; Development Volume 2 ; 2 >
+    au < HWDrupalPlugin ; doNotProcess ; 1955 ; Development Volume 3 ; 3 >
+    au < HWDrupalPlugin ; doNotProcess ; 1956 ; Development Volume 4 ; 4 >
+    au < HWDrupalPlugin ; doNotProcess ; 1957 ; Development Volume 5 ; 5 >
+    au < HWDrupalPlugin ; doNotProcess ; 1958 ; Development Volume 6 ; 6 >
+    au < HWDrupalPlugin ; doNotProcess ; 1959 ; Development Volume 7 ; 7 >
+    au < HWDrupalPlugin ; doNotProcess ; 1960 ; Development Volume 8 ; 8 >
+    au < HWDrupalPlugin ; doNotProcess ; 1961 ; Development Volume 9 ; 9 >
+    au < HWDrupalPlugin ; doNotProcess ; 1962 ; Development Volume 10 ; 10 >
+    au < HWDrupalPlugin ; doNotProcess ; 1963 ; Development Volume 11 ; 11 >
+    au < HWDrupalPlugin ; doNotProcess ; 1964 ; Development Volume 12 ; 12 >
+    au < HWDrupalPlugin ; doNotProcess ; 1965 ; Development Volume 13 ; 13 >
+    au < HWDrupalPlugin ; doNotProcess ; 1965 ; Development Volume 14 ; 14 >
+    au < HWDrupalPlugin ; doNotProcess ; 1966 ; Development Volume 15 ; 15 >
+    au < HWDrupalPlugin ; doNotProcess ; 1966 ; Development Volume 16 ; 16 >
+    au < HWDrupalPlugin ; doNotProcess ; 1967 ; Development Volume 17 ; 17 >
+    au < HWDrupalPlugin ; doNotProcess ; 1967 ; Development Volume 18 ; 18 >
+    au < HWDrupalPlugin ; doNotProcess ; 1968 ; Development Volume 19 ; 19 >
+    au < HWDrupalPlugin ; doNotProcess ; 1968 ; Development Volume 20 ; 20 >
+    au < HWDrupalPlugin ; doNotProcess ; 1969 ; Development Volume 21 ; 21 >
+    au < HWDrupalPlugin ; doNotProcess ; 1969 ; Development Volume 22 ; 22 >
+    au < HWDrupalPlugin ; doNotProcess ; 1970 ; Development Volume 23 ; 23 >
+    au < HWDrupalPlugin ; doNotProcess ; 1970 ; Development Volume 24 ; 24 >
+    au < HWDrupalPlugin ; doNotProcess ; 1971 ; Development Volume 25 ; 25 >
+    au < HWDrupalPlugin ; doNotProcess ; 1971 ; Development Volume 26 ; 26 >
+    au < HWDrupalPlugin ; doNotProcess ; 1972 ; Development Volume 27 ; 27 >
+    au < HWDrupalPlugin ; doNotProcess ; 1972 ; Development Volume 28 ; 28 >
+    au < HWDrupalPlugin ; doNotProcess ; 1973 ; Development Volume 29 ; 29 >
+    au < HWDrupalPlugin ; doNotProcess ; 1973 ; Development Volume 30 ; 30 >
+    au < HWDrupalPlugin ; doNotProcess ; 1974 ; Development Volume 31 ; 31 >
+    au < HWDrupalPlugin ; doNotProcess ; 1974 ; Development Volume 32 ; 32 >
+    au < HWDrupalPlugin ; doNotProcess ; 1975 ; Development Volume 33 ; 33 >
+    au < HWDrupalPlugin ; doNotProcess ; 1975 ; Development Volume 34 ; 34 >
+    au < HWDrupalPlugin ; doNotProcess ; 1976 ; Development Volume 35 ; 35 >
+    au < HWDrupalPlugin ; doNotProcess ; 1976 ; Development Volume 36 ; 36 >
+    au < HWDrupalPlugin ; doNotProcess ; 1977 ; Development Volume 37 ; 37 >
+    au < HWDrupalPlugin ; doNotProcess ; 1977 ; Development Volume 38 ; 38 >
+    au < HWDrupalPlugin ; doNotProcess ; 1977 ; Development Volume 39 ; 39 >
+    au < HWDrupalPlugin ; doNotProcess ; 1977 ; Development Volume 40 ; 40 >
+    au < HWDrupalPlugin ; doNotProcess ; 1977 ; Development Volume 41 ; 41 >
+    au < HWDrupalPlugin ; doNotProcess ; 1977 ; Development Volume 42 ; 42 >
+    au < HWDrupalPlugin ; doNotProcess ; 1978 ; Development Volume 43 ; 43 >
+    au < HWDrupalPlugin ; doNotProcess ; 1978 ; Development Volume 44 ; 44 >
+    au < HWDrupalPlugin ; doNotProcess ; 1978 ; Development Volume 45 ; 45 >
+    au < HWDrupalPlugin ; doNotProcess ; 1978 ; Development Volume 46 ; 46 >
+    au < HWDrupalPlugin ; doNotProcess ; 1978 ; Development Volume 47 ; 47 >
+    au < HWDrupalPlugin ; doNotProcess ; 1978 ; Development Volume 48 ; 48 >
+    au < HWDrupalPlugin ; doNotProcess ; 1979 ; Development Volume 49 ; 49 >
+    au < HWDrupalPlugin ; doNotProcess ; 1979 ; Development Volume 50 ; 50 >
+    au < HWDrupalPlugin ; doNotProcess ; 1979 ; Development Volume 51 ; 51 >
+    au < HWDrupalPlugin ; doNotProcess ; 1979 ; Development Volume 52 ; 52 >
+    au < HWDrupalPlugin ; doNotProcess ; 1979 ; Development Volume 53 ; 53 >
+    au < HWDrupalPlugin ; doNotProcess ; 1979 ; Development Volume 54 ; 54 >
+    au < HWDrupalPlugin ; doNotProcess ; 1980 ; Development Volume 55 ; 55 >
+    au < HWDrupalPlugin ; doNotProcess ; 1980 ; Development Volume 56 ; 56 >
+    au < HWDrupalPlugin ; doNotProcess ; 1980 ; Development Volume 57 ; 57 >
+    au < HWDrupalPlugin ; doNotProcess ; 1980 ; Development Volume 58 ; 58 >
+    au < HWDrupalPlugin ; doNotProcess ; 1980 ; Development Volume 59 ; 59 >
+    au < HWDrupalPlugin ; doNotProcess ; 1980 ; Development Volume 60 ; 60 >
+    au < HWDrupalPlugin ; doNotProcess ; 1981 ; Development Volume 61 ; 61 >
+    au < HWDrupalPlugin ; doNotProcess ; 1981 ; Development Volume 62 ; 62 >
+    au < HWDrupalPlugin ; doNotProcess ; 1981 ; Development Volume 63 ; 63 >
+    au < HWDrupalPlugin ; doNotProcess ; 1981 ; Development Volume 64 ; 64 >
+    au < HWDrupalPlugin ; doNotProcess ; 1981 ; Development Volume 65 ; 65 >
+    au < HWDrupalPlugin ; doNotProcess ; 1981 ; Development Volume 66 ; 66 >
+    au < HWDrupalPlugin ; doNotProcess ; 1982 ; Development Volume 67 ; 67 >
+    au < HWDrupalPlugin ; doNotProcess ; 1982 ; Development Volume 68 ; 68 >
+    au < HWDrupalPlugin ; doNotProcess ; 1982 ; Development Volume 69 ; 69 >
+    au < HWDrupalPlugin ; doNotProcess ; 1982 ; Development Volume 70 ; 70 >
+    au < HWDrupalPlugin ; doNotProcess ; 1982 ; Development Volume 71 ; 71 >
+    au < HWDrupalPlugin ; doNotProcess ; 1982 ; Development Volume 72 ; 72 >
+    au < HWDrupalPlugin ; doNotProcess ; 1983 ; Development Volume 73 ; 73 >
+    au < HWDrupalPlugin ; doNotProcess ; 1983 ; Development Volume 74 ; 74 >
+    au < HWDrupalPlugin ; doNotProcess ; 1983 ; Development Volume 75 ; 75 >
+    au < HWDrupalPlugin ; doNotProcess ; 1983 ; Development Volume 76 ; 76 >
+    au < HWDrupalPlugin ; doNotProcess ; 1983 ; Development Volume 77 ; 77 >
+    au < HWDrupalPlugin ; doNotProcess ; 1983 ; Development Volume 78 ; 78 >
+    au < HWDrupalPlugin ; doNotProcess ; 1984 ; Development Volume 79 ; 79 >
+    au < HWDrupalPlugin ; doNotProcess ; 1984 ; Development Volume 80 ; 80 >
+    au < HWDrupalPlugin ; doNotProcess ; 1984 ; Development Volume 81 ; 81 >
+    au < HWDrupalPlugin ; doNotProcess ; 1984 ; Development Volume 82 ; 82 >
+    au < HWDrupalPlugin ; doNotProcess ; 1984 ; Development Volume 83 ; 83 >
+    au < HWDrupalPlugin ; doNotProcess ; 1984 ; Development Volume 84 ; 84 >
+    au < HWDrupalPlugin ; doNotProcess ; 1985 ; Development Volume 85 ; 85 >
+    au < HWDrupalPlugin ; doNotProcess ; 1985 ; Development Volume 86 ; 86 >
+    au < HWDrupalPlugin ; doNotProcess ; 1985 ; Development Volume 87 ; 87 >
+    au < HWDrupalPlugin ; doNotProcess ; 1985 ; Development Volume 88 ; 88 >
+    au < HWDrupalPlugin ; doNotProcess ; 1985 ; Development Volume 89 ; 89 >
+    au < HWDrupalPlugin ; doNotProcess ; 1985 ; Development Volume 90 ; 90 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 91 ; 91 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 92 ; 92 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 93 ; 93 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 94 ; 94 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 95 ; 95 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 96 ; 96 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 97 ; 97 >
+    au < HWDrupalPlugin ; doNotProcess ; 1986 ; Development Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; down ; 1987 ; Development Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; down ; 1987 ; Development Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; down ; 1987 ; Development Volume 101 ; 101 >
@@ -164,25 +162,25 @@
     au < HighWirePressH20Plugin ; down ; 1996 ; Development Volume 122 ; 122 >
     au < HighWirePressH20Plugin ; down ; 1996 ; Development Volume 123 ; 123 >
     au < HighWireStrVolPlugin ; superseded ; 1997 ; Development Volume 124 [superseded] ; 124 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Development Volume 124 ; 124 >
+    au < HWDrupalPlugin ; exists ; 1997 ; Development Volume 124 ; 124 >
     au < HighWireStrVolPlugin ; superseded ; 1998 ; Development Volume 125 [superseded] ; 125 >
-    au < HighWirePressH20Plugin ; ready ; 1998 ; Development Volume 125 ; 125 >
+    au < HWDrupalPlugin ; exists ; 1998 ; Development Volume 125 ; 125 >
     au < HighWireStrVolPlugin ; superseded ; 1999 ; Development Volume 126 [superseded] ; 126 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Development Volume 126 ; 126 >
+    au < HWDrupalPlugin ; exists ; 1999 ; Development Volume 126 ; 126 >
     au < HighWireStrVolPlugin ; superseded ; 2000 ; Development Volume 127 [superseded] ; 127 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Development Volume 127 ; 127 >
+    au < HWDrupalPlugin ; exists ; 2000 ; Development Volume 127 ; 127 >
     au < HighWireStrVolPlugin ; superseded ; 2001 ; Development Volume 128 [superseded] ; 128 >
     au < HighWirePressH20Plugin ; down ; 2001 ; Development Volume 128 ; 128 >
     au < HighWireStrVolPlugin ; superseded ; 2002 ; Development Volume 129 [superseded] ; 129 >
     au < HighWirePressH20Plugin ; down ; 2002 ; Development Volume 129 ; 129 >
     au < HighWireStrVolPlugin ; superseded ; 2003 ; Development Volume 130 [superseded] ; 130 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Development Volume 130 ; 130 >
+    au < HWDrupalPlugin ; exists ; 2003 ; Development Volume 130 ; 130 >
     au < HighWireStrVolPlugin ; superseded ; 2004 ; Development Volume 131 [superseded] ; 131 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Development Volume 131 ; 131 >
+    au < HWDrupalPlugin ; exists ; 2004 ; Development Volume 131 ; 131 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; Development Volume 132 [superseded] ; 132 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Development Volume 132 ; 132 >
+    au < HWDrupalPlugin ; exists ; 2005 ; Development Volume 132 ; 132 >
     au < HighWireStrVolPlugin ; superseded ; 2006 ; Development Volume 133 [superseded] ; 133 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; Development Volume 133 ; 133 >
+    au < HWDrupalPlugin ; exists ; 2006 ; Development Volume 133 ; 133 >
     au < HighWirePressH20Plugin ; down ; 2007 ; Development Volume 134 ; 134 >
     au < HighWirePressH20Plugin ; down ; 2008 ; Development Volume 135 ; 135 >
     au < HighWirePressH20Plugin ; down ; 2009 ; Development Volume 136 ; 136 >
@@ -190,8 +188,8 @@
     au < HighWirePressH20Plugin ; down ; 2011 ; Development Volume 138 ; 138 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Development Volume 139 ; 139 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Development Volume 140 ; 140 >
-    au < HighWirePressH20Plugin ; exists ; 2014 ; Development Volume 141 ; 141 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Development Volume 142 ; 142 >
+    au < HWDrupalPlugin ; exists ; 2014 ; Development Volume 141 ; 141 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Development Volume 142 ; 142 >
 
   }
 
@@ -204,18 +202,16 @@
       issnl = 1754-8403
     >
 
-    pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://dmm.biologists.org/
-    implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
-    au < down ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
-    au < down ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
-    au < down ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
-    au < down ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
-    au < exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
-    au < down ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 >
-    au < exists ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
+    au < HWDrupalPlugin ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 >
 
   }
 
@@ -231,7 +227,6 @@
     comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
 
     param[base_url] = http://jcs.biologists.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; down ; 1966 ; Journal of Cell Science Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1967 ; Journal of Cell Science Volume 2 ; 2 >
@@ -357,28 +352,28 @@
     au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Cell Science Volume 121 [superseded] ; 121 >
     au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Cell Science Volume 122 [superseded] ; 122 >
     
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
+    au < HWDrupalPlugin ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
+    au < HWDrupalPlugin ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
+    au < HWDrupalPlugin ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
+    au < HWDrupalPlugin ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
+    au < HWDrupalPlugin ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
+    au < HWDrupalPlugin ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
+    au < HWDrupalPlugin ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
+    au < HWDrupalPlugin ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
+    au < HWDrupalPlugin ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
+    au < HWDrupalPlugin ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
+    au < HWDrupalPlugin ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
+    au < HWDrupalPlugin ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
+    au < HWDrupalPlugin ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
+    au < HWDrupalPlugin ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
+    au < HWDrupalPlugin ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
     
     au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Cell Science Volume 125 ; 125 >
-    au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
-    au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of cell Science Volume 127 ; 127 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of cell Science Volume 128 ; 128 >
+    au < HWDrupalPlugin ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
+    au < HWDrupalPlugin ; exists ; 2014 ; Journal of cell Science Volume 127 ; 127 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Journal of cell Science Volume 128 ; 128 >
 
   }
 
@@ -391,9 +386,7 @@
       issnl = 0022-0949
     >
 
-    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jeb.biologists.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; down ; 1923-1924 ; Journal of Experimental Biology Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1924-1925 ; Journal of Experimental Biology Volume 2 ; 2 >
@@ -609,28 +602,28 @@
     au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Experimental Biology Volume 211 [superseded] ; 211 >
     au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Experimental Biology Volume 212 [superseded] ; 212 >
     
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
+    au < HWDrupalPlugin ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
     au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
+    au < HWDrupalPlugin ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
+    au < HWDrupalPlugin ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
+    au < HWDrupalPlugin ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
+    au < HWDrupalPlugin ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
+    au < HWDrupalPlugin ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
+    au < HWDrupalPlugin ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
+    au < HWDrupalPlugin ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 >
+    au < HWDrupalPlugin ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
     au < HighWirePressH20Plugin ; down ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
+    au < HWDrupalPlugin ; exists ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
     au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
+    au < HWDrupalPlugin ; exists ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
     au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
     
     au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
-    au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
+    au < HWDrupalPlugin ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Journal of Experimental Biology Volume 217 ; 217 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of Experimental Biology Volume 218 ; 218 >
+    au < HWDrupalPlugin ; exists ; 2015 ; Journal of Experimental Biology Volume 218 ; 218 >
 
   }
 
