@@ -32,17 +32,30 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.db.SqlConstants.*;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.io.Reader;
+import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -53,6 +66,7 @@ import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 
 /**
@@ -275,6 +289,154 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
 
+  // Query to get the aggregated book type requests to be backed up.
+  private static final String SQL_QUERY_BACKUP_BOOK_TYPE_AGGREGATES_SELECT =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ",mi." + PARENT_SEQ_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",i1." + ISBN_COLUMN + " as " + P_ISBN_TYPE
+      + ",i2." + ISBN_COLUMN + " as " + E_ISBN_TYPE
+      + ",cbta." + IS_PUBLISHER_INVOLVED_COLUMN
+      + ",cbta." + REQUEST_YEAR_COLUMN
+      + ",cbta." + REQUEST_MONTH_COLUMN
+      + ",cbta." + FULL_REQUESTS_COLUMN
+      + ",cbta." + SECTION_REQUESTS_COLUMN
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + MD_ITEM_NAME_TABLE + " n"
+      + ", " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE + " cbta"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + "," + MD_ITEM_TABLE + " mi"
+      + " left outer join " + ISBN_TABLE + " i1"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISBN_TYPE_COLUMN + " = '" + P_ISBN_TYPE + "'"
+      + " left outer join " + ISBN_TABLE + " i2"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISBN_TYPE_COLUMN + " = '" + E_ISBN_TYPE + "'"
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
+      + " where cbta." + PUBLICATION_SEQ_COLUMN + " = pn."
+      + PUBLICATION_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
+      + " and mi." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+      + " and n." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " order by pr." + PUBLISHER_NAME_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN;
+
+  // Query to get the data of a book series.
+  private static final String SQL_QUERY_BACKUP_BOOK_SERIES_SELECT = "select "
+      + "distinct pi." + PROPRIETARY_ID_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ",i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
+      + " from " + MD_ITEM_NAME_TABLE + " n"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + "," + MD_ITEM_TABLE + " mi"
+      + " left outer join " + ISSN_TABLE + " i1"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " i2"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
+      + " where pn." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
+      + " and mi." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+      + " and n." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " and mi." + MD_ITEM_SEQ_COLUMN + " = ?";
+
+  // Query to get the aggregated journal type requests to be backed up.
+  private static final String SQL_QUERY_BACKUP_JOURNAL_TYPE_AGGREGATES_SELECT =
+      "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ",i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
+      + ",cjta." + IS_PUBLISHER_INVOLVED_COLUMN
+      + ",cjta." + REQUEST_YEAR_COLUMN
+      + ",cjta." + REQUEST_MONTH_COLUMN
+      + ",cjta." + TOTAL_REQUESTS_COLUMN
+      + ",cjta." + HTML_REQUESTS_COLUMN
+      + ",cjta." + PDF_REQUESTS_COLUMN
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + MD_ITEM_NAME_TABLE + " n"
+      + ", " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE + " cjta"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + "," + MD_ITEM_TABLE + " mi"
+      + " left outer join " + ISSN_TABLE + " i1"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " i2"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
+      + " where cjta." + PUBLICATION_SEQ_COLUMN + " = pn."
+      + PUBLICATION_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
+      + " and mi." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+      + " and n." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " order by pr." + PUBLISHER_NAME_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN;
+
+  // Query to get the aggregated journal publication year requests to be backed
+  // up.
+  private static final String SQL_QUERY_BACKUP_JOURNAL_PUBYEAR_AGGREGATES_SELECT
+      = "select distinct pr." + PUBLISHER_NAME_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ",i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
+      + ",cjpa." + IS_PUBLISHER_INVOLVED_COLUMN
+      + ",cjpa." + REQUEST_YEAR_COLUMN
+      + ",cjpa." + REQUEST_MONTH_COLUMN
+      + ",cjpa." + PUBLICATION_YEAR_COLUMN
+      + ",cjpa." + REQUESTS_COLUMN
+      + " from " + PUBLISHER_TABLE + " pr"
+      + ", " + MD_ITEM_NAME_TABLE + " n"
+      + ", " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE + " cjpa"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + "," + MD_ITEM_TABLE + " mi"
+      + " left outer join " + ISSN_TABLE + " i1"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " i2"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
+      + " where cjpa." + PUBLICATION_SEQ_COLUMN + " = pn."
+      + PUBLICATION_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and pn." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
+      + " and mi." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+      + " and n." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " order by pr." + PUBLISHER_NAME_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN;
+
+  // The field separator in the aggregate statistics backup file.
+  private static final String BACKUP_FIELD_SEPARATOR = "\t";
+
+  // The name of the file used to back-up book type aggregates.
+  private static final String BOOK_TYPE_AGGREGATE_BACKUP_FILENAME =
+      "counterbooktypes.bak";
+
+  // The name of the file used to back-up journal type aggregates.
+  private static final String JOURNAL_TYPE_AGGREGATE_BACKUP_FILENAME =
+      "counterjournaltypes.bak";
+
+  // The name of the file used to back-up journal publication year aggregates.
+  private static final String JOURNAL_PUBYEAR_AGGREGATE_BACKUP_FILENAME =
+      "counterjournalpubyears.bak";
+
+  private static final String CANNOT_CONNECT_TO_DB_ERROR_MESSAGE =
+      "Cannot connect to the database";
+
   // An indication of whether this object is ready to be used.
   private boolean ready = false;
 
@@ -318,7 +480,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     try {
       conn = dbManager.getConnection();
     } catch (DbException ex) {
-      log.error("Cannot connect to database", ex);
+      log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, ex);
       return;
     }
 
@@ -1861,5 +2023,1949 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     } finally {
       DbManager.safeCloseStatement(deleteAggregate);
     }
+  }
+
+  /**
+   * Writes to a zip file the aggregate statistics.
+   * 
+   * @param zipStream
+   *          A ZipOutputStream to the zip file.
+   * 
+   * @throws DbException, IOException
+   */
+  public void writeAggregatesBackupToZip(ZipOutputStream zipStream)
+      throws DbException, IOException {
+    final String DEBUG_HEADER = "writeAggregatesBackupToZip(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Do nothing more if the service is not ready to be used.
+    if (!ready) {
+      return;
+    }
+
+    // Get the book type aggregates.
+    List<Map<String, String>> bookTypeAggregates =
+	findBookTypeAggregatesForBackup();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "bookTypeAggregates = "
+	+ bookTypeAggregates);
+
+    // Do nothing if there are no book type aggregates.
+    if (bookTypeAggregates == null || bookTypeAggregates.size() == 0) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "No book type aggregates to write.");
+    } else {
+      // Create the book type aggregates backup file entry.
+      zipStream.putNextEntry(new ZipEntry(BOOK_TYPE_AGGREGATE_BACKUP_FILENAME));
+
+      // Loop through all the book type aggregates definitions to be backed up.
+      for (Map<String, String> bookTypeAggregate : bookTypeAggregates) {
+	// Write this book type aggregates definition to the zip file.
+	writeBookTypeAggregateBackupToStream(bookTypeAggregate, zipStream);
+      }
+
+      // Close the book type aggregates backup file entry.
+      zipStream.closeEntry();
+    }
+
+    // Get the journal type aggregates.
+    List<Map<String, String>> journalTypeAggregates =
+	findJournalTypeAggregatesForBackup();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "journalTypeAggregates = "
+	+ journalTypeAggregates);
+
+    // Do nothing if there are no journal type aggregates.
+    if (journalTypeAggregates == null || journalTypeAggregates.size() == 0) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "No journal type aggregates to write.");
+    } else {
+      // Create the journal type aggregates backup file entry.
+      zipStream.putNextEntry(new ZipEntry(
+	  JOURNAL_TYPE_AGGREGATE_BACKUP_FILENAME));
+
+      // Loop through all the journal type aggregates definitions to be backed
+      // up.
+      for (Map<String, String> journalTypeAggregate : journalTypeAggregates) {
+	// Write this journal type aggregates definition to the zip file.
+	writeJournalTypeAggregateBackupToStream(journalTypeAggregate,
+	    zipStream);
+      }
+
+      // Close the journal type aggregates backup file entry.
+      zipStream.closeEntry();
+    }
+
+    // Get the journal publication year aggregates.
+    List<Map<String, String>> journalPubYearAggregates =
+	findJournalPubYearAggregatesForBackup();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "journalPubYearAggregates = "
+	+ journalPubYearAggregates);
+
+    // Do nothing if there are no journal publication year aggregates.
+    if (journalPubYearAggregates == null
+	|| journalPubYearAggregates.size() == 0) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "No journal pulication year aggregates to write.");
+    } else {
+      // Create the journal publiaction year aggregate backup file entry.
+      zipStream.putNextEntry(new ZipEntry(
+	  JOURNAL_PUBYEAR_AGGREGATE_BACKUP_FILENAME));
+
+      // Loop through all the journal publication year aggregate definitions to
+      // be backed up.
+      for (Map<String, String> journalPubYearAggregate
+	  : journalPubYearAggregates) {
+	// Write this journal publication year aggregate definition to the zip
+	// file.
+	writeJournalPubYearAggregateBackupToStream(journalPubYearAggregate,
+	    zipStream);
+      }
+
+      // Close the journal type aggregate backup file entry.
+      zipStream.closeEntry();
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the existing book type request aggregates for backup purposes.
+   * 
+   * @return a List<Map<String, String>> with the existing book type request
+   *         aggregates.
+   * @throws DbException
+   *           if there are problems accessing the database.
+   */
+  private List<Map<String, String>> findBookTypeAggregatesForBackup()
+      throws DbException {
+    final String DEBUG_HEADER = "findBookTypeAggregatesForBackup(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    Connection conn = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    List<Map<String, String>> aggregates =
+	new ArrayList<Map<String, String>>();
+    Map<String, String> aggregate = null;
+    String publisherName = null;
+    String publicationName = null;
+    String proprietaryId;
+    String pIsbn;
+    String eIsbn;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Prepare the statement used to get the existing aggregates.
+      statement = dbManager.prepareStatement(conn,
+	  SQL_QUERY_BACKUP_BOOK_TYPE_AGGREGATES_SELECT);
+
+      resultSet = dbManager.executeQuery(statement);
+
+      while (resultSet.next()) {
+	// Check whether this publication is the same as the previous one.
+	if (resultSet.getString(PUBLISHER_NAME_COLUMN).equals(publisherName)
+	    && resultSet.getString(NAME_COLUMN).equals(publicationName)) {
+	  // Yes: This means that the publication has multiple values for the
+	  // proprietary identifier.
+	  proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	  // Add it to the list of proprietary identifiers, if it exists.
+	  if (!StringUtil.isNullString(proprietaryId)
+	      && !proprietaryId.equals(aggregate.get(PROPRIETARY_ID_COLUMN))) {
+	    String ids = aggregate.get(PROPRIETARY_ID_COLUMN);
+
+	    if (ids != null && ids.length() > 0) {
+	      aggregate.put(PROPRIETARY_ID_COLUMN, ids + "," + proprietaryId);
+	    } else {
+	      aggregate.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	    }
+
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "Added proprietaryId = '" + proprietaryId + "'.");
+	  }
+
+	  continue;
+	}
+
+	aggregate = new HashMap<String, String>();
+
+	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	aggregate.put(PUBLISHER_NAME_COLUMN, publisherName);
+
+	publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	aggregate.put(NAME_COLUMN, publicationName);
+
+	proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	if (proprietaryId != null) {
+	  aggregate.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	}
+
+	pIsbn = resultSet.getString(P_ISBN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
+
+	aggregate.put(P_ISBN_TYPE, pIsbn);
+
+	eIsbn = resultSet.getString(E_ISBN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
+
+	aggregate.put(E_ISBN_TYPE, eIsbn);
+
+	String isPublisherInvolved =
+	    "" + resultSet.getBoolean(IS_PUBLISHER_INVOLVED_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "isPublisherInvolved = " + isPublisherInvolved);
+
+	aggregate.put(IS_PUBLISHER_INVOLVED_COLUMN, isPublisherInvolved);
+
+	String requestYear = "" + resultSet.getInt(REQUEST_YEAR_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "requestYear = " + requestYear);
+
+	aggregate.put(REQUEST_YEAR_COLUMN, requestYear);
+
+	String requestMonth = "" + resultSet.getInt(REQUEST_MONTH_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "requestMonth = " + requestMonth);
+
+	aggregate.put(REQUEST_MONTH_COLUMN, requestMonth);
+
+	String fullRequests = "" + resultSet.getInt(FULL_REQUESTS_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "fullRequests = " + fullRequests);
+
+	aggregate.put(FULL_REQUESTS_COLUMN, fullRequests);
+
+	String sectionRequests = "" + resultSet.getInt(SECTION_REQUESTS_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "sectionRequests = " + sectionRequests);
+
+	aggregate.put(SECTION_REQUESTS_COLUMN, sectionRequests);
+
+	Long parentSeq = resultSet.getLong(PARENT_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "parentSeq = " + parentSeq);
+
+	if (parentSeq != null) {
+	  Map<String, String> bookSeries =
+	      findBookSeriesDataForBackup(conn, parentSeq);
+
+	  if (bookSeries != null) {
+	    String seriesName = bookSeries.get(NAME_COLUMN);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "seriesName = " + seriesName);
+
+	    aggregate.put("series_" + NAME_COLUMN, seriesName);
+
+	    String seriesProprietaryId = bookSeries.get(PROPRIETARY_ID_COLUMN);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "seriesProprietaryId = " + seriesProprietaryId);
+
+	    if (seriesProprietaryId != null) {
+	      aggregate.put("series_" + PROPRIETARY_ID_COLUMN,
+		  seriesProprietaryId);
+	    }
+
+	    String pIssn = bookSeries.get(P_ISSN_TYPE);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+	    aggregate.put("series_" + P_ISSN_TYPE, pIssn);
+
+	    String eIssn = bookSeries.get(E_ISSN_TYPE);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+	    aggregate.put("series_" + E_ISSN_TYPE, eIssn);
+	  }
+	}
+
+	aggregates.add(aggregate);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the book type aggregates for backup";
+      log.error(message, sqle);
+      log.error("SQL = '" + SQL_QUERY_BACKUP_BOOK_TYPE_AGGREGATES_SELECT
+	  + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+      DbManager.safeCloseConnection(conn);
+    }
+
+    log.debug2(DEBUG_HEADER + "Done.");
+    return aggregates;
+  }
+
+  /**
+   * Provides the bibliographic data of a book series for backup purposes.
+   * 
+   * @return a List<Map<String, String>> with the bibliographic data of the book
+   *         series.
+   * @throws DbException
+   *           if there are problems accessing the database.
+   */
+  private Map<String, String> findBookSeriesDataForBackup(Connection conn,
+      Long mdItemSeq) throws DbException {
+    final String DEBUG_HEADER = "findBookSeriesDataForBackup(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    Map<String, String> result = null;
+    String publicationName = null;
+    String proprietaryId;
+    String pIssn;
+    String eIssn;
+    boolean firstRowRead = false;
+
+    try {
+      // Prepare the statement used to get the existing aggregates.
+      statement =
+	  dbManager.prepareStatement(conn, SQL_QUERY_BACKUP_BOOK_SERIES_SELECT);
+
+      // Populate the book series identifier.
+      statement.setLong(1, mdItemSeq);
+
+      resultSet = dbManager.executeQuery(statement);
+
+      while (resultSet.next()) {
+	// Check whether this book series has multiple proprietary identifiers.
+	if (firstRowRead) {
+	  // Yes: Get this proprietary identifier.
+	  proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	  // Add it to the list of proprietary identifiers, if it exists.
+	  if (!StringUtil.isNullString(proprietaryId)
+	      && !proprietaryId.equals(result.get(PROPRIETARY_ID_COLUMN))) {
+	    String ids = result.get(PROPRIETARY_ID_COLUMN);
+
+	    if (ids != null && ids.length() > 0) {
+	      result.put(PROPRIETARY_ID_COLUMN, ids + "," + proprietaryId);
+	    } else {
+	      result.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	    }
+
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "Added proprietaryId = '" + proprietaryId + "'.");
+	  }
+
+	  continue;
+	}
+
+	result = new HashMap<String, String>();
+
+	publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	result.put(NAME_COLUMN, publicationName);
+
+	proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	if (proprietaryId != null) {
+	  result.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	}
+
+	pIssn = resultSet.getString(P_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+	result.put(P_ISSN_TYPE, pIssn);
+
+	eIssn = resultSet.getString(E_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+	result.put(E_ISSN_TYPE, eIssn);
+
+	firstRowRead = true;
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the book series data for backup";
+      log.error(message, sqle);
+      log.error("SQL = '" + SQL_QUERY_BACKUP_BOOK_SERIES_SELECT
+	  + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Writes to a stream the definition of a book type request aggregate for
+   * backup purposes.
+   * 
+   * @param aggregate
+   *          A Map<String, String> with the book type request aggregate
+   *          definition.
+   * @param outputStream
+   *          An OutputStream where to write the book type request aggregate
+   *          data.
+   * 
+   * @throws IOException
+   */
+  private void writeBookTypeAggregateBackupToStream(
+      Map<String, String> aggregate, OutputStream outputStream)
+	  throws IOException {
+    final String DEBUG_HEADER = "writeBookTypeAggregateBackupToStream(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+
+    // Ignore empty aggregates.
+    if (aggregate == null || aggregate.size() == 0) {
+      log.warning("Empty book type aggregate not added to backup file.");
+      return;
+    }
+
+    // Write the aggregate data.
+    StringBuilder entry = new StringBuilder(StringUtil
+	.blankOutNlsAndTabs(aggregate.get(PUBLISHER_NAME_COLUMN)));
+
+    entry.append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(NAME_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(PROPRIETARY_ID_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(P_ISBN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(E_ISBN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get("series_" + NAME_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get("series_" + PROPRIETARY_ID_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get("series_" + P_ISSN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get("series_" + E_ISSN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get(IS_PUBLISHER_INVOLVED_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(REQUEST_YEAR_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(REQUEST_MONTH_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(FULL_REQUESTS_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get(SECTION_REQUESTS_COLUMN)));
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entry = " + entry);
+
+    // Write the entry to the output stream.
+    outputStream.write((entry.toString() + "\n")
+	.getBytes(Charset.forName("UTF-8")));
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the existing journal type request aggregates for backup purposes.
+   * 
+   * @return a List<Map<String, String>> with the existing journal type request
+   *         aggregates.
+   * @throws DbException
+   *           if there are problems accessing the database.
+   */
+  private List<Map<String, String>> findJournalTypeAggregatesForBackup()
+      throws DbException {
+    final String DEBUG_HEADER = "findJournalTypeAggregatesForBackup(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    Connection conn = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    List<Map<String, String>> aggregates =
+	new ArrayList<Map<String, String>>();
+    Map<String, String> aggregate = null;
+    String publisherName = null;
+    String publicationName = null;
+    String proprietaryId;
+    String pIssn;
+    String eIssn;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Prepare the statement used to get the existing aggregates.
+      statement = dbManager.prepareStatement(conn,
+	  SQL_QUERY_BACKUP_JOURNAL_TYPE_AGGREGATES_SELECT);
+
+      resultSet = dbManager.executeQuery(statement);
+
+      while (resultSet.next()) {
+	// Check whether this publication is the same as the previous one.
+	if (resultSet.getString(PUBLISHER_NAME_COLUMN).equals(publisherName)
+	    && resultSet.getString(NAME_COLUMN).equals(publicationName)) {
+	  // Yes: This means that the publication has multiple values for the
+	  // proprietary identifier.
+	  proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	  // Add it to the list of proprietary identifiers, if it exists.
+	  if (!StringUtil.isNullString(proprietaryId)
+	      && !proprietaryId.equals(aggregate.get(PROPRIETARY_ID_COLUMN))) {
+	    String ids = aggregate.get(PROPRIETARY_ID_COLUMN);
+
+	    if (ids != null && ids.length() > 0) {
+	      aggregate.put(PROPRIETARY_ID_COLUMN, ids + "," + proprietaryId);
+	    } else {
+	      aggregate.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	    }
+
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "Added proprietaryId = '" + proprietaryId + "'.");
+	  }
+
+	  continue;
+	}
+
+	aggregate = new HashMap<String, String>();
+
+	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	aggregate.put(PUBLISHER_NAME_COLUMN, publisherName);
+
+	publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	aggregate.put(NAME_COLUMN, publicationName);
+
+	proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	if (proprietaryId != null) {
+	  aggregate.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	}
+
+	pIssn = resultSet.getString(P_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+	aggregate.put(P_ISSN_TYPE, pIssn);
+
+	eIssn = resultSet.getString(E_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+	aggregate.put(E_ISSN_TYPE, eIssn);
+
+	String isPublisherInvolved =
+	    "" + resultSet.getBoolean(IS_PUBLISHER_INVOLVED_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "isPublisherInvolved = " + isPublisherInvolved);
+
+	aggregate.put(IS_PUBLISHER_INVOLVED_COLUMN, isPublisherInvolved);
+
+	String requestYear = "" + resultSet.getInt(REQUEST_YEAR_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "requestYear = " + requestYear);
+
+	aggregate.put(REQUEST_YEAR_COLUMN, requestYear);
+
+	String requestMonth = "" + resultSet.getInt(REQUEST_MONTH_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "requestMonth = " + requestMonth);
+
+	aggregate.put(REQUEST_MONTH_COLUMN, requestMonth);
+
+	String totalRequests = "" + resultSet.getInt(TOTAL_REQUESTS_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "totalRequests = " + totalRequests);
+
+	aggregate.put(TOTAL_REQUESTS_COLUMN, totalRequests);
+
+	String htmlRequests = "" + resultSet.getInt(HTML_REQUESTS_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "htmlRequests = " + htmlRequests);
+
+	aggregate.put(HTML_REQUESTS_COLUMN, htmlRequests);
+
+	String pdfRequests = "" + resultSet.getInt(PDF_REQUESTS_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "pdfRequests = " + pdfRequests);
+
+	aggregate.put(PDF_REQUESTS_COLUMN, pdfRequests);
+
+	aggregates.add(aggregate);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the journal type aggregates for backup";
+      log.error(message, sqle);
+      log.error("SQL = '" + SQL_QUERY_BACKUP_JOURNAL_TYPE_AGGREGATES_SELECT
+	  + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+      DbManager.safeCloseConnection(conn);
+    }
+
+    log.debug2(DEBUG_HEADER + "Done.");
+    return aggregates;
+  }
+
+  /**
+   * Writes to a stream the definition of a journal type request aggregate for
+   * backup purposes.
+   * 
+   * @param aggregate
+   *          A Map<String, String> with the journal type request aggregate
+   *          definition.
+   * @param outputStream
+   *          An OutputStream where to write the journal type request aggregate
+   *          data.
+   * 
+   * @throws IOException
+   */
+  private void writeJournalTypeAggregateBackupToStream(
+      Map<String, String> aggregate, OutputStream outputStream)
+	  throws IOException {
+    final String DEBUG_HEADER = "writeJournalTypeAggregateBackupToStream(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+
+    // Ignore empty aggregates.
+    if (aggregate == null || aggregate.size() == 0) {
+      log.warning("Empty journal type aggregate not added to backup file.");
+      return;
+    }
+
+    // Write the aggregate data.
+    StringBuilder entry = new StringBuilder(StringUtil
+	.blankOutNlsAndTabs(aggregate.get(PUBLISHER_NAME_COLUMN)));
+
+    entry.append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(NAME_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(PROPRIETARY_ID_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(P_ISSN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(E_ISSN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get(IS_PUBLISHER_INVOLVED_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(REQUEST_YEAR_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(REQUEST_MONTH_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(TOTAL_REQUESTS_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(HTML_REQUESTS_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(PDF_REQUESTS_COLUMN)));
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entry = " + entry);
+
+    // Write the entry to the output stream.
+    outputStream.write((entry.toString() + "\n")
+	.getBytes(Charset.forName("UTF-8")));
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the existing journal publication year request aggregates for
+   * backup purposes.
+   * 
+   * @return a List<Map<String, String>> with the existing journal type request
+   *         aggregates.
+   * @throws DbException
+   *           if there are problems accessing the database.
+   */
+  private List<Map<String, String>> findJournalPubYearAggregatesForBackup()
+      throws DbException {
+    final String DEBUG_HEADER = "findJournalPubYearAggregatesForBackup(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    Connection conn = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    List<Map<String, String>> aggregates =
+	new ArrayList<Map<String, String>>();
+    Map<String, String> aggregate = null;
+    String publisherName = null;
+    String publicationName = null;
+    String proprietaryId;
+    String pIssn;
+    String eIssn;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Prepare the statement used to get the existing aggregates.
+      statement = dbManager.prepareStatement(conn,
+	  SQL_QUERY_BACKUP_JOURNAL_PUBYEAR_AGGREGATES_SELECT);
+
+      resultSet = dbManager.executeQuery(statement);
+
+      while (resultSet.next()) {
+	// Check whether this publication is the same as the previous one.
+	if (resultSet.getString(PUBLISHER_NAME_COLUMN).equals(publisherName)
+	    && resultSet.getString(NAME_COLUMN).equals(publicationName)) {
+	  // Yes: This means that the publication has multiple values for the
+	  // proprietary identifier.
+	  proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	  // Add it to the list of proprietary identifiers, if it exists.
+	  if (!StringUtil.isNullString(proprietaryId)
+	      && !proprietaryId.equals(aggregate.get(PROPRIETARY_ID_COLUMN))) {
+	    String ids = aggregate.get(PROPRIETARY_ID_COLUMN);
+
+	    if (ids != null && ids.length() > 0) {
+	      aggregate.put(PROPRIETARY_ID_COLUMN, ids + "," + proprietaryId);
+	    } else {
+	      aggregate.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	    }
+
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "Added proprietaryId = '" + proprietaryId + "'.");
+	  }
+
+	  continue;
+	}
+
+	aggregate = new HashMap<String, String>();
+
+	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	aggregate.put(PUBLISHER_NAME_COLUMN, publisherName);
+
+	publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	aggregate.put(NAME_COLUMN, publicationName);
+
+	proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	if (proprietaryId != null) {
+	  aggregate.put(PROPRIETARY_ID_COLUMN, proprietaryId);
+	}
+
+	pIssn = resultSet.getString(P_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+	aggregate.put(P_ISSN_TYPE, pIssn);
+
+	eIssn = resultSet.getString(E_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+	aggregate.put(E_ISSN_TYPE, eIssn);
+
+	String isPublisherInvolved =
+	    "" + resultSet.getBoolean(IS_PUBLISHER_INVOLVED_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "isPublisherInvolved = " + isPublisherInvolved);
+
+	aggregate.put(IS_PUBLISHER_INVOLVED_COLUMN, isPublisherInvolved);
+
+	String requestYear = "" + resultSet.getInt(REQUEST_YEAR_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "requestYear = " + requestYear);
+
+	aggregate.put(REQUEST_YEAR_COLUMN, requestYear);
+
+	String requestMonth = "" + resultSet.getInt(REQUEST_MONTH_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "requestMonth = " + requestMonth);
+
+	aggregate.put(REQUEST_MONTH_COLUMN, requestMonth);
+
+	String pubYear = "" + resultSet.getInt(PUBLICATION_YEAR_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pubYear = " + pubYear);
+
+	aggregate.put(PUBLICATION_YEAR_COLUMN, pubYear);
+
+	String requests = "" + resultSet.getInt(REQUESTS_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "requests = " + requests);
+
+	aggregate.put(REQUESTS_COLUMN, requests);
+
+	aggregates.add(aggregate);
+      }
+    } catch (SQLException sqle) {
+      String message =
+	  "Cannot get the journal publication year aggregates for backup";
+      log.error(message, sqle);
+      log.error("SQL = '" + SQL_QUERY_BACKUP_JOURNAL_PUBYEAR_AGGREGATES_SELECT
+	  + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+      DbManager.safeCloseConnection(conn);
+    }
+
+    log.debug2(DEBUG_HEADER + "Done.");
+    return aggregates;
+  }
+
+  /**
+   * Writes to a stream the definition of a journal publication year request
+   * aggregate for backup purposes.
+   * 
+   * @param aggregate
+   *          A Map<String, String> with the journal publication year request
+   *          aggregate definition.
+   * @param outputStream
+   *          An OutputStream where to write the journal publication year
+   *          request aggregate data.
+   * 
+   * @throws IOException
+   */
+  private void writeJournalPubYearAggregateBackupToStream(
+      Map<String, String> aggregate, OutputStream outputStream)
+	  throws IOException {
+    final String DEBUG_HEADER =
+	"writeJournalPubYearAggregateBackupToStream(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+
+    // Ignore empty aggregates.
+    if (aggregate == null || aggregate.size() == 0) {
+      log.warning("Empty journal publication year aggregate not added to "
+	  + "backup file.");
+      return;
+    }
+
+    // Write the aggregate data.
+    StringBuilder entry = new StringBuilder(StringUtil
+	.blankOutNlsAndTabs(aggregate.get(PUBLISHER_NAME_COLUMN)));
+
+    entry.append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(NAME_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(PROPRIETARY_ID_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(P_ISSN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(E_ISSN_TYPE)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get(IS_PUBLISHER_INVOLVED_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(REQUEST_YEAR_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(REQUEST_MONTH_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate
+	.get(PUBLICATION_YEAR_COLUMN)))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(aggregate.get(REQUESTS_COLUMN)));
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entry = " + entry);
+
+    // Write the entry to the output stream.
+    outputStream.write((entry.toString() + "\n")
+	.getBytes(Charset.forName("UTF-8")));
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Loads into the system the aggregate statistics defined in backup files.
+   * 
+   * @param backupDir
+   *          A File with the directory where the backup files are stored.
+   */
+  public void loadAggregatesFromBackup(File backupDir) {
+    final String DEBUG_HEADER = "loadAggregatesFromBackup(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "backupDir = " + backupDir);
+
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+    } catch (DbException dbe) {
+      log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, dbe);
+
+      if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
+      return;
+    }
+
+    try {
+      // Get the book type aggregates backup file.
+      File backupFile =
+	  new File(backupDir, BOOK_TYPE_AGGREGATE_BACKUP_FILENAME);
+
+      // Check whether the backup file exists.
+      if (backupFile.exists()) {
+	// Yes: Get the book type aggregates defined in the backup file.
+	List<Map<String, String>> bookTypeAggregates =
+	    getBookTypeAggregatesFromBackupFile(backupFile);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "bookTypeAggregates.size() = " + bookTypeAggregates.size());
+
+	try {
+	  // Load the book type aggregates.
+	  for (Map<String, String> bookTypeAggregate : bookTypeAggregates) {
+	    loadBookTypeAggregate(conn, bookTypeAggregate);
+	  }
+
+	  DbManager.commitOrRollback(conn, log);
+	} catch (DbException dbe) {
+	  log.error("Exception caught persisting book type aggregates", dbe);
+
+	  try {
+	    DbManager.rollback(conn, log);
+	  } catch (DbException dbe2) {
+	    log.error("Exception caught rolling back transaction", dbe);
+	  }
+
+	  return;
+	}
+      } else {
+	// No.
+	if (log.isDebug()) log.debug("No COUNTER report statistics backup file "
+	    + "named '" + BOOK_TYPE_AGGREGATE_BACKUP_FILENAME
+	    + "' found in directory '" + backupDir + "'.");
+      }
+
+      // Get the journal type aggregates backup file.
+      backupFile = new File(backupDir, JOURNAL_TYPE_AGGREGATE_BACKUP_FILENAME);
+
+      // Check whether the backup file exists.
+      if (backupFile.exists()) {
+	// Yes: Get the journal type aggregates defined in the backup file.
+	List<Map<String, String>> journalTypeAggregates =
+	    getJournalTypeAggregatesFromBackupFile(backupFile);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "journalTypeAggregates.size() = " + journalTypeAggregates.size());
+
+	try {
+	  // Load the journal type aggregates.
+	  for (Map<String, String> journalTypeAggregate
+	      : journalTypeAggregates) {
+	    loadJournalTypeAggregate(conn, journalTypeAggregate);
+	  }
+
+	  DbManager.commitOrRollback(conn, log);
+	} catch (DbException dbe) {
+	  log.error("Exception caught persisting journal type aggregates", dbe);
+
+	  try {
+	    DbManager.rollback(conn, log);
+	  } catch (DbException dbe2) {
+	    log.error("Exception caught rolling back transaction", dbe);
+	  }
+
+	  return;
+	}
+      } else {
+	// No.
+	if (log.isDebug()) log.debug("No COUNTER report statistics backup file "
+	    + "named '" + JOURNAL_TYPE_AGGREGATE_BACKUP_FILENAME
+	    + "' found in directory '" + backupDir + "'.");
+      }
+
+      // Get the journal publication year aggregates backup file.
+      backupFile =
+	  new File(backupDir, JOURNAL_PUBYEAR_AGGREGATE_BACKUP_FILENAME);
+
+      // Check whether the backup file exists.
+      if (backupFile.exists()) {
+	// Yes: Get the journal publication year aggregates defined in the
+	// backup file.
+	List<Map<String, String>> journalPubYearAggregates =
+	    getJournalPubYearAggregatesFromBackupFile(backupFile);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "journalPubYearAggregates.size() = "
+	    + journalPubYearAggregates.size());
+
+	try {
+	  // Load the journal publication year aggregates.
+	  for (Map<String, String> journalPubYearAggregate
+	      : journalPubYearAggregates) {
+	    loadJournalPubYearAggregate(conn, journalPubYearAggregate);
+	  }
+
+	  DbManager.commitOrRollback(conn, log);
+	} catch (DbException dbe) {
+	  log.error("Exception caught persisting journal publication year "
+	      + "aggregates", dbe);
+
+	  try {
+	    DbManager.rollback(conn, log);
+	  } catch (DbException dbe2) {
+	    log.error("Exception caught rolling back transaction", dbe);
+	  }
+
+	  return;
+	}
+      } else {
+	// No.
+	if (log.isDebug()) log.debug("No COUNTER report statistics backup file "
+	    + "named '" + JOURNAL_PUBYEAR_AGGREGATE_BACKUP_FILENAME
+	    + "' found in directory '" + backupDir + "'.");
+      }
+    } finally {
+      DbManager.safeCloseConnection(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the book type aggregate statistics defined in a backup file.
+   * 
+   * @param backupFile
+   *          A File with the backup file.
+   * @return a List<Map<String, String>> with the book type aggregate statistics
+   *         defined in the backup file.
+   */
+  private List<Map<String, String>> getBookTypeAggregatesFromBackupFile(
+      File backupFile) {
+    final String DEBUG_HEADER = "getBookTypeAggregatesFromBackupFile(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "backupFile = " + backupFile);
+
+    List<Map<String, String>> aggregates = new ArrayList<Map<String, String>>();
+
+    InputStream is = null;
+    Reader r = null;
+    BufferedReader br = null;
+    Map<String, String> aggregate = null;
+
+    try {
+      String line;
+      is = new FileInputStream(backupFile);
+      r = new InputStreamReader(is, "UTF-8");
+      br = new BufferedReader(r);
+
+      // Loop through all the lines in the backup file.
+      while ((line = br.readLine()) != null) {
+	// Get the book type aggregate statistics defined in the line, if any.
+	aggregate = getBookTypeAggregatesFromBackupFileLine(line);
+
+	// Add the defined statistics to the results.
+	if (aggregate != null) {
+	  aggregates.add(aggregate);
+	}
+      }
+    } catch (Exception e) {
+      log.error("Exception caught processing COUNTER reports statistics backup "
+	  + "file = " + backupFile, e);
+    } finally {
+      if (br != null) {
+	try {
+	  br.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close BufferedReader for file = " + backupFile);
+	}
+      }
+
+      if (r != null) {
+	try {
+	  r.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close Reader for file = " + backupFile);
+	}
+      }
+
+      if (is != null) {
+	try {
+	  is.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close InputStream for file = " + backupFile);
+	}
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregates = " + aggregates);
+    return aggregates;
+  }
+
+  /**
+   * Provides the book type aggregate statistics defined in one line of a backup
+   * file.
+   * 
+   * @param line
+   *          A String with the book type aggregate statistics definition.
+   * @return a Map<String, String> with the book type aggregate statistics
+   *         defined in the line.
+   */
+  private Map<String, String> getBookTypeAggregatesFromBackupFileLine(
+      String line) {
+    final String DEBUG_HEADER = "getBookTypeAggregatesFromBackupFileLine(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "line = " + line);
+
+    // Ignore empty lines.
+    if (line == null || line.length() == 0) {
+      if (log.isDebug()) log.debug("No book type aggregate statistics "
+	  + "definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    // Parse the line.
+    Collection<String> items = StringUtil.breakAt(line, BACKUP_FIELD_SEPARATOR);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "items = " + items);
+
+    // Ignore lines that do not contain a complete definition.
+    if (items == null || items.size() < 14) {
+      if (log.isDebug()) log.debug("No book type aggregate statistics "
+	  + "definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    Map<String, String> aggregate = new HashMap<String, String>();
+    Iterator<String> iterator = items.iterator();
+
+    aggregate.put(PUBLISHER_NAME_COLUMN, iterator.next());
+    aggregate.put(NAME_COLUMN, iterator.next());
+    aggregate.put(PROPRIETARY_ID_COLUMN, iterator.next());
+    aggregate.put(P_ISBN_TYPE, iterator.next());
+    aggregate.put(E_ISBN_TYPE, iterator.next());
+    aggregate.put("series_" + NAME_COLUMN, iterator.next());
+    aggregate.put("series_" + PROPRIETARY_ID_COLUMN, iterator.next());
+    aggregate.put("series_" + P_ISSN_TYPE, iterator.next());
+    aggregate.put("series_" + E_ISSN_TYPE, iterator.next());
+    aggregate.put(IS_PUBLISHER_INVOLVED_COLUMN, iterator.next());
+    aggregate.put(REQUEST_YEAR_COLUMN, iterator.next());
+    aggregate.put(REQUEST_MONTH_COLUMN, iterator.next());
+    aggregate.put(FULL_REQUESTS_COLUMN, iterator.next());
+    aggregate.put(SECTION_REQUESTS_COLUMN, iterator.next());
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+    return aggregate;
+  }
+
+  /**
+   * Loads into the system a set of book type aggregate statistics.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param aggregate
+   *          A Map<String, String> with the book type aggregate statistics.
+   */
+  private void loadBookTypeAggregate(Connection conn,
+      Map<String, String> aggregate) throws DbException {
+    final String DEBUG_HEADER = "loadBookTypeAggregate(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+
+    String publisherName = aggregate.get(PUBLISHER_NAME_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+    Long publisherSeq = dbManager.findOrCreatePublisher(conn, publisherName);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+
+    if (publisherSeq == null) {
+      log.error("Cannot get the identifier of publisher '" + publisherName
+	  + "'.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Book type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+	return;
+      }
+    }
+
+    String publicationName = aggregate.get(NAME_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+    String pIsbn = aggregate.get(P_ISBN_TYPE);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
+
+    String eIsbn = aggregate.get(E_ISBN_TYPE);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
+
+    String seriesPublicationName = aggregate.get("series_" + NAME_COLUMN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "seriesPublicationName = " + seriesPublicationName);
+
+    Long publicationSeq;
+
+    if (!StringUtil.isNullString(seriesPublicationName)) {
+      String pIssn = aggregate.get("series_" + P_ISSN_TYPE);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+      String eIssn = aggregate.get("series_" + E_ISSN_TYPE);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+      publicationSeq = metadataManager.findOrCreateBookInBookSeries(conn,
+	  publisherSeq, pIssn, eIssn, pIsbn, eIsbn, seriesPublicationName, null,
+	  publicationName, null);
+    } else {
+      publicationSeq = metadataManager.findOrCreateBook(conn, publisherSeq,
+	  null, pIsbn, eIsbn, publicationName, null);
+    }
+
+    if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    if (publicationSeq == null) {
+      log.error("Cannot get the identifier of publication '" + publicationName
+	  + "'.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Book type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+	return;
+      }
+    }
+
+    String proprietaryIds = aggregate.get(PROPRIETARY_ID_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "proprietaryIds = " + proprietaryIds);
+
+    if (proprietaryIds != null && proprietaryIds.length() > 0) {
+      Collection<String> pIds =
+	  StringUtil.breakAt(proprietaryIds, BACKUP_FIELD_SEPARATOR);
+
+      Long mdItemSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      metadataManager.addNewMdItemProprietaryIds(conn, mdItemSeq, pIds);
+    }
+
+    String seriesProprietaryIds =
+	aggregate.get("series_" + PROPRIETARY_ID_COLUMN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "seriesProprietaryIds = " + seriesProprietaryIds);
+
+    if (seriesProprietaryIds != null && seriesProprietaryIds.length() > 0) {
+      Collection<String> pIds =
+	  StringUtil.breakAt(seriesProprietaryIds, BACKUP_FIELD_SEPARATOR);
+
+      Long mdItemSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      Long parentSeq =
+	  metadataManager.findParentMetadataItem(conn, mdItemSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "parentSeq = " + parentSeq);
+
+      metadataManager.addNewMdItemProprietaryIds(conn, parentSeq, pIds);
+    }
+
+    boolean publisherInvolved =
+	Boolean.parseBoolean(aggregate.get(IS_PUBLISHER_INVOLVED_COLUMN));
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
+
+    int year = -1;
+
+    try {
+      year = Integer.parseInt(aggregate.get(REQUEST_YEAR_COLUMN));
+    } catch (NumberFormatException nfe) {
+      log.error("The request year '" + aggregate.get(REQUEST_YEAR_COLUMN)
+	  + "' cannot be converted into a number.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Book type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+        return;
+      }
+    }
+
+    int month = -1;
+
+    try {
+      month = Integer.parseInt(aggregate.get(REQUEST_MONTH_COLUMN));
+    } catch (NumberFormatException nfe) {
+      log.error("The request month '" + aggregate.get(REQUEST_MONTH_COLUMN)
+	  + "' cannot be converted into a number.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Book type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+        return;
+      }
+    }
+
+    // Retrieve the previous aggregate of book requests.
+    if (getExistingAggregateMonthBookTypes(year, month, publicationSeq,
+	publisherInvolved, conn) == null) {
+
+      int fullCount = -1;
+
+      try {
+	fullCount = Integer.parseInt(aggregate.get(FULL_REQUESTS_COLUMN));
+      } catch (NumberFormatException nfe) {
+        log.error("The count of full requests '"
+            + aggregate.get(FULL_REQUESTS_COLUMN)
+            + "' cannot be converted into a number.");
+
+        if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+          throw new DbException("Error loading COUNTER aggregate statistics");
+        } else {
+          log.error("Book type aggregate statistics '" + aggregate
+              + "' not loaded.");
+          return;
+        }
+      }
+
+      int sectionCount = -1;
+
+      try {
+	sectionCount =
+	    Integer.parseInt(aggregate.get(SECTION_REQUESTS_COLUMN));
+      } catch (NumberFormatException nfe) {
+        log.error("The count of section requests '"
+            + aggregate.get(SECTION_REQUESTS_COLUMN)
+            + "' cannot be converted into a number.");
+
+        if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+          throw new DbException("Error loading COUNTER aggregate statistics");
+        } else {
+          log.error("Book type aggregate statistics '" + aggregate
+              + "' not loaded.");
+          return;
+        }
+      }
+
+      insertBookTypeAggregate(year, month, publicationSeq, publisherInvolved,
+	  fullCount, sectionCount, conn);
+
+    } else {
+      log.error("Book type aggregate statistics already exist.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Book type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return;
+  }
+
+  /**
+   * Provides the journal type aggregate statistics defined in a backup file.
+   * 
+   * @param backupFile
+   *          A File with the backup file.
+   * @return a List<Map<String, String>> with the journal type aggregate
+   *         statistics defined in the backup file.
+   */
+  private List<Map<String, String>> getJournalTypeAggregatesFromBackupFile(
+      File backupFile) {
+    final String DEBUG_HEADER = "getJournalTypeAggregatesFromBackupFile(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "backupFile = " + backupFile);
+
+    List<Map<String, String>> aggregates = new ArrayList<Map<String, String>>();
+
+    InputStream is = null;
+    Reader r = null;
+    BufferedReader br = null;
+    Map<String, String> aggregate = null;
+
+    try {
+      String line;
+      is = new FileInputStream(backupFile);
+      r = new InputStreamReader(is, "UTF-8");
+      br = new BufferedReader(r);
+
+      // Loop through all the lines in the backup file.
+      while ((line = br.readLine()) != null) {
+	// Get the journal type aggregate statistics defined in the line, if
+	// any.
+	aggregate = getJournalTypeAggregatesFromBackupFileLine(line);
+
+	// Add the defined statistics to the results.
+	if (aggregate != null) {
+	  aggregates.add(aggregate);
+	}
+      }
+    } catch (Exception e) {
+      log.error("Exception caught processing COUNTER reports statistics backup "
+	  + "file = " + backupFile, e);
+    } finally {
+      if (br != null) {
+	try {
+	  br.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close BufferedReader for file = " + backupFile);
+	}
+      }
+
+      if (r != null) {
+	try {
+	  r.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close Reader for file = " + backupFile);
+	}
+      }
+
+      if (is != null) {
+	try {
+	  is.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close InputStream for file = " + backupFile);
+	}
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregates = " + aggregates);
+    return aggregates;
+  }
+
+  /**
+   * Provides the journal type aggregate statistics defined in one line of a
+   * backup file.
+   * 
+   * @param line
+   *          A String with the journal type aggregate statistics definition.
+   * @return a Map<String, String> with the journal type aggregate statistics
+   *         defined in the line.
+   */
+  private Map<String, String> getJournalTypeAggregatesFromBackupFileLine(
+      String line) {
+    final String DEBUG_HEADER =
+	"getJournalTypeAggregatesFromBackupFileLine(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "line = " + line);
+
+    // Ignore empty lines.
+    if (line == null || line.length() == 0) {
+      if (log.isDebug()) log.debug("No journal type aggregate statistics "
+	  + "definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    // Parse the line.
+    Collection<String> items = StringUtil.breakAt(line, BACKUP_FIELD_SEPARATOR);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "items = " + items);
+
+    // Ignore lines that do not contain a complete definition.
+    if (items == null || items.size() < 11) {
+      if (log.isDebug()) log.debug("No journal type aggregate statistics "
+	  + "definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    Map<String, String> aggregate = new HashMap<String, String>();
+    Iterator<String> iterator = items.iterator();
+
+    aggregate.put(PUBLISHER_NAME_COLUMN, iterator.next());
+    aggregate.put(NAME_COLUMN, iterator.next());
+    aggregate.put(PROPRIETARY_ID_COLUMN, iterator.next());
+    aggregate.put(P_ISSN_TYPE, iterator.next());
+    aggregate.put(E_ISSN_TYPE, iterator.next());
+    aggregate.put(IS_PUBLISHER_INVOLVED_COLUMN, iterator.next());
+    aggregate.put(REQUEST_YEAR_COLUMN, iterator.next());
+    aggregate.put(REQUEST_MONTH_COLUMN, iterator.next());
+    aggregate.put(TOTAL_REQUESTS_COLUMN, iterator.next());
+    aggregate.put(HTML_REQUESTS_COLUMN, iterator.next());
+    aggregate.put(PDF_REQUESTS_COLUMN, iterator.next());
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+    return aggregate;
+  }
+
+  /**
+   * Loads into the system a set of journal type aggregate statistics.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param aggregate
+   *          A Map<String, String> with the journal type aggregate statistics.
+   */
+  private void loadJournalTypeAggregate(Connection conn,
+      Map<String, String> aggregate) throws DbException {
+    final String DEBUG_HEADER = "loadJournalTypeAggregate(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+
+    String publisherName = aggregate.get(PUBLISHER_NAME_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+    Long publisherSeq = dbManager.findOrCreatePublisher(conn, publisherName);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+
+    if (publisherSeq == null) {
+      log.error("Cannot get the identifier of publisher '" + publisherName
+	  + "'.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Journal type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+	return;
+      }
+    }
+
+    String publicationName = aggregate.get(NAME_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+    String pIssn = aggregate.get(P_ISSN_TYPE);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+    String eIssn = aggregate.get(E_ISSN_TYPE);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+    Long publicationSeq = metadataManager.findOrCreateJournal(conn,
+	publisherSeq, pIssn, eIssn, publicationName, null);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    if (publicationSeq == null) {
+      log.error("Cannot get the identifier of publication '" + publicationName
+	  + "'.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Journal type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+	return;
+      }
+    }
+
+    String proprietaryIds = aggregate.get(PROPRIETARY_ID_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "proprietaryIds = " + proprietaryIds);
+
+    if (proprietaryIds != null && proprietaryIds.length() > 0) {
+      Collection<String> pIds =
+	  StringUtil.breakAt(proprietaryIds, BACKUP_FIELD_SEPARATOR);
+
+      Long mdItemSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      metadataManager.addNewMdItemProprietaryIds(conn, mdItemSeq, pIds);
+    }
+
+    boolean publisherInvolved =
+	Boolean.parseBoolean(aggregate.get(IS_PUBLISHER_INVOLVED_COLUMN));
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
+
+    int year = -1;
+
+    try {
+      year = Integer.parseInt(aggregate.get(REQUEST_YEAR_COLUMN));
+    } catch (NumberFormatException nfe) {
+      log.error("The request year '" + aggregate.get(REQUEST_YEAR_COLUMN)
+	  + "' cannot be converted into a number.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Journal type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+	return;
+      }
+    }
+
+    int month = -1;
+
+    try {
+      month = Integer.parseInt(aggregate.get(REQUEST_MONTH_COLUMN));
+    } catch (NumberFormatException nfe) {
+      log.error("The request month '" + aggregate.get(REQUEST_MONTH_COLUMN)
+	  + "' cannot be converted into a number.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Journal type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+	return;
+      }
+    }
+
+    // Retrieve the previous aggregate of journal requests.
+    if (getExistingAggregateMonthJournalTypes(year, month, publicationSeq,
+	publisherInvolved, conn) == null) {
+
+      int totalCount = -1;
+
+      try {
+	totalCount = Integer.parseInt(aggregate.get(TOTAL_REQUESTS_COLUMN));
+      } catch (NumberFormatException nfe) {
+        log.error("The count of total requests '"
+            + aggregate.get(TOTAL_REQUESTS_COLUMN)
+            + "' cannot be converted into a number.");
+
+        if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+          throw new DbException("Error loading COUNTER aggregate statistics");
+        } else {
+          log.error("Journal type aggregate statistics '" + aggregate
+              + "' not loaded.");
+          return;
+        }
+      }
+
+      int htmlCount = -1;
+
+      try {
+	htmlCount = Integer.parseInt(aggregate.get(HTML_REQUESTS_COLUMN));
+      } catch (NumberFormatException nfe) {
+        log.error("The count of HTML requests '"
+            + aggregate.get(SECTION_REQUESTS_COLUMN)
+            + "' cannot be converted into a number.");
+
+        if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+          throw new DbException("Error loading COUNTER aggregate statistics");
+        } else {
+          log.error("Journal type aggregate statistics '" + aggregate
+              + "' not loaded.");
+          return;
+        }
+      }
+
+      int pdfCount = -1;
+
+      try {
+	pdfCount = Integer.parseInt(aggregate.get(PDF_REQUESTS_COLUMN));
+      } catch (NumberFormatException nfe) {
+        log.error("The count of PDF requests '"
+            + aggregate.get(SECTION_REQUESTS_COLUMN)
+            + "' cannot be converted into a number.");
+
+        if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+          throw new DbException("Error loading COUNTER aggregate statistics");
+        } else {
+          log.error("Journal type aggregate statistics '" + aggregate
+              + "' not loaded.");
+          return;
+        }
+      }
+
+      insertJournalTypeAggregate(year, month, publicationSeq, publisherInvolved,
+	  totalCount, htmlCount, pdfCount, conn);
+
+    } else {
+      log.error("Journal type aggregate statistics already exist.");
+
+      if (ALL_PUBLISHERS_NAME.equals(publisherName)) {
+	throw new DbException("Error loading COUNTER aggregate statistics");
+      } else {
+	log.error("Journal type aggregate statistics '" + aggregate
+	    + "' not loaded.");
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return;
+  }
+
+  /**
+   * Provides the journal publication year aggregate statistics defined in a
+   * backup file.
+   * 
+   * @param backupFile
+   *          A File with the backup file.
+   * @return a List<Map<String, String>> with the journal publication year
+   *         aggregate statistics defined in the backup file.
+   */
+  private List<Map<String, String>> getJournalPubYearAggregatesFromBackupFile(
+      File backupFile) {
+    final String DEBUG_HEADER = "getJournalPubYearAggregatesFromBackupFile(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "backupFile = " + backupFile);
+
+    List<Map<String, String>> aggregates = new ArrayList<Map<String, String>>();
+
+    InputStream is = null;
+    Reader r = null;
+    BufferedReader br = null;
+    Map<String, String> aggregate = null;
+
+    try {
+      String line;
+      is = new FileInputStream(backupFile);
+      r = new InputStreamReader(is, "UTF-8");
+      br = new BufferedReader(r);
+
+      // Loop through all the lines in the backup file.
+      while ((line = br.readLine()) != null) {
+	// Get the journal publication year aggregate statistics defined in the
+	// line, if any.
+	aggregate = getJournalPubYearAggregatesFromBackupFileLine(line);
+
+	// Add the defined statistics to the results.
+	if (aggregate != null) {
+	  aggregates.add(aggregate);
+	}
+      }
+    } catch (Exception e) {
+      log.error("Exception caught processing COUNTER reports statistics backup "
+	  + "file = " + backupFile, e);
+    } finally {
+      if (br != null) {
+	try {
+	  br.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close BufferedReader for file = " + backupFile);
+	}
+      }
+
+      if (r != null) {
+	try {
+	  r.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close Reader for file = " + backupFile);
+	}
+      }
+
+      if (is != null) {
+	try {
+	  is.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close InputStream for file = " + backupFile);
+	}
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregates = " + aggregates);
+    return aggregates;
+  }
+
+  /**
+   * Provides the journal publication year aggregate statistics defined in one
+   * line of a backup file.
+   * 
+   * @param line
+   *          A String with the journal publication year aggregate statistics
+   *          definition.
+   * @return a Map<String, String> with the journal publication year aggregate
+   *         statistics defined in the line.
+   */
+  private Map<String, String> getJournalPubYearAggregatesFromBackupFileLine(
+      String line) {
+    final String DEBUG_HEADER =
+	"getJournalPubYearAggregatesFromBackupFileLine(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "line = " + line);
+
+    // Ignore empty lines.
+    if (line == null || line.length() == 0) {
+      if (log.isDebug()) log.debug("No journal publication year aggregate "
+	  + "statistics definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    // Parse the line.
+    Collection<String> items = StringUtil.breakAt(line, BACKUP_FIELD_SEPARATOR);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "items = " + items);
+
+    // Ignore lines that do not contain a complete definition.
+    if (items == null || items.size() < 10) {
+      if (log.isDebug()) log.debug("No journal publication year aggregate "
+	  + "statistics definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    Map<String, String> aggregate = new HashMap<String, String>();
+    Iterator<String> iterator = items.iterator();
+
+    aggregate.put(PUBLISHER_NAME_COLUMN, iterator.next());
+    aggregate.put(NAME_COLUMN, iterator.next());
+    aggregate.put(PROPRIETARY_ID_COLUMN, iterator.next());
+    aggregate.put(P_ISSN_TYPE, iterator.next());
+    aggregate.put(E_ISSN_TYPE, iterator.next());
+    aggregate.put(IS_PUBLISHER_INVOLVED_COLUMN, iterator.next());
+    aggregate.put(REQUEST_YEAR_COLUMN, iterator.next());
+    aggregate.put(REQUEST_MONTH_COLUMN, iterator.next());
+    aggregate.put(PUBLICATION_YEAR_COLUMN, iterator.next());
+    aggregate.put(REQUESTS_COLUMN, iterator.next());
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+    return aggregate;
+  }
+
+  /**
+   * Loads into the system a set of journal publication year aggregate
+   * statistics.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param aggregate
+   *          A Map<String, String> with the journal publication year aggregate
+   *          statistics.
+   */
+  private void loadJournalPubYearAggregate(Connection conn,
+      Map<String, String> aggregate) throws DbException {
+    final String DEBUG_HEADER = "loadJournalPubYearAggregate(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aggregate = " + aggregate);
+
+    String publisherName = aggregate.get(PUBLISHER_NAME_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+    Long publisherSeq = dbManager.findOrCreatePublisher(conn, publisherName);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+
+    if (publisherSeq == null) {
+      log.error("Cannot get the identifier of publisher '" + publisherName
+	  + "'.");
+      log.error("Journal publication year aggregate statistics '" + aggregate
+	  + "' not loaded.");
+      return;
+    }
+
+    String publicationName = aggregate.get(NAME_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+    String pIssn = aggregate.get(P_ISSN_TYPE);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+    String eIssn = aggregate.get(E_ISSN_TYPE);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+    Long publicationSeq = metadataManager.findOrCreateJournal(conn,
+	publisherSeq, pIssn, eIssn, publicationName, null);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    if (publicationSeq == null) {
+      log.error("Cannot get the identifier of publication '" + publicationName
+	  + "'.");
+      log.error("Journal publication year aggregate statistics '" + aggregate
+	  + "' not loaded.");
+      return;
+    }
+
+    String proprietaryIds = aggregate.get(PROPRIETARY_ID_COLUMN);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "proprietaryIds = " + proprietaryIds);
+
+    if (proprietaryIds != null && proprietaryIds.length() > 0) {
+      Collection<String> pIds =
+	  StringUtil.breakAt(proprietaryIds, BACKUP_FIELD_SEPARATOR);
+
+      Long mdItemSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      metadataManager.addNewMdItemProprietaryIds(conn, mdItemSeq, pIds);
+    }
+
+    boolean publisherInvolved =
+	Boolean.parseBoolean(aggregate.get(IS_PUBLISHER_INVOLVED_COLUMN));
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
+
+    int year = -1;
+
+    try {
+      year = Integer.parseInt(aggregate.get(REQUEST_YEAR_COLUMN));
+    } catch (NumberFormatException nfe) {
+      log.error("The request year '" + aggregate.get(REQUEST_YEAR_COLUMN)
+	  + "' cannot be converted into a number.");
+      log.error("Journal publication year aggregate statistics '" + aggregate
+	  + "' not loaded.");
+      return;
+    }
+
+    int month = -1;
+
+    try {
+      month = Integer.parseInt(aggregate.get(REQUEST_MONTH_COLUMN));
+    } catch (NumberFormatException nfe) {
+      log.error("The request month '" + aggregate.get(REQUEST_MONTH_COLUMN)
+	  + "' cannot be converted into a number.");
+      log.error("Journal publication year aggregate statistics '" + aggregate
+	  + "' not loaded.");
+      return;
+    }
+
+    int publicationYear = -1;
+
+    try {
+      publicationYear =
+	  Integer.parseInt(aggregate.get(PUBLICATION_YEAR_COLUMN));
+    } catch (NumberFormatException nfe) {
+      log.error("The publication year '"
+	  + aggregate.get(PUBLICATION_YEAR_COLUMN)
+	  + "' cannot be converted into a number.");
+      log.error("Journal publication year aggregate statistics '" + aggregate
+	  + "' not loaded.");
+      return;
+    }
+
+    // Retrieve the previous aggregate of journal requests.
+    if (getExistingAggregateMonthJournalPubYear(year, month, publicationSeq,
+	publisherInvolved, publicationYear, conn) == null) {
+
+      int requests = -1;
+
+      try {
+	requests = Integer.parseInt(aggregate.get(REQUESTS_COLUMN));
+      } catch (NumberFormatException nfe) {
+        log.error("The count of requests '" + aggregate.get(REQUESTS_COLUMN)
+            + "' cannot be converted into a number.");
+        log.error("Journal publication year aggregate statistics '" + aggregate
+            + "' not loaded.");
+        return;
+      }
+
+      insertTitlePubYearAggregate(year, month, publicationSeq,
+	  publisherInvolved, publicationYear, requests, conn);
+
+    } else {
+      log.error("Journal publication year aggregate statistics already exist.");
+      log.error("Journal publication year aggregate statistics '" + aggregate
+          + "' not loaded.");
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return;
   }
 }
