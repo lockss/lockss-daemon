@@ -343,7 +343,7 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2015 ; Computational Cognitive Science Volume 1 ; 1 >
+        au < crawling ; exists ; 2015 ; Computational Cognitive Science Volume 1 ; 1 >
   
     }
   
@@ -2129,7 +2129,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < crawling ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
-        au < ready ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
 
     }
 

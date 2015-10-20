@@ -1995,7 +1995,7 @@
       au < finished ; crawling ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 >
       au < finished ; crawling ; 2014 ; Addiction Science & Clinical Practice Volume 9 ; 9 >
-      au < ready ; exists ; 2015 ; Addiction Science & Clinical Practice Volume 10 ; 10 >
+      au < crawling ; exists ; 2015 ; Addiction Science & Clinical Practice Volume 10 ; 10 >
 
     }
 
@@ -2262,7 +2262,7 @@
       au < finished ; crawling ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
       au < finished ; crawling ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
-      au < ready ; exists ; 2015 ; Aquatic Biosystems Volume 11 ; 11 >
+      au < crawling ; exists ; 2015 ; Aquatic Biosystems Volume 11 ; 11 >
 
     }
 
@@ -2283,7 +2283,7 @@
       au < finished ; crawling ; 2012 ; Archives of Public Health Volume 70 ; 70 >
       au < crawling ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 >
       au < finished ; crawling ; 2014 ; Archives of Public Health Volume 72 ; 72 >
-      au < ready ; exists ; 2015 ; Archives of Public Health Volume 73 ; 73 >
+      au < crawling ; exists ; 2015 ; Archives of Public Health Volume 73 ; 73 >
 
     }
 
@@ -2465,7 +2465,7 @@
       au < finished ; frozen ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
       au < crawling ; exists ; 2014 ; Biological Procedures Online Volume 16 ; 16 >
-      au < ready ; exists ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
+      au < crawling ; exists ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
 
     }
 
@@ -2480,7 +2480,7 @@
       param[journal_issn] = 0717-6287
 
       au < frozen ; exists ; 2014 ; Biological Research Volume 47 ; 47 >
-      au < ready ; exists ; 2015 ; Biological Research Volume 48 ; 48 >
+      au < crawling ; exists ; 2015 ; Biological Research Volume 48 ; 48 >
 
     }
 
@@ -3214,7 +3214,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < frozen ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 >
-      au < ready ; exists ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
+      au < crawling ; exists ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
 
     }
 
@@ -3233,7 +3233,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
       au < finished ; crawling ; 2014 ; Clinical Epigenetics Volume 6 ; 6 >
-      au < ready ; exists ; 2015 ; Clinical Epigenetics Volume 7 ; 7 >
+      au < crawling ; exists ; 2015 ; Clinical Epigenetics Volume 7 ; 7 >
 
     }
 
