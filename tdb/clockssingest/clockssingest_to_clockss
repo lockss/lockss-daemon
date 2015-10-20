@@ -10,5 +10,5 @@ if [ "${CLOCKSS}" != "1" ]; then
   exit 1
 fi
 for f in *.tdb ; do
-  cat $f | sed -e 's@status ; status2@status1 ; status@' -e 's@comment\[proxy\]@proxy@' > ../clockss/$f
+  cat $f | sed -e 's@status ; status2@status1 ; status@' -e 's@hidden\[proxy\]@proxy@' > ../clockss/$f
 done
