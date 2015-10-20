@@ -21741,6 +21741,22 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of Cerebral Blood Flow & Metabolism ;
+      issn = 0271-678X ;
+      eissn = 1559-7016
+    >
+
+      param[base_url] = http://jcb.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
@@ -39175,6 +39191,21 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = SAGE Open Nursing ;
+      eissn = 2377-9608
+    >
+
+      param[base_url] = http://son.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; SAGE Open Nursing Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
@@ -39265,6 +39296,21 @@ comment[mpj] = now published by Brill
       au < manifest ; 2015 ; Scandinavian Journal of Surgery Volume 104 ; 104 >
 
     }
+
+  {
+
+    title <
+      name = Scars, Burns & Healing ;
+      eissn = 2059-5131
+    >
+
+      param[base_url] = http://sbh.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Scars, Burns & Healing Volume 1 ; 1 >
+
+  }
 
     {
 

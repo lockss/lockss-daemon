@@ -19278,6 +19278,21 @@
   {
 
     title <
+      name = Journal of Cerebral Blood Flow & Metabolism ;
+      issn = 0271-678X ;
+      eissn = 1559-7016
+    >
+
+      param[base_url] = http://jcb.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < expected ; exists ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Child Health Care ;
       issn = 1367-4935 ;
       eissn = 1741-2889
@@ -35820,6 +35835,20 @@
   {
 
     title <
+      name = SAGE Open Nursing ;
+      eissn = 2377-9608
+    >
+
+      param[base_url] = http://son.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; SAGE Open Nursing Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Scandinavian Journal of Public Health ;
       issn = 1403-4948 ;
       eissn = 1651-1905
@@ -35914,6 +35943,20 @@
     au < crawling ; exists ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 ; >
     au < finished ; crawling ; 2014 ; Scandinavian Journal of Surgery Volume 103 ; 103 ; >
     au < crawling ; exists ; 2015 ; Scandinavian Journal of Surgery Volume 104 ; 104 ; >
+
+  }
+
+  {
+
+    title <
+      name = Scars, Burns & Healing ;
+      eissn = 2059-5131
+    >
+
+      param[base_url] = http://sbh.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2015 ; Scars, Burns & Healing Volume 1 ; 1 ; >
 
   }
 
