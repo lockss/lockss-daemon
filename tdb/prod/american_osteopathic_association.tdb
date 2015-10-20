@@ -13,23 +13,26 @@
       issnl = 0098-6151
     >
     
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
 
     {
     
-    param[base_url] = http://www.jaoa.osteopathic.org/
-    comment[moved] = changed url at start of 2015
-    comment[notReady] = Unable to populate permission
+    plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+    implicit < status ; year ; name ; param[year] >
+    param[base_url] = http://jaoa.org/
+    param[resource_id] = 0  #Needs resource_id !!!!
+    
+    comment[moved] = changed url, moved to Silverchair.
 
-    au < notReady ; 2013 ; JAOA: Journal of the American Osteopathic Association Volume 113 ; 113 >
-    au < notReady ; 2014 ; JAOA: Journal of the American Osteopathic Association Volume 114 ; 114 >
-    au < manifest ; 2015 ; JAOA: Journal of the American Osteopathic Association Volume 115 ; 115 >
+    au < exists ; 2013 ; JAOA: Journal of the American Osteopathic Association Volume 113 ; 2013 >
+    au < exists ; 2014 ; JAOA: Journal of the American Osteopathic Association Volume 114 ; 2014 >
+    au < exists ; 2015 ; JAOA: Journal of the American Osteopathic Association Volume 115 ; 2015 >
 
     }
 
     {
     
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.jaoa.org/
 
     au < down ; 1950-1951 ; JAOA: Journal of the American Osteopathic Association Volume 50 [tables of contents only] ; 50 >
