@@ -43,7 +43,8 @@
     au < crawling ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
     au < crawling ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
+    au < notReady ; exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
+    #PD-1561 damaged PDF file
   
   }
 
@@ -150,7 +151,7 @@
     au < crawling ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
     au < manifest ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 >
+    au < ready ; exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 >
     
   }
 
@@ -188,7 +189,7 @@
     au < crawling ; exists ; 2012 ; JAMA Surgery Volume 147 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
     au < crawling ; exists ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Surgery Volume 150 ; 2015 >
+    au < ready ; exists ; 2015 ; JAMA Surgery Volume 150 ; 2015 >
   
   }
 
