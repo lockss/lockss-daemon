@@ -517,7 +517,6 @@
 
     param[journal_issn] = 1748-9326
     comment[ingNotReady] = crawl failed, Fetch error - access denied, RU4441
-    #notReady for 403 Forbidden - login required
 
     au < doNotProcess ; doNotProcess ; 2006 ; Environmental Research Letters Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
@@ -528,7 +527,7 @@
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 > 
     au < down ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 > 
     au < down ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
-    au < notReady ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
+    au < doNotProcess ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 > 
 
   }
 
@@ -1656,7 +1655,7 @@
     au < down ; crawling ; 2012 ; Journal of Physics D: Applied Physics Volume 45 ; 45 > 
     au < down ; exists ; 2013 ; Journal of Physics D: Applied Physics Volume 46 ; 46 > 
     au < down ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
-    au < notReady ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 > #PD-1361 login required
+    au < doNotProcess ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 > #PD-1361 login required
 
   }
 
@@ -2656,7 +2655,6 @@
     
     param[journal_issn] = 1612-202X
     comment[param] = eissn preferred
-    #notReady - PD-1361, login required
 
     au < doNotProcess ; doNotProcess ; 2004 ; Laser Physics Letters Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
@@ -2669,7 +2667,7 @@
     au < down ; crawling ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
     au < down ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
     au < down ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
-    au < notReady ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
+    au < doNotProcess ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
 
   }
 
@@ -2826,7 +2824,6 @@
 
     param[journal_issn] = 0965-0393
     comment[param] = print issn preferred
-    #notReady - login required
 
     au < doNotProcess ; doNotProcess ; 1992-1993 ; Modelling and Simulation in Materials Science and Engineering Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 1994 ; Modelling and Simulation in Materials Science and Engineering Volume 2 ; 2 > 
@@ -2850,7 +2847,7 @@
     au < down ; crawling ; 2012 ; Modelling and Simulation in Materials Science and Engineering Volume 20 ; 20 > 
     au < down ; exists ; 2013 ; Modelling and Simulation in Materials Science and Engineering Volume 21 ; 21 > 
     au < down ; exists ; 2014 ; Modelling and Simulation in Materials Science and Engineering Volume 22 ; 22 > 
-    au < notReady ; exists ; 2015 ; Modelling and Simulation in Materials Science and Engineering Volume 23 ; 23 > 
+    au < doNotProcess ; exists ; 2015 ; Modelling and Simulation in Materials Science and Engineering Volume 23 ; 23 > 
 
   }
 
