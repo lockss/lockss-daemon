@@ -242,7 +242,11 @@ implements SourceXmlSchemaHelper {
   private static String JATS_ameta =  "front/article-meta";
   
   private static String JATS_jtitle = JATS_jmeta + "/journal-title-group";
-  private static String JATS_issn = JATS_jmeta + "/issn";
+  // no attribute at all, or might specify type of issn
+  private static String JATS_issn = JATS_jmeta + "/issn[not(@*)]";
+  // leave public for post-processing
+  public static String JATS_pissn = JATS_jmeta + "/issn[@pub-type = \"ppub\"]";
+  private static String JATS_eissn = JATS_jmeta + "/issn[@pub-type = \"epub\"]";
   private static String JATS_pubname = JATS_jmeta + "/publisher/publisher-name";
   
   private static String JATS_doi =  JATS_ameta + "/article-id[@pub-id-type = \"doi\"]";
@@ -256,9 +260,11 @@ implements SourceXmlSchemaHelper {
   // The date could be identified by new or by older tag attributes
   // as a backup
   private static String pubdate_attr_options = "@date-type = \"pub\" or @pub-type = \"ppub\"" +
-      " or @pub-type = \"epub\" or @pub-type = \"epub-ppub\" or @pub-type = \"pub\"";
+      " or @pub-type = \"pub\"";
+  private static String epubdate_attr_options = "@pub-type = \"epub\" or @pub-type = \"epub-ppub\"";
 
   public static String JATS_date = JATS_ameta + "/pub-date[" + pubdate_attr_options +"]";
+  public static String JATS_edate = JATS_ameta + "/pub-date[" + epubdate_attr_options +"]";
   private static String JATS_contrib = JATS_ameta + "/contrib-group/contrib/name";
   
   /*
@@ -271,6 +277,8 @@ implements SourceXmlSchemaHelper {
   static {
     JATS_articleMap.put(JATS_jtitle, JATS_TITLE_VALUE);
     JATS_articleMap.put(JATS_issn, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_pissn, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_pubname, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_doi, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_atitle, JATS_TITLE_VALUE);
@@ -279,6 +287,7 @@ implements SourceXmlSchemaHelper {
     JATS_articleMap.put(JATS_fpage, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_lpage, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_date, JATS_DATE_VALUE);
+    JATS_articleMap.put(JATS_edate, JATS_DATE_VALUE);
     JATS_articleMap.put(JATS_copydate, XmlDomMetadataExtractor.TEXT_VALUE); 
     JATS_articleMap.put(JATS_contrib, JATS_AUTHOR_VALUE);
 
@@ -299,7 +308,9 @@ implements SourceXmlSchemaHelper {
     cookMap.put(JATS_jtitle, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(JATS_atitle, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(JATS_doi, MetadataField.FIELD_DOI);
+    // we'll pick up the pissn later if this one isn't there
     cookMap.put(JATS_issn, MetadataField.FIELD_ISSN);
+    cookMap.put(JATS_eissn, MetadataField.FIELD_EISSN);
     //cookMap.put(JATS_pubname, MetadataField.FIELD_PUBLISHER);
     cookMap.put(JATS_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(JATS_issue, MetadataField.FIELD_ISSUE);

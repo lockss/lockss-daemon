@@ -30,7 +30,7 @@
 
  */
 
-package org.lockss.plugin.clockss.lia;
+package org.lockss.plugin.clockss.iop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,14 +46,13 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 /*
- * If the xml is at foo/blah/Markup/VOR_10.2351_1.4893749.xml
- * then the pdf is at foo/blah/Page_Renditions/online.pdf 
- * which is the Page_Renditions sibling directory with the filename always "online.pdf" 
+ * If the xml is at 0022-3727/48/35/355104/d_48_35_355104.xml
+ * then the pdf is at 0022-3727/48/35/355104/d_48_35_355104.pdf
+ * and the author manuscript is at 0022-3727/48/35/355104/d_48_35_355104am.pdf
  */
 
-public class LiaJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(LiaJatsXmlMetadataExtractorFactory.class);
-  private static final String PDF_DIR_FILE = "/Page_Renditions/online.pdf";
+public class IOPJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(IOPJatsXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
@@ -77,31 +76,19 @@ public class LiaJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
 
 
     /* 
-     * filename is always online.pdf and lives in the sibling directory names Page_Renditions
-     * The XML file represented by the current cu would be something like:
-     * ...76_CLOCKSS_lia_2014-08-22_233000.zip!/v26/i4/014501_1/Markup/VOR_10.2351_1.4893749.xml
-     * and the pdf would be
-     * ...76_CLOCKSS_lia_2014-08-22_233000.zip!/v26/i4/014501_1/Page_Renditions/online.pdf
+     * filename is the same as the xml, just change the suffix 
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      String pdfPath;
+      // filename is just the same a the XML filename but with .pdf 
+      // instead of .xml
       String url_string = cu.getUrl();
-      int markup_dir_start = url_string.lastIndexOf("/Markup/");
-      // This will leave the "/", so just add back on the sibling_dir and filename
-      if (markup_dir_start < 0) {
-        //can't return null because that would make it okay to emit
-        // this will fail to emit, as it should - we don't know how to verify the PDF existence
-        log.siteWarning("The XML file lives at an unexpected location: " + url_string);
-        pdfPath = PDF_DIR_FILE;  
-      }  else {
-        pdfPath = url_string.substring(0, markup_dir_start) + PDF_DIR_FILE;
-      }
-      log.debug3("pdfPath is " + pdfPath);
+      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
-      returnList.add(pdfPath);
+      returnList.add(pdfName);
       return returnList;
     }
     
@@ -109,14 +96,19 @@ public class LiaJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("in Lia postCookProcess");
+      log.debug3("in IOP postCookProcess");
       //If we didn't get a valid date value, use the copyright year if it's there
       if (thisAM.get(MetadataField.FIELD_DATE) == null) {
-        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
-          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
-        } else {// last chance
+        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate) != null) {
           thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+        } else {
+          // well then try the print date
+          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
         }
+      }
+      if (thisAM.get(MetadataField.FIELD_ISSN) == null) {
+        //try the pissn version
+        thisAM.put(MetadataField.FIELD_ISSN, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pissn));
       }
     }
 
