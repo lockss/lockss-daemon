@@ -1515,7 +1515,7 @@
         param[journal_issn] = 2197-1153 
         comment[platform] = BioMedCentralPlugin
   
-        au < ready ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
+        au < crawling ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
         au < crawling ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
   
     }
@@ -2062,7 +2062,7 @@
         au < manifest ; exists ; 2012 ; Planetary Science Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Planetary Science Volume 2 ; 2 >
         au < crawling ; exists ; 2014 ; Planetary Science Volume 3 ; 3 >
-        au < ready ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
+        au < crawling ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
   
     }
   
@@ -2381,7 +2381,7 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < ready ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
+      au < crawling ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
 
     }
 

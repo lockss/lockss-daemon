@@ -465,7 +465,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2010 ; Advances in Mechanical Engineering Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2010 ; Advances in Mechanical Engineering Volume 2 ; 2 ; >
       au < crawling ; exists ; 2011 ; Advances in Mechanical Engineering Volume 3 ; 3 ; >
       au < crawling ; exists ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; Advances in Mechanical Engineering Volume 5 ; 5 ; >
@@ -2846,7 +2846,7 @@
     au < manifest ; exists ; 2007 ; Asian Cardiovascular and Thoracic Annals Volume 15 ; 15 ; >
     au < manifest ; exists ; 2008 ; Asian Cardiovascular and Thoracic Annals Volume 16 ; 16 ; >
     au < manifest ; exists ; 2009 ; Asian Cardiovascular and Thoracic Annals Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2010 ; Asian Cardiovascular and Thoracic Annals Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2010 ; Asian Cardiovascular and Thoracic Annals Volume 18 ; 18 ; >
     au < crawling ; exists ; 2011 ; Asian Cardiovascular and Thoracic Annals Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Asian Cardiovascular and Thoracic Annals Volume 20 ; 20 ; >
     au < finished ; crawling ; 2013 ; Asian Cardiovascular and Thoracic Annals Volume 21 ; 21 ; >
@@ -3955,7 +3955,7 @@
         au < manifest ; exists ; 2007 ; The British Journal of Occupational Therapy Volume 70 ; 70 ; >
         au < manifest ; exists ; 2008 ; The British Journal of Occupational Therapy Volume 71 ; 71 ; >
         au < manifest ; exists ; 2009 ; The British Journal of Occupational Therapy Volume 72 ; 72 ; >
-        au < manifest ; exists ; 2010 ; The British Journal of Occupational Therapy Volume 73 ; 73 ; >
+        au < crawling ; exists ; 2010 ; The British Journal of Occupational Therapy Volume 73 ; 73 ; >
         au < crawling ; exists ; 2011 ; The British Journal of Occupational Therapy Volume 74 ; 74 ; >
         au < crawling ; exists ; 2012 ; The British Journal of Occupational Therapy Volume 75 ; 75 ; >
         au < finished ; finished ; 2013 ; The British Journal of Occupational Therapy Volume 76 ; 76 ; >
@@ -6524,7 +6524,7 @@
       au < manifest ; exists ; 2007 ; Competition & Change Volume 11 ; 11 ; >
       au < manifest ; exists ; 2008 ; Competition & Change Volume 12 ; 12 ; >
       au < manifest ; exists ; 2009 ; Competition & Change Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2010 ; Competition & Change Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2010 ; Competition & Change Volume 14 ; 14 ; >
       au < crawling ; exists ; 2011 ; Competition & Change Volume 15 ; 15 ; >
       au < crawling ; exists ; 2012 ; Competition & Change Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Competition & Change Volume 17 ; 17 ; >
@@ -9979,7 +9979,7 @@
       au < manifest ; exists ; 2007 ; Environment and Planning A Volume 39 ; 39 ; >
       au < manifest ; exists ; 2008 ; Environment and Planning A Volume 40 ; 40 ; >
       au < manifest ; exists ; 2009 ; Environment and Planning A Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2010 ; Environment and Planning A Volume 42 ; 42 ; >
+      au < crawling ; exists ; 2010 ; Environment and Planning A Volume 42 ; 42 ; >
       au < crawling ; exists ; 2011 ; Environment and Planning A Volume 43 ; 43 ; >
       au < crawling ; exists ; 2012 ; Environment and Planning A Volume 44 ; 44 ; >
       au < crawling ; exists ; 2013 ; Environment and Planning A Volume 45 ; 45 ; >
@@ -10005,7 +10005,7 @@
       au < manifest ; exists ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 ; >
       au < manifest ; exists ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 ; >
       au < manifest ; exists ; 2009 ; Environment and Planning B: Planning and Design Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 ; >
       au < crawling ; exists ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 ; >
       au < crawling ; exists ; 2012 ; Environment and Planning B: Planning and Design Volume 39 ; 39 ; >
       au < crawling ; exists ; 2013 ; Environment and Planning B: Planning and Design Volume 40 ; 40 ; >
@@ -10031,7 +10031,7 @@
       au < manifest ; exists ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 ; >
       au < manifest ; exists ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 ; >
       au < manifest ; exists ; 2009 ; Environment and Planning C: Government and Policy Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 ; >
       au < crawling ; exists ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 ; >
       au < crawling ; exists ; 2012 ; Environment and Planning C: Government and Policy Volume 30 ; 30 ; >
       au < crawling ; exists ; 2013 ; Environment and Planning C: Government and Policy Volume 31 ; 31 ; >
@@ -10054,7 +10054,7 @@
 
       au < manifest ; exists ; 2008 ; Environment and Planning D: Society and Space Volume 26 ; 26 ; >
       au < manifest ; exists ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 ; >
       au < crawling ; exists ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 ; >
       au < crawling ; exists ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 ; >
       au < crawling ; exists ; 2013 ; Environment and Planning D: Society and Space Volume 31 ; 31 ; >
@@ -11342,7 +11342,7 @@
       au < manifest ; exists ; 2007 ; Evolutionary Psychology Volume 5 ; 5 ; >
       au < manifest ; exists ; 2008 ; Evolutionary Psychology Volume 6 ; 6 ; >
       au < manifest ; exists ; 2009 ; Evolutionary Psychology Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2010 ; Evolutionary Psychology Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2010 ; Evolutionary Psychology Volume 8 ; 8 ; >
       au < crawling ; exists ; 2011 ; Evolutionary Psychology Volume 9 ; 9 ; >
       au < crawling ; exists ; 2012 ; Evolutionary Psychology Volume 10 ; 10 ; >
       au < crawling ; exists ; 2013 ; Evolutionary Psychology Volume 11 ; 11 ; >
@@ -31363,7 +31363,7 @@
       au < manifest ; exists ; 2007 ; Perception Volume 36 ; 36 ; >
       au < manifest ; exists ; 2008 ; Perception Volume 37 ; 37 ; >
       au < manifest ; exists ; 2009 ; Perception Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2010 ; Perception Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2010 ; Perception Volume 39 ; 39 ; >
       au < crawling ; exists ; 2011 ; Perception Volume 40 ; 40 ; >
       au < crawling ; exists ; 2012 ; Perception Volume 41 ; 41 ; >
       au < crawling ; exists ; 2013 ; Perception Volume 42 ; 42 ; >
