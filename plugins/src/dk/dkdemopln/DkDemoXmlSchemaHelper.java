@@ -87,8 +87,7 @@ public class DkDemoXmlSchemaHelper implements SourceXmlSchemaHelper {
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
     // do NOT cook publisher_name, etc. (per VR)
-    // cookMap.put(DK_DEMO_id, MetadataField.FIELD_KEYWORDS);
-    cookMap.put(DK_DEMO_record_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+    cookMap.put(DK_DEMO_record_id, MetadataField.DC_FIELD_IDENTIFIER);
     cookMap.put(DK_DEMO_doi, MetadataField.FIELD_DOI);
     cookMap.put(DK_DEMO_add, MetadataField.FIELD_ARTICLE_TITLE);
   }
