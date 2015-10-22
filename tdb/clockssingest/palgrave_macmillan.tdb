@@ -8,6 +8,9 @@
     param[base_url] = http://www.palgrave-journals.com/
     implicit < status ; status2 ; year ; name ; param[year] ; param[volume_name] >
     
+    comment[0] = do not include: American Journal of Psychoanalysis, 0002-9548
+    
+    
     {
 
       title <
@@ -49,24 +52,6 @@
       au < crawling ; exists ; 2013 ; American Journal of Cultural Sociology Volume 1 ; 2013 ; 1 >
       au < crawling ; exists ; 2014 ; American Journal of Cultural Sociology Volume 2 ; 2014 ; 2 >
       au < crawling ; exists ; 2015 ; American Journal of Cultural Sociology Volume 3 ; 2015 ; 3 >
-   
-    }
-
-    {
-
-      title <
-        name = American Journal of Psychoanalysis ;
-        issn = 0002-9548 ;
-        eissn = 1573-6741 ;
-        issnl = 0002-9548
-      >
-
-      param[journal_id] = ajp
-      
-      au < exists ; exists ; 2012 ; American Journal of Psychoanalysis Volume 72 ; 2012 ; 72 >
-      au < exists ; exists ; 2013 ; American Journal of Psychoanalysis Volume 73 ; 2013 ; 73 >
-      au < exists ; exists ; 2014 ; American Journal of Psychoanalysis Volume 74 ; 2014 ; 74 >
-      au < exists ; exists ; 2015 ; American Journal of Psychoanalysis Volume 75 ; 2015 ; 75 >
    
     }
 
@@ -1252,6 +1237,23 @@
       au < finished ; crawling ; 2013 ; Urban Design International Volume 18 ; 2013 ; 18 >
       au < finished ; crawling ; 2014 ; Urban Design International Volume 19 ; 2014 ; 19 >
       au < crawling ; exists ; 2015 ; Urban Design International Volume 20 ; 2015 ; 20 >
+
+    }
+
+    {
+
+      title <
+        name = International Politics Reviews ;
+        issn = 2050-2982 ;
+        eissn = 2050-2990 ;
+        issnl = 2050-2982
+      >
+
+      param[journal_id] = ipr
+
+      au < exists ; exists ; 2013 ; International Politics Reviews Volume 1 ; 2013 ; 1 >
+      au < exists ; exists ; 2014 ; International Politics Reviews Volume 2 ; 2014 ; 2 >
+      au < exists ; exists ; 2015 ; International Politics Reviews Volume 3 ; 2015 ; 3 >
 
     }
 
