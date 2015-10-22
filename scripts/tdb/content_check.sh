@@ -88,7 +88,7 @@ diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate released names in the clockss title database
 echo "---------------------"
-scripts/tdb/tdbout -P -c name tdb/clockssingest/*.tdb | sort > $tpath/allAUs
+scripts/tdb/tdbout -PCZI -c name tdb/clockssingest/*.tdb | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
