@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -31,7 +31,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -162,11 +162,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponFullBookArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponFullBookArticleIteratorFactory</string>
   </entry>
 <!--  Atypon books do not appear to contain html metadata  -->
 <!--  checked: FutureScienceGroup, AIAA, SEG, WAGENINGEN, LUP, ASCE -->
