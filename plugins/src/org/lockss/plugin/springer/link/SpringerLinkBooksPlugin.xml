@@ -141,6 +141,13 @@
     <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
   </entry>
   <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>404=org.lockss.plugin.springer.link.SpringerLinkHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.springer.link.SpringerLinkHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
