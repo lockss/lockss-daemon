@@ -1946,7 +1946,7 @@
 
         au < notReady ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
         #PD-1535 xml page processing error
-        au < ready ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
 
     }
 
@@ -2044,7 +2044,7 @@
         au < manifest ; exists ; 2012 ; Pastoralism Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Pastoralism Volume 3 ; 3 >
         au < crawling ; exists ; 2014 ; Pastoralism Volume 4 ; 4 >
-        au < ready ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
+        au < crawling ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
   
     }
   
@@ -2094,7 +2094,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < crawling ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
-        au < ready ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
+        au < crawling ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
   
     }
   
