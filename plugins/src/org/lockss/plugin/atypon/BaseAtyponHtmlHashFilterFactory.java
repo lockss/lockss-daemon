@@ -118,6 +118,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     
   };
 
+  //And while we're visiting the tag, also remove data-request-id from html tag
   HtmlTransform xform_spanID = new HtmlTransform() {
     //; The "id" attribute of <span> tags can have a gensym
     @Override
@@ -126,13 +127,13 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
         nodeList.visitAllNodesWith(new NodeVisitor() {
           @Override
           public void visitTag(Tag tag) {
-            //changeable html attribute data-request-id first seen in BiR, see all html
-	    if (tag instanceof Html && tag.getAttribute("data-request-id") != null) {
-              tag.removeAttribute("data-request-id");
-	    } else if (tag instanceof Span && tag.getAttribute("id") != null) {
+            if (tag instanceof Span && tag.getAttribute("id") != null) {
               tag.removeAttribute("id");
               // some size notes are just text children of the link tag
               // eg <a ..> PDF Plus (123 kb)</a>
+            } else if (tag instanceof Html && tag.getAttribute("data-request-id") != null) {
+              //changeable html attribute data-request-id first seen in BiR, see all html
+              tag.removeAttribute("data-request-id");
             } else if 
             (tag instanceof LinkTag && ((CompositeTag) tag).getChildCount() == 1 &&
             ((CompositeTag) tag).getFirstChild() instanceof Text) {
@@ -157,6 +158,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * child plugins.  The "id" attribute of various tags <span>, <section> .. 
    * can have a gensym. Also removes pdf(plus) file sizes.
    */
+  //And while we're visiting the tag, also remove data-request-id from html tag
   HtmlTransform xform_allIDs = new HtmlTransform() {
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
@@ -167,7 +169,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
             if (tag.getAttribute("id") != null) {
               tag.removeAttribute("id");
             }
-            if (tag instanceof LinkTag && ((CompositeTag) tag).getChildCount() == 1 &&
+            //changeable html attribute data-request-id first seen in BiR, see all html
+            //<html lang="en" class="pb-page" data-request-id="cc2ac1e1-80e0-472e-acc8-2e97853c3c01" >            
+            if (tag instanceof Html && tag.getAttribute("data-request-id") != null) {
+              tag.removeAttribute("data-request-id");
+            } else if (tag instanceof LinkTag && ((CompositeTag) tag).getChildCount() == 1 &&
                 ((CompositeTag) tag).getFirstChild() instanceof Text) {
               if (SIZE_PATTERN.matcher(((CompositeTag) tag).getStringText()).find()) {
                 log.debug3("removing link child text : " + ((CompositeTag) tag).getStringText());
