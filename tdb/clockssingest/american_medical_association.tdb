@@ -24,7 +24,7 @@
     au < crawling ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
     au < crawling ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Dermatology Volume 151 ; 2015 >
+    au < ready ; exists ; 2015 ; JAMA Dermatology Volume 151 ; 2015 >
   
   }
 
@@ -43,8 +43,7 @@
     au < crawling ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
     au < crawling ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
-    au < notReady ; exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
-    #PD-1561 damaged PDF file
+    au < ready ; exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
   
   }
 
@@ -63,7 +62,7 @@
     au < crawling ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
     au < crawling ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 >
+    au < ready ; exists ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 >
 
   }
 
@@ -81,8 +80,8 @@
     
     au < crawling ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
-    au < manifest ; exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Neurology Volume 72 ; 2015 >
+    au < testing ; exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
+    au < ready ; exists ; 2015 ; JAMA Neurology Volume 72 ; 2015 >
   
   }
 
@@ -113,7 +112,7 @@
     au < crawling ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
     au < crawling ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 >
+    au < ready ; exists ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 >
     
   }
 
@@ -132,7 +131,7 @@
     au < crawling ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
     au < crawling ; exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
-    au < testing ; exists ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 >
+    au < ready ; exists ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 >
     
   }
 
@@ -150,7 +149,7 @@
         
     au < crawling ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
     au < crawling ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
-    au < manifest ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
+    au < testing ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
     au < crawling ; exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 >
     
   }
