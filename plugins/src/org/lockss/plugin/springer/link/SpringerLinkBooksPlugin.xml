@@ -94,7 +94,7 @@
       <string>1,"^%sdownload/epub/", base_url</string>
       <string>1,"^%s(content|chapter|book|article)/", base_url</string>
       <string>1,"^%sstatic/", download_url</string>
-      <string>1,"http://static-content.springer.com/image/.+[.](jpg|png)"</string>
+      <string>1,"http://static-content.springer.com/image/.+[.](jpe?g|png|gif|tif)"</string>
     </list>
   </entry>
   <entry>
