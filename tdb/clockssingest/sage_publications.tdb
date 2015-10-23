@@ -464,7 +464,7 @@
       param[base_url] = http://ade.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
       au < crawling ; exists ; 2010 ; Advances in Mechanical Engineering Volume 2 ; 2 ; >
       au < crawling ; exists ; 2011 ; Advances in Mechanical Engineering Volume 3 ; 3 ; >
       au < crawling ; exists ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
@@ -3557,7 +3557,7 @@
       au < manifest ; exists ; 2006 ; Behavior Modification Volume 30 ; 30 ; >
       au < manifest ; exists ; 2007 ; Behavior Modification Volume 31 ; 31 ; >
       au < finished ; finished ; 2008 ; Behavior Modification Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
       au < zapped ; finished ; 2010 ; Behavior Modification Volume 34 ; 34 ; >
       au < finished ; finished ; 2011 ; Behavior Modification Volume 35 ; 35 ; >
       au < finished ; finished ; 2012 ; Behavior Modification Volume 36 ; 36 ; >
@@ -3954,7 +3954,7 @@
         au < manifest ; exists ; 2006 ; The British Journal of Occupational Therapy Volume 69 ; 69 ; >
         au < manifest ; exists ; 2007 ; The British Journal of Occupational Therapy Volume 70 ; 70 ; >
         au < manifest ; exists ; 2008 ; The British Journal of Occupational Therapy Volume 71 ; 71 ; >
-        au < manifest ; exists ; 2009 ; The British Journal of Occupational Therapy Volume 72 ; 72 ; >
+        au < crawling ; exists ; 2009 ; The British Journal of Occupational Therapy Volume 72 ; 72 ; >
         au < crawling ; exists ; 2010 ; The British Journal of Occupational Therapy Volume 73 ; 73 ; >
         au < crawling ; exists ; 2011 ; The British Journal of Occupational Therapy Volume 74 ; 74 ; >
         au < crawling ; exists ; 2012 ; The British Journal of Occupational Therapy Volume 75 ; 75 ; >
@@ -5574,7 +5574,7 @@
       au < manifest ; exists ; 2006 ; Clin-Alert Volume 44 ; 44 ; >
       au < manifest ; exists ; 2007 ; Clin-Alert Volume 45 ; 45 ; >
       au < zapped ; finished ; 2008 ; Clin-Alert Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2009 ; Clin-Alert Volume 47 ; 47 ; >
+      au < crawling ; exists ; 2009 ; Clin-Alert Volume 47 ; 47 ; >
       au < finished ; crawling ; 2010 ; Clin-Alert Volume 48 ; 48 ; >
       au < finished ; finished ; 2011 ; Clin-Alert Volume 49 ; 49 ; >
       au < finished ; crawling ; 2012 ; Clin-Alert Volume 50 ; 50 ; >
@@ -9978,7 +9978,7 @@
       au < manifest ; exists ; 2006 ; Environment and Planning A Volume 38 ; 38 ; >
       au < manifest ; exists ; 2007 ; Environment and Planning A Volume 39 ; 39 ; >
       au < manifest ; exists ; 2008 ; Environment and Planning A Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2009 ; Environment and Planning A Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2009 ; Environment and Planning A Volume 41 ; 41 ; >
       au < crawling ; exists ; 2010 ; Environment and Planning A Volume 42 ; 42 ; >
       au < crawling ; exists ; 2011 ; Environment and Planning A Volume 43 ; 43 ; >
       au < crawling ; exists ; 2012 ; Environment and Planning A Volume 44 ; 44 ; >
@@ -10053,7 +10053,7 @@
       #content available from 2002 volume 20 to 2007 volume 25 
 
       au < manifest ; exists ; 2008 ; Environment and Planning D: Society and Space Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 ; >
       au < crawling ; exists ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 ; >
       au < crawling ; exists ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 ; >
       au < crawling ; exists ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 ; >
@@ -11341,7 +11341,7 @@
       au < manifest ; exists ; 2006 ; Evolutionary Psychology Volume 4 ; 4 ; >
       au < manifest ; exists ; 2007 ; Evolutionary Psychology Volume 5 ; 5 ; >
       au < manifest ; exists ; 2008 ; Evolutionary Psychology Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2009 ; Evolutionary Psychology Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2009 ; Evolutionary Psychology Volume 7 ; 7 ; >
       au < crawling ; exists ; 2010 ; Evolutionary Psychology Volume 8 ; 8 ; >
       au < crawling ; exists ; 2011 ; Evolutionary Psychology Volume 9 ; 9 ; >
       au < crawling ; exists ; 2012 ; Evolutionary Psychology Volume 10 ; 10 ; >
@@ -19326,7 +19326,7 @@
       au < manifest ; exists ; 2006 ; Journal of Child Health Care Volume 10 ; 10 ; >
       au < manifest ; exists ; 2007 ; Journal of Child Health Care Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
       au < zapped ; finished ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ; >
       au < finished ; finished ; 2011 ; Journal of Child Health Care Volume 15 ; 15 ; >
       au < finished ; crawling ; 2012 ; Journal of Child Health Care Volume 16 ; 16 ; >
@@ -19862,7 +19862,7 @@
       au < manifest ; exists ; 2006 ; Journal of Conflict Resolution Volume 50 ; 50 ; >
       au < manifest ; exists ; 2007 ; Journal of Conflict Resolution Volume 51 ; 51 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 ; >
+      au < crawling ; exists ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 ; >
       au < finished ; finished ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 ; >
       au < finished ; crawling ; 2011 ; Journal of Conflict Resolution Volume 55 ; 55 ; >
       au < finished ; crawling ; 2012 ; Journal of Conflict Resolution Volume 56 ; 56 ; >
@@ -20168,7 +20168,7 @@
       au < manifest ; exists ; 2006 ; Journal of Correctional Health Care Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Journal of Correctional Health Care Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; >
       au < zapped ; finished ; 2010 ; Journal of Correctional Health Care Volume 16 ; 16 ; >
       au < finished ; crawling ; 2011 ; Journal of Correctional Health Care Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Journal of Correctional Health Care Volume 18 ; 18 ; >
@@ -22175,7 +22175,7 @@
       au < manifest ; exists ; 2006 ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 ; >
       au < manifest ; exists ; 2007 ; Journal of Geriatric Psychiatry and Neurology Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2009 ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2009 ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 ; >
       au < finished ; crawling ; 2010 ; Journal of Geriatric Psychiatry and Neurology Volume 23 ; 23 ; >
       au < finished ; crawling ; 2011 ; Journal of Geriatric Psychiatry and Neurology Volume 24 ; 24 ; >
       au < finished ; crawling ; 2012 ; Journal of Geriatric Psychiatry and Neurology Volume 25 ; 25 ; >
@@ -25082,7 +25082,7 @@
       au < manifest ; exists ; 2006 ; Journal of Psychoeducational Assessment Volume 24 ; 24 ; >
       au < manifest ; exists ; 2007 ; Journal of Psychoeducational Assessment Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 ; >
       au < finished ; finished ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 ; >
       au < finished ; frozen ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 ; >
       au < finished ; finished ; 2012 ; Journal of Psychoeducational Assessment Volume 30 ; 30 ; >
@@ -26723,7 +26723,7 @@
       au < manifest ; exists ; 2006 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 ; >
       au < finished ; crawling ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 ; >
       au < finished ; crawling ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 ; >
       au < finished ; finished ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 ; >
@@ -32440,7 +32440,7 @@
       au < manifest ; exists ; 2006 ; Politics & Society Volume 34 ; 34 ; >
       au < manifest ; exists ; 2007 ; Politics & Society Volume 35 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Politics & Society Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2009 ; Politics & Society Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2009 ; Politics & Society Volume 37 ; 37 ; >
       au < finished ; crawling ; 2010 ; Politics & Society Volume 38 ; 38 ; >
       au < finished ; crawling ; 2011 ; Politics & Society Volume 39 ; 39 ; >
       au < finished ; finished ; 2012 ; Politics & Society Volume 40 ; 40 ; >
@@ -32629,7 +32629,7 @@
       au < manifest ; exists ; 2006 ; The Prison Journal Volume 86 ; 86 ; >
       au < manifest ; exists ; 2007 ; The Prison Journal Volume 87 ; 87 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 ; >
-      au < manifest ; exists ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
+      au < crawling ; exists ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
       au < finished ; finished ; 2010 ; The Prison Journal Volume 90 ; 90 ; >
       au < finished ; frozen ; 2011 ; The Prison Journal Volume 91 ; 91 ; >
       au < finished ; finished ; 2012 ; The Prison Journal Volume 92 ; 92 ; >
@@ -34269,7 +34269,7 @@
       au < manifest ; exists ; 2006 ; Public Understanding of Science Volume 15 ; 15 ; >
       au < manifest ; exists ; 2007 ; Public Understanding of Science Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Public Understanding of Science Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; >
       au < finished ; finished ; 2010 ; Public Understanding of Science Volume 19 ; 19 ; >
       au < finished ; finished ; 2011 ; Public Understanding of Science Volume 20 ; 20 ; >
       au < finished ; finished ; 2012 ; Public Understanding of Science Volume 21 ; 21 ; >
@@ -34364,7 +34364,7 @@
       au < manifest ; exists ; 2006 ; Punishment & Society Volume 8 ; 8 ; >
       au < manifest ; exists ; 2007 ; Punishment & Society Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2009 ; Punishment & Society Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2009 ; Punishment & Society Volume 11 ; 11 ; >
       au < zapped ; finished ; 2010 ; Punishment & Society Volume 12 ; 12 ; >
       au < finished ; crawling ; 2011 ; Punishment & Society Volume 13 ; 13 ; >
       au < zapped ; finished ; 2012 ; Punishment & Society Volume 14 ; 14 ; >
@@ -41326,7 +41326,7 @@
       au < manifest ; exists ; 2006 ; War in History Volume 13 ; 13 ; >
       au < manifest ; exists ; 2007 ; War in History Volume 14 ; 14 ; >
       au < finished ; crawling ; 2008 ; War in History Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2009 ; War in History Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2009 ; War in History Volume 16 ; 16 ; >
       au < zapped ; finished ; 2010 ; War in History Volume 17 ; 17 ; >
       au < zapped ; finished ; 2011 ; War in History Volume 18 ; 18 ; >
       au < finished ; frozen ; 2012 ; War in History Volume 19 ; 19 ; >
@@ -41456,7 +41456,7 @@
       au < manifest ; exists ; 2006 ; Western Journal of Nursing Research Volume 28 ; 28 ; >
       au < manifest ; exists ; 2007 ; Western Journal of Nursing Research Volume 29 ; 29 ; >
       au < zapped ; finished ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
       au < finished ; crawling ; 2010 ; Western Journal of Nursing Research Volume 32 ; 32 ; >
       au < finished ; finished ; 2011 ; Western Journal of Nursing Research Volume 33 ; 33 ; >
       au < finished ; crawling ; 2012 ; Western Journal of Nursing Research Volume 34 ; 34 ; >
