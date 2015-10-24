@@ -5,11 +5,11 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.silverchair.SilverchairBooksPlugin</string>
+        <string>org.lockss.plugin.silverchair.SilverchairProceedingsPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>1</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Silverchair Books Plugin</string>
+        <string>Silverchair Proceedings Plugin</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -57,21 +57,22 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Silverchair Books Plugin, Base URL %s, Year %d", base_url, year</string>
+        <string>"Silverchair Proceedings Plugin, Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%slockss/ListOfBooks.aspx?year=%d", base_url, year</string>
+        <string>"%slockss/ListOfVolumes.aspx?year=%d", base_url, year</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^https?://(ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com|[^.]+\.silverchaircdn\.com|cdn\.jsdelivr\.net)/"</string>
+            <string>1,"^https?://(ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com|.*\.silverchaircdn\.com|cdn\.jsdelivr\.net)/"</string>
             <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|less|png|tif?f)(\?v=[0-9]+)?$", base_url_host</string>
             <string>4,"^%s", base_url</string>
             <string>2,"__EVENTVALIDATION="</string>
-            <string>1,"^%sbook\.aspx\?bookid=",base_url,</string>
-            <string>1,"^%scontent\.aspx\?bookid=",base_url,</string>
+            <string>1,"^%svolume\.aspx\?volumeid=",base_url,</string>
+            <string>1,"^%sproceeding\.aspx\?articleid=",base_url,</string>
+            <string>1,"^%sdownloadCitation\.aspx", base_url</string>
             <string>1,"^%scombres\.axd/", base_url</string>
             <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
             <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
@@ -116,7 +117,7 @@
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%scontent\.aspx\?bookid=\d+$", base_url</string>
+            <string>"^%sproceeding\.aspx\?articleid=\d+$", base_url</string>
         </list>
     </entry>
     <entry>
@@ -156,7 +157,7 @@
     </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
-        <string>"ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com|[^.]+\.silverchaircdn\.com|cdn\.jsdelivr\.net"</string>
+        <string>"ajax\.googleapis\.com|ajax\.microsoft\.com|.*\.silverchair\.netdna-cdn\.com|.*\.silverchaircdn\.com|cdn\.jsdelivr\.net"</string>
     </entry>
     <entry>
         <string>plugin_url_fetcher_factory</string>
