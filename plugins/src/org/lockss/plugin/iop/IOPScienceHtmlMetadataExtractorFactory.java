@@ -80,16 +80,28 @@ public class IOPScienceHtmlMetadataExtractorFactory implements FileMetadataExtra
       tagMap.put("citation_author",MetadataField.FIELD_AUTHOR);
       //<meta name="citation_journal_title" content="Advances in Natural Sciences:
       //Nanoscience and Nanotechnology" />
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       // <meta name="citation_publisher" content="IOP Publishing" />
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      // XXX this map is so that the metadata url is not always the access_url
+      // <meta name="citation_fulltext_html_url" content="http://iopscience.iop.org/...
+      tagMap.put("citation_fulltext_html_url", MetadataField.FIELD_ACCESS_URL);
     }
 
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-	throws IOException {
+        throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      if (url != null && !url.isEmpty()) {
+        CachedUrl val = cu.getArchivalUnit().makeCachedUrl(url);
+        if (!val.hasContent()) {
+          am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+        }
+      } else {
+        am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+      }
       return am;
     }
   }

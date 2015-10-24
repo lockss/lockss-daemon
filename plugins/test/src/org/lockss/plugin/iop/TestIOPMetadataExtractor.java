@@ -107,6 +107,7 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     return conf;
   }
   
+  String url = "http://iopscience.iop.org/2043-6262/1/4/043003";
   // the metadata that should be extracted
   String goodDOI = "10.1088/2043-6262/1/4/043003";
   String goodArticleTitle = "Polymer materials with spatially graded morphologies: " +
@@ -140,6 +141,7 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     + "<meta name=\"citation_firstpage\""+ " content=\""+ goodStartPage	+ "\">\n"
     + "<meta name=\"citation_doi\"" + " content=\""     + goodDOI + "\">\n"
     + "<meta name=\"citation_issn\"" + " content=\""     + goodISSN + "\">\n"
+    + "<meta name=\"citation_fulltext_html_url\" content=\"" + url + "/article/\"/>"
   ;	
 		
   /**
@@ -149,7 +151,6 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
    * @throws Exception
    */
   public void testExtractFromGoodContent() throws Exception {
-    String url = "http://iopscience.iop.org/2043-6262/1/4/043003";
     MockCachedUrl cu = new MockCachedUrl(url, bau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
@@ -171,8 +172,9 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
   }
 
   // a chunk of html source code from where the IOPScienceHtmlMetadataExtractorFactory
@@ -193,7 +195,6 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
    * @throws Exception
    */
   public void testExtractFromBadContent() throws Exception {
-    String url = "http://iopscience.iop.org/2043-6262/1/4/043003";
     MockCachedUrl cu = new MockCachedUrl(url, bau);
     cu.setContent(badContent);
     cu.setContentSize(badContent.length());
