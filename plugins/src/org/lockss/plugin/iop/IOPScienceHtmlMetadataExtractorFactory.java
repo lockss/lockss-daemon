@@ -39,6 +39,8 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.MetadataField.Cardinality;
+import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.plugin.*;
 
 
@@ -48,6 +50,19 @@ import org.lockss.plugin.*;
  */
 public class IOPScienceHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(IOPScienceHtmlMetadataExtractorFactory.class);
+
+  public static MetadataField IOP_ACCESS_URL = new MetadataField(
+      MetadataField.KEY_ACCESS_URL, Cardinality.Single,
+      new Validator() {
+        public String validate(ArticleMetadata am,MetadataField field,String val)
+            throws MetadataException.ValidationException {
+          // trim trailing '/' from urls like http://iopscience.iop.org/0264-9381/29/9/097002/article/
+          if( (val != null) && !val.isEmpty() && (val.endsWith("/"))) {
+            val = val.substring(0, val.length()-1);
+          }
+          return val;
+        }
+      });
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
@@ -61,7 +76,6 @@ public class IOPScienceHtmlMetadataExtractorFactory implements FileMetadataExtra
    
     private static MultiMap tagMap = new MultiValueMap();
     static {
-
       //<meta name="citation_doi" content="10.1088/2043-6262/1/4/043003" />
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       //  <meta name="citation_publication_date" content="2011-01-25" />
@@ -85,7 +99,7 @@ public class IOPScienceHtmlMetadataExtractorFactory implements FileMetadataExtra
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       // XXX this map is so that the metadata url is not always the access_url
       // <meta name="citation_fulltext_html_url" content="http://iopscience.iop.org/...
-      tagMap.put("citation_fulltext_html_url", MetadataField.FIELD_ACCESS_URL);
+      tagMap.put("citation_fulltext_html_url", IOP_ACCESS_URL);
     }
 
     @Override
