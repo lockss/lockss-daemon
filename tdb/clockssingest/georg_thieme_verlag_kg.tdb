@@ -4090,7 +4090,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2011 ; 183 >
     au < manifest ; exists ; 2012 ; 2012 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2012 ; 184 >
     au < crawling ; exists ; 2013 ; 2013 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 >
-    au < testing ; exists ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2014 ; 186 >
+    au < ready ; exists ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2014 ; 186 >
     au < crawling ; exists ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2015 ; 187 >
 
   }
@@ -5070,7 +5070,7 @@
     au < crawling ; exists ; 2011 ; 2011 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2011 ; 1 >
     au < crawling ; exists ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 >
     au < crawling ; exists ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 >
-    au < testing ; exists ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 >
+    au < ready ; exists ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 >
     au < crawling ; exists ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 >
 
   }
@@ -5304,7 +5304,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zahnmedizin up2date Volume 2009 ; 3 >
     au < crawling ; exists ; 2010 ; 2010 ; Zahnmedizin up2date Volume 2010 ; 4 >
     au < crawling ; exists ; 2011 ; 2011 ; Zahnmedizin up2date Volume 2011 ; 5 >
-    au < testing ; exists ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 >
+    au < ready ; exists ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 >
     au < crawling ; exists ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 >
     au < crawling ; exists ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 >
     au < testing ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 >
@@ -5388,12 +5388,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2007 ; 211 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2008 ; 212 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2009 ; 213 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2010 ; 214 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2011 ; 215 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2012 ; 216 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2013 ; 217 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2014 ; 218 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2015 ; 219 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2010 ; 214 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2011 ; 215 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2012 ; 216 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2013 ; 217 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2014 ; 218 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2015 ; 219 >
 
   }
 
@@ -5463,12 +5463,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Klassische Homöopathie Volume 2007 ; 51 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Klassische Homöopathie Volume 2008 ; 52 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Klassische Homöopathie Volume 2009 ; 53 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Klassische Homöopathie Volume 2010 ; 54 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Klassische Homöopathie Volume 2011 ; 55 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Klassische Homöopathie Volume 2012 ; 56 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Klassische Homöopathie Volume 2013 ; 57 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Klassische Homöopathie Volume 2014 ; 58 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Klassische Homöopathie Volume 2015 ; 59 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Klassische Homöopathie Volume 2010 ; 54 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Klassische Homöopathie Volume 2011 ; 55 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Klassische Homöopathie Volume 2012 ; 56 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Klassische Homöopathie Volume 2013 ; 57 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Klassische Homöopathie Volume 2014 ; 58 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Klassische Homöopathie Volume 2015 ; 59 >
 
   }
 
@@ -5485,12 +5485,12 @@
     comment[years] = 2009-current
 
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Komplementärmedizin Volume 2009 ; 1 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Komplementärmedizin Volume 2010 ; 2 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Komplementärmedizin Volume 2011 ; 3 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Komplementärmedizin Volume 2012 ; 4 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Komplementärmedizin Volume 2013 ; 5 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 2014 ; 6 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 2015 ; 7 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Komplementärmedizin Volume 2010 ; 2 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Komplementärmedizin Volume 2011 ; 3 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Komplementärmedizin Volume 2012 ; 4 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Komplementärmedizin Volume 2013 ; 5 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 2014 ; 6 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 2015 ; 7 >
 
   }
 
@@ -5509,12 +5509,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Orthomolekulare Medizin Volume 2007 ; 5 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Orthomolekulare Medizin Volume 2008 ; 6 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Orthomolekulare Medizin Volume 2009 ; 7 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Orthomolekulare Medizin Volume 2010 ; 8 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Orthomolekulare Medizin Volume 2011 ; 9 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Orthomolekulare Medizin Volume 2012 ; 10 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Orthomolekulare Medizin Volume 2013 ; 11 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Orthomolekulare Medizin Volume 2014 ; 12 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Orthomolekulare Medizin Volume 2015 ; 13 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Orthomolekulare Medizin Volume 2010 ; 8 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Orthomolekulare Medizin Volume 2011 ; 9 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Orthomolekulare Medizin Volume 2012 ; 10 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Orthomolekulare Medizin Volume 2013 ; 11 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Orthomolekulare Medizin Volume 2014 ; 12 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Orthomolekulare Medizin Volume 2015 ; 13 >
 
   }
 
@@ -5533,12 +5533,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2007 ; 145 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2008 ; 146 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2009 ; 147 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2010 ; 148 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2011 ; 149 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2012 ; 150 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2013 ; 151 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2014 ; 152 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2015 ; 153 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2010 ; 148 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2011 ; 149 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2012 ; 150 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2013 ; 151 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2014 ; 152 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2015 ; 153 >
 
   }
 
@@ -5608,12 +5608,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Palliativmedizin Volume 2007 ; 8 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Palliativmedizin Volume 2008 ; 9 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Palliativmedizin Volume 2009 ; 10 >
-    au < manifest ; exists ; 2010 ; 2010 ; Zeitschrift für Palliativmedizin Volume 2010 ; 11 >
-    au < manifest ; exists ; 2011 ; 2011 ; Zeitschrift für Palliativmedizin Volume 2011 ; 12 >
-    au < manifest ; exists ; 2012 ; 2012 ; Zeitschrift für Palliativmedizin Volume 2012 ; 13 >
-    au < manifest ; exists ; 2013 ; 2013 ; Zeitschrift für Palliativmedizin Volume 2013 ; 14 >
-    au < manifest ; exists ; 2014 ; 2014 ; Zeitschrift für Palliativmedizin Volume 2014 ; 15 >
-    au < manifest ; exists ; 2015 ; 2015 ; Zeitschrift für Palliativmedizin Volume 2015 ; 16 >
+    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Palliativmedizin Volume 2010 ; 11 >
+    au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Palliativmedizin Volume 2011 ; 12 >
+    au < testing ; exists ; 2012 ; 2012 ; Zeitschrift für Palliativmedizin Volume 2012 ; 13 >
+    au < testing ; exists ; 2013 ; 2013 ; Zeitschrift für Palliativmedizin Volume 2013 ; 14 >
+    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Palliativmedizin Volume 2014 ; 15 >
+    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Palliativmedizin Volume 2015 ; 16 >
 
   }
 
