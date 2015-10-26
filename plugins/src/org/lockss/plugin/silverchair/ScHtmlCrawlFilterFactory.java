@@ -44,7 +44,26 @@ public class ScHtmlCrawlFilterFactory implements FilterFactory {
 
   /*
    * AMA = American Medical Association (http://jamanetwork.com/)
+   * Tabs 20151025
+   * 1=extract/abstract/article
+   * 2=discussion (w/i framework of article contents)
+   * 3=figures
+   * 4=tables
+   * 5=video
+   * 6=references
+   * 7=letters
+   * 8=cme
+   * 9=citing
+   * 10=comments
+   * 12=supplemental
    * SPIE = SPIE (http://spiedigitallibrary.org/)
+   * Tabs 20151025
+   * 1= extract/abstract/article
+   * 2=figures
+   * 3=tables
+   * 5=multimedia
+   * 6=refrences
+   *
    */
 
   @Override
