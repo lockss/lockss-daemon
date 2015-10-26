@@ -2006,7 +2006,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
       au < crawling ; exists ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
       au < crawling ; exists ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
-      au < testing ; exists ; 2015 ; Genetics Selection Evolution Volume 47 ; 47 >
+      au < ready ; exists ; 2015 ; Genetics Selection Evolution Volume 47 ; 47 >
 
     }
 
@@ -2078,7 +2078,6 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Genome Integrity Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Genome Integrity Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; Genome Integrity Volume 6 ; 6 >
       
     }
 
@@ -2101,7 +2100,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < manifest ; exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; Genome Medicine Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2015 ; Genome Medicine Volume 7 ; 7 > #articles do not have www.
       }
       {
       param[base_url] = http://genomemedicine.com/
@@ -2169,7 +2168,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
       au < finished ; manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
-      au < testing ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
+      au < ready ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }
 
@@ -2218,7 +2217,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
+      au < ready ; exists ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
 
     }
 
@@ -2261,7 +2260,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
-      au < testing ; exists ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
+      au < ready ; exists ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
 
     }
 
@@ -2315,7 +2314,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 >
-      au < testing ; exists ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 ; 13 >
+      au < ready ; exists ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 ; 13 >
 
     }
 
