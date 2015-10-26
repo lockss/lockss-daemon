@@ -71,6 +71,21 @@
     {
 
       title <
+        name = Asthma Research and Practice ;
+        eissn = 2054-7064 
+      >
+
+      param[base_url] = http://asthmarp.biomedcentral.com/
+      param[journal_issn] = 2054-7064
+      #journal_id = asthmarp
+
+      au < exists ; exists ; 2015 ; Asthma Research and Practice Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = Avian Research ;
         eissn = 2053-7166
       >
@@ -216,6 +231,21 @@
     }
 
     {
+
+      title <
+        name = COPD Research and Practice ;
+        eissn = 2054-9040 
+      >
+
+      param[base_url] = http://copdrp.biomedcentral.com/
+      param[journal_issn] = 2054-9040
+      #journal_id = copdrp
+
+      au < exists ; exists ; 2015 ; COPD Research and Practice Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Cost Effectiveness and Resource Allocation ;
         eissn = 1478-7547 ;
@@ -241,6 +271,7 @@
       au < exists ; exists ; 2015 ; Cost Effectiveness and Resource Allocation Volume 13 ; 13 >
 
     }
+
     {
 
       title < 
@@ -577,6 +608,22 @@
     }
 
     {
+
+      title <
+        name = Standards in Genomic Sciences ;
+        eissn = 1944-3277
+      >
+
+      param[base_url] = http://standardsingenomics.biomedcentral.com/
+      param[journal_issn] = 1944-3277
+      #journal_id = standardsingenomics
+
+      au < doNotProcess ; exists ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 >
+      au < exists ; exists ; 2015 ; Standards in Genomic Sciences Volume 10 ; 10 >
+
+    }
+
+    {
       title <
         name = Substance Abuse Treatment, Prevention, and Policy ;
         eissn = 1747-597X ;
@@ -597,6 +644,21 @@
       au < doNotProcess ; exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 >
       au < exists ; exists ; 2015 ; Substance Abuse Treatment, Prevention, and Policy Volume 10 ; 10 >
+
+    }
+
+    {
+
+      title <
+        name = Tropical Diseases, Travel Medicine and Vaccines ;
+        eissn = 2055-0936 
+      >
+
+      param[base_url] = http://tdtmvjournal.biomedcentral.com/
+      param[journal_issn] = 2055-0936
+      #journal_id = tdtmvjournal
+
+      au < exists ; exists ; 2015 ; Tropical Diseases, Travel Medicine and Vaccines Volume 1 ; 1 >
 
     }
 
@@ -624,22 +686,6 @@
       au < doNotProcess ; exists ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 >
       au < exists ; exists ; 2015 ; World Journal of Surgical Oncology Volume 13 ; 13 >
-
-    }
-
-    {
-
-      title <
-        name = Standards in Genomic Sciences ;
-        eissn = 1944-3277
-      >
-
-      param[base_url] = http://standardsingenomics.biomedcentral.com/
-      param[journal_issn] = 1944-3277
-      #journal_id = standardsingenomics
-
-      au < doNotProcess ; exists ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 >
-      au < exists ; exists ; 2015 ; Standards in Genomic Sciences Volume 10 ; 10 >
 
     }
 

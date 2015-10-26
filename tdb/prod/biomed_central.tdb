@@ -69,6 +69,21 @@
     {
 
       title <
+        name = Asthma Research and Practice ;
+        eissn = 2054-7064 
+      >
+
+      param[base_url] = http://asthmarp.biomedcentral.com/
+      param[journal_issn] = 2054-7064
+      #journal_id = asthmarp
+
+      au < exists ; 2015 ; Asthma Research and Practice Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = Avian Research ;
         eissn = 2053-7166
       >
@@ -210,6 +225,21 @@
 
       au < exists ; 2014 ; Climate Change Responses Volume 1 ; 1 >
       au < exists ; 2015 ; Climate Change Responses Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = COPD Research and Practice ;
+        eissn = 2054-9040 
+      >
+
+      param[base_url] = http://copdrp.biomedcentral.com/
+      param[journal_issn] = 2054-9040
+      #journal_id = copdrp
+
+      au < exists ; 2015 ; COPD Research and Practice Volume 1 ; 1 >
 
     }
 
@@ -612,6 +642,21 @@
       au < exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 >
       au < exists ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 >
       au < exists ; 2015 ; Substance Abuse Treatment, Prevention, and Policy Volume 10 ; 10 >
+
+    }
+
+    {
+
+      title <
+        name = Tropical Diseases, Travel Medicine and Vaccines ;
+        eissn = 2055-0936 
+      >
+
+      param[base_url] = http://tdtmvjournal.biomedcentral.com/
+      param[journal_issn] = 2055-0936
+      #journal_id = tdtmvjournal
+
+      au < exists ; 2015 ; Tropical Diseases, Travel Medicine and Vaccines Volume 1 ; 1 >
 
     }
 
