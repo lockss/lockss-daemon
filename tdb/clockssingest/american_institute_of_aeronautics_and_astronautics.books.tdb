@@ -17,7 +17,7 @@
     >
 
     au < manifest ; exists ; 1997 ; 978-1-56347-224-4 ; 978-1-60086-130-7 ; 9781600861307 ; Advanced Dynamics >
-    au < testing ; exists ; 2000 ; 978-1-56347-398-2 ; ; 9781563473982 ; Aircraft Performance: Theory and Practice >
+    au < expected ; exists ; 2000 ; 978-1-56347-398-2 ; ; 9781563473982 ; Aircraft Performance: Theory and Practice >
 
   }
 
@@ -29,7 +29,7 @@
     >
 
     au < manifest ; exists ; 2014 ; 978-1-62410-262-2 ; 978-1-62410-322-3 ; 9781624103223 ; The Overview Effect: Space Exploration and Human Evolution, Third Edition > 
-    au < testing ; exists ; 2014 ; 978-1-62410-252-3 ; ; 9781624102523 ; "Advanced Six Degrees of Freedom Aerospace Simulation and Analysis in C++, Second Edition" >
+    au < expected ; exists ; 2014 ; 978-1-62410-252-3 ; ; 9781624102523 ; "Advanced Six Degrees of Freedom Aerospace Simulation and Analysis in C++, Second Edition" >
 
   }
 
@@ -53,7 +53,7 @@
     >
 
     au < manifest ; exists ; 2002 ; 978-1-884989-11-7 ;  ; 9781884989117 ; "Spacecraft Thermal Control Handbook, Volume I: Fundamental Technologies" >
-    au < testing ; exists ; 2009 ; 978-1-884989-22-3 ;  ; 9781884989223 ; Small Satellites: Past, Present, and Future >
+    au < expected ; exists ; 2009 ; 978-1-884989-22-3 ;  ; 9781884989223 ; Small Satellites: Past, Present, and Future >
 
 
   }
