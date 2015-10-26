@@ -42,14 +42,14 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 
-public class TestIOPXmlMetadataExtractor extends LockssTestCase {
+public class TestIopXmlMetadataExtractor extends LockssTestCase {
 
-  private static final Logger log = Logger.getLogger(TestIOPXmlMetadataExtractor.class);
+  private static final Logger log = Logger.getLogger(TestIopXmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.iop.ClockssIOPSourcePlugin";
+  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static String TAR_GZ = "0022-3727.tar.gz!/";
   private static final String xml_url = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/d_48_35_355104.xml";
@@ -107,7 +107,7 @@ public class TestIOPXmlMetadataExtractor extends LockssTestCase {
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-      FileMetadataExtractor me = new  IOPJatsXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataExtractor me = new  IopJatsXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);

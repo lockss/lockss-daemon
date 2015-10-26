@@ -34,11 +34,10 @@ import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
-import org.lockss.util.*;
 
-public class TestIOPSourceArticleIteratorFactory extends ArticleIteratorTestCase {
+public class TestIopSourceArticleIteratorFactory extends ArticleIteratorTestCase {
 
-  private final String PLUGIN_NAME = "org.lockss.plugin.clockss.iop.ClockssIOPSourcePlugin";
+  private final String PLUGIN_NAME = "org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin";
   private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static final String BASE_URL = "http://clockss-ingest.lockss.org/sourcefiles/iop-released/";
   private static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();

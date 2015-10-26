@@ -47,9 +47,9 @@ import org.lockss.util.Logger;
 // Also - since we're customizing anyway; pick up the pdf files with a 
 // replacement.
 //
-public class IOPSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
+public class IopSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
-  private static final Logger log = Logger.getLogger(IOPSourceXmlArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(IopSourceXmlArticleIteratorFactory.class);
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   // This pattern is specific to IOP - exclude the manifest.xml XML

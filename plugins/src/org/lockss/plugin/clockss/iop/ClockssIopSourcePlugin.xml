@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.iop.ClockssIOPSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -65,18 +65,18 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.iop.IOPSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.iop.IopSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.iop.IOPSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.iop.IopSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.iop.IOPJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.iop.IopJatsXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -85,7 +85,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.iop.IOPJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.iop.IopJatsXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>    

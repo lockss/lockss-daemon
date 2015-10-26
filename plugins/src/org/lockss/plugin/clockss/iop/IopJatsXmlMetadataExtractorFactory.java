@@ -51,8 +51,8 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
  * and the author manuscript is at 0022-3727/48/35/355104/d_48_35_355104am.pdf
  */
 
-public class IOPJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(IOPJatsXmlMetadataExtractorFactory.class);
+public class IopJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(IopJatsXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
