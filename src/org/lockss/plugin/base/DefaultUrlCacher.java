@@ -33,23 +33,18 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
-import java.text.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.definable.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 
 /**
  * Basic, fully functional UrlCacher.  Utilizes the LockssRepository for

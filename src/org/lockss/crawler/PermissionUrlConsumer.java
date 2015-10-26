@@ -39,17 +39,12 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 
 import org.lockss.crawler.PermissionRecord.PermissionStatus;
 import org.lockss.daemon.Crawler;
-import org.lockss.daemon.LockssWatchdog;
 import org.lockss.daemon.PermissionChecker;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.FetchedUrlData;
-import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlConsumer;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
 import org.lockss.util.StreamUtil;
