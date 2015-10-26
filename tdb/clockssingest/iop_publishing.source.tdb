@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = IOP Publishing ;
+    info[contract] = 2015 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+       name = IOP Publishing Source Content
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.clockss.iop.ClockssIOPSourcePlugin
+      param[base_url] = http://content5.lockss.org/sourcefiles/iop-released/
+      comment[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+    
+      au < testing ; exists ; 2015 ; IOP Publishing Source Content 2015 ; 2015 >
+
+    }
+
+  }
+
+}
