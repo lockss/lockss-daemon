@@ -35,6 +35,7 @@
 package org.lockss.plugin.clockss;
 
 import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.*;
 import org.lockss.extractor.*;
@@ -106,12 +107,13 @@ implements SourceXmlSchemaHelper {
       }
 
       StringBuilder valbuilder = new StringBuilder();
-      if (tTitle != null) {
+      //isBlank checks for null, whitespace and empty
+      if (!StringUtils.isBlank(tTitle)) {
         valbuilder.append(tTitle);
-        if (tSubtitle != null) {
+        if (!StringUtils.isBlank(tSubtitle)) {
           valbuilder.append(": " + tSubtitle);
         }
-      } else if (tAltTitle != null) {
+      } else if (!StringUtils.isBlank(tAltTitle)) {
           valbuilder.append(tAltTitle);
       } else {
         log.debug3("no title found within title group");
@@ -217,9 +219,10 @@ implements SourceXmlSchemaHelper {
 
       // where to put the prefix?
       StringBuilder valbuilder = new StringBuilder();
-      if (tsurname != null) {
+      //isBlank checks for null, empty & whitespace only
+      if (!StringUtils.isBlank(tsurname)) {
         valbuilder.append(tsurname);
-        if (tgiven != null) {
+        if (!StringUtils.isBlank(tgiven)) {
           valbuilder.append(AUTHOR_SEPARATOR + " " + tgiven);
         }
       } else {
