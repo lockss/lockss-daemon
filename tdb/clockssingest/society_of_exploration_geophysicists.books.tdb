@@ -3,7 +3,7 @@
   publisher <
     name = Society of Exploration Geophysicists ;
     info[contract] = 2013 ;
-    info[tester] = 0 ;
+    info[tester] = 8 ;
     comment[platform] = Atypon 
   >
 
@@ -14,12 +14,21 @@
   {
   
     title <
-      name = Society of Exploration Geophysicists ;
+      name = Society of Exploration Geophysicists Books ;
       type = bookSeries
     >
 
+    au < manifest ; exists ; 2011 ; 978-1-56080-287-7 ; 978-1-56080-294-5 ; 9781560802945 ; SEAM Phase 1: Challenges of Subsalt Imaging in Tertiary Basins, with Emphasis on Deepwater Gulf of Mexico > 
+    au < manifest ; exists ; 2011 ; 978-1-56080-281-5 ; 978-1-56080-285-3 ; 9781560802853 ; Seismic Acquisition from Yesterday to Tomorrow >
+    au < manifest ; exists ; 2011 ; 978-1-56080-280-8 ; 978-1-56080-293-8 ; 9781560802938 ; First Steps in Seismic Interpretation > 
+    au < manifest ; exists ; 2011 ; 978-1-56080-282-2 ; 978-1-56080-289-1 ; 9781560802891 ; Multicomponent Seismic Technology > 
+    au < manifest ; exists ; 2011 ; 978-1-56080-228-0 ; 978-1-56080-283-9 ; 9781560802839 ; Seismology of Azimuthally Anisotropic Media and Seismic Fracture Characterization >
+    au < manifest ; exists ; 2011 ; 978-0-89181-374-3 ; 978-1-56080-288-4 ; 9781560802884 ; nterpretation of Three-Dimensional Seismic Data >
     au < manifest ; exists ; 2012 ; 978-1-56080-329-4 ; 978-1-56080-330-0 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering >
     au < manifest ; exists ; 2012 ; 978-1-56080-315-7 ; 978-1-56080-316-4 ; 9781560803164 ; Microseismic Imaging of Hydraulic Fracturing >
+    au < manifest ; exists ; 2012 ; 978-1-56080-298-3 ; 978-1-56080-305-8 ; 9781560803058 ; Fundamentals of Gravity Exploration >
+    au < manifest ; exists ; 2012 ; 978-1-56080-299-0 ; 978-1-56080-300-3 ; 9781560803003 ; Seismic Signatures and Analysis of Reflection Data in Anisotropic Media, Third Edition > 
+    au < manifest ; exists ; 2012 ; 978-1-56080-303-4 ; 978-1-56080-304-1 ; 9781560803041 ; 3D Seismic Survey Design, Second Edition >
     au < manifest ; exists ; 2013 ; 978-1-56080-326-3 ; 978-1-56080-327-0 ; 9781560803270 ; Understanding Seismic Anisotropy in Exploration and Exploitation >
     au < manifest ; exists ; 2013 ; 978-1-56080-313-3 ; 978-1-56080-314-0 ; 9781560803140 ; Remote Sensing in Action >
     au < manifest ; exists ; 2013 ; 978-1-56080-301-0 ; 978-1-56080-302-7 ; 9781560803027 ; Encyclopedia of Exploration Geophysics >
@@ -29,15 +38,6 @@
     au < testing ; exists ; 2014 ; 978-1-56080-310-2 ; 978-1-56080-311-9 ; 9781560803119 ; Hydrocarbon Seepage >
     au < testing ; exists ; 2014 ; 978-1-56080-291-4 ; 978-1-56080-295-2 ; 9781560802952 ; Elements of Seismic Dispersion: A Somewhat Practical Guide to Frequency-Dependent Phenomena >
     au < manifest ; exists ; 2015 ; 978-1-56080-290-7 ; 978-1-56080-308-9 ; 9781560803089 ; Numerical Modeling of Seismic Wave Propagation >
-    au < manifest ; exists ; 2012 ; 978-1-56080-298-3 ; 978-1-56080-305-8 ; 9781560803058 ; Fundamentals of Gravity Exploration >
-    au < manifest ; exists ; 2012 ; 978-1-56080-299-0 ; 978-1-56080-300-3 ; 9781560803003 ; Seismic Signatures and Analysis of Reflection Data in Anisotropic Media, Third Edition > 
-    au < manifest ; exists ; 2012 ; 978-1-56080-303-4 ; 978-1-56080-304-1 ; 9781560803041 ; 3D Seismic Survey Design, Second Edition >
-    au < manifest ; exists ; 2011 ; 978-1-56080-287-7 ; 978-1-56080-294-5 ; 9781560802945 ; SEAM Phase 1: Challenges of Subsalt Imaging in Tertiary Basins, with Emphasis on Deepwater Gulf of Mexico > 
-    au < manifest ; exists ; 2011 ; 978-1-56080-281-5 ; 978-1-56080-285-3 ; 9781560802853 ; Seismic Acquisition from Yesterday to Tomorrow >
-    au < manifest ; exists ; 2011 ; 978-1-56080-280-8 ; 978-1-56080-293-8 ; 9781560802938 ; First Steps in Seismic Interpretation > 
-    au < manifest ; exists ; 2011 ; 978-1-56080-282-2 ; 978-1-56080-289-1 ; 9781560802891 ; Multicomponent Seismic Technology > 
-    au < manifest ; exists ; 2011 ; 978-1-56080-228-0 ; 978-1-56080-283-9 ; 9781560802839 ; Seismology of Azimuthally Anisotropic Media and Seismic Fracture Characterization >
-    au < manifest ; exists ; 2011 ; 978-0-89181-374-3 ; 978-1-56080-288-4 ; 9781560802884 ; nterpretation of Three-Dimensional Seismic Data >
       
   }
 }
