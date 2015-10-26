@@ -24,9 +24,9 @@
       param[base_url] = http://repository.edm-forum.org/
       param[journal_abbr] = egems
 
-      au < manifest ; exists ; 2013 ; eGEMs Volume 1 ; 1 >
+      au < testing ; exists ; 2013 ; eGEMs Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2014 ; eGEMs Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; eGEMs Volume 3 ; 3 >
+      au < testing ; exists ; 2015 ; eGEMs Volume 3 ; 3 >
     
     }
     
