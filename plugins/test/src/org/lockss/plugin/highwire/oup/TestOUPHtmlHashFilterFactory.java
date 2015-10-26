@@ -59,14 +59,14 @@ public class TestOUPHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "<div id=\"zone-user-wrapper\" class=\"zone-wrapper\"></div>\n" + 
       "</header>\n" + 
       "</div>9";
-  private static final String headerFiltered = "A<div> </div>9";
+  private static final String headerFiltered = "A 9";
   
   private static final String footer = "A<div> " + 
       "<footer id=\"section-footer\" class=\"section section-footer\">\n" + 
       "<div id=\"zone-postscript\" class=\"zone zone-postscript clearfix container-30\"></div>\n" +
       "</footer>\n" + 
       "</div>9";
-  private static final String footerFiltered = "A<div> </div>9";
+  private static final String footerFiltered = "A 9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
   private static final String withSidebar = "A<html> " +
@@ -77,13 +77,13 @@ public class TestOUPHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
       "</div></div></div></div>\n" +
       "</html>9";
-  private static final String withoutSidebar = "A<html> </html>9";
+  private static final String withoutSidebar = "A 9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-header"),
   private static final String withHeader = "A<html>" +
       "<div class=\"content-header\">xx</div>" +
       "</HTML>9";
-  private static final String withoutHeader = "A<html></HTML>9";
+  private static final String withoutHeader = "A9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citing|related)-articles?"),
   private static final String withArticles = "A<html>\n" +
@@ -91,7 +91,7 @@ public class TestOUPHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "<div class=\"citing-articles\">X</div>\n" +
       "<div class=\"related-article\">X</div>\n" +
       "</html>9";
-  private static final String withoutArticles = "A<html> </html>9";
+  private static final String withoutArticles = "A 9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-(keywords|by-author|eletters)"),
   private static final String withKeywords = "A<div>\n" + 
@@ -99,13 +99,13 @@ public class TestOUPHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "<div class=\" w-by-author\">X</div>\n" +
       "<div class=\"related w-eletters\">X</div>\n" +
       "</div>9";
-  private static final String withoutKeywords = "A<div> </div>9";
+  private static final String withoutKeywords = "A 9";
   
   // HtmlNodeFilters.tagWithAttribute("div", "class", "panel-separator"),
   private static final String withSep = "A<div>\n" +
       "<div class=\"panel-separator\"> </div>" + 
       "</div>9";
-  private static final String withoutSep = "A<div> </div>9";
+  private static final String withoutSep = "A 9";
   
   // OUP author section kept changing formating and spacing
   //  HtmlNodeFilters.allExceptSubtree(
@@ -127,11 +127,9 @@ public class TestOUPHtmlHashFilterFactory extends TestHighWireDrupalHtmlCrawlFil
       "  </div>\n" + 
       "9</div>";
   // Keeps the subtree that includes highwire-cite-title with all the nested divs (sans attributes)
-  private static final String withoutCite = "<div>" +
-      "A<div><div>" +
-      "<div>Sodium: a randomized double-blind placebo-controlled study</div>" +
-      "</div></div> " +
-      "9</div>";
+  private static final String withoutCite = "A" +
+      "Sodium: a randomized double-blind placebo-controlled study " +
+      "9";
   
   
   @Override

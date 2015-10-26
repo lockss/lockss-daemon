@@ -80,10 +80,10 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   }
   @Override
   public boolean doTagAttributeFiltering() {
-    return true;
+    return false;
   }
   @Override
   public boolean doXformToText() {
-    return false;
+    return true;
   }
 }
