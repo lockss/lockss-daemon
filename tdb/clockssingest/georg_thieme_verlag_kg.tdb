@@ -197,7 +197,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Neurologie Volume 2010 ; 37 >
     au < crawling ; exists ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Neurologie Volume 2012 ; 39 >
-    au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
+    au < finished ; finished ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Neurologie Volume 2015 ; 42 >
 
@@ -322,8 +322,8 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Urologie Volume 2007 ; 38 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Urologie Volume 2008 ; 39 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Urologie Volume 2009 ; 40 >
-    au < finished ; crawling ; 2010 ; 2010 ; Aktuelle Urologie Volume 2010 ; 41 >
-    au < finished ; crawling ; 2011 ; 2011 ; Aktuelle Urologie Volume 2011 ; 42 >
+    au < finished ; finished ; 2010 ; 2010 ; Aktuelle Urologie Volume 2010 ; 41 >
+    au < finished ; finished ; 2011 ; 2011 ; Aktuelle Urologie Volume 2011 ; 42 >
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Urologie Volume 2012 ; 43 >
     au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Urologie Volume 2013 ; 44 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
@@ -405,7 +405,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Allgemein- und Viszeralchirurgie up2date Volume 2007 ; 1 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Allgemein- und Viszeralchirurgie up2date Volume 2008 ; 2 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Allgemein- und Viszeralchirurgie up2date Volume 2009 ; 3 >
-    au < finished ; crawling ; 2010 ; 2010 ; Allgemein- und Viszeralchirurgie up2date Volume 2010 ; 4 >
+    au < finished ; finished ; 2010 ; 2010 ; Allgemein- und Viszeralchirurgie up2date Volume 2010 ; 4 >
     au < crawling ; exists ; 2011 ; 2011 ; Allgemein- und Viszeralchirurgie up2date Volume 2011 ; 5 >
     au < crawling ; exists ; 2012 ; 2012 ; Allgemein- und Viszeralchirurgie up2date Volume 2012 ; 6 >
     au < crawling ; exists ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 >
@@ -598,7 +598,7 @@
         au < crawling ; exists ; 2011 ; 2011 ; B&G Bewegungstherapie und Gesundheitssport Volume 2011 ; 27 >
         au < crawling ; exists ; 2012 ; 2012 ; B&G Bewegungstherapie und Gesundheitssport Volume 2012 ; 28 >
         au < crawling ; exists ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 >
-        au < finished ; crawling ; 2014 ; 2014 ; B&G Bewegungstherapie und Gesundheitssport Volume 2014 ; 30 >
+        au < finished ; finished ; 2014 ; 2014 ; B&G Bewegungstherapie und Gesundheitssport Volume 2014 ; 30 >
         au < crawling ; exists ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 >
 
   }
@@ -797,7 +797,7 @@
    au < crawling ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Onkologie Volume 2011 ; 43 >
    au < crawling ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Onkologie Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Onkologie Volume 2013 ; 45 >
-   au < finished ; crawling ; 2014 ; 2014 ; Deutsche Zeitschrift für Onkologie Volume 2014 ; 46 >
+   au < finished ; finished ; 2014 ; 2014 ; Deutsche Zeitschrift für Onkologie Volume 2014 ; 46 >
    au < crawling ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Onkologie Volume 2015 ; 47 >
 
   }
@@ -858,7 +858,7 @@
    au < crawling ; exists ; 2010 ; 2010 ; Diabetologie und Stoffwechsel Volume 2010 ; 5 >
    au < crawling ; exists ; 2011 ; 2011 ; Diabetologie und Stoffwechsel Volume 2011 ; 6 >
    au < crawling ; exists ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 2012 ; 7 >
-   au < finished ; crawling ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 >
+   au < finished ; finished ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 >
    au < crawling ; exists ; 2014 ; 2014 ; Diabetologie und Stoffwechsel Volume 2014 ; 9 >
    au < crawling ; exists ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 2015 ; 10 >
 
@@ -1247,7 +1247,7 @@
    au < manifest ; exists ; 2011 ; 2011 ; Ergopraxis Volume 2011 ; 4 >
    au < manifest ; exists ; 2012 ; 2012 ; Ergopraxis Volume 2012 ; 5 >
    au < crawling ; exists ; 2013 ; 2013 ; Ergopraxis Volume 2013 ; 6 >
-   au < finished ; crawling ; 2014 ; 2014 ; Ergopraxis Volume 2014 ; 7 >
+   au < finished ; finished ; 2014 ; 2014 ; Ergopraxis Volume 2014 ; 7 >
    au < crawling ; exists ; 2015 ; 2015 ; Ergopraxis Volume 2015 ; 8 >
 
   }
@@ -1296,7 +1296,7 @@
    au < manifest ; exists ; 2011 ; 2011 ; Ernährung & Medizin Volume 2011 ; 26 >
    au < manifest ; exists ; 2012 ; 2012 ; Ernährung & Medizin Volume 2012 ; 27 >
    au < crawling ; exists ; 2013 ; 2013 ; Ernährung & Medizin Volume 2013 ;028 >
-   au < finished ; crawling ; 2014 ; 2014 ; Ernährung & Medizin Volume 2014 ;029 >
+   au < finished ; finished ; 2014 ; 2014 ; Ernährung & Medizin Volume 2014 ;029 >
    au < crawling ; exists ; 2015 ; 2015 ; Ernährung & Medizin Volume 2015 ;030 >
 
   }
@@ -1354,7 +1354,7 @@
     param[journal_id] = 10.1055/s-00024358
     comment[years] = 2013-current
 
-    au < finished ; crawling ; 2013 ; 2013 ; European Journal of Pediatric Surgery Reports Volume 1 ; 1 >
+    au < finished ; finished ; 2013 ; 2013 ; European Journal of Pediatric Surgery Reports Volume 1 ; 1 >
     au < crawling ; exists ; 2014 ; 2014 ; European Journal of Pediatric Surgery Reports Volume 2 ; 2 >
     au < crawling ; exists ; 2015 ; 2015 ; European Journal of Pediatric Surgery Reports Volume 3 ; 3 >
 

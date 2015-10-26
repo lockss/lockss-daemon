@@ -224,7 +224,7 @@
       comment[continues] = 1471-2326
 
       au < crawling ; exists ; 2013 ; BMC Hematology Volume 13 ; 13 >
-      au < finished ; crawling ; 2014 ; BMC Hematology Volume 14 ; 14 >
+      au < finished ; finished ; 2014 ; BMC Hematology Volume 14 ; 14 >
       au < crawling ; exists ; 2015 ; BMC Hematology Volume 15 ; 15 >
 
     }
@@ -932,7 +932,7 @@
       au < finished ; crawling ; 2011 ; BMC Medical Ethics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Medical Ethics Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Medical Ethics Volume 14 ; 14 >
-      au < finished ; crawling ; 2014 ; BMC Medical Ethics Volume 15 ; 15 >
+      au < finished ; finished ; 2014 ; BMC Medical Ethics Volume 15 ; 15 >
       au < crawling ; exists ; 2015 ; BMC Medical Ethics Volume 16 ; 16 >
 
     }
@@ -1765,7 +1765,7 @@
       {
         param[journal_issn] = 2052-1847 
         
-        au < finished ; crawling ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
+        au < finished ; finished ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
         au < crawling ; exists ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
         au < crawling ; exists ; 2015 ; BMC Sports Science, Medicine and Rehabilitation Volume 7 ; 7 >
 

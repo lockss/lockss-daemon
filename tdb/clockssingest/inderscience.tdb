@@ -1339,7 +1339,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 13 ; 13 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Information Systems Volume 14 ; 14 >
-      au < finished ; crawling ; 2014 ; International Journal of Business Information Systems Volume 15 ; 15 >
+      au < finished ; finished ; 2014 ; International Journal of Business Information Systems Volume 15 ; 15 >
       au < finished ; finished ; 2014 ; International Journal of Business Information Systems Volume 16 ; 16 >
       au < crawling ; exists ; 2014 ; International Journal of Business Information Systems Volume 17 ; 17 >
       au < crawling ; exists ; 2015 ; International Journal of Business Information Systems Volume 18 ; 18 >
@@ -2172,7 +2172,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 9 ; 9 >
-      au < finished ; crawling ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
+      au < finished ; finished ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
       au < crawling ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
       au < crawling ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
 
@@ -3398,7 +3398,7 @@
 
       param[journal_id] = ijfcm
 
-      au < finished ; crawling ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
+      au < finished ; finished ; 2014-2015 ; International Journal of Fuzzy Computation and Modelling Volume 1 ; 1 >
 
     }
 
@@ -3715,7 +3715,7 @@
 
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Factors and Ergonomics Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Human Factors and Ergonomics Volume 2 ; 2 >
-      au < finished ; crawling ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
+      au < finished ; finished ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
       au < expected ; exists ; 2015 ; International Journal of Human Factors and Ergonomics Volume 4 ; 4 >
 
     }
@@ -3763,7 +3763,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Human Resources Development and Management Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Resources Development and Management Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Human Resources Development and Management Volume 13 ; 13 >
-      au < finished ; crawling ; 2014 ; International Journal of Human Resources Development and Management Volume 14 ; 14 >
+      au < finished ; finished ; 2014 ; International Journal of Human Resources Development and Management Volume 14 ; 14 >
       au < crawling ; exists ; 2015 ; International Journal of Human Resources Development and Management Volume 15 ; 15 >
 
     }
@@ -6185,7 +6185,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Pluralism and Economics Education Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Pluralism and Economics Education Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Pluralism and Economics Education Volume 4 ; 4 >
-      au < finished ; crawling ; 2014 ; International Journal of Pluralism and Economics Education Volume 5 ; 5 >
+      au < finished ; finished ; 2014 ; International Journal of Pluralism and Economics Education Volume 5 ; 5 >
       au < crawling ; exists ; 2015 ; International Journal of Pluralism and Economics Education Volume 6 ; 6 >
 
     }
@@ -7944,7 +7944,7 @@
 
       param[journal_id] = ijbeam
 
-      au < finished ; crawling ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
+      au < finished ; finished ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
       au < expected ; exists ; 2015 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
 
     }
@@ -8183,7 +8183,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Design Volume 61 ; 61 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Design Volume 62 ; 62 >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Design Volume 63 ; 63 >
-      au < finished ; crawling ; 2014 ; International Journal of Vehicle Design Volume 64 ; 64 >
+      au < finished ; finished ; 2014 ; International Journal of Vehicle Design Volume 64 ; 64 >
       au < crawling ; exists ; 2014 ; International Journal of Vehicle Design Volume 65 ; 65 >
       au < finished ; finished ; 2014 ; International Journal of Vehicle Design Volume 66 ; 66 >
       au < crawling ; exists ; 2015 ; International Journal of Vehicle Design Volume 67 ; 67 >
@@ -8421,7 +8421,7 @@
       param[journal_id] = ijws
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
-      au < finished ; crawling ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 >
+      au < finished ; finished ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 >
       au < expected ; exists ; 2015 ; International Journal of Web Science Volume 3 ; 3 >
 
     }
@@ -8480,7 +8480,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Work Organisation and Emotion Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Work Organisation and Emotion Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Work Organisation and Emotion Volume 5 ; 5 >
-      au < finished ; crawling ; 2014 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 >
+      au < finished ; finished ; 2014 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 >
       au < expected ; exists ; 2015 ; International Journal of Work Organisation and Emotion Volume 7 ; 7 >
 
     }
