@@ -162,7 +162,7 @@ public class RisMetadataExtractor implements FileMetadataExtractor {
 			    		if(value.contentEquals("JOUR")) {
 			    			refType = REFTYPE_JOURNAL;
 			    		}
-			    		else if(value.contentEquals("BOOK") || value.contentEquals("CHAP")) {
+			    		else if(value.contains("BOOK") || value.contains("CHAP")) {
 			    			refType = REFTYPE_BOOK;
 			    		}
 			    		else {
