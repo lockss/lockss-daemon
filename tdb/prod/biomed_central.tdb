@@ -8,7 +8,7 @@
 
   {
     #BioMedCentral new platform
-    plugin = org.lockss.plugin.bmc.
+    plugin = needs.plugin
 
     {
       title <
@@ -632,12 +632,12 @@
       param[journal_issn] = 1747-597X
       #journal_id = substanceabusepolicy
 
-      au < doNotProces ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
-      au < doNotProces ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
-      au < doNotProces ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
-      au < doNotProces ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
-      au < doNotProces ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
-      au < doNotProces ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
+      au < doNotProcess ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
+      au < doNotProcess ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
+      au < doNotProcess ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
+      au < doNotProcess ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
+      au < doNotProcess ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
+      au < doNotProcess ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
       au < exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 >
       au < exists ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 >
