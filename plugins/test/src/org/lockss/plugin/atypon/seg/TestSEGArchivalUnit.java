@@ -71,7 +71,7 @@ public class TestSEGArchivalUnit
       "org.lockss.plugin.atypon.seg.ClockssSEGPlugin";
   
   private static final String PLUGIN_NAME = 
-                "Society of Exploration Geophysicists (CLOCKSS)";
+                "Society of Exploration Geophysicists Journals Plugin (CLOCKSS)";
 
   private static final String BASE_URL_KEY = 
       ConfigParamDescr.BASE_URL.getKey();

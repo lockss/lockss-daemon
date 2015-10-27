@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Institute of Aeronautics and Astronautics Plugin</string>
+    <string>American Institute of Aeronautics and Astronautics Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -39,11 +39,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>29</string>
+    <string>42</string>
   </entry>    
   <entry>
     <string>au_name</string>
-    <string>"American Institute of Aeronautics and Astronautics Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Institute of Aeronautics and Astronautics Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
     <entry>
     <string>text/html_filter_factory</string>

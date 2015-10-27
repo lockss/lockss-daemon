@@ -65,7 +65,7 @@ ArticleMetadataExtractorFactory {
 
   private static final String ROLE_PDFPLUS = "PdfPlus";
 
-  private static final String ROOT_TEMPLATE = "\"%sdoi/\", base_url";
+  private static final String ROOT_TEMPLATE = "\"%sdoi/book/\", base_url";
 
   
   private static final String PATTERN_TEMPLATE = 
@@ -142,8 +142,8 @@ ArticleMetadataExtractorFactory {
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
     // The last one isn't technically full text, but it will only happen if it's all we've got
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
         ROLE_PDFPLUS,
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);  
 
