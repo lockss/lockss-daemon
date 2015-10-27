@@ -515,9 +515,8 @@
 
     param[base_url] = http://bmjopenrespres.bmj.com/
 
-    au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Open Respiratory Research Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Open Respiratory Research Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Open Respiratory Research Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Respiratory Research Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
 
   }
   
@@ -530,9 +529,9 @@
       param[base_url] = http://qir.bmj.com/
 
       au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
       
     }
 
@@ -544,8 +543,7 @@
 
     param[base_url] = http://stel.bmj.com/
     
-    au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2014-2015 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
 
   }
 
@@ -936,9 +934,8 @@
     rights = openaccess
     param[base_url] = http://openheart.bmj.com/
 
-    au < HighWirePressH20Plugin ; released ; 2013 ; OpenHeart Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; OpenHeart Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; OpenHeart Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2014 ; OpenHeart Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; OpenHeart Volume 2 ; 2 >
 
   }
 
